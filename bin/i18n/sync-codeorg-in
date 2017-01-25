@@ -11,7 +11,7 @@ require 'json'
 require 'yaml'
 require 'tempfile'
 
-require_relative 'utils'
+require_relative 'i18n_script_utils'
 
 def pull_in_files_for_translation
   localize_level_content

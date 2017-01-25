@@ -45,7 +45,7 @@ const TeacherStageInfo = Radium(React.createClass({
 
     // redux provided
     sectionId: React.PropTypes.string,
-    hiddenStagesInitialized: React.PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
     hiddenStageMap: React.PropTypes.object.isRequired,
     scriptName: React.PropTypes.string.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
@@ -62,8 +62,8 @@ const TeacherStageInfo = Radium(React.createClass({
   },
 
   render() {
-    const { stage, sectionId, hiddenStageMap, hasNoSections, hiddenStagesInitialized } = this.props;
-    const isHidden = hiddenStagesInitialized &&
+    const { stage, sectionId, hiddenStageMap, hasNoSections, scriptAllowsHiddenStages } = this.props;
+    const isHidden = scriptAllowsHiddenStages &&
       isHiddenFromState(hiddenStageMap, sectionId, stage.id);
     const lessonPlanUrl = stage.lesson_plan_html_url;
 
@@ -89,7 +89,7 @@ const TeacherStageInfo = Radium(React.createClass({
       children.push(<StageLock key="stageLock" stage={stage}/>);
     }
 
-    if (sectionId && hiddenStagesInitialized && !hasNoSections) {
+    if (sectionId && scriptAllowsHiddenStages && !hasNoSections) {
       children.push(
         <div key="hiddenStageToggle">
           <HiddenStageToggle
@@ -117,7 +117,7 @@ const TeacherStageInfo = Radium(React.createClass({
 export default connect(state => {
   return {
     sectionId: state.sections.selectedSectionId,
-    hiddenStagesInitialized: state.hiddenStage.get('initialized'),
+    scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
     hiddenStageMap: state.hiddenStage.get('bySection'),
     scriptName: state.progress.scriptName,
     hasNoSections: state.sections.sectionsAreLoaded &&

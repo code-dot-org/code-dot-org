@@ -13,7 +13,7 @@
   "basketballWhenPaddleCollided": "when ball hits hand",
   "bounceBall": "bounce ball",
   "bounceBallTooltip": "Bounce a ball off of an object.",
-  "continue": "Continue",
+  "continue": "जारी राख्नुहोस्",
   "dirE": "E",
   "dirN": "N",
   "dirS": "S",
@@ -46,7 +46,7 @@
   "moveUp": "move up",
   "moveUpTooltip": "Move the paddle up.",
   "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
+  "no": "होइन",
   "noPathAhead": "path is blocked",
   "noPathLeft": "no path to the left",
   "noPathRight": "no path to the right",
@@ -149,5 +149,5 @@
   "whenWallCollidedTooltip": "Execute the actions below when a ball collides with a wall.",
   "whileMsg": "while",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes"
+  "yes": "हो"
 }
