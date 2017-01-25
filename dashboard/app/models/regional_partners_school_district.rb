@@ -22,7 +22,8 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
   CSV_HEADERS = {
     school_district_id: 'LEAID',
     regional_partner_name: 'RegionalPartner',
-    course: 'course'
+    course: 'course',
+    workshop_days: 'workshop_days'
   }.freeze
 
   CSV_IMPORT_OPTIONS = { col_sep: "\t", headers: true}
@@ -43,7 +44,6 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
       course = row[CSV_HEADERS[:course]]
       workshop_days = row[CSV_HEADERS[:workshop_days]]
 
-      # create the new association
       RegionalPartnersSchoolDistrict.create(school_district: school_district, regional_partner: regional_partner, course: course, workshop_days: workshop_days)
     end
   end
