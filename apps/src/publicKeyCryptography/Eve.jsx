@@ -161,7 +161,7 @@ const Eve = React.createClass({
         </NumberedSteps>
 
         <Heading text="Try to Crack it!"/>
-        <NumberedSteps start="4">
+        <NumberedSteps start={4}>
           <Step requires={[publicModulus, publicKey].every(Number.isInteger)}>
             Crack Alice's <KeywordPrivateKey/>:
             <PrivateKeyDropdown
