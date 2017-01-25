@@ -5,7 +5,7 @@
   'no': Non
   select_language: Veuillez sélectionner votre langue
   upgrade_ie_message: Code.org supprimera bientôt son support pour Internet Explorer
-    8, 9 et 10. Merci de passer à un navigateur plus récent.
+    8, 9 et 10. Merci de passer à un navigateur moderne.
   upgrade_ie_message_csedweek: CSEdWeek.org supprimera bientôt son support pour Internet
     Explorer 8, 9 et 10. Merci de passer à un navigateur actuel.
   upgrade_ie_link: Pour en savoir plus
@@ -96,7 +96,7 @@
   congratulations_on_completing_course1: Félicitations, tu as fini le cours N°1 !
   congratulations_on_completing_course2: Félicitations, tu as fini le cours N°2 !
   congratulations_on_completing_course3: Félicitations, tu as fini le cours N°3 !
-  congratulations_on_completing_course4: Félicitations, tu as fini le cours N°4 !
+  congratulations_on_completing_course4: Félicitation, tu as fini le cours n°4 !
   congratulations_on_completing_accelerated: Félicitations, tu as fini le cours accéléré
     !
   congrats_next_tutorials_title: Essaie ensuite ces tutoriels
@@ -288,8 +288,8 @@
   twitter_teach_cs: Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique
     ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/
     pour en savoir plus.
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
+  twitter_cs_foundational: L’informatique est fondamentale à apprendre pour chaque
+    élève. https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Apprendre une Heure de Code
   beyond_hoc: Au delà d'une Heure
   what_gender: De quel sexe es-tu ?
@@ -523,35 +523,38 @@
   sports_select_theme: Choisir le thème de ton tutoriel
   sports_basketball_title: Faire un match de basket
   sports_all_sports_title: Coder votre propre sport
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+  sports_featured_athletes: Voir les athlètes recommandés
+  sports_athletes_title: Athlètes recommandés
+  sports_athlete_Draymond: Draymond Green, médaillé d’or olympique et Champion de
+    la NBA, Golden State Warriors
+  sports_athlete_Serena: Serena Williams, médaillée d’Or olympique et Championne de
+    Tennis
+  sports_athlete_Russell: Russell Okung, Champion du Super Bowl et joueur de la NFL,
+    les Broncos de Denver
+  sports_athlete_Sergio: Sergio Ramos, Champion du monde et joueur de football, Real
+    Madrid
+  sports_athlete_Sue: Sue Bird, médaillée d’Or olympique et Championne WNBA, Seattle
+    Storm
+  sports_athlete_Alana: Alana Beard, médaillée d’Or et WNBA All-Star, Los Angeles
     Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
+  sports_athlete_Angelo: Angelo Matthews, capitaine de l’équipe de Cricket du Sri
+    Lankan
+  sports_athlete_Nneka: Nneka Ogwumike, médaillé d’or, Championne WNBA et Meilleure
+    joueuse 2016 MVP, Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, médaillé d’Or olympique et NBA All-Star
+    Game, New York Knicks
+  sports_athlete_Marco: Marco Belinelli, Champion NBA, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., médaillé d’Or olympique et joueur de football,
+    FC Barcelone et équipe nationale du Brésil
+  sports_athlete_Sarah: Sarah Quita Offringa, Championne de planche à voile
+  sports_athlete_Marcelo: Marcelo, Champion de football, Real Madrid et Équipe nationale
+    du Brésil
+  sports_athlete_Erika: Erika Olivera, Championne de marathon
+  sports_athlete_John: John Wall, NBA All-Star Game, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, médaillé d'Or olympique et Champion de la NBA,
+    Miami Heat
+  sports_athlete_Harrison: Harrison Barnes, champion olympique et Champion de la NBA,
+    les Mavericks de Dallas
   watch_inspirational_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Encourager une fille
@@ -568,8 +571,8 @@
   video_1min: 1 minutes
   video_2min: 2 minutes
   video_5min: 5 minutes
-  speak_another_language: Parles-tu d'autres langues ?
-  help_translate: Aidez-nous a traduire.
+  speak_another_language: Tu parles d'autres langues ?
+  help_translate: Aidez-nous à traduire.
   no_internet: Pas d'internet ?
   download_offline: Télécharger la version hors ligne.
   are_you_teacher: "Êtes-vous un enseignant?"
@@ -801,7 +804,7 @@
   dashboard_download_csv: Télécharger en CSV
   dashboard_navigation_home_page: Page d'accueil des enseignants
   dashboard_navigation_section_student_progress: Comptes et progression de l'élève
-  dashboard_navigation_section_teacher_progress: Votre progression de cours
+  dashboard_navigation_section_teacher_progress: L'avancement de votre cours
   dashboard_navigation_section_lesson_plans: Plans de cours et ressources
   dashboard_navigation_section_community: Aide et Communauté
   dashboard_navigation_section_pd: Journée pédagogique
@@ -820,7 +823,7 @@
   dashboard_navigation_student: "Élève&#160;: %{student_name}"
   dashboard_progress_not_started: pas commencé
   dashboard_progress_in_progress: en cours
-  dashboard_progress_not_completed: pas terminé
+  dashboard_progress_not_completed: non terminé
   dashboard_progress_completed_too_many_blocks: terminé, trop de blocs
   dashboard_progress_completed_perfect: terminé, parfait
   dashboard_progress_furthest_level_attempted: le plus haut niveau tenté
@@ -1048,7 +1051,7 @@
     américain de financer l’enseignement de l'informatique pour les élèves jusque
     18 ans.
   dashboard_announce_petition_button: Ajoutez votre nom
-  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond_button: Aller au-delà
   dashboard_announce_all: Tenez-vous au courant des nouvelles fonctionnalités et des
     mises à jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir
     les anciennes annonces.</a>
@@ -1074,12 +1077,13 @@
     de haute qualité et des tonnes d’excellents outils pour touts les niveaux niveaux
     — tout ce dont vous avez besoin, gratuitement. Vous vous demandez où commencer ?
     Téléchargez <a href='%{video_download_url}'> cette vidéo</a> !
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
+  dashboard_announce_go_beyond: Dépasser Une Heure De Code et explorer les concepts
+    des sciences de l’informatique avec vos élèves chaque semaine. Code.org propose
+    des programmes d’études, plans de leçon, programmes de formation professionnelle
+    de haute qualité et tonnes d’excellents outils pour tous les niveaux niveaux &mdash;
+    et tout est gratuit. :) Vous n’avez pas besoin d’expérience pour commencer à enseigner
+    l’informatique à votre salle de classe. <b>Trouver la prochaine étape qui convient
+    à votre classe.</b>
   code_hoc_coming: L'Heure de Code est là — du 8 au 14 décembre&#160;!
   code_sign_up: Enregistrez-vous pour participer à la Semaine de l'enseignement de
     l'informatique.
@@ -1233,6 +1237,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: Test complet - 50 questions
   cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
   cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions
