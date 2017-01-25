@@ -42,7 +42,7 @@ const bubbleColors = {
 
 const styles = {
   main: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     width: DOT_SIZE,
     height: DOT_SIZE,
     borderRadius: DOT_SIZE,

@@ -1,5 +1,8 @@
 import React from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
+import color from "@cdo/apps/util/color";
+
+const lighterBorder = '#D8D8D8';
 
 // TODO - figure out responsiveness
 const styles = {
@@ -12,14 +15,14 @@ const styles = {
   },
   headerRow: {
     borderTopWidth: 1,
-    borderTopColor: '#BBBBBB',
+    borderTopColor: color.border_gray,
     borderTopStyle: 'solid',
     backgroundColor: '#ECECEC',
   },
   bottomRow: {
     borderBottomWidth: 1,
     // TODO - should this be primary or secondary?
-    borderBottomColor: '#D8D8D8',
+    borderBottomColor: lighterBorder,
     borderBottomStyle: 'solid',
   },
   lightRow: {
@@ -31,29 +34,32 @@ const styles = {
   },
   col1: {
     borderLeftWidth: 1,
-    borderLeftColor: '#BBBBBB',
+    borderLeftColor: color.border_gray,
     borderLeftStyle: 'solid',
     borderRightWidth: 1,
-    borderRightColor: '#D8D8D8',
+    borderRightColor: lighterBorder,
     borderRightStyle: 'solid',
-    width: 200,
+    width: 240,
+    minWidth: 240,
     lineHeight: '52px',
     color: '#5B6770',
     letterSpacing: -0.11,
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
+    paddingLeft: 20,
+    paddingRight: 20
   },
   col2: {
     width: '100%',
     borderRightStyle: 'solid',
     borderRightWidth: 1,
-    borderRightColor: '#D8D8D8',
+    borderRightColor: lighterBorder,
+    paddingLeft: 20,
+    paddingRight: 20
   },
   colText: {
     color: '#5B6770',
-    marginLeft: 20,
-    marginRight: 20,
     // TODO - "correct" font?
-    fontFamily: '"Gotham 4r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
   }
 };
