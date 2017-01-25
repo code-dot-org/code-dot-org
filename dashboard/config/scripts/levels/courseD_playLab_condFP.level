@@ -139,9 +139,6 @@
           <block type="studio_repeatForever"/>
           <block type="controls_repeat">
             <title name="TIMES">5</title>
-            <statement name="DO">
-
-</statement>
           </block>
         </category>
         <category name="Math">
@@ -179,18 +176,27 @@
             <title name="SPRITE">0</title>
             <title name="EMOTION">1</title>
           </block>
+          <block type="studio_ifActorHasEmotionElse">
+            <title name="SPRITE">0</title>
+            <title name="EMOTION">1</title>
+          </block>
           <block type="studio_ifActorPosition" inline="true">
             <title name="SPRITE">0</title>
             <title name="POSITION">x</title>
             <title name="OPERATOR">EQ</title>
           </block>
-          <block type="studio_ifActorIsVisible">
+          <block type="studio_ifActorPositionElse" inline="true">
             <title name="SPRITE">0</title>
-            <title name="VISIBILITY">false</title>
+            <title name="POSITION">x</title>
+            <title name="OPERATOR">EQ</title>
           </block>
           <block type="studio_ifActorIsSprite">
             <title name="SPRITE">0</title>
             <title name="VALUE">"hidden"</title>
+          </block>
+          <block type="studio_ifActorIsVisibleElse">
+            <title name="SPRITE">0</title>
+            <title name="VISIBILITY">false</title>
           </block>
           <block type="controls_if" inline="false"/>
           <block type="logic_compare" inline="true">
