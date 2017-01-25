@@ -4,14 +4,14 @@
   'yes': '是'
   'no': '不'
   select_language: "请选择您的语言"
-  upgrade_ie_message: "Code.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到新版本的浏览器。"
-  upgrade_ie_message_csedweek: "CSEdWeek.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到新版本的浏览器。"
+  upgrade_ie_message: "Code.org 将停止支持 Internet Explorer 8、 9 和 10 。请升级到新版本的浏览器。"
+  upgrade_ie_message_csedweek: "Code.org 将停止支持 Internet Explorer 8、 9 和 10。请升级到新版本的浏览器。"
   upgrade_ie_link: "了解详情"
   en: "计算机科学"
   computer_science_edweek: "计算机科学教育周"
   csedweek_dates: "2014 年 12 月 8-14 日"
-  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">编程一小时</a>即将来临。邀请所有的老师和组织领导们<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
+  csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">编程一小时</a>即将来临。邀请所有的老师和学校管理者们<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是一位计算机老师吗？请您参阅更多计算机科学教育周的资源</a>'
   n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3># 送达</h3>"
   anybody_can_learn: "任何人都可以学习。"
   learn_now: "现在开始学习"
@@ -26,14 +26,14 @@
   twentyhours_heading: "看看我们对计算机科学课程的简介"
   twentyhours_text: "完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。"
   og_title: 'Code.org: 任何人都可以学习'
-  og_description: "每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。"
+  og_description: "每个学校的每个学生都应该有学习计算机科学的机会。计算机科学在改变一切。"
   csedweek_og_title: "计算机科学教育周"
   csedweek_og_description: "2017年12月4日至10日。计算机科学是每个学生要学习的基础课程。"
   hoc2014_heading: "加入<a href=\"http://hourofcode.com\">编程一小时</a><br/>2014年12月8至14日<br/>"
   hoc2014_students: "学生"
-  hoc2014_try: "体验一下"
+  hoc2014_try: "体验活动"
   hoc2014_teachers: "教师"
-  hoc2014_host: "举办它"
+  hoc2014_host: "开展活动"
   hoc2014_everyone: "每个人"
   hoc2014_support: "支持它 &#x25BE;"
   hoc2014_whatishoc: "什么是编程一小时？"
