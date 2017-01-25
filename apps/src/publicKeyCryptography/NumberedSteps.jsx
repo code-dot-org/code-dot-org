@@ -16,15 +16,23 @@ const style = {
   }
 };
 
-export default function NumberedSteps(props) {
+/**
+ * Custom 'ordered list' implementation with layout for the crypto widget.
+ * @param {number} [start] - if provided, starts numbering at this value.
+ *        Defaults to "1."
+ * @param children - List item contents.
+ */
+export default function NumberedSteps({start = 1, children}) {
   return (
     <table>
       <tbody>
-        {React.Children.map(props.children, (child, index) => React.cloneElement(child, {index}))}
+        {React.Children.map(children, (child, index) =>
+          React.cloneElement(child, {index: index + (start - 1)}))}
       </tbody>
     </table>);
 }
 NumberedSteps.propTypes = {
+  start: React.PropTypes.number,
   children: AnyChildren
 };
 
