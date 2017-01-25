@@ -42,7 +42,7 @@ let redrawApplicationFunction = function (event) {
   };
 
   if (schoolDistrictData['school-district'] && !schoolDistrictData['school-district-other']) {
-    const selectedCourseButton = document.querySelector('input[name="courseSelection"]:checked');
+    const selectedCourseButton = document.querySelector('input[name="selectedCourse"]:checked');
     const selectedCourse = selectedCourseButton ? selectedCourseButton.value : 'unselected';
 
     $.ajax({
@@ -57,7 +57,7 @@ let redrawApplicationFunction = function (event) {
         <TeacherApplication
           regionalPartnerGroup={regionalPartnerGroup}
           regionalPartnerName={regionalPartnerName}
-          workshopDates={workshopDays}
+          workshopDays={workshopDays ? `${regionalPartnerName}: ${workshopDays}` : workshopDays}
           schoolDistrictData={schoolDistrictData}
           districtErrorMessageHandler={districtErrorMessageHandler}
         />,
