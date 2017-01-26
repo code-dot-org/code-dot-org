@@ -5,7 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as PropTypes from '../PropTypes';
-import {editAnimation} from '../animationListModule';
+import {editAnimation, removePendingAnimationAddition} from '../animationListModule';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 
 /**
@@ -32,7 +32,8 @@ const PiskelEditor = React.createClass({
     editAnimation: React.PropTypes.func.isRequired,
     allAnimationsSingleFrame: React.PropTypes.bool.isRequired,
     onNewFrameClick: React.PropTypes.func.isRequired,
-    pendingAnimationAddition: React.PropTypes.object
+    pendingAnimationAddition: React.PropTypes.object,
+    removePendingAnimationAddition: React.PropTypes.func.isRequired
   },
 
   componentDidMount() {
@@ -69,8 +70,9 @@ const PiskelEditor = React.createClass({
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
       this.loadSelectedAnimation_(newProps);
     }
-    if (newProps.pendingAnimationAddition && newProps.selectedAnimation === newProps.pendingAnimationAddition.key) {
-      this.addPendingAnimationAddition(newProps.pendingAnimationAddition);
+    if (newProps.pendingAnimationAddition
+      && newProps.selectedAnimation === newProps.pendingAnimationAddition.key) {
+      this.addPendingAnimationAddition(newProps.pendingAnimationAddition.props);
     }
   },
 
@@ -81,13 +83,10 @@ const PiskelEditor = React.createClass({
     }
 
     this.isLoadingAnimation_ = true;
-    // Special case: When selecting a new, blank animation (one that is 'loaded'
-    // but has no loaded content) tell Piskel to create a new animation with
-    // its dimensions.
-    if (animationProps.loadedFromSource && animationProps.sourceUrl === null &&
-        animationProps.blob === null && animationProps.dataURI === null) {
-      /* TODO: find actual syntax for this
-      this.piskel.addBlankFrame(); */
+    if (animationProps.blankFrame) {
+      this.piskel.addBlankFrame();
+      this.isLoadingAnimation_ = false;
+      this.props.removePendingAnimationAddition();
     } else {
       this.piskel.loadAdditionalFrames(
         animationProps.dataURI,
@@ -195,8 +194,6 @@ const PiskelEditor = React.createClass({
   },
 
   render() {
-    console.log("Rendering piskel and logging pending animation addition if it exists.");
-    console.log(this.props.pendingAnimationAddition);
     return (
       <iframe
         ref={iframe => this.iframe = iframe}
@@ -211,10 +208,13 @@ export default connect(state => ({
   animationList: state.animationList,
   channelId: state.pageConstants.channelId,
   allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
-  pendingAnimationAddition: state.pendingAnimationAddition
+  pendingAnimationAddition: state.animationList.pendingAnimationAddition
 }), dispatch => ({
   editAnimation: (key, props) => dispatch(editAnimation(key, props)),
   onNewFrameClick() {
     dispatch(show(Goal.NEW_FRAME));
+  },
+  removePendingAnimationAddition() {
+    dispatch(removePendingAnimationAddition());
   }
 }))(PiskelEditor);
