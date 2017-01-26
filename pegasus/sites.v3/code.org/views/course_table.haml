@@ -10,8 +10,8 @@
 
   .courses .grouprow {
     color: #fff;
-    border: 3px solid white;
-    background-color: #aaa;
+    border: 1px solid white;
+    background-color: #666;
     padding: 10px 5px 10px 5px;
     box-sizing: border-box;
     text-align: center;
@@ -19,7 +19,7 @@
 
   .courses .graderow {
     color: #eee;
-    border: 3px solid white;
+    border: 1px solid white;
     background-color: #888;
     padding: 10px 5px 10px 5px;
     box-sizing: border-box;
@@ -34,10 +34,11 @@
     border: 0px solid grey;
     background-color: #ddd;
     color: white;
-    background: linear-gradient(to right, rgba(0, 148, 202, 1), rgba(0, 148, 202, 0.85));
-    border: 3px solid white;
+    //background: linear-gradient(to right, rgba(0, 148, 202, 1), rgba(0, 148, 202, 0.85));
+    border: 1px solid white;
     padding: 5px 10px 5px 10px;
-    border-radius: 8px;
+    border-radius: 0px;
+    margin: 5px 0px 5px 0px
   }
 
   .courses .break {
@@ -45,7 +46,7 @@
   }
 
   .courses .title {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .courses .groupname {
@@ -69,70 +70,136 @@
 
   .course a {
     color: white;
-    text-decoration: underline;
+    xtext-decoration: underline;
     font-size: 12px;
     margin-left: 10px;
+    margin-left: 0px;
+    font-family: 'Gotham 4r', sans-serif;
+  }
+
+  .notes {
+    text-align: center;
+    width: 882px;
+    margin-top: 16px;
+  }
+
+  .notes .block {
+    float: left;
+    width: 33%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+
+  }
+
+  .notes .number {
+    display: inline-block;
+    background-color: #888;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    line-height: 40px;
+    float: center;
+    margin-bottom: 20px;
   }
 
 - courses = []
-- courses << { name: "Course 1", starts: 0, ends: 1, description: "Introductory course for early readers.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school" }
-- courses << { name: "Course 2", starts: 1, ends: 5, description: "Introductory course for students who can read.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school" }
-- courses << { name: "Course 3", starts: 3, ends: 5, description: "Follow-up to Course 2.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school" }
-- courses << { name: "Course 4", starts: 5, ends: 6, description: "Follow-up to Course 3.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school" }
+- courses << { name: "Course 1", starts: 0, ends: 1, description: "Introductory course for early readers.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school", color: "#33E0EF" }
+- courses << { name: "Course 2", starts: 1, ends: 5, description: "Introductory course for students who can read.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school", color: "#33E0EF" }
+- courses << { name: "Course 3", starts: 3, ends: 5, description: "Follow-up to Course 2.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school", color: "#33E0EF" }
+- courses << { name: "Course 4", starts: 5, ends: 6, description: "Follow-up to Course 3.", group: "CS Fundamentals", link: "/educate/curriculum/elementary-school", color: "#33E0EF" }
 
-- courses << { name: "CS in Science", starts: 6, ends: 8, description: "Computer science concepts are introduced within the context of life, physical, and earth sciences.", link: "/curriculum/science" }
-- courses << { name: "CS in Algebra ", starts: 6, ends: 8, description: "Algebraic and geometric concepts are introduced through functional computer programming.", link: "/curriculum/algebra" }
-- courses << { name: "CS Discoveries", starts: 7, ends: 9, subtitle: "Under development", description: "Introductory computer science course that be a semester or year long.", link: "/educate/csd" }
-- courses << { name: "Computer Science Principles", subtitle: "Advanced Placement course", starts: 9, ends: 12, description: "A year-long rigorous introductory computer science course at the high-school level covering the Internet, data, and programming. Can be run as a non-AP course.", link: "/educate/csp" }
+- courses << { name: "CS in Science", starts: 6, ends: 8, description: "Computer science concepts are introduced within the context of life, physical, and earth sciences.", link: "/curriculum/science", color: "#1AC7D6" }
+- courses << { name: "CS in Algebra ", starts: 6, ends: 8, description: "Algebraic and geometric concepts are introduced through functional computer programming.", link: "/curriculum/algebra", color: "#1AC7D6" }
+- courses << { name: "CS Discoveries", starts: 7, ends: 9, subtitle: "Under development", description: "Introductory computer science course that be a semester or year long.", link: "/educate/csd", color: "#1AC7D6" }
+- courses << { name: "Computer Science Principles", subtitle: "Advanced Placement course", starts: 9, ends: 12, description: "A year-long rigorous introductory computer science course at the high-school level covering the Internet, data, and programming. Can be run as a non-AP course.", link: "/educate/csp", color: "#00adbc" }
 
-- courses << { name: "Accelerated Course", starts: 5, ends: 12, description: "A faster-paced course that covers all of the concepts covered in Courses 1 - 4 in 20-hours.", group: "CS Fundamentals", opacity: 0.7 }
+- courses << { name: "Accelerated Course", starts: 5, ends: 12, description: "A faster-paced course that covers all of the concepts covered in Courses 1 - 4 in 20-hours.", group: "CS Fundamentals", color: "#1AC7D6" }
+
+-#
+  - courses << { heading: "Standalone components"}
+
+  - courses << { name: "Artist", starts: 0, ends: 5 }
+  - courses << { name: "Play Lab", starts: 2, ends: 6 }
+  - courses << { name: "Game Lab", starts: 7, ends: 9, description: "Create and share real-time interactive games."}
+  - courses << { name: "Maker Toolkit", starts: 7, ends: 9}
+  - courses << { name: "App Lab", starts: 9, ends: 12 }
+  - courses << { name: "Text compression widget", starts: 9, ends: 12 }
+  - courses << { name: "Pixelation widget", starts: 9, ends: 12 }
+  - courses << { name: "Cryptography widget", starts: 9, ends: 12 }
+  - courses << { name: "Internet simulator", starts: 9, ends: 12 }
+
+  - courses << { heading: "Standalone activities" }
+  - courses << { name: "Unplugged", starts: 0, ends: 6, link: "/curriculum/unplugged" }
+  - courses << { name: "Hour of Code", starts: 0, ends: 12, link: "/learn" }
 
 .courses
-  .group
-    .grouprow.bar-6
+  .group{style: "overflow: hidden"}
+    .grouprow.bar-6{style: "opacity: 0.7"}
       Elementary school
-    .grouprow.bar-3
+    .grouprow.bar-3{style: "opacity: 0.85"}
       Middle school
-    .grouprow.bar-4
+    .grouprow.bar-4{style: "opacity: 1"}
       High school
   .grade.break
-    .graderow.bar-1
+    .graderow.bar-1{style: "opacity: 0.7"}
       K
     - (1..12).each do |n|
-      .graderow.bar-1
+      - opacity = n.between?(0,5) ? 0.7 : n.between?(6,8) ? 0.85 : 1
+      .graderow.bar-1{style: "opacity: #{opacity}"}
         = n
-    - courses.each_with_index do |course, course_index|
-      .course.break{id: "course-#{course_index}", onclick: "$('#courseextra-#{course_index}').slideToggle(); $('.extra').not('#courseextra-#{course_index}').slideUp();"}
-        - unless course[:starts] == 0
-          %div{class: "bar-#{course[:starts]}"}
-            &nbsp;
-        %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}", style: "opacity: #{course[:opacity] || 1}"}
-          .title
-            =course[:name]
-          - if course[:group]
-            .groupname
-              =(course[:group])
-          .extra{id: "courseextra-#{course_index}", style: "display: none"}
-            - if course[:subtitle]
-              .subtitle
-                =course[:subtitle]
-                %br/
-            .description
-              =course[:description]
-            - if course[:link]
-              %a{href: course[:link] }
-                Learn more
+  .coursebodycontainer{ style: "position: relative; overflow: hidden; clear: both"}
+    .coursebodyback{ style: "position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: -100"}
+      - (1..13).each do |n|
+        - opacity = n.between?(0,6) ? 0.6 : n.between?(7,9) ? 0.8 : 1
+        .graderow.bar-1{style: "height: 100%; background-color: rgba(200, 200, 200, #{opacity})"}
+    .coursebodymain{style: "width: 100%"}
+      - courses.each_with_index do |course, course_index|
+        - if course[:heading]
+          %h2.course.break
+            = course[:heading]
+        - else
+          %a{href: course[:link] || "" }
+            .course.break{id: "course-#{course_index}", xonclick: "$('#courseextra-#{course_index}').slideToggle(); $('.extra').not('#courseextra-#{course_index}').slideUp();"}
+              - unless course[:starts] == 0
+                %div{class: "bar-#{course[:starts]}"}
+                  &nbsp;
+              %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}", style: "xopacity: #{course[:opacity] || 1}; background-color: #{course[:color] || '#00adbc'}"}
+                .title
+                  =course[:name]
+                -# if course[:group]
+                  .groupname
+                    =(course[:group])
+                .extra{id: "courseextra-#{course_index}", style: "display: none"}
+                  - if course[:subtitle]
+                    .subtitle
+                      =course[:subtitle]
+                      %br/
+                  .description
+                    =course[:description]
+                  - if course[:link]
+                    %a{href: course[:link] }
+                      Learn more
+          .cleardiv{style: "clear: both"}
+  .cleardiv{style: "clear: both"}
 
-  .notes{style: "clear: both"}
+  .notes{style: "clear: both; background-color: #ddd; overflow: hidden"}
     %h3
       Notes
-    %ul
-      %li
-        All courses are intended to be entry points to the pathway
-        %br/
-        (exception: Courses 3 and 4 in CS Fundamentals recommend completion of Course 2)
-      %li
-        Actual implementation may vary
-      %li
-        Courses 2 – 4 in CS Fundamentals are often used by older students
+    .block
+      .number 1
+      %br/
+      Most courses are intended to be entry points to the pathway.
+      (Courses 3 & 4 recommend completion of Course 2 first).
+    .block
+      .number 2
+      %br/
+      The above shows default progression.  Actual implementation may vary.
+    .block
+      .number 3
+      %br/
+      While listed for younger grades, Courses 2–4 in CS Fundamentals are often used by older students
 
