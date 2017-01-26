@@ -5,6 +5,7 @@ export const DOT_SIZE = 30;
 
 // TODO - not sure I like these being keyed by these strings.
 // TODO - share with progress_dot?
+// TODO - change to orange on mouseover?
 const bubbleColors = {
   submitted: {
     color: color.white,

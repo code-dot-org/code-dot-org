@@ -69,6 +69,17 @@ const styles = {
 
 // TODO - i18n
 const ProgressTable = React.createClass({
+  componentDidMount() {
+    // TODO - dont ship this way
+    const padding = 80;
+    $(".container.main").css({
+      width: 'initial',
+      maxWidth: 940 + 2 * padding,
+      paddingLeft: padding,
+      paddingRight:padding
+    });
+  },
+
   render() {
     return (
       <table style={styles.table}>
@@ -107,6 +118,7 @@ const ProgressTable = React.createClass({
           </tr>
           <tr style={{...styles.lightRow, ...styles.bottomRow}}>
             <td style={styles.col1}>
+              {/* TODO: This should be top aligned for multiline rows?*/}
               <div style={styles.colText}>3. Real-life Algorithms: Plant a Seed</div>
             </td>
             <td style={styles.col2}>
