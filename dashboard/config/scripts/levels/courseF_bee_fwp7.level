@@ -36,8 +36,8 @@
     "instructions_important": "false",
     "markdown_instructions": "**Challenge:** Something looks a little different. Modify your function to make honey as well.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need a second parameter for this function, only a second `if` statement.\",\"hint_id\":\"courseF_bee_fwp7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dd9c99446ee6e2833e4d66f535ba19dd/courseF_bee_fwp7.mp3\"}]",
-    "contained_level_names": null,
-    "instructions": "**Challenge:** Modify your function to make honey as well."
+    "instructions": "**Challenge:** Modify your function to make honey as well.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
