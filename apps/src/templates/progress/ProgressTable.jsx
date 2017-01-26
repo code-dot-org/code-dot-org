@@ -3,7 +3,7 @@ import ProgressBubbleSet from './ProgressBubbleSet';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import { connect } from 'react-redux';
-import { stageNames, statusByStage, urlsByStage } from '@cdo/apps/code-studio/progressRedux';
+import { lessonNames, statusByStage, urlsByStage } from '@cdo/apps/code-studio/progressRedux';
 
 const lighterBorder = color.border_light_gray;
 
@@ -15,6 +15,7 @@ const styles = {
     borderTopColor: color.border_gray,
     borderRightColor: lighterBorder,
     borderBottomColor: lighterBorder,
+    float: 'left'
   },
   headerRow: {
     backgroundColor: color.table_header,
@@ -55,7 +56,7 @@ const styles = {
 
 const ProgressTable = React.createClass({
   propTypes: {
-    stageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     statusByStage: PropTypes.arrayOf(
       PropTypes.arrayOf(PropTypes.string)
     ).isRequired,
@@ -78,13 +79,13 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { stageNames, statusByStage, urlsByStage } = this.props;
+    const { lessonNames, statusByStage, urlsByStage } = this.props;
     return (
       <table style={styles.table}>
         <thead>
           <tr style={styles.headerRow}>
             <td style={styles.col1}>
-              <div style={styles.colText}>{i18n.stageName()}</div>
+              <div style={styles.colText}>{i18n.lessonName()}</div>
             </td>
             <td style={styles.col2}>
               <div style={styles.colText}>{i18n.yourProgress()}</div>
@@ -93,7 +94,7 @@ const ProgressTable = React.createClass({
         </thead>
         <tbody>
           {
-            stageNames.map((stageName, index) => (
+            lessonNames.map((lessonName, index) => (
               <tr
                 key={index}
                 style={{
@@ -103,7 +104,7 @@ const ProgressTable = React.createClass({
               >
                 <td style={styles.col1}>
                   <div style={styles.colText}>
-                    {`${index + 1}. ${stageName}`}
+                    {`${index + 1}. ${lessonName}`}
                   </div>
                 </td>
                 <td style={styles.col2}>
@@ -124,7 +125,7 @@ const ProgressTable = React.createClass({
 });
 
 export default connect(state => ({
-  stageNames: stageNames(state.progress),
+  lessonNames: lessonNames(state.progress),
   statusByStage: statusByStage(state.progress),
   urlsByStage: urlsByStage(state.progress)
 }))(ProgressTable);
