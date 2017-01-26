@@ -72,7 +72,7 @@ let siteChecker = new blc.SiteChecker(options, {
       totalLinkCount.toLocaleString() + " links in " +
       totalPageCount.toLocaleString() + " pages, " +
       brokenLinkCount.toLocaleString() + " were broken, and " +
-      ignoredLinkCount.toLocaleString() + " were skipped due to ignorelist.)_");
+      ignoredLinkCount.toLocaleString() + " were skipped due to ignore list.)_");
   }
 });
 
