@@ -31,7 +31,7 @@ const style = {
   },
   noCharacterSelected: {
     textAlign: 'center',
-    padding: 30,
+    padding: '100px 0',
     fontSize: 'x-large',
     color: color.light_gray
   }
@@ -126,7 +126,7 @@ const PublicKeyCryptographyWidget = React.createClass({
     }
     return (
       <div style={style.noCharacterSelected}>
-        <FontAwesome icon="arrow-left"/> Pick a character.
+        Please pick a character first.
       </div>
     );
   },
