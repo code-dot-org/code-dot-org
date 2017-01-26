@@ -13,6 +13,9 @@ const CONTINUOUS_METER_OVER_MODULUS = 400;
 const WEDGE_OUTER_RADIUS = 48;
 // Radius of the inner edge of a wedge clock segment
 const WEDGE_INNER_RADIUS = 25;
+// How long to wait on the last value before ending the animation:
+// Switching to the larger number and in the case of a zero, fading to an empty pie.
+const FINALIZATION_DELAY = 200;
 
 const COLOR = {
   clockFace: color.lightest_cyan,
@@ -40,6 +43,7 @@ const ModuloClock = React.createClass({
 
   getInitialState() {
     return {
+      startTime: null,
       currentDividend: 0
     };
   },
@@ -56,32 +60,35 @@ const ModuloClock = React.createClass({
     const maximumTimePerSegment = Math.min(1000, maximumDuration / 10);
 
     this.targetDividend = dividend;
-    this.startTime = Date.now();
     this.interval = setInterval(this.tick, 33);
     this.onStep = onStep || function () {};
     this.onComplete = onComplete || function () {};
     this.duration = Math.min(maximumDuration, dividend * maximumTimePerSegment);
-    this.setState({currentDividend: 0});
+    this.setState({startTime: Date.now(), currentDividend: 0});
   },
 
   tick() {
-    const elapsedTime = Date.now() - this.startTime;
+
+    const elapsedTime = Date.now() - this.state.startTime;
     if (elapsedTime < this.duration) {
       const currentDividend = Math.floor(easeOutCircular(elapsedTime, 0, this.targetDividend, this.duration));
       this.onStep(currentDividend);
       this.setState({currentDividend});
-    } else {
+    } else if (this.state.currentDividend !== this.targetDividend) {
+      // Snap to final value, but there's one more step before the animation ends.
+      this.setState({currentDividend: this.targetDividend});
+    } else if (elapsedTime >= this.duration + FINALIZATION_DELAY) {
+      // End the animation once the final value has been shown for a moment.
       clearInterval(this.interval);
       this.onComplete(this.targetDividend);
-      this.setState({currentDividend: this.targetDividend});
       this.interval = null;
-      this.startTime = null;
       this.onStep = null;
       this.onComplete = null;
+      this.setState({startTime: null});
     }
   },
 
-  renderSegments(dividend, modulus) {
+  renderSegments(dividend, modulus, isRunning) {
     const segmentGapInDegrees = modulus > SMALL_GAPS_OVER_MODULUS ? 0.5 : 1;
     const segmentGapRadians = segmentGapInDegrees * 2 * Math.PI / 360;
     const result = dividend % modulus;
@@ -105,22 +112,34 @@ const ModuloClock = React.createClass({
       ];
     } else {
       // Render distinct segments
-      const wedgePath = createWedgePath((2 * Math.PI / modulus) - segmentGapRadians);
-      return _.range(0, modulus).map(n => (
-        <path
-          key={n}
-          d={wedgePath}
-          transform={`rotate(${(n - 0.5) * 360 / modulus} 50 50)`}
-          fill={n <= result ? COLOR.fullWedge : COLOR.emptyWedge}
-        />
-      ));
+      const segmentCount = modulus;
+      const wedgePath = createWedgePath((2 * Math.PI / segmentCount) - segmentGapRadians);
+      return _.range(0, segmentCount).map(n => {
+        // When running we want R=0 to be a full pie, for a nice smooth
+        // animation (that doesn't skip a pie slice).
+        // When not running we want R=0 to be an empty pie, to accurately
+        // represent the final result.
+        // Also when not running we enable a fade effect.
+        // Together these create the special situation where you animate to a
+        // full pie (d%m=0), stop animating, and fade to an empty pie.
+        const isSegmentFull = n < result || (isRunning && 0 === result);
+        return (
+          <path
+            key={n}
+            d={wedgePath}
+            transform={`rotate(${n  * 360 / segmentCount} 50 50)`}
+            fill={isSegmentFull ? COLOR.fullWedge : COLOR.emptyWedge}
+            style={!isRunning ? {transition: 'fill 1.5s'} : {}}
+          />
+        );
+      });
     }
   },
 
   render() {
     const modulus = Math.max(1, this.props.modulus);
-    const {currentDividend} = this.state;
-    const isRunning = !!this.interval;
+    const {startTime, currentDividend} = this.state;
+    const isRunning = startTime !== null;
     return (
       <div style={style.root}>
         <svg viewBox={`0 0 ${VIEWBOX_SIDE} ${VIEWBOX_SIDE}`} style={style.svg}>
@@ -130,7 +149,7 @@ const ModuloClock = React.createClass({
             r={VIEWBOX_SIDE / 2}
             fill={COLOR.clockFace}
           />
-          {this.renderSegments(currentDividend, modulus)}
+          {this.renderSegments(currentDividend, modulus, isRunning)}
           <text
             x={VIEWBOX_SIDE / 2}
             y={VIEWBOX_SIDE / 2 + (isRunning ? 3 : 5)}
