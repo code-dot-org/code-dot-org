@@ -40,7 +40,8 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "instructions": "Construct a new object from the user inputs, and append it to your array. (Click to see full instructions)",
-    "encrypted_examples": "uu+6tQJri7anKx7EkLsmZWfJc5YgC0yGS3cM8Gp8kKy5f+nc/8slbsIZanPf\nkJDV\n"
+    "encrypted_examples": "uu+6tQJri7anKx7EkLsmZWfJc5YgC0yGS3cM8Gp8kKy5f+nc/8slbsIZanPf\nkJDV\n",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>
