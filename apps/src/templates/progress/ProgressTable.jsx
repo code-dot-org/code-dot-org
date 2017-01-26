@@ -39,8 +39,9 @@ const styles = {
     borderRightWidth: 1,
     borderRightColor: lighterBorder,
     borderRightStyle: 'solid',
-    width: 240,
-    minWidth: 240,
+    width: 200,
+    minWidth: 200,
+    maxWidth: 200,
     lineHeight: '52px',
     color: '#5B6770',
     letterSpacing: -0.11,
@@ -61,6 +62,8 @@ const styles = {
     // TODO - "correct" font?
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   }
 };
 
@@ -82,7 +85,7 @@ const ProgressTable = React.createClass({
         <tbody>
           <tr style={styles.lightRow}>
             <td style={styles.col1}>
-              <div style={styles.colText}>Happy Maps</div>
+              <div style={styles.colText}>1. Happy Maps</div>
             </td>
             <td style={styles.col2}>
               <ProgressBubbleSet
@@ -91,14 +94,30 @@ const ProgressTable = React.createClass({
               />
             </td>
           </tr>
-          <tr style={{...styles.darkRow, ...styles.bottomRow}}>
+          <tr style={styles.darkRow}>
             <td style={styles.col1}>
-              <div style={styles.colText}>Move it, Move it</div>
+              <div style={styles.colText}>2. Move it, Move it</div>
             </td>
             <td style={styles.col2}>
               <ProgressBubbleSet
                 startingNumber={1}
                 statuses={["perfect", "not_tried", "not_tried", "not_tried"]}
+              />
+            </td>
+          </tr>
+          <tr style={{...styles.lightRow, ...styles.bottomRow}}>
+            <td style={styles.col1}>
+              <div style={styles.colText}>3. Real-life Algorithms: Plant a Seed</div>
+            </td>
+            <td style={styles.col2}>
+              <ProgressBubbleSet
+                startingNumber={1}
+                statuses={[
+                  "perfect", "not_tried", "not_tried", "not_tried", "not_tried",
+                  "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
+                  "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
+                  "not_tried", "not_tried", "not_tried", "not_tried", "not_tried"
+                ]}
               />
             </td>
           </tr>
