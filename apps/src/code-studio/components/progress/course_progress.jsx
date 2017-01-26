@@ -6,6 +6,8 @@ import _ from 'lodash';
 import { stageShape } from './types';
 import CourseProgressRow from './course_progress_row.jsx';
 import HrefButton from '@cdo/apps/templates/HrefButton';
+import SectionSelector from './SectionSelector';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import color from "../../../util/color";
 import i18n from '@cdo/locale';
 
@@ -16,6 +18,11 @@ const styles = {
     borderRadius: 5,
     background: color.cyan,
     color: color.white
+  },
+  sectionSelector: {
+    position: 'absolute',
+    // offset selector's margin so that we're aligned flush right
+    right: -10
   }
 };
 
@@ -32,7 +39,8 @@ const CourseProgress = React.createClass({
     professionalLearningCourse: React.PropTypes.bool,
     focusAreaPositions: React.PropTypes.arrayOf(React.PropTypes.number),
     stages: React.PropTypes.arrayOf(stageShape),
-    peerReviewStage: stageShape
+    peerReviewStage: stageShape,
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
   },
 
   render() {
@@ -41,7 +49,8 @@ const CourseProgress = React.createClass({
       peerReviewStage,
       professionalLearningCourse,
       focusAreaPositions,
-      scriptName
+      scriptName,
+      viewAs
     } = this.props;
     const groups = _.groupBy(stages, stage => (stage.flex_category || 'Content'));
     // Add an additional group for any peer reviews
@@ -71,6 +80,11 @@ const CourseProgress = React.createClass({
             type="default"
             style={{marginLeft: 10, marginBottom: 10}}
           />
+        }
+        {this.props.onOverviewPage && viewAs === ViewType.Teacher &&
+          <span style={styles.sectionSelector}>
+            <SectionSelector/>
+          </span>
         }
         <div className="user-stats-block">
           {_.map(groups, (stages, group) =>
@@ -106,5 +120,6 @@ export default connect(state => ({
   professionalLearningCourse: state.progress.professionalLearningCourse,
   focusAreaPositions: state.progress.focusAreaPositions,
   stages: state.progress.stages,
-  peerReviewStage: state.progress.peerReviewStage
+  peerReviewStage: state.progress.peerReviewStage,
+  viewAs: state.stageLock.viewAs
 }))(Radium(CourseProgress));
