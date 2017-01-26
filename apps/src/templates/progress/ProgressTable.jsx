@@ -5,60 +5,47 @@ import i18n from '@cdo/locale';
 import { connect } from 'react-redux';
 import { stageNames, statusByStage, urlsByStage } from '@cdo/apps/code-studio/progressRedux';
 
-const lighterBorder = '#D8D8D8';
+const lighterBorder = color.border_light_gray;
 
 const styles = {
   table: {
-    backgroundColor: '#F6F6F6'
-    // TODO - get borderRadius working correctly (mgith be able to have all of
-    // our existing borders become less complicated?)
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderLeftColor: color.border_gray,
+    borderTopColor: color.border_gray,
+    borderRightColor: lighterBorder,
+    borderBottomColor: lighterBorder,
   },
   headerRow: {
-    borderTopWidth: 1,
-    borderTopColor: color.border_gray,
-    borderTopStyle: 'solid',
-    backgroundColor: '#ECECEC',
-  },
-  bottomRow: {
-    borderBottomWidth: 1,
-    // TODO - should this be primary or secondary?
-    borderBottomColor: lighterBorder,
-    borderBottomStyle: 'solid',
+    backgroundColor: color.table_header,
   },
   lightRow: {
-    backgroundColor: '#FCFCFC'
+    backgroundColor: color.table_light_row
   },
   darkRow: {
-    // TODO - this wasnt provided to me
-    backgroundColor: '#F4F4F4'
+    backgroundColor: color.table_dark_row
   },
   col1: {
-    borderLeftWidth: 1,
-    borderLeftColor: color.border_gray,
-    borderLeftStyle: 'solid',
-    borderRightWidth: 1,
-    borderRightColor: lighterBorder,
-    borderRightStyle: 'solid',
     width: 200,
     minWidth: 200,
     maxWidth: 200,
     lineHeight: '52px',
-    color: '#5B6770',
+    color: color.charcoal,
     letterSpacing: -0.11,
     whiteSpace: 'nowrap',
     paddingLeft: 20,
-    paddingRight: 20
+    paddingRight: 20,
+    borderRightWidth: 1,
+    borderRightColor: lighterBorder,
+    borderRightStyle: 'solid',
   },
   col2: {
     width: '100%',
-    borderRightStyle: 'solid',
-    borderRightWidth: 1,
-    borderRightColor: lighterBorder,
     paddingLeft: 20,
     paddingRight: 20
   },
   colText: {
-    color: '#5B6770',
+    color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
     overflow: 'hidden',
@@ -77,7 +64,10 @@ const ProgressTable = React.createClass({
     ).isRequired
   },
   componentDidMount() {
-    // TODO - dont ship this way
+    // TODO - This modifies things outside of our scope. This is done right now
+    // because we only want to modify this (dashboard-owned) markup in the case
+    // where an experiment is enabled (leading to this component being rendered).
+    // Once we're not behind an experiment, we should make these changes elsewhere.
     const padding = 80;
     $(".container.main").css({
       width: 'initial',
@@ -108,8 +98,7 @@ const ProgressTable = React.createClass({
                 key={index}
                 style={{
                   ...((index % 2 === 0) && styles.lightRow),
-                  ...((index % 2 === 1) && styles.darkRow),
-                  ...((index + 1 === stageNames.length) && styles.bottomRow)
+                  ...((index % 2 === 1) && styles.darkRow)
                 }}
               >
                 <td style={styles.col1}>
