@@ -401,6 +401,10 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
+
+      namespace :projects do
+        get 'section/:section_id', to: 'section_projects#index', defaults: { format: 'json' }
+      end
     end
   end
 

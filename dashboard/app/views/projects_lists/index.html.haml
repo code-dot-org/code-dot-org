@@ -1,4 +1,4 @@
 - content_for :head do
-  %script{src: minifiable_asset_path('/assets/js/projects_lists/index.js'), data: {projectsListData: @projects_list_data.to_json}}
+  %script{src: minifiable_asset_path('/assets/js/projects_lists/index.js'), data: {section: params[:section_id]}}
 
 #projects-list
