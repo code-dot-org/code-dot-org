@@ -1,11 +1,11 @@
 import React from 'react';
+import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 
 export const DOT_SIZE = 30;
 
 // TODO - not sure I like these being keyed by these strings.
 // TODO - share with progress_dot?
-// TODO - change to orange on mouseover?
 const bubbleColors = {
   submitted: {
     color: color.white,
@@ -59,6 +59,12 @@ const styles = {
     marginRight: 3,
     marginTop: 5,
     marginBottom: 5,
+    transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
+    ':hover': {
+      textDecoration: 'none',
+      color: color.white,
+      backgroundColor: color.level_current
+    }
   }
 };
 
@@ -86,4 +92,4 @@ const ProgressBubble = React.createClass({
 
 ProgressBubble.height = DOT_SIZE + styles.main.marginTop + styles.main.marginBottom;
 
-export default ProgressBubble;
+export default Radium(ProgressBubble);
