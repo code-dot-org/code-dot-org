@@ -41,7 +41,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "should show index with only art" do
-    get :index, app: Game::ARTIST, page: 1
+    get :index, params: {app: Game::ARTIST, page: 1}
 
     assert_response :success
 
@@ -50,7 +50,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "should show index with only apps" do
-    get :index, app: Game::PLAYLAB, page: 1
+    get :index, params: {app: Game::PLAYLAB, page: 1}
 
     assert_response :success
 
@@ -59,7 +59,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "annoying page number redirects to first page" do
-    get :index, app: Game::PLAYLAB, page: 100000
+    get :index, params: {app: Game::PLAYLAB, page: 100000}
 
     assert_redirected_to '/gallery'
   end
@@ -69,7 +69,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     u.destroy
     @playlab_gallery_activity.reload
 
-    get :index, page: 1
+    get :index, params: {page: 1}
 
     assert_response :success
 
@@ -101,7 +101,14 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
     assert_difference('GalleryActivity.count') do
       level_source = create(:level_source, level: @new_level)
-      post :create, gallery_activity: { level_source_id: level_source.id, activity_id: @new_activity.id }, format: :json
+      post :create,
+        params: {
+          gallery_activity: {
+            level_source_id: level_source.id,
+            activity_id: @new_activity.id
+          }
+        },
+        format: :json
     end
 
     assert_equal @user, assigns(:gallery_activity).user
@@ -118,7 +125,11 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     gallery_activity = GalleryActivity.create!(activity_id: @new_activity.id, user_id: @user.id)
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { activity_id: @new_activity.id }, format: :json
+      post :create,
+        params: {
+          gallery_activity: { activity_id: @new_activity.id }
+        },
+        format: :json
     end
 
     assert_equal gallery_activity, assigns(:gallery_activity)
@@ -131,7 +142,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     sign_in @user
 
     assert_difference('GalleryActivity.count', -1) do
-      delete :destroy, id: @gallery_activity, format: :json
+      delete :destroy, params: {id: @gallery_activity}, format: :json
     end
 
     assert_response :no_content
@@ -141,7 +152,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do
-      delete :destroy, id: @gallery_activity, format: :json
+      delete :destroy, params: {id: @gallery_activity}, format: :json
     end
 
     assert_response :forbidden
@@ -152,7 +163,11 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     create :activity, user: another_user
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { activity_id: @new_activity.id, user_id: @user.id }, format: :json
+      post :create,
+        params: {
+          gallery_activity: {activity_id: @new_activity.id, user_id: @user.id}
+        },
+        format: :json
     end
 
     assert_response :forbidden
@@ -162,7 +177,9 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { activity_id: @new_activity.id }, format: :json
+      post :create,
+        params: {gallery_activity: { activity_id: @new_activity.id }},
+        format: :json
     end
 
     assert_response :forbidden
@@ -172,7 +189,9 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { activity_id: 222222 }, format: :json
+      post :create,
+        params: {gallery_activity: { activity_id: 222222 }},
+        format: :json
     end
 
     assert_response :forbidden
@@ -183,7 +202,9 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     activity = create :activity, user: another_user
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { activity_id: activity.id, user_id: 22222 }, format: :json
+      post :create,
+        params: {gallery_activity: {activity_id: activity.id, user_id: 22222}},
+        format: :json
     end
 
     assert_response :forbidden
@@ -194,7 +215,9 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     activity = create :activity, user: another_user
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { activity_id: activity.id }, format: :json
+      post :create,
+        params: {gallery_activity: { activity_id: activity.id }},
+        format: :json
     end
 
     assert_response 401
@@ -204,7 +227,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     sign_in create(:user)
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { stub: nil }, format: :json
+      post :create, params: {gallery_activity: { stub: nil }}, format: :json
     end
 
     assert_response :forbidden
@@ -214,7 +237,11 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     sign_in @user
 
     assert_no_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { activity_id: @gallery_activity.activity_id }, format: :json
+      post :create,
+        params: {
+          gallery_activity: {activity_id: @gallery_activity.activity_id}
+        },
+        format: :json
     end
 
     # pretend to succeed
