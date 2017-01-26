@@ -1,0 +1,5 @@
+name 'courseA_external_stevie1'
+title 'Stevie and the Marbles Title Page'
+markdown <<MARKDOWN
+![](https://images.code.org/d54609efe7adc66e21771d9eb8bfe138-image-1485453109449.png)
+MARKDOWN

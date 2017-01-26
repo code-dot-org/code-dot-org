@@ -39,7 +39,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Write event handlers for the Edit Contacts UI elements. (Click to see full instructions)",
-    "encrypted_examples": "bKdCr0WquxvAhm3a92Hfs+GiO0lfLyYgJkWCo9r+OTubw13UdP77RW99UGmy\nbl8x\n"
+    "encrypted_examples": "bKdCr0WquxvAhm3a92Hfs+GiO0lfLyYgJkWCo9r+OTubw13UdP77RW99UGmy\nbl8x\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": ""
