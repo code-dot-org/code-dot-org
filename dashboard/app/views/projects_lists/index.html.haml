@@ -1,13 +1,4 @@
 - content_for :head do
-  %script{src:'/assets/js/projects_lists/index.js'}
+  %script{src: minifiable_asset_path('/assets/js/projects_lists/index.js'), data: {projectsListData: @projects_list_data.to_json}}
 
 #projects-list
-
-:ruby
-  reactProps = {
-    projectsData: @projects_list_data
-  }
-
-:javascript
-  ReactDOM.render(React.createElement(window.dashboard.ProjectsList, #{reactProps.to_json}),
-    document.getElementById('projects-list'));
