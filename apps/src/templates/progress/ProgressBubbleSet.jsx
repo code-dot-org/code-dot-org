@@ -41,13 +41,19 @@ const ProgressBubbleSet = React.createClass({
     startingNumber: React.PropTypes.number.isRequired,
     statuses: React.PropTypes.arrayOf(
       React.PropTypes.string
-    )
+    ).isRequired,
+    urls: React.PropTypes.arrayOf(
+      React.PropTypes.string
+    ).isRequired
   },
 
   render() {
-    const { startingNumber, statuses } = this.props;
+    const { startingNumber, statuses, urls } = this.props;
 
-    // TODO - handle case where our set wraps onto a second line
+    if (statuses.length !== urls.length) {
+      throw new Error('ProgressBubbleSet requires the same number of statuses and urls');
+    }
+
     return (
       <div style={styles.main}>
         {statuses.map((status, index) => (
@@ -66,6 +72,7 @@ const ProgressBubbleSet = React.createClass({
               <ProgressBubble
                 number={startingNumber + index}
                 status={status}
+                url={urls[index]}
               />
             </div>
           </div>

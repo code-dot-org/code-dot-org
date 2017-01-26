@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 
@@ -70,12 +70,13 @@ const styles = {
 
 const ProgressBubble = React.createClass({
   propTypes: {
-    number: React.PropTypes.number.isRequired,
-    status: React.PropTypes.oneOf(Object.keys(bubbleColors)).isRequired
+    number: PropTypes.number.isRequired,
+    status: PropTypes.oneOf(Object.keys(bubbleColors)).isRequired,
+    url: PropTypes.string
   },
 
   render() {
-    const { number, status } = this.props;
+    const { number, status, url } = this.props;
 
     const style = {
       ...styles.main,
@@ -83,9 +84,11 @@ const ProgressBubble = React.createClass({
     };
 
     return (
-      <div style={style}>
-        {number}
-      </div>
+      <a href={url ? url + location.search : undefined}>
+        <div style={style}>
+          {number}
+        </div>
+      </a>
     );
   }
 });

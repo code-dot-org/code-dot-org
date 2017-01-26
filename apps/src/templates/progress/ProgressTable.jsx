@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from "@cdo/apps/util/color";
 import { connect } from 'react-redux';
-import { stageNames, statusByStage } from '@cdo/apps/code-studio/progressRedux';
+import { stageNames, statusByStage, urlsByStage } from '@cdo/apps/code-studio/progressRedux';
 
 const lighterBorder = '#D8D8D8';
 
@@ -75,6 +75,9 @@ const ProgressTable = React.createClass({
     stageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     statusByStage: PropTypes.arrayOf(
       PropTypes.arrayOf(PropTypes.string)
+    ).isRequired,
+    urlsByStage: PropTypes.arrayOf(
+      PropTypes.arrayOf(PropTypes.string)
     ).isRequired
   },
   componentDidMount() {
@@ -89,7 +92,7 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { stageNames, statusByStage } = this.props;
+    const { stageNames, statusByStage, urlsByStage } = this.props;
     return (
       <table style={styles.table}>
         <thead>
@@ -122,6 +125,7 @@ const ProgressTable = React.createClass({
                   <ProgressBubbleSet
                     startingNumber={1}
                     statuses={statusByStage[index]}
+                    urls={urlsByStage[index]}
                   />
                 </td>
               </tr>
@@ -136,5 +140,6 @@ const ProgressTable = React.createClass({
 
 export default connect(state => ({
   stageNames: stageNames(state.progress),
-  statusByStage: statusByStage(state.progress)
+  statusByStage: statusByStage(state.progress),
+  urlsByStage: urlsByStage(state.progress)
 }))(ProgressTable);

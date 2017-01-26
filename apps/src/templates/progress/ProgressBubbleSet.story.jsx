@@ -1,7 +1,16 @@
 import React from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
 
-console.log('pbs');
+/**
+ * Make an array of size n where each element is theprovided item
+ */
+const arrayOfItem = (n, item) => {
+  let contents = [];
+  for (var i = 0; i < n; i++) {
+    contents.push(item);
+  }
+  return contents;
+};
 
 export default storybook => {
   storybook
@@ -13,6 +22,13 @@ export default storybook => {
           <ProgressBubbleSet
             startingNumber={3}
             statuses={["perfect", "not_tried", "attempted", "passed", "submitted"]}
+            urls={[
+              '/foo/bar',
+              '/foo/bar',
+              '/foo/bar',
+              '/foo/bar',
+              '/foo/bar',
+            ]}
           />
         )
       },
@@ -27,6 +43,7 @@ export default storybook => {
               "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
               "not_tried", "not_tried", "not_tried", "not_tried", "not_tried"
             ]}
+            urls={arrayOfItem(20, '/foo/bar')}
           />
         )
       }
