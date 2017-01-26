@@ -9,10 +9,11 @@ class SurveyResultsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     assert_creates(SurveyResult) do
-      post :create, params: {
-        survey: {kind: 'Diversity2016', survey2016_ethnicity_asian: 22, survey2016_foodstamps: 3},
+      post :create,
+        params: {
+          survey: {kind: 'Diversity2016', survey2016_ethnicity_asian: 22, survey2016_foodstamps: 3}
+        },
         format: :json
-      }
     end
 
     survey_result = SurveyResult.where(user: @teacher).first
@@ -28,10 +29,11 @@ class SurveyResultsControllerTest < ActionController::TestCase
     nps_value = 10
     nps_comment = "Rock on"
     assert_creates(SurveyResult) do
-      post :create, params: {
-        survey: {kind: 'NetPromoterScore2015', nps_value: nps_value, nps_comment: nps_comment},
+      post :create,
+        params: {
+          survey: {kind: 'NetPromoterScore2015', nps_value: nps_value, nps_comment: nps_comment}
+        },
         format: :json
-      }
     end
 
     survey_result = SurveyResult.where(user: @teacher).first
@@ -45,10 +47,11 @@ class SurveyResultsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     assert_creates(SurveyResult) do
-      post :create, params: {
-        survey: {kind: 'Diversity2016', nonwhitelisted: 'untrusted data'},
+      post :create,
+        params: {
+          survey: {kind: 'Diversity2016', nonwhitelisted: 'untrusted data'}
+        },
         format: :json
-      }
     end
 
     survey_result = SurveyResult.where(user: @teacher).first

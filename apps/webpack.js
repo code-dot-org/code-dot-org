@@ -135,7 +135,12 @@ var karmaConfig = _.extend({}, baseConfig, {
     "cheerio": "window",
     "react/addons": true,
     "react/lib/ExecutionEnvironment": true,
-    "react/lib/ReactContext": true
+    "react/lib/ReactContext": true,
+
+    // The below are necessary for serialport import to not choke during webpack-ing.
+    fs: '{}',
+    child_process: true,
+    bindings: true
   },
   plugins: [
     new webpack.ProvidePlugin({React: 'react'}),

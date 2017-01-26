@@ -58,7 +58,8 @@
     "markdown_instructions": "# Using Objects to Specify What to Delete\r\n\r\nWhen deleting an object in the database **the only property the database checks is `id` - *everything else* in the object is ignorned by `deleteRecord`**.\r\n\r\nThe **key takeway** is that you can pass *any* object to `deleteRecord`. As long as it has a property called `id` the database will try to delete a record with that ID.\r\n\r\nLet's look at an example. \r\n\r\n# Do This:\r\n <img src=\"https://images.code.org/0af097cf5062c49743275f2c3df21bf7-image-1449864027240.gif\" style=\"float: right; width: 350px\">\r\n \r\n**Starter code is provided** that constructs an object called `song` and sets `song.id = 9` (the ID of \"Little Bunny Foo Foo\"). Additional \"junk\" properties are added as well. The \"mySongs\" table in the database has been restored to its original state.\r\n \r\n* **Replace the second parameter of deleteRecord to use the `song` object** instead of `{id:1}` (see animation at right).\r\n* Run your program and **confirm that the record with id 9 is deleted** by checking in the Data Viewer.\r\n* **Change the ID in the `song` object** to the ID of a different record in your database.\r\n* Run your program and **confirm another record in \"mySongs\" was deleted.**",
     "instructions": "Use the song object to delete multiple objects in the database by changing only the \"id\" property. (Click for full Instructions).",
     "start_blocks": "var song = {};\r\nsong.id = 9;\r\nsong.someVal = \"Blah Blah Blah\";\r\nsong.randoThing = 9192;\r\nsong.someRandomProperty = \"hello\";\r\n\r\ndeleteRecord(\"mySongs\", {id:1}, function(){\r\n console.log(\"Successful Delete\"); \r\n});",
-    "encrypted_examples": "Lf0s8f3iDBQSLd+d0I44AqOXj2c3lEn3zxslXDmJUGlrUAvP2AbIsL3qtzdY\niY/A\n"
+    "encrypted_examples": "Lf0s8f3iDBQSLd+d0I44AqOXj2c3lEn3zxslXDmJUGlrUAvP2AbIsL3qtzdY\niY/A\n",
+    "contained_level_names": null
   },
   "published": true
 }]]></config>
