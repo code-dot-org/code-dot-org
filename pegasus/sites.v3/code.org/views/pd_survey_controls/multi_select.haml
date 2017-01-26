@@ -1,6 +1,6 @@
 -# Expected params: name, label, form, required (default: true)
 
--required = true unless defined? required
+-required = true unless locals.key? :required
 
 %div.form-group{for: name}
   %label.control-label{for: name}
