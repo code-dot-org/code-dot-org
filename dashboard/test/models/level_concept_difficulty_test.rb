@@ -30,4 +30,15 @@ class LevelConceptDifficultyTest < ActiveSupport::TestCase
     level.destroy
     assert !LevelConceptDifficulty.exists?(lcd_id)
   end
+
+  test 'concept_difficulty_as_string' do
+    level_concept_difficulty = LevelConceptDifficulty.new(
+      level: create(:level),
+      sequencing: 1,
+      repeat_loops: 2
+    )
+
+    assert_equal 'seq: 1, repeat: 2',
+      level_concept_difficulty.concept_difficulties_as_string
+  end
 end
