@@ -217,7 +217,7 @@ export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocSc
 // Do we have one or more lockable stages
 export const hasLockableStages = state => state.stages.some(stage => stage.lockable);
 
-export const stageNames = state => state.stages.map(stage => stage.name);
+export const lessonNames = state => state.stages.map(stage => stage.name);
 // TODO - account for locked levels here and with URLs
 export const statusByStage = state => (
   state.stages.map(stage => stage.levels.map(level => level.status))
