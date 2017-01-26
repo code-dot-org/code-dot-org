@@ -60,8 +60,7 @@ def main
 
     # Continue to advance the destination pointer until the destination email address in question
     # is the same or later alphabetically as the source email address.
-    while (!contact_rollup_dest.nil?) &&
-        ((contact_rollup_dest[:email] <=> email_src) == -1)
+    while (!contact_rollup_dest.nil?) && (contact_rollup_dest[:email] < email_src)
       contact_rollup_dest = grab_next(dest_iterator)
     end
 
