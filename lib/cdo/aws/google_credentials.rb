@@ -56,8 +56,8 @@ module Cdo
     def initialize(options = {})
       @oauth_attempted = false
       @assume_role_params = options.slice(
-        *Aws::STS::Client.api.operation(:assume_role_with_web_identity)
-          .input.shape.member_names
+        *Aws::STS::Client.api.operation(:assume_role_with_web_identity).
+          input.shape.member_names
       )
 
       @profile = options[:profile] || DEFAULT_PROFILE
@@ -91,6 +91,7 @@ module Cdo
     # Store cached credentials to the standard Google Application Default Credentials location.
     # Ref: http://goo.gl/IUuyuX
     def google_oauth
+      return nil if @oauth_attempted
       @oauth_attempted = true
       require 'google/api_client/auth/installed_app'
       flow = Google::APIClient::InstalledAppFlow.new(
@@ -105,7 +106,10 @@ module Cdo
 
     def refresh
       assume_role = begin
-        id_token = google_client.tap(&:refresh!).id_token
+        client = google_client
+        return unless client
+        id_token = google_client.id_token ||
+          google_client.tap(&:refresh!).id_token
         # Decode the JWT id_token to use the Google email as the AWS role session name.
         token_params = JWT.decode(id_token, nil, false).first
         @client.assume_role_with_web_identity(@assume_role_params.merge(
@@ -135,13 +139,16 @@ Google ID: #{token_params['sub']}"
     # Use `aws configure set` to write credentials and expiration to AWS credentials file.
     # AWS CLI is needed because writing AWS credentials is not supported by the AWS Ruby SDK.
     def write_credentials
-      %w(access_key_id secret_access_key session_token).map do |x|
-        ["aws_#{x}", @credentials.send(x)]
-      end.to_h.merge(expiration: @expiration).each do |key, value|
+      %w(
+        access_key_id
+        secret_access_key
+        session_token
+      ).map{|x| ["aws_#{x}", @credentials.send(x)]}.
+        to_h.
+        merge(expiration: @expiration).each do |key, value|
         system("aws configure set #{key} #{value} --profile #{@profile}")
       end
     end
-
   end
 
   # Patch Aws::SharedConfig to allow fetching arbitrary keys from the shared config.
