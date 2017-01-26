@@ -1,3 +1,38 @@
-class ProjectsList
+module ProjectsList
+  class << self
+    def fetch_section_projects(section_id)
+      [].tap do |projects_list_data|
+        Section.find(section_id).students.each do |student|
+          student_storage_id = PEGASUS_DB[:user_storage_ids].where(user_id: student.id).first
+          next unless student_storage_id
+          PEGASUS_DB[:storage_apps].where(storage_id: student_storage_id[:id], state: 'active').each do |project|
+            # The channel id stored in the project's value field may not be reliable
+            # when apps are remixed, so recompute the channel id.
+            channel_id = storage_encrypt_channel_id(student_storage_id[:id], project[:id])
+            project_row_data = get_project_row_data(student, project, channel_id)
+            projects_list_data << project_row_data if project_row_data
+          end
+        end
+      end
+    end
 
+    private
+
+    # e.g. '/p/applab' -> 'applab'
+    def project_type(level)
+      level && level.split('/')[2]
+    end
+
+    def get_project_row_data(student, project, channel_id)
+      project_value = project[:value] ? JSON.parse(project[:value]) : {}
+      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
+      {
+        channel: channel_id,
+        name: project_value['name'],
+        studentName: student.name,
+        type: project_type(project_value['level']),
+        updatedAt: project_value['updatedAt'],
+      }
+    end
+  end
 end
