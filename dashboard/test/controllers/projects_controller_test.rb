@@ -103,7 +103,7 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in create(:young_student_with_tos_teacher)
 
     %w(applab gamelab).each do |lab|
-      get :load, key: lab
+      get :load, params: {key: lab}
 
       assert @response.headers['Location'].ends_with? '/edit'
     end
@@ -116,7 +116,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
-      get :load, key: lab
+      get :load, params: {key: lab}
 
       assert_redirected_to '/'
     end
@@ -129,7 +129,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
-      get :load, key: lab
+      get :load, params: {key: lab}
 
       assert_redirected_to '/'
     end
@@ -143,7 +143,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @controller.send :pairings=, [@navigator]
 
     %w(applab gamelab).each do |lab|
-      get :load, key: lab
+      get :load, params: {key: lab}
 
       assert @response.headers['Location'].ends_with? '/edit'
     end
