@@ -1,5 +1,5 @@
 /**
- * Entry point for projectsList.js bundle
+ * Entry point for projects_list/index.js bundle
  */
 
 import $ from 'jquery';
@@ -10,10 +10,18 @@ import ProjectsList from '@cdo/apps/templates/projects/ProjectsList';
 $(document).ready(initPage);
 
 function initPage() {
-  const script = document.querySelector('script[data-projectsListData]');
-  const projectsData = JSON.parse(script.dataset.projectslistdata);
+  const script = document.querySelector('script[data-section]');
+  const sectionId = JSON.parse(script.dataset.section);
+  const dataUrl = `/api/v1/projects/section/${sectionId}`;
   const element = document.getElementById('projects-list');
 
-  ReactDOM.render(React.createElement(ProjectsList, {projectsData}), element);
+  $.ajax({
+    method: 'GET',
+    url: dataUrl,
+    dataType: 'json'
+  }).done(projectsData => {
+    ReactDOM.render(React.createElement(ProjectsList, {projectsData}), element);
+  });
+
 }
 
