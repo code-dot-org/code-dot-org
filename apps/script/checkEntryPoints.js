@@ -78,7 +78,6 @@ const SILENCED = [
   'netsim',
   'pd',
   'plc',
-  'projectsList',
   'publicKeyCryptography',
   'raceInterstitial',
   'schoolInfo',
