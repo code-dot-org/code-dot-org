@@ -40,7 +40,8 @@ const AnimationPicker = React.createClass({
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
     onUploadError: React.PropTypes.func.isRequired,
-    playAnimations: React.PropTypes.bool.isRequired
+    playAnimations: React.PropTypes.bool.isRequired,
+    goal: React.PropTypes.string,
   },
 
   onUploadClick() {
@@ -96,7 +97,8 @@ export default connect(state => ({
   uploadInProgress: state.animationPicker.uploadInProgress,
   uploadError: state.animationPicker.uploadError,
   is13Plus: state.pageConstants.is13Plus,
-  playAnimations: !state.pageConstants.allAnimationsSingleFrame
+  playAnimations: !state.pageConstants.allAnimationsSingleFrame,
+  goal: state.animationPicker.goal
 }), dispatch => ({
   onClose() {
     dispatch(hide());
