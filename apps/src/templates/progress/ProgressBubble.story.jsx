@@ -11,6 +11,16 @@ export default storybook => {
           <ProgressBubble
             number={3}
             status="perfect"
+            url="/foo/bar"
+          />
+        )
+      },
+      {
+        name:'bubble with no url',
+        story: () => (
+          <ProgressBubble
+            number={3}
+            status="perfect"
           />
         )
       },
@@ -20,6 +30,7 @@ export default storybook => {
           <ProgressBubble
             number={3}
             status="attempted"
+            url="/foo/bar"
           />
         )
       }
