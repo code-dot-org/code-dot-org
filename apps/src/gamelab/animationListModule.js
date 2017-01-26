@@ -44,11 +44,56 @@ export const START_LOADING_FROM_SOURCE = 'AnimationList/START_LOADING_FROM_SOURC
 export const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {string} version
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
+// Args: {AnimationKey} key, {!SerializedAnimation} props
+const SET_PENDING_ANIMATION_ADDITION = 'AnimationList/SET_PENDING_ANIMATION_ADDITION';
+// Args: none
+export const START_LOADING_ADDITION_FROM_SOURCE = 'AnimationList/START_LOADING_FROM_SOURCE';
+// Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
+export const DONE_LOADING_ADDITION_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SOURCE';
+// Args: none
+export const REMOVE_PENDING_ANIMATION_ADDITION = 'AnimationList/REMOVE_PENDING_ANIMATION_ADDITION';
+
 
 export default combineReducers({
   orderedKeys,
-  propsByKey
+  propsByKey,
+  pendingAnimationAddition
 });
+
+// pendingAnimationAddition is used for temporary storing additional
+// frames before they get added to the animation in Piskel.
+// pendingAnimationAddition gets added to animation in PiskelEditor.jsx
+function pendingAnimationAddition(state, action) {
+  state = state || [];
+  switch (action.type) {
+
+    case SET_PENDING_ANIMATION_ADDITION:
+      return {
+        key: action.key,
+        props: action.props
+      };
+
+    case REMOVE_PENDING_ANIMATION_ADDITION:
+      return {};
+
+    case START_LOADING_ADDITION_FROM_SOURCE:
+      return Object.assign({}, state, {
+        loadedFromSource: false
+      });
+
+    case DONE_LOADING_ADDITION_FROM_SOURCE:
+      return Object.assign({}, state, {
+        loadedFromSource: true,
+        saved: true,
+        blob: action.blob,
+        dataURI: action.dataURI,
+        sourceSize: action.sourceSize
+      });
+
+    default:
+      return state;
+  }
+}
 
 function orderedKeys(state, action) {
   state = state || [];
@@ -314,6 +359,7 @@ export function addAnimation(key, props) {
   };
 }
 
+
 /**
  * Add a library animation to the project.
  * @param {!SerializedAnimation} props
@@ -331,6 +377,37 @@ export function addLibraryAnimation(props) {
     }));
     let name = generateAnimationName(props.name, getState().animationList.propsByKey);
     dispatch(setAnimationName(key, name));
+    dashboard.project.projectChanged();
+  };
+}
+
+/**
+ * User selects new frames to add to the animation. Set these as pending
+ * before loading them into Piskel.
+ * @param {!AnimationKey} key
+ * @param {AnimationProps} props
+ * @returns {{type: string, key: AnimationKey, props: AnimationProps}}
+ */
+export function setPendingAnimationAddition(key, props) {
+  return {
+    type: SET_PENDING_ANIMATION_ADDITION,
+    key,
+    props
+  };
+}
+
+/**
+ * Add a library animation as additional frames to the current animation.
+ * @param {!SerializedAnimation} props
+ */
+export function addLibraryAnimationAddition(props) {
+  return (dispatch, getState) => {
+    var selectedAnimationKey = getState().animationTab.selectedAnimation;
+    const key = createUuid();
+    dispatch(setPendingAnimationAddition(selectedAnimationKey, props));
+    // for some reason loadAnimationAdditionFromSource also adds the key to the animation list and causes an error
+    console.log(key);
+    //dispatch(loadAnimationAdditionFromSource(key, props));
     dashboard.project.projectChanged();
   };
 }
@@ -496,6 +573,46 @@ function loadAnimationFromSource(key, callback) {
     });
   };
 }
+
+/**
+ * Load the indicated animation from its source, whether that is S3 or the animation library.
+ * From this function we'll need the dataURI and sourceSize to send to Piskel.
+ * @param {!AnimationKey} key
+ * @param {function} [callback]
+ */
+/*function loadAnimationAdditionFromSource(key, props, callback) {
+  callback = callback || function () {};
+  return (dispatch, getState) => {
+    const sourceUrl = animationSourceUrl(key, props);
+    dispatch({
+      type: START_LOADING_ADDITION_FROM_SOURCE
+    });
+    fetchURLAsBlob(sourceUrl, (err, blob) => {
+      if (err) {
+        console.log('Failed to load additional animation frames' + key, err);
+        // Brute-force recovery step: Remove the animation from our redux state;
+        // it looks like it's already gone from the server.
+        dispatch({
+          type: REMOVE_PENDING_ANIMATION_ADDITION
+        });
+        return;
+      }
+
+      blobToDataURI(blob, dataURI => {
+        dataURIToSourceSize(dataURI).then(sourceSize => {
+          dispatch({
+            type: DONE_LOADING_ADDITION_FROM_SOURCE,
+            key,
+            blob,
+            dataURI,
+            sourceSize
+          });
+          callback();
+        });
+      });
+    });
+  };
+}*/
 
 /**
  * Given a key/serialized-props pair for an animation, work out where to get

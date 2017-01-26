@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as PropTypes from '../PropTypes';
 import {editAnimation} from '../animationListModule';
+import { show, Goal } from '../AnimationPicker/animationPickerModule';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -29,7 +30,9 @@ const PiskelEditor = React.createClass({
     selectedAnimation: PropTypes.AnimationKey,
     channelId: React.PropTypes.string.isRequired,
     editAnimation: React.PropTypes.func.isRequired,
-    allAnimationsSingleFrame: React.PropTypes.bool.isRequired
+    allAnimationsSingleFrame: React.PropTypes.bool.isRequired,
+    onNewFrameClick: React.PropTypes.func.isRequired,
+    pendingAnimationAddition: React.PropTypes.object
   },
 
   componentDidMount() {
@@ -54,6 +57,7 @@ const PiskelEditor = React.createClass({
     this.piskel.attachToPiskel(this.iframe);
     this.piskel.onPiskelReady(this.onPiskelReady);
     this.piskel.onStateSaved(this.onAnimationSaved);
+    this.piskel.onAddFrame(this.onAddFrame);
   },
 
   componentWillUnmount() {
@@ -64,6 +68,40 @@ const PiskelEditor = React.createClass({
   componentWillReceiveProps(newProps) {
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
       this.loadSelectedAnimation_(newProps);
+    }
+    if (newProps.pendingAnimationAddition && newProps.selectedAnimation === newProps.pendingAnimationAddition.key) {
+      this.addPendingAnimationAddition(newProps.pendingAnimationAddition);
+    }
+  },
+
+  addPendingAnimationAddition(animationProps) {
+    const key = this.props.selectedAnimation;
+    if (!animationProps) {
+      throw new Error('No props present for animation with key ' + key);
+    }
+
+    this.isLoadingAnimation_ = true;
+    // Special case: When selecting a new, blank animation (one that is 'loaded'
+    // but has no loaded content) tell Piskel to create a new animation with
+    // its dimensions.
+    if (animationProps.loadedFromSource && animationProps.sourceUrl === null &&
+        animationProps.blob === null && animationProps.dataURI === null) {
+      /* TODO: find actual syntax for this
+      this.piskel.addBlankFrame(); */
+    } else {
+      this.piskel.loadAdditionalFrames(
+        animationProps.dataURI,
+        animationProps.frameSize.x,
+        animationProps.frameSize.y,
+        animationProps.frameDelay,
+        () => {
+          this.isLoadingAnimation_ = false;
+
+          // If the selected animation changed out from under us, load again.
+          if (this.props.selectedAnimation !== key) {
+            this.loadSelectedAnimation_(this.props);
+          }
+        });
     }
   },
 
@@ -130,6 +168,10 @@ const PiskelEditor = React.createClass({
     return false;
   },
 
+  onAddFrame() {
+    this.props.onNewFrameClick();
+  },
+
   onPiskelReady() {
     this.isPiskelReady_ = true;
     if (this.props.allAnimationsSingleFrame) {
@@ -153,6 +195,8 @@ const PiskelEditor = React.createClass({
   },
 
   render() {
+    console.log("Rendering piskel and logging pending animation addition if it exists.");
+    console.log(this.props.pendingAnimationAddition);
     return (
       <iframe
         ref={iframe => this.iframe = iframe}
@@ -166,7 +210,11 @@ export default connect(state => ({
   selectedAnimation: state.animationTab.selectedAnimation,
   animationList: state.animationList,
   channelId: state.pageConstants.channelId,
-  allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame
+  allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
+  pendingAnimationAddition: state.pendingAnimationAddition
 }), dispatch => ({
-  editAnimation: (key, props) => dispatch(editAnimation(key, props))
+  editAnimation: (key, props) => dispatch(editAnimation(key, props)),
+  onNewFrameClick() {
+    dispatch(show(Goal.NEW_FRAME));
+  }
 }))(PiskelEditor);
