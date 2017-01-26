@@ -65,7 +65,9 @@ const CourseProgress = React.createClass({
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
-    const progressRedesign = experiments.isEnabled('progressRedesign');
+    // Don't yet support PLC
+    const progressRedesign = !professionalLearningCourse &&
+      experiments.isEnabled('progressRedesign');
 
     return (
       <div>

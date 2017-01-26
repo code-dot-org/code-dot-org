@@ -1,19 +1,17 @@
 import React, { PropTypes } from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from "@cdo/apps/util/color";
+import i18n from '@cdo/locale';
 import { connect } from 'react-redux';
 import { stageNames, statusByStage, urlsByStage } from '@cdo/apps/code-studio/progressRedux';
 
 const lighterBorder = '#D8D8D8';
 
-// TODO - figure out responsiveness
 const styles = {
   table: {
     backgroundColor: '#F6F6F6'
     // TODO - get borderRadius working correctly (mgith be able to have all of
     // our existing borders become less complicated?)
-    // TODO - current approach makes it so that we have a 1 pixel difference in
-    // top border?
   },
   headerRow: {
     borderTopWidth: 1,
@@ -61,7 +59,6 @@ const styles = {
   },
   colText: {
     color: '#5B6770',
-    // TODO - "correct" font?
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
     overflow: 'hidden',
@@ -69,7 +66,6 @@ const styles = {
   }
 };
 
-// TODO - i18n
 const ProgressTable = React.createClass({
   propTypes: {
     stageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -98,10 +94,10 @@ const ProgressTable = React.createClass({
         <thead>
           <tr style={styles.headerRow}>
             <td style={styles.col1}>
-              <div style={styles.colText}>Stage Name</div>
+              <div style={styles.colText}>{i18n.stageName()}</div>
             </td>
             <td style={styles.col2}>
-              <div style={styles.colText}>Your Progress</div>
+              <div style={styles.colText}>{i18n.yourProgress()}</div>
             </td>
           </tr>
         </thead>

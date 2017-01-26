@@ -288,6 +288,7 @@
   "showToolbox": "Show Toolbox",
   "showVersionsHeader": "Version History",
   "signup": "Sign up for the intro course",
+  "stageName": "Stage Name",
   "stepIn": "Step in",
   "stepOver": "Step over",
   "stepOut": "Step out",
@@ -333,5 +334,6 @@
   "when": "when",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "yourProgress": "Your Progress"
 }
