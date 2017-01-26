@@ -38,7 +38,10 @@ module Ops
       assert_difference('@cohort.reload.teachers.count', 2) do
         assert_difference('User.count', 2) do
           assert_no_difference('@cohort.reload.districts.count') do
-            patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
+            patch :update, params: {
+              id: @cohort.id,
+              cohort: {teachers: teacher_params}
+            }
           end
         end
       end
@@ -75,7 +78,10 @@ module Ops
 
       assert_difference('@cohort.reload.teachers.count', 1) do
         assert_difference('User.count', 0) do
-          patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
+          patch :update, params: {
+            id: @cohort.id,
+            cohort: {teachers: teacher_params}
+          }
         end
       end
 
@@ -95,7 +101,10 @@ module Ops
 
       assert_difference '@cohort.teachers.count', -1 do
         assert_difference '@cohort.deleted_teachers.count', 1 do
-          delete :destroy_teacher, id: @cohort.id, teacher_id: @cohort.teachers.first.id
+          delete :destroy_teacher, params: {
+            id: @cohort.id,
+            teacher_id: @cohort.teachers.first.id
+          }
         end
       end
       assert_response :success
@@ -121,7 +130,10 @@ module Ops
 
       assert_difference '@cohort.teachers.count', 1 do # added to teachers
         assert_difference '@cohort.deleted_teachers.count', -1 do # removed from deleted teachers
-          patch :update, id: @cohort.id, cohort: {teachers: teacher_params}
+          patch :update, params: {
+            id: @cohort.id,
+            cohort: {teachers: teacher_params}
+          }
         end
       end
       assert_response :success
@@ -203,7 +215,7 @@ module Ops
       sign_in contact
 
       assert_no_difference('cohort.reload.districts.count') do
-        get :show, id: cohort.id
+        get :show, params: {id: cohort.id}
       end
       assert_response :success
       assert_equal cohort, assigns(:cohort)
@@ -231,7 +243,7 @@ module Ops
 
       sign_in dc
 
-      get :show, id: @cohort.id # not accessible
+      get :show, params: {id: @cohort.id} # not accessible
       assert_response :forbidden
     end
 
@@ -247,13 +259,13 @@ module Ops
     def all_forbidden
       get :index
       assert_response :forbidden
-      post :create, cohort: {name: 'x'}
+      post :create, params: {cohort: {name: 'x'}}
       assert_response :forbidden
-      get :show, id: @cohort.id
+      get :show, params: {id: @cohort.id}
       assert_response :forbidden
-      patch :update, id: @cohort.id, cohort: {name: 'name'}
+      patch :update, params: {id: @cohort.id, cohort: {name: 'name'}}
       assert_response :forbidden
-      delete :destroy, id: @cohort.id
+      delete :destroy, params: {id: @cohort.id}
       assert_response :forbidden
     end
 
@@ -263,7 +275,7 @@ module Ops
       assert_routing({ path: "#{API}/cohorts", method: :post }, { controller: 'ops/cohorts', action: 'create' })
 
       assert_difference 'Cohort.count' do
-        post :create, cohort: {name: 'Cohort name'}
+        post :create, params: {cohort: {name: 'Cohort name'}}
       end
       assert_response :success
     end
@@ -279,7 +291,13 @@ module Ops
       #87054348 (part 2)
       assert_difference 'User.count', 5 do
         assert_creates(Cohort, CohortsDistrict) do
-          post :create, cohort: {name: 'Cohort name', districts: [{id: @district.id}], teachers: teacher_params}
+          post :create, params: {
+            cohort: {
+              name: 'Cohort name',
+              districts: [{id: @district.id}],
+              teachers: teacher_params
+            }
+          }
         end
       end
       assert_response :success
@@ -307,7 +325,13 @@ module Ops
       d1 = create(:district)
       d2 = create(:district)
 
-      post :create, cohort: {name: 'Cohort name', districts: [{id: d1.id, max_teachers: 3}, {id: d2.id, max_teachers: 5}], teachers: teacher_params}
+      post :create, params: {
+        cohort: {
+          name: 'Cohort name',
+          districts: [{id: d1.id, max_teachers: 3}, {id: d2.id, max_teachers: 5}],
+          teachers: teacher_params
+        }
+      }
       assert_response :success
 
       cohort_id = JSON.parse(@response.body)['id']
@@ -327,7 +351,17 @@ module Ops
       d1 = create(:district)
       d2 = create(:district)
 
-      put :update, id: @cohort.id, cohort: {name: 'Cohort name', districts: [{id: @district.id, _destroy: 1}, {id: d1.id, max_teachers: 3}, {id: d2.id, max_teachers: 5}]}
+      put :update, params: {
+        id: @cohort.id,
+        cohort: {
+          name: 'Cohort name',
+          districts: [
+            {id: @district.id, _destroy: 1},
+            {id: d1.id, max_teachers: 3},
+            {id: d2.id, max_teachers: 5}
+          ]
+        }
+      }
       assert_response :success
 
       # only the two new districts
@@ -343,7 +377,17 @@ module Ops
 
       assert_no_difference('@cohort.reload.districts.count') do
         assert_no_difference('CohortsDistrict.count') do
-          put :update, id: @cohort.id, cohort: {name: 'Cohort name', districts: [{id: @district.id, _destroy: 1}, {id: d1.id, max_teachers: 3}, {id: d2.id, max_teachers: 5}]}
+          put :update, params: {
+            id: @cohort.id,
+            cohort: {
+              name: 'Cohort name',
+              districts: [
+                {id: @district.id, _destroy: 1},
+                {id: d1.id, max_teachers: 3},
+                {id: d2.id, max_teachers: 5}
+              ]
+            }
+          }
         end
       end
       assert_response :success
@@ -355,7 +399,13 @@ module Ops
     test 'updating Cohort with existing district updates count' do
       sign_in @admin
 
-      put :update, id: @cohort.id, cohort: {name: 'Cohort name', districts: [{id: @district.id, max_teachers: 8}]}
+      put :update, params: {
+        id: @cohort.id,
+        cohort: {
+          name: 'Cohort name',
+          districts: [{id: @district.id, max_teachers: 8}]
+        }
+      }
       assert_response :success
 
       # only the two new districts
@@ -365,7 +415,7 @@ module Ops
     test 'Can create Cohort without providing list of acceptable districts' do
       sign_in @admin
 
-      post :create, cohort: {name: 'Cohort name'}
+      post :create, params: {cohort: {name: 'Cohort name'}}
       assert_response :success
 
       assert_equal 'Cohort name', assigns(:cohort).name
@@ -382,9 +432,13 @@ module Ops
       # Only 5 new teachers created, not 6
       assert_difference ->{User.count}, 5 do
         assert_creates(Cohort, CohortsDistrict) do
-          post :create, cohort: {name: 'Cohort name',
-            districts: [{id: @district.id, max_teachers: 5}],
-            teachers: teacher_params + extra_teacher_params}
+          post :create, params: {
+            cohort: {
+              name: 'Cohort name',
+              districts: [{id: @district.id, max_teachers: 5}],
+              teachers: teacher_params + extra_teacher_params
+            }
+          }
         end
       end
       assert_response :success
@@ -407,7 +461,7 @@ module Ops
 
       assert_routing({ path: "#{API}/cohorts/1", method: :get }, { controller: 'ops/cohorts', action: 'show', id: '1' })
 
-      get :show, id: @cohort.id
+      get :show, params: {id: @cohort.id}
       assert_response :success
       response = JSON.parse(@response.body)
       assert_equal response['id'], @cohort.id
@@ -425,7 +479,7 @@ module Ops
       sign_in @admin
 
       assert_routing({ path: "#{API}/cohorts/1/teachers.csv", method: :get }, { controller: 'ops/cohorts', action: 'teachers', id: '1',  format: 'csv'})
-      get :teachers, id: @cohort.id, format: 'csv'
+      get :teachers, params: {id: @cohort.id}, format: 'csv'
 
       expected_response = <<EOS
 id,email,ops_first_name,ops_last_name,district_name,ops_school,ops_gender,races
@@ -442,9 +496,12 @@ EOS
 
       new_name = 'New cohort name'
       script = Script.find_by_name('ECSPD')
-      patch :update, id: @cohort.id, cohort: {name: new_name, script_id: script.id}
+      patch :update, params: {
+        id: @cohort.id,
+        cohort: {name: new_name, script_id: script.id}
+      }
 
-      get :show, id: @cohort.id
+      get :show, params: {id: @cohort.id}
       assert_equal new_name, JSON.parse(@response.body)['name']
       assert_equal script.id, JSON.parse(@response.body)['script_id']
       assert_response :success
@@ -456,7 +513,7 @@ EOS
       assert_routing({ path: "#{API}/cohorts/1", method: :delete }, { controller: 'ops/cohorts', action: 'destroy', id: '1' })
 
       assert_difference 'Cohort.count', -1 do
-        delete :destroy, id: @cohort.id
+        delete :destroy, params: {id: @cohort.id}
       end
       assert_response :success
     end
