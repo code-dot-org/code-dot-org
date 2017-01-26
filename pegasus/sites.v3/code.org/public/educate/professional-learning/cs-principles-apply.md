@@ -7,7 +7,7 @@ nav: plc_csp_nav
 
 <img src="/images/code-group.jpg" width="100%"/>
 
-We’re excited you’re interested in joining the 2017-18 Professional Learning Program for CS Principles! 
+We’re excited you’re interested in joining the **free** 2017-18 Professional Learning Program for CS Principles! 
 
 **Step 1:** Review the overview of <a href="/educate/csp" target=_blank>CS Principles and the Code.org Professional Learning Program</a> to make sure the course and the program are the right fit for you and your school. 
 
