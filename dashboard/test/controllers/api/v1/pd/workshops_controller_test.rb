@@ -122,7 +122,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
-      post :create, paams: {pd_workshop: workshop_params}
+      post :create, params: {pd_workshop: workshop_params}
       assert_response :success
     end
 
