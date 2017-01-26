@@ -39,8 +39,14 @@ Share these inspiring stories about students and teachers who are changing the f
 
 [<button>Student of the Week</button>](/sotw)&nbsp;&nbsp;[<button>Teacher of the Month</button>](/totm)
 
+## 4. Learn about Careers in Tech
+Watch videos and read interviews with inspirational people working in a variety of roles to change the face of technology and the world. 
+
+[<button>Careers in Tech</button>](/careers)
+
+
 <a id="posters"></a>
-## 4. Put up these posters
+## 5. Put up these posters
 
 [![image](/images/fit-260/malala.png)](/files/malala-poster.pdf)
 [![image](/images/fit-260/obama-new.png)](/files/obama-poster-new.pdf)
@@ -62,7 +68,7 @@ Share these inspiring stories about students and teachers who are changing the f
 [![image](/images/careers/poster_thumbnail_javier_aguera.jpg)](/files/careers/javier-aguera.pdf)
 
 
-## 5. Grow participation by women
+## 6. Grow participation by women
 
 - [Top 4 Ways to Recruit Girls to Try Computer Science](/girls)
 - [NCWIT outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
@@ -70,7 +76,7 @@ Share these inspiring stories about students and teachers who are changing the f
 - [Fact-sheet for participation by women](http://www.ncwit.org/infographic/3435)
 - [Awards and recognition for girls engaged in coding](http://www.aspirations.org)
 
-## 6. Other Materials
+## 7. Other Materials
 
 - Check out these [Teaching tips for introducing CS to a classroom](/files/CSTT_IntroducingCS.PDF)
 - Video library: [Use these videos to teach computer science in any class worldwide.](/educate/videos)

@@ -944,7 +944,11 @@ applabCommands.setImageURL = function (opts) {
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = assetPrefix.fixPath(opts.src);
+    if (ICON_PREFIX_REGEX.test(opts.src)) {
+      element.src = assetPrefix.renderIconToString(opts.src, element);
+    } else {
+      element.src = assetPrefix.fixPath(opts.src);
+    }
     element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
