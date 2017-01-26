@@ -11,7 +11,7 @@ $(document).ready(function () {
   }
 
   $('#pd-program-registration-form').submit(function (event) {
-    PdProgramRegistrationFormSubmit(event);
+    onPdProgramRegistrationFormSubmit(event);
   });
 
   $("input[name=accept_b]:radio").change(function () {
@@ -114,7 +114,7 @@ function processError(data) {
   $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
 }
 
-function PdProgramRegistrationFormSubmit(event) {
+function onPdProgramRegistrationFormSubmit(event) {
   $("#btn-submit").attr('disabled','disabled');
   $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
 

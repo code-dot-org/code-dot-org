@@ -3,12 +3,9 @@ class PdProgramRegistration
     result = {}
     result[:user_id_i] = required integer data[:user_id_i]
     result[:pd_teacher_application_id] = required integer data[:pd_teacher_application_id]
-    result[:first_name_s] = required data[:first_name_s]
-    result[:last_name_s] = required data[:last_name_s]
-    result[:phone_number_s] = required data[:phone_number_s]
-    result[:school_district_s] = required data[:school_district_s]
-    result[:selected_course_s] = required data[:selected_course_s]
-    result[:accepted_workshop_s] = required data[:accepted_workshop_s]
+    [:first_name_s, :last_name_s, :phone_number_s, :school_district_s, :selected_course_s, :accepted_workshop_s].each do |key|
+      result[key] = required data[key]
+    end
 
     result[:accept_b] = required data[:accept_b]
     if result[:accept_b] == '0'
