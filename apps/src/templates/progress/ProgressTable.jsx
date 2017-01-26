@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from "@cdo/apps/util/color";
+import { connect } from 'react-redux';
+import { stageNames, statusByStage } from '@cdo/apps/code-studio/progressRedux';
 
 const lighterBorder = '#D8D8D8';
 
@@ -69,6 +71,12 @@ const styles = {
 
 // TODO - i18n
 const ProgressTable = React.createClass({
+  propTypes: {
+    stageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    statusByStage: PropTypes.arrayOf(
+      PropTypes.arrayOf(PropTypes.string)
+    ).isRequired
+  },
   componentDidMount() {
     // TODO - dont ship this way
     const padding = 80;
@@ -81,6 +89,7 @@ const ProgressTable = React.createClass({
   },
 
   render() {
+    const { stageNames, statusByStage } = this.props;
     return (
       <table style={styles.table}>
         <thead>
@@ -94,49 +103,38 @@ const ProgressTable = React.createClass({
           </tr>
         </thead>
         <tbody>
-          <tr style={styles.lightRow}>
-            <td style={styles.col1}>
-              <div style={styles.colText}>1. Happy Maps</div>
-            </td>
-            <td style={styles.col2}>
-              <ProgressBubbleSet
-                startingNumber={1}
-                statuses={["perfect", "not_tried", "attempted", "passed", "submitted"]}
-              />
-            </td>
-          </tr>
-          <tr style={styles.darkRow}>
-            <td style={styles.col1}>
-              <div style={styles.colText}>2. Move it, Move it</div>
-            </td>
-            <td style={styles.col2}>
-              <ProgressBubbleSet
-                startingNumber={1}
-                statuses={["perfect", "not_tried", "not_tried", "not_tried"]}
-              />
-            </td>
-          </tr>
-          <tr style={{...styles.lightRow, ...styles.bottomRow}}>
-            <td style={styles.col1}>
-              {/* TODO: This should be top aligned for multiline rows?*/}
-              <div style={styles.colText}>3. Real-life Algorithms: Plant a Seed</div>
-            </td>
-            <td style={styles.col2}>
-              <ProgressBubbleSet
-                startingNumber={1}
-                statuses={[
-                  "perfect", "not_tried", "not_tried", "not_tried", "not_tried",
-                  "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
-                  "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
-                  "not_tried", "not_tried", "not_tried", "not_tried", "not_tried"
-                ]}
-              />
-            </td>
-          </tr>
+          {
+            stageNames.map((stageName, index) => (
+              <tr
+                key={index}
+                style={{
+                  ...((index % 2 === 0) && styles.lightRow),
+                  ...((index % 2 === 1) && styles.darkRow),
+                  ...((index + 1 === stageNames.length) && styles.bottomRow)
+                }}
+              >
+                <td style={styles.col1}>
+                  <div style={styles.colText}>
+                    {`${index + 1}. ${stageName}`}
+                  </div>
+                </td>
+                <td style={styles.col2}>
+                  <ProgressBubbleSet
+                    startingNumber={1}
+                    statuses={statusByStage[index]}
+                  />
+                </td>
+              </tr>
+            ))
+          }
         </tbody>
+
       </table>
     );
   }
 });
 
-export default ProgressTable;
+export default connect(state => ({
+  stageNames: stageNames(state.progress),
+  statusByStage: statusByStage(state.progress)
+}))(ProgressTable);
