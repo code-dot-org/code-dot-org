@@ -1,8 +1,8 @@
 module ProjectsList
   class << self
-    def fetch_section_projects(section_id)
+    def fetch_section_projects(section)
       [].tap do |projects_list_data|
-        Section.find(section_id).students.each do |student|
+        section.students.each do |student|
           student_storage_id = PEGASUS_DB[:user_storage_ids].where(user_id: student.id).first
           next unless student_storage_id
           PEGASUS_DB[:storage_apps].where(storage_id: student_storage_id[:id], state: 'active').each do |project|
