@@ -15,6 +15,20 @@ export default storybook => {
             statuses={["perfect", "not_tried", "attempted", "passed", "submitted"]}
           />
         )
+      },
+      {
+        name:'multiple lines',
+        story: () => (
+          <ProgressBubbleSet
+            startingNumber={1}
+            statuses={[
+              "perfect", "not_tried", "not_tried", "not_tried", "not_tried",
+              "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
+              "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
+              "not_tried", "not_tried", "not_tried", "not_tried", "not_tried"
+            ]}
+          />
+        )
       }
     ]);
 };

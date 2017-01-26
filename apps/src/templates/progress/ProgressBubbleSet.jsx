@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from "@cdo/apps/util/color";
 
@@ -11,17 +12,27 @@ const styles = {
     position: 'relative',
     display: 'inline-block'
   },
+  withBackground: {
+    display: 'inline-block',
+    position: 'relative'
+  },
   background: {
     height: 10,
     backgroundColor: color.lighter_gray,
     position: 'absolute',
-    left: 10,
-    right: 10,
-    top: 10,
-    bottom: 10,
+    left: 0,
+    right: 0,
+    marginTop: (ProgressBubble.height - 10) / 2,
+    marginBottom: (ProgressBubble.height - 10) / 2,
   },
-  bubbles: {
-    position: 'relative'
+  backgroundFirst: {
+    left: 15
+  },
+  backgroundLast: {
+    right: 15
+  },
+  bubble: {
+    position: 'relative',
   }
 };
 
@@ -39,19 +50,29 @@ const ProgressBubbleSet = React.createClass({
     // TODO - handle case where our set wraps onto a second line
     return (
       <div style={styles.main}>
-        <div style={styles.background}/>
-        <div style={styles.bubbles}>
-          {statuses.map((status, index) => (
-            <ProgressBubble
-              key={index}
-              number={startingNumber + index}
-              status={status}
+        {statuses.map((status, index) => (
+          <div
+            style={styles.withBackground}
+            key={index}
+          >
+            <div
+              style={[
+                styles.background,
+                index === 0 && styles.backgroundFirst,
+                index === statuses.length - 1 && styles.backgroundLast
+              ]}
             />
-          ))}
-        </div>
+            <div style={{position: 'relative'}}>
+              <ProgressBubble
+                number={startingNumber + index}
+                status={status}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     );
   }
 });
 
-export default ProgressBubbleSet;
+export default Radium(ProgressBubbleSet);

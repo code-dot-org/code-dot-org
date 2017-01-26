@@ -56,6 +56,8 @@ const styles = {
     display: 'inline-block',
     marginLeft: 3,
     marginRight: 3,
+    marginTop: 5,
+    marginBottom: 5,
   }
 };
 
@@ -81,7 +83,6 @@ const ProgressBubble = React.createClass({
   }
 });
 
-ProgressBubble.size = DOT_SIZE + 2 * styles.main.borderWidth +
-  styles.main.marginLeft + styles.main.marginRight;
+ProgressBubble.height = DOT_SIZE + styles.main.marginTop + styles.main.marginBottom;
 
 export default ProgressBubble;
