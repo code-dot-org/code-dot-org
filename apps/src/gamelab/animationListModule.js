@@ -336,6 +336,36 @@ export function addBlankAnimation() {
   };
 }
 
+export function addBlankAnimationAddition() {
+  return (dispatch, getState) => {
+    // Special behavior here:
+    // By pushing an animation that is "loadedFromSource" but has a null
+    // blob and dataURI, Piskel will know to create a new document with
+    // the given dimensions.
+    var selectedAnimationKey = getState().animationTab.selectedAnimation;
+    dispatch({
+      type: SET_PENDING_ANIMATION_ADDITION,
+      key: selectedAnimationKey,
+      props: {
+        blankFrame: true,
+        name: generateAnimationName('animation', getState().animationList.propsByKey),
+        sourceUrl: null,
+        frameSize: {x: 100, y: 100},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 4,
+        version: null,
+        loadedFromSource: true,
+        saved: false,
+        blob: null,
+        dataURI: null,
+        hasNewVersionThisSession: false
+      }
+    });
+    dashboard.project.projectChanged();
+  };
+}
+
 /**
  * Add an animation to the project (at the end of the list).
  * @param {!AnimationKey} key
@@ -393,6 +423,19 @@ export function setPendingAnimationAddition(key, props) {
     type: SET_PENDING_ANIMATION_ADDITION,
     key,
     props
+  };
+}
+
+/**
+ * After an animation addition is added, remove it as pending.
+ * @returns {{type: string}}
+ */
+export function removePendingAnimationAddition() {
+  return dispatch => {
+    dispatch({
+      type: REMOVE_PENDING_ANIMATION_ADDITION,
+
+    });
   };
 }
 
