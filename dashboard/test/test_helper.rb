@@ -233,19 +233,19 @@ class ActionController::TestCase
   def self.generate_admin_only_tests_for(action, params = {})
     test "should get #{action}" do
       sign_in create(:admin)
-      get action, params
+      get action, params: params
       assert_response :success
     end
 
     test "should not get #{action} if not signed in" do
       sign_out :user
-      get action, params
+      get action, params: params
       assert_redirected_to_sign_in
     end
 
     test "should not get #{action} if not admin" do
       sign_in create(:user)
-      get action, params
+      get action, params: params
       assert_response :forbidden
     end
   end
