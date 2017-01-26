@@ -73,14 +73,6 @@ class PdProgramRegistration
   OTHER = 'Other'.freeze
   FOOD_ALLERGY = 'Food Allergy'.freeze
 
-  GRADES = [
-    'Pre-K',
-    'Elementary',
-    'Middle School/Junior High',
-    'High School',
-    'I am not teaching this'
-  ].freeze
-
   OPTIONS = {
     accept_no_reason_s: [
       'I want to participate in the program, but I’m no longer able to attend these dates. ' \
@@ -138,8 +130,20 @@ class PdProgramRegistration
       'Prefer not to say'
     ],
 
-    grades_taught_ss: GRADES,
-    grades_planning_to_teach_ss: GRADES,
+    grades_taught_ss: [
+      'Pre-K',
+      'Elementary',
+      'Middle School/Junior High',
+      'High School',
+      'I am not teaching'
+    ],
+    grades_planning_to_teach_ss: [
+      'Pre-K',
+      'Elementary',
+      'Middle School/Junior High',
+      'High School',
+      'I am not teaching this course'
+    ],
 
     subjects_taught_ss: [
       'Computer Science',
