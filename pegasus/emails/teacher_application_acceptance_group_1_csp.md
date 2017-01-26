@@ -30,9 +30,9 @@ As a reminder, to join the Professional Learning Program we ask that you commit 
 
 * **Due by April 21, 2017:** Let us know whether or not you will join the Professional Learning Program! We understand that plans and commitments change, so we ask that you take two minutes to let us know if you accept your placement in the program. 
 
-  **If you want to accept your seat:**  
- * Log into your Code Studio account, using the email address you provided in your application.
- * [Register now for your summer workshop](<%= workshop_registration_url_s >). Completing this registration is the only way we will know if you have accepted your space in the program; if we don’t hear from you by April 21, 2017, we will need to give your space to someone on the waitlist.
+*  **If you want to accept your seat:**  
+    * Log into your Code Studio account, using the email address you provided in your application.
+    * [Register now for your summer workshop](<%= workshop_registration_url_s %>). Completing this registration is the only way we will know if you have accepted your space in the program; if we don’t hear from you by April 21, 2017, we will need to give your space to someone on the waitlist.
 
   **If you want to decline your seat:** Email [teacher@code.org](mailto:teacher@code.org). Please provide your full name and email address, and a message saying you are declining your seat in <%= regional_partner_name_possessive_s %> Professional Learning Program for CS Principles.
   
