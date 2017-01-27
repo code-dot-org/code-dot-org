@@ -157,6 +157,9 @@ class ProjectsController < ApplicationController
     @game = @level.game
   end
 
+  def section_projects
+  end
+
   private
 
   def get_from_cache(key)
