@@ -20,14 +20,28 @@ export default storybook => {
         name:'starting at 3',
         story: () => (
           <ProgressBubbleSet
-            number={3}
-            statuses={["perfect", "not_tried", "attempted", "passed", "submitted"]}
-            urls={[
-              '/foo/bar',
-              '/foo/bar',
-              '/foo/bar',
-              '/foo/bar',
-              '/foo/bar',
+            start={3}
+            levels={[
+              {
+                status: 'perfect',
+                url: '/foo/bar',
+              },
+              {
+                status: 'not_tried',
+                url: '/foo/bar',
+              },
+              {
+                status: 'attempted',
+                url: '/foo/bar',
+              },
+              {
+                status: 'passed',
+                url: '/foo/bar',
+              },
+              {
+                status: 'submitted',
+                url: '/foo/bar',
+              },
             ]}
           />
         )
@@ -36,14 +50,11 @@ export default storybook => {
         name:'multiple lines',
         story: () => (
           <ProgressBubbleSet
-            number={1}
-            statuses={[
-              "perfect", "not_tried", "not_tried", "not_tried", "not_tried",
-              "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
-              "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
-              "not_tried", "not_tried", "not_tried", "not_tried", "not_tried"
-            ]}
-            urls={arrayOfItem(20, '/foo/bar')}
+            start={1}
+            levels={arrayOfItem(20, {
+              status: 'not_tried',
+              url: '/foo/bar'
+            })}
           />
         )
       }
