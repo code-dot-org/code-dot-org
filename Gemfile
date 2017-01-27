@@ -227,3 +227,7 @@ gem 'sshkit'
 gem 'validates_email_format_of'
 
 gem 'composite_primary_keys'
+
+# GitHub API; used by the DotD script to automatically create new
+# releases on deploy
+gem 'octokit'
