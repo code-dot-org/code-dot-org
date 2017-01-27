@@ -170,7 +170,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     school_district = create :school_district
     create :regional_partners_school_district, school_district: school_district, regional_partner: regional_partner
 
-    # noise.
+    # noise: extra partners that should not match below because they're not first
     3.times do
       create :regional_partners_school_district, school_district: school_district, regional_partner: create(:regional_partner)
     end
@@ -185,7 +185,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     regional_partner = create :regional_partner
     school_district = create :school_district
 
-    # noise.
+    # noise: extra partners with no course that should not match below
     3.times do
       create :regional_partners_school_district, school_district: school_district, regional_partner: regional_partner
     end
