@@ -738,5 +738,15 @@ FactoryGirl.define do
     school_type SchoolInfo::SCHOOL_TYPE_CHARTER
     association :school_district
   end
+
+  factory :regional_partner do
+    sequence(:name) { |n| "Partner#{n}" }
+    group 1
+  end
+
+  factory :regional_partners_school_district do
+    association :school_district
+    association :regional_partner
+  end
 end
 # rubocop:enable Metrics/BlockLength
