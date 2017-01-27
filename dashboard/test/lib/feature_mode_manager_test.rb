@@ -24,7 +24,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     scripts = ['fake1', 'fake2']
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
     @dcdo.set('hoc_activity_sample_weight', 2)
-    assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
+    assert_nil FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
     # Set the DCDO property back to the original value and make sure we're in normal mode.
     @dcdo.set('hoc_activity_sample_weight', 1)
     assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
@@ -34,7 +34,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     scripts = ['fake1', 'fake2']
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
     @gatekeeper.set('postMilestone', where: {script_name: 'fake1'}, value: false)
-    assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
+    assert_nil FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
     @gatekeeper.set('postMilestone', where: {script_name: 'fake1'}, value: true)
     assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
   end
@@ -43,12 +43,12 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     scripts = ['fake1', 'fake2']
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
     @gatekeeper.set('puzzle_rating', value: false)
-    assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
+    assert_nil FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
     @gatekeeper.set('puzzle_rating', value: true)
     assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
 
     @gatekeeper.set('postMilestone', value: false)
-    assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
+    assert_nil FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
     @gatekeeper.set('postMilestone', value: true)
     assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
   end

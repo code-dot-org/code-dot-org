@@ -81,7 +81,6 @@ class LevelSourcesController < ApplicationController
     else
       @level_source = LevelSource.where(hidden: false).find(params[:id])
     end
-    @level_source.replace_old_when_run_blocks
     @level = Level.cache_find(@level_source.level_id)
     @game = @level.game
     view_options(
