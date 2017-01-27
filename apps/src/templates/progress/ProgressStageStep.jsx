@@ -6,8 +6,6 @@ import color from "@cdo/apps/util/color";
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
 
 const styles = {
-  main: {
-  },
   stepButton: {
     borderWidth: 1,
     borderStyle: 'solid',
@@ -23,9 +21,11 @@ const styles = {
   buttonText: {
     marginLeft: 10
   },
+  nameText: {
+    color: color.charcoal
+  },
   text: {
     display: 'inline-block',
-    color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     letterSpacing: -0.12
@@ -69,68 +69,78 @@ const styles = {
 
 const ProgressStageStep = React.createClass({
   propTypes: {
-    status: PropTypes.string,
-    name: PropTypes.string.isRequired
+    start: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    levels: PropTypes.arrayOf(
+      PropTypes.shape({
+        level: PropTypes.string,
+        url: PropTypes.string
+      })
+    ).isRequired
   },
 
   render() {
-    const { status, name } = this.props;
+    const { name, levels, start } = this.props;
+
+    const multiLevelStep = levels.length > 1;
+    // TODO - if all the levels have the same status, should we fill it in for
+    // the step button?
+    const status = multiLevelStep ? 'not_tried' : levels[0].status;
+
+    // In the multiLevel case, clicking the step will take us to the first level
+    // TODO possible we dont want the above behavior
+    const url = levels[0].url;
+
+    // TODO - dont have this be hardcoded
+    const icon = "file-text-o";
+
+    const lastStep = start + levels.length - 1;
+    let stepNumber = start;
+    if (multiLevelStep) {
+      stepNumber += `-${lastStep}`;
+    }
 
     // TODO - think about different widths for step 9 vs. step 10
+    // TODO - should step button turn orange on mouseover?
     return (
       <table>
         <tbody>
           <tr>
             <td>
-              <div style={{...styles.stepButton, ...BUBBLE_COLORS[status]}}>
-                <FontAwesome icon="file-text-o"/>
-                <div style={{...styles.buttonText, ...styles.text}}>
-                  STEP 1
+              <a href={url}>
+                <div style={{...styles.stepButton, ...BUBBLE_COLORS[status]}}>
+                  <FontAwesome icon={icon}/>
+                  <div style={{...styles.buttonText, ...styles.text}}>
+                    STEP {stepNumber}
+                  </div>
                 </div>
-              </div>
+              </a>
             </td>
             <td style={styles.col2}>
-              <div style={styles.text}>
-                {name}
-              </div>
+              <a href={url}>
+                <div style={{...styles.nameText, ...styles.text}}>
+                  {name}
+                </div>
+              </a>
             </td>
           </tr>
-          <tr>
-            <td>
-              <div style={styles.linesAndDot}>
-                <div style={styles.verticalLine}/>
-                <div style={styles.horizontalLine}/>
-                <div style={styles.dot}/>
-              </div>
-            </td>
-            <td style={styles.col2}>
-              <ProgressBubbleSet
-                start={1}
-                levels={[
-                  {
-                    status: 'perfect',
-                    url: '/foo/bar',
-                  },
-                  {
-                    status: 'not_tried',
-                    url: '/foo/bar',
-                  },
-                  {
-                    status: 'not_tried',
-                    url: '/foo/bar',
-                  },
-                  {
-                    status: 'not_tried',
-                    url: '/foo/bar',
-                  },
-                  {
-                    status: 'not_tried',
-                    url: '/foo/bar',
-                  },
-                ]}
-              />
-            </td>
-          </tr>
+          {multiLevelStep &&
+            <tr>
+              <td>
+                <div style={styles.linesAndDot}>
+                  <div style={styles.verticalLine}/>
+                  <div style={styles.horizontalLine}/>
+                  <div style={styles.dot}/>
+                </div>
+              </td>
+              <td style={styles.col2}>
+                <ProgressBubbleSet
+                  start={start}
+                  levels={levels}
+                />
+              </td>
+            </tr>
+          }
         </tbody>
       </table>
     );
