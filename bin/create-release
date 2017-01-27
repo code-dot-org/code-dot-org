@@ -43,32 +43,27 @@ def get_next_release_version
 
   # if we've already released a .0 or more today, increment the version
   # number appropriately
-  last_version = Octokit.latest_release(REPO).tag_name
-  if last_version.start_with?(today)
-    matched_version = /v\d{4}-\d{2}-\d{2}\.(\d*)#/.match(last_version)
+  last_release = Octokit.latest_release(REPO).tag_name
+  last_version = /^#{today}\.(\d*)#/.match(last_release)
+  unless last_version.nil?
+    version_number = matched_version[0].to_i + 1
+  end
 
-    if matched_version.nil?
-      # The last release didn't have a valid version number; it could
-      # have been edited or created though some other route. In this
-      # rare case, we resort to guess-and-check
-
-      begin
-        # try no more than five versions before accepting that something
-        # else is horribly wrong
-        until version_number == 5
-          Octokit.release_for_tag(REPO, "#{today}.#{version_number}")
-          version_number += 1
-        end
-      rescue Octokit::NotFound
-        # intentional noop
-      else
-        puts "Tried and failed to find a valid version number for this date; please check that the latest release has an integer version number"
-        exit(-1)
-      end
-    else
-      version_number = matched_version[0].to_i + 1
+  # we now have a best-guess next version number. Manually-created
+  # releases could invalidate this guess; in this rare case, we resort
+  # to guess-and-check
+  begin
+    # try no more than five versions before accepting that something
+    # else is horribly wrong
+    (version_number..version_number + 5).each do |attempted_version|
+      version_number = attempted_version
+      Octokit.release_for_tag(REPO, "#{today}.#{attempted_version}")
     end
-
+  rescue Octokit::NotFound
+    # intentional noop
+  else
+    puts "Tried and failed to find a valid version number for this date; please check that the latest release has an integer version number"
+    exit(-1)
   end
 
   "#{today}.#{version_number}"
@@ -122,7 +117,7 @@ def main
   loop do
     puts "Does this changelog look correct?"
     puts changes
-    print "[#{underline 'Y'}es]/#{underline 'N'}o/#{underline 'S'}kip: "
+    print "[#{underline 'Y'}es]/#{underline 'E'}dit/#{underline 'S'}kip: "
     response = gets.strip.downcase
     if 'yes'.start_with?(response)
       puts "POSTing changelog to github ..."
@@ -131,7 +126,7 @@ def main
     elsif 'skip'.start_with?(response)
       puts "Skipping release"
       break
-    elsif 'no'.start_with?(response)
+    elsif 'edit'.start_with?(response)
       changes = edit(changes)
     else
       puts "Sorry, I didn't understand that.\n\n"
