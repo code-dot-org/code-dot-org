@@ -63,6 +63,9 @@ const ModuloClock = React.createClass({
    * @param {function} onComplete - callback called at end of animation
    */
   animateTo(dividend, maximumDuration, onStep, onComplete) {
+    // Avoid very slow animations: If there are less than 10 segments, or we
+    // would spend more than a second per segment, we won't end up using the
+    // full animation time.
     const maximumTimePerSegment = Math.min(1000, maximumDuration / 10);
 
     this.targetDividend = dividend;
@@ -76,6 +79,7 @@ const ModuloClock = React.createClass({
   tick() {
     const elapsedTime = Date.now() - this.state.startTime;
     if (elapsedTime < this.duration - FINALIZATION_DELAY) {
+      // What dividend should we render on this frame? Ask the easing function.
       const currentDividend = Math.floor(easeOutCircular(elapsedTime, 0, this.targetDividend, this.duration));
       this.onStep(currentDividend);
       this.setState({currentDividend});
