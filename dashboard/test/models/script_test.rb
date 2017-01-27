@@ -327,7 +327,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'level_concept_difficulty uses preloading' do
-    level = Script.find_by_name('20-hour').script_levels.third.level
+    level = Script.find_by_name('course4').script_levels.second.level
     expected = level.level_concept_difficulty
 
     populate_cache_and_disconnect_db
