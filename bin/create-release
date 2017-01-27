@@ -8,7 +8,7 @@ require 'octokit'
 require 'open3'
 require 'tempfile'
 
-REPO = 'Hamms/misc'
+REPO = 'code-dot-org/code-dot-org'
 
 def git_generate_changelog
   changes, _err, status = Open3.capture3("git log --merges --oneline production^1..production^2 --format=\"%s %b\"")
