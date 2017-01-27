@@ -45,8 +45,30 @@ def get_next_release_version
   # number appropriately
   last_version = Octokit.latest_release(REPO).tag_name
   if last_version.start_with?(today)
-    last_release_version = /v\d{4}-\d{2}-\d{2}\.(\d*)/.match(last_version)[0].to_i
-    version_number = last_release_version + 1
+    matched_version = /v\d{4}-\d{2}-\d{2}\.(\d*)#/.match(last_version)
+
+    if matched_version.nil?
+      # The last release didn't have a valid version number; it could
+      # have been edited or created though some other route. In this
+      # rare case, we resort to guess-and-check
+
+      begin
+        # try no more than five versions before accepting that something
+        # else is horribly wrong
+        until version_number == 5
+          Octokit.release_for_tag(REPO, "#{today}.#{version_number}")
+          version_number += 1
+        end
+      rescue Octokit::NotFound
+        # intentional noop
+      else
+        puts "Tried and failed to find a valid version number for this date; please check that the latest release has an integer version number"
+        exit(-1)
+      end
+    else
+      version_number = matched_version[0].to_i + 1
+    end
+
   end
 
   "#{today}.#{version_number}"
