@@ -10,7 +10,8 @@ import reducer, {
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
-  SignInState
+  SignInState,
+  levelsByStage
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -410,6 +411,53 @@ describe('progressReduxTest', () => {
         name: "Ready to review",
         status: 'not_started',
       });
+    });
+  });
+
+  describe('levelsByStage', () => {
+    it('extracts status/url on a per level basis', () => {
+      const initializedState = reducer(undefined, initProgress(initialScriptOverviewProgress));
+
+      // merge some progress so that we have statuses
+      const action = mergeProgress({
+        // stage 2 level 2 is pass
+        339: TestResults.ALL_PASS,
+        // stage 2 level 3 is incomplete
+        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+      });
+      const state = reducer(initializedState, action);
+
+      const expected = [
+        [
+          {
+            status: 'not_tried',
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1"
+          },
+          {
+            status: 'not_tried',
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2"
+          },
+          {
+            status: 'not_tried',
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3"
+          }
+        ],
+        [
+          {
+            status: 'not_tried',
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1"
+          },
+          {
+            status: 'perfect',
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2"
+          },
+          {
+            status: 'attempted',
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3"
+          }
+        ]
+      ];
+      assert.deepEqual(expected, levelsByStage(state));
     });
   });
 });
