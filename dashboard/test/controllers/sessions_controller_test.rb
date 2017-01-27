@@ -128,10 +128,36 @@ class SessionsControllerTest < ActionController::TestCase
     assert_equal 1, UserGeo.count
   end
 
+  test 'signing in user creates SignIn' do
+    user = create :user
+    assert_difference('SignIn') do
+      post :create, params: {
+        user: {
+          login: '',
+          hashed_email: user.hashed_email,
+          password: user.password
+        }
+      }
+    end
+  end
+
   test 'failed signin does not create UserGeo' do
     user = create(:user)
 
     assert_no_change('UserGeo.count') do
+      post :create, params: {
+        user: {
+          login: '',
+          hashed_email: user.hashed_email,
+          password: 'wrong password'
+        }
+      }
+    end
+  end
+
+  test 'failed sign-in does not create SignIn' do
+    user = create :user
+    assert_no_difference('SignIn') do
       post :create, params: {
         user: {
           login: '',

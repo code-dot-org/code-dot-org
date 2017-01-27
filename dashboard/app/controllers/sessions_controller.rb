@@ -20,6 +20,10 @@ class SessionsController < Devise::SessionsController
           )
         end
       end
+      SignIn.create!(
+        user_id: user_id,
+        sign_in_at: DateTime.now
+      )
     end
   end
 
