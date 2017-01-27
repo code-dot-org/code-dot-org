@@ -1145,7 +1145,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: script_level.id, level_id: level1a.id
+        script_level_id: script_level.id,
+        level_id: level1a.id
       )
     response = JSON.parse(@response.body)
 
