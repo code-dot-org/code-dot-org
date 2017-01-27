@@ -122,7 +122,8 @@ export function setupApp(appOptions) {
         const levelId = appOptions.hasContainedLevels ?
           getContainedLevelId() :
           appOptions.serverLevelId;
-        clientState.writeSourceForLevel(appOptions.scriptName, levelId, +new Date(), lastSavedProgram);
+        clientState.writeSourceForLevel(appOptions.scriptName, levelId,
+            +new Date(), lastSavedProgram);
       }
       report.callback = appOptions.report.callback;
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
@@ -139,7 +140,8 @@ export function setupApp(appOptions) {
     onComplete: function (response) {
       if (!appOptions.channel && !appOptions.hasContainedLevels) {
         // Update the cache timestamp with the (more accurate) value from the server.
-        clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        clientState.writeSourceForLevel(appOptions.scriptName,
+            appOptions.serverLevelId, response.timestamp, lastSavedProgram);
       }
     },
     onResetPressed: function () {
