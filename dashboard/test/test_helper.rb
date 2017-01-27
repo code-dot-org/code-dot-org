@@ -360,7 +360,7 @@ def storage_id(_)
 end
 
 $stub_encrypted_channel_id = 'STUB_CHANNEL_ID-1234'
-def storage_encrypt_channel_id(_)
+def storage_encrypt_channel_id(_, _)
   $stub_encrypted_channel_id
 end
 
