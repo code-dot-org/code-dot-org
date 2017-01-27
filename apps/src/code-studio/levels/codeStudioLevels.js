@@ -112,16 +112,19 @@ export function lockContainedLevelAnswers() {
   getLevel(levelIds[0]).lockAnswers();
 }
 
-/**
- * Get the result of the single contained level.
- */
-export function getContainedLevelResult() {
+export function getContainedLevelId() {
   const levelIds = getLevelIds();
   if (levelIds.length !== 1) {
     throw `Expected exactly one contained level. Got ${levelIds.length}`;
   }
+  return levelIds[0];
+}
 
-  const level = getLevel(levelIds[0]);
+/**
+ * Get the result of the single contained level.
+ */
+export function getContainedLevelResult() {
+  const level = getLevel(getContainedLevelId());
   return {
     id: level.levelId,
     app: level.getAppName(),
