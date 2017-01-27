@@ -1,6 +1,5 @@
 import React from 'react';
 import HrefButton from './HrefButton';
-console.log(!!HrefButton);
 
 export default function (storybook) {
   storybook
