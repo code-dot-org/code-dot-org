@@ -20,10 +20,13 @@ class SessionsController < Devise::SessionsController
           )
         end
       end
-      SignIn.create!(
-        user_id: user_id,
-        sign_in_at: DateTime.now
-      )
+      if user.persisted?
+        SignIn.create!(
+          user_id: user.id,
+          sign_in_at: DateTime.now,
+          sign_in_count: user.sign_in_count
+        )
+      end
     end
   end
 

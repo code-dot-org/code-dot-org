@@ -130,7 +130,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'signing in user creates SignIn' do
     user = create :user
-    assert_difference('SignIn') do
+    assert_creates(SignIn) do
       post :create, params: {
         user: {
           login: '',
@@ -139,6 +139,10 @@ class SessionsControllerTest < ActionController::TestCase
         }
       }
     end
+    user.reload
+    sign_in = SignIn.last
+    assert_equal user.id, sign_in.user_id
+    assert_equal user.sign_in_count, sign_in.sign_in_count
   end
 
   test 'failed signin does not create UserGeo' do
@@ -157,7 +161,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test 'failed sign-in does not create SignIn' do
     user = create :user
-    assert_no_difference('SignIn') do
+    assert_does_not_create(SignIn) do
       post :create, params: {
         user: {
           login: '',

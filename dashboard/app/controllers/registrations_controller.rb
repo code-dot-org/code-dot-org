@@ -51,7 +51,15 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      super
+      super do |user|
+        if user.persisted?
+          SignIn.create!(
+            user_id: user.id,
+            sign_in_at: DateTime.now,
+            sign_in_count: user.sign_in_count
+          )
+        end
+      end
     end
   end
 

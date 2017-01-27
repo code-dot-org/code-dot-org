@@ -2,9 +2,10 @@
 #
 # Table name: sign_ins
 #
-#  id         :integer          not null, primary key
-#  user_id    :integer          not null
-#  sign_in_at :datetime
+#  id            :integer          not null, primary key
+#  user_id       :integer          not null
+#  sign_in_at    :datetime         not null
+#  sign_in_count :integer          not null
 #
 # Indexes
 #
