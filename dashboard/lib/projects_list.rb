@@ -23,6 +23,9 @@ module ProjectsList
       level && level.split('/')[2]
     end
 
+    # pull various fields out of the student and project records to populate
+    # a data structure that can be used to populate a UI component displaying a
+    # list of projects.
     def get_project_row_data(student, project, channel_id)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
