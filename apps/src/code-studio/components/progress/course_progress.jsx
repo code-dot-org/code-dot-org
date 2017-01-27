@@ -55,6 +55,7 @@ const CourseProgress = React.createClass({
       viewAs
     } = this.props;
     const groups = _.groupBy(stages, stage => (stage.flex_category || 'Content'));
+    const showGroupHeaders = _.size(groups) > 1;
     // Add an additional group for any peer reviews
     if (peerReviewStage) {
       // peerReviewStage.flex_category will always be "Peer Review" here
@@ -97,15 +98,18 @@ const CourseProgress = React.createClass({
         {!progressRedesign && <div className="user-stats-block">
           {_.map(groups, (stages, group) =>
             <div key={group}>
-              <h4
-                id={group.toLowerCase().replace(' ', '-')}
-                style={[
-                  professionalLearningCourse ? styles.flexHeader : {display: 'none'},
-                  count === 1 && {margin: '2px 0 0 0'}
-                ]}
-              >
-                {group}
-              </h4>
+              {showGroupHeaders &&
+                <h4
+                  id={group.toLowerCase().replace(' ', '-')}
+                  style={[
+                    styles.flexHeader,
+                    !professionalLearningCourse && {background: color.purple},
+                    count === 1 && {margin: '2px 0 0 0'}
+                  ]}
+                >
+                  {group}
+                </h4>
+              }
               {stages.map(stage =>
                 <CourseProgressRow
                   stage={stage}
