@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170126175815) do
+ActiveRecord::Schema.define(version: 20170127183604) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -702,6 +702,14 @@ ActiveRecord::Schema.define(version: 20170126175815) do
     t.index ["end"], name: "index_segments_on_end", using: :btree
     t.index ["start"], name: "index_segments_on_start", using: :btree
     t.index ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
+  end
+
+  create_table "sign_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",       null: false
+    t.datetime "sign_in_at",    null: false
+    t.integer  "sign_in_count", null: false
+    t.index ["sign_in_at"], name: "index_sign_ins_on_sign_in_at", using: :btree
+    t.index ["user_id"], name: "index_sign_ins_on_user_id", using: :btree
   end
 
   create_table "stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
