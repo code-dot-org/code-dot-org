@@ -1,5 +1,7 @@
 module ProjectsList
   class << self
+    # Look up every project of every student in the section which is not hidden or deleted.
+    # Return a set of metadata which can be used to display a list of projects in the UI.
     def fetch_section_projects(section)
       [].tap do |projects_list_data|
         section.students.each do |student|
@@ -25,7 +27,7 @@ module ProjectsList
 
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
-    # list of projects.
+    # single project.
     def get_project_row_data(student, project, channel_id)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
