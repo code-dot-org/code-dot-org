@@ -2,7 +2,7 @@
  * An ordered set of progress bubbles.
  */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from "@cdo/apps/util/color";
@@ -38,25 +38,21 @@ const styles = {
 
 const ProgressBubbleSet = React.createClass({
   propTypes: {
-    start: React.PropTypes.number.isRequired,
-    statuses: React.PropTypes.arrayOf(
-      React.PropTypes.string
-    ).isRequired,
-    urls: React.PropTypes.arrayOf(
-      React.PropTypes.string
+    start: PropTypes.number.isRequired,
+    levels: PropTypes.arrayOf(
+      PropTypes.shape({
+        level: PropTypes.string,
+        url: PropTypes.string
+      })
     ).isRequired
   },
 
   render() {
-    const { start, statuses, urls } = this.props;
-
-    if (statuses.length !== urls.length) {
-      throw new Error('ProgressBubbleSet requires the same number of statuses and urls');
-    }
+    const { start, levels } = this.props;
 
     return (
       <div style={styles.main}>
-        {statuses.map((status, index) => (
+        {levels.map((level, index) => (
           <div
             style={styles.withBackground}
             key={index}
@@ -65,14 +61,14 @@ const ProgressBubbleSet = React.createClass({
               style={[
                 styles.background,
                 index === 0 && styles.backgroundFirst,
-                index === statuses.length - 1 && styles.backgroundLast
+                index === levels.length - 1 && styles.backgroundLast
               ]}
             />
             <div style={{position: 'relative'}}>
               <ProgressBubble
                 number={start + index}
-                status={status}
-                url={urls[index]}
+                status={level.status}
+                url={level.url}
               />
             </div>
           </div>

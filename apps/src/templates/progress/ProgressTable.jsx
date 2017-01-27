@@ -3,7 +3,7 @@ import ProgressBubbleSet from './ProgressBubbleSet';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import { connect } from 'react-redux';
-import { lessonNames, statusByStage, urlsByStage } from '@cdo/apps/code-studio/progressRedux';
+import { lessonNames, levelsByStage } from '@cdo/apps/code-studio/progressRedux';
 
 const lighterBorder = color.border_light_gray;
 
@@ -57,12 +57,14 @@ const styles = {
 const ProgressTable = React.createClass({
   propTypes: {
     lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    statusByStage: PropTypes.arrayOf(
-      PropTypes.arrayOf(PropTypes.string)
+    levelsByStage: PropTypes.arrayOf(
+      PropTypes.arrayOf(
+        PropTypes.shape({
+          level: PropTypes.string,
+          url: PropTypes.string
+        })
+      )
     ).isRequired,
-    urlsByStage: PropTypes.arrayOf(
-      PropTypes.arrayOf(PropTypes.string)
-    ).isRequired
   },
   componentDidMount() {
     // TODO - This modifies things outside of our scope. This is done right now
@@ -79,7 +81,7 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { lessonNames, statusByStage, urlsByStage } = this.props;
+    const { lessonNames, levelsByStage } = this.props;
     return (
       <table style={styles.table}>
         <thead>
@@ -97,10 +99,7 @@ const ProgressTable = React.createClass({
             lessonNames.map((lessonName, index) => (
               <tr
                 key={index}
-                style={{
-                  ...((index % 2 === 0) && styles.lightRow),
-                  ...((index % 2 === 1) && styles.darkRow)
-                }}
+                style={(index % 2 === 0) ? styles.lightRow : styles.darkRow}
               >
                 <td style={styles.col1}>
                   <div style={styles.colText}>
@@ -109,9 +108,8 @@ const ProgressTable = React.createClass({
                 </td>
                 <td style={styles.col2}>
                   <ProgressBubbleSet
-                    number={1}
-                    statuses={statusByStage[index]}
-                    urls={urlsByStage[index]}
+                    start={1}
+                    levels={levelsByStage[index]}
                   />
                 </td>
               </tr>
@@ -126,6 +124,5 @@ const ProgressTable = React.createClass({
 
 export default connect(state => ({
   lessonNames: lessonNames(state.progress),
-  statusByStage: statusByStage(state.progress),
-  urlsByStage: urlsByStage(state.progress)
+  levelsByStage: levelsByStage(state.progress),
 }))(ProgressTable);
