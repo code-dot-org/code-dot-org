@@ -109,7 +109,7 @@ const ProgressTable = React.createClass({
                 </td>
                 <td style={styles.col2}>
                   <ProgressBubbleSet
-                    startingNumber={1}
+                    number={1}
                     statuses={statusByStage[index]}
                     urls={urlsByStage[index]}
                   />
