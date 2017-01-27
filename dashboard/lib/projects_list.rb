@@ -37,7 +37,7 @@ module ProjectsList
         studentName: student.name,
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-      }
+      }.with_indifferent_access
     end
   end
 end
