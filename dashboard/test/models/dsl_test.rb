@@ -32,7 +32,7 @@ class DslTest < ActiveSupport::TestCase
     level_modified = Multi.create_from_level_builder({}, {name: 'my_multi', dsl_text: input_dsl_without_content})
 
     assert_equal 'content1', level.properties['content1']
-    assert_equal nil, level_modified.properties['content1']
+    assert_nil level_modified.properties['content1']
   end
 
   test 'name should not be modifiable' do
