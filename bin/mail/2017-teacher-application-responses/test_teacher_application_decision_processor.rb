@@ -113,7 +113,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       regional_partner_contact_person_s: 'Mr. Contact',
       regional_partner_contact_person_email_s: 'partner.contact@example.net',
       workshop_registration_url_s: 'https://studio.code.org/pd/workshops/1234/enroll',
-      workshop_dates: 'June 1-5, 2017'
+      workshop_dates_s: 'June 1-5, 2017'
     }
     assert_equal expected, result
     assert_result_in_set :accept_partner, result

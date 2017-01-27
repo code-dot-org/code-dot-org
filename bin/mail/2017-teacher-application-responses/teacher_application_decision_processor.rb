@@ -41,7 +41,7 @@ class TeacherApplicationDecisionProcessor
     accept: 'Accept',
     decline: 'Decline',
     waitlist: 'Waitlist'
-  }
+  }.freeze
 
   TEACHER_CONS = [
     'June 18 - 23, 2017: Houston',
@@ -182,7 +182,7 @@ class TeacherApplicationDecisionProcessor
       regional_partner_contact_person_s: workshop_info[:partner_contact],
       regional_partner_contact_person_email_s: workshop_info[:partner_email],
       workshop_registration_url_s: "https://studio.code.org/pd/workshops/#{workshop_info[:id]}/enroll",
-      workshop_dates: workshop_info[:dates]
+      workshop_dates_s: workshop_info[:dates]
     }
     process :accept_partner, teacher_application, params
   end
