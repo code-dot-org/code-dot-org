@@ -245,7 +245,8 @@
                 .arrow_box_content{style: "overflow: hidden"}
                   - if course[:img]
                     .left{style: "float: left; width: 30%"}
-                      %img.courseimage{src: course[:img]}
+                      %a{href: course[:link]}
+                        %img.courseimage{src: course[:img]}
                   .right{style: "float: left; width: 65%"}
                     .title
                       =course[:name]
