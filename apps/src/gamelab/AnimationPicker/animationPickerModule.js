@@ -3,8 +3,9 @@ import _ from 'lodash';
 import {addBlankAnimation,
         addAnimation,
         addLibraryAnimation,
-        addLibraryAnimationAddition,
-        addBlankAnimationAddition} from '../animationListModule';
+        addBlankAnimationAddition,
+        addCustomAnimationAddition,
+        addLibraryAnimationAddition} from '../animationListModule';
 import { makeEnum } from '../../utils';
 import { animations as animationsApi } from '../../clientApi';
 import gamelabMsg from '@cdo/gamelab/locale';
@@ -123,8 +124,7 @@ export function handleUploadComplete(result) {
       if (goal === Goal.NEW_ANIMATION) {
         dispatch(addAnimation(key, animation));
       } else if (goal === Goal.NEW_FRAME) {
-        // TODO (bbuchanan): Implement after integrating Piskel
-        //dispatch(addCustomAnimationAddition(key, animation));
+        dispatch(addCustomAnimationAddition(animation));
       }
       dispatch(hide());
     }, () => {

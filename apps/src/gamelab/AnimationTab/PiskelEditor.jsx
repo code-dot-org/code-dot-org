@@ -5,7 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as PropTypes from '../PropTypes';
-import {editAnimation, removePendingAnimationAddition} from '../animationListModule';
+import { editAnimation, removePendingAnimationAddition } from '../animationListModule';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 
 /**
@@ -72,7 +72,7 @@ const PiskelEditor = React.createClass({
     }
     if (newProps.pendingAnimationAddition
       && newProps.selectedAnimation === newProps.pendingAnimationAddition.key) {
-      this.addPendingAnimationAddition(newProps.pendingAnimationAddition.props);
+      this.addPendingAnimationAddition(newProps.pendingAnimationAddition);
     }
   },
 
@@ -83,18 +83,19 @@ const PiskelEditor = React.createClass({
     }
 
     this.isLoadingAnimation_ = true;
-    if (animationProps.blankFrame) {
+    if (animationProps.props.blankFrame) {
       this.piskel.addBlankFrame();
       this.isLoadingAnimation_ = false;
       this.props.removePendingAnimationAddition();
-    } else {
+    } else if (animationProps.dataURI) {
       this.piskel.loadAdditionalFrames(
         animationProps.dataURI,
-        animationProps.frameSize.x,
-        animationProps.frameSize.y,
-        animationProps.frameDelay,
+        animationProps.props.frameSize.x,
+        animationProps.props.frameSize.y,
+        animationProps.props.frameDelay,
         () => {
           this.isLoadingAnimation_ = false;
+          this.props.removePendingAnimationAddition();
 
           // If the selected animation changed out from under us, load again.
           if (this.props.selectedAnimation !== key) {
