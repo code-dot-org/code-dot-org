@@ -147,10 +147,14 @@ class TeacherApplicationDecisionProcessor
     end
   end
 
+  def teachercon?(workshop_string)
+    TEACHER_CONS.any?{|tc| workshop_string.include? tc}
+  end
+
   def process_accept(teacher_application, accepted_workshop)
     # There are 2 kinds of acceptance, TeacherCon (ours) and Regional Partner.
     # We can tell based on the accepted workshop
-    if TEACHER_CONS.include? accepted_workshop
+    if teachercon? accepted_workshop
       process_accept_teachercon teacher_application, accepted_workshop
     else
       process_accept_partner teacher_application, accepted_workshop
