@@ -11,11 +11,12 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     @processor = TeacherApplicationDecisionProcessor.new
     @processor.expects(:update_primary_email).never
 
-    @mock_teacher_application = mock
-    @mock_teacher_application.stubs(:teacher_name).returns('Tracy Teacher')
-    @mock_teacher_application.stubs(:primary_email).returns('tracy.teacher@example.net')
-    @mock_teacher_application.stubs(:teacher_first_name).returns('Tracy')
-    @mock_teacher_application.stubs(:program_name).returns('CS Principles')
+    @mock_teacher_application = OpenStruct.new(
+      teacher_name: 'Tracy Teacher',
+      primary_email: 'tracy.teacher@example.net',
+      teacher_first_name: 'Tracy',
+      program_name: 'CS Principles'
+    )
     Pd::TeacherApplication.stubs(:find).with(is_a(Integer)).returns(@mock_teacher_application)
   end
 
