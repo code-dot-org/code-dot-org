@@ -397,7 +397,7 @@ module.exports = function (grunt) {
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
 
-    'projects_lists/index': './src/sites/studio/pages/projects_lists/index.js',
+    'projects/section_projects': './src/sites/studio/pages/projects/section_projects.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 

@@ -115,7 +115,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get '/projects-lists/:section_id', to: 'projects_lists#index'
+  get '/projects/section/:section_id', to: 'projects#section_projects'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
 

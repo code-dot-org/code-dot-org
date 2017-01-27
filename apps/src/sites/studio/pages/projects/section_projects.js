@@ -1,5 +1,5 @@
 /**
- * Entry point for projects_list/index.js bundle
+ * Entry point for projects/section_projects.js bundle
  */
 
 import $ from 'jquery';
