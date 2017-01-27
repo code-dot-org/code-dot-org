@@ -78,7 +78,7 @@ const CourseProgress = React.createClass({
               <h4
                 id={group.toLowerCase().replace(' ', '-')}
                 style={[
-                  professionalLearningCourse ? styles.flexHeader : {display: 'none'},
+                  styles.flexHeader,
                   count === 1 && {margin: '2px 0 0 0'}
                 ]}
               >
