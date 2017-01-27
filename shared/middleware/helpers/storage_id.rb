@@ -45,6 +45,15 @@ def storage_decrypt_channel_id(encrypted)
   [storage_id, channel_id]
 end
 
+def valid_encrypted_channel_id(encrypted)
+  begin
+    storage_decrypt_channel_id(encrypted)
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    return false
+  end
+  true
+end
+
 def storage_encrypt(plain)
   encrypter = OpenSSL::Cipher::Cipher.new('AES-128-CBC')
   encrypter.encrypt

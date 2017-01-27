@@ -189,7 +189,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'update_ideal_level_source does nothing for maze levels' do
     level = Maze.first
     level.update_ideal_level_source
-    assert_equal nil, level.ideal_level_source
+    assert_nil level.ideal_level_source
   end
 
   test 'artist levels are seeded with solutions' do
@@ -354,7 +354,7 @@ EOS
 
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)
-    assert_equal nil, level.examples
+    assert_nil level.examples
   end
 
   test 'gamelab examples' do
@@ -384,7 +384,7 @@ EOS
 
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)
-    assert_equal nil, level.examples
+    assert_nil level.examples
   end
 
   test 'cached_find' do
@@ -417,15 +417,15 @@ EOS
 
   test 'calculate_ideal_level_source_id does nothing if no level sources' do
     level = Maze.create(name: 'maze level with no level sources')
-    assert_equal nil, level.ideal_level_source_id
+    assert_nil level.ideal_level_source_id
 
     level.calculate_ideal_level_source_id
-    assert_equal nil, level.ideal_level_source_id
+    assert_nil level.ideal_level_source_id
   end
 
   test 'calculate_ideal_level_source_id sets ideal_level_source_id to best solution' do
     level = Maze.create(name: 'maze level with level sources')
-    assert_equal nil, level.ideal_level_source_id
+    assert_nil level.ideal_level_source_id
 
     right = create(:level_source, level: level, data: "<xml><right/></xml>")
     6.times do

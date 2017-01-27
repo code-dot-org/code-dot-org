@@ -751,6 +751,8 @@ en:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
