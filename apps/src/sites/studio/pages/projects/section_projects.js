@@ -20,8 +20,6 @@ function initPage() {
     url: dataUrl,
     dataType: 'json'
   }).done(projectsData => {
-    ReactDOM.render(React.createElement(ProjectsList, {projectsData}), element);
+    ReactDOM.render(<ProjectsList projectsData={projectsData}/>, element);
   });
-
 }
-
