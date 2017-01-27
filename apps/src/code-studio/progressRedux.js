@@ -217,6 +217,18 @@ export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocSc
 // Do we have one or more lockable stages
 export const hasLockableStages = state => state.stages.some(stage => stage.lockable);
 
+export const lessonNames = state => state.stages.map(stage => stage.name);
+
+// TODO - account for locked levels
+export const levelsByStage = state => (
+  state.stages.map(stage => (
+    stage.levels.map(level => ({
+      status: level.status,
+      url: level.url
+    }))
+  ))
+);
+
 /* start-test-block */
 // export private function(s) to expose to unit testing
 export const __testonly__ = {
