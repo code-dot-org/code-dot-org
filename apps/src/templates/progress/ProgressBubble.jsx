@@ -2,44 +2,12 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 
-export const DOT_SIZE = 30;
+// TODO - not sure I like these bubble color styles being keyed by these strings.
+// In a future PR, share with progress_dot, likely by using an Enum of different
+// allowable values.
+import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
 
-// TODO - not sure I like these being keyed by these strings.
-// TODO - share with progress_dot?
-const bubbleColors = {
-  submitted: {
-    color: color.white,
-    backgroundColor: color.level_submitted
-  },
-  perfect: {
-    color: color.white,
-    backgroundColor: color.level_perfect
-  },
-  passed: {
-    color: color.white,
-    backgroundColor: color.level_passed
-  },
-  attempted: {
-    color: color.charcoal,
-    backgroundColor: color.level_attempted
-  },
-  not_tried: {
-    color: color.charcoal,
-    backgroundColor: color.level_not_tried
-  },
-  review_rejected: {
-    color: color.white,
-    backgroundColor: color.level_review_rejected
-  },
-  review_accepted: {
-    color: color.white,
-    backgroundColor: color.level_perfect
-  },
-  dots_disabled: {
-    color: color.charcoal,
-    backgroundColor: color.lightest_gray
-  },
-};
+export const DOT_SIZE = 30;
 
 const styles = {
   main: {
@@ -71,7 +39,7 @@ const styles = {
 const ProgressBubble = React.createClass({
   propTypes: {
     number: PropTypes.number.isRequired,
-    status: PropTypes.oneOf(Object.keys(bubbleColors)).isRequired,
+    status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
     url: PropTypes.string
   },
 
@@ -80,7 +48,7 @@ const ProgressBubble = React.createClass({
 
     const style = {
       ...styles.main,
-      ...bubbleColors[status]
+      ...BUBBLE_COLORS[status]
     };
 
     return (
@@ -93,6 +61,8 @@ const ProgressBubble = React.createClass({
   }
 });
 
+// Expose our height, as ProgressBubbleSet needs this to stick the little gray
+// connector between bubbles
 ProgressBubble.height = DOT_SIZE + styles.main.marginTop + styles.main.marginBottom;
 
 export default Radium(ProgressBubble);

@@ -20,7 +20,7 @@ export default storybook => {
         name:'starting at 3',
         story: () => (
           <ProgressBubbleSet
-            startingNumber={3}
+            number={3}
             statuses={["perfect", "not_tried", "attempted", "passed", "submitted"]}
             urls={[
               '/foo/bar',
@@ -36,7 +36,7 @@ export default storybook => {
         name:'multiple lines',
         story: () => (
           <ProgressBubbleSet
-            startingNumber={1}
+            number={1}
             statuses={[
               "perfect", "not_tried", "not_tried", "not_tried", "not_tried",
               "not_tried", "not_tried", "not_tried", "not_tried", "not_tried",
