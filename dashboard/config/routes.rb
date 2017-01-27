@@ -115,11 +115,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :projects_lists, path: '/projects-lists/', only: [:index] do
-    collection do
-      get "/:section_id", to: 'projects_lists#index'
-    end
-  end
+  get '/projects-lists/:section_id', to: 'projects_lists#index'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
 
