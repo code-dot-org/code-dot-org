@@ -40,13 +40,13 @@ module Ops
     def all_forbidden
       get :index
       assert_response :forbidden
-      post :create, district: {name: 'test'}
+      post :create, params: {district: {name: 'test'}}
       assert_response :forbidden
-      get :show, id: @district.id
+      get :show, params: {id: @district.id}
       assert_response :forbidden
-      patch :update, id: @district.id, district: {name: 'name'}
+      patch :update, params: {id: @district.id, district: {name: 'name'}}
       assert_response :forbidden
-      delete :destroy, id: @district.id
+      delete :destroy, params: {id: @district.id}
       assert_response :forbidden
     end
 
@@ -55,7 +55,7 @@ module Ops
       assert_routing({ path: "#{API}/districts", method: :post }, { controller: 'ops/districts', action: 'create' })
 
       assert_difference 'District.count' do
-        post :create, district: {name: 'test district'}
+        post :create, params: {district: {name: 'test district'}}
       end
       assert_response :success
     end
@@ -65,7 +65,16 @@ module Ops
       assert_routing({ path: "#{API}/districts", method: :post }, { controller: 'ops/districts', action: 'create' })
 
       assert_creates(District, User) do
-        post :create, district: {name: 'test district', contact: {ops_first_name: 'New', ops_last_name: 'user', email: 'new_teacher@email.xx'}}
+        post :create, params: {
+          district: {
+            name: 'test district',
+            contact: {
+              ops_first_name: 'New',
+              ops_last_name: 'user',
+              email: 'new_teacher@email.xx'
+            }
+          }
+        }
       end
       assert_response :success
 
@@ -90,7 +99,7 @@ module Ops
     test 'read district info' do
       assert_routing({ path: "#{API}/districts/1", method: :get }, { controller: 'ops/districts', action: 'show', id: '1' })
 
-      get :show, id: @district.id
+      get :show, params: {id: @district.id}
       assert_response :success
     end
 
@@ -98,9 +107,9 @@ module Ops
       assert_routing({ path: "#{API}/districts/1", method: :patch }, { controller: 'ops/districts', action: 'update', id: '1' })
 
       new_name = 'New district name'
-      patch :update, id: @district.id, district: {name: new_name}
+      patch :update, params: {id: @district.id, district: {name: new_name}}
 
-      get :show, id: @district.id
+      get :show, params: {id: @district.id}
       assert_equal new_name, JSON.parse(@response.body)['name']
       assert_response :success
     end
@@ -110,7 +119,16 @@ module Ops
 
       assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
       assert_creates(User) do
-        put :update, id: @district.id, district: {contact: {ops_first_name: 'New', ops_last_name: 'Teacher', email: 'new_teacher@email.xx'}}
+        put :update, params: {
+          id: @district.id,
+          district: {
+            contact: {
+              ops_first_name: 'New',
+              ops_last_name: 'Teacher',
+              email: 'new_teacher@email.xx'
+            }
+          }
+        }
       end
 
       # user is a district contact
@@ -137,7 +155,12 @@ module Ops
 
       assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
       assert_does_not_create(User) do
-        put :update, id: @district.id, district: {contact: {name: 'Existing Teacher', email: 'existing@teacher.xx'}}
+        put :update, params: {
+          id: @district.id,
+          district: {
+            contact: {name: 'Existing Teacher', email: 'existing@teacher.xx'}
+          }
+        }
       end
 
       # user is a district contact
@@ -158,7 +181,7 @@ module Ops
       assert_routing({ path: "#{API}/districts/1", method: :delete }, { controller: 'ops/districts', action: 'destroy', id: '1' })
 
       assert_difference 'District.count', -1 do
-        delete :destroy, id: @district.id
+        delete :destroy, params: {id: @district.id}
       end
       assert_response :success
     end

@@ -11,6 +11,45 @@ import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 import { SignInState } from '../../progressRedux';
 
 const dotSize = 24;
+
+/**
+ * Styles to color bubbles
+ */
+export const BUBBLE_COLORS = {
+  submitted: {
+    color: color.white,
+    backgroundColor: color.level_submitted
+  },
+  perfect: {
+    color: color.white,
+    backgroundColor: color.level_perfect
+  },
+  passed: {
+    color: color.white,
+    backgroundColor: color.level_passed
+  },
+  attempted: {
+    color: color.charcoal,
+    backgroundColor: color.level_attempted
+  },
+  not_tried: {
+    color: color.charcoal,
+    backgroundColor: color.level_not_tried
+  },
+  review_rejected: {
+    color: color.white,
+    backgroundColor: color.level_review_rejected
+  },
+  review_accepted: {
+    color: color.white,
+    backgroundColor: color.level_perfect
+  },
+  dots_disabled: {
+    color: color.charcoal,
+    backgroundColor: color.lightest_gray
+  },
+};
+
 const styles = {
   outer: {
     color: color.purple
@@ -89,40 +128,7 @@ const styles = {
       }
     }
   },
-  status: {
-    submitted: {
-      color: color.white,
-      backgroundColor: color.level_submitted
-    },
-    perfect: {
-      color: color.white,
-      backgroundColor: color.level_perfect
-    },
-    passed: {
-      color: color.white,
-      backgroundColor: color.level_passed
-    },
-    attempted: {
-      color: color.charcoal,
-      backgroundColor: color.level_attempted
-    },
-    not_tried: {
-      color: color.charcoal,
-      backgroundColor: color.level_not_tried
-    },
-    review_rejected: {
-      color: color.white,
-      backgroundColor: color.level_review_rejected
-    },
-    review_accepted: {
-      color: color.white,
-      backgroundColor: color.level_perfect
-    },
-    dots_disabled: {
-      color: color.charcoal,
-      backgroundColor: color.lightest_gray
-    },
-  }
+  status: BUBBLE_COLORS
 };
 
 function dotClicked(url, e) {
