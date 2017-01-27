@@ -53,7 +53,6 @@ export const DONE_LOADING_ADDITION_FROM_SOURCE = 'AnimationList/DONE_LOADING_ADD
 // Args: none
 export const REMOVE_PENDING_ANIMATION_ADDITION = 'AnimationList/REMOVE_PENDING_ANIMATION_ADDITION';
 
-
 export default combineReducers({
   orderedKeys,
   propsByKey,
@@ -338,28 +337,12 @@ export function addBlankAnimation() {
 
 export function addBlankAnimationAddition() {
   return (dispatch, getState) => {
-    // Special behavior here:
-    // By pushing an animation that is "loadedFromSource" but has a null
-    // blob and dataURI, Piskel will know to create a new document with
-    // the given dimensions.
     var selectedAnimationKey = getState().animationTab.selectedAnimation;
     dispatch({
       type: SET_PENDING_ANIMATION_ADDITION,
       key: selectedAnimationKey,
       props: {
-        blankFrame: true,
-        name: generateAnimationName('animation', getState().animationList.propsByKey),
-        sourceUrl: null,
-        frameSize: {x: 100, y: 100},
-        frameCount: 1,
-        looping: true,
-        frameDelay: 4,
-        version: null,
-        loadedFromSource: true,
-        saved: false,
-        blob: null,
-        dataURI: null,
-        hasNewVersionThisSession: false
+        blankFrame: true
       }
     });
     dashboard.project.projectChanged();
@@ -401,7 +384,6 @@ export function addCustomAnimationAddition(props) {
     dashboard.project.projectChanged();
   };
 }
-
 
 /**
  * Add a library animation to the project.
@@ -446,8 +428,7 @@ export function setPendingAnimationAddition(key, props) {
 export function removePendingAnimationAddition() {
   return dispatch => {
     dispatch({
-      type: REMOVE_PENDING_ANIMATION_ADDITION,
-
+      type: REMOVE_PENDING_ANIMATION_ADDITION
     });
   };
 }
