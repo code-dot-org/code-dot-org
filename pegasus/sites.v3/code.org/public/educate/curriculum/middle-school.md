@@ -75,7 +75,7 @@ For Algebra Classrooms
 
 [/solid-block-header]
 
-Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. [Computer Science in Algebra Course A](/educate/algebra) is a ~10 hour, block based course available from Code.org. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, these courses demonstrate how algebra applies in the real world, using an exciting, hands-on approach to create something cool. 
+Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. [Computer Science in Algebra Course A](/educate/algebra) is a ~10 hour, block based course available from Code.org. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, these courses demonstrate how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 <br>
 
 [solid-block-header]
@@ -103,6 +103,8 @@ Other Resources
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
+
+<%= view :course_explorer_blurb %>
 
 ## Inspire students
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.

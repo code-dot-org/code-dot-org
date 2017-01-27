@@ -317,7 +317,7 @@ class UserTest < ActiveSupport::TestCase
       User.find_for_authentication(login: '', hashed_email: hashed_email_user.hashed_email)
 
     # wat you can't do that hax0rs
-    assert_equal nil, User.find_for_authentication(email: {'$acunetix' => 1})
+    assert_nil User.find_for_authentication(email: {'$acunetix' => 1})
     # this used to raise a mysql error, now we sanitize it into a nonsense string
   end
 
@@ -722,8 +722,8 @@ class UserTest < ActiveSupport::TestCase
       user_script = UserScript.last
       assert_equal start_date.to_i, user_script.started_at.to_i
       assert_equal progress_date.to_i, user_script.last_progress_at.to_i
-      assert_equal nil, user_script.assigned_at
-      assert_equal nil, user_script.completed_at
+      assert_nil user_script.assigned_at
+      assert_nil user_script.completed_at
     ensure
       UserLevel.record_timestamps = true
     end
@@ -760,7 +760,7 @@ class UserTest < ActiveSupport::TestCase
       user_script = UserScript.last
       assert_equal completed_date.to_i - 1.day, user_script.started_at.to_i
       assert_equal completed_date.to_i, user_script.last_progress_at.to_i
-      assert_equal nil, user_script.assigned_at
+      assert_nil user_script.assigned_at
       assert_equal completed_date.to_i, user_script.completed_at.to_i
 
     ensure
@@ -793,8 +793,8 @@ class UserTest < ActiveSupport::TestCase
       user_script = UserScript.last
       assert_equal completed_date.to_i - 1.day, user_script.started_at.to_i
       assert_equal completed_date.to_i, user_script.last_progress_at.to_i
-      assert_equal nil, user_script.assigned_at
-      assert_equal nil, user_script.completed_at
+      assert_nil user_script.assigned_at
+      assert_nil user_script.completed_at
 
     ensure
       UserLevel.record_timestamps = true
@@ -1109,9 +1109,9 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'f', User.normalize_gender('female')
     assert_equal 'm', User.normalize_gender('male')
 
-    assert_equal nil, User.normalize_gender('some nonsense')
-    assert_equal nil, User.normalize_gender('')
-    assert_equal nil, User.normalize_gender(nil)
+    assert_nil User.normalize_gender('some nonsense')
+    assert_nil User.normalize_gender('')
+    assert_nil User.normalize_gender(nil)
   end
 
   test 'can create user with same name as deleted user' do
@@ -1401,7 +1401,7 @@ class UserTest < ActiveSupport::TestCase
     time_now = DateTime.now
     follower = create :follower
     follower.user.update(deleted_at: time_now, terms_of_service_version: 1)
-    assert_equal nil, follower.student_user.terms_version
+    assert_nil follower.student_user.terms_version
   end
 
   test 'permission? returns true when permission exists' do
