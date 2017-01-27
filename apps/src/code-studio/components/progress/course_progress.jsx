@@ -75,15 +75,18 @@ const CourseProgress = React.createClass({
         <div className="user-stats-block">
           {_.map(groups, (stages, group) =>
             <div key={group}>
-              <h4
-                id={group.toLowerCase().replace(' ', '-')}
-                style={[
-                  styles.flexHeader,
-                  count === 1 && {margin: '2px 0 0 0'}
-                ]}
-              >
-                {group}
-              </h4>
+              {groups.length > 1 &&
+                <h4
+                  id={group.toLowerCase().replace(' ', '-')}
+                  style={[
+                    styles.flexHeader,
+                    !professionalLearningCourse && {background: color.purple},
+                    count === 1 && {margin: '2px 0 0 0'}
+                  ]}
+                >
+                  {group}
+                </h4>
+              }
               {stages.map(stage =>
                 <CourseProgressRow
                   stage={stage}
