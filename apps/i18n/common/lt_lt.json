@@ -332,5 +332,7 @@
   "when": "kada",
   "whenRun": "paleidus",
   "workspaceHeaderShort": "Darbo laukas: ",
-  "yes": "Taip"
+  "yes": "Taip",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

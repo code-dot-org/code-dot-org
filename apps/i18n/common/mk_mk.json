@@ -332,5 +332,7 @@
   "when": "Кога",
   "whenRun": "Кога трча",
   "workspaceHeaderShort": "Работна површина: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

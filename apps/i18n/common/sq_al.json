@@ -332,5 +332,7 @@
   "when": "kur",
   "whenRun": "kur ekzekutohet",
   "workspaceHeaderShort": "hapësirë pune",
-  "yes": "Po"
+  "yes": "Po",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

@@ -332,5 +332,7 @@
   "when": "எப்போது",
   "whenRun": "இயங்கும் போது",
   "workspaceHeaderShort": "பணிவெளி: ",
-  "yes": "ஆம்"
+  "yes": "ஆம்",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

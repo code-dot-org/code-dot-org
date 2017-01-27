@@ -332,5 +332,7 @@
   "when": "როდის",
   "whenRun": "გაშვებისას",
   "workspaceHeaderShort": "სამუშაო სივრცე: ",
-  "yes": "დიახ"
+  "yes": "დიახ",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

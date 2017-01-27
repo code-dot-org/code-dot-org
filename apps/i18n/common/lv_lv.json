@@ -332,5 +332,7 @@
   "when": "kad",
   "whenRun": "kad izpilda",
   "workspaceHeaderShort": "Darba virsma: ",
-  "yes": "Jā"
+  "yes": "Jā",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

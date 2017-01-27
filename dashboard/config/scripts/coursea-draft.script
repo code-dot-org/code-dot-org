@@ -1,3 +1,6 @@
+hidden false
+login_required true
+
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_story_unspottedBugs1'
 level 'courseB_story_unspottedBugs2'
