@@ -5,10 +5,13 @@ import color from "../util/color";
 
 // Defines the coordinate scale for SVG elements
 const VIEWBOX_SIDE = 100;
+const HALF_VIEWBOX_SIDE = VIEWBOX_SIDE / 2;
 // Above this size, the slices of the clock will have less space between them
 const SMALL_GAPS_OVER_MODULUS = 200;
 // Above this size, the clock will not render individual slices
 const CONTINUOUS_METER_OVER_MODULUS = 400;
+// Thickness of border that flashes when animation completes
+const OUTER_BORDER_WIDTH = 1;
 // Radius of the outer edge of a wedge clock segment
 const WEDGE_OUTER_RADIUS = 48;
 // Radius of the inner edge of a wedge clock segment
@@ -33,6 +36,9 @@ const style = {
   svg: {
     width: 300,
     height: 300
+  },
+  fadeFill: {
+    transition: 'fill 1.5s'
   }
 };
 
@@ -68,16 +74,15 @@ const ModuloClock = React.createClass({
   },
 
   tick() {
-
     const elapsedTime = Date.now() - this.state.startTime;
-    if (elapsedTime < this.duration) {
+    if (elapsedTime < this.duration - FINALIZATION_DELAY) {
       const currentDividend = Math.floor(easeOutCircular(elapsedTime, 0, this.targetDividend, this.duration));
       this.onStep(currentDividend);
       this.setState({currentDividend});
     } else if (this.state.currentDividend !== this.targetDividend) {
       // Snap to final value, but there's one more step before the animation ends.
       this.setState({currentDividend: this.targetDividend});
-    } else if (elapsedTime >= this.duration + FINALIZATION_DELAY) {
+    } else if (elapsedTime >= this.duration) {
       // End the animation once the final value has been shown for a moment.
       clearInterval(this.interval);
       this.onComplete(this.targetDividend);
@@ -129,7 +134,7 @@ const ModuloClock = React.createClass({
             d={wedgePath}
             transform={`rotate(${n  * 360 / segmentCount} 50 50)`}
             fill={isSegmentFull ? COLOR.fullWedge : COLOR.emptyWedge}
-            style={!isRunning ? {transition: 'fill 1.5s'} : {}}
+            style={!isRunning ? style.fadeFill : {}}
           />
         );
       });
@@ -144,15 +149,22 @@ const ModuloClock = React.createClass({
       <div style={style.root}>
         <svg viewBox={`0 0 ${VIEWBOX_SIDE} ${VIEWBOX_SIDE}`} style={style.svg}>
           <circle
-            cx={VIEWBOX_SIDE / 2}
-            cy={VIEWBOX_SIDE / 2}
-            r={VIEWBOX_SIDE / 2}
+            cx={HALF_VIEWBOX_SIDE}
+            cy={HALF_VIEWBOX_SIDE}
+            r={HALF_VIEWBOX_SIDE}
+            fill={isRunning && currentDividend === this.targetDividend ? COLOR.fullWedge : COLOR.clockFace}
+            style={!isRunning ? style.fadeFill : {}}
+          />
+          <circle
+            cx={HALF_VIEWBOX_SIDE}
+            cy={HALF_VIEWBOX_SIDE}
+            r={HALF_VIEWBOX_SIDE - OUTER_BORDER_WIDTH}
             fill={COLOR.clockFace}
           />
           {this.renderSegments(currentDividend, modulus, isRunning)}
           <text
-            x={VIEWBOX_SIDE / 2}
-            y={VIEWBOX_SIDE / 2 + (isRunning ? 3 : 5)}
+            x={HALF_VIEWBOX_SIDE}
+            y={HALF_VIEWBOX_SIDE + (isRunning ? 3 : 5)}
             textAnchor="middle"
             stroke={COLOR.valueText}
             fill={COLOR.valueText}
@@ -177,9 +189,9 @@ function createWedgePath(arcRadians) {
   const t = arcRadians;
   const r1 = WEDGE_OUTER_RADIUS;
   const r2 = WEDGE_INNER_RADIUS;
-  const x1 = VIEWBOX_SIDE / 2;
-  const y1 = (VIEWBOX_SIDE / 2) - r1;
-  const y2 = (VIEWBOX_SIDE / 2) - r2;
+  const x1 = HALF_VIEWBOX_SIDE;
+  const y1 = (HALF_VIEWBOX_SIDE) - r1;
+  const y2 = (HALF_VIEWBOX_SIDE) - r2;
   const largeArc = arcRadians > Math.PI ? 1 : 0;
   return `
       M ${x1} ${y1}
