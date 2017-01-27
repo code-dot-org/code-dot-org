@@ -6,12 +6,21 @@ class ProjectsListTest < ActionController::TestCase
   setup do
     @student = create :student
 
-    student_project_value = '{"name":"Bobs App","level":"/projects/applab","createdAt":"2017-01-24T16:41:08.000-08:00",'\
-      '"updatedAt":"2017-01-25T17:48:12.358-08:00"}'
+    student_project_value = {
+      name: 'Bobs App',
+      level: '/projects/applab',
+      createdAt: '2017-01-24T16:41:08.000-08:00',
+      updatedAt: '2017-01-25T17:48:12.358-08:00'
+    }.to_json
     @student_project = {id: 22, value: student_project_value}
 
-    hidden_project_value = '{"name":"Hidden App","level":"/projects/playlab","createdAt":"2017-01-01T00:00:00.000-08:00",'\
-      '"updatedAt":"2017-01-01T00:00:00.000-08:00","hidden":true}'
+    hidden_project_value = {
+      name: 'Hidden App',
+      level: '/projects/playlab',
+      createdAt: '2017-01-01T00:00:00.000-08:00',
+      updatedAt: '2017-01-01T00:00:00.000-08:00',
+      hidden: true
+    }.to_json
     @hidden_project = {id: 33, value: hidden_project_value}
   end
 

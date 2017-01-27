@@ -111,11 +111,10 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
+      get 'section/:section_id', action: 'section_projects'
       get '/angular', to: 'projects#angular'
     end
   end
-
-  get '/projects/section/:section_id', to: 'projects#section_projects'
 
   post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -329,12 +328,6 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  namespace :api do
-    namespace :v1 do
-      concerns :api_v1_pd_routes
-    end
-  end
-
   namespace :pd do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
@@ -390,6 +383,8 @@ Dashboard::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      concerns :api_v1_pd_routes
+
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: { format: 'json' }

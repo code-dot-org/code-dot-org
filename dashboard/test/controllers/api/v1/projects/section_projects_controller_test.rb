@@ -9,12 +9,21 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     @student = create :user
     create :follower, section: @section, student_user: @student
 
-    student_project_value = '{"name":"Bobs App","level":"/projects/applab","createdAt":"2017-01-24T16:41:08.000-08:00",'\
-      '"updatedAt":"2017-01-25T17:48:12.358-08:00"}'
+    student_project_value = {
+      name: 'Bobs App',
+      level: '/projects/applab',
+      createdAt: '2017-01-24T16:41:08.000-08:00',
+      updatedAt: '2017-01-25T17:48:12.358-08:00'
+    }.to_json
     student_project = {id: 22, value: student_project_value}
 
-    hidden_project_value = '{"name":"Hidden App","level":"/projects/playlab","createdAt":"2017-01-01T00:00:00.000-08:00",'\
-      '"updatedAt":"2017-01-01T00:00:00.000-08:00","hidden":true}'
+    hidden_project_value = {
+      name: 'Hidden App',
+      level: '/projects/playlab',
+      createdAt: '2017-01-01T00:00:00.000-08:00',
+      updatedAt: '2017-01-01T00:00:00.000-08:00',
+      hidden: true
+    }.to_json
     hidden_project = {id: 33, value: hidden_project_value}
 
     stub_user_storage_ids = [{id: STUDENT_STORAGE_ID}]
@@ -29,19 +38,33 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
   test 'student cannot access section projects' do
     sign_in(@student)
     get :index, params: {section_id: @section.id}
-    assert_equal @response.status, 403
+    assert_response :forbidden
   end
 
-  test 'teacher can access section projects' do
+  test 'teacher can access their own section projects' do
     sign_in(@teacher)
     get :index, params: {section_id: @section.id}
-    assert_equal @response.status, 200
+    assert_response :success
+  end
+
+  test 'teacher cannot access another teachers section projects' do
+    other_teacher = create :teacher
+    sign_in(other_teacher)
+    get :index, params: {section_id: @section.id}
+    assert_response :forbidden
+  end
+
+  test 'admin can access section projects' do
+    admin = create :admin
+    sign_in(admin)
+    get :index, params: {section_id: @section.id}
+    assert_response :success
   end
 
   test 'section projects details are correct' do
     sign_in(@teacher)
     get :index, params: {section_id: @section.id}
-    assert_equal @response.status, 200
+    assert_response :success
     projects_list = JSON.parse(@response.body)
     # this verifies that the hidden project was not shown.
     assert_equal 1, projects_list.size
