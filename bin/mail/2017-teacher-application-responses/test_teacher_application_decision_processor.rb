@@ -64,6 +64,13 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     end
   end
 
+  def test_is_teachercon
+    # Match substring, with or without "(travel expenses paid)"
+    assert @processor.teachercon? 'July 16 - 21, 2017: Phoenix'
+    assert @processor.teachercon? 'June 18 - 23, 2017: Houston (travel expenses paid)'
+    refute @processor.teachercon? 'not teachercon'
+  end
+
   def test_process_decisions_row_accept_teachercon
     teachercon_name = 'June 18 - 23, 2017: Houston'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, teachercon_name)
