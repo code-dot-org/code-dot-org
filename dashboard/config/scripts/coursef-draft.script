@@ -1,3 +1,6 @@
+hidden false
+login_required true
+
 stage 'The Power of Words'
 level 'coursef_powerofwords'
 

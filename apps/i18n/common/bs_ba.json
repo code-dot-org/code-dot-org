@@ -332,5 +332,7 @@
   "when": "kada",
   "whenRun": "pri pokretanju",
   "workspaceHeaderShort": "Radni prostor: ",
-  "yes": "Da"
+  "yes": "Da",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

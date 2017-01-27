@@ -332,5 +332,7 @@
   "when": "وقتی",
   "whenRun": "زمان اجرا",
   "workspaceHeaderShort": "محیط کار: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

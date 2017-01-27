@@ -16,7 +16,7 @@ module Ops
     test 'list all segments' do
       assert_routing({ path: "#{API}/workshops/1/segments", method: :get }, { controller: 'ops/segments', action: 'index', workshop_id: '1'})
 
-      get :index, workshop_id: @workshop.id
+      get :index, params: {workshop_id: @workshop.id}
       assert_response :success
     end
 
@@ -25,7 +25,10 @@ module Ops
       assert_routing({ path: "#{API}/workshops/1/segments", method: :post }, { controller: 'ops/segments', action: 'create', workshop_id: '1' })
 
       assert_difference 'Segment.count' do
-        post :create, workshop_id: @workshop.id, segment: {start: DateTime.now, end: DateTime.now + 1.day}
+        post :create, params: {
+          workshop_id: @workshop.id,
+          segment: {start: DateTime.now, end: DateTime.now + 1.day}
+        }
       end
       assert_response :success
     end
@@ -33,7 +36,7 @@ module Ops
     test 'read segment info' do
       assert_routing({ path: "#{API}/segments/1", method: :get }, { controller: 'ops/segments', action: 'show', id: '1' })
 
-      get :show, id: @segment.id
+      get :show, params: {id: @segment.id}
       assert_response :success
     end
 
@@ -41,7 +44,7 @@ module Ops
       assert_routing({ path: "#{API}/segments/1", method: :patch }, { controller: 'ops/segments', action: 'update', id: '1' })
 
       start_time = DateTime.now
-      patch :update, id: @segment.id, segment: {start: start_time}
+      patch :update, params: {id: @segment.id, segment: {start: start_time}}
 
       get :show, id: @segment.id
       assert_response :success
@@ -54,7 +57,7 @@ module Ops
       assert_routing({ path: "#{API}/segments/1", method: :delete }, { controller: 'ops/segments', action: 'destroy', id: '1' })
 
       assert_difference 'Segment.count', -1 do
-        get :destroy, id: @segment.id
+        get :destroy, params: {id: @segment.id}
       end
       assert_response :success
     end
@@ -72,9 +75,9 @@ module Ops
     end
 
     def all_forbidden
-      get :index, workshop_id: @workshop.id
+      get :index, params: {workshop_id: @workshop.id}
       assert_response :forbidden
-      get :show, id: @segment.id
+      get :show, params: {id: @segment.id}
       assert_response :forbidden
     end
   end

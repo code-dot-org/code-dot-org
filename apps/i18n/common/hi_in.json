@@ -332,5 +332,7 @@
   "when": "कब",
   "whenRun": "जब चलाएँ",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "हाँ"
+  "yes": "हाँ",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

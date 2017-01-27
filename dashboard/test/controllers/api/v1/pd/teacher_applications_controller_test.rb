@@ -50,14 +50,14 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
   test 'non admins with valid key can index teacher application' do
     secret_key = SecureRandom.hex(10)
     CDO.stubs(pd_teacher_application_list_secret_key: secret_key)
-    get :index, secret_key: secret_key
+    get :index, params: {secret_key: secret_key}
     assert_response :success
   end
 
   test 'index for non admins without a valid key returns 404' do
     secret_key = SecureRandom.hex(10)
     CDO.stubs(pd_teacher_application_list_secret_key: secret_key)
-    get :index, secret_key: 'invalid'
+    get :index, params: {secret_key: 'invalid'}
     assert_response 404
   end
 
