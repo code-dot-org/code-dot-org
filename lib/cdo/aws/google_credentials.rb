@@ -38,7 +38,6 @@ module Cdo
   # If you omit `:client` option, a new {STS::Client} object will be
   # constructed.
   class GoogleCredentials
-
     DEFAULT_PROFILE = 'cdo'
 
     include Aws::CredentialProvider
