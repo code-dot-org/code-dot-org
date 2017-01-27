@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { TestResults } from '../../constants';
 import { onAnswerChanged } from './codeStudioLevels';
 import { sourceForLevel } from '../clientState';
