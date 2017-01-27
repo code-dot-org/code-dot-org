@@ -332,5 +332,7 @@
   "when": "når",
   "whenRun": "når den køyrer",
   "workspaceHeaderShort": "Arbeidsområde: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

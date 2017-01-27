@@ -332,5 +332,7 @@
   "when": "când",
   "whenRun": "când rulezi",
   "workspaceHeaderShort": "Spaţiu de lucru: ",
-  "yes": "Da"
+  "yes": "Da",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

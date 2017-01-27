@@ -332,5 +332,7 @@
   "when": "kun",
   "whenRun": "suoritettaessa",
   "workspaceHeaderShort": "Työtila: ",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

@@ -332,5 +332,7 @@
   "when": "當",
   "whenRun": "當運行時",
   "workspaceHeaderShort": "工作區：",
-  "yes": "是"
+  "yes": "是",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

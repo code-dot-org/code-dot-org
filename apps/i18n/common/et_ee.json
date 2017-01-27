@@ -332,5 +332,7 @@
   "when": "kui",
   "whenRun": "pärast käivitamist",
   "workspaceHeaderShort": "Tööruum: ",
-  "yes": "Jah"
+  "yes": "Jah",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

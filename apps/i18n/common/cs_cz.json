@@ -332,5 +332,7 @@
   "when": "když",
   "whenRun": "při spuštění",
   "workspaceHeaderShort": "Pracovní prostor: ",
-  "yes": "Ano"
+  "yes": "Ano",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }
