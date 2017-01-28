@@ -157,6 +157,18 @@ class ProjectsController < ApplicationController
     @game = @level.game
   end
 
+  # GET /projects/section/:section_id
+  #
+  # displays a UI component showing the list of projects belonging to students
+  # in the specified section. This is designed to be embedded in another page
+  # as an iframe.
+  def section_projects
+    view_options(
+      no_footer: true,
+      no_header: true,
+    )
+  end
+
   private
 
   def get_from_cache(key)
