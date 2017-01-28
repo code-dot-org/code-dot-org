@@ -20,11 +20,17 @@ Feature: Public Key Cryptography Eyes
     When I open my eyes to test "Cryptography Widget Appearance"
     Then I see no difference for "initial load"
 
-    Given I hide Eve's panel
-    Then I see no difference for "Eve's panel hidden"
-    And I show Eve's panel
+    Given I open view "Alice"
+    Then I see no difference for "Alice's view"
 
-    Given I set the public modulus to 6709
+    Given I open view "Eve"
+    Then I see no difference for "Eve's view"
+
+    Given I open view "Bob"
+    Then I see no difference for "Bob's view"
+
+    Given I open view "All"
+    And I set the public modulus to 6709
     And Alice sets her private key to 2962
     Then Alice's public key is 5239
     And I see no difference for "Keys selected"

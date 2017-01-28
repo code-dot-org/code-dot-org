@@ -332,5 +332,7 @@
   "when": "apabila",
   "whenRun": "apabila berjalan",
   "workspaceHeaderShort": "Ruang kerja: ",
-  "yes": "Ya"
+  "yes": "Ya",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

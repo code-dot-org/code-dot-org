@@ -198,6 +198,7 @@
   "keyValuePairLink": "Key/value pairs",
   "learnMore": "Learn more",
   "less": "Less",
+  "lessonName": "Lesson Name",
   "levelIncompleteError": "Keep coding! Something's not quite right yet.",
   "listVariable": "list",
   "loading": "Loading...",
@@ -333,5 +334,6 @@
   "when": "when",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "yourProgress": "Your Progress"
 }

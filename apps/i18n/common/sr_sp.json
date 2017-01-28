@@ -332,5 +332,7 @@
   "when": "када",
   "whenRun": "Када кренеш",
   "workspaceHeaderShort": "Радни простор: ",
-  "yes": "Да"
+  "yes": "Да",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

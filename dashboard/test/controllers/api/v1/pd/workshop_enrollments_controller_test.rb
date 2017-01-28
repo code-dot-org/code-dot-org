@@ -29,7 +29,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
   test 'admins can see enrollments for all workshops' do
     sign_in create(:admin)
-    get :index, workshop_id: @unrelated_workshop.id
+    get :index, params: {workshop_id: @unrelated_workshop.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
     assert_equal 1, response_json.length
@@ -38,7 +38,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
   test 'workshop organizers can see enrollemnts in their workshops' do
     sign_in @organizer
-    get :index, workshop_id: @workshop.id
+    get :index, params: {workshop_id: @workshop.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
     assert_equal 1, response_json.length
@@ -47,13 +47,13 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
   test 'workshop organizers cannot see enrollments in workshops they are not organizing' do
     sign_in @organizer
-    get :index, workshop_id: @unrelated_workshop.id
+    get :index, params: {workshop_id: @unrelated_workshop.id}
     assert_response :forbidden
   end
 
   test 'facilitators can see enrollments in their workshops' do
     sign_in @facilitator
-    get :index, workshop_id: @workshop.id
+    get :index, params: {workshop_id: @workshop.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
     assert_equal 1, response_json.length
@@ -62,20 +62,23 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
   test 'facilitators cannot see enrollments in workshops they are not facilitating' do
     sign_in @facilitator
-    get :index, workshop_id: @unrelated_workshop.id
+    get :index, params: {workshop_id: @unrelated_workshop.id}
     assert_response :forbidden
   end
 
   test 'teachers cannot see enrollments' do
     sign_in create(:teacher)
-    get :index, workshop_id: @workshop.id
+    get :index, params: {workshop_id: @workshop.id}
     assert_response :forbidden
   end
 
   test 'admins can delete enrollments from any workshop' do
     sign_in create(:admin)
 
-    delete :destroy, workshop_id: @unrelated_workshop.id, id: @unrelated_enrollment.id
+    delete :destroy, params: {
+      workshop_id: @unrelated_workshop.id,
+      id: @unrelated_enrollment.id
+    }
     assert_response :success
     refute Pd::Enrollment.exists?(@unrelated_enrollment.id)
   end
@@ -83,7 +86,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   test 'organizers can delete enrollments from their own workshops' do
     sign_in @organizer
 
-    delete :destroy, workshop_id: @workshop.id, id: @enrollment.id
+    delete :destroy, params: {workshop_id: @workshop.id, id: @enrollment.id}
     assert_response :success
     refute Pd::Enrollment.exists?(@enrollment.id)
   end
@@ -91,14 +94,17 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   test 'organizers cannot delete enrollments from workshops they are not organizing' do
     sign_in @organizer
 
-    delete :destroy, workshop_id: @unrelated_workshop.id, id: @unrelated_enrollment.id
+    delete :destroy, params: {
+      workshop_id: @unrelated_workshop.id,
+      id: @unrelated_enrollment.id
+    }
     assert_response :forbidden
   end
 
   test 'facilitators can delete enrollments from their own workshops' do
     sign_in @facilitator
 
-    delete :destroy, workshop_id: @workshop.id, id: @enrollment.id
+    delete :destroy, params: {workshop_id: @workshop.id, id: @enrollment.id}
     assert_response :success
     refute Pd::Enrollment.exists?(@enrollment.id)
   end
@@ -106,21 +112,27 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   test 'facilitators cannot delete enrollments from workshops they are not organizing' do
     sign_in @facilitator
 
-    delete :destroy, workshop_id: @unrelated_workshop.id, id: @unrelated_enrollment.id
+    delete :destroy, params: {
+      workshop_id: @unrelated_workshop.id,
+      id: @unrelated_enrollment.id
+    }
     assert_response :forbidden
   end
 
   test 'deleting an enrollment is idempotent' do
     sign_in create(:admin)
 
-    delete :destroy, workshop_id: @workshop.id, id: @enrollment.id
+    delete :destroy, params: {workshop_id: @workshop.id, id: @enrollment.id}
     assert_response :success
 
-    delete :destroy, workshop_id: @workshop.id, id: @enrollment.id
+    delete :destroy, params: {workshop_id: @workshop.id, id: @enrollment.id}
     assert_response :success
 
     # deleting a non-existent enrollment also succeeds
-    delete :destroy, workshop_id: @workshop.id, id: @unrelated_enrollment.id
+    delete :destroy, params: {
+      workshop_id: @workshop.id,
+      id: @unrelated_enrollment.id
+    }
     assert_response :success
   end
 end

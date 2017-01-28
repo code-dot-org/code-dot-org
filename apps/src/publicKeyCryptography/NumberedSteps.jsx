@@ -10,18 +10,38 @@ const style = {
     // see https://facebook.github.io/react/tips/style-props-value-px.html
     lineHeight: `${LINE_HEIGHT}px`,
     paddingBottom: 8
+  },
+  subStep: {
+    fontWeight: 'normal'
+  },
+  heading: {
+    fontSize: 'larger',
+    fontWeight: 'bold',
+    marginTop: 10
+  },
+  subheading: {
+    fontStyle: 'italic',
+    marignBottom: 10
   }
 };
 
-export default function NumberedSteps(props) {
+/**
+ * Custom 'ordered list' implementation with layout for the crypto widget.
+ * @param {number} [start] - if provided, starts numbering at this value.
+ *        Defaults to "1."
+ * @param children - List item contents.
+ */
+export default function NumberedSteps({start = 1, children}) {
   return (
     <table>
       <tbody>
-        {React.Children.map(props.children, (child, index) => React.cloneElement(child, {index}))}
+        {React.Children.map(children, (child, index) =>
+          React.cloneElement(child, {index: index + (start - 1)}))}
       </tbody>
     </table>);
 }
 NumberedSteps.propTypes = {
+  start: React.PropTypes.number,
   children: AnyChildren
 };
 
@@ -50,3 +70,37 @@ Step.propTypes = {
 Step.defaultProps = {
   index: 0
 };
+
+/**
+ * A styled list item for use within a step.
+ */
+export function SubStep({text}) {
+  return (
+    <li style={style.subStep}>
+      {text}
+    </li>
+  );
+}
+SubStep.propTypes = {
+  text: React.PropTypes.string.isRequired
+};
+
+export function Heading({text}) {
+  return (
+    <div style={style.heading}>
+      {text}
+    </div>
+  );
+}
+Heading.propTypes = {
+  text: React.PropTypes.string.isRequired
+};
+
+export function Subheading({text}) {
+  return (
+    <div style={style.subheading}>
+      {text}
+    </div>
+  );
+}
+Subheading.propTypes = {...Heading.propTypes};

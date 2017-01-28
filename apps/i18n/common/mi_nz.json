@@ -332,5 +332,7 @@
   "when": "ina",
   "whenRun": "ina whakahaerehia",
   "workspaceHeaderShort": "Papamahi: ",
-  "yes": "Āe"
+  "yes": "Āe",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

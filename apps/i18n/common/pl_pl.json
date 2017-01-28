@@ -332,5 +332,7 @@
   "when": "kiedy",
   "whenRun": "po uruchomieniu",
   "workspaceHeaderShort": "Obszar roboczy: ",
-  "yes": "Tak"
+  "yes": "Tak",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

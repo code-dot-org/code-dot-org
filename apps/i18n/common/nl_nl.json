@@ -332,5 +332,7 @@
   "when": "wanneer",
   "whenRun": "als gestart",
   "workspaceHeaderShort": "Werkplaats: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

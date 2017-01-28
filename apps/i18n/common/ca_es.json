@@ -332,5 +332,7 @@
   "when": "quan",
   "whenRun": "quan s'executa",
   "workspaceHeaderShort": "Zona de treball: ",
-  "yes": "Sí"
+  "yes": "Sí",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }

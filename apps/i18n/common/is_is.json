@@ -332,5 +332,7 @@
   "when": "þegar",
   "whenRun": "þegar keyrt",
   "workspaceHeaderShort": "Vinnusvæði: ",
-  "yes": "Já"
+  "yes": "Já",
+  "lessonName": "Lesson Name",
+  "yourProgress": "Your Progress"
 }
