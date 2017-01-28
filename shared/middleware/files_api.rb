@@ -95,6 +95,12 @@ class FilesApi < Sinatra::Base
     end
   end
 
+  set(:code_projects_domain) do |val|
+    condition do
+      (request.host == CDO.canonical_hostname('codeprojects.org')) == val
+    end
+  end
+
   #
   # GET /v3/(animations|assets|sources)/<channel-id>
   #
@@ -113,12 +119,53 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    get_file(endpoint, encrypted_channel_id, filename)
+  end
+
+  #
+  # GET /<channel-id>/<filename>?version=<version-id>
+  #
+  # Read a file. Optionally get a specific version instead of the most recent.
+  # Only from codeprojects.org domain
+  #
+  get %r{/([^/]+)/([^/]+)$}, { code_projects_domain: true } do |encrypted_channel_id, filename|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, filename, true)
+  end
+
+  #
+  # GET /<channel-id>
+  #
+  # Redirect to /<channel-id>/
+  # Only from codeprojects.org domain
+  #
+  get %r{/([^/]+)$}, { code_projects_domain: true } do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    redirect "#{request.path_info}/"
+  end
+
+  #
+  # GET /<channel-id>/
+  #
+  # Serve index.html for this project.
+  # Only from codeprojects.org domain
+  #
+  get %r{/([^/]+)/$}, { code_projects_domain: true } do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, 'index.html', true)
+  end
+
+  def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
 
-    # Serve all files with Content-Disposition set to attachment so browsers will not render potential HTML content inline
+    # Unless this is hosted by codeprojects.org,
+    # serve all files with Content-Disposition set to attachment so browsers will not render potential HTML content inline
     # User-generated content can contain script that we don't want to host as authentic web content from our domain
-    response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+    response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\"" unless code_projects_domain_root_route
 
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds

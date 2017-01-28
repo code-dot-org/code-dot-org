@@ -21,7 +21,7 @@ class CohortTest < ActiveSupport::TestCase
   test "has a script" do
     c = create :cohort
 
-    assert_equal nil, c.script
+    assert_nil c.script
 
     c.script = Script.find_by_name('ECSPD')
 

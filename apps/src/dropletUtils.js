@@ -60,7 +60,7 @@ exports.getTime = function () {
 exports.promptNum = function (text) {
   var val;
   do {
-    val = parseInt(window.prompt(text), 10);
+    val = Number(window.prompt(text));
   } while (isNaN(val));
   return val;
 };

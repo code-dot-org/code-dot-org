@@ -5,6 +5,7 @@ import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
+import { hasLockableStages } from '../../progressRedux';
 import commonMsg from '@cdo/locale';
 
 const styles = {
@@ -28,7 +29,6 @@ const ScriptTeacherPanel = React.createClass({
     hasSections: React.PropTypes.bool.isRequired,
     sectionsAreLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
-    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
     unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
@@ -38,7 +38,6 @@ const ScriptTeacherPanel = React.createClass({
       hasSections,
       sectionsAreLoaded,
       scriptHasLockableStages,
-      scriptAllowsHiddenStages,
       unlockedStageNames
     } = this.props;
 
@@ -48,8 +47,7 @@ const ScriptTeacherPanel = React.createClass({
         <div className="content">
           <ViewAsToggle/>
           {!sectionsAreLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
-          {hasSections && (scriptHasLockableStages || scriptAllowsHiddenStages) &&
-            <SectionSelector/>}
+          <SectionSelector/>
           {hasSections && scriptHasLockableStages && viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
@@ -94,15 +92,13 @@ export default connect((state, ownProps) => {
   });
 
   // Pretend we don't have lockable stages if we're not authorized to see them
-  const scriptHasLockableStages = lockableAuthorized &&
-    state.progress.stages.some(stage => stage.lockable);
+  const scriptHasLockableStages = lockableAuthorized && hasLockableStages(state.progress);
 
   return {
     viewAs,
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
     scriptHasLockableStages,
-    scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
 })(ScriptTeacherPanel);

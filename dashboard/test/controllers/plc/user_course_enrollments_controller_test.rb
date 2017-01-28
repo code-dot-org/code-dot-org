@@ -17,16 +17,22 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test 'invalid email address' do
-    post :create, user_emails: 'invalid', plc_course_id: @plc_course.id
+    post :create, params: {
+      user_emails: 'invalid',
+      plc_course_id: @plc_course.id
+    }
     assert_redirected_to action: :new, notice: 'The following users did not exist <li>invalid</li><br/>'
 
-    post :create, user_emails: "invalid\r\n#{@user.email}", plc_course_id: @plc_course.id
+    post :create, params: {
+      user_emails: "invalid\r\n#{@user.email}",
+      plc_course_id: @plc_course.id
+    }
     assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>The following users did not exist <li>invalid</li><br/>"
   end
 
   test 'validation failed' do
     assert_raise do
-      post :create, user_emails: @user.email, plc_course_id: nil
+      post :create, params: {user_emails: @user.email, plc_course_id: nil}
     end
   end
 
@@ -34,7 +40,10 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     @user_course_enrollment.destroy
 
     assert_creates(Plc::UserCourseEnrollment) do
-      post :create, user_emails: @user.email, plc_course_id: @plc_course.id
+      post :create, params: {
+        user_emails: @user.email,
+        plc_course_id: @plc_course.id
+      }
     end
 
     assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>"
@@ -42,13 +51,19 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     user2 = create :teacher
     user3 = create :teacher
 
-    post :create, user_emails: "#{user2.email}\r\n#{user3.email}", plc_course_id: @plc_course.id
+    post :create, params: {
+      user_emails: "#{user2.email}\r\n#{user3.email}",
+      plc_course_id: @plc_course.id
+    }
     assert_redirected_to action: :new, notice: "Enrollments created for <li>#{user2.email}</li><li>#{user3.email}</li><br/>"
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user2, plc_course: @plc_course).count
     assert_equal 1, Plc::UserCourseEnrollment.where(user: user3, plc_course: @plc_course).count
 
     assert_no_difference('Plc::UserCourseEnrollment.count') do
-      post :create, user_emails: @user.email, plc_course_id: @plc_course.id
+      post :create, params: {
+        user_emails: @user.email,
+        plc_course_id: @plc_course.id
+      }
     end
 
     assert_redirected_to action: :new, notice: "Enrollments created for <li>#{@user.email}</li><br/>"
@@ -67,7 +82,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_response :success
     get :group_view
     assert_response :success
-    get :manager_view, id: @user_course_enrollment
+    get :manager_view, params: {id: @user_course_enrollment}
     assert_response :success
   end
 
@@ -80,7 +95,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_response :success
     get :group_view
     assert_response :forbidden
-    get :manager_view, id: @user_course_enrollment
+    get :manager_view, params: {id: @user_course_enrollment}
     assert_response :forbidden
   end
 
@@ -93,7 +108,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_response :forbidden
     get :group_view
     assert_response :forbidden
-    get :manager_view, id: @user_course_enrollment
+    get :manager_view, params: {id: @user_course_enrollment}
     assert_response :forbidden
   end
 
@@ -101,7 +116,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     sign_out @user
     sign_in @district_contact
 
-    get :manager_view, id: @user_course_enrollment
+    get :manager_view, params: {id: @user_course_enrollment}
     assert_response :forbidden
   end
 
@@ -117,7 +132,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     other_course = create(:plc_course, name: 'Other Course', id: Plc::Course.maximum(:id).next)
     create(:plc_user_course_enrollment, user: @user, plc_course: other_course)
 
-    get :index, course: 'test-course'
+    get :index, params: {course: 'test-course'}
     assert_select '.course_title', 'Test Course'
 
     @controller = Plc::UserCourseEnrollmentsController.new
