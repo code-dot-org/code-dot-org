@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
 require_relative '../../../dashboard/config/environment'
 
 PEGASUS_REPORTING_DB = sequel_connect CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader
@@ -105,7 +104,13 @@ class TeacherApplicationDecisionProcessor
 
       next if results.empty?
       puts "Exporting #{results.size} results to #{out_filename}"
-      export_contacts_to_csv results, out_filename
+      columns = results.first.keys
+      CSV.open(out_filename, 'wb') do |csv|
+        csv << columns
+        results.each do |result|
+          csv << columns.map{|column| result[column]}
+        end
+      end
     end
   end
 
