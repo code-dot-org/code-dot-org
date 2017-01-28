@@ -34,6 +34,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 %link(rel='stylesheet' type='text/css' href='/shared/css/teacher-announcement.css')
 %link(rel='stylesheet' type='text/css' href='/shared/css/teacher-dashboard.css')
 %link(rel='stylesheet' type='text/css' href='/shared/css/user-progress.css')
+%script{src: CDO.studio_url('/blockly/js/projects/section_projects.js')}
 
 
 %div{'ng-view' => ''}
@@ -68,6 +69,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         {templateUrl: '/teacher-dashboard/signin_cards', controller: 'SectionSigninCardsController', tab: 'print_signin_cards'});
     $routeProvider.when('/sections/:id/progress',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionProgressController', tab: 'progress'});
+    $routeProvider.when('/sections/:id/projects',
+        {templateUrl: '/teacher-dashboard/section', controller: 'SectionProjectsController', tab: 'projects'});
     $routeProvider.when('/sections/:id/responses',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionResponsesController', tab: 'responses'});
     $routeProvider.when('/sections/:id/assessments',
@@ -144,6 +147,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
          moveStudents: {method:'POST', url:'/dashboardapi/sections/transfers'},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
+         // projects: {method:'GET', url:'/dashboardapi/v1/projects/section/:id', isArray: true},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
          assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
@@ -171,10 +175,13 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   // CONTROLLERS
 
-  var app = angular.module('teacherDashboard.controllers', []);
+  var app = angular.module('teacherDashboard.controllers', ['ngRoute']);
 
-  app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
-                                       function($scope, $window, sectionsService){
+  app.controller('SectionsController', ['$scope', '$window', '$route', 'sectionsService',
+                                       function($scope, $window, $route, sectionsService){
+    $scope.showTeacherProjects = !!$route.current.params['showTeacherProjects']
+    console.log(`showTeacherProjects: ${!!$scope.showTeacherProjects}`)
+
     $scope.sectionsLoaded = false;
 
     $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
@@ -581,10 +588,27 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   }]);
 
+  app.controller('SectionProjectsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
+                                             function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+    $scope.sections = sectionsService.query();
+    $scope.section = sectionsService.get({id: $routeParams.id});
+    $scope.tab = 'projects';
+
+    $scope.section.$promise.then(
+      function (section) {
+        window.renderSection(section.id);
+
+        // $scope.projectsData = sectionsService.projects({id: section.id});
+        //
+        // $scope.projectsData.$promise.then(projectsData => {
+        //   window.renderSection(projectsData);
+        // })
+      }
+    );
+  }]);
+
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
                                              function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
-
-
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.progress = sectionsService.progress({id: $routeParams.id});
