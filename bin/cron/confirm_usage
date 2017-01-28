@@ -66,7 +66,7 @@ def main
     if delta_sec > threshold_sec
       alert "#{table.to_s.upcase} KEY-VALUE CREATION: "\
         "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since "\
-        "last #{table} creation with column #{k} having value #{v}."
+        "last #{table} creation with column #{column} having value #{column_value}."
     end
   end
 
