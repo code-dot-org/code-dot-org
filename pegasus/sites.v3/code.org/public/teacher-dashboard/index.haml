@@ -147,7 +147,6 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
          moveStudents: {method:'POST', url:'/dashboardapi/sections/transfers'},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
-         // projects: {method:'GET', url:'/dashboardapi/v1/projects/section/:id', isArray: true},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'},
          responses: {method:'GET', url:'/dashboardapi/section_text_responses/:id', isArray: true},
          assessments: {method:'GET', url:'/dashboardapi/section_assessments/:id', isArray: true},
@@ -175,13 +174,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   // CONTROLLERS
 
-  var app = angular.module('teacherDashboard.controllers', ['ngRoute']);
+  var app = angular.module('teacherDashboard.controllers', []);
 
-  app.controller('SectionsController', ['$scope', '$window', '$route', 'sectionsService',
-                                       function($scope, $window, $route, sectionsService){
-    $scope.showTeacherProjects = !!$route.current.params['showTeacherProjects']
-    console.log(`showTeacherProjects: ${!!$scope.showTeacherProjects}`)
-
+  app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
+                                       function($scope, $window, sectionsService){
     $scope.sectionsLoaded = false;
 
     $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
@@ -597,12 +593,6 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.section.$promise.then(
       function (section) {
         window.renderSection(section.id);
-
-        // $scope.projectsData = sectionsService.projects({id: section.id});
-        //
-        // $scope.projectsData.$promise.then(projectsData => {
-        //   window.renderSection(projectsData);
-        // })
       }
     );
   }]);

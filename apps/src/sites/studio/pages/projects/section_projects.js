@@ -20,7 +20,5 @@ function renderSection(sectionId) {
   }).done(projectsData => {
     ReactDOM.render(<ProjectsList projectsData={projectsData}/>, element);
   });
-
-  // ReactDOM.render(<ProjectsList projectsData={projectsData}/>, element);
 }
 window.renderSection = renderSection;
