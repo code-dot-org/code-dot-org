@@ -156,6 +156,13 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Email has already been taken"], assigns(:user).errors.full_messages
   end
 
+  test "create adds user_geos" do
+    params_with_ip = @default_params.merge({current_sign_in_ip: '1.2.3.4'})
+    assert_creates(UserGeo) do
+      post :create, params: {user: params_with_ip}
+    end
+  end
+
   test "update student with utf8mb4 in name fails" do
     student = create :student
 
