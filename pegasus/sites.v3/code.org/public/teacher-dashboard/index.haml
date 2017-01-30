@@ -7,6 +7,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 - error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub(/"/,"\\\\\"")
 - error_string_other_section = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
+- show_section_projects = DCDO.get('section_projects', CDO.section_projects)
 
 
 -#
@@ -34,13 +35,15 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 %link(rel='stylesheet' type='text/css' href='/shared/css/teacher-announcement.css')
 %link(rel='stylesheet' type='text/css' href='/shared/css/teacher-dashboard.css')
 %link(rel='stylesheet' type='text/css' href='/shared/css/user-progress.css')
-%script{src: CDO.studio_url('/blockly/js/projects/section_projects.js')}
-
+-if show_section_projects
+  %script{src: CDO.studio_url('/blockly/js/projects/section_projects.js')}
 
 %div{'ng-view' => ''}
 
 :javascript
   'use strict';
+
+  var showSectionProjects = #{show_section_projects};
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -69,8 +72,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         {templateUrl: '/teacher-dashboard/signin_cards', controller: 'SectionSigninCardsController', tab: 'print_signin_cards'});
     $routeProvider.when('/sections/:id/progress',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionProgressController', tab: 'progress'});
-    $routeProvider.when('/sections/:id/projects',
-        {templateUrl: '/teacher-dashboard/section', controller: 'SectionProjectsController', tab: 'projects'});
+    if (showSectionProjects) {
+      $routeProvider.when('/sections/:id/projects',
+          {templateUrl: '/teacher-dashboard/section', controller: 'SectionProjectsController', tab: 'projects'});
+    }
     $routeProvider.when('/sections/:id/responses',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionResponsesController', tab: 'responses'});
     $routeProvider.when('/sections/:id/assessments',
@@ -584,18 +589,20 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   }]);
 
-  app.controller('SectionProjectsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
-                                             function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
-    $scope.sections = sectionsService.query();
-    $scope.section = sectionsService.get({id: $routeParams.id});
-    $scope.tab = 'projects';
+  if (showSectionProjects) {
+    app.controller('SectionProjectsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
+                                               function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+      $scope.sections = sectionsService.query();
+      $scope.section = sectionsService.get({id: $routeParams.id});
+      $scope.tab = 'projects';
 
-    $scope.section.$promise.then(
-      function (section) {
-        window.renderSection(section.id);
-      }
-    );
-  }]);
+      $scope.section.$promise.then(
+        function (section) {
+          window.renderSection(section.id);
+        }
+      );
+    }]);
+  }
 
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
                                              function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
