@@ -916,6 +916,9 @@ en:
         description here: description here
         title: title
       Correlation vs Causation: {}
+      Cups and Beans Activity:
+        description here: description here
+        title: title
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
       Debugging Variables: {}
@@ -1730,6 +1733,9 @@ en:
       Practice Performance Tasks in Unit 2: {}
       Practice Performance Tasks in Unit 3: {}
       Prepare for your presentation:
+        description here: description here
+        title: title
+      Public Key Crypto Widget Instructions:
         description here: description here
         title: title
       Rating Websites: {}

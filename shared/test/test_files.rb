@@ -55,8 +55,16 @@ class FilesTest < FilesApiTestBase
     assert_fileinfo_equal(actual_dog_image_info, file_infos['files'][0])
     assert_fileinfo_equal(actual_cat_image_info, file_infos['files'][1])
 
+    # Verify that we download the file as an attachment when hitting the normal GET api
     @api.get_object(dog_image_filename)
     assert_equal 'private, must-revalidate, max-age=0', last_response['Cache-Control']
+    assert_equal "attachment; filename=\"#{dog_image_filename}\"", last_response['Content-Disposition']
+    assert_equal dog_image_body, last_response.body
+
+    # Verify that we download the file without Content-Disposition when hitting the codeprojects.org root URL
+    @api.get_root_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert_nil last_response['Content-Disposition']
+    assert_equal dog_image_body, last_response.body
 
     @api.delete_object(dog_image_filename)
     assert successful?

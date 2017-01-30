@@ -24,10 +24,13 @@
 #
 
 class Weblab < Level
+  before_save :fix_examples
+
   serialized_attrs %w(
     project_template_level_name
     start_sources
     teacher_markdown
+    encrypted_examples
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -38,5 +41,11 @@ class Weblab < Level
       properties: {
       }
     ))
+  end
+
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select(&:present?)
   end
 end

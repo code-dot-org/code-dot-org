@@ -135,8 +135,8 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Phase 1: Online Introduction', create(:workshop, phase: 1).phase_long_name
     assert_equal 'Phase 2: Blended Summer Study', create(:workshop, phase: 2).phase_long_name
 
-    assert_equal nil, create(:workshop, phase: "????").phase_long_name
-    assert_equal nil, create(:workshop, phase: nil).phase_long_name
+    assert_nil create(:workshop, phase: "????").phase_long_name
+    assert_nil create(:workshop, phase: nil).phase_long_name
   end
 
   test "prerequisite phase" do
@@ -145,13 +145,13 @@ class WorkshopTest < ActiveSupport::TestCase
     #   1 => {id: 1, short_name: PHASE_1, long_name: 'Phase 1: Online Introduction'},
     #   2 => {id: 2, short_name: PHASE_2, long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
 
-    assert_equal nil, create(:workshop, phase: 1).prerequisite_phase
+    assert_nil create(:workshop, phase: 1).prerequisite_phase
     phase1 = {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'}
     assert_equal phase1, create(:workshop, phase: 2).prerequisite_phase
-    assert_equal nil, create(:workshop, phase: 3).prerequisite_phase
+    assert_nil create(:workshop, phase: 3).prerequisite_phase
 
-    assert_equal nil, create(:workshop, phase: "????").prerequisite_phase
-    assert_equal nil, create(:workshop, phase: nil).prerequisite_phase
+    assert_nil create(:workshop, phase: "????").prerequisite_phase
+    assert_nil create(:workshop, phase: nil).prerequisite_phase
   end
 
   test "program_type_short_name" do
@@ -179,8 +179,8 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Phase 1', create(:workshop, phase: 1).phase_short_name
     assert_equal 'Phase 2', create(:workshop, phase: 2).phase_short_name
 
-    assert_equal nil, create(:workshop, phase: "????").phase_long_name
-    assert_equal nil, create(:workshop, phase: nil).phase_short_name
+    assert_nil create(:workshop, phase: "????").phase_long_name
+    assert_nil create(:workshop, phase: nil).phase_short_name
   end
 
   test "exit_survey_url" do

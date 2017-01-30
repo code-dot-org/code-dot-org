@@ -91,25 +91,25 @@ level 'courseF_bee_fwp7'
 level 'courseF_bee_fwp8'
 level 'courseF_bee_fwp9'
 
-stage 'Explore Project Ideas'
+stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'InspirationalArtwork'
 named_level 'FoodFight'
 named_level 'Guess The Number'
 named_level 'Choose Your Own Adventure'
 
-stage 'The Design Process'
+stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project'
 
-stage 'Build Your Project'
+stage 'Build Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project'
 named_level 'Course F: Play Lab Project'
 
-stage 'Revise Your Project'
+stage 'Revise Your Project', flex_category: 'end_of_course_project'
 named_level 'Course F: Artist Project - Revise'
 named_level 'Course F: Play Lab Project - Revise'
 
-stage 'Presentation Your Project'
+stage 'Presentation Your Project', flex_category: 'end_of_course_project'
 named_level 'Prepare for your presentation'
 
-stage 'Try programming with Khan Academy'
+stage 'Try programming with Khan Academy', flex_category: 'extra_course_content'
 named_level 'Learn Javascript with Khan Academy!'
