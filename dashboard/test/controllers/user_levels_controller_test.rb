@@ -10,7 +10,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in teacher
 
-    post :update, id: user_level.id, user_level: {submitted: false}
+    post :update, params: {id: user_level.id, user_level: {submitted: false}}
     assert_response :success
 
     user_level.reload
