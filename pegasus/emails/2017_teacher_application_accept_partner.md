@@ -43,7 +43,7 @@ As a reminder, to join the Professional Learning Program we ask that you commit 
   
 <h3>Additional steps</h3>
 
-* Mark your calendar for your summer workshop! **As a reminder, your assigned summer workshop location and date is <%= workshop_location_s %>, on <%= workshop_dates_s %>.**
+* Mark your calendar for your summer workshop! **As a reminder, your assigned summer workshop is with <%= regional_partner_name_s %> from <%= workshop_dates_s %>.**
 
 * You will receive more details about your summer workshop approximately six weeks in advance. This information will be sent by your Regional Partner contact. Please do not book any travel (if relevant) before you receive this information.
 

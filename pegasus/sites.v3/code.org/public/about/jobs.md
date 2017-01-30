@@ -91,7 +91,7 @@ Additionally, the ideal candidate has:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="coord"href="#coord">Program Manager (Seattle, WA)</a>
+## <a name="coord"href="#coord">Program Coordinator (Seattle, WA)</a>
 
 **Job Summary:**
 

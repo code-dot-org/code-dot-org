@@ -37,10 +37,11 @@ Addressing diversity issues is foundational to Code.org’s work, and is woven t
 
 From elementary school all the way to high school, our courses are designed specifically with a focus on diversity and recruitment of traditionally underrepresented students. This is factored into the curriculum itself. For example, our high school course sequencing begins students with a unit on problem-solving, instead of jumping directly into computer programming - this allows students to learn together on an even playing field, even if some students have already learned to code in a summer camp or after school. 
 
-<center><img src="/images/videostars.png" /></center>
-<br/><br/>
+<br/>
+<center><img width="100%" src="/images/videostars2.png" /></center>
+<br/>
 
-Across all the [video tutorials](/educate/videos) we produce, we've recruited a wide cast of "lecturers", some of which are celebrity geeks like Bill Gates or Mark Zuckerberg, but others are women in computing such as Paola Minaya (hispanic engineer at Microsoft), Tess Winlock (female engineer at Google), Makinde Adeagbo (early African American engineer at Facebook and Pinterest), or Kate Starbird (WNBA basketball player, now computer scientist at University of Washington). By casting a wide range of lecturers, diverse CS role models from different industries are baked into our curriculum materials.
+Across all the [video tutorials](/educate/videos) we produce, we've recruited a wide cast of "lecturers", featuring not only celebrated technologist like Bill Gates or Mark Zuckerberg, but also women and underrepresented minorities in computing such as Paola Minaya (hispanic engineer at Microsoft), Tess Winlock (female engineer at Google), Makinde Adeagbo (early African American engineer at Facebook and Pinterest), or Kate Starbird (WNBA basketball player, now computer scientist at University of Washington). By casting a wide range of lecturers, diverse CS role models from different industries are baked into our curriculum materials.
 
 The results speak for themselves:
 
@@ -88,9 +89,9 @@ We’ve also distributed [recruitment posters, videos, and other marketing mater
 
 | Our own team diversity |  |
 |------|---|
-| Code.org full time staff |  52% female |
+| Code.org full time staff |  53% female |
 | Our leadership team | 50% female |
-| Our technical staff (software engineers, technial product managers, computer science educators) | 31% female |
+| Our technical staff (software engineers, technial product managers, computer science educators) | 26% female |
 | Our teacher-training network |  69% female |
 | The teachers attending our professional development |  86% female |
 
