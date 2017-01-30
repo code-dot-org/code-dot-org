@@ -22,6 +22,18 @@ a.third-rule {
 }
 `;
 
+const NEW_APPLAB_CSS_CONTENT = `
+.some-css-rule {
+  background-image: url("applab/assets/blockly/media/foo.png");
+}
+#some-other-rule {
+  background-image: url("applab/assets/blockly/media/bar.jpg");
+}
+a.third-rule {
+  background-image: url("applab/assets/blockly/media/third.jpg");
+}
+`;
+
 describe('The Exporter,', function () {
   var server, listStub;
 
@@ -236,25 +248,27 @@ describe('The Exporter,', function () {
 
     describe("will produce a zip file, which", function () {
       it("should contain a bunch of files", () => {
-        assert.deepEqual(Object.keys(zipFiles), [
+        const files = Object.keys(zipFiles);
+        files.sort();
+        assert.deepEqual(files, [
           'my-app/',
           'my-app/README.md',
-          'my-app/index.html',
-          'my-app/style.css',
-          'my-app/code.js',
           'my-app/applab/',
           'my-app/applab/applab-api.js',
           'my-app/applab/applab.css',
-          'my-app/assets/',
-          'my-app/assets/foo.png',
-          'my-app/assets/bar.png',
-          'my-app/assets/zoo.mp3',
           'my-app/applab/assets/',
           'my-app/applab/assets/blockly/',
           'my-app/applab/assets/blockly/media/',
-          'my-app/applab/assets/blockly/media/foo.png',
           'my-app/applab/assets/blockly/media/bar.jpg',
+          'my-app/applab/assets/blockly/media/foo.png',
           'my-app/applab/assets/blockly/media/third.jpg',
+          'my-app/assets/',
+          'my-app/assets/bar.png',
+          'my-app/assets/foo.png',
+          'my-app/assets/zoo.mp3',
+          'my-app/code.js',
+          'my-app/index.html',
+          'my-app/style.css',
         ]);
       });
 
@@ -268,7 +282,7 @@ describe('The Exporter,', function () {
 
       it("should contain an applab.css file", function () {
         assert.property(zipFiles, 'my-app/applab/applab.css');
-        assert.equal(zipFiles['my-app/applab/applab.css'], APPLAB_CSS_CONTENT);
+        assert.equal(zipFiles['my-app/applab/applab.css'], NEW_APPLAB_CSS_CONTENT);
       });
 
       describe('the index.html file', () => {
