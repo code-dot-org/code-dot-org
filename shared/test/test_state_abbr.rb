@@ -30,9 +30,9 @@ class StateAbbrTest < Minitest::Test
   end
 
   def test_get_us_state_from_abbr_nonstate
-    assert_equal nil, get_us_state_from_abbr(:ZZ)
-    assert_equal nil, get_us_state_from_abbr(:ZZ, false)
-    assert_equal nil, get_us_state_from_abbr(:ZZ, true)
+    assert_nil get_us_state_from_abbr(:ZZ)
+    assert_nil get_us_state_from_abbr(:ZZ, false)
+    assert_nil get_us_state_from_abbr(:ZZ, true)
   end
 
   def test_get_us_state_from_abbr_with_include_dc
@@ -43,15 +43,15 @@ class StateAbbrTest < Minitest::Test
   end
 
   def test_get_us_state_from_abbr_washington_dc
-    assert_equal nil, get_us_state_from_abbr(:dc)
-    assert_equal nil, get_us_state_from_abbr(:DC)
-    assert_equal nil, get_us_state_from_abbr('dc')
-    assert_equal nil, get_us_state_from_abbr('DC')
+    assert_nil get_us_state_from_abbr(:dc)
+    assert_nil get_us_state_from_abbr(:DC)
+    assert_nil get_us_state_from_abbr('dc')
+    assert_nil get_us_state_from_abbr('DC')
 
-    assert_equal nil, get_us_state_from_abbr(:dc, false)
-    assert_equal nil, get_us_state_from_abbr(:DC, false)
-    assert_equal nil, get_us_state_from_abbr('dc', false)
-    assert_equal nil, get_us_state_from_abbr('DC', false)
+    assert_nil get_us_state_from_abbr(:dc, false)
+    assert_nil get_us_state_from_abbr(:DC, false)
+    assert_nil get_us_state_from_abbr('dc', false)
+    assert_nil get_us_state_from_abbr('DC', false)
 
     assert_equal 'Washington DC', get_us_state_from_abbr(:dc, true)
     assert_equal 'Washington DC', get_us_state_from_abbr(:DC, true)

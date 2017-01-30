@@ -31,7 +31,7 @@ class PropertiesTest < Minitest::Test
   end
 
   def test_get_when_key_does_not_exist
-    assert_equal nil, Properties.get(NONEXISTENT_KEY)
+    assert_nil Properties.get(NONEXISTENT_KEY)
   end
 
   def test_delete_when_key_exists
