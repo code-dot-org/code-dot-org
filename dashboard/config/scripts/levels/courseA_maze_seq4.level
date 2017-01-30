@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,2,1,4,0,0,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Something is not quite right. REMOVE a block to get me to the pig!",
+    "instructions": "REMOVE a block to get the bird to the pig!",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",
@@ -26,9 +26,9 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.\",\"hint_id\":\"K2.0_sequence_3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dfb0b2e1814398280569bc8dcff64283/K2.0 sequence 3.mp3\"}]",
-    "markdown_instructions": "Something is not quite right. REMOVE a block to get me to the pig!\r\n\r\n![](https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif)",
-    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.\",\"hint_id\":\"courseA_maze_seq4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dfb0b2e1814398280569bc8dcff64283/courseA_maze_seq4.mp3\"}]",
+    "markdown_instructions": "*\"Something is not quite right.\"* \r\n\r\nREMOVE a block to get the bird to the pig!\r\n\r\n<img src=\"https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif\" width=\"200px\"/>",
+    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,
@@ -62,12 +62,6 @@
         <block type="maze_moveWest"/>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="maze_moveEast"/>
-        <block type="maze_moveNorth"/>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
