@@ -84,6 +84,7 @@ class PeerReview < ActiveRecord::Base
     # Instructor feedback should override all other feedback
     if from_instructor
       user_level.update!(best_result: accepted? ? Activity::REVIEW_ACCEPTED_RESULT : Activity::REVIEW_REJECTED_RESULT)
+      PeerReview.where(submitter: submitter, status: nil, level: level).destroy_all
       return
     end
 

@@ -67,6 +67,24 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION - 1, PeerReview.count - initial
   end
 
+  test 'instructor review should mark as accepted and delete outstanding unfilled reviews' do
+    level_source = create :level_source, data: 'My submitted answer'
+
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
+    track_progress level_source.id
+    review1 = PeerReview.offset(1).last
+    review2 = PeerReview.last
+
+    user_level = UserLevel.find_by(user: review1.submitter, level: review1.level, script: review1.script)
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
+
+    review1.update! reviewer: create(:user), status: 'accepted', from_instructor: true
+    assert_not PeerReview.where(id: review2.id).any?
+
+    user_level.reload
+    assert_equal Activity::REVIEW_ACCEPTED_RESULT, user_level.best_result
+  end
+
   test 'approving both reviews should mark the corresponding UserLevel as accepted' do
     level_source = create :level_source, data: 'My submitted answer'
 
