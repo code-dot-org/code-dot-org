@@ -11,7 +11,7 @@ import ChromeSerialPort from 'chrome-serialport';
 import PlaygroundIO from 'playground-io';
 
 import _ from 'lodash';
-import {initializeCircuitPlaygroundComponents, TouchSensor} from './PlaygroundComponents';
+import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
 
 /** @const {string} */
 const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -85,7 +85,7 @@ export default class BoardController {
     }
 
     this.prewiredComponents = _.assign({},
-        initializeCircuitPlaygroundComponents(this.board_.io, five, PlaygroundIO),
+        initializeCircuitPlaygroundComponents(),
         {board: this.board_},
         J5_CONSTANTS);
   }
@@ -105,8 +105,7 @@ export default class BoardController {
       Thermometer: five.Thermometer,
       Sensor: five.Sensor,
       Pin: five.Pin,
-      CapTouch: PlaygroundIO.CapTouch,
-      Tap: PlaygroundIO.Tap,
+      Touchpad: five.Touchpad,
       Accelerometer: five.Accelerometer,
       Animation: five.Animation,
       /**
@@ -115,8 +114,7 @@ export default class BoardController {
        * 2. A robot must obey orders given it by human beings except where such orders would conflict with the First Law.
        * 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
        */
-      Servo: five.Servo,
-      TouchSensor: TouchSensor
+      Servo: five.Servo
     };
 
     Object.keys(componentConstructors).forEach(key => {
@@ -133,14 +131,7 @@ export default class BoardController {
     if (!this.board_) {
       return;
     }
-
-    // Components which do not get registered with the johnny-five board, but
-    // which can be reset in the same way.
-    const standaloneComponents = [
-      this.prewiredComponents.tap,
-      this.prewiredComponents.touch
-    ];
-    this.board_.register.concat(standaloneComponents).forEach(BoardController.resetComponent);
+    this.board_.register.forEach(BoardController.resetComponent);
   }
 
   pinMode(pin, modeConstant) {
@@ -164,6 +155,9 @@ export default class BoardController {
   }
 
   onBoardEvent(component, event, callback) {
+    // TODO: Add accelerometer events for "singletap" and "doubletap" that map to
+    // subsets of the "tap" event
+    // https://docs.google.com/document/d/1VuDefx4wijBkyiap-36qpfCAoNEzu5B7yLldhhhuv7U/edit#bookmark=id.daat8jt8eda8
     component.on(event, callback);
   }
 
