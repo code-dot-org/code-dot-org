@@ -233,5 +233,5 @@ gem 'composite_primary_keys'
 gem 'octokit'
 
 # Used to create a prefix trie of student names within a section
-gem 'rambling-trie'
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
+gem 'rambling-trie'
