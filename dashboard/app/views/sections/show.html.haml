@@ -65,7 +65,7 @@
   %div#user
     %h4.instructions= t('signinsection.name')
     %ul.students
-      - @section.students.each do |student|
+      - @section.name_safe_students.each do |student|
         %li{id: student.id}
           = student.name
     .clear

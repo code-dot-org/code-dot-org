@@ -26,7 +26,6 @@ CREATED_CHECKS = [
 #   [tablename, num_minutes, {DASHBOARD_DB | PEGASUS_DB}, column, column_value]
 # tuples.
 KEY_VALUE_CHECKS = [
-  [:forms, 120, PEGASUS_DB, :kind, 'HocSignup2016'],
   [:users, 120, DASHBOARD_DB, :provider, 'google_oauth2'],
   [:users, 120, DASHBOARD_DB, :provider, 'sponsored'],
   [:users, 120, DASHBOARD_DB, :provider, nil]
