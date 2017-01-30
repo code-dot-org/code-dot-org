@@ -112,19 +112,16 @@ export function lockContainedLevelAnswers() {
   getLevel(levelIds[0]).lockAnswers();
 }
 
-export function getContainedLevelId() {
-  const levelIds = getLevelIds();
-  if (levelIds.length !== 1) {
-    throw `Expected exactly one contained level. Got ${levelIds.length}`;
-  }
-  return levelIds[0];
-}
-
 /**
  * Get the result of the single contained level.
  */
 export function getContainedLevelResult() {
-  const level = getLevel(getContainedLevelId());
+  const levelIds = getLevelIds();
+  if (levelIds.length !== 1) {
+    throw `Expected exactly one contained level. Got ${levelIds.length}`;
+  }
+
+  const level = getLevel(levelIds[0]);
   return {
     id: level.levelId,
     app: level.getAppName(),

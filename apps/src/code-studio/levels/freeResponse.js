@@ -1,7 +1,5 @@
-import $ from 'jquery';
 import { TestResults } from '../../constants';
 import { onAnswerChanged } from './codeStudioLevels';
-import { sourceForLevel } from '../clientState';
 
 export default class FreeResponse {
   constructor(levelId) {
@@ -9,12 +7,6 @@ export default class FreeResponse {
 
     $(document).ready(function () {
       var textarea = $(`textarea#level_${levelId}.response`);
-      if (!textarea.val()) {
-        const lastAttempt = sourceForLevel(window.appOptions.scriptName, levelId);
-        if (lastAttempt) {
-          textarea.val(lastAttempt);
-        }
-      }
       textarea.blur(function () {
         onAnswerChanged(levelId, true);
       });
