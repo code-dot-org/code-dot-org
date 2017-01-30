@@ -72,7 +72,9 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null
+    "contained_level_names": [
+      "CSD U3 Counters explaining counters contained 2"
+    ]
   },
   "published": true,
   "notes": "",
