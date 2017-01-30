@@ -34,9 +34,16 @@ class PeerReviewsController < ApplicationController
   end
 
   def update
-    if @peer_review.update(peer_review_params.merge(reviewer: current_user))
+    puts peer_review_params
+    puts peer_review_params.merge(reviewer: current_user, from_instructor: current_user.permission?('plc_reviewer'))
+    if @peer_review.update(peer_review_params.merge(reviewer: current_user, from_instructor: current_user.permission?('plc_reviewer')))
       flash[:notice] = t('peer_review.review_submitted')
-      redirect_to script_path(@peer_review.script)
+
+      if current_user.permission?('plc_reviewer')
+        redirect_to peer_reviews_path
+      else
+        redirect_to script_path(@peer_review.script)
+      end
     else
       render action: :show
     end
