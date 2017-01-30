@@ -27,8 +27,9 @@ const styles = {
  * @type {Object}
  */
 const PROJECT_TYPE_MAP = {
-  artist: commonMsg.projectTypeArtist(),
+  algebra_game: commonMsg.projectTypeAlgebra(),
   applab: commonMsg.projectTypeApplab(),
+  artist: commonMsg.projectTypeArtist(),
   gamelab: commonMsg.projectTypeGamelab(),
   playlab: commonMsg.projectTypePlaylab(),
   weblab: commonMsg.projectTypeWeblab(),
