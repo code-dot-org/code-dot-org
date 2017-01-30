@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
+import { sourceForLevel } from '../clientState';
 
 var Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
@@ -156,8 +157,10 @@ Multi.prototype.ready = function () {
   }
 
   // Pre-select previously submitted response if available.
-  if (this.lastAttemptString) {
-    var previousResult = this.lastAttemptString.split(',');
+  var lastAttempt = this.lastAttemptString ||
+    sourceForLevel(window.appOptions.scriptName, this.levelId);
+  if (lastAttempt) {
+    var previousResult = lastAttempt.split(',');
 
     for (var i = 0; i < previousResult.length; i++) {
       this.clickItem(parseInt(previousResult[i]));
