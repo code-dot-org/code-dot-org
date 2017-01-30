@@ -1,14 +1,14 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-06-22T20:27:17.000Z",
+  "created_at": "2016-06-22T19:54:06.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,4,1,4,0,0,0],[0,0,4,1,1,2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Figure out what is missing and then add blocks to get me to the pig!",
-    "start_direction": "3",
+    "instructions": "Fix the code to get the bird to the pig!",
+    "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "false",
@@ -23,16 +23,19 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There is 1 block that you need to add to move the bird to the pig.\",\"hint_id\":\"K2.0_sequence_6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/21d7dcd6e12d6f15ea5b4727b9ac2c4d/K2.0 sequence 6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move.\",\"hint_id\":\"K2.0_sequence_6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/06e70e7ec1247edfcf0541fed5d17702/K2.0 sequence 6.mp3\"}]",
-    "markdown_instructions": "Figure out what is missing and then add blocks to get me to the pig!\r\n\r\n![](https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif)",
+    "disable_examples": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?\",\"hint_id\":\"courseA_maze_seq3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fc84034a9d3f1ed1bd1bdd8f97f33d6c/courseA_maze_seq3.mp3\"}]",
+    "markdown_instructions": "*\"Fix the code to get me to the pig!\"*\r\n\r\n<img src=\"https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif\" width=\"200\"/>",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 2
   }
 }]]></config>
   <blocks>
@@ -40,11 +43,15 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveWest" movable="false">
+            <block type="maze_moveEast" movable="false">
               <next>
-                <block type="maze_moveNorth" deletable="false" editable="false">
+                <block type="maze_moveEast" movable="false">
                   <next>
-                    <block type="maze_moveNorth" deletable="false" editable="false"/>
+                    <block type="maze_moveEast" movable="false">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
                   </next>
                 </block>
               </next>
@@ -63,20 +70,20 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveWest"/>
+        <block type="maze_moveEast"/>
       </xml>
     </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveWest">
+            <block type="maze_moveEast">
               <next>
-                <block type="maze_moveWest">
+                <block type="maze_moveEast">
                   <next>
-                    <block type="maze_moveNorth">
+                    <block type="maze_moveEast">
                       <next>
-                        <block type="maze_moveNorth"/>
+                        <block type="maze_moveEast"/>
                       </next>
                     </block>
                   </next>

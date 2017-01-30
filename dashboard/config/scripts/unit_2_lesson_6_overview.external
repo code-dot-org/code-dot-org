@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 ## Background
 
-In this lesson students will common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages found on Code Studio. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
+In this lesson students will address common issues that arise when designing web pages in HTML. Students will correct errors in a sequence of increasingly complex web pages found on Code Studio. In the process they will learn the importance of comments, whitespace, and indentation as tools for making web pages easier to read. At the end of the lesson students create a list of strategies for debugging web pages and ensuring they are easy to read and maintain.
 # Vocabulary
 
 * **Bug** - Part of a program that does not work correctly.
