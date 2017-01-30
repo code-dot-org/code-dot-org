@@ -18,10 +18,7 @@ var createCallouts = require('@cdo/apps/code-studio/callouts');
 var reporting = require('@cdo/apps/code-studio/reporting');
 var Dialog = require('@cdo/apps/code-studio/dialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
-import {
-  lockContainedLevelAnswers,
-  getContainedLevelId,
-} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import { lockContainedLevelAnswers } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
 
 import { activityCssClass, mergeActivityResult, LevelStatus } from '../activityUtils';
@@ -105,29 +102,24 @@ export function setupApp(appOptions) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return;
       }
-      if (appOptions.channel && !appOptions.level.edit_blocks) {
-        // Don't send the levelSource or image to Dashboard for channel-backed levels,
-        // unless we are actually editing blocks and not really completing a level
-        // (The levelSource is already stored in the channels API.)
-        delete report.program;
-        delete report.image;
-      } else {
-        // Only locally cache non-channel-backed levels. Use a client-generated
-        // timestamp initially (it will be updated with a timestamp from the server
-        // if we get a response.
-        lastSavedProgram = decodeURIComponent(report.program);
-
-        // If the program is the result for a contained level, store it with
-        // the contained level id
-        const levelId = appOptions.hasContainedLevels ?
-          getContainedLevelId() :
-          appOptions.serverLevelId;
-        clientState.writeSourceForLevel(appOptions.scriptName, levelId,
-            +new Date(), lastSavedProgram);
+      // or unless the program is actually the result for a contained level
+      if (!appOptions.hasContainedLevels || appOptions.level.edit_blocks) {
+        if (appOptions.channel && !appOptions.level.edit_blocks) {
+          // Don't send the levelSource or image to Dashboard for channel-backed levels,
+          // unless we are actually editing blocks and not really completing a level
+          // (The levelSource is already stored in the channels API.)
+          delete report.program;
+          delete report.image;
+        } else {
+          // Only locally cache non-channel-backed levels. Use a client-generated
+          // timestamp initially (it will be updated with a timestamp from the server
+          // if we get a response.
+          lastSavedProgram = decodeURIComponent(report.program);
+          clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
+        }
+        report.callback = appOptions.report.callback;
+        trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
       }
-      report.callback = appOptions.report.callback;
-      trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
-
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
       trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
@@ -140,8 +132,7 @@ export function setupApp(appOptions) {
     onComplete: function (response) {
       if (!appOptions.channel && !appOptions.hasContainedLevels) {
         // Update the cache timestamp with the (more accurate) value from the server.
-        clientState.writeSourceForLevel(appOptions.scriptName,
-            appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
       }
     },
     onResetPressed: function () {
