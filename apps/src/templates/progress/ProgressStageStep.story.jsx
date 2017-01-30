@@ -7,7 +7,6 @@ export default storybook => {
     .addStoryTable([
       {
         name:'single puzzle step',
-        status: 'perfect',
         story: () => (
           <ProgressStageStep
             start={1}
@@ -23,7 +22,6 @@ export default storybook => {
       },
       {
         name:'multiple puzzle step',
-        status: 'perfect',
         story: () => (
           <ProgressStageStep
             start={1}
@@ -55,7 +53,6 @@ export default storybook => {
       },
       {
         name:'non first step',
-        status: 'perfect',
         story: () => (
           <ProgressStageStep
             start={4}
