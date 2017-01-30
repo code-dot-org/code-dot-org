@@ -7,9 +7,12 @@
   "properties": {
     "video_key": "C1_maze_debugging",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "instructions_important": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

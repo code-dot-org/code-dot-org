@@ -37,3 +37,21 @@ The modulo operation (or "clock arithmetic" as we call it in the lesson) is a re
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Big Picture:
+
+This lesson has a lot of different parts to it. But all parts are necessary building blocks that lead to an answer to the crucial question:
+
+**How can two people send encrypted messages back and forth over insecure channels (the internet) *without* meeting ahead of time to agree on a secret key?**
+
+The answer explains what **Public Key Cryptography** is and how it works.  In a nutshell, there are two main principles you need to understand, that we try to lead students through in this lesson:
+
+| Principle | How we cover it in the lesson |
+|:--- |:---|
+| 1. The mechanics of communication with public key cryptography | <li> Recall public/private key idea from the video</li><li>Teacher Demonstration: "Cups & Beans" |
+| 2. The basic mathematical principles that make it possible | <li>Thought Experiment: Modulo as a clock </li><li> The "Modulo Clock" Widget </li><li> Public Key Crypto Widget & Activity </li> |
+
+Code studio is setup to walk students through these ideas with you (teacher) pausing at various points to lead a discussion, or run an activity.
+
+MARKDOWN
