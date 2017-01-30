@@ -8,13 +8,22 @@ describe('Free Response', () => {
   const lastAttemptString = 'This is my final answer';
   const otherLastAttemptString = 'This is some other answer';
   let textarea;
+  let originalAppOptions;
 
   before(() => {
+    // FreeResponse expects to find a textarea element in the document with id
+    // "level_<levelID>" and class "response"
     textarea = document.createElement('textarea');
     textarea.setAttribute('id', `level_${levelId}`);
     textarea.setAttribute('class', 'response');
     document.body.appendChild(textarea);
+
+    originalAppOptions = window.appOptions;
     window.appOptions = {};
+  });
+
+  after(() => {
+    window.appOptions = originalAppOptions;
   });
 
   describe('Shows last attempt', () => {
