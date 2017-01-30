@@ -266,7 +266,7 @@ describe('animationListModule', function () {
 
     it('cloning animation creates an animation with the same props, and unique name', function () {
       const key0 = 'animation_1';
-      let animationList = createAnimationList(1);
+      const animationList = createAnimationList(1);
 
       let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
       store.dispatch(setInitialAnimationList(animationList));
@@ -288,7 +288,7 @@ describe('animationListModule', function () {
 
     it('cloning an animation twice creates two animations with unique names', function () {
       const key0 = 'animation_1';
-      let animationList = createAnimationList(1);
+      const animationList = createAnimationList(1);
 
       let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
       store.dispatch(setInitialAnimationList(animationList));
