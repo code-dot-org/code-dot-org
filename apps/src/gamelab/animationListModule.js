@@ -242,6 +242,19 @@ export function setInitialAnimationList(serializedAnimationList) {
     }
   }
 
+  // If animations have the same name, rename one.
+  let numberAnimations = serializedAnimationList.orderedKeys.length;
+  for (let i = 0; i < numberAnimations; i++) {
+    let key = serializedAnimationList.orderedKeys[i];
+    let name = serializedAnimationList.propsByKey[key].name;
+    for (let j = i + 1; j < numberAnimations; j++) {
+      let otherKey = serializedAnimationList.orderedKeys[j];
+      if (name === serializedAnimationList.propsByKey[otherKey].name) {
+        serializedAnimationList.propsByKey[key].name = generateAnimationName(name, serializedAnimationList.propsByKey);
+      }
+    }
+  }
+
   try {
     throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
   } catch (err) {
@@ -357,7 +370,7 @@ export function cloneAnimation(key) {
       index: sourceIndex + 1,
       key: newAnimationKey,
       props: Object.assign({}, sourceAnimation, {
-        name: sourceAnimation.name + '_copy', // TODO: better generated names
+        name: generateAnimationName(sourceAnimation.name + '_copy', animationList.propsByKey),
         version: null,
         saved: false
       })
