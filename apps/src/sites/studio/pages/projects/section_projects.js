@@ -10,15 +10,17 @@ import ReactDOM from 'react-dom';
 import ProjectsList from '@cdo/apps/templates/projects/ProjectsList';
 
 function renderSection(sectionId) {
-  const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
-  const element = document.getElementById('projects-list');
+  $(document).ready(() => {
+    const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
+    const element = document.getElementById('projects-list');
 
-  $.ajax({
-    method: 'GET',
-    url: dataUrl,
-    dataType: 'json'
-  }).done(projectsData => {
-    ReactDOM.render(<ProjectsList projectsData={projectsData}/>, element);
+    $.ajax({
+      method: 'GET',
+      url: dataUrl,
+      dataType: 'json'
+    }).done(projectsData => {
+      ReactDOM.render(<ProjectsList projectsData={projectsData}/>, element);
+    });
   });
 }
 window.renderSection = renderSection;
