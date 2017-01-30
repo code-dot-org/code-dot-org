@@ -8,15 +8,16 @@ export default function AliceInstructions() {
     <CharacterPanel title="Alice's instructions">
       <NumberedSteps>
         <Step>
-          <b>Choose a public modulus</b>
+          <b>Choose a public modulus from the list</b>
           <ul>
             <SubStep text="Announce this number to Eve and Bob"/>
           </ul>
         </Step>
         <Step>
-          <b>Choose a private key and calculate your public key</b>
+          <b>Choose a private key to use</b>
           <ul>
             <SubStep text="Keep your private key a secret!"/>
+            <SubStep text="Your public key has been calculated for you"/>
             <SubStep text="Announce your public key to Eve and Bob"/>
           </ul>
         </Step>
