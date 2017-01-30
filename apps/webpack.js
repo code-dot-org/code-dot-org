@@ -78,6 +78,7 @@ if (envConstants.COVERAGE) {
       loader: "babel",
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     }, {
       test: /\.jsx?$/,
@@ -85,9 +86,15 @@ if (envConstants.COVERAGE) {
       include: path.resolve(__dirname, 'src'),
       exclude: [
         path.resolve(__dirname, 'src', 'lodash.js'),
+
+        // we need to turn off coverage for this file
+        // because we have tests that actually make assertions
+        // about the contents of the compiled version of this file :(
+        path.resolve(__dirname, 'src', 'flappy', 'levels.js'),
       ],
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     },
   ];
