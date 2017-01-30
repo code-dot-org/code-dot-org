@@ -1115,8 +1115,8 @@ Bounce.onPuzzleComplete = function () {
     sendReport();
   } else {
     document.getElementById('svgBounce').toDataURL("image/jpeg", {
-      callback: function (pngDataUrl) {
-        Bounce.feedbackImage = pngDataUrl;
+      callback: function (imageDataUrl) {
+        Bounce.feedbackImage = imageDataUrl;
         Bounce.encodedFeedbackImage = encodeURIComponent(Bounce.feedbackImage.split(',')[1]);
 
         sendReport();

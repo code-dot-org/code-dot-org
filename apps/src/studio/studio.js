@@ -3111,8 +3111,8 @@ Studio.onPuzzleComplete = function () {
     sendReport();
   } else {
     document.getElementById('svgStudio').toDataURL("image/jpeg", {
-      callback: function (pngDataUrl) {
-        Studio.feedbackImage = pngDataUrl;
+      callback: function (imageDataUrl) {
+        Studio.feedbackImage = imageDataUrl;
         Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
 
         sendReport();
