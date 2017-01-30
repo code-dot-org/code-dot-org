@@ -307,7 +307,7 @@ module.exports = {
   '8': {
     'requiredBlocks': [
       [{
-        test: function (block) {
+        test: function test(block) {
           return (block.type === 'flappy_setBackground' ||
             block.type === 'flappy_setPlayer') &&
             block.getTitleValue('VALUE') === 'random';
@@ -344,7 +344,7 @@ module.exports = {
   '9': {
     'requiredBlocks': [
       [{
-        test: function (block) {
+        test: function test(block) {
           return block.type === 'flappy_setScore';
         },
         type: 'flappy_setScore'
