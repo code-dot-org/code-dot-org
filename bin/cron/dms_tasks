@@ -1,0 +1,71 @@
+#!/usr/bin/env ruby
+
+# This script runs the AWS Data Migration Service tasks that replicate data from
+# our reporting RDS database to our Redshift database. It is highly tied to the
+# AWS DMS tasks (https://console.aws.amazon.com/dms/home?region=us-east-1#tasks:)
+# and the CDO.dms_tasks secret.
+
+require 'cdo/hip_chat'
+
+# The list of DMS tasks to start, as well as the length of time that should
+# elapse before starting the next task (an overestimate of completion time).
+# The hash keys are expected to be keys in CDO.dms_tasks through which the task
+# ARNs are retrieved.
+TASKS = {
+  oneoff_survey_hierarchy: {
+    duration: 5
+  },
+  oneoff_user_progress_hierarchy: {
+    duration: 640
+  },
+  oneoff_teaching_hierarchy: {
+    duration: 10
+  },
+  oneoff_script_hierarchy: {
+    duration: 5
+  },
+  oneoff_user_hierarchy_pii: {
+    duration: 90
+  },
+  oneoff_plc_hierarchy: {
+    duration: 10
+  },
+  oneoff_user_proficiency_hierarchy: {
+    duration: 15
+  },
+  oneoff_contacts_hierarchy_pii: {
+    duration: 10
+  },
+  oneoff_multi_hierarchy: {
+    duration: 10
+  },
+  oneoff_metrics_hierarchy: {
+    duration: 10
+  },
+  oneoff_user_hierarchy: {
+    duration: 40
+  },
+  oneoff_hint_hierarchy: {
+    duration: 30
+  }
+}.freeze
+
+TASK_ARNS = CDO.dms_tasks.freeze
+
+TASKS.each do |task_name, task_info|
+  HipChat.message 'infra-dms',
+    "Starting DMS task #{task_name} (sleep duration: #{task_info[:duration]})...",
+    color: green
+
+  task_arn = TASK_ARNS[task_name]
+  if task_arn
+    system "aws dms start-replication-task --replication-task-arn arn:#{task_arn} --start-replication-task-type reload-target"
+    sleep task_info[:duration]
+  else
+    HipChat.message 'infra-dms',
+      "Failed to retrieve task ARN for #{task_name}.",
+      color: red
+  end
+
+  HipChat.message 'infra-dms', "Finished DMS task #{task_name}.", color: green
+end
