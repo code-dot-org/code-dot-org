@@ -218,7 +218,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
   end
 
-  test "update under 13 student with client side hashed email" do
+  test "update student with client side hashed email" do
     student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 
