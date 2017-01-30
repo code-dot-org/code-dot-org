@@ -38,8 +38,6 @@ module Cdo
   # If you omit `:client` option, a new {STS::Client} object will be
   # constructed.
   class GoogleCredentials
-    DEFAULT_PROFILE = 'cdo'
-
     include Aws::CredentialProvider
     include Aws::RefreshingCredentials
 
@@ -59,7 +57,7 @@ module Cdo
           input.shape.member_names
       )
 
-      @profile = options[:profile] || DEFAULT_PROFILE
+      @profile = options[:profile] || ENV['AWS_DEFAULT_PROFILE'] || 'default'
       @google_id = Google::Auth::ClientId.new(
         options[:google_client_id],
         options[:google_client_secret]

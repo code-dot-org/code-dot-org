@@ -9,7 +9,8 @@ module Cdo
         Cdo::GoogleCredentials.config = {
           role_arn: CDO.aws_role,
           google_client_id: CDO.google_client_id,
-          google_client_secret: CDO.google_client_secret
+          google_client_secret: CDO.google_client_secret,
+          profile: 'cdo'
         }
       end
       super(options)
