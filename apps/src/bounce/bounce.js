@@ -24,6 +24,8 @@ var SquareType = tiles.SquareType;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
+import '../util/svgelement-polyfill';
+
 /**
  * Create a namespace for the application.
  */
@@ -1004,6 +1006,7 @@ var displayFeedback = function () {
       response: Bounce.response,
       level: level,
       showingSharing: level.freePlay,
+      feedbackImage: Bounce.feedbackImage,
       twitter: twitterOptions,
       appStrings: {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
@@ -1095,15 +1098,31 @@ Bounce.onPuzzleComplete = function () {
 
   Bounce.waitingForReport = true;
 
-  // Report result to server.
-  studioApp.report({
-                     app: 'bounce',
-                     level: level.id,
-                     result: Bounce.result === ResultType.SUCCESS,
-                     testResult: Bounce.testResults,
-                     program: encodeURIComponent(textBlocks),
-                     onComplete: Bounce.onReportComplete
-                     });
+  const sendReport = function () {
+    // Report result to server.
+    studioApp.report({
+      app: 'bounce',
+      level: level.id,
+      result: Bounce.result === ResultType.SUCCESS,
+      testResult: Bounce.testResults,
+      program: encodeURIComponent(textBlocks),
+      image: Bounce.encodedFeedbackImage,
+      onComplete: Bounce.onReportComplete
+    });
+  };
+
+  if (typeof document.getElementById('svgBounce').toDataURL === 'undefined') {
+    sendReport();
+  } else {
+    document.getElementById('svgBounce').toDataURL("image/jpeg", {
+      callback: function (imageDataUrl) {
+        Bounce.feedbackImage = imageDataUrl;
+        Bounce.encodedFeedbackImage = encodeURIComponent(Bounce.feedbackImage.split(',')[1]);
+
+        sendReport();
+      }
+    });
+  }
 };
 
 /**

@@ -83,12 +83,12 @@ class CachingTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('frozen').script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    post "/milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params: params
     assert_response 200
 
     no_database
 
-    post "/milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params: params
     assert_response 200
   end
 
@@ -132,12 +132,12 @@ class CachingTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('course1').script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    post "/milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params: params
     assert_response 200
 
     no_database
 
-    post "/milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params: params
     assert_response 200
   end
 end
