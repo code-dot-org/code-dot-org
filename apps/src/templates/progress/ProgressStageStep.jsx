@@ -12,6 +12,7 @@ const styles = {
   stepButton: {
     // TODO - this could get us into trouble with i18n?
     width: 90,
+    textAlign: 'center',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
