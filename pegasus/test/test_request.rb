@@ -26,6 +26,6 @@ class RequestTest < Minitest::Test
   def test_unknown_ip
     stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/unknown").to_return(status: 404, body: '<html><title>404')
     req = Rack::Request.new({'HTTP_X_FORWARDED_FOR' => 'unknown'})
-    assert_equal nil, req.location
+    assert_nil req.location
   end
 end

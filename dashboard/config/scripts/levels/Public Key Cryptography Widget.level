@@ -7,7 +7,8 @@
   "properties": {
     "skip_dialog": true,
     "href": "public_key_cryptography/public_key_cryptography.html",
-    "cryptography_widget_view": "2"
+    "cryptography_widget_view": "2",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",

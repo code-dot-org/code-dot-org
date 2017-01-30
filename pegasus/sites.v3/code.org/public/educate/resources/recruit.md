@@ -1,0 +1,174 @@
+---
+title: Student Recruitment
+nav: educate_nav
+---
+# Student recruitment 
+### Planning to offer a computer science course in your school? Here are some tips for recruiting students into your class. 
+
+*For resources and tips on getting district, administrator, or community buy-in, check out [code.org/promote](code.org/promote).*
+
+* [Play recruitment videos](#videos)
+* [Ask your school counselors for help](#counselors)
+* [Inspire with posters of careers in technology](#posters) 
+* [Host an information session](#info) 
+* [Run an Hour of Code](#hoc) 
+* [Send emails to students and parents](#blurbs)
+
+<a id="videos"></a>
+
+## Show these videos to students.
+**If you’re teaching CS Principles or CS Discoveries:**
+
+Hear from current students as they talk about the topics covered in each course and why your students should sign up. 
+
+[col-50]
+### Sign up for AP Computer Science Principles
+
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
+
+[**YouTube**](http://www.youtube.com/watch?v=jQm0z894CG0) | 
+[**Download**](https://www.dropbox.com/s/4olrpah7c2jo3gf/CSP_Students_v4.mp4?dl=0)
+
+[/col-50]
+
+[col-50]
+
+
+### Sign up for Computer Science Discoveries
+
+<%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
+
+[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://www.dropbox.com/s/pkj38135cqegu29/CS-high-school-pitch-GENERAL.mp4?dl=0) (new video coming soon)
+
+[/col-50]
+
+<p style="clear:both">&nbsp;</p>
+
+**For *any* computer science course:**
+
+
+[col-50]
+### Sign up for comptuer science (general)
+
+<%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
+
+[**YouTube**](http://www.youtube.com/watch?v=xgOYvG1WAbM) | [**Download**](https://www.dropbox.com/s/pkj38135cqegu29/CS-high-school-pitch-GENERAL.mp4?dl=0) 
+
+[/col-50]
+
+[col-50]
+
+
+### Comptuer science is changing everything
+
+<%=view :display_video_thumbnail, id: "cs_changing_everything", video_code: "QvyTEx1wyOY", play_button: 'center' %>
+
+[**YouTube**](https://www.youtube.com/watch?time_continue=1&v=QvyTEx1wyOY) 
+
+[/col-50]
+
+<p style="clear:both">&nbsp;</p>
+
+Find more videos to inspire your students at code.org/inspire, as well as content you can use to inspire more girls to take computer science.
+
+<a id="counselors"></a>
+
+## Your counselors can help.
+* Make sure the counselors at your school know what your school’s computer science courses are all about and who they’re for — check out the program brochures below. 
+* For ideas on how to talk to stakeholders like counselors, head to [code.org/pitch](/pitch). 
+
+Ask your counselor to give these flyers to students. Let them know these are intro courses for any student.
+
+[CS Discoveries brochure](https://code.org/files/programs/CSD_1-pager_final.pdf) | [CS Principles brochure](https://code.org/files/programs/CSP_1-pager_final.pdf)
+
+[CS in Algebra](/files/CSinAlgebra_one_pager.pdf) | [CS in Science](/files/CSinScience_one_pager.pdf) | [Exploring Computer Science](/files/ECS_one_pager.pdf)
+
+<a id="posters"></a>
+
+## Display inspiring posters.
+We’ve included some posters in this packet—hang them in the halls along with the course number for your computer science class. (Some were originally made for the Hour of Code, but they feature quotes that are relevant to CS education more broadly.) If you want to print out more posters, you can find the files at code.org/inspire. 
+
+[![image](/images/fit-200/careers/poster_thumbnail_maddy_maxey.jpg)](/files/careers/maddy-maxey.pdf)
+[![image](/images/fit-200/careers/poster_thumbnail_nidhi_erin.jpg)](/files/careers/nidhi-and-erin.pdf)
+[![image](/images/fit-200/careers/poster_thumbnail_rory_kieran.jpg)](/files/careers/rory-and-kieran.pdf)
+[![image](/images/fit-200/careers/poster_thumbnail_javier_aguera.jpg)](/files/careers/javier-aguera.pdf)
+
+*Learn more about these young tech professionals at [code.org/careers](/careers-in-tech)!*
+
+[![image](/images/fit-150/malala.png)](/files/malala-poster.pdf)
+[![image](/images/fit-150/obama-new.png)](/files/obama-poster-new.pdf)
+[![image](/images/fit-150/sheryl-sandberg.png)](/files/sheryl-poster.pdf)
+[![image](/images/fit-150/marissa-mayer.png)](/files/marissa-mayer-poster.pdf)
+
+<a id="info"></a>
+
+## Host an information session.
+Invite students to your classroom during lunch or after school to learn more about taking computer science. Here’s a brief 15 minute agenda to grab their attention: 
+
+**2 minutes:** Welcome! 
+
+* You’re here to learn about a class where you’ll explore the technology you use every day—and learn the foundations of how to create it! 
+* You’ll gain skills that will help you in any career goal in the 21st century—business, art, engineering, policy, medicine, etc. 
+* We have fun in this class. We solve problems, build things that you want to build, and learn how computers are changing the world. 
+
+**3 minutes:** Show the CS Discoveries (coming soon) or CS Principles student recruitment video. </br>
+
+**5 minutes:** Ask students to brainstorm apps they wish existed, or come up with questions they have about how something they use everyday actually works. Then, have them share some ideas or questions out. Let them know they can start to tackle these problems in this computer science course. </br>
+
+**5 minutes:** Answer questions from students about the course. </br>
+
+Close your session by handing out recruitment flyers, which you can print from [code.org/student-flyer](/student-flyer).
+
+If you have more time, run a quick teaser activity to give students an idea of how fun and engaging this course will be. 
+
+<a id="hoc"></a>
+ 
+## Run an Hour of Code.
+
+Get your students excited about computer science with an Hour of Code activity. Check out the dozens of activities created by Code.org and our partners at [HourofCode.com](https://hourofcode.com). 
+
+
+<a id="blurbs"></a>
+
+## Dear students and parents... 
+Teachers, counselors, and administrators can add a blurb to a student or parent email, or feature it prominently in a newsletter. 
+
+### **High School or Middle School**
+
+* **For parents:** </br>
+
+**[SCHOOL NAME]** is offering computer science classes this fall that will unlock an entirely new future for students. In our modern world, it’s no longer enough to learn how to *use* technology; it’s foundational to learn what goes into *building* technology. Computer science is transforming every professional field; no matter what career a student wants to pursue, a background in computer science will be relevant. In our new classes, students will learn how technology works and begin to create programs, games, and apps that can help their schools, families, and communities today! Whether they build a game for a younger sibling, create an app that keeps track of a family schedule, or make a webpage to organize a community event, your student will learn the basics of the technology that’s changing the world—and they’ll learn how they can be a part of that change, too.
+
+**[SCHOOL NAME]** is offering these classes through regional partnerships with Code.org, a nonprofit dedicated to giving every K-12 student in the US the opportunity to learn computer science. This fall, we will offer **[[Computer Science Discoveries](/csd) or [AP Computer Science Principles](/csp)]** for students—no computer science experience necessary. Encourage your child(ren) to sign up. This is an opportunity that will open up collaboration, creativity, and passion as students learn and build together. 
+
+What’s this all about? [Watch this inspiring video](http://www.youtube.com/watch?v=nKIu9yen5nc).
+
+* **For students (feature in student newspaper or email):** </br>
+
+Have you ever thought, *“I wish there was an app for that…”*? What if you got to use class time to *build* that app? You’re in luck. Next fall, **[SCHOOL NAME]** is offering new classes unlike any you’ve taken before. You’ll learn how to go beyond just *using* computers—you’ll begin to *create* the games, apps, and programs you see a need for *today*. **[SCHOOL NAME]** is excited to offer you a class where you can make a game, create an app, or build a webpage that your friends, family, and school can use!. The best part is that **you don’t need *any* experience to make awesome things in this class**. 
+
+What else can you do with computer science? [Watch this inspiring video](http://www.youtube.com/watch?v=nKIu9yen5nc).
+
+No matter what you want to do one day—whether it’s art, medicine, or history—computer science will help you make your ideas come to life. Sign up for **[COURSE NAME]** today. 
+
+### **Elementary School**
+
+* **For parents:** </br>
+
+**[SCHOOL NAME]** is offering new computer science program next fall that will unlock an entirely new future for students. With this program, even the youngest learners will begin to learn the basics of how technology works. They’ll move away from just learning how to *use* technology, and instead start to *create* their own programs with the foundations of computer science, such as logic, problem-solving, and creativity. Why is this important for even elementary school students? Introducing computer science in elementary school allows students to enjoy the possibilities of creating with code before stereotypes set in. But that’s only the beginning of why every student should have the opportunity to learn computer science. [Watch this inspiring video](http://www.youtube.com/watch?v=nKIu9yen5nc) to learn more. 
+
+We can bring this to *even more* elementary school students through a local program in partnership with Code.org, a non-profit dedicated to giving every K-12 student in the US the opportunity to learn computer science. Ask your school or district to have [more elementary school teachers trained](https://code.org/professional-development-workshops) (absolutely free, and no experience necessary)! 
+
+### Include these images on your website, letter, or email:
+
+[![image](/images/newclass.jpg)](/images/classlogoB.jpg)
+[![image](/images/newclasswide.jpg)](/images/classlogoD.jpg)
+
+[![image](/images/classlogoC.jpg)](/images/classlogoC.jpg)
+[![image](/images/classlogoA.jpg)](/images/classlogoA.jpg)
+
+[Download graphics file](https://www.dropbox.com/s/38tledlbucf0tql/New%20Class%20Graphics.zip)
+
+
+<br />
+<br />

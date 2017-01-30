@@ -20,7 +20,8 @@
       "y": null,
       "shapeColor": null,
       "background": null,
-      "color": null
+      "color": null,
+      "assign_x": null
     },
     "show_d_pad": "false",
     "edit_code": true,
