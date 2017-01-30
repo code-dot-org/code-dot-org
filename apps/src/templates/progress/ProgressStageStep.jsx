@@ -6,7 +6,12 @@ import color from "@cdo/apps/util/color";
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
 
 const styles = {
+  table: {
+    marginTop: 12
+  },
   stepButton: {
+    // TODO - this could get us into trouble with i18n?
+    width: 90,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
@@ -103,7 +108,7 @@ const ProgressStageStep = React.createClass({
     // TODO - think about different widths for step 9 vs. step 10
     // TODO - should step button turn orange on mouseover?
     return (
-      <table>
+      <table style={styles.table}>
         <tbody>
           <tr>
             <td>
