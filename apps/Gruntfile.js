@@ -373,6 +373,7 @@ module.exports = function (grunt) {
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'levels/editors/_blockly':   './src/sites/studio/pages/levels/editors/_blockly.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
