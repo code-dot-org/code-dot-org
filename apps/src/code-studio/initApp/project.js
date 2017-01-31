@@ -396,6 +396,7 @@ var projects = module.exports = {
         sourceHandler.setInitialLevelHtml(currentSources.html);
       }
 
+      setMakerAPIsStatusFromLevel();
       setMakerAPIsStatusFromQueryParams();
       if (currentSources.makerAPIsEnabled) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
@@ -893,6 +894,15 @@ function setMakerAPIsStatusFromQueryParams() {
 
   if (hasQueryParam('disableMaker')) {
     currentSources.makerAPIsEnabled = false;
+  }
+}
+
+/**
+ * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ */
+function setMakerAPIsStatusFromLevel() {
+  if (appOptions.level.makerlabEnabled) {
+    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
   }
 }
 
