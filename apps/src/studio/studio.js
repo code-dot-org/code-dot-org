@@ -3921,6 +3921,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.getSpriteXY(cmd.opts);
       break;
+    case 'setSpriteBehavior':
+      studioApp.highlight(cmd.id);
+      Studio.setSpriteBehavior(cmd.opts);
+      break;
     case 'setSpritesWander':
       studioApp.highlight(cmd.id);
       Studio.setSpritesWander(cmd.opts);
@@ -5169,6 +5173,7 @@ var createSpeechBubble = function (spriteIndex, text) {
 Studio.stop = function (opts) {
   cancelQueuedMovements(opts.spriteIndex, true);
   cancelQueuedMovements(opts.spriteIndex, false);
+  Studio.sprite[i].activity = constants.BEHAVIOR_STOP;
 
   if (!opts.dontResetCollisions) {
     // Reset collisionMasks so the next movement will fire another collision
@@ -5436,24 +5441,29 @@ function getSpritesByName(name) {
       sprite => sprite.imageName === name && sprite.visible);
 }
 
+Studio.setSpriteBehavior = function (opts) {
+  Studio.sprite[opts.spriteIndex].setActivity(opts.behavior,
+      opts.targetSpriteIndex);
+};
+
 Studio.setSpritesWander = function (opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity('roam'));
+      sprite.setActivity(constants.BEHAVIOR_WANDER));
 };
 
 Studio.setSpritesStop = function (opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity('none'));
+      sprite.setActivity(constants.BEHAVIOR_STOP));
 };
 
 Studio.setSpritesChase = function (opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity('chase', opts.targetSpriteIndex));
+      sprite.setActivity(constants.BEHAVIOR_CHASE, opts.targetSpriteIndex));
 };
 
 Studio.setSpritesFlee = function (opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity('flee', opts.targetSpriteIndex));
+      sprite.setActivity(constants.BEHAVIOR_FLEE, opts.targetSpriteIndex));
 };
 
 Studio.setSpritesSpeed = function (opts) {
