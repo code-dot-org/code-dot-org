@@ -169,6 +169,7 @@
   .field
     = f.label :coordinate_grid_background, 'Coordinate grid background'
     = boolean_check_box f, :coordinate_grid_background
+= render partial: 'levels/editors/hide_share_and_remix', locals: {f: f}
 .field
   = f.label :project_template_level_name, 'Project Template Level Name'
   %p What this does:
