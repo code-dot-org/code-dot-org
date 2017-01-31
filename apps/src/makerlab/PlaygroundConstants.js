@@ -6,12 +6,15 @@ export const BUTTON_VARS = ['buttonL', 'buttonR'];
 
 const BUTTON_EVENTS = ['press', 'down', 'up'];
 const SENSOR_EVENTS = ['change', 'data'];
+const TOUCH_PIN_EVENTS = {};
+TOUCH_PINS.forEach(pin => {
+  TOUCH_PIN_EVENTS[`touchPad${pin}`] = ['down', 'up'];
+});
 
-export const COMPONENT_EVENTS = {
+export const COMPONENT_EVENTS = Object.assign({}, TOUCH_PIN_EVENTS, {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
   toggleSwitch: ['open', 'close'],
-  accelerometer: ['change', 'data'],
-  touchpad: ['change']
-};
+  accelerometer: ['change', 'data']
+});
 SENSOR_VARS.forEach(s => COMPONENT_EVENTS[s] = SENSOR_EVENTS);

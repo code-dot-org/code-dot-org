@@ -8,6 +8,7 @@ import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
+import TouchSensor from './TouchSensor';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -51,9 +52,16 @@ export function initializeCircuitPlaygroundComponents() {
     return accelerometer[accelerationDirection];
   };
 
-  const touchpad = new five.Touchpad({
+  // We make one playground-io Touchpad controller for all captouch sensors,
+  // then wrap it in our own separate controllers for the API we want to
+  // expose to students.
+  const playgroundTouchpad = new five.Touchpad({
     controller: PlaygroundIO.Touchpad,
     pads: TOUCH_PINS
+  });
+  let touchPads = {};
+  TOUCH_PINS.forEach(pin => {
+    touchPads[`touchPad${pin}`] = new TouchSensor(pin, playgroundTouchpad);
   });
 
   const lightSensor = new five.Sensor({
@@ -70,7 +78,7 @@ export function initializeCircuitPlaygroundComponents() {
     addSensorFeatures(five.Board.fmap, s);
   });
 
-  return {
+  return Object.assign({}, touchPads, {
     colorLeds: colorLeds,
 
     led: new five.Led(13),
@@ -88,14 +96,12 @@ export function initializeCircuitPlaygroundComponents() {
 
     accelerometer: accelerometer,
 
-    touchpad: touchpad,
-
     soundSensor: soundSensor,
 
     buttonL: buttonL,
 
     buttonR: buttonR,
-  };
+  });
 }
 
 /**
