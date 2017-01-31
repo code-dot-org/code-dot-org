@@ -11,6 +11,7 @@ export const COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
   toggleSwitch: ['open', 'close'],
-  accelerometer: ['change', 'data']
+  accelerometer: ['change', 'data'],
+  touchpad: ['change']
 };
 SENSOR_VARS.forEach(s => COMPONENT_EVENTS[s] = SENSOR_EVENTS);
