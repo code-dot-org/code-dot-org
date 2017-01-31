@@ -183,5 +183,12 @@ class SectionTest < ActiveSupport::TestCase
       ["Dick Smith", "Dick Tracer", "Harry Smith", "Tom Clancy", "Tom Saywer", "Tom Smith"],
       ["Dick S", "Dick T", "Harry", "Tom C", "Tom Sa", "Tom Sm"]
     )
+
+    # Handles names that can't be nicely split into first and last, or
+    # names which use unusual separating characters
+    verify(
+      ["Cher", "J'onn J'onzz", "John\tDoe"],
+      ["Cher", "J'onn J'onzz", "John"]
+    )
   end
 end
