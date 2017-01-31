@@ -156,8 +156,6 @@ Get online assistance while using our curriculum through product FAQs, technical
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
 
-<%= view :course_explorer_blurb %>
-
 ## Inspire students
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
@@ -170,6 +168,7 @@ Thousands of engineers and individuals passionate about computer science have si
 
 ## Spread the word!
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators.
+
 
 
 
