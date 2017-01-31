@@ -5,6 +5,15 @@ class RegistrationsControllerTest < ActionController::TestCase
   setup do
     # stub properties so we don't try to hit pegasus db
     Properties.stubs(:get).returns nil
+
+    @default_params = {
+      name: 'A name',
+      password: 'apassword',
+      email: 'an@email.address',
+      gender: 'F',
+      age: '13',
+      user_type: 'student'
+    }
   end
 
   test "new" do
@@ -20,14 +29,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     User.any_instance.stubs(:save).raises(exception).then.returns(true)
     User.any_instance.stubs(:persisted?).returns(true)
 
-    student_params = {name: "A name",
-                      password: "apassword",
-                      email: 'an@email.address',
-                      gender: 'F',
-                      age: '13',
-                      user_type: 'student'}
-
-    post :create, params: {user: student_params}
+    post :create, params: {user: @default_params}
 
     assert_redirected_to '/'
 
@@ -37,15 +39,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create as student with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      student_params = {name: "A name",
-                        password: "apassword",
-                        email: 'an@email.address',
-                        gender: 'F',
-                        age: '13',
-                        user_type: 'student'}
-
       assert_creates(User) do
-        post :create, params: {user: student_params}
+        post :create, params: {user: @default_params}
       end
 
       assert_redirected_to '/'
@@ -62,98 +57,74 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create as under 13 student with client side hashed email" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      student_params = {name: "A name",
-                        password: "apassword",
-                        email: '',
-                        hashed_email: Digest::MD5.hexdigest('hidden@email.com'),
-                        gender: 'F',
-                        age: '9',
-                        user_type: 'student'}
+      @default_params.delete(:email)
+      params_with_hashed_email = @default_params.merge(
+        {hashed_email: Digest::MD5.hexdigest('an@email.address')}
+      )
 
       assert_creates(User) do
-        post :create, params: {user: student_params}
+        post :create, params: {user: params_with_hashed_email}
       end
 
       assert_redirected_to '/'
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
-      assert_equal Date.today - 9.years, assigns(:user).birthday
+      assert_equal Date.today - 13.years, assigns(:user).birthday
       assert_nil assigns(:user).provider
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
-      assert_equal Digest::MD5.hexdigest('hidden@email.com'), assigns(:user).hashed_email
+      assert_equal Digest::MD5.hexdigest('an@email.address'), assigns(:user).hashed_email
     end
   end
 
   test "create as student requires age" do
-    student_params = {name: "A name",
-                      password: "apassword",
-                      email: 'an@email.address',
-                      gender: 'F',
-                      age: '',
-                      user_type: 'student'}
+    params_without_age = @default_params.update(age: '')
 
     assert_does_not_create(User) do
-      post :create, params: {user: student_params}
+      post :create, params: {user: params_without_age}
     end
 
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
   test "create does not allow pandas in name" do
-    student_params = {name: panda_panda,
-                      password: "apassword",
-                      email: 'an@email.address',
-                      gender: 'F',
-                      age: '15',
-                      user_type: 'student'}
+    params_with_panda_name = @default_params.update(name: panda_panda)
 
     assert_does_not_create(User) do
-      post :create, params: {user: student_params}
+      post :create, params: {user: params_with_panda_name}
     end
 
     assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
   end
 
   test "create does not allow pandas in email" do
-    student_params = {name: "A name",
-                      password: "apassword",
-                      email: "#{panda_panda}@panda.com",
-                      gender: 'F',
-                      age: '15',
-                      user_type: 'student'}
+    params_with_panda_email = @default_params.update(
+      email: "#{panda_panda}@panda.com"
+    )
 
     # don't ask the db for existing panda emails
     User.expects(:find_by_email_or_hashed_email).never
 
     assert_does_not_create(User) do
-      post :create, params: {user: student_params}
+      post :create, params: {user: params_with_panda_email}
     end
 
     assert_equal ["Email is invalid"], assigns(:user).errors.full_messages
   end
 
   test "create allows chinese in name" do
-    student_params = {name: '樊瑞',
-                      password: "apassword",
-                      email: 'an@email.address',
-                      gender: 'F',
-                      age: '15',
-                      user_type: 'student'}
+    params_with_chinese_name = @default_params.update(
+      name: '樊瑞'
+    )
 
     assert_creates(User) do
-      post :create, params: {user: student_params}
+      post :create, params: {user: params_with_chinese_name}
     end
   end
 
   test "create as teacher requires age" do
-    teacher_params = {name: "A name",
-                      password: "apassword",
-                      email: 'an@email.address',
-                      gender: 'F',
-                      age: '',
-                      user_type: 'teacher'}
+    teacher_params = @default_params.update(user_type: 'teacher', age: '')
 
     assert_does_not_create(User) do
       post :create, params: {user: teacher_params}
@@ -163,14 +134,10 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create as student requires email" do
-    student_params = {name: "A name",
-                      password: "apassword",
-                      email: nil,
-                      user_type: 'student',
-                      age: '10'}
+    @default_params.delete(:email)
 
     assert_does_not_create(User) do
-      post :create, params: {user: student_params}
+      post :create, params: {user: @default_params}
     end
 
     assert_equal ["Email is required"], assigns(:user).errors.full_messages
@@ -178,14 +145,12 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create requires case insensitive unique email" do
     create(:student, email: 'not_a@unique.email')
-    student_params = {name: "A name",
-                      password: "apassword",
-                      email: 'Not_A@unique.email',
-                      user_type: 'student',
-                      age: '10'}
+    params_with_non_unique_email = @default_params.update(
+      email: 'not_a@unique.email'
+    )
 
     assert_does_not_create(User) do
-      post :create, params: {user: student_params}
+      post :create, params: {user: params_with_non_unique_email}
     end
 
     assert_equal ["Email has already been taken"], assigns(:user).errors.full_messages
@@ -253,7 +218,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
   end
 
-  test "update under 13 student with client side hashed email" do
+  test "update student with client side hashed email" do
     student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 

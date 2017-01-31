@@ -324,11 +324,17 @@ module.exports = function (grunt) {
       },
     },
     unit: {
+      coverageReporter: {
+        dir: 'coverage/unit',
+      },
       files: [
         {src: ['test/unit-tests.js'], watched: false},
       ],
     },
     integration: {
+      coverageReporter: {
+        dir: 'coverage/integration',
+      },
       files: [
         {src: ['test/integration-tests.js'], watched: false},
       ],

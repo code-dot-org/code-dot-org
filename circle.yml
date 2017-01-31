@@ -102,6 +102,7 @@ test:
     - ./test.sh:
         pwd:
             cookbooks
+    - ./apps/node_modules/.bin/codecov
 experimental:
   notify:
     branches:
