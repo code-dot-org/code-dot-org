@@ -5,7 +5,7 @@ nav: educate_nav
 
 [solid-block-header]
 
-High School
+High School 
 
 [/solid-block-header]
 
@@ -96,8 +96,6 @@ Other Resources
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
-
-<%= view :course_explorer_blurb %>
 
 ## Inspire students
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
