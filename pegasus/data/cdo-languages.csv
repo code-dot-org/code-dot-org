@@ -63,7 +63,7 @@ sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic)
 sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,TRUE,sv-SE,Swedish
 ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,FALSE,ta,Tamil
 tg,tg,tg,tg-TJ,тоҷикӣ,Tajik,FALSE,FALSE,tg,Tajik
-th,th,th,th-TH,ไทย,Thai,FALSE,FALSE,th,Thai
+th,th,th,th-TH,ภาษาไทย,Thai,TRUE,FALSE,th,Thai
 tr,tr,tr,tr-TR,Türkçe,Turkish,TRUE,TRUE,tr,Turkish
 uk,uk,uk,uk-UA,Українська,Ukrainian,TRUE,TRUE,uk,Ukrainian
 ur,ur,ur,ur-PK,اردو,Urdu (Pakistan),FALSE,TRUE,ur-PK,Urdu (Pakistan)

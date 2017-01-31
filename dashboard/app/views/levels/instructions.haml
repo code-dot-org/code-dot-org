@@ -10,6 +10,23 @@
       border: 1px dashed black;
       padding: 10px;
     }
+    .teacher_markdown {
+      border: 5px solid #0094ca;
+      border-radius: 5px;
+      background: #d9eff7;
+
+      > h3 {
+        background: #0094ca;
+        color: white;
+        font-family: "Gotham 7r", sans-serif;
+        font-size: 18;
+        padding: 5px;
+        margin: 0px;
+      }
+      .content {
+        padding: 10px;
+      }
+    }
   }
 
 - stages = local_assigns[:stages]
@@ -39,6 +56,12 @@
           - if level.properties['markdown_instructions']
             - markdown = level.properties['markdown_instructions']
             =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?
+          - if level.properties['teacher_markdown']
+            .teacher_markdown
+              %h3 For Teachers Only
+              .content
+                - markdown = level.properties['teacher_markdown']
+                =ActionView::Base.new.render(inline: markdown, type: :md) unless markdown.blank?
           - if level.properties['questions']
             %div= "Questions: #{level.properties['questions']}"
           - if level.properties['answers']
