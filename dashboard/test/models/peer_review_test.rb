@@ -20,6 +20,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   def track_progress(level_source_id, user = @user)
+    # this is what creates the peer review objects
     User.track_level_progress_sync(
       user_id: user.id,
       level_id: @script_level.level_id,
@@ -79,7 +80,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
     review1.update! reviewer: create(:user), status: 'accepted', from_instructor: true
-    assert_not PeerReview.where(id: review2.id).any?
+    refute PeerReview.where(id: review2.id).any?
 
     user_level.reload
     assert_equal Activity::REVIEW_ACCEPTED_RESULT, user_level.best_result
