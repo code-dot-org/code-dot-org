@@ -4157,7 +4157,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     dir: Direction.NONE,
     speed: Studio.itemSpeed[itemClass],
     normalSpeed: classProperties.speed,
-    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
+    activity: utils.valueOr(Studio.itemActivity[itemClass], constants.BEHAVIOR_WANDER),
     isHazard: classProperties.isHazard,
     spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
@@ -4278,8 +4278,10 @@ Studio.setItemActivity = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.className);
   }
 
-  if (opts.type === "roam" || opts.type === "chase" ||
-      opts.type === "flee" || opts.type === "none") {
+  if (opts.type === constants.BEHAVIOR_WANDER ||
+      opts.type === constants.BEHAVIOR_CHASE ||
+      opts.type === constants.BEHAVIOR_FLEE ||
+      opts.type === constants.BEHAVIOR_STOP) {
     // retain this activity type for items of this class created in the future:
     Studio.itemActivity[itemClass] = opts.type;
     Studio.items.forEach(function (item) {
