@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ProgressStageStep from './ProgressStageStep';
 
 const styles = {
@@ -12,16 +12,15 @@ const styles = {
 
 const ProgressStageContent = React.createClass({
   propTypes: {
-
+    description: PropTypes.string
   },
 
   render() {
+    const { description } = this.props;
     return (
       <div>
         <div style={styles.summary}>
-          At some point we reach a physical limit of how fast we can send bits and if we want
-          to send a large amount of information faster, we have to finds ways to represent the
-          same information with fewer bits - we must compress the data.
+          {description}
         </div>
         <ProgressStageStep
           start={1}

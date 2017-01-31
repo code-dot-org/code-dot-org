@@ -8,7 +8,9 @@ export default storybook => {
       {
         name:'progress stage',
         story: () => (
-          <ProgressStage/>
+          <ProgressStage
+            title="Stage 1: Bytes and File Sizes"
+          />
         )
       }
     ]);
