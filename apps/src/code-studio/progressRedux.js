@@ -234,7 +234,8 @@ export const levelsByStage = state => (
   state.stages.map(stage => (
     stage.levels.map(level => ({
       status: level.status,
-      url: level.url
+      url: level.url,
+      name: level.name
     }))
   ))
 );

@@ -58,8 +58,8 @@ const SummaryProgressTable = React.createClass({
     levelsByStage: PropTypes.arrayOf(
       PropTypes.arrayOf(
         PropTypes.shape({
-          level: PropTypes.string,
-          url: PropTypes.string
+          status: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired
         })
       )
     ).isRequired,
