@@ -114,8 +114,7 @@ module Cdo
           role_session_name: token_params['email']
         ))
       rescue Aws::STS::Errors::AccessDenied => e
-        unless @oauth_attempted
-          @google_client = google_oauth
+        if (@google_client = google_oauth)
           retry
         end
         raise e, "\nYour Google ID does not have access to the requested AWS Role. Ask your administrator to provide access.
