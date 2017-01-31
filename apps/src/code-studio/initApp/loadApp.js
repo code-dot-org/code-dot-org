@@ -127,7 +127,9 @@ export function setupApp(appOptions) {
         clientState.writeSourceForLevel(appOptions.scriptName, levelId,
             +new Date(), lastSavedProgram);
       }
-      report.callback = appOptions.report.callback;
+      if (!appOptions.hasContainedLevels) {
+        report.callback = appOptions.report.callback;
+      }
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
 
       report.fallbackResponse = appOptions.report.fallback_response;
