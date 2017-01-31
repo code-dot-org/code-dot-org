@@ -898,7 +898,10 @@ function setMakerAPIsStatusFromQueryParams() {
 }
 
 /**
- * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ * If a level itself has makerlabEnabled, set that for this project's source.
+ * This is the case with New Maker Lab Project.level, and projects created
+ * based off of that template (/p/makerlab), done prior to maker API support
+ * within applab.
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
