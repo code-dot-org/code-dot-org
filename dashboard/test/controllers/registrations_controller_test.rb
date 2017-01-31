@@ -156,6 +156,15 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Email has already been taken"], assigns(:user).errors.full_messages
   end
 
+  test 'create causses sign-in to be logged' do
+    assert_creates(SignIn) do
+      post :create, params: {
+
+      }
+    end
+    assert_equal user.id, SignIn.last.user_id
+  end
+
   test "update student with utf8mb4 in name fails" do
     student = create :student
 
