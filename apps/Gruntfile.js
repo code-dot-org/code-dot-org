@@ -326,6 +326,10 @@ module.exports = function (grunt) {
     unit: {
       coverageReporter: {
         dir: 'coverage/unit',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
       },
       files: [
         {src: ['test/unit-tests.js'], watched: false},
@@ -334,6 +338,10 @@ module.exports = function (grunt) {
     integration: {
       coverageReporter: {
         dir: 'coverage/integration',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
       },
       files: [
         {src: ['test/integration-tests.js'], watched: false},
@@ -345,6 +353,13 @@ module.exports = function (grunt) {
       ],
     },
     entry: {
+      coverageReporter: {
+        dir: 'coverage/entry',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/entry-tests.js'], watched: false},
       ],
