@@ -1,0 +1,5 @@
+name 'Challenge: Input and UI'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Challenge
+MARKDOWN
