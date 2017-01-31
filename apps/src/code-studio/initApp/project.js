@@ -348,7 +348,8 @@ var projects = module.exports = {
   // Students should not be able to easily see source for embedded applab or
   // gamelab levels.
   shouldHideShareAndRemix() {
-    return appOptions.embed && (appOptions.app === 'applab' || appOptions.app === 'gamelab');
+    return (appOptions.level && appOptions.level.hideShareAndRemix) ||
+      (appOptions.embed && (appOptions.app === 'applab' || appOptions.app === 'gamelab'));
   },
 
   showHeaderForProjectBacked() {
