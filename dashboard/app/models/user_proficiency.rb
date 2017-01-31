@@ -61,7 +61,7 @@
 #
 # Indexes
 #
-#  index_user_proficiencies_on_user_id  (user_id)
+#  index_user_proficiencies_on_user_id  (user_id) UNIQUE
 #
 
 class UserProficiency < ActiveRecord::Base
