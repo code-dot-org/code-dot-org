@@ -87,9 +87,9 @@ const PiskelEditor = React.createClass({
       this.piskel.addBlankFrame();
       this.isLoadingAnimation_ = false;
       this.props.removePendingAnimationAddition();
-    } else if (animationProps.dataURI) {
+    } else if (animationProps.loadedFromSource) {
       this.piskel.appendFrames(
-        animationProps.dataURI,
+        animationProps.loadedProps.dataURI,
         animationProps.props.frameSize.x,
         animationProps.props.frameSize.y,
         () => {
