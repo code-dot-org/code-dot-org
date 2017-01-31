@@ -4,6 +4,7 @@ require 'mocha/mini_test'
 require 'cdo/aws/google_credentials'
 require 'active_support/core_ext/numeric/time'
 require 'timecop'
+require 'webmock/minitest'
 
 describe Cdo::GoogleCredentials do
   before do
@@ -15,6 +16,10 @@ describe Cdo::GoogleCredentials do
       credentials_path: credentials,
       config_path: config
     )
+    # Disable instance metadata credentials.
+    stub_request(:get, /.*169\.254\.169\.254.*/)
+    # Disable environment credentials.
+    ENV.stubs(:[]).returns(nil)
   end
 
   describe 'not configured' do
