@@ -34,8 +34,6 @@ class PeerReviewsController < ApplicationController
   end
 
   def update
-    puts peer_review_params
-    puts peer_review_params.merge(reviewer: current_user, from_instructor: current_user.permission?('plc_reviewer'))
     if @peer_review.update(peer_review_params.merge(reviewer: current_user, from_instructor: current_user.permission?('plc_reviewer')))
       flash[:notice] = t('peer_review.review_submitted')
 
