@@ -108,7 +108,7 @@ const CourseProgress = React.createClass({
               }
               {progressRedesign && (
                 <span>
-                  <ProgressDetailToggle isSummary={true}/>
+                  <ProgressDetailToggle/>
                 </span>
               )}
             </div>

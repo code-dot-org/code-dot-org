@@ -19,6 +19,7 @@ const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
+const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -39,7 +40,8 @@ const initialState = {
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
   postMilestoneDisabled: false,
-  isHocScript: null
+  isHocScript: null,
+  isSummaryView: true
 };
 
 /**
@@ -142,6 +144,13 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_IS_SUMMARY_VIEW) {
+    return {
+      ...state,
+      isSummaryView: action.isSummaryView
+    };
+  }
+
   return state;
 }
 
@@ -211,6 +220,7 @@ export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
 export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
 export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
+export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, isSummaryView });
 
 // Selectors
 

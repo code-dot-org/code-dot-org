@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import ToggleGroup from '../ToggleGroup';
 import color from "@cdo/apps/util/color";
+import { setIsSummaryView } from '@cdo/apps/code-studio/progressRedux';
+import { connect } from 'react-redux';
 
 // TODO - can't use toggle group when we need to change both icons as we toggle?
 // hacky approach might be to have two groups and hide one at a time
@@ -27,39 +29,31 @@ const styles = {
 
 const ProgressDetailToggle = React.createClass({
   propTypes: {
-    isSummary: PropTypes.bool.isRequired
-  },
-
-  // TODO - eventually this will be in redux
-  getInitialState() {
-    return {
-      isSummary: this.props.isSummary
-    };
+    isSummaryView: PropTypes.bool.isRequired,
+    setIsSummaryView: PropTypes.func.isRequired
   },
 
   onChange() {
-    this.setState({
-      isSummary: !this.state.isSummary
-    });
+    this.props.setIsSummaryView(!this.props.isSummaryView);
   },
 
   render() {
-    const { isSummary } = this.state;
+    const { isSummaryView } = this.props;
     return (
       <ToggleGroup
-        selected={isSummary ? "summary" : "detail"}
+        selected={isSummaryView ? "summary" : "detail"}
         activeColor={color.cyan}
         onChange={this.onChange}
       >
         <button value="summary">
           <img
-            src={isSummary ? summaryActive : summaryInactive}
+            src={isSummaryView ? summaryActive : summaryInactive}
             style={styles.icon}
           />
         </button>
         <button value="detail">
           <img
-            src={isSummary ? detailInactive : detailActive}
+            src={isSummaryView ? detailInactive : detailActive}
             style={styles.icon}
           />
         </button>
@@ -69,4 +63,8 @@ const ProgressDetailToggle = React.createClass({
   }
 });
 
-export default ProgressDetailToggle;
+export default connect(state => ({
+  isSummaryView: state.progress.isSummaryView
+}), dispatch => ({
+  setIsSummaryView: isSummaryView => dispatch(setIsSummaryView(isSummaryView))
+}))(ProgressDetailToggle);

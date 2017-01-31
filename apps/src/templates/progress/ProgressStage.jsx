@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ProgressStageContent from './ProgressStageContent';
 import FontAwesome from '../FontAwesome';
 import color from "@cdo/apps/util/color";
@@ -9,6 +9,7 @@ const styles = {
     border: '1px solid ' + color.border_gray,
     borderRadius: 2,
     padding: 20,
+    marginBottom: 12
   },
   heading: {
     fontSize: 18,
@@ -20,8 +21,12 @@ const styles = {
 };
 
 
-// TODO - collapsing
 const ProgressStage = React.createClass({
+  propTypes: {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  },
+
   getInitialState() {
     return {
       collapsed: false
@@ -35,14 +40,19 @@ const ProgressStage = React.createClass({
   },
 
   render() {
+    const { title, description } = this.props;
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
     return (
       <div style={styles.main}>
         <div style={styles.heading} onClick={this.toggleCollapsed}>
           <FontAwesome icon={icon}/>
-          <span style={styles.headingText}>Stage 4: Encoding Color Images</span>
+          <span style={styles.headingText}>{title}</span>
         </div>
-        {!this.state.collapsed && <ProgressStageContent/>}
+        {!this.state.collapsed &&
+          <ProgressStageContent
+            description={description}
+          />
+        }
       </div>
     );
   }
