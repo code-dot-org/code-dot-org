@@ -132,7 +132,9 @@ export default class BoardController {
     if (!this.board_) {
       return;
     }
-    this.board_.register.forEach(BoardController.resetComponent);
+    // TouchSensors aren't in the board register, but we still need to reset them.
+    const touchSensors = _.filter(this.prewiredComponents, c => c instanceof TouchSensor);
+    this.board_.register.concat(touchSensors).forEach(BoardController.resetComponent);
   }
 
   pinMode(pin, modeConstant) {

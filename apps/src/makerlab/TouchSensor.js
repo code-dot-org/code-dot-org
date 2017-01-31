@@ -25,21 +25,40 @@ export default class TouchSensor extends EventEmitter {
      *          ids - TouchSensor in turn forwards events for a single pin.
      */
     this.touchpadsController_ = touchpadsController;
+
+    // This is an 'always on' component so we "start" it immediately.
+    // When we reset we stop/start back-to-back.
+    this.start();
   }
 
-  /**
-   * Called whenever we begin running with this component.
-   * TODO Verify this is true
-   */
   start() {
     this.removeAllListeners();
+    this.downHandler = event => {
+      if (event.which.includes(this.pinIndex_)) {
+        this.emit('down');
+      }
+    };
+    this.touchpadsController_.on('down', this.downHandler);
+    this.upHandler = event => {
+      if (event.which.includes(this.pinIndex_)) {
+        this.emit('up');
+      }
+    };
+    this.touchpadsController_.on('up', this.upHandler);
+  }
 
-    ['down', 'up'].forEach(eventName => {
-      this.touchpadsController_.on(eventName, event => {
-        if (event.which.includes(this.pinIndex_)) {
-          this.emit(eventName);
-        }
-      });
-    });
+  /** Actually more like a 'reset' */
+  stop() {
+    if (this.downHandler) {
+      this.touchpadsController_.removeListener('down', this.downHandler);
+      this.downHandler = null;
+    }
+    if (this.upHandler) {
+      this.touchpadsController_.removeListener('up', this.upHandler);
+      this.upHandler = null;
+    }
+    this.removeAllListeners();
+    // Immediately restart because this is an 'always-on' component.
+    this.start();
   }
 }
