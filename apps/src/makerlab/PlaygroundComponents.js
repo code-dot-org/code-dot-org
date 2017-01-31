@@ -3,7 +3,7 @@
  * conforming to Maker API droplet blocks.
  */
 
-import {N_COLOR_LEDS /*, TOUCH_PINS*/} from './PlaygroundConstants';
+import {N_COLOR_LEDS , TOUCH_PINS} from './PlaygroundConstants';
 import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from 'johnny-five';
@@ -51,13 +51,10 @@ export function initializeCircuitPlaygroundComponents() {
     return accelerometer[accelerationDirection];
   };
 
-  // Temporarily disabled - adds too much work to the board's update loop causing
-  // board interactions become unusably slow and unreliable.
-  // We need to enable touch pins gradually instead.
-  // const touchpad = new five.Touchpad({
-  //   controller: PlaygroundIO.Touchpad,
-  //   pads: TOUCH_PINS
-  // });
+  const touchpad = new five.Touchpad({
+    controller: PlaygroundIO.Touchpad,
+    pads: TOUCH_PINS
+  });
 
   const lightSensor = new five.Sensor({
     pin: "A5",
@@ -91,7 +88,7 @@ export function initializeCircuitPlaygroundComponents() {
 
     accelerometer: accelerometer,
 
-    // touchpad: touchpad,
+    touchpad: touchpad,
 
     soundSensor: soundSensor,
 
