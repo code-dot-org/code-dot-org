@@ -84,9 +84,7 @@ function pendingAnimationAddition(state, action) {
       return Object.assign({}, state, {
         loadedFromSource: true,
         saved: true,
-        blob: action.blob,
-        dataURI: action.dataURI,
-        sourceSize: action.sourceSize
+        loadedProps: action.loadedProps
       });
 
     default:
@@ -305,6 +303,21 @@ export function setInitialAnimationList(serializedAnimationList) {
   };
 }
 
+/**
+ * TODO caleybrock User selects new frames to add to the animation. Set these as pending
+ * before loading them into Piskel.
+ * @param {!AnimationKey} key
+ * @param {AnimationProps} props
+ * @returns {{type: string, key: AnimationKey, props: AnimationProps}}
+ */
+export function addAnimationAction(key, props) {
+  return {
+    type: ADD_ANIMATION,
+    key,
+    props
+  };
+}
+
 export function addBlankAnimation() {
   const key = createUuid();
   return (dispatch, getState) => {
@@ -312,10 +325,9 @@ export function addBlankAnimation() {
     // By pushing an animation that is "loadedFromSource" but has a null
     // blob and dataURI, Piskel will know to create a new document with
     // the given dimensions.
-    dispatch({
-      type: ADD_ANIMATION,
+    dispatch(addAnimationAction(
       key,
-      props: {
+      {
         name: generateAnimationName('animation', getState().animationList.propsByKey),
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
@@ -328,8 +340,7 @@ export function addBlankAnimation() {
         blob: null,
         dataURI: null,
         hasNewVersionThisSession: false
-      }
-    });
+      }));
     dispatch(selectAnimation(key));
     projectChanged();
   };
@@ -338,13 +349,7 @@ export function addBlankAnimation() {
 export function appendBlankFrame() {
   return (dispatch, getState) => {
     const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch({
-      type: SET_PENDING_ANIMATION_ADDITION,
-      key: selectedAnimationKey,
-      props: {
-        blankFrame: true
-      }
-    });
+    dispatch(setPendingAnimationAddition(selectedAnimationKey, {blankFrame: true}));
     projectChanged();
   };
 }
@@ -358,11 +363,8 @@ export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
   return (dispatch, getState) => {
-    dispatch({
-      type: ADD_ANIMATION,
-      key,
-      props
-    });
+    props.looping = true;
+    dispatch(addAnimationAction(key, props));
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
@@ -392,11 +394,7 @@ export function appendCustomFrames(props) {
 export function addLibraryAnimation(props) {
   return (dispatch, getState) => {
     const key = createUuid();
-    dispatch({
-      type: ADD_ANIMATION,
-      key,
-      props
-    });
+    dispatch(addAnimationAction(key, props));
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
@@ -427,9 +425,7 @@ export function setPendingAnimationAddition(key, props) {
  */
 export function removePendingAnimationAddition() {
   return dispatch => {
-    dispatch({
-      type: REMOVE_PENDING_ANIMATION_ADDITION
-    });
+    dispatch(removePendingAnimationAdditionAction());
   };
 }
 
@@ -608,6 +604,18 @@ function loadAnimationFromSource(key, callback) {
   };
 }
 
+function removePendingAnimationAdditionAction() {
+  return {type: REMOVE_PENDING_ANIMATION_ADDITION};
+}
+
+function doneLoadingAdditionFromSource(key, loadedProps) {
+  return {
+    type: DONE_LOADING_ADDITION_FROM_SOURCE,
+    key,
+    loadedProps
+  };
+}
+
 /**
  * Load the indicated animation from its source, whether that is S3 or the animation library.
  * From this function we'll need the dataURI and sourceSize to send to Piskel.
@@ -624,20 +632,12 @@ function loadAnimationAdditionFromSource(key, props, callback) {
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load additional animation frames' + key, err);
-        dispatch({
-          type: REMOVE_PENDING_ANIMATION_ADDITION
-        });
+        dispatch(removePendingAnimationAdditionAction());
         return;
       }
       blobToDataURI(blob, dataURI => {
         dataURIToSourceSize(dataURI).then(sourceSize => {
-          dispatch({
-            type: DONE_LOADING_ADDITION_FROM_SOURCE,
-            key,
-            blob,
-            dataURI,
-            sourceSize
-          });
+          dispatch(doneLoadingAdditionFromSource(key, {blob, dataURI, sourceSize}));
           callback();
         });
       });
