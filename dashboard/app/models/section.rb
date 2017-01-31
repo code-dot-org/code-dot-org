@@ -77,7 +77,10 @@ class Section < ActiveRecord::Base
 
     self.students.map do |student|
       first, _last = FullNameSplitter.split(student.name)
-      if trie.words(first).count == 1
+      if first.nil?
+        # if fullnamesplitter can't identify the first name, default to
+        # full name (ie do nothing)
+      elsif trie.words(first).count == 1
         # If the student's first name is unique, simply use that
         student.name = first
       else
