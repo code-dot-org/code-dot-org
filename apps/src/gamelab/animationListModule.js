@@ -45,42 +45,42 @@ export const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SOURCE'
 // Args: {AnimationKey} key, {string} version
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 // Args: {AnimationKey} key, {!SerializedAnimation} props
-const SET_PENDING_ANIMATION_ADDITION = 'AnimationList/SET_PENDING_ANIMATION_ADDITION';
+const SET_PENDING_FRAMES = 'AnimationList/SET_PENDING_FRAMES';
 // Args: none
-export const START_LOADING_ADDITION_FROM_SOURCE = 'AnimationList/START_LOADING_ADDITION_FROM_SOURCE';
+export const START_LOADING_PENDING_FRAMES_FROM_SOURCE = 'AnimationList/START_LOADING_PENDING_FRAMES_FROM_SOURCE';
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
-export const DONE_LOADING_ADDITION_FROM_SOURCE = 'AnimationList/DONE_LOADING_ADDITION_FROM_SOURCE';
+export const DONE_LOADING_PENDING_FRAMES_FROM_SOURCE = 'AnimationList/DONE_LOADING_PENDING_FRAMES_FROM_SOURCE';
 // Args: none
-export const REMOVE_PENDING_ANIMATION_ADDITION = 'AnimationList/REMOVE_PENDING_ANIMATION_ADDITION';
+export const REMOVE_PENDING_FRAMES = 'AnimationList/REMOVE_PENDING_FRAMES';
 
 export default combineReducers({
   orderedKeys,
   propsByKey,
-  pendingAnimationAddition
+  pendingFrames
 });
 
-// pendingAnimationAddition is used for temporarily storing additional
+// pendingFrames is used for temporarily storing additional
 // frames before they get added to the animation in Piskel.
-// pendingAnimationAddition gets added to animation in PiskelEditor.jsx
-function pendingAnimationAddition(state, action) {
+// pendingFrames gets added to animation in PiskelEditor.jsx
+function pendingFrames(state, action) {
   state = state || {};
   switch (action.type) {
 
-    case SET_PENDING_ANIMATION_ADDITION:
+    case SET_PENDING_FRAMES:
       return {
         key: action.key,
         props: action.props
       };
 
-    case REMOVE_PENDING_ANIMATION_ADDITION:
+    case REMOVE_PENDING_FRAMES:
       return {};
 
-    case START_LOADING_ADDITION_FROM_SOURCE:
+    case START_LOADING_PENDING_FRAMES_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: false
       });
 
-    case DONE_LOADING_ADDITION_FROM_SOURCE:
+    case DONE_LOADING_PENDING_FRAMES_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: true,
         saved: true,
@@ -349,7 +349,7 @@ export function addBlankAnimation() {
 export function appendBlankFrame() {
   return (dispatch, getState) => {
     const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingAnimationAddition(selectedAnimationKey, {blankFrame: true}));
+    dispatch(setPendingFramesAction(selectedAnimationKey, {blankFrame: true}));
     projectChanged();
   };
 }
@@ -381,8 +381,8 @@ export function addAnimation(key, props) {
 export function appendCustomFrames(props) {
   return (dispatch, getState) => {
     const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingAnimationAddition(selectedAnimationKey, props));
-    dispatch(loadAnimationAdditionFromSource(selectedAnimationKey, props));
+    dispatch(setPendingFramesAction(selectedAnimationKey, props));
+    dispatch(loadPendingFramesFromSource(selectedAnimationKey, props));
     projectChanged();
   };
 }
@@ -411,21 +411,21 @@ export function addLibraryAnimation(props) {
  * @param {AnimationProps} props
  * @returns {{type: string, key: AnimationKey, props: AnimationProps}}
  */
-export function setPendingAnimationAddition(key, props) {
+export function setPendingFramesAction(key, props) {
   return {
-    type: SET_PENDING_ANIMATION_ADDITION,
+    type: SET_PENDING_FRAMES,
     key,
     props
   };
 }
 
 /**
- * After an animation addition is added, remove it as pending.
+ * After pending frames are added, remove them as pending.
  * @returns {function}
  */
-export function removePendingAnimationAddition() {
+export function removePendingFrames() {
   return dispatch => {
-    dispatch(removePendingAnimationAdditionAction());
+    dispatch(removePendingFramesAction());
   };
 }
 
@@ -436,8 +436,8 @@ export function removePendingAnimationAddition() {
 export function appendLibraryFrames(props) {
   return (dispatch, getState) => {
     const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingAnimationAddition(selectedAnimationKey, props));
-    dispatch(loadAnimationAdditionFromSource(selectedAnimationKey, props));
+    dispatch(setPendingFramesAction(selectedAnimationKey, props));
+    dispatch(loadPendingFramesFromSource(selectedAnimationKey, props));
     projectChanged();
   };
 }
@@ -604,15 +604,23 @@ function loadAnimationFromSource(key, callback) {
   };
 }
 
-function removePendingAnimationAdditionAction() {
-  return {type: REMOVE_PENDING_ANIMATION_ADDITION};
+function removePendingFramesAction() {
+  return {
+    type: REMOVE_PENDING_FRAMES
+  };
 }
 
-function doneLoadingAdditionFromSource(key, loadedProps) {
+function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
   return {
-    type: DONE_LOADING_ADDITION_FROM_SOURCE,
+    type: DONE_LOADING_PENDING_FRAMES_FROM_SOURCE,
     key,
     loadedProps
+  };
+}
+
+function startLoadingPendingFramesFromSourceAction() {
+  return {
+    type: START_LOADING_PENDING_FRAMES_FROM_SOURCE
   };
 }
 
@@ -622,22 +630,20 @@ function doneLoadingAdditionFromSource(key, loadedProps) {
  * @param {!AnimationKey} key
  * @param {function} [callback]
  */
-function loadAnimationAdditionFromSource(key, props, callback) {
+function loadPendingFramesFromSource(key, props, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const sourceUrl = animationSourceUrl(key, props);
-    dispatch({
-      type: START_LOADING_ADDITION_FROM_SOURCE
-    });
+    dispatch(startLoadingPendingFramesFromSourceAction());
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
-        console.log('Failed to load additional animation frames' + key, err);
-        dispatch(removePendingAnimationAdditionAction());
+        console.log('Failed to load pending animation frames' + key, err);
+        dispatch(removePendingFramesAction());
         return;
       }
       blobToDataURI(blob, dataURI => {
         dataURIToSourceSize(dataURI).then(sourceSize => {
-          dispatch(doneLoadingAdditionFromSource(key, {blob, dataURI, sourceSize}));
+          dispatch(doneLoadingPendingFramesFromSourceAction(key, {blob, dataURI, sourceSize}));
           callback();
         });
       });

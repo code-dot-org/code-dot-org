@@ -5,7 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as PropTypes from '../PropTypes';
-import { editAnimation, removePendingAnimationAddition } from '../animationListModule';
+import { editAnimation, removePendingFrames } from '../animationListModule';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 
 /**
@@ -32,8 +32,8 @@ const PiskelEditor = React.createClass({
     editAnimation: React.PropTypes.func.isRequired,
     allAnimationsSingleFrame: React.PropTypes.bool.isRequired,
     onNewFrameClick: React.PropTypes.func.isRequired,
-    pendingAnimationAddition: React.PropTypes.object,
-    removePendingAnimationAddition: React.PropTypes.func.isRequired
+    pendingFrames: React.PropTypes.object,
+    removePendingFrames: React.PropTypes.func.isRequired
   },
 
   componentDidMount() {
@@ -70,13 +70,13 @@ const PiskelEditor = React.createClass({
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
       this.loadSelectedAnimation_(newProps);
     }
-    if (newProps.pendingAnimationAddition &&
-        newProps.selectedAnimation === newProps.pendingAnimationAddition.key) {
-      this.addPendingAnimationAddition(newProps.pendingAnimationAddition);
+    if (newProps.pendingFrames &&
+        newProps.selectedAnimation === newProps.pendingFrames.key) {
+      this.sendPendingFramesToPiskel(newProps.pendingFrames);
     }
   },
 
-  addPendingAnimationAddition(animationProps) {
+  sendPendingFramesToPiskel(animationProps) {
     const key = this.props.selectedAnimation;
     if (!animationProps) {
       throw new Error('No props present for animation with key ' + key);
@@ -86,7 +86,7 @@ const PiskelEditor = React.createClass({
     if (animationProps.props.blankFrame) {
       this.piskel.addBlankFrame();
       this.isLoadingAnimation_ = false;
-      this.props.removePendingAnimationAddition();
+      this.props.removePendingFrames();
     } else if (animationProps.loadedFromSource) {
       this.piskel.appendFrames(
         animationProps.loadedProps.dataURI,
@@ -94,7 +94,7 @@ const PiskelEditor = React.createClass({
         animationProps.props.frameSize.y,
         () => {
           this.isLoadingAnimation_ = false;
-          this.props.removePendingAnimationAddition();
+          this.props.removePendingFrames();
 
           // If the selected animation changed out from under us, load again.
           if (this.props.selectedAnimation !== key) {
@@ -208,13 +208,13 @@ export default connect(state => ({
   animationList: state.animationList,
   channelId: state.pageConstants.channelId,
   allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
-  pendingAnimationAddition: state.animationList.pendingAnimationAddition
+  pendingFrames: state.animationList.pendingFrames
 }), dispatch => ({
   editAnimation: (key, props) => dispatch(editAnimation(key, props)),
   onNewFrameClick() {
     dispatch(show(Goal.NEW_FRAME));
   },
-  removePendingAnimationAddition() {
-    dispatch(removePendingAnimationAddition());
+  removePendingFrames() {
+    dispatch(removePendingFrames());
   }
 }))(PiskelEditor);
