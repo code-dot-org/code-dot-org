@@ -1,11 +1,12 @@
 ---
 title: Student Recruitment
 nav: educate_nav
+video_player: true
 ---
 # Student recruitment 
 ### Planning to offer a computer science course in your school? Here are some tips for recruiting students into your class. 
 
-*For resources and tips on getting district, administrator, or community buy-in, check out [code.org/promote](code.org/promote).*
+*For resources and tips on getting district, administrator, or community buy-in, check out [code.org/promote](/promote).*
 
 * [Play recruitment videos](#videos)
 * [Ask your school counselors for help](#counselors)
@@ -17,12 +18,12 @@ nav: educate_nav
 <a id="videos"></a>
 
 ## Show these videos to students.
-**If you’re teaching CS Principles or CS Discoveries:**
+### **If you’re teaching CS Principles or CS Discoveries:**
 
 Hear from current students as they talk about the topics covered in each course and why your students should sign up. 
 
 [col-50]
-### Sign up for AP Computer Science Principles
+### **Sign up for AP CS Principles**
 
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
 
@@ -34,7 +35,7 @@ Hear from current students as they talk about the topics covered in each course 
 [col-50]
 
 
-### Sign up for Computer Science Discoveries
+### **Sign up for CS Discoveries**
 
 <%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
 
@@ -44,11 +45,11 @@ Hear from current students as they talk about the topics covered in each course 
 
 <p style="clear:both">&nbsp;</p>
 
-**For *any* computer science course:**
+### **For *any* computer science course:**
 
 
 [col-50]
-### Sign up for comptuer science (general)
+### **Sign up for computer science (general)**
 
 <%=view :display_video_thumbnail, id: "signup", video_code: "xgOYvG1WAbM", play_button: 'center' %>
 
@@ -59,7 +60,7 @@ Hear from current students as they talk about the topics covered in each course 
 [col-50]
 
 
-### Comptuer science is changing everything
+### **Computer science is changing everything**
 
 <%=view :display_video_thumbnail, id: "cs_changing_everything", video_code: "QvyTEx1wyOY", play_button: 'center' %>
 

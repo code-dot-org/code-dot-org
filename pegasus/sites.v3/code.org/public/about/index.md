@@ -76,7 +76,7 @@ See all past [news and announcements](/about/news).
 <br/>
 
 ## More information, history, and philosophy
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+In 2013, Code.org was launched by twin brothers [Hadi](/about/leadership/hadi_partovi) and [Ali Partovi](https://www.crunchbase.com/person/ali-partovi#/entity) with a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
 
 To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes.
 
