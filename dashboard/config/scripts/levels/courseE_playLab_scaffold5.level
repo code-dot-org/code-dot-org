@@ -40,13 +40,13 @@
     "first_sprite_index": "0",
     "markdown_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Try including a way to win or lose your game.\r\n<hr/>\r\n*Don't forget: Keep testing your game as you code. You'll not only want a game that works, but one that is fun to play!*\r\n<hr/>\r\nYour toolbox has been re-organized to make it easier to find what you need. We've also added these blocks:\r\n\r\n![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57 PM.png)",
     "instructions_important": "false",
-    "contained_level_names": null,
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "downButton",
       "upButton"
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -332,5 +332,8 @@
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
   "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "yes": "Ναι"
+  "yes": "Ναι",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

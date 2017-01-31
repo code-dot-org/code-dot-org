@@ -332,5 +332,8 @@
   "when": "ketika",
   "whenRun": "ketika dijalankan",
   "workspaceHeaderShort": "Area kerja: ",
-  "yes": "Ya"
+  "yes": "Ya",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

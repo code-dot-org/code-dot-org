@@ -332,5 +332,8 @@
   "when": "кезде",
   "whenRun": "қосу кезінде",
   "workspaceHeaderShort": "Жұмыс аумағы: ",
-  "yes": "Иә"
+  "yes": "Иә",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

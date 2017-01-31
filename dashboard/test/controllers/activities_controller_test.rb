@@ -122,7 +122,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params
+          post :milestone, params: @milestone_params
           @fake_queue.handle_pending_messages if async_activity_writes
         end
       end
@@ -163,7 +163,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     params[:level_id] = @script_level.level.id
     params[:result] = 'true'
 
-    post :milestone, params
+    post :milestone, params: params
     assert_response :success
   end
 
@@ -173,7 +173,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     params[:level_id] = @script_level.level.id
     params[:result] = 'false'
 
-    post :milestone, params
+    post :milestone, params: params
     assert_response :success
   end
 
@@ -186,7 +186,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     params[:level_id] = level1.id
     params[:result] = 'true'
 
-    post :milestone, params
+    post :milestone, params: params
 
     assert_equal level1, UserLevel.last.level
   end
@@ -200,7 +200,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     params[:level_id] = level2.id
     params[:result] = 'true'
 
-    post :milestone, params
+    post :milestone, params: params
 
     assert_equal level2, UserLevel.last.level
   end
@@ -216,7 +216,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity) do
       assert_does_not_create(GalleryActivity, UserLevel, UserScript) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params
+          post :milestone, params: @milestone_params
         end
       end
     end
@@ -234,7 +234,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(program: "<hey>" * 10000)
+          post :milestone, params: @milestone_params.merge(program: "<hey>" * 10000)
         end
       end
     end
@@ -265,7 +265,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity, LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+          post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
         end
       end
     end
@@ -289,7 +289,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # update total lines
-          post :milestone, @milestone_params.merge(lines: -20)
+          post :milestone, params: @milestone_params.merge(lines: -20)
         end
       end
     end
@@ -314,7 +314,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 1000) do # update total lines
-          post :milestone, @milestone_params.merge(lines: 9_999_999)
+          post :milestone, params: @milestone_params.merge(lines: 9_999_999)
         end
       end
     end
@@ -363,7 +363,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params
+          post :milestone, params: @milestone_params
         end
       end
     end
@@ -406,7 +406,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
       assert_difference('@user.reload.total_lines', 20) do # update total lines
-        post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@good_image))
+        post :milestone,
+          params: @milestone_params.merge(
+            save_to_gallery: 'true',
+            image: Base64.encode64(@good_image)
+          )
         @fake_queue.handle_pending_messages if async_activity_writes
       end
     end
@@ -433,7 +437,12 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
       assert_difference('@user.reload.total_lines', 20) do # update total lines
-        post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@jpg_image), image_type: 'jpg')
+        post :milestone,
+          params: @milestone_params.merge(
+            save_to_gallery: 'true',
+            image: Base64.encode64(@jpg_image),
+            image_type: 'jpg'
+          )
       end
     end
 
@@ -458,7 +467,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(save_to_gallery: 'undefined', image: Base64.encode64(@good_image))
+          post :milestone,
+            params: @milestone_params.merge(
+              save_to_gallery: 'undefined',
+              image: Base64.encode64(@good_image)
+            )
         end
       end
     end
@@ -481,7 +494,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(save_to_gallery: 'false', image: Base64.encode64(@good_image))
+          post :milestone,
+            params: @milestone_params.merge(
+              save_to_gallery: 'false',
+              image: Base64.encode64(@good_image)
+            )
         end
       end
     end
@@ -501,7 +518,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
-          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
+          post :milestone,
+            params: @milestone_params.merge(result: 'false', testResult: 10)
         end
       end
     end
@@ -517,7 +535,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
-          post :milestone, @milestone_params.merge(result: 'false', testResult: 10, image: Base64.encode64(@good_image), save_to_gallery: 'true')
+          post :milestone,
+            params: @milestone_params.merge(
+              result: 'false',
+              testResult: 10,
+              image: Base64.encode64(@good_image),
+              save_to_gallery: 'true'
+            )
         end
       end
     end
@@ -554,7 +578,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(*expected_created_classes) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(image: Base64.encode64(@good_image))
+          post :milestone,
+            params: @milestone_params.merge(image: Base64.encode64(@good_image))
         end
       end
     end
@@ -599,7 +624,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(program: program, image: Base64.encode64(@good_image))
+          post :milestone,
+            params: @milestone_params.merge(
+              program: program,
+              image: Base64.encode64(@good_image)
+            )
         end
       end
     end
@@ -629,7 +658,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(program: program, image: Base64.encode64(@good_image))
+          post :milestone,
+            params: @milestone_params.merge(
+              program: program,
+              image: Base64.encode64(@good_image)
+            )
         end
       end
     end
@@ -657,7 +690,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(program: program, image: Base64.encode64(@blank_image))
+          post :milestone,
+            params: @milestone_params.merge(
+              program: program,
+              image: Base64.encode64(@blank_image)
+            )
         end
       end
     end
@@ -687,7 +724,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(Activity, UserLevel) do
       assert_does_not_create(LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params.merge(program: program, image: Base64.encode64(@another_good_image))
+          post :milestone,
+            params: @milestone_params.merge(
+              program: program,
+              image: Base64.encode64(@another_good_image)
+            )
         end
       end
     end
@@ -731,7 +772,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity) do
       assert_does_not_create(GalleryActivity, UserLevel) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
-          post :milestone, @milestone_params
+          post :milestone, params: @milestone_params
         end
       end
     end
@@ -754,12 +795,12 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # we should just raise the exception
     assert_raises(ActiveRecord::RecordNotUnique) do
-      post :milestone, @milestone_params
+      post :milestone, params: @milestone_params
     end
   end
 
   test "logged in milestone with undefined submitted" do
-    post :milestone, @milestone_params.merge(submitted: 'undefined')
+    post :milestone, params: @milestone_params.merge(submitted: 'undefined')
     assert_response :success
 
     assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
@@ -767,7 +808,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "Milestone with milestone posts disabled returns 503 status" do
     Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
-    post :milestone, @milestone_params
+    post :milestone, params: @milestone_params
     assert_response 503
   end
 
@@ -780,7 +821,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
-        post :milestone, @milestone_params.merge(user_id: 0)
+        post :milestone, params: @milestone_params.merge(user_id: 0)
       end
     end
 
@@ -805,7 +846,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
-        post :milestone, @milestone_params.merge(user_id: 0)
+        post :milestone, params: @milestone_params.merge(user_id: 0)
       end
     end
 
@@ -827,7 +868,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
-        post :milestone, @milestone_params.merge(user_id: 0, result: "false", testResult: "0")
+        post :milestone,
+          params: @milestone_params.merge(
+            user_id: 0, result: "false",
+            testResult: "0"
+          )
       end
     end
 
@@ -856,7 +901,12 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, LevelSourceImage) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity) do
-        post :milestone, @milestone_params.merge(user_id: 0, save_to_gallery: 'true', image: Base64.encode64(@good_image))
+        post :milestone,
+          params: @milestone_params.merge(
+            user_id: 0,
+            save_to_gallery: 'true',
+            image: Base64.encode64(@good_image)
+          )
       end
     end
 
@@ -883,7 +933,12 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity, LevelSourceImage) do
-        post :milestone, @milestone_params.merge(user_id: 0, save_to_gallery: 'true', image: Base64.encode64(@good_image))
+        post :milestone,
+          params: @milestone_params.merge(
+            user_id: 0,
+            save_to_gallery: 'true',
+            image: Base64.encode64(@good_image)
+          )
       end
     end
 
@@ -897,7 +952,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     # end
 
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, user_id: @user.id, script_level_id: create(:script_level, :playlab).id, program: studio_program_with_text('shit')
+      post :milestone, params: {
+        user_id: @user.id,
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('shit')
+      }
     end
     assert_response :success
     expected_response = {
@@ -918,9 +977,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
-          program: studio_program_with_text('scheiße'))
+        post :milestone,
+          params: @milestone_params.merge(
+            script_level_id: create(:script_level, :playlab).id,
+            program: studio_program_with_text('scheiße')
+          )
       end
     end
     assert_response :success
@@ -938,9 +999,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
     assert_creates(LevelSource) do
-      post :milestone, @milestone_params.merge(
-        script_level_id: create(:script_level, :playlab).id,
-        program: studio_program_with_text('shit'))
+      post :milestone,
+        params: @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('shit')
+        )
     end
 
     assert_response :success
@@ -956,9 +1019,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
     assert_creates(LevelSource) do
-      post :milestone, @milestone_params.merge(
-        script_level_id: create(:script_level, :playlab).id,
-        program: studio_program_with_text('shit'))
+      post :milestone,
+        params: @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('shit')
+        )
     end
 
     assert_response :success
@@ -972,9 +1037,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     with_default_locale(:es) do
       assert_does_not_create(LevelSource, GalleryActivity) do
-        post :milestone, @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
-          program: studio_program_with_text('putamadre'))
+        post :milestone,
+          params: @milestone_params.merge(
+            script_level_id: create(:script_level, :playlab).id,
+            program: studio_program_with_text('putamadre')
+          )
       end
     end
     assert_response :success
@@ -984,9 +1051,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with phone number' do
     assert_does_not_create(LevelSource, GalleryActivity) do
-      post :milestone, @milestone_params.merge(
-        script_level_id: create(:script_level, :playlab).id,
-        program: studio_program_with_text('800-555-5555'))
+      post :milestone,
+        params: @milestone_params.merge(
+          script_level_id: create(:script_level, :playlab).id,
+          program: studio_program_with_text('800-555-5555')
+        )
     end
     assert_response :success
 
@@ -1005,9 +1074,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     script_level = create(:script_level, :playlab)
     Gatekeeper.set('shareEnabled', where: {script_name: script_level.script.name}, value: false)
 
-    post :milestone, @milestone_params.merge(
-      script_level_id: script_level.id,
-      program: studio_program_with_text('hey some text'))
+    post :milestone,
+      params: @milestone_params.merge(
+        script_level_id: script_level.id,
+        program: studio_program_with_text('hey some text')
+      )
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -1020,9 +1091,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     WebPurify.stubs(:find_potential_profanity).returns false
     Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
 
-    post :milestone, @milestone_params.merge(
-      script_level_id: create(:script_level, :playlab).id,
-      program: studio_program_with_text('hey some text'))
+    post :milestone,
+      params: @milestone_params.merge(
+        script_level_id: create(:script_level, :playlab).id,
+        program: studio_program_with_text('hey some text')
+      )
 
     assert_response :success
     response = JSON.parse(@response.body)
@@ -1033,7 +1106,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next stage in default script' do
     last_level_in_stage = @script_level.script.script_levels.reverse.find{|x| x.level.game.name == 'Artist'}
-    post :milestone, @milestone_params.merge(script_level_id: last_level_in_stage.id)
+    post :milestone,
+      params: @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['stage_changing'])
@@ -1050,7 +1124,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map{|stage| stage[:scriptlevels]}.flatten)
 
     last_level_in_first_stage = script.stages.first.script_levels.last
-    post :milestone, @milestone_params.merge(script_level_id: last_level_in_first_stage.id)
+    post :milestone,
+      params: @milestone_params.merge(
+        script_level_id: last_level_in_first_stage.id
+      )
     assert_response :success
     response = JSON.parse(@response.body)
 
@@ -1066,7 +1143,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     level1b = create :maze, name: 'maze 1 new'
     script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
 
-    post :milestone, @milestone_params.merge(script_level_id: script_level.id, level_id: level1a.id)
+    post :milestone,
+      params: @milestone_params.merge(
+        script_level_id: script_level.id,
+        level_id: level1a.id
+      )
     response = JSON.parse(@response.body)
 
     assert_equal response['level_id'], level1a.id
@@ -1074,7 +1155,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'New level completed response' do
     def new_level
-      post :milestone, @milestone_params
+      post :milestone, params: @milestone_params
       JSON.parse(@response.body)['new_level_completed']
     end
 
@@ -1094,7 +1175,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel) do
       assert_does_not_create(GalleryActivity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
-          post :milestone, @milestone_params.merge(result: 'false', testResult: 10)
+          post :milestone,
+            params: @milestone_params.merge(result: 'false', testResult: 10)
         end
       end
     end
@@ -1111,7 +1193,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_difference('UserLevel.count', 2) do # both get a UserLevel
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
-        post :milestone, @milestone_params
+        post :milestone, params: @milestone_params
         assert_response :success
       end
     end
@@ -1128,7 +1210,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_difference('UserLevel.count', 4) do # all 4 people
       assert_difference('PairedUserLevel.count', 3) do # there are 3 PairedUserLevel links
-        post :milestone, @milestone_params
+        post :milestone, params: @milestone_params
         assert_response :success
       end
     end
@@ -1150,7 +1232,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_difference('UserLevel.count', 1) do # one gets a new user level
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
-        post :milestone, @milestone_params
+        post :milestone, params: @milestone_params
         assert_response :success
       end
     end
@@ -1170,7 +1252,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_difference('UserLevel.count', 1) do # one gets a new user level
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
-        post :milestone, @milestone_params
+        post :milestone, params: @milestone_params
         assert_response :success
       end
     end
@@ -1221,14 +1303,14 @@ class ActivitiesControllerTest < ActionController::TestCase
     }
 
     # milestone post should fail because there's no user_level, and it is thus locked by implication
-    post :milestone, milestone_params
+    post :milestone, params: milestone_params
     assert_response 403
 
     # explicity create a user_level that is unlocked
     user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
 
     # should now succeed
-    post :milestone, milestone_params
+    post :milestone, params: milestone_params
     assert_response :success
 
     # milestone post should cause it to become locked again
@@ -1236,13 +1318,13 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert user_level.locked?(stage)
 
     # milestone post should also fail when we have an existing user_level that is locked
-    post :milestone, milestone_params
+    post :milestone, params: milestone_params
     assert_response 403
 
     user_level.delete
     # explicity create a user_level that is readonly_answers
     create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
-    post :milestone, milestone_params
+    post :milestone, params: milestone_params
     assert_response 403
   end
 end

@@ -332,5 +332,8 @@
   "when": "když",
   "whenRun": "při spuštění",
   "workspaceHeaderShort": "Pracovní prostor: ",
-  "yes": "Ano"
+  "yes": "Ano",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

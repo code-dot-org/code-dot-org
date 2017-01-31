@@ -332,5 +332,8 @@
   "when": "när",
   "whenRun": "vid start",
   "workspaceHeaderShort": "Arbetsyta: ",
-  "yes": "Ja"
+  "yes": "Ja",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

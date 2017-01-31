@@ -1,0 +1,13 @@
+name 'courseA_external_stevie12a'
+markdown <<MARKDOWN
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+“But if I try eight times before I get it, that means that I’ve failed seven times!” Stevie said.<br/><br/>
+
+“Why do you think failing is a bad thing?”  Jorge asked.  “Everyone fails at things before they know how to do them… just like you with your bike, or any baby learning to walk. You need to start thinking of the word FAIL as a way to describe trying to learn.”<br/><br/>
+
+“I never thought about it like that!”  Stevie exclaimed.<br/><br/>
+</div>
+
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+<img src="https://images.code.org/1ae44096dfd4f365a212ea26d2e70051-image-1485453665642.png" style="margin:0 auto;"/></div>
+MARKDOWN

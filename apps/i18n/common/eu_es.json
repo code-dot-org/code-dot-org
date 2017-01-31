@@ -332,5 +332,8 @@
   "when": "-enean",
   "whenRun": "martxan dagoenean",
   "workspaceHeaderShort": "Lan eremua: ",
-  "yes": "Bai"
+  "yes": "Bai",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

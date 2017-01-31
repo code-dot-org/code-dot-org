@@ -332,5 +332,8 @@
   "when": "когда",
   "whenRun": "при запуске",
   "workspaceHeaderShort": "Место сбора блоков: ",
-  "yes": "Да"
+  "yes": "Да",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

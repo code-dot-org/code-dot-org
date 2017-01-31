@@ -2629,3 +2629,18 @@ en:
           description_audience: ''
           description_short: ''
           description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.

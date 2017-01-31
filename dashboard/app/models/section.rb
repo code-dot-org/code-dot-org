@@ -24,6 +24,9 @@
 
 require 'cdo/section_helpers'
 
+require 'full-name-splitter'
+require 'rambling-trie'
+
 class Section < ActiveRecord::Base
   belongs_to :user
 
@@ -59,6 +62,45 @@ class Section < ActiveRecord::Base
   before_create :assign_code
   def assign_code
     self.code = unused_random_code
+  end
+
+  # return a version of self.students in which all students' names are
+  # shortened to their first name (if unique) or their first name plus
+  # the minimum number of letters in their last name needed to uniquely
+  # identify them
+  def name_safe_students
+    # Create a prefix tree of student names
+    trie = Rambling::Trie.create
+    self.students.each do |student|
+      trie.add student.name
+    end
+
+    self.students.map do |student|
+      first, _last = FullNameSplitter.split(student.name)
+      if trie.words(first).count == 1
+        # If the student's first name is unique, simply use that
+        student.name = first
+      else
+        # Otherwise, we first must find the leaf node representing the
+        # student's entire name
+        leaf = trie.root
+        student.name.split('').each do |letter|
+          leaf = leaf[letter.to_sym]
+        end
+        # we then traverse up the trie until we encounter the
+        # "rightmost" letter in the student's name which is not unique
+        leaf = leaf.parent while leaf.parent.children.count == 1
+        # finally, we assemble the student's unique name by continuing
+        # our way up the trie
+        student.name = ""
+        until leaf.nil?
+          student.name = leaf.letter.to_s + student.name
+          leaf = leaf.parent
+        end
+      end
+
+      student
+    end
   end
 
   def students_attributes=(params)

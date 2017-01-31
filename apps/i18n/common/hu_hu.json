@@ -332,5 +332,8 @@
   "when": "amikor",
   "whenRun": "futtatáskor",
   "workspaceHeaderShort": "Munkaterület: ",
-  "yes": "Igen"
+  "yes": "Igen",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

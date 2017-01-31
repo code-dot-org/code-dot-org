@@ -6,6 +6,7 @@ import reducer, {
     animationSourceUrl,
     setInitialAnimationList,
     deleteAnimation,
+    cloneAnimation,
     addBlankAnimation,
     addLibraryAnimation,
     withAbsoluteSourceUrls
@@ -240,6 +241,70 @@ describe('animationListModule', function () {
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key0));
       expect(store.getState().animationTab.selectedAnimation).to.equal('');
+    });
+  });
+
+  describe('action: clone animation', function () {
+    let oldWindowDashboard, server;
+    beforeEach(function () {
+      oldWindowDashboard = window.dashboard;
+      window.dashboard = {
+        project: {
+          getCurrentId() {return '';},
+          projectChanged() {return '';}
+        }
+      };
+
+      server = sinon.fakeServer.create();
+      server.respondWith('imageBody');
+    });
+
+    afterEach(function () {
+      server.restore();
+      window.dashboard = oldWindowDashboard;
+    });
+
+    it('cloning animation creates an animation with the same props, and unique name', function () {
+      const key0 = 'animation_1';
+      const animationList = createAnimationList(1);
+
+      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(cloneAnimation(key0));
+
+      expect(store.getState().animationList.orderedKeys.length).to.equal(2);
+
+      const clonedAnimationKey = store.getState().animationList.orderedKeys[1];
+      const clonedAnimation = store.getState().animationList.propsByKey[clonedAnimationKey];
+      const orignalAnimation = store.getState().animationList.propsByKey[key0];
+
+      expect(clonedAnimation.name).to.not.equal(orignalAnimation.name);
+      expect(clonedAnimation.frameSize).to.equal(orignalAnimation.frameSize);
+      expect(clonedAnimation.frameCount).to.equal(orignalAnimation.frameCount);
+      expect(clonedAnimation.frameDelay).to.equal(orignalAnimation.frameDelay);
+      expect(clonedAnimation.looping).to.equal(orignalAnimation.looping);
+      expect(clonedAnimation.sourceUrl).to.equal(orignalAnimation.sourceUrl);
+    });
+
+    it('cloning an animation twice creates two animations with unique names', function () {
+      const key0 = 'animation_1';
+      const animationList = createAnimationList(1);
+
+      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(cloneAnimation(key0));
+      store.dispatch(cloneAnimation(key0));
+
+      const orignalAnimation = store.getState().animationList.propsByKey[key0];
+      const clonedAnimationKey2 = store.getState().animationList.orderedKeys[1];
+      const clonedAnimation2 = store.getState().animationList.propsByKey[clonedAnimationKey2];
+      const clonedAnimationKey1 = store.getState().animationList.orderedKeys[2];
+      const clonedAnimation1 = store.getState().animationList.propsByKey[clonedAnimationKey1];
+
+      expect(store.getState().animationList.orderedKeys.length).to.equal(3);
+      expect(orignalAnimation.name).to.not.equal(clonedAnimation1.name);
+      expect(orignalAnimation.name).to.not.equal(clonedAnimation2.name);
+      expect(clonedAnimation1.name).to.not.equal(clonedAnimation2.name);
     });
   });
 

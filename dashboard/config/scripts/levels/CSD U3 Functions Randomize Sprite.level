@@ -60,6 +60,10 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"f9309cca-b9b2-443f-8d9a-545001ce5cf1\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"f9309cca-b9b2-443f-8d9a-545001ce5cf1\": {\r\n      \"name\": \"flyMan_fly\",\r\n      \"sourceUrl\": null,\r\n      \"frameSize\": {\r\n        \"x\": 50,\r\n        \"y\": 57\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": false,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"9Y9pfVDB8j1OV1WjLlHIrlSWNhkT.7an\"\r\n    }\r\n  }\r\n}",
     "project_template_level_name": "CSD U3 Functions Template Flyman",
     "all_animations_single_frame": "true",
+    "encrypted_examples": "7kijZJ+5a9cCKcz0ftFHJgDO1gpoiHRLlCkG/V0AdePHpCv/10seXrot52dJ\nkQSe\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "start_in_animation_tab": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -332,5 +332,8 @@
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
   "workspaceHeaderShort": "Area di lavoro: ",
-  "yes": "Sì"
+  "yes": "Sì",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

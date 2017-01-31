@@ -332,5 +332,8 @@
   "when": "Khi nào",
   "whenRun": "Khi chạy",
   "workspaceHeaderShort": "Không gian làm việc:",
-  "yes": "Đồng ý"
+  "yes": "Đồng ý",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

@@ -332,5 +332,8 @@
   "when": "когато",
   "whenRun": "при стартиране",
   "workspaceHeaderShort": "Работна област: ",
-  "yes": "Да"
+  "yes": "Да",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

@@ -332,5 +332,8 @@
   "when": "විට",
   "whenRun": "දුවන විට",
   "workspaceHeaderShort": "වැඩ අවකාශය: ",
-  "yes": "ඔව්"
+  "yes": "ඔව්",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

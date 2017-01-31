@@ -332,5 +332,8 @@
   "when": "kur",
   "whenRun": "kur ekzekutohet",
   "workspaceHeaderShort": "hapësirë pune",
-  "yes": "Po"
+  "yes": "Po",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

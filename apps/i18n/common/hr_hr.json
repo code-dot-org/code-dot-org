@@ -332,5 +332,8 @@
   "when": "kada",
   "whenRun": "pri pokretanju",
   "workspaceHeaderShort": "Radna površina: ",
-  "yes": "Da"
+  "yes": "Da",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

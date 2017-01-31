@@ -332,5 +332,8 @@
   "when": "nuair",
   "whenRun": "nuair a ritear é",
   "workspaceHeaderShort": "Spás oibre: ",
-  "yes": "Tá"
+  "yes": "Tá",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

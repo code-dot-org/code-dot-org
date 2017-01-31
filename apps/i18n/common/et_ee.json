@@ -332,5 +332,8 @@
   "when": "kui",
   "whenRun": "pärast käivitamist",
   "workspaceHeaderShort": "Tööruum: ",
-  "yes": "Jah"
+  "yes": "Jah",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

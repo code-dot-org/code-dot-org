@@ -35,8 +35,8 @@
     "markdown_instructions": "*\"You're doing great so far!\"*\r\n\r\nLet's use this function to collect the nectar.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Count the number of spaces you need to check in each stretch and use those numbers as your parameters to the function call.\",\"hint_id\":\"courseF_bee_fwp5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/844f5b30e978048d0072a95be324f6ba/courseF_bee_fwp5.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "instructions": "Use this function to collect the nectar."
+    "instructions": "Use this function to collect the nectar.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

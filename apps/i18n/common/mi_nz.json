@@ -332,5 +332,8 @@
   "when": "ina",
   "whenRun": "ina whakahaerehia",
   "workspaceHeaderShort": "Papamahi: ",
-  "yes": "Āe"
+  "yes": "Āe",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

@@ -332,5 +332,8 @@
   "when": "وقتی",
   "whenRun": "زمان اجرا",
   "workspaceHeaderShort": "محیط کار: ",
-  "yes": "بله"
+  "yes": "بله",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }

@@ -332,5 +332,8 @@
   "when": "коли",
   "whenRun": "коли гра починається",
   "workspaceHeaderShort": "Робоча область: ",
-  "yes": "Так"
+  "yes": "Так",
+  "lessonName": "Lesson Name",
+  "projectTypeAlgebra": "Algebra",
+  "yourProgress": "Your Progress"
 }
