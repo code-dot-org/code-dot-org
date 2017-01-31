@@ -1,6 +1,10 @@
-if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
+if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
+  if ENV['CIRCLECI']
+    require 'codecov'
+    SimpleCov.formatter = SimpleCov::Formatter::Codecov
+  end
 elsif ENV['CI'] # this is set by circle
   # TODO(bjordan): Temporarily disabled, re-enable with proper handling for
   # parallel testing https://coveralls.zendesk.com/hc/en-us/articles/203484329
