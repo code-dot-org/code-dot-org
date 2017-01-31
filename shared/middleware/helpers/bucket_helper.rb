@@ -28,7 +28,7 @@ class BucketHelper
     elsif ['.doc', '.docx'].include? extension
       'doc'
     else
-      mime_type.split('/').first
+      mime_type.try(:split, '/').try(:first)
     end
   end
 
