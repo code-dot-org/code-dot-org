@@ -20,11 +20,18 @@ const styles = {
   }
 };
 
-
+// TODO - everywhere stage = lesson, step = lesson
 const ProgressStage = React.createClass({
   propTypes: {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    // TODO - create a shared object for these (and add name)
+    levels: PropTypes.arrayOf(
+      PropTypes.shape({
+        status: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired
+      })
+    ).isRequired
   },
 
   getInitialState() {
@@ -40,7 +47,7 @@ const ProgressStage = React.createClass({
   },
 
   render() {
-    const { title, description } = this.props;
+    const { title, description, levels } = this.props;
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
     return (
       <div style={styles.main}>
@@ -51,6 +58,7 @@ const ProgressStage = React.createClass({
         {!this.state.collapsed &&
           <ProgressStageContent
             description={description}
+            levels={levels}
           />
         }
       </div>

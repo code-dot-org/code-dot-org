@@ -7,15 +7,15 @@ const DetailProgressTable = React.createClass({
     levelsByStage: PropTypes.arrayOf(
       PropTypes.arrayOf(
         PropTypes.shape({
-          level: PropTypes.string,
-          url: PropTypes.string
+          status: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired
         })
       )
     ).isRequired,
   },
 
   render() {
-    const { lessonNames } = this.props;
+    const { lessonNames, levelsByStage } = this.props;
     // TODO - better i18n for string construction
     return (
       <div>
@@ -23,6 +23,7 @@ const DetailProgressTable = React.createClass({
           <ProgressStage
             key={index}
             title={`Stage ${index + 1}: ${lessonName}`}
+            levels={levelsByStage[index]}
           />
         ))}
     </div>

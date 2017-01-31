@@ -76,7 +76,7 @@ const styles = {
 const ProgressStageStep = React.createClass({
   propTypes: {
     start: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     levels: PropTypes.arrayOf(
       PropTypes.shape({
         level: PropTypes.string,
@@ -97,7 +97,7 @@ const ProgressStageStep = React.createClass({
     // TODO possible we dont want the above behavior
     const url = levels[0].url;
 
-    // TODO - dont have this be hardcoded
+    // TODO - dont have this be hardcoded/get icons right
     const icon = "file-text-o";
 
     const lastStep = start + levels.length - 1;
