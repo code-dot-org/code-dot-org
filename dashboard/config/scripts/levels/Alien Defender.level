@@ -38,6 +38,8 @@
     "block_moving_into_walls": "true",
     "first_sprite_index": "1",
     "display_name": "Alien Defender",
+    "instructions": "Project Idea: Make a defender game in Play Lab!",
+    "markdown_instructions": "**Project Idea**: Make a defender game in Play Lab!",
     "contained_level_names": null
   },
   "published": true,
