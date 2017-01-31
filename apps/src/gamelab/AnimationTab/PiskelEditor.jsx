@@ -70,8 +70,8 @@ const PiskelEditor = React.createClass({
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
       this.loadSelectedAnimation_(newProps);
     }
-    if (newProps.pendingAnimationAddition
-      && newProps.selectedAnimation === newProps.pendingAnimationAddition.key) {
+    if (newProps.pendingAnimationAddition &&
+        newProps.selectedAnimation === newProps.pendingAnimationAddition.key) {
       this.addPendingAnimationAddition(newProps.pendingAnimationAddition);
     }
   },
@@ -88,11 +88,10 @@ const PiskelEditor = React.createClass({
       this.isLoadingAnimation_ = false;
       this.props.removePendingAnimationAddition();
     } else if (animationProps.dataURI) {
-      this.piskel.loadAdditionalFrames(
+      this.piskel.appendFrames(
         animationProps.dataURI,
         animationProps.props.frameSize.x,
         animationProps.props.frameSize.y,
-        animationProps.props.frameDelay,
         () => {
           this.isLoadingAnimation_ = false;
           this.props.removePendingAnimationAddition();

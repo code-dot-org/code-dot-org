@@ -14,7 +14,7 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
-/* global console, dashboard */
+import {projectChanged} from '../code-studio/initApp/project';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -59,7 +59,7 @@ export default combineReducers({
   pendingAnimationAddition
 });
 
-// pendingAnimationAddition is used for temporary storing additional
+// pendingAnimationAddition is used for temporarily storing additional
 // frames before they get added to the animation in Piskel.
 // pendingAnimationAddition gets added to animation in PiskelEditor.jsx
 function pendingAnimationAddition(state, action) {
@@ -331,13 +331,13 @@ export function addBlankAnimation() {
       }
     });
     dispatch(selectAnimation(key));
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
-export function addBlankAnimationAddition() {
+export function appendBlankFrame() {
   return (dispatch, getState) => {
-    var selectedAnimationKey = getState().animationTab.selectedAnimation;
+    const selectedAnimationKey = getState().animationTab.selectedAnimation;
     dispatch({
       type: SET_PENDING_ANIMATION_ADDITION,
       key: selectedAnimationKey,
@@ -345,7 +345,7 @@ export function addBlankAnimationAddition() {
         blankFrame: true
       }
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -368,7 +368,7 @@ export function addAnimation(key, props) {
     }));
     let name = generateAnimationName(props.name, getState().animationList.propsByKey);
     dispatch(setAnimationName(key, name));
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -376,12 +376,12 @@ export function addAnimation(key, props) {
  * Append an animation to the project (at the end of the list of frames).
  * @param {!SerializedAnimation} props
  */
-export function addCustomAnimationAddition(props) {
+export function appendCustomFrames(props) {
   return (dispatch, getState) => {
-    var selectedAnimationKey = getState().animationTab.selectedAnimation;
+    const selectedAnimationKey = getState().animationTab.selectedAnimation;
     dispatch(setPendingAnimationAddition(selectedAnimationKey, props));
     dispatch(loadAnimationAdditionFromSource(selectedAnimationKey, props));
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -402,7 +402,7 @@ export function addLibraryAnimation(props) {
     }));
     let name = generateAnimationName(props.name, getState().animationList.propsByKey);
     dispatch(setAnimationName(key, name));
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -423,7 +423,7 @@ export function setPendingAnimationAddition(key, props) {
 
 /**
  * After an animation addition is added, remove it as pending.
- * @returns {{type: string}}
+ * @returns {function}
  */
 export function removePendingAnimationAddition() {
   return dispatch => {
@@ -437,12 +437,12 @@ export function removePendingAnimationAddition() {
  * Add a library animation as additional frames to the current animation.
  * @param {!SerializedAnimation} props
  */
-export function addLibraryAnimationAddition(props) {
+export function appendLibraryFrames(props) {
   return (dispatch, getState) => {
-    var selectedAnimationKey = getState().animationTab.selectedAnimation;
+    const selectedAnimationKey = getState().animationTab.selectedAnimation;
     dispatch(setPendingAnimationAddition(selectedAnimationKey, props));
     dispatch(loadAnimationAdditionFromSource(selectedAnimationKey, props));
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -474,7 +474,7 @@ export function cloneAnimation(key) {
       })
     });
     dispatch(selectAnimation(newAnimationKey));
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -491,7 +491,7 @@ export function setAnimationName(key, name) {
       key,
       name
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -508,7 +508,7 @@ export function setAnimationFrameDelay(key, frameDelay) {
       key,
       frameDelay
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -525,7 +525,7 @@ export function setAnimationLooping(key, looping) {
       key,
       looping
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -541,7 +541,7 @@ export function editAnimation(key, props) {
       key,
       props
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -558,7 +558,7 @@ export function deleteAnimation(key) {
     dispatch(selectAnimation(orderedKeys[keyToSelect] || null));
 
     dispatch({type: DELETE_ANIMATION, key});
-    dashboard.project.projectChanged();
+    projectChanged();
     animationsApi.ajax('DELETE', key + '.png', () => {}, function error(xhr) {
       dispatch(reportError(`Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`));
     });
