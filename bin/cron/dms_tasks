@@ -31,11 +31,7 @@ end
 # The main method, responsible for creating a DMS client, fetching the set of
 # replication tasks, and starting the replication tasks.
 def main
-  dms_client = Aws::DatabaseMigrationService::Client.new(
-    region: 'us-east-1',
-    access_key_id: CDO.aws_access_key,
-    secret_access_key: CDO.aws_secret_key
-  )
+  dms_client = Aws::DatabaseMigrationService::Client.new
 
   dms_client.describe_replication_tasks.replication_tasks.each do |replication_task|
     task_name = replication_task.replication_task_identifier
