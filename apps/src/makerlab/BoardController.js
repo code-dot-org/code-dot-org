@@ -12,6 +12,7 @@ import PlaygroundIO from 'playground-io';
 
 import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
+import TouchSensor from './TouchSensor';
 
 /** @const {string} */
 const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -105,7 +106,6 @@ export default class BoardController {
       Thermometer: five.Thermometer,
       Sensor: five.Sensor,
       Pin: five.Pin,
-      Touchpad: five.Touchpad,
       Accelerometer: five.Accelerometer,
       Animation: five.Animation,
       /**
@@ -114,7 +114,8 @@ export default class BoardController {
        * 2. A robot must obey orders given it by human beings except where such orders would conflict with the First Law.
        * 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
        */
-      Servo: five.Servo
+      Servo: five.Servo,
+      TouchSensor
     };
 
     Object.keys(componentConstructors).forEach(key => {
