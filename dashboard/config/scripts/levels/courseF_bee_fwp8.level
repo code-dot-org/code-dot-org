@@ -35,8 +35,8 @@
     "honey_goal": "0",
     "instructions_important": "false",
     "authored_hints": "[]",
-    "contained_level_names": null,
-    "instructions": "Use your new function to solve this spiral."
+    "instructions": "Use your new function to solve this spiral.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

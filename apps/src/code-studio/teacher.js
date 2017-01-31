@@ -167,7 +167,10 @@ function renderViewAsToggle(element) {
 function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <SectionSelector reloadOnChange={true}/>
+      <SectionSelector
+        reloadOnChange={true}
+        alwaysShow={true}
+      />
     </Provider>,
     element
   );

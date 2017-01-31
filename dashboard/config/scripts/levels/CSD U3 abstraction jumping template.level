@@ -36,6 +36,7 @@
       "bounceOff": null,
       "collide": null,
       "displace": null,
+      "bounciness": null,
       "setCollider": null,
       "rotationSpeed": null,
       "velocityX": null,
@@ -49,6 +50,12 @@
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
       "comment_Math": null,
       "ifBlock": null,
       "x": null,
@@ -90,10 +97,7 @@
     "all_animations_single_frame": "false",
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

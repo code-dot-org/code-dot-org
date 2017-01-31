@@ -8,6 +8,7 @@ class PegasusSites
     @pegasus_app = Rack::Builder.parse_file(config_ru).first
     @pegasus_hosts = [
       'code.org',
+      'codeprojects.org',
       'csedweek.org',
       'hourofcode.com',
     ].map{|i| canonical_hostname(i)}

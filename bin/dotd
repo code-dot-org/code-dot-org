@@ -165,10 +165,16 @@ should_i "DTP" do
     open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
   end
 
+  should_i "create a new release of the code-dot-org repository on github" do
+    wait_for "the production server to fetch the latest changes"
+    system "ssh -t gateway.code.org ssh -t production-daemon \"production/bin/create-release\""
+  end
+
   wait_for "DTP to finish"
 
   puts <<-EOS.unindent
 
+    * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
     * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
     * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
     * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).

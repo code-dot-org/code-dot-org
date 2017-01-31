@@ -916,6 +916,9 @@ en:
         description here: description here
         title: title
       Correlation vs Causation: {}
+      Cups and Beans Activity:
+        description here: description here
+        title: title
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
       Debugging Variables: {}
@@ -1732,6 +1735,9 @@ en:
       Prepare for your presentation:
         description here: description here
         title: title
+      Public Key Crypto Widget Instructions:
+        description here: description here
+        title: title
       Rating Websites: {}
       Recipe Page Example: {}
       Responding to User Input: {}
@@ -2456,6 +2462,25 @@ en:
       courseA_external_dojo:
         Coder Dojo Video: Coder Dojo Video
         Learn about persistence and frustration: Learn about persistence and frustration
+      courseA_external_stevie1:
+        Stevie and the Marbles Title Page: Stevie and the Marbles Title Page
+      courseA_external_stevie10: {}
+      courseA_external_stevie11: {}
+      courseA_external_stevie12: {}
+      courseA_external_stevie12a: {}
+      courseA_external_stevie13: {}
+      courseA_external_stevie14: {}
+      courseA_external_stevie15: {}
+      courseA_external_stevie16: {}
+      courseA_external_stevie2:
+        Page 1: Page 1
+      courseA_external_stevie3: {}
+      courseA_external_stevie4: {}
+      courseA_external_stevie5: {}
+      courseA_external_stevie6: {}
+      courseA_external_stevie7: {}
+      courseA_external_stevie8: {}
+      courseA_external_stevie9: {}
       courseB_external_MRF:
         description here: description here
         title: title
@@ -7962,6 +7987,7 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
+      CSD U3 Counters explaining counters contained: {}
       'CSP U4L04 Assessment 2 ':
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here

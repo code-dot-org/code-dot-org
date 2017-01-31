@@ -27,6 +27,7 @@
     "code_functions": {
       "fill": null,
       "noFill": null,
+      "background": null,
       "stroke": null,
       "noStroke": null,
       "arc": null,

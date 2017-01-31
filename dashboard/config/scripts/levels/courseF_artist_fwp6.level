@@ -34,8 +34,8 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"It's okay to run the program a few times to figure out how the function works with different parameters.\",\"hint_id\":\"courseF_artist_fwp6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/312241cbf268d52633e8d8acb4dee0be/courseF_artist_fwp6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to add any `move` or `turn` blocks to finish this code.\",\"hint_id\":\"courseF_artist_fwp6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68da021954a8d73e7494a8acc47fcbd4/courseF_artist_fwp6.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "ideal": "27"
+    "ideal": "27",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -380,7 +380,11 @@ class Script < ActiveRecord::Base
 
   # TODO(asher): Rename this method to k1?, removing the need to disable lint.
   def is_k1?  # rubocop:disable PredicateName
-    name == 'course1'
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSE1_NAME
+    ].include?(name)
   end
 
   def hide_solutions?

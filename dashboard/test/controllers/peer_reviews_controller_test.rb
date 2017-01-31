@@ -31,7 +31,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   test 'Users can access and update their own peer reviews' do
     @peer_review.update(reviewer: @user)
 
-    get :show, id: @peer_review.id
+    get :show, params: {id: @peer_review.id}
     assert :success
   end
 
@@ -39,7 +39,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     sign_out(@user)
     sign_in(@other_user)
 
-    get :show, id: @peer_review.id
+    get :show, params: {id: @peer_review.id}
     assert :forbidden
   end
 
@@ -48,7 +48,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     Plc::UserCourseEnrollment.create(user: @user, plc_course: @script.plc_course_unit.plc_course)
 
     assert_equal 0, PeerReview.where(reviewer: @user).size
-    get :pull_review, script_id: @script.name
+    get :pull_review, params: {script_id: @script.name}
     @peer_review.reload
     assert_equal @user.id, @peer_review.reviewer_id
     assert_redirected_to peer_review_path(@peer_review)
@@ -57,19 +57,25 @@ class PeerReviewsControllerTest < ActionController::TestCase
   test 'Pull review redirects if there are no reviews to assign' do
     PeerReview.update_all(reviewer_id: @user.id)
 
-    get :pull_review, script_id: @script.name
+    get :pull_review, params: {script_id: @script.name}
     assert_redirected_to script_path(@script)
   end
 
   test 'Submitting a review redirects to the script view' do
     @peer_review.update(reviewer_id: @user.id)
-    post :update, id: @peer_review.id, peer_review: {status: 'accepted', data: 'This is great'}
+    post :update, params: {
+      id: @peer_review.id,
+      peer_review: {status: 'accepted', data: 'This is great'}
+    }
     assert_redirected_to script_path(@script)
   end
 
   test 'Submitting a peer review with emojis strips out the emojis' do
     @peer_review.update(reviewer_id: @user.id)
-    post :update, id: @peer_review.id, peer_review: {status: 'accepted', data: panda_panda}
+    post :update, params: {
+      id: @peer_review.id,
+      peer_review: {status: 'accepted', data: panda_panda}
+    }
     @peer_review.reload
     assert_equal 'Panda', @peer_review.data
   end

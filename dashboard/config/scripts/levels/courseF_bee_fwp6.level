@@ -35,8 +35,8 @@
     "instructions_important": "false",
     "markdown_instructions": "You can make code shorter and more efficient when you combine functions with other programming elements.  \r\n<hr/>\r\nWhat blocks can you use with your function to build a short and sweet solution to this puzzle?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Which block automatically increments a variable that you could use as a parameter?\",\"hint_id\":\"courseF_bee_fwp6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ddf058fb76bd8674dfcf6268065b580d/courseF_bee_fwp6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a `for` loop to solve this puzzle.\",\"hint_id\":\"courseF_bee_fwp6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5d0f04364c0c0bf7ca742415c825f3c8/courseF_bee_fwp6.mp3\"}]",
-    "contained_level_names": null,
-    "instructions": "Build a short and sweet solution to this puzzle."
+    "instructions": "Build a short and sweet solution to this puzzle.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

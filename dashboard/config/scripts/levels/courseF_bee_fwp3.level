@@ -36,8 +36,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will run no matter which direction you're facing.\",\"hint_id\":\"courseF_bee_fwp3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/03e76450542ed7078c03955258ecdfa6/courseF_bee_fwp3.mp3\"}]",
     "instructions_important": "false",
     "markdown_instructions": "Time to put the function to the test! \r\n\r\nLet's see if it makes collecting these three rows of nectar any easier.",
-    "contained_level_names": null,
-    "instructions": "Let's see if the function makes collecting these three rows of nectar any easier."
+    "instructions": "Let's see if the function makes collecting these three rows of nectar any easier.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -35,8 +35,8 @@
     "honey_goal": "0",
     "instructions_important": "false",
     "authored_hints": "[]",
-    "contained_level_names": null,
-    "instructions": "Use your new function to solve this puzzle."
+    "instructions": "Use your new function to solve this puzzle.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
