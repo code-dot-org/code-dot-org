@@ -59,9 +59,10 @@ export default combineReducers({
   pendingFrames
 });
 
-// pendingFrames is used for temporarily storing additional
-// frames before they get added to the animation in Piskel.
-// pendingFrames gets added to animation in PiskelEditor.jsx
+/** pendingFrames is used for temporarily storing additional
+  * frames before they get added to the animation in Piskel.
+  * pendingFrames gets added to animation in PiskelEditor.jsx
+  */
 function pendingFrames(state, action) {
   state = state || {};
   switch (action.type) {
@@ -303,21 +304,6 @@ export function setInitialAnimationList(serializedAnimationList) {
   };
 }
 
-/**
- * TODO caleybrock User selects new frames to add to the animation. Set these as pending
- * before loading them into Piskel.
- * @param {!AnimationKey} key
- * @param {AnimationProps} props
- * @returns {{type: string, key: AnimationKey, props: AnimationProps}}
- */
-export function addAnimationAction(key, props) {
-  return {
-    type: ADD_ANIMATION,
-    key,
-    props
-  };
-}
-
 export function addBlankAnimation() {
   const key = createUuid();
   return (dispatch, getState) => {
@@ -346,6 +332,10 @@ export function addBlankAnimation() {
   };
 }
 
+/**
+ * Add a blank frame to pending frames for the selected animation.
+ * @returns {function}
+ */
 export function appendBlankFrame() {
   return (dispatch, getState) => {
     const selectedAnimationKey = getState().animationTab.selectedAnimation;
@@ -377,6 +367,7 @@ export function addAnimation(key, props) {
 /**
  * Append an animation to the project (at the end of the list of frames).
  * @param {!SerializedAnimation} props
+ * @returns {function}
  */
 export function appendCustomFrames(props) {
   return (dispatch, getState) => {
@@ -405,21 +396,6 @@ export function addLibraryAnimation(props) {
 }
 
 /**
- * User selects new frames to add to the animation. Set these as pending
- * before loading them into Piskel.
- * @param {!AnimationKey} key
- * @param {AnimationProps} props
- * @returns {{type: string, key: AnimationKey, props: AnimationProps}}
- */
-export function setPendingFramesAction(key, props) {
-  return {
-    type: SET_PENDING_FRAMES,
-    key,
-    props
-  };
-}
-
-/**
  * After pending frames are added, remove them as pending.
  * @returns {function}
  */
@@ -430,8 +406,10 @@ export function removePendingFrames() {
 }
 
 /**
- * Add a library animation as additional frames to the current animation.
+ * Add a library animation as additional frames to the current animation
+ * by adding them to pendingFrames.
  * @param {!SerializedAnimation} props
+ * @returns {function}
  */
 export function appendLibraryFrames(props) {
   return (dispatch, getState) => {
@@ -604,12 +582,49 @@ function loadAnimationFromSource(key, callback) {
   };
 }
 
+/**
+ * Action creator for adding an animation.
+ * @param {!AnimationKey} key
+ * @param {AnimationProps} props
+ * @returns {{type: ActionType, key: AnimationKey, props: AnimationProps}}
+ */
+export function addAnimationAction(key, props) {
+  return {
+    type: ADD_ANIMATION,
+    key,
+    props
+  };
+}
+
+/**
+ * Action creator for when a user selects new frames to add to the animation.
+ * Set these as pending before loading them into Piskel.
+ * @param {!AnimationKey} key
+ * @param {AnimationProps} props
+ * @returns {{type: ActionType, key: AnimationKey, props: AnimationProps}}
+ */
+function setPendingFramesAction(key, props) {
+  return {
+    type: SET_PENDING_FRAMES,
+    key,
+    props
+  };
+}
+
+/**
+ * Action creator for removing pending frames.
+ * @returns {{type: ActionType}}
+ */
 function removePendingFramesAction() {
   return {
     type: REMOVE_PENDING_FRAMES
   };
 }
 
+/**
+ * Action creator for when pending frames are done loading from the source url.
+ * @returns {{type: ActionType, key: AnimationKey, props: AnimationProps}}
+ */
 function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
   return {
     type: DONE_LOADING_PENDING_FRAMES_FROM_SOURCE,
@@ -618,6 +633,10 @@ function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
   };
 }
 
+/**
+ * Action creator for when pending frames will start loading from the source url.
+ * @returns {{type: ActionType}}
+ */
 function startLoadingPendingFramesFromSourceAction() {
   return {
     type: START_LOADING_PENDING_FRAMES_FROM_SOURCE
