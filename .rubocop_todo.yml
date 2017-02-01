@@ -255,13 +255,6 @@ Style/SpaceBeforeBlockBraces:
 Style/SpaceBeforeComment:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: require_no_space, require_space
-Style/SpaceInLambdaLiteral:
-  Enabled: false
-
 # Offense count: 982
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
