@@ -12,7 +12,8 @@ import reducer, {
   setIsHocScript,
   setIsSummaryView,
   SignInState,
-  levelsByLesson
+  levelsByLesson,
+  progressionsFromLevels
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -473,6 +474,109 @@ describe('progressReduxTest', () => {
         ]
       ];
       assert.deepEqual(expected, levelsByLesson(state));
+    });
+  });
+
+  describe('progressionsFromLevels', () => {
+    it('returns a single progression when no levels have names', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+        }
+      ];
+
+      assert.deepEqual(progressionsFromLevels(levels), [{
+        name: undefined,
+        start: 0,
+        levels: levels
+      }]);
+    });
+
+    it('puts adjacent levels with the same name in the same progression', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          name: 'Progression 1'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          name: 'Progression 1'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          name: 'Progression 2'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 2);
+      assert.deepEqual(progressions[0], {
+        name: 'Progression 1',
+        start: 0,
+        levels: levels.slice(0, 2)
+      });
+    });
+
+    it('puts non-adjacent levels with the same name in different progressions', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          name: 'One'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          name: 'Two'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          name: 'One'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 3);
+      assert.equal(progressions[0].levels.length, 1);
+      assert.equal(progressions[1].levels.length, 1);
+      assert.equal(progressions[2].levels.length, 1);
+    });
+
+    it('sets the right start value for progressions that arent the first one', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          name: 'Progression 1'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          name: 'Progression 1'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          name: 'Progression 2'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 2);
+      assert.equal(progressions[1].start, 2);
     });
   });
 });
