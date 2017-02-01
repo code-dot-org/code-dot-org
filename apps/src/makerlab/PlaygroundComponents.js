@@ -79,7 +79,7 @@ export function initializeCircuitPlaygroundComponents() {
     addSensorFeatures(five.Board.fmap, s);
   });
 
-  return Object.assign({}, touchPads, {
+  return {
     colorLeds: colorLeds,
 
     led: new five.Led(13),
@@ -102,7 +102,9 @@ export function initializeCircuitPlaygroundComponents() {
     buttonL: buttonL,
 
     buttonR: buttonR,
-  });
+
+    ...touchPads
+  };
 }
 
 /**
