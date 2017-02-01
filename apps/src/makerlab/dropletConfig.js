@@ -38,11 +38,36 @@ const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
  * @returns {Array.<string>}
  */
 const boardEventDropdownGenerator = function (editor) {
-  const firstParam = getFirstParam('onBoardEvent', this.parent, editor);
-  const wrapInQuotes = e => `"${e}"`;
-  // TODO: Handle variable first parameters, that don't match our map.
-  return COMPONENT_EVENTS[firstParam].map(wrapInQuotes);
+  return getBoardEventDropdownForParam(
+    getFirstParam('onBoardEvent', this.parent, editor));
 };
+
+/**
+ * Generate an array of dropdown strings appropriate for the second
+ * parameter to onBoardEvent, given a particular first parameter to
+ * onBoardEvent.
+ * @param {string} firstParam - first parameter to onBoardEvent
+ */
+export function getBoardEventDropdownForParam(firstParam) {
+  const wrapInQuotes = e => `"${e}"`;
+  const idealOptions = COMPONENT_EVENTS[firstParam];
+  if (Array.isArray(idealOptions)) {
+    return _.chain(idealOptions)
+      .sort()
+      .sortedUniq()
+      .map(wrapInQuotes)
+      .value();
+  }
+
+  // If we can't find an ideal subset, use all possible
+  return _.chain(COMPONENT_EVENTS)
+    .values()
+    .flatten()
+    .sort()
+    .sortedUniq()
+    .map(wrapInQuotes)
+    .value();
+}
 
 export const blocks = [
   /**
