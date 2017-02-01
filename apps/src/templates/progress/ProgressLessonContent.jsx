@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
-import { lessonType } from './progressTypes';
+import { levelType } from './progressTypes';
 
 const styles = {
   summary: {
@@ -37,10 +37,10 @@ const groupLevels = levels => {
   return groups;
 };
 
-const ProgressStageContent = React.createClass({
+const ProgressLessonContent = React.createClass({
   propTypes: {
     description: PropTypes.string,
-    levels: PropTypes.arrayOf(lessonType).isRequired
+    levels: PropTypes.arrayOf(levelType).isRequired
   },
 
   render() {
@@ -64,4 +64,4 @@ const ProgressStageContent = React.createClass({
   }
 });
 
-export default ProgressStageContent;
+export default ProgressLessonContent;

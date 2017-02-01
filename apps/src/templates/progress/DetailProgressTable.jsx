@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ProgressStage from './ProgressStage';
+import ProgressLesson from './ProgressLesson';
 import i18n from '@cdo/locale';
 
 /**
@@ -9,7 +9,7 @@ import i18n from '@cdo/locale';
 const DetailProgressTable = React.createClass({
   propTypes: {
     lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    levelsByStage: PropTypes.arrayOf(
+    levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(
         PropTypes.shape({
           status: PropTypes.string.isRequired,
@@ -20,14 +20,14 @@ const DetailProgressTable = React.createClass({
   },
 
   render() {
-    const { lessonNames, levelsByStage } = this.props;
+    const { lessonNames, levelsByLesson } = this.props;
     return (
       <div>
         {lessonNames.map((lessonName, index) => (
-          <ProgressStage
+          <ProgressLesson
             key={index}
             title={i18n.lessonN({lessonNumber: index + 1}) + ": " + lessonName}
-            levels={levelsByStage[index]}
+            levels={levelsByLesson[index]}
           />
         ))}
     </div>

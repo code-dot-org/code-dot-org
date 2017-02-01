@@ -1,22 +1,20 @@
 import React from 'react';
-import ProgressStageContent from './ProgressStageContent';
+import ProgressLesson from './ProgressLesson';
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressStageContent', module)
+    .storiesOf('ProgressLesson', module)
     .addStoryTable([
       {
-        name:'progress stage content',
+        name:'progress lesson',
         story: () => (
-          <ProgressStageContent
-            description={"At some point we reach a physical limit of how fast " +
-              "we can send bits and if we want to send a large amount of " +
-              "information faster, we have to finds ways to represent the same " +
-              "information with fewer bits - we must compress the data."}
+          <ProgressLesson
+            title="Lesson 1: Bytes and File Sizes"
             levels={[
               {
                 status: 'not_tried',
                 url: '/step1/level1',
+                name: 'First progression'
               },
               {
                 status: 'perfect',
@@ -37,6 +35,11 @@ export default storybook => {
               {
                 status: 'not_tried',
                 url: '/step2/level5',
+              },
+              {
+                status: 'not_tried',
+                url: '/step3/level1',
+                name: 'Last progression'
               },
             ]}
           />

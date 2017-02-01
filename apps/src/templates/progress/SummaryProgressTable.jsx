@@ -55,7 +55,7 @@ const styles = {
 const SummaryProgressTable = React.createClass({
   propTypes: {
     lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    levelsByStage: PropTypes.arrayOf(
+    levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(
         PropTypes.shape({
           status: PropTypes.string.isRequired,
@@ -66,7 +66,7 @@ const SummaryProgressTable = React.createClass({
   },
 
   render() {
-    const { lessonNames, levelsByStage } = this.props;
+    const { lessonNames, levelsByLesson } = this.props;
     return (
       <table style={styles.table}>
         <thead>
@@ -94,7 +94,7 @@ const SummaryProgressTable = React.createClass({
                 <td style={styles.col2}>
                   <ProgressBubbleSet
                     start={1}
-                    levels={levelsByStage[index]}
+                    levels={levelsByLesson[index]}
                   />
                 </td>
               </tr>

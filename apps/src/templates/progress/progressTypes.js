@@ -1,6 +1,6 @@
 import { PropTypes } from 'react';
 
-export const lessonType = (
+export const levelType = (
   PropTypes.shape({
     status: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,

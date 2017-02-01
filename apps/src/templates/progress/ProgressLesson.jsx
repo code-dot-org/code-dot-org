@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
-import ProgressStageContent from './ProgressStageContent';
+import ProgressLessonContent from './ProgressLessonContent';
 import FontAwesome from '../FontAwesome';
 import color from "@cdo/apps/util/color";
-import { lessonType } from './progressTypes';
+import { levelType } from './progressTypes';
 
 const styles = {
   main: {
@@ -21,12 +21,11 @@ const styles = {
   }
 };
 
-// TODO - everywhere stage = lesson, step = lesson
-const ProgressStage = React.createClass({
+const ProgressLesson = React.createClass({
   propTypes: {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    levels: PropTypes.arrayOf(lessonType).isRequired
+    levels: PropTypes.arrayOf(levelType).isRequired
   },
 
   getInitialState() {
@@ -51,7 +50,7 @@ const ProgressStage = React.createClass({
           <span style={styles.headingText}>{title}</span>
         </div>
         {!this.state.collapsed &&
-          <ProgressStageContent
+          <ProgressLessonContent
             description={description}
             levels={levels}
           />
@@ -61,4 +60,4 @@ const ProgressStage = React.createClass({
   }
 });
 
-export default ProgressStage;
+export default ProgressLesson;

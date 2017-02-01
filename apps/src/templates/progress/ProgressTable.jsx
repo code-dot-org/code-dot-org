@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { lessonNames, levelsByStage } from '@cdo/apps/code-studio/progressRedux';
+import { lessonNames, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 
@@ -8,7 +8,7 @@ const ProgressTable = React.createClass({
   propTypes: {
     isSummaryView: PropTypes.bool.isRequired,
     lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    levelsByStage: PropTypes.arrayOf(
+    levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(
         PropTypes.shape({
           level: PropTypes.string,
@@ -36,14 +36,14 @@ const ProgressTable = React.createClass({
       return (
         <SummaryProgressTable
           lessonNames={this.props.lessonNames}
-          levelsByStage={this.props.levelsByStage}
+          levelsByLesson={this.props.levelsByLesson}
         />
       );
     } else {
       return (
         <DetailProgressTable
           lessonNames={this.props.lessonNames}
-          levelsByStage={this.props.levelsByStage}
+          levelsByLesson={this.props.levelsByLesson}
         />
       );
     }
@@ -53,5 +53,5 @@ const ProgressTable = React.createClass({
 export default connect(state => ({
   isSummaryView: state.progress.isSummaryView,
   lessonNames: lessonNames(state.progress),
-  levelsByStage: levelsByStage(state.progress),
+  levelsByLesson: levelsByLesson(state.progress),
 }))(ProgressTable);

@@ -230,7 +230,7 @@ export const hasLockableStages = state => state.stages.some(stage => stage.locka
 export const lessonNames = state => state.stages.map(stage => stage.name);
 
 // TODO - account for locked levels
-export const levelsByStage = state => (
+export const levelsByLesson = state => (
   state.stages.map(stage => (
     stage.levels.map(level => ({
       status: level.status,
