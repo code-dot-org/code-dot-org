@@ -68,7 +68,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
           survey: {
             kind: 'NetPromoterScore2017',
             nps_value: 1,
-            nps_comment: 'testing😂'
+            nps_comment: "testing #{panda_panda}"
           }
         },
         format: :json
@@ -77,8 +77,8 @@ class SurveyResultsControllerTest < ActionController::TestCase
     assert survey_result
     assert_equal 'NetPromoterScore2017', survey_result.kind
     assert_equal '1', survey_result.nps_value
-    # The smiley face is a four byte sequence, so there are four replacement
+    # The panda is a four byte sequence, so there are four replacement
     # characters.
-    assert_equal 'testing����', survey_result.nps_comment
+    assert_equal "testing Panda\u{fffd}\u{fffd}\u{fffd}\u{fffd}", survey_result.nps_comment
   end
 end
