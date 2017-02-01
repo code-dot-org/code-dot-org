@@ -57,7 +57,7 @@ export default class TouchSensor extends EventEmitter {
       this.touchpadsController_.removeListener('up', this.upHandler);
       this.upHandler = null;
     }
-    this.removeAllListeners();
+
     // Immediately restart because this is an 'always-on' component.
     this.start();
   }
