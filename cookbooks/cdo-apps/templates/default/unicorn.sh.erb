@@ -9,7 +9,7 @@ set -e
 # since nginx and unicorn accept the same signals
 
 # Feel free to change any of the following variables for your app:
-TIMEOUT=${TIMEOUT-120}
+TIMEOUT=${TIMEOUT-180}
 APP_ROOT=<%= @app_root %>
 PID=<%= @pid_file %>
 CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec unicorn -D -c <%= @src_file %> -E <%= @env %>"

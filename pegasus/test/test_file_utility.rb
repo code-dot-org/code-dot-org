@@ -9,6 +9,9 @@ class FileUtilityTest < Minitest::Test
       'test/also_does_not_exist',
     ])
 
-    assert_equal nil, FileUtility.find_first_existing('test/does_not_exist', 'test/also_does_not_exist')
+    assert_nil FileUtility.find_first_existing(
+      'test/does_not_exist',
+      'test/also_does_not_exist'
+    )
   end
 end

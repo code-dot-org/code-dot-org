@@ -107,6 +107,10 @@
           <title name="SPRITE">1</title>
           <title name="EMOTION">1</title>
         </block>
+        <block type="studio_ifActorHasEmotionElse">
+          <title name="SPRITE">1</title>
+          <title name="EMOTION">1</title>
+        </block>
         <block type="controls_if" inline="false">
           <value name="IF0">
             <block type="logic_compare" inline="true">
@@ -191,19 +195,24 @@
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
           <next>
-            <block type="studio_ifActorHasEmotion">
+            <block type="studio_ifActorHasEmotionElse">
               <title name="SPRITE">1</title>
               <title name="EMOTION">1</title>
               <statement name="DO">
                 <block type="studio_changeScore">
                   <title name="VALUE">1</title>
+                  <next>
+                    <block type="studio_changeScore">
+                      <title name="VALUE">1</title>
+                    </block>
+                  </next>
                 </block>
               </statement>
-              <next>
+              <statement name="ELSE">
                 <block type="studio_changeScore">
                   <title name="VALUE">1</title>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

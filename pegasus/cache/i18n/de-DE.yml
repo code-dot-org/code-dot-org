@@ -40,8 +40,8 @@
   og_description: In jeder Schule sollten Schüler die Gelegenheit erhalten, Informatik
     zu lernen.
   csedweek_og_title: Die Stunde des Codes ist hier
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
+  csedweek_og_description: 4.-10. Dezember 2017. Informatik ist eine grundlegende
+    Fähigkeit, die jede Schülerin und jeder Schüler kennen muss.
   hoc2014_heading: Machen Sie mit bei der <a href="http://hourofcode.com">Hour of
     Code</a><br/>8. - 14. Dezember 2014<br/>
   hoc2014_students: Schüler
@@ -120,8 +120,8 @@
   congrats_guest_speaker_cta: Finde einen Gastsprecher
   congrats_third_party_title: Wende deine neuen Fähigkeiten mit diesen Apps und Webseiten
     an
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_kto8: 1. bis 8. Klasse
+  third_party_gradelevel_kto2: 1. - 2. Klasse
   third_party_gradelevel_2to8: 2. bis 8. Klasse
   third_party_gradelevel_4to12: 4. bis 12. Klasse
   third_party_gradelevel_5to12: 5. bis 12. Klasse
@@ -486,25 +486,25 @@
   minecraft_adventurer: Minecraft Adventurer
   minecraft_tutorials: Minecraft Hour of Code Tutorials
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer_description: Baue dein eigene Minecraft-Version. Erschaffe deine
+    eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
   minecraft_designer_button: Start
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
   minecraft_adventurer_button: Start
   minecraft_no_internet: Don't have Internet?
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: Minecraft Hour of Code
-  sports_page_title: Sports Hour of Code
+  sports_page_title: Hour of Code - Sport
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
-  sports_title: Code your own sports game
+  sports_title: Programmiere Dein eigenes Sport-Spiel
   sports_watch_video: Video anschauen
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  sports_featured_athletes: See featured athletes
+  sports_basketball_title: Baue ein Basketball-Spiel
+  sports_all_sports_title: Kombiniere Elemente unterschiedlicher Sportarten
+  sports_featured_athletes: Siehe hier, welche Athleten dabei sind
   sports_athletes_title: Featured athletes
   sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
     Golden State Warriors
@@ -780,7 +780,7 @@
   dashboard_navigation_add_students: Schüler hinzufügen
   dashboard_navigation_manage_students: Schüler verwalten
   dashboard_navigation_lesson_plans_resources: Unterrichtspläne und Material
-  dashboard_navigation_view_stats: Statistik ansehen
+  dashboard_navigation_view_stats: Statistiken
   dashboard_navigation_section: 'Lerngruppe: %{section_name}'
   dashboard_navigation_student: 'Schüler: %{student_name}'
   dashboard_progress_not_started: Nicht gestartet
@@ -791,10 +791,9 @@
   dashboard_progress_furthest_level_attempted: Höchste Ebene versucht
   dashboard_progress_submitted: eingereicht
   dashboard_progress_view: 'Fortschritt ansehen:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
+  dashboard_progress_student_in_script: Fortschritt von %{student_name} in %{script_name}
   dashboard_progress_pair_programming: Paarprogrammierung
-  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_view: 'Textantworten anzeigen in:'
   dashboard_responses_none: Keine Antworten
   dashboard_sections_new_section: Neue Lerngruppe
   dashboard_sections_jumbotron_instruction: Erstellen Sie neue Lerngruppen und fügen
@@ -804,7 +803,7 @@
   dashboard_sections_table_secret: Login-Typ
   dashboard_sections_table_grade: Note
   dashboard_sections_table_course: Kurs
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Weiterführende Extras dieser Stufe
   dashboard_sections_table_students: Schüler
   dashboard_sections_table_code: Lerngruppen-Code
   dashboard_sections_name: Lerngruppen-Name
@@ -828,10 +827,11 @@
     jeden Lehrer. Ihre Schüler werden einer neuen Abteilung hinzugefügt und verlassen
     ihre alte.
   dashboard_sections_move_to_section: 'In Abteilung verschieben:'
-  dashboard_sections_enter_code: 'Enter section code:'
+  dashboard_sections_enter_code: 'Code für den gewünschten Abschnitt eingeben:'
   dashboard_sections_code_placeholder: 6-Buchstaben-Passwort (ABCDEF)
   dashboard_sections_other_section: Andere Abteilung
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_both_sections: Möchten Sie, dass die Schüler in beiden Abschnitten
+    sind?
   dashboard_sections_yes_both: Ja, Ich möchte Schüler in die gegenwärtige- und in
     die neue Abteilung kopieren
   dashboard_sections_no_move: Nein, ich möchte Schüler nur in die neue Abteilung verschieben.
@@ -994,7 +994,7 @@
   dashboard_announce_learn_more_button: Mehr erfahren
   dashboard_announce_try_now_button: Probiere es jetzt aus
   dashboard_announce_host_an_hour_button: Veranstalten Sie eine Stunde
-  dashboard_announce_watch_video_button: Schaue ein video
+  dashboard_announce_watch_video_button: Video anschauen
   dashboard_announce_petition: Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder
     Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an
     der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten
@@ -1002,7 +1002,7 @@
     ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung
     von "K-12 computer science education" zu erbitten.
   dashboard_announce_petition_button: Fügen Sie Ihren Namen ein
-  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond_button: Noch weiter gehen
   dashboard_announce_all: Informieren Sie sich über neue Funktionen und Aktualisierungen
     in unserem Lehrkräfte-Blog. <a href='%{teacher_blog_url}' target='_blank'>Vergangene
     Meldungen anzeigen.</a>
@@ -1011,27 +1011,27 @@
     Ihre Hilfe, mehr Studierende als je zuvor zu erreichen. <a href='%{signup_url}'
     target='_blank'> Registrieren Sie Ihre Hour-of-Code- Veranstaltung</a> und sagen
     Sie Ihren Lehrerkollegen, dass jeder Informatik lehren kann.
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
+  dashboard_announce_mc_launch: Eines unserer beliebtesten Tutorials hat jetzt eine
+    Fortsetzung! Im neuen "Minecraft Hour of Code"-Designer können Schülerinnen und
+    Schüler die Regeln der Minecraft Welt nachbauen. Sie können eine Regeln in Minecraft
+    erstellen, und diese Programme mit Freunden teile oder auf ihren Handys spielen.
+    Versuchen Sie das mit Ihrer Klasse als Erlebnis in der 'Hour of Code'.
   dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
     progress in this course from December 3 - 11 due to the level of traffic our site
     receives for the Hour of Code during this time.  You can still view student progress
     from before December 3.  We will go back to saving progress as usual after this
     week.
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
+  dashboard_announce_how_code_studio: Sie brauchen keine Vorkenntnisse, um in Klasse
+    mit Code.org Informatik zu unterrichten. Code.org bietet Unterrichtspläne, professionelle
+    Lernprogramme und tonnenweise gute Tools für alle Schulstufen an &mdash; alles
+    was Sie benötigen, alles unentgeltlich. Frage Sie sich, wo Sie beginnen sollen?
+    <a href='%{video_download_url}'> Dieses Video</a> herunterladen!
+  dashboard_announce_go_beyond: Lassen Sie Hour of Code hinter sich und erkunden Sie
+    mit Ihren Schülern jede Woche Konzepte der Informatik. Code.org bietet Ihnen einen
+    Lehrplan, vorgefertigte Unterrichtsstunden, hoch qualitative und professionelle
+    Lernporgramme und jede Menge großartige Werkzeuge für jede Klassenstufe - und
+    es ist kostenlos. :) Um Informatik in Ihren Klassenzimmer zu lehren, brauchen
+    Sie keine Erfahrung. Finden Sie den nächsten richtigen Schritt für Ihr Klassenzimmer
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melden Sie sich an, um an der Informatikwoche teilzunehmen
   host_an_hour: Veranstalte eine Hour of Code
@@ -1182,10 +1182,11 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: Vollständiger Test - 50 Fragen
   cspexam1-mWU7ilDYM9_name: Test Teil 1 - 25 Fragen
   cspexam2-AKwgAh1ac5_name: Test Teil 2 - 25 Fragen
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_gradelevel: 9. - 12. Klasse
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
@@ -1206,15 +1207,15 @@
   text-compression_name: Text Compression
   math_category_name: Mathematik
   hoc_category_name: Stunde des Codes
-  csf_category_name: CS Fundamentals
+  csf_category_name: Einführung in Informatik und Programmieren
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: Praxistest Grundlagen der Informatik
   research_studies_category_name: Research Studies
   applab_name: App-Labor
-  basketball_name: Make a basketball game
-  sports_name: Code your own sports game
+  basketball_name: Baue ein Basketball-Spiel
+  sports_name: Programmiere Dein eigenes Sport-Spiel
   applab_gradelevel: Ab 13 Jahren
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it

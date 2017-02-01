@@ -44,12 +44,6 @@ const path = require('path');
 const fs = require('fs');
 
 const SILENCED = [
-  'applab-api',
-  'tutorialExplorer',
-  'makerlab',
-  'pd',
-  'publicKeyCryptography',
-  'brambleHost',
   'applab',
   'applab-api',
   'bounce',
@@ -71,7 +65,7 @@ const SILENCED = [
   'levelbuilder_markdown',
   'levelbuilder_studio',
   'levels/contract_match',
-  'levels/dashboardDialogHelper',
+  'levels/submissionHelper',
   'levels/external',
   'levels/levelGroup',
   'levels/multi',
@@ -84,7 +78,6 @@ const SILENCED = [
   'netsim',
   'pd',
   'plc',
-  'publicKeyCryptography',
   'publicKeyCryptography',
   'raceInterstitial',
   'schoolInfo',

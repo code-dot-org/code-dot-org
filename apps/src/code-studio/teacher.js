@@ -167,7 +167,10 @@ function renderViewAsToggle(element) {
 function renderTeacherPanelSections(element) {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <SectionSelector reloadOnChange={true}/>
+      <SectionSelector
+        reloadOnChange={true}
+        alwaysShow={true}
+      />
     </Provider>,
     element
   );
@@ -191,7 +194,7 @@ function renderContentToggle() {
 
   const { scriptName } = store.getState().progress;
 
-  store.dispatch(getHiddenStages(scriptName));
+  store.dispatch(getHiddenStages(scriptName, false));
 
   ReactDOM.render(
     <Provider store={getStore()}>

@@ -1,0 +1,12 @@
+name 'CSD - Getters and Setters'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Getters and Setters
+
+Used setScreen before.  setScreen takes one piece of information - the screen to set to.
+
+setting different parts of a program is a common part of a program that is often called to a getter
+
+
+In addition to getting information sometimes we want to change the information to. We use setters to set the information.
+MARKDOWN

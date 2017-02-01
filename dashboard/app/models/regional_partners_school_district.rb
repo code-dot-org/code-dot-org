@@ -22,6 +22,8 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
   CSV_HEADERS = {
     school_district_id: 'LEAID',
     regional_partner_name: 'RegionalPartner',
+    course: 'course',
+    workshop_days: 'workshop_days'
   }.freeze
 
   CSV_IMPORT_OPTIONS = { col_sep: "\t", headers: true}
@@ -39,9 +41,10 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
       regional_partner = RegionalPartner.find_by(name: regional_partner_name)
       raise "regional partner name not found: #{regional_partner_name}" unless regional_partner
       school_district = SchoolDistrict.find(school_district_id)
+      course = row[CSV_HEADERS[:course]]
+      workshop_days = row[CSV_HEADERS[:workshop_days]]
 
-      # create the new association
-      school_district.regional_partner = regional_partner
+      RegionalPartnersSchoolDistrict.create(school_district: school_district, regional_partner: regional_partner, course: course, workshop_days: workshop_days)
     end
   end
 end

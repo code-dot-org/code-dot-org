@@ -31,11 +31,11 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Is something not quite right?  Use the \\\"Step\\\" button to see where things go wrong.\",\r\n  \"hint_id\": \"gradek_artist_loops2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Is something not quite right?  Use the \\\"Step\\\" button to see where things go wrong.\",\"hint_id\":\"gradek_artist_loops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/87c636b919cadecae5193a563642c214/gradek_artist_loops2.mp3\"}]",
     "markdown_instructions": "Our artist is trying to draw a line five times, but can't get it right. Can you help?\r\n\r\n![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]"
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

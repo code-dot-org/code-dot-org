@@ -352,7 +352,7 @@
   homepage_slot_text_frozen: Frozen (Ledeno kraljestvo) z Ano in Elso
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Vsi naši vodiči
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: Tečaj 4
   homepage_slot_text_shop: trgovina
   homepage_slot_text_flappy: Program za Plahutača (Flappyja)
   homepage_action_text_hoc: Ura kode za vsakega učenca.
@@ -1148,7 +1148,7 @@
   course1_name: Tečaj 1
   course2_name: Tečaj 2
   course3_name: Tečaj 3
-  course4_name: Course 4
+  course4_name: Tečaj 4
   accelerated_name: Pospešeni Tečaj
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1165,6 +1165,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

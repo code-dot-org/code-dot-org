@@ -11,22 +11,27 @@ require 'json'
 require 'yaml'
 require 'tempfile'
 
-require_relative 'utils'
+require_relative 'i18n_script_utils'
 
 def pull_in_files_for_translation
   localize_level_content
   run_bash_script "bin/i18n-codeorg/in.sh"
 end
 
-def copy_to_yml(label, data)
+def copy_to_yml(label, data, allow_full_length=false)
+  args = allow_full_length ? {line_width: -1} : {}
   File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    f.write(({ "en" => { "data" => { label => data }}}).to_yaml)
+    f.write(({ "en" => { "data" => { label => data }}}).to_yaml(**args))
     File.write(f, File.read(f))
   end
 end
 
 def reformat_quotes
-  filenames = ["instructions", "markdown_instructions"]
+  filenames = [
+    "instructions",
+    "markdown_instructions",
+    'failure_message_overrides',
+  ]
 
   filenames.each do |filename|
     temp_file = Tempfile.new("temp#{filename}.yml")
@@ -110,8 +115,8 @@ def localize_level_content
   copy_to_yml("instructions", level_instructions)
   copy_to_yml("markdown_instructions", level_markdown_instructions)
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
-  copy_to_yml("authored_hints", level_authored_hints)
-  copy_to_yml("callouts", level_callouts)
+  copy_to_yml("authored_hints", level_authored_hints, true)
+  copy_to_yml("callouts", level_callouts, true)
   reformat_quotes
 end
 

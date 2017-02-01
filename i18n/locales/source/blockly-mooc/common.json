@@ -198,6 +198,7 @@
   "keyValuePairLink": "Key/value pairs",
   "learnMore": "Learn more",
   "less": "Less",
+  "lessonName": "Lesson Name",
   "levelIncompleteError": "Keep coding! Something's not quite right yet.",
   "listVariable": "list",
   "loading": "Loading...",
@@ -246,6 +247,7 @@
   "positionTopOutRight": "to the top outside right position",
   "positionTopRight": "to the top right position",
   "predictionInstructions": "Make a prediction before you run the program.",
+  "projectTypeAlgebra": "Algebra",
   "projectTypeApplab": "App Lab",
   "projectTypeArtist": "Artist",
   "projectTypeGamelab": "Game Lab",
@@ -333,5 +335,6 @@
   "when": "when",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "yourProgress": "Your Progress"
 }

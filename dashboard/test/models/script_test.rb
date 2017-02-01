@@ -327,7 +327,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'level_concept_difficulty uses preloading' do
-    level = Script.find_by_name('20-hour').script_levels.third.level
+    level = Script.find_by_name('course4').script_levels.second.level
     expected = level.level_concept_difficulty
 
     populate_cache_and_disconnect_db
@@ -344,15 +344,15 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'banner image' do
-    assert_equal nil, Script.find_by_name('flappy').banner_image
+    assert_nil Script.find_by_name('flappy').banner_image
     assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
     assert_equal 'banner_course2.jpg', Script.find_by_name('course2').banner_image
   end
 
   test 'logo image' do
     # this is configured in scripts.en.yml
-    assert_equal nil, Script.find_by_name('flappy').logo_image
-    assert_equal nil, Script.find_by_name('ECSPD').logo_image
+    assert_nil Script.find_by_name('flappy').logo_image
+    assert_nil Script.find_by_name('ECSPD').logo_image
     assert_equal 'nextech_logo.png', Script.find_by_name('ECSPD-NexTech').logo_image
   end
 
@@ -393,7 +393,7 @@ class ScriptTest < ActiveSupport::TestCase
     summary = script.summarize
 
     assert_equal 1, summary[:stages].count
-    assert_equal nil, summary[:peerReviewStage]
+    assert_nil summary[:peerReviewStage]
     assert_equal 0, summary[:peerReviewsRequired]
   end
 

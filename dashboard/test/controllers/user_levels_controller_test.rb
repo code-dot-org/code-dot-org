@@ -10,7 +10,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in teacher
 
-    post :update, id: user_level.id, user_level: {submitted: false}
+    post :update, params: {id: user_level.id, user_level: {submitted: false}}
     assert_response :success
 
     user_level.reload
@@ -26,7 +26,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in student
 
-    post :update, id: user_level.id, user_level: {submitted: false}
+    post :update, params: {id: user_level.id, user_level: {submitted: false}}
     assert_response :success
 
     user_level.reload
@@ -42,7 +42,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in teacher
 
-    post :update, id: user_level.id, user_level: {submitted: false}
+    post :update, params: {id: user_level.id, user_level: {submitted: false}}
     assert_response :forbidden
 
     user_level.reload
@@ -59,7 +59,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in teacher
 
-    post :destroy, id: user_level.id
+    post :destroy, params: {id: user_level.id}
     assert_response :success
 
     assert UserLevel.find_by(id: user_level.id).nil?
@@ -73,7 +73,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in student
 
-    post :destroy, id: user_level.id
+    post :destroy, params: {id: user_level.id}
     assert_response 403
 
     assert !UserLevel.find_by(id: user_level.id).nil?
@@ -87,7 +87,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     sign_in teacher
 
-    post :destroy, id: user_level.id
+    post :destroy, params: {id: user_level.id}
     assert_response 403
 
     assert !UserLevel.find_by(id: user_level.id).nil?

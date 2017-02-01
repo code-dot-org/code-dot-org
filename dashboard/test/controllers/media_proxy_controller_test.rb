@@ -15,7 +15,7 @@ class MediaProxyControllerTest < ActionController::TestCase
 
     content_types.each do |content_type|
       stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: content_type})
-      get :get, u: IMAGE_URI
+      get :get, params: {u: IMAGE_URI}
       assert_response :success
       assert_equal content_type, response.content_type
       cache_control = response['Cache-Control']
@@ -33,7 +33,7 @@ class MediaProxyControllerTest < ActionController::TestCase
       {body: 'Redirect', status: 302, headers: {location: IMAGE_URI}},
       {body: IMAGE_DATA, headers: {content_type: 'image/jpeg'}}
     )
-    get :get, u: IMAGE_URI
+    get :get, params: {u: IMAGE_URI}
     assert_response :success
     assert_equal IMAGE_DATA, response.body
   end
@@ -41,13 +41,13 @@ class MediaProxyControllerTest < ActionController::TestCase
   test "should fail if invalid URL" do
     stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'image/jpeg'})
     bad_uri = '/foo'
-    get :get, u: bad_uri
+    get :get, params: {u: bad_uri}
     assert_response 400
   end
 
   test "should fail if missing URL" do
     stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'image/jpeg'})
-    get :get, foo: 'bar'
+    get :get, params: {foo: 'bar'}
     assert_response 400
   end
 
@@ -60,19 +60,19 @@ class MediaProxyControllerTest < ActionController::TestCase
       response,
       response,
       response)
-    get :get, u: IMAGE_URI
+    get :get, params: {u: IMAGE_URI}
     assert_response 500
   end
 
   test "should fail on unauthorized content types" do
     stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'text/html'})
-    get :get, u: IMAGE_URI
+    get :get, params: {u: IMAGE_URI}
     assert_response 400
   end
 
   test "should pass through server errors" do
     stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'image/jpeg'}, status: 503)
-    get :get, u: IMAGE_URI
+    get :get, params: {u: IMAGE_URI}
     assert_response 503
   end
 end

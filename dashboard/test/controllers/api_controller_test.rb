@@ -58,14 +58,14 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with default script" do
-    get :section_text_responses, section_id: @section.id
+    get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
     assert_equal Script.twenty_hour_script, assigns(:script)
   end
 
   test "should get text_responses for section with section script" do
-    get :section_text_responses, section_id: @flappy_section.id
+    get :section_text_responses, params: {section_id: @flappy_section.id}
     assert_response :success
 
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
@@ -74,21 +74,24 @@ class ApiControllerTest < ActionController::TestCase
   test "should get text_responses for section with specific script" do
     script = Script.find_by_name('algebra')
 
-    get :section_text_responses, section_id: @section.id, script_id: script.id
+    get :section_text_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
   end
 
   test "should get assessments for section with default script" do
-    get :section_assessments, section_id: @section.id
+    get :section_assessments, params: {section_id: @section.id}
     assert_response :success
 
     assert_equal Script.twenty_hour_script, assigns(:script)
   end
 
   test "should get assessments for section with section script" do
-    get :section_assessments, section_id: @flappy_section.id
+    get :section_assessments, params: {section_id: @flappy_section.id}
     assert_response :success
 
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
@@ -97,7 +100,10 @@ class ApiControllerTest < ActionController::TestCase
   test "should get assessments for section with specific script" do
     script = Script.find_by_name('algebra')
 
-    get :section_assessments, section_id: @section.id, script_id: script.id
+    get :section_assessments, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
@@ -141,7 +147,10 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: @student_2, level: level1, script: script,
       attempts: 1, level_source: level_source2
 
-    get :section_text_responses, section_id: @section.id, script_id: script.id
+    get :section_text_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
@@ -204,7 +213,10 @@ class ApiControllerTest < ActionController::TestCase
 
     create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
 
-    get :section_assessments, section_id: @section.id, script_id: script.id
+    get :section_assessments, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
 
     assert_response :success
     assert_equal script, assigns(:script)
@@ -297,7 +309,10 @@ class ApiControllerTest < ActionController::TestCase
         level_source: create(:level_source, level: sub_level4, data: "-1")
     end
 
-    get :section_surveys, section_id: @section.id, script_id: script.id
+    get :section_surveys, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
@@ -404,7 +419,10 @@ class ApiControllerTest < ActionController::TestCase
         level_source: create(:level_source, level: sub_level4, data: "-1")
     end
 
-    get :section_surveys, section_id: @section.id, script_id: script.id
+    get :section_surveys, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
@@ -504,12 +522,18 @@ class ApiControllerTest < ActionController::TestCase
     end
 
     # We can retrieve this with the survey API.
-    get :section_surveys, section_id: @section.id, script_id: script.id
+    get :section_surveys, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
     assert_equal 1, JSON.parse(@response.body).length
 
     # But importantly, we get an empty result with the assessment API.
-    get :section_assessments, section_id: @section.id, script_id: script.id
+    get :section_assessments, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
     assert_equal [], JSON.parse(@response.body)
   end
@@ -551,7 +575,10 @@ class ApiControllerTest < ActionController::TestCase
     end
 
     # We can retrieve this with the survey API, but it will be empty.
-    get :section_surveys, section_id: @section.id, script_id: script.id
+    get :section_surveys, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
     assert_equal 0, JSON.parse(@response.body).length
   end
@@ -559,7 +586,10 @@ class ApiControllerTest < ActionController::TestCase
   test "should get text_responses for section with script without text response" do
     script = Script.find_by_name('course1')
 
-    get :section_text_responses, section_id: @section.id, script_id: script.id
+    get :section_text_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
@@ -568,7 +598,10 @@ class ApiControllerTest < ActionController::TestCase
   test "should get assessments for section with script without assessment" do
     script = Script.find_by_name('course1')
 
-    get :section_assessments, section_id: @section.id, script_id: script.id
+    get :section_assessments, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
@@ -577,7 +610,10 @@ class ApiControllerTest < ActionController::TestCase
   test "should get lock state when no user_level" do
     script, level, stage = create_script_with_lockable_stage
 
-    get :lockable_state, section_id: @section.id, script_id: script.id
+    get :lockable_state, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
     body = JSON.parse(response.body)
 
@@ -631,7 +667,7 @@ class ApiControllerTest < ActionController::TestCase
     # student_5 got autolocked while viewing answers
     create :user_level, user: @student_5, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: 2.days.ago
 
-    get :lockable_state, section_id: @section.id, script_id: script.id
+    get :lockable_state, params: {section_id: @section.id, script_id: script.id}
     assert_response :success
     body = JSON.parse(response.body)
 
@@ -696,14 +732,14 @@ class ApiControllerTest < ActionController::TestCase
     user_level_data2 = {user_id: @student_2.id, level_id: level.id, script_id: script.id}
 
     # unlock a user_level that does not yet exist
-    assert_equal nil, UserLevel.find_by(user_level_data)
+    assert_nil UserLevel.find_by(user_level_data)
     updates = [{
       user_level_data: user_level_data,
       locked: false,
       readonly_answers: false
     }]
 
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
     assert_equal false, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
@@ -711,14 +747,14 @@ class ApiControllerTest < ActionController::TestCase
 
     # view_anwers for a user_level that does not yet exist
     user_level.delete
-    assert_equal nil, UserLevel.find_by(user_level_data)
+    assert_nil UserLevel.find_by(user_level_data)
     updates = [{
       user_level_data: user_level_data,
       locked: false,
       readonly_answers: true
     }]
 
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
     assert_equal true, user_level.submitted?
     assert_equal true, user_level.readonly_answers?
@@ -726,8 +762,8 @@ class ApiControllerTest < ActionController::TestCase
 
     # multiple updates at once
     user_level.delete
-    assert_equal nil, UserLevel.find_by(user_level_data)
-    assert_equal nil, UserLevel.find_by(user_level_data2)
+    assert_nil UserLevel.find_by(user_level_data)
+    assert_nil UserLevel.find_by(user_level_data2)
     updates = [{
       user_level_data: user_level_data,
       locked: false,
@@ -737,7 +773,7 @@ class ApiControllerTest < ActionController::TestCase
       locked: false,
       readonly_answers: false
     }]
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
     assert_equal false, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
@@ -763,11 +799,11 @@ class ApiControllerTest < ActionController::TestCase
       readonly_answers: false
     }]
 
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
     assert_equal true, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
-    assert_equal nil, user_level.unlocked_at
+    assert_nil user_level.unlocked_at
 
     # update from editable to readonly_answers
     user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
@@ -777,7 +813,7 @@ class ApiControllerTest < ActionController::TestCase
       readonly_answers: true
     }]
 
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
     assert_equal true, user_level.submitted?
     assert_equal true, user_level.readonly_answers?
@@ -791,11 +827,11 @@ class ApiControllerTest < ActionController::TestCase
       readonly_answers: false
     }]
 
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
     assert_equal true, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
-    assert_equal nil, user_level.unlocked_at
+    assert_nil user_level.unlocked_at
 
     # update from readonly_answers to editable
     user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
@@ -805,7 +841,7 @@ class ApiControllerTest < ActionController::TestCase
       readonly_answers: false
     }]
 
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
     assert_equal false, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
@@ -828,7 +864,7 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       readonly_answers: false
     }]
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     assert_response 400
 
     updates = [{
@@ -840,7 +876,7 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       readonly_answers: false
     }]
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     assert_response 400
 
     updates = [{
@@ -852,7 +888,7 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       readonly_answers: false
     }]
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     assert_response 400
 
     # can't set to lockable and readonly_answers
@@ -861,7 +897,7 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       readonly_answers: true
     }]
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     assert_response 400
 
     # can't update students that dont belong to teacher
@@ -875,7 +911,7 @@ class ApiControllerTest < ActionController::TestCase
       locked: true,
       readonly_answers: false
     }]
-    post :update_lockable_state, updates: updates
+    post :update_lockable_state, params: {updates: updates}
     assert_response 403
   end
 
@@ -887,7 +923,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in user
 
     # Test user progress.
-    get :user_progress, script_name: script.name
+    get :user_progress, params: {script_name: script.name}
     assert_response :success
 
     body = JSON.parse(response.body)
@@ -922,7 +958,11 @@ class ApiControllerTest < ActionController::TestCase
       level: level, level_source: level_source
     create :activity, user: user, level: level, level_source: level_source
 
-    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    get :user_progress_for_stage, params: {
+      script_name: script.name,
+      stage_position: 1,
+      level_position: 1
+    }
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal false, body['disableSocialShare']
@@ -952,7 +992,11 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user
     sign_out user
 
-    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    get :user_progress_for_stage, params: {
+      script_name: script.name,
+      stage_position: 1,
+      level_position: 1
+    }
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal({}, body)
@@ -974,7 +1018,11 @@ class ApiControllerTest < ActionController::TestCase
     young_student = create :young_student
     sign_in young_student
 
-    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    get :user_progress_for_stage, params: {
+      script_name: script.name,
+      stage_position: 1,
+      level_position: 1
+    }
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['disableSocialShare']
@@ -987,7 +1035,11 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user, total_lines: 2
     sign_in user
 
-    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    get :user_progress_for_stage, params: {
+      script_name: script.name,
+      stage_position: 1,
+      level_position: 1
+    }
     assert_response :success
   end
 
@@ -1002,13 +1054,18 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
     create :activity, user: @student_1, level: level1a, level_source: level_source
 
-    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1, level: level1a.id
+    get :user_progress_for_stage, params: {
+      script_name: script.name,
+      stage_position: 1,
+      level_position: 1,
+      level: level1a.id
+    }
     body = JSON.parse(response.body)
     assert_equal('level source', body['lastAttempt']['source'])
   end
 
   test "should get progress for section with section script" do
-    get :section_progress, section_id: @flappy_section.id
+    get :section_progress, params: {section_id: @flappy_section.id}
     assert_response :success
 
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
@@ -1017,35 +1074,50 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with specific script" do
     script = Script.find_by_name('algebra')
 
-    get :section_progress, section_id: @section.id, script_id: script.id
+    get :section_progress, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
   end
 
   test "should get progress for section with section script when blank script is specified" do
-    get :section_progress, section_id: @flappy_section.id, script_id: ''
+    get :section_progress, params: {
+      section_id: @flappy_section.id,
+      script_id: ''
+    }
     assert_response :success
 
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
   end
 
   test "should get progress for student" do
-    get :student_progress, student_id: @student_1.id, section_id: @section.id
+    get :student_progress, params: {
+      student_id: @student_1.id,
+      section_id: @section.id
+    }
     assert_response :success
 
     assert_equal Script.twenty_hour_script, assigns(:script)
   end
 
   test "should get progress for student in section" do
-    get :student_progress, student_id: @student_1.id, section_id: @section.id
+    get :student_progress, params: {
+      student_id: @student_1.id,
+      section_id: @section.id
+    }
     assert_response :success
 
     assert_equal Script.twenty_hour_script, assigns(:script)
   end
 
   test "should get progress for student in section with section script" do
-    get :student_progress, student_id: @student_flappy_1.id, section_id: @flappy_section.id
+    get :student_progress, params: {
+      student_id: @student_flappy_1.id,
+      section_id: @flappy_section.id
+    }
     assert_response :success
 
     assert_equal Script.get_from_cache(Script::FLAPPY_NAME), assigns(:script)
@@ -1053,7 +1125,11 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get progress for student in section with specified script" do
     script = Script.find_by_name('algebra')
-    get :student_progress, student_id: @student_flappy_1.id, section_id: @flappy_section.id, script_id: script.id
+    get :student_progress, params: {
+      student_id: @student_flappy_1.id,
+      section_id: @flappy_section.id,
+      script_id: script.id
+    }
     assert_response :success
 
     assert_equal script, assigns(:script)
@@ -1211,7 +1287,10 @@ class ApiControllerTest < ActionController::TestCase
     sign_out @teacher
     sign_in @teacher_other
 
-    get :section_assessments, section_id: @section.id, script_id: script.id
+    get :section_assessments, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :forbidden
   end
 
@@ -1221,7 +1300,10 @@ class ApiControllerTest < ActionController::TestCase
     sign_out @teacher
     sign_in @student_1
 
-    get :section_assessments, section_id: @section.id, script_id: script.id
+    get :section_assessments, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :forbidden
   end
 
@@ -1230,7 +1312,10 @@ class ApiControllerTest < ActionController::TestCase
 
     sign_out @teacher
 
-    get :section_assessments, section_id: @section.id, script_id: script.id
+    get :section_assessments, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :redirect
   end
 
@@ -1240,7 +1325,10 @@ class ApiControllerTest < ActionController::TestCase
     sign_out @teacher
     sign_in @teacher_other
 
-    get :section_surveys, section_id: @section.id, script_id: script.id
+    get :section_surveys, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :forbidden
   end
 
@@ -1250,7 +1338,10 @@ class ApiControllerTest < ActionController::TestCase
     sign_out @teacher
     sign_in @student_1
 
-    get :section_surveys, section_id: @section.id, script_id: script.id
+    get :section_surveys, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :forbidden
   end
 
@@ -1259,7 +1350,10 @@ class ApiControllerTest < ActionController::TestCase
 
     sign_out @teacher
 
-    get :section_surveys, section_id: @section.id, script_id: script.id
+    get :section_surveys, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
     assert_response :redirect
   end
 

@@ -6,5 +6,5 @@ Feature: Public Key Cryptography - Continue Button
   Scenario: Clicking the continue button
     Given I am on the 1st Public Key Cryptography test level
     When I press the last button with text "Continue"
-    And I wait to see ".panel-alice"
+    And I wait until "#public-key-cryptography-mount" contains text "Pick a character"
     Then check that I am on "http://studio.code.org/s/allthethings/stage/31/puzzle/2"

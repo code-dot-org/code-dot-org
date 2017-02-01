@@ -37,7 +37,10 @@
     "all_animations_single_frame": "false",
     "project_template_level_name": "CSD U3 AnimationsMulti defender template",
     "start_in_animation_tab": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "7stZ2q6Cy8Eeqt7yTX1AGPqcftE6LwZg7Rx5VN+sUXcTjF5A7Lk8as9YsHJn\nrrTz\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "Need to add gif of what it should look like.",

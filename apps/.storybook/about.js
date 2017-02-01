@@ -146,11 +146,11 @@ storybook
         function instead of <code>storiesOf()</code>. The <code>deprecatedStoriesOf()</code>
         function takes an optional third argument, which an object with additional information
         about the deprecation. For example:
-        <pre>{`storybook.deprecatedStoriesOf('SomeComponent', module, {
+      </p>
+      <pre>{`storybook.deprecatedStoriesOf('SomeComponent', module, {
   reason: 'SomeComponent was really old and crufty, and someone built the new hotness.'
   replacement: "NewHotness"
 })`}</pre>
-      </p>
       <p>
         This will automatically create a new deprecated story for
         the component that contains a link to the stories for "NewHotness"

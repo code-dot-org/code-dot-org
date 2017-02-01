@@ -8,14 +8,14 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
   end
 
   test 'requires "hints" in params' do
-    post :create, {}, format: :json
+    post :create, params: {}, format: :json
     assert_response :bad_request
   end
 
   test 'can create multiple with a single post' do
     initial_count = AuthoredHintViewRequest.count
 
-    post :create, {
+    post :create, params: {
       hints: [{
         scriptId: @script.id,
         levelId: @level.id,
@@ -44,7 +44,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
 
     sign_in driver
     @controller.send :pairings=, [navigator]
-    post :create, {
+    post :create, params: {
       hints: [{
         scriptId: @script.id,
         levelId: @level.id,

@@ -64,9 +64,9 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
-    "contained_level_names": null,
     "encrypted_examples": "98TQoiB/FYSBd/uGDj7Hs/K/HzNUfLw3sZ2rBaeQjTesO/XWhwderA+B1xcu\nFDP7\n",
-    "show_debug_watch": "false"
+    "show_debug_watch": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

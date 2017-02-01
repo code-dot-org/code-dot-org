@@ -75,7 +75,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
     assert_equal 11, user.age
 
     # LTI does not typically send gender
-    assert_equal nil, user.gender
+    assert_nil user.gender
   end
 
   test "LTI sign-in with new user_id can also create new Teacher account" do

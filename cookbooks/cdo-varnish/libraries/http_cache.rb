@@ -83,6 +83,7 @@ class HttpCache
               /teacher-dashboard*
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*
+              /pd-program-registration*
               /ops-dashboard*
               /poste*
             ),

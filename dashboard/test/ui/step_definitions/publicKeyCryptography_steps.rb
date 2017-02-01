@@ -33,9 +33,8 @@ When /^I run the modulo clock$/ do
   @browser.find_element(:css, '.go-button').click
 end
 
-When /^I (?:hide|show) Eve's panel$/ do
-  @browser.find_element(:xpath, "//div[text()='Eve']").click
-  sleep 0.5
+When /^I open view "(Alice|Eve|Bob|All)"$/ do |view|
+  @browser.find_element(:xpath, "//button[text()[contains(.,'#{view}')]]").click
 end
 
 When /^I click the start over button$/ do

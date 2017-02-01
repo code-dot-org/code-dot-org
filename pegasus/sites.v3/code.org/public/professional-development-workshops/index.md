@@ -25,10 +25,6 @@ We welcome elementary school teachers to sign up for a free, high-quality profes
 <img src="/images/coursebook.png" width="175"/>
 <img src="/images/k5certificate.png" width="175"/> 
 
-## Can't find a workshop near you?
-
-[Sign up](https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform) to hear when workshops near you are announced.
-
 ## Become a CS Fundamentals Facilitator for your district or region
 Learn more about our CS Fundamentals Facilitator program [here](/educate/professional-learning/cs-fundamentals-facilitator)
 

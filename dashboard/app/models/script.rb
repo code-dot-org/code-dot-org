@@ -380,7 +380,11 @@ class Script < ActiveRecord::Base
 
   # TODO(asher): Rename this method to k1?, removing the need to disable lint.
   def is_k1?  # rubocop:disable PredicateName
-    name == 'course1'
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSE1_NAME
+    ].include?(name)
   end
 
   def hide_solutions?
@@ -410,7 +414,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include?(name)
+    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include?(name)
   end
 
   def has_banner?

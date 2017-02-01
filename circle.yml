@@ -1,6 +1,7 @@
 general:
   artifacts:
     - apps/yarn-error.log
+    - apps/coverage
     - dashboard/test/ui
     - dashboard/log
     - pegasus/log
