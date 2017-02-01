@@ -12,7 +12,8 @@ const styles = {
     marginTop: 12
   },
   stepButton: {
-    // TODO - might run into problems with i18n
+    // TODO - fixed width isn't great for i18n. likely want to come up with some
+    // way of having this be dynamic, but the same size across all instances
     width: 110,
     textAlign: 'center',
     borderWidth: 1,
