@@ -35,8 +35,8 @@
     "markdown_instructions": "Our artist is trying to draw a line five times, but can't get it right. Can you help?\r\n\r\n![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]",
-    "contained_level_names": null,
-    "ideal": "6"
+    "ideal": "6",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

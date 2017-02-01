@@ -37,7 +37,10 @@
     "all_animations_single_frame": "false",
     "project_template_level_name": "CSD U3 AnimationsMulti defender template",
     "start_in_animation_tab": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "lSkSI2heIBkuveq6aO/EkBGZyJQXK0smuzkKtSJTSGx1ajuJyuxE07EzQ1mE\nTJbO\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",

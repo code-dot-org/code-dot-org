@@ -28,7 +28,7 @@
     "fast_get_nectar_animation": "false",
     "instructions": "What should you add to this code to get all of the gold?",
     "ideal": "10",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If you can't figure out what comes next, try running the code to see where Laurel ends up.\",\r\n  \"hint_id\": \"gradek_adventurer_loops5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out what comes next, try running the code to see where Laurel ends up.\",\"hint_id\":\"gradek_adventurer_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1bb7d7789a8e9688ee73baa43eeced90/gradek_adventurer_loops5.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "13",
     "contained_level_names": null

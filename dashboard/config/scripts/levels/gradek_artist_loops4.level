@@ -31,7 +31,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Try using what you've learned about repeat blocks to complete this puzzle!\",\r\n  \"hint_id\": \"artistLoopsK3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using what you've learned about repeat blocks to complete this puzzle!\",\"hint_id\":\"artistLoopsK3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2ebddc54609f8a57d507960c0d1f6621/gradek_artist_loops4.mp3\"}]",
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nDraw a line seven steps long. This will become our horizon.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif\" width=\"300\"/>\r\n",
     "ideal": "3",
     "instructions_important": "false",
