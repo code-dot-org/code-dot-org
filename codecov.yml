@@ -2,5 +2,5 @@ comment: off
 coverage:
   range: 50..80
 fixes:
-  - "lib/::dashboard/lib/"
-  - "app/::dashboard/app/"
+  - "/lib/::/dashboard/lib/"
+  - "/app/::/dashboard/app/"
