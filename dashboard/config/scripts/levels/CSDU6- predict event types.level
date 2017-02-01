@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-01-31T22:01:55.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "instructions_important": "false",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "# Predict: Event Type\r\n\r\nSo far you have really only used the click event type with buttons. There are many different event types you can use in App Lab. Look at the code and predict when each of the messages will print to the console log."
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
