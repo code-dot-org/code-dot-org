@@ -19,13 +19,19 @@ class CharsetTest < ActionDispatch::IntegrationTest
 
   test "attempting to log in as user with utf8mb4 chars does not hit the db" do
     # make sure all the classes are loaded
-    post '/users/sign_in', login: 'not a user', password: 'not a password'
+    post '/users/sign_in', params: {
+      login: 'not a user',
+      password: 'not a password'
+    }
     assert_response :success
     assert_select 'div.alert', 'Invalid email or password.'
 
     no_database
 
-    post '/users/sign_in', login: panda_panda, password: 'not a password'
+    post '/users/sign_in', params: {
+      login: panda_panda,
+      password: 'not a password'
+    }
     assert_response :success
     assert_select 'div.alert', 'Invalid email or password.'
   end

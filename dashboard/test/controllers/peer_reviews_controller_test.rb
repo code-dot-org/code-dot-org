@@ -61,6 +61,23 @@ class PeerReviewsControllerTest < ActionController::TestCase
     assert_redirected_to script_path(@script)
   end
 
+  test 'Submitting a review redirects to the index if user is a plc reviewer' do
+    plc_reviewer = create :teacher
+    plc_reviewer.permission = 'plc_reviewer'
+
+    sign_out(@user)
+    sign_in(plc_reviewer)
+
+    @peer_review.update(reviewer_id: plc_reviewer.id)
+    post :update, params: {
+        id: @peer_review.id,
+        peer_review: {status: 'accepted', data: 'This is great'}
+    }
+    @peer_review.reload
+    assert @peer_review.from_instructor
+    assert_redirected_to peer_reviews_path
+  end
+
   test 'Submitting a review redirects to the script view' do
     @peer_review.update(reviewer_id: @user.id)
     post :update, params: {

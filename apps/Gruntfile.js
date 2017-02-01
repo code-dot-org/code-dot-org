@@ -324,11 +324,25 @@ module.exports = function (grunt) {
       },
     },
     unit: {
+      coverageReporter: {
+        dir: 'coverage/unit',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/unit-tests.js'], watched: false},
       ],
     },
     integration: {
+      coverageReporter: {
+        dir: 'coverage/integration',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/integration-tests.js'], watched: false},
       ],
@@ -339,6 +353,13 @@ module.exports = function (grunt) {
       ],
     },
     entry: {
+      coverageReporter: {
+        dir: 'coverage/entry',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/entry-tests.js'], watched: false},
       ],
@@ -396,6 +417,8 @@ module.exports = function (grunt) {
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
+
+    'projects/section_projects': './src/sites/studio/pages/projects/section_projects.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 

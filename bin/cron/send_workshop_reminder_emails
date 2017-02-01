@@ -4,13 +4,19 @@
 # signups.
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'active_support'
+require 'active_support/core_ext/object/blank'
+require src_dir 'database'
 require 'cdo/poste'
 
-# @param date_as_string [String] a date string in the form MM/DD/YY.
+# @param date_as_string [String] a date string in the form MM/DD/YY or MM/DD/YYYY.
 # @returns [Date | nil] a Date for date_as_string or nil if it does not parse
 #   to a date.
 def parse_workshop_date(date_as_string)
-  Date.strptime(date_as_string, '%m/%d/%y')
+  return nil if date_as_string.blank?
+  year_part = date_as_string.split('/')[2]
+  format_string = year_part.length == 2 ? '%m/%d/%y' : '%m/%d/%Y'
+  Date.strptime(date_as_string, format_string)
 rescue ArgumentError
   nil
 end

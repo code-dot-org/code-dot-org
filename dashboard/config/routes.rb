@@ -111,6 +111,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
+      get 'section/:section_id', action: 'section_projects'
       get '/angular', to: 'projects#angular'
     end
   end
@@ -327,12 +328,6 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  namespace :api do
-    namespace :v1 do
-      concerns :api_v1_pd_routes
-    end
-  end
-
   namespace :pd do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
@@ -388,6 +383,8 @@ Dashboard::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      concerns :api_v1_pd_routes
+
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: { format: 'json' }
@@ -395,6 +392,10 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
+
+      namespace :projects do
+        get 'section/:section_id', to: 'section_projects#index', defaults: { format: 'json' }
+      end
     end
   end
 
