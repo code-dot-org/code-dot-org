@@ -59,4 +59,26 @@ class SurveyResultsControllerTest < ActionController::TestCase
     assert_equal 'Diversity2016', survey_result.kind
     assert survey_result['properties']['nonwhitelisted'].nil?
   end
+
+  test 'fixes non-utf-8 characters' do
+    sign_in @teacher
+    assert_creates(SurveyResult) do
+      post :create,
+        params: {
+          survey: {
+            kind: 'NetPromoterScore2017',
+            nps_value: 1,
+            nps_comment: "testing #{panda_panda}"
+          }
+        },
+        format: :json
+    end
+    survey_result = SurveyResult.find_by_user_id(@teacher.id)
+    assert survey_result
+    assert_equal 'NetPromoterScore2017', survey_result.kind
+    assert_equal '1', survey_result.nps_value
+    # The panda is a four byte sequence, so there are four replacement
+    # characters.
+    assert_equal "testing Panda\u{fffd}\u{fffd}\u{fffd}\u{fffd}", survey_result.nps_comment
+  end
 end
