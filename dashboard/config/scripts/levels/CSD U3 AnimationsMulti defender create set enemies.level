@@ -39,7 +39,8 @@
     "start_in_animation_tab": "false",
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "n/sTjawsX+6jh4uMUKIfAoGoUDlFvV03OwjqSYdF+A5WP1LoSk6wmhAcAzeh\nji8o\n"
   },
   "published": true,
   "notes": "Need to add gif of what it should look like.",
