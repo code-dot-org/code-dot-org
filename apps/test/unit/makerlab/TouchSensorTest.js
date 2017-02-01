@@ -56,6 +56,33 @@ describe('TouchSensor', function () {
     fakeTouchPad.hold(0);
     expect(spy).not.to.have.been.called;
   });
+
+  it('removes listeners on stop() (e.g. reset)', function () {
+    // Add an initial listener
+    touchSensor.on(DOWN, spy);
+    expect(spy).not.to.have.been.called;
+
+    // Check that the listener is working
+    fakeTouchPad.down(0);
+    expect(spy).to.have.been.calledOnce;
+
+
+    // Reset component
+    touchSensor.stop();
+
+    // Listener was removed in reset, so event is not forwarded.
+    spy.reset();
+    fakeTouchPad.down(0);
+    expect(spy).not.to.have.been.called;
+
+    // Now we can add a new listener
+    touchSensor.on(DOWN, spy);
+    expect(spy).not.to.have.been.called;
+
+    // And the new listener gets called
+    fakeTouchPad.down(0);
+    expect(spy).to.have.been.calledOnce;
+  });
 });
 
 class FakeTouchPad extends EventEmitter {
