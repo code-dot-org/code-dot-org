@@ -404,3 +404,8 @@ export const SOUND_THROTTLE_TIME = 200;
 // How many milliseconds to throttle between whenTouchObstacle events when
 // blockMovingIntoWalls is enabled.
 export const TOUCH_OBSTACLE_THROTTLE_TIME = 330;
+
+export const BEHAVIOR_CHASE = 'chase';
+export const BEHAVIOR_FLEE = 'flee';
+export const BEHAVIOR_STOP = 'none';
+export const BEHAVIOR_WANDER = 'roam';

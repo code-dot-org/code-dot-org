@@ -326,6 +326,10 @@ module.exports = function (grunt) {
     unit: {
       coverageReporter: {
         dir: 'coverage/unit',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
       },
       files: [
         {src: ['test/unit-tests.js'], watched: false},
@@ -334,6 +338,10 @@ module.exports = function (grunt) {
     integration: {
       coverageReporter: {
         dir: 'coverage/integration',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
       },
       files: [
         {src: ['test/integration-tests.js'], watched: false},
@@ -345,6 +353,13 @@ module.exports = function (grunt) {
       ],
     },
     entry: {
+      coverageReporter: {
+        dir: 'coverage/entry',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/entry-tests.js'], watched: false},
       ],
@@ -373,6 +388,7 @@ module.exports = function (grunt) {
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'levels/editors/_blockly':   './src/sites/studio/pages/levels/editors/_blockly.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
