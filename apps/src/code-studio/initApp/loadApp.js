@@ -127,6 +127,8 @@ export function setupApp(appOptions) {
         clientState.writeSourceForLevel(appOptions.scriptName, levelId,
             +new Date(), lastSavedProgram);
       }
+      // report.callback will already have the correct milestone post URL in
+      // the contained level case
       if (!appOptions.hasContainedLevels) {
         report.callback = appOptions.report.callback;
       }
