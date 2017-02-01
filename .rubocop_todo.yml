@@ -213,11 +213,6 @@ Style/MutableConstant:
 Style/Next:
   Enabled: false
 
-# Offense count: 8
-# Cop supports --auto-correct.
-Style/Proc:
-  Enabled: false
-
 # Offense count: 51
 # Cop supports --auto-correct.
 Style/RedundantParentheses:
