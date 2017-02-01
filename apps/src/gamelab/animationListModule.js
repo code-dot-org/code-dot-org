@@ -585,8 +585,8 @@ function loadAnimationFromSource(key, callback) {
 /**
  * Action creator for adding an animation.
  * @param {!AnimationKey} key
- * @param {AnimationProps} props
- * @returns {{type: ActionType, key: AnimationKey, props: AnimationProps}}
+ * @param {SerializedAnimation} props
+ * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
  */
 export function addAnimationAction(key, props) {
   return {
@@ -600,8 +600,8 @@ export function addAnimationAction(key, props) {
  * Action creator for when a user selects new frames to add to the animation.
  * Set these as pending before loading them into Piskel.
  * @param {!AnimationKey} key
- * @param {AnimationProps} props
- * @returns {{type: ActionType, key: AnimationKey, props: AnimationProps}}
+ * @param {SerializedAnimation} props
+ * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
  */
 function setPendingFramesAction(key, props) {
   return {
@@ -623,7 +623,7 @@ function removePendingFramesAction() {
 
 /**
  * Action creator for when pending frames are done loading from the source url.
- * @returns {{type: ActionType, key: AnimationKey, props: AnimationProps}}
+ * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
  */
 function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
   return {
@@ -647,6 +647,7 @@ function startLoadingPendingFramesFromSourceAction() {
  * Load the indicated animation from its source, whether that is S3 or the animation library.
  * From this function we'll need the dataURI and sourceSize to send to Piskel.
  * @param {!AnimationKey} key
+ * @param {SerializedAnimation} props
  * @param {function} [callback]
  */
 function loadPendingFramesFromSource(key, props, callback) {
