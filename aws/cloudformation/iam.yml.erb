@@ -60,12 +60,8 @@ Resources:
                 Action:
                   - 'dynamodb:*'
                 Resource:
-                  - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
-                    table/adhoc_tables
-                  ]]}
-                  - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
-                    table/adhoc_properties
-                  ]]}
+                  - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
+                  - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
   StandaloneRole:
     Type: AWS::IAM::Role
     Properties:
@@ -96,8 +92,8 @@ Resources:
           - Effect: Allow
             Action: ["dynamodb:*"]
             Resource:
-            - {"Fn::Join":[":",["arn:aws:dynamodb",{"Ref":"AWS::Region"},{"Ref":"AWS::AccountId"},"table/adhoc_tables"]]}
-            - {"Fn::Join":[":",["arn:aws:dynamodb",{"Ref":"AWS::Region"},{"Ref":"AWS::AccountId"},"table/adhoc_properties"]]}
+            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
+            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
           - Effect: Allow
             Action:
             - "s3:PutObject"
@@ -110,7 +106,7 @@ Resources:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: FrontendRole]
+      Roles: [!Ref FrontendRole]
   StandaloneInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
@@ -120,17 +116,17 @@ Resources:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: StandaloneFrontendRole]
+      Roles: [!Ref StandaloneFrontendRole]
   ProductionInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: FrontendRole]
+      Roles: [!Ref FrontendRole]
   StagingInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: FrontendRole]
+      Roles: [!Ref FrontendRole]
   LifecycleHookRole:
     Type: AWS::IAM::Role
     Properties:
@@ -151,10 +147,10 @@ Resources:
 Outputs:
   FrontendInstanceProfile:
     Description: Frontend Instance Profile
-    Value: {Ref: FrontendInstanceProfile}
+    Value: !Ref FrontendInstanceProfile
   StandaloneFrontendInstanceProfile:
     Description: Standalone Frontend Instance Profile
-    Value: {Ref: StandaloneFrontendInstanceProfile}
+    Value: !Ref StandaloneFrontendInstanceProfile
   LifecycleHookRoleARN:
     Description: Auto Scaling Lifecycle Hook Role
-    Value: {'Fn::GetAtt': [LifecycleHookRole, Arn]}
+    Value: !GetAtt LifecycleHookRole.Arn
