@@ -5,7 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as PropTypes from '../PropTypes';
-import { editAnimation, removePendingFrames } from '../animationListModule';
+import { editAnimation, removePendingFramesAction } from '../animationListModule';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 
 /**
@@ -215,6 +215,6 @@ export default connect(state => ({
     dispatch(show(Goal.NEW_FRAME));
   },
   removePendingFrames() {
-    dispatch(removePendingFrames());
+    dispatch(removePendingFramesAction());
   }
 }))(PiskelEditor);
