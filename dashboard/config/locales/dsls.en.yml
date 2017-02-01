@@ -595,6 +595,8 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      'CSD: Review Events': {}
+      'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Pick Elements Styled: {}
       CSDU2 - Rating Quality Websites: {}
@@ -610,6 +612,8 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 SFLP:
+        CSDU6 SFLP: CSDU6 SFLP
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -897,6 +901,7 @@ en:
       'Chirpr: @lillizard': {}
       'Chirpr: @solmoon': {}
       Choosing Good IDs: {}
+      'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
