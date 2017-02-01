@@ -159,7 +159,7 @@ export default class BoardController {
   }
 
   onBoardEvent(component, event, callback) {
-    // TODO: Add accelerometer events for "singletap" and "doubletap" that map to
+    // TODO (bbuchanan): Add accelerometer events for "singletap" and "doubletap" that map to
     // subsets of the "tap" event
     // https://docs.google.com/document/d/1VuDefx4wijBkyiap-36qpfCAoNEzu5B7yLldhhhuv7U/edit#bookmark=id.daat8jt8eda8
     component.on(event, callback);
