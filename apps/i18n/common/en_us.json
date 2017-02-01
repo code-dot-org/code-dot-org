@@ -199,6 +199,7 @@
   "learnMore": "Learn more",
   "less": "Less",
   "lessonName": "Lesson Name",
+  "lessonN": "Lesson {lessonNumber}",
   "levelIncompleteError": "Keep coding! Something's not quite right yet.",
   "listVariable": "list",
   "loading": "Loading...",

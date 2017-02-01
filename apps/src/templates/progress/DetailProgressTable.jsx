@@ -1,6 +1,11 @@
 import React, { PropTypes } from 'react';
 import ProgressStage from './ProgressStage';
+import i18n from '@cdo/locale';
 
+/**
+ * A component that shows progress in a course with more detail than the summary
+ * view
+ */
 const DetailProgressTable = React.createClass({
   propTypes: {
     lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -16,13 +21,12 @@ const DetailProgressTable = React.createClass({
 
   render() {
     const { lessonNames, levelsByStage } = this.props;
-    // TODO - better i18n for string construction
     return (
       <div>
         {lessonNames.map((lessonName, index) => (
           <ProgressStage
             key={index}
-            title={`Stage ${index + 1}: ${lessonName}`}
+            title={i18n.lessonN({lessonNumber: index + 1}) + ": " + lessonName}
             levels={levelsByStage[index]}
           />
         ))}
