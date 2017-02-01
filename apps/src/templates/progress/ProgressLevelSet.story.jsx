@@ -1,14 +1,14 @@
 import React from 'react';
-import ProgressStageStep from './ProgressStageStep';
+import ProgressLevelSet from './ProgressLevelSet';
 
 export default storybook => {
   storybook
-    .storiesOf('ProgressStageStep', module)
+    .storiesOf('ProgressLevelSet', module)
     .addStoryTable([
       {
         name:'single puzzle step',
         story: () => (
-          <ProgressStageStep
+          <ProgressLevelSet
             start={1}
             name="Images, Pixels, and RGB"
             levels={[
@@ -23,7 +23,7 @@ export default storybook => {
       {
         name:'multiple puzzle step',
         story: () => (
-          <ProgressStageStep
+          <ProgressLevelSet
             start={1}
             name="Writing Exercises"
             levels={[
@@ -54,7 +54,7 @@ export default storybook => {
       {
         name:'non first step',
         story: () => (
-          <ProgressStageStep
+          <ProgressLevelSet
             start={4}
             name="Writing Exercises"
             levels={[

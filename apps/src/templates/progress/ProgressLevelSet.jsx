@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react';
 import FontAwesome from '../FontAwesome';
 import ProgressBubbleSet from './ProgressBubbleSet';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 import { lessonType } from './progressTypes';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
@@ -11,7 +12,8 @@ const styles = {
     marginTop: 12
   },
   stepButton: {
-    width: 90,
+    // TODO - might run into problems with i18n
+    width: 110,
     textAlign: 'center',
     borderWidth: 1,
     borderStyle: 'solid',
@@ -72,7 +74,10 @@ const styles = {
   }
 };
 
-const ProgressStageStep = React.createClass({
+/**
+ * A set of one or more levels that are part of the same progression
+ */
+const ProgressLevelSet = React.createClass({
   propTypes: {
     start: PropTypes.number.isRequired,
     name: PropTypes.string,
@@ -91,9 +96,9 @@ const ProgressStageStep = React.createClass({
     const icon = "file-text-o";
 
     const lastStep = start + levels.length - 1;
-    let stepNumber = start;
+    let levelNumber = start;
     if (multiLevelStep) {
-      stepNumber += `-${lastStep}`;
+      levelNumber += `-${lastStep}`;
     }
 
     return (
@@ -105,7 +110,7 @@ const ProgressStageStep = React.createClass({
                 <div style={{...styles.stepButton, ...BUBBLE_COLORS[status]}}>
                   <FontAwesome icon={icon}/>
                   <div style={{...styles.buttonText, ...styles.text}}>
-                    STEP {stepNumber}
+                    {i18n.levelN({levelNumber})}
                   </div>
                 </div>
               </a>
@@ -141,4 +146,4 @@ const ProgressStageStep = React.createClass({
   }
 });
 
-export default ProgressStageStep;
+export default ProgressLevelSet;

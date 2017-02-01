@@ -201,6 +201,7 @@
   "lessonName": "Lesson Name",
   "lessonN": "Lesson {lessonNumber}",
   "levelIncompleteError": "Keep coding! Something's not quite right yet.",
+  "levelN": "LEVEL {levelNumber}",
   "listVariable": "list",
   "loading": "Loading...",
   "locked": "Locked",
