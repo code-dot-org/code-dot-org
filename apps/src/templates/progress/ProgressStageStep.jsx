@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import FontAwesome from '../FontAwesome';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from "@cdo/apps/util/color";
+import { lessonType } from './progressTypes';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
 
@@ -10,7 +11,6 @@ const styles = {
     marginTop: 12
   },
   stepButton: {
-    // TODO - this could get us into trouble with i18n?
     width: 90,
     textAlign: 'center',
     borderWidth: 1,
@@ -39,7 +39,6 @@ const styles = {
   col2: {
     paddingLeft: 30
   },
-  // TODO - validate these all look good on other browsers
   linesAndDot: {
     whiteSpace: 'nowrap',
     marginLeft: '50%',
@@ -77,24 +76,15 @@ const ProgressStageStep = React.createClass({
   propTypes: {
     start: PropTypes.number.isRequired,
     name: PropTypes.string,
-    levels: PropTypes.arrayOf(
-      PropTypes.shape({
-        level: PropTypes.string,
-        url: PropTypes.string
-      })
-    ).isRequired
+    levels: PropTypes.arrayOf(lessonType).isRequired
   },
 
   render() {
     const { name, levels, start } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    // TODO - if all the levels have the same status, should we fill it in for
-    // the step button?
     const status = multiLevelStep ? 'not_tried' : levels[0].status;
 
-    // In the multiLevel case, clicking the step will take us to the first level
-    // TODO possible we dont want the above behavior
     const url = levels[0].url;
 
     // TODO - dont have this be hardcoded/get icons right
@@ -106,8 +96,6 @@ const ProgressStageStep = React.createClass({
       stepNumber += `-${lastStep}`;
     }
 
-    // TODO - think about different widths for step 9 vs. step 10
-    // TODO - should step button turn orange on mouseover?
     return (
       <table style={styles.table}>
         <tbody>
