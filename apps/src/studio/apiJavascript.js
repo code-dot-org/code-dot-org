@@ -73,6 +73,14 @@ exports.setSpriteXY = function (spriteIndex, xpos, ypos) {
 };
 */
 
+exports.setSpriteBehavior = function (id, spriteIndex, targetSpriteIndex, behavior) {
+  Studio.queueCmd(id, 'setSpriteBehavior', {
+    spriteIndex,
+    targetSpriteIndex,
+    behavior,
+  });
+};
+
 exports.setSpritesWander = function (id, spriteName) {
   Studio.queueCmd(id, 'setSpritesWander', {
     'spriteName': spriteName
