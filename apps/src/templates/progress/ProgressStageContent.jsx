@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ProgressStageStep from './ProgressStageStep';
+import ProgressLevelSet from './ProgressLevelSet';
 import { lessonType } from './progressTypes';
 
 const styles = {
@@ -52,7 +52,7 @@ const ProgressStageContent = React.createClass({
           {description}
         </div>
         {groups.map((group, index) => (
-          <ProgressStageStep
+          <ProgressLevelSet
             key={index}
             start={group.start}
             name={group.name}
