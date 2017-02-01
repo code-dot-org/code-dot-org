@@ -2647,7 +2647,23 @@ en:
         unit6-csd-draft:
           stage:
             UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+          title: Draft Unit 6
           description_audience: ''
           description_short: ''
           description: ''
