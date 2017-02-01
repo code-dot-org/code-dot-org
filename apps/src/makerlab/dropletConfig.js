@@ -40,6 +40,7 @@ const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 const boardEventDropdownGenerator = function (editor) {
   const firstParam = getFirstParam('onBoardEvent', this.parent, editor);
   const wrapInQuotes = e => `"${e}"`;
+  // TODO: Handle variable first parameters, that don't match our map.
   return COMPONENT_EVENTS[firstParam].map(wrapInQuotes);
 };
 
