@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import ProgressStageContent from './ProgressStageContent';
 import FontAwesome from '../FontAwesome';
 import color from "@cdo/apps/util/color";
+import { lessonType } from './progressTypes';
 
 const styles = {
   main: {
@@ -25,13 +26,7 @@ const ProgressStage = React.createClass({
   propTypes: {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    // TODO - create a shared object for these (and add name)
-    levels: PropTypes.arrayOf(
-      PropTypes.shape({
-        status: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired
-      })
-    ).isRequired
+    levels: PropTypes.arrayOf(lessonType).isRequired
   },
 
   getInitialState() {
