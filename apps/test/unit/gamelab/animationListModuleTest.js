@@ -8,7 +8,10 @@ import reducer, {
     deleteAnimation,
     addBlankAnimation,
     addLibraryAnimation,
-    withAbsoluteSourceUrls
+    withAbsoluteSourceUrls,
+    appendBlankFrame,
+    appendLibraryFrames,
+    appendCustomFrames
 } from '@cdo/apps/gamelab/animationListModule';
 import animationTab from '@cdo/apps/gamelab/AnimationTab/animationTabModule';
 import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
@@ -409,6 +412,90 @@ describe('animationListModule', function () {
           }
         }
       });
+    });
+  });
+
+  describe('action: add blank frame', function () {
+    let oldWindowDashboard, server, store;
+    beforeEach(function () {
+      oldWindowDashboard = window.dashboard;
+      window.dashboard = {
+        project: {
+          getCurrentId() {return '';},
+          projectChanged() {return '';}
+        }
+      };
+      server = sinon.fakeServer.create();
+      server.respondWith('imageBody');
+      store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+    });
+
+    afterEach(function () {
+      server.restore();
+      window.dashboard = oldWindowDashboard;
+    });
+
+    it('new blank frame gets added to pendingFrames and original animation is unchanged', function () {
+      const animationList = createAnimationList(1);
+      store.dispatch(setInitialAnimationList(animationList));
+      const animationKey = store.getState().animationList.orderedKeys[0];
+      store.dispatch(appendBlankFrame());
+      expect(store.getState().animationList.propsByKey[animationKey].frameCount).to.equal(1);
+      expect(store.getState().animationList.pendingFrames.key).to.equal(animationKey);
+      expect(store.getState().animationList.pendingFrames.props.blankFrame).to.equal(true);
+    });
+
+    it('new blank pending frame uses the selectedAnimation key', function () {
+      const animationList = createAnimationList(2);
+      store.dispatch(setInitialAnimationList(animationList));
+      const selectedAnimation = store.getState().animationTab.selectedAnimation;
+      store.dispatch(appendBlankFrame());
+      expect(store.getState().animationList.pendingFrames.key).to.equal(selectedAnimation);
+    });
+  });
+
+  describe('action: append non blank frames', function () {
+    let oldWindowDashboard, server, store, selectedAnimation, libraryAnimProps;
+    beforeEach(function () {
+      oldWindowDashboard = window.dashboard;
+      window.dashboard = {
+        project: {
+          getCurrentId() {return '';},
+          projectChanged() {return '';}
+        }
+      };
+      server = sinon.fakeServer.create();
+      server.respondWith('imageBody');
+      store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      const animationList = createAnimationList(2);
+      store.dispatch(setInitialAnimationList(animationList));
+      selectedAnimation = store.getState().animationTab.selectedAnimation;
+      libraryAnimProps = {
+        name: 'library_animation',
+        sourceUrl: 'url',
+        frameSize: {x: 100, y: 100},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 4,
+        version: null
+      };
+    });
+
+    afterEach(function () {
+      server.restore();
+      window.dashboard = oldWindowDashboard;
+    });
+
+    it('append library frames adds props to pendingFrames for selectedAnimation', function () {
+      store.dispatch(appendLibraryFrames(libraryAnimProps));
+      expect(store.getState().animationList.pendingFrames.key).to.equal(selectedAnimation);
+      expect(store.getState().animationList.pendingFrames.props).to.deep.equal(libraryAnimProps);
+    });
+
+    it('append custom frames adds props to pendingFrames for selected animation', function () {
+      store.dispatch(appendCustomFrames(libraryAnimProps));
+      expect(store.getState().animationList.pendingFrames.key).to.equal(selectedAnimation);
+      expect(store.getState().animationList.pendingFrames.props).to.deep.equal(libraryAnimProps);
     });
   });
 });
