@@ -113,7 +113,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     # UNSUBSCRIBE_HOC means a volunteer said "I want to unsubscribe until the next Hour of Code".
     # We don't want them to be getting volunteer requests until then.  So, if we're not currently
     # in Hour of Code, don't show that volunteer, and do that by including UNSUBSCRIBE_HOC here.
-    if DCDO.get("hoc_mode", false) != "actual-hoc"
+    unless ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
       query += " -unsubscribed_s:\"#{UNSUBSCRIBE_HOC}\""
     end
 
