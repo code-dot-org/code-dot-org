@@ -12,7 +12,7 @@ import reducer, {
   setIsHocScript,
   setIsSummaryView,
   SignInState,
-  levelsByStage
+  levelsByLesson
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -423,7 +423,7 @@ describe('progressReduxTest', () => {
     });
   });
 
-  describe('levelsByStage', () => {
+  describe('levelsByLesson', () => {
     it('extracts status/url on a per level basis', () => {
       const initializedState = reducer(undefined, initProgress(initialScriptOverviewProgress));
 
@@ -472,7 +472,7 @@ describe('progressReduxTest', () => {
           }
         ]
       ];
-      assert.deepEqual(expected, levelsByStage(state));
+      assert.deepEqual(expected, levelsByLesson(state));
     });
   });
 });

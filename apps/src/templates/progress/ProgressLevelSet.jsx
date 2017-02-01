@@ -3,7 +3,7 @@ import FontAwesome from '../FontAwesome';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import { lessonType } from './progressTypes';
+import { levelType } from './progressTypes';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
 
@@ -81,7 +81,7 @@ const ProgressLevelSet = React.createClass({
   propTypes: {
     start: PropTypes.number.isRequired,
     name: PropTypes.string,
-    levels: PropTypes.arrayOf(lessonType).isRequired
+    levels: PropTypes.arrayOf(levelType).isRequired
   },
 
   render() {
