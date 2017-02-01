@@ -25,6 +25,7 @@ Resources:
                   - 'cloudformation:DescribeStackResources'
                   - 'autoscaling:CompleteLifecycleAction'
                   - 'ec2:DescribeImages'
+                  - 'ec2:DescribeTags'
                   - 'cloudwatch:PutMetricData'
                 Resource: '*'
   StandaloneFrontendRole:
@@ -65,11 +66,56 @@ Resources:
                   - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
                     table/adhoc_properties
                   ]]}
+  StandaloneRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Effect: Allow
+          Principal: {Service: [ec2.amazonaws.com]}
+          Action: ['sts:AssumeRole']
+      Path: /
+      Policies:
+      - PolicyName: instance
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action: ['s3:GetObject']
+            Resource: 'arn:aws:s3:::*'
+          - Effect: Allow
+            Action:
+            - "cloudformation:SignalResource"
+            - "cloudformation:DescribeStackResources"
+            - "autoscaling:CompleteLifecycleAction"
+            - "ec2:DescribeImages"
+            - "logs:Create*"
+            - "logs:PutLogEvents"
+            - "logs:PutRetentionPolicy"
+            - "cloudwatch:PutMetricData"
+            Resource: "*"
+          - Effect: Allow
+            Action: ["dynamodb:*"]
+            Resource:
+            - {"Fn::Join":[":",["arn:aws:dynamodb",{"Ref":"AWS::Region"},{"Ref":"AWS::AccountId"},"table/adhoc_tables"]]}
+            - {"Fn::Join":[":",["arn:aws:dynamodb",{"Ref":"AWS::Region"},{"Ref":"AWS::AccountId"},"table/adhoc_properties"]]}
+          - Effect: Allow
+            Action:
+            - "s3:PutObject"
+            - "s3:PutObjectAcl"
+            - "s3:PutObjectVersionAcl"
+            Resource:
+            - "arn:aws:s3:::cdo-dist/adhoc/*"
+            - "arn:aws:s3:::cdo-build-logs/*"
   FrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
       Roles: [Ref: FrontendRole]
+  StandaloneInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles: [!Ref StandaloneRole]
   StandaloneFrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
