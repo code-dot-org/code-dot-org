@@ -22,7 +22,7 @@ const DetailProgressTable = React.createClass({
         {lessonNames.map((lessonName, index) => (
           <ProgressLesson
             key={index}
-            title={i18n.lessonN({lessonNumber: index + 1}) + ": " + lessonName}
+            title={i18n.lessonNumbered({lessonNumber: index + 1, lessonName})}
             levels={levelsByLesson[index]}
           />
         ))}
