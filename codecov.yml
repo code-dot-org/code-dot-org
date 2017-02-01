@@ -3,4 +3,4 @@ coverage:
   range: 50..80
 fixes:
   - "/lib/::/dashboard/lib/"
-  - "/app/::/dashboard/app/"
+  - "app/::dashboard/app/"
