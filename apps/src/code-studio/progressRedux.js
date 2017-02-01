@@ -240,6 +240,39 @@ export const levelsByLesson = state => (
   ))
 );
 
+/**
+ * Given a set of levels, groups them in sets of progressions, where each
+ * progression is a set of adjacent levels sharing the same name (where that
+ * "same" name might also just be undefined)
+ * @param {Level[]} levels
+ * @returns {object[]} An array of progressions, where each consists of a name,
+ *   the position of the progression in the input array, and the set of levels
+ *   in the progression
+ */
+export const progressionsFromLevels = levels => {
+  const progressions = [];
+  let currentProgression = {
+    start: 0,
+    name: levels[0].name,
+    levels: [levels[0]]
+  };
+  levels.slice(1).forEach((level, index) => {
+    if (level.name === currentProgression.name) {
+      currentProgression.levels.push(level);
+    } else {
+      progressions.push(currentProgression);
+      currentProgression = {
+        // + 1 because we sliced off the first element
+        start: index + 1,
+        name: level.name,
+        levels: [level]
+      };
+    }
+  });
+  progressions.push(currentProgression);
+  return progressions;
+};
+
 /* start-test-block */
 // export private function(s) to expose to unit testing
 export const __testonly__ = {
