@@ -184,7 +184,7 @@
 
 %p Code.org is building a full K-12 curriculum pathway on our Code Studio learning platform. Our courses are already being taught in thousands of classrooms! Click each course to see more details.
 
-.courses{style: "margin-left: 0px; margin-top: 30px"}
+.courseexplorer.courses{style: "margin-left: 0px; margin-top: 30px"}
   .group{style: "overflow: hidden"}
     .grouprow.bar-6{style: "opacity: 0.7; opacity: 1"}
       Elementary school
@@ -211,7 +211,7 @@
           %h2.course.break
             = course[:heading]
         - else
-          .course.break{id: "course-#{course_index}", onclick: "$('#courseextra-#{course_index}').slideToggle(); $('.detailcontainer').not('#courseextra-#{course_index}').slideUp();"}
+          .course.break{id: "course-#{course_index}", onclick: "$('#courseextra-#{course_index}').slideToggle(); $('.courseexplorer .detailcontainer').not('#courseextra-#{course_index}').slideUp();"}
             - unless course[:starts] == 0
               %div{class: "bar-#{course[:starts]}"}
                 &nbsp;
