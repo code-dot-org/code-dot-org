@@ -120,7 +120,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     global_max_messages_per_sec = 25
 
     # Proc for determining the max rate based on DCDO.
-    max_rate_proc = Proc.new {
+    max_rate_proc = proc {
       DCDO.get('test-max-rate', global_max_messages_per_sec)
     }
 

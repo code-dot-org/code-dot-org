@@ -213,11 +213,6 @@ Style/MutableConstant:
 Style/Next:
   Enabled: false
 
-# Offense count: 8
-# Cop supports --auto-correct.
-Style/Proc:
-  Enabled: false
-
 # Offense count: 51
 # Cop supports --auto-correct.
 Style/RedundantParentheses:
@@ -258,13 +253,6 @@ Style/SpaceBeforeBlockBraces:
 # Offense count: 11
 # Cop supports --auto-correct.
 Style/SpaceBeforeComment:
-  Enabled: false
-
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: require_no_space, require_space
-Style/SpaceInLambdaLiteral:
   Enabled: false
 
 # Offense count: 982

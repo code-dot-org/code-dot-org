@@ -26,7 +26,7 @@ const group1CspWorkshops = {
   'The Friday Institute': 'July 10 - 14, 2017',
   'Battelle Education': 'July 24 - 28, 2017',
   'Rice University': 'June 26 - 30, 2017',
-  'Utah STEM Action Center and Utah Board of Education': 'June 12-16, 2017',
+  'Utah STEM Action Center and Utah Board of Education': 'June 26 - 30, 2017',
   'CodeVA': 'July 17 - 21, 2017',
   'Puget Sound Educational Service District': 'July 10 - 14, 2017',
   'NorthEast Washington Educational Service District 101': 'July 10 - 14, 2017'

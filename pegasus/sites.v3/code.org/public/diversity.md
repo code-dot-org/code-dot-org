@@ -30,7 +30,7 @@ But more importantly, computer science is now a foundational science for all 21s
 ## Diversity of students in our courses
 <center><img src="/images/infographics/fit-800/diversity-courses.png"/></center>
 
-Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diveresity. Below are examples of some of the other tactics we use address diversity issues:
+Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diveresity. Below are examples of some of the other tactics we use address diversity issues:
 
 
 ## Curriculum materials designed to recruit, engage, and retain women and underrepresented students of color
@@ -73,7 +73,9 @@ Moving forward, our advocacy efforts are focused on expanding access to computer
 
 ## Marketing to change culture and break stereotypes with the Hour of Code campaign
 
-The Hour of Code is an international campaign to recruit students to try computer science for one hour. A significant reason to do this is to break the stereotype that CS is only for nerdy boys  - by showing students that everybody is doing it. This stereotype is a prime reason girls avoid CS. The #1 way we’re organizing participation is by recruiting teachers to offer an Hour of Code in their classroom. These are math teachers, english teachers, science teachers, who have a 50/50 balance of boys and girls, and can communicate that anybody can try. The Hour of Code campaign emphasizes the use of “[pair programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning),” which has been shown to improve computer science (CS) enrollment (especially among young women), retention, and students' performance, increase students' confidence, and develop students' critical skills.
+The Hour of Code is an international campaign to recruit students to try computer science for one hour. A significant reason to do this is to break the stereotype that CS is only for nerdy boys  - by showing students that everybody is doing it. This stereotype is a prime reason girls avoid CS. The #1 way we’re organizing participation is by recruiting teachers to offer an Hour of Code in their classroom. These are math teachers, english teachers, science teachers, who have a 50/50 balance of boys and girls, and can communicate that anybody can try. 
+
+A [recent study](/files/HourOfCodeImpactStudy_Jan2017.pdf) of students participating in the Hour of Code showed significant improvements in attitudes and self-efficacy towards computer science, *especially among female students.*
 
 The results speak for themselves, with 100 million “hours served”, and 48% of participants being female, the Hour of Code is the largest-scale effort to introduce computer science to girls.
 
@@ -87,14 +89,12 @@ We’ve also distributed [recruitment posters, videos, and other marketing mater
 
 ## Our own team’s gender diversity
 
-| Our own team diversity |  |
+| Our own team gender diversity |  |
 |------|---|
 | Code.org full time staff |  53% female |
 | Our leadership team | 50% female |
-| Our technical staff (software engineers, technial product managers, computer science educators) | 26% female |
+| Our technical staff (software engineers, technical product managers, computer science educators) | 26% female |
 | Our teacher-training network |  69% female |
 | The teachers attending our professional development |  86% female |
 
 <br/><br/>
-
-Other than our technical staff, Code.org’s own numbers are quite balanced. And if you look at the results we’re delivering in classrooms, we’ve already proven our ability to balance the scales in K-12 computer science.  We welcome your support, help, and feedback as we scale this impact to more schools

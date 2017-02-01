@@ -130,7 +130,7 @@ export default class Item extends Collidable {
     if (this.activity === 'watchActor') {
       return;
     }
-    if (this.activity === 'none') {
+    if (this.activity === constants.BEHAVIOR_STOP) {
       this.setDirection(Direction.NONE);
 
       this.destGridX = undefined;
@@ -201,9 +201,9 @@ export default class Item extends Collidable {
         candidate = {gridX: candidateX, gridY: candidateY};
         candidate.score = 0;
 
-        if (this.activity === "roam") {
+        if (this.activity === constants.BEHAVIOR_WANDER) {
           candidate.score ++;
-        } else if (this.activity === "chase") {
+        } else if (this.activity === constants.BEHAVIOR_CHASE) {
           if (candidateY === this.gridY - 1 && spriteY < center.y - bufferDistance) {
             candidate.score += 2;
           } else if (candidateY === this.gridY + 1 && spriteY > center.y + bufferDistance) {
@@ -217,7 +217,7 @@ export default class Item extends Collidable {
           } else if (candidateX === this.gridX + 1 && spriteX > center.x + bufferDistance) {
             candidate.score ++;
           }
-        } else if (this.activity === "flee") {
+        } else if (this.activity === constants.BEHAVIOR_FLEE) {
           candidate.score = 1;
           if (candidateY === this.gridY - 1 && spriteY > center.y - bufferDistance) {
             candidate.score ++;
@@ -424,7 +424,7 @@ export default class Item extends Collidable {
     var speed = this.speed;
     // TODO: Better concept of which actions actually move the actor
     // Projected position should not be in front of you if you are not moving!
-    if (this.activity === "none" || this.activity === "watchActor") {
+    if (this.activity === constants.BEHAVIOR_STOP || this.activity === "watchActor") {
       speed = 0;
     }
     return {

@@ -37,7 +37,12 @@
     "markdown_instructions": "# Defend Your Cake!\r\n\r\nThis is an example of a defender game that you'll build by the end of this lesson. Move the alien with arrow keys to keep the ladybugs from getting to your cake. How high of a score can you get?\r\n\r\n# Do This\r\n\r\nTurn to a classmate and make a list of the following information.\r\n\r\n* How many sprites are there in this game. Which are they?\r\n* What variables are needed to make this game? What do they store?\r\n* If you were to split the code of this game into functions what do you think they would be? What are the major pieces of behavior you'd need to create in your code?",
     "all_animations_single_frame": "false",
     "start_in_animation_tab": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",

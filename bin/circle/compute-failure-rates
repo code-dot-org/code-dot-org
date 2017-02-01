@@ -80,12 +80,12 @@ end
 
 # Define columns - each maps to a lambda that filters builds
 columns = {
-  'Total' => -> (builds) {builds},
-  'Pipeline' => -> (builds) {builds.select {|i| %w(staging test production).include?(i[:branch])}},
-  'Branch' => -> (builds) {builds.reject {|i| %w(staging test production).include?(i[:branch])}}
+  'Total' => ->(builds) {builds},
+  'Pipeline' => ->(builds) {builds.select {|i| %w(staging test production).include?(i[:branch])}},
+  'Branch' => ->(builds) {builds.reject {|i| %w(staging test production).include?(i[:branch])}}
 }
 options[:custom_columns].each do |branches|
-  columns[branches.join(',')] = -> (builds) {builds.select{|i| branches.include?(i[:branch])}}
+  columns[branches.join(',')] = ->(builds) {builds.select{|i| branches.include?(i[:branch])}}
 end
 
 # Compute map of stats for each date
