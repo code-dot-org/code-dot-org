@@ -26,7 +26,8 @@ export function initializeCircuitPlaygroundComponents() {
   }));
 
   // Must initialize sound sensor BEFORE left button, otherwise left button
-  // will not respond to input.
+  // will not respond to input.  This has something to do with them sharing
+  // pin 4 on the board.
   const soundSensor = new five.Sensor({
     pin: "A4",
     freq: 100
@@ -52,8 +53,8 @@ export function initializeCircuitPlaygroundComponents() {
     return accelerometer[accelerationDirection];
   };
 
-  // We make one playground-io Touchpad controller for all captouch sensors,
-  // then wrap it in our own separate controllers for the API we want to
+  // We make one playground-io Touchpad component for all captouch sensors,
+  // then wrap it in our own separate objects to get the API we want to
   // expose to students.
   const playgroundTouchpad = new five.Touchpad({
     controller: PlaygroundIO.Touchpad,
