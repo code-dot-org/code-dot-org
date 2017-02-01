@@ -20,40 +20,40 @@ if (window.Blockly && !data.uses_droplet) {
 
 const fieldConfig = {
   startEditor: {
-    codemirrorEl: 'level_start_blocks',
-    blockPreviewEl: 'start-preview',
+    codemirror: 'level_start_blocks',
+    blockPreview: 'start-preview',
   },
   requiredEditor: {
-    codemirrorEl: 'level_required_blocks',
-    blockPreviewEl: 'required-preview',
+    codemirror: 'level_required_blocks',
+    blockPreview: 'required-preview',
   },
   recommendedEditor: {
-    codemirrorEl: 'level_recommended_blocks',
-    blockPreviewEl: 'recommended-preview',
+    codemirror: 'level_recommended_blocks',
+    blockPreview: 'recommended-preview',
   },
   toolboxEditor: {
     hideWhen: data.uses_droplet,
-    codemirrorEl: 'level_toolbox_blocks',
-    blockPreviewEl: 'toolbox-preview',
+    codemirror: 'level_toolbox_blocks',
+    blockPreview: 'toolbox-preview',
   },
   initializationEditor: {
     hideWhen: data.uses_droplet,
-    codemirrorEl: 'level_initialization_blocks',
-    blockPreviewEl: 'initialization-preview',
+    codemirror: 'level_initialization_blocks',
+    blockPreview: 'initialization-preview',
   },
   solutionEditor: {
     hideWhen: !data.solution_blocks,
-    codemirrorEl: 'level_solution_blocks',
-    blockPreviewEl: 'solution-preview',
+    codemirror: 'level_solution_blocks',
+    blockPreview: 'solution-preview',
   },
   codeFunctions: {
     hideWhen: !data.uses_droplet,
-    codemirrorEl: 'level_code_functions',
+    codemirror: 'level_code_functions',
     codemirrorMode: 'javascript',
   },
   inputOutputTable: {
     hideWhen: !data.input_output_table,
-    codemirrorEl: 'level_input_output_table',
+    codemirror: 'level_input_output_table',
     codemirrorMode: 'javascript',
   },
 };
@@ -64,9 +64,9 @@ Object.keys(fieldConfig).forEach(key => {
     return;
   }
   const mode = config.codemirrorMode || (data.uses_droplet ? 'javascript' : 'xml');
-  const editor = initializeCodeMirror(config.codemirrorEl, mode);
-  if (config.blockPreviewEl && !data.uses_droplet) {
-    initializeBlockPreview(editor, document.getElementById(config.blockPreviewEl));
+  const editor = initializeCodeMirror(config.codemirror, mode);
+  if (config.blockPreview && !data.uses_droplet) {
+    initializeBlockPreview(editor, document.getElementById(config.blockPreview));
   }
 });
 

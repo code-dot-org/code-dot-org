@@ -181,10 +181,16 @@
   #plusanswer
     %i.fa.fa-plus-circle
 
+:ruby
+  script_data = {
+    pageOptions: {
+      skin_id: @level.skin,
+      isK1: @level.try(:isK1),
+      app: @level.game.app,
+      solution_blocks: @level.respond_to?(:solution_blocks),
+      uses_droplet: @level.game.uses_droplet?,
+      input_output_table: @level.respond_to?(:input_output_table)
+    }.to_json
+  }
 %script{src: minifiable_asset_path('js/levels/editors/_blockly.js'),
-        data: {pageOptions: {skin_id: @level.skin,
-                             isK1: @level.try(:isK1),
-                             app: @level.game.app,
-                             solution_blocks: @level.respond_to?(:solution_blocks),
-                             uses_droplet: @level.game.uses_droplet?,
-                             input_output_table: @level.respond_to?(:input_output_table)}.to_json}}
+        data: script_data}
