@@ -353,8 +353,7 @@ export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
   return (dispatch, getState) => {
-    props.looping = true;
-    dispatch(addAnimationAction(key, props));
+    dispatch(addAnimationAction(key, { ...props, looping: true }));
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
@@ -392,16 +391,6 @@ export function addLibraryAnimation(props) {
     let name = generateAnimationName(props.name, getState().animationList.propsByKey);
     dispatch(setAnimationName(key, name));
     projectChanged();
-  };
-}
-
-/**
- * After pending frames are added, remove them as pending.
- * @returns {function}
- */
-export function removePendingFrames() {
-  return dispatch => {
-    dispatch(removePendingFramesAction());
   };
 }
 
@@ -615,7 +604,7 @@ function setPendingFramesAction(key, props) {
  * Action creator for removing pending frames.
  * @returns {{type: ActionType}}
  */
-function removePendingFramesAction() {
+export function removePendingFramesAction() {
   return {
     type: REMOVE_PENDING_FRAMES
   };
