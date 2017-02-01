@@ -4,12 +4,6 @@ import color from "@cdo/apps/util/color";
 import { setIsSummaryView } from '@cdo/apps/code-studio/progressRedux';
 import { connect } from 'react-redux';
 
-// TODO - can't use toggle group when we need to change both icons as we toggle?
-// hacky approach might be to have two groups and hide one at a time
-
-// TODO: I resized the summary images in gimp to be 22x23 instead of 21x23. In
-// resaving, they got bigger (in file size) than the detail images. Might be
-// worth rationalizing.
 const summaryActive = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAYAAAAP6L+eAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QEfBicvUU//cAAAAKtJREFUOMvtlLENwjAURN93kQoWoGEzNggNVPRxl4ZMAJNBkwVIExccTaJYFpLTIBq/8p/vbMlfB79Ckpc0amGU5CO9SfQcoyRvkl7AJrlvMLPtFPxNzzE4oANCNAzTbCbVcwTgSmHG7s/e662ToAIwCOasPex3F4Dbo2+QzrOeDZz8TqKOTYJKoo7OHteGxn5nRmfRrxsEs2UrUn3Ni8tWlK4oXVG64u9d8QEqLgOqdcEqDwAAAABJRU5ErkJggg==";
 const summaryInactive = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAYAAAAP6L+eAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QEfBjoS9kvffQAAALhJREFUOMvtlLERglAQRN/9gCJMbMYOzO0AEojIISORCjTXChxr0YQiCFgDAf9gAASOyd/s397+u5nbWfgRjMutBFIg6mstULHf5QBc7wXqMo+fQwtUDiyeiKK+9oaUrPh01DtQ3U/xJqr+PL/4+Y3NjgSMrjg/m1KdUvUHMmjNWXXYbnKA06MpkDItPOCgdxKxLxJEErHXm2iFKwa9M6M27+oGrRmjK6b8ko2B4IqQFSErQlb8NyteNvx30d8zRqcAAAAASUVORK5CYII=";
 const detailActive = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAYAAAAP6L+eAAAAWklEQVR4AWP4//9/GxD//E8lADWrDWTw5//UB59p52I4GAULHzxrXXj/6c8F95/+pwYGmQUykwHZUGoazgBi0AKPGjxqMCamXTpe9PBZG01yHgyMgtE6D+5iAJNEO6l4m/U/AAAAAElFTkSuQmCC";
@@ -26,7 +20,10 @@ const styles = {
     opacity: 1
   }
 };
-
+/**
+ * A toggle that provides a way to switch between detail and summary views of
+ * our course progress.
+ */
 const ProgressDetailToggle = React.createClass({
   propTypes: {
     isSummaryView: PropTypes.bool.isRequired,

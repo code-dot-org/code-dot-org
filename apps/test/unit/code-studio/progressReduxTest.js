@@ -10,6 +10,7 @@ import reducer, {
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
+  setIsSummaryView,
   SignInState,
   levelsByStage
 } from '@cdo/apps/code-studio/progressRedux';
@@ -293,6 +294,14 @@ describe('progressReduxTest', () => {
       const isNotHocScript = reducer(initialState, setIsHocScript(false));
       assert.equal(isNotHocScript.isHocScript, false);
     });
+
+    it('can update isSummaryView', () => {
+      const stateSummary = reducer(initialState, setIsSummaryView(true));
+      assert.strictEqual(stateSummary.isSummaryView, true);
+
+      const stateDetail = reducer(initialState, setIsSummaryView(false));
+      assert.strictEqual(stateDetail.isSummaryView, false);
+    });
   });
 
   describe('with peer reviews', () => {
@@ -431,29 +440,35 @@ describe('progressReduxTest', () => {
         [
           {
             status: 'not_tried',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
+            name: undefined
           },
           {
             status: 'not_tried',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
+            name: undefined
           },
           {
             status: 'not_tried',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
+            name: undefined
           }
         ],
         [
           {
             status: 'not_tried',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
+            name: undefined
           },
           {
             status: 'perfect',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
+            name: undefined
           },
           {
             status: 'attempted',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
+            name: undefined
           }
         ]
       ];
