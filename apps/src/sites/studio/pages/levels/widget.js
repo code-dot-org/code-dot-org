@@ -3,8 +3,11 @@
  */
 /* global appOptions */
 import $ from 'jquery';
-import _ from 'lodash';
-import { showInstructionsDialog } from '@cdo/apps/code-studio/levels/dialogHelper';
+import {
+  showInstructionsDialog,
+  showStartOverDialog,
+  processResults
+} from '@cdo/apps/code-studio/levels/dialogHelper';
 import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
 
@@ -20,9 +23,13 @@ function setupWidgetLevel() {
 // Add globals
 window.CodeMirror = require('codemirror');
 window.dashboard = window.dashboard || {};
-_.extend(window.dashboard, {
-  setupWidgetLevel: setupWidgetLevel
-});
+window.dashboard.widget = {
+  setupWidgetLevel: setupWidgetLevel,
+  // used by pixelation widget
+  showStartOverDialog: showStartOverDialog,
+  // used eby frequency, vigenere, and pixelation widgets
+  processResults: processResults
+};
 
 // On load (note - widget-specific setup may happen before this!)
 $(document).ready(function () {
