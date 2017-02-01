@@ -59,7 +59,7 @@
     display: inline-block;
     white-space: nowrap;
     right: 0px;
-    opacity: 0.8;
+    color: rgb(206,243,246);
   }
   .courses .subtitle {
     font-size: 10px;
@@ -264,7 +264,7 @@
                       %br/
                       %a{href: course[:link], style: "padding-left: 0px; color: grey"}
                         Learn more
-                .arrow_box_close{style: "position: absolute; right: 10px; top: 0px", onclick: "$('#courseextra-#{course_index}').slideUp()" }
+                .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", onclick: "$('#courseextra-#{course_index}').slideUp()" }
                   %i.fa.fa-times{"aria-hidden" => "true"}
 
           .cleardiv{style: "clear: both"}

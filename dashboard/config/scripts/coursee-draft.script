@@ -91,7 +91,7 @@ level 'courseE_playLab_scaffold6'
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'Geometric Sun'
 named_level 'Pizza on a Plate'
-named_level 'Unicorn Tag'
+named_level 'Alien Defender'
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
 named_level 'Begin planning your project'
