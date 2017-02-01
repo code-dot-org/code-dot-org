@@ -48,9 +48,9 @@
   version "1.1.3-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.1.3-cdo.tgz#aaf4abf1101666228b48370cd5b9fc6efeeb3efb"
 
-"@code-dot-org/piskel@0.8.10":
-  version "0.8.10"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.8.10.tgz#85b5b644068be0445564260acc562028ac4162df"
+"@code-dot-org/piskel@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.9.1.tgz#88d90402c12865da869b35ff521fd2e59dfc3ec2"
 
 "@kadira/react-split-pane@^1.4.0":
   version "1.4.7"
