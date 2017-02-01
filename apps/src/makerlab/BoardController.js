@@ -132,7 +132,8 @@ export default class BoardController {
     if (!this.board_) {
       return;
     }
-    // TouchSensors aren't in the board register, but we still need to reset them.
+    // TouchSensors aren't in board_.register because they are our own wrapper
+    // around TouchPad, but we still need to reset them.
     const touchSensors = _.filter(this.prewiredComponents, c => c instanceof TouchSensor);
     this.board_.register.concat(touchSensors).forEach(BoardController.resetComponent);
   }
