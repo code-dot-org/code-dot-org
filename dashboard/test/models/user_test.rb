@@ -1524,4 +1524,38 @@ class UserTest < ActiveSupport::TestCase
     student = create :student, created_at: DateTime.now - 8
     assert student.show_race_interstitial?('ignored_ip')
   end
+
+  test 'new users must have valid email addresses' do
+    assert_creates User do
+      create :user, email: 'valid@example.net'
+    end
+
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :user, email: 'invalid@incomplete'
+    end
+    assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
+  end
+
+  test 'existing users with invalid email addresses are still allowed' do
+    user_with_invalid_email = build :user, email: 'invalid@incomplete'
+    user_with_invalid_email.save!(validate: false)
+
+    assert user_with_invalid_email.valid?
+
+    # Update another field
+    user_with_invalid_email.name = 'updated name'
+    assert user_with_invalid_email.valid?
+    assert user_with_invalid_email.save
+  end
+
+  test 'users updating the email field must provide a valid email address' do
+    user = create :user
+
+    user.email = 'invalid@incomplete'
+    refute user.valid?
+    refute user.save
+
+    assert user.update(email: 'valid@example.net')
+    refute user.update(email: 'invalid@incomplete')
+  end
 end
