@@ -340,6 +340,18 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_setSpriteBehavior">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="TARGETSPRITE">
+      <block type="math_number">
+        <title name="NUM">2</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_endGame" />
 </category>
 <category name="Loops">

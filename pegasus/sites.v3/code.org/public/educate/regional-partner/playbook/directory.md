@@ -259,16 +259,17 @@ ________________
 ### Share Fair Nation and Colorado Education Initiative<br/>
 Colorado	
 
+Share Fair Nation is a non-profit organization created by the Morgridge Family Foundation a year and a half ago as part of their efforts to provide professional learning opportunities and support as a result of their transformative investments to the education sector. Share Fair Nation's mission is to teach and inspire educators in emerging practices, with the ultimate goals of engaging students and preparing them for success in a modern workforce. Technology is critical to our mission, because it's critical to our learners. Today's students are digital natives so technology helps them engage, and more importantly, it will be a tremendous force in tomorrow's job market.
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
+**Contact us for advice on:** Organizational Structures, Computer Science Programs, Robotics, Professional Learning Events, etc.
+
 **Contact Information**<br/>
 Brandon Petersen<Br/>
 brandon.petersen@sharefairnation.org
-
-Greg Hessee<Br/>
-ghessee@coloradoedinitiative.org
 
 [**Back to the top**](#top)
 <br/>
@@ -518,15 +519,28 @@ ________________
 ### Educate Maine and the Maine Mathematics and Science Alliance <br/>
 Maine
 
+Educate Maine’s mission is to champion college and career readiness and to increase the education attainment of all Maine people. All Maine students should graduate from high school prepared to succeed in postsecondary education and in the workplace and the number of Maine people with a college degree, a postsecondary certificate, or a professional credential must increase to meet the demands of the economy. Project>Login, one of Educate Maine's programs, is a campaign to increase Maine’s computing and information technology professionals through education, information, and internships.
+
+MMSA develops and applies research and best practices in Science, Technology, Engineering, and Math (STEM) education. MMSA's special strength is rooted in building relationships among schools, organizations, individuals, and communities to advance STEM education in Maine and the nation.
+
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
+
+**Contact us for advice on:** Engaging employers and higher education partners on supporting K-12 computer science. Education-ese such as frameworks, standards, assessment, curriculum, instruction, STEM; state policy actions; and implementing statewide programming.
 
 **Contact Information**<br/>
 Jason Judd<Br/>
 jason@educatemaine.org<Br/>
 
-Tom Keller, Ed.D.<br/>
+Chanel Lewis<br/>
+chanel@educatemaine.org<br/>
+
+Angela Oechslie<br/>
+angela@educatemaine.org<br/>
+
+Tom Keller<br/>
 tkeller@mmsa.org<br/>
 
 [**Back to the top**](#top)
@@ -762,6 +776,10 @@ lpoutasse@dciu.org <br/>
 
 Jon Regino<br/>
 jregino@dciu.org<br/>
+
+Rebecca Jervey<br/> 
+rjervery@dciu.org<br/>
+
 [**Back to the top**](#top)
 <br/>
 
@@ -772,14 +790,24 @@ ________________
 ### [The STEM Center of Excellence at The Citadel](http://www.citadel.edu/root/stemcenter)<br/>
 South Carolina<br/>
 
+The Citadel, a master-level public institution in Charleston, SC, was founded in 1842. A unique military-style educational system has been adopted, with the mission of educating principled leaders. Today, the student body consists of approximately 2300 undergraduate cadets and other day students (such as veterans), and a growing body of evening undergraduate and graduate students. The Citadel has been recognized as the best master-level public institution for the South the last five years by US News & World Report, in large part due to the freshman retention rate of 86% and four-year graduation rate of 59% (second highest of all South Carolina’s colleges). The Department of Mathematics and Computer Science offers a Bachelor's and Master's in Computer Science, in addition to 3 CS-related minors and graduate certificate in Cybersecurity.  Due to the military affiliation of the campus, cybersecurity has become a popular topic and is taught on campus from both the Department of Mathematics and Computer Science and Department of Criminal Justice.  The Citadel has been designated as NSA/DHS Center of Academic Excellence in Cyber Defense Education (CAE-CDE) in 2016. Additionally, the STEM Center of Excellence provides teacher professional development and student summer camps in computer science and cybersecurity.
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
+
+**Contact us for advice on:** 
+AP CSP teacher PD, student summer camps
 
 **Contact Information**<br/>
 Dr. Jennifer Albert<br/>
 jalbert@citadel.edu<br/>
 
+Shankar Banik<br/>
+baniks1@citadel.edu<br/>
+
+Deepti Joshi<br/>
+djoshi@citadel.edu<br/>
 [**Back to the top**](#top)
 <br/>
 
@@ -807,9 +835,14 @@ ________________
 ### [Center for STEM Education, The University of Texas at Austin](http://stemcenter.utexas.edu/)<br/>
 Austin, Texas<Br/>
 
+The University of Texas at Austin’s Center for STEM Education WeTeach_CS project trains K-12 educators to improve access to high quality CS experiences for a broad and diverse range of students. WeTeach_CS is designed to increase the number of CS certified high school teachers, increase the number of high schools offering CS courses, increase the number and diversity of students enrolled in CS courses, and expand access to computational thinking, coding and programming experiences for all students in K-8. 
+
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
+
+**Contact us for advice on:** 
+Statewide initiatives, MOOCs / online training courses
 
 **Contact Information** <br/>
 Amy Werst<br/>
@@ -849,8 +882,8 @@ apapa@rice.edu<br/>
 
 Richard Parr<br/>
 rparr@rice.edu<br/>
-
 <br/>
+
 
 ### [The University of Texas at Dallas](http://www.instructionalexcellence.org/)<br/>
 Dallas, Texas<Br/>
