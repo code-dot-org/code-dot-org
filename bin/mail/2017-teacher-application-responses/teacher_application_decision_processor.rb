@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
 require_relative '../../../dashboard/config/environment'
 
 PEGASUS_REPORTING_DB = sequel_connect CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader
@@ -105,7 +104,13 @@ class TeacherApplicationDecisionProcessor
 
       next if results.empty?
       puts "Exporting #{results.size} results to #{out_filename}"
-      export_contacts_to_csv results, out_filename
+      columns = results.first.keys
+      CSV.open(out_filename, 'wb') do |csv|
+        csv << columns
+        results.each do |result|
+          csv << columns.map{|column| result[column]}
+        end
+      end
     end
   end
 
@@ -147,10 +152,14 @@ class TeacherApplicationDecisionProcessor
     end
   end
 
+  def teachercon?(workshop_string)
+    TEACHER_CONS.any?{|tc| workshop_string.include? tc}
+  end
+
   def process_accept(teacher_application, accepted_workshop)
     # There are 2 kinds of acceptance, TeacherCon (ours) and Regional Partner.
     # We can tell based on the accepted workshop
-    if TEACHER_CONS.include? accepted_workshop
+    if teachercon? accepted_workshop
       process_accept_teachercon teacher_application, accepted_workshop
     else
       process_accept_partner teacher_application, accepted_workshop

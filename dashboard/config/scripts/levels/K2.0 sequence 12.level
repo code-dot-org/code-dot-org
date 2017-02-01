@@ -26,7 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the pig isn't moving far enough, try adding another block.\",\r\n  \"hint_id\": \"K2.0_sequence_12_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the pig isn't moving far enough, try adding another block.\",\"hint_id\":\"K2.0_sequence_12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c0c16c090fb65265cc8b4a6ddc263fc1/K2.0 sequence 12.mp3\"}]",
     "markdown_instructions": "Let's get that pig!\r\n\r\n![](https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif)\r\n",
     "contained_level_names": null
   },

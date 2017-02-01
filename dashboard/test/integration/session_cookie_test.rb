@@ -11,14 +11,14 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
   test 'no cookies if you do not do anything' do
     get '/'
 
-    assert_equal nil, cookies['_learn_session_test']
+    assert_nil cookies['_learn_session_test']
   end
 
   test 'session cookie not set over insecure HTTP' do
     https! false
     get '/reset_session'
 
-    assert_equal nil, cookies['_learn_session_test']
+    assert_nil cookies['_learn_session_test']
   end
 
   test 'session cookie not set in publicly cached level page' do

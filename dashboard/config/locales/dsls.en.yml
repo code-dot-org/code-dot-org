@@ -462,6 +462,9 @@ en:
         description here: description here
         title: title
       Building a UI with Design Mode: {}
+      'CSD - Event Types ': {}
+      CSD - Functions Review: {}
+      CSD - Getters and Setters: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD Creating Debugging Strat: {}
@@ -469,6 +472,7 @@ en:
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
       CSD Recipe Stop: {}
+      'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
         Challenge 1: Challenge 1
         description here: description here
@@ -886,6 +890,7 @@ en:
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
       Categorizing Data: {}
+      'Challenge: Input and UI': {}
       Changing Design Elements with Code: {}
       Check for Internet Accessibility: {}
       'Chirpr: @johnsnow': {}
@@ -916,6 +921,9 @@ en:
         description here: description here
         title: title
       Correlation vs Causation: {}
+      Cups and Beans Activity:
+        description here: description here
+        title: title
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
       Debugging Variables: {}
@@ -1732,6 +1740,9 @@ en:
       Prepare for your presentation:
         description here: description here
         title: title
+      Public Key Crypto Widget Instructions:
+        description here: description here
+        title: title
       Rating Websites: {}
       Recipe Page Example: {}
       Responding to User Input: {}
@@ -1760,6 +1771,7 @@ en:
       'Stop: Classes': {}
       'Stop: Common Styles Warm Up': {}
       'Stop: External Style Sheets': {}
+      'Stop: Getters and Setters': {}
       'Stop: Hobbies Page': {}
       'Stop: Images': {}
       'Stop: Intro to CSS': {}
