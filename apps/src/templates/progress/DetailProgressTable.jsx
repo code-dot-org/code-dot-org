@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import ProgressLesson from './ProgressLesson';
 import i18n from '@cdo/locale';
+import { levelType } from './progressTypes';
 
 /**
  * A component that shows progress in a course with more detail than the summary
@@ -10,12 +11,7 @@ const DetailProgressTable = React.createClass({
   propTypes: {
     lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     levelsByLesson: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          status: PropTypes.string.isRequired,
-          url: PropTypes.string.isRequired
-        })
-      )
+      PropTypes.arrayOf(levelType)
     ).isRequired,
   },
 
