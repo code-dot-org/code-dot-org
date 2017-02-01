@@ -84,7 +84,7 @@ class QueueProcessorManager
 
     # Run until SIGINT is received.
     stopping = false
-    exit_proc = Proc.new {
+    exit_proc = proc {
       puts "Shutting down, please wait..."
       stop_queue_processors unless stopping
       stopping = true
