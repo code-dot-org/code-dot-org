@@ -99,6 +99,11 @@
               %a{href: "/learn"}
                 %button.herohocbutton= I18n.t(entry[:param2_s])
             %div{style: "clear: both;"}
+          - elsif entry[:param1_s] == "cta_button"
+            .buttongroup
+              %a{href: entry[:param2_s]}
+                %button.herohocbutton= I18n.t(entry[:text1_s])
+            %div{style: "clear: both;"}
           - elsif entry[:param1_s] == "video"
             %img#playimage{src: "/shared/images/play-button.png", width:"25", onclick: "return showVideo_mainvideo();"}
             %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])

@@ -37,6 +37,7 @@ uk:
         'NetSim': 'Інтернет симулятор'
         'Custom': 'Художник'
         'CustomStudio': 'Ігрова студія'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Бронза'

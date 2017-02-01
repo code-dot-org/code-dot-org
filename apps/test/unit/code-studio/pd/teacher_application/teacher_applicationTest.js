@@ -11,6 +11,7 @@ describe("Tests for Teacher Application", () => {
   let districtErrorMessage;
   const districtErrorMessageHandler = function (message) { districtErrorMessage = message;};
   const regionalPartnerExample = {regionalPartnerGroup: 1, regionalPartnerName: 'A+ College Ready'};
+  const regionalPartnerWithWorkshopDates = {regionalPartnerGroup: 1, regionalPartnerName: 'A+ College Ready', workshopDays: 'OverriddenDates'};
 
   //<editor-fold desc="sample data">
   const warningFields = ['regionalPartnersOnlyWarning', 'identifyingRegionalPartnerWarning'];
@@ -242,6 +243,15 @@ describe("Tests for Teacher Application", () => {
 
       assertNoFormErrors();
       assertSummerContentAndWarningExistance(false);
+    });
+
+    it("Workshop days overrides works as expected", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerWithWorkshopDates);
+
+      pickCourse('csd');
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(true);
+      expect(form.find('SummerProgramContent').prop('selectedWorkshop')).to.equal('OverriddenDates');
     });
   });
 

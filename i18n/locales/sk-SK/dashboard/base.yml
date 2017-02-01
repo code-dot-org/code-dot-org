@@ -304,6 +304,8 @@ sk:
     delete_text_teacher_note: 'Poznámka: vymazaním svojho účtu nevymažete účty Vašich študentov.'
     delete_confirm: 'Naozaj chcete odstrániť tento účet?'
     deleted_user: 'deleted user'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Dokončené'
     tried: 'Vyskúšaný'
@@ -731,6 +733,9 @@ sk:
     content: 'Obsah'
     practice: 'Učiteľské cvičenia'
     peer_review: 'Recenzia'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.

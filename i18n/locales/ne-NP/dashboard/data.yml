@@ -37,6 +37,7 @@ ne:
         'NetSim': 'Internet Simulator'
         'Custom': 'Artist'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronze'
@@ -76,7 +77,7 @@ ne:
         'maze_2_18': "One more practice of the \"if-else\" block, can you get it right on your first try?"
         'maze_2_19': "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length."
         'turtle_1_1': "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
-        'turtle_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"set color\" block."
+        'turtle_1_2': "अब, वर्ग  बनाउनुहोस्। NOTE: use your favorite color by picking it in the new \"set color\" block."
         'turtle_1_3': "Make a square using only 3 blocks."
         'turtle_1_4': "Draw a triangle whose sides are all in different colors, using the \"random color\" option that picks a different color each time. Hint: you'll have to figure out how far to turn by clicking on the number in the turn block."
         'turtle_1_5': "Now, for practice, draw a triangle and then a square to draw an envelope."
@@ -84,7 +85,7 @@ ne:
         'turtle_1_7': "Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!"
         'turtle_1_8': "Ok, try to figure out what happens if you run this code (or press \"Run\" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time."
         'turtle_1_9': "Can you figure out what number to replace the question marks with to draw a circle?"
-        'turtle_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"set width\" block. Have fun!"
+        'turtle_1_10': "तपाईँले गरेरै छोड्नु भयो! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"set width\" block. रमाईलो गर्नुहोस्!"
         'turtle_4_1': "Can you draw a triangle (with edges of 100 pixels) with only 3 blocks? Hint: use a \"repeat\" block."
         'turtle_4_2': "Add a \"turn right by 90 degrees\" block somewhere in the middle of the program already out on the workspace to draw these triangles."
         'turtle_4_3': "Ok, here's the code you wrote to draw a single triangle. Can you add a \"repeat\" and \"turn\" block to make a pretty flower?"
@@ -165,8 +166,8 @@ ne:
         'bounce_10_basketball': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice."
         'bounce_11_basketball': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
         'bounce_12_basketball': "Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones."
-        'bounce_1_sports': "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
-        'bounce_2_sports': "There are two flags now! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
+        'bounce_1_sports': "झण्डा सम्म पुग्नुहोस्! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
+        'bounce_2_sports': "अब दुईवटा झण्डा छन्! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
         'bounce_5_sports': "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
         'bounce_6_sports': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
         'bounce_7_sports': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
@@ -295,8 +296,8 @@ ne:
         'maze_wordsearch_k_16': "Move me one way, then another to spell the word BELOW"
         'maze_wordsearch_k_20': "This is a test! Move me one way, then another to spell the word STORY"
         'applab_ec_simple': "Create your app by using the blocks in the toolbox."
-        'turtle_ec_1_2': "Now, draw a square. NOTE: use your favorite color by picking it in the new \"penColor\" block."
-        'turtle_ec_1_10': "You made it! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. Have fun!"
+        'turtle_ec_1_2': "अब, वर्ग  बनाउनुहोस्। NOTE: use your favorite color by picking it in the new \"penColor\" block."
+        'turtle_ec_1_10': "तपाईँले गरेरै छोड्नु भयो! Now, draw anything you want. Some fun ideas: a stick figure, snowflake, or spiral. Also try the new \"penWidth\" block. रमाईलो गर्नुहोस्!"
         'studio_ec_sandbox': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
     video:
       name:

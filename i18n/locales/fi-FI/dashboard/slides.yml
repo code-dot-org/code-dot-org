@@ -424,7 +424,7 @@ fi:
         text: "Hiekanveistossa sinun täytyy tietää että epäonnistuminen on osa ohjelmaa. Mutta jos jatkat, siitä ei tule mitään muuta kuin parempaa ja jännnittävämpää sinulle. Kärsivällisyys on pelin nimi. Pysy sen kanssa, tulet rakastamaan sitä."
       2:
         image: 'notes/C1_building_foundation_2.jpg'
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: "Tätä oppituntia kutsutaan perustan rakentamiseksi. Tällä oppitunnilla työskentelemme tehtävän parissa, jonka tarkoitus on olla todella vaikea. Sinulle selviää, miten tehdä vähintään yhtä pitkä rakennelma kuin yksi näistä kupeista ja se tulee olemaan tarpeeksi vahva kannattelemaan kirjan painoa."
       3:
         image: 'notes/C1_building_foundation_3.jpg'
         text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
@@ -437,7 +437,7 @@ fi:
     C1_getting_loopy:
       1:
         image: 'notes/C1_getting_loopy_1.png'
-        text: "Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work, there is something we use in both dances and in programming lightsuits. And that is loops! Loops are repeating an action over and over."
+        text: "Hei, nimeni on Miral Kotb ja olen Iluminaten luoja. Työssäni on jotain mitä käytämme sekä tansseissa ja valopukujen ohjelmoinnissa. Ne ovat silmukoita! Silmukat ovat tapa toistaa toiminto uudelleen ja uudelleen."
       2:
         image: 'notes/C1_getting_loopy_2.png'
         text: "When you repeat something multiple times, like my actions to keep the hula hoop spinning, I'm performing a loop of that action. This is a loop. This is a loop. And this is a loop."
@@ -465,7 +465,7 @@ fi:
         text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
       5:
         image: 'notes/C1_happy_maps_unplugged_5.png'
-        text: "It's like programming with paper. And that's it!"
+        text: "Se on kuin ohjelmointia paperilla. Ja se on siinä!"
     C1_maze_debugging:
       1:
         image: 'notes/C1_maze_debugging_1.png'
@@ -527,7 +527,7 @@ fi:
         text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
       7:
         image: 'notes/C1_going_places_safely_7.png'
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: "Vau, se oli hauskaa! Päivällisaika. Kirjaudun nyt ulos. En malta odottaa uudelleenkirjautumista, jotta pääseen näkemään minne pääsen seuraavaksi."
     C1_pair_programming:
       1:
         image: 'notes/C1_pair_programming_1.png'
@@ -657,7 +657,7 @@ fi:
         text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
       3:
         image: 'notes/C2_artist_debugging_3.png'
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: "Ah, siinä se ongelma on! Kissan viikset ovat 75 kuvapistettä pitkät, ei 25."
     C2_bee_debugging:
       1:
         image: 'notes/C2_bee_debugging_1.png'

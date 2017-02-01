@@ -37,6 +37,7 @@
         NetSim: Ionsamhlóir an Idirlín
         Custom: Ealaíontóir
         CustomStudio: Spraotharlann
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Cré-umha
@@ -203,14 +204,14 @@
           sé sa chatagóir Athróga.'
         turtle_2_7: Tarraingíonn an cód seo bís, ach díchumasaíodh na blocanna agus
           ní fheidhmeoidh siad. Déan do leagan féin den chód seo a úsáideann bloc
-          "áirigh le" (sa chatagóir "Lúba") agus bloc "áiritheoir" (sa chatagóir "Athróga")
+          "do gach" (sa chatagóir "Lúba") agus bloc "áiritheoir" (sa chatagóir "Athróga")
           a tharraingíonn an bhís chéanna.
         turtle_2_7_5: Gheobhaidh tú feidhm nua "tarraing fear sneachta" (sa gcatagóir
           Feidhmeanna). Tarraing dhá fhear sneachta, 250 agus 100 picteilín ar airde.
         turtle_2_8: Tá an ceann seo measartha casta. Úsáid an fheidhm "tarraing fear
           sneachta" agus an bloc nua "léim ar aghaidh" (sa chatagóir "Gníomhartha").
           Tarraing trí fhear sneachta le dathanna difriúla, 100 picteilín ó chéile.
-        turtle_2_9: Úsáid lúb "áirigh le" chun clann fear sneachta a tharraingt, iad
+        turtle_2_9: Úsáid lúb "do gach" chun clann fear sneachta a tharraingt, iad
           110, 100, 90, 80, agus 70 picteilín ar airde. Ba chóir dóibh a bheith 60
           picteilín ó chéile.
         turtle_2_10: Seo é cód lenar féidir bíseanna éagsúla a tharraingt. Cad a tharlaíonn

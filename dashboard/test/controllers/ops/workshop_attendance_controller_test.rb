@@ -96,7 +96,7 @@ module Ops
 
       teacher2_attendance = WorkshopAttendance.find_by_teacher_id(teacher2.id)
       assert_equal 'present', teacher2_attendance.status
-      assert_equal nil, teacher2_attendance.notes
+      assert_nil teacher2_attendance.notes
     end
 
     # Test index + CRUD controller actions

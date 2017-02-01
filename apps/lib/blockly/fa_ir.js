@@ -179,12 +179,12 @@ Blockly.Msg.LOGIC_BOOLEAN_TRUE = "صحیح";
 Blockly.Msg.LOGIC_COMPARE_HELPURL = "http://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ = "بازگشت صحیح اگر هر دو ورودی با یکدیگر برابر باشد.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GT = "بازگرداندن مقدار بولین true اگر ورودی اول  از ورودی دوم بزرگتر باشد.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GTE = "اگر ورودی اول بزرگتر یا مساوی ورودی دوم باشد، مقدار بولین true را برمی گرداند.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_GTE = "اگر ورودی اول بزرگتر یا مساوی ورودی دوم باشد، مقدار true را برمی گرداند.";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LT = "بازگرداندن مقدار true، اگر ورودی اول کوچکتر از ورودی دوم باشد.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE = "اگر ورودی اول کوچکتر یا مساوی ورودی دوم باشد، مقدار بولین true را بر میگرداند.";
-Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ = "اگر مقادیر هر دو ورودی با یکدیگر برابر نبودند، مقدار true را برمی گرداند.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_LTE = "بازگرداندن صحیح اگر ورودی اول کوچکتر یا مساوی با ورودی دوم باشد.";
+Blockly.Msg.LOGIC_COMPARE_TOOLTIP_NEQ = "برگرداندن صحیح اگر هر دو ورودی با یکدیگر برابر نباشند.";
 Blockly.Msg.LOGIC_NEGATE_HELPURL = "http://code.google.com/p/blockly/wiki/Not";
-Blockly.Msg.LOGIC_NEGATE_TITLE = "برعکس 1%";
+Blockly.Msg.LOGIC_NEGATE_TITLE = "نقیض %1";
 Blockly.Msg.LOGIC_NEGATE_TOOLTIP = "اگر ورودی برابر false  بود، مقدار بولین true را برمیگرداند. اگر ورودی برابر true بود مقدار بولین  false را برمیگرداند.";
 Blockly.Msg.LOGIC_NULL = "خالی";
 Blockly.Msg.LOGIC_NULL_HELPURL = "http://en.wikipedia.org/wiki/Nullable_type";
@@ -250,7 +250,7 @@ Blockly.Msg.MATH_ONLIST_TOOLTIP_SUM = "مجموع همهٔ عددهای لیست
 Blockly.Msg.MATH_POWER_SYMBOL = "^";
 Blockly.Msg.MATH_RANDOM_FLOAT_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%84%DB%8C%D8%AF_%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF_%D8%AA%D8%B5%D8%A7%D8%AF%D9%81%DB%8C";
 Blockly.Msg.MATH_RANDOM_FLOAT_TITLE_RANDOM = "کسر تصادفی";
-Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP = "مقدار اعشاری تصادفی بین صفر تا یک (ولی نه برابر با یک) را بر می گرداند.";
+Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP = "کسری تصادفی بین (و یا برابر) 0.0 و ( حتما کوچکتر) 1.0 را برمیگرداند.";
 Blockly.Msg.MATH_RANDOM_INT_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%84%DB%8C%D8%AF_%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF_%D8%AA%D8%B5%D8%A7%D8%AF%D9%81%DB%8C";
 Blockly.Msg.MATH_RANDOM_INT_TITLE = "عدد صحیح تصادفی بین %1 تا %2";
 Blockly.Msg.MATH_RANDOM_INT_TOOLTIP = "یک عدد صحیح تصادفی بین و یا برابر دو مقدار مشخص‌شده به باز می‌گرداند.";
@@ -261,13 +261,13 @@ Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDUP = "گرد به بالا";
 Blockly.Msg.MATH_ROUND_TOOLTIP = "گردکردن یک عدد به بالا یا پایین.";
 Blockly.Msg.MATH_SINGLE_HELPURL = "http://fa.wikipedia.org/wiki/%D8%B1%DB%8C%D8%B4%D9%87_%D8%AF%D9%88%D9%85";
 Blockly.Msg.MATH_SINGLE_OP_ABSOLUTE = "قدرمطلق";
-Blockly.Msg.MATH_SINGLE_OP_ROOT = "ریشهٔ دوم";
+Blockly.Msg.MATH_SINGLE_OP_ROOT = "جذر";
 Blockly.Msg.MATH_SINGLE_TOOLTIP_ABS = "قدر مطلق یک عدد را بازمی‌گرداند.";
 Blockly.Msg.MATH_SINGLE_TOOLTIP_EXP = "بازگرداندن توان e یک عدد.";
-Blockly.Msg.MATH_SINGLE_TOOLTIP_LN = "لوگاریتم طبیعی یک عدد را باز می‌گرداند.";
-Blockly.Msg.MATH_SINGLE_TOOLTIP_LOG10 = "بازگرداندن لگاریتم بر پایهٔ ۱۰ یک عدد.";
-Blockly.Msg.MATH_SINGLE_TOOLTIP_NEG = "منفی‌شدهٔ یک عدد را باز می‌گرداند.";
-Blockly.Msg.MATH_SINGLE_TOOLTIP_POW10 = "مقدار ۱۰ به توان یک عدد را برمیگرداند.";
+Blockly.Msg.MATH_SINGLE_TOOLTIP_LN = "لوگاریتم طبیعی یک عدد را نمایش می دهد.";
+Blockly.Msg.MATH_SINGLE_TOOLTIP_LOG10 = "لگاریتم پایهٔ ۱۰ یک عدد را نمایش می دهد.";
+Blockly.Msg.MATH_SINGLE_TOOLTIP_NEG = "منفی‌شدهٔ یک عدد را نمایش می دهد.";
+Blockly.Msg.MATH_SINGLE_TOOLTIP_POW10 = "مقدار ۱۰ به توان یک عدد را نمایش می دهد.";
 Blockly.Msg.MATH_SINGLE_TOOLTIP_ROOT = "ریشهٔ دوم (جذر) یک عدد را باز می‌گرداند.";
 Blockly.Msg.MATH_SUBTRACTION_SYMBOL = "-";
 Blockly.Msg.MATH_TRIG_ACOS = "cosec";
@@ -277,12 +277,12 @@ Blockly.Msg.MATH_TRIG_COS = "کسینوس";
 Blockly.Msg.MATH_TRIG_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%A8%D8%B9%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%85%D8%AB%D9%84%D8%AB%D8%A7%D8%AA%DB%8C";
 Blockly.Msg.MATH_TRIG_SIN = "سینوس";
 Blockly.Msg.MATH_TRIG_TAN = "تانژانت";
-Blockly.Msg.MATH_TRIG_TOOLTIP_ACOS = "آرک‌کسینوس درجه (نه رادیان) را برمیگرداند.";
-Blockly.Msg.MATH_TRIG_TOOLTIP_ASIN = "آرک‌سینوس درجه (نه رادیان) را برمیگرداند.";
-Blockly.Msg.MATH_TRIG_TOOLTIP_ATAN = "آرک‌تانژانت درجه (نه رادیان) را برمیگرداند.";
-Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "کسینوس درجه (نه رادیان) را بر می گرداند.";
-Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "سینوس درجه (نه رادیان) را برمیگرداند.";
-Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "تانژانت یک درجه (نه رادیان) را برمیگرداند.";
+Blockly.Msg.MATH_TRIG_TOOLTIP_ACOS = "آرک‌کسینوس درجه (نه رادیان) را نمایش می دهد.";
+Blockly.Msg.MATH_TRIG_TOOLTIP_ASIN = "آرک‌سینوس درجه (نه رادیان) را نمایش می دهد.";
+Blockly.Msg.MATH_TRIG_TOOLTIP_ATAN = "آرک‌تانژانت درجه (نه رادیان) را نمایش می دهد.";
+Blockly.Msg.MATH_TRIG_TOOLTIP_COS = "کسینوس درجه (نه رادیان) را نمایش می دهد.";
+Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "سینوس درجه (نه رادیان) را نشان می دهد.";
+Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "تانژانت یک درجه (نه رادیان) را نشان می دهد.";
 Blockly.Msg.NEW_VARIABLE = "متغیر جدید...";
 Blockly.Msg.NEW_VARIABLE_TITLE = "نام متغیر جدید:";
 Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";
@@ -310,7 +310,7 @@ Blockly.Msg.PROCEDURES_IFRETURN_TOOLTIP = "اگر یک مقدار صحیح اس�
 Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "اخطار: این بلوک فقط در تعریف توابع میتواند بکار رود.";
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "نام ورودی:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "ورودی‌ها";
-Blockly.Msg.REMOVE_COMMENT = "حذف نظر";
+Blockly.Msg.REMOVE_COMMENT = "نظر را حذف کن";
 Blockly.Msg.RENAME_PARAMETER = "پارامتر را تغییر نام دهید...";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "نام تمام پارامترهای '%1' را تغییر بده به:";
 Blockly.Msg.RENAME_VARIABLE = "تغییر نام متغیر...";

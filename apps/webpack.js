@@ -35,7 +35,7 @@ var baseConfig = {
           path.resolve(__dirname, 'static'),
         ],
         loader: "url-loader?limit=1024",
-      }
+      },
     ],
     preLoaders: [
       {
@@ -58,6 +58,14 @@ var baseConfig = {
   },
 };
 
+if (envConstants.HOT) {
+  baseConfig.module.loaders.push({
+    test: /\.jsx?$/,
+    loader: 'react-hot',
+    include: [path.resolve(__dirname, 'src')]
+  });
+}
+
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
   baseConfig.module.preLoaders = [
@@ -70,6 +78,7 @@ if (envConstants.COVERAGE) {
       loader: "babel",
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     }, {
       test: /\.jsx?$/,
@@ -77,9 +86,15 @@ if (envConstants.COVERAGE) {
       include: path.resolve(__dirname, 'src'),
       exclude: [
         path.resolve(__dirname, 'src', 'lodash.js'),
+
+        // we need to turn off coverage for this file
+        // because we have tests that actually make assertions
+        // about the contents of the compiled version of this file :(
+        path.resolve(__dirname, 'src', 'flappy', 'levels.js'),
       ],
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     },
   ];
@@ -127,7 +142,12 @@ var karmaConfig = _.extend({}, baseConfig, {
     "cheerio": "window",
     "react/addons": true,
     "react/lib/ExecutionEnvironment": true,
-    "react/lib/ReactContext": true
+    "react/lib/ReactContext": true,
+
+    // The below are necessary for serialport import to not choke during webpack-ing.
+    fs: '{}',
+    child_process: true,
+    bindings: true
   },
   plugins: [
     new webpack.ProvidePlugin({React: 'react'}),
@@ -167,7 +187,7 @@ function create(options) {
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
-      publicPath: '/blockly/js/',
+      publicPath: '/assets/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
     devtool: !process.env.CI && options.minify ?  'source-map' : devtool,

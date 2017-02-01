@@ -39,7 +39,8 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Use updateRecord to store the user's edits in the database. (Click to see full instructions)",
-    "encrypted_examples": "RMwL1AABGXVmmw/vxXgR/+zgUosXeYw0VcO6Z6Xj0KuvwNDKC54ipReSE7L+\nN9gR\n"
+    "encrypted_examples": "RMwL1AABGXVmmw/vxXgR/+zgUosXeYw0VcO6Z6Xj0KuvwNDKC54ipReSE7L+\nN9gR\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": ""

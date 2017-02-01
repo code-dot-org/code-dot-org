@@ -333,7 +333,9 @@ def update_database
             db_proficiency.last_progress_at = proficiency[51]
           end
 
-          if db_proficiency.basic_proficiency_at.nil? || db_proficiency.basic_proficiency_at > proficiency[52]
+          if proficiency[52] && (
+            db_proficiency.basic_proficiency_at.nil? || db_proficiency.basic_proficiency_at > proficiency[52]
+          )
             db_proficiency.basic_proficiency_at = proficiency[52]
           end
           unless db_proficiency.basic_proficiency_at

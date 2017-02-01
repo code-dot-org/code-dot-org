@@ -37,6 +37,7 @@ nn:
         'NetSim': 'Internettsimulator'
         'Custom': 'Kunstnar'
         'CustomStudio': 'Spel-lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronse'

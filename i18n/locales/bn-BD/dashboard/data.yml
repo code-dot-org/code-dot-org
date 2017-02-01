@@ -37,6 +37,7 @@ bn:
         'NetSim': 'Internet Simulator'
         'Custom': 'শিল্পী'
         'CustomStudio': 'প্লে ল্যাব'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'ব্রোঞ্জ'

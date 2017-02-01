@@ -37,6 +37,7 @@ lt:
         'NetSim': 'Interneto simuliatorius'
         'Custom': 'Menininkas'
         'CustomStudio': 'Laboratorija'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronza'

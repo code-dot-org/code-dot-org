@@ -37,6 +37,7 @@ id:
         'NetSim': 'Simulator Internet'
         'Custom': 'Artis'
         'CustomStudio': 'Play Lab/Lab Permainan'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Perunggu'

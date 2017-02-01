@@ -3,7 +3,7 @@ he:
     messages:
       not_saved: 'נא תקן את השגיאות הבאות:'
       too_young: 'התוכן מכיל הגבלות גיל במקום ולא זמין לתלמידים צעירים.'
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
+      teacher_must_accept_terms: 'בתוכן זה יש מגבלת גיל במקום והוא אינו זמין לתלמידים הצעירים. בקש מהמורה שלך לעדכן את תנאי השירות כדי לתת לך גישה לתוכן זה. המורה שלך יכול לעשות זאת על ידי התחברות לקוד סטודיו ולחיצה על כפתור ''סקירת עדכון תנאים'' בסמוך לחלקו העליון של דף הבית של קוד סטודיו.'
       pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
     errors:
@@ -305,6 +305,8 @@ he:
     delete_text_teacher_note: 'שים לב: מחיקת החשבון שלך לא תגרום למחיקת חשבונות התלמידים שלך.'
     delete_confirm: 'האם אתה בטוח שברצונך למחוק את החשבון שלך?'
     deleted_user: 'deleted user'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'הושלם'
     tried: 'נוסה'
@@ -732,6 +734,9 @@ he:
     content: 'Content'
     practice: 'Teaching Practices'
     peer_review: 'Peer Review'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

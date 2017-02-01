@@ -28,7 +28,7 @@
   og_title: เด็กทุกคนสมควรได้รับโอกาส
   og_description: "นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสศึกษาวิทยาการคอมพิวเตอร์. มันมีการเปลี่ยนแปลงทุกๆ อย่าง."
   csedweek_og_title: "Hour of Code กำลังมา"
-  csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description: "4-10 ธันวาคม พ.ศ.2560  วิทยาศาสตร์คอมพิวเตอร์คือพื้นฐานสำหรับนักเรียนทุกคนได้เรียนรู้"
   hoc2014_heading: "เข้าร่วม <a href=\"http://hourofcode.com\">Hour of Code</a><br/> ในวันที่ 8 - 14 ธันวาคม 2014<br/>"
   hoc2014_students: "นักเรียน"
   hoc2014_try: "ลอง"
@@ -892,6 +892,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: "Full Test - 50 questions"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

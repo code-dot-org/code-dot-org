@@ -30,7 +30,7 @@ hu:
           title: 2. tanfolyam
           description: A 2. tanfolyam a már olvasni tudó és előzetes programozási tapasztalattal bíró tanulók számára készült. Ezen a tanfolyamon a tanulók programokat készítenek majd bizonyos problémák megoldására, továbbá interaktív játékokat fognak fejleszteni vagy történetek fognak létrehozni, amelyeket majd megtudnak osztani. 2.-5. osztályosok számára ajánlott.
           description_short: A 2. tanfolyam a már olvasó korosztály számára készült.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Kor 6+ (olvasás szükséges)
           stage:
             'Artist: Debugging': 'Művész: hibakeresés'
             'Artist: Loops': 'Művész: ciklusok'
@@ -286,15 +286,17 @@ hu:
           description_short: Események
           stage:
             Bounce: Visszapattanós
-            Calc: Calc
-            Eval: Eval
+            Calc: Számolás
+            Eval: Kiértékel
             Studio: Studio
+          description_audience: ''
         flappy:
           title: Flappy kód
           description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld ki a Flappy kód gyakorlatot!
           description_short: Írd meg a saját Flappy játékod kevesebb, mint 10 perc alatt!
           stage:
             Flappy Code: Flappy kód
+          description_audience: ''
         jigsaw:
           title: Kirakós játék
           description: Próbáld ki a kirakós játék bemutatóját
@@ -321,14 +323,14 @@ hu:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Feladványok
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Feladványok
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -1484,9 +1486,11 @@ hu:
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1494,6 +1498,13 @@ hu:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2198,10 +2209,10 @@ hu:
         basketball:
           stage:
             Bounce: Visszapattanós
-          title: Choose your team and make a basketball game
+          title: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
           description_audience: ''
-          description_short: Choose your team and make a basketball game
-          description: Choose your team and make a basketball game
+          description_short: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
+          description: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2299,11 +2310,11 @@ hu:
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Minecraft Kódolás órája tervező
+          title: Minecraft Kódolás órája tervező
           description_audience: ''
           description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description: Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2474,10 +2485,10 @@ hu:
         sports:
           stage:
             Sports: Sports
-          title: Code your own sports game
+          title: Kódold le a saját sportjátékodat
           description_audience: ''
-          description_short: Mix and match across sports
-          description: Mix and match across sports
+          description_short: Kombinálj össze különböző sportágakat
+          description: Kombinálj össze különböző sportágakat
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Üdvözlünk!
@@ -2593,3 +2604,14 @@ hu:
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Üdvözlünk!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Összegzés
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

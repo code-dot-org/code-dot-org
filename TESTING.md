@@ -75,12 +75,14 @@ To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
-`cd dashboard && rake test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
+`cd dashboard && bundle exec rails test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
 
-If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, you can try running `RAILS_ENV=test rake db:reset db:migrate seed:all` to recreate the db.
+If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, you can try running `RAILS_ENV=test rake db:reset db:setup_or_migrate seed:all` to recreate the db.
 
 If you just want to run a single file of tests, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb`
+or
+`bundle exec rails test ./path/to/your/test.rb`
 
 To run a specific unit test, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb --name your_amazing_test_name`

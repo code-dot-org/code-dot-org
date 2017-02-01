@@ -37,6 +37,7 @@ sk:
         'NetSim': 'Simulátor Internetu'
         'Custom': 'Umelec'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronzová'

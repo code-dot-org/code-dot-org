@@ -192,8 +192,15 @@ class Pd::TeacherApplication < ActiveRecord::Base
     school_district.try(:name) || application_hash['school-district-name']
   end
 
+  def regional_partner
+    school_district.try do |d|
+      d.regional_partners_school_districts.find_by(course: selected_course).try(:regional_partner) ||
+      d.regional_partners.first
+    end
+  end
+
   def regional_partner_name
-    school_district.try(:regional_partner).try(:name)
+    regional_partner.try(:name)
   end
 
   def to_expanded_json

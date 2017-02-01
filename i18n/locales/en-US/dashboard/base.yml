@@ -1,0 +1,831 @@
+en:
+  errors:
+    messages:
+      not_saved: 'crwdns27834:0crwdne27834:0'
+      too_young: 'crwdns58492:0crwdne58492:0'
+      teacher_must_accept_terms: 'crwdns58493:0crwdne58493:0'
+      pair_programmer: 'crwdns58494:0crwdne58494:0'
+  activerecord:
+    errors:
+      messages:
+        blank: "crwdns7489:0crwdne7489:0"
+    attributes:
+      user:
+        name: 'crwdns8792:0crwdne8792:0'
+        email: 'crwdns2549:0crwdne2549:0'
+        username: 'crwdns2550:0crwdne2550:0'
+        password: 'crwdns2551:0crwdne2551:0'
+        password_confirmation: 'crwdns2552:0crwdne2552:0'
+        current_password: 'crwdns2553:0crwdne2553:0'
+        locale: 'crwdns2554:0crwdne2554:0'
+        age: 'crwdns7490:0crwdne7490:0'
+        gender: 'crwdns2555:0crwdne2555:0'
+        edit_header: 'crwdns2927:0crwdne2927:0'
+        error:
+          future: 'crwdns4882:0crwdne4882:0'
+  hello: "crwdns2556:0crwdne2556:0"
+  welcome_back: "crwdns3633:0%{name}crwdne3633:0"
+  your_professional_learning_plan: "crwdns56511:0crwdne56511:0"
+  see_your_learning_plan: "crwdns56512:0crwdne56512:0"
+  submit: 'crwdns35673:0crwdne35673:0'
+  unsubmit: 'crwdns56122:0crwdne56122:0'
+  previous_page: 'crwdns56442:0crwdne56442:0'
+  next_page: 'crwdns56247:0crwdne56247:0'
+  next_resource: 'crwdns56990:0crwdne56990:0'
+  done_with_module: 'crwdns56991:0crwdne56991:0'
+  cancel: "crwdns56443:0crwdne56443:0"
+  okay: "crwdns56444:0crwdne56444:0"
+  heading_x_of_y: "crwdns56275:0%{heading}crwdnd56275:0%{x}crwdnd56275:0%{y}crwdne56275:0"
+  add_teacher_form:
+    code:
+      label: 'crwdns23429:0crwdne23429:0'
+      placeholder: "crwdns23430:0crwdne23430:0"
+      instructions: "crwdns55880:0crwdne55880:0"
+    submit: 'crwdns2559:0crwdne2559:0'
+  add_hint_form:
+    placeholder: 'crwdns4360:0crwdne4360:0'
+    submit: 'crwdns4361:0crwdne4361:0'
+  appname: "crwdns2560:0crwdne2560:0"
+  stage: "crwdns2561:0crwdne2561:0"
+  stage_number: "crwdns18132:0%{number}crwdne18132:0"
+  puzzle: "crwdns2562:0crwdne2562:0"
+  trophies: "crwdns2563:0crwdne2563:0"
+  courses: 'crwdns2928:0crwdne2928:0'
+  unplugged_activity: 'crwdns55885:0crwdne55885:0'
+  of: "crwdns2564:0crwdne2564:0"
+  more: "crwdns2565:0crwdne2565:0"
+  less: "crwdns2566:0crwdne2566:0"
+  beta: "crwdns26807:0crwdne26807:0"
+  try_hoc: "crwdns2929:0crwdne2929:0"
+  try_k8intro: "crwdns4519:0crwdne4519:0"
+  k8intro: "crwdns4631:0crwdne4631:0"
+  already_started: "crwdns2930:0crwdne2930:0"
+  demos: 'crwdns3591:0crwdne3591:0'
+  continue: 'crwdns3075:0crwdne3075:0'
+  prize: 'crwdns3177:0crwdne3177:0'
+  more_info: 'crwdns3896:0crwdne3896:0'
+  auth:
+    sign_in_with: 'crwdns2932:0%{provider}crwdne2932:0'
+    signed_in: 'crwdns2567:0crwdne2567:0'
+    signed_out: 'crwdns7468:0%{url}crwdne7468:0'
+    sign_out_of: 'crwdns7469:0%{provider}crwdnd7469:0%{url}crwdnd7469:0%{provider}crwdne7469:0'
+    already_signedup: 'crwdns2933:0crwdne2933:0'
+    notyet_signedup: "crwdns2934:0crwdne2934:0"
+    google_oauth2: 'crwdns7336:0crwdne7336:0'
+    twitter: 'crwdns2569:0crwdne2569:0'
+    facebook: 'crwdns2570:0crwdne2570:0'
+    windowslive: 'crwdns7337:0crwdne7337:0'
+    forgot_password: 'crwdns2936:0crwdne2936:0'
+    need_confirmation: "crwdns2937:0crwdne2937:0"
+    need_unlock: "crwdns2938:0crwdne2938:0"
+  signup_form:
+    student_count: 'crwdns37544:0%{count}crwdne37544:0'
+    teacher_count: 'crwdns37545:0%{count}crwdne37545:0'
+    overview: 'crwdns58495:0crwdne58495:0'
+    hoc_already_signed_up_heading: 'crwdns68841:0crwdne68841:0'
+    hoc_already_signed_up_content: 'crwdns68842:0%{learn_url}crwdnd68842:0%{educate_url}crwdne68842:0'
+    hoc_already_signed_up_content_post_hoc: 'crwdns71749:0%{studio_url}crwdne71749:0'
+    teacher_educator_guide: 'crwdns4058:0crwdne4058:0'
+    title: "crwdns58496:0crwdne58496:0"
+    school_name: 'crwdns2940:0crwdne2940:0'
+    school_address: 'crwdns3037:0crwdne3037:0'
+    address_placeholder: 'crwdns2942:0crwdne2942:0'
+    gender: 'crwdns2943:0crwdne2943:0'
+    birthday: 'crwdns2944:0crwdne2944:0'
+    age: 'crwdns7491:0crwdne7491:0'
+    user_type: 'crwdns21448:0crwdne21448:0'
+    submit: 'crwdns2945:0crwdne2945:0'
+    teacher: 'crwdns2946:0crwdne2946:0'
+    valid_username: "crwdns3710:0crwdne3710:0"
+    invalid_username: "crwdns3711:0crwdne3711:0"
+    taken_username: "crwdns3712:0crwdne3712:0"
+    valid_password: "crwdns3713:0crwdne3713:0"
+    invalid_password: "crwdns3714:0crwdne3714:0"
+    mismatch_password: "crwdns3715:0crwdne3715:0"
+    student_terms: "crwdns58497:0crwdne58497:0"
+    teacher_terms: "crwdns58498:0crwdne58498:0"
+    additional_information: "crwdns7492:0crwdne7492:0"
+    user_type_label: "crwdns56993:0crwdne56993:0"
+    user_type_teacher: "crwdns56994:0crwdne56994:0"
+    user_type_student: "crwdns56995:0crwdne56995:0"
+    field_is_required: "crwdns58499:0crwdne58499:0"
+    accept_terms: "crwdns58500:0crwdne58500:0"
+  signin_form:
+    title: 'crwdns4520:0crwdne4520:0'
+    login: 'crwdns58501:0crwdne58501:0'
+    password: 'crwdns2949:0crwdne2949:0'
+    remember: 'crwdns2950:0crwdne2950:0'
+    submit: 'crwdns2951:0crwdne2951:0'
+  signin:
+    try_heading: 'crwdns4888:0crwdne4888:0'
+    try_hoc: 'crwdns4521:0crwdne4521:0'
+    try_20hours: 'crwdns4522:0crwdne4522:0'
+  signinsection:
+    welcome: 'crwdns6585:0%{section_name}crwdne6585:0'
+    name: 'crwdns6586:0crwdne6586:0'
+    picture: 'crwdns6587:0crwdne6587:0'
+    words: 'crwdns6588:0crwdne6588:0'
+    login: 'crwdns6589:0crwdne6589:0'
+    invalid_login: 'crwdns57400:0crwdne57400:0'
+    pair_programming: 'crwdns57401:0crwdne57401:0'
+  password:
+    reset_form:
+      title: 'crwdns2952:0crwdne2952:0'
+      instructions: "crwdns58502:0crwdne58502:0"
+      email: 'crwdns2953:0crwdne2953:0'
+      submit: 'crwdns58503:0crwdne58503:0'
+    change_form:
+      title: 'crwdns2955:0crwdne2955:0'
+      new_password: 'crwdns2956:0crwdne2956:0'
+      confirm_password: 'crwdns2957:0crwdne2957:0'
+      submit: 'crwdns2958:0crwdne2958:0'
+  welcome_email:
+    subject: 'crwdns2572:0crwdne2572:0'
+    body: |
+      crwdns2573:0%{link}crwdnd2573:0%{name}crwdne2573:0
+  follower:
+    invite_sent: 'crwdns2574:0crwdne2574:0'
+    added_teacher: 'crwdns2575:0%{name}crwdne2575:0'
+    registered: "crwdns4077:0%{section_name}crwdne4077:0"
+    error:
+      signed_in: 'crwdns2577:0crwdne2577:0'
+      username_not_found: 'crwdns2578:0%{username}crwdne2578:0'
+      username_in_use: 'crwdns2579:0%{username}crwdne2579:0'
+      no_teacher: "crwdns2580:0%{teacher_email_or_code}crwdne2580:0"
+      section_not_found: "crwdns5587:0%{section_code}crwdne5587:0"
+      blank_code: "crwdns5588:0crwdne5588:0"
+      cant_join_own_section: "crwdns5589:0crwdne5589:0"
+    mail:
+      invite_student:
+        subject: "crwdns3178:0%{teacher_name}crwdne3178:0"
+      student_disassociated:
+        subject: 'crwdns4337:0%{student_name}crwdne4337:0'
+  reports:
+    error:
+      access_denied: "crwdns2582:0crwdne2582:0"
+  redeem_prizes:
+    title: 'crwdns3716:0%{name}crwdne3716:0'
+    provider: 'crwdns3717:0crwdne3717:0'
+    code: 'crwdns3718:0crwdne3718:0'
+    redeem_header: 'crwdns4022:0crwdne4022:0'
+    donorschoose_register: 'crwdns4889:0crwdne4889:0'
+    donorschoose_project: 'crwdns4890:0crwdne4890:0'
+    donorschoose_how_to: 'crwdns4340:0crwdne4340:0'
+    success: 'crwdns3808:0crwdne3808:0'
+    error: 'crwdns3809:0crwdne3809:0'
+    error_us_only: 'crwdns4061:0crwdne4061:0'
+    error_not_earned: 'crwdns4310:0crwdne4310:0'
+    error_already_redeemed: 'crwdns4311:0crwdne4311:0'
+    no_prizes_available: "crwdns4312:0crwdne4312:0"
+    teacher_info_required: "crwdns4338:0crwdne4338:0"
+    teacher_email_required: "crwdns4341:0crwdne4341:0"
+    confirm:
+      title: 'crwdns3810:0crwdne3810:0'
+      'no': 'crwdns3811:0crwdne3811:0'
+      'yes': 'crwdns3812:0crwdne3812:0'
+      msg: 'crwdns3813:0%{prize_name}crwdne3813:0'
+      msg_student: 'crwdns3814:0crwdne3814:0'
+      msg_publicschool: 'crwdns4323:0crwdne4323:0'
+      msg_visit_website: 'crwdns4024:0crwdne4024:0'
+    providers:
+      apple_itunes: 'crwdns4025:0crwdne4025:0'
+      donors_choose: 'crwdns4026:0crwdne4026:0'
+      donors_choose_bonus: 'crwdns4027:0crwdne4027:0'
+      dropbox: 'crwdns4313:0crwdne4313:0'
+      valve: 'crwdns4029:0crwdne4029:0'
+      ea_bejeweled: 'crwdns4030:0crwdne4030:0'
+      ea_fifa: 'crwdns4031:0crwdne4031:0'
+      ea_simcity: 'crwdns4032:0crwdne4032:0'
+      ea_pvz: 'crwdns4033:0crwdne4033:0'
+      skype: 'crwdns4034:0crwdne4034:0'
+    msg:
+      choose: 'crwdns3729:0crwdne3729:0'
+      choose_teacher: 'crwdns4035:0crwdne4035:0'
+      earned: 'crwdns4063:0crwdne4063:0'
+      not_earned_title: 'crwdns4064:0crwdne4064:0'
+      not_earned: 'crwdns4314:0%{num_trophies}crwdne4314:0'
+      teacher:
+        earned: 'crwdns4387:0%{num_trophies}crwdne4387:0'
+        not_earned_title: 'crwdns4067:0crwdne4067:0'
+        not_earned: 'crwdns4160:0%{num_trophies}crwdne4160:0'
+        bonus:
+          not_earned_title: 'crwdns4069:0crwdne4069:0'
+          earned: 'crwdns4275:0%{num_trophies}crwdne4275:0'
+          not_earned: 'crwdns4162:0%{num_trophies}crwdne4162:0'
+  crud:
+    new_model: 'crwdns2583:0%{model}crwdne2583:0'
+    show: 'crwdns2584:0crwdne2584:0'
+    edit: 'crwdns2585:0crwdne2585:0'
+    edit_model: 'crwdns2586:0%{model}crwdne2586:0'
+    update: 'crwdns2587:0crwdne2587:0'
+    destroy: 'crwdns2588:0crwdne2588:0'
+    back: 'crwdns2589:0crwdne2589:0'
+    confirm: 'crwdns2590:0crwdne2590:0'
+    created: 'crwdns2591:0%{model}crwdne2591:0'
+    updated: 'crwdns2592:0%{model}crwdne2592:0'
+    destroyed: 'crwdns4333:0%{model}crwdne4333:0'
+    access_denied: 'crwdns4334:0%{model}crwdne4334:0'
+  nav:
+    header:
+      finished_hoc: "crwdns2959:0crwdne2959:0"
+      sign_in_to_save: 'crwdns2960:0crwdne2960:0'
+      free_play:
+        playlab: 'crwdns20075:0crwdne20075:0'
+        artist: 'crwdns20076:0crwdne20076:0'
+        calculate: 'crwdns43324:0crwdne43324:0'
+        applab: 'crwdns54664:0crwdne54664:0'
+    user:
+      classroom: 'crwdns22205:0crwdne22205:0'
+      district_dashboard: 'crwdns35951:0crwdne35951:0'
+      label: 'crwdns2593:0%{username}crwdne2593:0'
+      stats: 'crwdns3077:0crwdne3077:0'
+      settings: 'crwdns2963:0crwdne2963:0'
+      prizes: 'crwdns2964:0crwdne2964:0'
+      logout: 'crwdns2965:0crwdne2965:0'
+      signin: 'crwdns2597:0crwdne2597:0'
+      signup: 'crwdns58504:0crwdne58504:0'
+      already_registered: 'crwdns8813:0crwdne8813:0'
+      pair_programming: 'crwdns57402:0crwdne57402:0'
+      team: 'crwdns57403:0crwdne57403:0'
+      driver: 'crwdns57404:0crwdne57404:0'
+      navigator: 'crwdns57405:0crwdne57405:0'
+    popup:
+      progress_for_user: "crwdns38277:0%{name}crwdne38277:0"
+      progress: 'crwdns2599:0crwdne2599:0'
+      lines: 'crwdns2966:0%{lines}crwdne2966:0'
+      close: 'crwdns2600:0crwdne2600:0'
+      mastery: 'crwdns2967:0crwdne2967:0'
+      puzzle_map: 'crwdns2968:0crwdne2968:0'
+      prizes: 'crwdns2969:0%{total_trophies}crwdne2969:0'
+      prize_earned: 'crwdns3736:0%{total_trophies}crwdne3736:0'
+      prize_us_only: 'crwdns4072:0crwdne4072:0'
+      prizes_link: 'crwdns2970:0crwdne2970:0'
+  teacher:
+    answer: 'crwdns50991:0crwdne50991:0'
+    for_teachers_only: 'crwdns50992:0crwdne50992:0'
+    title:
+      one: 'crwdns4363:0crwdne4363:0'
+      other: 'crwdns2604:0crwdne2604:0'
+    remove: 'crwdns4339:0crwdne4339:0'
+    confirm:
+      remove: 'crwdns4364:0crwdne4364:0'
+    students:
+      dashboard: 'crwdns7340:0crwdne7340:0'
+    user_not_found: 'crwdns55874:0crwdne55874:0'
+    student_teacher_disassociated: 'crwdns55875:0%{teacher_name}crwdne55875:0'
+    panel:
+      answer_viewer: 'crwdns58505:0crwdne58505:0'
+      student: 'crwdns38279:0crwdne38279:0'
+      viewing_solution: 'crwdns39079:0crwdne39079:0'
+      try_it_yourself: 'crwdns38280:0crwdne38280:0'
+      section: 'crwdns39080:0crwdne39080:0'
+      example: 'crwdns45368:0crwdne45368:0'
+      example_with_number: 'crwdns45369:0%{solution_number}crwdne45369:0'
+      submitted_on: 'crwdns49667:0crwdne49667:0'
+      unsubmit: 'crwdns49668:0crwdne49668:0'
+      worked_with: 'crwdns57406:0crwdne57406:0'
+      update_lock_settings: 'crwdns58506:0crwdne58506:0'
+      clear_response: 'crwdns68016:0crwdne68016:0'
+  user:
+    email_confirm_needed: 'crwdns4342:0crwdne4342:0'
+    email_confirm_needed_required: 'crwdns33866:0%{email}crwdne33866:0'
+    email_confirm_wrong_email: 'crwdns33867:0crwdne33867:0'
+    email_resend_confirm: 'crwdns4343:0crwdne4343:0'
+    new_password_hint: "crwdns2610:0crwdne2610:0"
+    current_password_hint: 'crwdns2611:0crwdne2611:0'
+    delete: 'crwdns27773:0crwdne27773:0'
+    delete_text: "crwdns27774:0crwdne27774:0"
+    delete_text_teacher_note: 'crwdns27775:0crwdne27775:0'
+    delete_confirm: 'crwdns27776:0crwdne27776:0'
+    deleted_user: 'crwdns71750:0crwdne71750:0'
+    no_password_because_oauth: 'crwdns72035:0crwdne72035:0'
+    no_password_because_sponsored: 'crwdns72036:0crwdne72036:0'
+  user_level:
+    completed: 'crwdns3079:0crwdne3079:0'
+    tried: 'crwdns3080:0crwdne3080:0'
+  home:
+    title: "crwdns8814:0crwdne8814:0"
+    description: 'crwdns41699:0crwdne41699:0'
+    lines_of_code: "crwdns37546:0%{lines_count}crwdne37546:0"
+    lines_of_code_linebreak: "crwdns41700:0%{lines_count}crwdnd41700:0%{students_count}crwdne41700:0"
+    all_courses: "crwdns19023:0crwdne19023:0"
+    lesson_plans: "crwdns19024:0crwdne19024:0"
+    signin_message: "crwdns4633:0%{link}crwdne4633:0"
+    student_reg_link: 'crwdns4523:0crwdne4523:0'
+    teacher_reg_link: 'crwdns4524:0crwdne4524:0'
+    signin_directions: 'crwdns4891:0crwdne4891:0'
+    teacher_dashboard: 'crwdns3083:0crwdne3083:0'
+    teacher_student_count_one: 'crwdns4073:0%{count}crwdne4073:0'
+    teacher_student_count: 'crwdns3134:0%{count}crwdne3134:0'
+    teacher_averages: 'crwdns3135:0%{trophy_average}crwdnd3135:0%{trophy_max}crwdne3135:0'
+    teacher_print_certificates: 'crwdns4525:0crwdne4525:0'
+    teacher_read_blog: 'crwdns4526:0crwdne4526:0'
+    classroom: 'crwdns3085:0crwdne3085:0'
+    student_progress: 'crwdns3794:0crwdne3794:0'
+    student_stats: 'crwdns3087:0%{trophy_count}crwdnd3087:0%{trophy_max}crwdne3087:0'
+    student_left_off: 'crwdns3088:0crwdne3088:0'
+    student_finished: 'crwdns4325:0%{online_link}crwdnd4325:0%{local_school_link}crwdne4325:0'
+    local_school: 'crwdns3180:0crwdne3180:0'
+    online: 'crwdns3181:0crwdne3181:0'
+    see_details: 'crwdns3795:0crwdne3795:0'
+    view_course: 'crwdns43450:0crwdne43450:0'
+    prize_info: 'crwdns4893:0crwdne4893:0'
+    tryfirst: 'crwdns4636:0crwdne4636:0'
+    trynow: 'crwdns4637:0crwdne4637:0'
+    add_hint_help: 'crwdns4894:0crwdne4894:0'
+    20hour_overview: 'crwdns4895:0crwdne4895:0'
+    test_videos_help: 'crwdns5337:0crwdne5337:0'
+    try_beta_courses: 'crwdns6263:0crwdne6263:0'
+    use_as_teacher: 'crwdns7341:0crwdne7341:0'
+    heading_hoc2014: "crwdns24786:0crwdne24786:0"
+    heading_elementary: "crwdns24787:0crwdne24787:0"
+    heading_apps: "crwdns8816:0crwdne8816:0"
+    heading_tools: "crwdns56123:0crwdne56123:0"
+    heading_legacy: "crwdns8843:0crwdne8843:0"
+    your_gallery: 'crwdns23431:0crwdne23431:0'
+    no_primary_course: "crwdns36301:0crwdne36301:0"
+    choose_next_course: "crwdns43451:0crwdne43451:0"
+    print_certificate: "crwdns41905:0crwdne41905:0"
+    announcement_title: "crwdns56513:0crwdne56513:0"
+    announcement_message_fall2016_features: "crwdns58507:0%{pp_url}crwdnd58507:0%{csp_widgets_url}crwdnd58507:0%{unused_code_url}crwdne58507:0"
+    announcement_csp_widgets_message: "crwdns57910:0crwdne57910:0"
+    announcement_learn_more_button: "crwdns57407:0crwdne57407:0"
+    announcement_try_now_button: "crwdns57911:0crwdne57911:0"
+    announcement_host_an_hour_button: "crwdns68605:0crwdne68605:0"
+    announcement_watch_video_button: "crwdns69456:0crwdne69456:0"
+    announcement_petition: "crwdns56517:0crwdne56517:0"
+    announcement_petition_button: "crwdns56518:0crwdne56518:0"
+    announcement_go_beyond_button: "crwdns71751:0crwdne71751:0"
+    announcement_all: "crwdns58048:0%{teacher_blog_url}crwdne58048:0"
+    announcement_hoc_launch: "crwdns68606:0%{signup_url}crwdne68606:0"
+    announcement_mc_launch: "crwdns68844:0crwdne68844:0"
+    announcement_how_code_studio: "crwdns69457:0%{video_download_url}crwdne69457:0"
+    announcement_go_beyond: "crwdns71752:0crwdne71752:0"
+  move_students:
+    new_section_dne: "crwdns56519:0%{new_section_code}crwdne56519:0"
+    section_code_not_entered: "crwdns56520:0crwdne56520:0"
+    section_code_cant_be_current_section: "crwdns56521:0crwdne56521:0"
+    current_section_dne: "crwdns56522:0%{current_section_code}crwdne56522:0"
+    students_not_yours: "crwdns56523:0crwdne56523:0"
+    stay_enrolled_not_entered: "crwdns56524:0crwdne56524:0"
+    student_ids_not_entered: "crwdns56525:0crwdne56525:0"
+    student_not_found: "crwdns56526:0crwdne56526:0"
+    all_students_must_be_in_current_section: "crwdns56527:0crwdne56527:0"
+    already_enrolled_in_new_section: "crwdns56528:0crwdne56528:0"
+  share:
+    title: "crwdns45291:0crwdne45291:0"
+    description: "crwdns45292:0crwdne45292:0"
+    try_hour_of_code: 'crwdns55876:0crwdne55876:0'
+  gender:
+    male: 'crwdns2618:0crwdne2618:0'
+    female: 'crwdns2619:0crwdne2619:0'
+    none: 'crwdns2971:0crwdne2971:0'
+  user_type:
+    student: 'crwdns21449:0crwdne21449:0'
+    teacher: 'crwdns21450:0crwdne21450:0'
+  footer:
+    thank_you: 'crwdns45293:0crwdne45293:0'
+    help_from_html: 'crwdns6548:0crwdne6548:0'
+    help_from_html_old: 'crwdns45345:0crwdne45345:0'
+    art_from_html: 'crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0'
+    art_from_html_old: 'crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0'
+    code_from_html: 'crwdns56267:0crwdne56267:0'
+    powered_by_aws: 'crwdns24789:0crwdne24789:0'
+    trademark: 'crwdns45294:0%{current_year}crwdne45294:0'
+    copyright: 'crwdns45295:0crwdne45295:0'
+    more: 'crwdns45296:0crwdne45296:0'
+    feedback: 'crwdns2622:0crwdne2622:0'
+    translate: 'crwdns2623:0crwdne2623:0'
+    support: 'crwdns5295:0crwdne5295:0'
+    support_url: 'crwdns19025:0crwdne19025:0'
+    tos_short: 'crwdns45347:0crwdne45347:0'
+    tos: 'crwdns5338:0crwdne5338:0'
+    privacy: 'crwdns3901:0crwdne3901:0'
+    secure: 'crwdns5339:0crwdne5339:0'
+    report_abuse: 'crwdns49669:0crwdne49669:0'
+    built_on_code_studio: 'crwdns55144:0crwdne55144:0'
+    make_my_own_app: 'crwdns55145:0crwdne55145:0'
+    how_it_works: 'crwdns55146:0crwdne55146:0'
+    try_hour_of_code: 'crwdns55879:0crwdne55879:0'
+  reference_area:
+    title: 'crwdns2625:0crwdne2625:0'
+    subtitle: 'crwdns3090:0crwdne3090:0'
+    teacher: 'crwdns4315:0crwdne4315:0'
+    auth_error: 'crwdns4316:0crwdne4316:0'
+    submit: 'crwdns4896:0crwdne4896:0'
+    direction: 'crwdns20745:0crwdne20745:0'
+  video:
+    tab: 'crwdns2972:0crwdne2972:0'
+    notes: 'crwdns2973:0crwdne2973:0'
+    notes_coming_soon: 'crwdns7342:0crwdne7342:0'
+    autoplay_option: 'crwdns3091:0crwdne3091:0'
+    download: 'crwdns4163:0crwdne4163:0'
+  compatibility:
+    upgrade:
+      unsupported_message: "crwdns56929:0%{supported_browsers_url}crwdne56929:0"
+      link: "crwdns56932:0crwdne56932:0"
+  slow_loading: 'crwdns3859:0crwdne3859:0'
+  try_reloading: 'crwdns3860:0crwdne3860:0'
+  next_stage: 'crwdns4078:0crwdne4078:0'
+  download_pdf: 'crwdns4045:0crwdne4045:0'
+  lesson_plan: 'crwdns23290:0crwdne23290:0'
+  view_lesson_plan: 'crwdns6590:0crwdne6590:0'
+  pdf_download: 'crwdns6591:0crwdne6591:0'
+  download_coming_soon: 'crwdns23291:0crwdne23291:0'
+  video_coming_soon: 'crwdns23292:0crwdne23292:0'
+  not_started: 'crwdns50993:0crwdne50993:0'
+  share_code:
+    title: "crwdns5296:0crwdne5296:0"
+    bounce_og_title: "crwdns4898:0crwdne4898:0"
+    flappy_og_title: "crwdns4638:0crwdne4638:0"
+    studio_og_title: "crwdns18148:0crwdne18148:0"
+    check_out_what_i_made: "crwdns23499:0crwdne23499:0"
+    og_description: "crwdns4639:0crwdne4639:0"
+    phone_number_not_allowed: "crwdns20077:0crwdne20077:0"
+    address_not_allowed: "crwdns20078:0crwdne20078:0"
+    email_not_allowed: "crwdns20079:0crwdne20079:0"
+    profanity_not_allowed: "crwdns20080:0crwdne20080:0"
+  builder:
+    created: "crwdns4640:0crwdne4640:0"
+    destroyed: "crwdns4641:0crwdne4641:0"
+    manage: "crwdns4899:0crwdne4899:0"
+    view: "crwdns4643:0crwdne4643:0"
+    back: "crwdns4644:0crwdne4644:0"
+    success: "crwdns5341:0crwdne5341:0"
+    level:
+      create: "crwdns4645:0crwdne4645:0"
+      current: "crwdns4646:0crwdne4646:0"
+      unused: "crwdns4647:0crwdne4647:0"
+  upsell:
+    applab:
+      title: 'crwdns56124:0crwdne56124:0'
+      body: "crwdns56125:0crwdne56125:0"
+      body_short: "crwdns56172:0crwdne56172:0"
+      audience: 'crwdns56126:0crwdne56126:0'
+      cta: 'crwdns56127:0crwdne56127:0'
+    hoc:
+      title: 'crwdns55279:0crwdne55279:0'
+      body: 'crwdns4901:0crwdne4901:0'
+    flappy:
+      title: 'crwdns4902:0crwdne4902:0'
+      body: 'crwdns4903:0crwdne4903:0'
+    20-hour:
+      title: 'crwdns41906:0crwdne41906:0'
+      body: 'crwdns41907:0crwdne41907:0'
+      body_short: 'crwdns41908:0crwdne41908:0'
+    hoc2014:
+      try_new_tutorial: 'crwdns23500:0crwdne23500:0'
+      try_frozen: 'crwdns23501:0crwdne23501:0'
+    gallery:
+      title: "crwdns23626:0crwdne23626:0"
+      body: "crwdns23627:0crwdne23627:0"
+    frozen:
+      title: "crwdns24790:0crwdne24790:0"
+    starwars:
+      title: "crwdns50994:0crwdne50994:0"
+    infinity:
+      title: "crwdns35937:0crwdne35937:0"
+      body: "crwdns35938:0crwdne35938:0"
+    minecraft:
+      title: "crwdns51940:0crwdne51940:0"
+      body: "crwdns51941:0crwdne51941:0"
+    minecraft2016:
+      title: "crwdns68845:0crwdne68845:0"
+      body: "crwdns68846:0crwdne68846:0"
+    unplugged:
+      title: "crwdns56445:0crwdne56445:0"
+      audience: "crwdns56446:0crwdne56446:0"
+      body: "crwdns56447:0crwdne56447:0"
+      body_short: "crwdns56448:0crwdne56448:0"
+  gallery:
+    students_drew_these_with_code: "crwdns5091:0crwdne5091:0"
+    students_made_these_with_code: "crwdns20426:0crwdne20426:0"
+    picture_count: "crwdns5092:0%{days}crwdnd5092:0%{count}crwdne5092:0"
+    activity_count: "crwdns20427:0%{days}crwdnd20427:0%{count}crwdne20427:0"
+    want_to_make_your_own: "crwdns5093:0crwdne5093:0"
+    how_to_save: "crwdns56881:0crwdne56881:0"
+    more: "crwdns5094:0crwdne5094:0"
+    caption_by_name_age: "crwdns20428:0%{name}crwdnd20428:0%{age}crwdne20428:0"
+    caption_time_ago: "crwdns20429:0%{time_ago}crwdne20429:0"
+    header: "crwdns23628:0crwdne23628:0"
+    header_playlab: "crwdns23629:0crwdne23629:0"
+    header_artist: "crwdns23630:0crwdne23630:0"
+    report_abuse: "crwdns56882:0crwdne56882:0"
+  landing:
+    prerelease: "crwdns6265:0crwdne6265:0"
+    prerelease_hoc2014: "crwdns23502:0crwdne23502:0"
+    report_bug: "crwdns6267:0crwdne6267:0"
+    support: "crwdns6268:0crwdne6268:0"
+    support_url: "crwdns19026:0crwdne19026:0"
+    help_resources: "crwdns56128:0crwdne56128:0"
+  multi:
+    wrong_title: "crwdns5096:0crwdne5096:0"
+    wrong_body: "crwdns5097:0crwdne5097:0"
+    correct_title: "crwdns5342:0crwdne5342:0"
+    correct_body: "crwdns5343:0crwdne5343:0"
+    toofew_title: "crwdns38737:0crwdne38737:0"
+    toofew_body: "crwdns38738:0crwdne38738:0"
+  multi-submittable:
+    wrong_title: "crwdns56129:0crwdne56129:0"
+    wrong_body: "crwdns56130:0crwdne56130:0"
+    correct_title: "crwdns56131:0crwdne56131:0"
+    correct_body: "crwdns56132:0crwdne56132:0"
+    toofew_title: "crwdns56133:0crwdne56133:0"
+    toofew_body: "crwdns56134:0crwdne56134:0"
+  level_group:
+    wrong_title: "crwdns56221:0crwdne56221:0"
+    wrong_body: "crwdns56222:0crwdne56222:0"
+    correct_title: "crwdns56173:0crwdne56173:0"
+    correct_body: "crwdns56174:0crwdne56174:0"
+    hide_survey_last_answer: "crwdns57912:0crwdne57912:0"
+  level_group-submittable:
+    wrong_title: "crwdns56223:0crwdne56223:0"
+    wrong_body: "crwdns56224:0crwdne56224:0"
+    correct_title: "crwdns56225:0crwdne56225:0"
+    correct_body: "crwdns56226:0crwdne56226:0"
+    unsubmit-title: "crwdns56449:0crwdne56449:0"
+    unsubmit-body: "crwdns56450:0crwdne56450:0"
+    submit-incomplete-title: "crwdns56451:0crwdne56451:0"
+    submit-incomplete-body: "crwdns56452:0crwdne56452:0"
+    submit-complete-title: "crwdns56453:0crwdne56453:0"
+    submit-complete-body: "crwdns56454:0crwdne56454:0"
+  match:
+    wrong_title: "crwdns5098:0crwdne5098:0"
+    wrong_body: "crwdns5099:0crwdne5099:0"
+    correct_title: "crwdns5344:0crwdne5344:0"
+    correct_body: "crwdns5345:0crwdne5345:0"
+  contract_match:
+    wrong_title: "crwdns36222:0crwdne36222:0"
+    badname: "crwdns36223:0crwdne36223:0"
+    badname_case: "crwdns36271:0crwdne36271:0"
+    badrange: "crwdns36224:0crwdne36224:0"
+    baddomainsize: "crwdns36225:0crwdne36225:0"
+    baddomainname: "crwdns36226:0crwdne36226:0"
+    baddomaintype: "crwdns36302:0crwdne36302:0"
+  text_match:
+    placeholder: "crwdns22206:0crwdne22206:0"
+    open_response_title: "crwdns37547:0crwdne37547:0"
+    open_response_body: "crwdns37548:0crwdne37548:0"
+    correct_title: "crwdns56248:0crwdne56248:0"
+    correct_body: "crwdns56249:0crwdne56249:0"
+  dialog:
+    ok: "crwdns5100:0crwdne5100:0"
+    startover_title: "crwdns45297:0crwdne45297:0"
+    startover_body: "crwdns45298:0crwdne45298:0"
+    startover_ok: "crwdns45299:0crwdne45299:0"
+    startover_cancel: "crwdns45300:0crwdne45300:0"
+  time:
+    hour: 'crwdns6550:0crwdne6550:0'
+    day: 'crwdns6551:0crwdne6551:0'
+    week: 'crwdns6552:0crwdne6552:0'
+  age_interstitial:
+    age: 'crwdns7663:0crwdne7663:0'
+    header: 'crwdns7664:0crwdne7664:0'
+    message: "crwdns7665:0crwdne7665:0"
+    sign_out: 'crwdns7666:0%{url}crwdne7666:0'
+  terms_interstitial:
+    title: "crwdns58508:0crwdne58508:0"
+    intro_desc: 'crwdns58509:0crwdne58509:0'
+    intro_instructions: "crwdns58510:0crwdne58510:0"
+    tos: "crwdns58511:0crwdne58511:0"
+    privacy: "crwdns58512:0crwdne58512:0"
+    privacy_notice: "crwdns58513:0crwdne58513:0"
+    accept_label: 'crwdns58514:0%{tos_url}crwdnd58514:0%{privacy_url}crwdne58514:0'
+    accept: "crwdns58515:0crwdne58515:0"
+    print: "crwdns58516:0crwdne58516:0"
+    reminder_desc: 'crwdns58518:0%{tos_url}crwdnd58518:0%{privacy_url}crwdne58518:0'
+    review_terms: "crwdns58519:0crwdne58519:0"
+  race_interstitial:
+    title: 'crwdns68017:0crwdne68017:0'
+    message: "crwdns68018:0crwdne68018:0"
+    races:
+      - 
+        white: 'crwdns68019:0crwdne68019:0'
+      - 
+        black: 'crwdns68020:0crwdne68020:0'
+      - 
+        hispanic: 'crwdns68021:0crwdne68021:0'
+      - 
+        asian: 'crwdns68022:0crwdne68022:0'
+      - 
+        hawaiian: 'crwdns68023:0crwdne68023:0'
+      - 
+        american_indian: 'crwdns68024:0crwdne68024:0'
+      - 
+        other: 'crwdns68025:0crwdne68025:0'
+      - 
+        opt_out: 'crwdns68026:0crwdne68026:0'
+    submit: "crwdns68027:0crwdne68027:0"
+    decline: "crwdns68028:0crwdne68028:0"
+  zendesk_too_young_message: 'crwdns8502:0crwdne8502:0'
+  progress:
+    not_started: 'crwdns35032:0crwdne35032:0'
+    in_progress: 'crwdns35033:0crwdne35033:0'
+    completed_too_many_blocks: 'crwdns22208:0crwdne22208:0'
+    completed_perfect: 'crwdns22209:0crwdne22209:0'
+    furthest_level_attempted: 'crwdns22210:0crwdne22210:0'
+    assessment: 'crwdns35034:0crwdne35034:0'
+    submitted: 'crwdns56189:0crwdne56189:0'
+  studio:
+    courses_working_on: "crwdns25902:0crwdne25902:0"
+    completed_courses: "crwdns25903:0crwdne25903:0"
+    all_courses: "crwdns25904:0crwdne25904:0"
+  project:
+    projects: "crwdns35035:0crwdne35035:0"
+    create: "crwdns35036:0crwdne35036:0"
+    create_a_project: 'crwdns35674:0crwdne35674:0'
+    new: "crwdns35037:0crwdne35037:0"
+    rename: "crwdns35038:0crwdne35038:0"
+    save: "crwdns35039:0crwdne35039:0"
+    delete: "crwdns35040:0crwdne35040:0"
+    exit: "crwdns35041:0crwdne35041:0"
+    my_projects: "crwdns35042:0crwdne35042:0"
+    share: "crwdns35043:0crwdne35043:0"
+    share_title: 'crwdns35044:0crwdne35044:0'
+    share_copy_link: "crwdns35045:0crwdne35045:0"
+    share_embed_description: "crwdns56529:0crwdne56529:0"
+    share_u13_warning: "crwdns57408:0crwdne57408:0"
+    embed: "crwdns56530:0crwdne56530:0"
+    advanced_share: "crwdns56531:0crwdne56531:0"
+    close: "crwdns35046:0crwdne35046:0"
+    more: "crwdns35047:0crwdne35047:0"
+    name: "crwdns35048:0crwdne35048:0"
+    updated: "crwdns35049:0crwdne35049:0"
+    project_type: "crwdns35050:0crwdne35050:0"
+    help_text: "crwdns35051:0crwdne35051:0"
+    need_help: "crwdns35052:0crwdne35052:0"
+    really_delete: 'crwdns35053:0crwdne35053:0'
+    delete_yes: 'crwdns35054:0crwdne35054:0'
+    delete_no: 'crwdns35055:0crwdne35055:0'
+    saved: "crwdns35056:0crwdne35056:0"
+    not_saved: "crwdns35057:0crwdne35057:0"
+    cancel: 'crwdns35058:0crwdne35058:0'
+    delete_confirm_title: 'crwdns35059:0crwdne35059:0'
+    delete_confirm_text: "crwdns35060:0crwdne35060:0"
+    view_all: 'crwdns35061:0crwdne35061:0'
+    remix: 'crwdns35952:0crwdne35952:0'
+    click_to_remix: "crwdns35953:0crwdne35953:0"
+    edit_project: 'crwdns48358:0crwdne48358:0'
+    abuse:
+      tos: "crwdns48359:0crwdne48359:0"
+      policy_violation: "crwdns57409:0crwdne57409:0"
+      contact_us: "crwdns48360:0crwdne48360:0"
+      go_to_code_studio: 'crwdns48361:0crwdne48361:0'
+      report_abuse_form:
+        intro: 'crwdns49670:0crwdne49670:0'
+        validation:
+          email: 'crwdns49671:0crwdne49671:0'
+          age: 'crwdns49672:0crwdne49672:0'
+          abuse_type: 'crwdns49673:0crwdne49673:0'
+          abuse_detail: 'crwdns49674:0crwdne49674:0'
+        abusive_url: 'crwdns49675:0crwdne49675:0'
+        abuse_type:
+          question: 'crwdns49676:0%{link_start}crwdnd49676:0%{link_end}crwdne49676:0'
+          harassment: 'crwdns49677:0crwdne49677:0'
+          offensive: 'crwdns49678:0crwdne49678:0'
+          infringement: 'crwdns49679:0crwdne49679:0'
+          other: 'crwdns49680:0crwdne49680:0'
+        detail: 'crwdns49681:0crwdne49681:0'
+        acknowledge: 'crwdns49682:0%{link_start_privacy}crwdnd49682:0%{link_end}crwdnd49682:0%{link_start_tos}crwdnd49682:0%{link_end}crwdne49682:0'
+  peer_review:
+    accepted:
+      name: 'crwdns56532:0crwdne56532:0'
+      description: 'crwdns56533:0crwdne56533:0'
+    rejected:
+      name: 'crwdns56534:0crwdne56534:0'
+      description: 'crwdns56535:0crwdne56535:0'
+    escalated:
+      name: 'crwdns56536:0crwdne56536:0'
+      description: 'crwdns56537:0crwdne56537:0'
+    instructor_feedback: 'crwdns56731:0crwdne56731:0'
+    peer_feedback: 'crwdns56732:0crwdne56732:0'
+    outdated: 'crwdns56733:0crwdne56733:0'
+    review_in_progress: 'crwdns57410:0crwdne57410:0'
+    link_to_submitted_review: 'crwdns57411:0crwdne57411:0'
+    reviews_unavailable: 'crwdns57412:0crwdne57412:0'
+    review_count: 'crwdns57413:0%{review_count}crwdne57413:0'
+    must_be_enrolled: 'crwdns57414:0crwdne57414:0'
+    no_reviews_at_this_moment_notice: 'crwdns57415:0crwdne57415:0'
+    review_submitted: 'crwdns57416:0crwdne57416:0'
+    review_new_submission: 'crwdns57417:0crwdne57417:0'
+  components:
+    icon_library:
+      search_placeholder_text: 'crwdns56250:0crwdne56250:0'
+      no_icons_found: 'crwdns56251:0crwdne56251:0'
+    playzone:
+      artist_description: 'crwdns56933:0crwdne56933:0'
+      artist_title: 'crwdns56934:0crwdne56934:0'
+      continue_button: 'crwdns56935:0crwdne56935:0'
+      playlab_description: 'crwdns56936:0crwdne56936:0'
+      playlab_title: 'crwdns56937:0crwdne56937:0'
+      primary_header: 'crwdns56938:0%{stageName}crwdne56938:0'
+      projects_description: 'crwdns56939:0crwdne56939:0'
+      projects_title: 'crwdns56940:0crwdne56940:0'
+      secondary_header: 'crwdns56941:0crwdne56941:0'
+  flex_category:
+    required: 'crwdns56538:0crwdne56538:0'
+    content: 'crwdns56539:0crwdne56539:0'
+    practice: 'crwdns56540:0crwdne56540:0'
+    peer_review: 'crwdns57913:0crwdne57913:0'
+    ramp_up: 'crwdns72037:0crwdne72037:0'
+    end_of_course_project: 'crwdns72038:0crwdne72038:0'
+    optional_stages: 'crwdns72039:0crwdne72039:0'
+  external_links:
+    disclaimer: 'crwdns57418:0crwdne57418:0'
+    leaving_domain: 'crwdns57419:0crwdne57419:0'
+    disclaimer_text: 'crwdns57420:0%{support_url}crwdne57420:0'
+  hoc_download:
+    title: 'crwdns56942:0crwdne56942:0'
+    capsule_title: 'crwdns56943:0crwdne56943:0'
+    capsule_desc: 'crwdns56944:0%{url}crwdnd56944:0%{app_name}crwdne56944:0'
+    instructions_headline: 'crwdns56945:0crwdne56945:0'
+    instructions: 'crwdns56946:0%{url}crwdne56946:0'
+    minecraft_name: 'crwdns56947:0crwdne56947:0'
+    starwars_blocks_name: 'crwdns56948:0crwdne56948:0'
+    starwars_javascript_name: 'crwdns56949:0crwdne56949:0'
+    download_message: 'crwdns56950:0%{app_name}crwdne56950:0'
+    download_in_Albanian: 'crwdns69458:0crwdne69458:0'
+    download_in_Arabic: 'crwdns69459:0crwdne69459:0'
+    download_in_Azerbaijani: 'crwdns69460:0crwdne69460:0'
+    download_in_Basque: 'crwdns69461:0crwdne69461:0'
+    download_in_Bosnian: 'crwdns69462:0crwdne69462:0'
+    download_in_Bulgarian: 'crwdns69463:0crwdne69463:0'
+    download_in_Catalan: 'crwdns69464:0crwdne69464:0'
+    download_in_Chinese-Taiwan: 'crwdns69465:0crwdne69465:0'
+    download_in_Chinese: 'crwdns69466:0crwdne69466:0'
+    download_in_Croatian: 'crwdns69467:0crwdne69467:0'
+    download_in_Czech: 'crwdns69468:0crwdne69468:0'
+    download_in_Danish: 'crwdns69469:0crwdne69469:0'
+    download_in_Dutch: 'crwdns69470:0crwdne69470:0'
+    download_in_English: 'crwdns69471:0crwdne69471:0'
+    download_in_Finnish: 'crwdns69472:0crwdne69472:0'
+    download_in_French: 'crwdns69473:0crwdne69473:0'
+    download_in_German: 'crwdns69474:0crwdne69474:0'
+    download_in_Greek: 'crwdns69475:0crwdne69475:0'
+    download_in_Hebrew: 'crwdns69476:0crwdne69476:0'
+    download_in_Hungarian: 'crwdns69477:0crwdne69477:0'
+    download_in_Icelandic: 'crwdns69478:0crwdne69478:0'
+    download_in_Indonesian: 'crwdns69479:0crwdne69479:0'
+    download_in_Irish: 'crwdns69480:0crwdne69480:0'
+    download_in_Italian: 'crwdns69481:0crwdne69481:0'
+    download_in_Japanese: 'crwdns69482:0crwdne69482:0'
+    download_in_Korean: 'crwdns69483:0crwdne69483:0'
+    download_in_Latvian: 'crwdns69484:0crwdne69484:0'
+    download_in_Lithuanian: 'crwdns69485:0crwdne69485:0'
+    download_in_Norwegian: 'crwdns69486:0crwdne69486:0'
+    download_in_Norwegian-Nynorsk: 'crwdns69487:0crwdne69487:0'
+    download_in_Polish: 'crwdns69488:0crwdne69488:0'
+    download_in_Portuguese-Brazil: 'crwdns69489:0crwdne69489:0'
+    download_in_Portuguese: 'crwdns69490:0crwdne69490:0'
+    download_in_Romanian: 'crwdns69491:0crwdne69491:0'
+    download_in_Russian: 'crwdns69492:0crwdne69492:0'
+    download_in_Serbian: 'crwdns69493:0crwdne69493:0'
+    download_in_Slovenian: 'crwdns69494:0crwdne69494:0'
+    download_in_Spanish: 'crwdns69495:0crwdne69495:0'
+    download_in_Swedish: 'crwdns69496:0crwdne69496:0'
+    download_in_Turkish: 'crwdns69497:0crwdne69497:0'
+    download_in_Ukrainian: 'crwdns69498:0crwdne69498:0'
+    download_in_Vietnamese: 'crwdns69499:0crwdne69499:0'
+    windows: 'crwdns67952:0crwdne67952:0'
+    mac: 'crwdns56954:0crwdne56954:0'
+  plc:
+    preview_assignments:
+      content_focus_header: 'crwdns56996:0crwdne56996:0'
+      practice_focus_header: 'crwdns56997:0crwdne56997:0'
+      content_focus_strong: 'crwdns56998:0crwdne56998:0'
+      practice_focus_strong: 'crwdns56999:0crwdne56999:0'
+      choose_different_focus_area: 'crwdns57000:0crwdne57000:0'
+      other_focus_areas_available: 'crwdns57001:0crwdne57001:0'
+      confirm_focus_areas: 'crwdns57002:0crwdne57002:0'
+  locked_stage: 'crwdns58520:0crwdne58520:0'
+  hidden_stage: "crwdns60152:0crwdne60152:0"
+  return_course_overview: 'crwdns60153:0crwdne60153:0'
+  pd:
+    survey:
+      number_teachers: 'crwdns68607:0crwdne68607:0'
+      response_count: 'crwdns68608:0crwdne68608:0'
+      facilitator_effectiveness: 'crwdns68609:0crwdne68609:0'
+      teacher_engagement: 'crwdns68610:0crwdne68610:0'
+      overall_success: 'crwdns68611:0crwdne68611:0'
+      how_much_learned_s: 'crwdns68612:0crwdne68612:0'
+      how_motivating_s: 'crwdns68613:0crwdne68613:0'
+      how_clearly_presented_s: 'crwdns68614:0crwdne68614:0'
+      how_interesting_s: 'crwdns68615:0crwdne68615:0'
+      how_often_given_feedback_s: 'crwdns68616:0crwdne68616:0'
+      how_comfortable_asking_questions_s: 'crwdns68617:0crwdne68617:0'
+      how_often_taught_new_things_s: "crwdns68618:0crwdne68618:0"
+      how_much_participated_s: 'crwdns68619:0crwdne68619:0'
+      how_often_talk_about_ideas_outside_s: 'crwdns68620:0crwdne68620:0'
+      how_often_lost_track_of_time_s: 'crwdns68621:0crwdne68621:0'
+      how_excited_before_s: 'crwdns68622:0crwdne68622:0'
+      overall_how_interested_s: 'crwdns68623:0crwdne68623:0'
+      more_prepared_than_before_s: 'crwdns68624:0crwdne68624:0'
+      know_where_to_go_for_help_s: 'crwdns68625:0crwdne68625:0'
+      suitable_for_my_experience_s: 'crwdns68626:0crwdne68626:0'
+      would_recommend_s: 'crwdns68627:0crwdne68627:0'
+      part_of_community_s: 'crwdns68628:0crwdne68628:0'
+      things_facilitator_did_well_s: 'crwdns68629:0crwdne68629:0'
+      things_facilitator_could_improve_s: 'crwdns68630:0crwdne68630:0'
+      things_you_liked_s: 'crwdns68631:0crwdne68631:0'
+      things_you_would_change_s: 'crwdns68632:0crwdne68632:0'
+      anything_else_s: 'crwdns68633:0crwdne68633:0'

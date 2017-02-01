@@ -7,35 +7,35 @@
     failure:
       already_authenticated: "您已經登入。"
       inactive: "您的帳戶尚未啟動。"
-      invalid: "無效的電子郵件或密碼。"
+      invalid: "無效的電子信箱或密碼。"
       invalid_token: "無效的身份驗證碼。"
       locked: "您的帳戶已被鎖定。"
       not_found_in_database: "無效的電子郵件或密碼。"
-      timeout: "您的工作階段已過期，請重新登入以繼續。"
+      timeout: "你已離開太久，請重新登入。"
       unauthenticated: "您需要登錄或註冊才能繼續。"
       unconfirmed: "你必須先認證您的帳號才能繼續。"
     mailer:
       confirmation_instructions:
-        subject: Code.org 確認指令
+        subject: Code.org 確認說明
       reset_password_instructions:
         subject: Code.org 重設密碼說明
       unlock_instructions:
         subject: "解鎖操作說明"
     omniauth_callbacks:
-      failure: 由於"%{原因}"無法驗證您是從 %{類型}。
+      failure: "無法驗證你的身份 %{kind}，錯誤原因：%{reason}。"
       success: "成功通過身份驗證是從 %{類型} 帳戶。"
     passwords:
       no_token: "沒有從一封密碼重設的電子郵件來，您不能訪問此頁面。如果你要從密碼重設的電子郵件來，請確認您使用所提供的完整 URL。"
       send_instructions: "您將在幾分鐘之內收到一封有關如何重設密碼的操作說明。"
-      send_paranoid_instructions: "如果您的電子郵件位址存在於我們的資料庫中，您將在幾分鐘時間收到密碼回復連結的電子郵件。"
+      send_paranoid_instructions: "如果您的電子信箱存在於我們的資料庫中，您將在幾分鐘時間收到密碼復原連結的電子郵件。"
       updated: "您的密碼已經更改成功。你現在是簽署的。"
       updated_not_active: "您的密碼已經更改成功。"
     registrations:
-      destroyed: "再見了 ！您的帳戶已成功取消。我們希望很快再次見到你。"
+      destroyed: "再見了！您的帳戶已成功取消。我們希望很快再次見到你。"
       signed_up: "歡迎您 ！您已註冊成功。"
       signed_up_but_inactive: "您已註冊成功。然而因為您的帳戶尚未啟動，我們無法讓您登入。"
       signed_up_but_locked: "您已註冊成功。然而，因為您的帳戶已被鎖定，我們無法讓您登入。"
-      signed_up_but_unconfirmed: "帶有確認連結的郵件已被發送到您的電子郵件地址。請打開連結來啟動您的帳戶。"
+      signed_up_but_unconfirmed: "帶有確認連結的郵件已發送到您的信箱。請點擊信件中的連結以啟用你的帳戶。"
       update_needs_confirmation: "您成功地更新您的帳戶，但我們需要驗證您的新電子郵件地址。請檢查您的電子郵件，並按一下確認連結以最後確認您的新電子郵件地址。"
       updated: "您已成功更新您的帳戶。"
     sessions:
@@ -44,19 +44,19 @@
     unlocks:
       send_instructions: "您將在幾分鐘內收到一封有關說明如何確認您的帳戶的電子郵件。"
       send_paranoid_instructions: "如果您的帳號存在，您將在幾分鐘內收到一封說明如何解鎖的電子郵件。"
-      unlocked: "您的帳戶已成功解除鎖定。請登錄以繼續。"
+      unlocked: "您的帳戶已成功解除鎖定，請登入以繼續。"
   errors:
     messages:
-      already_confirmed: "已經驗證，請試著登錄"
+      already_confirmed: "已經驗證，請登入"
       confirmation_period_expired: "需要在 %{期間} 內被驗證，請申請一個新的"
-      expired: "已過期，請申請一個新的"
+      expired: "已失效，請重新申請"
       not_found: "未找到"
       not_locked: "未被鎖定"
       not_saved:
-        one: "發生一個錯誤，%{resource}無法儲存："
-        other: "發生%{count}個錯誤，%{resource}無法儲存："
+        one: "發生 1 個錯誤，%{resource} 無法儲存："
+        other: "發生 %{count} 個錯誤，%{resource} 無法儲存："
     invitations:
-      send_instructions: "邀請的email已寄送到 %{email}"
+      send_instructions: "邀請信件已發送至 %{email}。"
       invitation_token_invalid: "所提供的邀請碼是無效的！"
       updated: "你的密碼已成功設置。現在可以登入。"
       no_invitations_remaining: "沒有多餘的邀請。"
@@ -73,4 +73,4 @@
         hello: " %{email} 你好"
         someone_invited_you: "有人邀請你到 %{url}，你可以通過以下的連結接受它。"
         accept: "接受邀請"
-        ignore: "如果你不想要接受邀請，請忽略這封電子郵件內容。 < br / > 直到您訪問上面的連結並設置好密碼之前，您的帳號將不會被建立。"
+        ignore: "如果你不想接收這個邀請，請忽略這封信件。<br />在你點擊上方的連結並設定好密碼之前，你的帳戶將不會建立。"

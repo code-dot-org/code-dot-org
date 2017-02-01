@@ -7,13 +7,13 @@ Please stop and wait for instructions from your teacher before moving on.
 
 # Images Review
 
-The <img> tag allows you to show images on your web page.
+The `<img>` tag allows you to show images on your web page.
 
 Example:
 
 `<img src="dog.png" alt="dog jumping"/>`
 
-In order to tell the browser which file to use, extra information, called an attribute, is added to the <img> tag inside the brackets. The attribute src stands for source and tell the name of the image. Image files names include extensions which tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, .png.
+In order to tell the browser which file to use, extra information, called an attribute, is added to the `<img>` tag inside the brackets. The attribute src stands for source and tell the name of the image. Image files names include extensions which tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, .png.
 
 In addition to have the src attribute, image elements also have the alt attribute which describe the image. This is important in case the image doesn’t load or for people who have trouble with their eyesight.
 

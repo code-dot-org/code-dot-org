@@ -278,7 +278,7 @@ id:
     user_not_found: 'Guru tidak bisa ditemukan.'
     student_teacher_disassociated: 'Kamu telah mengganti %{teacher_name} dari jabatan gurumu.'
     panel:
-      answer_viewer: 'Teacher Panel'
+      answer_viewer: 'Panel Guru'
       student: 'siswa'
       viewing_solution: 'Melihat Solusi'
       try_it_yourself: 'Lakukan itu sendiri'
@@ -302,6 +302,8 @@ id:
     delete_text_teacher_note: 'Catatan : menghapus Akun Anda tidak akan menghapus akun murid-murid Anda.'
     delete_confirm: 'Apakah Anda yakin ingin menghapus akun Anda?'
     deleted_user: 'deleted user'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Selesai'
     tried: 'Telah mencoba'
@@ -729,6 +731,9 @@ id:
     content: 'Konten'
     practice: 'Teaching Practices'
     peer_review: 'Peer Review'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

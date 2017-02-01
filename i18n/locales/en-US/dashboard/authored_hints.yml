@@ -1,0 +1,2620 @@
+en:
+  data:
+    authored_hints:
+      2-3 Artist 1 new_authored_hint:
+        2-3_Artist_1_new_a:
+          - 'crwdns72186:0crwdne72186:0'
+        2-3_Artist_1_new_b:
+          - 'crwdns72187:0crwdne72187:0'
+      2-3 Artist 11_authored_hint:
+        2-3_Artist_11_a: 'crwdns72188:0crwdne72188:0'
+      2-3 Artist 12_authored_hint:
+        2-3_Artist_12_a:
+          - 'crwdns72189:0crwdne72189:0'
+      2-3 Artist 2 new_authored_hint:
+        2-3_Artist_2_new_a:
+          - 'crwdns72190:0crwdne72190:0'
+      2-3 Artist 3new_authored_hint:
+        2-3_Artist_3new_a:
+          - 'crwdns72191:0crwdne72191:0'
+        2-3_Artist_3new_b:
+          - 'crwdns72192:0crwdne72192:0'
+      2-3 Artist 4_authored_hint:
+        2-3_Artist_4_a: 'crwdns72193:0crwdne72193:0'
+      2-3 Artist 6_authored_hint:
+        2-3_Artist_6_a: 'crwdns72194:0crwdne72194:0'
+        2-3_Artist_6_b:
+          - 'crwdns72195:0crwdne72195:0'
+        2-3_Artist_6_c:
+          - 'crwdns72196:0crwdne72196:0'
+      2-3 Artist 7_authored_hint:
+        2-3_Artist_7_a:
+          - 'crwdns72197:0crwdne72197:0'
+          - 'crwdns72198:0crwdne72198:0'
+      2-3 Artist 8_authored_hint:
+        2-3_Artist_8_a:
+          - 'crwdns72199:0crwdne72199:0'
+      2-3 Artist 9 NEW_authored_hint:
+        2-3_Artist_9_a: 'crwdns72200:0crwdne72200:0'
+      2-3 Artist 9 REPLACEMENT_authored_hint:
+        step_size: 'crwdns72201:0crwdne72201:0'
+      2-3 Artist 9_authored_hint:
+        2-3_Artist_9_a: 'crwdns72202:0crwdne72202:0'
+        2-3_Artist_9_b: |-
+          crwdns72203:0crwdne72203:0
+      2-3 Artist Debugging 10_authored_hint:
+        2-3_Artist_Debugging_10_a:
+          - null
+        2-3_Artist_Debugging_10_b: "crwdns72204:0crwdne72204:0"
+      2-3 Artist Debugging 2_authored_hint:
+        2-3_Artist_Debugging_2_a: 'crwdns72205:0crwdne72205:0'
+      2-3 Artist Debugging 3_authored_hint:
+        2-3_Artist_Debugging_3_a: 'crwdns72206:0crwdne72206:0'
+        2-3_Artist_Debugging_3_b:
+          - 'crwdns72207:0crwdne72207:0'
+      2-3 Artist Debugging 7_authored_hint:
+        2-3_Artist_Debugging_7_a:
+          - 'crwdns72208:0crwdne72208:0'
+      2-3 Artist Debugging 8_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          crwdns72209:0crwdne72209:0
+      2-3 Artist Debugging 9_authored_hint:
+        2-3_Artist_Debugging_9_a:
+          - 'crwdns72210:0crwdne72210:0'
+        2-3_Artist_Debugging_9_b:
+          - 'crwdns72211:0crwdne72211:0'
+      2-3 Artist Functions 1_authored_hint:
+        2-3_Artist_Functions_1_a:
+          - 'crwdns72212:0crwdne72212:0'
+          - 'crwdns72213:0crwdne72213:0'
+        2-3_Artist_Functions_1_b:
+          - 'crwdns72214:0crwdne72214:0'
+      2-3 Artist Functions 11_authored_hint:
+        2-3_Artist_Functions_11_a:
+          - 'crwdns72215:0crwdne72215:0'
+          - 'crwdns72216:0crwdne72216:0'
+      2-3 Artist Functions 12_authored_hint:
+        2-3_Artist_Functions_12_a:
+          - 'crwdns72217:0crwdne72217:0'
+      2-3 Artist Functions 2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          crwdns72218:0crwdne72218:0
+      2-3 Artist Functions 3_authored_hint:
+        2-3_Artist_Functions_3_a: "crwdns72219:0crwdne72219:0"
+      2-3 Artist Functions 4_authored_hint:
+        2-3_Artist_Functions_4_a:
+          - 'crwdns72220:0crwdne72220:0'
+      2-3 Artist Loops New 11_authored_hint:
+        2-3_Artist_Loops_New_11_a: |-
+          crwdns72221:0crwdne72221:0
+        2-3_Artist_Loops_New_11_b:
+          - 'crwdns72222:0crwdne72222:0'
+      2-3 Artist Loops New 12_authored_hint:
+        2-3_Artist Loops_New_12_a:
+          - 'crwdns72223:0crwdne72223:0'
+        2-3_Artist Loops_New_12_b:
+          - 'crwdns72224:0crwdne72224:0'
+        2-3_Artist Loops_New_12_c:
+          - 'crwdns72225:0crwdne72225:0'
+      2-3 Artist Loops New 13_authored_hint:
+        2-3_Artist_Loops_New_13_a: "crwdns72226:0crwdne72226:0"
+        2-3_Artist_Loops_New_13_b: 'crwdns72227:0crwdne72227:0'
+      2-3 Artist Loops New 9_authored_hint:
+        2-3_Artist_Loops_New_9_a:
+          - 'crwdns72228:0crwdne72228:0'
+        2-3_Artist_Loops_New_9_b:
+          - 'crwdns72229:0crwdne72229:0'
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a:
+          - 'crwdns72230:0crwdne72230:0'
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "crwdns72231:0crwdne72231:0"
+        2-3_Artist_Nested_Loops_3_b:
+          - 'crwdns72232:0crwdne72232:0'
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: "crwdns72233:0crwdne72233:0"
+      2-3 Artist Nested Loops 5_authored_hint:
+        2-3_Artist_Nested_Loops_5_a: "crwdns72234:0crwdne72234:0"
+      2-3 Artist Nested Loops 7_authored_hint:
+        2-3_Artist_Nested_Loops_7_a: "crwdns72235:0crwdne72235:0"
+      2-3 Artist Nested Loops 9_authored_hint:
+        2-3_Artist_Nested_Loops_9_a: |-
+          crwdns72236:0crwdne72236:0
+      2-3 Bee Conditionals 14_authored_hint:
+        2-3_Bee_Conditionals_14_a:
+          - 'crwdns72237:0crwdne72237:0'
+        2-3_Bee_Conditionals_14_b:
+          - 'crwdns72238:0crwdne72238:0'
+        2-3_Bee_Conditionals_14_c: 'crwdns72239:0crwdne72239:0'
+      2-3 Bee Conditionals 15_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'crwdns72240:0crwdne72240:0'
+      2-3 Bee Conditionals 3_authored_hint:
+        2-3_Bee_Conditionals_3_a:
+          - 'crwdns72241:0crwdne72241:0'
+          - 'crwdns72242:0crwdne72242:0'
+      2-3 Bee Conditionals 6_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'crwdns72243:0crwdne72243:0'
+      2-3 Bee Debugging 1_authored_hint:
+        2-3_Bee_Debugging_1_a:
+          - 'crwdns72244:0crwdne72244:0'
+      2-3 Bee Debugging 2_authored_hint:
+        2-3_Bee_Debugging_2_a:
+          - 'crwdns72245:0crwdne72245:0'
+      2-3 Bee Debugging 4_authored_hint:
+        2-3_Bee_Debugging_4_a:
+          - 'crwdns72246:0crwdne72246:0'
+      2-3 Bee Functions 4_authored_hint:
+        2-3_Bee_Functions_4_a:
+          - 'crwdns72247:0crwdne72247:0'
+      2-3 Bee Functions 6_authored_hint:
+        2-3_Bee_Functions_6_a:
+          - 'crwdns72248:0crwdne72248:0'
+      2-3 Bee Functions 8_authored_hint:
+        2-3_Bee_Functions_8_a: "crwdns72249:0crwdne72249:0"
+      2-3 Bee Functions 9_authored_hint:
+        2-3_Bee_Functions_8_a: "crwdns72250:0crwdne72250:0"
+        2-3_Bee_Functions_8_b: |-
+          crwdns72251:0crwdne72251:0
+      2-3 Bee Loops 2_authored_hint:
+        2-3_Bee_Loops_2_a: 'crwdns72252:0crwdne72252:0'
+      2-3 Bee Loops 3_authored_hint:
+        2-3_Bee_Loops_3_a: 'crwdns72253:0crwdne72253:0'
+      2-3 Bee Loops 3B_authored_hint:
+        2-3_Bee_Loops_3B_a:
+          - 'crwdns72254:0crwdne72254:0'
+      2-3 Bee Loops 4_authored_hint:
+        2-3_Bee_Loops_4_a: 'crwdns72255:0crwdne72255:0'
+      2-3 Bee Loops 4A_authored_hint:
+        2-3_Bee_Loops_4A_a: 'crwdns72256:0crwdne72256:0'
+        2-3_Bee_Loops_4A_b:
+          - 'crwdns72257:0crwdne72257:0'
+        2-3_Bee_Loops_4A_c:
+          - 'crwdns72258:0crwdne72258:0'
+          - 'crwdns72259:0crwdne72259:0'
+      2-3 Bee Loops 5_authored_hint:
+        2-3_Bee_Loops_5_a:
+          - 'crwdns72260:0crwdne72260:0'
+      2-3 Bee Loops 6_authored_hint:
+        2-3_Bee_Loops_6_a:
+          - 'crwdns72261:0crwdne72261:0'
+        2-3_Bee_Loops_6_b:
+          - 'crwdns72262:0crwdne72262:0'
+      2-3 Bee Loops 7_authored_hint:
+        2-3_Bee_Loops_7_a: 'crwdns72263:0crwdne72263:0'
+        2-3_Bee_Loops_7_b: 'crwdns72264:0crwdne72264:0'
+      2-3 Maze 1_authored_hint:
+        2-3_Maze_1_a:
+          - 'crwdns72265:0crwdne72265:0'
+      2-3 Maze 16_authored_hint:
+        2-3_Maze_16_a:
+          - 'crwdns72266:0crwdne72266:0'
+        2-3_Maze_16_b: "crwdns72267:0crwdne72267:0"
+      2-3 Maze 6_authored_hint:
+        2-3_Maze_6_a: 'crwdns72268:0crwdne72268:0'
+      2-3 Maze Loops 17_authored_hint:
+        2-3_Maze_Loops_17_a:
+          - 'crwdns72269:0crwdne72269:0'
+          - 'crwdns72270:0crwdne72270:0'
+        2-3_Maze_Loops_17_b:
+          - 'crwdns72271:0crwdne72271:0'
+      2-3 Maze Loops 18_authored_hint:
+        2-3_Maze_Loops_18_a:
+          - 'crwdns72272:0crwdne72272:0'
+          - 'crwdns72273:0crwdne72273:0'
+      2-3 Maze Loops 19_authored_hint:
+        2-3_Maze_Loops_19_a:
+          - 'crwdns72274:0crwdne72274:0'
+        2-3_Maze_Loops_19_b:
+          - 'crwdns72275:0crwdne72275:0'
+      2-3 Maze Loops 20_authored_hint:
+        2-3_Maze_Loops_20_a:
+          - 'crwdns72276:0crwdne72276:0'
+      2-3 Maze Loops 21_authored_hint:
+        2-3_Maze_Loops_21_a:
+          - 'crwdns72277:0crwdne72277:0'
+      4-5 Artist 1_authored_hint:
+        4-5_Artist_1_a: "crwdns72278:0crwdne72278:0"
+      4-5 Artist 11_authored_hint:
+        4-5_Artist_11_a:
+          - 'crwdns72279:0crwdne72279:0'
+      4-5 Artist 3_authored_hint:
+        4-5_Artist_3_a: |-
+          crwdns72280:0crwdne72280:0
+        4-5_Artist_3_b:
+          - 'crwdns72281:0crwdne72281:0'
+      4-5 Artist 4_authored_hint:
+        4-5_Artist_4_a: "crwdns72282:0crwdne72282:0"
+      4-5 Artist 5_authored_hint:
+        4-5_Artist_5_a: |-
+          crwdns72283:0_____crwdne72283:0
+      4-5 Artist 7_authored_hint:
+        4-5_Artist_7_a: 'crwdns72284:0crwdne72284:0'
+      4-5 Artist 8_authored_hint:
+        4-5_Artist_8_a: "crwdns72285:0crwdne72285:0"
+        4-5_Artist_8_b: "crwdns72286:0crwdne72286:0"
+      4-5 Artist 9_authored_hint:
+        4-5_Artist_9_a: "crwdns72287:0crwdne72287:0"
+        4-5_Artist_9_b:
+          - 'crwdns72288:0crwdne72288:0'
+      4-5 Artist Assessment 1_authored_hint:
+        4-5_Artist_Assessment_1_a:
+          - 'crwdns72289:0crwdne72289:0'
+      4-5 Artist Patterns 11_authored_hint:
+        4-5_Artist_Patterns_11_a:
+          - 'crwdns72290:0crwdne72290:0'
+          - 'crwdns72291:0crwdne72291:0'
+      4-5 Artist Patterns 2_authored_hint:
+        4-5_Artist_Patterns_2_a:
+          - 'crwdns72292:0crwdne72292:0'
+      4-5 Artist Patterns 3_authored_hint:
+        4-5_Artist_Patterns_3_a:
+          - 'crwdns72293:0crwdne72293:0'
+        4-5_Artist_Patterns_3_b:
+          - 'crwdns72294:0crwdne72294:0'
+      4-5 Artist Patterns 5_authored_hint:
+        4-5_Artist_Patterns_5_a: "crwdns72295:0crwdne72295:0"
+      4-5 Bee Conditionals 4_authored_hint:
+        remember_quantum: "crwdns72296:0crwdne72296:0"
+      4-5 Bee Conditionals 5_authored_hint:
+        remember_quantum: "crwdns72297:0crwdne72297:0"
+      4-5 Bee Conditionals 6_authored_hint:
+        4-5 Bee Conditionals 6_a:
+          - 'crwdns72298:0crwdne72298:0'
+        4-5 Bee Conditionals 6_b:
+          - 'crwdns72299:0crwdne72299:0'
+      4-5 Bee Debugging 1_authored_hint:
+        4-5_Bee_Debugging_1_a:
+          - 'crwdns72300:0crwdne72300:0'
+      4-5 Bee Nested Loops Rows_authored_hint:
+        4-5_Bee_Nested_Loops_Rows_a:
+          - 'crwdns72301:0crwdne72301:0'
+          - 'crwdns72302:0crwdne72302:0'
+      4-5 Maze 10_authored_hint:
+        4-5_Maze_10_a: |-
+          crwdns72303:0crwdne72303:0
+      4-5 Maze 4_authored_hint:
+        4-5_Maze_4_a:
+          - 'crwdns72304:0crwdne72304:0'
+      4-5 Maze 5_authored_hint:
+        4-5_Maze_5_a:
+          - 'crwdns72305:0crwdne72305:0'
+        4-5_Maze_5_b: 'crwdns72306:0crwdne72306:0'
+      4-5 Maze 6_authored_hint:
+        4-5_Maze_6_a: "crwdns72307:0crwdne72307:0"
+      4-5 Maze 7_authored_hint:
+        4-5_Maze_7_a: "crwdns72308:0crwdne72308:0"
+      4-5 Nested Loops 12_authored_hint:
+        4-5_Nested_Loops_12_a: "crwdns72309:0crwdne72309:0"
+      4-5 Nested Loops 2_authored_hint: [ ]
+      4-5 Nested Loops 6_authored_hint:
+        4-5_Nested_Loops_6_a: |-
+          crwdns72310:0crwdne72310:0
+      4-5 Nested Loops 7_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          crwdns72311:0crwdne72311:0
+      4-5 Nested Loops 8_authored_hint:
+        4-5_Nested_Loops_8_a: |-
+          crwdns72312:0crwdne72312:0
+      4-5 While Loops 8_authored_hint:
+        4-5_While_Loops_8_a: 'crwdns72313:0crwdne72313:0'
+      aE1_authored_hint: [ ]
+      aE2_authored_hint:
+        aE2_a:
+          - 'crwdns72314:0crwdne72314:0'
+      aE3_authored_hint:
+        aE3_a:
+          - 'crwdns72315:0crwdne72315:0'
+        aE3_b: "crwdns72316:0crwdne72316:0"
+        aE3_c:
+          - 'crwdns72317:0crwdne72317:0'
+        aE3_d:
+          - 'crwdns72318:0crwdne72318:0'
+      aE3alternate_authored_hint:
+        aE3alternate_a:
+          - 'crwdns72319:0crwdne72319:0'
+        aE3alternate_b: "crwdns72320:0crwdne72320:0"
+        aE3alternate_c:
+          - 'crwdns72321:0crwdne72321:0'
+        aE3alternate_d:
+          - 'crwdns72322:0crwdne72322:0'
+      aE3alternateB_authored_hint:
+        aE4alternateB_a:
+          - 'crwdns72323:0crwdne72323:0'
+        aE4alternateB_b: "crwdns72324:0crwdne72324:0"
+        aE4alternateB_c:
+          - 'crwdns72325:0crwdne72325:0'
+        aE4alternateB_d:
+          - 'crwdns72326:0crwdne72326:0'
+      aE4_authored_hint:
+        aE4_a:
+          - 'crwdns72327:0crwdne72327:0'
+        aE4_b: "crwdns72328:0crwdne72328:0"
+        aE4_c:
+          - 'crwdns72329:0crwdne72329:0'
+        aE4_d:
+          - 'crwdns72330:0crwdne72330:0'
+      aE5_authored_hint: [ ]
+      aE6_authored_hint:
+        aE6_a: |-
+          crwdns72331:0crwdne72331:0
+      aE7_authored_hint:
+        aE7_a:
+          - 'crwdns72332:0crwdne72332:0'
+        aE7_b: 'crwdns72333:0crwdne72333:0'
+      aE8_authored_hint:
+        aE8_a: 'crwdns72334:0crwdne72334:0'
+      Artist Inspiration_authored_hint:
+        brush_width:
+          - 'crwdns72335:0crwdne72335:0'
+        double_loop: 'crwdns72336:0crwdne72336:0'
+        specifics: "crwdns72337:0crwdne72337:0"
+        after:
+          - 'crwdns72338:0crwdne72338:0'
+        solution: |-
+          crwdns72339:0crwdne72339:0
+      artistLoopsK2_authored_hint:
+        artistLoopsK2_a:
+          - 'crwdns72340:0crwdne72340:0'
+      artistLoopsK2gradek_artist_loops3_authored_hint:
+        artistLoopsK2_a:
+          - 'crwdns72341:0crwdne72341:0'
+      artistLoopsK3_authored_hint:
+        artistLoopsK3_a:
+          - 'crwdns72342:0crwdne72342:0'
+      artistLoopsK4_authored_hint:
+        artistLoopsK4_a: 'crwdns72343:0crwdne72343:0'
+      artistLoopsK5_authored_hint:
+        artistLoopsK5_a:
+          - 'crwdns72344:0crwdne72344:0'
+      artistLoopsK6_authored_hint:
+        artistLoopsK6_a: 'crwdns72345:0crwdne72345:0'
+      artistLoopsK7_authored_hint:
+        artistLoopsK7_a:
+          - 'crwdns72346:0crwdne72346:0'
+      artistLoopsK8_authored_hint:
+        artistLoopsK8_a: 'crwdns72347:0crwdne72347:0'
+      artistLoopsK9_authored_hint:
+        artistLoopsK9_a: 'crwdns72348:0crwdne72348:0'
+      artistLoopsKA_authored_hint:
+        artistLoopsKA_a: 'crwdns72349:0crwdne72349:0'
+      artistLoopsKB_authored_hint:
+        artistLoopsKB_a:
+          - 'crwdns72350:0crwdne72350:0'
+      artistLoopsKFP_authored_hint: [ ]
+      Bergeron Robot Maze1_authored_hint:
+        2-3_Maze_1_a:
+          - 'crwdns72351:0crwdne72351:0'
+      Course 4 Artist 11_authored_hint:
+        Course_4_Artist_11_a: 'crwdns72352:0crwdne72352:0'
+        Course_4_Artist_11_b: 'crwdns72353:0crwdne72353:0'
+      Course 4 Artist 12_authored_hint:
+        Course_4_Artist_12_a: 'crwdns72354:0crwdne72354:0'
+        Course_4_Artist_12_b: 'crwdns72355:0crwdne72355:0'
+        Course_4_Artist_12_c: "crwdns72356:0crwdne72356:0"
+        Course_4_Artist_12_d: |-
+          crwdns72357:0crwdne72357:0
+      Course 4 Artist 6_authored_hint:
+        Course_4_Artist_6_a:
+          - 'crwdns72358:0crwdne72358:0'
+      Course 4 Artist 7_authored_hint: [ ]
+      Course 4 Artist 8a_authored_hint:
+        Course_4_Artist_8a: |-
+          crwdns72359:0crwdne72359:0
+      Course 4 Artist 9_authored_hint:
+        Course_4_Artist_9_a: "crwdns72360:0crwdne72360:0"
+      Course 4 Artist Binary Free Play 2b_authored_hint:
+        Course_4_Artist_Binary_Free_Play_2b_a:
+          - 'crwdns72361:0crwdne72361:0'
+        Course_4_Artist_Binary_Free_Play_2b_b:
+          - 'crwdns72362:0crwdne72362:0'
+          - 'crwdns72363:0crwdne72363:0'
+        Course_4_Artist_Binary_Free_Play_2b_c:
+          - 'crwdns72364:0crwdne72364:0'
+        Course_4_Artist_Binary_Free_Play_2b_d: |-
+          crwdns72365:0[solution]crwdne72365:0
+      Course 4 Artist For Loops 11_authored_hint:
+        Course_4_Artist_For_Loops_11_a: "crwdns72366:0crwdne72366:0"
+      Course 4 Artist For Loops 11a_authored_hint:
+        Course_4_Artist_For_Loops_11a_a: 'crwdns72367:0crwdne72367:0'
+        Course_4_Artist_For_Loops_11a_b: 'crwdns72368:0crwdne72368:0'
+      Course 4 Artist For Loops 3_authored_hint:
+        Course_4_Artist_For_Loops_3_a:
+          - 'crwdns72369:0crwdne72369:0'
+      Course 4 Artist For Loops 4_authored_hint:
+        Course_4_Artist_For_Loops_4_a: "crwdns72370:0crwdne72370:0"
+      Course 4 Artist For Loops Challenge_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a:
+          - 'crwdns72371:0crwdne72371:0'
+        Course_4_Artist_For_Loops_Challenge_b:
+          - 'crwdns72372:0crwdne72372:0'
+      Course 4 Artist For Loops Challenge_a_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: 'crwdns72373:0crwdne72373:0'
+        Course_4_Artist_For_Loops_Challenge_b:
+          - 'crwdns72374:0crwdne72374:0'
+      Course 4 Artist For Loops inspire_authored_hint:
+        Course_4_Artist_For_Loops_inspire_a:
+          - 'crwdns72375:0crwdne72375:0'
+        Course_4_Artist_For_Loops_inspire_b:
+          - 'crwdns72376:0crwdne72376:0'
+        Course_4_Artist_For_Loops_inspire_c:
+          - 'crwdns72377:0crwdne72377:0'
+          - 'crwdns72378:0crwdne72378:0'
+        Course_4_Artist_For_Loops_inspire_d: "crwdns72379:0[Solution]crwdne72379:0"
+      Course 4 Artist Functions challenge_authored_hint:
+        Course_4_Artist_Functions_challenge_a:
+          - 'crwdns72380:0crwdne72380:0'
+        Course_4_Artist_Functions_challenge_b:
+          - 'crwdns72381:0crwdne72381:0'
+        Course_4_Artist_Functions_challenge_c:
+          - 'crwdns72382:0crwdne72382:0'
+        Course_4_Artist_Functions_challenge_d:
+          - 'crwdns72383:0crwdne72383:0'
+      Course 4 Artist Functions Inspiration_authored_hint:
+        Course_4_Artist_Functions_Inspiration_a:
+          - 'crwdns72384:0crwdne72384:0'
+          - 'crwdns72385:0crwdne72385:0'
+        Course_4_Artist_Functions_Inspiration_b:
+          - 'crwdns72386:0crwdne72386:0'
+        Course_4_Artist_Functions_Inspiration_c: |-
+          crwdns72387:0[Solution]crwdne72387:0
+      Course 4 Artist Inspire_authored_hint:
+        Course_4_Artist_Inspire_a:
+          - 'crwdns72388:0crwdne72388:0'
+        Course_4_Artist_Inspire_b:
+          - 'crwdns72389:0crwdne72389:0'
+        Course_4_Artist_Inspire_c:
+          - 'crwdns72390:0crwdne72390:0'
+        Course_4_Artist_Inspire_d: |-
+          crwdns72391:0crwdne72391:0
+      Course 4 Artist Vars 13_authored_hint:
+        Course_4_Artist_Vars_13_a:
+          - 'crwdns72392:0crwdne72392:0'
+        Course_4_Artist_Vars_13_b: "crwdns72393:0crwdne72393:0"
+        Course_4_Artist_Vars_13_c:
+          - 'crwdns72394:0crwdne72394:0'
+          - 'crwdns72395:0crwdne72395:0'
+      Course 4 Artist Vars 6_authored_hint:
+        Course_4_Artist_Vars_6_a:
+          - 'crwdns72396:0crwdne72396:0'
+      Course 4 Artist Vars 8_authored_hint:
+        Course_4_Artist_Vars_8_a:
+          - 'crwdns72397:0crwdne72397:0'
+          - 'crwdns72398:0crwdne72398:0'
+      Course 4 Bee Params 7_authored_hint:
+        notice_pattern: 'crwdns72399:0crwdne72399:0'
+        count_with_for:
+          - 'crwdns72400:0crwdne72400:0'
+      Course 4 Bee Params 8_authored_hint:
+        Course_4_Bee_Params_8_a:
+          - 'crwdns72401:0crwdne72401:0'
+      Course 4 Play Lab Params 2_authored_hint:
+        Course_4_Play_Lab_Params_2_a:
+          - 'crwdns72402:0crwdne72402:0'
+      Course 4 Play Lab Vars 2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a:
+          - 'crwdns72403:0crwdne72403:0'
+      Course 4 Play Labs For Loops 2_authored_hint:
+        Course_4_Play_Labs_For_Loops_2_a:
+          - 'crwdns72404:0crwdne72404:0'
+      Course 4 Playlab For Loop Freeplay_authored_hint: [ ]
+      Course 4 Playlab For Loops 4b_authored_hint:
+        Course_4_Playlab_For_Loops_4b_a:
+          - 'crwdns72405:0crwdne72405:0'
+        Course_4_Playlab_For_Loops_4b_b:
+          - 'crwdns72406:0crwdne72406:0'
+          - 'crwdns72407:0crwdne72407:0'
+        Course_4_Playlab_For_Loops_4b_c:
+          - 'crwdns72408:0crwdne72408:0'
+          - 'crwdns72409:0crwdne72409:0'
+      Course 4 Playlab For Loops 5b_authored_hint:
+        Course_4_Playlab_For_Loops_5b_a:
+          - 'crwdns72410:0crwdne72410:0'
+        Course_4_Playlab_For_Loops_5b_b:
+          - 'crwdns72411:0crwdne72411:0'
+      Course 4 Playlab For Loops 6b_authored_hint: [ ]
+      Course 4 SCF 1_authored_hint:
+        Course_4_SCF_1_a: 'crwdns72412:0crwdne72412:0'
+        Course_4_SCF_1_b:
+          - 'crwdns72413:0crwdne72413:0'
+        Course_4_SCF_1_c: "crwdns72414:0crwdne72414:0"
+        Course_4_SCF_1_d: "crwdns72415:0crwdne72415:0"
+        Course_4_SCF_1_e: |-
+          crwdns72416:0crwdne72416:0
+      Course 4 SCF 1a_authored_hint:
+        Course_4_SCF_1a_a: 'crwdns72417:0crwdne72417:0'
+        Course_4_SCF_1a_b: 'crwdns72418:0crwdne72418:0'
+        Course_4_SCF_1a_c:
+          - 'crwdns72419:0crwdne72419:0'
+        Course_4_SCF_1a_d: |-
+          crwdns72420:0crwdne72420:0
+      Course 4 SCF 1b_authored_hint:
+        Course_4_SCF_1b_a: "crwdns72421:0crwdne72421:0"
+        Course_4_SCF_1b_b: 'crwdns72422:0crwdne72422:0'
+        Course_4_SCF_1b_c:
+          - 'crwdns72423:0crwdne72423:0'
+        Course_4_SCF_1b_d: |-
+          crwdns72424:0crwdne72424:0
+      Course 4 SCF 2_authored_hint:
+        Course_4_SCF_2_a: 'crwdns72425:0crwdne72425:0'
+        Course_4_SCF_2_b:
+          - 'crwdns72426:0crwdne72426:0'
+        Course_4_SCF_2_c: "crwdns72427:0crwdne72427:0"
+        Course_4_SCF_2_d: "crwdns72428:0crwdne72428:0"
+        Course_4_SCF_2_e: |-
+          crwdns72429:0crwdne72429:0
+      Course 4 SCF 3_authored_hint:
+        Course_4_SCF_3_a: "crwdns72430:0crwdne72430:0"
+        Course_4_SCF_3_b: 'crwdns72431:0crwdne72431:0'
+        Course_4_SCF_3_c: 'crwdns72432:0crwdne72432:0'
+        Course_4_SCF_3_d: 'crwdns72433:0crwdne72433:0'
+        Course_4_SCF_3_e:
+          - 'crwdns72434:0crwdne72434:0'
+        Course_4_SCF_3_f: |-
+          crwdns72435:0crwdne72435:0
+      Course 4 SCFL 1_authored_hint:
+        Course_4_SCFL_1_a: 'crwdns72436:0crwdne72436:0'
+        Course_4_SCFL_1_b: 'crwdns72437:0crwdne72437:0'
+        Course_4_SCFL_1_c: "crwdns72438:0crwdne72438:0"
+        Course_4_SCFL_1_d: |-
+          crwdns72439:0crwdne72439:0
+      Course 4 SCFL 1a_authored_hint:
+        Course_4_SCFL_1a_a:
+          - 'crwdns72440:0crwdne72440:0'
+        Course_4_SCFL_1a_b: 'crwdns72441:0crwdne72441:0'
+        Course_4_SCFL_1a_c:
+          - 'crwdns72442:0crwdne72442:0'
+          - 'crwdns72443:0crwdne72443:0'
+        Course_4_SCFL_1a_d: "crwdns72444:0crwdne72444:0"
+      Course 4 SCFL 1b_authored_hint:
+        Course_4_SCFL_1b_a: 'crwdns72445:0crwdne72445:0'
+        Course_4_SCFL_1b_b: 'crwdns72446:0crwdne72446:0'
+        Course_4_SCFL_1b_c: |-
+          crwdns72447:0crwdne72447:0
+      Course 4 SCFL 2_authored_hint:
+        Course_4_SCFL_2_a: 'crwdns72448:0crwdne72448:0'
+        Course_4_SCFL_2_b:
+          - 'crwdns72449:0crwdne72449:0'
+        Course_4_SCFL_2_c:
+          - 'crwdns72450:0crwdne72450:0'
+        Course_4_SCFL_2_d: |-
+          crwdns72451:0crwdne72451:0
+      Course 4 SCFL 3_authored_hint:
+        Course_4_SCFL_3_a:
+          - 'crwdns72452:0crwdne72452:0'
+        Course_4_SCFL_3_b: 'crwdns72453:0crwdne72453:0'
+        Course_4_SCFL_3_c:
+          - 'crwdns72454:0crwdne72454:0'
+        Course_4_SCFL_3_d: |-
+          crwdns72455:0crwdne72455:0
+      Course 4 SCFL 4_authored_hint:
+        Course_4_SCFL_4_a:
+          - 'crwdns72456:0crwdne72456:0'
+          - 'crwdns72457:0crwdne72457:0'
+        Course_4_SCFL_4_b:
+          - 'crwdns72458:0crwdne72458:0'
+        Course_4_SCFL_4_c: 'crwdns72459:0crwdne72459:0'
+        Course_4_SCFL_4_d: |-
+          crwdns72460:0crwdne72460:0
+      Course 4 SCFL 6_authored_hint:
+        Course_4_SCFL_6_a:
+          - 'crwdns72461:0crwdne72461:0'
+          - 'crwdns72462:0crwdne72462:0'
+        Course_4_SCFL_6_b:
+          - 'crwdns72463:0crwdne72463:0'
+        Course_4_SCFL_6_c: 'crwdns72464:0crwdne72464:0'
+        Course_4_SCFL_6_d: |-
+          crwdns72465:0crwdne72465:0
+      Course 4 SCFL 7_authored_hint:
+        Course_4_SCFL_7_a:
+          - 'crwdns72466:0crwdne72466:0'
+          - 'crwdns72467:0crwdne72467:0'
+        Course_4_SCFL_7_b: 'crwdns72468:0crwdne72468:0'
+        Course_4_SCFL_7_c:
+          - 'crwdns72469:0crwdne72469:0'
+          - 'crwdns72470:0crwdne72470:0'
+        Course_4_SCFL_7_d:
+          - 'crwdns72471:0crwdne72471:0'
+        Course_4_SCFL_7_e: |-
+          crwdns72472:0crwdne72472:0
+      Course 4 SCV 1_authored_hint:
+        Course_4_SCV_1_a: 'crwdns72473:0crwdne72473:0'
+        Course_4_SCV_1_b:
+          - 'crwdns72474:0crwdne72474:0'
+          - 'crwdns72475:0crwdne72475:0'
+        Course_4_SCV_1_c:
+          - 'crwdns72476:0crwdne72476:0'
+          - 'crwdns72477:0crwdne72477:0'
+        Course_4_SCV_1_d: |-
+          crwdns72478:0[Solution]crwdne72478:0
+      Course 4 SCV 2_authored_hint:
+        Course_4_SCV_2_a: 'crwdns72479:0crwdne72479:0'
+        Course_4_SCV_2_b: 'crwdns72480:0crwdne72480:0'
+        Course_4_SCV_2_c:
+          - 'crwdns72481:0crwdne72481:0'
+        Course_4_SCV_2_d:
+          - 'crwdns72482:0crwdne72482:0'
+          - 'crwdns72483:0crwdne72483:0'
+        Course_4_SCV_2_e: |-
+          crwdns72484:0[Solution]crwdne72484:0
+      Course 4 SCV 3_authored_hint:
+        Course_4_SCV_3_a: 'crwdns72485:0crwdne72485:0'
+        Course_4_SCV_3_b:
+          - 'crwdns72486:0crwdne72486:0'
+        Course_4_SCV_3_c: |-
+          crwdns72487:0[solution]crwdne72487:0
+      Course 4 SCV 4_authored_hint:
+        Course_4_SCV_4_a:
+          - 'crwdns72488:0crwdne72488:0'
+          - 'crwdns72489:0crwdne72489:0'
+        Course_4_SCV_4_b: 'crwdns72490:0crwdne72490:0'
+        Course_4_SCV_4_c: 'crwdns72491:0crwdne72491:0'
+        Course_4_SCV_4_d: |-
+          crwdns72492:0[Solution]crwdne72492:0
+      Course 4 SCV 5_authored_hint:
+        Course_4_SCV_5_a: |-
+          crwdns72493:0crwdne72493:0
+        Course_4_SCV_5_b:
+          - 'crwdns72494:0crwdne72494:0'
+        Course_4_SCV_5_c:
+          - 'crwdns72495:0crwdne72495:0'
+        Course_4_SCV_5_d: |-
+          crwdns72496:0crwdne72496:0
+      Course 4 SCV 6_authored_hint:
+        Course_4_SCV_6_a: |-
+          crwdns72497:0crwdne72497:0
+        Course_4_SCV_6_b: 'crwdns72498:0crwdne72498:0'
+        Course_4_SCV_6_c:
+          - 'crwdns72499:0crwdne72499:0'
+          - 'crwdns72500:0crwdne72500:0'
+        Course_4_SCV_6_d: 'crwdns72501:0crwdne72501:0'
+        Course_4_SCV_6_e: 'crwdns72502:0crwdne72502:0'
+        Course_4_SCV_6_f: |-
+          crwdns72503:0[Solution]crwdne72503:0
+      courseA_maze_seq1_authored_hint:
+        K2.0_sequence_pre_a:
+          - 'crwdns72504:0crwdne72504:0'
+      courseA_maze_seq2_authored_hint:
+        K2.0_sequence_1_a:
+          - 'crwdns72505:0crwdne72505:0'
+      courseB_playlab_events2_authored_hint:
+        courseB_playlab_events2_a: |-
+          crwdns72506:0crwdne72506:0
+      courseB_playlab_events3_authored_hint:
+        courseB_playlab_events3_a: |-
+          crwdns72507:0crwdne72507:0
+        courseB_playlab_events3_b: |-
+          crwdns72508:0crwdne72508:0
+      courseB_playlab_events4_authored_hint:
+        courseB_playlab_events4_a: |-
+          crwdns72509:0crwdne72509:0
+      courseB_playlab_events5_authored_hint:
+        courseB_playlab_events5_a: 'crwdns72510:0crwdne72510:0'
+        courseB_playlab_events5_b: "crwdns72511:0crwdne72511:0"
+      courseB_playlab_events6_authored_hint:
+        courseB_playlab_events6_a: |-
+          crwdns72512:0crwdne72512:0
+      courseB_playlab_events7_authored_hint:
+        courseB_playlab_events7_a: |-
+          crwdns72513:0crwdne72513:0
+        courseB_playlab_events7_b: |-
+          crwdns72514:0crwdne72514:0
+        courseB_playlab_events7_c: |-
+          crwdns72515:0crwdne72515:0
+      courseB_playlab_eventsTemplate_authored_hint: [ ]
+      courseB_playlab_eventsToolbox_authored_hint:
+        courseB_playlab_events7_a: |-
+          crwdns72516:0crwdne72516:0
+        courseB_playlab_events7_b: |-
+          crwdns72517:0crwdne72517:0
+        courseB_playlab_events7_c: |-
+          crwdns72518:0crwdne72518:0
+      courseC_artist_prog1_authored_hint: [ ]
+      courseC_artist_prog2_authored_hint:
+        courseC_artist_prog2_a:
+          - 'crwdns72519:0crwdne72519:0'
+        courseC_artist_prog2_b:
+          - 'crwdns72520:0crwdne72520:0'
+      courseC_artist_prog3_authored_hint:
+        courseC_artist_prog3_a: |-
+          crwdns72521:0crwdne72521:0
+      courseC_artist_prog4_authored_hint:
+        courseC_artist_prog4_a: 'crwdns72522:0crwdne72522:0'
+      courseC_artist_prog5_authored_hint:
+        courseC_artist_prog5_a:
+          - 'crwdns72523:0crwdne72523:0'
+      courseC_artist_prog6_authored_hint:
+        courseC_artist_prog6_a:
+          - 'crwdns72524:0crwdne72524:0'
+        courseC_artist_prog6_b:
+          - 'crwdns72525:0crwdne72525:0'
+        courseC_artist_prog6_c:
+          - 'crwdns72526:0crwdne72526:0'
+      courseC_artist_prog7_authored_hint:
+        courseC_artist_prog7_a: 'crwdns72527:0crwdne72527:0'
+        courseC_artist_prog7_b: "crwdns72528:0crwdne72528:0"
+      courseC_artist_prog8_authored_hint:
+        courseC_artist_prog7_a:
+          - 'crwdns72529:0crwdne72529:0'
+      courseC_collector_prog2_authored_hint:
+        courseC_collector_prog2_a:
+          - 'crwdns72530:0crwdne72530:0'
+      courseC_collector_prog3_authored_hint:
+        courseC_collector_prog3_a:
+          - 'crwdns72531:0crwdne72531:0'
+        courseC_collector_prog3_b:
+          - 'crwdns72532:0crwdne72532:0'
+      courseC_collector_prog5_authored_hint:
+        courseC_collector_prog5_a: "crwdns72533:0crwdne72533:0"
+        courseC_collector_prog5_b:
+          - 'crwdns72534:0crwdne72534:0'
+      courseC_collector_prog6_authored_hint:
+        courseC_collector_prog6_a: "crwdns72535:0crwdne72535:0"
+      courseC_collector_prog7_authored_hint:
+        courseC_collector_prog7_a: 'crwdns72536:0crwdne72536:0'
+        courseC_collector_prog7_b:
+          - 'crwdns72537:0crwdne72537:0'
+      courseC_collector_prog9_authored_hint:
+        courseC_collector_prog9_a:
+          - 'crwdns72538:0crwdne72538:0'
+      courseC_collector_progA_authored_hint:
+        courseC_collector_progA_a:
+          - 'crwdns72539:0crwdne72539:0'
+      courseC_maze_debugging1_authored_hint:
+        courseC_maze_debugging1_a: |-
+          crwdns72540:0crwdne72540:0
+      courseC_maze_debugging2_authored_hint:
+        courseC_maze_debugging2_a:
+          - 'crwdns72541:0crwdne72541:0'
+        courseC_maze_debugging2_b: |-
+          crwdns72542:0crwdne72542:0
+      courseC_maze_debugging3_authored_hint:
+        courseC_maze_debugging3_a: |-
+          crwdns72543:0crwdne72543:0
+      courseC_maze_debugging4_authored_hint:
+        courseC_maze_debugging4_a:
+          - 'crwdns72544:0crwdne72544:0'
+      courseC_maze_debugging5_authored_hint:
+        courseC_maze_debugging5_a: "crwdns72545:0crwdne72545:0"
+        courseC_maze_debugging5_b:
+          - 'crwdns72546:0crwdne72546:0'
+      courseC_maze_debugging6_authored_hint:
+        courseC_maze_debugging6_a: |-
+          crwdns72547:0crwdne72547:0
+      courseC_maze_debugging7_authored_hint:
+        courseC_maze_debugging7_a: |-
+          crwdns72548:0crwdne72548:0
+        courseC_maze_debugging7_b:
+          - 'crwdns72549:0crwdne72549:0'
+        courseC_maze_debugging7_c: |-
+          crwdns72550:0crwdne72550:0
+      courseC_maze_debugging8_authored_hint:
+        courseC_maze_debugging8_a: |-
+          crwdns72551:0crwdne72551:0
+      courseC_maze_debugging9_authored_hint:
+        courseC_maze_debugging9_a: |-
+          crwdns72552:0crwdne72552:0
+      courseC_maze_loops10_authored_hint: [ ]
+      courseC_maze_loops11_authored_hint: [ ]
+      courseC_maze_loops2_authored_hint:
+        courseC_maze_loops2_a:
+          - 'crwdns72553:0crwdne72553:0'
+        courseC_maze_loops2_b:
+          - 'crwdns72554:0crwdne72554:0'
+        courseC_maze_loops2_c:
+          - 'crwdns72555:0crwdne72555:0'
+      courseC_maze_loops3_authored_hint:
+        courseC_maze_loops3_a: 'crwdns72556:0crwdne72556:0'
+        courseC_maze_loops3_b: 'crwdns72557:0crwdne72557:0'
+      courseC_maze_loops4_authored_hint:
+        courseC_maze_loops4_a: 'crwdns72558:0crwdne72558:0'
+        courseC_maze_loops4_b: 'crwdns72559:0crwdne72559:0'
+        courseC_maze_loops4_c: "crwdns72560:0crwdne72560:0"
+      courseC_maze_loops5_authored_hint:
+        courseC_maze_loops5_a:
+          - 'crwdns72561:0crwdne72561:0'
+      courseC_maze_loops6_authored_hint:
+        courseC_maze_loops6_a:
+          - 'crwdns72562:0crwdne72562:0'
+        courseC_maze_loops6_b: "crwdns72563:0crwdne72563:0"
+      courseC_maze_loops7_authored_hint:
+        courseC_maze_loops7_a:
+          - 'crwdns72564:0crwdne72564:0'
+          - 'crwdns72565:0crwdne72565:0'
+      courseC_maze_loops8_authored_hint:
+        courseC_puppy_loops8courseC_maze_loops8_a:
+          - 'crwdns72566:0crwdne72566:0'
+          - 'crwdns72567:0crwdne72567:0'
+        courseC_puppy_loops8courseC_maze_loops8_b:
+          - 'crwdns72568:0crwdne72568:0'
+        courseC_puppy_loops8courseC_maze_loops8_c: "crwdns72569:0crwdne72569:0"
+      courseC_maze_loops9_authored_hint:
+        courseC_maze_loops9_1: 'crwdns72570:0crwdne72570:0'
+      courseC_maze_programming1_authored_hint:
+        courseC_maze_programming1_0:
+          - 'crwdns72571:0crwdne72571:0'
+          - 'crwdns72572:0crwdne72572:0'
+      courseC_maze_programming2_authored_hint:
+        courseC_maze_programming2_a:
+          - 'crwdns72573:0crwdne72573:0'
+      courseC_maze_programming3_authored_hint:
+        courseC_maze_programming3_a: "crwdns72574:0crwdne72574:0"
+      courseC_maze_programming4_authored_hint:
+        courseC_maze_programming4_a:
+          - 'crwdns72575:0crwdne72575:0'
+        courseC_maze_programming4_b:
+          - 'crwdns72576:0crwdne72576:0'
+          - 'crwdns72577:0crwdne72577:0'
+      courseC_maze_programming5_authored_hint:
+        courseC_maze_programming5_a:
+          - 'crwdns72578:0crwdne72578:0'
+      courseC_maze_programming6_authored_hint:
+        courseC_maze_programming6_a: 'crwdns72579:0crwdne72579:0'
+      courseC_maze_programming7_authored_hint:
+        courseC_maze_programming7_a:
+          - 'crwdns72580:0crwdne72580:0'
+      courseC_maze_programming8_authored_hint: [ ]
+      courseC_maze_programming9_authored_hint: [ ]
+      courseC_PlayLab_events3_authored_hint:
+        courseC_PlayLab_events3_a:
+          - 'crwdns72581:0crwdne72581:0'
+      courseC_PlayLab_events4_authored_hint:
+        courseC_PlayLab_events4_b:
+          - 'crwdns72582:0crwdne72582:0'
+        courseC_PlayLab_events4_a:
+          - 'crwdns72583:0crwdne72583:0'
+      courseC_PlayLab_events5_authored_hint:
+        courseC_PlayLab_events5_a:
+          - 'crwdns72584:0crwdne72584:0'
+      courseC_PlayLab_events7_authored_hint:
+        courseC_PlayLab_events7_a: 'crwdns72585:0crwdne72585:0'
+      courseC_PlayLab_events8_authored_hint:
+        courseC_PlayLab_events8_a:
+          - 'crwdns72586:0crwdne72586:0'
+        courseC_PlayLab_events8_b:
+          - 'crwdns72587:0crwdne72587:0'
+      courseC_PlayLab_events9_authored_hint:
+        courseC_PlayLab_events9_a:
+          - 'crwdns72588:0crwdne72588:0'
+      courseC_PlayLab_eventsA_authored_hint:
+        courseC_PlayLab_eventsA_a:
+          - 'crwdns72589:0crwdne72589:0'
+      courseC_PlayLab_eventsFP_authored_hint:
+        idea1: |-
+          crwdns72590:0crwdne72590:0
+        idea2: |-
+          crwdns72591:0crwdne72591:0
+        idea3: |-
+          crwdns72592:0crwdne72592:0
+      courseC_puppy_loops10_authored_hint:
+        courseC_puppy_loops9_1: 'crwdns72593:0crwdne72593:0'
+      courseC_puppy_loops11_authored_hint: [ ]
+      courseC_puppy_loops8_authored_hint:
+        2-3_Maze_Loops_17_a:
+          - 'crwdns72594:0crwdne72594:0'
+        2-3_Maze_Loops_17_b:
+          - 'crwdns72595:0crwdne72595:0'
+        courseC_puppy_loops8_c:
+          - 'crwdns72596:0crwdne72596:0'
+          - 'crwdns72597:0crwdne72597:0'
+      courseC_puppy_loops8courseC_maze_loops8_authored_hint:
+        courseC_puppy_loops8courseC_maze_loops8_a:
+          - 'crwdns72598:0crwdne72598:0'
+          - 'crwdns72599:0crwdne72599:0'
+        courseC_puppy_loops8courseC_maze_loops8_b:
+          - 'crwdns72600:0crwdne72600:0'
+        courseC_puppy_loops8courseC_maze_loops8_c: "crwdns72601:0crwdne72601:0"
+      courseC_puppy_loops9_authored_hint:
+        courseC_puppy_loops9_1:
+          - 'crwdns72602:0crwdne72602:0'
+      courseD_artist_functions10_authored_hint:
+        courseD_artist_functions10_b:
+          - 'crwdns72603:0crwdne72603:0'
+        courseD_artist_functions10_a:
+          - 'crwdns72604:0crwdne72604:0'
+      courseD_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          crwdns72605:0crwdne72605:0
+      courseD_artist_functions3_authored_hint:
+        courseD_artist_functions3_a: |-
+          crwdns72606:0crwdne72606:0
+      courseD_artist_functions4_authored_hint:
+        courseD_artist_functions4_a: 'crwdns72607:0crwdne72607:0'
+      courseD_artist_functions5_authored_hint:
+        courseD_artist_functions5_a: 'crwdns72608:0crwdne72608:0'
+        courseD_artist_functions5_b:
+          - 'crwdns72609:0crwdne72609:0'
+      courseD_artist_functions6_authored_hint:
+        grade4_artist_functions_windows0_a:
+          - 'crwdns72610:0crwdne72610:0'
+        grade4_artist_functions_windows0_b:
+          - 'crwdns72611:0crwdne72611:0'
+      courseD_artist_functions7_authored_hint:
+        courseD_artist_functions7_a:
+          - 'crwdns72612:0crwdne72612:0'
+        courseD_artist_functions7_b:
+          - 'crwdns72613:0crwdne72613:0'
+          - 'crwdns72614:0crwdne72614:0'
+      courseD_artist_functions8_authored_hint:
+        courseD_artist_functions8_a: |-
+          crwdns72615:0crwdne72615:0
+        courseD_artist_functions8_b:
+          - 'crwdns72616:0crwdne72616:0'
+        courseD_artist_functions8_c:
+          - 'crwdns72617:0crwdne72617:0'
+      courseD_artist_functions9_authored_hint:
+        courseD_artist_functions9_a:
+          - 'crwdns72618:0crwdne72618:0'
+          - 'crwdns72619:0crwdne72619:0'
+        courseD_artist_functions9_b:
+          - 'crwdns72620:0crwdne72620:0'
+          - 'crwdns72621:0crwdne72621:0'
+      courseD_artist_nestedLoops1_authored_hint:
+        courseD_artist_nestedLoops1_a:
+          - 'crwdns72622:0crwdne72622:0'
+      courseD_artist_nestedLoops10_authored_hint:
+        courseD_artist_nestedLoops10_a:
+          - 'crwdns72623:0crwdne72623:0'
+        courseD_artist_nestedLoops10_b:
+          - 'crwdns72624:0crwdne72624:0'
+      courseD_artist_nestedLoops1a_authored_hint:
+        courseD_artist_nestedLoops1a_a: 'crwdns72625:0crwdne72625:0'
+      courseD_artist_nestedLoops2_authored_hint:
+        courseD_artist_nestedLoops2_a:
+          - 'crwdns72626:0crwdne72626:0'
+      courseD_artist_nestedLoops3_authored_hint:
+        courseD_artist_nestedLoops3_a: "crwdns72627:0crwdne72627:0"
+        courseD_artist_nestedLoops3_b: 'crwdns72628:0crwdne72628:0'
+      courseD_artist_nestedLoops4_authored_hint:
+        courseD_artist_nestedLoops4_a: |-
+          crwdns72629:0crwdne72629:0
+        courseD_artist_nestedLoops4_b:
+          - 'crwdns72630:0crwdne72630:0'
+        courseD_artist_nestedLoops4_c: 'crwdns72631:0crwdne72631:0'
+      courseD_artist_nestedLoops5_authored_hint:
+        courseD_artist_nestedLoops5_a: |-
+          crwdns72632:0crwdne72632:0
+      courseD_artist_nestedLoops6_authored_hint:
+        courseD_artist_nestedLoops6_a:
+          - 'crwdns72633:0crwdne72633:0'
+        courseD_artist_nestedLoops6_b: 'crwdns72634:0crwdne72634:0'
+      courseD_artist_nestedLoops7_authored_hint:
+        courseD_artist_nestedLoops7_a: |-
+          crwdns72635:0crwdne72635:0
+      courseD_artist_nestedLoops8_authored_hint:
+        courseD_artist_nestedLoops8_d:
+          - 'crwdns72636:0crwdne72636:0'
+        courseD_artist_nestedLoops8_a:
+          - 'crwdns72637:0crwdne72637:0'
+      courseD_artist_nestedLoops9_authored_hint:
+        courseD_artist_nestedLoops9_a:
+          - 'crwdns72638:0crwdne72638:0'
+        courseD_artist_nestedLoops9_b:
+          - 'crwdns72639:0crwdne72639:0'
+      courseD_artist_nestedLoopsFP_authored_hint:
+        courseD_artist_nestedLoopsFP_a: |-
+          crwdns72640:0crwdne72640:0
+        courseD_artist_nestedLoopsFP_b: |
+          crwdns72641:0crwdne72641:0
+        courseD_artist_nestedLoopsFP_c: |-
+          crwdns72642:0crwdne72642:0
+      courseD_artist_nestedLoopsPre1_authored_hint: [ ]
+      courseD_bee_conditionals1_authored_hint:
+        courseD_bee_conditionals1_a:
+          - 'crwdns72643:0crwdne72643:0'
+      courseD_bee_conditionals2_authored_hint:
+        courseD_bee_conditionals2_a:
+          - 'crwdns72644:0crwdne72644:0'
+          - 'crwdns72645:0crwdne72645:0'
+      courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_a:
+          - 'crwdns72646:0crwdne72646:0'
+      courseD_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_a:
+          - 'crwdns72647:0crwdne72647:0'
+        courseD_bee_conditionals4_b: 'crwdns72648:0crwdne72648:0'
+      courseD_bee_conditionals6_authored_hint:
+        courseD_bee_conditionals6_a:
+          - 'crwdns72649:0crwdne72649:0'
+      courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_a: "crwdns72650:0crwdne72650:0"
+      courseD_bee_conditionals8_authored_hint:
+        courseD_bee_conditionals8_a: "crwdns72651:0crwdne72651:0"
+        courseD_bee_conditionals8_b: |-
+          crwdns72652:0crwdne72652:0
+      courseD_bee_conditionals9_authored_hint:
+        courseD_bee_conditionals9_a:
+          - 'crwdns72653:0crwdne72653:0'
+          - 'crwdns72654:0crwdne72654:0'
+      courseD_bee_debugging1_authored_hint:
+        courseD_bee_debugging1_a: |-
+          crwdns72655:0crwdne72655:0
+        courseD_bee_debugging1_b:
+          - 'crwdns72656:0crwdne72656:0'
+      courseD_bee_debugging2_authored_hint:
+        courseD_bee_debugging2_a: |-
+          crwdns72657:0crwdne72657:0
+        courseD_bee_debugging2_b:
+          - 'crwdns72658:0crwdne72658:0'
+      courseD_bee_debugging3_authored_hint:
+        courseD_bee_debugging3_a:
+          - 'crwdns72659:0crwdne72659:0'
+        courseD_bee_debugging3_b: 'crwdns72660:0crwdne72660:0'
+      courseD_bee_debugging4_authored_hint:
+        courseD_bee_debugging4_a: "crwdns72661:0crwdne72661:0"
+        courseD_bee_debugging4_b: "crwdns72662:0crwdne72662:0"
+      courseD_bee_debugging5_authored_hint:
+        courseD_bee_debugging5_a: |-
+          crwdns72663:0crwdne72663:0
+        courseD_bee_debugging5_b:
+          - 'crwdns72664:0crwdne72664:0'
+        courseD_bee_debugging5_c: |-
+          crwdns72665:0crwdne72665:0
+      courseD_bee_debugging6_authored_hint:
+        courseD_bee_debugging6_a: |-
+          crwdns72666:0crwdne72666:0
+        courseD_bee_debugging6_b:
+          - 'crwdns72667:0crwdne72667:0'
+          - 'crwdns72668:0crwdne72668:0'
+      courseD_bee_debugging7_authored_hint:
+        courseD_bee_debugging7_a: "crwdns72669:0crwdne72669:0"
+        courseD_bee_debugging7_b:
+          - 'crwdns72670:0crwdne72670:0'
+      courseD_bee_debugging8_authored_hint:
+        courseD_bee_debugging8_a:
+          - 'crwdns72671:0crwdne72671:0'
+        courseD_bee_debugging8_b: 'crwdns72672:0crwdne72672:0'
+      courseD_bee_debugging9_authored_hint:
+        courseD_bee_debugging9_a:
+          - 'crwdns72673:0crwdne72673:0'
+        courseD_bee_debugging9_b:
+          - 'crwdns72674:0crwdne72674:0'
+      courseD_bee_nestedLoops1_authored_hint:
+        courseD_bee_nestedLoops1_a:
+          - 'crwdns72675:0crwdne72675:0'
+      courseD_bee_nestedLoops2_authored_hint:
+        courseD_bee_nestedLoops2_a:
+          - 'crwdns72676:0crwdne72676:0'
+      courseD_bee_nestedLoops3_authored_hint:
+        grade4_bee_nestedLoops1_a:
+          - 'crwdns72677:0crwdne72677:0'
+          - 'crwdns72678:0crwdne72678:0'
+      courseD_bee_nestedLoops5_authored_hint:
+        grade4_bee_nestedLoops4_a:
+          - 'crwdns72679:0crwdne72679:0'
+        grade4_bee_nestedLoops4_b: |-
+          crwdns72680:0crwdne72680:0
+      courseD_bee_nestedLoops6_authored_hint: [ ]
+      courseD_bee_nestedLoops7_authored_hint:
+        courseD_bee_nestedLoops7_a:
+          - 'crwdns72681:0crwdne72681:0'
+        courseD_bee_nestedLoops7_b:
+          - 'crwdns72682:0crwdne72682:0'
+        courseD_bee_nestedLoops7_c: |-
+          crwdns72683:0crwdne72683:0
+      courseD_bee_nestedLoops8_authored_hint:
+        courseD_bee_nestedLoops8_a:
+          - 'crwdns72684:0crwdne72684:0'
+        courseD_bee_nestedLoops8_b: |-
+          crwdns72685:0crwdne72685:0
+      courseD_bee_nestedLoops9_authored_hint: [ ]
+      courseD_debugging_1_authored_hint:
+        courseD_debugging_1_a: |-
+          crwdns72686:0crwdne72686:0
+        courseD_debugging_1_b:
+          - 'crwdns72687:0crwdne72687:0'
+      courseD_debugging_2_authored_hint:
+        courseD_debugging_2_a: |-
+          crwdns72688:0crwdne72688:0
+        courseD_debugging_2_b:
+          - 'crwdns72689:0crwdne72689:0'
+      courseD_debugging_3_authored_hint:
+        courseD_debugging_3_a:
+          - 'crwdns72690:0crwdne72690:0'
+        courseD_debugging_3_b: 'crwdns72691:0crwdne72691:0'
+      courseD_debugging_4_authored_hint:
+        courseD_debugging_4_a: "crwdns72692:0crwdne72692:0"
+        courseD_debugging_4_b: "crwdns72693:0crwdne72693:0"
+      courseD_debugging_5_authored_hint:
+        courseD_debugging_5_a: |-
+          crwdns72694:0crwdne72694:0
+        courseD_debugging_5_b:
+          - 'crwdns72695:0crwdne72695:0'
+        courseD_debugging_5_c: |-
+          crwdns72696:0crwdne72696:0
+      courseD_debugging_6_authored_hint:
+        courseD_debugging_6_a: |-
+          crwdns72697:0crwdne72697:0
+        courseD_debugging_6_b:
+          - 'crwdns72698:0crwdne72698:0'
+          - 'crwdns72699:0crwdne72699:0'
+      courseD_farmer_conditionals10_authored_hint: [ ]
+      courseD_farmer_conditionals4_authored_hint:
+        courseD_farmer_conditionals4_a:
+          - 'crwdns72700:0crwdne72700:0'
+      courseD_farmer_conditionals5_authored_hint:
+        courseD_farmer_conditionals5a:
+          - 'crwdns72701:0crwdne72701:0'
+      courseD_farmer_conditionals6_authored_hint:
+        courseD_farmer_conditionals6_a:
+          - 'crwdns72702:0crwdne72702:0'
+        courseD_farmer_conditionals6_b:
+          - 'crwdns72703:0crwdne72703:0'
+      courseD_farmer_conditionals7_authored_hint:
+        courseD_farmer_conditionals8_a:
+          - 'crwdns72704:0crwdne72704:0'
+      courseD_farmer_conditionals8_authored_hint:
+        courseD_farmer_conditionals8_a:
+          - 'crwdns72705:0crwdne72705:0'
+        courseD_farmer_conditionals8_b:
+          - 'crwdns72706:0crwdne72706:0'
+        courseD_farmer_conditionals8_c:
+          - 'crwdns72707:0crwdne72707:0'
+      courseD_farmer_conditionals9_authored_hint: [ ]
+      courseD_farmer_condLoops1_authored_hint:
+        courseD_farmer_condLoops1_a:
+          - 'crwdns72708:0crwdne72708:0'
+        courseD_farmer_condLoops1_b:
+          - 'crwdns72709:0crwdne72709:0'
+      courseD_farmer_condLoops2_authored_hint:
+        courseD_farmer_condLoops2_a: 'crwdns72710:0crwdne72710:0'
+        courseD_farmer_condLoops2_b:
+          - 'crwdns72711:0crwdne72711:0'
+      courseD_farmer_condLoops3_authored_hint:
+        courseD_farmer_condLoops3_a: |-
+          crwdns72712:0crwdne72712:0
+        courseD_farmer_condLoops3_b:
+          - 'crwdns72713:0crwdne72713:0'
+      courseD_farmer_condLoops4_authored_hint:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          crwdns72714:0crwdne72714:0
+      courseD_farmer_condLoops5_authored_hint:
+        courseD_farmer_condLoops5_a:
+          - 'crwdns72715:0crwdne72715:0'
+          - 'crwdns72716:0crwdne72716:0'
+      courseD_farmer_condLoops6_authored_hint:
+        courseD_farmer_condLoops6_a:
+          - 'crwdns72717:0crwdne72717:0'
+        courseD_farmer_condLoops6_b:
+          - 'crwdns72718:0crwdne72718:0'
+      courseD_farmer_condLoops7_authored_hint:
+        courseD_farmer_condLoops7_a: |-
+          crwdns72719:0crwdne72719:0
+        courseD_farmer_condLoops7_b:
+          - 'crwdns72720:0crwdne72720:0'
+        courseD_farmer_condLoops7_c: 'crwdns72721:0crwdne72721:0'
+      courseD_farmer_condLoops8_authored_hint:
+        courseD_farmer_condLoops8_a:
+          - 'crwdns72722:0crwdne72722:0'
+      courseD_farmer_condLoops9_authored_hint:
+        courseD_farmer_condLoops9_a:
+          - 'crwdns72723:0crwdne72723:0'
+      courseD_farmer_while10_authored_hint: [ ]
+      courseD_farmer_while4_authored_hint:
+        courseD_farmer_conditionals4_a:
+          - 'crwdns72724:0crwdne72724:0'
+      courseD_farmer_while5_authored_hint:
+        courseD_farmer_conditionals5a:
+          - 'crwdns72725:0crwdne72725:0'
+      courseD_farmer_while6_authored_hint:
+        courseD_farmer_conditionals6_a:
+          - 'crwdns72726:0crwdne72726:0'
+        courseD_farmer_conditionals6_b:
+          - 'crwdns72727:0crwdne72727:0'
+      courseD_farmer_while7_authored_hint:
+        courseD_farmer_conditionals8_a:
+          - 'crwdns72728:0crwdne72728:0'
+      courseD_farmer_while8_authored_hint:
+        courseD_farmer_conditionals8_a:
+          - 'crwdns72729:0crwdne72729:0'
+        courseD_farmer_conditionals8_b:
+          - 'crwdns72730:0crwdne72730:0'
+        courseD_farmer_conditionals8_c:
+          - 'crwdns72731:0crwdne72731:0'
+      courseD_farmer_while9_authored_hint: [ ]
+      courseD_maze_nestedLoops3_authored_hint:
+        courseD_maze_nestedLoops3_a:
+          - 'crwdns72732:0crwdne72732:0'
+      courseD_maze_nestedLoops4_authored_hint:
+        courseD_maze_nestedLoops4_a: |-
+          crwdns72733:0crwdne72733:0
+        courseD_maze_nestedLoops4_b:
+          - 'crwdns72734:0crwdne72734:0'
+          - 'crwdns72735:0crwdne72735:0'
+        courseD_maze_nestedLoops4_c:
+          - 'crwdns72736:0crwdne72736:0'
+      courseD_maze_nestedLoops5_authored_hint:
+        courseD_maze_nestedLoops5_a:
+          - 'crwdns72737:0crwdne72737:0'
+      courseD_maze_nestedLoops6_authored_hint:
+        courseD_maze_nestedLoops6_a:
+          - 'crwdns72738:0crwdne72738:0'
+        courseD_maze_nestedLoops6_b:
+          - 'crwdns72739:0crwdne72739:0'
+        courseD_maze_nestedLoops6_c:
+          - 'crwdns72740:0crwdne72740:0'
+      courseD_maze_until10_authored_hint: [ ]
+      courseD_maze_until2_authored_hint:
+        courseD_maze_until2_a:
+          - 'crwdns72741:0crwdne72741:0'
+      courseD_maze_until3_authored_hint:
+        courseD_maze_until3_a: |-
+          crwdns72742:0crwdne72742:0
+      courseD_maze_until4_authored_hint:
+        courseD_maze_until4_a: |-
+          crwdns72743:0crwdne72743:0
+      courseD_maze_until5_authored_hint:
+        courseD_maze_until5_a:
+          - 'crwdns72744:0crwdne72744:0'
+      courseD_maze_until6_authored_hint:
+        courseD_maze_until6_a:
+          - 'crwdns72745:0crwdne72745:0'
+      courseD_maze_until7_authored_hint:
+        courseD_maze_until7_a:
+          - 'crwdns72746:0crwdne72746:0'
+      courseD_maze_until8_authored_hint:
+        courseD_maze_until8_a:
+          - 'crwdns72747:0crwdne72747:0'
+      courseD_maze_until9_authored_hint:
+        courseD_maze_until8_a:
+          - 'crwdns72748:0crwdne72748:0'
+      courseD_playLab_cond1_authored_hint:
+        courseD_playLab_cond1_a:
+          - 'crwdns72749:0crwdne72749:0'
+          - 'crwdns72750:0crwdne72750:0'
+      courseD_playLab_cond2_authored_hint:
+        courseD_playLab_cond2_a:
+          - 'crwdns72751:0crwdne72751:0'
+      courseD_playLab_cond3_authored_hint:
+        courseD_playLab_cond3_a:
+          - 'crwdns72752:0crwdne72752:0'
+          - 'crwdns72753:0crwdne72753:0'
+        courseD_playLab_cond3_b: 'crwdns72754:0crwdne72754:0'
+        courseD_playLab_cond3_c: "crwdns72755:0crwdne72755:0"
+      courseD_playLab_cond4_authored_hint:
+        courseD_playLab_cond4_a:
+          - 'crwdns72756:0crwdne72756:0'
+        courseD_playLab_cond4_b:
+          - 'crwdns72757:0crwdne72757:0'
+        courseD_playLab_cond4_c:
+          - 'crwdns72758:0crwdne72758:0'
+      courseD_playLab_cond5_authored_hint:
+        courseD_playLab_cond5_a:
+          - 'crwdns72759:0crwdne72759:0'
+      courseD_playLab_cond6_authored_hint:
+        courseD_playLab_cond6_a:
+          - 'crwdns72760:0crwdne72760:0'
+        courseD_playLab_cond6_b: >
+          crwdns72761:0crwdne72761:0
+        courseD_playLab_cond6_c:
+          - 'crwdns72762:0crwdne72762:0'
+          - 'crwdns72763:0crwdne72763:0'
+      courseD_playLab_cond6cloneForTest_authored_hint:
+        courseD_playLab_cond6_a:
+          - 'crwdns72764:0crwdne72764:0'
+        courseD_playLab_cond6_b: >
+          crwdns72765:0crwdne72765:0
+        courseD_playLab_cond6_c:
+          - 'crwdns72766:0crwdne72766:0'
+          - 'crwdns72767:0crwdne72767:0'
+      courseE_artist_concept1_authored_hint:
+        courseE_artist_concept1_a:
+          - 'crwdns72768:0crwdne72768:0'
+        courseE_artist_concept1_b:
+          - 'crwdns72769:0crwdne72769:0'
+      courseE_artist_concept4_authored_hint:
+        courseE_artist_concept4_a:
+          - 'crwdns72770:0crwdne72770:0'
+        courseE_artist_concept4_b:
+          - 'crwdns72771:0crwdne72771:0'
+      courseE_artist_functions1_authored_hint:
+        courseE_artist_functions1_a:
+          - 'crwdns72772:0crwdne72772:0'
+          - 'crwdns72773:0crwdne72773:0'
+        courseE_artist_functions1_b:
+          - 'crwdns72774:0crwdne72774:0'
+      courseE_artist_functions10_authored_hint:
+        courseD_artist_functions10_b:
+          - 'crwdns72775:0crwdne72775:0'
+        courseD_artist_functions10_a:
+          - 'crwdns72776:0crwdne72776:0'
+      courseE_artist_functions2_authored_hint:
+        courseD_artist_functions2_a: |-
+          crwdns72777:0crwdne72777:0
+      courseE_artist_functions3_authored_hint:
+        courseD_artist_functions3_a: |-
+          crwdns72778:0crwdne72778:0
+      courseE_artist_functions4_authored_hint:
+        courseD_artist_functions4_a: 'crwdns72779:0crwdne72779:0'
+      courseE_artist_functions5_authored_hint:
+        courseD_artist_functions5_a: 'crwdns72780:0crwdne72780:0'
+        courseD_artist_functions5_b:
+          - 'crwdns72781:0crwdne72781:0'
+      courseE_artist_functions6_authored_hint:
+        grade4_artist_functions_windows0_a:
+          - 'crwdns72782:0crwdne72782:0'
+        grade4_artist_functions_windows0_b:
+          - 'crwdns72783:0crwdne72783:0'
+      courseE_artist_functions7_authored_hint:
+        courseD_artist_functions7_a:
+          - 'crwdns72784:0crwdne72784:0'
+        courseD_artist_functions7_b:
+          - 'crwdns72785:0crwdne72785:0'
+          - 'crwdns72786:0crwdne72786:0'
+      courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_a: |-
+          crwdns72787:0crwdne72787:0
+        courseD_artist_functions8_b:
+          - 'crwdns72788:0crwdne72788:0'
+        courseD_artist_functions8_c:
+          - 'crwdns72789:0crwdne72789:0'
+      courseE_artist_functions9_authored_hint:
+        courseD_artist_functions9_a:
+          - 'crwdns72790:0crwdne72790:0'
+          - 'crwdns72791:0crwdne72791:0'
+        courseD_artist_functions9_b:
+          - 'crwdns72792:0crwdne72792:0'
+          - 'crwdns72793:0crwdne72793:0'
+      courseE_bee_concept1_authored_hint:
+        courseE_bee_concept1_a:
+          - 'crwdns72794:0crwdne72794:0'
+          - 'crwdns72795:0crwdne72795:0'
+      courseE_bee_concept2_authored_hint:
+        courseE_bee_concept2_a: 'crwdns72796:0crwdne72796:0'
+      courseE_bee_concept3_authored_hint:
+        courseE_bee_concept3a_a: 'crwdns72797:0crwdne72797:0'
+      courseE_bee_concept4_authored_hint:
+        courseE_bee_concept4_a: 'crwdns72798:0crwdne72798:0'
+      courseE_bee_concept5_authored_hint:
+        courseE_bee_concept5_a: 'crwdns72799:0crwdne72799:0'
+        courseE_bee_concept5_b:
+          - 'crwdns72800:0crwdne72800:0'
+      courseE_bee_functions1_authored_hint:
+        courseE_bee_functions1_a: 'crwdns72801:0crwdne72801:0'
+      courseE_bee_functions2_authored_hint:
+        courseE_bee_functions2_a:
+          - 'crwdns72802:0crwdne72802:0'
+      courseE_bee_functions3_authored_hint:
+        courseE_bee_functions3_a: 'crwdns72803:0crwdne72803:0'
+      courseE_bee_functions4_authored_hint:
+        courseE_bee_functions4_a:
+          - 'crwdns72804:0crwdne72804:0'
+          - 'crwdns72805:0crwdne72805:0'
+      courseE_bee_functions5_authored_hint:
+        courseE_bee_functions5_a:
+          - 'crwdns72806:0crwdne72806:0'
+        courseE_bee_functions5_b: 'crwdns72807:0crwdne72807:0'
+      courseE_bee_functions6_authored_hint:
+        courseE_bee_functions6_a: "crwdns72808:0crwdne72808:0"
+      courseE_bee_functions7_authored_hint:
+        courseE_bee_functions7_a: "crwdns72809:0crwdne72809:0"
+        courseE_bee_functions7_b: |-
+          crwdns72810:0crwdne72810:0
+        courseE_bee_functions7_c:
+          - 'crwdns72811:0crwdne72811:0'
+          - 'crwdns72812:0crwdne72812:0'
+      courseE_bee_functions8_authored_hint:
+        courseE_bee_functions8_a:
+          - 'crwdns72813:0crwdne72813:0'
+          - 'crwdns72814:0crwdne72814:0'
+        courseE_bee_functions8_b:
+          - 'crwdns72815:0crwdne72815:0'
+      courseE_bee_functions9_authored_hint:
+        courseE_bee_functions9_a:
+          - 'crwdns72816:0crwdne72816:0'
+          - 'crwdns72817:0crwdne72817:0'
+      courseE_farmer_concept1_authored_hint:
+        courseE_farmer_concept1_a:
+          - 'crwdns72818:0crwdne72818:0'
+      courseE_farmer_concept2_authored_hint:
+        courseE_farmer_concept2_a:
+          - 'crwdns72819:0crwdne72819:0'
+      courseE_farmer_concept3_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a:
+          - 'crwdns72820:0crwdne72820:0'
+      courseE_farmer_concept4_authored_hint:
+        4-5_Artist_Patterns_3_a:
+          - 'crwdns72821:0crwdne72821:0'
+        4-5_Artist_Patterns_3_b:
+          - 'crwdns72822:0crwdne72822:0'
+      courseE_farmer_functions10_authored_hint: [ ]
+      courseE_farmer_functions10b_authored_hint: [ ]
+      courseE_farmer_functions1a_authored_hint:
+        courseE_farmer_functions1a_a:
+          - 'crwdns72823:0crwdne72823:0'
+      courseE_farmer_functions2a_authored_hint: [ ]
+      courseE_farmer_functions2aALT_authored_hint: [ ]
+      courseE_farmer_functions2b_authored_hint:
+        courseE_farmer_functions2b_a:
+          - 'crwdns72824:0crwdne72824:0'
+        courseE_farmer_functions2b_b:
+          - 'crwdns72825:0crwdne72825:0'
+      courseE_farmer_functions3_authored_hint:
+        courseE_farmer_functions3_a:
+          - 'crwdns72826:0crwdne72826:0'
+      courseE_farmer_functions3b_authored_hint:
+        courseE_farmer_functions1a_a:
+          - 'crwdns72827:0crwdne72827:0'
+      courseE_farmer_functions3c_authored_hint:
+        courseE_farmer_functions3c_a:
+          - 'crwdns72828:0crwdne72828:0'
+        courseE_farmer_functions3c_b: |-
+          crwdns72829:0crwdne72829:0
+      courseE_farmer_functions4_authored_hint:
+        courseE_farmer_functions4_a:
+          - 'crwdns72830:0crwdne72830:0'
+        courseE_farmer_functions4_b:
+          - 'crwdns72831:0crwdne72831:0'
+      courseE_farmer_functions4b_authored_hint: [ ]
+      courseE_farmer_functions5_authored_hint: [ ]
+      courseE_farmer_functions5a_authored_hint: [ ]
+      courseE_farmer_functions5b_authored_hint:
+        courseE_farmer_functions5b_a:
+          - 'crwdns72832:0crwdne72832:0'
+      courseE_farmer_functions5c_authored_hint: [ ]
+      courseE_farmer_functions6_authored_hint: [ ]
+      courseE_farmer_functions6b_authored_hint: [ ]
+      courseE_farmer_functions6c_authored_hint: [ ]
+      courseE_farmer_functions7_authored_hint: [ ]
+      courseE_farmer_functions7b_authored_hint:
+        courseE_farmer_functions7b_a:
+          - 'crwdns72833:0crwdne72833:0'
+      courseE_farmer_functions8_authored_hint:
+        courseE_farmer_functions8_a:
+          - 'crwdns72834:0crwdne72834:0'
+      courseE_farmer_functions8b_authored_hint: [ ]
+      courseE_farmer_functions9_authored_hint:
+        courseE_farmer_functions8_a:
+          - 'crwdns72835:0crwdne72835:0'
+      courseE_farmer_functions9b_authored_hint: [ ]
+      courseE_playLab_scaffold2_authored_hint:
+        courseE_playLab_scaffold1_a:
+          - 'crwdns72836:0crwdne72836:0'
+      courseE_playLab_scaffold3_authored_hint:
+        courseE_playLab_scaffold3_a:
+          - 'crwdns72837:0crwdne72837:0'
+      courseF_artist_for1_authored_hint:
+        courseF_artist_for1_a: |-
+          crwdns72838:0crwdne72838:0
+      courseF_artist_for10_authored_hint:
+        courseF_artist_for10_a:
+          - 'crwdns72839:0crwdne72839:0'
+        courseF_artist_for10_b: 'crwdns72840:0crwdne72840:0'
+        courseF_artist_for10_c: |-
+          crwdns72841:0crwdne72841:0
+      courseF_artist_for2_authored_hint:
+        courseF_artist_for2_a: |-
+          crwdns72842:0crwdne72842:0
+      courseF_artist_for3_authored_hint:
+        courseF_artist_for3_a: |-
+          crwdns72843:0crwdne72843:0
+      courseF_artist_for4_authored_hint:
+        courseF_artist_for4_a: "crwdns72844:0crwdne72844:0"
+      courseF_artist_for5_authored_hint:
+        courseF_artist_for5_a:
+          - 'crwdns72845:0crwdne72845:0'
+      courseF_artist_for7_authored_hint:
+        courseF_artist_for7_a: 'crwdns72846:0crwdne72846:0'
+        courseF_artist_for7_b: 'crwdns72847:0crwdne72847:0'
+      courseF_artist_for8_authored_hint: [ ]
+      courseF_artist_for9_authored_hint: [ ]
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_a:
+          - 'crwdns72848:0crwdne72848:0'
+          - 'crwdns72849:0crwdne72849:0'
+        courseF_artist_variables4_b: "crwdns72850:0crwdne72850:0"
+      courseF_artist_variables5_authored_hint:
+        courseF_artist_variables5_a:
+          - 'crwdns72851:0crwdne72851:0'
+          - 'crwdns72852:0crwdne72852:0'
+      courseF_artist_variables6_authored_hint:
+        courseF_artist_variables6_a:
+          - 'crwdns72853:0crwdne72853:0'
+      courseF_artist_variables6a_authored_hint:
+        courseF_artist_variables6a_a:
+          - 'crwdns72854:0crwdne72854:0'
+      courseF_artist_variables8_authored_hint:
+        courseF_artist_variables8_a: |
+          crwdns72855:0crwdne72855:0
+      courseF_artist_variables_4_authored_hint:
+        courseF_artist_variables_4_a:
+          - 'crwdns72856:0crwdne72856:0'
+          - 'crwdns72857:0crwdne72857:0'
+        courseF_artist_variables_4_b: "crwdns72858:0crwdne72858:0"
+      courseF_artist_variables_6_authored_hint:
+        courseF_artist_variables_6_a:
+          - 'crwdns72859:0crwdne72859:0'
+      courseF_artist_variables_6a_authored_hint:
+        courseF_artist_variables6a_a:
+          - 'crwdns72860:0crwdne72860:0'
+      courseF_artist_variables_8_authored_hint:
+        courseF_artist_variables_8_a: |
+          crwdns72861:0crwdne72861:0
+      courseF_bee_for1_authored_hint:
+        courseF_bee_for1_a: 'crwdns72862:0crwdne72862:0'
+      courseF_bee_for10_authored_hint:
+        courseF_bee_for10_a:
+          - 'crwdns72863:0crwdne72863:0'
+        courseF_bee_for10_b: 'crwdns72864:0crwdne72864:0'
+      courseF_bee_for11_authored_hint:
+        courseF_bee_for11_a: "crwdns72865:0crwdne72865:0"
+      courseF_bee_for2_authored_hint:
+        courseF_bee_for2_a:
+          - 'crwdns72866:0crwdne72866:0'
+      courseF_bee_for3_authored_hint:
+        courseF_bee_for3_a: 'crwdns72867:0crwdne72867:0'
+        courseF_bee_for3_b:
+          - 'crwdns72868:0crwdne72868:0'
+      courseF_bee_for4_authored_hint:
+        courseF_bee_for4_a:
+          - 'crwdns72869:0crwdne72869:0'
+        courseF_bee_for4_b:
+          - 'crwdns72870:0crwdne72870:0'
+      courseF_bee_for5_authored_hint:
+        courseF_bee_for5_a:
+          - 'crwdns72871:0crwdne72871:0'
+          - 'crwdns72872:0crwdne72872:0'
+      courseF_bee_for6_authored_hint:
+        courseF_bee_for6_a:
+          - 'crwdns72873:0crwdne72873:0'
+      courseF_bee_for7_authored_hint:
+        courseF_bee_for7_a: 'crwdns72874:0crwdne72874:0'
+      courseF_bee_for8_authored_hint:
+        courseF_bee_for8_a: "crwdns72875:0crwdne72875:0"
+      courseF_bee_for9_authored_hint:
+        courseF_bee_for9_a: |-
+          crwdns72876:0crwdne72876:0
+        courseF_bee_for9_c:
+          - 'crwdns72877:0crwdne72877:0'
+        courseF_bee_for9_b: "crwdns72878:0crwdne72878:0"
+      courseF_playlab_variables1a_authored_hint:
+        courseF_playlab_variables1a_a:
+          - 'crwdns72879:0crwdne72879:0'
+      courseF_playlab_variables3b_authored_hint:
+        courseF_playlab_variables3b_a:
+          - 'crwdns72880:0crwdne72880:0'
+      drawings!_authored_hint:
+        triangle_geometry_hint: 'crwdns72881:0crwdne72881:0'
+        repeat_pointer:
+          - 'crwdns72882:0crwdne72882:0'
+        repeat_bottom_out: 'crwdns72883:0crwdne72883:0'
+      Farmer for Authored Hint testing_authored_hint:
+        first_hint: |-
+          crwdns72884:0crwdne72884:0
+        second_hint: |-
+          crwdns72885:0crwdne72885:0
+        last_hint: 'crwdns72886:0crwdne72886:0'
+      Farmer for TTS testing_authored_hint:
+        first_hint: |-
+          crwdns72887:0crwdne72887:0
+        second_hint: |-
+          crwdns72888:0crwdne72888:0
+        last_hint: 'crwdns72889:0crwdne72889:0'
+      grade1_adventurer_loops10_authored_hint:
+        grade1_adventurer_loops10_a:
+          - 'crwdns72890:0crwdne72890:0'
+      grade1_adventurer_loops2_authored_hint:
+        grade1_adventurer_loops2_a: 'crwdns72891:0crwdne72891:0'
+      grade1_adventurer_loops3_authored_hint:
+        grade1_adventurer_loops3_a:
+          - 'crwdns72892:0crwdne72892:0'
+      grade1_adventurer_loops4_authored_hint:
+        grade1_adventurer_loops4_a: 'crwdns72893:0crwdne72893:0'
+      grade1_adventurer_loops5_authored_hint:
+        grade1_adventurer_loops5_a:
+          - 'crwdns72894:0crwdne72894:0'
+      grade1_adventurer_loops6_authored_hint:
+        grade1_adventurer_loops6_a:
+          - 'crwdns72895:0crwdne72895:0'
+      grade1_adventurer_loops7_challenge_authored_hint:
+        grade1_adventurer_loops7_challenge_a: 'crwdns72896:0crwdne72896:0'
+        grade1_adventurer_loops7_challenge_b:
+          - 'crwdns72897:0crwdne72897:0'
+          - 'crwdns72898:0crwdne72898:0'
+      grade1_adventurer_loops8_challenge_authored_hint:
+        grade1_adventurer_loops8_challenge_a:
+          - 'crwdns72899:0crwdne72899:0'
+      grade1_adventurer_loops9_authored_hint:
+        grade1_adventurer_loops9_a: |
+          crwdns72900:0crwdne72900:0
+      grade1_artist_loops1_authored_hint:
+        grade1_artist_loops1_a:
+          - 'crwdns72901:0crwdne72901:0'
+      grade1_artist_loops2_authored_hint:
+        grade1_artist_loops2_a: 'crwdns72902:0crwdne72902:0'
+      grade1_artist_loops3_authored_hint: [ ]
+      grade1_artist_loops4_authored_hint:
+        grade1_artist_loops4_a:
+          - 'crwdns72903:0crwdne72903:0'
+      grade1_artist_loops5_authored_hint: [ ]
+      grade1_artist_loops6_authored_hint:
+        grade1_artist_loops6_a: 'crwdns72904:0crwdne72904:0'
+        grade1_artist_loops6_b: |-
+          crwdns72905:0crwdne72905:0
+        grade1_artist_loops6_c: "crwdns72906:0crwdne72906:0"
+      grade1_artist_loops7_authored_hint: [ ]
+      grade1_artist_loops7a_authored_hint:
+        artistLoopsK9_a: 'crwdns72907:0crwdne72907:0'
+        artistLoopsK9_b: |-
+          crwdns72908:0crwdne72908:0
+        artistLoopsK9_c: "crwdns72909:0crwdne72909:0"
+      grade1_artist_loops7b_authored_hint:
+        grade1_artist_loops7b_a:
+          - 'crwdns72910:0crwdne72910:0'
+      grade1_artist_loops8_authored_hint: [ ]
+      grade1_artist_loops9_authored_hint: [ ]
+      grade1_artist_loopsFP_authored_hint: [ ]
+      grade1_maze_sequence1_authored_hint:
+        grade1_maze_sequence1_a:
+          - 'crwdns72911:0crwdne72911:0'
+      grade1_maze_sequence10_authored_hint:
+        grade1_maze_sequence10_a:
+          - 'crwdns72912:0crwdne72912:0'
+      grade1_maze_sequence2_authored_hint:
+        grade1_maze_sequence2_a:
+          - 'crwdns72913:0crwdne72913:0'
+          - 'crwdns72914:0crwdne72914:0'
+      grade1_maze_sequence3_authored_hint:
+        grade1_maze_sequence3_a:
+          - 'crwdns72915:0crwdne72915:0'
+      grade1_maze_sequence5_authored_hint:
+        K2.0_sequence_5: 'crwdns72916:0crwdne72916:0'
+      grade1_maze_sequence6_authored_hint:
+        K2.0_sequence_6_a:
+          - 'crwdns72917:0crwdne72917:0'
+      grade1_maze_sequence7_authored_hint:
+        grade1_maze_sequence7a:
+          - 'crwdns72918:0crwdne72918:0'
+      grade1_maze_sequence8_authored_hint:
+        grade1_maze_sequence8_a: 'crwdns72919:0crwdne72919:0'
+        grade1_maze_sequence8_b:
+          - 'crwdns72920:0crwdne72920:0'
+          - 'crwdns72921:0crwdne72921:0'
+      grade1_maze_sequence9_authored_hint:
+        grade1_maze_sequence9_a:
+          - 'crwdns72922:0crwdne72922:0'
+      grade1_maze_sequenceA_authored_hint:
+        grade1_maze_sequence10_a:
+          - 'crwdns72923:0crwdne72923:0'
+      grade1_maze_sequenceB_authored_hint:
+        grade1_maze_sequenceB_a:
+          - 'crwdns72924:0crwdne72924:0'
+      grade1_maze_sequenceC_authored_hint:
+        grade1_maze_sequenceC_a:
+          - 'crwdns72925:0crwdne72925:0'
+      grade2_CaringForNewPet_0_authored_hint:
+        grade2_CaringForNewPet_0:
+          - 'crwdns72926:0crwdne72926:0'
+          - 'crwdns72927:0crwdne72927:0'
+      grade2_CaringForNewPet_1_authored_hint:
+        2-3_Maze_1_a:
+          - 'crwdns72928:0crwdne72928:0'
+      grade2_CaringForNewPet_11_authored_hint: [ ]
+      grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
+        courseC_maze_programming3_a: "crwdns72929:0crwdne72929:0"
+      grade2_CaringForNewPet_3_authored_hint:
+        hint1:
+          - 'crwdns72930:0crwdne72930:0'
+        hint2:
+          - 'crwdns72931:0crwdne72931:0'
+        hint3:
+          - 'crwdns72932:0crwdne72932:0'
+      grade2_CaringForNewPet_3D_authored_hint: [ ]
+      grade2_CaringForNewPet_4_authored_hint:
+        2-3_Maze_6_a: 'crwdns72933:0crwdne72933:0'
+      grade2_CaringForNewPet_5_authored_hint:
+        grade2_CaringForNewPet_5_a:
+          - 'crwdns72934:0crwdne72934:0'
+          - 'crwdns72935:0crwdne72935:0'
+      grade2_CaringForNewPet_6_authored_hint:
+        grade2_CaringForNewPet_6_a:
+          - 'crwdns72936:0crwdne72936:0'
+      grade2_CaringForNewPet_7D_authored_hint:
+        grade2_CaringForNewPet_7D_a:
+          - 'crwdns72937:0crwdne72937:0'
+      grade2_collector_2_authored_hint:
+        hint1:
+          - 'crwdns72938:0crwdne72938:0'
+      grade2_MakeDogTag_1_authored_hint:
+        2-3_Artist_1_new_a:
+          - 'crwdns72939:0crwdne72939:0'
+        2-3_Artist_1_new_b:
+          - 'crwdns72940:0crwdne72940:0'
+      grade2_MakeDogTag_2_authored_hint:
+        2-3_Artist_2_new_a:
+          - 'crwdns72941:0crwdne72941:0'
+      grade2_MakeDogTag_3_authored_hint:
+        2-3_Artist_4_a: 'crwdns72942:0crwdne72942:0'
+      grade2_MakeDogTag_4_authored_hint: [ ]
+      grade2_MakeDogTag_5_authored_hint:
+        grade2_MakeDogTag_5a:
+          - 'crwdns72943:0crwdne72943:0'
+        grade2_MakeDogTag_5b:
+          - 'crwdns72944:0crwdne72944:0'
+        grade2_MakeDogTag_5c:
+          - 'crwdns72945:0crwdne72945:0'
+      grade2_MakeDogTag_6_authored_hint:
+        grade2_MakeDogTag_6a: 'crwdns72946:0crwdne72946:0'
+        grade2_MakeDogTag_6b: "crwdns72947:0crwdne72947:0"
+      grade2_MakeDogTag_7_authored_hint:
+        2-3_Artist_11_a: 'crwdns72948:0crwdne72948:0'
+      grade2_MakeDogTag_9_authored_hint:
+        2-3_Artist_Loops_New_11_a: |-
+          crwdns72949:0crwdne72949:0
+        2-3_Artist_Loops_New_11_b:
+          - 'crwdns72950:0crwdne72950:0'
+      grade2_MakeDogTag_BFP_authored_hint: [ ]
+      grade2_maze_debuggingFP_authored_hint: [ ]
+      grade2_maze_intro4_authored_hint:
+        hint_1: 'crwdns72951:0crwdne72951:0'
+      grade2_playlab_project_6_authored_hint:
+        idea1: |-
+          crwdns72952:0crwdne72952:0
+        idea2: |-
+          crwdns72953:0crwdne72953:0
+        idea3: |-
+          crwdns72954:0crwdne72954:0
+      grade2_puppy_loops2_authored_hint:
+        hint1: 'crwdns72955:0crwdne72955:0'
+        hint2:
+          - 'crwdns72956:0crwdne72956:0'
+        hint3:
+          - 'crwdns72957:0crwdne72957:0'
+      grade2_puppy_loops3_authored_hint:
+        hint1: 'crwdns72958:0crwdne72958:0'
+        hint2: 'crwdns72959:0crwdne72959:0'
+        hint3: 'crwdns72960:0crwdne72960:0'
+      grade2_puppy_loops4_authored_hint:
+        hint1: 'crwdns72961:0crwdne72961:0'
+        hint2: 'crwdns72962:0crwdne72962:0'
+        hint3: "crwdns72963:0crwdne72963:0"
+      grade2_puppy_loops5_authored_hint:
+        hint1: 'crwdns72964:0crwdne72964:0'
+      grade2_puppy_loops6_authored_hint:
+        2-3_Maze_16_a:
+          - 'crwdns72965:0crwdne72965:0'
+        2-3_Maze_16_b: "crwdns72966:0crwdne72966:0"
+      grade2_puppy_loops7_authored_hint:
+        2-3_Maze_Loops_17_a:
+          - 'crwdns72967:0crwdne72967:0'
+          - 'crwdns72968:0crwdne72968:0'
+      grade2_PuppyLoops_10_authored_hint:
+        2-3_Artist_Debugging_8_a: |-
+          crwdns72969:0crwdne72969:0
+      grade2_PuppyLoops_3_authored_hint:
+        hint1: 'crwdns72970:0crwdne72970:0'
+        hint2: 'crwdns72971:0crwdne72971:0'
+        hint3: 'crwdns72972:0crwdne72972:0'
+      grade2_PuppyLoops_5_authored_hint:
+        hint1: 'crwdns72973:0crwdne72973:0'
+      grade2_PuppyLoops_6_authored_hint:
+        2-3_Maze_16_a:
+          - 'crwdns72974:0crwdne72974:0'
+        2-3_Maze_16_b: "crwdns72975:0crwdne72975:0"
+      grade2_PuppyLoops_7_authored_hint:
+        2-3_Maze_Loops_17_a:
+          - 'crwdns72976:0crwdne72976:0'
+          - 'crwdns72977:0crwdne72977:0'
+        2-3_Maze_Loops_17_b:
+          - 'crwdns72978:0crwdne72978:0'
+      grade2_PuppyLoops_8_authored_hint:
+        2-3_Artist_Debugging_2_a: 'crwdns72979:0crwdne72979:0'
+      grade2_PuppyLoops_9_authored_hint:
+        2-3_Artist_Debugging_7_a:
+          - 'crwdns72980:0crwdne72980:0'
+      grade3_bee_conditionals_new1a_authored_hint:
+        grade3_bee_conditionals_new1a_a:
+          - 'crwdns72981:0crwdne72981:0'
+      grade3_bee_conditionals_new2a_authored_hint:
+        grade3_bee_conditionals_new2a_a:
+          - 'crwdns72982:0crwdne72982:0'
+        grade3_bee_conditionals_new2a_b: 'crwdns72983:0crwdne72983:0'
+      grade3_bee_conditionals_new3a_authored_hint:
+        grade3_bee_conditionals_new3a_a:
+          - 'crwdns72984:0crwdne72984:0'
+          - 'crwdns72985:0crwdne72985:0'
+      grade3_bee_Conditionals_new4_authored_hint:
+        grade3_bee_Conditionals_new4_a:
+          - 'crwdns72986:0crwdne72986:0'
+      grade3_bee_conditionals_quantum1_authored_hint:
+        grade3_bee_conditionals_quantum1_a:
+          - 'crwdns72987:0crwdne72987:0'
+          - 'crwdns72988:0crwdne72988:0'
+      grade3_bee_conditionals_quantum2_authored_hint:
+        grade3_bee_conditionals_quantum2_a:
+          - 'crwdns72989:0crwdne72989:0'
+          - 'crwdns72990:0crwdne72990:0'
+      grade3_bee_conditionals_quantum3_authored_hint:
+        grade3_bee_conditionals_quantum3:
+          - 'crwdns72991:0crwdne72991:0'
+      grade3_bee_conditionals_quantum4_authored_hint:
+        remember_quantum: "crwdns72992:0crwdne72992:0"
+      grade3_bee_conditionals_quantum5_authored_hint:
+        remember_quantum: "crwdns72993:0crwdne72993:0"
+        grade3_bee_conditionals_quantum5_a:
+          - 'crwdns72994:0crwdne72994:0'
+      grade3_Conditionals_10 BAD_authored_hint:
+        4-5_Bee_Nested_Loops_Rows_a:
+          - 'crwdns72995:0crwdne72995:0'
+          - 'crwdns72996:0crwdne72996:0'
+      grade3_Conditionals_11_authored_hint:
+        2-3_Bee_Conditionals_14_a:
+          - 'crwdns72997:0crwdne72997:0'
+        2-3_Bee_Conditionals_14_b:
+          - 'crwdns72998:0crwdne72998:0'
+        2-3_Bee_Conditionals_14_c: 'crwdns72999:0crwdne72999:0'
+      grade3_Conditionals_12_authored_hint:
+        2-3_Bee_Conditionals_15_a: 'crwdns73000:0crwdne73000:0'
+      grade3_Conditionals_2_authored_hint:
+        2-3_Bee_Conditionals_3_a:
+          - 'crwdns73001:0crwdne73001:0'
+          - 'crwdns73002:0crwdne73002:0'
+      grade3_Conditionals_4_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'crwdns73003:0crwdne73003:0'
+      grade3_Conditionals_TeacherIDo_authored_hint:
+        2-3_Bee_Conditionals_6_a: 'crwdns73004:0crwdne73004:0'
+      grade3_ConditionalsElse_4_authored_hint:
+        remember_quantum: "crwdns73005:0crwdne73005:0"
+      grade3_ConditionalsElse_5_authored_hint:
+        remember_quantum: "crwdns73006:0crwdne73006:0"
+      grade3_ConditionalsElse_TeacherIDo_authored_hint:
+        remember_quantum: "crwdns73007:0crwdne73007:0"
+      grade3_Debugging_1_authored_hint:
+        2-3_Bee_Debugging_1_a:
+          - 'crwdns73008:0crwdne73008:0'
+      grade3_Debugging_10_authored_hint:
+        grade3_Debugging_10_a: |-
+          crwdns73009:0crwdne73009:0
+        grade3_Debugging_10_b:
+          - 'crwdns73010:0crwdne73010:0'
+        grade3_Debugging_10_c: |-
+          crwdns73011:0crwdne73011:0
+      grade3_Debugging_11_authored_hint:
+        grade3_Debugging_11_a: |-
+          crwdns73012:0crwdne73012:0
+        grade3_Debugging_11_b:
+          - 'crwdns73013:0crwdne73013:0'
+          - 'crwdns73014:0crwdne73014:0'
+      grade3_Debugging_2_authored_hint:
+        grade3_Debugging_2_a: |-
+          crwdns73015:0crwdne73015:0
+        grade3_Debugging_2_b:
+          - 'crwdns73016:0crwdne73016:0'
+      grade3_Debugging_3_authored_hint:
+        grade3_Debugging_3_a: |-
+          crwdns73017:0crwdne73017:0
+        grade3_Debugging_3_b:
+          - 'crwdns73018:0crwdne73018:0'
+      grade3_Debugging_4_authored_hint:
+        grade3_Debugging_4_a:
+          - 'crwdns73019:0crwdne73019:0'
+        grade3_Debugging_4_b: 'crwdns73020:0crwdne73020:0'
+      grade3_Debugging_8_authored_hint:
+        grade3_Debugging_8_a: "crwdns73021:0crwdne73021:0"
+        grade3_Debugging_8_b: "crwdns73022:0crwdne73022:0"
+      grade3_Debugging_TeacherIDo_authored_hint:
+        2-3_Bee_Debugging_4_a:
+          - 'crwdns73023:0crwdne73023:0'
+      grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: 'crwdns73024:0crwdne73024:0'
+      grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a:
+          - 'crwdns73025:0crwdne73025:0'
+      grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a:
+          - 'crwdns73026:0crwdne73026:0'
+        2-3_Bee_Loops_6_b:
+          - 'crwdns73027:0crwdne73027:0'
+      grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a:
+          - 'crwdns73028:0crwdne73028:0'
+      grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: 'crwdns73029:0crwdne73029:0'
+        2-3_Bee_Loops_7_b: 'crwdns73030:0crwdne73030:0'
+      grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: 'crwdns73031:0crwdne73031:0'
+        2-3_Bee_Loops_4A_b:
+          - 'crwdns73032:0crwdne73032:0'
+        2-3_Bee_Loops_4A_c:
+          - 'crwdns73033:0crwdne73033:0'
+          - 'crwdns73034:0crwdne73034:0'
+      grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: 'crwdns73035:0crwdne73035:0'
+      grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: 'crwdns73036:0crwdne73036:0'
+      grade3_maze_loops1_authored_hint:
+        grade3_maze_loops1_a: 'crwdns73037:0crwdne73037:0'
+      grade3_maze_loops2_authored_hint:
+        grade3_maze_loops2_a: |-
+          crwdns73038:0crwdne73038:0
+        grade3_maze_loops2_b:
+          - 'crwdns73039:0crwdne73039:0'
+          - 'crwdns73040:0crwdne73040:0'
+        grade3_maze_loops2_c:
+          - 'crwdns73041:0crwdne73041:0'
+      grade3_maze_loops2a_authored_hint:
+        grade3_maze_loops2a_a:
+          - 'crwdns73042:0crwdne73042:0'
+      grade3_maze_loops3_authored_hint:
+        2-3_Maze_Loops_19_a:
+          - 'crwdns73043:0crwdne73043:0'
+        2-3_Maze_Loops_19_b:
+          - 'crwdns73044:0crwdne73044:0'
+        2-3_Maze_Loops_19_c:
+          - 'crwdns73045:0crwdne73045:0'
+      grade3_maze_loops4_authored_hint:
+        2-3_Maze_Loops_20_a:
+          - 'crwdns73046:0crwdne73046:0'
+      grade3_maze_loops5_authored_hint:
+        2-3_Maze_Loops_21_a:
+          - 'crwdns73047:0crwdne73047:0'
+      grade3_robotFarmer_ConditionalsIntro_10a_authored_hint: [ ]
+      grade3_robotFarmer_ConditionalsIntro_11a_authored_hint: [ ]
+      grade3_robotFarmer_ConditionalsIntro_5_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_5a:
+          - 'crwdns73048:0crwdne73048:0'
+      grade3_robotFarmer_ConditionalsIntro_7_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_7_a:
+          - 'crwdns73049:0crwdne73049:0'
+        grade3_robotFarmer_ConditionalsIntro_7_b:
+          - 'crwdns73050:0crwdne73050:0'
+      grade3_robotFarmer_ConditionalsIntro_8_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_8_a:
+          - 'crwdns73051:0crwdne73051:0'
+      grade3_robotFarmer_ConditionalsIntro_9_authored_hint:
+        grade3_robotFarmer_ConditionalsIntro_9_a:
+          - 'crwdns73052:0crwdne73052:0'
+        grade3_robotFarmer_ConditionalsIntro_9_b:
+          - 'crwdns73053:0crwdne73053:0'
+        grade3_robotFarmer_ConditionalsIntro_9_c:
+          - 'crwdns73054:0crwdne73054:0'
+      grade3_RunningFarm_1_authored_hint:
+        grade3_RunningFarm_1_a:
+          - 'crwdns73055:0crwdne73055:0'
+        grade3_RunningFarm_1_b:
+          - 'crwdns73056:0crwdne73056:0'
+      grade3_RunningFarm_10_authored_hint:
+        grade3_RunningFarm_10_a:
+          - 'crwdns73057:0crwdne73057:0'
+      grade3_RunningFarm_11a_authored_hint:
+        grade3_RunningFarm_11a_a:
+          - 'crwdns73058:0crwdne73058:0'
+      grade3_RunningFarm_2_authored_hint:
+        grade3_RunningFarm_2_a: 'crwdns73059:0crwdne73059:0'
+        grade3_RunningFarm_2_b:
+          - 'crwdns73060:0crwdne73060:0'
+      grade3_RunningFarm_3_authored_hint:
+        grade3_RunningFarm_3_a: |-
+          crwdns73061:0crwdne73061:0
+        grade3_RunningFarm_3_b:
+          - 'crwdns73062:0crwdne73062:0'
+      grade3_RunningFarm_4_authored_hint:
+        grade3_RunningFarm_4_a: |-
+          crwdns73063:0crwdne73063:0
+      grade3_RunningFarm_5_authored_hint:
+        grade3_RunningFarm_5_a:
+          - 'crwdns73064:0crwdne73064:0'
+      grade3_RunningFarm_6_authored_hint:
+        grade3_RunningFarm_6_a:
+          - 'crwdns73065:0crwdne73065:0'
+        grade3_RunningFarm_6_b:
+          - 'crwdns73066:0crwdne73066:0'
+      grade3_RunningFarm_7_authored_hint:
+        grade3_RunningFarm_7_a: |-
+          crwdns73067:0crwdne73067:0
+        grade3_RunningFarm_7_b:
+          - 'crwdns73068:0crwdne73068:0'
+        grade3_RunningFarm_7_c: 'crwdns73069:0crwdne73069:0'
+      grade4_arist_nested_loop_polygons1_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          crwdns73070:0crwdne73070:0
+      grade4_arist_nested_loop_polygons2_authored_hint:
+        4-5_Nested_Loops_8_a: |-
+          crwdns73071:0crwdne73071:0
+      grade4_arist_nested_loop_triangles2_authored_hint: [ ]
+      grade4_arist_nested_loop_triangles3_authored_hint:
+        4-5_Nested_Loops_6_a: |-
+          crwdns73072:0crwdne73072:0
+      grade4_arist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "crwdns73073:0crwdne73073:0"
+      grade4_artist_functions1_authored_hint:
+        2-3_Artist_Functions_1_a:
+          - 'crwdns73074:0crwdne73074:0'
+          - 'crwdns73075:0crwdne73075:0'
+        2-3_Artist_Functions_1_b:
+          - 'crwdns73076:0crwdne73076:0'
+      grade4_artist_functions2_authored_hint:
+        2-3_Artist_Functions_2_a: |-
+          crwdns73077:0crwdne73077:0
+      grade4_artist_functions2a_authored_hint:
+        grade4_artist_functions2a_a:
+          - 'crwdns73078:0crwdne73078:0'
+      grade4_artist_functions3a_authored_hint:
+        grade4_artist_functions2a_a:
+          - 'crwdns73079:0crwdne73079:0'
+      grade4_artist_functions3b_authored_hint:
+        grade4_artist_functions2a_a:
+          - 'crwdns73080:0crwdne73080:0'
+      grade4_artist_functions_challenge_authored_hint:
+        Course_4_SCF_1_a: 'crwdns73081:0crwdne73081:0'
+        Course_4_SCF_1_b:
+          - 'crwdns73082:0crwdne73082:0'
+        Course_4_SCF_1_c: "crwdns73083:0crwdne73083:0"
+        Course_4_SCF_1_d: "crwdns73084:0crwdne73084:0"
+        Course_4_SCF_1_e: |-
+          crwdns73085:0crwdne73085:0
+      grade4_artist_functions_challenge2_authored_hint:
+        Course_4_SCF_1_a: 'crwdns73086:0crwdne73086:0'
+        Course_4_SCF_1_b:
+          - 'crwdns73087:0crwdne73087:0'
+        Course_4_SCF_1_c: "crwdns73088:0crwdne73088:0"
+        Course_4_SCF_1_d: "crwdns73089:0crwdne73089:0"
+        Course_4_SCF_1_e: |-
+          crwdns73090:0crwdne73090:0
+      grade4_artist_functions_stars0_authored_hint:
+        grade4_artist_functions_stars0_a: |-
+          crwdns73091:0crwdne73091:0
+      grade4_artist_functions_stars1_authored_hint:
+        grade4_artist_functions_stars1_a: 'crwdns73092:0crwdne73092:0'
+      grade4_artist_functions_stars2_authored_hint:
+        grade4_artist_functions_stars2_a:
+          - 'crwdns73093:0crwdne73093:0'
+        grade4_artist_functions_stars2_b:
+          - 'crwdns73094:0crwdne73094:0'
+      grade4_artist_functions_stars3_authored_hint:
+        hint1: 'crwdns73095:0crwdne73095:0'
+      grade4_artist_functions_windows0_authored_hint:
+        grade4_artist_functions_windows0_a:
+          - 'crwdns73096:0crwdne73096:0'
+        grade4_artist_functions_windows0_b:
+          - 'crwdns73097:0crwdne73097:0'
+      grade4_artist_functions_windows2_authored_hint:
+        grade4_artist_functions_windows2_a:
+          - 'crwdns73098:0crwdne73098:0'
+        grade4_artist_functions_windows2_b:
+          - 'crwdns73099:0crwdne73099:0'
+          - 'crwdns73100:0crwdne73100:0'
+      grade4_artist_functionsChallenge0_authored_hint:
+        grade4_artist_functionsChallenge0_a: |-
+          crwdns73101:0crwdne73101:0
+        grade4_artist_functionsChallenge0_b:
+          - 'crwdns73102:0crwdne73102:0'
+          - 'crwdns73103:0crwdne73103:0'
+        grade4_artist_functionsChallenge0_c:
+          - 'crwdns73104:0crwdne73104:0'
+      grade4_artist_nested_loop_polygons1_authored_hint:
+        4-5_Nested_Loops_7_a: |-
+          crwdns73105:0crwdne73105:0
+      grade4_artist_nested_loop_polygons2_authored_hint:
+        4-5_Nested_Loops_8_a: |-
+          crwdns73106:0crwdne73106:0
+      grade4_artist_nested_loop_triangles2_authored_hint: [ ]
+      grade4_artist_nested_loop_triangles3_authored_hint:
+        4-5_Nested_Loops_6_a: |-
+          crwdns73107:0crwdne73107:0
+      grade4_artist_nested_loop_triangles6_authored_hint:
+        4-5_Nested_Loops_12_a: "crwdns73108:0crwdne73108:0"
+      grade4_artist_nestedLoops_challenge2_authored_hint:
+        Course_4_Artist_11_a: 'crwdns73109:0crwdne73109:0'
+        Course_4_Artist_11_b: 'crwdns73110:0crwdne73110:0'
+      grade4_bee_conditionals_new1a_authored_hint:
+        grade4_bee_conditionals_new1a_a: 'crwdns73111:0crwdne73111:0'
+      grade4_bee_conditionals_new2_authored_hint:
+        grade4_bee_conditionals_new2_a: 'crwdns73112:0crwdne73112:0'
+        grade4_bee_conditionals_new2_b:
+          - 'crwdns73113:0crwdne73113:0'
+      grade4_bee_conditionals_new3b_authored_hint:
+        grade4_bee_conditionals_new3b_a:
+          - 'crwdns73114:0crwdne73114:0'
+      grade4_bee_conditionals_quantum4_authored_hint:
+        remember_quantum: "crwdns73115:0crwdne73115:0"
+      grade4_bee_conditionals_quantum5_authored_hint:
+        remember_quantum: "crwdns73116:0crwdne73116:0"
+      grade4_bee_functions1_authored_hint:
+        grade4_bee_functions1_a: 'crwdns73117:0crwdne73117:0'
+      grade4_bee_functions10_authored_hint:
+        grade4_bee_functions10_a:
+          - 'crwdns73118:0crwdne73118:0'
+          - 'crwdns73119:0crwdne73119:0'
+      grade4_bee_functions2_authored_hint:
+        grade4_bee_functions2_a:
+          - 'crwdns73120:0crwdne73120:0'
+      grade4_bee_functions3_authored_hint:
+        grade4_bee_functions3_a: 'crwdns73121:0crwdne73121:0'
+      grade4_bee_functions4_authored_hint:
+        grade4_bee_functions4_a:
+          - 'crwdns73122:0crwdne73122:0'
+          - 'crwdns73123:0crwdne73123:0'
+      grade4_bee_functions6_authored_hint:
+        grade4_bee_functions6_a:
+          - 'crwdns73124:0crwdne73124:0'
+        grade4_bee_functions6_b: 'crwdns73125:0crwdne73125:0'
+      grade4_bee_functions7_authored_hint:
+        2-3_Bee_Functions_8_a: "crwdns73126:0crwdne73126:0"
+      grade4_bee_functions8_authored_hint:
+        2-3_Bee_Functions_8_a: "crwdns73127:0crwdne73127:0"
+        2-3_Bee_Functions_8_b: |-
+          crwdns73128:0crwdne73128:0
+        2-3_Bee_Functions_8_c:
+          - 'crwdns73129:0crwdne73129:0'
+          - 'crwdns73130:0crwdne73130:0'
+      grade4_bee_functions9_authored_hint:
+        grade4_bee_functions9_a:
+          - 'crwdns73131:0crwdne73131:0'
+          - 'crwdns73132:0crwdne73132:0'
+        grade4_bee_functions9_b:
+          - 'crwdns73133:0crwdne73133:0'
+      grade4_bee_nestedLoops1_authored_hint:
+        grade4_bee_nestedLoops1_a:
+          - 'crwdns73134:0crwdne73134:0'
+          - 'crwdns73135:0crwdne73135:0'
+      grade4_bee_nestedLoops2_authored_hint:
+        grade4_bee_nestedLoops2_a:
+          - 'crwdns73136:0crwdne73136:0'
+        grade4_bee_nestedLoops2_b:
+          - 'crwdns73137:0crwdne73137:0'
+        grade4_bee_nestedLoops2_c: |-
+          crwdns73138:0crwdne73138:0
+      grade4_bee_nestedLoops2a_authored_hint:
+        grade4_bee_nestedLoops2a_a:
+          - 'crwdns73139:0crwdne73139:0'
+      grade4_bee_nestedLoops4_authored_hint:
+        grade4_bee_nestedLoops4_a:
+          - 'crwdns73140:0crwdne73140:0'
+        grade4_bee_nestedLoops4_b: |-
+          crwdns73141:0crwdne73141:0
+      grade4_bee_nestedLoops5_authored_hint:
+        grade4_bee_nestedLoops5_a: 'crwdns73142:0crwdne73142:0'
+      grade4_review_artist1_authored_hint:
+        2-3_Artist_1_new_a:
+          - 'crwdns73143:0crwdne73143:0'
+        2-3_Artist_1_new_b:
+          - 'crwdns73144:0crwdne73144:0'
+      grade4_review_artist2_authored_hint:
+        2-3_Artist_6_a: 'crwdns73145:0crwdne73145:0'
+        2-3_Artist_6_b:
+          - 'crwdns73146:0crwdne73146:0'
+        2-3_Artist_6_c:
+          - 'crwdns73147:0crwdne73147:0'
+      grade4_review_bee1_authored_hint:
+        2-3_Bee_Loops_3B_a:
+          - 'crwdns73148:0crwdne73148:0'
+      grade4_review_bee2_authored_hint:
+        2-3_Bee_Loops_3_a: 'crwdns73149:0crwdne73149:0'
+      grade4_review_bee3_authored_hint:
+        2-3_Bee_Loops_4_a: 'crwdns73150:0crwdne73150:0'
+      grade5_artist_binary10_authored_hint:
+        Course_4_Artist_Binary_Free_Play_2b_a:
+          - 'crwdns73151:0crwdne73151:0'
+        Course_4_Artist_Binary_Free_Play_2b_b:
+          - 'crwdns73152:0crwdne73152:0'
+          - 'crwdns73153:0crwdne73153:0'
+        Course_4_Artist_Binary_Free_Play_2b_c:
+          - 'crwdns73154:0crwdne73154:0'
+        Course_4_Artist_Binary_Free_Play_2b_d: |-
+          crwdns73155:0[solution]crwdne73155:0
+      grade5_artist_for_loops1_authored_hint:
+        grade5_artist_for_loops1_a: |-
+          crwdns73156:0crwdne73156:0
+      grade5_artist_for_loops10_authored_hint:
+        Course_4_Artist_For_Loops_Challenge_a: 'crwdns73157:0crwdne73157:0'
+        Course_4_Artist_For_Loops_Challenge_b:
+          - 'crwdns73158:0crwdne73158:0'
+      grade5_artist_for_loops1b_authored_hint:
+        grade5_artist_for_loops1b_a: |-
+          crwdns73159:0crwdne73159:0
+      grade5_artist_for_loops2_authored_hint:
+        grade5_artist_for_loops2_a: |-
+          crwdns73160:0crwdne73160:0
+      grade5_artist_for_loops3_authored_hint:
+        Course_4_Artist_For_Loops_3_a: |-
+          crwdns73161:0crwdne73161:0
+      grade5_artist_for_loops4_authored_hint:
+        Course_4_Artist_For_Loops_4_a: "crwdns73162:0crwdne73162:0"
+      grade5_artist_for_loops5_authored_hint:
+        grade5_artist_for_loops5_a:
+          - 'crwdns73163:0crwdne73163:0'
+      grade5_artist_for_loops7_authored_hint:
+        grade5_artist_for_loops7_a:
+          - 'crwdns73164:0crwdne73164:0'
+        grade5_artist_for_loops7_b:
+          - 'crwdns73165:0crwdne73165:0'
+      grade5_artist_for_loops7a_authored_hint: [ ]
+      grade5_artist_for_loops7b_authored_hint: [ ]
+      grade5_artist_for_loops8_authored_hint:
+        Course_4_Artist_For_Loops_11_a: "crwdns73166:0crwdne73166:0"
+      grade5_artist_for_loops9_authored_hint:
+        Course_4_Artist_For_Loops_11a_a: 'crwdns73167:0crwdne73167:0'
+        Course_4_Artist_For_Loops_11a_b: 'crwdns73168:0crwdne73168:0'
+      grade5_artist_for_loopsfreeplay11_authored_hint:
+        Course_4_Artist_For_Loops_inspire_a:
+          - 'crwdns73169:0crwdne73169:0'
+        Course_4_Artist_For_Loops_inspire_b:
+          - 'crwdns73170:0crwdne73170:0'
+        Course_4_Artist_For_Loops_inspire_c:
+          - 'crwdns73171:0crwdne73171:0'
+          - 'crwdns73172:0crwdne73172:0'
+        Course_4_Artist_For_Loops_inspire_d: "crwdns73173:0[Solution]crwdne73173:0"
+      grade5_artist_for_loopsfreeplay12_authored_hint:
+        grade5_artist_for_loopsfreeplay12_a:
+          - 'crwdns73174:0crwdne73174:0'
+        grade5_artist_for_loopsfreeplay12_b:
+          - 'crwdns73175:0crwdne73175:0'
+        grade5_artist_for_loopsfreeplay12_c: |-
+          crwdns73176:0crwdne73176:0
+      grade5_artist_functionparameters10_authored_hint:
+        brush_width:
+          - 'crwdns73177:0crwdne73177:0'
+        double_loop: 'crwdns73178:0crwdne73178:0'
+        specifics: "crwdns73179:0crwdne73179:0"
+        after:
+          - 'crwdns73180:0crwdne73180:0'
+        solution: |-
+          crwdns73181:0crwdne73181:0
+      grade5_artist_functionparameters8_authored_hint:
+        NEW_Course_4_Artist_Params_13_a:
+          - 'crwdns73182:0crwdne73182:0'
+      grade5_artist_functionparameters9_authored_hint:
+        NEW_Course_4_Artist_Params_14_a:
+          - 'crwdns73183:0crwdne73183:0'
+        grade5_artist_functionparameters9_b:
+          - 'crwdns73184:0crwdne73184:0'
+      grade5_artist_functionparameters9a_authored_hint:
+        grade5_artist_functionparameters9a_a:
+          - 'crwdns73185:0crwdne73185:0'
+        grade5_artist_functionparameters9a_b:
+          - 'crwdns73186:0crwdne73186:0'
+      grade5_artist_functionparameters9b_authored_hint:
+        grade5_artist_functionparameters9b_a:
+          - 'crwdns73187:0crwdne73187:0'
+        grade5_artist_functionparameters9b_b:
+          - 'crwdns73188:0crwdne73188:0'
+      grade5_artist_functionparameters_6_authored_hint:
+        grade5_artist_functionparameters_6_a:
+          - 'crwdns73189:0crwdne73189:0'
+        grade5_artist_functionparameters_6_b:
+          - 'crwdns73190:0crwdne73190:0'
+      grade5_artist_parameters_squares1a_authored_hint:
+        grade5_artist_parameters_squares1a_a:
+          - 'crwdns73191:0crwdne73191:0'
+        grade5_artist_parameters_squares1a_b:
+          - 'crwdns73192:0crwdne73192:0'
+      grade5_artist_parameters_squares2_authored_hint:
+        grade5_artist_parameters_squares2_a:
+          - 'crwdns73193:0crwdne73193:0'
+        grade5_artist_parameters_squares2_b: |-
+          crwdns73194:0crwdne73194:0
+      grade5_artist_parameters_squares2a_authored_hint:
+        grade5_artist_parameters_squares2a_a:
+          - 'crwdns73195:0crwdne73195:0'
+          - 'crwdns73196:0crwdne73196:0'
+        grade5_artist_parameters_squares2a_b:
+          - 'crwdns73197:0crwdne73197:0'
+      grade5_artist_parameters_stars1_authored_hint:
+        hint1: 'crwdns73198:0crwdne73198:0'
+      grade5_artist_variables_freeplay10_authored_hint:
+        Course_4_Artist_Vars_8_a:
+          - 'crwdns73199:0crwdne73199:0'
+          - 'crwdns73200:0crwdne73200:0'
+      grade5_artist_variables_freeplay15_authored_hint:
+        Course_4_Artist_Inspire_a:
+          - 'crwdns73201:0crwdne73201:0'
+        Course_4_Artist_Inspire_b:
+          - 'crwdns73202:0crwdne73202:0'
+        Course_4_Artist_Inspire_c:
+          - 'crwdns73203:0crwdne73203:0'
+        Course_4_Artist_Inspire_d: |-
+          crwdns73204:0crwdne73204:0
+      grade5_artist_variables_octagons13_authored_hint:
+        Course_4_Artist_Vars_13_a:
+          - 'crwdns73205:0crwdne73205:0'
+        Course_4_Artist_Vars_13_b: "crwdns73206:0crwdne73206:0"
+        Course_4_Artist_Vars_13_c:
+          - 'crwdns73207:0crwdne73207:0'
+          - 'crwdns73208:0crwdne73208:0'
+      grade5_artist_variables_square7_authored_hint:
+        Course_4_Artist_Vars_6_a:
+          - 'crwdns73209:0crwdne73209:0'
+      grade5_bee_for_loops10_authored_hint:
+        grade5_bee_for_loops10_a: "crwdns73210:0crwdne73210:0"
+      grade5_bee_for_loops11_authored_hint:
+        NEW_Course_4_Bee_For_Loops_10a_a:
+          - 'crwdns73211:0crwdne73211:0'
+        NEW_Course_4_Bee_For_Loops_10a_b:
+          - 'crwdns73212:0crwdne73212:0'
+      grade5_bee_for_loops3_authored_hint:
+        grade5_bee_for_loops3_a: 'crwdns73213:0crwdne73213:0'
+        grade5_bee_for_loops3_b:
+          - 'crwdns73214:0crwdne73214:0'
+      grade5_bee_for_loops4_authored_hint:
+        grade5_bee_for_loops4_a:
+          - 'crwdns73215:0crwdne73215:0'
+        grade5_bee_for_loops4_b:
+          - 'crwdns73216:0crwdne73216:0'
+      grade5_bee_for_loops5_authored_hint:
+        grade5_bee_for_loops5_a:
+          - 'crwdns73217:0crwdne73217:0'
+      grade5_bee_for_loops6_authored_hint:
+        grade5_bee_for_loops6_a:
+          - 'crwdns73218:0crwdne73218:0'
+      grade5_bee_for_loops7_authored_hint:
+        grade5_bee_for_loops7_a:
+          - 'crwdns73219:0crwdne73219:0'
+      grade5_bee_for_loops8_authored_hint:
+        NEW_Course_4_Bee_For_Loops_8_a: "crwdns73220:0crwdne73220:0"
+      grade5_bee_for_loops9_authored_hint:
+        NEW_Course_4_Bee_For_Loops_7_a: |-
+          crwdns73221:0crwdne73221:0
+        NEW_Course_4_Bee_For_Loops_7_b: 'crwdns73222:0crwdne73222:0'
+      grade5_bee_parameters_new1_authored_hint:
+        grade5_bee_parameters_new1_a:
+          - 'crwdns73223:0crwdne73223:0'
+      grade5_bee_parameters_new2_authored_hint:
+        grade5_bee_parameters_new2_a: "crwdns73224:0crwdne73224:0"
+        grade5_bee_parameters_new2_b:
+          - 'crwdns73225:0crwdne73225:0'
+      grade5_bee_parameters_new3_authored_hint:
+        grade5_bee_parameters_new3_a:
+          - 'crwdns73226:0crwdne73226:0'
+      grade5_bee_parameters_new4_authored_hint:
+        grade5_bee_parameters_new4_a:
+          - 'crwdns73227:0crwdne73227:0'
+      grade5_bee_parameters_new5_authored_hint:
+        grade5_bee_parameters_new5_a:
+          - 'crwdns73228:0crwdne73228:0'
+          - 'crwdns73229:0crwdne73229:0'
+      grade5_bee_parameters_new6_authored_hint:
+        grade5_bee_parameters_new6_a:
+          - 'crwdns73230:0crwdne73230:0'
+      grade5_bee_parameters_new7_authored_hint:
+        grade5_bee_parameters_new7_a:
+          - 'crwdns73231:0crwdne73231:0'
+      grade5_bee_parameters_new8a_authored_hint:
+        grade5_bee_parameters_new8a_a:
+          - 'crwdns73232:0crwdne73232:0'
+      grade5_bee_parameters_new9a_authored_hint:
+        grade5_bee_parameters_new9a_a:
+          - 'crwdns73233:0crwdne73233:0'
+        grade5_bee_parameters_new9a_b:
+          - 'crwdns73234:0crwdne73234:0'
+      grade5_playlab_variables2_authored_hint:
+        Course_4_Play_Lab_Vars_2_a:
+          - 'crwdns73235:0crwdne73235:0'
+      gradek_adventurer_loops3_authored_hint:
+        gradek_adventurer_loops3_a:
+          - 'crwdns73236:0crwdne73236:0'
+        gradek_adventurer_loops3_b:
+          - 'crwdns73237:0crwdne73237:0'
+      gradek_adventurer_loops4_authored_hint:
+        gradek_adventurer_loops4_a:
+          - 'crwdns73238:0crwdne73238:0'
+          - 'crwdns73239:0crwdne73239:0'
+      gradek_adventurer_loops4a_authored_hint:
+        gradek_adventurer_loops4a_a:
+          - 'crwdns73240:0crwdne73240:0'
+      gradek_adventurer_loops5_authored_hint:
+        gradek_adventurer_loops5_a:
+          - 'crwdns73241:0crwdne73241:0'
+      gradek_adventurer_loops6_authored_hint:
+        gradek_adventurer_loops6_a:
+          - 'crwdns73242:0crwdne73242:0'
+      gradek_adventurer_loops7_challenge_authored_hint:
+        gradek_adventurer_loops7_challenge_a:
+          - 'crwdns73243:0crwdne73243:0'
+          - 'crwdns73244:0crwdne73244:0'
+      gradek_adventurer_loops8_authored_hint:
+        gradek_adventurer_loops8_a:
+          - 'crwdns73245:0crwdne73245:0'
+      gradek_adventurer_loops9_authored_hint:
+        gradek_adventurer_loops9_a:
+          - 'crwdns73246:0crwdne73246:0'
+      gradek_artist_loops1_authored_hint:
+        gradek_artist_loops1_a:
+          - 'crwdns73247:0crwdne73247:0'
+      gradek_artist_loops2_authored_hint:
+        gradek_artist_loops2_a:
+          - 'crwdns73248:0crwdne73248:0'
+      gradek_artist_loops3_authored_hint:
+        artistLoopsK2_a:
+          - 'crwdns73249:0crwdne73249:0'
+      gradek_artist_loops4_authored_hint:
+        artistLoopsK3_a:
+          - 'crwdns73250:0crwdne73250:0'
+      gradek_artist_loops5_authored_hint:
+        gradek_artist_loops5_a:
+          - 'crwdns73251:0crwdne73251:0'
+      gradek_artist_loops6_authored_hint:
+        gradek_artist_loops6_a:
+          - 'crwdns73252:0crwdne73252:0'
+      gradek_artist_loops7_authored_hint:
+        gradek_artist_loops7_a:
+          - 'crwdns73253:0crwdne73253:0'
+        gradek_artist_loops7_b:
+          - 'crwdns73254:0crwdne73254:0'
+        gradek_artist_loops7_c: "crwdns73255:0crwdne73255:0"
+      gradek_artist_loops8_authored_hint:
+        gradek_artist_loops8_a: 'crwdns73256:0crwdne73256:0'
+      gradek_artist_loops9_authored_hint:
+        artistLoopsKA_a: 'crwdns73257:0crwdne73257:0'
+      gradek_artist_loopsA_authored_hint:
+        artistLoopsKB_a:
+          - 'crwdns73258:0crwdne73258:0'
+      gradek_artist_loopsFP_authored_hint: [ ]
+      gradek_playlab_events1a_authored_hint:
+        gradek_playlab_events1a_a:
+          - 'crwdns73259:0crwdne73259:0'
+      gradek_playlab_events1c_authored_hint:
+        gradek_playlab_events1c_a: 'crwdns73260:0crwdne73260:0'
+      gradek_playlab_events2c_authored_hint:
+        gradek_playlab_events2c_a:
+          - 'crwdns73261:0crwdne73261:0'
+      gradek_playlab_events3c_authored_hint:
+        gradek_playlab_events3c_a: |-
+          crwdns73262:0crwdne73262:0
+        gradek_playlab_events3c_b: |-
+          crwdns73263:0crwdne73263:0
+      gradek_playlab_events4c_authored_hint:
+        gradek_playlab_events4c_a: "crwdns73264:0crwdne73264:0"
+      gradek_playlab_events5c_authored_hint:
+        gradek_playlab_events5c_a: |-
+          crwdns73265:0crwdne73265:0
+        gradek_playlab_events5c_b: |-
+          crwdns73266:0crwdne73266:0
+        gradek_playlab_events5c_c: |-
+          crwdns73267:0crwdne73267:0
+      gradek_playlab_eventsA_authored_hint:
+        gradek_playlab_eventsA_a: |-
+          crwdns73268:0crwdne73268:0
+      gradeK_sequence_4_authored_hint:
+        gradeK_sequence_4_a: 'crwdns73269:0crwdne73269:0'
+      Harvesting_authored_hint:
+        pointer_harvester_test:
+          - 'crwdns73270:0crwdne73270:0'
+      Inspirational Artwork_authored_hint:
+        brush_width:
+          - 'crwdns73271:0crwdne73271:0'
+        double_loop: 'crwdns73272:0crwdne73272:0'
+        specifics: "crwdns73273:0crwdne73273:0"
+        after:
+          - 'crwdns73274:0crwdne73274:0'
+        solution: |-
+          crwdns73275:0crwdne73275:0
+      K2.0 sequence 1_authored_hint:
+        K2.0_sequence_1_a:
+          - 'crwdns73276:0crwdne73276:0'
+      K2.0 sequence 10_authored_hint:
+        K2.0_sequence_10_a:
+          - 'crwdns73277:0crwdne73277:0'
+        K2.0_sequence_10_b:
+          - 'crwdns73278:0crwdne73278:0'
+      K2.0 sequence 12_authored_hint:
+        K2.0_sequence_12_a:
+          - 'crwdns73279:0crwdne73279:0'
+      K2.0 sequence 2_authored_hint:
+        K2.0_sequence_2_a:
+          - 'crwdns73280:0crwdne73280:0'
+      K2.0 sequence 3_authored_hint:
+        K2.0_sequence_3_a:
+          - 'crwdns73281:0crwdne73281:0'
+      K2.0 sequence 4_authored_hint:
+        K2.0_sequence_4_a: 'crwdns73282:0crwdne73282:0'
+      K2.0 sequence 5_authored_hint:
+        K2.0_sequence_5: 'crwdns73283:0crwdne73283:0'
+      K2.0 sequence 6_authored_hint:
+        K2.0_sequence_6_a:
+          - 'crwdns73284:0crwdne73284:0'
+        K2.0_sequence_6_b:
+          - 'crwdns73285:0crwdne73285:0'
+      K2.0 sequence 7_authored_hint:
+        K2.0_sequence_7_a:
+          - 'crwdns73286:0crwdne73286:0'
+      K2.0 sequence 8_authored_hint:
+        K2.0_sequence_8_a: 'crwdns73287:0crwdne73287:0'
+      K2.0 sequence 9_authored_hint:
+        K2.0_sequence_9_a:
+          - 'crwdns73288:0crwdne73288:0'
+        K2.0_sequence_9_b:
+          - 'crwdns73289:0crwdne73289:0'
+      K2.0 sequence FP_authored_hint:
+        K2.0_sequence_FP_a:
+          - 'crwdns73290:0crwdne73290:0'
+      K2.0 sequence pre_authored_hint:
+        K2.0_sequence_pre_a:
+          - 'crwdns73291:0crwdne73291:0'
+      level 'grade3_Loops_10_authored_hint:
+        2-3_Bee_Loops_4_a: 'crwdns73292:0crwdne73292:0'
+      level 'grade3_Loops_11_authored_hint:
+        2-3_Bee_Loops_5_a:
+          - 'crwdns73293:0crwdne73293:0'
+      level 'grade3_Loops_12_authored_hint:
+        2-3_Bee_Loops_6_a:
+          - 'crwdns73294:0crwdne73294:0'
+        2-3_Bee_Loops_6_b:
+          - 'crwdns73295:0crwdne73295:0'
+      level 'grade3_Loops_4_authored_hint:
+        2-3_Bee_Loops_3B_a:
+          - 'crwdns73296:0crwdne73296:0'
+      level 'grade3_Loops_5_authored_hint:
+        2-3_Bee_Loops_7_a: 'crwdns73297:0crwdne73297:0'
+        2-3_Bee_Loops_7_b: 'crwdns73298:0crwdne73298:0'
+      level 'grade3_Loops_6_authored_hint:
+        2-3_Bee_Loops_4A_a: 'crwdns73299:0crwdne73299:0'
+        2-3_Bee_Loops_4A_b:
+          - 'crwdns73300:0crwdne73300:0'
+        2-3_Bee_Loops_4A_c:
+          - 'crwdns73301:0crwdne73301:0'
+          - 'crwdns73302:0crwdne73302:0'
+      level 'grade3_Loops_8_authored_hint:
+        2-3_Bee_Loops_2_a: 'crwdns73303:0crwdne73303:0'
+      level 'grade3_Loops_9_authored_hint:
+        2-3_Bee_Loops_3_a: 'crwdns73304:0crwdne73304:0'
+      MikeStar_authored_hint:
+        hint1: 'crwdns73305:0crwdne73305:0'
+      MikeStarHard_authored_hint:
+        hint1: 'crwdns73306:0crwdne73306:0'
+      MikeStarNested_authored_hint:
+        hint1: 'crwdns73307:0crwdne73307:0'
+      NEW Course 4 Artist Functions 13_authored_hint:
+        NEW_Course_4_Artist_Functions_13_a:
+          - 'crwdns73308:0crwdne73308:0'
+        NEW_Course_4_Artist_Functions_13_b:
+          - 'crwdns73309:0crwdne73309:0'
+        NEW_Course_4_Artist_Functions_13_c:
+          - 'crwdns73310:0crwdne73310:0'
+      NEW Course 4 Artist Functions 4_authored_hint:
+        NEW_Course_4_Artist_Functions_4_a:
+          - 'crwdns73311:0crwdne73311:0'
+      NEW Course 4 Artist Functions 9_authored_hint:
+        NEW_Course_4_Artist_Functions_9_a:
+          - 'crwdns73312:0crwdne73312:0'
+        NEW_Course_4_Artist_Functions_9_b:
+          - 'crwdns73313:0crwdne73313:0'
+      NEW Course 4 Artist Params 11_authored_hint:
+        NEW_Course_4_Artist_Params_11_a:
+          - 'crwdns73314:0crwdne73314:0'
+      NEW Course 4 Artist Params 13_authored_hint:
+        NEW_Course_4_Artist_Params_13_a: 'crwdns73315:0crwdne73315:0'
+      NEW Course 4 Artist Params 14_authored_hint:
+        NEW_Course_4_Artist_Params_14_a:
+          - 'crwdns73316:0crwdne73316:0'
+      NEW Course 4 Artist Params inspire_authored_hint:
+        brush_width:
+          - 'crwdns73317:0crwdne73317:0'
+        double_loop: 'crwdns73318:0crwdne73318:0'
+        specifics: "crwdns73319:0crwdne73319:0"
+        after:
+          - 'crwdns73320:0crwdne73320:0'
+        solution: |-
+          crwdns73321:0crwdne73321:0
+      NEW Course 4 Bee For Loops 10a_authored_hint:
+        NEW_Course_4_Bee_For_Loops_10a_a:
+          - 'crwdns73322:0crwdne73322:0'
+        NEW_Course_4_Bee_For_Loops_10a_b:
+          - 'crwdns73323:0crwdne73323:0'
+      NEW Course 4 Bee For Loops 7_authored_hint:
+        NEW_Course_4_Bee_For_Loops_7_a: |-
+          crwdns73324:0crwdne73324:0
+      NEW Course 4 Bee For Loops 8_authored_hint:
+        NEW_Course_4_Bee_For_Loops_8_a: "crwdns73325:0crwdne73325:0"
+      Pattern Bee 1_authored_hint:
+        conditional_pointer: |-
+          crwdns73326:0crwdne73326:0
+        turn_at_honeycomb_pointer:
+          - 'crwdns73327:0crwdne73327:0'
+      Planning Farmer_authored_hint:
+        conditional_pointer: |-
+          crwdns73328:0crwdne73328:0
+        turn_at_honeycomb_pointer:
+          - 'crwdns73329:0crwdne73329:0'
+      sample3_authored_hint:
+        sample3_a: |-
+          crwdns73330:0crwdne73330:0
+      sample5_authored_hint:
+        sample5_a:
+          - 'crwdns73331:0crwdne73331:0'
+        sample5_b: |-
+          crwdns73332:0crwdne73332:0
+      sample6_authored_hint:
+        sample6_a: 'crwdns73333:0crwdne73333:0'
+        sample6_b:
+          - 'crwdns73334:0crwdne73334:0'
+      sample7assessment_authored_hint: [ ]

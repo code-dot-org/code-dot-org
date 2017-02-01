@@ -32,7 +32,7 @@ class FeatureModeControllerTest < ActionController::TestCase
   test 'update scale mode and show pending scale mode' do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       FeatureModeManager.expects(:set_mode)
-      post :update, mode: 'scale'
+      post :update, params: {mode: 'scale'}
       assert_redirected_to 'http://test.host/admin/feature_mode'
 
       # Stub the feature mode manager to still return 'normal', simulating a change that has not yet

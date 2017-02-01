@@ -102,12 +102,11 @@
       ha gustado la Hora de Código y quiere ir mas lejos, puede establecer una contraseña
       y crear una cuenta de Code Studio debajo para inscribir a sus estudiantes en
       cualquiera de nuestros <a href="https://code.org/educate">cursos más largos</a>.
-    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
-      To sign in to Code Studio, you’ll need to set up a password for your account.
-      This will let you save your progress and manage your classroom. You’ll be able
-      to assign courses to students and track their progress. <a href="%{studio_url}">You
-      can also continue to browse the various stages and puzzles</a> without creating
-      an account.
+    hoc_already_signed_up_content_post_hoc: Gracias por hospedar una Hora de Código.
+      Para ingresar en "Code Studio, tienes que establecer una contraseña para tu
+      cuenta. Esto te dejara guardar tu progreso y manejar tu clase. Podrás asignar
+      cursos a estudiantes y ver su progreso. <a href="%{studio_url}">También puedes
+      continuar con los varios niveles y rompecabezas</a> sin crear una cuenta.
     teacher_educator_guide: Consulte la guía del educador
     title: Registrar en Code.org
     school_name: Nombre de la escuela (opcional)
@@ -366,7 +365,10 @@
     delete_text_teacher_note: 'Nota: Al eliminar tu cuenta no eliminarás la cuenta
       de tus alumnos.'
     delete_confirm: "¿Está seguro de que desea eliminar su cuenta?"
-    deleted_user: deleted user
+    deleted_user: usuario borrado
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
   user_level:
     completed: Completada
     tried: Intentaste
@@ -452,7 +454,7 @@
       se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para
       financiar en la educacion de K-12 informática.
     announcement_petition_button: Agrega tu nombre
-    announcement_go_beyond_button: Go beyond
+    announcement_go_beyond_button: Ve más allá
     announcement_all: Mantente al tanto con nuevas características y actualizaciones
       en nuestro blog del profesor. <a href='%{teacher_blog_url}' target='_blank'>Mira
       los anuncios anteriores.</a>
@@ -472,12 +474,12 @@
       de aprendizaje profesional de alta calidad y toneladas de excelentes herramientas
       para todos los niveles&mdash; todo lo que necesita, sin costo. ¿Se pregunta
       dónde empezar? Descarga <a href='%{video_download_url}'>this video</a>!
-    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
-      concepts with your students every week. Code.org offers curriculum, lesson plans,
-      high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;and it's all free. :) You don't need any experience to start
-      teaching computer science in your classroom. <b>Find the next step that's right
-      for your classroom.</b>
+    announcement_go_beyond: Ve mas allá de Hour of Code y explora las ciencias de
+      la computación con tus estudiantes cada semana. Code.org ofrece currículum,
+      planes de enseñanza, planes profesionales de aprendizaje, y toneladas de buenas
+      herramientas para todos los niveles&mdash;y es todo gratis. :) No necesitas
+      ninguna experiencia para empezar a enseñar ciencias de la computación en tu
+      clase.<b>Encuentra el proximo paso que es correcto para tu clase.</b>
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Introduzca
       un código de sección diferente.
@@ -943,6 +945,9 @@
     content: Contenido
     practice: Prácticas de Profesor
     peer_review: Revisión por pares
+    ramp_up: Ramp-Up
+    end_of_course_project: End of Course Project
+    optional_stages: Optional Stages
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Usted se está saliendo de este dominio, a una página que no es

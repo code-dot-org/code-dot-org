@@ -289,12 +289,14 @@ gl:
             Calc: Calc
             Eval: Eval
             Studio: Studio
+          description_audience: ''
         flappy:
           title: Código do Flappy bird
           description: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente o noso titorial sobre o Código do Flappy bird!
           description_short: Escribe o teu propio xogo Flappy en menos de 10 minutos!
           stage:
             Flappy Code: Código do Flappy bird
+          description_audience: ''
         jigsaw:
           title: Crebacabezas
           description: Proba o noso titorial de Jigsaw
@@ -1484,9 +1486,11 @@ gl:
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1494,6 +1498,13 @@ gl:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2593,3 +2604,14 @@ gl:
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Benvido!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Resumo
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

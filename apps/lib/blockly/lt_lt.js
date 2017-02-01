@@ -376,7 +376,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "ištrink tarpus iš abiejų pusių";
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "ištrink tarpus teksto kairėje";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "ištrink tarpus teksto dešinėje";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "Duoda tekstą, pašalinęs tarpus iš pradžios bei galo.";
-Blockly.Msg.UNUSED_CODE = "Unused code";
+Blockly.Msg.UNUSED_CODE = "Nepanaudotas kodas";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "elementas";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "Sukurti priskyrimą '%1 = '";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";

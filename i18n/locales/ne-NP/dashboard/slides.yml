@@ -99,7 +99,7 @@ ne:
         text: "When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground."
       10:
         image: 'notes/flappy10.jpg'
-        text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
+        text: "In the final puzzle you'll be able to create your own game and share it with your friends. रमाईलो गर्नुहोस्!"
     loop_times:
       1:
         image: 'notes/hoc2_1.jpg'
@@ -592,7 +592,7 @@ ne:
         text: "In order to do this, you drag your move forward command and then you put it inside the repeat block. And you can click on it and tell it how many times you  to repeat the block to tell it how many steps you want it to take forward."
       5:
         image: 'notes/C1_zuck_repeat_loop_5.png'
-        text: "One more thing is you can put as many commands as you want inside the repeat block. So in this example, you're telling it to move forward and turn left, which it'll do five times. Have fun!"
+        text: "One more thing is you can put as many commands as you want inside the repeat block. So in this example, you're telling it to move forward and turn left, which it'll do five times. रमाईलो गर्नुहोस्!"
     C2_artist_intro:
       1:
         image: 'notes/C2_artist_intro_1.png'
@@ -1428,7 +1428,7 @@ ne:
         text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: 'notes/starwars_congrats_5.JPG'
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. रमाईलो गर्नुहोस्!"
     starwars_blocks_intro:
       1:
         image: 'notes/starwars_blocks_intro_1.JPG'
@@ -1497,7 +1497,7 @@ ne:
         text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: 'notes/starwars_blocks_congrats_5.JPG'
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. रमाईलो गर्नुहोस्!"
     mc_intro:
       1:
         image: 'notes/mc_intro_1.JPG'
@@ -1582,7 +1582,7 @@ ne:
         text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
       4:
         image: 'notes/mc_congrats_share_4.JPG'
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: "When you're done making your creation, choose share to get a link to share with your friends. रमाईलो गर्नुहोस्!"
     mc_congrats_no_share:
       1:
         image: 'notes/mc_congrats_no_share_1.JPG'
@@ -1595,7 +1595,7 @@ ne:
         text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
       4:
         image: 'notes/mc_congrats_no_share_4.JPG'
-        text: "Now you can build whatever you want. Have fun!"
+        text: "Now you can build whatever you want. रमाईलो गर्नुहोस्!"
     gumball_intro:
       1:
         image: 'notes/gumball_intro_1.JPG'
@@ -1725,7 +1725,7 @@ ne:
         text: "If you ever want to delete a block, just remove it from the stack and drag it back to the toolbox."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
-        text: "After you've hit \"Run\" you can always hit the \"Reset\" button to reset the game and start over. Now, it's your turn to make your very own version of Minecraft. Have fun!"
+        text: "After you've hit \"Run\" you can always hit the \"Reset\" button to reset the game and start over. Now, it's your turn to make your very own version of Minecraft. रमाईलो गर्नुहोस्!"
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'
@@ -1762,4 +1762,4 @@ ne:
         text: "Congratulations! You've learned to use computer science commands to bring the Minecraft world to life. You are the developer now. You've unlocked all the commands and all the creatures. You choose what happens."
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
-        text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
+        text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. रमाईलो गर्नुहोस्! I'm looking forward to playing your version of Minecraft."

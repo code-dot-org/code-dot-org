@@ -11,7 +11,7 @@ class RedirectProxyControllerTest < ActionController::TestCase
       status: 301,
       headers: {Location: LONG_URI})
 
-    get :get, u: short_uri
+    get :get, params: {u: short_uri}
 
     assert_response :success
     assert_equal LONG_URI, response.body
@@ -20,7 +20,7 @@ class RedirectProxyControllerTest < ActionController::TestCase
   test 'should avoid attempting redirect if not on whitelist' do
     local_uri = "http://foo.com/bar"
 
-    get :get, u: local_uri
+    get :get, params: {u: local_uri}
 
     # Would expect test to fail if it tried to hit network because of WebMock.disable_net_connect
     assert_response :success
@@ -28,13 +28,13 @@ class RedirectProxyControllerTest < ActionController::TestCase
   end
 
   test 'should fail if attempting to hit invalid uri' do
-    get :get, u: 'invaliduri'
+    get :get, params: {u: 'invaliduri'}
     assert_response 400
   end
 
   test 'should avoid redirect if host/port match this server' do
     local_uri = "http://test.host:80/foobar"
-    get :get, u: local_uri
+    get :get, params: {u: local_uri}
 
     assert_response :success
     assert_equal local_uri, response.body
@@ -51,7 +51,7 @@ class RedirectProxyControllerTest < ActionController::TestCase
       response,
       response,
       response)
-    get :get, u: short_uri
+    get :get, params: {u: short_uri}
     assert_response 500
   end
 end

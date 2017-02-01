@@ -3021,118 +3021,118 @@
     mc_2016_intro:
       1:
         image: notes/mc_2016_intro_1.jpg
-        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
-          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
-          but the world has stopped. The sheep aren't moving, the chickens aren't
-          laying eggs, and zombies are just standing still. It's up to you to add
-          the code to make the Minecraft world work.
+        text: "სალამი, მე ჯენსი მქვია და მე მაინკრაფტის მთავარი დიზაინერი ვარ. შემდეგი
+          ერთი საათის განმავლობაში თქვენ მაინკრაფტის საკუთარ თამაშს შექმნით. ეს უკვე
+          ჰგავს მაინკრაფტს, მაგრამ სამყარო გაჩერებულია. ცხვარი არ მოძრაობს, ქათამი
+          კვერცხს არ დებს და ზომბიც თავისთვის დგას გაუნძრევლად. ახლა თქვენი ჯერია
+          – დაამატეთ კოდი და გააცოცხლეთ მაინკრაფტის სამყარო."
       2:
         image: notes/mc_2016_intro_2.jpg
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
-          really interested in is how people think and interact with technology and
-          so this job is the perfect job for me to put together the computer engineering
-          with the psychology: how people think and behave.'
+        text: "მე მქვია მელისა და ჩემი საქმე მაინკრაფტის ფარგლებში არის მომხმარებლის
+          კვლევა. რაც ნამდვილად მაინტერესებს არის ის, თუ როგორ შედიან ადამიანები ინტერაქციაში
+          ტექნოლოგიებთან, ასე რომ ამ სამუშაოს ფარგლებში ერთმანეთს კომპიუტერულ მეცნიერებასა
+          და ფსიქოლოგიას ვუთავსებ ერთმანეთს: როგორ ფიქრობენ და იქცევიან ადამიანები."
       3:
         image: notes/mc_2016_intro_3.jpg
-        text: You'll see your screen is split into three main parts. 1) On the left
-          is the Minecraft game. Right now the world is frozen but we're going to
-          fix that with code.
+        text: "როგორც ხედავთ, თქვენი ეკრანი სამ ძირითად ნაწილადაა დაყოფილი. 1) მარცხნივ
+          მაინკრაფტის თამაშია. ახლა სამყარო გაყინულია, მაგრამ ამას კოდის მეშვეობით
+          გამოვასწორებთ."
       4:
         image: notes/mc_2016_intro_4.jpg
-        text: 2) This middle area is the toolbox. Each of these blocks is a command
-          that chickens, sheep, and other Minecraft creatures can understand.
+        text: 2) ეს შუა ნაწილი არის ინსტრუმენტების პანელი. ამ ბლოკებიდან ყოველი არის
+          ბრძანება, რომლის გაგებაც შეუძლია მაინკრაფტის არსებას, მაგალითად ქათამსა
+          ან ცხვარს.
       5:
         image: notes/mc_2016_intro_5.jpg
-        text: 3) The space on the right is called the workspace and this is where
-          we'll build our program.
+        text: 3) მარჯვნივ განთავსებულ სივრცეს ჰქვია სამუშაო სივრცე - აქ დაიწერება
+          ჩვენი პროგრამა.
       6:
         image: notes/mc_2016_intro_6.jpg
-        text: If you forget what to do, the instructions for each level are at the
-          top.
+        text: "თუ დაგავიწყდებათ, რა უნდა გააკეთოთ, ყოველი დონის ინსტრუქციები ზემოთაა
+          მოცემული."
       7:
         image: notes/mc_2016_intro_7.jpg
-        text: To start off, we're going to program a chicken. Let's drag the "move
-          forward" command to the workspace. When I hit "Run" the chicken moves forward
-          one step. To go further, I'll drag another "move forward" block underneath
-          the first "move forward" block until the highlight appears. Then I'll drop
-          it and the two blocks snap together. If I hit "Run" again, the chicken walks
-          two steps.
+        text: ქათმის დაპროგრამებით დავიწყებთ. გადმოვიტანოთ სამუშაო სივრცეში ბრძანება
+          "წინ გადაადგილება". როცა "გაშვებას" დავაჭერ, ქათამი წინ ერთ ნაბიჯით გადაადგილდება.
+          იმისთვის, რომ მან სვლა განაგრძოს, კიდევ ერთ "წინ გადაადგილების" ბლოკს გადმოვიტან
+          პირველის ქვემოთ. (დაველოდოთ, სანამ ბლოკებს შორის ხაზი განათდება, შემდეგ
+          გავუშვათ ბლოკი და ის წინას მიემაგრება). ახლა, თუ "გაშვებას" დავაჭერ, ქათამი
+          ორ ნაბიჯს გადადგამს.
       8:
         image: notes/mc_2016_intro_8.jpg
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back to the toolbox.
+        text: "თუ ბლოკის წაშლა მოგინდებათ, უბრალოდ გადაიტანეთ ის უკან, ინსტრუმენტების
+          პანელზე."
       9:
         image: notes/mc_2016_intro_9.jpg
-        text: After you've hit "Run" you can always hit the "Reset" button to reset
-          the game and start over. Now, it's your turn to make your very own version
-          of Minecraft. Have fun!
+        text: '"გაშვების" შემდეგ ყოველთვის შეგიძლიათ დააჭიროთ ღილაკს "თავიდან დაწყება",
+          რომ... თავიდან დაიწყოთ! მოკლედ, ახლა თქვენი ჯერია შექმნათ მაინკრაფტის სამყარო.
+          იხალისეთ!'
     mc_2016_loops:
       1:
         image: notes/mc_2016_loops_1.jpg
-        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
-          of the animals and enemies in the game. One of the animals that I worked
-          on is the ocelot. I worked on the part where you can feed an ocelot a fish
-          to tame it into your own cat.
+        text: "სალამი, მე ლიზა ვარ - პროგრამული უზრუნველყოფის დეველოპერი მაინკრაფტში.
+          თამაშში სხვადასხვა ცხოველებსა და მტრებს მე ვქმნი. მაგალითად, ერთ-ერთი ცხოველი,
+          რომელზეც ვმუშაობდი, იყო ოცელოტი. იდეა მდგომარეობდა შემდეგში: მოთამაშეს უნდა
+          შეძლებოდა ეჭმია ოცელოტისთვის თევზი და მოეშინაურებინა ცხოველი."
       2:
         image: notes/mc_2016_loops_2.jpg
-        text: As humans, we get really bored if we have to do the same thing over
-          and over and over again. But the cool thing about computers is that they
-          can do the same thing millions or even billions of times in a row without
-          getting bored. This repetition is called a loop and every creature in Minecraft
-          uses loops.
+        text: "ჩვენ ადამიანები ვართ და მალევე გვბეზრდება ერთისა და იმავე მოქმედების
+          ბევრჯერ გამეორება. მაგრამ, აი, რა განასხვავებს ჩვენგან კომპიუტერებს - მათ
+          შეუძლიათ ერთი და იგივე მილიონჯერ ან თუნდაც მილიარდჯერ გაიმეორონ - და მოწყენას
+          ვერც კი შეატყობთ. ასეთ გამეორებას ჰქვია ციკლი და მაინკრაფტის ყოველი არსება
+          იყენებს ციკლს."
       3:
         image: notes/mc_2016_loops_3.jpg
-        text: Earlier, we got a chicken to move across the screen but then she stopped.
-          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
-          do" loop from our toolbox to keep our chickens moving around forever too.
-          The power of loops will save you tons of time and open up all kinds of neat
-          options as you build your own version of Minecraft.
+        text: წინა ჯერ ჩვენმა ქათამმა ეკრანზე მოძრაობა დაიწყო, მაგრამ მერე გაჩერდა.
+          მაინკრაფტში ქათმები დაუსრულებლად დადიან აქეთ–იქით. ავიღოთ "მუდმივად" ციკლი
+          ჩვენი იარაღების პანელიდან და უსასრულოდ ვამოძრავოთ ჩვენი ქათამი. ციკლები
+          ძალიან გამოგადგებათ მაინკრაფტის თქვენეული ვერსიის შექმნისას და უამრავ დროს
+          დაგიზოგავთ.
     mc_2016_events:
       1:
         image: notes/mc_2016_events_1.jpg
-        text: On this next level, you can pick to be either Steve or Alex. Press the
-          arrow buttons on your keyboard to move up, down, left, and right. Now you
-          can move around a level wherever you want. To use a creature, just walk
-          towards it, turn to face it, and press the spacebar.
+        text: "შემდეგ დონეზე შეგიძლიათ აირჩიოთ - სტივი იქნებით თუ ალექსი. კლავიატურაზე
+          ისრებზე დაჭერით შეგიძლიათ იმოძრავოთ ქვემოთ, ზემოთ, მარცხნივ და მარჯვნივ.
+          ახლა უკვე ყველგან შეგიძლიათ მისვლა. ქმნილების გამოსაყენებლად უბრალოდ მიუახლოვდით,
+          დაუდექით პირისპირ და ჰარეს დააჭირეთ."
       2:
         image: notes/mc_2016_events_2.jpg
-        text: If you're using a touch screen, swipe up, down, left, and right to move
-          around. Then tap the game to use the item in front of you.
+        text: "თუ კონტაქტურ ეკრანს იყენებთ, სამოძრაოდ შეეხეთ ეკრანს შესაბამისი მიმართულებით.
+          იმისთვის, რომ თქვენს წინაშე მდებარე საგანი გამოიყენოთ, დააჭირეთ ეკრანს."
       3:
         image: notes/mc_2016_events_3.jpg
-        text: But what happens when you use it? In Minecraft, sheep drop wool when
-          you shear them, cows run away when you hit them, and creepers explode when
-          you get near them. These reactions happen thanks to something called events.
-          Events tell your program to listen or wait for when something happens. And
-          when it does, perform an action.
+        text: "და რა უნდა მოხდეს მათი გამოყენებისას? მაინკრაფტის სამყაროში შეკრეჭისას
+          ცხვარი მატყლს ყრის, ძროხა დატყმისას გარბის, ქრიფერები კი მოახლოვებისას ფეთქდებიან.
+          ეს ყველაფერი მოვლენების წყალობით ხდება. მოვლენა ეუბნება თქვენს პროგრამას,
+          რომ დააკვირდეს, როდის მოხდება რაღაც კონკრეტული მოვლენა - შემდეგ კი შესაბამისი
+          ქმედება განახორციელოს."
       4:
         image: notes/mc_2016_events_4.jpg
-        text: So far, you've used one event. Code you put in the "when spawned" slot
-          runs when your creature is created or when the game starts. Over the next
-          few levels you'll have new slots for events such as "when touched" that
-          runs when you touch the creature, or "when used" for when you use the creature.
-          Or, if you want your zombie to disappear when the sun comes up, put that
-          in the "when day" slot
+        text: ჯერ–ჯერობით მხოლოდ ერთი მოვლენა გამოიყენეთ. კოდი, რომელსაც სვამთ "შექმნისას"
+          სლოტში გაეშვება, როცა თქვენი ქმნილება შეიქმნება ან როცა თამაში დაიწყება.
+          რამდენიმე მომდევნო დონეზე ახალი მოვლენების სლოტები გაგიჩნდებათ, მაგალითად,
+          "შეხებისას", რომელიც გაეშვება, როცა არსებას შეეხებით ან "გამოყენებისას",
+          რომელიც, შესაბამისად, არსების გამოყენებისას გაეშვება. თუ გინდათ, რომ თქვენი
+          ზომბი გაქრეს მზის ამოსვლისას, ჩადეთ ეს ქმედება სლოტში "როცა დღეა"
     mc_2016_spawn:
       1:
         image: notes/mc_2016_spawn_1.jpg
-        text: In games, spawn means the same thing as create. In this level, let's
-          make zombies spawn when the sun goes down. To do this, we'll use the "when
-          night" block.
+        text: თამაშებში გამოჩენა იგივეა, რაც შექმნა. ამ დონეზე მზის ჩასვლისას ზომბები
+          უნდა გამოვაჩინოთ. ამისთვის კი "როცა ღამეა" ბლოკი უნდა გამოვიყენოთ.
       2:
         image: notes/mc_2016_spawn_2.jpg
-        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
-          block under the "when night" block. As soon as they're spawned, each zombie
-          will run the code that you put in their "when spawned" event slot. Have
-          fun spawning zombies!
+        text: რადგანაც გვინდა, რომ ზომბები ღამ-ღამობით ჩნდებოდნენ, "როცა ღამეა" ბლოკის
+          ქვემოთ უნდა დავამატოთ ბლოკი "ზომბების გაჩენა". როცა ზომბები გაჩნდებიან,
+          ყოველი მათგანი იმ კოდს შეასრულებს, რომელიც მათი "გაჩენისას" სლოტშია გაწერილი.
+          აბა, იხალისეთ!
     mc_2016_congrats:
       1:
         image: notes/mc_2016_congrats_1.jpg
-        text: Congratulations! You've learned to use computer science commands to
-          bring the Minecraft world to life. You are the developer now. You've unlocked
-          all the commands and all the creatures. You choose what happens.
+        text: "გილოცავთ! თქვენ ისწავლეთ როგორ გააცოცხლოთ მაინკრაფტის სამყარო კომპიუტერული
+          მეცნიერების ბრძანებების გამოყენებით! ახლა დეველოპერი ხართ! ახლა უკვე ყველა
+          ბრძანება და ქმნილება იცით. თქვენი ასარჩევია, რა მოხდება."
       2:
         image: notes/mc_2016_congrats_2.jpg
-        text: When you're done making your game, choose share to get a link that you
-          can share with your friends or to play your game on your phone. Have fun!
-          I'm looking forward to playing your version of Minecraft.
+        text: როცა მორჩებით თქვენი თამაშის შექმნას, აირჩიეთ "გაზიარება" და გაუგზავნეთ
+          მიღებული ბმული თქვენს მეგობრებს ან ითამაშეთ თქვენი თამაში მობილურზე. გაერთეთ!
+          მე პირადად ერთი სული მაქვს, როდის შევძლებ, ვითამაშო მაინკრაფტის თქვენი ვერსია.

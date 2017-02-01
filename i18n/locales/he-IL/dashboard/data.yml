@@ -37,6 +37,7 @@ he:
         'NetSim': 'מדמה אינטרנט'
         'Custom': 'אמן'
         'CustomStudio': 'מעבדת משחקים'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'ארד'

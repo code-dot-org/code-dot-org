@@ -37,6 +37,7 @@
         NetSim: "අන්තර්ජාල සමාකෘතිය"
         Custom: "කලාකරු"
         CustomStudio: "ක්‍රීඩා පරීක්ෂණාගාරය"
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: "ලෝකඩ"

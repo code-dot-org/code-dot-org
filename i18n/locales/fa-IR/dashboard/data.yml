@@ -37,6 +37,7 @@ fa:
         'NetSim': 'شبیه ساز اینترنت'
         'Custom': 'هنرمند'
         'CustomStudio': 'آزمایشگاه بازی'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'برنز'

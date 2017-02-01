@@ -27,6 +27,7 @@
     "code_functions": {
       "fill": null,
       "noFill": null,
+      "background": null,
       "stroke": null,
       "noStroke": null,
       "arc": null,
@@ -43,7 +44,17 @@
       "ifBlock": null,
       "lessThanOperator": null,
       "randomNumber_min_max": null,
-      "ifElseBlock": null
+      "ifElseBlock": null,
+      "drawSprites": null,
+      "var sprite = createSprite": null,
+      "velocityX": null,
+      "velocityY": null,
+      "x": null,
+      "y": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "setAnimation": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -56,13 +67,10 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "all_animations_single_frame": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "start_in_animation_tab": "false"
+    "start_in_animation_tab": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

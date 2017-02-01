@@ -156,8 +156,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "embedded-freeplay level doesn't remove header and footer" do
     @level.embed = true
     app_options
-    assert_equal nil, view_options[:no_header]
-    assert_equal nil, view_options[:no_footer]
+    assert_nil view_options[:no_header]
+    assert_nil view_options[:no_footer]
   end
 
   test 'Blockly#blockly_app_options and Blockly#blockly_level_options not modified by levels helper' do

@@ -84,7 +84,7 @@ nn:
     overview: 'Registrer deg for å følgje fremdrifta din eller administrere klasserommet. <a href="/">Du kan bla gjennom dei ulike scenane og oppgåvene</a> utan ein konto, men du må registrere deg for å lagre framgang og prosjekt.'
     hoc_already_signed_up_heading: 'Kom i gong utan å logge inn'
     hoc_already_signed_up_content: 'Du er påmeldt Kodetimen! De treng ikkje å logge inn i Code Studio for å delta. For å kome i gong, <a href="https://code.org/learn">velg eit oppgåvesett</a> til klasserommet ditt, og del lenkja med elevane.<br/><br/>Om de likte Kodetimen og ønskjer å kode meir, kan de opprette kontoar i Code Studio og la elevane jobbe med dei <a href="https://code.org/educate">lengre kursa</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc: 'Takk for at du arrangerer Kodetimen. For å logge inn på Code Studio, trenger du å lage et passord til kontoen din. Dette vil la deg lagre fremgangen din og styre klasserommet. Du vil ha mulighet til å tilordne kurs til elever og se fremgangen. <a href="%{studio_url}">Du kan også fortsette å bla i de forskjellige nivåene og oppgavene</a> uten å lage en konto.'
     teacher_educator_guide: 'Sjå veiledning for lærar'
     title: "Registrer deg på Code.org"
     school_name: 'Namnet på skulen (valfritt)'
@@ -303,7 +303,9 @@ nn:
     delete_text: "Klikk på knappen under for å sletta kontoen din."
     delete_text_teacher_note: 'Merk: Du vil ikkje slette nokon av elevane dine sine kontoar ved å slette din eigen konto.'
     delete_confirm: 'Er du sikker på at du vil sletta kontoen din?'
-    deleted_user: 'deleted user'
+    deleted_user: 'slettet bruker'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -359,12 +361,12 @@ nn:
     announcement_watch_video_button: "Sjå videoen"
     announcement_petition: "Som lærar, er du del av ei rørsle som ynskjer å gje alle elevar, i alle skular, høve til å lære programmering. No er det på tide å la myndigheitene høyre frå deg. Denne veka gjekk leiarar innan utdanning, 28 guvernørar og administrerande direktørar i dei største selskapa i USA saman og leverte eit ope brev, kor dei ba kongressen finansiere K-12 programmeringsutdanning."
     announcement_petition_button: "Legg til namnet ditt"
-    announcement_go_beyond_button: "Go beyond"
+    announcement_go_beyond_button: "Fortsett videre"
     announcement_all: "Held deg oppdatert med oppdateringar og ny funksjonalitet på lærarbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Sjå tidligare kunngjeringar.</a>"
     announcement_hoc_launch: "Tusener av lærarar i meir enn 180 land vil undervise i programmering under Kodetimen 5.-11. desember. Me reknar med at du vil hjelpe oss å nå fleire elevar enn nokon sinne. <a href='%{signup_url}' target='_blank'>Registrer din Kodetime</a> og la andre lærarar vite at kven som helst kan lære bort programmering."
     announcement_mc_launch: "Eit av våre mest populære opplegg har fått ein oppfølgjar! Heilt nye Kodetimens Minecraft-designer let elevane bestemme reglane i Minecraft. Dei kan skape si helt unike Minecraft-verd, og dele den med venene sine eller spele den på telefonen sin. Gjennomfør opplegget med klassa di i årets Kodetime."
     announcement_how_code_studio: "Du treng inga erfaring for å undervise i programmering i ditt klasserom. Code.org har læreplanar, timeplanar, høykvalitetslæreprogram og fleire verktøy for alle klassetrinn&mdash;alt du treng heilt gratis. Lurer du på kvar du skal begynne? Last ned<a href='%{video_download_url}'>denne videoen</a>!"
-    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_go_beyond: "Fortsette videre fra Kodetimen og utforsk konsepter fra datateknikk med dine elever hver uke. Code.org tilby pensum, timeplaner, profesjoneller høykvalitets læreplaner og tilby tonnevis av gode verktøy for alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for å begynne med å lære bort datateknologi i klasserommet ditt. <b>Finn det neste steget som passer for ditt klasserom.</b>"
   move_students:
     new_section_dne: "Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn ein annan seksjonskode."
     section_code_not_entered: "Legg inn gjeldande_seksjons_kode."
@@ -731,6 +733,9 @@ nn:
     content: 'Innhald'
     practice: 'Undervisningspraksis'
     peer_review: 'Gjennomgang av annan elev'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Fråskrive seg ansvar
     leaving_domain: Du forlet no dette domenet, til eit område som ikkje blir styrt av Code.org.
@@ -745,48 +750,48 @@ nn:
     starwars_blocks_name: 'Star Wars: Bygg ein galakse med kode(blokker)'
     starwars_javascript_name: 'Star Wars: Bygg ein galakse med kode(JavaScript)'
     download_message: 'Last ned %{app_name} for fråkobla bruk (136MB)'
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Albanian: 'Last ned på albansk:'
+    download_in_Arabic: 'Last ned på arabisk:'
+    download_in_Azerbaijani: 'Last ned på aserbadjansk:'
+    download_in_Basque: 'Last ned på baskisk:'
+    download_in_Bosnian: 'Last ned på bosnisk:'
+    download_in_Bulgarian: 'Last ned på bulgarsk:'
+    download_in_Catalan: 'Last ned på katalansk:'
+    download_in_Chinese-Taiwan: 'Last ned på kinesisk-taiwansk:'
+    download_in_Chinese: 'Last ned på kinesisk:'
+    download_in_Croatian: 'Last ned på kroatisk:'
+    download_in_Czech: 'Last ned på tsjekkisk:'
+    download_in_Danish: 'Last ned på dansk:'
+    download_in_Dutch: 'Last ned på nederlansk:'
+    download_in_English: 'Last ned på engelsk:'
+    download_in_Finnish: 'Last ned på finsk:'
+    download_in_French: 'Last ned på fransk:'
+    download_in_German: 'Last ned på tysk:'
+    download_in_Greek: 'Last ned på gresk:'
+    download_in_Hebrew: 'Last ned på hebraisk:'
+    download_in_Hungarian: 'Last ned på ungarsk:'
+    download_in_Icelandic: 'Last ned på islandsk:'
+    download_in_Indonesian: 'Last ned på indonesisk:'
+    download_in_Irish: 'Last ned på irsk:'
+    download_in_Italian: 'Last ned på italiensk:'
+    download_in_Japanese: 'Last ned på japansk:'
+    download_in_Korean: 'Last ned på koreansk:'
+    download_in_Latvian: 'Last ned på latvisk:'
+    download_in_Lithuanian: 'Last ned på litausk:'
     download_in_Norwegian: 'Last ned på Norsk bokmål:'
     download_in_Norwegian-Nynorsk: 'Last ned på Norsk nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Polish: 'Last ned på polsk:'
+    download_in_Portuguese-Brazil: 'Last ned på brasiliansk-portugisisk:'
+    download_in_Portuguese: 'Last ned på portugisisk:'
+    download_in_Romanian: 'Last ned på rumensk:'
+    download_in_Russian: 'Last ned på russisk:'
+    download_in_Serbian: 'Last ned på serbisk:'
+    download_in_Slovenian: 'Last ned på slovensk:'
+    download_in_Spanish: 'Last ned på spansk:'
+    download_in_Swedish: 'Last ned på svensk:'
+    download_in_Turkish: 'Last ned på tyrkisk:'
+    download_in_Ukrainian: 'Last ned på ukrainsk:'
+    download_in_Vietnamese: 'Last ned på vietnamesisk:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
   plc:

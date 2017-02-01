@@ -289,12 +289,14 @@ zh-CN:
             Calc: 计算
             Eval: 赋值
             Studio: 工作室
+          description_audience: ''
         flappy:
           title: 飞扬的代码
           description: 想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！
           description_short: 在10分钟内写一个自己的Flappy游戏
           stage:
             Flappy Code: 飞扬的代码
+          description_audience: ''
         jigsaw:
           title: 拼图
           description: 试试拼图教程
@@ -1484,9 +1486,11 @@ zh-CN:
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1494,6 +1498,13 @@ zh-CN:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2200,7 +2211,7 @@ zh-CN:
             Bounce: 弹跳
           title: 选择你的球队进行一场篮球比赛
           description_audience: ''
-          description_short: 进行一场篮球赛
+          description_short: 选择你的球队进行一场篮球比赛
           description: 选择你的球队进行一场篮球比赛
         sample-csp5:
           stage:
@@ -2474,7 +2485,7 @@ zh-CN:
         sports:
           stage:
             Sports: 运动
-          title: 用代码编写你自己的体育比赛
+          title: 用代码编写你自己的体育比赛。
           description_audience: ''
           description_short: 为你自己的运动编写代码
           description: 为你自己的运动编写代码
@@ -2593,3 +2604,14 @@ zh-CN:
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: 欢迎！
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: 总结
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

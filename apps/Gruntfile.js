@@ -324,11 +324,25 @@ module.exports = function (grunt) {
       },
     },
     unit: {
+      coverageReporter: {
+        dir: 'coverage/unit',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/unit-tests.js'], watched: false},
       ],
     },
     integration: {
+      coverageReporter: {
+        dir: 'coverage/integration',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/integration-tests.js'], watched: false},
       ],
@@ -339,6 +353,13 @@ module.exports = function (grunt) {
       ],
     },
     entry: {
+      coverageReporter: {
+        dir: 'coverage/entry',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
       files: [
         {src: ['test/entry-tests.js'], watched: false},
       ],
@@ -361,12 +382,13 @@ module.exports = function (grunt) {
     'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
-    'levels/dashboardDialogHelper': './src/sites/studio/pages/levels/dashboardDialogHelper.js',
+    'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'levels/editors/_blockly':   './src/sites/studio/pages/levels/editors/_blockly.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
@@ -396,6 +418,8 @@ module.exports = function (grunt) {
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
+
+    'projects/section_projects': './src/sites/studio/pages/projects/section_projects.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
@@ -470,6 +494,28 @@ module.exports = function (grunt) {
       minify: false,
       watch: true
     })
+  };
+
+  config['webpack-dev-server'] = {
+    watch: {
+      webpack: createConfig({
+        minify: false,
+        watch: false
+      }),
+      keepAlive: true,
+      proxy: {
+        '**': 'http://localhost:3000',
+      },
+      publicPath: '/assets/js/',
+      hot: true,
+      inline: true,
+      port: 3001,
+      host: '0.0.0.0',
+      watchOptions: {
+        aggregateTimeout: 1000,
+        poll: 1000
+      },
+    }
   };
 
   var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
@@ -553,7 +599,7 @@ module.exports = function (grunt) {
   config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack:watch'],
+      tasks: ['watch', envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'],
       options: {
         logConcurrentOutput: true
       }

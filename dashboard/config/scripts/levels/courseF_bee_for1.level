@@ -32,9 +32,9 @@
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
     "step_speed": "1",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"A loop will help you here.\",\"hint_id\":\"courseF_bee_for1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/760d3eea8a6593defec6ff566a9c5bb6/courseF_bee_for1.mp3\"}]",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

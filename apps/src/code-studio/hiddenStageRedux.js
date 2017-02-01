@@ -6,12 +6,13 @@ import $ from 'jquery';
 import Immutable from 'immutable';
 
 export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
-export const ALLOW_HIDEABLE = 'hiddenStage/ALLOW_HIDEABLE';
+export const SET_INITIALIZED = 'hiddenStage/SET_INITIALIZED';
 
 const STUDENT_SECTION_ID = 'STUDENT';
 
 const initialState = Immutable.fromJS({
   initialized: false,
+  hideableAllowed: false,
   // mapping of section id to hidden stages for that section
   // Teachers will potentially have a number of section ids. For students we
   // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
@@ -38,8 +39,11 @@ export default function reducer(state = initialState, action) {
     return nextState;
   }
 
-  if (action.type === ALLOW_HIDEABLE) {
-    return state.set('initialized', true);
+  if (action.type === SET_INITIALIZED) {
+    return state.merge({
+      initialized: true,
+      hideableAllowed: action.hideableAllowed
+    });
   }
 
   return state;
@@ -76,14 +80,21 @@ export function toggleHidden(scriptName, sectionId, stageId, hidden) {
   };
 }
 
-export function allowHideable() {
+function setInitialized(hideableAllowed) {
   return {
-    type: ALLOW_HIDEABLE
+    type: SET_INITIALIZED,
+    hideableAllowed
   };
 }
 
-
-export function getHiddenStages(scriptName) {
+/**
+ * Query server for hidden stage ids, and (potentially) toggle whether or not we
+ * are able to mark stages as hideable.
+ * @param {string} scriptName
+ * @param {boolean} canHideStages If true, inform redux that we're able to toggle
+ *   whether or not stages are hidden.
+ */
+export function getHiddenStages(scriptName, canHideStages) {
   return dispatch => {
     $.ajax({
       type: 'GET',
@@ -104,7 +115,7 @@ export function getHiddenStages(scriptName) {
           dispatch(updateHiddenStage(sectionId, stageId, true));
         });
       });
-      dispatch(allowHideable());
+      dispatch(setInitialized(!!canHideStages));
     }).fail(err => {
       console.error(err);
     });

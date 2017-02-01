@@ -1,6 +1,6 @@
 /** @file The Alice character panel from the crypto widget */
 import React from 'react';
-import CollapsiblePanel from './CollapsiblePanel';
+import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
@@ -100,10 +100,10 @@ const Alice = React.createClass({
     const publicKey = this.getPublicKey({privateKey, publicModulus});
 
     return (
-      <CollapsiblePanel title="Alice">
+      <CharacterPanel title="Alice">
         <NumberedSteps>
           <Step>
-            Enter <KeywordPublicModulus/>:
+            Set a <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
@@ -158,7 +158,7 @@ const Alice = React.createClass({
             </div>
           </Step>
         </NumberedSteps>
-      </CollapsiblePanel>);
+      </CharacterPanel>);
   }
 });
 export default Alice;

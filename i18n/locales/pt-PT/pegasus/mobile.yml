@@ -187,7 +187,7 @@
   learn_next_level: "Experimentar outro curso do Code Studio"
   learn_online: "Experimentar outros cursos online"
   learn_classes: "Encontrar aulas perto de ti"
-  learn_back_to_minecraft: "Keep learning with Minecraft"
+  learn_back_to_minecraft: "Continua a aprender com o Minecraft"
   hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
   just_did_course1: "Vejam! Acabei de concluir o curso 1! @codeorg"
@@ -275,7 +275,7 @@
   homepage_hero_text_stat_served: 'Hora de Código: #served de alunos já experimentaram'
   homepage_slot_text_hoc: "A Hora de Código"
   homepage_slot_text_frozen: "Frozen com Anna e Elsa"
-  homepage_slot_text_teacher: "Teacher Dashboard"
+  homepage_slot_text_teacher: "Painel do Professor"
   homepage_slot_text_studio: "Todos os nossos tutoriais"
   homepage_slot_text_course4: "Curso 4"
   homepage_slot_text_shop: "Loja"
@@ -302,10 +302,10 @@
   homepage_banner_privacy_link: "Saber mais"
   homepage_banner_20k_teachers: "20 000 professores formados para dar aulas de ciência da computação na sala de aula."
   homepage_banner_20k_teachers_link: "Saber mais"
-  homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
+  homepage_banner_congress: "Líderes Americanos estão a apelar ao congresso que financie a ciência da computação (k-12)."
   homepage_banner_congress_link: "Adicione o seu suporte"
-  homepage_banner_emailprivacy: "We’re making an important change to how we support student privacy."
-  homepage_banner_emailprivacy_link: "Read more"
+  homepage_banner_emailprivacy: "Estamos a fazer uma importante mudança na maneira como damos suporte à privacidade dos estudantes."
+  homepage_banner_emailprivacy_link: "Leia mais"
   homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Saber mais"
   homepage_slot_text_title_hoc: "Hora de Código"
@@ -396,7 +396,7 @@
   mc_gradelevel: "Idades 6 +"
   mc_platformtext: "Navegadores modernos, smartphones e tablets"
   mc_specs: "Many languages | Modern browsers and tablets | Ages 6-106"
-  minecraft_designer: "Minecraft Designer"
+  minecraft_designer: "Designer de Minecraft"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
@@ -893,6 +893,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: "Teste Completo - 50 questões"
   cspexam1-mWU7ilDYM9_name: Teste Parte 1 - 25 perguntas
   cspexam2-AKwgAh1ac5_name: Teste Parte 2 - 25 perguntas

@@ -37,6 +37,7 @@ ar:
         'NetSim': 'محاكاة الإنترنت'
         'Custom': 'الرسام'
         'CustomStudio': 'مختبر اللعب'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'برونزية'

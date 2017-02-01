@@ -369,6 +369,10 @@ argparse@^1.0.7:
     underscore "~1.7.0"
     underscore.string "~2.4.0"
 
+argv@>=0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/argv/-/argv-0.0.2.tgz#ecbd16f8949b157183711b1bda334f37840185ab"
+
 arr-diff@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/arr-diff/-/arr-diff-2.0.0.tgz#8f3b827f955a8bd669697e4a4256ac3ceae356cf"
@@ -2177,6 +2181,15 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
+codecov:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/codecov/-/codecov-1.0.1.tgz#97260ceac0e96b8eda8d562006558a53a139dffd"
+  dependencies:
+    argv ">=0.0.2"
+    execSync "1.0.2"
+    request ">=2.42.0"
+    urlgrey ">=0.4.0"
+
 codemirror-spell-checker:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/codemirror-spell-checker/-/codemirror-spell-checker-1.1.2.tgz#1c660f9089483ccb5113b9ba9ca19c3f4993371e"
@@ -2614,16 +2627,6 @@ cosmiconfig@^2.1.0:
     os-homedir "^1.0.1"
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
-
-coveralls@~2.11.2:
-  version "2.11.15"
-  resolved "https://registry.yarnpkg.com/coveralls/-/coveralls-2.11.15.tgz#37d3474369d66c14f33fa73a9d25cee6e099fca0"
-  dependencies:
-    js-yaml "3.6.1"
-    lcov-parse "0.0.10"
-    log-driver "1.2.5"
-    minimist "1.2.0"
-    request "2.75.0"
 
 coverify@^1.4.1:
   version "1.4.1"
@@ -3746,6 +3749,12 @@ evp_bytestokey@^1.0.0:
   dependencies:
     create-hash "^1.1.1"
 
+execSync@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/execSync/-/execSync-1.0.2.tgz#1f42eda582225180053224ecdd3fd1960fdb3139"
+  dependencies:
+    temp "~0.5.1"
+
 exenv@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.1.tgz#75de1c8dee02e952b102aa17f8875973e0df14f9"
@@ -4252,14 +4261,6 @@ form-data@~1.0.0-rc4:
     combined-stream "^1.0.5"
     mime-types "^2.1.11"
 
-form-data@~2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.0.0.tgz#6f0aebadcc5da16c13e1ecc11137d85f9b883b25"
-  dependencies:
-    asynckit "^0.4.0"
-    combined-stream "^1.0.5"
-    mime-types "^2.1.11"
-
 form-data@~2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.1.2.tgz#89c3534008b97eada4cbb157d58f6f5df025eae4"
@@ -4489,7 +4490,7 @@ glob@^4.0.5, glob@^4.3.1, glob@^4.4.2:
     minimatch "^2.0.1"
     once "^1.3.0"
 
-glob@^5.0.15, glob@^5.0.5, glob@~5.0.0, glob@5.x:
+glob@^5.0.15, glob@^5.0.5, glob@5.x:
   version "5.0.15"
   resolved "https://registry.yarnpkg.com/glob/-/glob-5.0.15.tgz#1bc936b9e02f4a603fcc222ecf7633d30b8b93b1"
   dependencies:
@@ -4626,7 +4627,7 @@ graceful-fs@^3.0.0:
   dependencies:
     natives "^1.1.0"
 
-graceful-fs@~1.2.0:
+graceful-fs@~1, graceful-fs@~1.2.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-1.2.3.tgz#15a4806a57547cb2d2dbf27f42e89a8c3451b364"
 
@@ -5922,7 +5923,7 @@ js-yaml@^3.4.3:
     argparse "^1.0.7"
     esprima "^2.6.0"
 
-js-yaml@^3.5.1, js-yaml@^3.6.0, js-yaml@~3.6.1, js-yaml@3.6.1, js-yaml@3.x:
+js-yaml@^3.5.1, js-yaml@^3.6.0, js-yaml@~3.6.1, js-yaml@3.x:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
   dependencies:
@@ -6116,13 +6117,6 @@ karma-coverage@^1.0.0:
     minimatch "^3.0.0"
     source-map "^0.5.1"
 
-karma-coveralls:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/karma-coveralls/-/karma-coveralls-1.1.2.tgz#6f960ee738793b087ba99284a854ef6be4d32ae0"
-  dependencies:
-    coveralls "~2.11.2"
-    glob "~5.0.0"
-
 karma-junit-reporter@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/karma-junit-reporter/-/karma-junit-reporter-1.1.0.tgz#12f8ff82050607a1d4f1192f0211efde4b59ca3e"
@@ -6248,10 +6242,6 @@ lcid@^1.0.0:
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"
   dependencies:
     invert-kv "^1.0.0"
-
-lcov-parse@0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/lcov-parse/-/lcov-parse-0.0.10.tgz#1b0b8ff9ac9c7889250582b70b71315d9da6d9a3"
 
 less@~1.5.0:
   version "1.5.1"
@@ -6763,10 +6753,6 @@ lodash@4.15.0:
 lodash@4.x.x:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
-
-log-driver@1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/log-driver/-/log-driver-1.2.5.tgz#7ae4ec257302fd790d557cb10c97100d857b0056"
 
 log4js@^0.6.31:
   version "0.6.38"
@@ -8758,6 +8744,17 @@ react-fuzzy@^0.3.3:
     classnames "^2.2.3"
     fuse.js "^2.2.0"
 
+react-hot-api@^0.4.5:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/react-hot-api/-/react-hot-api-0.4.7.tgz#a7e22a56d252e11abd9366b61264cf4492c58171"
+
+react-hot-loader:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-1.3.1.tgz#c95647ae78b73dfceff6ec71ffcb04182ff6daf9"
+  dependencies:
+    react-hot-api "^0.4.5"
+    source-map "^0.4.4"
+
 react-idle-timer:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/react-idle-timer/-/react-idle-timer-1.3.3.tgz#51f7360533afd74e68e65369849f2cb042e9cb0e"
@@ -9289,7 +9286,7 @@ request@^2.55.0, request@^2.61.0, request@^2.75.0, request@>=2.12.0, request@2:
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
 
-request@^2.74.0:
+request@^2.74.0, request@>=2.42.0:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:
@@ -9326,32 +9323,6 @@ request@~2.74.0:
     extend "~3.0.0"
     forever-agent "~0.6.1"
     form-data "~1.0.0-rc4"
-    har-validator "~2.0.6"
-    hawk "~3.1.3"
-    http-signature "~1.1.0"
-    is-typedarray "~1.0.0"
-    isstream "~0.1.2"
-    json-stringify-safe "~5.0.1"
-    mime-types "~2.1.7"
-    node-uuid "~1.4.7"
-    oauth-sign "~0.8.1"
-    qs "~6.2.0"
-    stringstream "~0.0.4"
-    tough-cookie "~2.3.0"
-    tunnel-agent "~0.4.1"
-
-request@2.75.0:
-  version "2.75.0"
-  resolved "https://registry.yarnpkg.com/request/-/request-2.75.0.tgz#d2b8268a286da13eaa5d01adf5d18cc90f657d93"
-  dependencies:
-    aws-sign2 "~0.6.0"
-    aws4 "^1.2.1"
-    bl "~1.1.2"
-    caseless "~0.11.0"
-    combined-stream "~1.0.5"
-    extend "~3.0.0"
-    forever-agent "~0.6.1"
-    form-data "~2.0.0"
     har-validator "~2.0.6"
     hawk "~3.1.3"
     http-signature "~1.1.0"
@@ -9526,6 +9497,12 @@ rimraf@^2.2.8, rimraf@^2.3.3, rimraf@^2.4.0, rimraf@~2.5.1, rimraf@~2.5.4, rimra
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
     glob "^7.0.5"
+
+rimraf@~2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.1.4.tgz#5a6eb62eeda068f51ede50f29b3e5cd22f3d9bb2"
+  optionalDependencies:
+    graceful-fs "~1"
 
 rimraf@~2.2.1, rimraf@~2.2.6, rimraf@~2.2.8, rimraf@2.2.8:
   version "2.2.8"
@@ -10460,6 +10437,12 @@ temp@^0.7.0:
   dependencies:
     rimraf "~2.2.6"
 
+temp@~0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/temp/-/temp-0.5.1.tgz#77ab19c79aa7b593cbe4fac2441768cad987b8df"
+  dependencies:
+    rimraf "~2.1.4"
+
 temporal@latest:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/temporal/-/temporal-0.5.0.tgz#5b818954c8dabcd2f8b22610782342328b82414c"
@@ -10931,6 +10914,10 @@ url@~0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+urlgrey@>=0.4.0:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/urlgrey/-/urlgrey-0.4.4.tgz#892fe95960805e85519f1cd4389f2cb4cbb7652f"
 
 user-home@^1.1.1:
   version "1.1.1"

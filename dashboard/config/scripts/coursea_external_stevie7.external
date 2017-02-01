@@ -1,0 +1,13 @@
+name 'courseA_external_stevie7'
+markdown <<MARKDOWN
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+“But how do I get rid of it?” Stevie asked. “I never want to feel this way again.”<br/><br/>
+“Lots of things are frustrating, Stevie. The trick is knowing that frustration is a good thing.”<br/><br/>
+“A good thing?!”  Stevie was shocked.<br/><br/>
+
+“Yes!  Frustration is an emotion that lets us know that we’re about to learn something.  When you are frustrated, it means that something is not the way you want it to be.  If you can figure out how you want it to be, and then fix it, you will have learned something that can help you next time.” </div>
+
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+<img src="https://images.code.org/d7f0ce9f4a6f5a00aef5a97e577dc6ee-image-1485386178419.png" style="margin:0 auto;"/></div>
+
+MARKDOWN

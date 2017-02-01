@@ -996,7 +996,7 @@
     великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування
     інформатичної освіти у школі."
   dashboard_announce_petition_button: "Додайте своє ім'я"
-  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond_button: "Вийти за межі"
   dashboard_announce_all: "Слідкуйте за новими функціями та оновленнями у нашому вчительському
     блозі. <a href='%{teacher_blog_url}' target='_blank'>Переглянути попередні оголошення.</a>"
   dashboard_announce_hoc_launch: "Тисячі вчителів у більш, як 180 країнах світу розпочнуть
@@ -1171,6 +1171,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: "Повний тест - 50 запитань"
   cspexam1-mWU7ilDYM9_name: "Тест, частина 1 - 25 запитань"
   cspexam2-AKwgAh1ac5_name: "Тест, частина 2 - 25 запитань"

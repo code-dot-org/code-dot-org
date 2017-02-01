@@ -98,11 +98,11 @@
     hoc_already_signed_up_heading: Tosú gan logáil isteach
     hoc_already_signed_up_content: Chláraigh tú chun Uair Chódála a mhúineadh! Ní
       gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh
-      san ócáid seo. Ar dtús, <a href="https://code.org/learn">roghnaigh cúrsa teagaisc</a>
+      san ócáid seo. Ar dtús, <a href="%{learn_url}">roghnaigh cúrsa teagaisc</a>
       don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair
       Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas
       ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon
-      cheann de na <a href="https://code.org/educate">cúrsaí níos faide</a> atá againn.
+      cheann de na <a href="%{educate_url}">cúrsaí níos faide</a> atá againn.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
       This will let you save your progress and manage your classroom. You’ll be able
@@ -369,7 +369,10 @@
     delete_text_teacher_note: 'Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais
       do chuid daltaí.'
     delete_confirm: An bhfuil tú cinnte gur mhaith leat do chuntas a scriosadh?
-    deleted_user: deleted user
+    deleted_user: "úsáideoir scriosta"
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
   user_level:
     completed: Críochnaithe
     tried: Iarracht déanta
@@ -452,7 +455,7 @@
       is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil
       na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
     announcement_petition_button: Cuir d'ainm leis
-    announcement_go_beyond_button: Go beyond
+    announcement_go_beyond_button: An chéad chéim eile
     announcement_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag
       le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
       ar fhógraí roimhe seo.</a>
@@ -943,6 +946,9 @@
     content: "Ábhar"
     practice: Cleachtais Mhúinteoireachta
     peer_review: Athbhreithniú Comhghleacaithe
+    ramp_up: Ramp-Up
+    end_of_course_project: End of Course Project
+    optional_stages: Optional Stages
   external_links:
     disclaimer: Séanadh
     leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt

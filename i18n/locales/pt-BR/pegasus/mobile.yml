@@ -759,13 +759,13 @@
   dashboard_announce_watch_video_button: "Ver vídeo"
   dashboard_announce_petition: "Como professor, você está abrindo as portas de um movimento que dará a cada aluno de todas as escolas a oportunidade de aprender ciência da computação. Agora chegou a hora de seus representantes ouvirem o que você tem a dizer. Esta semana, líderes de educação, 28 governadores, e presidentes das maiores empresas dos Estados Unidos se uniram em uma carta aberta pedindo que o Congresso dos EUA financie o ensino da ciência da computação da pré-escola ao Ensino médio."
   dashboard_announce_petition_button: "Adicione seu nome"
-  dashboard_announce_go_beyond_button: "Go beyond"
+  dashboard_announce_go_beyond_button: "Ir além"
   dashboard_announce_all: "Fique por dentro dos novos recursos e atualizações em nosso blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas novidades.</a>"
   dashboard_announce_hoc_launch: "Milhares de professores em mais de 180 países começarão a ensinar ciência da computação durante a Hora do Código, de 5 a 11 de dezembro. Estamos contando com você para nos ajudar a atingir mais alunos do que nunca. <a href='%{signup_url}' target='_blank'>Registre seu evento da Hora do Código</a> e avise outro professor que ele também pode começar a ensinar ciência da computação."
   dashboard_announce_mc_launch: "Um de nossos tutoriais mais populares ganhou uma sequência! O novo Designer para a Hora do Código Minecraft permite que os alunos façam as regras do mundo Minecraft. Eles podem criar uma experiência completamente única de Minecraft e compartilhar com seus amigos ou jogar em seus aparelhos. Faça isso com sua turma na Hora do Código."
   dashboard_announce_hoc_scaling_progress: "Por favor, note que não salvamos o progresso dos alunos deste curso entre 3 e 11 de dezembro devido ao alto tráfego que nosso site recebe neste período causado pela Hora do Código. Você ainda pode visualizar o progresso dos alunos antes de 3 de dezembro. Voltaremos a salvar o progresso após esta semana como de costume."
   dashboard_announce_how_code_studio: "Você não precisa ter experiência para começar a ensinar ciência da computação em sua sala de aula. Code.org oferece currículo, planos de aula, programas de aprendizagem profissionais de alta qualidade e uma enorme quantidade de ferramentas excelentes para todos os níveis escolares&mdash;tudo de que você precisa sem custo algum. Querendo saber por onde começar? Baixe <a href='%{video_download_url}'>este vídeo</a>!"
-  dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+  dashboard_announce_go_beyond: "Ir além de uma hora de código e explorar conceitos de ciência do computador com seus alunos a cada semana. Code.org oferece currículo, planos de aula. programas de aprendizagem profissional de alta qualidade e toneladas de ótimas ferramentas para todos os níveis da classe&mdash;e isso é totalmente de graça. :) Você não precisa de nenhuma experiencia para começar a ensinar ciência da computação em sua sala de aula. <b>Encontre o próximo passo que é certo para sua sala de aula.</b>"
   code_hoc_coming: "A Hora do Código chegou: de 8 a 14 de dezembro!"
   code_sign_up: "Inscreva-se para participar durante a Semana da Educação em Ciência da Computação"
   host_an_hour: "Organize uma hora"
@@ -893,6 +893,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: "Teste completo - 50 questões"
   cspexam1-mWU7ilDYM9_name: Teste, parte 1 - 25 questões
   cspexam2-AKwgAh1ac5_name: Teste, parte 2 - 25 questões

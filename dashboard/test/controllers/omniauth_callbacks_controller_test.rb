@@ -42,8 +42,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test.host/users/sign_up'
     attributes = session['devise.user_attributes']
 
-    assert_equal nil, attributes['email']
-    assert_equal nil, attributes['age']
+    assert_nil attributes['email']
+    assert_nil attributes['age']
   end
 
   test "authorizing with unknown clever teacher account" do
@@ -72,7 +72,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'Hat Cat', user.name
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
-    assert_equal nil, user.gender
+    assert_nil user.gender
   end
 
   test "authorizing with unknown clever district admin account creates teacher" do
@@ -101,7 +101,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'Hat Cat', user.name
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
-    assert_equal nil, user.gender
+    assert_nil user.gender
   end
 
   test "authorizing with unknown clever school admin account creates teacher" do
@@ -130,7 +130,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 'Hat Cat', user.name
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
-    assert_equal nil, user.gender
+    assert_nil user.gender
   end
 
   test "authorizing with unknown clever teacher account needs additional information" do
@@ -157,7 +157,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test.host/users/sign_up'
     attributes = session['devise.user_attributes']
 
-    assert_equal nil, attributes['email']
+    assert_nil attributes['email']
   end
 
   test "authorizing with unknown clever student account creates student" do

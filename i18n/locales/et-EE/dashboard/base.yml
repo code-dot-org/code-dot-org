@@ -298,6 +298,8 @@ et:
     delete_text_teacher_note: 'Pange tähele: konto kustutamine ei kustuta sinu õpilaste kontosid.'
     delete_confirm: 'Kas soovite kindlasti kustutada oma konto?'
     deleted_user: 'deleted user'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Tehtud'
     tried: 'Proovisin'
@@ -725,6 +727,9 @@ et:
     content: 'Sisu'
     practice: 'Õpetamise tavad'
     peer_review: 'Vastastikune hindamine'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Lahtiütlemine
     leaving_domain: Olete lahkumas sellest domeenist leheküljele, mida ei halda Code.org.

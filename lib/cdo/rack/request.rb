@@ -53,7 +53,7 @@ module Cdo
       end
 
       domain = parts.last(2).join('.').split(':').first
-      return domain if %w(csedweek.org hourofcode.com).include?(domain)
+      return domain if %w(csedweek.org hourofcode.com codeprojects.org).include?(domain)
 
       'code.org'
     end

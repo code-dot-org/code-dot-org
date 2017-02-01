@@ -3,7 +3,7 @@ ka:
     messages:
       not_saved: 'თუ შეიძლება, შეასწორეთ შემდეგი შეცდომები:'
       too_young: 'ეს მასალა შეზღუდულია ასაკის მიხედვით და მიუწვდომელია მცირეწლოვანი მოსწავლეებისთვის.'
-      teacher_must_accept_terms: 'ამ შიგთავსზე მოქმედებს ასაკის შეზღუდვა და არ არის ხელმისაწვდომი უფრო პატარა მოსწავლეებისთვის. სთხოვეთ თქვენს მასწავლებელს, დაეთანხმოს განახლებულ მომსახურების პირობებს, იმისთვის, რომ მოგცეთ წვდომა შიგთავსზე. მასწავლებელი უნდა შევიდეს კოდის სტუდიაში და დააჭიროს ღილაკს "გადახედეთ განახლებულ პირობებს", რომელიც არის კოდის სტუდიის მთავარ გვერდზე, ზევით.'
+      teacher_must_accept_terms: 'ამ შიგთავსზე მოქმედებს ასაკობრივი შეზღუდვა და არ არის ხელმისაწვდომი უფრო პატარა მოსწავლეებისთვის. სთხოვეთ თქვენს მასწავლებელს, დაეთანხმოს განახლებულ მომსახურების პირობებს, იმისთვის, რომ მოგცეთ წვდომა შიგთავსზე. მასწავლებელი უნდა შევიდეს კოდის სტუდიაში და დააჭიროს ღილაკს "გადახედეთ განახლებულ პირობებს", რომელიც არის კოდის სტუდიის მთავარ გვერდზე, ზევით.'
       pair_programmer: 'თქვენ ხართ წყვილში მოსწავლესთან, რომელსაც არ აქვს ამ შიგთავსთან წვდომა. იმისთვის, რომ ამ შიგთავსზე წვდომა მიიღოთ, გათიშეთ წყვილში პროგრამირება და ხელახლა სცადეთ.'
   activerecord:
     errors:
@@ -82,9 +82,9 @@ ka:
     student_count: 'უკვე დარეგისტრირდა %{count} სტუდენტი.'
     teacher_count: 'უკვე დარეგისტრირდა %{count} მასწავლებელი.'
     overview: 'დარეგისტრირდით, რათა თვალი ადევნოთ თქვენს პროგრესს და მართოთ თქვენი საკლასო ოთახი. <a href="/">შეგიძლიათ, დაათვალიეროთ სხვადასხვა ეტაპები და თავსატეხევი</a> საკუთარი ანგარიშის გარეშე, მაგრამ პროგრესისა და პროექტების შესანახად დაგჭირდებათ დარეგისტრირება.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    hoc_already_signed_up_heading: 'დაწყება სისტემაში შესვლის გარეშე'
+    hoc_already_signed_up_content: 'თქვენ დარეგისტრირდით კოდის ერთი საათის მასწავლებლად! ამ ღონისძიებაში მონაწილეობის მისაღებად არც თქვენ და არც თქვენს მოსწავლეებს არ გესაჭიროებათ სისტემაში შესვლა. დასაწყებად, <a href="%{learn_url}">აირჩიეთ ტუტორიალი</a> და გაუზიარეთ ბმული კლასს.<br/><br/>თუ კოდის ერთი საათი მოგეწონათ და გაგრძელება გინდათ, შეგიძლიათ შექმნათ პაროლი და კოდის სტუდიის ანგარიაში თქვენი თითოეული მოსწავლისთვის და უფრო <a href="%{educate_url}">გრძელი კურსები</a> გაიაროთ.'
+    hoc_already_signed_up_content_post_hoc: 'მადლობა, კოდის ერთი საათის ჩატარებისთვის. კოდის სტუდიაში დასარეგისტრირებლად თქვენი ანგარიშისთვის პაროლი უნდა შექმნათ. ასე შეძლებთ შეინახოთ თქვენი პროგრესი და აკონტროლოთ საკლასო ჯგუფი, ასევე შეგეძლებათ მისცეთ მოსწავლეებს დავალებები და თვალი ადევნოთ მათ შედეგებს. <a href="%{studio_url}">ასევე შეგიძლიათ გააგრძელოთ სხვადასხვა დავალებებისა და დონეების ნახვა</a> ანგარიშის შეუქმნელად.'
     teacher_educator_guide: 'ნახეთ მასწავლებლის სახელმძღვანელო'
     title: "რეგისტრაცია Code.org-ზე"
     school_name: 'სკოლის სახელი (არასავალდებულო)'
@@ -102,7 +102,7 @@ ka:
     valid_password: "პაროლი დასაშვებია!"
     invalid_password: "პაროლი მინიმუმ 6 ნიშნისგან უნდა შედგებოდეს"
     mismatch_password: "თქვენ მიერ შეყვანილი ორი პაროლი არ ემთხვევა"
-    student_terms: "მე ვეთანხმები Code.org-ის <a href='http://code.org/tos'>მომსახურების პირობებს</a>. თუ მე 13 წელზე ნაკლები ასაკის ვარ, ამ ფორმის გამოგზავნით ვადასტურებ, რომ მაქვს ჩემი მშობლის ან მეურვის ნებართვა Code.org-ის მომსახურების გამოყენებაზე.<br/><br/>ელექტრონული ფოსტის მისამართები არ არის შენახული ისე, რომ საშუალება გვქონდეს, დავეკონტაქტოთ მოსწავლეებს. მოსწავლე არასდროს მიიღებს წერილს Code.org-ისგან, გარდა პაროლის აღდგენის შემთხვევისა. მეტი ინფორმაციისთვის ნახეთ ჩვენი <a href='http://code.org/privacy'>კონფიდენციალურობის პოლიტიკა</a>."
+    student_terms: "მე ვეთანხმები Code.org-ის <a href='http://code.org/tos'>მომსახურების პირობებს</a>. თუ მე 13 წელზე ნაკლები ასაკის ვარ, ამ ფორმის გამოგზავნით ვადასტურებ, რომ მაქვს ჩემი მშობლის ან მეურვის ნებართვა Code.org-ის მომსახურების გამოყენებაზე.<br/><br/>ელექტრონული ფოსტის მისამართები არის შენახული ისეთი ფორმით, რომ მოსწავლეებთან დაკავშირება შეუძლებელია. მოსწავლე არასდროს მიიღებს წერილს Code.org-ისგან, გარდა პაროლის აღდგენის შემთხვევისა. მეტი ინფორმაციისთვის ნახეთ ჩვენი <a href='http://code.org/privacy'>კონფიდენციალურობის პოლიტიკა</a>."
     teacher_terms: "მე ვეთანხმები Code.org-ის მომსახურების პირობებს. კონფიდენციალურობასთან დაკავშირებით მეტი ინფორმაციისთვის ნახეთ ჩვენი <a href='http://code.org/privacy'>კონფიდენციალურობის პოლიტიკა</a>."
     additional_information: "რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია."
     user_type_label: "ანგარიშის ტიპი"
@@ -126,8 +126,8 @@ ka:
     picture: 'იპოვეთ თქვენი საიდუმლო სურათი'
     words: 'ახლა შეიყვანეთ თქვენი საიდუმლო სიტყვები'
     login: 'შესვლა'
-    invalid_login: 'არასწორი შესვლა, გთხოვთ, ხელახლა სცადეთ'
-    pair_programming: 'კონპიუტერთან მყავს პარტნიორი'
+    invalid_login: 'შესვლის მცდელობისას დაშვებულია შეცდომა, გთხოვთ, ხელახლა სცადეთ'
+    pair_programming: 'კომპიუტერთან მყავს პარტნიორი'
   password:
     reset_form:
       title: 'დაგავიწყდათ თქვენი პაროლი?'
@@ -291,7 +291,7 @@ ka:
       unsubmit: 'ჩაბარების გაუქმება'
       worked_with: 'იმუშავა'
       update_lock_settings: 'დახურვის პარამეტრები განაახლეთ აქ.'
-      clear_response: 'Clear response'
+      clear_response: 'პასუხის წაშლა'
   user:
     email_confirm_needed: 'ელ.ფოსტა არ არის დადასტურებული:'
     email_confirm_needed_required: 'თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:'
@@ -303,7 +303,9 @@ ka:
     delete_text: "ქვემოთ ღილაკზე დაჭერა წაშლის თქვენს ანგარიშს."
     delete_text_teacher_note: 'გაითვალისწინეთ: თქვენი ანგარიშის წაშლა არ წაშლის თქვენი მოსწავლეების ანგარიშებს.'
     delete_confirm: 'დარწმუნებული ხართ, რომ თქვენი ანგარიშის წაშლა გინდათ?'
-    deleted_user: 'deleted user'
+    deleted_user: 'წაშლილი მომხმარებელი'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'დასრულებულია'
     tried: 'უკვე ნაცადია'
@@ -351,24 +353,24 @@ ka:
     choose_next_course: "სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი"
     print_certificate: "სერტიფიკატის ამობეჭდვა"
     announcement_title: "განცხადებები"
-    announcement_message_fall2016_features: "ზაფხულის განმავლობაში თქვენი უკუკავშირის საშუალებით ახალი ფუნქციები შევქმენით. ახლა შეგიძლიათ <a href=\"%{pp_url}\" target=\"_blank\">რამოდენიმე მოსწავლის პროგრესი შეამოწმოთ</a> იმ შემთხვევაშიც კი, თუ ისინი ერთი მოწყობილობით სარგებლობენ. შეგიძლიათ გამოიყენოთ <a href=\"%{csp_widgets_url}\" target=\"_blank\">ინტერაქტიული ინსტრუმენტები </a> კომპიუტერული მეცნიერების პრინციპების კურსიდან <i>ნებისმიერ</i> კლასში. თქვენს მოსწავლეებს შეუძლიათ <a href=\"%{unused_code_url}\" target=\"_blank\">შეინახონ გამოუყენებელი კოდი</a> თავიანთ სამუშაო სივრცეში სამომავლო ექსპერიმენტებისთვის! ნახეთ ყველა ახალი ფუნქცია და გაგვაგებინეთ თქვენი აზრი."
+    announcement_message_fall2016_features: "ზაფხულის განმავლობაში თქვენს უკუკავშირზე დაყრდნობით ახალი ფუნქციები შევქმენით. ახლა შეგიძლიათ <a href=\"%{pp_url}\" target=\"_blank\">რამოდენიმე მოსწავლის პროგრესი შეამოწმოთ</a> იმ შემთხვევაშიც კი, თუ ისინი ერთი მოწყობილობით სარგებლობენ. შეგიძლიათ გამოიყენოთ <a href=\"%{csp_widgets_url}\" target=\"_blank\">ინტერაქტიული ინსტრუმენტები </a> კომპიუტერული მეცნიერების პრინციპების კურსიდან <i>ნებისმიერ</i> კლასში. თქვენს მოსწავლეებს შეუძლიათ <a href=\"%{unused_code_url}\" target=\"_blank\">შეინახონ გამოუყენებელი კოდი</a> თავიანთ სამუშაო სივრცეში სამომავლო ექსპერიმენტებისთვის! ნახეთ ყველა ახალი ფუნქცია და გაგვაგებინეთ თქვენი აზრი."
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "გაიგეთ მეტი"
     announcement_try_now_button: "სცადეთ ახლა"
-    announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
-    announcement_petition: "როგორც მასწავლებელი, თქვენ მიუძღვებით მოძრაობას, რათა ყველა სკოლის ყველა მოსწავლეს მიეცეს კომპიუტერული მეცნიერების სწავლის საშუალება. ახლა დროა, თქვენს წარმომადგენლებს შეეხმიანოთ. ამ კვირაში, საგანმანათლებლო ლიდერები, 28 გუბერნატორი და ამერიკის უდიდესი კომპანიების აღმასრულებელი დირექტორები გაერთიანდნენ ღია წერილში, რომლითაც ა.შ.შ-ს კონგრესს მიმართეს, რომ დააფინანსოს K-12 კომპიუტერული მეცნიერების სწავლება."
+    announcement_host_an_hour_button: "ჩაატარეთ კოდის ერთი საათი"
+    announcement_watch_video_button: "უყურეთ ვიდეოს"
+    announcement_petition: "როგორც მასწავლებელი, თქვენ მიუძღვებით მოძრაობას, რომლის მიზანია ყოველი სკოლის ყოველ მოსწავლეს მიეცეს კომპიუტერული მეცნიერების სწავლის საშუალება. ახლა დროა, თქვენს წარმომადგენლებს შეეხმიანოთ. ამ კვირაში, საგანმანათლებლო ლიდერები, 28 გუბერნატორი და ამერიკის უდიდესი კომპანიების აღმასრულებელი დირექტორები გაერთიანდნენ ღია წერილში, რომლითაც ა.შ.შ-ს კონგრესს მიმართეს, რომ დააფინანსოს K-12 კომპიუტერული მეცნიერების სწავლება."
     announcement_petition_button: "დაამატეთ თქვენი სახელი"
-    announcement_go_beyond_button: "Go beyond"
-    announcement_all: "მიიღეთ უახლესი ინფორმაცია ახალი მახასიათებლებითა და მასწავლებლის განახლებადი ბლოგით. <a href='%{teacher_blog_url}' target='_blank'>იხილეთ წინა განცხადებები.</a>"
-    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
-    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
-    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_go_beyond_button: "გააგრძელეთ"
+    announcement_all: "მიიღეთ ინფორმაცია ახალი ფუნქციონალის შესახებ და მასწავლებლის განახლებადი ბლოგი. <a href='%{teacher_blog_url}' target='_blank'>იხილეთ წინა განცხადებები.</a>"
+    announcement_hoc_launch: "5-11 დეკემბერს ათასობის პედაგოგი 180–ზე მეტი ქვეყნიდან დაიწყებს კოდის ერთი საათის ფარგლებში კომპიუტერული მეცნიერებოს გაკვეთილებს. თქვენი იმედი გვაქვს – დაგვეხმარეთ მაქსიმალურად ბევრ მოსწავლეს მივწვდეთ. <a href='%{signup_url}' target='_blank'>დაარეგისტრირეთ კოდის ერთი საათის თქვენი ღონისძიება</a> და აცნობეთ სხვა მასწავლებლებს, რომ კომპიუტერული მეცნიერების სწავლება ნებისმიერს შეუძლია."
+    announcement_mc_launch: "ჩვენს ერთ–ერთ ყველაზე პოპულარულ ტუტორიალს ახლა გაგრძელებაც აქვს! მაინკრაფტის დიზაინერი, რომელიც კოდის ერთი საათისთვის შეიქმნა, მოსწავლეებს მაინკრაფტის სამყაროს წესების შემუშავებაში ეხმარება. მათ შეუძლიათ შექმნან მაინკრაქფტის უნიკალური სამყარო, შემდეგ კი გაუზიარონ იგი მეგობრებს ან ითამაშონ მობილურიდან. სცადეთ ეს ტუტორიალი კოდის ერთი საათის ფარგლებში."
+    announcement_how_code_studio: "იმისთვის, რომ კომპიუტერული მეცნიერების სწავლება დაიწყოთ არ გჭირდებათ არანაირი გამოცდილება. Code.org–ზე გვაქვს კურიკულუმები, გაკვეთილის გეგმები, უმაღლესი ხარისხის სასწავლო პროგრამები და უამრავი საინტერესო რამ ნებისმიესმიერი კლასისთვის&mdash; ყველაფერი უფასოა. ფიქრობთ, საიდან დაიწყოთ? გადმოიწერეთ <a href='%{video_download_url}'>ეს ვიდეო</a>!"
+    announcement_go_beyond: "გააგრძელეთ სწავლა კოდის ერთი საათის შემდეგ და ისწავლეთ რაღაც ახალი თქვენს მოსწავლეებთან ერთად ყოველკვირეულად. Code.org–ზე გვაქვს კურიკულუმები, გაკვეთილის გეგმები, უმაღლესი ხარისხის სასწავლო პროგრამები და უამრავი საინტერესო რამ ნებისმიესმიერი კლასისთვის&mdash;და ეს ყველაფერი უფასოა. :) იმისთვის, რომ კომპიუტერული მეცნიერების სწავლება დაიწყოთ, არანაირი გამოცდილება არ გჭირდებათ. <b>გაიგეთ, რა უნდა გააკეთოს თქვენმა კლასმა ახლა.</b>"
   move_students:
     new_section_dne: "სამწუხაროდ, სექცია %{new_section_code} არ არსებობს. გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
     section_code_not_entered: "გთხოვთ წარმოადგინოით current_section_code."
-    section_code_cant_be_current_section: "ახლანდელი სექცია ვერ იქნება იგივე, რაც ახალი სექცია."
+    section_code_cant_be_current_section: "მიმდინარე სექცია ვერ იქნება იგივე, რაც ახალი სექცია."
     current_section_dne: "სამწუხაროდ, სექცია %{current_section_code} არ არსებობს. გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
     students_not_yours: "თქვენ არ შეგიძლიათ მოსწავლეების გადაყვანა იმ სექციიდან, რომელიც თქვენ არ გეკუთვნით."
     stay_enrolled_not_entered: "გთხოვთ, წარმოადგინოთ stay_enrolled_in_current_section."
@@ -426,7 +428,7 @@ ka:
     download: 'ვიდეოს გადმოწერა'
   compatibility:
     upgrade:
-      unsupported_message: "თქცენს ბრაუზერს არ აქვს მხარდაჭერა. თხოვთ, განაახლეთ თქვენი ბრაუზერი <a href='%{supported_browsers_url}', target='_blank'>ჩვენ მიერ მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი ფუნქციონალურობა დარღვეული იქნება."
+      unsupported_message: "თქცენი ბრაუზერი არ არის მხარდაჭერილი. თხოვთ, განაახლეთ თქვენი ბრაუზერი <a href='%{supported_browsers_url}', target='_blank'>ჩვენ მიერ მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი ფუნქციონალურობა დარღვეული იქნება."
       link: "გაიგეთ მეტი"
   slow_loading: 'ჰმ.. პროცესს ჩვეულებრივზე მეტი დრო მიაქვს...'
   try_reloading: 'სცადეთ გვერდის გადატვირთვა'
@@ -495,7 +497,7 @@ ka:
       body: "შეისწავლეთ მაინკრაფტის სამყარო კოდით."
     minecraft2016:
       title: "მაინკრაფტი"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის საკუთარ სამყაროში."
     unplugged:
       title: "გაკვეთილები კომპიუტერის გარეშე"
       audience: "ასაკი 4+"
@@ -507,7 +509,7 @@ ka:
     picture_count: "გასულ <b>%{days}</b> დღეში მოსწავლეებმა დახატეს <b>%{count} </b> ნახატი საკუთარი კომპიუტერული პროგრამების შექმნით. დააჭირეთ ნახატებს და ნახეთ, როგორ მოქმედებს თითოეული პროგრამა."
     activity_count: "გასულ <b>%{days}</b> დღეში მოსწავლეებმა შექმნეს <b>%{count}</b> აპლიკაცია და ნახატი საკუთარი კომპიუტერული პროგრამების შექმნით. დააჭირეთ ნახატებს და სქრინშოტებს და ნახეთ, როგორ მოქმედებს თითოეული პროგრამა."
     want_to_make_your_own: "გინდათ, თქვენი შექმნათ?"
-    how_to_save: "ამ ტუტორიალების ბოლო დონეზე დააჭირეთ \"დასრულება\" და \"შენახვა\", იმისთვის, რომ შეინახოთ თქვენი ნაშრომი გალერეაში."
+    how_to_save: "ამ ტუტორიალების ბოლო დონეზე დააჭირეთ \"დასრულებასა\" და \"შენახვას\", იმისთვის, რომ შეინახოთ თქვენი ნაშრომი გალერეაში."
     more: "მეტი &rarr;"
     caption_by_name_age: "შემქმნელი: %{name}, ასაკი %{age}"
     caption_time_ago: "%{time_ago}ს წინ"
@@ -547,11 +549,11 @@ ka:
     wrong_body: "მადლობა პასუხისთვის"
     correct_title: "მადლობა"
     correct_body: "მადლობა პასუხისთვის"
-    unsubmit-title: "თქვენი ტესტის ჩაბარების გაუქმება"
-    unsubmit-body: "შეფასების გადაცემის უკან დაბრუნება გააუქმებს გადაცემულ დროსა და თარიღს. დარწმუნებული ხართ?"
-    submit-incomplete-title: "თქვენი ტესტის ჩაბარება"
-    submit-incomplete-body: "ზოგიერთი კითხვა დ აუსრულებელი დატოვეთ. თქვენს პასუხს გაგზავნის შემდეგ ვეღარ შეასწორებთ. დარწმუნებული ხართ?"
-    submit-complete-title: "თქვენი ტესტის ჩაბარება"
+    unsubmit-title: "თქვენი დავალების გაუქმება"
+    unsubmit-body: "დავალების უკან დაბრუნება გააუქმებს გადაცემულ დროსა და თარიღს. დარწმუნებული ხართ?"
+    submit-incomplete-title: "თქვენი დავალების ჩაბარება"
+    submit-incomplete-body: "ზოგიერთი კითხვა დაუსრულებელი დატოვეთ. თქვენს პასუხს გაგზავნის შემდეგ ვეღარ შეასწორებთ. დარწმუნებული ხართ?"
+    submit-complete-title: "თქვენი დავალების ჩაბარება"
     submit-complete-body: "თქვენს პასუხს გაგზავნის შემდეგ ვეღარ შეასწორებთ. დარწმუნებული ხართ?"
   match:
     wrong_title: "არასწორი გადაწყვეტაა"
@@ -589,36 +591,36 @@ ka:
     sign_out: 'თუ არ გინდათ თქვენი ასაკის დასახელება, შეგიძლიათ <a href="%{url}"> გახვიდეთ </a>.'
   terms_interstitial:
     title: "განახლებული მომსახურების პირობები და კონფიდენციალურობის პოლიტიკა"
-    intro_desc: 'ჩვენ განვაახლეთ მომსახურების პირობები და კონფიდენციალურობის პოლიტიკა, როგორც ქვემოთაა ნაჩვენები. ცვლილებები ძალაში შევა 2016 წლის 24 აგვისტოდან. უმთავრესი ცვლილება: ჩვენ <i>აღარ ვინახავთ მოსწავლეების ელექტრონული ფოსტის მისამართებს Code Studio-ში.</i> ეს ჩვენთვის ძალიან მნიშვნელოვანია და ვიმედოვნებთ, რომ ამით დავნერგავთ ახალ სტანდარტს მოსწავლეთა კონფიდენციალურობის კუთხით განათლების ტექნოლოგიებში. ჩვენ ელექტრონულ მისამართზე გამოგიგზავნეთ სხვა ცვლილებების მოკლე მიმოხილვა.'
-    intro_instructions: "თქვენ უნდა დაეთანხმოთ ახალ პირობებს, რომ თქვენს კლასში 13 წლამდე მოსწავლეებს სრული წვდომა ჰქონდეთ ყველა უახლეს ფუნქციაზე კოდის სტუდიაში. 13 წლამდე მოსწავლის ანგარიშის შექმნის დროს, თქვენ გთხოვენ დაადასტუროთ, რომ თქვენს სკოლას აქვს მშობლის თანხმობა მოსწავლის პერსონალური ინფორმაციის შეგროვებაზე და ამ ინფორმაციის მოსწავლისთვის სასარგებლოდ გამოყენებაზე სკოლაში, ისეთი საგანმანათლებლო პროგრამების ჩათვლის, როგორიცაა კოდის სტუდია."
+    intro_desc: 'ჩვენ განვაახლეთ მომსახურების პირობები და კონფიდენციალურობის პოლიტიკა, როგორც ქვემოთაა ნაჩვენები. ცვლილებები ძალაში შევა 2016 წლის 24 აგვისტოდან. უმთავრესი ცვლილება: ჩვენ <i>აღარ ვინახავთ მოსწავლეების ელექტრონული ფოსტის მისამართებს კოდის სტუდიაში.</i> ეს ჩვენთვის ძალიან მნიშვნელოვანია და ვიმედოვნებთ, რომ ამით დავნერგავთ ახალ სტანდარტს მოსწავლეთა კონფიდენციალურობის კუთხით განათლების ტექნოლოგიებში. სხვა ცვლილებების მოკლე მიმოხილვა ელექტრონულ მისამართზე გამოგიგზავნეთ.'
+    intro_instructions: "თქვენ უნდა დაეთანხმოთ ახალ პირობებს, რომ თქვენს კლასში 13 წლამდე მოსწავლეებს სრული წვდომა ჰქონდეთ ყველა უახლეს ფუნქციაზე კოდის სტუდიაში. 13 წლამდე მოსწავლის ანგარიშის შექმნის დროს თქვენ გთხოვენ დაადასტუროთ, რომ თქვენს სკოლას აქვს მშობლის თანხმობა მოსწავლის პერსონალური ინფორმაციის შეგროვებაზე და ამ ინფორმაციის მოსწავლისთვის სასარგებლოდ გამოყენებაზე სკოლაში, ისეთი საგანმანათლებლო პროგრამების ჩათვლით, როგორიცაა კოდის სტუდია."
     tos: "მომსახურების პირობები"
     privacy: "კონფიდენციალურობის პოლიტიკა"
     privacy_notice: "კონფიდენციალურობის ცნობა"
     accept_label: 'ვეთანხმები განახლებულ <a href="%{tos_url}" target="_blank">მომსახურების პირობებსა</a> და <a href="%{privacy_url}" target="_blank">კონფიდენციალურობის პოლიტიკას</a>'
     accept: "დათანხმება"
     print: "დაბეჭდვა"
-    reminder_desc: 'ჩვენ განვაახლეთ <a href="%{tos_url}" target="_blank">მომსახურების პირობები</a> ა <a href="%{privacy_url}" target="_blank">კონფიდენციალურობის პოლიტიკა</a>. გთხოვთ, დათანხმებამდე ყურადღებით წაიკითხოთ. გაითვალისწინეთ, ჩვენი ხელსაწყოები, რომლითაც ვასწავლით JavaScript-ს შეიძლება არ იყოს ხელმისაწვდომი მოსწავლეებისთვის, სანამ არ დაეთანხმებიან განახლებულ პირობებს.'
+    reminder_desc: 'ჩვენ განვაახლეთ <a href="%{tos_url}" target="_blank">მომსახურების პირობები</a> და <a href="%{privacy_url}" target="_blank">კონფიდენციალურობის პოლიტიკა</a>. გთხოვთ, დათანხმებამდე ყურადღებით წაიკითხოთ. გაითვალისწინეთ, ჩვენი ხელსაწყოები, რომლითაც ვასწავლით JavaScript-ს შეიძლება არ იყოს ხელმისაწვდომი მოსწავლეებისთვის, სანამ არ დაეთანხმებიან განახლებულ პირობებს.'
     review_terms: "გადახედეთ განახლებულ პირობებს"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
-    message: "Please tell us your race (check all that apply)"
+    title: 'არჩევითი: დაგვეხმარეთ, აღვრიცხოთ ჩვენი პროგრესი. რამდენად კარგად გამოგვდის კომპიუტერული მეცნიერება ყველასთვის იყოს მისაწვდომი'
+    message: "თუ შეიძლება, გვითხარით თქვენი ეთნიკურობა (მონიშნეთ ყველა შესაფერისი ვარიანტი)"
     races:
       - 
-        white: White
+        white: თეთრკანიანი
       - 
-        black: Black or African American
+        black: შავკანიანი ან აფროამერიკელი
       - 
-        hispanic: Hispanic or Latino
+        hispanic: ესპანელი ან ლათინო
       - 
-        asian: Asian
+        asian: აზიელი
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: ჰავაიელი ან მშვიდი ოკეანეს სხვა კუნძულების მაცხოვრებელი
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: ამერიკელი ინდიელი/ალასკელი
       - 
         other: სხვა
       - 
-        opt_out: Prefer not to say
+        opt_out: პასუხისგან თავის შეკავება
     submit: "გაგზავნა"
     decline: "დახურვა"
   zendesk_too_young_message: 'სამწუხაროდ, თქვენი ასაკის მომხმარებლებისთვის ეს გვერდი მიუწვდომელია. შეგიძლიათ ეწვიოთ გვერდს <a href="http://support.code.org">support.code.org</a>  ავტორიზაციის გარეშე, ან სთხოვოთ თქვენს მშობელს ან მასწავლებელს თქვენ მაგივრად დაგვიკავშირდნენ.'
@@ -647,7 +649,7 @@ ka:
     share: "გაზიარება"
     share_title: თქვენი პროექტის გაზიარება
     share_copy_link: "დააკოპირეთ ლინკი:"
-    share_embed_description: "ჩაშენებული კოდი შეგიძლიათ ჩასვათ HTML გვერდზე, რათა პროექტი წარმოადგინოს ვებგვერდზე."
+    share_embed_description: "ჩაშენებული კოდი შეგიძლიათ ჩასვათ HTML გვერდზე, რათა პროექტი ვებგვერდზე გამოჩნდეს."
     share_u13_warning: "გაზიარებამდე ჰკითხეთ თქვენს მასწავლებელს. მხოლოდ თქვენს სკოლაში მყოფებთან გააზიარეთ."
     embed: "ჩაშენებული"
     advanced_share: "დამატებითი პარამეტრების ჩვენება"
@@ -694,13 +696,13 @@ ka:
   peer_review:
     accepted:
       name: 'დათანხმებული'
-      description: '<strong>დიახ</strong>, ეს გადაცემა <strong>ეთანხმება</strong> მოთხოვნებს'
+      description: '<strong>დიახ</strong>, ეს დავალება <strong>შეესაბამება</strong> მოთხოვნებს'
     rejected:
       name: 'უარყოფილი'
-      description: '<strong>არა</strong>, ეს გადაცემა <strong>არ ეთანხმება</strong> მოთხოვნებს'
+      description: '<strong>არა</strong>, ეს დავალება <strong>არ შეესაბამება</strong> მოთხოვნებს'
     escalated:
       name: 'გამწვავებული'
-      description: 'მსურს, ინსტრუქტორმა გადახედოს ამ გადაცემას'
+      description: 'მსურს, ინსტრუქტორმა გადახედოს ამ დავალებას'
     instructor_feedback: 'ინსტრუქტორის უკუკავშირი'
     peer_feedback: 'თანატოლის შეფასება'
     outdated: 'ეს შეფასება დაემატა მანამდე გადაცემულ ვერსიას'
@@ -731,62 +733,65 @@ ka:
     content: 'შიგთავსი'
     practice: 'სწავლება'
     peer_review: 'თანატოლის კომენტარი'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: უარყოფა
     leaving_domain: თქვენ ახლა ტოვებთ ამ დომენს და გადადიხართ საიტზე, რომელიც არ იმართება Code.org-ის მიერ.
-    disclaimer_text: ამ საიტს შეიძლება Code.org-ისგან განსხვავებული კონფიდენციალურობის პოლიტიკა ჰქონდეს. ჩვენ ამ მესამე მონაწილის რესურსები იმიტომ შევარჩიეთ, რომ გვგონია, ისინი თქვენთვის გამოსადეგი იქნება. თუმცა ჩვენ არ ვართ პირდაპირ პასუხისმგებლელი ამ საიტის შიგთავსზე, გთხოვთ, მიმართოთ <a href='%{support_url}'>დაუკავშირდით დახმარებას</a>, თუ შიგთავსი თქვენთვის მიუღებელია ან თუ ეს საიტი აღარ არის ხელმისაწვდომი.
+    disclaimer_text: ამ საიტს შეიძლება Code.org-ისგან განსხვავებული კონფიდენციალურობის პოლიტიკა ჰქონდეს. ჩვენ ამ მესამე მონაწილის რესურსები იმიტომ შევარჩიეთ, რომ გვგონია, ისინი თქვენთვის გამოსადეგი იქნება. თუმცა ჩვენ არ ვართ პირდაპირ პასუხისმგებლელი ამ საიტის შიგთავსზე, გთხოვთ, <a href='%{support_url}'>დაუკავშირდეთ დახმარებას</a>, თუ შიგთავსი თქვენთვის მიუღებელია ან თუ ეს საიტი აღარ არის ხელმისაწვდომი.
   hoc_download:
     title: 'კოდის ერთი საათის ჩამოტვირთვები'
     capsule_title: 'გაქვთ ინტერნეტი?'
     capsule_desc: 'გამოიყენეთ ონლაინ, ვებ-ზე დაფუძნებული <a href="%{url}">%{app_name}</a>.'
     instructions_headline: 'ინტერნეტი არ გაქვთ?'
-    instructions: 'ინსტრუქცია მასწავლებლებისთვის: თუ ინტერნეტთან წვდომა უხარისხოა, კოდის ერთი საათის ეს ტუტორიალები ხელმისაწვდომია გადმოსაწერად და ოფლაინ გამოყენებისთვის. აირჩიეთ თქვენი ენა და პლატფორმა, გადმოწერეთ და დააყენეთ ყველა კომპიუტერზე საკლასო ოთახში. შეიძლება დაგჭირდეთ USB დრაივის გამოყენება, რათა ერთხელ გადმოწეროთ და ყველა კომპიუტერზე დააყენოთ. გაითვალისწინეთ: მოსწავლეები ვერ შევლენ კოდის სტუდიაში, ვერ შეინახავენ პროგრესს ან ამობეჭდავენ სერტიფიკატს. მასწავლებლებმა შეიძლება წინასწარ ამობეჭდონ სერტიფიკატები <a href="%{url}">here</a>.'
+    instructions: 'ინსტრუქცია მასწავლებლებისთვის: თუ ინტერნეტთან წვდომა უხარისხოა, კოდის ერთი საათის ეს ტუტორიალები ხელმისაწვდომია გადმოსაწერად და კავშირის გარეშე გამოყენებისთვის. აირჩიეთ თქვენი ენა და პლატფორმა, გადმოწერეთ და დააყენეთ ყველა კომპიუტერზე საკლასო ოთახში. შეიძლება დაგჭირდეთ USB დრაივის გამოყენება, რათა ერთხელ გადმოწეროთ და ყველა კომპიუტერზე დააყენოთ. გაითვალისწინეთ: მოსწავლეები ვერ შევლენ კოდის სტუდიაში, ვერ შეინახავენ პროგრესს ან ამობეჭდავენ სერტიფიკატს. მასწავლებლებს შეუძლიათ წინასწარ ამობეჭდონ სერტიფიკატები <a href="%{url}">აქ</a>.'
     minecraft_name: 'მაინკრაფტის კოდის ერთი საათი'
     starwars_blocks_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით (ბლოკები)'
     starwars_javascript_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - (JavaScript)'
     download_message: 'გადმოწერეთ %{app_name} ოფლაინ გამოყენებისთვის (136MB)'
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Albanian: 'გადმოიწერე ალბანურად:'
+    download_in_Arabic: 'გადმოიწერე არაბულად:'
+    download_in_Azerbaijani: 'გადმოიწერე აზერბაიჯანულად:'
+    download_in_Basque: 'გადმოიწერე ბასკურად:'
+    download_in_Bosnian: 'გადმოიწერე ბოსნიურად:'
+    download_in_Bulgarian: 'გადმოიწერე ბულგარულად:'
+    download_in_Catalan: 'გადმოიწერე კატალონიურად:'
+    download_in_Chinese-Taiwan: 'გადმოიწერე ჩინურ–ტაივანურად:'
+    download_in_Chinese: 'გადმოიწერე ჩინურად:'
+    download_in_Croatian: 'გადმოიწერე ხორვატულად:'
+    download_in_Czech: 'გადმოიწერე ჩეხურად:'
+    download_in_Danish: 'გადმოიწერე დანიურად:'
+    download_in_Dutch: 'გადმოიწერე ჰოლანდიურად:'
+    download_in_English: 'გადმოიწერე ინგლისურად:'
+    download_in_Finnish: 'გადმოიწერე ფინურად:'
+    download_in_French: 'გადმოიწერე ფრანგულად:'
+    download_in_German: 'გადმოიწერე გერმანულად:'
+    download_in_Greek: 'გადმოიწერე ბერძნულად:'
+    download_in_Hebrew: 'გადმოიწერე ებრაულად:'
+    download_in_Hungarian: 'გადმოიწერე უნგრულად:'
+    download_in_Icelandic: 'გადმოიწერე ისლანდიურად:'
+    download_in_Indonesian: 'გადმოიწერე ინდონეზიურად:'
+    download_in_Irish: 'გადმოიწერე ირლანდიურად:'
+    download_in_Italian: 'გადმოიწერე იტალიურად:'
+    download_in_Japanese: 'გადმოიწერე იაპონურად:'
+    download_in_Korean: 'გადმოიწერე კორეულად:'
+    download_in_Latvian: 'გადმოიწერე ლატვიურად:'
+    download_in_Lithuanian: 'გადმოიწერე ლიტვურად:'
+    download_in_Norwegian: 'გადმოიწერე ნორვეგიულად:'
+    download_in_Norwegian-Nynorsk: 'გადმოიწერე ნორვეგიულის ნინორსკურ დიალექტზე:'
+    download_in_Polish: 'გადმოიწერე პოლონურად:'
+    download_in_Portuguese-Brazil: 'გადმოიწერე პორტუგალიურ ბრაზილიურად:'
+    download_in_Portuguese: 'გადმოიწერე პორტუგალიურად:'
+    download_in_Romanian: 'გადმოიწერე რომანულად:'
+    download_in_Russian: 'გადმოიწერე რუსულად:'
+    download_in_Serbian: 'გადმოიწერე სერბულად:'
+    download_in_Slovenian: 'გადმოიწერე სლოვენურად:'
+    download_in_Spanish: 'გადმოიწერე ესპანურად:'
+    download_in_Swedish: 'გადმოიწერე შვედურად:'
+    download_in_Turkish: 'გადმოიწერე თურქულად:'
+    download_in_Ukrainian: 'გადმოიწერე უკრაინულად:'
+    download_in_Vietnamese: 'გადმოიწერე ვიეტნამურად:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
   plc:

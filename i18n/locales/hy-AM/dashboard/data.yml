@@ -37,6 +37,7 @@ hy:
         'NetSim': 'Ինտերնետ Simulator'
         'Custom': 'Արտիստ'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'բրոնզ'

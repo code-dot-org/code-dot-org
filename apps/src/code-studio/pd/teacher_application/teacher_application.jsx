@@ -97,6 +97,7 @@ const TeacherApplication = React.createClass({
   propTypes: {
     regionalPartnerGroup: React.PropTypes.number,
     regionalPartnerName: React.PropTypes.string,
+    workshopDays: React.PropTypes.string,
     schoolDistrictData: React.PropTypes.object.isRequired,
     districtErrorMessageHandler: React.PropTypes.func.isRequired
   },
@@ -700,7 +701,7 @@ const TeacherApplication = React.createClass({
           onChange={this.handleSubformDataChange}
           formData={this.state}
           errorData={this.errorData}
-          selectedWorkshop={getWorkshopForState(
+          selectedWorkshop={this.props.workshopDays || getWorkshopForState(
             this.props.regionalPartnerGroup,
             this.props.regionalPartnerName,
             this.state.selectedCourse,

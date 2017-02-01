@@ -2240,10 +2240,19 @@ en:
       U5 - Create PT Prep - Student Introduction:
         description here: description here
         title: title
+      U5 - Create PT review - Student Introduction:
+        description here: description here
+        title: title
       U5 - Explore PT - Student Introduction:
         description here: description here
         title: title
       U5 - Explore PT Prep - Student Introduction:
+        description here: description here
+        title: title
+      U5 - Explore PT Review - Student Introduction:
+        description here: description here
+        title: title
+      U5 - PT Prep - Digital Portfolio and tech setup:
         description here: description here
         title: title
       U5 color sleuth check correct:
@@ -2268,6 +2277,25 @@ en:
         description here: description here
         title: title
       U6 - updateRecord - Student Introduction:
+        description here: description here
+        title: title
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT - Complete the Task - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT - Make a Plan - Student Links: {}
+      U6 Create PT Review - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT Review - Student Links:
         description here: description here
         title: title
       Understanding Communication Protocols: {}
@@ -2492,6 +2520,8 @@ en:
       courseC_screenoutthemean:
         description here: description here
         title: title
+      courseD_external_binary1:
+        Binary Drawing: Binary Drawing
       courseF_external_variableConstant: {}
       coursee-privateandpersonalinformation:
         description here: description here
@@ -2500,6 +2530,9 @@ en:
         description here: description here
         title: title
       csp_ap_intro: {}
+      csp_unit5_finalassessment_overview:
+        description here: description here
+        title: title
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -4429,8 +4462,6 @@ en:
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
       CSD Header Size Prediction:
-        ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
-        : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
         <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
         <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
@@ -5035,8 +5066,8 @@ en:
         "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
         "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
         "<pre>in func3<br>in func3<br>in func1</pre>": "<pre>in func3<br>in func3<br>in func1</pre>"
-        ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be printed over and over until the code is stopped manually'
-        : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be printed over and over until the code is stopped manually'
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
         Nothing is displayed: Nothing is displayed
         What will be displayed when this code is run?: What will be displayed when this code is run?
       CommuteAssess - Cond 1 - block:
@@ -5102,8 +5133,8 @@ en:
         '1': '1'
         '10': '10'
         '5': '5'
-        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will be continuously displayed until the program is stopped manually'
-        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will be continuously displayed until the program is stopped manually'
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
         ? 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
         : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
         it will be different each time you run it: it will be different each time you run it
@@ -6826,6 +6857,10 @@ en:
         right answer: right answer
         title: title
         wrong answer: wrong answer
+      Unit 5 final assessment understand and continue:
+        I am NOT planning to take the AP exam this year: I am NOT planning to take the AP exam this year
+        I am planning to take the AP exam this year: I am planning to take the AP exam this year
+        I am still not sure if I am going to take the exam: I am still not sure if I am going to take the exam
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -6875,6 +6910,7 @@ en:
         Before I decide, I would like to have a better sense of how well I will do: Before I decide, I would like to have a better sense of how well I will do
         Before I decide, I would like to know more about the AP exam and what it involves: Before I decide, I would like to know more about the AP exam and what it involves
         I was unaware I had the option.: I was unaware I had the option.
+        I'd like to, but am concerned about the costs: I'd like to, but am concerned about the costs
         No. I'm definitely not going to take the AP Exam: No. I'm definitely not going to take the AP Exam
         Yes, definitely.: Yes, definitely.
       cspu3_assess1_callfunction:

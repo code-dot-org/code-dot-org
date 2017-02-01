@@ -31,10 +31,6 @@ After do
   check_window_for_js_errors('after scenario')
 end
 
-at_exit do
-  check_window_for_js_errors('at_exit')
-end
-
 Around do |_, block|
   begin
     block.call

@@ -287,7 +287,7 @@ hu:
       unsubmit: 'Visszavon'
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
-      clear_response: 'Clear response'
+      clear_response: 'Válasz törlése'
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
@@ -299,7 +299,9 @@ hu:
     delete_text: "Az alábbi gombra kattintva törlöd a fiókot."
     delete_text_teacher_note: 'Kérjük, vedd figyelembe: a fiók törlésével együtt nem törlődnek a tanulói fiókok.'
     delete_confirm: 'Biztosan törölni akarod a fiókot?'
-    deleted_user: 'deleted user'
+    deleted_user: 'törölt felhasználó'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Befejezve'
     tried: 'Próbáltam'
@@ -352,10 +354,10 @@ hu:
     announcement_learn_more_button: "Tudj meg többet"
     announcement_try_now_button: "Próbálja ki most"
     announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "Nézd meg a videót"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "Add meg a nevedet"
-    announcement_go_beyond_button: "Go beyond"
+    announcement_go_beyond_button: "Menj tovább"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
@@ -727,6 +729,9 @@ hu:
     content: 'Tartalom'
     practice: 'Tanítási gyakorlatok'
     peer_review: 'Peer Review'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

@@ -1,8 +1,8 @@
 {
   "basketballLaunchBall": "lançar uma bola nova",
-  "basketballLaunchBallTooltip": "Lança a bola para o jogo.",
+  "basketballLaunchBallTooltip": "Lança a bola para jogo.",
   "basketballSetPaddle": "coloque a mão",
-  "basketballSetPaddleSpeedFast": "definir velocidade da bola rápida",
+  "basketballSetPaddleSpeedFast": "definir a velocidade rápida de mão",
   "basketballSetPaddleSpeedNormal": "definir a velocidade normal da mão",
   "basketballSetPaddleSpeedRandom": "definir velocidade da mão aleatória",
   "basketballSetPaddleSpeedSlow": "definir velocidade da mão lenta",

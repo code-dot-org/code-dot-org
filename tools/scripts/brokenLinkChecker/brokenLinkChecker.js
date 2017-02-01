@@ -6,7 +6,7 @@ const url = require('url');
 const YAML = require('yamljs');
 const path = require("path");
 
-const whitelist = require('./whitelist.json').ignore;
+const ignoreList = require('./brokenLinkChecker.json').ignore;
 
 const slackUrl =
   "https://hooks.slack.com/services/" +
@@ -15,16 +15,16 @@ const slackUrl =
 let totalLinkCount = 0;
 let totalPageCount = 0;
 let brokenLinkCount = 0;
-let whitedlistedLinkCount = 0;
+let ignoredLinkCount = 0;
 
-/* Returns true if the provided string contains one of the whitelisted strings.
- * Note that it doesn't need to be an exact match; rather a whitelisted string
+/* Returns true if the provided string contains one of the ignored strings.
+ * Note that it doesn't need to be an exact match; rather an ignored string
  * must simply appear inside what might be a longer provided string.
- * e.g. if the whitelist contains "testdomain.com/test" then a provided string of
+ * e.g. if the ignore list contains "testdomain.com/test" then a provided string of
  * "www.testdomain.com/test/first" will match.
  */
-function stringContainsWhitelistedString(s) {
-  return whitelist.some(w => s.includes(w));
+function stringContainsIgnoredString(s) {
+  return ignoreList.some(i => s.includes(i));
 }
 
 function logTextToSlack(text) {
@@ -51,13 +51,13 @@ let options = { honorRobotExclusions: false };
 let siteChecker = new blc.SiteChecker(options, {
   link: function (result, customData) {
     if (result.broken) {
-      if (!stringContainsWhitelistedString(result.url.resolved)) {
+      if (!stringContainsIgnoredString(result.url.resolved)) {
         console.log("Broken link:", result.url.resolved, "in", result.base.resolved);
         logTextToSlack("Broken link: <" + result.url.resolved + "> in <" + result.base.resolved + ">");
         brokenLinkCount++;
       } else {
-        console.log("  Found whitelisted URL:", result.url.resolved);
-        whitedlistedLinkCount++;
+        console.log("  Found ignored URL:", result.url.resolved);
+        ignoredLinkCount++;
       }
     }
     totalLinkCount++;
@@ -72,13 +72,13 @@ let siteChecker = new blc.SiteChecker(options, {
       totalLinkCount.toLocaleString() + " links in " +
       totalPageCount.toLocaleString() + " pages, " +
       brokenLinkCount.toLocaleString() + " were broken, and " +
-      whitedlistedLinkCount.toLocaleString() + " were skipped due to whitelist.)_");
+      ignoredLinkCount.toLocaleString() + " were skipped due to ignore list.)_");
   }
 });
 
 logTextToSlack(
   "Beginning broken link check...\n_(Ignoring " +
-  whitelist.length.toLocaleString() + " URLs specified in whitelist.json)_");
+  ignoreList.length.toLocaleString() + " URLs specified in brokenLinkChecker.json)_");
 
 siteChecker.enqueue('https://staging.code.org');
 

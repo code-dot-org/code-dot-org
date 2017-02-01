@@ -37,6 +37,7 @@ ta:
         'NetSim': 'இணைய மாதிரி'
         'Custom': 'Artist'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'வெண்கலம்'
