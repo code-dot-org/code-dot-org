@@ -157,11 +157,14 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create causes UserGeo creation" do
+    request.remote_addr = '1.2.3.4'
     assert_creates(UserGeo) do
-      post :create, params: {
-        user: @default_params.merge({current_sign_in_at: '1.2.3.4'})
-      }
+      post :create, params: {user: @default_params}
     end
+
+    user_geo = UserGeo.last
+    assert user_geo
+    assert user_geo.ip_address = '1.2.3.4'
   end
 
   test "update student with utf8mb4 in name fails" do
