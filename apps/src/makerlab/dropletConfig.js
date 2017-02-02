@@ -6,7 +6,7 @@ import {
     SENSOR_VARS,
     BUTTON_VARS,
     COMPONENT_EVENTS
-} from './PlaygroundConstants';
+} from '../lib/kits/maker/PlaygroundConstants';
 
 const COLOR_LIGHT_GREEN = '#D3E965';
 const COLOR_CYAN = '#4DD0E1';
