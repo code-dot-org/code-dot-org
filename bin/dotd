@@ -167,7 +167,7 @@ should_i "DTP" do
 
   should_i "create a new release of the code-dot-org repository on github" do
     wait_for "the production server to fetch the latest changes"
-    system "ssh -t gateway.code.org ssh -t production-daemon \"production/bin/create-release\""
+    system "ssh -t gateway.code.org ssh -t \"production-daemon \\\"cd production; ./bin/create-release\\\"\""
   end
 
   wait_for "DTP to finish"
