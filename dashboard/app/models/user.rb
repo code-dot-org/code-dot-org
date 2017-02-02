@@ -1010,7 +1010,11 @@ class User < ActiveRecord::Base
 
     # Create peer reviews after submitting a peer_reviewable solution
     if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
-      PeerReview.create_for_submission(user_level, level_source_id)
+      learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
+
+      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user: self, plc_learning_module: learning_module)
+        PeerReview.create_for_submission(user_level, level_source_id)
+      end
     end
 
     if new_level_completed && script_id
