@@ -7,108 +7,183 @@ Resources:
     Properties:
       AssumeRolePolicyDocument:
         Statement:
-          - Effect: Allow
-            Principal:
-              Service: [ec2.amazonaws.com]
-            Action: ['sts:AssumeRole']
-      Path: '/'
+        - Effect: Allow
+          Principal:
+            Service: [ec2.amazonaws.com]
+          Action: ['sts:AssumeRole']
+      Path: /
       Policies:
-        - PolicyName: instance
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action: ['s3:GetObject']
-                Resource: 'arn:aws:s3:::<%=s3_bucket%>/*'
-              - Effect: Allow
-                Action:
-                  - 'cloudformation:SignalResource'
-                  - 'cloudformation:DescribeStackResources'
-                  - 'autoscaling:CompleteLifecycleAction'
-                  - 'ec2:DescribeImages'
-                  - 'cloudwatch:PutMetricData'
-                Resource: '*'
+      - PolicyName: instance
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action: ['s3:GetObject']
+            Resource: 'arn:aws:s3:::cdo-dist/*'
+          - Effect: Allow
+            Action:
+            - 'cloudformation:SignalResource'
+            - 'cloudformation:DescribeStackResources'
+            - 'autoscaling:CompleteLifecycleAction'
+            - 'ec2:DescribeImages'
+            - 'ec2:DescribeTags'
+            - 'cloudwatch:PutMetricData'
+            Resource: '*'
+      - PolicyName: ServiceAccess
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            - 's3:*'
+            - 'dynamodb:*'
+            - 'sqs:*'
+            Resource: '*'
   StandaloneFrontendRole:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Statement:
-          - Effect: Allow
-            Principal:
-              Service: [ec2.amazonaws.com]
-            Action: ['sts:AssumeRole']
+        - Effect: Allow
+          Principal:
+            Service: [ec2.amazonaws.com]
+          Action: ['sts:AssumeRole']
       Path: '/'
       Policies:
-        - PolicyName: instance
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action: ['s3:GetObject']
-                Resource: 'arn:aws:s3:::*'
-              - Effect: Allow
-                Action:
-                  - 'cloudformation:SignalResource'
-                  - 'cloudformation:DescribeStackResources'
-                  - 'autoscaling:CompleteLifecycleAction'
-                  - 'ec2:DescribeImages'
-                  - 'logs:Create*'
-                  - 'logs:PutLogEvents'
-                  - 'logs:PutRetentionPolicy'
-                  - 'cloudwatch:PutMetricData'
-                Resource: '*'
-              - Effect: Allow
-                Action:
-                  - 'dynamodb:*'
-                Resource:
-                  - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
-                    table/adhoc_tables
-                  ]]}
-                  - {'Fn::Join': [':',['arn:aws:dynamodb',{Ref: 'AWS::Region'},{Ref: 'AWS::AccountId'},
-                    table/adhoc_properties
-                  ]]}
+      - PolicyName: instance
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action: ['s3:GetObject']
+            Resource: 'arn:aws:s3:::*'
+          - Effect: Allow
+            Action:
+            - 'cloudformation:SignalResource'
+            - 'cloudformation:DescribeStackResources'
+            - 'autoscaling:CompleteLifecycleAction'
+            - 'ec2:DescribeImages'
+            - 'logs:Create*'
+            - 'logs:PutLogEvents'
+            - 'logs:PutRetentionPolicy'
+            - 'cloudwatch:PutMetricData'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+            - 'dynamodb:*'
+            Resource:
+            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
+            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
+  StandaloneRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Effect: Allow
+          Principal: {Service: [ec2.amazonaws.com]}
+          Action: ['sts:AssumeRole']
+      Path: /
+      Policies:
+      - PolicyName: instance
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action: ['s3:GetObject']
+            Resource: 'arn:aws:s3:::*'
+          - Effect: Allow
+            Action:
+            - "cloudformation:SignalResource"
+            - "cloudformation:DescribeStackResources"
+            - "autoscaling:CompleteLifecycleAction"
+            - "ec2:DescribeImages"
+            - "logs:Create*"
+            - "logs:PutLogEvents"
+            - "logs:PutRetentionPolicy"
+            - "cloudwatch:PutMetricData"
+            Resource: "*"
+          - Effect: Allow
+            Action: ["dynamodb:*"]
+            Resource:
+            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
+            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
+          - Effect: Allow
+            Action:
+            - "s3:PutObject"
+            - "s3:PutObjectAcl"
+            - "s3:PutObjectVersionAcl"
+            Resource:
+            - "arn:aws:s3:::cdo-dist/adhoc/*"
+            - "arn:aws:s3:::cdo-build-logs/*"
+  DaemonRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service: [ec2.amazonaws.com]
+          Action: ['sts:AssumeRole']
+      Path: /
+      Policies:
+      - PolicyName: Daemon
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            NotAction: ['iam:*', 'organizations:*']
+            Resource: '*'
+          - Effect: Allow
+            Action:
+            - 'iam:GetServerCertificate'
+            Resource: '*'
   FrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: FrontendRole]
+      Roles: [!Ref FrontendRole]
+  StandaloneInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles: [!Ref StandaloneRole]
   StandaloneFrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: StandaloneFrontendRole]
+      Roles: [!Ref StandaloneFrontendRole]
   ProductionInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: FrontendRole]
+      Roles: [!Ref DaemonRole]
   StagingInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: '/'
-      Roles: [Ref: FrontendRole]
+      Roles: [!Ref DaemonRole]
   LifecycleHookRole:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Statement:
-          - Effect: Allow
-            Principal:
-              Service: [autoscaling.amazonaws.com]
-            Action: ['sts:AssumeRole']
+        - Effect: Allow
+          Principal:
+            Service: [autoscaling.amazonaws.com]
+          Action: ['sts:AssumeRole']
       Path: '/'
       Policies:
-        - PolicyName: root
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action: ['sns:Publish']
-                Resource: '*'
+      - PolicyName: root
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action: ['sns:Publish']
+            Resource: '*'
 Outputs:
   FrontendInstanceProfile:
     Description: Frontend Instance Profile
-    Value: {Ref: FrontendInstanceProfile}
+    Value: !Ref FrontendInstanceProfile
+    Export: {Name: !Sub "${AWS::StackName}-FrontendInstanceProfile"}
   StandaloneFrontendInstanceProfile:
     Description: Standalone Frontend Instance Profile
-    Value: {Ref: StandaloneFrontendInstanceProfile}
+    Value: !Ref StandaloneFrontendInstanceProfile
+    Export: {Name: !Sub "${AWS::StackName}-StandaloneFrontendInstanceProfile"}
   LifecycleHookRoleARN:
     Description: Auto Scaling Lifecycle Hook Role
-    Value: {'Fn::GetAtt': [LifecycleHookRole, Arn]}
+    Value: !GetAtt LifecycleHookRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-LifecycleHookRoleARN"}
