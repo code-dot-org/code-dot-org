@@ -15,7 +15,7 @@ def send_receipts(kind, form)
     if kind.method(:receipt).parameters.empty?
       receipts << kind.receipt
     else
-      receipts << kind.receipt(JSON.load(form[:data]))
+      receipts << kind.receipt(JSON.parse(form[:data]))
     end
   end
   receipts = receipts.flatten.select{|i| i}
@@ -53,7 +53,7 @@ def process_batch_of_forms(batch_size)
       if kind.respond_to?(:process_)
         processed_data = kind.process_(form)
       elsif kind.respond_to?(:process)
-        processed_data = kind.process(JSON.load(form[:data]))
+        processed_data = kind.process(JSON.parse(form[:data]))
       end
     rescue AbortFormError => e
       HipChat.log "Unable to process form #{form[:id]} because #{e.message}."
@@ -76,7 +76,7 @@ def index_batch_of_forms(batch_size)
       kind = Object.const_get(form[:kind])
 
       begin
-        index_data = JSON.load(form[:data]).merge(JSON.load(form[:processed_data]))
+        index_data = JSON.parse(form[:data]).merge(JSON.parse(form[:processed_data]))
         index_data = index_data.merge(
           'id' => form[:id],
           'kind_s' => form[:kind],

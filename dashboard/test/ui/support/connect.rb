@@ -6,7 +6,7 @@ require_relative '../../../../deployment'
 require 'active_support/core_ext/object/blank'
 require_relative '../utils/selenium_browser'
 
-$browser_configs = JSON.load(open("browsers.json"))
+$browser_configs = JSON.parse(open("browsers.json"))
 
 MAX_CONNECT_RETRIES = 3
 

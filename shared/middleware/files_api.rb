@@ -442,7 +442,7 @@ class FilesApi < Sinatra::Base
       #     }
       #   ]
       # }
-      { "filesVersionId": result[:version_id], "files": JSON.load(result[:body]) }.to_json
+      { "filesVersionId": result[:version_id], "files": JSON.parse(result[:body]) }.to_json
     end
   end
 
@@ -455,7 +455,7 @@ class FilesApi < Sinatra::Base
     if manifest_result[:status] == 'NOT_FOUND'
       manifest = []
     else
-      manifest = JSON.load manifest_result[:body]
+      manifest = JSON.parse manifest_result[:body]
     end
 
     # store the new file
@@ -554,7 +554,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     return { filesVersionId: "" }.to_json if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse manifest_result[:body]
 
     # overwrite the manifest file with an empty list
     response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'])
@@ -583,7 +583,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
     not_found if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse manifest_result[:body]
 
     # remove the file from the manifest
     reject_result = manifest.reject! { |e| e['filename'].downcase == filename.downcase }
@@ -626,7 +626,7 @@ class FilesApi < Sinatra::Base
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, nil, params['version'])
     bad_request if manifest_result[:status] == 'NOT_FOUND'
-    manifest = JSON.load manifest_result[:body]
+    manifest = JSON.parse manifest_result[:body]
 
     # restore the files based on the versions stored in the manifest
     manifest.each do |entry|

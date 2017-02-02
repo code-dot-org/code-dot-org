@@ -10,7 +10,7 @@ class Properties
   def self.get(key)
     i = @@table.where(key: key.to_s).first
     return nil unless i
-    JSON.load(StringIO.new(i[:value]))
+    JSON.parse(StringIO.new(i[:value]))
   end
 
   # @param key [String] the key to insert

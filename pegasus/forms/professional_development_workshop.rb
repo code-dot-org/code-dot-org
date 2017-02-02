@@ -56,8 +56,8 @@ class ProfessionalDevelopmentWorkshop
   end
 
   def self.process_(row)
-    data = JSON.load(row[:data])
-    last_processed_data = JSON.load(row[:processed_data])
+    data = JSON.parse(row[:data])
+    last_processed_data = JSON.parse(row[:processed_data])
 
     {}.tap do |results|
       location = search_for_address(data['location_address_s'])

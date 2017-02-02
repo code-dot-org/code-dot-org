@@ -79,7 +79,7 @@ class SqlTable
       # We want to preserve the order of the columns so creating
       # a new hash is required.
       new_value = {}
-      value = JSON.load(r[:value])
+      value = JSON.parse(r[:value])
       value.each do |k, v|
         if k == old_name
           new_value[new_name] = v
@@ -107,7 +107,7 @@ class SqlTable
     metadata_dataset.update({column_list: new_column_list.to_json})
 
     items.each do |r|
-      value = JSON.load(r[:value])
+      value = JSON.parse(r[:value])
       value.delete(column_name)
       update(r[:row_id], value, ip_address)
     end
@@ -116,7 +116,7 @@ class SqlTable
   def fetch(id)
     row = items.where(row_id: id).first
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
-    JSON.load(row[:value]).merge('id' => row[:row_id])
+    JSON.parse(row[:value]).merge('id' => row[:row_id])
   end
 
   def insert(value, ip_address)
@@ -140,7 +140,7 @@ class SqlTable
       raise
     end
 
-    JSON.load(row[:value]).merge('id' => row[:row_id])
+    JSON.parse(row[:value]).merge('id' => row[:row_id])
   end
 
   def next_id
@@ -157,12 +157,12 @@ class SqlTable
     update_count = items.where(row_id: id).update(row)
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" if update_count == 0
 
-    JSON.load(row[:value]).merge('id' => id)
+    JSON.parse(row[:value]).merge('id' => id)
   end
 
   def to_a
     items.map do |row|
-      JSON.load(row[:value]).merge('id' => row[:row_id])
+      JSON.parse(row[:value]).merge('id' => row[:row_id])
     end
   end
 

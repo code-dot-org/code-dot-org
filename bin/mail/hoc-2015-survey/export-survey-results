@@ -65,7 +65,7 @@ CSV.open('HocSurvey2015-results.csv', 'wb') do |csv|
       next
     end
 
-    data = JSON.load form[:data]
+    data = JSON.parse form[:data]
     unless valid?(data)
       skipped += 1
       skipped_emails.add form[:email]
