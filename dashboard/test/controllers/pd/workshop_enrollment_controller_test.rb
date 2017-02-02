@@ -97,7 +97,8 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       last_name: @existing_enrollment.last_name,
       email: @existing_enrollment.email,
       confirmation_email: @existing_enrollment.email,
-    })
+    }
+)
     post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
     assert_template :duplicate
   end
@@ -107,7 +108,8 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       full_name: @organizer.name,
       email: @organizer.email,
       confirmation_email: @organizer.email,
-    })
+    }
+)
     post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
     assert_template :own
   end
@@ -117,7 +119,8 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       full_name: @facilitator.name,
       email: @facilitator.email,
       confirmation_email: @facilitator.email,
-    })
+    }
+)
     post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
     assert_template :own
   end
@@ -146,7 +149,8 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     params = enrollment_test_params.merge({
       first_name: '',
       confirmation_email: nil
-    })
+    }
+)
     post :create, params: {
       workshop_id: @workshop.id,
       pd_enrollment: params,

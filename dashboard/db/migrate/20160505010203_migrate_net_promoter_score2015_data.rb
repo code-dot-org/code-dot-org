@@ -21,7 +21,8 @@ class MigrateNetPromoterScore2015Data < ActiveRecord::Migration[4.2]
                 },
                 # The NPS survey was administered 4 June 2015 to 15 Sept 2015.
                 created_at: '2015-09-15 00:00:00 UTC',
-                updated_at: '2015-09-15 00:00:00 UTC')
+                updated_at: '2015-09-15 00:00:00 UTC'
+)
             end
           end
         ensure

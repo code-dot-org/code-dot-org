@@ -10,7 +10,8 @@ class WorkshopTest < ActiveSupport::TestCase
       workshop.segments = []
       segment_starts_and_ends.each do |segment_start_and_end|
         workshop.segments.build(start: segment_start_and_end.first,
-                                end: segment_start_and_end.last)
+                                end: segment_start_and_end.last
+)
       end
       workshop.save!
     end

@@ -40,7 +40,8 @@ class TestMilestoneParser < Minitest::Test
 
     @s3_client = Aws::S3::Client.new(stub_responses: true)
     @s3_client.stub_responses(:list_objects_v2,
-      {common_prefixes: [{prefix: 'hosts/adhoc-12345/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]})
+      {common_prefixes: [{prefix: 'hosts/adhoc-12345/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]}
+)
     @s3_client.stub_responses(:list_objects,
       {contents: [
         {key: 'hosts/folder_1/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
@@ -120,7 +121,8 @@ class TestMilestoneParser < Minitest::Test
 
   def test_error_handling
     @s3_client.stub_responses(:list_objects_v2,
-      {common_prefixes: [{prefix: 'hosts/folder_1/'}]})
+      {common_prefixes: [{prefix: 'hosts/folder_1/'}]}
+)
     @s3_client.stub_responses(:list_objects,
       {contents: [
         {key: 'hosts/folder_1/dashboard/milestone.log.12345', size: LOG_SIZE, etag: 'x'}

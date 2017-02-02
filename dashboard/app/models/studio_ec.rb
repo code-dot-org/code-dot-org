@@ -41,7 +41,8 @@ class StudioEC < Studio
         goal_override: JSON.parse(goal_override),
         edit_code: true
       }
-    ))
+    )
+)
     level.create_maze(level_params, params)
     level
   end

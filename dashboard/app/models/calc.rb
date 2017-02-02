@@ -44,7 +44,8 @@ class Calc < Blockly
         toolbox_blocks: "<xml>#{toolbox}</xml>",
         use_contract_editor: true
       }
-    ))
+    )
+)
   end
 
   def self.toolbox

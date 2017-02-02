@@ -10,9 +10,11 @@ class LevelSourceTest < ActiveSupport::TestCase
     @variant_data =
       LevelSource::XMLNS_STRING + @standard_data + LevelSource::XMLNS_STRING
     @ls1_standard = create(:level_source,
-      level_id: @level.id, data: @standard_data)
+      level_id: @level.id, data: @standard_data
+)
     @ls1_variant = create(:level_source,
-      level_id: @level.id, data: @variant_data)
+      level_id: @level.id, data: @variant_data
+)
     assert_equal @ls1_standard.level_id, @ls1_variant.level_id
 
     level2_id = create(:level).id

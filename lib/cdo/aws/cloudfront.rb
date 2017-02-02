@@ -95,7 +95,8 @@ module AWS
       puts 'Creating CloudFront cache invalidations...'
       cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
                                                log_level: :debug,
-                                               http_wire_trace: true)
+                                               http_wire_trace: true
+)
       invalidations = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
         id = get_distribution_id_with_retry(cloudfront, hostname)
@@ -108,7 +109,8 @@ module AWS
             },
             caller_reference: SecureRandom.hex,
           },
-        }).invalidation.id
+        }
+).invalidation.id
         [app, id, invalidation]
       end
       puts 'Invalidations created.'
@@ -132,7 +134,8 @@ module AWS
     def self.create_or_update
       cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
                                                log_level: :debug,
-                                               http_wire_trace: true)
+                                               http_wire_trace: true
+)
       ids = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
         id, distribution_config = get_distribution_config(cloudfront, hostname)

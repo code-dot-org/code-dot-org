@@ -34,7 +34,8 @@ class DevRoutesTest < Minitest::Test
         pegasus.post('/api/dev/start-build', {
           token: FAKE_START_BUILD_TOKEN,
           user_name: 'Dave'
-        })
+        }
+)
         assert_equal 403, pegasus.last_response.status
         refute File.file? BUILD_STARTED_PATH
       end
@@ -63,7 +64,8 @@ class DevRoutesTest < Minitest::Test
           pegasus.post('/api/dev/start-build', {
               token: FAKE_START_BUILD_TOKEN,
               user_name: 'Dave'
-          })
+          }
+)
           assert_equal 200, pegasus.last_response.status
         ensure
           system "rm -f #{BUILD_STARTED_PATH}"
@@ -76,7 +78,8 @@ class DevRoutesTest < Minitest::Test
         pegasus = make_test_pegasus
         pegasus.post('/api/dev/start-build', {
             user_name: 'Dave'
-        })
+        }
+)
         assert_equal 403, pegasus.last_response.status
       end
     end
@@ -87,7 +90,8 @@ class DevRoutesTest < Minitest::Test
         pegasus.post('/api/dev/start-build', {
             token: 'incorrect-token',
             user_name: 'Dave'
-        })
+        }
+)
         assert_equal 403, pegasus.last_response.status
       end
     end
@@ -100,7 +104,8 @@ class DevRoutesTest < Minitest::Test
           pegasus.post('/api/dev/start-build', {
               token: FAKE_START_BUILD_TOKEN,
               user_name: 'Dave'
-          })
+          }
+)
           assert File.file? BUILD_STARTED_PATH
 
           # Check appropriate response to whole room, too
@@ -125,7 +130,8 @@ class DevRoutesTest < Minitest::Test
           pegasus.post('/api/dev/start-build', {
               token: FAKE_START_BUILD_TOKEN,
               user_name: 'Dave'
-          })
+          }
+)
           assert File.file? BUILD_STARTED_PATH
           assert_equal original_modify_time, File.mtime(BUILD_STARTED_PATH)
 

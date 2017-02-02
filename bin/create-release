@@ -73,7 +73,8 @@ def create_release(version, body)
   Octokit.create_release(REPO, version, {
     'name' => version,
     'body' => body
-  })
+  }
+)
 end
 
 def edit(content)

@@ -79,7 +79,8 @@ module AWS
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
           change_set_id = cfn.create_change_set(stack_options(template).merge(
             change_set_name: "#{stack_name}-#{Digest::MD5.hexdigest(template)}"
-          )).id
+          )
+).id
 
           begin
             change_set = {changes: []}
@@ -209,7 +210,8 @@ module AWS
             Tempfile.open('berks') do |tmp|
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               client = Aws::S3::Client.new(region: CDO.aws_region,
-                                           credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
+                                           credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key)
+)
               client.put_object(
                 bucket: S3_BUCKET,
                 key: "chef/#{branch}.tar.gz",

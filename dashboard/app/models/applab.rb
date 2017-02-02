@@ -68,7 +68,8 @@ class Applab < Blockly
         code_functions: JSON.parse(palette),
         edit_code: true
       }
-    ))
+    )
+)
   end
 
   def xml_blocks

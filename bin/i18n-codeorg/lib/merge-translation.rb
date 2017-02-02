@@ -25,7 +25,8 @@ def merge_translation_tree(en_translation, new_translation, prev_translation)
         new_translation[key] =
           merge_translation_tree(en_translation[key],
             new_translation[key],
-            prev_translation[key])
+            prev_translation[key]
+)
       end
     end
   end
@@ -52,7 +53,8 @@ if file_type == "yml"
   new_translation[new_translation.keys[0]] =
     merge_translation_tree(en_translation.values[0],
       new_translation.values[0],
-      prev_translation.values[0])
+      prev_translation.values[0]
+)
 
   File.open(prev_translation_path, 'w+') do |f|
     f.write(new_translation.to_yaml)
@@ -65,7 +67,8 @@ else
   # Get new translation
   new_translation = merge_translation_tree(en_translation,
     new_translation,
-    prev_translation)
+    prev_translation
+)
 
   File.open(prev_translation_path, 'w+') do |f|
     f.write(JSON.pretty_generate(new_translation))

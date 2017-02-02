@@ -180,10 +180,12 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'blockly level in custom script' do
     script_data, _ = ScriptDSL.parse(
-      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename')
+      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
+)
 
     script = Script.add_script({name: 'test script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+)
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
@@ -432,7 +434,8 @@ class ScriptTest < ActiveSupport::TestCase
     custom_i18n.deep_merge!({'en' => {'data' => {'script' => {'name' => {'test-plc' => {
       'title' => 'PLC Test',
       'description' => 'PLC test fixture script'
-    }}}}}})
+    }}}}}}
+)
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
     script = scripts.first
@@ -512,7 +515,8 @@ class ScriptTest < ActiveSupport::TestCase
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script({name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+)
 
     # Everything has Stage <number> when nothing is lockable
     assert /^Stage 1:/.match(script.stages[0].localized_title)
@@ -529,7 +533,8 @@ class ScriptTest < ActiveSupport::TestCase
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script({name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+)
 
     # When first stage is lockable, it has no stage number, and the next stage starts at 1
     assert /^Stage/.match(script.stages[0].localized_title).nil?
@@ -546,7 +551,8 @@ class ScriptTest < ActiveSupport::TestCase
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script({name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+)
 
     # When only second stage is lockable, we count non-lockable stages appropriately
     assert /^Stage 1:/.match(script.stages[0].localized_title)

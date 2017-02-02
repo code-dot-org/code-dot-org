@@ -23,5 +23,6 @@ post '/api/dev/start-build' do
   JSON.pretty_generate({
     text: "#{rack_env.to_s.capitalize} build restarted by #{params[:user_name]}",
     response_type: 'in_channel'
-  })
+  }
+)
 end

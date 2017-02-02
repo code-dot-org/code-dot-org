@@ -112,7 +112,8 @@ module Cdo
         @client.assume_role_with_web_identity(@assume_role_params.merge(
           web_identity_token: id_token,
           role_session_name: token_params['email']
-        ))
+        )
+)
       rescue Aws::STS::Errors::AccessDenied => e
         if (@google_client = google_oauth)
           retry

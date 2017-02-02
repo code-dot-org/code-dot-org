@@ -34,7 +34,8 @@ class GAClient
                                                              'filters' => filter,
                                                              'sampleLevel' => 'HIGHER_PRECISION',
                                                              'max-results' => 10000
-                                                         })
+                                                         }
+)
   end
 
   # noinspection RubyClassVariableUsageInspection,RubyResolve
@@ -51,7 +52,8 @@ class GAClient
 
     @@client = Google::APIClient.new(
       application_name: 'cdo-ga-analytics',
-      application_version: '0.0.1')
+      application_version: '0.0.1'
+)
 
     ## Load our credentials for the service account
     signing_key = Google::APIClient::KeyUtils.load_from_pkcs12(pkcs12_key, key_secret)
@@ -61,7 +63,8 @@ class GAClient
       audience: 'https://accounts.google.com/o/oauth2/token',
       scope: 'https://www.googleapis.com/auth/analytics.readonly',
       issuer: service_account_email,
-      signing_key: signing_key)
+      signing_key: signing_key
+)
 
     ## Request a token for our service account
     @@client.authorization.fetch_access_token!

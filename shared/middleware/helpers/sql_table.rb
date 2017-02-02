@@ -48,7 +48,8 @@ class SqlTable
       table_name: @table_name,
       column_list: TableMetadata.generate_column_list(to_a).to_json,
       updated_at: DateTime.now
-    })
+    }
+)
   rescue Sequel::UniqueConstraintViolation
       # catch and ignore
   end

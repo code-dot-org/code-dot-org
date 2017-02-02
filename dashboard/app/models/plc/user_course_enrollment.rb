@@ -62,7 +62,8 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
       Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
                                            plc_course_unit: course_unit,
                                            status: course_unit.started ? Plc::EnrollmentUnitAssignment::IN_PROGRESS : Plc::EnrollmentUnitAssignment::START_BLOCKED,
-                                           user: user)
+                                           user: user
+)
     end
   end
 end

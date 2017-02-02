@@ -315,7 +315,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     params = workshop_params.merge({
       facilitators: [new_facilitator.id]
-    })
+    }
+)
     put :update, params: {id: @workshop.id, pd_workshop: params}
     assert_response :success
     @workshop.reload

@@ -126,7 +126,9 @@ class Deliverer
       encrypted_id: encrypted_id,
       unsubscribe_link: unsubscribe_url,
       tracking_pixel: poste_url("/o/#{encrypted_id}"),
-    }))
+    }
+)
+)
 
     message = StringIO.new
 

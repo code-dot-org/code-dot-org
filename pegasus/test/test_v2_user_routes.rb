@@ -103,7 +103,8 @@ class V2UserRoutesTest < Minitest::Test
         @pegasus.get '/v2/students'
         assert_equal 200, @pegasus.last_response.status
         assert_equal([expected_v2_students_hash_for(FakeDashboard::STUDENT)],
-          JSON.parse(@pegasus.last_response.body))
+          JSON.parse(@pegasus.last_response.body)
+)
       end
 
       it 'returns no deleted students or deleted followers' do
@@ -143,7 +144,8 @@ class V2UserRoutesTest < Minitest::Test
         @pegasus.get "/v2/students/#{FakeDashboard::STUDENT[:id]}"
         assert_equal 200, @pegasus.last_response.status
         assert_equal(expected_v2_students_id_hash_for(FakeDashboard::STUDENT),
-          JSON.parse(@pegasus.last_response.body))
+          JSON.parse(@pegasus.last_response.body)
+)
       end
 
       it 'returns student info when signed in as admin' do
@@ -151,7 +153,8 @@ class V2UserRoutesTest < Minitest::Test
         @pegasus.get "/v2/students/#{FakeDashboard::STUDENT[:id]}"
         assert_equal 200, @pegasus.last_response.status
         assert_equal(expected_v2_students_id_hash_for(FakeDashboard::STUDENT),
-          JSON.parse(@pegasus.last_response.body))
+          JSON.parse(@pegasus.last_response.body)
+)
       end
 
       it 'returns 403 when seeking nonexistent student' do
@@ -204,7 +207,8 @@ class V2UserRoutesTest < Minitest::Test
             'CONTENT_TYPE' => 'application/json;charset=utf-8'
           assert_equal 200, @pegasus.last_response.status
           assert_equal expected_v2_students_id_hash_for(
-            FakeDashboard::STUDENT.merge({name: NEW_NAME})),
+            FakeDashboard::STUDENT.merge({name: NEW_NAME})
+),
             JSON.parse(@pegasus.last_response.body)
         end
       end

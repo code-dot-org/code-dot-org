@@ -105,7 +105,8 @@ class ActivitiesController < ApplicationController
                                     level_source_image: @level_source_image,
                                     activity: @activity,
                                     new_level_completed: @new_level_completed,
-                                    share_failure: share_failure)
+                                    share_failure: share_failure
+)
 
     if solved
       slog(

@@ -9,7 +9,8 @@ def create_storage_id_cookie
     domain: ".#{request.shared_cookie_domain}",
     path: '/',
     expires: Time.now + (365 * 24 * 3600)
-  })
+  }
+)
 
   storage_id
 end

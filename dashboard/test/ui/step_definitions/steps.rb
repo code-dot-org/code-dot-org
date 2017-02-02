@@ -768,7 +768,8 @@ Then(/^I fake completion of the assessment$/) do
   unit_assignment.enroll_user_in_unit_with_learning_modules([
     unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::CONTENT_MODULE),
     unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
-  ])
+  ]
+)
 end
 
 def generate_user(name)

@@ -126,7 +126,9 @@ class HttpDocument
       body: content,
       classes: classes,
       head: head,
-    }))
+    }
+)
+)
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
@@ -140,7 +142,9 @@ class HttpDocument
     @body = TextRender.haml_file(path, locals.merge({
       header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
       body:   @body,
-    }))
+    }
+)
+)
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
@@ -170,7 +174,8 @@ class HttpDocument
         sites_dir("all/views/#{view}"),
       ], [
         '.haml',
-      ])
+      ]
+)
     )
   end
 
@@ -288,7 +293,9 @@ module Pegasus
         response: response,
         params: params,
         session: session,
-      }))
+      }
+)
+)
       deliver(document)
     end
 
@@ -322,7 +329,9 @@ module Pegasus
           if File.file?(path = "#{parent}/_all#{extname}")
             return HttpDocument.from_file(path, headers.merge({
               'Cache-Control' => "max-age=#{settings.document_max_age}, private, must-revalidate"
-            }))
+            }
+)
+)
           end
         end
       end

@@ -33,7 +33,8 @@ class ApiController < ApplicationController
         return head :forbidden
       end
       UserLevel.update_lockable_state(user_level_data[:user_id], user_level_data[:level_id],
-        user_level_data[:script_id], item[:locked], item[:readonly_answers])
+        user_level_data[:script_id], item[:locked], item[:readonly_answers]
+)
     end
     render json: {}
   end
@@ -199,7 +200,8 @@ class ApiController < ApplicationController
          script_level_id: script_level.id,
          level_id: level.id,
          user_agent: request.user_agent,
-         locale: locale) if level.finishable?
+         locale: locale
+) if level.finishable?
 
     render json: response
   end

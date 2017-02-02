@@ -60,7 +60,8 @@ module Pd::Payment
 
       assert_equal({
         food: 50
-      }, payment.amounts)
+      }, payment.amounts
+)
 
       assert_equal 50, payment.total
     end

@@ -212,7 +212,8 @@ class User < ActiveRecord::Base
       params[:school] ||= params[:ops_school]
 
       user = User.invite!(email: params[:email],
-                          user_type: TYPE_TEACHER, age: 21)
+                          user_type: TYPE_TEACHER, age: 21
+)
       user.invited_by = invited_by_user
     end
 
@@ -507,7 +508,8 @@ class User < ActiveRecord::Base
     if login.present?
       return nil if login.utf8mb4?
       where(['username = :value OR email = :value OR hashed_email = :hashed_value',
-             { value: login.downcase, hashed_value: hash_email(login.downcase) }]).first
+             { value: login.downcase, hashed_value: hash_email(login.downcase) }]
+).first
     elsif hashed_email = conditions.delete(:hashed_email)
       return nil if hashed_email.utf8mb4?
       where(hashed_email: hashed_email).first
@@ -558,7 +560,8 @@ class User < ActiveRecord::Base
 
   def user_level_for(script_level, level)
     user_levels.find_by(script_id: script_level.script_id,
-                        level_id: level.id)
+                        level_id: level.id
+)
   end
 
   def user_level_locked?(script_level, level)

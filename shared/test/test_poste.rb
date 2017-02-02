@@ -17,14 +17,16 @@ class PosteTest < SequelTestCase
       username: 'code studio student',
       user_type: 'student',
       birthday: '2000-01-02'
-    })
+    }
+)
     DASHBOARD_DB[:users].insert({
       email: TEACHER_EMAIL,
       hashed_email: TEACHER_EMAIL_HASH,
       username: 'code studio teacher',
       user_type: 'teacher',
       birthday: '2000-01-02'
-    })
+    }
+)
   end
 
   def test_unsubscribe_for_existing_contact
@@ -45,14 +47,16 @@ class PosteTest < SequelTestCase
 
     assert POSTE_DB[:contacts].where(hashed_email: hashed_email).empty?
     Poste.unsubscribe(
-      email, Digest::MD5.hexdigest(email), {ip_address: '5.6.7.8.'})
+      email, Digest::MD5.hexdigest(email), {ip_address: '5.6.7.8.'}
+)
     assert POSTE_DB[:contacts].
       where(hashed_email: hashed_email).first[:unsubscribed_at]
   end
 
   def test_unsubscribe_for_code_studio_student_stores_no_email
     Poste.unsubscribe(
-      STUDENT_EMAIL, STUDENT_EMAIL_HASH, {ip_address: '1.2.3.4'})
+      STUDENT_EMAIL, STUDENT_EMAIL_HASH, {ip_address: '1.2.3.4'}
+)
 
     assert POSTE_DB[:contacts].
       where(hashed_email: STUDENT_EMAIL_HASH).first[:unsubscribed_at]
@@ -61,7 +65,8 @@ class PosteTest < SequelTestCase
 
   def test_unsubscribe_for_code_studio_teacher_stores_email
     Poste.unsubscribe(
-      TEACHER_EMAIL, TEACHER_EMAIL_HASH, {ip_address: '1.2.3.4'})
+      TEACHER_EMAIL, TEACHER_EMAIL_HASH, {ip_address: '1.2.3.4'}
+)
 
     assert POSTE_DB[:contacts].
       where(hashed_email: TEACHER_EMAIL_HASH).first[:unsubscribed_at]
@@ -247,7 +252,8 @@ class Poste2Test < SequelTestCase
       created_ip: '1.2.3.4',
       updated_at: DateTime.now,
       updated_ip: '1.2.3.4'
-    })
+    }
+)
 
     recipient = Poste2.create_recipient(email)
     assert_equal id, recipient[:id]
@@ -311,7 +317,8 @@ class Poste2Test < SequelTestCase
       created_ip: '1.2.3.4',
       updated_at: DateTime.now,
       updated_ip: '1.2.3.4'
-    })
+    }
+)
 
     recipient = Poste2.ensure_recipient(email, {ip_address: '5.6.7.8'})
     # Intentional or not, the IP address returned is the IP address passed in.

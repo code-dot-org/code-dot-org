@@ -18,6 +18,7 @@ class ApplabTest < ActiveSupport::TestCase
 
     assert_same_keys(JSON.parse(code_functions), JSON.parse(Applab.palette),
       'applab/levels.js', 'applab.rb',
-      "Ruby-JavaScript palette mismatch")
+      "Ruby-JavaScript palette mismatch"
+)
   end
 end

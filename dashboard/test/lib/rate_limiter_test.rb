@@ -74,7 +74,8 @@ class RateLimiterTest < ActiveSupport::TestCase
       max_rate_proc: max_rate_proc,
       num_processors: num_processors,
       num_workers_per_processor: num_workers_per_processor,
-      logger: @logger)
+      logger: @logger
+)
   end
 
   # A fake handler that does nothing.

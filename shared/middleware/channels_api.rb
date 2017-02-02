@@ -23,7 +23,8 @@ class ChannelsApi < Sinatra::Base
       content_type :json
       JSON.pretty_generate({
         storage_id: storage_id('user'),
-      })
+      }
+)
     end
   end
 

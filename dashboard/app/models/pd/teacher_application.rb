@@ -211,6 +211,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
       schoolName: school_name,
       schoolDistrictName: school_district_name,
       regionalPartner: regional_partner_name
-    }).stringify_keys
+    }
+).stringify_keys
   end
 end

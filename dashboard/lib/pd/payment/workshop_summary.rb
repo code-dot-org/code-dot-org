@@ -113,7 +113,8 @@ module Pd::Payment
           staffer_payment: payment.try{|p| p.amounts[:staffer]},
           venue_payment: payment.try{|p| p.amounts[:venue]},
           payment_total: payment.try(&:total)
-        })
+        }
+)
       end
 
       line_item

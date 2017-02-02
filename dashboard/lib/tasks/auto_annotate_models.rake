@@ -31,7 +31,8 @@ if Rails.env.development?
       'sort'                    => "false",
       'force'                   => "false",
       'trace'                   => "false",
-    })
+    }
+)
   end
 
   Annotate.load_tasks

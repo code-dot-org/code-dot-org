@@ -7,7 +7,8 @@ class FileUtilityTest < Minitest::Test
       'test/does_not_exist',
       'test/test_hash.rb',
       'test/also_does_not_exist',
-    ])
+    ]
+)
 
     assert_nil FileUtility.find_first_existing(
       'test/does_not_exist',

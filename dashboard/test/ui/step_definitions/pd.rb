@@ -94,7 +94,8 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
         state: 'WA',
         zip: '98101',
         school_name: 'Code.org'
-      }),
+      }
+),
       pd_workshop_id: workshop.id
     )
     PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete

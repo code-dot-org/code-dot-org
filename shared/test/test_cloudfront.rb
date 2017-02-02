@@ -64,7 +64,8 @@ STR
     ).merge(distribution[:distribution_config].except(
       :caller_reference,
       :default_root_object,
-      :logging)
+      :logging
+)
     ).merge(
       aliases: {
         quantity: 3,

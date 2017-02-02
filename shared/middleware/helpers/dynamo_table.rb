@@ -87,7 +87,8 @@ class DynamoTable
       (0..ids.length).step(MAX_BATCH_SIZE).each do |start_index|
         db.batch_write_item(request_items: {
           CDO.dynamo_tables_table => items.slice(start_index, MAX_BATCH_SIZE)
-        })
+        }
+)
       end
     end
     db.delete_item(

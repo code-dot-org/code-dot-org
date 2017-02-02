@@ -57,7 +57,8 @@ class ClassSubmission
         teacher_resource
         other
       )
-    })
+    }
+)
   end
 
   def self.formats_with_i18n_labels(groups)

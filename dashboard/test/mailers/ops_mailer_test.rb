@@ -47,7 +47,8 @@ class OpsMailerTest < ActionMailer::TestCase
     incorrect_recipients = Set.new(%w{
       123@code.org 987@code.org facilitator_2@code.org xxx@code.org yyy@code.org
       facilitator_3@code.org district_contact_2@code.org district_contact_3@code.org
-    })
+    }
+)
 
     ActionMailer::Base.deliveries.each do |mail|
       actual_recipients << mail.to[0]
@@ -80,7 +81,8 @@ class OpsMailerTest < ActionMailer::TestCase
     incorrect_recipients = Set.new(%w{
       123@code.org 987@code.org facilitator_2@code.org xxx@code.org yyy@code.org
       facilitator_3@code.org district_contact_2@code.org district_contact_3@code.org
-    })
+    }
+)
 
     ActionMailer::Base.deliveries.each do |mail|
       actual_recipients << mail.to[0]
@@ -112,7 +114,8 @@ class OpsMailerTest < ActionMailer::TestCase
     incorrect_recipients = Set.new(%w{
       123@code.org 987@code.org facilitator_2@code.org xxx@code.org yyy@code.org
       facilitator_3@code.org district_contact_2@code.org district_contact_3@code.org
-    })
+    }
+)
 
     ActionMailer::Base.deliveries.each do |mail|
       actual_recipients << mail.to[0]

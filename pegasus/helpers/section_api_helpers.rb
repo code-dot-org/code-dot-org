@@ -36,7 +36,8 @@ class DashboardStudent
       created_at: created_at,
       updated_at: created_at,
       username: UserHelpers.generate_username(Dashboard.db[:users], name)
-    }.merge(random_secrets))
+    }.merge(random_secrets)
+)
     return nil unless row
 
     row
@@ -290,7 +291,8 @@ class DashboardSection
         code: SectionHelpers.random_code,
         created_at: created_at,
         updated_at: created_at,
-      })
+      }
+)
     rescue Sequel::UniqueConstraintViolation
       tries += 1
       retry if tries < 2
@@ -383,7 +385,8 @@ class DashboardSection
       section_id: @row[:id],
       created_at: created_at,
       updated_at: created_at,
-    })
+    }
+)
     student_id
   end
 
@@ -415,7 +418,8 @@ class DashboardSection
       select(Sequel.as(:student_user_id, :id),
         *DashboardStudent.fields,
         :secret_pictures__name___secret_picture_name,
-        :secret_pictures__path___secret_picture_path).
+        :secret_pictures__path___secret_picture_path
+).
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
@@ -424,7 +428,8 @@ class DashboardSection
           location: "/v2/users/#{row[:id]}",
           age: DashboardStudent.birthday_to_age(row[:birthday]),
           completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
-        })
+        }
+)
       end
   end
 
