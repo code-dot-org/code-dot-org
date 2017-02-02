@@ -12,7 +12,7 @@ import PlaygroundIO from 'playground-io';
 
 import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
-import TouchSensor from './TouchSensor';
+import TouchSensor from '../lib/kits/maker/TouchSensor';
 
 /** @const {string} */
 const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
