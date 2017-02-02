@@ -18,20 +18,20 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Level)
     assert ability.can?(:read, Activity)
 
-    assert !ability.can?(:destroy, Game)
-    assert !ability.can?(:destroy, Level)
-    assert !ability.can?(:destroy, Activity)
+    refute ability.can?(:destroy, Game)
+    refute ability.can?(:destroy, Level)
+    refute ability.can?(:destroy, Activity)
 
-    assert !ability.can?(:read, Section)
+    refute ability.can?(:read, Section)
 
-    assert !ability.can?(:read, Script.find_by_name('ECSPD'))
+    refute ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_script)
-    assert !ability.can?(:read, @login_required_script)
+    refute ability.can?(:read, @login_required_script)
 
     assert ability.can?(:read, @public_script_level)
-    assert !ability.can?(:read, @login_required_script_level)
+    refute ability.can?(:read, @login_required_script_level)
   end
 
   test "as member" do
@@ -41,11 +41,11 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Level)
     assert ability.can?(:read, Activity)
 
-    assert !ability.can?(:destroy, Game)
-    assert !ability.can?(:destroy, Level)
-    assert !ability.can?(:destroy, Activity)
+    refute ability.can?(:destroy, Game)
+    refute ability.can?(:destroy, Level)
+    refute ability.can?(:destroy, Activity)
 
-    assert !ability.can?(:read, Section)
+    refute ability.can?(:read, Section)
 
     assert ability.can?(:create, GalleryActivity)
     assert ability.can?(:destroy, GalleryActivity)

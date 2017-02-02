@@ -75,7 +75,7 @@ class AwsS3IntegrationTest < Minitest::Test
     allows_public_reads = private_grants.detect do |grant|
       grant.grantee.uri == all_users_uri && grant.permission == 'READ'
     end
-    assert !allows_public_reads, 'default acl should not allow public reads'
+    refute allows_public_reads, 'default acl should not allow public reads'
   end
 
   def test_public_url

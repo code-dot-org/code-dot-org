@@ -439,9 +439,9 @@ EOS
 
     levels = Level.where_we_want_to_calculate_ideal_level_source
 
-    assert !levels.include?(match_level)
-    assert !levels.include?(level_with_ideal_level_source_already)
-    assert !levels.include?(freeplay_artist)
+    refute levels.include?(match_level)
+    refute levels.include?(level_with_ideal_level_source_already)
+    refute levels.include?(freeplay_artist)
     assert levels.include?(regular_artist)
   end
 

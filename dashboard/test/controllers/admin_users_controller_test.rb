@@ -101,29 +101,29 @@ class AdminUsersControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :confirm_email_form
 
   test "should not confirm_email if not admin" do
-    assert !@unconfirmed.confirmed_at # not confirmed
+    refute @unconfirmed.confirmed_at # not confirmed
 
     sign_in @not_admin
     post :confirm_email, params: {email: @admin.email}
     assert_response :forbidden
 
     @admin.reload
-    assert !@unconfirmed.confirmed_at
+    refute @unconfirmed.confirmed_at
   end
 
   test "should not confirm_email if not signed in" do
-    assert !@unconfirmed.confirmed_at # not confirmed
+    refute @unconfirmed.confirmed_at # not confirmed
 
     post :confirm_email, params: {email: @unconfirmed.email}
 
     assert_redirected_to_sign_in
 
     @unconfirmed.reload
-    assert !@unconfirmed.confirmed_at
+    refute @unconfirmed.confirmed_at
   end
 
   test "should confirm_email by email" do
-    assert !@unconfirmed.confirmed_at # not confirmed
+    refute @unconfirmed.confirmed_at # not confirmed
 
     sign_in @admin
 
