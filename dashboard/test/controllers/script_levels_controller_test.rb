@@ -587,7 +587,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response 200
 
     assert client_state.level_progress_is_empty_for_test
-    assert !session['warden.user.user.key']
+    refute session['warden.user.user.key']
   end
 
   test "show with the reset param should not reset session when logged in" do
@@ -615,7 +615,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response 200
 
     assert client_state.level_progress_is_empty_for_test
-    assert !session['warden.user.user.key']
+    refute session['warden.user.user.key']
   end
 
   test "reset redirects for custom scripts for signed in users" do
@@ -1423,7 +1423,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in teacher
 
     section = put_student_in_section(student, teacher, script)
-    assert !script.hideable_stages
+    refute script.hideable_stages
 
     post :toggle_hidden, params: {
       script_id: script.id,

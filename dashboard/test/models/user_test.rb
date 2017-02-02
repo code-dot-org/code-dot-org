@@ -33,7 +33,7 @@ class UserTest < ActiveSupport::TestCase
     # if password is already peppered we don't need to change the hashed pw
     assert_no_change('user.reload.encrypted_password') do
       assert user.valid_password?("foosbars")
-      assert !user.valid_password?("foosbarsasdasds")
+      refute user.valid_password?("foosbarsasdasds")
     end
   end
 
@@ -50,49 +50,49 @@ class UserTest < ActiveSupport::TestCase
     # update pw with new hashed pw
     assert_change('user.reload.encrypted_password') do
       assert user.valid_password?("foosbars")
-      assert !user.valid_password?("foosbarsasdasds")
+      refute user.valid_password?("foosbarsasdasds")
     end
 
     # doesn't change second time
     assert_no_change('user.reload.encrypted_password') do
       assert user.valid_password?("foosbars")
-      assert !user.valid_password?("foosbarsasdasds")
+      refute user.valid_password?("foosbarsasdasds")
     end
   end
 
   test "cannot create user with panda in name" do
     user = User.create(@good_data.merge({name: panda_panda}))
-    assert !user.valid?
+    refute user.valid?
     assert user.errors[:name].length == 1
   end
 
   test "cannot create user with panda in email" do
     user = User.create(@good_data.merge({email: "#{panda_panda}@panda.com"}))
-    assert !user.valid?
+    refute user.valid?
     assert user.errors[:email].length == 1
   end
 
   test "cannot create user with invalid email" do
     user = User.create(@good_data.merge({email: 'foo@bar@com'}))
-    assert !user.valid?
+    refute user.valid?
     assert user.errors[:email].length == 1
   end
 
   test "cannot create user with no type" do
     user = User.create(@good_data.merge(user_type: nil))
-    assert !user.valid?
+    refute user.valid?
     assert user.errors[:user_type].length == 1
   end
 
   test "cannot create user with no name" do
     user = User.create(@good_data.merge(name: nil))
-    assert !user.valid?
+    refute user.valid?
     assert user.errors[:name].length == 1
   end
 
   test "cannot create user with invalid type" do
     user = User.create(@good_data.merge(user_type: 'xxxxx'))
-    assert !user.valid?
+    refute user.valid?
     assert user.errors[:user_type].length == 1
   end
 
@@ -249,14 +249,14 @@ class UserTest < ActiveSupport::TestCase
     user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
     user.user_type = User::TYPE_TEACHER
-    assert !user.save
+    refute user.save
   end
 
   test "cannot make an account without email an admin" do
     user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
     user.admin = true
-    assert !user.save
+    refute user.save
   end
 
   test "cannot create admin without email" do
@@ -539,12 +539,12 @@ class UserTest < ActiveSupport::TestCase
 
   test 'under 13' do
     user = create :user
-    assert !user.under_13?
+    refute user.under_13?
 
     user.age = 13
-    assert !user.under_13?
+    refute user.under_13?
     user.save!
-    assert !user.under_13?
+    refute user.under_13?
 
     user.age = 10
     assert user.under_13?
@@ -606,7 +606,7 @@ class UserTest < ActiveSupport::TestCase
     student.update_attribute(:birthday, nil) # hacky
 
     student = User.find(student.id)
-    assert !student.age
+    refute student.age
 
     User.send_reset_password_instructions(email: email)
 
@@ -614,7 +614,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [email], mail.to
     assert_equal 'Code.org reset password instructions', mail.subject
     student = student.reload
-    assert !student.age
+    refute student.age
     assert student.reset_password_token
   end
 
@@ -625,7 +625,7 @@ class UserTest < ActiveSupport::TestCase
     student.update_attribute(:birthday, nil) # hacky
 
     student = User.find(student.id)
-    assert !student.age
+    refute student.age
 
     old_password = student.encrypted_password
 
@@ -857,7 +857,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "needs_to_backfill_user_scripts?" do
     user = create :student, created_at: Date.new(2014, 9, 10)
-    assert !user.needs_to_backfill_user_scripts?
+    refute user.needs_to_backfill_user_scripts?
 
     script = Script.find_by_name("course2")
 
@@ -871,17 +871,17 @@ class UserTest < ActiveSupport::TestCase
 
     # now is backfilled (has a user script)
     user = user.reload
-    assert !user.needs_to_backfill_user_scripts?
+    refute user.needs_to_backfill_user_scripts?
   end
 
   test "needs_to_backfill_user_scripts? is false for recent users" do
     user = create :student, created_at: Date.new(2015, 9, 10)
-    assert !user.needs_to_backfill_user_scripts?
+    refute user.needs_to_backfill_user_scripts?
 
     script = Script.find_by_name("course2")
     # In normal usage, UserScript will be created alongside UserLevel.
     create :user_level, user: user, level: script.script_levels.first.level, script: script
-    assert !user.needs_to_backfill_user_scripts?
+    refute user.needs_to_backfill_user_scripts?
   end
 
   test 'can_edit_password? is true for user with password' do
@@ -941,7 +941,7 @@ class UserTest < ActiveSupport::TestCase
     user_proficiency = UserProficiency.
       where(user_id: user_proficiency.user_id).
       first
-    assert !user_proficiency.nil?
+    refute user_proficiency.nil?
     assert_equal 0, user_proficiency.repeat_loops_d1_count
     assert_equal 2 + 1, user_proficiency.repeat_loops_d2_count
     assert_equal 0, user_proficiency.repeat_loops_d3_count
@@ -956,7 +956,7 @@ class UserTest < ActiveSupport::TestCase
     User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
 
     user_proficiency = UserProficiency.where(user_id: student.id).first
-    assert !user_proficiency.nil?
+    refute user_proficiency.nil?
     assert_equal 0, user_proficiency.repeat_loops_d1_count
     assert_equal 1, user_proficiency.repeat_loops_d2_count
     assert_equal 0, user_proficiency.repeat_loops_d3_count
@@ -978,7 +978,7 @@ class UserTest < ActiveSupport::TestCase
     User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
 
     user_proficiency = UserProficiency.where(user_id: student.id).first
-    assert !user_proficiency.nil?
+    refute user_proficiency.nil?
     assert_equal TIME, user_proficiency.basic_proficiency_at.to_s
   end
 
@@ -995,8 +995,8 @@ class UserTest < ActiveSupport::TestCase
     User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
 
     user_proficiency = UserProficiency.where(user_id: student.id).first
-    assert !user_proficiency.nil?
-    assert !user_proficiency.basic_proficiency_at.nil?
+    refute user_proficiency.nil?
+    refute user_proficiency.basic_proficiency_at.nil?
   end
 
   test 'track_proficiency does not update basic_proficiency_at if not proficient' do
@@ -1012,7 +1012,7 @@ class UserTest < ActiveSupport::TestCase
     user_proficiency = UserProficiency.
       where(user_id: user_proficiency.user_id).
       first
-    assert !user_proficiency.nil?
+    refute user_proficiency.nil?
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
@@ -1284,13 +1284,13 @@ class UserTest < ActiveSupport::TestCase
   test 'email confirmation required for teachers' do
     user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
     assert user.confirmation_required?
-    assert !user.confirmed_at
+    refute user.confirmed_at
   end
 
   test 'email confirmation not required for students' do
     user = create :student, email: 'my_email@test.xx', confirmed_at: nil
-    assert !user.confirmation_required?
-    assert !user.confirmed_at
+    refute user.confirmation_required?
+    refute user.confirmed_at
   end
 
   test 'student and teacher relationships' do
@@ -1309,17 +1309,17 @@ class UserTest < ActiveSupport::TestCase
     other_user = create :student
 
     # student_of? method
-    assert !student.student_of?(student)
-    assert !student.student_of?(other_user)
+    refute student.student_of?(student)
+    refute student.student_of?(other_user)
     assert student.student_of?(teacher)
 
-    assert !teacher.student_of?(student)
-    assert !teacher.student_of?(other_user)
-    assert !teacher.student_of?(teacher)
+    refute teacher.student_of?(student)
+    refute teacher.student_of?(other_user)
+    refute teacher.student_of?(teacher)
 
-    assert !other_user.student_of?(student)
-    assert !other_user.student_of?(other_user)
-    assert !other_user.student_of?(teacher)
+    refute other_user.student_of?(student)
+    refute other_user.student_of?(other_user)
+    refute other_user.student_of?(teacher)
 
     # user associations
     assert_equal [], other_user.teachers
@@ -1360,7 +1360,7 @@ class UserTest < ActiveSupport::TestCase
     # you can't just create your own authorized teacher account
     fake_teacher = create :teacher
     assert fake_teacher.teacher?
-    assert !fake_teacher.authorized_teacher?
+    refute fake_teacher.authorized_teacher?
 
     # you have to be in a cohort
     c = create :cohort
@@ -1481,7 +1481,7 @@ class UserTest < ActiveSupport::TestCase
       user_id: user.id, permission: UserPermission::FACILITATOR
     )
 
-    assert !user.permission?(UserPermission::LEVELBUILDER)
+    refute user.permission?(UserPermission::LEVELBUILDER)
   end
 
   test 'permission? caches all permissions' do
@@ -1495,7 +1495,7 @@ class UserTest < ActiveSupport::TestCase
     ActiveRecord::Base.connection.disconnect!
 
     assert user.permission?(UserPermission::FACILITATOR)
-    assert !user.permission?(UserPermission::LEVELBUILDER)
+    refute user.permission?(UserPermission::LEVELBUILDER)
   end
 
   test 'should_see_inline_answer? returns true in levelbuilder' do
