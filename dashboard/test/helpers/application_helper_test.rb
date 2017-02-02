@@ -60,7 +60,7 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test "!is_k1? by default" do
     @level = Maze.create(@maze_data)
-    assert !is_k1?
+    refute is_k1?
   end
 
   test "windows phone 8.1 supported" do

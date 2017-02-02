@@ -79,7 +79,7 @@ class PosteTest < SequelTestCase
   def test_dashboard_student_for_nonuser
     email = 'nonexistent_email@fake_domain.com'
     hashed_email = Digest::MD5.hexdigest(email)
-    assert !Poste.dashboard_student?(hashed_email)
+    refute Poste.dashboard_student?(hashed_email)
   end
 
   def test_dashboard_student_for_student
@@ -87,7 +87,7 @@ class PosteTest < SequelTestCase
   end
 
   def test_dashboard_student_for_teacher
-    assert !Poste.dashboard_student?(TEACHER_EMAIL_HASH)
+    refute Poste.dashboard_student?(TEACHER_EMAIL_HASH)
   end
 
   def test_encrypt_then_decrypt_noop
@@ -275,7 +275,7 @@ class Poste2Test < SequelTestCase
 
     Poste2.create_recipient(email, {ip_address: '1.2.3.4'})
     assert POSTE_DB[:contacts].where(hashed_email: hashed_email).first
-    assert !POSTE_DB[:contacts].where(email: email).first
+    refute POSTE_DB[:contacts].where(email: email).first
   end
 
   def test_create_recipient_for_dashboard_teacher
