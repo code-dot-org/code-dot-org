@@ -6,6 +6,9 @@ import { levelType } from './progressTypes';
 import color from "@cdo/apps/util/color";
 
 const styles = {
+  main: {
+    marginBottom: 20
+  },
   header: {
     padding: 20,
     backgroundColor: color.purple,
@@ -56,7 +59,7 @@ const ProgressGroup = React.createClass({
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
     return (
-      <div>
+      <div style={styles.main}>
         <div
           style={styles.header}
           onClick={this.toggleCollapsed}
