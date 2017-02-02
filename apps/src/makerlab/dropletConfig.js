@@ -1,4 +1,4 @@
-import api from './api';
+import api from '../lib/kits/maker/api';
 import _ from 'lodash';
 import {getFirstParam} from '../dropletUtils';
 import {
