@@ -4,7 +4,7 @@
  */
 
 import {N_COLOR_LEDS , TOUCH_PINS} from './PlaygroundConstants';
-import LookbackLogger from './LookbackLogger';
+import LookbackLogger from '../lib/kits/maker/LookbackLogger';
 import _ from 'lodash';
 import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
