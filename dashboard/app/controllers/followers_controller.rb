@@ -57,7 +57,7 @@ class FollowersController < ApplicationController
 
     student_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
     if user_type == User::TYPE_TEACHER
-      student_params.merge(params[:user].permit([:school, :full_address]))
+      student_params.merge(params[:user].permit([:full_address]))
     end
 
     @user = User.new(student_params)

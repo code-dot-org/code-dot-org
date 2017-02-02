@@ -89,7 +89,6 @@ class RegistrationsController < Devise::RegistrationsController
       :age,
       :birthday,
       :user_type,
-      :school,
       :full_address,
       :terms_of_service_version,
       races: []
