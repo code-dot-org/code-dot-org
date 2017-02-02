@@ -9,8 +9,7 @@ $(document).ready(() => {
   // make milestone post
   postMilestoneForPageLoad();
 
-  // handle click on continue, in particular think about what happens if we didnt
-  // hear back
+  // handle click on continue (results in navigating to next puzzle)
   $(".submitButton").click(onContinue);
 });
 
