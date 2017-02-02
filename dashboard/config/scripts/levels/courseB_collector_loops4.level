@@ -26,8 +26,8 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Can you fix Laurel's path to get all of this gold?",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Is something not right? Try using the step button to figure out where things go wrong.\",\"hint_id\":\"grade1_adventurer_loops3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6af379aa2bdd1eda224e49b62f1152eb/grade1_adventurer_loops3.mp3\"}]",
+    "instructions": "Fix Laurel's path to get all of this gold!",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Is something not right? Try using the step button to figure out where things go wrong.\",\"hint_id\":\"courseB_collector_loops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6af379aa2bdd1eda224e49b62f1152eb/courseB_collector_loops4.mp3\"}]",
     "ideal": "8",
     "instructions_important": "false",
     "video_key": "C1_zuck_repeat_loop",
@@ -77,11 +77,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="maze_moveEast"/>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

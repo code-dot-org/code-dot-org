@@ -28,8 +28,7 @@
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having trouble, try writing down the steps on a piece of paper first.\",\"hint_id\":\"courseB_maze_seqOld_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f77a1ec169a93c73e0c324f31c61fb4d/courseB_maze_seqOld.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
