@@ -97,16 +97,17 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
-    render json: milestone_response(script_level: @script_level,
-                                    level: @level,
-                                    total_lines: total_lines,
-                                    solved?: solved,
-                                    level_source: @level_source.try(:hidden) ? nil : @level_source,
-                                    level_source_image: @level_source_image,
-                                    activity: @activity,
-                                    new_level_completed: @new_level_completed,
-                                    share_failure: share_failure
-)
+    render json: milestone_response(
+      script_level: @script_level,
+      level: @level,
+      total_lines: total_lines,
+      solved?: solved,
+      level_source: @level_source.try(:hidden) ? nil : @level_source,
+      level_source_image: @level_source_image,
+      activity: @activity,
+      new_level_completed: @new_level_completed,
+      share_failure: share_failure
+    )
 
     if solved
       slog(

@@ -765,11 +765,12 @@ end
 Then(/^I fake completion of the assessment$/) do
   user = User.find_by_email_or_hashed_email(@users.first[1][:email])
   unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user)
-  unit_assignment.enroll_user_in_unit_with_learning_modules([
-    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::CONTENT_MODULE),
-    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
-  ]
-)
+  unit_assignment.enroll_user_in_unit_with_learning_modules(
+    [
+      unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::CONTENT_MODULE),
+      unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
+    ]
+  )
 end
 
 def generate_user(name)

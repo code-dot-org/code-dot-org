@@ -4,13 +4,15 @@ require 'base64'
 def create_storage_id_cookie
   storage_id = user_storage_ids_table.insert(user_id: nil)
 
-  response.set_cookie(storage_id_cookie_name, {
-    value: CGI.escape(storage_encrypt_id(storage_id)),
-    domain: ".#{request.shared_cookie_domain}",
-    path: '/',
-    expires: Time.now + (365 * 24 * 3600)
-  }
-)
+  response.set_cookie(
+    storage_id_cookie_name,
+    {
+      value: CGI.escape(storage_encrypt_id(storage_id)),
+      domain: ".#{request.shared_cookie_domain}",
+      path: '/',
+      expires: Time.now + (365 * 24 * 3600)
+    }
+  )
 
   storage_id
 end

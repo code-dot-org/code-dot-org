@@ -192,6 +192,6 @@ class AdminReportsController < ApplicationController
         csv
       end,
       type: 'text/csv'
-)
+    )
   end
 end

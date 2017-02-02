@@ -105,8 +105,9 @@ class AbilityTest < ActiveSupport::TestCase
   test 'non-admins can read only own UserPermission' do
     user = create :user
     user_permission = UserPermission.create(
-      user_id: user.id, permission: UserPermission::DISTRICT_CONTACT
-)
+      user_id: user.id,
+      permission: UserPermission::DISTRICT_CONTACT
+    )
     ability = Ability.new user
 
     ability.cannot?(:create, UserPermission)
@@ -128,8 +129,9 @@ class AbilityTest < ActiveSupport::TestCase
   test 'levelbuilders can manage appropriate objects' do
     user = create :user
     UserPermission.create(
-      user_id: user.id, permission: UserPermission::LEVELBUILDER
-)
+      user_id: user.id,
+      permission: UserPermission::LEVELBUILDER
+    )
     ability = Ability.new user
 
     assert ability.can?(:manage, Game)

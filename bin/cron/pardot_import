@@ -60,11 +60,14 @@ def request_pardot_api_key
   uri = URI.parse(PARDOT_AUTHENTICATION_URL)
 
   log "Requesting new API key"
-  response = Net::HTTP.post_form(uri,
-                      {email: CDO.pardot_username,
-                      password: CDO.pardot_password,
-                      user_key: CDO.pardot_user_key}
-)
+  response = Net::HTTP.post_form(
+    uri,
+    {
+      email: CDO.pardot_username,
+      password: CDO.pardot_password,
+      user_key: CDO.pardot_user_key
+    }
+  )
 
   raise "Pardot authentication request failed with HTTP " + response.code if response.code != "200"
 

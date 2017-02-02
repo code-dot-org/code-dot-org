@@ -47,12 +47,13 @@ class Artist < Blockly
   end
 
   def self.create_from_level_builder(params, level_params)
-    create!(level_params.merge(
-      user: params[:user],
-      game: Game.custom_artist,
-      level_num: 'custom',
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.custom_artist,
+        level_num: 'custom',
+      )
     )
-)
   end
 
   def toolbox(type)

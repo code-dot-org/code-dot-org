@@ -19,15 +19,24 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
     @custom_stage_2 = create(:stage, script: @custom_script, name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
     @custom_stage_3 = create(:stage, script: @custom_script, name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
-    @custom_s1_l1 = create(:script_level, script: @custom_script,
-                           stage: @custom_stage_1, position: 1
-)
-    @custom_s2_l1 = create(:script_level, script: @custom_script,
-                           stage: @custom_stage_2, position: 1
-)
-    @custom_s2_l2 = create(:script_level, script: @custom_script,
-                           stage: @custom_stage_2, position: 2
-)
+    @custom_s1_l1 = create(
+      :script_level,
+      script: @custom_script,
+      stage: @custom_stage_1,
+      position: 1
+    )
+    @custom_s2_l1 = create(
+      :script_level,
+      script: @custom_script,
+      stage: @custom_stage_2,
+      position: 1
+    )
+    @custom_s2_l2 = create(
+      :script_level,
+      script: @custom_script,
+      stage: @custom_stage_2,
+      position: 2
+    )
     create(:script_level, script: @custom_script, stage: @custom_stage_3, position: 1)
     client_state.reset
 
@@ -382,49 +391,57 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
     assert_equal '/s/20-hour/stage/2/puzzle/2', build_script_level_path(sl)
-    assert_routing({method: "get", path: build_script_level_path(sl)},
+    assert_routing(
+      {method: "get", path: build_script_level_path(sl)},
       {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_position: sl.stage.to_param, id: sl.to_param}
-)
+    )
   end
 
   test "chapter based routing" do
-    assert_routing({method: "get", path: '/hoc/reset'},
+    assert_routing(
+      {method: "get", path: '/hoc/reset'},
       {controller: "script_levels", action: "reset", script_id: Script::HOC_NAME}
-)
+    )
 
     hoc_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::HOC_NAME).id, chapter: 1)
-    assert_routing({method: "get", path: '/hoc/1'},
+    assert_routing(
+      {method: "get", path: '/hoc/1'},
       {controller: "script_levels", action: "show", script_id: Script::HOC_NAME, chapter: "1"}
-)
+    )
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
     flappy_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::FLAPPY_NAME).id, chapter: 5)
-    assert_routing({method: "get", path: '/flappy/5'},
+    assert_routing(
+      {method: "get", path: '/flappy/5'},
       {controller: "script_levels", action: "show", script_id: Script::FLAPPY_NAME, chapter: "5"}
-)
+    )
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
     jigsaw_level = ScriptLevel.find_by(script_id: Script.get_from_cache(Script::JIGSAW_NAME).id, chapter: 3)
-    assert_routing({method: "get", path: '/jigsaw/3'},
+    assert_routing(
+      {method: "get", path: '/jigsaw/3'},
       {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"}
-)
+    )
     assert_equal "/s/jigsaw/stage/1/puzzle/3", build_script_level_path(jigsaw_level)
   end
 
   test "routing for custom scripts with stage" do
-    assert_routing({method: "get", path: "/s/laurel/stage/1/puzzle/1"},
+    assert_routing(
+      {method: "get", path: "/s/laurel/stage/1/puzzle/1"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "1", id: "1"}
-)
+    )
     assert_equal "/s/laurel/stage/1/puzzle/1", build_script_level_path(@custom_s1_l1)
 
-    assert_routing({method: "get", path: "/s/laurel/stage/2/puzzle/1"},
+    assert_routing(
+      {method: "get", path: "/s/laurel/stage/2/puzzle/1"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "2", id: "1"}
-)
+    )
     assert_equal "/s/laurel/stage/2/puzzle/1", build_script_level_path(@custom_s2_l1)
 
-    assert_routing({method: "get", path: "/s/laurel/stage/2/puzzle/2"},
+    assert_routing(
+      {method: "get", path: "/s/laurel/stage/2/puzzle/2"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "2", id: "2"}
-)
+    )
     assert_equal "/s/laurel/stage/2/puzzle/2", build_script_level_path(@custom_s2_l2)
   end
 
@@ -434,9 +451,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "next routing for custom scripts" do
-    assert_routing({method: "get", path: "/s/laurel/next"},
+    assert_routing(
+      {method: "get", path: "/s/laurel/next"},
       {controller: "script_levels", action: "next", script_id: 'laurel'}
-)
+    )
     assert_equal "/s/laurel/next", script_next_path(@custom_script)
   end
 
@@ -583,9 +601,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "reset routing for custom scripts" do
-    assert_routing({method: "get", path: "/s/laurel/reset"},
+    assert_routing(
+      {method: "get", path: "/s/laurel/reset"},
       {controller: "script_levels", action: "reset", script_id: 'laurel'}
-)
+    )
   end
 
   test "reset resets for custom scripts" do
@@ -948,13 +967,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.joins(:script, :levels).find_by(
       scripts: {name: 'allthethings'},
       levels:  Level.key_to_params('K-1 Artist1 1')
-)
+    )
 
-    assert_routing({method: "get", path: build_script_level_path(sl)},
+    assert_routing(
+      {method: "get", path: build_script_level_path(sl)},
       {controller: "script_levels", action: "show", script_id: 'allthethings', stage_position: sl.stage.absolute_position.to_s, id: sl.position.to_s, solution: true},
       {},
       {solution: true}
-)
+    )
 
     sign_in @teacher
 
@@ -997,7 +1017,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.joins(:script, :levels).find_by(
       scripts: {name: 'allthethings'},
       levels: Level.key_to_params('K-1 Artist1 1')
-)
+    )
 
     sign_in @student
 
@@ -1014,7 +1034,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.joins(:script, :levels).find_by(
       scripts: {name: 'allthethings'},
       levels: Level.key_to_params('U3L2 Using Simple Commands')
-)
+    )
 
     sign_in @young_student
 
@@ -1031,7 +1051,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sl = ScriptLevel.joins(:script, :levels).find_by(
       scripts: {name: 'allthethings'},
       levels: Level.key_to_params('U3L2 Using Simple Commands')
-)
+    )
 
     sign_in @student
 
@@ -1124,20 +1144,26 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should present first level if active" do
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
-    get_show_script_level_page(create(:script_level, levels: [level, level2],
+    get_show_script_level_page(
+      create(
+        :script_level,
+        levels: [level, level2],
         properties: '{"maze 2": {"active": false}}'
-)
-)
+      )
+    )
     assert_equal assigns(:level), level
   end
 
   test "should present second level if first is inactive" do
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
-    get_show_script_level_page(create(:script_level, levels: [level, level2],
+    get_show_script_level_page(
+      create(
+        :script_level,
+        levels: [level, level2],
         properties: '{"maze 1": {"active": false}}'
-)
-)
+      )
+    )
     assert_equal assigns(:level), level2
   end
 
@@ -1145,10 +1171,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     assert_raises do
-      get_show_script_level_page(create(:script_level, levels: [level, level2],
+      get_show_script_level_page(
+        create(
+          :script_level,
+          levels: [level, level2],
           properties: '{"maze 1": {"active": false}, "maze 2": {"active": false}}'
-)
-)
+        )
+      )
     end
   end
 
@@ -1160,10 +1189,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :user_level, user: @student, level_id: level.id, attempts: 1,
       level_source: level_source
 
-    get_show_script_level_page(create(:script_level, levels: [level, level2],
+    get_show_script_level_page(
+      create(
+        :script_level,
+        levels: [level, level2],
         properties: '{"maze 1": {"active": false}}'
-)
-)
+      )
+    )
     assert_equal assigns(:level), level
   end
 
@@ -1178,10 +1210,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :user_level, user: @student, level_id: level.id, attempts: 1,
       level_source: level_source, updated_at: '2016-01-02'
 
-    get_show_script_level_page(create(:script_level, levels: [level, level2],
+    get_show_script_level_page(
+      create(
+        :script_level,
+        levels: [level, level2],
         properties: '{"maze 1": {"active": false}}'
-)
-)
+      )
+    )
     assert_equal assigns(:level), level
   end
 

@@ -13,13 +13,12 @@ class DynamoDBAdapter
   # @param key [String]
   # @returns [Object] or nil if the key doesnt exist
   def get(key)
-    resp = @client.get_item({
-      table_name: @table_name,
-      key: {
-        'data-key' => key
+    resp = @client.get_item(
+      {
+        table_name: @table_name,
+        key: {'data-key' => key}
       }
-    }
-)
+    )
     return nil if resp.item.nil?
     begin
       value = Oj.load(resp.item['data-value'])
@@ -34,14 +33,15 @@ class DynamoDBAdapter
   # @param value [JSONable object]
   # @raise if DynamoDB is unavailable
   def set(key, value)
-    @client.put_item({
-      table_name: @table_name,
-      item: {
-        'data-key' => key,
-        'data-value' => Oj.dump(value, mode: :strict)
+    @client.put_item(
+      {
+        table_name: @table_name,
+        item: {
+          'data-key' => key,
+          'data-value' => Oj.dump(value, mode: :strict)
+        }
       }
-    }
-)
+    )
   end
 
   # @returns [Hash]
@@ -50,11 +50,12 @@ class DynamoDBAdapter
     result = {}
     last_evaluated = nil
     loop do
-      resp = @client.scan({
-        table_name: @table_name,
-        exclusive_start_key: last_evaluated
-      }
-)
+      resp = @client.scan(
+        {
+          table_name: @table_name,
+          exclusive_start_key: last_evaluated
+        }
+      )
 
       resp.items.each do |item|
         key = item['data-key']

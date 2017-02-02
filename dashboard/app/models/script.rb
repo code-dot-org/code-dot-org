@@ -186,19 +186,20 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([
-          {
-            script_levels: [
-              {levels: [:game, :concepts, :level_concept_difficulty]},
-              :stage,
-              :callouts
-            ]
-          },
-          {
-            stages: [{script_levels: [:levels]}]
-          }
-        ]
-).find(script_id)
+        script = Script.includes(
+          [
+            {
+              script_levels: [
+                {levels: [:game, :concepts, :level_concept_difficulty]},
+                :stage,
+                :callouts
+              ]
+            },
+            {
+              stages: [{script_levels: [:levels]}]
+            }
+          ]
+        ).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -317,7 +318,8 @@ class Script < ActiveRecord::Base
       end
     end
 
-    text_response_levels.concat(script_levels.includes(:levels).
+    text_response_levels.concat(
+      script_levels.includes(:levels).
         where('levels.type' => [TextMatch, FreeResponse]).
         map do |script_level|
           {
@@ -325,7 +327,7 @@ class Script < ActiveRecord::Base
             levels: script_level.levels
           }
         end
-)
+    )
 
     text_response_levels
   end
@@ -629,14 +631,16 @@ class Script < ActiveRecord::Base
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-        Script.add_script({
-          name: script_name,
-          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
-          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
-          wrapup_video: general_params[:wrapup_video],
-          properties: Script.build_property_hash(general_params)
-        }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten
-)
+        Script.add_script(
+          {
+            name: script_name,
+            hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+            login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+            wrapup_video: general_params[:wrapup_video],
+            properties: Script.build_property_hash(general_params)
+          },
+          script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten
+        )
         Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
     rescue StandardError => e

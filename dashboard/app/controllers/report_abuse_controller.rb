@@ -6,7 +6,8 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse
     unless Rails.env.development?
-      response = HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
+      response = HTTParty.post(
+        'https://codeorg.zendesk.com/api/v2/tickets.json',
         headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
         body: {
           ticket: {
@@ -28,7 +29,7 @@ class ReportAbuseController < ApplicationController
           }
         }.to_json,
         basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
-)
+      )
       raise 'Zendesk failed' unless response.success?
     end
 

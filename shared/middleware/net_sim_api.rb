@@ -51,9 +51,10 @@ class NetSimApi < Sinatra::Base
 
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
-    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
+    RedisTable.new(
+      get_redis_client, get_pub_sub_api, shard_id, table_name,
       CDO.netsim_shard_expiry_seconds
-)
+    )
   end
 
   #
@@ -367,11 +368,12 @@ class NetSimApi < Sinatra::Base
   # @return [Redis]
   def get_redis_client
     return @@overridden_redis unless @@overridden_redis.nil?
-    Redis::SlaveRead::Interface::Hiredis.new({
+    Redis::SlaveRead::Interface::Hiredis.new(
+      {
         master: Redis.new(url: redis_url),
         slaves: redis_read_replica_urls.map {|url| Redis.new(url: url)}
-                                            }
-)
+      }
+    )
   end
 
   # Returns the URL (configuration string) of the redis service in the current

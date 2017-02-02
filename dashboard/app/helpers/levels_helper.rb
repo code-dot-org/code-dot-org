@@ -60,7 +60,7 @@ module LevelsHelper
           hidden: true,
           useFirebase: use_firebase
         }
-)
+      )
     end
 
     view_options(channel: channel_token.channel) if channel_token
@@ -379,25 +379,32 @@ module LevelsHelper
     if script && script_level && app_options[:showUnusedBlocks] != false
 
       # puzzle-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
-        script_name: script.name,
-        stage: script_level.stage.absolute_position,
-        puzzle: script_level.position
-      }, default: nil
-)
+      enabled = Gatekeeper.allows(
+        'showUnusedBlocks',
+        where: {
+          script_name: script.name,
+          stage: script_level.stage.absolute_position,
+          puzzle: script_level.position
+        },
+        default: nil
+      )
 
       # stage-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
-        script_name: script.name,
-        stage: script_level.stage.absolute_position,
-      }, default: nil
-) if enabled.nil?
+      enabled = Gatekeeper.allows(
+        'showUnusedBlocks',
+        where: {
+          script_name: script.name,
+          stage: script_level.stage.absolute_position,
+        },
+        default: nil
+      ) if enabled.nil?
 
       # script-specific
-      enabled = Gatekeeper.allows('showUnusedBlocks', where: {
-        script_name: script.name,
-      }, default: nil
-) if enabled.nil?
+      enabled = Gatekeeper.allows(
+        'showUnusedBlocks',
+        where: {script_name: script.name},
+        default: nil
+      ) if enabled.nil?
 
       # global
       enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
@@ -524,28 +531,36 @@ module LevelsHelper
       base_level = File.basename(path, ext)
       level = Level.find_by(name: base_level)
       block_type = ext.slice(1..-1)
-      content_tag(:iframe, '', {
+      content_tag(
+        :iframe,
+        '',
+        {
           src: url_for(controller: :levels, action: :embed_blocks, level_id: level.id, block_type: block_type).strip,
           width: width ? width.strip : '100%',
           scrolling: 'no',
           seamless: 'seamless',
           style: 'border: none;',
-      }
-)
+        }
+      )
 
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
       level = Level.find_by(name: base_level)
-      content_tag(:div,
-        content_tag(:iframe, '', {
-          src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
-          width: (width ? width.strip : '100%'),
-          scrolling: 'no',
-          seamless: 'seamless',
-          style: 'border: none;'
-        }
-), {class: 'aspect-ratio'}
-)
+      content_tag(
+        :div,
+        content_tag(
+          :iframe,
+          '',
+          {
+            src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
+            width: (width ? width.strip : '100%'),
+            scrolling: 'no',
+            seamless: 'seamless',
+            style: 'border: none;'
+          }
+        ),
+        {class: 'aspect-ratio'}
+      )
     else
       level_name = source_level ? source_level.name : @level.name
       data_t(prefix + '.' + level_name, text)

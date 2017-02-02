@@ -142,11 +142,12 @@ class NetSimApiTest < Minitest::Test
     created_ids.push(record_create_response['id'])
 
     # Sending several records should result in them all being inserted
-    record_create_response = create_record([
-      {name: 'nancy', age: 9, male: false},
-      {name: 'drew', age: 11, male: true}
-    ]
-)
+    record_create_response = create_record(
+      [
+        {name: 'nancy', age: 9, male: false},
+        {name: 'drew', age: 11, male: true}
+      ]
+    )
     assert record_create_response.is_a?(Array)
     assert_equal 2, record_create_response.length
     assert_equal 4, read_records.length
