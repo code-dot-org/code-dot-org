@@ -125,7 +125,7 @@ class S3PackagingTest < Minitest::Test
       @packager.send(:ensure_updated_package)
       # we shouldn't have redownloaded output, because commit_hash still claims we're up to date
       assert_equal @packager.send(:target_commit_hash, @target_location), ORIGINAL_HASH
-      assert !File.exist?(@target_location + '/output.js')
+      refute File.exist?(@target_location + '/output.js')
 
       # if we have the wrong package, we download
       FileUtils.cp(@target_location + '/commit_hash', alt_target_loc)
@@ -167,7 +167,7 @@ class S3PackagingTest < Minitest::Test
     # try uploading a different package under the same name, it fails
     threw = false
     begin
-      assert !@packager.upload_package_to_s3('/src')
+      refute @packager.upload_package_to_s3('/src')
     rescue
       threw = true
     end

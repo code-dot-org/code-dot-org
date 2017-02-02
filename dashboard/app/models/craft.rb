@@ -217,28 +217,30 @@ class Craft < Blockly
       flowerRose: true,
       torch: true
     },
-    action_plane: ALL_BLOCKS.merge({
-      creeper: true,
-      sheep: true,
-      cropWheat: true,
-      treeAcacia: true,
-      treeBirch: true,
-      treeJungle: true,
-      treeOak: true,
-      treeSpruce: true
-      # TODO(bjordan): rename & enable available subset once finished
-      # rails_bottomLeft: true,
-      # rails_bottomRight: true,
-      # rails_horizontal: true,
-      # rails_topLeft: true,
-      # rails_topRight: true,
-      # rails_unpoweredHorizontal: true,
-      # rails_unpoweredVertical: true,
-      # rails_vertical: true,
-      # rails_poweredHorizontal: true,
-      # rails_poweredVertical: true,
-      # rails_redstoneTorch: true
-    })
+    action_plane: ALL_BLOCKS.merge(
+      {
+        creeper: true,
+        sheep: true,
+        cropWheat: true,
+        treeAcacia: true,
+        treeBirch: true,
+        treeJungle: true,
+        treeOak: true,
+        treeSpruce: true
+        # TODO(bjordan): rename & enable available subset once finished
+        # rails_bottomLeft: true,
+        # rails_bottomRight: true,
+        # rails_horizontal: true,
+        # rails_topLeft: true,
+        # rails_topRight: true,
+        # rails_unpoweredHorizontal: true,
+        # rails_unpoweredVertical: true,
+        # rails_vertical: true,
+        # rails_poweredHorizontal: true,
+        # rails_poweredVertical: true,
+        # rails_redstoneTorch: true
+      }
+    )
   }
 
   TILES_TO_PREVIEW_IMAGES = {
@@ -412,9 +414,11 @@ class Craft < Blockly
     default_game_params[:failure_check_function] = SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS[:neverFailEarly]
     default_game_params[:level_verification_timeout] = '30000'
 
-    create!(level_params.
-                merge(user: params[:user], game: Game.craft, level_num: 'custom').
-                merge(default_game_params))
+    create!(
+      level_params.
+        merge(user: params[:user], game: Game.craft, level_num: 'custom').
+        merge(default_game_params)
+    )
   end
 
   # Attributes that are stored as JSON strings but should be passed through to the app as

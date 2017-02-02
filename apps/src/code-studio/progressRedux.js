@@ -19,6 +19,7 @@ const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
+const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -39,7 +40,8 @@ const initialState = {
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
   postMilestoneDisabled: false,
-  isHocScript: null
+  isHocScript: null,
+  isSummaryView: true
 };
 
 /**
@@ -142,6 +144,13 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_IS_SUMMARY_VIEW) {
+    return {
+      ...state,
+      isSummaryView: action.isSummaryView
+    };
+  }
+
   return state;
 }
 
@@ -211,6 +220,7 @@ export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
 export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
 export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
+export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, isSummaryView });
 
 // Selectors
 
@@ -220,14 +230,48 @@ export const hasLockableStages = state => state.stages.some(stage => stage.locka
 export const lessonNames = state => state.stages.map(stage => stage.name);
 
 // TODO - account for locked levels
-export const levelsByStage = state => (
+export const levelsByLesson = state => (
   state.stages.map(stage => (
     stage.levels.map(level => ({
       status: level.status,
-      url: level.url
+      url: level.url,
+      name: level.name
     }))
   ))
 );
+
+/**
+ * Given a set of levels, groups them in sets of progressions, where each
+ * progression is a set of adjacent levels sharing the same name (where that
+ * "same" name might also just be undefined)
+ * @param {Level[]} levels
+ * @returns {object[]} An array of progressions, where each consists of a name,
+ *   the position of the progression in the input array, and the set of levels
+ *   in the progression
+ */
+export const progressionsFromLevels = levels => {
+  const progressions = [];
+  let currentProgression = {
+    start: 0,
+    name: levels[0].name,
+    levels: [levels[0]]
+  };
+  levels.slice(1).forEach((level, index) => {
+    if (level.name === currentProgression.name) {
+      currentProgression.levels.push(level);
+    } else {
+      progressions.push(currentProgression);
+      currentProgression = {
+        // + 1 because we sliced off the first element
+        start: index + 1,
+        name: level.name,
+        levels: [level]
+      };
+    }
+  });
+  progressions.push(currentProgression);
+  return progressions;
+};
 
 /* start-test-block */
 // export private function(s) to expose to unit testing

@@ -1,26 +1,11 @@
 /* globals appOptions */
 
-import {
-  showDialog,
-  showStartOverDialog,
-  showInstructionsDialog,
-  processResults
-} from  '@cdo/apps/code-studio/levels/dialogHelper';
+import { showDialog, processResults } from  '@cdo/apps/code-studio/levels/dialogHelper';
 import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
 /**
- * This file injects some of our dialog related methods onto the dashboard namespace
- * and does some handling of submit button interactions.
+ * This file does some handling of submit button interactions.
  */
-
-window.dashboard = window.dashboard || {};
-// These are placed on the dashboard namespace, as they are still used by some
-// files in dashboard/public
-window.dashboard.dialog = {
-  showStartOverDialog: showStartOverDialog,
-  showInstructionsDialog: showInstructionsDialog,
-  processResults: processResults
-};
 
 $(document).ready(function () {
   if (appOptions.dialog.preTitle) {

@@ -131,7 +131,8 @@ class QueueProcessorTest < ActiveSupport::TestCase
       max_rate_proc: max_rate_proc,
       num_processors: 1,
       num_workers_per_processor: num_workers,
-      logger: logger)
+      logger: logger
+    )
     processor = SQS::QueueProcessor.new(config, sqs_metrics)
     processor.start
 

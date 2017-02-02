@@ -53,7 +53,7 @@ module Ops
       assert_equal 'Jefferson Middle School', last_user.ops_school
       assert_equal 'Jefferson Middle School', last_user.school
 
-      assert !ActionMailer::Base.deliveries.empty?
+      refute ActionMailer::Base.deliveries.empty?
 
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
@@ -109,7 +109,7 @@ module Ops
       end
       assert_response :success
 
-      assert !ActionMailer::Base.deliveries.empty?
+      refute ActionMailer::Base.deliveries.empty?
 
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
@@ -138,7 +138,7 @@ module Ops
       end
       assert_response :success
 
-      assert !ActionMailer::Base.deliveries.empty?
+      refute ActionMailer::Base.deliveries.empty?
 
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
