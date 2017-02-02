@@ -52,7 +52,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       "user_id" => user.uid,
       "custom_age" => user.age,
       "lis_person_name_full" => user.name
-)
+    )
 
     lti_post :sso, params
 
