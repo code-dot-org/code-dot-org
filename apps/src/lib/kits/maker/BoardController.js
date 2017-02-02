@@ -1,5 +1,5 @@
 /**
- * @file Serial connection and board component initialization logic for Makerlab
+ * @file Serial connection and board component initialization logic for Maker Toolkit
  */
 /* global Promise */
 
