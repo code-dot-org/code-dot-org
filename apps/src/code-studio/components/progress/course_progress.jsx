@@ -15,6 +15,10 @@ import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 
 const styles = {
+  buttonRow: {
+    // ensure we have height when we only have our toggle (which is floated)
+    minHeight: 50
+  },
   flexHeader: {
     padding: '8px 11px',
     margin: '20px 0 0 0',
@@ -74,14 +78,12 @@ const CourseProgress = React.createClass({
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
-    // Don't yet support PLC
-    const progressRedesign = !professionalLearningCourse &&
-      experiments.isEnabled('progressRedesign');
+    const progressRedesign = experiments.isEnabled('progressRedesign');
 
     return (
       <div>
         {this.props.onOverviewPage && (
-          <div>
+          <div style={styles.buttonRow}>
             <div>
               {!this.props.professionalLearningCourse &&
                 <HrefButton

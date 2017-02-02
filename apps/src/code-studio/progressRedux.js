@@ -227,7 +227,9 @@ export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, i
 // Do we have one or more lockable stages
 export const hasLockableStages = state => state.stages.some(stage => stage.lockable);
 
+// TODO - should i combine these three?
 export const lessonNames = state => state.stages.map(stage => stage.name);
+export const categories = state => state.stages.map(stage => stage.flex_category);
 
 // TODO - account for locked levels
 export const levelsByLesson = state => (
