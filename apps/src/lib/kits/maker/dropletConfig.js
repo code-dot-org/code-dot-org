@@ -1,5 +1,6 @@
 import api from './api';
 import _ from 'lodash';
+import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
     N_COLOR_LEDS,
@@ -7,9 +8,6 @@ import {
     BUTTON_VARS,
     COMPONENT_EVENTS
 } from './PlaygroundConstants';
-
-const COLOR_LIGHT_GREEN = '#D3E965';
-const COLOR_CYAN = '#4DD0E1';
 
 const playSongConfig = {
   song: [
@@ -131,12 +129,12 @@ export const blocks = [
 export const categories = {
   [MAKER_CATEGORY]: {
     color: 'cyan',
-    rgb: COLOR_CYAN,
+    rgb: color['droplet-cyan'],
     blocks: []
   },
   [CIRCUIT_CATEGORY]: {
-    color: 'lightgreen',
-    rgb: COLOR_LIGHT_GREEN,
+    color: 'red',
+    rgb: color['droplet-red'],
     blocks: []
   },
 };

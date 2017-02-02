@@ -4,6 +4,7 @@ import * as api from './api';
 import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
@@ -20,12 +21,6 @@ function chooseAsset(typeFilter, callback) {
     showUnderageWarning: !studioApp.reduxStore.getState().pageConstants.is13Plus
   });
 }
-
-var COLOR_LIGHT_GREEN = '#D3E965';
-var COLOR_BLUE = '#19C3E1';
-var COLOR_RED = '#F78183';
-var COLOR_CYAN = '#4DD0E1';
-var COLOR_YELLOW = '#FFF176';
 
 var stringMethodPrefix = '[string].';
 var arrayMethodPrefix = '[list].';
@@ -186,35 +181,35 @@ export var blocks = [
   {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
 ];
 
-export var categories = {
+export const categories = {
   'UI controls': {
     id: 'uicontrols',
     color: 'yellow',
-    rgb: COLOR_YELLOW,
+    rgb: color['droplet-yellow'],
     blocks: []
   },
   Canvas: {
     id: 'canvas',
     color: 'red',
-    rgb: COLOR_RED,
+    rgb: color['droplet-red'],
     blocks: []
   },
   Data: {
     id: 'data',
     color: 'lightgreen',
-    rgb: COLOR_LIGHT_GREEN,
+    rgb: color['droplet-light-green'],
     blocks: []
   },
   Turtle: {
     id: 'turtle',
     color: 'cyan',
-    rgb: COLOR_CYAN,
+    rgb: color['droplet-cyan'],
     blocks: []
   },
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: COLOR_BLUE,
+    rgb: color['droplet-bright-blue'],
     blocks: []
   },
 };
