@@ -240,16 +240,17 @@ module Poste2
       message_id = @@message_id_cache[message_name] = message[:id]
     end
 
-    POSTE_DB[:poste_deliveries].insert({
-      created_at: DateTime.now,
-      created_ip: recipient[:ip_address],
-      contact_id: recipient[:id],
-      contact_email: recipient[:email],
-      hashed_email: Digest::MD5.hexdigest(recipient[:email]),
-      message_id: message_id,
-      params: (params).to_json,
-    }
-)
+    POSTE_DB[:poste_deliveries].insert(
+      {
+        created_at: DateTime.now,
+        created_ip: recipient[:ip_address],
+        contact_id: recipient[:id],
+        contact_email: recipient[:email],
+        hashed_email: Digest::MD5.hexdigest(recipient[:email]),
+        message_id: message_id,
+        params: (params).to_json,
+      }
+    )
   end
 
   class DeliveryMethod

@@ -65,7 +65,7 @@ STR
       :caller_reference,
       :default_root_object,
       :logging
-)
+    )
     ).merge(
       aliases: {
         quantity: 3,

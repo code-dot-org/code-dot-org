@@ -7,10 +7,12 @@ class ImageLibTest < ActiveSupport::TestCase
     bg_url =  test_image_path('blank_sharing_drawing_anna.png')
     fg_blob = test_image('foreground_overlay.png').to_blob
 
-    framed_image = ImageLib.overlay_image({
+    framed_image = ImageLib.overlay_image(
+      {
         background_url: bg_url,
-        foreground_blob: fg_blob}
-)
+        foreground_blob: fg_blob
+      }
+    )
 
     expected_image_name = 'expected_overlaid_image.png'
     expected_image = test_image(expected_image_name)
@@ -32,22 +34,34 @@ class ImageLibTest < ActiveSupport::TestCase
 
   # Make sure the images_match helper function is working correctly.
   def test_images_match
-    assert images_equal?(test_image('foreground_overlay.png'),
-      test_image('foreground_overlay_copy.png')
-),
+    assert(
+      images_equal?(
+        test_image('foreground_overlay.png'),
+        test_image('foreground_overlay_copy.png')
+      ),
       'Identical images should match'
-    assert images_equal?(test_image('foreground_overlay.png'),
-      test_image('foreground_overlay.png')
-),
+    )
+    assert(
+      images_equal?(
+        test_image('foreground_overlay.png'),
+        test_image('foreground_overlay.png')
+      ),
       'Image should match itself'
-    refute images_equal?(test_image('foreground_overlay.png'),
-      test_image('foreground_overlay_tweaked.png')
-),
+    )
+    refute(
+      images_equal?(
+        test_image('foreground_overlay.png'),
+        test_image('foreground_overlay_tweaked.png')
+      ),
       'Images with same size but different pixels should not match'
-    refute images_equal?(test_image('foreground_overlay.png'),
-      test_image('blank_sharing_drawing_anna.png')
-),
+    )
+    refute(
+      images_equal?(
+        test_image('foreground_overlay.png'),
+        test_image('blank_sharing_drawing_anna.png')
+      ),
       'Images with different sizes and pixels should not match'
+    )
   end
 
   def test_to_png_for_png

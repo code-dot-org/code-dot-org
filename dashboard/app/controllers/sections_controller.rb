@@ -28,9 +28,9 @@ class SectionsController < ApplicationController
   end
 
   def load_section
-    @section = Section.find_by!(code: params[:id],
-                                login_type: [Section::LOGIN_TYPE_PICTURE,
-                                             Section::LOGIN_TYPE_WORD]
-)
+    @section = Section.find_by!(
+      code: params[:id],
+      login_type: [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD]
+    )
   end
 end

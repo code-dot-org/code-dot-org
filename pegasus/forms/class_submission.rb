@@ -34,31 +34,32 @@ class ClassSubmission
   end
 
   def self.formats
-    (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels({
-      'in_school' => %w(
-        daily_programming_course
-        ap_computer_science
-        full_university_cs_curriculum
-        robotics_club
-        programming_integrated_in_other_classes
-        summer_school_cs_program
-        exploring_computer_science
-        other
-      ),
-      'out_of_school' => %w(
-        summer_camp
-        afterschool_program
-        all-day_workshop
-        multi-week_workshop
-        other
-      ),
-      'online' => %w(
-        programming_class
-        teacher_resource
-        other
-      )
-    }
-)
+    (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels(
+      {
+        'in_school' => %w(
+          daily_programming_course
+          ap_computer_science
+          full_university_cs_curriculum
+          robotics_club
+          programming_integrated_in_other_classes
+          summer_school_cs_program
+          exploring_computer_science
+          other
+        ),
+        'out_of_school' => %w(
+          summer_camp
+          afterschool_program
+          all-day_workshop
+          multi-week_workshop
+          other
+        ),
+        'online' => %w(
+          programming_class
+          teacher_resource
+          other
+        )
+      }
+    )
   end
 
   def self.formats_with_i18n_labels(groups)

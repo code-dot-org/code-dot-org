@@ -46,7 +46,7 @@ module SQS
         initial_max_rate: options['initial_max_rate'] || 5000,
         max_rate_proc: options['max_rate_proc'],
         name: options['name']
-)
+      )
     end
 
     def self.create_configs_from_json(json)

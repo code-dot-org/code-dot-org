@@ -9,16 +9,17 @@ class SchoolTest < ActiveSupport::TestCase
 
     schools = School.find_or_create_all_from_tsv('test/fixtures/schools.tsv')
     assert_equal(16, schools.size, 'test data contains 16 schools')
-    assert_not_nil School.find_by({
-      id: 10_000_500_871,
-      school_district_id: 100005,
-      name: 'ALBERTVILLE HIGH SCH',
-      city: 'ALBERTVILLE',
-      state: 'AL',
-      zip: '35950',
-      school_type: 'public',
-    }
-)
+    assert_not_nil School.find_by(
+      {
+        id: 10_000_500_871,
+        school_district_id: 100005,
+        name: 'ALBERTVILLE HIGH SCH',
+        city: 'ALBERTVILLE',
+        state: 'AL',
+        zip: '35950',
+        school_type: 'public',
+      }
+    )
   end
 
   # See CHARTR in http://nces.ed.gov/ccd/pdf/2015150_sc132a_Documentation_052716.pdf

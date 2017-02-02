@@ -213,13 +213,14 @@ class Blockly < Level
       app_options[:skinId] = skin_id if skin_id
 
       # Set some values that Blockly expects on the root of its options string
-      app_options.merge!({
-        baseUrl: Blockly.base_url,
-        app: game.try(:app),
-        droplet: game.try(:uses_droplet?),
-        pretty: Rails.configuration.pretty_apps ? '' : '.min',
-      }
-)
+      app_options.merge!(
+        {
+          baseUrl: Blockly.base_url,
+          app: game.try(:app),
+          droplet: game.try(:uses_droplet?),
+          pretty: Rails.configuration.pretty_apps ? '' : '.min',
+        }
+      )
     end
     options.freeze
   end

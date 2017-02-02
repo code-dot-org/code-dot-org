@@ -119,10 +119,11 @@ def log_result(result)
   return if ENV['TEST_LOCAL'] == 'true' || @sauce_session_id.nil?
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
-  HTTParty.put(url,
+  HTTParty.put(
+    url,
     body: {"passed" => result}.to_json,
     headers: {'Content-Type' => 'application/json'}
-)
+  )
 end
 
 all_passed = true

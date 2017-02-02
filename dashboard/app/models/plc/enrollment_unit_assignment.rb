@@ -111,9 +111,10 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   def enroll_in_module(learning_module)
     return unless learning_module.plc_course_unit == plc_course_unit
 
-    Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self,
-                                                      plc_learning_module: learning_module,
-                                                      user: user
-)
+    Plc::EnrollmentModuleAssignment.find_or_create_by(
+      plc_enrollment_unit_assignment: self,
+      plc_learning_module: learning_module,
+      user: user
+    )
   end
 end

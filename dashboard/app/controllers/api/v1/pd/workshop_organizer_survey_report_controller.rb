@@ -14,7 +14,7 @@ module Api::V1::Pd
 
       survey_report[:all_my_workshops_for_course], facilitator_scores = get_score_for_workshops(
         ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id), facilitator_breakdown: true
-)
+      )
       survey_report.merge!(facilitator_scores)
 
       respond_to do |format|

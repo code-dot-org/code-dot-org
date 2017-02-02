@@ -231,7 +231,7 @@ namespace :seed do
         password: row['Password'],
         password_confirmation: row['Password'],
         birthday: row['Birthday'].blank? ? nil : Date.parse(row['Birthday'])
-)
+      )
     end
   end
 

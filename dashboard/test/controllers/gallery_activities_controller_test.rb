@@ -5,17 +5,20 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   setup do
     @user = create(:user)
     @level_source = create(:level_source, level_source_image: create(:level_source_image))
-    @activity = create(:activity, user: @user,
-                       level: create(:level, game: Game.find_by_app(Game::ARTIST)),
-                       level_source: @level_source
-)
+    @activity = create(
+      :activity,
+      user: @user,
+      level: create(:level, game: Game.find_by_app(Game::ARTIST)),
+      level_source: @level_source
+    )
     @gallery_activity = create(:gallery_activity, user: @user, level_source: @level_source, activity: @activity, autosaved: false)
 
     @playlab_level_source = create(:level_source, level_source_image: create(:level_source_image))
-    @playlab_activity = create(:activity, user: @user,
-                               level: create(:level, game: Game.find_by_app(Game::PLAYLAB)),
-                               level_source: @playlab_level_source
-)
+    @playlab_activity = create(
+      :activity, user: @user,
+      level: create(:level, game: Game.find_by_app(Game::PLAYLAB)),
+      level_source: @playlab_level_source
+    )
     @playlab_gallery_activity = create(:gallery_activity, user: @user, level_source: @playlab_level_source, activity: @playlab_activity, autosaved: false)
 
     @new_level = create(:level, game: Game.find_by_app(Game::PLAYLAB))

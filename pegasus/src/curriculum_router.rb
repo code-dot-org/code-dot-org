@@ -121,14 +121,17 @@ class HttpDocument
     path = resolve_template(locals[:request].site, theme)
     raise Exception, "'#{theme}' theme not found." if path.nil?
 
-    @body = TextRender.haml_file(path, locals.merge({
-      header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
-      body: content,
-      classes: classes,
-      head: head,
-    }
-)
-)
+    @body = TextRender.haml_file(
+      path,
+      locals.merge(
+        {
+          header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
+          body: content,
+          classes: classes,
+          head: head,
+        }
+      )
+    )
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
@@ -139,12 +142,15 @@ class HttpDocument
     path = resolve_template(locals[:request].site, view)
     raise Exception, "'#{view}' view not found." if path.nil?
 
-    @body = TextRender.haml_file(path, locals.merge({
-      header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
-      body:   @body,
-    }
-)
-)
+    @body = TextRender.haml_file(
+      path,
+      locals.merge(
+        {
+          header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
+          body:   @body,
+        }
+      )
+    )
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
@@ -169,13 +175,13 @@ class HttpDocument
 
   def resolve_template(site, view)
     FileUtility.find_first_existing(
-      String.multiply_concat([
-        sites_dir("#{site}/views/#{view}"),
-        sites_dir("all/views/#{view}"),
-      ], [
-        '.haml',
-      ]
-)
+      String.multiply_concat(
+        [
+          sites_dir("#{site}/views/#{view}"),
+          sites_dir("all/views/#{view}"),
+        ],
+        ['.haml']
+      )
     )
   end
 
@@ -287,15 +293,17 @@ module Pegasus
     end
 
     def render(document, locals={})
-      document.to_html!(locals.merge({
-        settings: settings,
-        request: request,
-        response: response,
-        params: params,
-        session: session,
-      }
-)
-)
+      document.to_html!(
+        locals.merge(
+          {
+            settings: settings,
+            request: request,
+            response: response,
+            params: params,
+            session: session,
+          }
+        )
+      )
       deliver(document)
     end
 
@@ -327,11 +335,14 @@ module Pegasus
 
         extnames.each do |extname|
           if File.file?(path = "#{parent}/_all#{extname}")
-            return HttpDocument.from_file(path, headers.merge({
-              'Cache-Control' => "max-age=#{settings.document_max_age}, private, must-revalidate"
-            }
-)
-)
+            return HttpDocument.from_file(
+              path,
+              headers.merge(
+                {
+                  'Cache-Control' => "max-age=#{settings.document_max_age}, private, must-revalidate"
+                }
+              )
+            )
           end
         end
       end

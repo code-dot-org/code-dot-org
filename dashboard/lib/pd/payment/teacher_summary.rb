@@ -74,14 +74,15 @@ module Pd::Payment
       }
 
       if with_payment
-        line_item.merge!({
-          pay_period: workshop_summary.pay_period,
-          payment_type: payment.try(&:type),
-          payment_rate: payment.try(&:rate),
-          qualified: qualified?,
-          payment_amount: payment.try(&:amount)
-        }
-)
+        line_item.merge!(
+          {
+            pay_period: workshop_summary.pay_period,
+            payment_type: payment.try(&:type),
+            payment_rate: payment.try(&:rate),
+            qualified: qualified?,
+            payment_amount: payment.try(&:amount)
+          }
+        )
       end
 
       line_item

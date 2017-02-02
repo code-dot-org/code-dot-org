@@ -193,8 +193,9 @@ begin
     # We set basic_proficiency_at before the other timestamps, as it can depend
     # on historical timestamp values.
     proficiency.basic_proficiency_at = compute_basic_proficiency_at(
-      proficiency, line
-)
+      proficiency,
+      line
+    )
     proficiency.created_at = TIME_NOW unless proficiency.created_at
     proficiency.updated_at = TIME_NOW
     # Though not accurate, TIME_CUTOFF is the most accurate estimate we have.

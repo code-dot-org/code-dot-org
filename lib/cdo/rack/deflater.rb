@@ -44,9 +44,10 @@ module Rack
 
       request = Request.new(env)
 
-      encoding = Utils.select_best_encoding(%w(gzip deflate identity),
+      encoding = Utils.select_best_encoding(
+        %w(gzip deflate identity),
         request.accept_encoding
-)
+      )
 
       # Set the Vary HTTP header.
       vary = headers["Vary"].to_s.split(",").map(&:strip)

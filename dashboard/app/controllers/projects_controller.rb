@@ -79,7 +79,7 @@ class ProjectsController < ApplicationController
         useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
       }
-)
+    )
   end
 
   def show
@@ -146,7 +146,7 @@ class ProjectsController < ApplicationController
       nil,
       src_channel_id,
       use_firebase
-)
+    )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id

@@ -109,11 +109,12 @@ module Cdo
           google_client.tap(&:refresh!).id_token
         # Decode the JWT id_token to use the Google email as the AWS role session name.
         token_params = JWT.decode(id_token, nil, false).first
-        @client.assume_role_with_web_identity(@assume_role_params.merge(
-          web_identity_token: id_token,
-          role_session_name: token_params['email']
+        @client.assume_role_with_web_identity(
+          @assume_role_params.merge(
+            web_identity_token: id_token,
+            role_session_name: token_params['email']
+          )
         )
-)
       rescue Aws::STS::Errors::AccessDenied => e
         if (@google_client = google_oauth)
           retry
