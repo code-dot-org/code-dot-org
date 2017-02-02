@@ -24,8 +24,9 @@ def git_generate_changelog
   end
 
   relevant_matches = matches.select do |match|
-    # ignore merges from our various server branches
-    !match.nil? && !['staging', 'test', 'levelbuilder'].include?(match['branch'])
+    # ignore merges from staging and test, which represent standard
+    # deploy operations
+    !match.nil? && !['staging', 'test'].include?(match['branch'])
   end
 
   items = relevant_matches.map do |match|
