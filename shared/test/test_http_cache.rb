@@ -82,13 +82,15 @@ module Cdo
 
       # Mocks a simple text/plain response body at the specified URL.
       def mock_response(url, body, request_headers={}, response_headers={}, method='GET')
-        @mock_responses.push({
-          url: url,
-          body: body,
-          request: request_headers,
-          response: response_headers,
-          method: method
-        })
+        @mock_responses.push(
+          {
+            url: url,
+            body: body,
+            request: request_headers,
+            response: response_headers,
+            method: method
+          }
+        )
       end
 
       def proxy_request(url, headers={}, cookies={}, method='GET')

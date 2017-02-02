@@ -1962,3 +1962,15 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
+  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
+    science education movement. You can participate in high-quality K-12th grade professional
+    learning programs <strong>at absolutely no cost to you or your school</strong>.
+    Take the lead on computer science in your school, and apply for professional learning.
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
+  csppostap_name: 'Post AP: Databases in Apps'
+  csf2_draft_category_name: 'Under Development: Courses A - F'

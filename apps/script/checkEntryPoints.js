@@ -65,7 +65,7 @@ const SILENCED = [
   'levelbuilder_markdown',
   'levelbuilder_studio',
   'levels/contract_match',
-  'levels/dashboardDialogHelper',
+  'levels/submissionHelper',
   'levels/external',
   'levels/levelGroup',
   'levels/multi',

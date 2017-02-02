@@ -49,15 +49,17 @@ class PosteRoutesTest < Minitest::Test
           Rack::MockSession.new(MockPegasus.new, "studio.code.org")
         )
 
-        @id = DB[:poste_deliveries].insert({
-          created_at: DateTime.now,
-          created_ip: '1.2.3.4',
-          contact_id: '1',
-          contact_email: EMAIL,
-          hashed_email: HASHED_EMAIL,
-          message_id: 1,
-          params: {}.to_json
-        })
+        @id = DB[:poste_deliveries].insert(
+          {
+            created_at: DateTime.now,
+            created_ip: '1.2.3.4',
+            contact_id: '1',
+            contact_email: EMAIL,
+            hashed_email: HASHED_EMAIL,
+            message_id: 1,
+            params: {}.to_json
+          }
+        )
       end
 
       it 'unsubscribes new contact' do
@@ -79,7 +81,8 @@ class PosteRoutesTest < Minitest::Test
             created_ip: '1.2.3.4',
             updated_at: DateTime.now,
             updated_ip: '1.2.3.4'
-          })
+          }
+)
           @pegasus.get "/u/#{Poste.encrypt(@id)}"
           assert DB[:contacts].
             where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
@@ -107,15 +110,17 @@ class PosteRoutesTest < Minitest::Test
 
       it 'unsubscribes existing contact' do
         DB.transaction(rollback: :always) do
-          DB[:contacts].insert({
-            email: EMAIL,
-            hashed_email: HASHED_EMAIL,
-            name: 'existing contact',
-            created_at: DateTime.now,
-            created_ip: '1.2.3.4',
-            updated_at: DateTime.now,
-            updated_ip: '1.2.3.4'
-          })
+          DB[:contacts].insert(
+            {
+              email: EMAIL,
+              hashed_email: HASHED_EMAIL,
+              name: 'existing contact',
+              created_at: DateTime.now,
+              created_ip: '1.2.3.4',
+              updated_at: DateTime.now,
+              updated_ip: '1.2.3.4'
+            }
+          )
           @pegasus.get "/unsubscribe/#{EMAIL}"
           assert DB[:contacts].
             where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
@@ -140,15 +145,17 @@ class PosteRoutesTest < Minitest::Test
           Rack::MockSession.new(MockPegasus.new, "studio.code.org")
         )
 
-        @id = DB[:poste_deliveries].insert({
-          created_at: DateTime.now,
-          created_ip: '1.2.3.4',
-          contact_id: '1',
-          contact_email: EMAIL,
-          hashed_email: HASHED_EMAIL,
-          message_id: 1,
-          params: {}.to_json
-        })
+        @id = DB[:poste_deliveries].insert(
+          {
+            created_at: DateTime.now,
+            created_ip: '1.2.3.4',
+            contact_id: '1',
+            contact_email: EMAIL,
+            hashed_email: HASHED_EMAIL,
+            message_id: 1,
+            params: {}.to_json
+          }
+        )
       end
 
       it 'creates poste_opens row' do

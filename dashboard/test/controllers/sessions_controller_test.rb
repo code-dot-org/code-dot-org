@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require 'test_helper'
+require 'timecop'
 
 class SessionsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -137,6 +138,38 @@ class SessionsControllerTest < ActionController::TestCase
           login: '',
           hashed_email: user.hashed_email,
           password: 'wrong password'
+        }
+      }
+    end
+  end
+
+  test 'signing in user creates SignIn' do
+    frozen_time = '1985-10-26 01:20:00'
+    DateTime.stubs(:now).returns(frozen_time)
+    user = create :user, sign_in_count: 2
+    assert_creates(SignIn) do
+      post :create, params: {
+        user: {
+          login: '',
+          hashed_email: user.hashed_email,
+          password: user.password
+        }
+      }
+    end
+    sign_in = SignIn.find_by_user_id(user.id)
+    assert sign_in
+    assert_equal 2 + 1, sign_in.sign_in_count
+    assert_equal frozen_time + ' UTC', sign_in.sign_in_at.to_s
+  end
+
+  test 'failed signin does not create SignIn' do
+    user = create :user
+    assert_does_not_create(SignIn) do
+      post :create, params: {
+        user: {
+          login: '',
+          hashed_email: user.hashed_email,
+          password: 'wrongpassword'
         }
       }
     end
