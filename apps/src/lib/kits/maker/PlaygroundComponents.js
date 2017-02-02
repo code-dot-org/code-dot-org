@@ -3,12 +3,12 @@
  * conforming to Maker API droplet blocks.
  */
 
-import {N_COLOR_LEDS , TOUCH_PINS} from '../lib/kits/maker/PlaygroundConstants';
-import LookbackLogger from '../lib/kits/maker/LookbackLogger';
+import {N_COLOR_LEDS , TOUCH_PINS} from './PlaygroundConstants';
+import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
-import TouchSensor from '../lib/kits/maker/TouchSensor';
+import TouchSensor from './TouchSensor';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
