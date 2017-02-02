@@ -25,10 +25,12 @@ class AdminHocController < ApplicationController
             "#{year.to_i + 1}-01-01"
           ).
           group(:name, :email).
-          group_and_count(Sequel.as(
-            Sequel.qualify(:forms, :created_at).cast(:date),
-            :created_at_day
-          )).
+          group_and_count(
+            Sequel.as(
+              Sequel.qualify(:forms, :created_at).cast(:date),
+              :created_at_day
+            )
+          ).
           order(:created_at_day).
           all.
           map do |row|

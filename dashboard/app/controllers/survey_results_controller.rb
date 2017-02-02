@@ -14,9 +14,18 @@ class SurveyResultsController < ApplicationController
     end
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the white list
+  # through. Also sanitize the parameters to only contain UTF-8.
   def survey_result_params
-    params.require(:survey).
+    whitelisted_params = params.require(:survey).
       permit(SurveyResult::ALL_ATTRS.map(&:to_sym) + [:kind])
+    whitelisted_params.each do |k, v|
+      whitelisted_params[k] = v.force_encoding('BINARY').encode(
+        'utf-8',
+        invalid: :replace,
+        undef: :replace
+      )
+    end
+    whitelisted_params
   end
 end

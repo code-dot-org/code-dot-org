@@ -211,8 +211,11 @@ class User < ActiveRecord::Base
       end
       params[:school] ||= params[:ops_school]
 
-      user = User.invite!(email: params[:email],
-                          user_type: TYPE_TEACHER, age: 21)
+      user = User.invite!(
+        email: params[:email],
+        user_type: TYPE_TEACHER,
+        age: 21
+      )
       user.invited_by = invited_by_user
     end
 
@@ -382,8 +385,8 @@ class User < ActiveRecord::Base
 
   validate :presence_of_email, if: :teacher?
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
-  validates_format_of :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
   validates :email, no_utf8mb4: true
+  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
 
   def presence_of_email
@@ -506,8 +509,12 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     if login.present?
       return nil if login.utf8mb4?
-      where(['username = :value OR email = :value OR hashed_email = :hashed_value',
-             { value: login.downcase, hashed_value: hash_email(login.downcase) }]).first
+      where(
+        [
+          'username = :value OR email = :value OR hashed_email = :hashed_value',
+          { value: login.downcase, hashed_value: hash_email(login.downcase) }
+        ]
+      ).first
     elsif hashed_email = conditions.delete(:hashed_email)
       return nil if hashed_email.utf8mb4?
       where(hashed_email: hashed_email).first
@@ -557,8 +564,10 @@ class User < ActiveRecord::Base
   end
 
   def user_level_for(script_level, level)
-    user_levels.find_by(script_id: script_level.script_id,
-                        level_id: level.id)
+    user_levels.find_by(
+      script_id: script_level.script_id,
+      level_id: level.id
+    )
   end
 
   def user_level_locked?(script_level, level)
@@ -1010,7 +1019,11 @@ class User < ActiveRecord::Base
 
     # Create peer reviews after submitting a peer_reviewable solution
     if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
-      PeerReview.create_for_submission(user_level, level_source_id)
+      learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
+
+      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user: self, plc_learning_module: learning_module)
+        PeerReview.create_for_submission(user_level, level_source_id)
+      end
     end
 
     if new_level_completed && script_id

@@ -30,9 +30,10 @@ var baseConfig = {
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
       {
-        test:/.png|.jpg|.jpeg|.gif|.svg/,
+        test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [
           path.resolve(__dirname, 'static'),
+          path.resolve(__dirname, 'src'),
         ],
         loader: "url-loader?limit=1024",
       },

@@ -3,6 +3,7 @@ require 'test_helper'
 class PeerReviewTest < ActiveSupport::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    @learning_module = create :plc_learning_module
 
     @level = FreeResponse.find_or_create_by!(
       game: Game.free_response,
@@ -14,8 +15,11 @@ class PeerReviewTest < ActiveSupport::TestCase
     @level.peer_reviewable = 'true'
     @level.save!
 
-    @script_level = create :script_level, levels: [@level]
+    @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
     @script = @script_level.script
+
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
+
     @user = create :user
   end
 
@@ -36,6 +40,15 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_source = create :level_source, data: 'My submitted answer'
 
     assert_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
+      track_progress level_source.id
+    end
+  end
+
+  test 'submitting a peer reviewed level when I am not enrolled in the module should not create PeerReview objects' do
+    level_source = create :level_source, data: 'My submitted answer'
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(false)
+
+    assert_no_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
       track_progress level_source.id
     end
   end
