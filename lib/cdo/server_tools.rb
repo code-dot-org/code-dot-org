@@ -95,15 +95,18 @@ class ServerTools
   # Returns the Chef json hash for all of the servers matching `name_glob`.
   def self.find_frontends(name_glob)
     JSON.parse(
-      `knife search node "roles:front-end AND chef_environment:production AND name:#{name_glob}" --format json`)['rows']
+      `knife search node "roles:front-end AND chef_environment:production AND name:#{name_glob}" --format json`
+    )['rows']
   end
 
   # Returns an array of ServerIdentifier records for each of the servers whose name matches `name_glob`.
   def self.find_frontend_identifiers(name_glob)
     find_frontends(name_glob).map do |fe|
-      ServerIdentifier.new(name: fe['name'],
-                           hostname: fe['automatic']['ec2']['hostname'],
-                           instance_id: fe['automatic']['ec2']['instance_id'])
+      ServerIdentifier.new(
+        name: fe['name'],
+        hostname: fe['automatic']['ec2']['hostname'],
+        instance_id: fe['automatic']['ec2']['instance_id']
+      )
     end
   end
 

@@ -54,7 +54,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         'info',
         nickname: '',
         name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'first_last@clever_teacher.xx',
+        email: 'first_last@clever-teacher.xx',
         user_type: 'teacher',
         dob: nil,
         gender: nil
@@ -83,7 +83,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         'info',
         nickname: '',
         name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'first_last@clever_district_admin.xx',
+        email: 'first_last@clever-district-admin.xx',
         user_type: 'district_admin',
         dob: nil,
         gender: nil
@@ -112,7 +112,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         'info',
         nickname: '',
         name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'first_last@clever_school_admin.xx',
+        email: 'first_last@clever-school-admin.xx',
         user_type: 'school_admin',
         dob: nil,
         gender: nil

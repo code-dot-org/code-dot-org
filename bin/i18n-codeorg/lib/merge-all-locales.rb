@@ -55,10 +55,11 @@ if file_type == "yml"
   prev_translation = YAML.load_file(prev_translation_path)
 
   # Get new translation
-  new_translation[new_translation.keys[0]] =
-    merge_translation_tree(en_translation.values[0],
-      new_translation.values[0],
-      prev_translation.values[0])
+  new_translation[new_translation.keys[0]] = merge_translation_tree(
+    en_translation.values[0],
+    new_translation.values[0],
+    prev_translation.values[0]
+  )
 
   File.open(prev_translation_path, 'w+') do |f|
     f.write(new_translation.to_yaml)
@@ -69,9 +70,11 @@ else
   prev_translation = JSON.parse(File.read(prev_translation_path))
 
   # Get new translation
-  new_translation = merge_translation_tree(en_translation,
+  new_translation = merge_translation_tree(
+    en_translation,
     new_translation,
-    prev_translation)
+    prev_translation
+  )
 
   File.open(prev_translation_path, 'w+') do |f|
     f.write(JSON.pretty_generate(new_translation))
