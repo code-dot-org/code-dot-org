@@ -682,7 +682,7 @@ Applab.init = function (config) {
 
   config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
 
-  // Set the custom set of blocks (may have had makerlab blocks merged in) so
+  // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
   config.level.levelBlocks = config.dropletConfig.blocks;
 
