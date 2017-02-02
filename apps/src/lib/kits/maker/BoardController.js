@@ -11,8 +11,8 @@ import ChromeSerialPort from 'chrome-serialport';
 import PlaygroundIO from 'playground-io';
 
 import _ from 'lodash';
-import {initializeCircuitPlaygroundComponents} from '../lib/kits/maker/PlaygroundComponents';
-import TouchSensor from '../lib/kits/maker/TouchSensor';
+import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
+import TouchSensor from './TouchSensor';
 
 /** @const {string} */
 const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';

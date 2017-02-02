@@ -45,7 +45,7 @@ import * as applabConstants from './constants';
 const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
-import BoardController from '../makerlab/BoardController';
+import BoardController from '../lib/kits/maker/BoardController';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {
   getContainedLevelResultInfo,
