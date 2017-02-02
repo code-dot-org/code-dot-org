@@ -12,8 +12,7 @@ const styles = {
     borderLeftColor: color.border_gray,
     borderTopColor: color.border_gray,
     borderRightColor: lighterBorder,
-    borderBottomColor: lighterBorder,
-    float: 'left'
+    borderBottomColor: lighterBorder
   },
   headerRow: {
     backgroundColor: color.table_header,
