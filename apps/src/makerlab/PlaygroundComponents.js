@@ -3,7 +3,7 @@
  * conforming to Maker API droplet blocks.
  */
 
-import {N_COLOR_LEDS , TOUCH_PINS} from './PlaygroundConstants';
+import {N_COLOR_LEDS , TOUCH_PINS} from '../lib/kits/maker/PlaygroundConstants';
 import LookbackLogger from '../lib/kits/maker/LookbackLogger';
 import _ from 'lodash';
 import five from 'johnny-five';
