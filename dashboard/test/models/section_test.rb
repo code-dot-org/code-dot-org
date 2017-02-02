@@ -35,7 +35,7 @@ class SectionTest < ActiveSupport::TestCase
 
     student_section = Section.create(user: student, name: "a section")
 
-    assert !student_section.persisted?
+    refute student_section.persisted?
     assert_equal ["User must be a teacher"], student_section.errors.full_messages
   end
 
@@ -55,7 +55,7 @@ class SectionTest < ActiveSupport::TestCase
 
     section = follower.section
 
-    assert !section.destroy
+    refute section.destroy
     assert Section.exists?(section.id)
   end
 
@@ -64,7 +64,7 @@ class SectionTest < ActiveSupport::TestCase
 
     assert section.destroy
 
-    assert !Section.exists?(section.id)
+    refute Section.exists?(section.id)
   end
 
   test 'add_student adds student to section' do

@@ -397,10 +397,10 @@ class NetSimApiTest < Minitest::Test
     assert_equal 204, @net_sim_api.last_response.status
 
     # Assert nodeA is gone
-    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    refute record_exists(TABLE_NAMES[:node], node_a['id'])
 
     # Assert wire AB and CA are gone
-    assert !record_exists(TABLE_NAMES[:wire], wire_ab['id'])
+    refute record_exists(TABLE_NAMES[:wire], wire_ab['id'])
 
     # Assert node B and C are still there
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
@@ -456,10 +456,10 @@ class NetSimApiTest < Minitest::Test
     yield(node_a['id'])
 
     # Assert nodeA is gone
-    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    refute record_exists(TABLE_NAMES[:node], node_a['id'])
 
     # Assert message from B to A is gone
-    assert !record_exists(TABLE_NAMES[:message], message_b_to_a['id'])
+    refute record_exists(TABLE_NAMES[:message], message_b_to_a['id'])
 
     # Assert node B is still there
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
@@ -518,8 +518,8 @@ class NetSimApiTest < Minitest::Test
     yield([node_a['id'], node_b['id']])
 
     # Assert nodes A and B are gone, but C is still there.
-    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
-    assert !record_exists(TABLE_NAMES[:node], node_b['id'])
+    refute record_exists(TABLE_NAMES[:node], node_a['id'])
+    refute record_exists(TABLE_NAMES[:node], node_b['id'])
     assert record_exists(TABLE_NAMES[:node], node_c['id'])
 
     # Assert all wires and messages are gone
@@ -641,9 +641,9 @@ class NetSimApiTest < Minitest::Test
     yield query_string # Performs delete using block provided by caller
     assert_equal 204, @net_sim_api.last_response.status
 
-    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    refute record_exists(TABLE_NAMES[:node], node_a['id'])
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
-    assert !record_exists(TABLE_NAMES[:node], node_c['id'])
+    refute record_exists(TABLE_NAMES[:node], node_c['id'])
 
   ensure
     delete_node(node_a['id'])

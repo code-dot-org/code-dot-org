@@ -24,7 +24,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_response :success
     assert assigns(:user)
 
-    assert !assigns(:user).persisted?
+    refute assigns(:user).persisted?
   end
 
   test "student_user_new without section code" do
@@ -286,7 +286,7 @@ class FollowersControllerTest < ActionController::TestCase
       post :remove, params: {teacher_user_id: follower.user_id}
     end
 
-    assert !Follower.exists?(follower.id)
+    refute Follower.exists?(follower.id)
   end
 
   test "student can remove teacher if teacher does not have email" do
@@ -299,7 +299,7 @@ class FollowersControllerTest < ActionController::TestCase
       post :remove, params: {teacher_user_id: follower.user_id}
     end
 
-    assert !Follower.exists?(follower.id)
+    refute Follower.exists?(follower.id)
   end
 
   test "student_user_new when signed in in section with script" do

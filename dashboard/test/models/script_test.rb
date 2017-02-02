@@ -238,7 +238,7 @@ class ScriptTest < ActiveSupport::TestCase
     }.map{|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
-      assert !s.hidden?, "#{s.name} is hidden when it should not be"
+      refute s.hidden?, "#{s.name} is hidden when it should not be"
     end
 
     # all other scripts are hidden

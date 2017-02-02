@@ -41,7 +41,7 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     key = "key"
     value = [1, 3, 2]
 
-    assert !listener.changed, 'on_change should not be called before change'
+    refute listener.changed, 'on_change should not be called before change'
     cache.set(key, value)
     assert_equal value, cache.get(key)
     assert listener.changed, 'on_change should be called after local set'
@@ -60,8 +60,8 @@ class DatastoreCacheTest < ActiveSupport::TestCase
 
     # Set the same value and verify that the change listeners are not called.
     cache.set(key, value2)
-    assert !listener.changed
-    assert !listener2.changed
+    refute listener.changed
+    refute listener2.changed
   end
 
   test 'cache is refreshed after expiration time' do
@@ -81,7 +81,7 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     assert listener.changed, 'on_change should be called after polled updated'
     listener.reset
     sleep 0.1
-    assert !listener.changed, 'on_change should not be called when polling detects no changes'
+    refute listener.changed, 'on_change should not be called when polling detects no changes'
 
     @data_adapter.set(key, 'new value')
     sleep 0.1
