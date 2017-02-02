@@ -24,7 +24,7 @@ const playSongConfig = {
   tempo: 100000
 };
 
-const MAKER_CATEGORY = 'Maker Lab';
+const MAKER_CATEGORY = 'Maker';
 const CIRCUIT_CATEGORY = 'Circuit';
 
 const pixelType = '[ColorLed].';
