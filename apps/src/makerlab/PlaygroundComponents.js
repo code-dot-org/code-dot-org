@@ -8,7 +8,7 @@ import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
-import TouchSensor from './TouchSensor';
+import TouchSensor from '../lib/kits/maker/TouchSensor';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
