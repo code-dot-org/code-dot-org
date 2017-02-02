@@ -1699,37 +1699,37 @@ applabCommands.pinMode = function (opts) {
     servo: 4
   };
 
-  Applab.makerlabController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
+  Applab.makerController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
 };
 
 applabCommands.digitalWrite = function (opts) {
   apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
 
-  Applab.makerlabController.digitalWrite(opts.pin, opts.value);
+  Applab.makerController.digitalWrite(opts.pin, opts.value);
 };
 
 applabCommands.digitalRead = function (opts) {
   apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
 
-  return Applab.makerlabController.digitalRead(opts.pin, opts.callback);
+  return Applab.makerController.digitalRead(opts.pin, opts.callback);
 };
 
 applabCommands.analogWrite = function (opts) {
   apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
 
-  Applab.makerlabController.analogWrite(opts.pin, opts.value);
+  Applab.makerController.analogWrite(opts.pin, opts.value);
 };
 
 applabCommands.analogRead = function (opts) {
   apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
 
-  return Applab.makerlabController.analogRead(opts.pin, opts.callback);
+  return Applab.makerController.analogRead(opts.pin, opts.callback);
 };
 
 applabCommands.onBoardEvent = function (opts) {
-  return Applab.makerlabController.onBoardEvent(opts.component, opts.event, opts.callback);
+  return Applab.makerController.onBoardEvent(opts.component, opts.event, opts.callback);
 };
 
 /**

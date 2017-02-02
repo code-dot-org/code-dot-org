@@ -147,7 +147,7 @@ function loadLevel() {
   }
 
   if (Applab.makerlabEnabled) {
-    Applab.makerlabController = new BoardController();
+    Applab.makerController = new BoardController();
   }
 }
 
@@ -996,8 +996,8 @@ Applab.reset = function () {
     designMode.resetPropertyTab();
   }
 
-  if (Applab.makerlabController) {
-    Applab.makerlabController.reset();
+  if (Applab.makerController) {
+    Applab.makerController.reset();
   }
 
   if (level.showTurtleBeforeRun) {
@@ -1183,8 +1183,8 @@ Applab.execute = function () {
     }
   }
 
-  if (Applab.makerlabController) {
-    Applab.makerlabController
+  if (Applab.makerController) {
+    Applab.makerController
         .connectAndInitialize(codegen, Applab.JSInterpreter)
         .catch((error) => {
           studioApp.displayPlayspaceAlert("error",
