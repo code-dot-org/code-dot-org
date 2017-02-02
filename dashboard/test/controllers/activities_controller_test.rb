@@ -1183,7 +1183,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'does not backfill new users who submit unsuccessful first attempt' do
-    assert !@user.needs_to_backfill_user_scripts?
+    refute @user.needs_to_backfill_user_scripts?
 
     # do all the logging
     @controller.expects :log_milestone
@@ -1199,7 +1199,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
-    assert !@user.needs_to_backfill_user_scripts?
+    refute @user.needs_to_backfill_user_scripts?
   end
 
   test "milestone with one pairing creates new user levels" do

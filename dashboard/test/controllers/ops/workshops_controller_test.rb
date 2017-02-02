@@ -51,7 +51,7 @@ module Ops
       @workshop.reload
       assert_equal [unexpected_teacher_1, unexpected_teacher_2], @workshop.unexpected_teachers
 
-      assert !ActionMailer::Base.deliveries.empty?
+      refute ActionMailer::Base.deliveries.empty?
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
       assert_equal ['ops@code.org'], mail.to
