@@ -25,7 +25,6 @@
 #  locale                     :string(10)       default("en-US"), not null
 #  birthday                   :date
 #  user_type                  :string(16)
-#  school                     :string(255)
 #  full_address               :string(1024)
 #  total_lines                :integer          default(0), not null
 #  prize_earned               :boolean          default(FALSE)
