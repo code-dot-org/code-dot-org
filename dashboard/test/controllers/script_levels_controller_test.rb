@@ -88,7 +88,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   def get_show_script_level_page(script_level)
-    get :show, script_id: script_level.script, stage_position: script_level.stage.absolute_position, id: script_level.position
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage.absolute_position,
+      id: script_level.position
+    }
   end
 
   # Asserts that each expected directive is contained in the cache-control header,
