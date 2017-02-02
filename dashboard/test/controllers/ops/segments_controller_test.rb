@@ -46,7 +46,7 @@ module Ops
       start_time = DateTime.now
       patch :update, params: {id: @segment.id, segment: {start: start_time}}
 
-      get :show, id: @segment.id
+      get :show, params: {id: @segment.id}
       assert_response :success
 
       # Compare DateTime#to_i because separately-parsed DateTime objects are not equal
