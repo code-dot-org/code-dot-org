@@ -1,12 +1,12 @@
-import api from '../lib/kits/maker/api';
+import api from './api';
 import _ from 'lodash';
-import {getFirstParam} from '../dropletUtils';
+import {getFirstParam} from '../../../dropletUtils';
 import {
     N_COLOR_LEDS,
     SENSOR_VARS,
     BUTTON_VARS,
     COMPONENT_EVENTS
-} from '../lib/kits/maker/PlaygroundConstants';
+} from './PlaygroundConstants';
 
 const COLOR_LIGHT_GREEN = '#D3E965';
 const COLOR_CYAN = '#4DD0E1';
