@@ -161,4 +161,34 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.new.workshop_section?
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
   end
+
+  test 'name safe students' do
+    def verify(actual, expected)
+      section = create :section
+      actual.each do |name|
+        section.add_student(create(:student, name: name))
+      end
+      result = section.name_safe_students.map(&:name)
+      assert_equal expected, result
+    end
+
+    # uses first names if possible
+    verify(["Laura Ferno", "Natalie Ferno"], ["Laura", "Natalie"])
+
+    # uses the minimum characters from the last name if necessary
+    verify(["John Smith", "John Stamos"], ["John Sm", "John St"])
+
+    # Handles a variety of combinations
+    verify(
+      ["Dick Smith", "Dick Tracer", "Harry Smith", "Tom Clancy", "Tom Saywer", "Tom Smith"],
+      ["Dick S", "Dick T", "Harry", "Tom C", "Tom Sa", "Tom Sm"]
+    )
+
+    # Handles names that can't be nicely split into first and last, or
+    # names which use unusual separating characters
+    verify(
+      ["Cher", "J'onn J'onzz", "John\tDoe"],
+      ["Cher", "J'onn J'onzz", "John"]
+    )
+  end
 end
