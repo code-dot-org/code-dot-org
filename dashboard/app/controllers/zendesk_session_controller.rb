@@ -33,7 +33,8 @@ class ZendeskSessionController < ApplicationController
       jti: jti, # Unique token id, helps prevent replay attacks
       name: user.name,
       email: user.email,
-    }, SECRET)
+    }, SECRET
+)
 
     redirect_to zendesk_sso_url(payload)
   end

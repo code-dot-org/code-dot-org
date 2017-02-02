@@ -28,7 +28,8 @@ class AdminHocController < ApplicationController
           group_and_count(Sequel.as(
             Sequel.qualify(:forms, :created_at).cast(:date),
             :created_at_day
-          )).
+          )
+).
           order(:created_at_day).
           all.
           map do |row|

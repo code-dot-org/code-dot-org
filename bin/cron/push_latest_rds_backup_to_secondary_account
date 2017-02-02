@@ -63,7 +63,8 @@ def find_shared_snapshot_on_backup(rds_backup, temp_snapshot_name)
     shared_snapshots = rds_backup.db_snapshots({
       max_records: 100,
       include_shared: true,
-    }).select { |snap|
+    }
+).select { |snap|
       snap.snapshot_id.start_with?('arn:aws:rds:') && snap.snapshot_id.end_with?(temp_snapshot_name)
     }
   end
@@ -92,7 +93,8 @@ def share_snapshot_with_account(credentials_backup, latest_snapshot)
   restore_attribute.modify({
       values_to_add: [backup_account_id],
       values_to_remove: []
-  })
+  }
+)
   return copied_snapshot, temp_snapshot_name
 end
 
@@ -129,7 +131,8 @@ def main
     begin
       backed_up_snapshot = shared_snapshot.copy({
         target_db_snapshot_identifier: latest_snapshot.snapshot_id.sub('rds:', '')
-      })
+      }
+)
       wait_for_snapshot_copy(backed_up_snapshot)
       HipChat.developers "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
     rescue Aws::RDS::Errors::DBSnapshotAlreadyExists

@@ -57,7 +57,8 @@ class PosteRoutesTest < Minitest::Test
           hashed_email: HASHED_EMAIL,
           message_id: 1,
           params: {}.to_json
-        })
+        }
+)
       end
 
       it 'unsubscribes new contact' do
@@ -79,7 +80,8 @@ class PosteRoutesTest < Minitest::Test
             created_ip: '1.2.3.4',
             updated_at: DateTime.now,
             updated_ip: '1.2.3.4'
-          })
+          }
+)
           @pegasus.get "/u/#{Poste.encrypt(@id)}"
           assert DB[:contacts].
             where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
@@ -115,7 +117,8 @@ class PosteRoutesTest < Minitest::Test
             created_ip: '1.2.3.4',
             updated_at: DateTime.now,
             updated_ip: '1.2.3.4'
-          })
+          }
+)
           @pegasus.get "/unsubscribe/#{EMAIL}"
           assert DB[:contacts].
             where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
@@ -148,7 +151,8 @@ class PosteRoutesTest < Minitest::Test
           hashed_email: HASHED_EMAIL,
           message_id: 1,
           params: {}.to_json
-        })
+        }
+)
       end
 
       it 'creates poste_opens row' do

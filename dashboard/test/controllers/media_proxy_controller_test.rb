@@ -59,7 +59,8 @@ class MediaProxyControllerTest < ActionController::TestCase
       response,
       response,
       response,
-      response)
+      response
+)
     get :get, params: {u: IMAGE_URI}
     assert_response 500
   end

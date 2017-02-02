@@ -66,7 +66,8 @@ describe Cdo::GoogleCredentials do
     before do
       Cdo::GoogleCredentials.stubs(:config).returns(config)
       config[:client].stub_responses(:assume_role_with_web_identity,
-        credentials: credentials)
+        credentials: credentials
+)
       @system = Object.any_instance.stubs(:system).with { |x| x.match /aws configure set / }
       @oauth_default = Google::Auth.stubs(:get_application_default).returns(oauth)
     end
@@ -85,7 +86,8 @@ describe Cdo::GoogleCredentials do
       config[:client].stub_responses(:assume_role_with_web_identity, [
         {credentials: credentials.dup.tap{|c| c[:expiration] = 1.hour.from_now}},
         {credentials: credentials.dup.tap{|c| c[:expiration] = 2.hours.from_now}}
-      ])
+      ]
+)
       service = Aws::STS::Client.new
       expiration = service.config.credentials.expiration
       expiration.must_equal(service.config.credentials.expiration)
@@ -112,7 +114,8 @@ describe Cdo::GoogleCredentials do
         config[:client].stub_responses(:assume_role_with_web_identity, [
           Aws::STS::Errors::AccessDenied.new(nil, nil),
           {credentials: credentials}
-        ])
+        ]
+)
       end
 
       it 'retries Google auth when invalid credentials are provided' do

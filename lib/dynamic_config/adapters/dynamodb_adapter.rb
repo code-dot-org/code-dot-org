@@ -18,7 +18,8 @@ class DynamoDBAdapter
       key: {
         'data-key' => key
       }
-    })
+    }
+)
     return nil if resp.item.nil?
     begin
       value = Oj.load(resp.item['data-value'])
@@ -39,7 +40,8 @@ class DynamoDBAdapter
         'data-key' => key,
         'data-value' => Oj.dump(value, mode: :strict)
       }
-    })
+    }
+)
   end
 
   # @returns [Hash]
@@ -51,7 +53,8 @@ class DynamoDBAdapter
       resp = @client.scan({
         table_name: @table_name,
         exclusive_start_key: last_evaluated
-      })
+      }
+)
 
       resp.items.each do |item|
         key = item['data-key']

@@ -218,7 +218,8 @@ class Blockly < Level
         app: game.try(:app),
         droplet: game.try(:uses_droplet?),
         pretty: Rails.configuration.pretty_apps ? '' : '.min',
-      })
+      }
+)
     end
     options.freeze
   end

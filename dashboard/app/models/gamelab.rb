@@ -66,7 +66,8 @@ class Gamelab < Blockly
         edit_code: true,
         show_debug_watch: false
       }
-    ))
+    )
+)
   end
 
   def xml_blocks

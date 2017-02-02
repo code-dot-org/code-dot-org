@@ -238,7 +238,8 @@ class Craft < Blockly
       # rails_poweredHorizontal: true,
       # rails_poweredVertical: true,
       # rails_redstoneTorch: true
-    })
+    }
+)
   }
 
   TILES_TO_PREVIEW_IMAGES = {
@@ -414,7 +415,8 @@ class Craft < Blockly
 
     create!(level_params.
                 merge(user: params[:user], game: Game.craft, level_num: 'custom').
-                merge(default_game_params))
+                merge(default_game_params)
+)
   end
 
   # Attributes that are stored as JSON strings but should be passed through to the app as

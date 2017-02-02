@@ -197,7 +197,8 @@ class Script < ActiveRecord::Base
           {
             stages: [{script_levels: [:levels]}]
           }
-        ]).find(script_id)
+        ]
+).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -323,7 +324,8 @@ class Script < ActiveRecord::Base
             script_level: script_level,
             levels: script_level.levels
           }
-        end)
+        end
+)
 
     text_response_levels
   end
@@ -633,7 +635,8 @@ class Script < ActiveRecord::Base
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           properties: Script.build_property_hash(general_params)
-        }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
+        }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten
+)
         Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
     rescue StandardError => e

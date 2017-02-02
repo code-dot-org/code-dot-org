@@ -67,7 +67,9 @@ class ApplicationHelperTest < ActionView::TestCase
     def request
       OpenStruct.new(headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ' \
       'ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 930) like iPhone OS 7_0_3 Mac OS X ' \
-      'AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'))
+      'AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'
+)
+)
     end
     assert(!browser.cdo_unsupported?)
   end
@@ -75,7 +77,9 @@ class ApplicationHelperTest < ActionView::TestCase
   test "chrome 34 detected" do
     def request
       OpenStruct.new(headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) ' \
-      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'))
+      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'
+)
+)
     end
     assert(browser.chrome?)
     assert(browser.version.to_s.to_i == 34)

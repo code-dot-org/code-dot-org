@@ -113,6 +113,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
     Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self,
                                                       plc_learning_module: learning_module,
-                                                      user: user)
+                                                      user: user
+)
   end
 end

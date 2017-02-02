@@ -113,7 +113,8 @@ else
   puts format("%-10s#{' %16s' * columns.size}", 'Date', *columns.keys.map {|k| k[0, 14]})
   stats_by_date.each do |date, stats|
     puts format("%-10s#{'  %7s = %5.3f' * columns.size}",
-           date, *stats.map {|_, v| [format("%s/%s", v[:failed_builds], v[:total_builds]), v[:failure_rate].round(3)]}.flatten)
+           date, *stats.map {|_, v| [format("%s/%s", v[:failed_builds], v[:total_builds]), v[:failure_rate].round(3)]}.flatten
+)
   end
 end
 

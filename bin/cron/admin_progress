@@ -14,7 +14,8 @@ def main
       user_count: User.count,
       levels_attempted: UserLevel.where('best_result > 0').group(:level_id).count,
       levels_passed: UserLevel.where('best_result >= 20').group(:level_id).count,
-    })
+    }
+)
   end
 end
 

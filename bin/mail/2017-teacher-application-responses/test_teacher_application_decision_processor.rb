@@ -79,7 +79,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       'Application ID' => 1,
       'Decision' => 'Accept',
       'Workshop' => teachercon_name
-    })
+    }
+)
 
     expected = {
       name: 'Tracy Teacher',
@@ -103,13 +104,15 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       dates: 'June 1-5, 2017',
       partner_contact: 'Mr. Contact',
       partner_email: 'partner.contact@example.net'
-    })
+    }
+)
 
     result = @processor.process_decision_row({
       'Application ID' => 1,
       'Decision' => 'Accept',
       'Workshop' => partner_workshop
-    })
+    }
+)
 
     expected = {
       name: 'Tracy Teacher',
@@ -132,7 +135,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
         'Application ID' => 1,
         'Decision' => 'Accept',
         'Workshop' => 'nonexistent'
-      })
+      }
+)
     end
 
     assert_equal 'Unexpected workshop: nonexistent', e.message
@@ -143,7 +147,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       'Application ID' => 1,
       'Decision' => 'Decline',
       'Workshop' => "doesn't matter"
-    })
+    }
+)
 
     expected = {
       name: 'Tracy Teacher',
@@ -160,7 +165,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       'Application ID' => 1,
       'Decision' => 'Waitlist',
       'Workshop' => "doesn't matter"
-    })
+    }
+)
 
     expected = {
       name: 'Tracy Teacher',
@@ -183,7 +189,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       'Decision' => 'Decline',
       'Workshop' => "doesn't matter",
       'Primary Email' => new_primary_email
-    })
+    }
+)
   end
 
   private
@@ -209,7 +216,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       'Workshop Id' => 1234,
       'Partner Contact' => 'Mr. Contact',
       'Partner Email' => 'partner.contact@example.net'
-    })
+    }
+)
     CSV.expects(:foreach).with('workshops.csv', headers: true).returns(mock_csv)
   end
 end

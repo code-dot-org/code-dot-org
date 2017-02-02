@@ -81,7 +81,9 @@ class ManifestBuilder
 
           # Sort alias map for stable updates
           'aliases': alias_map.sort.to_h
-      }))
+      }
+)
+)
     end
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
@@ -128,7 +130,8 @@ class ManifestBuilder
         @warnings.push result
       end
       download_progress_bar.increment unless download_progress_bar.nil?
-    end) do |name|
+    end
+) do |name|
       # This is the parallel block.  This block should return a string to
       # generate a warning and skip the animation, and a metadata Hash in
       # the success case.
@@ -245,7 +248,8 @@ The animation has been skipped.
         @warnings.push result
       end
       metadata_progress_bar.increment unless metadata_progress_bar.nil?
-    end) do |name|
+    end
+) do |name|
       # This is the parallel block.  This block should return a string to
       # generate a warning and skip the animation, and a metadata Hash in
       # the success case.

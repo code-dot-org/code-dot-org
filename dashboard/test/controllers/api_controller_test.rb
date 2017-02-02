@@ -636,7 +636,8 @@ class ApiControllerTest < ActionController::TestCase
         "user_id" => student.id,
         "level_id" => level.id,
         "script_id" => script.id
-      }, student_response['user_level_data'], 'user_id, level_id, and script_id for not yet existing user_level')
+      }, student_response['user_level_data'], 'user_id, level_id, and script_id for not yet existing user_level'
+)
       assert_equal student.name, student_response['name']
       assert_equal true, student_response['locked'], 'starts out locked'
       assert_equal false, student_response['readonly_answers']
@@ -680,7 +681,8 @@ class ApiControllerTest < ActionController::TestCase
       "user_id" => @student_1.id,
       "level_id" => level.id,
       "script_id" => script.id
-    }, student_1_response['user_level_data'])
+    }, student_1_response['user_level_data']
+)
     assert_equal false, student_1_response['locked']
     assert_equal false, student_1_response['readonly_answers']
 
@@ -690,7 +692,8 @@ class ApiControllerTest < ActionController::TestCase
       "user_id" => @student_2.id,
       "level_id" => level.id,
       "script_id" => script.id
-    }, student_2_response['user_level_data'])
+    }, student_2_response['user_level_data']
+)
     assert_equal false, student_2_response['locked']
     assert_equal true, student_2_response['readonly_answers']
 
@@ -700,7 +703,8 @@ class ApiControllerTest < ActionController::TestCase
       "user_id" => @student_3.id,
       "level_id" => level.id,
       "script_id" => script.id
-    }, student_3_response['user_level_data'])
+    }, student_3_response['user_level_data']
+)
     assert_equal true, student_3_response['locked']
     assert_equal false, student_3_response['readonly_answers']
 
@@ -710,7 +714,8 @@ class ApiControllerTest < ActionController::TestCase
       "user_id" => @student_4.id,
       "level_id" => level.id,
       "script_id" => script.id
-    }, student_4_response['user_level_data'])
+    }, student_4_response['user_level_data']
+)
     assert_equal true, student_4_response['locked']
     assert_equal false, student_4_response['readonly_answers']
 
@@ -720,7 +725,8 @@ class ApiControllerTest < ActionController::TestCase
       "user_id" => @student_5.id,
       "level_id" => level.id,
       "script_id" => script.id
-    }, student_5_response['user_level_data'])
+    }, student_5_response['user_level_data']
+)
     assert_equal true, student_5_response['locked']
     assert_equal false, student_5_response['readonly_answers']
   end
@@ -1179,7 +1185,8 @@ class ApiControllerTest < ActionController::TestCase
     assert_select '#welcome.student'
     assert_select '#suggestcourse', I18n.t('home.student_finished',
       online_link: I18n.t('home.online'),
-      local_school_link: I18n.t('home.local_school'))
+      local_school_link: I18n.t('home.local_school')
+)
   end
 
   test 'should show teacher-dashboard link when a teacher' do

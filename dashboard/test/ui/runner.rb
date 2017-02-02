@@ -295,7 +295,8 @@ if $options.with_status_page
       start_time: $suite_start_time,
       browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
       features: features_to_run
-    })
+    }
+)
   end
   HipChat.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
@@ -519,7 +520,8 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
       success: succeeded.to_s,
       attempt: reruns.to_s,
       duration: test_duration.to_s
-  })
+  }
+)
 
   while !succeeded && (reruns < max_reruns)
     reruns += 1
@@ -537,7 +539,8 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
         duration: test_duration.to_s,
         attempt: reruns.to_s,
         success: succeeded.to_s
-    })
+    }
+)
   end
 
   $lock.synchronize do

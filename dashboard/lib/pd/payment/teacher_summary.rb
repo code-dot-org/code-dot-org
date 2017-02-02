@@ -80,7 +80,8 @@ module Pd::Payment
           payment_rate: payment.try(&:rate),
           qualified: qualified?,
           payment_amount: payment.try(&:amount)
-        })
+        }
+)
       end
 
       line_item

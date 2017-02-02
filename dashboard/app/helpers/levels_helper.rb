@@ -59,7 +59,8 @@ module LevelsHelper
         {
           hidden: true,
           useFirebase: use_firebase
-        })
+        }
+)
     end
 
     view_options(channel: channel_token.channel) if channel_token
@@ -382,18 +383,21 @@ module LevelsHelper
         script_name: script.name,
         stage: script_level.stage.absolute_position,
         puzzle: script_level.position
-      }, default: nil)
+      }, default: nil
+)
 
       # stage-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
         stage: script_level.stage.absolute_position,
-      }, default: nil) if enabled.nil?
+      }, default: nil
+) if enabled.nil?
 
       # script-specific
       enabled = Gatekeeper.allows('showUnusedBlocks', where: {
         script_name: script.name,
-      }, default: nil) if enabled.nil?
+      }, default: nil
+) if enabled.nil?
 
       # global
       enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
@@ -526,7 +530,8 @@ module LevelsHelper
           scrolling: 'no',
           seamless: 'seamless',
           style: 'border: none;',
-      })
+      }
+)
 
     elsif File.extname(path) == '.level'
       base_level = File.basename(path, '.level')
@@ -538,7 +543,9 @@ module LevelsHelper
           scrolling: 'no',
           seamless: 'seamless',
           style: 'border: none;'
-        }), {class: 'aspect-ratio'})
+        }
+), {class: 'aspect-ratio'}
+)
     else
       level_name = source_level ? source_level.name : @level.name
       data_t(prefix + '.' + level_name, text)

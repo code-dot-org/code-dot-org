@@ -25,7 +25,8 @@ class TestFlakiness
       response = RestClient::Request.execute(method: :get,
                                              url: url,
                                              user: sauce_username,
-                                             password: sauce_key)
+                                             password: sauce_key
+)
       jobs += JSON.parse(response.body)
     end
 

@@ -19,7 +19,8 @@ class XhrProxyController < ApplicationController
     text/javascript
     text/json
     text/plain
-  ))
+  )
+)
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
@@ -77,6 +78,7 @@ class XhrProxyController < ApplicationController
       allowed_content_types: ALLOWED_CONTENT_TYPES,
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
-      infer_content_type: false)
+      infer_content_type: false
+)
   end
 end

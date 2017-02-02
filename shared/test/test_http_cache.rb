@@ -88,7 +88,8 @@ module Cdo
           request: request_headers,
           response: response_headers,
           method: method
-        })
+        }
+)
       end
 
       def proxy_request(url, headers={}, cookies={}, method='GET')

@@ -30,6 +30,7 @@ class SectionsController < ApplicationController
   def load_section
     @section = Section.find_by!(code: params[:id],
                                 login_type: [Section::LOGIN_TYPE_PICTURE,
-                                             Section::LOGIN_TYPE_WORD])
+                                             Section::LOGIN_TYPE_WORD]
+)
   end
 end

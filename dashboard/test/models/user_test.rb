@@ -333,7 +333,8 @@ class UserTest < ActiveSupport::TestCase
       next if script_level.level.game.unplugged? # skip all unplugged
       next if script_level.chapter > 33
       UserLevel.create(user: user, level: script_level.level, script: twenty_hour,
-                       attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+                       attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT
+)
     end
     assert_equal(35, user.next_unpassed_progression_level(twenty_hour).chapter)
   end
@@ -344,7 +345,8 @@ class UserTest < ActiveSupport::TestCase
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
       UserLevel.create(user: create(:user), level: script_level.level, script: twenty_hour,
-                       attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+                       attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT
+)
     end
     assert_equal(2, user.next_unpassed_progression_level(twenty_hour).chapter)
   end
@@ -356,10 +358,12 @@ class UserTest < ActiveSupport::TestCase
     script = create :script
     script_level = create(:script_level, script: script,
                           levels: [level, level2],
-                          properties: '{"maze 2": {"active": false}}')
+                          properties: '{"maze 2": {"active": false}}'
+)
     create :user_script, user: user, script: script
     UserLevel.create(user: user, level: script_level.levels[1], script: script,
-        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT
+)
 
     assert user.completed?(script)
   end
@@ -371,10 +375,12 @@ class UserTest < ActiveSupport::TestCase
     script = create :script
     script_level = create(:script_level, script: script,
                           levels: [level, level2],
-                          properties: '{"maze 2": {"active": false}}')
+                          properties: '{"maze 2": {"active": false}}'
+)
     create :user_script, user: user, script: script
     UserLevel.create(user: user, level: script_level.levels[0], script: script,
-        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT)
+        attempts: 1, best_result: Activity::MINIMUM_PASS_RESULT
+)
 
     assert user.completed?(script)
   end
@@ -565,7 +571,8 @@ class UserTest < ActiveSupport::TestCase
 
     User.reset_password_by_token(reset_password_token: token,
                                  password: 'newone',
-                                 password_confirmation: 'newone')
+                                 password_confirmation: 'newone'
+)
 
     student = User.find(student.id)
     # password was changed
@@ -691,7 +698,8 @@ class UserTest < ActiveSupport::TestCase
     # do a level that is both in script 1 and hoc
     [twenty_hour, hoc].each do |script|
       UserLevel.create!(user_id: user.id, level_id: Script.twenty_hour_script.script_levels[1].level.id, script: script,
-                        created_at: start_date, updated_at: start_date)
+                        created_at: start_date, updated_at: start_date
+)
     end
 
     user.backfill_user_scripts
@@ -710,10 +718,12 @@ class UserTest < ActiveSupport::TestCase
 
       UserLevel.record_timestamps = false # ooh
       UserLevel.create!(user_id: user.id, level_id: sl1.level.id, script: script,
-                        created_at: start_date, updated_at: start_date)
+                        created_at: start_date, updated_at: start_date
+)
 
       UserLevel.create!(user_id: user.id, level_id: sl2.level.id, script: script,
-                        created_at: progress_date, updated_at: progress_date)
+                        created_at: progress_date, updated_at: progress_date
+)
 
       assert_creates(UserScript) do
         user.backfill_user_scripts
@@ -733,13 +743,15 @@ class UserTest < ActiveSupport::TestCase
     # complete all except last level a day earlier
     script.script_levels[0..-2].each do |sl|
       UserLevel.create!(user_id: user.id, level_id: sl.level_id, script: script, best_result: 100,
-                        created_at: completed_date - 1.day, updated_at: completed_date - 1.day)
+                        created_at: completed_date - 1.day, updated_at: completed_date - 1.day
+)
     end
 
     # completed last level
     sl = script.script_levels.last
     UserLevel.create!(user_id: user.id, level_id: sl.level_id, script: script, best_result: 100,
-                      created_at: completed_date, updated_at: completed_date)
+                      created_at: completed_date, updated_at: completed_date
+)
   end
 
   test "backfill user_scripts backfills completed_at" do
@@ -879,7 +891,8 @@ class UserTest < ActiveSupport::TestCase
     user_proficiency = create :user_proficiency
 
     User.track_proficiency(
-      user_proficiency.user_id, nil, level_concept_difficulty.level_id)
+      user_proficiency.user_id, nil, level_concept_difficulty.level_id
+)
 
     user_proficiency = UserProficiency.
       where(user_id: user_proficiency.user_id).
@@ -915,7 +928,8 @@ class UserTest < ActiveSupport::TestCase
       create(level: level, events: 5)
     UserProficiency.create(
       user_id: student.id, sequencing_d3_count: 6, repeat_loops_d4_count: 7,
-      events_d5_count: 8, basic_proficiency_at: TIME)
+      events_d5_count: 8, basic_proficiency_at: TIME
+)
 
     User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
 
@@ -931,7 +945,8 @@ class UserTest < ActiveSupport::TestCase
     student = create :student
     UserProficiency.create(
       user_id: student.id, sequencing_d3_count: 3, repeat_loops_d3_count: 3,
-      events_d3_count: 2)
+      events_d3_count: 2
+)
 
     User.track_proficiency(student.id, nil, level_concept_difficulty.level_id)
 
@@ -945,7 +960,8 @@ class UserTest < ActiveSupport::TestCase
     user_proficiency = create :user_proficiency
 
     User.track_proficiency(
-      user_proficiency.user_id, nil, level_concept_difficulty.level_id)
+      user_proficiency.user_id, nil, level_concept_difficulty.level_id
+)
 
     user_proficiency = UserProficiency.
       where(user_id: user_proficiency.user_id).

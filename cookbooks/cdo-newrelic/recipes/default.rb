@@ -37,7 +37,8 @@ template '/etc/init.d/cdo-newrelic' do
       ENABLED_ALERT_POLICY_ID: node['cdo-newrelic']['enabled_alert_policy_id'],
       DISABLED_ALERT_POLICY_ID: node['cdo-newrelic']['disabled_alert_policy_id']
     }
-  })
+  }
+)
   mode '0777'
   action :create
   only_if { node['cdo-newrelic']['api-key'] }

@@ -17,7 +17,8 @@ class SchoolTest < ActiveSupport::TestCase
       state: 'AL',
       zip: '35950',
       school_type: 'public',
-    })
+    }
+)
   end
 
   # See CHARTR in http://nces.ed.gov/ccd/pdf/2015150_sc132a_Documentation_052716.pdf

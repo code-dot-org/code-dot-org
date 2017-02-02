@@ -51,7 +51,8 @@ class Artist < Blockly
       user: params[:user],
       game: Game.custom_artist,
       level_num: 'custom',
-    ))
+    )
+)
   end
 
   def toolbox(type)

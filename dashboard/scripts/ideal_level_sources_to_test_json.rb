@@ -44,7 +44,9 @@ def main
 
   puts(JSON.pretty_generate({
     levels: level_hashes
-  }))
+  }
+)
+)
 end
 
 main

@@ -202,13 +202,15 @@ class V2SectionRoutesTest < Minitest::Test
         Dashboard.db.transaction(rollback: :always) do
           before_timestamp = Dashboard.db[:followers].
             where(user_id: FakeDashboard::TEACHER_WITH_DELETED[:id],
-                  student_user_id: FakeDashboard::SELF_STUDENT[:id]).
+                  student_user_id: FakeDashboard::SELF_STUDENT[:id]
+).
             select_map(:deleted_at)
           @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_DELETED_FOLLOWERS[:id]}/delete"
           assert_equal 204, @pegasus.last_response.status
           after_timestamp = Dashboard.db[:followers].
             where(user_id: FakeDashboard::TEACHER_WITH_DELETED[:id],
-                  student_user_id: FakeDashboard::SELF_STUDENT[:id]).
+                  student_user_id: FakeDashboard::SELF_STUDENT[:id]
+).
             select_map(:deleted_at)
           assert_equal before_timestamp, after_timestamp
         end

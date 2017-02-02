@@ -40,7 +40,8 @@ class Weblab < Level
       level_num: 'custom',
       properties: {
       }
-    ))
+    )
+)
   end
 
   def fix_examples

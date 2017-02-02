@@ -176,13 +176,6 @@ Style/MultilineHashBraceLayout:
 Style/MultilineIfModifier:
   Enabled: false
 
-# Offense count: 109
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: symmetrical, new_line, same_line
-Style/MultilineMethodCallBraceLayout:
-  Enabled: false
-
 # Offense count: 231
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
