@@ -167,6 +167,18 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert user_geo.ip_address = '1.2.3.4'
   end
 
+  test "create causes SignIn creation" do
+    frozen_time = '1985-10-26 01:20:00'
+    DateTime.stubs(:now).returns(frozen_time)
+    assert_creates(SignIn) do
+      post :create, params: {user: @default_params}
+    end
+    sign_in = SignIn.last
+    assert sign_in
+    assert_equal 1, sign_in.sign_in_count
+    assert_equal frozen_time + ' UTC', sign_in.sign_in_at.to_s
+  end
+
   test "update student with utf8mb4 in name fails" do
     student = create :student
 
