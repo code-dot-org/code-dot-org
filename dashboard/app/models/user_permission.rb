@@ -65,7 +65,7 @@ class UserPermission < ActiveRecord::Base
     # In particular, we do not log for adhoc or test environments.
     return unless [:staging, :levelbuilder, :production].include? rack_env
 
-    HipChat.log 'infra-security',
+    HipChat.message 'infra-security',
       'Deleting UserPermission: '\
         "environment: #{rack_env}, "\
         "user ID: #{self.user.id}, "\

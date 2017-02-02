@@ -33,6 +33,7 @@ var baseConfig = {
         test:/.png|.jpg|.jpeg|.gif|.svg/,
         include: [
           path.resolve(__dirname, 'static'),
+          path.resolve(__dirname, 'src'),
         ],
         loader: "url-loader?limit=1024",
       },

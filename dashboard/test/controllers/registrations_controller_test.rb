@@ -156,6 +156,17 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Email has already been taken"], assigns(:user).errors.full_messages
   end
 
+  test "create causes UserGeo creation" do
+    request.remote_addr = '1.2.3.4'
+    assert_creates(UserGeo) do
+      post :create, params: {user: @default_params}
+    end
+
+    user_geo = UserGeo.last
+    assert user_geo
+    assert user_geo.ip_address = '1.2.3.4'
+  end
+
   test "update student with utf8mb4 in name fails" do
     student = create :student
 

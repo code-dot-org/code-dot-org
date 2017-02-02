@@ -93,22 +93,26 @@ module AWS
 
     def self.invalidate_caches
       puts 'Creating CloudFront cache invalidations...'
-      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
-                                               log_level: :debug,
-                                               http_wire_trace: true)
+      cloudfront = Aws::CloudFront::Client.new(
+        logger: Logger.new(dashboard_dir('log/cloudfront.log')),
+        log_level: :debug,
+        http_wire_trace: true
+      )
       invalidations = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
         id = get_distribution_id_with_retry(cloudfront, hostname)
-        invalidation = cloudfront.create_invalidation({
-          distribution_id: id,
-          invalidation_batch: {
-            paths: {
-              quantity: 1,
-              items: ['/*'],
+        invalidation = cloudfront.create_invalidation(
+          {
+            distribution_id: id,
+            invalidation_batch: {
+              paths: {
+                quantity: 1,
+                items: ['/*'],
+              },
+              caller_reference: SecureRandom.hex,
             },
-            caller_reference: SecureRandom.hex,
-          },
-        }).invalidation.id
+          }
+        ).invalidation.id
         [app, id, invalidation]
       end
       puts 'Invalidations created.'
@@ -130,9 +134,11 @@ module AWS
     #  While CloudFront is propagating your changes to edge locations, we cannot determine whether a given edge
     #  location is serving your content based on the previous configuration or the new configuration."
     def self.create_or_update
-      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
-                                               log_level: :debug,
-                                               http_wire_trace: true)
+      cloudfront = Aws::CloudFront::Client.new(
+        logger: Logger.new(dashboard_dir('log/cloudfront.log')),
+        log_level: :debug,
+        http_wire_trace: true
+      )
       ids = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
         id, distribution_config = get_distribution_config(cloudfront, hostname)
