@@ -1,6 +1,7 @@
 general:
   artifacts:
     - apps/yarn-error.log
+    - apps/coverage
     - dashboard/test/ui
     - dashboard/log
     - pegasus/log
@@ -102,7 +103,6 @@ test:
     - ./test.sh:
         pwd:
             cookbooks
-    - ./apps/node_modules/.bin/codecov
 experimental:
   notify:
     branches:
