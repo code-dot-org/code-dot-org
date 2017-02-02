@@ -68,13 +68,19 @@ def open_in_default_browser(url)
   end
 end
 
+def run_on(server_name, command)
+  # escape any double quotes in the command string
+  command = %Q["#{command}"]
+  system "ssh -t gateway.code.org ssh -t #{server_name} \"#{command}\""
+end
+
 def content_push(server_name, environment_name, user_name)
   puts <<-EOS.unindent
     Follow the prompts given by the content-push script.
       If you need to do something fancier (or if the changed files do not
       "look ok" when it asks you), log in to staging and hand-craft the commit.
   EOS
-  success = system "ssh -t gateway.code.org ssh -t #{server_name} \"#{environment_name}/bin/content-push --name=\\\"#{user_name}\\\"\""
+  success = run_on(server_name, "#{environment_name}/bin/content-push --name=\"#{user_name}\"")
 
   # Notice if the content push fails, and be helpful about fixing the problem.
   unless success
@@ -167,7 +173,7 @@ should_i "DTP" do
 
   should_i "create a new release of the code-dot-org repository on github" do
     wait_for "the production server to fetch the latest changes"
-    system "ssh -t gateway.code.org ssh -t \"production-daemon \\\"cd production; ./bin/create-release\\\"\""
+    run_on("production-daemon", "cd production; ./bin/create-release")
   end
 
   wait_for "DTP to finish"
