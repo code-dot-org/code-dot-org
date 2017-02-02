@@ -204,13 +204,15 @@ class Pd::TeacherApplication < ActiveRecord::Base
   end
 
   def to_expanded_json
-    application_hash.merge({
-      id: id,
-      userId: user_id,
-      timestamp: created_at,
-      schoolName: school_name,
-      schoolDistrictName: school_district_name,
-      regionalPartner: regional_partner_name
-    }).stringify_keys
+    application_hash.merge(
+      {
+        id: id,
+        userId: user_id,
+        timestamp: created_at,
+        schoolName: school_name,
+        schoolDistrictName: school_district_name,
+        regionalPartner: regional_partner_name
+      }
+    ).stringify_keys
   end
 end

@@ -3,20 +3,26 @@ require 'test_helper'
 class TextToSpeechTest < ActiveSupport::TestCase
   setup do
     @level_without_instructions = Level.create
-    @level_with_instructions = Level.create({
-      instructions: 'regular instructions'
-    })
-    @level_with_instructions_override = Level.create({
-      instructions: 'regular instructions',
-      tts_instructions_override: 'override'
-    })
-    @level_with_markdown_instructions = Level.create({
-      markdown_instructions: '*regular* `markdown_instructions` with _some_ [extra](formatting)'
-    })
-    @level_with_markdown_instructions_override = Level.create({
-      markdown_instructions: 'regular markdown_instructions',
-      tts_markdown_instructions_override: 'markdown override'
-    })
+    @level_with_instructions = Level.create(
+      {instructions: 'regular instructions'}
+    )
+    @level_with_instructions_override = Level.create(
+      {
+        instructions: 'regular instructions',
+        tts_instructions_override: 'override'
+      }
+    )
+    @level_with_markdown_instructions = Level.create(
+      {
+        markdown_instructions: '*regular* `markdown_instructions` with _some_ [extra](formatting)'
+      }
+    )
+    @level_with_markdown_instructions_override = Level.create(
+      {
+        markdown_instructions: 'regular markdown_instructions',
+        tts_markdown_instructions_override: 'markdown override'
+      }
+    )
   end
 
   test 'tts_instructions_text' do

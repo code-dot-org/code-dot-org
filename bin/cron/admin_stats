@@ -7,7 +7,9 @@ require src_dir 'database'
 require 'cdo/properties'
 
 DASHBOARD_REPORTING_DB_READONLY = sequel_connect(
-  CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+  CDO.dashboard_reporting_db_reader,
+  CDO.dashboard_reporting_db_reader
+)
 SEVEN_DAYS = 7 * 24 * 60 * 60
 THIRTY_DAYS = 30 * 24 * 60 * 60
 
@@ -63,39 +65,45 @@ def main
   thirty_day_retention_current_monthly_baseline = students.
     where(created_at: (Time.now - (3 * THIRTY_DAYS))..(Time.now - (2 * THIRTY_DAYS)))
 
-  Properties.set(:admin_stats, {
-    accounts: {
-      users: all_users.count,
-      students: all_students.count,
-      teachers: all_teachers.count,
-    },
-    born_accounts: {
-      users: users.count,
-      students: students.count,
-      female_students: students.where(gender: 'f').count,
-      male_students: students.where(gender: 'm').count,
-      teachers: teachers.count,
-    },
-    actives: {
-      seven_day_students: seven_day_active_students.count,
-      seven_day_female_students: seven_day_active_students.where(gender: 'f').count,
-      seven_day_male_students: seven_day_active_students.where(gender: 'm').count,
-      thirty_day_students: thirty_day_active_students.count,
-      thirty_day_female_students: thirty_day_active_students.where(gender: 'f').count,
-      thirty_day_male_students: thirty_day_active_students.where(gender: 'm').count,
-    },
-    thirty_day_retention_historical: build_demographic_breakdowns(
-      thirty_day_retention_historical_baseline),
-    thirty_day_retention_current_weekly: build_demographic_breakdowns(
-      thirty_day_retention_current_weekly_baseline),
-    thirty_day_retention_current_monthly: build_demographic_breakdowns(
-      thirty_day_retention_current_monthly_baseline),
-    # TODO(asher): Add more student-teacher metrics and pipe them to the admin_stats dashboard.
-    teachers: {
-      with_students: students.join(:followers, student_user_id: :id).select(:followers__user_id).distinct.count,
-      with_active_students: thirty_day_active_students.join(:followers, student_user_id: :id).select(:followers__user_id).distinct.count,
-    },
-  })
+  Properties.set(
+    :admin_stats,
+    {
+      accounts: {
+        users: all_users.count,
+        students: all_students.count,
+        teachers: all_teachers.count,
+      },
+      born_accounts: {
+        users: users.count,
+        students: students.count,
+        female_students: students.where(gender: 'f').count,
+        male_students: students.where(gender: 'm').count,
+        teachers: teachers.count,
+      },
+      actives: {
+        seven_day_students: seven_day_active_students.count,
+        seven_day_female_students: seven_day_active_students.where(gender: 'f').count,
+        seven_day_male_students: seven_day_active_students.where(gender: 'm').count,
+        thirty_day_students: thirty_day_active_students.count,
+        thirty_day_female_students: thirty_day_active_students.where(gender: 'f').count,
+        thirty_day_male_students: thirty_day_active_students.where(gender: 'm').count,
+      },
+      thirty_day_retention_historical: build_demographic_breakdowns(
+        thirty_day_retention_historical_baseline
+      ),
+      thirty_day_retention_current_weekly: build_demographic_breakdowns(
+        thirty_day_retention_current_weekly_baseline
+      ),
+      thirty_day_retention_current_monthly: build_demographic_breakdowns(
+        thirty_day_retention_current_monthly_baseline
+      ),
+      # TODO(asher): Add more student-teacher metrics and pipe them to the admin_stats dashboard.
+      teachers: {
+        with_students: students.join(:followers, student_user_id: :id).select(:followers__user_id).distinct.count,
+        with_active_students: thirty_day_active_students.join(:followers, student_user_id: :id).select(:followers__user_id).distinct.count,
+      },
+    }
+  )
 end
 
 main

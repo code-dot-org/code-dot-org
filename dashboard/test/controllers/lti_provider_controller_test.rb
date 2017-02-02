@@ -12,13 +12,16 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
 
   def lti_consumer_params(consumer_key, consumer_secret, test_name, *args)
     # match URL used by MiniTest post :sso call
-    tc = IMS::LTI::ToolConfig.new(title: 'Test LTI Provider',
-                                  launch_url: auth_lti_url)
+    tc = IMS::LTI::ToolConfig.new(
+      title: 'Test LTI Provider',
+      launch_url: auth_lti_url
+    )
 
     @consumer = IMS::LTI::ToolConsumer.new(
       consumer_key,
       consumer_secret,
-      args[0])
+      args[0]
+    )
     @consumer.set_config(tc)
 
     # Set some launch data, see:
@@ -48,7 +51,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       TEST_PROVIDER_KEY, method_name,
       "user_id" => user.uid,
       "custom_age" => user.age,
-      "lis_person_name_full" => user.name)
+      "lis_person_name_full" => user.name
+    )
 
     lti_post :sso, params
 
@@ -61,7 +65,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       TEST_PROVIDER_KEY, method_name,
       "custom_age" => 11,
       "user_id" => "12345",
-      "lis_person_name_full" => "Cat Hat")
+      "lis_person_name_full" => "Cat Hat"
+    )
 
     assert_creates(User) do
       lti_post :sso, params
@@ -84,7 +89,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       TEST_PROVIDER_KEY, method_name,
       "user_id" => "12345",
       "lis_person_name_full" => "Cat Hat",
-      "roles" => "Instructor")
+      "roles" => "Instructor"
+    )
 
     assert_creates(User) do
       lti_post :sso, params
@@ -104,7 +110,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       TEST_PROVIDER_KEY,  method_name,
       "user_id" => "12345",
       "lis_person_name_full" => "Cat Hat",
-      "roles" => "Instructor, TeachingAssistant, ContentDeveloper")
+      "roles" => "Instructor, TeachingAssistant, ContentDeveloper"
+    )
 
     assert_creates(User) do
       lti_post :sso, params
@@ -123,7 +130,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       "user_id" => "12345",
       "lis_person_name_full" => "Cat Hat",
       "custom_age" => 9,
-      "roles" => "Learner, Learner")
+      "roles" => "Learner, Learner"
+    )
 
     assert_creates(User) do
       lti_post :sso, params
@@ -143,7 +151,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       "user_id" => "12345",
       "lis_person_name_full" => "Cat Hat",
       "custom_age" => 8,
-      "roles" => "Learner")
+      "roles" => "Learner"
+    )
 
     assert_creates(User) do
       lti_post :sso, params
@@ -160,7 +169,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       TEST_CONSUMER_KEY,
       TEST_PROVIDER_KEY, method_name,
       "custom_age" => 8,
-      "lis_person_name_full" => "Cat Hat")
+      "lis_person_name_full" => "Cat Hat"
+    )
 
     assert_does_not_create(User) do
       lti_post :sso, params
@@ -177,7 +187,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       "oauth_timestamp" => Time.now.to_i - 6.minutes,
       "custom_age" => 8,
       "user_id" => "12345",
-      "lis_person_name_full" => "Cat Hat")
+      "lis_person_name_full" => "Cat Hat"
+    )
 
     assert_does_not_create(User) do
       lti_post :sso, params
@@ -193,7 +204,8 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
       TEST_PROVIDER_KEY, method_name,
       "custom_age" => nil,
       "user_id" => "12345",
-      "lis_person_name_full" => "Cat Hat")
+      "lis_person_name_full" => "Cat Hat"
+    )
 
     assert_does_not_create(User) do
       lti_post :sso, params
