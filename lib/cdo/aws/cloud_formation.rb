@@ -69,8 +69,7 @@ module AWS
       # First prints the JSON-formatted template, then either raises an error (if invalid)
       # or prints the template description (if valid).
       def validate
-        template = json_template(dry_run: true)
-        CDO.log.info JSON.pretty_generate(JSON.parse(template))
+        template = render_template(dry_run: true)
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
         CDO.log.info "Parameters: #{parameters(template).join("\n")}"
@@ -120,7 +119,7 @@ module AWS
       end
 
       def parameters(template)
-        params = JSON.parse(template)['Parameters']
+        params = YAML.load(template)['Parameters']
         return [] unless params
         params.keys.map do |key|
           value = CDO[key.underscore]
@@ -147,7 +146,7 @@ module AWS
       end
 
       def create_or_update
-        template = json_template
+        template = render_template
         action = stack_exists? ? :update : :create
         CDO.log.info "#{action} stack: #{stack_name}..."
         start_time = Time.now
@@ -287,7 +286,7 @@ module AWS
         CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
       end
 
-      def json_template(dry_run: false)
+      def render_template(dry_run: false)
         filename = aws_dir('cloudformation', TEMPLATE)
         template_string = File.read(filename)
         availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
@@ -325,8 +324,7 @@ module AWS
           update_bootstrap_script: method(:update_bootstrap_script),
           log_name: LOG_NAME
         )
-        erb_output = erb_eval(template_string, filename)
-        YAML.load(erb_output).to_json
+        erb_eval(template_string, filename)
       end
 
       # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).

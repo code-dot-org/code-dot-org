@@ -1228,7 +1228,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert assigns(:show_pairing_dialog)
-    assert !session[:show_pairing_dialog] # should only show once
+    refute session[:show_pairing_dialog] # should only show once
   end
 
   test "user menu should not open pairing dialog if not asked to in the session" do
@@ -1238,8 +1238,8 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_menu
 
-    assert !assigns(:show_pairing_dialog)
-    assert !session[:show_pairing_dialog] # should only show once
+    refute assigns(:show_pairing_dialog)
+    refute session[:show_pairing_dialog] # should only show once
   end
 
   test "do show prize link when you already have a prize" do
