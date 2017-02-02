@@ -1,19 +1,18 @@
 <Maze>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-07-06T23:49:31.000Z",
+  "created_at": "2016-07-07T00:03:28.000Z",
   "level_num": "custom",
-  "user_id": 19,
+  "user_id": 3,
   "properties": {
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,4,0,2,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Go around the TNT to get the bird to the pig! ",
-    "start_direction": "3",
-    "step_mode": "0",
+    "instructions": "Fix the bugs to get the bird to the pig.",
+    "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",
+    "start_direction": "3",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,4,4,0,0],[0,0,4,3,4,0,0,0],[0,0,4,1,2,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "6",
-    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -22,14 +21,14 @@
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
-    "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "never_autoplay_video": "true",
+    "examples_required": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having trouble, try writing down the steps on a piece of paper first.\",\"hint_id\":\"courseB_maze_seq10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f77a1ec169a93c73e0c324f31c61fb4d/courseB_maze_seq10.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -37,6 +36,19 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveNorth" deletable="false">
+              <next>
+                <block type="maze_moveEast"/>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_moveNorth"/>
@@ -49,21 +61,9 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveSouth">
+            <block type="maze_moveWest">
               <next>
-                <block type="maze_moveWest">
-                  <next>
-                    <block type="maze_moveWest">
-                      <next>
-                        <block type="maze_moveWest">
-                          <next>
-                            <block type="maze_moveNorth"/>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
+                <block type="maze_moveNorth"/>
               </next>
             </block>
           </next>
