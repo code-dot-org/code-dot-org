@@ -161,24 +161,24 @@ Resources:
       AutoScalingGroupName: {Ref: Frontends}
       MetricAggregationType: Average
       MinAdjustmentMagnitude: 1
-      EstimatedInstanceWarmup: 600
+      EstimatedInstanceWarmup: 300
       PolicyType: StepScaling
       StepAdjustments:
-        # 50-60% cpu, +20% instances
+        # 55-60% cpu, +10% instances
         - MetricIntervalLowerBound: 0
-          MetricIntervalUpperBound: 10
+          MetricIntervalUpperBound: 5
+          ScalingAdjustment: 10
+        # 60-70% cpu, +20% instances
+        - MetricIntervalLowerBound: 5
+          MetricIntervalUpperBound: 15
           ScalingAdjustment: 20
-        # 60-70% cpu, +40% instances
-        - MetricIntervalLowerBound: 10
-          MetricIntervalUpperBound: 20
-          ScalingAdjustment: 40
-        # 70-90% cpu, +60% instances
-        - MetricIntervalLowerBound: 20
-          MetricIntervalUpperBound: 40
-          ScalingAdjustment: 60
-        # 90-100% cpu, +80% instances
-        - MetricIntervalLowerBound: 40
-          ScalingAdjustment: 80
+        # 70-85% cpu, +30% instances
+        - MetricIntervalLowerBound: 15
+          MetricIntervalUpperBound: 30
+          ScalingAdjustment: 30
+        # 85-100% cpu, +35% instances
+        - MetricIntervalLowerBound: 30
+          ScalingAdjustment: 35
   ScaleDownPolicyNew:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
@@ -189,36 +189,36 @@ Resources:
       EstimatedInstanceWarmup: 300
       PolicyType: StepScaling
       StepAdjustments:
-        # 30-25% cpu, -10% instances
+        # 40-30% cpu, -5% instances
         - MetricIntervalUpperBound: 0
-          MetricIntervalLowerBound: -5
-          ScalingAdjustment: -10
-        # 25-20% cpu, -15% instances
-        - MetricIntervalUpperBound: -5
           MetricIntervalLowerBound: -10
-          ScalingAdjustment: -15
-        # 20-15% cpu, -20% instances
+          ScalingAdjustment: -5
+        # 30-20% cpu, -10% instances
         - MetricIntervalUpperBound: -10
-          MetricIntervalLowerBound: -15
-          ScalingAdjustment: -20
-        # 15-10% cpu, -30% instances
-        - MetricIntervalUpperBound: -15
           MetricIntervalLowerBound: -20
+          ScalingAdjustment: -10
+        # 20-15% cpu, -20% instances
+        - MetricIntervalUpperBound: -20
+          MetricIntervalLowerBound: -25
+          ScalingAdjustment: -20
+        # 15-10% cpu, -40% instances
+        - MetricIntervalUpperBound: -25
+          MetricIntervalLowerBound: -30
           ScalingAdjustment: -40
         # 10-0% cpu, -50% instances
-        - MetricIntervalUpperBound: -20
+        - MetricIntervalUpperBound: -30
           ScalingAdjustment: -50
   ScaleUpAlarmNew:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmDescription: Scale-up if average CPU is greater than 50% for 10 minutes
+      AlarmDescription: Scale-up if average CPU is greater than 55% for 3 minutes
       AlarmActions: [Ref: ScaleUpPolicyNew]
       MetricName: CPUUtilization
       Namespace: AWS/EC2
       Statistic: Average
-      Period: 300
-      EvaluationPeriods: 2
-      Threshold: 50
+      Period: 60
+      EvaluationPeriods: 3
+      Threshold: 55
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: AutoScalingGroupName
@@ -226,14 +226,14 @@ Resources:
   ScaleDownAlarmNew:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmDescription: Scale-down if average CPU is less than 30% for 10 minutes
+      AlarmDescription: Scale-down if average CPU is less than 40% for 10 minutes
       AlarmActions: [Ref: ScaleDownPolicyNew]
       MetricName: CPUUtilization
       Namespace: AWS/EC2
       Statistic: Average
-      Period: 300
-      EvaluationPeriods: 2
-      Threshold: 30
+      Period: 60
+      EvaluationPeriods: 10
+      Threshold: 40
       ComparisonOperator: LessThanOrEqualToThreshold
       Dimensions:
         - Name: AutoScalingGroupName

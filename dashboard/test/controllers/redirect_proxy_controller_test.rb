@@ -9,7 +9,8 @@ class RedirectProxyControllerTest < ActionController::TestCase
     short_uri = 'http://bit.ly/2gPJmTQ'
     stub_request(:head, short_uri).to_return(
       status: 301,
-      headers: {Location: LONG_URI})
+      headers: {Location: LONG_URI}
+    )
 
     get :get, params: {u: short_uri}
 
@@ -50,7 +51,8 @@ class RedirectProxyControllerTest < ActionController::TestCase
       response,
       response,
       response,
-      response)
+      response
+    )
     get :get, params: {u: short_uri}
     assert_response 500
   end

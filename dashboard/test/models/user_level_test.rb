@@ -27,10 +27,10 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: nil
     )
 
-    assert !ul.best?
-    assert !ul.perfect?
-    assert !ul.finished?
-    assert !ul.passing?
+    refute ul.best?
+    refute ul.perfect?
+    refute ul.finished?
+    refute ul.passing?
   end
 
   test "best? perfect? finished? and passing? for best result" do
@@ -55,7 +55,7 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::MAXIMUM_NONOPTIMAL_RESULT + 1
     )
 
-    assert !ul.best?
+    refute ul.best?
     assert ul.perfect?
     assert ul.finished?
     assert ul.passing?
@@ -69,8 +69,8 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_PASS_RESULT
     )
 
-    assert !ul.best?
-    assert !ul.perfect?
+    refute ul.best?
+    refute ul.perfect?
     assert ul.finished?
     assert ul.passing?
   end
@@ -83,10 +83,10 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_FINISHED_RESULT
     )
 
-    assert !ul.best?
-    assert !ul.perfect?
+    refute ul.best?
+    refute ul.perfect?
     assert ul.finished?
-    assert !ul.passing?
+    refute ul.passing?
   end
 
   test "best? perfect? finished? and passing? for not finishing result" do
@@ -97,10 +97,10 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::MINIMUM_FINISHED_RESULT - 5
     )
 
-    assert !ul.best?
-    assert !ul.perfect?
-    assert !ul.finished?
-    assert !ul.passing?
+    refute ul.best?
+    refute ul.perfect?
+    refute ul.finished?
+    refute ul.passing?
   end
 
   test "best? perfect? finished? and passing? for free play result" do
@@ -111,7 +111,7 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::FREE_PLAY_RESULT
     )
 
-    assert !ul.best?
+    refute ul.best?
     assert ul.perfect?
     assert ul.finished?
     assert ul.passing?

@@ -58,9 +58,10 @@ module Pd::Payment
       payment = summary.payment
       assert payment
 
-      assert_equal({
-        food: 50
-      }, payment.amounts)
+      assert_equal(
+        {food: 50},
+        payment.amounts
+      )
 
       assert_equal 50, payment.total
     end

@@ -28,7 +28,7 @@ class LevelConceptDifficultyTest < ActiveSupport::TestCase
     lcd_id = level.level_concept_difficulty.id
     assert LevelConceptDifficulty.exists?(lcd_id)
     level.destroy
-    assert !LevelConceptDifficulty.exists?(lcd_id)
+    refute LevelConceptDifficulty.exists?(lcd_id)
   end
 
   test 'concept_difficulty_as_string' do
