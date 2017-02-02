@@ -15,7 +15,7 @@ import AppLabView from './AppLabView';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
-import * as makerDropletConfig from '../makerlab/dropletConfig';
+import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
 import AppStorage from './appStorage';
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
