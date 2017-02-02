@@ -133,7 +133,6 @@ function loadLevel() {
   // since I don't understand it well enough.
   Applab.appWidth = applabConstants.APP_WIDTH;
   Applab.appHeight = applabConstants.APP_HEIGHT;
-  Applab.makerlabEnabled = level.makerlabEnabled;
 
   // In share mode we need to reserve some number of pixels for our in-app
   // footer. We do that by making the play space slightly smaller elsewhere.
@@ -146,7 +145,7 @@ function loadLevel() {
     Applab.scale[key] = level.scale[key];
   }
 
-  if (Applab.makerlabEnabled) {
+  if (level.makerlabEnabled) {
     Applab.makerController = new BoardController();
   }
 }
