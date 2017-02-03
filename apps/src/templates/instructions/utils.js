@@ -51,7 +51,7 @@ export function convertXmlToBlockly(container) {
         noScrolling: true
       });
     } catch (e) {
-      // This oculd error out for many reaons, from invalid XML to
+      // This could error out for many reaons, from invalid XML to
       // simply misconfigured blocks. In any case, treat an error as a
       // noop
       return;
