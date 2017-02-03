@@ -1,44 +1,22 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
-import { lessonNames, categories, levelsByLesson } from '@cdo/apps/code-studio/progressRedux';
+import { categorizedLessons } from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
-
-function categorize(categories, lessonNames, levelsByLesson) {
-  let byCategory = {};
-
-  categories.forEach((category, index) => {
-    const lessonName = lessonNames[index];
-    const levels = levelsByLesson[index];
-
-    byCategory[category] = byCategory[category] || {
-      category,
-      lessonNames: [],
-      levels: []
-    };
-
-    byCategory[category].lessonNames.push(lessonName);
-    byCategory[category].levels.push(levels);
-  });
-
-  return byCategory;
-}
+import { levelType } from './progressTypes';
 
 const ProgressTable = React.createClass({
   propTypes: {
     isSummaryView: PropTypes.bool.isRequired,
-    lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    categories: PropTypes.arrayOf(PropTypes.string).isRequired,
-    levelsByLesson: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          level: PropTypes.string,
-          url: PropTypes.string
-        })
-      )
+    categorizedLessons: PropTypes.arrayOf(
+      PropTypes.shape({
+        category: PropTypes.string.isRequired,
+        lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+        levels: PropTypes.arrayOf(
+          PropTypes.arrayOf(levelType)
+        ).isRequired
+      })
     ).isRequired,
   },
 
@@ -57,28 +35,27 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { isSummaryView, categories, lessonNames, levelsByLesson } = this.props;
+    const { isSummaryView, categorizedLessons } = this.props;
 
     const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
 
-    if (_.uniq(categories).length === 1) {
+    if (categorizedLessons.length === 1) {
       return (
         <TableType
-          lessonNames={lessonNames}
-          levelsByLesson={levelsByLesson}
+          lessonNames={categorizedLessons[0].lessonNames}
+          levelsByLesson={categorizedLessons[0].levels}
         />
       );
     } else {
-      const categorized = categorize(categories, lessonNames, levelsByLesson);
       return (
         <div>
-          {Object.keys(categorized).map((category, index) => (
+          {categorizedLessons.map(category => (
             <ProgressGroup
-              key={index}
-              groupName={category}
+              key={category.category}
+              groupName={category.category}
               isSummaryView={isSummaryView}
-              lessonNames={categorized[category].lessonNames}
-              levelsByLesson={categorized[category].levels}
+              lessonNames={category.lessonNames}
+              levelsByLesson={category.levels}
             />
           ))}
         </div>
@@ -89,8 +66,5 @@ const ProgressTable = React.createClass({
 
 export default connect(state => ({
   isSummaryView: state.progress.isSummaryView,
-  lessonNames: lessonNames(state.progress),
-  // Put anything without a category into a "Content" category
-  categories: categories(state.progress).map(cat => cat || i18n.content()),
-  levelsByLesson: levelsByLesson(state.progress),
+  categorizedLessons: categorizedLessons(state.progress)
 }))(ProgressTable);
