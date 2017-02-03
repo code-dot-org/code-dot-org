@@ -147,7 +147,6 @@ class Applab < Blockly
         "circle": null,
         "rect": null,
         "setStrokeWidth": null,
-        "rgb": null,
         "setStrokeColor": null,
         "setFillColor": null,
         "drawImageURL": null,
