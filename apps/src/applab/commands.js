@@ -559,12 +559,12 @@ applabCommands.rgb = function (opts) {
   apiValidateTypeAndRange(opts, 'color', 'number', opts.r, 'number', 0, 255);
   apiValidateTypeAndRange(opts, 'color', 'number', opts.g, 'number', 0, 255);
   apiValidateTypeAndRange(opts, 'color', 'number', opts.b, 'number', 0, 255);
-  var colorString = opts.r + "," + opts.g + "," + opts.b;
+  const colorString = `${opts.r}, ${opts.g}, ${opts.b}`;
   if (opts.a) {
     apiValidateTypeAndRange(opts, 'color', 'number', opts.a, 'number', 0, 1);
-    return "rgba(" + colorString + "," + opts.a + ")";
+    return `rgba(${colorString}, ${opts.a})`;
   }
-  return "rgb(" + colorString + ")";
+  return `rgb(${colorString})`;
 };
 
 applabCommands.setStrokeColor = function (opts) {
