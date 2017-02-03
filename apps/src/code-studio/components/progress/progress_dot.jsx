@@ -48,6 +48,10 @@ export const BUBBLE_COLORS = {
     color: color.charcoal,
     backgroundColor: color.lightest_gray
   },
+  multi_level: {
+    color: color.charcoal,
+    backgroundColor: color.lightest_gray
+  }
 };
 
 const styles = {
