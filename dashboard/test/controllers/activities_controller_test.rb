@@ -1344,11 +1344,12 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone strips emoji from program and saves it" do
     params = @milestone_params
-    params[:program] = "panda: [#{0x1F43C.chr}]"
+    params[:program] = panda_panda
 
     post :milestone, params: params
 
     user_level = UserLevel.last
-    assert_equal user_level.level_source.data, 'panda: []'
+    # panda_panda contains a panda emoji, ensure that it's gone
+    assert_equal user_level.level_source.data, 'Panda'
   end
 end
