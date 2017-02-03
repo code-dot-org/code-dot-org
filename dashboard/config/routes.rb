@@ -333,6 +333,8 @@ Dashboard::Application.routes.draw do
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
 
+    get 'professional_learning_landing', to: 'professional_learning_landing#index'
+
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
     get 'teacher_application/thanks', to: 'teacher_application#thanks'

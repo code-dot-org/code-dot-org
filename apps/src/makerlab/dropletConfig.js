@@ -3,7 +3,6 @@ import _ from 'lodash';
 import {getFirstParam} from '../dropletUtils';
 import {
     N_COLOR_LEDS,
-    TOUCH_SENSOR_VARS,
     SENSOR_VARS,
     BUTTON_VARS,
     COMPONENT_EVENTS
@@ -29,7 +28,6 @@ const MAKERLAB_CATEGORY = 'Maker Lab';
 const CIRCUIT_CATEGORY = 'Circuit';
 
 const pixelType = '[ColorLed].';
-const touchSensorType = '[TouchSensor].';
 const colorPixelVariables = _.range(N_COLOR_LEDS).map(index => `colorLeds[${index}]`);
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
@@ -40,10 +38,36 @@ const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
  * @returns {Array.<string>}
  */
 const boardEventDropdownGenerator = function (editor) {
-  const firstParam = getFirstParam('onBoardEvent', this.parent, editor);
-  const wrapInQuotes = e => `"${e}"`;
-  return COMPONENT_EVENTS[firstParam].map(wrapInQuotes);
+  return getBoardEventDropdownForParam(
+    getFirstParam('onBoardEvent', this.parent, editor));
 };
+
+/**
+ * Generate an array of dropdown strings appropriate for the second
+ * parameter to onBoardEvent, given a particular first parameter to
+ * onBoardEvent.
+ * @param {string} firstParam - first parameter to onBoardEvent
+ */
+export function getBoardEventDropdownForParam(firstParam) {
+  const wrapInQuotes = e => `"${e}"`;
+  const idealOptions = COMPONENT_EVENTS[firstParam];
+  if (Array.isArray(idealOptions)) {
+    return _.chain(idealOptions)
+      .sort()
+      .sortedUniq()
+      .map(wrapInQuotes)
+      .value();
+  }
+
+  // If we can't find an ideal subset, use all possible
+  return _.chain(COMPONENT_EVENTS)
+    .values()
+    .flatten()
+    .sort()
+    .sortedUniq()
+    .map(wrapInQuotes)
+    .value();
+}
 
 export const blocks = [
   /**
@@ -86,9 +110,6 @@ export const blocks = [
   {func: 'accelerometer.getAcceleration', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.start', category: CIRCUIT_CATEGORY},
   {func: 'accelerometer.sensitivity', category: CIRCUIT_CATEGORY, type: 'property' },
-
-  {func: 'value', blockPrefix: `${TOUCH_SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: touchSensorType, modeOptionName: '*.value', objectDropdown: {options: TOUCH_SENSOR_VARS}, type: 'readonlyproperty'},
-  {func: 'sensitivity', blockPrefix: `${TOUCH_SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: touchSensorType, modeOptionName: '*.sensitivity', objectDropdown: {options: TOUCH_SENSOR_VARS}, type: 'property'},
 
   // TODO(bjordan): re-add when dropdowns work with object refs
   //{func: 'buttonL', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
