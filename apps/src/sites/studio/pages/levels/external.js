@@ -4,6 +4,16 @@ import { postMilestoneForPageLoad, onContinue } from '@cdo/apps/code-studio/leve
 
 $(document).ready(() => {
   embedDiscourseForum();
+
+  const script = document.querySelector('script[data-external]');
+  const data = JSON.parse(script.dataset.external);
+
+  // If this is in a level group, we dont need to do anything special for
+  // milestone requests
+  if (data.in_level_group) {
+    return;
+  }
+
   registerGetResult();
 
   // make milestone post

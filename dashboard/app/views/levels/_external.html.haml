@@ -3,7 +3,7 @@
 - in_level_group ||= false
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/external.js')}
+  %script{src: minifiable_asset_path('js/levels/external.js'), data: {external: { in_level_group: in_level_group }.to_json}}
   :javascript
     var options = #{level.properties['options'].to_json}
 
