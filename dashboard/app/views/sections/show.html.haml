@@ -63,12 +63,18 @@
     =t('signinsection.welcome', section_name: @section.name)
 
   %div#user
-    %h4.instructions= t('signinsection.name')
+    %h4.instructions
+      = succeed '*' do
+        = t('signinsection.name')
     %ul.students
       - @section.name_safe_students.each do |student|
         %li{id: student.id}
           = student.name
     .clear
+
+  %br
+  = precede '*' do
+    != t('signinsection.student_privacy', student_privacy_blog: 'http://teacherblog.code.org/post/156768797364/privacy-concern-with-using-student-full-names')
 
   - if @section.login_type == Section::LOGIN_TYPE_PICTURE
     #secret{style: 'display: none;'}

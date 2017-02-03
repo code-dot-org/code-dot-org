@@ -24,8 +24,9 @@ def git_generate_changelog
   end
 
   relevant_matches = matches.select do |match|
-    # ignore merges from staging; those represent DTTs
-    match['branch'] != 'staging'
+    # ignore merges from staging and test, which represent standard
+    # deploy operations
+    !match.nil? && !['staging', 'test'].include?(match['branch'])
   end
 
   items = relevant_matches.map do |match|
@@ -82,7 +83,7 @@ end
 
 def edit(content)
   file = Tempfile.new(['create-release', '.md'])
-  editor = ENV['EDITOR'].to_s || 'vim'
+  editor = ENV['EDITOR'] || 'vim'
   begin
     file.write(content)
     file.close

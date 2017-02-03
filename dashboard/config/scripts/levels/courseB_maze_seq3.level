@@ -28,8 +28,7 @@
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?\",\"hint_id\":\"courseB_maze_seq3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fc84034a9d3f1ed1bd1bdd8f97f33d6c/courseB_maze_seq3.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
