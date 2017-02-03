@@ -35,6 +35,13 @@
                   = text_field_tag :name, @level.name
                   = hidden_field_tag :authenticity_token, form_authenticity_token
                   = submit_tag 'Clone'
+            -if @level.is_a? LevelGroup
+              %li
+                contained levels
+                %ol
+                  - @level.properties['pages'].each do |page|
+                    - page['levels'].each do |level_name|
+                      %li= link_to level_name, level_path(Level.find_by_name(level_name))
           - elsif @script_level
             %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
         - else

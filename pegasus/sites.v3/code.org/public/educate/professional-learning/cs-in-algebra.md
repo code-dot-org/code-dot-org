@@ -19,7 +19,6 @@ If accepted into the Code.org CS in Algebra Professional Learning Program, you w
 The Code.org CS in Algebra professional development program is designed to help teachers identify the intersection between Computer Science and Algebra in a way that supports student learning of Algebraic functions, with a focus on providing space for teachers to become comfortable with the curricular materials (lesson plans and computer-based tools) and associated teaching strategies.
 
 
-[<button>Apply now</button>](/educate/professional-learning/cs-in-algebra-apply)
 
 ## <a name="commitments"></a>What are the program commitments?
 
@@ -27,11 +26,11 @@ The Code.org CS in Algebra professional development program is designed to help 
 <br/>
 	- 2 hours online, self-paced
 <br/>
-- **Phase 2: Summer Study**
+- **Phase 2: In Person**
 <br/>
 	- 2 days (14 hours) in person
 <br/>
-- **Phase 3: Academic Year Development**
+- **Phase 3: Follow Up**
 <br/>
 	- 2 hours online, self-paced
 <br/>
@@ -46,4 +45,3 @@ Any middle school math teacher who's district is partnered with Code.org and int
 
 We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach CS in Algebra. If your school district is not partnered with Code.org (or even if it is), you can also contact [Bootstrap](http://www.bootstrapworld.org/workshops/), our preferred professional development provider for CS in Algebra.
 
-[<button>Apply now</button>](/educate/professional-learning/cs-in-algebra-apply)
