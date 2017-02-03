@@ -174,7 +174,14 @@ export default class BoardController {
       const serialPort = new ChromeSerialPort.SerialPort(portId, {
         bitrate: SERIAL_BAUD
       }, true);
-      const io = new PlaygroundIO({port: serialPort});
+      const io = new PlaygroundIO({
+        port: serialPort,
+        // Circuit Playground Firmata does not seem to proactively report its
+        // version, meaning we were hitting the default 5000ms timeout waiting
+        // for this on every connection attempt.  Lowering that timeout to
+        // 200ms seems to work just fine.
+        reportVersionTimeout: 200
+      });
       const board = new five.Board({io: io, repl: false});
       board.once('ready', () => resolve(board));
       board.once('error', reject);
