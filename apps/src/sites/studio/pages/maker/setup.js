@@ -1,4 +1,4 @@
-import BoardController from '@cdo/apps/makerlab/BoardController';
+import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
