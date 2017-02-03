@@ -269,7 +269,7 @@ export const categorizedLessons = state => {
   });
 
   // We want to return an array of categories
-  return Object.keys(byCategory).map(key => byCategory[key]);
+  return _.values(byCategory);
 };
 
 /**

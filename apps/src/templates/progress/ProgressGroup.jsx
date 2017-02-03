@@ -54,7 +54,7 @@ const ProgressGroup = React.createClass({
   render() {
     const { groupName, lessonNames, levelsByLesson, isSummaryView } = this.props;
 
-    const ProgressTable = isSummaryView ? SummaryProgressTable : DetailProgressTable;
+    const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
     return (
@@ -70,7 +70,7 @@ const ProgressGroup = React.createClass({
         </div>
         {!this.state.collapsed &&
           <div style={styles.contents}>
-            <ProgressTable
+            <TableType
               lessonNames={lessonNames}
               levelsByLesson={levelsByLesson}
             />
