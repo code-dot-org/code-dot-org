@@ -23,7 +23,6 @@ const styles = {
     backgroundColor: color.lighter_purple,
     padding: 20
   }
-
 };
 
 /**
