@@ -36,7 +36,7 @@
   $(document).ready(function () {
     $.getJSON( "/v2/client-location", function (data) {
       country_code = data['country_code'];
-      if (country_code != 'US') {
+      if (country_code == 'US') {
         $('#us-announcement').show();
       }
       else {
