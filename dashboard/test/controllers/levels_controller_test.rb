@@ -268,7 +268,7 @@ class LevelsControllerTest < ActionController::TestCase
       level = Level.find_by(name: level_name)
       file_path = LevelLoader.level_file_path(level.name)
       assert_equal true, file_path && File.exist?(file_path)
-      delete :destroy, id: level
+      delete :destroy, params: {id: level}
       assert_equal false, file_path && File.exist?(file_path)
     ensure
       file_path = LevelLoader.level_file_path(level_name)
