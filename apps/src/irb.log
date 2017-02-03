@@ -1,0 +1,12 @@
+command = 'my "command"'
+command
+%Q["#{command}"]
+%q[command]
+%q[#{command}]
+%q[#{command}]
+%Q["#{command}"]
+%q[%Q["#{command}"]]
+%Q["#{command}"]
+command
+command.inspect
+command.inspect.inspect

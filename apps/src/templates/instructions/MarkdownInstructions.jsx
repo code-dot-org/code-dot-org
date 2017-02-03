@@ -53,8 +53,47 @@ const MarkdownInstructions = React.createClass({
       });
     }
 
+    // Convert any inline XML into blockly blocks. Note that we want to
+    // make sure we don't initialize any blockspace before the main
+    // block space has been created, lest we violate some assumptions
+    // blockly has.
+    if (Blockly.mainBlockSpace) {
+      this.addBlocks();
+    } else {
+      document.addEventListener(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED, () => {
+        this.addBlocks();
+      });
+    }
+
     // Parent needs to readjust some sizing after images have loaded
     $(ReactDOM.findDOMNode(this)).find('img').load(this.props.onResize);
+  },
+
+  addBlocks() {
+    // If we have Blockly, convert them from raw XML into populated blockspaces
+    const xmls = ReactDOM.findDOMNode(this).getElementsByTagName('xml');
+    if (xmls.length) {
+      Array.prototype.forEach.call(xmls, function (xml) {
+        // create a container and insert the blockspace into it
+        const container = xml.parentNode.insertBefore(document.createElement('div'), xml);
+        var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
+          noScrolling: true
+        });
+
+        // then, calculate the minimum required size for the container
+        const metrics = blockSpace.getMetrics();
+        const height = metrics.contentHeight + (metrics.contentTop * 2);
+        const width = metrics.contentWidth + metrics.contentLeft;
+
+        // and shrink it, triggering a blockspace resize when we do so
+        container.style.height = height + "px";
+        container.style.width = width + "px";
+        blockSpace.blockSpaceEditor.svgResize();
+      }.bind(this));
+
+      // Finally, resize the instructions to accomodate our new elements
+      this.props.onResize();
+    }
   },
 
   componentDidMount() {
