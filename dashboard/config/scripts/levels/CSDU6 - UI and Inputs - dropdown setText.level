@@ -75,11 +75,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 Simple Dropdown Template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "markdown_instructions": "# setText and getText\r\n\r\nOften you will want to get the text of a UI Element and use it to set the text of another element on the screen. Can you get the text from the dropdown when the user picks a new input and use it to set the text of the choiceDisplay label."
+    "markdown_instructions": "# setText and getText\r\n\r\nOften you will want to get the text of a UI Element and use it to set the text of another element on the screen. Can you get the text from the dropdown when the user picks a new input and use it to set the text of the choiceDisplay label.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

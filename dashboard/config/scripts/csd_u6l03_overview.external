@@ -1,0 +1,9 @@
+name 'CSD U6L03 Overview'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Overview
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+* <a href="https://docs.google.com/document/d/1MhjLVY95kQarl-R3d171nv6xFwGUQQK8jy-VTmRX214/edit#" target="_blank">Activity Guide KEY - Event Testing </a>
+MARKDOWN
