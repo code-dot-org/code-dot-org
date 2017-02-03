@@ -13,7 +13,8 @@ import reducer, {
   setIsSummaryView,
   SignInState,
   levelsByLesson,
-  progressionsFromLevels
+  progressionsFromLevels,
+  categorizedLessons
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -577,6 +578,52 @@ describe('progressReduxTest', () => {
       const progressions = progressionsFromLevels(levels);
       assert.equal(progressions.length, 2);
       assert.equal(progressions[1].start, 2);
+    });
+  });
+
+  describe('categorizedLessons', () => {
+    // helper method that creates a fake stage
+    const fakeStage = (categoryName, stageName) => ({
+      flex_category: categoryName,
+      name: stageName,
+      levels: [{
+        status: 'not_tried',
+        url: '',
+        name: 'fake level'
+      }]
+    });
+
+    it('returns a single category if all lessons have the same category', () => {
+      const state = {
+        stages: [
+          fakeStage('Content', 'stage1'),
+          fakeStage('Content', 'stage2'),
+          fakeStage('Content', 'stage3')
+        ]
+      };
+
+      const categories = categorizedLessons(state);
+      assert.equal(categories.length, 1);
+      assert.equal(categories[0].category, 'Content');
+    });
+
+    it('groups non-adjacent stages by category', () => {
+      const state = {
+        stages: [
+          fakeStage('cat1', 'stage1'),
+          fakeStage('cat2', 'stage2'),
+          fakeStage('cat1', 'stage3')
+        ]
+      };
+
+      const categories = categorizedLessons(state);
+      assert.equal(categories.length, 2);
+      assert.equal(categories[0].category, 'cat1');
+      assert.equal(categories[1].category, 'cat2');
+      assert.equal(categories[0].levels.length, 2);
+      assert.equal(categories[1].levels.length, 1);
+      assert.deepEqual(categories[0].lessonNames, ['stage1', 'stage3']);
+      assert.deepEqual(categories[1].lessonNames, ['stage2']);
     });
   });
 });
