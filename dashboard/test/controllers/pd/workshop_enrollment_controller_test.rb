@@ -84,7 +84,11 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'enrollments can be created' do
     assert_creates(Pd::Enrollment) do
-      post :create, workshop_id: @workshop.id, pd_enrollment: enrollment_test_params, school_info: school_info_params
+      post :create, params: {
+        workshop_id: @workshop.id,
+        pd_enrollment: enrollment_test_params,
+        school_info: school_info_params
+      }
     end
     enrollment = Pd::Enrollment.last
     refute_nil enrollment.code

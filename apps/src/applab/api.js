@@ -149,15 +149,6 @@ export function setStrokeWidth(width) {
                           {'width': width });
 }
 
-export function rgb(r, g, b, a) {
-  return Applab.executeCmd(null,
-                          'rgb',
-                          {'r' : r,
-                           'g' : g,
-                           'b' : b,
-                           'a' : a});
-}
-
 export function setStrokeColor(color) {
   return Applab.executeCmd(null,
                           'setStrokeColor',
