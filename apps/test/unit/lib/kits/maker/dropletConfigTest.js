@@ -1,6 +1,6 @@
 /** @file Test maker droplet config behavior */
-import {expect} from '../../util/configuredChai';
-import {getBoardEventDropdownForParam} from '@cdo/apps/makerlab/dropletConfig';
+import {expect} from '../../../../util/configuredChai';
+import {getBoardEventDropdownForParam} from '@cdo/apps/lib/kits/maker/dropletConfig';
 
 describe('getBoardEventDropdownForParam', function () {
   it('unknown first parameter dropdown contains all options', function () {

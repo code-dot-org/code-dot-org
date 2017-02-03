@@ -678,7 +678,7 @@ module LevelsHelper
   # redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
-    # Note that Game.applab includes both App Lab and Maker Lab.
+    # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?

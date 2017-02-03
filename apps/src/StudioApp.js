@@ -36,7 +36,7 @@ import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
-import {blocks as makerDropletBlocks} from './makerlab/dropletConfig';
+import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore, registerReducers } from './redux';
 import { Provider } from 'react-redux';
 import {

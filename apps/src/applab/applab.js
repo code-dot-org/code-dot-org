@@ -15,7 +15,7 @@ import AppLabView from './AppLabView';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
-import * as makerDropletConfig from '../makerlab/dropletConfig';
+import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
 import AppStorage from './appStorage';
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
@@ -45,7 +45,7 @@ import * as applabConstants from './constants';
 const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
-import BoardController from '../makerlab/BoardController';
+import BoardController from '../lib/kits/maker/BoardController';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {
   getContainedLevelResultInfo,
@@ -133,7 +133,6 @@ function loadLevel() {
   // since I don't understand it well enough.
   Applab.appWidth = applabConstants.APP_WIDTH;
   Applab.appHeight = applabConstants.APP_HEIGHT;
-  Applab.makerlabEnabled = level.makerlabEnabled;
 
   // In share mode we need to reserve some number of pixels for our in-app
   // footer. We do that by making the play space slightly smaller elsewhere.
@@ -146,8 +145,8 @@ function loadLevel() {
     Applab.scale[key] = level.scale[key];
   }
 
-  if (Applab.makerlabEnabled) {
-    Applab.makerlabController = new BoardController();
+  if (level.makerlabEnabled) {
+    Applab.makerController = new BoardController();
   }
 }
 
@@ -682,7 +681,7 @@ Applab.init = function (config) {
 
   config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
 
-  // Set the custom set of blocks (may have had makerlab blocks merged in) so
+  // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
   config.level.levelBlocks = config.dropletConfig.blocks;
 
@@ -996,8 +995,8 @@ Applab.reset = function () {
     designMode.resetPropertyTab();
   }
 
-  if (Applab.makerlabController) {
-    Applab.makerlabController.reset();
+  if (Applab.makerController) {
+    Applab.makerController.reset();
   }
 
   if (level.showTurtleBeforeRun) {
@@ -1183,8 +1182,8 @@ Applab.execute = function () {
     }
   }
 
-  if (Applab.makerlabController) {
-    Applab.makerlabController
+  if (Applab.makerController) {
+    Applab.makerController
         .connectAndInitialize(codegen, Applab.JSInterpreter)
         .catch((error) => {
           studioApp.displayPlayspaceAlert("error",
