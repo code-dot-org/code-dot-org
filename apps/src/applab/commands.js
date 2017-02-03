@@ -556,15 +556,12 @@ applabCommands.setStrokeWidth = function (opts) {
 
 // Returns an rbg or rgba color string that can be used as a parameter to other functions.
 applabCommands.rgb = function (opts) {
-  apiValidateTypeAndRange(opts, 'color', 'number', opts.r, 'number', 0, 255);
-  apiValidateTypeAndRange(opts, 'color', 'number', opts.g, 'number', 0, 255);
-  apiValidateTypeAndRange(opts, 'color', 'number', opts.b, 'number', 0, 255);
-  const colorString = `${opts.r}, ${opts.g}, ${opts.b}`;
-  if (opts.a) {
-    apiValidateTypeAndRange(opts, 'color', 'number', opts.a, 'number', 0, 1);
-    return `rgba(${colorString}, ${opts.a})`;
-  }
-  return `rgb(${colorString})`;
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.a, 'number', 0, 1, OPTIONAL);
+  const alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  return `rgba(${opts.r}, ${opts.g}, ${opts.b}, ${alpha})`;
 };
 
 applabCommands.setStrokeColor = function (opts) {
