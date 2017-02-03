@@ -80,6 +80,10 @@ class Section < ActiveRecord::Base
       if first.nil?
         # if fullnamesplitter can't identify the first name, default to
         # full name (ie do nothing)
+      elsif first.length == 1 || /^.\.$/.match(first)
+        # if the students first name is either a single character or a
+        # single character followed by a period, assume it has been
+        # abbreviated and display the full name
       elsif trie.words(first).count == 1
         # If the student's first name is unique, simply use that
         student.name = first
