@@ -190,5 +190,13 @@ class SectionTest < ActiveSupport::TestCase
       ["Cher", "J'onn J'onzz", "John\tDoe"],
       ["Cher", "J'onn J'onzz", "John"]
     )
+
+    # Handles abbreviated first names by defaulting back to the "full"
+    # name. Abbreviations are a single letter or a single letter
+    # followed by a period; two-letter names are still allowed
+    verify(
+      ["Bo Burnham", "J. Crew", "T Bone"],
+      ["Bo", "J. Crew", "T Bone"]
+    )
   end
 end
