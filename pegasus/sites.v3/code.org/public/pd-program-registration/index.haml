@@ -9,11 +9,12 @@ title: "Code.org Professional Learning Program Registration"
   user_id = dashboard_user[:id]
   application = DASHBOARD_DB[:pd_teacher_applications].where(user_id: user_id).first
 
-  application_json, accepted_workshop, assigned_tc_city = nil
+  application_json, accepted_workshop, assigned_tc_city, selected_course = nil
   if application
     application_json = JSON.parse(application[:application])
     accepted_workshop = application[:accepted_workshop]
     assigned_tc_city = accepted_workshop.to_s.scan(/Houston|Phoenix|Philadelphia/).first
+    selected_course = application_json['selectedCourse']
   end
 
   previous_response = DB[:forms].where(kind: 'PdProgramRegistration', user_id: user_id).first
@@ -99,7 +100,7 @@ title: "Code.org Professional Learning Program Registration"
     %input{name: 'last_name_s', type: 'hidden', value: application_json['lastName']}
     %input{name: 'phone_number_s', type: 'hidden', value: application_json['phoneNumber']}
     %input{name: 'school_district_s', type: 'hidden', value: application_json['school-district']}
-    %input{name: 'selected_course_s', type: 'hidden', value: application_json['selectedCourse']}
+    %input{name: 'selected_course_s', type: 'hidden', value: selected_course}
     %input{name: 'accepted_workshop_s', type: 'hidden', value: accepted_workshop}
 
     %h1 Code.org Professional Learning Program Registration
@@ -357,6 +358,12 @@ title: "Code.org Professional Learning Program Registration"
         = form_control :multi_select,
             name: 'grades_planning_to_teach_ss[]',
             label: 'What grade level are you planning to teach this course to (check all that apply)?'
+
+      - if selected_course == 'csd'
+        .form-group
+          = form_control :single_select,
+              name: 'how_implement_csd_s',
+              label: 'Please tell us how you plan to implement the CS Discoveries course'
 
       .form-group
         = form_control :multi_select,

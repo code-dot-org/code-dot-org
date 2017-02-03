@@ -27,7 +27,7 @@ module.exports = {
         'rect(80, 120, 160, 240);\n' +
         'setStrokeWidth(3);\n' +
         'setStrokeColor("red");\n' +
-        'setFillColor(rgb(255,0,0));\n' +
+        'setFillColor("yellow");\n' +
         'drawImageURL("' + imageUrl + '");\n' +
         'var imgData = getImageData(0, 0, 320, 480);\n' +
         'putImageData(imgData, 0, 0);\n' +
