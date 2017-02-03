@@ -3072,8 +3072,10 @@ Studio.onPuzzleComplete = function () {
 
   if (studioApp.hasContainedLevels && !level.edit_blocks) {
     postContainedLevelAttempt(studioApp);
-    runAfterPostContainedLevel(
-        () => Studio.onReportComplete(getContainedLevelResultInfo().feedback));
+    runAfterPostContainedLevel(() => {
+      Studio.message = getContainedLevelResultInfo().feedback;
+      Studio.onReportComplete();
+    });
     return;
   }
 

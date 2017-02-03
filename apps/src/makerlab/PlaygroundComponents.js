@@ -3,10 +3,12 @@
  * conforming to Maker API droplet blocks.
  */
 
-import {N_COLOR_LEDS, TOUCH_PINS} from './PlaygroundConstants';
-import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
+import {N_COLOR_LEDS , TOUCH_PINS} from './PlaygroundConstants';
 import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
+import five from 'johnny-five';
+import PlaygroundIO from 'playground-io';
+import TouchSensor from './TouchSensor';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -15,20 +17,17 @@ import _ from 'lodash';
  * Components:
  *   - will each have .stop() called on Reset
  *
- * TODO(bcjordan): Import dependencies directly once conditional imports sorted.
- *
  * @returns {Object.<String, Object>} board components
  */
-export function initializeCircuitPlaygroundComponents(io, five, PlaygroundIO) {
+export function initializeCircuitPlaygroundComponents() {
   const colorLeds = _.range(N_COLOR_LEDS).map(index => new five.Led.RGB({
     controller: PlaygroundIO.Pixel,
     pin: index
   }));
 
-  /**
-   * Must initialize sound sensor BEFORE left button, otherwise left button
-   * will not respond to input.
-   */
+  // Must initialize sound sensor BEFORE left button, otherwise left button
+  // will not respond to input.  This has something to do with them sharing
+  // pin 4 on the board.
   const soundSensor = new five.Sensor({
     pin: "A4",
     freq: 100
@@ -54,10 +53,16 @@ export function initializeCircuitPlaygroundComponents(io, five, PlaygroundIO) {
     return accelerometer[accelerationDirection];
   };
 
-  const capTouch = new PlaygroundIO.CapTouch(io);
-  const touchSensors = {};
-  _.each(TOUCH_PINS, (index) => {
-    touchSensors[`touchSensor${index}`] = new TouchSensor(index, capTouch);
+  // We make one playground-io Touchpad component for all captouch sensors,
+  // then wrap it in our own separate objects to get the API we want to
+  // expose to students.
+  const playgroundTouchpad = new five.Touchpad({
+    controller: PlaygroundIO.Touchpad,
+    pads: TOUCH_PINS
+  });
+  let touchPads = {};
+  TOUCH_PINS.forEach(pin => {
+    touchPads[`touchPad${pin}`] = new TouchSensor(pin, playgroundTouchpad);
   });
 
   const lightSensor = new five.Sensor({
@@ -74,7 +79,7 @@ export function initializeCircuitPlaygroundComponents(io, five, PlaygroundIO) {
     addSensorFeatures(five.Board.fmap, s);
   });
 
-  return _.assign({}, touchSensors, {
+  return {
     colorLeds: colorLeds,
 
     led: new five.Led(13),
@@ -92,41 +97,14 @@ export function initializeCircuitPlaygroundComponents(io, five, PlaygroundIO) {
 
     accelerometer: accelerometer,
 
-    tap: new PlaygroundIO.Tap(io),
-
-    touch: capTouch,
-
     soundSensor: soundSensor,
 
     buttonL: buttonL,
 
     buttonR: buttonR,
-  });
-}
 
-/**
- * Value recording and event emitting for Playground.CapTouch
- *
- * TODO(bcjordan): Remove EventEmitter after updating PlaygroundIO.
- */
-export class TouchSensor extends EventEmitter {
-  constructor(index, capTouch) {
-    super();
-    this.index = index;
-    this.capTouch = capTouch;
-    this.value = undefined;
-  }
-
-  start() {
-    this.removeAllListeners();
-    this.capTouch.onTouch(this.index, (isTouched, value) => {
-      this.value = value;
-      if (isTouched) {
-        this.emit('touch', ...arguments);
-      }
-    });
-    this.value = undefined;
-  }
+    ...touchPads
+  };
 }
 
 /**
