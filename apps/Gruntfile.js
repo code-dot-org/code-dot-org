@@ -383,6 +383,7 @@ module.exports = function (grunt) {
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
+    'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
