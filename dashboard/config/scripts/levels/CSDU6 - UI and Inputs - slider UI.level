@@ -75,6 +75,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 color slider template",
+    "markdown_instructions": "# RGB Sliders\r\n\r\n<img src=\"https://images.code.org/f3fb468a73aa35b69d7e64deee34c7c3-image-1486080850211.12.39 PM.png\" style=\"width:200px;float:right\">\r\n\r\nFirst step to creating the RGB Sliders app is to set up the UI elements and event handers for the sliders. \r\n\r\n* Can you get the screen to look similar to the one below? Hint: The color box is a button with no text.\r\n* Can you set up 3 event handlers that listen for when someone has finished moving the slider to a new location? Hint: Think back to your event investigation. Which event type do you want?",
     "contained_level_names": null
   },
   "published": true,
