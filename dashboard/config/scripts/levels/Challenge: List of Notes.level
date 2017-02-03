@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-02-03T19:26:34.000Z",
+  "created_at": "2017-02-03T20:52:20.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -37,18 +37,13 @@
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
       "functionParams_none": null,
       "callMyFunction": null,
       "comment": null,
-      "on": null,
-      "off": null,
-      "toggle": null,
       "led.on": null,
       "led.off": null,
       "buzzer.note": null,
-      "buzzer.off": null
+      "declareAssign_list_abd": null
     },
     "edit_code": true,
     "embed": "false",
@@ -84,7 +79,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# ColorLEDs\r\n\r\nOn your board there are a bunch of colorLEDs that are all stored in an array. Can you use the length function to figure out how many Leds there are on the board?",
+    "markdown_instructions": "# Challenge\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nYou now know how to create a list of items. Try creating a list of notes for a song you can play using the buzzer on the Circuit Playground. Putting all the notes in the list will help to keep it organized. ",
     "contained_level_names": null
   },
   "published": true,

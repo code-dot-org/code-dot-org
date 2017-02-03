@@ -37,7 +37,10 @@
     "palette_category_at_start": "control",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "kHgV3hy4z/tk/faBT1teLZNf/3xIbnCtHSvPjMcdGJkUFzSPnWRjl4SYFRJt\nOB9x\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",

@@ -597,8 +597,10 @@ en:
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
       'CSD: Creating Variables In App Lab': {}
+      'CSD: Dropdown & Conditionals': {}
       'CSD: Lists': {}
       'CSD: Review Events': {}
+      'CSD: colorLed list': {}
       'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Pick Elements Styled: {}
@@ -904,6 +906,7 @@ en:
       'Chirpr: @lillizard': {}
       'Chirpr: @solmoon': {}
       Choosing Good IDs: {}
+      'Circuit Playground Map: Buzzer': {}
       'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
