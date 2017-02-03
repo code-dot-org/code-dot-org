@@ -80,6 +80,10 @@ class Section < ActiveRecord::Base
       if first.nil?
         # if fullnamesplitter can't identify the first name, default to
         # full name (ie do nothing)
+      elsif first.length == 1 || /^.\.$/.match(first)
+        # if the students first name is either a single character or a
+        # single character followed by a period, assume it has been
+        # abbreviated and display the full name
       elsif trie.words(first).count == 1
         # If the student's first name is unique, simply use that
         student.name = first
@@ -92,14 +96,15 @@ class Section < ActiveRecord::Base
         end
         # we then traverse up the trie until we encounter the
         # "rightmost" letter in the student's name which is not unique
-        leaf = leaf.parent while leaf.parent.children.count == 1
+        leaf = leaf.parent while leaf.parent && leaf.parent.children.count == 1
         # finally, we assemble the student's unique name by continuing
         # our way up the trie
-        student.name = ""
+        newname = ""
         until leaf.nil?
-          student.name = leaf.letter.to_s + student.name
+          newname = leaf.letter.to_s + newname
           leaf = leaf.parent
         end
+        student.name = newname unless newname.empty?
       end
 
       student

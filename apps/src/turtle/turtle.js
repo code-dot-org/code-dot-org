@@ -1490,8 +1490,10 @@ Artist.prototype.checkAnswer = function () {
 
   if (this.studioApp_.hasContainedLevels && !level.edit_blocks) {
     postContainedLevelAttempt(this.studioApp_);
-    runAfterPostContainedLevel(
-        () => this.onReportComplete(getContainedLevelResultInfo().feedback));
+    runAfterPostContainedLevel(() => {
+      this.message = getContainedLevelResultInfo().feedback;
+      this.onReportComplete();
+    });
   } else {
     var reportData = {
       app: 'turtle',
