@@ -218,7 +218,6 @@ module Pd::Payment
         deleted_at: DateTime.now
 
       calculator = PaymentCalculatorBase.instance
-      calculator.stubs(:teacher_qualified?).returns true
       calculator.expects(:teacher_qualified?).with(teacher_unqualified).returns false
 
       workshop_summary = calculator.calculate(workshop)
