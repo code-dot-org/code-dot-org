@@ -75,6 +75,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 Simple Dropdown Template",
+    "markdown_instructions": "# getText\r\n\r\nTry to set up an event handler that gets the text from the dropdown whenever a user selects a new item from the dropdown. You will need to use the getter `getText()`. Whenever you use a getter you should save it in a variable. Use `console.log()` to make sure it is working.",
     "contained_level_names": null
   },
   "published": true,

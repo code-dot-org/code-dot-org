@@ -1,0 +1,64 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2017-02-01T21:43:25.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "category": ""
+      },
+      "led.on": {
+        "category": ""
+      },
+      "led.off": {
+        "category": ""
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "true",
+    "markdown_instructions": "# Turn that LED Off\r\n\r\nJust as you can turn your red LED on using `led.on()`, you can turn it back off again with `led.off()`. You'll need to add a second button with an event handler that calls `led.off()`.\r\n\r\n# Do this\r\n\r\nAdd a second button and use its \"click\" event to turn off the LED\r\n\r\n* Drag out a new button in Design Mode and give it a good ID\r\n* Insert an event handler for your newly created button\r\n* Drag an `led.off()` command into your new event handler\r\n\r\nNow you should have two buttons, one that turns the LED on, and another that turns it off.\r\n\r\n_Challenge: Can you come up with other ways to turn on and off the LED? Could you do it with a single button?_",
+    "project_template_level_name": "CSDU6 LED basics template",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

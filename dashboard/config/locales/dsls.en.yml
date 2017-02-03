@@ -462,7 +462,7 @@ en:
         description here: description here
         title: title
       Building a UI with Design Mode: {}
-      'CSD - Event Types ': {}
+      CSD - Event Types: {}
       CSD - Functions Review: {}
       CSD - Getters and Setters: {}
       CSD - Headers and Lists - Hobbies Project: {}
@@ -580,6 +580,7 @@ en:
       CSD U4L22 SFLP: {}
       CSD U4L23 SFLP: {}
       CSD U4L24 SFLP: {}
+      CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U1-SFLP Exploring Problem Solving: {}
@@ -595,6 +596,8 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      'CSD: Creating Variables In App Lab': {}
+      'CSD: Lists': {}
       'CSD: Review Events': {}
       'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
@@ -4551,6 +4554,15 @@ en:
         Contact Us: Contact Us
         Use It: Use It
         Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
+      CSDU6 LED predict multi:
+        Alternate between on and off each click: Alternate between on and off each click
+        Blink on and off randomly: Blink on and off randomly
+        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        ? Here's a new block called `led.toggle()`. In this program `led.toggle()` is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        : Here's a new block called `led.toggle()`. In this program `led.toggle()` is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        Never turn on: Never turn on
+        Turn on and stay on: Turn on and stay on
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -7242,10 +7254,10 @@ en:
         '5': '5'
         '6': '6'
       cspu5_assess3_array3:
-        <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">: <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">
         <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
         <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
         <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+        <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">: <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
         <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">: <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
       cspu5_assess3_array4:
         '0': '0'

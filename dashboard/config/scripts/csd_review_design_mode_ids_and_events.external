@@ -1,7 +1,7 @@
 name 'CSD Review: Design Mode, IDs, and Events'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Design Mode, IDs, and Events
+# Review: Design Mode and IDs
 
 ## Design Mode
 App Lab let's you easily add UI Elements to your app, and then add code to respond when a user interacts with those elements. 
