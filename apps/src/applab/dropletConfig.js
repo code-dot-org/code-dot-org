@@ -185,31 +185,31 @@ export const categories = {
   'UI controls': {
     id: 'uicontrols',
     color: 'yellow',
-    rgb: color['droplet-yellow'],
+    rgb: color.droplet_yellow,
     blocks: []
   },
   Canvas: {
     id: 'canvas',
     color: 'red',
-    rgb: color['droplet-red'],
+    rgb: color.droplet_red,
     blocks: []
   },
   Data: {
     id: 'data',
     color: 'lightgreen',
-    rgb: color['droplet-light-green'],
+    rgb: color.droplet_light_green,
     blocks: []
   },
   Turtle: {
     id: 'turtle',
     color: 'cyan',
-    rgb: color['droplet-cyan'],
+    rgb: color.droplet_cyan,
     blocks: []
   },
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: color['droplet-bright-blue'],
+    rgb: color.droplet_bright_blue,
     blocks: []
   },
 };

@@ -341,43 +341,43 @@ module.exports.categories = {
   'Game Lab': {
     id: 'gamelab',
     color: 'yellow',
-    rgb: color['droplet-yellow'],
+    rgb: color.droplet_yellow,
     blocks: []
   },
   Sprites: {
     id: 'sprites',
     color: 'red',
-    rgb: color['droplet-red'],
+    rgb: color.droplet_red,
     blocks: []
   },
   Animations: {
     id: 'animations',
     color: 'red',
-    rgb: color['droplet-red'],
+    rgb: color.droplet_red,
     blocks: []
   },
   Groups: {
     id: 'groups',
     color: 'red',
-    rgb: color['droplet-red'],
+    rgb: color.droplet_red,
     blocks: []
   },
   Data: {
     id: 'data',
     color: 'lightgreen',
-    rgb: color['droplet-light-green'],
+    rgb: color.droplet_light_green,
     blocks: []
   },
   Drawing: {
     id: 'drawing',
     color: 'cyan',
-    rgb: color['droplet-cyan'],
+    rgb: color.droplet_cyan,
     blocks: []
   },
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: color['droplet-blue'],
+    rgb: color.droplet_blue,
     blocks: []
   },
 };

@@ -129,12 +129,12 @@ export const blocks = [
 export const categories = {
   [MAKER_CATEGORY]: {
     color: 'cyan',
-    rgb: color['droplet-cyan'],
+    rgb: color.droplet_cyan,
     blocks: []
   },
   [CIRCUIT_CATEGORY]: {
     color: 'red',
-    rgb: color['droplet-red'],
+    rgb: color.droplet_red,
     blocks: []
   },
 };
