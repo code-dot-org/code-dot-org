@@ -18,6 +18,7 @@ const ProgressTable = React.createClass({
         ).isRequired
       })
     ).isRequired,
+    hasPeerReviews: PropTypes.bool.isRequired
   },
 
   componentDidMount() {
@@ -35,7 +36,7 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { isSummaryView, categorizedLessons } = this.props;
+    const { isSummaryView, categorizedLessons, hasPeerReviews } = this.props;
 
     const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
 
@@ -58,6 +59,22 @@ const ProgressTable = React.createClass({
               levelsByLesson={category.levels}
             />
           ))}
+          {/* Peer reviews are a bit of a special beast and will take some time to
+            * get right. For now, stick in a placeholder that makes it clear that
+            * this work hasnt been done yet*/}
+          {hasPeerReviews &&
+            <ProgressGroup
+              key="peer_review"
+              groupName={"Peer Review: Not Yet Implemented with progressRedesign"}
+              isSummaryView={isSummaryView}
+              lessonNames={["Not yet implemented"]}
+              levelsByLesson={[[{
+                status: 'not_tried',
+                url: '',
+                name: 'Not Implemented'
+              }]]}
+            />
+          }
         </div>
       );
     }
@@ -66,5 +83,6 @@ const ProgressTable = React.createClass({
 
 export default connect(state => ({
   isSummaryView: state.progress.isSummaryView,
-  categorizedLessons: categorizedLessons(state.progress)
+  categorizedLessons: categorizedLessons(state.progress),
+  hasPeerReviews: !!state.progress.peerReviewStage,
 }))(ProgressTable);
