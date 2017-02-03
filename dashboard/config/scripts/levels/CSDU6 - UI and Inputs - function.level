@@ -78,6 +78,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 color slider template",
+    "markdown_instructions": "# setColor Function\r\n\r\nAt this point you probably have the same code inside each of your event handlers. Remember that when you have repeated code it is good to put it into a function. Can you use functions to get rid of the repeated code?",
     "contained_level_names": null
   },
   "published": true,

@@ -29,8 +29,7 @@
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This program is missing one block. Can you figure out which one?\",\"hint_id\":\"courseB_maze_seq2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57e4e54aa1f38237e9befdf5d1315d80/courseB_maze_seq2.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "debug: add command to end",
