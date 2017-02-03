@@ -94,9 +94,23 @@ class Section < ActiveRecord::Base
         student.name.split('').each do |letter|
           leaf = leaf[letter.to_sym]
         end
+
         # we then traverse up the trie until we encounter the
-        # "rightmost" letter in the student's name which is not unique
-        leaf = leaf.parent while leaf.parent && leaf.parent.children.count == 1
+        # "rightmost" letter in the student's name which is not unique.
+        # "Not unique" means that either the letter has siblings
+        # (implying other names that share characters with our own) or
+        # its parent is a terminal node (implying a name that's a strict
+        # subset of our own)
+        leaf = leaf.parent until leaf.parent.nil? ||
+            leaf.parent.children.count > 1 ||
+            leaf.parent.terminal?
+
+        # If our "rightmost" character is the empty string, add an
+        # additional letter for visibility if we can. Note that by this
+        # stage we are guaranteed to have no more than one child, so we
+        # can condifently pick the first.
+        leaf = leaf.children[0] if leaf.children.count > 0 && leaf.letter == :" "
+
         # finally, we assemble the student's unique name by continuing
         # our way up the trie
         newname = ""
