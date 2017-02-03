@@ -272,7 +272,6 @@ export const categorizedLessons = state => {
   return Object.keys(byCategory).map(key => byCategory[key]);
 };
 
-
 /**
  * Given a set of levels, groups them in sets of progressions, where each
  * progression is a set of adjacent levels sharing the same name (where that
