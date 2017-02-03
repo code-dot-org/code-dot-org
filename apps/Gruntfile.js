@@ -420,6 +420,8 @@ module.exports = function (grunt) {
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
 
+    'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+
     'projects/section_projects': './src/sites/studio/pages/projects/section_projects.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
