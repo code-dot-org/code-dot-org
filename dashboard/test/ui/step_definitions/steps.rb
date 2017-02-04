@@ -779,7 +779,7 @@ def generate_user(name)
   @users ||= {}
   @users[name] = {
     password: password,
-      email: email
+    email: email
   }
   return email, password
 end

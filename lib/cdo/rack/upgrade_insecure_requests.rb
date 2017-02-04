@@ -12,7 +12,7 @@ module Rack
     # Only the first match is rewritten
     HTTPS_DOMAINS = {
       /\Ahttp:\/\/.+\.jotformpro\.com/ => '//secure.jotformpro.com',
-        /\Ahttp:\/\// => '//'
+      /\Ahttp:\/\// => '//'
     }
 
     def initialize(app)

@@ -170,7 +170,7 @@ class DashboardStudent
   def self.random_secrets
     {
       secret_picture_id: random_secret_picture_id,
-     secret_words: random_secret_words
+      secret_words: random_secret_words
     }
   end
 

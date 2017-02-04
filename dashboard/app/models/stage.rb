@@ -90,16 +90,16 @@ class Stage < ActiveRecord::Base
     stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
       stage_data = {
         script_id: script.id,
-          script_name: script.name,
-          script_stages: script.stages.to_a.size,
-          freeplay_links: script.freeplay_links,
-          id: id,
-          position: absolute_position,
-          name: localized_name,
-          title: localized_title,
-          flex_category: localized_category,
-          lockable: !!lockable,
-          levels: cached_script_levels.map(&:summarize),
+        script_name: script.name,
+        script_stages: script.stages.to_a.size,
+        freeplay_links: script.freeplay_links,
+        id: id,
+        position: absolute_position,
+        name: localized_name,
+        title: localized_title,
+        flex_category: localized_category,
+        lockable: !!lockable,
+        levels: cached_script_levels.map(&:summarize),
       }
 
       # Use to_a here so that we get access to the cached script_levels.

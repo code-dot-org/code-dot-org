@@ -196,12 +196,12 @@ class ScriptLevel < ActiveRecord::Base
 
     summary = {
       ids: ids,
-        activeId: oldest_active_level.id,
-        position: position,
-        kind: kind,
-        icon: level.icon,
-        title: level_display_text,
-        url: build_script_level_url(self)
+      activeId: oldest_active_level.id,
+      position: position,
+      kind: kind,
+      icon: level.icon,
+      title: level_display_text,
+      url: build_script_level_url(self)
     }
 
     if kind == 'named_level'

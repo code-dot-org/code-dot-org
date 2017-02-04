@@ -67,139 +67,139 @@ class Craft < Blockly
 
   ALL_BLOCKS = {
     EMPTY_STRING => true,
-      bedrock: true,
-      bricks: true,
-      clay: true,
-      oreCoal: true,
-      dirtCoarse: true,
-      cobblestone: true,
-      oreDiamond: true,
-      dirt: true,
-      oreEmerald: true,
-      farmlandWet: true,
-      glass: true,
-      oreGold: true,
-      grass: true,
-      gravel: true,
-      houseTopA: true,
-      houseRightC: true,
-      houseRightB: true,
-      houseLeftA: true,
-      houseRightA: true,
-      houseBottomA: true,
-      houseBottomB: true,
-      houseBottomC: true,
-      houseBottomD: true,
-      clayHardened: true,
-      oreIron: true,
-      oreLapis: true,
-      lava: true,
-      logAcacia: true,
-      logBirch: true,
-      logJungle: true,
-      logOak: true,
-      logSpruce: true,
-      planksAcacia: true,
-      planksBirch: true,
-      planksJungle: true,
-      planksOak: true,
-      planksSpruce: true,
-      oreRedstone: true,
-      sand: true,
-      sandstone: true,
-      stone: true,
-      tnt: true,
-      water: true,
-      wool: true
+    bedrock: true,
+    bricks: true,
+    clay: true,
+    oreCoal: true,
+    dirtCoarse: true,
+    cobblestone: true,
+    oreDiamond: true,
+    dirt: true,
+    oreEmerald: true,
+    farmlandWet: true,
+    glass: true,
+    oreGold: true,
+    grass: true,
+    gravel: true,
+    houseTopA: true,
+    houseRightC: true,
+    houseRightB: true,
+    houseLeftA: true,
+    houseRightA: true,
+    houseBottomA: true,
+    houseBottomB: true,
+    houseBottomC: true,
+    houseBottomD: true,
+    clayHardened: true,
+    oreIron: true,
+    oreLapis: true,
+    lava: true,
+    logAcacia: true,
+    logBirch: true,
+    logJungle: true,
+    logOak: true,
+    logSpruce: true,
+    planksAcacia: true,
+    planksBirch: true,
+    planksJungle: true,
+    planksOak: true,
+    planksSpruce: true,
+    oreRedstone: true,
+    sand: true,
+    sandstone: true,
+    stone: true,
+    tnt: true,
+    water: true,
+    wool: true
   }
 
   ALL_MINIBLOCKS = {
     dirt: true,
-      dirtCoarse: true,
-      sand: true,
-      gravel: true,
-      bricks: true,
-      logAcacia: true,
-      logBirch: true,
-      logJungle: true,
-      logOak: true,
-      logSpruce: true,
-      planksAcacia: true,
-      planksBirch: true,
-      planksJungle: true,
-      planksOak: true,
-      planksSpruce: true,
-      cobblestone: true,
-      sandstone: true,
-      wool: true,
-      redstoneDust: true,
-      lapisLazuli: true,
-      ingotIron: true,
-      ingotGold: true,
-      emerald: true,
-      diamond: true,
-      coal: true,
-      bucketWater: true,
-      bucketLava: true,
-      gunPowder: true,
-      wheat: true,
-      potato: true,
-      carrots: true,
-      milk: true,
-      egg: true,
-      poppy: true
+    dirtCoarse: true,
+    sand: true,
+    gravel: true,
+    bricks: true,
+    logAcacia: true,
+    logBirch: true,
+    logJungle: true,
+    logOak: true,
+    logSpruce: true,
+    planksAcacia: true,
+    planksBirch: true,
+    planksJungle: true,
+    planksOak: true,
+    planksSpruce: true,
+    cobblestone: true,
+    sandstone: true,
+    wool: true,
+    redstoneDust: true,
+    lapisLazuli: true,
+    ingotIron: true,
+    ingotGold: true,
+    emerald: true,
+    diamond: true,
+    coal: true,
+    bucketWater: true,
+    bucketLava: true,
+    gunPowder: true,
+    wheat: true,
+    potato: true,
+    carrots: true,
+    milk: true,
+    egg: true,
+    poppy: true
   }
 
   ALL_SOUNDS = {
     dirt: true,
-      dirtCoarse: true,
-      sand: true,
-      gravel: true,
-      bricks: true,
-      logAcacia: true,
-      logBirch: true,
-      logJungle: true,
-      logOak: true,
-      logSpruce: true,
-      planksAcacia: true,
-      planksBirch: true,
-      planksJungle: true,
-      planksOak: true,
-      planksSpruce: true,
-      cobblestone: true,
-      sandstone: true,
-      wool: true,
-      redstoneDust: true,
-      lapisLazuli: true,
-      ingotIron: true,
-      ingotGold: true,
-      emerald: true,
-      diamond: true,
-      coal: true,
-      bucketWater: true,
-      bucketLava: true,
-      gunPowder: true,
-      wheat: true,
-      potato: true,
-      carrots: true,
-      milk: true,
-      egg: true,
-      poppy: true,
-      sheep: true,
-      sheepBaa: true,
-      chickenHurt: true,
-      chickenBawk: true,
-      cowHuff: true,
-      cowHurt: true,
-      cowMoo: true,
-      cowMooLong: true,
-      creeperHiss: true,
-      ironGolemHit: true,
-      metalWhack: true,
-      zombieBrains: true,
-      zombieGroan: true,
-      zombieHurt: true,
-      zombieHurt2: true,
+    dirtCoarse: true,
+    sand: true,
+    gravel: true,
+    bricks: true,
+    logAcacia: true,
+    logBirch: true,
+    logJungle: true,
+    logOak: true,
+    logSpruce: true,
+    planksAcacia: true,
+    planksBirch: true,
+    planksJungle: true,
+    planksOak: true,
+    planksSpruce: true,
+    cobblestone: true,
+    sandstone: true,
+    wool: true,
+    redstoneDust: true,
+    lapisLazuli: true,
+    ingotIron: true,
+    ingotGold: true,
+    emerald: true,
+    diamond: true,
+    coal: true,
+    bucketWater: true,
+    bucketLava: true,
+    gunPowder: true,
+    wheat: true,
+    potato: true,
+    carrots: true,
+    milk: true,
+    egg: true,
+    poppy: true,
+    sheep: true,
+    sheepBaa: true,
+    chickenHurt: true,
+    chickenBawk: true,
+    cowHuff: true,
+    cowHurt: true,
+    cowMoo: true,
+    cowMooLong: true,
+    creeperHiss: true,
+    ironGolemHit: true,
+    metalWhack: true,
+    zombieBrains: true,
+    zombieGroan: true,
+    zombieHurt: true,
+    zombieHurt2: true,
   }
 
   ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]"
@@ -245,25 +245,25 @@ class Craft < Blockly
 
   TILES_TO_PREVIEW_IMAGES = {
     grass: '/blockly/media/skins/craft/images/Block_0000_Grass.png',
-      logOak: '/blockly/media/skins/craft/images/Block_0008_log_oak.png',
-      coarseDirt: '/blockly/media/skins/craft/images/Block_0002_coarse_dirt.png',
-      leavesOak: '/blockly/media/skins/craft/images/Block_0014_leaves_oak.png',
-      tallGrass: '/blockly/media/skins/craft/images/TallGrass.png',
-      sheep: '/blockly/media/skins/craft/images/Sheep.png',
-      treeOak: '/blockly/media/skins/craft/images/Leaves_Oak_Decay.png',
+    logOak: '/blockly/media/skins/craft/images/Block_0008_log_oak.png',
+    coarseDirt: '/blockly/media/skins/craft/images/Block_0002_coarse_dirt.png',
+    leavesOak: '/blockly/media/skins/craft/images/Block_0014_leaves_oak.png',
+    tallGrass: '/blockly/media/skins/craft/images/TallGrass.png',
+    sheep: '/blockly/media/skins/craft/images/Sheep.png',
+    treeOak: '/blockly/media/skins/craft/images/Leaves_Oak_Decay.png',
   }
 
   SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS = {
     fail:
 'function (verificationAPI) {
-// Fail if we hit the end of the timeout.
-return false;
+  // Fail if we hit the end of the timeout.
+  return false;
 }',
-      turnRandomCount:
+    turnRandomCount:
 'function(verificationAPI) {
   return verificationAPI.getTurnRandomCount() >= 1;
 },',
-      playerSurvived:
+    playerSurvived:
 'function(verificationAPI) {
   // if we have reached the timeout without fail, they succeeded.
   return true;
@@ -274,15 +274,15 @@ return false;
   SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
     neverFailEarly:
 'function (verificationAPI) {
-// Fail instantly
-return false;
+  // Fail instantly
+  return false;
 }',
-      failInstantly:
+    failInstantly:
 'function (verificationAPI) {
   // Fail instantly
   return true;
 }',
-      turnRandomCount:
+    turnRandomCount:
 'function(verificationAPI) {
   // Fail instantly when they turn once.
   return verificationAPI.getTurnRandomCount() >= 1;
@@ -292,53 +292,53 @@ return false;
   SAMPLE_VERIFICATION_FUNCTIONS = {
     mapMatches:
 'function (verificationAPI) {
-    // the map has the given block layout.
-    // "" means ignore, "empty" means nothing there, "any" means something there
-    return verificationAPI.solutionMapMatchesResultMap(
-          [
-            "", "", "", "", "", "", "", "", "", "",
-            "", "", "", "", "", "", "", "", "", "",
-            "", "", "", "", "", "", "", "", "", "",
-            "", "", "", "logOak", "logOak", "logOak", "logOak", "", "", "",
-            "", "", "", "logOak", "empty", "empty", "logOak", "", "", "",
-            "", "", "", "logOak", "empty", "empty", "logOak", "", "", "",
-            "", "", "", "logOak", "any", "any", "any", "", "", "",
-            "", "", "", "", "", "", "", "", "", "",
-            "", "", "", "", "", "", "", "", "", "",
-            "", "", "", "", "", "", "", "", "", ""
-          ]);
+      // the map has the given block layout.
+      // "" means ignore, "empty" means nothing there, "any" means something there
+      return verificationAPI.solutionMapMatchesResultMap(
+            [
+              "", "", "", "", "", "", "", "", "", "",
+              "", "", "", "", "", "", "", "", "", "",
+              "", "", "", "", "", "", "", "", "", "",
+              "", "", "", "logOak", "logOak", "logOak", "logOak", "", "", "",
+              "", "", "", "logOak", "empty", "empty", "logOak", "", "", "",
+              "", "", "", "logOak", "empty", "empty", "logOak", "", "", "",
+              "", "", "", "logOak", "any", "any", "any", "", "", "",
+              "", "", "", "", "", "", "", "", "", "",
+              "", "", "", "", "", "", "", "", "", "",
+              "", "", "", "", "", "", "", "", "", ""
+            ]);
 }',
 
-      countOfTypeOnMap:
+    countOfTypeOnMap:
 'function (verificationAPI) {
       // there are at least 3 logOak blocks on the board
       return verificationAPI.countOfTypeOnMap("logOak") >= 3;
 }',
 
-      isPlayerAt:
+    isPlayerAt:
 'function (verificationAPI) {
       // player is at given x, y position
       return verificationAPI.isPlayerAt([5, 5]);
 }',
 
-      isPlayerNextTo:
+    isPlayerNextTo:
 'function (verificationAPI) {
       // player is next to block of type logOak
       return verificationAPI.isPlayerNextTo("logOak");
 }',
 
-      getInventoryAmount:
+    getInventoryAmount:
 'function (verificationAPI) {
       // the player has collected at least 2 wool
       return verificationAPI.getInventoryAmount("wool") >= 2;
 }',
-      isEntityAt:
+    isEntityAt:
 'function (verificationAPI) {
   // [5, 5]: grid coordinates, 0, 0 is top left
   verificationAPI.isEntityAt("sheep", [5, 5]);
 }
 ',
-      sheepOnGrassCount:
+    sheepOnGrassCount:
 'function (verificationAPI) {
   var grassPositions = [[0, 0], [1, 1]]
   Var sheepOnGrassCount = 0;
@@ -349,13 +349,13 @@ return false;
   return sheepOnGrassCount >= 2;
 }
 ',
-      isEntityDied:
+    isEntityDied:
 'function (verificationAPI) {
   // replace 3 with number of zombies in map
   verificationAPI.isEntityDied("zombie", 3);
 }
 ',
-      playerAtOneOfManyPositions:
+    playerAtOneOfManyPositions:
 'function (verificationAPI) {
   // List of x, y positions.
   var successPositions = [[0, 0], [0, 1], [0, 2]];

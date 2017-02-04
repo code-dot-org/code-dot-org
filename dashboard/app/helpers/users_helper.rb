@@ -127,10 +127,10 @@ module UsersHelper
           elsif completion_status != 'not_tried'
             user_data[:levels][level_id] = {
               status: completion_status,
-                result: ul.try(:best_result) || 0,
-                submitted: submitted ? true : nil,
-                readonly_answers: readonly_answers ? true : nil,
-                paired: (paired_uls.include? ul.try(:id)) ? true : nil
+              result: ul.try(:best_result) || 0,
+              submitted: submitted ? true : nil,
+              readonly_answers: readonly_answers ? true : nil,
+              paired: (paired_uls.include? ul.try(:id)) ? true : nil
             }.compact
 
             # Just in case this level has multiple pages, in which case we add an additional

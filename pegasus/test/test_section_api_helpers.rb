@@ -102,7 +102,7 @@ class SectionApiHelperTest < Minitest::Test
       it 'creates a row in the database with name' do
         params = {
           user: {id: 15, user_type: 'teacher'},
-                  name: 'My cool section'
+          name: 'My cool section'
         }
         DashboardSection.create(params)
         assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
