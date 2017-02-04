@@ -57,7 +57,7 @@ class FilesApiTestBase < Minitest::Test
     response = s3.list_object_versions(bucket: bucket, prefix: key)
     objects = response.versions.concat(response.delete_markers).map do |version|
       {
-          key: key,
+        key: key,
           version_id: version.version_id
       }
     end

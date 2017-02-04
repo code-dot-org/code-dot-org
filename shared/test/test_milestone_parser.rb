@@ -92,7 +92,7 @@ class TestMilestoneParser < Minitest::Test
   def test_zero_length_append
     cache = @cache.dup.tap do |x|
       x[x.keys[0]] = {
-          'count' => 5,
+        'count' => 5,
           'length' => 0,
           'md5' => Digest::MD5.hexdigest(''),
           'etag' => 'z'
@@ -107,7 +107,7 @@ class TestMilestoneParser < Minitest::Test
   def test_log_rollover
     cache = @cache.dup.tap do |x|
       x[x.keys[0]] = {
-          'count' => 50,
+        'count' => 50,
           'length' => 5000,
           'md5' => 'z',
           'etag' => 'z'

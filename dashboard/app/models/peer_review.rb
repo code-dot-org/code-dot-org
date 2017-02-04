@@ -175,7 +175,7 @@ class PeerReview < ActiveRecord::Base
             reviews.size < script.peer_reviews_to_complete &&
             PeerReview.get_potential_reviews(script, user).any?
           reviews << {
-              status: 'not_started',
+            status: 'not_started',
               name: I18n.t('peer_review.review_new_submission'),
               result: ActivityConstants::UNSUBMITTED_RESULT,
               icon: '',

@@ -72,7 +72,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     @peer_review.update(reviewer_id: plc_reviewer.id)
     post :update, params: {
-        id: @peer_review.id,
+      id: @peer_review.id,
         peer_review: {status: 'accepted', data: 'This is great'}
     }
     @peer_review.reload

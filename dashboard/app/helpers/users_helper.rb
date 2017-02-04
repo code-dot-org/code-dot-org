@@ -126,7 +126,7 @@ module UsersHelper
             }
           elsif completion_status != 'not_tried'
             user_data[:levels][level_id] = {
-                status: completion_status,
+              status: completion_status,
                 result: ul.try(:best_result) || 0,
                 submitted: submitted ? true : nil,
                 readonly_answers: readonly_answers ? true : nil,

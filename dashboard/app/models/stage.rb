@@ -89,7 +89,7 @@ class Stage < ActiveRecord::Base
   def summarize
     stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
       stage_data = {
-          script_id: script.id,
+        script_id: script.id,
           script_name: script.name,
           script_stages: script.stages.to_a.size,
           freeplay_links: script.freeplay_links,

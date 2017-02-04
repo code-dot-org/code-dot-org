@@ -137,10 +137,10 @@ hash_map.keys.each_with_index do |hash, table_id|
       return_consumed_capacity: 'TOTAL',
       attributes_to_get: ['channel_id', 'hash', 'table_name', 'value'],
       key_conditions: {
-          "hash" => {
-              attribute_value_list: [hash],
-              comparison_operator: "EQ",
-          },
+        "hash" => {
+          attribute_value_list: [hash],
+            comparison_operator: "EQ",
+        },
       },
 
     )

@@ -77,7 +77,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     if plc_course_unit.has_evaluation?
       Plc::LearningModule::MODULE_TYPES.keep_if { |type| categories_for_stage.include?(type)}.each do |flex_category|
         summary << {
-            category: flex_category || Plc::LearningModule::CONTENT_MODULE,
+          category: flex_category || Plc::LearningModule::CONTENT_MODULE,
             status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED
         }
       end
@@ -85,7 +85,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
       # Otherwise, status is determined by the completion of stages
       categories_for_stage.each do |category|
         summary << {
-            category: category || 'content',
+          category: category || 'content',
             status: Plc::EnrollmentModuleAssignment.stages_based_status(
               plc_course_unit.script.stages.select { |stage| stage.flex_category == category },
               user,
@@ -98,7 +98,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     # If there are peer reviews, summarize that progress as well
     if plc_course_unit.script.has_peer_reviews?
       summary << {
-          category: 'peer_review',
+        category: 'peer_review',
           status: PeerReview.get_review_completion_status(user, plc_course_unit.script)
       }
     end

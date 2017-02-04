@@ -29,7 +29,7 @@ URL_LENGTH_SEND_THRESHOLD = 6200
 
 # Map of database fields to Pardot field names
 MYSQL_TO_PARDOT_MAP = {
-    email: { field: 'email', multi: false },
+  email: { field: 'email', multi: false },
     name: { field: 'first_name', multi: false },
     street_address: { field: 'address_one', multi: false },
     city: { field: 'city', multi: false },

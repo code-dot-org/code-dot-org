@@ -228,7 +228,7 @@ module LevelsHelper
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
            locals: {
-               app: app_options[:app],
+             app: app_options[:app],
                use_droplet: use_droplet,
                use_netsim: use_netsim,
                use_blockly: use_blockly,
@@ -296,7 +296,7 @@ module LevelsHelper
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
     app_options[:report] = {
-        fallback_response: @fallback_response,
+      fallback_response: @fallback_response,
         callback: @callback,
         sublevelCallback: @sublevel_callback,
     }
@@ -475,7 +475,7 @@ module LevelsHelper
     app_options[:showExampleTestButtons] = true if l.enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
-        fallback_response: @fallback_response,
+      fallback_response: @fallback_response,
         callback: @callback,
         sublevelCallback: @sublevel_callback,
     }
@@ -508,7 +508,7 @@ module LevelsHelper
     # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-        thank_you: URI.escape(I18n.t('footer.thank_you')),
+      thank_you: URI.escape(I18n.t('footer.thank_you')),
         help_from_html: I18n.t('footer.help_from_html'),
         art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
         code_from_html: URI.escape(I18n.t('footer.code_from_html')),

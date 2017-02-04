@@ -11,7 +11,7 @@ module Rack
     # Most of the time, switching scheme from http to https will work, but we can add any exceptions to this list.
     # Only the first match is rewritten
     HTTPS_DOMAINS = {
-        /\Ahttp:\/\/.+\.jotformpro\.com/ => '//secure.jotformpro.com',
+      /\Ahttp:\/\/.+\.jotformpro\.com/ => '//secure.jotformpro.com',
         /\Ahttp:\/\// => '//'
     }
 

@@ -114,7 +114,7 @@ class Section < ActiveRecord::Base
   def students_attributes=(params)
     follower_params = params.collect do |student|
       {
-       user_id: user.id,
+        user_id: user.id,
        student_user_attributes: student
       }
     end
