@@ -127,13 +127,6 @@ Style/ConditionalAssignment:
 Style/GlobalVars:
   Enabled: false
 
-# Offense count: 83
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
-# SupportedStyles: special_inside_parentheses, consistent, align_brackets
-Style/IndentArray:
-  Enabled: false
-
 # Offense count: 287
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
