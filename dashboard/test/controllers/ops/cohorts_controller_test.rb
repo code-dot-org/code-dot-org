@@ -30,9 +30,9 @@ module Ops
       assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
 
       teacher_params = [
-                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district: new_district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'},
-                         {ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.xx', district: new_district.name, ops_school: 'Jefferson Middle School', ops_gender: 'Male'}
-                        ]
+        {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', district: new_district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'},
+        {ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.xx', district: new_district.name, ops_school: 'Jefferson Middle School', ops_gender: 'Male'}
+      ]
 
       # we add these two new teachers and did not remove the old ones
       assert_difference('@cohort.reload.teachers.count', 2) do
@@ -74,7 +74,7 @@ module Ops
 
       teacher_params = @cohort.teachers.map {|teacher| {ops_first_name: teacher.name, email: teacher.email, id: teacher.id}}
       teacher_params += [
-                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: existing_email, district: @district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'}]
+        {ops_first_name: 'Laurel', ops_last_name: 'X', email: existing_email, district: @district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'}]
 
       assert_difference('@cohort.reload.teachers.count', 1) do
         assert_difference('User.count', 0) do

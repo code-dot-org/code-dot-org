@@ -25,9 +25,9 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
   validates :plc_learning_module, presence: true
 
   MODULE_STATUS_STATES = [
-      NOT_STARTED = :not_started,
-      IN_PROGRESS = :in_progress,
-      COMPLETED = :completed
+    NOT_STARTED = :not_started,
+    IN_PROGRESS = :in_progress,
+    COMPLETED = :completed
   ]
 
   def status

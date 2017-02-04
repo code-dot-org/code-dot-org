@@ -75,8 +75,8 @@ course_names_to_old_new_renames.each do |course_name, old_to_new_levels|
         # They have also played since we made the change
         new_user_level.attempts = new_user_level.attempts + old_user_level.attempts
         new_user_level.best_result = [
-            new_user_level.best_result || 0,
-            old_user_level.best_result || 0].max
+          new_user_level.best_result || 0,
+          old_user_level.best_result || 0].max
         new_user_level.save
         old_user_level.destroy
       else
