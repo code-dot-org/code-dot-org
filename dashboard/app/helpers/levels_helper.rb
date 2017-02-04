@@ -624,10 +624,10 @@ module LevelsHelper
   SoftButton = Struct.new(:name, :value)
   def soft_button_options
     [
-        SoftButton.new('Left', 'leftButton'),
-        SoftButton.new('Right', 'rightButton'),
-        SoftButton.new('Down', 'downButton'),
-        SoftButton.new('Up', 'upButton'),
+      SoftButton.new('Left', 'leftButton'),
+      SoftButton.new('Right', 'rightButton'),
+      SoftButton.new('Down', 'downButton'),
+      SoftButton.new('Up', 'upButton'),
     ]
   end
 
