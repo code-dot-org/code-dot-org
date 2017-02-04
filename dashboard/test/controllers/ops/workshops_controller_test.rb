@@ -45,7 +45,8 @@ module Ops
       unexpected_teacher_2 = create(:teacher, district_id: @district.id, ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.yy', ops_school: 'Washington Elementary', ops_gender: 'Female')
       unexpected_teacher_params = [
         {email: unexpected_teacher_1.email},
-        {email: unexpected_teacher_2.email}]
+        {email: unexpected_teacher_2.email}
+      ]
       workshop_params = {"unexpected_teachers" => unexpected_teacher_params}
       put :update, params: {id: @workshop.id, workshop: workshop_params}
       @workshop.reload
@@ -101,7 +102,8 @@ module Ops
       assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
 
       facilitator_params = [
-        {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
+        {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}
+      ]
 
       assert_creates(Workshop, User) do
         post :create, params: {
@@ -130,7 +132,8 @@ module Ops
 
       facilitator_params = @workshop.facilitators.map {|facilitator| {ops_first_name: facilitator.name, email: facilitator.email, id: facilitator.id}}
       facilitator_params += [
-        {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
+        {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}
+      ]
 
       assert_creates(User) do
         assert_difference('@workshop.reload.facilitators.count') do

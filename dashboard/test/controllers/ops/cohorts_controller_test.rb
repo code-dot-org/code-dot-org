@@ -74,7 +74,15 @@ module Ops
 
       teacher_params = @cohort.teachers.map {|teacher| {ops_first_name: teacher.name, email: teacher.email, id: teacher.id}}
       teacher_params += [
-        {ops_first_name: 'Laurel', ops_last_name: 'X', email: existing_email, district: @district.name, ops_school: 'Washington Elementary', ops_gender: 'Female'}]
+        {
+          ops_first_name: 'Laurel',
+          ops_last_name: 'X',
+          email: existing_email,
+          district: @district.name,
+          ops_school: 'Washington Elementary',
+          ops_gender: 'Female'
+        }
+      ]
 
       assert_difference('@cohort.reload.teachers.count', 1) do
         assert_difference('User.count', 0) do
