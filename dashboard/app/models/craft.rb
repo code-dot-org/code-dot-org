@@ -57,9 +57,9 @@ class Craft < Blockly
   )
 
   JSON_LEVEL_MAPS = [
-      :ground_plane,
-      :ground_decoration_plane,
-      :action_plane
+    :ground_plane,
+    :ground_decoration_plane,
+    :action_plane
   ]
 
   EMPTY_STRING = ''
