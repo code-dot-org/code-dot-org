@@ -32,7 +32,7 @@ def generate_professional_development_workshop_payment_report(from=nil, to=nil)
     next if from && to && (stopped_at < from || stopped_at > to)
 
     {
-     name: row[:name],
+      name: row[:name],
      user_id: row[:user_id],
      email: row[:email],
      type: data["type_s"],

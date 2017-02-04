@@ -24,13 +24,13 @@ class FeatureModeManager
   MODE_SETTINGS_MAP = {
     # 'green'
     normal: {
-        gatekeeper_general_settings: {
-          puzzle_rating: true,
-          hint_view_request: true,
-          postMilestone: true,
-          shareEnabled: true,
-          slogging: true
-        },
+      gatekeeper_general_settings: {
+        puzzle_rating: true,
+        hint_view_request: true,
+        postMilestone: true,
+        shareEnabled: true,
+        slogging: true
+      },
         gatekeeper_hoc_tutorial_settings: {
           postMilestone: true,
           shareEnabled: true,

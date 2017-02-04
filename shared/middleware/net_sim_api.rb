@@ -11,19 +11,19 @@ require_relative '../middleware/channels_api'
 # NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
   TABLE_NAMES = {
-      node: 'n',
+    node: 'n',
       wire: 'w',
       message: 'm',
       log: 'l'
   }
 
   NODE_TYPES = {
-      client: 'client',
+    client: 'client',
       router: 'router'
   }
 
   VALIDATION_ERRORS = {
-      malformed: 'malformed',
+    malformed: 'malformed',
       conflict: 'conflict',
       limit_reached: 'limit_reached'
   }

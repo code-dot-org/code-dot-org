@@ -66,7 +66,7 @@ class Craft < Blockly
   DEFAULT_MAP_VALUE = EMPTY_STRING # no item
 
   ALL_BLOCKS = {
-      EMPTY_STRING => true,
+    EMPTY_STRING => true,
       bedrock: true,
       bricks: true,
       clay: true,
@@ -114,7 +114,7 @@ class Craft < Blockly
   }
 
   ALL_MINIBLOCKS = {
-      dirt: true,
+    dirt: true,
       dirtCoarse: true,
       sand: true,
       gravel: true,
@@ -151,7 +151,7 @@ class Craft < Blockly
   }
 
   ALL_SOUNDS = {
-      dirt: true,
+    dirt: true,
       dirtCoarse: true,
       sand: true,
       gravel: true,
@@ -244,7 +244,7 @@ class Craft < Blockly
   }
 
   TILES_TO_PREVIEW_IMAGES = {
-      grass: '/blockly/media/skins/craft/images/Block_0000_Grass.png',
+    grass: '/blockly/media/skins/craft/images/Block_0000_Grass.png',
       logOak: '/blockly/media/skins/craft/images/Block_0008_log_oak.png',
       coarseDirt: '/blockly/media/skins/craft/images/Block_0002_coarse_dirt.png',
       leavesOak: '/blockly/media/skins/craft/images/Block_0014_leaves_oak.png',
@@ -254,10 +254,10 @@ class Craft < Blockly
   }
 
   SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS = {
-      fail:
+    fail:
 'function (verificationAPI) {
-  // Fail if we hit the end of the timeout.
-  return false;
+// Fail if we hit the end of the timeout.
+return false;
 }',
       turnRandomCount:
 'function(verificationAPI) {
@@ -272,10 +272,10 @@ class Craft < Blockly
   }
 
   SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
-      neverFailEarly:
+    neverFailEarly:
 'function (verificationAPI) {
-  // Fail instantly
-  return false;
+// Fail instantly
+return false;
 }',
       failInstantly:
 'function (verificationAPI) {
@@ -290,23 +290,23 @@ class Craft < Blockly
   }
 
   SAMPLE_VERIFICATION_FUNCTIONS = {
-      mapMatches:
+    mapMatches:
 'function (verificationAPI) {
-      // the map has the given block layout.
-      // "" means ignore, "empty" means nothing there, "any" means something there
-      return verificationAPI.solutionMapMatchesResultMap(
-            [
-              "", "", "", "", "", "", "", "", "", "",
-              "", "", "", "", "", "", "", "", "", "",
-              "", "", "", "", "", "", "", "", "", "",
-              "", "", "", "logOak", "logOak", "logOak", "logOak", "", "", "",
-              "", "", "", "logOak", "empty", "empty", "logOak", "", "", "",
-              "", "", "", "logOak", "empty", "empty", "logOak", "", "", "",
-              "", "", "", "logOak", "any", "any", "any", "", "", "",
-              "", "", "", "", "", "", "", "", "", "",
-              "", "", "", "", "", "", "", "", "", "",
-              "", "", "", "", "", "", "", "", "", ""
-            ]);
+    // the map has the given block layout.
+    // "" means ignore, "empty" means nothing there, "any" means something there
+    return verificationAPI.solutionMapMatchesResultMap(
+          [
+            "", "", "", "", "", "", "", "", "", "",
+            "", "", "", "", "", "", "", "", "", "",
+            "", "", "", "", "", "", "", "", "", "",
+            "", "", "", "logOak", "logOak", "logOak", "logOak", "", "", "",
+            "", "", "", "logOak", "empty", "empty", "logOak", "", "", "",
+            "", "", "", "logOak", "empty", "empty", "logOak", "", "", "",
+            "", "", "", "logOak", "any", "any", "any", "", "", "",
+            "", "", "", "", "", "", "", "", "", "",
+            "", "", "", "", "", "", "", "", "", "",
+            "", "", "", "", "", "", "", "", "", ""
+          ]);
 }',
 
       countOfTypeOnMap:

@@ -3,7 +3,7 @@ require 'json'
 
 module WebPurify
   ISO_639_1_TO_WEBPURIFY = {
-      'es' => 'sp',
+    'es' => 'sp',
       'ko' => 'kr',
       'ja' => 'jp'
   }

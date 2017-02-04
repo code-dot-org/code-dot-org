@@ -976,9 +976,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
     assert_response :success
     expected_response = {
-        'level_source' => nil,
+      'level_source' => nil,
         'share_failure' => {
-            'message' => "It looks like there is profanity in it. Try changing the text.",
+          'message' => "It looks like there is profanity in it. Try changing the text.",
             'type' => 'profanity'
         }
     }
@@ -1076,9 +1076,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = {
-        'level_source' => nil,
+      'level_source' => nil,
         'share_failure' => {
-            'message' => "It looks like there is a phone number in it. Try changing the text.",
+          'message' => "It looks like there is a phone number in it. Try changing the text.",
             'contents' => '800-555-5555',
             'type' => 'phone'
         }

@@ -1,6 +1,6 @@
 class MigratePhaseValues < ActiveRecord::Migration[4.2]
   PHASES = {
-      1 => 'Phase 1',
+    1 => 'Phase 1',
       2 => 'Phase 2',
       3 => 'Phase 2 Online',
       4 => 'Phase 3A',

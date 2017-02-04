@@ -107,7 +107,7 @@ def complete_tutorial(tutorial={})
       # in the corner case when a user skips to the end without going to the beginning.
       weight = (unsampled_session?) ? 0 : 1
       row = create_session_row({
-        referer: request.host_with_port,
+                                 referer: request.host_with_port,
         tutorial: tutorial[:code],
         finished_at: DateTime.now,
         finished_ip: request.ip},

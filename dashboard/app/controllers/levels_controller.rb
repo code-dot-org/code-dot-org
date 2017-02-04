@@ -216,7 +216,7 @@ class LevelsController < ApplicationController
     level = Level.find(params[:level_id])
     block_type = params[:block_type]
     options = {
-        app: level.game.app,
+      app: level.game.app,
         readonly: true,
         locale: js_locale,
         baseUrl: Blockly.base_url,

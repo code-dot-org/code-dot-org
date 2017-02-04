@@ -161,7 +161,7 @@ class Rack::Attack
       throttle_name = req.env['rack.attack.matched']
       throttle_data = req.env['rack.attack.throttle_data'][throttle_name]
       event_details = {
-          throttle_name: throttle_name,
+        throttle_name: throttle_name,
           throttle_data_count: throttle_data[:count],
           throttle_data_period: throttle_data[:period],
           throttle_data_limit: throttle_data[:limit],

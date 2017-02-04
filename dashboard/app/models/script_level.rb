@@ -195,7 +195,7 @@ class ScriptLevel < ActiveRecord::Base
     end
 
     summary = {
-        ids: ids,
+      ids: ids,
         activeId: oldest_active_level.id,
         position: position,
         kind: kind,

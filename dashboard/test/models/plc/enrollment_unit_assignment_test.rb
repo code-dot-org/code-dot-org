@@ -60,7 +60,7 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
         status: Plc::EnrollmentModuleAssignment::NOT_STARTED
       },
       {
-          category: 'peer_review',
+        category: 'peer_review',
           status: Plc::EnrollmentModuleAssignment::NOT_STARTED
       }
     ], @unit_enrollment.summarize_progress
@@ -71,15 +71,15 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     assert_equal [
       {
-         category: Plc::LearningModule::PRACTICE_MODULE,
+        category: Plc::LearningModule::PRACTICE_MODULE,
          status: Plc::EnrollmentModuleAssignment::COMPLETED
       },
       {
-         category: Plc::LearningModule::CONTENT_MODULE,
+        category: Plc::LearningModule::CONTENT_MODULE,
          status: Plc::EnrollmentModuleAssignment::COMPLETED
       },
       {
-         category: Plc::LearningModule::REQUIRED_MODULE,
+        category: Plc::LearningModule::REQUIRED_MODULE,
          status: Plc::EnrollmentModuleAssignment::COMPLETED
       }
     ], @unit_enrollment.summarize_progress

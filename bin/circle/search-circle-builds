@@ -12,17 +12,17 @@ MAX_THREADS = 50
 
 KNOWN_FAIL_TYPES = [
   {
-      search_string: 'ConnectionTimeoutError',
+    search_string: 'ConnectionTimeoutError',
       step_string: RUN_UI_TESTS_STEP_STRING,
       container: RUN_UI_TESTS_CONTAINER
   },
   {
-      search_string: 'io_fillbuf',
+    search_string: 'io_fillbuf',
       step_string: RUN_UI_TESTS_STEP_STRING,
       container: RUN_UI_TESTS_CONTAINER
   },
   {
-      search_string: 'invalid base64',
+    search_string: 'invalid base64',
       step_string: RUN_UI_TESTS_STEP_STRING,
       container: RUN_UI_TESTS_CONTAINER
   },

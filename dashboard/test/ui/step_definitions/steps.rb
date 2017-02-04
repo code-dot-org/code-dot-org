@@ -778,7 +778,7 @@ def generate_user(name)
   password = name + "password" # hack
   @users ||= {}
   @users[name] = {
-      password: password,
+    password: password,
       email: email
   }
   return email, password

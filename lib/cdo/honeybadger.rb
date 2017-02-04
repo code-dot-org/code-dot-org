@@ -28,11 +28,11 @@ module Honeybadger
     error_message = stderr if error_message.to_s.empty?
 
     opts = {
-        error_class: "#{command} returned #{status}",
+      error_class: "#{command} returned #{status}",
         error_message: error_message,
         backtrace: backtrace,
         context: {
-            stdout: stdout,
+          stdout: stdout,
             stderr: stderr, # include full stderr in case honeybadger truncates the error_message/backtrace thing
             environment_variables: ENV.with_sensitive_values_redacted
         }

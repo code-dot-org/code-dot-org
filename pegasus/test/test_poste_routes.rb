@@ -74,14 +74,14 @@ class PosteRoutesTest < Minitest::Test
       it 'unsubscribes existing contact' do
         DB.transaction(rollback: :always) do
           DB[:contacts].insert({
-            email: EMAIL,
+                                 email: EMAIL,
             hashed_email: HASHED_EMAIL,
             name: 'existing contact',
             created_at: DateTime.now,
             created_ip: '1.2.3.4',
             updated_at: DateTime.now,
             updated_ip: '1.2.3.4'
-          }
+                               }
 )
           @pegasus.get "/u/#{Poste.encrypt(@id)}"
           assert DB[:contacts].
