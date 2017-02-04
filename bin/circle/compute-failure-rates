@@ -90,16 +90,22 @@ end
 
 # Compute map of stats for each date
 stats_by_date = builds_by_date.hmap do |date, build_infos_for_date|
-  [date, columns.hmap do |name, column|
-    builds = column.call build_infos_for_date
-    succeeded_builds = builds.select {|i| i[:succeeded]}.count
-    failed_builds = builds.select {|i| i[:failed]}.count
-    [name, {
-      total_builds: succeeded_builds + failed_builds,
-        failed_builds: failed_builds,
-        failure_rate: Float(failed_builds) / (succeeded_builds + failed_builds)
-    }]
-  end]
+  [
+    date,
+    columns.hmap do |name, column|
+      builds = column.call build_infos_for_date
+      succeeded_builds = builds.select {|i| i[:succeeded]}.count
+      failed_builds = builds.select {|i| i[:failed]}.count
+      [
+        name,
+        {
+          total_builds: succeeded_builds + failed_builds,
+          failed_builds: failed_builds,
+          failure_rate: Float(failed_builds) / (succeeded_builds + failed_builds)
+        }
+      ]
+    end
+  ]
 end
 
 # Print build stats

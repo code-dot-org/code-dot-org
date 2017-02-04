@@ -29,13 +29,13 @@ module Honeybadger
 
     opts = {
       error_class: "#{command} returned #{status}",
-        error_message: error_message,
-        backtrace: backtrace,
-        context: {
-          stdout: stdout,
-            stderr: stderr, # include full stderr in case honeybadger truncates the error_message/backtrace thing
-            environment_variables: ENV.with_sensitive_values_redacted
-        }
+      error_message: error_message,
+      backtrace: backtrace,
+      context: {
+        stdout: stdout,
+        stderr: stderr, # include full stderr in case honeybadger truncates the error_message/backtrace thing
+        environment_variables: ENV.with_sensitive_values_redacted
+      }
     }
 
     Honeybadger.notify(opts)

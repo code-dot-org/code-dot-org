@@ -5,13 +5,13 @@ get '/v2/client-location' do
   if location
     location = {
       ip_address: request.ip,
-                city: location.city,
-                state: location.state,
-                state_code: location.state_code,
-                country: location.country,
-                country_code: location.country_code,
-                zip_code: location.postal_code,
-                postal_code: location.postal_code,
+      city: location.city,
+      state: location.state,
+      state_code: location.state_code,
+      country: location.country,
+      country_code: location.country_code,
+      zip_code: location.postal_code,
+      postal_code: location.postal_code,
     }
   else
     location = {ip_address: request.ip}

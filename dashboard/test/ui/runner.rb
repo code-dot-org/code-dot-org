@@ -349,17 +349,17 @@ next_feature = lambda do
 end
 
 parallel_config = {
-    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+  # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
   in_threads: ENV['CI'] ? $options.parallel_limit : nil,
-    in_processes: ENV['CI'] ? nil : $options.parallel_limit,
+  in_processes: ENV['CI'] ? nil : $options.parallel_limit,
 
-    # This 'finish' lambda runs on the main thread after each Parallel.map work
-    # item is completed.
-    finish: lambda do |_, _, result|
-      succeeded, _, _ = result
-      # Count failures so we can abort the whole test run if we exceed the limit
-      failed_features += 1 unless succeeded
-    end
+  # This 'finish' lambda runs on the main thread after each Parallel.map work
+  # item is completed.
+  finish: lambda do |_, _, result|
+    succeeded, _, _ = result
+    # Count failures so we can abort the whole test run if we exceed the limit
+    failed_features += 1 unless succeeded
+  end
 }
 run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)

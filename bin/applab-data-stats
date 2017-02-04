@@ -139,7 +139,7 @@ hash_map.keys.each_with_index do |hash, table_id|
       key_conditions: {
         "hash" => {
           attribute_value_list: [hash],
-            comparison_operator: "EQ",
+          comparison_operator: "EQ",
         },
       },
 

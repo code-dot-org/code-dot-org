@@ -72,15 +72,15 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     assert_equal [
       {
         category: Plc::LearningModule::PRACTICE_MODULE,
-         status: Plc::EnrollmentModuleAssignment::COMPLETED
+        status: Plc::EnrollmentModuleAssignment::COMPLETED
       },
       {
         category: Plc::LearningModule::CONTENT_MODULE,
-         status: Plc::EnrollmentModuleAssignment::COMPLETED
+        status: Plc::EnrollmentModuleAssignment::COMPLETED
       },
       {
         category: Plc::LearningModule::REQUIRED_MODULE,
-         status: Plc::EnrollmentModuleAssignment::COMPLETED
+        status: Plc::EnrollmentModuleAssignment::COMPLETED
       }
     ], @unit_enrollment.summarize_progress
   end

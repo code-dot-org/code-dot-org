@@ -217,10 +217,10 @@ class LevelsController < ApplicationController
     block_type = params[:block_type]
     options = {
       app: level.game.app,
-        readonly: true,
-        locale: js_locale,
-        baseUrl: Blockly.base_url,
-        blocks: level.blocks_to_embed(level.properties[block_type])
+      readonly: true,
+      locale: js_locale,
+      baseUrl: Blockly.base_url,
+      blocks: level.blocks_to_embed(level.properties[block_type])
     }
     render :embed_blocks, layout: false, locals: options
   end

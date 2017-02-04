@@ -93,9 +93,9 @@ class TestMilestoneParser < Minitest::Test
     cache = @cache.dup.tap do |x|
       x[x.keys[0]] = {
         'count' => 5,
-          'length' => 0,
-          'md5' => Digest::MD5.hexdigest(''),
-          'etag' => 'z'
+        'length' => 0,
+        'md5' => Digest::MD5.hexdigest(''),
+        'etag' => 'z'
       }
     end
     count = MilestoneParser.new(cache, @s3_client).count
@@ -108,9 +108,9 @@ class TestMilestoneParser < Minitest::Test
     cache = @cache.dup.tap do |x|
       x[x.keys[0]] = {
         'count' => 50,
-          'length' => 5000,
-          'md5' => 'z',
-          'etag' => 'z'
+        'length' => 5000,
+        'md5' => 'z',
+        'etag' => 'z'
       }
     end
     count = MilestoneParser.new(cache, @s3_client).count

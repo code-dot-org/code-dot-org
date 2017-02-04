@@ -58,7 +58,7 @@ class FilesApiTestBase < Minitest::Test
     objects = response.versions.concat(response.delete_markers).map do |version|
       {
         key: key,
-          version_id: version.version_id
+        version_id: version.version_id
       }
     end
     s3.delete_objects(

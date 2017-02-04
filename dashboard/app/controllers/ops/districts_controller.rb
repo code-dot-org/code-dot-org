@@ -34,10 +34,10 @@ module Ops
 
     def contact_params(params)
       {
-       # created_by_user_id: current_user.id, # TODO
+        # created_by_user_id: current_user.id, # TODO
         email: params[:email],
-       ops_first_name: params[:ops_first_name],
-       ops_last_name: params[:ops_last_name]
+        ops_first_name: params[:ops_first_name],
+        ops_last_name: params[:ops_last_name]
       }
     end
 

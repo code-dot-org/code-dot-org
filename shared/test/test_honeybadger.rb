@@ -33,13 +33,13 @@ class HoneybadgerTest < Minitest::Test
   def test_notify_command_error
     expected_opts = {
       error_class: "/home/ubuntu/staging/bin/deliver_poste_messages returned 1",
-        error_message: EXPECTED_MESSAGE,
-        backtrace: EXPECTED_BACKTRACE,
-        context: {
-          stdout: 'captured stdout',
-            stderr: ERROR,
-            environment_variables: {}
-        }
+      error_message: EXPECTED_MESSAGE,
+      backtrace: EXPECTED_BACKTRACE,
+      context: {
+        stdout: 'captured stdout',
+        stderr: ERROR,
+        environment_variables: {}
+      }
     }
 
     ENV.expects(:with_sensitive_values_redacted).returns({})

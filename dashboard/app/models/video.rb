@@ -48,13 +48,13 @@ class Video < ActiveRecord::Base
   def youtube_url(args={})
     defaults = {
       v: youtube_code,
-        modestbranding: 1,
-        rel: 0,
-        showinfo: 1,
-        autoplay: 1,
-        wmode: 'transparent',
-        iv_load_policy: 3,
-        enablejsapi: 1
+      modestbranding: 1,
+      rel: 0,
+      showinfo: 1,
+      autoplay: 1,
+      wmode: 'transparent',
+      iv_load_policy: 3,
+      enablejsapi: 1
     }
 
     language = I18n.locale.to_s.downcase.split('-').first

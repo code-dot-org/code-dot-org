@@ -12,20 +12,20 @@ require_relative '../middleware/channels_api'
 class NetSimApi < Sinatra::Base
   TABLE_NAMES = {
     node: 'n',
-      wire: 'w',
-      message: 'm',
-      log: 'l'
+    wire: 'w',
+    message: 'm',
+    log: 'l'
   }
 
   NODE_TYPES = {
     client: 'client',
-      router: 'router'
+    router: 'router'
   }
 
   VALIDATION_ERRORS = {
     malformed: 'malformed',
-      conflict: 'conflict',
-      limit_reached: 'limit_reached'
+    conflict: 'conflict',
+    limit_reached: 'limit_reached'
   }
 
   helpers do

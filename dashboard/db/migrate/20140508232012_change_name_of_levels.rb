@@ -1,11 +1,11 @@
 class ChangeNameOfLevels < ActiveRecord::Migration[4.2]
   OLD_TO_NEW = {
     "Edit Code" => 'edit-code',
-                "2014 Levels" => 'events',
-                "Builder Levels" => 'builder',
-                "Flappy Levels" => 'flappy',
-                "Jigsaw Levels" => 'jigsaw',
-                "Maze Step Levels" => 'step'
+    "2014 Levels" => 'events',
+    "Builder Levels" => 'builder',
+    "Flappy Levels" => 'flappy',
+    "Jigsaw Levels" => 'jigsaw',
+    "Maze Step Levels" => 'step'
   }
 
   def up
