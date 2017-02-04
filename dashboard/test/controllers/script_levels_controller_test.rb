@@ -108,7 +108,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       'no-cache',
       'no-store',
       'must-revalidate',
-      'max-age=0']
+      'max-age=0'
+    ]
     assert_cache_control_match expected_directives, cache_control_header
   end
 
@@ -116,7 +117,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     expected_directives = [
       'public',
       "max-age=#{max_age}",
-      "s-maxage=#{proxy_max_age}"]
+      "s-maxage=#{proxy_max_age}"
+    ]
     assert_cache_control_match expected_directives, cache_control_header
   end
 
