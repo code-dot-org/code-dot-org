@@ -17,6 +17,10 @@ const DetailProgressTable = React.createClass({
 
   render() {
     const { lessonNames, levelsByLesson } = this.props;
+    if (lessonNames.length !== levelsByLesson.length) {
+      throw new Error('Inconsistent number of lessons');
+    }
+
     return (
       <div>
         {lessonNames.map((lessonName, index) => (
