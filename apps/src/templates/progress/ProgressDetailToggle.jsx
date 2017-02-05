@@ -1,13 +1,33 @@
 import React, { PropTypes } from 'react';
 import ToggleGroup from '../ToggleGroup';
 import color from "@cdo/apps/util/color";
-import { setIsSummaryView } from '@cdo/apps/code-studio/progressRedux';
+import { setIsSummaryView, hasGroups } from '@cdo/apps/code-studio/progressRedux';
 import { connect } from 'react-redux';
 
-import summaryActive from './toggleSummaryActive.png';
-import summaryInactive from './toggleSummaryInactive.png';
-import detailActive from './toggleDetailActive.png';
-import detailInactive from './toggleDetailInactive.png';
+import summaryActive from './images/toggleSummaryActive.png';
+import summaryInactive from './images/toggleSummaryInactive.png';
+import detailActive from './images/toggleDetailActive.png';
+import detailInactive from './images/toggleDetailInactive.png';
+
+import groupSummaryActive from './images/groupToggleSummaryActive.png';
+import groupSummaryInactive from './images/groupToggleSummaryInactive.png';
+import groupDetailActive from './images/groupToggleDetailActive.png';
+import groupDetailInactive from './images/groupToggleDetailInactive.png';
+
+const imageSets = {
+  ungrouped: {
+    summaryActive,
+    summaryInactive,
+    detailActive,
+    detailInactive
+  },
+  grouped: {
+    summaryActive: groupSummaryActive,
+    summaryInactive: groupSummaryInactive,
+    detailActive: groupDetailActive,
+    detailInactive: groupDetailInactive,
+  }
+};
 
 const styles = {
   icon: {
@@ -27,6 +47,7 @@ const styles = {
 const ProgressDetailToggle = React.createClass({
   propTypes: {
     isSummaryView: PropTypes.bool.isRequired,
+    hasGroups: PropTypes.bool.isRequired,
     setIsSummaryView: PropTypes.func.isRequired
   },
 
@@ -35,22 +56,23 @@ const ProgressDetailToggle = React.createClass({
   },
 
   render() {
-    const { isSummaryView } = this.props;
+    const { isSummaryView, hasGroups } = this.props;
+    const images = hasGroups ? imageSets.grouped : imageSets.ungrouped;
     return (
       <ToggleGroup
         selected={isSummaryView ? "summary" : "detail"}
-        activeColor={color.cyan}
+        activeColor={hasGroups ? color.purple : color.cyan}
         onChange={this.onChange}
       >
         <button value="summary">
           <img
-            src={isSummaryView ? summaryActive : summaryInactive}
+            src={isSummaryView ? images.summaryActive : images.summaryInactive}
             style={styles.icon}
           />
         </button>
         <button value="detail">
           <img
-            src={isSummaryView ? detailInactive : detailActive}
+            src={isSummaryView ? images.detailInactive : images.detailActive}
             style={styles.icon}
           />
         </button>
@@ -63,6 +85,7 @@ const ProgressDetailToggle = React.createClass({
 export default connect(
   state => ({
     isSummaryView: state.progress.isSummaryView,
+    hasGroups: hasGroups(state.progress)
   }),
   {setIsSummaryView}
 )(ProgressDetailToggle);
