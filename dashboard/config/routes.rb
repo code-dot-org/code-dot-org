@@ -71,6 +71,7 @@ Dashboard::Application.routes.draw do
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
+    patch '/dashboardapi/users', to: 'registrations#update'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
