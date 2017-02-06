@@ -1,5 +1,9 @@
 comment: on
 coverage:
   status:
-    project: off
+    project:
+      default:
+        threshold: 2 # allow a drop in overall project coverage of 2%
+      apps:
+        paths: "apps/src/"
     patch: off
