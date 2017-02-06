@@ -154,4 +154,4 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `convert --version`
 - `gem install imagemagick@6`
 - `brew unlink imagemagick`
-- `brew link imagemagick@6 —force`
+- `brew link imagemagick@6 —-force`
