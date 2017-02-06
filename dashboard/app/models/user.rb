@@ -54,6 +54,7 @@
 #  invited_by_type            :string(255)
 #  invitations_count          :integer          default(0)
 #  terms_of_service_version   :integer
+#  school_info_id             :integer
 #
 # Indexes
 #
@@ -67,6 +68,7 @@
 #  index_users_on_prize_id_and_deleted_at                (prize_id,deleted_at) UNIQUE
 #  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
 #  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_school_info_id                         (school_info_id)
 #  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
