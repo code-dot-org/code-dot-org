@@ -203,11 +203,6 @@ FactoryGirl.define do
     game {create(:game, app: Game::PLAYLAB)}
   end
 
-  factory :makerlab, parent: :level, class: Applab do
-    game {Game.applab}
-    properties{{makerlab_enabled: true}}
-  end
-
   factory :gamelab, parent: :level, class: Gamelab do
     game {Game.gamelab}
   end
