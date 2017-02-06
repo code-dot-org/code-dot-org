@@ -16,6 +16,7 @@ var PaneButton = PaneHeader.PaneButton;
 var SpeedSlider = require('@cdo/apps/templates/SpeedSlider');
 import {setStepSpeed} from '@cdo/apps/redux/runState';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+import JsDebuggerUi from './JsDebuggerUi';
 
 var styles = {
   debugAreaHeader: {
@@ -135,6 +136,7 @@ var UnconnectedJsDebugger = React.createClass({
     debugConsole: React.PropTypes.bool.isRequired,
     debugWatch: React.PropTypes.bool.isRequired,
     debugSlider: React.PropTypes.bool.isRequired,
+    debuggerUi: React.PropTypes.instanceOf(JsDebuggerUi).isRequired,
     isDebuggerPaused: React.PropTypes.bool.isRequired,
     stepSpeed: React.PropTypes.number.isRequired,
     setStepSpeed: React.PropTypes.func.isRequired,
@@ -147,6 +149,13 @@ var UnconnectedJsDebugger = React.createClass({
     };
   },
 
+  componentDidMount() {
+    this.props.debuggerUi.initializeAfterDomCreated({
+      defaultStepSpeed: this.props.stepSpeed,
+      root: this.root,
+    });
+  },
+
   render() {
     var hasFocus = this.props.isDebuggerPaused;
 
@@ -157,7 +166,7 @@ var UnconnectedJsDebugger = React.createClass({
 
     const showWatchPane = this.props.debugWatch && !this.state.watchersHidden;
     return (
-      <div id="debug-area" style={this.props.style || {}}>
+      <div id="debug-area" style={this.props.style || {}} ref={root => this.root = root}>
         <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
         <PaneHeader
           id="debug-area-header"
@@ -246,6 +255,7 @@ export default connect(function propsFromStore(state) {
     debugConsole: state.pageConstants.showDebugConsole,
     debugWatch: state.pageConstants.showDebugWatch,
     debugSlider: state.pageConstants.showDebugSlider,
+    debuggerUi: state.pageConstants.debuggerUi,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     stepSpeed: state.runState.stepSpeed
   };

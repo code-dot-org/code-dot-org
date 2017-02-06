@@ -165,7 +165,7 @@ var CodeWorkspace = React.createClass({
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
           />
         }
-        {props.showDebugger && <JsDebugger/>}
+        {props.showDebugger && <JsDebugger />}
       </span>
     );
   }
