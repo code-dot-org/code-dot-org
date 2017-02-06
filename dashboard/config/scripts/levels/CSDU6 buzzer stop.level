@@ -41,7 +41,8 @@
       "led.on": null,
       "led.off": null,
       "led.toggle": null,
-      "buzzer.frequency": null
+      "buzzer.frequency": null,
+      "buzzer.stop": null
     },
     "edit_code": true,
     "embed": "false",
@@ -77,13 +78,15 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Playing Sounds\r\n\r\nThe `buzzer.frequency()` command takes two inputs - the first is the _frequency_ of the sound to be played (high numbers = higher sounds), and the second is the _duration_ of the sound (how long it should be played)\r\n\r\n# Do This\r\n\r\nThe provided app has three buttons with event handlers. Add a `buzzer.frequency()` command to each of the event handlers so that the buzzer plays the appropriate sound (a low, medium, or high note).",
-    "start_blocks": "onEvent(\"low_button\", \"click\", function(event) {\r\n  \r\n});\r\nonEvent(\"medium_button\", \"click\", function(event) {\r\n  \r\n});\r\nonEvent(\"high_button\", \"click\", function(event) {\r\n  \r\n});",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"low_button\" style=\"padding: 0px; margin: 0px; height: 95px; width: 265px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 35px;\">Low Frequency</button><button id=\"medium_button\" style=\"padding: 0px; margin: 0px; height: 95px; width: 265px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 175px;\">Medium Frequency</button><button id=\"high_button\" style=\"padding: 0px; margin: 0px; height: 95px; width: 265px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 310px;\">High Frequency</button></div></div>",
+    "markdown_instructions": "# Playing Longer Sounds\r\n\r\nThe _duration_ input of the `buzzer.frequency()` command is an _optional_ input - meaning that you don't need to use it. You can remove an optional input by clicking the left arrow next to it (img needed)\r\n\r\nBy removing the duration, you are telling the buzzer to buzz continuously. You'll notice that there's a new block in the toolbox called `buzzer.stop()` to use in this case.\r\n\r\n# Do This\r\n\r\nHere's an app with two buttons, a Start and a Stop. Make these buttons Start and Stop the buzzer\r\n\r\n* Add an event handler for each button\r\n* When the Start button is clicked, make the buzzer play continuously\r\n* When the Stop button is clicked, stop the buzzer from playing",
+    "start_blocks": "// Use event handlers to make the Start and Stop buttons\r\n// control the buzzer",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"start_button\" style=\"padding: 0px; margin: 0px; height: 200px; width: 265px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 20px;\">Start</button><button id=\"stop_button\" style=\"padding: 0px; margin: 0px; height: 200px; width: 265px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(188, 26, 29); position: absolute; left: 25px; top: 230px;\">Stop</button></div></div>",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
