@@ -7,15 +7,15 @@ var React = require('react');
 var connect = require('react-redux').connect;
 
 var i18n = require('@cdo/locale');
-var commonStyles = require('../commonStyles');
-var styleConstants = require('../styleConstants');
-import {ConnectedWatchers} from './watchers/Watchers';
-var PaneHeader = require('./PaneHeader');
+var commonStyles = require('@cdo/apps/commonStyles');
+var styleConstants = require('@cdo/apps/styleConstants');
+import {ConnectedWatchers} from '@cdo/apps/templates/watchers/Watchers';
+var PaneHeader = require('@cdo/apps/templates/PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
-var SpeedSlider = require('./SpeedSlider');
-import {setStepSpeed} from '../redux/runState';
-import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
+var SpeedSlider = require('@cdo/apps/templates/SpeedSlider');
+import {setStepSpeed} from '@cdo/apps/redux/runState';
+import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 
 var styles = {
   debugAreaHeader: {
@@ -256,4 +256,3 @@ export default connect(function propsFromStore(state) {
     }
   };
 })(UnconnectedJsDebugger);
-
