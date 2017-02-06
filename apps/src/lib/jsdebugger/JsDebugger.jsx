@@ -7,6 +7,7 @@ var React = require('react');
 var connect = require('react-redux').connect;
 
 var i18n = require('@cdo/locale');
+import Radium from 'radium';
 var commonStyles = require('@cdo/apps/commonStyles');
 var styleConstants = require('@cdo/apps/styleConstants');
 import {ConnectedWatchers} from '@cdo/apps/templates/watchers/Watchers';
@@ -14,6 +15,7 @@ var PaneHeader = require('@cdo/apps/templates/PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
 var SpeedSlider = require('@cdo/apps/templates/SpeedSlider');
+var utils = require('@cdo/apps/utils');
 import {setStepSpeed} from '@cdo/apps/redux/runState';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import JsDebuggerUi from './JsDebuggerUi';
@@ -76,7 +78,7 @@ var DebugConsole = function (props) {
   }
 
   return (
-    <div id="debug-console" className={classes}>
+    <div id="debug-console" className={classes} style={props.style}>
       <div id="debug-output" className="debug-output"/>
       <span className="debug-input-prompt">
         &gt;
@@ -88,14 +90,15 @@ var DebugConsole = function (props) {
 DebugConsole.propTypes = {
   debugButtons: React.PropTypes.bool,
   debugWatch: React.PropTypes.bool,
+  style: React.PropTypes.object,
 };
 
 /**
  * Buttons for stepping through code.
  */
-var DebugButtons = function () {
+var DebugButtons = function ({style}) {
   return (
-    <div id="debug-commands" className="debug-commands">
+    <div id="debug-commands" className="debug-commands" style={style}>
       <div id="debug-buttons">
         {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
         <button id="pauseButton" className="debugger_button">
@@ -126,11 +129,14 @@ var DebugButtons = function () {
     </div>
   );
 };
+DebugButtons.propTypes = {
+  style: React.PropTypes.object,
+};
 
 /**
  * The parent JsDebugger component.
  */
-var UnconnectedJsDebugger = React.createClass({
+var UnconnectedJsDebugger = Radium(React.createClass({
   propTypes: {
     debugButtons: React.PropTypes.bool.isRequired,
     debugConsole: React.PropTypes.bool.isRequired,
@@ -145,7 +151,8 @@ var UnconnectedJsDebugger = React.createClass({
 
   getInitialState() {
     return {
-      watchersHidden: false
+      watchersHidden: false,
+      open: true,
     };
   },
 
@@ -153,7 +160,49 @@ var UnconnectedJsDebugger = React.createClass({
     this.props.debuggerUi.initializeAfterDomCreated({
       defaultStepSpeed: this.props.stepSpeed,
       root: this.root,
+      component: this,
     });
+  },
+
+  isShut() {
+    return !this.state.open;
+  },
+
+  slideShut() {
+    const closedHeight = $(this.root).find('#debug-area-header').height() + $(this.root).find('#debugResizeBar').height();
+    this.setState({
+      transitionType: 'closing',
+      open: false,
+      openedHeight: $(this.root).height(),
+      closedHeight,
+    });
+    $('#codeTextbox').animate(
+      {bottom: closedHeight},
+      {step: utils.fireResizeEvent}
+    );
+  },
+
+  slideOpen() {
+    this.setState({
+      open: true,
+      transitionType: 'opening',
+    });
+    $('#codeTextbox').animate(
+      {bottom: this.state.openedHeight},
+      {step: utils.fireResizeEvent}
+    );
+  },
+
+  slideToggle() {
+    if (this.state.open) {
+      this.slideShut();
+    } else {
+      this.slideOpen();
+    }
+  },
+
+  onTransitionEnd() {
+    this.setState({transitionType: null});
   },
 
   render() {
@@ -164,9 +213,20 @@ var UnconnectedJsDebugger = React.createClass({
       marginRight: 5
     };
 
+    const openStyle = {display: 'block'};
+    if (!this.state.open && this.state.transitionType !== 'closing') {
+      openStyle.display = 'none';
+    }
+    const height = this.state.open ? this.state.openedHeight : this.state.closedHeight;
+
     const showWatchPane = this.props.debugWatch && !this.state.watchersHidden;
     return (
-      <div id="debug-area" style={this.props.style || {}} ref={root => this.root = root}>
+      <div
+        id="debug-area"
+        style={[{transition: 'height 0.4s'}, this.props.style, {height}]}
+        onTransitionEnd={this.onTransitionEnd}
+        ref={root => this.root = root}
+      >
         <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
         <PaneHeader
           id="debug-area-header"
@@ -179,7 +239,12 @@ var UnconnectedJsDebugger = React.createClass({
           >
             {i18n.debugConsoleHeader()}
           </span>
-          <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down" style={styles.showHideIcon}/>
+          <i
+            id="show-hide-debug-icon"
+            className={`fa ${this.state.open ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up'}`}
+            style={styles.showHideIcon}
+            onClick={this.slideToggle}
+          />
           {this.props.debugButtons &&
           <PaneSection id="debug-commands-header">
             <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"/>
@@ -188,7 +253,7 @@ var UnconnectedJsDebugger = React.createClass({
               style={styles.noUserSelect}
               className="header-text"
             >
-              {i18n.debugCommandsHeaderWhenOpen()}
+              {this.state.open ? i18n.debugCommandsHeaderWhenOpen() : i18n.debugCommandsHeaderWhenClosed()}
             </span>
           </PaneSection>
           }
@@ -234,18 +299,23 @@ var UnconnectedJsDebugger = React.createClass({
           />
           {this.props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={this.props.stepSpeed} lineWidth={130} onChange={this.props.setStepSpeed}/>}
         </PaneHeader>
-        {this.props.debugButtons && <DebugButtons/>}
-        {this.props.debugConsole && <DebugConsole debugButtons={this.props.debugButtons} debugWatch={showWatchPane}/>}
+        {this.props.debugButtons && <DebugButtons style={openStyle}/>}
+        {this.props.debugConsole && (
+           <DebugConsole
+             style={openStyle}
+             debugButtons={this.props.debugButtons}
+             debugWatch={showWatchPane}
+           />)}
         <div style={{display: showWatchPane ? 'initial' : 'none'}}>
           <ProtectedStatefulDiv>
             <div id="watchersResizeBar"></div>
           </ProtectedStatefulDiv>
         </div>
-        {showWatchPane && <ConnectedWatchers debugButtons={this.props.debugButtons}/>}
+        {showWatchPane && <ConnectedWatchers style={openStyle} debugButtons={this.props.debugButtons}/>}
       </div>
     );
   }
-});
+}));
 
 export {UnconnectedJsDebugger};
 
