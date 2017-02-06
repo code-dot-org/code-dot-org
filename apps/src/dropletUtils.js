@@ -625,8 +625,41 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
  * @throws {Error} encountered unexpected Droplet token
  */
 exports.getFirstParam = function (methodName, block, editor) {
+  return getParamAtIndex(0, methodName, block, editor);
+};
+
+/**
+ * Gets the second parameter of the given function name, given either that
+ * function's DropletBlock or an AceEditor instance with its current cursor
+ * set to after the method.
+ *
+ *
+ * @param {string} methodName name of method to get first param of
+ * @param {DropletBlock} block Droplet block, or undefined if in text mode
+ * @param {AceEditor} editor
+ * @return {string|null} found parameter (without quotes) or null if none found
+ * @throws {Error} encountered unexpected Droplet token
+ */
+exports.getSecondParam = function (methodName, block, editor) {
+  return getParamAtIndex(1, methodName, block, editor);
+};
+
+/**
+ * Gets the parameter at a given index of a given function name, given either that
+ * function's DropletBlock or an AceEditor instance with its current cursor
+ * set to after the method.
+ *
+ * @param {number} index of the parameter requested
+ * @param {string} methodName name of method to get first param of
+ * @param {DropletBlock} block Droplet block, or undefined if in text mode
+ * @param {AceEditor} editor
+ * @return {string|null} found parameter (without quotes) or null if none found
+ * @throws {Error} encountered unexpected Droplet token
+ */
+function getParamAtIndex(index, methodName, block, editor) {
   if (!block) {
     // If we're not given a block, assume that we're in text mode
+    // Currently text mode can only detect the first parameter.
     var cursor = editor.session.selection.getCursor();
     var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
 
@@ -634,8 +667,14 @@ exports.getFirstParam = function (methodName, block, editor) {
   }
   // We have a block. Parse it to find our first socket.
   var token = block.start;
+  var paramNumber = -1;
   do {
     if (token.type === 'socketStart') {
+      paramNumber++;
+      if (paramNumber !== index) {
+        token = token.next;
+        continue;
+      }
       var textToken = token.next;
       if (textToken.type === 'text') {
         return textToken.value;
@@ -648,7 +687,7 @@ exports.getFirstParam = function (methodName, block, editor) {
     token = token.next;
   } while (token);
   return null;
-};
+}
 
 function getFirstParamFromCode(methodName, code) {
   var prefix = `${methodName}(`;
