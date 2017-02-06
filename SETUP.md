@@ -19,7 +19,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `gem install bundler -v 1.10.6`
 1. `rbenv rehash`
 1. `cd code-dot-org`
-1. `bundle install`
+1. `bundle install` (Problems with rmagick? See [tips](#tips) below.)
 1. `rake install`
 1. (Optional) [Enable JavaScript builds](#enabling-javascript-builds)
 1. `rake build`
@@ -153,5 +153,5 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
 - `convert --version`
 - `gem install imagemagick@6`
-- `unlink imagemagick`
+- `brew unlink imagemagick`
 - `brew link imagemagick@6 —force`
