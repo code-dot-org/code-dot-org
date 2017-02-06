@@ -554,6 +554,16 @@ applabCommands.setStrokeWidth = function (opts) {
   return false;
 };
 
+// Returns an rbg or rgba color string that can be used as a parameter to other functions.
+applabCommands.rgb = function (opts) {
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.a, 'number', 0, 1, OPTIONAL);
+  const alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  return `rgba(${opts.r}, ${opts.g}, ${opts.b}, ${alpha})`;
+};
+
 applabCommands.setStrokeColor = function (opts) {
   apiValidateActiveCanvas(opts, 'setStrokeColor');
   apiValidateType(opts, 'setStrokeColor', 'color', opts.color, 'color');
