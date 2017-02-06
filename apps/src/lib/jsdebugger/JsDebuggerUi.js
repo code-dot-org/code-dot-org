@@ -1,7 +1,6 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
 var CommandHistory = require('@cdo/apps/CommandHistory');
 var constants = require('@cdo/apps/constants');
-var DebugArea = require('./DebugArea');
 var dom = require('@cdo/apps/dom');
 var JSInterpreter = require('@cdo/apps/JSInterpreter');
 var Observer = require('@cdo/apps/Observer');
@@ -72,12 +71,6 @@ var JsDebuggerUi = module.exports = function (runApp, reduxStore) {
   this.watchIntervalId_ = 0;
 
   /**
-   * Helper that handles open/shut actions for debugger UI
-   * @private {DebugArea}
-   */
-  this.debugOpenShutController_ = null;
-
-  /**
    * Root element for debug UI: div#debug-area
    * @private {HTMLDivElement}
    */
@@ -145,11 +138,7 @@ JsDebuggerUi.prototype.getElement_ = function (selector) {
 JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
   // Get references to important elements of the DOM
   this.rootDiv_ = options.root || document.getElementById('debug-area');
-
-  // Create controller for open/shut behavior of debug area
-  this.debugOpenShutController_ = new DebugArea(
-      this.rootDiv_,
-      document.getElementById('codeTextbox'));
+  this.reactComponent_ = options.component;
 
   // Change default speed (eg Speed up levels that have lots of steps).
   if (options.defaultStepSpeed) {
@@ -438,8 +427,8 @@ JsDebuggerUi.prototype.onMouseMoveDebugResizeBar = function (event) {
       Math.min(MAX_DEBUG_AREA_HEIGHT,
           (window.innerHeight - event.pageY) - offset));
 
-  if (this.debugOpenShutController_.isShut()) {
-    this.debugOpenShutController_.snapOpen();
+  if (this.reactComponent_.isShut()) {
+    this.reactComponent_.slideOpen();
   }
 
   codeTextbox.style.bottom = newDbgHeight + 'px';
