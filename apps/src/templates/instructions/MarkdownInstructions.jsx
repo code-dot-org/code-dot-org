@@ -31,7 +31,8 @@ const MarkdownInstructions = React.createClass({
     noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
     hasInlineImages: React.PropTypes.bool,
     onResize: React.PropTypes.func,
-    inTopPane: React.PropTypes.bool
+    inTopPane: React.PropTypes.bool,
+    isBlockly: React.PropTypes.bool
   },
 
   /**
@@ -54,18 +55,20 @@ const MarkdownInstructions = React.createClass({
       });
     }
 
-    // Convert any inline XML into blockly blocks. Note that we want to
-    // make sure we don't initialize any blockspace before the main
-    // block space has been created, lest we violate some assumptions
-    // blockly has.
-    if (Blockly.mainBlockSpace) {
-      convertXmlToBlockly(ReactDOM.findDOMNode(this));
-      this.props.onResize();
-    } else {
-      document.addEventListener(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED, () => {
+    if (this.props.isBlockly) {
+      // Convert any inline XML into blockly blocks. Note that we want to
+      // make sure we don't initialize any blockspace before the main
+      // block space has been created, lest we violate some assumptions
+      // blockly has.
+      if (Blockly.mainBlockSpace) {
         convertXmlToBlockly(ReactDOM.findDOMNode(this));
         this.props.onResize();
-      });
+      } else {
+        document.addEventListener(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED, () => {
+          convertXmlToBlockly(ReactDOM.findDOMNode(this));
+          this.props.onResize();
+        });
+      }
     }
 
     // Parent needs to readjust some sizing after images have loaded
@@ -118,6 +121,7 @@ const MarkdownInstructions = React.createClass({
 
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
 export default connect(state => ({
+  hasInlineImages: state.instructions.hasInlineImages,
+  isBlockly: state.pageConstants.isBlockly,
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
-  hasInlineImages: state.instructions.hasInlineImages
 }))(Radium(MarkdownInstructions));

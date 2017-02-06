@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
+import { connect } from 'react-redux';
 import { convertXmlToBlockly } from './utils';
 
 const InlineHint = React.createClass({
@@ -14,10 +15,13 @@ const InlineHint = React.createClass({
     content: React.PropTypes.string.isRequired,
     ttsUrl: React.PropTypes.string,
     ttsMessage: React.PropTypes.string,
+    isBlockly: React.PropTypes.bool
   },
 
   componentDidMount() {
-    convertXmlToBlockly(ReactDOM.findDOMNode(this));
+    if (this.props.isBlockly) {
+      convertXmlToBlockly(ReactDOM.findDOMNode(this));
+    }
   },
 
   render() {
@@ -33,4 +37,7 @@ const InlineHint = React.createClass({
 
 });
 
-export default Radium(InlineHint);
+export const StatelessInlineHint = Radium(InlineHint);
+export default connect(state => ({
+  isBlockly: state.pageConstants.isBlockly
+}))(Radium(InlineHint));
