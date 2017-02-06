@@ -1,0 +1,5 @@
+name 'CSD: colorLed list'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# colorLed List
+MARKDOWN

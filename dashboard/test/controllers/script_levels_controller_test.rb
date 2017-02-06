@@ -88,7 +88,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   def get_show_script_level_page(script_level)
-    get :show, script_id: script_level.script, stage_position: script_level.stage.absolute_position, id: script_level.position
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.stage.absolute_position,
+      id: script_level.position
+    }
   end
 
   # Asserts that each expected directive is contained in the cache-control header,
@@ -101,18 +105,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
-        'no-cache',
-        'no-store',
-        'must-revalidate',
-        'max-age=0']
+      'no-cache',
+      'no-store',
+      'must-revalidate',
+      'max-age=0'
+    ]
     assert_cache_control_match expected_directives, cache_control_header
   end
 
   def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
     expected_directives = [
-        'public',
-        "max-age=#{max_age}",
-        "s-maxage=#{proxy_max_age}"]
+      'public',
+      "max-age=#{max_age}",
+      "s-maxage=#{proxy_max_age}"
+    ]
     assert_cache_control_match expected_directives, cache_control_header
   end
 

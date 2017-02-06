@@ -556,15 +556,12 @@ applabCommands.setStrokeWidth = function (opts) {
 
 // Returns an rbg or rgba color string that can be used as a parameter to other functions.
 applabCommands.rgb = function (opts) {
-  apiValidateTypeAndRange(opts, 'color', 'number', opts.r, 'number', 0, 255);
-  apiValidateTypeAndRange(opts, 'color', 'number', opts.g, 'number', 0, 255);
-  apiValidateTypeAndRange(opts, 'color', 'number', opts.b, 'number', 0, 255);
-  const colorString = `${opts.r}, ${opts.g}, ${opts.b}`;
-  if (opts.a) {
-    apiValidateTypeAndRange(opts, 'color', 'number', opts.a, 'number', 0, 1);
-    return `rgba(${colorString}, ${opts.a})`;
-  }
-  return `rgb(${colorString})`;
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.a, 'number', 0, 1, OPTIONAL);
+  const alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  return `rgba(${opts.r}, ${opts.g}, ${opts.b}, ${alpha})`;
 };
 
 applabCommands.setStrokeColor = function (opts) {
@@ -1712,37 +1709,37 @@ applabCommands.pinMode = function (opts) {
     servo: 4
   };
 
-  Applab.makerlabController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
+  Applab.makerController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
 };
 
 applabCommands.digitalWrite = function (opts) {
   apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
 
-  Applab.makerlabController.digitalWrite(opts.pin, opts.value);
+  Applab.makerController.digitalWrite(opts.pin, opts.value);
 };
 
 applabCommands.digitalRead = function (opts) {
   apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
 
-  return Applab.makerlabController.digitalRead(opts.pin, opts.callback);
+  return Applab.makerController.digitalRead(opts.pin, opts.callback);
 };
 
 applabCommands.analogWrite = function (opts) {
   apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
 
-  Applab.makerlabController.analogWrite(opts.pin, opts.value);
+  Applab.makerController.analogWrite(opts.pin, opts.value);
 };
 
 applabCommands.analogRead = function (opts) {
   apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
 
-  return Applab.makerlabController.analogRead(opts.pin, opts.callback);
+  return Applab.makerController.analogRead(opts.pin, opts.callback);
 };
 
 applabCommands.onBoardEvent = function (opts) {
-  return Applab.makerlabController.onBoardEvent(opts.component, opts.event, opts.callback);
+  return Applab.makerController.onBoardEvent(opts.component, opts.event, opts.callback);
 };
 
 /**

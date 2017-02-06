@@ -71,9 +71,9 @@ class ManifestBuilder
           {
             # JSON-style file comment
             '//': [
-                'Animation Library Manifest',
-                'GENERATED FILE: DO NOT MODIFY DIRECTLY',
-                'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
+              'Animation Library Manifest',
+              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+              'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
             ],
 
             # Strip aliases from metadata - they're no longer needed since they

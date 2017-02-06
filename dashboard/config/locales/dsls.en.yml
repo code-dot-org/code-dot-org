@@ -597,8 +597,10 @@ en:
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
       'CSD: Creating Variables In App Lab': {}
+      'CSD: Dropdown & Conditionals': {}
       'CSD: Lists': {}
       'CSD: Review Events': {}
+      'CSD: colorLed list': {}
       'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Pick Elements Styled: {}
@@ -897,13 +899,13 @@ en:
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
       Categorizing Data: {}
-      'Challenge: Input and UI': {}
       Changing Design Elements with Code: {}
       Check for Internet Accessibility: {}
       'Chirpr: @johnsnow': {}
       'Chirpr: @lillizard': {}
       'Chirpr: @solmoon': {}
       Choosing Good IDs: {}
+      'Circuit Playground Map: Buzzer': {}
       'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
@@ -4559,8 +4561,6 @@ en:
         Blink on and off randomly: Blink on and off randomly
         ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
         : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
-        ? Here's a new block called `led.toggle()`. In this program `led.toggle()` is called every time you click the red button. What do you think will happen when when you click the repeatedly.
-        : Here's a new block called `led.toggle()`. In this program `led.toggle()` is called every time you click the red button. What do you think will happen when when you click the repeatedly.
         Never turn on: Never turn on
         Turn on and stay on: Turn on and stay on
       'CSP U4L04 Assessment 1 ':
