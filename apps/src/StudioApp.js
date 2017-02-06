@@ -2869,6 +2869,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,
+    isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
