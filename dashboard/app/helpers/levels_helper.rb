@@ -252,15 +252,14 @@ module LevelsHelper
 
   # Options hash for Weblab
   def weblab_options
+    # Level-dependent options
     app_options = {}
 
-    level_options = app_options[:level] ||= Hash.new
-    app_options[:level] = level_options
-    level_options.merge! @level.properties.camelize_keys
+    l = @level
+    raise ArgumentError.new("#{l} is not a Weblab object") unless l.is_a? Weblab
 
-    # teacherMarkdown lives on the base app_options object, to be consistent with
-    # Blockly levels, where it needs to avoid caching
-    app_options[:level]['teacherMarkdown'] = nil
+    level_options = l.weblab_level_options.dup
+    app_options[:level] = level_options
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -269,8 +268,6 @@ module LevelsHelper
 
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
-
-    level_options['levelId'] = @level.level_num
 
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
@@ -624,10 +621,10 @@ module LevelsHelper
   SoftButton = Struct.new(:name, :value)
   def soft_button_options
     [
-        SoftButton.new('Left', 'leftButton'),
-        SoftButton.new('Right', 'rightButton'),
-        SoftButton.new('Down', 'downButton'),
-        SoftButton.new('Up', 'upButton'),
+      SoftButton.new('Left', 'leftButton'),
+      SoftButton.new('Right', 'rightButton'),
+      SoftButton.new('Down', 'downButton'),
+      SoftButton.new('Up', 'upButton'),
     ]
   end
 
@@ -678,7 +675,7 @@ module LevelsHelper
   # redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
-    # Note that Game.applab includes both App Lab and Maker Lab.
+    # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?

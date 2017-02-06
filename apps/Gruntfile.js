@@ -389,12 +389,12 @@ module.exports = function (grunt) {
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
-    'levels/editors/_blockly':   './src/sites/studio/pages/levels/editors/_blockly.js',
+    'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
+    'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
   };
 

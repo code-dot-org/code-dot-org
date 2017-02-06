@@ -45,7 +45,10 @@ const ProgressLesson = React.createClass({
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
     return (
       <div style={styles.main}>
-        <div style={styles.heading} onClick={this.toggleCollapsed}>
+        <div
+          style={styles.heading}
+          onClick={this.toggleCollapsed}
+        >
           <FontAwesome icon={icon}/>
           <span style={styles.headingText}>{title}</span>
         </div>

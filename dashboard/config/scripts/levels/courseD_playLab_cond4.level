@@ -75,6 +75,19 @@
         <block type="studio_playSound">
           <title name="SOUND">random</title>
         </block>
+        <block type="studio_setSpriteBehavior" inline="true">
+          <title name="VALUE">"chase"</title>
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">3</title>
+            </block>
+          </value>
+          <value name="TARGETSPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
         <block type="studio_setSpritesChase" inline="true">
           <title name="VALUE">"ninja"</title>
           <value name="SPRITE">
@@ -132,9 +145,14 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="studio_setSpritesChase" inline="true">
-              <title name="VALUE">"ninja"</title>
+            <block type="studio_setSpriteBehavior" inline="true">
+              <title name="VALUE">"chase"</title>
               <value name="SPRITE">
+                <block type="math_number">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <value name="TARGETSPRITE">
                 <block type="math_number">
                   <title name="NUM">1</title>
                 </block>

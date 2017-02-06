@@ -1,15 +1,13 @@
 import api from './api';
 import _ from 'lodash';
-import {getFirstParam} from '../dropletUtils';
+import color from '../../../util/color';
+import {getFirstParam} from '../../../dropletUtils';
 import {
     N_COLOR_LEDS,
     SENSOR_VARS,
     BUTTON_VARS,
     COMPONENT_EVENTS
 } from './PlaygroundConstants';
-
-const COLOR_LIGHT_GREEN = '#D3E965';
-const COLOR_CYAN = '#4DD0E1';
 
 const playSongConfig = {
   song: [
@@ -24,7 +22,7 @@ const playSongConfig = {
   tempo: 100000
 };
 
-const MAKERLAB_CATEGORY = 'Maker Lab';
+const MAKER_CATEGORY = 'Maker';
 const CIRCUIT_CATEGORY = 'Circuit';
 
 const pixelType = '[ColorLed].';
@@ -73,11 +71,11 @@ export const blocks = [
   /**
    * Generic Johnny-Five / Firmata blocks
    */
-  {func: 'pinMode', parent: api, category: MAKERLAB_CATEGORY, paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
-  {func: 'digitalWrite', parent: api, category: MAKERLAB_CATEGORY, paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
-  {func: 'digitalRead', parent: api, category: MAKERLAB_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
-  {func: 'analogWrite', parent: api, category: MAKERLAB_CATEGORY, paletteParams: ['pin', 'value'], params: ['5', '150']},
-  {func: 'analogRead', parent: api, category: MAKERLAB_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
+  {func: 'pinMode', parent: api, category: MAKER_CATEGORY, paletteParams: ['pin', 'mode'], params: ['13', '"output"'], dropdown: { 1: ['"output"', '"input"', '"analog"'] }},
+  {func: 'digitalWrite', parent: api, category: MAKER_CATEGORY, paletteParams: ['pin', 'value'], params: ['13', '1'], dropdown: { 1: ['1', '0'] }},
+  {func: 'digitalRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
+  {func: 'analogWrite', parent: api, category: MAKER_CATEGORY, paletteParams: ['pin', 'value'], params: ['5', '150']},
+  {func: 'analogRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
 
   /**
    * Circuit-Playground-specific blocks
@@ -129,14 +127,14 @@ export const blocks = [
 ];
 
 export const categories = {
-  [MAKERLAB_CATEGORY]: {
+  [MAKER_CATEGORY]: {
     color: 'cyan',
-    rgb: COLOR_CYAN,
+    rgb: color.droplet_cyan,
     blocks: []
   },
   [CIRCUIT_CATEGORY]: {
-    color: 'lightgreen',
-    rgb: COLOR_LIGHT_GREEN,
+    color: 'red',
+    rgb: color.droplet_red,
     blocks: []
   },
 };
