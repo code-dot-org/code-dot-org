@@ -42,14 +42,14 @@ module Rack
         if ssl?(env)
           # headers['Content-Security-Policy'] = 'upgrade-insecure-requests'
           policies += [
-              "default-src 'self' https:",
-              "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
-              "style-src 'self' https: 'unsafe-inline'",
-              "img-src 'self' https: data: blob:",
-              "font-src 'self' https: data:",
-              "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com",
-              "media-src 'self' https: http://vaas.acapela-group.com",
-              "report-uri #{CDO.code_org_url('https/mixed-content')}"
+            "default-src 'self' https:",
+            "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
+            "style-src 'self' https: 'unsafe-inline'",
+            "img-src 'self' https: data: blob:",
+            "font-src 'self' https: data:",
+            "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com",
+            "media-src 'self' https: http://vaas.acapela-group.com",
+            "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
         end
 

@@ -321,53 +321,53 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       { "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "levelgroup_results" => [
-        { "type" => "text_match",
-          "question" => "test",
-          "results" => [
-          {"result" => "Free response from student 3"},
-          {"result" => "This is a different free response"},
-          {"result" => "Free response from student 5"},
-          {"result" => "This is a free response"},
-          {"result" => "Free response from student 4"}],
-          "answer_texts" => nil},
-        { "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {"answer_index" => 0},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        { "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {"answer_index" => 2},
-            {},
-            {"answer_index" => 1}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        {
-          "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {"answer_index" => 3},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        {
-          "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
+          { "type" => "text_match",
+            "question" => "test",
+            "results" => [
+              {"result" => "Free response from student 3"},
+              {"result" => "This is a different free response"},
+              {"result" => "Free response from student 5"},
+              {"result" => "This is a free response"},
+              {"result" => "Free response from student 4"}],
+            "answer_texts" => nil},
+          { "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {"answer_index" => 0},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          { "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {"answer_index" => 2},
+              {},
+              {"answer_index" => 1}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          {
+            "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {"answer_index" => 3},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          {
+            "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
         ]
       }
     ]
@@ -397,7 +397,7 @@ class ApiControllerTest < ActionController::TestCase
         level_multi_correct
         level_multi_incorrect
         level_multi_unattempted)}
-      ]
+    ]
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
@@ -431,53 +431,53 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       { "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "levelgroup_results" => [
-        { "type" => "text_match",
-          "question" => "test",
-          "results" => [
-          {"result" => "Free response from student 5"},
-          {"result" => "Free response from student 4"},
-          {"result" => "Free response from student 7"},
-          {"result" => "Free response from student 3"},
-          {"result" => "Free response from student 6"}],
-          "answer_texts" => nil},
-        { "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        { "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        {
-          "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        {
-          "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
+          { "type" => "text_match",
+            "question" => "test",
+            "results" => [
+              {"result" => "Free response from student 5"},
+              {"result" => "Free response from student 4"},
+              {"result" => "Free response from student 7"},
+              {"result" => "Free response from student 3"},
+              {"result" => "Free response from student 6"}],
+            "answer_texts" => nil},
+          { "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          { "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          {
+            "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          {
+            "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
         ]
       }
     ]
@@ -632,11 +632,15 @@ class ApiControllerTest < ActionController::TestCase
 
     [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, index|
       student_response = stage_response[index]
-      assert_equal({
-        "user_id" => student.id,
-        "level_id" => level.id,
-        "script_id" => script.id
-      }, student_response['user_level_data'], 'user_id, level_id, and script_id for not yet existing user_level')
+      assert_equal(
+        {
+          "user_id" => student.id,
+          "level_id" => level.id,
+          "script_id" => script.id
+        },
+        student_response['user_level_data'],
+        'user_id, level_id, and script_id for not yet existing user_level'
+      )
       assert_equal student.name, student_response['name']
       assert_equal true, student_response['locked'], 'starts out locked'
       assert_equal false, student_response['readonly_answers']
@@ -676,51 +680,66 @@ class ApiControllerTest < ActionController::TestCase
 
     # student_1 is unlocked
     student_1_response = student_responses[0]
-    assert_equal({
-      "user_id" => @student_1.id,
-      "level_id" => level.id,
-      "script_id" => script.id
-    }, student_1_response['user_level_data'])
+    assert_equal(
+      {
+        "user_id" => @student_1.id,
+        "level_id" => level.id,
+        "script_id" => script.id
+      },
+      student_1_response['user_level_data']
+    )
     assert_equal false, student_1_response['locked']
     assert_equal false, student_1_response['readonly_answers']
 
     # student_2 is unlocked
     student_2_response = student_responses[1]
-    assert_equal({
-      "user_id" => @student_2.id,
-      "level_id" => level.id,
-      "script_id" => script.id
-    }, student_2_response['user_level_data'])
+    assert_equal(
+      {
+        "user_id" => @student_2.id,
+        "level_id" => level.id,
+        "script_id" => script.id
+      },
+      student_2_response['user_level_data']
+    )
     assert_equal false, student_2_response['locked']
     assert_equal true, student_2_response['readonly_answers']
 
     # student_3 has a user_level, but is still locked
     student_3_response = student_responses[2]
-    assert_equal({
-      "user_id" => @student_3.id,
-      "level_id" => level.id,
-      "script_id" => script.id
-    }, student_3_response['user_level_data'])
+    assert_equal(
+      {
+        "user_id" => @student_3.id,
+        "level_id" => level.id,
+        "script_id" => script.id
+      },
+      student_3_response['user_level_data']
+    )
     assert_equal true, student_3_response['locked']
     assert_equal false, student_3_response['readonly_answers']
 
     # student_4 got autolocked while editing
     student_4_response = student_responses[3]
-    assert_equal({
-      "user_id" => @student_4.id,
-      "level_id" => level.id,
-      "script_id" => script.id
-    }, student_4_response['user_level_data'])
+    assert_equal(
+      {
+        "user_id" => @student_4.id,
+        "level_id" => level.id,
+        "script_id" => script.id
+      },
+      student_4_response['user_level_data']
+    )
     assert_equal true, student_4_response['locked']
     assert_equal false, student_4_response['readonly_answers']
 
     # student_5 got autolocked while viewing answers
     student_5_response = student_responses[4]
-    assert_equal({
-      "user_id" => @student_5.id,
-      "level_id" => level.id,
-      "script_id" => script.id
-    }, student_5_response['user_level_data'])
+    assert_equal(
+      {
+        "user_id" => @student_5.id,
+        "level_id" => level.id,
+        "script_id" => script.id
+      },
+      student_5_response['user_level_data']
+    )
     assert_equal true, student_5_response['locked']
     assert_equal false, student_5_response['readonly_answers']
   end
@@ -1177,9 +1196,11 @@ class ApiControllerTest < ActionController::TestCase
     get :user_hero
 
     assert_select '#welcome.student'
-    assert_select '#suggestcourse', I18n.t('home.student_finished',
+    assert_select '#suggestcourse', I18n.t(
+      'home.student_finished',
       online_link: I18n.t('home.online'),
-      local_school_link: I18n.t('home.local_school'))
+      local_school_link: I18n.t('home.local_school')
+    )
   end
 
   test 'should show teacher-dashboard link when a teacher' do
@@ -1207,7 +1228,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert assigns(:show_pairing_dialog)
-    assert !session[:show_pairing_dialog] # should only show once
+    refute session[:show_pairing_dialog] # should only show once
   end
 
   test "user menu should not open pairing dialog if not asked to in the session" do
@@ -1217,8 +1238,8 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_menu
 
-    assert !assigns(:show_pairing_dialog)
-    assert !session[:show_pairing_dialog] # should only show once
+    refute assigns(:show_pairing_dialog)
+    refute session[:show_pairing_dialog] # should only show once
   end
 
   test "do show prize link when you already have a prize" do

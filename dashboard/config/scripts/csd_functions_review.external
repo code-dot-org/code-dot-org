@@ -3,29 +3,13 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Functions Review
 
-# Calling Functions
-
 Functions let you build your own blocks and decide what code goes inside of them. This is the command that lets you create a new function.
-
-![](https://images.code.org/2493f74065d4e642ca51429b8832e431-image-1474913839061.17.09 PM.png)
-
-You use or "call" your function like any other block by using the name you gave it.
-
-![](https://images.code.org/61a6eb716e263b580ecd63fab0de7547-image-1474913770359.16.00 PM.png)
-
-The blocks to create and call functions can be found in the "Functions" tab of the palette.
-
-![](https://images.code.org/a570a05be61297ee9f0d79a02df8db6e-image-1474922721897.44.36 PM.png)
 
 Placing code inside functions makes it easy to read and make changes to. Good names for functions indicate what your program is doing to a reader. You can call your functions in a different order to quickly make significant changes to how your program runs.
 
 You'll often want to use the same code at many places in your program. Once you've created a function you can call it as many times as you like.
 
 A nice benefit of using functions to remove repeated code is that you can now easily make changes to multiple places in your code. Just change how you create the functions, and your program will now use the new code everywhere your function is called.
-
-In Game Lab all the action is happening in the draw loop, but too much complex code makes it really confusing to read. To keep your draw loop easy to read, begin by writing functions for larger chunks of code. You can then go write them below. This is a really good example of using abstraction to think about problems at a high level and worry about details later.
-
-# Reviewing Functions
 
 ### **Creating (Naming) a Function**
 

@@ -69,13 +69,15 @@ course_names_to_old_new_renames.each do |course_name, old_to_new_levels|
       new_user_level = UserLevel.find_by(
         level_id: new_level_id,
         script_id: script_id,
-        user_id: old_user_level.user_id)
+        user_id: old_user_level.user_id
+      )
       if new_user_level
         # They have also played since we made the change
         new_user_level.attempts = new_user_level.attempts + old_user_level.attempts
         new_user_level.best_result = [
-            new_user_level.best_result || 0,
-            old_user_level.best_result || 0].max
+          new_user_level.best_result || 0,
+          old_user_level.best_result || 0
+        ].max
         new_user_level.save
         old_user_level.destroy
       else

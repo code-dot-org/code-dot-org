@@ -5,7 +5,6 @@ stage 'Private and Personal Information'
 level 'coursee-privateandpersonalinformation'
 
 stage 'Build a Star Wars Game'
-level 'courseE_video_StarWarsEvents'
 skin 'hoc2015'
 video_key_for_next_level 'starwars_blocks_events'
 level 'blockly:Studio:hoc2015_blockly_7'

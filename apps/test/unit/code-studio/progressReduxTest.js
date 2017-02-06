@@ -10,8 +10,11 @@ import reducer, {
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
+  setIsSummaryView,
   SignInState,
-  levelsByStage
+  levelsByLesson,
+  progressionsFromLevels,
+  categorizedLessons
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -293,6 +296,14 @@ describe('progressReduxTest', () => {
       const isNotHocScript = reducer(initialState, setIsHocScript(false));
       assert.equal(isNotHocScript.isHocScript, false);
     });
+
+    it('can update isSummaryView', () => {
+      const stateSummary = reducer(initialState, setIsSummaryView(true));
+      assert.strictEqual(stateSummary.isSummaryView, true);
+
+      const stateDetail = reducer(initialState, setIsSummaryView(false));
+      assert.strictEqual(stateDetail.isSummaryView, false);
+    });
   });
 
   describe('with peer reviews', () => {
@@ -414,7 +425,7 @@ describe('progressReduxTest', () => {
     });
   });
 
-  describe('levelsByStage', () => {
+  describe('levelsByLesson', () => {
     it('extracts status/url on a per level basis', () => {
       const initializedState = reducer(undefined, initProgress(initialScriptOverviewProgress));
 
@@ -431,33 +442,188 @@ describe('progressReduxTest', () => {
         [
           {
             status: 'not_tried',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
+            name: undefined
           },
           {
             status: 'not_tried',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
+            name: undefined
           },
           {
             status: 'not_tried',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
+            name: undefined
           }
         ],
         [
           {
             status: 'not_tried',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
+            name: undefined
           },
           {
             status: 'perfect',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
+            name: undefined
           },
           {
             status: 'attempted',
-            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3"
+            url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
+            name: undefined
           }
         ]
       ];
-      assert.deepEqual(expected, levelsByStage(state));
+      assert.deepEqual(expected, levelsByLesson(state));
+    });
+  });
+
+  describe('progressionsFromLevels', () => {
+    it('returns a single progression when no levels have names', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+        }
+      ];
+
+      assert.deepEqual(progressionsFromLevels(levels), [{
+        name: undefined,
+        start: 0,
+        levels: levels
+      }]);
+    });
+
+    it('puts adjacent levels with the same name in the same progression', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          name: 'Progression 1'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          name: 'Progression 1'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          name: 'Progression 2'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 2);
+      assert.deepEqual(progressions[0], {
+        name: 'Progression 1',
+        start: 0,
+        levels: levels.slice(0, 2)
+      });
+    });
+
+    it('puts non-adjacent levels with the same name in different progressions', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          name: 'One'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          name: 'Two'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          name: 'One'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 3);
+      assert.equal(progressions[0].levels.length, 1);
+      assert.equal(progressions[1].levels.length, 1);
+      assert.equal(progressions[2].levels.length, 1);
+    });
+
+    it('sets the right start value for progressions that arent the first one', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          name: 'Progression 1'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          name: 'Progression 1'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          name: 'Progression 2'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 2);
+      assert.equal(progressions[1].start, 2);
+    });
+  });
+
+  describe('categorizedLessons', () => {
+    // helper method that creates a fake stage
+    const fakeStage = (categoryName, stageName) => ({
+      flex_category: categoryName,
+      name: stageName,
+      levels: [{
+        status: 'not_tried',
+        url: '',
+        name: 'fake level'
+      }]
+    });
+
+    it('returns a single category if all lessons have the same category', () => {
+      const state = {
+        stages: [
+          fakeStage('Content', 'stage1'),
+          fakeStage('Content', 'stage2'),
+          fakeStage('Content', 'stage3')
+        ]
+      };
+
+      const categories = categorizedLessons(state);
+      assert.equal(categories.length, 1);
+      assert.equal(categories[0].category, 'Content');
+    });
+
+    it('groups non-adjacent stages by category', () => {
+      const state = {
+        stages: [
+          fakeStage('cat1', 'stage1'),
+          fakeStage('cat2', 'stage2'),
+          fakeStage('cat1', 'stage3')
+        ]
+      };
+
+      const categories = categorizedLessons(state);
+      assert.equal(categories.length, 2);
+      assert.equal(categories[0].category, 'cat1');
+      assert.equal(categories[1].category, 'cat2');
+      assert.equal(categories[0].levels.length, 2);
+      assert.equal(categories[1].levels.length, 1);
+      assert.deepEqual(categories[0].lessonNames, ['stage1', 'stage3']);
+      assert.deepEqual(categories[1].lessonNames, ['stage2']);
     });
   });
 });

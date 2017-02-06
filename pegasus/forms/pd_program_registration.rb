@@ -46,6 +46,9 @@ class PdProgramRegistration
       result[:years_taught_k12_s] = integer data[:years_taught_k12_s]
       result[:grades_taught_ss] = required_multi_enum data, :grades_taught_ss
       result[:grades_planning_to_teach_ss] = required_multi_enum data, :grades_planning_to_teach_ss
+
+      result[:how_implement_csd_s] = required_enum data, :how_implement_csd_s if result[:selected_course_s] == 'csd'
+
       result[:subjects_taught_ss] = required_multi_enum data, :subjects_taught_ss
       result[:years_taught_cs_s] = integer data[:years_taught_cs_s]
     end
@@ -143,6 +146,13 @@ class PdProgramRegistration
       'Middle School/Junior High',
       'High School',
       'I am not teaching this course'
+    ],
+
+    how_implement_csd_s: [
+      'I plan to teach the full course in 2017-18',
+      'I plan to teach the first semester in 2017-18, and the second semester in 2018-19',
+      'I only plan to teach the first semester of the course',
+      "I don't know my plans yet"
     ],
 
     subjects_taught_ss: [

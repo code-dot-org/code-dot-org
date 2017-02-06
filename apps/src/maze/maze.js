@@ -777,10 +777,13 @@ var displayFeedback = function () {
     response: Maze.response,
     level: level
   };
-  // If there was an app-specific error
-  // add it to the options passed to studioApp.displayFeedback().
+
   let message;
-  if (Maze.subtype.hasMessage(Maze.testResults)) {
+  if (studioApp.hasContainedLevels) {
+    message = getContainedLevelResultInfo().feedback;
+  } else if (Maze.subtype.hasMessage(Maze.testResults)) {
+    // If there was an app-specific error
+    // add it to the options passed to studioApp.displayFeedback().
     message = Maze.subtype.getMessage(Maze.executionInfo.terminationValue());
   }
 
@@ -988,7 +991,6 @@ Maze.execute = function (stepMode) {
   if (studioApp.hasContainedLevels && !level.edit_blocks) {
     // Contained levels post progress in a special way, and always pass
     postContainedLevelAttempt(studioApp);
-    Maze.response = getContainedLevelResultInfo().feedback;
     Maze.testResults = TestResults.ALL_PASS;
     runAfterPostContainedLevel(Maze.onReportComplete);
   } else {

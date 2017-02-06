@@ -21,9 +21,9 @@ class ChannelsApi < Sinatra::Base
     get '/v3/channels/debug' do
       dont_cache
       content_type :json
-      JSON.pretty_generate({
-        storage_id: storage_id('user'),
-      })
+      JSON.pretty_generate(
+        {storage_id: storage_id('user')}
+      )
     end
   end
 
