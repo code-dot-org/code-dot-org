@@ -18,7 +18,8 @@ class EmailValidatorTest < Minitest::Test
       'email@example.name',
       'email@example.museum',
       'email@example.co.jp',
-      'firstname-lastname@example.com']
+      'firstname-lastname@example.com'
+    ]
 
     valid_addresses.each do |address|
       assert EmailValidator.email_address?(address), "#{address} should be a valid email address"
@@ -46,7 +47,8 @@ class EmailValidatorTest < Minitest::Test
       '(Joe',
       'Smith)',
       'email@example',
-      'email@example..com']
+      'email@example..com'
+    ]
 
     invalid_addresses.each do |address|
       refute EmailValidator.email_address?(address), "#{address} should be an invalid email address"
