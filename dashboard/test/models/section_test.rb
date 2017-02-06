@@ -199,9 +199,7 @@ class SectionTest < ActiveSupport::TestCase
       ["Bo", "J. Crew", "T Bone"]
     )
 
-    # Names which have other names as their strict subsets will default
-    # back to full names.
-    # TODO elijah fix this so we instead get "First L"
-    verify(['First', 'First Last'], ['First', 'First Last'])
+    # Handles names that have other names as their strict subset
+    verify(['Thor', 'Thor Odinson'], ['Thor', 'Thor O'])
   end
 end
