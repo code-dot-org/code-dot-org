@@ -721,12 +721,6 @@ Applab.init = function (config) {
   var onMount = function () {
     studioApp.init(config);
 
-    if (debuggerUi) {
-      debuggerUi.initializeAfterDomCreated({
-        defaultStepSpeed: config.level.sliderSpeed
-      });
-    }
-
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
@@ -782,7 +776,8 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers')
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
+    debuggerUi,
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(

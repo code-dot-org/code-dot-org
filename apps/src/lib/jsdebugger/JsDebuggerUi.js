@@ -144,7 +144,7 @@ JsDebuggerUi.prototype.getElement_ = function (selector) {
  */
 JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
   // Get references to important elements of the DOM
-  this.rootDiv_ = document.getElementById('debug-area');
+  this.rootDiv_ = options.root || document.getElementById('debug-area');
 
   // Create controller for open/shut behavior of debug area
   this.debugOpenShutController_ = new DebugArea(
