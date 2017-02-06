@@ -67,9 +67,9 @@ class XhrProxyController < ApplicationController
     end
 
     event_details = {
-        channel_id: channel_id,
-        owner_storage_id: owner_storage_id,
-        url: url
+      channel_id: channel_id,
+      owner_storage_id: owner_storage_id,
+      url: url
     }
     NewRelic::Agent.record_custom_event("XhrProxyControllerRequest", event_details) if CDO.newrelic_logging
     Rails.logger.info "XhrProxyControllerRequest #{event_details}"
