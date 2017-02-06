@@ -191,7 +191,7 @@
       solution_blocks: @level.respond_to?(:solution_blocks),
       uses_droplet: @level.game.uses_droplet?,
       input_output_table: @level.respond_to?(:input_output_table),
-      original_palette: JSON.parse(@level.class.palette),
+      original_palette: JSON.parse(@level.class.try(:palette) || "{}"),
     }.to_json
   }
 %script{src: minifiable_asset_path('js/levels/editors/_blockly.js'),
