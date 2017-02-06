@@ -147,3 +147,11 @@ Please also see our other documentation, including our:
 * [License](./LICENSE)
 
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) for more information on helping us out.
+
+---
+###Tips 
+If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
+- `convert --version`
+- `gem install imagemagick@6`
+- `unlink imagemagick`
+- `brew link imagemagick@6 —force`
