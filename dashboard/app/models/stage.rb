@@ -67,7 +67,11 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_category
-    I18n.t "flex_category.#{flex_category}" if flex_category
+    if flex_category
+      I18n.t "flex_category.#{flex_category}"
+    else
+      I18n.t "flex_category.content"
+    end
   end
 
   def lesson_plan_html_url

@@ -1,15 +1,10 @@
 /* global dashboard */
 
 var api = require('./apiJavascript.js');
+import color from '../util/color';
 var consoleApi = require('../consoleApi');
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
-
-var COLOR_LIGHT_GREEN = '#D3E965';
-var COLOR_RED = '#F78183';
-var COLOR_CYAN = '#4DD0E1';
-var COLOR_YELLOW = '#FFF176';
-var COLOR_BLUE = '#64B5F6';
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';
@@ -346,43 +341,43 @@ module.exports.categories = {
   'Game Lab': {
     id: 'gamelab',
     color: 'yellow',
-    rgb: COLOR_YELLOW,
+    rgb: color.droplet_yellow,
     blocks: []
   },
   Sprites: {
     id: 'sprites',
     color: 'red',
-    rgb: COLOR_RED,
+    rgb: color.droplet_red,
     blocks: []
   },
   Animations: {
     id: 'animations',
     color: 'red',
-    rgb: COLOR_RED,
+    rgb: color.droplet_red,
     blocks: []
   },
   Groups: {
     id: 'groups',
     color: 'red',
-    rgb: COLOR_RED,
+    rgb: color.droplet_red,
     blocks: []
   },
   Data: {
     id: 'data',
     color: 'lightgreen',
-    rgb: COLOR_LIGHT_GREEN,
+    rgb: color.droplet_light_green,
     blocks: []
   },
   Drawing: {
     id: 'drawing',
     color: 'cyan',
-    rgb: COLOR_CYAN,
+    rgb: color.droplet_cyan,
     blocks: []
   },
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: COLOR_BLUE,
+    rgb: color.droplet_blue,
     blocks: []
   },
 };
