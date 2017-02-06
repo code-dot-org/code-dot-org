@@ -84,10 +84,13 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
+    "markdown_instructions": "# ColorLEDs\r\n\r\nOn your board there are a bunch of colorLEDs that are all stored in an array. Can you use the length function to figure out how many Leds there are on the board?",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
