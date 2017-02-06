@@ -1,0 +1,33 @@
+name 'CSD: Lists'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# List
+
+## Creating a List
+
+Lists have many features which make them different from variables, but **most of what you've learned about variables also applies to lists**. For example, just like a variable:
+
+* Lists should be given a **descriptive and meaningful** name.
+* Lists are created using `var`.
+* Lists can be initialized/set using `=`.
+
+**Example: Creating a List**
+
+![](https://images.code.org/0b7d201db2990f0189963bb6a565a057-image-1447097600773.33.08 PM.png)
+
+This list contains 3 values: 100, 250, 500. Notice that the values are separated with commas `,` and that the entire list is enclosed in brackets `[ ]` . We can use `console.log` to display the contents of an list just like we would a variable.
+
+![](https://images.code.org/7d4be70330108e3e5d6325fa4e721ef4-image-1447097904253.38.18 PM.png)
+
+This will print out [100, 250, 500] in the console area.
+
+## Accessing Items of List
+
+A list is comprised of many locations. You can individually set or reference the information at each location of your list just like a variable. To tell your locations apart each has a separate number, or **index**, that identifies it.
+
+Lists in JavaScript are **zero-indexed** which means the first index is 0. This is similar to binary number systems which begin counting at 0. For example a list of 10 items would have indexes 0-9. As a result **the last index is always one less than the length of the list**.
+
+**Accessing List Items by Index:** If you know the index of the item you wish to access you can reference it using square brackets `list[index]` . The example below prints the value of the 4th element in the list.  
+
+![](https://images.code.org/8b2da597fccaeeafb30b04991074cd8b-image-1447365422277.56.45 PM.png)
+MARKDOWN

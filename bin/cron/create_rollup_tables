@@ -15,6 +15,28 @@ def sanitize_string_for_db(unsanitized)
   unsanitized.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
 end
 
+# @param contained_level [Level] The level to parse.
+# @return [String] The level question, from the markdown or the text. If both
+#   exist, the two are concatenated.
+def get_contained_question(contained_level)
+  contained_question_markdown = contained_level.properties['markdown']
+
+  contained_question_text = nil
+  if contained_level.properties['questions']
+    contained_question_text = contained_level.
+      properties['questions'].
+      first['text']
+  end
+
+  if contained_question_markdown.nil?
+    return contained_question_text
+  end
+  if contained_question_text.nil?
+    return contained_question_markdown
+  end
+  return "(TEXT) #{contained_question_text} (MARKDOWN) #{contained_question_markdown}"
+end
+
 def main
   # Truncate the existing tables.
   %w(
@@ -37,12 +59,7 @@ def main
       page['levels'].each_with_index do |contained_level_name, position_index|
         contained_level = Level.find_by_name(contained_level_name)
         next unless contained_level.type == 'Multi'
-        contained_question = contained_level.properties['markdown']
-        unless contained_question
-          contained_question = contained_level.
-            properties['questions'].
-            first['text']
-        end
+        contained_question = get_contained_question(contained_level)
         contained_levels << {
           level_id: level.id,
           contained_level_id: contained_level.id,

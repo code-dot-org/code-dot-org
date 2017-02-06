@@ -410,8 +410,10 @@ class LevelsHelperTest < ActionView::TestCase
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
-    script = Script.add_script({name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+    script = Script.add_script(
+      {name: 'test_script'},
+      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+    )
 
     stage = script.stages[0]
     assert_equal 1, stage.absolute_position

@@ -172,8 +172,8 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_equal 3, project_versions.count
     assert project_versions[0]['isLatest']
-    assert !project_versions[1]['isLatest']
-    assert !project_versions[2]['isLatest']
+    refute project_versions[1]['isLatest']
+    refute project_versions[2]['isLatest']
 
     # Restore previous version
     @api.restore_files_version(project_versions[2]['versionId'])

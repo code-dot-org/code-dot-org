@@ -49,7 +49,7 @@ class EmailValidatorTest < Minitest::Test
       'email@example..com']
 
     invalid_addresses.each do |address|
-      assert !EmailValidator.email_address?(address), "#{address} should be an invalid email address"
+      refute EmailValidator.email_address?(address), "#{address} should be an invalid email address"
     end
   end
 end

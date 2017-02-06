@@ -285,17 +285,20 @@ if $options.with_status_page
   scheme = (rack_env?(:development) && !CDO.https_development) ? 'http:' : 'https:'
   status_page_url = CDO.studio_url('/ui_test/' + status_page_filename, scheme)
   File.open(status_page_filename, 'w') do |file|
-    file.write haml_engine.render(Object.new, {
-      api_origin: CDO.studio_url('', scheme),
-      s3_bucket: S3_LOGS_BUCKET,
-      s3_prefix: S3_LOGS_PREFIX,
-      type: test_type,
-      git_branch: GIT_BRANCH,
-      commit_hash: COMMIT_HASH,
-      start_time: $suite_start_time,
-      browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
-      features: features_to_run
-    })
+    file.write haml_engine.render(
+      Object.new,
+      {
+        api_origin: CDO.studio_url('', scheme),
+        s3_bucket: S3_LOGS_BUCKET,
+        s3_prefix: S3_LOGS_PREFIX,
+        type: test_type,
+        git_branch: GIT_BRANCH,
+        commit_hash: COMMIT_HASH,
+        start_time: $suite_start_time,
+        browsers: $browsers.map {|b| b['name'].nil? ? 'UnknownBrowser' : b['name']},
+        features: features_to_run
+      }
+    )
   end
   HipChat.log "A <a href=\"#{status_page_url}\">status page</a> has been generated for this #{test_type} test run."
 end
@@ -514,12 +517,15 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
 
   reruns = 0
   succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments, log_prefix)
-  log_link = upload_log_and_get_public_link(html_output_filename, {
+  log_link = upload_log_and_get_public_link(
+    html_output_filename,
+    {
       commit: COMMIT_HASH,
       success: succeeded.to_s,
       attempt: reruns.to_s,
       duration: test_duration.to_s
-  })
+    }
+  )
 
   while !succeeded && (reruns < max_reruns)
     reruns += 1
@@ -532,12 +538,15 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
     succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments + rerun_arguments, log_prefix)
-    log_link = upload_log_and_get_public_link(html_output_filename, {
+    log_link = upload_log_and_get_public_link(
+      html_output_filename,
+      {
         commit: COMMIT_HASH,
         duration: test_duration.to_s,
         attempt: reruns.to_s,
         success: succeeded.to_s
-    })
+      }
+    )
   end
 
   $lock.synchronize do

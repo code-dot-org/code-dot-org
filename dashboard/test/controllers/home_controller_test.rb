@@ -200,7 +200,7 @@ class HomeControllerTest < ActionController::TestCase
     user = create(:user)
     user.update_attribute(:birthday, nil) # bypasses validations
     user = user.reload
-    assert !user.age, "user should not have age, but value was #{user.age}"
+    refute user.age, "user should not have age, but value was #{user.age}"
 
     sign_in user
     get :index

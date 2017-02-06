@@ -127,13 +127,6 @@ Style/ConditionalAssignment:
 Style/GlobalVars:
   Enabled: false
 
-# Offense count: 83
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
-# SupportedStyles: special_inside_parentheses, consistent, align_brackets
-Style/IndentArray:
-  Enabled: false
-
 # Offense count: 287
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
@@ -174,13 +167,6 @@ Style/MultilineHashBraceLayout:
 # Offense count: 18
 # Cop supports --auto-correct.
 Style/MultilineIfModifier:
-  Enabled: false
-
-# Offense count: 109
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: symmetrical, new_line, same_line
-Style/MultilineMethodCallBraceLayout:
   Enabled: false
 
 # Offense count: 231

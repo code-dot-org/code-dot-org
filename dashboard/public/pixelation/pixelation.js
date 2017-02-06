@@ -566,12 +566,12 @@ function onFinishedButtonClick() {
   if (!appOptions.readonlyWorkspace && options.saveProject) {
     options.saveProject(onSaveProjectComplete);
   } else {
-    dashboard.dialog.processResults(onComplete);
+    dashboard.widget.processResults(onComplete);
   }
 }
 
 function onSaveProjectComplete() {
-  dashboard.dialog.processResults(onComplete);
+  dashboard.widget.processResults(onComplete);
 }
 
 /**
@@ -590,7 +590,7 @@ function onComplete(willRedirect) {
  * level to its initial state, losing any of their own work on that level.
  */
 function startOverClicked() {
-  dashboard.dialog.showStartOverDialog(startOverConfirmed);
+  dashboard.widget.showStartOverDialog(startOverConfirmed);
 }
 
 function startOverConfirmed() {

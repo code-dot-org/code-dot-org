@@ -12,8 +12,13 @@ import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
+import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 
 const styles = {
+  buttonRow: {
+    // ensure we have height when we only have our toggle (which is floated)
+    minHeight: 50
+  },
   flexHeader: {
     padding: '8px 11px',
     margin: '20px 0 0 0',
@@ -21,10 +26,17 @@ const styles = {
     background: color.cyan,
     color: color.white
   },
-  sectionSelector: {
+  right: {
     position: 'absolute',
+    right: 0,
+    top: 0
+  },
+  sectionSelector: {
     // offset selector's margin so that we're aligned flush right
-    right: -10
+    position: 'relative',
+    right: experiments.isEnabled('progressRedesign') ? 0 : -10,
+    // vertically center
+    bottom: 4
   }
 };
 
@@ -66,33 +78,45 @@ const CourseProgress = React.createClass({
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
-    // Don't yet support PLC
-    const progressRedesign = !professionalLearningCourse &&
-      experiments.isEnabled('progressRedesign');
+    const progressRedesign = experiments.isEnabled('progressRedesign');
 
     return (
       <div>
-        {this.props.onOverviewPage && !this.props.professionalLearningCourse &&
-          <HrefButton
-            href={`/s/${scriptName}/next.next`}
-            text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
-            type="primary"
-            style={{marginBottom: 10}}
-          />
-        }
-        {this.props.onOverviewPage && !this.props.professionalLearningCourse &&
-          <HrefButton
-            href="//support.code.org"
-            text={i18n.getHelp()}
-            type="default"
-            style={{marginLeft: 10, marginBottom: 10}}
-          />
-        }
-        {this.props.onOverviewPage && viewAs === ViewType.Teacher &&
-          <span style={styles.sectionSelector}>
-            <SectionSelector/>
-          </span>
-        }
+        {this.props.onOverviewPage && (
+          <div style={styles.buttonRow}>
+            <div>
+              {!this.props.professionalLearningCourse &&
+                <HrefButton
+                  href={`/s/${scriptName}/next.next`}
+                  text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
+                  type="primary"
+                  style={{marginBottom: 10}}
+                />
+              }
+              {!this.props.professionalLearningCourse &&
+                <HrefButton
+                  href="//support.code.org"
+                  text={i18n.getHelp()}
+                  type="default"
+                  style={{marginLeft: 10, marginBottom: 10}}
+                />
+              }
+            </div>
+            <div style={styles.right}>
+              {viewAs === ViewType.Teacher &&
+                <span style={styles.sectionSelector}>
+                  <SectionSelector/>
+                </span>
+              }
+              {progressRedesign && (
+                <span>
+                  <ProgressDetailToggle/>
+                </span>
+              )}
+            </div>
+          </div>
+        )}
+
         {progressRedesign && <ProgressTable/>}
 
         {!progressRedesign && <div className="user-stats-block">

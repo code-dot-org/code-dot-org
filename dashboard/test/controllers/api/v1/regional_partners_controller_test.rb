@@ -13,8 +13,8 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   test 'index finds the regional partner for a given district and course combination' do
     [
-        ['csp', 'A+ College Ready'],
-        ['csd', 'Academy for CS Education - Florida International University'],
+      ['csp', 'A+ College Ready'],
+      ['csd', 'Academy for CS Education - Florida International University'],
     ].each do |course, regional_partner|
       get :index, params: {school_district_id: '1200390', course: course}
       response = JSON.parse(@response.body)
@@ -28,14 +28,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
   test 'index finds the regional partner and workshop days for a given district and course' do
     [
-        ['csd', '200001', 'A+ College Ready', 'June 10-15, 2017'],
-        ['csp', '200001', 'A+ College Ready', 'June 10-15, 2017'],
-        ['unselected', '200001', 'A+ College Ready', 'June 10-15, 2017'],
-        ['csd', '200003', 'A+ College Ready', 'June 16-20, 2017'],
-        ['csp', '200003', 'A+ College Ready', 'June 16-20, 2017'],
-        ['unselected', '200003', 'A+ College Ready', 'June 16-20, 2017'],
-        ['csd', '600001', 'A+ College Ready', 'June 1-5, 2017'],
-        ['csp', '600001', 'A+ College Ready', 'June 21-25, 2017'],
+      ['csd', '200001', 'A+ College Ready', 'June 10-15, 2017'],
+      ['csp', '200001', 'A+ College Ready', 'June 10-15, 2017'],
+      ['unselected', '200001', 'A+ College Ready', 'June 10-15, 2017'],
+      ['csd', '200003', 'A+ College Ready', 'June 16-20, 2017'],
+      ['csp', '200003', 'A+ College Ready', 'June 16-20, 2017'],
+      ['unselected', '200003', 'A+ College Ready', 'June 16-20, 2017'],
+      ['csd', '600001', 'A+ College Ready', 'June 1-5, 2017'],
+      ['csp', '600001', 'A+ College Ready', 'June 21-25, 2017'],
     ].each do |course, district, regional_partner, workshop_days|
       get :index, params: {school_district_id: district, course: course}
       response = JSON.parse(@response.body)
