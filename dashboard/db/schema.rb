@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170202090015) do
 
-  create_table "activities", id: :bigint, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "level_id"
     t.string   "action"
