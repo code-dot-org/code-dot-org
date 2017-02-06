@@ -451,18 +451,22 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   if (!jsonData || !jsonData.length) {
     return;
   }
-  getExistingTables(overwrite).then(existingTables => {
-    const promises = [];
-    const newTables = JSON.parse(jsonData);
-    for (const tableName in newTables) {
-      if (overwrite || (existingTables[tableName] === undefined)) {
-        const newRecords = newTables[tableName];
-        const recordsData = getRecordsData(newRecords);
-        promises.push(overwriteTableData(tableName, recordsData));
+  // Ensure rate limit counters have been initialized, so that updates to the
+  // counters/tables node will pass type definition checks in the security rules.
+  incrementRateLimitCounters()
+    .then(() => getExistingTables(overwrite))
+    .then(existingTables => {
+      const promises = [];
+      const newTables = JSON.parse(jsonData);
+      for (const tableName in newTables) {
+        if (overwrite || (existingTables[tableName] === undefined)) {
+          const newRecords = newTables[tableName];
+          const recordsData = getRecordsData(newRecords);
+          promises.push(overwriteTableData(tableName, recordsData));
+        }
       }
-    }
-    return Promise.all(promises);
-  }).then(onSuccess, onError);
+      return Promise.all(promises);
+    }).then(onSuccess, onError);
 };
 
 /**
