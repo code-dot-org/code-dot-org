@@ -1,7 +1,7 @@
 import $ from 'jquery';
 var i18n = require('@cdo/locale');
-var dom = require('./dom');
-var utils = require('./utils');
+var dom = require('@cdo/apps/dom');
+var utils = require('@cdo/apps/utils');
 
 /**
  * Creates the debug area controller and configures it to operate on the given

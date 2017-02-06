@@ -1,7 +1,7 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
 var CommandHistory = require('@cdo/apps/CommandHistory');
 var constants = require('@cdo/apps/constants');
-var DebugArea = require('@cdo/apps/DebugArea');
+var DebugArea = require('./DebugArea');
 var dom = require('@cdo/apps/dom');
 var JSInterpreter = require('@cdo/apps/JSInterpreter');
 var Observer = require('@cdo/apps/Observer');
