@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { StatusProgressDot } from './StatusProgressDot';
 import { LevelStatus } from '../../activityUtils';
+import { SignInState } from '../../progressRedux';
 import { ViewType } from '../../stageLockRedux';
 
 export default storybook => {
@@ -19,14 +20,15 @@ export default storybook => {
     .storiesOf('StatusProgressDot', module)
     .addStoryTable([
       {
-        name: 'showProgress is true',
+        name: 'show progress when milestone posts are enabled',
         description: "should be green",
         story: () => (
           <Provider store={store}>
             <StatusProgressDot
               viewAs={ViewType.Student}
               courseOverviewPage={true}
-              showProgress={true}
+              postMilestoneDisabled={false}
+              signInState={SignInState.SignedIn}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -45,14 +47,15 @@ export default storybook => {
       },
 
       {
-        name: 'showProgress is false',
-        description: "should not be green",
+        name: 'milestone posts disabled, signed in',
+        description: "background should be gray",
         story: () => (
           <Provider store={store}>
             <StatusProgressDot
               viewAs={ViewType.Student}
               courseOverviewPage={true}
-              showProgress={false}
+              postMilestoneDisabled={true}
+              signInState={SignInState.SignedIn}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -71,15 +74,42 @@ export default storybook => {
       },
 
       {
-        name: 'perfect puzzle in course overview with bubble colors disabled',
-        description: "should be gray",
+        name: 'milestone posts disabled, signed out',
+        description: "background should be green",
         story: () => (
           <Provider store={store}>
             <StatusProgressDot
               viewAs={ViewType.Student}
               courseOverviewPage={true}
-              showProgress={true}
-              grayProgress={true}
+              postMilestoneDisabled={true}
+              signInState={SignInState.SignedOut}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275],
+                kind: 'puzzle',
+                next: [2, 1],
+                position: 1,
+                previous: [7,15],
+                title: 1,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
+                status: LevelStatus.perfect
+              }}
+            />
+          </Provider>
+        )
+      },
+
+      {
+        name: 'milestone posts disabled, unknown signed in',
+        description: "background should be white",
+        story: () => (
+          <Provider store={store}>
+            <StatusProgressDot
+              viewAs={ViewType.Student}
+              courseOverviewPage={true}
+              postMilestoneDisabled={true}
+              signInState={SignInState.Unknown}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
