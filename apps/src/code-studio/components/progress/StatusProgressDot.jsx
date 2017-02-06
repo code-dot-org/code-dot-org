@@ -7,8 +7,8 @@ import { LevelStatus } from '../../activityUtils';
 import { SignInState } from '../../progressRedux';
 
 /**
- * Wrapper around ProgressDot that own determining the correct status for the
- * dot.
+ * Wrapper around ProgressDot that owns determining the correct status for the
+ * underlying component.
  */
 export const StatusProgressDot = React.createClass({
   propTypes: {
@@ -29,10 +29,9 @@ export const StatusProgressDot = React.createClass({
       )
     ),
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    // if false, display all progress as not tried
-    showProgress: React.PropTypes.bool,
-    // if true, display all progress as gray (dots_disabled)
-    grayProgress: React.PropTypes.bool,
+
+    postMilestoneDisabled: PropTypes.bool.isRequired,
+    signInState: PropTypes.oneOf(Object.values(SignInState)).isRequired
   },
 
   render() {
@@ -42,20 +41,23 @@ export const StatusProgressDot = React.createClass({
       stageId,
       currentSection,
       viewAs,
-      showProgress,
-      grayProgress
+      postMilestoneDisabled,
+      signInState
     } = this.props;
+
+    let status = level.status;
 
     // If we're a teacher viewing as a student, we want to render lockable stages
     // to have a lockable item only if the stage is fully locked.
-    // Do this by providing an overrideLevelStatus, which will take precedence
-    // over level.status
-    let status = level.status;
-
-    const fullyLocked = fullyLockedStageMapping(currentSection);
-    if (stageId !== undefined && viewAs === ViewType.Student && !!fullyLocked[stageId]) {
-      status = LevelStatus.locked;
+    if (stageId !== undefined && viewAs === ViewType.Student) {
+      const fullyLocked = fullyLockedStageMapping(currentSection);
+      if (!!fullyLocked[stageId]) {
+        status = LevelStatus.locked;
+      }
     }
+
+    const showProgress = !postMilestoneDisabled || signInState !== SignInState.Unknown;
+    const grayProgress = postMilestoneDisabled && signInState === SignInState.SignedIn;
 
     if (status !== LevelStatus.locked) {
       // During hoc we're going to disable milestone posts. If disabled, we want
@@ -79,15 +81,11 @@ export const StatusProgressDot = React.createClass({
   }
 });
 
-export default connect(state => {
-  const { postMilestoneDisabled, signInState } = state.progress;
-
-  return {
-    // If milestone posts are disabled, don't show progress (i.e. leave bubbles
-    // white) until we know whether we're signed in or not.
-    showProgress: !postMilestoneDisabled || signInState !== SignInState.Unknown,
-    grayProgress: postMilestoneDisabled && signInState === SignInState.SignedIn,
-    currentSection: state.stageLock.stagesBySectionId[state.sections.selectedSectionId],
-    viewAs: state.stageLock.viewAs
-  };
-})(StatusProgressDot);
+export default connect(state => ({
+  // If milestone posts are disabled, don't show progress (i.e. leave bubbles
+  // white) until we know whether we're signed in or not.
+  postMilestoneDisabled: state.progress.postMilestoneDisabled,
+  signInState: state.progress.signInState,
+  currentSection: state.stageLock.stagesBySectionId[state.sections.selectedSectionId],
+  viewAs: state.stageLock.viewAs
+}))(StatusProgressDot);

@@ -7,6 +7,7 @@ import { StatusProgressDot } from
   '@cdo/apps/code-studio/components/progress/StatusProgressDot';
 import * as stageLockRedux from '@cdo/apps/code-studio/stageLockRedux';
 import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
+import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 
 const ViewType = stageLockRedux.ViewType;
 
@@ -108,8 +109,8 @@ describe('StatusProgressDot', () => {
     });
   });
 
-  describe('progress overrides', () => {
-    it('sets status to not_tried if not showing progress', () => {
+  describe('postMilestone overrides', () => {
+    it('shows as dots_disabled when postMilestone is disabled and signed in', () => {
       const wrapper = shallow(
         <StatusProgressDot
           level={{
@@ -127,38 +128,64 @@ describe('StatusProgressDot', () => {
           courseOverviewPage={true}
           stageId={partiallyLockedStageId}
           viewAs={ViewType.Student}
-          showProgress={false}
-          grayProgress={false}
-          saveAnswersBeforeNavigation={false}
-        />
-      );
-      assert.equal(statusFromWrapper(wrapper), LevelStatus.not_tried);
-    });
-
-    it('sets status to disabled if grayProgress is true', () => {
-      const wrapper = shallow(
-        <StatusProgressDot
-          level={{
-            icon: null,
-            ids: [5275],
-            kind: 'assessment',
-            next: [2, 1],
-            position: 1,
-            previous: false,
-            status: LevelStatus.perfect,
-            title: 1,
-            uid: '5275_0',
-            url: '/test-url'
-          }}
-          courseOverviewPage={true}
-          stageId={partiallyLockedStageId}
-          viewAs={ViewType.Student}
-          showProgress={true}
-          grayProgress={true}
+          postMilestoneDisabled={true}
+          signInState={SignInState.SignedIn}
           saveAnswersBeforeNavigation={false}
         />
       );
       assert.equal(statusFromWrapper(wrapper), LevelStatus.dots_disabled);
+    });
+
+    it('shows progress when postMilestone is disabled but signed out', () => {
+      const wrapper = shallow(
+        <StatusProgressDot
+          level={{
+            icon: null,
+            ids: [5275],
+            kind: 'assessment',
+            next: [2, 1],
+            position: 1,
+            previous: false,
+            status: LevelStatus.perfect,
+            title: 1,
+            uid: '5275_0',
+            url: '/test-url'
+          }}
+          courseOverviewPage={true}
+          stageId={partiallyLockedStageId}
+          viewAs={ViewType.Student}
+          postMilestoneDisabled={true}
+          signInState={SignInState.SignedOut}
+          saveAnswersBeforeNavigation={false}
+        />
+      );
+      assert.equal(statusFromWrapper(wrapper), LevelStatus.perfect);
+    });
+
+    it('when postMilestone is disabled, shows up as not_tried until signin state is known', () => {
+      const wrapper = shallow(
+        <StatusProgressDot
+          level={{
+            icon: null,
+            ids: [5275],
+            kind: 'assessment',
+            next: [2, 1],
+            position: 1,
+            previous: false,
+            status: LevelStatus.perfect,
+            title: 1,
+            uid: '5275_0',
+            url: '/test-url'
+          }}
+          courseOverviewPage={true}
+          stageId={partiallyLockedStageId}
+          viewAs={ViewType.Student}
+          postMilestoneDisabled={true}
+          signInState={SignInState.Unknown}
+          saveAnswersBeforeNavigation={false}
+        />
+      );
+      assert.equal(statusFromWrapper(wrapper), LevelStatus.not_tried);
     });
 
     it('doesnt override status if initial status was locked', () => {
@@ -179,8 +206,8 @@ describe('StatusProgressDot', () => {
           courseOverviewPage={true}
           stageId={partiallyLockedStageId}
           viewAs={ViewType.Student}
-          showProgress={true}
-          grayProgress={true}
+          postMilestoneDisabled={true}
+          signInState={SignInState.SignedIn}
           saveAnswersBeforeNavigation={false}
         />
       );
