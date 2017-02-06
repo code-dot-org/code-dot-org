@@ -19,4 +19,4 @@ module OverrideUpdateTrackedFields
   end
 end
 
-Devise::Models::Trackable.prepend OverrideUpdateTrackedFields
+User.prepend OverrideUpdateTrackedFields

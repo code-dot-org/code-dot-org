@@ -48,6 +48,10 @@ export const BUBBLE_COLORS = {
     color: color.charcoal,
     backgroundColor: color.lightest_gray
   },
+  multi_level: {
+    color: color.charcoal,
+    backgroundColor: color.lightest_gray
+  }
 };
 
 const styles = {
@@ -284,7 +288,8 @@ export default connect((state, ownProps) => {
   const stageId = ownProps.stageId;
   let overrideLevelStatus;
   const { selectedSectionId } = state.sections;
-  const fullyLocked = fullyLockedStageMapping(state.stageLock[selectedSectionId]);
+  const currentSection = state.stageLock.stagesBySectionId[selectedSectionId];
+  const fullyLocked = fullyLockedStageMapping(currentSection);
   if (stageId !== undefined && state.stageLock.viewAs === ViewType.Student &&
       !!fullyLocked[stageId]) {
     overrideLevelStatus = LevelStatus.locked;

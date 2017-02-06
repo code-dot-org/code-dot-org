@@ -105,18 +105,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
-        'no-cache',
-        'no-store',
-        'must-revalidate',
-        'max-age=0']
+      'no-cache',
+      'no-store',
+      'must-revalidate',
+      'max-age=0'
+    ]
     assert_cache_control_match expected_directives, cache_control_header
   end
 
   def assert_caching_enabled(cache_control_header, max_age, proxy_max_age)
     expected_directives = [
-        'public',
-        "max-age=#{max_age}",
-        "s-maxage=#{proxy_max_age}"]
+      'public',
+      "max-age=#{max_age}",
+      "s-maxage=#{proxy_max_age}"
+    ]
     assert_cache_control_match expected_directives, cache_control_header
   end
 

@@ -321,53 +321,53 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       { "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "levelgroup_results" => [
-        { "type" => "text_match",
-          "question" => "test",
-          "results" => [
-          {"result" => "Free response from student 3"},
-          {"result" => "This is a different free response"},
-          {"result" => "Free response from student 5"},
-          {"result" => "This is a free response"},
-          {"result" => "Free response from student 4"}],
-          "answer_texts" => nil},
-        { "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {"answer_index" => 0},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        { "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {"answer_index" => 2},
-            {},
-            {"answer_index" => 1}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        {
-          "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {"answer_index" => 3},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        {
-          "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
+          { "type" => "text_match",
+            "question" => "test",
+            "results" => [
+              {"result" => "Free response from student 3"},
+              {"result" => "This is a different free response"},
+              {"result" => "Free response from student 5"},
+              {"result" => "This is a free response"},
+              {"result" => "Free response from student 4"}],
+            "answer_texts" => nil},
+          { "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {"answer_index" => 0},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          { "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {"answer_index" => 2},
+              {},
+              {"answer_index" => 1}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          {
+            "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {"answer_index" => 3},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          {
+            "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
         ]
       }
     ]
@@ -397,7 +397,7 @@ class ApiControllerTest < ActionController::TestCase
         level_multi_correct
         level_multi_incorrect
         level_multi_unattempted)}
-      ]
+    ]
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
@@ -431,53 +431,53 @@ class ApiControllerTest < ActionController::TestCase
     expected_response = [
       { "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
         "levelgroup_results" => [
-        { "type" => "text_match",
-          "question" => "test",
-          "results" => [
-          {"result" => "Free response from student 5"},
-          {"result" => "Free response from student 4"},
-          {"result" => "Free response from student 7"},
-          {"result" => "Free response from student 3"},
-          {"result" => "Free response from student 6"}],
-          "answer_texts" => nil},
-        { "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        { "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        {
-          "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
-        {
-          "type" => "multi",
-          "question" => "question text",
-          "results" => [
-            {},
-            {},
-            {},
-            {},
-            {}],
-          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
+          { "type" => "text_match",
+            "question" => "test",
+            "results" => [
+              {"result" => "Free response from student 5"},
+              {"result" => "Free response from student 4"},
+              {"result" => "Free response from student 7"},
+              {"result" => "Free response from student 3"},
+              {"result" => "Free response from student 6"}],
+            "answer_texts" => nil},
+          { "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          { "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          {
+            "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+          {
+            "type" => "multi",
+            "question" => "question text",
+            "results" => [
+              {},
+              {},
+              {},
+              {},
+              {}],
+            "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
         ]
       }
     ]
