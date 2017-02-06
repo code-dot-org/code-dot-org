@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 
 import { stageProgressShape } from './types';
-import LockableProgressDot from './LockableProgressDot.jsx';
+import StatusProgressDot from './StatusProgressDot.jsx';
 import color from "../../../util/color";
 
 const styles = {
@@ -32,7 +32,7 @@ const StageProgress = React.createClass({
 
   render() {
     const progressDots = this.props.levels.map((level, index) =>
-      <LockableProgressDot
+      <StatusProgressDot
         key={index}
         stageId={this.props.stageId}
         level={level}
