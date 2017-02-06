@@ -415,7 +415,7 @@ function getExistingTables(overwrite) {
   if (overwrite) {
     return Promise.resolve({});
   }
-  const tablesRef = getDatabase().child('storage/tables');
+  const tablesRef = getDatabase().child('counters/tables');
   return tablesRef.once('value').then(snapshot => snapshot.val() || {});
 }
 
