@@ -56,7 +56,12 @@ var CONFIGS = {
   },
 
   collector: {
-    obstacleIdle: 'obstacle.png',
+    wallPegmanAnimation: 'wall_avatar.png',
+    movePegmanAnimation: 'move_avatar.png',
+    movePegmanAnimationSpeedScale: 1,
+    movePegmanAnimationFrameNumber: 8,
+    pegmanHeight: 50,
+    pegmanWidth: 50,
 
     goal: 'gold.png',
     corners: 'corners.png',
@@ -65,7 +70,6 @@ var CONFIGS = {
     transparentTileEnding: true,
     nonDisappearingPegmanHittingObstacle: true,
     background: 'background.png',
-    pegmanYOffset: -8,
     danceOnLoad: true
   },
 
