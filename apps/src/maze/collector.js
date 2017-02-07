@@ -202,45 +202,53 @@ export default class Collector extends Subtype {
   }
 
   drawCorners(svg, row, col, tileId) {
-    const corners = [
-      [-1, -1],
-      [-1, 1],
-      [1, -1],
-      [1, 1]
-    ];
+    const corners = {
+      'NW': [-1, -1],
+      'NE': [-1, 1],
+      'SW': [1, -1],
+      'SE': [1, 1]
+    };
 
     const SVG_NS = 'http://www.w3.org/2000/svg';
     const SQUARE_SIZE = 50;
 
-    let pegmanElement = document.getElementsByClassName('pegman-location')[0];
+    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
 
     if (!this.isWallOrOutOfBounds_(col, row)) {
-      corners.forEach((corner, i) => {
-        if (!this.isWallOrOutOfBounds_(col + corner[0], row) &&
-            !this.isWallOrOutOfBounds_(col, row + corner[1]) &&
-            this.isWallOrOutOfBounds_(col + corner[0], row + corner[1])) {
-          const tileClip = document.createElementNS(SVG_NS, 'clipPath');
-          tileClip.setAttribute('id', `tileCorner${i}ClipPath${tileId}`);
-          const tileClipRect = document.createElementNS(SVG_NS, 'rect');
-          tileClipRect.setAttribute('width', SQUARE_SIZE / 2);
-          tileClipRect.setAttribute('height', SQUARE_SIZE / 2);
+      Object.keys(corners).filter(corner => {
+        // we need a corner if there is a wall in the corner direction and open
+        // space in the two cardinal directions "surrounding" the corner
+        const direction = corners[corner];
+        const needsCorner = !this.isWallOrOutOfBounds_(col + direction[0], row) &&
+            !this.isWallOrOutOfBounds_(col, row + direction[1]) &&
+            this.isWallOrOutOfBounds_(col + direction[0], row + direction[1]);
 
-          tileClipRect.setAttribute('x', col * SQUARE_SIZE + (corner[0] + 1) * SQUARE_SIZE / 4);
-          tileClipRect.setAttribute('y', row * SQUARE_SIZE + (corner[1] + 1) * SQUARE_SIZE / 4);
-          tileClip.appendChild(tileClipRect);
-          svg.appendChild(tileClip);
+        return needsCorner;
+      }).forEach(corner => {
+        const tileClip = document.createElementNS(SVG_NS, 'clipPath');
+        tileClip.setAttribute('id', `tileCorner${corner}ClipPath${tileId}`);
+        const tileClipRect = document.createElementNS(SVG_NS, 'rect');
+        tileClipRect.setAttribute('width', SQUARE_SIZE / 2);
+        tileClipRect.setAttribute('height', SQUARE_SIZE / 2);
 
-          // Create image.
-          let img = document.createElementNS(SVG_NS, 'image');
-          img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', this.skin_.corners);
-          img.setAttribute('height', SQUARE_SIZE);
-          img.setAttribute('width', SQUARE_SIZE);
-          img.setAttribute('x', SQUARE_SIZE * col);
-          img.setAttribute('y', SQUARE_SIZE * row);
-          img.setAttribute('id', `tileCorner${i}${tileId}`);
-          img.setAttribute('clip-path', 'url(#' + `tileCorner${i}ClipPath${tileId}` + ')');
-          svg.insertBefore(img, pegmanElement);
-        }
+        // clip the asest to only the quadrant we care about
+        const direction = corners[corner];
+        tileClipRect.setAttribute('x', col * SQUARE_SIZE + (direction[0] + 1) * SQUARE_SIZE / 4);
+        tileClipRect.setAttribute('y', row * SQUARE_SIZE + (direction[1] + 1) * SQUARE_SIZE / 4);
+        tileClip.appendChild(tileClipRect);
+        svg.appendChild(tileClip);
+
+        // Create image.
+        const img = document.createElementNS(SVG_NS, 'image');
+        img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', this.skin_.corners);
+        img.setAttribute('height', SQUARE_SIZE);
+        img.setAttribute('width', SQUARE_SIZE);
+        img.setAttribute('x', SQUARE_SIZE * col);
+        img.setAttribute('y', SQUARE_SIZE * row);
+        img.setAttribute('id', `tileCorner${corner}${tileId}`);
+        img.setAttribute('clip-path', `url(#${tileClip.id})`);
+        svg.insertBefore(img, pegmanElement);
+        console.log(tileClip.id);
       });
     }
   }
