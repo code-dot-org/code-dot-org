@@ -57,10 +57,10 @@ class ProfessionalDevelopmentWorkshopSignup
 
   def self.teacher_roles
     [
-    'Classroom teacher',
-    'Computer teacher',
-    'Librarian',
-    'Administrator',
+      'Classroom teacher',
+      'Computer teacher',
+      'Librarian',
+      'Administrator',
     ]
   end
 

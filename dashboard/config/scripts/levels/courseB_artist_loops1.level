@@ -31,8 +31,8 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
