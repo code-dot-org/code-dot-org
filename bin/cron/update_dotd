@@ -28,9 +28,7 @@ end
 
 def main
   # Get the current developers room topic.
-  slack_api_url = "https://slack.com/api/channels.info?token=#{SLACK_TOKEN}&channel=#{CHANNEL_ID}"
-  channel_info = open(slack_api_url).read
-  current_topic = JSON.parse(channel_info)['channel']['topic']['value']
+  current_topic = Slack.get_topic('developers')
 
   # Get the primary and secondary site on-calls from PagerDuty.
   on_call = `curl --silent -H "Content-type: application/json" -H "Authorization: Token token=#{PAGERDUTY_TOKEN}" -X GET -G "https://codeorg.pagerduty.com/api/v1/users/on_call"`
@@ -52,7 +50,7 @@ def main
 
   # Set the new developers room topic
   new_topic = current_topic.sub(/^.+?;/, "DOTD: @#{primary_dotd_user};")
-  Slack.update('developers', new_topic)
+  Slack.update_topic('developers', new_topic)
 end
 
 main if only_one_running?(__FILE__)
