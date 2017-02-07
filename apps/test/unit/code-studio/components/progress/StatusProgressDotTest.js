@@ -21,6 +21,28 @@ describe('StatusProgressDot', () => {
   const fullyLockedStageId = 123;
   const partiallyLockedStageId = 321;
 
+  // Some basic properties for our component. Some of these will be overriden
+  // in some tests
+  const baseProps = {
+    level: {
+      icon: null,
+      ids: [5275],
+      kind: 'assessment',
+      next: [2, 1],
+      position: 1,
+      previous: false,
+      status: LevelStatus.perfect,
+      title: 1,
+      uid: '5275_0',
+      url: '/test-url'
+    },
+    courseOverviewPage: true,
+    postMilestoneDisabled: false,
+    signInState: SignInState.SignedIn,
+    saveAnswersBeforeNavigation: false
+  };
+  const level = baseProps.level; // TODO - get rid of
+
   before(() => {
     sinon.stub(stageLockRedux, 'fullyLockedStageMapping', () => ({
       [fullyLockedStageId]: true,
@@ -33,184 +55,89 @@ describe('StatusProgressDot', () => {
 
   describe('handling lockable assessments', () => {
     it('overrides status to be locked when viewing fully locked section as student', () => {
-      const wrapper = shallow(
-        <StatusProgressDot
-          level={{
-            icon: null,
-            ids: [5275],
-            kind: 'assessment',
-            next: [2, 1],
-            position: 1,
-            previous: false,
-            status: LevelStatus.perfect,
-            title: 1,
-            uid: '5275_0',
-            url: '/test-url'
-          }}
-          courseOverviewPage={true}
-          stageId={fullyLockedStageId}
-          viewAs={ViewType.Student}
-          showProgress={true}
-          saveAnswersBeforeNavigation={false}
-        />
-      );
+      const props = {
+        ...baseProps,
+        stageId: fullyLockedStageId,
+        viewAs: ViewType.Student
+      };
+
+      const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.locked);
     });
 
     it('does not override lock status when viewing as teacher', () => {
-      const wrapper = shallow(
-        <StatusProgressDot
-          level={{
-            icon: null,
-            ids: [5275],
-            kind: 'assessment',
-            next: [2, 1],
-            position: 1,
-            previous: false,
-            status: LevelStatus.perfect,
-            title: 1,
-            uid: '5275_0',
-            url: '/test-url'
-          }}
-          courseOverviewPage={true}
-          stageId={fullyLockedStageId}
-          viewAs={ViewType.Teacher}
-          showProgress={true}
-          saveAnswersBeforeNavigation={false}
-        />
-      );
+      const props = {
+        ...baseProps,
+        stageId: fullyLockedStageId,
+        viewAs: ViewType.Teacher
+      };
+      const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.perfect);
     });
 
     it('does not override lock status when stage is not fully locked', () => {
-      const wrapper = shallow(
-        <StatusProgressDot
-          level={{
-            icon: null,
-            ids: [5275],
-            kind: 'assessment',
-            next: [2, 1],
-            position: 1,
-            previous: false,
-            status: LevelStatus.perfect,
-            title: 1,
-            uid: '5275_0',
-            url: '/test-url'
-          }}
-          courseOverviewPage={true}
-          stageId={partiallyLockedStageId}
-          viewAs={ViewType.Student}
-          showProgress={true}
-          saveAnswersBeforeNavigation={false}
-        />
-      );
-
+      const props = {
+        ...baseProps,
+        stageId: partiallyLockedStageId,
+        viewAs: ViewType.Student
+      };
+      const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.perfect);
     });
   });
 
   describe('postMilestone overrides', () => {
     it('shows as dots_disabled when postMilestone is disabled and signed in', () => {
-      const wrapper = shallow(
-        <StatusProgressDot
-          level={{
-            icon: null,
-            ids: [5275],
-            kind: 'assessment',
-            next: [2, 1],
-            position: 1,
-            previous: false,
-            status: LevelStatus.perfect,
-            title: 1,
-            uid: '5275_0',
-            url: '/test-url'
-          }}
-          courseOverviewPage={true}
-          stageId={partiallyLockedStageId}
-          viewAs={ViewType.Student}
-          postMilestoneDisabled={true}
-          signInState={SignInState.SignedIn}
-          saveAnswersBeforeNavigation={false}
-        />
-      );
+      const props = {
+        ...baseProps,
+        stageId: partiallyLockedStageId,
+        viewAs: ViewType.Student,
+        postMilestoneDisabled: true,
+      };
+
+      const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.dots_disabled);
     });
 
     it('shows progress when postMilestone is disabled but signed out', () => {
-      const wrapper = shallow(
-        <StatusProgressDot
-          level={{
-            icon: null,
-            ids: [5275],
-            kind: 'assessment',
-            next: [2, 1],
-            position: 1,
-            previous: false,
-            status: LevelStatus.perfect,
-            title: 1,
-            uid: '5275_0',
-            url: '/test-url'
-          }}
-          courseOverviewPage={true}
-          stageId={partiallyLockedStageId}
-          viewAs={ViewType.Student}
-          postMilestoneDisabled={true}
-          signInState={SignInState.SignedOut}
-          saveAnswersBeforeNavigation={false}
-        />
-      );
+      const props = {
+        ...baseProps,
+        stageId: partiallyLockedStageId,
+        viewAs: ViewType.Student,
+        postMilestoneDisabled: true,
+        signInState: SignInState.SignedOut
+      };
+
+      const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.perfect);
     });
 
     it('when postMilestone is disabled, shows up as not_tried until signin state is known', () => {
-      const wrapper = shallow(
-        <StatusProgressDot
-          level={{
-            icon: null,
-            ids: [5275],
-            kind: 'assessment',
-            next: [2, 1],
-            position: 1,
-            previous: false,
-            status: LevelStatus.perfect,
-            title: 1,
-            uid: '5275_0',
-            url: '/test-url'
-          }}
-          courseOverviewPage={true}
-          stageId={partiallyLockedStageId}
-          viewAs={ViewType.Student}
-          postMilestoneDisabled={true}
-          signInState={SignInState.Unknown}
-          saveAnswersBeforeNavigation={false}
-        />
-      );
+      const props = {
+        ...baseProps,
+        stageId: partiallyLockedStageId,
+        viewAs: ViewType.Student,
+        postMilestoneDisabled: true,
+        signInState: SignInState.Unknown
+      };
+
+      const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.not_tried);
     });
 
     it('doesnt override status if initial status was locked', () => {
-      const wrapper = shallow(
-        <StatusProgressDot
-          level={{
-            icon: null,
-            ids: [5275],
-            kind: 'assessment',
-            next: [2, 1],
-            position: 1,
-            previous: false,
-            status: LevelStatus.locked,
-            title: 1,
-            uid: '5275_0',
-            url: '/test-url'
-          }}
-          courseOverviewPage={true}
-          stageId={partiallyLockedStageId}
-          viewAs={ViewType.Student}
-          postMilestoneDisabled={true}
-          signInState={SignInState.SignedIn}
-          saveAnswersBeforeNavigation={false}
-        />
-      );
+      const props = {
+        ...baseProps,
+        level: {
+          ...baseProps.level,
+          status: LevelStatus.locked
+        },
+        stageId: partiallyLockedStageId,
+        viewAs: ViewType.Student,
+        postMilestoneDisabled: true
+      };
+
+      const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.locked);
     });
   });
