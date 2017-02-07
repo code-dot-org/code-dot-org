@@ -5,7 +5,8 @@ import sinon from 'sinon';
 import {
   blocks,
   getBoardEventDropdownForParam,
-  MAKER_CATEGORY
+  MAKER_CATEGORY,
+  stringifySong
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 import * as api from '@cdo/apps/lib/kits/maker/api';
 import commands from '@cdo/apps/lib/kits/maker/commands';
@@ -87,6 +88,18 @@ describe('getBoardEventDropdownForParam', () => {
         ]);
       });
     });
+  });
+});
+
+describe('stringifySong', function () {
+  it('formats note arrays indented with one note per line', function () {
+    expect(stringifySong([['A1', 1/4], ['B2', 1/4], ['C3', 1/2]])).to.equal(
+      '[\n' +
+      '  ["A1",0.25],\n' +
+      '  ["B2",0.25],\n' +
+      '  ["C3",0.5]\n' +
+      ']'
+    )
   });
 });
 
