@@ -632,8 +632,6 @@ exports.getFirstParam = function (methodName, block, editor) {
  * Gets the second parameter of the given function name, given either that
  * function's DropletBlock or an AceEditor instance with its current cursor
  * set to after the method.
- *
- *
  * @param {string} methodName name of method to get first param of
  * @param {DropletBlock} block Droplet block, or undefined if in text mode
  * @param {AceEditor} editor
