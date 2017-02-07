@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-02-03T19:03:45.000Z",
+  "created_at": "2017-02-07T20:06:58.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -79,17 +79,13 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Create Your Own Lists\r\n\r\n**Write code:** to create the following lists:\r\n\r\n* The numbers from 1 to 10\r\n* A list of the names of 5 different shapes\r\n* The names of the months of the year",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "hide_share_and_remix": "false"
+    "markdown_instructions": "# Accessing Items in a List\r\n\r\n**Starter Code:** There is a list of days of the week provided as well as well as a console.log statement to access the spot that holds \"Friday\" in the list. \r\n\r\n**Do This:** Can you add three more console.log statements that access the spots that hold:\r\n\r\n* Thursday\r\n* Monday\r\n* Sunday",
+    "start_blocks": "var dayOfWeek = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"];\r\nconsole.log(daysOfWeek[4]);",
+    "hide_share_and_remix": "false",
+    "contained_level_names": null
   },
   "published": true,
-  "notes": "",
-  "level_concept_difficulty": {
-  }
+  "notes": ""
 }]]></config>
   <blocks/>
 </Applab>
