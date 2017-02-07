@@ -304,6 +304,49 @@ describe('progressReduxTest', () => {
       const stateDetail = reducer(initialState, setIsSummaryView(false));
       assert.strictEqual(stateDetail.isSummaryView, false);
     });
+
+    describe('mergeProgress for locked levels', () => {
+      // Create a startState where we have only one stage, which is an assessment
+      // Most of the fields were stripped for brevity.
+      const singleStageState = _.cloneDeep(initialState);
+      singleStageState.stages = [{
+        lockable: true,
+        levels: [
+          {
+            ids: [5275],
+            uid: "5275_0"
+          },
+          {
+            ids: [5275],
+            uid: "5275_1",
+          }
+        ]
+      }];
+
+      it('does not set status to locked when not locked', () => {
+        const action = mergeProgress({
+          "5275": TestResults.UNSUBMITTED_ATTEMPT,
+          "5275_0": TestResults.UNSUBMITTED_ATTEMPT,
+          "5275_1": undefined
+        });
+        const state = reducer(singleStageState, action);
+        const newLevels = state.stages[0].levels;
+
+        assert.strictEqual(newLevels[0].status, LevelStatus.attempted);
+        assert.strictEqual(newLevels[1].status, LevelStatus.not_tried);
+      });
+
+      it('does set status to locked when locked', () => {
+        const action = mergeProgress({
+          "5275": TestResults.LOCKED_RESULT,
+        });
+        const state = reducer(singleStageState, action);
+        const newLevels = state.stages[0].levels;
+
+        assert.strictEqual(newLevels[0].status, LevelStatus.locked);
+        assert.strictEqual(newLevels[1].status, LevelStatus.locked);
+      });
+    });
   });
 
   describe('with peer reviews', () => {
