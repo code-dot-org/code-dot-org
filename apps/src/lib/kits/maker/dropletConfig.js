@@ -17,7 +17,7 @@ const pixelType = '[ColorLed].';
 const colorPixelVariables = _.range(N_COLOR_LEDS).map(index => `colorLeds[${index}]`);
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
-function stringifySong(song) {
+export function stringifySong(song) {
   return '[\n' +
       song.map(note => `  ${JSON.stringify(note)}`).join(',\n') +
       '\n]';
