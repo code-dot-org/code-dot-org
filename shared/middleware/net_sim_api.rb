@@ -443,11 +443,11 @@ class NetSimApi < Sinatra::Base
   # @param [Array<Integer>] node_ids
   def delete_wires_for_nodes(shard_id, node_ids)
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
-    wires = wire_table.to_a.select {|wire|
-      node_ids.any? { |node_id|
+    wires = wire_table.to_a.select do |wire|
+      node_ids.any? do |node_id|
         wire['localNodeID'] == node_id || wire['remoteNodeID'] == node_id
-      }
-    }
+      end
+    end
     wire_ids = wires.map {|wire| wire['id']}
     wire_table.delete(wire_ids) unless wire_ids.empty?
   end
@@ -459,9 +459,9 @@ class NetSimApi < Sinatra::Base
   # @param [Array<Integer>] node_ids
   def delete_messages_for_nodes(shard_id, node_ids)
     message_table = get_table(shard_id, TABLE_NAMES[:message])
-    messages = message_table.to_a.select {|message|
+    messages = message_table.to_a.select do |message|
       node_ids.member? message['simulatedBy']
-    }
+    end
     message_ids = messages.map {|message| message['id']}
     message_table.delete(message_ids) unless message_ids.empty?
   end
