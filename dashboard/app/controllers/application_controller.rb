@@ -100,7 +100,7 @@ class ApplicationController < ActionController::Base
 
   PERMITTED_USER_FIELDS = [:name, :username, :email, :password, :password_confirmation,
                            :locale, :gender, :login,
-                           :remember_me, :age, :school, :full_address, :user_type,
+                           :remember_me, :age, :full_address, :user_type,
                            :hashed_email, :terms_of_service_version]
 
   def configure_permitted_parameters
