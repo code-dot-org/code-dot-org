@@ -21,9 +21,6 @@ Computer Science Principles
 
 [/solid-block-header]
 
-<!-- <iframe width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
-<br /> -->
-
 <% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
 <% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>'Computer Science Principles @codeorg'} %>
 
