@@ -311,4 +311,32 @@ class SchoolInfoTest < ActiveSupport::TestCase
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end
+
+  # Validation-suppression: this is required so that dashboard signups can make all school info
+  # fields optional while we A/B test the presence of that field on the signup form
+
+  test 'non-US without name succeeds when validation is suppressed' do
+    school_info = build :school_info_non_us, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test 'non-US without address succeeds when validation is suppressed' do
+    school_info = build :school_info_non_us, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test 'US private without state succeeds when validation is suppressed' do
+    school_info = build :school_info_us_private, state: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test 'US private without zip succeeds when validation is suppressed' do
+    school_info = build :school_info_us_private, zip: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    assert school_info.valid?, school_info.errors.full_messages
+  end
+
+  test 'By default, validation type is set to full' do
+    school_info = build :school_info_us_public
+    assert school_info.validation_type == SchoolInfo::VALIDATION_FULL
+  end
 end

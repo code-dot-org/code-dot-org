@@ -16,6 +16,7 @@
 #  full_address          :string(255)
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  validation_type       :string(255)      default("full")
 #
 # Indexes
 #
@@ -32,6 +33,11 @@ class SchoolInfo < ActiveRecord::Base
   ]
 
   SCHOOL_STATE_OTHER = "other"
+
+  VALIDATION_TYPES = [
+    VALIDATION_FULL = 'full',
+    VALIDATION_NONE = 'none'
+  ]
 
   belongs_to :school_district
   belongs_to :school
@@ -68,6 +74,10 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_with_country
   validate :validate_without_country
 
+  def should_validate?
+    validation_type != VALIDATION_NONE
+  end
+
   # Validate records in the newer data format (see school_info_test.rb for details).
   # The following states are valid (from the spec at https://goo.gl/Gw57rL):
   #
@@ -83,11 +93,12 @@ class SchoolInfo < ActiveRecord::Base
   #
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
-    return unless country
+    return unless country && should_validate?
     country == 'US' ? validate_us : validate_non_us
   end
 
   def validate_non_us
+    return unless should_validate?
     errors.add(:school_type, "is required") unless school_type
     errors.add(:school_name, "is required") unless school_name
     errors.add(:full_address, "is required") unless full_address
