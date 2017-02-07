@@ -596,8 +596,10 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      'CSD: Accessing List Items': {}
       'CSD: Creating Variables In App Lab': {}
       'CSD: Dropdown & Conditionals': {}
+      'CSD: List Length': {}
       'CSD: Lists': {}
       'CSD: Review Events': {}
       'CSD: colorLed list': {}

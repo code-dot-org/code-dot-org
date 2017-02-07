@@ -42,6 +42,7 @@ data.each_slice(5_000) do |slice|
     puts "    RESCUED ActiveRecord::RecordNotUnique (slice #{slice_count})."
     retry
   end
+  slice_count += 1
 end
 
 puts "SAVED DATA TO DB."
