@@ -407,6 +407,8 @@ FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
 };
 
 /**
+ * Returns a list of existing tables. The counters/tables node is the source of truth for
+ * whether a table exists. See fileoverview in firebaseCounters.js for more details.
  * @param {boolean} overwrite
  * @returns {Promise.<Object>} Promise containing a map with existing table names as keys,
  *   or an empty map if overwrite is true.

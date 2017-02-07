@@ -558,6 +558,12 @@ describe('FirebaseStorage', () => {
         }
       }
     };
+    const EXISTING_COUNTER_DATA = {
+      cities: {
+        lastId: 2,
+        rowCount: 2
+      }
+    };
     const NEW_TABLE_DATA_JSON = `{
       "cities": [
         {"city": "Seattle", "state": "WA"},
@@ -592,6 +598,7 @@ describe('FirebaseStorage', () => {
     it('does not overwrite existing data when overwrite is false', done => {
       const overwrite = false;
       getDatabase().child(`storage/tables`).set(EXISTING_TABLE_DATA)
+        .then(() => getDatabase().child('counters/tables').set(EXISTING_COUNTER_DATA))
         .then(() => {
           FirebaseStorage.populateTable(
             NEW_TABLE_DATA_JSON,
@@ -602,9 +609,26 @@ describe('FirebaseStorage', () => {
         });
     });
 
+    // Some users got into a bad state where populateTables wrote storage/tables,
+    // but failed to write counters/tables due to a security rule violation. Make
+    // sure we overwrite tables for users in that state.
+    it('does overwrite existing data when counters/tables node is empty', done => {
+      const overwrite = false;
+      getDatabase().child(`storage/tables`).set(EXISTING_TABLE_DATA)
+        .then(() => {
+          FirebaseStorage.populateTable(
+            NEW_TABLE_DATA_JSON,
+            overwrite,
+            () => verifyTable(NEW_TABLE_DATA).then(done),
+            error => {throw error;});
+
+        });
+    });
+
     it('does overwrite existing data when overwrite is true', done => {
       const overwrite = true;
       getDatabase().child(`storage/tables`).set(EXISTING_TABLE_DATA)
+        .then(() => getDatabase().child('counters/tables').set(EXISTING_COUNTER_DATA))
         .then(() => {
           FirebaseStorage.populateTable(
             NEW_TABLE_DATA_JSON,
