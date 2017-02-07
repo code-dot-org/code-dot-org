@@ -548,12 +548,12 @@ class Script < ActiveRecord::Base
         assessment: assessment
       }
       script_level_attributes[:properties] = properties.to_json if properties
-      script_level = script.script_levels.detect{|sl|
+      script_level = script.script_levels.detect do |sl|
         script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
           sl.levels == levels
-      } || ScriptLevel.create(script_level_attributes) {|sl|
+      end || ScriptLevel.create(script_level_attributes) do |sl|
         sl.levels = levels
-      }
+      end
       # Set/create Stage containing custom ScriptLevel
       if stage_name
         stage = script.stages.detect{|s| s.name == stage_name} ||
