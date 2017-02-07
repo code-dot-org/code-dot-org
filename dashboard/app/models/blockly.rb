@@ -75,9 +75,9 @@ class Blockly < Level
 
   before_save :update_ideal_level_source
 
-  before_validation {
+  before_validation do
     self.scrollbars = nil if scrollbars == 'nil'
-  }
+  end
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
@@ -118,9 +118,9 @@ class Blockly < Level
     properties["contained_level_names"] = contained_level_names
   end
 
-  before_validation {
+  before_validation do
     xml_blocks.each {|attr| normalize_xml attr}
-  }
+  end
 
   XML_OPTIONS = Nokogiri::XML::Node::SaveOptions::NO_DECLARATION
 
@@ -315,9 +315,9 @@ class Blockly < Level
         return loc_val
       end
     else
-      val = [game.app, game.name].map { |name|
+      val = [game.app, game.name].map do |name|
         I18n.t("data.level.instructions").try(:[], "#{name}_#{level_num}".to_sym)
-      }.compact.first
+      end.compact.first
       return val unless val.nil?
     end
   end

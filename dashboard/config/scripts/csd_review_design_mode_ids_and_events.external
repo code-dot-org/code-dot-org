@@ -4,12 +4,12 @@ markdown <<MARKDOWN
 # Review: Design Mode and IDs
 
 ## Design Mode
-App Lab let's you easily add UI Elements to your app, and then add code to respond when a user interacts with those elements. 
+App Lab lets you easily add UI Elements to your app, and then add code to respond when a user interacts with those elements.
 
 <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 
 <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
-You'll see a new set of switches above the app area that let you flip back and forth between "Design Mode" and Code Mode".</p>
+You'll see a set of switches above the app area that let you flip back and forth between "Design Mode" and Code Mode".</p>
 
 <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Adding an element is as easy as dragging and dropping it into the app where ever you want. Once it's on the app screen you can reposition it, resize it and change lots of other properties about it </p>
 
