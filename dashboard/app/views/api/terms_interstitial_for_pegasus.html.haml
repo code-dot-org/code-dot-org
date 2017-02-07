@@ -33,5 +33,5 @@
                 = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
             .form-group
               = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true
-            = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+            -# = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
         .clear
