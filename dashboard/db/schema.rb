@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170201010203) do
+ActiveRecord::Schema.define(version: 20170202214905) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -923,7 +923,6 @@ ActiveRecord::Schema.define(version: 20170201010203) do
     t.string   "locale",                     limit: 10,    default: "en-US", null: false
     t.date     "birthday"
     t.string   "user_type",                  limit: 16
-    t.string   "school"
     t.string   "full_address",               limit: 1024
     t.integer  "total_lines",                              default: 0,       null: false
     t.boolean  "prize_earned",                             default: false
