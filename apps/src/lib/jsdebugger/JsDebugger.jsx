@@ -3,8 +3,9 @@
  * so this can only be used in cases where we have a redux store.
  */
 
-var React = require('react');
-var connect = require('react-redux').connect;
+import React from 'react';
+import {connect} from 'react-redux';
+import $ from 'jquery';
 
 var i18n = require('@cdo/locale');
 import Radium from 'radium';
@@ -164,8 +165,8 @@ var UnconnectedJsDebugger = Radium(React.createClass({
     });
   },
 
-  isShut() {
-    return !this.state.open;
+  isOpen() {
+    return this.state.open;
   },
 
   slideShut() {
@@ -217,7 +218,7 @@ var UnconnectedJsDebugger = Radium(React.createClass({
     if (!this.state.open && this.state.transitionType !== 'closing') {
       openStyle.display = 'none';
     }
-    const height = this.state.open ? this.state.openedHeight : this.state.closedHeight;
+    const height = (this.state.open ? this.state.openedHeight : this.state.closedHeight) || this.props.style.height;
 
     const showWatchPane = this.props.debugWatch && !this.state.watchersHidden;
     return (
@@ -240,7 +241,6 @@ var UnconnectedJsDebugger = Radium(React.createClass({
             {i18n.debugConsoleHeader()}
           </span>
           <i
-            id="show-hide-debug-icon"
             className={`fa ${this.state.open ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up'}`}
             style={styles.showHideIcon}
             onClick={this.slideToggle}

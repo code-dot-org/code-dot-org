@@ -427,7 +427,7 @@ JsDebuggerUi.prototype.onMouseMoveDebugResizeBar = function (event) {
       Math.min(MAX_DEBUG_AREA_HEIGHT,
           (window.innerHeight - event.pageY) - offset));
 
-  if (this.reactComponent_.isShut()) {
+  if (!this.reactComponent_.isOpen()) {
     this.reactComponent_.slideOpen();
   }
 
