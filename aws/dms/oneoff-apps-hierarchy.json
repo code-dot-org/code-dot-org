@@ -19,16 +19,6 @@
         "table-name": "storage_apps"
       },
       "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "3",
-      "rule-name": "3",
-      "object-locator": {
-        "schema-name": "pegasus",
-        "table-name": "app_properties"
-      },
-      "rule-action": "include"
     }
   ]
 }
