@@ -150,7 +150,7 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 #### <a name="materials"></a>What materials do I need for this course?
 **Required Materials:**
 
-This course requires students have access to computers with a modern web browser. For more details, check out Code.org's techonology requirements, here. 
+This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, here. 
 
 Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. In addition to handouts, you will need the following: 
 
@@ -160,7 +160,7 @@ Many lessons have handouts that are designed to guide students through activitie
 
 The following items are called for in lessons, but alternatives are offered below:
 
-- (Unit 3, Lesson 1) A handful of legos per 2-3 students. Alternatives: post-it notes, contstruction paper
+- (Unit 3, Lesson 1) A handful of legos per 2-3 students. Alternatives: post-it notes, construction paper
 - (Unit 3, Lesson 2 - 3) Playing cards (1 deck per 6 students). Alternatives: write numbers of post-it notes. 
 - (Unit 4, Lesson 8) Clear dixie cups with beans. Alternatives: Any clear container (ziplock bag, empty water bottle, etc) with any small item (beads, raisins, coffee beans, etc) 
 

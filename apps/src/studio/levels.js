@@ -3336,6 +3336,10 @@ levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items,  {
   ]
 });
 
+// exactly clone this level so we can insert it into scripts without a
+// preceding video.
+levels.hoc2015_blockly_7_no_video = extend(levels.hoc2015_blockly_7);
+
 levels.hoc2015_blockly_8 = extend(levels.js_hoc2015_event_four_items,  {
   editCode: false,
   msgStringOverrides: {

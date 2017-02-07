@@ -268,25 +268,25 @@ class PeerReviewTest < ActiveSupport::TestCase
     #Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
     expected_reviews = [
       {
-          id: first_review.id,
-          status: 'perfect',
-          name: I18n.t('peer_review.link_to_submitted_review'),
-          result: ActivityConstants::BEST_PASS_RESULT,
-          locked: false
+        id: first_review.id,
+        status: 'perfect',
+        name: I18n.t('peer_review.link_to_submitted_review'),
+        result: ActivityConstants::BEST_PASS_RESULT,
+        locked: false
       },
       {
-          id: second_review.id,
-          status: 'not_started',
-          name: I18n.t('peer_review.review_in_progress'),
-          result: ActivityConstants::UNSUBMITTED_RESULT,
-          locked: false
+        id: second_review.id,
+        status: 'not_started',
+        name: I18n.t('peer_review.review_in_progress'),
+        result: ActivityConstants::UNSUBMITTED_RESULT,
+        locked: false
       },
       {
-          status: 'not_started',
-          name: 'Review a new submission',
-          result: ActivityConstants::UNSUBMITTED_RESULT,
-          icon: '',
-          locked: false
+        status: 'not_started',
+        name: 'Review a new submission',
+        result: ActivityConstants::UNSUBMITTED_RESULT,
+        icon: '',
+        locked: false
       }
     ]
 
