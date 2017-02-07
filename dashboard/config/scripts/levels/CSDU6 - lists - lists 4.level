@@ -79,10 +79,11 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "start_blocks": "var numbersList = [40, 2, 18, 100, 30, 48, 15, 62];\r\nnumbersList[1];\r\nnumbersList[0];\r\nnumbersList[4];\r\nnumbersList[100];",
+    "start_blocks": "var numbersList = [40, 2, 18, 100, 30, 48, 15, 62];\r\nconsole.log(numbersList[1]);\r\nconsole.log(numbersList[0]);\r\nconsole.log(numbersList[4]);\r\nconsole.log(numbersList[100]);",
     "contained_level_names": [
       "CSD - Predict List Accessing"
-    ]
+    ],
+    "hide_share_and_remix": "false"
   },
   "published": true,
   "notes": "",

@@ -16,7 +16,7 @@ namespace :firebase do
   task :upload_rules do
     if CDO.firebase_name
       HipChat.log 'Uploading security rules to firebase...'
-      Dir.chdir(dashboard_dir) {
+      Dir.chdir(dashboard_dir) do
         if rack_env?(:development) && !`readlink public/blockly`.include?('apps/build/package')
           STDERR.puts "\nWARNING: you are uploading firebase rules from the precompiled apps package.\n"\
             "To upload the firebase rules you built using `rake firebase:compile_rules`, you will need to\n"\
@@ -29,7 +29,7 @@ namespace :firebase do
         end
         url = "https://#{CDO.firebase_name}.firebaseio.com/.settings/rules.json?auth=#{CDO.firebase_secret}"
         RakeUtils.system("curl -X PUT -T ./public/blockly/firebase/rules.json '#{url}'")
-      }
+      end
     end
   end
 
@@ -37,7 +37,7 @@ namespace :firebase do
   task :set_config do
     if CDO.firebase_name
       HipChat.log 'Setting firebase configuration parameters...'
-      Dir.chdir(apps_dir) {
+      Dir.chdir(apps_dir) do
         url = "https://#{CDO.firebase_name}.firebaseio.com/v3/config.json?auth=#{CDO.firebase_secret}"
         config = {
           channels: {
@@ -52,7 +52,7 @@ namespace :firebase do
           }
         }
         RakeUtils.system("curl -X PUT -d '#{config.to_json}' '#{url}'")
-      }
+      end
     end
   end
 

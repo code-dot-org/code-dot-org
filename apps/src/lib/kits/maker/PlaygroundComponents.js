@@ -8,6 +8,7 @@ import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
+import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
 
 /**
@@ -70,7 +71,7 @@ export function initializeCircuitPlaygroundComponents() {
     freq: 100
   });
   const tempSensor = new five.Thermometer({
-    controller: "TINKERKIT",
+    controller: Thermometer,
     pin: "A0",
     freq: 100
   });

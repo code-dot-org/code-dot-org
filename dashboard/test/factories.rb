@@ -209,7 +209,7 @@ FactoryGirl.define do
 
   factory :multi, parent: :level, class: Applab do
     game {create(:game, app: "multi")}
-    properties {
+    properties do
       {
         question: 'question text',
         answers: [
@@ -221,7 +221,7 @@ FactoryGirl.define do
         questions: [{text: 'question text'}],
         options: {hide_submit: false}
       }
-    }
+    end
   end
 
   factory :evaluation_multi, parent: :level, class: EvaluationMulti do
