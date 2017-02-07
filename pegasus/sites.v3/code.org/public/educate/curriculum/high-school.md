@@ -1,6 +1,7 @@
 ---
 title: CS Curriculum for grades 9-12
 nav: educate_nav
+video_player: true
 ---
 
 [solid-block-header]
@@ -20,8 +21,17 @@ Computer Science Principles
 
 [/solid-block-header]
 
-<iframe width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
-<br />
+<!-- <iframe width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
+<br /> -->
+
+<% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
+<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>'Computer Science Principles @codeorg'} %>
+
+<div style="float:left; padding:10px; width:49%">
+
+  <%=view :display_video_thumbnail, id: "CSPrinciples", video_code: "DMr1iFYacGQ", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+
+</div>
 
 The College Board has proposed a new AP® course called AP® Computer Science Principles.*  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment.
 
