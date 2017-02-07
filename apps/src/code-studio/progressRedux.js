@@ -29,12 +29,12 @@ const initialState = {
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
+  stages: null,
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
   levelProgress: {},
   focusAreaPositions: [],
-  stages: null,
   peerReviewStage: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
@@ -73,34 +73,13 @@ export default function reducer(state = initialState, action) {
       ...action.levelProgress
     });
     combinedLevels.forEach(key => {
-      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
+      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key],
+        action.levelProgress[key]);
     });
 
     return {
       ...state,
       levelProgress: newLevelProgress,
-      stages: state.stages.map(stage => ({
-        ...stage,
-        levels: stage.levels.map((level, index) => {
-          // Assessment levels will have a uid for each page (and a test-result
-          // for each uid). When locked, they will end up not having a per-uid
-          // test result, but will have a LOCKED_RESULT for the LevelGroup (which
-          // is tracked by ids)
-          // Worth noting that in the majority of cases, ids will be a single
-          // id here
-          const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
-          let status = activityCssClass(newLevelProgress[id]);
-          if (level.uid &&
-              level.ids.every(id => newLevelProgress[id] === TestResults.LOCKED_RESULT)) {
-            status = LevelStatus.locked;
-          }
-
-          return {
-            ...level,
-            status
-          };
-        })
-      }))
     };
   }
 
@@ -243,12 +222,36 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
 export const levelsByLesson = state => (
   state.stages.map(stage => (
     stage.levels.map(level => ({
-      status: level.status,
+      status: statusForLevel(level, state.levelProgress),
       url: level.url,
       name: level.name
     }))
   ))
 );
+
+/**
+ * Given a level and levelProgress (both from our redux store state), determine
+ * the status for that level.
+ * @param {object} level - Level object from state.stages.levels
+ * @param {object<number, TestResult>} levelProgress - Mapping from levelId to
+ *   TestResult
+ */
+export function statusForLevel(level, levelProgress) {
+  // Assessment levels will have a uid for each page (and a test-result
+  // for each uid). When locked, they will end up not having a per-uid
+  // test result, but will have a LOCKED_RESULT for the LevelGroup (which
+  // is tracked by ids)
+  // Worth noting that in the majority of cases, ids will be a single
+  // id here
+  const id = level.uid || bestResultLevelId(level.ids, levelProgress);
+  let status = activityCssClass(levelProgress[id]);
+  if (level.uid &&
+      level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)) {
+    status = LevelStatus.locked;
+  }
+  return status;
+}
+
 
 /**
  * Groups lessons (aka stages) according to category.
