@@ -153,6 +153,22 @@ class User < ActiveRecord::Base
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
+  belongs_to :school_info
+  accepts_nested_attributes_for :school_info, reject_if: :check_school_info
+  validates_presence_of :school_info, unless: :school_info_optional?
+
+  def check_school_info(school_info_attr)
+    # Suppress validation - all parts of this form are optional when accesssed through the registration form
+    school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
+    student? # students are never asked to fill out this data, so silently reject it
+  end
+
+  # Not deployed to everyone, so we don't require this for anybody, yet
+  def school_info_optional?
+    true
+    #student? || (persisted? && created_at < '2017-MM-DD') # update if/when A/B test is done and accepted
+  end
+
   belongs_to :invited_by, polymorphic: true
 
   # TODO: I think we actually want to do this.
