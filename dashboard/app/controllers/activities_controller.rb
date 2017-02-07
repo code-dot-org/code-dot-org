@@ -141,16 +141,16 @@ class ActivitiesController < ApplicationController
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
     # Create the activity.
-    attributes = {
-        user: current_user,
-        level: @level,
-        action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
-        test_result: test_result,
-        attempt: params[:attempt].to_i,
-        lines: lines,
-        time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-        level_source_id: @level_source.try(:id)
-    }
+    # attributes = {
+    #     user: current_user,
+    #     level: @level,
+    #     action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
+    #     test_result: test_result,
+    #     attempt: params[:attempt].to_i,
+    #     lines: lines,
+    #     time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+    #     level_source_id: @level_source.try(:id)
+    # }
 
     # Save the activity and user_level synchronously if the level might be saved
     # to the gallery (for which the activity.id and user_level.id is required).
@@ -159,11 +159,12 @@ class ActivitiesController < ApplicationController
     synchronous_save = solved &&
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
-    if synchronous_save
-      @activity = Activity.create!(attributes)
-    else
-      @activity = Activity.create_async!(attributes)
-    end
+    # HOTFIX: Stop saving activities while the table is "full"
+    # if synchronous_save
+    #   @activity = Activity.create!(attributes)
+    # else
+    #   @activity = Activity.create_async!(attributes)
+    # end
     if @script_level
       if synchronous_save
         @new_level_completed = User.track_level_progress_sync(
