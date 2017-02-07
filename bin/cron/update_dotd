@@ -50,7 +50,7 @@ def main
 
   # Set the new developers room topic
   new_topic = current_topic.sub(/^.+?;/, "DOTD: @#{primary_dotd_user};")
-  Slack.update('developers', new_topic)
+  Slack.update_topic('developers', new_topic)
 end
 
 main if only_one_running?(__FILE__)
