@@ -192,13 +192,21 @@ window.SchoolInfoManager = function (existingOptions) {
     return $('#school-country').val() === 'US';
   }
 
+  function closestFormGroupOrItemBlock(selector) {
+    var closest = $(selector).closest('.form-group');
+    if (closest.length === 0) {
+      closest = $(selector).closest('.itemblock');
+    }
+    return closest;
+  }
+
   function show(selector) {
-    $(selector).closest('.form-group').show();
+    closestFormGroupOrItemBlock(selector).show();
   }
 
   function clearAndHide(selector) {
     $(selector).val('');
-    $(selector).closest('.form-group').hide();
+    closestFormGroupOrItemBlock(selector).hide();
   }
 
   $('#school-country').change(function () {

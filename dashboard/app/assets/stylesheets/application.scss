@@ -1444,7 +1444,8 @@ a.download-video {
   #usernamefield {
     vertical-align: top;
   }
-  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
+  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select,
+  #schooldropdown-block select, #schooldropdown-block .selectize-control {
     width: 234px;
   }
   #usernamemessage, #password_message, #password_message_confirmation {

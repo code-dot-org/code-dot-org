@@ -1,0 +1,101 @@
+- require 'country_codes'
+- require 'state_abbr'
+- require 'geocoder'
+
+- location = Geocoder.search(request.ip).try(:first)
+-# geocoder sometimes shows localhost's country as RD/Reserved
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+- existing_school_info ||= {}
+- existing_school_info[:country] ||= 'US' if us_ip
+- existing_school_info = {} if allow_empty
+
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/schoolInfo.js')}
+
+.itemblock#school-country-group
+  .labelblock= t('School Country') #TODO eric: add all of these to strings
+  %select#school-country.form-control.fieldblock{name: "#{form_name}[country]", type: "select", required: false}
+    %option{value: "", selected: true, disabled: true}
+    - COUNTRY_CODE_TO_COUNTRY_NAME.keys.each do |code|
+      %option{value: code}= country_name_from_code(code)
+
+.itemblock
+  .labelblock= t('Select school type')
+  %select#school-type.form-control.fieldblock{name: "#{form_name}[school_type]", type: "select", required: false}
+    %option{value: "", selected: true, disabled: true}
+    %option{value: SchoolInfo::SCHOOL_TYPE_CHARTER} Charter
+    %option{value: SchoolInfo::SCHOOL_TYPE_PRIVATE} Private
+    %option{value: SchoolInfo::SCHOOL_TYPE_PUBLIC} Public
+    %option{value: SchoolInfo::SCHOOL_TYPE_OTHER} Other
+
+.itemblock{style: "display: none;"}
+  .labelblock= t('State')
+  %select#school-state.form-control.fieldblock{name: "#{form_name}[school_state]", type: "select", required: false}
+    %option{value: "", selected: true, disabled: true}
+    - get_all_states_with_dc.each do |state_abbr, state_name|
+      %option{value: state_abbr}= state_name
+
+.itemblock{style: "display: none;"}
+  .labelblock= t('District')
+  #school-district
+
+    -# We'll apply the Selectize UI control to this input.
+    %input#school-district-id.form-control.fieldblock{name: "#{form_name}[school_district_id]", type: "text", required: false}
+
+    %label
+      %input#school-district-other{name: "#{form_name}[school_district_other]", type: "checkbox", value: "true", style: "margin-top: 0px"}
+      %span{style: "font-size: 12px"}
+        Other district not listed above
+
+    .form-group{style: "display: none;"}
+      .labelblock= t('District Name')
+      %div.controls
+        %input#school-district-name.form-control.fieldblock{name: "#{form_name}[school_district_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
+
+.itemblock{style: "display: none;"}
+  .labelblock= t('School')
+  #school
+
+    -# We'll apply the Selectize UI control to this input.
+    %input#school-id.form-control.fieldblock{name: "#{form_name}[school_id]", type: "text", required: false}
+
+    %label
+      %input#school-other{name: "#{form_name}[school_other]", type: "checkbox", value: "true", style: "margin-top: 0px"}
+      %span{style: "font-size: 12px"}
+        Other school not listed above
+
+#no-schools-warning.itemblock{style: "display: none; margin-bottom: 5px;"}
+  .labelblock= t('No schools of that type were found in this district.')
+
+-# '#school-name' is outside of '#school' so that we can still show it when the school dropdown is hidden.
+.itemblock{style: "display: none;"}
+  .labelblock= t('School Name')
+  %div.controls
+    %input#school-name.form-control.fieldblock{name: "#{form_name}[school_name]", type: "text", required: false}
+
+.itemblock{style: "display: none;"}
+  .labelblock= t("School’s ZIP code")
+  %input#school-zipcode.form-control.fieldblock{name: "#{form_name}[school_zip]", type: "text", required: false}
+
+.itemblock{style: "display: none;"}
+  .labelblock= t('School Address')
+  %div.controls
+    %textarea#school-address.form-control.fieldblock{name: "#{form_name}[full_address]", required: false, rows: 4}
+
+:javascript
+
+  $(document).ready(function() {
+    var options = #{existing_school_info.to_json};
+    var suppressScrolling = #{!!(local_assigns[:suppress_scrolling])};
+    options['suppressScrolling'] = suppressScrolling;
+
+    var assumeUsa = #{!!(local_assigns[:assume_usa])};
+
+    if (assumeUsa) {
+      $('#school-country-group').hide();
+      $('#school-country').val('United States');
+    }
+
+    // Send through some values that the JavaScript will need.
+    window.schoolInfoManager = new SchoolInfoManager(options);
+  });

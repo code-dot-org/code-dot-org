@@ -98,10 +98,18 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  # These are sometimes updated from the registration form
+  SCHOOL_INFO_ATTRIBUTES = [:country, :school_type, :school_state, :school_district_id,
+                            :school_district_name, :school_id, :school_name, :school_zip,
+                            :full_address, :school_district_other, :school_name_other,
+  ].freeze
+
   PERMITTED_USER_FIELDS = [:name, :username, :email, :password, :password_confirmation,
                            :locale, :gender, :login,
                            :remember_me, :age, :school, :full_address, :user_type,
-                           :hashed_email, :terms_of_service_version]
+                           :hashed_email, :terms_of_service_version,
+                           school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
+  ].freeze
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end
