@@ -195,6 +195,7 @@ levels.custom = {
     "digitalRead": null,
     "analogWrite": null,
     "analogRead": null,
+    "timedLoop": null,
 
     // Circuit Playground
     "on": null,

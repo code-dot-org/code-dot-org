@@ -1,6 +1,13 @@
 /** @file Test maker droplet config behavior */
 import {expect} from '../../../../util/configuredChai';
-import {getBoardEventDropdownForParam} from '@cdo/apps/lib/kits/maker/dropletConfig';
+import sinon from 'sinon';
+import {
+  blocks,
+  getBoardEventDropdownForParam,
+  MAKER_CATEGORY
+} from '@cdo/apps/lib/kits/maker/dropletConfig';
+import * as api from '@cdo/apps/lib/kits/maker/api';
+import commands from '@cdo/apps/lib/kits/maker/commands';
 
 describe('getBoardEventDropdownForParam', function () {
   it('unknown first parameter dropdown contains all options', function () {
@@ -79,5 +86,73 @@ describe('getBoardEventDropdownForParam', function () {
         ]);
       });
     });
+  });
+});
+
+// TODO (bbuchanan): Replace with more general assertions when we move maker
+// commands back to this kit.
+describe(`timedLoop(ms, callback)`, function () {
+  it('is an exported block with expected configuration', function () {
+    const timedLoopBlocks = blocks.filter(block => block.func === 'timedLoop');
+    expect(timedLoopBlocks).to.have.length(1);
+    const timedLoopBlock = timedLoopBlocks[0];
+    expect(timedLoopBlock.func).to.equal('timedLoop');
+    expect(timedLoopBlock.category).to.equal(MAKER_CATEGORY);
+    expect(timedLoopBlock.paletteParams).to.deep.equal(['ms', 'callback']);
+    expect(timedLoopBlock.params).to.deep.equal(['1000', 'function(exit) {\n  \n}']);
+  });
+
+  it('has a matching export in api.js', function () {
+    expect(api).to.haveOwnProperty('timedLoop');
+    expect(api.timedLoop).to.be.a('function');
+  });
+
+  it('api call passes arguments through to Applab.executeCmd', function () {
+    // Check that API passes arguments through as expected
+    window.Applab = window.Applab || {executeCmd() {}};
+    sinon.stub(Applab, 'executeCmd');
+
+    const ms = 234;
+    const callback = function () {};
+    api.timedLoop(ms, callback);
+    expect(window.Applab.executeCmd).to.have.been.calledWith(null, 'timedLoop', {ms, callback});
+
+    window.Applab.executeCmd.restore();
+  });
+
+  it('has a matching export in commands.js', function () {
+    expect(commands).to.haveOwnProperty('timedLoop');
+    expect(commands.timedLoop).to.be.a('function');
+  });
+
+  it('runs code on an interval', function () {
+    const clock = sinon.useFakeTimers();
+
+    const spy = sinon.spy();
+    let stopLoop;
+    commands.timedLoop({
+      ms: 50,
+      callback: exit => {
+        stopLoop = exit;
+        spy();
+      }
+    });
+
+    expect(spy).not.to.have.been.called;
+
+    clock.tick(49);
+    expect(spy).not.to.have.been.called;
+
+    clock.tick(1);
+    expect(spy).to.have.been.calledOnce;
+
+    clock.tick(50);
+    expect(spy).to.have.been.calledTwice;
+
+    stopLoop();
+    clock.tick(50);
+    expect(spy).to.have.been.calledTwice;
+
+    clock.restore();
   });
 });
