@@ -29,7 +29,6 @@ export const StatusProgressDot = React.createClass({
       )
     ),
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-
     postMilestoneDisabled: PropTypes.bool.isRequired,
     signInState: PropTypes.oneOf(Object.values(SignInState)).isRequired
   },
