@@ -104,9 +104,9 @@ class ApplicationController < ActionController::Base
                            :hashed_email, :terms_of_service_version]
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end
-    devise_parameter_sanitizer.permit(:sign_up) do |u| u.permit PERMITTED_USER_FIELDS end
-    devise_parameter_sanitizer.permit(:sign_in) do |u| u.permit PERMITTED_USER_FIELDS end
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit PERMITTED_USER_FIELDS }
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit PERMITTED_USER_FIELDS }
+    devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit PERMITTED_USER_FIELDS }
   end
 
   def with_locale
