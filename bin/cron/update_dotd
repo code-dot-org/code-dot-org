@@ -4,10 +4,10 @@ require 'open-uri'
 require 'json'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require_relative '../../deployment'
+require 'cdo/slack'
 
 SLACK_TOKEN = CDO.slack_token.freeze
 PAGERDUTY_TOKEN = CDO.pagerduty_token.freeze
-CHANNEL_ID = CDO.developers_channel_id.freeze
 
 ESCALATION_POLICY_NAME = 'Live Site Issues'.freeze
 
@@ -52,7 +52,7 @@ def main
 
   # Set the new developers room topic
   new_topic = current_topic.sub(/^.+?;/, "DOTD: @#{primary_dotd_user};")
-  open("https://slack.com/api/channels.setTopic?token=#{SLACK_TOKEN}&channel=#{CHANNEL_ID}&topic=#{new_topic}")
+  Slack.update('developers', new_topic)
 end
 
 main if only_one_running?(__FILE__)

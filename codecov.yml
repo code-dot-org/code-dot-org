@@ -1,1 +1,5 @@
 comment: on
+coverage:
+  status:
+    project: off
+    patch: off

@@ -216,9 +216,9 @@ FactoryGirl.define do
           {text: 'answer1', correct: true},
           {text: 'answer2', correct: false},
           {text: 'answer3', correct: false},
-          {text: 'answer4', correct: false}],
-        questions: [
-          {text: 'question text'}],
+          {text: 'answer4', correct: false}
+        ],
+        questions: [{text: 'question text'}],
         options: {hide_submit: false}
       }
     }
