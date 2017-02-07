@@ -659,11 +659,10 @@ exports.getSecondParam = function (methodName, block, editor) {
 function getParamAtIndex(index, methodName, block, editor) {
   if (!block) {
     // If we're not given a block, assume that we're in text mode
-    // Currently text mode can only detect the first parameter.
     var cursor = editor.session.selection.getCursor();
     var contents = editor.session.getLine(cursor.row).substring(0, cursor.column);
 
-    return getFirstParamFromCode(methodName, contents);
+    return getParamFromCodeAtIndex(index, methodName, contents);
   }
   // We have a block. Parse it to find our first socket.
   var token = block.start;
@@ -689,19 +688,28 @@ function getParamAtIndex(index, methodName, block, editor) {
   return null;
 }
 
-function getFirstParamFromCode(methodName, code) {
+/**
+ * Take a string like "'param1', 'param2'" and an index and return
+ * the param at the given index without extra quotes, commas or spaces.
+ */
+function formatParamString(index, params) {
+  params = params.split(",");
+  return params[index].split('"').join('').split("'").join('').trim();
+}
+
+function getParamFromCodeAtIndex(index, methodName, code) {
   var prefix = `${methodName}(`;
   code = code.slice(code.lastIndexOf(prefix));
   // quote, followed by param, followed by end quote, comma, and optional whitespace
   const backslashEscapedRegex = `^${methodName}\\((['"])(.*)\\1,\\s*$`;
   // param, comma, and optional whitespace
   const backslashNoQuoteRegex = `^${methodName}\\(([^"']*),\\s*$`;
-  var matchQuote = new RegExp(backslashEscapedRegex).exec(code);
-  var matchNoQuote = new RegExp(backslashNoQuoteRegex).exec(code);
+  let matchQuote = new RegExp(backslashEscapedRegex).exec(code);
+  let matchNoQuote = new RegExp(backslashNoQuoteRegex).exec(code);
   if (matchQuote) {
-    return matchQuote[2];
+    return formatParamString(index, matchQuote[2]);
   } else if (matchNoQuote) {
-    return matchNoQuote[1];
+    return formatParamString(index, matchNoQuote[1]);
   }
   return null;
 }
@@ -709,5 +717,5 @@ function getFirstParamFromCode(methodName, code) {
 exports.__TestInterface = {
   mergeCategoriesWithConfig: mergeCategoriesWithConfig,
   filteredBlocksFromConfig: filteredBlocksFromConfig,
-  getFirstParamFromCode: getFirstParamFromCode
+  getParamFromCodeAtIndex: getParamFromCodeAtIndex
 };
