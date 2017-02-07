@@ -3,8 +3,9 @@
  */
 import _ from 'lodash';
 
-import {getFirstParam} from '../dropletUtils';
+import {getFirstParam, getSecondParam} from '../dropletUtils';
 import library from './designElements/library';
+import getAssetDropdown from '../assetManagement/getAssetDropdown';
 var ElementType = library.ElementType;
 
 /**
@@ -242,6 +243,14 @@ function getFirstSetPropertyParam(block, editor) {
 }
 
 /**
+ * @param {DropletBlock} block Droplet block, or undefined if in text mode
+ * @param {AceEditor}
+ */
+function getSecondSetPropertyParam(block, editor) {
+  return getSecondParam('setProperty', block, editor);
+}
+
+/**
  * Given a string like <"asdf"> strips quotes and returns <asdf>
  */
 function stripQuotes(str) {
@@ -281,6 +290,28 @@ export function getInternalPropertyInfo(element, friendlyPropName) {
     info = PROPERTIES[elementType].infoForFriendlyName[friendlyPropName];
   }
   return info;
+}
+
+
+/**
+ * @returns {function} Gets the value of the second param for this block, checks
+ *  if it's an image, and then displays the image selector. If it can't determine element
+ *  types, displays the value 100, which is the default value in droplet config.
+ */
+export function setImageSelector() {
+  const dropletConfigDefaultValue = "100";
+  return function (editor) {
+    const param2 = getSecondSetPropertyParam(this.parent, editor);
+    if (!param2) {
+      return [dropletConfigDefaultValue];
+    }
+    const formattedParam = stripQuotes(param2);
+    if (formattedParam === "image") {
+      return getAssetDropdown('image');
+    } else {
+      return [dropletConfigDefaultValue];
+    }
+  };
 }
 
 /**
