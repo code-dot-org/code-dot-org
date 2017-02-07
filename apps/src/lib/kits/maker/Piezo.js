@@ -19,13 +19,22 @@ Piezo.inherits(five.Piezo);
  * different arguments and provide different defaults.
  * @see http://johnny-five.io/api/piezo/#usage
  * @param {Array.<string>|Array.<Array.<string, number>>} notes that make up the
- *        song to be played.
+ *        song to be played.  Can be one of:
+ *          A 1D array of notes: ['C#4', 'D4', 'E4']
+ *            in this case each note is assumed to be a quarter-note.
+ *          A 2D array of notes+durations: [['C#4', 1/4], ['D4', 1/4], ['E4', 1/2]]
+ *            where a duration of 1.0 is a whole-note in the given tempo.
  * @param {number} tempo in beats per minute
  * @override
  */
 Piezo.prototype.play = function (notes, tempo) {
   five.Piezo.prototype.play.call(this, {
-    song: notes,
+    song: notes.map(n => {
+      if (typeof n === 'string') {
+        return [n, 1/4];
+      }
+      return n;
+    }),
     tempo
   });
 };

@@ -23,20 +23,38 @@ describe('Piezo', function () {
   });
 
   describe('play()', function () {
-    it(`converts a song and tempo to the 'tune' format expected by five.Piezo`, function () {
-      sinon.stub(five.Piezo.prototype, 'play');
+    let piezo;
 
-      const piezo = new Piezo({
+    beforeEach(function () {
+      sinon.stub(five.Piezo.prototype, 'play');
+      piezo = new Piezo({
         controller: fakePiezoController
       });
+    });
 
-      const song = [['C4', 1], ['D4', 1], ['E4', 1]];
+    afterEach(function () {
+      five.Piezo.prototype.play.restore();
+    });
+
+    it(`converts a song and tempo to the 'tune' format expected by five.Piezo`, function () {
+      const song = [['C4', 1/2], ['D4', 1/2], ['E4', 1]];
       const tempo = 100;
       piezo.play(song, tempo);
-
       expect(five.Piezo.prototype.play).to.have.been.calledWith({song, tempo});
+    });
 
-      five.Piezo.prototype.play.restore();
+    it(`assumes quarter notes if given a 1D note array`, function () {
+      const song = ['C4', 'D4', 'E4'];
+      const tempo = 100;
+      piezo.play(song, tempo);
+      expect(five.Piezo.prototype.play).to.have.been.calledWith({
+        song: [
+          ['C4', 1/4],
+          ['D4', 1/4],
+          ['E4', 1/4]
+        ],
+        tempo
+      });
     });
   });
 });
