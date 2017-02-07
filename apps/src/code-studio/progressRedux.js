@@ -82,13 +82,22 @@ export default function reducer(state = initialState, action) {
       stages: state.stages.map(stage => ({
         ...stage,
         levels: stage.levels.map((level, index) => {
-          const lockedStage = stage.lockable &&
-            level.ids.every(id => newLevelProgress[id] === TestResults.LOCKED_RESULT);
-
+          // Assessment levels will have a uid for each page (and a test-result
+          // for each uid). When locked, they will end up not having a per-uid
+          // test result, but will have a LOCKED_RESULT for the LevelGroup (which
+          // is tracked by ids)
+          // Worth noting that in the majority of cases, ids will be a single
+          // id here
           const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
+          let status = activityCssClass(newLevelProgress[id]);
+          if (level.uid &&
+              level.ids.every(id => newLevelProgress[id] === TestResults.LOCKED_RESULT)) {
+            status = LevelStatus.locked;
+          }
+
           return {
             ...level,
-            status: lockedStage ? LevelStatus.locked : activityCssClass(newLevelProgress[id])
+            status
           };
         })
       }))
