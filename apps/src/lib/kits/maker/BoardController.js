@@ -12,6 +12,7 @@ import PlaygroundIO from 'playground-io';
 
 import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
+import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 import TouchSensor from './TouchSensor';
 
 /** @const {string} */
@@ -159,9 +160,9 @@ export default class BoardController {
   }
 
   onBoardEvent(component, event, callback) {
-    // TODO (bbuchanan): Add accelerometer events for "singletap" and "doubletap" that map to
-    // subsets of the "tap" event
-    // https://docs.google.com/document/d/1VuDefx4wijBkyiap-36qpfCAoNEzu5B7yLldhhhuv7U/edit#bookmark=id.daat8jt8eda8
+    if (BOARD_EVENT_ALIASES[event]) {
+      event = BOARD_EVENT_ALIASES[event];
+    }
     component.on(event, callback);
   }
 

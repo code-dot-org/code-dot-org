@@ -228,6 +228,7 @@ export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, i
 export const hasLockableStages = state => state.stages.some(stage => stage.lockable);
 
 export const lessonNames = state => state.stages.map(stage => stage.name);
+export const hasGroups = state => Object.keys(categorizedLessons(state)).length > 1;
 
 // TODO - account for locked levels
 export const levelsByLesson = state => (
@@ -239,6 +240,37 @@ export const levelsByLesson = state => (
     }))
   ))
 );
+
+/**
+ * Groups lessons (aka stages) according to category.
+ * @returns {Object[]}
+ * {string} Object.name
+ * {string[]} Object.lessonNames
+ * {Object[]} Object.stageLevels
+ */
+export const categorizedLessons = state => {
+  let byCategory = {};
+
+  const allLevels = levelsByLesson(state);
+
+  state.stages.forEach((stage, index) => {
+    const category = stage.flex_category;
+    const lessonName = stage.name;
+    const stageLevels = allLevels[index];
+
+    byCategory[category] = byCategory[category] || {
+      category,
+      lessonNames: [],
+      levels: []
+    };
+
+    byCategory[category].lessonNames.push(lessonName);
+    byCategory[category].levels.push(stageLevels);
+  });
+
+  // We want to return an array of categories
+  return _.values(byCategory);
+};
 
 /**
  * Given a set of levels, groups them in sets of progressions, where each

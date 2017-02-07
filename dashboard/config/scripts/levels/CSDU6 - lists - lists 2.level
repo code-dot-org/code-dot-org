@@ -80,8 +80,10 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Create Your Own List\r\n\r\nCreate your own list of 5 things and print it out in the console.",
-    "start_blocks": "var numbersList = [40, 2, 18];\r\nconsole.log(numbersList);\r\n \r\nvar lettersList = [\"a\", \"b\", \"d\"];\r\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
