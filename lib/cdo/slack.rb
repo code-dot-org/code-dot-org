@@ -19,6 +19,35 @@ class Slack
 
   SLACK_TOKEN = CDO.slack_token.freeze
 
+  # @param channel_name [String] The channel to fetch the topic.
+  # @return [String | nil] The existing topic, nil if not found.
+  def self.get_topic(channel_name, use_channel_map = false)
+    if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
+      channel_name = CHANNEL_MAP[channel_name]
+    end
+
+    channel_id = get_channel_id(channel_name)
+    return nil unless channel_id
+
+    response = open(
+      'https://slack.com/api/channels.info'\
+      "?token=#{SLACK_TOKEN}"\
+      "&channel=#{channel_id}"\
+    )
+
+    begin
+      parsed_response = JSON.parse(response.string)
+    rescue JSON::ParserError
+      return nil
+    end
+
+    unless parsed_response['ok']
+      return nil
+    end
+
+    parsed_response['channel']['latest']['topic']
+  end
+
   # @param channel_name [String] The channel to update the topic.
   # @param new_topic [String] The topic to post.
   # @param use_channel_map [Boolean] Whether to look up channel_name in
