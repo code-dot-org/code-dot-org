@@ -8,9 +8,11 @@ describe('getBoardEventDropdownForParam', function () {
       '"change"',
       '"close"',
       '"data"',
+      '"doubleTap"',
       '"down"',
       '"open"',
       '"press"',
+      '"singleTap"',
       '"up"'
     ]);
   });
@@ -41,7 +43,9 @@ describe('getBoardEventDropdownForParam', function () {
   it('accelerometer dropdown', function () {
     expect(getBoardEventDropdownForParam('accelerometer')).to.deep.equal([
       '"change"',
-      '"data"'
+      '"data"',
+      '"doubleTap"',
+      '"singleTap"'
     ]);
   });
 
