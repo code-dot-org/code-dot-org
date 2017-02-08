@@ -15,6 +15,7 @@ Dashboard::Application.routes.draw do
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
+  get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -71,6 +72,7 @@ Dashboard::Application.routes.draw do
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
+    patch '/dashboardapi/users', to: 'registrations#update'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -332,6 +334,8 @@ Dashboard::Application.routes.draw do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
+
+    get 'professional_learning_landing', to: 'professional_learning_landing#index'
 
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'

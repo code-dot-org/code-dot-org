@@ -26,6 +26,12 @@
   font-size: 18px;
 }
 
+.breakoutquote a:link, .breakoutquote a:visited,
+.breakoutquote a:hover, .breakoutquote a:active {
+  color: white;
+  text-decoration: underline;
+}
+
 .clearboth {
   clear: both;
 }

@@ -134,6 +134,7 @@
   .field
     = f.label :coordinate_grid_background, 'Coordinate grid background'
     = boolean_check_box f, :coordinate_grid_background
+= render partial: 'levels/editors/hide_share_and_remix', locals: {f: f}
 .field
   = f.label :project_template_level_name, 'Project Template Level Name'
   %p What this does:
@@ -189,7 +190,8 @@
       app: @level.game.app,
       solution_blocks: @level.respond_to?(:solution_blocks),
       uses_droplet: @level.game.uses_droplet?,
-      input_output_table: @level.respond_to?(:input_output_table)
+      input_output_table: @level.respond_to?(:input_output_table),
+      original_palette: JSON.parse(@level.class.try(:palette) || "{}"),
     }.to_json
   }
 %script{src: minifiable_asset_path('js/levels/editors/_blockly.js'),

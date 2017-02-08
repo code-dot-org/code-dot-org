@@ -9,10 +9,16 @@ class LevelSourceTest < ActiveSupport::TestCase
     @standard_data = 'dummy data'
     @variant_data =
       LevelSource::XMLNS_STRING + @standard_data + LevelSource::XMLNS_STRING
-    @ls1_standard = create(:level_source,
-      level_id: @level.id, data: @standard_data)
-    @ls1_variant = create(:level_source,
-      level_id: @level.id, data: @variant_data)
+    @ls1_standard = create(
+      :level_source,
+      level_id: @level.id,
+      data: @standard_data
+    )
+    @ls1_variant = create(
+      :level_source,
+      level_id: @level.id,
+      data: @variant_data
+    )
     assert_equal @ls1_standard.level_id, @ls1_variant.level_id
 
     level2_id = create(:level).id
@@ -28,7 +34,7 @@ class LevelSourceTest < ActiveSupport::TestCase
   test "should not create level source with utf8mb8" do
     program = "<xml>#{panda_panda}</xml>"
     level_source = LevelSource.find_identical_or_create(@level, program)
-    assert !level_source.valid?
+    refute level_source.valid?
     assert_equal ['Data is invalid'], level_source.errors.full_messages
   end
 
@@ -40,10 +46,10 @@ class LevelSourceTest < ActiveSupport::TestCase
 
   test "should recognize standardized level sources" do
     assert @ls1_standard.standardized?
-    assert !@ls1_variant.standardized?
+    refute @ls1_variant.standardized?
     assert @ls2_standard.standardized?
-    assert !@ls2_variant.standardized?
-    assert !@ls3_variant.standardized?
+    refute @ls2_variant.standardized?
+    refute @ls3_variant.standardized?
   end
 
   test "should find standardized version when standardized" do

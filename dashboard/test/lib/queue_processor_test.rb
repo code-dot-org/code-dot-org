@@ -39,11 +39,11 @@ class QueueProcessorTest < ActiveSupport::TestCase
       @logger = logger
       @lock = Mutex.new
 
-      # An array of all of the message bodies received by the handler.
-      @bodies = Set.new#<String>
+      # A set of strings of message bodies received by the handler.
+      @bodies = Set.new
 
-      # A set of message bodies to intentionally fail on.
-      @fail_on_message = Set.new#<String>
+      # A set of strings of message bodies to intentionally fail on.
+      @fail_on_message = Set.new
     end
 
     def handle(messages)
@@ -64,22 +64,22 @@ class QueueProcessorTest < ActiveSupport::TestCase
 
     # Fail the next handle attempt for the given message body.
     def raise_on_next_receipt_of(body)
-      @lock.synchronize {
+      @lock.synchronize do
         @logger.debug "Adding fake failure for #{body}"
         @fail_on_message.add(body)
-      }
+      end
     end
 
     def received_bodies
-      @lock.synchronize {
+      @lock.synchronize do
         @bodies.dup
-      }
+      end
     end
 
     def reset_received_bodies
-      @lock.synchronize {
-        @bodies = Set.new#<String>
-      }
+      @lock.synchronize do
+        @bodies = Set.new
+      end
     end
   end
 
@@ -120,9 +120,9 @@ class QueueProcessorTest < ActiveSupport::TestCase
     global_max_messages_per_sec = 25
 
     # Proc for determining the max rate based on DCDO.
-    max_rate_proc = proc {
+    max_rate_proc = proc do
       DCDO.get('test-max-rate', global_max_messages_per_sec)
-    }
+    end
 
     config = SQS::QueueProcessorConfig.new(
       queue_url: queue_url,
@@ -131,7 +131,8 @@ class QueueProcessorTest < ActiveSupport::TestCase
       max_rate_proc: max_rate_proc,
       num_processors: 1,
       num_workers_per_processor: num_workers,
-      logger: logger)
+      logger: logger
+    )
     processor = SQS::QueueProcessor.new(config, sqs_metrics)
     processor.start
 
@@ -139,7 +140,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     batches = 5
     batch_size = 10
     num_messages = batches * batch_size
-    expected_bodies = Set.new#<String>
+    expected_bodies = Set.new
     batches.times do
       batch = []
       batch_size.times do
@@ -228,9 +229,9 @@ class QueueProcessorTest < ActiveSupport::TestCase
   end
 
   def create_unique_message_body
-    @lock.synchronize {
+    @lock.synchronize do
       @message_id += 1
       @message_id.to_s
-    }
+    end
   end
 end

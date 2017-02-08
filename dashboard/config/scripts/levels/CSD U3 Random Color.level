@@ -13,13 +13,9 @@
       "stroke": null,
       "strokeWeight": null,
       "noStroke": null,
-      "arc": null,
       "ellipse": null,
-      "line": null,
-      "point": null,
       "rect": null,
       "regularPolygon": null,
-      "shape": null,
       "randomNumber_min_max": null,
       "console.log": null
     },

@@ -78,6 +78,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 color slider template",
+    "markdown_instructions": "# setProperty background-color\r\n\r\nIn order to set the color of the button you will need to use the `setProperty()` block to control the `background-color` of the button. Setting the background color with the `color` block will require all 3 slider values at once. So you will need to get the value of each slider inside each event handler. ",
     "contained_level_names": null
   },
   "published": true,

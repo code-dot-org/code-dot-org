@@ -21,7 +21,7 @@ MILESTONE_DATA = {
 }
 
 TESTS = [
-    { url: '/' },
+  { url: '/' },
 ]
 
 20.times do |i|

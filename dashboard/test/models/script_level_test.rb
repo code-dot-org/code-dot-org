@@ -151,8 +151,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert script.stages[1].script_levels.last.end_of_stage?
     assert script.stages[2].script_levels.last.end_of_stage?
     assert script.stages[3].script_levels.last.end_of_stage?
-    assert !script.stages[3].script_levels.first.end_of_stage?
-    assert !script.stages[3].script_levels[1].end_of_stage?
+    refute script.stages[3].script_levels.first.end_of_stage?
+    refute script.stages[3].script_levels[1].end_of_stage?
   end
 
   test 'cached_find' do

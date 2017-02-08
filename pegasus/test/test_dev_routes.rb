@@ -31,10 +31,13 @@ class DevRoutesTest < Minitest::Test
       in_rack_env(forbidden_env) do
         pegasus = make_test_pegasus
 
-        pegasus.post('/api/dev/start-build', {
-          token: FAKE_START_BUILD_TOKEN,
-          user_name: 'Dave'
-        })
+        pegasus.post(
+          '/api/dev/start-build',
+          {
+            token: FAKE_START_BUILD_TOKEN,
+            user_name: 'Dave'
+          }
+        )
         assert_equal 403, pegasus.last_response.status
         refute File.file? BUILD_STARTED_PATH
       end
@@ -60,10 +63,13 @@ class DevRoutesTest < Minitest::Test
       in_rack_env(allowed_env) do
         pegasus = make_test_pegasus
         begin
-          pegasus.post('/api/dev/start-build', {
+          pegasus.post(
+            '/api/dev/start-build',
+            {
               token: FAKE_START_BUILD_TOKEN,
               user_name: 'Dave'
-          })
+            }
+          )
           assert_equal 200, pegasus.last_response.status
         ensure
           system "rm -f #{BUILD_STARTED_PATH}"
@@ -74,9 +80,10 @@ class DevRoutesTest < Minitest::Test
     it 'is forbidden with a missing token' do
       in_rack_env(:staging) do
         pegasus = make_test_pegasus
-        pegasus.post('/api/dev/start-build', {
-            user_name: 'Dave'
-        })
+        pegasus.post(
+          '/api/dev/start-build',
+          {user_name: 'Dave'}
+        )
         assert_equal 403, pegasus.last_response.status
       end
     end
@@ -84,10 +91,13 @@ class DevRoutesTest < Minitest::Test
     it 'is forbidden with an incorrect token' do
       in_rack_env(:staging) do
         pegasus = make_test_pegasus
-        pegasus.post('/api/dev/start-build', {
+        pegasus.post(
+          '/api/dev/start-build',
+          {
             token: 'incorrect-token',
             user_name: 'Dave'
-        })
+          }
+        )
         assert_equal 403, pegasus.last_response.status
       end
     end
@@ -97,10 +107,13 @@ class DevRoutesTest < Minitest::Test
         pegasus = make_test_pegasus
         begin
           refute File.file? BUILD_STARTED_PATH
-          pegasus.post('/api/dev/start-build', {
+          pegasus.post(
+            '/api/dev/start-build',
+            {
               token: FAKE_START_BUILD_TOKEN,
               user_name: 'Dave'
-          })
+            }
+          )
           assert File.file? BUILD_STARTED_PATH
 
           # Check appropriate response to whole room, too
@@ -122,10 +135,13 @@ class DevRoutesTest < Minitest::Test
           assert File.file? BUILD_STARTED_PATH
           original_modify_time = File.mtime(BUILD_STARTED_PATH)
 
-          pegasus.post('/api/dev/start-build', {
+          pegasus.post(
+            '/api/dev/start-build',
+            {
               token: FAKE_START_BUILD_TOKEN,
               user_name: 'Dave'
-          })
+            }
+          )
           assert File.file? BUILD_STARTED_PATH
           assert_equal original_modify_time, File.mtime(BUILD_STARTED_PATH)
 

@@ -93,22 +93,26 @@ module AWS
 
     def self.invalidate_caches
       puts 'Creating CloudFront cache invalidations...'
-      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
-                                               log_level: :debug,
-                                               http_wire_trace: true)
+      cloudfront = Aws::CloudFront::Client.new(
+        logger: Logger.new(dashboard_dir('log/cloudfront.log')),
+        log_level: :debug,
+        http_wire_trace: true
+      )
       invalidations = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
         id = get_distribution_id_with_retry(cloudfront, hostname)
-        invalidation = cloudfront.create_invalidation({
-          distribution_id: id,
-          invalidation_batch: {
-            paths: {
-              quantity: 1,
-              items: ['/*'],
+        invalidation = cloudfront.create_invalidation(
+          {
+            distribution_id: id,
+            invalidation_batch: {
+              paths: {
+                quantity: 1,
+                items: ['/*'],
+              },
+              caller_reference: SecureRandom.hex,
             },
-            caller_reference: SecureRandom.hex,
-          },
-        }).invalidation.id
+          }
+        ).invalidation.id
         [app, id, invalidation]
       end
       puts 'Invalidations created.'
@@ -130,9 +134,11 @@ module AWS
     #  While CloudFront is propagating your changes to edge locations, we cannot determine whether a given edge
     #  location is serving your content based on the previous configuration or the new configuration."
     def self.create_or_update
-      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
-                                               log_level: :debug,
-                                               http_wire_trace: true)
+      cloudfront = Aws::CloudFront::Client.new(
+        logger: Logger.new(dashboard_dir('log/cloudfront.log')),
+        log_level: :debug,
+        http_wire_trace: true
+      )
       ids = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
         id, distribution_config = get_distribution_config(cloudfront, hostname)
@@ -220,7 +226,7 @@ module AWS
           items: cloudfront[:aliases].empty? ? nil : cloudfront[:aliases],
         },
         default_root_object: '',
-        origins: {# required
+        origins: { # required
           quantity: 2, # required
           items: [
             {
@@ -289,7 +295,7 @@ module AWS
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         },
         restrictions: {
-          geo_restriction: {# required
+          geo_restriction: { # required
             restriction_type: 'none', # required, accepts blacklist, whitelist, none
             quantity: 0 # required
           },
@@ -376,7 +382,7 @@ module AWS
     def self.cache_behavior(behavior_config, path=nil)
       s3 = behavior_config[:proxy] == 'cdo-assets'
       cookie_config = if behavior_config[:cookies].is_a?(Array)
-                        {# required
+                        { # required
                           forward: 'whitelist', # required, accepts none, whitelist, all
                           whitelisted_names: {
                             quantity: behavior_config[:cookies].length, # required
@@ -392,9 +398,9 @@ module AWS
       # Include S3 forward headers for s3 origins.
       headers = behavior_config[:headers] +
         (s3 ? S3_FORWARD_HEADERS : ['Host'])
-      behavior = {# required
+      behavior = { # required
         target_origin_id: (s3 ? behavior_config[:proxy] : 'cdo'), # required
-        forwarded_values: {# required
+        forwarded_values: { # required
           query_string: true, # required
           cookies: cookie_config,
           headers: {
@@ -405,7 +411,7 @@ module AWS
             quantity: 0
           },
         },
-        trusted_signers: {# required
+        trusted_signers: { # required
           enabled: false, # required
           quantity: 0
         },
