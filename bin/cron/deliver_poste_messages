@@ -14,8 +14,17 @@ MIN_MESSAGES_PER_THREAD = 50
 
 # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
 CONNECTION_ATTEMPTS = 5
-RETRYABLE_ERROR_TYPES = [Net::SMTPServerBusy, Net::SMTPAuthenticationError].freeze
-RETRYABLE_ERROR_MESSAGE_MATCH = /(Too many connections, try again later)|(Temporary authentication failure)/
+RETRYABLE_ERROR_TYPES = [
+  Net::SMTPServerBusy,
+  Net::SMTPAuthenticationError,
+  EOFError
+].freeze
+RETRYABLE_ERROR_MESSAGES = [
+  'Too many connections, try again later',
+  'Temporary authentication failure',
+  'end of file reached'
+].freeze
+RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map{|m| "(#{m})"}.join('|')
 
 SMTP_OPTIONS = {
   address: CDO.poste_smtp_server,
