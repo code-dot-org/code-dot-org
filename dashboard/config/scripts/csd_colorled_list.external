@@ -13,4 +13,9 @@ The color LEDs are actually each made up of three smaller LED - a Red, a Green, 
 
 Because there are so many of these LEDs, we've stored them in a list called `colorLeds`. The first RGB LED in the list (position 0) is located next to the green Power LED, and the rest follow in order counter-clockwise around the board, ending at the 10th RGB LED (position 9) next to the red LED.
 
+### Choosing a Color
+
+You can set the color of an RGB LED many ways, including using the name of a color (such as "green") a hexadecimal string (like "#00FF00") or using the `rgb()` command (for example `rgb(0, 255, 0)`)
+
+_image needed_
 MARKDOWN

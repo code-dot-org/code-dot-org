@@ -19,6 +19,7 @@ import {
   outputWarning,
 } from '../javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import makerCommands from '@cdo/apps/lib/kits/maker/commands';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -1776,3 +1777,4 @@ function stopLoadingSpinnerFor(elementId) {
 
 // Include playSound, stopSound, etc.
 Object.assign(applabCommands, audioCommands);
+Object.assign(applabCommands, makerCommands);

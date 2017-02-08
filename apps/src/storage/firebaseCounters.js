@@ -2,6 +2,17 @@ import Firebase from 'firebase';
 import { loadConfig, getDatabase, showRateLimitAlert } from './firebaseUtils';
 
 /**
+ * @fileoverview
+ * Data for table foo my exist in up to 3 places in firebase:
+ *   /v3/channels/<channel>/
+ *     counters/tables/foo - source of truth for whether a table exists
+ *     storage/tables/foo/records - may be empty if there are no records in the table
+ *     metadata/tables/foo - may be empty if table has not been viewed in data browser
+ *
+ * Therefore, any test for whether a table exists must look only at counters/tables.
+ */
+
+/**
  * Ensure that creating the table will not bring this app over the maximum
  * table count.
  * @param {Object} config

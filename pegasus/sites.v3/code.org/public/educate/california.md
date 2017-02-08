@@ -3,11 +3,21 @@ title: California Bring Computer Science to Your School
 nav: educate_nav
 ---
 
-# Teach Computer Science in Your District
+# Bring Computer Science To California Schools
 
-## Why Computer Science?
+## The Opportunity in California
+
+- 68,352 currently open computing jobs 
+- 3,525 computer science graduates from California universities last year
+- *Only 16% of schools in the state offer AP Computer Science*
+- *Fewer than 2,000 black or Hispanic students took AP Computer Science last year*
+
+## Do You Offer Your Students This Foundational Knowledge?
 
 Computer science opens more doors for students than any other discipline in today’s world. Learning even the basics will help students lead in virtually any career -- from architecture to zoology.  Just as we teach students multiplication and division, or how electricity works, it’s important for every 21st century student to have a chance to “dissect an app,” or learn how the Internet works.
+
+## Teachers can sign up for professional learning to offer computer science. It's free of charge!
+Please help us spread the word to California principals and teachers, at all grade bands, but especially in high schools. Or reach out to Vinh Luong, Code.org's Southwest Regional Manager, [vinh@code.org](mailto:vinh@code.org) to talk about how to bring comprehensive computer science to your district.
 
 <!-- FROM OLD WEBPAGE
 
