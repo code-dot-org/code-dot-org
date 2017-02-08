@@ -100,7 +100,7 @@ describe(`timedLoop(ms, callback)`, () => {
     expect(timedLoopBlock.func).to.equal('timedLoop');
     expect(timedLoopBlock.category).to.equal(MAKER_CATEGORY);
     expect(timedLoopBlock.paletteParams).to.deep.equal(['ms', 'callback']);
-    expect(timedLoopBlock.params).to.deep.equal(['1000', 'function(exit) {\n  \n}']);
+    expect(timedLoopBlock.params).to.deep.equal(['1000', 'function(exit) {\n  // Call exit() to stop looping\n  exit();\n}']);
   });
 
   it('has a matching export in api.js', () => {
