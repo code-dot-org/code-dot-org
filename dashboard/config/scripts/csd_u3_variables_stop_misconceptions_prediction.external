@@ -1,4 +1,5 @@
 name 'CSD U3 Variables STOP misconceptions prediction'
+display_name 'Stop: Variables Prediction'
 css 'unplugged' 
 
 markdown <<MARKDOWN
