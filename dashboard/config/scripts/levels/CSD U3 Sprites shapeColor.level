@@ -57,8 +57,8 @@
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
     "encrypted_examples": "7f95ypngQgMGDd0bcQgYwhEaPpFpAT4n5RYwk1DhLusT1yMN8+UQwrO+ANwg\n2yQh\n",
-    "contained_level_names": null,
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
