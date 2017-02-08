@@ -203,10 +203,10 @@ export default class Collector extends Subtype {
 
   drawCorners(svg, row, col, tileId) {
     const corners = {
+      'NE': [1, -1],
       'NW': [-1, -1],
-      'NE': [-1, 1],
-      'SW': [1, -1],
-      'SE': [1, 1]
+      'SE': [1, 1],
+      'SW': [-1, 1],
     };
 
     const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -248,7 +248,6 @@ export default class Collector extends Subtype {
         img.setAttribute('id', `tileCorner${corner}${tileId}`);
         img.setAttribute('clip-path', `url(#${tileClip.id})`);
         svg.insertBefore(img, pegmanElement);
-        console.log(tileClip.id);
       });
     }
   }
