@@ -1,12 +1,12 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
-var CommandHistory = require('@cdo/apps/CommandHistory');
-var constants = require('@cdo/apps/constants');
-var dom = require('@cdo/apps/dom');
-var JSInterpreter = require('@cdo/apps/JSInterpreter');
-var Observer = require('@cdo/apps/Observer');
-var utils = require('@cdo/apps/utils');
-import {setStepSpeed} from '@cdo/apps/redux/runState';
-import {add, update, remove} from '@cdo/apps/redux/watchedExpressions';
+import CommandHistory from '../../../CommandHistory';
+import constants from '../../../constants';
+import dom from '../../../dom';
+import JSInterpreter from '../../../JSInterpreter';
+import Observer from '../../../Observer';
+import utils from '../../../utils';
+import {setStepSpeed} from '../../../redux/runState';
+import {add, update, remove} from '../../../redux/watchedExpressions';
 
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;

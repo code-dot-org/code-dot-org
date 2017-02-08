@@ -7,18 +7,17 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 
-var i18n = require('@cdo/locale');
+import i18n from '@cdo/locale';
 import Radium from 'radium';
-var commonStyles = require('@cdo/apps/commonStyles');
-var styleConstants = require('@cdo/apps/styleConstants');
-import {ConnectedWatchers} from '@cdo/apps/templates/watchers/Watchers';
-var PaneHeader = require('@cdo/apps/templates/PaneHeader');
-var PaneSection = PaneHeader.PaneSection;
-var PaneButton = PaneHeader.PaneButton;
-var SpeedSlider = require('@cdo/apps/templates/SpeedSlider');
+import commonStyles from '../../../commonStyles';
+import styleConstants from '../../../styleConstants';
+import {ConnectedWatchers} from '../../../templates/watchers/Watchers';
+import PaneHeader from '../../../templates/PaneHeader';
+const {PaneSection, PaneButton} = PaneHeader;
+import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
-import {setStepSpeed} from '@cdo/apps/redux/runState';
-import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+import {setStepSpeed} from '../../../redux/runState';
+import ProtectedStatefulDiv from '../../../templates/ProtectedStatefulDiv';
 import JsDebuggerUi from './JsDebuggerUi';
 
 var styles = {
