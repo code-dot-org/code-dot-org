@@ -1,0 +1,9 @@
+{
+  "name": "@cdo/lambda",
+  "private": true,
+  "version": "0.1.0",
+  "license": "apache-2.0",
+  "dependencies": {
+    "aws-sdk": "^2.9.0"
+  }
+}

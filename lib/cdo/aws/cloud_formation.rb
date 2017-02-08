@@ -314,7 +314,6 @@ module AWS
           s3_bucket: S3_BUCKET,
           file: method(:file),
           js: method(:js),
-          js_zip: method(:js_zip),
           erb: method(:erb),
           subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
           public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
@@ -370,11 +369,15 @@ module AWS
 
       def js_zip
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
+          RakeUtils.npm_install
           `zip -qr - *.js node_modules`
         end
         key = "lambdajs-#{Digest::MD5.hexdigest(code_zip)}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
-        AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true) unless object_exists
+        unless object_exists
+          CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
+          AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true)
+        end
         {
           S3Bucket: S3_BUCKET,
           S3Key: key
@@ -404,7 +407,11 @@ module AWS
 
       def erb_eval(str, filename=nil, local_vars=nil)
         local_vars ||= @@local_variables
-        ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_vars.instance_eval{binding})
+        local_binding = binding
+        local_vars.each_pair do |key, value|
+          local_binding.local_variable_set(key, value)
+        end
+        ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_binding)
       end
     end
   end
