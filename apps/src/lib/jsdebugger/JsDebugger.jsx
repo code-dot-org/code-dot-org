@@ -218,7 +218,10 @@ var UnconnectedJsDebugger = Radium(React.createClass({
     if (!this.state.open && this.state.transitionType !== 'closing') {
       openStyle.display = 'none';
     }
-    const height = (this.state.open ? this.state.openedHeight : this.state.closedHeight) || this.props.style.height;
+    let height = this.state.open ? this.state.openedHeight : this.state.closedHeight;
+    if (!height && this.props.style) {
+      height = this.props.style.height;
+    }
 
     const showWatchPane = this.props.debugWatch && !this.state.watchersHidden;
     return (
