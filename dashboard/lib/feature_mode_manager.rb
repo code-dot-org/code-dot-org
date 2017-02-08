@@ -24,23 +24,23 @@ class FeatureModeManager
   MODE_SETTINGS_MAP = {
     # 'green'
     normal: {
-        gatekeeper_general_settings: {
-          puzzle_rating: true,
-          hint_view_request: true,
-          postMilestone: true,
-          shareEnabled: true,
-          slogging: true
-        },
-        gatekeeper_hoc_tutorial_settings: {
-          postMilestone: true,
-          shareEnabled: true,
-        },
-        dcdo_settings: {
-          hoc_activity_sample_weight: 1,
-          hoc_learn_activity_sample_weight: 1,
-          public_proxy_max_age: 3.minutes.to_i,
-          public_max_age: 6.minutes.to_i,
-        }
+      gatekeeper_general_settings: {
+        puzzle_rating: true,
+        hint_view_request: true,
+        postMilestone: true,
+        shareEnabled: true,
+        slogging: true
+      },
+      gatekeeper_hoc_tutorial_settings: {
+        postMilestone: true,
+        shareEnabled: true,
+      },
+      dcdo_settings: {
+        hoc_activity_sample_weight: 1,
+        hoc_learn_activity_sample_weight: 1,
+        public_proxy_max_age: 3.minutes.to_i,
+        public_max_age: 6.minutes.to_i,
+      }
     },
     # 'yellow'
     scale: {

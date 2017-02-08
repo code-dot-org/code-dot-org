@@ -32,9 +32,9 @@ module SolutionBlocks
 
     if create_for_toolbox
       # strip out blocks that shouldn't be in a toolbox
-      solution_blocks.reject! { |block|
+      solution_blocks.reject! do |block|
         IGNORED_SOLUTION_BLOCK_ATTRS.any? {|key, value| block.attr(key) == value}
-      }
+      end
     end
 
     # sanitize
