@@ -45,7 +45,7 @@ class Slack
       return nil
     end
 
-    parsed_response['channel']['latest']['topic']
+    parsed_response['channel']['topic']['value']
   end
 
   # @param channel_name [String] The channel to update the topic.
@@ -104,13 +104,11 @@ class Slack
     end
   end
 
-  private
-
   # Returns the channel ID for the channel with the requested channel_name.
   # @param channel_name [String] The name of the Slack channel.
   # @return [nil | String] The Slack channel ID for the channel, nil if not
   #   found.
-  def get_channel_id(channel_name)
+  private_class_method def self.get_channel_id(channel_name)
     # Documentation at https://api.slack.com/methods/channels.list.
     slack_api_url = "https://slack.com/api/channels.list?token=#{SLACK_TOKEN}"
     channels = open(slack_api_url).read
