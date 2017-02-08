@@ -33,6 +33,7 @@ en:
     attributes:
       user:
         name: 'Display Name'
+        firstname_lastinitial: 'First Name and Last Initial'
         email: 'Email'
         username: 'Username'
         password: 'Password'
@@ -134,7 +135,8 @@ en:
     accept_terms: "You must agree to create an account"
   signin_form:
     title: 'Have an account already? Sign in'
-    login: 'Email or Username'
+    login: 'Email'
+    login_username: 'Email or Username'
     password: 'Password'
     remember: 'Remember me'
     submit: 'Sign in'
