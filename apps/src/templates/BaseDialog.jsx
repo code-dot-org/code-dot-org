@@ -115,7 +115,7 @@ var BaseDialog = React.createClass({
       >
         <div style={modalBodyStyle} className={modalBodyClassNames}>
           {!this.props.uncloseable && (this.props.useUpdatedStyles ?
-            <i className="fa fa-times" style={xCloseStyle} /> :
+            <i className="fa fa-times" style={xCloseStyle} onClick={this.closeDialog}/> :
             <div id="x-close" className="x-close" onClick={this.closeDialog}></div>
           )}
           {this.props.children}
