@@ -1,9 +1,14 @@
 module SurveyResultsHelper
-  def show_survey?
-    # rubocop:disable Lint/UnreachableCode
-    # Disable NPS survey
-    return false
+  def show_diversity_survey?
+    true
+  end
 
+  def show_nps_survey?
+    # Disable NPS survey
+    false
+  end
+
+  def show_survey?
     # Reasons we would not show the survey.
     unless current_user
       return false
