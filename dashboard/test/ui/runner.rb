@@ -426,7 +426,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   end
 
   arguments = ''
-  #  arguments += "#{$options.feature}" if $options.feature
+  # arguments += "#{$options.feature}" if $options.feature
   arguments += feature
   arguments += " -t #{$options.run_eyes_tests && !browser['mobile'] ? '' : '~'}@eyes"
   arguments += " -t #{$options.run_eyes_tests && browser['mobile'] ? '' : '~'}@eyes_mobile"
