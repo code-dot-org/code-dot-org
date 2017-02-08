@@ -265,6 +265,7 @@ class Applab < Blockly
         "digitalRead": null,
         "analogWrite": null,
         "analogRead": null,
+        "timedLoop": null,
 
         // Circuit Playground
         "on": null,

@@ -18,6 +18,10 @@ exports.analogRead = function (pin, callback) {
   return Applab.executeCmd(null, 'analogRead', {pin, callback});
 };
 
+exports.timedLoop = function (ms, callback) {
+  return Applab.executeCmd(null, 'timedLoop', {ms, callback});
+};
+
 exports.onBoardEvent = function (component, event, callback) {
   return Applab.executeCmd(null, 'onBoardEvent', {component, event, callback});
 };
