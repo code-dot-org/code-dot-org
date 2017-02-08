@@ -24,10 +24,10 @@ Piezo.inherits(five.Piezo);
  *            in this case each note is assumed to be a quarter-note.
  *          A 2D array of notes+durations: [['C#4', 1/4], ['D4', 1/4], ['E4', 1/2]]
  *            where a duration of 1.0 is a whole-note in the given tempo.
- * @param {number} tempo in beats per minute
+ * @param {number} [tempo] in beats per minute
  * @override
  */
-Piezo.prototype.play = function (notes, tempo) {
+Piezo.prototype.play = function (notes, tempo = 120) {
   five.Piezo.prototype.play.call(this, {
     song: notes.map(n => {
       if (typeof n === 'string') {
