@@ -45,9 +45,11 @@ class XhrProxyControllerTest < ActionController::TestCase
 
   test "should fetch proxied data request with redirects" do
     stub_request(:get, XHR_REDIRECT_URI).to_return(
-      body: 'Redirect', status: 302, headers: {location: XHR_URI})
+      body: 'Redirect', status: 302, headers: {location: XHR_URI}
+    )
     stub_request(:get, XHR_URI).to_return(
-      body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
+      body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE}
+    )
     get :get, params: {u: XHR_REDIRECT_URI, c: CHANNEL_ID}
     assert_response :success
     assert_equal XHR_DATA, response.body
@@ -68,7 +70,8 @@ class XhrProxyControllerTest < ActionController::TestCase
       response,
       response,
       response,
-      response)
+      response
+    )
     get :get, params: {u: XHR_URI, c: CHANNEL_ID}
     assert_response 500
   end

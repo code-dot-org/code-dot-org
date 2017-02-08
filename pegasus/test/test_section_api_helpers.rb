@@ -53,11 +53,11 @@ class SectionApiHelperTest < Minitest::Test
       before do
         # mock scripts (the first query to the db gets the scripts)
         @fake_db.fetch = [
-            {id: 1, name: 'Foo', hidden: false},
-            {id: 3, name: 'Bar', hidden: false},
-            {id: 4, name: 'mc', hidden: false},
-            {id: 5, name: 'hourofcode', hidden: false},
-            {id: 6, name: 'minecraft', hidden: false}
+          {id: 1, name: 'Foo', hidden: false},
+          {id: 3, name: 'Bar', hidden: false},
+          {id: 4, name: 'mc', hidden: false},
+          {id: 5, name: 'hourofcode', hidden: false},
+          {id: 6, name: 'minecraft', hidden: false}
         ]
       end
 
@@ -93,17 +93,17 @@ class SectionApiHelperTest < Minitest::Test
     describe 'create' do
       it 'creates a row in the database with defaults' do
         params = {
-                  user: {id: 15, user_type: 'teacher'}
-                 }
+          user: {id: 15, user_type: 'teacher'}
+        }
         DashboardSection.create(params)
         assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'New Section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
 
       it 'creates a row in the database with name' do
         params = {
-                  user: {id: 15, user_type: 'teacher'},
-                  name: 'My cool section'
-                 }
+          user: {id: 15, user_type: 'teacher'},
+          name: 'My cool section'
+        }
         DashboardSection.create(params)
         assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end

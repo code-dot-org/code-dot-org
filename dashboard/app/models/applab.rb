@@ -60,15 +60,17 @@ class Applab < Blockly
   end
 
   def self.create_from_level_builder(params, level_params)
-    create!(level_params.merge(
-      user: params[:user],
-      game: Game.applab,
-      level_num: 'custom',
-      properties: {
-        code_functions: JSON.parse(palette),
-        edit_code: true
-      }
-    ))
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.applab,
+        level_num: 'custom',
+        properties: {
+          code_functions: JSON.parse(palette),
+          edit_code: true
+        }
+      )
+    )
   end
 
   def xml_blocks
@@ -263,6 +265,7 @@ class Applab < Blockly
         "digitalRead": null,
         "analogWrite": null,
         "analogRead": null,
+        "timedLoop": null,
 
         // Circuit Playground
         "on": null,

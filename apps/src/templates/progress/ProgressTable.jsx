@@ -1,71 +1,26 @@
 import React, { PropTypes } from 'react';
-import ProgressBubbleSet from './ProgressBubbleSet';
-import color from "@cdo/apps/util/color";
-import i18n from '@cdo/locale';
 import { connect } from 'react-redux';
-import { lessonNames, levelsByStage } from '@cdo/apps/code-studio/progressRedux';
-
-const lighterBorder = color.border_light_gray;
-
-const styles = {
-  table: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderLeftColor: color.border_gray,
-    borderTopColor: color.border_gray,
-    borderRightColor: lighterBorder,
-    borderBottomColor: lighterBorder,
-    float: 'left'
-  },
-  headerRow: {
-    backgroundColor: color.table_header,
-  },
-  lightRow: {
-    backgroundColor: color.table_light_row
-  },
-  darkRow: {
-    backgroundColor: color.table_dark_row
-  },
-  col1: {
-    width: 200,
-    minWidth: 200,
-    maxWidth: 200,
-    lineHeight: '52px',
-    color: color.charcoal,
-    letterSpacing: -0.11,
-    whiteSpace: 'nowrap',
-    paddingLeft: 20,
-    paddingRight: 20,
-    borderRightWidth: 1,
-    borderRightColor: lighterBorder,
-    borderRightStyle: 'solid',
-  },
-  col2: {
-    width: '100%',
-    paddingLeft: 20,
-    paddingRight: 20
-  },
-  colText: {
-    color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 12,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
-  }
-};
+import { categorizedLessons } from '@cdo/apps/code-studio/progressRedux';
+import SummaryProgressTable from './SummaryProgressTable';
+import DetailProgressTable from './DetailProgressTable';
+import ProgressGroup from './ProgressGroup';
+import { levelType } from './progressTypes';
 
 const ProgressTable = React.createClass({
   propTypes: {
-    lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    levelsByStage: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          level: PropTypes.string,
-          url: PropTypes.string
-        })
-      )
+    isSummaryView: PropTypes.bool.isRequired,
+    categorizedLessons: PropTypes.arrayOf(
+      PropTypes.shape({
+        category: PropTypes.string.isRequired,
+        lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+        levels: PropTypes.arrayOf(
+          PropTypes.arrayOf(levelType)
+        ).isRequired
+      })
     ).isRequired,
+    hasPeerReviews: PropTypes.bool.isRequired
   },
+
   componentDidMount() {
     // TODO - This modifies things outside of our scope. This is done right now
     // because we only want to modify this (dashboard-owned) markup in the case
@@ -81,48 +36,53 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { lessonNames, levelsByStage } = this.props;
-    return (
-      <table style={styles.table}>
-        <thead>
-          <tr style={styles.headerRow}>
-            <td style={styles.col1}>
-              <div style={styles.colText}>{i18n.lessonName()}</div>
-            </td>
-            <td style={styles.col2}>
-              <div style={styles.colText}>{i18n.yourProgress()}</div>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            lessonNames.map((lessonName, index) => (
-              <tr
-                key={index}
-                style={(index % 2 === 0) ? styles.lightRow : styles.darkRow}
-              >
-                <td style={styles.col1}>
-                  <div style={styles.colText}>
-                    {`${index + 1}. ${lessonName}`}
-                  </div>
-                </td>
-                <td style={styles.col2}>
-                  <ProgressBubbleSet
-                    start={1}
-                    levels={levelsByStage[index]}
-                  />
-                </td>
-              </tr>
-            ))
-          }
-        </tbody>
+    const { isSummaryView, categorizedLessons, hasPeerReviews } = this.props;
 
-      </table>
-    );
+    const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
+
+    if (categorizedLessons.length === 1) {
+      return (
+        <TableType
+          lessonNames={categorizedLessons[0].lessonNames}
+          levelsByLesson={categorizedLessons[0].levels}
+        />
+      );
+    } else {
+      return (
+        <div>
+          {categorizedLessons.map(category => (
+            <ProgressGroup
+              key={category.category}
+              groupName={category.category}
+              isSummaryView={isSummaryView}
+              lessonNames={category.lessonNames}
+              levelsByLesson={category.levels}
+            />
+          ))}
+          {/* Peer reviews are a bit of a special beast and will take some time to
+            * get right. For now, stick in a placeholder that makes it clear that
+            * this work hasnt been done yet*/}
+          {hasPeerReviews &&
+            <ProgressGroup
+              key="peer_review"
+              groupName={"Peer Review: Not Yet Implemented with progressRedesign"}
+              isSummaryView={isSummaryView}
+              lessonNames={["Not yet implemented"]}
+              levelsByLesson={[[{
+                status: 'not_tried',
+                url: '',
+                name: 'Not Implemented'
+              }]]}
+            />
+          }
+        </div>
+      );
+    }
   }
 });
 
 export default connect(state => ({
-  lessonNames: lessonNames(state.progress),
-  levelsByStage: levelsByStage(state.progress),
+  isSummaryView: state.progress.isSummaryView,
+  categorizedLessons: categorizedLessons(state.progress),
+  hasPeerReviews: !!state.progress.peerReviewStage,
 }))(ProgressTable);

@@ -3072,8 +3072,10 @@ Studio.onPuzzleComplete = function () {
 
   if (studioApp.hasContainedLevels && !level.edit_blocks) {
     postContainedLevelAttempt(studioApp);
-    runAfterPostContainedLevel(
-        () => Studio.onReportComplete(getContainedLevelResultInfo().feedback));
+    runAfterPostContainedLevel(() => {
+      Studio.message = getContainedLevelResultInfo().feedback;
+      Studio.onReportComplete();
+    });
     return;
   }
 
@@ -5175,7 +5177,7 @@ var createSpeechBubble = function (spriteIndex, text) {
 Studio.stop = function (opts) {
   cancelQueuedMovements(opts.spriteIndex, true);
   cancelQueuedMovements(opts.spriteIndex, false);
-  Studio.sprite[i].activity = constants.BEHAVIOR_STOP;
+  Studio.sprite[opts.spriteIndex].activity = constants.BEHAVIOR_STOP;
 
   if (!opts.dontResetCollisions) {
     // Reset collisionMasks so the next movement will fire another collision

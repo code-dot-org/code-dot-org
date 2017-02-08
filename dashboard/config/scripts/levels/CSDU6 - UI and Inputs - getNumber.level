@@ -77,6 +77,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 color slider template",
+    "markdown_instructions": "# getNumber\r\n\r\nAlright now that the sliders represent the right range of values. Let's get the value of each slider when they are updated.  \r\n\r\n* Using the event handlers can you figure out how to get the number value of each slider? Since you are going to be getting a number and not text you will need to use a new block `getNumber()`.  \r\n* Make sure to save each number with a clearly named variable. ",
     "contained_level_names": null
   },
   "published": true,

@@ -11,21 +11,21 @@ require_relative '../middleware/channels_api'
 # NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
   TABLE_NAMES = {
-      node: 'n',
-      wire: 'w',
-      message: 'm',
-      log: 'l'
+    node: 'n',
+    wire: 'w',
+    message: 'm',
+    log: 'l'
   }
 
   NODE_TYPES = {
-      client: 'client',
-      router: 'router'
+    client: 'client',
+    router: 'router'
   }
 
   VALIDATION_ERRORS = {
-      malformed: 'malformed',
-      conflict: 'conflict',
-      limit_reached: 'limit_reached'
+    malformed: 'malformed',
+    conflict: 'conflict',
+    limit_reached: 'limit_reached'
   }
 
   helpers do
@@ -51,8 +51,10 @@ class NetSimApi < Sinatra::Base
 
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
-    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
-      CDO.netsim_shard_expiry_seconds)
+    RedisTable.new(
+      get_redis_client, get_pub_sub_api, shard_id, table_name,
+      CDO.netsim_shard_expiry_seconds
+    )
   end
 
   #
@@ -366,10 +368,12 @@ class NetSimApi < Sinatra::Base
   # @return [Redis]
   def get_redis_client
     return @@overridden_redis unless @@overridden_redis.nil?
-    Redis::SlaveRead::Interface::Hiredis.new({
+    Redis::SlaveRead::Interface::Hiredis.new(
+      {
         master: Redis.new(url: redis_url),
         slaves: redis_read_replica_urls.map {|url| Redis.new(url: url)}
-                                            })
+      }
+    )
   end
 
   # Returns the URL (configuration string) of the redis service in the current
@@ -439,11 +443,11 @@ class NetSimApi < Sinatra::Base
   # @param [Array<Integer>] node_ids
   def delete_wires_for_nodes(shard_id, node_ids)
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
-    wires = wire_table.to_a.select {|wire|
-      node_ids.any? { |node_id|
+    wires = wire_table.to_a.select do |wire|
+      node_ids.any? do |node_id|
         wire['localNodeID'] == node_id || wire['remoteNodeID'] == node_id
-      }
-    }
+      end
+    end
     wire_ids = wires.map {|wire| wire['id']}
     wire_table.delete(wire_ids) unless wire_ids.empty?
   end
@@ -455,9 +459,9 @@ class NetSimApi < Sinatra::Base
   # @param [Array<Integer>] node_ids
   def delete_messages_for_nodes(shard_id, node_ids)
     message_table = get_table(shard_id, TABLE_NAMES[:message])
-    messages = message_table.to_a.select {|message|
+    messages = message_table.to_a.select do |message|
       node_ids.member? message['simulatedBy']
-    }
+    end
     message_ids = messages.map {|message| message['id']}
     message_table.delete(message_ids) unless message_ids.empty?
   end

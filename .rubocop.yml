@@ -30,6 +30,9 @@ Style/EmptyMethod:
 Style/FirstParameterIndentation:
   EnforcedStyle: consistent
 
+Style/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+
 Style/NumericLiterals:
   MinDigits: 7
 
