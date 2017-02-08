@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
-import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
 
 import reducer, {
@@ -325,6 +325,27 @@ describe('progressReduxTest', () => {
       };
       const status = statusForLevel(level, levelProgress);
       assert.strictEqual(status, LevelStatus.not_tried);
+    });
+
+    it('returns LevelStatus.locked for a locked peer_review stage', () => {
+      const level = {
+        kind: LevelKind.peer_review,
+        locked: true
+      };
+      const levelProgress = {};
+      const status = statusForLevel(level, levelProgress);
+      assert.strictEqual(status, LevelStatus.locked);
+    });
+
+    it('returns LevelStatus.perfect for a completed peer_review stage', () => {
+      const level = {
+        kind: LevelKind.peer_review,
+        locked: false,
+        status: LevelStatus.perfect
+      };
+      const levelProgress = {};
+      const status = statusForLevel(level, levelProgress);
+      assert.strictEqual(status, LevelStatus.perfect);
     });
   });
 
