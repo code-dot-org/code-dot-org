@@ -36,6 +36,9 @@ var DialogButtons = require('./templates/DialogButtons');
 var CodeWritten = require('./templates/feedback/CodeWritten');
 var GeneratedCode = require('./templates/feedback/GeneratedCode');
 
+import experiments from './util/experiments';
+import BaseDialog from './templates/BaseDialog';
+
 /**
  * @typedef {Object} TestableBlock
  * @property {string|function} test - A test whether the block is
@@ -187,6 +190,13 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
+
+  if (experiments.isEnabled('gamification')) {
+    const container = document.createElement('div');
+    ReactDOM.render(<BaseDialog useUpdatedStyles isOpen={true} assetUrl={this.studioApp_.assetUrl}/>, container);
+    document.body.appendChild(container);
+    return;
+  }
 
   var feedbackDialog = this.createModalDialog({
     Dialog: options.Dialog,
