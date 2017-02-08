@@ -29,16 +29,17 @@ In this activity you will **simulate public key cryptography** by:
 
 On the next page is the public key crypto widget. This widget will use numbers and math to do public key encryption, but it's important to understand that the mechanics of what you're doing are **basically the same as the cups and beans activity**
 
-Using the widget the process is still:
+**The Goal** just as before, is for Bob to send Alice a secret number.  But for that to happen **Alice actually has to act first** to create a public key for Bob to use.  So, using the widget the process is still:
 
 * Alice creates a private and public key
 * Bob uses the public key to encrypt a secret number
-* Eve tries to crack it.
+* Eve can intercept all public information and tries to crack it.
 
 The differences between the public key crypto widget and the cups and beans activity:
 
-* **Use your voice** to announce numbers publicly (this replaces the visual of beans in a cup)
-* **The "public modulus"** - this is another number that is publicly known and is technically part of Alice's public key.  It's one of the only clues that Eve has for cracking the code.
+* **All data are numbers** - the secret messages are numbers that get encrypted by transforming them into *other* numbers. (This replaces secret numbers of beans "encrypted" by putting them in a cup).
+* **Use your voice** to broadcast encrypted information publicly (this replaces beans in a cup getting passed around)
+* **The "public key" is actually a combination of two numbers** - Alice will produce a "public key" number, but there is also a "public clock size" that is used to produce that number.  Both are publicly known.  Since the clock size could actually be declared by anyone, including Eve, we refer to Alice's public number as her "public key."
 * **The Math: Multiplication and Modulo** - rather than simple addition and subtraction of beans, we'll multiply numbers together as input to modulo.
 
 MARKDOWN

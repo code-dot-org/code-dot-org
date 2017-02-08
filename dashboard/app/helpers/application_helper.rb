@@ -181,9 +181,11 @@ module ApplicationHelper
     messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
     sentence = resource.oauth? ?
       I18n.t("signup_form.additional_information") :
-      I18n.t("errors.messages.not_saved",
+      I18n.t(
+        "errors.messages.not_saved",
         count: resource.errors.count,
-        resource: resource.class.model_name.human.downcase)
+        resource: resource.class.model_name.human.downcase
+      )
 
     html = <<-HTML
     <div id="error_explanation">
@@ -206,7 +208,8 @@ module ApplicationHelper
     certificate_image_url(
       name: user.name,
       course: script.name,
-      course_title: data_t_suffix('script.name', script.name, 'title'))
+      course_title: data_t_suffix('script.name', script.name, 'title')
+    )
   end
 
   def minifiable_asset_path(path)

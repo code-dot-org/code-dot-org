@@ -121,7 +121,7 @@ class SectionsControllerTest < ActionController::TestCase
 
     assert_redirected_to '/s/flappy'
 
-    assert !session[:show_pairing_dialog]
+    refute session[:show_pairing_dialog]
   end
 
   test "cannot log in to section if you are not in the section" do

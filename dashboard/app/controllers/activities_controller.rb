@@ -97,15 +97,17 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
-    render json: milestone_response(script_level: @script_level,
-                                    level: @level,
-                                    total_lines: total_lines,
-                                    solved?: solved,
-                                    level_source: @level_source.try(:hidden) ? nil : @level_source,
-                                    level_source_image: @level_source_image,
-                                    activity: @activity,
-                                    new_level_completed: @new_level_completed,
-                                    share_failure: share_failure)
+    render json: milestone_response(
+      script_level: @script_level,
+      level: @level,
+      total_lines: total_lines,
+      solved?: solved,
+      level_source: @level_source.try(:hidden) ? nil : @level_source,
+      level_source_image: @level_source_image,
+      activity: @activity,
+      new_level_completed: @new_level_completed,
+      share_failure: share_failure
+    )
 
     if solved
       slog(
@@ -140,14 +142,14 @@ class ActivitiesController < ApplicationController
 
     # Create the activity.
     attributes = {
-        user: current_user,
-        level: @level,
-        action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
-        test_result: test_result,
-        attempt: params[:attempt].to_i,
-        lines: lines,
-        time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-        level_source_id: @level_source.try(:id)
+      user: current_user,
+      level: @level,
+      action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
+      test_result: test_result,
+      attempt: params[:attempt].to_i,
+      lines: lines,
+      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      level_source_id: @level_source.try(:id)
     }
 
     # Save the activity and user_level synchronously if the level might be saved

@@ -1,0 +1,36 @@
+- if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
+  #terms-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', style: 'display: none;'}
+    .modal-dialog
+      .modal-content.no-modal-icon
+        %h2.custom-h2= t('terms_interstitial.title')
+
+        .right
+          %iframe#print-frame{src: '/dashboardapi/terms-and-privacy', style: 'display: none'}
+          %a#print-terms{href: "#"}
+            %i.fa.fa-print.right-margin-5
+            = t('terms_interstitial.print')
+        .clear
+        .scroll-box
+          = t('terms_interstitial.intro_desc').html_safe
+          %br
+          %br
+          = t('terms_interstitial.intro_instructions')
+          %h1.custom-h1= t('terms_interstitial.tos')
+          = render partial: 'home/tos'
+          %hr
+          %h1= t('terms_interstitial.privacy')
+          = render partial: 'home/privacy'
+          %hr
+          %h1= t('terms_interstitial.privacy_notice')
+          = render partial: 'home/privacy_notice'
+
+        %br
+        .left
+          = form_for(current_user, url: '/dashboardapi/users', html: {id: 'edit_user'}) do |f|
+            .form-group
+              = f.label :terms_of_service_version do
+                = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, current_user.latest_terms_version
+                = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+            .form-group
+              = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true
+        .clear

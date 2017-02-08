@@ -333,7 +333,10 @@
   "whenRun": "quand l'exécution commence",
   "workspaceHeaderShort": "Espace de travail :",
   "yes": "Oui",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
+  "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
+  "levelN": "LEVEL {levelNumber}",
   "projectTypeAlgebra": "Algebra",
   "yourProgress": "Your Progress"
 }

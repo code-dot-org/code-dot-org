@@ -1,6 +1,9 @@
-comment: off
+comment: on
 coverage:
   range: 50..80
+  status:
+    project: off
+    patch: off
 fixes:
   - "/lib/::/dashboard/lib/"
   - "app/::dashboard/app/"

@@ -27,16 +27,18 @@ class DashboardStudent
 
     created_at = DateTime.now
 
-    row = Dashboard.db[:users].insert({
-      name: name,
-      user_type: 'student',
-      provider: 'sponsored',
-      gender: gender,
-      birthday: birthday,
-      created_at: created_at,
-      updated_at: created_at,
-      username: UserHelpers.generate_username(Dashboard.db[:users], name)
-    }.merge(random_secrets))
+    row = Dashboard.db[:users].insert(
+      {
+        name: name,
+        user_type: 'student',
+        provider: 'sponsored',
+        gender: gender,
+        birthday: birthday,
+        created_at: created_at,
+        updated_at: created_at,
+        username: UserHelpers.generate_username(Dashboard.db[:users], name)
+      }.merge(random_secrets)
+    )
     return nil unless row
 
     row
@@ -167,8 +169,8 @@ class DashboardStudent
 
   def self.random_secrets
     {
-     secret_picture_id: random_secret_picture_id,
-     secret_words: random_secret_words
+      secret_picture_id: random_secret_picture_id,
+      secret_words: random_secret_words
     }
   end
 
@@ -281,16 +283,18 @@ class DashboardSection
     row = nil
     tries = 0
     begin
-      row = Dashboard.db[:sections].insert({
-        user_id: params[:user][:id],
-        name: name,
-        login_type: login_type,
-        grade: grade,
-        script_id: script_id,
-        code: SectionHelpers.random_code,
-        created_at: created_at,
-        updated_at: created_at,
-      })
+      row = Dashboard.db[:sections].insert(
+        {
+          user_id: params[:user][:id],
+          name: name,
+          login_type: login_type,
+          grade: grade,
+          script_id: script_id,
+          code: SectionHelpers.random_code,
+          created_at: created_at,
+          updated_at: created_at,
+        }
+      )
     rescue Sequel::UniqueConstraintViolation
       tries += 1
       retry if tries < 2
@@ -377,13 +381,15 @@ class DashboardSection
     return nil unless student_id = student[:id] || DashboardStudent.create(student)
 
     created_at = DateTime.now
-    Dashboard.db[:followers].insert({
-      user_id: @row[:teacher_id],
-      student_user_id: student_id,
-      section_id: @row[:id],
-      created_at: created_at,
-      updated_at: created_at,
-    })
+    Dashboard.db[:followers].insert(
+      {
+        user_id: @row[:teacher_id],
+        student_user_id: student_id,
+        section_id: @row[:id],
+        created_at: created_at,
+        updated_at: created_at,
+      }
+    )
     student_id
   end
 
@@ -412,19 +418,23 @@ class DashboardSection
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
-      select(Sequel.as(:student_user_id, :id),
+      select(
+        Sequel.as(:student_user_id, :id),
         *DashboardStudent.fields,
         :secret_pictures__name___secret_picture_name,
-        :secret_pictures__path___secret_picture_path).
+        :secret_pictures__path___secret_picture_path
+      ).
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
       map do |row|
-        row.merge({
-          location: "/v2/users/#{row[:id]}",
-          age: DashboardStudent.birthday_to_age(row[:birthday]),
-          completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
-        })
+        row.merge(
+          {
+            location: "/v2/users/#{row[:id]}",
+            age: DashboardStudent.birthday_to_age(row[:birthday]),
+            completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
+          }
+        )
       end
   end
 

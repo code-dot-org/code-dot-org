@@ -20,6 +20,6 @@ class FollowerTest < ActiveSupport::TestCase
 
   test "cannot follow yourself" do
     follower = Follower.create(user_id: @laurel.id, student_user_id: @laurel.id, section: @laurel_section_1)
-    assert !follower.valid?
+    refute follower.valid?
   end
 end

@@ -16,9 +16,21 @@ class MediaProxyController < ApplicationController
 
   # Content types that we are willing to proxy
   ALLOWED_CONTENT_TYPES = Set.new(
-    ['image/bmp', 'image/x-windows-bmp', 'image/gif', 'image/jpeg', 'image/png',
-     'image/svg+xml', 'audio/basic', 'audio/mid', 'audio/mpeg', 'audio/mp4',
-     'audio/ogg', 'audio/vnd.wav'])
+    [
+      'image/bmp',
+      'image/x-windows-bmp',
+      'image/gif',
+      'image/jpeg',
+      'image/png',
+      'image/svg+xml',
+      'audio/basic',
+      'audio/mid',
+      'audio/mpeg',
+      'audio/mp4',
+      'audio/ogg',
+      'audio/vnd.wav'
+    ]
+  )
 
   # How long the content is allowed to be cached.
   EXPIRY_TIME = 10.years
@@ -30,6 +42,7 @@ class MediaProxyController < ApplicationController
       allowed_content_types: ALLOWED_CONTENT_TYPES,
       allowed_hostname_suffixes: nil, # allow any hostname
       expiry_time: EXPIRY_TIME,
-      infer_content_type: true)
+      infer_content_type: true
+    )
   end
 end

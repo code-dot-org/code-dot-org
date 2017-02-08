@@ -38,9 +38,9 @@
     "block_moving_into_walls": "false",
     "markdown_instructions": "This game is called \"Play Lab\".  \r\n\r\n<br/>\r\nSee if you can figure out what each block does.",
     "first_sprite_index": "0",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "timeout_failure_tick": "0"
+    "timeout_failure_tick": "0",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

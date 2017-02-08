@@ -44,8 +44,10 @@ module Rack
 
       request = Request.new(env)
 
-      encoding = Utils.select_best_encoding(%w(gzip deflate identity),
-        request.accept_encoding)
+      encoding = Utils.select_best_encoding(
+        %w(gzip deflate identity),
+        request.accept_encoding
+      )
 
       # Set the Vary HTTP header.
       vary = headers["Vary"].to_s.split(",").map(&:strip)
@@ -84,10 +86,10 @@ module Rack
         @writer = block
         gzip = ::Zlib::GzipWriter.new(self)
         gzip.mtime = @mtime
-        @body.each { |part|
+        @body.each do |part|
           gzip.write(part)
           gzip.flush
-        }
+        end
       ensure
         gzip.close
         @writer = nil

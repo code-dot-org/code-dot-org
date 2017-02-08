@@ -25,14 +25,17 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
   validates :plc_learning_module, presence: true
 
   MODULE_STATUS_STATES = [
-      NOT_STARTED = :not_started,
-      IN_PROGRESS = :in_progress,
-      COMPLETED = :completed
+    NOT_STARTED = :not_started,
+    IN_PROGRESS = :in_progress,
+    COMPLETED = :completed
   ]
 
   def status
-    Plc::EnrollmentModuleAssignment.stages_based_status([plc_learning_module.stage],
-      user, plc_enrollment_unit_assignment.plc_course_unit.script)
+    Plc::EnrollmentModuleAssignment.stages_based_status(
+      [plc_learning_module.stage],
+      user,
+      plc_enrollment_unit_assignment.plc_course_unit.script
+    )
   end
 
   # Legacy PD courses do not have modules. However, they have user-completion-status for different sections

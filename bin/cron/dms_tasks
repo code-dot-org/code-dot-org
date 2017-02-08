@@ -5,11 +5,13 @@
 # AWS DMS tasks in the us-east-1 region.
 # (https://console.aws.amazon.com/dms/home?region=us-east-1#tasks:)
 
+require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/hip_chat'
 require 'cdo/only_one'
+require 'cdo/slack'
 
-SECONDS_PER_MINUTE = 60
 REPLICATION_TASK_TYPE = 'reload-target'.freeze
+SECONDS_PER_MINUTE = 60
 
 # @param task_execution_time_sec [Integer] The number of seconds the task's
 #   previous execution took.
@@ -31,8 +33,12 @@ end
 # The main method, responsible for creating a DMS client, fetching the set of
 # replication tasks, and starting the replication tasks.
 def main
-  dms_client = Aws::DatabaseMigrationService::Client.new
+  # Update the data room topic in Slack.
+  new_topic = 'Tableau data is automatically reloading (details in #infra-dms)...'
+  Slack.update_topic('data', new_topic)
 
+  # Create a DMS client and use it to start task replication.
+  dms_client = Aws::DatabaseMigrationService::Client.new
   dms_client.describe_replication_tasks.replication_tasks.each do |replication_task|
     task_name = replication_task.replication_task_identifier
     task_arn = replication_task.replication_task_arn
@@ -54,10 +60,19 @@ def main
 
     HipChat.message 'infra-dms', "Finished DMS task #{task_name}.", color: 'green'
   end
+
+  # Update the "data" room summary in Slack.
+  new_topic = "Tableau data is good (reloaded #{DateTime.now.strftime('%Y-%m-%d')})"
+  Slack.update_topic('data', new_topic)
 rescue Aws::DatabaseMigrationService::Errors::ServiceError => e
+  # Log the exception to "infra-dms" and "data" rooms in Slack.
   HipChat.message 'infra-dms',
     "EXCEPTION: #{e.message}",
     color: 'red'
+  new_topic = 'Tableau data is bad. :('
+  Slack.update_topic('data', new_topic)
+
+  # Re-raise the exception for HoneyBadger visibility.
   raise e
 end
 
