@@ -50,6 +50,7 @@ var ALLOWED_KEYS = new Set([
   'isSignedIn',
   'isK1',
   'debuggerUi',
+  'documentationUrl',
 ]);
 
 const initialState = {

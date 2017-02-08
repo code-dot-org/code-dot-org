@@ -13,7 +13,13 @@ export const COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
   buttonR: BUTTON_EVENTS,
   toggleSwitch: ['open', 'close'],
-  accelerometer: ['change', 'data']
+  accelerometer: ['change', 'data', 'singleTap', 'doubleTap']
 };
 SENSOR_VARS.forEach(s => COMPONENT_EVENTS[s] = SENSOR_EVENTS);
 TOUCH_PAD_VARS.forEach(s => COMPONENT_EVENTS[s] = TOUCH_EVENTS);
+
+export const BOARD_EVENT_ALIASES = {
+  // codeStudioName: 'playground-io-name'
+  singleTap: 'tap:single',
+  doubleTap: 'tap:double'
+};

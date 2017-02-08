@@ -142,14 +142,14 @@ class ActivitiesController < ApplicationController
 
     # Create the activity.
     attributes = {
-        user: current_user,
-        level: @level,
-        action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
-        test_result: test_result,
-        attempt: params[:attempt].to_i,
-        lines: lines,
-        time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-        level_source_id: @level_source.try(:id)
+      user: current_user,
+      level: @level,
+      action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
+      test_result: test_result,
+      attempt: params[:attempt].to_i,
+      lines: lines,
+      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      level_source_id: @level_source.try(:id)
     }
 
     # Save the activity and user_level synchronously if the level might be saved

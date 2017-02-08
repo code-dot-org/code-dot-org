@@ -1,4 +1,5 @@
 name 'Circuit Playground Map: Buzzer'
+display_name 'Circuit Playground: Buzzer'
 markdown <<MARKDOWN
 # Producing Output
 
