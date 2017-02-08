@@ -1,6 +1,6 @@
 /** @file Test maker droplet config behavior */
 import {expect} from '../../../../util/configuredChai';
-import {stubWindowApplab} from '../../../../util/testUtils';
+import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 import sinon from 'sinon';
 import {
   blocks,
@@ -109,13 +109,21 @@ describe(`timedLoop(ms, callback)`, () => {
   });
 
   describe('api passthrough', () => {
-    stubWindowApplab();
+    beforeEach(() => {
+      replaceOnWindow('Applab', {
+        executeCmd: sinon.spy()
+      });
+    });
+
+    afterEach(() => {
+      restoreOnWindow('Applab');
+    });
 
     it('api call passes arguments through to Applab.executeCmd', () => {
       const ms = 234;
       const callback = () => {};
       api.timedLoop(ms, callback);
-      expect(window.Applab.executeCmd).to.have.been.calledWith(null, 'timedLoop', {ms, callback});
+      expect(Applab.executeCmd).to.have.been.calledWith(null, 'timedLoop', {ms, callback});
     });
   });
 

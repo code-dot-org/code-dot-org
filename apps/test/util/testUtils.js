@@ -292,29 +292,19 @@ export function throwOnConsoleWarnings() {
   });
 }
 
-/**
- * Stub everything on window.Applab for every test in this describe block.
- */
-export function stubWindowApplab() {
-  let windowHadApplab;
+const originalWindowValues = {};
+export function replaceOnWindow(key, newValue) {
+  if (originalWindowValues.hasOwnProperty(key)) {
+    throw new Error(`Can't replace 'window.${key}' - it's already been replaced.`);
+  }
+  originalWindowValues[key] = window[key];
+  window[key] = newValue;
+}
 
-  beforeEach(() => {
-    windowHadApplab = window.hasOwnProperty('Applab');
-    if (!windowHadApplab) {
-      window.Applab = {
-        executeCmd() {}
-        // Add Applab methods here as needed
-      };
-    }
-    sinon.stub(window.Applab);
-  });
-
-  afterEach(() => {
-    // sinon.restore isn't in the docs, but it's by design;
-    // see https://github.com/sinonjs/sinon/issues/270
-    sinon.restore(window.Applab);
-    if (!windowHadApplab) {
-      delete window.Applab;
-    }
-  });
+export function restoreOnWindow(key) {
+  if (!originalWindowValues.hasOwnProperty(key)) {
+    throw new Error(`Can't restore 'window.${key}' - it wasn't replaced.`);
+  }
+  window[key] = originalWindowValues[key];
+  delete originalWindowValues[key];
 }
