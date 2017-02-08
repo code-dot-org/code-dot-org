@@ -64,22 +64,22 @@ class QueueProcessorTest < ActiveSupport::TestCase
 
     # Fail the next handle attempt for the given message body.
     def raise_on_next_receipt_of(body)
-      @lock.synchronize {
+      @lock.synchronize do
         @logger.debug "Adding fake failure for #{body}"
         @fail_on_message.add(body)
-      }
+      end
     end
 
     def received_bodies
-      @lock.synchronize {
+      @lock.synchronize do
         @bodies.dup
-      }
+      end
     end
 
     def reset_received_bodies
-      @lock.synchronize {
+      @lock.synchronize do
         @bodies = Set.new#<String>
-      }
+      end
     end
   end
 
@@ -120,9 +120,9 @@ class QueueProcessorTest < ActiveSupport::TestCase
     global_max_messages_per_sec = 25
 
     # Proc for determining the max rate based on DCDO.
-    max_rate_proc = proc {
+    max_rate_proc = proc do
       DCDO.get('test-max-rate', global_max_messages_per_sec)
-    }
+    end
 
     config = SQS::QueueProcessorConfig.new(
       queue_url: queue_url,
@@ -229,9 +229,9 @@ class QueueProcessorTest < ActiveSupport::TestCase
   end
 
   def create_unique_message_body
-    @lock.synchronize {
+    @lock.synchronize do
       @message_id += 1
       @message_id.to_s
-    }
+    end
   end
 end

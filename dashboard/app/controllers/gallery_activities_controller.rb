@@ -33,14 +33,16 @@ class GalleryActivitiesController < ApplicationController
   # POST /gallery_activities.json
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      @gallery_activity = GalleryActivity.where(gallery_activity_params).first_or_initialize
+      @gallery_activity = GalleryActivity.where(gallery_activity_params).
+        first_or_initialize
       @gallery_activity.autosaved = false
       authorize! :save_to_gallery, @gallery_activity.activity
 
       if @gallery_activity.save
         render action: 'show', status: :created, location: @gallery_activity
       else
-        # right now this never happens because we end up raising an exception in one of the authorization checks
+        # Right now this never happens because we end up raising an exception in
+        # one of the authorization checks.
         render json: @gallery_activity.errors, status: :unprocessable_entity
       end
     end
@@ -60,14 +62,22 @@ class GalleryActivitiesController < ApplicationController
     @gallery_activity = GalleryActivity.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the white list
+  # through.
   def gallery_activity_params
-    params[:gallery_activity][:user_id] ||= current_user.id if params[:gallery_activity] && current_user
+    if params[:gallery_activity] && current_user
+      params[:gallery_activity][:user_id] ||= current_user.id
+    end
     params.require(:gallery_activity).permit(:activity_id, :level_source_id, :user_id)
   end
 
   def gallery_activities_for_app(app)
-    per_page = params[:app] ? INDEX_PER_PAGE : INDEX_PER_PAGE / 2 # when we show both apps, show half as many per app
-    GalleryActivity.where(autosaved: false, app: app).order(id: :desc).page(params[:page]).per(per_page)
+    # When we show both apps, show half as many per app.
+    per_page = params[:app] ? INDEX_PER_PAGE : INDEX_PER_PAGE / 2
+    GalleryActivity.
+      where(autosaved: false, app: app).
+      order(id: :desc).
+      page(params[:page]).
+      per(per_page)
   end
 end

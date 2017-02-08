@@ -77,9 +77,9 @@ end
 
 def rebuild_blockly_js_files
   run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
-  Dir.chdir('apps'){
+  Dir.chdir('apps') do
     puts `yarn build`
-  }
+  end
 end
 
 push_out_translated_files
