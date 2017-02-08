@@ -16,6 +16,7 @@ var PaneHeader = require('@cdo/apps/templates/PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
 var SpeedSlider = require('@cdo/apps/templates/SpeedSlider');
+import FontAwesome from '../../templates/FontAwesome';
 import {setStepSpeed} from '@cdo/apps/redux/runState';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import JsDebuggerUi from './JsDebuggerUi';
@@ -242,15 +243,24 @@ var UnconnectedJsDebugger = Radium(React.createClass({
           >
             {i18n.debugConsoleHeader()}
           </span>
-          <i
-            className={`fa ${this.state.open ? 'fa-chevron-circle-down' : 'fa-chevron-circle-up'}`}
+          <FontAwesome
+            icon={this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'}
             style={styles.showHideIcon}
             onClick={this.slideToggle}
           />
           {this.props.debugButtons &&
           <PaneSection id="debug-commands-header">
-            <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"/>
-            <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"/>
+            <FontAwesome
+              id="running-spinner"
+              style={commonStyles.hidden}
+              icon="spinner"
+              className="fa-spin"
+            />
+            <FontAwesome
+              id="paused-icon"
+              style={commonStyles.hidden}
+              icon="pause"
+            />
             <span
               style={styles.noUserSelect}
               className="header-text"
@@ -279,10 +289,10 @@ var UnconnectedJsDebugger = Radium(React.createClass({
               marginRight: '30px'
             } : {}}
           >
-            <i
+            <FontAwesome
               id="hide-toolbox-icon"
               style={styles.showDebugWatchIcon}
-              className={"fa " + (this.state.watchersHidden ? "fa-chevron-circle-left" : "fa-chevron-circle-right")}
+              icon={this.state.watchersHidden ? "chevron-circle-left" : "chevron-circle-right"}
             />
             <span
               style={styles.noUserSelect}

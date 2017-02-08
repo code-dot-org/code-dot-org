@@ -42,8 +42,8 @@ describe('The JSDebugger component', () => {
 
   const debugAreaEl = () => root.find('#debug-area').get(0);
   const paneHeader = () => root.find('PaneHeader');
-  const closeIcon = () => paneHeader().find('i.fa-chevron-circle-down');
-  const openIcon = () => paneHeader().find('i.fa-chevron-circle-up');
+  const closeIcon = () => paneHeader().find('.fa-chevron-circle-down');
+  const openIcon = () => paneHeader().find('.fa-chevron-circle-up');
 
   it("renders a div", () => {
     expect(root.find('div#debug-area').isEmpty()).to.be.false;
