@@ -195,11 +195,12 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const container = document.createElement('div');
     ReactDOM.render(
       <AchievementDialog
-        puzzleNumber={1}
-        idealBlocks={2}
-        actualBlocks={2}
-        hintsUsed={4}
+        puzzleNumber={options.level.puzzle_number || 0}
+        idealBlocks={this.studioApp_.IDEAL_BLOCK_NUM}
+        actualBlocks={this.getNumCountableBlocks()}
+        hintsUsed={1}
         assetUrl={this.studioApp_.assetUrl}
+        onContinue={options.onContinue}
       />, container);
     document.body.appendChild(container);
     return;

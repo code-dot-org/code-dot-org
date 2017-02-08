@@ -40,6 +40,16 @@ const AchievementDialog = Radium(React.createClass({
     actualBlocks: React.PropTypes.number,
     hintsUsed: React.PropTypes.number,
     assetUrl: React.PropTypes.func,
+    onContinue: React.PropTypes.func,
+  },
+
+  getInitialState() {
+    return {isOpen: true};
+  },
+
+  handleClose(nextPuzzle = true) {
+    this.setState({isOpen: false});
+    nextPuzzle && this.props.onContinue();
   },
 
   render() {
@@ -49,10 +59,18 @@ const AchievementDialog = Radium(React.createClass({
     const message = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
 
     return (
-      <BaseDialog useUpdatedStyles isOpen={true} assetUrl={this.props.assetUrl}>
+      <BaseDialog
+        useUpdatedStyles
+        isOpen={this.state.isOpen}
+        handleClose={this.handleClose.bind(this, !tooManyBlocks)}
+        assetUrl={this.props.assetUrl}
+      >
         <div style={styles.footer}>
+
           <p style={styles.feedbackMessage}>{message}</p>
+
           <button
+            onClick={this.handleClose}
             style={[
               styles.buttonPrimary,
               tooManyBlocks && styles.buttonSecondary
@@ -61,7 +79,12 @@ const AchievementDialog = Radium(React.createClass({
             {locale.continue()}
           </button>
           {tooManyBlocks &&
-            <button style={styles.buttonPrimary}>{locale.tryAgain()}</button>
+            <button
+              onClick={this.handleClose.bind(this, false)}
+              style={styles.buttonPrimary}
+            >
+              {locale.tryAgain()}
+            </button>
           }
         </div>
       </BaseDialog>
