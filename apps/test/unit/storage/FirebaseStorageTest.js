@@ -578,6 +578,7 @@ describe('FirebaseStorage', () => {
         }
       }
     };
+    const BAD_JSON = '{';
 
     function verifyTable(expectedTablesData) {
       return getDatabase().child(`storage/tables`).once('value')
@@ -637,6 +638,22 @@ describe('FirebaseStorage', () => {
             error => {throw error;});
 
         });
+    });
+
+    it('prints a friendly error message when given bad json', done => {
+      const overwrite = false;
+
+      FirebaseStorage.populateTable(
+        BAD_JSON,
+        overwrite,
+        () => {throw 'expected JSON error to be reported';},
+        validateError);
+
+      function validateError(error) {
+        expect(error).to.contain('SyntaxError');
+        expect(error).to.contain('while parsing initial table data: {');
+        done();
+      }
     });
   });
 

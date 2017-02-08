@@ -459,7 +459,12 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
     .then(() => getExistingTables(overwrite))
     .then(existingTables => {
       const promises = [];
-      const newTables = JSON.parse(jsonData);
+      let newTables;
+      try {
+        newTables = JSON.parse(jsonData);
+      } catch (e) {
+        return Promise.reject(`${e}\nwhile parsing initial table data: ${jsonData}`);
+      }
       for (const tableName in newTables) {
         if (overwrite || (existingTables[tableName] === undefined)) {
           const newRecords = newTables[tableName];
