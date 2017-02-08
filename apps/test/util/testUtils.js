@@ -291,3 +291,30 @@ export function throwOnConsoleWarnings() {
     firstError = null;
   });
 }
+
+/**
+ * Stub everything on window.Applab for every test in this describe block.
+ */
+export function stubWindowApplab() {
+  let windowHadApplab;
+
+  beforeEach(() => {
+    windowHadApplab = window.hasOwnProperty('Applab');
+    if (!windowHadApplab) {
+      window.Applab = {
+        executeCmd() {}
+        // Add Applab methods here as needed
+      };
+    }
+    sinon.stub(window.Applab);
+  });
+
+  afterEach(() => {
+    // sinon.restore isn't in the docs, but it's by design;
+    // see https://github.com/sinonjs/sinon/issues/270
+    sinon.restore(window.Applab);
+    if (!windowHadApplab) {
+      delete window.Applab;
+    }
+  });
+}

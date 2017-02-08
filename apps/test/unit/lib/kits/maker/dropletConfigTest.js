@@ -1,5 +1,6 @@
 /** @file Test maker droplet config behavior */
 import {expect} from '../../../../util/configuredChai';
+import {stubWindowApplab} from '../../../../util/testUtils';
 import sinon from 'sinon';
 import {
   blocks,
@@ -107,18 +108,17 @@ describe(`timedLoop(ms, callback)`, function () {
     expect(api.timedLoop).to.be.a('function');
   });
 
-  it('api call passes arguments through to Applab.executeCmd', function () {
-    // Check that API passes arguments through as expected
-    window.Applab = window.Applab || {executeCmd() {}};
-    sinon.stub(Applab, 'executeCmd');
+  describe('api passthrough', function () {
+    stubWindowApplab();
 
-    const ms = 234;
-    const callback = function () {};
-    api.timedLoop(ms, callback);
-    expect(window.Applab.executeCmd).to.have.been.calledWith(null, 'timedLoop', {ms, callback});
-
-    window.Applab.executeCmd.restore();
+    it('api call passes arguments through to Applab.executeCmd', function () {
+      const ms = 234;
+      const callback = function () {};
+      api.timedLoop(ms, callback);
+      expect(window.Applab.executeCmd).to.have.been.calledWith(null, 'timedLoop', {ms, callback});
+    });
   });
+
 
   it('has a matching export in commands.js', function () {
     expect(commands).to.haveOwnProperty('timedLoop');
