@@ -1698,21 +1698,6 @@ applabCommands.drawChartFromRecords = function (opts) {
   ).then(onSuccess, onError);
 };
 
-applabCommands.pinMode = function (opts) {
-  apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid');
-  apiValidateType(opts, 'pinMode', 'mode', opts.mode, 'string');
-
-  const modeStringToConstant = {
-    input: 0,
-    output: 1,
-    analog: 2,
-    pwm: 3,
-    servo: 4
-  };
-
-  Applab.makerController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
-};
-
 applabCommands.digitalWrite = function (opts) {
   apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
