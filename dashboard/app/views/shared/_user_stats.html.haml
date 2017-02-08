@@ -49,7 +49,7 @@
                 - link += "?user_id=#{user.id}"
               - if @section
                 - link += "&section_id=#{@section.id}"
-              %a.level_link{href: link, class: [status, "level-#{level_id}"], data: {result: result}}
+              %a.level_link{href: link, class: status, data: {result: result}}
                 - if script_level[:kind] == 'unplugged'
                   %span.puzzle-named
                     = script_level[:title]
