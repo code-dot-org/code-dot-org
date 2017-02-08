@@ -153,12 +153,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
     @teacher = enrollment.user
     @enrollment = enrollment
-
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? @workshop.course
-      @survey_url = CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{enrollment.code}", 'https:'
-    else
-      @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
-    end
+    @survey_url = enrollment.exit_survey_url
 
     @dash_code = CDO.pd_workshop_exit_survey_dash_code
 
