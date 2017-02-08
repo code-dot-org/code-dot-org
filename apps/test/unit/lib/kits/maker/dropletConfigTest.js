@@ -10,8 +10,8 @@ import {
 import * as api from '@cdo/apps/lib/kits/maker/api';
 import commands from '@cdo/apps/lib/kits/maker/commands';
 
-describe('getBoardEventDropdownForParam', function () {
-  it('unknown first parameter dropdown contains all options', function () {
+describe('getBoardEventDropdownForParam', () => {
+  it('unknown first parameter dropdown contains all options', () => {
     expect(getBoardEventDropdownForParam('unknown')).to.deep.equal([
       '"change"',
       '"close"',
@@ -25,7 +25,7 @@ describe('getBoardEventDropdownForParam', function () {
     ]);
   });
 
-  it('buttonL dropdown', function () {
+  it('buttonL dropdown', () => {
     expect(getBoardEventDropdownForParam('buttonL')).to.deep.equal([
       '"down"',
       '"press"',
@@ -33,7 +33,7 @@ describe('getBoardEventDropdownForParam', function () {
     ]);
   });
 
-  it('buttonR dropdown', function () {
+  it('buttonR dropdown', () => {
     expect(getBoardEventDropdownForParam('buttonR')).to.deep.equal([
       '"down"',
       '"press"',
@@ -41,14 +41,14 @@ describe('getBoardEventDropdownForParam', function () {
     ]);
   });
 
-  it('toggleSwitch dropdown', function () {
+  it('toggleSwitch dropdown', () => {
     expect(getBoardEventDropdownForParam('toggleSwitch')).to.deep.equal([
       '"close"',
       '"open"'
     ]);
   });
 
-  it('accelerometer dropdown', function () {
+  it('accelerometer dropdown', () => {
     expect(getBoardEventDropdownForParam('accelerometer')).to.deep.equal([
       '"change"',
       '"data"',
@@ -57,30 +57,30 @@ describe('getBoardEventDropdownForParam', function () {
     ]);
   });
 
-  it('soundSensor dropdown', function () {
+  it('soundSensor dropdown', () => {
     expect(getBoardEventDropdownForParam('soundSensor')).to.deep.equal([
       '"change"',
       '"data"'
     ]);
   });
 
-  it('lightSensor dropdown', function () {
+  it('lightSensor dropdown', () => {
     expect(getBoardEventDropdownForParam('lightSensor')).to.deep.equal([
       '"change"',
       '"data"'
     ]);
   });
 
-  it('tempSensor dropdown', function () {
+  it('tempSensor dropdown', () => {
     expect(getBoardEventDropdownForParam('tempSensor')).to.deep.equal([
       '"change"',
       '"data"'
     ]);
   });
 
-  describe('touchPads', function () {
+  describe('touchPads', () => {
     [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
-      it(`touchPad${pin} dropdown`, function () {
+      it(`touchPad${pin} dropdown`, () => {
         expect(getBoardEventDropdownForParam(`touchPad${pin}`)).to.deep.equal([
           '"down"',
           '"up"'
@@ -92,8 +92,8 @@ describe('getBoardEventDropdownForParam', function () {
 
 // TODO (bbuchanan): Replace with more general assertions when we move maker
 // commands back to this kit.
-describe(`timedLoop(ms, callback)`, function () {
-  it('is an exported block with expected configuration', function () {
+describe(`timedLoop(ms, callback)`, () => {
+  it('is an exported block with expected configuration', () => {
     const timedLoopBlocks = blocks.filter(block => block.func === 'timedLoop');
     expect(timedLoopBlocks).to.have.length(1);
     const timedLoopBlock = timedLoopBlocks[0];
@@ -103,29 +103,29 @@ describe(`timedLoop(ms, callback)`, function () {
     expect(timedLoopBlock.params).to.deep.equal(['1000', 'function(exit) {\n  \n}']);
   });
 
-  it('has a matching export in api.js', function () {
+  it('has a matching export in api.js', () => {
     expect(api).to.haveOwnProperty('timedLoop');
     expect(api.timedLoop).to.be.a('function');
   });
 
-  describe('api passthrough', function () {
+  describe('api passthrough', () => {
     stubWindowApplab();
 
-    it('api call passes arguments through to Applab.executeCmd', function () {
+    it('api call passes arguments through to Applab.executeCmd', () => {
       const ms = 234;
-      const callback = function () {};
+      const callback = () => {};
       api.timedLoop(ms, callback);
       expect(window.Applab.executeCmd).to.have.been.calledWith(null, 'timedLoop', {ms, callback});
     });
   });
 
 
-  it('has a matching export in commands.js', function () {
+  it('has a matching export in commands.js', () => {
     expect(commands).to.haveOwnProperty('timedLoop');
     expect(commands.timedLoop).to.be.a('function');
   });
 
-  it('runs code on an interval', function () {
+  it('runs code on an interval', () => {
     const clock = sinon.useFakeTimers();
 
     const spy = sinon.spy();
