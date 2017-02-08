@@ -6,9 +6,11 @@ import React from 'react';
 import CsFundamentalsSection from './csFundamentalsSection';
 import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSection';
 
+const CSPCSDcourses = ['CS Principles', 'CS Discoveries'];
 
 const LandingPage = React.createClass({
   propTypes: {
+    coursesCompleted: React.PropTypes.arrayOf(React.PropTypes.string),
     coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string),
     lastWorkshopSurveyUrl: React.PropTypes.string
   },
@@ -43,6 +45,11 @@ const LandingPage = React.createClass({
     );
   },
 
+  shouldRenderCSPCSDSection() {
+    return _.intersection(CSPCSDcourses, this.props.coursesCompleted).length ||
+      (_.intersection(CSPCSDcourses, this.props.coursesTaught).length && this.props.lastWorkshopSurveyUrl)
+  },
+
   render() {
     return (
       <div>
@@ -52,10 +59,10 @@ const LandingPage = React.createClass({
             <CsFundamentalsSection/>
           )
         }
-        {
-          (this.props.coursesTaught.includes('CS Principles') || this.props.coursesTaught.includes('CS Discoveries')) && (
+        { this.shouldRenderCSPCSDSection() && (
             <CsPrinciplesAndDiscoveriesSection
               lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyUrl}
+              coursesCompleted={this.props.coursesCompleted}
             />
           )
         }
