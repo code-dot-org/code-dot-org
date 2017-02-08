@@ -8,7 +8,6 @@ import { StatusProgressDot } from
 import * as stageLockRedux from '@cdo/apps/code-studio/stageLockRedux';
 import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
-import { TestResults } from '@cdo/apps/constants';
 
 const ViewType = stageLockRedux.ViewType;
 
@@ -36,10 +35,6 @@ describe('StatusProgressDot', () => {
       title: 1,
       uid: '5275_0',
       url: '/test-url'
-    },
-    levelProgress: {
-      // teacher has perfect status
-      '5275_0': TestResults.ALL_PASS,
     },
     courseOverviewPage: true,
     postMilestoneDisabled: false,
@@ -134,10 +129,8 @@ describe('StatusProgressDot', () => {
       const props = {
         ...baseProps,
         level: {
-          ...baseProps.level
-        },
-        levelProgress: {
-          5275: TestResults.LOCKED_RESULT
+          ...baseProps.level,
+          status: LevelStatus.locked
         },
         stageId: partiallyLockedStageId,
         viewAs: ViewType.Student,
