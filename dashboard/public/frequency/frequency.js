@@ -1154,7 +1154,7 @@ $(document).ready(function () {
     }
 
     finishedButton.prop("disabled", true);
-    dashboard.dialog.processResults(function (willRedirect) {
+    dashboard.widget.processResults(function (willRedirect) {
       if (!willRedirect) {
         finishedButton.prop("disabled", false);
       }

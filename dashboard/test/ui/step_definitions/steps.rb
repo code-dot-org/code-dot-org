@@ -203,16 +203,16 @@ When /^I inject simulation$/ do
 end
 
 When /^I press "([^"]*)"$/ do |button|
-  wait_with_short_timeout.until {
+  wait_with_short_timeout.until do
     @button = @browser.find_element(id: button)
-  }
+  end
   @button.click
 end
 
 When /^I press the first "([^"]*)" element$/ do |selector|
-  wait_with_short_timeout.until {
+  wait_with_short_timeout.until do
     @element = @browser.find_element(:css, selector)
-  }
+  end
   begin
     @element.click
   rescue
@@ -223,9 +223,9 @@ When /^I press the first "([^"]*)" element$/ do |selector|
 end
 
 When /^I press the "([^"]*)" button$/ do |button_text|
-  wait_with_short_timeout.until {
+  wait_with_short_timeout.until do
     @button = @browser.find_element(:css, "input[value='#{button_text}']")
-  }
+  end
   @button.click
 end
 
@@ -308,9 +308,9 @@ When /^I press dropdown item "([^"]*)"$/ do |index|
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
-  wait_with_timeout.until {
+  wait_with_timeout.until do
     @button = @browser.find_element(:xpath, xpath)
-  }
+  end
   @button.click
 end
 
@@ -706,9 +706,9 @@ Then /^I wait for jquery to load$/ do
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_id|
-  wait_with_short_timeout.until {
+  wait_with_short_timeout.until do
     @child_item = @browser.find_element(:id, child_id)
-  }
+  end
   actual_parent_item = @child_item.find_element(:xpath, "..")
   actual_parent_id = actual_parent_item.attribute('id')
   expect(actual_parent_id).to eq(parent_id)
@@ -765,10 +765,12 @@ end
 Then(/^I fake completion of the assessment$/) do
   user = User.find_by_email_or_hashed_email(@users.first[1][:email])
   unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user)
-  unit_assignment.enroll_user_in_unit_with_learning_modules([
-    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::CONTENT_MODULE),
-    unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
-  ])
+  unit_assignment.enroll_user_in_unit_with_learning_modules(
+    [
+      unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::CONTENT_MODULE),
+      unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
+    ]
+  )
 end
 
 def generate_user(name)
@@ -776,8 +778,8 @@ def generate_user(name)
   password = name + "password" # hack
   @users ||= {}
   @users[name] = {
-      password: password,
-      email: email
+    password: password,
+    email: email
   }
   return email, password
 end

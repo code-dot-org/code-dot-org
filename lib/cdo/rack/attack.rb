@@ -39,14 +39,18 @@ class RackAttackConfigUpdater
   # Returns a default rack attack store backed by Redis.
   def default_redis_cache_store
     Rack::Attack::StoreProxy::RedisStoreProxy.new(
-      Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379'))
+      Redis.new(url: CDO.geocoder_redis_url || 'redis://localhost:6379')
+    )
   end
 
   # Updates the RackAttack limits based on CDO defaults and DCDO overrides.
   def update_config
     limits(max_table_reads_per_sec).each do |limit, period|
-      Rack::Attack.throttle("shared-tables/reads/#{period}",
-        limit: limit, period: period.seconds) do |req|
+      Rack::Attack.throttle(
+        "shared-tables/reads/#{period}",
+        limit: limit,
+        period: period.seconds
+      ) do |req|
         # extract the channel id for get requests to shared tables. Only match full
         # table reads, because createRecord commands get redirected to individual row
         # reads and we don't want those reads to count toward these limits.
@@ -55,8 +59,11 @@ class RackAttackConfigUpdater
     end
 
     limits(max_table_writes_per_sec).each do |limit, period|
-      Rack::Attack.throttle("shared-tables/writes/#{period}",
-        limit: limit, period: period.seconds) do |req|
+      Rack::Attack.throttle(
+        "shared-tables/writes/#{period}",
+        limit: limit,
+        period: period.seconds
+      ) do |req|
         # extract the channel id for create, update and delete requests to shared tables.
         # TODO(dave): Make imports and other table/column operations not fall into this bucket
         # once we are accounting for them separately.
@@ -65,16 +72,22 @@ class RackAttackConfigUpdater
     end
 
     limits(max_property_reads_per_sec).each do |limit, period|
-      Rack::Attack.throttle("shared-properties/reads/#{period}",
-        limit: limit, period: period.seconds) do |req|
+      Rack::Attack.throttle(
+        "shared-properties/reads/#{period}",
+        limit: limit,
+        period: period.seconds
+      ) do |req|
         # extract the channel id for reads of shared properties.
         req.get? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
       end
     end
 
     limits(max_property_writes_per_sec).each do |limit, period|
-      Rack::Attack.throttle("shared-properties/writes/#{period}",
-        limit: limit, period: period.seconds) do |req|
+      Rack::Attack.throttle(
+        "shared-properties/writes/#{period}",
+        limit: limit,
+        period: period.seconds
+      ) do |req|
         # extract the channel id for writes to shared properties.
         req.write? && %r{^/v3/shared-properties/([^/]+)/[^/]+$}.match(req.path).try(:[], 1)
       end
@@ -148,11 +161,11 @@ class Rack::Attack
       throttle_name = req.env['rack.attack.matched']
       throttle_data = req.env['rack.attack.throttle_data'][throttle_name]
       event_details = {
-          throttle_name: throttle_name,
-          throttle_data_count: throttle_data[:count],
-          throttle_data_period: throttle_data[:period],
-          throttle_data_limit: throttle_data[:limit],
-          encrypted_channel_id: req.env['rack.attack.match_discriminator'],
+        throttle_name: throttle_name,
+        throttle_data_count: throttle_data[:count],
+        throttle_data_period: throttle_data[:period],
+        throttle_data_limit: throttle_data[:limit],
+        encrypted_channel_id: req.env['rack.attack.match_discriminator'],
       }
 
       NewRelic::Agent.record_custom_event("RackAttackRequestThrottled", event_details)

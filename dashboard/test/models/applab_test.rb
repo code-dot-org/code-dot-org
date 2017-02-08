@@ -16,8 +16,12 @@ class ApplabTest < ActiveSupport::TestCase
       (\{[^}]*\})              # Capture value of property
     /mx.match(file_contents)[1]
 
-    assert_same_keys(JSON.parse(code_functions), JSON.parse(Applab.palette),
-      'applab/levels.js', 'applab.rb',
-      "Ruby-JavaScript palette mismatch")
+    assert_same_keys(
+      JSON.parse(code_functions),
+      JSON.parse(Applab.palette),
+      'applab/levels.js',
+      'applab.rb',
+      "Ruby-JavaScript palette mismatch"
+    )
   end
 end

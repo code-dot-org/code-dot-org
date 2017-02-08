@@ -34,30 +34,32 @@ class ClassSubmission
   end
 
   def self.formats
-    (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels({
-      'in_school' => %w(
-        daily_programming_course
-        ap_computer_science
-        full_university_cs_curriculum
-        robotics_club
-        programming_integrated_in_other_classes
-        summer_school_cs_program
-        exploring_computer_science
-        other
-      ),
-      'out_of_school' => %w(
-        summer_camp
-        afterschool_program
-        all-day_workshop
-        multi-week_workshop
-        other
-      ),
-      'online' => %w(
-        programming_class
-        teacher_resource
-        other
-      )
-    })
+    (@formats ||= {})[I18n.locale] ||= formats_with_i18n_labels(
+      {
+        'in_school' => %w(
+          daily_programming_course
+          ap_computer_science
+          full_university_cs_curriculum
+          robotics_club
+          programming_integrated_in_other_classes
+          summer_school_cs_program
+          exploring_computer_science
+          other
+        ),
+        'out_of_school' => %w(
+          summer_camp
+          afterschool_program
+          all-day_workshop
+          multi-week_workshop
+          other
+        ),
+        'online' => %w(
+          programming_class
+          teacher_resource
+          other
+        )
+      }
+    )
   end
 
   def self.formats_with_i18n_labels(groups)
@@ -168,13 +170,13 @@ class ClassSubmission
     fq.push("class_format_category_s:#{params['class_format_category_s']}") unless params['class_format_category_s'].nil_or_empty?
     fq.push("school_tuition_s:#{params['school_tuition_s']}") unless params['school_tuition_s'].nil_or_empty?
 
-    params['class_languages_all_ss'].each { |language|
+    params['class_languages_all_ss'].each do |language|
       fq.push("class_languages_all_ss:#{language}")
-    } unless params['class_languages_all_ss'].nil_or_empty?
+    end unless params['class_languages_all_ss'].nil_or_empty?
 
-    params['school_level_ss'].each { |level|
+    params['school_level_ss'].each do |level|
       fq.push("school_level_ss:#{level}")
-    } unless params['school_level_ss'].nil_or_empty?
+    end unless params['school_level_ss'].nil_or_empty?
 
     fl = 'location_p,school_name_s,school_address_s,class_format_s,class_format_category_s,school_tuition_s,school_level_ss,class_languages_all_ss,school_website_s,class_description_s'
     {

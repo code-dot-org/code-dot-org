@@ -27,7 +27,7 @@ Scenario: Toggle on Hidden Maze Level
   And I wait to see ".uitest-hidden"
   Then I click selector ".uitest-hidden:nth(1)"
   Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
-  And I close the instructions overlay if it exists
+  And I wait for the page to fully load
   And I see no difference for "page load"
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"

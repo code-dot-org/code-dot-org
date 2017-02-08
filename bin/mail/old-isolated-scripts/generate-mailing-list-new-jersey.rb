@@ -4,79 +4,85 @@ require 'cdo/solr'
 require src_dir 'database'
 
 SETS = {
-    seattle: {
-        cities: ['Bainbridge Island',
-                 'Spanaway',
-                 'Bremerton',
-                 'Lakewood',
-                 'Eastonville',
-                 'Enumclaw',
-                 'Tacoma',
-                 'Burien',
-                 'Marysville',
-                 'Seattle',
-                 'Shoreline',
-                 'Lake Forest Park',
-                 'Tukwila',
-                 'Lake Stevens',
-                 'Snohomish',
-                 'Everett',
-                 'Lynwood',
-                 'Federal Way',
-                 'Puyallup',
-                 'Oriting',
-                 'Gig Harbor',
-                 'Belfair',
-                 'Silverdale',
-                 'Poulsbo',
-                 'Shelton',
-                 'Lacey',
-                 'Olympia',
-                 'Chimacum'],
-        state: 'Washington'
-    },
-    clark: {
-        cities: ['Las Vegas',
-                 'Boulder City',
-                 'Henderson',
-                 'Mesquite',
-                 'North Las Vegas'],
-        state: 'Nevada'
-    },
-    la: {
-        cities: ['Bell',
-                 'Cudahy',
-                 'Florence',
-                 'Gardena',
-                 'Huntington Park',
-                 'Lomita',
-                 'Los Angeles',
-                 'Marina del Rey',
-                 'Maywood',
-                 'San Fernando',
-                 'South Gate',
-                 'Topanga',
-                 'Universal City',
-                 'Vernon',
-                 'View Park',
-                 'Walnut Park',
-                 'West Athens',
-                 'Westmont',
-                 'West Hollywood',
-                 'Carson',
-                 'Commerce',
-                 'East Los Angeles',
-                 'Hawthorne',
-                 'Inglewood',
-                 'Monterey Park',
-                 'West Compton',
-                 'Willowbrook'],
-        state: 'California'
-    },
-    columbus: {
-        pt: '39.98,-82.98',
-        d: '40'
-    }
+  seattle: {
+    cities: [
+      'Bainbridge Island',
+      'Spanaway',
+      'Bremerton',
+      'Lakewood',
+      'Eastonville',
+      'Enumclaw',
+      'Tacoma',
+      'Burien',
+      'Marysville',
+      'Seattle',
+      'Shoreline',
+      'Lake Forest Park',
+      'Tukwila',
+      'Lake Stevens',
+      'Snohomish',
+      'Everett',
+      'Lynwood',
+      'Federal Way',
+      'Puyallup',
+      'Oriting',
+      'Gig Harbor',
+      'Belfair',
+      'Silverdale',
+      'Poulsbo',
+      'Shelton',
+      'Lacey',
+      'Olympia',
+      'Chimacum'
+    ],
+    state: 'Washington'
+  },
+  clark: {
+    cities: [
+      'Las Vegas',
+      'Boulder City',
+      'Henderson',
+      'Mesquite',
+      'North Las Vegas'
+    ],
+    state: 'Nevada'
+  },
+  la: {
+    cities: [
+      'Bell',
+      'Cudahy',
+      'Florence',
+      'Gardena',
+      'Huntington Park',
+      'Lomita',
+      'Los Angeles',
+      'Marina del Rey',
+      'Maywood',
+      'San Fernando',
+      'South Gate',
+      'Topanga',
+      'Universal City',
+      'Vernon',
+      'View Park',
+      'Walnut Park',
+      'West Athens',
+      'Westmont',
+      'West Hollywood',
+      'Carson',
+      'Commerce',
+      'East Los Angeles',
+      'Hawthorne',
+      'Inglewood',
+      'Monterey Park',
+      'West Compton',
+      'Willowbrook'
+    ],
+    state: 'California'
+  },
+  columbus: {
+    pt: '39.98,-82.98',
+    d: '40'
+  }
 }
 
 def city_query

@@ -27,10 +27,9 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "markdown_instructions": "**Challenge:** Debug this level by adding blocks to get me to the pig!",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Stuck? Try tracing the bird's path with your finger.\",\r\n  \"hint_id\": \"grade1_maze_sequence8_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )\",\r\n  \"hint_id\": \"grade1_maze_sequence8_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Stuck? Try tracing the bird's path with your finger.\",\"hint_id\":\"grade1_maze_sequence8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6f51b2337ebe235039efad494b7b9412/grade1_maze_sequence8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The extra blocks need to be added before the last ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51 PM.png )\",\"hint_id\":\"grade1_maze_sequence8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1f92cdad6c0d7158feba4fc7d1b83c21/grade1_maze_sequence8.mp3\"}]",
     "instructions_important": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

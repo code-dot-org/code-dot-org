@@ -164,6 +164,7 @@ WebLab.prototype.init = function (config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
+    documentationUrl: 'https://docs.code.org/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
   });
 

@@ -213,3 +213,6 @@ level 'Web Lab 1'
 
 stage 'Single page assessment'
 assessment 'Test longassessment levelgroup new'
+
+stage 'Standalone video'
+level 'AllTheThings_StandaloneVideo'

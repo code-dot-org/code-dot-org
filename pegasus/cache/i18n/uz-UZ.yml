@@ -1901,3 +1901,20 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
+    science education movement. You can participate in high-quality K-12th grade professional
+    learning programs <strong>at absolutely no cost to you or your school</strong>.
+    Take the lead on computer science in your school, and apply for professional learning.
+  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
+    To protect your students’ privacy, we have made a change to your section’s login
+    page to avoid displaying full names. Even though this update should reduce privacy
+    concerns for the login page, we still encourage users to <i>not use full names
+    for students</i>.
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
+  csppostap_name: 'Post AP: Databases in Apps'
+  csf2_draft_category_name: 'Under Development: Courses A - F'

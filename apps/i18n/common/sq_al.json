@@ -333,7 +333,10 @@
   "whenRun": "kur ekzekutohet",
   "workspaceHeaderShort": "hapësirë pune",
   "yes": "Po",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
+  "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
+  "levelN": "LEVEL {levelNumber}",
   "projectTypeAlgebra": "Algebra",
   "yourProgress": "Your Progress"
 }

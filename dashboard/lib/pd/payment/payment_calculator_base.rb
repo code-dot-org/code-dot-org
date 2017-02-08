@@ -159,7 +159,8 @@ module Pd::Payment
       # Generate a teacher summary for all teachers in raw attendance.
       raw_teacher_attendance.keys.map do |teacher_id|
         enrollment = enrollments_by_teacher_id[teacher_id]
-        teacher = enrolled_teachers_by_id[teacher_id] || User.find(teacher_id)
+        teacher = enrolled_teachers_by_id[teacher_id] ||
+          User.with_deleted.find(teacher_id)
         raw_attendance = raw_teacher_attendance[teacher_id]
 
         days, hours = calculate_adjusted_teacher_attendance raw_attendance, workshop_summary.min_attendance_days,

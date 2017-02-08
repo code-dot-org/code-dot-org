@@ -69,17 +69,18 @@ module AWS
       # First prints the JSON-formatted template, then either raises an error (if invalid)
       # or prints the template description (if valid).
       def validate
-        template = json_template(dry_run: true)
-        CDO.log.info JSON.pretty_generate(JSON.parse(template))
+        template = render_template(dry_run: true)
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
         CDO.log.info "Parameters: #{parameters(template).join("\n")}"
 
         if stack_exists?
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
-          change_set_id = cfn.create_change_set(stack_options(template).merge(
-            change_set_name: "#{stack_name}-#{Digest::MD5.hexdigest(template)}"
-          )).id
+          change_set_id = cfn.create_change_set(
+            stack_options(template).merge(
+              change_set_name: "#{stack_name}-#{Digest::MD5.hexdigest(template)}"
+            )
+          ).id
 
           begin
             change_set = {changes: []}
@@ -118,7 +119,7 @@ module AWS
       end
 
       def parameters(template)
-        params = JSON.parse(template)['Parameters']
+        params = YAML.load(template)['Parameters']
         return [] unless params
         params.keys.map do |key|
           value = CDO[key.underscore]
@@ -145,7 +146,7 @@ module AWS
       end
 
       def create_or_update
-        template = json_template
+        template = render_template
         action = stack_exists? ? :update : :create
         CDO.log.info "#{action} stack: #{stack_name}..."
         start_time = Time.now
@@ -208,8 +209,10 @@ module AWS
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
-              client = Aws::S3::Client.new(region: CDO.aws_region,
-                                           credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
+              client = Aws::S3::Client.new(
+                region: CDO.aws_region,
+                credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key)
+              )
               client.put_object(
                 bucket: S3_BUCKET,
                 key: "chef/#{branch}.tar.gz",
@@ -283,7 +286,7 @@ module AWS
         CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
       end
 
-      def json_template(dry_run: false)
+      def render_template(dry_run: false)
         filename = aws_dir('cloudformation', TEMPLATE)
         template_string = File.read(filename)
         availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
@@ -321,8 +324,7 @@ module AWS
           update_bootstrap_script: method(:update_bootstrap_script),
           log_name: LOG_NAME
         )
-        erb_output = erb_eval(template_string, filename)
-        YAML.load(erb_output).to_json
+        erb_eval(template_string, filename)
       end
 
       # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
