@@ -5,6 +5,38 @@ import color from "../util/color";
 import locale from '@cdo/locale';
 
 const styles = {
+  checkmarks: {
+    position: 'absolute',
+    top: 50,
+    right: 120,
+    left: 120,
+    height: 230,
+    padding: '50px 100px',
+    boxSizing: 'border-box',
+    background: '#fff',
+    borderRadius: 8,
+    boxShadow: '0 2px 7px 2px rgba(0, 0, 0, 0.3)',
+    color: color.purple,
+  },
+  achievement: {
+    row: {
+      lineHeight: '28px',
+    },
+    icon: {
+      fontSize: 30,
+      verticalAlign: 'middle',
+      width: 30,
+      marginRight: 10,
+    },
+    text: {
+      fontSize: 20,
+      color: '#392e52',
+      verticalAlign: 'middle',
+    },
+    inactive: {
+      color: '#aaa',
+    }
+  },
   feedbackMessage: {
     fontSize: 18,
     textAlign: 'center',
@@ -53,7 +85,10 @@ const AchievementDialog = Radium(React.createClass({
   },
 
   render() {
-    const params = {puzzleNumber: this.props.puzzleNumber, numBlocks: this.props.idealBlocks};
+    const params = {
+      puzzleNumber: this.props.puzzleNumber,
+      numBlocks: this.props.idealBlocks
+    };
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
     const message = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
@@ -65,6 +100,20 @@ const AchievementDialog = Radium(React.createClass({
         handleClose={this.handleClose.bind(this, !tooManyBlocks)}
         assetUrl={this.props.assetUrl}
       >
+        <div style={styles.checkmarks}>
+          <p style={styles.achievement.row}>
+            <i className="fa fa-check-square-o" style={styles.achievement.icon}/>
+            <span style={styles.achievement.text}>Puzzle completed!</span>
+          </p>
+          <p style={styles.achievement.row}>
+            <i className="fa fa-square-o" style={[styles.achievement.icon, styles.achievement.inactive]}/>
+            <span style={[styles.achievement.text, styles.achievement.inactive]}>Too many blocks</span>
+          </p>
+          <p style={styles.achievement.row}>
+            <i className="fa fa-square-o" style={[styles.achievement.icon, styles.achievement.inactive]}/>
+            <span style={[styles.achievement.text, styles.achievement.inactive]}>2 hints used</span>
+          </p>
+        </div>
         <div style={styles.footer}>
 
           <p style={styles.feedbackMessage}>{message}</p>
