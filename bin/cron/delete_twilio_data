@@ -44,10 +44,9 @@ def main
 
         message.delete
       rescue Twilio::REST::RequestError => e
-        # TODO(asher): Consider whether we should log the exception and continue to
-        # attempt to delete further messages rather than stopping deletion.
         sanitized_error_message = e.message.sub CDO.twilio_sid, 'CDO.twilio_sid'
-        raise "Twilio::REST::RequestError (#{message.status}): #{sanitized_error_message}"
+        HipChat.message 'infra-twilio', sanitized_error_message, color: 'red'
+        next
       end
     end
 
