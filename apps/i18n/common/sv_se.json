@@ -333,6 +333,7 @@
   "whenRun": "vid start",
   "workspaceHeaderShort": "Arbetsyta: ",
   "yes": "Ja",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
   "levelN": "LEVEL {levelNumber}",
