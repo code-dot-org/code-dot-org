@@ -134,7 +134,7 @@ en:
     accept_terms: "You must agree to create an account"
   signin_form:
     title: 'Have an account already? Sign in'
-    login: 'Email'
+    login: 'Email or Username'
     password: 'Password'
     remember: 'Remember me'
     submit: 'Sign in'
