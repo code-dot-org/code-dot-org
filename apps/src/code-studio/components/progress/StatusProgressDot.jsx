@@ -4,7 +4,7 @@ import ProgressDot from './progress_dot';
 import { levelProgressShape } from './types';
 import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 import { LevelStatus } from '../../activityUtils';
-import { SignInState, statusForLevel } from '../../progressRedux';
+import { SignInState } from '../../progressRedux';
 
 /**
  * Wrapper around ProgressDot that owns determining the correct status for the
@@ -28,10 +28,10 @@ export const StatusProgressDot = React.createClass({
         })
       )
     ),
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
+
     postMilestoneDisabled: PropTypes.bool.isRequired,
-    signInState: PropTypes.oneOf(Object.values(SignInState)).isRequired,
-    levelProgress: PropTypes.object.isRequired
+    signInState: PropTypes.oneOf(Object.values(SignInState)).isRequired
   },
 
   render() {
@@ -42,11 +42,10 @@ export const StatusProgressDot = React.createClass({
       currentSection,
       viewAs,
       postMilestoneDisabled,
-      signInState,
-      levelProgress
+      signInState
     } = this.props;
 
-    let status = statusForLevel(level, levelProgress);
+    let status = level.status;
 
     // If we're a teacher viewing as a student, we want to render lockable stages
     // to have a lockable item only if the stage is fully locked.
@@ -88,6 +87,5 @@ export default connect(state => ({
   postMilestoneDisabled: state.progress.postMilestoneDisabled,
   signInState: state.progress.signInState,
   currentSection: state.stageLock.stagesBySectionId[state.sections.selectedSectionId],
-  viewAs: state.stageLock.viewAs,
-  levelProgress: state.progress.levelProgress
+  viewAs: state.stageLock.viewAs
 }))(StatusProgressDot);
