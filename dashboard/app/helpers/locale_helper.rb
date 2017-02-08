@@ -3,7 +3,7 @@ module LocaleHelper
   def locale
     current = request.env['cdo.locale']
     #if(current_user && current_user.locale != current)
-      # TODO: Set language cookie and reload the page.
+    # TODO: Set language cookie and reload the page.
     #end
     current.downcase.to_sym
   end
