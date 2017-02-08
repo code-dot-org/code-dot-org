@@ -16,10 +16,6 @@ describe('The JSDebugger component', () => {
     stubRedux();
     registerReducers(commonReducers);
 
-    const codeTextbox = document.createElement('div');
-    document.body.appendChild(codeTextbox);
-    codeTextbox.id = 'codeTextbox';
-
     const runApp = sinon.spy();
     getStore().dispatch(setPageConstants({
       showDebugButtons: true,
@@ -30,7 +26,11 @@ describe('The JSDebugger component', () => {
     }));
     root = mount(
       <Provider store={getStore()}>
-        <JsDebugger style={{height: 250}}/>
+        <JsDebugger
+          style={{height: 250}}
+          onSlideOpen={sinon.spy()}
+          onSlideShut={sinon.spy()}
+        />
       </Provider>
     );
     jsDebugger = root.find('UnconnectedJsDebugger').get(0);
@@ -82,6 +82,10 @@ describe('The JSDebugger component', () => {
       expect(debugAreaEl().style.height).to.equal('30px');
     });
 
+    it("will call the onSlideShut prop", () => {
+      expect(jsDebugger.props.onSlideShut).to.have.been.called;
+    });
+
     describe("Then clicking the open icon", () => {
 
       beforeEach(() => {
@@ -99,6 +103,10 @@ describe('The JSDebugger component', () => {
 
       it("will expand the debugger by setting the height in the css", () => {
         expect(debugAreaEl().style.height).to.equal('250px');
+      });
+
+      it("will call the onSlideOpen prop", () => {
+        expect(jsDebugger.props.onSlideOpen).to.have.been.called;
       });
 
       describe("And resizing the debug area with other code", () => {

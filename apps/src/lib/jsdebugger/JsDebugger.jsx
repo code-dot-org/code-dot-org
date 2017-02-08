@@ -16,7 +16,6 @@ var PaneHeader = require('@cdo/apps/templates/PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
 var SpeedSlider = require('@cdo/apps/templates/SpeedSlider');
-var utils = require('@cdo/apps/utils');
 import {setStepSpeed} from '@cdo/apps/redux/runState';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import JsDebuggerUi from './JsDebuggerUi';
@@ -150,6 +149,8 @@ var UnconnectedJsDebugger = Radium(React.createClass({
 
     // passed from above
     setStepSpeed: PropTypes.func.isRequired,
+    onSlideShut: PropTypes.func,
+    onSlideOpen: PropTypes.func,
     style: PropTypes.object,
   },
 
@@ -173,17 +174,15 @@ var UnconnectedJsDebugger = Radium(React.createClass({
   },
 
   slideShut() {
-    const closedHeight = $(this.root).find('#debug-area-header').height() + $(this.root).find('#debugResizeBar').height();
+    const closedHeight = $(this.root).find('#debug-area-header').height() +
+                         $(this.root).find('#debugResizeBar').height();
     this.setState({
       transitionType: 'closing',
       open: false,
       openedHeight: $(this.root).height(),
       closedHeight,
     });
-    $('#codeTextbox').animate(
-      {bottom: closedHeight},
-      {step: utils.fireResizeEvent}
-    );
+    this.props.onSlideShut && this.props.onSlideShut(closedHeight);
   },
 
   slideOpen() {
@@ -191,10 +190,7 @@ var UnconnectedJsDebugger = Radium(React.createClass({
       open: true,
       transitionType: 'opening',
     });
-    $('#codeTextbox').animate(
-      {bottom: this.state.openedHeight},
-      {step: utils.fireResizeEvent}
-    );
+    this.props.onSlideOpen && this.props.onSlideOpen(this.state.openedHeight);
   },
 
   slideToggle() {
