@@ -11,7 +11,8 @@ console.log(landingPageData);
 ReactDOM.render(
   <LandingPage
     coursesTaught={landingPageData['courses_teaching']}
-    lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
+    coursesCompleted={landingPageData['courses_completed']}
+    lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_link']}
   />,
   document.getElementById('landing-page-container')
 );

@@ -5,11 +5,13 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     # Get workshops that the user is enrolled in with an outstanding survey
     workshops = Pd::Workshop.enrolled_in_by(current_user)
     courses_teaching = workshops.pluck(:course).uniq
+    courses_completed = workshops.in_state(Pd::Workshop::STATE_ENDED).pluck(:course).uniq
 
     # Link to the certificate
     @landing_page_data = {
       courses_teaching: courses_teaching,
-      last_survey_link: 'some link'
+      courses_completed: courses_teaching, #Temporary hack
+      last_workshop_survey_link: 'some link'
     }
   end
 end
