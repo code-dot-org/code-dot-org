@@ -3,10 +3,13 @@
  */
 
 import React from 'react';
+import CsFundamentalsSection from './csFundamentalsSection';
+import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSection';
+
 
 const LandingPage = React.createClass({
   propTypes: {
-
+    coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string)
   },
 
   renderHeaderImage() {
@@ -43,6 +46,16 @@ const LandingPage = React.createClass({
     return (
       <div>
         {this.renderHeaderImage()}
+        {
+          this.props.coursesTaught.includes('CS Fundamentals') && (
+            <CsFundamentalsSection/>
+          )
+        }
+        {
+          (this.props.coursesTaught.includes('CS Principles') || this.props.coursesTaught.includes('CS Discoveries')) && (
+            <CsPrinciplesAndDiscoveriesSection/>
+          )
+        }
       </div>
     );
   }
