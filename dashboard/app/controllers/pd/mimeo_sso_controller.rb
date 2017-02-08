@@ -19,14 +19,19 @@ class Pd::MimeoSsoController < ApplicationController
       raise CanCan::AccessDenied unless PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: @enrollment.id).any?
     end
 
+    # First name is always present, but some older enrollments don't have last names.
+    # The API requires both so substitute a placeholder for blank last names:
+    first_name = @enrollment.first_name
+    last_name = @enrollment.last_name.present? ? @enrollment.last_name : '-'
+
     # Set up fields for the Mimeo SSO API. Each of these will be rendered as a hidden field on a form which will be
     # automatically posted to the @endpoint on page load.
     # Mimeo's API will then authenticate and either redirect the user's browser to the redirectUrl on success,
     # or to our errorUrl if it fails (see #error below).
     @endpoint = ENDPOINT
     @fields = {
-      firstName: encrypt_token(@enrollment.first_name),
-      lastName: encrypt_token(@enrollment.last_name),
+      firstName: encrypt_token(first_name),
+      lastName: encrypt_token(last_name),
       email: encrypt_token(current_user.email),
       companyId: secret(:company_id),
       organizationId: secret(:organization_id, encrypt: true),
