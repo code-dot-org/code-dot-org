@@ -39,11 +39,11 @@ class QueueProcessorTest < ActiveSupport::TestCase
       @logger = logger
       @lock = Mutex.new
 
-      # An array of all of the message bodies received by the handler.
-      @bodies = Set.new #<String>
+      # A set of strings of message bodies received by the handler.
+      @bodies = Set.new
 
-      # A set of message bodies to intentionally fail on.
-      @fail_on_message = Set.new #<String>
+      # A set of strings of message bodies to intentionally fail on.
+      @fail_on_message = Set.new
     end
 
     def handle(messages)
@@ -78,7 +78,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
 
     def reset_received_bodies
       @lock.synchronize do
-        @bodies = Set.new #<String>
+        @bodies = Set.new
       end
     end
   end
@@ -140,7 +140,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
     batches = 5
     batch_size = 10
     num_messages = batches * batch_size
-    expected_bodies = Set.new #<String>
+    expected_bodies = Set.new
     batches.times do
       batch = []
       batch_size.times do
