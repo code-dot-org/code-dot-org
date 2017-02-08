@@ -95,7 +95,7 @@ export const blocks = [
   {func: 'buzzer.note', category: CIRCUIT_CATEGORY, paletteParams: ['note', 'duration'], params: ['"A4"', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.off', category: CIRCUIT_CATEGORY},
   {func: 'buzzer.stop', category: CIRCUIT_CATEGORY},
-  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120]},
+  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
 
   // TODO(bjordan): re-add when dropdowns work with object refs
   //{func: 'accelerometer', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
