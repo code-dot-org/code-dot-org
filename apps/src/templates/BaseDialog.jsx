@@ -83,7 +83,7 @@ var BaseDialog = React.createClass({
       modalBodyClassNames = "";
       modalBodyStyle = {
         background: `#fff top center url(${this.props.assetUrl('media/background.png')}) no-repeat`,
-        height: 500,
+        height: 480,
         overflow: 'hidden',
         borderRadius: 4,
       };

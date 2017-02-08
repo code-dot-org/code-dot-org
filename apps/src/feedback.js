@@ -37,7 +37,7 @@ var CodeWritten = require('./templates/feedback/CodeWritten');
 var GeneratedCode = require('./templates/feedback/GeneratedCode');
 
 import experiments from './util/experiments';
-import BaseDialog from './templates/BaseDialog';
+import AchievementDialog from './templates/AchievementDialog';
 
 /**
  * @typedef {Object} TestableBlock
@@ -193,7 +193,14 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
-    ReactDOM.render(<BaseDialog useUpdatedStyles isOpen={true} assetUrl={this.studioApp_.assetUrl}/>, container);
+    ReactDOM.render(
+      <AchievementDialog
+        puzzleNumber={1}
+        idealBlocks={2}
+        actualBlocks={2}
+        hintsUsed={4}
+        assetUrl={this.studioApp_.assetUrl}
+      />, container);
     document.body.appendChild(container);
     return;
   }
