@@ -13,7 +13,7 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
   renderCompletedCourseBox() {
     if (this.props.lastWorkshopSurveyUrl) {
       return (
-        <div>
+        <div id="cspStartSurvey">
           <h3>
             Share your feedback
           </h3>
@@ -25,10 +25,10 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
             Start Survey
           </Button>
         </div>
-      )
+      );
     } else if (this.props.coursesCompleted && this.props.coursesCompleted.length > 0) {
       return (
-        <div style={{marginTop: '20px'}}>
+        <div style={{marginTop: '20px'}} id="cspThanks">
           <h3>
             Thank you
           </h3>
@@ -37,7 +37,7 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
             please email teacher@code.org
           </p>
         </div>
-      )
+      );
     }
   },
 
@@ -47,9 +47,11 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
         <br/>
         <TwoPartBanner
           leftHalf={(
-            <div style={Object.assign({}, imageStyle, leftStyle, {
-              backgroundImage: `url('https://code.org/images/email/BJC4NYC.jpg')`,
-            })}/>
+            <div
+              style={Object.assign({}, imageStyle, leftStyle, {
+                backgroundImage: `url('https://code.org/images/email/BJC4NYC.jpg')`,
+              })}
+            />
           )}
           rightHalf={(
            <div style={Object.assign({}, textStyle, rightStyle, {})}>

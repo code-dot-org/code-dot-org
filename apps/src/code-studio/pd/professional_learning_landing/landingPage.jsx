@@ -5,6 +5,7 @@
 import React from 'react';
 import CsFundamentalsSection from './csFundamentalsSection';
 import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSection';
+import _ from 'lodash';
 
 const CSPCSDcourses = ['CS Principles', 'CS Discoveries'];
 
@@ -47,7 +48,7 @@ const LandingPage = React.createClass({
 
   shouldRenderCSPCSDSection() {
     return _.intersection(CSPCSDcourses, this.props.coursesCompleted).length ||
-      (_.intersection(CSPCSDcourses, this.props.coursesTaught).length && this.props.lastWorkshopSurveyUrl)
+      (_.intersection(CSPCSDcourses, this.props.coursesTaught).length && this.props.lastWorkshopSurveyUrl);
   },
 
   render() {
@@ -55,11 +56,11 @@ const LandingPage = React.createClass({
       <div>
         {this.renderHeaderImage()}
         {
-          this.props.coursesTaught.includes('CS Fundamentals') && (
+          this.props.coursesTaught && this.props.coursesTaught.includes('CS Fundamentals') && (
             <CsFundamentalsSection/>
           )
         }
-        { this.shouldRenderCSPCSDSection() && (
+        {this.shouldRenderCSPCSDSection() && (
             <CsPrinciplesAndDiscoveriesSection
               lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyUrl}
               coursesCompleted={this.props.coursesCompleted}

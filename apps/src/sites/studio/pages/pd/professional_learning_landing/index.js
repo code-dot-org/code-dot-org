@@ -6,8 +6,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 const landingPageData = getScriptData('landingPageData');
 
-console.log(landingPageData);
-
 ReactDOM.render(
   <LandingPage
     coursesTaught={landingPageData['courses_teaching']}
