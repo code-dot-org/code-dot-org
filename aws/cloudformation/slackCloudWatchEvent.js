@@ -10,18 +10,18 @@ slack_req_opts.headers = {
   'Content-Type': 'application/json'
 };
 
-exports.handler = function(event, context) {
+exports.handler = function(event, context, callback) {
   var req = https.request(slack_req_opts, function(res) {
     if (res.statusCode === 200) {
-      context.succeed('posted to slack');
+      callback(null, 'posted to slack');
     } else {
-      context.fail('status code: ' + res.statusCode);
+      callback('status code: ' + res.statusCode);
     }
   });
 
   req.on('error', function(e) {
     console.log('problem with request: ' + e.message);
-    context.fail(e.message);
+    callback(e.message);
   });
 
   var cause = event.detail.Cause;
@@ -35,8 +35,9 @@ exports.handler = function(event, context) {
     username: 'Auto Scaling'
   };
   var type = event["detail-type"];
-  if (type == "EC2 Instance-launch Lifecycle Action") {
-    message.text = `<${instanceLink}|${instanceId}> - EC2 Instance Launch`
+  var action;
+  if (action = type.match(/EC2 Instance-(launch|terminate) Lifecycle Action/)) {
+    message.text = `<${instanceLink}|${instanceId}> - EC2 Instance ${action[1].replace(/^./, x=>x.toUpperCase())}`
   } else if (type.match("EC2 Instance (Launch|Terminate) Successful")) {
     var capacity = cause.match(' the capacity from (\\d+) to (\\d+)');
     var duration = (Date.parse(event.detail.EndTime) - Date.parse(event.detail.StartTime)) / 1000;
@@ -47,8 +48,8 @@ exports.handler = function(event, context) {
       color: "good",
       mrkdwn_in: ["fields"],
       fields: [
-        {"title": "Capacity", "value": capacity ? `*${capacity[1]}* to *${capacity[2]}*` : '', "short": true},
-        {"title": "Duration", "value": `*${~~(duration / 60)}* min *${~~(duration % 60)}* sec`, "short": true}
+        {title: "Capacity", value: capacity ? `*${capacity[1]}* to *${capacity[2]}*` : '', short: true},
+        {title: "Duration", value: `*${~~(duration / 60)}* min *${~~(duration % 60)}* sec`, short: true}
       ]
     }];
   } else {

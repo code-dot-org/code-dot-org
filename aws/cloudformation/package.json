@@ -5,5 +5,10 @@
   "license": "apache-2.0",
   "dependencies": {
     "aws-sdk": "^2.9.0"
+  },
+  "devDependencies": {
+    "lambda-tester": "^2.7.0",
+    "mocha": "^3.2.0",
+    "nock": "^9.0.4"
   }
 }
