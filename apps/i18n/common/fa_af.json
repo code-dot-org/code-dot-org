@@ -333,6 +333,7 @@
   "whenRun": "زمان اجرا",
   "workspaceHeaderShort": "محیط کار: ",
   "yes": "Yes",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
   "levelN": "LEVEL {levelNumber}",

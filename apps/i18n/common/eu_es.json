@@ -333,6 +333,7 @@
   "whenRun": "martxan dagoenean",
   "workspaceHeaderShort": "Lan eremua: ",
   "yes": "Bai",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
   "levelN": "LEVEL {levelNumber}",

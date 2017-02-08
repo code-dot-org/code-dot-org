@@ -333,6 +333,7 @@
   "whenRun": "quando executar",
   "workspaceHeaderShort": "Área de trabalho: ",
   "yes": "Sim",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
   "levelN": "LEVEL {levelNumber}",
