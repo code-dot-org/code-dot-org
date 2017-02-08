@@ -3,7 +3,7 @@
  * so this can only be used in cases where we have a redux store.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 
@@ -89,9 +89,9 @@ var DebugConsole = function (props) {
   );
 };
 DebugConsole.propTypes = {
-  debugButtons: React.PropTypes.bool,
-  debugWatch: React.PropTypes.bool,
-  style: React.PropTypes.object,
+  debugButtons: PropTypes.bool,
+  debugWatch: PropTypes.bool,
+  style: PropTypes.object,
 };
 
 /**
@@ -131,7 +131,7 @@ var DebugButtons = function ({style}) {
   );
 };
 DebugButtons.propTypes = {
-  style: React.PropTypes.object,
+  style: PropTypes.object,
 };
 
 /**
@@ -139,15 +139,18 @@ DebugButtons.propTypes = {
  */
 var UnconnectedJsDebugger = Radium(React.createClass({
   propTypes: {
-    debugButtons: React.PropTypes.bool.isRequired,
-    debugConsole: React.PropTypes.bool.isRequired,
-    debugWatch: React.PropTypes.bool.isRequired,
-    debugSlider: React.PropTypes.bool.isRequired,
-    debuggerUi: React.PropTypes.instanceOf(JsDebuggerUi).isRequired,
-    isDebuggerPaused: React.PropTypes.bool.isRequired,
-    stepSpeed: React.PropTypes.number.isRequired,
-    setStepSpeed: React.PropTypes.func.isRequired,
-    style: React.PropTypes.object,
+    // from redux
+    debugButtons: PropTypes.bool.isRequired,
+    debugConsole: PropTypes.bool.isRequired,
+    debugWatch: PropTypes.bool.isRequired,
+    debugSlider: PropTypes.bool.isRequired,
+    debuggerUi: PropTypes.instanceOf(JsDebuggerUi).isRequired,
+    isDebuggerPaused: PropTypes.bool.isRequired,
+    stepSpeed: PropTypes.number.isRequired,
+
+    // passed from above
+    setStepSpeed: PropTypes.func.isRequired,
+    style: PropTypes.object,
   },
 
   getInitialState() {
