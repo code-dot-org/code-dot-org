@@ -53,8 +53,13 @@
             = f.password_field :password_confirmation, class: 'input-xlarge fieldblock', maxlength: 255
             .error_in_field
 
-        #name-block.itemblock
+        #firstname-block.itemblock
           .labelblock= t('activerecord.attributes.user.firstname_lastinitial')
+          = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
+          .error_in_field
+
+        #name-block.itemblock{style: "display: none"}
+          .labelblock= t('activerecord.attributes.user.name')
           = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
           .error_in_field
 
