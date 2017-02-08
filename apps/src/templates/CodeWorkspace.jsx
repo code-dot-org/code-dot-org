@@ -2,7 +2,7 @@ var React = require('react');
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
-import JsDebugger from '@cdo/apps/lib/jsdebugger/JsDebugger';
+import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 var PaneHeader = require('./PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;

@@ -16,7 +16,7 @@ var PaneHeader = require('@cdo/apps/templates/PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
 var SpeedSlider = require('@cdo/apps/templates/SpeedSlider');
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../../templates/FontAwesome';
 import {setStepSpeed} from '@cdo/apps/redux/runState';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import JsDebuggerUi from './JsDebuggerUi';

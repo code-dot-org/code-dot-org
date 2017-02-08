@@ -27,7 +27,7 @@ import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
 import JSInterpreter from '../JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
-import JsDebuggerUi from '@cdo/apps/lib/jsdebugger/JsDebuggerUi';
+import JsDebuggerUi from '@cdo/apps/lib/tools/jsdebugger/JsDebuggerUi';
 import * as elementUtils from './designElements/elementUtils';
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
