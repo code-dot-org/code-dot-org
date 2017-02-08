@@ -9,7 +9,8 @@ import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSecti
 
 const LandingPage = React.createClass({
   propTypes: {
-    coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string)
+    coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string),
+    lastWorkshopSurveyUrl: React.PropTypes.string
   },
 
   renderHeaderImage() {
@@ -53,7 +54,9 @@ const LandingPage = React.createClass({
         }
         {
           (this.props.coursesTaught.includes('CS Principles') || this.props.coursesTaught.includes('CS Discoveries')) && (
-            <CsPrinciplesAndDiscoveriesSection/>
+            <CsPrinciplesAndDiscoveriesSection
+              lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyUrl}
+            />
           )
         }
       </div>
