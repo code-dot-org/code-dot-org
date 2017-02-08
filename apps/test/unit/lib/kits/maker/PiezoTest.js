@@ -56,6 +56,15 @@ describe('Piezo', function () {
         tempo
       });
     });
+
+    it(`passes a default tempo of 120bpm`, function () {
+      const song = [['C4', 1/2], ['D4', 1/2], ['E4', 1]];
+      piezo.play(song);
+      expect(five.Piezo.prototype.play).to.have.been.calledWith({
+        song,
+        tempo: 120
+      });
+    });
   });
 });
 
