@@ -22,7 +22,7 @@ const playSongConfig = {
   tempo: 100000
 };
 
-const MAKER_CATEGORY = 'Maker';
+export const MAKER_CATEGORY = 'Maker';
 const CIRCUIT_CATEGORY = 'Circuit';
 
 const pixelType = '[ColorLed].';
@@ -76,6 +76,7 @@ export const blocks = [
   {func: 'digitalRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
   {func: 'analogWrite', parent: api, category: MAKER_CATEGORY, paletteParams: ['pin', 'value'], params: ['5', '150']},
   {func: 'analogRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
+  {func: 'timedLoop', parent: api, category: MAKER_CATEGORY, paletteParams: ['ms', 'callback'], params: ['1000', 'function(exit) {\n  \n}']},
 
   /**
    * Circuit-Playground-specific blocks
