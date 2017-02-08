@@ -35,15 +35,15 @@ function interstitialLoaded() {
       });
     }
 
-    var already_shown = !!getCookie('hide_tos');
+    var already_shown = !!getTermsCookie('hide_tos');
     if (!already_shown) {
       $("#terms-modal").modal('show');
-      setCookie('hide_tos', '1');
+      setTermsCookie('hide_tos', '1');
     }
   }
 }
 
-function setCookie(key, value) {
+function setTermsCookie(key, value) {
   var expires = new Date();
   // Kill hide_tos cookie at midnight every night
   // so the terms interstitial pops up once a day.
@@ -51,7 +51,7 @@ function setCookie(key, value) {
   document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
 }
 
-function getCookie(key) {
+function getTermsCookie(key) {
   var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
   return keyValue ? keyValue[2] : null;
 }
