@@ -7,10 +7,13 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     @csp_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
 
     @teacher = create(:admin, email: 'test_email@foo.com', user_type: 'teacher')
+    other_teacher = create :teacher
 
     [@csf_workshop, @csd_workshop, @csp_workshop].each do |workshop|
-      create :pd_enrollment, email: @teacher.email, workshop: workshop
+      create :pd_enrollment, email: other_teacher.email, workshop: workshop
     end
+
+    create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
   end
 
   test 'index returns expected values' do
@@ -20,7 +23,6 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_response :success
     response = assigns(:landing_page_data)
 
-    assert_equal [Pd::Workshop::COURSE_CSF, Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP],
-                 response[:courses_teaching]
+    assert_equal [Pd::Workshop::COURSE_CSF], response[:courses_teaching]
   end
 end
