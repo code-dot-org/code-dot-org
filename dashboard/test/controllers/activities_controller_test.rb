@@ -976,11 +976,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
     assert_response :success
     expected_response = {
-        'level_source' => nil,
-        'share_failure' => {
-            'message' => "It looks like there is profanity in it. Try changing the text.",
-            'type' => 'profanity'
-        }
+      'level_source' => nil,
+      'share_failure' => {
+        'message' => "It looks like there is profanity in it. Try changing the text.",
+          'type' => 'profanity'
+      }
     }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -1076,12 +1076,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = {
-        'level_source' => nil,
-        'share_failure' => {
-            'message' => "It looks like there is a phone number in it. Try changing the text.",
-            'contents' => '800-555-5555',
-            'type' => 'phone'
-        }
+      'level_source' => nil,
+      'share_failure' => {
+        'message' => "It looks like there is a phone number in it. Try changing the text.",
+          'contents' => '800-555-5555',
+          'type' => 'phone'
+      }
     }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
