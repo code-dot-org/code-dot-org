@@ -107,7 +107,7 @@ const ProgressLevelSet = React.createClass({
         <tbody>
           <tr>
             <td>
-              <a href={url}>
+              <a href={multiLevelStep ? undefined : url}>
                 <div style={{...styles.stepButton, ...BUBBLE_COLORS[status]}}>
                   <FontAwesome icon={icon}/>
                   <div style={{...styles.buttonText, ...styles.text}}>
