@@ -1,6 +1,6 @@
-- if show_survey?
+- if show_diversity_survey?
   - survey_url = "https://docs.google.com/forms/d/10Qebl7Gi9DTf-RDt-0v78jVFdzJN0mWTSHgAuk6V5gU/viewform?entry.692842963=__other_option__&entry.692842963.other_option_response=#{current_user.id}&entry.1146050975&entry.796977513&entry.999252886"
-  .survey{style: "border: 4px solid #a69bc1; border-radius: 15px; padding:40px"}
+  .survey{style: "padding:40px; background-color: #00adbc; color: white"}
     #surveythanks{style: "display: none; font-size: 14px"}
       Thank you for telling us about your students!
       %br/
@@ -14,11 +14,11 @@
 
 
     #surveybody
-      %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Code.org Program Improvement Survey
+      %h1{style: "margin-top:0px; color: white"} Code.org Program Improvement Survey
       %div{style: "margin-left: 0px"}
         One of our primary goals at Code.org is to improve overall diversity within computer science education. Please answer 2 questions about your classroom so we can estimate how we're doing. To protect their privacy, we will not ask your students for this information so that it is not linked to their specific accounts. (See our
         = succeed '.)' do
-          %a{href: CDO.code_org_url('/privacy'), target: "_blank"} privacy policy
+          %a{href: CDO.code_org_url('/privacy'), target: "_blank", style: "color: white; text-decoration: underline"} privacy policy
       %br/
       = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
         .survey_left{style: "width: 50%; float: left"}
