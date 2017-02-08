@@ -25,4 +25,12 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
     assert_equal [Pd::Workshop::COURSE_CSF], response[:courses_teaching]
   end
+
+  test 'admins only' do
+    other_teacher = create :teacher
+    sign_in other_teacher
+
+    get :index
+    assert_response :forbidden
+  end
 end
