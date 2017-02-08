@@ -548,7 +548,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-    #    assert_equal @good_image.size, LevelSourceImage.last.image.size
+    # assert_equal @good_image.size, LevelSourceImage.last.image.size
 
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)

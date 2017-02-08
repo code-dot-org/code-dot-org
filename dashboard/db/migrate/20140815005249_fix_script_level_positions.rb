@@ -1,7 +1,6 @@
 class FixScriptLevelPositions < ActiveRecord::Migration[4.2]
   def change
-    # one time migration. not to be run again
-
+    # One time migration, not to be run again.
     #    Script.all.each{|script| script.stages.destroy_all}
     #    require 'rake'
     #    Rake::Task.clear
