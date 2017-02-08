@@ -1,4 +1,5 @@
 name 'U3 - Simple Drawing - Plan Personal Drawing'
+display_name 'Stop: Plan Your Drawing'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Stop

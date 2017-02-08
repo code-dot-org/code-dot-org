@@ -443,6 +443,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert e.message.include? 'bad email'
   end
 
+  test 'workshop starting date picks the day of the first session' do
+    session = create :pd_session, start: Date.today + 15.days
+    session2 = create :pd_session, start: Date.today + 20.days
+    @workshop.sessions << session
+    @workshop.sessions << session2
+    assert_equal session.start, @workshop.workshop_starting_date
+  end
+
   private
 
   def session_on_day(day_offset)
