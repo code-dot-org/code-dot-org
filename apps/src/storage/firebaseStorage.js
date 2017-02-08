@@ -506,15 +506,21 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
     return;
   }
   getExistingKeyValues(overwrite).then(oldKeyValues => {
-    const newKeyValues = JSON.parse(jsonData);
+    let newKeyValues;
+    try {
+      newKeyValues = JSON.parse(jsonData);
+    } catch (e) {
+      return Promise.reject(`${e}\nwhile parsing initial key/value data: ${jsonData}`);
+    }
     const keysData = {};
     for (const key in newKeyValues) {
       if (overwrite || (oldKeyValues[key] === undefined)) {
         keysData[key] = JSON.stringify(newKeyValues[key]);
       }
     }
-    getKeysRef().update(keysData).then(onSuccess, onError);
-  });
+    return keysData;
+  }).then(keysData => getKeysRef().update(keysData))
+    .then(onSuccess, onError);
 };
 
 FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError) {

@@ -666,7 +666,7 @@ Applab.init = function (config) {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
-    Applab.storage.populateKeyValue(level.dataProperties, true); // overwrite = true
+    Applab.storage.populateKeyValue(level.dataProperties, true, () => {}, outputError); // overwrite = true
     studioApp.resetButtonClick();
   };
 
@@ -716,7 +716,7 @@ Applab.init = function (config) {
     Applab.storage.populateTable(level.dataTables, false, () => {}, outputError); // overwrite = false
   }
   if (level.dataProperties) {
-    Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+    Applab.storage.populateKeyValue(level.dataProperties, false, () => {}, outputError); // overwrite = false
   }
 
   Applab.handleVersionHistory = studioApp.getVersionHistoryHandler(config);

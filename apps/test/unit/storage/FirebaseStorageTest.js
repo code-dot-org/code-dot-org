@@ -640,7 +640,7 @@ describe('FirebaseStorage', () => {
         });
     });
 
-    it('prints a friendly error message when given bad json', done => {
+    it('prints a friendly error message when given bad table json', done => {
       const overwrite = false;
 
       FirebaseStorage.populateTable(
@@ -667,6 +667,7 @@ describe('FirebaseStorage', () => {
     const NEW_KEY_VALUE_DATA = {
       "click_count": "5"
     };
+    const BAD_JSON = '{';
 
     function verifyKeyValue(expectedData) {
       return getDatabase().child(`storage/keys`).once('value')
@@ -707,6 +708,22 @@ describe('FirebaseStorage', () => {
             () => verifyKeyValue(NEW_KEY_VALUE_DATA).then(done),
             error => {throw error;});
         });
+    });
+
+    it('prints a friendly error message when given bad key value json', done => {
+      const overwrite = false;
+
+      FirebaseStorage.populateKeyValue(
+        BAD_JSON,
+        overwrite,
+        () => {throw 'expected JSON error to be reported';},
+        validateError);
+
+      function validateError(error) {
+        expect(error).to.contain('SyntaxError');
+        expect(error).to.contain('while parsing initial key/value data: {');
+        done();
+      }
     });
   });
 
