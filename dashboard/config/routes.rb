@@ -15,6 +15,7 @@ Dashboard::Application.routes.draw do
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
+  get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
