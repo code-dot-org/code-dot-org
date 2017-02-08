@@ -8,12 +8,6 @@ const containerStyle = {
   width: '100%',
 };
 
-const sectionStyle = {
-  fontSize: '24px',
-  color: '#FFFFFF',
-  margin: '10px',
-};
-
 const imageStyle = {
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',
@@ -37,7 +31,7 @@ const leftStyle = {
   float: 'left',
   borderTopLeftRadius: '10px',
   borderBottomLeftRadius: '10px',
-}
+};
 
 const rightStyle = {
   width: '50%',
@@ -45,7 +39,7 @@ const rightStyle = {
   float: 'left',
   borderTopRightRadius: '10px',
   borderBottomRightRadius: '10px',
-}
+};
 
 const TwoPartBanner = React.createClass({
   propTypes: {
@@ -59,8 +53,8 @@ const TwoPartBanner = React.createClass({
         {this.props.leftHalf}
         {this.props.rightHalf}
       </div>
-    )
+    );
   }
 });
 
-export {TwoPartBanner, imageStyle, textStyle, leftStyle, rightStyle}
+export {TwoPartBanner, imageStyle, textStyle, leftStyle, rightStyle};

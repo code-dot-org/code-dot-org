@@ -10,8 +10,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     # Link to the certificate
     @landing_page_data = {
       courses_teaching: courses_teaching,
-      courses_completed: courses_teaching, #Temporary hack
-      last_workshop_survey_link: 'some link'
+      courses_completed: courses_completed
     }
   end
 end
