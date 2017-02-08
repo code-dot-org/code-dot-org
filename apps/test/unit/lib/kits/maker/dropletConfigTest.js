@@ -91,8 +91,8 @@ describe('getBoardEventDropdownForParam', () => {
   });
 });
 
-describe('stringifySong', function () {
-  it('formats note arrays indented with one note per line', function () {
+describe('stringifySong', () => {
+  it('formats note arrays indented with one note per line', () => {
     expect(stringifySong([['A1', 1/4], ['B2', 1/4], ['C3', 1/2]])).to.equal(
       '[\n' +
       '  ["A1",0.25],\n' +
