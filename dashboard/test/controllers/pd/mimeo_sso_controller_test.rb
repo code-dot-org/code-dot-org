@@ -28,8 +28,14 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  test 'logged in users cannot access enrollments they dont own' do
+  test 'logged in teachers cannot access enrollments they dont own' do
     sign_in create(:teacher)
+    get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
+    assert_response :forbidden
+  end
+
+  test 'logged in students are forbidden' do
+    sign_in create(:student)
     get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
     assert_response :forbidden
   end
@@ -53,6 +59,19 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
     sign_in create(:teacher)
     get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
     assert_response :forbidden
+  end
+
+  test 'blank last name is replaced with a placeholder' do
+    @enrollment.last_name = nil
+    @enrollment.save!(validate: false)
+
+    # Expect '-' placeholder last name
+    @mock_rsa.expects(:public_encrypt).with(@enrollment.first_name).returns('encrypted first name').then.
+      with('-').returns('encrypted last name')
+
+    sign_in @teacher
+    get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
+    assert_response :success
   end
 
   test 'rendered form' do

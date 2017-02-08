@@ -8,4 +8,7 @@
   = @code
 
 %p
-= link_to 'try again', action: 'authenticate_and_redirect', enrollment_code: params[:enrollment_code]
+  = link_to 'Try Again', action: 'authenticate_and_redirect', enrollment_code: params[:enrollment_code]
+
+%p
+  = link_to 'Contact Support', 'https://support.code.org'
