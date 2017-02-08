@@ -5,7 +5,7 @@
         %h2.custom-h2= t('terms_interstitial.title')
 
         .right
-          %iframe#print-frame{src: CDO.studio_url('/terms-and-privacy'), style: 'display: none'}
+          %iframe#print-frame{src: '/dashboardapi/terms-and-privacy', style: 'display: none'}
           %a#print-terms{href: "#"}
             %i.fa.fa-print.right-margin-5
             = t('terms_interstitial.print')
@@ -33,5 +33,4 @@
                 = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
             .form-group
               = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true
-            -# = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
         .clear
