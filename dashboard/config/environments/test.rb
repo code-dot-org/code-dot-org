@@ -60,8 +60,8 @@ Dashboard::Application.configure do
   # Disable Rails.cache when running unit tests.
   config.cache_store = :memory_store, { size: 64.megabytes } if ci_test
 
-#  config.action_mailer.raise_delivery_errors = true
-#  config.action_mailer.delivery_method = :smtp
+  #  config.action_mailer.raise_delivery_errors = true
+  #  config.action_mailer.delivery_method = :smtp
 
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails

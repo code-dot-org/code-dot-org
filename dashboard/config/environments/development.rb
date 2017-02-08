@@ -47,7 +47,7 @@ Dashboard::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-#  config.assets.debug = true
+  #  config.assets.debug = true
 
   config.assets.digest = false
 
@@ -65,7 +65,7 @@ Dashboard::Application.configure do
 
   # disable this for developers by default, it won't make much sense because we have our own db
   CDO.disable_s3_image_uploads = true
-#  CDO.disable_s3_image_uploads = false
+  #  CDO.disable_s3_image_uploads = false
 
   # Set to :debug to see everything in the log.
   config.log_level = :debug

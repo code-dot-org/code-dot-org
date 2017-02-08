@@ -12,7 +12,7 @@ require 'yaml'
 #   CDO.ga_profile_id: 01234567 [this is the "View ID", not the "Account ID"]
 
 class GAClient
-# Modified from https://github.com/google/google-api-ruby-client-samples/blob/master/service_account/analytics.rb
+  # Modified from https://github.com/google/google-api-ruby-client-samples/blob/master/service_account/analytics.rb
   API_VERSION = 'v3'
   CACHED_API_FILE = File.join(__dir__, "analytics-#{API_VERSION}.cache")
 
