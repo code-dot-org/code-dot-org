@@ -114,6 +114,21 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_district)
   end
 
+  test 'exit_survey_url' do
+    normal_workshop = create :pd_ended_workshop
+    normal_enrollment = create :pd_enrollment, workshop: normal_workshop
+
+    counselor_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
+    counselor_enrollment = create :pd_enrollment, workshop: counselor_workshop
+
+    admin_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ADMIN
+    admin_enrollment = create :pd_enrollment, workshop: admin_workshop
+
+    assert normal_enrollment.exit_survey_url.end_with? "/pd-workshop-survey/#{normal_enrollment.code}"
+    assert counselor_enrollment.exit_survey_url.end_with? "/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"
+    assert admin_enrollment.exit_survey_url.end_with? "/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"
+  end
+
   test 'send_exit_survey does not send mail when the survey was already sent' do
     enrollment = create :pd_enrollment, user: create(:teacher), survey_sent_at: Time.now
     Pd::WorkshopMailer.expects(:exit_survey).never
@@ -202,5 +217,12 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
 
     assert create :pd_enrollment, email: 'valid@example.net'
+  end
+
+  test 'completed_survey?' do
+    enrollment = create :pd_enrollment
+    refute enrollment.completed_survey?
+    enrollment.update!(completed_survey_id: 1234)
+    assert enrollment.completed_survey?
   end
 end

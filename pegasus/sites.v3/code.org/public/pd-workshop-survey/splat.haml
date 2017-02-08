@@ -8,11 +8,11 @@ title: "Professional Development Workshop Survey"
   pass unless enrollment
 
   workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
-  pass unless workshop
+  pass unless workshop && workshop[:ended_at]
 
   teacher_id = enrollment[:user_id]
   teacher = DASHBOARD_DB[:users].where(id: teacher_id).first
-  name = teacher.nil? ? enrollment[:name] : teacher[:name]
+  name = teacher.nil? ? "#{enrollment[:first_name]} #{enrollment[:last_name]}" : teacher[:name]
   email = teacher.nil? ? enrollment[:email] : teacher[:email]
 
   plp = DASHBOARD_DB[:professional_learning_partners].where(contact_id: workshop[:organizer_id]).first
@@ -25,16 +25,15 @@ title: "Professional Development Workshop Survey"
   course = workshop[:course]
   subject = workshop[:subject]
 
+  mimeo_url = nil
+  if course == 'CS Fundamentals'
+    mimeo_url = CDO.studio_url "pd/mimeo/#{enrollment_code}"
+  end
+
   def local_view(name, options = {})
     options[:form] = PdWorkshopSurvey
     view "pd_survey_controls/#{name.to_s}", options
   end
-
-:javascript
-  window.pdWorkshopSurvey = {
-    enrollmentCode: "#{enrollment_code}",
-    course: "#{course}"
-  };
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
@@ -305,3 +304,13 @@ title: "Professional Development Workshop Survey"
   #thanks{style: 'display: none;'}
     %h1 Thank you for your submission
 
+- if mimeo_url
+  #materials-order{style: 'display: none;'}
+    %p
+      Click
+      %a{href: mimeo_url} here
+      if you'd like to order materials for the unplugged lessons in Courses 1-4,
+      or check on an existing order (US attendees only).
+
+- if previous_response && mimeo_url
+  %script{type: 'text/javascript'}$('#materials-order').show();
