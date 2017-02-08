@@ -152,35 +152,4 @@ describe(`timedLoop(ms, callback)`, () => {
     expect(commands).to.haveOwnProperty('timedLoop');
     expect(commands.timedLoop).to.be.a('function');
   });
-
-  it('runs code on an interval', () => {
-    const clock = sinon.useFakeTimers();
-
-    const spy = sinon.spy();
-    let stopLoop;
-    commands.timedLoop({
-      ms: 50,
-      callback: exit => {
-        stopLoop = exit;
-        spy();
-      }
-    });
-
-    expect(spy).not.to.have.been.called;
-
-    clock.tick(49);
-    expect(spy).not.to.have.been.called;
-
-    clock.tick(1);
-    expect(spy).to.have.been.calledOnce;
-
-    clock.tick(50);
-    expect(spy).to.have.been.calledTwice;
-
-    stopLoop();
-    clock.tick(50);
-    expect(spy).to.have.been.calledTwice;
-
-    clock.restore();
-  });
 });
