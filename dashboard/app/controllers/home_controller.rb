@@ -56,9 +56,6 @@ class HomeController < ApplicationController
   # This static page combines TOS and Privacy partials all in one page
   # for easy printing.
   def terms_and_privacy
-    # Allow inclusion in iframes since terms interstitial is now shown on Pegasus too.
-    response.headers['X-Frame-Options'] = 'ALLOWALL'
-
     render partial: 'home/tos_and_privacy'
   end
 end
