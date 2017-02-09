@@ -4,6 +4,7 @@ import Playground from 'playground-io';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import {
+  initializeAccelerometer,
   initializeButton,
   initializeColorLeds,
   initializeSoundSensor
@@ -29,6 +30,7 @@ describe('initializeColorLeds()', () => {
 
     // 20 sysex calls during initialization, two per LED.
     for (let i = 0; i < 10; i++) {
+      // TODO (bbuchanan): Record what these calls mean.
       expect(board.io.sysexCommand.getCall(i*2)).to.have.been.calledWith([0x40, 0x10, i, 0, 0, 0, 0]);
       expect(board.io.sysexCommand.getCall(i*2+1)).to.have.been.calledWith([0x40, 0x11]);
     }
@@ -64,6 +66,18 @@ describe('initializeButton()', () => {
     const button = initializeButton(board, '4');
     expect(button).to.be.an.instanceOf(five.Button);
     expect(button).to.haveOwnProperty('isPressed');
+    // Doesn't use sysex at first
+    expect(board.io.sysexCommand.callCount).to.equal(0);
+  });
+});
+
+describe('initializeAccelerometer()', () => {
+  it('initializes accelerometer', function () {
+    const board = newBoard();
+    const button = initializeAccelerometer(board);
+    expect(button).to.be.an.instanceOf(five.Accelerometer);
+    expect(button).to.haveOwnProperty('getOrientation');
+    expect(button).to.haveOwnProperty('getAcceleration');
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);
   });

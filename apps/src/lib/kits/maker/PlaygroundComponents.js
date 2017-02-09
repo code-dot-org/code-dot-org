@@ -34,18 +34,7 @@ export function initializeCircuitPlaygroundComponents(board) {
   const buttonL = initializeButton(board, '4');
   const buttonR = initializeButton(board, '19');
 
-  const accelerometer = new five.Accelerometer({
-    controller: PlaygroundIO.Accelerometer
-  });
-  accelerometer.getOrientation = function (orientationType) {
-    return accelerometer[orientationType];
-  };
-  accelerometer.getAcceleration = function (accelerationDirection) {
-    if (accelerationDirection === 'total') {
-      return accelerometer.acceleration;
-    }
-    return accelerometer[accelerationDirection];
-  };
+  const accelerometer = initializeAccelerometer(board);
 
   // We make one playground-io Touchpad component for all captouch sensors,
   // then wrap it in our own separate objects to get the API we want to
@@ -160,4 +149,21 @@ export function initializeButton(board, pin) {
     get: () => button.value === 1
   });
   return button;
+}
+
+export function initializeAccelerometer(board) {
+  const accelerometer = new five.Accelerometer({
+    board,
+    controller: PlaygroundIO.Accelerometer
+  });
+  accelerometer.getOrientation = function (orientationType) {
+    return accelerometer[orientationType];
+  };
+  accelerometer.getAcceleration = function (accelerationDirection) {
+    if (accelerationDirection === 'total') {
+      return accelerometer.acceleration;
+    }
+    return accelerometer[accelerationDirection];
+  };
+  return accelerometer;
 }
