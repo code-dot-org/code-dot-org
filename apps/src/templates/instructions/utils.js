@@ -45,17 +45,9 @@ export function convertXmlToBlockly(container) {
   Array.prototype.forEach.call(xmls, function (xml) {
     // create a container and insert the blockspace into it
     const container = xml.parentNode.insertBefore(document.createElement('div'), xml);
-    let blockSpace;
-    try {
-      blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
-        noScrolling: true
-      });
-    } catch (e) {
-      // This could error out for many reaons, from invalid XML to
-      // simply misconfigured blocks. In any case, treat an error as a
-      // noop
-      return;
-    }
+    const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
+      noScrolling: true
+    });
 
     // then, calculate the minimum required size for the container
     const metrics = blockSpace.getMetrics();
