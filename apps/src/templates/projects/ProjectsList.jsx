@@ -4,6 +4,9 @@ import color from "../../util/color";
 // import commonMsg from '@cdo/locale';
 
 const styles = {
+  table: {
+    width: 971,
+  },
   cell: {
     border: '1px solid gray',
     padding: 10,
@@ -134,6 +137,7 @@ const ProjectsList = React.createClass({
       <Table.Provider
         className="pure-table pure-table-striped"
         columns={this.getColumns()}
+        style={styles.table}
       >
         <Table.Header />
 
