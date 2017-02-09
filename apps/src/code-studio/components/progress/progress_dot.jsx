@@ -232,7 +232,7 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           /> :
           <div
-            className={`level-${level.id}${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
+            className={`${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
             style={[
               styles.dot.common,
               isLocked ? styles.dot.lockedReview : styles.dot.puzzle,

@@ -13,7 +13,13 @@ var dropletUtils = require('../dropletUtils');
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly, Dialog) {
+function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly, Dialog, appType) {
+  /**
+    * App type, ie 'applab' or 'gamelab' used to point to documentation.
+    * @type {String}
+    */
+  this.appType = appType;
+
   /**
    * App-specific strings (to override common msg)
    * @type {Object.<String, Function>}
@@ -131,7 +137,7 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
     body: $('<iframe>')
       .addClass('markdown-instructions-container')
       .width('100%')
-      .attr('src', tooltip.getFullDocumentationURL()),
+      .attr('src', tooltip.getFullDocumentationURL(this.appType)),
     autoResizeScrollableElement: '.markdown-instructions-container',
     id: 'block-documentation-lightbox'
   });
