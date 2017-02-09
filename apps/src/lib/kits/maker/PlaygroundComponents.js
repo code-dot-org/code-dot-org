@@ -19,21 +19,17 @@ import Piezo from './Piezo';
  * Components:
  *   - will each have .stop() called on Reset
  *
+ * @param {five.Board} board - the johnny-five board object that needs new
+ *        components initialized.
  * @returns {Object.<String, Object>} board components
  */
-export function initializeCircuitPlaygroundComponents() {
-  const colorLeds = _.range(N_COLOR_LEDS).map(index => new five.Led.RGB({
-    controller: PlaygroundIO.Pixel,
-    pin: index
-  }));
+export function initializeCircuitPlaygroundComponents(board) {
+  const colorLeds = initializeColorLeds(board);
 
   // Must initialize sound sensor BEFORE left button, otherwise left button
   // will not respond to input.  This has something to do with them sharing
   // pin 4 on the board.
-  const soundSensor = new five.Sensor({
-    pin: "A4",
-    freq: 100
-  });
+  const soundSensor = initializeSoundSensor();
   const buttonL = new five.Button('4');
   const buttonR = new five.Button('19');
   [buttonL, buttonR].forEach(button => {
@@ -141,3 +137,18 @@ const addSensorFeatures = (fmap, sensor) => {
     scale = [low, high];
   };
 };
+
+export function initializeColorLeds(board) {
+  return _.range(N_COLOR_LEDS).map(index => new five.Led.RGB({
+    board,
+    controller: PlaygroundIO.Pixel,
+    pin: index
+  }));
+}
+
+export function initializeSoundSensor() {
+  return new five.Sensor({
+    pin: "A4",
+    freq: 100
+  });
+}
