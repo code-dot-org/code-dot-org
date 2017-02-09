@@ -1680,10 +1680,6 @@ applabCommands.drawChartFromRecords = function (opts) {
   ).then(onSuccess, onError);
 };
 
-applabCommands.onBoardEvent = function (opts) {
-  return Applab.makerController.onBoardEvent(opts.component, opts.event, opts.callback);
-};
-
 /**
  * If the element is found, add the 'loading' class to it so that it
  * displays the loading spinner.

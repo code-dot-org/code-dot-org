@@ -65,6 +65,17 @@ export function analogRead(opts) {
 }
 
 /**
+ * Add a handler for a maker board event from a particular board component.
+ * @param {Object} opts.component
+ * @param {string} opts.event
+ * @param {function} opts.callback
+ */
+export function onBoardEvent(opts) {
+  // TODO (bbuchanan): Validate arguments?
+  return Applab.makerController.onBoardEvent(opts.component, opts.event, opts.callback);
+}
+
+/**
  * Execute some code every X milliseconds.  This is effectively setInterval()
  * with a cleaner interface.
  * @param {number} opts.ms How often to invoke the code in the loop,

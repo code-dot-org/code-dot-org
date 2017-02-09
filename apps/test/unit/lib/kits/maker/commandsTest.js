@@ -7,6 +7,7 @@ import {
   analogWrite,
   digitalRead,
   digitalWrite,
+  onBoardEvent,
   pinMode,
   timedLoop
 } from '@cdo/apps/lib/kits/maker/commands';
@@ -111,6 +112,29 @@ describe('maker commands', () => {
 
       analogRead({pin: 18});
       expect(Applab.makerController.analogRead).to.have.been.calledWith(18);
+
+      restoreOnWindow('Applab');
+    });
+  });
+
+  describe('onBoardEvent(pin)', () => {
+    it('delegates to makerController.onBoardEvent', () => {
+      replaceOnWindow('Applab', {
+        makerController: {
+          onBoardEvent: sinon.spy()
+        }
+      });
+
+      const fakeComponent = {};
+      const eventName = 'data';
+      const fakeCallback = () => {};
+      onBoardEvent({
+        component: fakeComponent,
+        event: eventName,
+        callback: fakeCallback
+      });
+      expect(Applab.makerController.onBoardEvent).to.have.been
+        .calledWith(fakeComponent, eventName, fakeCallback);
 
       restoreOnWindow('Applab');
     });
