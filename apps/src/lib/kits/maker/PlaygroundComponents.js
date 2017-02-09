@@ -135,11 +135,15 @@ const addSensorFeatures = (fmap, sensor) => {
 };
 
 export function initializeColorLeds(board) {
-  return _.range(N_COLOR_LEDS).map(index => new five.Led.RGB({
+  return _.range(N_COLOR_LEDS).map(i => initializeColorLed(board, i));
+}
+
+function initializeColorLed(board, pin) {
+  return new five.Led.RGB({
     board,
     controller: PlaygroundIO.Pixel,
-    pin: index
-  }));
+    pin
+  });
 }
 
 export function initializeSoundSensor(board) {
