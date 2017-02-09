@@ -13,7 +13,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
       create :pd_enrollment, email: other_teacher.email, workshop: workshop
     end
 
-    create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
+    @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
     create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop
 
     @csf_workshop.start!
@@ -27,8 +27,11 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_response :success
     response = assigns(:landing_page_data)
 
+    puts response
+
     assert_equal [Pd::Workshop::COURSE_CSF, Pd::Workshop::COURSE_CSD], response[:courses_teaching]
     assert_equal [Pd::Workshop::COURSE_CSF], response[:courses_completed]
+    assert_equal "#{CDO.code_org_url}/pd-workshop-survey/#{@ended_enrollment.code}", response[:last_workshop_survey_url]
   end
 
   test 'admins only' do
