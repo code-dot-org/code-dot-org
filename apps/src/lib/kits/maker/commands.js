@@ -45,6 +45,26 @@ export function digitalRead(opts) {
 }
 
 /**
+ * @param {string|number} opts.pin
+ * @param {number} opts.value
+ */
+export function analogWrite(opts) {
+  apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
+  apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
+
+  Applab.makerController.analogWrite(opts.pin, opts.value);
+}
+
+/**
+ * @param {string|number} opts.pin
+ */
+export function analogRead(opts) {
+  apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
+
+  return Applab.makerController.analogRead(opts.pin, opts.callback);
+}
+
+/**
  * Execute some code every X milliseconds.  This is effectively setInterval()
  * with a cleaner interface.
  * @param {number} opts.ms How often to invoke the code in the loop,
