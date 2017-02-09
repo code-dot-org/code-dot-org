@@ -333,6 +333,7 @@
   "whenRun": "icra etdikdə",
   "workspaceHeaderShort": "iş sahəsi: ",
   "yes": "Bəli",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
   "levelN": "LEVEL {levelNumber}",

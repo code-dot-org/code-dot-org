@@ -333,6 +333,7 @@
   "whenRun": "қосу кезінде",
   "workspaceHeaderShort": "Жұмыс аумағы: ",
   "yes": "Иә",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
   "levelN": "LEVEL {levelNumber}",
