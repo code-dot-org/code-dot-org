@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206173655) do
+ActiveRecord::Schema.define(version: 20170209010013) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id"
+    t.integer  "level_id"
+    t.string   "action"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "attempt"
+    t.integer  "time"
+    t.integer  "test_result"
+    t.integer  "level_source_id"
+    t.integer  "lines",           default: 0, null: false
+    t.index ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
+    t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
+  end
+
+  create_table "activities_old", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "level_id"
     t.string   "action"
@@ -361,6 +377,7 @@ ActiveRecord::Schema.define(version: 20170206173655) do
     t.integer  "school_info_id"
     t.datetime "deleted_at"
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
+    t.index ["email"], name: "index_pd_enrollments_on_email", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
   end
 
