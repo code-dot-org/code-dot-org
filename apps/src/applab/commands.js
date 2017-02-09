@@ -1680,12 +1680,6 @@ applabCommands.drawChartFromRecords = function (opts) {
   ).then(onSuccess, onError);
 };
 
-applabCommands.digitalRead = function (opts) {
-  apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
-
-  return Applab.makerController.digitalRead(opts.pin, opts.callback);
-};
-
 applabCommands.analogWrite = function (opts) {
   apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);

@@ -117,6 +117,13 @@ describe(`digitalWrite(pin, value)`, () => {
   });
 });
 
+describe(`digitalRead(pin)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('digitalRead');
+    expect(commands.digitalRead).to.be.a('function');
+  });
+});
+
 // TODO (bbuchanan): Replace with more general assertions when we move maker
 // commands back to this kit.
 describe(`timedLoop(ms, callback)`, () => {
