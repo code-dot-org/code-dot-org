@@ -1,5 +1,5 @@
 /**
- * Entry point for projects/section_projects.js bundle
+ * Entry point for teacher-dashboard/index.js bundle
  */
 
 /* globals window */
