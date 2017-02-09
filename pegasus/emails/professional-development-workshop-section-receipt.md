@@ -64,7 +64,7 @@ Code.org is offering $50 off [**Dash robot**](https://store.makewonder.com/). Th
 **Redemption code for Dash robot: CODE9173**   
 *Offer good for 1 Dash robot per customer.*
 
-[Go here](https://help.makewonder.com/) for questions regarding redemption. 
+[Go here](https://help.makewonder.com/) for questions regarding redemption.
 
 **Need more support?**
 
