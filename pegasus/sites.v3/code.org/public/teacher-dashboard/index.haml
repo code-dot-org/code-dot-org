@@ -601,6 +601,14 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
           window.renderSection(section.id);
         }
       );
+
+      // the ng-select in the nav compares by reference not by value, so we can't just set
+      // selectedSection to section, we have to find it in sections.
+      $scope.sections.$promise.then(
+        function( sections ){
+          $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+        }
+      );
     }]);
   }
 
