@@ -3,6 +3,7 @@ import {expect} from '../../../../util/configuredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 import sinon from 'sinon';
 import {
+  digitalWrite,
   pinMode,
   timedLoop
 } from '@cdo/apps/lib/kits/maker/commands';
@@ -49,6 +50,21 @@ describe('maker commands', () => {
     it(`maps 'servo' mode to 4`, () => {
       pinMode({pin: 42, mode: 'servo'});
       expect(Applab.makerController.pinMode).to.have.been.calledWith(42, 4);
+    });
+  });
+
+  describe('digitalWrite(pin, value)', () => {
+    it('delegates to makerController.digitalWrite with mapped mode id', () => {
+      replaceOnWindow('Applab', {
+        makerController: {
+          digitalWrite: sinon.spy()
+        }
+      });
+
+      digitalWrite({pin: 22, value: 33});
+      expect(Applab.makerController.digitalWrite).to.have.been.calledWith(22, 33);
+
+      restoreOnWindow('Applab');
     });
   });
 

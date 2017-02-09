@@ -110,6 +110,13 @@ describe(`pinMode(pin, mode)`, () => {
   });
 });
 
+describe(`digitalWrite(pin, value)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('digitalWrite');
+    expect(commands.digitalWrite).to.be.a('function');
+  });
+});
+
 // TODO (bbuchanan): Replace with more general assertions when we move maker
 // commands back to this kit.
 describe(`timedLoop(ms, callback)`, () => {
