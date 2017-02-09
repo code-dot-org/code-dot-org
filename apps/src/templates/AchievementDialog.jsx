@@ -20,18 +20,16 @@ const styles = {
   },
   achievement: {
     row: {
-      lineHeight: '34px',
+      marginBottom: 25,
     },
     icon: {
       position: 'relative',
       fontSize: 30,
       width: 30,
-      verticalAlign: 'middle',
     },
     text: {
       fontSize: 20,
       color: '#392e52',
-      verticalAlign: 'middle',
       marginLeft: 50,
     },
     inactive: {
@@ -110,7 +108,7 @@ const AchievementDialog = Radium(React.createClass({
             <i
               key="b"
               className="fa fa-times"
-              style={[styles.absolute, {fontSize: 24, left: 2, top: 1}]}
+              style={[styles.absolute, {fontSize: 24, left: 2, top: 10}]}
             />
           ]
         }
