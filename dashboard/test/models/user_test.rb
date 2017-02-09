@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
@@ -18,6 +17,24 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher, school_info_attributes: school_attributes
     teacher.save!
     assert teacher.valid?, teacher.errors.full_messages
+  end
+
+  test 'identical school info should not be duplicated in the database' do
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: 'CA'
+    }
+    teacher = create :teacher, school_info_attributes: school_attributes
+    teacher.save!
+
+    teacher2 = create :teacher, school_info_attributes: school_attributes
+    teacher2.save!
+
+    attr = teacher.process_school_info_attributes(school_attributes)
+    school_info = SchoolInfo.where(attr).first
+    assert teacher.school_info == school_info && teacher2.school_info == school_info
+    assert SchoolInfo.where(attr).count == 1
   end
 
   test 'normalize_email' do
