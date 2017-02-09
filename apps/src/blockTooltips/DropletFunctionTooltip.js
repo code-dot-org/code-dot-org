@@ -148,6 +148,7 @@ DropletFunctionTooltip.prototype.i18nPrefix = function () {
 };
 
 /**
+ * @param {string} appType
  * @returns {string} URL for full doc about this function
  */
 DropletFunctionTooltip.prototype.getFullDocumentationURL = function (appType) {
