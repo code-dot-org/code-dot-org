@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import experiments from '@cdo/apps/util/experiments';
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -52,11 +53,40 @@ window.SignupManager = function (options) {
     }
   });
 
+  function shouldShowSchoolDropdown() {
+    if (experiments.isEnabled('schoolDropdownOnRegistration')) {
+      return true;
+    }
+
+    // We enable the school dropdown in an A/B test by setting 'display' to 'none' on this div in Optimizely
+    var testMarker = $("#schooldropdown-ab-test-marker");
+    if (!testMarker) {
+      return false;
+    }
+    return testMarker.css("display") === "none";
+  }
+
+  function setSchoolInfoVisibility(state) {
+    var showSchoolDropdown = shouldShowSchoolDropdown();
+    if (state) {
+      if (showSchoolDropdown) {
+        $("#schooldropdown-block").fadeIn();
+      } else {
+        $("#schoolname-block").fadeIn();
+        $("#schooladdress-block").fadeIn();
+      }
+    } else {
+      $("#schooldropdown-block").hide();
+      $("#schoolname-block").hide();
+      $("#schooladdress-block").hide();
+    }
+  }
+
   function showStudent() {
     // Show correct form elements.
     $("#age-block").fadeIn();
     $("#gender-block").fadeIn();
-    $("#schooldropdown-block").hide();
+    setSchoolInfoVisibility(false);
 
     // Show correct terms below form.
     $("#student-terms").fadeIn();
@@ -70,7 +100,7 @@ window.SignupManager = function (options) {
     // Show correct form elements.
     $("#age-block").hide();
     $("#gender-block").hide();
-    $("#schooldropdown-block").fadeIn();
+    setSchoolInfoVisibility(true);
 
     // Show correct terms below form.
     $("#student-terms").hide();
