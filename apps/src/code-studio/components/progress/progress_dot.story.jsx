@@ -10,8 +10,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="not_tried"
             level={{
               icon: null,
               ids: [5275],
@@ -19,7 +19,6 @@ export default storybook => {
               next: [2, 1],
               position: 1,
               previous: false,
-              status: 'not_tried',
               title: 1,
               uid: '5275_0',
               url: 'http://localhost-studio.code.org:3000/s/csp1/lockable/1/puzzle/1/page/1'
@@ -32,8 +31,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="locked"
             level={{
               icon: null,
               ids: [5275],
@@ -41,7 +40,6 @@ export default storybook => {
               next: [2, 1],
               position: 1,
               previous: false,
-              status: 'locked',
               title: 1,
               uid: '5275_0',
               url: 'http://localhost-studio.code.org:3000/s/csp1/lockable/1/puzzle/1/page/1'
@@ -55,9 +53,9 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             grayProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="locked"
             level={{
               icon: null,
               ids: [5275],
@@ -65,7 +63,6 @@ export default storybook => {
               next: [2, 1],
               position: 1,
               previous: false,
-              status: 'locked',
               title: 1,
               uid: '5275_0',
               url: 'http://localhost-studio.code.org:3000/s/csp1/lockable/1/puzzle/1/page/1'
@@ -78,8 +75,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="submitted"
             level={{
               icon: null,
               ids: [5275],
@@ -87,7 +84,6 @@ export default storybook => {
               next: [2, 1],
               position: 1,
               previous: false,
-              status: 'submitted',
               title: 1,
               uid: '5275_0',
               url: 'http://localhost-studio.code.org:3000/s/csp1/lockable/1/puzzle/1/page/1'
@@ -100,8 +96,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="attempted"
             level={{
               icon: null,
               ids: [5275],
@@ -109,70 +105,27 @@ export default storybook => {
               next: [2, 1],
               position: 1,
               previous: [7,15],
-              status: 'attempted',
               title: 1,
               url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1'
             }}
           />
         )
       },
-      {
-        name: 'attempted puzzle in course overview with showProgress false',
-        story: () => (
-          <ProgressDot
-            courseOverviewPage={true}
-            showProgress={false}
-            saveAnswersBeforeNavigation={false}
-            level={{
-              icon: null,
-              ids: [5275],
-              kind: 'puzzle',
-              next: [2, 1],
-              position: 1,
-              previous: [7,15],
-              status: 'attempted',
-              title: 1,
-              url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1'
-            }}
-          />
-        )
-      },
-      {
-        name: 'attempted puzzle in course overview with bubble colors disabled',
-        story: () => (
-          <ProgressDot
-            courseOverviewPage={true}
-            showProgress={true}
-            grayProgress={true}
-            saveAnswersBeforeNavigation={false}
-            level={{
-              icon: null,
-              ids: [5275],
-              kind: 'puzzle',
-              next: [2, 1],
-              position: 1,
-              previous: [7,15],
-              status: 'attempted',
-              title: 1,
-              url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1'
-            }}
-          />
-        )
-      },
+
+
       {
         name: 'imperfect completed puzzle in course overview',
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="passed"
             level={{
               icon: null,
               ids: [2288],
               kind: 'puzzle',
               next: [2, 1],
               position: 6,
-              status: 'passed',
               title: 6,
               url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
             }}
@@ -185,15 +138,14 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="perfect"
             level={{
               icon: null,
               ids: [2288],
               kind: 'puzzle',
               next: [2, 1],
               position: 6,
-              status: 'perfect',
               title: 6,
               url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
             }}
@@ -205,15 +157,14 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
             currentLevelId="2288"
+            status="not_tried"
             level={{
               icon: null,
               ids: [2288],
               kind: 'puzzle',
               position: 6,
-              status: 'not_tried',
               title: 6,
               url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
             }}
@@ -225,15 +176,14 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="not_tried"
             level={{
               icon: null,
               ids: [2094],
               kind: 'unplugged',
               previous: [1, 2],
               position: 1,
-              status: 'not_tried',
               title: 'Unplugged Activity',
               url: 'http://localhost-studio.code.org:3000/s/course1/stage/2/puzzle/1'
             }}
@@ -245,15 +195,14 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="not_tried"
             level={{
               icon: 'fa-file-text',
               ids: [1379],
               kind: 'puzzle',
               name: 'CSP Pre-survey',
               position: 2,
-              status: 'not_tried',
               title: 2,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/2'
             }}
@@ -265,8 +214,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="not_tried"
             level={{
               icon: 'fa-file-text',
               ids: [5442],
@@ -274,7 +223,6 @@ export default storybook => {
               name: 'CSP Pre-survey',
               position: 1,
               previous: [1,1],
-              status: 'not_tried',
               title: 1,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/1'
             }}
@@ -286,8 +234,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="perfect"
             level={{
               icon: 'fa-video-camera',
               ids: [5078],
@@ -295,7 +243,6 @@ export default storybook => {
               name: 'Computer Science is Changing Everything',
               position: 3,
               previous: [1,1],
-              status: 'perfect',
               title: 3,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/3'
             }}
@@ -308,8 +255,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="review_rejected"
             level={{
               ids: [1073563865],
               position: 7,
@@ -318,7 +265,6 @@ export default storybook => {
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
               name: "Peer Review Level 1 - Tuesday Report",
-              status: "review_rejected"
             }}
           />
         )
@@ -329,8 +275,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="review_accepted"
             level={{
               ids: [1073563865],
               position: 7,
@@ -339,7 +285,6 @@ export default storybook => {
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
               name: "Peer Review Level 1 - Tuesday Report",
-              status: "review_accepted"
             }}
           />
         )
@@ -350,8 +295,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="submitted"
             level={{
               ids: [1073563865],
               position: 7,
@@ -360,7 +305,6 @@ export default storybook => {
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
               name: "Peer Review Level 1 - Tuesday Report",
-              status: "submitted"
             }}
           />
         )
@@ -371,8 +315,8 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status={undefined}
             level={{
               ids: [0],
               kind: "peer_review",
@@ -390,15 +334,14 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
-            showProgress={true}
             saveAnswersBeforeNavigation={false}
+            status="not_tried"
             level={{
               icon: null,
               ids: [5096],
               kind: 'named_level',
               name: 'Internet Simulator: sending binary messages',
               position: 2,
-              status: 'not_tried',
               title: 2,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/3/puzzle/2'
             }}
@@ -410,9 +353,9 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={false}
-            showProgress={true}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
+            status="not_tried"
             level={{
               icon: 'fa-file-text',
               ids: [5442],
@@ -420,7 +363,6 @@ export default storybook => {
               name: 'CSP Pre-survey',
               position: 1,
               previous: [1,1],
-              status: 'not_tried',
               title: 1,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/1'
             }}
@@ -432,9 +374,9 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={false}
-            showProgress={true}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
+            status="perfect"
             level={{
               icon: 'fa-video-camera',
               ids: [5078],
@@ -442,7 +384,6 @@ export default storybook => {
               name: 'Computer Science is Changing Everything',
               position: 3,
               previous: [1,1],
-              status: 'perfect',
               title: 3,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/3'
             }}
@@ -454,16 +395,15 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={false}
-            showProgress={true}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
+            status="not_tried"
             level={{
               icon: null,
               ids: [2049],
               kind: 'puzzle',
               position: 4,
               next: [3,1],
-              status: 'not_tried',
               title: 4,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/4'
             }}
@@ -475,16 +415,15 @@ export default storybook => {
         story: () => (
           <ProgressDot
             courseOverviewPage={false}
-            showProgress={true}
             currentLevelId="2049"
             saveAnswersBeforeNavigation={false}
+            status="not_tried"
             level={{
               icon: null,
               ids: [2049],
               kind: 'puzzle',
               position: 4,
               next: [3,1],
-              status: 'not_tried',
               title: 4,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/4'
             }}

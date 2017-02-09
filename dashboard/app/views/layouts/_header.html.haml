@@ -15,7 +15,7 @@
       - if level && level.try(:is_project_level) && level.game == Game.applab
         = link_to t('landing.help_resources'), CDO.code_org_url('/educate/applab'), target: '_blank'
         |
-      = link_to t('landing.report_bug'), report_url, target: '_blank'
+      = link_to t('landing.help_support'), report_url, target: '_blank'
 
   .navbar-static-top.header{class: 'hide_on_mobile'}
     .container{style: (full_width ? 'width: 880px;' : '')}

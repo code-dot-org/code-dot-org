@@ -6,9 +6,7 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from "../../../util/color";
 import progressStyles, { createOutline } from './progressStyles';
-import { LevelStatus } from '../../activityUtils';
-import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
-import { SignInState } from '../../progressRedux';
+import { LevelStatus, LevelKind } from '../../activityUtils';
 
 const dotSize = 24;
 
@@ -169,14 +167,9 @@ export const ProgressDot = Radium(React.createClass({
     level: levelProgressShape.isRequired,
     courseOverviewPage: React.PropTypes.bool,
     stageId: React.PropTypes.number,
+    status: React.PropTypes.oneOf(Object.keys(LevelStatus)),
 
     // redux provdied
-
-    // if false, display all progress as not tried
-    showProgress: React.PropTypes.bool,
-    // if true, display all progress as gray (dots_disabled)
-    grayProgress: React.PropTypes.bool,
-    overrideLevelStatus: React.PropTypes.oneOf(Object.keys(LevelStatus)),
     currentLevelId: React.PropTypes.string,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
   },
@@ -195,17 +188,8 @@ export const ProgressDot = Radium(React.createClass({
 
   render() {
     const level = this.props.level;
-    let levelStatus = this.props.overrideLevelStatus || level.status;
-    if (levelStatus !== LevelStatus.locked) {
-      // During hoc we're going to disable milestone posts. If disabled, we want
-      // to display dots as gray (unless the level is locked, in which case we
-      // want to leave as is).
-      if (!this.props.showProgress) {
-        levelStatus = LevelStatus.not_tried;
-      } else if (this.props.grayProgress) {
-        levelStatus = LevelStatus.dots_disabled;
-      }
-    }
+    let levelStatus = this.props.status;
+
     const onCurrent = this.props.currentLevelId &&
         ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
         level.uid === this.props.currentLevelId);
@@ -214,10 +198,11 @@ export const ProgressDot = Radium(React.createClass({
     const showUnplugged = isUnplugged && (this.props.courseOverviewPage || onCurrent);
     const outlineCurrent = this.props.courseOverviewPage && onCurrent;
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
-    const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
-    const isPeerReview = level.kind === 'peer_review';
+    const showLevelName = this.props.courseOverviewPage &&
+      (level.kind === LevelKind.named_level || level.kind === LevelKind.peer_review);
+    const isPeerReview = level.kind === LevelKind.peer_review;
     // Account for both the level based concept of locked, and the progress based concept.
-    const isLocked = level.locked || levelStatus === LevelStatus.locked;
+    const isLocked = levelStatus === LevelStatus.locked;
     const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged &&
       this.props.courseOverviewPage && this.getIconForLevelStatus(levelStatus, isLocked);
     const levelUrl = isLocked ? undefined : level.url + location.search;
@@ -247,13 +232,13 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           /> :
           <div
-            className={`level-${level.id}${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
+            className={`${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
             style={[
               styles.dot.common,
               isLocked ? styles.dot.lockedReview : styles.dot.puzzle,
               this.props.courseOverviewPage && styles.dot.overview,
               smallDot && styles.dot.small,
-              level.kind === 'assessment' && styles.dot.assessment,
+              level.kind === LevelKind.assessment && styles.dot.assessment,
               outlineCurrent && {borderColor: color.level_current},
               showUnplugged && styles.dot.unplugged,
               styles.status[levelStatus || LevelStatus.not_tried],
@@ -280,30 +265,7 @@ export const ProgressDot = Radium(React.createClass({
   }
 }));
 
-export default connect((state, ownProps) => {
-  // If we're a teacher viewing as a student, we want to render lockable stages
-  // to have a lockable item only if the stage is fully locked.
-  // Do this by providing an overrideLevelStatus, which will take precedence
-  // over level.status
-  const stageId = ownProps.stageId;
-  let overrideLevelStatus;
-  const { selectedSectionId } = state.sections;
-  const currentSection = state.stageLock.stagesBySectionId[selectedSectionId];
-  const fullyLocked = fullyLockedStageMapping(currentSection);
-  if (stageId !== undefined && state.stageLock.viewAs === ViewType.Student &&
-      !!fullyLocked[stageId]) {
-    overrideLevelStatus = LevelStatus.locked;
-  }
-
-  const { postMilestoneDisabled, signInState } = state.progress;
-
-  return {
-    currentLevelId: state.progress.currentLevelId,
-    saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation,
-    // If milestone posts are disabled, don't show progress (i.e. leave bubbles
-    // white) until we know whether we're signed in or not.
-    showProgress: !postMilestoneDisabled || signInState !== SignInState.Unknown,
-    grayProgress: postMilestoneDisabled && signInState === SignInState.SignedIn,
-    overrideLevelStatus
-  };
-})(ProgressDot);
+export default connect(state => ({
+  currentLevelId: state.progress.currentLevelId,
+  saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
+}))(ProgressDot);

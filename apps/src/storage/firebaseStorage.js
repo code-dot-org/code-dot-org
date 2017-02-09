@@ -407,6 +407,8 @@ FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
 };
 
 /**
+ * Returns a list of existing tables. The counters/tables node is the source of truth for
+ * whether a table exists. See fileoverview in firebaseCounters.js for more details.
  * @param {boolean} overwrite
  * @returns {Promise.<Object>} Promise containing a map with existing table names as keys,
  *   or an empty map if overwrite is true.
@@ -415,7 +417,7 @@ function getExistingTables(overwrite) {
   if (overwrite) {
     return Promise.resolve({});
   }
-  const tablesRef = getDatabase().child('storage/tables');
+  const tablesRef = getDatabase().child('counters/tables');
   return tablesRef.once('value').then(snapshot => snapshot.val() || {});
 }
 
@@ -451,18 +453,27 @@ FirebaseStorage.populateTable = function (jsonData, overwrite, onSuccess, onErro
   if (!jsonData || !jsonData.length) {
     return;
   }
-  getExistingTables(overwrite).then(existingTables => {
-    const promises = [];
-    const newTables = JSON.parse(jsonData);
-    for (const tableName in newTables) {
-      if (overwrite || (existingTables[tableName] === undefined)) {
-        const newRecords = newTables[tableName];
-        const recordsData = getRecordsData(newRecords);
-        promises.push(overwriteTableData(tableName, recordsData));
+  // Ensure rate limit counters have been initialized, so that updates to the
+  // counters/tables node will pass type definition checks in the security rules.
+  incrementRateLimitCounters()
+    .then(() => getExistingTables(overwrite))
+    .then(existingTables => {
+      const promises = [];
+      let newTables;
+      try {
+        newTables = JSON.parse(jsonData);
+      } catch (e) {
+        return Promise.reject(`${e}\nwhile parsing initial table data: ${jsonData}`);
       }
-    }
-    return Promise.all(promises);
-  }).then(onSuccess, onError);
+      for (const tableName in newTables) {
+        if (overwrite || (existingTables[tableName] === undefined)) {
+          const newRecords = newTables[tableName];
+          const recordsData = getRecordsData(newRecords);
+          promises.push(overwriteTableData(tableName, recordsData));
+        }
+      }
+      return Promise.all(promises);
+    }).then(onSuccess, onError);
 };
 
 /**
@@ -495,15 +506,21 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
     return;
   }
   getExistingKeyValues(overwrite).then(oldKeyValues => {
-    const newKeyValues = JSON.parse(jsonData);
+    let newKeyValues;
+    try {
+      newKeyValues = JSON.parse(jsonData);
+    } catch (e) {
+      return Promise.reject(`${e}\nwhile parsing initial key/value data: ${jsonData}`);
+    }
     const keysData = {};
     for (const key in newKeyValues) {
       if (overwrite || (oldKeyValues[key] === undefined)) {
         keysData[key] = JSON.stringify(newKeyValues[key]);
       }
     }
-    getKeysRef().update(keysData).then(onSuccess, onError);
-  });
+    return keysData;
+  }).then(keysData => getKeysRef().update(keysData))
+    .then(onSuccess, onError);
 };
 
 FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError) {

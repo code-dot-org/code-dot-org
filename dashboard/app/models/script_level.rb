@@ -195,13 +195,13 @@ class ScriptLevel < ActiveRecord::Base
     end
 
     summary = {
-        ids: ids,
-        activeId: oldest_active_level.id,
-        position: position,
-        kind: kind,
-        icon: level.icon,
-        title: level_display_text,
-        url: build_script_level_url(self)
+      ids: ids,
+      activeId: oldest_active_level.id,
+      position: position,
+      kind: kind,
+      icon: level.icon,
+      title: level_display_text,
+      url: build_script_level_url(self)
     }
 
     if kind == 'named_level'
