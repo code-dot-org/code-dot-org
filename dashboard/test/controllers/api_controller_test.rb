@@ -473,7 +473,8 @@ class ApiControllerTest < ActionController::TestCase
             ],
             "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]
           },
-          { "type" => "multi",
+          {
+            "type" => "multi",
             "question" => "question text",
             "results" => [
               {},
