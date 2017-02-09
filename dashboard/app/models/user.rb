@@ -81,7 +81,7 @@ require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
-  include SerializedProperties
+  include SerializedProperties, SchoolInfoDeduplicator
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
@@ -160,7 +160,8 @@ class User < ActiveRecord::Base
   def check_school_info(school_info_attr)
     # Suppress validation - all parts of this form are optional when accesssed through the registration form
     school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
-    student? # students are never asked to fill out this data, so silently reject it
+    # students are never asked to fill out this data, so silently reject it for them
+    student? || deduplicate_school_info(school_info_attr, self)
   end
 
   # Not deployed to everyone, so we don't require this for anybody, yet
