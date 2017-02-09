@@ -29,7 +29,7 @@ export function initializeCircuitPlaygroundComponents(board) {
   // Must initialize sound sensor BEFORE left button, otherwise left button
   // will not respond to input.  This has something to do with them sharing
   // pin 4 on the board.
-  const soundSensor = initializeSoundSensor();
+  const soundSensor = initializeSoundSensor(board);
   const buttonL = new five.Button('4');
   const buttonR = new five.Button('19');
   [buttonL, buttonR].forEach(button => {
@@ -146,8 +146,9 @@ export function initializeColorLeds(board) {
   }));
 }
 
-export function initializeSoundSensor() {
+export function initializeSoundSensor(board) {
   return new five.Sensor({
+    board,
     pin: "A4",
     freq: 100
   });
