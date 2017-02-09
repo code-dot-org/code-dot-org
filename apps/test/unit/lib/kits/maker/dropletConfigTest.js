@@ -9,7 +9,7 @@ import {
   stringifySong
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 import * as api from '@cdo/apps/lib/kits/maker/api';
-import commands from '@cdo/apps/lib/kits/maker/commands';
+import * as commands from '@cdo/apps/lib/kits/maker/commands';
 
 describe('getBoardEventDropdownForParam', () => {
   it('unknown first parameter dropdown contains all options', () => {
