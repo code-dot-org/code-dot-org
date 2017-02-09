@@ -128,6 +128,7 @@ sk:
     login: 'Prihlásiť sa'
     invalid_login: 'Neplatné prihlasovacie meno, prosím, skús to ešte raz'
     pair_programming: 'Mám partnera pri počítači'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Zabudli ste heslo?'
@@ -367,6 +368,9 @@ sk:
     announcement_mc_launch: "Jeden z našich najpopulárnejších návodov má teraz pokračovanie! Celkom nový Minecraft Dizajnér Hodiny Kódu umožňuje študentom vytvoriť si pravidlá pre svet Minecraft-u. Môžu stvoriť totálne unikátne Minecraft-ové zážitky, následne ich zdieľať s priateľmi, či zahrať si ich na telefónoch. Vytvorte si ich vo svojej triede na Hodine Kódu."
     announcement_how_code_studio: "Nepotrebujete žiadne skúsenosti na to, aby ste začali učiť informatiku vo vašej triede. Code.org ponúka osnovy, ušebné plány, vysoko-kvalitné profesionálne vyučovacie programy a tonu skvelých nástrojov pre všetky úrovne&mdash;všetko, čo potrebujete, všetko zadarmo. Hľadáte, kde začať? Stiahnite si <a href='%{video_download_url}'>toto video</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje. Zadajte kód inej sekcie."
     section_code_not_entered: "Uveďte, prosím, current_section_code."
@@ -524,6 +528,9 @@ sk:
     support: "Získať pomoc"
     support_url: "support.code.org"
     help_resources: "Pomoc a Zdroje"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Nesprávna odpoveď"
     wrong_body: "Zadaná odpoveď je nesprávna.  Prosím skúste to znova!"
@@ -736,6 +743,8 @@ sk:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.

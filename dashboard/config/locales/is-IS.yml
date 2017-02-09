@@ -100,12 +100,11 @@
       af Klukkustund kóðunar og viljið halda lengra, getur þú sett aðgangsorð og stofnað
       aðgang að Kóðastúdíóinu hér fyrir neðan til skrá nemendur þína á eitt af <a
       href="https://code.org/educate">lengri námskeiðum</a> okkar.
-    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
-      To sign in to Code Studio, you’ll need to set up a password for your account.
-      This will let you save your progress and manage your classroom. You’ll be able
-      to assign courses to students and track their progress. <a href="%{studio_url}">You
-      can also continue to browse the various stages and puzzles</a> without creating
-      an account.
+    hoc_already_signed_up_content_post_hoc: Þakka þér fyrir að hýsa Klukkustund kóðunar.
+      Til að skrá þig inn í Kóðastúdíóið þarft þú að stofna aðgang með lykilorði.
+      Þá getur þú vistað framvindu þína og haft umsjón með bekknum. Þú getur skráð
+      nemendur á námskeið og fylgst með framvindu þeirra. <a href="%{studio_url}">En
+      þú getur líka skoðað hin ýmsu borð og þrautir</a> án þess að stofna aðgang.
     teacher_educator_guide: Sjá leiðarvísi kennara
     title: Nýskrá á Code.org
     school_name: Nafn skóla (valfrjálst)
@@ -158,6 +157,8 @@
     login: Innskráning
     invalid_login: Innskráning tókst ekki. Reyndu aftur.
     pair_programming: "Ég er með félaga við tölvuna"
+    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
+      target='_blank'>here</a>.
   password:
     reset_form:
       title: Gleymdir þú lykilorðinu þínu ?
@@ -366,10 +367,10 @@
     delete_text_teacher_note: 'Vinsamlegast athugaðu: þó þú eyðir þínum aðgangi, eyðir
       það ekki aðgangi nemenda þinna.'
     delete_confirm: Ertu viss um að þú viljir eyða aðgangi þínum?
-    deleted_user: deleted user
-    no_password_because_oauth: No password because you sign in with a third-party
-      provider.
-    no_password_because_sponsored: See your teacher to manage your password.
+    deleted_user: notanda var eytt
+    no_password_because_oauth: Ekkert lykilorð því þú skráir þig inn frá þriðja aðila.
+    no_password_because_sponsored: Ræddu við kennarann þinn varðandi umsjón lykilorðs
+      þíns.
   user_level:
     completed: Lokið
     tried: Reynt
@@ -452,7 +453,7 @@
       bréf sem fer þess á leit við Bandaríkjaþing að fjármagna kennslu tölvunarfræði
       í grunnskólum.
     announcement_petition_button: Bættu nafni þínu við
-    announcement_go_beyond_button: Go beyond
+    announcement_go_beyond_button: Halda lengra
     announcement_all: Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir
       kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
     announcement_hoc_launch: "Þúsundir kennara í meira en 180 löndum munu byrja að
@@ -470,12 +471,29 @@
       hágæða fræðslu fyrir kennara og fjöldann allan af góðum verkfærum fyrir alla
       aldurhópa &mdash;allt sem þú munt þarfnast, og allt frítt. Hvar er best að byrja?
       Sæktu  <a href='%{video_download_url}'>þetta myndband</a>!"
-    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
-      concepts with your students every week. Code.org offers curriculum, lesson plans,
-      high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;and it's all free. :) You don't need any experience to start
-      teaching computer science in your classroom. <b>Find the next step that's right
-      for your classroom.</b>
+    announcement_go_beyond: Haltu áfram eftir Klukkustund kóðunar og kannaðu hugtök
+      tölvunarfræði með nemendum þínum í hverri viku. Code.org er með námsefni, kennsluáætlanir,
+      hágæða þjálfun fyrir kennara og fullt af fínum verkfærum fyrir alla árganga&mdash;og
+      allt ókeypis. :) Þú þarft ekki að hafa neina fyrri reynslu til að geta byrjað
+      að kenna nemendum þínum tölvunarfræði. <b>Finndu næsta áfanga sem hentar bekknum
+      þínum.</b>
+    announcement_teacher_recruitment: Teachers like you are leading the computer science
+      education movement. You can participate in high-quality K-12th grade professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Take the lead on computer science in your school, and apply for professional
+      learning.
+    announcement_student_privacy: At Code.org, we take student privacy very seriously.
+      To protect your students’ privacy, we have made a change to your section’s login
+      page to avoid displaying full names. Even though this update should reduce privacy
+      concerns for the login page, we still encourage users to <i>not use full names
+      for students</i>.
+    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+      Your students could be featured in Code.org''s next viral video encouraging
+      students to take the AP CS Principles exam this year. We''re inviting all CS
+      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
+      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
+      will be featured in our video and the winning students will receive Code.org
+      swag!'
   move_students:
     new_section_dne: "Því miður finnst hópurinn %{new_section_code} ekki. Vinsamlegast
       færðu inn annan kóða fyrir hóp."
@@ -683,6 +701,9 @@
     support: Fá hjálp
     support_url: "//support.code.org"
     help_resources: Hjálp og tilföng
+    help_support: Help and Support
+    documentation: Documentation
+    tutorials: Tutorials
   multi:
     wrong_title: Rangt svar
     wrong_body: Svarið sem þú gafst er ekki rétt. Vinsamlegast reyndu aftur!
@@ -937,6 +958,8 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
+    main_course: Main Course
+    extra_course_content: Extra Course Content
   external_links:
     disclaimer: Afsal ábyrgðar
     leaving_domain: "Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org

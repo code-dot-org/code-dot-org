@@ -1011,6 +1011,9 @@
         Using a word problem from your existing
         curriculum or elswhere, complete the Design Recipe and program a function.
         Use a Design Recipe form from your workbook or download a copy [here]('https://code.org/curriculum/algebra/docs/worksheets/design_recipe.pdf').
+      Alien Defender_markdown_instruction: |-
+        **Project Idea**: Make a defender game
+        in Play Lab!
       AllTheThings Applab - Turtle move with button_markdown_instruction: |-
         # Please
         sign in to test applab levels (By design, applab levels only work if signed
@@ -1091,6 +1094,11 @@
         \r
         End
         of instructions that are long.
+      allthethings level dataTables_markdown_instruction: |-
+        Please sign in to test
+        applab levels (By design, applab levels only work if signed in. Normally,
+        we make people sign in, but this is only enforceable for a whole script and
+        would be annoying to do for the allthethings script).
       allthethings_embed_video_markdown_instruction: "Siri is a digital assistant\nbuilt
         into Apple's iOS devices, including iPhones and iPads. Watch the advertisement\nfor
         Siri, below. \n\n<iframe width=\"637px\" height=\"375px\" src=\"https://www.youtube.com/embed/8ciagGASro0\"\nframeborder=\"0\"
@@ -1644,6 +1652,64 @@
       Calc Vars 2_markdown_instruction: |-
         Can you write an expression that calculates
         `age` in months?
+      'Challenge: Buzzer and LED_markdown_instruction': |-
+        # Challenge\r
+        \r
+        Check
+        with your teacher before starting the challenge.\r
+        \r
+        Now that you know
+        how to use the LED and buzzer, try creating an app that can play a variety
+        of different sounds and which uses the LED. You could make a keyboard or synthesizer
+        that plays various sounds when you click different buttons.
+      'Challenge: Input and UI_markdown_instruction': |-
+        # Stop\r
+        \r
+        You have reached
+        the end of the lesson. Check in with your teacher to see if you should work
+        on the challenge level before you start. This is an extra challenge to practice
+        your skills if you have time. If you don't have time for it no big deal!\r
+        \r
+        #
+        Challenge\r
+        \r
+        Go to <a href="studio.code.org/p/gamelab" target="_blank">
+        Full Game Lab </a> and try to make your own profile creator like the example
+        program on this level.
+      'Challenge: Lights Picker_markdown_instruction': |-
+        # Light Pattern\r
+        \r
+        Find
+        a partner and bring your light patterns together.\r
+        \r
+        Set up the app so
+        the user can use what light pattern they want to see. You should put each
+        of your light displays in a function to make this easier
+      'Challenge: List of Notes_markdown_instruction': |
+        # Challenge: \r
+        \r
+        Check
+        with your teacher before starting the challenge.\r
+      'Challenge: Sunset with Counters_markdown_instruction': |
+        # Challenge: Nightfall\r
+        \r
+        Think
+        you've got drawing with counters down? Try this challenge.\r
+        \r
+        The color
+        block can take a 4th input that controls the opacity of the color. You can
+        click the arrows on the side of the color block to expand this 4th input.\r
+        \r
+        ![](https://images.code.org/7844f8cb46eade7cec452b7a4d98124b-image-1484964689007.10.08
+        PM.png)\r
+        \r
+        # Do This\r
+        \r
+        This is your same sunset animation from before.
+        Can you make the scene slowly change to night?\r
+        \r
+        ![](https://images.code.org/b055142110b0d0ed092d6496447aad6e-image-1463079830043.gif)\r
+        \r
       Classroom Assessment Techniques_markdown_instruction: |-
         The following link is
         a resource that presents the process of designing and using classroom assessment
@@ -2526,7 +2592,7 @@
         figure out how to collect all of this nectar with the fewest blocks possible?\r
       Course 4 SCF 1b_markdown_instruction: |
         **Functions Super Challenge:** Can you
-        figure out how to collect all of this nectar with the fewest blocks possible?\r
+        figure out how to collect all of this honey with the fewest blocks possible?\r
         \r
       Course 4 SCF 2_markdown_instruction: "**Functions Super Challenge:** Use what\nyou
         learned in the previous level to draw an image like this.\\r\n\\r\n*Note:\nThe
@@ -2754,11 +2820,272 @@
         "arrrg" should be "a" \r
         - "ye" should be "e"\r
         \r
-      courseA_maze_seq2_markdown_instruction: |-
-        A bug! Fix the code to get me to the
-        pig.\r
+      courseA_artist_loops10_markdown_instruction: |
+        <div style="color: #7665a0;
+        font-size: 1.6em; line-height: 1.4em;" >\r
+        Time to head back to land. Help
+        me put down stones so I don't fall in!<br/><br/>\r
+        </div>\r
         \r
-        ![](https://images.code.org/2843193ce2d869ad2f06f0f5b114c9d0-image-1467924400663.gif)
+        <img src="https://images.code.org/5ba9e8e5c1524eec2b0ba3e4684b0cef-image-1467936361364.gif"
+        width="300"/>\r
+      courseA_artist_loops11_markdown_instruction: |
+        <div style="color: #7665a0;
+        font-size: 1.6em; line-height: 1.4em;" >\r
+        Help me build steps to watch
+        the ship sail away.<br/>\r
+        </div>\r
+        \r
+        <img src="https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif"
+        width="300"/>\r
+      courseA_artist_loops12_markdown_instruction: |
+        The artist saw something funny
+        in the distance.  Draw what you think he saw.\r
+        \r
+        <hr/>\r
+        <h3>Ideas</h3>\r
+        <table>\r
+        <tr>\r
+        <td>\r
+        <img
+        src="https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif"
+        width="150"/><br/>\r
+        <h4>A Singing Snail</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif"
+        width="150"/><br/>\r
+        <h4>A Big City</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif"
+        width="150"/><br/>\r
+        <h4>A Concert</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif"
+        width="150"/><br/>\r
+        <h4>A Birthday Cake</h4><br/><br/>\r
+        </td>\r
+        \r
+        </tr>\r
+        </table>\r
+      courseA_artist_loops2_markdown_instruction: |-
+        Help the artist draw this line
+        two times forward.\r
+        \r
+        ![](https://images.code.org/7ddc7b43ef27197559c7defb0af56d03-image-1470776934855.gif)
+      courseA_artist_loops3_markdown_instruction: |-
+        Our artist is trying to draw a
+        line five times, but can't get it right. Can you help?\r
+        \r
+        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops4_markdown_instruction: |-
+        Now, use a `repeat` loop to draw
+        this line five times!\r
+        \r
+        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops5_markdown_instruction: |
+        <div style="color: #7665a0; font-size:
+        1.6em; line-height: 1.4em;" >\r
+        Draw a line seven steps long. This will
+        become our horizon.<br/><br/>\r
+        </div>\r
+        \r
+        <img src="https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif"
+        width="300"/>\r
+      courseA_artist_loops6_markdown_instruction: |
+        <div style="color: #7665a0; font-size:
+        1.6em; line-height: 1.4em;" >\r
+        Let's put a nice hill in the back.<br/><br/>\r
+        </div>\r
+        \r
+        <img
+        src="https://images.code.org/bbbd114642d829029fc3b0566a4437e3-image-1477107329933.gif"
+        width="300"/>\r
+      courseA_artist_loops7_markdown_instruction: |
+        <div style="color: #7665a0; font-size:
+        1.6em; line-height: 1.4em;" >\r
+        Use the `repeat` loop to add waves to the
+        water.<br/>\r
+        </div>\r
+        \r
+        <img src="https://images.code.org/06a1120e0b2da4dbcf960a22c3abc248-image-1470787144854.gif"
+        width="300"/>\r
+      courseA_artist_loops8_markdown_instruction: |-
+        <div style="color: #7665a0; font-size:
+        1.6em; line-height: 1.4em;" >\r
+        We need a ladder up to the boat.<br/>\r
+        </div>\r
+        <img
+        src="https://images.code.org/6e4dc767e55d11400f35c6680bbfe1e3-image-1470788284437.gif"
+        width="300"/>
+      courseA_artist_loops9_markdown_instruction: |
+        <div style="color: #7665a0; font-size:
+        1.6em; line-height: 1.4em;" >\r
+        **Challenge:** The stairs down to the dock
+        are broken.  Help me fix them.<br/>\r
+        </div>\r
+        \r
+        <img src="https://images.code.org/53c68133f897895caa0369b4afa3ec3b-image-1470789463684.gif"
+        width="300"/>\r
+      courseA_collector_loops1_markdown_instruction: |-
+        This is Laurel the Adventurer!\r
+        \r
+        Move
+        her around and get as much gold as you can.
+      courseA_maze_seq1_markdown_instruction: |-
+        *"Play with these blocks and try
+        to get me to the bad pig!"*
+      courseA_maze_seq10_markdown_instruction: |-
+        **Challenge:** Go around the TNT
+        to get the bird to the pig!\r
+        \r
+        <img src="https://images.code.org/fa04813e9451e0bc070af50bc01d4a6b-image-1467932582838.gif"
+        width="200px"/>
+      courseA_maze_seq11_markdown_instruction: |
+        Time for a shorter puzzle!  Move
+        one way, then another to get the bird to the pig.\r
+        \r
+        <img src="https://images.code.org/c2e2d7ea98a18d899c6de183ce6d82e1-image-1471385293382.gif"
+        width="200px"/>\r
+      courseA_maze_seq12_markdown_instruction: |
+        Get that pig!\r
+        \r
+        <img src="https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif"
+        width="200px"/>\r
+      courseA_maze_seq2_markdown_instruction: |-
+        *"A bug! Fix the code to get me to
+        the pig."*\r
+          \r
+        <img src="https://images.code.org/2843193ce2d869ad2f06f0f5b114c9d0-image-1467924400663.gif"
+        width="200px"/>
+      courseA_maze_seq3_markdown_instruction: |-
+        *"Fix the code to get me to the pig!"*\r
+        \r
+        <img
+        src="https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif"
+        width="200"/>
+      courseA_maze_seq4_markdown_instruction: |-
+        *"Something is not quite right."*
+        \r
+        \r
+        REMOVE a block to get the bird to the pig!\r
+        \r
+        <img src="https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif"
+        width="200px"/>
+      courseA_maze_seq5_markdown_instruction: |-
+        Try this one yourself from the beginning.\r
+        \r
+        <img
+        src="https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif"
+        width="200px"/>
+      courseA_maze_seq6_markdown_instruction: |-
+        Move one way, then another to get
+        the bird to the pig!\r
+        \r
+        <img src="https://images.code.org/0b324bc0f684f7a22171acd8b38c8d9f-image-1467931807767.gif"
+        width="200px"/>
+      courseA_maze_seq7_markdown_instruction: |-
+        Figure out what is missing and then
+        add blocks to get the bird to the pig!\r
+        \r
+        <img src="https://images.code.org/b9803e12911694d8bb18bd55304f85d5-image-1467932006704.gif"
+        width="200px"/>
+      courseA_maze_seq8_markdown_instruction: |-
+        Solve this level and get the bird
+        to the pig!\r
+        \r
+        <img src="https://images.code.org/1eb9139e2887083dc80b98d9aeb3bef2-image-1467932105884.gif"
+        width="200px"/>
+      courseA_maze_seq9_markdown_instruction: |-
+        **Challenge:** Debug this level by
+        adding blocks to get the bird to the pig!\r
+        \r
+        <img src="https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif"
+        width="200px"/>
+      courseA_playLab_events3_markdown_instruction: |-
+        Help Jorge the Dog get moving
+        by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
+        block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
+        event block that is already in the workspace.
+      courseA_playLab_events4_markdown_instruction: |-
+        Now, get Jorge to move right
+        when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png)
+        button is clicked.
+      courseA_playLab_events5_markdown_instruction: |-
+        Add events to have Jorge move
+        up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png)
+        and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png)
+        buttons are pressed.
+      courseB_artist_loops10_markdown_instruction: |
+        Use what you have learned to
+        draw a picture of what you think the artist saw when he got home.\r
+        \r
+        <hr/>\r
+        <h3>Ideas</h3>\r
+        <table>\r
+        <tr>\r
+        <td>\r
+        <img
+        src="https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif"
+        width="150"/><br/>\r
+        <h4>A Singing Snail</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif"
+        width="150"/><br/>\r
+        <h4>A Big City</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif"
+        width="150"/><br/>\r
+        <h4>A Concert</h4><br/><br/>\r
+        </td>\r
+        \r
+        <td>\r
+        <img
+        src="https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif"
+        width="150"/><br/>\r
+        <h4>A Birthday Cake</h4><br/><br/>\r
+        </td>\r
+        \r
+        </tr>\r
+        </table>\r
+      courseB_artist_loops6_markdown_instruction: |-
+        Behind the bushes there is a beautiful
+        vine full of flowers.  Can you climb the vine and see where it goes?
+      courseB_artist_loops7_markdown_instruction: |-
+        **Challenge:**  It's a hidden
+        garden! Let's walk around.
+      courseB_collector_loops3_markdown_instruction: |-
+        How can Laurel collect all
+        five piles of gold using only one `E -->` block?
+      courseB_collector_prog3_markdown_instruction: |-
+        How can Laurel collect all five
+        piles of gold using only one `E -->` block?
+      courseB_maze_seq9_markdown_instruction: |-
+        **Challenge:** Move around the TNT
+        to get the bird to the pig.
+      courseB_maze_seqCold_markdown_instruction: |-
+        **Challenge:** Debug this level
+        by adding blocks to get the bird to the pig!
+      courseB_playLab_events1_markdown_instruction: |-
+        This game is called "Play Lab".  \r
+        \r
+        <br/>\r
+        See
+        if you can figure out what each block does.
       courseB_playlab_events3_markdown_instruction: |
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
@@ -3705,8 +4032,7 @@
         We've added these blocks to
         your tool box to help you.\r
         \r
-        ![](https://images.code.org/6216c0559cfae16005ffb53e6532473b-image-1471472994205.23.54
-        PM.png)
+        ![](https://images.code.org/6216c0559cfae16005ffb53e6532473b-image-1471472994205.23.54%20PM.png)
       courseE_playLab_scaffold3_markdown_instruction: |-
         Now that your game has a hero,
         add two or more additional actors to your game and make them move. \r
@@ -3792,6 +4118,77 @@
         alpha` block to get this faded center.  \r
         (This hexagon pattern was made
         using a 60 degree turn.)
+      courseF_artist_fwp1_markdown_instruction: |-
+        Today, we're going to try out a
+        powerful function editor. See if you can figure out how to edit the `draw
+        a square` function to find the bugs.
+      courseF_artist_fwp2_markdown_instruction: |-
+        Edit the function to accept a parameter
+        called `length`.  \r
+        \r
+        The sides of each square should be 25 pixels larger
+        than the last.  The first square has 25 pixel sides. Replace the '???' with
+        the correct values to draw the picture.
+      courseF_artist_fwp3_markdown_instruction: |-
+        Now try creating the function from
+        scratch!  \r
+        \r
+        Create a function called `draw a square` and use it to outline
+        these four boxes.  \r
+        Make sure to add a parameter for `length`!\r
+        \r
+        <hr/>\r
+        Starting
+        from the upper right, the box widths are 50, 100, 150, and 200.
+      courseF_artist_fwp4_markdown_instruction: |-
+        Great job!  Now edit this function
+        to add a parameter for the number of sides in your polygon.\r
+        \r
+        The sides
+        of all the shapes are 100 pixels long.
+      courseF_artist_fwp5_markdown_instruction: |
+        Use the function from the last puzzle
+        to draw this series of shapes.  \r
+        \r
+        \r
+        The triangle has 21 pixel sides,
+        and the sides in each following shape are 7 pixels longer than the last.   \r
+        Use
+        the `multiplication`block to make this all happen with just one function call.\r
+        <hr/>\r
+        The
+        `multipication` block looks like this ![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\r
+        \r
+      courseF_artist_fwp6_markdown_instruction: |-
+        **Challenge:** Edit `draw a spiral
+        edge` to use `length` and `sides` parameters, then recreate these shapes.\r
+        \r
+        -
+        The square goes from 3 pixels to 90 pixels.\r
+        - The hexagon goes from 3 pixels
+        to 100 pixels.\r
+        - The triangle goes from 3 pixels to 105 pixels.
+      courseF_artist_fwp7_markdown_instruction: |
+        Finish off the `draw a spiral edge`
+        function to also ask for a minimum length for the center of the spiral.\r
+        \r
+        -
+        The smallest side in the center of this square is 50 pixels long\r
+        - The
+        longest side at the outside of this spiral is 200 pixels long\r
+      courseF_artist_fwp8_markdown_instruction: |
+        Can you figure out how to make this
+        drawing using the function that you just created?\r
+        \r
+        - The red spiral
+        goes from 50 to 200 pixels\r
+        - The blue spiral goes from 25 to 125 pixels\r
+        -
+        The green spiral goes from 100 to 300 pixels\r
+      courseF_artist_fwp9_markdown_instruction: |-
+        **Freeplay:** Below there are functions
+        you've written, and more for you to play with. Play with the pen width to
+        see how different your drawings look!
       courseF_artist_variables10_markdown_instruction: |-
         Here's your code from the
         last puzzle.  Try editing the variable in other ways.  \r
@@ -3976,6 +4373,43 @@
         \r
         How can you use the `counter` variable to navigate
         this garden with the fewest number of blocks possible?
+      courseF_bee_fwp1_markdown_instruction: |-
+        Check beneath the clouds to see if
+        the flowers have any nectar.
+      courseF_bee_fwp2_markdown_instruction: |-
+        Here's some code that solves the last
+        puzzle.  \r
+        Let's pull it into a function, then call the function to check
+        this row for nectar.  \r
+        <hr/>\r
+        This may seem like a strange step now,
+        but it will be really helpful soon!
+      courseF_bee_fwp3_markdown_instruction: |-
+        Time to put the function to the test!
+        \r
+        \r
+        Let's see if it makes collecting these three rows of nectar any easier.
+      courseF_bee_fwp4_markdown_instruction: |-
+        *"How is your function holding up?"*   \r
+        \r
+        We
+        need to make some adjustments here. Click "edit" to add a `length` parameter
+        to the function so that it will still work when the row is a different length.
+      courseF_bee_fwp5_markdown_instruction: |-
+        *"You're doing great so far!"*\r
+        \r
+        Let's
+        use this function to collect the nectar.
+      courseF_bee_fwp6_markdown_instruction: |-
+        You can make code shorter and more
+        efficient when you combine functions with other programming elements.  \r
+        <hr/>\r
+        What
+        blocks can you use with your function to build a short and sweet solution
+        to this puzzle?
+      courseF_bee_fwp7_markdown_instruction: |-
+        **Challenge:** Something looks a little
+        different. Modify your function to make honey as well.
       courseF_playlab_variables0_markdown_instruction: |
         This is Pirate Pegleg.  He's
         awfully hard to understand these days!  \r
@@ -4146,6 +4580,12 @@
         the cipher! Is this a good method of encrypting secret data?\r
         \r
         <img src="http://code.org/api/hour/finish_encryption.png">
+      CSD - Predict List Accessing_markdown_instruction: |
+        # Predict\r
+        \r
+        The code
+        below has 4 things it will log to the console. What do you think will print
+        in the console as a result of this code?\r
       CSD Hackathon Pt 1_markdown_instruction: |-
         # MS Hackathon: Fancy Drawing\r
         \r
@@ -5555,35 +5995,34 @@
         * **Click "Run" to start the widget on the left,**
         and use the sliders to adjust the levels of red, green, and blue light.\r
         *
-        For each of the colors below, match it to its RGB value. Type your response
-        in the box below.\r
+        For each of the colors below, match it to its RGB value.\r
         \r
-        A) red: 216, green: 191, blue: 216 - rgb(216,191,216)\r
+        A) red: 216,
+        green: 191, blue: 216 - rgb(216,191,216)\r
         \r
-        B)
-        red: 255, green: 239, blue: 213 - rgb(255,239,213)\r
+        B) red: 255, green: 239, blue:
+        213 - rgb(255,239,213)\r
         \r
-        C) red: 255, green:
-        140, blue: 105 - rgb(255,140,105)\r
+        C) red: 255, green: 140, blue: 105 - rgb(255,140,105)\r
         \r
-        D) red: 123, green: 104, blue: 238
-        - rgb(123,104,238)\r
+        D)
+        red: 123, green: 104, blue: 238 - rgb(123,104,238)\r
         \r
-        E) red: 107, green: 142, blue: 35 - rgb(107,142,35)\r
+        E) red: 107, green:
+        142, blue: 35 - rgb(107,142,35)\r
         \r
         \r
-        <div
-        style="font-size: 16px">\r
-        <br />\r
+        <div style="font-size: 16px">\r
+        <br
+        />\r
         <details>\r
-        <summary>**Why do red
-        and green make yellow?**</summary>\r
-        <p>When you mix paint, red and green
-        make brown, but RGB color mixing uses light instead of paint, so the colors
-        mix differently.  RGB uses _additive color mixing_.  In additive color mixing,
-        red and green make yellow, red and blue make magenta, and blue and green make
-        cyan.  When you mix the three primary colors together (red, green, and blue),
-        they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia
+        <summary>**Why do red and green make yellow?**</summary>\r
+        <p>When
+        you mix paint, red and green make brown, but RGB color mixing uses light instead
+        of paint, so the colors mix differently.  RGB uses _additive color mixing_.  In
+        additive color mixing, red and green make yellow, red and blue make magenta,
+        and blue and green make cyan.  When you mix the three primary colors together
+        (red, green, and blue), they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia
         - Additive Color</a>\r
         </p> </details>\r
         <details>\r
@@ -6623,7 +7062,7 @@
         from the challenge, with the up arrow using a nested conditional. \r
         \r
         *
-        Use the same nested conditional pattern one the other 3 arrow keys.\r
+        Use the same nested conditional pattern on the other 3 arrow keys.\r
       CSD U3 - conditionals - arrows and gears_markdown_instruction: |-
         # Gears with
         Conditionals\r
@@ -8244,12 +8683,14 @@
         Before we get started
         you'll want some better animations for each of your sprites.\r
         \r
-        * Use
-        the animations tab to select appropriate animations for each of your sprites.
-        You should **use the ones provided for now** but later you'll be able to
-        go change them.\r
-        * Head to [Level 4](/s/csd3/stage/16/puzzle/4) if you need
-        help remembering how to do this.
+        * In
+        the Animation Tab are animations for each of your sprites. Go look at what
+        they are.\r
+        * In your code give each sprite its appropriate animation. **Use
+        the ones provided for now** but later you'll be able to go change them.\r
+        *
+        Head to [Level 4](/s/csd3/stage/16/puzzle/4) if you need help remembering
+        how to do this.
       CSD U3 AnimationsMulti defender animate player_markdown_instruction: |-
         # Change
         Player Animations\r
@@ -8457,7 +8898,7 @@
         * Use an `if` block along with `keyDown`
         to detect when the "up" arrow is pressed\r
         * Use `sprite.y` to increase
-        the player's x position by 3 using the counter pattern\r
+        the player's y position by 3 using the counter pattern\r
         * Use another `if`
         block to move the player down when the "down" arrow is pressed\r
         \r
@@ -9811,7 +10252,7 @@
         conditions at once.\r
         \r
         * **Brainstorm** with your neighbors ways you might
-        check for more that one condition.\r
+        check for more than one condition.\r
         * **Share** back with the whole class
         so you can see other potential approaches.\r
         * **Explore** the toolbox for
@@ -10101,14 +10542,42 @@
         <details><Summary>Need help?</Summary>\r
         <ul>\r
         <li>For
-        help animating the sun go check out level 8</li>\r
+        help animating the sun go check out level 10</li>\r
         <li>For help animating
-        the sky go check out level 10</li>\r
+        the sky go check out level 12</li>\r
         <li>For help animating the cloud go
-        check out level 12</li>\r
+        check out level 13</li>\r
         </ul>\r
         \r
         </details>
+      CSD U3 Counters explaining counters contained 2_markdown_instruction: |
+        # The
+        Counter Pattern\r
+        \r
+        This pattern is one of the most important ones in all
+        of programming. \r
+        \r
+        ![](https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56
+        PM.png)\r
+            \r
+        It is used to increase the value of a variable by 1. You
+        might call it the **counter pattern** since it can be used to make a variable
+        that counts up. You'll use this pattern a lot, especially with the draw loop.
+        Let's see what that looks like.\r
+        \r
+        # Do This\r
+        \r
+        This program creates
+        a variable `counter` and then uses the **counter pattern** to make it count
+        up. When you run the program what do you think you'll see on the screen?\r
+        \r
+        *
+        **Read the program** and make a prediction of what the output will be.\r
+        *
+        **Run the program** to check your prediction.\r
+        * **Discuss with a neighbor**.
+        Can you explain what you observed?\r
+        \r
       CSD U3 Counters explaining counters_markdown_instruction: |
         # The Counter Pattern\r
         \r
@@ -10543,23 +11012,6 @@
         *
         Play the game and **randomize the velocity of the coin** to a range that you
         think is fun
-      CSD U3 Functions bunny template_markdown_instruction: |-
-        # Change the Background
-        with the Score\r
-        \r
-        Once you've caught 10 coins it's time to celebrate.
-        You should change the background to be something fun.\r
-        \r
-        <img src="https://images.code.org/943c67e59502334fc65a25e690076bdb-image-1475030156530.33.54
-        PM.png" style="float:right; height:100px">\r
-        \r
-        # Do This\r
-        \r
-        * Use
-        an **if-statement** and two separate functions to draw your backgrounds\r
-        *
-        Then go write your functions outside your draw loop. You get to decide what
-        a "simple" or "crazy" background are. Have fun with it!
       CSD U3 Functions Call Draw Loop_markdown_instruction: |-
         # Calling Functions
         in the Draw Loop\r
@@ -11881,13 +12333,13 @@
         \r
         # Do This\r
         \r
-        Pick a shape function
-        and use calls to `randomNumber()` in place of one or more of the inputs. Make
-        sure you run it a few times so you can see the effect of randomization.\r
+        Pick a shape command (`ellipse()`,
+        `rect()` or `regularPolygon()`) and use `randomNumber()` in place of one or
+        more of the inputs. Make sure you run it a few times so you can see the effect
+        of randomization.\r
         \r
-        _Notice
-        that the `console.log()` block is now in the Variables drawer and the `randomNumber()`
-        block is in the Math drawer._
+        _Notice that the `console.log()` block is now in
+        the Variables drawer and the `randomNumber()` block is in the Math drawer._
       CSD U3 Simple Drawing - Animation 2_markdown_instruction: |-
         # Rays of Sunshine\r
         \r
@@ -13255,6 +13707,49 @@
         the font size\r
         * Choose a color you like for the title\r
         \r
+      'CSD: Boolean Expressions_markdown_instruction': "# Boolean Expressions Video"
+      'CSD: Cake Defender Exemplar_markdown_instruction': |-
+        # Defend Your Cake!\r
+        \r
+        This
+        is an example of a defender game that you'll build by the end of this lesson.
+        Move the alien with arrow keys to keep the ladybugs from getting to your cake.
+        How high of a score can you get?\r
+        \r
+        # Do This\r
+        \r
+        Turn to a classmate
+        and make a list of the following information.\r
+        \r
+        * How many sprites are
+        there in this game. Which are they?\r
+        * What variables are needed to make
+        this game? What do they store?\r
+        * If you were to split the code of this
+        game into functions what do you think they would be? What are the major pieces
+        of behavior you'd need to create in your code?
+      'CSD: Platform Jumper Exemplar_markdown_instruction': |-
+        # Platform Jumper\r
+        \r
+        The
+        game on the left is an example of a platform jumper.  Press "Run" to play
+        it.  You can make the alien jump with the up arrow, and move it to the left
+        and right with the arrow keys.  You score by collecting stars, and if you
+        score high enough, the background will change.\r
+        \r
+        You already know how
+        to use all the blocks you need to make a game just like this one, and you'll
+        be making your own platform jumper in this lesson.\r
+        \r
+        You can see other
+        examples of platform jumpers in the next two levels.
+      'CSD: Slider Example_markdown_instruction': |-
+        # RGB Slider\r
+        \r
+        Over the next
+        couple levels you are going to learn about using sliders to get user input.
+        You will be creating this slider which controls the color of a button. You
+        will return to this project in later lessons to control lights!
       CSDU2 - 2nd Validator issue_markdown_instruction: |-
         # Add head and title tags\r
         \r
@@ -14400,13 +14895,13 @@
          * Where does the file name go?\r
          * Where does the label
         of the link go?\r
-        * Below the comment add a hyperlink (`<a>`) to each of
-        the following pages\r
+        * Below the hyperlink to the Odd Houses page add two new
+        hyperlinks (`<a>`) to the following pages:\r
             * Crazy Signs Page\r
-            * Guinness Book of World
-        Records Page\r
-        * Test it out to see if clicking the links take you to the
-        other pages of your site.
+            *
+        Guinness Book of World Records Page\r
+        * Test it out to see if clicking the
+        links take you to the other pages of your site.
       CSDU2 - Link Tag_markdown_instruction: |-
         # Link Element\r
         \r
@@ -16007,7 +16502,7 @@
         # Welcome to Web Lab!\r
         \r
         <img
-        src="https://images.code.org/869225b10df7518a7d40b80c587898a6-image-1480362796040.png"
+        src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg"
         style="width:700px; float:right">\r
         \r
         The platform you are in is called
@@ -16021,7 +16516,6 @@
         * Try typing something in the Code Area\r
         * Press <img src="https://images.code.org/6a35d13b10ed2029a9323c9cb555e39e-image-1477681291001.01.12
         PM.png" style="width:100px"> to see it in the Preview Area!\r
-        \r
       CSDU2 - Unordered Lists_markdown_instruction: |-
         <div style="float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
@@ -17577,15 +18071,15 @@
         than Just Labels\r
         \r
         You can use `setText()` to change the text of labels,
-        obviously, but it can also be used to change to change the text on _any_ element
-        that has text, including buttons, text input, and text areas.\r
+        obviously, but it can also be used to change the text on _any_ element that
+        has text, including buttons, text input, and text areas.\r
         \r
-        # Do
-        This\r
+        # Do This\r
         \r
-        The starter program has an event handler already set up for the
-        red button, can you write event handlers for the other three buttons so they
-        behave in the same way?
+        The
+        starter program has an event handler already set up for the red button, can
+        you write event handlers for the other three buttons so they behave in the
+        same way?
       CSDU4 Functionality setText input_markdown_instruction: |-
         # Pre-fill Input Fields
         with setText\r
@@ -17892,6 +18386,498 @@
         from this Prototype\r
         \r
         * Questions aren't actually checked for correctness
+      CSDU6 - Arrays - expressionsAsIndexes_markdown_instruction: |-
+        # Expressions
+        as Indexes: Using Variables\r
+        \r
+        * **Starter code** has been provided which
+        creates an list of identifiers for icons in the icon library\r
+        * **Write
+        code** that sets the image on the screen to a random icon from the list
+      CSDU6 - Arrays - indexPractice_markdown_instruction: |-
+        # Index Practice\r
+        \r
+        <img
+        src="https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45
+        PM.png" style="width: 150px; float: right">\r
+        \r
+        **Starter code** has
+        been provided that creates a list called `colors`.\r
+        \r
+        * Use `setProperty`
+        and the list of colors to change the `background-color` of the buttons to
+        create a rainbow. The first button has been done for you.
+      CSDU6 - Arrays - length_markdown_instruction: |-
+        <img src="https://images.code.org/f02914c957acffecbadaa3646388d26c-image-1486499703151.33.50
+        PM.png" style="width: 200px; float:right">\r
+        \r
+        # List Length\r
+        \r
+        *
+        **Starter code** has been provided which creates several long arrays.\r
+        *
+        **Use `list.length` and `console.log`** to determine how many items are in
+        each array. An example of the output is below.
+      CSDU6 - Arrays - lengthMinus1_markdown_instruction: |
+        # Accessing Last Item
+        in List\r
+        \r
+        * **Starter code** has been provided that which creates several
+        lists.\r
+        * **Write Code** to display the final item in each list. Make sure
+        to use list.length so that your code will work even if the list shrank.\r
+      CSDU6 - L06 - Light Display Template_markdown_instruction: |
+        # Blink\r
+        \r
+        Make
+        lights blink \r
+        \r
+      CSDU6 - lists - lists 1_markdown_instruction: |-
+        # Lists\r
+        \r
+        Let's practice
+        adding items and printing out lists.\r
+        \r
+        * Add a `console.log()` command
+        to print out the lettersList\r
+        * Add the letter "c" to the letters list
+        so it prints [a,b,c,d]
+      CSDU6 - lists - lists 2_markdown_instruction: |-
+        # Create Your Own Lists\r
+        \r
+        **Write
+        code:** to create the following lists:\r
+        \r
+        * The numbers from 1 to 10\r
+        *
+        A list of the names of 5 different shapes\r
+        * The names of the months of
+        the year
+      CSDU6 - lists - lists 3 - out of bounds_markdown_instruction: |-
+        # Accessing
+        Items in a List\r
+        \r
+        **Starter Code:** There is a list of days of the week
+        provided as well as well as a console.log statement to access the spot that
+        holds "Friday" in the list. \r
+        \r
+        **Do This:** Can you add three more
+        console.log statements that access the spots that hold:\r
+        \r
+        * Thursday\r
+        *
+        Monday\r
+        * Sunday
+      CSDU6 - lists - lists 3_markdown_instruction: |-
+        # Accessing Items in a List\r
+        \r
+        **Starter
+        Code:** There is a list of days of the week provided as well as a command
+        to set the label on the screen.\r
+        \r
+        **Do This:** Can you change the index
+        value so that the page displays "Today is: Tuesday"
+      CSDU6 - lists - lists 5_markdown_instruction: |
+        # Debug\r
+        \r
+      CSDU6 - UI and Inputs - Debug Screens and IDs_markdown_instruction: |-
+        # Debug
+        The Program\r
+        \r
+        In Unit 4 you learned how to set up the UI of an app, give
+        elements meaningful IDs, and switch between screens using button clicks.   The
+        programmer that created this app did not use good IDs and that caused their
+        code to be buggy. Can you fix their code?\r
+        \r
+        * Go into Design Mode and
+        give everything meaningful IDs\r
+        * Set up the event handlers so that the
+        buttons transition to the correct screen (see diagram below)\r
+        \r
+        ![](https://images.code.org/f9c9a9b5cbcb6e1cd59b1349625b7e9d-image-1485898200882.png)
+      CSDU6 - UI and Inputs - dropdown setText_markdown_instruction: |-
+        # setText and
+        getText\r
+        \r
+        Often you will want to get the text of a UI Element and use
+        it to set the text of another element on the screen. Can you get the text
+        from the dropdown when the user picks a new input and use it to set the text
+        of the choiceDisplay label.
+      CSDU6 - UI and Inputs - event type testing_markdown_instruction: |
+        # Event Testing:
+        \r
+        There is one event handler provided for you in the code section. One at
+        a time:\r
+        \r
+        * Pick one of the UI elements on the screen (Button, Dropdown,
+        Text Input, Slider)\r
+        * Pick one event type from the 3 on your sheet (Click,
+        Change, Input)\r
+        * Interact this that UI element and try to come up with
+        a clear understanding of when that event fires for that UI element.\r
+        * Write
+        down your thoughts in the table on your worksheet.\r
+      CSDU6 - UI and Inputs - function_markdown_instruction: |-
+        # setColor Function\r
+        \r
+        At
+        this point you probably have the same code inside each of your event handlers.
+        Remember that when you have repeated code it is good to put it into a function.
+        Can you use functions to get rid of the repeated code?
+      CSDU6 - UI and Inputs - getNumber_markdown_instruction: |
+        # getNumber\r
+        \r
+        Alright
+        now that the sliders represent the right range of values. Let's get the value
+        of each slider when they are updated.  \r
+        \r
+        * Using the event handlers
+        can you figure out how to get the number value of each slider? Since you are
+        going to be getting a number and not text you will need to use a new block
+        `getNumber()`.  \r
+        * Make sure to save each number with a clearly named variable.
+      CSDU6 - UI and Inputs - getText_markdown_instruction: |-
+        # getText\r
+        \r
+        Try
+        to set up an event handler that gets the text from the dropdown whenever a
+        user selects a new item from the dropdown. You will need to use the getter
+        `getText()`. Whenever you use a getter you should save it in a variable. Use
+        `console.log()` to make sure it is working.
+      CSDU6 - UI and Inputs - hide show_markdown_instruction: |-
+        # Hide and Show\r
+        \r
+        It
+        is a little weird that both buttons are on the screen at the same time. You
+        don't need the stop alarm button until the alarm is on. Can you make the
+        buttons only show when they are needed?\r
+        \r
+        * You will want the stop alarm
+        button to be hidden when the program starts. You can do this in design mode.\r
+        \r
+        Hint:
+        When you click the trigger alarm button, you should change the text, hide
+        the trigger alarm button, _and_ show the stop alarm button.
+      CSDU6 - UI and Inputs - set slider range_markdown_instruction: |-
+        # Set Slider
+        Range\r
+        \r
+        Sliders represent a range of numbers. In order to set that range
+        you need to set the minimum value and maximum value for each slider. Do you
+        remember what the range of values is you can give for each value in a RGB
+        color?
+      CSDU6 - UI and Inputs - setProperty_markdown_instruction: "# setProperty background-color\\r\n\\r\nIn\norder
+        to set the color of the button you will need to use the `setProperty()`\nblock
+        to control the `background-color` of the button. Setting the background\ncolor
+        with the `color` block will require all 3 slider values at once. So\nyou will
+        need to get the value of each slider inside each event handler. "
+      CSDU6 - UI and Inputs - setText_markdown_instruction: |-
+        # setText\r
+        \r
+        We
+        are going to start making an alarm app. We have already set up an event handler
+        for the "triggerAlarmButton" which will change the "statusLabel" text
+        to ON when clicked. Can you make the stop alarm button change the text to
+        OFF when clicked?
+      CSDU6 - UI and Inputs - slider UI_markdown_instruction: |-
+        # RGB Sliders\r
+        \r
+        <img
+        src="https://images.code.org/f3fb468a73aa35b69d7e64deee34c7c3-image-1486080850211.12.39
+        PM.png" style="width:200px;float:right">\r
+        \r
+        First step to creating
+        the RGB Sliders app is to set up the UI elements and event handers for the
+        sliders. \r
+        \r
+        * Can you get the screen to look similar to the one below?
+        Hint: The color box is a button with no text.\r
+        * Can you set up 3 event
+        handlers that listen for when someone has finished moving the slider to a
+        new location? Hint: Think back to your event investigation. Which event type
+        do you want?
+      CSDU6 AppLab Input 1_markdown_instruction: |-
+        # Input in App Lab\r
+        \r
+        _You
+        don't need to make any changes to the code here_\r
+        \r
+        Take a minute to
+        read through the code and run the program. Discuss with a partner:\r
+        \r
+        1.
+        What is the source of input?\r
+        2. Where and how does the program check for
+        input?\r
+        3. What does the program do when it gets the right input?\r
+        3.
+        What is the program doing when there is no input?
+      CSDU6 buzzer alarm_markdown_instruction: |-
+        # Noisy Alarm\r
+        \r
+        Back to the
+        Alarm now - now with the buzzer we can make this thing really sound like an
+        alarm. Using `buzzer.frequency()` and `buzzer.stop()` make your alarm play
+        a sound when it goes off.
+      CSDU6 buzzer freq_markdown_instruction: |-
+        # Playing Sounds\r
+        \r
+        The `buzzer.frequency()`
+        command takes two inputs - the first is the _frequency_ of the sound to be
+        played (high numbers = higher sounds), and the second is the _duration_ of
+        the sound (how long it should be played)\r
+        \r
+        # Do This\r
+        \r
+        The provided
+        app has three buttons with event handlers. Add a `buzzer.frequency()` command
+        to each of the event handlers so that the buzzer plays the appropriate sound
+        (a low, medium, or high note).
+      CSDU6 buzzer stop_markdown_instruction: |-
+        # Playing Longer Sounds\r
+        \r
+        The
+        _duration_ input of the `buzzer.frequency()` command is an _optional_ input
+        - meaning that you don't need to use it. You can remove an optional input
+        by clicking the left arrow next to it (img needed)\r
+        \r
+        By removing the
+        duration, you are telling the buzzer to buzz continuously. You'll notice
+        that there's a new block in the toolbox called `buzzer.stop()` to use in
+        this case.\r
+        \r
+        # Do This\r
+        \r
+        Here's an app with two buttons, a Start
+        and a Stop. Make these buttons Start and Stop the buzzer\r
+        \r
+        * Add an event
+        handler for each button\r
+        * When the Start button is clicked, make the buzzer
+        play continuously\r
+        * When the Stop button is clicked, stop the buzzer from
+        playing
+      CSDU6 Circuit Playground Test_markdown_instruction: |-
+        # Test Your Board\r
+        \r
+        This
+        level is just a quick test to make sure your board is working. To run this
+        test, do the following:\r
+        \r
+        1. Plug your board into your computer with
+        a USB cable\r
+        2. Click "Run"\r
+        3. Wait a few seconds for either a Success
+        or Error screen to pop up\r
+        4. If your test was successful, move on to the
+        next level. If not, try some of the troubleshooting steps\r
+        \r
+        ## Troubleshooting\r
+        \r
+        There
+        are a number of things that could prevent your test from passing.\r
+        \r
+        1.
+        Try refreshing the page and running the test again (you should refresh the
+        page for each of the following ideas as well)\r
+        2. Try connecting your board
+        to a different USB port\r
+        3. Try a different USB cable. Some USB cables can
+        only be used for charging, so make sure your cable supports data transfer!\r
+        4.
+        Try a different board\r
+        5. Go to [studio.code.org/maker/setup](/maker/setup)
+        to run a more detailed test
+      CSDU6 GameLab Input 1_markdown_instruction: |-
+        # Input in Game Lab\r
+        \r
+        _You
+        don't need to make any changes to the code here_\r
+        \r
+        Take a minute to
+        read through the code and run the program. Discuss with a partner:\r
+        \r
+        1.
+        What is the source of input?\r
+        2. Where and how does the program check for
+        input?\r
+        3. What does the program do when it gets the right input?\r
+        3.
+        What is the program doing when there is no input?
+      CSDU6 LED alarm silent_markdown_instruction: |-
+        # Silent Alarm\r
+        \r
+        Here's
+        the alarm app that you started in the last lesson. Right now it doesn't do
+        much, so let's see if we can make it more useful by hooking it up to your
+        board. When the alarm is triggered, turn on the red LED. When the alarm is
+        stopped, turn the LED off again.\r
+        \r
+        # Do This\r
+        \r
+        Add `led.on()` and
+        `led.off()` blocks to the events that trigger and disable the alarm.\r
+        \r
+        _Notice
+        that the LED blocks have been moved to a new drawer called Circuit_
+      CSDU6 LED basics led.off()_markdown_instruction: |-
+        # Turn that LED Off\r
+        \r
+        Just
+        as you can turn your red LED on using `led.on()`, you can turn it back off
+        again with `led.off()`. You'll need to add a second button with an event
+        handler that calls `led.off()`.\r
+        \r
+        # Do this\r
+        \r
+        Add a second button
+        and use its "click" event to turn off the LED\r
+        \r
+        * Drag out a new button
+        in Design Mode and give it a good ID\r
+        * Insert an event handler for your
+        newly created button\r
+        * Drag an `led.off()` command into your new event
+        handler\r
+        \r
+        Now you should have two buttons, one that turns the LED on,
+        and another that turns it off.\r
+        \r
+        _Challenge: Can you come up with other
+        ways to turn on and off the LED? Could you do it with a single button?_
+      CSDU6 LED basics led.on_markdown_instruction: |-
+        # Turn on that LED\r
+        \r
+        The
+        red LED on your board is represented in code by an object called `led`. Similar
+        to the sprite objects in Game Lab, you can use _dot notation_ to control the
+        LED. Try using the command `led.on()` to make your red LED light up when the
+        program is run.\r
+        \r
+        # Do this\r
+        \r
+        * Drag out the `led.on()` block and
+        place it underneath the comment\r
+        * Run the program\r
+        * Bask in the warm
+        red glow of your LED!
+      CSDU6 LED basics onEvent_markdown_instruction: |-
+        # Turn on that LED - with a
+        Button!\r
+        \r
+        As exciting as an always-on red LED is, an LED that you can
+        turn on with the click of a button seems much more useful. If you add a button
+        to your screen in Design Mode, then you can use move your `led.on()` command
+        into an `onEvent()` block.\r
+        \r
+        # Do this\r
+        \r
+        Add a button and use its
+        "click" event to turn on the LED\r
+        \r
+        * Drag out a new button in Design
+        Mode and give it a good ID\r
+        * Insert an event handler for your newly created
+        button\r
+        * Move the code that turns your LED on _inside_ the button's event
+        handler\r
+        \r
+        If everything worked out, you should see that your LED starts
+        out off, but turns on when you click the button!
+      CSDU6- predict event types_markdown_instruction: |-
+        # Predict: Event Type\r
+        \r
+        So
+        far you have really only used the click event type with buttons. There are
+        many different event types you can use in App Lab. Look at the code and predict
+        when each of the messages will print to the console log.
+      CSDU6L06 - lists and colorLeds - blink_markdown_instruction: |
+        # Blink\r
+        \r
+        Make
+        lights blink \r
+        \r
+      CSDU6L06 - lists and colorLeds - create light pattern_markdown_instruction: |-
+        #
+        Light Pattern\r
+        \r
+        Find a partner and bring your light patterns together.\r
+        \r
+        Set
+        up the app so the user can use what light pattern they want to see. You should
+        put each of your light displays in a function to make this easier
+      CSDU6L06 - lists and colorLeds - debug_markdown_instruction: |
+        <img src="https://images.code.org/a2b5050f76bdb262713ce52f0356fb04-image-1486151096632.JPG"
+        style="width:250px; float:right">\r
+        # Debug: colorLeds\r
+        \r
+        Can you debug
+        the index values so that the rainbow shows up on the board like in the picture?\r
+        \r
+      CSDU6L06 - lists and colorLeds - Light Display_markdown_instruction: |
+        # Blink\r
+        \r
+        Make
+        lights blink \r
+        \r
+      CSDU6L06 - lists and colorLeds - pulse_markdown_instruction: |
+        # Pulse\r
+        \r
+        Make
+        lights pulse\r
+        \r
+      CSDU6L06 - lists and colorLeds - set color_markdown_instruction: |-
+        # Adding
+        Some Color\r
+        \r
+        You probably noticed when you used `colorLeds[0].on()` in
+        the last level, the LEDs turned on as white. If you don't specify a color,
+        `on()` will turn on all three parts of the LED (red, green, and blue) to produce
+        white. You'll see a new command in the toolbox called `colorLeds[0].color()`
+        which lets you specify a color, either as a string like "blue" or an RGB
+        value using color `color()` command.\r
+        \r
+        # Do This\r
+        \r
+        Use the `.color()`
+        command to set each of the color LEDs to a different color.
+      CSDU6L06 - lists and colorLeds - song list_markdown_instruction: |
+        <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif"
+        style="float: right; margin: 10px;">\r
+        \r
+        # colorLeds\r
+        \r
+        The color
+        LEDs can use the same basic commands that you used with the red LED, such
+        as `on()` and `off()`. Using the provided buttons, write a program that turns
+        on and off the bottom two color LEDs (the one's furthest away from the USB
+        cable.\r
+        \r
+        # Do This\r
+        \r
+        Add event handlers to the provided buttons
+        "on_button" and "off_button" that turn on and off the bottom two color
+        LEDs. Which positions in the `colorLeds` list are those two LEDs?\r
+        \r
+      CSDU6L06 - lists and colorLeds - toggle_markdown_instruction: |
+        # Toggle\r
+        \r
+        The
+        `.toggle()` command works like a light switch - whenever you call it on an
+        LED, the light will turn on if it was off, or off if it was on. This can be
+        a really useful alternative to using both on and off.\r
+        \r
+        # Do This\r
+        \r
+        Choose
+        a few LEDs and write a program that toggles them on and off when you click
+        the Toggle button.\r
+      CSDU6L06 - lists and colorLeds -solo light pattern_markdown_instruction: |-
+        #
+        Light Pattern\r
+        \r
+        Create your own light pattern using blink, toggle, and
+        color
       CSP Data Unit - Counting Multiple Things_markdown_instruction: |-
         If you can
         count one thing you can count multiple things\r
@@ -19126,7 +20112,7 @@
         Insert lines of code between the "Welcome"
         and "Goodbye" that do the following:\r
         \r
-        1. use `promtNum` to ask the
+        1. use `promptNum` to ask the
         user to enter the "secret number"\r
         2. add an `if` statement to check if
         the number is the secret (you can make up your own secret number)\r
@@ -28059,6 +29045,59 @@
         * Share
         your answer with another group **and be ready to share your ideas with the
         class**
+      GameLab Livecode Demo 1_markdown_instruction: |
+        # Animating Sprites\r
+        \r
+        To
+        start this demo, we'll do the following:\r
+        \r
+        1. Create a new sprite with
+        the `createSprite()` block\r
+        2. Click on the Animation tab and select an
+        image for the sprite\r
+        3. Set the animation using the `sprite.setAnimation()`
+        block\r
+        4. Move the sprite by incrementing (slowly increasing) its x and
+        y value using the draw loop\r
+      GameLab Livecode Demo 2_markdown_instruction: |
+        # Move With Keys\r
+        \r
+        Now
+        that we've got a sprite on the screen, let's make it respond to keyboard
+        input.\r
+        \r
+        1. Read through the blocks at lines 14 and 21 - what is going
+        on?\r
+        2. Add two more conditionals to respond to the up and left keys\r
+        3.
+        Experiment with some of the additional provided blocks, such as `sprite.scale`
+        and `sprite.rotation`\r
+      GameLab Livecode Demo 3_markdown_instruction: |
+        # Sprite Interactions\r
+        \r
+        At
+        this point there's one sprite on screen, and we can move it around with the
+        arrow keys. Now let's add a second sprite and get the two interacting.\r
+        \r
+        1.
+        Add a new animation in the animation tab\r
+        2. Create a new sprite called
+        "target" and set its animation\r
+        3. Use the `sprite.isTouching()` block
+        in a conditional to make the target sprite react to the player sprite\r
+        \t*
+        Make the target sprite shrink or grow\r
+            * Make the target move to a random
+        location\r
+            * Make the target rotate\r
+      GameLab Livecode Demo 4_markdown_instruction: |-
+        # Make it Your Own\r
+        \r
+        Now
+        that we've created a simple game, take some time to explore the environment
+        on your own and add to your game. You'll notice that there are a bunch of
+        new blocks available to you in the toolbox - take a look around and try some
+        out!
       Geometric Pattern_markdown_instruction: |-
         **Project Idea:** Create a pattern
         using geometric ideas like shapes. This requires persistence and planning!
@@ -28327,6 +29366,10 @@
         \r
         Play around with the blocks
         to see if you can help Laurel collect some gold.
+      grade2_link_RunMarco_partner_markdown_instruction: |-
+        <a href="https://www.allcancode.com/runmarco"></a><img
+        src="https://images.code.org/c754e82a395ab69e5c1e3b2dfe8bf9ff-image-1486603338831.22.10.png"
+        width="400px"/></a>
       grade2_MakeDogTag_1_markdown_instruction: |-
         *"Let's make a cage for my pet
         monster!"*\r
@@ -30401,6 +31444,31 @@
         , **beans** ![picture of beans](https://images.code.org/5e379ff595be17722237d9685b29fd96-image-1472493220871.png)
         , or **pumpkins** ![picture of pumpkin](https://images.code.org/03cf76a978e0788ccb53f14e9d264695-image-1472493237148.png)
         . Can you write some code to pick all the crops, no matter what they are?
+      harvey_pixelation_markdown_instruction: |-
+        # Make your own image of any size\r
+        \r
+        ![](https://images.code.org/01c15fed4f1a2c6c3af531edc35e736e-image-1439596066108.png)\r
+        ![](https://images.code.org/24efcaa184d1fc852f37c32911b3b87c-image-1439596070178.png)\r
+        ![](https://images.code.org/c9a5d0fd5ba445b7f6b5744e08b50e49-image-1439596071878.png)\r
+        ![](https://images.code.org/f14e1b8dd722b0ca5bc54fa96b34f2eb-image-1439596074236.png)\r
+        ![](https://images.code.org/fe938c0c16453b9d461b4023098079df-image-1439596075744.png)\r
+        ![](https://images.code.org/02c88a7da51289b2f2d1f64bd8c97b28-image-1439596077514.png)\r
+        ![](https://images.code.org/309e3157dcfd91956181007f483f8e58-image-1439596079084.png)\r
+        \r
+        \r
+        **Directions:**\r
+        \r
+        *
+        Encode an image of anything you like using `binary`.\r
+        * The binary language
+        will be represented with `0` and `1` only.\r
+        * You might want to do some
+        planning and sketching with graph paper first. \r
+        * Depict something, perhaps
+        your name written out, your initials, an icon or logo of some sort.\r
+        * Get
+        creative! The image doesn't have to be a perfect square, it can be long and
+        skinny.
       'How to: Setup your Class Data Tracker_markdown_instruction': "## Setting up\nyour
         copy of the Class Data Tracker\\r\n\\r\nThe second chapter of unit 2 dives\ninto
         data collection, analysis, and visualization. Starting in lesson 7 you\nwill
@@ -30456,6 +31524,12 @@
         \r
         Notice:
         We've used the `set alpha` block to make the "petals" fade toward the outside.
+      InspirationalArtwork_markdown_instruction: |
+        You've now learned everything
+        you need to know to make a pattern like this! \r
+        \r
+        If this picture inspires
+        you, try to make something similar. Otherwise, create something all your own.\r
       Internet Accessibility_markdown_instruction: |-
         # Internet Accessibility: Internet
         Speed\r
@@ -33175,6 +34249,51 @@
         you'd like! You've even got an empty function that you can make do whatever
         you want!\r
         \r
+      'Stop: List Review_markdown_instruction': |
+        ## Choose: Array or Variable?\r
+        \r
+        Your
+        app needs to store the following information. For each type of information,
+        decide whether you would use an array or a variable to store it:\r
+         \r
+        *
+        All the messages a user has sent\r
+        * The highest score a user has ever reached
+        on the app\r
+        * A username and password to unlock the app\r
+        \r
+      'Stop: Review Getters and Setters_markdown_instruction': |
+        # Stop\r
+        \r
+        ##
+        Reflection\r
+        \r
+        Questions:\r
+        \r
+        * What is the difference between getters
+        and setters?\r
+        * Why would you want to save the information from a getter
+        in a variable?\r
+        \r
+        Once you have answered the questions above check with
+        your teacher.\r
+        \r
+        ## Extension\r
+        \r
+        Check with your teacher if they want
+        you to keep going on do the extension below:\r
+        \r
+        * Return to level ?? and
+        try to make your alarm app play a sound when the alarm is triggered. Make
+        the sound stop playing when the alarm is stopped. For this you will need some
+        blocks that are not available in the toolbox on the level. Click "Remix"
+        at the top of the level to get the full toolbox.\r
+        \r
+        * Return to level
+        ?? and add an image UI element to the picker level with the dropdown. Figure
+        out how to make the choice from the dropdown determine what image that shows.  For
+        this you will need some blocks that are not available in the toolbox on the
+        level. Click "Remix" at the top of the level to get the full toolbox.\r
       'Task: ASCII Representation of your Name_markdown_instruction': |
         # TASK: Write
         your name in ASCII\r
@@ -35055,7 +36174,7 @@
       U2L19 Free Response Getting Started_markdown_instruction: |
         Explain in your
         own words what the modulo operation does.  You may use the analogy of a clock
-        in your answer if you like.
+        in your answer if you like.\r
       U2L19 Free Response Wrap Up_markdown_instruction: |
         Describe to a person who
         knows nothing about encryption why public key encryption is secure and is
@@ -40179,9 +41298,9 @@
         * Make
         the `strokeWeight` large enough that the bands all touch (25)\r
         * Notice
-        that the fill disappeared for the grass add `fill` for grass\r
-        * Remove the
-        border on the grass by using `noStroke`\r
+        that the fill disappeared for the grass. Add `fill` for grass\r
+        * Remove
+        the border on the grass by using `noStroke`\r
       U3 - Simple Drawing - Order of Blocks_markdown_instruction: "# Order of Code\nMatters\\r\n\\r\nThe
         order of the blocks of code matters. Computer code is read\nfrom top to bottom,
         in order. The computer will run the step on the first\nline, then the second
@@ -40344,7 +41463,7 @@
         width=200>\\r\n\\r\n# Do This\\r\n* Add ellipses for clouds and the\nsun.\\r\n*
         Make sure there is no outline on the clouds and sun\\r\n* Set the\ncolors
         of the clouds and sun. "
-      U3 - Simple Drawing - Road Rects and Color_markdown_instruction: |
+      U3 - Simple Drawing - Road Rects and Color_markdown_instruction: |-
         <img src="https://images.code.org/86a9f34aadf57bb8e3b897b8c6ddf52e-image-1460646615062.09.59
         AM.png" style="float:right" width=150>\r
         \r
@@ -40371,6 +41490,8 @@
         for each item used: \r
         * Remove the black outline\r
         \r
+        Don't worry about
+        finishing the whole picture right now. You'll do that in the next few levels.
       U3 - Simple Drawing - Simple Shape Drawing_markdown_instruction: |
         # Simple
         Drawing\r
@@ -40402,14 +41523,14 @@
         like you did in HTML and CSS. We do this by using the `color()` block\nin
         place of the color name. For example `stroke(color(255,0,0))`. Like fill,\nyou
         need to set stroke before drawing the object you want to have that stroke.\\r\n\\r\n#\nDo
-        This\\r\n<img src=\"https://images.code.org/4a724cec68427e45ca17f2de60a78a2b-image-1460642517432.01.34\nAM.png\"
-        style=\"width: 250px; float: right\">\\r\n\\r\nThe final picture should\nlook
-        like the one shown to the right.\\r\n\\r\n* Use `fill()` to make the grass\ngreen.\\r\n*
-        Use `stroke()` to make each ring of the rainbow the appropriate\ncolor. \\r\n\\r\n|
-        Color | RGB Values |\\r\n|---|---|\\r\n| red | (255,0,0)|\\r\n|\norange |
-        (255,127,0) |\\r\n| yellow | (255, 255, 0) |\\r\n| green | (0,255,0)\n|\\r\n|
-        blue | (0, 0, 255) |\\r\n| indigo | (75, 0, 130) |\\r\n| violet | (139,\n0,
-        255) | "
+        This\\r\n<img src=\"https://images.code.org/023bd330cc9ccced5c665330c5e997b4-image-1485287796998.56.13\nPM.png\"
+        style=\"width: 250px; float: right\">\\r\n\\r\n* Use `stroke()` to\nmake each
+        ring of the rainbow the appropriate color. \\r\n* The final picture\nshould
+        look like the one shown to the right. You will continue to improve\nit on
+        the next level.\\r\n\\r\n| Color | RGB Values |\\r\n|---|---|\\r\n| red\n|
+        (255,0,0)|\\r\n| orange | (255,127,0) |\\r\n| yellow | (255, 255, 0) |\\r\n|\ngreen
+        | (0,255,0) |\\r\n| blue | (0, 0, 255) |\\r\n| indigo | (75, 0, 130) |\\r\n|\nviolet
+        | (139, 0, 255) | "
       U3 - Simple Drawing - text_markdown_instruction: |-
         # Text\r
         \r
@@ -52749,8 +53870,7 @@
         \r
         **Remove an `else-if`** -- if you add an extra `else-if`
         by accident, you can remove it by switching into text mode and deleting the
-        text.  Don't forget to delete the curly-braces `{` and `}` thtat go with
-        it.\r
+        text.  Don't forget to delete the curly-braces `{` and `}` that go with it.\r
         \r
         \r
       U5 if-else-if quiz grade_markdown_instruction: |
@@ -53069,6 +54189,57 @@
         object you pass `updateRecord` has an ID that matches a record in the table.\r
         </details>\r
         \r
+      Unit 2 RGB Mapping_markdown_instruction: |
+        # RGB Colors\r
+        \r
+        All colors, whether
+        they have names or not, can be described by the level of red, green, and blue
+        light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You
+        can use the widget on your left to try out different RGB values and see what
+        colors they make.\r
+        \r
+        * **Click "Run" to start the widget on the left,**
+        and use the sliders to adjust the levels of red, green, and blue light.\r
+        *
+        For each of the colors below, match it to its RGB value. Type your response
+        in the box below.\r
+        \r
+        A) red: 216, green: 191, blue: 216 - rgb(216,191,216)\r
+        \r
+        B)
+        red: 255, green: 239, blue: 213 - rgb(255,239,213)\r
+        \r
+        C) red: 255, green:
+        140, blue: 105 - rgb(255,140,105)\r
+        \r
+        D) red: 123, green: 104, blue: 238
+        - rgb(123,104,238)\r
+        \r
+        E) red: 107, green: 142, blue: 35 - rgb(107,142,35)\r
+        \r
+        \r
+        <div
+        style="font-size: 16px">\r
+        <br />\r
+        <details>\r
+        <summary>**Why do red
+        and green make yellow?**</summary>\r
+        <p>When you mix paint, red and green
+        make brown, but RGB color mixing uses light instead of paint, so the colors
+        mix differently.  RGB uses _additive color mixing_.  In additive color mixing,
+        red and green make yellow, red and blue make magenta, and blue and green make
+        cyan.  When you mix the three primary colors together (red, green, and blue),
+        they make white.  You can read more at <a href="https://en.wikipedia.org/wiki/Additive_color">Wikipedia
+        - Additive Color</a>\r
+        </p> </details>\r
+        <details>\r
+        <summary>**How many
+        colors can I make with RGB color mixing?**</summary>\r
+        <p>\r
+        You can make
+        make over sixteen million different colors with RGB color mixing.\r
+        </p></details>\r
+        </div>\r
       'Unit 2 Teaching Practice Plan: Assessing Student Learning_markdown_instruction': |
         **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 2. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n# Unit 2 Teaching Practice Plan: Assessing Student Learning\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your plan for assessing student learning throughout unit 2. Your plan should address the following: \r\n\r\n- Using what’s in the curriculum\r\n \r\n - How do you plan to use the assessment opportunities that have been provided in the curriculum? Your response should include how you plan to use formative lessons questions (blue bubbles in code studio), project rubrics, AP-style questions (following lesson 6 and lesson 17), practice performance tasks (lessons 6 and 15)\r\n\r\n\r\n- Making your own assessments\r\n\r\n - What types of assessments might you need to create or use on top of those provided in the curriculum? \r\n - What is your strategy for developing assessment opportunities that are consistent with the philosophy of the curriculum and activities? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n"
       'Unit 2 Teaching Practice Plan: Balancing Teacher and Tools_markdown_instruction': |
