@@ -59,13 +59,6 @@ Security/JSONLoad:
 Style/AlignHash:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
-# SupportedStyles: with_first_parameter, with_fixed_indentation
-Style/AlignParameters:
-  Enabled: false
-
 # Offense count: 417
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
