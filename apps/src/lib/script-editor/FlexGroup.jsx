@@ -6,6 +6,7 @@ import { borderRadius, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import { NEW_LEVEL_ID, addStage, addGroup } from './editorRedux';
+import { LevelKind } from '@cdo/apps/code-studio/activityUtils';
 
 const styles = {
   groupHeader: {
@@ -124,7 +125,7 @@ const FlexGroup = React.createClass({
    * @return {string}
    */
   normalizeLevelKind(kind) {
-    return (!kind || kind === 'puzzle' || kind === 'unplugged') ? 'level' : kind;
+    return (!kind || kind === LevelKind.puzzle || kind === LevelKind.unplugged) ? LevelKind.level : kind;
   },
 
   render() {
