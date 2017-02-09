@@ -2,7 +2,7 @@
 import {
   apiValidateType,
   apiValidateTypeAndRange
-} from '../../../javascriptMode';
+} from '../../util/javascriptMode';
 /* global Applab */ // TODO (bbuchanan): Inject Applab or makerController.
 
 /**
