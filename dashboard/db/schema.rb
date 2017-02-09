@@ -181,18 +181,16 @@ ActiveRecord::Schema.define(version: 20170222192220) do
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
-    t.integer  "activity_id"
     t.integer  "user_level_id"
     t.integer  "level_source_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "autosaved"
     t.string   "app",             default: "turtle", null: false
-    t.index ["activity_id"], name: "index_gallery_activities_on_activity_id", using: :btree
     t.index ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
     t.index ["level_source_id"], name: "index_gallery_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", using: :btree
     t.index ["user_id", "level_source_id"], name: "index_gallery_activities_on_user_id_and_level_source_id", using: :btree
+    t.index ["user_id"], name: "index_gallery_activities_on_user_id_and_activity_id", using: :btree
     t.index ["user_level_id"], name: "index_gallery_activities_on_user_level_id", using: :btree
   end
 
