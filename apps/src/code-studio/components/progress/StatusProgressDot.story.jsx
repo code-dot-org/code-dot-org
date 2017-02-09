@@ -7,7 +7,7 @@ import { SignInState } from '../../progressRedux';
 import { ViewType } from '../../stageLockRedux';
 
 export default storybook => {
-  // progress_dot grabs a couple items from redux. Create a bogus store with
+  // ProgressDot grabs a couple items from redux. Create a bogus store with
   // these items hardcoded so we don't get warnings.
   const store = createStore(state => state, {
     progress: {

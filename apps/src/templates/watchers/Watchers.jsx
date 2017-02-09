@@ -88,6 +88,7 @@ export const Watchers = React.createClass({
     add: React.PropTypes.func.isRequired,
     update: React.PropTypes.func.isRequired,
     remove: React.PropTypes.func.isRequired,
+    style: React.PropTypes.object,
   },
 
   getInitialState: function () {
@@ -332,7 +333,7 @@ export const Watchers = React.createClass({
         id="debugger-watch-container"
         style={styles.watchContainer}
       >
-        <div id="debug-watch" ref="scrollableContainer" className="debug-watch">
+        <div id="debug-watch" ref="scrollableContainer" className="debug-watch" style={this.props.style}>
           {
             this.props.watchedExpressions.map(wv => {
               const varName = wv.get('expression');

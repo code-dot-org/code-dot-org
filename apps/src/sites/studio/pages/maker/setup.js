@@ -1,4 +1,5 @@
 import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
+import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -140,10 +141,7 @@ const BoardSetupStatus = React.createClass({
           .then(() => this.thumb('board-components'))
           .then(() => {
             bc.prewiredComponents.buzzer.play({
-              song: [
-                ["G3", 100], ["C4", 100], ["E4", 100], ["G4", 50],
-                [null, 150], ["E4", 75], ["G4", 400]
-              ], tempo: 41500
+              song: SONG_CHARGE, tempo: 104
             });
             bc.prewiredComponents.colorLeds.forEach(l => l.color('green'));
           })
