@@ -56,7 +56,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {
   outputError,
   injectErrorHandler
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var project = require('@cdo/apps/code-studio/initApp/project');
 

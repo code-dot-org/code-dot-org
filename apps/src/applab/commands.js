@@ -18,7 +18,7 @@ import {
   getAsyncOutputWarning,
   outputError,
   outputWarning,
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 
