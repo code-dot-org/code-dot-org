@@ -35,8 +35,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 %link(rel='stylesheet' type='text/css' href='/shared/css/teacher-announcement.css')
 %link(rel='stylesheet' type='text/css' href='/shared/css/teacher-dashboard.css')
 %link(rel='stylesheet' type='text/css' href='/shared/css/user-progress.css')
--if show_section_projects
-  %script{src: CDO.studio_url('/blockly/js/projects/section_projects.js')}
+
+%script{src: CDO.studio_url('/blockly/js/teacher-dashboard/index.js')}
 
 %div{'ng-view' => ''}
 
