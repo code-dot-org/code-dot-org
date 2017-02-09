@@ -1,5 +1,5 @@
 import React from 'react';
-import {ProgressDot} from './progress_dot';
+import {ProgressDot} from './ProgressDot';
 
 export default storybook => {
   storybook

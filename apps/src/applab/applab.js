@@ -27,7 +27,7 @@ import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
 import JSInterpreter from '../JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
-import JsDebuggerUi from '../JsDebuggerUi';
+import JsDebuggerUi from '@cdo/apps/lib/tools/jsdebugger/JsDebuggerUi';
 import * as elementUtils from './designElements/elementUtils';
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
@@ -724,12 +724,6 @@ Applab.init = function (config) {
   var onMount = function () {
     studioApp.init(config);
 
-    if (debuggerUi) {
-      debuggerUi.initializeAfterDomCreated({
-        defaultStepSpeed: config.level.sliderSpeed
-      });
-    }
-
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
@@ -785,7 +779,8 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers')
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
+    debuggerUi,
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(

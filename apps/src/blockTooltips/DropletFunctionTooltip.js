@@ -148,13 +148,14 @@ DropletFunctionTooltip.prototype.i18nPrefix = function () {
 };
 
 /**
+ * @param {string} appType
  * @returns {string} URL for full doc about this function
  */
-DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
+DropletFunctionTooltip.prototype.getFullDocumentationURL = function (appType) {
   if (this.customDocURL) {
     return this.customDocURL;
   }
-  return '//' + window.dashboard.CODE_ORG_URL + '/applab/docs/' + this.functionName + '?embedded';
+  return '//docs.code.org/' + appType + '/' + this.functionName + '/';
 };
 
 module.exports = DropletFunctionTooltip;
