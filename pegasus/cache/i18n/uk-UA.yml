@@ -1904,6 +1904,12 @@
     page to avoid displaying full names. Even though this update should reduce privacy
     concerns for the login page, we still encourage users to <i>not use full names
     for students</i>.
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+    Your students could be featured in Code.org''s next viral video encouraging students
+    to take the AP CS Principles exam this year. We''re inviting all CS Principles
+    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
+    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
+    in our video and the winning students will receive Code.org swag!'
   coursea-draft_name: Course A
   courseb-draft_name: Course B
   coursec-draft_name: Course C
