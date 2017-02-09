@@ -598,7 +598,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
       $scope.section.$promise.then(
         function (section) {
-          window.renderSection(section.id);
+          window.renderSectionProjects(section.id);
         }
       );
 
