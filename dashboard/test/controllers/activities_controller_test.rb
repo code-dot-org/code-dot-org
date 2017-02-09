@@ -548,7 +548,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-#    assert_equal @good_image.size, LevelSourceImage.last.image.size
+    # assert_equal @good_image.size, LevelSourceImage.last.image.size
 
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
@@ -565,7 +565,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   def _test_logged_in_milestone_with_image(async_activity_writes:)
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
-      # do all the logging
+    # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
 
