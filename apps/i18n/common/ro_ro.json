@@ -333,6 +333,7 @@
   "whenRun": "când rulezi",
   "workspaceHeaderShort": "Spaţiu de lucru: ",
   "yes": "Da",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
   "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
   "levelN": "LEVEL {levelNumber}",

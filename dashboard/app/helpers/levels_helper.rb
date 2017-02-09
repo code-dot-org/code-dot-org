@@ -227,18 +227,18 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
-           locals: {
-               app: app_options[:app],
-               use_droplet: use_droplet,
-               use_netsim: use_netsim,
-               use_blockly: use_blockly,
-               use_applab: use_applab,
-               use_gamelab: use_gamelab,
-               use_weblab: use_weblab,
-               use_phaser: use_phaser,
-               hide_source: hide_source,
-               static_asset_base_path: app_options[:baseUrl]
-           }
+      locals: {
+        app: app_options[:app],
+        use_droplet: use_droplet,
+        use_netsim: use_netsim,
+        use_blockly: use_blockly,
+        use_applab: use_applab,
+        use_gamelab: use_gamelab,
+        use_weblab: use_weblab,
+        use_phaser: use_phaser,
+        hide_source: hide_source,
+        static_asset_base_path: app_options[:baseUrl]
+      }
   end
 
   # Options hash for Widget
@@ -252,15 +252,14 @@ module LevelsHelper
 
   # Options hash for Weblab
   def weblab_options
+    # Level-dependent options
     app_options = {}
 
-    level_options = app_options[:level] ||= Hash.new
-    app_options[:level] = level_options
-    level_options.merge! @level.properties.camelize_keys
+    l = @level
+    raise ArgumentError.new("#{l} is not a Weblab object") unless l.is_a? Weblab
 
-    # teacherMarkdown lives on the base app_options object, to be consistent with
-    # Blockly levels, where it needs to avoid caching
-    app_options[:level]['teacherMarkdown'] = nil
+    level_options = l.weblab_level_options.dup
+    app_options[:level] = level_options
 
     # ScriptLevel-dependent option
     script_level = @script_level
@@ -269,8 +268,6 @@ module LevelsHelper
 
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
-
-    level_options['levelId'] = @level.level_num
 
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
@@ -299,9 +296,9 @@ module LevelsHelper
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
     app_options[:report] = {
-        fallback_response: @fallback_response,
-        callback: @callback,
-        sublevelCallback: @sublevel_callback,
+      fallback_response: @fallback_response,
+      callback: @callback,
+      sublevelCallback: @sublevel_callback,
     }
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share
@@ -478,9 +475,9 @@ module LevelsHelper
     app_options[:showExampleTestButtons] = true if l.enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
-        fallback_response: @fallback_response,
-        callback: @callback,
-        sublevelCallback: @sublevel_callback,
+      fallback_response: @fallback_response,
+      callback: @callback,
+      sublevelCallback: @sublevel_callback,
     }
 
     unless params[:no_last_attempt]
@@ -511,12 +508,12 @@ module LevelsHelper
     # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-        thank_you: URI.escape(I18n.t('footer.thank_you')),
-        help_from_html: I18n.t('footer.help_from_html'),
-        art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-        code_from_html: URI.escape(I18n.t('footer.code_from_html')),
-        powered_by_aws: I18n.t('footer.powered_by_aws'),
-        trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      thank_you: URI.escape(I18n.t('footer.thank_you')),
+      help_from_html: I18n.t('footer.help_from_html'),
+      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+      code_from_html: URI.escape(I18n.t('footer.code_from_html')),
+      powered_by_aws: I18n.t('footer.powered_by_aws'),
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
   end
 
@@ -624,10 +621,10 @@ module LevelsHelper
   SoftButton = Struct.new(:name, :value)
   def soft_button_options
     [
-        SoftButton.new('Left', 'leftButton'),
-        SoftButton.new('Right', 'rightButton'),
-        SoftButton.new('Down', 'downButton'),
-        SoftButton.new('Up', 'upButton'),
+      SoftButton.new('Left', 'leftButton'),
+      SoftButton.new('Right', 'rightButton'),
+      SoftButton.new('Down', 'downButton'),
+      SoftButton.new('Up', 'upButton'),
     ]
   end
 

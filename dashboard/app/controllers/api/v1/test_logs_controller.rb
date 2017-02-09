@@ -25,11 +25,11 @@ class Api::V1::TestLogsController < ApplicationController
     bucket = Aws::S3::Bucket.new('cucumber-logs')
     object = bucket.object("#{params[:prefix]}/#{params[:name]}.#{params[:format]}")
     render json: {
-        version_id: object.version_id,
-        commit: object.metadata['commit'],
-        attempt: object.metadata['attempt'],
-        success: object.metadata['success'],
-        duration: object.metadata['duration']
+      version_id: object.version_id,
+      commit: object.metadata['commit'],
+      attempt: object.metadata['attempt'],
+      success: object.metadata['success'],
+      duration: object.metadata['duration']
     }
   end
 end

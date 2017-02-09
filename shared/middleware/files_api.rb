@@ -82,9 +82,9 @@ class FilesApi < Sinatra::Base
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
     event_details = {
-        quota_type: quota_type,
-        encrypted_channel_id: encrypted_channel_id,
-        owner_user_id: owner_user_id
+      quota_type: quota_type,
+      encrypted_channel_id: encrypted_channel_id,
+      owner_user_id: owner_user_id
     }
     NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
   end
