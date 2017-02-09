@@ -4,6 +4,7 @@ import Playground from 'playground-io';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import {
+  initializeButton,
   initializeColorLeds,
   initializeSoundSensor
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
@@ -50,8 +51,19 @@ describe('initializeColorLeds()', () => {
 describe('initializeSoundSensor()', () => {
   it('initializes one sensor', function () {
     const board = newBoard();
-    const returnVal = initializeSoundSensor(board);
-    expect(returnVal).to.be.an.instanceOf(five.Sensor);
+    const sensor = initializeSoundSensor(board);
+    expect(sensor).to.be.an.instanceOf(five.Sensor);
+    // Doesn't use sysex at first
+    expect(board.io.sysexCommand.callCount).to.equal(0);
+  });
+});
+
+describe('initializeButton()', () => {
+  it('initializes one button', function () {
+    const board = newBoard();
+    const button = initializeButton(board, '4');
+    expect(button).to.be.an.instanceOf(five.Button);
+    expect(button).to.haveOwnProperty('isPressed');
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);
   });

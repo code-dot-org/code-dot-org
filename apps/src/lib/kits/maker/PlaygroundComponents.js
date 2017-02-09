@@ -30,13 +30,9 @@ export function initializeCircuitPlaygroundComponents(board) {
   // will not respond to input.  This has something to do with them sharing
   // pin 4 on the board.
   const soundSensor = initializeSoundSensor(board);
-  const buttonL = new five.Button('4');
-  const buttonR = new five.Button('19');
-  [buttonL, buttonR].forEach(button => {
-    Object.defineProperty(button, 'isPressed', {
-      get: () => button.value === 1
-    });
-  });
+
+  const buttonL = initializeButton(board, '4');
+  const buttonR = initializeButton(board, '19');
 
   const accelerometer = new five.Accelerometer({
     controller: PlaygroundIO.Accelerometer
@@ -152,4 +148,12 @@ export function initializeSoundSensor(board) {
     pin: "A4",
     freq: 100
   });
+}
+
+export function initializeButton(board, pin) {
+  const button = new five.Button({board, pin});
+  Object.defineProperty(button, 'isPressed', {
+    get: () => button.value === 1
+  });
+  return button;
 }
