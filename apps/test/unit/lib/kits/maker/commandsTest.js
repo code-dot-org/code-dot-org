@@ -13,19 +13,24 @@ import {
 } from '@cdo/apps/lib/kits/maker/commands';
 
 describe('maker commands', () => {
+  beforeEach(() => {
+    replaceOnWindow('Applab', {
+      makerController: {
+        analogRead: sinon.spy(),
+        analogWrite: sinon.spy(),
+        digitalRead: sinon.spy(),
+        digitalWrite: sinon.spy(),
+        onBoardEvent: sinon.spy(),
+        pinMode: sinon.spy(),
+      }
+    });
+  });
+
+  afterEach(() => {
+    restoreOnWindow('Applab');
+  });
+
   describe('pinMode(pin, mode)', () => {
-    beforeEach(() => {
-      replaceOnWindow('Applab', {
-        makerController: {
-          pinMode: sinon.spy()
-        }
-      });
-    });
-
-    afterEach(() => {
-      restoreOnWindow('Applab');
-    });
-
     it('delegates to makerController.pinMode with mapped mode id', () => {
       pinMode({pin: 1, mode: 'input'});
       expect(Applab.makerController.pinMode).to.have.been.calledWith(1, 0);
@@ -59,72 +64,34 @@ describe('maker commands', () => {
 
   describe('digitalWrite(pin, value)', () => {
     it('delegates to makerController.digitalWrite', () => {
-      replaceOnWindow('Applab', {
-        makerController: {
-          digitalWrite: sinon.spy()
-        }
-      });
-
-      digitalWrite({pin: 22, value: 33});
-      expect(Applab.makerController.digitalWrite).to.have.been.calledWith(22, 33);
-
-      restoreOnWindow('Applab');
+      digitalWrite({pin: 22, value: 1});
+      expect(Applab.makerController.digitalWrite).to.have.been.calledWith(22, 1);
     });
   });
 
   describe('digitalRead(pin)', () => {
     it('delegates to makerController.digitalRead', () => {
-      replaceOnWindow('Applab', {
-        makerController: {
-          digitalRead: sinon.spy()
-        }
-      });
-
       digitalRead({pin: 18});
       expect(Applab.makerController.digitalRead).to.have.been.calledWith(18);
-
-      restoreOnWindow('Applab');
     });
   });
 
   describe('analogWrite(pin, value)', () => {
     it('delegates to makerController.analogWrite', () => {
-      replaceOnWindow('Applab', {
-        makerController: {
-          analogWrite: sinon.spy()
-        }
-      });
-
       analogWrite({pin: 22, value: 33});
       expect(Applab.makerController.analogWrite).to.have.been.calledWith(22, 33);
-
-      restoreOnWindow('Applab');
     });
   });
 
   describe('analogRead(pin)', () => {
     it('delegates to makerController.analogRead', () => {
-      replaceOnWindow('Applab', {
-        makerController: {
-          analogRead: sinon.spy()
-        }
-      });
-
       analogRead({pin: 18});
       expect(Applab.makerController.analogRead).to.have.been.calledWith(18);
-
-      restoreOnWindow('Applab');
     });
   });
 
   describe('onBoardEvent(pin)', () => {
     it('delegates to makerController.onBoardEvent', () => {
-      replaceOnWindow('Applab', {
-        makerController: {
-          onBoardEvent: sinon.spy()
-        }
-      });
-
       const fakeComponent = {};
       const eventName = 'data';
       const fakeCallback = () => {};
@@ -135,8 +102,6 @@ describe('maker commands', () => {
       });
       expect(Applab.makerController.onBoardEvent).to.have.been
         .calledWith(fakeComponent, eventName, fakeCallback);
-
-      restoreOnWindow('Applab');
     });
   });
 
