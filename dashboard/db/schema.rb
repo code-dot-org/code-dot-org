@@ -606,7 +606,7 @@ ActiveRecord::Schema.define(version: 20170207004002) do
     t.string   "full_address",                                        comment: "This column appears to be redundant with users.full_address, therefore validation rules must be used to ensure that any user with a school_info has its school address stored in the correct place."
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.string   "validation_type",       default: "full"
+    t.string   "validation_type",       default: "full", null: false
     t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
     t.index ["school_id"], name: "index_school_infos_on_school_id", using: :btree
   end
