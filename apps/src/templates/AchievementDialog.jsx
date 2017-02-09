@@ -87,6 +87,10 @@ const AchievementDialog = Radium(React.createClass({
     nextPuzzle && this.props.onContinue();
   },
 
+  getIcon(flag) {
+    return `fa fa-${flag ? 'check' : 'times'}`;
+  },
+
   render() {
     const params = {
       puzzleNumber: this.props.puzzleNumber,
@@ -108,7 +112,7 @@ const AchievementDialog = Radium(React.createClass({
         <div style={styles.checkmarks}>
           <p style={styles.achievement.row}>
             <i
-              className="fa fa-check-square-o"
+              className={this.getIcon(true)}
               style={styles.achievement.icon}
             />
             <span style={styles.achievement.text}>
@@ -117,7 +121,7 @@ const AchievementDialog = Radium(React.createClass({
           </p>
           <p style={styles.achievement.row}>
             <i
-              className={`fa fa-${tooManyBlocks ? '' : 'check-'}square-o`}
+              className={this.getIcon(!tooManyBlocks)}
               style={[
                 styles.achievement.icon,
                 tooManyBlocks && styles.achievement.inactive
@@ -138,7 +142,7 @@ const AchievementDialog = Radium(React.createClass({
           </p>
           <p style={styles.achievement.row}>
             <i
-              className={`fa fa-${tooManyHints ? '' : 'check-'}square-o`}
+              className={this.getIcon(!tooManyHints)}
               style={[
                 styles.achievement.icon,
                 tooManyHints && styles.achievement.inactive
