@@ -2,9 +2,12 @@ import { expect } from 'chai';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
+import sinon from 'sinon';
+import saveAnswers from '@cdo/apps/code-studio//levels/saveAnswers';
 import $ from 'jquery';
 
-import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/progress_dot';
+import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/ProgressDot';
+import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
 import color from '@cdo/apps/util/color';
 
 // If we set a color as something like #fff, the browser converts it to rgb(255, 255, 255)
@@ -14,44 +17,116 @@ function colorToRgb(color) {
 }
 
 describe('ProgressDot component tests', () => {
-  let renderer, attemptedLevel;
+  let renderer, level;
 
   beforeEach(() => {
     renderer = ReactTestUtils.createRenderer();
-    attemptedLevel = {
+    level = {
       ids: [123],
       uid: '123',
       title: 1,
       name: 'Test Level',
-      status: 'attempted',
       kind: 'puzzle',
       url: '/test-url'
     };
+
+    sinon.stub(saveAnswers, 'saveAnswersAndNavigate');
   });
 
-  it('adds an onClick handler when saveAnswersBeforeNavigation is true', () => {
-    renderer.render(
-      <ProgressDot level={attemptedLevel} saveAnswersBeforeNavigation={true} showProgress={true}/>
+  afterEach(() => {
+    saveAnswers.saveAnswersAndNavigate.restore();
+  });
+
+  it('calls saveAnswersAndNavigate onClick when saveAnswersBeforeNavigation is true', () => {
+    const dot = (
+      <ProgressDot
+        level={level}
+        status={LevelStatus.attempted}
+        saveAnswersBeforeNavigation={true}
+        showProgress={true}
+      />
     );
+    renderer.render(dot);
 
     const result = renderer.getRenderOutput();
     expect(result.type).to.equal('a');
     expect(result.props.onClick).to.be.a('function');
+
+    const element = ReactTestUtils.renderIntoDocument(dot);
+    ReactTestUtils.Simulate.click(ReactDOM.findDOMNode(element));
+
+    expect(saveAnswers.saveAnswersAndNavigate.called).to.equal(true);
+  });
+
+  it('does not calls saveAnswersAndNavigate onClick when saveAnswersBeforeNavigation is false', () => {
+    const dot = (
+      <ProgressDot
+        level={level}
+        status={LevelStatus.attempted}
+        saveAnswersBeforeNavigation={false}
+        showProgress={true}
+      />
+    );
+    renderer.render(dot);
+
+    const result = renderer.getRenderOutput();
+    expect(result.type).to.equal('a');
+    expect(result.props.href).to.be.a('string');
+    expect(result.props.onClick).to.be.a('function');
+
+    const element = ReactTestUtils.renderIntoDocument(dot);
+    ReactTestUtils.Simulate.click(ReactDOM.findDOMNode(element));
+
+    expect(saveAnswers.saveAnswersAndNavigate.called).to.equal(false);
+  });
+
+  it('has no href for locked levels', () => {
+    const dot = (
+      <ProgressDot
+        level={level}
+        status={LevelStatus.locked}
+        saveAnswersBeforeNavigation={false}
+        showProgress={true}
+      />
+    );
+    renderer.render(dot);
+
+    const result = renderer.getRenderOutput();
+    expect(result.type).to.equal('a');
+    expect(result.props.href).to.equal(undefined);
+    expect(result.props.onClick).to.be.a('function');
+
+    const element = ReactTestUtils.renderIntoDocument(dot);
+    ReactTestUtils.Simulate.click(ReactDOM.findDOMNode(element));
+
+    expect(saveAnswers.saveAnswersAndNavigate.called).to.equal(false);
   });
 
   it('highlights the current level on the course overview page', () => {
     renderer.render(
-      <ProgressDot level={attemptedLevel} saveAnswersBeforeNavigation={false} currentLevelId="123" courseOverviewPage={true} showProgress={true}/>
+      <ProgressDot
+        level={level}
+        status={LevelStatus.attempted}
+        saveAnswersBeforeNavigation={false}
+        currentLevelId="123"
+        courseOverviewPage={true}
+        showProgress={true}
+      />
     );
 
     const result = renderer.getRenderOutput();
-    expect(result.props.onClick).to.not.be.a('function');
     expect(result.props.children[0].props.style.borderColor).to.equal(color.level_current);
   });
 
   it('does not highlight the current level in single-stage view', () => {
     renderer.render(
-      <ProgressDot level={attemptedLevel} saveAnswersBeforeNavigation={false} currentLevelId="123" showProgress={true}/>
+      <ProgressDot
+        level={level}
+        status={LevelStatus.attempted}
+        saveAnswersBeforeNavigation={false}
+        currentLevelId="123"
+        showProgress={true}
+      />
     );
 
     const result = renderer.getRenderOutput();
@@ -60,7 +135,12 @@ describe('ProgressDot component tests', () => {
 
   it('bubble interior renders title if not showing level name nor level icon', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={attemptedLevel.title} showingIcon={false} showingLevelName={false} />
+      <BubbleInterior
+        title={level.title}
+        status={LevelStatus.attempted}
+        showingIcon={false}
+        showingLevelName={false}
+      />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('1');
@@ -68,7 +148,11 @@ describe('ProgressDot component tests', () => {
 
   it('bubble interior renders nothing for named levels with icons', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={attemptedLevel.title} showingIcon={true} showingLevelName={true} />
+      <BubbleInterior
+        title={level.title}
+        showingIcon={true}
+        showingLevelName={true}
+      />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('');
@@ -76,7 +160,11 @@ describe('ProgressDot component tests', () => {
 
   it('bubble interior renders &nbsp for named levels without icons', () => {
     const result = ReactTestUtils.renderIntoDocument(
-      <BubbleInterior title={attemptedLevel.title} showingIcon={false} showingLevelName={true} />
+      <BubbleInterior
+        title={level.title}
+        showingIcon={false}
+        showingLevelName={true}
+      />
     );
 
     expect(ReactDOM.findDOMNode(result).innerHTML).to.equal('&nbsp;');
