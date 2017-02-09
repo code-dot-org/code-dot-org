@@ -368,11 +368,20 @@ module AWS
       end
 
       def js_zip
+        hash = nil
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.npm_install
+          RakeUtils.npm_install '--production'
+          # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
+          hash = Digest::MD5.hexdigest(
+            Dir['*.js', 'node_modules/**/*'].
+              select(&File.method(:file?)).
+              sort.
+              map(&Digest::MD5.method(:file)).
+              join
+          )
           `zip -qr - *.js node_modules`
         end
-        key = "lambdajs-#{Digest::MD5.hexdigest(code_zip)}.zip"
+        key = "lambdajs-#{hash}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
         unless object_exists
           CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
