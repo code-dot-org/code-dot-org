@@ -76,7 +76,7 @@ Code.org is offering $50 off [**Dash robot**](https://store.makewonder.com/). Th
 Thanks again for your support,
 
 Hadi Partovi<br/>
-Founder, Code.org
+Founder, Code.org 
 
 Follow us [on Facebook](http://facebook.com/code.org) or [on Twitter](http://twitter.com/codeorg)
 
