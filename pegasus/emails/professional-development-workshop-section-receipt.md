@@ -25,7 +25,7 @@ twitter_link = "https://twitter.com/intent/tweet?#{twitter.to_query}"
 Dear <%= recipient.name %>,
 <% end %>
 
-Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %><%= start_date ? " on #{Chronic.parse(start_date).strftime('%A, %B %d %Y')}" : '' %>! We hope you had an awesome time and that you feel prepared to bring computer science to your little learners! If you had a good experience, please spread the word about the [Code.org K-5 program](http://code.org/k5).
+Thank you for attending a Code.org K-5 workshop with <%= facilitator_name %><%= start_date ? " on #{Chronic.parse(start_date).strftime('%A, %B %d %Y')}" : '' %>! We hope you had an awesome time and that you feel prepared to bring computer science to your little learners! If you had a good experience, please spread the word about the [Code.org K-5 program](http://code.org/k5). 
 
 <div><!--[if mso]>
   <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="<%= facebook_link %>" style="height:45px;v-text-anchor:middle;width:180px;" arcsize="9%" stroke="f" fillcolor="#7e5ca2">
@@ -76,7 +76,7 @@ Code.org is offering $50 off [**Dash robot**](https://store.makewonder.com/). Th
 Thanks again for your support,
 
 Hadi Partovi<br/>
-Founder, Code.org 
+Founder, Code.org
 
 Follow us [on Facebook](http://facebook.com/code.org) or [on Twitter](http://twitter.com/codeorg)
 
