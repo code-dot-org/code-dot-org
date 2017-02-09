@@ -50,7 +50,7 @@ describe('initializeColorLeds()', () => {
 describe('initializeSoundSensor()', () => {
   it('initializes one sensor', function () {
     const board = newBoard();
-    const returnVal = initializeSoundSensor();
+    const returnVal = initializeSoundSensor(board);
     expect(returnVal).to.be.an.instanceOf(five.Sensor);
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);
