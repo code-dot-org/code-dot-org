@@ -30,7 +30,7 @@ const styles = {
     text: {
       fontSize: 20,
       color: '#392e52',
-      marginLeft: 50,
+      marginLeft: 40,
     },
     inactive: {
       color: '#aaa',
