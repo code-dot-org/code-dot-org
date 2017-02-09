@@ -7,6 +7,11 @@ class UserTest < ActiveSupport::TestCase
     @good_data_young = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
   end
 
+  test 'make_teachers_21' do
+    teacher = create :teacher, birthday: Time.now - 18.years
+    assert_equal '21+', teacher.age
+  end
+
   # Disable this test if and when we do require teachers to complete school data
   test 'school info should not be validated' do
     school_attributes = {
