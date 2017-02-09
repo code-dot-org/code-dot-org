@@ -1,5 +1,3 @@
-// TODO - rename me already
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';

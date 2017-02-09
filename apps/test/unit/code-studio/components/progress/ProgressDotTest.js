@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import saveAnswers from '@cdo/apps/code-studio//levels/saveAnswers';
 import $ from 'jquery';
 
-import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/progress_dot';
+import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
 import color from '@cdo/apps/util/color';
 
