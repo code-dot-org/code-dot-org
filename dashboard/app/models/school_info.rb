@@ -16,7 +16,7 @@
 #  full_address          :string(255)
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
-#  validation_type       :string(255)      default("full")
+#  validation_type       :string(255)      default("full"), not null
 #
 # Indexes
 #
