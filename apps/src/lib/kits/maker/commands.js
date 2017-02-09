@@ -1,5 +1,8 @@
 /** @file Maker commands (invoked by Applab/Gamelab.executeCmd) */
-import {apiValidateType} from '@cdo/apps/javascriptMode';
+import {
+  apiValidateType,
+  apiValidateTypeAndRange
+} from '../../../javascriptMode';
 /* global Applab */ // TODO (bbuchanan): Inject Applab or makerController.
 
 /**
@@ -19,6 +22,17 @@ export function pinMode(opts) {
   };
 
   Applab.makerController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
+}
+
+/**
+ * @param {string|number} opts.pin
+ * @param {number} opts.value
+ */
+export function digitalWrite(opts) {
+  apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
+  apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
+
+  Applab.makerController.digitalWrite(opts.pin, opts.value);
 }
 
 /**

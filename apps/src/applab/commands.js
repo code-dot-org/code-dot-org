@@ -14,6 +14,7 @@ import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
   apiValidateType,
+  apiValidateTypeAndRange,
   getAsyncOutputWarning,
   outputError,
   outputWarning,
@@ -43,25 +44,6 @@ var toBeCached = {};
  * @type {EventSandboxer}
  */
 var eventSandboxer = new EventSandboxer();
-
-function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                 expectedType, minValue, maxValue, opt) {
-  var validatedTypeKey = 'validated_type_' + varName;
-  var validatedRangeKey = 'validated_range_' + varName;
-  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
-  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
-    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
-    if (inRange) {
-      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
-    }
-    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
-    if (!inRange) {
-      outputWarning(funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not in the expected range.");
-    }
-    opts[validatedRangeKey] = inRange;
-  }
-}
 
 function apiValidateActiveCanvas(opts, funcName) {
   var validatedActiveCanvasKey = 'validated_active_canvas';
@@ -1696,13 +1678,6 @@ applabCommands.drawChartFromRecords = function (opts) {
       opts.columns,
       opts.options
   ).then(onSuccess, onError);
-};
-
-applabCommands.digitalWrite = function (opts) {
-  apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
-  apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
-
-  Applab.makerController.digitalWrite(opts.pin, opts.value);
 };
 
 applabCommands.digitalRead = function (opts) {
