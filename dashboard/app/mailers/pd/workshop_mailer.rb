@@ -25,9 +25,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   # Online URL used in the details partials, organized by course.
   ONLINE_URL = {
-    Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/s/sciencepd1',
-    Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/s/algebrapd1',
-    Pd::Workshop::COURSE_ECS => 'https://studio.code.org/s/ecspd1'
+    Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/course/cs-in-science-support',
+    Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/course/cs-in-algebra-support',
+    Pd::Workshop::COURSE_ECS => 'https://studio.code.org/course/ecs-support'
   }
 
   after_action :save_timestamp
