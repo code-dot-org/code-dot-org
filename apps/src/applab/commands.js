@@ -19,6 +19,7 @@ import {
   outputWarning,
 } from '../javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import makerCommands from '@cdo/apps/lib/kits/maker/commands';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -552,6 +553,16 @@ applabCommands.setStrokeWidth = function (opts) {
     return true;
   }
   return false;
+};
+
+// Returns an rbg or rgba color string that can be used as a parameter to other functions.
+applabCommands.rgb = function (opts) {
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.r, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.g, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.b, 'number', 0, 255);
+  apiValidateTypeAndRange(opts, 'rgb', 'number', opts.a, 'number', 0, 1, OPTIONAL);
+  const alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
+  return `rgba(${opts.r}, ${opts.g}, ${opts.b}, ${alpha})`;
 };
 
 applabCommands.setStrokeColor = function (opts) {
@@ -1766,3 +1777,4 @@ function stopLoadingSpinnerFor(elementId) {
 
 // Include playSound, stopSound, etc.
 Object.assign(applabCommands, audioCommands);
+Object.assign(applabCommands, makerCommands);

@@ -8,7 +8,7 @@ import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
-import {setPropertyDropdown} from './setPropertyDropdown';
+import {setPropertyDropdown, setImageSelector} from './setPropertyDropdown';
 import {singleton as studioApp} from '../StudioApp';
 import * as applabConstants from './constants';
 
@@ -86,7 +86,7 @@ export var blocks = [
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setPosition', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
-  {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
+  {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown(), 2: setImageSelector() } },
   {func: 'getProperty', parent: api, category: 'UI controls', paletteParams: ['id','property'], params: ['"id"', '"width"'], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() }, type: 'value' },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
@@ -99,8 +99,9 @@ export var blocks = [
   {func: 'circle', parent: api, category: 'Canvas', paletteParams: ['x','y','radius'], params: ["160", "240", "100"] },
   {func: 'rect', parent: api, category: 'Canvas', paletteParams: ['x','y','width','height'], params: ["80", "120", "160", "240"] },
   {func: 'setStrokeWidth', parent: api, category: 'Canvas', paletteParams: ['width'], params: ["3"] },
-  {func: 'setStrokeColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"'] } },
-  {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"'] } },
+  {func: 'rgb', parent: api, category: 'Canvas', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r', 'g', 'b', 'a'], params: ["250", "0", "75", "0.5"]},
+  {func: 'setStrokeColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'] } },
+  {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', 'rgb(255,255,0)', 'rgb(255,255,0,0.5)', '"#FFFF00"'] } },
   // drawImage has been deprecated in favor of drawImageURL
   {func: 'drawImage', parent: api, category: 'Canvas', paletteParams: ['id','x','y'], params: ['"id"', "0", "0"], dropdown: { 0: idDropdownWithSelector("img") }, noAutocomplete: true },
   {func: 'drawImageURL', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 6 }, paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'] },
@@ -147,7 +148,7 @@ export var blocks = [
   {func: 'penUp', parent: api, category: 'Turtle' },
   {func: 'penDown', parent: api, category: 'Turtle' },
   {func: 'penWidth', parent: api, category: 'Turtle', paletteParams: ['width'], params: ["3"], dropdown: { 0: ["1", "3", "5"] } },
-  {func: 'penColor', parent: api, category: 'Turtle', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"'] } },
+  {func: 'penColor', parent: api, category: 'Turtle', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'] } },
   {func: 'penRGB', parent: api, category: 'Turtle', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r','g','b'], params: ["120", "180", "200"] },
   {func: 'show', parent: api, category: 'Turtle' },
   {func: 'hide', parent: api, category: 'Turtle' },

@@ -1,4 +1,5 @@
 name 'Circuit Playground Map: LEDS'
+display_name 'Circuit Playground: LEDs'
 markdown <<MARKDOWN
 # Welcome to the Circuit Playground
 
