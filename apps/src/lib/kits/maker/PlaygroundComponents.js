@@ -10,6 +10,7 @@ import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
+import Piezo from './Piezo';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -87,7 +88,7 @@ export function initializeCircuitPlaygroundComponents() {
 
     toggleSwitch: new five.Switch('21'),
 
-    buzzer: new five.Piezo({
+    buzzer: new Piezo({
       pin: '5',
       controller: PlaygroundIO.Piezo
     }),
