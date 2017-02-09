@@ -79,9 +79,12 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Challenge: List of Notes\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nYou now know how to create a list of items. Try creating a list of notes for a song you can play using the buzzer on the Circuit Playground. Putting all the notes in the list will help to keep it organized. ",
+    "markdown_instructions": "# Challenge: \r\n\r\nCheck with your teacher before starting the challenge.\r\n",
     "hide_share_and_remix": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
