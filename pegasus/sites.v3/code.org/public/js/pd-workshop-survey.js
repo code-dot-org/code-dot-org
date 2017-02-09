@@ -59,14 +59,11 @@ $(document).ready(function () {
 });
 
 function processResponse() {
-  if (window.pdWorkshopSurvey.course === "CS Fundamentals") {
-    window.location.href = "/pd-workshop-survey/materials/" + window.pdWorkshopSurvey.enrollmentCode;
-  } else {
-    $("#btn-submit").removeAttr('disabled');
-    $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
-    $('#pd-workshop-survey-form').hide();
-    $('#thanks').show();
-  }
+  $("#btn-submit").removeAttr('disabled');
+  $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
+  $('#pd-workshop-survey-form').hide();
+  $('#thanks').show();
+  $('#materials-order').show();
 }
 
 function processError(data) {

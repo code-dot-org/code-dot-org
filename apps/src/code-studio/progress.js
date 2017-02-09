@@ -85,11 +85,6 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
     level => level.submitted ? TestResults.SUBMITTED_RESULT : level.result)));
 
-  // Provied a function that can be called later to merge in progress now saved on the client.
-  progress.refreshStageProgress = function () {
-    store.dispatch(mergeProgress(clientState.allLevelsProgress()[name] || {}));
-  };
-
   // If the server didn't tell us about signIn state (i.e. because script is
   // cached) see if we cached locally
   if (signedIn === null) {
