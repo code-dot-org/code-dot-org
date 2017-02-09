@@ -1,6 +1,6 @@
 /** @file Utility methods common to toolkits that use the Droplet editor to let
   * students write and execute JavaScript. */
-import RGBColor from '../../rgbcolor.js';
+import RGBColor from './rgbcolor.js';
 
 export const OPTIONAL = true;
 
