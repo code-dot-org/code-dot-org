@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 
@@ -133,11 +134,6 @@ const styles = {
   status: BUBBLE_COLORS
 };
 
-function dotClicked(url, e) {
-  e.preventDefault();
-  saveAnswersAndNavigate(url);
-}
-
 export const BubbleInterior = React.createClass({
   propTypes: {
     showingIcon: React.PropTypes.bool,
@@ -165,6 +161,8 @@ export const BubbleInterior = React.createClass({
 export const ProgressDot = Radium(React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
+    // More accurately, something like allStages. True on the overview page, but
+    // also when we select dropdown from header.
     courseOverviewPage: React.PropTypes.bool,
     stageId: React.PropTypes.number,
     status: React.PropTypes.oneOf(Object.keys(LevelStatus)),
@@ -186,6 +184,17 @@ export const ProgressDot = Radium(React.createClass({
     }
   },
 
+  onClick(event) {
+    const { saveAnswersBeforeNavigation } = this.props;
+    const href = ReactDOM.findDOMNode(this).href;
+    if (!saveAnswersBeforeNavigation || !href) {
+      return;
+    }
+
+    event.preventDefault();
+    saveAnswersAndNavigate(href);
+  },
+
   render() {
     const level = this.props.level;
     let levelStatus = this.props.status;
@@ -205,13 +214,12 @@ export const ProgressDot = Radium(React.createClass({
     const isLocked = levelStatus === LevelStatus.locked;
     const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged &&
       this.props.courseOverviewPage && this.getIconForLevelStatus(levelStatus, isLocked);
-    const levelUrl = isLocked ? undefined : level.url + location.search;
 
     return (
       <a
         key="link"
-        href={levelUrl}
-        onClick={this.props.saveAnswersBeforeNavigation && (levelUrl ? dotClicked.bind(null, levelUrl) : false)}
+        href={isLocked ? undefined : level.url + location.search}
+        onClick={this.onClick}
         style={[
           styles.outer,
           (showLevelName || isPeerReview) && {display: 'table-row'},

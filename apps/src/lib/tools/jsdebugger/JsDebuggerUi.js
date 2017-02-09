@@ -1,13 +1,12 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
-var CommandHistory = require('./CommandHistory');
-var constants = require('./constants');
-var DebugArea = require('./DebugArea');
-var dom = require('./dom');
-var JSInterpreter = require('./JSInterpreter');
-var Observer = require('./Observer');
-var utils = require('./utils');
-import {setStepSpeed} from './redux/runState';
-import {add, update, remove} from './redux/watchedExpressions';
+import CommandHistory from '../../../CommandHistory';
+import constants from '../../../constants';
+import dom from '../../../dom';
+import JSInterpreter from '../../../JSInterpreter';
+import Observer from '../../../Observer';
+import utils from '../../../utils';
+import {setStepSpeed} from '../../../redux/runState';
+import {add, update, remove} from '../../../redux/watchedExpressions';
 
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;
@@ -70,12 +69,6 @@ var JsDebuggerUi = module.exports = function (runApp, reduxStore) {
    * @private {number}
    */
   this.watchIntervalId_ = 0;
-
-  /**
-   * Helper that handles open/shut actions for debugger UI
-   * @private {DebugArea}
-   */
-  this.debugOpenShutController_ = null;
 
   /**
    * Root element for debug UI: div#debug-area
@@ -144,12 +137,8 @@ JsDebuggerUi.prototype.getElement_ = function (selector) {
  */
 JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
   // Get references to important elements of the DOM
-  this.rootDiv_ = document.getElementById('debug-area');
-
-  // Create controller for open/shut behavior of debug area
-  this.debugOpenShutController_ = new DebugArea(
-      this.rootDiv_,
-      document.getElementById('codeTextbox'));
+  this.rootDiv_ = options.root || document.getElementById('debug-area');
+  this.reactComponent_ = options.component;
 
   // Change default speed (eg Speed up levels that have lots of steps).
   if (options.defaultStepSpeed) {
@@ -438,8 +427,8 @@ JsDebuggerUi.prototype.onMouseMoveDebugResizeBar = function (event) {
       Math.min(MAX_DEBUG_AREA_HEIGHT,
           (window.innerHeight - event.pageY) - offset));
 
-  if (this.debugOpenShutController_.isShut()) {
-    this.debugOpenShutController_.snapOpen();
+  if (!this.reactComponent_.isOpen()) {
+    this.reactComponent_.slideOpen();
   }
 
   codeTextbox.style.bottom = newDbgHeight + 'px';
