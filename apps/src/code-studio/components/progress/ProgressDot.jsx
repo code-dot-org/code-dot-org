@@ -165,7 +165,7 @@ export const ProgressDot = Radium(React.createClass({
     // also when we select dropdown from header.
     courseOverviewPage: React.PropTypes.bool,
     stageId: React.PropTypes.number,
-    status: React.PropTypes.oneOf(Object.keys(LevelStatus)),
+    status: React.PropTypes.oneOf(Object.keys(LevelStatus)).isRequired,
 
     // redux provdied
     currentLevelId: React.PropTypes.string,
@@ -175,7 +175,8 @@ export const ProgressDot = Radium(React.createClass({
   getIconForLevelStatus(levelStatus, isLocked) {
     if (isLocked) {
       return 'fa-lock';
-    } else if (levelStatus === LevelStatus.perfect || levelStatus === LevelStatus.review_accepted) {
+    } else if (levelStatus === LevelStatus.perfect ||
+        levelStatus === LevelStatus.review_accepted) {
       return 'fa-check';
     } else if (levelStatus === LevelStatus.review_rejected) {
       return 'fa-exclamation';
@@ -203,7 +204,7 @@ export const ProgressDot = Radium(React.createClass({
         ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
         level.uid === this.props.currentLevelId);
 
-    const isUnplugged = isNaN(level.title);
+    const isUnplugged = level.kind === LevelKind.unplugged;
     const showUnplugged = isUnplugged && (this.props.courseOverviewPage || onCurrent);
     const outlineCurrent = this.props.courseOverviewPage && onCurrent;
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
@@ -212,7 +213,7 @@ export const ProgressDot = Radium(React.createClass({
     const isPeerReview = level.kind === LevelKind.peer_review;
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = levelStatus === LevelStatus.locked;
-    const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged &&
+    const iconForLevelStatus = (isLocked || showLevelName) &&
       this.props.courseOverviewPage && this.getIconForLevelStatus(levelStatus, isLocked);
 
     return (
@@ -240,7 +241,7 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           /> :
           <div
-            className={`${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
+            className={`${iconForLevelStatus ? `fa ${iconForLevelStatus}` : ''}`}
             style={[
               styles.dot.common,
               isLocked ? styles.dot.lockedReview : styles.dot.puzzle,
