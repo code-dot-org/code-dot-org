@@ -11,7 +11,7 @@ const styles = {
     right: 120,
     left: 120,
     height: 230,
-    padding: '50px 100px',
+    padding: '50px 80px',
     boxSizing: 'border-box',
     background: '#fff',
     borderRadius: 8,
@@ -20,7 +20,7 @@ const styles = {
   },
   achievement: {
     row: {
-      lineHeight: '28px',
+      lineHeight: '34px',
     },
     icon: {
       fontSize: 30,
@@ -41,6 +41,9 @@ const styles = {
     fontSize: 18,
     textAlign: 'center',
     color: '#4e5665',
+    width: 450,
+    lineHeight: 1.3,
+    margin: '20px auto',
   },
   footer: {
     position: 'absolute',
