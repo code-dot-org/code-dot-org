@@ -33,6 +33,9 @@ Style/FirstParameterIndentation:
 Style/MultilineMethodCallBraceLayout:
   EnforcedStyle: new_line
 
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
 Style/NumericLiterals:
   MinDigits: 7
 

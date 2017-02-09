@@ -70,8 +70,8 @@ class RegistrationsController < Devise::RegistrationsController
   # extend this as needed
   def needs_password?(user, params)
     params[:user][:email].present? && user.email != params[:user][:email] ||
-        params[:user][:hashed_email].present? && user.hashed_email != params[:user][:hashed_email] ||
-        params[:user][:password].present?
+      params[:user][:hashed_email].present? && user.hashed_email != params[:user][:hashed_email] ||
+      params[:user][:password].present?
   end
 
   # Accept only whitelisted params for update.

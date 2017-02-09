@@ -354,13 +354,13 @@ class UserProficiency < ActiveRecord::Base
     end
     # The loops meta-concept.
     if get_level_count(ConceptDifficulties::REPEAT_LOOPS, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::REPEAT_UNTIL_WHILE, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::FOR_LOOPS, 3) >= 3
+        get_level_count(ConceptDifficulties::REPEAT_UNTIL_WHILE, 3) >= 3 ||
+        get_level_count(ConceptDifficulties::FOR_LOOPS, 3) >= 3
       concept_proficiency_count += 1
     end
     # The functions meta-concept.
     if get_level_count(ConceptDifficulties::FUNCTIONS, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::FUNCTIONS_WITH_PARAMS, 3) >= 3
+        get_level_count(ConceptDifficulties::FUNCTIONS_WITH_PARAMS, 3) >= 3
       concept_proficiency_count += 1
     end
 

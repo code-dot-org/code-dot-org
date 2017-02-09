@@ -863,12 +863,12 @@ class User < ActiveRecord::Base
           # is this the first level we started?
           user_script.started_at = ul.created_at if
             ul.created_at &&
-            (!user_script.started_at || ul.created_at < user_script.started_at)
+                (!user_script.started_at || ul.created_at < user_script.started_at)
 
           # is this the last level we worked on?
           user_script.last_progress_at = ul.updated_at if
             ul.updated_at &&
-            (!user_script.last_progress_at || ul.updated_at > user_script.last_progress_at)
+                (!user_script.last_progress_at || ul.updated_at > user_script.last_progress_at)
         end
 
         # backfill completed scripts
@@ -968,26 +968,26 @@ class User < ActiveRecord::Base
         new_level_completed = true
       end
       if !user_level.perfect? &&
-        new_result == 100 &&
-        ([
-          ScriptConstants::TWENTY_HOUR_NAME,
-          ScriptConstants::COURSE2_NAME,
-          ScriptConstants::COURSE3_NAME,
-          ScriptConstants::COURSE4_NAME
-        ].include? Script.get_from_cache(script_id).name) &&
-        HintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty? &&
-        AuthoredHintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty?
+          new_result == 100 &&
+          ([
+            ScriptConstants::TWENTY_HOUR_NAME,
+            ScriptConstants::COURSE2_NAME,
+            ScriptConstants::COURSE3_NAME,
+            ScriptConstants::COURSE4_NAME
+          ].include? Script.get_from_cache(script_id).name) &&
+          HintViewRequest.
+            where(user_id: user_id, script_id: script_id, level_id: level_id).
+            empty? &&
+          AuthoredHintViewRequest.
+            where(user_id: user_id, script_id: script_id, level_id: level_id).
+            empty?
         new_csf_level_perfected = true
       end
 
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if user_level.best_result.nil? ||
-        new_result > user_level.best_result
+          new_result > user_level.best_result
       user_level.submitted = submitted
       if level_source_id && !is_navigator
         user_level.level_source_id = level_source_id
