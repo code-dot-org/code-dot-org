@@ -5,7 +5,7 @@
 # and reduces our costs (reducing media storage costs).
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require 'cdo/hip_chat'
+require 'honeybadger'
 require 'cdo/only_one'
 require 'date'
 require 'twilio-ruby'
@@ -44,8 +44,9 @@ def main
 
         message.delete
       rescue Twilio::REST::RequestError => e
-        sanitized_error_message = e.message.sub CDO.twilio_sid, 'CDO.twilio_sid'
-        HipChat.message 'infra-twilio', sanitized_error_message, color: 'red'
+        # Sanitize the exception message so that we don't expose secrets.
+        e.message.gsub! CDO.twilio_sid, 'CDO.twilio_sid'
+        HoneyBadger.notify(e)
         next
       end
     end
