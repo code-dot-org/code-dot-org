@@ -124,6 +124,20 @@ describe(`digitalRead(pin)`, () => {
   });
 });
 
+describe(`analogWrite(pin, value)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('analogWrite');
+    expect(commands.analogWrite).to.be.a('function');
+  });
+});
+
+describe(`analogRead(pin)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('analogRead');
+    expect(commands.analogRead).to.be.a('function');
+  });
+});
+
 // TODO (bbuchanan): Replace with more general assertions when we move maker
 // commands back to this kit.
 describe(`timedLoop(ms, callback)`, () => {
