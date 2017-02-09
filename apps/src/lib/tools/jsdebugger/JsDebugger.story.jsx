@@ -1,9 +1,9 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import commonReducers from '@cdo/apps/redux/commonReducers';
-import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import {default as JsDebugger, UnconnectedJsDebugger} from './JsDebugger';
+import commonReducers from '../../../redux/commonReducers';
+import {setPageConstants} from '../../../redux/pageConstants';
+import JsDebugger, {UnconnectedJsDebugger} from './JsDebugger';
 
 export default storybook => {
   const storyTable = [];

@@ -210,6 +210,7 @@ levels.custom = {
     "buzzer.frequency": null,
     "buzzer.note": null,
     "buzzer.off": null,
+    "buzzer.play": null,
     "accelerometer.getOrientation": null,
     "accelerometer.start": null,
     "accelerometer.getAcceleration": null,
