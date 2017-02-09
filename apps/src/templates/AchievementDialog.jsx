@@ -11,7 +11,7 @@ const styles = {
     right: 120,
     left: 120,
     height: 230,
-    padding: '50px 80px',
+    padding: '50px 30px 50px 80px',
     boxSizing: 'border-box',
     background: '#fff',
     borderRadius: 8,
@@ -94,7 +94,9 @@ const AchievementDialog = Radium(React.createClass({
     };
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
-    const message = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+    const footerMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+
+    const tooManyHints = this.props.hintsUsed > 0;
 
     return (
       <BaseDialog
@@ -105,21 +107,56 @@ const AchievementDialog = Radium(React.createClass({
       >
         <div style={styles.checkmarks}>
           <p style={styles.achievement.row}>
-            <i className="fa fa-check-square-o" style={styles.achievement.icon}/>
-            <span style={styles.achievement.text}>Puzzle completed!</span>
+            <i
+              className="fa fa-check-square-o"
+              style={styles.achievement.icon}
+            />
+            <span style={styles.achievement.text}>
+              {locale.puzzleCompleted()}
+            </span>
           </p>
           <p style={styles.achievement.row}>
-            <i className="fa fa-square-o" style={[styles.achievement.icon, styles.achievement.inactive]}/>
-            <span style={[styles.achievement.text, styles.achievement.inactive]}>Too many blocks</span>
+            <i
+              className={`fa fa-${tooManyBlocks ? '' : 'check-'}square-o`}
+              style={[
+                styles.achievement.icon,
+                tooManyBlocks && styles.achievement.inactive
+              ]}
+            />
+            <span
+              style={[
+                styles.achievement.text,
+                tooManyBlocks && styles.achievement.inactive
+              ]}
+            >
+              {tooManyBlocks ? locale.usingTooManyBlocks(params) :
+                (blockDelta === 0 ? locale.exactNumberOfBlocks(params) :
+                  locale.fewerNumberOfBlocks(params)
+                )
+              }
+            </span>
           </p>
           <p style={styles.achievement.row}>
-            <i className="fa fa-square-o" style={[styles.achievement.icon, styles.achievement.inactive]}/>
-            <span style={[styles.achievement.text, styles.achievement.inactive]}>2 hints used</span>
+            <i
+              className={`fa fa-${tooManyHints ? '' : 'check-'}square-o`}
+              style={[
+                styles.achievement.icon,
+                tooManyHints && styles.achievement.inactive
+              ]}
+            />
+            <span
+              style={[
+                styles.achievement.text,
+                tooManyHints && styles.achievement.inactive
+              ]}
+            >
+              {tooManyHints ? locale.usingHints() : locale.withoutHints()}
+            </span>
           </p>
         </div>
         <div style={styles.footer}>
 
-          <p style={styles.feedbackMessage}>{message}</p>
+          <p style={styles.feedbackMessage}>{footerMessage}</p>
 
           <button
             onClick={this.handleClose}
