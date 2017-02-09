@@ -1,4 +1,5 @@
 name 'CSD U3 Draw Loop Stop'
+display_name 'Stop and Discuss'
 markdown <<MARKDOWN
 <i class="fa fa-hand-paper-o" aria-hidden="true" style="color:red; float: right; font-size: 200px; font-weight: 800;"></i>
 

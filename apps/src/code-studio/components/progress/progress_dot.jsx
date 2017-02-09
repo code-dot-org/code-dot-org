@@ -6,7 +6,7 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from "../../../util/color";
 import progressStyles, { createOutline } from './progressStyles';
-import { LevelStatus } from '../../activityUtils';
+import { LevelStatus, LevelKind } from '../../activityUtils';
 
 const dotSize = 24;
 
@@ -198,10 +198,11 @@ export const ProgressDot = Radium(React.createClass({
     const showUnplugged = isUnplugged && (this.props.courseOverviewPage || onCurrent);
     const outlineCurrent = this.props.courseOverviewPage && onCurrent;
     const smallDot = !this.props.courseOverviewPage && !onCurrent;
-    const showLevelName = /(named_level|peer_review)/.test(level.kind) && this.props.courseOverviewPage;
-    const isPeerReview = level.kind === 'peer_review';
+    const showLevelName = this.props.courseOverviewPage &&
+      (level.kind === LevelKind.named_level || level.kind === LevelKind.peer_review);
+    const isPeerReview = level.kind === LevelKind.peer_review;
     // Account for both the level based concept of locked, and the progress based concept.
-    const isLocked = level.locked || levelStatus === LevelStatus.locked;
+    const isLocked = levelStatus === LevelStatus.locked;
     const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged &&
       this.props.courseOverviewPage && this.getIconForLevelStatus(levelStatus, isLocked);
     const levelUrl = isLocked ? undefined : level.url + location.search;
@@ -231,13 +232,13 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           /> :
           <div
-            className={`level-${level.id}${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
+            className={`${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
             style={[
               styles.dot.common,
               isLocked ? styles.dot.lockedReview : styles.dot.puzzle,
               this.props.courseOverviewPage && styles.dot.overview,
               smallDot && styles.dot.small,
-              level.kind === 'assessment' && styles.dot.assessment,
+              level.kind === LevelKind.assessment && styles.dot.assessment,
               outlineCurrent && {borderColor: color.level_current},
               showUnplugged && styles.dot.unplugged,
               styles.status[levelStatus || LevelStatus.not_tried],

@@ -75,11 +75,8 @@
     "makerlab_enabled": "false",
     "project_template_level_name": "CSD Alarm Template",
     "markdown_instructions": "# Hide and Show\r\n\r\nIt is a little weird that both buttons are on the screen at the same time. You don't need the stop alarm button until the alarm is on. Can you make the buttons only show when they are needed?\r\n\r\n* You will want the stop alarm button to be hidden when the program starts. You can do this in design mode.\r\n\r\nHint: When you click the trigger alarm button, you should change the text, hide the trigger alarm button, _and_ show the stop alarm button.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

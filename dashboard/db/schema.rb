@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170207004002) do
+ActiveRecord::Schema.define(version: 20170206173655) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -184,7 +184,7 @@ ActiveRecord::Schema.define(version: 20170207004002) do
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
-    t.integer  "activity_id",                        null: false
+    t.integer  "activity_id"
     t.integer  "user_level_id"
     t.integer  "level_source_id"
     t.datetime "created_at"
@@ -194,7 +194,7 @@ ActiveRecord::Schema.define(version: 20170207004002) do
     t.index ["activity_id"], name: "index_gallery_activities_on_activity_id", using: :btree
     t.index ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
     t.index ["level_source_id"], name: "index_gallery_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", unique: true, using: :btree
+    t.index ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", using: :btree
     t.index ["user_id", "level_source_id"], name: "index_gallery_activities_on_user_id_and_level_source_id", using: :btree
     t.index ["user_level_id"], name: "index_gallery_activities_on_user_level_id", using: :btree
   end
@@ -602,11 +602,10 @@ ActiveRecord::Schema.define(version: 20170207004002) do
     t.string   "school_district_name"
     t.bigint   "school_id"
     t.boolean  "school_other",          default: false
-    t.string   "school_name",                                         comment: "This column appears to be redundant with pd_enrollments.school and users.school, therefore validation rules must be used to ensure that any user or enrollment with a school_info has its school name stored in the correct place."
-    t.string   "full_address",                                        comment: "This column appears to be redundant with users.full_address, therefore validation rules must be used to ensure that any user with a school_info has its school address stored in the correct place."
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.string   "validation_type",       default: "full"
+    t.string   "school_name",                                        comment: "This column appears to be redundant with pd_enrollments.school and users.school, therefore validation rules must be used to ensure that any user or enrollment with a school_info has its school name stored in the correct place."
+    t.string   "full_address",                                       comment: "This column appears to be redundant with users.full_address, therefore validation rules must be used to ensure that any user with a school_info has its school address stored in the correct place."
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
     t.index ["school_id"], name: "index_school_infos_on_school_id", using: :btree
   end
@@ -953,7 +952,6 @@ ActiveRecord::Schema.define(version: 20170207004002) do
     t.string   "invited_by_type"
     t.integer  "invitations_count",                        default: 0
     t.integer  "terms_of_service_version"
-    t.integer  "school_info_id"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
@@ -964,7 +962,6 @@ ActiveRecord::Schema.define(version: 20170207004002) do
     t.index ["prize_id", "deleted_at"], name: "index_users_on_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
-    t.index ["school_info_id"], name: "index_users_on_school_info_id", using: :btree
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree
     t.index ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree
