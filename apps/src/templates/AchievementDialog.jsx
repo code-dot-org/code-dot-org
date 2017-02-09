@@ -23,19 +23,23 @@ const styles = {
       lineHeight: '34px',
     },
     icon: {
+      position: 'relative',
       fontSize: 30,
-      verticalAlign: 'middle',
       width: 30,
-      marginRight: 10,
+      verticalAlign: 'middle',
     },
     text: {
       fontSize: 20,
       color: '#392e52',
       verticalAlign: 'middle',
+      marginLeft: 50,
     },
     inactive: {
       color: '#aaa',
     }
+  },
+  absolute: {
+    position: 'absolute'
   },
   feedbackMessage: {
     fontSize: 18,
@@ -88,7 +92,30 @@ const AchievementDialog = Radium(React.createClass({
   },
 
   getIcon(flag) {
-    return `fa fa-${flag ? 'check' : 'times'}`;
+    return (
+      <span
+        style={[
+          styles.achievement.icon,
+          !flag && styles.achievement.inactive
+        ]}
+      >
+        {flag ?
+          <i className="fa fa-check-square-o" style={styles.absolute}/> :
+          [
+            <i
+              key="a"
+              className="fa fa-square-o"
+              style={styles.absolute}
+            />,
+            <i
+              key="b"
+              className="fa fa-times"
+              style={[styles.absolute, {fontSize: 24, left: 2, top: 1}]}
+            />
+          ]
+        }
+      </span>
+    );
   },
 
   render() {
@@ -111,22 +138,13 @@ const AchievementDialog = Radium(React.createClass({
       >
         <div style={styles.checkmarks}>
           <p style={styles.achievement.row}>
-            <i
-              className={this.getIcon(true)}
-              style={styles.achievement.icon}
-            />
+            {this.getIcon(true)}
             <span style={styles.achievement.text}>
               {locale.puzzleCompleted()}
             </span>
           </p>
           <p style={styles.achievement.row}>
-            <i
-              className={this.getIcon(!tooManyBlocks)}
-              style={[
-                styles.achievement.icon,
-                tooManyBlocks && styles.achievement.inactive
-              ]}
-            />
+            {this.getIcon(!tooManyBlocks)}
             <span
               style={[
                 styles.achievement.text,
@@ -141,13 +159,7 @@ const AchievementDialog = Radium(React.createClass({
             </span>
           </p>
           <p style={styles.achievement.row}>
-            <i
-              className={this.getIcon(!tooManyHints)}
-              style={[
-                styles.achievement.icon,
-                tooManyHints && styles.achievement.inactive
-              ]}
-            />
+            {this.getIcon(!tooManyHints)}
             <span
               style={[
                 styles.achievement.text,
