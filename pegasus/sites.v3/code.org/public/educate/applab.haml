@@ -30,13 +30,13 @@ video_player: true
   .clear
   %h2 See how to use App Lab and build your own app with these 10 minute demos
   .col-25{style: "padding-right: 10px;"}
-    = view :display_video_thumbnail, id: "app_lab_intro", video_code: "xlbRL5eOgkI", play_button: 'center', download_path: "//videos.code.org/applab/how-to-introduction.mp4", letterbox: 'false', play_button: 'none'
+    = view :display_video_thumbnail, id: "app_lab_intro", video_code: "xlbRL5eOgkI", play_button: 'center', download_path: "//videos.code.org/applab/how-to-introduction.mp4", letterbox: 'false', play_button: 'center'
   .col-25{style: "padding-right: 10px;"}
-    = view :display_video_thumbnail, id: "how_to_make_an_app", video_code: "tDnoxkOSfQw", play_button: 'center', download_path: "//videos.code.org/applab/how-to-make-an-app.mp4", letterbox: 'false', play_button: 'none'
+    = view :display_video_thumbnail, id: "how_to_make_an_app", video_code: "tDnoxkOSfQw", play_button: 'center', download_path: "//videos.code.org/applab/how-to-make-an-app.mp4", letterbox: 'false', play_button: 'center'
   .col-25{style: "padding-right: 10px;"}
-    = view :display_video_thumbnail, id: "choose_adventure", video_code: "ZhgBSYKWL2A", play_button: 'center', download_path: "//videos.code.org/applab/how-to-choose-your-own-adventure.mp4", letterbox: 'false', play_button: 'none'
+    = view :display_video_thumbnail, id: "choose_adventure", video_code: "ZhgBSYKWL2A", play_button: 'center', download_path: "//videos.code.org/applab/how-to-choose-your-own-adventure.mp4", letterbox: 'false', play_button: 'center'
   .col-25{style: "padding-right: 10px;"}
-    = view :display_video_thumbnail, id: "whack_e_moji", video_code: "WZVAA3ajZxc", play_button: 'center', download_path: "//videos.code.org/applab/whack-e-moji.mp4", letterbox: 'false', play_button: 'none'
+    = view :display_video_thumbnail, id: "whack_e_moji", video_code: "WZVAA3ajZxc", play_button: 'center', download_path: "//videos.code.org/applab/whack-e-moji.mp4", letterbox: 'false', play_button: 'center'
   .clear
 
 #challenges.responsive-body
@@ -76,7 +76,7 @@ video_player: true
       .clear
       %h2= video[:category_title]
     %div{style: "float:left; padding:10px; width: 275px;"}
-      = view :display_video_thumbnail, id: video[:id],  video_code:video[:code], caption: video[:caption], play_button: 'none', download_path: video[:download_path], letterbox: 'false'
+      = view :display_video_thumbnail, id: video[:id],  video_code:video[:code], caption: video[:caption], play_button: 'center', download_path: video[:download_path], letterbox: 'false'
       - unless video[:studio_stage].nil_or_empty?
         %a{href: CDO.studio_url(video[:studio_stage])} Try it now
 
