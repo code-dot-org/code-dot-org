@@ -60,15 +60,10 @@ const MarkdownInstructions = React.createClass({
       // make sure we don't initialize any blockspace before the main
       // block space has been created, lest we violate some assumptions
       // blockly has.
-      if (Blockly.mainBlockSpace) {
+      Blockly.BlockSpace.onMainBlockSpaceCreated(() => {
         convertXmlToBlockly(ReactDOM.findDOMNode(this));
         this.props.onResize();
-      } else {
-        document.addEventListener(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED, () => {
-          convertXmlToBlockly(ReactDOM.findDOMNode(this));
-          this.props.onResize();
-        });
-      }
+      });
     }
 
     // Parent needs to readjust some sizing after images have loaded
