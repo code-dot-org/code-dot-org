@@ -12,7 +12,8 @@ import reducer, {
     withAbsoluteSourceUrls,
     appendBlankFrame,
     appendLibraryFrames,
-    appendCustomFrames
+    appendCustomFrames,
+    saveAnimation
 } from '@cdo/apps/gamelab/animationListModule';
 import animationTab from '@cdo/apps/gamelab/AnimationTab/animationTabModule';
 import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
@@ -562,5 +563,37 @@ describe('animationListModule', function () {
       expect(store.getState().animationList.pendingFrames.key).to.equal(selectedAnimation);
       expect(store.getState().animationList.pendingFrames.props).to.deep.equal(libraryAnimProps);
     });
+  });
+
+  describe('action: save animation', function () {
+    let xhr, requests;
+    beforeEach(function () {
+      xhr = sinon.useFakeXMLHttpRequest();
+      requests = [];
+      xhr.onCreate = xhr => requests.push(xhr);
+    });
+
+    afterEach(function () {
+      xhr.restore();
+    });
+
+    it('sends a save request', function () {
+      const libraryAnimProps = {
+        name: 'animation_1',
+        sourceUrl: 'url',
+        frameSize: {x: 100, y: 100},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 4,
+        version: null
+      };
+
+      saveAnimation('animation_1', libraryAnimProps);
+      expect(requests.length).to.equal(1);
+      expect(requests[0].method).to.equal('PUT');
+      expect(requests[0].url).to.equal("/v3/animations/fake_id/animation_1.png");
+      expect(requests[0].requestHeaders['Content-type']).to.equal("image/png;charset=utf-8");
+    });
+
   });
 });
