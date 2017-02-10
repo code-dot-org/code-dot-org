@@ -22,12 +22,15 @@
       "color": null,
       "stroke": null,
       "noStroke": null,
+      "strokeWeight": null,
       "noFill": null,
       "ellipse": null,
       "text": null,
       "textSize": null,
       "textAlign": null,
-      "randomNumber_min_max": null
+      "randomNumber_min_max": null,
+      "addOperator": null,
+      "subtractOperator": null
     },
     "show_d_pad": "false",
     "edit_code": true,
@@ -64,7 +67,8 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "8nGOgACRNM//altl+p3SHOw2hrAXTHFf8U1Mdgah0Mz9j4r9TSPeTktkhN/n\nJ4UY\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false"
   },
   "published": true,
   "notes": "",

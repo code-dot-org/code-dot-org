@@ -17,7 +17,7 @@ var consoleApi = require('../consoleApi');
 var utils = require('../utils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
-var JsDebuggerUi = require('../JsDebuggerUi');
+var JsDebuggerUi = require('@cdo/apps/lib/tools/jsdebugger/JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
@@ -258,12 +258,6 @@ GameLab.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
     }
 
-    if (this.debugger_) {
-      this.debugger_.initializeAfterDomCreated({
-        defaultStepSpeed: 1
-      });
-    }
-
     this.setCrosshairCursorForPlaySpace();
   }.bind(this);
 
@@ -290,6 +284,7 @@ GameLab.prototype.init = function (config) {
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
     isIframeEmbed: !!config.level.iframeEmbed,
+    debuggerUi: this.debugger_,
   });
 
   if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
