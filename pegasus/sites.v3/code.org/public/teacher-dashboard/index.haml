@@ -602,7 +602,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       // so do it using a custom event here. The call to listen for the custom
       // event must not be nested inside another deferred call or we might
       // miss the event.
-      $scope.$on('section-projects-rendered', event => {
+      $scope.$on('section-projects-rendered', function () {
         $scope.section.$promise.then(
           function (section) {
             window.renderSectionProjects(section.id);
