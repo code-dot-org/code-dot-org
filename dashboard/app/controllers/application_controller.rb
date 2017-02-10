@@ -176,6 +176,12 @@ class ApplicationController < ActionController::Base
           options[:level_source_image]
         response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {level_source_id: options[:level_source].try(:id), activity_id: options[:activity].id})
       end
+
+      if options[:get_hint_usage]
+        response[:hints_used] =
+          HintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count +
+          AuthoredHintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count
+      end
     end
 
     response[:activity_id] = options[:activity] && options[:activity].id
