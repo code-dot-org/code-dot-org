@@ -1,92 +1,87 @@
 /** @file Test maker command behavior */
 import {expect} from '../../../../util/configuredChai';
-import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 import sinon from 'sinon';
 import {
   analogRead,
   analogWrite,
   digitalRead,
   digitalWrite,
+  injectBoardController,
   onBoardEvent,
   pinMode,
   timedLoop
 } from '@cdo/apps/lib/kits/maker/commands';
+import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
 
 describe('maker commands', () => {
+  let stubBoardController;
+
   beforeEach(() => {
-    replaceOnWindow('Applab', {
-      makerController: {
-        analogRead: sinon.spy(),
-        analogWrite: sinon.spy(),
-        digitalRead: sinon.spy(),
-        digitalWrite: sinon.spy(),
-        onBoardEvent: sinon.spy(),
-        pinMode: sinon.spy(),
-      }
-    });
+    stubBoardController = sinon.createStubInstance(BoardController);
+    injectBoardController(stubBoardController);
   });
 
   afterEach(() => {
-    restoreOnWindow('Applab');
+    injectBoardController(undefined);
   });
 
   describe('pinMode(pin, mode)', () => {
     it('delegates to makerController.pinMode with mapped mode id', () => {
       pinMode({pin: 1, mode: 'input'});
-      expect(Applab.makerController.pinMode).to.have.been.calledWith(1, 0);
+      expect(stubBoardController.pinMode).to.have.been.calledWith(1, 0);
     });
 
     it(`maps 'input' mode to 0`, () => {
       pinMode({pin: 42, mode: 'input'});
-      expect(Applab.makerController.pinMode).to.have.been.calledWith(42, 0);
+      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 0);
     });
 
     it(`maps 'output' mode to 1`, () => {
       pinMode({pin: 42, mode: 'output'});
-      expect(Applab.makerController.pinMode).to.have.been.calledWith(42, 1);
+      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 1);
     });
 
     it(`maps 'analog' mode to 2`, () => {
       pinMode({pin: 42, mode: 'analog'});
-      expect(Applab.makerController.pinMode).to.have.been.calledWith(42, 2);
+      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 2);
     });
 
     it(`maps 'pwm' mode to 3`, () => {
       pinMode({pin: 42, mode: 'pwm'});
-      expect(Applab.makerController.pinMode).to.have.been.calledWith(42, 3);
+      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 3);
     });
 
     it(`maps 'servo' mode to 4`, () => {
       pinMode({pin: 42, mode: 'servo'});
-      expect(Applab.makerController.pinMode).to.have.been.calledWith(42, 4);
+      expect(stubBoardController.pinMode).to.have.been.calledWith(42, 4);
     });
   });
 
   describe('digitalWrite(pin, value)', () => {
     it('delegates to makerController.digitalWrite', () => {
       digitalWrite({pin: 22, value: 1});
-      expect(Applab.makerController.digitalWrite).to.have.been.calledWith(22, 1);
+      expect(stubBoardController.digitalWrite).to.have.been.calledWith(22, 1);
     });
   });
 
   describe('digitalRead(pin)', () => {
     it('delegates to makerController.digitalRead', () => {
       digitalRead({pin: 18});
-      expect(Applab.makerController.digitalRead).to.have.been.calledWith(18);
+      expect(stubBoardController.digitalRead).to.have.been.calledWith(18);
     });
   });
 
   describe('analogWrite(pin, value)', () => {
     it('delegates to makerController.analogWrite', () => {
       analogWrite({pin: 22, value: 33});
-      expect(Applab.makerController.analogWrite).to.have.been.calledWith(22, 33);
+      expect(stubBoardController.analogWrite).to.have.been.calledWith(22, 33);
     });
   });
 
   describe('analogRead(pin)', () => {
     it('delegates to makerController.analogRead', () => {
       analogRead({pin: 18});
-      expect(Applab.makerController.analogRead).to.have.been.calledWith(18);
+      expect(stubBoardController.analogRead).to.have.been.calledWith(18);
     });
   });
 
@@ -100,7 +95,7 @@ describe('maker commands', () => {
         event: eventName,
         callback: fakeCallback
       });
-      expect(Applab.makerController.onBoardEvent).to.have.been
+      expect(stubBoardController.onBoardEvent).to.have.been
         .calledWith(fakeComponent, eventName, fakeCallback);
     });
   });
