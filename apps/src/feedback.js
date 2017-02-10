@@ -198,7 +198,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         puzzleNumber={options.level.puzzle_number || 0}
         idealBlocks={this.studioApp_.IDEAL_BLOCK_NUM}
         actualBlocks={this.getNumCountableBlocks()}
-        hintsUsed={1}
+        hintsUsed={options.response.hints_used}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={options.onContinue}
       />, container);
