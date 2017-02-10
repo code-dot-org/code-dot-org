@@ -24,48 +24,35 @@ import Piezo from './Piezo';
  * @returns {Object.<String, Object>} board components
  */
 export function initializeCircuitPlaygroundComponents(board) {
-  const colorLeds = initializeColorLeds(board);
-
-  // Must initialize sound sensor BEFORE left button, otherwise left button
-  // will not respond to input.  This has something to do with them sharing
-  // pin 4 on the board.
-  const soundSensor = initializeSoundSensor(board);
-
-  const buttonL = initializeButton(board, '4');
-  const buttonR = initializeButton(board, '19');
-
-  const accelerometer = initializeAccelerometer(board);
-
-  const touchPads = initializeTouchPads(board);
-
-  const lightSensor = initializeLightSensor(board);
-  const tempSensor = initializeThermometer(board);
-
   return {
-    colorLeds: colorLeds,
+    colorLeds: initializeColorLeds(board),
 
-    led: new five.Led(13),
+    led: new five.Led({board, pin: 13}),
 
-    toggleSwitch: new five.Switch('21'),
+    toggleSwitch: new five.Switch({board, pin: '21'}),
 
     buzzer: new Piezo({
+      board,
       pin: '5',
       controller: PlaygroundIO.Piezo
     }),
 
-    tempSensor: tempSensor,
+    // Must initialize sound sensor BEFORE left button, otherwise left button
+    // will not respond to input.  This has something to do with them sharing
+    // pin 4 on the board.
+    soundSensor: initializeSoundSensor(board),
 
-    lightSensor: lightSensor,
+    tempSensor: initializeThermometer(board),
 
-    accelerometer: accelerometer,
+    lightSensor: initializeLightSensor(board),
 
-    soundSensor: soundSensor,
+    accelerometer: initializeAccelerometer(board),
 
-    buttonL: buttonL,
+    buttonL: initializeButton(board, '4'),
 
-    buttonR: buttonR,
+    buttonR: initializeButton(board, '19'),
 
-    ...touchPads
+    ...initializeTouchPads(board)
   };
 }
 
