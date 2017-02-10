@@ -270,7 +270,8 @@ describe('ProgressDot component tests', () => {
           <ProgressDot
             level={{
               icon: 'fa-video-camera',
-              kind: LevelKind.named_level
+              name: 'I have a name',
+              kind: LevelKind.puzzle
             }}
             status={LevelStatus.not_tried}
             courseOverviewPage={true}
@@ -287,7 +288,8 @@ describe('ProgressDot component tests', () => {
           <ProgressDot
             level={{
               icon: undefined,
-              kind: LevelKind.named_level
+              name: 'I have a name',
+              kind: LevelKind.puzzle
             }}
             status={LevelStatus.not_tried}
             courseOverviewPage={true}
@@ -304,7 +306,8 @@ describe('ProgressDot component tests', () => {
           <ProgressDot
             level={{
               icon: 'fa-video-camera',
-              kind: LevelKind.named_level
+              name: 'I have a name',
+              kind: LevelKind.puzzle
             }}
             status={LevelStatus.not_tried}
             courseOverviewPage={/* false implies this is header progress */false}
@@ -323,7 +326,8 @@ describe('ProgressDot component tests', () => {
           <ProgressDot
             level={{
               icon: undefined,
-              kind: LevelKind.named_level
+              name: 'I have a name',
+              kind: LevelKind.puzzle
             }}
             status={LevelStatus.not_tried}
             courseOverviewPage={true}
@@ -340,7 +344,8 @@ describe('ProgressDot component tests', () => {
           <ProgressDot
             level={{
               icon: undefined,
-              kind: LevelKind.named_level
+              name: 'I have a name',
+              kind: LevelKind.puzzle
             }}
             status={LevelStatus.not_tried}
             courseOverviewPage={/* false implies this is header progress */false}
