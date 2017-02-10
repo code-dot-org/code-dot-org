@@ -18,6 +18,8 @@ ________________
 ### What does the application process look like and how is my organization involved?
 Refer to the [Teacher Application Process Document](https://docs.google.com/document/d/1BhWbgYYxDcKnCYTGOQaT1YD_KKjVWE7F1tI6wWDHKa4/edit#) for everything you need to know about the Code.org teacher application process.
 
+You can also reference the [Application Spreadsheet Guide](https://docs.google.com/document/d/1Y_bRru2qWNMW5A1tS4uXs_YU0Sq70p3O725aJiSMrIY/edit#) for information on how to use the application spreadsheet tool.
+
 ### Application Links
 - Computer Science Discoveries - [Apply here!](https://code.org/educate/professional-learning/cs-discoveries)
 - Computer Science Principles - [Apply here!](https://code.org/educate/professional-learning/cs-principles)
