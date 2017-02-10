@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-02-03T20:34:44.000Z",
+  "created_at": "2017-02-09T20:10:24.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -84,7 +84,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Light Patterns\r\n\r\nThis app already has one light pattern program, which can be activated by clicking a button. Notice that we put this pattern into a function to make the code cleaner and clearer.\r\n\r\n# Do This\r\n\r\nCreate a light pattern function of your own - maybe the colors of your favorite holiday, college, sports team, or just colors you like!\r\n\r\nAfter you've created your new function, add a button and event handler so that you can switch between the two light patterns.",
+    "markdown_instructions": "# Turning It Off\r\n\r\nWhen you start this app your lights are off, but as soon as choose a pattern, there's no way to turn the lights back off!\r\n\r\n# Do This\r\n\r\nAdd a \"Off\" button to your app and make it turn off all of the color LEDs.",
     "project_template_level_name": "CSDU6 - L06 - Light Display Template",
     "hide_share_and_remix": "false",
     "contained_level_names": null
