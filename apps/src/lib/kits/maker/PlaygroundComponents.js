@@ -41,10 +41,6 @@ export function initializeCircuitPlaygroundComponents(board) {
   const lightSensor = initializeLightSensor(board);
   const tempSensor = initializeThermometer(board);
 
-  [soundSensor, lightSensor, tempSensor].forEach((s) => {
-    addSensorFeatures(five.Board.fmap, s);
-  });
-
   return {
     colorLeds: colorLeds,
 
@@ -73,12 +69,55 @@ export function initializeCircuitPlaygroundComponents(board) {
   };
 }
 
+export function initializeColorLeds(board) {
+  return _.range(N_COLOR_LEDS).map(i => initializeColorLed(board, i));
+}
+
+function initializeColorLed(board, pin) {
+  return new five.Led.RGB({
+    board,
+    controller: PlaygroundIO.Pixel,
+    pin
+  });
+}
+
+export function initializeSoundSensor(board) {
+  const sensor = new five.Sensor({
+    board,
+    pin: "A4",
+    freq: 100
+  });
+  addSensorFeatures(five.Board.fmap, sensor);
+  return sensor;
+}
+
+export function initializeLightSensor(board) {
+  const sensor = new five.Sensor({
+    board,
+    pin: "A5",
+    freq: 100
+  });
+  addSensorFeatures(five.Board.fmap, sensor);
+  return sensor;
+}
+
+export function initializeThermometer(board) {
+  const sensor = new five.Thermometer({
+    board,
+    controller: Thermometer,
+    pin: "A0",
+    freq: 100
+  });
+  addSensorFeatures(five.Board.fmap, sensor);
+  return sensor;
+}
+
 /**
  * Adds `getAveragedValue` using LookbackLogger to a five.Sensor instance.
  * @param {five.Board.fmap} fmap mapping function
  * @param {five.Sensor} sensor
  */
-const addSensorFeatures = (fmap, sensor) => {
+function addSensorFeatures(fmap, sensor) {
   /**
    * Cache scale setting locally (cannot grab after the fact from five.Sensor).
    * Scale is a 2-element array of [low, high].
@@ -104,43 +143,6 @@ const addSensorFeatures = (fmap, sensor) => {
     // store scale in public state for scaling recorded data
     scale = [low, high];
   };
-};
-
-export function initializeColorLeds(board) {
-  return _.range(N_COLOR_LEDS).map(i => initializeColorLed(board, i));
-}
-
-function initializeColorLed(board, pin) {
-  return new five.Led.RGB({
-    board,
-    controller: PlaygroundIO.Pixel,
-    pin
-  });
-}
-
-export function initializeSoundSensor(board) {
-  return new five.Sensor({
-    board,
-    pin: "A4",
-    freq: 100
-  });
-}
-
-export function initializeLightSensor(board) {
-  return new five.Sensor({
-    board,
-    pin: "A5",
-    freq: 100
-  });
-}
-
-export function initializeThermometer(board) {
-  return new five.Thermometer({
-    board,
-    controller: Thermometer,
-    pin: "A0",
-    freq: 100
-  });
 }
 
 export function initializeButton(board, pin) {
