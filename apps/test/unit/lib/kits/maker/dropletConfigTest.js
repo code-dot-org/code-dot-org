@@ -1,6 +1,5 @@
 /** @file Test maker droplet config behavior */
 import {expect} from '../../../../util/configuredChai';
-import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 import sinon from 'sinon';
 import {
   blocks,
@@ -9,7 +8,7 @@ import {
   stringifySong
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 import * as api from '@cdo/apps/lib/kits/maker/api';
-import commands from '@cdo/apps/lib/kits/maker/commands';
+import * as commands from '@cdo/apps/lib/kits/maker/commands';
 
 describe('getBoardEventDropdownForParam', () => {
   it('unknown first parameter dropdown contains all options', () => {
@@ -103,6 +102,48 @@ describe('stringifySong', () => {
   });
 });
 
+describe(`pinMode(pin, mode)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('pinMode');
+    expect(commands.pinMode).to.be.a('function');
+  });
+});
+
+describe(`digitalWrite(pin, value)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('digitalWrite');
+    expect(commands.digitalWrite).to.be.a('function');
+  });
+});
+
+describe(`digitalRead(pin)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('digitalRead');
+    expect(commands.digitalRead).to.be.a('function');
+  });
+});
+
+describe(`analogWrite(pin, value)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('analogWrite');
+    expect(commands.analogWrite).to.be.a('function');
+  });
+});
+
+describe(`analogRead(pin)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('analogRead');
+    expect(commands.analogRead).to.be.a('function');
+  });
+});
+
+describe(`onBoardEvent(component, event, callback)`, () => {
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('onBoardEvent');
+    expect(commands.onBoardEvent).to.be.a('function');
+  });
+});
+
 // TODO (bbuchanan): Replace with more general assertions when we move maker
 // commands back to this kit.
 describe(`timedLoop(ms, callback)`, () => {
@@ -122,21 +163,22 @@ describe(`timedLoop(ms, callback)`, () => {
   });
 
   describe('api passthrough', () => {
+    let spy;
+
     beforeEach(() => {
-      replaceOnWindow('Applab', {
-        executeCmd: sinon.spy()
-      });
+      spy = sinon.spy();
+      api.injectExecuteCmd(spy);
     });
 
     afterEach(() => {
-      restoreOnWindow('Applab');
+      api.injectExecuteCmd(undefined);
     });
 
     it('api call passes arguments through to Applab.executeCmd', () => {
       const ms = 234;
       const callback = () => {};
       api.timedLoop(ms, callback);
-      expect(Applab.executeCmd).to.have.been.calledWith(null, 'timedLoop', {ms, callback});
+      expect(spy).to.have.been.calledWith(null, 'timedLoop', {ms, callback});
     });
   });
 
@@ -144,36 +186,5 @@ describe(`timedLoop(ms, callback)`, () => {
   it('has a matching export in commands.js', () => {
     expect(commands).to.haveOwnProperty('timedLoop');
     expect(commands.timedLoop).to.be.a('function');
-  });
-
-  it('runs code on an interval', () => {
-    const clock = sinon.useFakeTimers();
-
-    const spy = sinon.spy();
-    let stopLoop;
-    commands.timedLoop({
-      ms: 50,
-      callback: exit => {
-        stopLoop = exit;
-        spy();
-      }
-    });
-
-    expect(spy).not.to.have.been.called;
-
-    clock.tick(49);
-    expect(spy).not.to.have.been.called;
-
-    clock.tick(1);
-    expect(spy).to.have.been.calledOnce;
-
-    clock.tick(50);
-    expect(spy).to.have.been.calledTwice;
-
-    stopLoop();
-    clock.tick(50);
-    expect(spy).to.have.been.calledTwice;
-
-    clock.restore();
   });
 });
