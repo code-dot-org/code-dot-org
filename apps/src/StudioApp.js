@@ -1836,7 +1836,8 @@ StudioApp.prototype.configureDom = function (config) {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = { category : { x: 20 } };
       }
-      // Enable param & var editing in levelbuilder, regardless of level setting
+      // Enable if/else, param & var editing in levelbuilder, regardless of level setting
+      config.level.disableIfElseEditing = false;
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
     }
@@ -2386,6 +2387,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   var div = document.getElementById('codeWorkspace');
   var options = {
     toolbox: config.level.toolbox,
+    disableIfElseEditing: utils.valueOr(config.level.disableIfElseEditing, false),
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
