@@ -7,6 +7,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 - error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub(/"/,"\\\\\"")
 - error_string_other_section = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
+- show_section_projects = DCDO.get('section_projects', CDO.section_projects)
 
 
 -#
@@ -35,11 +36,16 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 %link(rel='stylesheet' type='text/css' href='/shared/css/teacher-dashboard.css')
 %link(rel='stylesheet' type='text/css' href='/shared/css/user-progress.css')
 
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: CDO.studio_url("/blockly/js/#{js_locale}/common_locale.js")}
+%script{src: CDO.studio_url('/blockly/js/teacher-dashboard/index.js')}
 
 %div{'ng-view' => ''}
 
 :javascript
   'use strict';
+
+  var showSectionProjects = #{show_section_projects};
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -68,6 +74,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         {templateUrl: '/teacher-dashboard/signin_cards', controller: 'SectionSigninCardsController', tab: 'print_signin_cards'});
     $routeProvider.when('/sections/:id/progress',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionProgressController', tab: 'progress'});
+    if (showSectionProjects) {
+      $routeProvider.when('/sections/:id/projects',
+          {templateUrl: '/teacher-dashboard/section', controller: 'SectionProjectsController', tab: 'projects'});
+    }
     $routeProvider.when('/sections/:id/responses',
         {templateUrl: '/teacher-dashboard/section', controller: 'SectionResponsesController', tab: 'responses'});
     $routeProvider.when('/sections/:id/assessments',
@@ -581,10 +591,37 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
   }]);
 
+  if (showSectionProjects) {
+    app.controller('SectionProjectsController', ['$scope', '$routeParams', 'sectionsService',
+                                               function($scope, $routeParams,  sectionsService) {
+      $scope.sections = sectionsService.query();
+      $scope.section = sectionsService.get({id: $routeParams.id});
+      $scope.tab = 'projects';
+
+      // Angular does not offer a reliable way to wait for the template to load,
+      // so do it using a custom event here. The call to listen for the custom
+      // event must not be nested inside another deferred call or we might
+      // miss the event.
+      $scope.$on('section-projects-rendered', function () {
+        $scope.section.$promise.then(
+          function (section) {
+            window.renderSectionProjects(section.id);
+          }
+        );
+      });
+
+      // the ng-select in the nav compares by reference not by value, so we can't just set
+      // selectedSection to section, we have to find it in sections.
+      $scope.sections.$promise.then(
+        function (sections) {
+          $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+        }
+      );
+    }]);
+  }
+
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
                                              function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
-
-
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.progress = sectionsService.progress({id: $routeParams.id});
