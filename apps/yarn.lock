@@ -3,9 +3,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.3":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.3.tgz#ffdc1c0e4e06f7c87966e5e98f6649c99799819e"
+"@code-dot-org/blockly@1.6.6":
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.6.tgz#7996cef00d5b508ec59aad185db78b429c3594c1"
 
 "@code-dot-org/bramble@0.1.11":
   version "0.1.11"
@@ -1452,6 +1452,12 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.6"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.6.tgz#53344adb14617a13f6e8dd2ce28905d1c0ba3215"
 
+board-io@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/board-io/-/board-io-3.0.5.tgz#b9801aa81ac8bd5dd7a1d06627e4f79d6fa31a84"
+  dependencies:
+    check-types "^1.2"
+
 body-parser@^1.12.4:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.15.2.tgz#d7578cf4f1d11d5f6ea804cef35dc7a7ff6dae67"
@@ -1989,6 +1995,10 @@ change-case@2.3.x:
 "charenc@>= 0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.1.tgz#004cff9feaf102382ed12db58dd6f962796d6e88"
+
+check-types@^1.2:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/check-types/-/check-types-1.4.0.tgz#eed63bbac9ea49a0e26a096314058b03b08dd62b"
 
 cheerio@^0.20.0:
   version "0.20.0"
@@ -7100,6 +7110,12 @@ mochify@2.18.0:
     through2 "^2.0.0"
     watchify "^3.7.0"
     which "^1.2.1"
+
+mock-firmata@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/mock-firmata/-/mock-firmata-0.1.0.tgz#017c1ef5b6ec1f7a3021556c8a96ce0cf31e4613"
+  dependencies:
+    board-io "^3.0.5"
 
 mockfirebase@^0.12.0:
   version "0.12.0"

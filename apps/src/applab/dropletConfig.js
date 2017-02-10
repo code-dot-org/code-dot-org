@@ -4,6 +4,7 @@ import * as api from './api';
 import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
@@ -27,10 +28,13 @@ var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
 
-// Configure the audio API for App Lab
-audioApi.injectExecuteCmd(function () {
-  Applab.executeCmd.apply(Applab, arguments);
-});
+// Configure shared APIs for App Lab
+// We wrap this because it runs before window.Applab exists
+function applabExecuteCmd(...args) {
+  Applab.executeCmd.call(Applab, ...args);
+}
+audioApi.injectExecuteCmd(applabExecuteCmd);
+makerApi.injectExecuteCmd(applabExecuteCmd);
 
 /**
  * Generate a list of screen ids for our setScreen dropdown
