@@ -566,12 +566,15 @@ describe('animationListModule', function () {
   });
 
   describe('action: save animation', function () {
+    let xhr, requests;
     beforeEach(function () {
-      this.xhr = sinon.useFakeXMLHttpRequest();
-      let requests = this.requests = [];
-      this.xhr.onCreate = function (xhr) {
-        requests.push(xhr);
-      };
+      xhr = sinon.useFakeXMLHttpRequest();
+      requests = [];
+      xhr.onCreate = xhr => requests.push(xhr);
+    });
+
+    afterEach(function () {
+      xhr.restore();
     });
 
     it('sends a save request', function () {
@@ -585,12 +588,11 @@ describe('animationListModule', function () {
         version: null
       };
 
-      let callback = sinon.spy();
       saveAnimation('animation_1', libraryAnimProps);
-      expect(this.requests.length).to.equal(1);
-      expect(this.requests[0].method).to.equal('PUT');
-      expect(this.requests[0].url).to.equal("/v3/animations/fake_id/animation_1.png");
-      expect(this.requests[0].requestHeaders['Content-type']).to.equal("image/png;charset=utf-8");
+      expect(requests.length).to.equal(1);
+      expect(requests[0].method).to.equal('PUT');
+      expect(requests[0].url).to.equal("/v3/animations/fake_id/animation_1.png");
+      expect(requests[0].requestHeaders['Content-type']).to.equal("image/png;charset=utf-8");
     });
 
   });
