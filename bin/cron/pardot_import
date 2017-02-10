@@ -22,7 +22,7 @@ PARDOT_API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4"
 PARDOT_BATCH_CREATE_URL = "#{PARDOT_API_V4_BASE}/do/batchCreate"
 # URL for prospect batch update
 PARDOT_BATCH_UPDATE_URL = "#{PARDOT_API_V4_BASE}/do/batchUpdate"
-# URL for propspect query
+# URL for prospect query
 PARDOT_PROSPECT_QUERY_URL = "#{PARDOT_API_V4_BASE}/do/query"
 
 PARDOT_SUCCESS_HTTP_CODES = %w(200 201)
@@ -32,7 +32,8 @@ MAX_PROSPECT_BATCH_SIZE = 50
 # Empirically determined safe max URL length for batch operations
 URL_LENGTH_SEND_THRESHOLD = 6200
 
-# Map of database fields to Pardot field names
+# Map of database fields to Pardot field names. "multi" refers to if the field is a multi-valued
+# type (such as checkbox list)
 MYSQL_TO_PARDOT_MAP = {
   email: {  field: 'email', multi: false },
   pardot_id: { field: 'id', multi: false },
@@ -76,8 +77,7 @@ end
 def update_pardot_ids_of_new_contacts
   # Find the highest Pardot ID of contacts stored in our database. Any newer contacts are guaranteed to have a
   # higher ID. (Not stated in docs, but confirmed by Pardot support who said this was the best way to do this.)
-  id_max = PEGASUS_DB[:contact_rollups].max(:pardot_id)
-  id_max = 0 if id_max.nil?
+  id_max = PEGASUS_DB[:contact_rollups].max(:pardot_id) || 0
 
   # Run repeated requests querying for prospects above our highest known Pardot ID. Up to 200 prospects will be
   # returned at a time by Pardot, so query repeatedly if there are more than 200 to retrieve.
@@ -210,17 +210,17 @@ def sync_contacts_with_pardot(config)
   log "Contact #{config[:operation_name]} pass completed. #{num_operations} total operations."
 end
 
-# Create or update a batch of prospects
+# Create or update a batch of prospects. This method may raise an exception.
 # @param prospects [Array<Hash>] array of hashes of prospect data
 # @param config [Hash] hash of config params to use to control create vs update behavior
-# @returns [Nokogiri::XML] XML response from Pardot
+# @return [Nokogiri::XML] XML response from Pardot
 def submit_prospect_batch(prospects, config)
   # Build the URL containing prospect data. (Prospect data is sent as a JSON blob in a
   # query parameter)
   url = build_batch_prospects_url(prospects, config)
 
-  # Build array of the emails for to create in Pardot
-  prospect_emails = prospects.collect{ |x| x["email"] }.to_a
+  # Build array of the emails to create in Pardot
+  prospect_emails = prospects.collect{ |x| x["email"] }
   malformed_emails = []
 
   num_submitted = prospects.length
@@ -234,17 +234,18 @@ def submit_prospect_batch(prospects, config)
     num_removed = 0
     doc.xpath('/rsp/errors/*').each do |node|
       error_text = node.text
-      if error_text.eql?("Invalid prospect email address")
+      if error_text == "Invalid prospect email address"
         # Identifier of contact with error is zero-based index
         prospect_identifier = node.attr("identifier").to_i
         # Adjust contact index for any we have already removed in this batch
         prospect_identifier -= num_removed
 
-        malformed_email = prospect_emails[prospect_identifier]
+        malformed_email = prospect_emails.delete_at(prospect_identifier)
+        malformed_emails << malformed_email
+
         log "Pardot reported email \"#{malformed_email}\" as malformed, marking as malformed in our DB"
         # Add the rejected email to our list of malformed emails
-        malformed_emails << malformed_email
-        prospect_emails.delete_at(prospect_identifier)
+
         num_removed += 1
       else
         error_text = "Unknown error" if error_text.empty?
@@ -258,14 +259,14 @@ def submit_prospect_batch(prospects, config)
   log "Completed Pardot prospect #{config[:operation_name]} batch call. #{num_submitted} submitted, #{prospect_emails.length} succeeded, #{malformed_emails.length} rejected as malformed"
 
   # Mark Pardot sync time of contacts in our database
-  PEGASUS_DB[:contact_rollups].where("email in ?", prospect_emails).update("pardot_sync_at=NOW()") unless prospect_emails.empty?
+  PEGASUS_DB[:contact_rollups].where("email in ?", prospect_emails).update(pardot_sync_at: DateTime.now) unless prospect_emails.empty?
   # Mark any email addresses rejected by Pardot as malformed so we don't keep trying to fruitlessly create them forever
-  PEGASUS_DB[:contact_rollups].where("email in ?", malformed_emails).update("email_malformed=true") unless malformed_emails.empty?
+  PEGASUS_DB[:contact_rollups].where("email in ?", malformed_emails).update(email_malformed: true) unless malformed_emails.empty?
 end
 
 # Login to Pardot and request an API key. The API key is valid for (up to) one hour, after which
 # it will become invalid and we will need to request a new one.
-# @returns [String] API key to use for subsequent requests
+# @return [String] API key to use for subsequent requests
 def request_pardot_api_key
   log "Requesting new API key"
   doc = post_request(PARDOT_AUTHENTICATION_URL,
@@ -273,7 +274,7 @@ def request_pardot_api_key
   )
 
   status = doc.xpath('/rsp/@stat').text
-  raise "Pardot authentication response failed with status " + status + " " + doc.to_s if status != "ok"
+  raise "Pardot authentication response failed with status #{status}  #{doc}" if status != "ok"
 
   api_key = doc.xpath('/rsp/api_key').text
   raise "Pardot authentication response did not include api_key" if api_key.nil?
@@ -285,7 +286,7 @@ end
 # query param.
 # @param prospects [Array<Hash>] array of hashes of prospect data
 # @param config [Hash] hash of config params to use to control create vs update behavior
-# @returns [String] Pardot URL for API request including encoded JSON prospect data in query string
+# @return [String] Pardot URL for API request including encoded JSON prospect data in query string
 def build_batch_prospects_url(prospects, config)
   prospects_payload_json_encoded = URI.encode({ prospects: prospects }.to_json)
   # We also need to encode plus signs in email addresses, otherwise Pardot rejects them as invalid.
@@ -299,7 +300,7 @@ end
 # Make an API request with Pardot authentication, including appending auth params and refreshing Pardot API key and
 # retrying if necessary
 # @param url [String] URL to post to
-# @returns [Nokogiri::XML] XML response from Pardot
+# @return [Nokogiri::XML] XML response from Pardot
 def post_with_auth_retry(url)
   # do the post to Pardot
   post_request_with_auth(url)
@@ -311,28 +312,27 @@ rescue InvalidApiKeyException
 end
 
 # Make an API request with Pardot authentication
-# @param url [String] URL to post to
-# @returns [Nokogiri::XML] XML response from Pardot
+# @param url [String] URL to post to. The URL passed in should not contain auth params, as
+#   auth params will get appended in this method
+# @return [Nokogiri::XML] XML response from Pardot
 def post_request_with_auth(url)
   request_pardot_api_key if $pardot_api_key.nil?
   # add the API key and user key parameters to the URL
   auth_url = append_auth_params_to_url(url)
-  doc = post_request(auth_url, {})
-  doc
+  post_request(auth_url, {})
 end
 
-# Make an API request
+# Make an API request. This method may raise exceptions.
 # @param url [String] URL to post to - must already include Pardot auth params in query string
 # @param params [Hash] hash of POST params (may be empty hash)
-# @returns [Nokogiri::XML] XML response from Pardot
+# @return [Nokogiri::XML] XML response from Pardot
 def post_request(url, params)
   uri = URI(url)
 
-  # make the HTTP POST
   response = Net::HTTP.post_form(uri, params)
 
   # do common error handling for Pardot response
-  raise "Pardot request failed with HTTP " + response.code unless PARDOT_SUCCESS_HTTP_CODES.include?(response.code)
+  raise "Pardot request failed with HTTP #{response.code} " unless PARDOT_SUCCESS_HTTP_CODES.include?(response.code)
 
   doc = Nokogiri::XML(response.body, &:noblanks)
   raise "Pardot response did not return parsable XML" if doc.nil?
@@ -349,7 +349,7 @@ end
 # Append standard Pardot auth parameters (per-session API key and fixed user key) to a
 # Pardot API request
 # @param url [String] URL to post to
-# @returns [String] URL with auth parameters appended
+# @return [String] URL with auth parameters appended
 def append_auth_params_to_url(url)
   "#{url}&api_key=#{$pardot_api_key}&user_key=#{CDO.pardot_user_key}"
 end
@@ -361,7 +361,7 @@ def raise_if_response_error(doc)
   status = doc.xpath('/rsp/@stat').text
   if status != "ok"
     error_text = doc.xpath('/rsp/errors/*').first.try(:text)
-    error_text = "Unknown error" if error_text.empty?
+    error_text = "Unknown error" if error_text.nil? || error_text.empty?
     log doc.to_s
     log error_text
     raise "Error in Pardot response: #{error_text}"
