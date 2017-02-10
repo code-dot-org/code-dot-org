@@ -421,23 +421,6 @@ describe('ProgressDot component tests', () => {
         const result = renderer.getRenderOutput();
         expect(result.props.children[0].props.className).to.equal('fa fa-lock');
       });
-
-      it('does not show a locked icon on header when locked', () => {
-        renderer.render(
-          <ProgressDot
-            level={{
-              icon: undefined,
-              kind: LevelKind.puzzle
-            }}
-            status={LevelStatus.locked}
-            courseOverviewPage={/* false implies this is header progress */false}
-            saveAnswersBeforeNavigation={false}
-          />
-        );
-
-        const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('');
-      });
     });
 
     describe('assessment levels', () => {
