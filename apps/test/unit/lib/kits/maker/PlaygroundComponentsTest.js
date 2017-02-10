@@ -7,6 +7,7 @@ import {
   initializeAccelerometer,
   initializeButton,
   initializeColorLeds,
+  initializeLightSensor,
   initializeSoundSensor,
   initializeTouchPads,
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
@@ -56,6 +57,16 @@ describe('initializeSoundSensor()', () => {
   it('initializes one sensor', function () {
     const board = newBoard();
     const sensor = initializeSoundSensor(board);
+    expect(sensor).to.be.an.instanceOf(five.Sensor);
+    // Doesn't use sysex at first
+    expect(board.io.sysexCommand.callCount).to.equal(0);
+  });
+});
+
+describe('initializeLightSensor()', () => {
+  it('initializes one sensor', function () {
+    const board = newBoard();
+    const sensor = initializeLightSensor(board);
     expect(sensor).to.be.an.instanceOf(five.Sensor);
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);

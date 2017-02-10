@@ -38,10 +38,7 @@ export function initializeCircuitPlaygroundComponents(board) {
 
   const touchPads = initializeTouchPads(board);
 
-  const lightSensor = new five.Sensor({
-    pin: "A5",
-    freq: 100
-  });
+  const lightSensor = initializeLightSensor(board);
   const tempSensor = new five.Thermometer({
     controller: Thermometer,
     pin: "A0",
@@ -129,6 +126,14 @@ export function initializeSoundSensor(board) {
   return new five.Sensor({
     board,
     pin: "A4",
+    freq: 100
+  });
+}
+
+export function initializeLightSensor(board) {
+  return new five.Sensor({
+    board,
+    pin: "A5",
     freq: 100
   });
 }
