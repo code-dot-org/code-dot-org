@@ -130,19 +130,19 @@
         sign_in_to_save_project:
         - this project to your account!
       Course 4 Artist 4_callout:
-        repeat_full_circle:
-        - make a full circle
+        repeat_full_circle: "Εισάγετε τον αριθμό των φορών που το ζόμπι πρέπει να
+          κινηθεί για να κάνει έναν πλήρη κύκλο"
       Course 4 Artist 7_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: Χρησιμοποίησε το "Επανάλαβε" μπλοκ και πιάσε ένα γύρο όλα τα
+          μπλοκ στον χώρο εργασίας
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: "Σύρε τη μεταβλητή μετρητή μέσα σε αυτό το μπλοκ"
       Course 4 Artist Functions 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την
+          επιλογή "Δημιουργία Συνάρτησης".
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint:
-        - fix it in the next puzzle.
+        house_hint: "Δεν πειράζει αν η εικόνα δεν μοιάζει ακόμη με  σπίτι. Θα το φτιάξουμε
+          στο επόμενο πρόβλημα."
       Course 4 Artist Functions 8_callout:
         edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
       Course 4 Artist Functions challenge_callout:
@@ -153,14 +153,14 @@
         length_parameter: Μπορείς να ενημερώσεις αυτή τη συνάρτηση έτσι που να χρησιμοποιεί
           την παράμετρο "μήκος";
       Course 4 Artist Params 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την
+          επιλογή "Δημιουργία Συνάρτησης".
       Course 4 Artist Vars 1_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: Χρησιμοποίησε το "Επανάλαβε" μπλοκ και πιάσε ένα γύρο όλα τα
+          μπλοκ στον χώρο εργασίας
       Course 4 Artist Vars 10_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: Χρησιμοποίησε αυτό το μπλοκ για να θέσεις τις "πλευρές" στον αριθμό
+          που πρέπει για να συμπληρωθεί το  παζλ.
       Course 4 Artist Vars 12_callout:
         set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή
           τιμή.
@@ -171,14 +171,14 @@
       Course 4 Artist Vars 3_callout:
         place_variable: "Σύρε τη μεταβλητή σου μέσα σε αυτό το μπλοκ"
       Course 4 Artist Vars 6_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη
+          γωνία σε μοίρες."
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       Course 4 Artist Vars 9_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: Χρησιμοποίησε αυτό το μπλοκ για να θέσεις τις "πλευρές" στον αριθμό
+          που πρέπει για να συμπληρωθεί το  παζλ.
       Course 4 Bee 1_callout:
         if_bee_nectar:
         - "φτιάξε μέλι"
@@ -188,11 +188,11 @@
       Course 4 Bee For Loops 1_callout:
         get_nectar: Χρησιμοποίησε το νέο "πάρε νέκταρ" μπλοκ.
       Course 4 Bee For Loops 6_callout:
-        actions_category:
-        - here now.
+        actions_category: Η εργαλειοθήκη πήρε νέα μορφή! Τα "Δράσεις" μπλοκ είναι
+          εδώ μέσα τώρα.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar:
-        - the Bee will turn to get the nectar.
+        edit_get_nectar: "Χρησιμοποίησε αυτό το πλήκτρο για να διορθώσεις τη συνάρτηση
+          και άλλαξε την κατεύθυνση της Μέλισσας να γυρίσει να πάρει το νέκταρ."
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4:
@@ -238,6 +238,28 @@
         - the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops8_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_playLab_events2_callout: []
+      courseA_playLab_events3_callout: []
+      courseA_playLab_events4_callout: []
+      courseA_playLab_events5_callout: []
+      courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_maze_seq7_callout:
+        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
+          they can't be trashed.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
       courseC_collector_prog7_callout:
@@ -318,6 +340,14 @@
         courseF_artist_for1_1:
         - for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: []
+      courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4_callout:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5_callout:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1:
         - numbers. These `math` blocks can be pulled out and moved around!
@@ -360,6 +390,13 @@
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_fwp1_callout:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp3_callout:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4_callout:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1:
         - to make it easier to find the blocks you need.
@@ -556,17 +593,16 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: Χρησιμοποιήστε το μπλοκ "Δημιουργία
+          κύκλου" και αλλάξτε το μέγεθος.
       frozen cross rotate_callout:
         replace_questions_degree: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
       frozen cross_callout:
-        repeat_blocks_1: |-
-          (1) Use this block and put it around the grey blocks in
-          the workspace
-        repeat_blocks_2:
-        - inside
+        repeat_blocks_1: "(1) Χρησιμοποίησε αυτό το μπλοκ και βάλε το γύρω από τα
+          γκρι μπλοκ στο χώρο εργασίας"
+        repeat_blocks_2: "(2) μετακίνησε το μπλοκ «Επανάλαβε» εδώ, και τοποθέτησε
+          μέσα τα γκρι μπλοκ"
       frozen diamond snowflake_callout:
         frozen_diamond_repeat: "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
       frozen diamond_callout:
@@ -576,11 +612,11 @@
           διαφορετικές χιονονιφάδες!"
       frozen line_callout:
         run: Hit "Run" to try your program!
-        move_elsa_forward:
-        - Run" block to make Elsa move forward
+        move_elsa_forward: Πιάσε το "Πήγαινε μπροστά" μπλοκ και φέρ'το κάτω από το
+          "Όταν Εκτελείται" μπλοκ για να κάνεις την Έλσα να πάει μπροστά
       frozen perpendicular_callout:
-        turn_elsa:
-        - determines how much Elsa turns
+        turn_elsa: Χρησιμοποίησε το "Γύρισε" μπλοκ για να κάνεις την Έλσα να γυρίσει.
+          Ο αριθμός στο αναδυόμενο μενού δείχνει πόσες φορές γυρίζει η Έλσα
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Χρησιμοποιήστε το μπλοκ "δημιουργία κλαδιού νιφάδας
           χιονιού"
@@ -695,8 +731,8 @@
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο
           στην συνάρτή σου
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί
+          "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1:
         - You don't have to check for honeycombs at all.
@@ -704,8 +740,8 @@
         snowflake_dropdown: "Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
           διαφορετικές χιονονιφάδες!"
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: Χρησιμοποιήστε το μπλοκ "Δημιουργία
+          κύκλου" και αλλάξτε το μέγεθος.
       grade4_frozen_nested_loop_diamonds1_callout:
         frozen_diamond_repeat: "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
       grade4_frozen_nested_loop_diamonds3_callout:
@@ -752,8 +788,8 @@
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο
           στην συνάρτή σου
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί
+          "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1:
         - code inside the function.
@@ -766,21 +802,21 @@
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο
           στην συνάρτή σου
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί
+          "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει
+          τα ερωτηματικά"
       grade5_artist_variables_pentagons12_callout:
         set_length: Χρησιμοποίησε αυτό το μπλοκ  για να θέσεις το "μήκος" στη σωστή
           τιμή.
       grade5_artist_variables_square7_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη
+          γωνία σε μοίρες."
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1:
         - to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -835,8 +871,8 @@
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: "Παίξε έναν ήχο όταν συμβαίνει αυτό το γεγονός."
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout:
-        - the up arrow is pressed?
+        Infinity_move_directions_callout: "Ποιο μπλοκ θα κάνει τον Baymax να μετακινηθεί
+          προς τα πάνω όταν πατιέται το πάνω βελάκι;"
         Infinity_move_directions_callout_arrow: "Χρησιμοποιήστε αυτά τα βελάκια για
           να το κατευθύνετε"
       Infinity_move_right_callout:
@@ -892,15 +928,16 @@
         - that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
-        function_editor_draw_square:
-        - run everytime you use the "draw a square" block
+        function_editor_draw_square: "Αυτός είναι ορισμός της συνάρτηση σου. Αυτά
+          τα μπλοκ ενεργοποιούνται κάθε φορά που χρησιμοποιείς το μπλοκ «Σχεδίασε
+          ένα τετράγωνο»"
       NEW Course 4 Artist Functions 7_callout:
         edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
       NEW Course 4 Artist Functions 8_callout:
         edit_function: "Κάνε κλικ εδώ για να επεξεργαστείς τη συνάρτησή σου."
       NEW Course 4 Artist Params 10_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Πάτα εδώ να ανοίξει το μενού "Συναρτήσεις", μετά πάτα την
+          επιλογή "Δημιουργία Συνάρτησης".
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
@@ -908,17 +945,17 @@
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Πάτα "επεξεργασία" για να προσθέσεις μία μια παράμετρο
           στην συνάρτή σου
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί
+          "Προσθήκη", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει
+          τα ερωτηματικά"
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop:
         - here
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category:
-        - here now.
+        actions_category: Η εργαλειοθήκη πήρε νέα μορφή! Τα "Δράσεις" μπλοκ είναι
+          εδώ μέσα τώρα.
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1:
@@ -933,8 +970,8 @@
       Overworld Chop Trees_callout:
         craft_callout_preplaced: "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house:
-        - you finish it?
+        craft_callout_preplaced_house: "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το
+          σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Πάτα "Εκτέλεση" για να δοκιμάσεις το πρόγραμμά σου
         craft_drag_block_callout:
@@ -1047,8 +1084,8 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward:
-        - to move forward?
+        craft_callout_moveforward: "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς
+          να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
       Underground Iron_callout:
         craft_what_is_iron: "Εξόρυξε αυτόν τον σίδηρο!"
       WebLab PS test - 1-12_callout:

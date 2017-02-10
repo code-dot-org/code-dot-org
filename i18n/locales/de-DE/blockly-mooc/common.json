@@ -60,6 +60,7 @@
   "disabledProgress1":"Jeglicher Fortschritt, den Du während dieser Woche in Deinem Kurz machst, wird nicht gespeichert aufgrund des hohen Datenaufkommens auf unserer Seite während der \"Stunde des Codes\"-Woche.",
   "disabledProgress2":"Darum werden alle Deine Punkte-Perlen ausgegraut dargestellt (keine Angst, Dein früherer Fortschritt vor dieser Woche ist noch gesichert).",
   "disabledProgress3":"Wir empfehlen Dir, stattdessen während dieser Woche \"Stunde des Codes\"-Kurse auszuprobieren.",
+  "documentation":"Documentation",
   "dontForget":"Nicht vergessen",
   "dropletBlock_addOperator_description":"Füge zwei Nummern hinzu",
   "dropletBlock_addOperator_signatureOverride":"Füge einen Operator hinzu",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"Schlüssel/Wert-Paare",
   "learnMore":"Mehr erfahren",
   "less":"Weniger",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"Du verwendest alle nötigen Bausteine, aber noch nicht auf die richtige Weise.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"Liste",
   "loading":"Wird geladen...",
   "locked":"Gesperrt",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"nach oben rechts außen",
   "positionTopRight":"nach oben rechts",
   "predictionInstructions":"Bevor du das Programm ausführst, überlege dir zuerst aufgrund des Programms, was geschehen wird.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"App-Labor",
   "projectTypeArtist":"Künstler",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"wenn",
   "whenRun":"wenn Ausführen",
   "workspaceHeaderShort":"Arbeitsbereich: ",
-  "yes":"Ja"
+  "yes":"Ja",
+  "yourProgress":"Your Progress"
 }

@@ -868,12 +868,229 @@
           **Solution:**
 
           ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
+      courseA_artist_loops10_authored_hint:
+        courseA_artist_loops10_a: Use the jump block to move forward without drawing
+          a line.
+      courseA_artist_loops11_authored_hint:
+        courseA_artist_loops11_a: There should be 2 blocks inside of your loop to
+          solve this puzzle.
+      courseA_artist_loops12_authored_hint: []
+      courseA_artist_loops2_authored_hint:
+        courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching
+          blocks to the `when run` block to see what happens.
+      courseA_artist_loops3_authored_hint:
+        courseA_artist_loops3_a: Is something not quite right?  Trace slowly through
+          the program with your finger to see where it goes wrong.
+      courseA_artist_loops4_authored_hint:
+        courseA_artist_loops4_a: If you want the loop to repeat more than 4 times,
+          you can change the number at the top of the block.
+      courseA_artist_loops5_authored_hint:
+        courseA_artist_loops5_a: Try using what you've learned about repeat blocks
+          to complete this puzzle!
+      courseA_artist_loops6_authored_hint:
+        courseA_artist_loops6_a: Can't figure out how to make the hill?  Try playing
+          with the blocks a bit to see what each one draws.
+      courseA_artist_loops7_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+      courseA_artist_loops8_authored_hint:
+        courseA_artist_loops8_a: Try running the code to see what has been written
+          for you.
+        courseA_artist_loops8_b: How would you loop the code that has been given to
+          you?
+        courseA_artist_loops8_c: "What does the code do?  \nWhat is it supposed to
+          do?  \nWhat does that tell you?"
+      courseA_artist_loops9_authored_hint:
+        courseA_artist_loops9_a: 'You don''t have to delete everything!  Some of the
+          code is good. Use it to build the rest of the stairs. '
+      courseA_collector_loops10_authored_hint:
+        courseA_collector_loops10_a: If you can't figure out where to put the loops,
+          try writing the code out step-by-step and look for a pattern.
+      courseA_collector_loops11_authored_hint:
+        courseA_collector_loops11_a: If you can't figure out where to put the loops,
+          try writing your code step-by-step and look for patterns.
+      courseA_collector_loops3_authored_hint:
+        courseA_collector_loops3: Try using a `repeat` loop to do the job!
+      courseA_collector_loops4_authored_hint:
+        courseA_collector_loops4_a: To change how far the adventurer goes, change
+          the number of times that the loop runs.
+        courseA_collector_loops4_b: Don't forget that the adventurer needs to walk
+          down and collect gold after she finishes the `repeat` loop!
+      courseA_collector_loops5_authored_hint:
+        courseA_collector_loops5_a: If you can't figure out the answer right away,
+          try using a piece of paper to figure out what arrows you will need and look
+          for a pattern.
+      courseA_collector_loops6_authored_hint:
+        courseA_collector_loops6_a: Can't figure out what's wrong? Try running the
+          code a couple of times to see what happens.
+      courseA_collector_loops7_authored_hint:
+        courseA_collector_loops7_a: If you can't figure out what comes next, try running
+          the code to see where Laurel ends up.
+      courseA_collector_loops8_authored_hint:
+        courseA_collector_loops8_a: If you are having trouble figuring this puzzle
+          out, try writing the moves down on a piece of paper and look for a pattern.
+      courseA_collector_loops9_authored_hint:
+        courseA_collector_loops9_a: Does the code feel really long?  Try putting two
+          of your `repeat` loops inside of another loop to make it much shorter!
       courseA_maze_seq1_authored_hint:
-        K2.0_sequence_pre_a:
-        - sure blocks are connected under `when run`.
+        courseA_maze_seq1_a: If you are having trouble getting the bird to move, make
+          sure blocks are clicked in under the `when run` event.
+        courseA_maze_seq1_b: The bird will need to move `W <--` three times to get
+          to the pig.
+      courseA_maze_seq10_authored_hint:
+        courseA_maze_seq10_a: If you're having trouble, try writing down the steps
+          on a piece of paper first.
+        courseA_maze_seq10_b: You will need to go three different directions to solve
+          this puzzle.
+      courseA_maze_seq11_authored_hint:
+        courseA_maze_seq11_a: Use 2 different arrow blocks to solve this puzzle!
+      courseA_maze_seq12_authored_hint:
+        courseA_maze_seq12_a: If the pig isn't moving far enough, try adding another
+          block.
+      courseA_maze_seq13_authored_hint:
+        courseA_maze_seq13_a: If the path you need is unclear, use your finger to
+          trace your way from the bird to the pig.
       courseA_maze_seq2_authored_hint:
-        K2.0_sequence_1_a:
-        - one?
+        courseA_maze_seq2_a: This program is missing one block. Can you figure out
+          which one?
+      courseA_maze_seq3_authored_hint:
+        courseA_maze_seq3_a: One of the blocks is moving the bird in the wrong direction.
+          Can you figure out which one and replace it with the correct block?
+      courseA_maze_seq4_authored_hint:
+        courseA_maze_seq4_a: If you are having trouble, try to figure out what the
+          correct path is and then remove the block that doesn't fit.
+      courseA_maze_seq5_authored_hint:
+        courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
+      courseA_maze_seq6_authored_hint:
+        courseA_maze_seq6_a: Your final code should have three movement blocks.
+      courseA_maze_seq7_authored_hint:
+        courseA_maze_seq7_a: There is 1 block that you need to add to move the bird
+          to the pig.
+        courseA_maze_seq7_b: If you can't figure out what to do, try drawing the puzzle
+          on paper and use your finger to figure out which way to move.
+      courseA_maze_seq8_authored_hint:
+        courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see
+          how the bird should move.
+      courseA_maze_seq9_authored_hint:
+        courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
+      courseA_playLab_events2_authored_hint:
+        courseA_playLab_events2_a: "Here is the block you should connect to the `when
+          run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
+      courseA_playLab_events3_authored_hint:
+        courseA_playLab_events3_a: drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
+          and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
+      courseA_playLab_events4_authored_hint:
+        courseA_playLab_events4_a: |-
+          Here is the event block that you will need to get Jorge to move right:
+
+          ![](https://images.code.org/cfc4b696b1ad5762ff40c1c8a17a194d-image-1478141370249.png)
+        courseA_playLab_events4_b: |-
+          Here is the block you should connect to the `when right` event:
+
+          ![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)
+      courseA_playLab_events5_authored_hint:
+        courseA_playLab_events5_a: "Here are the event blocks that you will need to
+          use to move Jorge up and down:\n\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\nand
+          \n![](https://images.code.org/bb2a117cef485e79119a63e5d027968e-image-1478140979742.png)"
+      courseA_playLab_events6_authored_hint:
+        courseA_playLab_events6_a: |-
+          Here is the event block that you would use to have Jorge do something when clicked:
+
+          ![](https://images.code.org/6e3a654378643fd0590307ec3a0e429c-image-1478140058859.png)
+        courseA_playLab_events6_b: |-
+          Here is the block you would use to change the background:
+
+          ![](https://images.code.org/3f6d7a642b37c3abffe7b0de062ea076-image-1478140261440.png)
+        courseA_playLab_events6_c: |-
+          Here is the block you would use to play a random sound:
+
+          ![](https://images.code.org/81a8ef4f64023039438199fef67bb56b-image-1478140125332.png)
+      courseB_artist_loops10_authored_hint: []
+      courseB_artist_loops2_authored_hint:
+        courseB_artist_loops2_a: If you want the loop to repeat more than 4 times,
+          you can change the number at the top of the block.
+      courseB_artist_loops3_authored_hint:
+        courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
+      courseB_artist_loops4_authored_hint: []
+      courseB_artist_loops5_authored_hint:
+        courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
+          inside of it. How many times do you need to repeat?
+      courseB_artist_loops6_authored_hint: []
+      courseB_artist_loops7_authored_hint:
+        courseB_artist_loops7_a: This challenge uses FOUR loops, one right after another!
+        courseB_artist_loops7_b: |-
+          Notice that every loop makes a stair pattern that travels in a different direction.
+
+          ![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)
+        courseB_artist_loops7_c: "The loops should do this:\n- Loop 1\n  - Right\n
+          \ - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n-
+          Loop 4\n  - Left\n  - Down"
+      courseB_artist_loops8_authored_hint:
+        courseB_artist_loops8_a: How many times should you repeat the pattern to make
+          the ladder?
+      courseB_artist_loops9_authored_hint: []
+      courseB_collector_loops10_authored_hint:
+        courseB_collector_loops10_a: You'll need three `repeat` loops to solve this
+          puzzle.
+      courseB_collector_loops3_authored_hint:
+        courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
+      courseB_collector_loops4_authored_hint:
+        courseB_collector_loops4_a: Is something not right? Try using the step button
+          to figure out where things go wrong.
+      courseB_collector_loops5_authored_hint:
+        courseB_collector_loops5_a: Try using more than one loop to get the job done.
+      courseB_collector_loops6_authored_hint:
+        courseB_collector_loops6_a: Can't figure out where things start going wrong?
+          Use the "Step" button to run through your program one block at a time.
+      courseB_collector_loops7_authored_hint:
+        courseB_collector_loops7_a: If you are having a hard time with the puzzle,
+          try drawing it on paper to help you figure it out.
+      courseB_collector_loops8_authored_hint:
+        courseB_collector_loops8_challenge_a: 'If you can''t figure out where to put
+          the repeat loops, program it out step-by-step and look for a pattern. '
+        courseB_collector_loops8_challenge_b: Does the code feel a little long?  You
+          can make it much shorter by moving two of your `repeat` loops inside of
+          another loop.
+      courseB_collector_loops9_authored_hint:
+        courseB_collector_loops9_a: |
+          Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
+      courseB_collector_prog3_authored_hint:
+        courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
+      courseB_maze_seq1_authored_hint: []
+      courseB_maze_seq10_authored_hint:
+        courseB_maze_seq10_a: If you're having trouble, try writing down the steps
+          on a piece of paper first.
+      courseB_maze_seq11_authored_hint:
+        courseB_maze_seq11_a: If you're having trouble, try writing down the steps
+          on a piece of paper first.
+      courseB_maze_seq2_authored_hint:
+        courseB_maze_seq2_a: This program is missing one block. Can you figure out
+          which one?
+      courseB_maze_seq3_authored_hint:
+        courseB_maze_seq3_a: One of the blocks is moving the bird in the wrong direction.
+          Can you figure out which one and replace it with the correct block?
+      courseB_maze_seq4_authored_hint:
+        courseB_maze_seq4_a: Try adding one instruction at a time until you get to
+          the pig.
+      courseB_maze_seq6_authored_hint:
+        courseB_maze_seq6_a: Your final code should have three movement blocks.
+      courseB_maze_seq7_authored_hint:
+        courseB_maze_seq7_a: There is 1 block that you need to add to move the bird
+          to the pig.
+      courseB_maze_seq8_authored_hint:
+        courseB_maze_seq8_a: If you're stuck, try adding one block at a time until
+          you solve the puzzle.
+      courseB_maze_seq9_authored_hint:
+        courseB_maze_seq9_a: If you're having trouble, try writing down the steps
+          on a piece of paper first.
+      courseB_maze_seqCold_authored_hint:
+        courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
+        courseB_maze_seqCold_b: The extra blocks need to be added before the last
+          ![](https://images.code.org/145dfc20c086bc8fc265de47f3cfe4b0-image-1467848177684.35.51
+          PM.png )
+      courseB_maze_seqOld_authored_hint:
+        courseB_maze_seqOld_a: If you're having trouble, try writing down the steps
+          on a piece of paper first.
       courseB_playlab_events2_authored_hint:
         courseB_playlab_events2_a: |-
           This is the block to have Daisy say something:
@@ -1932,6 +2149,48 @@
         courseF_artist_for7_b: Notice that this spiral turns right instead of left!
       courseF_artist_for8_authored_hint: []
       courseF_artist_for9_authored_hint: []
+      courseF_artist_fwp1_authored_hint:
+        courseF_artist_fwp1_c: Put all of the code for drawing a square inside the
+          function editor.
+        courseF_artist_fwp1_a: Remember, you need to turn 90 degrees to draw a square.
+        courseF_artist_fwp1_b: You only need to repeat as many times as the number
+          of sides in a square.
+      courseF_artist_fwp2_authored_hint:
+        courseF_artist_fwp2_a: You need to click the "edit" button to get into the
+          function.  Once you're there, add a parameter called `length` and use it
+          inside your `move forward` block!
+        courseF_artist_fwp2_b: When calling your function, use a `for loop` for the
+          best possible code!
+      courseF_artist_fwp3_authored_hint:
+        courseF_artist_fwp3_a: This gets easier if you put it all in a `for` loop.
+        courseF_artist_fwp3_b: |-
+          Be sure to turn 90 degrees between each square!
+
+          ![](https://images.code.org/97bd8eded03c5aa39740876c8e9f7ff8-image-1469224745277.gif)
+      courseF_artist_fwp4_authored_hint:
+        courseF_artist_fwp4_a: Use a `for` loop to get the code as smooth as you can.
+        courseF_artist_fwp4_b: Remember to **add** a parameter.  Don't remove the
+          one that is already there!
+      courseF_artist_fwp5_authored_hint:
+        courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
+          of sides it has.
+        courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
+      courseF_artist_fwp6_authored_hint:
+        courseF_artist_fwp6_a: It's okay to run the program a few times to figure
+          out how the function works with different parameters.
+        courseF_artist_fwp6_b: You don't need to add any `move` or `turn` blocks to
+          finish this code.
+      courseF_artist_fwp7_authored_hint:
+        courseF_artist_fwp7_a: 'Did the code get so scrambled up that it''s no longer
+          recognizable?  Try clicking the "Start over" button in the upper right-hand
+          corner. '
+        courseF_artist_fwp7_b: Your new `min` variable should go in the first slot
+          in your `for` loop, inside the function.
+      courseF_artist_fwp8_authored_hint:
+        courseF_artist_fwp8_a: If your function is correct, you shouldn't need to
+          change it for this puzzle.
+        courseF_artist_fwp8_b: The only thing you should need to do between function
+          calls is change the color of the line.
       courseF_artist_variables4_authored_hint:
         courseF_artist_variables4_a:
         - in the last puzzle, except that you will need to turn the artist to jump
@@ -2009,6 +2268,32 @@
         courseF_bee_for9_b: |-
           **Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through.
+      courseF_bee_fwp1_authored_hint:
+        courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar
+          from a flower.
+      courseF_bee_fwp2_authored_hint:
+        courseF_bee_fwp2_a: "To turn this into a function, simply drag the code into
+          the existing function block.  \n\n\n![](https://images.code.org/4d918c677ecb9f1618c1556566805b32-image-1477621874625.gif)"
+        courseF_bee_fwp2_b: Don't forget to connect the `rowOfNectar` block to `when
+          run` to call the function that you just built.
+      courseF_bee_fwp3_authored_hint:
+        courseF_bee_fwp3_a: Your function will run no matter which direction you're
+          facing.
+      courseF_bee_fwp4_authored_hint:
+        courseF_bee_fwp4_a: You will need to add a parameter and use the resulting
+          variable in your loop.
+      courseF_bee_fwp5_authored_hint:
+        courseF_bee_fwp5_a: Count the number of spaces you need to check in each stretch
+          and use those numbers as your parameters to the function call.
+      courseF_bee_fwp6_authored_hint:
+        courseF_bee_fwp6_a: Which block automatically increments a variable that you
+          could use as a parameter?
+        courseF_bee_fwp6_b: Try using a `for` loop to solve this puzzle.
+      courseF_bee_fwp7_authored_hint:
+        courseF_bee_fwp7_a: You don't need a second parameter for this function, only
+          a second `if` statement.
+      courseF_bee_fwp8_authored_hint: []
+      courseF_bee_fwp9_authored_hint: []
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a:
         - that is connected to the purple `set shout to` block.
@@ -3145,6 +3430,7 @@
 
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      InspirationalArtwork_authored_hint: []
       K2.0 sequence 1_authored_hint:
         K2.0_sequence_1_a:
         - one?

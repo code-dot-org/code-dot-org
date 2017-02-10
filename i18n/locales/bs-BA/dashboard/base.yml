@@ -2,7 +2,7 @@ bs:
   errors:
     messages:
       not_saved: 'Ispravi ove greške:'
-      too_young: 'This content has age restrictions in place and is not available for younger students.'
+      too_young: 'Ovaj sadržaj ima podešeno dobno ograničenje i nije dostupan mlađim studentima.'
       teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
       pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
@@ -29,18 +29,18 @@ bs:
   see_your_learning_plan: "See your learning plan"
   submit: Potvrdi
   unsubmit: Poništi objavu
-  previous_page: Previous page
-  next_page: Next page
+  previous_page: Prethodna stranica
+  next_page: Sljedeća stranica
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: "Poništi"
   okay: "U redu"
-  heading_x_of_y: "%{heading} (page %{x} of %{y})"
+  heading_x_of_y: "%{heading} (strana %{x} od %{y})"
   add_teacher_form:
     code:
       label: 'Dodaj učitelja:'
       placeholder: "Šifra Odjeljenja (ABCDEF)"
-      instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
+      instructions: "Molimo unesite kôd koji je sa vama podijelio vaš učitelj. To je kôd od 6 slova tipa \"ABCDEF\"."
     submit: 'Dodaj učitelja'
   add_hint_form:
     placeholder: 'Molimo unesite vaš prijedlog'
@@ -82,11 +82,11 @@ bs:
     student_count: '%{count} učenika se već prijavilo.'
     teacher_count: '%{count} nastavnika se već prijavilo.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_heading: 'Započnite bez prijavljivanja'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Pogledajte vodič za edukatore'
-    title: "Sign up for Code.org"
+    title: "Registrirajte se na Code.org"
     school_name: 'Naziv škole (nije obavezno)'
     school_address: 'Adresa škole (nije obavezno)'
     address_placeholder: 'adresa, grad, država, poštanski broj'
@@ -105,11 +105,11 @@ bs:
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
     additional_information: "Trebamo dodatne informacije kako bismo nastavili vašu prijavu."
-    user_type_label: "Account Type"
+    user_type_label: "Tip računa"
     user_type_teacher: "Učitelj"
     user_type_student: "Učenik"
     field_is_required: "je neophodno"
-    accept_terms: "You must agree to create an account"
+    accept_terms: "Morate pristati da bi napravili račun"
   signin_form:
     title: 'Već imate račun? Prijavite se'
     login: 'Email'
@@ -128,6 +128,7 @@ bs:
     login: 'Prijava'
     invalid_login: 'Invalid login, please try again'
     pair_programming: 'I have a partner at my computer'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Zaboravio/la si šifru?'
@@ -246,7 +247,7 @@ bs:
       prizes: 'Nagrade'
       logout: 'Odjava'
       signin: 'Prijava'
-      signup: 'Create an account'
+      signup: 'Napravi račun'
       already_registered: 'Jeste li već registrirani?'
       pair_programming: 'Programiranje u Paru'
       team: 'Team'
@@ -274,7 +275,7 @@ bs:
       remove: 'Jesi li siguran/na da želiš ukloniti ovog učitelja?'
     students:
       dashboard: 'Idi na upravljačku ploču učitelja'
-    user_not_found: 'The teacher could not be found.'
+    user_not_found: 'Učitelj nije pronađen.'
     student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: 'Teacher Panel'
@@ -300,9 +301,9 @@ bs:
     delete_text: "Klikanjem na tipku ispod, tvoj se račun."
     delete_text_teacher_note: 'Napomena: brisanjem tvog računa, ne brišu se računi tvojih studenata.'
     delete_confirm: 'Jeste li sigurni da želite izbrisati svoj račun?'
-    deleted_user: 'deleted user'
+    deleted_user: 'obrisan korisnik'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    no_password_because_sponsored: 'Javite se učitelju za upravljanje vašom lozinkom.'
   user_level:
     completed: 'Kompletirano'
     tried: 'Pokušano'
@@ -355,15 +356,18 @@ bs:
     announcement_learn_more_button: "Nauči više"
     announcement_try_now_button: "Probaj sad"
     announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "Pogledaj video"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: "Add your name"
+    announcement_petition_button: "Dodajte svoje ime"
     announcement_go_beyond_button: "Go beyond"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_not_entered: "Please provide current_section_code."
@@ -521,6 +525,9 @@ bs:
     support: "Potraži Pomoći"
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Netačan odgovor"
     wrong_body: "Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!"
@@ -733,6 +740,8 @@ bs:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
