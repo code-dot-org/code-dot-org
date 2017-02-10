@@ -1,4 +1,4 @@
-import api from './api';
+import * as api from './api';
 import _ from 'lodash';
 import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
