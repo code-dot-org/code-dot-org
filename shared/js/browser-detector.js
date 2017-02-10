@@ -31,7 +31,7 @@ function isUnsupportedSafari() {
 // We support Firefox 25.x +
 function isUnsupportedFirefox() {
   var isFirefox = navigator.userAgent.indexOf('Firefox') !== -1;
-  var firefoxVersion = navigator.userAgent.substr(navigator.userAgent.lastIndexOf('Firefox/') + 8, 2); 
+  var firefoxVersion = navigator.userAgent.substr(navigator.userAgent.lastIndexOf('Firefox/') + 8, 2);
   var unsupported =  isFirefox && firefoxVersion < 25;
   return unsupported;
 }
@@ -41,5 +41,17 @@ function isUnsupportedFirefox() {
 function isUnsupportedBrowser () {
   var isUnsupported = false;
   isUnsupported = isUnsupportedIE() || isUnsupportedChrome() || isUnsupportedSafari() || isUnsupportedFirefox()
-  return isUnsupported
+  return true;
+  return isUnsupported;
+}
+
+// If device is <= 640px or it says it's an iPad or iPhone, then we consider it small.
+function isSmallDevice() {
+  return $(window).width() <= 640 || navigator.userAgent.match(/iPad/i) !== null;
+}
+
+// From http://stackoverflow.com/questions/21825157/internet-explorer-11-detection/21825207#21825207
+function isIE11() {
+  var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+  return isIE11;
 }

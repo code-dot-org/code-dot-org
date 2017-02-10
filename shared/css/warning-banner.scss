@@ -1,6 +1,71 @@
 @import 'color';
 @import 'font';
 
+/* Dashboard supports up to two banners stacked on top of each other. */
+
+#warning-banner-container {
+  position: absolute;
+  z-index: 100;
+
+  #warning-banner-secondary {
+    background-color: $light_purple;
+    border-top: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+  }
+
+  .warning-banner {
+    overflow: hidden;
+    padding: 10px 20px 5px 20px;
+    font-size: 13px;
+    line-height: 16px;
+    background-color: $purple;
+    text-align: center;
+    color: white;
+    a, a:visited {
+      font-family: $gotham-extra-bold;
+      color: white;
+      text-decoration: underline;
+    }
+    a:hover {
+      background: transparent;
+    }
+
+    #message {
+      float: left;
+      width: 90%;
+    }
+
+    #hide-warning {
+      position: relative;
+    }
+
+    #hide-warning .close {
+      float: right;
+      font-size: 20px;
+    }
+
+    .left {
+      float: left;
+      width: 5%;
+    }
+
+    .right {
+      float: left;
+      width: 95%;
+    }
+  }
+
+  .close-button {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+}
+
 #warning-banner {
   padding: 10px 20px 5px 20px;
   font-size: 13px;
