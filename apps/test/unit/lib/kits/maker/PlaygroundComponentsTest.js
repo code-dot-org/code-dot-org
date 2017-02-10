@@ -9,6 +9,7 @@ import {
   initializeColorLeds,
   initializeLightSensor,
   initializeSoundSensor,
+  initializeThermometer,
   initializeTouchPads,
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
@@ -68,6 +69,16 @@ describe('initializeLightSensor()', () => {
     const board = newBoard();
     const sensor = initializeLightSensor(board);
     expect(sensor).to.be.an.instanceOf(five.Sensor);
+    // Doesn't use sysex at first
+    expect(board.io.sysexCommand.callCount).to.equal(0);
+  });
+});
+
+describe('initializeThermometer()', () => {
+  it('initializes one sensor', function () {
+    const board = newBoard();
+    const thermometer = initializeThermometer(board);
+    expect(thermometer).to.be.an.instanceOf(five.Thermometer);
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);
   });
