@@ -6,6 +6,7 @@ class AdminReportsControllerTest < ActionController::TestCase
   setup do
     # Stub used by :admin_stats.
     Properties.stubs(:get).returns(nil)
+    sign_in create(:admin)
   end
 
   generate_admin_only_tests_for :admin_progress
