@@ -32,7 +32,6 @@ var Instructions = React.createClass({
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
-    inTopPane: React.PropTypes.bool,
     onResize: React.PropTypes.func,
   },
 
@@ -54,7 +53,6 @@ var Instructions = React.createClass({
             ref="instructionsMarkdown"
             renderedMarkdown={this.props.renderedMarkdown}
             onResize={this.props.onResize}
-            inTopPane={this.props.inTopPane}
           />
         }
         { /* Note: In this case props.instructions might be undefined, but we
@@ -71,10 +69,7 @@ var Instructions = React.createClass({
           <InputOutputTable data={this.props.inputOutputTable}/>
         }
 
-        {this.props.aniGifURL && !this.props.inTopPane &&
-          <img className="aniGif example-image" src={this.props.aniGifURL}/>
-        }
-        {this.props.aniGifURL && this.props.inTopPane &&
+        {this.props.aniGifURL &&
           <AniGifPreview/>
         }
         {this.props.authoredHints}

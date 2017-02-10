@@ -24,10 +24,8 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var DialogButtons = require('./templates/DialogButtons');
-import WireframeButtons from './templates/WireframeButtons';
-import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
-import DialogInstructions from './templates/instructions/DialogInstructions';
+import AniGifModal from './templates/AniGifModal';
+var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 var assetsApi = require('./clientApi').assets;
 import * as assetPrefix from './assetManagement/assetPrefix';
 var annotationList = require('./acemode/annotationList');
@@ -38,15 +36,12 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore, registerReducers } from './redux';
-import { Provider } from 'react-redux';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
-import {
-  closeDialog as closeInstructionsDialog
-} from './redux/instructionsDialog';
+
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 
@@ -330,17 +325,6 @@ StudioApp.prototype.init = function (config) {
 
   this.configureDom(config);
 
-  ReactDOM.render(
-    <Provider store={this.reduxStore}>
-      <InstructionsDialogWrapper
-        showInstructionsDialog={(autoClose) => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-      />
-    </Provider>,
-    document.body.appendChild(document.createElement('div'))
-  );
-
   if (config.usesAssets) {
     assetPrefix.init(config);
 
@@ -431,10 +415,6 @@ StudioApp.prototype.init = function (config) {
   if (config.level.instructionsIcon) {
     this.icon = config.skin[config.level.instructionsIcon];
     this.winIcon = config.skin[config.level.instructionsIcon];
-  }
-
-  if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(() => {});
   }
 
   // In embed mode, the display scales down when the width of the
@@ -1103,107 +1083,36 @@ StudioApp.prototype.onReportComplete = function (response) {
   }
 };
 
-/**
- * Show our instructions dialog. This should never be called directly, and will
- * instead be called when the state of our redux store changes.
- * @param {object} level
- * @param {boolean} autoClose - closes instructions after 32s if true
- */
-StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
+StudioApp.prototype.showAniGifModal = function () {
   const reduxState = this.reduxStore.getState();
-  const isMarkdownMode = !!reduxState.instructions.longInstructions;
+  const {aniGifURL, stageTotal, puzzleNumber} = reduxState.pageConstants;
 
-  var instructionsDiv = document.createElement('div');
-  instructionsDiv.className = isMarkdownMode ?
-    'markdown-instructions-container' :
-    'instructions-container';
-
-  var headerElement;
-
-  var puzzleTitle = msg.puzzleTitle({
-    stage_total: level.stage_total,
-    puzzle_number: level.puzzle_number
+  const puzzleTitle = msg.puzzleTitle({
+    stage_total: stageTotal,
+    puzzle_number: puzzleNumber
   });
 
-  if (isMarkdownMode) {
-    headerElement = document.createElement('h1');
-    headerElement.className = 'markdown-level-header-text dialog-title';
-    headerElement.innerHTML = puzzleTitle;
-    if (!this.icon) {
-      headerElement.className += ' no-modal-icon';
-    }
-  }
+  const container = document.createElement('div');
 
-  // Create a div to eventually hold this content, and add it to the
-  // overall container. We don't want to render directly into the
-  // container just yet, because our React component could contain some
-  // elements that don't want to be rendered until they are in the DOM
-  var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className='instructions-content';
-  instructionsDiv.appendChild(instructionsReactContainer);
+  ReactDOM.render(
+    <AniGifModal title={puzzleTitle} aniGifURL={aniGifURL} />,
+    container
+  );
 
-  var buttons = document.createElement('div');
-  instructionsDiv.appendChild(buttons);
-  ReactDOM.render(<DialogButtons ok={true}/>, buttons);
-
-  // If there is an instructions block on the screen, we want the instructions dialog to
-  // shrink down to that instructions block when it's dismissed.
-  // We then want to flash the instructions block.
-  var hideOptions = null;
-  var endTargetSelector = "#bubble";
-
-  if ($(endTargetSelector).length) {
-    hideOptions = {};
-    hideOptions.endTarget = endTargetSelector;
-  }
-
-  var hideFn = _.bind(function () {
-    // Set focus to ace editor when instructions close:
-    if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
-      this.editor.aceEditor.focus();
-    }
-
-    // update redux
-    this.reduxStore.dispatch(closeInstructionsDialog());
-  }, this);
-
-  this.instructionsDialog = this.createModalDialog({
-    markdownMode: isMarkdownMode,
-    contentDiv: instructionsDiv,
+  const dialog = this.createModalDialog({
+    contentDiv: container,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
-    onHidden: hideFn,
-    scrollContent: true,
-    scrollableSelector: ".instructions-content",
-    header: headerElement
   });
 
-  // Now that our elements are guaranteed to be in the DOM, we can
-  // render in our react components
-  $(this.instructionsDialog.div).on('show.bs.modal', () => {
-    ReactDOM.render(
-      <Provider store={this.reduxStore}>
-        <DialogInstructions />
-      </Provider>,
-      instructionsReactContainer);
-  });
-
-  if (autoClose) {
-    setTimeout(_.bind(function () {
-      this.instructionsDialog.hide();
-    }, this), 32000);
-  }
-
-  var okayButton = buttons.querySelector('#ok-button');
+  const okayButton = container.querySelector('#ok-button');
   if (okayButton) {
-    dom.addClickTouchEvent(okayButton, _.bind(function () {
-      if (this.instructionsDialog) {
-        this.instructionsDialog.hide();
-      }
-    }, this));
+    dom.addClickTouchEvent(okayButton, () => {
+      dialog.hide();
+    });
   }
 
-  this.instructionsDialog.show({hideOptions: hideOptions});
+  dialog.show();
 };
 
 /**
@@ -2168,11 +2077,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     showToolboxHeader.style.display = 'none';
   }
 
-  // droplet may now be in code mode if it couldn't parse the code into
-  // blocks, so update the UI based on the current state (don't autofocus
-  // if we have already created an instructionsDialog at this stage of init)
-  this.onDropletToggle_(!this.instructionsDialog);
-
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
   this.editor.on('palettetoggledone', function (e) {
@@ -2261,12 +2165,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       event.preventDefault();
     }
   });
-
-  if (this.instructionsDialog) {
-    // Initializing the droplet editor in text mode (ace) can steal the focus
-    // from our visible instructions dialog. Restore focus where it belongs:
-    this.instructionsDialog.focus();
-  }
 
   if (config.afterEditorReady) {
     config.afterEditorReady();
@@ -2866,6 +2764,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
+    showAniGifModal: this.showAniGifModal.bind(this),
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,

@@ -5,6 +5,7 @@ var SET_PAGE_CONSTANTS = 'pageConstants/SET_PAGE_CONSTANTS';
 var ALLOWED_KEYS = new Set([
   'skinId',
   'showNextHint',
+  'showAniGifModal',
   'ttsInstructionsUrl',
   'ttsMarkdownInstructionsUrl',
   'assetUrl',

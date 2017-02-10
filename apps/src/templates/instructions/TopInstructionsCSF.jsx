@@ -9,7 +9,6 @@ import classNames from 'classnames';
 import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
 var instructions = require('../../redux/instructions');
-import { openDialog } from '../../redux/instructionsDialog';
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
@@ -197,7 +196,6 @@ var TopInstructions = React.createClass({
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
-    showInstructionsDialog: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -594,7 +592,6 @@ var TopInstructions = React.createClass({
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
                 aniGifURL={this.props.aniGifURL}
-                inTopPane
               />
               {instructions2 &&
                 <div
@@ -712,13 +709,6 @@ module.exports = connect(function propsFromStore(state) {
     clearFeedback(height) {
       dispatch(instructions.setFeedback(null));
     },
-    showInstructionsDialog(height) {
-      dispatch(openDialog({
-        autoClose: false,
-        aniGifOnly: false,
-        hintsOnly: true
-      }));
-    }
   };
 }, null, { withRef: true }
 )(Radium(TopInstructions));
