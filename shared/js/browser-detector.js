@@ -41,7 +41,6 @@ function isUnsupportedFirefox() {
 function isUnsupportedBrowser () {
   var isUnsupported = false;
   isUnsupported = isUnsupportedIE() || isUnsupportedChrome() || isUnsupportedSafari() || isUnsupportedFirefox()
-  return true;
   return isUnsupported;
 }
 
