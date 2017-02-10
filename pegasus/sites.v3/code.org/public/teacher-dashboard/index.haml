@@ -592,8 +592,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
   }]);
 
   if (showSectionProjects) {
-    app.controller('SectionProjectsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
-                                               function($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+    app.controller('SectionProjectsController', ['$scope', '$routeParams', 'sectionsService',
+                                               function($scope, $routeParams,  sectionsService) {
       $scope.sections = sectionsService.query();
       $scope.section = sectionsService.get({id: $routeParams.id});
       $scope.tab = 'projects';
