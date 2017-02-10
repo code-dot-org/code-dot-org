@@ -81,6 +81,7 @@
     "makerlab_enabled": "false",
     "markdown_instructions": "# Lists\r\n\r\nLet's practice adding items and printing out lists.\r\n\r\n* Add a `console.log()` command to print out the lettersList\r\n* Add the letter \"c\" to the letters list so it prints [a,b,c,d]",
     "start_blocks": "var numbersList = [40, 2, 18];\r\nconsole.log(numbersList);\r\n \r\nvar lettersList = [\"a\", \"b\", \"d\"];\r\n",
+    "hide_share_and_remix": "false",
     "contained_level_names": null
   },
   "published": true,
