@@ -756,7 +756,7 @@ export function saveAnimations(onComplete) {
  * @param {AnimationProps} animationProps
  * @return {Promise} which resolves to a redux action object
  */
-function saveAnimation(animationKey, animationProps) {
+export function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
 
