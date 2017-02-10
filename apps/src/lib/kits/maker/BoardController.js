@@ -14,6 +14,7 @@ import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
 import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 import TouchSensor from './TouchSensor';
+import Piezo from './Piezo';
 
 /** @const {string} */
 const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -87,7 +88,7 @@ export default class BoardController {
     }
 
     this.prewiredComponents = _.assign({},
-        initializeCircuitPlaygroundComponents(),
+        initializeCircuitPlaygroundComponents(this.board_),
         {board: this.board_},
         J5_CONSTANTS);
   }
@@ -103,7 +104,7 @@ export default class BoardController {
       RGB: five.Led.RGB,
       Button: five.Button,
       Switch: five.Switch,
-      Piezo: five.Piezo,
+      Piezo,
       Thermometer: five.Thermometer,
       Sensor: five.Sensor,
       Pin: five.Pin,

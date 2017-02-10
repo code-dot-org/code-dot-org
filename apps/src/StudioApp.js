@@ -2107,7 +2107,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     config.dropletConfig,
     config.level.codeFunctions,
     config.level.autocompletePaletteApisOnly,
-    this.Dialog);
+    this.Dialog,
+    config.app);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
@@ -2869,6 +2870,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,
+    isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
