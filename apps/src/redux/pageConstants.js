@@ -30,6 +30,7 @@ var ALLOWED_KEYS = new Set([
   'localeDirection',
   'hasContainedLevels',
   'isDroplet',
+  'isBlockly',
   'isMinecraft',
   'visualizationHasPadding',
   'visualizationInWorkspace',

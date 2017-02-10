@@ -138,6 +138,8 @@
     login: "ログイン"
     invalid_login: "ログインに失敗（しっぱい）しました。もう一度（いちど）入力（にゅうりょく）してください。"
     pair_programming: "このコンピューターで、パートナーがいます"
+    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
+      target='_blank'>here</a>.
   password:
     reset_form:
       title: "パスワードをお忘れですか？"
@@ -406,6 +408,23 @@
       <a href='%{video_download_url}'> このビデオ</a> をダウンロード!"
     announcement_go_beyond: Hour of Code を超えて、毎週、生徒とコンピュータサイエンスの概念を探索しましょう。Code.org
       は、すべての学年向けのカリキュラム、授業、質の高い専門的な学習プログラム、多くの素晴らしいツールを提供しています &mdash; しかも無料です :)あなたの教室でコンピューターサイエンスを教え始めるために、経験は必要ありません。<b>あなたの教室にぴったりな、次のステップを見つける。</b>
+    announcement_teacher_recruitment: Teachers like you are leading the computer science
+      education movement. You can participate in high-quality K-12th grade professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Take the lead on computer science in your school, and apply for professional
+      learning.
+    announcement_student_privacy: At Code.org, we take student privacy very seriously.
+      To protect your students’ privacy, we have made a change to your section’s login
+      page to avoid displaying full names. Even though this update should reduce privacy
+      concerns for the login page, we still encourage users to <i>not use full names
+      for students</i>.
+    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+      Your students could be featured in Code.org''s next viral video encouraging
+      students to take the AP CS Principles exam this year. We''re inviting all CS
+      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
+      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
+      will be featured in our video and the winning students will receive Code.org
+      swag!'
   move_students:
     new_section_dne: "申し訳ありませんが、セクション %{new_section_code} は存在しません。別のセクション コードを入力してください。"
     section_code_not_entered: Current_section_code を入力してください。
@@ -586,6 +605,9 @@
     support: "説明を見る"
     support_url: "//support.code.org"
     help_resources: "ヘルプとリソース"
+    help_support: Help and Support
+    documentation: Documentation
+    tutorials: Tutorials
   multi:
     wrong_title: "不正解"
     wrong_body: "不正解です。やりなおしてみてください。"
@@ -801,6 +823,8 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
+    main_course: Main Course
+    extra_course_content: Extra Course Content
   external_links:
     disclaimer: "免責事項"
     leaving_domain: "このドメインから離れ、Code.org が運営していないサイトに移動します。"

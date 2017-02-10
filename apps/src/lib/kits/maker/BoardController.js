@@ -88,7 +88,7 @@ export default class BoardController {
     }
 
     this.prewiredComponents = _.assign({},
-        initializeCircuitPlaygroundComponents(),
+        initializeCircuitPlaygroundComponents(this.board_),
         {board: this.board_},
         J5_CONSTANTS);
   }

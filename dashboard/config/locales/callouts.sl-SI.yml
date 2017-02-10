@@ -133,16 +133,16 @@
         repeat_full_circle:
         - make a full circle
       Course 4 Artist 7_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: Uporabi blok "Ponovi" in spravi vanj vse bloke, ki jih imaš
+          v svojem delovnem prostoru
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: Drag your counter variable inside this block
       Course 4 Artist Functions 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
+          "ustvari funkcijo".
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint:
-        - fix it in the next puzzle.
+        house_hint: "Čeprav risba še ni podobna hiši, smo z njo zadovoljni. V naslednji
+          nalogi bo še bolj podobna hiši."
       Course 4 Artist Functions 8_callout:
         edit_function: Click here to edit your function.
       Course 4 Artist Functions challenge_callout:
@@ -153,14 +153,13 @@
         length_parameter: Znaš popraviti to funkcijo tako, da bo uporabljala parameter
           "dolžina"?
       Course 4 Artist Params 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
+          "ustvari funkcijo".
       Course 4 Artist Vars 1_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: Uporabi blok "Ponovi" in spravi vanj vse bloke, ki jih imaš
+          v svojem delovnem prostoru
       Course 4 Artist Vars 10_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: Uporabi ta blok za število "stranic", potrebnih za rešitev naloge.
       Course 4 Artist Vars 12_callout:
         set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.
       Course 4 Artist Vars 13_callout: []
@@ -169,14 +168,13 @@
       Course 4 Artist Vars 3_callout:
         place_variable: Drag your variable inside this block
       Course 4 Artist Vars 6_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "Če deliš 360 s številom stranic, je rezultat število stopinj
+          za posamezen kot (obrat)."
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       Course 4 Artist Vars 9_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: Uporabi ta blok za število "stranic", potrebnih za rešitev naloge.
       Course 4 Bee 1_callout:
         if_bee_nectar:
         - naredi med
@@ -186,11 +184,11 @@
       Course 4 Bee For Loops 1_callout:
         get_nectar: Uporabi nov blok "vzami nektar".
       Course 4 Bee For Loops 6_callout:
-        actions_category:
-        - here now.
+        actions_category: 'V galeriji pripomočkov je nekaj novega! Dodali smo bloke
+          za "dejanja" (ang.: "Actions").'
       Course 4 Bee Params 2_callout:
-        edit_get_nectar:
-        - the Bee will turn to get the nectar.
+        edit_get_nectar: "Če želiš spremeniti smer Čebelice zato,  da bo našla nektar,
+          potem uporabi ta gumb za urejanje funkcije."
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4:
@@ -235,6 +233,28 @@
         - the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops8_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_playLab_events2_callout: []
+      courseA_playLab_events3_callout: []
+      courseA_playLab_events4_callout: []
+      courseA_playLab_events5_callout: []
+      courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_maze_seq7_callout:
+        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
+          they can't be trashed.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
       courseC_collector_prog7_callout:
@@ -315,6 +335,14 @@
         courseF_artist_for1_1:
         - for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: []
+      courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4_callout:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5_callout:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1:
         - numbers. These `math` blocks can be pulled out and moved around!
@@ -357,6 +385,13 @@
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_fwp1_callout:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp3_callout:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4_callout:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1:
         - to make it easier to find the blocks you need.
@@ -553,8 +588,8 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: Uporabi blok "ustvari krog"
+          in mu spremeni velikost.
       frozen cross rotate_callout:
         replace_questions_degree: Namesto "???" vnesi številko iz spustnega menuja
       frozen cross_callout:
@@ -571,11 +606,11 @@
         snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
       frozen line_callout:
         run: Hit "Run" to try your program!
-        move_elsa_forward:
-        - Run" block to make Elsa move forward
+        move_elsa_forward: Pod blok "Ko zaženeš" povleci blok "premakni naprej", da
+          boš premaknil/a Elso
       frozen perpendicular_callout:
-        turn_elsa:
-        - determines how much Elsa turns
+        turn_elsa: Uporabi blok "obrni se", da boš obrnil/a Elso. S številko povej
+          še za koliko stopinj naj se obrne
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Uporabi blok "ustvari snežinkino vejo"
       frozen square iterative_callout:
@@ -693,8 +728,8 @@
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: Uporabi blok "ustvari krog"
+          in mu spremeni velikost.
       grade4_frozen_nested_loop_diamonds1_callout:
         frozen_diamond_repeat: Uporabi blok "ponovi", da boš ustvaril/a tako obliko.
       grade4_frozen_nested_loop_diamonds3_callout:
@@ -761,8 +796,8 @@
       grade5_artist_variables_pentagons12_callout:
         set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.
       grade5_artist_variables_square7_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "Če deliš 360 s številom stranic, je rezultat število stopinj
+          za posamezen kot (obrat)."
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1:
         - to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -878,8 +913,8 @@
       NEW Course 4 Artist Functions 8_callout:
         edit_function: Click here to edit your function.
       NEW Course 4 Artist Params 10_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
+          "ustvari funkcijo".
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
@@ -895,8 +930,8 @@
         bee_for_loop:
         - here
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category:
-        - here now.
+        actions_category: 'V galeriji pripomočkov je nekaj novega! Dodali smo bloke
+          za "dejanja" (ang.: "Actions").'
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1:

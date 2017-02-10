@@ -462,6 +462,9 @@ en:
         description here: description here
         title: title
       Building a UI with Design Mode: {}
+      CSD - Event Types: {}
+      CSD - Functions Review: {}
+      CSD - Getters and Setters: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD Creating Debugging Strat: {}
@@ -469,6 +472,7 @@ en:
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
       CSD Recipe Stop: {}
+      'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
         Challenge 1: Challenge 1
         description here: description here
@@ -576,6 +580,7 @@ en:
       CSD U4L22 SFLP: {}
       CSD U4L23 SFLP: {}
       CSD U4L24 SFLP: {}
+      CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U1-SFLP Exploring Problem Solving: {}
@@ -591,6 +596,14 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      'CSD: Accessing List Items': {}
+      'CSD: Creating Variables In App Lab': {}
+      'CSD: Dropdown & Conditionals': {}
+      'CSD: List Length': {}
+      'CSD: Lists': {}
+      'CSD: Review Events': {}
+      'CSD: colorLed list': {}
+      'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Pick Elements Styled: {}
       CSDU2 - Rating Quality Websites: {}
@@ -606,6 +619,8 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 SFLP:
+        CSDU6 SFLP: CSDU6 SFLP
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -892,6 +907,8 @@ en:
       'Chirpr: @lillizard': {}
       'Chirpr: @solmoon': {}
       Choosing Good IDs: {}
+      'Circuit Playground Map: Buzzer': {}
+      'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
@@ -916,6 +933,9 @@ en:
         description here: description here
         title: title
       Correlation vs Causation: {}
+      Cups and Beans Activity:
+        description here: description here
+        title: title
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
       Debugging Variables: {}
@@ -1732,6 +1752,9 @@ en:
       Prepare for your presentation:
         description here: description here
         title: title
+      Public Key Crypto Widget Instructions:
+        description here: description here
+        title: title
       Rating Websites: {}
       Recipe Page Example: {}
       Responding to User Input: {}
@@ -1760,6 +1783,7 @@ en:
       'Stop: Classes': {}
       'Stop: Common Styles Warm Up': {}
       'Stop: External Style Sheets': {}
+      'Stop: Getters and Setters': {}
       'Stop: Hobbies Page': {}
       'Stop: Images': {}
       'Stop: Intro to CSS': {}
@@ -2453,6 +2477,28 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      courseA_external_dojo:
+        Coder Dojo Video: Coder Dojo Video
+        Learn about persistence and frustration: Learn about persistence and frustration
+      courseA_external_stevie1:
+        Stevie and the Marbles Title Page: Stevie and the Marbles Title Page
+      courseA_external_stevie10: {}
+      courseA_external_stevie11: {}
+      courseA_external_stevie12: {}
+      courseA_external_stevie12a: {}
+      courseA_external_stevie13: {}
+      courseA_external_stevie14: {}
+      courseA_external_stevie15: {}
+      courseA_external_stevie16: {}
+      courseA_external_stevie2:
+        Page 1: Page 1
+      courseA_external_stevie3: {}
+      courseA_external_stevie4: {}
+      courseA_external_stevie5: {}
+      courseA_external_stevie6: {}
+      courseA_external_stevie7: {}
+      courseA_external_stevie8: {}
+      courseA_external_stevie9: {}
       courseB_external_MRF:
         description here: description here
         title: title
@@ -4512,6 +4558,13 @@ en:
         Contact Us: Contact Us
         Use It: Use It
         Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
+      CSDU6 LED predict multi:
+        Alternate between on and off each click: Alternate between on and off each click
+        Blink on and off randomly: Blink on and off randomly
+        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        Never turn on: Never turn on
+        Turn on and stay on: Turn on and stay on
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -7203,10 +7256,10 @@ en:
         '5': '5'
         '6': '6'
       cspu5_assess3_array3:
-        <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">: <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">
         <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
         <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
         <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+        <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">: <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
         <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">: <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
       cspu5_assess3_array4:
         '0': '0'
@@ -7959,6 +8012,7 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
+      CSD U3 Counters explaining counters contained: {}
       'CSP U4L04 Assessment 2 ':
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here
