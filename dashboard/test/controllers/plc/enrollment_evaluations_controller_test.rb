@@ -36,7 +36,11 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   end
 
   test "submit evaluation enrolls user in appropriate modules" do
-    post :confirm_assignments, script_id: @course_unit.script.name, content_module: @module_content_1, practice_module: @module_practice_1
+    post :confirm_assignments, params: {
+      script_id: @course_unit.script.name,
+      content_module: @module_content_1,
+      practice_module: @module_practice_1
+    }
     assert_redirected_to script_path(@course_unit.script)
     assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
   end

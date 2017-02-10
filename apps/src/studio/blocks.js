@@ -18,6 +18,9 @@ import {
   Direction,
   Emotions,
   Position,
+  BEHAVIOR_CHASE,
+  BEHAVIOR_FLEE,
+  BEHAVIOR_WANDER,
   CLICK_VALUE,
   EMPTY_QUOTES,
   HIDDEN_VALUE,
@@ -126,8 +129,8 @@ function spriteNumberTextArray(stringGenerator) {
  * @param block
  * @returns {string}
  */
-function getSpriteIndex(block) {
-  var index = Blockly.JavaScript.valueToCode(block, 'SPRITE',
+function getSpriteIndex(block, inputName = 'SPRITE') {
+  var index = Blockly.JavaScript.valueToCode(block, inputName,
       Blockly.JavaScript.ORDER_NONE) || '1';
   return index + '-1';
 }
@@ -1840,6 +1843,53 @@ exports.install = function (blockly, blockInstallOptions) {
       ctx: this,
       name: 'setSpritesSpeed',
       extraParams: speed,
+    });
+  };
+
+  blockly.Blocks.studio_setSpriteBehavior = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(msg.setActor());
+      this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      let hasTargetInput = true;
+      const behaviorValues = [
+        [msg.setSpriteChase(), BEHAVIOR_CHASE],
+        [msg.setSpriteFlee(), BEHAVIOR_FLEE],
+        [msg.toWander(), BEHAVIOR_WANDER],
+      ].map(kv => [kv[0], `"${kv[1]}"`]);
+      const behaviorDropdown = new blockly.FieldDropdown(behaviorValues, value => {
+        // Strip the quotes before comparing
+        value = value.substring(1, value.length - 1);
+
+        if (hasTargetInput && value === BEHAVIOR_WANDER) {
+          this.removeInput('TARGETSPRITE');
+          hasTargetInput = false;
+        } else if (!hasTargetInput &&
+            (value === BEHAVIOR_CHASE || value === BEHAVIOR_FLEE)) {
+          this.appendValueInput('TARGETSPRITE')
+              .setCheck(blockly.BlockValueType.NUMBER);
+          hasTargetInput = true;
+        }
+      }, true);
+      this.appendDummyInput()
+          .appendTitle(behaviorDropdown, 'VALUE');
+      this.appendValueInput('TARGETSPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER);
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpriteBehaviorTooltip());
+    }
+  };
+
+  generator.studio_setSpriteBehavior = function () {
+    return generateSetterCode({
+      ctx: this,
+      name: 'setSpriteBehavior',
+      extraParams: getSpriteIndex(this) + ', ' + getSpriteIndex(this, 'TARGETSPRITE'),
     });
   };
 

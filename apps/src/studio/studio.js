@@ -3072,8 +3072,10 @@ Studio.onPuzzleComplete = function () {
 
   if (studioApp.hasContainedLevels && !level.edit_blocks) {
     postContainedLevelAttempt(studioApp);
-    runAfterPostContainedLevel(
-        () => Studio.onReportComplete(getContainedLevelResultInfo().feedback));
+    runAfterPostContainedLevel(() => {
+      Studio.message = getContainedLevelResultInfo().feedback;
+      Studio.onReportComplete();
+    });
     return;
   }
 
@@ -3111,8 +3113,8 @@ Studio.onPuzzleComplete = function () {
     sendReport();
   } else {
     document.getElementById('svgStudio').toDataURL("image/jpeg", {
-      callback: function (pngDataUrl) {
-        Studio.feedbackImage = pngDataUrl;
+      callback: function (imageDataUrl) {
+        Studio.feedbackImage = imageDataUrl;
         Studio.encodedFeedbackImage = encodeURIComponent(Studio.feedbackImage.split(',')[1]);
 
         sendReport();
@@ -3921,6 +3923,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.getSpriteXY(cmd.opts);
       break;
+    case 'setSpriteBehavior':
+      studioApp.highlight(cmd.id);
+      Studio.setSpriteBehavior(cmd.opts);
+      break;
     case 'setSpritesWander':
       studioApp.highlight(cmd.id);
       Studio.setSpritesWander(cmd.opts);
@@ -4153,7 +4159,7 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     dir: Direction.NONE,
     speed: Studio.itemSpeed[itemClass],
     normalSpeed: classProperties.speed,
-    activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
+    activity: utils.valueOr(Studio.itemActivity[itemClass], constants.BEHAVIOR_WANDER),
     isHazard: classProperties.isHazard,
     spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
@@ -4274,8 +4280,10 @@ Studio.setItemActivity = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.className);
   }
 
-  if (opts.type === "roam" || opts.type === "chase" ||
-      opts.type === "flee" || opts.type === "none") {
+  if (opts.type === constants.BEHAVIOR_WANDER ||
+      opts.type === constants.BEHAVIOR_CHASE ||
+      opts.type === constants.BEHAVIOR_FLEE ||
+      opts.type === constants.BEHAVIOR_STOP) {
     // retain this activity type for items of this class created in the future:
     Studio.itemActivity[itemClass] = opts.type;
     Studio.items.forEach(function (item) {
@@ -5169,6 +5177,7 @@ var createSpeechBubble = function (spriteIndex, text) {
 Studio.stop = function (opts) {
   cancelQueuedMovements(opts.spriteIndex, true);
   cancelQueuedMovements(opts.spriteIndex, false);
+  Studio.sprite[opts.spriteIndex].activity = constants.BEHAVIOR_STOP;
 
   if (!opts.dontResetCollisions) {
     // Reset collisionMasks so the next movement will fire another collision
@@ -5436,24 +5445,29 @@ function getSpritesByName(name) {
       sprite => sprite.imageName === name && sprite.visible);
 }
 
+Studio.setSpriteBehavior = function (opts) {
+  Studio.sprite[opts.spriteIndex].setActivity(opts.behavior,
+      opts.targetSpriteIndex);
+};
+
 Studio.setSpritesWander = function (opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity('roam'));
+      sprite.setActivity(constants.BEHAVIOR_WANDER));
 };
 
 Studio.setSpritesStop = function (opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity('none'));
+      sprite.setActivity(constants.BEHAVIOR_STOP));
 };
 
 Studio.setSpritesChase = function (opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity('chase', opts.targetSpriteIndex));
+      sprite.setActivity(constants.BEHAVIOR_CHASE, opts.targetSpriteIndex));
 };
 
 Studio.setSpritesFlee = function (opts) {
   getSpritesByName(opts.spriteName).forEach(sprite =>
-      sprite.setActivity('flee', opts.targetSpriteIndex));
+      sprite.setActivity(constants.BEHAVIOR_FLEE, opts.targetSpriteIndex));
 };
 
 Studio.setSpritesSpeed = function (opts) {

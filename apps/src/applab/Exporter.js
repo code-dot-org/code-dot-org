@@ -276,17 +276,24 @@ export default {
         ([commonLocale], [applabLocale], [applabApi], [applabCSS], ...rest) => {
           zip.file(appName + "/applab/applab-api.js",
                    [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
-          zip.file(appName + "/applab/applab.css", applabCSS);
           rest.forEach(([data], index) => {
             zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});
           });
 
+          // Extract urls from applab.css that point to other assets we need to download
           const cssAssetsToDownload = (applabCSS.match(/url\(['"]?\/[^)]+['"]?\)/ig) || [])
             .map(
               urlRef => {
                 const matches = urlRef.match(/url\(['"]?(\/[^'")]+)['"]?\)/i);
                 if (matches) {
-                  return matches[1];
+                  const [cssURLRule, url] = matches;
+                  while (applabCSS.indexOf(cssURLRule) >= 0) {
+                    applabCSS = applabCSS.replace(
+                      cssURLRule,
+                      `url("assets${url}")`
+                    );
+                  }
+                  return url;
                 }
               }
             )
@@ -298,6 +305,8 @@ export default {
                 zipPath: appName + '/applab/assets' + url,
               })
             );
+
+          zip.file(appName + "/applab/applab.css", applabCSS);
 
           $.when(
             ...cssAssetsToDownload.map(

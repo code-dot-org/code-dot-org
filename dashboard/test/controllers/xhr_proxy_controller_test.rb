@@ -13,7 +13,7 @@ class XhrProxyControllerTest < ActionController::TestCase
 
   test "should fetch proxied media with correct content type" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: XHR_URI, c: CHANNEL_ID
+    get :get, params: {u: XHR_URI, c: CHANNEL_ID}
     assert_response :success
     assert_equal XHR_CONTENT_TYPE, response.content_type
     cache_control = response['Cache-Control']
@@ -27,7 +27,7 @@ class XhrProxyControllerTest < ActionController::TestCase
   test "should handle query parameters" do
     url = 'https://www.googleapis.com/freebase/v1/search?query=ada&filter=(any%20type:/people/person%20type:/location/citytown)'
     stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: url, c: CHANNEL_ID
+    get :get, params: {u: url, c: CHANNEL_ID}
     assert_response :success
     assert_equal XHR_DATA, response.body
   end
@@ -36,7 +36,7 @@ class XhrProxyControllerTest < ActionController::TestCase
     CDO.stubs(:newrelic_logging).returns(true) do
       stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
       assert NewRelic::Agent.events.empty?, 'no custom events initially recorded'
-      get :get, u: XHR_URI, c: CHANNEL_ID
+      get :get, params: {u: XHR_URI, c: CHANNEL_ID}
       assert_response :success
       assert NewRelic::Agent.events.length == 1, 'one custom event recorded'
       assert NewRelic::Agent.events[0].first == 'XhrProxyControllerRequest', 'XhrProxyControllerRequest event recorded'
@@ -45,10 +45,12 @@ class XhrProxyControllerTest < ActionController::TestCase
 
   test "should fetch proxied data request with redirects" do
     stub_request(:get, XHR_REDIRECT_URI).to_return(
-      body: 'Redirect', status: 302, headers: {location: XHR_URI})
+      body: 'Redirect', status: 302, headers: {location: XHR_URI}
+    )
     stub_request(:get, XHR_URI).to_return(
-      body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: XHR_REDIRECT_URI, c: CHANNEL_ID
+      body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE}
+    )
+    get :get, params: {u: XHR_REDIRECT_URI, c: CHANNEL_ID}
     assert_response :success
     assert_equal XHR_DATA, response.body
   end
@@ -56,7 +58,7 @@ class XhrProxyControllerTest < ActionController::TestCase
   test "should fail if invalid URL" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
     bad_uri = '/foo'
-    get :get, u: bad_uri, c: CHANNEL_ID
+    get :get, params: {u: bad_uri, c: CHANNEL_ID}
     assert_response 400
   end
 
@@ -68,27 +70,28 @@ class XhrProxyControllerTest < ActionController::TestCase
       response,
       response,
       response,
-      response)
-    get :get, u: XHR_URI, c: CHANNEL_ID
+      response
+    )
+    get :get, params: {u: XHR_URI, c: CHANNEL_ID}
     assert_response 500
   end
 
   test "should fail on unauthorized content types" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: 'text/html'})
-    get :get, u: XHR_URI, c: CHANNEL_ID
+    get :get, params: {u: XHR_URI, c: CHANNEL_ID}
     assert_response 400
   end
 
   test "should succeed on text/plain content type" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: 'text/plain'})
-    get :get, u: XHR_URI, c: CHANNEL_ID
+    get :get, params: {u: XHR_URI, c: CHANNEL_ID}
     assert_response 200
   end
 
   test "should fail with ec2.internal hostname suffix" do
     url = 'https://ip-192.168.0.1.ec2.internal/my/secret/api'
     stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: url, c: CHANNEL_ID
+    get :get, params: {u: url, c: CHANNEL_ID}
     assert_response 400
   end
 
@@ -96,32 +99,32 @@ class XhrProxyControllerTest < ActionController::TestCase
   test "should fail with wikipediaXorg hostname suffix" do
     url = 'https://www.wikipediaXorg/foo?a=1&b=2'
     stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: url, c: CHANNEL_ID
+    get :get, params: {u: url, c: CHANNEL_ID}
     assert_response 400
   end
 
   test "should fail with wikipedia.org.evil hostname suffix" do
     url = 'https://www.wikipedia.org.evil/foo?a=1&b=2'
     stub_request(:get, url).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: url, c: CHANNEL_ID
+    get :get, params: {u: url, c: CHANNEL_ID}
     assert_response 400
   end
 
   test "should pass through server errors" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE}, status: 503)
-    get :get, u: XHR_URI, c: CHANNEL_ID
+    get :get, params: {u: XHR_URI, c: CHANNEL_ID}
     assert_response 503
   end
 
   test "should fail with bad channel id" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: XHR_URI, c: '12345'
+    get :get, params: {u: XHR_URI, c: '12345'}
     assert_response 403
   end
 
   test "should fail with missing channel id" do
     stub_request(:get, XHR_URI).to_return(body: XHR_DATA, headers: {content_type: XHR_CONTENT_TYPE})
-    get :get, u: XHR_URI
+    get :get, params: {u: XHR_URI}
     assert_response 403
   end
 end

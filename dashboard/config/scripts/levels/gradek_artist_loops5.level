@@ -31,12 +31,12 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.\",\r\n  \"hint_id\": \"gradek_artist_loops5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.\",\"hint_id\":\"gradek_artist_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f830f86737c6bf500e401a085e644bec/gradek_artist_loops5.mp3\"}]",
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nLet's put a nice hill in the back.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/bbbd114642d829029fc3b0566a4437e3-image-1477107329933.gif\" width=\"300\"/>\r\n",
     "ideal": "3",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "images": "[\r\n  {\"filename\": \"https://images.code.org/6a9171979a8e734e6c4fbb7e5205fec0-image-1477106973527.png\", \"position\": [0, 0]}\r\n]\r\n\r\n"
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/6a9171979a8e734e6c4fbb7e5205fec0-image-1477106973527.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

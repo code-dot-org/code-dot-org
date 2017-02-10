@@ -1,0 +1,42 @@
+import React, { PropTypes } from 'react';
+import ProgressLevelSet from './ProgressLevelSet';
+import { levelType } from './progressTypes';
+import { progressionsFromLevels } from '@cdo/apps/code-studio/progressRedux';
+
+const styles = {
+  summary: {
+    marginTop: 20,
+    marginBottom: 30,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+  }
+};
+
+const ProgressLessonContent = React.createClass({
+  propTypes: {
+    description: PropTypes.string,
+    levels: PropTypes.arrayOf(levelType).isRequired
+  },
+
+  render() {
+    const { description, levels } = this.props;
+    const progressions = progressionsFromLevels(levels);
+    return (
+      <div>
+        <div style={styles.summary}>
+          {description}
+        </div>
+        {progressions.map((progression, index) => (
+          <ProgressLevelSet
+            key={index}
+            start={progression.start + 1}
+            name={progression.name}
+            levels={progression.levels}
+          />
+        ))}
+      </div>
+    );
+  }
+});
+
+export default ProgressLessonContent;

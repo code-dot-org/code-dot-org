@@ -4,7 +4,7 @@
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 var LETTERS = ALPHABET.split('');
 
-function vigenereLetter (x, y) {
+function vigenereLetter(x, y) {
   return LETTERS[(x+y) % LETTERS.length];
 }
 
@@ -69,7 +69,7 @@ $(document).ready(function () {
     }
 
     finishedButton.prop("disabled", true);
-    dashboard.dialog.processResults(function (willRedirect) {
+    dashboard.widget.processResults(function (willRedirect) {
       if (!willRedirect) {
         finishedButton.prop("disabled", false);
       }
@@ -77,7 +77,7 @@ $(document).ready(function () {
   });
 });
 
-function renderVigenereTable () {
+function renderVigenereTable() {
   var table = $("<table>");
   var tbody = $("<tbody>");
 
@@ -107,12 +107,12 @@ function renderVigenereTable () {
   vigenere_table.html(table);
 }
 
-function clearVigenereTableHighlights (row, col) {
+function clearVigenereTableHighlights(row, col) {
   var tbody = vigenere_table.find('tbody');
   tbody.find(".highlight").removeClass();
 }
 
-function highlightVigenereTable (row, col) {
+function highlightVigenereTable(row, col) {
 
   clearVigenereTableHighlights();
 
@@ -136,14 +136,14 @@ function highlightVigenereTable (row, col) {
   }
 }
 
-function highlightCharacter (id, originalText, indexToHighlight) {
+function highlightCharacter(id, originalText, indexToHighlight) {
   var newStr = originalText.substring(0, indexToHighlight);
   newStr += "<mark>" + originalText.charAt(indexToHighlight) + "</mark>";
   newStr += originalText.substring(indexToHighlight + 1, originalText.length);
   $(id).html(newStr);
 }
 
-function decryptNextCharacter (skipAnimation) {
+function decryptNextCharacter(skipAnimation) {
 
   skipAnimation = skipAnimation || false;
 
@@ -182,7 +182,7 @@ function decryptNextCharacter (skipAnimation) {
   return true;
 }
 
-function encryptNextCharacter (skipAnimation) {
+function encryptNextCharacter(skipAnimation) {
 
   skipAnimation = skipAnimation || false;
 
@@ -217,22 +217,22 @@ function encryptNextCharacter (skipAnimation) {
   return true;
 }
 
-function clean (text) {
+function clean(text) {
   return text.toUpperCase()
     .replace(/ /g, "_")
     .replace(/[^A-Z_]/g, "");
 }
 
-function cleanBlock (block) {
+function cleanBlock(block) {
   var text = $(block).html();
   $(block).html(clean(text));
 }
-function cleanInput (input) {
+function cleanInput(input) {
   var text = $(input).val();
   $(input).val(clean(text));
 }
 
-function encodeFullText () {
+function encodeFullText() {
   setup();
   if (IS_ENCRYPTING === true) {
     while (encryptNextCharacter(true)) {}
@@ -241,7 +241,7 @@ function encodeFullText () {
   }
 }
 
-function encodeNextCharacter (){
+function encodeNextCharacter() {
   if (IS_ENCRYPTING === true) {
     encryptNextCharacter();
   } else {
@@ -249,16 +249,16 @@ function encodeNextCharacter (){
   }
 }
 
-function setTimerFromSlider () {
+function setTimerFromSlider() {
   setTimer(1000 - $("#speedSlider").slider("value"));
 }
 
-function clearTimer () {
+function clearTimer() {
   clearInterval(timerId);
   timerId = undefined;
 }
 
-function setTimer (ms) {
+function setTimer(ms) {
   //if changing delay want to clear old timer anyway
   // or old one will continue to be called in separate
   // thread
@@ -273,25 +273,25 @@ function setTimer (ms) {
   }
 }
 
-function pause () {
+function pause() {
   clearTimer();
   paused = true;
   pause_button.button('toggle');
 }
 
-function play () {
+function play() {
   setTimerFromSlider();
   paused = false;
   play_button.button('toggle');
 }
 
-function restart () {
+function restart() {
   setup();
   pause();
 }
 
 
-function setup () {
+function setup() {
   outputMessage = "";
   keyIndex = 0;
 
@@ -312,4 +312,3 @@ function setup () {
 
   clearVigenereTableHighlights();
 }
-

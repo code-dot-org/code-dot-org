@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,4],[0,1,1,1,0,1,1,0],[0,1,1,1,1,1,1,0],[0,1,3,1,1,2,1,0],[0,4,1,1,1,1,1,0],[0,1,1,0,1,1,4,0],[0,0,0,0,0,0,0,0],[0,0,4,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Play with these blocks to see if you can get me to the pig!",
+    "instructions": "Get the bird to the bad pig!",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
@@ -25,10 +25,12 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.\",\r\n  \"hint_id\": \"K2.0_sequence_pre_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are having trouble getting the bird to move, make sure blocks are clicked in under the `when run` event.\",\"hint_id\":\"courseA_maze_seq1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e2347d9cd98a4a8c4c1ab02ca0ba8ba1/courseA_maze_seq1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The bird will need to move `W <--` three times to get to the pig.\",\"hint_id\":\"courseA_maze_seq1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f7c2b7e13b34d7b347e89cbd83ea2f9d/courseA_maze_seq1.mp3\"}]",
     "instructions_important": "false",
-    "maze_data": null
+    "markdown_instructions": "*\"Play with these blocks and try to get me to the bad pig!\"*",
+    "tts_instructions_override": "Get the bird to the bad pig!",
+    "tts_markdown_instructions_override": "Play with these blocks and try to get me to the bad pig!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This should be an angry birds style \"freeplay\"",

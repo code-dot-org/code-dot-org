@@ -64,15 +64,24 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     end
   end
 
+  def test_is_teachercon
+    # Match substring, with or without "(travel expenses paid)"
+    assert @processor.teachercon? 'July 16 - 21, 2017: Phoenix'
+    assert @processor.teachercon? 'June 18 - 23, 2017: Houston (travel expenses paid)'
+    refute @processor.teachercon? 'not teachercon'
+  end
+
   def test_process_decisions_row_accept_teachercon
     teachercon_name = 'June 18 - 23, 2017: Houston'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, teachercon_name)
 
-    result = @processor.process_decision_row({
-      'Application ID' => 1,
-      'Decision' => 'Accept',
-      'Workshop' => teachercon_name
-    })
+    result = @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        'Decision' => 'Accept',
+        'Workshop' => teachercon_name
+      }
+    )
 
     expected = {
       name: 'Tracy Teacher',
@@ -90,19 +99,23 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     partner_workshop = 'Code Partner: June 1 - 5, 2017'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, partner_workshop)
 
-    @processor.expects(:lookup_workshop).with(partner_workshop).returns({
-      id: 1234,
-      partner_name: 'Code Partner',
-      dates: 'June 1-5, 2017',
-      partner_contact: 'Mr. Contact',
-      partner_email: 'partner.contact@example.net'
-    })
+    @processor.expects(:lookup_workshop).with(partner_workshop).returns(
+      {
+        id: 1234,
+        partner_name: 'Code Partner',
+        dates: 'June 1-5, 2017',
+        partner_contact: 'Mr. Contact',
+        partner_email: 'partner.contact@example.net'
+      }
+    )
 
-    result = @processor.process_decision_row({
-      'Application ID' => 1,
-      'Decision' => 'Accept',
-      'Workshop' => partner_workshop
-    })
+    result = @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        'Decision' => 'Accept',
+        'Workshop' => partner_workshop
+      }
+    )
 
     expected = {
       name: 'Tracy Teacher',
@@ -121,22 +134,26 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
 
   def test_process_decisions_row_accept_nonexistent_workshop
     e = assert_raises RuntimeError do
-      @processor.process_decision_row({
-        'Application ID' => 1,
-        'Decision' => 'Accept',
-        'Workshop' => 'nonexistent'
-      })
+      @processor.process_decision_row(
+        {
+          'Application ID' => 1,
+          'Decision' => 'Accept',
+          'Workshop' => 'nonexistent'
+        }
+      )
     end
 
     assert_equal 'Unexpected workshop: nonexistent', e.message
   end
 
   def test_process_decisions_row_decline
-    result = @processor.process_decision_row({
-      'Application ID' => 1,
-      'Decision' => 'Decline',
-      'Workshop' => "doesn't matter"
-    })
+    result = @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        'Decision' => 'Decline',
+        'Workshop' => "doesn't matter"
+      }
+    )
 
     expected = {
       name: 'Tracy Teacher',
@@ -149,11 +166,13 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   end
 
   def test_process_decisions_row_waitlist
-    result = @processor.process_decision_row({
-      'Application ID' => 1,
-      'Decision' => 'Waitlist',
-      'Workshop' => "doesn't matter"
-    })
+    result = @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        'Decision' => 'Waitlist',
+        'Workshop' => "doesn't matter"
+      }
+    )
 
     expected = {
       name: 'Tracy Teacher',
@@ -168,15 +187,17 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   def test_update_primary_email
     new_primary_email = 'new.primary.email@example.net'
     @processor.expects(:update_primary_email).with(@mock_teacher_application, new_primary_email).once
-    @processor.process_decision_row({
-      'Application ID' => 1,
-
-      # It doesn't matter which decision: any will update the primary_email.
-      # Using Decline so we don't need a matching workshop, as that functionality is tested separately.
-      'Decision' => 'Decline',
-      'Workshop' => "doesn't matter",
-      'Primary Email' => new_primary_email
-    })
+    @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        # It doesn't matter which decision: any will update the primary_email.
+        # Using Decline so we don't need a matching workshop, as that
+        # functionality is tested separately.
+        'Decision' => 'Decline',
+        'Workshop' => "doesn't matter",
+        'Primary Email' => new_primary_email
+      }
+    )
   end
 
   private
@@ -197,12 +218,14 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     TeacherApplicationDecisionProcessor.any_instance.unstub(:load_workshop_map)
 
     mock_csv = mock
-    mock_csv.expects(:each).yields({
-      'Workshop String' => 'Sample Partner : June 1 - 5, 2017',
-      'Workshop Id' => 1234,
-      'Partner Contact' => 'Mr. Contact',
-      'Partner Email' => 'partner.contact@example.net'
-    })
+    mock_csv.expects(:each).yields(
+      {
+        'Workshop String' => 'Sample Partner : June 1 - 5, 2017',
+        'Workshop Id' => 1234,
+        'Partner Contact' => 'Mr. Contact',
+        'Partner Email' => 'partner.contact@example.net'
+      }
+    )
     CSV.expects(:foreach).with('workshops.csv', headers: true).returns(mock_csv)
   end
 end

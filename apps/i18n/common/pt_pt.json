@@ -333,6 +333,10 @@
   "whenRun": "quando executar",
   "workspaceHeaderShort": "Espaço de trabalho: ",
   "yes": "Sim",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
+  "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
+  "levelN": "LEVEL {levelNumber}",
+  "projectTypeAlgebra": "Algebra",
   "yourProgress": "Your Progress"
 }

@@ -6,9 +6,13 @@ import reducer, {
     animationSourceUrl,
     setInitialAnimationList,
     deleteAnimation,
+    cloneAnimation,
     addBlankAnimation,
     addLibraryAnimation,
-    withAbsoluteSourceUrls
+    withAbsoluteSourceUrls,
+    appendBlankFrame,
+    appendLibraryFrames,
+    appendCustomFrames
 } from '@cdo/apps/gamelab/animationListModule';
 import animationTab from '@cdo/apps/gamelab/AnimationTab/animationTabModule';
 import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
@@ -243,6 +247,70 @@ describe('animationListModule', function () {
     });
   });
 
+  describe('action: clone animation', function () {
+    let oldWindowDashboard, server;
+    beforeEach(function () {
+      oldWindowDashboard = window.dashboard;
+      window.dashboard = {
+        project: {
+          getCurrentId() {return '';},
+          projectChanged() {return '';}
+        }
+      };
+
+      server = sinon.fakeServer.create();
+      server.respondWith('imageBody');
+    });
+
+    afterEach(function () {
+      server.restore();
+      window.dashboard = oldWindowDashboard;
+    });
+
+    it('cloning animation creates an animation with the same props, and unique name', function () {
+      const key0 = 'animation_1';
+      const animationList = createAnimationList(1);
+
+      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(cloneAnimation(key0));
+
+      expect(store.getState().animationList.orderedKeys.length).to.equal(2);
+
+      const clonedAnimationKey = store.getState().animationList.orderedKeys[1];
+      const clonedAnimation = store.getState().animationList.propsByKey[clonedAnimationKey];
+      const orignalAnimation = store.getState().animationList.propsByKey[key0];
+
+      expect(clonedAnimation.name).to.not.equal(orignalAnimation.name);
+      expect(clonedAnimation.frameSize).to.equal(orignalAnimation.frameSize);
+      expect(clonedAnimation.frameCount).to.equal(orignalAnimation.frameCount);
+      expect(clonedAnimation.frameDelay).to.equal(orignalAnimation.frameDelay);
+      expect(clonedAnimation.looping).to.equal(orignalAnimation.looping);
+      expect(clonedAnimation.sourceUrl).to.equal(orignalAnimation.sourceUrl);
+    });
+
+    it('cloning an animation twice creates two animations with unique names', function () {
+      const key0 = 'animation_1';
+      const animationList = createAnimationList(1);
+
+      let store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      store.dispatch(setInitialAnimationList(animationList));
+      store.dispatch(cloneAnimation(key0));
+      store.dispatch(cloneAnimation(key0));
+
+      const orignalAnimation = store.getState().animationList.propsByKey[key0];
+      const clonedAnimationKey2 = store.getState().animationList.orderedKeys[1];
+      const clonedAnimation2 = store.getState().animationList.propsByKey[clonedAnimationKey2];
+      const clonedAnimationKey1 = store.getState().animationList.orderedKeys[2];
+      const clonedAnimation1 = store.getState().animationList.propsByKey[clonedAnimationKey1];
+
+      expect(store.getState().animationList.orderedKeys.length).to.equal(3);
+      expect(orignalAnimation.name).to.not.equal(clonedAnimation1.name);
+      expect(orignalAnimation.name).to.not.equal(clonedAnimation2.name);
+      expect(clonedAnimation1.name).to.not.equal(clonedAnimation2.name);
+    });
+  });
+
   describe('action: add blank animation', function () {
     let oldWindowDashboard, server, store;
     beforeEach(function () {
@@ -409,6 +477,90 @@ describe('animationListModule', function () {
           }
         }
       });
+    });
+  });
+
+  describe('action: add blank frame', function () {
+    let oldWindowDashboard, server, store;
+    beforeEach(function () {
+      oldWindowDashboard = window.dashboard;
+      window.dashboard = {
+        project: {
+          getCurrentId() {return '';},
+          projectChanged() {return '';}
+        }
+      };
+      server = sinon.fakeServer.create();
+      server.respondWith('imageBody');
+      store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+    });
+
+    afterEach(function () {
+      server.restore();
+      window.dashboard = oldWindowDashboard;
+    });
+
+    it('new blank frame gets added to pendingFrames and original animation is unchanged', function () {
+      const animationList = createAnimationList(1);
+      store.dispatch(setInitialAnimationList(animationList));
+      const animationKey = store.getState().animationList.orderedKeys[0];
+      store.dispatch(appendBlankFrame());
+      expect(store.getState().animationList.propsByKey[animationKey].frameCount).to.equal(1);
+      expect(store.getState().animationList.pendingFrames.key).to.equal(animationKey);
+      expect(store.getState().animationList.pendingFrames.props.blankFrame).to.equal(true);
+    });
+
+    it('new blank pending frame uses the selectedAnimation key', function () {
+      const animationList = createAnimationList(2);
+      store.dispatch(setInitialAnimationList(animationList));
+      const selectedAnimation = store.getState().animationTab.selectedAnimation;
+      store.dispatch(appendBlankFrame());
+      expect(store.getState().animationList.pendingFrames.key).to.equal(selectedAnimation);
+    });
+  });
+
+  describe('action: append non blank frames', function () {
+    let oldWindowDashboard, server, store, selectedAnimation, libraryAnimProps;
+    beforeEach(function () {
+      oldWindowDashboard = window.dashboard;
+      window.dashboard = {
+        project: {
+          getCurrentId() {return '';},
+          projectChanged() {return '';}
+        }
+      };
+      server = sinon.fakeServer.create();
+      server.respondWith('imageBody');
+      store = createStore(combineReducers({animationList: reducer, animationTab}), {});
+      const animationList = createAnimationList(2);
+      store.dispatch(setInitialAnimationList(animationList));
+      selectedAnimation = store.getState().animationTab.selectedAnimation;
+      libraryAnimProps = {
+        name: 'library_animation',
+        sourceUrl: 'url',
+        frameSize: {x: 100, y: 100},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 4,
+        version: null
+      };
+    });
+
+    afterEach(function () {
+      server.restore();
+      window.dashboard = oldWindowDashboard;
+    });
+
+    it('append library frames adds props to pendingFrames for selectedAnimation', function () {
+      store.dispatch(appendLibraryFrames(libraryAnimProps));
+      expect(store.getState().animationList.pendingFrames.key).to.equal(selectedAnimation);
+      expect(store.getState().animationList.pendingFrames.props).to.deep.equal(libraryAnimProps);
+    });
+
+    it('append custom frames adds props to pendingFrames for selected animation', function () {
+      store.dispatch(appendCustomFrames(libraryAnimProps));
+      expect(store.getState().animationList.pendingFrames.key).to.equal(selectedAnimation);
+      expect(store.getState().animationList.pendingFrames.props).to.deep.equal(libraryAnimProps);
     });
   });
 });

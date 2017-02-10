@@ -131,11 +131,11 @@ class ActiveSupport::TestCase
   def assert_change(expressions, message = nil, &block)
     expressions = Array(expressions)
 
-    exps = expressions.map { |e|
+    exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
       # rubocop:enable Lint/Eval
-    }
+    end
     before = exps.map(&:call)
 
     yield
@@ -152,11 +152,11 @@ class ActiveSupport::TestCase
   def assert_no_change(expressions, message = nil, &block)
     expressions = Array(expressions)
 
-    exps = expressions.map { |e|
+    exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
       # rubocop:enable Lint/Eval
-    }
+    end
     before = exps.map(&:call)
 
     yield
@@ -360,7 +360,7 @@ def storage_id(_)
 end
 
 $stub_encrypted_channel_id = 'STUB_CHANNEL_ID-1234'
-def storage_encrypt_channel_id(_)
+def storage_encrypt_channel_id(_, _)
   $stub_encrypted_channel_id
 end
 

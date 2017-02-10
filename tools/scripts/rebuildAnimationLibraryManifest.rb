@@ -66,22 +66,26 @@ class ManifestBuilder
 
     # Write result to file
     File.open(DEFAULT_OUTPUT_FILE, 'w') do |file|
-      file.write(JSON.pretty_generate({
-          # JSON-style file comment
-          '//': [
+      file.write(
+        JSON.pretty_generate(
+          {
+            # JSON-style file comment
+            '//': [
               'Animation Library Manifest',
               'GENERATED FILE: DO NOT MODIFY DIRECTLY',
               'See tools/scripts/rebuildAnimationLibraryManifest.rb for more information.'
-          ],
+            ],
 
-          # Strip aliases from metadata - they're no longer needed since they
-          #   are represented in the alias map.
-          # Also sort for stable updates
-          'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+            # Strip aliases from metadata - they're no longer needed since they
+            #   are represented in the alias map.
+            # Also sort for stable updates
+            'metadata': animation_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
 
-          # Sort alias map for stable updates
-          'aliases': alias_map.sort.to_h
-      }))
+            # Sort alias map for stable updates
+            'aliases': alias_map.sort.to_h
+          }
+        )
+      )
     end
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
@@ -128,7 +132,8 @@ class ManifestBuilder
         @warnings.push result
       end
       download_progress_bar.increment unless download_progress_bar.nil?
-    end) do |name|
+    end
+) do |name|
       # This is the parallel block.  This block should return a string to
       # generate a warning and skip the animation, and a metadata Hash in
       # the success case.
@@ -166,7 +171,7 @@ The animation has been skipped.
         #{dim 'd[ o_0 ]b'}
     EOS
 
-      # Report any issues while talking to S3 and suggest most likely steps for fixing it.
+  # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => service_error
     warn service_error.inspect
     warn <<-EOS.unindent
@@ -245,7 +250,8 @@ The animation has been skipped.
         @warnings.push result
       end
       metadata_progress_bar.increment unless metadata_progress_bar.nil?
-    end) do |name|
+    end
+) do |name|
       # This is the parallel block.  This block should return a string to
       # generate a warning and skip the animation, and a metadata Hash in
       # the success case.

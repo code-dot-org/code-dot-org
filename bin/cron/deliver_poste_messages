@@ -14,8 +14,17 @@ MIN_MESSAGES_PER_THREAD = 50
 
 # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
 CONNECTION_ATTEMPTS = 5
-RETRYABLE_ERROR_TYPES = [Net::SMTPServerBusy, Net::SMTPAuthenticationError].freeze
-RETRYABLE_ERROR_MESSAGE_MATCH = /(Too many connections, try again later)|(Temporary authentication failure)/
+RETRYABLE_ERROR_TYPES = [
+  Net::SMTPServerBusy,
+  Net::SMTPAuthenticationError,
+  EOFError
+].freeze
+RETRYABLE_ERROR_MESSAGES = [
+  'Too many connections, try again later',
+  'Temporary authentication failure',
+  'end of file reached'
+].map(&:freeze).freeze
+RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map{|m| "(#{m})"}.join('|')
 
 SMTP_OPTIONS = {
   address: CDO.poste_smtp_server,
@@ -121,12 +130,16 @@ class Deliverer
     params = JSON.parse(delivery[:params])
     unsubscribe_url = poste_url("/u/#{CGI.escape(encrypted_id)}")
 
-    header, html, _ = load_template(message[:name]).render(params.merge({
-      recipient: OpenStruct.new(recipient),
-      encrypted_id: encrypted_id,
-      unsubscribe_link: unsubscribe_url,
-      tracking_pixel: poste_url("/o/#{encrypted_id}"),
-    }))
+    header, html, _ = load_template(message[:name]).render(
+      params.merge(
+        {
+          recipient: OpenStruct.new(recipient),
+          encrypted_id: encrypted_id,
+          unsubscribe_link: unsubscribe_url,
+          tracking_pixel: poste_url("/o/#{encrypted_id}"),
+        }
+      )
+    )
 
     message = StringIO.new
 

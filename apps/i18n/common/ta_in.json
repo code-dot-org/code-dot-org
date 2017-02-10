@@ -333,6 +333,10 @@
   "whenRun": "இயங்கும் போது",
   "workspaceHeaderShort": "பணிவெளி: ",
   "yes": "ஆம்",
+  "documentation": "Documentation",
   "lessonName": "Lesson Name",
+  "lessonNumbered": "Lesson {lessonNumber}: {lessonName}",
+  "levelN": "LEVEL {levelNumber}",
+  "projectTypeAlgebra": "Algebra",
   "yourProgress": "Your Progress"
 }

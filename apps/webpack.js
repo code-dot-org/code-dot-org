@@ -6,6 +6,16 @@ var envConstants = require('./envConstants');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
+// Certain packages ship in ES6 and need to be transpiled for our purposes -
+// especially for tests, which run on PhantomJS with _zero_ ES6 support.
+var toTranspileWithinNodeModules = [
+  // All of our @cdo-aliased files should get transpiled as they are our own
+  // source files.
+  path.resolve(__dirname, 'node_modules', '@cdo'),
+  // playground-io ships in ES6 as of 0.3.0
+  path.resolve(__dirname, 'node_modules', 'playground-io'),
+];
+
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
@@ -30,9 +40,10 @@ var baseConfig = {
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
       {
-        test:/.png|.jpg|.jpeg|.gif|.svg/,
+        test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [
           path.resolve(__dirname, 'static'),
+          path.resolve(__dirname, 'src'),
         ],
         loader: "url-loader?limit=1024",
       },
@@ -43,8 +54,7 @@ var baseConfig = {
         include: [
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
-          path.resolve(__dirname, 'node_modules', '@cdo')
-        ],
+        ].concat(toTranspileWithinNodeModules),
         exclude: [
           path.resolve(__dirname, 'src', 'lodash.js'),
         ],
@@ -73,11 +83,11 @@ if (envConstants.COVERAGE) {
       test: /\.jsx?$/,
       include: [
         path.resolve(__dirname, 'test'),
-        path.resolve(__dirname, 'node_modules', '@cdo'),
-      ],
+      ].concat(toTranspileWithinNodeModules),
       loader: "babel",
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     }, {
       test: /\.jsx?$/,
@@ -85,9 +95,15 @@ if (envConstants.COVERAGE) {
       include: path.resolve(__dirname, 'src'),
       exclude: [
         path.resolve(__dirname, 'src', 'lodash.js'),
+
+        // we need to turn off coverage for this file
+        // because we have tests that actually make assertions
+        // about the contents of the compiled version of this file :(
+        path.resolve(__dirname, 'src', 'flappy', 'levels.js'),
       ],
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     },
   ];
@@ -125,6 +141,8 @@ var karmaConfig = _.extend({}, baseConfig, {
       '@cdo/gamelab/locale': path.resolve(__dirname, 'test', 'util', 'gamelab', 'locale-do-not-import.js'),
       '@cdo/weblab/locale': path.resolve(__dirname, 'test', 'util', 'weblab', 'locale-do-not-import.js'),
       'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
+      // Use mock-firmata to unit test playground-io maker components
+      'firmata': 'mock-firmata/mock-firmata'
     }),
   }),
   externals: {

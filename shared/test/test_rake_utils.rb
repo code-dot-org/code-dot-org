@@ -8,7 +8,7 @@ class RakeUtilsTest < Minitest::Test
 
   def test_glob_matches_file_names
     assert RakeUtils.glob_matches_file_path?('file.js', 'file.js')
-    assert !RakeUtils.glob_matches_file_path?('*/file.js', 'file.js')
+    refute RakeUtils.glob_matches_file_path?('*/file.js', 'file.js')
     assert RakeUtils.glob_matches_file_path?('**/file.js', 'file.js')
 
     assert RakeUtils.glob_matches_file_path?('*.js', 'file.js')
@@ -25,16 +25,16 @@ class RakeUtilsTest < Minitest::Test
     assert RakeUtils.glob_matches_file_path?('**/*.js', 'folder/file.js')
     assert RakeUtils.glob_matches_file_path?('**/*.js', 'nested/folder/file.js')
 
-    assert !RakeUtils.glob_matches_file_path?('*.js', 'nested/folder/file.js')
+    refute RakeUtils.glob_matches_file_path?('*.js', 'nested/folder/file.js')
   end
 
   def test_glob_mismatches_extensions
-    assert !RakeUtils.glob_matches_file_path?('*.jsx', 'file.js')
-    assert !RakeUtils.glob_matches_file_path?('*.js', 'file.jsx')
-    assert !RakeUtils.glob_matches_file_path?('**/*.jsx', 'nested/folder/file.js')
-    assert !RakeUtils.glob_matches_file_path?('**/*.js', 'nested/folder/file.jsx')
+    refute RakeUtils.glob_matches_file_path?('*.jsx', 'file.js')
+    refute RakeUtils.glob_matches_file_path?('*.js', 'file.jsx')
+    refute RakeUtils.glob_matches_file_path?('**/*.jsx', 'nested/folder/file.js')
+    refute RakeUtils.glob_matches_file_path?('**/*.js', 'nested/folder/file.jsx')
 
-    assert !RakeUtils.glob_matches_file_path?('**.jsx', 'nested/folder/file.js')
-    assert !RakeUtils.glob_matches_file_path?('**.js', 'nested/folder/file.jsx')
+    refute RakeUtils.glob_matches_file_path?('**.jsx', 'nested/folder/file.js')
+    refute RakeUtils.glob_matches_file_path?('**.js', 'nested/folder/file.jsx')
   end
 end

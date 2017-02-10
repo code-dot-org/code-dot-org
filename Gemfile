@@ -227,3 +227,11 @@ gem 'sshkit'
 gem 'validates_email_format_of'
 
 gem 'composite_primary_keys'
+
+# GitHub API; used by the DotD script to automatically create new
+# releases on deploy
+gem 'octokit'
+
+# Used to create a prefix trie of student names within a section
+gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
+gem 'rambling-trie'

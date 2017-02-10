@@ -15,6 +15,12 @@ GIT
       redis
 
 GIT
+  remote: git://github.com/pahanix/full-name-splitter.git
+  revision: 316b4f3f4b1e5902dedc2a369d1d9052f042dd50
+  specs:
+    full-name-splitter (0.1.2)
+
+GIT
   remote: git://github.com/rails-api/active_model_serializers.git
   revision: 2962f3f64e7c672bfb5a13a8f739b5db073e5473
   ref: 2962f3f64e7c672bfb5a13a8f739b5db073e5473
@@ -386,6 +392,8 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
+    octokit (4.6.2)
+      sawyer (~> 0.8.0, >= 0.5.3)
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
     oj (2.17.1)
@@ -467,6 +475,7 @@ GEM
     rainbow (2.2.1)
     raindrops (0.16.0)
     rake (11.3.0)
+    rambling-trie (1.0.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -513,6 +522,9 @@ GEM
     rubyzip (1.2.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
+    sawyer (0.8.1)
+      addressable (>= 2.3.5, < 2.6)
+      faraday (~> 0.8, < 1.0)
     scss_lint (0.49.0)
       rake (>= 0.9, < 12)
       sass (~> 3.4.20)
@@ -652,6 +664,7 @@ DEPENDENCIES
   firebase
   firebase_token_generator
   font-awesome-rails (~> 4.6.3)
+  full-name-splitter!
   gemoji
   geocoder!
   google-api-client
@@ -684,6 +697,7 @@ DEPENDENCIES
   net-ssh
   newrelic_rpm (~> 3.16.0)
   nokogiri (~> 1.6.1)
+  octokit
   oj
   omniauth-clever (~> 1.2.1)!
   omniauth-facebook (~> 4.0.0.rc1)
@@ -703,6 +717,7 @@ DEPENDENCIES
   rack_csrf
   rails (~> 5.0.1)
   rails-controller-testing
+  rambling-trie
   redcarpet (~> 3.3.4)
   redis (~> 3.3.1)
   redis-slave-read!

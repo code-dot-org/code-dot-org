@@ -15,7 +15,8 @@
         - if @user
           .students.hide-as-student
             %h4= t('teacher.panel.student')
-            = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
+            - unless @section.nil? || @user.nil?
+              = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
         - if @user_level
           .user_level
             .level
@@ -40,7 +41,7 @@
                       %i= t('nav.user.driver')
                   - @user_level.navigator_user_levels.each do |navigator_user_level|
                     %div
-                      = navigator_user_level.user.name
+                      = navigator_user_level.user ? navigator_user_level.user.name : I18n.t('user.deleted_user')
                       %i= t('nav.user.navigator')
               - if @user_level.submitted?
                 #submitted

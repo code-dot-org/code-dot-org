@@ -7,9 +7,10 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-#  commenting this stuff out because even if we don't have a reader configured it will set stuff in the session
-# include SeamlessDatabasePool::ControllerFilter
-#  use_database_pool :all => :master
+  # Commenting this stuff out because even if we don't have a reader configured
+  # it will set stuff in the session.
+  # include SeamlessDatabasePool::ControllerFilter
+  # use_database_pool :all => :master
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -104,9 +105,9 @@ class ApplicationController < ActionController::Base
                            :hashed_email, :terms_of_service_version]
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update) do |u| u.permit PERMITTED_USER_FIELDS end
-    devise_parameter_sanitizer.permit(:sign_up) do |u| u.permit PERMITTED_USER_FIELDS end
-    devise_parameter_sanitizer.permit(:sign_in) do |u| u.permit PERMITTED_USER_FIELDS end
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit PERMITTED_USER_FIELDS }
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit PERMITTED_USER_FIELDS }
+    devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit PERMITTED_USER_FIELDS }
   end
 
   def with_locale

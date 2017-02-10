@@ -84,7 +84,11 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'enrollments can be created' do
     assert_creates(Pd::Enrollment) do
-      post :create, workshop_id: @workshop.id, pd_enrollment: enrollment_test_params, school_info: school_info_params
+      post :create, params: {
+        workshop_id: @workshop.id,
+        pd_enrollment: enrollment_test_params,
+        school_info: school_info_params
+      }
     end
     enrollment = Pd::Enrollment.last
     refute_nil enrollment.code
@@ -92,32 +96,38 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   test 'creating a duplicate enrollment renders duplicate view' do
-    params = enrollment_test_params.merge({
-      first_name: @existing_enrollment.first_name,
-      last_name: @existing_enrollment.last_name,
-      email: @existing_enrollment.email,
-      confirmation_email: @existing_enrollment.email,
-    })
+    params = enrollment_test_params.merge(
+      {
+        first_name: @existing_enrollment.first_name,
+        last_name: @existing_enrollment.last_name,
+        email: @existing_enrollment.email,
+        confirmation_email: @existing_enrollment.email,
+      }
+    )
     post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
     assert_template :duplicate
   end
 
   test 'creating an enrollment with email match from organizer renders own view' do
-    params = enrollment_test_params.merge({
-      full_name: @organizer.name,
-      email: @organizer.email,
-      confirmation_email: @organizer.email,
-    })
+    params = enrollment_test_params.merge(
+      {
+        full_name: @organizer.name,
+        email: @organizer.email,
+        confirmation_email: @organizer.email,
+      }
+    )
     post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
     assert_template :own
   end
 
   test 'creating an enrollment with email match from facilitator renders own view' do
-    params = enrollment_test_params.merge({
-      full_name: @facilitator.name,
-      email: @facilitator.email,
-      confirmation_email: @facilitator.email,
-    })
+    params = enrollment_test_params.merge(
+      {
+        full_name: @facilitator.name,
+        email: @facilitator.email,
+        confirmation_email: @facilitator.email,
+      }
+    )
     post :create, params: {workshop_id: @workshop.id, pd_enrollment: params}
     assert_template :own
   end
@@ -143,10 +153,12 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   test 'creating an enrollment with errors renders new view' do
-    params = enrollment_test_params.merge({
-      first_name: '',
-      confirmation_email: nil
-    })
+    params = enrollment_test_params.merge(
+      {
+        first_name: '',
+        confirmation_email: nil
+      }
+    )
     post :create, params: {
       workshop_id: @workshop.id,
       pd_enrollment: params,

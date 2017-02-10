@@ -10,6 +10,7 @@ require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
+require 'cdo/aws/cdo_google_credentials'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -318,11 +319,13 @@ class CDOImpl < OpenStruct
   def app_servers
     return super unless CDO.chef_managed
     require 'aws-sdk'
-    servers = Aws::EC2::Client.new.describe_instances(filters: [
+    servers = Aws::EC2::Client.new.describe_instances(
+      filters: [
         { name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name]},
         { name: 'tag:aws:cloudformation:logical-id', values: ['Frontends'] },
         { name: 'instance-state-name', values: ['running']}
-    ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
+      ]
+    ).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
     servers.merge(super)
   end
 end

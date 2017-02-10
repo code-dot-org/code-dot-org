@@ -10,7 +10,7 @@ Dashboard::Application.configure do
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.
-  config.eager_load = false
+  config.eager_load = true
 
   # Use the schema cache dump to avoid forcing every front end to fetch the schema from
   # the database. (Fetching the schema adds undesirable load and can trigger expensive
@@ -48,20 +48,19 @@ Dashboard::Application.configure do
 
     # Whether or not to display pretty shared js assets
     config.pretty_sharedjs = false
-
   end
 
   config.assets.quiet = true
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
   # Disable Rails.cache when running unit tests.
   config.cache_store = :memory_store, { size: 64.megabytes } if ci_test
 
-#  config.action_mailer.raise_delivery_errors = true
-#  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.delivery_method = :smtp
 
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
@@ -81,24 +80,25 @@ Dashboard::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  # disable this for test by default, it won't make much sense if we keep wiping the db
+  # Disable this for test by default, it won't make much sense if we keep wiping
+  # the DB.
   CDO.disable_s3_image_uploads = true
 
-  # see stack traces around sql queries in the log
-  # off by default because it slows things down
+  # See stack traces around SQL queries in the log. Off by default because it
+  # slows things down.
   ActiveRecordQueryTrace.enabled = false
 
-  # Explicitly set legacy test-order behavior in Rails 4.2
+  # Explicitly set legacy test-order behavior in Rails 4.2.
   # See http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases
   config.active_support.test_order = :sorted
 
-  # don't act like a levelbuilder by default
+  # Don't act like a levelbuilder by default.
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
   # Whether or not to skip script preloading. Setting this to true
-  # significantly speeds up server startup time
+  # significantly speeds up server startup time.
   config.skip_script_preload = false
 end

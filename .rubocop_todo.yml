@@ -66,16 +66,6 @@ Style/AlignHash:
 Style/AlignParameters:
   Enabled: false
 
-# Offense count: 47
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, ProceduralMethods, FunctionalMethods, IgnoredMethods.
-# SupportedStyles: line_count_based, semantic, braces_for_chaining
-# ProceduralMethods: benchmark, bm, bmbm, create, each_with_object, measure, new, realtime, tap, with_object
-# FunctionalMethods: let, let!, subject, watch
-# IgnoredMethods: lambda, proc, it
-Style/BlockDelimiters:
-  Enabled: false
-
 # Offense count: 417
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -110,11 +100,6 @@ Style/ClassVars:
 Style/CollectionMethods:
   Enabled: false
 
-# Offense count: 28
-# Cop supports --auto-correct.
-Style/CommentIndentation:
-  Enabled: false
-
 # Offense count: 31
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, SingleLineConditionsOnly.
@@ -125,20 +110,6 @@ Style/ConditionalAssignment:
 # Offense count: 280
 # Configuration parameters: AllowedVariables.
 Style/GlobalVars:
-  Enabled: false
-
-# Offense count: 83
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
-# SupportedStyles: special_inside_parentheses, consistent, align_brackets
-Style/IndentArray:
-  Enabled: false
-
-# Offense count: 287
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, IndentationWidth.
-# SupportedStyles: special_inside_parentheses, consistent, align_braces
-Style/IndentHash:
   Enabled: false
 
 # Offense count: 6
@@ -157,13 +128,6 @@ Style/LeadingCommentSpace:
 Style/MethodMissing:
   Enabled: false
 
-# Offense count: 24
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: symmetrical, new_line, same_line
-Style/MultilineArrayBraceLayout:
-  Enabled: false
-
 # Offense count: 16
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -174,13 +138,6 @@ Style/MultilineHashBraceLayout:
 # Offense count: 18
 # Cop supports --auto-correct.
 Style/MultilineIfModifier:
-  Enabled: false
-
-# Offense count: 109
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: symmetrical, new_line, same_line
-Style/MultilineMethodCallBraceLayout:
   Enabled: false
 
 # Offense count: 231
@@ -211,11 +168,6 @@ Style/MutableConstant:
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
 # SupportedStyles: skip_modifier_ifs, always
 Style/Next:
-  Enabled: false
-
-# Offense count: 8
-# Cop supports --auto-correct.
-Style/Proc:
   Enabled: false
 
 # Offense count: 51
@@ -253,18 +205,6 @@ Style/SpaceAroundEqualsInParameterDefault:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: space, no_space
 Style/SpaceBeforeBlockBraces:
-  Enabled: false
-
-# Offense count: 11
-# Cop supports --auto-correct.
-Style/SpaceBeforeComment:
-  Enabled: false
-
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: require_no_space, require_space
-Style/SpaceInLambdaLiteral:
   Enabled: false
 
 # Offense count: 982

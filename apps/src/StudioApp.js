@@ -36,7 +36,7 @@ import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
-import {blocks as makerDropletBlocks} from './makerlab/dropletConfig';
+import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore, registerReducers } from './redux';
 import { Provider } from 'react-redux';
 import {
@@ -2107,7 +2107,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     config.dropletConfig,
     config.level.codeFunctions,
     config.level.autocompletePaletteApisOnly,
-    this.Dialog);
+    this.Dialog,
+    config.app);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
@@ -2869,6 +2870,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,
+    isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,

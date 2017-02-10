@@ -15,6 +15,7 @@ Dashboard::Application.routes.draw do
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
+  get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -71,6 +72,7 @@ Dashboard::Application.routes.draw do
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
+    patch '/dashboardapi/users', to: 'registrations#update'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -111,6 +113,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
+      get 'section/:section_id', action: 'section_projects'
       get '/angular', to: 'projects#angular'
     end
   end
@@ -327,16 +330,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  namespace :api do
-    namespace :v1 do
-      concerns :api_v1_pd_routes
-    end
-  end
-
   namespace :pd do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
+
+    get 'professional_learning_landing', to: 'professional_learning_landing#index'
 
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
@@ -349,6 +348,9 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+
+    get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
+    get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -388,6 +390,8 @@ Dashboard::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      concerns :api_v1_pd_routes
+
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: { format: 'json' }
@@ -395,6 +399,10 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
+
+      namespace :projects do
+        get 'section/:section_id', to: 'section_projects#index', defaults: { format: 'json' }
+      end
     end
   end
 
