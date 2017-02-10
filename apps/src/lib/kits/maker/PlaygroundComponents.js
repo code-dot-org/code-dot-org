@@ -36,17 +36,7 @@ export function initializeCircuitPlaygroundComponents(board) {
 
   const accelerometer = initializeAccelerometer(board);
 
-  // We make one playground-io Touchpad component for all captouch sensors,
-  // then wrap it in our own separate objects to get the API we want to
-  // expose to students.
-  const playgroundTouchpad = new five.Touchpad({
-    controller: PlaygroundIO.Touchpad,
-    pads: TOUCH_PINS
-  });
-  let touchPads = {};
-  TOUCH_PINS.forEach(pin => {
-    touchPads[`touchPad${pin}`] = new TouchSensor(pin, playgroundTouchpad);
-  });
+  const touchPads = initializeTouchPads(board);
 
   const lightSensor = new five.Sensor({
     pin: "A5",
@@ -166,4 +156,20 @@ export function initializeAccelerometer(board) {
     return accelerometer[accelerationDirection];
   };
   return accelerometer;
+}
+
+export function initializeTouchPads(board) {
+  // We make one playground-io Touchpad component for all captouch sensors,
+  // then wrap it in our own separate objects to get the API we want to
+  // expose to students.
+  const playgroundTouchpad = new five.Touchpad({
+    board,
+    controller: PlaygroundIO.Touchpad,
+    pads: TOUCH_PINS
+  });
+  let touchPads = {};
+  TOUCH_PINS.forEach(pin => {
+    touchPads[`touchPad${pin}`] = new TouchSensor(pin, playgroundTouchpad);
+  });
+  return touchPads;
 }

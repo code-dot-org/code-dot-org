@@ -7,8 +7,10 @@ import {
   initializeAccelerometer,
   initializeButton,
   initializeColorLeds,
-  initializeSoundSensor
+  initializeSoundSensor,
+  initializeTouchPads,
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
+import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -40,12 +42,12 @@ describe('initializeColorLeds()', () => {
     // Checks a necessary condition for a true johnny-five level reset.
     const boardOne = newBoard();
     const controllers = initializeColorLeds(boardOne);
-    expect(controllers[0].board === boardOne);
+    expect(controllers[0].board === boardOne).to.be.true;
     expect(boardOne.io.sysexCommand.callCount).to.equal(20);
 
     const boardTwo = newBoard();
     const newControllers = initializeColorLeds(boardTwo);
-    expect(newControllers[0].board === boardTwo);
+    expect(newControllers[0].board === boardTwo).to.be.true;
     expect(boardTwo.io.sysexCommand.callCount).to.equal(20);
   });
 });
@@ -74,12 +76,39 @@ describe('initializeButton()', () => {
 describe('initializeAccelerometer()', () => {
   it('initializes accelerometer', function () {
     const board = newBoard();
-    const button = initializeAccelerometer(board);
-    expect(button).to.be.an.instanceOf(five.Accelerometer);
-    expect(button).to.haveOwnProperty('getOrientation');
-    expect(button).to.haveOwnProperty('getAcceleration');
+    const sensor = initializeAccelerometer(board);
+    expect(sensor).to.be.an.instanceOf(five.Accelerometer);
+    expect(sensor).to.haveOwnProperty('getOrientation');
+    expect(sensor).to.haveOwnProperty('getAcceleration');
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);
+  });
+});
+
+describe('initializeTouchPads()', () => {
+  it('initializes all touch pads', function () {
+    const board = newBoard();
+    const pads = initializeTouchPads(board);
+    expect(Object.keys(pads)).to.have.length(8);
+    for (const key in pads) {
+      if (!pads.hasOwnProperty(key)) continue;
+      const pad = pads[key];
+      expect(/touchPad\d+/.test(key)).to.be.true;
+      expect(pad).to.be.an.instanceOf(TouchSensor);
+      expect(pad.touchpadsController_).to.be.an.instanceOf(five.Touchpad);
+    }
+
+    // Check exact sysex calls
+    expect(board.io.sysexCommand.callCount).to.equal(8);
+    // TODO (bbuchanan): Record what these calls mean.
+    expect(board.io.sysexCommand.getCall(0)).to.have.been.calledWith([0x40, 0x41, 0]);
+    expect(board.io.sysexCommand.getCall(1)).to.have.been.calledWith([0x40, 0x41, 1]);
+    expect(board.io.sysexCommand.getCall(2)).to.have.been.calledWith([0x40, 0x41, 2]);
+    expect(board.io.sysexCommand.getCall(3)).to.have.been.calledWith([0x40, 0x41, 3]);
+    expect(board.io.sysexCommand.getCall(4)).to.have.been.calledWith([0x40, 0x41, 6]);
+    expect(board.io.sysexCommand.getCall(5)).to.have.been.calledWith([0x40, 0x41, 9]);
+    expect(board.io.sysexCommand.getCall(6)).to.have.been.calledWith([0x40, 0x41, 10]);
+    expect(board.io.sysexCommand.getCall(7)).to.have.been.calledWith([0x40, 0x41, 12]);
   });
 });
 
