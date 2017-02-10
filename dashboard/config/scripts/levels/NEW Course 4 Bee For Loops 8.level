@@ -68,7 +68,9 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="maze_moveForward"/>
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                </block>
               </statement>
             </block>
           </next>
@@ -77,7 +79,9 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
         <block type="maze_nectar"/>
         <block type="controls_repeat_ext" inline="true"/>
         <block type="variables_get">
@@ -139,7 +143,8 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
                   <next>
                     <block type="controls_repeat_ext" inline="true">
                       <value name="TIMES">

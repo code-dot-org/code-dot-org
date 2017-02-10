@@ -74,7 +74,9 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>

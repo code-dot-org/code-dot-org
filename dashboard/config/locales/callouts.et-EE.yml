@@ -130,19 +130,18 @@
         sign_in_to_save_project:
         - this project to your account!
       Course 4 Artist 4_callout:
-        repeat_full_circle:
-        - make a full circle
+        repeat_full_circle: Sisesta, mitu korda peab zombi liikuma, et teha üks täisring
       Course 4 Artist 7_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: Kasuta plokki „Korda“ ja pane see tööruumis olevate plokkide
+          ümber
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: Lohista oma loendurimuutuja selle ploki sisse
       Course 4 Artist Functions 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul
+          „Loo funktsioon“.
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint:
-        - fix it in the next puzzle.
+        house_hint: Pole midagi, kui pilt pole veel päris maja moodi. Järgmises mõistatuses
+          parandame selle ära.
       Course 4 Artist Functions 8_callout:
         edit_function: Funktsiooni muutmiseks kliki siin.
       Course 4 Artist Functions challenge_callout:
@@ -153,14 +152,14 @@
         length_parameter: Kas oskad seda funktsiooni uuendada, et see kasutaks parameetrit
           „pikkus“?
       Course 4 Artist Params 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul
+          „Loo funktsioon“.
       Course 4 Artist Vars 1_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: Kasuta plokki „Korda“ ja pane see tööruumis olevate plokkide
+          ümber
       Course 4 Artist Vars 10_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: Kasuta seda plokki, et määrata külgede arvuks see arv, mida on
+          vaja mõistatuse lahendamiseks.
       Course 4 Artist Vars 12_callout:
         set_length: Kasuta seda plokk, et määrata õige pikkus.
       Course 4 Artist Vars 13_callout: []
@@ -169,14 +168,14 @@
       Course 4 Artist Vars 3_callout:
         place_variable: Lohista oma muutuja selle ploki sisse
       Course 4 Artist Vars 6_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: Jaga number 360 külgede arvuga, et saaksid iga nurga kraadide
+          arvu.
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       Course 4 Artist Vars 9_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: Kasuta seda plokki, et määrata külgede arvuks see arv, mida on
+          vaja mõistatuse lahendamiseks.
       Course 4 Bee 1_callout:
         if_bee_nectar:
         - tee mett
@@ -186,11 +185,10 @@
       Course 4 Bee For Loops 1_callout:
         get_nectar: Kasuta uut plokki „korja nektarit“.
       Course 4 Bee For Loops 6_callout:
-        actions_category:
-        - here now.
+        actions_category: Tööriistakastil on uus ilme. Tegevuste plokid on nüüd siin.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar:
-        - the Bee will turn to get the nectar.
+        edit_get_nectar: Kasuta seda nuppu funktsiooni muutmiseks ja mesilase liikumissuuna
+          muutmiseks, kui ta nektarit korjab.
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4:
@@ -235,6 +233,28 @@
         - the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops8_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_playLab_events2_callout: []
+      courseA_playLab_events3_callout: []
+      courseA_playLab_events4_callout: []
+      courseA_playLab_events5_callout: []
+      courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_maze_seq7_callout:
+        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
+          they can't be trashed.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
       courseC_collector_prog7_callout:
@@ -315,6 +335,14 @@
         courseF_artist_for1_1:
         - for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: []
+      courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4_callout:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5_callout:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1:
         - numbers. These `math` blocks can be pulled out and moved around!
@@ -357,6 +385,13 @@
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_fwp1_callout:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp3_callout:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4_callout:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1:
         - to make it easier to find the blocks you need.
@@ -553,16 +588,15 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja
+          muuda suurus.
       frozen cross rotate_callout:
         replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ numbriga
       frozen cross_callout:
-        repeat_blocks_1: |-
-          (1) Use this block and put it around the grey blocks in
-          the workspace
-        repeat_blocks_2:
-        - inside
+        repeat_blocks_1: "(1) Kasuta seda plokki ja pane see tööruumis hallide plokkide
+          ümber"
+        repeat_blocks_2: "(2) Teisalda plokk „Korda“ siia ja pane hallid plokid selle
+          sisse"
       frozen diamond snowflake_callout:
         frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
       frozen diamond_callout:
@@ -571,11 +605,11 @@
         snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
       frozen line_callout:
         run: Hit "Run" to try your program!
-        move_elsa_forward:
-        - Run" block to make Elsa move forward
+        move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“
+          alla, et Elsa liiguks edasi
       frozen perpendicular_callout:
-        turn_elsa:
-        - determines how much Elsa turns
+        turn_elsa: Kasuta plokki „Pööra“, et Elsa pööraks. Rippmenüüs valitud number
+          näitab, mitu korda Elsa pöörab
       frozen snowflake branch_callout:
         frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki
       frozen square iterative_callout:
@@ -685,16 +719,16 @@
         - time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul
+          ja lohista see oma funktsioonimääratlusse
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1:
         - You don't have to check for honeycombs at all.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja
+          muuda suurus.
       grade4_frozen_nested_loop_diamonds1_callout:
         frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
       grade4_frozen_nested_loop_diamonds3_callout:
@@ -736,8 +770,8 @@
         - you are always turning by 360 ÷ `sides` degrees.
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul
+          ja lohista see oma funktsioonimääratlusse
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1:
         - code inside the function.
@@ -749,20 +783,19 @@
         - code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul
+          ja lohista see oma funktsioonimääratlusse
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: Küsimärkide asendamiseks lohista siia pikkusemuutuja
       grade5_artist_variables_pentagons12_callout:
         set_length: Kasuta seda plokk, et määrata õige pikkus.
       grade5_artist_variables_square7_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: Jaga number 360 külgede arvuga, et saaksid iga nurga kraadide
+          arvu.
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1:
         - to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -815,8 +848,8 @@
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: Mängi heli, kui sündmus juhtub.
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout:
-        - the up arrow is pressed?
+        Infinity_move_directions_callout: Milline plokk paneb Baymaxi üles liikuma,
+          kui üles noole klahvile on vajutatud?
         Infinity_move_directions_callout_arrow: Noolte abil saate juhtida
       Infinity_move_right_callout:
         Infinity_move_right_runbutton: Lisa liigutamise plokk siia
@@ -871,32 +904,30 @@
         - that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Funktsiooni muutmiseks kliki siin.
-        function_editor_draw_square:
-        - run everytime you use the "draw a square" block
+        function_editor_draw_square: See on sinu funktsioonimääratlus. Neid plokke
+          käitatakse iga kord, kui kasutad plokki „joonista ruut“
       NEW Course 4 Artist Functions 7_callout:
         edit_function: Funktsiooni muutmiseks kliki siin.
       NEW Course 4 Artist Functions 8_callout:
         edit_function: Funktsiooni muutmiseks kliki siin.
       NEW Course 4 Artist Params 10_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul
+          „Loo funktsioon“.
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul
+          ja lohista see oma funktsioonimääratlusse
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: Küsimärkide asendamiseks lohista siia pikkusemuutuja
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop:
         - here
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category:
-        - here now.
+        actions_category: Tööriistakastil on uus ilme. Tegevuste plokid on nüüd siin.
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1:
@@ -911,8 +942,8 @@
       Overworld Chop Trees_callout:
         craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house:
-        - you finish it?
+        craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
+          oskad selle lõpetada?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
         craft_drag_block_callout:
@@ -1025,8 +1056,8 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward:
-        - to move forward?
+        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
+          edasiliikumiskäsu?
       Underground Iron_callout:
         craft_what_is_iron: Kaevanda seda rauda!
       WebLab PS test - 1-12_callout:

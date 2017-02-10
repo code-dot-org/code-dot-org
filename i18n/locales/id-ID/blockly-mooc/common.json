@@ -60,6 +60,7 @@
   "disabledProgress1":"Any progress you make on your course will not be saved from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.",
   "disabledProgress2":"This is why all your bubbles are displayed as gray (don’t worry, your progress from before this week is still safe).",
   "disabledProgress3":"We encourage you to try Hour of Code tutorials instead this week.",
+  "documentation":"Documentation",
   "dontForget":"Jangan lupa",
   "dropletBlock_addOperator_description":"tambahkan dua nomor",
   "dropletBlock_addOperator_signatureOverride":"Tambahkan operator",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"Kunci/nilai pasangan",
   "learnMore":"Pelajari lebih banyak",
   "less":"Kurang",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"Anda telah gunakan semua jenis blok yang diperlukan  tetapi tidak dengan cara yang tepat.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"list",
   "loading":"Memuat...",
   "locked":"Dikunci",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"ke paling atas di luar posisi kanan",
   "positionTopRight":"ke posisi kanan atas",
   "predictionInstructions":"Make a prediction before you run the program.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"Laboratorium Aplikasi",
   "projectTypeArtist":"Artis",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"ketika",
   "whenRun":"ketika dijalankan",
   "workspaceHeaderShort":"Area kerja: ",
-  "yes":"Ya"
+  "yes":"Ya",
+  "yourProgress":"Your Progress"
 }

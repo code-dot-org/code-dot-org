@@ -130,19 +130,15 @@
         sign_in_to_save_project:
         - this project to your account!
       Course 4 Artist 4_callout:
-        repeat_full_circle:
-        - make a full circle
+        repeat_full_circle: "원을 만들기 위해서 좀비가 움직여야하는 횟수를 입력하세요."
       Course 4 Artist 7_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: '"반복" 블럭의 안에 다른 블럭들을 넣어보세요.'
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: "이 블럭의 안에 수를 세기 위한 카운터 블럭을 드래그 하세요."
       Course 4 Artist Functions 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint:
-        - fix it in the next puzzle.
+        house_hint: "그림이 집처럼 보이지 않아도 괜찮습니다. 다음 퍼즐에서 해결할 것입니다."
       Course 4 Artist Functions 8_callout:
         edit_function: "함수를 수정하기 위해서 여기를 클릭하세요."
       Course 4 Artist Functions challenge_callout:
@@ -152,14 +148,11 @@
       Course 4 Artist Params 2_callout:
         length_parameter: 이 함수를 수정해서 "길이"를 매개변수로 사용할 수 있도록 해 보세요.
       Course 4 Artist Params 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
       Course 4 Artist Vars 1_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: '"반복" 블럭의 안에 다른 블럭들을 넣어보세요.'
       Course 4 Artist Vars 10_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: "퍼즐을 해결하기 위해 필요한 면의 수를 설정하기 위해 이 블럭을 사용하세요."
       Course 4 Artist Vars 12_callout:
         set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
       Course 4 Artist Vars 13_callout: []
@@ -168,14 +161,12 @@
       Course 4 Artist Vars 3_callout:
         place_variable: "이 블럭의 안쪽에 변수 블럭을 드래그 하세요."
       Course 4 Artist Vars 6_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요."
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       Course 4 Artist Vars 9_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: "퍼즐을 해결하기 위해 필요한 면의 수를 설정하기 위해 이 블럭을 사용하세요."
       Course 4 Bee 1_callout:
         if_bee_nectar:
         - "꿀 만들기"
@@ -185,11 +176,9 @@
       Course 4 Bee For Loops 1_callout:
         get_nectar: 새로운 "꽃꿀 얻기" 블럭을 사용하세요.
       Course 4 Bee For Loops 6_callout:
-        actions_category:
-        - here now.
+        actions_category: 도구 상자가 새로운 모습으로 바뀌었습니다! 이제 "실행" 블럭들을 사용할 수 있습니다.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar:
-        - the Bee will turn to get the nectar.
+        edit_get_nectar: "이 버튼을 사용해 함수를 수정해서, 꿀벌이 꽃꿀 방향으로 회전할 수 있도록 하세요."
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4:
@@ -234,6 +223,28 @@
         - the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops8_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_playLab_events2_callout: []
+      courseA_playLab_events3_callout: []
+      courseA_playLab_events4_callout: []
+      courseA_playLab_events5_callout: []
+      courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_maze_seq7_callout:
+        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
+          they can't be trashed.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
       courseC_collector_prog7_callout:
@@ -314,6 +325,14 @@
         courseF_artist_for1_1:
         - for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: []
+      courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4_callout:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5_callout:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1:
         - numbers. These `math` blocks can be pulled out and moved around!
@@ -356,6 +375,13 @@
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_fwp1_callout:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp3_callout:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4_callout:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1:
         - to make it easier to find the blocks you need.
@@ -552,16 +578,12 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: '"원 만들기" 블럭을 사용하고 그 크기를 바꾸세요.'
       frozen cross rotate_callout:
         replace_questions_degree: '"???" 부분에 수를 입력하면 됩니다.'
       frozen cross_callout:
-        repeat_blocks_1: |-
-          (1) Use this block and put it around the grey blocks in
-          the workspace
-        repeat_blocks_2:
-        - inside
+        repeat_blocks_1: "(1) 이 블럭을 회색 블럭들에 사용하세요."
+        repeat_blocks_2: (2) "반복(Repeat)" 블럭을 여기에 이동시킨 후, 회색 블럭들의 안에 넣어주세요.
       frozen diamond snowflake_callout:
         frozen_diamond_repeat: "반복 블럭을 사용해 이 모양을 만들어보세요."
       frozen diamond_callout:
@@ -570,11 +592,10 @@
         snowflake_dropdown: "다른 모양의 눈송이를 만들기 위해서 사용해 보세요."
       frozen line_callout:
         run: Hit "Run" to try your program!
-        move_elsa_forward:
-        - Run" block to make Elsa move forward
+        move_elsa_forward: '"앞으로 이동" 블럭을 드래그해서 "실행하면" 블럭의 아래에 붙여 엘사가 앞으로 이동하게 해보세요.'
       frozen perpendicular_callout:
-        turn_elsa:
-        - determines how much Elsa turns
+        turn_elsa: '"돌기(회전)" 블럭을 사용해 엘사가 방향을 바꾸도록 해보세요. 선택 메뉴에서의 수는 엘사가 회전해야할 정도를
+          의미합니다.'
       frozen snowflake branch_callout:
         frozen_snowflake_branch: '"가지치기 눈송이 만들기(create a snowflake branch)" 블럭을 사용하세요.'
       frozen square iterative_callout:
@@ -684,16 +705,15 @@
         - time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: "함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요."
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요."
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1:
         - You don't have to check for honeycombs at all.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: "다른 모양의 눈송이를 만들기 위해서 사용해 보세요."
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: '"원 만들기" 블럭을 사용하고 그 크기를 바꾸세요.'
       grade4_frozen_nested_loop_diamonds1_callout:
         frozen_diamond_repeat: "반복 블럭을 사용해 이 모양을 만들어보세요."
       grade4_frozen_nested_loop_diamonds3_callout:
@@ -735,8 +755,8 @@
         - you are always turning by 360 ÷ `sides` degrees.
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: "함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요."
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요."
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1:
         - code inside the function.
@@ -748,20 +768,18 @@
         - code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: "함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요."
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요."
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "여기에 길이(length) 변수를 드래그해서 물음표 표시를 바꾸세요."
       grade5_artist_variables_pentagons12_callout:
         set_length: 정확한 값으로 "길이"를 설정하기 위해 이 블럭을 사용하세요.
       grade5_artist_variables_square7_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요."
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1:
         - to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -814,8 +832,8 @@
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: "이 이벤트가 발생하면 소리를 재생 합니다."
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout:
-        - the up arrow is pressed?
+        Infinity_move_directions_callout: "어느 블록이 '위쪽 화살표'가 눌렸을 때 Baymax를 위로 움직이게
+          할까요?"
         Infinity_move_directions_callout_arrow: "이 화살표를 이용해서 조정하세요"
       Infinity_move_right_callout:
         Infinity_move_right_runbutton: "이곳에 이동 블록을 추가합니다."
@@ -870,32 +888,29 @@
         - that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: "함수를 수정하기 위해서 여기를 클릭하세요."
-        function_editor_draw_square:
-        - run everytime you use the "draw a square" block
+        function_editor_draw_square: 이것이 여러분이 만든 함수의 정의입니다. 이 블럭들은 "사각형 그리기" 블럭을 사용할
+          때마다 실행됩니다.
       NEW Course 4 Artist Functions 7_callout:
         edit_function: "함수를 수정하기 위해서 여기를 클릭하세요."
       NEW Course 4 Artist Functions 8_callout:
         edit_function: "함수를 수정하기 위해서 여기를 클릭하세요."
       NEW Course 4 Artist Params 10_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: '"함수" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 "함수 만들기" 버튼을 누르세요. '
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: "함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요."
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의
+          안에 드래그해 넣으세요."
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "여기에 길이(length) 변수를 드래그해서 물음표 표시를 바꾸세요."
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop:
         - here
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category:
-        - here now.
+        actions_category: 도구 상자가 새로운 모습으로 바뀌었습니다! 이제 "실행" 블럭들을 사용할 수 있습니다.
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1:
@@ -910,8 +925,7 @@
       Overworld Chop Trees_callout:
         craft_callout_preplaced: "여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요"
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house:
-        - you finish it?
+        craft_callout_preplaced_house: "이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?"
       Overworld Move to Sheep_callout:
         craft_run_button_callout: 만든 프로그램을 "실행하기"를 눌러 실행시켜보세요.
         craft_drag_block_callout:
@@ -1024,8 +1038,7 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward:
-        - to move forward?
+        craft_callout_moveforward: "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
       Underground Iron_callout:
         craft_what_is_iron: "이 철을 채굴하세요!"
       WebLab PS test - 1-12_callout:

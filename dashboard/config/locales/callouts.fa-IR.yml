@@ -130,19 +130,19 @@
         sign_in_to_save_project:
         - this project to your account!
       Course 4 Artist 4_callout:
-        repeat_full_circle:
-        - make a full circle
+        repeat_full_circle: "تعداد دفعاتی که زامبی باید حرکت کند تا یک دایره کامل
+          بسازد را وارد کنید"
       Course 4 Artist 7_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: از بلوک "repeat" استفاده کنید و آن را دور بلوک های موجود در
+          فضای کار بپیچید
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: "شمارنده ی متغیر خود را به داخل این بلوک بکشید"
       Course 4 Artist Functions 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه
+          ی "یک تابع بساز" را کلیک کنید.
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint:
-        - fix it in the next puzzle.
+        house_hint: "اشکالی ندارد اگر تصویر هنوز مثل یک خانه به نظر نمی رسد. در معمای
+          بعدی درستش می کنیم."
       Course 4 Artist Functions 8_callout:
         edit_function: "اینجا را کلیک کنید تا تابع خود را ویرایش کنید."
       Course 4 Artist Functions challenge_callout:
@@ -153,14 +153,14 @@
         length_parameter: می توانید این تابع را به روز کنید به طوری که از ورودی "طول"
           استفاده کند?
       Course 4 Artist Params 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه
+          ی "یک تابع بساز" را کلیک کنید.
       Course 4 Artist Vars 1_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: از بلوک "repeat" استفاده کنید و آن را دور بلوک های موجود در
+          فضای کار بپیچید
       Course 4 Artist Vars 10_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: "از این بلوک برای تنظیم اضلاع به تعداد مورد نیاز برای حل معما استفاده
+          کنید."
       Course 4 Artist Vars 12_callout:
         set_length: از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.
       Course 4 Artist Vars 13_callout: []
@@ -169,14 +169,14 @@
       Course 4 Artist Vars 3_callout:
         place_variable: "متغیر خود را به داخل این بلوک بکشید"
       Course 4 Artist Vars 6_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: 360 را بر تعداد اضلاع تقسیم کنید تا اندازه ی هر زاویه را
+          به درجه بدست آورید.
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       Course 4 Artist Vars 9_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: "از این بلوک برای تنظیم اضلاع به تعداد مورد نیاز برای حل معما استفاده
+          کنید."
       Course 4 Bee 1_callout:
         if_bee_nectar:
         - "عسل بساز"
@@ -186,11 +186,11 @@
       Course 4 Bee For Loops 1_callout:
         get_nectar: از بلوک جدید "شهد را بگیر" استفاده کن.
       Course 4 Bee For Loops 6_callout:
-        actions_category:
-        - here now.
+        actions_category: جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های "کارها" حالا
+          اینجا هستند.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar:
-        - the Bee will turn to get the nectar.
+        edit_get_nectar: "از این دکمه برای ویرایش تابع استفاده کنید و جهتی که زنبور
+          برای گرفتن شهد می چرخد را تغییر دهید."
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4:
@@ -235,6 +235,28 @@
         - the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops8_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_playLab_events2_callout: []
+      courseA_playLab_events3_callout: []
+      courseA_playLab_events4_callout: []
+      courseA_playLab_events5_callout: []
+      courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_maze_seq7_callout:
+        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
+          they can't be trashed.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
       courseC_collector_prog7_callout:
@@ -315,6 +337,14 @@
         courseF_artist_for1_1:
         - for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: []
+      courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4_callout:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5_callout:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1:
         - numbers. These `math` blocks can be pulled out and moved around!
@@ -357,6 +387,13 @@
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_fwp1_callout:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp3_callout:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4_callout:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1:
         - to make it easier to find the blocks you need.
@@ -553,17 +590,16 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: استفاده از بلوک "ایجاد یک دایره"
+          و تغییر سایز.
       frozen cross rotate_callout:
         replace_questions_degree: از منوی کشویی برای جایگزین کردن "???" با یک عدد
           استفاده کنید
       frozen cross_callout:
-        repeat_blocks_1: |-
-          (1) Use this block and put it around the grey blocks in
-          the workspace
-        repeat_blocks_2:
-        - inside
+        repeat_blocks_1: "(1) از این بلوک استفاده کنید و آن را دور بلوک های خاکستری
+          در فضای کار بگذارید"
+        repeat_blocks_2: (2) بلوک "Repeat" را به اینجا حرکت دهید، و بلوک های خاکستری
+          را داخلش قرار دهید
       frozen diamond snowflake_callout:
         frozen_diamond_repeat: "از بلوک تکرار برای ایجاد این شکل استفاده کنید."
       frozen diamond_callout:
@@ -573,11 +609,11 @@
           کنید!"
       frozen line_callout:
         run: Hit "Run" to try your program!
-        move_elsa_forward:
-        - Run" block to make Elsa move forward
+        move_elsa_forward: یک بلوک "move forward" را بکشید و آن را زیر بلوک "when
+          run" بیندازید تا السا را به جلو حرکت دهید
       frozen perpendicular_callout:
-        turn_elsa:
-        - determines how much Elsa turns
+        turn_elsa: از بلوک "Turn" برای چرخاندن السا استفاده کنید. شماره ی منوی کشویی
+          تعیین می کند که السا چقدر می چرخد
       frozen snowflake branch_callout:
         frozen_snowflake_branch: استفاده از بلوک "ایجاد شعبه برف ریزه"
       frozen square iterative_callout:
@@ -690,8 +726,8 @@
         - time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: "برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک
+          کرده، و سپس آنرا به تعریف عملکرد تان بکشید"
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1:
         - You don't have to check for honeycombs at all.
@@ -699,8 +735,8 @@
         snowflake_dropdown: "از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده
           کنید!"
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: استفاده از بلوک "ایجاد یک دایره"
+          و تغییر سایز.
       grade4_frozen_nested_loop_diamonds1_callout:
         frozen_diamond_repeat: "از بلوک تکرار برای ایجاد این شکل استفاده کنید."
       grade4_frozen_nested_loop_diamonds3_callout:
@@ -746,8 +782,8 @@
         - you are always turning by 360 ÷ `sides` degrees.
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: "برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک
+          کرده، و سپس آنرا به تعریف عملکرد تان بکشید"
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1:
         - code inside the function.
@@ -759,20 +795,19 @@
         - code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: "برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک
+          کرده، و سپس آنرا به تعریف عملکرد تان بکشید"
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "برای جابجایی علامت سوال طول متغیر را به اینجا بکشید"
       grade5_artist_variables_pentagons12_callout:
         set_length: از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.
       grade5_artist_variables_square7_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: 360 را بر تعداد اضلاع تقسیم کنید تا اندازه ی هر زاویه را
+          به درجه بدست آورید.
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1:
         - to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -825,8 +860,8 @@
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: "پخش صدا هنگامی که این رویداد رخ می دهد."
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout:
-        - the up arrow is pressed?
+        Infinity_move_directions_callout: "وقتی فلش بالا فشرده میشود کدام بلوک بایمکس
+          را به بالا حرکت میدهد؟"
         Infinity_move_directions_callout_arrow: "برای هدایت کردن از این فلش ها استفاده
           کنید"
       Infinity_move_right_callout:
@@ -882,32 +917,31 @@
         - that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: "اینجا را کلیک کنید تا تابع خود را ویرایش کنید."
-        function_editor_draw_square:
-        - run everytime you use the "draw a square" block
+        function_editor_draw_square: این تعریف تابع شماست. این بلوک ها هر زمان که
+          از بلوک "کشیدن یک میدان" استفاده کنید، اجرا میشوند
       NEW Course 4 Artist Functions 7_callout:
         edit_function: "اینجا را کلیک کنید تا تابع خود را ویرایش کنید."
       NEW Course 4 Artist Functions 8_callout:
         edit_function: "اینجا را کلیک کنید تا تابع خود را ویرایش کنید."
       NEW Course 4 Artist Params 10_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه
+          ی "یک تابع بساز" را کلیک کنید.
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: "برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک
+          کرده، و سپس آنرا به تعریف عملکرد تان بکشید"
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "برای جابجایی علامت سوال طول متغیر را به اینجا بکشید"
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop:
         - here
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category:
-        - here now.
+        actions_category: جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های "کارها" حالا
+          اینجا هستند.
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1:
@@ -1036,8 +1070,8 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward:
-        - to move forward?
+        craft_callout_moveforward: "این کد برای گدازه (مواد مذاب) بررسی خواهد شد،
+          می توانید برای حرکت به جلو یک دستور اضافه کنید؟"
       Underground Iron_callout:
         craft_what_is_iron: "این آهن را استخراج کنید!"
       WebLab PS test - 1-12_callout:

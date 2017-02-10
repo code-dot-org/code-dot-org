@@ -165,23 +165,11 @@ export const ProgressDot = Radium(React.createClass({
     // also when we select dropdown from header.
     courseOverviewPage: React.PropTypes.bool,
     stageId: React.PropTypes.number,
-    status: React.PropTypes.oneOf(Object.keys(LevelStatus)),
+    status: React.PropTypes.oneOf(Object.keys(LevelStatus)).isRequired,
 
     // redux provdied
     currentLevelId: React.PropTypes.string,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
-  },
-
-  getIconForLevelStatus(levelStatus, isLocked) {
-    if (isLocked) {
-      return 'fa-lock';
-    } else if (levelStatus === LevelStatus.perfect || levelStatus === LevelStatus.review_accepted) {
-      return 'fa-check';
-    } else if (levelStatus === LevelStatus.review_rejected) {
-      return 'fa-exclamation';
-    } else {
-      return null;
-    }
   },
 
   onClick(event) {
@@ -195,25 +183,45 @@ export const ProgressDot = Radium(React.createClass({
     saveAnswersAndNavigate(href);
   },
 
+  iconClassName() {
+    const { level, status } = this.props;
+    if (status === LevelStatus.locked) {
+      return 'fa fa-lock';
+    }
+
+    if (level.kind === LevelKind.peer_review) {
+      if (status === LevelStatus.perfect ||
+          status === LevelStatus.review_accepted) {
+        return 'fa fa-check';
+      } else if (status === LevelStatus.review_rejected) {
+        return 'fa fa-exclamation';
+      } else {
+        return '';
+      }
+    }
+
+    if (level.icon) {
+      return 'fa ' + level.icon;
+    }
+    return '';
+  },
+
   render() {
-    const level = this.props.level;
-    let levelStatus = this.props.status;
+    const { level, status, courseOverviewPage, currentLevelId } = this.props;
 
-    const onCurrent = this.props.currentLevelId &&
-        ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
-        level.uid === this.props.currentLevelId);
+    const onCurrent = currentLevelId &&
+        ((level.ids && level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
+        level.uid === currentLevelId);
 
-    const isUnplugged = isNaN(level.title);
-    const showUnplugged = isUnplugged && (this.props.courseOverviewPage || onCurrent);
-    const outlineCurrent = this.props.courseOverviewPage && onCurrent;
-    const smallDot = !this.props.courseOverviewPage && !onCurrent;
-    const showLevelName = this.props.courseOverviewPage &&
+    const isUnplugged = level.kind === LevelKind.unplugged;
+    const showUnplugged = isUnplugged && (courseOverviewPage || onCurrent);
+    const outlineCurrent = courseOverviewPage && onCurrent;
+    const smallDot = !courseOverviewPage && !onCurrent;
+    const showLevelName = courseOverviewPage &&
       (level.kind === LevelKind.named_level || level.kind === LevelKind.peer_review);
     const isPeerReview = level.kind === LevelKind.peer_review;
     // Account for both the level based concept of locked, and the progress based concept.
-    const isLocked = levelStatus === LevelStatus.locked;
-    const iconForLevelStatus = (isLocked || showLevelName) && !isUnplugged &&
-      this.props.courseOverviewPage && this.getIconForLevelStatus(levelStatus, isLocked);
+    const isLocked = status === LevelStatus.locked;
 
     return (
       <a
@@ -228,32 +236,32 @@ export const ProgressDot = Radium(React.createClass({
       >
         {(level.icon && !isPeerReview) ?
           <i
-            className={`fa ${level.icon}`}
+            className={this.iconClassName()}
             style={[
               styles.dot.common,
               styles.dot.puzzle,
-              this.props.courseOverviewPage && styles.dot.overview,
+              courseOverviewPage && styles.dot.overview,
               styles.dot.icon,
               smallDot && styles.dot.icon_small,
-              levelStatus && levelStatus !== LevelStatus.not_tried && styles.dot.icon_complete,
+              status && status !== LevelStatus.not_tried && styles.dot.icon_complete,
               outlineCurrent && {textShadow: createOutline(color.level_current)}
             ]}
           /> :
           <div
-            className={`${iconForLevelStatus ? ` fa ${iconForLevelStatus}` : ''}`}
+            className={this.iconClassName()}
             style={[
               styles.dot.common,
               isLocked ? styles.dot.lockedReview : styles.dot.puzzle,
-              this.props.courseOverviewPage && styles.dot.overview,
+              courseOverviewPage && styles.dot.overview,
               smallDot && styles.dot.small,
               level.kind === LevelKind.assessment && styles.dot.assessment,
               outlineCurrent && {borderColor: color.level_current},
               showUnplugged && styles.dot.unplugged,
-              styles.status[levelStatus || LevelStatus.not_tried],
+              styles.status[status || LevelStatus.not_tried],
             ]}
           >
             <BubbleInterior
-              showingIcon={!!iconForLevelStatus}
+              showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
               title={level.title || undefined}
             />
