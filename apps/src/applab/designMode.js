@@ -249,7 +249,19 @@ designMode.updateProperty = function (element, name, value) {
       element.style.textAlign = value;
       break;
     case 'icon-color':
+      // This property name is used when changing the icon color in design mode
+
+
+        debugger;
       element.setAttribute('data-icon-color', value);
+    //  break;
+    //case 'iconColor':
+      // This property name is used when changing the icon color programatically
+      var imageUrl = element.getAttribute('data-canonical-image-url');
+      if (ICON_PREFIX_REGEX.test(imageUrl)) {
+        element.style.backgroundImage = 'url(' + assetPrefix.renderIconToString(imageUrl, element) + ')';
+      }
+
       break;
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
