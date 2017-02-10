@@ -290,7 +290,7 @@ export default {
                   while (applabCSS.indexOf(cssURLRule) >= 0) {
                     applabCSS = applabCSS.replace(
                       cssURLRule,
-                      `url("applab/assets${url}")`
+                      `url("assets${url}")`
                     );
                   }
                   return url;

@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import { levelType } from './progressTypes';
 
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
+import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 const styles = {
   table: {
@@ -107,7 +107,7 @@ const ProgressLevelSet = React.createClass({
         <tbody>
           <tr>
             <td>
-              <a href={url}>
+              <a href={multiLevelStep ? undefined : url}>
                 <div style={{...styles.stepButton, ...BUBBLE_COLORS[status]}}>
                   <FontAwesome icon={icon}/>
                   <div style={{...styles.buttonText, ...styles.text}}>

@@ -15,6 +15,7 @@ Dashboard::Application.routes.draw do
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
+  get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -347,6 +348,9 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+
+    get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
+    get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
