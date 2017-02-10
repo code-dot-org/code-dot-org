@@ -35,6 +35,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons');
 var CodeWritten = require('./templates/feedback/CodeWritten');
 var GeneratedCode = require('./templates/feedback/GeneratedCode');
+var authoredHintUtils = require('./authoredHintUtils');
 
 import experiments from './util/experiments';
 import AchievementDialog from './templates/AchievementDialog';
@@ -193,12 +194,14 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
+    const hintsUsed = options.response.hints_used +
+      authoredHintUtils.currentOpenedHintCount(options.response.level_id);
     ReactDOM.render(
       <AchievementDialog
         puzzleNumber={options.level.puzzle_number || 0}
         idealBlocks={this.studioApp_.IDEAL_BLOCK_NUM}
         actualBlocks={this.getNumCountableBlocks()}
-        hintsUsed={options.response.hints_used}
+        hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={options.onContinue}
       />, container);
