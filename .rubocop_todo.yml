@@ -121,13 +121,6 @@ Style/LeadingCommentSpace:
 Style/MethodMissing:
   Enabled: false
 
-# Offense count: 16
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: symmetrical, new_line, same_line
-Style/MultilineHashBraceLayout:
-  Enabled: false
-
 # Offense count: 18
 # Cop supports --auto-correct.
 Style/MultilineIfModifier:
