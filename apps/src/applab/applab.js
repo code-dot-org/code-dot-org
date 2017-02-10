@@ -46,6 +46,7 @@ const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
 import BoardController from '../lib/kits/maker/BoardController';
+import {injectBoardController} from '../lib/kits/maker/commands';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {
   getContainedLevelResultInfo,
@@ -147,6 +148,7 @@ function loadLevel() {
 
   if (level.makerlabEnabled) {
     Applab.makerController = new BoardController();
+    injectBoardController(Applab.makerController);
   }
 }
 

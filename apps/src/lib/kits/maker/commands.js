@@ -3,7 +3,11 @@ import {
   apiValidateType,
   apiValidateTypeAndRange
 } from '../../util/javascriptMode';
-/* global Applab */ // TODO (bbuchanan): Inject Applab or makerController.
+
+let globalBoardController;
+export function injectBoardController(bc) {
+  globalBoardController = bc;
+}
 
 /**
  * @param {string|number} opts.pin
@@ -21,7 +25,7 @@ export function pinMode(opts) {
     servo: 4
   };
 
-  Applab.makerController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
+  globalBoardController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
 }
 
 /**
@@ -32,7 +36,7 @@ export function digitalWrite(opts) {
   apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
 
-  Applab.makerController.digitalWrite(opts.pin, opts.value);
+  globalBoardController.digitalWrite(opts.pin, opts.value);
 }
 
 /**
@@ -41,7 +45,7 @@ export function digitalWrite(opts) {
 export function digitalRead(opts) {
   apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
 
-  return Applab.makerController.digitalRead(opts.pin, opts.callback);
+  return globalBoardController.digitalRead(opts.pin, opts.callback);
 }
 
 /**
@@ -52,7 +56,7 @@ export function analogWrite(opts) {
   apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
 
-  Applab.makerController.analogWrite(opts.pin, opts.value);
+  globalBoardController.analogWrite(opts.pin, opts.value);
 }
 
 /**
@@ -61,7 +65,7 @@ export function analogWrite(opts) {
 export function analogRead(opts) {
   apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
 
-  return Applab.makerController.analogRead(opts.pin, opts.callback);
+  return globalBoardController.analogRead(opts.pin, opts.callback);
 }
 
 /**
@@ -72,7 +76,7 @@ export function analogRead(opts) {
  */
 export function onBoardEvent(opts) {
   // TODO (bbuchanan): Validate arguments?
-  return Applab.makerController.onBoardEvent(opts.component, opts.event, opts.callback);
+  return globalBoardController.onBoardEvent(opts.component, opts.event, opts.callback);
 }
 
 /**
