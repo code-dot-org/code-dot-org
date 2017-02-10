@@ -5,7 +5,7 @@ import commonMsg from '@cdo/locale';
 
 const styles = {
   table: {
-    width: 971,
+    width: '100%',
   },
   cell: {
     border: '1px solid gray',

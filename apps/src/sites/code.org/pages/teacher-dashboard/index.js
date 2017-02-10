@@ -2,8 +2,6 @@
  * Entry point for teacher-dashboard/index.js bundle
  */
 
-/* globals window */
-
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
