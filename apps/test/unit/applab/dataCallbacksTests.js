@@ -1,7 +1,7 @@
 import {assert} from '../../util/configuredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import sinon from 'sinon';
-import {injectErrorHandler} from '@cdo/apps/javascriptMode';
+import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();

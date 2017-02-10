@@ -27,7 +27,8 @@ export const LevelKind = makeEnum(
   'assessment',
   'named_level',
   'puzzle',
-  'unplugged'
+  'unplugged',
+  'level'
 );
 
 /**

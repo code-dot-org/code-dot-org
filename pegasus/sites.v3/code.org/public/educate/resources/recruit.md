@@ -18,7 +18,7 @@ video_player: true
 <a id="videos"></a>
 
 ## Show these videos to students.
-### **If you’re teaching CS Principles or CS Discoveries:**
+### **If you’re teaching [CS Principles](/csp) or [CS Discoveries](/csd):**
 
 Hear from current students as they talk about the topics covered in each course and why your students should sign up. 
 
@@ -70,19 +70,26 @@ Hear from current students as they talk about the topics covered in each course 
 
 <p style="clear:both">&nbsp;</p>
 
-Find more videos to inspire your students at code.org/inspire, as well as content you can use to inspire more girls to take computer science.
+Find more videos to inspire your students at [code.org/inspire](/inspire), as well as content you can use to [inspire more girls](/girls) to take computer science.
 
 <a id="counselors"></a>
 
 ## Your counselors can help.
 * Make sure the counselors at your school know what your school’s computer science courses are all about and who they’re for — check out the program brochures below. 
+
+</br>
+</br>
+
 * For ideas on how to talk to stakeholders like counselors, head to [code.org/pitch](/pitch). 
 
-Ask your counselor to give these flyers to students. Let them know these are intro courses for any student.
+### Let counselors know these are intro courses for *any* student.
 
-[CS Discoveries brochure](https://code.org/files/programs/CSD_1-pager_final.pdf) | [CS Principles brochure](https://code.org/files/programs/CSP_1-pager_final.pdf)
+* **Student flyers:** [CS Discoveries](/files/programs/cs-discoveries-student-flyer) | [CS Principles](/files/programs/cs-principles-student-flyer)
 
-[CS in Algebra](/files/CSinAlgebra_one_pager.pdf) | [CS in Science](/files/CSinScience_one_pager.pdf) | [Exploring Computer Science](/files/ECS_one_pager.pdf)
+</br> 
+</br>
+
+* **Curriculum brochures:** [CS Discoveries brochure](https://code.org/files/programs/CSD_1-pager_final.pdf) | [CS Principles brochure](https://code.org/files/programs/CSP_1-pager_final.pdf) | [CS in Algebra](/files/CSinAlgebra_one_pager.pdf) | [CS in Science](/files/CSinScience_one_pager.pdf) | [Exploring Computer Science](/files/ECS_one_pager.pdf)
 
 <a id="posters"></a>
 

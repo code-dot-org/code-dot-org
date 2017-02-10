@@ -38,7 +38,7 @@ const stageData = [
         ids: [2106],
         activeId: 2106,
         position: 1,
-        kind: "unplugged",
+        kind: LevelKind.unplugged,
         icon: null,
         title: "Unplugged Activity",
         url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
@@ -48,7 +48,7 @@ const stageData = [
           ids: [323],
           activeId: 323,
           position: 2,
-          kind: "assessment",
+          kind: LevelKind.assessment,
           icon: null,
           title: 1,
           url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2"
@@ -57,7 +57,7 @@ const stageData = [
           ids: [322],
           activeId: 322,
           position: 3,
-          kind: "assessment",
+          kind: LevelKind.assessment,
           icon: null,
           title: 2,
           url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
@@ -84,7 +84,7 @@ const stageData = [
         ids: [330],
         activeId: 330,
         position: 1,
-        kind: "puzzle",
+        kind: LevelKind.puzzle,
         icon: null,
         title: 1,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
@@ -93,7 +93,7 @@ const stageData = [
         ids: [339],
         activeId: 339,
         position: 2,
-        kind: "puzzle",
+        kind: LevelKind.puzzle,
         icon: null,
         title: 2,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
@@ -101,7 +101,7 @@ const stageData = [
         ids: [341],
         activeId: 341,
         position: 3,
-        kind: "puzzle",
+        kind: LevelKind.puzzle,
         icon: null,
         title: 3,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
@@ -357,7 +357,7 @@ describe('progressReduxTest', () => {
       levels: [
         {
           ids: [0],
-          kind: "peer_review",
+          kind: LevelKind.peer_review,
           title: "",
           url: "",
           name: "Reviews unavailable at this time",
@@ -366,7 +366,7 @@ describe('progressReduxTest', () => {
         },
         {
           ids: [1],
-          kind: "peer_review",
+          kind: LevelKind.peer_review,
           title: "",
           url: "",
           name: "Reviews unavailable at this time",
@@ -414,7 +414,7 @@ describe('progressReduxTest', () => {
 
       assert.deepEqual(peerReviewStage.levels[0], {
         ids: [0],
-        kind: "peer_review",
+        kind: LevelKind.peer_review,
         title: "",
         url: "",
         name: "Reviews unavailable at this time",
@@ -442,7 +442,7 @@ describe('progressReduxTest', () => {
       // First assert about previous state, to make sure that we didn't mutate it
       assert.deepEqual(state.peerReviewStage.levels[0], {
         ids: [0],
-        kind: "peer_review",
+        kind: LevelKind.peer_review,
         title: "",
         url: "",
         name: "Reviews unavailable at this time",
@@ -458,7 +458,7 @@ describe('progressReduxTest', () => {
         // TODO: Seems strange to have an fa-lock icon even tho we're not locked.
         icon: 'fa-lock',
         locked: false,
-        kind: "peer_review",
+        kind: LevelKind.peer_review,
         result: TestResults.UNSUBMITTED_ATTEMPT,
         title: "",
         url: '/peer_reviews/13',
