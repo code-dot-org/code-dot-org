@@ -62,6 +62,14 @@ describe('initializeSoundSensor()', () => {
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);
   });
+
+  it('gets sensor methods', function () {
+    const board = newBoard();
+    const sensor = initializeSoundSensor(board);
+    expect(sensor).to.haveOwnProperty('start');
+    expect(sensor).to.haveOwnProperty('getAveragedValue');
+    expect(sensor).to.haveOwnProperty('setScale');
+  });
 });
 
 describe('initializeLightSensor()', () => {
@@ -72,6 +80,14 @@ describe('initializeLightSensor()', () => {
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);
   });
+
+  it('gets sensor methods', function () {
+    const board = newBoard();
+    const sensor = initializeLightSensor(board);
+    expect(sensor).to.haveOwnProperty('start');
+    expect(sensor).to.haveOwnProperty('getAveragedValue');
+    expect(sensor).to.haveOwnProperty('setScale');
+  });
 });
 
 describe('initializeThermometer()', () => {
@@ -81,6 +97,14 @@ describe('initializeThermometer()', () => {
     expect(thermometer).to.be.an.instanceOf(five.Thermometer);
     // Doesn't use sysex at first
     expect(board.io.sysexCommand.callCount).to.equal(0);
+  });
+
+  it('gets sensor methods', function () {
+    const board = newBoard();
+    const sensor = initializeThermometer(board);
+    expect(sensor).to.haveOwnProperty('start');
+    expect(sensor).to.haveOwnProperty('getAveragedValue');
+    expect(sensor).to.haveOwnProperty('setScale');
   });
 });
 
