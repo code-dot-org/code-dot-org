@@ -89,7 +89,7 @@ export function apiValidateType(opts, funcName, varName, varValue, expectedType,
 }
 
 export function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                        expectedType, minValue, maxValue, opt) {
+    expectedType, minValue, maxValue, opt) {
   const validatedTypeKey = 'validated_type_' + varName;
   const validatedRangeKey = 'validated_range_' + varName;
   apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
