@@ -35,7 +35,7 @@ class SectionTest < ActiveSupport::TestCase
 
     student_section = Section.create(user: student, name: "a section")
 
-    assert !student_section.persisted?
+    refute student_section.persisted?
     assert_equal ["User must be a teacher"], student_section.errors.full_messages
   end
 
@@ -55,7 +55,7 @@ class SectionTest < ActiveSupport::TestCase
 
     section = follower.section
 
-    assert !section.destroy
+    refute section.destroy
     assert Section.exists?(section.id)
   end
 
@@ -64,7 +64,7 @@ class SectionTest < ActiveSupport::TestCase
 
     assert section.destroy
 
-    assert !Section.exists?(section.id)
+    refute Section.exists?(section.id)
   end
 
   test 'add_student adds student to section' do
@@ -160,5 +160,46 @@ class SectionTest < ActiveSupport::TestCase
 
     refute Section.new.workshop_section?
     refute Section.new(section_type: 'not_a_workshop').workshop_section?
+  end
+
+  test 'name safe students' do
+    def verify(actual, expected)
+      section = create :section
+      actual.each do |name|
+        section.add_student(create(:student, name: name))
+      end
+      result = section.name_safe_students.map(&:name)
+      assert_equal expected, result
+    end
+
+    # uses first names if possible
+    verify(["Laura Ferno", "Natalie Ferno"], ["Laura", "Natalie"])
+
+    # uses the minimum characters from the last name if necessary
+    verify(["John Smith", "John Stamos"], ["John Sm", "John St"])
+
+    # Handles a variety of combinations
+    verify(
+      ["Dick Smith", "Dick Tracer", "Harry Smith", "Tom Clancy", "Tom Saywer", "Tom Smith"],
+      ["Dick S", "Dick T", "Harry", "Tom C", "Tom Sa", "Tom Sm"]
+    )
+
+    # Handles names that can't be nicely split into first and last, or
+    # names which use unusual separating characters
+    verify(
+      ["Cher", "J'onn J'onzz", "John\tDoe", "Mister\tT"],
+      ["Cher", "J'onn J'onzz", "John", "Mister T"]
+    )
+
+    # Handles abbreviated first names by defaulting back to the "full"
+    # name. Abbreviations are a single letter or a single letter
+    # followed by a period; two-letter names are still allowed
+    verify(
+      ["Bo Burnham", "J. Crew", "T Bone"],
+      ["Bo", "J. Crew", "T Bone"]
+    )
+
+    # Handles names that have other names as their strict subset
+    verify(['Thor', 'Thor Odinson'], ['Thor', 'Thor O'])
   end
 end

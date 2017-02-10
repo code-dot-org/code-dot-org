@@ -80,26 +80,32 @@ end
 
 # Define columns - each maps to a lambda that filters builds
 columns = {
-  'Total' => -> (builds) {builds},
-  'Pipeline' => -> (builds) {builds.select {|i| %w(staging test production).include?(i[:branch])}},
-  'Branch' => -> (builds) {builds.reject {|i| %w(staging test production).include?(i[:branch])}}
+  'Total' => ->(builds) {builds},
+  'Pipeline' => ->(builds) {builds.select {|i| %w(staging test production).include?(i[:branch])}},
+  'Branch' => ->(builds) {builds.reject {|i| %w(staging test production).include?(i[:branch])}}
 }
 options[:custom_columns].each do |branches|
-  columns[branches.join(',')] = -> (builds) {builds.select{|i| branches.include?(i[:branch])}}
+  columns[branches.join(',')] = ->(builds) {builds.select{|i| branches.include?(i[:branch])}}
 end
 
 # Compute map of stats for each date
 stats_by_date = builds_by_date.hmap do |date, build_infos_for_date|
-  [date, columns.hmap do |name, column|
-    builds = column.call build_infos_for_date
-    succeeded_builds = builds.select {|i| i[:succeeded]}.count
-    failed_builds = builds.select {|i| i[:failed]}.count
-    [name, {
-        total_builds: succeeded_builds + failed_builds,
-        failed_builds: failed_builds,
-        failure_rate: Float(failed_builds) / (succeeded_builds + failed_builds)
-    }]
-  end]
+  [
+    date,
+    columns.hmap do |name, column|
+      builds = column.call build_infos_for_date
+      succeeded_builds = builds.select {|i| i[:succeeded]}.count
+      failed_builds = builds.select {|i| i[:failed]}.count
+      [
+        name,
+        {
+          total_builds: succeeded_builds + failed_builds,
+          failed_builds: failed_builds,
+          failure_rate: Float(failed_builds) / (succeeded_builds + failed_builds)
+        }
+      ]
+    end
+  ]
 end
 
 # Print build stats
@@ -112,8 +118,11 @@ if options[:output_format] == 'csv'
 else
   puts format("%-10s#{' %16s' * columns.size}", 'Date', *columns.keys.map {|k| k[0, 14]})
   stats_by_date.each do |date, stats|
-    puts format("%-10s#{'  %7s = %5.3f' * columns.size}",
-           date, *stats.map {|_, v| [format("%s/%s", v[:failed_builds], v[:total_builds]), v[:failure_rate].round(3)]}.flatten)
+    puts format(
+      "%-10s#{'  %7s = %5.3f' * columns.size}",
+      date,
+      *stats.map {|_, v| [format("%s/%s", v[:failed_builds], v[:total_builds]), v[:failure_rate].round(3)]}.flatten
+    )
   end
 end
 

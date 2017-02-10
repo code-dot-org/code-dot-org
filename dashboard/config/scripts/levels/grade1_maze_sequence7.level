@@ -26,7 +26,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you're stuck, try adding one block at a time until you solve the puzzle.\",\r\n  \"hint_id\": \"grade1_maze_sequence7a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're stuck, try adding one block at a time until you solve the puzzle.\",\"hint_id\":\"grade1_maze_sequence7a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ced8621269fe40dca4a7c2d18b4d9306/grade1_maze_sequence7.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

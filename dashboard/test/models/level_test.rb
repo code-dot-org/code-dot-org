@@ -387,6 +387,36 @@ EOS
     assert_nil level.examples
   end
 
+  test 'weblab examples' do
+    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+
+    level = Weblab.create(name: 'weblab_with_example')
+    level.examples = ['xxxxxx', 'yyyyyy']
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # this property is encrypted, not plaintext
+    assert_nil level.properties['examples']
+    assert level.properties['encrypted_examples']
+
+    # take out nils and empty strings
+    level.examples = ['xxxxxx', nil, "", 'yyyyyy', ""]
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # does not crash if decryption is busted
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    assert_equal nil, level.examples
+  end
+
   test 'cached_find' do
     level1 = Script.twenty_hour_script.script_levels[0].level
     cache_level1 = Level.cache_find(level1.id)
@@ -409,9 +439,9 @@ EOS
 
     levels = Level.where_we_want_to_calculate_ideal_level_source
 
-    assert !levels.include?(match_level)
-    assert !levels.include?(level_with_ideal_level_source_already)
-    assert !levels.include?(freeplay_artist)
+    refute levels.include?(match_level)
+    refute levels.include?(level_with_ideal_level_source_already)
+    refute levels.include?(freeplay_artist)
     assert levels.include?(regular_artist)
   end
 

@@ -45,8 +45,8 @@ class DslTest < ActiveSupport::TestCase
     }
 
     i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stage' => {
-        'Stage1' => 'Stage1',
-        'Stage2' => 'Stage2'
+      'Stage1' => 'Stage1',
+      'Stage2' => 'Stage2'
     }}}}}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
@@ -136,6 +136,7 @@ DSL
     stage2 = create(:stage, name: 'Stage2', script: script)
     input_dsl = <<DSL
 name 'Test question'
+display_name 'Test override question'
 question 'Question text'
 answer 'answer 1'
 answer 'answer 2', weight: 2, stage_name: '#{stage1.name}'
@@ -146,6 +147,7 @@ DSL
     expected = {
       name: 'Test question',
       properties: {
+        display_name: 'Test override question',
         options: {},
         questions: [{text: 'Question text'}],
         answers: [

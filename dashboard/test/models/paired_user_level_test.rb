@@ -36,10 +36,12 @@ class PairedUserLevelTest < ActiveSupport::TestCase
   test 'pairs filters mix of driver, navigators, and non-paired' do
     assert_equal(
       [@nav_level_1.id, @driver_level_1.id, @nav_level_2.id, @driver_level_2.id],
-      PairedUserLevel.pairs([
-        @nav_level_1.id, @driver_level_1.id, @nav_level_2.id, @driver_level_2.id,
-        @nonpaired_level_3.id, @nonpaired_level_4.id
-      ]).sort
+      PairedUserLevel.pairs(
+        [
+          @nav_level_1.id, @driver_level_1.id, @nav_level_2.id, @driver_level_2.id,
+          @nonpaired_level_3.id, @nonpaired_level_4.id
+        ]
+      ).sort
     )
   end
 end

@@ -143,7 +143,7 @@ module Ops
       assert_equal dc, @district.contact
 
       # old district contact is no longer a district contact
-      assert !old_district_contact.district_contact?
+      refute old_district_contact.district_contact?
     end
 
     test 'assigning district contact to district upgrades existing user' do
@@ -151,7 +151,7 @@ module Ops
 
       dc = create :teacher, email: 'existing@teacher.xx'
       assert dc.teacher?
-      assert !dc.district_contact?
+      refute dc.district_contact?
 
       assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
       assert_does_not_create(User) do
@@ -174,7 +174,7 @@ module Ops
       assert_equal dc, @district.contact
 
       # old district contact is no longer a district contact
-      assert !old_district_contact.district_contact?
+      refute old_district_contact.district_contact?
     end
 
     test 'delete district' do

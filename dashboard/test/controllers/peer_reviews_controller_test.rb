@@ -9,12 +9,14 @@ class PeerReviewsControllerTest < ActionController::TestCase
     level = create :free_response
     level.update(submittable: true, peer_reviewable: true)
 
-    @script_level = create :script_level, levels: [level]
+    learning_module = create :plc_learning_module
+
+    @script_level = create :script_level, levels: [level], stage: learning_module.stage
     @script = @script_level.script
     level_source = create :level_source, data: 'My submitted answer'
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
     User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
     @peer_review = PeerReview.first
-    PeerReview.where.not(id: @peer_review.id).destroy_all
   end
 
   test 'non admins cannot access index' do
@@ -59,6 +61,23 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     get :pull_review, params: {script_id: @script.name}
     assert_redirected_to script_path(@script)
+  end
+
+  test 'Submitting a review redirects to the index if user is a plc reviewer' do
+    plc_reviewer = create :teacher
+    plc_reviewer.permission = 'plc_reviewer'
+
+    sign_out(@user)
+    sign_in(plc_reviewer)
+
+    @peer_review.update(reviewer_id: plc_reviewer.id)
+    post :update, params: {
+      id: @peer_review.id,
+      peer_review: {status: 'accepted', data: 'This is great'}
+    }
+    @peer_review.reload
+    assert @peer_review.from_instructor
+    assert_redirected_to peer_reviews_path
   end
 
   test 'Submitting a review redirects to the script view' do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170126175815) do
+ActiveRecord::Schema.define(version: 20170206173655) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -184,7 +184,7 @@ ActiveRecord::Schema.define(version: 20170126175815) do
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
-    t.integer  "activity_id",                        null: false
+    t.integer  "activity_id"
     t.integer  "user_level_id"
     t.integer  "level_source_id"
     t.datetime "created_at"
@@ -194,7 +194,7 @@ ActiveRecord::Schema.define(version: 20170126175815) do
     t.index ["activity_id"], name: "index_gallery_activities_on_activity_id", using: :btree
     t.index ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
     t.index ["level_source_id"], name: "index_gallery_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", unique: true, using: :btree
+    t.index ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", using: :btree
     t.index ["user_id", "level_source_id"], name: "index_gallery_activities_on_user_id_and_level_source_id", using: :btree
     t.index ["user_level_id"], name: "index_gallery_activities_on_user_level_id", using: :btree
   end
@@ -704,6 +704,14 @@ ActiveRecord::Schema.define(version: 20170126175815) do
     t.index ["workshop_id"], name: "index_segments_on_workshop_id", using: :btree
   end
 
+  create_table "sign_ins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",       null: false
+    t.datetime "sign_in_at",    null: false
+    t.integer  "sign_in_count", null: false
+    t.index ["sign_in_at"], name: "index_sign_ins_on_sign_in_at", using: :btree
+    t.index ["user_id"], name: "index_sign_ins_on_user_id", using: :btree
+  end
+
   create_table "stages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name",              null: false
     t.integer  "absolute_position"
@@ -876,7 +884,7 @@ ActiveRecord::Schema.define(version: 20170126175815) do
     t.integer  "conditionals_d4_count",          default: 0
     t.integer  "conditionals_d5_count",          default: 0
     t.datetime "basic_proficiency_at"
-    t.index ["user_id"], name: "index_user_proficiencies_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_user_proficiencies_on_user_id", unique: true, using: :btree
   end
 
   create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

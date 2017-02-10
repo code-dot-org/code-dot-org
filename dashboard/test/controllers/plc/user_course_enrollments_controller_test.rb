@@ -136,7 +136,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_select '.course_title', 'Test Course'
 
     @controller = Plc::UserCourseEnrollmentsController.new
-    get :index, course: 'other-course'
+    get :index, params: {course: 'other-course'}
     assert_select '.course_title', 'Other Course'
 
     @controller = Plc::UserCourseEnrollmentsController.new

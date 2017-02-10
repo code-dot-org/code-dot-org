@@ -39,6 +39,8 @@ class UserPermission < ActiveRecord::Base
     # Grants access to managing professional development workshops and
     # professional development workshop attendance.
     WORKSHOP_ORGANIZER = 'workshop_organizer'.freeze,
+    # Grants ability to conduct peer reviews for professional learning courses
+    PLC_REVIEWER = 'plc_reviewer'.freeze
   ].freeze
 
   validates_inclusion_of :permission, in: VALID_PERMISSIONS
@@ -63,7 +65,7 @@ class UserPermission < ActiveRecord::Base
     # In particular, we do not log for adhoc or test environments.
     return unless [:staging, :levelbuilder, :production].include? rack_env
 
-    HipChat.log 'infra-security',
+    HipChat.message 'infra-security',
       'Deleting UserPermission: '\
         "environment: #{rack_env}, "\
         "user ID: #{self.user.id}, "\

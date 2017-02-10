@@ -14,12 +14,14 @@ require 'set'
 class XhrProxyController < ApplicationController
   include ProxyHelper
 
-  ALLOWED_CONTENT_TYPES = Set.new(%w(
-    application/json
-    text/javascript
-    text/json
-    text/plain
-  ))
+  ALLOWED_CONTENT_TYPES = Set.new(
+    %w(
+      application/json
+      text/javascript
+      text/json
+      text/plain
+    )
+  )
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
@@ -65,9 +67,9 @@ class XhrProxyController < ApplicationController
     end
 
     event_details = {
-        channel_id: channel_id,
-        owner_storage_id: owner_storage_id,
-        url: url
+      channel_id: channel_id,
+      owner_storage_id: owner_storage_id,
+      url: url
     }
     NewRelic::Agent.record_custom_event("XhrProxyControllerRequest", event_details) if CDO.newrelic_logging
     Rails.logger.info "XhrProxyControllerRequest #{event_details}"
@@ -77,6 +79,7 @@ class XhrProxyController < ApplicationController
       allowed_content_types: ALLOWED_CONTENT_TYPES,
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
-      infer_content_type: false)
+      infer_content_type: false
+    )
   end
 end

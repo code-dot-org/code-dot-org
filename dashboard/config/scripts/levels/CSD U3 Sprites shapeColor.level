@@ -18,9 +18,10 @@
       },
       "x": null,
       "y": null,
+      "color": null,
       "shapeColor": null,
       "background": null,
-      "color": null
+      "assign_x": null
     },
     "show_d_pad": "false",
     "edit_code": true,
@@ -56,6 +57,7 @@
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
     "encrypted_examples": "7f95ypngQgMGDd0bcQgYwhEaPpFpAT4n5RYwk1DhLusT1yMN8+UQwrO+ANwg\n2yQh\n",
+    "hide_share_and_remix": "false",
     "contained_level_names": null
   },
   "published": true,

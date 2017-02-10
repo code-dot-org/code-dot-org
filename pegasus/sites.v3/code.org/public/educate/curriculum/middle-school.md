@@ -57,7 +57,7 @@ Computer Science in Science
 
 <i>Note: Starting in the 2017-2018 school year, Code.org will not be offering professional development for this course.</i>
 
- </div>
+</div>
 
 [col-50]
 

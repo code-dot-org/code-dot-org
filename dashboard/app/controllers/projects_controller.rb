@@ -78,7 +78,8 @@ class ProjectsController < ApplicationController
         name: 'Untitled Project',
         useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
-      })
+      }
+    )
   end
 
   def show
@@ -144,7 +145,8 @@ class ProjectsController < ApplicationController
       StorageApps.new(storage_id('user')),
       nil,
       src_channel_id,
-      use_firebase)
+      use_firebase
+    )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id
@@ -155,6 +157,18 @@ class ProjectsController < ApplicationController
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
+  end
+
+  # GET /projects/section/:section_id
+  #
+  # displays a UI component showing the list of projects belonging to students
+  # in the specified section. This is designed to be embedded in another page
+  # as an iframe.
+  def section_projects
+    view_options(
+      no_footer: true,
+      no_header: true,
+    )
   end
 
   private

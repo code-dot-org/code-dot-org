@@ -93,7 +93,8 @@ function validateReport(report) {
       case 'fallbackResponse':
         if (!isContainedLevel && ['free_response', 'multi', 'level_group',
             'text_match', 'match', 'contract_match', 'odometer',
-            'text_compression', 'pixelation', 'external'].includes(report.app)) {
+            'text_compression', 'pixelation', 'external', 'frequency_analysis',
+            'unplug', 'standalone_video'].includes(report.app)) {
           // In this case, we end up with json for an object. It seems likely
           // that we could/should just pass around the object instead.
           validateType('fallbackResponse', value, 'string');

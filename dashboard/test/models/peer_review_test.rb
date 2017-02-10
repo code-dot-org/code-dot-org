@@ -3,6 +3,7 @@ require 'test_helper'
 class PeerReviewTest < ActiveSupport::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    @learning_module = create :plc_learning_module
 
     @level = FreeResponse.find_or_create_by!(
       game: Game.free_response,
@@ -14,12 +15,16 @@ class PeerReviewTest < ActiveSupport::TestCase
     @level.peer_reviewable = 'true'
     @level.save!
 
-    @script_level = create :script_level, levels: [@level]
+    @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
     @script = @script_level.script
+
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
+
     @user = create :user
   end
 
   def track_progress(level_source_id, user = @user)
+    # this is what creates the peer review objects
     User.track_level_progress_sync(
       user_id: user.id,
       level_id: @script_level.level_id,
@@ -35,6 +40,15 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_source = create :level_source, data: 'My submitted answer'
 
     assert_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
+      track_progress level_source.id
+    end
+  end
+
+  test 'submitting a peer reviewed level when I am not enrolled in the module should not create PeerReview objects' do
+    level_source = create :level_source, data: 'My submitted answer'
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(false)
+
+    assert_no_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
       track_progress level_source.id
     end
   end
@@ -65,6 +79,24 @@ class PeerReviewTest < ActiveSupport::TestCase
     initial = PeerReview.count
     track_progress updated_level_source.id
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION - 1, PeerReview.count - initial
+  end
+
+  test 'instructor review should mark as accepted and delete outstanding unfilled reviews' do
+    level_source = create :level_source, data: 'My submitted answer'
+
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
+    track_progress level_source.id
+    review1 = PeerReview.offset(1).last
+    review2 = PeerReview.last
+
+    user_level = UserLevel.find_by(user: review1.submitter, level: review1.level, script: review1.script)
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
+
+    review1.update! reviewer: create(:user), status: 'accepted', from_instructor: true
+    refute PeerReview.where(id: review2.id).any?
+
+    user_level.reload
+    assert_equal Activity::REVIEW_ACCEPTED_RESULT, user_level.best_result
   end
 
   test 'approving both reviews should mark the corresponding UserLevel as accepted' do
@@ -235,27 +267,27 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     #Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
     expected_reviews = [
-        {
-            id: first_review.id,
-            status: 'perfect',
-            name: I18n.t('peer_review.link_to_submitted_review'),
-            result: ActivityConstants::BEST_PASS_RESULT,
-            locked: false
-        },
-        {
-            id: second_review.id,
-            status: 'not_started',
-            name: I18n.t('peer_review.review_in_progress'),
-            result: ActivityConstants::UNSUBMITTED_RESULT,
-            locked: false
-        },
-        {
-            status: 'not_started',
-            name: 'Review a new submission',
-            result: ActivityConstants::UNSUBMITTED_RESULT,
-            icon: '',
-            locked: false
-        }
+      {
+        id: first_review.id,
+        status: 'perfect',
+        name: I18n.t('peer_review.link_to_submitted_review'),
+        result: ActivityConstants::BEST_PASS_RESULT,
+        locked: false
+      },
+      {
+        id: second_review.id,
+        status: 'not_started',
+        name: I18n.t('peer_review.review_in_progress'),
+        result: ActivityConstants::UNSUBMITTED_RESULT,
+        locked: false
+      },
+      {
+        status: 'not_started',
+        name: 'Review a new submission',
+        result: ActivityConstants::UNSUBMITTED_RESULT,
+        icon: '',
+        locked: false
+      }
     ]
 
     assert_equal expected_reviews, PeerReview.get_peer_review_summaries(@user, @script)

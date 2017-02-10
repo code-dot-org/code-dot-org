@@ -84,6 +84,10 @@ class PeerReview < ActiveRecord::Base
     # Instructor feedback should override all other feedback
     if from_instructor
       user_level.update!(best_result: accepted? ? Activity::REVIEW_ACCEPTED_RESULT : Activity::REVIEW_REJECTED_RESULT)
+
+      # There's no need for the outstanding peer reviews to stick around because the instructor has reviewed them. So
+      # they are safe to delete.
+      PeerReview.where(submitter: submitter, reviewer: nil, status: nil, level: level).destroy_all
       return
     end
 
@@ -171,11 +175,11 @@ class PeerReview < ActiveRecord::Base
             reviews.size < script.peer_reviews_to_complete &&
             PeerReview.get_potential_reviews(script, user).any?
           reviews << {
-              status: 'not_started',
-              name: I18n.t('peer_review.review_new_submission'),
-              result: ActivityConstants::UNSUBMITTED_RESULT,
-              icon: '',
-              locked: false
+            status: 'not_started',
+            name: I18n.t('peer_review.review_new_submission'),
+            result: ActivityConstants::UNSUBMITTED_RESULT,
+            icon: '',
+            locked: false
           }
         end
       end

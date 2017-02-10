@@ -5,6 +5,7 @@ import _ from 'lodash';
 import { makeEnum } from '../utils';
 import {
   LevelStatus,
+  LevelKind,
   mergeActivityResult,
   activityCssClass
 } from './activityUtils';
@@ -19,6 +20,7 @@ const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
 const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
+const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -28,18 +30,19 @@ const initialState = {
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
+  stages: null,
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
   levelProgress: {},
   focusAreaPositions: [],
-  stages: null,
   peerReviewStage: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
   postMilestoneDisabled: false,
-  isHocScript: null
+  isHocScript: null,
+  isSummaryView: true
 };
 
 /**
@@ -71,25 +74,13 @@ export default function reducer(state = initialState, action) {
       ...action.levelProgress
     });
     combinedLevels.forEach(key => {
-      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
+      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key],
+        action.levelProgress[key]);
     });
 
     return {
       ...state,
       levelProgress: newLevelProgress,
-      stages: state.stages.map(stage => ({
-        ...stage,
-        levels: stage.levels.map((level, index) => {
-          const lockedStage = stage.lockable &&
-            level.ids.every(id => newLevelProgress[id] === TestResults.LOCKED_RESULT);
-
-          const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
-          return {
-            ...level,
-            status: lockedStage ? LevelStatus.locked : activityCssClass(newLevelProgress[id])
-          };
-        })
-      }))
     };
   }
 
@@ -139,6 +130,13 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isHocScript: action.isHocScript
+    };
+  }
+
+  if (action.type === SET_IS_SUMMARY_VIEW) {
+    return {
+      ...state,
+      isSummaryView: action.isSummaryView
     };
   }
 
@@ -211,6 +209,7 @@ export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
 export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
 export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
+export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, isSummaryView });
 
 // Selectors
 
@@ -218,16 +217,116 @@ export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocSc
 export const hasLockableStages = state => state.stages.some(stage => stage.lockable);
 
 export const lessonNames = state => state.stages.map(stage => stage.name);
+export const hasGroups = state => Object.keys(categorizedLessons(state)).length > 1;
 
 // TODO - account for locked levels
-export const levelsByStage = state => (
+export const levelsByLesson = state => (
   state.stages.map(stage => (
     stage.levels.map(level => ({
-      status: level.status,
-      url: level.url
+      status: statusForLevel(level, state.levelProgress),
+      url: level.url,
+      name: level.name
     }))
   ))
 );
+
+/**
+ * Given a level and levelProgress (both from our redux store state), determine
+ * the status for that level.
+ * @param {object} level - Level object from state.stages.levels
+ * @param {object<number, TestResult>} levelProgress - Mapping from levelId to
+ *   TestResult
+ */
+export function statusForLevel(level, levelProgress) {
+  // Peer Reviews use a level object to track their state, but have some subtle
+  // differences from regular levels (such as a separate id namespace). Unlike
+  // levels, Peer Reviews store status on the level object (for the time being)
+  if (level.kind === LevelKind.peer_review) {
+    if (level.locked) {
+      return LevelStatus.locked;
+    }
+    return level.status;
+  }
+
+  // Assessment levels will have a uid for each page (and a test-result
+  // for each uid). When locked, they will end up not having a per-uid
+  // test result, but will have a LOCKED_RESULT for the LevelGroup (which
+  // is tracked by ids)
+  // Worth noting that in the majority of cases, ids will be a single
+  // id here
+  const id = level.uid || bestResultLevelId(level.ids, levelProgress);
+  let status = activityCssClass(levelProgress[id]);
+  if (level.uid &&
+      level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)) {
+    status = LevelStatus.locked;
+  }
+  return status;
+}
+
+
+/**
+ * Groups lessons (aka stages) according to category.
+ * @returns {Object[]}
+ * {string} Object.name
+ * {string[]} Object.lessonNames
+ * {Object[]} Object.stageLevels
+ */
+export const categorizedLessons = state => {
+  let byCategory = {};
+
+  const allLevels = levelsByLesson(state);
+
+  state.stages.forEach((stage, index) => {
+    const category = stage.flex_category;
+    const lessonName = stage.name;
+    const stageLevels = allLevels[index];
+
+    byCategory[category] = byCategory[category] || {
+      category,
+      lessonNames: [],
+      levels: []
+    };
+
+    byCategory[category].lessonNames.push(lessonName);
+    byCategory[category].levels.push(stageLevels);
+  });
+
+  // We want to return an array of categories
+  return _.values(byCategory);
+};
+
+/**
+ * Given a set of levels, groups them in sets of progressions, where each
+ * progression is a set of adjacent levels sharing the same name (where that
+ * "same" name might also just be undefined)
+ * @param {Level[]} levels
+ * @returns {object[]} An array of progressions, where each consists of a name,
+ *   the position of the progression in the input array, and the set of levels
+ *   in the progression
+ */
+export const progressionsFromLevels = levels => {
+  const progressions = [];
+  let currentProgression = {
+    start: 0,
+    name: levels[0].name,
+    levels: [levels[0]]
+  };
+  levels.slice(1).forEach((level, index) => {
+    if (level.name === currentProgression.name) {
+      currentProgression.levels.push(level);
+    } else {
+      progressions.push(currentProgression);
+      currentProgression = {
+        // + 1 because we sliced off the first element
+        start: index + 1,
+        name: level.name,
+        levels: [level]
+      };
+    }
+  });
+  progressions.push(currentProgression);
+  return progressions;
+};
 
 /* start-test-block */
 // export private function(s) to expose to unit testing

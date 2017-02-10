@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressBubble from './ProgressBubble';
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
+import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 const statuses = Object.keys(BUBBLE_COLORS);
 

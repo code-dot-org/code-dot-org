@@ -142,10 +142,12 @@ class NetSimApiTest < Minitest::Test
     created_ids.push(record_create_response['id'])
 
     # Sending several records should result in them all being inserted
-    record_create_response = create_record([
-      {name: 'nancy', age: 9, male: false},
-      {name: 'drew', age: 11, male: true}
-    ])
+    record_create_response = create_record(
+      [
+        {name: 'nancy', age: 9, male: false},
+        {name: 'drew', age: 11, male: true}
+      ]
+    )
     assert record_create_response.is_a?(Array)
     assert_equal 2, record_create_response.length
     assert_equal 4, read_records.length
@@ -187,10 +189,13 @@ class NetSimApiTest < Minitest::Test
     result = JSON.parse(@net_sim_api.last_response.body)
     result['table1']['rows'].sort! {|a, b| a['id'] <=> b['id']}
     assert_equal(
-      {'table1' => {'rows' => [t1_row1, t1_row2]},
-       'table2' => {'rows' => [t2_row2]},
-       'table3' => {'rows' => []}},
-      result)
+      {
+        'table1' => {'rows' => [t1_row1, t1_row2]},
+        'table2' => {'rows' => [t2_row2]},
+        'table3' => {'rows' => []}
+      },
+      result
+    )
   end
 
   def test_read_no_tables
@@ -392,10 +397,10 @@ class NetSimApiTest < Minitest::Test
     assert_equal 204, @net_sim_api.last_response.status
 
     # Assert nodeA is gone
-    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    refute record_exists(TABLE_NAMES[:node], node_a['id'])
 
     # Assert wire AB and CA are gone
-    assert !record_exists(TABLE_NAMES[:wire], wire_ab['id'])
+    refute record_exists(TABLE_NAMES[:wire], wire_ab['id'])
 
     # Assert node B and C are still there
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
@@ -451,10 +456,10 @@ class NetSimApiTest < Minitest::Test
     yield(node_a['id'])
 
     # Assert nodeA is gone
-    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    refute record_exists(TABLE_NAMES[:node], node_a['id'])
 
     # Assert message from B to A is gone
-    assert !record_exists(TABLE_NAMES[:message], message_b_to_a['id'])
+    refute record_exists(TABLE_NAMES[:message], message_b_to_a['id'])
 
     # Assert node B is still there
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
@@ -513,8 +518,8 @@ class NetSimApiTest < Minitest::Test
     yield([node_a['id'], node_b['id']])
 
     # Assert nodes A and B are gone, but C is still there.
-    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
-    assert !record_exists(TABLE_NAMES[:node], node_b['id'])
+    refute record_exists(TABLE_NAMES[:node], node_a['id'])
+    refute record_exists(TABLE_NAMES[:node], node_b['id'])
     assert record_exists(TABLE_NAMES[:node], node_c['id'])
 
     # Assert all wires and messages are gone
@@ -526,47 +531,56 @@ class NetSimApiTest < Minitest::Test
     assert_equal(3, test_spy.publish_history.length)
 
     # In fact, the invalidations produce a very complete account of what was done.
-    assert_equal(test_spy.publish_history[0], {
-      channel: @shard_id,
-      event: TABLE_NAMES[:wire],
-      data: {
-        action: 'delete',
-        ids: [
-          wire_ab['id'],
-          wire_ac['id'],
-          wire_ba['id'],
-          wire_bc['id'],
-          wire_ca['id'],
-          wire_cb['id']
-        ]
+    assert_equal(
+      test_spy.publish_history[0],
+      {
+        channel: @shard_id,
+        event: TABLE_NAMES[:wire],
+        data: {
+          action: 'delete',
+          ids: [
+            wire_ab['id'],
+            wire_ac['id'],
+            wire_ba['id'],
+            wire_bc['id'],
+            wire_ca['id'],
+            wire_cb['id']
+          ]
+        }
       }
-    })
+    )
 
-    assert_equal(test_spy.publish_history[1], {
-      channel: @shard_id,
-      event: TABLE_NAMES[:message],
-      data: {
-        action: 'delete',
-        ids: [
-          message_a_to_b['id'],
-          message2_a_to_b['id'],
-          message_b_to_a['id'],
-          message2_b_to_a['id']
-        ]
+    assert_equal(
+      test_spy.publish_history[1],
+      {
+        channel: @shard_id,
+        event: TABLE_NAMES[:message],
+        data: {
+          action: 'delete',
+          ids: [
+            message_a_to_b['id'],
+            message2_a_to_b['id'],
+            message_b_to_a['id'],
+            message2_b_to_a['id']
+          ]
+        }
       }
-    })
+    )
 
-    assert_equal(test_spy.publish_history[2], {
-      channel: @shard_id,
-      event: TABLE_NAMES[:node],
-      data: {
-        action: 'delete',
-        ids: [
-          node_a['id'],
-          node_b['id']
-        ]
+    assert_equal(
+      test_spy.publish_history[2],
+      {
+        channel: @shard_id,
+        event: TABLE_NAMES[:node],
+        data: {
+          action: 'delete',
+          ids: [
+            node_a['id'],
+            node_b['id']
+          ]
+        }
       }
-    })
+    )
 
   ensure
     delete_node(node_a['id'])
@@ -589,15 +603,18 @@ class NetSimApiTest < Minitest::Test
 
   def test_parse_table_map_from_query_string
     assert_equal({'lobby' => 1, 'n' => 20, 'orders' => 100},
-      parse_table_map_from_query_string('t[]=lobby@1&t[]=n@20&t[]=orders@100&ignored=foo'))
+      parse_table_map_from_query_string('t[]=lobby@1&t[]=n@20&t[]=orders@100&ignored=foo')
+    )
 
     assert_equal({'n' => 0},
       parse_table_map_from_query_string('t[]=n'),
-      'Unspecified version numbers should default to 0')
+      'Unspecified version numbers should default to 0'
+    )
 
     assert_equal({'n' => 0},
       parse_table_map_from_query_string('t[]=n@a'),
-      'Invalid version numbers should default to 0')
+      'Invalid version numbers should default to 0'
+    )
 
     assert_equal({}, parse_table_map_from_query_string(''))
   end
@@ -624,9 +641,9 @@ class NetSimApiTest < Minitest::Test
     yield query_string # Performs delete using block provided by caller
     assert_equal 204, @net_sim_api.last_response.status
 
-    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    refute record_exists(TABLE_NAMES[:node], node_a['id'])
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
-    assert !record_exists(TABLE_NAMES[:node], node_c['id'])
+    refute record_exists(TABLE_NAMES[:node], node_c['id'])
 
   ensure
     delete_node(node_a['id'])
@@ -637,8 +654,11 @@ class NetSimApiTest < Minitest::Test
 
   def test_parse_ids_from_query_string
     assert_equal([1, 3, 5], parse_ids_from_query_string('id[]=1&id[]=3&id[]=5'))
-    assert_equal([2], parse_ids_from_query_string('id[]=nonsense&id[]=2'),
-      'Nonnumeric IDs should be ignored')
+    assert_equal(
+      [2],
+      parse_ids_from_query_string('id[]=nonsense&id[]=2'),
+      'Nonnumeric IDs should be ignored'
+    )
   end
 
   def test_can_only_insert_known_node_types
@@ -668,16 +688,21 @@ class NetSimApiTest < Minitest::Test
     end
     assert_equal(CDO.netsim_max_routers,
       read_records(TABLE_NAMES[:node]).count,
-      "Didn't create #{CDO.netsim_max_routers} nodes")
+      "Didn't create #{CDO.netsim_max_routers} nodes"
+    )
 
     # We want the 21st node to fail
     create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
-    assert_equal(400, @net_sim_api.last_response.status,
-      "Went over router limit!")
+    assert_equal(
+      400,
+      @net_sim_api.last_response.status,
+      "Went over router limit!"
+    )
     assert_equal(VALIDATION_ERRORS[:limit_reached], last_error_details)
     assert_equal(CDO.netsim_max_routers,
       read_records(TABLE_NAMES[:node]).count,
-      "Went over router limit!")
+      "Went over router limit!"
+    )
   end
 
   def test_do_not_limit_shard_clients_to_max_routers
@@ -687,15 +712,18 @@ class NetSimApiTest < Minitest::Test
     end
     assert_equal(CDO.netsim_max_routers,
       read_records(TABLE_NAMES[:node]).count,
-      "Didn't create #{CDO.netsim_max_routers} nodes")
+      "Didn't create #{CDO.netsim_max_routers} nodes"
+    )
 
     # We want the 21st node to succeed
     create_client_node
     assert_equal(201, @net_sim_api.last_response.status,
-      "Should have allowed 21st client")
+      "Should have allowed 21st client"
+    )
     assert_equal(CDO.netsim_max_routers + 1,
       read_records(TABLE_NAMES[:node]).count,
-      "Should have allowed 21st client")
+      "Should have allowed 21st client"
+    )
   end
 
   def test_having_max_routers_should_not_limit_clients
@@ -710,10 +738,12 @@ class NetSimApiTest < Minitest::Test
     # We are out of router spaces, but adding a client should be okay
     create_client_node
     assert_equal(201, @net_sim_api.last_response.status,
-      "Should have allowed 1st client")
+      "Should have allowed 1st client"
+    )
     assert_equal(CDO.netsim_max_routers + 1,
       read_records(TABLE_NAMES[:node]).count,
-      "Should have allowed 1st client")
+      "Should have allowed 1st client"
+    )
   end
 
   def test_having_max_routers_of_clients_should_not_limit_routers
@@ -723,15 +753,18 @@ class NetSimApiTest < Minitest::Test
     end
     assert_equal(CDO.netsim_max_routers,
       read_records(TABLE_NAMES[:node]).count,
-      "Didn't create #{CDO.netsim_max_routers} nodes")
+      "Didn't create #{CDO.netsim_max_routers} nodes"
+    )
 
     # We should still be able to add a router
     create_router_node('routerNumber' => 1)
     assert_equal(201, @net_sim_api.last_response.status,
-      "Should have allowed 1st router")
+      "Should have allowed 1st router"
+    )
     assert_equal(CDO.netsim_max_routers + 1,
       read_records(TABLE_NAMES[:node]).count,
-      "Should have allowed 1st router")
+      "Should have allowed 1st router"
+    )
   end
 
   def test_having_max_routers_on_one_shard_does_not_limit_another
@@ -741,15 +774,18 @@ class NetSimApiTest < Minitest::Test
     end
     assert_equal(CDO.netsim_max_routers,
       read_records(TABLE_NAMES[:node]).count,
-      "Didn't create #{CDO.netsim_max_routers} nodes")
+      "Didn't create #{CDO.netsim_max_routers} nodes"
+    )
 
     # We should still be able to add a router on another shard
     @shard_id = '_testShard3'
     create_router_node('routerNumber' => CDO.netsim_max_routers + 1)
     assert_equal(201, @net_sim_api.last_response.status,
-      'Should have allowed router on another shard')
+      'Should have allowed router on another shard'
+    )
     assert_equal(1, read_records(TABLE_NAMES[:node]).count,
-      'Should have allowed router on another shard')
+      'Should have allowed router on another shard'
+    )
   end
 
   def test_reject_routers_without_router_number
@@ -761,29 +797,35 @@ class NetSimApiTest < Minitest::Test
   def test_reject_routers_causing_router_number_collision
     create_router_node('routerNumber' => 1)
     assert_equal(201, @net_sim_api.last_response.status,
-      'Failed to insert first router.')
+      'Failed to insert first router.'
+    )
 
     # Should return 400 BAD REQUEST when a routerNumber collision is detected
     create_router_node('routerNumber' => 1)
     assert_equal(400, @net_sim_api.last_response.status,
-      'Should have rejected duplicate routerNumber')
+      'Should have rejected duplicate routerNumber'
+    )
     assert_equal(VALIDATION_ERRORS[:conflict], last_error_details)
 
     assert_equal(1, read_records(TABLE_NAMES[:node]).count,
-      'Expected to end up with one node.')
+      'Expected to end up with one node.'
+    )
   end
 
   def test_allow_routers_with_different_router_numbers
     create_router_node('routerNumber' => 1)
     assert_equal(201, @net_sim_api.last_response.status,
-      'Failed to insert first router.')
+      'Failed to insert first router.'
+    )
 
     create_router_node('routerNumber' => 2)
     assert_equal(201, @net_sim_api.last_response.status,
-      'Failed to insert second router.')
+      'Failed to insert second router.'
+    )
 
     assert_equal(2, read_records(TABLE_NAMES[:node]).count,
-      'Expected to end up with two nodes.')
+      'Expected to end up with two nodes.'
+    )
   end
 
   # Methods below this point are test utilities, not actual tests

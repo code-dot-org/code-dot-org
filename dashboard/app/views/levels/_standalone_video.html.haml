@@ -1,5 +1,5 @@
-:javascript
-  window.dashboard.codeStudioLevels.registerGetResult();
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/levels/_standalone_video.js')}
 
 .standalone-video
   - video = @level.specified_autoplay_video
@@ -10,5 +10,8 @@
   %iframe{width: 853, height: 480, frameborder: 0, allowfullscreen: true, src: src}
   %p= link_to t('video.download'), video.download
 
-  = render partial: 'levels/dialog', locals: {continue_button: true, data: @level.properties}
+  .buttons
+    %a.btn.btn-large.btn-primary.next-stage.submitButton
+      =t('continue')
+
   = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.teacher_markdown}}

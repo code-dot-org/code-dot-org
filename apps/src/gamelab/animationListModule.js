@@ -14,7 +14,7 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './PropTypes';
-/* global console, dashboard */
+import {projectChanged} from '../code-studio/initApp/project';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -44,11 +44,54 @@ export const START_LOADING_FROM_SOURCE = 'AnimationList/START_LOADING_FROM_SOURC
 export const DONE_LOADING_FROM_SOURCE = 'AnimationList/DONE_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {string} version
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
+// Args: {AnimationKey} key, {!SerializedAnimation} props
+const SET_PENDING_FRAMES = 'AnimationList/SET_PENDING_FRAMES';
+// Args: none
+export const START_LOADING_PENDING_FRAMES_FROM_SOURCE = 'AnimationList/START_LOADING_PENDING_FRAMES_FROM_SOURCE';
+// Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
+export const DONE_LOADING_PENDING_FRAMES_FROM_SOURCE = 'AnimationList/DONE_LOADING_PENDING_FRAMES_FROM_SOURCE';
+// Args: none
+export const REMOVE_PENDING_FRAMES = 'AnimationList/REMOVE_PENDING_FRAMES';
 
 export default combineReducers({
   orderedKeys,
-  propsByKey
+  propsByKey,
+  pendingFrames
 });
+
+/** pendingFrames is used for temporarily storing additional
+  * frames before they get added to the animation in Piskel.
+  * pendingFrames gets added to animation in PiskelEditor.jsx
+  */
+function pendingFrames(state, action) {
+  state = state || {};
+  switch (action.type) {
+
+    case SET_PENDING_FRAMES:
+      return {
+        key: action.key,
+        props: action.props
+      };
+
+    case REMOVE_PENDING_FRAMES:
+      return {};
+
+    case START_LOADING_PENDING_FRAMES_FROM_SOURCE:
+      return Object.assign({}, state, {
+        loadedFromSource: false
+      });
+
+    case DONE_LOADING_PENDING_FRAMES_FROM_SOURCE:
+      return Object.assign({}, state, {
+        loadedFromSource: true,
+        saved: true,
+        loadedProps: action.loadedProps
+      });
+
+    default:
+      return state;
+  }
+}
 
 function orderedKeys(state, action) {
   state = state || [];
@@ -242,6 +285,19 @@ export function setInitialAnimationList(serializedAnimationList) {
     }
   }
 
+  // If animations have the same name, rename one.
+  const numberAnimations = serializedAnimationList.orderedKeys.length;
+  for (let i = 0; i < numberAnimations; i++) {
+    const key = serializedAnimationList.orderedKeys[i];
+    const name = serializedAnimationList.propsByKey[key].name;
+    for (let j = i + 1; j < numberAnimations; j++) {
+      const otherKey = serializedAnimationList.orderedKeys[j];
+      if (name === serializedAnimationList.propsByKey[otherKey].name) {
+        serializedAnimationList.propsByKey[key].name = generateAnimationName(name, serializedAnimationList.propsByKey);
+      }
+    }
+  }
+
   try {
     throwIfSerializedAnimationListIsInvalid(serializedAnimationList);
   } catch (err) {
@@ -268,10 +324,9 @@ export function addBlankAnimation() {
     // By pushing an animation that is "loadedFromSource" but has a null
     // blob and dataURI, Piskel will know to create a new document with
     // the given dimensions.
-    dispatch({
-      type: ADD_ANIMATION,
+    dispatch(addAnimationAction(
       key,
-      props: {
+      {
         name: generateAnimationName('animation', getState().animationList.propsByKey),
         sourceUrl: null,
         frameSize: {x: 100, y: 100},
@@ -284,10 +339,21 @@ export function addBlankAnimation() {
         blob: null,
         dataURI: null,
         hasNewVersionThisSession: false
-      }
-    });
+      }));
     dispatch(selectAnimation(key));
-    dashboard.project.projectChanged();
+    projectChanged();
+  };
+}
+
+/**
+ * Add a blank frame to pending frames for the selected animation.
+ * @returns {function}
+ */
+export function appendBlankFrame() {
+  return (dispatch, getState) => {
+    const selectedAnimationKey = getState().animationTab.selectedAnimation;
+    dispatch(setPendingFramesAction(selectedAnimationKey, {blankFrame: true}));
+    projectChanged();
   };
 }
 
@@ -300,17 +366,27 @@ export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
   return (dispatch, getState) => {
-    dispatch({
-      type: ADD_ANIMATION,
-      key,
-      props
-    });
+    dispatch(addAnimationAction(key, { ...props, looping: true }));
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
     let name = generateAnimationName(props.name, getState().animationList.propsByKey);
     dispatch(setAnimationName(key, name));
-    dashboard.project.projectChanged();
+    projectChanged();
+  };
+}
+
+/**
+ * Append an animation to the project (at the end of the list of frames).
+ * @param {!SerializedAnimation} props
+ * @returns {function}
+ */
+export function appendCustomFrames(props) {
+  return (dispatch, getState) => {
+    const selectedAnimationKey = getState().animationTab.selectedAnimation;
+    dispatch(setPendingFramesAction(selectedAnimationKey, props));
+    dispatch(loadPendingFramesFromSource(selectedAnimationKey, props));
+    projectChanged();
   };
 }
 
@@ -321,17 +397,28 @@ export function addAnimation(key, props) {
 export function addLibraryAnimation(props) {
   return (dispatch, getState) => {
     const key = createUuid();
-    dispatch({
-      type: ADD_ANIMATION,
-      key,
-      props
-    });
+    dispatch(addAnimationAction(key, props));
     dispatch(loadAnimationFromSource(key, () => {
       dispatch(selectAnimation(key));
     }));
     let name = generateAnimationName(props.name, getState().animationList.propsByKey);
     dispatch(setAnimationName(key, name));
-    dashboard.project.projectChanged();
+    projectChanged();
+  };
+}
+
+/**
+ * Add a library animation as additional frames to the current animation
+ * by adding them to pendingFrames.
+ * @param {!SerializedAnimation} props
+ * @returns {function}
+ */
+export function appendLibraryFrames(props) {
+  return (dispatch, getState) => {
+    const selectedAnimationKey = getState().animationTab.selectedAnimation;
+    dispatch(setPendingFramesAction(selectedAnimationKey, props));
+    dispatch(loadPendingFramesFromSource(selectedAnimationKey, props));
+    projectChanged();
   };
 }
 
@@ -357,13 +444,13 @@ export function cloneAnimation(key) {
       index: sourceIndex + 1,
       key: newAnimationKey,
       props: Object.assign({}, sourceAnimation, {
-        name: sourceAnimation.name + '_copy', // TODO: better generated names
+        name: generateAnimationName(sourceAnimation.name + '_copy', animationList.propsByKey),
         version: null,
         saved: false
       })
     });
     dispatch(selectAnimation(newAnimationKey));
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -380,7 +467,7 @@ export function setAnimationName(key, name) {
       key,
       name
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -397,7 +484,7 @@ export function setAnimationFrameDelay(key, frameDelay) {
       key,
       frameDelay
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -414,7 +501,7 @@ export function setAnimationLooping(key, looping) {
       key,
       looping
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -430,7 +517,7 @@ export function editAnimation(key, props) {
       key,
       props
     });
-    dashboard.project.projectChanged();
+    projectChanged();
   };
 }
 
@@ -447,7 +534,7 @@ export function deleteAnimation(key) {
     dispatch(selectAnimation(orderedKeys[keyToSelect] || null));
 
     dispatch({type: DELETE_ANIMATION, key});
-    dashboard.project.projectChanged();
+    projectChanged();
     animationsApi.ajax('DELETE', key + '.png', () => {}, function error(xhr) {
       dispatch(reportError(`Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`));
     });
@@ -490,6 +577,95 @@ function loadAnimationFromSource(key, callback) {
             dataURI,
             sourceSize
           });
+          callback();
+        });
+      });
+    });
+  };
+}
+
+/**
+ * Action creator for adding an animation.
+ * @param {!AnimationKey} key
+ * @param {SerializedAnimation} props
+ * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ */
+export function addAnimationAction(key, props) {
+  return {
+    type: ADD_ANIMATION,
+    key,
+    props
+  };
+}
+
+/**
+ * Action creator for when a user selects new frames to add to the animation.
+ * Set these as pending before loading them into Piskel.
+ * @param {!AnimationKey} key
+ * @param {SerializedAnimation} props
+ * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ */
+function setPendingFramesAction(key, props) {
+  return {
+    type: SET_PENDING_FRAMES,
+    key,
+    props
+  };
+}
+
+/**
+ * Action creator for removing pending frames.
+ * @returns {{type: ActionType}}
+ */
+export function removePendingFramesAction() {
+  return {
+    type: REMOVE_PENDING_FRAMES
+  };
+}
+
+/**
+ * Action creator for when pending frames are done loading from the source url.
+ * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ */
+function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
+  return {
+    type: DONE_LOADING_PENDING_FRAMES_FROM_SOURCE,
+    key,
+    loadedProps
+  };
+}
+
+/**
+ * Action creator for when pending frames will start loading from the source url.
+ * @returns {{type: ActionType}}
+ */
+function startLoadingPendingFramesFromSourceAction() {
+  return {
+    type: START_LOADING_PENDING_FRAMES_FROM_SOURCE
+  };
+}
+
+/**
+ * Load the indicated animation from its source, whether that is S3 or the animation library.
+ * From this function we'll need the dataURI and sourceSize to send to Piskel.
+ * @param {!AnimationKey} key
+ * @param {SerializedAnimation} props
+ * @param {function} [callback]
+ */
+function loadPendingFramesFromSource(key, props, callback) {
+  callback = callback || function () {};
+  return (dispatch, getState) => {
+    const sourceUrl = animationSourceUrl(key, props);
+    dispatch(startLoadingPendingFramesFromSourceAction());
+    fetchURLAsBlob(sourceUrl, (err, blob) => {
+      if (err) {
+        console.log('Failed to load pending animation frames' + key, err);
+        dispatch(removePendingFramesAction());
+        return;
+      }
+      blobToDataURI(blob, dataURI => {
+        dataURIToSourceSize(dataURI).then(sourceSize => {
+          dispatch(doneLoadingPendingFramesFromSourceAction(key, {blob, dataURI, sourceSize}));
           callback();
         });
       });

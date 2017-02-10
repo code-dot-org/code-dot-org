@@ -348,7 +348,8 @@ var projects = module.exports = {
   // Students should not be able to easily see source for embedded applab or
   // gamelab levels.
   shouldHideShareAndRemix() {
-    return appOptions.embed && (appOptions.app === 'applab' || appOptions.app === 'gamelab');
+    return (appOptions.level && appOptions.level.hideShareAndRemix) ||
+      (appOptions.embed && (appOptions.app === 'applab' || appOptions.app === 'gamelab'));
   },
 
   showHeaderForProjectBacked() {
@@ -396,6 +397,7 @@ var projects = module.exports = {
         sourceHandler.setInitialLevelHtml(currentSources.html);
       }
 
+      setMakerAPIsStatusFromLevel();
       setMakerAPIsStatusFromQueryParams();
       if (currentSources.makerAPIsEnabled) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
@@ -893,6 +895,18 @@ function setMakerAPIsStatusFromQueryParams() {
 
   if (hasQueryParam('disableMaker')) {
     currentSources.makerAPIsEnabled = false;
+  }
+}
+
+/**
+ * If a level itself has makerlabEnabled, set that for this project's source.
+ * This is the case with New Maker Lab Project.level, and projects created
+ * based off of that template (/p/makerlab), done prior to maker API support
+ * within applab.
+ */
+function setMakerAPIsStatusFromLevel() {
+  if (appOptions.level.makerlabEnabled) {
+    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
   }
 }
 
