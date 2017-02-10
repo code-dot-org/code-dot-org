@@ -100,11 +100,6 @@ Style/ClassVars:
 Style/CollectionMethods:
   Enabled: false
 
-# Offense count: 28
-# Cop supports --auto-correct.
-Style/CommentIndentation:
-  Enabled: false
-
 # Offense count: 31
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles, SingleLineConditionsOnly.
@@ -210,11 +205,6 @@ Style/SpaceAroundEqualsInParameterDefault:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: space, no_space
 Style/SpaceBeforeBlockBraces:
-  Enabled: false
-
-# Offense count: 11
-# Cop supports --auto-correct.
-Style/SpaceBeforeComment:
   Enabled: false
 
 # Offense count: 982

@@ -265,6 +265,7 @@ class Applab < Blockly
         "digitalRead": null,
         "analogWrite": null,
         "analogRead": null,
+        "timedLoop": null,
 
         // Circuit Playground
         "on": null,
@@ -279,6 +280,7 @@ class Applab < Blockly
         "buzzer.frequency": null,
         "buzzer.note": null,
         "buzzer.off": null,
+        "buzzer.play": null,
         "accelerometer.getOrientation": null,
         "accelerometer.start": null,
         "accelerometer.getAcceleration": null,
