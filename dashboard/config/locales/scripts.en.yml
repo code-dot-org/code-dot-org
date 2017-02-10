@@ -2667,6 +2667,9 @@ en:
             Foo: Foo
             Lists: Lists
             Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
           title: Draft Unit 6
           description_audience: ''
           description_short: ''
