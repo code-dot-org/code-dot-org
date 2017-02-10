@@ -33,7 +33,7 @@ en:
     attributes:
       user:
         name: 'Display Name'
-        firstname_lastinitial: 'First Name and Last Initial'
+        name_example: 'Display Name    (e.g. Cool Coder or Jane S.)'
         email: 'Email'
         username: 'Username'
         password: 'Password'
