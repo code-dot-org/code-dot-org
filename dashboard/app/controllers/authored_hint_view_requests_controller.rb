@@ -4,13 +4,10 @@ class AuthoredHintViewRequestsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def create
-    return head :unauthorized unless AuthoredHintViewRequest.enabled?
+    return head :unauthorized unless AuthoredHintViewRequest.enabled? && current_user
     unless params.key?("hints") && params["hints"].respond_to?(:to_a)
       return head :bad_request
     end
-    # TODO(elijah): After fixing the client-side, change this to :bad_request,
-    # updating the appropriate test.
-    return head :accepted unless current_user
 
     hints = params.permit(hints: [:scriptId, :levelId, :hintId]).require(:hints)
     hints.each do |hint|

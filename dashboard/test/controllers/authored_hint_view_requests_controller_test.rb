@@ -31,9 +31,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
       post :create, params: @default_params
     end
 
-    # TODO(elijah): Change the implementation, after fixing the client-side, to
-    # be :bad_request.
-    assert_response :accepted
+    assert_response :unauthorized
   end
 
   test 'can create multiple with a single post' do
