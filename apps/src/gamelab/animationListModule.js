@@ -785,6 +785,7 @@ function saveAnimation(animationKey, animationProps) {
     xhr.addEventListener('load', onSuccess);
     xhr.addEventListener('error', onError);
     xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
+    xhr.setRequestHeader("Content-type", "image/png");
     xhr.send(animationProps.blob);
   });
 }
