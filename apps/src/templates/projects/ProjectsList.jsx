@@ -1,7 +1,7 @@
 import React from 'react';
 import {Table} from 'reactabular';
 import color from "../../util/color";
-import commonMsg from '@cdo/locale';
+// import commonMsg from '@cdo/locale';
 
 const styles = {
   cell: {
@@ -26,13 +26,22 @@ const styles = {
  * Map from project type to friendly name.
  * @type {Object}
  */
+// const PROJECT_TYPE_MAP = {
+//   algebra_game: commonMsg.projectTypeAlgebra(),
+//   applab: commonMsg.projectTypeApplab(),
+//   artist: commonMsg.projectTypeArtist(),
+//   gamelab: commonMsg.projectTypeGamelab(),
+//   playlab: commonMsg.projectTypePlaylab(),
+//   weblab: commonMsg.projectTypeWeblab(),
+// };
+
 const PROJECT_TYPE_MAP = {
-  algebra_game: commonMsg.projectTypeAlgebra(),
-  applab: commonMsg.projectTypeApplab(),
-  artist: commonMsg.projectTypeArtist(),
-  gamelab: commonMsg.projectTypeGamelab(),
-  playlab: commonMsg.projectTypePlaylab(),
-  weblab: commonMsg.projectTypeWeblab(),
+  algebra_game: 'algebra',
+  applab: 'applab',
+  artist: 'artist',
+  gamelab: 'gamelab',
+  playlab: 'playlab',
+  weblab: 'weblab',
 };
 
 function typeFormatter(type) {
