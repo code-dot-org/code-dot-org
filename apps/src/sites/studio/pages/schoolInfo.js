@@ -143,7 +143,7 @@ window.SchoolInfoManager = function (existingOptions) {
           // dropdown and show a warning if there are no schools of the selected type.
           if (schools.length === 0) {
             $('#school-other').prop('checked', true).change();
-            $('#school').closest('.form-group').hide();
+            closestFormGroupOrItemBlock('#school').hide();
             $('#no-schools-warning').show();
           }
         }
@@ -167,17 +167,17 @@ window.SchoolInfoManager = function (existingOptions) {
     enableDistrictDropdown(false);
     $("#school-district-other").val(false);
     $("#school-district-name").val("");
-    $('#school-district').closest('.form-group').hide();
-    $('#school-district-name').closest('.form-group').hide();
+    closestFormGroupOrItemBlock('#school-district').hide();
+    closestFormGroupOrItemBlock('#school-district-name').hide();
   }
 
   function clearAndHideSchool() {
     enableSchoolDropdown(false);
     $("#school-other").prop('checked', false);
     $("#school-name").val("");
-    $('#school').closest('.form-group').hide();
+    closestFormGroupOrItemBlock('#school').hide();
     $('#no-schools-warning').hide();
-    $('#school-name').closest('.form-group').hide();
+    closestFormGroupOrItemBlock('#school-name').hide();
   }
 
   function isPrivateOrOther() {
