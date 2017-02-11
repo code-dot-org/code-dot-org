@@ -18,9 +18,9 @@ class PeerReviewTest < ActiveSupport::TestCase
     @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
     @script = @script_level.script
 
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
-
     @user = create :user
+
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
   end
 
   def track_progress(level_source_id, user = @user)
@@ -251,6 +251,10 @@ class PeerReviewTest < ActiveSupport::TestCase
     submitter_1 = create :teacher
     submitter_2 = create :teacher
     submitter_3 = create :teacher
+
+    [submitter_1, submitter_2, submitter_3].each do |submitter|
+      Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: submitter.id, plc_learning_module: @learning_module).returns(true)
+    end
 
     level_source_1 = create(:level_source, data: 'Some answer')
     level_source_2 = create(:level_source, data: 'Other answer')
