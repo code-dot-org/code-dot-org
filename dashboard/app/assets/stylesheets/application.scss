@@ -1444,9 +1444,26 @@ a.download-video {
   #usernamefield {
     vertical-align: top;
   }
-  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select,
-  #schooldropdown-block select, #schooldropdown-block .selectize-control {
+  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
     width: 234px;
+  }
+  $schooldropdown-background: #f7f7f7;
+  $schooldropdown-border: #e5e5e5;
+  #schooldropdown-block {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: $schooldropdown-background;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $schooldropdown-border;
+  }
+  #schooldropdown-block select, #schooldropdown-block .selectize-control {
+    width: 100%;
+  }
+  #schooldropdown-block .itemblock, #schooldropdown-block .fieldblock {
+    width: 100%;
   }
   #usernamemessage, #password_message, #password_message_confirmation {
     display: inline-block;

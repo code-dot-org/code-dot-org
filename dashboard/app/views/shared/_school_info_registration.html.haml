@@ -7,10 +7,14 @@
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 - existing_school_info ||= {}
 - existing_school_info[:country] ||= 'US' if us_ip
-- existing_school_info = {} if allow_empty
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/schoolInfo.js')}
+
+%h5{style: "font-weight: bold;"}
+  = t('School Information (optional)')
+
+%hr
 
 .itemblock#school-country-group
   .labelblock= t('School Country') #TODO eric: add all of these to strings
@@ -47,10 +51,10 @@
       %span{style: "font-size: 12px"}
         Other district not listed above
 
-    .form-group{style: "display: none;"}
-      .labelblock= t('District Name')
-      %div.controls
-        %input#school-district-name.form-control.fieldblock{name: "#{form_name}[school_district_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
+.itemblock{style: "display: none;"}
+  .labelblock= t('District Name')
+  %div.controls
+    %input#school-district-name.form-control.fieldblock{name: "#{form_name}[school_district_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
 
 .itemblock{style: "display: none;"}
   .labelblock= t('School')
@@ -64,23 +68,23 @@
       %span{style: "font-size: 12px"}
         Other school not listed above
 
-#no-schools-warning.itemblock{style: "display: none; margin-bottom: 5px;"}
-  .labelblock= t('No schools of that type were found in this district.')
+    #no-schools-warning.itemblock{style: "display: none; margin-bottom: 5px;"}
+      .labelblock= t('No schools of that type were found in this district.')
 
 -# '#school-name' is outside of '#school' so that we can still show it when the school dropdown is hidden.
 .itemblock{style: "display: none;"}
   .labelblock= t('School Name')
   %div.controls
-    %input#school-name.form-control.fieldblock{name: "#{form_name}[school_name]", type: "text", required: false}
+    %input#school-name.form-control.fieldblock{name: "#{form_name}[school_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
 
 .itemblock{style: "display: none;"}
   .labelblock= t("School’s ZIP code")
-  %input#school-zipcode.form-control.fieldblock{name: "#{form_name}[school_zip]", type: "text", required: false}
+  %input#school-zipcode.form-control.fieldblock{name: "#{form_name}[school_zip]", type: "text", required: false, style: "width: calc(100% - 15px);"}
 
 .itemblock{style: "display: none;"}
   .labelblock= t('School Address')
   %div.controls
-    %textarea#school-address.form-control.fieldblock{name: "#{form_name}[full_address]", required: false, rows: 4}
+    %textarea#school-address.form-control.fieldblock{name: "#{form_name}[full_address]", required: false, rows: 4, style: "width: calc(100% - 15px);"}
 
 :javascript
 
