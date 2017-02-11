@@ -158,7 +158,7 @@ describe('Circuit Playground Components', () => {
 
 /**
  * Generate a test board object.
- * From rwaldrong/johnny-five's newBoard() test helper:
+ * From rwaldron/johnny-five's newBoard() test helper:
  * https://github.com/rwaldron/johnny-five/blob/dd47719/test/common/bootstrap.js#L83
  * @returns {*}
  */

@@ -9,15 +9,11 @@ class Pd::MimeoSsoController < ApplicationController
   ALLOWED_COURSES = [Pd::Workshop::COURSE_CSF].freeze
 
   def authenticate_and_redirect
-    # Make sure the user is logged in and is the owner of this enrollment
+    # Make sure the user is logged in, is the owner of this enrollment, has completed the survey, and the
+    # enrollment is for an allowed course
     authorize! :manage, @enrollment
     raise CanCan::AccessDenied unless ALLOWED_COURSES.include? @enrollment.workshop.course
-
-    unless @enrollment.completed_survey?
-      # Until the survey is processed, it won't show up in the enrollment model.
-      # Check pegasus forms directly before giving up.
-      raise CanCan::AccessDenied unless PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: @enrollment.id).any?
-    end
+    raise CanCan::AccessDenied unless @enrollment.completed_survey?
 
     # First name is always present, but some older enrollments don't have last names.
     # The API requires both so substitute a placeholder for blank last names:

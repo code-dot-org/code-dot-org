@@ -6,7 +6,7 @@ import '@cdo/apps/sites/studio/pages/code-studio';
 // which need to be explicitly required here.
 window.React = require('react');
 window.Applab = require('./applab');
-import {injectErrorHandler} from '../javascriptMode';
+import {injectErrorHandler} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import appStorage from './appStorage';
 import Sounds from '../Sounds';
