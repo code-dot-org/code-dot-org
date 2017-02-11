@@ -77,8 +77,8 @@ class Section < ActiveRecord::Base
     # normalization, this is necessary to ensure that we can recognize
     # the name on the other side
     self.students.each do |student|
-      normalized = student.name.split(/\s+/).join(' ')
-      trie.add normalized
+      student.name = student.name.strip.split(/\s+/).join(' ')
+      trie.add student.name
     end
 
     self.students.map do |student|
