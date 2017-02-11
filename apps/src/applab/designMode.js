@@ -249,19 +249,11 @@ designMode.updateProperty = function (element, name, value) {
       element.style.textAlign = value;
       break;
     case 'icon-color':
-      // This property name is used when changing the icon color in design mode
-
-
-        debugger;
       element.setAttribute('data-icon-color', value);
-    //  break;
-    //case 'iconColor':
-      // This property name is used when changing the icon color programatically
-      var imageUrl = element.getAttribute('data-canonical-image-url');
+      const imageUrl = element.getAttribute('data-canonical-image-url');
       if (ICON_PREFIX_REGEX.test(imageUrl)) {
-        element.style.backgroundImage = 'url(' + assetPrefix.renderIconToString(imageUrl, element) + ')';
+        element.src = assetPrefix.renderIconToString(imageUrl, element);
       }
-
       break;
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
@@ -487,6 +479,8 @@ designMode.readProperty = function (element, name) {
       return parseFloat(element.style.fontSize);
     case 'textAlign':
       return element.style.textAlign;
+    case 'icon-color':
+      return element.getAttribute('data-icon-color');
     case 'image':
       return element.getAttribute('data-canonical-image-url');
     case 'screen-image':
