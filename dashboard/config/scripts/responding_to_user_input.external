@@ -41,7 +41,7 @@ It's important to understand in Event-Driven programming that:
 
 App Lab's `onEvent` block is a type of event-handling function called an **Event Listener**. It wraps all of the setup up you need to do event handling into one command that has several parts. Here is an example with everything labeled:
 
-<img src="https://images.code.org/a4cf535f00b0b77737d5259386b4442d-image-1476884080311.png" style="display: block; margin: auto">
+<img src="//curriculum.code.org/images/applab/onEvent_diagram.png" style="display: block; margin: 20px auto">
 
 <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 

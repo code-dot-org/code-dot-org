@@ -748,6 +748,9 @@
   dashboard_announce_hoc_scaling_progress: "Моля, обърнете внимание, че ние няма да записваме напредъка на учениците в този курс от 3-11 декември поради нивото на трафик, който нашия сайт получава за Hour of Code през това време.  Ще можете да виждате напредъка учениците от преди 3 декември.  Ние ще се върнем към предишния режим след тази седмица."
   dashboard_announce_how_code_studio: "Не е нужен опит, за да започнете да изучавате компютърни науки в класната стая. Code.org предлага учебни програми, учебни планове, висококачествени професионални обучителни програми и тонове страхотни инструменти за всички класове&mdash; всичко необходимо, безплатно. Чудите се откъде да започнете? Изтеглете <a href='%{video_download_url}'> това видео</a>!"
   dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "Часът на кода е тук - декември 8-14!"
   code_sign_up: "Регистрирайте се за участие по време на CS седмицата на образованието"
   host_an_hour: "Домакин на час"
@@ -859,6 +862,12 @@
   course2_name: "Курс 2"
   course3_name: "Курс 3"
   course4_name: "Курс 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "Ускорен курс"
   cspunit1_name: '(стар) Урок 1: Цифрова информация'
   cspunit2_name: '(стар) Раздел 2: Интернет'
@@ -876,6 +885,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Пълен тест - 50 въпроса"
   cspexam1-mWU7ilDYM9_name: Тест част 1-25 въпроси
   cspexam2-AKwgAh1ac5_name: Тест част 2 - 25 въпроси
@@ -897,6 +907,7 @@
   math_category_name: "Математика"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS основи"
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "\"15-\" 16 CS принципи"
   csp17_category_name: "\"15-\" 16 CS принципи"

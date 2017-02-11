@@ -5,7 +5,7 @@ import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {
   apiValidateType,
   OPTIONAL
-} from '@cdo/apps/javascriptMode';
+} from './javascriptMode';
 /* global dashboard */
 
 /**

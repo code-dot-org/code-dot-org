@@ -220,9 +220,51 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'completed_survey?' do
+    # no survey
+    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: false)))
     enrollment = create :pd_enrollment
     refute enrollment.completed_survey?
+
+    # survey just completed, not yet processed
+    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: true)))
+    assert enrollment.completed_survey?
+
+    # survey processed, model up to date. Pegasus should not be contacted.
+    PEGASUS_DB.expects('[]').with(:forms).never
     enrollment.update!(completed_survey_id: 1234)
     assert enrollment.completed_survey?
+  end
+
+  test 'filter_for_survey_completion argument check' do
+    e = assert_raises do
+      # not an enumerable
+      Pd::Enrollment.filter_for_survey_completion('invalid type')
+    end
+    assert_equal 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects', e.message
+
+    e = assert_raises do
+      # enumerable contains non-enrollments
+      Pd::Enrollment.filter_for_survey_completion([create(:pd_enrollment), 'invalid type'])
+    end
+    assert_equal 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects', e.message
+
+    # valid
+    assert Pd::Enrollment.filter_for_survey_completion([create(:pd_enrollment)])
+  end
+
+  test 'filter_for_survey_completion' do
+    enrollments = [
+      enrollment_no_survey = create(:pd_enrollment),
+      enrollment_with_unprocessed_survey = create(:pd_enrollment),
+      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234)
+    ]
+
+    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey]
+    without_surveys = [enrollment_no_survey]
+    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where: stub(map: with_surveys.map(&:id))))
+
+    assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
+    assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
+    assert_equal without_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, false)
   end
 end

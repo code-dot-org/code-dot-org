@@ -128,6 +128,7 @@ nn:
     login: 'Logg inn'
     invalid_login: 'Feil ved innlogging, ver vennleg og prøv igjen'
     pair_programming: 'Eg sit ved datamaskinen saman med ein partnar'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Har du gløymt passordet ditt?'
@@ -367,6 +368,9 @@ nn:
     announcement_mc_launch: "Eit av våre mest populære opplegg har fått ein oppfølgjar! Heilt nye Kodetimens Minecraft-designer let elevane bestemme reglane i Minecraft. Dei kan skape si helt unike Minecraft-verd, og dele den med venene sine eller spele den på telefonen sin. Gjennomfør opplegget med klassa di i årets Kodetime."
     announcement_how_code_studio: "Du treng inga erfaring for å undervise i programmering i ditt klasserom. Code.org har læreplanar, timeplanar, høykvalitetslæreprogram og fleire verktøy for alle klassetrinn&mdash;alt du treng heilt gratis. Lurer du på kvar du skal begynne? Last ned<a href='%{video_download_url}'>denne videoen</a>!"
     announcement_go_beyond: "Fortsette videre fra Kodetimen og utforsk konsepter fra datateknikk med dine elever hver uke. Code.org tilby pensum, timeplaner, profesjoneller høykvalitets læreplaner og tilby tonnevis av gode verktøy for alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for å begynne med å lære bort datateknologi i klasserommet ditt. <b>Finn det neste steget som passer for ditt klasserom.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn ein annan seksjonskode."
     section_code_not_entered: "Legg inn gjeldande_seksjons_kode."
@@ -524,6 +528,9 @@ nn:
     support: "Få hjelp"
     support_url: "//support.code.org"
     help_resources: "Hjelp og oppslagsverk"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Feil svar"
     wrong_body: "Svaret du har gitt er ikkje rett.  Prøv på nytt!"
@@ -736,6 +743,8 @@ nn:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Fråskrive seg ansvar
     leaving_domain: Du forlet no dette domenet, til eit område som ikkje blir styrt av Code.org.
