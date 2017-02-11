@@ -89,7 +89,7 @@ const AchievementDialog = Radium(React.createClass({
     nextPuzzle && this.props.onContinue();
   },
 
-  getIcon(flag) {
+  icon(flag) {
     return (
       <span
         style={[
@@ -116,16 +116,39 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
+  achievementRow(flag, message) {
+    return (
+      <p style={styles.achievement.row}>
+        {this.icon(flag)}
+        <span style={styles.achievement.text}>{message}</span>
+      </p>
+    );
+  },
+
+  blocksUsedMessage(blockDelta, params) {
+    if (blockDelta > 0) {
+      return locale.usingTooManyBlocks(params);
+    } else if (blockDelta === 0) {
+      return locale.exactNumberOfBlocks(params);
+    } else {
+      return locale.fewerNumberOfBlocks(params);
+    }
+  },
+
+  hintsMessage(tooManyHints) {
+    return tooManyHints ? locale.usingHints() : locale.withoutHints();
+  },
+
   render() {
-    const params = {
-      puzzleNumber: this.props.puzzleNumber,
-      numBlocks: this.props.idealBlocks
-    };
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
-    const footerMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
-
     const tooManyHints = this.props.hintsUsed > 0;
+
+    const params = {
+      puzzleNumber: this.props.puzzleNumber,
+      numBlocks: this.props.idealBlocks,
+    };
+    const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
 
     return (
       <BaseDialog
@@ -135,42 +158,12 @@ const AchievementDialog = Radium(React.createClass({
         assetUrl={this.props.assetUrl}
       >
         <div style={styles.checkmarks}>
-          <p style={styles.achievement.row}>
-            {this.getIcon(true)}
-            <span style={styles.achievement.text}>
-              {locale.puzzleCompleted()}
-            </span>
-          </p>
-          <p style={styles.achievement.row}>
-            {this.getIcon(!tooManyBlocks)}
-            <span
-              style={[
-                styles.achievement.text,
-                tooManyBlocks && styles.achievement.inactive
-              ]}
-            >
-              {tooManyBlocks ? locale.usingTooManyBlocks(params) :
-                (blockDelta === 0 ? locale.exactNumberOfBlocks(params) :
-                  locale.fewerNumberOfBlocks(params)
-                )
-              }
-            </span>
-          </p>
-          <p style={styles.achievement.row}>
-            {this.getIcon(!tooManyHints)}
-            <span
-              style={[
-                styles.achievement.text,
-                tooManyHints && styles.achievement.inactive
-              ]}
-            >
-              {tooManyHints ? locale.usingHints() : locale.withoutHints()}
-            </span>
-          </p>
+          {this.achievementRow(true, locale.puzzleCompleted())}
+          {this.achievementRow(!tooManyBlocks, this.blocksUsedMessage(blockDelta, params))}
+          {this.achievementRow(!tooManyHints, this.hintsMessage(tooManyHints))}
         </div>
         <div style={styles.footer}>
-
-          <p style={styles.feedbackMessage}>{footerMessage}</p>
+          <p style={styles.feedbackMessage}>{feedbackMessage}</p>
 
           <button
             onClick={this.handleClose}
