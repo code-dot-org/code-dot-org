@@ -196,6 +196,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const container = document.createElement('div');
     const hintsUsed = options.response.hints_used +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
+
+    document.body.appendChild(container);
     ReactDOM.render(
       <AchievementDialog
         puzzleNumber={options.level.puzzle_number || 0}
@@ -205,7 +207,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         assetUrl={this.studioApp_.assetUrl}
         onContinue={options.onContinue}
       />, container);
-    document.body.appendChild(container);
     return;
   }
 
