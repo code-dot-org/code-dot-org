@@ -74,6 +74,22 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
+  test 'public key format' do
+    OpenSSL::PKey::RSA.unstub(:new)
+
+    # This is to test the key format (base64-encoded raw public key with no extra markup)
+    # This test key was generated via: Base64.encode64(OpenSSL::PKey::RSA.new(128).public_key.to_der).strip
+    # Obviously this key is insecure and should not be used in production.
+    @secrets['rsa_public_key'] = "MCwwDQYJKoZIhvcNAQEBBQADGwAwGAIRANejYVd2T5zbWOZbAuTquCECAwEA\nAQ=="
+    assert_not_empty Pd::MimeoSsoController.new.send(:encrypt_token, 'token')
+
+    @secrets['rsa_public_key'] = 'invalid key'
+    e = assert_raises OpenSSL::PKey::RSAError do
+      Pd::MimeoSsoController.new.send(:encrypt_token, 'token')
+    end
+    assert e.message.start_with? 'Neither PUB key nor PRIV key'
+  end
+
   test 'rendered form' do
     sign_in @teacher
 
