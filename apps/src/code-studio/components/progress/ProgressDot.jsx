@@ -217,8 +217,7 @@ export const ProgressDot = Radium(React.createClass({
     const showUnplugged = isUnplugged && (courseOverviewPage || onCurrent);
     const outlineCurrent = courseOverviewPage && onCurrent;
     const smallDot = !courseOverviewPage && !onCurrent;
-    const showLevelName = courseOverviewPage &&
-      (level.kind === LevelKind.named_level || level.kind === LevelKind.peer_review);
+    const showLevelName = courseOverviewPage && !!level.name;
     const isPeerReview = level.kind === LevelKind.peer_review;
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = status === LevelStatus.locked;
