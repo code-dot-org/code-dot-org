@@ -309,6 +309,19 @@ class Blockly < Level
     options.freeze
   end
 
+  def localized_authored_hints
+    if should_localize? && authored_hints
+      localized_hints = JSON.parse(authored_hints).map do |hint|
+        hint['hint_markdown'] = I18n.t("data.authored_hints").
+            try(:[], "#{name}_authored_hint".to_sym).
+            try(:[], hint['hint_id'].to_sym)
+
+        hint
+      end
+      JSON.generate(localized_hints)
+    end
+  end
+
   def localized_instructions
     if custom?
       loc_val = I18n.t("data.instructions").try(:[], "#{name}_instruction".to_sym)

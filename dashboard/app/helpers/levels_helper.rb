@@ -351,6 +351,7 @@ module LevelsHelper
     # Locale-depdendant option
     loc_instructions = l.localized_instructions
     level_options['instructions'] = loc_instructions unless loc_instructions.nil?
+    level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
 
     # Script-dependent option
     script = @script
