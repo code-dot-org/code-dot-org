@@ -54,7 +54,10 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure
-        @level_source = LevelSource.find_identical_or_create(@level, params[:program])
+        @level_source = LevelSource.find_identical_or_create(
+          @level,
+          params[:program].strip_utf8mb4
+        )
         slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
       end
     end
@@ -106,6 +109,7 @@ class ActivitiesController < ApplicationController
       level_source_image: @level_source_image,
       activity: @activity,
       new_level_completed: @new_level_completed,
+      get_hint_usage: params[:gamification_enabled],
       share_failure: share_failure
     )
 
@@ -199,7 +203,6 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(
         user: current_user,
-        activity: @activity,
         user_level_id: @new_level_completed.try(:id),
         level_source_id: @level_source_image.level_source_id,
         autosaved: true

@@ -180,8 +180,6 @@ class ScriptLevel < ActiveRecord::Base
   def summarize
     if level.unplugged?
       kind = 'unplugged'
-    elsif named_level
-      kind = 'named_level'
     elsif assessment
       kind = 'assessment'
     else
@@ -204,7 +202,7 @@ class ScriptLevel < ActiveRecord::Base
       url: build_script_level_url(self)
     }
 
-    if kind == 'named_level'
+    if named_level
       summary[:name] = level.display_name || level.name
     end
 

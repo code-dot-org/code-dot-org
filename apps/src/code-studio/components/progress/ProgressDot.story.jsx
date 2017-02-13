@@ -1,5 +1,6 @@
 import React from 'react';
-import {ProgressDot} from './ProgressDot';
+import { ProgressDot } from './ProgressDot';
+import { LevelKind, LevelStatus } from '../../activityUtils';
 
 export default storybook => {
   storybook
@@ -11,11 +12,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [5275],
-              kind: 'assessment',
+              kind: LevelKind.assessment,
               next: [2, 1],
               position: 1,
               previous: false,
@@ -32,11 +33,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="locked"
+            status={LevelStatus.locked}
             level={{
               icon: null,
               ids: [5275],
-              kind: 'assessment',
+              kind: LevelKind.assessment,
               next: [2, 1],
               position: 1,
               previous: false,
@@ -55,11 +56,11 @@ export default storybook => {
             courseOverviewPage={true}
             grayProgress={true}
             saveAnswersBeforeNavigation={false}
-            status="locked"
+            status={LevelStatus.locked}
             level={{
               icon: null,
               ids: [5275],
-              kind: 'assessment',
+              kind: LevelKind.assessment,
               next: [2, 1],
               position: 1,
               previous: false,
@@ -76,11 +77,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="submitted"
+            status={LevelStatus.submitted}
             level={{
               icon: null,
               ids: [5275],
-              kind: 'assessment',
+              kind: LevelKind.assessment,
               next: [2, 1],
               position: 1,
               previous: false,
@@ -97,11 +98,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="attempted"
+            status={LevelStatus.attempted}
             level={{
               icon: null,
               ids: [5275],
-              kind: 'puzzle',
+              kind: LevelKind.puzzle,
               next: [2, 1],
               position: 1,
               previous: [7,15],
@@ -119,11 +120,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="passed"
+            status={LevelStatus.passed}
             level={{
               icon: null,
               ids: [2288],
-              kind: 'puzzle',
+              kind: LevelKind.puzzle,
               next: [2, 1],
               position: 6,
               title: 6,
@@ -139,11 +140,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="perfect"
+            status={LevelStatus.perfect}
             level={{
               icon: null,
               ids: [2288],
-              kind: 'puzzle',
+              kind: LevelKind.puzzle,
               next: [2, 1],
               position: 6,
               title: 6,
@@ -159,11 +160,11 @@ export default storybook => {
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
             currentLevelId="2288"
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [2288],
-              kind: 'puzzle',
+              kind: LevelKind.puzzle,
               position: 6,
               title: 6,
               url: 'http://localhost-studio.code.org:3000/s/course1/stage/11/puzzle/6'
@@ -177,11 +178,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [2094],
-              kind: 'unplugged',
+              kind: LevelKind.unplugged,
               previous: [1, 2],
               position: 1,
               title: 'Unplugged Activity',
@@ -196,35 +197,15 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: 'fa-file-text',
               ids: [1379],
-              kind: 'puzzle',
+              kind: LevelKind.puzzle,
               name: 'CSP Pre-survey',
               position: 2,
               title: 2,
               url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/2'
-            }}
-          />
-        )
-      },
-      {
-        name: 'named level in course overview',
-        story: () => (
-          <ProgressDot
-            courseOverviewPage={true}
-            saveAnswersBeforeNavigation={false}
-            status="not_tried"
-            level={{
-              icon: 'fa-file-text',
-              ids: [5442],
-              kind: 'named_level',
-              name: 'CSP Pre-survey',
-              position: 1,
-              previous: [1,1],
-              title: 1,
-              url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/1'
             }}
           />
         )
@@ -235,11 +216,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="perfect"
+            status={LevelStatus.perfect}
             level={{
               icon: 'fa-video-camera',
               ids: [5078],
-              kind: 'named_level',
+              kind: LevelKind.puzzle,
               name: 'Computer Science is Changing Everything',
               position: 3,
               previous: [1,1],
@@ -256,11 +237,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="review_rejected"
+            status={LevelStatus.review_rejected}
             level={{
               ids: [1073563865],
               position: 7,
-              kind: "named_level",
+              kind: LevelKind.peer_review,
               icon: null,
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
@@ -276,11 +257,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="review_accepted"
+            status={LevelStatus.review_accepted}
             level={{
               ids: [1073563865],
               position: 7,
-              kind: "named_level",
+              kind: LevelKind.peer_review,
               icon: null,
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
@@ -296,11 +277,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="submitted"
+            status={LevelStatus.submitted}
             level={{
               ids: [1073563865],
               position: 7,
-              kind: "named_level",
+              kind: LevelKind.peer_review,
               icon: null,
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
@@ -316,10 +297,10 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status={undefined}
+            status={LevelStatus.locked}
             level={{
               ids: [0],
-              kind: "peer_review",
+              kind: LevelKind.peer_review,
               title: "",
               url: "",
               name: "Reviews unavailable at this time",
@@ -335,11 +316,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [5096],
-              kind: 'named_level',
+              kind: LevelKind.puzzle,
               name: 'Internet Simulator: sending binary messages',
               position: 2,
               title: 2,
@@ -355,11 +336,11 @@ export default storybook => {
             courseOverviewPage={false}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: 'fa-file-text',
               ids: [5442],
-              kind: 'named_level',
+              kind: LevelKind.assessment,
               name: 'CSP Pre-survey',
               position: 1,
               previous: [1,1],
@@ -376,11 +357,11 @@ export default storybook => {
             courseOverviewPage={false}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
-            status="perfect"
+            status={LevelStatus.perfect}
             level={{
               icon: 'fa-video-camera',
               ids: [5078],
-              kind: 'named_level',
+              kind: LevelKind.puzzle,
               name: 'Computer Science is Changing Everything',
               position: 3,
               previous: [1,1],
@@ -397,11 +378,11 @@ export default storybook => {
             courseOverviewPage={false}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [2049],
-              kind: 'puzzle',
+              kind: LevelKind.puzzle,
               position: 4,
               next: [3,1],
               title: 4,
@@ -417,11 +398,11 @@ export default storybook => {
             courseOverviewPage={false}
             currentLevelId="2049"
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [2049],
-              kind: 'puzzle',
+              kind: LevelKind.puzzle,
               position: 4,
               next: [3,1],
               title: 4,

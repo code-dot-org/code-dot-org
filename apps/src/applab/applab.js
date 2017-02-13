@@ -46,6 +46,7 @@ const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
 import BoardController from '../lib/kits/maker/BoardController';
+import {injectBoardController} from '../lib/kits/maker/commands';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {
   getContainedLevelResultInfo,
@@ -56,7 +57,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {
   outputError,
   injectErrorHandler
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var project = require('@cdo/apps/code-studio/initApp/project');
 
@@ -147,6 +148,7 @@ function loadLevel() {
 
   if (level.makerlabEnabled) {
     Applab.makerController = new BoardController();
+    injectBoardController(Applab.makerController);
   }
 }
 
@@ -976,6 +978,10 @@ Applab.reset = function () {
   var divApplab = document.getElementById('divApplab');
   while (divApplab.firstChild) {
     divApplab.removeChild(divApplab.firstChild);
+  }
+
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.stopAllAudio();
   }
 
   // Clone and replace divApplab (this removes all attached event listeners):

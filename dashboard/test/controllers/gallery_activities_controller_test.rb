@@ -4,25 +4,38 @@ require 'test_helper'
 class GalleryActivitiesControllerTest < ActionController::TestCase
   setup do
     @user = create(:user)
-    @level_source = create(:level_source, level_source_image: create(:level_source_image))
-    @activity = create(
-      :activity,
-      user: @user,
-      level: create(:level, game: Game.find_by_app(Game::ARTIST)),
-      level_source: @level_source
-    )
-    @gallery_activity = create(:gallery_activity, user: @user, level_source: @level_source, activity: @activity, autosaved: false)
 
-    @playlab_level_source = create(:level_source, level_source_image: create(:level_source_image))
-    @playlab_activity = create(
-      :activity, user: @user,
-      level: create(:level, game: Game.find_by_app(Game::PLAYLAB)),
-      level_source: @playlab_level_source
+    @artist_level = create(:level, game: Game.find_by_app(Game::ARTIST))
+    @artist_user_level = create(:user_level, user: @user, level: @artist_level)
+    @level_source = create(
+      :level_source,
+      :with_image,
+      level: @artist_level,
     )
-    @playlab_gallery_activity = create(:gallery_activity, user: @user, level_source: @playlab_level_source, activity: @playlab_activity, autosaved: false)
+    @gallery_activity = create(
+      :gallery_activity,
+      user: @user,
+      level_source: @level_source,
+      autosaved: false,
+      user_level: @artist_user_level
+    )
+
+    @playlab_level = create(:level, game: Game.find_by_app(Game::PLAYLAB))
+    @playlab_user_level = create(:user_level, user: @user, level: @playlab_level)
+    @playlab_level_source = create(
+      :level_source,
+      :with_image,
+      level: @playlab_level
+    )
+    @playlab_gallery_activity = create(
+      :gallery_activity,
+      user: @user,
+      level_source: @playlab_level_source,
+      autosaved: false,
+      user_level: @playlab_user_level
+    )
 
     @new_level = create(:level, game: Game.find_by_app(Game::PLAYLAB))
-    @new_activity = create(:activity, user: @user, level: @new_level)
 
     @autosaved_gallery_activity = create(:gallery_activity, user: @user, autosaved: true)
   end
@@ -106,18 +119,18 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
     assert_difference('GalleryActivity.count') do
       level_source = create(:level_source, level: @new_level)
+      user_level = create(:user_level, user: @user, level: level_source.level)
       post :create,
         params: {
           gallery_activity: {
             level_source_id: level_source.id,
-            activity_id: @new_activity.id
+            user_level_id: user_level.id
           }
         },
         format: :json
     end
 
     assert_equal @user, assigns(:gallery_activity).user
-    assert_equal @new_activity, assigns(:gallery_activity).activity
     assert_equal false, assigns(:gallery_activity).autosaved
     assert_equal 'studio', assigns(:gallery_activity).app
 
@@ -127,17 +140,19 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   test "should return existing gallery_activity if exists" do
     sign_in @user
 
-    gallery_activity = GalleryActivity.create!(activity_id: @new_activity.id, user_id: @user.id)
-
     assert_no_difference('GalleryActivity.count') do
       post :create,
         params: {
-          gallery_activity: { activity_id: @new_activity.id }
+          gallery_activity: {
+            level_source_id: @level_source.id,
+            user_id: @user.id,
+            user_level: @artist_user_level
+          }
         },
         format: :json
     end
 
-    assert_equal gallery_activity, assigns(:gallery_activity)
+    assert_equal @gallery_activity, assigns(:gallery_activity)
     assert_equal false, assigns(:gallery_activity).autosaved
 
     assert_response :created
@@ -164,13 +179,13 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "cannot create gallery activity for someone else" do
-    sign_in another_user = create(:user)
-    create :activity, user: another_user
+    sign_in create(:user)
+    new_level_source = create :level_source
 
     assert_no_difference('GalleryActivity.count') do
       post :create,
         params: {
-          gallery_activity: {activity_id: @new_activity.id, user_id: @user.id}
+          gallery_activity: {level_source: new_level_source.id, user_id: @user.id}
         },
         format: :json
     end
@@ -183,7 +198,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
     assert_no_difference('GalleryActivity.count') do
       post :create,
-        params: {gallery_activity: { activity_id: @new_activity.id }},
+        params: {gallery_activity: { leveL_source: @level_source.id }},
         format: :json
     end
 

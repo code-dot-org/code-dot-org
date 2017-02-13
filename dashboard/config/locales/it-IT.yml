@@ -162,6 +162,8 @@
     login: Accedi
     invalid_login: Accesso non valido, per favore riprova
     pair_programming: Sto lavorando in coppia
+    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
+      target='_blank'>here</a>.
   password:
     reset_form:
       title: Hai dimenticato la tua password?
@@ -373,7 +375,7 @@
     delete_text_teacher_note: Nota che eliminando il tuo account non verranno eliminati
       gli account dei tuoi studenti.
     delete_confirm: Sei sicuro di voler eliminare il tuo account?
-    deleted_user: deleted user
+    deleted_user: utente eliminato
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
@@ -456,7 +458,7 @@
     announcement_learn_more_button: Ulteriori informazioni
     announcement_try_now_button: Prova adesso
     announcement_host_an_hour_button: Ospita un'ora
-    announcement_watch_video_button: Watch video
+    announcement_watch_video_button: Guarda video
     announcement_petition: Come insegnante, stai aprendo la strada per permettere
       ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso
       è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa
@@ -492,6 +494,23 @@
       grade levels&mdash;and it's all free. :) You don't need any experience to start
       teaching computer science in your classroom. <b>Find the next step that's right
       for your classroom.</b>
+    announcement_teacher_recruitment: Teachers like you are leading the computer science
+      education movement. You can participate in high-quality K-12th grade professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Take the lead on computer science in your school, and apply for professional
+      learning.
+    announcement_student_privacy: At Code.org, we take student privacy very seriously.
+      To protect your students’ privacy, we have made a change to your section’s login
+      page to avoid displaying full names. Even though this update should reduce privacy
+      concerns for the login page, we still encourage users to <i>not use full names
+      for students</i>.
+    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+      Your students could be featured in Code.org''s next viral video encouraging
+      students to take the AP CS Principles exam this year. We''re inviting all CS
+      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
+      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
+      will be featured in our video and the winning students will receive Code.org
+      swag!'
   move_students:
     new_section_dne: Ci dispiace, la classe col codice %{new_section_code} non esiste.
       Inserisci un codice di classe esistente.
@@ -709,6 +728,9 @@
     support: Ottieni aiuto
     support_url: "//programmailfuturo.it/aiuto"
     help_resources: Aiuto e Risorse
+    help_support: Help and Support
+    documentation: Documentation
+    tutorials: Tutorials
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
@@ -966,6 +988,8 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
+    main_course: Main Course
+    extra_course_content: Extra Course Content
   external_links:
     disclaimer: Limiti di responsabilità
     leaving_domain: Stai per lasciare il nostro dominio, per entrare su un sito che
@@ -992,48 +1016,48 @@
     starwars_javascript_name: 'Guerre Stellari: Costruisci una galassia con il codice
       ( JavaScript)'
     download_message: Scarica %{app_name} per l'utilizzo <i>in locale</i> (136MB)
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Albanian: 'Scarica in albanese:'
+    download_in_Arabic: 'Scarica in arabo:'
+    download_in_Azerbaijani: 'Scarica in azerbaigiano:'
+    download_in_Basque: 'Scarica in basco:'
+    download_in_Bosnian: 'Scarica in bosniaco:'
+    download_in_Bulgarian: 'Scarica in bulgaro:'
+    download_in_Catalan: 'Scarica in catalano:'
+    download_in_Chinese-Taiwan: 'Scarica in cinese-taiwanese:'
+    download_in_Chinese: 'Scarica in cinese:'
+    download_in_Croatian: 'Scarica in croato:'
+    download_in_Czech: 'Scarica in ceco:'
+    download_in_Danish: 'Scarica in danese:'
+    download_in_Dutch: 'Scarica in olandese:'
+    download_in_English: 'Scarica in inglese:'
+    download_in_Finnish: 'Scarica in finlandese:'
+    download_in_French: 'Scarica in frances:'
+    download_in_German: 'Scarica in tedesc:'
+    download_in_Greek: 'Scarica in greco:'
+    download_in_Hebrew: 'Scarica in ebreo:'
+    download_in_Hungarian: 'Scarica in ungaro:'
+    download_in_Icelandic: 'Scarica in islandese:'
+    download_in_Indonesian: 'Scarica in indonesiano:'
+    download_in_Irish: 'Scarica in irlandese:'
+    download_in_Italian: 'Scarica in italiano:'
+    download_in_Japanese: 'Scarica in giapponese:'
+    download_in_Korean: 'Scarica in coreano:'
+    download_in_Latvian: 'Scarica in lettone:'
+    download_in_Lithuanian: 'Scarica in lituano:'
+    download_in_Norwegian: 'Scarica in norvegese:'
+    download_in_Norwegian-Nynorsk: 'Scarica in norvegese-nynorsk:'
+    download_in_Polish: 'Scarica in polacco:'
+    download_in_Portuguese-Brazil: 'Scarica in portoghese-brasiliano:'
+    download_in_Portuguese: 'Scarica in portoghese:'
+    download_in_Romanian: 'Scarica in rumeno:'
+    download_in_Russian: 'Scarica in russo:'
+    download_in_Serbian: 'Scarica in serbo:'
+    download_in_Slovenian: 'Scarica in sloveno:'
+    download_in_Spanish: 'Scarica in spagnolo:'
+    download_in_Swedish: 'Scarica in svedese:'
+    download_in_Turkish: 'Scarica in turco:'
+    download_in_Ukrainian: 'Scarica in ucraino:'
+    download_in_Vietnamese: 'Scarica in vietnamita:'
     windows: Windows (64 bit)
     mac: Mac OS X
   plc:
