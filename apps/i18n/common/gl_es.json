@@ -338,5 +338,11 @@
   "whenRun": "cando se executa",
   "workspaceHeaderShort": "Espazo de traballo: ",
   "yes": "Si",
-  "yourProgress": "Your Progress"
+  "yourProgress": "Your Progress",
+  "exactNumberOfBlocks": "Only {numBlocks, plural, one {1 block} other {# blocks}} used!",
+  "fewerNumberOfBlocks": "Fewer than {numBlocks, plural, one {1 block} other {# blocks}} used!",
+  "puzzleCompleted": "Puzzle completed!",
+  "usingHints": "Using hints",
+  "usingTooManyBlocks": "Using too many blocks",
+  "withoutHints": "Without using any hints!"
 }
