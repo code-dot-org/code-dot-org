@@ -420,6 +420,10 @@ en:
       4.1 - 4.4 Lesson Connections: {}
       4.5 - 4.7 Lesson Connections: {}
       4.8 - 4.9 Lesson Connections: {}
+      5.1 - 5.3 Lesson Connections: {}
+      5.11 - 5.14 Lesson Connections: {}
+      5.4 - 5.6 Lesson Connections: {}
+      5.7 - 5.10 Lesson Connections: {}
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
@@ -943,6 +947,7 @@ en:
       Debugging with Console.log:
         description here: description here
         title: title
+      Design Mode Overview: {}
       Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
@@ -965,6 +970,8 @@ en:
       Digital Footprint instantframe wiz_kid_liz:
         description here: description here
         title: title
+      DigitalCitizenship2:
+        Digital Citizenship: Digital Citizenship
       Discovery Learning in Unit 1: {}
       Documentation in App Lab: {}
       Downloading the Data Set: {}
@@ -1344,6 +1351,7 @@ en:
       Event-Driven Programming Patterns:
         description here: description here
         title: title
+      Events Overview: {}
       Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
@@ -3358,7 +3366,6 @@ en:
       'CSD: Variables Matching':
         "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)": "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)"
         "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)": "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)"
-        "![](https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif)": "![](https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif)"
         "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)": "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)"
         <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">: <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">
         Program 1: Program 1
