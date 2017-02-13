@@ -128,6 +128,7 @@ ga:
     login: 'Logáil isteach'
     invalid_login: 'Theip ar an logáil isteach, bain triail eile as'
     pair_programming: 'Tá comhpháirtí in éineacht liom anseo'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Focal faire dearmadta?'
@@ -367,6 +368,9 @@ ga:
     announcement_mc_launch: "Tá cúrsa nua againn a leanann ceann de na cúrsaí is mó a thaitníonn le daoine! Leis an Dearthóir Minecraft úrnua don Uair Chódála, is féidir le daltaí na rialacha sa domhan Minecraft a leagan síos, agus eispéireas go hiomlán uathúil a chruthú. Ansin, is féidir leo an cluiche a chomhroinnt le cairde, nó a imirt ar a nguthán. Bainfidh do chuid daltaí taitneamh as!"
     announcement_how_code_studio: "Is féidir leat an ríomheolaíocht a mhúineadh i do sheomra ranga fiú mura bhfuil aon taithí agat. Gheobhaidh tú curaclam iomlán, pleananna ceachta, cláracha foghlamtha den chéad scoth, agus neart uirlisí iontacha le haghaidh gach leibhéil &mdash; gach a dteastaíonn uait, saor in aisce. Níl tú cinnte cá dtosóidh tú? Íoslódáil <a href='%{video_download_url}'>an físeán seo</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin eile."
     section_code_not_entered: "Tabhair cód an rannáin reatha."
@@ -524,6 +528,9 @@ ga:
     support: "Cabhair"
     support_url: "//support.code.org"
     help_resources: "Cabhair agus Acmhainní"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Freagra mícheart"
     wrong_body: "Faraor, ní é sin an freagra ceart. Déan iarracht eile!"
@@ -736,6 +743,8 @@ ga:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Séanadh
     leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt ar shuíomh nach bhfuil faoi stiúir Code.org.

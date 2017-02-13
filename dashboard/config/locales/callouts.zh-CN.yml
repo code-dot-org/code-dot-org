@@ -130,19 +130,15 @@
         sign_in_to_save_project:
         - this project to your account!
       Course 4 Artist 4_callout:
-        repeat_full_circle:
-        - make a full circle
+        repeat_full_circle: "输入僵尸至少需要移动多少次才能完成一个完整的循环"
       Course 4 Artist 7_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: "用重复模块来将工作区的其它模块包起来。"
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: "将计数器拖拽到这个模块中。"
       Course 4 Artist Functions 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: "点击这里来打开函数的选项，然后点击“创建函数”的按钮。"
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint:
-        - fix it in the next puzzle.
+        house_hint: "如果这幅画看起来不像一个房子也没关系。我们会在下一关里面修好它。"
       Course 4 Artist Functions 8_callout:
         edit_function: "单击此处来编辑您的函数。"
       Course 4 Artist Functions challenge_callout:
@@ -152,14 +148,11 @@
       Course 4 Artist Params 2_callout:
         length_parameter: "你能修改这个函数，从而让它用到长度参数吗？"
       Course 4 Artist Params 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: "点击这里来打开函数的选项，然后点击“创建函数”的按钮。"
       Course 4 Artist Vars 1_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: "用重复模块来将工作区的其它模块包起来。"
       Course 4 Artist Vars 10_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: "用这个模块来设置“边数”为正确的数值来通过这一关。"
       Course 4 Artist Vars 12_callout:
         set_length: "用这个模块来设置“长度”为正确的数值。"
       Course 4 Artist Vars 13_callout: []
@@ -168,14 +161,12 @@
       Course 4 Artist Vars 3_callout:
         place_variable: "将变量拖拽到这个模块中"
       Course 4 Artist Vars 6_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "用360除以边的数量，从而算出每次转的角度。"
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       Course 4 Artist Vars 9_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: "用这个模块来设置“边数”为正确的数值来通过这一关。"
       Course 4 Bee 1_callout:
         if_bee_nectar:
         - "做蜂蜜"
@@ -185,11 +176,9 @@
       Course 4 Bee For Loops 1_callout:
         get_nectar: 使用新的"得到花蜜"块。
       Course 4 Bee For Loops 6_callout:
-        actions_category:
-        - here now.
+        actions_category: "工具箱里有新的样子了！现在里面有“行动”模块了。"
       Course 4 Bee Params 2_callout:
-        edit_get_nectar:
-        - the Bee will turn to get the nectar.
+        edit_get_nectar: "用这个按钮来编辑函数，并改变蜜蜂的方向让它到达花蜜。"
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4:
@@ -234,6 +223,28 @@
         - the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops8_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_playLab_events2_callout: []
+      courseA_playLab_events3_callout: []
+      courseA_playLab_events4_callout: []
+      courseA_playLab_events5_callout: []
+      courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_maze_seq7_callout:
+        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
+          they can't be trashed.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
       courseC_collector_prog7_callout:
@@ -314,6 +325,14 @@
         courseF_artist_for1_1:
         - for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: []
+      courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4_callout:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5_callout:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1:
         - numbers. These `math` blocks can be pulled out and moved around!
@@ -356,6 +375,13 @@
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_fwp1_callout:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp3_callout:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4_callout:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1:
         - to make it easier to find the blocks you need.
@@ -552,16 +578,12 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: "用“创建圆圈”模块，并且改变大小。"
       frozen cross rotate_callout:
         replace_questions_degree: 使用下拉菜单来将"???"替换为数字
       frozen cross_callout:
-        repeat_blocks_1: |-
-          (1) Use this block and put it around the grey blocks in
-          the workspace
-        repeat_blocks_2:
-        - inside
+        repeat_blocks_1: "(1) 使用这个模块将工作区的灰色模块包围起来。"
+        repeat_blocks_2: (2) 移动"重复"块到这里, 然后将灰色方块放到它里面.
       frozen diamond snowflake_callout:
         frozen_diamond_repeat: "用重复模块来创建这个形状。"
       frozen diamond_callout:
@@ -570,11 +592,9 @@
         snowflake_dropdown: "用下拉菜单来创建不一样的雪花！"
       frozen line_callout:
         run: Hit "Run" to try your program!
-        move_elsa_forward:
-        - Run" block to make Elsa move forward
+        move_elsa_forward: "拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。"
       frozen perpendicular_callout:
-        turn_elsa:
-        - determines how much Elsa turns
+        turn_elsa: "用“转”模块来让艾莎转方向。下拉菜单里的数字决定了艾莎转多少度。"
       frozen snowflake branch_callout:
         frozen_snowflake_branch: "用“创建一个雪花分支”模块"
       frozen square iterative_callout:
@@ -684,16 +704,14 @@
         - time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: "点击编辑，在你的函数中添加参数"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中"
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1:
         - You don't have to check for honeycombs at all.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: "用下拉菜单来创建不一样的雪花！"
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: "用“创建圆圈”模块，并且改变大小。"
       grade4_frozen_nested_loop_diamonds1_callout:
         frozen_diamond_repeat: "用重复模块来创建这个形状。"
       grade4_frozen_nested_loop_diamonds3_callout:
@@ -735,8 +753,7 @@
         - you are always turning by 360 ÷ `sides` degrees.
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: "点击编辑，在你的函数中添加参数"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中"
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1:
         - code inside the function.
@@ -748,20 +765,17 @@
         - code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: "点击编辑，在你的函数中添加参数"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中"
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "将长度变量拖拽到这里来替代问号。"
       grade5_artist_variables_pentagons12_callout:
         set_length: "用这个模块来设置“长度”为正确的数值。"
       grade5_artist_variables_square7_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "用360除以边的数量，从而算出每次转的角度。"
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1:
         - to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -814,8 +828,7 @@
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: "发生此事件时播放声音。"
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout:
-        - the up arrow is pressed?
+        Infinity_move_directions_callout: "当按上方向键时，哪个模块将会让大白向上移动？"
         Infinity_move_directions_callout_arrow: "使用这些箭头键引导"
       Infinity_move_right_callout:
         Infinity_move_right_runbutton: "在这里添加移动模块"
@@ -870,32 +883,27 @@
         - that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: "单击此处来编辑您的函数。"
-        function_editor_draw_square:
-        - run everytime you use the "draw a square" block
+        function_editor_draw_square: "这是你的函数定义。这些模块会在每次使用“画一个正方形”模块时运行。"
       NEW Course 4 Artist Functions 7_callout:
         edit_function: "单击此处来编辑您的函数。"
       NEW Course 4 Artist Functions 8_callout:
         edit_function: "单击此处来编辑您的函数。"
       NEW Course 4 Artist Params 10_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: "点击这里来打开函数的选项，然后点击“创建函数”的按钮。"
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: "点击编辑，在你的函数中添加参数"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中"
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "将长度变量拖拽到这里来替代问号。"
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop:
         - here
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category:
-        - here now.
+        actions_category: "工具箱里有新的样子了！现在里面有“行动”模块了。"
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1:
@@ -910,8 +918,7 @@
       Overworld Chop Trees_callout:
         craft_callout_preplaced: "我们已将一些方块放在这儿，好方便你开始"
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house:
-        - you finish it?
+        craft_callout_preplaced_house: "此代码将开始建造你的房子。你能完成吗？"
       Overworld Move to Sheep_callout:
         craft_run_button_callout: 点击"运行"以尝试您的程序
         craft_drag_block_callout:
@@ -1024,8 +1031,7 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward:
-        - to move forward?
+        craft_callout_moveforward: "此代码会检查岩浆，你能添加一条向前移动的命令吗？"
       Underground Iron_callout:
         craft_what_is_iron: "开采这块铁矿！"
       WebLab PS test - 1-12_callout:

@@ -896,6 +896,7 @@
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       AllTheThings Applab - Turtle move with button_instruction: |-
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
@@ -909,6 +910,11 @@
         levels (By design, applab levels only work if signed in. Normally, we make
         people sign in, but this is only enforceable for a whole script and would
         be annoying to do for the allthethings script).
+      allthethings level dataTables_instruction: |-
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
       allthethings_moviebot_instruction: |-
         This level cloned from "U3 Digital Assistant
         Target"
@@ -2262,10 +2268,205 @@
       course_playlab_variables3_instruction: |
         Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r
+      courseA_artist_loops1_instruction: |-
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      courseA_artist_loops10_instruction: |-
+        Help me put down stones so I don't fall
+        in!
+      courseA_artist_loops11_instruction: |-
+        Help me build steps to watch the ship
+        sail away.
+      courseA_artist_loops12_instruction: |-
+        The artist saw something funny in the
+        distance.  Draw what you think he saw.
+      courseA_artist_loops2_instruction: |-
+        Help the artist draw this line two times
+        forward.
+      courseA_artist_loops3_instruction: Draw a line forward five times.
+      courseA_artist_loops4_instruction: |-
+        Now, use a `repeat` loop to draw this line
+        five times!
+      courseA_artist_loops5_instruction: |-
+        Draw a line seven steps long. This will
+        become our horizon.
+      courseA_artist_loops6_instruction: Let's put a nice hill in the back.
+      courseA_artist_loops7_instruction: |-
+        Use the `repeat` loop to add waves to the
+        water.
+      courseA_artist_loops8_instruction: We need a ladder up to the boat.
+      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
+      courseA_collector_loops1_instruction: |-
+        Move Laurel around and get as much gold
+        as you can!
+      courseA_collector_loops10_instruction: |-
+        Help me get all of the gold from this
+        deep valley.
+      courseA_collector_loops11_instruction: |-
+        Help me get all of the gold from this
+        cave.
+      courseA_collector_loops12_instruction: |-
+        Eureka!  Collect as much gold as you
+        can!
+      courseA_collector_loops2_instruction: |-
+        Here are three piles of gold!  Collect
+        all three.
+      courseA_collector_loops3_instruction: |-
+        How can Laurel collect all five piles
+        of gold using only one `[E-->]` block?
+      courseA_collector_loops4_instruction: |-
+        Fix Laurel's path to get all of this
+        gold.
+      courseA_collector_loops5_instruction: |-
+        Use what you learned to get all of the
+        coins.
+      courseA_collector_loops6_instruction: |-
+        Add blocks to this code to collect all
+        of the coins.
+      courseA_collector_loops7_instruction: |-
+        What should you add to this code to
+        get all of the gold?
+      courseA_collector_loops8_instruction: Write the code to get all of this gold.
+      courseA_collector_loops9_instruction: |-
+        **Challenge:** The gold goes all the
+        way up these stairs!  Write the code to help me get it all.
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
+      courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
+        the pig! "
+      courseA_maze_seq11_instruction: |-
+        Move one way, then another to get the bird
+        to the pig.
+      courseA_maze_seq12_instruction: 'Get that pig! '
+      courseA_maze_seq13_instruction: Get the pig any way you can!
       courseA_maze_seq2_instruction: Pas de code aan om me naar het varken te brengen!
+      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
+      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq5_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq6_instruction: |-
+        Move one way, then another to get the bird
+        to the pig!
+      courseA_maze_seq7_instruction: |-
+        Figure out what is missing and then add blocks
+        to get the bird to the pig!
+      courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
+      courseA_maze_seq9_instruction: |-
+        Debug this level by adding blocks to get the
+        bird to the pig!
+      courseA_playLab_events1_instruction: |-
+        This is a Play Lab level.  Move blocks
+        to the workspace and see what happens!
+      courseA_playLab_events2_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
+      courseA_playLab_events3_instruction: |-
+        Connect the `move left` block to the
+        `when left` event block that is already in the workspace.
+      courseA_playLab_events4_instruction: |-
+        Now, get Jorge to move right when the
+        `right` button is clicked.
+      courseA_playLab_events5_instruction: |-
+        Add events to have Jorge move up and
+        down when the `up` and `down` buttons are pressed.
+      courseA_playLab_events6_instruction: |-
+        Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked.
+      courseA_playLab_events7_instruction: |-
+        Add anything you want to this game.  Can
+        you make the dinosaur disappear when Jorge runs into him?
+      courseA_video_events_instruction: Need a better playlab/events combo
+      courseB_artist_loops1_instruction: |-
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      courseB_artist_loops10_instruction: |-
+        Use what you have learned to draw a picture
+        of what you think the artist saw when he got home.
+      courseB_artist_loops2_instruction: |-
+        The Artist is trying to draw a line six
+        times, but can't get it right.  Can you help?
+      courseB_artist_loops3_instruction: |-
+        Help the artist draw a line 7 times to
+        make a garden wall.
+      courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
+        the bugs in the code and help the artist prepare the ground. "
+      courseB_artist_loops5_instruction: |-
+        Time to fix the stairs!  Repeat this pattern
+        five times so the artist can reach the top of the bushes.
+      courseB_artist_loops6_instruction: Climb the vine and see where it goes?
+      courseB_artist_loops7_instruction: |-
+        **Challenge:**  It's a hidden garden!
+        Let's walk around.
+      courseB_artist_loops8_instruction: |-
+        Time to head home. Can you fix this ladder
+        to help the artist get down?
+      courseB_artist_loops9_instruction: |-
+        Let's take the short way home, over the
+        pond. Can you help the artist stay on the stones?
+      courseB_collector_loops1_instruction: |-
+        This is Laurel the Adventurer!  Can
+        you move her around and get gold?
+      courseB_collector_loops10_instruction: |-
+        Help Laurel get all of the gold from
+        this cave.
+      courseB_collector_loops11_instruction: |-
+        Eureka!  Collect as much gold as you
+        can!
+      courseB_collector_loops2_instruction: Four piles of gold!  Collect all four.
+      courseB_collector_loops3_instruction: |-
+        How can Laurel collect all five piles
+        of gold using only one `E -->` block?
+      courseB_collector_loops4_instruction: |-
+        Fix Laurel's path to get all of this
+        gold!
+      courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
+        get all of the gold. "
+      courseB_collector_loops6_instruction: |-
+        What should you add to this code to
+        get all of the gold?
+      courseB_collector_loops7_instruction: Write the code to get all of this gold.
+      courseB_collector_loops8_instruction: |-
+        **Challenge: ** The gold goes all the
+        way down these stairs!  Write the code to help Laurel get it all.
+      courseB_collector_loops9_instruction: |-
+        *"Help me get the gold from this deep
+        valley."*
+      courseB_collector_prog1_instruction: |-
+        This is Laurel the Adventurer!  Can you
+        move her around and get gold?
+      courseB_collector_prog2_instruction: Four piles of gold!  Collect all four.
+      courseB_collector_prog3_instruction: |-
+        How can Laurel collect all five piles
+        of gold using only one `E -->` block?
+      courseB_maze_seq1_instruction: |-
+        Play with these blocks to see what they make
+        the bird do!
+      courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
+      courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
+      courseB_maze_seq12_instruction: Now get that pig any way you can!
+      courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
+      courseB_maze_seq3_instruction: '*"Fix the code to get me to the pig!"*'
+      courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
+      courseB_maze_seq5_instruction: Now try this puzzle from the start!
+      courseB_maze_seq6_instruction: |-
+        Move one way, then another to get the bird
+        to the pig!
+      courseB_maze_seq7_instruction: |-
+        Figure out what is missing and then add blocks
+        to get the bird to the pig!
+      courseB_maze_seq8_instruction: |-
+        Your turn!  What do you need to do to get the
+        bird to the pig?
+      courseB_maze_seq9_instruction: |-
+        Challenge: Move around the TNT to get the bird
+        to the pig.
+      courseB_maze_seqCold_instruction: |-
+        Challenge: Debug this level by adding blocks
+        to get the bird to the pig!
+      courseB_maze_seqOld_instruction: "Go around the TNT to get the bird to the\npig! "
+      courseB_playLab_events1_instruction: |-
+        See if you can figure out what each block
+        does.
       courseB_playlab_events2_instruction: |-
         Have Daisy the Dragon say something when
         you click "Run".
@@ -3055,6 +3256,32 @@
       courseF_artist_for9_instruction: |-
         Use the counter inside the `set alpha` block
         to get this faded center.
+      courseF_artist_fwp1_instruction: |-
+        Edit the function 'draw a square' to find
+        bugs.
+      courseF_artist_fwp2_instruction: |-
+        Edit the function to accept a parameter called
+        `length`.
+      courseF_artist_fwp3_instruction: |-
+        Create a function called 'draw a square'
+        and use it to outline these four boxes using parameters.
+      courseF_artist_fwp4_instruction: |-
+        Edit this function to add a parameter for
+        the number of sides in your polygon.
+      courseF_artist_fwp5_instruction: "Use the function from the last puzzle to\ndraw
+        this series of shapes.  "
+      courseF_artist_fwp6_instruction: |-
+        Challenge: Edit `draw a spiral edge` to use
+        `length` and `sides` parameters, then recreate these shapes.
+      courseF_artist_fwp7_instruction: |-
+        Finish off the `draw a spiral edge` function
+        to also ask for a minimum length for the center of the spiral.
+      courseF_artist_fwp8_instruction: |-
+        Can you figure out how to make this drawing
+        using the function that you just created?
+      courseF_artist_fwp9_instruction: |-
+        Freeplay: Draw something awesome! Play with
+        the pen width to see how different your drawings look!
       courseF_artist_variables1_instruction: |-
         Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side.
@@ -3150,6 +3377,22 @@
       courseF_bee_for9_instruction: |-
         Use the `counter` variable to navigate this
         garden with the fewest number of blocks possible.
+      courseF_bee_fwp2_instruction: |-
+        Pull this code into a function, then call the
+        function to check this row for nectar.
+      courseF_bee_fwp3_instruction: |-
+        Let's see if the function makes collecting
+        these three rows of nectar any easier.
+      courseF_bee_fwp4_instruction: |-
+        Add a `length` parameter to the function so
+        that it will still work when the row is a different length.
+      courseF_bee_fwp5_instruction: Use this function to collect the nectar.
+      courseF_bee_fwp6_instruction: Build a short and sweet solution to this puzzle.
+      courseF_bee_fwp7_instruction: |-
+        **Challenge:** Modify your function to make
+        honey as well.
+      courseF_bee_fwp8_instruction: Use your new function to solve this spiral.
+      courseF_bee_fwp9_instruction: Use your new function to solve this puzzle.
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of choose your own adventure story in play lab.
@@ -3468,6 +3711,18 @@
       CSDU4 nameAgeTemplate_instruction: |-
         Add an Text Input box for the name and
         age. (Click to see full instructions)
+      CSDU6 - Arrays - expressionsAsIndexes_instruction: |-
+        Write a program that displays
+        a randomly chosen color from the array. (Click to see full instructions)
+      CSDU6 - Arrays - indexPractice_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - Arrays - length_instruction: |-
+        Use list.length to determine the length
+        of each array. (Click to see full instructions)
+      CSDU6 - Arrays - lengthMinus1_instruction: |-
+        Use list.length - 1 to log the
+        last item in the array to the console. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -4612,6 +4867,7 @@
       Food Fight_instruction: |-
         You can make whatever you want in play lab! This is
         an example of a game you can make in play lab.
+      FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Laten we nu 20 overlappende cirkels
         maken, draai 18 graden tussen elke cirkel.
@@ -6422,6 +6678,9 @@
         Uh oh, I lost my map and can't remember what I planted.
         Every sprout could grow up to be corn, beans, or pumpkins. Can you write some
         code to pick all the crops, no matter what they are?
+      harvey_pixelation_instruction: |-
+        Encode an image of anything you like using
+        binary. The binary language will be represented with '0' and '1' only.
       Infinity_catch_instruction: Kun je Elsa (acteur 2) laten inhalen door Anna met
         behulp van de pijltjestoetsen?
       Infinity_finale_instruction: Maak wat je maar wilt en deel het!
@@ -6452,6 +6711,9 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
+      InspirationalArtwork_instruction: |-
+        If this picture inspires you, try to make
+        something similar. Otherwise, create something all your own.
       'Internet Simulator: Broadcast Mode_instruction': |
         Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and

@@ -57,7 +57,7 @@ class AdminReportsController < ApplicationController
 
   def level_completions
     require 'date'
-# noinspection RubyResolve
+    # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
     @is_sampled = false

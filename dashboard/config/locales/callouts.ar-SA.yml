@@ -130,19 +130,18 @@
         sign_in_to_save_project:
         - this project to your account!
       Course 4 Artist 4_callout:
-        repeat_full_circle:
-        - make a full circle
+        repeat_full_circle: "أدخل عدد المرات التي يجب أن يتحرك الزومبي ليقوم بدائرة
+          كاملة"
       Course 4 Artist 7_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل
       Course 4 Artist For Loops 4_callout:
         place_counter_variable: "سحب متغير العداد داخل مربع البرمجة هذا"
       Course 4 Artist Functions 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر
+          "إنشاء مهمة".
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint:
-        - fix it in the next puzzle.
+        house_hint: "موافق إذا كانت الصورة لا تبدو وكأنها منزل حتى الآن. سيتم إصلاحه
+          في اللغز القادم."
       Course 4 Artist Functions 8_callout:
         edit_function: "انقر هنا لتحرير وظيفتك."
       Course 4 Artist Functions challenge_callout:
@@ -152,14 +151,12 @@
       Course 4 Artist Params 2_callout:
         length_parameter: يمكن أن تقوم بتحديث هذه الوظيفة حيث أنه يستخدم المعلمة "طول"؟
       Course 4 Artist Params 4_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر
+          "إنشاء مهمة".
       Course 4 Artist Vars 1_callout:
-        repeat_blocks:
-        - workspace
+        repeat_blocks: إستخدم كتلة "كرر" و لفّ حولها القطع في مساحة العمل
       Course 4 Artist Vars 10_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: تستخدم هذه الكتلة لتعيين "الجانبين" إلى العدد المطلوب لإكمال اللغز.
       Course 4 Artist Vars 12_callout:
         set_length: تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.
       Course 4 Artist Vars 13_callout: []
@@ -168,14 +165,12 @@
       Course 4 Artist Vars 3_callout:
         place_variable: "سحب المتغير الخاص بك داخل مربع الترجمة هذا"
       Course 4 Artist Vars 6_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات."
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       Course 4 Artist Vars 9_callout:
-        set_sides:
-        - the puzzle.
+        set_sides: تستخدم هذه الكتلة لتعيين "الجانبين" إلى العدد المطلوب لإكمال اللغز.
       Course 4 Bee 1_callout:
         if_bee_nectar:
         - "إنتاج العسل"
@@ -185,11 +180,10 @@
       Course 4 Bee For Loops 1_callout:
         get_nectar: استخدام الكتلة الجديدة "الحصول على رحيق".
       Course 4 Bee For Loops 6_callout:
-        actions_category:
-        - here now.
+        actions_category: أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.
       Course 4 Bee Params 2_callout:
-        edit_get_nectar:
-        - the Bee will turn to get the nectar.
+        edit_get_nectar: "استخدم هذا الزر لتحرير المهمة وتغيير اتجاه النحلة سوف تتحول
+          إلى الحصول على الرحيق."
       Course 4 Bee Params 3_callout: []
       Course 4 Bee Params 4 - Two WhenRun_callout:
         Course_4_Bee_Params_4:
@@ -234,6 +228,28 @@
         - the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      courseA_artist_loops4_callout:
+        courseA_artist_loops4_1: This number tells you how many of these blocks you
+          can use in this puzzle.
+      courseA_artist_loops8_callout:
+        courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
+          you need to?
+      courseA_collector_loops3_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      courseA_playLab_events2_callout: []
+      courseA_playLab_events3_callout: []
+      courseA_playLab_events4_callout: []
+      courseA_playLab_events5_callout: []
+      courseA_playLab_events6_callout:
+        courseA_playLab_events6_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      courseB_artist_loops3_callout:
+        courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      courseB_maze_seq7_callout:
+        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
+          they can't be trashed.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
       courseC_collector_prog7_callout:
@@ -314,6 +330,14 @@
         courseF_artist_for1_1:
         - for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: []
+      courseF_artist_fwp1_callout:
+        courseF_artist_fwp1_1: Click the "edit" button to change the code inside the
+          function.
+      courseF_artist_fwp4_callout:
+        courseF_artist_fwp4_1: To complete your polygon, make sure you are always
+          turning by 360 ÷ `sides` degrees.
+      courseF_artist_fwp5_callout:
+        courseF_artist_fwp5_1: You will find the polygon function in here.
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1:
         - numbers. These `math` blocks can be pulled out and moved around!
@@ -356,6 +380,13 @@
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_fwp1_callout:
+        courseF_bee_fwp1_1: You can find `if` statements in here.
+      courseF_bee_fwp3_callout:
+        courseF_bee_fwp3_1: This same function can be used when checking for empty
+          spaces as well as clouds.
+      courseF_bee_fwp4_callout:
+        courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1:
         - to make it easier to find the blocks you need.
@@ -552,16 +583,14 @@
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة"
+          و غيّر الحجم.
       frozen cross rotate_callout:
         replace_questions_degree: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
       frozen cross_callout:
-        repeat_blocks_1: |-
-          (1) Use this block and put it around the grey blocks in
-          the workspace
-        repeat_blocks_2:
-        - inside
+        repeat_blocks_1: "(1) استخدام هذه الكتلة لوضعها حول الكتل الرمادية في مساحة
+          العمل"
+        repeat_blocks_2: أنقل المقطع "كرر" هنا، وضع المقاطع الرمادية بداخلهاا
       frozen diamond snowflake_callout:
         frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
       frozen diamond_callout:
@@ -571,11 +600,11 @@
           الثلج!"
       frozen line_callout:
         run: Hit "Run" to try your program!
-        move_elsa_forward:
-        - Run" block to make Elsa move forward
+        move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة
+          "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
       frozen perpendicular_callout:
-        turn_elsa:
-        - determines how much Elsa turns
+        turn_elsa: إستخدم القطعة البرمجية "اتجه" لجعل إلسا تدور. العدد الموجود في
+          القائمة يحدد الزاوية التي ستستدرها
       frozen snowflake branch_callout:
         frozen_snowflake_branch: إستخدم قطعة "إنشاء فرع رقاقة الثلج"
       frozen square iterative_callout:
@@ -685,8 +714,8 @@
         - time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
         edit_add_parameter: "انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن
+          ثم اسحبه إلى تعريف الدالة الخاصة بك"
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1:
         - You don't have to check for honeycombs at all.
@@ -694,8 +723,8 @@
         snowflake_dropdown: "استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
           الثلج!"
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle:
-        - and change the size.
+        frozen_circle_function_with_parameter_circle: إستخدم القطعة "إنشاء دائرة"
+          و غيّر الحجم.
       grade4_frozen_nested_loop_diamonds1_callout:
         frozen_diamond_repeat: إستخدم القطعة "كرر" لإنشاء هذا الشكل.
       grade4_frozen_nested_loop_diamonds3_callout:
@@ -737,8 +766,8 @@
         - you are always turning by 360 ÷ `sides` degrees.
       grade5_artist_parameters_squares1_callout:
         edit_add_parameter: "انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن
+          ثم اسحبه إلى تعريف الدالة الخاصة بك"
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1:
         - code inside the function.
@@ -750,20 +779,18 @@
         - code inside the function.
       grade5_artist_parameters_triangles1aa_callout:
         edit_add_parameter: "انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن
+          ثم اسحبه إلى تعريف الدالة الخاصة بك"
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a:
         - coding area wider.
       grade5_artist_variables_octagons13_callout: []
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "اسحب متغير الطول هنا لاستبدال علامات الاستفهام"
       grade5_artist_variables_pentagons12_callout:
         set_length: تستخدم هذه الكتلة لتعيين "طول" إلى القيمة الصحيحة.
       grade5_artist_variables_square7_callout:
-        degrees_per_side:
-        - angle in degrees.
+        degrees_per_side: "قسمة 360 على عدد الجانبين للحصول على حجم كل زاوية في درجات."
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1:
         - to enter numbers. These `math` blocks can be pulled out and moved around!
@@ -816,8 +843,8 @@
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: "تشغيل صوت عند حدوث هذا الحدث."
       Infinity_move_directions_callout:
-        Infinity_move_directions_callout:
-        - the up arrow is pressed?
+        Infinity_move_directions_callout: "أي من مربعات البرمجة ستجعل بايماكس يتنقل
+          إلى أعلى عند الضغط على السهم لأعلى؟"
         Infinity_move_directions_callout_arrow: "استخدم هذه الأسهم للتوجيه"
       Infinity_move_right_callout:
         Infinity_move_right_runbutton: "إضافة مربع برمجة تنقّل هنا"
@@ -872,32 +899,30 @@
         - that it creates a square.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: "انقر هنا لتحرير وظيفتك."
-        function_editor_draw_square:
-        - run everytime you use the "draw a square" block
+        function_editor_draw_square: هذا هو تعريف الدالة الخاصة بك. تشتغل مربعات البرمجة
+          هذه كل مرة تستخدم فيها مربع ترجمة "ارسم مربع"
       NEW Course 4 Artist Functions 7_callout:
         edit_function: "انقر هنا لتحرير وظيفتك."
       NEW Course 4 Artist Functions 8_callout:
         edit_function: "انقر هنا لتحرير وظيفتك."
       NEW Course 4 Artist Params 10_callout:
-        create_function:
-        - '"Create a Function" button.'
+        create_function: انقر هنا لفتح القائمة المنبثقة "المهام"، ثم انقر فوق الزر
+          "إنشاء مهمة".
       NEW Course 4 Artist Params 2_callout:
         create_function: ''
         name_function: ''
         write_draw_triangle_function: ''
       NEW Course 4 Artist Params 9_callout:
         edit_add_parameter: "انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك"
-        add_and_drag_parameter:
-        - and then drag it into your function definition
+        add_and_drag_parameter: "اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن
+          ثم اسحبه إلى تعريف الدالة الخاصة بك"
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable:
-        - marks
+        place_length_variable: "اسحب متغير الطول هنا لاستبدال علامات الاستفهام"
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop:
         - here
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category:
-        - here now.
+        actions_category: أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.
       New Maker Lab Project_callout: []
       New Play Lab Project_callout:
         New Play Lab Project_callout1:
@@ -912,8 +937,8 @@
       Overworld Chop Trees_callout:
         craft_callout_preplaced: "وضعنا بعض الكتل هنا لنساعدك في البدء"
       Overworld House Frame Chosen_callout:
-        craft_callout_preplaced_house:
-        - you finish it?
+        craft_callout_preplaced_house: "ستساعدك هذه التعليمة البرمجية في البدء في
+          بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
       Overworld Move to Sheep_callout:
         craft_run_button_callout: انقر على "نفذ" لتجربة برنامجك
         craft_drag_block_callout:
@@ -1026,8 +1051,8 @@
       U3L2_TurtleSquare_right_callout: []
       U5 ColorSleuth Template_callout: []
       Underground Avoiding Lava_callout:
-        craft_callout_moveforward:
-        - to move forward?
+        craft_callout_moveforward: "ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك
+          إضافة أمر للتقدم؟"
       Underground Iron_callout:
         craft_what_is_iron: "الحفر لاستخراج كتلة حديدية!"
       WebLab PS test - 1-12_callout:

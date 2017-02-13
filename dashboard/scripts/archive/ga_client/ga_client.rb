@@ -12,16 +12,16 @@ require 'yaml'
 #   CDO.ga_profile_id: 01234567 [this is the "View ID", not the "Account ID"]
 
 class GAClient
-# Modified from https://github.com/google/google-api-ruby-client-samples/blob/master/service_account/analytics.rb
+  # Modified from https://github.com/google/google-api-ruby-client-samples/blob/master/service_account/analytics.rb
   API_VERSION = 'v3'
   CACHED_API_FILE = File.join(__dir__, "analytics-#{API_VERSION}.cache")
 
-  ## Query Parameters Summary https://developers.google.com/analytics/devguides/reporting/core/v3/reference#q_summary
-  ## Dimensions and Metrics Reference: https://developers.google.com/analytics/devguides/reporting/core/dimsmets
-  ## A single dimension data request to be retrieved from the API is limited to a maximum of 7 dimensions
-  ## A single metrics data request to be retrieved from the API is limited to a maximum of 10 metrics
+  # Query Parameters Summary https://developers.google.com/analytics/devguides/reporting/core/v3/reference#q_summary
+  # Dimensions and Metrics Reference: https://developers.google.com/analytics/devguides/reporting/core/dimsmets
+  # A single dimension data request to be retrieved from the API is limited to a maximum of 7 dimensions
+  # A single metrics data request to be retrieved from the API is limited to a maximum of 10 metrics
 
-  ## Function to query google for a set of analytics attributes
+  # Function to query google for a set of analytics attributes
   def self.query_ga(start_date, end_date, dimensions, metrics, filter)
     client, analytics = get_client
     # noinspection RubyStringKeysInHashInspection,RubyClassVariableUsageInspection
@@ -57,7 +57,7 @@ class GAClient
       application_version: '0.0.1'
     )
 
-    ## Load our credentials for the service account
+    # Load our credentials for the service account
     signing_key = Google::APIClient::KeyUtils.load_from_pkcs12(pkcs12_key, key_secret)
 
     @@client.authorization = Signet::OAuth2::Client.new(
@@ -68,12 +68,12 @@ class GAClient
       signing_key: signing_key
     )
 
-    ## Request a token for our service account
+    # Request a token for our service account
     @@client.authorization.fetch_access_token!
 
     @@analytics = nil
-    ## Load cached discovered API, if it exists. This prevents retrieving the
-    ## discovery document on every run, saving a round-trip to the discovery service.
+    # Load cached discovered API, if it exists. This prevents retrieving the
+    # discovery document on every run, saving a round-trip to the discovery service.
     if File.exist? CACHED_API_FILE
       File.open(CACHED_API_FILE) do |file|
         @@analytics = Marshal.load(file)

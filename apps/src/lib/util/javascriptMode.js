@@ -88,6 +88,25 @@ export function apiValidateType(opts, funcName, varName, varValue, expectedType,
   return !!opts[validatedTypeKey];
 }
 
+export function apiValidateTypeAndRange(opts, funcName, varName, varValue,
+    expectedType, minValue, maxValue, opt) {
+  const validatedTypeKey = 'validated_type_' + varName;
+  const validatedRangeKey = 'validated_range_' + varName;
+  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
+  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
+    let inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
+    if (inRange) {
+      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
+    }
+    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
+    if (!inRange) {
+      outputWarning(funcName + "() " + varName + " parameter value (" +
+        varValue + ") is not in the expected range.");
+    }
+    opts[validatedRangeKey] = inRange;
+  }
+}
+
 /**
  * @param value
  * @returns {boolean} true if value is a string, number, boolean, undefined or null.
