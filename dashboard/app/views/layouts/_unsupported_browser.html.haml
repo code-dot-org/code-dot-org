@@ -29,11 +29,13 @@
       dismissable = true;
     }
 
-    $(textDivId).show();
-    if (dismissable) {
-      $("#dismissIcon").show();
-    } else {
-      $("#warningIcon").show();
+    if (textDivId) {
+      $(textDivId).show();
+      if (dismissable) {
+        $("#dismissIcon").show();
+      } else {
+        $("#warningIcon").show();
+      }
+      $("#warning-banner").show();
     }
-    $("#warning-banner").show();
   });
