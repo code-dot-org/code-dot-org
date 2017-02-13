@@ -269,34 +269,18 @@ class UserTest < ActiveSupport::TestCase
     user = create(:user)
     assert_equal [], user.gallery_activities
 
-    assert_does_not_create(GalleryActivity) do
-      create(:activity, user: user) # not saved to gallery
-      create(:user_level, user: user)
-    end
+    create(:activity, user: user) # not saved to gallery
+    assert_equal [], user.gallery_activities
 
-    ga2 = nil
-    assert_creates(GalleryActivity) do
-      user_level2 = create(:user_level, user: user)
-      activity2 = create(:activity, user: user)
-      ga2 = GalleryActivity.create!(
-        activity_id: activity2.id,
-        user: user,
-        user_level: user_level2
-      )
-    end
+    activity2 = create(:activity, user: user)
+    ga2 = GalleryActivity.create!(activity: activity2, user: user)
+    assert_equal [ga2], user.reload.gallery_activities
 
-    assert_does_not_create(GalleryActivity) do
-      create(:activity, user: user) # not saved to gallery
-      create(:user_level, user: user)
-    end
+    create(:activity, user: user) # not saved to gallery
+    assert_equal [ga2], user.reload.gallery_activities
 
-    ga4 = nil
-    assert_creates(GalleryActivity) do
-      activity4 = create(:activity, user: user)
-      user_level4 = create(:user_level, user: user)
-      ga4 = GalleryActivity.create!(activity_id: activity4.id, user: user, user_level: user_level4)
-    end
-
+    activity4 = create(:activity, user: user)
+    ga4 = GalleryActivity.create!(activity: activity4, user: user)
     assert_equal [ga4, ga2], user.reload.gallery_activities
   end
 
