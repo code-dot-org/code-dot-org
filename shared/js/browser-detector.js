@@ -49,7 +49,8 @@ function isSmallDevice() {
   return $(window).width() <= 640 || navigator.userAgent.match(/iPad/i) !== null;
 }
 
-// From http://stackoverflow.com/questions/21825157/internet-explorer-11-detection/21825207#21825207
+// Detect IE11.  Adapted from
+// http://stackoverflow.com/questions/21825157/internet-explorer-11-detection/21825207#21825207
 function isIE11() {
   var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
   return isIE11;
