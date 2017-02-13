@@ -140,9 +140,7 @@ const BoardSetupStatus = React.createClass({
       return bc.connectWithComponents()
           .then(() => this.thumb('board-components'))
           .then(() => {
-            bc.prewiredComponents.buzzer.play({
-              song: SONG_CHARGE, tempo: 104
-            });
+            bc.prewiredComponents.buzzer.play(SONG_CHARGE, 104);
             bc.prewiredComponents.colorLeds.forEach(l => l.color('green'));
           })
           .then(() => promiseWaitFor(1600))
