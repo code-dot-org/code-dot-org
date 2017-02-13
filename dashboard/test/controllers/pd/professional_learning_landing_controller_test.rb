@@ -14,6 +14,10 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     end
 
     create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
+    create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop
+
+    @csf_workshop.start!
+    @csf_workshop.end!
   end
 
   test 'index returns expected values' do
@@ -23,7 +27,8 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_response :success
     response = assigns(:landing_page_data)
 
-    assert_equal [Pd::Workshop::COURSE_CSF], response[:courses_teaching]
+    assert_equal [Pd::Workshop::COURSE_CSF, Pd::Workshop::COURSE_CSD], response[:courses_teaching]
+    assert_equal [Pd::Workshop::COURSE_CSF], response[:courses_completed]
   end
 
   test 'admins only' do
