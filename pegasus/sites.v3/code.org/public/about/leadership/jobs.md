@@ -20,7 +20,7 @@ nav: about_nav
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#software)
 	- [UX / Visual Designer (Part time)](#design)
-	
+
 
 
 **[Working at Code.org](#info)**
@@ -33,37 +33,37 @@ nav: about_nav
 
 **Job Summary:**
 
-Code.org is seeking an experienced Administrative Assistant to join our administrative team. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth. 
+Code.org is seeking an experienced Administrative Assistant to join our administrative team. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth.
 
-High ­level responsibilities include: 
+High ­level responsibilities include:
 
-- Managing a variety of administrative tasks and projects 
+- Managing a variety of administrative tasks and projects
 - Increasing office productivity by overseeing smooth and efficient office administration
 - Supporting VP level staff
 - Event planning, coordinating, and logistics  
 
 **Duties and Responsibilities:**
 
-- Handle routine administrative tasks and oversee office administration; primary point of contact for meeting staff needs 
+- Handle routine administrative tasks and oversee office administration; primary point of contact for meeting staff needs
 - Coordinate travel and manage select Leadership Team individual calendars
 - Support discrete strategic and tactical projects with data entry, analysis, drafting communications, or logistics.
 - Troubleshoot basic technology issues (printers, videoconferencing system)
 Coordinate events (office, social, and corporate) and visitor logistics
-- Other duties, as assigned 
+- Other duties, as assigned
 
 
 **Skills and Qualifications:**
 
-We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team. You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Experience in a start up environment and/or with events planning a plus. 
+We are looking for an energetic, positive, collaborative professional to join our small, nimble administrative team. You should be a tech-savvy self starter experienced in using tools to solve problems, with a willingness to take ownership and get-it-done attitude. Experience in a start up environment and/or with events planning a plus.
 
 
 The ideal candidate has the following qualifications:
 
-- Excellent written and verbal communications skills 
-- Strong attention to detail 
+- Excellent written and verbal communications skills
+- Strong attention to detail
 - Experience learning and using modern tech tools
-- 2-5 years experience in administrative support, event planning, or office management preferred 
-- Bachelor’s degree preferred 
+- 2-5 years experience in administrative support, event planning, or office management preferred
+- Bachelor’s degree preferred
 
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
@@ -73,7 +73,7 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 **Job Summary:**
 
-Code.org is looking for an experienced Controller to oversee all aspects of accounting, regulatory and financial reporting, budget and forecast preparation, as well as development of internal control policies and procedures. 
+Code.org is looking for an experienced Controller to oversee all aspects of accounting, regulatory and financial reporting, budget and forecast preparation, as well as development of internal control policies and procedures.
 
 Responsibilities of the position include:
 
@@ -87,18 +87,18 @@ Responsibilities of the position include:
 - Preparing quarterly Board of Directors’ financial presentation
 - Supporting the external audit of the company’s financial statements, including preparation of audit schedules and responding to auditor questions and requests
 - Managing and complying with local, state, and federal government reporting requirements and tax filings
-- Proactively identifying issues and areas for improvement with the close process and implementing process improvements 
+- Proactively identifying issues and areas for improvement with the close process and implementing process improvements
 - Developing and documenting finance and accounting processes and policies to maintain and strengthen internal controls
 
 **Skills and Qualifications:**
 
 The ideal candidate has at least a Bachelor’s degree in Business Administration, Accounting, or related field and possesses the following skills:
 
-- 5+ years experience in a finance and/or accounting management role 
+- 5+ years experience in a finance and/or accounting management role
 - Strong knowledge of GAAP and financial reporting requirements as well as financial audits
 - Advanced experience in Quickbooks Online
 - Advanced or expert user of spreadsheets
-- Experience and aptitude for managing complex projects and reports 
+- Experience and aptitude for managing complex projects and reports
 - Advanced analytical, organizational and problem solving skills
 - Be highly comfortable working in a fast-paced, ambiguous, informal work environment
 - Non-profit accounting experience a plus
@@ -111,7 +111,7 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 ## <a name="donor"href="#donor">Major Gifts Manager (Seattle, WA)</a>
 **Job Summary:**
 
-The Major Gifts Manager plays an important role in increasing revenue for Code.org, with a focus on stewardship of existing Foundation and Corporate partnerships and grant writing activities. The candidate selected for this role will help establish and manage long-term partnerships and strengthen existing relationships with the corporate and foundation sector, as well as developing compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried. 
+The Major Gifts Manager plays an important role in increasing revenue for Code.org, with a focus on stewardship of existing Foundation and Corporate partnerships and grant writing activities. The candidate selected for this role will help establish and manage long-term partnerships and strengthen existing relationships with the corporate and foundation sector, as well as developing compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried.
 
 Responsibilities of the position include:
 
@@ -125,22 +125,22 @@ Responsibilities of the position include:
 
 **Skills and Qualifications:**
 
-A minimum of 5 years of relevant experience is required. 
+A minimum of 5 years of relevant experience is required.
 
-- Strong networking, presentation, and relationship building expertise 
+- Strong networking, presentation, and relationship building expertise
 - An incredible passion for our mission and an ability to inspire others to get involved
 - Strategic thinker, analytical, self-motivated, detail-oriented, and highly-organized  
 - Posess a track record of securing six figure or larger gifts from corporate and foundation funders, including multi-year commitments
 - Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing large foundation and/or corporate grants
-- Thrive in a collaborative, team environment and also work independently 
+- Thrive in a collaborative, team environment and also work independently
 - Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications
 - Strong and thoughtful customer service orientation
-- Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects. 
-- A solid understanding of budgets as they relate to proposals and grants is required. 
+- Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects.
+- A solid understanding of budgets as they relate to proposals and grants is required.
 
 A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred. Proficiency in working with Microsoft Office and Google Docs a must.
 
-Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
+Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals.
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -188,7 +188,7 @@ Additional desired strengths include:
 
 - Experience working with school districts in a project implementation capacity
 - Recent computer science teaching experience in a K-12 school setting
-- Strong existing connections to the computer science community 
+- Strong existing connections to the computer science community
 
 Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
@@ -208,9 +208,9 @@ As Senior Backend Engineer / Infrastructure Lead, you’ll be responsible for bu
 The ideal candidate has the following qualifications:
 
 - Bachelor’s degree with a major in Computer Science
-- 5-10 years as a software engineer 
+- 5-10 years as a software engineer
 - Experience in a fast growth start-up environment desired
-- Experience scaling web services 
+- Experience scaling web services
 - Experience building developer infrastructure
 - Expertise in some of these technologies preferred: Ruby / Rails, JavaScript, Sinatra, SQL/Databases/MySQL, React
 
@@ -228,11 +228,11 @@ As Senior Software Engineer at Code.org, you’ll be a key contributor in delive
 
 The ideal candidate has the following qualifications:
 
-- Passion for our mission of #CSForAll
+- Passion for our mission of increasing access to computer science education
 - Bachelor’s degree with a major in Computer Science
 - 5+ years as a software engineer
-- Ability to make senior level engineering contributions including a high level of output, tackling the hardest problems, and being a guiding voice on the team 
-- Experience shipping significant features in commercial software products 
+- Ability to make senior level engineering contributions including a high level of output, tackling the hardest problems, and being a guiding voice on the team
+- Experience shipping significant features in commercial software products
 - Expertise in some of these technologies preferred: JavaScript, React, Ruby / Rails, SQL/Databases/MySQL
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
@@ -249,7 +249,7 @@ As Software Engineer at Code.org, you’ll be delivering features in Code Studio
 
 The ideal candidate has the following qualifications:
 
-- Passion for our mission of #CSForAll
+- Passion for our mission of increasing access to computer science education
 - Bachelor’s degree with a major in Computer Science
 - 3+ years as a software engineer
 - Expertise in some of these technologies preferred: JavaScript, React, Ruby / Rails, SQL/Databases/MySQL
@@ -261,14 +261,14 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 **Job Summary:**
 
 Code.org is looking for an experienced, creative designer with the drive to own end-to-end design of a product with major impact.   
-You will own visual design across our website, marketing materials and education tutorials. These currently reach millions of people around the world. We have over 8 million students today and 10,000 new accounts created every day. 
+You will own visual design across our website, marketing materials and education tutorials. These currently reach millions of people around the world. We have over 8 million students today and 10,000 new accounts created every day.
 
 Areas of responsibility include:
 
-- The website for Code.org and Hour of Code 
+- The website for Code.org and Hour of Code
 - Tutorials to teach elementary students to code (examples: learning to draw with code or making a story with code)
-- Tools and a development environment for middle school and high school students to learn computer science 
-- Marketing materials and handouts that are used for schools, districts, and partnerships 
+- Tools and a development environment for middle school and high school students to learn computer science
+- Marketing materials and handouts that are used for schools, districts, and partnerships
 
 You will also need to be able to successfully communicate conceptual ideas, detailed design, and design rationale, both verbally and visually.
 
@@ -276,13 +276,13 @@ You will also need to be able to successfully communicate conceptual ideas, deta
 
 The ideal candidate has strong, flexible visual design skills and experience in app and/or web design. We are looking for a self-starter who is passionate about improving education.  
 
-The candidate should have: 
+The candidate should have:
 
-- Experience with responsive design 
-- Graphic/print layout experience 
+- Experience with responsive design
+- Graphic/print layout experience
 - Proven ability to own end-to-end design for product, including style guides and design guidelines
 
-Additional desired skills include: 
+Additional desired skills include:
 
 - Interest in education
 - Basic knowledge of computer science (taken any computer science course at some point - no active coding skill necessary)
@@ -290,7 +290,7 @@ Additional desired skills include:
 - Interaction design
 - Designing sprites, animations, etc. for sample video game assets
 - Bachelor's degree in graphics design, interaction design, fine arts, or a related discipline.
-- At least two years of relevant experience 
+- At least two years of relevant experience
 
 Email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -309,7 +309,7 @@ We believe computer science and computer programming should be part of the core 
 We offer a comprehensive employee benefits package that includes:
 
 - Competitive Salary
-- Technology subsidy consistent with our Bring Your Own Device environment 
+- Technology subsidy consistent with our Bring Your Own Device environment
 - Flexible, engaging working environment
 - Monthly unlimited ORCA pass or equal value transit subsidy; located near public transit hub in Seattle, WA
 - Paid time off: 3 weeks vacation annually, sick leave, and 'winter break' office closure the two weeks that include Christmas and New Years.
