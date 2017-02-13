@@ -11,7 +11,7 @@ module ScriptLevelsHelper
         # users in sections with an enabled "stage extras" flag
         enabled_for_stage = !script_level.end_of_script?
         enabled_for_user = current_user && current_user.section_for_script(script_level.script) &&
-            current_user.section_for_script(script_level.script).stage_extras
+          current_user.section_for_script(script_level.script).stage_extras
         response[:end_of_stage_experience] = enabled_for_stage && enabled_for_user
       end
     else

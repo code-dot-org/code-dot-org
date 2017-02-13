@@ -45,6 +45,6 @@ module ShareFiltering
 
   def self.should_filter_program(program)
     program =~ /#{PLAYLAB_APP_INDICATOR}/ &&
-        program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+      program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
   end
 end

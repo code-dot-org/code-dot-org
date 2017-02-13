@@ -37,8 +37,8 @@ class ScriptsController < ApplicationController
     # containing a slash, we do this (security) check anyways to prevent
     # directory traversal as validation can be manually bypassed.
     if (@script.name.start_with? '.') ||
-      (@script.name.start_with? '~') ||
-      (@script.name.include? '/')
+        (@script.name.start_with? '~') ||
+        (@script.name.include? '/')
       raise ArgumentError, "evil script name (#{@script.name})"
     end
 

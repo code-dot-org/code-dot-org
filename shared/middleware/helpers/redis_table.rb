@@ -241,8 +241,8 @@ class RedisTable
   # @return [Boolean]
   def belongs_to_this_table_with_min_id(row_key, min_id)
     (@table_name == table_from_row_key(row_key)) &&
-        (row_key != @row_id_key) &&
-        (min_id.nil? || id_from_row_key(row_key) >= min_id)
+      (row_key != @row_id_key) &&
+      (min_id.nil? || id_from_row_key(row_key) >= min_id)
   end
 
   # Return true if k is special internal key (e.g. the row id key) that should

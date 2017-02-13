@@ -157,8 +157,8 @@ class ActivitiesController < ApplicationController
     # This is true for levels auto-saved to the gallery, free play levels, and
     # "impressive" levels.
     synchronous_save = solved &&
-        (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
-            @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
+      (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
+          @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
     if synchronous_save
       @activity = Activity.create!(attributes)
     else

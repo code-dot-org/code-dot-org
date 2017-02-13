@@ -195,7 +195,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   def regional_partner
     school_district.try do |d|
       d.regional_partners_school_districts.find_by(course: selected_course).try(:regional_partner) ||
-      d.regional_partners.first
+        d.regional_partners.first
     end
   end
 

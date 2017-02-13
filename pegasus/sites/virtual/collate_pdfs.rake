@@ -7,7 +7,7 @@ require 'cdo/yaml'
 # Given a .collate file with lines representing
 def collate_to_pdf_to_fetch_file(collate_file)
   source_paths = PDF.get_local_markdown_paths(collate_file) +
-      PDF.get_local_pdf_paths(collate_file)
+    PDF.get_local_pdf_paths(collate_file)
   output_filename = collate_file.sub('.collate', '.pdf')
   v3_path = Course.virtual_to_v3_path(output_filename)
   fetchfile_path = "#{v3_path}.fetch"

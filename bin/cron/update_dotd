@@ -19,7 +19,7 @@ def dotd?(user, level)
   return false unless user['on_call']
   user['on_call'].each do |on_call|
     if on_call['level'] == level &&
-      on_call['escalation_policy']['name'] == ESCALATION_POLICY_NAME
+        on_call['escalation_policy']['name'] == ESCALATION_POLICY_NAME
       return true
     end
   end
