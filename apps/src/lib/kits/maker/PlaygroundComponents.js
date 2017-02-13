@@ -10,6 +10,7 @@ import five from 'johnny-five';
 import PlaygroundIO from 'playground-io';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
+import Piezo from './Piezo';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -18,94 +19,84 @@ import TouchSensor from './TouchSensor';
  * Components:
  *   - will each have .stop() called on Reset
  *
+ * @param {five.Board} board - the johnny-five board object that needs new
+ *        components initialized.
  * @returns {Object.<String, Object>} board components
  */
-export function initializeCircuitPlaygroundComponents() {
-  const colorLeds = _.range(N_COLOR_LEDS).map(index => new five.Led.RGB({
-    controller: PlaygroundIO.Pixel,
-    pin: index
-  }));
-
-  // Must initialize sound sensor BEFORE left button, otherwise left button
-  // will not respond to input.  This has something to do with them sharing
-  // pin 4 on the board.
-  const soundSensor = new five.Sensor({
-    pin: "A4",
-    freq: 100
-  });
-  const buttonL = new five.Button('4');
-  const buttonR = new five.Button('19');
-  [buttonL, buttonR].forEach(button => {
-    Object.defineProperty(button, 'isPressed', {
-      get: () => button.value === 1
-    });
-  });
-
-  const accelerometer = new five.Accelerometer({
-    controller: PlaygroundIO.Accelerometer
-  });
-  accelerometer.getOrientation = function (orientationType) {
-    return accelerometer[orientationType];
-  };
-  accelerometer.getAcceleration = function (accelerationDirection) {
-    if (accelerationDirection === 'total') {
-      return accelerometer.acceleration;
-    }
-    return accelerometer[accelerationDirection];
-  };
-
-  // We make one playground-io Touchpad component for all captouch sensors,
-  // then wrap it in our own separate objects to get the API we want to
-  // expose to students.
-  const playgroundTouchpad = new five.Touchpad({
-    controller: PlaygroundIO.Touchpad,
-    pads: TOUCH_PINS
-  });
-  let touchPads = {};
-  TOUCH_PINS.forEach(pin => {
-    touchPads[`touchPad${pin}`] = new TouchSensor(pin, playgroundTouchpad);
-  });
-
-  const lightSensor = new five.Sensor({
-    pin: "A5",
-    freq: 100
-  });
-  const tempSensor = new five.Thermometer({
-    controller: Thermometer,
-    pin: "A0",
-    freq: 100
-  });
-
-  [soundSensor, lightSensor, tempSensor].forEach((s) => {
-    addSensorFeatures(five.Board.fmap, s);
-  });
-
+export function initializeCircuitPlaygroundComponents(board) {
   return {
-    colorLeds: colorLeds,
+    colorLeds: initializeColorLeds(board),
 
-    led: new five.Led(13),
+    led: new five.Led({board, pin: 13}),
 
-    toggleSwitch: new five.Switch('21'),
+    toggleSwitch: new five.Switch({board, pin: '21'}),
 
-    buzzer: new five.Piezo({
+    buzzer: new Piezo({
+      board,
       pin: '5',
       controller: PlaygroundIO.Piezo
     }),
 
-    tempSensor: tempSensor,
+    // Must initialize sound sensor BEFORE left button, otherwise left button
+    // will not respond to input.  This has something to do with them sharing
+    // pin 4 on the board.
+    soundSensor: initializeSoundSensor(board),
 
-    lightSensor: lightSensor,
+    tempSensor: initializeThermometer(board),
 
-    accelerometer: accelerometer,
+    lightSensor: initializeLightSensor(board),
 
-    soundSensor: soundSensor,
+    accelerometer: initializeAccelerometer(board),
 
-    buttonL: buttonL,
+    buttonL: initializeButton(board, '4'),
 
-    buttonR: buttonR,
+    buttonR: initializeButton(board, '19'),
 
-    ...touchPads
+    ...initializeTouchPads(board)
   };
+}
+
+export function initializeColorLeds(board) {
+  return _.range(N_COLOR_LEDS).map(i => initializeColorLed(board, i));
+}
+
+function initializeColorLed(board, pin) {
+  return new five.Led.RGB({
+    board,
+    controller: PlaygroundIO.Pixel,
+    pin
+  });
+}
+
+export function initializeSoundSensor(board) {
+  const sensor = new five.Sensor({
+    board,
+    pin: "A4",
+    freq: 100
+  });
+  addSensorFeatures(five.Board.fmap, sensor);
+  return sensor;
+}
+
+export function initializeLightSensor(board) {
+  const sensor = new five.Sensor({
+    board,
+    pin: "A5",
+    freq: 100
+  });
+  addSensorFeatures(five.Board.fmap, sensor);
+  return sensor;
+}
+
+export function initializeThermometer(board) {
+  const sensor = new five.Thermometer({
+    board,
+    controller: Thermometer,
+    pin: "A0",
+    freq: 100
+  });
+  addSensorFeatures(five.Board.fmap, sensor);
+  return sensor;
 }
 
 /**
@@ -113,7 +104,7 @@ export function initializeCircuitPlaygroundComponents() {
  * @param {five.Board.fmap} fmap mapping function
  * @param {five.Sensor} sensor
  */
-const addSensorFeatures = (fmap, sensor) => {
+function addSensorFeatures(fmap, sensor) {
   /**
    * Cache scale setting locally (cannot grab after the fact from five.Sensor).
    * Scale is a 2-element array of [low, high].
@@ -139,4 +130,45 @@ const addSensorFeatures = (fmap, sensor) => {
     // store scale in public state for scaling recorded data
     scale = [low, high];
   };
-};
+}
+
+export function initializeButton(board, pin) {
+  const button = new five.Button({board, pin});
+  Object.defineProperty(button, 'isPressed', {
+    get: () => button.value === 1
+  });
+  return button;
+}
+
+export function initializeAccelerometer(board) {
+  const accelerometer = new five.Accelerometer({
+    board,
+    controller: PlaygroundIO.Accelerometer
+  });
+  accelerometer.getOrientation = function (orientationType) {
+    return accelerometer[orientationType];
+  };
+  accelerometer.getAcceleration = function (accelerationDirection) {
+    if (accelerationDirection === 'total') {
+      return accelerometer.acceleration;
+    }
+    return accelerometer[accelerationDirection];
+  };
+  return accelerometer;
+}
+
+export function initializeTouchPads(board) {
+  // We make one playground-io Touchpad component for all captouch sensors,
+  // then wrap it in our own separate objects to get the API we want to
+  // expose to students.
+  const playgroundTouchpad = new five.Touchpad({
+    board,
+    controller: PlaygroundIO.Touchpad,
+    pads: TOUCH_PINS
+  });
+  let touchPads = {};
+  TOUCH_PINS.forEach(pin => {
+    touchPads[`touchPad${pin}`] = new TouchSensor(pin, playgroundTouchpad);
+  });
+  return touchPads;
+}

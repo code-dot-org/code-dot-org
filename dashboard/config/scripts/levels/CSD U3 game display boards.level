@@ -38,7 +38,9 @@
     "pause_animations_by_default": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "CV2aO2JS1CspjqVFoiNMd0Wfve53XmWY/NW86lSHClltwd+d6F+6/vFsdIWm\nQjxr\n",
+    "hide_share_and_remix": "false"
   },
   "published": true,
   "notes": "",

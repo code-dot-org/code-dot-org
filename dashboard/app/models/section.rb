@@ -71,7 +71,13 @@ class Section < ActiveRecord::Base
   def name_safe_students
     # Create a prefix tree of student names
     trie = Rambling::Trie.create
+
+    # Add whitespace-normalized versions of the student names to the
+    # trie. Because FullNameSplitter implicitly performs whitespace
+    # normalization, this is necessary to ensure that we can recognize
+    # the name on the other side
     self.students.each do |student|
+      student.name = student.name.strip.split(/\s+/).join(' ')
       trie.add student.name
     end
 

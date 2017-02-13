@@ -187,8 +187,8 @@ class SectionTest < ActiveSupport::TestCase
     # Handles names that can't be nicely split into first and last, or
     # names which use unusual separating characters
     verify(
-      ["Cher", "J'onn J'onzz", "John\tDoe"],
-      ["Cher", "J'onn J'onzz", "John"]
+      [" Abraham Lincoln ", "Cher", "J'onn J'onzz", "John\tDoe", "Mister\tT"],
+      ["Abraham", "Cher", "J'onn J'onzz", "John", "Mister T"]
     )
 
     # Handles abbreviated first names by defaulting back to the "full"

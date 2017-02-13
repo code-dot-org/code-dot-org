@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import ProgressDot from './progress_dot';
+import ProgressDot from './ProgressDot';
 import { levelProgressShape } from './types';
 import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 import { LevelStatus } from '../../activityUtils';
