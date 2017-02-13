@@ -975,12 +975,8 @@ class User < ActiveRecord::Base
           ScriptConstants::COURSE3_NAME,
           ScriptConstants::COURSE4_NAME
         ].include? Script.get_from_cache(script_id).name) &&
-        HintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty? &&
-        AuthoredHintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty?
+        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
