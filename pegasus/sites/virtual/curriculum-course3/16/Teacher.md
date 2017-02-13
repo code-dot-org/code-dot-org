@@ -49,8 +49,8 @@ In this activity, students will have the opportunity to apply all of the coding 
 
 Review the event handling students did in Bounce:
 
-- What did events did you use in coding Flappy?
-- Now you're going to animate multiple characters using events triggered by the arrow keys to tell a story.
+- What did events did you use in coding Bounce?
+- Now you're going to animate multiple characters using events tell a story.
 - This is your chance to get really creative!
 
 [/together]

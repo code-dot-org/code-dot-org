@@ -422,7 +422,7 @@ module.exports = function (grunt) {
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
-    'projects/section_projects': './src/sites/studio/pages/projects/section_projects.js',
+    'teacher-dashboard/index': './src/sites/code.org/pages/teacher-dashboard/index.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 

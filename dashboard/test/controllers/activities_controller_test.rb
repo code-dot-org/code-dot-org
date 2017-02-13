@@ -256,14 +256,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with panda does not crash" do
-    # the column that we store the program is 20000 bytes, don't crash if we fail to save because the field is too large
-
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    assert_creates(Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity, LevelSource) do
+    assert_creates(Activity, UserLevel, UserScript, LevelSource) do
+      assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
         end
@@ -425,7 +423,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
-    assert_equal Activity.last, GalleryActivity.last.activity
+    assert_equal nil, GalleryActivity.last.activity_id
     assert_equal UserLevel.last.id, GalleryActivity.last.user_level_id
     assert_equal LevelSource.last.id,  GalleryActivity.last.level_source_id
   end
@@ -456,7 +454,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
-    assert_equal Activity.last, GalleryActivity.last.activity
+    assert_equal nil, GalleryActivity.last.activity_id
   end
 
   test "logged in milestone should not save to gallery when passing a level with undefined impressiveness" do
@@ -1342,5 +1340,16 @@ class ActivitiesControllerTest < ActionController::TestCase
     create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
     post :milestone, params: milestone_params
     assert_response 403
+  end
+
+  test "milestone strips emoji from program and saves it" do
+    params = @milestone_params
+    params[:program] = panda_panda
+
+    post :milestone, params: params
+
+    user_level = UserLevel.last
+    # panda_panda contains a panda emoji, ensure that it's gone
+    assert_equal user_level.level_source.data, 'Panda'
   end
 end
