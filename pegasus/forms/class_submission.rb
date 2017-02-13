@@ -170,13 +170,17 @@ class ClassSubmission
     fq.push("class_format_category_s:#{params['class_format_category_s']}") unless params['class_format_category_s'].nil_or_empty?
     fq.push("school_tuition_s:#{params['school_tuition_s']}") unless params['school_tuition_s'].nil_or_empty?
 
-    params['class_languages_all_ss'].each do |language|
-      fq.push("class_languages_all_ss:#{language}")
-    end unless params['class_languages_all_ss'].nil_or_empty?
+    unless params['class_languages_all_ss'].nil_or_empty?
+      params['class_languages_all_ss'].each do |language|
+        fq.push("class_languages_all_ss:#{language}")
+      end
+    end
 
-    params['school_level_ss'].each do |level|
-      fq.push("school_level_ss:#{level}")
-    end unless params['school_level_ss'].nil_or_empty?
+    unless params['school_level_ss'].nil_or_empty?
+      params['school_level_ss'].each do |level|
+        fq.push("school_level_ss:#{level}")
+      end
+    end
 
     fl = 'location_p,school_name_s,school_address_s,class_format_s,class_format_category_s,school_tuition_s,school_level_ss,class_languages_all_ss,school_website_s,class_description_s'
     {
