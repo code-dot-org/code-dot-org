@@ -17,16 +17,18 @@
 
     if (isUnsupportedBrowser()) {
       textDivId = '#unsupportedBrowser';
-    } else if (isSmallDevice()) {
-      if (appOptions.app == 'applab') {
-        textDivId = '#appLabUnsupportedTablet';
-      } else if (appOptions.app == 'gamelab') {
-        textDivId = '#gameLabUnsupportedTablet';
+    } else if (typeof appOptions !== 'undefined') {
+      if (isSmallDevice()) {
+        if (appOptions.app == 'applab') {
+          textDivId = '#appLabUnsupportedTablet';
+        } else if (appOptions.app == 'gamelab') {
+          textDivId = '#gameLabUnsupportedTablet';
+        }
+        dismissable = true;
+      } else if (isIE11() && appOptions.app == 'weblab') {
+        textDivId = '#webLabUnsupportedBrowser'
+        dismissable = true;
       }
-      dismissable = true;
-    } else if (isIE11() && appOptions.app == 'weblab') {
-      textDivId = '#webLabUnsupportedBrowser'
-      dismissable = true;
     }
 
     if (textDivId) {
