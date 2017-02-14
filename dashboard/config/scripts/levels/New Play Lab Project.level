@@ -284,6 +284,9 @@
               </block>
             </value>
           </block>
+          <block type="studio_setMap">
+            <title name="VALUE">random</title>
+          </block>
         </category>
         <category name="Events">
           <block type="studio_whenSpriteCollided">
