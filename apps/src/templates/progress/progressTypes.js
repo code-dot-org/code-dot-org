@@ -4,7 +4,6 @@ export const levelType = (
   PropTypes.shape({
     status: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    icon: PropTypes.string
+    name: PropTypes.string
   })
 );
