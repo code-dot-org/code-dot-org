@@ -13,7 +13,7 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
     @mock_rsa.stubs(:public_encrypt).returns('fake encrypted token')
 
     @secrets = {
-      rsa_public_key: @fake_rsa_key,
+      rsa_public_key: Base64.encode64(@fake_rsa_key),
       organization_id: 'fake organization id',
       company_id: 'fake company id',
       company_name: 'fake company name',
