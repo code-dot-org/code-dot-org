@@ -14,12 +14,12 @@ VOICES = {
     SHAPE: 100
   },
   'es-es': {
-    VOICE: 'maria22k',
+    VOICE: 'ines22k',
     SPEED: 180,
     SHAPE: 100,
     alternates: {
       a: {
-        VOICE: 'ines22k',
+        VOICE: 'maria22k',
         SPEED: 180,
         SHAPE: 100,
       },
@@ -31,7 +31,7 @@ VOICES = {
     }
   },
   'it-it': {
-    VOICE: 'fabiana22k',
+    VOICE: 'vittorio22k',
     SPEED: 180,
     SHAPE: 100,
     alternates: {
@@ -41,7 +41,7 @@ VOICES = {
         SHAPE: 100,
       },
       b: {
-        VOICE: 'vittorio22k',
+        VOICE: 'fabiana22k',
         SPEED: 180,
         SHAPE: 100,
       }
