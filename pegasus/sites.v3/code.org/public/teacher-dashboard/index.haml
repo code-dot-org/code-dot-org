@@ -19,11 +19,9 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 #interstitial
 :javascript
   $(document).ready(function () {
-    if (window.location.search.indexOf("enable_terms_interstitial") !== -1) {
-      $("#interstitial").load( "/dashboardapi/terms_interstitial_for_pegasus/", function() {
-        interstitialLoaded();
+    $("#interstitial").load( "/dashboardapi/terms_interstitial_for_pegasus/", function() {
+      interstitialLoaded();
       });
-    }
   });
 %script{src: CDO.code_org_url('js/terms_interstitial.js')}
 
