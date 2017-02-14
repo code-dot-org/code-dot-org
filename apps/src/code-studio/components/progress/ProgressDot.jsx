@@ -200,7 +200,7 @@ export const ProgressDot = Radium(React.createClass({
       }
     }
 
-    // fa-list-ol is used only by our redesigned dots, but we don't want to us
+    // fa-list-ol is used only by our redesigned dots, but we don't want to use
     // it here
     if (level.icon && level.icon !== 'fa-list-ol') {
       return 'fa ' + level.icon;
