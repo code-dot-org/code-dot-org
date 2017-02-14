@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCase
   setup do
-    @csf_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, subject: nil
+    @csf_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, subject: nil
     @csd_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, subject: nil
     @csp_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
 
@@ -13,11 +13,10 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
       create :pd_enrollment, email: other_teacher.email, workshop: workshop
     end
 
-    @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
-    create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop
+    @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop, survey_sent_at: Date.today + 5.days
+    other_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop, survey_sent_at: Date.today + 2.days
 
-    @csf_workshop.start!
-    @csf_workshop.end!
+    Pd::Enrollment.stubs(:filter_for_survey_completion).returns([@ended_enrollment, other_enrollment])
   end
 
   test 'index returns expected values' do
