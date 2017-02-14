@@ -789,8 +789,8 @@ function makeDraggable(jqueryElements) {
         var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
         // Update the position of wrapper (.ui-resizable) div
-        ui.size.width = dimensions.width;
-        ui.size.height = dimensions.height;
+        ui.element.outerWidth(dimensions.width);
+        ui.element.outerHeight(dimensions.height);
 
         // Set original element properties to update values in Property tab
         if (elm.is("canvas")) {

@@ -9,11 +9,11 @@ class Pd::MimeoSsoController < ApplicationController
   ALLOWED_COURSES = [Pd::Workshop::COURSE_CSF].freeze
 
   def authenticate_and_redirect
-    # Make sure the user is logged in, is the owner of this enrollment, has completed the survey, and the
-    # enrollment is for an allowed course
-    authorize! :manage, @enrollment
-    raise CanCan::AccessDenied unless ALLOWED_COURSES.include? @enrollment.workshop.course
-    raise CanCan::AccessDenied unless @enrollment.completed_survey?
+    # Make sure the enrollment is for an allowed course and has a completed survey
+    unless ALLOWED_COURSES.include?(@enrollment.workshop.course) && @enrollment.completed_survey?
+      render_404
+      return
+    end
 
     # First name is always present, but some older enrollments don't have last names.
     # The API requires both so substitute a placeholder for blank last names:
@@ -28,7 +28,7 @@ class Pd::MimeoSsoController < ApplicationController
     @fields = {
       firstName: encrypt_token(first_name),
       lastName: encrypt_token(last_name),
-      email: encrypt_token(current_user.email),
+      email: encrypt_token(@enrollment.email),
       companyId: secret(:company_id),
       organizationId: secret(:organization_id, encrypt: true),
       companyName: secret(:company_name, encrypt: true),
@@ -66,12 +66,14 @@ class Pd::MimeoSsoController < ApplicationController
     encrypt ? encrypt_token(secret) : secret
   end
 
-  # Encrypt a string token with the RSA public key
+  # Encrypt a string token with the RSA public key.
+  # The key is obtained as a Base64-encoded string from secret(:rsa_public_key)
   # @param token [String] string to be encrypted
   # @return [String] encrypted and Base64 encoded token
   def encrypt_token(token)
     return nil if token.nil?
-    @rsa ||= OpenSSL::PKey::RSA.new secret(:rsa_public_key)
+
+    @rsa ||= OpenSSL::PKey::RSA.new Base64.decode64(secret(:rsa_public_key))
     Base64.encode64(@rsa.public_encrypt(token))
   end
 end
