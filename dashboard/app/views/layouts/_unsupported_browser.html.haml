@@ -9,6 +9,7 @@
   #applab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.applab_unsupported_tablet")
   #gamelab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.gamelab_unsupported_tablet")
   #weblab-unsupported-browser.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_browser")
+  #weblab-unsupported-local-storage.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_locale_storage")
 
 :javascript
   $(document).ready(function () {
@@ -26,7 +27,10 @@
         }
         dismissable = true;
       } else if (isIE11() && appOptions.app == 'weblab') {
-        textDivId = '#weblab-unsupported-browser'
+        textDivId = '#weblab-unsupported-browser';
+        dismissable = true;
+      } else if (!isStorageAvailable('localStorage') && appOptions.app == 'weblab') {
+        textDivId = '#weblab-unsupported-local-storage';
         dismissable = true;
       }
     }

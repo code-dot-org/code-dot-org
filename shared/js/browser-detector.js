@@ -55,3 +55,18 @@ function isIE11() {
   var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
   return isIE11;
 }
+
+// Determine whether local storage is available.  On macOS Safari Private Mode it won't be.
+// Adapted from https://gist.github.com/paulirish/5558557#gistcomment-1755099
+function isStorageAvailable(type) {
+  try {
+    var storage = window[type],
+      x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  }
+  catch(e) {
+    return false;
+  }
+}
