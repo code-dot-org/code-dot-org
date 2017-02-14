@@ -494,17 +494,14 @@ div#visualizationResizeBar {
 /*
  * Reposition the bottom and right click targets to keep them from overlapping with
  * the bottom-right resize handle. Also increase the effective size of the bottom and
- * right click targets by making them overlap more with the wrapper. These adjustments
- * are necessary because we aren't giving the jquery resizable wrapper any padding
- * around its contents. We omit this padding because we want the border of the wrapper
- * to line up exactly with the border of its contents.
+ * right click targets by making them overlap more with the wrapper.
  */
 
 #designModeViz .ui-resizable-e {
   height: calc(100% - 12px);
-  right: 0px;
+  right: 0;
 }
 #designModeViz .ui-resizable-s {
   width: calc(100% - 12px);
-  bottom: 0px;
+  bottom: 0;
 }
