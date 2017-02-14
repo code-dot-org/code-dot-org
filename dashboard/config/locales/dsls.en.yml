@@ -423,7 +423,6 @@ en:
       5.1 - 5.3 Lesson Connections: {}
       5.11 - 5.14 Lesson Connections: {}
       5.4 - 5.6 Lesson Connections: {}
-      5.7 - 5.10 Lesson Connections: {}
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
@@ -2587,9 +2586,7 @@ en:
       courseD_external_binary1:
         Binary Drawing: Binary Drawing
       courseF_external_variableConstant: {}
-      coursee-privateandpersonalinformation:
-        description here: description here
-        title: title
+      coursee-privateandpersonalinformation: {}
       coursef_powerofwords:
         description here: description here
         title: title

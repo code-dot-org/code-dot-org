@@ -321,7 +321,7 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/style.css');
         assert.include(
           zipFiles['my-app/style.css'],
-          '#divApplab #clickMeButton {\n' +
+          '#divApplab.appModern #clickMeButton {\n' +
           '  background-color: red;\n' +
           '}'
         );
