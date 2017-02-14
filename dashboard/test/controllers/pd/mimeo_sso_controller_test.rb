@@ -22,43 +22,23 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
     CDO.stubs(:mimeo_sso).returns @secrets
   end
 
-  test 'logged in users can access the redirects for their enrollments' do
-    sign_in @teacher
+  test 'valid enrollment codes succeed' do
     get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
     assert_response :success
   end
 
-  test 'logged in teachers cannot access enrollments they dont own' do
-    sign_in create(:teacher)
-    get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
-    assert_response :forbidden
-  end
-
-  test 'logged in students are forbidden' do
-    sign_in create(:student)
-    get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
-    assert_response :forbidden
-  end
-
-  test 'not logged in users are redirected to login page' do
-    get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
-    assert_redirected_to_sign_in
-  end
-
-  test 'attempting to view for a disallowed course is forbidden' do
+  test 'disallowed courses return not found' do
     @workshop.update!(course: Pd::Workshop::COURSE_CSD)
 
-    sign_in create(:teacher)
     get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
-    assert_response :forbidden
+    assert_response :not_found
   end
 
-  test 'attempting to view before completing the exit survey is forbidden' do
-    @enrollment.update!(completed_survey_id: nil)
+  test 'incomplete surveys return not found' do
+    Pd::Enrollment.any_instance.expects(:completed_survey?).returns(false)
 
-    sign_in create(:teacher)
     get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
-    assert_response :forbidden
+    assert_response :not_found
   end
 
   test 'blank last name is replaced with a placeholder' do
@@ -69,14 +49,11 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
     @mock_rsa.expects(:public_encrypt).with(@enrollment.first_name).returns('encrypted first name').then.
       with('-').returns('encrypted last name')
 
-    sign_in @teacher
     get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
     assert_response :success
   end
 
   test 'rendered form' do
-    sign_in @teacher
-
     expect_rsa_encrypt with: @enrollment.first_name, returns: 'encrypted first name'
     expect_rsa_encrypt with: @enrollment.last_name, returns: 'encrypted last name'
     expect_rsa_encrypt with: @enrollment.email, returns: 'encrypted email'
