@@ -54,7 +54,7 @@
             .error_in_field
 
         #name-block.itemblock
-          #name-student.labelblock= t('activerecord.attributes.user.name_example')
+          #name-student.labelblock!= t('activerecord.attributes.user.name_example')
           #name-teacher.labelblock{style: "display: none"}= t('activerecord.attributes.user.name')
           = f.text_field :name, class: 'input-xlarge fieldblock', autofocus: true, maxlength: 255
           .error_in_field
