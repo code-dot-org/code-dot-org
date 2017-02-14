@@ -352,6 +352,7 @@ module LevelsHelper
     loc_instructions = l.localized_instructions
     level_options['instructions'] = loc_instructions unless loc_instructions.nil?
     level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
+    level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
 
     # Script-dependent option
     script = @script
