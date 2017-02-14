@@ -31,7 +31,7 @@ Our focus is primarily on K-12 learning, which is where the diversity problem be
 Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among underrepresented minorities: African Americans, Hispanic/Latino students, Native American/Alaskans, and Native Hawaiian/Pacific Islanders. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diversity. Below are examples of some of the other tactics we use address diversity issues:
 
 
-## Curriculum materials designed to recruit, engage, and retain women and underrepresented students of color
+## Curriculum materials designed to recruit, engage, and retain women and underrepresented minorities
 
 From elementary school all the way to high school, our courses are designed specifically with a focus on diversity and recruitment of traditionally underrepresented students. This is factored into the curriculum itself. For example, our high school course sequencing begins students with a unit on problem-solving, instead of jumping directly into computer programming - this allows students to learn together on an even playing field, even if some students have already learned to code in a summer camp or after school. 
 

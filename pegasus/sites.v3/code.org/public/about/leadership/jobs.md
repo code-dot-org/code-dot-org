@@ -300,7 +300,7 @@ Email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailt
 
 **Company Profile**
 
-Code.org is a non-profit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+Code.org is a non-profit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science.
 
 We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
 

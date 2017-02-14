@@ -12,7 +12,7 @@ Planning to update privacy policy: Aug 24, 2016
 
 
 ## About Code.org
-Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color.
+Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented minorities.
 
 Please read this Privacy Policy carefully before accessing or using the Website.
 

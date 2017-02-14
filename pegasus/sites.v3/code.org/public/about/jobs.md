@@ -17,7 +17,7 @@ video_player: true
 
 <div style="margin-left: 300px;">
 
-Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
+Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented minorities. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
 
 </div>
 
@@ -235,7 +235,7 @@ To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a h
 
 **Company Profile**
 
-Code.org is a non-profit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+Code.org is a non-profit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science.
 
 We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
 

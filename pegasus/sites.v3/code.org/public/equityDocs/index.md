@@ -31,7 +31,7 @@ But more importantly, computer science is now a foundational science for all 21s
 Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. Below are examples of some of the specific tactics we use address diversity issues:
 
 
-## Curriculum materials, professional development designed to recruit and retain women and underrepresented students of color
+## Curriculum materials, professional development designed to recruit and retain women and underrepresented minorities
 
 From elementary school all the way to high school, our courses are designed specifically with a focus on diversity and recruitment of traditionally underrepresented students. This is factored into the curriculum itself and also the professional development model. For example, our high school course sequencing begins students with a unit on problem-solving, instead of jumping directly into computer programming - this allows students to learn together on an even playing field, even if some students have already learned to code in a summer camp or after school. 
 
