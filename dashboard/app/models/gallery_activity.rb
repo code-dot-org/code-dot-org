@@ -24,6 +24,7 @@
 
 class GalleryActivity < ActiveRecord::Base
   belongs_to :user
+  belongs_to :activity
   belongs_to :level_source
   belongs_to :user_level
 
