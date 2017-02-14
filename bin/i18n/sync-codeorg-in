@@ -65,8 +65,8 @@ def localize_level_content
 
   Dir.glob("dashboard/config/scripts/levels/*.level").each do |file|
     level = File.basename(file, ".*") + "_instruction"
-    failure_message_override_level = File.basename(file, ".*") + "_failure_message_override"
     markdown_level = File.basename(file, ".*") + "_markdown_instruction"
+    failure_message_override_level = File.basename(file, ".*") + "_failure_message_override"
     authored_hint_level = File.basename(file, ".*") + "_authored_hint"
     callout_level = File.basename(file, ".*") + "_callout"
 
