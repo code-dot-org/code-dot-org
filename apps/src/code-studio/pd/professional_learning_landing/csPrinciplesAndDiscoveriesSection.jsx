@@ -1,7 +1,7 @@
 /** Section for CS Principles and CS Discoveries */
 
 import React from 'react';
-import {TwoPartBanner, imageStyle, textStyle, leftStyle, rightStyle} from './twoPartBanner';
+import {TwoPartBanner} from './twoPartBanner';
 import {Button} from 'react-bootstrap';
 
 const CsPrinciplesAndDiscoveriesSection = React.createClass({
@@ -46,18 +46,9 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
       <div>
         <br/>
         <TwoPartBanner
-          leftHalf={(
-            <div
-              style={Object.assign({}, imageStyle, leftStyle, {
-                backgroundImage: `url('https://code.org/images/email/BJC4NYC.jpg')`,
-              })}
-            />
-          )}
-          rightHalf={(
-           <div style={Object.assign({}, textStyle, rightStyle, {})}>
-             {this.renderCompletedCourseBox()}
-           </div>
-          )}
+          imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
+          textElement={this.renderCompletedCourseBox()}
+          imagePosition="imageLeft"
         />
       </div>
     );
