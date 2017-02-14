@@ -18,10 +18,10 @@
       },
       "x": null,
       "y": null,
-      "color": null,
       "shapeColor": null,
       "background": null,
-      "assign_x": null
+      "assign_x": null,
+      "color": null
     },
     "show_d_pad": "false",
     "edit_code": true,
