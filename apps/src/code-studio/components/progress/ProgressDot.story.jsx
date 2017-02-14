@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProgressDot } from './ProgressDot';
-import { LevelKind } from '../../activityUtils';
+import { LevelKind, LevelStatus } from '../../activityUtils';
 
 export default storybook => {
   storybook
@@ -12,7 +12,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [5275],
@@ -33,7 +33,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="locked"
+            status={LevelStatus.locked}
             level={{
               icon: null,
               ids: [5275],
@@ -56,7 +56,7 @@ export default storybook => {
             courseOverviewPage={true}
             grayProgress={true}
             saveAnswersBeforeNavigation={false}
-            status="locked"
+            status={LevelStatus.locked}
             level={{
               icon: null,
               ids: [5275],
@@ -77,7 +77,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="submitted"
+            status={LevelStatus.submitted}
             level={{
               icon: null,
               ids: [5275],
@@ -98,7 +98,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="attempted"
+            status={LevelStatus.attempted}
             level={{
               icon: null,
               ids: [5275],
@@ -120,7 +120,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="passed"
+            status={LevelStatus.passed}
             level={{
               icon: null,
               ids: [2288],
@@ -140,7 +140,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="perfect"
+            status={LevelStatus.perfect}
             level={{
               icon: null,
               ids: [2288],
@@ -160,7 +160,7 @@ export default storybook => {
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
             currentLevelId="2288"
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [2288],
@@ -178,7 +178,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [2094],
@@ -197,7 +197,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: 'fa-file-text',
               ids: [1379],
@@ -211,36 +211,16 @@ export default storybook => {
         )
       },
       {
-        name: 'named level in course overview',
-        story: () => (
-          <ProgressDot
-            courseOverviewPage={true}
-            saveAnswersBeforeNavigation={false}
-            status="not_tried"
-            level={{
-              icon: 'fa-file-text',
-              ids: [5442],
-              kind: LevelKind.named_level,
-              name: 'CSP Pre-survey',
-              position: 1,
-              previous: [1,1],
-              title: 1,
-              url: 'http://localhost-studio.code.org:3000/s/csp1/stage/1/puzzle/1'
-            }}
-          />
-        )
-      },
-      {
         name: 'completed named video level in course overview',
         story: () => (
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="perfect"
+            status={LevelStatus.perfect}
             level={{
               icon: 'fa-video-camera',
               ids: [5078],
-              kind: LevelKind.named_level,
+              kind: LevelKind.puzzle,
               name: 'Computer Science is Changing Everything',
               position: 3,
               previous: [1,1],
@@ -257,11 +237,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="review_rejected"
+            status={LevelStatus.review_rejected}
             level={{
               ids: [1073563865],
               position: 7,
-              kind: LevelKind.named_level,
+              kind: LevelKind.peer_review,
               icon: null,
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
@@ -277,11 +257,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="review_accepted"
+            status={LevelStatus.review_accepted}
             level={{
               ids: [1073563865],
               position: 7,
-              kind: LevelKind.named_level,
+              kind: LevelKind.peer_review,
               icon: null,
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
@@ -297,11 +277,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="submitted"
+            status={LevelStatus.submitted}
             level={{
               ids: [1073563865],
               position: 7,
-              kind: LevelKind.named_level,
+              kind: LevelKind.peer_review,
               icon: null,
               title: 7,
               url: "http://localhost-studio.code.org:3000/s/alltheplcthings/stage/10/puzzle/7",
@@ -317,7 +297,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status={undefined}
+            status={LevelStatus.locked}
             level={{
               ids: [0],
               kind: LevelKind.peer_review,
@@ -336,11 +316,11 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={true}
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [5096],
-              kind: LevelKind.named_level,
+              kind: LevelKind.puzzle,
               name: 'Internet Simulator: sending binary messages',
               position: 2,
               title: 2,
@@ -356,11 +336,11 @@ export default storybook => {
             courseOverviewPage={false}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: 'fa-file-text',
               ids: [5442],
-              kind: LevelKind.named_level,
+              kind: LevelKind.assessment,
               name: 'CSP Pre-survey',
               position: 1,
               previous: [1,1],
@@ -377,11 +357,11 @@ export default storybook => {
             courseOverviewPage={false}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
-            status="perfect"
+            status={LevelStatus.perfect}
             level={{
               icon: 'fa-video-camera',
               ids: [5078],
-              kind: LevelKind.named_level,
+              kind: LevelKind.puzzle,
               name: 'Computer Science is Changing Everything',
               position: 3,
               previous: [1,1],
@@ -398,7 +378,7 @@ export default storybook => {
             courseOverviewPage={false}
             currentLevelId="1379"
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [2049],
@@ -418,7 +398,7 @@ export default storybook => {
             courseOverviewPage={false}
             currentLevelId="2049"
             saveAnswersBeforeNavigation={false}
-            status="not_tried"
+            status={LevelStatus.not_tried}
             level={{
               icon: null,
               ids: [2049],

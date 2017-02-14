@@ -34,7 +34,7 @@ end
 # replication tasks, and starting the replication tasks.
 def main
   # Update the data room topic in Slack.
-  new_topic = 'Tableau data is automatically reloading (details in #infra-dms)...'
+  new_topic = 'Tableau data is automatically reloading (details in channel infra-dms)...'
   Slack.update_topic('data', new_topic)
 
   # Create a DMS client and use it to start task replication.

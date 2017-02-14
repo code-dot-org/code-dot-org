@@ -980,6 +980,10 @@ Applab.reset = function () {
     divApplab.removeChild(divApplab.firstChild);
   }
 
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.stopAllAudio();
+  }
+
   // Clone and replace divApplab (this removes all attached event listeners):
   var newDivApplab = divApplab.cloneNode(true);
   divApplab.parentNode.replaceChild(newDivApplab, divApplab);
