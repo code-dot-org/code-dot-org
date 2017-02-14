@@ -177,6 +177,14 @@ class ScriptLevel < ActiveRecord::Base
     build_script_level_path(self)
   end
 
+  def icon
+    if level.icon
+      level.icon
+    elsif assessment
+      'fa-list-ol'
+    end
+  end
+
   def summarize
     if level.unplugged?
       kind = 'unplugged'
@@ -197,7 +205,7 @@ class ScriptLevel < ActiveRecord::Base
       activeId: oldest_active_level.id,
       position: position,
       kind: kind,
-      icon: level.icon,
+      icon: icon,
       title: level_display_text,
       url: build_script_level_url(self)
     }
