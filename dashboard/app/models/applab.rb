@@ -139,6 +139,7 @@ class Applab < Blockly
         "getXPosition": null,
         "getYPosition": null,
         "setScreen": null,
+        "rgb": null,
 
         // Canvas
         "createCanvas": null,
