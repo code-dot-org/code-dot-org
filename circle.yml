@@ -28,6 +28,7 @@ dependencies:
     - ./bin/circle/install-circle-predependencies.sh
     - google-chrome --version
     - yarn --version
+    - mkdir -p apps/.babel-cache
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
