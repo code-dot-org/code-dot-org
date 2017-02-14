@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
+import weblabMsg from '@cdo/weblab/locale';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import reducers from './reducers';
@@ -242,6 +243,12 @@ WebLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
+
+  window.onbeforeunload = evt => {
+    if (dashboard.project.hasProjectChanged()) {
+      return weblabMsg.confirmExitWithUnsavedChanges();
+    }
+  };
 };
 
 WebLab.prototype.renderFooterInSharedMode = function (container, copyrightStrings) {

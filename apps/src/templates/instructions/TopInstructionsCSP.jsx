@@ -59,7 +59,7 @@ var styles = {
   },
   title: {
     textAlign: 'center',
-    height: HEADER_HEIGHT + 'px',
+    height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
   }
 };
@@ -162,7 +162,7 @@ var TopInstructions = React.createClass({
    * Handle a click on the Documentation PaneButton.
    */
   handleDocumentationClick() {
-    var win = window.open(this.props.documentationUrl, '_blank');
+    const win = window.open(this.props.documentationUrl, '_blank');
     win.focus();
   },
 
