@@ -77,7 +77,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
     data = {
       scriptId: @script.id,
       levelId: @level.id,
-      hintId: "first",
+      hintId: 'first',
       hintClass: 'bottom-out',
       hintType: 'general',
       prevTime: 1,
@@ -97,13 +97,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
       finalLevelSourceId: 15
     }
 
-    post(
-      :create,
-      params: {
-        hints: [data]
-      },
-      format: :json
-    )
+    post(:create, params: { hints: [data] }, format: :json)
 
     record = AuthoredHintViewRequest.last
 
