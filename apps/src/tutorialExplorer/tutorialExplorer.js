@@ -59,7 +59,7 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    const sortBy = this.props.sortByPopularity ? TutorialsSortBy.popularityrank : TutorialsSortBy.default;
+    const sortBy = TutorialsSortBy.default;
     const filteredTutorials = this.filterTutorialSet(filters, sortBy);
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
     const showingAllTutorials = this.isLocaleEnglish();
@@ -163,7 +163,8 @@ const TutorialExplorer = React.createClass({
       filters: filters,
       hideFilters: this.props.hideFilters,
       locale: "en-US",
-      sortBy: sortBy
+      sortBy: sortBy,
+      sortByPopularity: this.props.sortByPopularity
     };
 
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
@@ -292,7 +293,7 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, filters, hideFilters, sortBy } = filterProps;
+      const { locale, specificLocale, filters, hideFilters, sortBy, sortByPopularity } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as do-not-show.  If it does,
@@ -349,7 +350,14 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        if (sortBy === TutorialsSortBy.popularityrank) {
+        let useSortBy;
+        if (sortBy === TutorialsSortBy.default) {
+          useSortBy = sortByPopularity ? TutorialsSortBy.popularityrank : TutorialsSortBy.displayweight;
+        } else {
+          useSortBy = sortBy;
+        }
+
+        if (useSortBy === TutorialsSortBy.popularityrank) {
           return tutorial1.popularityrank - tutorial2.popularityrank;
         } else {
           return tutorial2.displayweight - tutorial1.displayweight;
@@ -425,6 +433,7 @@ const TutorialExplorer = React.createClass({
                 showModalFilters={this.showModalFilters}
                 hideModalFilters={this.hideModalFilters}
                 showSortBy={this.props.showSortBy}
+                sortByPopularity={this.props.sortByPopularity}
               />
               <div style={{clear: "both"}}/>
 

@@ -59,7 +59,8 @@ const FilterHeader = React.createClass({
     showingModalFilters: React.PropTypes.bool.isRequired,
     showModalFilters: React.PropTypes.func.isRequired,
     hideModalFilters: React.PropTypes.func.isRequired,
-    showSortBy: React.PropTypes.bool.isRequired
+    showSortBy: React.PropTypes.bool.isRequired,
+    sortByPopularity: React.PropTypes.bool
   },
 
   shouldShowOpenFiltersButton() {
@@ -86,6 +87,19 @@ const FilterHeader = React.createClass({
     const tutorialCountString = tutorialCount === 1 ?
       i18n.filterHeaderTutorialCountSingle() :
       i18n.filterHeaderTutorialCountPlural({tutorial_count: tutorialCount});
+
+    let sortOptions;
+    if (this.props.sortByPopularity) {
+      sortOptions = [
+        {value: "popularityrank", text: i18n.filterHeaderPopularityRank()},
+        {value: "displayweight", text: i18n.filterHeaderDisplayWeight()}
+      ];
+    } else {
+      sortOptions = [
+        {value: "displayweight", text: i18n.filterHeaderDisplayWeight()},
+        {value: "popularityrank", text: i18n.filterHeaderPopularityRank()}
+      ];
+    }
 
     return (
       <div style={styles.header}>
@@ -125,8 +139,8 @@ const FilterHeader = React.createClass({
                   className="noFocusButton"
                 >
                   <option disabled hidden value="default">{i18n.filterHeaderDefault()}</option>
-                  <option value="displayweight">{i18n.filterHeaderDisplayWeight()}</option>
-                  <option value="popularityrank">{i18n.filterHeaderPopularityRank()}</option>
+                  <option value={sortOptions[0].value}>{sortOptions[0].text}</option>
+                  <option value={sortOptions[1].value}>{sortOptions[1].text}</option>
                 </select>
               )}
 
