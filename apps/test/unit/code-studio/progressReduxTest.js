@@ -486,47 +486,38 @@ describe('progressReduxTest', () => {
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
-            name: undefined,
-            icon: null
+            name: undefined
           },
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
-            name: undefined,
-            icon: null
+            name: undefined
           },
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
-            name: undefined,
-            icon: null
+            name: undefined
           }
         ],
         [
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
-            name: undefined,
-            icon: null
+            name: undefined
           },
           {
             status: 'perfect',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
-            name: undefined,
-            icon: null
+            name: undefined
           },
           {
             status: 'attempted',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
-            name: undefined,
-            icon: null
+            name: undefined
           }
         ]
       ];
-      const results = levelsByLesson(state);
-      assert.equal(expected.length, results.length);
-      assert.deepEqual(expected[0], results[0]);
-      assert.deepEqual(expected[1], results[1]);
+      assert.deepEqual(expected, levelsByLesson(state));
     });
   });
 

@@ -433,7 +433,7 @@ describe('ProgressDot component tests', () => {
         renderer.render(
           <ProgressDot
             level={{
-              icon: 'fa-list-ol',
+              icon: undefined,
               kind: LevelKind.assessment
             }}
             status={LevelStatus.not_tried}

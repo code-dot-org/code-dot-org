@@ -225,8 +225,7 @@ export const levelsByLesson = state => (
     stage.levels.map(level => ({
       status: statusForLevel(level, state.levelProgress),
       url: level.url,
-      name: level.name,
-      icon: level.icon
+      name: level.name
     }))
   ))
 );
