@@ -13,7 +13,7 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
     @mock_rsa.stubs(:public_encrypt).returns('fake encrypted token')
 
     @secrets = {
-      rsa_public_key: @fake_rsa_key,
+      rsa_public_key: Base64.encode64(@fake_rsa_key),
       organization_id: 'fake organization id',
       company_id: 'fake company id',
       company_name: 'fake company name',
@@ -51,6 +51,22 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
 
     get :authenticate_and_redirect, params: {enrollment_code: @enrollment.code}
     assert_response :success
+  end
+
+  test 'public key format' do
+    OpenSSL::PKey::RSA.unstub(:new)
+
+    # This is to test the key format (base64-encoded raw public key with no extra markup)
+    # This test key was generated via: Base64.encode64(OpenSSL::PKey::RSA.new(128).public_key.to_der).strip
+    # Obviously this key is insecure and should not be used in production.
+    @secrets['rsa_public_key'] = "MCwwDQYJKoZIhvcNAQEBBQADGwAwGAIRANejYVd2T5zbWOZbAuTquCECAwEA\nAQ=="
+    assert_not_empty Pd::MimeoSsoController.new.send(:encrypt_token, 'token')
+
+    @secrets['rsa_public_key'] = 'invalid key'
+    e = assert_raises OpenSSL::PKey::RSAError do
+      Pd::MimeoSsoController.new.send(:encrypt_token, 'token')
+    end
+    assert e.message.start_with? 'Neither PUB key nor PRIV key'
   end
 
   test 'rendered form' do
