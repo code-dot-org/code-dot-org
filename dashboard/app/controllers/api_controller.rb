@@ -200,13 +200,15 @@ class ApiController < ApplicationController
       end
     end
 
-    slog(
-      tag: 'activity_start',
-      script_level_id: script_level.id,
-      level_id: level.id,
-      user_agent: request.user_agent,
-      locale: locale
-    ) if level.finishable?
+    if level.finishable?
+      slog(
+        tag: 'activity_start',
+        script_level_id: script_level.id,
+        level_id: level.id,
+        user_agent: request.user_agent,
+        locale: locale
+      )
+    end
 
     render json: response
   end

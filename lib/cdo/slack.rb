@@ -1,5 +1,5 @@
 require 'net/http'
-require 'uri'
+require 'open-uri'
 
 class Slack
   COLOR_MAP = {

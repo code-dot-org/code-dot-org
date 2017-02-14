@@ -3,8 +3,9 @@ title: Student Recruitment
 nav: educate_nav
 video_player: true
 ---
-# Student recruitment 
-### Planning to offer a computer science course in your school? Here are some tips for recruiting students into your class. 
+# Planning to offer computer science in your school? 
+
+### Here are some tips for recruiting students into your class. 
 
 *For resources and tips on getting district, administrator, or community buy-in, check out [code.org/promote](/promote).*
 
