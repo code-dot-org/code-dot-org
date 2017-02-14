@@ -443,7 +443,8 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('');
+        expect(result.props.children[0].type).to.equal('div');
+        expect(result.props.children[0].props.className).to.equal(undefined);
       });
 
       it('has no icon in header', () => {
