@@ -16,6 +16,7 @@ def push_out_translated_files
   copy_untranslated_apps
   cleanup_chinese_and_portuguese_codes
   rebuild_blockly_js_files
+  check_for_bad_translations
 end
 
 # Files downloaded from Crowdin are organized by language name,
