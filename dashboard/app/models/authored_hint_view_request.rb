@@ -3,7 +3,7 @@
 # Table name: authored_hint_view_requests
 #
 #  id                    :integer          not null, primary key
-#  user_id               :integer
+#  user_id               :integer          not null
 #  script_id             :integer
 #  level_id              :integer
 #  hint_id               :string(255)
