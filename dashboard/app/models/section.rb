@@ -64,6 +64,10 @@ class Section < ActiveRecord::Base
     self.code = unused_random_code
   end
 
+  def teacher_dashboard_url
+    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'http:'
+  end
+
   # return a version of self.students in which all students' names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
