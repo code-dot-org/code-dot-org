@@ -9,7 +9,7 @@ const WATCH_TIMER_PERIOD = 250;
 const INITIALIZE = 'jsdebugger/INITIALIZE';
 const ATTACH = 'jsdebugger/ATTACH';
 const DETACH = 'jsdebugger/DETACH';
-const MIRROR_INTERPRETER_STATE = 'jsdebugger/MIRROR_INTERPRETER_STATE';
+const MAP_INTERPRETER_STATE = 'jsdebugger/MAP_INTERPRETER_STATE';
 const APPEND_LOG = 'jsdebugger/APPEND_LOG';
 const CLEAR_LOG = 'jsdebugger/CLEAR_LOG';
 
@@ -21,8 +21,8 @@ const JSDebuggerState = Immutable.Record({
   watchIntervalId: null,
   commandHistory: null,
   logOutput: '',
-  jsInterpreterNextStep: null,
-  jsInterpreterPaused: false,
+  canRunNext: false,
+  isPaused: false,
 });
 
 export function getRoot(state) {
@@ -42,7 +42,7 @@ function getRunApp(state) {
 }
 
 export function isPaused(state) {
-  return getRoot(state).jsInterpreterPaused;
+  return getRoot(state).isPaused;
 }
 
 function getObserver(state) {
@@ -58,10 +58,7 @@ export function isAttached(state) {
 }
 
 export function canRunNext(state) {
-  return (
-    isPaused(state) &&
-    getRoot(state).jsInterpreterNextStep === JSInterpreter.StepType.RUN
-  );
+  return getRoot(state).canRunNext;
 }
 
 export function getLogOutput(state) {
@@ -91,8 +88,13 @@ export function clearLog() {
   return {type: CLEAR_LOG};
 }
 
-function mirrorInterpreterState(jsInterpreter) {
-  return {type: MIRROR_INTERPRETER_STATE, jsInterpreter};
+/**
+ * We periodically need to update the debugger UI state
+ * in response to events emitted by the interpreter.
+ * This action triggers that mapping.
+ */
+function mapInterpreterState(jsInterpreter) {
+  return {type: MAP_INTERPRETER_STATE, jsInterpreter};
 }
 
 export function attach(jsInterpreter) {
@@ -100,7 +102,7 @@ export function attach(jsInterpreter) {
     const observer = new Observer();
     observer.observe(
       jsInterpreter.onNextStepChanged,
-      () => dispatch(mirrorInterpreterState(jsInterpreter))
+      () => dispatch(mapInterpreterState(jsInterpreter))
     );
     observer.observe(
       jsInterpreter.onPause,
@@ -147,7 +149,7 @@ export function togglePause() {
       return;
     }
     jsInterpreter.handlePauseContinue();
-    dispatch(mirrorInterpreterState(jsInterpreter));
+    dispatch(mapInterpreterState(jsInterpreter));
   };
 }
 
@@ -168,7 +170,7 @@ export function stepIn() {
       }
     }
     jsInterpreter.handleStepIn();
-    dispatch(mirrorInterpreterState(jsInterpreter));
+    dispatch(mapInterpreterState(jsInterpreter));
   };
 }
 
@@ -177,7 +179,7 @@ export function stepOver() {
     let jsInterpreter = getJSInterpreter(getState());
     if (jsInterpreter) {
       jsInterpreter.handleStepOver();
-      dispatch(mirrorInterpreterState(jsInterpreter));
+      dispatch(mapInterpreterState(jsInterpreter));
     } else {
       throw new Error("No interpreter has been attached");
     }
@@ -189,7 +191,7 @@ export function stepOut() {
     let jsInterpreter = getJSInterpreter(getState());
     if (jsInterpreter) {
       jsInterpreter.handleStepOut();
-      dispatch(mirrorInterpreterState(jsInterpreter));
+      dispatch(mapInterpreterState(jsInterpreter));
     } else {
       throw new Error("No interpreter has been attached");
     }
@@ -245,10 +247,13 @@ export function reducer(state = new JSDebuggerState(), action) {
       jsInterpreter: null,
       watchIntervalId: 0,
     });
-  } else if (action.type === MIRROR_INTERPRETER_STATE) {
+  } else if (action.type === MAP_INTERPRETER_STATE) {
     return state.merge({
-      jsInterpreterPaused: action.jsInterpreter.paused,
-      jsInterpreterNextStep: action.jsInterpreter.nextStep,
+      isPaused: action.jsInterpreter.paused,
+      canRunNext: (
+        action.jsInterpreter.paused &&
+        action.jsInterpreter.nextStep === JSInterpreter.StepType.RUN
+      )
     });
   } else {
     return state;
