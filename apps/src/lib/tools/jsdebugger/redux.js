@@ -4,6 +4,7 @@ import {update as updateWatchExpressions} from '../../../redux/watchedExpression
 import CommandHistory from './CommandHistory';
 import JSInterpreter from '../../../JSInterpreter';
 import watchedExpressions from '@cdo/apps/redux/watchedExpressions';
+import runState from '@cdo/apps/redux/runState';
 
 const WATCH_TIMER_PERIOD = 250;
 const INITIALIZE = 'jsdebugger/INITIALIZE';
@@ -22,7 +23,6 @@ const JSDebuggerState = Immutable.Record({
   commandHistory: null,
   logOutput: '',
   canRunNext: false,
-  isPaused: false,
 });
 
 export function getRoot(state) {
@@ -42,7 +42,7 @@ function getRunApp(state) {
 }
 
 export function isPaused(state) {
-  return getRoot(state).isPaused;
+  return state.runState.isDebuggerPaused;
 }
 
 function getObserver(state) {
@@ -249,7 +249,6 @@ export function reducer(state = new JSDebuggerState(), action) {
     });
   } else if (action.type === MAP_INTERPRETER_STATE) {
     return state.merge({
-      isPaused: action.jsInterpreter.paused,
       canRunNext: (
         action.jsInterpreter.paused &&
         action.jsInterpreter.nextStep === JSInterpreter.StepType.RUN
@@ -263,4 +262,5 @@ export function reducer(state = new JSDebuggerState(), action) {
 export const reducers = {
   jsdebugger: reducer,
   watchedExpressions,
+  runState,
 };
