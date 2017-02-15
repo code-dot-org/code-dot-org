@@ -10,7 +10,6 @@ const WATCH_TIMER_PERIOD = 250;
 const INITIALIZE = 'jsdebugger/INITIALIZE';
 const ATTACH = 'jsdebugger/ATTACH';
 const DETACH = 'jsdebugger/DETACH';
-const MAP_INTERPRETER_STATE = 'jsdebugger/MAP_INTERPRETER_STATE';
 const APPEND_LOG = 'jsdebugger/APPEND_LOG';
 const CLEAR_LOG = 'jsdebugger/CLEAR_LOG';
 
@@ -22,7 +21,6 @@ const JSDebuggerState = Immutable.Record({
   watchIntervalId: null,
   commandHistory: null,
   logOutput: '',
-  canRunNext: false,
 });
 
 export function getRoot(state) {
@@ -58,7 +56,10 @@ export function isAttached(state) {
 }
 
 export function canRunNext(state) {
-  return getRoot(state).canRunNext;
+  return (
+    state.runState.isDebuggerPaused &&
+    state.runState.nextStep === JSInterpreter.StepType.RUN
+  );
 }
 
 export function getLogOutput(state) {
@@ -88,22 +89,9 @@ export function clearLog() {
   return {type: CLEAR_LOG};
 }
 
-/**
- * We periodically need to update the debugger UI state
- * in response to events emitted by the interpreter.
- * This action triggers that mapping.
- */
-function mapInterpreterState(jsInterpreter) {
-  return {type: MAP_INTERPRETER_STATE, jsInterpreter};
-}
-
 export function attach(jsInterpreter) {
   return (dispatch, getState) => {
     const observer = new Observer();
-    observer.observe(
-      jsInterpreter.onNextStepChanged,
-      () => dispatch(mapInterpreterState(jsInterpreter))
-    );
     observer.observe(
       jsInterpreter.onPause,
       () => dispatch(togglePause())
@@ -149,7 +137,6 @@ export function togglePause() {
       return;
     }
     jsInterpreter.handlePauseContinue();
-    dispatch(mapInterpreterState(jsInterpreter));
   };
 }
 
@@ -170,7 +157,6 @@ export function stepIn() {
       }
     }
     jsInterpreter.handleStepIn();
-    dispatch(mapInterpreterState(jsInterpreter));
   };
 }
 
@@ -179,7 +165,6 @@ export function stepOver() {
     let jsInterpreter = getJSInterpreter(getState());
     if (jsInterpreter) {
       jsInterpreter.handleStepOver();
-      dispatch(mapInterpreterState(jsInterpreter));
     } else {
       throw new Error("No interpreter has been attached");
     }
@@ -191,7 +176,6 @@ export function stepOut() {
     let jsInterpreter = getJSInterpreter(getState());
     if (jsInterpreter) {
       jsInterpreter.handleStepOut();
-      dispatch(mapInterpreterState(jsInterpreter));
     } else {
       throw new Error("No interpreter has been attached");
     }
@@ -246,13 +230,6 @@ export function reducer(state = new JSDebuggerState(), action) {
     return state.merge({
       jsInterpreter: null,
       watchIntervalId: 0,
-    });
-  } else if (action.type === MAP_INTERPRETER_STATE) {
-    return state.merge({
-      canRunNext: (
-        action.jsInterpreter.paused &&
-        action.jsInterpreter.nextStep === JSInterpreter.StepType.RUN
-      )
     });
   } else {
     return state;
