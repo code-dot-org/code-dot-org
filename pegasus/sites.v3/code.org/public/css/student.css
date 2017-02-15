@@ -1,0 +1,44 @@
+.full-resource-block {
+  width: 90%;
+  height: 244px;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.description {
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.resource-title {
+  padding: 0px;
+  margin: 0px;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding-bottom: 10px;
+}
+
+.side-image {
+  height: 100%;
+  float: left;
+}
+
+.side-description-area {
+  float: left;
+  height: 100%;
+  background-color: #00adbc;
+  padding: 30px 30px;
+}
+
+.gray-button {
+  background-color: #e7e8ea;
+  border-color: #c6cacd;
+  color: #5b6770;
+  text-decoration: none;
+}
+
+.orange-button {
+  text-decoration: none;
+  background-color: #ffa400;
+}
