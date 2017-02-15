@@ -614,7 +614,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
+        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -654,7 +657,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
+        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -687,7 +693,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
+        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -722,7 +731,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
+        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -757,7 +769,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
+        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
