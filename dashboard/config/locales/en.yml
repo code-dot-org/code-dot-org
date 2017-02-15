@@ -33,6 +33,7 @@ en:
     attributes:
       user:
         name: 'Display Name'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Email'
         username: 'Username'
         password: 'Password'
@@ -135,6 +136,7 @@ en:
   signin_form:
     title: 'Have an account already? Sign in'
     login: 'Email'
+    login_username: 'Email or Username'
     password: 'Password'
     remember: 'Remember me'
     submit: 'Sign in'
