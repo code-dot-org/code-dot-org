@@ -15,7 +15,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
         format: :json
     end
 
-    survey_result = SurveyResult.where(user: @teacher).first
+    survey_result = SurveyResult.where(user: @teacher).last
     assert survey_result
     assert_equal 'Diversity2016', survey_result.kind
     assert_equal 22, survey_result["properties"]["survey2016_ethnicity_asian"].to_i
@@ -33,7 +33,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
         format: :json
     end
 
-    survey_result = SurveyResult.where(user: @teacher).first
+    survey_result = SurveyResult.where(user: @teacher).last
     assert survey_result
     assert_equal 'NetPromoterScore2015', survey_result.kind
     assert_equal nps_value, survey_result.properties['nps_value'].to_i
@@ -49,7 +49,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
         format: :json
     end
 
-    survey_result = SurveyResult.where(user: @teacher).first
+    survey_result = SurveyResult.where(user: @teacher).last
     assert survey_result
     assert_equal 'Diversity2016', survey_result.kind
     assert survey_result['properties']['nonwhitelisted'].nil?
@@ -67,7 +67,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
         },
         format: :json
     end
-    survey_result = SurveyResult.find_by_user_id(@teacher.id)
+    survey_result = SurveyResult.where(user: @teacher).last
     assert survey_result
     assert_equal 'NetPromoterScore2017', survey_result.kind
     assert_equal '1', survey_result.nps_value
@@ -90,7 +90,7 @@ class SurveyResultsControllerTest < ActionController::TestCase
         format: :json
       )
     end
-    survey_result = SurveyResult.find_by_user_id(@teacher.id)
+    survey_result = SurveyResult.where(user: @teacher).last
     assert survey_result
     assert_equal "0" * 997 + "...", survey_result.nps_comment
   end
