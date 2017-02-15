@@ -3,11 +3,10 @@ require 'test_helper'
 class SurveyResultsControllerTest < ActionController::TestCase
   setup do
     @teacher = create(:teacher)
+    sign_in @teacher
   end
 
   test 'post diversity survey results' do
-    sign_in @teacher
-
     assert_creates(SurveyResult) do
       post :create,
         params: {
@@ -24,8 +23,6 @@ class SurveyResultsControllerTest < ActionController::TestCase
   end
 
   test 'post net promoter score survey results' do
-    sign_in @teacher
-
     nps_value = 10
     nps_comment = "Rock on"
     assert_creates(SurveyResult) do
@@ -44,8 +41,6 @@ class SurveyResultsControllerTest < ActionController::TestCase
   end
 
   test 'blocks non-whitelisted parameters' do
-    sign_in @teacher
-
     assert_creates(SurveyResult) do
       post :create,
         params: {
@@ -61,7 +56,6 @@ class SurveyResultsControllerTest < ActionController::TestCase
   end
 
   test 'fixes non-utf-8 characters' do
-    sign_in @teacher
     assert_creates(SurveyResult) do
       post :create,
         params: {
@@ -83,8 +77,6 @@ class SurveyResultsControllerTest < ActionController::TestCase
   end
 
   test 'truncates long nps_comment' do
-    sign_in @teacher
-
     assert_creates(SurveyResult) do
       post(
         :create,
