@@ -21,6 +21,7 @@
 # Indexes
 #
 #  index_pd_enrollments_on_code            (code) UNIQUE
+#  index_pd_enrollments_on_email           (email)
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
