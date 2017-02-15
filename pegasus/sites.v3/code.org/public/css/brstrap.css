@@ -62,6 +62,16 @@
   .mobile-show-medium { display: none }
 
   .i-agree-button { width: 9%; }
+
+ /*This is applicable when side by side images with rounded corners need to be stacked on smaller sizes (e.g. code.org/student)*/
+  .side-image.right, .side-description-area.right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .side-image.left, .side-description-area.left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 }
 
 
@@ -96,6 +106,16 @@
   .mobile-pad-left64 { padding-left: 64px; }
 
   .mobile-pad-edge { padding: 20px; }
+
+/*This is applicable when side by side images with rounded corners need to be stacked on smaller sizes (e.g. code.org/student)*/
+ .side-image.right, .side-description-area.right {
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+ }
+ .side-image.left, .side-description-area.left {
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+ }
 }
 
 /* 512 and down: some mobile styling collapses even more */
@@ -110,4 +130,3 @@
 
   .mobile-small-hide { display: none }
 }
-
