@@ -81,4 +81,25 @@ class SurveyResultsControllerTest < ActionController::TestCase
     # characters.
     assert_equal "testing Panda\u{fffd}\u{fffd}\u{fffd}\u{fffd}", survey_result.nps_comment
   end
+
+  test 'truncates long nps_comment' do
+    sign_in @teacher
+
+    assert_creates(SurveyResult) do
+      post(
+        :create,
+        params: {
+          survey: {
+            kind: 'NetPromoterScore2017',
+            nps_value: 1,
+            nps_comment: "0" * 12_345
+          }
+        },
+        format: :json
+      )
+    end
+    survey_result = SurveyResult.find_by_user_id(@teacher.id)
+    assert survey_result
+    assert_equal "0" * 997 + "...", survey_result.nps_comment
+  end
 end
