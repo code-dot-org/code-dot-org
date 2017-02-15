@@ -13,6 +13,8 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     surveys_pending_enrollment = Pd::Enrollment.filter_for_survey_completion(enrollments, false)
     last_pending_enrollment = surveys_pending_enrollment && surveys_pending_enrollment.max_by(&:survey_sent_at)
 
+    upcoming_workshops = Pd::Enrollment.where(email: current_user.email, )
+
     # Link to the certificate
     @landing_page_data = {
       courses_teaching: courses_teaching,
