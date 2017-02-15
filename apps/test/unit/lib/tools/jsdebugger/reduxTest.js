@@ -3,50 +3,55 @@ import {expect} from '../../../../util/configuredChai';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {reducers, selectors, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import ObservableEvent from '@cdo/apps/ObservableEvent';
+import Observer from '@cdo/apps/Observer';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
 
-class StubInterpreter {
-  constructor() {
-    this.onNextStepChanged = new ObservableEvent();
-    this.onPause = new ObservableEvent();
-    this.onExecutionWarning = new ObservableEvent();
-
-    this.handlePauseContinue = sinon.spy();
-    this.handleStepIn = sinon.spy();
-    this.handleStepOut = sinon.spy();
-    this.handleStepOver = sinon.spy();
-    this.paused = false;
-    this.nextStep = null;
-  }
-
-  mockPause() {
-    this.paused = true;
-    this.onPause.notifyObservers();
-  }
-
-  mockExecutionWarning(error, lineNumber) {
-    this.onExecutionWarning.notifyObservers(error, lineNumber);
-  }
-
-  mockSetNextStep(nextStep) {
-    this.nextStep = nextStep;
-    this.onNextStepChanged.notifyObservers();
-  }
-}
+window.acorn = require('../../../../../lib/jsinterpreter/acorn');
+require('../../../../../lib/jsinterpreter/interpreter');
 
 describe('The JSDebugger redux duck', () => {
-  let store, state;
+  let store, state, studioApp, interpreter;
   beforeEach(() => {
     stubRedux();
     registerReducers(reducers);
     store = getStore();
     state = store.getState();
+    studioApp = {reduxStore: getStore(), hideSource: true};
+    interpreter = new JSInterpreter({
+      shouldRunAtMaxSpeed: () => false,
+      studioApp
+    });
+    sinon.spy(interpreter, 'handlePauseContinue');
+    sinon.spy(interpreter, 'handleStepIn');
+    sinon.spy(interpreter, 'handleStepOut');
+    sinon.spy(interpreter, 'handleStepOver');
   });
   afterEach(() => {
     restoreRedux();
   });
+
+  function runToBreakpoint() {
+    const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
+    interpreter.calculateCodeInfo(code);
+    interpreter.parse({code});
+    interpreter.paused = true;
+    interpreter.nextStep = JSInterpreter.StepType.IN;
+    interpreter.executeInterpreter(true);
+
+    interpreter.isBreakpointRow = function (row) {
+      return row === 3 || row === 5;
+    };
+    const observer = new Observer();
+    let hitBreakpoint = false;
+    observer.observe(interpreter.onPause, function () {
+      hitBreakpoint = true;
+    });
+    interpreter.paused = false;
+
+    for (let i = 0; !hitBreakpoint && i < 100; i++) {
+      interpreter.executeInterpreter();
+    }
+  }
 
   it("exposes state on the jsdebugger key", () => {
     expect(store.getState().jsdebugger).to.be.defined;
@@ -123,7 +128,7 @@ describe('The JSDebugger redux duck', () => {
     let runApp;
     beforeEach(() => {
       runApp = sinon.spy(() => {
-        store.dispatch(actions.attach(new StubInterpreter()));
+        store.dispatch(actions.attach(interpreter));
       });
       store.dispatch(actions.initialize({runApp}));
       state = store.getState();
@@ -174,9 +179,7 @@ describe('The JSDebugger redux duck', () => {
     });
 
     describe("after being attached to an interpreter", () => {
-      let interpreter;
       beforeEach(() => {
-        interpreter = new StubInterpreter();
         store.dispatch(actions.attach(interpreter));
         state = store.getState();
       });
@@ -187,21 +190,19 @@ describe('The JSDebugger redux duck', () => {
 
       it("the interpreter will trigger pause actions", () => {
         expect(selectors.isPaused(state)).to.be.false;
-        interpreter.mockPause();
+        runToBreakpoint();
         expect(selectors.isPaused(store.getState())).to.be.true;
       });
 
       it("the interpreter will log execution warnings", () => {
         expect(selectors.getLogOutput(state)).to.equal('');
-        interpreter.mockExecutionWarning("ouch!", 10);
+        interpreter.onExecutionWarning.notifyObservers("ouch!", 10);
         expect(selectors.getLogOutput(store.getState())).to.equal('ouch!');
       });
 
       it("changes to the interpreter's next step will be mirrored", () => {
         expect(selectors.canRunNext(state)).to.be.false;
-        interpreter.mockPause();
-        expect(selectors.canRunNext(store.getState())).to.be.false;
-        interpreter.mockSetNextStep(JSInterpreter.StepType.RUN);
+        runToBreakpoint();
         expect(selectors.canRunNext(store.getState())).to.be.true;
       });
 
@@ -240,21 +241,19 @@ describe('The JSDebugger redux duck', () => {
 
         it("will no longer trigger pause actions", () => {
           expect(selectors.isPaused(state)).to.be.false;
-          interpreter.mockPause();
+          runToBreakpoint();
           expect(selectors.isPaused(store.getState())).to.be.false;
         });
 
         it("will no longer log execution warnings", () => {
           expect(selectors.getLogOutput(state)).to.equal('');
-          interpreter.mockExecutionWarning("ouch!", 10);
+          interpreter.onExecutionWarning.notifyObservers("ouch!", 10);
           expect(selectors.getLogOutput(store.getState())).to.equal('');
         });
 
         it("will no longer mirror changes to the interpreter state", () => {
           expect(selectors.canRunNext(state)).to.be.false;
-          interpreter.mockPause();
-          expect(selectors.canRunNext(store.getState())).to.be.false;
-          interpreter.mockSetNextStep(JSInterpreter.StepType.RUN);
+          runToBreakpoint();
           expect(selectors.canRunNext(store.getState())).to.be.false;
         });
       });
