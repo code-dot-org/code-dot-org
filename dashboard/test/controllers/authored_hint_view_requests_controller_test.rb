@@ -83,17 +83,14 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
       prevTime: 1,
       prevAttempt: 2,
       prevTestResult: 3,
-      prevActivityId: 4,
       prevLevelSourceId: 5,
       nextTime: 6,
       nextAttempt: 7,
       nextTestResult: 8,
-      nextActivityId: 9,
       nextLevelSourceId: 10,
       finalTime: 11,
       finalAttempt: 12,
       finalTestResult: 13,
-      finalActivityId: 14,
       finalLevelSourceId: 15
     }
 
