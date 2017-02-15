@@ -3,13 +3,13 @@
 import React from 'react';
 
 const styles = {
-  containerStyle: {
+  container: {
     display: 'flex',
     height: '240px',
     width: '100%',
   },
 
-  imageStyle: {
+  image: {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -19,7 +19,7 @@ const styles = {
     boxSizing: 'border-box',
   },
 
-  textStyle: {
+  text: {
     fontSize: '24px',
     backgroundColor: '#00adbc',
     color: 'white',
@@ -60,13 +60,13 @@ const TwoPartBanner = React.createClass({
 
   renderInterior() {
     const appliedImageStyle = {
-      ...styles.imageStyle,
+      ...styles.image,
       backgroundImage: this.props.imageUrl,
       ...this.getImageAlignmentStyle()
     };
 
     const appliedTextStyle = {
-      ...styles.textStyle,
+      ...styles.text,
       ...this.getTextAlignmentStyle()
     };
 
@@ -80,7 +80,7 @@ const TwoPartBanner = React.createClass({
 
   render() {
     return (
-      <div style={styles.containerStyle}>
+      <div style={styles.container}>
         {this.renderInterior()}
       </div>
     );
