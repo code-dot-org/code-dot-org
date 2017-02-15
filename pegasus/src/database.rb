@@ -59,7 +59,7 @@ def no_credit_count
 end
 
 def credit_count
-  DB[:cdo_state_promote].where(cs_counts_t: 'Yes').count
+  DB[:cdo_state_promote].where("cs_counts_t = 'Yes' || cs_counts_t = 'Other'").count
 end
 
 def jobs_nationwide
