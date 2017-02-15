@@ -41,9 +41,9 @@ const TutorialExplorer = React.createClass({
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
     roboticsButtonUrl: React.PropTypes.string,
-    showSortBy: React.PropTypes.bool.isRequired,
+    showSortDropdown: React.PropTypes.bool.isRequired,
     disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    sortByPopularity: React.PropTypes.bool
+    defaultSortBy: React.PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
   },
 
   shouldScrollToTop: false,
@@ -162,10 +162,13 @@ const TutorialExplorer = React.createClass({
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
-      locale: "en-US",
-      sortBy: sortBy,
-      sortByPopularity: this.props.sortByPopularity
+      locale: "en-US"
     };
+
+    // If the user hasn't chosen a sorting option yet (and the dropdown is still in its
+    // default state) then use whatever we know to be the default sort criteria.
+    // But if the user has chosen a sorting option, then use that.
+    filterProps.sortBy = sortBy === TutorialsSortBy.default ? this.props.defaultSortBy : sortBy;
 
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
   },
@@ -178,7 +181,7 @@ const TutorialExplorer = React.createClass({
    */
   filterTutorialSetForLocale() {
     const filterProps = {
-      sortBy: TutorialsSortBy.default
+      sortBy: this.props.defaultSortBy
     };
 
     if (!this.props.roboticsButtonUrl) {
@@ -293,7 +296,7 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, filters, hideFilters, sortBy, sortByPopularity } = filterProps;
+      const { locale, specificLocale, filters, hideFilters, sortBy } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as do-not-show.  If it does,
@@ -350,14 +353,7 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        let useSortBy;
-        if (sortBy === TutorialsSortBy.default) {
-          useSortBy = sortByPopularity ? TutorialsSortBy.popularityrank : TutorialsSortBy.displayweight;
-        } else {
-          useSortBy = sortBy;
-        }
-
-        if (useSortBy === TutorialsSortBy.popularityrank) {
+        if (sortBy === TutorialsSortBy.popularityrank) {
           return tutorial1.popularityrank - tutorial2.popularityrank;
         } else {
           return tutorial2.displayweight - tutorial1.displayweight;
@@ -432,8 +428,8 @@ const TutorialExplorer = React.createClass({
                 showingModalFilters={this.state.showingModalFilters}
                 showModalFilters={this.showModalFilters}
                 hideModalFilters={this.hideModalFilters}
-                showSortBy={this.props.showSortBy}
-                sortByPopularity={this.props.sortByPopularity}
+                showSortDropdown={this.props.showSortDropdown}
+                defaultSortBy={this.props.defaultSortBy}
               />
               <div style={{clear: "both"}}/>
 
@@ -628,6 +624,10 @@ window.TutorialExplorerManager = function (options) {
     initialFilters = providedParameters;
   }
 
+  // The caller can provide defaultSortByPopularity, and when true, the default sort will
+  // be by popularity.  Otherwise, the default sort will be by display weight.
+  const defaultSortBy = options.defaultSortByPopularity ? TutorialsSortBy.popularityrank : TutorialsSortBy.displayweight;
+
   this.renderToElement = function (element) {
     ReactDOM.render(
       <TutorialExplorer
@@ -638,9 +638,9 @@ window.TutorialExplorerManager = function (options) {
         locale={options.locale}
         backButton={options.backButton}
         roboticsButtonUrl={options.roboticsButtonUrl}
-        showSortBy={options.showSortBy}
+        showSortDropdown={true}
         disabledTutorials={options.disabledTutorials}
-        sortByPopularity={options.sortByPopularity}
+        defaultSortBy={defaultSortBy}
       />,
       element
     );
