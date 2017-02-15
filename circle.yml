@@ -28,6 +28,8 @@ dependencies:
     - ./bin/circle/install-circle-predependencies.sh
     - google-chrome --version
     - yarn --version
+    - node --version
+    - npm --version
   cache_directories:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
