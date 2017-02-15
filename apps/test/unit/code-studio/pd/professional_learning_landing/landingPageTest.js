@@ -22,15 +22,20 @@ describe("Tests for Professional Learning Landing Page", () => {
 
     it("page is as expected for a CSD/CSP teacher", () => {
       ['CS Principles', 'CS Discoveries'].forEach((course) => {
-        const landingPage = generateLandingPage({coursesTaught: [course]});
+        const landingPage = generateLandingPage({coursesCompleted: [course]});
 
         expect(landingPage.find('CsFundamentalsSection')).to.have.length(0);
         expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(1);
       });
+
+      const landingPage = generateLandingPage({coursesTaught: ['CS Discoveries'], lastWorkshopSurveyUrl: 'url'});
+
+      expect(landingPage.find('CsFundamentalsSection')).to.have.length(0);
+      expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(1);
     });
 
     it("page is as expected for a teacher in both CSF and CSD/CSP", () => {
-      const landingPage = generateLandingPage({coursesTaught: ['CS Fundamentals', 'CS Discoveries']});
+      const landingPage = generateLandingPage({coursesTaught: ['CS Fundamentals', 'CS Discoveries'], coursesCompleted: ['CS Fundamentals', 'CS Discoveries']});
 
       expect(landingPage.find('CsFundamentalsSection')).to.have.length(1);
       expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(1);
