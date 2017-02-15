@@ -464,6 +464,9 @@ var projects = module.exports = {
   projectChanged() {
     hasProjectChanged = true;
   },
+  hasOwnerChangedProject() {
+    return this.isOwner() && hasProjectChanged;
+  },
   /**
    * @returns {string} The name of the standalone app capable of running
    * this project as a standalone project, or null if none exists.
