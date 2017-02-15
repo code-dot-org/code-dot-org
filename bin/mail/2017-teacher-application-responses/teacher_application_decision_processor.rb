@@ -33,7 +33,8 @@ class TeacherApplicationDecisionProcessor
     application_id: 'Application ID',
     decision: 'Decision',
     workshop_string: 'Workshop',
-    primary_email: 'Primary Email'
+    primary_email: 'Primary Email',
+    program: 'Program'
   }.freeze
 
   DECISIONS = {
@@ -82,10 +83,11 @@ class TeacherApplicationDecisionProcessor
     end
 
     workshop_string = row[DECISION_HEADERS[:workshop_string]]
+    program = row[DECISION_HEADERS[:program]]
     decision = row[DECISION_HEADERS[:decision]]
     case decision
       when DECISIONS[:accept]
-        process_accept teacher_application, workshop_string
+        process_accept teacher_application, program, workshop_string
       when DECISIONS[:decline]
         process :decline, teacher_application
       when DECISIONS[:waitlist]
@@ -156,19 +158,19 @@ class TeacherApplicationDecisionProcessor
     TEACHER_CONS.any?{|tc| workshop_string.include? tc}
   end
 
-  def process_accept(teacher_application, accepted_workshop)
+  def process_accept(teacher_application, program, accepted_workshop)
     # There are 2 kinds of acceptance, TeacherCon (ours) and Regional Partner.
     # We can tell based on the accepted workshop
     if teachercon? accepted_workshop
-      process_accept_teachercon teacher_application, accepted_workshop
+      process_accept_teachercon teacher_application, program, accepted_workshop
     else
-      process_accept_partner teacher_application, accepted_workshop
+      process_accept_partner teacher_application, program, accepted_workshop
     end
   end
 
-  def process_accept_teachercon(teacher_application, accepted_workshop)
+  def process_accept_teachercon(teacher_application, program, accepted_workshop)
     # First, update the actual dashboard DB with this accepted workshop string.
-    save_accepted_workshop teacher_application, accepted_workshop
+    save_accepted_workshop teacher_application, program, accepted_workshop
 
     # TeacherCon string is in the format: 'dates : location'
     dates, location = accepted_workshop.split(':').map(&:strip)
@@ -179,12 +181,12 @@ class TeacherApplicationDecisionProcessor
     process :accept_teachercon, teacher_application, params
   end
 
-  def process_accept_partner(teacher_application, accepted_workshop)
+  def process_accept_partner(teacher_application, program, accepted_workshop)
     # First, make sure this is a valid workshop string (lookup_workshop will raise an error otherwise)
     workshop_info = lookup_workshop accepted_workshop
 
     # Next, update the actual dashboard DB with this accepted workshop string.
-    save_accepted_workshop teacher_application, accepted_workshop
+    save_accepted_workshop teacher_application, program, accepted_workshop
 
     params = {
       regional_partner_name_s: workshop_info[:partner_name],
@@ -196,8 +198,10 @@ class TeacherApplicationDecisionProcessor
     process :accept_partner, teacher_application, params
   end
 
-  def save_accepted_workshop(teacher_application, accepted_workshop)
-    teacher_application.update!(accepted_workshop: accepted_workshop)
+  def save_accepted_workshop(teacher_application, program, accepted_workshop)
+    teacher_application.update_application_hash('selectedCourse': program)
+    teacher_application.accepted_workshop = accepted_workshop
+    teacher_application.save!
   end
 
   def update_primary_email(teacher_application, primary_email)
