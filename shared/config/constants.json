@@ -1,9 +1,9 @@
 {
-  "LevelKinds": [
-    "peer_review",
-    "assessment",
-    "puzzle",
-    "unplugged",
-    "level"
-  ]
+  "LevelKind": {
+    "peer_review": "peer_review",
+    "assessment": "assessment",
+    "puzzle": "puzzle",
+    "unplugged": "unplugged",
+    "level": "level"
+  }
 }
