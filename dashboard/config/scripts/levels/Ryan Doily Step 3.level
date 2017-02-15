@@ -26,10 +26,10 @@
     "free_play": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "discard_background": "false"
+    "discard_background": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -475,6 +475,7 @@ en:
       CSD Design Instructions Site: {}
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
+      'CSD Map: Timed Loop': {}
       CSD Recipe Stop: {}
       'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
@@ -4586,6 +4587,16 @@ en:
         Contact Us: Contact Us
         Use It: Use It
         Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
+      CSDU6 - timed loop question for:
+        The button background will be violet: The button background will be violet
+        The button background will change to each of the colors in the list: The button background will change to each of the colors in the list
+        The button background will change to each of the colors in the list `colors`: The button background will change to each of the colors in the list `colors`
+        The button background will not change: The button background will not change
+        The button will change background color each time it is clicked: The button will change background color each time it is clicked
+        The button will change backgrounds each time it is clicked: The button will change backgrounds each time it is clicked
+        The button will cycle through each of the backgrounds: The button will cycle through each of the backgrounds
+        When you run this code, what will you see.: When you run this code, what will you see.
+        When you run this code, what will you see?: When you run this code, what will you see?
       CSDU6 LED predict multi:
         Alternate between on and off each click: Alternate between on and off each click
         Blink on and off randomly: Blink on and off randomly
