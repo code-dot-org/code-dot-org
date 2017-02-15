@@ -1,7 +1,7 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../../../../util/configuredChai';
 
 describe("CommandHistory", function () {
-  var CommandHistory = require('@cdo/apps/CommandHistory');
+  var CommandHistory = require('@cdo/apps/lib/tools/jsdebugger/CommandHistory');
   var history, inputText;
 
   beforeEach(function () {
