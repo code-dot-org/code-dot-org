@@ -30,7 +30,6 @@ dependencies:
     - yarn --version
   cache_directories:
     - "apps/node_modules"
-    - "apps/.babel-cache"
     - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
     - ".tmputils"

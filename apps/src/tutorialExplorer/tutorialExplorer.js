@@ -42,7 +42,8 @@ const TutorialExplorer = React.createClass({
     backButton: React.PropTypes.bool,
     roboticsButtonUrl: React.PropTypes.string,
     showSortBy: React.PropTypes.bool.isRequired,
-    disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+    disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    sortByPopularity: React.PropTypes.bool
   },
 
   shouldScrollToTop: false,
@@ -58,7 +59,7 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    const sortBy = TutorialsSortBy.default;
+    const sortBy = this.props.sortByPopularity ? TutorialsSortBy.popularityrank : TutorialsSortBy.default;
     const filteredTutorials = this.filterTutorialSet(filters, sortBy);
     const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
     const showingAllTutorials = this.isLocaleEnglish();
@@ -630,6 +631,7 @@ window.TutorialExplorerManager = function (options) {
         roboticsButtonUrl={options.roboticsButtonUrl}
         showSortBy={options.showSortBy}
         disabledTutorials={options.disabledTutorials}
+        sortByPopularity={options.sortByPopularity}
       />,
       element
     );
