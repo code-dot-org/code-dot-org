@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209010013) do
+ActiveRecord::Schema.define(version: 20170214161503) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -28,24 +28,8 @@ ActiveRecord::Schema.define(version: 20170209010013) do
     t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
   end
 
-  create_table "activities_old", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id"
-    t.integer  "level_id"
-    t.string   "action"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "attempt"
-    t.integer  "time"
-    t.integer  "test_result"
-    t.integer  "level_source_id"
-    t.integer  "lines",           default: 0, null: false
-    t.index ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
-  end
-
   create_table "authored_hint_view_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",               null: false
     t.integer  "script_id"
     t.integer  "level_id"
     t.string   "hint_id"
@@ -54,17 +38,14 @@ ActiveRecord::Schema.define(version: 20170209010013) do
     t.integer  "prev_time"
     t.integer  "prev_attempt"
     t.integer  "prev_test_result"
-    t.integer  "prev_activity_id"
     t.integer  "prev_level_source_id"
     t.integer  "next_time"
     t.integer  "next_attempt"
     t.integer  "next_test_result"
-    t.integer  "next_activity_id"
     t.integer  "next_level_source_id"
     t.integer  "final_time"
     t.integer  "final_attempt"
     t.integer  "final_test_result"
-    t.integer  "final_activity_id"
     t.integer  "final_level_source_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
