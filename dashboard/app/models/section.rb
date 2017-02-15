@@ -65,7 +65,7 @@ class Section < ActiveRecord::Base
   end
 
   def teacher_dashboard_url
-    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'http:'
+    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
   end
 
   # return a version of self.students in which all students' names are

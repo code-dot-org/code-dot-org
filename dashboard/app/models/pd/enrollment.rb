@@ -129,9 +129,9 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
-      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'http:'
+      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
     else
-      CDO.code_org_url "/pd-workshop-survey/#{code}", 'http:'
+      CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
   end
 
