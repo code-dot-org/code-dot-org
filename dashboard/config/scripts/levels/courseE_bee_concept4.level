@@ -46,7 +46,7 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_moveForward" limit="2"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>

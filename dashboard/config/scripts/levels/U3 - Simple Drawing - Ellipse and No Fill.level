@@ -47,8 +47,8 @@
     "encrypted_examples": "2qniaf7NpemT8g4Q4gCGGnduXacWMcVjR1YB031jLzjDZeqh5/EyJSGtDz69\n70dw\n",
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null,
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
