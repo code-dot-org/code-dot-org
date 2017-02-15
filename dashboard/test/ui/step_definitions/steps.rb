@@ -44,6 +44,15 @@ def color_for_status(status)
   }[status.to_sym]
 end
 
+# When an individual step fails in a call to steps, one gets no feedback about
+# which step failed. This splits a set of steps into individual steps, and calls
+# each separately, so that when one fails we're told which.
+def individual_steps(steps)
+  steps.split("\n").map(&:strip).each do |separate_step|
+    steps separate_step
+  end
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   url = replace_hostname(url)
@@ -794,7 +803,7 @@ def generate_teacher_student(name, teacher_authorized)
   # enroll in a plc course as a way of becoming an authorized teacher
   enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
-  steps %Q{
+  individual_steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
     And I dismiss the language selector
