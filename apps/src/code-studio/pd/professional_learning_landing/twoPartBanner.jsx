@@ -3,13 +3,13 @@
 import React from 'react';
 
 const styles = {
-  containerStyle: {
+  container: {
     display: 'flex',
     height: '240px',
     width: '100%',
   },
 
-  imageStyle: {
+  image: {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -19,14 +19,14 @@ const styles = {
     boxSizing: 'border-box',
   },
 
-  textStyle: {
+  text: {
     fontSize: '24px',
     backgroundColor: '#00adbc',
     color: 'white',
     padding: '20px'
   },
 
-  leftStyle: {
+  left: {
     width: '50%',
     maxWidth: '50%',
     float: 'left',
@@ -34,7 +34,7 @@ const styles = {
     borderBottomLeftRadius: '10px',
   },
 
-  rightStyle: {
+  right: {
     width: '50%',
     maxWidth: '50%',
     float: 'left',
@@ -50,13 +50,26 @@ const TwoPartBanner = React.createClass({
     imagePosition: React.PropTypes.oneOf(['imageLeft', 'imageRight']).isRequired
   },
 
-  getAlignmentStyle() {
-    return this.props.imagePosition === 'imageLeft' ? styles.leftStyle : styles.rightStyle;
+  getImageAlignmentStyle() {
+    return this.props.imagePosition === 'imageLeft' ? styles.left : styles.right;
+  },
+
+  getTextAlignmentStyle() {
+    return this.props.imagePosition === 'imageLeft' ? styles.right : styles.left;
   },
 
   renderInterior() {
-    const appliedImageStyle = Object.assign({}, styles.imageStyle, {backgroundImage: this.props.imageUrl}, this.getAlignmentStyle());
-    const appliedTextStyle = Object.assign({}, styles.textStyle, this.getAlignmentStyle());
+    const appliedImageStyle = {
+      ...styles.image,
+      backgroundImage: this.props.imageUrl,
+      ...this.getImageAlignmentStyle()
+    };
+
+    const appliedTextStyle = {
+      ...styles.text,
+      ...this.getTextAlignmentStyle()
+    };
+
     const imageElement = (
       <div key="image" style={appliedImageStyle}/>
     );
@@ -67,7 +80,7 @@ const TwoPartBanner = React.createClass({
 
   render() {
     return (
-      <div style={styles.containerStyle}>
+      <div style={styles.container}>
         {this.renderInterior()}
       </div>
     );
