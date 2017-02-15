@@ -429,7 +429,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
-    assert_equal Activity.last, GalleryActivity.last.activity
+    assert_nil GalleryActivity.last.activity_id
     assert_equal UserLevel.last.id, GalleryActivity.last.user_level_id
     assert_equal LevelSource.last.id,  GalleryActivity.last.level_source_id
   end
@@ -460,7 +460,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
-    assert_equal Activity.last, GalleryActivity.last.activity
+    assert_nil GalleryActivity.last.activity_id
   end
 
   test "logged in milestone should not save to gallery when passing a level with undefined impressiveness" do
