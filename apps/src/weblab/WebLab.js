@@ -5,13 +5,14 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
+import weblabMsg from '@cdo/weblab/locale';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import reducers from './reducers';
 import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
-var project = require('@cdo/apps/code-studio/initApp/project');
+import project from '@cdo/apps/code-studio/initApp/project';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
@@ -179,7 +180,7 @@ WebLab.prototype.init = function (config) {
   }
 
   function onAddFileImage() {
-    window.dashboard.project.autosave(() => {
+    project.autosave(() => {
       dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
         showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
         useFilesApi: config.useFilesApi
@@ -196,7 +197,7 @@ WebLab.prototype.init = function (config) {
   }
 
   function onRefreshPreview() {
-    window.dashboard.project.autosave(() => {
+    project.autosave(() => {
       this.brambleHost.refreshPreview();
     });
   }
@@ -213,7 +214,7 @@ WebLab.prototype.init = function (config) {
   }
 
   function onFinish() {
-    window.dashboard.project.autosave(() => {
+    project.autosave(() => {
       this.studioApp_.report({
         app: 'weblab',
         level: this.level.id,
@@ -242,6 +243,12 @@ WebLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
+
+  window.onbeforeunload = evt => {
+    if (project.hasOwnerChangedProject()) {
+      return weblabMsg.confirmExitWithUnsavedChanges();
+    }
+  };
 };
 
 WebLab.prototype.renderFooterInSharedMode = function (container, copyrightStrings) {
@@ -326,7 +333,7 @@ WebLab.prototype.getCurrentFileEntries = function () {
 };
 
 WebLab.prototype.getCurrentFilesVersionId = function () {
-  return dashboard.project.filesVersionId || this.initialFilesVersionId;
+  return project.filesVersionId || this.initialFilesVersionId;
 };
 
 // Called by Bramble when a file has been deleted
@@ -334,7 +341,7 @@ WebLab.prototype.deleteProjectFile = function (filename, callback) {
   filesApi.deleteFile(
     filename,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not deleted`);
@@ -349,7 +356,7 @@ WebLab.prototype.renameProjectFile = function (filename, newFilename, callback) 
     filename,
     newFilename,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
@@ -364,7 +371,7 @@ WebLab.prototype.changeProjectFile = function (filename, fileData, callback) {
     filename,
     fileData,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
@@ -386,7 +393,7 @@ WebLab.prototype.registerBeforeFirstWriteHook = function (hook) {
 WebLab.prototype.onProjectChanged = function () {
   if (!this.readOnly) {
     // let dashboard project object know project has changed, which will trigger autosave
-    dashboard.project.projectChanged();
+    project.projectChanged();
   }
 };
 
@@ -403,7 +410,7 @@ WebLab.prototype.setBrambleHost = function (obj) {
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
-  return dashboard.project.getCurrentId();
+  return project.getCurrentId();
 };
 
 // Called by Bramble host to get page constants
@@ -447,7 +454,7 @@ WebLab.prototype.loadFileEntries = function () {
       // After we've detected the first change to the version, we store this
       // version id so that subsequent writes will continue to replace the
       // current version (until the browser page reloads)
-      dashboard.project.filesVersionId = result.filesVersionId;
+      project.filesVersionId = result.filesVersionId;
     }
     if (this.brambleHost) {
       this.brambleHost.syncFiles(() => {});
