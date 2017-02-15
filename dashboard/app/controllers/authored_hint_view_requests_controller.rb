@@ -9,7 +9,31 @@ class AuthoredHintViewRequestsController < ApplicationController
       return head :bad_request
     end
 
-    hints = params.permit(hints: [:scriptId, :levelId, :hintId]).require(:hints)
+    fields = [
+      :scriptId,
+      :levelId,
+      :hintId,
+      :hintClass,
+      :hintType,
+      :prevTime,
+      :prevAttempt,
+      :prevTestResult,
+      :prevActivityId,
+      :prevLevelSourceId,
+      :nextTime,
+      :nextAttempt,
+      :nextTestResult,
+      :nextActivityId,
+      :nextLevelSourceId,
+      :finalTime,
+      :finalAttempt,
+      :finalTestResult,
+      :finalActivityId,
+      :finalLevelSourceId,
+    ]
+
+    hints = params.permit(hints: fields).require(:hints)
+
     hints.each do |hint|
       # Add :user.
       hint[:user] = current_user
