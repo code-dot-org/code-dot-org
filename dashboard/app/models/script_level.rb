@@ -3,7 +3,6 @@
 # Table name: script_levels
 #
 #  id          :integer          not null, primary key
-#  level_id    :integer
 #  script_id   :integer          not null
 #  chapter     :integer
 #  created_at  :datetime
@@ -16,7 +15,6 @@
 #
 # Indexes
 #
-#  index_script_levels_on_level_id   (level_id)
 #  index_script_levels_on_script_id  (script_id)
 #  index_script_levels_on_stage_id   (stage_id)
 #
