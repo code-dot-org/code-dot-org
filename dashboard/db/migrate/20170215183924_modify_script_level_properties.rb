@@ -6,8 +6,7 @@ class ModifyScriptLevelProperties < ActiveRecord::Migration[5.0]
   def up
     ScriptLevel.where.not(properties: nil).each do |script_level|
       obj = JSON.parse script_level.properties
-      script_level.properties = { variants: obj }.to_json
-      script_level.save
+      script_level.update!(properties: { variants: obj }.to_json)
     end
   end
 
@@ -17,8 +16,7 @@ class ModifyScriptLevelProperties < ActiveRecord::Migration[5.0]
       if obj.keys != ['variants']
         raise "Unable to migration script_level #{script_level.id} down"
       end
-      script_level.properties = obj["variants"].to_json
-      script_level.save
+      script_level.update!(properties: obj["variants"].to_json)
     end
   end
 end
