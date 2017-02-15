@@ -18,17 +18,14 @@ class AuthoredHintViewRequestsController < ApplicationController
       :prevTime,
       :prevAttempt,
       :prevTestResult,
-      :prevActivityId,
       :prevLevelSourceId,
       :nextTime,
       :nextAttempt,
       :nextTestResult,
-      :nextActivityId,
       :nextLevelSourceId,
       :finalTime,
       :finalAttempt,
       :finalTestResult,
-      :finalActivityId,
       :finalLevelSourceId,
     ]
 
