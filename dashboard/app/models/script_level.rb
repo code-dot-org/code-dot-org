@@ -178,10 +178,14 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def icon
-    if level.icon
-      level.icon
-    elsif assessment
+    # Assessment levels can be of many different level types (i.e. multiple choice,
+    # blockly, etc.). Regardless of the underlying level type, we want them to
+    # have their own icon. If not an assessment, let the underlying level type
+    # continue to own which icon we use.
+    if assessment
       'fa-list-ol'
+    else
+      level.icon
     end
   end
 
