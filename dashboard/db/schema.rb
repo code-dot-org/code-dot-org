@@ -28,22 +28,6 @@ ActiveRecord::Schema.define(version: 20170214161503) do
     t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
   end
 
-  create_table "activities_old", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id"
-    t.integer  "level_id"
-    t.string   "action"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "attempt"
-    t.integer  "time"
-    t.integer  "test_result"
-    t.integer  "level_source_id"
-    t.integer  "lines",           default: 0, null: false
-    t.index ["level_source_id"], name: "index_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "level_id"], name: "index_activities_on_user_id_and_level_id", using: :btree
-  end
-
   create_table "authored_hint_view_requests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",               null: false
     t.integer  "script_id"
