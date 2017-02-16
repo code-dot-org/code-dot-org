@@ -14,6 +14,7 @@ const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATI
 const BoardSetupStatus = React.createClass({
   getInitialState() {
     return {
+      isDetecting: false,
       'status-is-chrome': WAITING,
       'status-app-installed': WAITING,
       'status-windows-drivers': WAITING,
@@ -31,12 +32,116 @@ const BoardSetupStatus = React.createClass({
     return `${baseFormURL}?${userAgentFieldFill}&${setupStatesFieldFill}`;
   },
 
+  detect() {
+    this.setState({...this.getInitialState(), isDetecting: true});
+
+    if (!isChrome()) {
+      this.fail('is-chrome');
+      return;
+    }
+
+    if (!isWindows()) {
+      this.hide('windows-drivers');
+    }
+
+    if (gtChrome33()) {
+      this.succeed('is-chrome');
+    } else {
+      this.fail('is-chrome');
+    }
+
+    const bc = new BoardController();
+    Promise.resolve()
+
+        // Is Chrome App Installed?
+        .then(() => this.spin('app-installed'))
+        .then(() => promiseWaitFor(200)) // Artificial delay feels better
+        .then(() =>
+            BoardController.ensureAppInstalled()
+                .then(() => this.succeed('app-installed'))
+                .catch(error => this.fail('app-installed')))
+
+        // Is board plugged in?
+        .then(() => this.spin('board-plug'))
+        .then(() => promiseWaitFor(200)) // Artificial delay feels better
+        .then(() =>
+            BoardController.getDevicePortName()
+                .then(() => this.succeed('board-plug'))
+                .catch(error => this.fail('board-plug')))
+
+        // Can we talk to the firmware?
+        .then(() => this.spin('board-connect'))
+        .then(() =>
+            bc.ensureBoardConnected()
+                .then(() => this.succeed('board-connect'))
+                .catch(error => this.fail('board-connect')))
+
+        // Can we initialize components successfully?
+        .then(() => this.spin('board-components'))
+        .then(() => promiseWaitFor(200)) // Artificial delay feels better
+        .then(() => bc.connectWithComponents())
+        .then(() => this.celebrateAllSuccessful(bc))
+        .catch(error => this.fail('board-components'))
+
+        // Put the board back in its original state, if possible
+        .then(() => bc.reset())
+        .then(() => this.setState({isDetecting: false}));
+  },
+
+  /**
+   * Play a song and animate some LEDs to demonstrate successful connection
+   * to the board.
+   * @param {BoardController} bc
+   * @returns {Promise} resolved when the song and animation are done.
+   */
+  celebrateAllSuccessful(bc) {
+    /**
+     * Run given function for each LED on the board in sequence, with givcen
+     * delay between them.
+     * @param {function(five.Led.RGB)} func
+     * @param {number} delay in milliseconds
+     * @returns {Promise} resolves after func is called for the last LED
+     */
+    function forEachLedInSequence(func, delay) {
+      return new Promise(resolve => {
+        const leds = bc.prewiredComponents.colorLeds;
+        let ledIndex = 0;
+        const interval = setInterval(() => {
+          func(leds[ledIndex]);
+          ledIndex++;
+          if (ledIndex >= leds.length) {
+            clearInterval(interval);
+            resolve();
+          }
+        }, delay);
+      });
+    }
+
+    return Promise.resolve()
+        .then(() => this.thumb('board-components'))
+        .then(() => bc.prewiredComponents.buzzer.play(SONG_CHARGE, 104))
+        .then(() => forEachLedInSequence(led => led.color('green'), 80))
+        .then(() => forEachLedInSequence(led => led.off(), 80))
+        .then(() => this.succeed('board-components'));
+  },
+
+  componentDidMount() {
+    this.detect();
+  },
+
   render() {
     return (
         <div>
           <h2>
             Setup Status
-            <input style={{marginLeft: 9, marginTop: -4}} className="btn" type="button" value="re-detect" onClick={() => window.location.reload()}/>
+            <input
+              style={{marginLeft: 9, marginTop: -4}}
+              className="btn"
+              type="button"
+              value="re-detect"
+              onClick={this.detect}
+              disabled={this.state.isDetecting}
+            />
           </h2>
           <div className="setup-status" style={{'fontSize': '26px'}}>
             <SetupStep
@@ -102,53 +207,6 @@ const BoardSetupStatus = React.createClass({
   thumb(selector) {
     this.setState({[`status-${selector}`]: CELEBRATING});
   },
-
-  componentDidMount() {
-    if (!isChrome()) {
-      this.fail('is-chrome');
-      return;
-    }
-
-    if (!isWindows()) {
-      this.hide('windows-drivers');
-    }
-
-    if (gtChrome33()) {
-      this.succeed('is-chrome');
-    } else {
-      this.fail('is-chrome');
-    }
-
-    const bc = new BoardController();
-    Promise.resolve().then(() => {
-      this.spin('app-installed');
-      return BoardController.ensureAppInstalled()
-          .then(() => this.succeed('app-installed'))
-          .catch((error) => this.fail('app-installed'));
-    }).then(() => {
-      this.spin('board-plug');
-      return BoardController.getDevicePortName()
-          .then(() => this.succeed('board-plug'))
-          .catch((error) => this.fail('board-plug'));
-    }).then(() => {
-      this.spin('board-connect');
-      return bc.ensureBoardConnected()
-          .then(() => this.succeed('board-connect'))
-          .catch((error) => this.fail('board-connect'));
-    }).then(() => {
-      this.spin('board-components');
-      return bc.connectWithComponents()
-          .then(() => this.thumb('board-components'))
-          .then(() => {
-            bc.prewiredComponents.buzzer.play(SONG_CHARGE, 104);
-            bc.prewiredComponents.colorLeds.forEach(l => l.color('green'));
-          })
-          .then(() => promiseWaitFor(1600))
-          .then(() => bc.prewiredComponents.colorLeds.forEach(l => l.off()))
-          .then(() => this.succeed('board-components'))
-          .catch((error) => this.fail('board-components'));
-    });
-  }
 });
 
 const SetupStep = React.createClass({
