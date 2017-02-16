@@ -69,10 +69,14 @@ module TextToSpeech
     )
   end
 
+  def self.locale_supported?(locale)
+    VOICES.key?(locale)
+  end
+
   def self.localized_voice
     # Use localized voice if we have a setting for the current locale;
     # default to English otherwise.
-    loc = VOICES.key?(I18n.locale) ? I18n.locale : :'en-us'
+    loc = TextToSpeech.locale_supported?(I18n.locale) ? I18n.locale : :'en-us'
     VOICES[loc]
   end
 
@@ -113,7 +117,7 @@ module TextToSpeech
 
   def tts_instructions_text
     if I18n.locale == 'en-us'
-      tts_instructions_override || instructions || try(:localized_instructions) || ""
+      tts_instructions_override || instructions || ""
     else
       TTSSafeRenderer.render(try(:localized_instructions) || "")
     end
