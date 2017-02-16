@@ -71,6 +71,12 @@ class ScriptLevel < ActiveRecord::Base
     !variants || !variants[level.name] || variants[level.name]['active'] != false
   end
 
+  def progression
+    return nil unless properties
+    properties_hash = JSON.parse(properties)
+    properties_hash['progression']
+  end
+
   def has_another_level_to_go_to?
     if script.professional_learning_course?
       !end_of_stage?

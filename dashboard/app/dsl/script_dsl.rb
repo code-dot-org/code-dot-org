@@ -74,6 +74,8 @@ class ScriptDSL < BaseDSL
 
   def level(name, properties = {})
     active = properties.delete(:active)
+    progression = properties.delete(:progression)
+
     level = {
       name: name,
       stage_flex_category: @stage_flex_category,
@@ -84,6 +86,8 @@ class ScriptDSL < BaseDSL
       video_key: @video_key_for_next_level
     }.merge(properties).select{|_, v| v.present? }
     @video_key_for_next_level = nil
+
+    # Having @current_scriptlevel implies we're a level inside of a variants block
     if @current_scriptlevel
       @current_scriptlevel[:levels] << level
 
@@ -94,10 +98,16 @@ class ScriptDSL < BaseDSL
         @current_scriptlevel[:properties][:variants][name] = levelprops
       end
     else
-      @scriptlevels << {
+      script_level = {
         stage: @stage,
         levels: [level]
       }
+      # TODO: consider the case where variants have progressions
+      if progression
+        script_level[:properties] = { progression: progression }
+      end
+
+      @scriptlevels << script_level
     end
   end
 
@@ -166,11 +176,11 @@ class ScriptDSL < BaseDSL
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(serialize_level(level, type, sl.active?(level)).map{ |l| l.indent(2) })
+            s.concat(serialize_level(level, type, sl.active?(level), sl.progression).map{ |l| l.indent(2) })
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression))
         end
       end
       s << ''
@@ -178,7 +188,7 @@ class ScriptDSL < BaseDSL
     s.join("\n")
   end
 
-  def self.serialize_level(level, type, active = nil)
+  def self.serialize_level(level, type, active = nil, progression = nil)
     s = []
     if level.key.start_with? 'blockly:'
       s << "skin '#{level.skin}'" if level.try(:skin)
@@ -192,6 +202,7 @@ class ScriptDSL < BaseDSL
     end
     l = "#{type} '#{level.key.gsub("'"){ "\\'" }}'"
     l += ', active: false' unless active.nil? || active
+    l += ", progression: #{progression}" if progression
     s << l
     s
   end

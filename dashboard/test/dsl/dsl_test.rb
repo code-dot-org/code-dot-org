@@ -274,4 +274,35 @@ DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:hideable_stages]
   end
+
+  test 'Script DSL with level progressions' do
+    input_dsl = <<DSL
+stage 'Stage1'
+level 'Level 1'
+level 'Level 2', progression: 'Foo'
+level 'Level 3', progression: 'Foo'
+DSL
+    expected = {
+      id: nil,
+      stages: [
+        {
+          stage: "Stage1",
+          scriptlevels: [
+            {stage: "Stage1", levels: [{name: "Level 1"}]},
+            {stage: "Stage1", levels: [{name: "Level 2"}], properties: { progression: 'Foo' }},
+            {stage: "Stage1", levels: [{name: "Level 3"}], properties: { progression: 'Foo' }},
+          ]
+        }
+      ],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      hideable_stages: false,
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
+    }
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
 end
