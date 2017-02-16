@@ -105,15 +105,8 @@ const BoardSetupStatus = React.createClass({
     function forEachLedInSequence(func, delay) {
       return new Promise(resolve => {
         const leds = bc.prewiredComponents.colorLeds;
-        let ledIndex = 0;
-        const interval = setInterval(() => {
-          func(leds[ledIndex]);
-          ledIndex++;
-          if (ledIndex >= leds.length) {
-            clearInterval(interval);
-            resolve();
-          }
-        }, delay);
+        leds.forEach((led, i) => setTimeout(() => func(led), delay * (i+1)));
+        setTimeout(resolve, delay * leds.length);
       });
     }
 
