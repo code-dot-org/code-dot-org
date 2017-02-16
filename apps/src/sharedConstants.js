@@ -1,4 +1,5 @@
 // This file is generated via generateSharedConstants.rb. DO NOT CHANGE MANUALLY
+// To regenerate, run `rake build:shared_constants` from root
 
 // Used to communicate different types of levels
 export const LevelKind = {
@@ -21,5 +22,4 @@ export const LevelStatus = {
   "review_rejected": "review_rejected",
   "dots_disabled": "dots_disabled"
 };
-
 

@@ -13,7 +13,12 @@ INPUT_JSON = "#{REPO_DIR}/shared/config/constants.json"
 OUTPUT_RUBY = "#{REPO_DIR}/lib/cdo/shared_constants.rb"
 OUTPUT_JS = "#{REPO_DIR}/apps/src/sharedConstants.js"
 
-HEADER = "This file is generated via generateSharedConstants.rb. DO NOT CHANGE MANUALLY"
+def commented_header(comment)
+  [
+    "This file is generated via generateSharedConstants.rb. DO NOT CHANGE MANUALLY",
+    "To regenerate, run `rake build:shared_constants` from root"
+  ].map{|line| comment + " " + line}.join("\n")
+end
 
 # Generates a static ruby file representing our shared constants
 def generate_ruby(enums)
@@ -32,13 +37,10 @@ def generate_ruby(enums)
   end
   constants.strip!
 
-  output = <<CONSTANTS
-# #{HEADER}
-
-module SharedConstants
-  #{constants}
-end
-CONSTANTS
+  output = "#{commented_header('#')}\n\n"\
+    "module SharedConstants\n"\
+    "  #{constants}\n"\
+    "end\n"
 
   File.open(OUTPUT_RUBY, 'w') {|f| f.write(output)}
 end
@@ -55,11 +57,7 @@ def generate_js(enums)
     end
     constants += "export const #{key} = #{value};\n\n"
   end
-  output = <<CONSTANTS
-// #{HEADER}
-
-#{constants}
-CONSTANTS
+  output = "#{commented_header('//')}\n\n#{constants}"
   File.open(OUTPUT_JS, 'w') {|f| f.write(output)}
 end
 

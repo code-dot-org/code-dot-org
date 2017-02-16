@@ -193,11 +193,11 @@ class ScriptLevel < ActiveRecord::Base
 
   def summarize
     if level.unplugged?
-      kind = SharedConstants::LevelKind.unplugged
+      kind = LevelKind.unplugged
     elsif assessment
-      kind = SharedConstants::LevelKind.assessment
+      kind = LevelKind.assessment
     else
-      kind = SharedConstants::LevelKind.puzzle
+      kind = LevelKind.puzzle
     end
 
     ids = level_ids

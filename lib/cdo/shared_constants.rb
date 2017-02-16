@@ -1,4 +1,5 @@
 # This file is generated via generateSharedConstants.rb. DO NOT CHANGE MANUALLY
+# To regenerate, run `rake build:shared_constants` from root
 
 module SharedConstants
   # Used to communicate different types of levels
