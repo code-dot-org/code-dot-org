@@ -19,6 +19,7 @@ machine:
     DISABLE_SPRING: 1
   services:
     - docker
+    - redis
 checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:

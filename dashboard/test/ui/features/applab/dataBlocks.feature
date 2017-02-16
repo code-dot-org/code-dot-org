@@ -1,5 +1,3 @@
-# temporarily disabled on circle after ubuntu 14 upgrade
-@no_circle
 @no_mobile
 @dashboard_db_access
 @as_student
