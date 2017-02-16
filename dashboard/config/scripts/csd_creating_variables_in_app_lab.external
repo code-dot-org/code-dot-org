@@ -1,5 +1,5 @@
 name 'CSD: Creating Variables In App Lab'
-href 'path/to/html/in/asset/folder'
+display_name 'Variables in App Lab'
 markdown <<MARKDOWN
 # Variables in App Lab
 ## Where should you create variables?

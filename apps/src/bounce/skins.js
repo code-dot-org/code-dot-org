@@ -268,7 +268,7 @@ exports.load = function (assetUrl, id) {
   skin.retro = {
     background: skin.assetUrl('retro_background.png'),
     tiles: skin.assetUrl('retro_tiles_wall.png'),
-    goaltiles: skin.assetUrl('retro_tiles_goal.png'),
+    goalTiles: skin.assetUrl('retro_tiles_goal.png'),
     paddle: skin.assetUrl('retro_paddle.png'),
     ball: skin.assetUrl('retro_ball.png')
   };
