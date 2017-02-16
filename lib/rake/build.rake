@@ -29,6 +29,13 @@ namespace :build do
     end
   end
 
+  desc 'generate static ruby/js files from json config'
+  task :shared_constants do
+    Dir.chdir(File.join(tools_dir, "scripts")) do
+      RakeUtils.system 'ruby', 'generateSharedConstants.rb'
+    end
+  end
+
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   task dashboard: :package do
     Dir.chdir(dashboard_dir) do
@@ -134,6 +141,7 @@ namespace :build do
   end
 
   tasks = []
+  tasks << :shared_constants
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
