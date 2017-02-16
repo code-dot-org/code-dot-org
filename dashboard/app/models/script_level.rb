@@ -219,8 +219,10 @@ class ScriptLevel < ActiveRecord::Base
       kind: kind,
       icon: icon,
       title: level_display_text,
-      url: build_script_level_url(self)
+      url: build_script_level_url(self),
     }
+
+    summary[:progression] = progression if progression
 
     if named_level
       summary[:name] = level.display_name || level.name
