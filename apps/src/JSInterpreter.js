@@ -1278,23 +1278,35 @@ JSInterpreter.prototype.handlePauseContinue = function () {
     this.paused = true;
     this.nextStep = StepType.RUN;
   }
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    this.paused,
+    this.nextStep
+  ));
 };
 
 JSInterpreter.prototype.handleStepOver = function () {
   this.paused = true;
   this.nextStep = StepType.OVER;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    this.paused,
+    this.nextStep
+  ));
 };
 
 JSInterpreter.prototype.handleStepIn = function () {
   this.paused = true;
   this.nextStep = StepType.IN;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    this.paused,
+    this.nextStep
+  ));
 };
 
 JSInterpreter.prototype.handleStepOut = function () {
   this.paused = true;
   this.nextStep = StepType.OUT;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    this.paused,
+    this.nextStep
+  ));
 };

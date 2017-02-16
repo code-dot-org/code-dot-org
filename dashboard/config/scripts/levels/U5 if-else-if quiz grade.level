@@ -64,9 +64,9 @@
     "makerlab_enabled": "false",
     "palette_category_at_start": "control",
     "encrypted_examples": "nJYNOAIPzFcuHFeRuMQqMWeYvNBtWdZrH0pqWWDnTwxbzt1fdWyx07FG+Ov9\n/ZRz\n",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
