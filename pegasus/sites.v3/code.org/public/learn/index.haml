@@ -107,9 +107,8 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
-      showSortBy: true,
       disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
-      sortByPopularity: #{request.site == 'code.org'}
+      defaultSortByPopularity: #{request.site == 'code.org'}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
