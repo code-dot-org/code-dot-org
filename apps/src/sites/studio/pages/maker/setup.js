@@ -122,12 +122,12 @@ const BoardSetupStatus = React.createClass({
     const bc = new BoardController();
     Promise.resolve().then(() => {
       this.spin('app-installed');
-      return bc.ensureAppInstalled()
+      return BoardController.ensureAppInstalled()
           .then(() => this.succeed('app-installed'))
           .catch((error) => this.fail('app-installed'));
     }).then(() => {
       this.spin('board-plug');
-      return BoardController.getDevicePort()
+      return BoardController.getDevicePortName()
           .then(() => this.succeed('board-plug'))
           .catch((error) => this.fail('board-plug'));
     }).then(() => {

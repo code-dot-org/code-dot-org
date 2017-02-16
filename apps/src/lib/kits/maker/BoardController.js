@@ -40,7 +40,7 @@ export default class BoardController {
 
   connectAndInitialize(codegen, interpreter) {
     return this.ensureBoardConnected()
-        .then(this.ensureAppInstalled())
+        .then(BoardController.ensureAppInstalled())
         .then(this.ensureComponentsInitialized.bind(this))
         .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
   }
@@ -50,7 +50,7 @@ export default class BoardController {
         .then(this.ensureComponentsInitialized.bind(this));
   }
 
-  ensureAppInstalled() {
+  static ensureAppInstalled() {
     return new Promise((resolve, reject) => {
       ChromeSerialPort.isInstalled(function (error) {
         if (error) {
@@ -73,7 +73,7 @@ export default class BoardController {
         return;
       }
 
-      this.connect()
+      BoardController.connect()
           .then(board => {
             this.board_ = board;
             resolve();
@@ -166,13 +166,14 @@ export default class BoardController {
     component.on(event, callback);
   }
 
-  connect() {
-    return BoardController.getDevicePort().then(port => this.connectToBoard(port));
+  static connect() {
+    return BoardController.getDevicePortName()
+        .then(portName => BoardController.connectToBoard(portName));
   }
 
-  connectToBoard(portId) {
+  static connectToBoard(portName) {
     return new Promise((resolve, reject) => {
-      const serialPort = new ChromeSerialPort.SerialPort(portId, {
+      const serialPort = new ChromeSerialPort.SerialPort(portName, {
         bitrate: SERIAL_BAUD
       }, true);
       const io = new PlaygroundIO({ port: serialPort });
@@ -194,7 +195,7 @@ export default class BoardController {
     });
   }
 
-  static getDevicePort() {
+  static getDevicePortName() {
     return new Promise((resolve, reject) => {
       ChromeSerialPort.list((error, list) => {
         if (error) {
@@ -223,5 +224,5 @@ export default class BoardController {
 
 BoardController.__testonly__ = {
   deviceOnPortAppearsUsable: BoardController.deviceOnPortAppearsUsable,
-  getDevicePort: BoardController.getDevicePort
+  getDevicePort: BoardController.getDevicePortName
 };
