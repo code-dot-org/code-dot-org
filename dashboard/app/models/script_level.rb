@@ -64,7 +64,8 @@ class ScriptLevel < ActiveRecord::Base
 
   def active?(level)
     properties_hash = JSON.parse(properties)
-    !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+    variants = properties_hash['variants']
+    !variants || !variants[level.name] || variants[level.name]['active'] != false
   end
 
   def has_another_level_to_go_to?
