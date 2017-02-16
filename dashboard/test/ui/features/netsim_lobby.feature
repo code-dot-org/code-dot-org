@@ -1,3 +1,5 @@
+# temporarily disabled on circle after ubuntu 14 upgrade
+@no_circle
 @no_mobile
 Feature: Using the Internet Simulator Lobby
 
