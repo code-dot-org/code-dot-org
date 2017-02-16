@@ -168,7 +168,7 @@ export default class BoardController {
 
   static connect() {
     return BoardController.getDevicePortName()
-        .then(portName => BoardController.connectToBoard(portName));
+        .then(BoardController.connectToBoard);
   }
 
   static connectToBoard(portName) {
