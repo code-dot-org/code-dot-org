@@ -19,6 +19,7 @@ machine:
     DISABLE_SPRING: 1
   services:
     - docker
+    - redis
 checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
@@ -28,10 +29,13 @@ dependencies:
     - ./bin/circle/install-circle-predependencies.sh
     - google-chrome --version
     - yarn --version
+    - node --version
+    - npm --version
   cache_directories:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
-    - "~/.rvm/gems/ruby-2.2.3"
+    - "/opt/circleci/.rvm/gems/ruby-2.2.3"
+    - "/opt/circleci/ruby/ruby-2.2.3"
     - ".tmputils"
     - "~/.yarn-cache"
   override:
