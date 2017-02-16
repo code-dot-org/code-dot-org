@@ -194,32 +194,6 @@ export default class BoardController {
     });
   }
 
-  static resetComponent(component) {
-    try {
-      if (component.state && component.state.intervalId) {
-        clearInterval(component.state.intervalId);
-      } else if (component.state && component.state.interval) {
-        clearInterval(component.state.interval);
-      }
-      if (component.stop) {
-        component.stop();
-      }
-      if (component.off) {
-        component.off();
-      }
-      if (component.threshold) {
-        // Reset sensor thresholds to 1.0 in case changed.
-        component.threshold = 1;
-      }
-      if (component.removeAllListeners) {
-        component.removeAllListeners();
-      }
-    } catch (error) {
-      console.log('Error trying to cleanup component', error);
-      console.log(component);
-    }
-  }
-
   static getDevicePort() {
     return new Promise((resolve, reject) => {
       ChromeSerialPort.list((error, list) => {
