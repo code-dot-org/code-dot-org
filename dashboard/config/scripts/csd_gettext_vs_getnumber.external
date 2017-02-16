@@ -1,5 +1,5 @@
 name 'CSD: getText vs getNumber'
-href 'path/to/html/in/asset/folder'
+display_name 'getText vs getNumber'
 markdown <<MARKDOWN
 # getText vs getNumber
 
