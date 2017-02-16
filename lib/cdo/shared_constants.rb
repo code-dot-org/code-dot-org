@@ -1,19 +1,22 @@
-# This file is generated via generateSharedConstants.rb. DO NOT CHANGE MANUALLY
-# To regenerate, run `rake build:shared_constants` from root
+# This is the source of truth for a set of constants that are shared between JS
+# and ruby code. generateSharedConstants.rb is the file that processes this and
+# outputs JS. It is run via `rake build:shared_constants
 
 module SharedConstants
+  # TODO: switch these to LEVEL_KIND, LEVEL_STATUS
   # Used to communicate different types of levels
   LevelKind = OpenStruct.new(
     {
-      "peer_review": "peer_review",
-      "assessment": "assessment",
-      "puzzle": "puzzle",
-      "unplugged": "unplugged",
-      "level": "level"
+      peer_review: "peer_review",
+      assessment: "assessment",
+      puzzle: "puzzle",
+      unplugged: "unplugged",
+      level: "level"
     }
   )
 
-  # Different possibilities for level.status, used to communicate how user has performed on a given level
+  # Different possibilities for level.status, used to communicate how user has
+  # performed on a given level
   LevelStatus = OpenStruct.new(
     {
       "not_tried": "not_tried",
