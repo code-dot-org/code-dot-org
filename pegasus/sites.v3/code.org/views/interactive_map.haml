@@ -1,23 +1,135 @@
 %script{src: "/js/raphael.js"}
 %script{src: "/js/extended_us_map.js"}
 
-%div#map
-%div#infobox.greybox
+%div#state-list.phone-feature
+  Future drop down list of the states when users are looking at the site on mobile.
+  .nav-collapse.collapse
+  %ul.nav{class:"list-unstyled"}
+    %li.dropdown
+      %a.dropdown-toggle{:href => "#", "role" => "button", "data-toggle" => "dropdown", "data-target" => "#"}
+        Select Your State
+        %b.caret
+      %ul.dropdown-menu{"role" => "menu"}
+        %li
+          %a{:href => "#link1"}
+            Alabama
+          %a{:href => "#link2"}
+            Alaska
+          %a{:href => "#link3"}
+            Arizona
+          %a{:href => "#link4"}
+            Arkansas
+          %a{:href => "#link4"}
+            California
+          %a{:href => "#link1"}
+            Colorado
+          %a{:href => "#link2"}
+            Connecticut
+          %a{:href => "#link3"}
+            Delaware
+          %a{:href => "#link4"}
+            Florida
+          %a{:href => "#link4"}
+            Georgia
+          %a{:href => "#link1"}
+            Hawaii
+          %a{:href => "#link2"}
+            Idaho
+          %a{:href => "#link3"}
+            Illinois
+          %a{:href => "#link4"}
+            Indiana
+          %a{:href => "#link4"}
+            Iowa
+          %a{:href => "#link1"}
+            Kansas
+          %a{:href => "#link2"}
+            Kentucky
+          %a{:href => "#link3"}
+            Louisiana
+          %a{:href => "#link4"}
+            Maine
+          %a{:href => "#link4"}
+            Maryland
+          %a{:href => "#link1"}
+            Massachusetts
+          %a{:href => "#link2"}
+            Michigan
+          %a{:href => "#link3"}
+            Minnesota
+          %a{:href => "#link4"}
+            Mississippi
+          %a{:href => "#link4"}
+            Missouri
+          %a{:href => "#link1"}
+            Montana
+          %a{:href => "#link2"}
+            Nebraska
+          %a{:href => "#link3"}
+            Nevada
+          %a{:href => "#link4"}
+            New Hampshire
+          %a{:href => "#link4"}
+            New Jersey
+          %a{:href => "#link4"}
+            New Mexico
+          %a{:href => "#link4"}
+            New York
+          %a{:href => "#link1"}
+            North Carolina
+          %a{:href => "#link2"}
+            North Dakota
+          %a{:href => "#link3"}
+            Ohio
+          %a{:href => "#link3"}
+            Oklahoma
+          %a{:href => "#link3"}
+            Oregon
+          %a{:href => "#link3"}
+            Pennsylvania
+          %a{:href => "#link3"}
+            Rhode Island
+          %a{:href => "#link3"}
+            South Carolina
+          %a{:href => "#link3"}
+            South Dakota
+          %a{:href => "#link3"}
+            Tennessee
+          %a{:href => "#link4"}
+            Texas
+          %a{:href => "#link4"}
+            Utah
+          %a{:href => "#link1"}
+            Vermont
+          %a{:href => "#link2"}
+            Viriginia
+          %a{:href => "#link3"}
+            Washington
+          %a{:href => "#link3"}
+            West Virginia
+          %a{:href => "#link4"}
+            Wisconsin
+          %a{:href => "#link4"}
+            Wyoming
+%div#map.tablet-feature
+%div#infobox.greybox.col-33
   %p.info
     Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
   %ul
     %li
       Only
-      %strong
-        =credit_count
-      states allow students to count computer science courses toward high school graduation.
-  
+      %a{:href=>"/action", style: 'color: white; cursor: pointer; text-decoration: underline', target: '_blank'}
+        %strong
+          =credit_count
+        states
+      allow students to count computer science courses toward high school graduation.
+
     %li
       There are currently
       %strong
         = format_integer_with_commas(jobs_nationwide)
       open computing jobs nationwide.
-  
+
     %li
       Last year, only
       %strong
@@ -110,16 +222,15 @@
 
 :css
   #map {
-  width: 56%;
-  min-height: 350px;
-  float: left;
-  margin-top: 25px
+    width: 700px;
+    min-height: 425px;
+    float: left;
+    margin-right: -100px;
   }
 
   #infobox {
-    width: 44%;
     text-align:left;
-    float:left
+    float:right;
   }
 
   .info {
