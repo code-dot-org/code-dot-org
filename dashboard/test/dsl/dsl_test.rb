@@ -72,7 +72,9 @@ level 'Level 3'
             {
               stage: "Stage1",
               levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-              properties: {"Level 2b" => {active: false}}
+              properties: {
+                variants: {"Level 2b" => {active: false}}
+              }
             },
             {stage: "Stage1", levels: [{name: "Level 3"}]}
           ]
