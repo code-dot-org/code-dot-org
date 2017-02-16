@@ -29,8 +29,8 @@ class GalleryActivitiesController < ApplicationController
     @days = (Date.today - gallery_feature_ship_date).to_i
   end
 
-  # POST /gallery_activities
-  # POST /gallery_activities.json
+  # POST /gallery
+  # POST /gallery.json
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       @gallery_activity = GalleryActivity.where(gallery_activity_params).
@@ -48,8 +48,8 @@ class GalleryActivitiesController < ApplicationController
     end
   end
 
-  # DELETE /gallery_activities/1
-  # DELETE /gallery_activities/1.json
+  # DELETE /gallery/1
+  # DELETE /gallery/1.json
   def destroy
     @gallery_activity.destroy
     head :no_content
