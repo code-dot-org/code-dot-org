@@ -1,5 +1,5 @@
 name 'CSD: List Length'
-href 'path/to/html/in/asset/folder'
+display_name 'List Length'
 markdown <<MARKDOWN
 # Lists
 
