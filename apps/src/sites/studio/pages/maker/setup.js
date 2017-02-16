@@ -15,12 +15,12 @@ const BoardSetupStatus = React.createClass({
   getInitialState() {
     return {
       isDetecting: false,
-      'status-is-chrome': WAITING,
-      'status-app-installed': WAITING,
-      'status-windows-drivers': WAITING,
-      'status-board-plug': WAITING,
-      'status-board-connect': WAITING,
-      'status-board-components': WAITING
+      statusIsChrome: WAITING,
+      statusAppInstalled: WAITING,
+      statusWindowsDrivers: WAITING,
+      statusBoardPlug: WAITING,
+      statusBoardConnect: WAITING,
+      statusBoardComponents: WAITING
     };
   },
 
@@ -36,52 +36,52 @@ const BoardSetupStatus = React.createClass({
     this.setState({...this.getInitialState(), isDetecting: true});
 
     if (!isChrome()) {
-      this.fail('is-chrome');
+      this.fail('IsChrome');
       return;
     }
 
     if (!isWindows()) {
-      this.hide('windows-drivers');
+      this.hide('WindowsDrivers');
     }
 
     if (gtChrome33()) {
-      this.succeed('is-chrome');
+      this.succeed('IsChrome');
     } else {
-      this.fail('is-chrome');
+      this.fail('IsChrome');
     }
 
     const bc = new BoardController();
     Promise.resolve()
 
         // Is Chrome App Installed?
-        .then(() => this.spin('app-installed'))
+        .then(() => this.spin('AppInstalled'))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() =>
             BoardController.ensureAppInstalled()
-                .then(() => this.succeed('app-installed'))
-                .catch(error => this.fail('app-installed')))
+                .then(() => this.succeed('AppInstalled'))
+                .catch(error => this.fail('AppInstalled')))
 
         // Is board plugged in?
-        .then(() => this.spin('board-plug'))
+        .then(() => this.spin('BoardPlug'))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() =>
             BoardController.getDevicePortName()
-                .then(() => this.succeed('board-plug'))
-                .catch(error => this.fail('board-plug')))
+                .then(() => this.succeed('BoardPlug'))
+                .catch(error => this.fail('BoardPlug')))
 
         // Can we talk to the firmware?
-        .then(() => this.spin('board-connect'))
+        .then(() => this.spin('BoardConnect'))
         .then(() =>
             bc.ensureBoardConnected()
-                .then(() => this.succeed('board-connect'))
-                .catch(error => this.fail('board-connect')))
+                .then(() => this.succeed('BoardConnect'))
+                .catch(error => this.fail('BoardConnect')))
 
         // Can we initialize components successfully?
-        .then(() => this.spin('board-components'))
+        .then(() => this.spin('BoardComponents'))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() => bc.connectWithComponents())
         .then(() => this.celebrateAllSuccessful(bc))
-        .catch(error => this.fail('board-components'))
+        .catch(error => this.fail('BoardComponents'))
 
         // Put the board back in its original state, if possible
         .then(() => bc.reset())
@@ -118,11 +118,11 @@ const BoardSetupStatus = React.createClass({
     }
 
     return Promise.resolve()
-        .then(() => this.thumb('board-components'))
+        .then(() => this.thumb('BoardComponents'))
         .then(() => bc.prewiredComponents.buzzer.play(SONG_CHARGE, 104))
         .then(() => forEachLedInSequence(led => led.color('green'), 80))
         .then(() => forEachLedInSequence(led => led.off(), 80))
-        .then(() => this.succeed('board-components'));
+        .then(() => this.succeed('BoardComponents'));
   },
 
   componentDidMount() {
@@ -130,6 +130,15 @@ const BoardSetupStatus = React.createClass({
   },
 
   render() {
+    const {
+      isDetecting,
+      statusIsChrome,
+      statusAppInstalled,
+      statusWindowsDrivers,
+      statusBoardPlug,
+      statusBoardConnect,
+      statusBoardComponents
+    } = this.state;
     return (
         <div>
           <h2>
@@ -140,34 +149,34 @@ const BoardSetupStatus = React.createClass({
               type="button"
               value="re-detect"
               onClick={this.detect}
-              disabled={this.state.isDetecting}
+              disabled={isDetecting}
             />
           </h2>
           <div className="setup-status" style={{'fontSize': '26px'}}>
             <SetupStep
-              stepStatus={this.state['status-is-chrome']}
+              stepStatus={statusIsChrome}
               stepName="Chrome version 33+"
             >
-              {isChrome() && " - Your Chrome version is " + getChromeVersion() + ", please upgrade to at least version 33"}
+              {isChrome() && ` - Your Chrome version is ${getChromeVersion()}, please upgrade to at least version 33`}
             </SetupStep>
             <SetupStep
-              stepStatus={this.state['status-app-installed']}
+              stepStatus={statusAppInstalled}
               stepName="Chrome App installed"
             />
             <SetupStep
-              stepStatus={this.state['status-windows-drivers']}
+              stepStatus={statusWindowsDrivers}
               stepName="Windows drivers installed? (cannot auto-check)"
             />
             <SetupStep
-              stepStatus={this.state['status-board-plug']}
+              stepStatus={statusBoardPlug}
               stepName="Board plugged in"
             />
             <SetupStep
-              stepStatus={this.state['status-board-connect']}
+              stepStatus={statusBoardConnect}
               stepName="Board connectable"
             />
             <SetupStep
-              stepStatus={this.state['status-board-components']}
+              stepStatus={statusBoardComponents}
               stepName="Board components usable"
             />
           </div>
@@ -189,23 +198,23 @@ const BoardSetupStatus = React.createClass({
   },
 
   hide(selector) {
-    this.setState({[`status-${selector}`]: HIDDEN});
+    this.setState({[`status${selector}`]: HIDDEN});
   },
 
   fail(selector) {
-    this.setState({[`status-${selector}`]: FAILED});
+    this.setState({[`status${selector}`]: FAILED});
   },
 
   spin(selector) {
-    this.setState({[`status-${selector}`]: ATTEMPTING});
+    this.setState({[`status${selector}`]: ATTEMPTING});
   },
 
   succeed(selector) {
-    this.setState({[`status-${selector}`]: SUCCEEDED});
+    this.setState({[`status${selector}`]: SUCCEEDED});
   },
 
   thumb(selector) {
-    this.setState({[`status-${selector}`]: CELEBRATING});
+    this.setState({[`status${selector}`]: CELEBRATING});
   },
 });
 
