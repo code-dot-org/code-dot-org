@@ -68,8 +68,9 @@ class ScriptDSL < BaseDSL
     level(name, properties)
   end
 
-  def named_level(name)
-    level(name, {named_level: true})
+  def named_level(name, properties = {})
+    properties[:named_level] = true
+    level(name, properties)
   end
 
   def level(name, properties = {})
@@ -97,12 +98,20 @@ class ScriptDSL < BaseDSL
         @current_scriptlevel[:properties][:variants] ||= {}
         @current_scriptlevel[:properties][:variants][name] = levelprops
       end
+
+      if progression
+        # Variant levels must always have the same progression (or no progression)
+        current_progression = @current_scriptlevel[:properties][:progression]
+        if current_progression && current_progression != progression
+          raise 'Variants levels must have the same progression'
+        end
+        @current_scriptlevel[:properties][:progression] = progression
+      end
     else
       script_level = {
         stage: @stage,
         levels: [level]
       }
-      # TODO: consider the case where variants have progressions
       if progression
         script_level[:properties] = { progression: progression }
       end
@@ -202,7 +211,7 @@ class ScriptDSL < BaseDSL
     end
     l = "#{type} '#{level.key.gsub("'"){ "\\'" }}'"
     l += ', active: false' unless active.nil? || active
-    l += ", progression: #{progression}" if progression
+    l += ", progression: '#{progression}'" if progression
     s << l
     s
   end
