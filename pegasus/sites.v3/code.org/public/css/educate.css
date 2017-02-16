@@ -1,11 +1,10 @@
-.educate-banner {
-  margin-left: 1%;
+.educate-banner{
   border-radius: 5px;
   width: 100%;
 }
+
 #educate-curriculum-grid, #educate-resources-grid{
   width: 100%;
-  margin-left: 1%;
 }
 
 #educate-curriculum-grid{

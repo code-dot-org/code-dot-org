@@ -2,6 +2,7 @@
 title: About Us
 nav: about_nav
 video_player: true
+theme: responsive
 ---
 
 <%
@@ -10,7 +11,7 @@ video_player: true
 
 # About Us
 
-<div style="float: left; width: 280px;">
+<div style="float: left; width: 280px; margin-right: 5%;">
 
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
 <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>'Meet the team at @codeorg and see how much they’ve done in just a few years!'} %>
@@ -19,7 +20,7 @@ video_player: true
 
 </div>
 
-<div style="margin-left: 300px;">
+<div class="col-66">
 
 Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Microsoft, Facebook, the Infosys Foundation, Google, Omidyar Network, and <a href="/about/donors">many more</a>.
 
@@ -29,7 +30,8 @@ Code.org&reg; is a non-profit dedicated to expanding access to computer science,
 <div style="clear: both;"></div>
 
 ## Diversity of students in our courses
-![image](/images/infographics/fit-800/diversity-courses.png)
+
+<img src="/images/infographics/fit-800/diversity-courses.png" style="width: 100%">
 
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about [our efforts to increase diversity in computer science](/diversity).
 
@@ -38,13 +40,13 @@ Code.org increases diversity in computer science by reaching students of all bac
 ## Code.org in the News
 See all past [news and announcements](/about/news).
 
-<div style="float: left; width: 50%; padding-right: 10px;">
+<div class=col-50 style="float: left; padding-right: 20px;">
 
 <%=view :display_video_thumbnail, id: "Nasdaq", video_code: "zxcBZg7jYlc", caption: "Nasdaq interviews Code.org founder Hadi Partovi", play_button: "center", letterbox: "false" %>
 
 </div>
 
-<div style="float: left; width: 50%; padding-left: 10px;">
+<div class=col-50 style="float: left; padding-right: 20px">
 
 <%=view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false" %>
 
@@ -139,4 +141,3 @@ Receive [quarterly updates from Code.org by email](http://eepurl.com/wL0XL), or 
 <a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
     <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
 </a> [![image](/images/fit-150/student_privacy_pledge.png)](http://studentprivacypledge.org/)
-
