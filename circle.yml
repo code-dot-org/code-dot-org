@@ -35,6 +35,7 @@ dependencies:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
     - "/opt/circleci/.rvm/gems/ruby-2.2.3"
+    - "/opt/circleci/ruby/ruby-2.2.3"
     - ".tmputils"
     - "~/.yarn-cache"
   override:
