@@ -1,16 +1,29 @@
-# A set of constants shared between ruby and JS via /shared/config/sharedConstants.json
-require 'json'
+# This file is generated via generateSharedConstants.rb. DO NOT CHANGE MANUALLY
 
 module SharedConstants
-  @@json = nil
+  # Used to communicate different types of levels
+  LevelKind = OpenStruct.new(
+    {
+      "peer_review": "peer_review",
+      "assessment": "assessment",
+      "puzzle": "puzzle",
+      "unplugged": "unplugged",
+      "level": "level"
+    }
+  )
 
-  def self.json
-    return @@json if @@json
-
-    file = File.read(File.join(__dir__, '../../shared/config/constants.json'))
-    # @@json = JSON.parse(file)
-    @@json = JSON.parse(file, object_class: OpenStruct)
-  end
-
-  LevelKind = self.json.LevelKind
+  # Different possibilities for level.status, used to communicate how user has performed on a given level
+  LevelStatus = OpenStruct.new(
+    {
+      "not_tried": "not_tried",
+      "submitted": "submitted",
+      "locked": "locked",
+      "perfect": "perfect",
+      "passed": "passed",
+      "attempted": "attempted",
+      "review_accepted": "review_accepted",
+      "review_rejected": "review_rejected",
+      "dots_disabled": "dots_disabled"
+    }
+  )
 end
