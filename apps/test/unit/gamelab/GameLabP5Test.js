@@ -132,4 +132,18 @@ describe('GameLabP5', function () {
     });
 
   });
+
+  describe('rgb method', function () {
+    it('returns the same as color method for rgb values', function () {
+      expect(gameLabP5.p5.color(255, 255, 255)).to.deep.equal(gameLabP5.p5.rgb(255, 255, 255));
+      expect(gameLabP5.p5.color(0, 0, 0)).to.deep.equal(gameLabP5.p5.rgb(0, 0, 0));
+    });
+
+    it('converts 0 to 1 alpha to 255 color value', function () {
+      expect(gameLabP5.p5.color(255, 255, 255, 255).maxes.rgb).to.deep.equal(gameLabP5.p5.rgb(255, 255, 255, 1).maxes.rgb);
+      expect(gameLabP5.p5.color(0, 0, 0, 0).maxes.rgb).to.deep.equal(gameLabP5.p5.rgb(0, 0, 0, 0).maxes.rgb);
+      expect(gameLabP5.p5.color(255, 255, 255, 127.5).maxes.rgb).to.deep.equal(gameLabP5.p5.rgb(255, 255, 255, 0.5).maxes.rgb);
+      expect(gameLabP5.p5.color(10, 20, 30, 63.75).maxes.rgb).to.deep.equal(gameLabP5.p5.rgb(10, 20, 30, 0.25).maxes.rgb);
+    });
+  });
 });
