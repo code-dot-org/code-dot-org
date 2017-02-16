@@ -431,8 +431,7 @@ module LevelsHelper
     # TTS
     # TTS is currently only enabled for k1
     if script && script.is_k1?
-      alternate = params[:alternate_voice] ? params[:alternate_voice].to_sym : nil
-      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text, alternate)
+      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
       level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
     end
 

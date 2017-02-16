@@ -17,35 +17,11 @@ VOICES = {
     VOICE: 'ines22k',
     SPEED: 180,
     SHAPE: 100,
-    alternates: {
-      a: {
-        VOICE: 'maria22k',
-        SPEED: 180,
-        SHAPE: 100,
-      },
-      b: {
-        VOICE: 'rosa22k',
-        SPEED: 180,
-        SHAPE: 100,
-      }
-    }
   },
   'it-it': {
     VOICE: 'vittorio22k',
     SPEED: 180,
     SHAPE: 100,
-    alternates: {
-      a: {
-        VOICE: 'chiara22k',
-        SPEED: 180,
-        SHAPE: 100,
-      },
-      b: {
-        VOICE: 'fabiana22k',
-        SPEED: 180,
-        SHAPE: 100,
-      }
-    }
   },
   'pt-br': {
     VOICE: 'marcia22k',
@@ -93,23 +69,19 @@ module TextToSpeech
     )
   end
 
-  def self.localized_voice(alternate_voice=nil)
+  def self.localized_voice
     # Use localized voice if we have a setting for the current locale;
     # default to English otherwise.
     loc = VOICES.key?(I18n.locale) ? I18n.locale : :'en-us'
-    voice = VOICES[loc]
-    if alternate_voice && voice[:alternates] && voice[:alternates][alternate_voice]
-      return voice[:alternates][alternate_voice]
-    end
-    voice
+    VOICES[loc]
   end
 
-  def self.tts_upload_to_s3(text, filename, alternate_voice=nil)
+  def self.tts_upload_to_s3(text, filename)
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
     return if AWS::S3.exists_in_bucket(TTS_BUCKET, filename)
 
-    loc_voice = TextToSpeech.localized_voice(alternate_voice)
+    loc_voice = TextToSpeech.localized_voice
     url = acapela_text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE])
     return if url.nil?
     uri = URI.parse(url)
@@ -119,18 +91,18 @@ module TextToSpeech
     end
   end
 
-  def tts_upload_to_s3(text, alternate_voice=nil)
-    filename = tts_path(text, alternate_voice)
-    TextToSpeech.tts_upload_to_s3(text, filename, alternate_voice)
+  def tts_upload_to_s3(text)
+    filename = tts_path(text)
+    TextToSpeech.tts_upload_to_s3(text, filename)
   end
 
-  def tts_url(text, alternate_voice=nil)
-    "https://tts.code.org/#{tts_path(text, alternate_voice)}"
+  def tts_url(text)
+    "https://tts.code.org/#{tts_path(text)}"
   end
 
-  def tts_path(text, alternate_voice=nil)
+  def tts_path(text)
     content_hash = Digest::MD5.hexdigest(text)
-    loc_voice = TextToSpeech.localized_voice(alternate_voice)
+    loc_voice = TextToSpeech.localized_voice
     "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{name}.mp3"
   end
 
