@@ -1,7 +1,7 @@
-// This file is generated via generateSharedConstants.rb. DO NOT CHANGE MANUALLY
-// To regenerate, run `rake build:shared_constants` from root
+// This is a generated file and SHOULD NOT BE EDITTED MANUALLY!!
+// Contents are generated from lib/cdo/shared_constants.rb by running
+// `rake build:shared_constants`
 
-// Used to communicate different types of levels
 export const LevelKind = {
   "peer_review": "peer_review",
   "assessment": "assessment",
@@ -10,7 +10,6 @@ export const LevelKind = {
   "level": "level"
 };
 
-// Different possibilities for level.status, used to communicate how user has performed on a given level
 export const LevelStatus = {
   "not_tried": "not_tried",
   "submitted": "submitted",
