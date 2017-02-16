@@ -11,16 +11,23 @@ const FAILED = 'FAILED';
 const CELEBRATING = 'CELEBRATING';
 const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
 
+const STATUS_IS_CHROME = 'statusIsChrome';
+const STATUS_APP_INSTALLED = 'statusAppInstalled';
+const STATUS_WINDOWS_DRIVERS = 'statusWindowsDrivers';
+const STATUS_BOARD_PLUG = 'statusBoardPlug';
+const STATUS_BOARD_CONNECT = 'statusBoardConnect';
+const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
+
 const BoardSetupStatus = React.createClass({
   getInitialState() {
     return {
       isDetecting: false,
-      statusIsChrome: WAITING,
-      statusAppInstalled: WAITING,
-      statusWindowsDrivers: WAITING,
-      statusBoardPlug: WAITING,
-      statusBoardConnect: WAITING,
-      statusBoardComponents: WAITING
+      [STATUS_IS_CHROME]: WAITING,
+      [STATUS_APP_INSTALLED]: WAITING,
+      [STATUS_WINDOWS_DRIVERS]: WAITING,
+      [STATUS_BOARD_PLUG]: WAITING,
+      [STATUS_BOARD_CONNECT]: WAITING,
+      [STATUS_BOARD_COMPONENTS]: WAITING
     };
   },
 
@@ -36,52 +43,52 @@ const BoardSetupStatus = React.createClass({
     this.setState({...this.getInitialState(), isDetecting: true});
 
     if (!isChrome()) {
-      this.fail('IsChrome');
+      this.fail(STATUS_IS_CHROME);
       return;
     }
 
     if (!isWindows()) {
-      this.hide('WindowsDrivers');
+      this.hide(STATUS_WINDOWS_DRIVERS);
     }
 
     if (gtChrome33()) {
-      this.succeed('IsChrome');
+      this.succeed(STATUS_IS_CHROME);
     } else {
-      this.fail('IsChrome');
+      this.fail(STATUS_IS_CHROME);
     }
 
     const bc = new BoardController();
     Promise.resolve()
 
         // Is Chrome App Installed?
-        .then(() => this.spin('AppInstalled'))
+        .then(() => this.spin(STATUS_APP_INSTALLED))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() =>
             BoardController.ensureAppInstalled()
-                .then(() => this.succeed('AppInstalled'))
-                .catch(error => this.fail('AppInstalled')))
+                .then(() => this.succeed(STATUS_APP_INSTALLED))
+                .catch(error => this.fail(STATUS_APP_INSTALLED)))
 
         // Is board plugged in?
-        .then(() => this.spin('BoardPlug'))
+        .then(() => this.spin(STATUS_BOARD_PLUG))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() =>
             BoardController.getDevicePortName()
-                .then(() => this.succeed('BoardPlug'))
-                .catch(error => this.fail('BoardPlug')))
+                .then(() => this.succeed(STATUS_BOARD_PLUG))
+                .catch(error => this.fail(STATUS_BOARD_PLUG)))
 
         // Can we talk to the firmware?
-        .then(() => this.spin('BoardConnect'))
+        .then(() => this.spin(STATUS_BOARD_CONNECT))
         .then(() =>
             bc.ensureBoardConnected()
-                .then(() => this.succeed('BoardConnect'))
-                .catch(error => this.fail('BoardConnect')))
+                .then(() => this.succeed(STATUS_BOARD_CONNECT))
+                .catch(error => this.fail(STATUS_BOARD_CONNECT)))
 
         // Can we initialize components successfully?
-        .then(() => this.spin('BoardComponents'))
+        .then(() => this.spin(STATUS_BOARD_COMPONENTS))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() => bc.connectWithComponents())
         .then(() => this.celebrateAllSuccessful(bc))
-        .catch(error => this.fail('BoardComponents'))
+        .catch(error => this.fail(STATUS_BOARD_COMPONENTS))
 
         // Put the board back in its original state, if possible
         .then(() => bc.reset())
@@ -111,11 +118,11 @@ const BoardSetupStatus = React.createClass({
     }
 
     return Promise.resolve()
-        .then(() => this.thumb('BoardComponents'))
+        .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
         .then(() => bc.prewiredComponents.buzzer.play(SONG_CHARGE, 104))
         .then(() => forEachLedInSequence(led => led.color('green'), 80))
         .then(() => forEachLedInSequence(led => led.off(), 80))
-        .then(() => this.succeed('BoardComponents'));
+        .then(() => this.succeed(STATUS_BOARD_COMPONENTS));
   },
 
   componentDidMount() {
@@ -123,15 +130,6 @@ const BoardSetupStatus = React.createClass({
   },
 
   render() {
-    const {
-      isDetecting,
-      statusIsChrome,
-      statusAppInstalled,
-      statusWindowsDrivers,
-      statusBoardPlug,
-      statusBoardConnect,
-      statusBoardComponents
-    } = this.state;
     return (
         <div>
           <h2>
@@ -142,34 +140,34 @@ const BoardSetupStatus = React.createClass({
               type="button"
               value="re-detect"
               onClick={this.detect}
-              disabled={isDetecting}
+              disabled={this.state.isDetecting}
             />
           </h2>
           <div className="setup-status" style={{'fontSize': '26px'}}>
             <SetupStep
-              stepStatus={statusIsChrome}
+              stepStatus={this.state[STATUS_IS_CHROME]}
               stepName="Chrome version 33+"
             >
               {isChrome() && ` - Your Chrome version is ${getChromeVersion()}, please upgrade to at least version 33`}
             </SetupStep>
             <SetupStep
-              stepStatus={statusAppInstalled}
+              stepStatus={this.state[STATUS_APP_INSTALLED]}
               stepName="Chrome App installed"
             />
             <SetupStep
-              stepStatus={statusWindowsDrivers}
+              stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
               stepName="Windows drivers installed? (cannot auto-check)"
             />
             <SetupStep
-              stepStatus={statusBoardPlug}
+              stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
             />
             <SetupStep
-              stepStatus={statusBoardConnect}
+              stepStatus={this.state[STATUS_BOARD_CONNECT]}
               stepName="Board connectable"
             />
             <SetupStep
-              stepStatus={statusBoardComponents}
+              stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
               stepName="Board components usable"
             />
           </div>
@@ -191,23 +189,23 @@ const BoardSetupStatus = React.createClass({
   },
 
   hide(selector) {
-    this.setState({[`status${selector}`]: HIDDEN});
+    this.setState({[selector]: HIDDEN});
   },
 
   fail(selector) {
-    this.setState({[`status${selector}`]: FAILED});
+    this.setState({[selector]: FAILED});
   },
 
   spin(selector) {
-    this.setState({[`status${selector}`]: ATTEMPTING});
+    this.setState({[selector]: ATTEMPTING});
   },
 
   succeed(selector) {
-    this.setState({[`status${selector}`]: SUCCEEDED});
+    this.setState({[selector]: SUCCEEDED});
   },
 
   thumb(selector) {
-    this.setState({[`status${selector}`]: CELEBRATING});
+    this.setState({[selector]: CELEBRATING});
   },
 });
 
