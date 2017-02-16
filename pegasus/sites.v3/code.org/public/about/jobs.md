@@ -160,7 +160,7 @@ As a Software Engineer at Code.org, you’ll be delivering features in Code Stud
 
 The ideal candidate has the following qualifications:
 
-- Passion for our mission of #CSForAll
+- Passion for our mission of increasing access to computer science education
 - Bachelor’s degree with a major in Computer Science
 - 3+ years as a software engineer
 - Expertise in some of these technologies preferred:

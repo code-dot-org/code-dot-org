@@ -7995,9 +7995,9 @@ pkg-up@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-playground-io@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/playground-io/-/playground-io-0.4.0.tgz#743a69f2376966f338ee16febfa8f7c2c46b3111"
+playground-io@code-dot-org/playground-io#v0.4.0-cdo.1:
+  version "0.4.0-cdo.1"
+  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/8a476b8d99f300940542b7ddbed81cff735cca99"
   dependencies:
     buffer "^4.6.0"
     firmata "^0.11.3"

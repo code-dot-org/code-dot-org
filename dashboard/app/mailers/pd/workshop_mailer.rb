@@ -49,7 +49,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def organizer_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
-    @teacher_dashboard_url = CDO.code_org_url "/teacher-dashboard#/sections/#{@workshop.section_id}/manage"
 
     mail content_type: 'text/html',
       from: from_no_reply,
