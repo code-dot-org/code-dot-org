@@ -187,6 +187,11 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_invalid_file_extension
+    @api.get_object('bad_extension.css%22')
+    assert unsupported_media_type?
+  end
+
   private
 
   def post_file(api, uploaded_file)
