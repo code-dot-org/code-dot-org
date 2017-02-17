@@ -16,9 +16,6 @@ import Piezo from './Piezo';
  * Initializes a set of Johnny-Five component instances for the currently
  * connected Circuit Playground board.
  *
- * Components:
- *   - will each have .stop() called on Reset
- *
  * @param {five.Board} board - the johnny-five board object that needs new
  *        components initialized.
  * @returns {Object.<String, Object>} board components
