@@ -14,12 +14,13 @@ import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
   apiValidateType,
+  apiValidateTypeAndRange,
   getAsyncOutputWarning,
   outputError,
   outputWarning,
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
-import makerCommands from '@cdo/apps/lib/kits/maker/commands';
+import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -43,25 +44,6 @@ var toBeCached = {};
  * @type {EventSandboxer}
  */
 var eventSandboxer = new EventSandboxer();
-
-function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                 expectedType, minValue, maxValue, opt) {
-  var validatedTypeKey = 'validated_type_' + varName;
-  var validatedRangeKey = 'validated_range_' + varName;
-  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
-  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
-    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
-    if (inRange) {
-      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
-    }
-    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
-    if (!inRange) {
-      outputWarning(funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not in the expected range.");
-    }
-    opts[validatedRangeKey] = inRange;
-  }
-}
 
 function apiValidateActiveCanvas(opts, funcName) {
   var validatedActiveCanvasKey = 'validated_active_canvas';
@@ -1696,51 +1678,6 @@ applabCommands.drawChartFromRecords = function (opts) {
       opts.columns,
       opts.options
   ).then(onSuccess, onError);
-};
-
-applabCommands.pinMode = function (opts) {
-  apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid');
-  apiValidateType(opts, 'pinMode', 'mode', opts.mode, 'string');
-
-  const modeStringToConstant = {
-    input: 0,
-    output: 1,
-    analog: 2,
-    pwm: 3,
-    servo: 4
-  };
-
-  Applab.makerController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
-};
-
-applabCommands.digitalWrite = function (opts) {
-  apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
-  apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
-
-  Applab.makerController.digitalWrite(opts.pin, opts.value);
-};
-
-applabCommands.digitalRead = function (opts) {
-  apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
-
-  return Applab.makerController.digitalRead(opts.pin, opts.callback);
-};
-
-applabCommands.analogWrite = function (opts) {
-  apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
-  apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
-
-  Applab.makerController.analogWrite(opts.pin, opts.value);
-};
-
-applabCommands.analogRead = function (opts) {
-  apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
-
-  return Applab.makerController.analogRead(opts.pin, opts.callback);
-};
-
-applabCommands.onBoardEvent = function (opts) {
-  return Applab.makerController.onBoardEvent(opts.component, opts.event, opts.callback);
 };
 
 /**

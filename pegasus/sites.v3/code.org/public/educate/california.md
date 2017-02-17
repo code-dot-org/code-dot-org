@@ -32,7 +32,7 @@ Please help us spread the word to California principals and teachers, at all gra
 -->
 
 
-## Computer Science Principles
+## Computer Science Principles for grades 10-12
 
 <iframe width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
 <br />
@@ -50,7 +50,7 @@ Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, 
 <br />
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
-## Computer Science Discoveries
+## Computer Science Discoveries for grades 7-9
 
 <img src="/images/csdiscoveries-montage.jpg" width="500px">
 
@@ -58,7 +58,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
-## Grades K-5
+## CS Fundamentals for grades K-5
 
 Code.org offers an elementary school curriculum that allows even the youngest students to explore the limitless world of computing. Courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all.
 

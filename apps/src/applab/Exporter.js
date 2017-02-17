@@ -161,7 +161,7 @@ function extractCSSFromHTML(el) {
 
   // We need to prefix all of our selectors with divApplab to overcome the
   // precendence of css defined in applab.css
-  var selectorPrefix = '#divApplab ';
+  var selectorPrefix = '#divApplab.appModern ';
 
   var baseEls = {};
   for (var elementType in elementLibrary.ElementType) {
@@ -174,6 +174,7 @@ function extractCSSFromHTML(el) {
     if (baseEl.tagName.toLowerCase() === 'input') {
       selector += '[type=' + (baseEl.getAttribute('type') || 'text') + ']';
     }
+    selector += ',\n' + selector + ':hover';
     css.push(selector + ' {');
     for (var k = 0; k < baseEl.style.length; k++) {
       var key = baseEl.style[k];
@@ -290,7 +291,7 @@ export default {
                   while (applabCSS.indexOf(cssURLRule) >= 0) {
                     applabCSS = applabCSS.replace(
                       cssURLRule,
-                      `url("applab/assets${url}")`
+                      `url("assets${url}")`
                     );
                   }
                   return url;

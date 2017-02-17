@@ -71,6 +71,7 @@ class Blockly < Level
     lock_zero_param_functions
     contained_level_names
     encrypted_examples
+    disable_if_else_editing
   )
 
   before_save :update_ideal_level_source

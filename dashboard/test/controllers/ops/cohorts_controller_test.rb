@@ -160,7 +160,7 @@ module Ops
       # todo
     end
 
-      # Test index + CRUD controller actions
+    # Test index + CRUD controller actions
 
     test 'Ops team can list all cohorts' do
       sign_in @admin

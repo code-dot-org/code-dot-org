@@ -113,7 +113,6 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
-      get 'section/:section_id', action: 'section_projects'
       get '/angular', to: 'projects#angular'
     end
   end
@@ -348,6 +347,9 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+
+    get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
+    get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -396,14 +398,11 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
-
-      namespace :projects do
-        get 'section/:section_id', to: 'section_projects#index', defaults: { format: 'json' }
-      end
     end
   end
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: { format: 'json' }
 end

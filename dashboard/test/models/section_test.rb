@@ -187,8 +187,8 @@ class SectionTest < ActiveSupport::TestCase
     # Handles names that can't be nicely split into first and last, or
     # names which use unusual separating characters
     verify(
-      ["Cher", "J'onn J'onzz", "John\tDoe"],
-      ["Cher", "J'onn J'onzz", "John"]
+      [" Abraham Lincoln ", "Cher", "J'onn J'onzz", "John\tDoe", "Mister\tT"],
+      ["Abraham", "Cher", "J'onn J'onzz", "John", "Mister T"]
     )
 
     # Handles abbreviated first names by defaulting back to the "full"
@@ -201,5 +201,12 @@ class SectionTest < ActiveSupport::TestCase
 
     # Handles names that have other names as their strict subset
     verify(['Thor', 'Thor Odinson'], ['Thor', 'Thor O'])
+  end
+
+  test 'teacher_dashboard_url' do
+    section = create :section
+
+    expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
+    assert_equal expected_url, section.teacher_dashboard_url
   end
 end

@@ -20,10 +20,19 @@ module.exports = function (grunt) {
     // so that karma + webpack can do their thing. For some reason, you
     // can't just point the test runner to the file itself as it won't
     // get compiled.
+    let file = "require('babel-polyfill');\n" +
+      "require('"+path.resolve(process.env.mocha_entry)+"');\n";
+
+    if (fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory()) {
+      file = `
+import 'babel-polyfill';
+var testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\.js$/);
+testsContext.keys().forEach(testsContext);
+`;
+    }
     fs.writeFileSync(
       'test/entry-tests.js',
-      "require('babel-polyfill');\n" +
-      "require('"+path.resolve(process.env.mocha_entry)+"');\n"
+      file
     );
   }
 
@@ -390,6 +399,7 @@ module.exports = function (grunt) {
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
+    'levels/editors/_all':          './src/sites/studio/pages/levels/editors/_all.js',
     'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
@@ -422,7 +432,7 @@ module.exports = function (grunt) {
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
-    'projects/section_projects': './src/sites/studio/pages/projects/section_projects.js',
+    'teacher-dashboard/index': './src/sites/code.org/pages/teacher-dashboard/index.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
