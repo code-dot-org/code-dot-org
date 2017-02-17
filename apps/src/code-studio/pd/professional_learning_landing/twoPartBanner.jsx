@@ -4,12 +4,14 @@ import React from 'react';
 
 const styles = {
   container: {
-    display: 'flex',
+    display: 'table',
+    tableLayout: 'fixed',
     height: '240px',
     width: '100%',
   },
 
   image: {
+    display: 'table-cell',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -20,6 +22,7 @@ const styles = {
   },
 
   text: {
+    display: 'table-cell',
     fontSize: '24px',
     backgroundColor: '#00adbc',
     color: 'white',
@@ -27,17 +30,11 @@ const styles = {
   },
 
   left: {
-    width: '50%',
-    maxWidth: '50%',
-    float: 'left',
     borderTopLeftRadius: '10px',
     borderBottomLeftRadius: '10px',
   },
 
   right: {
-    width: '50%',
-    maxWidth: '50%',
-    float: 'left',
     borderTopRightRadius: '10px',
     borderBottomRightRadius: '10px',
   }
