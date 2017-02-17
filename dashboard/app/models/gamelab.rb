@@ -205,7 +205,7 @@ class Gamelab < Blockly
         "stroke": null,
         "strokeWeight": null,
         "noStroke": null,
-        "color": null,
+        "rgb": null,
         "arc": null,
         "ellipse": null,
         "line": null,
