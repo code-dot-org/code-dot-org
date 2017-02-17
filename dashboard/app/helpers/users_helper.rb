@@ -1,7 +1,9 @@
 require 'cdo/activity_constants'
+require 'cdo/shared_constants'
 
 module UsersHelper
   include ApplicationHelper
+  include SharedConstants
 
   # Summarize a user and his or her progress progress within a certain script.
   # Example return value:
@@ -122,9 +124,9 @@ module UsersHelper
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
             user_data[:levels][level_id] = {
-              status: 'locked'
+              status: LEVEL_STATUS.locked
             }
-          elsif completion_status != 'not_tried'
+          elsif completion_status != LEVEL_STATUS.not_tried
             user_data[:levels][level_id] = {
               status: completion_status,
               result: ul.try(:best_result) || 0,

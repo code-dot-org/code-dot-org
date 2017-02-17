@@ -72,14 +72,16 @@ function Test(fromRow) {
 Test.prototype.setLastModified = function (lastModified) {
   // Do no updating if things haven't changed.
   if (this.lastModified_ && lastModified <= this.lastModified_) {
-    return;
+    return Promise.resolve();
   }
 
-  this.lastModified_ = lastModified;
   if (lastModified > RUN_START_TIME && this.status !== STATUS_SUCCEEDED) {
-    this.fetchStatus();
+    return this.fetchStatus()
+      .then(() => this.lastModified_ = lastModified);
   } else {
+    this.lastModified_ = lastModified;
     this.updateView();
+    return Promise.resolve();
   }
 };
 
@@ -91,8 +93,13 @@ Test.prototype.fetchStatus = function () {
     this.updateView();
   };
 
-  fetch(`${API_BASEPATH}/${this.s3Key()}`, {mode: 'no-cors'})
-    .then(response => response.json())
+  return fetch(`${API_BASEPATH}/${this.s3Key()}`, {mode: 'no-cors'})
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error(`While fetching status, "${response.url}" returned ${response.status}.`);
+    })
     .then(json => {
       if (json.commit === COMMIT_HASH) {
         this.versionId = json.version_id;
@@ -102,7 +109,10 @@ Test.prototype.fetchStatus = function () {
         this.status = this.success ? STATUS_SUCCEEDED : STATUS_FAILED;
       }
     })
-    .then(ensure, ensure);
+    .then(ensure, error => {
+      ensure();
+      throw error;
+    });
 };
 
 Test.prototype.updateView = function () {
@@ -289,18 +299,39 @@ function refresh() {
   let lastRefreshEpochSeconds = Math.floor(lastRefreshTime.getTime()/1000);
   let newTime = new Date();
   fetch(`${API_BASEPATH}/${S3_PREFIX}/since/${lastRefreshEpochSeconds}`, { mode: 'no-cors' })
-    .then(response => response.json())
-    .then(json => {
-      json.forEach(object => {
-        let test = testFromS3Key(object.key);
-        if (test) {
-          test.setLastModified(new Date(object.last_modified));
-        }
-      });
-      lastRefreshTime = newTime;
-      lastRefreshTimeLabel.textContent = 'Updated ' + lastRefreshTime.toTimeString();
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error(`While fetching updates, "${response.url}" returned ${response.status}.`);
     })
+    .then(json => {
+      return Promise.all(json.map(object => refreshIndividualTest(object)))
+        .then(() => {
+          lastRefreshTime = newTime;
+          lastRefreshTimeLabel.textContent = 'Updated ' + lastRefreshTime.toTimeString();
+        })
+        .catch(error => {
+          lastRefreshTimeLabel.textContent = 'Partially updated at ' + newTime.toTimeString();
+          console.warn(error);
+        });
+    })
+    .catch(error => console.error(error))
     .then(ensure, ensure);
+}
+
+/**
+ * @param {string} key
+ * @param {string} last_modified
+ * @returns {Promise}
+ */
+function refreshIndividualTest({key, last_modified}) {
+  const test = testFromS3Key(key);
+  if (test) {
+    return test.setLastModified(new Date(last_modified));
+  }
+  // If we can't find the test, we don't care about it.
+  return Promise.resolve();
 }
 
 var refreshInterval = null;

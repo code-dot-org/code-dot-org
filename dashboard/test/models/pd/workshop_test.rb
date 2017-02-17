@@ -451,6 +451,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal session.start, @workshop.workshop_starting_date
   end
 
+  test 'workshop_dashboard_url' do
+    expected_url = "http://#{CDO.dashboard_hostname}/pd/workshop_dashboard/workshops/#{@workshop.id}"
+    assert_equal expected_url, @workshop.workshop_dashboard_url
+  end
+
   private
 
   def session_on_day(day_offset)

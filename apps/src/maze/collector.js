@@ -37,11 +37,14 @@ export default class Collector extends Subtype {
     return true;
   }
 
-  /**
-   * @override
-   */
-  shouldCheckSuccessOnMove() {
-    return false;
+  collect(id, row, col) {
+    const currVal = this.maze_.map.getValue(row, col);
+    if (currVal < 1) {
+      this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
+    } else {
+      this.maze_.executionInfo.queueAction('pickup', id);
+      this.maze_.map.setValue(row, col, currVal - 1);
+    }
   }
 
   /**

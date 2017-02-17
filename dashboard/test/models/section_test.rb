@@ -202,4 +202,11 @@ class SectionTest < ActiveSupport::TestCase
     # Handles names that have other names as their strict subset
     verify(['Thor', 'Thor Odinson'], ['Thor', 'Thor O'])
   end
+
+  test 'teacher_dashboard_url' do
+    section = create :section
+
+    expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
+    assert_equal expected_url, section.teacher_dashboard_url
+  end
 end
