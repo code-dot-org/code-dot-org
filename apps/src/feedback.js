@@ -421,7 +421,9 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   buttons.id = 'feedbackButtons';
 
   let tryAgainText = '';
-  if (options.feedbackType === TestResults.FREE_PLAY) {
+  if (options.tryAgainText) {
+    tryAgainText = options.tryAgainText;
+  } else if (options.feedbackType === TestResults.FREE_PLAY) {
     tryAgainText = msg.keepPlaying();
   } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
     tryAgainText = msg.tryAgain();
