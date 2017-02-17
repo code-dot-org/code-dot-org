@@ -73,7 +73,8 @@ module AWS
         template = render_template(dry_run: true)
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
-        CDO.log.info "Parameters: #{parameters(template).join("\n")}"
+        params = parameters(template)
+        CDO.log.info "Parameters: #{params.join("\n")}" unless params.empty?
 
         if stack_exists?
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
@@ -210,11 +211,7 @@ module AWS
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
-              client = Aws::S3::Client.new(
-                region: CDO.aws_region,
-                credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key)
-              )
-              client.put_object(
+              Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
                 key: "chef/#{branch}.tar.gz",
                 body: tmp.read
