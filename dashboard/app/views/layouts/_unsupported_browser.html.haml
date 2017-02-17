@@ -9,6 +9,7 @@
   #applab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.applab_unsupported_tablet")
   #gamelab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.gamelab_unsupported_tablet")
   #weblab-unsupported-browser.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_browser")
+  #weblab-unsupported-local-storage.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_locale_storage")
 
 :javascript
   $(document).ready(function () {
@@ -18,15 +19,18 @@
     if (isUnsupportedBrowser()) {
       textDivId = '#unsupported-browser';
     } else if (typeof appOptions !== 'undefined') {
-      if (isSmallDevice()) {
-        if (appOptions.app == 'applab') {
+      if (isMobileDevice()) {
+        if (appOptions.app === 'applab') {
           textDivId = '#applab-unsupported-tablet';
-        } else if (appOptions.app == 'gamelab') {
+        } else if (appOptions.app === 'gamelab') {
           textDivId = '#gamelab-unsupported-tablet';
         }
         dismissable = true;
-      } else if (isIE11() && appOptions.app == 'weblab') {
-        textDivId = '#weblab-unsupported-browser'
+      } else if (isIE11() && appOptions.app === 'weblab') {
+        textDivId = '#weblab-unsupported-browser';
+        dismissable = true;
+      } else if (!isStorageAvailable('localStorage') && appOptions.app === 'weblab') {
+        textDivId = '#weblab-unsupported-local-storage';
         dismissable = true;
       }
     }

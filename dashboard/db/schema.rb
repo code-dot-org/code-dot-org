@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210150621) do
+ActiveRecord::Schema.define(version: 20170215183924) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -38,17 +38,14 @@ ActiveRecord::Schema.define(version: 20170210150621) do
     t.integer  "prev_time"
     t.integer  "prev_attempt"
     t.integer  "prev_test_result"
-    t.integer  "prev_activity_id"
     t.integer  "prev_level_source_id"
     t.integer  "next_time"
     t.integer  "next_attempt"
     t.integer  "next_test_result"
-    t.integer  "next_activity_id"
     t.integer  "next_level_source_id"
     t.integer  "final_time"
     t.integer  "final_attempt"
     t.integer  "final_test_result"
-    t.integer  "final_activity_id"
     t.integer  "final_level_source_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
@@ -361,6 +358,7 @@ ActiveRecord::Schema.define(version: 20170210150621) do
     t.integer  "school_info_id"
     t.datetime "deleted_at"
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
+    t.index ["email"], name: "index_pd_enrollments_on_email", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
   end
 
@@ -625,7 +623,6 @@ ActiveRecord::Schema.define(version: 20170210150621) do
   end
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "level_id"
     t.integer  "script_id",                 null: false
     t.integer  "chapter"
     t.datetime "created_at"
@@ -635,7 +632,6 @@ ActiveRecord::Schema.define(version: 20170210150621) do
     t.boolean  "assessment"
     t.text     "properties",  limit: 65535
     t.boolean  "named_level"
-    t.index ["level_id"], name: "index_script_levels_on_level_id", using: :btree
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
     t.index ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
   end

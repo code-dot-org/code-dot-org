@@ -1,5 +1,5 @@
 name 'CSD - Getters and Setters'
-href 'path/to/html/in/asset/folder'
+display_name 'Getters and Setters'
 markdown <<MARKDOWN
 # Getters and Setters
 

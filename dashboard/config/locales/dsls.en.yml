@@ -475,6 +475,8 @@ en:
       CSD Design Instructions Site: {}
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
+      'CSD Map: Timed For Loop': {}
+      'CSD Map: Timed Loop': {}
       CSD Recipe Stop: {}
       'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
@@ -624,6 +626,7 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 - timed loop stop board: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Journal Entry Placeholder:
@@ -4586,6 +4589,20 @@ en:
         Contact Us: Contact Us
         Use It: Use It
         Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
+      CSDU6 - timed loop predict counter multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        How many times with the word 'looped' be printed in the console?: How many times with the word 'looped' be printed in the console?
+        inifinite: inifinite
+      CSDU6 - timed loop question for:
+        The button background will be violet: The button background will be violet
+        The button background will change to each of the colors in the list: The button background will change to each of the colors in the list
+        The button background will not change: The button background will not change
+        The button will change background color each time it is clicked: The button will change background color each time it is clicked
+        When you run this code, what will you see?: When you run this code, what will you see?
       CSDU6 LED predict multi:
         Alternate between on and off each click: Alternate between on and off each click
         Blink on and off randomly: Blink on and off randomly

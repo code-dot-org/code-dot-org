@@ -7,7 +7,7 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from "../../../util/color";
 import progressStyles, { createOutline } from './progressStyles';
-import { LevelStatus, LevelKind } from '../../activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
 const dotSize = 24;
 
@@ -134,6 +134,19 @@ const styles = {
   status: BUBBLE_COLORS
 };
 
+// Longer term, I'd like the server to provide us an icon type, instead of a
+// className. For now, I'm going to use the className in level.icon as if it
+// were actually a type key.
+const iconClassFromIconType = {
+  'fa-file-text': 'fa fa-file-text',
+  // Explicitly don't want to use an icon for this type
+  'fa-list-ol': undefined,
+  'fa-external-link-square': 'fa fa-external-link-square',
+  'fa-video-camera': 'fa fa-video-camera',
+  'fa-stop-circle': 'fa fa-stop-circle',
+  'fa-map': 'fa fa-map',
+};
+
 export const BubbleInterior = React.createClass({
   propTypes: {
     showingIcon: React.PropTypes.bool,
@@ -200,10 +213,8 @@ export const ProgressDot = Radium(React.createClass({
       }
     }
 
-    // fa-list-ol is used only by our redesigned dots, but we don't want to use
-    // it here
-    if (level.icon && level.icon !== 'fa-list-ol') {
-      return 'fa ' + level.icon;
+    if (level.icon) {
+      return iconClassFromIconType[level.icon];
     }
     return '';
   },
@@ -235,7 +246,7 @@ export const ProgressDot = Radium(React.createClass({
           isLocked && styles.disabledLevel
          ]}
       >
-        {(level.icon && !isPeerReview) ?
+        {(iconClassFromIconType[level.icon] && !isPeerReview) ?
           <i
             className={this.iconClassName()}
             style={[
