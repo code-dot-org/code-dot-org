@@ -113,6 +113,13 @@ To run an individual test, use the `--entry` option with `npm run test:entry` to
 npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
 ```
 
+This option also works on directories, in which case all files within that
+directory and any subdirectories will be run:
+
+```
+npm run test:entry -- --entry ./test/unit/applab/
+```
+
 It's also possible to run an individual test or subset of tests with:
 
 ```
