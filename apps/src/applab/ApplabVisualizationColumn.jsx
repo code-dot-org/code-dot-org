@@ -54,7 +54,6 @@ const ApplabVisualizationColumn = React.createClass({
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     visualizationHasPadding: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    isResponsive: React.PropTypes.bool.isRequired,
     nonResponsiveWidth: React.PropTypes.number.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
@@ -101,7 +100,7 @@ const ApplabVisualizationColumn = React.createClass({
     const chromelessShare = dom.isMobile() && !dom.isIPad();
     const visualizationColumnClassNames = classNames({
       with_padding: this.props.visualizationHasPadding,
-      responsive: this.props.isResponsive,
+      responsive: true,
       pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
 
       // the below replicates some logic in StudioApp.handleHideSource_ which
@@ -116,7 +115,6 @@ const ApplabVisualizationColumn = React.createClass({
       <div
         id="visualizationColumn"
         className={visualizationColumnClassNames}
-        style={[!this.props.isResponsive && {maxWidth: this.props.nonResponsiveWidth}]}
       >
         {!this.props.isReadOnlyWorkspace &&
           <PlaySpaceHeader
@@ -161,7 +159,6 @@ export default connect(function propsFromStore(state) {
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     isShareView: state.pageConstants.isShareView,
-    isResponsive: true,
     nonResponsiveWidth: state.pageConstants.nonResponsiveVisualizationColumnWidth,
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     hideSource: state.pageConstants.hideSource,
