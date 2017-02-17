@@ -516,11 +516,15 @@ StudioApp.prototype.init = function (config) {
     );
   }
 
-  // TODO (elijah) Replace this with internationalized actual copy
   // If we are in a non-english locale using our english-specific app
   // (the Spelling Bee), display a warning.
   if (config.locale !== 'en_us' && config.skinId === 'letters') {
-      this.displayWorkspaceAlert('warning', <div>{"This level is in English; if you aren't a fan of that, please feel free to skip it"}</div>);
+      this.displayWorkspaceAlert(
+        'error',
+        <div>
+          {msg.englishOnlyWarning({ nextStage: config.stagePosition + 1 })}
+        </div>
+      );
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
