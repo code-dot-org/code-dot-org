@@ -11,12 +11,14 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 OUTPUT_JS = "#{REPO_DIR}/apps/src/util/sharedConstants.js"
 
 def generate_js
-  output = "// This is a generated file and SHOULD NOT BE EDITTED MANUALLY!!\n"\
-    "// Contents are generated as part of grunt build\n"\
-    "// Source of truth is lib/cdo/shared_constants.rb\n"\
-    "\n"\
-    "#{generate_level_kind}\n\n"\
-    "#{generate_level_status}\n\n"
+  output = <<CONTENT
+// This is a generated file and SHOULD NOT BE EDITTED MANUALLY!!
+// Contents are generated as part of grunt build
+// Source of truth is lib/cdo/shared_constants.rb
+
+#{generate_level_kind}
+#{generate_level_status}
+CONTENT
 
   File.open(OUTPUT_JS, 'w') {|f| f.write(output)}
 end
