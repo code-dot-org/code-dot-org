@@ -45,8 +45,11 @@
       "on": null,
       "off": null,
       "toggle": null,
+      "intensity": null,
       "led.on": null,
       "led.off": null,
+      "led.toggle": null,
+      "led.intensity": null,
       "buzzer.note": null,
       "buzzer.off": null
     },
