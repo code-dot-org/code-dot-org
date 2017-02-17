@@ -27,7 +27,6 @@ const GameLabView = React.createClass({
     onMount: React.PropTypes.func.isRequired,
     // Provided by Redux
     interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
-    isResponsive: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     allowAnimationMode: React.PropTypes.bool.isRequired,
@@ -48,7 +47,7 @@ const GameLabView = React.createClass({
   },
 
   renderCodeMode() {
-    const {interfaceMode, isResponsive, hideSource, pinWorkspaceToBottom,
+    const {interfaceMode, hideSource, pinWorkspaceToBottom,
            showFinishButton} = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
@@ -62,7 +61,7 @@ const GameLabView = React.createClass({
     };
 
     const visualizationColumnClassNames = classNames({
-      responsive: isResponsive,
+      responsive: true,
       pin_bottom: !hideSource && pinWorkspaceToBottom
     });
 
@@ -116,7 +115,6 @@ const GameLabView = React.createClass({
 module.exports = connect(state => ({
   hideSource: state.pageConstants.hideSource,
   interfaceMode: state.interfaceMode,
-  isResponsive: true,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
   allowAnimationMode: allowAnimationMode(state),
   showVisualizationHeader: showVisualizationHeader(state),
