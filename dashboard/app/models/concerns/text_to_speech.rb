@@ -117,7 +117,9 @@ module TextToSpeech
 
   def tts_instructions_text
     if I18n.locale == I18n.default_locale
-      tts_instructions_override || instructions || ""
+      # We still have to try localized instructions here for the
+      # levels.js-defined levels
+      tts_instructions_override || instructions || try(:localized_instructions) || ""
     else
       TTSSafeRenderer.render(try(:localized_instructions) || "")
     end
