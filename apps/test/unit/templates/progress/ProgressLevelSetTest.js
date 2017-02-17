@@ -2,7 +2,7 @@ import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import { LevelStatus } from '@cdo/apps/sharedConstants';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 describe('ProgressLevelSet', function () {
   describe('getIcon', () => {

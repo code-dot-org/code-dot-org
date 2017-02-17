@@ -2,7 +2,7 @@ import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { StatusProgressDot } from './StatusProgressDot';
-import { LevelStatus } from '@cdo/apps/sharedConstants';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { SignInState } from '../../progressRedux';
 import { ViewType } from '../../stageLockRedux';
 
