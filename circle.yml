@@ -36,8 +36,6 @@ dependencies:
   cache_directories:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
-    - "/opt/circleci/.rvm/gems/ruby-2.2.3"
-    - "/opt/circleci/ruby/ruby-2.2.3"
     - ".tmputils"
     - "~/.yarn-cache"
   override:
@@ -45,7 +43,7 @@ dependencies:
     # When installing moreutils, make sure it does not overwrite GNU parallel,
     # which CircleCI uses to capture artifacts.
     - sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
-    - sudo apt-get install libicu-dev enscript moreutils
+    - sudo apt-get install libicu-dev enscript moreutils pdftk
     - sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
     - bundle install --without ''
     - 'echo "bundler_use_sudo: false" >> locals.yml'
