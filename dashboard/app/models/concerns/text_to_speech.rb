@@ -18,6 +18,11 @@ VOICES = {
     SPEED: 180,
     SHAPE: 100,
   },
+  'es-mx': {
+    VOICE: 'rosa22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
   'it-it': {
     VOICE: 'vittorio22k',
     SPEED: 180,
