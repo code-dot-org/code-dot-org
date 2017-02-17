@@ -73,13 +73,14 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
 
   def test_process_decisions_row_accept_teachercon
     teachercon_name = 'June 18 - 23, 2017: Houston'
-    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, teachercon_name)
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name)
 
     result = @processor.process_decision_row(
       {
         'Application ID' => 1,
         'Decision' => 'Accept',
-        'Workshop' => teachercon_name
+        'Workshop' => teachercon_name,
+        'Program' => 'csd'
       }
     )
 
@@ -97,7 +98,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
 
   def test_process_decisions_row_accept_partner
     partner_workshop = 'Code Partner: June 1 - 5, 2017'
-    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, partner_workshop)
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csp', partner_workshop)
 
     @processor.expects(:lookup_workshop).with(partner_workshop).returns(
       {
@@ -113,7 +114,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       {
         'Application ID' => 1,
         'Decision' => 'Accept',
-        'Workshop' => partner_workshop
+        'Workshop' => partner_workshop,
+        'Program' => 'csp'
       }
     )
 

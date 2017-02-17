@@ -3,7 +3,6 @@
 # Table name: script_levels
 #
 #  id          :integer          not null, primary key
-#  level_id    :integer
 #  script_id   :integer          not null
 #  chapter     :integer
 #  created_at  :datetime
@@ -16,7 +15,6 @@
 #
 # Indexes
 #
-#  index_script_levels_on_level_id   (level_id)
 #  index_script_levels_on_script_id  (script_id)
 #  index_script_levels_on_stage_id   (stage_id)
 #
@@ -66,7 +64,8 @@ class ScriptLevel < ActiveRecord::Base
 
   def active?(level)
     properties_hash = JSON.parse(properties)
-    !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+    variants = properties_hash['variants']
+    !variants || !variants[level.name] || variants[level.name]['active'] != false
   end
 
   def has_another_level_to_go_to?

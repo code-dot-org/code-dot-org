@@ -21,6 +21,7 @@
 # Indexes
 #
 #  index_pd_enrollments_on_code            (code) UNIQUE
+#  index_pd_enrollments_on_email           (email)
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
@@ -129,9 +130,9 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
-      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}"
+      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
     else
-      CDO.code_org_url "/pd-workshop-survey/#{code}"
+      CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
   end
 
