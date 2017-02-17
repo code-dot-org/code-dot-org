@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-# This script creates a UserLevel for each contained level of a LevelGroup level
+# This script creates a UserLevel for each sublevel of a LevelGroup level
 # (if one does not already exist). Though current production code creates a
-# UserLevel for each contained UserLevel, there was a period of time where this
-# was not the case.
+# UserLevel for each sublevel, there was a period of time where this was not the
+# case.
 #
 # The script expects a data file of user_level_id's to (possibly) fix. This list
 # was generated via the following SQL.
@@ -43,9 +43,8 @@ DATA_FILE = '/tmp/user_level_ids.csv'.freeze
 # Validates raw_data and extracts the answer data from it. Raises an exception
 # if raw_data is not of the appropriate format.
 # @param raw_data [Hash] The LevelGroup value (within LevelSource.data) for a
-#   contained level.
-# @return [String] The string to persist in LevelSource.data for the contained
-#   level.
+#   sublevel.
+# @return [String] The string to persist in LevelSource.data for the sublevel.
 def get_data(raw_data)
   unless raw_data.keys == ['result', 'valid']
     raise "raw_data malformed: #{raw_data}"
@@ -76,13 +75,12 @@ def get_user_level_and_level_source_data(user_level_id)
   [user_level, level_source_data]
 end
 
-# Creates a UserLevel for each contained level in the LevelGroup UserLevel, if
-# one does not already exist. As part of this, creates any necessary LevelSource
-# objects.
+# Creates a UserLevel for each sublevel in the LevelGroup UserLevel, if one does
+# not already exist. As part of this, creates any necessary LevelSource objects.
 # @param user_level [UserLevel]
 # @param level_id [Integer]
 # @param raw_data [Hash]
-def create_contained_level_sources(user_level, level_id, raw_data)
+def create_sublevel_level_sources(user_level, level_id, raw_data)
   # Determine if there is an existing sublevel UserLevel, continuing if so.
   sublevel_user_level = UserLevel.
     where(
@@ -136,11 +134,11 @@ def main
     )
 
     ActiveRecord::Base.transaction do
-      level_source_data.each do |contained_level_id, contained_level_raw_data|
-        create_contained_level_sources(
+      level_source_data.each do |sublevel_level_id, sublevel_level_raw_data|
+        create_sublevel_level_sources(
           user_level,
-          contained_level_id,
-          contained_level_raw_data
+          sublevel_level_id,
+          sublevel_level_raw_data
         )
       end
     end
