@@ -7,7 +7,7 @@ import saveAnswers from '@cdo/apps/code-studio//levels/saveAnswers';
 import $ from 'jquery';
 
 import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/ProgressDot';
-import { LevelStatus, LevelKind } from '@cdo/apps/code-studio/activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
 
 // If we set a color as something like #fff, the browser converts it to rgb(255, 255, 255)
@@ -443,7 +443,8 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('');
+        expect(result.props.children[0].type).to.equal('div');
+        expect(result.props.children[0].props.className).to.equal(undefined);
       });
 
       it('has no icon in header', () => {

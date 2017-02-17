@@ -83,6 +83,9 @@
             <block type="colour_random"/>
           </value>
         </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

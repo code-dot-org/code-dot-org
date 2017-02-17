@@ -124,9 +124,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     admin_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ADMIN
     admin_enrollment = create :pd_enrollment, workshop: admin_workshop
 
-    assert normal_enrollment.exit_survey_url.end_with? "/pd-workshop-survey/#{normal_enrollment.code}"
-    assert counselor_enrollment.exit_survey_url.end_with? "/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}"
-    assert admin_enrollment.exit_survey_url.end_with? "/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}"
+    base_url = "https://#{CDO.pegasus_hostname}"
+    assert_equal "#{base_url}/pd-workshop-survey/#{normal_enrollment.code}", normal_enrollment.exit_survey_url
+    assert_equal "#{base_url}/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}", counselor_enrollment.exit_survey_url
+    assert_equal "#{base_url}/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}", admin_enrollment.exit_survey_url
   end
 
   test 'send_exit_survey does not send mail when the survey was already sent' do
