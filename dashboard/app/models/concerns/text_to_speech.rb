@@ -116,7 +116,7 @@ module TextToSpeech
   end
 
   def tts_instructions_text
-    if I18n.locale == 'en-us'
+    if I18n.locale == I18n.default_locale
       tts_instructions_override || instructions || ""
     else
       TTSSafeRenderer.render(try(:localized_instructions) || "")
