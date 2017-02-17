@@ -88,10 +88,7 @@
     "hide_share_and_remix": "false",
     "markdown_instructions": "# For Loop\r\n\r\n* Run the program what numbers is it printing?",
     "start_blocks": "for (var i = 0; i < 10; i = i+2) {\r\n  console.log(i);\r\n}",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -3,12 +3,8 @@
  */
 import _ from 'lodash';
 import { makeEnum } from '../utils';
-import {
-  LevelStatus,
-  LevelKind,
-  mergeActivityResult,
-  activityCssClass
-} from './activityUtils';
+import { mergeActivityResult, activityCssClass } from './activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
 
 // Action types
@@ -225,7 +221,8 @@ export const levelsByLesson = state => (
     stage.levels.map(level => ({
       status: statusForLevel(level, state.levelProgress),
       url: level.url,
-      name: level.name
+      name: level.name,
+      icon: level.icon
     }))
   ))
 );

@@ -75,7 +75,13 @@ class ActivitiesControllerTest < ActionController::TestCase
   # without having to update all existing test contracts.
   def assert_equal_expected_keys(expected, actual)
     expected.each do |key, value|
-      assert_equal value, actual.with_indifferent_access[key], "for key #{key}"
+      # As we receive a warning that this will fail in MT6, though ugly, we gate
+      # the assertion on whether the expected value is nil.
+      if value.nil?
+        assert_nil actual.with_indifferent_access[key], "for key #{key}"
+      else
+        assert_equal value, actual.with_indifferent_access[key], "for key #{key}"
+      end
     end
   end
 

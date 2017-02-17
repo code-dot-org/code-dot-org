@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProgressDot } from './ProgressDot';
-import { LevelKind, LevelStatus } from '../../activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
 export default storybook => {
   storybook
