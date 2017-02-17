@@ -9,7 +9,20 @@ export default storybook => {
         name:'simple DetailProgressTable',
         story: () => (
           <DetailProgressTable
-            lessonNames={['Jigsaw', 'Maze', 'Artist']}
+            lessons={[
+              {
+                name: 'Jigsaw',
+                id: 1
+              },
+              {
+                name: 'Maze',
+                id: 2
+              },
+              {
+                name: 'Artist',
+                id: 3
+              },
+            ]}
             levelsByLesson={[
               [
                 {
