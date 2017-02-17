@@ -20,10 +20,19 @@ module.exports = function (grunt) {
     // so that karma + webpack can do their thing. For some reason, you
     // can't just point the test runner to the file itself as it won't
     // get compiled.
+    let file = "require('babel-polyfill');\n" +
+      "require('"+path.resolve(process.env.mocha_entry)+"');\n";
+
+    if (fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory()) {
+      file = `
+import 'babel-polyfill';
+var testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\.js$/);
+testsContext.keys().forEach(testsContext);
+`;
+    }
     fs.writeFileSync(
       'test/entry-tests.js',
-      "require('babel-polyfill');\n" +
-      "require('"+path.resolve(process.env.mocha_entry)+"');\n"
+      file
     );
   }
 
