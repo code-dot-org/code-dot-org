@@ -82,7 +82,7 @@ Resources:
       LoadBalancerName: <%=stack_name%>
       CrossZone: true
       SecurityGroups: [!GetAtt [VPC, ELBSecurityGroup]]
-      Subnets: <%=public_subnets%>
+      Subnets: <%= public_subnets.to_json %>
       LBCookieStickinessPolicy:
         - PolicyName: CookieBasedPolicy
           CookieExpirationPeriod: 30
@@ -125,7 +125,7 @@ Resources:
         SuspendProcesses: [ScheduledActions]
         WaitOnResourceSignals: true
     Properties:
-      VPCZoneIdentifier: <%=subnets%>
+      VPCZoneIdentifier: <%= subnets.first(2).to_json %>
       LaunchConfigurationName: !Ref FrontendLaunchConfig
       MinSize: !GetAtt [ASGCount, MinSize]
       MaxSize: !GetAtt [ASGCount, MaxSize]
@@ -359,7 +359,7 @@ Resources:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
       Description: Geocoder Cache Subnet Group
-      SubnetIds: <%=subnets%>
+      SubnetIds: <%= subnets.to_json %>
   GeocoderGroup:
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
