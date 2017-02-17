@@ -276,7 +276,7 @@ Resources:
       Principal: events.amazonaws.com
       SourceArn: !GetAtt WebServerHookEventRule.Arn
   WebServerHookTopicNew: {Type: 'AWS::SNS::Topic'}
-  <%if environment == :production -%>
+<%  if environment == :production -%>
   ClassroomScaleUp:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
