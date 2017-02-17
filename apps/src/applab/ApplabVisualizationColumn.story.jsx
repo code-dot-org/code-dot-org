@@ -24,7 +24,6 @@ export default function (storybook) {
     isReadOnlyWorkspace: false,
     visualizationHasPadding: true,
     isShareView: false,
-    nonResponsiveVisualizationColumnWidth: 320,
     isIframeEmbed: false,
     hideSource: true,
     playspacePhoneFrame: false,
