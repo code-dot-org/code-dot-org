@@ -1,5 +1,8 @@
 require 'cdo/db'
+require 'cdo/geocoder'
 require 'cdo/properties'
+require 'json'
+require 'securerandom'
 
 class Tutorials
   def initialize(table)
@@ -78,8 +81,6 @@ def zip_code?(code)
   !zip_code_from_code(code).nil?
 end
 
-require 'cdo/geocoder'
-
 def search_for_address(address)
   sleep(0.01)
   Geocoder.search(address).first
@@ -91,9 +92,6 @@ def geocode_address(address)
   return nil unless location.latitude && location.longitude
   "#{location.latitude},#{location.longitude}"
 end
-
-require 'securerandom'
-require 'json'
 
 class Form2 < OpenStruct
   def initialize(params={})
