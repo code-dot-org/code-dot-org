@@ -13,6 +13,7 @@ OUTPUT_JS = "#{REPO_DIR}/apps/src/util/sharedConstants.js"
 def generate_js
   output = "// This is a generated file and SHOULD NOT BE EDITTED MANUALLY!!\n"\
     "// Contents are generated as part of grunt build\n"\
+    "// Source of truth is lib/cdo/shared_constants.rb\n"\
     "\n"\
     "#{generate_level_kind}\n\n"\
     "#{generate_level_status}\n\n"

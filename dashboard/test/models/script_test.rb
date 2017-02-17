@@ -2,6 +2,8 @@ require 'test_helper'
 require 'cdo/shared_constants'
 
 class ScriptTest < ActiveSupport::TestCase
+  include SharedConstants
+
   def setup
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
@@ -415,7 +417,7 @@ class ScriptTest < ActiveSupport::TestCase
       flex_category: "Peer Review",
       levels: [{
         ids: [0],
-        kind: SharedConstants::LEVEL_KIND.peer_review,
+        kind: LEVEL_KIND.peer_review,
         title: "",
         url: "",
         name: "Reviews unavailable at this time",
