@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import StudioAppWrapper from './StudioAppWrapper';
 import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
@@ -48,6 +47,6 @@ const AppView = React.createClass({
 });
 module.exports = connect(state => ({
   hideSource: state.pageConstants.hideSource,
-  isResponsive: isResponsiveFromState(state),
+  isResponsive: true,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
 }))(AppView);

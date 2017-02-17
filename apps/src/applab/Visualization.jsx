@@ -5,7 +5,7 @@ import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import color from "../util/color";
 import VisualizationOverlay from '../templates/VisualizationOverlay';
-import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
+import {VISUALIZATION_DIV_ID} from '../templates/ProtectedVisualizationDiv';
 import * as applabConstants from './constants';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
@@ -101,5 +101,5 @@ export default connect(state => ({
   isRunning: state.runState.isRunning,
   isPaused: state.runState.isDebuggerPaused,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
-  isResponsive: isResponsiveFromState(state)
+  isResponsive: true
 }))(Radium(Visualization));
