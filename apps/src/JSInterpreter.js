@@ -28,6 +28,12 @@ var JSInterpreter = module.exports = function (options) {
 
   /** @type {ObservableEvent} */
   this.onNextStepChanged = new ObservableEvent();
+  this.onNextStepChanged.register(() => {
+    this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+      this.paused,
+      this.nextStep
+    ));
+  });
 
   /** @type {ObservableEvent} */
   this.onPause = new ObservableEvent();
