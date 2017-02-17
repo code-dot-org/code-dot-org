@@ -1,5 +1,5 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
-import CommandHistory from '../../../CommandHistory';
+import CommandHistory from './CommandHistory';
 import constants from '../../../constants';
 import dom from '../../../dom';
 import JSInterpreter from '../../../JSInterpreter';

@@ -11,6 +11,7 @@ ReactDOM.render(
     coursesTaught={landingPageData['courses_teaching']}
     coursesCompleted={landingPageData['courses_completed']}
     lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
+    lastWorkshopSurveyCourse={landingPageData['last_workshop_survey_course']}
   />,
   document.getElementById('landing-page-container')
 );
