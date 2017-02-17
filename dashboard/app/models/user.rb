@@ -27,6 +27,7 @@
 #  user_type                  :string(16)
 #  school                     :string(255)
 #  full_address               :string(1024)
+#  school_info_id             :integer
 #  total_lines                :integer          default(0), not null
 #  prize_earned               :boolean          default(FALSE)
 #  prize_id                   :integer
@@ -54,7 +55,6 @@
 #  invited_by_type            :string(255)
 #  invitations_count          :integer          default(0)
 #  terms_of_service_version   :integer
-#  school_info_id             :integer
 #
 # Indexes
 #

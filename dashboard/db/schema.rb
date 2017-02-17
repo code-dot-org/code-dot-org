@@ -922,6 +922,7 @@ ActiveRecord::Schema.define(version: 20170215183924) do
     t.string   "user_type",                  limit: 16
     t.string   "school"
     t.string   "full_address",               limit: 1024
+    t.integer  "school_info_id"
     t.integer  "total_lines",                              default: 0,       null: false
     t.boolean  "prize_earned",                             default: false
     t.integer  "prize_id"
@@ -949,7 +950,6 @@ ActiveRecord::Schema.define(version: 20170215183924) do
     t.string   "invited_by_type"
     t.integer  "invitations_count",                        default: 0
     t.integer  "terms_of_service_version"
-    t.integer  "school_info_id"
     t.index ["birthday"], name: "index_users_on_birthday", using: :btree
     t.index ["confirmation_token", "deleted_at"], name: "index_users_on_confirmation_token_and_deleted_at", unique: true, using: :btree
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at", using: :btree
