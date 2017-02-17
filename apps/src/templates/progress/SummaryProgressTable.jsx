@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
+import { levelType, lessonType } from './progressTypes';
 
 const lighterBorder = color.border_light_gray;
 
@@ -53,20 +54,15 @@ const styles = {
 
 const SummaryProgressTable = React.createClass({
   propTypes: {
-    lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          status: PropTypes.string.isRequired,
-          url: PropTypes.string.isRequired
-        })
-      )
+      PropTypes.arrayOf(levelType)
     ).isRequired,
   },
 
   render() {
-    const { lessonNames, levelsByLesson } = this.props;
-    if (lessonNames.length !== levelsByLesson.length) {
+    const { lessons, levelsByLesson } = this.props;
+    if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
 
@@ -84,14 +80,14 @@ const SummaryProgressTable = React.createClass({
         </thead>
         <tbody>
           {
-            lessonNames.map((lessonName, index) => (
+            lessons.map((lesson, index) => (
               <tr
                 key={index}
                 style={(index % 2 === 0) ? styles.lightRow : styles.darkRow}
               >
                 <td style={styles.col1}>
                   <div style={styles.colText}>
-                    {`${index + 1}. ${lessonName}`}
+                    {`${index + 1}. ${lesson.name}`}
                   </div>
                 </td>
                 <td style={styles.col2}>

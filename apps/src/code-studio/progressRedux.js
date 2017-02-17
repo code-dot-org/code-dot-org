@@ -212,8 +212,13 @@ export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, i
 // Do we have one or more lockable stages
 export const hasLockableStages = state => state.stages.some(stage => stage.lockable);
 
-export const lessonNames = state => state.stages.map(stage => stage.name);
 export const hasGroups = state => Object.keys(categorizedLessons(state)).length > 1;
+
+const lessonFromStage = stage => ({
+  name: stage.name,
+  id: stage.id
+});
+export const lessons = state => state.stages.map(lessonFromStage);
 
 /**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
@@ -281,16 +286,16 @@ export const categorizedLessons = state => {
 
   state.stages.forEach((stage, index) => {
     const category = stage.flex_category;
-    const lessonName = stage.name;
+    const lesson = lessonFromStage(stage);
     const stageLevels = allLevels[index];
 
     byCategory[category] = byCategory[category] || {
       category,
-      lessonNames: [],
+      lessons: [],
       levels: []
     };
 
-    byCategory[category].lessonNames.push(lessonName);
+    byCategory[category].lessons.push(lesson);
     byCategory[category].levels.push(stageLevels);
   });
 
