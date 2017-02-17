@@ -24,6 +24,8 @@ checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
         parallel: true
+    - ./bin/circle/merge-base:
+        parallel: true
 dependencies:
   pre:
     - ./bin/circle/install-circle-predependencies.sh
