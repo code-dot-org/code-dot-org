@@ -205,6 +205,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={options.onContinue}
+        showStageProgress={experiments.isEnabled('g.stageprogress')}
       />, container);
     return;
   }

@@ -2,33 +2,8 @@
  * A set of utility functions made for dealing with activities easier.
  */
 
-import { makeEnum } from '@cdo/apps/utils';
-
 import { TestResults } from '@cdo/apps/constants';
-
-/**
- * Different possibilites for level.status. Note, these values are also used
- * in dashboard in various places and should not be changed.
- */
-export const LevelStatus = makeEnum(
-  'not_tried',
-  'submitted',
-  'locked',
-  'perfect',
-  'passed',
-  'attempted',
-  'review_accepted',
-  'review_rejected',
-  'dots_disabled'
-);
-
-export const LevelKind = makeEnum(
-  'peer_review',
-  'assessment',
-  'puzzle',
-  'unplugged',
-  'level'
-);
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 /**
  * See ApplicationHelper#activity_css_class.

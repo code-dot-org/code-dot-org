@@ -17,7 +17,7 @@ exports.install = function (blockly, blockInstallOptions) {
     title: isK1 ? msg.get() : msg.collect(),
     titleImage: isK1 ? skin.goal : undefined,
     tooltip: msg.collectorCollectTooltip(),
-    functionName: 'Maze.dig'
+    functionName: 'Maze.collect'
   });
 
   // simplified collector block. For when you want a K1 block in a
@@ -28,7 +28,7 @@ exports.install = function (blockly, blockInstallOptions) {
     title: msg.get(),
     titleImage: skin.goal,
     tooltip: msg.collectorCollectTooltip(),
-    functionName: 'Maze.dig'
+    functionName: 'Maze.collect'
   });
 
   // Block for 'if' conditional if there is a collectible
