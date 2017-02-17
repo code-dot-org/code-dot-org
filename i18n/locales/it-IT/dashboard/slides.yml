@@ -664,7 +664,7 @@ it:
         text: "Hai mai sentito parlare di correzione del codice (debugging) di un programma? E' il modo in cui cerchi di capire cosa non funziona. Quando effettui la correzione del codice, identifichi e rimuovi gli errori."
       2:
         image: 'notes/C2_bee_debugging_2.png'
-        text: "Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Clicca su \"Fai un passo\" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario risolvere un problema."
+        text: "Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Clicca su \"Fai un passo\" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se è necessario correggere un errore."
       3:
         image: 'notes/C2_bee_debugging_3.png'
         text: "Sembra proprio che ci sia un problema! Devi aggiungere un altro blocco \"vai avanti\" (move forward). Il pulsante \"Fai un passo\" ti aiuta ad individuare dove si è verificato l'errore, così da permetterti di correggerlo."
@@ -829,7 +829,7 @@ it:
         text: "Hai mai sentito parlare di correzione del codice (debugging) di un programma? E' il modo in cui cerchi di capire cosa non funziona. Quando effettui la correzione del codice, identifichi e rimuovi gli errori."
       2:
         image: 'notes/C3_debugging_bee_2.png'
-        text: "Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Clicca su \"Fai un passo\" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario risolvere un problema."
+        text: "Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Clicca su \"Fai un passo\" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se è necessario correggere un errore."
       3:
         image: 'notes/C3_debugging_bee_3.png'
         text: "Sembra proprio che ci sia un problema! Devi aggiungere un altro blocco \"vai avanti\" (move forward). Il pulsante \"Fai un passo\" ti aiuta ad individuare dove si è verificato l'errore, così da permetterti di correggerlo."
@@ -1001,7 +1001,7 @@ it:
         text: "Quando usi un blocco \"ripeti … volte\" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco \"ripeti … volte\" in realtà utilizza un blocco più sofisticato detta \"ciclo con contatore\" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito."
       2:
         image: 'notes/C4_for_loops_2.png'
-        text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (counter) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (counter) e usarla nel ciclo."
+        text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (<i>counter</i>) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (<i>counter</i>) e usarla nel ciclo."
       3:
         image: 'notes/C4_for_loops_3.png'
         text: "Il vantaggio di usare un vero \"ciclo con contatore\" (repeat counter times) al posto di un blocco \"ripeti … volte\" sta nel fatto che si può effettivamente vedere la variabile \"contatore\" (counter) e usarla nel ciclo. Per esempio, se ho una fila di fiori e il primo ha una dose di nettare, il secondo ne ha due e il terzo ne ha tre, posso usare il \"ciclo con contatore\" per dire all'ape di raccogliere \"contatore\" dosi di nettare ogni volta, ossia una dose dal primo fiore, due dal secondo e tre dal terzo."
@@ -1014,7 +1014,7 @@ it:
         text: "Quando usi un blocco \"ripeti … volte\" per eseguire più volte una parte del tuo codice, come fa il computer a sapere quando il codice è stato ripetuto a sufficienza? Il blocco \"ripeti … volte\" in realtà utilizza un blocco più sofisticato detta \"ciclo con contatore\" che conta, a partire da un valore iniziale fino ad un valore finale, con un incremento stabilito."
       2:
         image: 'notes/C4_for_loops_bee_2.png'
-        text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (counter) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (counter) e usarla nel ciclo."
+        text: "Per esempio, un blocco \"ripeti 3 volte\" conta da 1 a 3 con un incremento di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il \"ciclo con contatore\" sa quante volte è stato eseguito grazie alla variabile \"contatore\" (<i>counter</i>) che viene impostata al valore iniziale all'inizio del ciclo e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito. Non appena la variabile \"contatore\" diventa più grande del valore finale, il ciclo si arresta. Il vantaggio di usare un \"ciclo con contatore\" al posto di un blocco \"ripeti … volte\" sta nel fatto che si può vedere la variabile \"contatore\" (<i>counter</i>) e usarla nel ciclo."
       3:
         image: 'notes/C4_for_loops_bee_3.png'
         text: "Il vantaggio di usare un vero \"ciclo con contatore\" (repeat counter times) al posto di un blocco \"ripeti … volte\" sta nel fatto che si può effettivamente vedere la variabile \"contatore\" (counter) e usarla nel ciclo. Per esempio, se ho una fila di fiori e il primo ha una dose di nettare, il secondo ne ha due e il terzo ne ha tre, posso usare il \"ciclo con contatore\" per dire all'ape di raccogliere \"contatore\" dosi di nettare ogni volta, ossia una dose dal primo fiore, due dal secondo e tre dal terzo."

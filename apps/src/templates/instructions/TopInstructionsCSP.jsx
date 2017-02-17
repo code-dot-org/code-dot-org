@@ -17,6 +17,7 @@ var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
 var msg = require('@cdo/locale');
 import ContainedLevel from '../ContainedLevel';
+import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -38,13 +39,6 @@ var styles = {
     marginRight: 0,
     marginLeft: 0
   },
-  header: {
-    height: HEADER_HEIGHT,
-    lineHeight: HEADER_HEIGHT + 'px',
-    fontFamily: '"Gotham 4r"',
-    backgroundColor: color.lighter_purple,
-    textAlign: 'center'
-  },
   body: {
     backgroundColor: 'white',
     overflowY: 'scroll',
@@ -59,6 +53,14 @@ var styles = {
   embedView: {
     height: undefined,
     bottom: 0
+  },
+  paneHeaderOverride: {
+    color: color.default_text,
+  },
+  title: {
+    textAlign: 'center',
+    height: HEADER_HEIGHT,
+    lineHeight: HEADER_HEIGHT + 'px'
   }
 };
 
@@ -78,7 +80,8 @@ var TopInstructions = React.createClass({
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired
+    setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
+    documentationUrl: React.PropTypes.string
   },
 
   /**
@@ -155,6 +158,14 @@ var TopInstructions = React.createClass({
     }
   },
 
+  /**
+   * Handle a click on the Documentation PaneButton.
+   */
+  handleDocumentationClick() {
+    const win = window.open(this.props.documentationUrl, '_blank');
+    win.focus();
+  },
+
   render() {
     const mainStyle = [
       styles.main,
@@ -169,17 +180,29 @@ var TopInstructions = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        {!this.props.isEmbedView &&
-          <CollapserIcon
-            collapsed={this.props.collapsed}
-            onClick={this.handleClickCollapser}
-          />}
-        <div style={styles.header}>
-          {msg.puzzleTitle({
-            stage_total: this.props.stageTotal,
-            puzzle_number: this.props.puzzleNumber
-          })}
-        </div>
+        <PaneHeader hasFocus={false}>
+          <div style={styles.paneHeaderOverride}>
+            {this.props.documentationUrl &&
+              <PaneButton
+                iconClass="fa fa-book"
+                label={msg.documentation()}
+                isRtl={false}
+                headerHasFocus={false}
+                onClick={this.handleDocumentationClick}
+              />}
+            {!this.props.isEmbedView &&
+              <CollapserIcon
+                collapsed={this.props.collapsed}
+                onClick={this.handleClickCollapser}
+              />}
+            <div style={styles.title}>
+              {msg.puzzleTitle({
+                stage_total: this.props.stageTotal,
+                puzzle_number: this.props.puzzleNumber
+              })}
+            </div>
+          </div>
+        </PaneHeader>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
             {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
@@ -219,7 +242,8 @@ module.exports = connect(function propsFromStore(state) {
       state.instructions.maxNeededHeight),
     markdown: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
-    collapsed: state.instructions.collapsed
+    collapsed: state.instructions.collapsed,
+    documentationUrl: state.pageConstants.documentationUrl
   };
 }, function propsFromDispatch(dispatch) {
   return {

@@ -420,6 +420,9 @@ en:
       4.1 - 4.4 Lesson Connections: {}
       4.5 - 4.7 Lesson Connections: {}
       4.8 - 4.9 Lesson Connections: {}
+      5.1 - 5.3 Lesson Connections: {}
+      5.11 - 5.14 Lesson Connections: {}
+      5.4 - 5.6 Lesson Connections: {}
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
@@ -441,6 +444,7 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      Arrays Overview: {}
       Assessing Student Learning in Unit 1: {}
       Assessing Student Learning in Unit 2: {}
       Assessing Student Learning in Unit 4: {}
@@ -471,6 +475,8 @@ en:
       CSD Design Instructions Site: {}
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
+      'CSD Map: Timed For Loop': {}
+      'CSD Map: Timed Loop': {}
       CSD Recipe Stop: {}
       'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
@@ -596,11 +602,14 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      'CSD: Accessing List Items': {}
       'CSD: Creating Variables In App Lab': {}
       'CSD: Dropdown & Conditionals': {}
+      'CSD: List Length': {}
       'CSD: Lists': {}
       'CSD: Review Events': {}
       'CSD: colorLed list': {}
+      'CSD: getText vs getNumber': {}
       'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Pick Elements Styled: {}
@@ -617,6 +626,7 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 - timed loop stop board: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Journal Entry Placeholder:
@@ -926,6 +936,7 @@ en:
         description here: description here
         title: title
       Common Misconceptions about Functions: {}
+      Conditionals Overview: {}
       Conditions and Logic: {}
       Controlling Memory - Other ways to assign values:
         description here: description here
@@ -940,6 +951,7 @@ en:
       Debugging with Console.log:
         description here: description here
         title: title
+      Design Mode Overview: {}
       Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
@@ -962,6 +974,8 @@ en:
       Digital Footprint instantframe wiz_kid_liz:
         description here: description here
         title: title
+      DigitalCitizenship2:
+        Digital Citizenship: Digital Citizenship
       Discovery Learning in Unit 1: {}
       Documentation in App Lab: {}
       Downloading the Data Set: {}
@@ -1341,6 +1355,7 @@ en:
       Event-Driven Programming Patterns:
         description here: description here
         title: title
+      Events Overview: {}
       Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
@@ -1750,6 +1765,10 @@ en:
       Prepare for your presentation:
         description here: description here
         title: title
+      Processing Arrays: {}
+      'Project Breakdown: Color Sleuth': {}
+      'Project Breakdown: Image Scroller': {}
+      'Project Breakdown: Multi-Screen App': {}
       Public Key Crypto Widget Instructions:
         description here: description here
         title: title
@@ -2435,6 +2454,7 @@ en:
       'Variable Scope: Local vs. Global':
         U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
         description here: description here
+      Variables Overview: {}
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
@@ -2444,6 +2464,7 @@ en:
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
+      While Loops Overview: {}
       Why Teach Number Systems?: {}
       'Worked Example: If-statements and Robot':
         description here: description here
@@ -2451,6 +2472,7 @@ en:
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
+      boolean logic and expressions overview: {}
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -2567,9 +2589,7 @@ en:
       courseD_external_binary1:
         Binary Drawing: Binary Drawing
       courseF_external_variableConstant: {}
-      coursee-privateandpersonalinformation:
-        description here: description here
-        title: title
+      coursee-privateandpersonalinformation: {}
       coursef_powerofwords:
         description here: description here
         title: title
@@ -2620,6 +2640,7 @@ en:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
       final practice pt vs. explore pt: {}
+      functions that return values: {}
       grade1_activity_frustration:
         Dealing with Frustration: Dealing with Frustration
       grade1_activity_groupTower:
@@ -2699,6 +2720,8 @@ en:
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
+      'project breakdown: canvas painter': {}
+      'project breakdown: clicker game': {}
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -2978,6 +3001,7 @@ en:
         bee leaves: bee leaves
       storyline5:
         wrapup: wrapup
+      strings overview: {}
       test cb level:
         description here: description here
         test cb level: test cb level
@@ -3352,6 +3376,15 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
+      'CSD: Variables Matching':
+        "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)": "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)"
+        "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)": "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)"
+        "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)": "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)"
+        <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">: <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">
+        Program 1: Program 1
+        Program 2: Program 2
+        Program 3: Program 3
+        Program 4: Program 4
       CSDU2 Match RGB Colors:
         Question: Question
         'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
@@ -4556,6 +4589,20 @@ en:
         Contact Us: Contact Us
         Use It: Use It
         Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
+      CSDU6 - timed loop predict counter multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        How many times with the word 'looped' be printed in the console?: How many times with the word 'looped' be printed in the console?
+        inifinite: inifinite
+      CSDU6 - timed loop question for:
+        The button background will be violet: The button background will be violet
+        The button background will change to each of the colors in the list: The button background will change to each of the colors in the list
+        The button background will not change: The button background will not change
+        The button will change background color each time it is clicked: The button will change background color each time it is clicked
+        When you run this code, what will you see?: When you run this code, what will you see?
       CSDU6 LED predict multi:
         Alternate between on and off each click: Alternate between on and off each click
         Blink on and off randomly: Blink on and off randomly

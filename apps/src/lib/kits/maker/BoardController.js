@@ -12,7 +12,9 @@ import PlaygroundIO from 'playground-io';
 
 import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
+import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 import TouchSensor from './TouchSensor';
+import Piezo from './Piezo';
 
 /** @const {string} */
 const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -86,7 +88,7 @@ export default class BoardController {
     }
 
     this.prewiredComponents = _.assign({},
-        initializeCircuitPlaygroundComponents(),
+        initializeCircuitPlaygroundComponents(this.board_),
         {board: this.board_},
         J5_CONSTANTS);
   }
@@ -102,7 +104,7 @@ export default class BoardController {
       RGB: five.Led.RGB,
       Button: five.Button,
       Switch: five.Switch,
-      Piezo: five.Piezo,
+      Piezo,
       Thermometer: five.Thermometer,
       Sensor: five.Sensor,
       Pin: five.Pin,
@@ -132,10 +134,9 @@ export default class BoardController {
     if (!this.board_) {
       return;
     }
-    // TouchSensors aren't in board_.register because they are our own wrapper
-    // around TouchPad, but we still need to reset them.
-    const touchSensors = _.filter(this.prewiredComponents, c => c instanceof TouchSensor);
-    this.board_.register.concat(touchSensors).forEach(BoardController.resetComponent);
+    this.board_.io.reset();
+    this.board_ = null;
+    this.prewiredComponents = null;
   }
 
   pinMode(pin, modeConstant) {
@@ -159,9 +160,9 @@ export default class BoardController {
   }
 
   onBoardEvent(component, event, callback) {
-    // TODO (bbuchanan): Add accelerometer events for "singletap" and "doubletap" that map to
-    // subsets of the "tap" event
-    // https://docs.google.com/document/d/1VuDefx4wijBkyiap-36qpfCAoNEzu5B7yLldhhhuv7U/edit#bookmark=id.daat8jt8eda8
+    if (BOARD_EVENT_ALIASES[event]) {
+      event = BOARD_EVENT_ALIASES[event];
+    }
     component.on(event, callback);
   }
 
@@ -174,14 +175,19 @@ export default class BoardController {
       const serialPort = new ChromeSerialPort.SerialPort(portId, {
         bitrate: SERIAL_BAUD
       }, true);
-      const io = new PlaygroundIO({
-        port: serialPort,
-        // Circuit Playground Firmata does not seem to proactively report its
-        // version, meaning we were hitting the default 5000ms timeout waiting
-        // for this on every connection attempt.  Lowering that timeout to
-        // 200ms seems to work just fine.
-        reportVersionTimeout: 200
+      const io = new PlaygroundIO({ port: serialPort });
+
+      // Circuit Playground Firmata does not seem to proactively report its
+      // version, meaning we were hitting the default 5000ms timeout waiting
+      // for this on every connection attempt.
+      // Here we explicitly request a version as soon as the serialport is open
+      // to speed up the connection process.
+      io.on("open", function () {
+        // Requesting the version requires both of these calls. ¯\_(ツ)_/¯
+        io.reportVersion(function () {});
+        io.queryFirmware(function () {});
       });
+
       const board = new five.Board({io: io, repl: false});
       board.once('ready', () => resolve(board));
       board.once('error', reject);

@@ -975,12 +975,8 @@ class User < ActiveRecord::Base
           ScriptConstants::COURSE3_NAME,
           ScriptConstants::COURSE4_NAME
         ].include? Script.get_from_cache(script_id).name) &&
-        HintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty? &&
-        AuthoredHintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty?
+        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
@@ -1021,7 +1017,7 @@ class User < ActiveRecord::Base
     if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
       learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
 
-      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user: self, plc_learning_module: learning_module)
+      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
         PeerReview.create_for_submission(user_level, level_source_id)
       end
     end

@@ -1,8 +1,11 @@
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';
 import commonBlocks from '@cdo/apps/blocksCommon';
+import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/DropletPaletteSelector';
 
 const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.
@@ -64,12 +67,25 @@ Object.keys(fieldConfig).forEach(key => {
     return;
   }
   const mode = config.codemirrorMode || (data.uses_droplet ? 'javascript' : 'xml');
-  const editor = initializeCodeMirror(config.codemirror, mode);
+  config.editor = initializeCodeMirror(config.codemirror, mode);
   if (config.blockPreview && !data.uses_droplet) {
-    initializeBlockPreview(editor, document.getElementById(config.blockPreview));
+    initializeBlockPreview(config.editor, document.getElementById(config.blockPreview));
   }
 });
 
 $("#plusanswer").on("click", () => {
   $("#plusanswer").prev().clone().insertBefore("#plusanswer");
 });
+
+
+if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
+  ReactDOM.render(
+    <DropletPaletteSelector
+      palette={data.original_palette}
+      editor={fieldConfig.codeFunctions.editor}
+    />,
+    $('<div></div>')
+      .insertAfter(`label[for="${fieldConfig.codeFunctions.codemirror}"]`)
+      .get(0)
+  );
+}

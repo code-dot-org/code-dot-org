@@ -27,7 +27,7 @@ import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
 import JSInterpreter from '../JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
-import JsDebuggerUi from '../JsDebuggerUi';
+import JsDebuggerUi from '@cdo/apps/lib/tools/jsdebugger/JsDebuggerUi';
 import * as elementUtils from './designElements/elementUtils';
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
@@ -46,6 +46,7 @@ const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
 import BoardController from '../lib/kits/maker/BoardController';
+import {injectBoardController} from '../lib/kits/maker/commands';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {
   getContainedLevelResultInfo,
@@ -56,7 +57,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {
   outputError,
   injectErrorHandler
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var project = require('@cdo/apps/code-studio/initApp/project');
 
@@ -147,6 +148,7 @@ function loadLevel() {
 
   if (level.makerlabEnabled) {
     Applab.makerController = new BoardController();
+    injectBoardController(Applab.makerController);
   }
 }
 
@@ -665,8 +667,8 @@ Applab.init = function (config) {
   config.afterClearPuzzle = function () {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    Applab.storage.populateTable(level.dataTables, true); // overwrite = true
-    Applab.storage.populateKeyValue(level.dataProperties, true); // overwrite = true
+    Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
+    Applab.storage.populateKeyValue(level.dataProperties, true, () => {}, outputError); // overwrite = true
     studioApp.resetButtonClick();
   };
 
@@ -709,23 +711,20 @@ Applab.init = function (config) {
   // to starting code by levelbuilders will be shown.
   config.ignoreLastAttempt = config.embed;
 
+  // Print any json parsing errors to the applab debug console and the browser debug
+  // console. If a json parse error is thrown before the applab debug console
+  // initializes, the error will be printed only to the browser debug console.
   if (level.dataTables) {
-    Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+    Applab.storage.populateTable(level.dataTables, false, () => {}, outputError); // overwrite = false
   }
   if (level.dataProperties) {
-    Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+    Applab.storage.populateKeyValue(level.dataProperties, false, () => {}, outputError); // overwrite = false
   }
 
   Applab.handleVersionHistory = studioApp.getVersionHistoryHandler(config);
 
   var onMount = function () {
     studioApp.init(config);
-
-    if (debuggerUi) {
-      debuggerUi.initializeAfterDomCreated({
-        defaultStepSpeed: config.level.sliderSpeed
-      });
-    }
 
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -782,7 +781,8 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers')
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
+    debuggerUi,
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -978,6 +978,10 @@ Applab.reset = function () {
   var divApplab = document.getElementById('divApplab');
   while (divApplab.firstChild) {
     divApplab.removeChild(divApplab.firstChild);
+  }
+
+  if (studioApp.cdoSounds) {
+    studioApp.cdoSounds.stopAllAudio();
   }
 
   // Clone and replace divApplab (this removes all attached event listeners):

@@ -6,41 +6,6 @@
   "user_id": 106,
   "properties": {
     "skin": "gamelab",
-    "code_functions": {
-      "drawSprites": null,
-      "var sprite = createSprite": {
-        "params": [
-          "200",
-          "200"
-        ],
-        "paletteParams": [
-          "x",
-          "y"
-        ]
-      },
-      "setAnimation": null,
-      "x": null,
-      "y": null,
-      "sprite.width": null,
-      "sprite.height": null,
-      "shapeColor": null,
-      "background": null,
-      "comment": null,
-      "rect": null,
-      "fill": null,
-      "draw": null,
-      "color": null,
-      "stroke": null,
-      "noStroke": null,
-      "noFill": null,
-      "ellipse": null,
-      "text": null,
-      "textSize": null,
-      "textAlign": null,
-      "randomNumber_min_max": null,
-      "addOperator": null,
-      "subtractOperator": null
-    },
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
@@ -74,6 +39,8 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
     "contained_level_names": null
   },
   "published": true,

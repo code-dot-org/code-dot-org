@@ -22,6 +22,14 @@ export const LevelStatus = makeEnum(
   'dots_disabled'
 );
 
+export const LevelKind = makeEnum(
+  'peer_review',
+  'assessment',
+  'puzzle',
+  'unplugged',
+  'level'
+);
+
 /**
  * See ApplicationHelper#activity_css_class.
  * @param result

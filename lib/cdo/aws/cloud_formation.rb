@@ -36,6 +36,7 @@ module AWS
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
+    AVAILABILITY_ZONES = ('b'..'e').map{|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
     LOG_NAME = '/var/log/bootstrap.log'
@@ -289,8 +290,7 @@ module AWS
       def render_template(dry_run: false)
         filename = aws_dir('cloudformation', TEMPLATE)
         template_string = File.read(filename)
-        availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
-        azs = availability_zones.map { |zone| zone[-1].upcase }
+        azs = AVAILABILITY_ZONES.map { |zone| zone[-1].upcase }
         @@local_variables = OpenStruct.new(
           dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
@@ -308,8 +308,8 @@ module AWS
           subdomain: fqdn,
           studio_subdomain: studio_fqdn,
           cname: cname,
-          availability_zone: availability_zones.first,
-          availability_zones: availability_zones,
+          availability_zone: AVAILABILITY_ZONES.first,
+          availability_zones: AVAILABILITY_ZONES,
           azs: azs,
           s3_bucket: S3_BUCKET,
           file: method(:file),

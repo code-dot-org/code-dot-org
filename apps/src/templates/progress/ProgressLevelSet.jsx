@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import { levelType } from './progressTypes';
 
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
+import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 const styles = {
   table: {
@@ -85,6 +85,26 @@ const ProgressLevelSet = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired
   },
 
+  getIcon() {
+    const { levels } = this.props;
+    const level = levels[0];
+
+    // TODO - Once we know what locked levels and peer reviews are going to look
+    // like in the redesign, we'll need add logic for those here.
+
+    if (level.icon) {
+      // Eventually I'd like to have dashboard return an icon type. For now, I'm just
+      // going to treat the css class it sends as a type, and map it to an icon name.
+      const match = /fa-(.*)/.exec(level.icon);
+      if (!match || !match[1]) {
+        throw new Error('Unknown iconType: ' + level.icon);
+      }
+      return match[1];
+    }
+
+    return 'desktop';
+  },
+
   render() {
     const { name, levels, start } = this.props;
 
@@ -92,9 +112,6 @@ const ProgressLevelSet = React.createClass({
     const status = multiLevelStep ? 'multi_level' : levels[0].status;
 
     const url = levels[0].url;
-
-    // TODO - dont have this be hardcoded/get icons right
-    const icon = "file-text-o";
 
     const lastStep = start + levels.length - 1;
     let levelNumber = start;
@@ -107,9 +124,9 @@ const ProgressLevelSet = React.createClass({
         <tbody>
           <tr>
             <td>
-              <a href={url}>
+              <a href={multiLevelStep ? undefined : url}>
                 <div style={{...styles.stepButton, ...BUBBLE_COLORS[status]}}>
-                  <FontAwesome icon={icon}/>
+                  <FontAwesome icon={this.getIcon()}/>
                   <div style={{...styles.buttonText, ...styles.text}}>
                     {i18n.levelN({levelNumber})}
                   </div>

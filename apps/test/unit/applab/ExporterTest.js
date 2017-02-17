@@ -24,13 +24,13 @@ a.third-rule {
 
 const NEW_APPLAB_CSS_CONTENT = `
 .some-css-rule {
-  background-image: url("applab/assets/blockly/media/foo.png");
+  background-image: url("assets/blockly/media/foo.png");
 }
 #some-other-rule {
-  background-image: url("applab/assets/blockly/media/bar.jpg");
+  background-image: url("assets/blockly/media/bar.jpg");
 }
 a.third-rule {
-  background-image: url("applab/assets/blockly/media/third.jpg");
+  background-image: url("assets/blockly/media/third.jpg");
 }
 `;
 
@@ -321,7 +321,7 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/style.css');
         assert.include(
           zipFiles['my-app/style.css'],
-          '#divApplab #clickMeButton {\n' +
+          '#divApplab.appModern #clickMeButton {\n' +
           '  background-color: red;\n' +
           '}'
         );
