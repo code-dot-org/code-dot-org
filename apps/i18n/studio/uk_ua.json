@@ -574,6 +574,8 @@
   "setScoreText": "встановити рахунок",
   "setScoreTextTooltip": "Задає текст, який буде відображатися в області балів.",
   "setScoreTooltip": "Встановлює бал гравця у вказане значення",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "у зображення Менні",
   "setSpriteSid": "у зображення Сіда",
   "setSpriteGranny": "у зображення Бабуні",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "до дуже високої швидкості",
   "setSpriteSpeedTooltip": "Встановлює швидкість персонажа",
   "setSpriteZombie": "у зображення зомбі",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Всі вказані персонажі переслідують інших",
   "setSpritesFleeTooltip": "Всі вказані персонажі втікають від інших",
   "setSpritesStopTooltip": "Всі вказані персонажі припиняють блукати, переслідувати чи втікати",
@@ -671,6 +674,7 @@
   "showTSDefText": "надрукуйте тут текст",
   "showTitleScreenTooltip": "Показати титульний екран з відповідним заголовком і текстом.",
   "size": "розмір",
+  "setActor": "set actor",
   "setDroid": "встановити дроїд",
   "setDroidHidden": "у прихований",
   "setDroidRandom": "у випадковий",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Вітання, додано код створення Дроїдів-Мишей. Можна перейти до наступного рівня, коли збереш 20 Дроїдів-Мишей. Спробуй полегшити задачу, додаючи їх більшу кількість! (Натискай та утримуй клавіші на клавіатурі чи екрані, щоб рухатися швидше.)",
   "failedChangeSettingTimeout": "Дістанься до трьох Пілотів повстанців, щоб рухатися далі.",
   "failedChangeSettingSettings": "Створи власну гру. Щоб пройти цей рівень потрібно змінити дроїда та задати його швидкість.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

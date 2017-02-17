@@ -14,6 +14,7 @@ import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
 import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 import TouchSensor from './TouchSensor';
+import Piezo from './Piezo';
 
 /** @const {string} */
 const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
@@ -39,7 +40,7 @@ export default class BoardController {
 
   connectAndInitialize(codegen, interpreter) {
     return this.ensureBoardConnected()
-        .then(this.ensureAppInstalled())
+        .then(BoardController.ensureAppInstalled())
         .then(this.ensureComponentsInitialized.bind(this))
         .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
   }
@@ -49,7 +50,7 @@ export default class BoardController {
         .then(this.ensureComponentsInitialized.bind(this));
   }
 
-  ensureAppInstalled() {
+  static ensureAppInstalled() {
     return new Promise((resolve, reject) => {
       ChromeSerialPort.isInstalled(function (error) {
         if (error) {
@@ -72,7 +73,7 @@ export default class BoardController {
         return;
       }
 
-      this.connect()
+      BoardController.connect()
           .then(board => {
             this.board_ = board;
             resolve();
@@ -87,7 +88,7 @@ export default class BoardController {
     }
 
     this.prewiredComponents = _.assign({},
-        initializeCircuitPlaygroundComponents(),
+        initializeCircuitPlaygroundComponents(this.board_),
         {board: this.board_},
         J5_CONSTANTS);
   }
@@ -103,7 +104,7 @@ export default class BoardController {
       RGB: five.Led.RGB,
       Button: five.Button,
       Switch: five.Switch,
-      Piezo: five.Piezo,
+      Piezo,
       Thermometer: five.Thermometer,
       Sensor: five.Sensor,
       Pin: five.Pin,
@@ -133,10 +134,9 @@ export default class BoardController {
     if (!this.board_) {
       return;
     }
-    // TouchSensors aren't in board_.register because they are our own wrapper
-    // around TouchPad, but we still need to reset them.
-    const touchSensors = _.filter(this.prewiredComponents, c => c instanceof TouchSensor);
-    this.board_.register.concat(touchSensors).forEach(BoardController.resetComponent);
+    this.board_.io.reset();
+    this.board_ = null;
+    this.prewiredComponents = null;
   }
 
   pinMode(pin, modeConstant) {
@@ -166,13 +166,14 @@ export default class BoardController {
     component.on(event, callback);
   }
 
-  connect() {
-    return BoardController.getDevicePort().then(port => this.connectToBoard(port));
+  static connect() {
+    return BoardController.getDevicePortName()
+        .then(BoardController.connectToBoard);
   }
 
-  connectToBoard(portId) {
+  static connectToBoard(portName) {
     return new Promise((resolve, reject) => {
-      const serialPort = new ChromeSerialPort.SerialPort(portId, {
+      const serialPort = new ChromeSerialPort.SerialPort(portName, {
         bitrate: SERIAL_BAUD
       }, true);
       const io = new PlaygroundIO({ port: serialPort });
@@ -194,33 +195,7 @@ export default class BoardController {
     });
   }
 
-  static resetComponent(component) {
-    try {
-      if (component.state && component.state.intervalId) {
-        clearInterval(component.state.intervalId);
-      } else if (component.state && component.state.interval) {
-        clearInterval(component.state.interval);
-      }
-      if (component.stop) {
-        component.stop();
-      }
-      if (component.off) {
-        component.off();
-      }
-      if (component.threshold) {
-        // Reset sensor thresholds to 1.0 in case changed.
-        component.threshold = 1;
-      }
-      if (component.removeAllListeners) {
-        component.removeAllListeners();
-      }
-    } catch (error) {
-      console.log('Error trying to cleanup component', error);
-      console.log(component);
-    }
-  }
-
-  static getDevicePort() {
+  static getDevicePortName() {
     return new Promise((resolve, reject) => {
       ChromeSerialPort.list((error, list) => {
         if (error) {
@@ -249,5 +224,5 @@ export default class BoardController {
 
 BoardController.__testonly__ = {
   deviceOnPortAppearsUsable: BoardController.deviceOnPortAppearsUsable,
-  getDevicePort: BoardController.getDevicePort
+  getDevicePort: BoardController.getDevicePortName
 };

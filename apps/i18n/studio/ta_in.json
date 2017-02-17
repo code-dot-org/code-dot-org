@@ -10,7 +10,7 @@
   "addPoints50": "50 புள்ளிகளைச் சேர்",
   "addPoints100": "100 புள்ளிகள் சேர்",
   "addPoints300": "300 புள்ளிகளைச் சேர்",
-  "addPoints1000": "add 1000 points",
+  "addPoints1000": "100 புள்ளிகள் சேர்",
   "addPointsTooltip": "Add points to the score.",
   "alien": "வேற்றுகிரகத்துவாசி",
   "alienInvasion": "Alien Invasion!",
@@ -574,6 +574,8 @@
   "setScoreText": "set score",
   "setScoreTextTooltip": "Sets the text to be displayed in the score area.",
   "setScoreTooltip": "Sets the player's score to the specified amount",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "to a Manny image",
   "setSpriteSid": "to a Sid image",
   "setSpriteGranny": "to a Granny image",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "to a very fast speed",
   "setSpriteSpeedTooltip": "Sets the speed of an actor",
   "setSpriteZombie": "to a zombie image",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Makes all the selected actors chase another actor",
   "setSpritesFleeTooltip": "Makes all the selected actors flee from another actor",
   "setSpritesStopTooltip": "Makes all the selected actors stop wandering, chasing, or fleeing",
@@ -671,6 +674,7 @@
   "showTSDefText": "type text here",
   "showTitleScreenTooltip": "Show a title screen with the associated title and text.",
   "size": "size",
+  "setActor": "set actor",
   "setDroid": "set droid",
   "setDroidHidden": "to hidden",
   "setDroidRandom": "to random",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Get three Rebel Pilots to move on.",
   "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

@@ -574,6 +574,8 @@
   "setScoreText": "taškai =",
   "setScoreTextTooltip": "Kokį tekstą rodyti šalia taškų.",
   "setScoreTooltip": "Nustato žaidėjo pasiektą rezultatą į nurodytą reikšmę",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "į vaizdą „Manny“",
   "setSpriteSid": "į vaizdą „Sid“",
   "setSpriteGranny": "į vaizdą „močiutė“",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "greitis = labai didelis",
   "setSpriteSpeedTooltip": "Nustato veikėjo greitį",
   "setSpriteZombie": "išvaizda = zombis",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Priverčia visus pažymėtus aktorius persekioti kitą aktorių",
   "setSpritesFleeTooltip": "Priverčia visus pažymėtus aktorius bėgti nuo kito aktoriaus",
   "setSpritesStopTooltip": "Priverčia visus pažymėtus aktorius nustoti klajoti, persekioti arba bėgti nuo",
@@ -671,6 +674,7 @@
   "showTSDefText": "įrašykite tekstą",
   "showTitleScreenTooltip": "Parodyti pradinį ekraną su pavadinimu ir tekstu.",
   "size": "dydis",
+  "setActor": "set actor",
   "setDroid": "nustatyk robotą",
   "setDroidHidden": "į paslėptą",
   "setDroidRandom": "į atsitiktinį",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Sveikiname, tu sukūrei kodą Pelėms Droidams pagaminti. Gali pereiti prie kito galvosūkio arba pamėginti dar kartą, kad gautum 20 Pelių Droidų. Pamėgink lengviau – pradėk su didesniu Pelių Droidų skaičiumi. (Nuspausk ir laikyk klavišus savo klaviatūroje (arba ekrane), kad judėtum greičiau.)",
   "failedChangeSettingTimeout": "Pagauk 3 Sukilimo Pilotus.",
   "failedChangeSettingSettings": "Pasidaryk žaidimą pagal save! Kad išspręstum šį galvosūkį, tau reikia pakeisti savo robotą ir nustatyti jo greitį.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

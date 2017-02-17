@@ -25,10 +25,10 @@ az:
           future: gələcəkdə ola bilməz
   hello: "Salam, dünya"
   welcome_back: "Bir daha xoş gəldiniz, %{name}"
-  your_professional_learning_plan: "Your Professional Learning Plan"
-  see_your_learning_plan: "See your learning plan"
+  your_professional_learning_plan: "Sizin peşəkar öyrənmə planınız"
+  see_your_learning_plan: "Öyrənmə planınıza baxın"
   submit: Göndər
-  unsubmit: Unsubmit
+  unsubmit: Abunə olmamaq
   previous_page: Əvvəlki səhifə
   next_page: Növbəti səhifə
   next_resource: Növbəti resurs
@@ -86,7 +86,7 @@ az:
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Təhsil işçisi üçün göstərişlərə baxın'
-    title: "Sign up for Code.org"
+    title: "Code.org da qeydiyyatdan keçin"
     school_name: 'Məktəbin Adı (vacib deyil)'
     school_address: 'Məktəbin ünvanı (vacib deyil)'
     address_placeholder: 'ünvan, şəhər, vilayət, poçt indeksi'
@@ -128,10 +128,11 @@ az:
     login: 'Daxil olun'
     invalid_login: 'Invalid login, please try again'
     pair_programming: 'I have a partner at my computer'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Parolunuzu unutmusunuz?'
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: "Aşağıda e-mail adresinizi daxil edin və biz sizə qurulmanı sıfırlamaq üçün şifrə göndərəcəyik."
       email: 'E-poçt ünvanı'
       submit: 'Göndər'
     change_form:
@@ -159,7 +160,7 @@ az:
       username_in_use: '%{username} artıq istifadə olunur, zəhmət olmasa, digərini seçin'
       no_teacher: "'%{teacher_email_or_code}' ilə daxil olan heç kim tapılmadı. Zəhmət olmasa, onlardan burada qeydiyyatdan keçməyi xahiş edin və sonra onları yenidən əlavə etməyə çalışın"
       section_not_found: "Could not find a section with code '%{section_code}'."
-      blank_code: "Please enter a section code"
+      blank_code: "Seçilmiş kodu daxil edin"
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
       invite_student:
@@ -237,7 +238,7 @@ az:
       sign_in_to_save: 'Nəticələri itirməmək üçün daxil olun'
       free_play:
         playlab: 'Make a Play Lab app'
-        artist: 'Draw something'
+        artist: 'Nə isə çəkin'
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
     user:
@@ -249,7 +250,7 @@ az:
       prizes: 'Mükafatlar'
       logout: 'Çıxın'
       signin: 'Daxil olun'
-      signup: 'Create an account'
+      signup: 'Hesab yaradın'
       already_registered: 'Artıq qeydiyyatdan keçmisiniz?'
       pair_programming: 'Pair Programming'
       team: 'Komanda'
@@ -288,9 +289,9 @@ az:
       example: 'Example Solution'
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: 'Submitted on:'
-      unsubmit: 'Unsubmit'
-      worked_with: 'Worked With'
-      update_lock_settings: 'Update lock settings here.'
+      unsubmit: 'Abunə olmamaq'
+      worked_with: 'Ilə işlədi'
+      update_lock_settings: 'Kilid parametrlərini buradan yeniləyin.'
       clear_response: 'Clear response'
   user:
     email_confirm_needed: 'E-poçt ünvanı təsdiqlənməyib:'
@@ -336,7 +337,7 @@ az:
     see_details: Təfərrüatına baxın
     view_course: Kursu göstər
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
-    tryfirst: 'Or, you can try it first, and sign up later:'
+    tryfirst: 'Yada, siz birinci dəfə üçün yoxlayın, və sonra qeydiyyatdan keçin:'
     trynow: 'Elə indi sınaqdan keçirin'
     add_hint_help: 'Please help us to add smart hints to Code.org tutorials'
     20hour_overview: 'Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.'
@@ -345,11 +346,11 @@ az:
     use_as_teacher: 'Saytı müəllim olaraq istifadə edin'
     heading_hoc2014: "<h2>Kod Saatı</h2><h1>Bütün yaşlar üçün</h1>"
     heading_elementary: "<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar) üçün</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
+    heading_apps: "<h2>Əyləncə üçün</h2><h1>Hərkəs</h1>"
+    heading_tools: "<h2>Növbəti addım üçün hazırsan?</h2><h1> Universitet üçün JavaScript alətləri</h1>"
     heading_legacy: "<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>"
     your_gallery: Qalereya
-    no_primary_course: "Try a Code Studio course"
+    no_primary_course: "Code Studiosu kursunu yoxla"
     choose_next_course: "Try a Code Studio course by choosing one below"
     print_certificate: "Sertifikatı çap edin"
     announcement_title: "Elanlar"
@@ -367,6 +368,9 @@ az:
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_not_entered: "Please provide current_section_code."
@@ -524,6 +528,9 @@ az:
     support: "Kömək istə"
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Yanlış cavab"
     wrong_body: "Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!"
@@ -736,6 +743,8 @@ az:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

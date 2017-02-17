@@ -574,6 +574,8 @@
   "setScoreText": "Pontszám beállítása",
   "setScoreTextTooltip": "Beállítja a pontszám mezőben megjelenő szöveget.",
   "setScoreTooltip": "Beállítja egy játékos pontszámát egy adott értékre",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "Manny-vé",
   "setSpriteSid": "Siddé",
   "setSpriteGranny": "Granny-vé",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "nagyon gyors sebességre",
   "setSpriteSpeedTooltip": "A szereplő sebességének beállítása",
   "setSpriteZombie": "zombivá",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "A kiválasztott szereplők üldözzenek egy másik szereplőt",
   "setSpritesFleeTooltip": "A kiválasztott szereplők meneküljenek egy másik szereplőtől",
   "setSpritesStopTooltip": "A kiválasztott szereplők hagyják abba a kalandozást, üldözést vagy menekülést",
@@ -671,6 +674,7 @@
   "showTSDefText": "ide írd a szöveget",
   "showTitleScreenTooltip": "Mutasd a képernyő címét a kapcsolódó címmel és szöveggel.",
   "size": "méret",
+  "setActor": "set actor",
   "setDroid": "droid beállítása",
   "setDroidHidden": "rejtettre",
   "setDroidRandom": "véletlenszerűre",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Gratulálok, készítettél kódot Egér Droidok készítésére. Mehetsz a következő feladványra, vagy megpróbálhatsz ismét 20 Egér Droidot elkapni. Próbáld egyszerűbbé tenni több hozzáadásával! (Tartsd lenyomva a nyilakat a billentyűzeten vagy képernyőn a gyorsabb mozgáshoz)",
   "failedChangeSettingTimeout": "Három Lázadót kell elkapnod a továbbjutáshoz.",
   "failedChangeSettingSettings": "Készítsd el a saját játékod. Hogy továbbléphess ezen a feladványon, meg kell változtatnod a droidodat és beállítanod a sebességét.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }
