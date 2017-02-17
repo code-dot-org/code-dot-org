@@ -756,7 +756,7 @@ export function saveAnimations(onComplete) {
  * @param {AnimationProps} animationProps
  * @return {Promise} which resolves to a redux action object
  */
-function saveAnimation(animationKey, animationProps) {
+export function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
 
@@ -785,6 +785,7 @@ function saveAnimation(animationKey, animationProps) {
     xhr.addEventListener('load', onSuccess);
     xhr.addEventListener('error', onError);
     xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
+    xhr.setRequestHeader("Content-type", "image/png");
     xhr.send(animationProps.blob);
   });
 }

@@ -33,6 +33,7 @@ en:
     attributes:
       user:
         name: 'Display Name'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Email'
         username: 'Username'
         password: 'Password'
@@ -135,6 +136,7 @@ en:
   signin_form:
     title: 'Have an account already? Sign in'
     login: 'Email'
+    login_username: 'Email or Username'
     password: 'Password'
     remember: 'Remember me'
     submit: 'Sign in'
@@ -428,7 +430,7 @@ en:
     copyright: 'Copyright'
     more: 'More'
     feedback: 'Provide feedback'
-    translate: 'Help us translate to your language'
+    translate: 'Volunteer to translate our content'
     support: 'Support'
     support_url: 'http://support.code.org'
     tos_short: 'Terms'
@@ -457,6 +459,10 @@ en:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
       link: "Learn more"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
   next_stage: 'Finished! Continue to next stage'
@@ -552,6 +558,8 @@ en:
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
     help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"

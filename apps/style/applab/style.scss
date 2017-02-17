@@ -490,3 +490,18 @@ div#visualizationResizeBar {
   width: 24px;
   margin: 0px;
 }
+
+/*
+ * Reposition the bottom and right click targets to keep them from overlapping with
+ * the bottom-right resize handle. Also increase the effective size of the bottom and
+ * right click targets by making them overlap more with the wrapper.
+ */
+
+#designModeViz .ui-resizable-e {
+  height: calc(100% - 12px);
+  right: 0;
+}
+#designModeViz .ui-resizable-s {
+  width: calc(100% - 12px);
+  bottom: 0;
+}
