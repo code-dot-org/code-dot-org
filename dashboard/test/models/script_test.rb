@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class ScriptTest < ActiveSupport::TestCase
   def setup
@@ -414,7 +415,7 @@ class ScriptTest < ActiveSupport::TestCase
       flex_category: "Peer Review",
       levels: [{
         ids: [0],
-        kind: "peer_review",
+        kind: SharedConstants::LEVEL_KIND.peer_review,
         title: "",
         url: "",
         name: "Reviews unavailable at this time",

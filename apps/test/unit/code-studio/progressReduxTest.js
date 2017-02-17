@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
-import { LevelStatus, LevelKind } from '@cdo/apps/code-studio/activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/sharedConstants';
 import _ from 'lodash';
 
 import reducer, {
