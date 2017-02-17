@@ -131,11 +131,11 @@ class PeerReviewTest < ActiveSupport::TestCase
     user_level = UserLevel.find_by(user: review1.submitter, level: review1.level, script: review1.script)
     assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
-    review1.update! reviewer: create(:user), status: SharedConstants::LEVEL_STATUS.rejected
+    review1.update! reviewer: create(:user), status: 'rejected'
     user_level.reload
     assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
 
-    review2.update! reviewer: create(:user), status: SharedConstants::LEVEL_STATUS.rejected
+    review2.update! reviewer: create(:user), status: 'rejected'
     user_level.reload
     assert_equal Activity::REVIEW_REJECTED_RESULT, user_level.best_result
   end
@@ -212,7 +212,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     # When the third reviewer goes to the page, they should get a link
     review_summary = PeerReview.get_peer_review_summaries(reviewer_3, @script_level.script)
     expected_review = {
-      status: SharedConstants::LEVEL_STATUS.not_started,
+      status: SharedConstants::LEVEL_STATUS.not_tried,
       name: I18n.t('peer_review.review_new_submission'),
       result: ActivityConstants::UNSUBMITTED_RESULT,
       icon: '',
@@ -281,13 +281,13 @@ class PeerReviewTest < ActiveSupport::TestCase
       },
       {
         id: second_review.id,
-        status: SharedConstants::LEVEL_STATUS.not_started,
+        status: SharedConstants::LEVEL_STATUS.not_tried,
         name: I18n.t('peer_review.review_in_progress'),
         result: ActivityConstants::UNSUBMITTED_RESULT,
         locked: false
       },
       {
-        status: SharedConstants::LEVEL_STATUS.not_started,
+        status: SharedConstants::LEVEL_STATUS.not_tried,
         name: 'Review a new submission',
         result: ActivityConstants::UNSUBMITTED_RESULT,
         icon: '',
