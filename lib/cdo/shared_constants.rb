@@ -3,9 +3,8 @@
 # outputs JS. It is run via `rake build:shared_constants
 
 module SharedConstants
-  # TODO: switch these to LEVEL_KIND, LEVEL_STATUS
   # Used to communicate different types of levels
-  LevelKind = OpenStruct.new(
+  LEVEL_KIND = OpenStruct.new(
     {
       peer_review: "peer_review",
       assessment: "assessment",
@@ -13,11 +12,11 @@ module SharedConstants
       unplugged: "unplugged",
       level: "level"
     }
-  )
+  ).freeze
 
   # Different possibilities for level.status, used to communicate how user has
   # performed on a given level
-  LevelStatus = OpenStruct.new(
+  LEVEL_STATUS = OpenStruct.new(
     {
       "not_tried": "not_tried",
       "submitted": "submitted",
@@ -29,5 +28,5 @@ module SharedConstants
       "review_rejected": "review_rejected",
       "dots_disabled": "dots_disabled"
     }
-  )
+  ).freeze
 end

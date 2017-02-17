@@ -57,14 +57,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
-    assert_equal 'puzzle', summary[:kind]
+    assert_equal SharedConstants::LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
-    assert_equal 'puzzle', summary[:kind]
+    assert_equal SharedConstants::LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 2, summary[:title]
   end
 
@@ -73,7 +73,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "#{root_url.chomp('/')}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
-    assert_equal 'puzzle', summary[:kind]
+    assert_equal SharedConstants::LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
   end
 

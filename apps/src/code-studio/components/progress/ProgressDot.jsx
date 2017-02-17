@@ -7,7 +7,7 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from "../../../util/color";
 import progressStyles, { createOutline } from './progressStyles';
-import { LevelStatus, LevelKind } from '../../activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/sharedConstants';
 
 const dotSize = 24;
 

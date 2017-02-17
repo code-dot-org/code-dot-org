@@ -7,7 +7,7 @@ import saveAnswers from '@cdo/apps/code-studio//levels/saveAnswers';
 import $ from 'jquery';
 
 import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/ProgressDot';
-import { LevelStatus, LevelKind } from '@cdo/apps/code-studio/activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/sharedConstants';
 import color from '@cdo/apps/util/color';
 
 // If we set a color as something like #fff, the browser converts it to rgb(255, 255, 255)
