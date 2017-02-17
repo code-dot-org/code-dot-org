@@ -3,7 +3,7 @@
 # Table name: authored_hint_view_requests
 #
 #  id                    :integer          not null, primary key
-#  user_id               :integer
+#  user_id               :integer          not null
 #  script_id             :integer
 #  level_id              :integer
 #  hint_id               :string(255)
@@ -12,17 +12,14 @@
 #  prev_time             :integer
 #  prev_attempt          :integer
 #  prev_test_result      :integer
-#  prev_activity_id      :integer
 #  prev_level_source_id  :integer
 #  next_time             :integer
 #  next_attempt          :integer
 #  next_test_result      :integer
-#  next_activity_id      :integer
 #  next_level_source_id  :integer
 #  final_time            :integer
 #  final_attempt         :integer
 #  final_test_result     :integer
-#  final_activity_id     :integer
 #  final_level_source_id :integer
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
@@ -43,6 +40,8 @@ class AuthoredHintViewRequest < ActiveRecord::Base
 
   validates :script, presence: true
   validates :level, presence: true
+
+  include HintsUsed
 
   def self.enabled?(script = nil)
     if script

@@ -330,7 +330,7 @@ function drawMap() {
       idStr: 'move',
       pegmanImage: skin.movePegmanAnimation,
       numColPegman: 4,
-      numRowPegman: 9
+      numRowPegman: (skin.movePegmanAnimationFrameNumber || 9)
     });
   }
 }

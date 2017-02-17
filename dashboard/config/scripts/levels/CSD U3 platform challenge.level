@@ -35,6 +35,11 @@
     "pause_animations_by_default": "false",
     "project_template_level_name": "CSD U3 platform template",
     "all_animations_single_frame": "false",
+    "encrypted_examples": "CLp70Nl1O85yhw/TdOPhX98ssoTAl+vJ+baCh01rfFCdECQ/gI0sHjy4gpzw\nLgCg\n",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "start_in_animation_tab": "false",
+    "show_debug_watch": "false",
     "contained_level_names": null
   },
   "published": true,

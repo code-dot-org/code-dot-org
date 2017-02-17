@@ -69,6 +69,7 @@ levels.custom = {
     "getXPosition": null,
     "getYPosition": null,
     "setScreen": null,
+    "rgb": null,
 
     // Canvas
     "createCanvas": null,
@@ -210,6 +211,7 @@ levels.custom = {
     "buzzer.frequency": null,
     "buzzer.note": null,
     "buzzer.off": null,
+    "buzzer.play": null,
     "accelerometer.getOrientation": null,
     "accelerometer.start": null,
     "accelerometer.getAcceleration": null,

@@ -21,6 +21,7 @@
 # Indexes
 #
 #  index_pd_enrollments_on_code            (code) UNIQUE
+#  index_pd_enrollments_on_email           (email)
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
@@ -76,7 +77,33 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def completed_survey?
-    completed_survey_id.present?
+    return true if completed_survey_id.present?
+
+    # Until the survey is processed (via process_forms cron job), it won't show up in the enrollment model.
+    # Check pegasus forms directly to be sure.
+    PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: id).any?
+  end
+
+  # Filters a list of enrollments for survey completion, checking with Pegasus (in batch) to include
+  # new unprocessed surveys that don't yet show up in this model.
+  # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
+  # @param select_completed [Boolean] if true, return only enrollments with completed surveys,
+  #   otherwise return only those without completed surveys. Defaults to true.
+  # @return [Enumerable<Pd::Enrollment>]
+  def self.filter_for_survey_completion(enrollments, select_completed = true)
+    raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
+      enrollments.is_a?(Enumerable) && enrollments.all?{|e| e.is_a?(Pd::Enrollment)}
+
+    ids_with_processed_surveys, ids_without_processed_surveys =
+      enrollments.partition{|e| e.completed_survey_id.present?}.map{|list| list.map(&:id)}
+
+    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: ids_without_processed_surveys).map(:id)
+
+    filtered_ids = select_completed ?
+      ids_with_processed_surveys + ids_with_unprocessed_surveys :
+      ids_without_processed_surveys - ids_with_unprocessed_surveys
+
+    enrollments.select{|e| filtered_ids.include? e.id}
   end
 
   before_create :assign_code
@@ -103,9 +130,9 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
-      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}"
+      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
     else
-      CDO.code_org_url "/pd-workshop-survey/#{code}"
+      CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
   end
 
