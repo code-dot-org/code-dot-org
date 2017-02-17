@@ -37,9 +37,9 @@ Resources:
     Properties:
       ImageId: <%=image_id%>
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt IAM.FrontendInstanceProfile
-      SecurityGroupIds: [!GetAtt VPC.FrontendSecurityGroup]
-      SubnetId: !GetAtt VPC.Subnet<%=azs.first%>
+      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
+      SecurityGroupIds: [!GetAtt [VPC, FrontendSecurityGroup]]
+      SubnetId: !GetAtt [VPC, Subnet<%=azs.first%>]
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -80,7 +80,7 @@ Resources:
     Properties:
       LoadBalancerName: <%=stack_name%>
       CrossZone: true
-      SecurityGroups: [!GetAtt VPC.ELBSecurityGroup]
+      SecurityGroups: [!GetAtt [VPC, ELBSecurityGroup]]
       Subnets: <%=public_subnets%>
       LBCookieStickinessPolicy:
         - PolicyName: CookieBasedPolicy
@@ -112,13 +112,13 @@ Resources:
     CreationPolicy:
       ResourceSignal:
         Timeout: PT50M
-        Count: !GetAtt ASGCount.DesiredCapacity
+        Count: !GetAtt [ASGCount, DesiredCapacity]
       AutoScalingCreationPolicy:
         MinSuccessfulInstancesPercent: 80
     UpdatePolicy:
       AutoScalingRollingUpdate:
         MaxBatchSize: 20
-        MinInstancesInService: !GetAtt ASGCount.DesiredCapacity
+        MinInstancesInService: !GetAtt [ASGCount, DesiredCapacity]
         MinSuccessfulInstancesPercent: 80
         PauseTime: PT50M
         SuspendProcesses: [ScheduledActions]
@@ -126,9 +126,9 @@ Resources:
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: !Ref FrontendLaunchConfig
-      MinSize: !GetAtt ASGCount.MinSize
-      MaxSize: !GetAtt ASGCount.MaxSize
-      DesiredCapacity: !GetAtt ASGCount.DesiredCapacity
+      MinSize: !GetAtt [ASGCount, MinSize]
+      MaxSize: !GetAtt [ASGCount, MaxSize]
+      DesiredCapacity: !GetAtt [ASGCount, DesiredCapacity]
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
@@ -137,10 +137,10 @@ Resources:
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
-      ImageId: !GetAtt AMI<%=ami%>.ImageId
+      ImageId: !GetAtt [AMI<%=ami%>, ImageId]
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt IAM.FrontendInstanceProfile
-      SecurityGroups: [!GetAtt VPC.FrontendSecurityGroup]
+      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
+      SecurityGroups: [!GetAtt [VPC, FrontendSecurityGroup]]
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -247,7 +247,7 @@ Resources:
       DefaultResult: ABANDON
       HeartbeatTimeout: 3000 # seconds = 50 minutes
       NotificationTargetARN: !Ref WebServerHookTopicNew
-      RoleARN: !GetAtt IAM.LifecycleHookRoleARN
+      RoleARN: !GetAtt [IAM, LifecycleHookRoleARN]
   WebServerHookEventRule:
     Type: AWS::Events::Rule
     Properties:
@@ -314,11 +314,11 @@ Resources:
           Type: A
           AliasTarget:
 <%   if cdn_enabled -%>
-            DNSName: !GetAtt <%=app%>CDN.DomainName
+            DNSName: !GetAtt [<%=app%>CDN, DomainName]
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
 <%   else -%>
-            DNSName: !GetAtt LoadBalancer.CanonicalHostedZoneName
-            HostedZoneId: !GetAtt LoadBalancer.CanonicalHostedZoneNameID
+            DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
+            HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
 <%   end -%>
 <%   if cdn_enabled -%>
   <%=app%>CDN:
@@ -347,8 +347,8 @@ Resources:
         - Name: "origin-<%=subdomain%>"
           Type: A
           AliasTarget:
-            HostedZoneId: !GetAtt LoadBalancer.CanonicalHostedZoneNameID
-            DNSName: !GetAtt LoadBalancer.CanonicalHostedZoneName
+            HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
+            DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
 <% end -%>
 <% if environment == :production -%>
   GeocoderSubnetGroup:
@@ -363,7 +363,7 @@ Resources:
       NumCacheClusters: 3
       Engine: redis
       CacheNodeType: cache.r3.large
-      SecurityGroupIds: [!GetAtt VPC.RedisSecurityGroup]
+      SecurityGroupIds: [!GetAtt [VPC, RedisSecurityGroup]]
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
 <% end -%>
   ActivitiesQueue:
@@ -374,7 +374,7 @@ Resources:
       QueueName: <%="activities-#{stack_name}"%>
       RedrivePolicy:
         maxReceiveCount: 3
-        deadLetterTargetArn: {'Fn::GetAtt': [ActivitiesDeadQueue,Arn]}
+        deadLetterTargetArn: !GetAtt [ActivitiesDeadQueue, Arn]
   ActivitiesDeadQueue:
     Type: AWS::SQS::Queue
     Properties:
@@ -390,7 +390,7 @@ Resources:
     Properties:
       ImageId: <%=image_id%>
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: !GetAtt IAM.FrontendInstanceProfile
+      IamInstanceProfile: !GetAtt [IAM, FrontendInstanceProfile]
       KeyName: <%=ssh_key_name%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:
@@ -412,9 +412,9 @@ Resources:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
           GroupSet:
-            - !GetAtt VPC.FrontendSecurityGroup
-            - !GetAtt VPC.GatewaySecurityGroup
-          SubnetId: !GetAtt VPC.PublicSubnet<%=azs.first%>
+            - !GetAtt [VPC, FrontendSecurityGroup]
+            - !GetAtt [VPC, GatewaySecurityGroup]
+          SubnetId: !GetAtt [VPC, PublicSubnet<%=azs.first%>]
 <% end -%>
 Outputs:
   DashboardURL:
