@@ -1,3 +1,9 @@
+/**
+ * A react component that renders a little debugging console that interacts
+ * with the javascript interpreter. You can type expressions into an input area
+ * and have the evaluated result show up in an output area, along with any
+ * console logs.
+ */
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 
@@ -7,8 +13,6 @@ import {
   remove as removeWatchExpression
 } from '../../../redux/watchedExpressions';
 import CommandHistory from './CommandHistory';
-import JSInterpreter from '../../../JSInterpreter';
-
 import {actions, selectors} from './redux';
 
 const WATCH_COMMAND_PREFIX = "$watch ";
@@ -43,20 +47,23 @@ const DebugConsole = connect(
     commandHistory: selectors.getCommandHistory(state),
     jsInterpreter: selectors.getJSInterpreter(state),
     logOutput: selectors.getLogOutput(state),
+    isAttached: selectors.isAttached(state),
   }),
   {
     addWatchExpression,
     removeWatchExpression,
+    evalInCurrentScope: actions.evalInCurrentScope,
     appendLog: actions.appendLog,
   }
 )(React.createClass({
   propTypes: {
     // from redux
     commandHistory: PropTypes.instanceOf(CommandHistory),
-    jsInterpreter: PropTypes.instanceOf(JSInterpreter),
     logOutput: PropTypes.string.isRequired,
+    isAttached: PropTypes.bool.isRequired,
     addWatchExpression: PropTypes.func.isRequired,
     removeWatchExpression: PropTypes.func.isRequired,
+    evalInCurrentScope: PropTypes.func.isRequired,
     appendLog: PropTypes.func.isRequired,
 
     // passed from above
@@ -80,9 +87,9 @@ const DebugConsole = connect(
         this.props.removeWatchExpression(
           input.substring(UNWATCH_COMMAND_PREFIX.length)
         );
-      } else if (this.props.jsInterpreter) {
+      } else if (this.props.isAttached) {
         try {
-          var result = this.props.jsInterpreter.evalInCurrentScope(input);
+          var result = this.props.evalInCurrentScope(input);
           this.appendLog('< ' + String(result));
         } catch (err) {
           this.appendLog('< ' + String(err));

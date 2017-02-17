@@ -182,6 +182,17 @@ export function stepOut() {
   };
 }
 
+export function evalInCurrentScope(input) {
+  return (dispatch, getState) => {
+    let jsInterpreter = getJSInterpreter(getState());
+    if (jsInterpreter) {
+      return jsInterpreter.evalInCurrentScope(input);
+    } else {
+      throw new Error("No interpreter has been attached");
+    }
+  };
+}
+
 export const actions = {
   initialize,
   appendLog,
@@ -192,6 +203,7 @@ export const actions = {
   stepIn,
   stepOver,
   stepOut,
+  evalInCurrentScope,
 };
 
 // reducer
