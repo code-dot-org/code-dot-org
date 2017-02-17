@@ -46,6 +46,12 @@ class Stage < ActiveRecord::Base
     script_levels.first.level.unplugged?
   end
 
+  def spelling_bee?
+    script_levels = script.script_levels.select{|sl| sl.stage_id == id}
+    return false unless script_levels.first
+    script_levels.first.level.spelling_bee?
+  end
+
   def localized_title
     # The standard case for localized_title is something like "Stage 1: Maze".
     # In the case of lockable stages, we don't want to include the Stage 1
