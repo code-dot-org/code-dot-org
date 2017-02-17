@@ -82,12 +82,12 @@ AuthoredHints.prototype.submitHints = function (url) {
  * @param {number} scriptId
  * @param {number} levelId
  */
-AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
+AuthoredHints.prototype.init = function (hints, hintsUsedIds, scriptId, levelId) {
   this.scriptId_ = scriptId;
   this.levelId_ = levelId;
 
   if (hints && hints.length > 0) {
-    this.studioApp_.reduxStore.dispatch(enqueueHints(hints));
+    this.studioApp_.reduxStore.dispatch(enqueueHints(hints, hintsUsedIds));
     this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
   }
 };
