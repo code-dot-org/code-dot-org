@@ -37,9 +37,9 @@ Resources:
     Properties:
       ImageId: <%=image_id%>
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
-      SecurityGroupIds: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
-      SubnetId: {'Fn::GetAtt': [VPC, Subnet<%=azs.first%>]}
+      IamInstanceProfile: !GetAtt IAM.FrontendInstanceProfile
+      SecurityGroupIds: [!GetAtt VPC.FrontendSecurityGroup]
+      SubnetId: !GetAtt VPC.Subnet<%=azs.first%>
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -79,7 +79,7 @@ Resources:
     Properties:
       LoadBalancerName: <%=stack_name%>
       CrossZone: true
-      SecurityGroups: ['Fn::GetAtt': [VPC, ELBSecurityGroup]]
+      SecurityGroups: [!GetAtt VPC.ELBSecurityGroup]
       Subnets: <%=public_subnets%>
       LBCookieStickinessPolicy:
         - PolicyName: CookieBasedPolicy
@@ -111,23 +111,23 @@ Resources:
     CreationPolicy:
       ResourceSignal:
         Timeout: PT50M
-        Count: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
+        Count: !GetAtt ASGCount.DesiredCapacity
       AutoScalingCreationPolicy:
         MinSuccessfulInstancesPercent: 80
     UpdatePolicy:
       AutoScalingRollingUpdate:
         MaxBatchSize: 20
-        MinInstancesInService: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
+        MinInstancesInService: !GetAtt ASGCount.DesiredCapacity
         MinSuccessfulInstancesPercent: 80
         PauseTime: PT50M
         SuspendProcesses: [ScheduledActions]
         WaitOnResourceSignals: true
     Properties:
       VPCZoneIdentifier: <%=subnets%>
-      LaunchConfigurationName: {Ref: FrontendLaunchConfig}
-      MinSize: {'Fn::GetAtt': [ASGCount, MinSize]}
-      MaxSize: {'Fn::GetAtt': [ASGCount, MaxSize]}
-      DesiredCapacity: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
+      LaunchConfigurationName: !Ref FrontendLaunchConfig
+      MinSize: !GetAtt ASGCount.MinSize
+      MaxSize: !GetAtt ASGCount.MaxSize
+      DesiredCapacity: !GetAtt ASGCount.DesiredCapacity
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
@@ -136,10 +136,10 @@ Resources:
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
-      ImageId: {'Fn::GetAtt': [AMI<%=ami%>, ImageId]}
+      ImageId: !GetAtt AMI<%=ami%>.ImageId
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
-      SecurityGroups: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
+      IamInstanceProfile: !GetAtt IAM.FrontendInstanceProfile
+      SecurityGroups: [!GetAtt VPC.FrontendSecurityGroup]
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
@@ -158,7 +158,7 @@ Resources:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
       AdjustmentType: PercentChangeInCapacity
-      AutoScalingGroupName: {Ref: Frontends}
+      AutoScalingGroupName: !Ref Frontends
       MetricAggregationType: Average
       MinAdjustmentMagnitude: 1
       EstimatedInstanceWarmup: 300
@@ -183,7 +183,7 @@ Resources:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
       AdjustmentType: PercentChangeInCapacity
-      AutoScalingGroupName: {Ref: Frontends}
+      AutoScalingGroupName: !Ref Frontends
       MetricAggregationType: Average
       MinAdjustmentMagnitude: 1
       EstimatedInstanceWarmup: 300
@@ -222,7 +222,7 @@ Resources:
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: AutoScalingGroupName
-          Value: {Ref: Frontends}
+          Value: !Ref Frontends
   ScaleDownAlarmNew:
     Type: AWS::CloudWatch::Alarm
     Properties:
@@ -237,37 +237,37 @@ Resources:
       ComparisonOperator: LessThanOrEqualToThreshold
       Dimensions:
         - Name: AutoScalingGroupName
-          Value: {Ref: Frontends}
+          Value: !Ref Frontends
   WebServerHookNew:
     Type: AWS::AutoScaling::LifecycleHook
     Properties:
-      AutoScalingGroupName: {Ref: Frontends}
+      AutoScalingGroupName: !Ref Frontends
       LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
       DefaultResult: ABANDON
       HeartbeatTimeout: 3000 # seconds = 50 minutes
-      NotificationTargetARN: {Ref: WebServerHookTopicNew}
-      RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
+      NotificationTargetARN: !Ref WebServerHookTopicNew
+      RoleARN: !GetAtt IAM.LifecycleHookRoleARN
   WebServerHookTopicNew: {Type: 'AWS::SNS::Topic'}
   <%if environment == :production -%>
   # Scale up min instances at 4AM PDT (=11:00 UTC)
   ClassroomTrafficBeginNew:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
-      AutoScalingGroupName: {Ref: Frontends}
+      AutoScalingGroupName: !Ref Frontends
       MinSize: 5
       Recurrence: "0 11 * * MON-FRI"
   # Scale down min instances at 1PM PDT (=20:00 UTC)
   ClassroomTrafficEndNew:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
-      AutoScalingGroupName: {Ref: Frontends}
+      AutoScalingGroupName: !Ref Frontends
       MinSize: 3
       Recurrence: "0 20 * * MON-FRI"
   # Further scale down min instances at 8PM PDT (=3:00+1day UTC)
   OvernightNew:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
-      AutoScalingGroupName: {Ref: Frontends}
+      AutoScalingGroupName: !Ref Frontends
       MinSize: 2
       Recurrence: "0 3 * * TUE-SAT"
 <%   end -%>
@@ -287,11 +287,11 @@ Resources:
           Type: A
           AliasTarget:
 <%   if cdn_enabled -%>
-            DNSName: {'Fn::GetAtt': [<%=app%>CDN, DomainName]}
+            DNSName: !GetAtt <%=app%>CDN.DomainName
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
 <%   else -%>
-            DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
-            HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
+            DNSName: !GetAtt LoadBalancer.CanonicalHostedZoneName
+            HostedZoneId: !GetAtt LoadBalancer.CanonicalHostedZoneNameID
 <%   end -%>
 <%   if cdn_enabled -%>
   <%=app%>CDN:
@@ -320,8 +320,8 @@ Resources:
         - Name: "origin-<%=subdomain%>"
           Type: A
           AliasTarget:
-            HostedZoneId: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneNameID]}
-            DNSName: {'Fn::GetAtt': [LoadBalancer, CanonicalHostedZoneName]}
+            HostedZoneId: !GetAtt LoadBalancer.CanonicalHostedZoneNameID
+            DNSName: !GetAtt LoadBalancer.CanonicalHostedZoneName
 <% end -%>
 <% if environment == :production -%>
   GeocoderSubnetGroup:
@@ -336,8 +336,8 @@ Resources:
       NumCacheClusters: 3
       Engine: redis
       CacheNodeType: cache.r3.large
-      SecurityGroupIds: ['Fn::GetAtt': [VPC, RedisSecurityGroup]]
-      CacheSubnetGroupName: {Ref: GeocoderSubnetGroup}
+      SecurityGroupIds: [!GetAtt VPC.RedisSecurityGroup]
+      CacheSubnetGroupName: !Ref GeocoderSubnetGroup
 <% end -%>
   ActivitiesQueue:
     Type: AWS::SQS::Queue
@@ -363,7 +363,7 @@ Resources:
     Properties:
       ImageId: <%=image_id%>
       InstanceType: <%=instance_type%>
-      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
+      IamInstanceProfile: !GetAtt IAM.FrontendInstanceProfile
       KeyName: <%=ssh_key_name%>
       Tags: [{Key: Name, Value: <%=stack_name%>}]
       BlockDeviceMappings:
@@ -385,9 +385,9 @@ Resources:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
           GroupSet:
-            - 'Fn::GetAtt': [VPC, FrontendSecurityGroup]
-            - 'Fn::GetAtt': [VPC, GatewaySecurityGroup]
-          SubnetId: {'Fn::GetAtt': [VPC, PublicSubnet<%=azs.first%>]}
+            - !GetAtt VPC.FrontendSecurityGroup
+            - !GetAtt VPC.GatewaySecurityGroup
+          SubnetId: !GetAtt VPC.PublicSubnet<%=azs.first%>
 <% end -%>
 Outputs:
   DashboardURL:
