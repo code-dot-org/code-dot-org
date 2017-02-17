@@ -1892,7 +1892,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
-  document.getElementById('visualizationResizeBar').style.display = 'none';
 
   // Chrome-less share page.
   if (this.share) {
