@@ -113,6 +113,12 @@ To run an individual test, use the `--entry` option with `npm run test:entry` to
 npm run test:entry -- --entry ./test/unit/gridUtilsTest.js
 ```
 
+It's also possible to run an individual test or subset of tests with:
+
+```
+npm run test:unit -- --grep='TutorialExplorer'
+```
+
 ##### Rerun Tests Automatically #####
 
 To rerun tests automatically on every file change, set the environment variable
