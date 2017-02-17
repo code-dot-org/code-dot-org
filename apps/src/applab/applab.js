@@ -594,7 +594,7 @@ Applab.init = function (config) {
   }
 
   if (showDebugButtons || showDebugConsole) {
-    studioApp.reduxStore.dispatch(jsDebugger.initializeJSDebugger({
+    studioApp.reduxStore.dispatch(jsDebugger.initialize({
       runApp: Applab.runButtonClick,
     }));
   }
@@ -1009,7 +1009,7 @@ Applab.reset = function () {
     level.goal.successState = {};
   }
 
-  studioApp.reduxStore.dispatch(jsDebugger.detachJSDebugger());
+  studioApp.reduxStore.dispatch(jsDebugger.detach());
 
   if (jsInterpreterLogger) {
     jsInterpreterLogger.detach();
@@ -1162,7 +1162,7 @@ Applab.execute = function () {
     if (jsInterpreterLogger) {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
-    studioApp.reduxStore.dispatch(jsDebugger.attachJSDebugger(Applab.JSInterpreter));
+    studioApp.reduxStore.dispatch(jsDebugger.attach(Applab.JSInterpreter));
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
