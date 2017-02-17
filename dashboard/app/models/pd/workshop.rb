@@ -183,10 +183,6 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:section).find_by(sections: {code: section_code})
   end
 
-  def self.in_states(states)
-
-  end
-
   def self.in_state(state)
     case state
       when STATE_NOT_STARTED

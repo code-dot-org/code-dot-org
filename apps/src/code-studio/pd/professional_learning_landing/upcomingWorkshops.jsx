@@ -10,6 +10,7 @@ const UpcomingWorkshops = React.createClass({
     return (
       <WorkshopTableLoader
         queryUrl="/api/v1/pd/workshops/?state=Not%20Started"
+        hideNoWorkshopsMessage={true}
       >
         <UpcomingWorkshopsTable/>
       </WorkshopTableLoader>
@@ -78,7 +79,7 @@ const UpcomingWorkshopsTable = React.createClass({
           }
         </td>
         <td>
-          <div className="span3">
+          <div>
             <p>{workshop.location_name}</p>
             <p>{workshop.location_address}</p>
           </div>
