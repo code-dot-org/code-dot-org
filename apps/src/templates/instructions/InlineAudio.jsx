@@ -1,5 +1,6 @@
-/* global CryptoJS, trackEvent */
-
+/* global trackEvent */
+import MD5 from 'crypto-js/md5';
+import Base64 from 'crypto-js/enc-base64';
 import Radium from 'radium';
 import React from 'react';
 
@@ -106,7 +107,7 @@ const InlineAudio = React.createClass({
     }
 
     const message = this.props.message.replace('"???"', 'the question marks');
-    const hash = CryptoJS.MD5(message).toString(CryptoJS.enc.Base64);
+    const hash = MD5(message).toString(Base64);
     return `${TTS_URL}/${hash}/${encodeURIComponent(message)}.mp3`;
   },
 
