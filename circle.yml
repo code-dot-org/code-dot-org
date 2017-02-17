@@ -34,7 +34,7 @@ dependencies:
   cache_directories:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
-    - "/opt/circleci/.rvm/gems/ruby-2.2.3"
+    - "/opt/circleci/.rvm/gems"
     - "/opt/circleci/ruby/ruby-2.2.3"
     - ".tmputils"
     - "~/.yarn-cache"
