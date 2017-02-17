@@ -114,6 +114,7 @@ const AchievementDialog = Radium(React.createClass({
     hintsUsed: React.PropTypes.number,
     assetUrl: React.PropTypes.func,
     onContinue: React.PropTypes.func,
+    showStageProgress: React.PropTypes.bool,
   },
 
   getInitialState() {
@@ -202,19 +203,21 @@ const AchievementDialog = Radium(React.createClass({
           {this.achievementRow(!tooManyBlocks, this.blocksUsedMessage(blockDelta, params))}
           {this.achievementRow(!tooManyHints, this.hintsMessage(tooManyHints))}
         </div>
-        <div style={styles.stageRewards}>
-          <div style={styles.stageRewardsTitle}>
-            {locale.stageRewards()}
+        {this.props.showStageProgress &&
+          <div style={styles.stageRewards}>
+            <div style={styles.stageRewardsTitle}>
+              {locale.stageRewards()}
+            </div>
+            <div style={styles.progressBackground}>
+              <div
+                style={{
+                  ...styles.progressForeground,
+                  width: this.stageProgress() * MAX_PROGRESS_WIDTH
+                }}
+              />
+            </div>
           </div>
-          <div style={styles.progressBackground}>
-            <div
-              style={{
-                ...styles.progressForeground,
-                width: this.stageProgress() * MAX_PROGRESS_WIDTH
-              }}
-            />
-          </div>
-        </div>
+        }
         <div style={styles.footer}>
           <p style={styles.feedbackMessage}>{feedbackMessage}</p>
 
