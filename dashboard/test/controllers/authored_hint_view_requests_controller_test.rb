@@ -72,4 +72,34 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
       end
     end
   end
+
+  test 'records all (optional) data fields' do
+    data = {
+      scriptId: @script.id,
+      levelId: @level.id,
+      hintId: 'first',
+      hintClass: 'bottom-out',
+      hintType: 'general',
+      prevTime: 1,
+      prevAttempt: 2,
+      prevTestResult: 3,
+      prevLevelSourceId: 5,
+      nextTime: 6,
+      nextAttempt: 7,
+      nextTestResult: 8,
+      nextLevelSourceId: 10,
+      finalTime: 11,
+      finalAttempt: 12,
+      finalTestResult: 13,
+      finalLevelSourceId: 15
+    }
+
+    post(:create, params: { hints: [data] }, format: :json)
+
+    record = AuthoredHintViewRequest.last
+
+    data.keys.each do |key|
+      assert_equal data[key], record[key.to_s.underscore.to_sym]
+    end
+  end
 end

@@ -1,5 +1,5 @@
 name 'CSD - Functions Review'
-href 'path/to/html/in/asset/folder'
+display_name 'Functions Review'
 markdown <<MARKDOWN
 # Functions Review
 
