@@ -116,12 +116,6 @@ const DebugConsole = connect(
     this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
   },
 
-  clearOutput() {
-    if (this._debugOutput) {
-      this._debugOutput.textContent = '';
-    }
-  },
-
   clearDebugInput() {
     // TODO: this needs to get called on ATTACH action being dispatched
     // alternatively, the text content should get stored in redux.
