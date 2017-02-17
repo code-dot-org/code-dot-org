@@ -1,29 +1,28 @@
 #!/usr/bin/env ruby
 #
-# This file generates a static json file, and uses it to create enum-like objects
-# that can be used in both dashboard and apps. It does this by generating two
-# static files - one which is a ruby file to be used by dashboard, the other
-# which is a js file to be used by apps. In both cases, the expectation is that
-# the generated files get checked into the repo
+# This file is used to generate a static JS file containing some of the same
+# constants that we have defined in a ruby file. This allows us to ensure that
+# we're using the same set of constants in dashboard and apps.
 #
 require 'json'
 require_relative '../../lib/cdo/shared_constants'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
-OUTPUT_JS = "#{REPO_DIR}/apps/src/sharedConstants.js"
-# TODO: generate JS file should probably not be checked in. should also be generated
-# as part of `npm run build` in apps
+OUTPUT_JS = "#{REPO_DIR}/apps/src/util/sharedConstants.js"
 
 def generate_js
   output = "// This is a generated file and SHOULD NOT BE EDITTED MANUALLY!!\n"\
-    "// Contents are generated from lib/cdo/shared_constants.rb by running\n"\
-    "// `rake build:shared_constants`\n"\
+    "// Contents are generated as part of grunt build\n"\
     "\n"\
     "#{generate_level_kind}\n\n"\
     "#{generate_level_status}\n\n"
 
   File.open(OUTPUT_JS, 'w') {|f| f.write(output)}
 end
+
+# Each of these generate a particular JS "enum" from its ruby equivalent. As we
+# want to add more constants, we'll need to add more similar methods that extract
+# the content we care about from the ruby object, and write it as JS.
 
 def generate_level_kind
   hash = SharedConstants::LEVEL_KIND.marshal_dump

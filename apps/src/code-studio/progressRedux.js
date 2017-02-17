@@ -4,7 +4,7 @@
 import _ from 'lodash';
 import { makeEnum } from '../utils';
 import { mergeActivityResult, activityCssClass } from './activityUtils';
-import { LevelStatus, LevelKind } from '@cdo/apps/sharedConstants';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
 
 // Action types

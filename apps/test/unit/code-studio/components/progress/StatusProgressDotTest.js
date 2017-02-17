@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import { StatusProgressDot } from
   '@cdo/apps/code-studio/components/progress/StatusProgressDot';
 import * as stageLockRedux from '@cdo/apps/code-studio/stageLockRedux';
-import { LevelStatus, LevelKind } from '@cdo/apps/sharedConstants';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import { TestResults } from '@cdo/apps/constants';
 

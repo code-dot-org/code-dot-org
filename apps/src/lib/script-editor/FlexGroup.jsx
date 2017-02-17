@@ -6,7 +6,7 @@ import { borderRadius, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import { NEW_LEVEL_ID, addStage, addGroup } from './editorRedux';
-import { LevelKind } from '@cdo/apps/sharedConstants';
+import { LevelKind } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   groupHeader: {

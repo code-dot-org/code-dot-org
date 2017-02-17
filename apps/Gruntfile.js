@@ -301,6 +301,7 @@ module.exports = function (grunt) {
   var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
+    generateSharedConstants: './script/generateSharedConstants.rb'
   };
 
   config.karma = {
@@ -663,6 +664,7 @@ module.exports = function (grunt) {
     'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -729,6 +731,7 @@ module.exports = function (grunt) {
   grunt.registerTask('preconcat', [
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'newer:copy:static',
   ]);
 
@@ -742,6 +745,7 @@ module.exports = function (grunt) {
   grunt.registerTask('unitTest', [
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'concat',
     'karma:unit'
   ]);

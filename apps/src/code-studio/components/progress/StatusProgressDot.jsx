@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ProgressDot from './ProgressDot';
 import { levelProgressShape } from './types';
 import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
-import { LevelStatus } from '@cdo/apps/sharedConstants';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { SignInState, statusForLevel } from '../../progressRedux';
 
 /**

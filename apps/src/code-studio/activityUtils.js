@@ -3,7 +3,7 @@
  */
 
 import { TestResults } from '@cdo/apps/constants';
-import { LevelStatus } from '@cdo/apps/sharedConstants';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 /**
  * See ApplicationHelper#activity_css_class.
