@@ -90,7 +90,8 @@ class ScriptDSL < BaseDSL
       levelprops = {}
       levelprops[:active] = active if active == false
       unless levelprops.empty?
-        @current_scriptlevel[:properties][name] = levelprops
+        @current_scriptlevel[:properties][:variants] ||= {}
+        @current_scriptlevel[:properties][:variants][name] = levelprops
       end
     else
       @scriptlevels << {
