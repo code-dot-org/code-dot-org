@@ -76,9 +76,7 @@ const LandingPage = React.createClass({
         )
         }
         {
-          <UpcomingWorkshops
-
-          />
+          <UpcomingWorkshops/>
         }
       </div>
     );
