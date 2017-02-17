@@ -248,8 +248,13 @@ export default class BoardController {
       return otherAdafruit;
     }
 
-    // 3. Last-ditch effort: Anything with a probably-usable port name
+    // 3. Last-ditch effort: Anything with a probably-usable port name and
+    //    a valid vendor id and product id
     const comNameRegex = /usb|acm|^com/i;
-    return portList.find(port => comNameRegex.test(port.comName))
+    return portList.find(port => {
+      const vendorId = parseInt(port.vendorId, 16);
+      const productId = parseInt(port.productId, 16);
+      return comNameRegex.test(port.comName) && vendorId > 0 && productId > 0;
+    });
   }
 }
