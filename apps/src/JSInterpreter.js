@@ -28,7 +28,7 @@ var JSInterpreter = module.exports = function (options) {
 
   /** @type {ObservableEvent} */
   this.onNextStepChanged = new ObservableEvent();
-  this.onNextStepChanged.register(() => {
+  this._runStateUpdater = this.onNextStepChanged.register(() => {
     this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
       this.paused,
       this.nextStep
@@ -314,6 +314,7 @@ JSInterpreter.prototype.initialized = function () {
  * JSInterpreter so any async callbacks will not execute.
  */
 JSInterpreter.prototype.deinitialize = function () {
+  this.onNextStepChanged.unregister(this._runStateUpdater);
   this.interpreter = null;
 };
 
