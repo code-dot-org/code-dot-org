@@ -113,7 +113,6 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{locale_code}",
       roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
-      showSortBy: true,
       disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
