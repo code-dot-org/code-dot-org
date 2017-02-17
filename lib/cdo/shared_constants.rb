@@ -18,15 +18,15 @@ module SharedConstants
   # performed on a given level
   LEVEL_STATUS = OpenStruct.new(
     {
-      "not_tried": "not_tried",
-      "submitted": "submitted",
-      "locked": "locked",
-      "perfect": "perfect",
-      "passed": "passed",
-      "attempted": "attempted",
-      "review_accepted": "review_accepted",
-      "review_rejected": "review_rejected",
-      "dots_disabled": "dots_disabled"
+      not_tried: "not_tried",
+      submitted: "submitted",
+      locked: "locked",
+      perfect: "perfect",
+      passed: "passed",
+      attempted: "attempted",
+      review_accepted: "review_accepted",
+      review_rejected: "review_rejected",
+      dots_disabled: "dots_disabled"
     }
   ).freeze
 end
