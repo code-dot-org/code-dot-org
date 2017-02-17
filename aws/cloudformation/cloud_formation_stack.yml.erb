@@ -15,6 +15,7 @@ unless dry_run
 end
 
 frontends = %i(production adhoc).include?(rack_env)
+require 'cdo/cron'
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -276,27 +277,30 @@ Resources:
       SourceArn: !GetAtt WebServerHookEventRule.Arn
   WebServerHookTopicNew: {Type: 'AWS::SNS::Topic'}
   <%if environment == :production -%>
-  # Scale up min instances at 4AM PDT (=11:00 UTC)
-  ClassroomTrafficBeginNew:
+  ClassroomScaleUp:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
       AutoScalingGroupName: !Ref Frontends
       MinSize: 5
-      Recurrence: "0 11 * * MON-FRI"
-  # Scale down min instances at 1PM PDT (=20:00 UTC)
-  ClassroomTrafficEndNew:
+      Recurrence: <%= Cdo::Cron.weekdays_at '4am' %>
+  ClassroomScaleDown:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
       AutoScalingGroupName: !Ref Frontends
       MinSize: 3
-      Recurrence: "0 20 * * MON-FRI"
-  # Further scale down min instances at 8PM PDT (=3:00+1day UTC)
-  OvernightNew:
+      Recurrence: <%= Cdo::Cron.weekdays_at '1pm' %>
+  WeekendScaleDown:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
       AutoScalingGroupName: !Ref Frontends
       MinSize: 2
-      Recurrence: "0 3 * * TUE-SAT"
+      Recurrence: <%= Cdo::Cron.weekly_at '8pm Friday' %>
+  WeekendScaleUp:
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: !Ref Frontends
+      MinSize: 3
+      Recurrence: <%= Cdo::Cron.weekly_at '4am Monday', time_zone: 'London' %>
 <%   end -%>
 <% end -%>
 # Route53 (DNS) and CloudFront (CDN) resources:
