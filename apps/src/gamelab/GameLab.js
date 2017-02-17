@@ -265,7 +265,7 @@ GameLab.prototype.init = function (config) {
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
-    this.studioApp_.reduxStore.dispatch(jsDebugger.initializeJSDebugger({
+    this.studioApp_.reduxStore.dispatch(jsDebugger.initialize({
       runApp: Applab.runButtonClick,
     }));
   }
@@ -446,7 +446,7 @@ GameLab.prototype.reset = function (ignore) {
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  this.studioApp_.reduxStore.dispatch(jsDebugger.detachJSDebugger());
+  this.studioApp_.reduxStore.dispatch(jsDebugger.detach());
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -797,7 +797,7 @@ GameLab.prototype.initInterpreter = function () {
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  this.studioApp_.dispatch(jsDebugger.attachJSDebugger(this.JSInterpreter));
+  this.studioApp_.dispatch(jsDebugger.attach(this.JSInterpreter));
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
