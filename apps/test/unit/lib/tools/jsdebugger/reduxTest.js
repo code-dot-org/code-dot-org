@@ -25,6 +25,10 @@ describe('The JSDebugger redux duck', () => {
     sinon.spy(interpreter, 'handleStepIn');
     sinon.spy(interpreter, 'handleStepOut');
     sinon.spy(interpreter, 'handleStepOver');
+
+    // override evalInCurrentScope so we don't have to set up the full interpreter.
+    // eslint-disable-next-line no-eval
+    sinon.stub(interpreter, 'evalInCurrentScope', input => eval(input));
   });
   afterEach(() => {
     restoreRedux();
@@ -156,6 +160,12 @@ describe('The JSDebugger redux duck', () => {
         );
       });
 
+      it("the evalInCurrentScope action throws an error", () => {
+        expect(() => store.dispatch(actions.evalInCurrentScope('1+1'))).to.throw(
+          "No interpreter has been attached"
+        );
+      });
+
       describe("after dispatching the stepIn() action", () => {
         beforeEach(() => {
           store.dispatch(actions.stepIn());
@@ -218,6 +228,13 @@ describe('The JSDebugger redux duck', () => {
           .to.have.been.called;
       });
 
+      it("you can dispatch the evalInCurrentScope action", () => {
+        const result = store.dispatch(actions.evalInCurrentScope('1+1'));
+        expect(selectors.getJSInterpreter(store.getState()).evalInCurrentScope)
+          .to.have.been.called;
+        expect(result).to.equal(2);
+      });
+
       describe("after dispatching the stepIn() action", () => {
         beforeEach(() => {
           store.dispatch(actions.stepIn());
@@ -227,6 +244,7 @@ describe('The JSDebugger redux duck', () => {
         it("will not call the provided runApp, because an interpreter is already attached", () => {
           expect(runApp).not.to.have.been.called;
         });
+
       });
 
       describe("after being detached", () => {
