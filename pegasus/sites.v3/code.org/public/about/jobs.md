@@ -31,6 +31,8 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 - **Advocacy and Government Affairs**
 	- [Director of State Government Affairs](#govaffairs)
+- **Fundraising**
+	- [Fundraising Consultant](#fund)
 - **Product and Engineering**
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
@@ -38,6 +40,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 	- [Program Coordinator](#coord)
 - **Internships**
  	- [Curriculum Team Intern](#edintern)
+ 	- [Fundraising Team Intern](#fundintern)
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
@@ -94,6 +97,26 @@ Additionally, the ideal candidate has:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="fund"href="#fund">Fundraising Consultant (Seattle, WA; location flexible)</a>
+
+**Scope of Work:**
+
+Code.org is seeking a part-time Fundraising Consultant to conduct research and provide consultation services to select Code.org partners regarding the feasibility and process for applying to various grant programs.
+
+**Experience Required:**
+
+We are looking for a consultant with 3+ years experience seeking grants, able to identify early-stage potential opportunities, stay abreast of new opportunities that are released, and quickly be able to understand how to apply for and win funding. Consultant must have proven experience in successfully applying for at least one of the following:
+
+- Grants from private individuals, family foundations, or large, established foundations (corporate, family, or other)
+- Grants and/or contracts from cities, counties, states, and/or the Federal government, preferably including i3/EIR, NSF, Dept. of Ed, etc.
+
+The person we contract for this role will be experienced in building relationships with grantmakers and/or policymakers to access funds or give input into funding opportunities, and be able to guide and coach others in both seeking grants and building relationships.
+
+**Contract Terms:**
+
+Consultant will be expected to devote up to 15 hours per week for at least the next year (as needed, on contract); the work will require a minimum of 5 hours per month to cover ongoing communications and research time to stay current on grant opportunities, Code.org activities, and activities of our Regional Partners. 
+
+Interested contractors should email a resume and cover letter, and any relevant work samples, to <a href="mailto:jobs@code.org">jobs@code.org</a>. You may also choose to include a LinkedIn or related online profile. Compensation will be a contracted hourly rate, depending on experience. 
 
 ## <a name="senior"href="#senior">Senior Software Engineer (Seattle, WA)</a>
 
@@ -204,6 +227,33 @@ The candidate should also:
 - Have some prior curriculum writing experience / activity design experience (required)
 - Proficiency in working with Microsoft Office and Google Docs (required) 
 - Be working to obtain a Bachelor’s degree or higher in Education or Computer Science (preferred)
+
+
+To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
+## <a name="fundintern"href="#fundintern">Fundraising Team Intern (Seattle, WA)</a>
+
+**Internship Summary:**
+
+Code.org is looking for a Fundraising Intern to join Code.org’s Fundraising team. Our team is responsible for raising funds to sustain Code.org’s operations. This is a spring (March-May) internship, part-time, approximately 10-15 hours per week on a flexible schedule. Intern’s responsibilities would include:
+
+- Researching potential fundraising sources using the Foundation Center and other online resources for Code.org and our regional partners 
+- Developing reports of qualified potential funding sources 
+- Developing an application calendar to assist the Fundraising team in prioritizing work
+- Other special projects, as needed
+
+
+**Experience and Qualifications:**
+
+Must be extremely detail-oriented, possess strong research skills, excel at written and verbal communications in English, and be tech-savvy (computer science background/experience not required). Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+Required Qualifications:
+
+- Minimum 2 years of undergraduate studies completed
+- Experience with Google suite of products
+- Have interest and prior experience in gathering online research
+- Ability to work legally in the United States
 
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.

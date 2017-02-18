@@ -27,10 +27,10 @@ An introduction to else statements and nested if statements to add more complex 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
 |mouseDidMove()|Returns true if the mouse did move|`if(mouseDidMove()) {}`  | link |
-|mouseWentDown(side)|Gives the y position of the mouse|`if(mouseWentDown("left")) {}` | link |
-|mouseWentUp(side)|Gives the x position of the mouse|`if(mouseWentUp("left")) {}`  | link |
-|keyWentDown(key)|Gives the y position of the mouse|`if(keyWentDown("e")) {}`| link |
-|keyWentUp(key)|Gives the y position of the mouse|`if(keyWentDown("m")) {}` | link |
+|mouseWentDown(side)|Returns true once when the specified mouse button is pressed down|`if(mouseWentDown("left")) {}` | link |
+|mouseWentUp(side)|Returns true once when the specified mouse button is released|`if(mouseWentUp("left")) {}`  | link |
+|keyWentDown(key)|Returns true once when the specified key is pressed down|`if(keyWentDown("e")) {}`| link |
+|keyWentUp(key)|Returns true once when the specified key is released|`if(keyWentDown("m")) {}` | link |
 
 # Resources
 

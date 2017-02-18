@@ -128,6 +128,7 @@ mi:
     login: 'Takiuru'
     invalid_login: 'Takiuru muhu, me ngana tonu'
     pair_programming: 'He hoa tōku i taku taha'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Kua wareware i a koe tō kupuhipa?'
@@ -367,6 +368,9 @@ mi:
     announcement_mc_launch: "Kua whai tānga tuarua tētahi o ā mātou whakaakoranga i tino pīrangitia! E wātea ana ngā ākonga i te tānga hou nei, i Hour of Code Hoahoa Mahimaina, ki te whakatakoto i ngā ture o te ao Mahimaina. E āhei ana rātou ki te waihanga i tētahi wheako Mahimaina motuhake ka tiritiria ai ki ō rātou hoa, ka tākaro rānei ki ō rātou waea. Mahia atu me tō akomanga mō Hour of Code."
     announcement_how_code_studio: "Ehara i te mea me tangata mōhio koe ki te pūtaiao rorohiko e āhei ai koe ki te whakaako i tō akomanga. He marau, he mahere ako, he akoranga ngaio kounga, me ētahi tini rauemi ka whakaratoa e Code.org mō ngā taumata ako katoa &mdash; ngā mea katoa kei te hiahiatia, ā, he utu kore. E whakaaro ana koe ki hea tīmata ai? Tikina ake <a href='%{video_download_url}'>tēnei ataata</a>!"
     announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "Kia manawanui mai, kāore tēnei wāhanga %{new_section_code}. Tēnā whakaurua he waehere wāhanga rerekē."
     section_code_not_entered: "Tēnā whakaratoa mai he waehere_wāhanga_onāianei."
@@ -524,6 +528,9 @@ mi:
     support: "Tono Āwhina"
     support_url: "//support.code.org"
     help_resources: "Te Āwhina me ngā Rauemi"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Whakautu hē"
     wrong_body: "E hē ana te whakautu nāu i whakauru. Tēnā whakamātau anō!"
@@ -736,6 +743,8 @@ mi:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Karo
     leaving_domain: E puta ana koe i tēnei rohe ināianei ki tētahi pae kāore i te whakahaerehia e Code.org.

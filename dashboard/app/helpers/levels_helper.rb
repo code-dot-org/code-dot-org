@@ -387,21 +387,25 @@ module LevelsHelper
       )
 
       # stage-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {
-          script_name: script.name,
-          stage: script_level.stage.absolute_position,
-        },
-        default: nil
-      ) if enabled.nil?
+      if enabled.nil?
+        enabled = Gatekeeper.allows(
+          'showUnusedBlocks',
+          where: {
+            script_name: script.name,
+            stage: script_level.stage.absolute_position,
+          },
+          default: nil
+        )
+      end
 
       # script-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {script_name: script.name},
-        default: nil
-      ) if enabled.nil?
+      if enabled.nil?
+        enabled = Gatekeeper.allows(
+          'showUnusedBlocks',
+          where: {script_name: script.name},
+          default: nil
+        )
+      end
 
       # global
       enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
@@ -493,8 +497,10 @@ module LevelsHelper
     end
 
     # Request-dependent option
-    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
-        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    if request
+      app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+          (!Rails.env.production? && request.location.try(:country_code) == 'RD')
+    end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share
