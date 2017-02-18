@@ -79,6 +79,7 @@ PROPERTIES[ElementType.BUTTON] = {
     'fontSize',
     'textAlign',
     'image',
+    'iconColor',
     'hidden'
   ]
 };
@@ -175,7 +176,8 @@ PROPERTIES[ElementType.SCREEN] = {
   propertyNames: [
     'text',
     'backgroundColor',
-    'screenImage'
+    'screenImage',
+    'iconColor'
   ]
 };
 PROPERTIES[ElementType.TEXT_AREA] = {
