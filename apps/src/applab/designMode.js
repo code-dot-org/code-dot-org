@@ -252,7 +252,12 @@ designMode.updateProperty = function (element, name, value) {
       element.setAttribute('data-icon-color', value);
       const imageUrl = element.getAttribute('data-canonical-image-url');
       if (ICON_PREFIX_REGEX.test(imageUrl)) {
-        element.src = assetPrefix.renderIconToString(imageUrl, element);
+        const url = assetPrefix.renderIconToString(imageUrl, element);
+        if (element.nodeName == "IMG") {
+          element.src = url;
+        } else {
+          element.style.backgroundImage = 'url(' + url + ')';
+        }
       }
       break;
     case 'image':
