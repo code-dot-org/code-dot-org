@@ -86,6 +86,8 @@ window.SignupManager = function (options) {
     // Show correct form elements.
     $("#age-block").fadeIn();
     $("#gender-block").fadeIn();
+    $("#name-student").fadeIn();
+    $("#name-teacher").hide();
     setSchoolInfoVisibility(false);
 
     // Show correct terms below form.
@@ -100,6 +102,8 @@ window.SignupManager = function (options) {
     // Show correct form elements.
     $("#age-block").hide();
     $("#gender-block").hide();
+    $("#name-student").hide();
+    $("#name-teacher").fadeIn();
     setSchoolInfoVisibility(true);
 
     // Show correct terms below form.

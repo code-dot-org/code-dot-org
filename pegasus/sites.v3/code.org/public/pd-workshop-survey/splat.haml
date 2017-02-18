@@ -314,14 +314,17 @@ title: "Professional Development Workshop Survey"
 
   #thanks{style: 'display: none;'}
     %h1 Thank you for your submission
+    %h3 We appreciate your feedback.
 
 - if mimeo_url
   #materials-order{style: 'display: none;'}
+    %h1 Order Supplies
     %p
-      Click
-      %a{href: mimeo_url} here
-      if you'd like to be connected with our partner Mimeo to order free materials for the unplugged
+      Click below if you'd like to be connected with our partner Mimeo to order free materials for the unplugged
       lessons in CS Fundamentals, or to check on an existing order (US attendees only).
+    %p
+      %a{href: mimeo_url}
+        %button#btn.btn-primary Order Supplies
 
 - if previous_response && mimeo_url
   %script{type: 'text/javascript'}$('#materials-order').show();

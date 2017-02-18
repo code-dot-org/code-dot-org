@@ -387,4 +387,10 @@ class Pd::Workshop < ActiveRecord::Base
   def workshop_starting_date
     sessions.first.try(:start)
   end
+
+  # @return [String] url for this workshop in the workshop dashboard
+  # Note the latter part of the path is handled by React-Router on the client, and is not known by rails url helpers
+  def workshop_dashboard_url
+    Rails.application.routes.url_helpers.pd_workshop_dashboard_url + "/workshops/#{id}"
+  end
 end

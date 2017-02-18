@@ -78,10 +78,12 @@ class Level < ActiveRecord::Base
   def assign_attributes(new_attributes)
     attributes = new_attributes.stringify_keys
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
-    assign_nested_attributes_for_one_to_one_association(
-      :level_concept_difficulty,
-      concept_difficulty_attributes
-    ) if concept_difficulty_attributes
+    if concept_difficulty_attributes
+      assign_nested_attributes_for_one_to_one_association(
+        :level_concept_difficulty,
+        concept_difficulty_attributes
+      )
+    end
     super(attributes)
   end
 

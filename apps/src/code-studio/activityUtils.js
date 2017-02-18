@@ -25,9 +25,9 @@ export const LevelStatus = makeEnum(
 export const LevelKind = makeEnum(
   'peer_review',
   'assessment',
-  'named_level',
   'puzzle',
-  'unplugged'
+  'unplugged',
+  'level'
 );
 
 /**

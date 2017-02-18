@@ -5,6 +5,18 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
     AuthoredHintViewRequest.stubs(:enabled?).returns true
     @script = create :script
     @level = create :level
+    @user = create :user
+    sign_in @user
+
+    @default_params = {
+      hints: [
+        {
+          scriptId: @script.id,
+          levelId: @level.id,
+          hintId: 'hint'
+        }
+      ]
+    }
   end
 
   test 'requires "hints" in params' do
@@ -12,50 +24,82 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test 'cannot create without signed-in user' do
+    sign_out @user
+
+    assert_does_not_create(AuthoredHintViewRequest) do
+      post :create, params: @default_params
+    end
+
+    assert_response :unauthorized
+  end
+
   test 'can create multiple with a single post' do
-    initial_count = AuthoredHintViewRequest.count
-
-    post :create, params: {
-      hints: [{
-        scriptId: @script.id,
-        levelId: @level.id,
-        hintId: "first"
-      }, {
-        scriptId: @script.id,
-        levelId: @level.id,
-        hintId: "second"
-      }]
-    }, format: :json
-
-    final_count = AuthoredHintViewRequest.count
-
-    assert_equal(2, final_count - initial_count)
+    assert_difference 'AuthoredHintViewRequest.count', 2 do
+      post(
+        :create,
+        params: {
+          hints: [
+            {
+              scriptId: @script.id,
+              levelId: @level.id,
+              hintId: "first"
+            },
+            {
+              scriptId: @script.id,
+              levelId: @level.id,
+              hintId: "second"
+            }
+          ]
+        },
+        format: :json
+      )
+    end
   end
 
   test 'creates authored hints for both users when pairing' do
-    driver = create :user
+    driver = @user
     navigator = create :user
     section = create :section
     section.add_student driver
     section.add_student navigator
 
-    driver_initial = AuthoredHintViewRequest.where(user: driver).count
-    navigator_initial = AuthoredHintViewRequest.where(user: navigator).count
-
-    sign_in driver
     @controller.send :pairings=, [navigator]
-    post :create, params: {
-      hints: [{
-        scriptId: @script.id,
-        levelId: @level.id,
-        hintId: 'third'
-      }]
+
+    assert_difference 'AuthoredHintViewRequest.where(user: driver).count' do
+      assert_difference 'AuthoredHintViewRequest.where(user: navigator).count' do
+        post :create, params: @default_params
+      end
+    end
+  end
+
+  test 'records all (optional) data fields' do
+    data = {
+      scriptId: @script.id,
+      levelId: @level.id,
+      hintId: 'first',
+      hintClass: 'bottom-out',
+      hintType: 'general',
+      prevTime: 1,
+      prevAttempt: 2,
+      prevTestResult: 3,
+      prevLevelSourceId: 5,
+      nextTime: 6,
+      nextAttempt: 7,
+      nextTestResult: 8,
+      nextLevelSourceId: 10,
+      finalTime: 11,
+      finalAttempt: 12,
+      finalTestResult: 13,
+      finalLevelSourceId: 15
     }
 
-    driver_final = AuthoredHintViewRequest.where(user: driver).count
-    navigator_final = AuthoredHintViewRequest.where(user: navigator).count
+    post(:create, params: { hints: [data] }, format: :json)
 
-    assert_equal(1, driver_final - driver_initial)
-    assert_equal(1, navigator_final - navigator_initial)
+    record = AuthoredHintViewRequest.last
+
+    data.keys.each do |key|
+      assert_equal data[key], record[key.to_s.underscore.to_sym]
+    end
   end
 end

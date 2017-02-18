@@ -1,5 +1,5 @@
 name 'CSD: Accessing List Items'
-href 'path/to/html/in/asset/folder'
+display_name 'Accessing List Items'
 markdown <<MARKDOWN
 # Lists
 
@@ -18,14 +18,11 @@ If you try to access an index that does not exist the program does not know what
 
 ` var myList = ["dog", "cat", "pig"] `
 
-If I tried to access an index less than zero or greater than 3 the program would evaluate that to be undefined since it has not been defined in my code.
+If I tried to access an index less than zero or greater than 3 the program would evaluate that to be undefined since it has not been defined in my code. All of these would print 'undefined' in the console.
 
-` 
-console.log(myList[-1]);
-console.log(myList[3]);
-console.log(myList[20]); 
-`
-All of these would print 'undefined' in the console.
+`console.log(myList[-1]);` <br>
+`console.log(myList[3]);` <br>
+`console.log(myList[20]);` <br>
 
 
 ## Expressions as Indexes

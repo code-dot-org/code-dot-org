@@ -15,7 +15,7 @@ nav: about_nav
 ## Evaluation
 Code.org’s 3rd party evaluation team is [Jeanne Century](http://outlier.uchicago.edu/outlier/team/?data-target-rollout-thumb-id=jeanne), [Heather King](http://outlier.uchicago.edu/outlier/team/?data-target-rollout-thumb-id=heather) and [Courtney Blackwell](http://cemse.uchicago.edu/staff/courtney-blackwell/) of [Outlier Research & Evaluation](http://outlier.uchicago.edu/), at [CEMSE | University of Chicago](http://cemse.uchicago.edu/).
 
-## We'd like to thank our advisors for their help over the years
+## We're grateful for the advice and help of so many leaders over the years:
 
 ### From Tech
 

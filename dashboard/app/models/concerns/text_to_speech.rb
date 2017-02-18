@@ -33,6 +33,14 @@ class TTSSafe < Redcarpet::Render::StripDown
     ''
   end
 
+  def block_html(raw_html)
+    ''
+  end
+
+  def raw_html(raw_html)
+    ''
+  end
+
   def link(link, title, content)
     ''
   end

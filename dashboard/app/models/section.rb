@@ -64,6 +64,10 @@ class Section < ActiveRecord::Base
     self.code = unused_random_code
   end
 
+  def teacher_dashboard_url
+    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
+  end
+
   # return a version of self.students in which all students' names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
@@ -71,7 +75,13 @@ class Section < ActiveRecord::Base
   def name_safe_students
     # Create a prefix tree of student names
     trie = Rambling::Trie.create
+
+    # Add whitespace-normalized versions of the student names to the
+    # trie. Because FullNameSplitter implicitly performs whitespace
+    # normalization, this is necessary to ensure that we can recognize
+    # the name on the other side
     self.students.each do |student|
+      student.name = student.name.strip.split(/\s+/).join(' ')
       trie.add student.name
     end
 

@@ -8,7 +8,7 @@ import experiments from '../util/experiments';
 import {
   outputError,
   injectErrorHandler
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');

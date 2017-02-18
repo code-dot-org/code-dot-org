@@ -16,7 +16,7 @@
     "free_play": "false",
     "impressive": "false",
     "slider_speed": ".7",
-    "ideal": "13",
+    "ideal": "11",
     "use_modal_function_editor": "false",
     "instructions": "Make three small changes to the code from the last level to get this!",
     "use_contract_editor": "false",
@@ -32,6 +32,9 @@
     "disable_sharing": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "discard_background": "false",
     "contained_level_names": null
   },
   "published": true,
