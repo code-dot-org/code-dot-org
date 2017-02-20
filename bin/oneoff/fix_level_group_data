@@ -84,7 +84,7 @@ def create_sublevel_user_level(user_level, sublevel_level_id, sublevel_raw_data)
       script_id: user_level.script_id
     ).
     first
-  next if sublevel_user_level
+  return if sublevel_user_level
 
   # Before creating the sublevel UserLevel, verify the existence of an
   # appropriate LevelSource, creating one if not.
