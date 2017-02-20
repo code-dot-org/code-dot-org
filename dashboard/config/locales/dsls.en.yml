@@ -7261,9 +7261,14 @@ en:
         An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
+        (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
+        (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
         "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
+        day != "Monday": day != "Monday"
         day != “Monday”: day != “Monday”
+        day == "Saturday": day == "Saturday"
+        day == "Sunday": day == "Sunday"
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
