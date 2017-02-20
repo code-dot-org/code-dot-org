@@ -44,6 +44,7 @@
   .desktop-feature { }
 
   .col-18 { width: 18%; float:left; }
+  .col-18eb { width: 18%; float:left; }
   .col-20 { width: 20%; float:left; }
   .col-23 { width: 23%; float:left; }
   .col-25 { width: 25%; float:left; }
@@ -84,6 +85,7 @@
   .desktop-feature { display: none }
 
   .col-18 { width: 100%; float:left; }
+  .col-18eb { width: 31%; float:left; }
   .col-20 { width: 100%; float:left; }
   .col-23 { width: 100%; }
   .col-25 { width: 100%; }
@@ -125,6 +127,7 @@
   .col-mobile-50 { width: 100%; float:left; }
   .col-mobile-44 { width: 100%; float:left; }
   .col-mobile-56 { width: 100%; float:left; }
+  .col-18eb { width: 48%; float:left; }
 
   .mobile-show-medium { display: none }
 

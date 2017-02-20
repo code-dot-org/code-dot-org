@@ -3,15 +3,14 @@
   -if value[:title_s] == 'Convince your school or state' && ! state.nil_or_empty? && File.exists?(sites_dir("all/files/states/#{state}.pdf"))
     -url = "/files/states/#{state}.pdf"
 
-  #block{:style=>'width:20%; float:left; padding:30px; padding-top:0px; padding-bottom:0px'}
-    %a{:href=>url, :target=>'_blank', :style=>'text-decoration:none; font-size:100px;'}
-      %i{:class=>"fa " + value[:icon_s]}
-    #text{:style=>'float:left; width:75%'}
-    %br
-    %br
-    %a{:href=>url, :target=>'_blank'}
-      =value[:title_s]
-    %p{:style=>'font-size:13px; line-height:18px'}
-      =value[:description_t]
-    %p{:style=>'font-size:13px; line-height:18px; color:red'}
-      =value[:icon_s]
+  %div.col-18eb{:style=> 'margin:1%; float:left;'}
+    #block{:style=> 'float:left; padding:1%; padding-top:1%; padding-bottom:1%'}
+      %a{:href=>url, :target=>'_blank', :style=>'text-decoration:none; font-size:100px;'}
+        %i{:class=>"fa " + value[:icon_s]}
+      #text{:style=>'float:left; width:75%'}
+      %br
+      %br
+      %a{:href=>url, :target=>'_blank'}
+        =value[:title_s]
+      %p{:style=>'font-size:13px; line-height:18px'}
+        =value[:description_t]
