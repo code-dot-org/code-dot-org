@@ -19,10 +19,13 @@
 #  index_script_levels_on_stage_id   (stage_id)
 #
 
+require 'cdo/shared_constants'
+
 # Joins a Script to a Level
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
   include LevelsHelper
+  include SharedConstants
   include Rails.application.routes.url_helpers
 
   has_and_belongs_to_many :levels
@@ -190,11 +193,11 @@ class ScriptLevel < ActiveRecord::Base
 
   def summarize
     if level.unplugged?
-      kind = 'unplugged'
+      kind = LEVEL_KIND.unplugged
     elsif assessment
-      kind = 'assessment'
+      kind = LEVEL_KIND.assessment
     else
-      kind = 'puzzle'
+      kind = LEVEL_KIND.puzzle
     end
 
     ids = level_ids
