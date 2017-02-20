@@ -23,7 +23,6 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var utils = require('./utils');
 var codegen = require('./codegen');
 var msg = require('@cdo/locale');
 var dom = require('./dom');
@@ -422,12 +421,15 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
 
-  var tryAgainText = '';
-  if (options.feedbackType !== TestResults.ALL_PASS) {
-    tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
-  }
-  if (options.keepPlayingText) {
-    tryAgainText = options.keepPlayingText;
+  let tryAgainText = '';
+  if (options.tryAgainText) {
+    tryAgainText = options.tryAgainText;
+  } else if (options.feedbackType === TestResults.FREE_PLAY) {
+    tryAgainText = msg.keepPlaying();
+  } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
+    tryAgainText = msg.tryAgain();
+  } else {
+    tryAgainText = msg.replayButton();
   }
 
   ReactDOM.render(React.createElement(DialogButtons, {

@@ -293,6 +293,7 @@ class CDOImpl < OpenStruct
       Gem.path.each do |gem|
         b.gsub!(gem, '[GEM]')
       end
+      b.gsub! Bundler.system_bindir, '[BIN]'
     end
     backtrace.join("\n")
   end
