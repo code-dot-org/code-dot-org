@@ -46,6 +46,7 @@ var ALLOWED_KEYS = new Set([
   'showAnimationMode',
   'startInAnimationTab',
   'allAnimationsSingleFrame',
+  'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
   'isSignedIn',
   'isK1',

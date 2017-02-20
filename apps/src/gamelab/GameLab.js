@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {GameLabInterfaceMode} from './constants';
+import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 import experiments from '../util/experiments';
 import {
   outputError,
@@ -275,6 +275,7 @@ GameLab.prototype.init = function (config) {
 
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
+    nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
