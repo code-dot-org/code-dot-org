@@ -93,3 +93,6 @@ level 'CSDU6 - timed loop for LEDs'
 level 'CSDU6 - timed loop random sound exit'
 level 'CSDU6 - timed loop helpers'
 named_level 'CSDU6 - timed loop challenge'
+
+stage 'Physical Input'
+named_level 'CSD Map: Board Buttons'
