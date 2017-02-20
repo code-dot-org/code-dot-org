@@ -67,4 +67,17 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
       )
     end
   end
+
+  def summarize
+    {
+        courseName: plc_course.name,
+        status: status,
+        courseUnits: plc_unit_assignments.map do |unit_assignment|
+          {
+              unitName: unit_assignment.plc_course_unit.unit_name,
+              moduleAssignments: unit_assignment.summarize_progress
+          }
+        end
+    }
+  end
 end
