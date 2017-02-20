@@ -1,4 +1,4 @@
-Date of Last Revision: November 17, 2016
+Date of Last Revision: February 17, 2017
 
 
 ## About Code.org
@@ -180,7 +180,7 @@ In particular, we do not share any Personal Information you provide with our don
 If your use of the Code.org Website is in the context of a partnership with your school or school district, we may allow the school or school district to access the same student progress report that is also shared with your teacher(s).
 
 ### We may share teacher contact information with training facilitators and partner organizations
-Part of our educational program is to offer professional development workshops to prepare teachers to offer computer science courses. If you are a teacher participating in one of these workshops, your name and contact information will be shared with the facilitator and/or professional learning organization hosting the workshop, and they may have access to your continued progress in our online professional learning courses in order to coach or facilitate your learning. 
+Part of our educational program is to offer professional development workshops to prepare teachers to offer computer science courses. If you are a teacher participating in one of these workshops, your name and contact information will be shared with the facilitator and/or professional learning organization hosting the workshop, and they may have access to your continued progress in our online professional learning courses in order to coach or facilitate your learning. If Code.org is paying for your travel to our professional learning workshops for teachers, we will - with your explicit permission - share your name and contact information with our travel partner to facilitate booking your travel.
 
 In the context of partnerships between Code.org and school districts, we may also share this workshop attendance and professional learning data with the school district that employs the teacher, in order to allow school districts to compensate teachers in situations where school districts have such an arrangement with their teachers.
 

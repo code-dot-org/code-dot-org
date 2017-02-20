@@ -310,6 +310,7 @@ testsContext.keys().forEach(testsContext);
   var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
+    generateSharedConstants: './script/generateSharedConstants.rb'
   };
 
   config.karma = {
@@ -672,6 +673,7 @@ testsContext.keys().forEach(testsContext);
     'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -738,6 +740,7 @@ testsContext.keys().forEach(testsContext);
   grunt.registerTask('preconcat', [
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'newer:copy:static',
   ]);
 
@@ -751,6 +754,7 @@ testsContext.keys().forEach(testsContext);
   grunt.registerTask('unitTest', [
     'newer:messages',
     'exec:convertScssVars',
+    'exec:generateSharedConstants',
     'concat',
     'karma:unit'
   ]);
