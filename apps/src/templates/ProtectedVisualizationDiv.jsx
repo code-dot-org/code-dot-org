@@ -7,6 +7,15 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 export const VISUALIZATION_DIV_ID = 'visualization';
 
 /**
+ * @param {!Object} state - Redux state from any app.
+ * @returns {boolean} TRUE if we expect to apply responsive styles to layout
+ *          elements in the current view.
+ */
+export function isResponsiveFromState(state) {
+  return true;
+}
+
+/**
  * Protected div with ID "visualization" that depends on Redux state to render
  * with the "responsive" class or not.
  */
@@ -28,5 +37,5 @@ const ProtectedVisualizationDiv = React.createClass({
   }
 });
 export default connect(state => ({
-  isResponsive: true
+  isResponsive: isResponsiveFromState(state)
 }))(ProtectedVisualizationDiv);
