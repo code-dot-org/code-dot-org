@@ -11,7 +11,12 @@ import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
 
 var styles = {
+  nonResponsive: {
+    width: applabConstants.APP_WIDTH,
+    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
+  },
   share: {
+    // overrides nonReponsive
     height: applabConstants.APP_HEIGHT
   },
   phoneFrame: {
