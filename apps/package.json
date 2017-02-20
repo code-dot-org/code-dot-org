@@ -14,7 +14,6 @@
     "test:unit": "grunt unitTest",
     "test:integration": "grunt integrationTest",
     "test:entry": "grunt karma:entry",
-    "test:ruby-blocks": "grunt ruby-block-tests",
     "clean": "grunt clean",
     "build": "DEV=1 grunt build && grunt logBuildTimes",
     "build:blockly": "DEV=1 grunt preconcat && grunt concat",
