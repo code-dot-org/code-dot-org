@@ -104,6 +104,11 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
+    milestone_response_user_level = nil
+    if @new_level_completed.is_a? UserLevel
+      milestone_response_user_level = @new_level_completed
+    end
+
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
@@ -115,7 +120,7 @@ class ActivitiesController < ApplicationController
       new_level_completed: @new_level_completed,
       get_hint_usage: params[:gamification_enabled],
       share_failure: share_failure,
-      user_level: @new_level_completed
+      user_level: milestone_response_user_level
     )
 
     if solved
