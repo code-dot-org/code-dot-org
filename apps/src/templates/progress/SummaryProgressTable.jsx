@@ -87,6 +87,7 @@ const SummaryProgressTable = React.createClass({
   }
 });
 
+// Provide non-connected version for testing
 SummaryProgressTable.SummaryProgressTable = SummaryProgressTable;
 
 export default connect(state => ({
