@@ -114,6 +114,9 @@ const FlexGroup = React.createClass({
     if (active === false) {
       l += ', active: false'
     }
+    if (level.progression) {
+      l += `, progression: '${level.progression}'`;
+    }
     s.push(l);
     return s;
   },
