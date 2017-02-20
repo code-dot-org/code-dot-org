@@ -38,7 +38,7 @@ Use playing cards (or dice, or sheets of paper...anything with the ability to ra
 **Ages 8-18. Sequence, Algorithms, Programming, Unplugged.** 
 Make fun take-home items that "store" students' initials using only two colors.
 
-[Bomberbot Hour of Code Activities](http://www.bomberbot.com/hourofcode)  
+[Bomberbot Hour of Code Activities](http://go.bomberbot.com/hourofcode)  
 **Ages 8-12. Sequence, Algorithms, Programming, Unplugged or Web-based.** Students will learn a series of programming concepts and apply them to programming a robot.
 
 [STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)  
@@ -134,9 +134,6 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 
 [Input and Output, Math Activity](https://app.vidcode.io/doc/unplugged-activity-math.pdf)   
 **Ages 12-16. Math (Algebra), Math (Functions), Unplugged.** Connect JavaScript functions to both math and real world problems.
-
-[Vizwik Voter App](http://www.vizwik.com/hoc)  
-**Ages 13-18. Programming, App building.** Learn how to build your own mobile app (iOS and Android) to share with friends to vote on a question that is important to you.
 
 [Climate Science](https://app.vidcode.io/hourofcode/science-teacher-guide)  
 **Ages 12-16. Science (Climate), Science (Environment), Unplugged.** Students draw a picture, and take turns giving the class steps to recreate their drawing.
