@@ -16,8 +16,6 @@ import mazeMsg from './locale';
 
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
-const COLLECTED_SOME = 2;
-const COLLECTED_EVERYTHING = 3;
 const COLLECTED_TOO_MANY = 4;
 const COLLECTED_NOT_ENOUGH = 5;
 
@@ -39,11 +37,14 @@ export default class Collector extends Subtype {
     return true;
   }
 
-  /**
-   * @override
-   */
-  shouldCheckSuccessOnMove() {
-    return false;
+  collect(id, row, col) {
+    const currVal = this.maze_.map.getValue(row, col);
+    if (currVal < 1) {
+      this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
+    } else {
+      this.maze_.executionInfo.queueAction('pickup', id);
+      this.maze_.map.setValue(row, col, currVal - 1);
+    }
   }
 
   /**
@@ -123,12 +124,10 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
     } else if (this.studioApp_.feedback_.getNumCountableBlocks() > this.maxBlocks_) {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
-    } else if (this.collectedAll()) {
-      executionInfo.terminateWithValue(COLLECTED_EVERYTHING);
     } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
     } else {
-      executionInfo.terminateWithValue(COLLECTED_SOME);
+      executionInfo.terminateWithValue(true);
     }
   }
 
@@ -151,14 +150,16 @@ export default class Collector extends Subtype {
         return mazeMsg.collectorTooManyBlocks({blockLimit: this.maxBlocks_});
       case COLLECTED_NOTHING:
         return mazeMsg.collectorCollectedNothing();
-      case COLLECTED_SOME:
-        return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
-      case COLLECTED_EVERYTHING:
-        return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
       case COLLECTED_TOO_MANY:
         return mazeMsg.collectorCollectedTooMany();
       case COLLECTED_NOT_ENOUGH:
         return mazeMsg.collectorCollectedNotEnough({goal: this.minCollected_});
+      case true:
+        if (this.collectedAll()) {
+          return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
+        } else {
+          return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
+        }
       default:
         return null;
     }
@@ -177,10 +178,12 @@ export default class Collector extends Subtype {
       case COLLECTED_TOO_MANY:
       case COLLECTED_NOT_ENOUGH:
         return TestResults.APP_SPECIFIC_FAIL;
-      case COLLECTED_SOME:
-        return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
-      case COLLECTED_EVERYTHING:
-        return TestResults.ALL_PASS;
+      case true:
+        if (this.collectedAll()) {
+          return TestResults.ALL_PASS;
+        } else {
+          return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+        }
     }
 
     return this.studioApp_.getTestResults(false);

@@ -7,7 +7,7 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from "../../../util/color";
 import progressStyles, { createOutline } from './progressStyles';
-import { LevelStatus, LevelKind } from '../../activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
 const dotSize = 24;
 
@@ -134,6 +134,19 @@ const styles = {
   status: BUBBLE_COLORS
 };
 
+// Longer term, I'd like the server to provide us an icon type, instead of a
+// className. For now, I'm going to use the className in level.icon as if it
+// were actually a type key.
+const iconClassFromIconType = {
+  'fa-file-text': 'fa fa-file-text',
+  // Explicitly don't want to use an icon for this type
+  'fa-list-ol': undefined,
+  'fa-external-link-square': 'fa fa-external-link-square',
+  'fa-video-camera': 'fa fa-video-camera',
+  'fa-stop-circle': 'fa fa-stop-circle',
+  'fa-map': 'fa fa-map',
+};
+
 export const BubbleInterior = React.createClass({
   propTypes: {
     showingIcon: React.PropTypes.bool,
@@ -201,7 +214,7 @@ export const ProgressDot = Radium(React.createClass({
     }
 
     if (level.icon) {
-      return 'fa ' + level.icon;
+      return iconClassFromIconType[level.icon];
     }
     return '';
   },
@@ -217,8 +230,7 @@ export const ProgressDot = Radium(React.createClass({
     const showUnplugged = isUnplugged && (courseOverviewPage || onCurrent);
     const outlineCurrent = courseOverviewPage && onCurrent;
     const smallDot = !courseOverviewPage && !onCurrent;
-    const showLevelName = courseOverviewPage &&
-      (level.kind === LevelKind.named_level || level.kind === LevelKind.peer_review);
+    const showLevelName = courseOverviewPage && !!level.name;
     const isPeerReview = level.kind === LevelKind.peer_review;
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = status === LevelStatus.locked;
@@ -234,7 +246,7 @@ export const ProgressDot = Radium(React.createClass({
           isLocked && styles.disabledLevel
          ]}
       >
-        {(level.icon && !isPeerReview) ?
+        {(iconClassFromIconType[level.icon] && !isPeerReview) ?
           <i
             className={this.iconClassName()}
             style={[

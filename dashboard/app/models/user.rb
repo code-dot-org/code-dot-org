@@ -27,6 +27,7 @@
 #  user_type                  :string(16)
 #  school                     :string(255)
 #  full_address               :string(1024)
+#  school_info_id             :integer
 #  total_lines                :integer          default(0), not null
 #  prize_earned               :boolean          default(FALSE)
 #  prize_id                   :integer
@@ -67,6 +68,7 @@
 #  index_users_on_prize_id_and_deleted_at                (prize_id,deleted_at) UNIQUE
 #  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
 #  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_school_info_id                         (school_info_id)
 #  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
@@ -975,12 +977,8 @@ class User < ActiveRecord::Base
           ScriptConstants::COURSE3_NAME,
           ScriptConstants::COURSE4_NAME
         ].include? Script.get_from_cache(script_id).name) &&
-        HintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty? &&
-        AuthoredHintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty?
+        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
@@ -1021,7 +1019,7 @@ class User < ActiveRecord::Base
     if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
       learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
 
-      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user: self, plc_learning_module: learning_module)
+      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
         PeerReview.create_for_submission(user_level, level_source_id)
       end
     end

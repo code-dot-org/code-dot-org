@@ -574,6 +574,8 @@
   "setScoreText": "tetapkan skor",
   "setScoreTextTooltip": "atur teks yang ditampilkan di area skor",
   "setScoreTooltip": "Sets the player's score to the specified amount",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "ke sebuah gambar Manny",
   "setSpriteSid": "ke sebuah gambar Sid",
   "setSpriteGranny": "ke sebuah gambar Nenek",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "untuk kecepatan sangat cepat",
   "setSpriteSpeedTooltip": "atur kecepatan aktor",
   "setSpriteZombie": "menjadi gambar zombie",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Makes all the selected actors chase another actor",
   "setSpritesFleeTooltip": "Makes all the selected actors flee from another actor",
   "setSpritesStopTooltip": "Makes all the selected actors stop wandering, chasing, or fleeing",
@@ -671,6 +674,7 @@
   "showTSDefText": "Ketik teks disini",
   "showTitleScreenTooltip": "Tampilkan layar judul dengan judul dan teks terkait.",
   "size": "ukuran",
+  "setActor": "set actor",
   "setDroid": "tetapkan droid",
   "setDroidHidden": "ke tersebunyi",
   "setDroidRandom": "ke acak",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Selamat, kamu menambahkan kode untuk membuat Droid Tikus. Kamu bisa pergi ke teka-teki berikutnya atau mencoba lagi untuk mendapatkan 20 Droid Tikus. Cobalah buat hal tersebut menjadi lebih mudah dengan menambah jumlah mereka! (Tekan dan tahan tombol-tombol pada keyboardmu (atau layar) untuk bergerak lebih cepat.)",
   "failedChangeSettingTimeout": "Dapatkan tiga Pilot Pemberontak untuk dapat lanjut.",
   "failedChangeSettingSettings": "Buatlah game tersebut milikmu. Untuk menyelesaikan teka-teki ini, kamu harus mengganti droidmu dan menetapkan kecepatannya.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

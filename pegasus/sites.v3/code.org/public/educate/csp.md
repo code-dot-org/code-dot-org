@@ -120,9 +120,11 @@ Several documents describe the overarching themes and direction of the course.
 - [Professional Development Overview](/educate/professional-learning/cs-principles)
 - [Course Materials List](#materials)
 
+
+
 ## <a name="lessons"></a>Lessons
 
-*In response to feedback from our 2015-2016 pilot teachers, we are reordering, condensing, and clarifying lesson content. Units 1 - 3 have already been revised per pilot feedback and Units 4 - 6 will be revised in the fall. Learn more about the updates [here](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ). All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary).*
+*After the '15-'16 pilot year, we revised and reorganized major portions of the curriculum. A document describing what we changed and why is here: [here](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ). All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary).*
 
 All lessons are available at [curriculum.code.org/csp](https://curriculum.code.org/csp)
 
@@ -131,9 +133,9 @@ All lessons are available at [curriculum.code.org/csp](https://curriculum.code.o
 |  [![Internet Simulator](csp/images/thumb_netsim.png "Unit 1")](https://curriculum.code.org/csp/unit1) [Unit 1](https://curriculum.code.org/csp/unit1)  | **The Internet (Last updated: May 2016)** This unit begins exploring the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. In the second half of the unit, students solve problems similar ones that had to be solved to build the real Internet. Students design their own versions of protocols, each one layered on the previous one, in a process that mimics the layered sets of protocols on the real Internet. Topics include: the digital representation of numbers and text, Internet Protocol, DNS, and TCP/IP. |
 |   [![binary magic](csp/images/thumb_binaryMagic.png "Unit 2")](https://curriculum.code.org/csp/unit2) [Unit 2](https://curriculum.code.org/csp/unit2)   | **Digital Information (Last updated: May 2016)** This unit further explores the ways that digital information is encoded, represented and manipulated. In this unit students will look at and generate data, clean it, manipulate it, and create and use visualizations to identify patterns and trends.|
 |  [![App Lab](csp/images/thumb_applab.png "Unit 3")](https://curriculum.code.org/csp/unit3) [Unit 3](https://curriculum.code.org/csp/unit3) | **Algorithms and Programming (Last updated: June 2016)** This unit introduces students to programming in the JavaScript language and creating small applications (apps) that live on the web. This introduction places a heavy emphasis on understanding general principles of computer programming and revealing those things that are universally applicable to any programming language.|
-|  [![Graph](csp/images/thumb_graph.png "Unit 4")](https://curriculum.code.org/csp/unit4) [Unit 4](https://curriculum.code.org/csp/unit4)| **Big Data and Privacy (Last updated: October 2016)** The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. In many ways this unit acts as a unit on current events. It is highly likely that there will be something related to big data, privacy and security going on in the news at any point in time. The major goals of the unit are 1) for students to develop a well­rounded and balanced view about data in the world around them and both the positive and negative effects of it and 2) to understand the basics of how and why modern encryption works.|
+|  [![Graph](csp/images/thumb_graph.png "Unit 4")](https://curriculum.code.org/csp/unit4) [Unit 4](https://curriculum.code.org/csp/unit4)| **Big Data and Privacy (Last updated: October 2016)** The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. In many ways this unit acts as a unit on current events. It is highly likely that there will be something related to big data, privacy and security going on in the news at any point in time. The major goals of the unit are 1) for students to develop a well ­rounded and balanced view about data in the world around them and both the positive and negative effects of it and 2) to understand the basics of how and why modern encryption works.|
 | [![App](csp/images/thumb_app.png "Unit 5")](https://curriculum.code.org/csp/unit5) [Unit 5](https://curriculum.code.org/csp/unit5)| **Building Apps (Last updated: December 2016)** This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event­-driven apps. The unit assumes that students have learned the concepts and skills from Unit 3, namely: writing and using functions, using simple repeat loops, being able to read documentation, collaborating, and using the Code Studio environment with App Lab. |
-|  [![survey](csp/images/thumb_survey.png "Unit 6")](https://curriculum.code.org/csp/unit6v1) [Unit 6](https://curriculum.code.org/csp/unit6v1) | **Create and Explore PT (Last updated: January 2016)** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create. |
+|  [![survey](csp/images/thumb_survey.png "Unit 6")](https://curriculum.code.org/csp/unit6) [Unit 6](https://curriculum.code.org/csp/unit6) | **Create and Explore PT (Last updated: January 2017)** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create. |
 
 ### Chat about CS Principles in the forum
 We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CS Principles there are two forums that are most useful:
@@ -150,7 +152,7 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 #### <a name="materials"></a>What materials do I need for this course?
 **Required Materials:**
 
-This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, here. 
+This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, [here](/educate/it). 
 
 Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. In addition to handouts, you will need the following: 
 
@@ -202,5 +204,8 @@ In-person professional development for the Code.org CS Principles course will be
 We send out monthly updates! [Sign up for future emails](http://code.org/educate/csp/CSPStatus_Signup).
 
 <br />
+
+### Ideas and Inspirations
+Please see this page about [CS Principles Inspirations](/educate/csp/inspirations) to read about the influential works in computer science education that form some of the course's philosophical underpinnings.
 
 AP® is a registered trademark of the College Board.

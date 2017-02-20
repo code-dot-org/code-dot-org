@@ -6,17 +6,22 @@ theme: responsive
 
 %link{:href=>"/css/student.css", :rel=>"stylesheet"}
 
-.full-resource-block
-  %img.side-image.left.col-50{src: "/images/fit-485/student/hour_of_code.jpg"}
-  .side-description-area.right.col-50{style: "margin-bottom: 5%;"}
+.space{style: "height: 20px"}
+
+- hoc_picture = capture_haml do
+  %img.side-image{src: "/images/fit-485/student/hour_of_code.jpg"}
+
+- hoc_text = capture_haml do
+  .side-description-area
     .description
       %h2.resource-title{style: "padding-bottom: 10px;"} Hour of Code
       Get started by choosing a tutorial from over 100 one hour computer science activities from Code.org and partners. Join 10% of the world's students; it's your turn to try!
     %a{href: "/learn"}
       %button.orange-button Start
 
-.full-resource-block
-  .side-description-area.left.col-50
+- studio_text = capture_haml do
+  .side-description-area
+
     .description
       %h2.resource-title Courses on Code Studio
       Code Studio is the most popular coding platform in K-12 education. We offer fun introductory courses you can learn alone or in a classroom, all the way through full year computer science curriculum for middle or high school.
@@ -25,11 +30,15 @@ theme: responsive
     &nbsp;&nbsp;
     %a{href: "/educate"}
       %button.gray-button I'm a teacher
-  %img.side-image.right.col-50{style: "margin-bottom: 5%;", src: "/images/fit-485/student/courses.jpg"}
 
-.full-resource-block
-  %img.side-image.left.col-50{src: "/images/fit-485/student/highschool.jpg"}
-  .side-description-area.right.col-50{style: "margin-bottom: 5%;"}
+- studio_picture = capture_haml do
+  %img.side-image{src: "/images/fit-485/student/courses.jpg"}
+
+- other_picture = capture_haml do
+  %img.side-image{src: "/images/fit-485/student/highschool.jpg"}
+
+- other_text = capture_haml do
+  .side-description-area
     .description
       %h2.resource-title{style: "padding-bottom: 10px;"} Courses from 3rd parties
       Check out some of the 3rd party online courses we recommend, or find a local workshop, school, or summer camp to learn in a classroom.
@@ -38,3 +47,23 @@ theme: responsive
     &nbsp;&nbsp;
     %a{href: "/learn/local"}
       %button.gray-button Local classes
+
+-# Show Hour of Code first when soon or actually Hour of Code time.  Otherwise, show Code Studio first.
+- if ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
+  .full-resource-block
+    .left= hoc_picture
+    .right= hoc_text
+  .full-resource-block
+    .left= studio_text
+    .right= studio_picture
+- else
+  .full-resource-block
+    .left= studio_picture
+    .right= studio_text
+  .full-resource-block
+    .left= hoc_text
+    .right= hoc_picture
+
+.full-resource-block
+  .left= other_picture
+  .right= other_text

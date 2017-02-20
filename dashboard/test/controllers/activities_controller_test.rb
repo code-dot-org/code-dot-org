@@ -75,7 +75,13 @@ class ActivitiesControllerTest < ActionController::TestCase
   # without having to update all existing test contracts.
   def assert_equal_expected_keys(expected, actual)
     expected.each do |key, value|
-      assert_equal value, actual.with_indifferent_access[key], "for key #{key}"
+      # As we receive a warning that this will fail in MT6, though ugly, we gate
+      # the assertion on whether the expected value is nil.
+      if value.nil?
+        assert_nil actual.with_indifferent_access[key], "for key #{key}"
+      else
+        assert_equal value, actual.with_indifferent_access[key], "for key #{key}"
+      end
     end
   end
 
@@ -256,14 +262,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with panda does not crash" do
-    # the column that we store the program is 20000 bytes, don't crash if we fail to save because the field is too large
-
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    assert_creates(Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity, LevelSource) do
+    assert_creates(Activity, UserLevel, UserScript, LevelSource) do
+      assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
         end
@@ -1342,5 +1346,16 @@ class ActivitiesControllerTest < ActionController::TestCase
     create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
     post :milestone, params: milestone_params
     assert_response 403
+  end
+
+  test "milestone strips emoji from program and saves it" do
+    params = @milestone_params
+    params[:program] = panda_panda
+
+    post :milestone, params: params
+
+    user_level = UserLevel.last
+    # panda_panda contains a panda emoji, ensure that it's gone
+    assert_equal user_level.level_source.data, 'Panda'
   end
 end

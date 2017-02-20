@@ -281,3 +281,15 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
     };
   });
 };
+
+/**
+ * Returns the number of hints that the user has opened on the given level, but
+ * haven't been reported to the server yet.
+ */
+authoredHintUtils.currentOpenedHintCount = function (levelId) {
+  const unfinished = authoredHintUtils.getUnfinishedHints_();
+  const finished = authoredHintUtils.getFinishedHints_();
+  return unfinished.concat(finished).filter((hint) => {
+    return hint.levelId === levelId;
+  }).length;
+};

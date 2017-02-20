@@ -574,6 +574,8 @@
   "setScoreText": "nastavit body",
   "setScoreTextTooltip": "Nastaví se text, který se má zobrazit v oblasti pro výsledek.",
   "setScoreTooltip": "Nastav hráčovo skóre na určité množství",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "k obrázku Manny",
   "setSpriteSid": "k obrázku Sida",
   "setSpriteGranny": "k obrázku babičky",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "na velmi rychlou rychlost",
   "setSpriteSpeedTooltip": "Nastaví rychlost aktéra",
   "setSpriteZombie": "na obrázek zombie",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Nastav všechny vybrané postavy, aby sledovaly jinou postavu",
   "setSpritesFleeTooltip": "Nastav všechny vybrané postavy, aby utíkaly od jiné postavy",
   "setSpritesStopTooltip": "Nastav všechny postavy, aby přestaly s procházením se, sledováním, nebo utíkáním",
@@ -671,6 +674,7 @@
   "showTSDefText": "zde zadej text",
   "showTitleScreenTooltip": "Zobrazit úvodní obrazovka s přípojeným názvem a textem.",
   "size": "velikost",
+  "setActor": "set actor",
   "setDroid": "nastavit droida",
   "setDroidHidden": "skrýt",
   "setDroidRandom": "náhodně",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Blahopřejeme, přidal jsi kód, abys vytvořil Myší Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Myších Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)",
   "failedChangeSettingTimeout": "Dostaň tři Rebel Piloty k posunu dál.",
   "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

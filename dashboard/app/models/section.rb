@@ -64,6 +64,10 @@ class Section < ActiveRecord::Base
     self.code = unused_random_code
   end
 
+  def teacher_dashboard_url
+    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
+  end
+
   # return a version of self.students in which all students' names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
@@ -77,8 +81,8 @@ class Section < ActiveRecord::Base
     # normalization, this is necessary to ensure that we can recognize
     # the name on the other side
     self.students.each do |student|
-      normalized = student.name.split(/\s+/).join(' ')
-      trie.add normalized
+      student.name = student.name.strip.split(/\s+/).join(' ')
+      trie.add student.name
     end
 
     self.students.map do |student|

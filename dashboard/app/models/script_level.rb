@@ -3,7 +3,6 @@
 # Table name: script_levels
 #
 #  id          :integer          not null, primary key
-#  level_id    :integer
 #  script_id   :integer          not null
 #  chapter     :integer
 #  created_at  :datetime
@@ -16,15 +15,17 @@
 #
 # Indexes
 #
-#  index_script_levels_on_level_id   (level_id)
 #  index_script_levels_on_script_id  (script_id)
 #  index_script_levels_on_stage_id   (stage_id)
 #
+
+require 'cdo/shared_constants'
 
 # Joins a Script to a Level
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
   include LevelsHelper
+  include SharedConstants
   include Rails.application.routes.url_helpers
 
   has_and_belongs_to_many :levels
@@ -66,7 +67,8 @@ class ScriptLevel < ActiveRecord::Base
 
   def active?(level)
     properties_hash = JSON.parse(properties)
-    !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+    variants = properties_hash['variants']
+    !variants || !variants[level.name] || variants[level.name]['active'] != false
   end
 
   def has_another_level_to_go_to?
@@ -177,15 +179,25 @@ class ScriptLevel < ActiveRecord::Base
     build_script_level_path(self)
   end
 
+  def icon
+    # Assessment levels can be of many different level types (i.e. multiple choice,
+    # blockly, etc.). Regardless of the underlying level type, we want them to
+    # have their own icon. If not an assessment, let the underlying level type
+    # continue to own which icon we use.
+    if assessment
+      'fa-list-ol'
+    else
+      level.icon
+    end
+  end
+
   def summarize
     if level.unplugged?
-      kind = 'unplugged'
-    elsif named_level
-      kind = 'named_level'
+      kind = LEVEL_KIND.unplugged
     elsif assessment
-      kind = 'assessment'
+      kind = LEVEL_KIND.assessment
     else
-      kind = 'puzzle'
+      kind = LEVEL_KIND.puzzle
     end
 
     ids = level_ids
@@ -199,12 +211,12 @@ class ScriptLevel < ActiveRecord::Base
       activeId: oldest_active_level.id,
       position: position,
       kind: kind,
-      icon: level.icon,
+      icon: icon,
       title: level_display_text,
       url: build_script_level_url(self)
     }
 
-    if kind == 'named_level'
+    if named_level
       summary[:name] = level.display_name || level.name
     end
 

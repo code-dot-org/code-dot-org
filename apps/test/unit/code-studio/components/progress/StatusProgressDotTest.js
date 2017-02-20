@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import { StatusProgressDot } from
   '@cdo/apps/code-studio/components/progress/StatusProgressDot';
 import * as stageLockRedux from '@cdo/apps/code-studio/stageLockRedux';
-import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
 import { TestResults } from '@cdo/apps/constants';
 
@@ -28,7 +28,7 @@ describe('StatusProgressDot', () => {
     level: {
       icon: null,
       ids: [5275],
-      kind: 'assessment',
+      kind: LevelKind.assessment,
       next: [2, 1],
       position: 1,
       previous: false,

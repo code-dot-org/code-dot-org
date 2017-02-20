@@ -60,6 +60,7 @@
   "disabledProgress1":"Cualquier avance que hagas durante esta semana en tu curso no será guardado debido al nivel de tráfico que nuestro sitio recibe por la semana de la Hora del Código.",
   "disabledProgress2":"Es el por qué todas tus burbujas son mostradas en gris (no te preocupes, tu avance anterior a esta semana está seguro).",
   "disabledProgress3":"Te animamos a probar en su lugar los tutoriales de la Hora del Código esta semana.",
+  "documentation":"Documentation",
   "dontForget":"No te olvides",
   "dropletBlock_addOperator_description":"Suma dos números",
   "dropletBlock_addOperator_signatureOverride":"Añade un operador",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"Pares de Clave/Valor",
   "learnMore":"Aprende más",
   "less":"Less",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"Estás utilizando todos los tipos necesarios de bloques pero no de la manera correcta.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"lista",
   "loading":"Cargando...",
   "locked":"Bloqueado",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"a la posición superior derecha externa",
   "positionTopRight":"Hacia la posición superior derecha",
   "predictionInstructions":"Haz una predicción antes de ejecutar el programa.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"Laboratorio de App",
   "projectTypeArtist":"Artista",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"cuando",
   "whenRun":"cuando se ejecuta",
   "workspaceHeaderShort":"Espacio de trabajo: ",
-  "yes":"Sí"
+  "yes":"Sí",
+  "yourProgress":"Your Progress"
 }

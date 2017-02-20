@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class PeerReviewTest < ActiveSupport::TestCase
+  include SharedConstants
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @learning_module = create :plc_learning_module
@@ -18,9 +21,9 @@ class PeerReviewTest < ActiveSupport::TestCase
     @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
     @script = @script_level.script
 
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
-
     @user = create :user
+
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
   end
 
   def track_progress(level_source_id, user = @user)
@@ -211,7 +214,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     # When the third reviewer goes to the page, they should get a link
     review_summary = PeerReview.get_peer_review_summaries(reviewer_3, @script_level.script)
     expected_review = {
-      status: 'not_started',
+      status: LEVEL_STATUS.not_tried,
       name: I18n.t('peer_review.review_new_submission'),
       result: ActivityConstants::UNSUBMITTED_RESULT,
       icon: '',
@@ -252,6 +255,10 @@ class PeerReviewTest < ActiveSupport::TestCase
     submitter_2 = create :teacher
     submitter_3 = create :teacher
 
+    [submitter_1, submitter_2, submitter_3].each do |submitter|
+      Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: submitter.id, plc_learning_module: @learning_module).returns(true)
+    end
+
     level_source_1 = create(:level_source, data: 'Some answer')
     level_source_2 = create(:level_source, data: 'Other answer')
     level_source_3 = create(:level_source, data: 'Unreviewed answer')
@@ -269,20 +276,20 @@ class PeerReviewTest < ActiveSupport::TestCase
     expected_reviews = [
       {
         id: first_review.id,
-        status: 'perfect',
+        status: LEVEL_STATUS.perfect,
         name: I18n.t('peer_review.link_to_submitted_review'),
         result: ActivityConstants::BEST_PASS_RESULT,
         locked: false
       },
       {
         id: second_review.id,
-        status: 'not_started',
+        status: LEVEL_STATUS.not_tried,
         name: I18n.t('peer_review.review_in_progress'),
         result: ActivityConstants::UNSUBMITTED_RESULT,
         locked: false
       },
       {
-        status: 'not_started',
+        status: LEVEL_STATUS.not_tried,
         name: 'Review a new submission',
         result: ActivityConstants::UNSUBMITTED_RESULT,
         icon: '',
