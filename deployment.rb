@@ -133,6 +133,11 @@ def load_configuration
 
     config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
 
+    # test environment should use precompiled, minified, digested assets like production,
+    # unless it's being used for unit tests.
+    ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
+    config['pretty_js'] = [:development, :staging, :adhoc].include?(rack_env) || (rack_env?(:test) && ci_test)
+
     config.merge! global_config
     config.merge! local_config
 
