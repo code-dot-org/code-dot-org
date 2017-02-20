@@ -74,8 +74,8 @@ const CsFundamentalsSection = React.createClass({
         <br/>
 
         <TwoPartBanner
-          imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
           textElement={this.renderOnlineProfessionalLearningBox()}
+          imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
           imagePosition="imageRight"
         />
       </div>
