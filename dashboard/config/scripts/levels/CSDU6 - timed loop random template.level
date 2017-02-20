@@ -113,10 +113,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "true",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
