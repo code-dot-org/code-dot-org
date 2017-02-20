@@ -54,7 +54,8 @@ Resources:
             local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'
           ],
           commit: commit,
-          shutdown: true
+          shutdown: true,
+          daemon: false
         )%>
   AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
     DependsOn: "AMICreate#{ami}",
@@ -247,6 +248,32 @@ Resources:
       HeartbeatTimeout: 3000 # seconds = 50 minutes
       NotificationTargetARN: {Ref: WebServerHookTopicNew}
       RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
+  WebServerHookEventRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: !Sub "Auto Scaling Events for ${AWS::StackName}."
+      EventPattern:
+        source: [aws.autoscaling]
+        detail-type:
+        - EC2 Instance Launch Successful
+        - EC2 Instance Terminate Successful
+        - EC2 Instance Launch Unsuccessful
+        - EC2 Instance Terminate Unsuccessful
+        - EC2 Instance-launch Lifecycle Action
+        - EC2 Instance-terminate Lifecycle Action
+        detail:
+          AutoScalingGroupName: [!Ref Frontends]
+      State: ENABLED
+      Targets:
+      - Arn: !ImportValue SlackEvent
+        Id: WebServerHookTarget
+  WebServerHookEventPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !ImportValue SlackEvent
+      Action: 'lambda:InvokeFunction'
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt WebServerHookEventRule.Arn
   WebServerHookTopicNew: {Type: 'AWS::SNS::Topic'}
   <%if environment == :production -%>
   # Scale up min instances at 4AM PDT (=11:00 UTC)

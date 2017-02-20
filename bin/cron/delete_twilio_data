@@ -46,7 +46,7 @@ def main
       rescue Twilio::REST::RequestError => e
         # Sanitize the exception message so that we don't expose secrets.
         e.message.gsub! CDO.twilio_sid, 'CDO.twilio_sid'
-        HoneyBadger.notify(e)
+        Honeybadger.notify(e)
         next
       end
     end

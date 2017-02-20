@@ -4,6 +4,8 @@ import BaseDialog from './BaseDialog';
 import color from "../util/color";
 import locale from '@cdo/locale';
 
+const MAX_PROGRESS_WIDTH = 400;
+
 const styles = {
   checkmarks: {
     position: 'absolute',
@@ -68,6 +70,40 @@ const styles = {
     color: '#5b6770',
     border: '1px solid #c5c5c5',
   },
+  stageRewards: {
+    position: 'absolute',
+    background: '#f3eeff',
+    top: 240,
+    left: 100,
+    width: '500px',
+    height: '75px',
+    border: '1px solid #d2cae6',
+    borderRadius: 3,
+  },
+  stageRewardsTitle: {
+    textAlign: 'center',
+    color: '#655689',
+    fontSize: 14,
+    fontWeight: 'bold',
+    padding: 10,
+  },
+  progressBackground: {
+    position: 'absolute',
+    background: '#fff',
+    borderRadius: 10,
+    border: '1px solid #d2cae6',
+    height: 20,
+    width: MAX_PROGRESS_WIDTH,
+    left: 50,
+  },
+  progressForeground: {
+    position: 'absolute',
+    background: '#eaa721',
+    borderRadius: 11,
+    height: 22,
+    top: -1,
+    left: -1,
+  },
 };
 
 const AchievementDialog = Radium(React.createClass({
@@ -78,6 +114,7 @@ const AchievementDialog = Radium(React.createClass({
     hintsUsed: React.PropTypes.number,
     assetUrl: React.PropTypes.func,
     onContinue: React.PropTypes.func,
+    showStageProgress: React.PropTypes.bool,
   },
 
   getInitialState() {
@@ -139,6 +176,10 @@ const AchievementDialog = Radium(React.createClass({
     return tooManyHints ? locale.usingHints() : locale.withoutHints();
   },
 
+  stageProgress() {
+    return 0.75;
+  },
+
   render() {
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
@@ -162,6 +203,21 @@ const AchievementDialog = Radium(React.createClass({
           {this.achievementRow(!tooManyBlocks, this.blocksUsedMessage(blockDelta, params))}
           {this.achievementRow(!tooManyHints, this.hintsMessage(tooManyHints))}
         </div>
+        {this.props.showStageProgress &&
+          <div style={styles.stageRewards}>
+            <div style={styles.stageRewardsTitle}>
+              {locale.stageRewards()}
+            </div>
+            <div style={styles.progressBackground}>
+              <div
+                style={{
+                  ...styles.progressForeground,
+                  width: this.stageProgress() * MAX_PROGRESS_WIDTH
+                }}
+              />
+            </div>
+          </div>
+        }
         <div style={styles.footer}>
           <p style={styles.feedbackMessage}>{feedbackMessage}</p>
 

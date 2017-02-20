@@ -1,5 +1,5 @@
 name 'CSD: Lists'
-href 'path/to/html/in/asset/folder'
+display_name 'Lists'
 markdown <<MARKDOWN
 # List
 

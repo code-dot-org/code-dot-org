@@ -19,19 +19,23 @@ machine:
     DISABLE_SPRING: 1
   services:
     - docker
+    - redis
 checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
+        parallel: true
+    - ./bin/circle/merge-base:
         parallel: true
 dependencies:
   pre:
     - ./bin/circle/install-circle-predependencies.sh
     - google-chrome --version
     - yarn --version
+    - node --version
+    - npm --version
   cache_directories:
     - "apps/node_modules"
     - "dashboard/tmp/cache"
-    - "~/.rvm/gems/ruby-2.2.3"
     - ".tmputils"
     - "~/.yarn-cache"
   override:
@@ -39,7 +43,7 @@ dependencies:
     # When installing moreutils, make sure it does not overwrite GNU parallel,
     # which CircleCI uses to capture artifacts.
     - sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
-    - sudo apt-get install libicu-dev enscript moreutils
+    - sudo apt-get install libicu-dev enscript moreutils pdftk
     - sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
     - bundle install --without ''
     - 'echo "bundler_use_sudo: false" >> locals.yml'
