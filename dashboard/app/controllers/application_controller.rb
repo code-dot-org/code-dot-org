@@ -31,27 +31,28 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
+  # pp='disabled' will disable it; any other value will enable it.
+  def maybe_enable_profiler
+    pp = params['pp']
+    if pp
+      ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on'
+    end
+  end
+
+  # Enable the Rails web console if params['dbg'] is set, or disable it
+  # if params['dbg'] is 'off'.
+  def configure_web_console
+    if params[:dbg]
+      cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
+    end
+    @use_web_console = cookies[:dbg]
+  end
+
   # Configure development only filters.
   if Rails.env.development?
-    # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
-    # pp='disabled' will disable it; any other value will enable it.
     before_action :maybe_enable_profiler
-    def maybe_enable_profiler
-      pp = params['pp']
-      if pp
-        ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on'
-      end
-    end
-
     before_action :configure_web_console
-    # Enable the Rails web console if params['dbg'] is set, or disable it
-    # if params['dbg'] is 'off'.
-    def configure_web_console
-      if params[:dbg]
-        cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
-      end
-      @use_web_console = cookies[:dbg]
-    end
   end
 
   def reset_session_endpoint
@@ -62,16 +63,16 @@ class ApplicationController < ActionController::Base
 
   rescue_from CanCan::AccessDenied do
     if !current_user && request.format == :html
-      # we don't know who you are, you can try to sign in
+      # We don't know who you are, so you can try to sign in.
       authenticate_user!
     else
-      # we know who you are, you shouldn't be here
+      # We know who you are, you shouldn't be here.
       head :forbidden
     end
   end
 
-  # missing templates are usually a result of the user agent
-  # requesting a file in the wrong format, send a 404 instead of a 500
+  # Missing templates are usually a result of the user agent requesting a file
+  # in the wrong format, send a 404 instead of a 500.
   rescue_from ActionView::MissingTemplate do |exception|
     Rails.logger.warn("Missing template: #{exception}")
     render_404
@@ -144,7 +145,7 @@ class ApplicationController < ActionController::Base
         response[:previous_level] = build_script_level_path(previous_level)
       end
 
-      # if they solved it, figure out next level
+      # If they solved it, figure out next level.
       if options[:solved?]
         response[:total_lines] = options[:total_lines]
         response[:new_level_completed] = options[:new_level_completed]
@@ -169,25 +170,32 @@ class ApplicationController < ActionController::Base
 
     if HintViewRequest.enabled?
       if script_level && current_user
-        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
+        response[:hint_view_requests] = HintViewRequest.milestone_response(
+          script_level.script,
+          level,
+          current_user
+        )
         response[:hint_view_request_url] = hint_view_requests_path
       end
     end
 
     if PuzzleRating.enabled?
-      response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
+      response[:puzzle_ratings_enabled] = script_level &&
+        PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    # logged in users can:
     if current_user
-      # save solved levels to a gallery (subject to
-      # additional logic in the blockly code because blockly owns
-      # which levels are worth saving)
+      # Save solved levels to a gallery (subject to additional logic in the
+      # blockly code because blockly owns which levels are worth saving).
       if options[:level_source].try(:id) &&
           options[:solved?] &&
-          options[:activity] &&
           options[:level_source_image]
-        response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {level_source_id: options[:level_source].try(:id), activity_id: options[:activity].id})
+        response[:save_to_gallery_url] = gallery_activities_path(
+          gallery_activity: {
+            level_source_id: options[:level_source].try(:id),
+            user_id: current_user.id
+          }
+        )
       end
 
       if options[:get_hint_usage]
@@ -223,7 +231,6 @@ class ApplicationController < ActionController::Base
   # Pairings are stored as an array of user ids in the session
   # (storing full objects is not a good idea because the session is
   # saved as a cookie)
-
   def pairings=(pairings_from_params)
     # remove pairings
     if pairings_from_params.blank?
