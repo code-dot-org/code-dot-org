@@ -1,5 +1,6 @@
 
 import React from 'react';
+import {connect} from 'react-redux';
 import classNames from 'classnames';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
@@ -11,6 +12,7 @@ export const VISUALIZATION_DIV_ID = 'visualization';
  */
 const ProtectedVisualizationDiv = React.createClass({
   propTypes: {
+    isResponsive: React.PropTypes.bool.isRequired,
     children: React.PropTypes.node,
   },
 
@@ -18,11 +20,13 @@ const ProtectedVisualizationDiv = React.createClass({
     return (
       <ProtectedStatefulDiv
         id={VISUALIZATION_DIV_ID}
-        className={classNames({responsive: true})}
+        className={classNames({responsive: this.props.isResponsive})}
       >
         {this.props.children}
       </ProtectedStatefulDiv>
     );
   }
 });
-export default ProtectedVisualizationDiv;
+export default connect(state => ({
+  isResponsive: true
+}))(ProtectedVisualizationDiv);
