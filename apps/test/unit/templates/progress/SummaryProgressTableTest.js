@@ -55,7 +55,7 @@ describe('SummaryProgressTable', () => {
         sectionId={'11'}
         hiddenStageMap={Immutable.fromJS({
           '11': {
-            '2': false
+            '2': true
           }
         })}
       />
