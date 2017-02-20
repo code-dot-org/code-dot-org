@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -15,7 +14,9 @@ export const styles = {
   hiddenRow: {
     borderStyle: 'dashed',
     borderWidth: 2,
-    borderColor: color.border_gray
+    borderColor: color.border_gray,
+    opacity: 0.6,
+    backgroundColor: color.table_light_row
   },
   col1: {
     width: 200,
@@ -56,25 +57,22 @@ const SummaryRow = React.createClass({
     lesson: lessonType.isRequired,
     lessonNumber: PropTypes.number.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    hidden: PropTypes.bool.isRequired,
-
-    // redux provided
-    sectionId: PropTypes.string,
-    hiddenStageMap: PropTypes.object.isRequired,
+    hiddenForStudents: PropTypes.bool.isRequired,
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels, hidden } = this.props;
+    const { dark, lesson, lessonNumber, levels, hiddenForStudents } = this.props;
     return (
       <tr
         style={{
-          ...dark ? styles.darkRow: styles.lightRow,
-          ...(hidden && styles.hiddenRow)
+          ...(!dark && styles.lightRow),
+          ...(dark && styles.darkRow),
+          ...(hiddenForStudents && styles.hiddenRow)
         }}
       >
         <td style={styles.col1}>
           <div style={styles.colText}>
-            {hidden &&
+            {hiddenForStudents &&
               <FontAwesome
                 icon="eye-slash"
                 style={styles.icon}
@@ -93,7 +91,4 @@ const SummaryRow = React.createClass({
     );
   }
 });
-export default connect(state => ({
-  sectionId: state.sections.selectedSectionId,
-  hiddenStageMap: state.hiddenStage.get('bySection'),
-}))(SummaryRow);
+export default SummaryRow;
