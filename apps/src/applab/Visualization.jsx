@@ -49,6 +49,7 @@ var Visualization = React.createClass({
     isPaused: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     playspacePhoneFrame: React.PropTypes.bool.isRequired,
+    isResponsive: React.PropTypes.bool.isRequired
   },
 
   render: function () {
@@ -59,10 +60,11 @@ var Visualization = React.createClass({
       <div
         id={VISUALIZATION_DIV_ID}
         className={classNames({
-          responsive: true,
+          responsive: this.props.isResponsive,
           with_padding: this.props.visualizationHasPadding
         })}
         style={[
+          !this.props.isResponsive && styles.nonResponsive,
           this.props.isShareView && styles.share,
           this.props.playspacePhoneFrame && styles.phoneFrame,
           this.props.playspacePhoneFrame && this.props.isRunning && styles.phoneFrameRunning
@@ -99,4 +101,5 @@ export default connect(state => ({
   isRunning: state.runState.isRunning,
   isPaused: state.runState.isDebuggerPaused,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+  isResponsive: true
 }))(Radium(Visualization));

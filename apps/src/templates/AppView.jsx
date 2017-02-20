@@ -13,6 +13,7 @@ import Overlay from './Overlay';
 const AppView = React.createClass({
   propTypes: {
     hideSource: React.PropTypes.bool.isRequired,
+    isResponsive: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
 
     // not provided by redux
@@ -26,7 +27,7 @@ const AppView = React.createClass({
 
   render: function () {
     const visualizationColumnClassNames = classNames({
-      responsive: true,
+      responsive: this.props.isResponsive,
       pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
     });
 
@@ -46,5 +47,6 @@ const AppView = React.createClass({
 });
 module.exports = connect(state => ({
   hideSource: state.pageConstants.hideSource,
+  isResponsive: true,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
 }))(AppView);
