@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
-import { isHiddenFromState } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const styles = {
   table: {
@@ -31,11 +31,11 @@ const SummaryProgressTable = React.createClass({
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     sectionId: PropTypes.string,
-    hiddenStageMap: PropTypes.object.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
   },
 
   render() {
-    const { lessons, levelsByLesson, viewAs, sectionId, hiddenStageMap } = this.props;
+    const { lessons, levelsByLesson, viewAs, sectionId, hiddenStageState } = this.props;
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
@@ -46,7 +46,7 @@ const SummaryProgressTable = React.createClass({
     lessons.forEach((lesson, index) => {
       // When viewing as a student, we'll filter out hidden rows. When viewing
       // as a teacher, we'll set hiddenForStudents and style the row differntly.
-      const isHidden = isHiddenFromState(hiddenStageMap, sectionId, lesson.id);
+      const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
       if (isHidden && !showHidden) {
         return;
       }
@@ -93,5 +93,5 @@ SummaryProgressTable.SummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({
   viewAs: state.stageLock.viewAs,
   sectionId: state.sections.selectedSectionId,
-  hiddenStageMap: state.hiddenStage.get('bySection'),
+  hiddenStageState: state.hiddenStage,
 }))(SummaryProgressTable);

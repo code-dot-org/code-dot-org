@@ -36,9 +36,11 @@ describe('DetailProgressTable', () => {
         levelsByLesson={levelsByLesson}
         viewAs={ViewType.Teacher}
         sectionId={'11'}
-        hiddenStageMap={Immutable.fromJS({
-          '11': {
-            '2': true
+        hiddenStageState={Immutable.fromJS({
+          bySection: {
+            '11': {
+              '2': true
+            }
           }
         })}
       />
