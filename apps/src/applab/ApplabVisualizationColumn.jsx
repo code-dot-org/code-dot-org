@@ -9,6 +9,7 @@ import CompletionButton from './CompletionButton';
 import PlaySpaceHeader from './PlaySpaceHeader';
 import PhoneFrame from './PhoneFrame';
 import BelowVisualization from '../templates/BelowVisualization';
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
@@ -161,7 +162,7 @@ export default connect(function propsFromStore(state) {
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     isShareView: state.pageConstants.isShareView,
-    isResponsive: true,
+    isResponsive: isResponsiveFromState(state),
     nonResponsiveWidth: state.pageConstants.nonResponsiveVisualizationColumnWidth,
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     hideSource: state.pageConstants.hideSource,

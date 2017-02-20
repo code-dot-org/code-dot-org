@@ -12,6 +12,7 @@ import GameLabVisualizationHeader from './GameLabVisualizationHeader';
 import GameLabVisualizationColumn from './GameLabVisualizationColumn';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
@@ -116,7 +117,7 @@ const GameLabView = React.createClass({
 module.exports = connect(state => ({
   hideSource: state.pageConstants.hideSource,
   interfaceMode: state.interfaceMode,
-  isResponsive: true,
+  isResponsive: isResponsiveFromState(state),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
   allowAnimationMode: allowAnimationMode(state),
   showVisualizationHeader: showVisualizationHeader(state),
