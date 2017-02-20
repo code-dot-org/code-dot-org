@@ -1,7 +1,8 @@
 - teacher_blog_url = 'http://teacherblog.code.org/'
 - code_studio_video_url = 'https://www.youtube.com/watch?v=ZRNRVu4DFcs'
 - beyond_url = 'https://code.org/educate'
-- recruit_ap_students = 'http://teacherblog.code.org/post/156689658029/ask-your-cs-principles-students-to-star-in-next'
+- recruit_ap_students = 'http://teacherblog.code.org/post/156689658029/ask-your-cs-principles-students-to-star-in-our'
+- gift_url = 'http://teacherblog.code.org/post/157254660224/lets-make-history-for-ap-computer-science'
 
 .teacher-announce
   .announce-heading{style: 'height: 20px;'}
@@ -17,13 +18,13 @@
         %a{href: beyond_url, target: '_blank'}
           %button.primary= t('home.announcement_learn_more_button')
     .announce-content
-      %a{href: recruit_ap_students, target: '_blank'}
+      %a{href: gift_url, target: '_blank'}
         .content-img-container
           = image_tag(CDO.shared_image_url('/teacher-announcement/recruit-ap-students.jpg'), width: '200px')
       .content-text
-        != t('home.announcement_apcsp_recruitment')
+        != t('home.announcement_apcsp_recruitment2', gift_url: gift_url, challenge_url: recruit_ap_students)
       .announce-learn-more
-        %a{href: recruit_ap_students, target: '_blank'}
+        %a{href: gift_url, target: '_blank'}
           %button.primary= t('home.announcement_learn_more_button')
   #non-us-announcement{style: 'display: none;'}
     .announce-content

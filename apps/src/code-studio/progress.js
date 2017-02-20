@@ -11,7 +11,7 @@ import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
 import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
 import { getHiddenStages } from './hiddenStageRedux';
-import { LevelStatus } from './activityUtils';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
 import {
   initProgress,
