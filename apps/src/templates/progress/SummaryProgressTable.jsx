@@ -44,6 +44,8 @@ const SummaryProgressTable = React.createClass({
     let dark = false; // start with a light row
     const showHidden = viewAs === ViewType.Teacher;
     lessons.forEach((lesson, index) => {
+      // When viewing as a student, we'll filter out hidden rows. When viewing
+      // as a teacher, we'll set hiddenForStudents and style the row differntly.
       const isHidden = isHiddenFromState(hiddenStageMap, sectionId, lesson.id);
       if (isHidden && !showHidden) {
         return;
@@ -51,7 +53,7 @@ const SummaryProgressTable = React.createClass({
       rows.push(
         <SummaryProgressRow
           key={index}
-          hidden={isHidden}
+          hiddenForStudents={isHidden}
           dark={dark}
           lesson={lesson}
           lessonNumber={index + 1}
@@ -84,6 +86,8 @@ const SummaryProgressTable = React.createClass({
     );
   }
 });
+
+SummaryProgressTable.SummaryProgressTable = SummaryProgressTable;
 
 export default connect(state => ({
   viewAs: state.stageLock.viewAs,
