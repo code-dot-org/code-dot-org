@@ -120,9 +120,11 @@ Several documents describe the overarching themes and direction of the course.
 - [Professional Development Overview](/educate/professional-learning/cs-principles)
 - [Course Materials List](#materials)
 
+
+
 ## <a name="lessons"></a>Lessons
 
-*In response to feedback from our 2015-2016 pilot teachers, we are reordering, condensing, and clarifying lesson content. Units 1 - 3 have already been revised per pilot feedback and Units 4 - 6 will be revised in the fall. Learn more about the updates [here](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ). All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary).*
+*After the '15-'16 pilot year, we revised and reorganized major portions of the curriculum. A document describing what we changed and why is here: [here](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ). All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary).*
 
 All lessons are available at [curriculum.code.org/csp](https://curriculum.code.org/csp)
 
@@ -150,7 +152,7 @@ We have forums for educators to discuss and trade ideas about CS Principles and 
 #### <a name="materials"></a>What materials do I need for this course?
 **Required Materials:**
 
-This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, here. 
+This course requires students have access to computers with a modern web browser. For more details, check out Code.org's technology requirements, [here](/educate/it). 
 
 Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. In addition to handouts, you will need the following: 
 
@@ -202,5 +204,8 @@ In-person professional development for the Code.org CS Principles course will be
 We send out monthly updates! [Sign up for future emails](http://code.org/educate/csp/CSPStatus_Signup).
 
 <br />
+
+### Ideas and Inspirations
+Please see this page about [CS Principles Inspirations](/educate/csp/inspirations) to read about the influential works in computer science education that form some of the course's philosophical underpinnings.
 
 AP® is a registered trademark of the College Board.
