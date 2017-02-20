@@ -1,6 +1,7 @@
 if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
+  SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
   if ENV['CIRCLECI']
     require 'codecov'
     SimpleCov.formatter = SimpleCov::Formatter::Codecov

@@ -4,6 +4,3 @@ coverage:
   status:
     project: off
     patch: off
-fixes:
-  - "/lib/::/dashboard/lib/"
-  - "app/::dashboard/app/"
