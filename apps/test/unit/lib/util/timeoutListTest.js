@@ -1,6 +1,6 @@
 import sinon from 'sinon';
-import {expect} from '../util/configuredChai';
-import * as timeoutList from '@cdo/apps/timeoutList';
+import {expect} from '../../../util/configuredChai';
+import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 
 describe('timeoutList', () => {
   let clock;
