@@ -1,15 +1,15 @@
 %script{src: "/js/raphael.js"}
 %script{src: "/js/extended_us_map.js"}
+%link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
 
-%div#state-list.phone-feature
-  //Would it be better here to iterate through a hash of state names and abbreviates appended to the promote url? Would it also be better to move this whole chunk to a new file?
+#state-list.phone-feature
   .nav-collapse.collapse
-  %div.nav
-    %div.dropdown
-      %button.dropdown-toggle{:href => "#", "role" => "button", "data-toggle" => "dropdown", "data-target" => "#", :style => "background-color:#7665a0; border:2px solid #7665a0; width:100%; margin-bottom: 2%; font-size:18px"}
+  .nav
+    .dropdown
+      %button.dropdown-toggle{:href => "#", "role" => "button", "data-toggle" => "dropdown", "data-target" => "#"}
         Select Your State
         %b.caret
-      %ul.dropdown-menu{"role" => "menu", :style => "width:100%; font-size:18px; padding-left:10px;"}
+      %ul.dropdown-menu{"role" => "menu"}
         %a{:href => "/promote/al"}
           Alabama
         %br
@@ -164,8 +164,8 @@
           Washington D.C.
 
 %h2.tablet-feature Choose a State
-%div#map.tablet-feature
-%div#infobox.greybox.col-33
+#map.tablet-feature
+#infobox.greybox.col-33
   %p.info
     Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
   %ul
@@ -272,20 +272,3 @@
       });
     }
   };
-
-:css
-  #map {
-    width: 700px;
-    min-height: 425px;
-    float: left;
-    margin-right: -100px;
-  }
-
-  #infobox {
-    text-align:left;
-    float:right;
-  }
-
-  .info {
-    font-size:18px;
-  }
