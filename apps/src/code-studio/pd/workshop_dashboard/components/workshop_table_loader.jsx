@@ -15,7 +15,8 @@ const WorkshopTableLoader = React.createClass({
   propTypes: {
     queryUrl: React.PropTypes.string.isRequired,
     canDelete: React.PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
-    children: React.PropTypes.element.isRequired // Require exactly 1 child component.
+    children: React.PropTypes.element.isRequired, // Require exactly 1 child component.
+    hideNoWorkshopsMessage: React.PropTypes.bool // Should we show "no workshops found" if no workshops are found?
   },
 
   getInitialState() {
@@ -64,8 +65,12 @@ const WorkshopTableLoader = React.createClass({
       return <Spinner/>;
     }
 
-    if (this.state.workshops.length === 0) {
-      return <p>No workshops found</p>;
+    if (this.state.workshops.length === 0 ) {
+      if (this.props.hideNoWorkshopsMessage) {
+        return null;
+      } else {
+        return <p>No workshops found</p>;
+      }
     }
 
     return (

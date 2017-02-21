@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
 
 # This script populates the hashed_email column of the pegasus forms table.
-# This is based off of back_populate_contacts_hashed_email
+# This is based off of contacts_hashed_email
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../../pegasus/src/env', __FILE__)
 require 'digest/md5'
 require src_dir 'database'
 
 if ARGV.length < 3 || ARGV.length > 4
-  puts 'Usage: ./bin/oneoff/back_populate_forms_hashed_email '\
+  puts 'Usage: ./bin/oneoff/backfill_data/forms_hashed_email '\
     'start_index end_index batch_size [--dry-run]'
   exit 1
 end
