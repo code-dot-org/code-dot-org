@@ -5,7 +5,7 @@
 # email addresses. The script accepts as input a file containing a list of
 # contacts.id to wipe, generated from a MySQL query on the replica.
 
-require File.expand_path('../../production/pegasus/src/env', __FILE__)
+require File.expand_path('../../../production/pegasus/src/env', __FILE__)
 require src_dir 'database'
 
 if ARGV.length != 1
