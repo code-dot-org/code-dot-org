@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# This script populates the purpose field in Pegasus.hoc_survey_prizes for
+# claimed prizes with no purpose to "Hoc2014"
+
+require File.expand_path('../../../../pegasus/src/env', __FILE__)
+
+DB[:hoc_survey_prizes].
+  exclude(claimant: nil).
+  where(purpose: '').
+  update(purpose: 'Hoc2014')

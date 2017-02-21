@@ -44,7 +44,7 @@ class HipChat
   def self.post_to_hipchat(room, message, options={})
     unless CDO.hip_chat_logging
       # Output to standard log if HipChat isn't configured
-      CDO.log.info(message.to_s)
+      CDO.log.info("[#{room}] #{message}")
       return
     end
   end
