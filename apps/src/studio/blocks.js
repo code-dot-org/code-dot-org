@@ -1985,6 +1985,43 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   /**
+   * setMapAndColor
+   */
+  blockly.Blocks.studio_setMapAndColor = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(312, 0.32, 0.62);
+      // 'random' is a special value, don't put it in quotes
+      this.VALUES = skin.mapChoices.map(
+          opt => [opt[0], opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`]);
+
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      // default to first item after random
+      dropdown.setValue(skin.mapChoices[1][1]);
+
+      this.appendValueInput('COLOR')
+          .setCheck(blockly.BlockValueType.COLOUR)
+          .appendTitle(msg.withColor());
+
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setMapTooltip());
+    }
+  };
+
+  generator.studio_setMapAndColor = function () {
+    var color = blockly.JavaScript.valueToCode(this, 'COLOR',
+        generator.ORDER_NONE) || '\'#000000\'';
+    return generateSetterCode({
+      ctx: this,
+      name: 'setMapAndColor',
+      extraParams: color,
+    });
+  };
+
+  /**
    * showTitleScreen
    */
   var initShowTitleScreenBlock = function (options) {
