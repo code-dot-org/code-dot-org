@@ -4,7 +4,7 @@ require 'sprockets'
 def load_asset_map
   $asset_map = nil
   manifest_filename = Sprockets::ManifestUtils.find_directory_manifest(CDO.dashboard_assets_dir)
-  return unless manifest_filename
+  return unless manifest_filename && File.exist?(manifest_filename)
   json = File.read(manifest_filename)
   $asset_map = JSON.parse(json)['assets']
 end
