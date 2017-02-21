@@ -1354,6 +1354,32 @@ applabCommands.clearInterval = function (opts) {
   apiTimeoutList.clearInterval(opts.intervalId);
 };
 
+/**
+ * Execute some code every X milliseconds.  This is effectively setInterval()
+ * with a cleaner interface.
+ * @param {number} opts.ms How often to invoke the code in the loop,
+ *   in milliseconds.
+ * @param {function(function)} opts.callback Code to invoke in each loop
+ *   iteration.
+ * @return {number} a timeout key
+ */
+applabCommands.timedLoop = function timedLoop(opts) {
+  apiValidateType(opts, 'timedLoop', 'ms', opts.ms, 'number');
+  apiValidateType(opts, 'timedLoop', 'callback', opts.callback, 'function');
+  return apiTimeoutList.timedLoop(opts.ms, applabCommands.onTimerFired.bind(this, {
+    func: opts.callback
+  }));
+};
+
+/**
+ * Stop all running intervals that were started with `timedLoop()`.
+ * @param {number} [opts.key] - if omitted, stop _all_ timedLoops.
+ */
+applabCommands.stopTimedLoop = function stopTimedLoop(opts) {
+  apiValidateType(opts, 'stopTimedLoop', 'key', opts.key, 'number', OPTIONAL);
+  apiTimeoutList.stopTimedLoop(opts.key);
+};
+
 applabCommands.createRecord = function (opts) {
   // PARAMNAME: createRecord: table vs. tableName
   // PARAMNAME: createRecord: callback vs. callbackFunction
