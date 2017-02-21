@@ -42,9 +42,6 @@ Dashboard::Application.configure do
 
     # Version of your assets, change this if you want to expire all your assets.
     config.assets.version = '1.0'
-
-    # The value for config.pretty_sharedjs is controlled by CDO.pretty_js.
-    # The logic here should be kept in sync with the logic for setting CDO.pretty_js.
   end
 
   config.assets.quiet = true
