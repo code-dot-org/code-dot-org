@@ -9,6 +9,12 @@ export const levelType = (
   })
 );
 
+/**
+ * @typedef {Object} Lesson
+ *
+ * @property {string} name
+ * @property {number} id
+ */
 export const lessonType = (
   PropTypes.shape({
     name: PropTypes.string.isRequired,
