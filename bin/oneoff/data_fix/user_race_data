@@ -8,7 +8,7 @@
 #   https://docs.google.com/document/d/1rAlElet9GJTzJZkruuNyEXzkl5Mtut4h-AAP_yBwmY0
 # describing the issues and impacts.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 CLOSED_DIALOG = 'closed_dialog'.freeze
 
