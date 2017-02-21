@@ -22,15 +22,15 @@ puts '--dry-run flag passed, no database writes will occur' if dry_run
 
 update_count = 0
 
-until start_index > end_index
-  puts "Processing from #{start_index} to #{start_index + batch_size}..."
+until start_index >= end_index
+  puts "Processing from #{start_index} to #{start_index + batch_size - 1}..."
 
   # For efficiency reasons, we keep a hash of ID to hashed_email, doing the
   # update in a transaction. To minimize locking of the table, we compute the
   # hash outside of the update transaction.
   hashed_email_updates = {}
   DB[:forms].
-    where(id: start_index..(start_index + batch_size)).
+    where(id: start_index..(start_index + batch_size - 1)).
     each do |form|
     hashed_email = Digest::MD5.hexdigest(form[:email])
     hashed_email_updates[form[:id]] = hashed_email
@@ -38,14 +38,14 @@ until start_index > end_index
 
   if dry_run
     hashed_email_updates.each_pair do |id, hashed_email|
-      puts "Would have written #{id} => #{hashed_email}"
       update_count += 1
+      puts "Would have written #{id} => #{hashed_email}"
     end
   else
     DB.transaction do
       hashed_email_updates.each_pair do |id, hashed_email|
         DB[:forms].where(id: id).update(hashed_email: hashed_email)
-        ++update_count
+        update_count += 1
       end
     end
   end
