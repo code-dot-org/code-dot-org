@@ -32,7 +32,7 @@
 # removed.
 
 require 'csv'
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 TRANSACTION_SIZE = 5_000
 TIME_NOW = Time.now.freeze
