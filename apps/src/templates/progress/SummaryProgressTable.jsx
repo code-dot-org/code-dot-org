@@ -88,7 +88,7 @@ const SummaryProgressTable = React.createClass({
 });
 
 // Provide non-connected version for testing
-SummaryProgressTable.SummaryProgressTable = SummaryProgressTable;
+export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 
 export default connect(state => ({
   viewAs: state.stageLock.viewAs,

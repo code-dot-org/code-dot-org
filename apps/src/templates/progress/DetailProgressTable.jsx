@@ -53,7 +53,7 @@ const DetailProgressTable = React.createClass({
 });
 
 // Provide non-connected version for testing
-DetailProgressTable.DetailProgressTable = DetailProgressTable;
+export const UnconnectedDetailProgressTable = DetailProgressTable;
 
 export default connect(state => ({
   viewAs: state.stageLock.viewAs,
