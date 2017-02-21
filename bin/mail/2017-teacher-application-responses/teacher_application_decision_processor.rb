@@ -175,12 +175,15 @@ class TeacherApplicationDecisionProcessor
     # First, update the actual dashboard DB with this accepted workshop string.
     save_accepted_workshop teacher_application, program, accepted_workshop, regional_partner_override
 
+    regional_partner_name = teacher_application.regional_partner_name
+    raise "Missing regional partner name for application id: #{teacher_application.id}" if regional_partner_name.blank?
+
     # TeacherCon string is in the format: 'dates : location'
     dates, location = accepted_workshop.split(':').map(&:strip)
     params = {
       teachercon_location_s: location,
       teachercon_dates_s: dates,
-      regional_partner_name_s: teacher_application.regional_partner_name
+      regional_partner_name_s: regional_partner_name
     }
     process :accept_teachercon, teacher_application, params
   end

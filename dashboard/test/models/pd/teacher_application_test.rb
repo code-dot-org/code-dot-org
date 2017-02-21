@@ -200,8 +200,8 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
 
   test 'regional partner override' do
     teacher_application = build :pd_teacher_application
-    old_partner_name = "old partner #{SecureRandom.hex(10)}"
-    new_partner_name = "new partner #{SecureRandom.hex(10)}"
+    old_partner_name = 'old partner'
+    new_partner_name = 'new partner'
 
     teacher_application.expects(:regional_partner).at_least_once.returns(stub(name: old_partner_name))
     assert_equal old_partner_name, teacher_application.regional_partner_name
