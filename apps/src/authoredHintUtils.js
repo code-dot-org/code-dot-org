@@ -104,6 +104,13 @@ authoredHintUtils.getFinishedHints_ = function () {
 };
 
 /**
+ * @return {FinishedHint[]}
+ */
+authoredHintUtils.getOldFinishedHints = function () {
+  return authoredHintUtils.getFromLocalStorage_('old_finished_authored_hint_views', []);
+};
+
+/**
  * @return {AttemptRecord}
  */
 authoredHintUtils.getLastAttemptRecord_ = function () {
@@ -125,6 +132,7 @@ authoredHintUtils.clearUnfinishedHints = function () {
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
+  trySetLocalStorage('old_finished_authored_hint_views', JSON.stringify(authoredHintUtils.getFinishedHints_()));
   trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 

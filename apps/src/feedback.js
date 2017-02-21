@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ClientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -196,6 +197,49 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const hintsUsed = options.response.hints_used +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
 
+    let stageProgress = 0;
+    if (experiments.isEnabled('g.stageprogress')) {
+      const stage = this.studioApp_.reduxStore.getState().progress.stages[0];
+      const scriptName = stage.script_name;
+      const levels = stage.levels;
+      const progress = ClientState.allLevelsProgress();
+      const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
+
+      let numPassed = 0,
+        numPerfect = 0,
+        numZeroHints = 0,
+        numOneHint = 0;
+      for (let i = 0; i < levels.length; i++) {
+        const levelProgress = Math.max.apply(Math, levels[i].ids.map(id => progress[scriptName][id]));
+        if (levelProgress > TestResults.MINIMUM_PASS_RESULT) {
+          numPassed++;
+          if (levelProgress > TestResults.MINIMUM_OPTIMAL_RESULT) {
+            numPerfect++;
+          }
+          const numHintsUsed = oldFinishedHints.filter(hint => levels[i].ids.indexOf(hint.levelId) !== -1).length;
+          if (numHintsUsed === 0) {
+            numZeroHints++;
+          } else if (numHintsUsed === 1) {
+            numOneHint++;
+          }
+        }
+      }
+      if (hintsUsed === 0) {
+        numZeroHints++;
+      } else if (hintsUsed === 1) {
+        numOneHint++;
+      }
+
+      const passedScore = numPassed / levels.length;
+      const perfectScore = numPerfect / levels.length;
+      const hintScore = numZeroHints / levels.length +
+        0.5 * numOneHint / levels.length;
+
+      stageProgress = 0.3 * passedScore +
+        0.4 * perfectScore +
+        0.3 * hintScore;
+    }
+
     document.body.appendChild(container);
     ReactDOM.render(
       <AchievementDialog
@@ -206,6 +250,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         assetUrl={this.studioApp_.assetUrl}
         onContinue={options.onContinue}
         showStageProgress={experiments.isEnabled('g.stageprogress')}
+        stageProgress={stageProgress}
       />, container);
     return;
   }
