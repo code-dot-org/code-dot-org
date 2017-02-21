@@ -1,4 +1,4 @@
-import apiTimeoutList from '../lib/util/timeoutList';
+import * as apiTimeoutList from '../lib/util/timeoutList';
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
