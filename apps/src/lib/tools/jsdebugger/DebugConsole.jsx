@@ -54,7 +54,9 @@ const DebugConsole = connect(
     removeWatchExpression,
     evalInCurrentScope: actions.evalInCurrentScope,
     appendLog: actions.appendLog,
-  }
+  },
+  null,
+  {withRef: true}
 )(React.createClass({
   propTypes: {
     // from redux
