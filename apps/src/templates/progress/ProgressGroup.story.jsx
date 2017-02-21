@@ -11,7 +11,20 @@ export default storybook => {
           <ProgressGroup
             groupName="My Group"
             isSummaryView={false}
-            lessonNames={['Jigsaw', 'Maze', 'Artist']}
+            lessons={[
+              {
+                name: 'Jigsaw',
+                id: 1
+              },
+              {
+                name: 'Maze',
+                id: 2
+              },
+              {
+                name: 'Artist',
+                id: 3
+              },
+            ]}
             levelsByLesson={[
               [
                 {
@@ -78,7 +91,20 @@ export default storybook => {
           <ProgressGroup
             groupName="My Group"
             isSummaryView={true}
-            lessonNames={['Jigsaw', 'Maze', 'Artist']}
+            lessons={[
+              {
+                name: 'Jigsaw',
+                id: 1
+              },
+              {
+                name: 'Maze',
+                id: 2
+              },
+              {
+                name: 'Artist',
+                id: 3
+              },
+            ]}
             levelsByLesson={[
               [
                 {
