@@ -266,7 +266,7 @@ GameLab.prototype.init = function (config) {
 
   if (showDebugButtons || showDebugConsole) {
     this.studioApp_.reduxStore.dispatch(jsDebugger.initialize({
-      runApp: Applab.runButtonClick,
+      runApp: this.runButtonClick,
     }));
   }
 
