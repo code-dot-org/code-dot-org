@@ -21,7 +21,7 @@ theme: responsive
 #promote-page
   %h1{:style=>'margin-bottom:15px;'} Promote Computer Science
 
-  %div.col-80{:id=>'thank-you-box'}
+  %div.col-80{:id=>'thank-you-box', :style=>'margin-bottom:50px;'}
     %p{:id=>'thank-you-message', :style=>'display: inline-block'}
       Thank you for filling out our petition. Please help us spread the word.
       = view :share_buttons, facebook:facebook, twitter:twitter
