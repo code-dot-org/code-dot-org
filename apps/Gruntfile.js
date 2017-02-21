@@ -410,6 +410,7 @@ testsContext.keys().forEach(testsContext);
   };
 
   var otherEntries = {
+    'layouts/application': './src/sites/studio/pages/layouts/application.js',
     plc: './src/sites/studio/pages/plc.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
@@ -462,7 +463,7 @@ testsContext.keys().forEach(testsContext);
       ),
       externals: [
         {
-          'jquery': 'var $',
+          jquery: 'var $',
         }
       ],
       plugins: [
@@ -480,6 +481,7 @@ testsContext.keys().forEach(testsContext);
           name: 'essential',
           minChunks: 2,
           chunks: [
+            'layouts/application',
             'plc',
             'pd',
             'code-studio-common',

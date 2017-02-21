@@ -28,6 +28,8 @@ var baseConfig = {
       '@cdo/weblab/locale': path.resolve(__dirname, 'src', 'weblab', 'locale-do-not-import.js'),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       repl: path.resolve(__dirname, 'src/noop'),
+      '@cdo/dashboard': path.resolve(__dirname, '..', 'dashboard'),
+      '@cdo/shared': path.resolve(__dirname, '..', 'shared'),
     }
   },
   sassLoader: {
