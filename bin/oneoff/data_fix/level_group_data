@@ -35,7 +35,7 @@
 # where the script IDs are those scripts containing the level IDs and the level
 # IDs are the levels of type LevelGroup.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 require 'digest/md5'
 
 DATA_FILE = '/tmp/user_level_ids.csv'.freeze

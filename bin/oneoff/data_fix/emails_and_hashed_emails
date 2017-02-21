@@ -9,7 +9,7 @@
 # As of November 2016, the former invariant is violated for approximately 840
 # users and the latter invariant is violated for approximately 150 users.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 # Fix violations of the invariant
 #   user.email == user.email.strip.downcase

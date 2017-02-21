@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
-#
+
 # This script creates a form_geos entry (if one does not already exist) for
 # every form row.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 
 if ARGV.length != 3
-  puts 'Usage: ./bin/oneoff/back_populate_form_geos start_index end_index batch_size'
+  puts 'Usage: ./bin/oneoff/backfill_data/form_geos start_index end_index batch_size'
   exit 1
 end
 
