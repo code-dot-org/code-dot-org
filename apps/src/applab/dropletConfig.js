@@ -96,7 +96,7 @@ export var blocks = [
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'setScreen', parent: api, category: 'UI controls', paletteParams: ['screenId'], params: ['"screen1"'], dropdown: { 0: getScreenIds }},
-  {func: 'rgb', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r', 'g', 'b', 'a'], params: ["250", "0", "75", "0.5"]},
+  {func: 'rgb', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r', 'g', 'b', 'a'], params: ["250", "0", "75", "0.5"], type: 'value' },
 
   {func: 'createCanvas', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 3 }, paletteParams: ['id','width','height'], params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT] },
   {func: 'setActiveCanvas', parent: api, category: 'Canvas', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("canvas") } },

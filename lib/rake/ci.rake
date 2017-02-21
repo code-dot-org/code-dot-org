@@ -61,7 +61,7 @@ namespace :ci do
   multitask deploy_multi: [:deploy_console, :deploy_stack]
 
   task :deploy_stack do
-    HipChat.wrap('CloudFormation stack update') { RakeUtils.rake 'stack:start' }
+    HipChat.wrap('CloudFormation stack update') { RakeUtils.rake_stream_output 'stack:start' }
   end
 
   task :deploy_console do

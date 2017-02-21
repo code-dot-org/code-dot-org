@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
-#
+
 # This script creates a user_geos entry (if one does not already exist) for
 # every user with a previous sign-in.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 if ARGV.length != 3
-  puts 'Usage: ./bin/oneoff/back_populate_user_geos start_index end_index batch_size'
+  puts 'Usage: ./bin/oneoff/backfill_data/user_geos start_index end_index batch_size'
   exit 1
 end
 start_index = ARGV[0].to_i
