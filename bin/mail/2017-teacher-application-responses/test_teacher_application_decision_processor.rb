@@ -233,6 +233,26 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     )
   end
 
+  def test_teachercon_acceptance_without_partner_raises_error
+    teachercon_name = 'June 18 - 23, 2017: Houston'
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, nil)
+    @mock_teacher_application.expects(:regional_partner_name).returns(nil)
+    @mock_teacher_application.stubs(id: 1)
+
+    e = assert_raises RuntimeError do
+      @processor.process_decision_row(
+        {
+          'Application ID' => 1,
+          'Decision' => 'Accept',
+          'Workshop' => teachercon_name,
+          'Program' => 'csd'
+        }
+      )
+    end
+
+    assert_equal 'Missing regional partner name for application id: 1', e.message
+  end
+
   private
 
   def assert_result_in_set(type, result)
