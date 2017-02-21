@@ -36,7 +36,7 @@ class GalleryActivitiesController < ApplicationController
       @gallery_activity = GalleryActivity.where(gallery_activity_params).
         first_or_initialize
       @gallery_activity.autosaved = false
-      authorize! :save_to_gallery, @gallery_activity.activity
+      authorize! :save_to_gallery, @gallery_activity.user_level
 
       if @gallery_activity.save
         render action: 'show', status: :created, location: @gallery_activity
@@ -68,7 +68,8 @@ class GalleryActivitiesController < ApplicationController
     if params[:gallery_activity] && current_user
       params[:gallery_activity][:user_id] ||= current_user.id
     end
-    params.require(:gallery_activity).permit(:activity_id, :level_source_id, :user_id)
+    params.require(:gallery_activity).
+      permit(:level_source_id, :user_id, :user_level_id)
   end
 
   def gallery_activities_for_app(app)
