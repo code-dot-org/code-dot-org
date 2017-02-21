@@ -1,3 +1,7 @@
+.space{
+  height: 20px;
+}
+
 .full-resource-block {
   width: 100%;
   height: 244px;
@@ -20,6 +24,7 @@
 .side-image {
   height: 100%;
   float: left;
+  width: 100%;
 }
 
 .side-description-area {
@@ -33,14 +38,6 @@
   height: 100%;
   float: left;
   margin-bottom: 5%;
-}
-.right .side-image, .right .side-description-area {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.left .side-image, .left .side-description-area {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
 
 .gray-button {

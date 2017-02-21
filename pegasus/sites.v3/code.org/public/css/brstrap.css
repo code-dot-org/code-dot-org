@@ -65,14 +65,15 @@
   .i-agree-button { width: 9%; }
 
  /*This is applicable when side by side images with rounded corners need to be stacked on smaller sizes (e.g. code.org/student)*/
-  .side-image.right, .side-description-area.right {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  .side-image.left, .side-description-area.left {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
+ .right .side-image, .right .side-description-area {
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+ }
+
+ .left .side-image, .left .side-description-area {
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+ }
 }
 
 
@@ -110,11 +111,13 @@
   .mobile-pad-edge { padding: 20px; }
 
 /*This is applicable when side by side images with rounded corners need to be stacked on smaller sizes (e.g. code.org/student)*/
- .side-image.right, .side-description-area.right {
+ .right .side-image, .right .side-description-area {
    border-bottom-left-radius: 5px;
    border-bottom-right-radius: 5px;
+   margin-top: -5%;
  }
- .side-image.left, .side-description-area.left {
+
+  .left .side-image, .left .side-description-area {
    border-top-left-radius: 5px;
    border-top-right-radius: 5px;
  }

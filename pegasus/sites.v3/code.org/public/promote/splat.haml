@@ -9,6 +9,8 @@ social:
   "og:video:width": ""
   "og:video:height": ""
   "og:video:type": ""
+video_player: true
+theme: responsive
 ---
 -state = File.basename(request.path_info)
 -facebook = {:u=>'https://code.org/promote' + (state != "thanks" ? "/" + state : "")}
@@ -17,9 +19,9 @@ social:
 %script{:src=>"/js/jquery.placeholder.js"}
 
 #promote-page
-  %h1 Promote Computer Science
+  %h1{:style=>'margin-bottom:15px;'} Promote Computer Science
 
-  %div{:id=>'thank-you-box'}
+  %div.col-80{:id=>'thank-you-box'}
     %p{:id=>'thank-you-message', :style=>'display: inline-block'}
       Thank you for filling out our petition. Please help us spread the word.
       = view :share_buttons, facebook:facebook, twitter:twitter
