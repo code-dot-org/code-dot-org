@@ -1,6 +1,6 @@
 import React from 'react';
 import Immutable from 'immutable';
-import { SummaryProgressTable } from './SummaryProgressTable';
+import { UnconnectedSummaryProgressTable as SummaryProgressTable } from './SummaryProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 

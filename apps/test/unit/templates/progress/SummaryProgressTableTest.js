@@ -2,7 +2,7 @@ import { assert } from '../../../util/configuredChai';
 import _ from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SummaryProgressTable } from '@cdo/apps/templates/progress/SummaryProgressTable';
+import { UnconnectedSummaryProgressTable as SummaryProgressTable } from '@cdo/apps/templates/progress/SummaryProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import Immutable from 'immutable';
