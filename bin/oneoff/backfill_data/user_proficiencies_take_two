@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-#
+
 # This script back populates the user_proficiencies table with data from the
 # user_levels table. The impetus is corrections in the
 # level_concept_difficulties table, causing existing data in the
@@ -160,7 +160,7 @@
 # and imported by this script.
 
 require 'csv'
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 SUFFIXES = %w(
   _2016_01

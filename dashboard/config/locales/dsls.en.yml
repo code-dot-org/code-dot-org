@@ -478,6 +478,7 @@ en:
       'CSD Map: Board Buttons': {}
       'CSD Map: Timed For Loop': {}
       'CSD Map: Timed Loop': {}
+      'CSD Map: onBoardEvent': {}
       CSD Recipe Stop: {}
       'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:

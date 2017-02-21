@@ -169,6 +169,10 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
+    codecov (0.1.9)
+      json
+      simplecov
+      url
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
     coderay (1.1.1)
@@ -605,6 +609,7 @@ GEM
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    url (0.3.2)
     url_safe_base64 (0.2.2)
     user_agent_parser (2.3.0)
     validates_email_format_of (1.6.3)
@@ -646,6 +651,7 @@ DEPENDENCIES
   cancancan (~> 1.15.0)
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
+  codecov
   codemirror-rails
   colorize
   composite_primary_keys
