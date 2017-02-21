@@ -252,7 +252,7 @@ describe('The Exporter,', function () {
         files.sort();
         assert.deepEqual(files, [
           'my-app/',
-          'my-app/README.md',
+          'my-app/README.txt',
           'my-app/applab/',
           'my-app/applab/applab-api.js',
           'my-app/applab/applab.css',
@@ -331,8 +331,8 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/code.js');
       });
 
-      it("should contain a README.md file", function () {
-        assert.property(zipFiles, 'my-app/README.md');
+      it("should contain a README.txt file", function () {
+        assert.property(zipFiles, 'my-app/README.txt');
       });
 
       it("should contain the assets files used by the project", function () {
