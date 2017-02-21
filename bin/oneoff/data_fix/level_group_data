@@ -35,7 +35,7 @@
 # where the script IDs are those scripts containing the level IDs and the level
 # IDs are the levels of type LevelGroup.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 require 'digest/md5'
 
 DATA_FILE = '/tmp/user_level_ids.csv'.freeze
@@ -44,71 +44,65 @@ DATA_FILE = '/tmp/user_level_ids.csv'.freeze
 # if raw_data is not of the appropriate format.
 # @param raw_data [Hash] The LevelGroup value (within LevelSource.data) for a
 #   sublevel.
-# @return [String] The string to persist in LevelSource.data for the sublevel.
+# @return [JSON] The JSON to persist in LevelSource.data for the sublevel.
 def get_data(raw_data)
   unless raw_data.keys == ['result', 'valid']
     raise "raw_data malformed: #{raw_data}"
   end
 
-  return raw_data['result']
+  return raw_data['result'].to_json
 end
 
 # Retrieves the UserLevel and the (JSON-parsed) LevelSource.data associated with
-# a user_level_id. Raises an exception if the UserLevel or LevelSource is
-# missing.
+# a user_level_id. Raises an exception if the UserLevel is missing.
 # @param user_level_id [Integer] The ID of the user_level.
-# @return [Array[UserLevel, Hash]] An array of a UserLevel and the corresponding
-#   (JSON-parsed) LevelSource.data.
+# @return [Array[UserLevel, {nil | Hash}]] An array of a UserLevel and the
+#   corresponding (JSON-parsed) LevelSource.data.
 def get_user_level_and_level_source_data(user_level_id)
   user_level = UserLevel.find_by_id(user_level_id)
-  unless user_level && user_level.level_source_id
-    raise "Malformed UserLevel: #{user_level_id}"
+  unless user_level
+    raise "Missing UserLevel: #{user_level_id}"
   end
 
   level_source = LevelSource.find_by_id(user_level.level_source_id)
-  unless level_source
-    raise "Missing LevelSource: #{user_level.level_source_id} "\
-      "(#{user_level_id})"
-  end
-  level_source_data = JSON.parse(level_source.data)
+  level_source_data = level_source ? JSON.parse(level_source.data) : nil
 
   [user_level, level_source_data]
 end
 
 # Creates a UserLevel for each sublevel in the LevelGroup UserLevel, if one does
 # not already exist. As part of this, creates any necessary LevelSource objects.
-# @param user_level [UserLevel]
-# @param level_id [Integer]
-# @param raw_data [Hash]
-def create_sublevel_level_sources(user_level, level_id, raw_data)
+# @param user_level [UserLevel] The LevelGroup UserLevel.
+# @param sublevel_level_id [Integer] The level_id of the sublevel.
+# @param sublevel_raw_data [Hash] The data for the sublevel LevelSource.
+def create_sublevel_user_level(user_level, sublevel_level_id, sublevel_raw_data)
   # Determine if there is an existing sublevel UserLevel, continuing if so.
   sublevel_user_level = UserLevel.
     where(
       user_id: user_level.user_id,
-      level_id: level_id,
+      level_id: sublevel_level_id,
       script_id: user_level.script_id
     ).
     first
-  next if sublevel_user_level
+  return if sublevel_user_level
 
-  # There was not, so create the sublevel UserLevel based on the LevelGroup
-  # UserLevel. Before doing so, verify the existence of an appropriate
-  # LevelSource, creating one if not.
-  data = get_data raw_data
+  # Before creating the sublevel UserLevel, verify the existence of an
+  # appropriate LevelSource, creating one if not.
+  data = get_data sublevel_raw_data
   md5 = Digest::MD5.hexdigest data
-  level_source = LevelSource.
+  sublevel_level_source = LevelSource.
     create_with(data: data).
     find_or_create_by(
       md5: md5,
-      level_id: level_id
+      level_id: sublevel_level_id
     )
 
   # Actually create the UserLevel for the sublevel.
   UserLevel.create!(
     user_id: user_level.user_id,
-    level_id: level_id,
+    level_id: sublevel_level_id,
     script_id: user_level.script_id,
-    level_source_id: level_source.id,
+    level_source_id: sublevel_level_source.id,
     # Since UserLevel.attempts for the LevelGroup encompasses the number of
     # state changes across all answers and the number of submits, we do not
     # try to populate attempts with an accurate number.
@@ -132,10 +126,11 @@ def main
     user_level, level_source_data = get_user_level_and_level_source_data(
       user_level_id
     )
+    next unless user_level && level_source_data
 
     ActiveRecord::Base.transaction do
       level_source_data.each do |sublevel_level_id, sublevel_level_raw_data|
-        create_sublevel_level_sources(
+        create_sublevel_user_level(
           user_level,
           sublevel_level_id,
           sublevel_level_raw_data
@@ -144,3 +139,5 @@ def main
     end
   end
 end
+
+main

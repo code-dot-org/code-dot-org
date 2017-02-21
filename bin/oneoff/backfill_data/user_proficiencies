@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-#
+
 # This script reads a file of user proficiencies (one per line). For each, it
 # checks to see if there is an existing row. If there is, it adds the values to
 # the row, setting timestamps appropriately. If not, it creates a row.
@@ -74,7 +74,7 @@
 #   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 require 'csv'
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 TIME_NOW = DateTime.now.freeze
 # The time at which we started tracking incremental user proficiency.
