@@ -118,8 +118,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
   },
 
   componentDidMount() {
-    // TODO: probably need to put this somehwere...
-//    this.props.debuggerUi.setStepSpeed(this.props.stepSpeed);
+    this.props.setStepSpeed(this.props.stepSpeed);
 
     const mouseUpTouchEventName = dom.getTouchEventName('mouseup');
 
