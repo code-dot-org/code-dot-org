@@ -331,7 +331,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     const watchersResizeRight = (newWatchersWidth - watchersResizeRect.width / 2);
 
     watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
-    this._debugConsole.root.style.right = newWatchersWidth + 'px';
+    this._debugConsole.getWrappedInstance().root.style.right = newWatchersWidth + 'px';
     this._watchersResizeBar.style.right = watchersResizeRight + 'px';
 
     const headerLBorderWidth = 1;
