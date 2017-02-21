@@ -724,9 +724,10 @@ describe('progressReduxTest', () => {
 
   describe('categorizedLessons', () => {
     // helper method that creates a fake stage
-    const fakeStage = (categoryName, stageName) => ({
+    const fakeStage = (categoryName, stageName, stageId) => ({
       flex_category: categoryName,
       name: stageName,
+      id: stageId,
       levels: [{
         url: '',
         name: 'fake level',
@@ -737,9 +738,9 @@ describe('progressReduxTest', () => {
     it('returns a single category if all lessons have the same category', () => {
       const state = {
         stages: [
-          fakeStage('Content', 'stage1'),
-          fakeStage('Content', 'stage2'),
-          fakeStage('Content', 'stage3')
+          fakeStage('Content', 'stage1', 1),
+          fakeStage('Content', 'stage2', 2),
+          fakeStage('Content', 'stage3', 3)
         ],
         levelProgress: {}
       };
@@ -752,9 +753,9 @@ describe('progressReduxTest', () => {
     it('groups non-adjacent stages by category', () => {
       const state = {
         stages: [
-          fakeStage('cat1', 'stage1'),
-          fakeStage('cat2', 'stage2'),
-          fakeStage('cat1', 'stage3')
+          fakeStage('cat1', 'stage1', 1),
+          fakeStage('cat2', 'stage2', 2),
+          fakeStage('cat1', 'stage3', 3)
         ],
         levelProgress: {}
       };
@@ -765,8 +766,19 @@ describe('progressReduxTest', () => {
       assert.equal(categories[1].category, 'cat2');
       assert.equal(categories[0].levels.length, 2);
       assert.equal(categories[1].levels.length, 1);
-      assert.deepEqual(categories[0].lessonNames, ['stage1', 'stage3']);
-      assert.deepEqual(categories[1].lessonNames, ['stage2']);
+      assert.deepEqual(categories[0].lessons, [
+        {
+          name: 'stage1',
+          id: 1
+        }, {
+          name: 'stage3',
+          id: 3
+        }
+      ]);
+      assert.deepEqual(categories[1].lessons, [{
+        name: 'stage2',
+        id: 2
+      }]);
     });
   });
 });
