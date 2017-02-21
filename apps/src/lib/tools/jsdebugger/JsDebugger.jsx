@@ -419,8 +419,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
             id="debug-watch-header"
             ref={debugWatchHeader => this._debugWatchHeader = debugWatchHeader}
             onClick={() => {
-              // call JsDebuggerUi.js logic to reset resizer-overridden styles
-              // (remove once JsDebuggerUi.js resize logic migrated to React)
+              // reset resizer-overridden styles
+              // (remove once resize logic migrated to React)
               if (!this.state.watchersHidden) {
                 const resetResizeEvent = document.createEvent('Event');
                 resetResizeEvent.initEvent('resetWatchersResizableElements', true, true);
