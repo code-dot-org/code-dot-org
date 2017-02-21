@@ -17,6 +17,8 @@ def push_out_translated_files
   cleanup_chinese_and_portuguese_codes
   rebuild_blockly_js_files
   check_for_mismatching_links_or_images
+  puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
+  run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
 end
 
 # Files downloaded from Crowdin are organized by language name,
