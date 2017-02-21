@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import experiments from './util/experiments';
 import processMarkdown from 'marked';
 import renderer from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
@@ -132,7 +133,10 @@ authoredHintUtils.clearUnfinishedHints = function () {
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
-  trySetLocalStorage('old_finished_authored_hint_views', JSON.stringify(authoredHintUtils.getFinishedHints_()));
+  if (experiments.isEnabled('g.stageprogress')) {
+    trySetLocalStorage('old_finished_authored_hint_views',
+        JSON.stringify(authoredHintUtils.getFinishedHints_()));
+  }
   trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
