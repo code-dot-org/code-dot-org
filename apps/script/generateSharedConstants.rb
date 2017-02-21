@@ -8,28 +8,22 @@ require 'json'
 require_relative '../../lib/cdo/shared_constants'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
-OUTPUT_JS = "#{REPO_DIR}/apps/src/util/sharedConstants.js"
 
-def generate_js
+def generate_shared_js_file(content, path)
   output = <<CONTENT
 // This is a generated file and SHOULD NOT BE EDITTED MANUALLY!!
 // Contents are generated as part of grunt build
 // Source of truth is lib/cdo/shared_constants.rb
 
-#{generate_level_kind}
-
-#{generate_level_status}
-
-#{generate_applab_blocks}
+#{content}
 CONTENT
 
-  File.open(OUTPUT_JS, 'w') {|f| f.write(output)}
+  File.open(path, 'w') {|f| f.write(output)}
 end
 
-# Each of these generate a particular JS "enum" from its ruby equivalent. As we
-# want to add more constants, we'll need to add more similar methods that extract
-# the content we care about from the ruby object, and write it as JS.
-
+# Each of these generate a JS object from its ruby equivalent. As we want to add
+# more constants, we'll need to add more similar methods that extract the content
+# we care about from the ruby object, and write it as JS.
 def generate_level_kind
   hash = SharedConstants::LEVEL_KIND.marshal_dump
   "export const LevelKind = #{JSON.pretty_generate(hash)};"
@@ -40,9 +34,17 @@ def generate_level_status
   "export const LevelStatus = #{JSON.pretty_generate(hash)};"
 end
 
+
 def generate_applab_blocks
   hash = JSON.parse(SharedConstants::APPLAB_BLOCKS)
   "export const ApplabBlocks = #{JSON.pretty_generate(hash)};"
 end
 
-generate_js
+def main
+  shared_content = [generate_level_kind, generate_level_status].join("\n\n")
+
+  generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
+  generate_shared_js_file(generate_applab_blocks, "#{REPO_DIR}/apps/src/util/sharedApplabBlocks.js")
+end
+
+main
