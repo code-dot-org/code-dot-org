@@ -18,7 +18,7 @@
 #       AND user_levels.level_id = activities.level_id;
 # saving the output to and reading the data from a CSV.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 require 'csv'
 
 TRANSACTION_SIZE = 5_000
