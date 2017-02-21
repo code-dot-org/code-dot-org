@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-#
+
 # Based off of data_fix_for_missing_emails
 #
 # This script reads a file of user ids (one per line). For each,
@@ -18,7 +18,7 @@
 # ORDER BY users.id;
 #
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 File.foreach('/tmp/non_us_ids_with_races.csv').with_index do |line, line_num|
   if line_num % 1000 == 0
