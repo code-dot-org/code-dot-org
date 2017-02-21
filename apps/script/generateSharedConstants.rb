@@ -17,7 +17,10 @@ def generate_js
 // Source of truth is lib/cdo/shared_constants.rb
 
 #{generate_level_kind}
+
 #{generate_level_status}
+
+#{generate_applab_blocks}
 CONTENT
 
   File.open(OUTPUT_JS, 'w') {|f| f.write(output)}
@@ -35,6 +38,11 @@ end
 def generate_level_status
   hash = SharedConstants::LEVEL_STATUS.marshal_dump
   "export const LevelStatus = #{JSON.pretty_generate(hash)};"
+end
+
+def generate_applab_blocks
+  hash = JSON.parse(SharedConstants::APPLAB_BLOCKS)
+  "export const ApplabBlocks = #{JSON.pretty_generate(hash)};"
 end
 
 generate_js
