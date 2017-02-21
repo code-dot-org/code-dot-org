@@ -1,5 +1,5 @@
-/* global CryptoJS */
 import $ from 'jquery';
+import MD5 from 'crypto-js/md5';
 
 var EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
@@ -7,7 +7,7 @@ module.exports = function hashEmail(options) {
   // Hash the email, if it is an email.
   var email = $(options.email_selector).val().toLowerCase().trim();
   if (email !== '' && EMAIL_REGEX.test(email)) {
-    var hashed_email = CryptoJS.MD5(email);
+    var hashed_email = MD5(email);
     $(options.hashed_email_selector).val(hashed_email);
 
     // Unless we want to deliberately skip the step of clearing the email.

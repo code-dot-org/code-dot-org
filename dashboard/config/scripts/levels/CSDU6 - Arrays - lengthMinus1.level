@@ -43,7 +43,8 @@
       "led.on": null,
       "led.off": null,
       "buzzer.note": null,
-      "declareAssign_list_abd": null
+      "declareAssign_list_abd": null,
+      "listLength": null
     },
     "edit_code": true,
     "embed": "false",
@@ -85,6 +86,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

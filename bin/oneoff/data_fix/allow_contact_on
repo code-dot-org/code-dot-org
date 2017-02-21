@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
-require File.expand_path('../../pegasus/src/env', __FILE__)
+
+# This script changes the value of the allow_contact_b key in data from 'on'
+# to '1'.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/db'
 require 'cdo/geocoder'
 require src_dir 'forms'

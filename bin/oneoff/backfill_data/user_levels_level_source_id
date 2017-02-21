@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-#
+
 # This script populates the `level_source_id` column of the `user_levels` table,
 # if not already present, using the data in a CSV file. The CSV file itself is
 # constructed from a mysqldump of a temporary table created by the following
@@ -35,10 +35,10 @@
 # level_source_id. Thus, after running this script, there will be UserLevel rows
 # without a level_source_id.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 if ARGV.length != 2
-  puts 'Usage: ./bin/oneoff/back_populate_user_levels_level_source_id filename batch_size'
+  puts 'Usage: ./bin/oneoff/backfill_data/user_levels_level_source_id filename batch_size'
   exit 1
 end
 

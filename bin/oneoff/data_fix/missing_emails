@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-#
+
 # This script reads a file of teacher email addresses (one per line). For each,
 # it  checks to see if there is a user account without a plaintext email
 # matching the email address (comparing the hashes). If there is, it upgrades
@@ -17,7 +17,7 @@
 # https://docs.google.com/spreadsheets/d/1pKbdj98sFp8-tAbMHvJ4Zuq3nQllxG-yMaZbhGqMzms
 # for details of those users.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 File.foreach('/tmp/teacher_emails.csv').with_index do |line, line_num|
   if line_num % 1000 == 0
