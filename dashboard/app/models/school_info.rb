@@ -30,14 +30,14 @@ class SchoolInfo < ActiveRecord::Base
     SCHOOL_TYPE_PRIVATE = "private",
     SCHOOL_TYPE_PUBLIC = "public",
     SCHOOL_TYPE_OTHER = "other"
-  ]
+  ].freeze
 
   SCHOOL_STATE_OTHER = "other"
 
   VALIDATION_TYPES = [
     VALIDATION_FULL = 'full',
     VALIDATION_NONE = 'none'
-  ]
+  ].freeze
 
   belongs_to :school_district
   belongs_to :school
