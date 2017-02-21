@@ -15,7 +15,6 @@
 #
 #  index_gallery_activities_on_app_and_autosaved            (app,autosaved)
 #  index_gallery_activities_on_level_source_id              (level_source_id)
-#  index_gallery_activities_on_user_id_and_activity_id      (user_id)
 #  index_gallery_activities_on_user_id_and_level_source_id  (user_id,level_source_id)
 #  index_gallery_activities_on_user_level_id                (user_level_id)
 #
