@@ -440,6 +440,8 @@ testsContext.keys().forEach(testsContext);
     brambleHost: './src/weblab/brambleHost.js',
 
     'applab-api': './src/applab/api-entry.js',
+
+    'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
   };
 
   // Create a config for each of our bundles
