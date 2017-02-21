@@ -337,6 +337,6 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   test 'By default, validation type is set to full' do
     school_info = build :school_info_us_public
-    assert school_info.validation_type == SchoolInfo::VALIDATION_FULL
+    assert school_info.validation_type == SchoolInfo::VALIDATION_FULL, school_info.validation_type
   end
 end

@@ -19,9 +19,9 @@ class UserTest < ActiveSupport::TestCase
       school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
       state: nil
     }
-    teacher = create :teacher, school_info_attributes: school_attributes
-    teacher.save!
-    assert teacher.valid?, teacher.errors.full_messages
+    assert_creates(User) do
+      create :teacher, school_info_attributes: school_attributes
+    end
   end
 
   test 'identical school info should not be duplicated in the database' do
@@ -30,15 +30,10 @@ class UserTest < ActiveSupport::TestCase
       school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
       state: 'CA'
     }
-    teacher = create :teacher, school_info_attributes: school_attributes
-    teacher.save!
-
-    teacher2 = create :teacher, school_info_attributes: school_attributes
-    teacher2.save!
-
-    attr = teacher.process_school_info_attributes(school_attributes)
+    teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
+    attr = teachers[0].process_school_info_attributes(school_attributes)
     school_info = SchoolInfo.where(attr).first
-    assert teacher.school_info == school_info && teacher2.school_info == school_info
+    assert teachers[0].school_info == school_info && teachers[1].school_info == school_info
     assert SchoolInfo.where(attr).count == 1
   end
 
