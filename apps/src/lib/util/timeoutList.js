@@ -1,68 +1,77 @@
-var timeoutList = [];
+/** @file Wrap timer functions for easy cleanup of all timers. */
+const timeoutList = [];
 
 /**
  * call setTimeout and track the returned id
+ * @param {function} fn
+ * @param {number} delay in milliseconds
+ * @return {number} timeout key
  */
-exports.setTimeout = function (fn, time) {
-  var timeout = window.setTimeout.apply(window, arguments);
-  timeoutList.push(timeout);
-  return timeout;
-};
+export function setTimeout(fn, delay) {
+  const key = window.setTimeout.apply(window, arguments);
+  timeoutList.push(key);
+  return key;
+}
 
 /**
  * Clears all timeouts in our timeoutList and resets the timeoutList
  */
-exports.clearTimeouts = function () {
+export function clearTimeouts() {
   timeoutList.forEach(window.clearTimeout, window);
-  timeoutList = [];
-};
+  timeoutList.length = 0;
+}
 
 /**
  * Clears a timeout and removes the item from the timeoutList
+ * @param {number} key
  */
-exports.clearTimeout = function (id) {
-  window.clearTimeout(id);
+export function clearTimeout(key) {
+  window.clearTimeout(key);
   // List removal requires IE9+
-  var index = timeoutList.indexOf(id);
+  const index = timeoutList.indexOf(key);
   if (index > -1) {
     timeoutList.splice(index, 1);
   }
-};
+}
 
-var intervalList = [];
+const intervalList = [];
 
 /**
  * call setInterval and track the returned id
+ * @param {function} fn
+ * @param {number} intervalTime in milliseconds
+ * @return {number} interval key
  */
-exports.setInterval = function (fn, time) {
-  var interval = window.setInterval.apply(window, arguments);
-  intervalList.push(interval);
-  return interval;
-};
+export function setInterval(fn, intervalTime) {
+  const key = window.setInterval.apply(window, arguments);
+  intervalList.push(key);
+  return key;
+}
 
 /**
  * Clears all interval timeouts in our intervalList and resets the intervalList
  */
-exports.clearIntervals = function () {
+export function clearIntervals() {
   intervalList.forEach(window.clearInterval, window);
-  intervalList = [];
-};
+  intervalList.length = 0;
+}
 
 /**
  * Clears a timeout and removes the item from the intervalList
+ * @param {number} key
  */
-exports.clearInterval = function (id) {
-  window.clearInterval(id);
+export function clearInterval(key) {
+  window.clearInterval(key);
   // List removal requires IE9+
-  const timedLoopIndex = timedLoopList.indexOf(id);
+  const timedLoopIndex = timedLoopList.indexOf(key);
   if (timedLoopIndex > -1) {
     timedLoopList.splice(timedLoopIndex, 1);
   }
-  var index = intervalList.indexOf(id);
-  if (index > -1) {
-    intervalList.splice(index, 1);
+  const intervalIndex = intervalList.indexOf(key);
+  if (intervalIndex > -1) {
+    intervalList.splice(intervalIndex, 1);
   }
-};
+}
 
 // Strictly a subset of intervalList
 const timedLoopList = [];
@@ -74,11 +83,11 @@ const timedLoopList = [];
  * @param {function} fn
  * @return {number} interval key
  */
-exports.timedLoop = function (interval, fn) {
-  const key = exports.setInterval(fn, interval);
+export function timedLoop(interval, fn) {
+  const key = setInterval(fn, interval);
   timedLoopList.push(key);
   return key;
-};
+}
 
 /**
  * Stop intervals started with timedLoop.  If a key is provided, stop that
@@ -86,10 +95,10 @@ exports.timedLoop = function (interval, fn) {
  * with timedLoop.
  * @param {number} [key]
  */
-exports.stopTimedLoop = function (key) {
+export function stopTimedLoop(key) {
   if (key === undefined) {
     timedLoopList.slice().forEach(k => exports.clearInterval(k));
   } else {
-    exports.clearInterval(key);
+    clearInterval(key);
   }
-};
+}

@@ -146,7 +146,7 @@ var initWallMap = function () {
 /**
  * PIDs of animation tasks currently executing.
  */
-var timeoutList = require('../lib/util/timeoutList');
+import * as timeoutList from '../lib/util/timeoutList';
 
 function drawMap() {
   var svg = document.getElementById('svgMaze');
