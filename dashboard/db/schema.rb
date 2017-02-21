@@ -190,7 +190,6 @@ ActiveRecord::Schema.define(version: 20170224150102) do
     t.index ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
     t.index ["level_source_id"], name: "index_gallery_activities_on_level_source_id", using: :btree
     t.index ["user_id", "level_source_id"], name: "index_gallery_activities_on_user_id_and_level_source_id", using: :btree
-    t.index ["user_id"], name: "index_gallery_activities_on_user_id_and_activity_id", using: :btree
     t.index ["user_level_id"], name: "index_gallery_activities_on_user_level_id", using: :btree
   end
 
