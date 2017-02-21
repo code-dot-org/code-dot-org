@@ -11,15 +11,17 @@ class AssetHelpersTest < Minitest::Test
   MINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/teacher-dashboard/index.min-5bb3b68c6f92cf8409eb7d0649cf572ffa0c66fca1b02b887b4454cab553daef.js"
 
   def test_asset_map_pretty
-    CDO.pretty_js = true
-    assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminified asset path"
-    # Should return the unminified path because pretty_js is true
-    assert_equal UNMINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minified asset path"
+    CDO.stub(:pretty_js, true) do
+      assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminified asset path"
+      # Should return the unminified path because pretty_js is true
+      assert_equal UNMINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minified asset path"
+    end
   end
 
   def test_asset_map_ugly
-    CDO.pretty_js = false
-    assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminified asset path"
-    assert_equal MINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minified asset path"
+    CDO.stub(:pretty_js, false) do
+      assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminified asset path"
+      assert_equal MINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minified asset path"
+    end
   end
 end
