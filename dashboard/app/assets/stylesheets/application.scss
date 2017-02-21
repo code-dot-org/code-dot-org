@@ -1459,6 +1459,9 @@ a.download-video {
     border-width: 1px;
     border-color: $schooldropdown-border;
   }
+  #schooldropdown-block hr {
+    border-color: $schooldropdown-border;
+  }
   #schooldropdown-block select, #schooldropdown-block .selectize-control {
     width: 100%;
   }
