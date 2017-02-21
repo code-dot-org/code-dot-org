@@ -140,8 +140,106 @@ describe('timeoutList', () => {
       expect(spy2).to.have.been.calledOnce;
     });
 
+    it('also clears timedLoops', () => {
+      const spy1 = sinon.spy();
+      const spy2 = sinon.spy();
+      timeoutList.timedLoop(100, spy1);
+      timeoutList.timedLoop(100, spy2);
+      clock.tick(100);
+      expect(spy1).to.have.been.calledOnce;
+      expect(spy2).to.have.been.calledOnce;
+
+      timeoutList.clearIntervals();
+      clock.tick(100);
+      expect(spy1).to.have.been.calledOnce;
+      expect(spy2).to.have.been.calledOnce;
+    });
+
     it('is a no-op if no intervals are set', () => {
       expect(() => timeoutList.clearIntervals()).not.to.throw;
+    });
+  });
+
+  describe('timedLoop(interval, fn)', () => {
+    it('runs code on an interval', () => {
+      const spy = sinon.spy();
+      timeoutList.timedLoop(100, spy);
+      expect(spy).not.to.have.been.called;
+      clock.tick(100);
+      expect(spy).to.have.been.calledOnce;
+    });
+
+    it('happens every [interval] ms', () => {
+      const spy = sinon.spy();
+      timeoutList.timedLoop(100, spy);
+      clock.tick(300);
+      expect(spy).to.have.been.calledThrice;
+    });
+  });
+
+  describe('stopTimedLoop([key])', () => {
+    it('stops the loop from happening', () => {
+      const spy = sinon.spy();
+      timeoutList.timedLoop(100, spy);
+      clock.tick(100);
+      expect(spy).to.have.been.calledOnce;
+
+      timeoutList.stopTimedLoop();
+      clock.tick(100);
+      expect(spy).to.have.been.calledOnce;
+    });
+
+    it('is a no-op if called when no timed loop is running', () => {
+      expect(() => timeoutList.stopTimedLoop()).not.to.throw;
+    });
+
+    it('is a no-op if called on a bad key', () => {
+      expect(() => timeoutList.stopTimedLoop(42)).not.to.throw;
+    });
+
+    it('clears only one loop if given a key', () => {
+      const spy1 = sinon.spy();
+      const spy2 = sinon.spy();
+      const key1 = timeoutList.timedLoop(100, spy1);
+      const key2 = timeoutList.timedLoop(100, spy2);
+      clock.tick(100);
+      expect(spy1).to.have.been.calledOnce;
+      expect(spy2).to.have.been.calledOnce;
+
+      timeoutList.stopTimedLoop(key1);
+      clock.tick(100);
+      expect(spy1).to.have.been.calledOnce;
+      expect(spy2).to.have.been.calledTwice;
+    });
+
+    it('clears all loops if called with no arguments', () => {
+      const spy1 = sinon.spy();
+      const spy2 = sinon.spy();
+      timeoutList.timedLoop(100, spy1);
+      timeoutList.timedLoop(100, spy2);
+      clock.tick(100);
+      expect(spy1).to.have.been.calledOnce;
+      expect(spy2).to.have.been.calledOnce;
+
+      timeoutList.stopTimedLoop();
+      clock.tick(100);
+      expect(spy1).to.have.been.calledOnce;
+      expect(spy2).to.have.been.calledOnce;
+    });
+
+    it('does not clear setInterval calls if called with no arguments', () => {
+      const spy1 = sinon.spy();
+      const spy2 = sinon.spy();
+      timeoutList.timedLoop(100, spy1);
+      timeoutList.setInterval(spy2, 100);
+      clock.tick(100);
+      expect(spy1).to.have.been.calledOnce;
+      expect(spy2).to.have.been.calledOnce;
+
+      timeoutList.stopTimedLoop();
+      clock.tick(100);
+      expect(spy1).to.have.been.calledOnce;
+      expect(spy2).to.have.been.calledTwice;
     });
   });
 });
