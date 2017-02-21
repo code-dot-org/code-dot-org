@@ -121,13 +121,13 @@
     "slider_speed": "1",
     "project_template_level_name": "U3 - Simulation - Template",
     "encrypted_examples": "2kMdyOmgHRBUNUfpeGMMDZxQCeXB1IGcNgktPtTUeG5pDfKygPcwQjShOUL4\nShbo\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -6,7 +6,7 @@ import { borderRadius, ControlTypes } from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import { NEW_LEVEL_ID, addStage, addGroup } from './editorRedux';
-import { LevelKind } from '@cdo/apps/code-studio/activityUtils';
+import { LevelKind } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   groupHeader: {
@@ -113,6 +113,9 @@ const FlexGroup = React.createClass({
     let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(/'/, "\\'")}'`;
     if (active === false) {
       l += ', active: false'
+    }
+    if (level.progression) {
+      l += `, progression: '${level.progression}'`;
     }
     s.push(l);
     return s;

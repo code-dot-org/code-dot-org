@@ -294,6 +294,7 @@ class ScriptLevelsController < ApplicationController
     if @level.try(:pages)
       puzzle_page = params[:puzzle_page] || 1
       @pages = [@level.pages[puzzle_page.to_i - 1]]
+      raise ActiveRecord::RecordNotFound if @pages.first.nil?
       @total_page_count = @level.pages.count
       @total_level_count = @level.levels.length
     end
