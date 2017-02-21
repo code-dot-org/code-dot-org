@@ -95,4 +95,7 @@ level 'CSDU6 - timed loop helpers'
 named_level 'CSDU6 - timed loop challenge'
 
 stage 'Physical Input'
+named_level 'CSD Map: onBoardEvent'
+level 'CSDU6 - button screen buttonL'
+level 'CSDU6 - button screen buttonR'
 named_level 'CSD Map: Board Buttons'

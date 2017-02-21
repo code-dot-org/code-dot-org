@@ -5,6 +5,7 @@
 import React from 'react';
 import CsFundamentalsSection from './csFundamentalsSection';
 import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSection';
+import UpcomingWorkshops from './upcomingWorkshops';
 import _ from 'lodash';
 
 const CSPCSDcourses = ['CS Principles', 'CS Discoveries'];
@@ -73,6 +74,9 @@ const LandingPage = React.createClass({
             coursesCompleted={this.props.coursesCompleted}
           />
         )
+        }
+        {
+          <UpcomingWorkshops/>
         }
       </div>
     );

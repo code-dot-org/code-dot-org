@@ -250,6 +250,7 @@ describe('The JSDebugger redux duck', () => {
       describe("after being detached", () => {
         beforeEach(() => {
           store.dispatch(actions.detach());
+          selectors.getJSInterpreter(state).deinitialize();
           state = store.getState();
         });
 
