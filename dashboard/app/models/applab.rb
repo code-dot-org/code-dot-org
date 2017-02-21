@@ -207,8 +207,6 @@ class Applab < Blockly
         "whileBlock": null,
         "setTimeout": null,
         "clearTimeout": null,
-        "setInterval": null,
-        "clearInterval": null,
         "timedLoop": null,
         "stopTimedLoop": null,
         "getTime": null,
