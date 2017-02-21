@@ -49,6 +49,7 @@ def load_configuration
     'build_code_studio'           => false,
     'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
+    'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
@@ -137,7 +138,7 @@ def load_configuration
     # unless it's being used for unit tests. This logic should be kept in sync with
     # the logic for setting config.assets.* under dashboard/config/.
     ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
-    config['pretty_js'] = [:development, :staging].include?(rack_env) || (rack_env?(:test) && ci_test)
+    config['pretty_js'] = [:development, :staging].include?(rack_env) || (rack_env == :test && ci_test)
 
     config.merge! global_config
     config.merge! local_config
