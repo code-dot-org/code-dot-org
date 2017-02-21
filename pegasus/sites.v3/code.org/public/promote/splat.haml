@@ -25,10 +25,10 @@ theme: responsive
     %p{:id=>'thank-you-message', :style=>'display: inline-block'}
       Thank you for filling out our petition. Please help us spread the word.
       = view :share_buttons, facebook:facebook, twitter:twitter
+
   %div{:id=>'us_content'}
     - if state != "thanks"
       #interactive-map.section.clear
-        %h2{:style=>"margin-top: 0px"} Choose a State
         = view :interactive_map, use_url: true
 
     #stats-section.section.clear
@@ -48,7 +48,6 @@ theme: responsive
 
   - if state == "thanks"
     #interactive-map.section.clear
-      %h2{:style=>"margin-top: 0px"} Choose a State
       = view :interactive_map, use_url: true
 
   %div{:id=>'universal_content'}

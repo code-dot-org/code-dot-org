@@ -2,117 +2,168 @@
 %script{src: "/js/extended_us_map.js"}
 
 %div#state-list.phone-feature
-  Future drop down list of the states when users are looking at the site on mobile.
   //Would it be better here to iterate through a hash of state names and abbreviates appended to the promote url? Would it also be better to move this whole chunk to a new file?
-
   .nav-collapse.collapse
-  %ul.nav{class:"list-unstyled"}
-    %li.dropdown
-      %a.dropdown-toggle{:href => "#", "role" => "button", "data-toggle" => "dropdown", "data-target" => "#"}
+  %div.nav
+    %div.dropdown
+      %button.dropdown-toggle{:href => "#", "role" => "button", "data-toggle" => "dropdown", "data-target" => "#", :style => "background-color:#7665a0; border:2px solid #7665a0; width:100%; margin-bottom: 2%; font-size:18px"}
         Select Your State
         %b.caret
-      %ul.dropdown-menu{"role" => "menu"}
-        %li
-          %a{:href => "/promote/al"}
-            Alabama
-          %a{:href => "/promote/ak"}
-            Alaska
-          %a{:href => "/promote/az"}
-            Arizona
-          %a{:href => "/promote/ar"}
-            Arkansas
-          %a{:href => "/promote/ca"}
-            California
-          %a{:href => "/promote/co"}
-            Colorado
-          %a{:href => "/promote/ct"}
-            Connecticut
-          %a{:href => "/promote/de"}
-            Delaware
-          %a{:href => "/promote/fl"}
-            Florida
-          %a{:href => "/promote/ga"}
-            Georgia
-          %a{:href => "/promote/hi"}
-            Hawaii
-          %a{:href => "/promote/id"}
-            Idaho
-          %a{:href => "/promote/il"}
-            Illinois
-          %a{:href => "/promote/in"}
-            Indiana
-          %a{:href => "/promote/ia"}
-            Iowa
-          %a{:href => "/promote/ks"}
-            Kansas
-          %a{:href => "/promote/ky"}
-            Kentucky
-          %a{:href => "/promote/la"}
-            Louisiana
-          %a{:href => "/promote/me"}
-            Maine
-          %a{:href => "/promote/md"}
-            Maryland
-          %a{:href => "/promote/ma"}
-            Massachusetts
-          %a{:href => "/promote/mi"}
-            Michigan
-          %a{:href => "/promote/mn"}
-            Minnesota
-          %a{:href => "/promote/ms"}
-            Mississippi
-          %a{:href => "/promote/mo"}
-            Missouri
-          %a{:href => "/promote/mt"}
-            Montana
-          %a{:href => "/promote/ne"}
-            Nebraska
-          %a{:href => "/promote/nv"}
-            Nevada
-          %a{:href => "/promote/nh"}
-            New Hampshire
-          %a{:href => "/promote/nj"}
-            New Jersey
-          %a{:href => "/promote/nm"}
-            New Mexico
-          %a{:href => "/promote/ny"}
-            New York
-          %a{:href => "/promote/nc"}
-            North Carolina
-          %a{:href => "/promote/nd"}
-            North Dakota
-          %a{:href => "/promote/oh"}
-            Ohio
-          %a{:href => "/promote/ok"}
-            Oklahoma
-          %a{:href => "/promote/or"}
-            Oregon
-          %a{:href => "/promote/pa"}
-            Pennsylvania
-          %a{:href => "/promote/ri"}
-            Rhode Island
-          %a{:href => "/promote/sc"}
-            South Carolina
-          %a{:href => "/promote/sd"}
-            South Dakota
-          %a{:href => "/promote/tn"}
-            Tennessee
-          %a{:href => "/promote/tx"}
-            Texas
-          %a{:href => "/promote/ut"}
-            Utah
-          %a{:href => "/promote/vt"}
-            Vermont
-          %a{:href => "/promote/va"}
-            Viriginia
-          %a{:href => "/promote/wa"}
-            Washington
-          %a{:href => "/promote/wv"}
-            West Virginia
-          %a{:href => "/promote/wi"}
-            Wisconsin
-          %a{:href => "/promote/wy"}
-            Wyoming
+      %ul.dropdown-menu{"role" => "menu", :style => "width:100%; font-size:18px; padding-left:10px;"}
+        %a{:href => "/promote/al"}
+          Alabama
+        %br
+        %a{:href => "/promote/ak"}
+          Alaska
+        %br
+        %a{:href => "/promote/az"}
+          Arizona
+        %br
+        %a{:href => "/promote/ar"}
+          Arkansas
+        %br
+        %a{:href => "/promote/ca"}
+          California
+        %br
+        %a{:href => "/promote/co"}
+          Colorado
+        %br
+        %a{:href => "/promote/ct"}
+          Connecticut
+        %br
+        %a{:href => "/promote/de"}
+          Delaware
+        %br
+        %a{:href => "/promote/fl"}
+          Florida
+        %br
+        %a{:href => "/promote/ga"}
+          Georgia
+        %br
+        %a{:href => "/promote/hi"}
+          Hawaii
+        %br
+        %a{:href => "/promote/id"}
+          Idaho
+        %br
+        %a{:href => "/promote/il"}
+          Illinois
+        %br
+        %a{:href => "/promote/in"}
+          Indiana
+        %br
+        %a{:href => "/promote/ia"}
+          Iowa
+        %br
+        %a{:href => "/promote/ks"}
+          Kansas
+        %br
+        %a{:href => "/promote/ky"}
+          Kentucky
+        %br
+        %a{:href => "/promote/la"}
+          Louisiana
+        %br
+        %a{:href => "/promote/me"}
+          Maine
+        %br
+        %a{:href => "/promote/md"}
+          Maryland
+        %br
+        %a{:href => "/promote/ma"}
+          Massachusetts
+        %br
+        %a{:href => "/promote/mi"}
+          Michigan
+        %br
+        %a{:href => "/promote/mn"}
+          Minnesota
+        %br
+        %a{:href => "/promote/ms"}
+          Mississippi
+        %br
+        %a{:href => "/promote/mo"}
+          Missouri
+        %br
+        %a{:href => "/promote/mt"}
+          Montana
+        %br
+        %a{:href => "/promote/ne"}
+          Nebraska
+        %br
+        %a{:href => "/promote/nv"}
+          Nevada
+        %br
+        %a{:href => "/promote/nh"}
+          New Hampshire
+        %br
+        %a{:href => "/promote/nj"}
+          New Jersey
+        %br
+        %a{:href => "/promote/nm"}
+          New Mexico
+        %br
+        %a{:href => "/promote/ny"}
+          New York
+        %br
+        %a{:href => "/promote/nc"}
+          North Carolina
+        %br
+        %a{:href => "/promote/nd"}
+          North Dakota
+        %br
+        %a{:href => "/promote/oh"}
+          Ohio
+        %br
+        %a{:href => "/promote/ok"}
+          Oklahoma
+        %br
+        %a{:href => "/promote/or"}
+          Oregon
+        %br
+        %a{:href => "/promote/pa"}
+          Pennsylvania
+        %br
+        %a{:href => "/promote/ri"}
+          Rhode Island
+        %br
+        %a{:href => "/promote/sc"}
+          South Carolina
+        %br
+        %a{:href => "/promote/sd"}
+          South Dakota
+        %br
+        %a{:href => "/promote/tn"}
+          Tennessee
+        %br
+        %a{:href => "/promote/tx"}
+          Texas
+        %br
+        %a{:href => "/promote/ut"}
+          Utah
+        %br
+        %a{:href => "/promote/vt"}
+          Vermont
+        %br
+        %a{:href => "/promote/va"}
+          Viriginia
+        %br
+        %a{:href => "/promote/wa"}
+          Washington
+        %br
+        %a{:href => "/promote/wv"}
+          West Virginia
+        %br
+        %a{:href => "/promote/wi"}
+          Wisconsin
+        %br
+        %a{:href => "/promote/wy"}
+          Wyoming
+        %br
+        %a{:href => "/promote/dc"}
+          Washington D.C.
+
+%h2.tablet-feature Choose a State
 %div#map.tablet-feature
 %div#infobox.greybox.col-33
   %p.info
