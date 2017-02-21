@@ -265,7 +265,7 @@ export default {
     }
 
     var zip = new JSZip();
-    zip.file(appName + "/README.md", readme);
+    zip.file(appName + "/README.txt", readme);
     zip.file(appName + "/index.html", rewriteAssetUrls(html));
     zip.file(appName + "/style.css", rewriteAssetUrls(css));
     zip.file(appName + "/code.js", rewriteAssetUrls(code));
