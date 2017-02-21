@@ -10,6 +10,10 @@ testUtils.setExternalGlobals();
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
 const APPLAB_LOCALE_JS_CONTENT = 'applab_locale.js content';
 const APPLAB_API_JS_CONTENT = 'applab-api.js content';
+const COMMON_CSS_CONTENT = `
+body {
+  font-family: sans-serif;
+}`;
 const APPLAB_CSS_CONTENT = `
 .some-css-rule {
   background-image: url("/blockly/media/foo.png");
@@ -23,6 +27,9 @@ a.third-rule {
 `;
 
 const NEW_APPLAB_CSS_CONTENT = `
+body {
+  font-family: sans-serif;
+}
 .some-css-rule {
   background-image: url("assets/blockly/media/foo.png");
 }
@@ -50,6 +57,10 @@ describe('The Exporter,', function () {
     server.respondWith(
       /\/blockly\/js\/applab-api\.js\?__cb__=\d+/,
       APPLAB_API_JS_CONTENT
+    );
+    server.respondWith(
+      /\/blockly\/css\/common\.css\?__cb__=\d+/,
+      COMMON_CSS_CONTENT
     );
     server.respondWith(
       /\/blockly\/css\/applab\.css\?__cb__=\d+/,
