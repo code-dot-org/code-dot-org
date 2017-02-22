@@ -22,6 +22,9 @@ module Poste
     plain << decrypter.final
   end
 
+  # Attempts to decrypt an encrypted Id
+  # @param encrypted [String] encrypted id
+  # @return [Integer, nil] decrypted id, or nil if it could not be decrypted.
   def self.decrypt_id(encrypted)
     decrypt(encrypted).to_i
   rescue OpenSSL::Cipher::CipherError, ArgumentError => e

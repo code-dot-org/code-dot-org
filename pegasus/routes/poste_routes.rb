@@ -30,11 +30,13 @@ end
 get '/o/:id' do |id|
   only_for 'code.org'
   dont_cache
-  delivery = DB[:poste_deliveries].where(id: Poste.decrypt_id(id)).first
+  delivery_id = Poste.decrypt_id(id)
+  pass unless delivery_id
+  delivery = DB[:poste_deliveries].where(id: delivery_id).first
   pass unless delivery
 
-  id = DB[:poste_opens].insert(delivery_id: delivery[:id], created_ip: request.ip, created_at: DateTime.now)
-  response.headers['X-Poste-Open-Id'] = id.to_s
+  poste_opens_id = DB[:poste_opens].insert(delivery_id: delivery_id, created_ip: request.ip, created_at: DateTime.now)
+  response.headers['X-Poste-Open-Id'] = poste_opens_id.to_s
   send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
 end
 
