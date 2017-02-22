@@ -207,8 +207,8 @@ class Applab < Blockly
         "whileBlock": null,
         "setTimeout": null,
         "clearTimeout": null,
-        "setInterval": null,
-        "clearInterval": null,
+        "timedLoop": null,
+        "stopTimedLoop": null,
         "getTime": null,
 
         // Math
@@ -266,7 +266,6 @@ class Applab < Blockly
         "digitalRead": null,
         "analogWrite": null,
         "analogRead": null,
-        "timedLoop": null,
 
         // Circuit Playground
         "on": null,
