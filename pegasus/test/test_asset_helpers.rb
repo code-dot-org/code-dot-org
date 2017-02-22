@@ -35,19 +35,16 @@ class AssetHelpersTest < Minitest::Test
     Singleton.__init__(AssetMap)
     CDO.stubs(:rack_env).returns(:production)
     CDO.stubs(:pretty_js).returns(false)
-    begin
-      asset_path(UNMINIFIED_ASSET_NAME)
-      raise 'Expected asset_path to raise when asset map not initialized'
-    rescue Exception => e
-      assert_equal e.message, 'Asset map not initialized'
-    end
 
-    begin
-      minifiable_asset_path(UNMINIFIED_ASSET_NAME)
-      raise 'Expected minifiable_asset_path to raise when asset map not initialized'
-    rescue Exception => e
-      assert_equal e.message, 'Asset map not initialized'
+    e = assert_raises RuntimeError do
+      asset_path(UNMINIFIED_ASSET_NAME)
     end
+    assert_equal e.message, 'Asset map not initialized'
+
+    e = assert_raises RuntimeError do
+      minifiable_asset_path(UNMINIFIED_ASSET_NAME)
+    end
+    assert_equal e.message, 'Asset map not initialized'
   end
 
   def test_development_no_asset_map
@@ -63,19 +60,16 @@ class AssetHelpersTest < Minitest::Test
   def test_production_asset_not_in_map
     CDO.stubs(:rack_env).returns(:production)
     CDO.stubs(:pretty_js).returns(false)
-    begin
-      asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
-      raise 'Expected asset_path to raise when asset not found'
-    rescue Exception => e
-      assert_equal e.message, "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'"
-    end
 
-    begin
-      minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
-      raise 'Expected minifiable_asset_path to raise when asset not found'
-    rescue Exception => e
-      assert_equal e.message, "Asset not found in asset map: '#{MINIFIED_ASSET_NOT_IN_MAP}'"
+    e = assert_raises RuntimeError do
+      asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
     end
+    assert_equal e.message, "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'"
+
+    e = assert_raises RuntimeError do
+      minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
+    end
+    assert_equal e.message, "Asset not found in asset map: '#{MINIFIED_ASSET_NOT_IN_MAP}'"
   end
 
   def test_development_asset_not_in_map
