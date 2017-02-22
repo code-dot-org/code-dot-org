@@ -1,20 +1,12 @@
 import { assert } from '../../../util/configuredChai';
-import _ from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from '@cdo/apps/templates/progress/SummaryProgressTable';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import Immutable from 'immutable';
+import { fakeLesson, fakeLevels } from './progressTestUtils';
 
 describe('SummaryProgressTable', () => {
-  const fakeLesson = (name, id) => ({name, id});
-  const fakeLevels = numLevels => _.range(numLevels).map(index => ({
-    status: LevelStatus.not_tried,
-    url: `/level${index}`,
-    name: `Level ${index}`
-  }));
-
   const lessons = [
     fakeLesson('lesson1', 1),
     fakeLesson('lesson2', 2),
@@ -68,7 +60,7 @@ describe('SummaryProgressTable', () => {
     assert.equal(rows.length, 3);
     // dark is still every other for non-hidden rows
     assert.deepEqual(rows.map(row => row.props.dark), [false, true, false]);
-    assert.deepEqual(rows.map(row => row.props.lesson.id), ['1', '3', '4']);
+    assert.deepEqual(rows.map(row => row.props.lesson.id), [1, 3, 4]);
   });
 
   it('marks hidden rows as hidden when viewing as teacher', () => {
@@ -93,6 +85,6 @@ describe('SummaryProgressTable', () => {
     // dark is still every other, though the "hiddenness" of the second row
     // will end up taking priority in determining the background color
     assert.deepEqual(rows.map(row => row.props.dark), [false, true, false, true]);
-    assert.deepEqual(rows.map(row => row.props.lesson.id), ['1', '2', '3', '4']);
+    assert.deepEqual(rows.map(row => row.props.lesson.id), [1, 2, 3, 4]);
   });
 });
