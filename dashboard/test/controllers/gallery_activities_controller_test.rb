@@ -187,13 +187,13 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
           gallery_activity: {
             level_source_id: @artist_level_source.id,
             user_id: @user.id,
-            user_level: other_user_level
+            user_level_id: other_user_level.id
           }
         },
         format: :json
     end
 
-    assert_response :unauthorized
+    assert_response :forbidden
   end
 
   test "cannot create gallery activity for someone else" do
@@ -266,10 +266,10 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
   test "cannot create gallery activity with no user_level id" do
     assert_no_difference('GalleryActivity.count') do
-      post :create, params: {gallery_activity: {stub: nil}}, format: :json
+      assert_raises(ActionController::ParameterMissing) do
+        post :create, params: {gallery_activity: {stub: nil}}, format: :json
+      end
     end
-
-    assert_response :forbidden
   end
 
   test "does not create duplicate gallery activity" do
