@@ -74,7 +74,7 @@ class AssetHelpersTest < Minitest::Test
       minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
       raise 'Expected minifiable_asset_path to raise when asset not found'
     rescue Exception => e
-      assert_equal e.message, "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'"
+      assert_equal e.message, "Asset not found in asset map: '#{MINIFIED_ASSET_NOT_IN_MAP}'"
     end
   end
 
@@ -82,6 +82,6 @@ class AssetHelpersTest < Minitest::Test
     CDO.stubs(:rack_env).returns(:development)
     CDO.stubs(:pretty_js).returns(true)
     assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when unminifiable asset is not found"
-    assert_equal MINIFIED_ASSET_NOT_IN_MAP, minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when minifiable asset is not found"
+    assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when minifiable asset is not found"
   end
 end
