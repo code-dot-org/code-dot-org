@@ -40,11 +40,17 @@ def generate_applab_blocks
   "export const ApplabBlocks = #{JSON.pretty_generate(hash)};"
 end
 
+def generate_gamelab_blocks
+  hash = JSON.parse(SharedConstants::GAMELAB_BLOCKS)
+  "export const GamelabBlocks = #{JSON.pretty_generate(hash)};"
+end
+
 def main
   shared_content = [generate_level_kind, generate_level_status].join("\n\n")
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
   generate_shared_js_file(generate_applab_blocks, "#{REPO_DIR}/apps/src/util/sharedApplabBlocks.js")
+  generate_shared_js_file(generate_gamelab_blocks, "#{REPO_DIR}/apps/src/util/sharedGamelabBlocks.js")
 end
 
 main
