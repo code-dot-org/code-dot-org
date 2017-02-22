@@ -2,14 +2,15 @@
 #
 # Table name: pd_teacher_applications
 #
-#  id                :integer          not null, primary key
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
-#  user_id           :integer          not null
-#  primary_email     :string(255)      not null
-#  secondary_email   :string(255)      not null
-#  application       :text(65535)      not null
-#  accepted_workshop :string(255)
+#  id                        :integer          not null, primary key
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  user_id                   :integer          not null
+#  primary_email             :string(255)      not null
+#  secondary_email           :string(255)      not null
+#  application               :text(65535)      not null
+#  accepted_workshop         :string(255)
+#  regional_partner_override :string(255)
 #
 # Indexes
 #
@@ -199,8 +200,12 @@ class Pd::TeacherApplication < ActiveRecord::Base
     end
   end
 
+  def regional_partner_override=(value)
+    write_attribute :regional_partner_override, value if value.present? && value != regional_partner_name
+  end
+
   def regional_partner_name
-    regional_partner.try(:name)
+    regional_partner_override || regional_partner.try(:name)
   end
 
   def to_expanded_json
