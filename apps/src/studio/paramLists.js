@@ -30,13 +30,11 @@ exports.getPlaySoundValues = function (withRandom) {
     }
   }
 
-  if (level && level.paramRestrictions) {
-    var restrictions = level.paramRestrictions && level.paramRestrictions.playSound;
-    if (restrictions) {
-      names = names.filter(function (name) {
-        return restrictions[name];
-      });
-    }
+  if (level && level.paramRestrictions && level.paramRestrictions.playSound) {
+    var restrictions = level.paramRestrictions.playSound;
+    names = names.filter(function (name) {
+      return restrictions[name];
+    });
   }
 
   return names;
