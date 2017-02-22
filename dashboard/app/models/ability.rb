@@ -4,8 +4,7 @@ class Ability
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
   def initialize(user)
-    user ||= User.new rescue nil
-    persisted = user && user.persisted?
+    user ||= User.new
 
     # Abilities for all users, signed in or not signed in.
     can :read, :all
@@ -43,7 +42,7 @@ class Ability
       Pd::TeacherApplication
     ]
 
-    if persisted
+    if user.persisted?
       can :manage, user
 
       can :create, Activity, user_id: user.id
@@ -120,7 +119,7 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    if persisted
+    if user.persisted?
       can :read, Script
       can :read, ScriptLevel
     else
@@ -138,7 +137,7 @@ class Ability
     # there.
     ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
       if project_type_props[:login_required]
-        can :load_project, project_type_key if persisted
+        can :load_project, project_type_key if user.persisted?
       else
         can :load_project, project_type_key
       end
@@ -147,7 +146,7 @@ class Ability
     # In order to accommodate the possibility of there being no database, we
     # need to check that the user is persisted before checking the user
     # permissions.
-    if persisted && user.permission?(UserPermission::LEVELBUILDER)
+    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
       can :manage, [
         Game,
         Level,
@@ -161,12 +160,12 @@ class Ability
       end
     end
 
-    if persisted && user.permission?(UserPermission::BLOCK_SHARE)
+    if user.persisted? && user.permission?(UserPermission::BLOCK_SHARE)
       # let them change the hidden state
       can :manage, LevelSource
     end
 
-    if persisted && user.admin?
+    if user.admin?
       can :manage, :all
 
       cannot :manage, [

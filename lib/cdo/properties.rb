@@ -1,5 +1,4 @@
 require 'cdo/db'
-require 'honeybadger'
 DB = PEGASUS_DB
 
 # A wrapper class around the PEGASUS_DB[:properties] table.
@@ -9,12 +8,7 @@ class Properties
   # @param key [String] the key to retrieve the value of.
   # @return [JSON] the value associated with key, nil if key does not exist.
   def self.get(key)
-    i = begin
-      @@table.where(key: key.to_s).first
-    rescue Sequel::DatabaseError => e
-      Honeybadger.notify e
-      nil
-    end
+    i = @@table.where(key: key.to_s).first
     return nil unless i
     JSON.load(StringIO.new(i[:value]))
   end
