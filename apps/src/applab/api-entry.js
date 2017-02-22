@@ -40,10 +40,13 @@ getStore().dispatch(setIsRunning(true));
 
 // Expose api functions globally, unless they already exist
 // in which case they are probably browser apis that we should
-// not overwrite.
+// not overwrite... unless they are in a whitelist of browser
+// apis that we really *do* want to override, because our version
+// has nothing to do with them...
 const globalApi = getExportedGlobals();
+const whitelist = {moveTo: true};
 for (let key in globalApi) {
-  if (!window[key]) {
+  if (!window[key] || whitelist[key]) {
     window[key] = globalApi[key];
   }
 }
