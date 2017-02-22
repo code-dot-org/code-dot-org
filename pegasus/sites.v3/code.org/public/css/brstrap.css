@@ -6,7 +6,7 @@
 {
   .phone-feature { }
 
-  .container_responsive { width: 100%; margin: 0 auto }
+  .container_responsive { width: 100%; margin: 0 auto; padding-left: 10px; padding-right: 10px}
 
   .container_responsive h1 { font-size: 18px; margin-top: 1em; margin-bottom: .5em; }
   .container_responsive h2 { font-size: 15px; }
@@ -92,6 +92,7 @@
   .col-25 { width: 100%; }
   .col-26 { width: 100%; }
   .col-33 { width: 100% }
+  .col-33 img { margin-left: 25px; }
   .col-36 { width: 100% }
   .col-50 { width: 100%; float:left; }
   .col-63 { width: 100%;}
