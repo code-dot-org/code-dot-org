@@ -116,6 +116,12 @@ describe('The JSDebugger redux duck', () => {
         '{"foo":"bar"}\nhello'
       );
     });
+
+    it("will also trigger the open action if the debugger is not already open", () => {
+      expect(selectors.isOpen(store.getState())).to.be.false;
+      store.dispatch(actions.appendLog("open sesame"));
+      expect(selectors.isOpen(store.getState())).to.be.true;
+    });
   });
 
   describe("before being initialized", () => {
@@ -213,10 +219,16 @@ describe('The JSDebugger redux duck', () => {
         expect(selectors.getJSInterpreter(state)).to.equal(interpreter);
       });
 
-      it("the interpreter will trigger pause actions", () => {
+      it("the interpreter will trigger pause actions on breakpoints", () => {
         expect(selectors.isPaused(state)).to.be.false;
         runToBreakpoint();
         expect(selectors.isPaused(store.getState())).to.be.true;
+      });
+
+      it("the interpreter will open the debugger on breakpoints", () => {
+        expect(selectors.isOpen(state)).to.be.false;
+        runToBreakpoint();
+        expect(selectors.isOpen(store.getState())).to.be.true;
       });
 
       it("the interpreter will log execution warnings", () => {
