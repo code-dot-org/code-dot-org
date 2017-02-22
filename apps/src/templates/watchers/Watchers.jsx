@@ -151,7 +151,7 @@ export const Watchers = React.createClass({
   },
 
   scrollToBottom() {
-    this.scrollableContainer.scrollTop = this.scrollableContainer.scrollHeight;
+    this.refs.scrollableContainer.scrollTop = this.refs.scrollableContainer.scrollHeight;
   },
 
   addButtonClick() {
@@ -333,12 +333,7 @@ export const Watchers = React.createClass({
         id="debugger-watch-container"
         style={styles.watchContainer}
       >
-        <div
-          id="debug-watch"
-          ref={scrollableContainer => this.scrollableContainer = scrollableContainer}
-          className="debug-watch"
-          style={this.props.style}
-        >
+        <div id="debug-watch" ref="scrollableContainer" className="debug-watch" style={this.props.style}>
           {
             this.props.watchedExpressions.map(wv => {
               const varName = wv.get('expression');
@@ -405,12 +400,21 @@ export const Watchers = React.createClass({
   }
 });
 
-export const ConnectedWatchers = connect(
-  state => ({
+export const ConnectedWatchers = connect(state => {
+  return {
     watchedExpressions: state.watchedExpressions,
     isRunning: state.runState.isRunning
-  }),
-  {add, update, remove},
-  null,
-  {withRef: true}
-)(Watchers);
+  };
+}, dispatch => {
+  return {
+    add(expression) {
+      dispatch(add(expression));
+    },
+    update(expression, value) {
+      dispatch(update(expression, value));
+    },
+    remove(expression) {
+      dispatch(remove(expression));
+    },
+  };
+})(Watchers);
