@@ -240,7 +240,6 @@ Slider.prototype.getValueOverride_ = function () {
   if (override) {
     return JSON.parse(override);
   }
-  return null;
 };
 
 /**
