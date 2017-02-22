@@ -190,7 +190,6 @@ class ApplicationController < ActionController::Base
         response[:save_to_gallery_url] = gallery_activities_path(
           gallery_activity: {
             level_source_id: options[:level_source].try(:id),
-            activity_id: options[:activity].id,
             user_level_id: options[:user_level] && options[:user_level].id
           }
         )
