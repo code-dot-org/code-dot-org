@@ -123,7 +123,7 @@ var initWallMap = function () {
 /**
  * PIDs of async tasks currently executing.
  */
-var timeoutList = require('../timeoutList');
+import * as timeoutList from '../lib/util/timeoutList';
 
 // Map each possible shape to a sprite.
 // Input: Binary string representing Centre/North/East/South/West squares.

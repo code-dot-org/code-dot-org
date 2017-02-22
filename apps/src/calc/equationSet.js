@@ -1,7 +1,7 @@
 var _ = require('lodash');
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
-var jsnums = require('./js-numbers/js-numbers');
+var jsnums = require('@code-dot-org/js-numbers');
 var utils = require('../utils');
 
 /**
