@@ -1,35 +1,35 @@
 #map {
-  width:700px;
-  min-height:425px;
-  float:left;
-  margin-right:-100px;
+  width: 700px;
+  min-height: 425px;
+  float: left;
+  margin-right: -100px;
 }
 
 #infobox {
-  text-align:left;
-  float:right;
+  text-align: left;
+  float: right;
 }
 
 .info {
-  font-size:18px;
+  font-size: 18px;
 }
 
 .dropdown-toggle {
-  background-color:#7665a0;
-  border:2px solid #7665a0;
-  width:100%;
+  background-color: #7665a0;
+  border: 2px solid #7665a0;
+  width: 100%;
   margin-bottom: 2%;
-  font-size:18px;
+  font-size: 18px;
 }
 
 .dropdown-menu {
-  width:100%;
-  font-size:18px;
-  padding-left:10px;
+  width: 100%;
+  font-size: 18px;
+  padding-left: 10px;
 }
 
-a:link, a:visited{
-  color:white;
-  cursor:pointer;
-  text-decoration:underline;
+a:link, a:visited {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
 }
