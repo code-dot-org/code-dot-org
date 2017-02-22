@@ -1,3 +1,5 @@
+// TODO: import apps/lib/jsinterpreter/interpreter.js directly
+// instead of referencing window.
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
