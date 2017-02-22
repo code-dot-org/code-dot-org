@@ -58,9 +58,10 @@ The results speak for themselves:
 
 All of our professional development workshops for teachers include a session on equity and access, to help teachers build awareness of their own stereotypes, and to give them tools to recruit or retain a diverse CS student population.  We also host professional development workshops with district administrators and counselors, who play a critical role in helping high school students choose their fields of study, in order to guide them to help recruit diverse students to the new computer sciences we help them establish in their schools. By focusing our efforts on schools with underserved populations, particularly in urban or rural geographies, we reach the students who typically don't participate in computer science.
 
-**The results:** among our school district partnerships, the students in our high school computer science classes are 37% female, and 56% black or Hispanic.  
+The results are most evident in our roll-out of the [CS Principles](https://code.org/educate/csp) course which was designed from the ground up to broaden participation in computer science. Endorsed by the College Board, this course prepares students for the new AP exam in computer science. Code.org has helped expand access to this course in urban school districts such as New York City, Chicago, or Oakland, as well as in rural schools in Idaho or Alabama. Because of our focus on reaching underprivileged students, there are more underrepresented minorities enrolled in our CS Principles classrooms than the total nation's AP Computer Science exam takers in 2016!
 
 <center><img width="70%" src="/images/2015AR/diversity.jpg" /></center>
+
 
 ## Changing state level policies to increase participation in CS
 

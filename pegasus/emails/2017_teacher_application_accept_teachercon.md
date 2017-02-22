@@ -4,7 +4,7 @@ subject: "Congratulations from Code.org! Respond by April 21st"
 ---
 Hi <%= preferred_first_name_s %>,
 
-We are so excited to offer you a space in Code.org’s Professional Learning Program for <%= course_name_s %>! We think you can make an important contribution to our collective goal to ensure computer science education is available to every student in every school across the country, and we can’t wait to start working with you. Please read through the following information, and then make sure to let us know your plans via the form below.
+Code.org and <%= regional_partner_name_s %> are so excited to offer you a space in Code.org’s Professional Learning Program for <%= course_name_s %>! We think you can make an important contribution to our collective goal to ensure computer science education is available to every student in every school across the country, and we can’t wait to start working with you. Please read through the following information, and then make sure to let us know your plans via the form below.
 
 As a reminder, to participate in the Professional Learning Program we ask that you commit to:
 
@@ -28,7 +28,7 @@ As a reminder, to participate in the Professional Learning Program we ask that y
 
 * Share the good news with your school! Start talking with your administration, colleagues, students, and parents now about the course you will be teaching next year, and encourage a diverse group of students to enroll. Once you accept your space in the program, you will receive a welcome kit complete with recruitment tips and tools. In the meantime, please help yourself to these [videos and resources](https://code.org/educate/resources/videos).
 
-Please contact [teacher@code.org](mailto:teacher@code.org) with any additional questions. We look forward to hearing from you by April 21, 2017!
+Your Regional Partner, <%= regional_partner_name_s %>, will share more information over the next few months about plans for your quarterly one-day workshops. In the meantime, please contact [teacher@code.org](mailto:teacher@code.org) with any additional questions. We look forward to hearing from you by April 21, 2017!
 
 Thank you,  
 Sarah Fairweather  

@@ -63,7 +63,11 @@ class ActivitiesController < ApplicationController
     end
 
     if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable? && database_connected?
-      user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
+      user_level = UserLevel.find_by(
+        user_id: current_user.id,
+        level_id: @script_level.level.id,
+        script_id: @script_level.script.id
+      )
       # we have a lockable stage, and user_level is locked. disallow milestone requests
       if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
         return head :service_unavailable
@@ -100,6 +104,11 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
+    milestone_response_user_level = nil
+    if @new_level_completed.is_a? UserLevel
+      milestone_response_user_level = @new_level_completed
+    end
+
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
@@ -110,7 +119,8 @@ class ActivitiesController < ApplicationController
       activity: @activity,
       new_level_completed: @new_level_completed,
       get_hint_usage: params[:gamification_enabled],
-      share_failure: share_failure
+      share_failure: share_failure,
+      user_level: milestone_response_user_level
     )
 
     if solved
@@ -203,7 +213,6 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(
         user: current_user,
-        activity: @activity,
         user_level_id: @new_level_completed.try(:id),
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
