@@ -200,8 +200,12 @@ class Pd::TeacherApplication < ActiveRecord::Base
     end
   end
 
+  def regional_partner_override=(value)
+    write_attribute :regional_partner_override, value if value.present? && value != regional_partner_name
+  end
+
   def regional_partner_name
-    regional_partner.try(:name)
+    regional_partner_override || regional_partner.try(:name)
   end
 
   def to_expanded_json

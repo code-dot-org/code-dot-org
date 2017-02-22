@@ -28,13 +28,15 @@ class TeacherApplicationDecisionProcessor
     partner_email: 'Partner Email'
   }.freeze
 
-  # Application ID, Decision (Accept, Decline, Waitlist), Workshop String (from matched list)
+  # Application ID, Decision (Accept, Decline, Waitlist), Workshop String (from matched list),
+  # Primary Email, Program, and Partner Name (to override the implicit district-matched one, optional)
   DECISION_HEADERS = {
     application_id: 'Application ID',
     decision: 'Decision',
     workshop_string: 'Workshop',
     primary_email: 'Primary Email',
-    program: 'Program'
+    program: 'Program',
+    partner_name: 'Partner Name'
   }.freeze
 
   DECISIONS = {
@@ -84,10 +86,11 @@ class TeacherApplicationDecisionProcessor
 
     workshop_string = row[DECISION_HEADERS[:workshop_string]]
     program = row[DECISION_HEADERS[:program]]
+    regional_partner_override = row[DECISION_HEADERS[:partner_name]]
     decision = row[DECISION_HEADERS[:decision]]
     case decision
       when DECISIONS[:accept]
-        process_accept teacher_application, program, workshop_string
+        process_accept teacher_application, program, workshop_string, regional_partner_override
       when DECISIONS[:decline]
         process :decline, teacher_application
       when DECISIONS[:waitlist]
@@ -158,25 +161,29 @@ class TeacherApplicationDecisionProcessor
     TEACHER_CONS.any?{|tc| workshop_string.include? tc}
   end
 
-  def process_accept(teacher_application, program, accepted_workshop)
+  def process_accept(teacher_application, program, accepted_workshop, regional_partner_override)
     # There are 2 kinds of acceptance, TeacherCon (ours) and Regional Partner.
     # We can tell based on the accepted workshop
     if teachercon? accepted_workshop
-      process_accept_teachercon teacher_application, program, accepted_workshop
+      process_accept_teachercon teacher_application, program, accepted_workshop, regional_partner_override
     else
       process_accept_partner teacher_application, program, accepted_workshop
     end
   end
 
-  def process_accept_teachercon(teacher_application, program, accepted_workshop)
+  def process_accept_teachercon(teacher_application, program, accepted_workshop, regional_partner_override)
     # First, update the actual dashboard DB with this accepted workshop string.
-    save_accepted_workshop teacher_application, program, accepted_workshop
+    save_accepted_workshop teacher_application, program, accepted_workshop, regional_partner_override
+
+    regional_partner_name = teacher_application.regional_partner_name
+    raise "Missing regional partner name for application id: #{teacher_application.id}" if regional_partner_name.blank?
 
     # TeacherCon string is in the format: 'dates : location'
     dates, location = accepted_workshop.split(':').map(&:strip)
     params = {
       teachercon_location_s: location,
-      teachercon_dates_s: dates
+      teachercon_dates_s: dates,
+      regional_partner_name_s: regional_partner_name
     }
     process :accept_teachercon, teacher_application, params
   end
@@ -198,9 +205,10 @@ class TeacherApplicationDecisionProcessor
     process :accept_partner, teacher_application, params
   end
 
-  def save_accepted_workshop(teacher_application, program, accepted_workshop)
+  def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override = nil)
     teacher_application.update_application_hash('selectedCourse': program)
     teacher_application.accepted_workshop = accepted_workshop
+    teacher_application.regional_partner_override = regional_partner_override if regional_partner_override.present?
     teacher_application.save!
   end
 
