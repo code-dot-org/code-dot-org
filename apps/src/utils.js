@@ -426,6 +426,23 @@ export function trySetLocalStorage(item, value) {
 }
 
 /**
+ * Simple wrapper around sessionStorage.setItem that catches the quota exceeded
+ * exceptions we get when we call setItem in Safari's private mode.
+ * @return {boolean} True if we set successfully
+ */
+export function trySetSessionStorage(item, value) {
+  try {
+    sessionStorage.setItem(item, value);
+    return true;
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+    return false;
+  }
+}
+
+/**
  * Generates a simple enum object
  * @example
  *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');

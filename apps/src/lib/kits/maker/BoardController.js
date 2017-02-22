@@ -50,6 +50,8 @@ export default class BoardController {
     this.board_ = null;
     /** @private {Object} */
     this.prewiredComponents = null;
+    /** @private {function} */
+    this.onDisconnectCallback_ = null;
   }
 
   connectAndInitialize(codegen, interpreter) {
@@ -90,6 +92,7 @@ export default class BoardController {
       BoardController.connect()
           .then(board => {
             this.board_ = board;
+            this.board_.on('disconnect', this.handleDisconnect_.bind(this));
             resolve();
           })
           .catch(reject);
@@ -142,6 +145,17 @@ export default class BoardController {
     Object.keys(this.prewiredComponents).forEach(key => {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
     });
+  }
+
+  onceOnDisconnect(cb) {
+    this.onDisconnectCallback_ = cb;
+  }
+
+  handleDisconnect_() {
+    if (typeof this.onDisconnectCallback_ === 'function') {
+      this.onDisconnectCallback_();
+      this.onDisconnectCallback_ = null;
+    }
   }
 
   reset() {
