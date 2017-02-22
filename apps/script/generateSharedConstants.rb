@@ -49,8 +49,8 @@ def main
   shared_content = [generate_level_kind, generate_level_status].join("\n\n")
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
-  generate_shared_js_file(generate_applab_blocks, "#{REPO_DIR}/apps/src/util/sharedApplabBlocks.js")
-  generate_shared_js_file(generate_gamelab_blocks, "#{REPO_DIR}/apps/src/util/sharedGamelabBlocks.js")
+  generate_shared_js_file(generate_applab_blocks, "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
+  generate_shared_js_file(generate_gamelab_blocks, "#{REPO_DIR}/apps/src/gamelab/sharedGamelabBlocks.js")
 end
 
 main

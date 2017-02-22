@@ -2,7 +2,7 @@ var utils = require('../utils');
 var blockUtils = require('../block_utils');
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
-import { GamelabBlocks } from '@cdo/apps/util/sharedGamelabBlocks';
+import { GamelabBlocks } from '@cdo/apps/gamelab/sharedGamelabBlocks';
 
 // TODO (bbuchanan): Continue documenting the game lab level object properties.
 /**
