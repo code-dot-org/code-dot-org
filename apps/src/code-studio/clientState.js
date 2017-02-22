@@ -2,6 +2,7 @@
  * @file Helper functions for accessing client state. This state is stored in a
  *       combination of cookies and HTML5 web storage.
  */
+import { safelySetItem } from '../utils';
 import cookies from 'js-cookie';
 var sessionStorage = window.sessionStorage;
 
@@ -284,17 +285,4 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
  */
 function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
-}
-
-/**
- * Don't throw storage errors in Safari private browsing mode.
- */
-function safelySetItem(key, value) {
-  try {
-    sessionStorage.setItem(key, value);
-  } catch (e) {
-    if (e.name !== "QuotaExceededError") {
-      throw e;
-    }
-  }
 }

@@ -649,3 +649,16 @@ export function levenshtein(a, b) {
 
   return matrix[b.length][a.length];
 }
+
+/**
+ * Don't throw storage errors in Safari private browsing mode.
+ */
+export function safelySetItem(key, value) {
+  try {
+    sessionStorage.setItem(key, value);
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+  }
+}
