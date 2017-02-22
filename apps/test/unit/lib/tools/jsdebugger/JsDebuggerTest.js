@@ -71,7 +71,7 @@ describe('The JSDebugger component', () => {
   });
 
   it("is initially open", () => {
-    expect(jsDebugger.isOpen()).to.be.true;
+    expect(jsDebugger.props.isOpen).to.be.true;
   });
 
   it("initially has the height given to it via css", () => {
@@ -91,7 +91,7 @@ describe('The JSDebugger component', () => {
     });
 
     it("will make the isOpen() method return false", () => {
-      expect(jsDebugger.isOpen()).to.be.false;
+      expect(jsDebugger.props.isOpen).to.be.false;
     });
 
     it("will swap out the open/close icons", () => {
@@ -114,7 +114,7 @@ describe('The JSDebugger component', () => {
       });
 
       it("will make isOpen return true again", () => {
-        expect(jsDebugger.isOpen()).to.be.true;
+        expect(jsDebugger.props.isOpen).to.be.true;
       });
 
       it("will again swap out the open/close icons", () => {

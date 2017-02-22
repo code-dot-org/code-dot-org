@@ -30,9 +30,12 @@ import DebugButtons from './DebugButtons';
 import {
   // actions
   clearLog,
+  open,
+  close,
 
   // selectors
   isAttached,
+  isOpen,
   canRunNext,
   getCommandHistory,
 } from './redux';
@@ -99,10 +102,13 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     debugSlider: PropTypes.bool.isRequired,
     isDebuggerPaused: PropTypes.bool.isRequired,
     stepSpeed: PropTypes.number.isRequired,
+    isOpen: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
     canRunNext: PropTypes.bool.isRequired,
     setStepSpeed: PropTypes.func.isRequired,
     clearLog: PropTypes.func.isRequired,
+    open: PropTypes.func.isRequired,
+    close: PropTypes.func.isRequired,
 
     // passed from above
     onSlideShut: PropTypes.func,
@@ -113,7 +119,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
   getInitialState() {
     return {
       watchersHidden: false,
-      open: true,
+      open: this.props.isOpen,
     };
   },
 
@@ -197,10 +203,6 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     }
   },
 
-  isOpen() {
-    return this.state.open;
-  },
-
   slideShut() {
     const closedHeight = $(this.root).find('#debug-area-header').height() +
                          $(this._debugResizeBar).height();
@@ -221,11 +223,19 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     this.props.onSlideOpen && this.props.onSlideOpen(this.state.openedHeight);
   },
 
-  slideToggle() {
-    if (this.state.open) {
+  componentWillReceiveProps(nextProps) {
+    if (this.props.isOpen && !nextProps.isOpen) {
       this.slideShut();
-    } else {
+    } else if (!this.props.isOpen && nextProps.isOpen) {
       this.slideOpen();
+    }
+  },
+
+  slideToggle() {
+    if (this.props.isOpen) {
+      this.props.close();
+    } else {
+      this.props.open();
     }
   },
 
@@ -270,7 +280,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       )
     );
 
-    if (!this.isOpen()) {
+    if (!this.props.isOpen) {
       this.slideOpen();
     }
 
@@ -494,6 +504,7 @@ export default connect(
     debugSlider: state.pageConstants.showDebugSlider,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     stepSpeed: state.runState.stepSpeed,
+    isOpen: isOpen(state),
     isAttached: isAttached(state),
     canRunNext: canRunNext(state),
     commandHistory: getCommandHistory(state),
@@ -503,5 +514,7 @@ export default connect(
     addWatchExpression,
     removeWatchExpression,
     clearLog,
+    open,
+    close,
   }
 )(UnconnectedJsDebugger);

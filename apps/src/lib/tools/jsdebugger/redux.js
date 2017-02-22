@@ -12,6 +12,8 @@ const ATTACH = 'jsdebugger/ATTACH';
 const DETACH = 'jsdebugger/DETACH';
 const APPEND_LOG = 'jsdebugger/APPEND_LOG';
 const CLEAR_LOG = 'jsdebugger/CLEAR_LOG';
+const OPEN = 'jsdebugger/OPEN';
+const CLOSE = 'jsdebugger/CLOSE';
 
 // State model
 const JSDebuggerState = Immutable.Record({
@@ -21,6 +23,7 @@ const JSDebuggerState = Immutable.Record({
   watchIntervalId: null,
   commandHistory: null,
   logOutput: '',
+  isOpen: true,
 });
 
 export function getRoot(state) {
@@ -55,6 +58,10 @@ export function isAttached(state) {
   return !!getJSInterpreter(state);
 }
 
+export function isOpen(state) {
+  return getRoot(state).isOpen;
+}
+
 export function canRunNext(state) {
   return (
     state.runState.isDebuggerPaused &&
@@ -74,6 +81,7 @@ export const selectors = {
   isAttached,
   canRunNext,
   getLogOutput,
+  isOpen,
 };
 
 // actions
@@ -128,6 +136,14 @@ export function detach() {
     clearInterval(getWatchIntervalId(getState()));
     dispatch({type: DETACH});
   };
+}
+
+export function open() {
+  return {type: OPEN};
+}
+
+export function close() {
+  return {type: CLOSE};
 }
 
 export function togglePause() {
@@ -199,6 +215,8 @@ export const actions = {
   clearLog,
   attach,
   detach,
+  open,
+  close,
   togglePause,
   stepIn,
   stepOver,
@@ -243,6 +261,10 @@ export function reducer(state = new JSDebuggerState(), action) {
       jsInterpreter: null,
       watchIntervalId: 0,
     });
+  } else if (action.type === CLOSE) {
+    return state.set('isOpen', false);
+  } else if (action.type === OPEN) {
+    return state.set('isOpen', true);
   } else {
     return state;
   }
