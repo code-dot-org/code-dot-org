@@ -702,6 +702,7 @@ Applab.init = function (config) {
   // just without the editor
   config.centerEmbedded = false;
   config.wireframeShare = true;
+  config.responsiveEmbedded = true;
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.

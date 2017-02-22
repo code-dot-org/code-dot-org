@@ -206,6 +206,11 @@ function StudioApp() {
   this.centerEmbedded = true;
 
   /**
+   * By default, embedded levels are not responsive.
+   */
+  this.responsiveEmbedded = false;
+
+  /**
    * If set to true, we use our wireframe share (or chromeless share on mobile)
    */
   this.wireframeShare = false;
@@ -363,6 +368,7 @@ StudioApp.prototype.init = function (config) {
       app: config.app,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
+      isResponsive: this.reduxStore.getState().pageConstants.isResponsive,
     });
   }
 
@@ -1722,6 +1728,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
   this.centerEmbedded = utils.valueOr(config.centerEmbedded, this.centerEmbedded);
+  this.responsiveEmbedded = utils.valueOr(config.responsiveEmbedded, this.responsiveEmbedded);
   this.wireframeShare = utils.valueOr(config.wireframeShare, this.wireframeShare);
 
   // if true, dont provide links to share on fb/twitter
@@ -1892,6 +1899,10 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
+
+  if (!options.isResponsive) {
+    document.getElementById('visualizationResizeBar').style.display = 'none';
+  }
 
   // Chrome-less share page.
   if (this.share) {
@@ -2854,6 +2865,19 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 };
 
 /**
+ * Returns whether this view should be responsive based on level options.
+ * Responsive means that the visualizationColumn should resize as the
+ * window width changes, and that a grippy is available to manually resize
+ * the visualizationColumn.
+ */
+StudioApp.prototype.isResponsiveFromConfig = function (config) {
+  // use config.responsiveEmbedded because this.responsiveEmbedded may not be initialized yet
+  const isResponsiveEmbedView = !!(config.embed && config.responsiveEmbedded);
+  const isCodeView = !config.embed && !config.share;
+  return isResponsiveEmbedView || isCodeView;
+};
+
+/**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
  * @param {AppOptionsConfig} config
@@ -2874,6 +2898,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
+    isResponsive: this.isResponsiveFromConfig(config),
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
