@@ -268,7 +268,7 @@ window.SchoolInfoManager = function (existingOptions) {
       clearAndHide('#school-state');
       clearAndHideDistrict();
       clearAndHideSchool();
-      clearAndHide('#school-name');
+      show('#school-name');
       show('#school-address');
     } else {
       // no type or non-US
