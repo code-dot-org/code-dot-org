@@ -1,8 +1,7 @@
 module SchoolInfoDeduplicator
   # Returns true if the SchoolInfo already exists and we should reuse that.
-  # Returns false if the SchoolInfo is new and should be stored.
-  # Validates the SchoolInfo first so that we fall into the latter path in
-  # that case.
+  # Returns false if the SchoolInfo is new and should be stored or if it is invalid,
+  # in which case we allow the save to fail as usual
   def deduplicate_school_info(school_info_attr, self_object)
     attr = process_school_info_attributes(school_info_attr)
 
