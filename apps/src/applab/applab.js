@@ -1186,7 +1186,10 @@ Applab.execute = function () {
           studioApp.displayPlayspaceAlert("error",
               <div>{`Board connection error: ${error}`}</div>);
         })
-        .then(Applab.beginVisualizationRun);
+        .then(() => {
+          Applab.makerController.onceOnDisconnect(() => studioApp.resetButtonClick());
+          Applab.beginVisualizationRun();
+        });
   } else {
     Applab.beginVisualizationRun();
   }
