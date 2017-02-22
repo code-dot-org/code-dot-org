@@ -27,6 +27,7 @@ import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
 import JSInterpreter from '../JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
+import JsDebuggerUi from '@cdo/apps/lib/tools/jsdebugger/JsDebuggerUi';
 import * as elementUtils from './designElements/elementUtils';
 import { shouldOverlaysBeVisible } from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
@@ -47,7 +48,6 @@ import consoleApi from '../consoleApi';
 import BoardController from '../lib/kits/maker/BoardController';
 import {injectBoardController} from '../lib/kits/maker/commands';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
-import {setStepSpeed} from '../redux/runState';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -58,9 +58,6 @@ import {
   outputError,
   injectErrorHandler
 } from '../lib/util/javascriptMode';
-import {
-  actions as jsDebugger,
-} from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var project = require('@cdo/apps/code-studio/initApp/project');
 
@@ -80,6 +77,11 @@ export default Applab;
 var jsInterpreterLogger = null;
 
 /**
+ * @type {JsDebuggerUi} Controller for JS debug buttons and console area
+ */
+var debuggerUi = null;
+
+/**
  * Temporary: Some code depends on global access to logging, but only Applab
  * knows about the debugger UI where logging should occur.
  * Eventually, I'd like to replace this with window events that the debugger
@@ -91,7 +93,9 @@ Applab.log = function (object) {
     jsInterpreterLogger.log(object);
   }
 
-  studioApp.reduxStore.dispatch(jsDebugger.appendLog(object));
+  if (debuggerUi) {
+    debuggerUi.log(object);
+  }
 };
 consoleApi.setLogMethod(Applab.log);
 
@@ -118,10 +122,6 @@ var twitterOptions = {
 // The unscaled dimensions of the visualization area
 var vizAppWidth = 400;
 var VIZ_APP_HEIGHT = 400;
-
-function stepDelayFromStepSpeed(stepSpeed) {
-  return 300 * Math.pow(1 - stepSpeed, 2);
-}
 
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -423,14 +423,17 @@ Applab.hasDataStoreAPIs = function (code) {
  * @param {!number} speed - range 0..1
  */
 Applab.setStepSpeed = function (speed) {
-  studioApp.reduxStore.dispatch(setStepSpeed(speed));
-  Applab.scale.stepSpeed = stepDelayFromStepSpeed(speed);
+  if (debuggerUi) {
+    debuggerUi.setStepSpeed(speed);
+  }
+  Applab.scale.stepSpeed = JsDebuggerUi.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
-  var debugStepDelay = stepDelayFromStepSpeed(
-    studioApp.reduxStore.getState().runState.stepSpeed
-  );
+  var debugStepDelay;
+  if (debuggerUi) {
+    debugStepDelay = debuggerUi.getStepDelay();
+  }
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
 }
 
@@ -522,6 +525,7 @@ Applab.init = function (config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
+  debuggerUi = null;
 
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
@@ -594,9 +598,7 @@ Applab.init = function (config) {
   }
 
   if (showDebugButtons || showDebugConsole) {
-    studioApp.reduxStore.dispatch(jsDebugger.initialize({
-      runApp: Applab.runButtonClick,
-    }));
+    debuggerUi = new JsDebuggerUi(Applab.runButtonClick, studioApp.reduxStore);
   }
 
   // Set up an error handler for student errors and warnings.
@@ -780,6 +782,7 @@ Applab.init = function (config) {
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
     showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
+    debuggerUi,
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(
@@ -1009,7 +1012,9 @@ Applab.reset = function () {
     level.goal.successState = {};
   }
 
-  studioApp.reduxStore.dispatch(jsDebugger.detach());
+  if (debuggerUi) {
+    debuggerUi.detach();
+  }
 
   if (jsInterpreterLogger) {
     jsInterpreterLogger.detach();
@@ -1162,7 +1167,9 @@ Applab.execute = function () {
     if (jsInterpreterLogger) {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
-    studioApp.reduxStore.dispatch(jsDebugger.attach(Applab.JSInterpreter));
+    if (debuggerUi) {
+      debuggerUi.attachTo(Applab.JSInterpreter);
+    }
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
