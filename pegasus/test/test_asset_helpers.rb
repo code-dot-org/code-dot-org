@@ -36,7 +36,8 @@ class AssetHelpersTest < Minitest::Test
   end
 
   def test_production_no_asset_map
-    # This directory does not have a manifest file in it
+    # This directory does not have a manifest file in it.
+    # Update the asset map to be nil.
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
     Singleton.__init__(AssetMap)
     CDO.stubs(:rack_env).returns(:production)
@@ -54,7 +55,8 @@ class AssetHelpersTest < Minitest::Test
   end
 
   def test_development_no_asset_map
-    # This directory does not have a manifest file in it
+    # This directory does not have a manifest file in it.
+    # Update the asset map to be nil.
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
     Singleton.__init__(AssetMap)
     CDO.stubs(:rack_env).returns(:development)
