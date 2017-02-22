@@ -197,4 +197,22 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     assert_equal regional_partner, teacher_application.regional_partner
     assert_equal regional_partner.name, teacher_application.regional_partner_name
   end
+
+  test 'regional partner override' do
+    teacher_application = build :pd_teacher_application
+    old_partner_name = 'old partner'
+    new_partner_name = 'new partner'
+
+    teacher_application.expects(:regional_partner).at_least_once.returns(stub(name: old_partner_name))
+    assert_equal old_partner_name, teacher_application.regional_partner_name
+
+    # Setting the override to the existing district-matched partner name is a no-op
+    teacher_application.regional_partner_override = old_partner_name
+    assert_nil teacher_application.regional_partner_override
+
+    teacher_application.regional_partner_override = new_partner_name
+    teacher_application.unstub(:regional_partner)
+    teacher_application.expects(:regional_partner).never
+    assert_equal new_partner_name, teacher_application.regional_partner_name
+  end
 end
