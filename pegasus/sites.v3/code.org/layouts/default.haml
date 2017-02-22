@@ -24,6 +24,13 @@
   %div{:class=>containerClass}
 
     -if header['theme'] == 'responsive'
+      -if header['nav']
+        %div{:style=>'width: 140px; margin-right: 40px; float: left;'}
+          -if header['nav'].nil? || header['nav'] == 'blank'
+            &nbsp;
+          -else
+            = view(header['nav'])
+                
       =body
 
       #clearboth{:style=>"clear:both"}
