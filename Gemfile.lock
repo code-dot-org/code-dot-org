@@ -67,11 +67,11 @@ GIT
 
 GIT
   remote: git://github.com/wjordan/seamless_database_pool.git
-  revision: 94b6fbb3a4176255c6eb87259a9e43f787e77fe1
+  revision: c9a5c2bc92efc1f87a2aa065283e15283dbb9425
   ref: cdo
   specs:
-    seamless_database_pool (1.0.18)
-      activerecord (>= 3.0.20)
+    seamless_database_pool (1.0.19)
+      activerecord (>= 3.2.0)
 
 GEM
   remote: https://rubygems.org/
