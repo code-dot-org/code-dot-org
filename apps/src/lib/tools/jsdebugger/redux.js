@@ -23,7 +23,7 @@ const JSDebuggerState = Immutable.Record({
   watchIntervalId: null,
   commandHistory: null,
   logOutput: '',
-  isOpen: true,
+  isOpen: false,
 });
 
 export function getRoot(state) {
