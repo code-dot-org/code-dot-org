@@ -1,6 +1,7 @@
 require_relative '../../deployment'
 require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
+require 'mocha/mini_test'
 require_relative '../helpers/asset_helpers'
 
 class AssetHelpersTest < Minitest::Test
@@ -11,89 +12,76 @@ class AssetHelpersTest < Minitest::Test
   MINIFIED_ASSET_NOT_IN_MAP = 'foo.min.js'
 
   def setup
-    CDO.stub(:dashboard_assets_dir, './test/fixtures/dashboard_assets') do
-      Singleton.__init__(AssetMap)
-    end
+    CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/dashboard_assets')
+    Singleton.__init__(AssetMap)
   end
 
   def test_asset_map_pretty
-    CDO.stub(:pretty_js, true) do
-      assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminifiable asset path"
-      # Should return the unminified path because pretty_js is true
-      assert_equal UNMINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minifiable asset path"
-    end
+    CDO.stubs(:pretty_js).returns(true)
+    assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminifiable asset path"
+    # Should return the unminified path because pretty_js is true
+    assert_equal UNMINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minifiable asset path"
   end
 
   def test_asset_map_ugly
-    CDO.stub(:pretty_js, false) do
-      assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminifiable asset path"
-      assert_equal MINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minifiable asset path"
-    end
+    CDO.stubs(:pretty_js).returns(false)
+    assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminifiable asset path"
+    assert_equal MINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minifiable asset path"
   end
 
   def test_production_no_asset_map
     # This directory does not have a manifest file in it
-    CDO.stub(:dashboard_assets_dir, './test/fixtures/') do
-      Singleton.__init__(AssetMap)
-      CDO.stub(:rack_env, :production) do
-        CDO.stub(:pretty_js, false) do
-          begin
-            asset_path(UNMINIFIED_ASSET_NAME)
-            raise 'Expected asset_path to raise when asset map not initialized'
-          rescue Exception => e
-            assert_equal e.message, 'Asset map not initialized'
-          end
+    CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
+    Singleton.__init__(AssetMap)
+    CDO.stubs(:rack_env).returns(:production)
+    CDO.stubs(:pretty_js).returns(false)
+    begin
+      asset_path(UNMINIFIED_ASSET_NAME)
+      raise 'Expected asset_path to raise when asset map not initialized'
+    rescue Exception => e
+      assert_equal e.message, 'Asset map not initialized'
+    end
 
-          begin
-            minifiable_asset_path(UNMINIFIED_ASSET_NAME)
-            raise 'Expected minifiable_asset_path to raise when asset map not initialized'
-          rescue Exception => e
-            assert_equal e.message, 'Asset map not initialized'
-          end
-        end
-      end
+    begin
+      minifiable_asset_path(UNMINIFIED_ASSET_NAME)
+      raise 'Expected minifiable_asset_path to raise when asset map not initialized'
+    rescue Exception => e
+      assert_equal e.message, 'Asset map not initialized'
     end
   end
 
   def test_development_no_asset_map
     # This directory does not have a manifest file in it
-    CDO.stub(:dashboard_assets_dir, './test/fixtures/') do
-      Singleton.__init__(AssetMap)
-      CDO.stub(:rack_env, :development) do
-        CDO.stub(:pretty_js, true) do
-          assert_equal UNMINIFIED_ASSET_NAME, asset_path(UNMINIFIED_ASSET_NAME), "should recover gracefully when no asset map for unminifiable asset"
-          assert_equal UNMINIFIED_ASSET_NAME, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "should recover gracefully when no asset map for minifiable asset"
-        end
-      end
-    end
+    CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
+    Singleton.__init__(AssetMap)
+    CDO.stubs(:rack_env).returns(:development)
+    CDO.stubs(:pretty_js).returns(true)
+    assert_equal UNMINIFIED_ASSET_NAME, asset_path(UNMINIFIED_ASSET_NAME), "should recover gracefully when no asset map for unminifiable asset"
+    assert_equal UNMINIFIED_ASSET_NAME, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "should recover gracefully when no asset map for minifiable asset"
   end
 
   def test_production_asset_not_in_map
-    CDO.stub(:rack_env, :production) do
-      CDO.stub(:pretty_js, false) do
-        begin
-          asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
-          raise 'Expected asset_path to raise when asset not found'
-        rescue Exception => e
-          assert_equal e.message, "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'"
-        end
+    CDO.stubs(:rack_env).returns(:production)
+    CDO.stubs(:pretty_js).returns(false)
+    begin
+      asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
+      raise 'Expected asset_path to raise when asset not found'
+    rescue Exception => e
+      assert_equal e.message, "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'"
+    end
 
-        begin
-          minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
-          raise 'Expected minifiable_asset_path to raise when asset not found'
-        rescue Exception => e
-          assert_equal e.message, "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'"
-        end
-      end
+    begin
+      minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
+      raise 'Expected minifiable_asset_path to raise when asset not found'
+    rescue Exception => e
+      assert_equal e.message, "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'"
     end
   end
 
   def test_development_asset_not_in_map
-    CDO.stub(:rack_env, :development) do
-      CDO.stub(:pretty_js, true) do
-        assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when unminifiable asset is not found"
-        assert_equal MINIFIED_ASSET_NOT_IN_MAP, minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when minifiable asset is not found"
-      end
-    end
+    CDO.stubs(:rack_env).returns(:development)
+    CDO.stubs(:pretty_js).returns(true)
+    assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when unminifiable asset is not found"
+    assert_equal MINIFIED_ASSET_NOT_IN_MAP, minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when minifiable asset is not found"
   end
 end
