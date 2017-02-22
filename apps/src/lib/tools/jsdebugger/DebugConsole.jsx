@@ -54,9 +54,7 @@ const DebugConsole = connect(
     removeWatchExpression,
     evalInCurrentScope: actions.evalInCurrentScope,
     appendLog: actions.appendLog,
-  },
-  null,
-  {withRef: true}
+  }
 )(React.createClass({
   propTypes: {
     // from redux
@@ -116,6 +114,12 @@ const DebugConsole = connect(
 
   componentDidUpdate() {
     this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+  },
+
+  clearOutput() {
+    if (this._debugOutput) {
+      this._debugOutput.textContent = '';
+    }
   },
 
   clearDebugInput() {
