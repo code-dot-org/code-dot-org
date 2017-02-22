@@ -3,18 +3,25 @@ import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/configuredChai';
-import JsDebugger, {UnconnectedJsDebugger} from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
-import JsDebuggerUi from '@cdo/apps/lib/tools/jsdebugger/JsDebuggerUi';
+import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
+import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe('The JSDebugger component', () => {
-  let root, jsDebugger;
+  let root, jsDebugger, addEventSpy, removeEventSpy, codeApp;
 
   beforeEach(() => {
     stubRedux();
     registerReducers(commonReducers);
+    registerReducers(reducers);
+
+    document.body.innerHTML = '';
+    // needs to be around for resizing.
+    codeApp = document.createElement('div');
+    codeApp.id = 'codeApp';
+    document.body.appendChild(codeApp);
 
     const runApp = sinon.spy();
     getStore().dispatch(setPageConstants({
@@ -22,8 +29,16 @@ describe('The JSDebugger component', () => {
       showDebugConsole: true,
       showDebugWatch: true,
       showDebugSlider: true,
-      debuggerUi: new JsDebuggerUi(runApp, getStore()),
     }));
+    getStore().dispatch(actions.initialize({runApp}));
+
+    addEventSpy = sinon.spy(document.body, 'addEventListener');
+    removeEventSpy = sinon.spy(document.body, 'removeEventListener');
+    ['mousemove', 'touchmove', 'mouseup', 'touchend'].forEach(e => {
+      addEventSpy.withArgs(e);
+      removeEventSpy.withArgs(e);
+    });
+
     root = mount(
       <Provider store={getStore()}>
         <JsDebugger
@@ -38,12 +53,18 @@ describe('The JSDebugger component', () => {
 
   afterEach(() => {
     restoreRedux();
+    addEventSpy.restore();
+    removeEventSpy.restore();
+    document.body.removeChild(codeApp);
   });
 
   const debugAreaEl = () => root.find('#debug-area').get(0);
   const paneHeader = () => root.find('PaneHeader');
   const closeIcon = () => paneHeader().find('.fa-chevron-circle-down');
   const openIcon = () => paneHeader().find('.fa-chevron-circle-up');
+  const resizeBar = () => root.find('#debugResizeBar');
+  const watchersResizeBar = () => root.find('#watchersResizeBar');
+  const debugConsole = () => root.find('#debug-console');
 
   it("renders a div", () => {
     expect(root.find('div#debug-area').isEmpty()).to.be.false;
@@ -125,6 +146,120 @@ describe('The JSDebugger component', () => {
 
     });
 
+  });
+
+  describe("Resizing the debug bar", () => {
+    let codeTextbox;
+    beforeEach(() => {
+      codeTextbox = document.createElement('div');
+      codeTextbox.id = 'codeTextbox';
+      document.body.appendChild(codeTextbox);
+    });
+
+    afterEach(() => {
+      document.body.removeChild(codeTextbox);
+    });
+
+    it("mouseup and touchend events on document.body are subscribed to", () => {
+      expect(addEventSpy.withArgs('mouseup')).to.have.been.called;
+      expect(addEventSpy.withArgs('touchend')).to.have.been.called;
+    });
+
+    describe("when the mouse is pressed on the resize bar", () => {
+      beforeEach(() => {
+        resizeBar().simulate('mouseDown');
+      });
+      it("starts listening to mouse move events on the docment body", () => {
+        expect(addEventSpy.withArgs('mousemove')).to.have.been.called;
+        expect(addEventSpy.withArgs('touchmove')).to.have.been.called;
+      });
+
+      describe("when the mouse is moved", () => {
+        const moveTo = (pageY) => {
+          const moveEvent = new CustomEvent('touchmove');
+          moveEvent.pageY = pageY;
+          addEventSpy.withArgs('touchmove').args.forEach(args => args[1](moveEvent));
+        };
+        it("changes the height of the debugger", () => {
+          moveTo(100);
+          expect(jsDebugger.root.style.height).to.equal('200px');
+        });
+
+        it("and will do so multiple times", () => {
+          moveTo(120);
+          expect(jsDebugger.root.style.height).to.equal('180px');
+        });
+
+        describe("when the mouse is unpressed", () => {
+          beforeEach(() => {
+            moveTo(120);
+            addEventSpy.withArgs('touchend').args.forEach(args => args[1](new CustomEvent('touchend')));
+          });
+
+          it("will stop responding to mouse move events", () => {
+            expect(removeEventSpy.withArgs('touchmove')).to.have.been.called;
+            expect(removeEventSpy.withArgs('mousemove')).to.have.been.called;
+          });
+        });
+      });
+    });
+  });
+
+  describe("Resizing the watchers bar", () => {
+    it("mouseup and touchend events on document.body are subscribed to", () => {
+      expect(addEventSpy.withArgs('mouseup')).to.have.been.called;
+      expect(addEventSpy.withArgs('touchend')).to.have.been.called;
+    });
+
+    describe("when the mouse is pressed on the resize bar", () => {
+      beforeEach(() => {
+        watchersResizeBar().simulate('mouseDown');
+      });
+
+      it("starts listening to mouse move events on the docment body", () => {
+        expect(addEventSpy.withArgs('mousemove')).to.have.been.called;
+        expect(addEventSpy.withArgs('touchmove')).to.have.been.called;
+      });
+
+      it("does not change the position of anything", () => {
+        expect(watchersResizeBar().get(0).style.right).to.equal('');
+        expect(debugConsole().get(0).style.right).to.equal('');
+      });
+
+      describe("when the mouse is moved", () => {
+        const moveTo = (clientX) => {
+          const moveEvent = new CustomEvent('touchmove');
+          moveEvent.clientX = clientX;
+          addEventSpy.withArgs('touchmove').args.forEach(args => args[1](moveEvent));
+        };
+        beforeEach(() => moveTo(-300));
+
+        it("changes the 'right' position of the watchers resize bar", () => {
+          expect(watchersResizeBar().get(0).style.right).to.equal('300px');
+        });
+
+        it("changes the 'right' style of the debug console", () => {
+          expect(debugConsole().get(0).style.right).to.equal('300px');
+        });
+
+        it("and will do so multiple times", () => {
+          moveTo(-320);
+          expect(debugConsole().get(0).style.right).to.equal('320px');
+        });
+
+        describe("when the mouse is unpressed", () => {
+          beforeEach(() => {
+            moveTo(-320);
+            addEventSpy.withArgs('touchend').args.forEach(args => args[1](new CustomEvent('touchend')));
+          });
+
+          it("will stop responding to mouse move events", () => {
+            expect(removeEventSpy.withArgs('touchmove')).to.have.been.called;
+            expect(removeEventSpy.withArgs('mousemove')).to.have.been.called;
+          });
+        });
+      });
+    });
   });
 
 });

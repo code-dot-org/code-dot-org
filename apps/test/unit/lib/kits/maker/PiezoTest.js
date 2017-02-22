@@ -70,9 +70,9 @@ describe('Piezo', function () {
 
 const fakePiezoController = {
   frequency: {
-    value: function() {}
+    value: function () {}
   },
   noTone: {
-    value: function() {}
+    value: function () {}
   }
 };
