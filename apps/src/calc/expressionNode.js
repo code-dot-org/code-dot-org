@@ -1,7 +1,7 @@
 var utils = require('../utils');
 var _ = require('lodash');
 var Token = require('./token');
-var jsnums = require('./js-numbers/js-numbers');
+var jsnums = require('@code-dot-org/js-numbers');
 
 var ValueType = {
   ARITHMETIC: 1,

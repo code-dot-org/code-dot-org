@@ -35,8 +35,8 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 %link(rel='stylesheet' type='text/css' href='/shared/css/user-progress.css')
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: CDO.studio_url("/blockly/js/#{js_locale}/common_locale.js")}
-%script{src: CDO.studio_url('/blockly/js/teacher-dashboard/index.js')}
+%script{src: asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: minifiable_asset_path('js/teacher-dashboard/index.js')}
 
 %div{'ng-view' => ''}
 
