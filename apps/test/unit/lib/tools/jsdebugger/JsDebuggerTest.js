@@ -10,12 +10,18 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe('The JSDebugger component', () => {
-  let root, jsDebugger, addEventSpy, removeEventSpy;
+  let root, jsDebugger, addEventSpy, removeEventSpy, codeApp;
 
   beforeEach(() => {
     stubRedux();
     registerReducers(commonReducers);
     registerReducers(reducers);
+
+    document.body.innerHTML = '';
+    // needs to be around for resizing.
+    codeApp = document.createElement('div');
+    codeApp.id = 'codeApp';
+    document.body.appendChild(codeApp);
 
     const runApp = sinon.spy();
     getStore().dispatch(setPageConstants({
@@ -49,6 +55,7 @@ describe('The JSDebugger component', () => {
     restoreRedux();
     addEventSpy.restore();
     removeEventSpy.restore();
+    document.body.removeChild(codeApp);
   });
 
   const debugAreaEl = () => root.find('#debug-area').get(0);
