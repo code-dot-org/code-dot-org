@@ -5,6 +5,7 @@ import { levelType, lessonType } from './progressTypes';
 import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
 import { connect } from 'react-redux';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { lessonIsHidden } from './progressHelpers';
 
 const styles = {
   table: {
@@ -65,7 +66,7 @@ const SummaryProgressTable = React.createClass({
               sectionId,
               hiddenStageState
             }))
-            .filter(props => SummaryProgressRow.shouldRender(props))
+            .filter(props => !lessonIsHidden(props))
             .map((props, index) => (
               <SummaryProgressRow
                 {...props}

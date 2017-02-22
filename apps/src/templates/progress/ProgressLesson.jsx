@@ -5,8 +5,8 @@ import FontAwesome from '../FontAwesome';
 import color from "@cdo/apps/util/color";
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import i18n from '@cdo/locale';
+import { lessonIsHidden } from './progressHelpers';
 
 const styles = {
   main: {
@@ -63,40 +63,15 @@ const ProgressLesson = React.createClass({
     });
   },
 
-  // TODO - share with SummaryProgressRow?
-  // TODO - return { forTeachers, forStudents }?
-  shouldRender() {
-    const {
-      viewAs,
-      sectionId,
-      hiddenStageState,
-      lesson
-    } = this.props;
-
-    const showHidden = viewAs === ViewType.Teacher;
-    const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
-    if (!showHidden && isHidden) {
-      return false;
-    }
-    return true;
-  },
-
   render() {
-    const {
-      description,
-      lesson,
-      lessonNumber,
-      levels,
-      sectionId,
-      hiddenStageState
-    } = this.props;
+    const { description, lesson, lessonNumber, levels } = this.props;
 
-    if (!this.shouldRender()) {
+    if (lessonIsHidden(this.props)) {
       return null;
     }
 
     // Is this a hidden stage that we still render because we're a teacher
-    const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+    const hiddenForStudents = lessonIsHidden({...this.props, viewAs: ViewType.Student });
     const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
@@ -104,14 +79,14 @@ const ProgressLesson = React.createClass({
       <div
         style={{
           ...styles.main,
-          ...(isHidden && styles.hidden)
+          ...(hiddenForStudents && styles.hidden)
         }}
       >
         <div
           style={styles.heading}
           onClick={this.toggleCollapsed}
         >
-          {isHidden &&
+          {hiddenForStudents &&
             <FontAwesome
               icon="eye-slash"
               style={styles.hiddenIcon}
