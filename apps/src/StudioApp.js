@@ -2873,8 +2873,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.isResponsiveFromConfig = function (config) {
   // use config.responsiveEmbedded because this.responsiveEmbedded may not be initialized yet
   const isResponsiveEmbedView = !!(config.embed && config.responsiveEmbedded);
-  const isCodeView = !config.embed && !config.share;
-  return isResponsiveEmbedView || isCodeView;
+  const isWorkspaceView = !config.embed && !config.share;
+  return isResponsiveEmbedView || isWorkspaceView;
 };
 
 /**
