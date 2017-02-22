@@ -154,10 +154,15 @@ class User < ActiveRecord::Base
   has_many :districts, through: :districts_users
 
   belongs_to :school_info
-  accepts_nested_attributes_for :school_info, reject_if: :check_school_info
+  accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
 
-  def check_school_info(school_info_attr)
+  # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
+  # based on the passed attributes.
+  # @param school_info_attr the attributes to set and check
+  # @return [Boolean] true if we should reject (ignore and skip writing) the record,
+  # false if we should accept and write it
+  def preprocess_school_info(school_info_attr)
     # Suppress validation - all parts of this form are optional when accesssed through the registration form
     school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
     # students are never asked to fill out this data, so silently reject it for them
