@@ -3,7 +3,7 @@
   -if value[:title_s] == 'Convince your school or state' && ! state.nil_or_empty? && File.exists?(sites_dir("all/files/states/#{state}.pdf"))
     -url = "/files/states/#{state}.pdf"
 
-  %div.col-18eb{:style=> 'margin:1%; float:left; height:275px;'}
+  .col-18eb{:style=> 'margin:1%; float:left; height:275px;'}
     #block{:style=> 'float:left; padding:1%; padding-top:1%; padding-bottom:1%'}
       %a{:href=>url, :target=>'_blank', :style=>'text-decoration:none; font-size:100px;'}
         %i{:class=>"fa fa-file-" + value[:icon_s] + "-o"}

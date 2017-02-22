@@ -1,4 +1,3 @@
-<!-- code.org/help -->
 ---
 title: How to help
 theme: responsive

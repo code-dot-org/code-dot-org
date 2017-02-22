@@ -1,8 +1,8 @@
 #map {
-  width: 700px;
-  min-height: 425px;
-  float: left;
-  margin-right: -100px;
+  width:700px;
+  min-height:425px;
+  float:left;
+  margin-right:-100px;
 }
 
 #infobox {
@@ -14,7 +14,7 @@
   font-size:18px;
 }
 
-.dropdown-toggle{
+.dropdown-toggle {
   background-color:#7665a0;
   border:2px solid #7665a0;
   width:100%;
@@ -22,8 +22,14 @@
   font-size:18px;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   width:100%;
   font-size:18px;
   padding-left:10px;
+}
+
+a:link, a:visited{
+  color:white;
+  cursor:pointer;
+  text-decoration:underline;
 }

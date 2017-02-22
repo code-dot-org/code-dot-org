@@ -24,12 +24,10 @@
   %ul
     %li
       Only
-      %a{:href=>'/action', style: 'color: white; cursor: pointer; text-decoration: underline', target: '_blank'}
-        %strong
-          =credit_count
-        states
-      allow students to count computer science courses toward high school graduation.
-
+      = succeed " allow students to count computer science courses toward high school graduation." do
+        %a{href: '/action', target: '_blank'}<
+          %strong= credit_count
+          states
     %li
       There are currently
       %strong
@@ -44,7 +42,7 @@
   %p.info
     See a
     = succeed "." do
-      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', style: 'color: white; cursor: pointer; text-decoration: underline', target: '_blank'} summary of state efforts
+      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'} summary of state efforts
 
 :javascript
   var webServiceLocation = "/promote/state/";
