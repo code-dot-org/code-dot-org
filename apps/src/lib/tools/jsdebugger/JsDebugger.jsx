@@ -120,6 +120,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     return {
       watchersHidden: false,
       open: this.props.isOpen,
+      openedHeight: 120,
     };
   },
 
