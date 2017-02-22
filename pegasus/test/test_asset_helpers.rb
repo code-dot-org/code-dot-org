@@ -6,8 +6,10 @@ require_relative '../helpers/asset_helpers'
 
 class AssetHelpersTest < Minitest::Test
   UNMINIFIED_ASSET_NAME = 'js/teacher-dashboard/index.js'
-  UNMINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/teacher-dashboard/index-ef90e2acd9003ff8b8bac522e6ce107da641d3b85aba5f58c77d5d28f77a496a.js"
-  MINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/teacher-dashboard/index.min-5bb3b68c6f92cf8409eb7d0649cf572ffa0c66fca1b02b887b4454cab553daef.js"
+  UNMINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/teacher-dashboard/"\
+    'index-ef90e2acd9003ff8b8bac522e6ce107da641d3b85aba5f58c77d5d28f77a496a.js'
+  MINIFIED_ASSET_PATH = "#{CDO.studio_url}/assets/js/teacher-dashboard/"\
+    'index.min-5bb3b68c6f92cf8409eb7d0649cf572ffa0c66fca1b02b887b4454cab553daef.js'
   UNMINIFIED_ASSET_NOT_IN_MAP = 'foo.js'
   MINIFIED_ASSET_NOT_IN_MAP = 'foo.min.js'
 
@@ -18,15 +20,19 @@ class AssetHelpersTest < Minitest::Test
 
   def test_asset_map_pretty
     CDO.stubs(:pretty_js).returns(true)
-    assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminifiable asset path"
+    assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME),
+      "incorrect unminifiable asset path"
     # Should return the unminified path because pretty_js is true
-    assert_equal UNMINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minifiable asset path"
+    assert_equal UNMINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME),
+      "incorrect minifiable asset path"
   end
 
   def test_asset_map_ugly
     CDO.stubs(:pretty_js).returns(false)
-    assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME), "incorrect unminifiable asset path"
-    assert_equal MINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "incorrect minifiable asset path"
+    assert_equal UNMINIFIED_ASSET_PATH, asset_path(UNMINIFIED_ASSET_NAME),
+      "incorrect unminifiable asset path"
+    assert_equal MINIFIED_ASSET_PATH, minifiable_asset_path(UNMINIFIED_ASSET_NAME),
+      "incorrect minifiable asset path"
   end
 
   def test_production_no_asset_map
@@ -53,8 +59,10 @@ class AssetHelpersTest < Minitest::Test
     Singleton.__init__(AssetMap)
     CDO.stubs(:rack_env).returns(:development)
     CDO.stubs(:pretty_js).returns(true)
-    assert_equal UNMINIFIED_ASSET_NAME, asset_path(UNMINIFIED_ASSET_NAME), "should recover gracefully when no asset map for unminifiable asset"
-    assert_equal UNMINIFIED_ASSET_NAME, minifiable_asset_path(UNMINIFIED_ASSET_NAME), "should recover gracefully when no asset map for minifiable asset"
+    assert_equal UNMINIFIED_ASSET_NAME, asset_path(UNMINIFIED_ASSET_NAME),
+      "should recover gracefully when no asset map for unminifiable asset"
+    assert_equal UNMINIFIED_ASSET_NAME, minifiable_asset_path(UNMINIFIED_ASSET_NAME),
+      "should recover gracefully when no asset map for minifiable asset"
   end
 
   def test_production_asset_not_in_map
@@ -75,7 +83,9 @@ class AssetHelpersTest < Minitest::Test
   def test_development_asset_not_in_map
     CDO.stubs(:rack_env).returns(:development)
     CDO.stubs(:pretty_js).returns(true)
-    assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when unminifiable asset is not found"
-    assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP), "should recover gracefully when minifiable asset is not found"
+    assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, asset_path(UNMINIFIED_ASSET_NOT_IN_MAP),
+      "should recover gracefully when unminifiable asset is not found"
+    assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP),
+      "should recover gracefully when minifiable asset is not found"
   end
 end
