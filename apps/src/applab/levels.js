@@ -1,7 +1,7 @@
 import msg from '@cdo/applab/locale';
 import * as utils from '../utils';
 import blockUtils from '../block_utils';
-import { ApplabBlocks } from '@cdo/apps/util/sharedApplabBlocks';
+import { ApplabBlocks } from '@cdo/apps/applab/sharedApplabBlocks';
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;
