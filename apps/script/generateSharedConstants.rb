@@ -5,6 +5,7 @@
 # we're using the same set of constants in dashboard and apps.
 #
 require 'json'
+require 'active_support/inflector'
 require_relative '../../lib/cdo/shared_constants'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
@@ -21,36 +22,20 @@ CONTENT
   File.open(path, 'w') {|f| f.write(output)}
 end
 
-# Each of these generate a JS object from its ruby equivalent. As we want to add
-# more constants, we'll need to add more similar methods that extract the content
-# we care about from the ruby object, and write it as JS.
-def generate_level_kind
-  hash = SharedConstants::LEVEL_KIND.marshal_dump
-  "export const LevelKind = #{JSON.pretty_generate(hash)};"
-end
-
-def generate_level_status
-  hash = SharedConstants::LEVEL_STATUS.marshal_dump
-  "export const LevelStatus = #{JSON.pretty_generate(hash)};"
-end
-
-
-def generate_applab_blocks
-  hash = JSON.parse(SharedConstants::APPLAB_BLOCKS)
-  "export const ApplabBlocks = #{JSON.pretty_generate(hash)};"
-end
-
-def generate_gamelab_blocks
-  hash = JSON.parse(SharedConstants::GAMELAB_BLOCKS)
-  "export const GamelabBlocks = #{JSON.pretty_generate(hash)};"
+# This generates a JS object from its ruby equivalent based on the constant
+# name in shared_constants
+def generate_constants(shared_const_name)
+  raw = SharedConstants.const_get(shared_const_name)
+  hash = raw.is_a?(OpenStruct) ? raw.marshal_dump : JSON.parse(raw)
+  "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash)};"
 end
 
 def main
-  shared_content = [generate_level_kind, generate_level_status].join("\n\n")
+  shared_content = [generate_constants('LEVEL_KIND'), generate_constants('LEVEL_STATUS')].join("\n\n")
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
-  generate_shared_js_file(generate_applab_blocks, "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
-  generate_shared_js_file(generate_gamelab_blocks, "#{REPO_DIR}/apps/src/gamelab/sharedGamelabBlocks.js")
+  generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
+  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/gamelab/sharedGamelabBlocks.js")
 end
 
 main
