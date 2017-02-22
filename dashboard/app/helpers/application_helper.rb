@@ -254,6 +254,15 @@ module ApplicationHelper
     obj
   end
 
+  # true if the current controller action is connected to the database.
+  def database_connected?
+    @database_connected ||= begin
+      ActiveRecord::Base.connection.active?
+    rescue Mysql2::Error
+      false
+    end
+  end
+
   private
 
   def share_failure_message(failure_type)
