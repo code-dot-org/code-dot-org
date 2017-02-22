@@ -14,7 +14,7 @@ class AssetMap
   end
 
   def minifiable_asset_path(asset)
-    asset.sub!(/\.js$/, '.min.js') unless CDO.pretty_js
+    asset = asset.sub(/\.js$/, '.min.js') unless CDO.pretty_js
     asset_path(asset)
   end
 
