@@ -270,32 +270,26 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], user.gallery_activities
 
     assert_does_not_create(GalleryActivity) do
-      create(:activity, user: user)
       create(:user_level, user: user)
     end
 
     ga2 = nil
     assert_creates(GalleryActivity) do
       user_level2 = create(:user_level, user: user)
-      activity2 = create(:activity, user: user)
       ga2 = GalleryActivity.create!(
-        activity_id: activity2.id,
         user: user,
         user_level: user_level2
       )
     end
 
     assert_does_not_create(GalleryActivity) do
-      create(:activity, user: user)
       create(:user_level, user: user)
     end
 
     ga4 = nil
     assert_creates(GalleryActivity) do
       user_level4 = create(:user_level, user: user)
-      activity4 = create(:activity, user: user)
       ga4 = GalleryActivity.create!(
-        activity_id: activity4.id,
         user: user,
         user_level: user_level4
       )
