@@ -54,9 +54,7 @@ const DebugConsole = connect(
     removeWatchExpression,
     evalInCurrentScope: actions.evalInCurrentScope,
     appendLog: actions.appendLog,
-  },
-  null,
-  {withRef: true}
+  }
 )(React.createClass({
   propTypes: {
     // from redux
@@ -118,6 +116,12 @@ const DebugConsole = connect(
     this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
   },
 
+  clearOutput() {
+    if (this._debugOutput) {
+      this._debugOutput.textContent = '';
+    }
+  },
+
   clearDebugInput() {
     // TODO: this needs to get called on ATTACH action being dispatched
     // alternatively, the text content should get stored in redux.
@@ -135,8 +139,12 @@ const DebugConsole = connect(
   onDebugOutputMouseUp(e) {
     if (e.target.tagName === "DIV" &&
         window.getSelection().toString().length === 0) {
-      this._debugInput.focus();
+      this.focus();
     }
+  },
+
+  focus() {
+    this._debugInput.focus();
   },
 
   render() {
@@ -171,7 +179,11 @@ const DebugConsole = connect(
         >
           {this.props.logOutput}
         </div>
-        <span className="debug-input-prompt">
+        <span
+          className="debug-input-prompt"
+          style={{cursor: 'text'}}
+          onClick={this.focus}
+        >
           &gt;
         </span>
         <div
