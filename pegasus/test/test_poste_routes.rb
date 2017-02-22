@@ -119,7 +119,7 @@ class PosteRoutesTest < Minitest::Test
       end
     end
 
-    describe 'GET /l/:id' do
+    describe 'GET /l/:id/:url' do
       before do
         @id = create_poste_delivery
         @url_id = Poste2.find_or_create_url('my url')
