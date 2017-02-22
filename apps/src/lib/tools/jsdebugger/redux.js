@@ -90,7 +90,12 @@ export function initialize({runApp}) {
 }
 
 export function appendLog(output) {
-  return {type: APPEND_LOG, output};
+  return (dispatch, getState) => {
+    dispatch({type: APPEND_LOG, output});
+    if (!isOpen(getState())) {
+      dispatch(open());
+    }
+  };
 }
 
 export function clearLog() {
@@ -102,7 +107,10 @@ export function attach(jsInterpreter) {
     const observer = new Observer();
     observer.observe(
       jsInterpreter.onPause,
-      () => dispatch(togglePause())
+      () => {
+        dispatch(togglePause());
+        dispatch(open());
+      }
     );
     observer.observe(
       jsInterpreter.onExecutionWarning,
