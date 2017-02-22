@@ -47,3 +47,43 @@ describe(`timedLoop(ms, callback)`, () => {
     expect(commands.timedLoop).to.be.a('function');
   });
 });
+
+describe(`stopTimedLoop([key])`, () => {
+  it('is an exported block with expected configuration', () => {
+    const stopTimedLoopBlocks = blocks.filter(block => block.func === 'stopTimedLoop');
+    expect(stopTimedLoopBlocks).to.have.length(1);
+    const stopTimedLoopBlock = stopTimedLoopBlocks[0];
+    expect(stopTimedLoopBlock.func).to.equal('stopTimedLoop');
+    expect(stopTimedLoopBlock.category).to.equal('Control');
+    expect(stopTimedLoopBlock.paramButtons).to.deep.equal({ minArgs: 0, maxArgs: 1 });
+  });
+
+  it('has a matching export in api.js', () => {
+    expect(api).to.haveOwnProperty('stopTimedLoop');
+    expect(api.stopTimedLoop).to.be.a('function');
+  });
+
+  describe('api passthrough', () => {
+    beforeEach(() => {
+      replaceOnWindow('Applab', {
+        executeCmd: sinon.spy()
+      });
+    });
+
+    afterEach(() => {
+      restoreOnWindow('Applab');
+    });
+
+    it('api call passes arguments through to Applab.executeCmd', () => {
+      const key = 1987;
+      api.stopTimedLoop(key);
+      expect(Applab.executeCmd).to.have.been.calledWith(null, 'stopTimedLoop', {key});
+    });
+  });
+
+
+  it('has a matching export in commands.js', () => {
+    expect(commands).to.haveOwnProperty('stopTimedLoop');
+    expect(commands.stopTimedLoop).to.be.a('function');
+  });
+});
