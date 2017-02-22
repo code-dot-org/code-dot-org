@@ -1,8 +1,7 @@
-src/**/*.min.js*
-src/calc/js-numbers/js-numbers.js
-src/code-studio/vendor/**/*.js
-src/third-party/**/*.js
+/src/**/*.min.js*
+/src/code-studio/vendor/**/*.js
+/src/third-party/**/*.js
 
-lib
-build
+/lib
+/build
 node_modules
