@@ -4,7 +4,7 @@ import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { lessonIsHidden } from './progressHelpers';
 
 export const styles = {
   lightRow: {
@@ -64,52 +64,27 @@ const SummaryProgressRow = React.createClass({
     hiddenStageState: PropTypes.object.isRequired,
   },
 
-  statics: {
-    shouldRender(props) {
-      const {
-        viewAs,
-        sectionId,
-        hiddenStageState,
-        lesson
-      } = props;
-
-      const showHidden = viewAs === ViewType.Teacher;
-      const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
-      if (!showHidden && isHidden) {
-        return false;
-      }
-      return true;
-    }
-  },
-
   render() {
-    const {
-      dark,
-      lesson,
-      lessonNumber,
-      levels,
-      sectionId,
-      hiddenStageState
-    } = this.props;
+    const { dark, lesson, lessonNumber, levels } = this.props;
 
-    if (!SummaryProgressRow.shouldRender(this.props)) {
+    if (lessonIsHidden(this.props)) {
       return null;
     }
 
     // Is this a hidden stage that we still render because we're a teacher
-    const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+    const hiddenForStudents = lessonIsHidden({...this.props, viewAs: ViewType.Student });
 
     return (
       <tr
         style={{
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),
-          ...(isHidden && styles.hiddenRow)
+          ...(hiddenForStudents && styles.hiddenRow)
         }}
       >
         <td style={styles.col1}>
           <div style={styles.colText}>
-            {isHidden &&
+            {hiddenForStudents &&
               <FontAwesome
                 icon="eye-slash"
                 style={styles.icon}
