@@ -171,8 +171,7 @@ class User < ActiveRecord::Base
 
   # Not deployed to everyone, so we don't require this for anybody, yet
   def school_info_optional?
-    true
-    #student? || (persisted? && created_at < '2017-MM-DD') # update if/when A/B test is done and accepted
+    true # update if/when A/B test is done and accepted
   end
 
   belongs_to :invited_by, polymorphic: true
