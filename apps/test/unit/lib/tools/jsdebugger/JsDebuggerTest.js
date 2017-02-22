@@ -31,6 +31,7 @@ describe('The JSDebugger component', () => {
       showDebugSlider: true,
     }));
     getStore().dispatch(actions.initialize({runApp}));
+    getStore().dispatch(actions.open());
 
     addEventSpy = sinon.spy(document.body, 'addEventListener');
     removeEventSpy = sinon.spy(document.body, 'removeEventListener');
@@ -68,10 +69,6 @@ describe('The JSDebugger component', () => {
 
   it("renders a div", () => {
     expect(root.find('div#debug-area').isEmpty()).to.be.false;
-  });
-
-  it("is initially open", () => {
-    expect(jsDebugger.props.isOpen).to.be.true;
   });
 
   it("initially has the height given to it via css", () => {
