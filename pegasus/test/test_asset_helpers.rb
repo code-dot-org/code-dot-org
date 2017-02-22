@@ -1,8 +1,6 @@
 require_relative '../../deployment'
 require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
-
-# AssetMap must be re-initialized before each test with CDO.dashboard_assets_dir set properly
 require_relative '../helpers/asset_helpers'
 
 class AssetHelpersTest < Minitest::Test
