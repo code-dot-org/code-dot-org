@@ -52,23 +52,7 @@ class PosteRoutesTest < Minitest::Test
 
     describe 'GET /u/:id' do
       before do
-        FakeDashboard.use_fake_database
-        $log.level = Logger::ERROR
-        @pegasus = Rack::Test::Session.new(
-          Rack::MockSession.new(MockPegasus.new, "studio.code.org")
-        )
-
-        @id = DB[:poste_deliveries].insert(
-          {
-            created_at: DateTime.now,
-            created_ip: '1.2.3.4',
-            contact_id: '1',
-            contact_email: EMAIL,
-            hashed_email: HASHED_EMAIL,
-            message_id: 1,
-            params: {}.to_json
-          }
-        )
+        @id = create_poste_delivery
       end
 
       it 'unsubscribes new contact' do
@@ -79,17 +63,8 @@ class PosteRoutesTest < Minitest::Test
       end
 
       it 'unsubscribes existing contact' do
-        DB[:contacts].insert(
-          {
-            email: EMAIL,
-            hashed_email: HASHED_EMAIL,
-            name: 'existing contact',
-            created_at: DateTime.now,
-            created_ip: '1.2.3.4',
-            updated_at: DateTime.now,
-            updated_ip: '1.2.3.4'
-          }
-        )
+        create_contact
+
         @pegasus.get "/u/#{Poste.encrypt(@id)}"
         assert DB[:contacts].
           where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
@@ -104,26 +79,9 @@ class PosteRoutesTest < Minitest::Test
     end
 
     describe 'GET /unsubscribe/:email' do
-      before do
-        FakeDashboard.use_fake_database
-        $log.level = Logger::ERROR
-        @pegasus = Rack::Test::Session.new(
-          Rack::MockSession.new(MockPegasus.new, "studio.code.org")
-        )
-      end
-
       it 'unsubscribes existing contact' do
-        DB[:contacts].insert(
-          {
-            email: EMAIL,
-            hashed_email: HASHED_EMAIL,
-            name: 'existing contact',
-            created_at: DateTime.now,
-            created_ip: '1.2.3.4',
-            updated_at: DateTime.now,
-            updated_ip: '1.2.3.4'
-          }
-        )
+        create_contact
+
         @pegasus.get "/unsubscribe/#{EMAIL}"
         assert DB[:contacts].
           where(hashed_email: HASHED_EMAIL)[:unsubscribed_at]
@@ -139,23 +97,7 @@ class PosteRoutesTest < Minitest::Test
 
     describe 'GET /o/:id' do
       before do
-        FakeDashboard.use_fake_database
-        $log.level = Logger::ERROR
-        @pegasus = Rack::Test::Session.new(
-          Rack::MockSession.new(MockPegasus.new, "studio.code.org")
-        )
-
-        @id = DB[:poste_deliveries].insert(
-          {
-            created_at: DateTime.now,
-            created_ip: '1.2.3.4',
-            contact_id: '1',
-            contact_email: EMAIL,
-            hashed_email: HASHED_EMAIL,
-            message_id: 1,
-            params: {}.to_json
-          }
-        )
+        @id = create_poste_delivery
       end
 
       it 'creates poste_opens row' do
@@ -170,6 +112,7 @@ class PosteRoutesTest < Minitest::Test
       end
 
       it 'creates no poste_opens row with an undecryptable id' do
+        CDO.log.expects(:warn).with('Unable to decrypt poste id: invalid. Error: invalid base64')
         @pegasus.get '/o/invalid'
         assert_response 404
         assert DB[:poste_opens].where(delivery_id: @id).empty?
@@ -178,24 +121,7 @@ class PosteRoutesTest < Minitest::Test
 
     describe 'GET /l/:id' do
       before do
-        FakeDashboard.use_fake_database
-        $log.level = Logger::ERROR
-        @pegasus = Rack::Test::Session.new(
-          Rack::MockSession.new(MockPegasus.new, "studio.code.org")
-        )
-
-        @id = DB[:poste_deliveries].insert(
-          {
-            created_at: DateTime.now,
-            created_ip: '1.2.3.4',
-            contact_id: '1',
-            contact_email: EMAIL,
-            hashed_email: HASHED_EMAIL,
-            message_id: 1,
-            params: {}.to_json
-          }
-        )
-
+        @id = create_poste_delivery
         @url_id = Poste2.find_or_create_url('my url')
       end
 
@@ -211,6 +137,7 @@ class PosteRoutesTest < Minitest::Test
       end
 
       it 'creates no poste_clicks row with an undecryptable id' do
+        CDO.log.expects(:warn).with('Unable to decrypt poste id: invalid. Error: invalid base64')
         @pegasus.get "/l/invalid/#{Base64.urlsafe_encode64(@url_id.to_s)}"
         assert_response 404
         assert DB[:poste_clicks].where(delivery_id: @id).empty?
@@ -229,6 +156,8 @@ class PosteRoutesTest < Minitest::Test
       end
     end
 
+    private
+
     # Stubs the user ID for the duration of the test to match the ID of the
     # user hash given (e.g. FakeDashboard::STUDENT or FakeDashboard::TEACHER).
     # The result should be pulled in through the mock database.
@@ -239,6 +168,34 @@ class PosteRoutesTest < Minitest::Test
 
     def assert_response(response)
       assert_equal response, @pegasus.last_response.status
+    end
+
+    def create_poste_delivery
+      DB[:poste_deliveries].insert(
+        {
+          created_at: DateTime.now,
+          created_ip: '1.2.3.4',
+          contact_id: '1',
+          contact_email: EMAIL,
+          hashed_email: HASHED_EMAIL,
+          message_id: 1,
+          params: {}.to_json
+        }
+      )
+    end
+
+    def create_contact
+      DB[:contacts].insert(
+        {
+          email: EMAIL,
+          hashed_email: HASHED_EMAIL,
+          name: 'existing contact',
+          created_at: DateTime.now,
+          created_ip: '1.2.3.4',
+          updated_at: DateTime.now,
+          updated_ip: '1.2.3.4'
+        }
+      )
     end
   end
 end
