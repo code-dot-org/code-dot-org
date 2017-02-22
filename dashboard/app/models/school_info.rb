@@ -29,6 +29,8 @@ class SchoolInfo < ActiveRecord::Base
     SCHOOL_TYPE_CHARTER = "charter",
     SCHOOL_TYPE_PRIVATE = "private",
     SCHOOL_TYPE_PUBLIC = "public",
+    SCHOOL_TYPE_HOMESCHOOL = "homeschool",
+    SCHOOL_TYPE_AFTER_SCHOOL = "afterschool",
     SCHOOL_TYPE_OTHER = "other"
   ].freeze
 

@@ -224,6 +224,14 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
 
+  # US homeschool TODO
+
+  # US after school TODO
+
+  # Non-US homeschool TODO
+
+  # Non-US after school TODO
+
   # deprecated data formats (without country). The absence of the country column is the marker that
   # the record does NOT conform to the newer data format. These older records may belong to a Pd::Enrollment,
   # in which case the school name should be stored in enrollment.school, NOT in enrollment.school_info.school_name.
