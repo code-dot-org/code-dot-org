@@ -23,7 +23,7 @@
  */
 var SVG_NS = require('./constants').SVG_NS;
 var dom = require('./dom');
-var safelySetItem = require('./utils').safelySetItem;
+var trySetSessionStorage = require('./utils').trySetSessionStorage;
 
 var OVERRIDE_STORAGE_KEY = 'slider_value_override';
 
@@ -247,7 +247,7 @@ Slider.prototype.getValueOverride_ = function () {
  * Store a new override in sessionStorage.
  */
 Slider.prototype.setValueOverride_  = function (from, to) {
-  safelySetItem(OVERRIDE_STORAGE_KEY, JSON.stringify({ from, to }));
+  trySetSessionStorage(OVERRIDE_STORAGE_KEY, JSON.stringify({ from, to }));
 };
 
 /**
