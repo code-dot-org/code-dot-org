@@ -39,12 +39,12 @@ class AssetHelpersTest < Minitest::Test
     e = assert_raises RuntimeError do
       asset_path(UNMINIFIED_ASSET_NAME)
     end
-    assert_equal e.message, 'Asset map not initialized'
+    assert_equal 'Asset map not initialized', e.message
 
     e = assert_raises RuntimeError do
       minifiable_asset_path(UNMINIFIED_ASSET_NAME)
     end
-    assert_equal e.message, 'Asset map not initialized'
+    assert_equal 'Asset map not initialized', e.message
   end
 
   def test_development_no_asset_map
@@ -64,12 +64,12 @@ class AssetHelpersTest < Minitest::Test
     e = assert_raises RuntimeError do
       asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
     end
-    assert_equal e.message, "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'"
+    assert_equal "Asset not found in asset map: '#{UNMINIFIED_ASSET_NOT_IN_MAP}'", e.message
 
     e = assert_raises RuntimeError do
       minifiable_asset_path(UNMINIFIED_ASSET_NOT_IN_MAP)
     end
-    assert_equal e.message, "Asset not found in asset map: '#{MINIFIED_ASSET_NOT_IN_MAP}'"
+    assert_equal "Asset not found in asset map: '#{MINIFIED_ASSET_NOT_IN_MAP}'", e.message
   end
 
   def test_development_asset_not_in_map
