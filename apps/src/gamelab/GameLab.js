@@ -17,7 +17,6 @@ var consoleApi = require('../consoleApi');
 var utils = require('../utils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
-var JsDebuggerUi = require('@cdo/apps/lib/tools/jsdebugger/JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
@@ -44,6 +43,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
+import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -78,9 +78,6 @@ var GameLab = function () {
 
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
-
-  /** @type {JsDebuggerUi} */
-  this.debugger_ = null;
 
   this.eventHandlers = {};
   this.Globals = {};
@@ -123,9 +120,7 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object) {
   this.consoleLogger_.log(object);
-  if (this.debugger_) {
-    this.debugger_.log(object);
-  }
+  this.studioApp_.reduxStore.dispatch(jsDebugger.appendLog(object));
 };
 
 /**
@@ -270,7 +265,9 @@ GameLab.prototype.init = function (config) {
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
-    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this), this.studioApp_.reduxStore);
+    this.studioApp_.reduxStore.dispatch(jsDebugger.initialize({
+      runApp: this.runButtonClick,
+    }));
   }
 
   this.studioApp_.setPageConstants(config, {
@@ -284,7 +281,6 @@ GameLab.prototype.init = function (config) {
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
     isIframeEmbed: !!config.level.iframeEmbed,
-    debuggerUi: this.debugger_,
   });
 
   if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
@@ -450,9 +446,7 @@ GameLab.prototype.reset = function (ignore) {
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  if (this.debugger_) {
-    this.debugger_.detach();
-  }
+  this.studioApp_.reduxStore.dispatch(jsDebugger.detach());
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -803,9 +797,7 @@ GameLab.prototype.initInterpreter = function () {
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  if (this.debugger_) {
-    this.debugger_.attachTo(this.JSInterpreter);
-  }
+  this.studioApp_.dispatch(jsDebugger.attach(this.JSInterpreter));
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
