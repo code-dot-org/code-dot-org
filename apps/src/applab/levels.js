@@ -137,8 +137,8 @@ levels.custom = {
     "whileBlock": null,
     "setTimeout": null,
     "clearTimeout": null,
-    "setInterval": null,
-    "clearInterval": null,
+    "timedLoop": null,
+    "stopTimedLoop": null,
     "getTime": null,
 
     // Math
@@ -196,7 +196,6 @@ levels.custom = {
     "digitalRead": null,
     "analogWrite": null,
     "analogRead": null,
-    "timedLoop": null,
 
     // Circuit Playground
     "on": null,

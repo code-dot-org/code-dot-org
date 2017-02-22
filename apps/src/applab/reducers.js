@@ -4,7 +4,6 @@ import { ActionType } from './actions';
 import { ApplabInterfaceMode } from './constants';
 import data from '../storage/redux/data';
 import screens from './redux/screens';
-import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
 
 function interfaceMode(state, action) {
   state = state || ApplabInterfaceMode.CODE;
@@ -18,7 +17,6 @@ function interfaceMode(state, action) {
 }
 
 export default {
-  ...jsDebuggerReducers,
   data,
   interfaceMode,
   screens

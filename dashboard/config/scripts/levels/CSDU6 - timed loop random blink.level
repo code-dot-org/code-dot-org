@@ -114,7 +114,10 @@
     "disable_if_else_editing": "false",
     "markdown_instructions": "# Timed Blinking\r\n\r\nThe provided code toggles a randomly selected color LED once. Place that line inside a timed loop to make a randomized pattern of blinking lights.",
     "project_template_level_name": "CSDU6 - timed loop random template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
