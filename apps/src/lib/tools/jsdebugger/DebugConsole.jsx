@@ -139,8 +139,12 @@ const DebugConsole = connect(
   onDebugOutputMouseUp(e) {
     if (e.target.tagName === "DIV" &&
         window.getSelection().toString().length === 0) {
-      this._debugInput.focus();
+      this.focus();
     }
+  },
+
+  focus() {
+    this._debugInput.focus();
   },
 
   render() {
@@ -175,7 +179,11 @@ const DebugConsole = connect(
         >
           {this.props.logOutput}
         </div>
-        <span className="debug-input-prompt">
+        <span
+          className="debug-input-prompt"
+          style={{cursor: 'text'}}
+          onClick={this.focus}
+        >
           &gt;
         </span>
         <div

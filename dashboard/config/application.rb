@@ -103,6 +103,8 @@ module Dashboard
 
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
+    config.pretty_sharedjs = CDO.pretty_js
+
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
