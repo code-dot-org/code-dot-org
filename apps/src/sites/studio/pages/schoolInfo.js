@@ -236,12 +236,14 @@ window.SchoolInfoManager = function (existingOptions) {
       }
       clearAndHide('#school-zipcode');
       clearAndHide('#school-name');
+      clearAndHide('#school-address');
     } else if (isUs() && isPrivateOrOther()) {
       show('#school-state');
       show('#school-zipcode');
       clearAndHideDistrict();
       clearAndHideSchool();
       show('#school-name');
+      clearAndHide('#school-address');
     } else if (isUs() && isHomeschool()) {
       show('#school-zipcode');
       show('#school-state');
@@ -276,8 +278,10 @@ window.SchoolInfoManager = function (existingOptions) {
       clearAndHide('#school-state');
       clearAndHideDistrict();
       clearAndHideSchool();
-      show('#school-name');
-      show('#school-address');
+      if (!isUs()) {
+        show('#school-name');
+        show('#school-address');
+      }
     }
   });
 
