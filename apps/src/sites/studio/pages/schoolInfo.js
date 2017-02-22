@@ -188,6 +188,14 @@ window.SchoolInfoManager = function (existingOptions) {
     return ['public', 'charter'].indexOf($('#school-type').val()) > -1;
   }
 
+  function isHomeschool() {
+    return $('#school-type').val() === 'homeschool';
+  }
+
+  function isAfterSchool() {
+    return $('#school-type').val() === 'afterschool';
+  }
+
   function isUs() {
     return $('#school-country').val() === 'US';
   }
@@ -214,18 +222,11 @@ window.SchoolInfoManager = function (existingOptions) {
     if ($(this).val() === 'US') {
       clearAndHide('#school-name');
       clearAndHide('#school-address');
-      // Show fields corresponding to the current contents of the type dropdown.
-      $('#school-type').change();
-    } else { // non-US
-      clearAndHide('#school-zipcode');
-      clearAndHide('#school-state');
-      clearAndHideDistrict();
-      clearAndHideSchool();
-      show('#school-name');
-      show('#school-address');
     }
+    $('#school-type').change();
   });
 
+  // Show fields corresponding to the current contents of the type dropdown.
   $('#school-type').change(function () {
     if (isUs() && isPublicOrCharter()) {
       show('#school-state');
@@ -241,8 +242,42 @@ window.SchoolInfoManager = function (existingOptions) {
       clearAndHideDistrict();
       clearAndHideSchool();
       show('#school-name');
+    } else if (isUs() && isHomeschool()) {
+      show('#school-zipcode');
+      show('#school-state');
+      clearAndHideDistrict();
+      clearAndHideSchool();
+      clearAndHide('#school-name');
+      clearAndHide('#school-address');
+    } else if (isUs() && isAfterSchool()) {
+      show('#school-zipcode');
+      show('#school-state');
+      clearAndHideDistrict();
+      clearAndHideSchool();
+      show('#school-name');
+      clearAndHide('#school-address');
+    } else if (!isUs() && isHomeschool()) {
+      clearAndHide('#school-zipcode');
+      clearAndHide('#school-state');
+      clearAndHideDistrict();
+      clearAndHideSchool();
+      clearAndHide('#school-name');
+      show('#school-address');
+    } else if (!isUs() && isAfterSchool()) {
+      clearAndHide('#school-zipcode');
+      clearAndHide('#school-state');
+      clearAndHideDistrict();
+      clearAndHideSchool();
+      clearAndHide('#school-name');
+      show('#school-address');
     } else {
       // no type or non-US
+      clearAndHide('#school-zipcode');
+      clearAndHide('#school-state');
+      clearAndHideDistrict();
+      clearAndHideSchool();
+      show('#school-name');
+      show('#school-address');
     }
   });
 
