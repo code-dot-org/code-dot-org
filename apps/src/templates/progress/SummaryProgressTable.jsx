@@ -1,11 +1,10 @@
 import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import { levelType, lessonType } from './progressTypes';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
-import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { connect } from 'react-redux';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
 const styles = {
   table: {
@@ -27,8 +26,6 @@ const SummaryProgressTable = React.createClass({
     levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(levelType)
     ).isRequired,
-
-    // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     sectionId: PropTypes.string,
     hiddenStageState: PropTypes.object.isRequired,
@@ -39,29 +36,6 @@ const SummaryProgressTable = React.createClass({
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
-
-    let rows = [];
-    let dark = false; // start with a light row
-    const showHidden = viewAs === ViewType.Teacher;
-    lessons.forEach((lesson, index) => {
-      // When viewing as a student, we'll filter out hidden rows. When viewing
-      // as a teacher, we'll set hiddenForStudents and style the row differntly.
-      const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
-      if (isHidden && !showHidden) {
-        return;
-      }
-      rows.push(
-        <SummaryProgressRow
-          key={index}
-          hiddenForStudents={isHidden}
-          dark={dark}
-          lesson={lesson}
-          lessonNumber={index + 1}
-          levels={levelsByLesson[index]}
-        />
-      );
-      dark = !dark;
-    });
 
     return (
       <table style={styles.table}>
@@ -80,7 +54,25 @@ const SummaryProgressTable = React.createClass({
           </tr>
         </thead>
         <tbody>
-          {rows}
+          {/*Filter our lessons to those that will be rendered, and then make
+            every other (remaining) one dark*/
+            lessons.map((lesson, index) => ({
+              key: index,
+              lessonNumber: index + 1,
+              levels: levelsByLesson[index],
+              lesson,
+              viewAs,
+              sectionId,
+              hiddenStageState
+            }))
+            .filter(props => SummaryProgressRow.shouldRender(props))
+            .map((props, index) => (
+              <SummaryProgressRow
+                {...props}
+                dark={index % 2 === 1}
+              />
+            ))
+          }
         </tbody>
       </table>
     );

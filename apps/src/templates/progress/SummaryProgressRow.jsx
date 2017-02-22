@@ -3,6 +3,8 @@ import color from "@cdo/apps/util/color";
 import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { levelType, lessonType } from './progressTypes';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 export const styles = {
   lightRow: {
@@ -51,28 +53,63 @@ export const styles = {
   }
 };
 
-const SummaryRow = React.createClass({
+const SummaryProgressRow = React.createClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
     lessonNumber: PropTypes.number.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    hiddenForStudents: PropTypes.bool.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    sectionId: PropTypes.string,
+    hiddenStageState: PropTypes.object.isRequired,
+  },
+
+  statics: {
+    shouldRender(props) {
+      const {
+        viewAs,
+        sectionId,
+        hiddenStageState,
+        lesson
+      } = props;
+
+      const showHidden = viewAs === ViewType.Teacher;
+      const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+      if (!showHidden && isHidden) {
+        return false;
+      }
+      return true;
+    }
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels, hiddenForStudents } = this.props;
+    const {
+      dark,
+      lesson,
+      lessonNumber,
+      levels,
+      sectionId,
+      hiddenStageState
+    } = this.props;
+
+    if (!SummaryProgressRow.shouldRender(this.props)) {
+      return null;
+    }
+
+    // Is this a hidden stage that we still render because we're a teacher
+    const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
+
     return (
       <tr
         style={{
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),
-          ...(hiddenForStudents && styles.hiddenRow)
+          ...(isHidden && styles.hiddenRow)
         }}
       >
         <td style={styles.col1}>
           <div style={styles.colText}>
-            {hiddenForStudents &&
+            {isHidden &&
               <FontAwesome
                 icon="eye-slash"
                 style={styles.icon}
@@ -91,4 +128,5 @@ const SummaryRow = React.createClass({
     );
   }
 });
-export default SummaryRow;
+
+export default SummaryProgressRow;
