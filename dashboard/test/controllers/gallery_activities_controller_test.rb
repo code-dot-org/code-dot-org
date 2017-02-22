@@ -138,13 +138,13 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "should return existing gallery_activity if exists" do
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
         params: {
           gallery_activity: {
             level_source_id: @artist_level_source.id,
             user_id: @user.id,
-            user_level: @artist_user_level
+            user_level_id: @artist_user_level.id
           }
         },
         format: :json
@@ -167,7 +167,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   test "cannot destroy someone else's gallery activity" do
     sign_in create(:user)
 
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       delete :destroy, params: {id: @gallery_activity}, format: :json
     end
 
@@ -201,7 +201,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     level_source = create :level_source, level: @new_level
     user_level = create :user_level, user: @user, level: @new_level
 
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
         params: {
           gallery_activity: {
@@ -236,7 +236,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "cannot create gallery activity for invalid user_level id" do
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
         params: {gallery_activity: { user_level_id: UserLevel.last.id + 1 }},
         format: :json
@@ -249,7 +249,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     level_source = create :level_source, level: @new_level
     user_level = create :user_level, user: @user, level: @new_level
 
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
         params: {
           gallery_activity: {
@@ -265,7 +265,7 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "cannot create gallery activity with no user_level id" do
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       assert_raises(ActionController::ParameterMissing) do
         post :create, params: {gallery_activity: {stub: nil}}, format: :json
       end
@@ -273,12 +273,12 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "does not create duplicate gallery activity" do
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
         params: {
           gallery_activity: {
-            level_source: @artist_level_soure,
-            user_level: @artist_user_level
+            level_source_id: @artist_level_source.id,
+            user_level_id: @artist_user_level.id
           }
         },
         format: :json
