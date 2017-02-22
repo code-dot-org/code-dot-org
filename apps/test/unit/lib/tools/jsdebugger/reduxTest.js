@@ -81,6 +81,21 @@ describe('The JSDebugger redux duck', () => {
     it("and no log output", () => {
       expect(selectors.getLogOutput(state)).to.equal('');
     });
+
+    it("and is open", () => {
+      expect(selectors.isOpen(state)).to.be.true;
+    });
+  });
+
+  describe("the open and close actions", () => {
+    beforeEach(() => store.dispatch(actions.close()));
+    it("will close the debugger", () => {
+      expect(selectors.isOpen(store.getState())).to.be.false;
+    });
+    it("and open the debugger", () => {
+      store.dispatch(actions.open());
+      expect(selectors.isOpen(store.getState())).to.be.true;
+    });
   });
 
   describe("the appendLog action", () => {
