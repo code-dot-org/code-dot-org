@@ -43,7 +43,6 @@ describe('The JSDebugger component', () => {
     root = mount(
       <Provider store={getStore()}>
         <JsDebugger
-          style={{height: 250}}
           onSlideOpen={sinon.spy()}
           onSlideShut={sinon.spy()}
         />
@@ -71,8 +70,8 @@ describe('The JSDebugger component', () => {
     expect(root.find('div#debug-area').isEmpty()).to.be.false;
   });
 
-  it("initially has the height given to it via css", () => {
-    expect(debugAreaEl().style.height).to.equal('250px');
+  it("initially has the height of 120px", () => {
+    expect(debugAreaEl().style.height).to.equal('120px');
   });
 
   describe("The header", () => {
@@ -120,7 +119,7 @@ describe('The JSDebugger component', () => {
       });
 
       it("will expand the debugger by setting the height in the css", () => {
-        expect(debugAreaEl().style.height).to.equal('250px');
+        expect(debugAreaEl().style.height).to.equal('120px');
       });
 
       it("will call the onSlideOpen prop", () => {
