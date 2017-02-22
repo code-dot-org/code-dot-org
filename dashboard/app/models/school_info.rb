@@ -98,7 +98,6 @@ class SchoolInfo < ActiveRecord::Base
   end
 
   def validate_non_us
-    return unless should_validate?
     errors.add(:school_type, "is required") unless school_type
     errors.add(:school_name, "is required") unless school_name
     errors.add(:full_address, "is required") unless full_address
@@ -168,6 +167,7 @@ class SchoolInfo < ActiveRecord::Base
   # validate records in the older data format (see school_info_test.rb for details).
   # This method reports errors if the record does NOT have a country and is invalid.
   def validate_without_country
+    return unless should_validate?
     return if country
 
     # don't allow any new fields in the old data format.
