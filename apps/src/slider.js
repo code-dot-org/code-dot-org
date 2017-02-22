@@ -25,7 +25,7 @@ var SVG_NS = require('./constants').SVG_NS;
 var dom = require('./dom');
 var safelySetItem = require('./utils').safelySetItem;
 
-var OVERRIDE_KEY = 'slider_value_override';
+var OVERRIDE_STORAGE_KEY = 'slider_value_override';
 
 /**
  * Object representing a horizontal slider widget.
@@ -236,7 +236,7 @@ Slider.prototype.setValue = function (value) {
  * @return {Object} containing the value to override and the new value
  */
 Slider.prototype.getValueOverride_ = function () {
-  var override = sessionStorage.getItem(OVERRIDE_KEY);
+  var override = sessionStorage.getItem(OVERRIDE_STORAGE_KEY);
   if (override) {
     return JSON.parse(override);
   }
@@ -247,7 +247,7 @@ Slider.prototype.getValueOverride_ = function () {
  * Store a new override in sessionStorage.
  */
 Slider.prototype.setValueOverride_  = function (from, to) {
-  safelySetItem(OVERRIDE_KEY, JSON.stringify({ from, to }));
+  safelySetItem(OVERRIDE_STORAGE_KEY, JSON.stringify({ from, to }));
 };
 
 /**
