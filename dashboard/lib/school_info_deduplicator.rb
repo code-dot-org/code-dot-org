@@ -20,6 +20,25 @@ module SchoolInfoDeduplicator
   def process_school_info_attributes(school_info_attr)
     attr = school_info_attr.symbolize_keys
 
+    # Names of state and zip fields change between form fields and SchoolInfo class
+    attr[:state] ||= school_info_attr['school_state']
+    attr[:zip] ||= school_info_attr['school_zip']
+
+    attr.slice!(
+      :country,
+      :school_type,
+      :state,
+      :zip,
+      :school_district_id,
+      :school_district_other,
+      :school_district_name,
+      :school_id,
+      :school_other,
+      :school_name,
+      :full_address,
+      :validation_type
+    )
+
     # Remove empty attributes.  Notably school_district_id can come through
     # as an empty string when we don't want anything.
     attr.delete_if { |_, e| e.blank? }
