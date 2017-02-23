@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { getStore } from '../redux';
 import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
@@ -98,6 +99,10 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
+        const imageData = `data:image/png;base64,${decodeURIComponent(report.image)}`;
+        window.fetch && fetch(imageData).then(img => img.blob()).then(blob => {
+          files.putFile('image.png', blob);
+        });
         return;
       }
       if (appOptions.channel && !appOptions.level.edit_blocks &&
