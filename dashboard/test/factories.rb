@@ -684,7 +684,6 @@ FactoryGirl.define do
   factory :school_info_non_us_homeschool, class: SchoolInfo do
     country 'GB'
     school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
-    school_name 'Home'
     full_address '31 West Bank, London, England'
   end
 
