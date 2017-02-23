@@ -33,7 +33,7 @@ const styles = {
     in_progress: {backgroundColor: color.mustardyellow},
     completed: {backgroundColor: '#0EBE0E'}
   }
-}
+};
 
 const ModuleAssignment = React.createClass({
   propTypes: {
@@ -44,10 +44,11 @@ const ModuleAssignment = React.createClass({
     return (
       <a href={this.props.moduleAssignmentData.link}>
         <div style={styles.moduleAssignmentSection}>
-          {this.props.moduleAssignmentData['category']}
+          {this.props.moduleAssignmentData.category}
           <div style={styles.ribbonWrapper}>
-            <div style={
-              Object.assign(
+            <div
+              className="ribbon"
+              style={Object.assign(
                 {},
                 styles.ribbon,
                 styles.ribbonStylesForStatus[`${this.props.moduleAssignmentData.status}`]
@@ -57,7 +58,7 @@ const ModuleAssignment = React.createClass({
           </div>
         </div>
       </a>
-    )
+    );
   }
 });
 
