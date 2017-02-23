@@ -49,6 +49,7 @@ Dashboard::Application.config.action_dispatch.show_exceptions = false
 
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
+require 'minitest/hooks/test'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -213,6 +214,26 @@ class ActiveSupport::TestCase
     teardown do
       Timecop.return
     end
+  end
+
+  include Minitest::Hooks
+  define_callbacks :setup_all, :teardown_all
+
+  def around_all
+    ActiveRecord::Base.transaction(requires_new: false) do
+      run_callbacks :setup_all
+      super
+      run_callbacks :teardown_all
+      raise ActiveRecord::Rollback
+    end
+  end
+
+  def self.setup_all(*args, &block)
+    set_callback(:setup_all, :before, *args, &block)
+  end
+
+  def self.teardown_all(*args, &block)
+    set_callback(:teardown_all, :after, *args, &block)
   end
 end
 

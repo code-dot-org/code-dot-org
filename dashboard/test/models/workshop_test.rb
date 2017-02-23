@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class WorkshopTest < ActiveSupport::TestCase
+  self.fixture_table_names = []
+
   # see also tests in OpsMailerTest
 
   def create_workshop(segment_starts_and_ends)
@@ -18,7 +20,7 @@ class WorkshopTest < ActiveSupport::TestCase
     end
   end
 
-  setup do
+  setup_all do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0)
 
     @old_workshop = create_workshop [[Time.now.utc - 10.days, Time.now.utc - 9.days]]
@@ -41,7 +43,7 @@ class WorkshopTest < ActiveSupport::TestCase
     @workshop_in_3_days = create_workshop [[today_start + 3.days, today_end + 3.days]]
   end
 
-  teardown do
+  teardown_all do
     Timecop.return
   end
 

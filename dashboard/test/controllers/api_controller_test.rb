@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'minitest/hooks/test'
 
 # Define this here to ensure that we don't incorrectly use the :pegasus version.
 def slog(h)
@@ -8,37 +7,30 @@ end
 
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
-  include Minitest::Hooks
 
-  def around_all
-    ActiveRecord::Base.transaction(requires_new: true) do
-      begin
-        @teacher = create(:teacher)
+  self.fixture_table_names = []
 
-        # make them an authorized_Teacher
-        cohort = create(:cohort)
-        cohort.teachers << @teacher
-        cohort.save!
+  setup_all do
+    @teacher = create(:teacher)
 
-        @teacher_other = create(:teacher)
+    # make them an authorized_Teacher
+    cohort = create(:cohort)
+    cohort.teachers << @teacher
+    cohort.save!
 
-        @section = create(:section, user: @teacher, login_type: 'word')
-        @student_1 = create(:follower, section: @section).student_user
-        @student_2 = create(:follower, section: @section).student_user
-        @student_3 = create(:follower, section: @section).student_user
-        @student_4 = create(:follower, section: @section).student_user
-        @student_5 = create(:follower, section: @section).student_user
+    @teacher_other = create(:teacher)
 
-        @flappy_section = create(:section, user: @teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
-        @student_flappy_1 = create(:follower, section: @flappy_section).student_user
-        @student_flappy_1.backfill_user_scripts
-        @student_flappy_1.reload
+    @section = create(:section, user: @teacher, login_type: 'word')
+    @student_1 = create(:follower, section: @section).student_user
+    @student_2 = create(:follower, section: @section).student_user
+    @student_3 = create(:follower, section: @section).student_user
+    @student_4 = create(:follower, section: @section).student_user
+    @student_5 = create(:follower, section: @section).student_user
 
-        super
-      ensure
-        raise ActiveRecord::Rollback
-      end
-    end
+    @flappy_section = create(:section, user: @teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
+    @student_flappy_1 = create(:follower, section: @flappy_section).student_user
+    @student_flappy_1.backfill_user_scripts
+    @student_flappy_1.reload
   end
 
   setup do

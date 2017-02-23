@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class LevelSourceTest < ActiveSupport::TestCase
-  setup do
+  self.fixture_table_names = []
+
+  setup_all do
     @level = create :level
     @level_source = create(:level_source, level_id: @level.id, data: 'data')
 
