@@ -168,15 +168,15 @@ class Ability
     if user.admin?
       can :manage, :all
 
-      cannot :manage, [
-        Activity,
-        Game,
-        Level,
-        Script,
-        ScriptLevel,
-        UserLevel,
-        UserScript
-      ]
+      # cannot :manage, [
+      #   Activity,
+      #   Game,
+      #   Level,
+      #   Script,
+      #   ScriptLevel,
+      #   UserLevel,
+      #   UserScript
+      # ]
     end
   end
 end
