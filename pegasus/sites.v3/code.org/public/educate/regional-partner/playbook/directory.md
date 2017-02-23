@@ -1,4 +1,4 @@
-﻿
+
 ---
 title: directory
 nav: regional_partner_playbook_nav
@@ -475,7 +475,7 @@ ________________
 <a id="ky"></a>
 
 ## Kentucky
-### [AdvanceKY](http://www.advanceky.com)<br/>
+### [AdvanceKentucky](http://www.advanceky.com)<br/>
 Kentucky	
 
 AdvanceKentucky is a statewide math-science initiative of the Kentucky Science and Technology Corporation (KSTC) dedicated to helping Kentucky’s students reach new heights in rigorous academic achievement.
