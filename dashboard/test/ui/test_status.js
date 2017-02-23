@@ -5,8 +5,8 @@
 // (see test_logs_controller.rb) which in turn gets its information from the
 // uploaded S3 logs and their metadata.
 
-// Lodash and Clipboard provided on test_status.html
-/* global _, Clipboard */
+// Globals are provided on test_status.html
+/* global _, Clipboard, setTabStatusIcon */
 
 // Gather metadata for the run
 const COMMIT_HASH = document.querySelector('#commit-hash').dataset.hash;
@@ -281,6 +281,16 @@ function updateProgressNow() {
     failureCount,
     pendingCount
   });
+
+  // Set the tab's status icon according to how complete the test run is
+  if (failureCount > 0) {
+    setTabStatusIcon('fail');
+  } else if (pendingCount > 0) {
+    setTabStatusIcon('in-progress');
+  } else {
+    setTabStatusIcon('pass');
+  }
+
   // Disable auto-refresh if the test run is done and green.
   if (pendingCount + failureCount === 0) {
     disableAutoRefresh();

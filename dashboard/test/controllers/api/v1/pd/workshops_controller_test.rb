@@ -44,6 +44,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_2.id, response[0]['id']
   end
 
+  test 'with the enrollments param, enrollment IDs are included in the response' do
+    sign_in @organizer
+    enrollment = create :pd_enrollment, workshop: @workshop, email: @organizer.email
+
+    get :index, params: {include_enrollments: true}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal @workshop.id, response[0]['id']
+    assert_equal enrollment.id, response[0]['enrollment_id']
+  end
+
   test 'workshop organizers cannot list workshops they are not organizing' do
     sign_in create(:workshop_organizer)
     get :index
