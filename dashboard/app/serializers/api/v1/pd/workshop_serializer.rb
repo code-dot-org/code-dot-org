@@ -53,6 +53,6 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   end
 
   def enrollment_id
-    @scope.try(:id)
+    @scope.try(:[], :enrollment_id)
   end
 end
