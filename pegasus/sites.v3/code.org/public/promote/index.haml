@@ -17,8 +17,10 @@ theme: responsive
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
+%link{:href=>"../css/promote.css", :rel=>"stylesheet"}
+
 #promote-page
-  %h1{:style=>'margin-bottom:15px;'} Promote Computer Science
+  %h1 Promote Computer Science
 
   %div{:id=>'us_content'}
 
@@ -42,7 +44,7 @@ theme: responsive
 
   %div{:id=>'universal_content'}
     #youtube-section.section.clear
-      %h2{:style=>'margin-top: 0px'} Tell the world! Share the Code.org video
+      %h2 Tell the world! Share the Code.org video
       = view :youtube_videos
 
     #quotes-section.section.clear
