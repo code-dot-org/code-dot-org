@@ -27,6 +27,10 @@
   = f.label :show_d_pad
   = boolean_check_box f, :show_d_pad
 
+.field
+  = f.label :expand_debugger, 'Expand Debugger by Default'
+  = boolean_check_box f, :expand_debugger
+
 = render partial: 'levels/editors/watchers_ui', locals: {f: f}
 
 .field
