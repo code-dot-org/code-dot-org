@@ -1,5 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from './SummaryProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
@@ -97,13 +96,7 @@ export default storybook => {
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
-            sectionId="11"
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { }
-              }
-            })}
+            lessonIsHidden={() => false}
           />
         )
       },
@@ -115,11 +108,8 @@ export default storybook => {
             levelsByLesson={levelsByLesson}
             viewAs={ViewType.Teacher}
             sectionId="11"
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { '2': true }
-              }
-            })}
+            lessonIsHidden={(lessonId, viewAs) =>
+              (lessonId === 2 && viewAs === ViewType.Student)}
           />
         )
       },
@@ -131,43 +121,36 @@ export default storybook => {
             levelsByLesson={levelsByLesson}
             viewAs={ViewType.Teacher}
             sectionId="11"
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { '3': true }
-              }
-            })}
+            lessonIsHidden={(lessonId, viewAs) =>
+              (lessonId === 3 && viewAs === ViewType.Student)}
           />
         )
       },
       {
         name:'even row is hidden, viewing as student',
+        description: 'Row 2 should not be visible',
         story: () => (
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
+            viewAs={ViewType.Student}
             sectionId="11"
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { '2': true }
-              }
-            })}
+            lessonIsHidden={(lessonId, viewAs) =>
+              (lessonId === 2 && viewAs !== ViewType.Teacher)}
           />
         )
       },
       {
         name:'odd row is hidden, viewing as student',
+        description: 'Row 3 should not be visible',
         story: () => (
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
+            viewAs={ViewType.Student}
             sectionId="11"
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { '3': true }
-              }
-            })}
+            lessonIsHidden={(lessonId, viewAs) =>
+              (lessonId === 3 && viewAs !== ViewType.Teacher)}
           />
         )
       }
