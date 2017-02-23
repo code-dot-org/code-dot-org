@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
-#
+
 # This script resets `User.terms_of_service_version` to nil for all users.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 begin
   User.

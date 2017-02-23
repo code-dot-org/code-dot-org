@@ -1,0 +1,11 @@
+name 'CSD: For Loops'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# For Loops
+
+# Condition
+
+# Start Value
+
+# Incrementor
+MARKDOWN

@@ -66,6 +66,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.microsoft.com/about/corporatecitizenship/en-us/working-responsibly/principled-business-practices/integrity-governance/political-engagement/"_blank">Microsoft</a> 
 * <a href="https://www.nms.org/">National Math and Science Initiative</a> 
 * <a href="https://www.ncwit.org/">NCWIT</a>
+* <a href="http://nextech.org/">Nextech</a>
 * <a href="http://www.osc.org/">Orlando Science Center</a>
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>

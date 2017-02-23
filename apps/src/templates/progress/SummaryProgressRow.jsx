@@ -3,6 +3,8 @@ import color from "@cdo/apps/util/color";
 import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { levelType, lessonType } from './progressTypes';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { lessonIsHidden } from './progressHelpers';
 
 export const styles = {
   lightRow: {
@@ -51,17 +53,27 @@ export const styles = {
   }
 };
 
-const SummaryRow = React.createClass({
+const SummaryProgressRow = React.createClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
     lessonNumber: PropTypes.number.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    hiddenForStudents: PropTypes.bool.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    sectionId: PropTypes.string,
+    hiddenStageState: PropTypes.object.isRequired,
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels, hiddenForStudents } = this.props;
+    const { dark, lesson, lessonNumber, levels } = this.props;
+
+    if (lessonIsHidden(this.props)) {
+      return null;
+    }
+
+    // Is this a hidden stage that we still render because we're a teacher
+    const hiddenForStudents = lessonIsHidden({...this.props, viewAs: ViewType.Student });
+
     return (
       <tr
         style={{
@@ -91,4 +103,5 @@ const SummaryRow = React.createClass({
     );
   }
 });
-export default SummaryRow;
+
+export default SummaryProgressRow;
