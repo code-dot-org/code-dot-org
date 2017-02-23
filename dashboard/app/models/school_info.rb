@@ -75,9 +75,16 @@ class SchoolInfo < ActiveRecord::Base
 
   validate :validate_with_country
   validate :validate_without_country
+  validate :validate_zip
 
   def should_validate?
     validation_type != VALIDATION_NONE
+  end
+
+  def validate_zip
+    if zip
+      errors.add(:zip, 'Invalid zip code') unless zip > 0
+    end
   end
 
   # Validate records in the newer data format (see school_info_test.rb for details).

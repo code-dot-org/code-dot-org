@@ -27,7 +27,7 @@ window.SignupManager = function (options) {
 
   function formError(err) {
     // Define the fields that can have specific errors attached to them.
-    var fields = ["user_type", "name", "email", "password", "password_confirmation", "schoolname", "schooladdress", "age", "gender", "terms_of_service_version"];
+    var fields = ["user_type", "name", "email", "password", "password_confirmation", "schoolname", "schooladdress", "age", "gender", "terms_of_service_version", "school_info.zip"];
 
     for (var i = 0; i < fields.length; i++) {
       var field = fields[i];
@@ -36,6 +36,9 @@ window.SignupManager = function (options) {
          // We have a custom inline message for user_type errors already set in the DOM.
         if (field === "terms_of_service_version") {
           errorField.text(self.options.acceptTermsString);
+        } else if (field === "school_info.zip") {
+          errorField = $('#school-zip').find('.error_in_field');
+          errorField.text(err.responseJSON.errors[field][0]);
         } else if (field !== "user_type") {
           errorField.text(err.responseJSON.errors[field][0]);
         }
