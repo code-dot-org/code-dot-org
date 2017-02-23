@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-02-23T04:15:31.000Z",
+  "created_at": "2017-02-23T20:24:04.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -62,13 +62,13 @@
       "timedLoop": null,
       "stopTimedLoop": null,
       "forLoop_i_0_4": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+      "toggleSwitch.isOpen": null,
+      "isPressed": null
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Toggle with a Button\r\n\r\nUsing `onBoardEvent()`, can you write a program that toggles the red LED when you click the left button?",
     "instructions_important": "false",
-    "start_blocks": "// When the left button is clicked, toggle the red LED",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -88,7 +88,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
-    "free_play": "false",
+    "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
@@ -102,10 +102,10 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "start_blocks": "var currentled = 0;\r\nonBoardEvent(\"buttonL\", \"press\", function(event) {\r\n  colorLeds[current_led].toggle();\r\n  current_led = current_led + 1;\r\n});\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  colorLeds[current_led].toggle();\r\n  current_led = current_led - 1;\r\n  if (current_led < 0) {\r\n    current_led = colorLeds.length - 1;\r\n  }\r\n});",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 29px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 34px; position: absolute; left: 0px; top: 35px; text-align: center;\" id=\"title_label\">Button Tug o' War</label><input type=\"range\" value=\"0\" min=\"-10\" max=\"10\" step=\"1\" id=\"tug_slider\" style=\"margin: 0px; padding: 0px; width: 300px; height: 24px; position: absolute; left: 10px; top: 225px;\"></div></div>",
+    "markdown_instructions": "# Debug\r\n\r\n<[gif needed]>\r\n\r\nThis program should work like the image on the right - toggle LEDs one by one in the direction of the button you click. Clicking the left button should cause LEDs to toggle counter clockwise, while clicking the right button should toggle LEDs clockwise. Find and fix all of the bugs to get the program working again.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
