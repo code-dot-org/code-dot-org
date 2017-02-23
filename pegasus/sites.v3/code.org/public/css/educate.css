@@ -1,18 +1,18 @@
-.educate-banner{
+.educate-banner {
   border-radius: 5px;
   width: 100%;
 }
 
-#educate-curriculum-grid, #educate-resources-grid{
+#educate-curriculum-grid, #educate-resources-grid {
   width: 100%;
 }
 
-#educate-curriculum-grid{
+#educate-curriculum-grid {
   margin-top: 20px;
 }
 
 .educate-container {
-  position:relative;
+  position: relative;
   float: left;
 }
 

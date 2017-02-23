@@ -20,7 +20,7 @@ theme: responsive
 
 </div>
 
-<div class="col-66">
+<div class="col-50">
 
 Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Microsoft, Facebook, the Infosys Foundation, Google, Omidyar Network, and <a href="/about/donors">many more</a>.
 
@@ -29,13 +29,15 @@ Code.org&reg; is a non-profit dedicated to expanding access to computer science,
 
 <div style="clear: both;"></div>
 
-## Diversity of students in our courses
+## Diversity of students in our courses</h2>
 
-<img src="/images/infographics/fit-800/diversity-courses.png" style="width: 100%">
+<img src="/images/infographics/fit-800/diversity-courses.png" style="width: 95%;">
 
-Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about [our efforts to increase diversity in computer science](/diversity).
+Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Read  about <a href="/diversity">our efforts to increase diversity in computer science</a>.
+
 
 <br />
+
 
 ## Code.org in the News
 See all past [news and announcements](/about/news).

@@ -25,13 +25,16 @@
 
     -if header['theme'] == 'responsive'
       -if header['nav']
-        %div{:style=>'width: 140px; margin-right: 40px; float: left;'}
-          -if header['nav'].nil? || header['nav'] == 'blank'
-            &nbsp;
-          -else
-            = view(header['nav'])
-                
-      =body
+        %div
+          .col-80-right
+            =body
+          %div.left-nav.desktop-feature
+            -if header['nav'].nil? || header['nav'] == 'blank'
+              &nbsp;
+            -else
+              = view(header['nav'])
+      -else
+        =body
 
       #clearboth{:style=>"clear:both"}
       .desktop-feature

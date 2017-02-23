@@ -52,10 +52,13 @@
   .col-32 { width: 32%; float:left; }
   .col-33 { width: 33%; float:left; }
   .col-36 { width: 36%; float:left; }
+  .col-45 { width: 45%; float:left; }
   .col-50 { width: 50%; float:left; }
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
   .col-80 { width: 80%; float:left; }
+  .col-80-right { width: 80%; float: right; }
+  .left-nav { width: 100px; float: left; }
 
   .desktop-pad-right { padding-right: 30px; }
 
@@ -118,6 +121,7 @@
   .col-33 { width: 100% }
   .col-33 img { margin-left: 25px; }
   .col-36 { width: 100% }
+  .col-45 { width: 100%; float:left; }
   .col-50 { width: 100%; float:left; }
   .col-63 { width: 100%;}
   .col-66 { width: 100% }
