@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'cdo/contact_rollups'
-require 'cdo/pardot'
 
 PEGASUS_TEST_DB_NAME = "pegasus_#{Rails.env}"
 COLUMN_NAME_TO_INDEX_MAP = { "roles": 0, "ages_taught": 1 }.freeze
@@ -81,7 +80,8 @@ class PardotTest < ActiveSupport::TestCase
   end
 
   def create_follower_helper(section, age)
-    @student = create(:student, birthday: Time.zone.today - age.years)
+    # subtract an additional day when calculating birthday for desired age to avoid time zone issues
+    @student = create(:student, birthday: Time.zone.today - age.years - 1.days)
     create(:follower, section: section, student_user: @student)
   end
 end
