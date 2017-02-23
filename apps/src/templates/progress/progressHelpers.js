@@ -9,8 +9,5 @@ import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
  */
 export function lessonIsHidden({lesson, viewAs, sectionId, hiddenStageState}) {
   const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
-  if (isHidden && viewAs !== ViewType.Teacher) {
-    return true;
-  }
-  return false;
+  return isHidden && viewAs !== ViewType.Teacher;
 }
