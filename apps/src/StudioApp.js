@@ -1990,12 +1990,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     return;
   }
 
-  // Ensure global ace variable is the same as window.ace
-  // (important because they can be different in our test environment)
-  /* eslint-disable */
-  ace = window.ace;
-  /* eslint-enable */
-
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
   // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
   // was initialized, so include it initially, and conditionally remove it here.
