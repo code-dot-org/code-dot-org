@@ -126,6 +126,9 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
 
   componentDidMount() {
     this.props.setStepSpeed(this.props.stepSpeed);
+    if (this.props.isOpen) {
+      this.slideOpen();
+    }
 
     const mouseUpTouchEventName = dom.getTouchEventName('mouseup');
 

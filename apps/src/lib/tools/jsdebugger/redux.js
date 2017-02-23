@@ -5,6 +5,7 @@ import CommandHistory from './CommandHistory';
 import JSInterpreter from '../../../JSInterpreter';
 import watchedExpressions from '@cdo/apps/redux/watchedExpressions';
 import runState from '@cdo/apps/redux/runState';
+import experiments from '../../../util/experiments';
 
 const WATCH_TIMER_PERIOD = 250;
 const INITIALIZE = 'jsdebugger/INITIALIZE';
@@ -246,7 +247,12 @@ function appendLogOutput(logOutput, output) {
   return logOutput;
 }
 
-export function reducer(state = new JSDebuggerState(), action) {
+export function reducer(state, action) {
+  if (!state) {
+    state = new JSDebuggerState({
+      isOpen: !experiments.isEnabled('collapse-debugger'),
+    });
+  }
   if (action.type === INITIALIZE) {
     return state.merge({
       runApp: action.runApp,
