@@ -45,6 +45,13 @@ GIT
       oauth (>= 0.4.5)
 
 GIT
+  remote: git://github.com/wjordan/minitest-hooks.git
+  revision: 3796f8bda5e215734a06794b422fd04c62c8de4f
+  ref: cdo
+  specs:
+    minitest-hooks (1.4.0)
+
+GIT
   remote: git://github.com/wjordan/omniauth-windowslive.git
   revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
   ref: cdo
@@ -366,7 +373,6 @@ GEM
     minitest (5.10.1)
     minitest-around (0.3.2)
       minitest (~> 5.0)
-    minitest-hooks (1.4.0)
     minitest-reporters (1.1.10)
       ansi
       builder
@@ -698,7 +704,7 @@ DEPENDENCIES
   mini_magick
   minitest (~> 5.5)
   minitest-around
-  minitest-hooks
+  minitest-hooks!
   minitest-reporters
   minitest-test_profile
   mocha
