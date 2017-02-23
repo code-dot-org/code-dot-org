@@ -157,7 +157,7 @@ class ActivitiesControllerTest < ActionController::TestCase
         script_level_id: @script_level.id,
         level_id: @script_level.level.id,
         user_agent: 'Rails Testing',
-        locale: :'en-us'
+        locale: :'en-US'
       }],
       slogger.records
     )

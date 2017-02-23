@@ -8,27 +8,27 @@ require 'redcarpet/render_strip'
 TTS_BUCKET = 'cdo-tts'
 
 VOICES = {
-  'en-us': {
+  'en-US': {
     VOICE: 'sharon22k',
     SPEED: 180,
     SHAPE: 100
   },
-  'es-es': {
+  'es-ES': {
     VOICE: 'ines22k',
     SPEED: 180,
     SHAPE: 100,
   },
-  'es-mx': {
+  'es-MX': {
     VOICE: 'rosa22k',
     SPEED: 180,
     SHAPE: 100,
   },
-  'it-it': {
+  'it-IT': {
     VOICE: 'vittorio22k',
     SPEED: 180,
     SHAPE: 100,
   },
-  'pt-br': {
+  'pt-BR': {
     VOICE: 'marcia22k',
     SPEED: 180,
     SHAPE: 100,
@@ -81,7 +81,7 @@ module TextToSpeech
   def self.localized_voice
     # Use localized voice if we have a setting for the current locale;
     # default to English otherwise.
-    loc = TextToSpeech.locale_supported?(I18n.locale) ? I18n.locale : :'en-us'
+    loc = TextToSpeech.locale_supported?(I18n.locale) ? I18n.locale : :'en-US'
     VOICES[loc]
   end
 
