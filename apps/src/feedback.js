@@ -387,7 +387,7 @@ FeedbackUtils.prototype.calculateStageProgress = function (hintsUsed) {
     numZeroHints = 0,
     numOneHint = 0;
   for (let i = 0; i < levels.length; i++) {
-    const levelProgress = Math.max.apply(Math, levels[i].ids.map(id => progress[scriptName][id]));
+    const levelProgress = ClientState.bestProgress(levels[i].ids, scriptName, progress);
     if (levelProgress > TestResults.MINIMUM_PASS_RESULT) {
       numPassed++;
       if (levelProgress > TestResults.MINIMUM_OPTIMAL_RESULT) {

@@ -166,6 +166,21 @@ clientState.allLevelsProgress = function () {
 };
 
 /**
+ * Returns the best progress of any of the specified levels
+ * @param {Array.<number>} levelIds List of level ids to check for progress
+ * @param {string} scriptName Script in which to check for progress
+ * @param {Object=} progress A map from level id to progress values. Will be
+ *  fetched from sessionStorage if not provided.
+ */
+clientState.bestProgress = function (levelIds, scriptName, progress) {
+  if (!progress) {
+    progress = clientState.allLevelsProgress();
+  }
+  return Math.max.apply(Math, levelIds.filter(id => progress[scriptName][id])
+      .map(id => progress[scriptName][id])) || 0;
+};
+
+/**
  * Returns the number of lines completed from the cookie.
  * @returns {number}
  */
