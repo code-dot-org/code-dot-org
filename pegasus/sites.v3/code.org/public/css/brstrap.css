@@ -54,6 +54,7 @@
   .col-36 { width: 36%; float:left; }
   .col-45 { width: 45%; float:left; }
   .col-50 { width: 50%; float:left; }
+  .col-50-student { width: 50%; float:left; }
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
   .col-80 { width: 80%; float:left; }
@@ -100,8 +101,11 @@
    position: absolute;
    min-height: 250px;
  }
-}
 
+ .orange-button, .gray-button {
+   margin-bottom: 40px;
+ }
+}
 
 /* 970px and down: minimal headers */
 
@@ -122,12 +126,12 @@
   .col-33 img { margin-left: 25px; }
   .col-36 { width: 100% }
   .col-45 { width: 100%; float:left; }
-  .col-50 { width: 100%; float:left; }
+  .col-50-student { width: 500px; float:left; }
   .col-63 { width: 100%;}
   .col-66 { width: 100% }
   .col-80 { width: 100% }
 
-  .col-mobile-50 { width: 50%; float:left; }
+  .col-mobile-50 { width: 100%; float:left; }
   .col-mobile-44 { width: 44%; float:left; }
   .col-mobile-56 { width: 56%; float:left; }
 
@@ -143,7 +147,7 @@
  .right .side-image, .right .side-description-area {
    border-bottom-left-radius: 5px;
    border-bottom-right-radius: 5px;
-   margin-top: -5%;
+   margin-top: -10%;
  }
 
   .left .side-image, .left .side-description-area {
@@ -172,6 +176,10 @@
    position: absolute;
    min-height: 210px;
  }
+
+ .orange-button, .gray-button {
+   margin-bottom: 70px;
+ }
 }
 
 
@@ -188,4 +196,9 @@
   .mobile-show-medium { display: none }
 
   .mobile-small-hide { display: none }
+  .col-50-student { width: 380px; float:left; }
+
+  .orange-button, .gray-button {
+    margin-bottom: 55px;
+  }
 }
