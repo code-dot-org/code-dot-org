@@ -13,9 +13,14 @@ elsif ENV['CI'] # this is set by circle
   # Coveralls.wear!('rails')
 end
 
-require 'minitest/reporters'
-Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
+require 'minitest/test_profile'
+MiniTest::TestProfile.use!
 
+require 'minitest/reporters'
+Minitest::Reporters.use! [
+  Minitest::Reporters::SpecReporter.new,
+  Minitest::TestProfile::Reporter.new
+]
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"

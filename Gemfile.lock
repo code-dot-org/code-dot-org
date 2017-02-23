@@ -371,6 +371,9 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    minitest-test_profile (0.2.1)
+      coveralls
+      minitest
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multi_json (1.12.1)
@@ -695,6 +698,7 @@ DEPENDENCIES
   minitest (~> 5.5)
   minitest-around
   minitest-reporters
+  minitest-test_profile
   mocha
   mysql2 (~> 0.3.13)
   naturally
