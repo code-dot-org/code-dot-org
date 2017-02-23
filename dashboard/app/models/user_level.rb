@@ -55,7 +55,7 @@ class UserLevel < ActiveRecord::Base
 
   def perfect?
     return false if best_result.nil?
-    result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
+    best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
   end
 
   def finished?
