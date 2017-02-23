@@ -10,6 +10,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ### Miscellaneous
 
 * AP Computer Science A is the [fastest-growing](http://blog.code.org/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
+* Code.org [updated our position](http://blog.code.org/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 * [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
 * Computing occupations are the [#1 source of new wages](http://blog.code.org/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://blog.code.org/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968).
