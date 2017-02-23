@@ -79,6 +79,7 @@ AuthoredHints.prototype.submitHints = function (url) {
 
 /**
  * @param {AuthoredHint[]} hints
+ * @param {String[]} hintsUsedIds
  * @param {number} scriptId
  * @param {number} levelId
  */
