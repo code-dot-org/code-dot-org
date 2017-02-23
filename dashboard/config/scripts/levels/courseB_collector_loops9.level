@@ -30,7 +30,7 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Does this seem too hard?  Break it up into 4 little problems to make it feel easier.\\n\",\"hint_id\":\"courseB_collector_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de3a2f945eebf3c58e7be623a1c5ae78/courseB_collector_loops9.mp3\"}]",
     "ideal": "12",
     "instructions_important": "false",
-    "min_collected": "11",
+    "min_collected": "10",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "contained_level_names": null
