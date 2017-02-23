@@ -5,6 +5,20 @@ PEGASUS_TEST_DB_NAME = "pegasus_#{Rails.env}"
 COLUMN_NAME_TO_INDEX_MAP = { "roles": 0, "ages_taught": 1 }.freeze
 
 class PardotTest < ActiveSupport::TestCase
+  def setup
+    # Create the contact_rollups_daily table, which in production exists only on the replica server. Do it here outside
+    # the main ActiveRecord connection. The test framework runs the test inside a transaction on the ActiveRecord connection
+    # in order to be able to roll back the transaction and discard test changes at the end of the test. CREATE TABLE on
+    # that connection would cause an implicit commit of the transaction and break tests. The simplest way to get a different
+    # ActiveRecord connection is to run the command in a different thread. The structure below ensures the connection
+    # is returned to the connection pool at the end of the block.
+    Thread.new do
+      ActiveRecord::Base.connection_pool.with_connection do |connection|
+        connection.execute "CREATE TABLE IF NOT EXISTS pegasus_test.contact_rollups_daily LIKE pegasus_test.contact_rollups"
+      end
+    end.join
+  end
+
   def test_empty_contacts
     # Test the rollup process with an empty database
     rollups_test_helper 0, []

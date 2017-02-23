@@ -185,8 +185,10 @@ class ContactRollups
     # runs the test inside a transaction on the ActiveRecord connection in order to be able to roll back the transaction
     # and discard test changes at the end of the test. CREATE TABLE on that connection would cause an implicit commit
     # of the transaction and break tests. So we use a different connection to run schema modification commands.
-    PEGASUS_REPORTING_DB.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
-    PEGASUS_REPORTING_DB.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
+    unless Rails.env.test?
+      PEGASUS_REPORTING_DB.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
+      PEGASUS_REPORTING_DB.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
+    end
 
     log_completion(start)
   end
