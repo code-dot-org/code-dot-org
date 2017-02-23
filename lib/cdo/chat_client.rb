@@ -24,23 +24,11 @@ class ChatClient
     post_to_hipchat(room, message, options)
 
     channel = "\##{Slack::CHANNEL_MAP[room] || room}"
-    Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
+    Slack.message message.to_s, channel: channel, username: @@name, color: options[:color]
   end
 
-  def self.slackify(message)
-    # format with slack markdownish formatting instead of html
-    # https://slack.zendesk.com/hc/en-us/articles/202288908-Formatting-your-messages
-    message.strip!
-    message = "```#{message[7..-1]}```" if message =~ /^\/quote /
-    message.
-      gsub(/<\/?i>/, '_').
-      gsub(/<\/?b>/, '*').
-      gsub(/<\/?pre>/, '```').
-      gsub(/<a href=['"]([^'"]+)['"]>/, '<\1|').
-      gsub(/<\/a>/, '>').
-      gsub(/<br\/?>/, "\n")
-  end
-
+  # TODO(asher): Deprecate this method. There appears to be a test dependency
+  # on this CDO.log.info output happening.
   def self.post_to_hipchat(room, message, options={})
     unless CDO.hip_chat_logging
       # Output to standard log if HipChat isn't configured
