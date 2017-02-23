@@ -15,7 +15,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   def populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
-    Script.script_cache_to_cache
+    # Only need to populate cache once per test-suite run
+    @@script_cached ||= Script.script_cache_to_cache
     Script.script_cache_from_cache
     ActiveRecord::Base.connection.disconnect!
   end
