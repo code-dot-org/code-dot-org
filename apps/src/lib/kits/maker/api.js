@@ -27,10 +27,6 @@ export function analogRead(pin, callback) {
   return executeCmd(null, 'analogRead', {pin, callback});
 }
 
-export function timedLoop(ms, callback) {
-  return executeCmd(null, 'timedLoop', {ms, callback});
-}
-
 export function onBoardEvent(component, event, callback) {
   return executeCmd(null, 'onBoardEvent', {component, event, callback});
 }

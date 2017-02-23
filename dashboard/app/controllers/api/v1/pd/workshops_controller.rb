@@ -15,7 +15,16 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.organized_by(current_user)
     end
 
-    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+    if params[:include_enrollments]
+      return_val = @workshops.map do |workshop|
+        enrollment = workshop.enrollments.where('email = ? OR user_id = ?', current_user.email, current_user.id).first
+        Api::V1::Pd::WorkshopSerializer.new(workshop, scope: {enrollment_id: enrollment.try(&:id)}).attributes
+      end
+
+      render json: return_val
+    else
+      render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+    end
   end
 
   # Upcoming (not started) public CSF workshops.

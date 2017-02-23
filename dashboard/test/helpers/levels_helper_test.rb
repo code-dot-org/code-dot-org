@@ -41,8 +41,8 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "non-custom level displays localized instruction after locale switch" do
-    default_locale = 'en-us'
-    new_locale = 'es-es'
+    default_locale = 'en-US'
+    new_locale = 'es-ES'
     @level.instructions = nil
     @level.user_id = nil
     @level.level_num = '2_2'
@@ -60,7 +60,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "custom level displays english instruction" do
-    default_locale = 'en-us'
+    default_locale = 'en-US'
     @level.name = 'frozen line'
 
     I18n.locale = default_locale
@@ -69,8 +69,8 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "custom level displays localized instruction if exists" do
-    default_locale = 'en-us'
-    new_locale = 'es-es'
+    default_locale = 'en-US'
+    new_locale = 'es-ES'
 
     I18n.locale = new_locale
     @level.name = 'frozen line'

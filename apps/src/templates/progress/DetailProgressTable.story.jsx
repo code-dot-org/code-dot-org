@@ -1,6 +1,8 @@
 import React from 'react';
 import Immutable from 'immutable';
-import { UnconnectedDetailProgressTable as DetailProgressTable } from './DetailProgressTable';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import DetailProgressTable from './DetailProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
@@ -87,6 +89,20 @@ const levelsByLesson = [
   ]
 ];
 
+const createStoreWithHiddenLesson = (viewAs, lessonId) => {
+  return createStore(state => state, {
+    stageLock: { viewAs },
+    sections: {
+      selectedSectionId: '11'
+    },
+    hiddenStage: Immutable.fromJS({
+      bySection: {
+        '11': { [lessonId]: true }
+      }
+    })
+  });
+};
+
 export default storybook => {
   storybook
     .storiesOf('DetailProgressTable', module)
@@ -94,31 +110,55 @@ export default storybook => {
       {
         name:'simple DetailProgressTable',
         story: () => (
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
-            sectionId={'11'}
-            hiddenStageMap={Immutable.fromJS({
-              '11': {}
-            })}
-          />
+          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+            <DetailProgressTable
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+              viewAs={ViewType.Teacher}
+              sectionId={'11'}
+              hiddenStageMap={Immutable.fromJS({
+                '11': {}
+              })}
+            />
+          </Provider>
         )
       },
       {
-        name:'with hidden lesson',
+        name:'with hidden lesson as teacher',
+        description: 'lesson 2 should be white with dashed outline',
         story: () => (
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
-            sectionId={'11'}
-            hiddenStageMap={Immutable.fromJS({
-              '11': {
-                '2': true
-              }
-            })}
-          />
+          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
+            <DetailProgressTable
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+              viewAs={ViewType.Teacher}
+              sectionId={'11'}
+              hiddenStageMap={Immutable.fromJS({
+                '11': {
+                  '2': true
+                }
+              })}
+            />
+          </Provider>
+        )
+      },
+      {
+        name:'with hidden lesson as student',
+        description: 'lesson 2 should be invisible',
+        story: () => (
+          <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
+            <DetailProgressTable
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+              viewAs={ViewType.Teacher}
+              sectionId={'11'}
+              hiddenStageMap={Immutable.fromJS({
+                '11': {
+                  '2': true
+                }
+              })}
+            />
+          </Provider>
         )
       }
     ]);

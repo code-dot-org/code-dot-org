@@ -19,8 +19,12 @@ class AssetMap
   end
 
   def asset_path(asset)
+    # Don't require developers to precompile assets.
+    return asset if rack_env?(:development) && !@asset_map
     raise "Asset map not initialized" unless @asset_map
     asset_path = @asset_map[asset]
+    # Don't require developers to precompile assets.
+    return asset if rack_env?(:development) && !asset_path
     raise "Asset not found in asset map: '#{asset}'" unless asset_path
     CDO.studio_url("/assets/#{asset_path}")
   end
