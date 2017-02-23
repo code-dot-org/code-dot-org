@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'cdo/solr'
 require src_dir 'forms'
 
@@ -56,7 +56,7 @@ def process_batch_of_forms(batch_size)
         processed_data = kind.process(JSON.load(form[:data]))
       end
     rescue AbortFormError => e
-      HipChat.log "Unable to process form #{form[:id]} because #{e.message}."
+      ChatClient.log "Unable to process form #{form[:id]} because #{e.message}."
       DB[:forms].where(id: form[:id]).update(processed_at: 0, indexed_at: 0, notified_at: 0)
       next
     end
@@ -101,7 +101,7 @@ def index_batch_of_forms(batch_size)
 
         documents << index_data
       rescue
-        HipChat.log "Form #{form[:id]} couldn't be indexed.", color: 'red', notify: 1
+        ChatClient.log "Form #{form[:id]} couldn't be indexed.", color: 'red', notify: 1
         raise
       end
 
@@ -115,7 +115,7 @@ def index_batch_of_forms(batch_size)
         begin
           SOLR.update([document])
         rescue => e
-          HipChat.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color: 'red', notify: 1
+          ChatClient.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color: 'red', notify: 1
           raise
         end
       end

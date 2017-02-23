@@ -2,7 +2,7 @@
 require_relative('../config/environment')
 require 'cdo/properties'
 
-ENABLED_LANGUAGES = [:'es-es', :'it-it', :'pt-br']
+ENABLED_LANGUAGES = [:'es-ES', :'it-IT', :'pt-BR']
 
 k1_script_names = [
   Script::COURSEA_DRAFT_NAME,

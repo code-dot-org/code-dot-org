@@ -115,6 +115,7 @@ const AchievementDialog = Radium(React.createClass({
     assetUrl: React.PropTypes.func,
     onContinue: React.PropTypes.func,
     showStageProgress: React.PropTypes.bool,
+    stageProgress: React.PropTypes.number,
   },
 
   getInitialState() {
@@ -176,10 +177,6 @@ const AchievementDialog = Radium(React.createClass({
     return tooManyHints ? locale.usingHints() : locale.withoutHints();
   },
 
-  stageProgress() {
-    return 0.75;
-  },
-
   render() {
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
@@ -212,7 +209,7 @@ const AchievementDialog = Radium(React.createClass({
               <div
                 style={{
                   ...styles.progressForeground,
-                  width: this.stageProgress() * MAX_PROGRESS_WIDTH
+                  width: this.props.stageProgress * MAX_PROGRESS_WIDTH
                 }}
               />
             </div>
