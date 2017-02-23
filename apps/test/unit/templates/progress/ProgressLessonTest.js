@@ -28,7 +28,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        lessonIsHidden={(lessonId, viewAs) => viewAs !== ViewType.Teacher}
+        lessonIsHidden={(lesson, viewAs) => viewAs !== ViewType.Teacher}
         viewAs={ViewType.Student}
         hiddenStageState={Immutable.fromJS({
           bySection: {
@@ -45,7 +45,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        lessonIsHidden={(lessonId, viewAs) => viewAs === ViewType.Student}
+        lessonIsHidden={(lesson, viewAs) => viewAs === ViewType.Student}
       />
     );
     assert.equal(wrapper.props().style.background, color.white);

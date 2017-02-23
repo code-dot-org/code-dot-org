@@ -11,7 +11,7 @@ import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
  *   would be visible if viewing as someone else
  * @returns {boolean} True if the provided lesson is hidden
  */
-export function lessonIsHidden(lessonId, state, viewAs) {
+export function lessonIsHidden(lesson, state, viewAs) {
   if (!viewAs) {
     viewAs = state.stageLock.viewAs;
   }
@@ -19,6 +19,6 @@ export function lessonIsHidden(lessonId, state, viewAs) {
   const hiddenStageState = state.hiddenStage;
   const sectionId = state.sections.selectedSectionId;
 
-  const isHidden = isHiddenForSection(hiddenStageState, sectionId, lessonId);
+  const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
   return isHidden && viewAs !== ViewType.Teacher;
 }

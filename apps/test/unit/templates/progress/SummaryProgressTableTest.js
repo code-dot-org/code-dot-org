@@ -40,7 +40,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        lessonIsHidden={(lessonId, viewAs) => lessonId === 2 && viewAs !== ViewType.Teacher}
+        lessonIsHidden={(lesson, viewAs) => lesson.id === 2 && viewAs !== ViewType.Teacher}
       />
     );
 
@@ -56,7 +56,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        lessonIsHidden={(lessonId, viewAs) => lessonId === 2 && viewAs === ViewType.Student}
+        lessonIsHidden={(lesson, viewAs) => lesson.id === 2 && viewAs === ViewType.Student}
       />
     );
 
