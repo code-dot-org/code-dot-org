@@ -198,7 +198,7 @@ under development configurations. Usually these bugs are related to the build
 system. To get them to repro, you need to configure your local environment to
 work more like production. Here are the steps to do that:
 
-1. Edit `dashboard/config/environments/development.rb` by changing `config.assets.digest` to
+1. Edit `dashboard/config/development.rb` by changing `config.assets.digest` to
    `true` and `config.assets.compile` to `false`. Edit `locals.yml` by setting `pretty_js` to
    `false`. This will make the rails app and pegasus look for minified js files that have
    already been processed by the rails asset pipeline.
