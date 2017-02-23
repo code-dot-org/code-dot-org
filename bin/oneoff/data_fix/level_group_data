@@ -2,7 +2,7 @@
 
 # This script performs two data migrations related to LevelGroup levels:
 #
-# (1) It migrates UserLevel.data for a LevelGroup level from the format
+# (1) It migrates LevelSource.data for a LevelGroup level from the format
 #   [{"level_id"=>4840, "result"=>"-1"}, {"level_id"=>4843, "result"=>"3"}]
 # to the format
 #   {"4840"=>{"result"=>"-1", "valid"=>true}, "4843"=>{"result"=>"3", "valid"=>true}}
