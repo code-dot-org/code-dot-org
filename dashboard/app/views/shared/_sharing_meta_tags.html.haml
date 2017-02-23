@@ -11,7 +11,7 @@
     = tag 'meta', name: 'twitter:site', content: '@codeorg'
     = tag 'meta', name: 'twitter:card', content: 'photo'
 
-    - if @level.game.app == Game::ARTIST
+    - if @level.game.app == Game::ARTIST && @project_image.nil?
       - meta_image_width = 500
       - meta_image_height = 261
     - else
@@ -25,6 +25,8 @@
       = tag 'meta', attr => "#{namespace}:url", content: request.original_url
 
       = tag 'meta', attr => "#{namespace}:image", content: meta_image_url(level_source: @level_source, level: @level)
+      - if @project_image
+        = tag 'meta', attr => "#{namespace}:image", content: @project_image
       = tag 'meta', attr => "#{namespace}:image:width", content: meta_image_width
       = tag 'meta', attr => "#{namespace}:image:height", content: meta_image_height
 
