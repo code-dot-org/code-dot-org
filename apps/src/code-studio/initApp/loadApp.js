@@ -27,6 +27,8 @@ import queryString from 'query-string';
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
 
+const SHARE_IMAGE_NAME = '_share_image.png';
+
 /**
  * When we have a publicly cacheable script, the server does not send down the
  * user's levelProgress, and instead we get it asynchronously. This method adds
@@ -101,7 +103,7 @@ export function setupApp(appOptions) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         const imageData = `data:image/png;base64,${decodeURIComponent(report.image)}`;
         window.fetch && fetch(imageData).then(img => img.blob()).then(blob => {
-          files.putFile('image.png', blob);
+          files.putFile(SHARE_IMAGE_NAME, blob);
         });
         return;
       }
