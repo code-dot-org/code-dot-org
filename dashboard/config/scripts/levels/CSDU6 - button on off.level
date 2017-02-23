@@ -60,6 +60,7 @@
       "buzzer.frequency": null,
       "buzzer.play": null,
       "timedLoop": null,
+      "stopTimedLoop": null,
       "forLoop_i_0_4": null,
       "onBoardEvent": null
     },
@@ -100,7 +101,10 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
