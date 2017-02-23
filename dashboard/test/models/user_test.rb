@@ -939,7 +939,7 @@ class UserTest < ActiveSupport::TestCase
       password: "[FILTERED]",
       password_confirmation: "[FILTERED]",
       current_password: "",
-      locale: "en-us",
+      locale: "en-US",
       gender: "",
       age: "10"
     )
