@@ -2,6 +2,8 @@ require_relative '../../deployment'
 require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
 require 'mocha/mini_test'
+
+CDO.dashboard_assets_dir = './test/fixtures/dashboard_assets'
 require_relative '../helpers/asset_helpers'
 
 class AssetHelpersTest < Minitest::Test
@@ -13,7 +15,9 @@ class AssetHelpersTest < Minitest::Test
   UNMINIFIED_ASSET_NOT_IN_MAP = 'foo.js'
   MINIFIED_ASSET_NOT_IN_MAP = 'foo.min.js'
 
-  def setup
+  # Restore the asset map from the test fixture, so as not to interfere with any other
+  # tests which depend on it.
+  def teardown
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/dashboard_assets')
     Singleton.__init__(AssetMap)
   end
