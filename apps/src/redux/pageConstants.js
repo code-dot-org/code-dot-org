@@ -50,7 +50,6 @@ var ALLOWED_KEYS = new Set([
   'is13Plus',
   'isSignedIn',
   'isK1',
-  'debuggerUi',
   'documentationUrl',
 ]);
 

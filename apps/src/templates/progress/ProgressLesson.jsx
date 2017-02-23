@@ -1,8 +1,12 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import ProgressLessonContent from './ProgressLessonContent';
 import FontAwesome from '../FontAwesome';
 import color from "@cdo/apps/util/color";
-import { levelType } from './progressTypes';
+import { levelType, lessonType } from './progressTypes';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import i18n from '@cdo/locale';
+import { lessonIsHidden } from './progressHelpers';
 
 const styles = {
   main: {
@@ -36,10 +40,15 @@ const styles = {
 
 const ProgressLesson = React.createClass({
   propTypes: {
-    title: PropTypes.string.isRequired,
     description: PropTypes.string,
+    lesson: lessonType.isRequired,
+    lessonNumber: PropTypes.number.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    hiddenForStudents: PropTypes.bool.isRequired,
+
+    // redux provided
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    sectionId: PropTypes.string,
+    hiddenStageState: PropTypes.object.isRequired,
   },
 
   getInitialState() {
@@ -55,8 +64,17 @@ const ProgressLesson = React.createClass({
   },
 
   render() {
-    const { title, description, levels, hiddenForStudents } = this.props;
+    const { description, lesson, lessonNumber, levels } = this.props;
+
+    if (lessonIsHidden(this.props)) {
+      return null;
+    }
+
+    // Is this a hidden stage that we still render because we're a teacher
+    const hiddenForStudents = lessonIsHidden({...this.props, viewAs: ViewType.Student });
+    const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
+
     return (
       <div
         style={{
@@ -88,4 +106,10 @@ const ProgressLesson = React.createClass({
   }
 });
 
-export default ProgressLesson;
+export const UnconnectedProgressLesson = ProgressLesson;
+
+export default connect(state => ({
+  viewAs: state.stageLock.viewAs,
+  sectionId: state.sections.selectedSectionId,
+  hiddenStageState: state.hiddenStage,
+}))(ProgressLesson);
