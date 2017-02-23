@@ -3,6 +3,10 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+  def around_all
+    yield
+  end
+
   setup do
     @good_data = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
     @good_data_young = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
@@ -746,7 +750,7 @@ class UserTest < ActiveSupport::TestCase
       )
     end
 
-    user.backfill_user_scripts
+    user.backfill_user_scripts([twenty_hour, hoc])
     assert_equal [twenty_hour, hoc], user.working_on_scripts
   end
 
@@ -778,7 +782,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       assert_creates(UserScript) do
-        user.backfill_user_scripts
+        user.backfill_user_scripts([script])
       end
 
       user_script = UserScript.last
@@ -828,7 +832,7 @@ class UserTest < ActiveSupport::TestCase
       complete_script_for_user(student, script, completed_date)
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts
+        student.backfill_user_scripts([script])
       end
 
       user_script = UserScript.last
@@ -861,7 +865,7 @@ class UserTest < ActiveSupport::TestCase
       ul.save!
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts
+        student.backfill_user_scripts [script]
       end
 
       user_script = UserScript.last
@@ -886,7 +890,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.needs_to_backfill_user_scripts?
 
     assert_creates(UserScript) do
-      user.backfill_user_scripts
+      user.backfill_user_scripts [script]
     end
 
     # now is backfilled (has a user script)

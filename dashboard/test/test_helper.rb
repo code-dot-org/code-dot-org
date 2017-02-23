@@ -222,7 +222,7 @@ class ActiveSupport::TestCase
   def around_all
     ActiveRecord::Base.transaction(requires_new: false) do
       run_callbacks :setup_all
-      super
+      yield
       run_callbacks :teardown_all
       raise ActiveRecord::Rollback
     end
