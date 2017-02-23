@@ -76,14 +76,15 @@
   %div.controls
     %input#school-name.form-control.fieldblock{name: "#{form_name}[school_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
 
-.itemblock{style: "display: none;"}
+#school-zip.itemblock{style: "display: none;"}
   .labelblock= t("School’s ZIP code")
   %input#school-zipcode.form-control.fieldblock{name: "#{form_name}[school_zip]", type: "text", required: false, style: "width: calc(100% - 15px);"}
+  .error_in_field{style: "padding: 0px; text-align: center;"}
 
 .itemblock{style: "display: none;"}
   .labelblock= t('School Address')
   %div.controls
-    %textarea#school-address.form-control.fieldblock{name: "#{form_name}[full_address]", required: false, rows: 4, style: "width: calc(100% - 15px);"}
+    %textarea#school-address.form-control.fieldblock{name: "#{form_name}[full_address]", required: false, rows: 4, style: "width: calc(100% - 15px); resize: vertical;"}
 
 :javascript
 
@@ -102,4 +103,5 @@
 
     // Send through some values that the JavaScript will need.
     window.schoolInfoManager = new SchoolInfoManager(options);
+    $('#school-zipcode').mask('00000'); // For now, only apply to registration page
   });
