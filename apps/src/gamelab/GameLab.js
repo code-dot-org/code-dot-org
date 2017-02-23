@@ -797,7 +797,7 @@ GameLab.prototype.initInterpreter = function () {
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  this.studioApp_.dispatch(jsDebugger.attach(this.JSInterpreter));
+  this.studioApp_.reduxStore.dispatch(jsDebugger.attach(this.JSInterpreter));
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-#
+
 # This script wipes plaintext emails associated with students, filling them with
 # empty strings, as part of an effort to reduce our PII footprint.
 #
@@ -10,10 +10,10 @@
 # followed by a migration performing the same task so as to assure all
 # environments incorporate this.
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../../dashboard/config/environment'
 
 if ARGV.length != 2
-  puts 'Usage: ./bin/oneoff/wipe_plaintext_email start_index end_index'
+  puts 'Usage: ./bin/oneoff/wipe_data/plaintext_email start_index end_index'
   exit 1
 end
 

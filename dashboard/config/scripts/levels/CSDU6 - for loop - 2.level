@@ -86,9 +86,13 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop\r\n\r\n* Run the program - how many times does it print?\r\n* Change the 4 to another positive number less than 10. What happens?\r\n* What happens if you change the 4 to a negative number?",
+    "markdown_instructions": "# For Loop - Condition\r\n\r\n* Run the program - how many times does it print?\r\n* Change the 4 to another positive number less than 10. What happens?\r\n* What happens if you change the 4 to a negative number?",
     "start_blocks": "for (var i = 0; i < 4; i++) {\r\n  console.log(\"message\");\r\n}",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",

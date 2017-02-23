@@ -175,7 +175,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/cc903e4a0fb57b241b90abe220f027ef-image-1487707484420.04.00.png\" style=\"float:right; margin-left: 10px; width: 50%\">\r\n# Changing the Input\r\n\r\nUsing another `onBoardEvent()` block, make `buttonR` change the screen back to \"red_screen\". The first input of the `onBoardEvent()` command lets you pick which board object to watch.",
+    "markdown_instructions": "# Changing the Input\r\n\r\n<img src=\"https://images.code.org/cc903e4a0fb57b241b90abe220f027ef-image-1487707484420.04.00.png\" style=\"float:right; margin-left: 10px; width: 50%\">\r\n\r\nUsing another `onBoardEvent()` block, make `buttonR` change the screen back to \"red_screen\". The first input of the `onBoardEvent()` command lets you pick which board object to watch.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
