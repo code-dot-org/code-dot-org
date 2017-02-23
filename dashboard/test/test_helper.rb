@@ -40,7 +40,6 @@ I18n.backend.reload!
 Dashboard::Application.config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
-require 'cdo/minitest_suite_runner'
 require 'rails/test_help'
 
 require 'mocha/mini_test'

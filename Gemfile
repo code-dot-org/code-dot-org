@@ -87,6 +87,7 @@ group :development, :test do
   # For pegasus PDF generation / merging testing.
   gem 'pdf-reader', require: false
   gem 'minitest-test_profile'
+  gem 'minitest-hooks'
 end
 
 group :doc do

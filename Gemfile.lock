@@ -366,6 +366,7 @@ GEM
     minitest (5.10.1)
     minitest-around (0.3.2)
       minitest (~> 5.0)
+    minitest-hooks (1.4.0)
     minitest-reporters (1.1.10)
       ansi
       builder
@@ -697,6 +698,7 @@ DEPENDENCIES
   mini_magick
   minitest (~> 5.5)
   minitest-around
+  minitest-hooks
   minitest-reporters
   minitest-test_profile
   mocha

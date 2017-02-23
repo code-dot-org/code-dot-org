@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'minitest/hooks/test'
 
 # Define this here to ensure that we don't incorrectly use the :pegasus version.
 def slog(h)
@@ -7,32 +8,33 @@ end
 
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include Minitest::Hooks
 
-  def suite_around(&block)
+  def around_all
     ActiveRecord::Base.transaction(requires_new: true) do
       begin
-        @@teacher = create(:teacher)
+        @teacher = create(:teacher)
 
         # make them an authorized_Teacher
         cohort = create(:cohort)
-        cohort.teachers << @@teacher
+        cohort.teachers << @teacher
         cohort.save!
 
-        @@teacher_other = create(:teacher)
+        @teacher_other = create(:teacher)
 
-        @@section = create(:section, user: @@teacher, login_type: 'word')
-        @@student_1 = create(:follower, section: @@section).student_user
-        @@student_2 = create(:follower, section: @@section).student_user
-        @@student_3 = create(:follower, section: @@section).student_user
-        @@student_4 = create(:follower, section: @@section).student_user
-        @@student_5 = create(:follower, section: @@section).student_user
+        @section = create(:section, user: @teacher, login_type: 'word')
+        @student_1 = create(:follower, section: @section).student_user
+        @student_2 = create(:follower, section: @section).student_user
+        @student_3 = create(:follower, section: @section).student_user
+        @student_4 = create(:follower, section: @section).student_user
+        @student_5 = create(:follower, section: @section).student_user
 
-        @@flappy_section = create(:section, user: @@teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
-        @@student_flappy_1 = create(:follower, section: @@flappy_section).student_user
-        @@student_flappy_1.backfill_user_scripts
-        @@student_flappy_1.reload
+        @flappy_section = create(:section, user: @teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
+        @student_flappy_1 = create(:follower, section: @flappy_section).student_user
+        @student_flappy_1.backfill_user_scripts
+        @student_flappy_1.reload
 
-        yield block
+        super
       ensure
         raise ActiveRecord::Rollback
       end
@@ -40,17 +42,6 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   setup do
-    @teacher = @@teacher
-    @teacher_other = @@teacher_other
-    @section = @@section
-    @student_1 = @@student_1
-    @student_2 = @@student_2
-    @student_3 = @@student_3
-    @student_4 = @@student_4
-    @student_5 = @@student_5
-    @flappy_section = @@flappy_section
-    @student_flappy_1 = @@student_flappy_1
-
     sign_in @teacher
   end
 
@@ -977,7 +968,7 @@ class ApiControllerTest < ActionController::TestCase
         user_level_data: {
           user_id: @student_1.id,
           level_id: level.id
-        # missing script_id
+          # missing script_id
         },
         locked: true,
         readonly_answers: false
