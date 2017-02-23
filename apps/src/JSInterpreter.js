@@ -28,6 +28,12 @@ var JSInterpreter = module.exports = function (options) {
 
   /** @type {ObservableEvent} */
   this.onNextStepChanged = new ObservableEvent();
+  this._runStateUpdater = this.onNextStepChanged.register(() => {
+    this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+      this.paused,
+      this.nextStep
+    ));
+  });
 
   /** @type {ObservableEvent} */
   this.onPause = new ObservableEvent();
@@ -308,6 +314,7 @@ JSInterpreter.prototype.initialized = function () {
  * JSInterpreter so any async callbacks will not execute.
  */
 JSInterpreter.prototype.deinitialize = function () {
+  this.onNextStepChanged.unregister(this._runStateUpdater);
   this.interpreter = null;
 };
 
@@ -1278,23 +1285,35 @@ JSInterpreter.prototype.handlePauseContinue = function () {
     this.paused = true;
     this.nextStep = StepType.RUN;
   }
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    this.paused,
+    this.nextStep
+  ));
 };
 
 JSInterpreter.prototype.handleStepOver = function () {
   this.paused = true;
   this.nextStep = StepType.OVER;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    this.paused,
+    this.nextStep
+  ));
 };
 
 JSInterpreter.prototype.handleStepIn = function () {
   this.paused = true;
   this.nextStep = StepType.IN;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    this.paused,
+    this.nextStep
+  ));
 };
 
 JSInterpreter.prototype.handleStepOut = function () {
   this.paused = true;
   this.nextStep = StepType.OUT;
-  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(this.paused));
+  this.studioApp.reduxStore.dispatch(setIsDebuggerPaused(
+    this.paused,
+    this.nextStep
+  ));
 };

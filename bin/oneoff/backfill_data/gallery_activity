@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+# This script populates the gallery_activities.user_level_id and the
+# gallery_activities.level_source_id fields, when possible. Doing so is part of
+# associating a GalleryActivity with a UserLevel rather than an Activity, as
+# part of deprecating the latter.
+
+# For performance reasons, we precompute the backfill data via the query
+#   SELECT
+#     gallery_activities.id,
+#     user_levels.id AS user_level_id,
+#     activities.level_source_id
+#   FROM (SELECT * FROM gallery_activities LIMIT 100000) gallery_activities
+#   INNER JOIN activities
+#     ON activities.id = gallery_activities.activity_id
+#   INNER JOIN user_levels
+#     ON user_levels.user_id = activities.user_id
+#       AND user_levels.level_id = activities.level_id;
+# saving the output to and reading the data from a CSV.
+
+require_relative '../../../dashboard/config/environment'
+require 'csv'
+
+TRANSACTION_SIZE = 5_000
+TIME_NOW = Time.now.freeze
+
+filename = ARGV[0]
+exit(-1) unless filename
+
+puts "READING #{filename}..."
+
+data = CSV.read(filename).map do |line|
+  [line[0].to_i, line[1].to_i, line[2].to_i]
+end
+
+puts "UPDATING #{data.count} ROWS..."
+
+slice = 0
+data.each_slice(TRANSACTION_SIZE) do |data_slice|
+  puts "PROCESSING: slice #{slice}..."
+  ActiveRecord::Base.transaction do
+    data_slice.each do |gallery_activity_id, user_level_id, level_source_id|
+      GalleryActivity.find_by_id(gallery_activity_id).update!(
+        user_level_id: user_level_id,
+        level_source_id: level_source_id
+      )
+    end
+  end
+  slice += 1
+end

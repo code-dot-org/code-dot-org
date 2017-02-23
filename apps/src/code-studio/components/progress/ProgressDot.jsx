@@ -7,7 +7,7 @@ import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
 import color from "../../../util/color";
 import progressStyles, { createOutline } from './progressStyles';
-import { LevelStatus, LevelKind } from '../../activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
 const dotSize = 24;
 
@@ -48,8 +48,7 @@ export const BUBBLE_COLORS = {
     backgroundColor: color.lightest_gray
   },
   multi_level: {
-    color: color.charcoal,
-    backgroundColor: color.lightest_gray
+    color: color.charcoal
   }
 };
 

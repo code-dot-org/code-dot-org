@@ -388,6 +388,14 @@ export function clearInterval(intervalId) {
                            {'intervalId': intervalId });
 }
 
+export function timedLoop(ms, callback) {
+  return Applab.executeCmd(null, 'timedLoop', {ms, callback});
+}
+
+export function stopTimedLoop(key) {
+  return Applab.executeCmd(null, 'stopTimedLoop', {key});
+}
+
 export function getKeyValue(key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',

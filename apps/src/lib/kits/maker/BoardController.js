@@ -16,8 +16,22 @@ import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
 
+/**
+ * @typedef {Object} SerialPortInfo
+ * @property {string} comName (a port id) e.g. "COM3" or "/dev/ttyACM0"
+ * @property {string} manufacturer e.g. "Adafruit Circuit Playground"
+ * @property {string} productId e.g. "0x8011"
+ * @property {string} vendorId e.g. "0x239a"
+ */
+
 /** @const {string} */
 const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
+
+/** @const {string} Adafruit's vendor id as reported by Circuit Playground boards */
+export const ADAFRUIT_VID = '0x239a';
+
+/** @const {string} The Circuit Playground product id as reported by Circuit playground boards */
+export const CIRCUIT_PLAYGROUND_PID = '0x8011';
 
 const SERIAL_BAUD = 57600;
 const J5_CONSTANTS = {
@@ -36,11 +50,13 @@ export default class BoardController {
     this.board_ = null;
     /** @private {Object} */
     this.prewiredComponents = null;
+    /** @private {function} */
+    this.onDisconnectCallback_ = null;
   }
 
   connectAndInitialize(codegen, interpreter) {
     return this.ensureBoardConnected()
-        .then(this.ensureAppInstalled())
+        .then(BoardController.ensureAppInstalled())
         .then(this.ensureComponentsInitialized.bind(this))
         .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
   }
@@ -50,7 +66,7 @@ export default class BoardController {
         .then(this.ensureComponentsInitialized.bind(this));
   }
 
-  ensureAppInstalled() {
+  static ensureAppInstalled() {
     return new Promise((resolve, reject) => {
       ChromeSerialPort.isInstalled(function (error) {
         if (error) {
@@ -73,9 +89,10 @@ export default class BoardController {
         return;
       }
 
-      this.connect()
+      BoardController.connect()
           .then(board => {
             this.board_ = board;
+            this.board_.on('disconnect', this.handleDisconnect_.bind(this));
             resolve();
           })
           .catch(reject);
@@ -130,6 +147,17 @@ export default class BoardController {
     });
   }
 
+  onceOnDisconnect(cb) {
+    this.onDisconnectCallback_ = cb;
+  }
+
+  handleDisconnect_() {
+    if (typeof this.onDisconnectCallback_ === 'function') {
+      this.onDisconnectCallback_();
+      this.onDisconnectCallback_ = null;
+    }
+  }
+
   reset() {
     if (!this.board_) {
       return;
@@ -166,13 +194,14 @@ export default class BoardController {
     component.on(event, callback);
   }
 
-  connect() {
-    return BoardController.getDevicePort().then(port => this.connectToBoard(port));
+  static connect() {
+    return BoardController.getDevicePortName()
+        .then(BoardController.connectToBoard);
   }
 
-  connectToBoard(portId) {
+  static connectToBoard(portName) {
     return new Promise((resolve, reject) => {
-      const serialPort = new ChromeSerialPort.SerialPort(portId, {
+      const serialPort = new ChromeSerialPort.SerialPort(portName, {
         bitrate: SERIAL_BAUD
       }, true);
       const io = new PlaygroundIO({ port: serialPort });
@@ -194,33 +223,7 @@ export default class BoardController {
     });
   }
 
-  static resetComponent(component) {
-    try {
-      if (component.state && component.state.intervalId) {
-        clearInterval(component.state.intervalId);
-      } else if (component.state && component.state.interval) {
-        clearInterval(component.state.interval);
-      }
-      if (component.stop) {
-        component.stop();
-      }
-      if (component.off) {
-        component.off();
-      }
-      if (component.threshold) {
-        // Reset sensor thresholds to 1.0 in case changed.
-        component.threshold = 1;
-      }
-      if (component.removeAllListeners) {
-        component.removeAllListeners();
-      }
-    } catch (error) {
-      console.log('Error trying to cleanup component', error);
-      console.log(component);
-    }
-  }
-
-  static getDevicePort() {
+  static getDevicePortName() {
     return new Promise((resolve, reject) => {
       ChromeSerialPort.list((error, list) => {
         if (error) {
@@ -228,12 +231,9 @@ export default class BoardController {
           return;
         }
 
-        const prewiredBoards = list.filter((port) => {
-          return BoardController.deviceOnPortAppearsUsable(port);
-        });
-
-        if (prewiredBoards.length > 0) {
-          resolve(prewiredBoards[0].comName);
+        const bestOption = BoardController.getPreferredPort(list);
+        if (bestOption) {
+          resolve(bestOption.comName);
         } else {
           reject('Could not get device port.');
         }
@@ -241,13 +241,34 @@ export default class BoardController {
     });
   }
 
-  static deviceOnPortAppearsUsable(port) {
+  /**
+   * Given a collection of serial port configurations, pick the one that is
+   * most likely to be compatible with maker toolkit.
+   * @param {Array.<SerialPortInfo>} portList
+   * @return {SerialPortInfo|undefined} the best option, if one is found
+   */
+  static getPreferredPort(portList) {
+    // 1. Best case: Correct vid and pid
+    const adafruitCircuitPlayground = portList.find(port =>
+        port.vendorId === ADAFRUIT_VID &&
+        port.productId === CIRCUIT_PLAYGROUND_PID);
+    if (adafruitCircuitPlayground) {
+      return adafruitCircuitPlayground;
+    }
+
+    // 2. Next best case: Some other Adafruit product that might also work
+    const otherAdafruit = portList.find(port => port.vendorId === ADAFRUIT_VID);
+    if (otherAdafruit) {
+      return otherAdafruit;
+    }
+
+    // 3. Last-ditch effort: Anything with a probably-usable port name and
+    //    a valid vendor id and product id
     const comNameRegex = /usb|acm|^com/i;
-    return comNameRegex.test(port.comName);
+    return portList.find(port => {
+      const vendorId = parseInt(port.vendorId, 16);
+      const productId = parseInt(port.productId, 16);
+      return comNameRegex.test(port.comName) && vendorId > 0 && productId > 0;
+    });
   }
 }
-
-BoardController.__testonly__ = {
-  deviceOnPortAppearsUsable: BoardController.deviceOnPortAppearsUsable,
-  getDevicePort: BoardController.getDevicePort
-};
