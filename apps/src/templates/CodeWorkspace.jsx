@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var React = require('react');
 var Radium = require('radium');
 var connect = require('react-redux').connect;
