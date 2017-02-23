@@ -4,7 +4,9 @@ get '/l/:id/:url' do |id, url_64|
   only_for 'code.org'
   dont_cache
 
-  delivery = DB[:poste_deliveries].where(id: Poste.decrypt_id(id)).first
+  delivery_id = Poste.decrypt_id(id)
+  pass unless delivery_id
+  delivery = DB[:poste_deliveries].where(id: delivery_id).first
   pass unless delivery
 
   url_id = begin
