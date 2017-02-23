@@ -105,6 +105,11 @@ authoredHintUtils.getFinishedHints_ = function () {
 };
 
 /**
+ * This only retrieves the hints stored in localStorage, which likely won't
+ * include things from older sessions.
+ *
+ * TODO(ram): Grab *all* the old hint requests from the server, preferably on
+ *   level load
  * @return {FinishedHint[]}
  */
 authoredHintUtils.getOldFinishedHints = function () {
@@ -134,8 +139,9 @@ authoredHintUtils.clearUnfinishedHints = function () {
 
 authoredHintUtils.clearFinishedHints_ = function () {
   if (experiments.isEnabled('g.stageprogress')) {
+    const oldHints = authoredHintUtils.getOldFinishedHints();
     trySetLocalStorage('old_finished_authored_hint_views',
-        JSON.stringify(authoredHintUtils.getFinishedHints_()));
+        JSON.stringify(oldHints.concat(authoredHintUtils.getFinishedHints_())));
   }
   trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
