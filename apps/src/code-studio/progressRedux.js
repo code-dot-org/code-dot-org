@@ -221,7 +221,8 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
  */
 const lessonFromStage = stage => ({
   name: stage.name,
-  id: stage.id
+  id: stage.id,
+  lockable: stage.lockable
 });
 export const lessons = state => state.stages.map(lessonFromStage);
 

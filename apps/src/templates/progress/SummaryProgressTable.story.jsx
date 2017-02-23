@@ -6,19 +6,23 @@ import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 const lessons = [
   {
     name: 'Jigsaw',
-    id: 1
+    id: 1,
+    lockable: false
   },
   {
     name: 'Maze',
-    id: 2
+    id: 2,
+    lockable: false
   },
   {
     name: 'Artist',
-    id: 3
+    id: 3,
+    lockable: false
   },
   {
     name: 'Something',
-    id: 4
+    id: 4,
+    lockable: false
   },
 ];
 const levelsByLesson = [

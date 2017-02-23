@@ -55,7 +55,9 @@ const SummaryProgressTable = React.createClass({
         </thead>
         <tbody>
           {/*Filter our lessons to those that will be rendered, and then make
-            every other (remaining) one dark*/
+            every other (remaining) one dark
+            TODO: Making this more complex, lockable stages shouldnt get numbers
+            */
             lessons.map((lesson, index) => ({unfilteredIndex: index, lesson }))
             .filter(item => !this.props.lessonIsHidden(item.lesson))
             .map((item, filteredIndex) => (

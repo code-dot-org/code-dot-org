@@ -16,6 +16,11 @@ export function lessonIsHidden(lesson, state, viewAs) {
     viewAs = state.stageLock.viewAs;
   }
 
+  // Don't show stage if not authorized to see lockable
+  if (lesson.lockable && !state.stageLock.lockableAuthorized) {
+    return true;
+  }
+
   const hiddenStageState = state.hiddenStage;
   const sectionId = state.sections.selectedSectionId;
 

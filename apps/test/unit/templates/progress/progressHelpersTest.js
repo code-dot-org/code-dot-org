@@ -9,7 +9,7 @@ describe('progressHelpers', () => {
   describe('lessonIsHidden', () => {
     const visibleLesson = fakeLesson('visible lesson', '2', false);
     const hiddenLesson = fakeLesson('hidden lesson', '3', false);
-    // const lockableLesson = fakeLesson('lockable lesson', '4', true)
+    const lockableLesson = fakeLesson('lockable lesson', '4', true);
 
     const stateWithViewAs = viewAs => ({
       sections: {
@@ -46,6 +46,18 @@ describe('progressHelpers', () => {
     it('returns false for non-hidden lessons while viewing as a teacher', () => {
       const state = stateWithViewAs(ViewType.Teacher);
       assert.strictEqual(lessonIsHidden(visibleLesson, state, undefined), false);
+    });
+
+    it('returns true for a lockable stage when not authorized', () => {
+      let state = stateWithViewAs(ViewType.Teacher);
+      state.stageLock.lockableAuthorized = false;
+      assert.strictEqual(lessonIsHidden(lockableLesson, state, undefined), true);
+    });
+
+    it('returns false for a lockable stage when not authorized', () => {
+      let state = stateWithViewAs(ViewType.Teacher);
+      state.stageLock.lockableAuthorized = true;
+      assert.strictEqual(lessonIsHidden(lockableLesson, state, undefined), false);
     });
 
   });
