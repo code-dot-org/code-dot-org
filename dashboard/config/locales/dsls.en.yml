@@ -422,7 +422,9 @@ en:
       4.8 - 4.9 Lesson Connections: {}
       5.1 - 5.3 Lesson Connections: {}
       5.11 - 5.14 Lesson Connections: {}
+      5.15 - 5.17 Lesson Connections: {}
       5.4 - 5.6 Lesson Connections: {}
+      5.7- 5.10 Lesson Connections: {}
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
@@ -607,9 +609,12 @@ en:
       'CSD: Accessing List Items': {}
       'CSD: Creating Variables In App Lab': {}
       'CSD: Dropdown & Conditionals': {}
+      'CSD: For Loops': {}
       'CSD: List Length': {}
       'CSD: Lists': {}
+      'CSD: Lists with For Loops': {}
       'CSD: Review Events': {}
+      'CSD: Stop': {}
       'CSD: colorLed list': {}
       'CSD: getText vs getNumber': {}
       'CSD: setProperty': {}
@@ -628,6 +633,7 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 - button check for understanding: {}
       CSDU6 - timed loop stop board: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP

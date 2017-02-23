@@ -21,7 +21,8 @@ export function setExternalGlobals() {
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; },
       useFirebase: function () { return false; },
-      useMakerAPIs: function () { return false; }
+      useMakerAPIs: function () { return false; },
+      isOwner: () => true,
     },
     assets: {
       showAssetManager: function () {},

@@ -3,8 +3,8 @@
 # This script removes plaintext emails from the contacts and poste_deliveries
 # tables for all and young Code Studio students, respectively.
 
-require_relative '../../deployment'
-require_relative '../../lib/cdo/db'
+require_relative '../../../deployment'
+require_relative '../../../lib/cdo/db'
 
 SLICE_SIZE = 10_000
 

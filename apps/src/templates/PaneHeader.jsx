@@ -111,12 +111,21 @@ var PaneHeader = React.createClass({
  * A section of our Pane Header. Essentially this is just a div with some
  * particular styles applied
  */
-var PaneSection = function (props) {
-  return <div {...props} style={[styles.paneSection, props.style]}/>;
-};
-PaneSection.propTypes = {
-  style: React.PropTypes.object,
-};
+const PaneSection = React.createClass({
+  propTypes: {
+    style: React.PropTypes.object,
+  },
+
+  render() {
+    return (
+      <div
+        {...this.props}
+        ref={root => this.root = root}
+        style={[styles.paneSection, this.props.style]}
+      />
+    );
+  },
+});
 
 /**
  * A button within or PaneHeader, whose styles change whether or not the pane
