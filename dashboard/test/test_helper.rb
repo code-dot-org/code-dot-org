@@ -18,8 +18,7 @@ MiniTest::TestProfile.use!
 
 require 'minitest/reporters'
 Minitest::Reporters.use! [
-  Minitest::Reporters::SpecReporter.new,
-  Minitest::TestProfile::Reporter.new
+  Minitest::Reporters::SpecReporter.new
 ]
 
 ENV["UNIT_TEST"] = 'true'
