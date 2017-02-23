@@ -633,9 +633,7 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
-      CSDU6 - button check for understanding:
-        description here: description here
-        title: title
+      CSDU6 - button check for understanding: {}
       CSDU6 - timed loop stop board: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP

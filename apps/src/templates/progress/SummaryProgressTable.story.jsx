@@ -98,40 +98,74 @@ export default storybook => {
             lessons={lessons}
             levelsByLesson={levelsByLesson}
             viewAs={ViewType.Teacher}
-            sectionId={'11'}
-            hiddenStageMap={Immutable.fromJS({
-              '11': {}
-            })}
-          />
-        )
-      },
-      {
-        name:'dark row is hidden',
-        story: () => (
-          <SummaryProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
-            sectionId={'11'}
-            hiddenStageMap={Immutable.fromJS({
-              '11': {
-                '2': true
+            sectionId="11"
+            hiddenStageState={Immutable.fromJS({
+              bySection: {
+                '11': { }
               }
             })}
           />
         )
       },
       {
-        name:'light row is hidden',
+        name:'even row is hidden, viewing as teacher',
         story: () => (
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
             viewAs={ViewType.Teacher}
-            sectionId={'11'}
-            hiddenStageMap={Immutable.fromJS({
-              '11': {
-                '3': true
+            sectionId="11"
+            hiddenStageState={Immutable.fromJS({
+              bySection: {
+                '11': { '2': true }
+              }
+            })}
+          />
+        )
+      },
+      {
+        name:'odd row is hidden, viewing as teacher',
+        story: () => (
+          <SummaryProgressTable
+            lessons={lessons}
+            levelsByLesson={levelsByLesson}
+            viewAs={ViewType.Teacher}
+            sectionId="11"
+            hiddenStageState={Immutable.fromJS({
+              bySection: {
+                '11': { '3': true }
+              }
+            })}
+          />
+        )
+      },
+      {
+        name:'even row is hidden, viewing as student',
+        story: () => (
+          <SummaryProgressTable
+            lessons={lessons}
+            levelsByLesson={levelsByLesson}
+            viewAs={ViewType.Teacher}
+            sectionId="11"
+            hiddenStageState={Immutable.fromJS({
+              bySection: {
+                '11': { '2': true }
+              }
+            })}
+          />
+        )
+      },
+      {
+        name:'odd row is hidden, viewing as student',
+        story: () => (
+          <SummaryProgressTable
+            lessons={lessons}
+            levelsByLesson={levelsByLesson}
+            viewAs={ViewType.Teacher}
+            sectionId="11"
+            hiddenStageState={Immutable.fromJS({
+              bySection: {
+                '11': { '3': true }
               }
             })}
           />

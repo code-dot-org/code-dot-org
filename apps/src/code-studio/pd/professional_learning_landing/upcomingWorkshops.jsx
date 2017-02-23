@@ -1,7 +1,7 @@
 import React from 'react';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
-import {Table} from 'react-bootstrap';
+import {Table, Button} from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshop_dashboard/workshopConstants';
 
@@ -9,7 +9,7 @@ const UpcomingWorkshops = React.createClass({
   render() {
     return (
       <WorkshopTableLoader
-        queryUrl="/api/v1/pd/workshops/?state=Not%20Started"
+        queryUrl="/api/v1/pd/workshops/?state=Not%20Started&include_enrollments=1"
         hideNoWorkshopsMessage={true}
       >
         <UpcomingWorkshopsTable/>
@@ -36,6 +36,7 @@ const UpcomingWorkshopsTable = React.createClass({
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
+            <th/>
           </tr>
         </thead>
         <tbody>
@@ -83,6 +84,15 @@ const UpcomingWorkshopsTable = React.createClass({
             <p>{workshop.location_name}</p>
             <p>{workshop.location_address}</p>
           </div>
+        </td>
+        <td>
+          {workshop.enrollment_id &&
+            (
+              <Button>
+                Cancel enrollment
+              </Button>
+            )
+          }
         </td>
       </tr>
     );

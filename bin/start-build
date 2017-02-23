@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../deployment.rb'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 
 # restarts the build on daemon servers by touching build-started,
 # where a cron job looks for every minute as a signal to restart the build.
@@ -12,5 +12,5 @@ Dir.chdir(deploy_dir) do
   msg = "touch #{Dir.pwd.chomp}/build-started"
   puts msg
   system 'touch ./build-started'
-  HipChat.log "build restarted via #{$0}"
+  ChatClient.log "build restarted via #{$0}"
 end
