@@ -95,10 +95,7 @@
     "makerlab_enabled": "false",
     "markdown_instructions": "# Starting From Scratch\r\n\r\nNow that you've got some practice with `timedLoop()`, let's see if you can set one up from scratch.\r\n\r\n# Do This\r\n\r\n* Get a `timedLoop()` block from the _Control_ drawer in your toolbox\r\n* Change the _ms_ input so that the loop runs twice a second\r\n* Inside the loop, write the console with `console.log()`\r\n* Delete the call to `exit()` from the loop so it runs forever",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

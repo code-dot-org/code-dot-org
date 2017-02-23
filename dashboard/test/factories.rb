@@ -665,6 +665,34 @@ FactoryGirl.define do
     end
   end
 
+  factory :school_info_us_homeschool, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
+    state 'NJ'
+    zip '08534'
+  end
+
+  factory :school_info_us_after_school, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
+    state 'NJ'
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_non_us_homeschool, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
+    full_address '31 West Bank, London, England'
+  end
+
+  factory :school_info_non_us_after_school, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
+    school_name 'Grazebrook'
+    full_address '31 West Bank, London, England'
+  end
+
   # end school info
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do

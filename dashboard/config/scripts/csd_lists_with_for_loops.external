@@ -1,0 +1,7 @@
+name 'CSD: Lists with For Loops'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Lists with For Loops
+
+
+MARKDOWN

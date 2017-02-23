@@ -61,7 +61,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge\r\n\r\n_Ask your teacher before embarking on this challenge_\r\n\r\nUsing what your new _timed loop_ skills, create an interesting program of your own design. Consider using multiple loops running at different speeds, or combining _timed loops_ with the `blink()` and `play()` helpers you saw in the previous level.\r\n\r\nYou can either start from scratch here, or remix any of the earlier levels in this lesson.",
+    "markdown_instructions": "# Challenge\r\n\r\n_Ask your teacher before embarking on this challenge_\r\n\r\nUsing your new _timed loop_ skills, create an interesting program of your own design. Consider using multiple loops running at different speeds, or combining _timed loops_ with the `blink()` and `play()` helpers you saw in the previous level.\r\n\r\nYou can either start from scratch here, or remix any of the earlier levels in this lesson.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
