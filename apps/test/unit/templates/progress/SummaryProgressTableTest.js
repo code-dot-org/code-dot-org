@@ -26,11 +26,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        viewAs={ViewType.Student}
-        sectionId={'11'}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {}
-        })}
+        lessonIsHidden={() => false}
       />
     );
     const rows = wrapper.find('tbody').props().children;
@@ -44,15 +40,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        viewAs={ViewType.Student}
-        sectionId={'11'}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {
-            '11': {
-              '2': true
-            }
-          }
-        })}
+        lessonIsHidden={(lessonId, viewAs) => lessonId === 2 && viewAs !== ViewType.Teacher}
       />
     );
 
@@ -68,15 +56,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        viewAs={ViewType.Teacher}
-        sectionId={'11'}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {
-            '11': {
-              '2': true
-            }
-          }
-        })}
+        lessonIsHidden={(lessonId, viewAs) => lessonId === 2 && viewAs === ViewType.Student}
       />
     );
 

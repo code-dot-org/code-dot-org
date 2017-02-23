@@ -7,56 +7,45 @@ import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
 describe('progressHelpers', () => {
   describe('lessonIsHidden', () => {
-    const hiddenStageProps = {
-      sectionId: '11',
+    const hiddenLessonId = '3';
+    const visibleLessonId = '2';
+
+    const stateWithViewAs = viewAs => ({
+      sections: {
+        selectedSectionId: '11',
+      },
       lesson: fakeLesson('lesson1', 3),
-      hiddenStageState: Immutable.fromJS({
+      stageLock: { viewAs },
+      hiddenStage: Immutable.fromJS({
         bySection: {
           '11': { '3': true }
         }
       })
-    };
-
-    const noHiddenStageProps = {
-      sectionId: '11',
-      lesson: fakeLesson('lesson1', 3),
-      hiddenStageState: Immutable.fromJS({
-        bySection: {
-          '11': {  }
-        }
-      })
-    };
-
-    it('returns true for hidden lessons if we view as a student', () => {
-      const props = {
-        ...hiddenStageProps,
-        viewAs: ViewType.Student
-      };
-      assert.strictEqual(lessonIsHidden(props), true);
     });
 
-    it('returns false for hidden lessons if we view as a teacher', () => {
-      const props = {
-        ...hiddenStageProps,
-        viewAs: ViewType.Teacher
-      };
-      assert.strictEqual(lessonIsHidden(props), false);
+    it('returns true for hidden lessons while viewing as student', () => {
+      const state = stateWithViewAs(ViewType.Student);
+      assert.strictEqual(lessonIsHidden(hiddenLessonId, state, undefined), true);
     });
 
-    it('returns false for non-hidden lessons if we view as a student', () => {
-      const props = {
-        ...noHiddenStageProps,
-        viewAs: ViewType.Student
-      };
-      assert.strictEqual(lessonIsHidden(props), false);
+    it('returns false for hidden lessons while viewing as a teacher', () => {
+      const state = stateWithViewAs(ViewType.Teacher);
+      assert.strictEqual(lessonIsHidden(hiddenLessonId, state, undefined), false);
     });
 
-    it('returns false for non-hidden lessons if we view as a teacher', () => {
-      const props = {
-        ...noHiddenStageProps,
-        viewAs: ViewType.Teacher
-      };
-      assert.strictEqual(lessonIsHidden(props), false);
+    it('returns true for hidden lessons while viewing as a teacher, if we ask about students', () => {
+      const state = stateWithViewAs(ViewType.Teacher);
+      assert.strictEqual(lessonIsHidden(hiddenLessonId, state, ViewType.Student), true);
+    });
+
+    it('returns false for non-hidden lessons while viewing as a student', () => {
+      const state = stateWithViewAs(ViewType.Student);
+      assert.strictEqual(lessonIsHidden(visibleLessonId, state, undefined), false);
+    });
+
+    it('returns false for non-hidden lessons while viewing as a teacher', () => {
+      const state = stateWithViewAs(ViewType.Teacher);
+      assert.strictEqual(lessonIsHidden(visibleLessonId, state, undefined), false);
     });
 
   });
