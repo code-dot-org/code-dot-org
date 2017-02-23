@@ -122,11 +122,13 @@ class PosteRoutesTest < Minitest::Test
     describe 'GET /l/:id/:url' do
       before do
         @id = create_poste_delivery
-        @url_id = Poste2.find_or_create_url('my url')
+        @url_id = create_poste_url
       end
 
-      it 'creates poste_clicks row' do
+      it 'creates poste_clicks row and redirects' do
         @pegasus.get "/l/#{Poste.encrypt(@id)}/#{Base64.urlsafe_encode64(@url_id.to_s)}"
+        assert_response 302
+        assert @pegasus.last_response['Location'].end_with? 'my url'
         assert DB[:poste_clicks].where(delivery_id: @id, url_id: @url_id).any?
       end
 
@@ -194,6 +196,17 @@ class PosteRoutesTest < Minitest::Test
           created_ip: '1.2.3.4',
           updated_at: DateTime.now,
           updated_ip: '1.2.3.4'
+        }
+      )
+    end
+
+    def create_poste_url
+      DB[:poste_urls].insert(
+        {
+          url: 'my url',
+
+          # Obtained by Digest::MD5.hexdigest('my url')
+          hash: 'c4a8698678999acd754ec6063ce3b7f8',
         }
       )
     end
