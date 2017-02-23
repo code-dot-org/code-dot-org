@@ -21,20 +21,8 @@ class ChatClient
   end
 
   def self.message(room, message, options={})
-    post_to_hipchat(room, message, options)
-
     channel = "\##{Slack::CHANNEL_MAP[room] || room}"
     Slack.message message.to_s, channel: channel, username: @@name, color: options[:color]
-  end
-
-  # TODO(asher): Deprecate this method. There appears to be a test dependency
-  # on this CDO.log.info output happening.
-  def self.post_to_hipchat(room, message, options={})
-    unless CDO.hip_chat_logging
-      # Output to standard log if HipChat isn't configured
-      CDO.log.info("[#{room}] #{message}")
-      return
-    end
   end
 
   def self.wrap(name)
