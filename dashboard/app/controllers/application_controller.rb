@@ -99,6 +99,21 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  # These are sometimes updated from the registration form
+  SCHOOL_INFO_ATTRIBUTES = [
+    :country,
+    :school_type,
+    :school_state,
+    :school_district_id,
+    :school_district_name,
+    :school_id,
+    :school_name,
+    :school_zip,
+    :full_address,
+    :school_district_other,
+    :school_name_other
+  ].freeze
+
   PERMITTED_USER_FIELDS = [
     :name,
     :username,
@@ -113,7 +128,8 @@ class ApplicationController < ActionController::Base
     :full_address,
     :user_type,
     :hashed_email,
-    :terms_of_service_version
+    :terms_of_service_version,
+    school_info_attributes: SCHOOL_INFO_ATTRIBUTES
   ].freeze
 
   def configure_permitted_parameters
