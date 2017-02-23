@@ -81,7 +81,7 @@ require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
-  include SerializedProperties
+  include SerializedProperties, SchoolInfoDeduplicator
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
@@ -152,6 +152,27 @@ class User < ActiveRecord::Base
 
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
+
+  belongs_to :school_info
+  accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
+  validates_presence_of :school_info, unless: :school_info_optional?
+
+  # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
+  # based on the passed attributes.
+  # @param school_info_attr the attributes to set and check
+  # @return [Boolean] true if we should reject (ignore and skip writing) the record,
+  # false if we should accept and write it
+  def preprocess_school_info(school_info_attr)
+    # Suppress validation - all parts of this form are optional when accesssed through the registration form
+    school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
+    # students are never asked to fill out this data, so silently reject it for them
+    student? || deduplicate_school_info(school_info_attr, self)
+  end
+
+  # Not deployed to everyone, so we don't require this for anybody, yet
+  def school_info_optional?
+    true # update if/when A/B test is done and accepted
+  end
 
   belongs_to :invited_by, polymorphic: true
 
