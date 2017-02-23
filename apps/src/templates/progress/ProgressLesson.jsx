@@ -64,12 +64,12 @@ const ProgressLesson = React.createClass({
   render() {
     const { description, lesson, lessonNumber, levels, lessonIsHidden } = this.props;
 
-    if (lessonIsHidden(lesson.id)) {
+    if (lessonIsHidden(lesson)) {
       return null;
     }
 
     // Is this a hidden stage that we still render because we're a teacher
-    const hiddenForStudents = lessonIsHidden(lesson.id, ViewType.Student);
+    const hiddenForStudents = lessonIsHidden(lesson, ViewType.Student);
     const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
@@ -107,5 +107,5 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  lessonIsHidden: (lessonId, viewAs) => lessonIsHidden(lessonId, state, viewAs)
+  lessonIsHidden: (lesson, viewAs) => lessonIsHidden(lesson, state, viewAs)
 }))(ProgressLesson);
