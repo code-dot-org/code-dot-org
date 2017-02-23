@@ -12,13 +12,7 @@ describe('ProgressLesson', () => {
     lesson: fakeLesson('lesson1', 1),
     levels: fakeLevels(3),
     lessonNumber: 3,
-    viewAs: ViewType.Teacher,
-    sectionId: '11',
-    hiddenStageState: Immutable.fromJS({
-      bySection: {
-        '11': { }
-      }
-    })
+    lessonIsHidden: () => false
   };
 
   it('renders with gray background when not hidden', () => {
@@ -34,6 +28,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
+        lessonIsHidden={(lessonId, viewAs) => viewAs !== ViewType.Teacher}
         viewAs={ViewType.Student}
         hiddenStageState={Immutable.fromJS({
           bySection: {
@@ -50,12 +45,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Teacher}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {
-            '11': { '1': true }
-          }
-        })}
+        lessonIsHidden={(lessonId, viewAs) => viewAs === ViewType.Student}
       />
     );
     assert.equal(wrapper.props().style.background, color.white);
