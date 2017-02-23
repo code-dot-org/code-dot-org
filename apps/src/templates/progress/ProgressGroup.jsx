@@ -3,7 +3,7 @@ import Radium from 'radium';
 import DetailProgressTable from './DetailProgressTable';
 import SummaryProgressTable from './SummaryProgressTable';
 import FontAwesome from '../FontAwesome';
-import { levelType } from './progressTypes';
+import { levelType, lessonType } from './progressTypes';
 import color from "@cdo/apps/util/color";
 
 const styles = {
@@ -39,7 +39,7 @@ const styles = {
 const ProgressGroup = React.createClass({
   propTypes: {
     groupName: PropTypes.string.isRequired,
-    lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(levelType)
     ).isRequired,
@@ -59,7 +59,7 @@ const ProgressGroup = React.createClass({
   },
 
   render() {
-    const { groupName, lessonNames, levelsByLesson, isSummaryView } = this.props;
+    const { groupName, lessons, levelsByLesson, isSummaryView } = this.props;
 
     const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
@@ -78,7 +78,7 @@ const ProgressGroup = React.createClass({
         {!this.state.collapsed &&
           <div style={[styles.contents, styles.bottom]}>
             <TableType
-              lessonNames={lessonNames}
+              lessons={lessons}
               levelsByLesson={levelsByLesson}
             />
           </div>

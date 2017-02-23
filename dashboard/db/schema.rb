@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170214161503) do
+ActiveRecord::Schema.define(version: 20170221004101) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -373,13 +373,14 @@ ActiveRecord::Schema.define(version: 20170214161503) do
   end
 
   create_table "pd_teacher_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.integer  "user_id",                         null: false
-    t.string   "primary_email",                   null: false
-    t.string   "secondary_email",                 null: false
-    t.text     "application",       limit: 65535, null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.integer  "user_id",                                 null: false
+    t.string   "primary_email",                           null: false
+    t.string   "secondary_email",                         null: false
+    t.text     "application",               limit: 65535, null: false
     t.string   "accepted_workshop"
+    t.string   "regional_partner_override"
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
     t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
@@ -600,10 +601,11 @@ ActiveRecord::Schema.define(version: 20170214161503) do
     t.string   "school_district_name"
     t.bigint   "school_id"
     t.boolean  "school_other",          default: false
-    t.string   "school_name",                                        comment: "This column appears to be redundant with pd_enrollments.school and users.school, therefore validation rules must be used to ensure that any user or enrollment with a school_info has its school name stored in the correct place."
-    t.string   "full_address",                                       comment: "This column appears to be redundant with users.full_address, therefore validation rules must be used to ensure that any user with a school_info has its school address stored in the correct place."
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.string   "school_name",                                         comment: "This column appears to be redundant with pd_enrollments.school and users.school, therefore validation rules must be used to ensure that any user or enrollment with a school_info has its school name stored in the correct place."
+    t.string   "full_address",                                        comment: "This column appears to be redundant with users.full_address, therefore validation rules must be used to ensure that any user with a school_info has its school address stored in the correct place."
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "validation_type",       default: "full", null: false
     t.index ["school_district_id"], name: "fk_rails_951bceb7e3", using: :btree
     t.index ["school_id"], name: "index_school_infos_on_school_id", using: :btree
   end
@@ -623,7 +625,6 @@ ActiveRecord::Schema.define(version: 20170214161503) do
   end
 
   create_table "script_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "level_id"
     t.integer  "script_id",                 null: false
     t.integer  "chapter"
     t.datetime "created_at"
@@ -633,7 +634,6 @@ ActiveRecord::Schema.define(version: 20170214161503) do
     t.boolean  "assessment"
     t.text     "properties",  limit: 65535
     t.boolean  "named_level"
-    t.index ["level_id"], name: "index_script_levels_on_level_id", using: :btree
     t.index ["script_id"], name: "index_script_levels_on_script_id", using: :btree
     t.index ["stage_id"], name: "index_script_levels_on_stage_id", using: :btree
   end
@@ -923,6 +923,7 @@ ActiveRecord::Schema.define(version: 20170214161503) do
     t.string   "user_type",                  limit: 16
     t.string   "school"
     t.string   "full_address",               limit: 1024
+    t.integer  "school_info_id"
     t.integer  "total_lines",                              default: 0,       null: false
     t.boolean  "prize_earned",                             default: false
     t.integer  "prize_id"
@@ -960,6 +961,7 @@ ActiveRecord::Schema.define(version: 20170214161503) do
     t.index ["prize_id", "deleted_at"], name: "index_users_on_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
+    t.index ["school_info_id"], name: "index_users_on_school_info_id", using: :btree
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree
     t.index ["teacher_bonus_prize_id", "deleted_at"], name: "index_users_on_teacher_bonus_prize_id_and_deleted_at", unique: true, using: :btree
     t.index ["teacher_prize_id", "deleted_at"], name: "index_users_on_teacher_prize_id_and_deleted_at", unique: true, using: :btree

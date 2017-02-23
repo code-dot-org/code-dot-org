@@ -7,6 +7,7 @@
 apt_repository 'varnish-4.0-vmods' do
   uri          'ppa:wjordan/varnish-vmods'
   distribution 'trusty'
+  retries 3
 end
 
 apt_package 'varnish' do

@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class PeerReviewTest < ActiveSupport::TestCase
+  include SharedConstants
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @learning_module = create :plc_learning_module
@@ -211,7 +214,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     # When the third reviewer goes to the page, they should get a link
     review_summary = PeerReview.get_peer_review_summaries(reviewer_3, @script_level.script)
     expected_review = {
-      status: 'not_started',
+      status: LEVEL_STATUS.not_tried,
       name: I18n.t('peer_review.review_new_submission'),
       result: ActivityConstants::UNSUBMITTED_RESULT,
       icon: '',
@@ -273,20 +276,20 @@ class PeerReviewTest < ActiveSupport::TestCase
     expected_reviews = [
       {
         id: first_review.id,
-        status: 'perfect',
+        status: LEVEL_STATUS.perfect,
         name: I18n.t('peer_review.link_to_submitted_review'),
         result: ActivityConstants::BEST_PASS_RESULT,
         locked: false
       },
       {
         id: second_review.id,
-        status: 'not_started',
+        status: LEVEL_STATUS.not_tried,
         name: I18n.t('peer_review.review_in_progress'),
         result: ActivityConstants::UNSUBMITTED_RESULT,
         locked: false
       },
       {
-        status: 'not_started',
+        status: LEVEL_STATUS.not_tried,
         name: 'Review a new submission',
         result: ActivityConstants::UNSUBMITTED_RESULT,
         icon: '',

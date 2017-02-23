@@ -1,15 +1,61 @@
+import _ from 'lodash';
 import sinon from 'sinon';
-import {assert, expect} from '../../../../util/configuredChai';
-import {REDBOARD_PORTS, FLORA_PORTS, OSX_DEFAULT_PORTS} from './sampleSerialPorts';
+import {expect} from '../../../../util/configuredChai';
+import {
+  CIRCUIT_PLAYGROUND_PORTS,
+  REDBOARD_PORTS,
+  FLORA_PORTS,
+  OSX_DEFAULT_PORTS,
+  OTHER_BAD_SERIALPORTS
+} from './sampleSerialPorts';
 import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
 
-const deviceOnPortAppearsUsable = BoardController.__testonly__.deviceOnPortAppearsUsable;
-
 describe("BoardController", function () {
-  it("deviceOnPortAppearsUsable", function () {
-    assertPortsUsable(FLORA_PORTS);
-    assertPortsUsable(REDBOARD_PORTS);
-    assertPortsUnusable(OSX_DEFAULT_PORTS);
+  describe(`getPreferredPort(portList)`, () => {
+    it('picks out an Adafruit Circuit Playground if there are multiple ports', () => {
+      CIRCUIT_PLAYGROUND_PORTS.forEach(circuitPlaygroundPort => {
+        // Try random port order to prove that it doesn't matter
+        const ports = _.shuffle([
+          circuitPlaygroundPort,
+          ...FLORA_PORTS,
+          ...REDBOARD_PORTS,
+          ...OSX_DEFAULT_PORTS,
+          ...OTHER_BAD_SERIALPORTS
+        ]);
+        expect(BoardController.getPreferredPort(ports)).to.equal(circuitPlaygroundPort);
+      });
+    });
+
+    it('picks another Adafruit product over other ports', () => {
+      FLORA_PORTS.forEach(floraPort => {
+        const ports = _.shuffle([
+          floraPort,
+          ...REDBOARD_PORTS,
+          ...OSX_DEFAULT_PORTS,
+          ...OTHER_BAD_SERIALPORTS
+        ]);
+        expect(BoardController.getPreferredPort(ports)).to.equal(floraPort);
+      });
+    });
+
+    it('picks another possibly valid port over known bad ports', () => {
+      REDBOARD_PORTS.forEach(redboardPort => {
+        const ports = _.shuffle([
+          redboardPort,
+          ...OSX_DEFAULT_PORTS,
+          ...OTHER_BAD_SERIALPORTS
+        ]);
+        expect(BoardController.getPreferredPort(ports)).to.equal(redboardPort);
+      });
+    });
+
+    it('will not pick a known bad port', () => {
+      const ports = [
+        ...OSX_DEFAULT_PORTS,
+        ...OTHER_BAD_SERIALPORTS
+      ];
+      expect(BoardController.getPreferredPort(ports)).to.be.undefined;
+    });
   });
 
   describe('event aliases', function () {
@@ -32,17 +78,3 @@ describe("BoardController", function () {
     });
   });
 });
-
-function assertPortsUsable(list) {
-  list.forEach(function (port) {
-    assert(deviceOnPortAppearsUsable(port),
-        "Device " + JSON.stringify(port) + " should be recognized as usable.");
-  });
-}
-
-function assertPortsUnusable(list) {
-  list.forEach(function (port) {
-    assert(!deviceOnPortAppearsUsable(port),
-        "Device " + JSON.stringify(port) + " should not be recognized as usable.");
-  });
-}

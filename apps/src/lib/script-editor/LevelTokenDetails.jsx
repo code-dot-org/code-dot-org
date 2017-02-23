@@ -43,6 +43,9 @@ const styles = {
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     margin: '0'
+  },
+  progression: {
+    paddingTop: 5
   }
 };
 
@@ -183,6 +186,13 @@ const LevelTokenDetails = React.createClass({
             />
           </div>
         )}
+        {/* We don't currently support editing progression names here, but do
+          * show the current progression if we have one. */}
+        {this.props.level.progression &&
+          <div style={styles.progression}>
+            Progression Name: {this.props.level.progression}
+          </div>
+        }
         <hr style={styles.divider} />
         <button
           onMouseDown={this.handleAddVariant}
