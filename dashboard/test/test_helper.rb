@@ -219,12 +219,18 @@ class ActiveSupport::TestCase
   include Minitest::Hooks
   define_callbacks :setup_all, :teardown_all
 
+  # run setup_all and teardown_all callbacks within an ActiveRecord transaction.
   def around_all
-    ActiveRecord::Base.transaction(requires_new: false) do
-      run_callbacks :setup_all
+    if _setup_all_callbacks.empty? && _teardown_all_callbacks.empty?
+      # Transaction not needed if no callbacks are present.
       yield
-      run_callbacks :teardown_all
-      raise ActiveRecord::Rollback
+    else
+      ActiveRecord::Base.transaction(requires_new: true) do
+        run_callbacks :setup_all
+        yield
+        run_callbacks :teardown_all
+        raise ActiveRecord::Rollback
+      end
     end
   end
 
