@@ -4,6 +4,10 @@ require 'cdo/shared_constants'
 class ScriptTest < ActiveSupport::TestCase
   include SharedConstants
 
+  def around_all
+    yield
+  end
+
   def setup
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")

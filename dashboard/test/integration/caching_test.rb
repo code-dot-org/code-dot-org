@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
+  def around_all
+    yield
+  end
+
   def setup
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
