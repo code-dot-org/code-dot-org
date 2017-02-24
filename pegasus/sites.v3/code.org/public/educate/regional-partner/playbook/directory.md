@@ -292,6 +292,12 @@ CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact Information**<br/>
+Dr. Betina Malhotra (primary)<br/>
+betina.malhotra@fscj.edu <br/>
+
+Dr. Vanessa Howard<br/>
+vanessa.howard@fscj.edu<br/>
+
 Dr. Tiffany Hunter<br/>
 tiffany.hunter@fscj.edu 
 
@@ -469,7 +475,7 @@ ________________
 <a id="ky"></a>
 
 ## Kentucky
-### [AdvanceKY](http://www.advanceky.com)<br/>
+### [AdvanceKentucky](http://www.advanceky.com)<br/>
 Kentucky	
 
 AdvanceKentucky is a statewide math-science initiative of the Kentucky Science and Technology Corporation (KSTC) dedicated to helping Kentucky’s students reach new heights in rigorous academic achievement.
@@ -634,12 +640,8 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Laura Doyle<br/>
-segedil1@tcnj.edu<br/>
-
-Henry Harms (Primary)<br/>
-harms@tcnj.edu<br/>
-[**Back to the top**](#top)
+Henry Harms<br/>
+harms@tcnj.edu<br/><br/>[**Back to the top**](#top)
 <br/>
 ________________
 <a id="ny"></a>

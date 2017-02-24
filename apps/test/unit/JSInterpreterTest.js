@@ -1,4 +1,5 @@
 import {assert} from '../util/configuredChai';
+import {getStore} from '@cdo/apps/redux';
 
 describe("JSInterpreter", function () {
   var Observer = require('@cdo/apps/Observer');
@@ -14,7 +15,7 @@ describe("JSInterpreter", function () {
     // needed.
     jsInterpreter = new JSInterpreter({
       shouldRunAtMaxSpeed: function () { return false; },
-      studioApp: {hideSource: true}
+      studioApp: {hideSource: true, reduxStore: getStore()}
     });
 
     // Initialize a test program

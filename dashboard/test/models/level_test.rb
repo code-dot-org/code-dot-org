@@ -414,7 +414,7 @@ EOS
 
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)
-    assert_equal nil, level.examples
+    assert_nil level.examples
   end
 
   test 'cached_find' do

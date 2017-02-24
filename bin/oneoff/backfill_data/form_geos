@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+# This script creates a form_geos entry (if one does not already exist) for
+# every form row.
+
+require File.expand_path('../../../../pegasus/src/env', __FILE__)
+require src_dir 'database'
+
+if ARGV.length != 3
+  puts 'Usage: ./bin/oneoff/backfill_data/form_geos start_index end_index batch_size'
+  exit 1
+end
+
+start_index = ARGV[0].to_i
+end_index = ARGV[1].to_i
+batch_size = ARGV[2].to_i
+
+time_now = DateTime.now
+log_message = "PROGRAM START..."
+
+begin
+  while start_index < end_index
+    puts "WORKING: #{start_index} .. #{start_index + batch_size}"
+    form_to_ip_hash = {}
+    DB[:forms].
+      where(id: start_index...(start_index + batch_size)).
+      each do |form|
+      log_message = "SAVING #{form[:id]}..."
+      form_to_ip_hash[form[:id]] = form[:created_ip]
+    end
+
+    DB.transaction do
+      form_to_ip_hash.each do |form_id, ip_address|
+        next if DB[:form_geos].where(form_id: form_id).any?
+        log_message = "INSERTING #{form_id}"
+        DB[:form_geos].insert(
+          form_id: form_id,
+          ip_address: ip_address,
+          created_at: time_now,
+          updated_at: time_now
+        )
+      end
+    end
+
+    start_index += batch_size
+  end
+rescue Exception => e
+  puts "PROCESSING: #{log_message}"
+  raise e
+end

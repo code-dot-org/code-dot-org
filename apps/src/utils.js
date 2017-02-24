@@ -426,6 +426,23 @@ export function trySetLocalStorage(item, value) {
 }
 
 /**
+ * Simple wrapper around sessionStorage.setItem that catches the quota exceeded
+ * exceptions we get when we call setItem in Safari's private mode.
+ * @return {boolean} True if we set successfully
+ */
+export function trySetSessionStorage(item, value) {
+  try {
+    sessionStorage.setItem(item, value);
+    return true;
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+    return false;
+  }
+}
+
+/**
  * Generates a simple enum object
  * @example
  *   var Seasons = enum('SPRING', 'SUMMER', 'FALL', 'WINTER');
@@ -648,4 +665,19 @@ export function levenshtein(a, b) {
   }
 
   return matrix[b.length][a.length];
+}
+
+/**
+ * Bisects the given array based on the given conditional
+ * @param {Array} array
+ * @param {Function} conditional
+ * @return {Array.<Array>} an array with two elements; the first is an
+ *         array containing those values for which the given conditional
+ *         function is true and the second is an array containing those
+ *         values for which it is false
+ */
+export function bisect(array, conditional) {
+  const positive = array.filter(x => conditional(x));
+  const negative = array.filter(x => !conditional(x));
+  return [positive, negative];
 }
