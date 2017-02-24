@@ -51,6 +51,13 @@ describe("Tests for Professional Learning Landing Page", () => {
 
       expect(landingPage.find('CsFundamentalsSection')).to.have.length(0);
       expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(0);
+      expect(landingPage.find('UpcomingWorkshops')).to.have.length(1);
+      expect(landingPage.find('ProfessionalLearningCourseProgress')).to.have.length(0);
+    });
+
+    it("page has section for professional learning if user is enrolled in professional learning courses", () => {
+      const landingPage = generateLandingPage({professionalLearningCourseData: [{data: 'woohoo'}]});
+      expect(landingPage.find('ProfessionalLearningCourseProgress')).to.have.length(1);
     });
   });
 });
