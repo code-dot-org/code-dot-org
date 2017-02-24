@@ -101,7 +101,7 @@ class Documents < Sinatra::Base
   before do
     $log.debug request.url
 
-    Honeybadger.context({url: request.url})
+    Honeybadger.context({url: request.url, locale: request.locale})
 
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
