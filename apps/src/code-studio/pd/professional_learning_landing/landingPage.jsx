@@ -81,6 +81,7 @@ const LandingPage = React.createClass({
           <UpcomingWorkshops/>
         }
         {
+          !_.isEmpty(this.props.professionalLearningCourseData) &&
           <ProfessionalLearningCourseProgress
             professionalLearningCourseData={this.props.professionalLearningCourseData}
           />
