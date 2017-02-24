@@ -179,10 +179,17 @@ function bestResultLevelId(levelIds, progressData) {
 export function processedStages(stages) {
   let numberOfNonLockableStages = 0;
 
-  return stages.map(stage => ({
-    ..._.omit(stage, 'hidden'),
-    stageNumber: (stage.lockable ? undefined : (++numberOfNonLockableStages))
-  }));
+  return stages.map(stage => {
+    let stageNumber;
+    if (!stage.lockable) {
+      numberOfNonLockableStages++;
+      stageNumber = numberOfNonLockableStages;
+    }
+    return {
+      ..._.omit(stage, 'hidden'),
+      stageNumber
+    };
+  });
 }
 
 
