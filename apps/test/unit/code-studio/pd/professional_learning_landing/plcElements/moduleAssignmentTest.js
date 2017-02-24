@@ -1,13 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import ModuleAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/moduleAssignment';
 import {expect} from 'chai';
 
 describe ("Module assignment element", () => {
   it("colors are as expected for module assignment", () => {
     _.forEach({not_started: 'white', in_progress: '#efcd1c', completed: '#0EBE0E'}, (value, key) => {
-      const moduleAssignment = mount(
+      const moduleAssignment = shallow(
         <ModuleAssignment
           moduleAssignmentData={{
             category: 'Overview',
@@ -16,7 +16,7 @@ describe ("Module assignment element", () => {
         />
       );
 
-      expect(moduleAssignment.find('.ribbon').at(0).props().style.backgroundColor).to.equal(value);
+      expect(moduleAssignment.find('div').last().props().style.backgroundColor).to.equal(value);
     });
   });
 });

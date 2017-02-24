@@ -47,7 +47,6 @@ const ModuleAssignment = React.createClass({
           {this.props.moduleAssignmentData.category}
           <div style={styles.ribbonWrapper}>
             <div
-              className="ribbon"
               style={Object.assign(
                 {},
                 styles.ribbon,

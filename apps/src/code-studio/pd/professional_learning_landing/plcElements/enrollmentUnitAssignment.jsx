@@ -1,6 +1,6 @@
 import React from 'react';
 import color from '../../../../util/color';
-import ModuleAssignment from './moduleAssignment'
+import ModuleAssignment from './moduleAssignment';
 
 const styles = {
   courseUnitSection: {
@@ -14,8 +14,14 @@ const styles = {
     color: color.dark_charcoal,
     fontFamily: '"Gotham 4r"',
     fontSize: '18px'
+  },
+  comingSoonMessage: {
+    textAlign: 'center',
+    fontSize: '16px',
+    paddingTop: '20px',
+    color: color.dark_charcoal
   }
-}
+};
 
 const EnrollmentUnitAssignment = React.createClass({
   propTypes: {
@@ -23,20 +29,28 @@ const EnrollmentUnitAssignment = React.createClass({
   },
 
   renderModuleAssignments() {
-    const moduleAssignments = this.props.courseUnitData['moduleAssignments'].map((moduleAssignment, i) => {
+    if (this.props.courseUnitData.status === 'start_blocked') {
       return (
-        <ModuleAssignment
-          moduleAssignmentData={moduleAssignment}
-          key={i}
-        />
-      )
-    });
+        <div style={styles.comingSoonMessage}>
+          Coming soon!
+        </div>
+      );
+    } else {
+      const moduleAssignments = this.props.courseUnitData.moduleAssignments.map((moduleAssignment, i) => {
+        return (
+          <ModuleAssignment
+            moduleAssignmentData={moduleAssignment}
+            key={i}
+          />
+        );
+      });
 
-    return (
-      <div>
-        {moduleAssignments}
-      </div>
-    );
+      return (
+        <div>
+          {moduleAssignments}
+        </div>
+      );
+    }
   },
 
   render() {
@@ -49,7 +63,7 @@ const EnrollmentUnitAssignment = React.createClass({
         </a>
         {this.renderModuleAssignments()}
       </div>
-    )
+    );
   }
 });
 
