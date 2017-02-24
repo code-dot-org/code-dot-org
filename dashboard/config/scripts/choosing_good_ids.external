@@ -4,7 +4,7 @@ markdown <<MARKDOWN
 
 **Good IDs** are **meaningful and descriptive**.
 
-Just like good names for functions, you will want an ID to describe the intended purpose of the element.  
+Just like you want good names for functions, you will want an ID to describe the intended purpose of the element.  
 
 For example, if you have many buttons in your program, you will want to give each an ID that describes what the button does. 
 
@@ -24,7 +24,7 @@ You might make IDs that convey not only that it's a button but what you intend t
 # Rules About IDs
 In making descriptive and meaningful IDs there **are some rules about IDs** you need to know.  IDs...
 
-* are case-sensitive
+* are case-sensitive.
 * cannot contain spaces.
 * *must* begin with a letter (A-Z or a-z) and may be followed by any number of digits and letters.
 * can contain hyphens ("-"), underscores ("_"), colons (":"), or periods (".").

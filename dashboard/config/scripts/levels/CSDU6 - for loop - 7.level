@@ -86,7 +86,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop - Starting Value Practice\r\n",
+    "markdown_instructions": "# For Loop - Starting Value Practice\r\n\r\nEdit the starting value and the condition of the loop so that it counts from 50 to 100.\r\n",
     "start_blocks": "for (var i = 5; i < 10; i = i+1) {\r\n  console.log(i);\r\n}",
     "disable_if_else_editing": "false",
     "contained_level_names": null
