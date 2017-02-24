@@ -225,10 +225,29 @@ class ActiveSupport::TestCase
       # Transaction not needed if no callbacks are present.
       yield
     else
-      ActiveRecord::Base.transaction(requires_new: true) do
-        run_callbacks :setup_all
+      ActiveRecord::Base.transaction(
+        isolation: :read_uncommitted,
+        requires_new: true
+      ) do
+        unless _setup_all_callbacks.empty?
+          begin
+            t0 = Minitest.clock_time
+            run_callbacks :setup_all
+          ensure
+            setup_time = Minitest.clock_time - t0
+            puts "\nSetup (#{format('%.2fs', setup_time)})"
+          end
+        end
         yield
-        run_callbacks :teardown_all
+        unless _teardown_all_callbacks.empty?
+          begin
+            t0 = Minitest.clock_time
+            run_callbacks :teardown_all
+          ensure
+            teardown_time = Minitest.clock_time - t0
+            puts "Teardown (#{format('%.2fs', teardown_time)})"
+          end
+        end
         raise ActiveRecord::Rollback
       end
     end
@@ -240,6 +259,13 @@ class ActiveSupport::TestCase
 
   def self.teardown_all(*args, &block)
     set_callback(:teardown_all, :after, *args, &block)
+  end
+
+  def no_database
+    Rails.logger.info '--------------'
+    Rails.logger.info 'DISCONNECTING DATABASE'
+    Rails.logger.info '--------------'
+    ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
 end
 
