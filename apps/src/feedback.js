@@ -196,21 +196,26 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const container = document.createElement('div');
     const hintsUsed = options.response.hints_used +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
+    const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
+    const actualBlocks = this.getNumCountableBlocks();
 
-    const stageProgress = experiments.isEnabled('g.stageprogress') ?
-      this.calculateStageProgress(hintsUsed) : 0;
+    const progress = experiments.isEnabled('g.stageprogress') ?
+      this.calculateStageProgress(actualBlocks <= idealBlocks, hintsUsed, options.response.level_id) : {};
 
     document.body.appendChild(container);
     ReactDOM.render(
       <AchievementDialog
         puzzleNumber={options.level.puzzle_number || 0}
-        idealBlocks={this.studioApp_.IDEAL_BLOCK_NUM}
-        actualBlocks={this.getNumCountableBlocks()}
+        idealBlocks={idealBlocks}
+        actualBlocks={actualBlocks}
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={options.onContinue}
         showStageProgress={experiments.isEnabled('g.stageprogress')}
-        stageProgress={stageProgress}
+        oldStageProgress={progress.oldStageProgress}
+        newPassedProgress={progress.newPassedProgress}
+        newPerfectProgress={progress.newPerfectProgress}
+        newHintUsageProgress={progress.newHintUsageProgress}
       />, container);
     return;
   }
@@ -375,7 +380,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
 };
 
-FeedbackUtils.prototype.calculateStageProgress = function (hintsUsed) {
+FeedbackUtils.prototype.calculateStageProgress = function (isPerfect, hintsUsed, currentLevelId) {
   const stage = this.studioApp_.reduxStore.getState().progress.stages[0];
   const scriptName = stage.script_name;
   const levels = stage.levels;
@@ -387,6 +392,9 @@ FeedbackUtils.prototype.calculateStageProgress = function (hintsUsed) {
     numZeroHints = 0,
     numOneHint = 0;
   for (let i = 0; i < levels.length; i++) {
+    if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
+      continue;
+    }
     const levelProgress = ClientState.bestProgress(levels[i].ids, scriptName, progress);
     if (levelProgress > TestResults.MINIMUM_PASS_RESULT) {
       numPassed++;
@@ -401,20 +409,29 @@ FeedbackUtils.prototype.calculateStageProgress = function (hintsUsed) {
       }
     }
   }
-  if (hintsUsed === 0) {
-    numZeroHints++;
-  } else if (hintsUsed === 1) {
-    numOneHint++;
-  }
 
   const passedScore = numPassed / levels.length;
   const perfectScore = numPerfect / levels.length;
   const hintScore = numZeroHints / levels.length +
     0.5 * numOneHint / levels.length;
-
-  return 0.3 * passedScore +
+  const oldStageProgress = 0.3 * passedScore +
     0.4 * perfectScore +
     0.3 * hintScore;
+
+  const newPassedLevels = 1;
+  const newPerfectLevels = isPerfect ? 1 : 0;
+  const newHintUsageLevels = hintsUsed === 0 ? 1 : hintsUsed === 1 ? 0.5 : 0;
+
+  const newPassedProgress = newPassedLevels * 0.3 / levels.length;
+  const newPerfectProgress = newPerfectLevels * 0.4 / levels.length;
+  const newHintUsageProgress = newHintUsageLevels * 0.3 / levels.length;
+
+  return {
+    oldStageProgress,
+    newPassedProgress,
+    newPerfectProgress,
+    newHintUsageProgress,
+  };
 };
 
 /**
