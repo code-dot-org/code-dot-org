@@ -229,6 +229,8 @@ class ActiveSupport::TestCase
         isolation: :read_uncommitted,
         requires_new: true
       ) do
+        puts "Connections: #{ActiveRecord::Base.connection_handler.connection_pool_list.count}"
+        puts "Active Connections: #{ActiveRecord::Base.connection_handler.connection_pool_list.select(&:active_connection?).count}"
         unless _setup_all_callbacks.empty?
           begin
             t0 = Minitest.clock_time
