@@ -86,7 +86,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop - Starting Value\r\n\r\n* Run the program what numbers is it printing?\r\n* Try changing the 10 to a different number",
+    "markdown_instructions": "# For Loop - Starting Value\r\n\r\nYou can change where a for loop starts counting.\r\n\r\n* Run the program what number does it start counting at?\r\n* Try changing the 5 to a different number\r\n\t* What happens if you make the number negative?\r\n    * What happens if you make the number bigger than 10 (since the condition is i < 10)?",
     "start_blocks": "for (var i = 5; i < 10; i = i+1) {\r\n  console.log(i);\r\n}",
     "disable_if_else_editing": "false",
     "contained_level_names": null

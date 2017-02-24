@@ -1,11 +1,26 @@
 name 'CSD: For Loops'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# For Loops
+# *for* Loop
 
-# Condition
+It's very common to want to repeat a set of commands a particular number of times. Recently, we have been using the `while` loop to do this by creating a counting variable, setting the boolean expression, and incrementing the value of the counter by 1 each time. We've also used the `for` loop before, and we'll explain it more in-depth now.  The `for` loop was created to wrap all of those components related to counting loops into a single line of code.
 
-# Start Value
+<img src="https://images.code.org/b93a044fc07cb4bbabb95b43132a005b-image-1447342829632.png" style="width: 450px">
 
-# Incrementor
+<img src="https://images.code.org/d0d8f34d0f4aabaf66084ceac282448e-image-1447343652405.png" style="width: 450px">
+
+Programmers would typically read a loop `for (var i = 0; i < 10; i++)` out like this: <br>
+**"for variable i starting at 0, while i is less than 10, i plus plus (or increment i by 1)"**
+
+Notice that in reading a `for` loop we still use the word "while".
+
+You may notice that when you drag a `for` loop out from the toolbox that we've set it up for you with `i` as the variable. 
+
+<details> 
+<summary>**Why is `i` the variable?** [click to expand]</summary>  
+
+Using the single character `i` as the variable in a `for` loop has become a convention in programming for a variety of reasons. One reason is that `for` loops are often used when processing arrays - **you can think of `i` as shorthand for index. **   But there is no reason why you have to use `i` if you don't want to.  It's just a variable.  
+</details>
+
+
 MARKDOWN

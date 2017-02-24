@@ -86,8 +86,9 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# Counting down\r\n\r\nSo far all the programs you have written count up. Can you make this program count down from 10 to 1? Hint: You need to change the starting value and the incrementor.",
+    "markdown_instructions": "# Counting down\r\n\r\nSo far all the programs you have written count up. Can you make this program count down from 10 to 1? Hint: You need to change something about all three parts of the for loop!",
     "start_blocks": "for (var i = 0; i < 4; i = i+1) {\r\n  console.log(i);\r\n}\r\n",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

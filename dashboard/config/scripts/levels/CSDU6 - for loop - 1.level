@@ -86,10 +86,13 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop - Looping Through A List\r\n\r\nOne of the most common ways that for loops are used is with lists. For loops make it really easy to go through all the items in a list and do something to each of them.\r\n\r\n* Print out all the items in the colors list using a for loop just list is shown for the daysOfWeek list",
-    "start_blocks": "var daysOfWeek = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"];\r\n\r\nvar colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"];\r\n\r\nfor(var i = 0; i < daysOfWeek.length-1; i++){\r\n  console.log(daysOfWeek[i]);\r\n}\r\n\r\n\r\n\r\n",
+    "markdown_instructions": "# For Loop - Looping Through A List\r\n\r\n* Print out all the items in the colors list using a for loop",
+    "start_blocks": "var colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"];\r\n\r\n\r\n\r\n\r\n",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
