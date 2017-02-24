@@ -4,18 +4,19 @@ module Ops
     include Devise::Test::IntegrationHelpers
     API = ::OPS::API
 
+    def around_all
+      yield
+    end
+
     self.fixture_table_names = []
 
-    setup_all do
+    setup do
       @admin = create :admin
 
       @attendance = create(:attendance)
       @cohort = @attendance.segment.workshop.cohorts.first
       @cohort_district = create :cohorts_district, cohort: @cohort
       @cohort = @cohort.reload
-    end
-
-    setup do
       sign_in @admin
     end
 
