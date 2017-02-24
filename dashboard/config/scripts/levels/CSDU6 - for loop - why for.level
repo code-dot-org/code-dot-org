@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-02-10T21:35:42.000Z",
+  "created_at": "2017-02-24T17:26:35.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -49,7 +49,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Write the contents of the array to the screen in numerical order. (Click to see full instructions)",
-    "markdown_instructions": "# Lists\r\n\r\n<img src=\"https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45 PM.png\" style=\"width: 150px; float: right\">\r\n\r\n**Starter code** has been provided that creates a list of colors and a list of the buttons on the screen. In addition there is code to set each button to a color.\r\n\r\n**Change the code** so that instead of the name of each button being using in the call to `setProperty` the list index is used instead.  For example:\r\n\r\n<pre>\r\nsetProperty(buttons[0],\"background-color\", colors[0]);\r\n</pre>",
+    "markdown_instructions": "# Lists\r\n\r\n<img src=\"https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45 PM.png\" style=\"width: 150px; float: right\">\r\n\r\nWhy are loops so great?  Well lets try something out.\r\n\r\n* Add another button to your screen in design mode.\r\n* Add a color for that button to the end of your list of colors\r\n* Add the button name for that button to the end of your list of buttons\r\n* Run your program!\r\n\r\nDid it work? Notice you never changed the for loop at all!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -79,7 +79,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"];\r\nvar buttons = [\"redButton\", \"oranageButton\", \"yellowButton\", \"greenButton\", \"blueButton\", \"purpleButton\"];\r\n\r\n// Use setProperty to set the color of \r\n// the buttons in order to creat a rainbow\r\n\r\nsetProperty(\"redButton\",\"background-color\", colors[0]);\r\nsetProperty(\"orangeButton\",\"background-color\", colors[1]);\r\nsetProperty(\"yellowButton\",\"background-color\", colors[2]);\r\nsetProperty(\"greenButton\",\"background-color\", colors[3]);\r\nsetProperty(\"blueButton\",\"background-color\", colors[4]);\r\nsetProperty(\"purpleButton\",\"background-color\", colors[5]);\r\n",
     "encrypted_examples": "B+DdHPLd10HYwoSJ9G+oIsRURjVjxgqp17AaZ45k+5Sj9lSXoTaiJ4TZE7K6\no7w5\n",
     "instructions_important": "false",
     "show_debug_watch": "false",
