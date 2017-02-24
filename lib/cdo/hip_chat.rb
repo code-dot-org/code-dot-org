@@ -51,7 +51,7 @@ class HipChat
     # notify developers room and our own room
     "<b>#{name}</b> failed in #{RakeUtils.format_duration(Time.now - start_time)}".tap do |message|
       HipChat.log message, color: 'red', notify: 1
-      HipChat.developers message, color: 'red', notify: 1
+      HipChat.message 'server operations', message, color: 'red', notify: 1
     end
     # log detailed error information in our own room
     HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
