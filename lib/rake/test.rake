@@ -23,11 +23,11 @@ namespace :test do
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
-        HipChat.developers message, color: 'green'
+        HipChat.message 'server operations', message, color: 'green'
       else
         message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
         HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
+        HipChat.message 'server operations', message, color: 'red', notify: 1
       end
     end
   end
@@ -40,11 +40,11 @@ namespace :test do
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message
-        HipChat.developers message, color: 'green'
+        HipChat.message 'server operations', message, color: 'green'
       else
         message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
         HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
+        HipChat.message 'server operations', message, color: 'red', notify: 1
       end
     end
   end

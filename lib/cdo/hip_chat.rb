@@ -9,13 +9,6 @@ class HipChat
   TRUNCATION_PREFIX = '[TRUNCATED]'
   MAX_MESSAGE_SIZE = 10_000
 
-  def self.developers(message, options={})
-    # Temporarily redirect developer logging to 'Server operations'.
-    # TODO(dave): rename or split HipChat.developers once we settle on a HipChat
-    # logging strategy.
-    message('server operations', message, options)
-  end
-
   def self.log(message, options={})
     message(CDO.hip_chat_log_room, message, options)
   end
