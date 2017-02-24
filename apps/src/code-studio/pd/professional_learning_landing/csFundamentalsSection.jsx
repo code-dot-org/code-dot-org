@@ -9,6 +9,14 @@ const CsFundamentalsSection = React.createClass({
     lastWorkshopSurveyUrl: React.PropTypes.string
   },
 
+  onStartSurveyClick() {
+    window.location = this.props.lastWorkshopSurveyUrl;
+  },
+
+  onPrintCertificateClick() {
+    window.location = '';
+  },
+
   renderCompletedCourseBox() {
     if (this.props.lastWorkshopSurveyUrl) {
       return (
@@ -20,7 +28,7 @@ const CsFundamentalsSection = React.createClass({
             Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
             will be able to order supplies for your classroom. You can print a certificate for completing our workshop.
           </p>
-          <Button bsStyle="primary">
+          <Button bsStyle="primary" onclick={this.onStartSurveyClick()}>
             Start survey
           </Button>
           <Button>
@@ -30,7 +38,7 @@ const CsFundamentalsSection = React.createClass({
       );
     } else {
       return (
-        <div id="csfPrintCertificate">
+        <div id="csfPrintCertificate" onclick={this.onPrintCertificateClick()}>
           <h3>
             Thank you
           </h3>
