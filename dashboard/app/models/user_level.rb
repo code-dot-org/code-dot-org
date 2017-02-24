@@ -49,19 +49,23 @@ class UserLevel < ActiveRecord::Base
   end
 
   def best?
-    Activity.best? best_result
+    return false if best_result.nil?
+    best_result == ActivityConstants::BEST_PASS_RESULT
   end
 
   def perfect?
-    Activity.perfect? best_result
+    return false if best_result.nil?
+    best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
   end
 
   def finished?
-    Activity.finished? best_result
+    return false if best_result.nil?
+    best_result >= ActivityConstants::MINIMUM_FINISHED_RESULT
   end
 
   def passing?
-    Activity.passing? best_result
+    return false if best_result.nil?
+    best_result >= ActivityConstants::MINIMUM_PASS_RESULT
   end
 
   # user levels can be linked through pair programming. The 'driver'
