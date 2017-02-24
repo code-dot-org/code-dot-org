@@ -17,7 +17,7 @@ class ChatClient
   end
 
   def self.log(message, options={})
-    message(CDO.hip_chat_log_room, message, options)
+    message("infra-#{ENV['RACK_ENV']}", message, options)
   end
 
   def self.message(room, message, options={})
@@ -30,8 +30,8 @@ class ChatClient
   # TODO(asher): Deprecate this method. There appears to be a test dependency
   # on this CDO.log.info output happening.
   def self.post_to_hipchat(room, message, options={})
-    unless CDO.hip_chat_logging
-      # Output to standard log if HipChat isn't configured
+    unless CDO.slack_logging
+      # Output to standard log if Slack isn't configured.
       CDO.log.info("[#{room}] #{message}")
       return
     end
