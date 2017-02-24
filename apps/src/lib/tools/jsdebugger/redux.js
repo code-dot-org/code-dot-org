@@ -5,6 +5,7 @@ import CommandHistory from './CommandHistory';
 import JSInterpreter from '../../../JSInterpreter';
 import watchedExpressions from '@cdo/apps/redux/watchedExpressions';
 import runState from '@cdo/apps/redux/runState';
+import experiments from '../../../util/experiments';
 
 const WATCH_TIMER_PERIOD = 250;
 const INITIALIZE = 'jsdebugger/INITIALIZE';
@@ -12,6 +13,8 @@ const ATTACH = 'jsdebugger/ATTACH';
 const DETACH = 'jsdebugger/DETACH';
 const APPEND_LOG = 'jsdebugger/APPEND_LOG';
 const CLEAR_LOG = 'jsdebugger/CLEAR_LOG';
+const OPEN = 'jsdebugger/OPEN';
+const CLOSE = 'jsdebugger/CLOSE';
 
 // State model
 const JSDebuggerState = Immutable.Record({
@@ -21,6 +24,7 @@ const JSDebuggerState = Immutable.Record({
   watchIntervalId: null,
   commandHistory: null,
   logOutput: '',
+  isOpen: false,
 });
 
 export function getRoot(state) {
@@ -55,6 +59,10 @@ export function isAttached(state) {
   return !!getJSInterpreter(state);
 }
 
+export function isOpen(state) {
+  return getRoot(state).isOpen;
+}
+
 export function canRunNext(state) {
   return (
     state.runState.isDebuggerPaused &&
@@ -74,6 +82,7 @@ export const selectors = {
   isAttached,
   canRunNext,
   getLogOutput,
+  isOpen,
 };
 
 // actions
@@ -82,7 +91,12 @@ export function initialize({runApp}) {
 }
 
 export function appendLog(output) {
-  return {type: APPEND_LOG, output};
+  return (dispatch, getState) => {
+    dispatch({type: APPEND_LOG, output});
+    if (!isOpen(getState())) {
+      dispatch(open());
+    }
+  };
 }
 
 export function clearLog() {
@@ -94,7 +108,10 @@ export function attach(jsInterpreter) {
     const observer = new Observer();
     observer.observe(
       jsInterpreter.onPause,
-      () => dispatch(togglePause())
+      () => {
+        dispatch(togglePause());
+        dispatch(open());
+      }
     );
     observer.observe(
       jsInterpreter.onExecutionWarning,
@@ -128,6 +145,14 @@ export function detach() {
     clearInterval(getWatchIntervalId(getState()));
     dispatch({type: DETACH});
   };
+}
+
+export function open() {
+  return {type: OPEN};
+}
+
+export function close() {
+  return {type: CLOSE};
 }
 
 export function togglePause() {
@@ -199,6 +224,8 @@ export const actions = {
   clearLog,
   attach,
   detach,
+  open,
+  close,
   togglePause,
   stepIn,
   stepOver,
@@ -220,7 +247,12 @@ function appendLogOutput(logOutput, output) {
   return logOutput;
 }
 
-export function reducer(state = new JSDebuggerState(), action) {
+export function reducer(state, action) {
+  if (!state) {
+    state = new JSDebuggerState({
+      isOpen: !experiments.isEnabled('collapse-debugger'),
+    });
+  }
   if (action.type === INITIALIZE) {
     return state.merge({
       runApp: action.runApp,
@@ -243,6 +275,10 @@ export function reducer(state = new JSDebuggerState(), action) {
       jsInterpreter: null,
       watchIntervalId: 0,
     });
+  } else if (action.type === CLOSE) {
+    return state.set('isOpen', false);
+  } else if (action.type === OPEN) {
+    return state.set('isOpen', true);
   } else {
     return state;
   }
