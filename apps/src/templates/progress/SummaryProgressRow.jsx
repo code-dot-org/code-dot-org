@@ -58,19 +58,19 @@ const SummaryProgressRow = React.createClass({
     lesson: lessonType.isRequired,
     lessonNumber: PropTypes.number,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    lessonIsHidden: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels, lessonIsHidden } = this.props;
+    const { dark, lesson, lessonNumber, levels, lessonIsVisible } = this.props;
 
     // Is this lesson hidden for whomever we're currently viewing as
-    if (lessonIsHidden(lesson)) {
+    if (!lessonIsVisible(lesson)) {
       return null;
     }
 
     // Would this stage be hidden if we were a student?
-    const hiddenForStudents = lessonIsHidden(lesson, ViewType.Student);
+    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     let lessonTitle = lesson.name;
     if (lessonNumber) {
       lessonTitle = lessonNumber + ". " + lessonTitle;

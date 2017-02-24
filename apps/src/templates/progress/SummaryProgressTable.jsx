@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import { levelType, lessonType } from './progressTypes';
 import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
 import { connect } from 'react-redux';
-import { lessonIsHidden } from './progressHelpers';
+import { lessonIsVisible } from './progressHelpers';
 
 const styles = {
   table: {
@@ -28,7 +28,7 @@ const SummaryProgressTable = React.createClass({
     ).isRequired,
 
     // redux provided
-    lessonIsHidden: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
@@ -58,7 +58,7 @@ const SummaryProgressTable = React.createClass({
             every other (remaining) one dark
             */
             lessons.map((lesson, index) => ({unfilteredIndex: index, lesson }))
-            .filter(item => !this.props.lessonIsHidden(item.lesson))
+            .filter(item => this.props.lessonIsVisible(item.lesson))
             .map((item, filteredIndex) => (
               <SummaryProgressRow
                 key={item.unfilteredIndex}
@@ -66,7 +66,7 @@ const SummaryProgressTable = React.createClass({
                 levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
                 dark={filteredIndex % 2 === 1}
-                lessonIsHidden={this.props.lessonIsHidden}
+                lessonIsVisible={this.props.lessonIsVisible}
               />
             ))
           }
@@ -80,5 +80,5 @@ const SummaryProgressTable = React.createClass({
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 
 export default connect(state => ({
-  lessonIsHidden: (lesson, viewAs) => lessonIsHidden(lesson, state, viewAs)
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(SummaryProgressTable);

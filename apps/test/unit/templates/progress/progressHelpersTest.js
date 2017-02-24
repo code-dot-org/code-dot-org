@@ -2,11 +2,11 @@ import { assert } from '../../../util/configuredChai';
 import Immutable from 'immutable';
 import sinon from 'sinon';
 import { fakeLesson } from './progressTestUtils';
-import { lessonIsHidden } from '@cdo/apps/templates/progress/progressHelpers';
+import { lessonIsVisible } from '@cdo/apps/templates/progress/progressHelpers';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
 describe('progressHelpers', () => {
-  describe('lessonIsHidden', () => {
+  describe('lessonIsVisible', () => {
     const visibleLesson = fakeLesson('visible lesson', '2', false);
     const hiddenLesson = fakeLesson('hidden lesson', '3', false);
     const lockableLesson = fakeLesson('lockable lesson', '4', true);
@@ -23,41 +23,41 @@ describe('progressHelpers', () => {
       })
     });
 
-    it('returns true for hidden lessons while viewing as student', () => {
+    it('returns false for hidden lessons while viewing as student', () => {
       const state = stateWithViewAs(ViewType.Student);
-      assert.strictEqual(lessonIsHidden(hiddenLesson, state, undefined), true);
+      assert.strictEqual(lessonIsVisible(hiddenLesson, state, undefined), false);
     });
 
-    it('returns false for hidden lessons while viewing as a teacher', () => {
+    it('returns true for hidden lessons while viewing as a teacher', () => {
       const state = stateWithViewAs(ViewType.Teacher);
-      assert.strictEqual(lessonIsHidden(hiddenLesson, state, undefined), false);
+      assert.strictEqual(lessonIsVisible(hiddenLesson, state, undefined), true);
     });
 
-    it('returns true for hidden lessons while viewing as a teacher, if we ask about students', () => {
+    it('returns false for hidden lessons while viewing as a teacher, if we ask about students', () => {
       const state = stateWithViewAs(ViewType.Teacher);
-      assert.strictEqual(lessonIsHidden(hiddenLesson, state, ViewType.Student), true);
+      assert.strictEqual(lessonIsVisible(hiddenLesson, state, ViewType.Student), false);
     });
 
-    it('returns false for non-hidden lessons while viewing as a student', () => {
+    it('returns true for non-hidden lessons while viewing as a student', () => {
       const state = stateWithViewAs(ViewType.Student);
-      assert.strictEqual(lessonIsHidden(visibleLesson, state, undefined), false);
+      assert.strictEqual(lessonIsVisible(visibleLesson, state, undefined), true);
     });
 
-    it('returns false for non-hidden lessons while viewing as a teacher', () => {
+    it('returns true for non-hidden lessons while viewing as a teacher', () => {
       const state = stateWithViewAs(ViewType.Teacher);
-      assert.strictEqual(lessonIsHidden(visibleLesson, state, undefined), false);
-    });
-
-    it('returns true for a lockable stage when not authorized', () => {
-      let state = stateWithViewAs(ViewType.Teacher);
-      state.stageLock.lockableAuthorized = false;
-      assert.strictEqual(lessonIsHidden(lockableLesson, state, undefined), true);
+      assert.strictEqual(lessonIsVisible(visibleLesson, state, undefined), true);
     });
 
     it('returns false for a lockable stage when not authorized', () => {
       let state = stateWithViewAs(ViewType.Teacher);
+      state.stageLock.lockableAuthorized = false;
+      assert.strictEqual(lessonIsVisible(lockableLesson, state, undefined), false);
+    });
+
+    it('returns true for a lockable stage when not authorized', () => {
+      let state = stateWithViewAs(ViewType.Teacher);
       state.stageLock.lockableAuthorized = true;
-      assert.strictEqual(lessonIsHidden(lockableLesson, state, undefined), false);
+      assert.strictEqual(lessonIsVisible(lockableLesson, state, undefined), true);
     });
 
   });

@@ -16,7 +16,7 @@ import reducer, {
   progressionsFromLevels,
   categorizedLessons,
   statusForLevel,
-  __testonly__
+  processedStages
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -145,7 +145,8 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, undefined);
       assert.equal(nextState.professionalLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, initialScriptOverviewProgress.stages);
+
+      assert.deepEqual(nextState.stages, processedStages(initialScriptOverviewProgress.stages));
       assert.equal(nextState.scriptName, 'course3');
       assert.equal(nextState.currentStageId, undefined);
     });
@@ -157,7 +158,7 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, "341");
       assert.equal(nextState.professionalLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, initialPuzzlePageProgress.stages);
+      assert.deepEqual(nextState.stages, processedStages(initialPuzzlePageProgress.stages));
       assert.equal(nextState.scriptName, 'course3');
       assert.equal(nextState.currentStageId, 265);
     });
@@ -394,7 +395,7 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, undefined);
       assert.equal(nextState.professionalLearningCourse, true);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, intialOverviewProgressWithPeerReview.stages);
+      assert.deepEqual(nextState.stages, processedStages(intialOverviewProgressWithPeerReview.stages));
       assert.deepEqual(nextState.peerReviewStage, peerReviewStage);
       assert.equal(nextState.scriptName, 'alltheplcthings');
       assert.equal(nextState.currentStageId, undefined);
@@ -784,7 +785,6 @@ describe('progressReduxTest', () => {
   });
 
   describe('processedStages', () => {
-    const processedStages = __testonly__.processedStages;
     it('strips "hidden" field from stages', () => {
       const stages = [{
         name: 'stage1',
