@@ -1,7 +1,7 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levelbuilder.js')}
 
-#validation-error.validation-error{style: 'background-color: yellow'}
+%pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
   .field
@@ -48,7 +48,7 @@
       - @level.script_levels.each do |script_level|
         %li
           = f.submit build_script_level_path(script_level), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
-#validation-error.validation-error{style: 'background-color: yellow'}
+%pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 :javascript
   window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
   var saving = false;
