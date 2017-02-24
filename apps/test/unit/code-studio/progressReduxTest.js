@@ -15,7 +15,8 @@ import reducer, {
   levelsByLesson,
   progressionsFromLevels,
   categorizedLessons,
-  statusForLevel
+  statusForLevel,
+  __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -779,6 +780,51 @@ describe('progressReduxTest', () => {
         name: 'stage2',
         id: 2
       }]);
+    });
+  });
+
+  describe('processedStages', () => {
+    const processedStages = __testonly__.processedStages;
+    it('strips "hidden" field from stages', () => {
+      const stages = [{
+        name: 'stage1',
+        id: 123,
+        hidden: false
+      }, {
+        name: 'stage2',
+        id: 124,
+        hidden: true
+      }];
+
+      const processed = processedStages(stages);
+      assert.strictEqual(processed[0].hidden, undefined);
+      assert.strictEqual(processed[1].hidden, undefined);
+    });
+
+    it('adds stageNumber to non-lockable stages, not to lockable stages', () => {
+      const stages = [{
+        name: 'locked1',
+        id: 123,
+        lockable: true
+      }, {
+        name: 'non-locked1',
+        id: 124,
+        lockable: false,
+      }, {
+        name: 'locked2',
+        id: 125,
+        lockable: true
+      }, {
+        name: 'non-locked2',
+        id: 126,
+        lockable: false,
+      }];
+
+      const processed = processedStages(stages);
+      assert.strictEqual(processed[0].stageNumber, undefined);
+      assert.strictEqual(processed[1].stageNumber, 1);
+      assert.strictEqual(processed[2].stageNumber, undefined);
+      assert.strictEqual(processed[3].stageNumber, 2);
     });
   });
 });

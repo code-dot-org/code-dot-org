@@ -56,7 +56,7 @@ const SummaryProgressRow = React.createClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
-    lessonNumber: PropTypes.number.isRequired,
+    lessonNumber: PropTypes.number,
     levels: PropTypes.arrayOf(levelType).isRequired,
     lessonIsHidden: PropTypes.func.isRequired
   },
@@ -71,6 +71,10 @@ const SummaryProgressRow = React.createClass({
 
     // Would this stage be hidden if we were a student?
     const hiddenForStudents = lessonIsHidden(lesson, ViewType.Student);
+    let lessonTitle = lesson.name;
+    if (lessonNumber) {
+      lessonTitle = lessonNumber + ". " + lessonTitle;
+    }
 
     return (
       <tr
@@ -88,7 +92,7 @@ const SummaryProgressRow = React.createClass({
                 style={styles.icon}
               />
             }
-            {`${lessonNumber}. ${lesson.name}`}
+            {lessonTitle}
           </div>
         </td>
         <td style={styles.col2}>
