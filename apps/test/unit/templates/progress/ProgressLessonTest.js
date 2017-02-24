@@ -12,13 +12,7 @@ describe('ProgressLesson', () => {
     lesson: fakeLesson('lesson1', 1),
     levels: fakeLevels(3),
     lessonNumber: 3,
-    viewAs: ViewType.Teacher,
-    sectionId: '11',
-    hiddenStageState: Immutable.fromJS({
-      bySection: {
-        '11': { }
-      }
-    })
+    lessonIsVisible: () => true
   };
 
   it('renders with gray background when not hidden', () => {
@@ -30,32 +24,23 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.lightest_gray);
   });
 
-  it('does not render when hidden and viewing as student', () => {
+  it('does not render when lessonIsVisible is false', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
+        lessonIsVisible={() => false}
         viewAs={ViewType.Student}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {
-            '11': { '1': true }
-          }
-        })}
       />
     );
 
     assert.equal(wrapper.node, null);
   });
 
-  it('renders with white background when hidden and viewing as teacher', () => {
+  it('renders with white background when only visible for teachers', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Teacher}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {
-            '11': { '1': true }
-          }
-        })}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
       />
     );
     assert.equal(wrapper.props().style.background, color.white);

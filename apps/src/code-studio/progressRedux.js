@@ -56,7 +56,7 @@ export default function reducer(state = initialState, action) {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: stages.map(stage => _.omit(stage, 'hidden')),
+      stages: processedStages(stages),
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId
@@ -171,6 +171,27 @@ function bestResultLevelId(levelIds, progressData) {
   return bestId;
 }
 
+/**
+ * Does some processing of our passed in stages, namely
+ * - Removes 'hidden' field
+ * - Adds 'stageNumber' field for non-lockable stages
+ */
+export function processedStages(stages) {
+  let numberOfNonLockableStages = 0;
+
+  return stages.map(stage => {
+    let stageNumber;
+    if (!stage.lockable) {
+      numberOfNonLockableStages++;
+      stageNumber = numberOfNonLockableStages;
+    }
+    return {
+      ..._.omit(stage, 'hidden'),
+      stageNumber
+    };
+  });
+}
+
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
@@ -219,10 +240,7 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
  * Note, that this does not include levels
  * @returns {Lesson}
  */
-const lessonFromStage = stage => ({
-  name: stage.name,
-  id: stage.id
-});
+const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber']);
 export const lessons = state => state.stages.map(lessonFromStage);
 
 /**

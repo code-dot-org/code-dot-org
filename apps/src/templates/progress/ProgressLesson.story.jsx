@@ -1,7 +1,6 @@
 import React from 'react';
 import { UnconnectedProgressLesson as ProgressLesson } from './ProgressLesson';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import Immutable from 'immutable';
 
 const defaultProps = {
   title: "Lesson 1: Bytes and File Sizes" ,
@@ -44,11 +43,7 @@ const defaultProps = {
   ],
   viewAs: ViewType.Teacher,
   sectionId: "11",
-  hiddenStageState: Immutable.fromJS({
-    bySection: {
-      '11': { }
-    }
-  })
+  lessonIsVisible: () => true
 };
 
 export default storybook => {
@@ -69,11 +64,7 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { '1': true}
-              }
-            })}
+            lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
           />
         )
       },
@@ -83,12 +74,7 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            viewAs={ViewType.Student}
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { '1': true}
-              }
-            })}
+            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
           />
         )
       }
