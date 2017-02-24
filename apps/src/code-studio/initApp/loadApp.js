@@ -123,8 +123,8 @@ export function setupApp(appOptions) {
             +new Date(), lastSavedProgram);
       }
       // report.callback will already have the correct milestone post URL in
-      // the contained level case
-      if (!appOptions.hasContainedLevels) {
+      // the contained level case, unless we're editing blocks
+      if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         report.callback = appOptions.report.callback;
       }
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
