@@ -100,53 +100,53 @@ export default storybook => {
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            lessonIsHidden={() => false}
+            lessonIsVisible={() => true}
           />
         )
       },
       {
-        name:'even row is hidden, viewing as teacher',
+        name:'second lesson is a hidden stage, viewing as teacher',
         story: () => (
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            lessonIsHidden={(lesson, viewAs) =>
-              (lesson.id === 2 && viewAs === ViewType.Student)}
+            lessonIsVisible={(lesson, viewAs) =>
+              (lesson.id !== 2 || viewAs !== ViewType.Student)}
           />
         )
       },
       {
-        name:'odd row is hidden, viewing as teacher',
+        name:'third lesson is a hidden stage, viewing as teacher',
         story: () => (
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            lessonIsHidden={(lesson, viewAs) =>
-              (lesson.id === 3 && viewAs === ViewType.Student)}
+            lessonIsVisible={(lesson, viewAs) =>
+              (lesson.id !== 3 || viewAs !== ViewType.Student)}
           />
         )
       },
       {
-        name:'even row is hidden, viewing as student',
+        name:'second lesson is a hidden stage, viewing as student',
         description: 'Row 2 should not be visible',
         story: () => (
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            lessonIsHidden={(lesson, viewAs) =>
-              (lesson.id === 2 && viewAs !== ViewType.Teacher)}
+            lessonIsVisible={(lesson, viewAs) =>
+              (lesson.id !== 2 || viewAs === ViewType.Teacher)}
           />
         )
       },
       {
-        name:'odd row is hidden, viewing as student',
+        name:'third row is a hidden stage, viewing as student',
         description: 'Row 3 should not be visible',
         story: () => (
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            lessonIsHidden={(lesson, viewAs) =>
-              (lesson.id === 3 && viewAs !== ViewType.Teacher)}
+            lessonIsVisible={(lesson, viewAs) =>
+              (lesson.id !== 3 || viewAs === ViewType.Teacher)}
           />
         )
       }

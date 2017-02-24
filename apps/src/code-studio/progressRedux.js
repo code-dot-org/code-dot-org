@@ -176,7 +176,7 @@ function bestResultLevelId(levelIds, progressData) {
  * - Removes 'hidden' field
  * - Adds 'stageNumber' field for non-lockable stages
  */
-function processedStages(stages) {
+export function processedStages(stages) {
   let numberOfNonLockableStages = 0;
 
   return stages.map(stage => ({
@@ -358,7 +358,6 @@ export const progressionsFromLevels = levels => {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 export const __testonly__ = {
-  bestResultLevelId,
-  processedStages
+  bestResultLevelId
 };
 /* end-test-block */

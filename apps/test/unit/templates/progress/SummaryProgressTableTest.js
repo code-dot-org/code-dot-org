@@ -26,7 +26,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        lessonIsHidden={() => false}
+        lessonIsVisible={() => true}
       />
     );
     const rows = wrapper.find('tbody').props().children;
@@ -40,7 +40,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        lessonIsHidden={(lesson, viewAs) => lesson.id === 2 && viewAs !== ViewType.Teacher}
+        lessonIsVisible={(lesson, viewAs) => lesson.id !== 2 || viewAs === ViewType.Teacher}
       />
     );
 
@@ -56,7 +56,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        lessonIsHidden={(lesson, viewAs) => lesson.id === 2 && viewAs === ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => lesson.id !== 2 || viewAs !== ViewType.Student}
       />
     );
 
