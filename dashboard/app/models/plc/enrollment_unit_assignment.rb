@@ -81,7 +81,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         summary << {
           category: category_name,
           status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED,
-          link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: category_name.downcase.gsub(' ', '-'))
+          link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: category_name.downcase.tr(' ', '-'))
         }
       end
     else
