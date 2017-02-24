@@ -181,10 +181,8 @@ class ContactRollups
     # table should exist only there, we can't use a migration to create it. Create the destination table explicitly in code.
     # Create it based on master contact_rollups table. Create it every time to keep up with schema changes in contact_rollups.
 
-    # We deliberately use Sequel rather than ActiveRecord for DB access here. If we are running in a test, the test framework
-    # runs the test inside a transaction on the ActiveRecord connection in order to be able to roll back the transaction
-    # and discard test changes at the end of the test. CREATE TABLE on that connection would cause an implicit commit
-    # of the transaction and break tests. So we use a different connection to run schema modification commands.
+    # Don't create this table if we are running inside a test as it runs afoul of the transaction created on the ActiveRecord
+    # connection to roll back changes from the test. The test will ensure this table is created.
     unless Rails.env.test?
       PEGASUS_REPORTING_DB.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
       PEGASUS_REPORTING_DB.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
