@@ -48,13 +48,13 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
       courseUnits: [
         {
           unitName: @course_unit1.unit_name,
-          link: Rails.application.routes.url_helpers.script_path(@course_unit1.script),
+          link: "/s/#{@course_unit1.script.name}",
           moduleAssignments: [],
           status: 'start_blocked'
         },
         {
           unitName: @course_unit2.unit_name,
-          link: Rails.application.routes.url_helpers.script_path(@course_unit2.script),
+          link: "/@hs/#{@course_unit2.script.name}",
           moduleAssignments: [],
           status: 'start_blocked'
         }
