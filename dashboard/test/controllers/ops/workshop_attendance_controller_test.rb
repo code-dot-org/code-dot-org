@@ -4,10 +4,6 @@ module Ops
     include Devise::Test::IntegrationHelpers
     API = ::OPS::API
 
-    def around_all
-      yield
-    end
-
     self.fixture_table_names = []
 
     setup do

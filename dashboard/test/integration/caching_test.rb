@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
-  def around_all
-    yield
-  end
-
   def setup
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
@@ -13,14 +9,6 @@ class CachingTest < ActionDispatch::IntegrationTest
     Rails.application.config.cache_store = :memory_store, { size: 64.megabytes }
 
     Rails.cache.clear
-  end
-
-  def no_database
-    Rails.logger.info '--------------'
-    Rails.logger.info 'DISCONNECTING DATABASE'
-    Rails.logger.info '--------------'
-
-    ActiveRecord::Base.connection.disconnect!
   end
 
   test "should get /hoc/1" do

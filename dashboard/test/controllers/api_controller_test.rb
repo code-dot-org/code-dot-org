@@ -27,9 +27,10 @@ class ApiControllerTest < ActionController::TestCase
     @student_4 = create(:follower, section: @section).student_user
     @student_5 = create(:follower, section: @section).student_user
 
-    @flappy_section = create(:section, user: @teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
+    flappy = Script.get_from_cache(Script::FLAPPY_NAME)
+    @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
-    @student_flappy_1.backfill_user_scripts
+    @student_flappy_1.backfill_user_scripts [flappy]
     @student_flappy_1.reload
   end
 

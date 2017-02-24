@@ -4,10 +4,6 @@ require 'cdo/shared_constants'
 class ScriptTest < ActiveSupport::TestCase
   include SharedConstants
 
-  def around_all
-    yield
-  end
-
   def setup
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
@@ -22,7 +18,11 @@ class ScriptTest < ActiveSupport::TestCase
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Script.script_cache_to_cache
     Script.script_cache_from_cache
-    ActiveRecord::Base.connection.disconnect!
+
+    # NOTE: ActiveRecord collection association still references an active DB connection,
+    # even when the data is already eager loaded.
+    # Best we can do is ensure that no queries are executed on the active connection.
+    ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
   end
 
   test 'login required setting in script file' do
