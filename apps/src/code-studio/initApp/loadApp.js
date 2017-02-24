@@ -27,6 +27,7 @@ import queryString from 'query-string';
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
 
+const BLANK_SHARE_IMAGE_PATH = '/assets/blank_sharing_drawing.png';
 const SHARE_IMAGE_NAME = '_share_image.png';
 
 /**
@@ -101,10 +102,22 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
-        const imageData = `data:image/png;base64,${decodeURIComponent(report.image)}`;
-        window.fetch && fetch(imageData).then(img => img.blob()).then(blob => {
-          files.putFile(SHARE_IMAGE_NAME, blob);
-        });
+        // Add the frame to the drawing.
+        const frame = new Image();
+        const imageData = new Image();
+        imageData.src = `data:image/png;base64,${decodeURIComponent(report.image)}`;
+        frame.onload = () => {
+          const canvas = document.createElement('canvas');
+          canvas.width = frame.width;
+          canvas.height = frame.height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(frame, 0, 0);
+          ctx.drawImage(imageData, 175, 52);
+          canvas.toBlob && canvas.toBlob(blob => {
+            files.putFile(SHARE_IMAGE_NAME, blob);
+          });
+        };
+        frame.src = BLANK_SHARE_IMAGE_PATH;
         return;
       }
       if (appOptions.channel && !appOptions.level.edit_blocks &&
