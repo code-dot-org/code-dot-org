@@ -1,11 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
-require_relative 'fixtures/mock_pegasus'
 require 'mocha/mini_test'
-
-# Initialize asset_path and minifiable_asset_path, needed by /learn.
-CDO.dashboard_assets_dir = './test/fixtures/dashboard_assets'
-require_relative '../helpers/asset_helpers'
+require_relative 'fixtures/mock_pegasus'
 
 # Set up the rack environment to be test and recreate the Gatekeeper and DCDO in that mode.
 CDO.rack_env = 'test'

@@ -200,7 +200,7 @@ work more like production. Here are the steps to do that:
 
 1. Edit `dashboard/config/environments/development.rb` by changing `config.assets.digest` to
    `true` and `config.assets.compile` to `false`. Edit `locals.yml` by setting `pretty_js` to
-   `false`. This will make the rails app and pegasus look for minified js files that have
+   `false` and `pegasus_skip_asset_map` to `false`. This will make the rails app and pegasus look for minified js files that have
    already been processed by the rails asset pipeline.
 
 2. Run `npm build:dist` inside the `apps` directory. This will generate all the
