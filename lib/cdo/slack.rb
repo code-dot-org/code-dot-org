@@ -36,7 +36,7 @@ class Slack
     )
 
     begin
-      parsed_response = JSON.parse(response.string)
+      parsed_response = JSON.parse(response.read)
     rescue JSON::ParserError
       return nil
     end
@@ -67,7 +67,7 @@ class Slack
       "&topic=#{new_topic}"
     )
 
-    JSON.parse(response.string)['ok']
+    JSON.parse(response.read)['ok']
   end
 
   # @param text [String] The text to post in Slack.
@@ -129,9 +129,10 @@ class Slack
   # Format with slack markdownish formatting instead of HTML.
   # https://slack.zendesk.com/hc/en-us/articles/202288908-Formatting-your-messages
   private_class_method def self.slackify(message)
-    message.strip!
-    message = "```#{message[7..-1]}```" if message =~ /^\/quote /
-    message.
+    message_copy = message.dup
+    message_copy.strip!
+    message_copy = "```#{message_copy[7..-1]}```" if message_copy =~ /^\/quote /
+    message_copy.
       gsub(/<\/?i>/, '_').
       gsub(/<\/?b>/, '*').
       gsub(/<\/?pre>/, '```').
