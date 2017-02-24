@@ -6,9 +6,6 @@ require 'cdo/slack'
 class ChatClient
   @@name = CDO.name[0..14]
 
-  TRUNCATION_PREFIX = '[TRUNCATED]'
-  MAX_MESSAGE_SIZE = 10_000
-
   def self.developers(message, options={})
     # Temporarily redirect developer logging to 'Server operations'.
     # TODO(dave): rename or split HipChat.developers once we settle on a HipChat
