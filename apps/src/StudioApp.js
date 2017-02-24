@@ -375,7 +375,8 @@ StudioApp.prototype.init = function (config) {
     });
   }
 
-  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
+  const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
+  this.authoredHintsController_.init(config.level.authoredHints, hintsUsedIds, config.scriptId, config.serverLevelId);
   if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
     this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
   }
