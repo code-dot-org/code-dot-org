@@ -38,7 +38,8 @@ If you're in one of the countries below, reach out to the partner listed and get
 | China       | Kidsoft                                    | Sarah Tan                    | sarahtan@kidsoft.org                   |                                                                                                             
 | Denmark     | Coding Pirates                             | Martin Exner                 | martin.exner1@gmail.com                |                                                                                                             
 | France      | Microsoft                                  | Béatrice Matlega             | [http://www.aka.ms/code2016](http://www.aka.ms/code2016) <br>email: hourofcode@outlook.fr                
-| Ghana       | Ghana Code Club                            | Ernestina Appiah             | [http://www.ghanacodeclub.org](http://www.ghanacodeclub.org) <br>email: tinasupport@gmail.com                  
+| Ghana       | Ghana Code Club                            | Ernestina Appiah             | [http://www.ghanacodeclub.org](http://www.ghanacodeclub.org) <br>email: tinasupport@gmail.com      
+| India       | Mozilla Indore                           | Mrinal Jain             | [http://mstcindore.org/](http://mstcindore.org/) <br>email:  jain.mrinal140@gmail.com                              
 | Ireland     | Cybersmarties                              | Diarmuid Hudner              | diarmuid@cybersmarties.com             |    
 | Ireland     | EXCITED Digital Learning Movement                              |              | info@excited.ie            |                                                                                                             
 | Italy       | CINI and Univ. Roma "Tor Vergata"          | Enrico Nardelli              | [http://programmailfuturo.it](http://programmailfuturo.it) <br>email: nardelli@mat.uniroma2.it            |
