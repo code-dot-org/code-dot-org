@@ -14,7 +14,7 @@ class ShareFilteringTest < Minitest::Test
   # @param title_name [String] The name of the title of the program.
   # @param title_text [String] The text of the title of the program.
   # @return [String] A sample program.
-  def get_program(title_name, title_text)
+  def generate_program(title_name, title_text)
     '<xml><block type="when_run" deletable="false">'\
       '<next><block type="studio_showTitleScreen">'\
       "<title name=\"TITLE\">#{title_name}</title>"\
@@ -23,7 +23,7 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_with_email_address
-    program = get_program('My Email', 'test@example.com')
+    program = generate_program('My Email', 'test@example.com')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
       ShareFiltering.find_share_failure(program, 'en')
@@ -35,7 +35,7 @@ class ShareFilteringTest < Minitest::Test
       stubs(:find_potential_street_address).
       returns('1600 Pennsylvania Ave NW, Washington, DC 20500')
 
-    program = get_program(
+    program = generate_program(
       'My Street Address',
       '1600 Pennsylvania Ave NW, Washington, DC 20500'
     )
@@ -49,7 +49,7 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_with_phone_number
-    program = get_program('My Phone Number', '123-456-7890')
+    program = generate_program('My Phone Number', '123-456-7890')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
       ShareFiltering.find_share_failure(program, 'en')
@@ -59,7 +59,7 @@ class ShareFilteringTest < Minitest::Test
   def test_find_share_failure_with_profanity
     WebPurify.stubs(:find_potential_profanity).returns('damn')
 
-    program = get_program('My Profanity', 'damn')
+    program = generate_program('My Profanity', 'damn')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'),
       ShareFiltering.find_share_failure(program, 'en')
