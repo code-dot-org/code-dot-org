@@ -86,10 +86,14 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop - Using List Length in For Loop\r\n\r\nOne of the most common ways that for loops are used is with lists. In this example the condition is dependent on list. \r\n\r\n* What will this print in the console?",
-    "start_blocks": "var daysOfWeek = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"];\r\n\r\nfor(var i = 0; i < daysOfWeek.length-1; i++){\r\n  console.log(i);\r\n}\r\n\r\n\r\n\r\n",
+    "start_blocks": "var daysOfWeek = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"];\r\n\r\nfor(var i = 0; i < daysOfWeek.length; i++){\r\n  console.log(i);\r\n}\r\n\r\n\r\n\r\n",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": [
+      "CSD - Predict - Array Length List Printing"
+    ],
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
