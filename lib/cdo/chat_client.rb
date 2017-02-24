@@ -6,9 +6,6 @@ require 'cdo/slack'
 class ChatClient
   @@name = CDO.name[0..14]
 
-  TRUNCATION_PREFIX = '[TRUNCATED]'
-  MAX_MESSAGE_SIZE = 10_000
-
   def self.log(message, options={})
     message(CDO.hip_chat_log_room, message, options)
   end
