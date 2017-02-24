@@ -31,19 +31,20 @@ class PardotTest < ActiveSupport::TestCase
     create(:teacher, email: "rolluptestteacher1@code.org")
 
     # Create teacher 2 with an empty section
-    create(:teacher, email: "rolluptestteacher2@code.org")
+    teacher2 = create(:teacher, email: "rolluptestteacher2@code.org")
+    create_sections_helper teacher2, [[]]
 
     # Create teacher 3 with one section and one student
-    teacher = create(:teacher, email: "rolluptestteacher3@code.org")
-    create_sections_helper teacher, [[{age: 6}]]
+    teacher3 = create(:teacher, email: "rolluptestteacher3@code.org")
+    create_sections_helper teacher3, [[{age: 6}]]
 
     # Create teacher 4 with one section and multiple students
-    teacher = create(:teacher, email: "rolluptestteacher4@code.org")
-    create_sections_helper teacher, [[{age: 6}, {age: 10}, {age: 14}, {age: 10}]]
+    teacher4 = create(:teacher, email: "rolluptestteacher4@code.org")
+    create_sections_helper teacher4, [[{age: 6}, {age: 10}, {age: 14}, {age: 10}]]
 
     # Create teacher 5 with three sections and multiple students
-    teacher = create(:teacher, email: "rolluptestteacher5@code.org")
-    create_sections_helper teacher,
+    teacher5 = create(:teacher, email: "rolluptestteacher5@code.org")
+    create_sections_helper teacher5,
       [
         [{age: 14}, {age: 10}, {age: 11}, {age: 10}, {age: 10}, {age: 11}],
         [{age: 9}, {age: 11}, {age: 9}],
