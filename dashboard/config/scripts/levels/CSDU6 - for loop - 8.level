@@ -86,10 +86,13 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop - Incrementor Practice\r\n",
+    "markdown_instructions": "# For Loop - Incrementor Practice\r\n\r\nCan you make the program count from 30 to 60 by 3s?  (30,33,36,39......57,60)",
     "start_blocks": "for (var i = 10; i < 20; i = i+2) {\r\n  console.log(i);\r\n}\r\n",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
