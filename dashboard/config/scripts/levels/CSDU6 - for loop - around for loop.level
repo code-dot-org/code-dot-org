@@ -88,10 +88,7 @@
     "hide_share_and_remix": "false",
     "markdown_instructions": "# Before and After For Loop\r\n\r\n* Run this code and check out when the console.log statements before and after the for loop print.",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

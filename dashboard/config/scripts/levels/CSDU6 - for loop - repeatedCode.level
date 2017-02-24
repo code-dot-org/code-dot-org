@@ -88,10 +88,7 @@
     "hide_share_and_remix": "false",
     "markdown_instructions": "# Refactoring To For Loop\r\n\r\nFor loops are just a way of simplifying repeated code and make it easier to update in the future.\r\n\r\n* Can you take the repeated code here and turn it into a for loop?",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
