@@ -200,7 +200,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const actualBlocks = this.getNumCountableBlocks();
 
     const progress = experiments.isEnabled('g.stageprogress') ?
-      this.calculateStageProgress(actualBlocks <= idealBlocks, hintsUsed, options.response.level_id) : {};
+      this.calculateStageProgress(
+        actualBlocks <= idealBlocks,
+        hintsUsed,
+        options.response.level_id) :
+      {};
 
     document.body.appendChild(container);
     ReactDOM.render(
@@ -380,7 +384,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
 };
 
-FeedbackUtils.prototype.calculateStageProgress = function (isPerfect, hintsUsed, currentLevelId) {
+FeedbackUtils.prototype.calculateStageProgress = function (
+    isPerfect, hintsUsed, currentLevelId) {
   const stage = this.studioApp_.reduxStore.getState().progress.stages[0];
   const scriptName = stage.script_name;
   const levels = stage.levels;
