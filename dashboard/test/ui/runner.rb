@@ -593,7 +593,9 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
 
     message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if $options.run_eyes_tests} -c #{browser_name} -f #{feature}"
     HipChat.log message, color: 'red'
-    HipChat.developers short_message, color: 'red' if rack_env?(:test)
+    if rack_env?(:test)
+      HipChat.message 'server operations', short_message, color: 'red'
+    end
   end
   result_string =
     if scenario_count == 0

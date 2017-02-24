@@ -6,13 +6,6 @@ require 'cdo/slack'
 class ChatClient
   @@name = CDO.name[0..14]
 
-  def self.developers(message, options={})
-    # Temporarily redirect developer logging to 'Server operations'.
-    # TODO(dave): rename or split HipChat.developers once we settle on a HipChat
-    # logging strategy.
-    message('server operations', message, options)
-  end
-
   def self.log(message, options={})
     message(CDO.hip_chat_log_room, message, options)
   end
