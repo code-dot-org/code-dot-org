@@ -225,12 +225,17 @@ class ActiveSupport::TestCase
       # Transaction not needed if no callbacks are present.
       yield
     else
+      pools = ActiveRecord::Base.connection_handler.connection_pool_list
+      all_connections = pools.map(&:connections).flatten
+      if all_connections.many?
+        warning = 'WARN: Multiple ActiveRecord connections are in use, this can make transactional tests fail in weird ways.'
+        CDO.log.warn warning
+        puts warning
+      end
       ActiveRecord::Base.transaction(
         isolation: :read_uncommitted,
         requires_new: true
       ) do
-        puts "Connections: #{ActiveRecord::Base.connection_handler.connection_pool_list.count}"
-        puts "Active Connections: #{ActiveRecord::Base.connection_handler.connection_pool_list.select(&:active_connection?).count}"
         unless _setup_all_callbacks.empty?
           begin
             t0 = Minitest.clock_time

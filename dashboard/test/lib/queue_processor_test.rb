@@ -102,6 +102,7 @@ class QueueProcessorTest < ActiveSupport::TestCase
   end
 
   def test_queue_processor
+    # skip 'slow/broken test'
     response = @sqs.create_queue(
       queue_name: "test-queue-processor-test",
       # Set a short visibility timeout so that retries will happen quickly.
