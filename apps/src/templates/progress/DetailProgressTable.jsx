@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import ProgressLesson from './ProgressLesson';
-import i18n from '@cdo/locale';
-import { levelType } from './progressTypes';
+import { levelType, lessonType } from './progressTypes';
 
 /**
  * A component that shows progress in a course with more detail than the summary
@@ -9,28 +8,29 @@ import { levelType } from './progressTypes';
  */
 const DetailProgressTable = React.createClass({
   propTypes: {
-    lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(levelType)
-    ).isRequired,
+    ).isRequired
   },
 
   render() {
-    const { lessonNames, levelsByLesson } = this.props;
-    if (lessonNames.length !== levelsByLesson.length) {
+    const { lessons, levelsByLesson } = this.props;
+    if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
 
     return (
       <div>
-        {lessonNames.map((lessonName, index) => (
+        {lessons.map((lesson, index) => (
           <ProgressLesson
             key={index}
-            title={i18n.lessonNumbered({lessonNumber: index + 1, lessonName})}
+            lesson={lesson}
+            lessonNumber={index + 1}
             levels={levelsByLesson[index]}
           />
         ))}
-    </div>
+      </div>
     );
   }
 });

@@ -134,7 +134,9 @@ describe('Circuit Playground Components', () => {
       const pads = initializeTouchPads(board);
       expect(Object.keys(pads)).to.have.length(8);
       for (const key in pads) {
-        if (!pads.hasOwnProperty(key)) continue;
+        if (!pads.hasOwnProperty(key)) {
+          continue;
+        }
         const pad = pads[key];
         expect(/touchPad\d+/.test(key)).to.be.true;
         expect(pad).to.be.an.instanceOf(TouchSensor);

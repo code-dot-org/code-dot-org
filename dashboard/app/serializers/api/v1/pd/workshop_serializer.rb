@@ -53,12 +53,6 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   end
 
   def enrollment_id
-    @scope.try(:id)
-    #
-    # if @scope && @scope[:enrollments]
-    #   enrollment = @scope[:enrollments].find(workshop_id: :id)
-    #
-    #   enrollment.try(:id)
-    # end
+    @scope.try(:[], :enrollment_id)
   end
 end

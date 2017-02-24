@@ -8,3 +8,16 @@ export const levelType = (
     icon: PropTypes.string
   })
 );
+
+/**
+ * @typedef {Object} Lesson
+ *
+ * @property {string} name
+ * @property {number} id
+ */
+export const lessonType = (
+  PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired
+  })
+);

@@ -96,7 +96,7 @@ export var blocks = [
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'setScreen', parent: api, category: 'UI controls', paletteParams: ['screenId'], params: ['"screen1"'], dropdown: { 0: getScreenIds }},
-  {func: 'rgb', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r', 'g', 'b', 'a'], params: ["250", "0", "75", "0.5"]},
+  {func: 'rgb', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r', 'g', 'b', 'a'], params: ["250", "0", "75", "0.5"], type: 'value' },
 
   {func: 'createCanvas', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 3 }, paletteParams: ['id','width','height'], params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT] },
   {func: 'setActiveCanvas', parent: api, category: 'Canvas', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("canvas") } },
@@ -162,6 +162,8 @@ export var blocks = [
   {func: 'clearTimeout', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
   {func: 'setInterval', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"] },
   {func: 'clearInterval', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
+  {func: 'timedLoop', parent: api, category: 'Control', paletteParams: ['ms', 'callback'], params: ['1000', 'function() {\n  \n}']},
+  {func: 'stopTimedLoop', parent: api, category: 'Control', paramButtons: { minArgs: 0, maxArgs: 1 }},
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },

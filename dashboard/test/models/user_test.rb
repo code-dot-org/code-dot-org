@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
@@ -11,6 +10,56 @@ class UserTest < ActiveSupport::TestCase
   test 'make_teachers_21' do
     teacher = create :teacher, birthday: Time.now - 18.years
     assert_equal '21+', teacher.age
+  end
+
+  # Disable this test if and when we do require teachers to complete school data
+  test 'school info should not be validated' do
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: nil
+    }
+    assert_creates(User) do
+      create :teacher, school_info_attributes: school_attributes
+    end
+  end
+
+  test 'ensure school info values are saved correctly when state and zip are passed in different ways' do
+    # state and zip fields are usually passed as school_state and school_zip, but should
+    # be accepted both ways when preprocessed
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      school_state: 'CA',
+      school_zip: '94107'
+    }
+    teacher = create :teacher, school_info_attributes: school_attributes
+    assert teacher.school_info.state == 'CA', teacher.school_info.state
+    assert teacher.school_info.zip == 94107, teacher.school_info.zip
+
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: 'CA',
+      zip: '94107'
+    }
+    teacher = create :teacher, school_info_attributes: school_attributes
+    assert teacher.school_info.state == 'CA', teacher.school_info.state
+    assert teacher.school_info.zip == 94107, teacher.school_info.zip
+  end
+
+  test 'identical school info should not be duplicated in the database' do
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: 'CA'
+    }
+    teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
+    attr = teachers[0].process_school_info_attributes(school_attributes)
+    school_info = SchoolInfo.where(attr).first
+    assert teachers[0].school_info == school_info, "Teacher info: #{teachers[0].school_info.inspect} not equal to #{school_info.inspect}"
+    assert teachers[1].school_info == school_info, "Teacher info: #{teachers[1].school_info.inspect} not equal to #{school_info.inspect}"
+    assert SchoolInfo.where(attr).count == 1
   end
 
   test 'normalize_email' do
@@ -269,18 +318,32 @@ class UserTest < ActiveSupport::TestCase
     user = create(:user)
     assert_equal [], user.gallery_activities
 
-    create(:activity, user: user) # not saved to gallery
-    assert_equal [], user.gallery_activities
+    assert_does_not_create(GalleryActivity) do
+      create(:user_level, user: user)
+    end
 
-    activity2 = create(:activity, user: user)
-    ga2 = GalleryActivity.create!(activity: activity2, user: user)
-    assert_equal [ga2], user.reload.gallery_activities
+    ga2 = nil
+    assert_creates(GalleryActivity) do
+      user_level2 = create(:user_level, user: user)
+      ga2 = GalleryActivity.create!(
+        user: user,
+        user_level: user_level2
+      )
+    end
 
-    create(:activity, user: user) # not saved to gallery
-    assert_equal [ga2], user.reload.gallery_activities
+    assert_does_not_create(GalleryActivity) do
+      create(:user_level, user: user)
+    end
 
-    activity4 = create(:activity, user: user)
-    ga4 = GalleryActivity.create!(activity: activity4, user: user)
+    ga4 = nil
+    assert_creates(GalleryActivity) do
+      user_level4 = create(:user_level, user: user)
+      ga4 = GalleryActivity.create!(
+        user: user,
+        user_level: user_level4
+      )
+    end
+
     assert_equal [ga4, ga2], user.reload.gallery_activities
   end
 
@@ -919,7 +982,7 @@ class UserTest < ActiveSupport::TestCase
       password: "[FILTERED]",
       password_confirmation: "[FILTERED]",
       current_password: "",
-      locale: "en-us",
+      locale: "en-US",
       gender: "",
       age: "10"
     )

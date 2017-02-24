@@ -22,8 +22,14 @@ module Poste
     plain << decrypter.final
   end
 
+  # Attempts to decrypt an encrypted Id
+  # @param encrypted [String] encrypted id
+  # @return [Integer, nil] decrypted id, or nil if it could not be decrypted.
   def self.decrypt_id(encrypted)
-    return decrypt(encrypted).to_i
+    decrypt(encrypted).to_i
+  rescue OpenSSL::Cipher::CipherError, ArgumentError => e
+    CDO.log.warn "Unable to decrypt poste id: #{encrypted}. Error: #{e.message}"
+    nil
   end
 
   def self.encrypt(plain)

@@ -5,6 +5,7 @@ import {reducers, selectors, actions} from '@cdo/apps/lib/tools/jsdebugger/redux
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import Observer from '@cdo/apps/Observer';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
+import experiments from '@cdo/apps/util/experiments';
 
 window.acorn = require('../../../../../lib/jsinterpreter/acorn');
 require('../../../../../lib/jsinterpreter/interpreter');
@@ -13,6 +14,7 @@ describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;
   beforeEach(() => {
     stubRedux();
+    experiments.setEnabled('collapse-debugger', true);
     registerReducers(reducers);
     store = getStore();
     state = store.getState();
@@ -81,6 +83,21 @@ describe('The JSDebugger redux duck', () => {
     it("and no log output", () => {
       expect(selectors.getLogOutput(state)).to.equal('');
     });
+
+    it("and is closed", () => {
+      expect(selectors.isOpen(state)).to.be.false;
+    });
+  });
+
+  describe("the open and close actions", () => {
+    beforeEach(() => store.dispatch(actions.open()));
+    it("will open the debugger", () => {
+      expect(selectors.isOpen(store.getState())).to.be.true;
+    });
+    it("and close the debugger", () => {
+      store.dispatch(actions.close());
+      expect(selectors.isOpen(store.getState())).to.be.false;
+    });
   });
 
   describe("the appendLog action", () => {
@@ -100,6 +117,12 @@ describe('The JSDebugger redux duck', () => {
       expect(selectors.getLogOutput(store.getState())).to.equal(
         '{"foo":"bar"}\nhello'
       );
+    });
+
+    it("will also trigger the open action if the debugger is not already open", () => {
+      expect(selectors.isOpen(store.getState())).to.be.false;
+      store.dispatch(actions.appendLog("open sesame"));
+      expect(selectors.isOpen(store.getState())).to.be.true;
     });
   });
 
@@ -198,10 +221,16 @@ describe('The JSDebugger redux duck', () => {
         expect(selectors.getJSInterpreter(state)).to.equal(interpreter);
       });
 
-      it("the interpreter will trigger pause actions", () => {
+      it("the interpreter will trigger pause actions on breakpoints", () => {
         expect(selectors.isPaused(state)).to.be.false;
         runToBreakpoint();
         expect(selectors.isPaused(store.getState())).to.be.true;
+      });
+
+      it("the interpreter will open the debugger on breakpoints", () => {
+        expect(selectors.isOpen(state)).to.be.false;
+        runToBreakpoint();
+        expect(selectors.isOpen(store.getState())).to.be.true;
       });
 
       it("the interpreter will log execution warnings", () => {
@@ -250,6 +279,7 @@ describe('The JSDebugger redux duck', () => {
       describe("after being detached", () => {
         beforeEach(() => {
           store.dispatch(actions.detach());
+          selectors.getJSInterpreter(state).deinitialize();
           state = store.getState();
         });
 
