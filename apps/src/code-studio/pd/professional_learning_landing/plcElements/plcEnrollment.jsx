@@ -1,6 +1,6 @@
 import React from 'react';
 import color from '../../../../util/color';
-import EnrollmentUnitAssignment from './enrollmentUnitAssignment'
+import EnrollmentUnitAssignment from './enrollmentUnitAssignment';
 
 const styles = {
   courseSection: {
@@ -12,7 +12,7 @@ const styles = {
     fontFamily: '"Gotham 4r"',
     fontSize: '18px'
   },
-}
+};
 
 const PlcEnrollment = React.createClass({
   propTypes: {
@@ -26,7 +26,7 @@ const PlcEnrollment = React.createClass({
           key={i}
           courseUnitData={courseUnit}
         />
-      )
+      );
     });
 
     return (
@@ -47,7 +47,7 @@ const PlcEnrollment = React.createClass({
         {this.renderEnrollmentUnitAssignments()}
         <hr/>
       </div>
-    )
+    );
   }
 });
 

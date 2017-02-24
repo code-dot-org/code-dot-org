@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import PlcEnrollment from './plcElements/plcEnrollment'
+import PlcEnrollment from './plcElements/plcEnrollment';
 
 
 const ProfessionalLearningCourseProgress = React.createClass({
@@ -25,7 +25,7 @@ const ProfessionalLearningCourseProgress = React.createClass({
           })
         }
       </div>
-    )
+    );
   },
 
   render() {
