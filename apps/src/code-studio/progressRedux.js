@@ -56,7 +56,7 @@ export default function reducer(state = initialState, action) {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: stages.map(stage => _.omit(stage, 'hidden')),
+      stages: processedStages(stages),
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId
@@ -171,6 +171,20 @@ function bestResultLevelId(levelIds, progressData) {
   return bestId;
 }
 
+/**
+ * Does some processing of our passed in stages, namely
+ * - Removes 'hidden' field
+ * - Adds 'stageNumber' field for non-lockable stages
+ */
+function processedStages(stages) {
+  let numberOfNonLockableStages = 0;
+
+  return stages.map(stage => ({
+    ..._.omit(stage, 'hidden'),
+    stageNumber: (stage.lockable ? undefined : (++numberOfNonLockableStages))
+  }));
+}
+
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
@@ -219,11 +233,7 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
  * Note, that this does not include levels
  * @returns {Lesson}
  */
-const lessonFromStage = stage => ({
-  name: stage.name,
-  id: stage.id,
-  lockable: stage.lockable
-});
+const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber']);
 export const lessons = state => state.stages.map(lessonFromStage);
 
 /**
@@ -348,6 +358,7 @@ export const progressionsFromLevels = levels => {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 export const __testonly__ = {
-  bestResultLevelId
+  bestResultLevelId,
+  processedStages
 };
 /* end-test-block */

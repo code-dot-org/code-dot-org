@@ -64,7 +64,7 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            lessonIsHidden={(lessonId, viewAs) => viewAs === ViewType.Student}
+            lessonIsHidden={(lesson, viewAs) => viewAs === ViewType.Student}
           />
         )
       },
@@ -75,7 +75,7 @@ export default storybook => {
           <ProgressLesson
             {...defaultProps}
             viewAs={ViewType.Student}
-            lessonIsHidden={(lessonId, viewAs) => viewAs !== ViewType.Teacher}
+            lessonIsHidden={(lesson, viewAs) => viewAs !== ViewType.Teacher}
           />
         )
       }

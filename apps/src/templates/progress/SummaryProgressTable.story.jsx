@@ -7,7 +7,7 @@ const lessons = [
   {
     name: 'Jigsaw',
     id: 1,
-    lockable: false
+    lockable: false,
   },
   {
     name: 'Maze',
@@ -110,10 +110,8 @@ export default storybook => {
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
-            sectionId="11"
-            lessonIsHidden={(lessonId, viewAs) =>
-              (lessonId === 2 && viewAs === ViewType.Student)}
+            lessonIsHidden={(lesson, viewAs) =>
+              (lesson.id === 2 && viewAs === ViewType.Student)}
           />
         )
       },
@@ -123,10 +121,8 @@ export default storybook => {
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
-            sectionId="11"
-            lessonIsHidden={(lessonId, viewAs) =>
-              (lessonId === 3 && viewAs === ViewType.Student)}
+            lessonIsHidden={(lesson, viewAs) =>
+              (lesson.id === 3 && viewAs === ViewType.Student)}
           />
         )
       },
@@ -137,10 +133,8 @@ export default storybook => {
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Student}
-            sectionId="11"
-            lessonIsHidden={(lessonId, viewAs) =>
-              (lessonId === 2 && viewAs !== ViewType.Teacher)}
+            lessonIsHidden={(lesson, viewAs) =>
+              (lesson.id === 2 && viewAs !== ViewType.Teacher)}
           />
         )
       },
@@ -151,10 +145,8 @@ export default storybook => {
           <SummaryProgressTable
             lessons={lessons}
             levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Student}
-            sectionId="11"
-            lessonIsHidden={(lessonId, viewAs) =>
-              (lessonId === 3 && viewAs !== ViewType.Teacher)}
+            lessonIsHidden={(lesson, viewAs) =>
+              (lesson.id === 3 && viewAs !== ViewType.Teacher)}
           />
         )
       }
