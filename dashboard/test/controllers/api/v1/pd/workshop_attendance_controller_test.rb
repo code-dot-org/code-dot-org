@@ -3,7 +3,7 @@ require 'test_helper'
 class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::IntegrationTest
   freeze_time
 
-  setup do
+  setup_all do
     @organizer = create :workshop_organizer
     @facilitator = create :facilitator
 

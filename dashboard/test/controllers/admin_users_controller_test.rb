@@ -3,7 +3,7 @@ require 'test_helper'
 class AdminUsersControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  setup do
+  setup_all do
     @admin = create(:admin)
 
     @unconfirmed = create(:teacher, username: 'unconfirmed', confirmed_at: nil, email: 'unconfirmed@email.xx')

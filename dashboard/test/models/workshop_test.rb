@@ -20,9 +20,7 @@ class WorkshopTest < ActiveSupport::TestCase
     end
   end
 
-  setup do
-    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0)
-
+  setup_all do
     @old_workshop = create_workshop [[Time.now.utc - 10.days, Time.now.utc - 9.days]]
     @tomorrow_workshop = create_workshop [[Time.now.utc + 1.days, Time.now.utc + 1.days + 1.hour]]
 
@@ -41,6 +39,10 @@ class WorkshopTest < ActiveSupport::TestCase
     @workshop_in_2_weeks = create_workshop [[today_start + 2.weeks, today_end + 2.weeks]]
 
     @workshop_in_3_days = create_workshop [[today_start + 3.days, today_end + 3.days]]
+  end
+
+  setup do
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0)
   end
 
   teardown do

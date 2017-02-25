@@ -41,7 +41,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     payment_total
   ).freeze
 
-  setup do
+  setup_all do
     @admin = create :admin
     @organizer = create :workshop_organizer
 

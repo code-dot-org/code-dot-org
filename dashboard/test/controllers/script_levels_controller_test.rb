@@ -7,7 +7,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
 
-  setup do
+  setup_all do
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher

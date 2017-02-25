@@ -4,10 +4,9 @@ require 'cdo/shared_constants'
 class PeerReviewsControllerTest < ActionController::TestCase
   include SharedConstants
 
-  setup do
+  setup_all do
     @user = create :teacher
     @other_user = create :teacher
-    sign_in(@user)
 
     level = create :free_response
     level.update(submittable: true, peer_reviewable: true)
@@ -17,9 +16,13 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @script_level = create :script_level, levels: [level], stage: learning_module.stage
     @script = @script_level.script
     level_source = create :level_source, data: 'My submitted answer'
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
     User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
     @peer_review = PeerReview.first
+  end
+
+  setup do
+    sign_in(@user)
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
   end
 
   test 'non admins cannot access index' do

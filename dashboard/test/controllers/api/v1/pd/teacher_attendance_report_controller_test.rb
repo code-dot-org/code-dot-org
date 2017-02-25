@@ -34,7 +34,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     payment_amount
   ).freeze
 
-  setup do
+  setup_all do
     @admin = create :admin
     @organizer = create :workshop_organizer
 
