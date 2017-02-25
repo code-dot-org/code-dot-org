@@ -36,7 +36,7 @@ zh-TW:
             'Artist: Loops': '小藝術家 - 迴圈（Loops）'
             'Artist: Nested Loops': '小藝術家 - 巢狀迴圈（Nested Loops）'
             'Artist: Sequence': '小藝術家 - 序列（Sequence）'
-            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditonals）'
+            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditionals）'
             'Bee: Debugging': '蜜蜂： 除錯（Debugging）'
             'Bee: Loops': '蜜蜂：迴圈（Loops）'
             Binary Bracelets: 二進制手環
@@ -61,7 +61,7 @@ zh-TW:
             'Artist: Functions': '小藝術家 - 函式（Functions）'
             'Artist: Nested Loops': '小藝術家 - 巢狀迴圈（Nested Loops）'
             'Artist: Patterns': '小藝術家 - 圖案（Patterns）'
-            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditonals）'
+            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditionals）'
             'Bee: Debugging': '蜜蜂： 除錯（Debugging）'
             'Bee: Functions': '蜜蜂：函式（Functions）'
             'Bee: Nested Loops': '蜜蜂：巢狀迴圈（Nested Loops）'
@@ -80,8 +80,8 @@ zh-TW:
             'Studio: Create a Story': 'Play Lab：創作一個故事'
         playlab:
           title: Play Lab
-          description: 利用 Play Lab 來創作一個故事或是製作一個遊戲！
-          description_short: 創建一個故事或做遊戲玩實驗室！
+          description: 在 Play Lab 上創作故事或是遊戲！
+          description_short: 在 Play Lab 上創作故事或設計遊戲！
           stage:
             Play Lab: Play Lab
         artist:
@@ -104,7 +104,7 @@ zh-TW:
             Artist: 演出者
         course4:
           title: 課程 4
-          description: 課程 4 是設計給完成課程 2 和 3 的學生 。隨著難度增加，學生在解決關卡的問題時，也能夠學習結合多種概念。當完成本課程的時候，學生將創建能夠展示多種技能的程式，包括用於迴圈和帶參數的函式。建議 4-5 年級的學生學習。
+          description: 課程 4 是設計給完成課程 2 和 3 的學生 。隨著難度增加，學生在解決關卡的問題時，也能夠學習結合多種概念。當完成本課程的時候，學生將創建能夠展示多種技能的程式，包括用於迴圈和帶參數的函式。建議 4-8 年級的學生學習。
           description_short: 學生在完成課程 2 和課程 3 後，才可以進入課程 4。
           description_audience: 年齡 9-18
           stage:
@@ -139,7 +139,7 @@ zh-TW:
             'Artist: Loops': '小藝術家 - 迴圈（Loops）'
             'Artist: Nested Loops': '小藝術家 - 巢狀迴圈（Nested Loops）'
             'Artist: Sequence': '小藝術家 - 序列（Sequence）'
-            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditonals）'
+            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditionals）'
             'Bee: Debugging': '蜜蜂： 除錯（Debugging）'
             'Bee: Nested Loops': '蜜蜂：巢狀迴圈（Nested Loops）'
             'Farmer: While Loops': '農夫 - 條件迴圈（While Loops）'
@@ -245,7 +245,7 @@ zh-TW:
           description_audience: ''
         20-hour:
           title: 計算機科學課程快速入門
-          description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
+          description: 這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。
           description_short: 這個 20 小時課程中，其中的課程 2-4 包含了核心的計算機科學和編程概念。
           description_audience: 年齡 10-18
           stage:
@@ -705,7 +705,7 @@ zh-TW:
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
-            Standalone video: Standalone video
+            Standalone video: 獨立影片
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -1823,7 +1823,7 @@ zh-TW:
           description_audience: ''
         kinderTest:
           stage:
-            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditonals）'
+            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditionals）'
             Kindergarten Stage 1: Kindergarten Stage 1
           title: ''
           description_audience: ''
@@ -2188,6 +2188,11 @@ zh-TW:
             'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
           description_audience: ''
         csp1-support:
           title: Unit 1 Online Professional Learning Course
@@ -2538,8 +2543,8 @@ zh-TW:
             AP Preparation and Support: AP Preparation and Support
           title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 3
-          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
+          description_short: 教師專業學習課程 - CSP 單元 3
+          description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 3 作準備。
         csdgraveyard:
           stage:
             new stage: new stage
@@ -2564,8 +2569,8 @@ zh-TW:
             Unit 4 Overview: Unit 4 Overview
           title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 4
-          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
+          description_short: 教師專業學習課程 - CSP 單元 4
+          description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 4 作準備。
         sciencepd4:
           stage:
             Welcome!: 歡迎！
@@ -2618,16 +2623,16 @@ zh-TW:
           description: 'Phase 3: Prepare for semester 2 workshop'
         csp5-support:
           stage: [ ]
-          title: Unit 5 Online Professional Learning Course
+          title: 單元 5 線上專業學習課程
           description_audience: ''
           description_short: Teacher Professional Learning Course for CSP Unit 1
-          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+          description: 即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。 
         csp6-support:
           stage: [ ]
-          title: Unit 6 Online Professional Learning Course
+          title: 單元 6 線上專業學習課程
           description_audience: ''
           description_short: ''
-          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+          description: 即將推出：在 2 月中旬，這個頁面會有一系列提供給教師準備 AP 考試的資源。
         csppostap:
           stage:
             Creating Javascript Objects: Creating Javascript Objects
@@ -2639,15 +2644,15 @@ zh-TW:
             Visualizing Data: Visualizing Data
             Sample Apps: Sample Apps
             Final Project: Final Project
-          title: CSP Post-AP - Databases and Using Data in Your Apps
+          title: CSP Post-AP - 數據庫和在你的 App 中使用資料
           description_audience: ''
           description_short: ''
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
         unit6-csd-draft:
           stage:
-            UI and Input: UI and Input
-            Computing Innovations: Computing Innovations
-            Input Unplugged: Input Unplugged
+            UI and Input: 使用者介面（UI）和輸入（Input）
+            Computing Innovations: 計算創新（Computing Innovations）
+            Input Unplugged: 不插電介紹輸入（Input）
             '': ''
           title: ''
           description_audience: ''
@@ -2655,17 +2660,26 @@ zh-TW:
           description: ''
         gamelab-demo:
           stage:
-            Simple Sprite Movement: Simple Sprite Movement
+            Simple Sprite Movement: 簡單的角色動作
         csd6-draft:
           stage:
-            UI and Input: UI and Input
-            Computing Innovations: Computing Innovations
-            Input Uplugged: Input Uplugged
-            The Circuit Playground: The Circuit Playground
+            UI and Input: 使用者介面（UI）和輸入（Input）
+            Computing Innovations: 計算創新（Computing Innovations）
+            Input Uplugged: 不插電介紹輸入（Input）
+            The Circuit Playground: 電路（Circuit ）遊樂場
             Foo: Foo
             Lists: 清單
-            Lights: Lights
-          title: Draft Unit 6
+            Lights: 燈光
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: 不插電介紹輸入（Input）
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: 計數迴圈（For Loops）
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
+          title: 實驗單元 6
           description_audience: ''
           description_short: ''
           description: ''

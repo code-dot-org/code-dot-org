@@ -16,6 +16,7 @@
     attributes:
       user:
         name: Zobrazit jméno
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-mail
         username: uživatelské jméno
         password: heslo
@@ -134,9 +135,29 @@
     user_type_student: student
     field_is_required: je požadováno
     accept_terms: Musíte souhlasit pro vytvoření účtu
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: Select School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: Ostatní
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
   signin_form:
     title: Máš již účet? Přihlaš se
     login: E-mail
+    login_username: Email or Username
     password: Heslo
     remember: Zapamatuj si mne
     submit: Přihlásit
@@ -483,6 +504,12 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
   move_students:
     new_section_dne: Omlouváme se, ale sekce %{new_section_code} neexistuje. Zadejte
       jiný kód sekce.
@@ -576,6 +603,18 @@
         prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou
         nastat chyby ve funkcionalitě.
       link: Zjisti více
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Trvá to déle než obvykle...
   try_reloading: Zkus znovu načíst stránku
   next_stage: Hotovo! Pokračuj do další fáze

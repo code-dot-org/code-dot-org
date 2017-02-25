@@ -124,14 +124,14 @@
         2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would
           the code be to draw half of a square?
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside
-          of your loop.
+        2-3_Artist_Nested_Loops_1_a: "Не забудьте поместить все серые блоки внутрь
+          своего цикла."
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "Нужна помощь с углами? \n**360/12 = 30**"
         2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your
           turn block inside of a loop.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "Нужна помощь с углами? \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from
           the top of one square to the place where you will start the next. \n\nIf
@@ -148,8 +148,9 @@
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
           blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_b: "Если бы вместо красного цветка был фиолетовый,
+          смог бы ты понять, как использовать дополнительный цикл `повторить`, чтобы
+          сократить количество кода?"
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
@@ -448,6 +449,10 @@
 
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: []
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can
           change the number at the top of the block.
@@ -2612,8 +2617,9 @@
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
           blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
-          out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_b: "Если бы вместо красного цветка был фиолетовый,
+          смог бы ты понять, как использовать дополнительный цикл `повторить`, чтобы
+          сократить количество кода?"
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
           \ \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1)
           Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar,
@@ -3569,6 +3575,9 @@
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different
           that you have to do at each honeycomb?
+      playLabDebugVideo1_authored_hint:
+        courseA_playLab_events2_a: "Here is the block you should connect to the `when
+          run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:
         sample3_a: |-
           Try writing the code once and looping it seven times:

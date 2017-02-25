@@ -1057,6 +1057,12 @@
     students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
     saying "I''m taking the #APCSP exam because..." The best submissions will be featured
     in our video and the winning students will receive Code.org swag!'
+  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
+    to break records. Student participation in the exam could dramatically shift diversity
+    in AP Computer Science, but we need your help. Encourage every CS Principles student
+    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
+    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
+    target='_blank'>#APCSP video challenge</a>.
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
   code_sign_up: "Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính"
   host_an_hour: Host an hour
@@ -1936,9 +1942,3 @@
   infinity_shortcode: inf
   playlab_shortcode: Bắt đầu chơi
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

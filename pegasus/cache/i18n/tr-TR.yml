@@ -990,7 +990,7 @@
     gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
     için bir açık mektup verdi."
   dashboard_announce_petition_button: Adınızı Ekleyin
-  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond_button: "Ötesine geçin"
   dashboard_announce_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
     takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
   dashboard_announce_hoc_launch: 180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde,
@@ -1008,32 +1008,36 @@
     yüksek talep trafiği dolayısıyla HourOfCode talebelerinin iilerleme etapları saklanmayacaktır.
     Aralık 3 ten önceki ilerlemelere ulaşılabilir. Bu haftadan sonra normal saklama
     uygulamamız tekrar başlayacaktır.
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
-  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
-    science education movement. You can participate in high-quality K-12th grade professional
-    learning programs <strong>at absolutely no cost to you or your school</strong>.
-    Take the lead on computer science in your school, and apply for professional learning.
-  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
-    To protect your students’ privacy, we have made a change to your section’s login
-    page to avoid displaying full names. Even though this update should reduce privacy
-    concerns for the login page, we still encourage users to <i>not use full names
-    for students</i>.
-  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-    Your students could be featured in Code.org''s next viral video encouraging students
-    to take the AP CS Principles exam this year. We''re inviting all CS Principles
-    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
-    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
-    in our video and the winning students will receive Code.org swag!'
+  dashboard_announce_how_code_studio: 'Bilgisayar Bilimlerini, sınıf içinde öğretmeye
+    başlamak için herhangi bir deneyime ihtiyacın yok. Code.org sunar: müfredat, ders
+    planları, yüksek kaliteli profesyonel eğitim programları ve büyük araçlar.Tüm
+    sınıf düzeyleri için &mdash; Nereden başlıyacağını merak ediyorsan<a href=''%{video_download_url}''>
+    Bu video</a> indir!'
+  dashboard_announce_go_beyond: 'Kod saatinin ötesine gidip  bilgisayar bilimi kavramlarını
+    öğrenciler ile her hafta keşfedin. Code.org sunar: müfredat, ders planları, yüksek
+    kaliteli profesyonel eğitim programları ve büyük araçlar. Tüm düzeyler için &mdash;
+    ve hepsi ücretsiz. :) Bilgisayar Bilimleri, sınıf içinde öğretim başlamak için
+    herhangi bir deneyime ihtiyacın yok. <b>Sınıf için uygun olan adım.</b>'
+  dashboard_announce_teacher_recruitment: Sizin öğretmenler bilişim hareketinin liderisiniz.
+    Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden
+    katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak ve
+    profesyonel öğretme için uygulayabilirsiniz.
+  dashboard_announce_student_privacy: Code.org biz öğrencinin gizliliğini çok ciddiye
+    alıyoruz. Senin öğrencilerin gizliliğini korumak için biz tam adlarınnı görüntülemesini
+    önlemek için bölümün giriş sayfasına bir değişiklik yaptık. Bu güncelleştirme
+    gizlilik seviyesini arttırsa bile <i>öğrencilerin tam adlarını kullanmamasını
+    teşvik ediyoruz.
+  dashboard_announce_apcsp_recruitment: '<strong>Bilgisayar bilim ilkeleri.öğretmenler:</strong>
+    Öğrencilerin Bilgisayar Bilimleri İlkeleri sınavına bu yıl öğrencilerinizi teşvik
+    edin. Code.org''ın sonraki viral özellikli video. 10-20 saniye arası video göndermeleri
+    için öğrencileri davet ediyoruz. Instagram veya Facebook üzerinde video klip vr
+    "Ben #APCSP çünkü sınava gireceğim..." diye paylaşm yapın. Code.org dan swag kazanın!'
+  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
+    to break records. Student participation in the exam could dramatically shift diversity
+    in AP Computer Science, but we need your help. Encourage every CS Principles student
+    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
+    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
+    target='_blank'>#APCSP video challenge</a>.
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   host_an_hour: yaklaşık bir saat
@@ -1893,9 +1897,3 @@
   infinity_shortcode: inf
   playlab_shortcode: oynat
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

@@ -239,6 +239,9 @@
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
+      courseA_collector_loops1_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks
           you can use in this puzzle.
@@ -252,11 +255,17 @@
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
           will you use it?
+      courseB_collector_loops1_callout:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
       courseB_maze_seq7_callout:
         courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
           they can't be trashed.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
+      courseC_collector_prog1_callout:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't
+          worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you
           need them!
@@ -868,7 +877,8 @@
       Luigi's Pizza 4_callout: []
       MC HOC 2016 Level 1_callout: []
       MC HOC 2016 Level 2-2_callout:
-        craft2_run_button_callout: When you are ready, hit "Run" to try your program.
+        craft2_run_button_callout: Hazır olduğunda programı denemek için "Çalıştır"
+          tuşuna bas.
       MC HOC 2016 Level 6_callout: []
       MC HOC 2016 Nerop_callout: []
       MC HOC 2016 New Drop_callout: []
@@ -922,8 +932,7 @@
       NEW Course 4 Artist Vars 6_callout:
         place_length_variable: Soru işaretlerinin yerine uzunluk değişkenini sürükle
       NEW Course 4 Bee For Loops 4_callout:
-        bee_for_loop: Enter the largest number of nectar you want the bee to collect
-          here
+        bee_for_loop: Arının toplaması için nektar sayısını istediğiniz sayıyı girin
       NEW Course 4 Bee For Loops 5_callout:
         actions_category: Ataç kutusunun yeni bir görünümü var! "Eylemler" blokları
           artık burada.
@@ -945,8 +954,8 @@
           bitirebilecek misiniz?
       Overworld Move to Sheep_callout:
         craft_run_button_callout: Programınızı denemek için "Çalıştır" düğmesine basın
-        craft_drag_block_callout: Drag a "move forward" block and snap it below the
-          other block
+        craft_drag_block_callout: Bir "ileri git" bloğunu sürükleyin ve diğer bloğun
+          altına dayayın
       Overworld Place Wall_callout:
         craft_inside_repeat: Blokları buraya yerleştirerek eylemleri tekrar edin
       PDAlg 13-16 Sam Extension Puzzle_callout: []
@@ -972,6 +981,7 @@
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the
           examples and definition.
       Play Lab Rocket Free Play_callout: []
+      playLabDebugVideo1_callout: []
       Poorva copy U3L2 Using Simple Commands_callout: []
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
@@ -1060,6 +1070,6 @@
       Underground Iron_callout:
         craft_what_is_iron: Bu demiri çıkar!
       WebLab PS test - 1-12_callout:
-        version_history_button: Check out version history
+        version_history_button: Sürüm geçmişini kontrol et
       WhileAdventure_callout:
         sample1_1: This will be an adventurer collecting coins, not a farmer digging.

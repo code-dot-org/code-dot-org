@@ -265,7 +265,7 @@
   learn_next_level: Weiter zum nächsten Code Studio Kurs
   learn_online: Probiere andere Kurse online
   learn_classes: Finde Kurse in deiner Nähe.
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: Lerne mehr mit Minecraft
   hoc_is_here: 'Die #HourOfCode ist hier - schau mal vorbei! @codeorg'
   just_did_hoc: 'Ich habe gerade die #HourOfCode gemacht - schau mal vorbei! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
@@ -347,7 +347,7 @@
   homepage_hero_text_stat_served: 'The Hour of Code: #served mal genutzt'
   homepage_slot_text_hoc: Die "Hour of Code"
   homepage_slot_text_frozen: Die Eiskönigin mit Anna und Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Lehrer-Dashboard
   homepage_slot_text_studio: Alle unsere Anleitungen
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Shop
@@ -383,7 +383,7 @@
   homepage_banner_congress_link: Unterstützen sie uns
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: Erfahre mehr
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Mehr erfahren
   homepage_slot_text_title_hoc: Stunde der Code
@@ -1047,6 +1047,12 @@
     students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
     saying "I''m taking the #APCSP exam because..." The best submissions will be featured
     in our video and the winning students will receive Code.org swag!'
+  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
+    to break records. Student participation in the exam could dramatically shift diversity
+    in AP Computer Science, but we need your help. Encourage every CS Principles student
+    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
+    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
+    target='_blank'>#APCSP video challenge</a>.
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melden Sie sich an, um an der Informatikwoche teilzunehmen
   host_an_hour: Veranstalte eine Hour of Code
@@ -1955,9 +1961,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

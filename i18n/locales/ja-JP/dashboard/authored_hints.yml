@@ -2,21 +2,21 @@ ja:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: '「まえにすすむ 100 ピクセル」ブロックを使ってくれれば、せんを引きます。'
+        2-3_Artist_1_new_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: '角度が、むずかしい？8回まがって360度ですね。360 ÷ 8 は、いくつでしょうか？ '
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns 1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: 円は 360 度で、アーティストはループごとに1度まがるから、360 回くりかえして みてください。
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
+        2-3_Artist_2_new_a: アーティストは、正しい方を向いていないです。せんを かく前に、かれの向きを かえてください。
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how tall the hat needs to be!
-        2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
+        2-3_Artist_3new_a: 100 - 70 は、いくつですか？もんだい文では、それが帽子の高さです！
+        2-3_Artist_3new_b: アーティストは、正しい方を向いていないです。せんを かく前に、かれの向きを かえてください。
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: 家を完成させるには、四角形をかいてください！
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
+        2-3_Artist_6_a: '小さな角度にするには、この四角形で、もっと多くまがってください。   '
         2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
         2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
       2-3 Artist 7_authored_hint:
@@ -90,7 +90,7 @@ ja:
         2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
@@ -133,7 +133,7 @@ ja:
       2-3 Bee Loops 2_authored_hint:
         2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       2-3 Bee Loops 3B_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       2-3 Bee Loops 4_authored_hint:
@@ -300,6 +300,9 @@ ja:
           
           
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: [ ]
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
       artistLoopsK2gradek_artist_loops3_authored_hint:
@@ -802,8 +805,8 @@ ja:
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseC_artist_prog1_authored_hint: [ ]
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        courseC_artist_prog2_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        courseC_artist_prog2_a: '「まえにすすむ 100 ピクセル」ブロックを使ってくれれば、せんを引きます。'
+        courseC_artist_prog2_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
           To create this window, just draw a square with 100 pixel sides.
@@ -1020,7 +1023,7 @@ ja:
       courseD_artist_nestedLoops1_authored_hint:
         courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
       courseD_artist_nestedLoops10_authored_hint:
-        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the second half of the last puzzle.
+        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the first half of the last puzzle.
         courseD_artist_nestedLoops10_b: Make sure the outer loop of the code is set to run 7 times and remove the outer turn.
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: 'You will need to draw a total of 6 triangles, each rotated 60 degrees.  '
@@ -1737,8 +1740,8 @@ ja:
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: '「まえにすすむ 100 ピクセル」ブロックを使ってくれれば、せんを引きます。'
+        2-3_Artist_1_new_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel sides.
       grade2_MakeDogTag_3_authored_hint:
@@ -1929,7 +1932,7 @@ ja:
       grade3_Loops_8_authored_hint:
         2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       grade3_maze_loops1_authored_hint:
         grade3_maze_loops1_a: Try using the "Step" button to find errors.
       grade3_maze_loops2_authored_hint:
@@ -2157,16 +2160,16 @@ ja:
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: '「まえにすすむ 100 ピクセル」ブロックを使ってくれれば、せんを引きます。'
+        2-3_Artist_1_new_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
+        2-3_Artist_6_a: '小さな角度にするには、この四角形で、もっと多くまがってください。   '
         2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
         2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
       grade4_review_bee1_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       grade4_review_bee3_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       grade5_artist_binary10_authored_hint:
@@ -2465,7 +2468,7 @@ ja:
       level 'grade3_Loops_8_authored_hint:
         2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: くりかえしの中には6ブロックがひつようです。
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:
@@ -2519,6 +2522,8 @@ ja:
           
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
+      playLabDebugVideo1_authored_hint:
+        courseA_playLab_events2_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:
         sample3_a: |-
           Try writing the code once and looping it seven times:

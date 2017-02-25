@@ -2,31 +2,32 @@
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Se você usar o bloco para me fazer `avançar por 100 pixels`,
+          eu desenharei uma linha automaticamente.
+        2-3_Artist_1_new_b: Você está tendo problemas para virar a esquina? Use o
+          bloco 'virar à direita 90 graus'.
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees
-          in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: 'Está tendo problemas com os ângulos? Você precisa percorrer
+          360 graus em 8 rodadas. Quanto é 360/8? '
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns
-          1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: Há 360 graus em uma circunferência, então se o artista virar
+          1 grau de cada vez ao longo do loop, ele precisará fazer isso 360 vezes.
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct
-          direction. Can you make them turn first before drawing the line?
+        2-3_Artist_2_new_a: A artista parece não estar apontando na direção correta.
+          Você pode fazê-la virar-se antes de desenhar a linha?
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how
-          tall the hat needs to be!
-        2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction.
-          Can you make them turn first before drawing the line?
+        2-3_Artist_3new_a: Quanto é 100-70? Com base no problema da história, essa
+          é a altura que o chapéu precisa ter!
+        2-3_Artist_3new_b: A artista parece não estar apontando na direção correta.
+          Você pode fazê-la virar-se antes de desenhar a linha?
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: Para terminar a casa, tudo o que precisamos fazer é desenhar
+          um quadrado!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start
-          by moving forward, then make left turns to create the triangle.
+        2-3_Artist_6_a: 'Para fazer esses pequenos ângulos, você deve virar *um pouco
+          mais* a cada vez do que você fez com o quadrado.   '
+        2-3_Artist_6_b: Uma vez que eu já estou olhando para a direita, é mais fácil
+          começar indo em frente e depois ir virando à esquerda para criar o triângulo.
         2-3_Artist_6_c: Each side of the triangle is the same length as each side
           of the square...100 pixels!
       2-3 Artist 7_authored_hint:
@@ -448,6 +449,10 @@
 
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: []
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can
           change the number at the top of the block.
@@ -1150,10 +1155,10 @@
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseC_artist_prog1_authored_hint: []
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: If you use the block to have me `move forward by 100
-          pixels`, I will draw a line automatically.
-        courseC_artist_prog2_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        courseC_artist_prog2_a: Se você usar o bloco para me fazer `avançar por 100
+          pixels`, eu desenharei uma linha automaticamente.
+        courseC_artist_prog2_b: Você está tendo problemas para virar a esquina? Use
+          o bloco 'virar à direita 90 graus'.
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
           To create this window, just draw a square with 100 pixel sides.
@@ -2462,10 +2467,10 @@
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Se você usar o bloco para me fazer `avançar por 100 pixels`,
+          eu desenharei uma linha automaticamente.
+        2-3_Artist_1_new_b: Você está tendo problemas para virar a esquina? Use o
+          bloco 'virar à direita 90 graus'.
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel
           sides.
@@ -3049,15 +3054,15 @@
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Se você usar o bloco para me fazer `avançar por 100 pixels`,
+          eu desenharei uma linha automaticamente.
+        2-3_Artist_1_new_b: Você está tendo problemas para virar a esquina? Use o
+          bloco 'virar à direita 90 graus'.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start
-          by moving forward, then make left turns to create the triangle.
+        2-3_Artist_6_a: 'Para fazer esses pequenos ângulos, você deve virar *um pouco
+          mais* a cada vez do que você fez com o quadrado.   '
+        2-3_Artist_6_b: Uma vez que eu já estou olhando para a direita, é mais fácil
+          começar indo em frente e depois ir virando à esquerda para criar o triângulo.
         2-3_Artist_6_c: Each side of the triangle is the same length as each side
           of the square...100 pixels!
       grade4_review_bee1_authored_hint:
@@ -3569,6 +3574,9 @@
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different
           that you have to do at each honeycomb?
+      playLabDebugVideo1_authored_hint:
+        courseA_playLab_events2_a: "Here is the block you should connect to the `when
+          run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:
         sample3_a: |-
           Try writing the code once and looping it seven times:

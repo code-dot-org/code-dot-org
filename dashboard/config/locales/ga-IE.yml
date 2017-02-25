@@ -18,6 +18,7 @@
     attributes:
       user:
         name: Ainm Taispeána
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: Seoladh ríomhphoist
         username: Ainm úsáideora
         password: Focal faire
@@ -142,9 +143,29 @@
     user_type_student: Dalta
     field_is_required: riachtanach
     accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: Select School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: Eile
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
   signin_form:
     title: An bhfuil cuntas agat cheana? Logáil isteach
     login: Seoladh ríomhphoist
+    login_username: Email or Username
     password: Focal faire
     remember: Cuimhnigh orm
     submit: Logáil isteach
@@ -501,6 +522,12 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
   move_students:
     new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
       eile.
@@ -597,6 +624,18 @@
         féidir leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe
         ar an leathanach briste.
       link: Tuilleadh eolais
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Moill as an ngnáth air seo...
   try_reloading: Déan iarracht an leathanach a lódáil arís
   next_stage: Críochnaithe! Ar aghaidh go dtí an chéad chéim eile

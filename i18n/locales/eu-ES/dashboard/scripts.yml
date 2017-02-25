@@ -30,7 +30,7 @@ eu:
           title: 2. Kurtsoa
           description: Hasi 2 kurtsoarekin irakurtzen dakiten eta programatzen esperientziarik ez duten ikasleekin. Kurtso honetan ikasleek programak sortuko dituzte problemak ebazteko eta joku interaktiboak garatu edo elkarbanatu ditzaketen istorioak sortuko dituzte. 2-5 mailetako ikasleentzako gomendatzen da.
           description_short: Hasi 2 kurtosarekin irakurtzen dakiten ikasleekin.
-          description_audience: Ages 6+ (reading required)
+          description_audience: 6+ urte (Nahitaezko irakurketa)
           stage:
             'Artist: Debugging': 'Artista: arazketa'
             'Artist: Loops': 'Artista: Begiztak'
@@ -53,7 +53,7 @@ eu:
             Your Digital Footprint: Zure aztarna digitala
         course3:
           title: 3. Kurtsoa
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Hirugarren maila, bigarren maila egin duten ikasleentzat dago dineinatuta. Ikasleak aurreko mailetan emandako irakasgailetan gehiago sakonduko dute, problema komplexuagoei erantzuna ematen gai izateko. Maila honen amaierarako, ikasleak gai izango dira isotio iteraktiboak eta jokuak sortu, eta edozeinekin partekatzeko. 4-5 urte artekoentzat gomendatua.
           description_short: 3. kurtsoa 2. kurtsoaren jarraipena da.
           description_audience: 8-18 bitarteko adina
           stage:
@@ -286,8 +286,8 @@ eu:
           description_short: Gertaerak
           stage:
             Bounce: Errebotea
-            Calc: Calc
-            Eval: Eval
+            Calc: Kalk
+            Eval: Ebal
             Studio: Studio
           description_audience: ''
         flappy:
@@ -2188,6 +2188,11 @@ eu:
             'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
           description_audience: ''
         csp1-support:
           title: Unit 1 Online Professional Learning Course
@@ -2665,6 +2670,15 @@ eu:
             Foo: Foo
             Lists: Zerrendak
             Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: For begiztak
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
           title: Draft Unit 6
           description_audience: ''
           description_short: ''

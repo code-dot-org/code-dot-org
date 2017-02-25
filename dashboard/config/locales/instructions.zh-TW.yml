@@ -15,7 +15,7 @@
         but the half-finished wall is only 50. Complete the wall. "
       2-3 Artist 3.4_instruction: |-
         跳躍積木只會移動小藝術家而不會繪圖。
-        同時使用「跳躍-向前」和「移動-向前」積木來畫出這個虛線。
+        同時使用`跳躍-向前`和`移動-向前`積木來畫出這個虛線。
         每個線條長度為 50 像素。
       2-3 Artist 3_instruction: "這個帽子有 100 像素高。畫出一個高度少於 70 像素的帽子。"
       2-3 Artist 3new_instruction: |-
@@ -91,22 +91,22 @@
       2-3 Artist Functions 10_instruction: "自由發揮：這裏有 2 個函式：一個是 big gear（大齒輪），另一個是
         small gear（小齒輪）。用它們來畫出一台機器的內部。"
       2-3 Artist Functions 11.5_instruction: |-
-        這裡是一個相同的 draw a hexagon（畫個六邊形）函式。\r
+        這裡是一個相同的 `draw a hexagon`（畫個六邊形）函式。\r
         \r
         如果你循環主要的程式 6 次，每次循環都轉 60 度，會發生什麼事呢？
       2-3 Artist Functions 11_instruction: |-
-        我們已經將 draw a square（畫個正方形）函式重新命名成 draw a hexagon（畫個六邊形），但是它還是只能畫出正方形！你可以修改 draw a hexagon 函式，讓它能畫出每邊長 50 像素的六邊形嗎？\r
+        我們已經將 `draw a square`（畫個正方形）函式重新命名成 `draw a hexagon`（畫個六邊形），但是它還是只能畫出正方形！你可以修改 `draw a hexagon` 函式，讓它能畫出每邊長 50 像素的六邊形嗎？\r
         \r
         用新的函式把圖案畫出來吧！
       2-3 Artist Functions 12 Mike_instruction: |-
         函式（Functions）很適合用來重複繪製複雜圖案。\r
         \r
-        你可以使用 draw a flower（畫個花朵）函式將播種盒上剩餘的圖案填滿嗎？\r
+        你可以使用 `draw a flower`（畫個花朵）函式將播種盒上剩餘的圖案填滿嗎？\r
         植物之間的距離是 100 像素。
       2-3 Artist Functions 12_instruction: |-
         函式（Functions）很適合用來重複繪製複雜圖案。\r
         \r
-        你可以使用 draw a flower（畫個花朵）函式將播種盒上剩餘的圖案填滿嗎？\r
+        你可以使用 `draw a flower`（畫個花朵）函式將播種盒上剩餘的圖案填滿嗎？\r
         植物之間的距離是 100 像素。
       2-3 Artist Functions 13_instruction: |-
         我們為你提供了 4 個函式。
@@ -114,7 +114,7 @@
       2-3 Artist Functions 2_instruction: |-
         函式（Functions）能讓你能夠製作一個屬於自己的新積木！\r
         \r
-        我們已經把繪製一個正方形所需要的所有積木放到一個名叫 draw a square 的函式裡。這一次，使用 draw a square 函式來製作個眼鏡。
+        我們已經把繪製一個正方形所需要的所有積木放到一個名叫 `draw a square` 的函式裡。這一次，使用 `draw a square` 函式來製作個眼鏡。
         \r
         \r
         鏡片外框之間的距離為 75 像素。
@@ -157,15 +157,15 @@
       2-3 Artist Loops New 14_instruction: "玩玩這個畫菱形的程式，看看你可以畫出什麼圖案。試著修改轉向的角度，還有循環的次數。"
       2-3 Artist Loops New 15_instruction: "現在，畫你喜歡的任何東西！"
       2-3 Artist Loops New 2_instruction: |-
-        這個關卡和前一關差不多，不過這次，我們只可以用 1 個「移動-向前」積木，還有 1 個「轉向」積木。\r
+        這個關卡和前一關差不多，不過這次，我們只可以用 1 個`移動-向前`積木，還有 1 個`轉向`積木。\r
         \r
-        你可以使用「重複」積木來解決這個問題嗎？
+        你可以使用`重複`積木來解決這個問題嗎？
       2-3 Artist Loops New 9_instruction: "畫出一個簡單的 V（兩邊的長度都是 50 像素）以完成這個箭頭符號。"
       2-3 Artist Match Hex Pic_instruction: "配對：幫忙完成六邊形。"
       2-3 Artist Match Rho Pic_instruction: "配對：完成遺失的程式碼。"
       2-3 Artist Match Sq Pic_instruction: "配對：完成缺少的程式碼"
       2-3 Artist Match Tri pic_instruction: "配對：填入遺失的積木。"
-      2-3 Artist Nested Loops 1_instruction: "用一個「重複」積木包在整個程式外圍，以畫出這個圖形。"
+      2-3 Artist Nested Loops 1_instruction: "用一個`重複`積木包在整個程式外圍，以畫出這個圖形。"
       2-3 Artist Nested Loops 10_instruction: "循環這個程式 12 次來完成這個圖案。"
       2-3 Artist Nested Loops 11_instruction: "循環這個程式 4 次來完成這個圖案。每繞完一圈就轉向 90 度。"
       2-3 Artist Nested Loops 12_instruction: "循環這個程式 12 次來完成這個漩渦。"
@@ -230,7 +230,7 @@
       2-3 Bee Conditionals 4_instruction: "幫我收集所有花朵中的花蜜，並全部釀成蜂蜜。"
       2-3 Bee Conditionals 5_instruction: |-
         小心不要採集到沒有任何花蜜的紫花。\r
-        你必須用「如果花蜜」積木先檢查看看。
+        你必須用`如果花蜜`積木先檢查看看。
       2-3 Bee Conditionals 6_instruction: "用一個「如果」積木來檢查這朵花上面有沒有花蜜。"
       2-3 Bee Conditionals 7_instruction: "在有花蜜的花朵中採集花蜜。"
       2-3 Bee Conditionals 8_instruction: |-
@@ -282,10 +282,10 @@
       2-3 Bee Functions 2_instruction: |-
         函式是執行特定任務的一串程式碼。\r
         \r
-        用 get 5 這個函式來一次採集 5 個花蜜。
+        用 `get 5` 這個函式來一次採集 5 個花蜜。
       2-3 Bee Functions 3_instruction: "收集每一朵花的花蜜。"
       2-3 Bee Functions 4_instruction: |-
-        Move and get nectar（移動並採集花蜜）函式讓蜜蜂轉向、收集花蜜，接著再讓蜜蜂轉向回到起始點。\r
+        `Move and get nectar`（移動並採集花蜜）函式讓蜜蜂轉向、收集花蜜，接著再讓蜜蜂轉向回到起始點。\r
         \r
         使用這個函式來收集所有的花蜜。
       2-3 Bee Functions 5_instruction: |-
@@ -309,8 +309,8 @@
       2-3 Bee Loops 2_instruction: "使用最少的積木來收集所有花蜜及蜂蜜。"
       2-3 Bee Loops 2A_instruction: "這一回，用一個迴圈來收集所有的花蜜。"
       2-3 Bee Loops 3_instruction: "使用最少的積木，從每一朵花中採集花蜜，並在每一個蜂窩裡釀造蜂蜜。"
-      2-3 Bee Loops 3A_instruction: "使用一個「重複」迴圈來收集所有的花蜜。"
-      2-3 Bee Loops 3B_instruction: "現在使用「重複」積木來收集所有的花蜜和蜂蜜。"
+      2-3 Bee Loops 3A_instruction: "使用一個`重複`迴圈來收集所有的花蜜。"
+      2-3 Bee Loops 3B_instruction: "現在使用`重複`積木來收集所有的花蜜和蜂蜜。"
       2-3 Bee Loops 4_instruction: |-
         蜜蜂就是那麼忙！\r
         \r
@@ -328,12 +328,12 @@
       2-3 Bee Loops 8_instruction: |-
         這些紫色的花在每次關卡運得時，就會有不同的花蜜數量。\r
         \r
-        使用「當花蜜…」迴圈來收集到所有的花蜜。\r
+        使用`當花蜜…`迴圈來收集到所有的花蜜。\r
         \r
         只要條件判斷後是 true（剩下的花蜜數 > 0），這個迴圈就會不斷循環。
       2-3 Bee Loops 9_instruction: While迴圈等同於在迴圈中加上if的敘述。在這個程式碼中加上一個while迴圈來執行同樣的任務。
-      2-3 Bee Loops Assessment 1_instruction: "評量：使用一個「當…」迴圈來採集這些花朵上的所有花蜜。"
-      2-3 Maze 1_instruction: "你可以幫我抓住那頑皮的豬嗎？把幾個「移動-向前」積木放到「當運行時」積木的下面，然後點擊「運行」。 "
+      2-3 Bee Loops Assessment 1_instruction: "評量：使用一個`當…`迴圈來採集這些花朵上的所有花蜜。"
+      2-3 Maze 1_instruction: "你可以幫我抓住那頑皮的豬嗎？把幾個`移動-向前`積木放到`當運行時`積木的下面，然後點擊「運行」。 "
       2-3 Maze 10_instruction: "將我帶到那個綠色小惡魔那！(記得小心TNT黃色炸藥喔)"
       2-3 Maze 11_instruction: "我餓了！讓我到花那兒！你需要重複使用一個積木幾次？"
       2-3 Maze 12 (copy 1)_instruction: "你可以用兩個程式積木就完成上一題的任務嗎? \n(提示: 使用程式積木\"repeat
@@ -341,14 +341,14 @@
       2-3 Maze 12 (copy 2)_instruction: "你可以用兩個程式積木就完成上一題的任務嗎? \n(提示: 使用程式積木\"repeat
         times\"來建立一個迴圈)"
       2-3 Maze 12 (old)_instruction: "讓我抓到那隻豬！現在再用上重複積木！"
-      2-3 Maze 12 - One Move Block_instruction: "抓到這隻豬！但這次，你只可以使用 1 個「移動-向前」積木。看看其它的程式積木是不是能幫上你的忙？"
-      2-3 Maze 12_instruction: "你能用 1 個「移動-向前」和 1 個「重複」積木來創建出一個迴圈，然後到達小豬那兒嗎？"
+      2-3 Maze 12 - One Move Block_instruction: "抓到這隻豬！但這次，你只可以使用 1 個`移動-向前`積木。看看其它的程式積木是不是能幫上你的忙？"
+      2-3 Maze 12_instruction: "你能用 1 個`移動-向前`和 1 個`重複`積木來創建出一個迴圈，然後到達小豬那兒嗎？"
       2-3 Maze 13 (old)_instruction: "讓我抓到那隻豬！現在再用上重複直到積木！"
       2-3 Maze 13_instruction: "讓我抓到那隻豬！這一次，你只能用 1 個向前移動積木。"
       2-3 Maze 14 (old)_instruction: "使用「重複直到」積木讓我到豬那兒！"
       2-3 Maze 14_instruction: "使用最少的積木讓我吃到向日葵！（我需要的「重複」積木在哪兒呢？）"
       2-3 Maze 15 (old)_instruction: "使用「重複直到」積木讓我到豬那兒！"
-      2-3 Maze 15_instruction: "這個關卡裡，2 個重複迴圈可以幫你使用最少的積木數來採集到花蜜！"
+      2-3 Maze 15_instruction: "這個關卡裡，2 個`重複`迴圈可以幫你使用最少的積木數來採集到花蜜！"
       2-3 Maze 16 (old)_instruction: "使用「重複直到」積木讓我到豬那兒！"
       2-3 Maze 16 before_instruction: "想想看，如何用最快的方式讓我可以抓到豬？"
       2-3 Maze 16_instruction: "迴圈裡還可以放入更多的積木！你可以循環這個序列，讓殭屍吃到向日葵嗎？"
@@ -365,7 +365,7 @@
       2-3 Maze Loops 18_instruction: |-
         使用最少的積木帶我吃到向日葵！\r
         \r
-        試試把一個「重複」迴圈放到另一個「重複」迴圈裡頭，可以減少積木的使用次數。
+        試試把一個`重複`迴圈放到另一個`重複`迴圈裡頭，可以減少積木的使用次數。
       2-3 Maze Loops 19_instruction: |-
         我們來把它帶到另一個層次！\r
         使用迴圈，讓我吃到向日葵，用愈少積木愈好！
@@ -503,7 +503,7 @@
       4-5 Artist 1_instruction: "請幫我畫完我的盒子。（每個線段的長度是 300 像素） "
       4-5 Artist 10_instruction: "點擊「運行」來試試程式，接著，重複它指定次數來完成這個圖案，每次使用不同的顏色。"
       4-5 Artist 11_instruction: "完成這些綠色的線。它們的長度是 300 像素，線條與線條之間的距離為 15 像素。"
-      4-5 Artist 2_instruction: "使用「重複」積木來循環這個程式，以完成這個正方形。"
+      4-5 Artist 2_instruction: "使用`重複`積木來循環這個程式，以完成這個正方形。"
       4-5 Artist 3.5_instruction: "想一想，當你運行這個程式時會發生什麼事（你也可以直接點擊「運行」來看看）。接著，重複它一定的次數來完成這個圖形！"
       4-5 Artist 3_instruction: "這個長方形花圃的周長是 600。長邊的長度是 200。畫出這個長方形，用的積木愈少愈好。"
       4-5 Artist 4_instruction: "一個圓有多少度？藉由迴圈來創造一個彩色的圓。"
@@ -810,7 +810,7 @@
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
-      Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
+      Alien Defender_instruction: "專案點子：在 Play Lab 裡設計一個獨一無二的遊戲！"
       AllTheThings Applab - Turtle move with button_instruction: "添加一個按鈕，讓你在點擊它時，烏龜能夠移動。（點擊觀看完整說明）"
       allthethings data blocks test_instruction: |-
         Please sign in to test applab levels
@@ -887,6 +887,10 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
+      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
+      artistFunctionsVideo1_instruction: |-
+        Follow the instructions to make your own
+        function.
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -930,6 +934,7 @@
         or 0 nectar, but you don't know which one! Be careful not to collect nectar
         from a purple flower if it doesn't have any. Check if the nectar is equal
         to 1 by using the if block.
+      beeDebugVideo1_instruction: "使用一個`重複`迴圈來收集所有的花蜜。"
       Bergeron Robot Maze1_instruction: |
         Can you help me catch the naughty pig? Stack
         a couple of `move forward` blocks below the `when run` block and press "Run".
@@ -1069,6 +1074,9 @@
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
+      birdsDebugVideo1_instruction: |-
+        Trace the path and lead me to the silly pig.
+        Avoid TNT or feathers will fly!
       Brad Spooky House Copy_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -1355,6 +1363,14 @@
       Collector Demo_instruction: |-
         Look at all this loot! Help me get as many coins
         as I can so I can improve my farm. I can only use 9 blocks though!
+      collector example_instruction: |-
+        Put these blocks in order to collect all of
+        the gold and solve the puzzle.
+      collectorDebugVideo2_instruction: |-
+        Put these blocks in order to collect all
+        of the gold and solve the puzzle.
+      collectorSkinVideo1_instruction: Collect all four piles to pass this level.
+      collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? "
       Course 2 Bee Loops 13_instruction: "評量：使用重複積木來收集所有的花蜜。"
@@ -1687,7 +1703,7 @@
         變數會依照增量的值改變。試試每次增量 2，以收集到這些花朵。"
       Course 4 Bee Loops 5 NEW_instruction: "這裡有 3 朵花，你能找出你需要重複 3 次去收集花蜜的操作模式，在使用最少數量的積木情況來完成這個關卡嗎？"
       Course 4 Bee Loops 5a NEW_instruction: "現在，使用迴圈來幫助蜜蜂在往蜂窩的路上採集所有的花蜜，盡可能使用最少的程式積木。當你到達目的地時，別忘了要釀成蜂蜜！"
-      Course 4 Bee Params 1_instruction: "寫一序列的指令以收集所有花蜜。使用 get 3 nectar（採集 3 個花蜜）這個函式，其功能為轉向，然後移動到目標並採花蜜，最後回到原本的位置。"
+      Course 4 Bee Params 1_instruction: "寫一序列的指令以收集所有花蜜。使用 `get 3 nectar`（採集 3 個花蜜）這個函式，其功能為轉向，然後移動到目標並採花蜜，最後回到原本的位置。"
       Course 4 Bee Params 2_instruction: "修改 get 3 nectar（採集 3 個花蜜）這個函式，讓我右轉找到花朵，而不是向左轉。"
       Course 4 Bee Params 3 (copy 1)_instruction: "現在，兩邊都有花了！也許你可以用一個參數，讓同一個函式對兩邊的花都可以使用。我們已添加了一個叫做
         direction（方向）的參數到函式裡。如果這個 direction 參數等於 0，就會向左轉，如果它等於 1，就會向右轉。"
@@ -1903,11 +1919,9 @@
         at least 10 times, the game is over.
       Course 4 Playlab For Loop Freeplay_instruction: "自由發揮：使用目前為止你學會的一切製作一個遊戲，包括計數迴圈！"
       Course 4 Playlab For Loops 4b_instruction: |-
-        現在，這二個角色想要比實跑！\r
-        \r
+        現在，這二個角色想要比實跑！
         每個角色一次移動的距離會依計數器而定，
-        但是他們的計數器會因為計數迴圈而得到不同的數值。\r
-        \r
+        但是他們的計數器會因為計數迴圈而得到不同的數值。
         你能改變迴圈的間隔數值，來讓他們同時到達終點嗎？
       Course 4 Playlab For Loops 5b_instruction: "調整這些計數迴圈（for loops）的間隔數，以便這兩個角色最後到達完全相同的位置。"
       Course 4 Playlab For Loops 6b_instruction: "編輯這個計數迴圈去創造一個你自己覺得好玩的遊戲！\\r\n點擊「運行」然後盡你所能的點擊獨角獸，你能超過我們的最高紀錄
@@ -2007,19 +2021,13 @@
       courseA_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
-      courseA_artist_loops10_instruction: |-
-        Help me put down stones so I don't fall
-        in!
-      courseA_artist_loops11_instruction: |-
-        Help me build steps to watch the ship
-        sail away.
-      courseA_artist_loops12_instruction: |-
-        The artist saw something funny in the
-        distance.  Draw what you think he saw.
+      courseA_artist_loops10_instruction: "幫我放些石頭，我不想掉下去！"
+      courseA_artist_loops11_instruction: "幫我建置階梯，讓我可以看著船航行到遠方。"
+      courseA_artist_loops12_instruction: "小藝術家在遠處看到了一些有趣的東西，你覺得他看到了什麼？把它畫出來。"
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
-      courseA_artist_loops3_instruction: Draw a line forward five times.
+      courseA_artist_loops3_instruction: "向前畫一條線，重複 5 次。"
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
@@ -2029,10 +2037,8 @@
       courseA_artist_loops6_instruction: Let's put a nice hill in the back.
       courseA_artist_loops7_instruction: "使用「重複」迴圈為水添加波紋。"
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
-      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
-      courseA_collector_loops1_instruction: |-
-        Move Laurel around and get as much gold
-        as you can!
+      courseA_artist_loops9_instruction: "挑戰：修復這些階梯。"
+      courseA_collector_loops1_instruction: "移動 Laurel，幫助牠找到愈多的黃金愈好！"
       courseA_collector_loops10_instruction: |-
         Help me get all of the gold from this
         deep valley.
@@ -2042,61 +2048,40 @@
       courseA_collector_loops12_instruction: |-
         Eureka!  Collect as much gold as you
         can!
-      courseA_collector_loops2_instruction: |-
-        Here are three piles of gold!  Collect
-        all three.
+      courseA_collector_loops2_instruction: "這是有 3 堆黃金！收集到所有黃金。"
       courseA_collector_loops3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `[E-->]` block?
-      courseA_collector_loops4_instruction: |-
-        Fix Laurel's path to get all of this
-        gold.
+      courseA_collector_loops4_instruction: "修正 Laurel 的路徑，讓牠能收集到黃金。"
       courseA_collector_loops5_instruction: |-
         Use what you learned to get all of the
         coins.
-      courseA_collector_loops6_instruction: |-
-        Add blocks to this code to collect all
-        of the coins.
+      courseA_collector_loops6_instruction: "添加積木到程式中，以收集到所有的硬幣。"
       courseA_collector_loops7_instruction: |-
         What should you add to this code to
         get all of the gold?
       courseA_collector_loops8_instruction: Write the code to get all of this gold.
-      courseA_collector_loops9_instruction: |-
-        **Challenge:** The gold goes all the
-        way up these stairs!  Write the code to help me get it all.
-      courseA_maze_seq1_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
-      courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
-        the pig! "
-      courseA_maze_seq11_instruction: |-
-        Move one way, then another to get the bird
-        to the pig.
-      courseA_maze_seq12_instruction: 'Get that pig! '
-      courseA_maze_seq13_instruction: Get the pig any way you can!
+      courseA_collector_loops9_instruction: "**挑戰：**階梯上到處都是黃金！寫個程式幫我得到全部的黃金。"
+      courseA_maze_seq1_instruction: "讓這隻鳥抓到壞豬豬！"
+      courseA_maze_seq10_instruction: "挑戰：繞開 TNT 炸蘗，讓鳥能夠抓到豬！"
+      courseA_maze_seq11_instruction: "先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到那頭豬。"
+      courseA_maze_seq12_instruction: "抓住那頭豬！ "
+      courseA_maze_seq13_instruction: "抓到這頭豬，不管你用什麼方法！"
       courseA_maze_seq2_instruction: "有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。"
-      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq3_instruction: "修正這個程式，讓鳥抓到這頭豬！"
+      courseA_maze_seq4_instruction: "「移除」一個積木，讓鳥抓到這頭豬！"
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
-      courseA_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
-      courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
-      courseA_maze_seq9_instruction: |-
-        Debug this level by adding blocks to get the
-        bird to the pig!
+      courseA_maze_seq6_instruction: "先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！"
+      courseA_maze_seq7_instruction: "想想看，這裡頭少了什麼積木，添加積木讓鳥可以抓到這頭豬！"
+      courseA_maze_seq8_instruction: "完成這個關卡，讓鳥抓到這頭豬！"
+      courseA_maze_seq9_instruction: "找出這個關卡的錯誤，添加積木以修正程式，讓鳥可以抓到這頭豬！"
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       courseA_playLab_events2_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
-      courseA_playLab_events3_instruction: |-
-        Connect the `move left` block to the
-        `when left` event block that is already in the workspace.
+      courseA_playLab_events3_instruction: "將「移動-向左」積木連接到工作區裡的「當按向左鍵時」事件積木下。"
       courseA_playLab_events4_instruction: |-
         Now, get Jorge to move right when the
         `right` button is clicked.
@@ -2119,18 +2104,14 @@
       courseB_artist_loops2_instruction: |-
         The Artist is trying to draw a line six
         times, but can't get it right.  Can you help?
-      courseB_artist_loops3_instruction: |-
-        Help the artist draw a line 7 times to
-        make a garden wall.
+      courseB_artist_loops3_instruction: "幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。"
       courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
         the bugs in the code and help the artist prepare the ground. "
       courseB_artist_loops5_instruction: |-
         Time to fix the stairs!  Repeat this pattern
         five times so the artist can reach the top of the bushes.
-      courseB_artist_loops6_instruction: Climb the vine and see where it goes?
-      courseB_artist_loops7_instruction: |-
-        **Challenge:**  It's a hidden garden!
-        Let's walk around.
+      courseB_artist_loops6_instruction: "爬上藤，看看它在哪裡？"
+      courseB_artist_loops7_instruction: "**挑戰：**有個隱藏的花園！讓我們隨便逛逛。"
       courseB_artist_loops8_instruction: |-
         Time to head home. Can you fix this ladder
         to help the artist get down?
@@ -2140,34 +2121,26 @@
       courseB_collector_loops1_instruction: |-
         This is Laurel the Adventurer!  Can
         you move her around and get gold?
-      courseB_collector_loops10_instruction: |-
-        Help Laurel get all of the gold from
-        this cave.
+      courseB_collector_loops10_instruction: "幫助 Laurel 獲得洞穴中的所有黃金。"
       courseB_collector_loops11_instruction: |-
         Eureka!  Collect as much gold as you
         can!
-      courseB_collector_loops2_instruction: Four piles of gold!  Collect all four.
+      courseB_collector_loops2_instruction: |-
+        Collect all four piles to pass this
+        level.
       courseB_collector_loops3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
-      courseB_collector_loops4_instruction: |-
-        Fix Laurel's path to get all of this
-        gold!
+      courseB_collector_loops4_instruction: "修正 Laurel 的路徑，讓牠能收集到黃金！"
       courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
         get all of the gold. "
       courseB_collector_loops6_instruction: |-
-        What should you add to this code to
-        get all of the gold?
+        Figure out the code to help Laurel get
+        all of the gold!
       courseB_collector_loops7_instruction: Write the code to get all of this gold.
-      courseB_collector_loops8_instruction: |-
-        **Challenge: ** The gold goes all the
-        way down these stairs!  Write the code to help Laurel get it all.
-      courseB_collector_loops9_instruction: |-
-        *"Help me get the gold from this deep
-        valley."*
-      courseB_collector_prog1_instruction: |-
-        This is Laurel the Adventurer!  Can you
-        move her around and get gold?
+      courseB_collector_loops8_instruction: "**挑戰：**階梯上到處都是黃金！寫個程式幫我得到全部的黃金。"
+      courseB_collector_loops9_instruction: "*「幫我拿到深谷裡的所有的黃金。」*"
+      courseB_collector_prog1_instruction: "這位是冒險家 Laurel！你能幫助她移動以取得黃金嗎？"
       courseB_collector_prog2_instruction: Four piles of gold!  Collect all four.
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
@@ -2177,30 +2150,18 @@
         the bird do!
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
-      courseB_maze_seq12_instruction: Now get that pig any way you can!
-      courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
-      courseB_maze_seq3_instruction: '*"Fix the code to get me to the pig!"*'
+      courseB_maze_seq12_instruction: "現在抓到那頭豬，不管你用什麼方法！"
+      courseB_maze_seq2_instruction: "*「有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。」*"
+      courseB_maze_seq3_instruction: "*「修正這個程式，使我抓到這頭豬！」*"
       courseB_maze_seq4_instruction: "添加 2 個積木讓鳥移動到豬那裡。"
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
-      courseB_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
-      courseB_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
-      courseB_maze_seq8_instruction: |-
-        Your turn!  What do you need to do to get the
-        bird to the pig?
-      courseB_maze_seq9_instruction: |-
-        Challenge: Move around the TNT to get the bird
-        to the pig.
-      courseB_maze_seqCold_instruction: |-
-        Challenge: Debug this level by adding blocks
-        to get the bird to the pig!
-      courseB_maze_seqOld_instruction: "Go around the TNT to get the bird to the\npig! "
-      courseB_playLab_events1_instruction: |-
-        See if you can figure out what each block
-        does.
+      courseB_maze_seq6_instruction: "先往一個方向移動，接著再往另一個方向移動，讓鳥能夠抓到這頭豬！"
+      courseB_maze_seq7_instruction: "想想看，這裡頭少了什麼積木，添加積木讓鳥可以抓到這頭豬！"
+      courseB_maze_seq8_instruction: "輪到你了！要怎麼樣才能讓鳥抓到這頭豬呢？"
+      courseB_maze_seq9_instruction: "挑戰：繞開 TNT 炸蘗，讓鳥能夠抓到豬！"
+      courseB_maze_seqCold_instruction: "挑戰：找出這個關卡的錯誤，添加積木以修正程式，讓鳥可以抓到這頭豬！"
+      courseB_maze_seqOld_instruction: "繞開 TNT 炸藥，讓鳥抓到這頭豬！ "
+      courseB_playLab_events1_instruction: "看看你是否能指出每個積木的用途。"
       courseB_playlab_events2_instruction: |-
         Have Daisy the Dragon say something when
         you click "Run".
@@ -2481,8 +2442,8 @@
         (Each side is 100 pixels long and you'll need to turn 120 degrees
         for each exterior angle.)
       courseD_artist_nestedLoops10_instruction: |-
-        Take the triangles from before,
-        but this time only make 7 of them, and lay them out in a row.
+        Take the squares from before, but
+        this time only make 7 of them, and lay them out in a row.
       courseD_artist_nestedLoops1a_instruction: |-
         Now loop the triangle 6 times. \r
         After
@@ -2952,32 +2913,17 @@
       courseF_artist_for9_instruction: |-
         Use the counter inside the `set alpha` block
         to get this faded center.
-      courseF_artist_fwp1_instruction: |-
-        Edit the function 'draw a square' to find
-        bugs.
-      courseF_artist_fwp2_instruction: |-
-        Edit the function to accept a parameter called
-        `length`.
-      courseF_artist_fwp3_instruction: |-
-        Create a function called 'draw a square'
-        and use it to outline these four boxes using parameters.
-      courseF_artist_fwp4_instruction: |-
-        Edit this function to add a parameter for
-        the number of sides in your polygon.
-      courseF_artist_fwp5_instruction: "Use the function from the last puzzle to\ndraw
-        this series of shapes.  "
-      courseF_artist_fwp6_instruction: |-
-        Challenge: Edit `draw a spiral edge` to use
-        `length` and `sides` parameters, then recreate these shapes.
-      courseF_artist_fwp7_instruction: |-
-        Finish off the `draw a spiral edge` function
-        to also ask for a minimum length for the center of the spiral.
-      courseF_artist_fwp8_instruction: |-
-        Can you figure out how to make this drawing
-        using the function that you just created?
-      courseF_artist_fwp9_instruction: |-
-        Freeplay: Draw something awesome! Play with
-        the pen width to see how different your drawings look!
+      courseF_artist_fwp1_instruction: "編輯函式 draw a square（畫個正方形），找出程式裡頭的錯誤。"
+      courseF_artist_fwp2_instruction: "編輯這個函式，讓函式裡頭帶有一個稱做 length（長度）的參數。"
+      courseF_artist_fwp3_instruction: "創建一個函式，名為 draw a square（畫個正方形），並使用參數來畫出這 4
+        個盒子的外框線。"
+      courseF_artist_fwp4_instruction: "編輯這個函式以添加一個參數，參數用來表示多邊形的邊數。"
+      courseF_artist_fwp5_instruction: "使用上個關卡的函式來畫出這些圖形。  "
+      courseF_artist_fwp6_instruction: "編輯 draw a spiral edge（畫個螺旋圖）以使用 length（長度）和
+        sides（邊）參數，然後重新創建這些形狀。"
+      courseF_artist_fwp7_instruction: "完成 draw a spiral edge（畫個螺旋圖）函式，同時詢問螺旋中心所需的最小長度。"
+      courseF_artist_fwp8_instruction: "想一想要怎麼使用你剛剛創建的函式來製作出這個圖案？"
+      courseF_artist_fwp9_instruction: "自由發揮：畫些很棒的東西出來吧！變化筆跡寬度，看看你的圖案會變得怎麼樣！"
       courseF_artist_variables1_instruction: |-
         Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side.
@@ -3071,22 +3017,14 @@
       courseF_bee_for9_instruction: |-
         Use the `counter` variable to navigate this
         garden with the fewest number of blocks possible.
-      courseF_bee_fwp2_instruction: |-
-        Pull this code into a function, then call the
-        function to check this row for nectar.
-      courseF_bee_fwp3_instruction: |-
-        Let's see if the function makes collecting
-        these three rows of nectar any easier.
-      courseF_bee_fwp4_instruction: |-
-        Add a `length` parameter to the function so
-        that it will still work when the row is a different length.
-      courseF_bee_fwp5_instruction: Use this function to collect the nectar.
-      courseF_bee_fwp6_instruction: Build a short and sweet solution to this puzzle.
-      courseF_bee_fwp7_instruction: |-
-        **Challenge:** Modify your function to make
-        honey as well.
-      courseF_bee_fwp8_instruction: Use your new function to solve this spiral.
-      courseF_bee_fwp9_instruction: Use your new function to solve this puzzle.
+      courseF_bee_fwp2_instruction: "將這些程式變成一個函式，接著呼叫這個函式來檢查是否有花蜜。"
+      courseF_bee_fwp3_instruction: "讓我們來看看這個函式是否有辦法很容易的收集到三列的花蜜。"
+      courseF_bee_fwp4_instruction: "添加一個 length（長度）參數到函式裡，這樣一來當橫列長度不一樣時，它也一樣有用。"
+      courseF_bee_fwp5_instruction: "使用這個函式來收集花蜜。"
+      courseF_bee_fwp6_instruction: "為這個關卡建立一個簡短有力的解法。"
+      courseF_bee_fwp7_instruction: "**挑戰：**修改你的函式，讓你的函式也可以釀造蜂蜜。"
+      courseF_bee_fwp8_instruction: "使用你的新函式以畫出這個螺旋圖形。"
+      courseF_bee_fwp9_instruction: "使用你的新函式以完成這個關卡。"
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of choose your own adventure story in play lab.
@@ -3405,6 +3343,15 @@
       CSDU6 - Arrays - lengthMinus1_instruction: |-
         Use list.length - 1 to log the
         last item in the array to the console. (Click to see full instructions)
+      CSDU6 - for loop - color buttons with for_instruction: |-
+        Write the contents
+        of the array to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - color buttons_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - why for_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -4508,7 +4455,7 @@
       Food Fight_instruction: |-
         You can make whatever you want in play lab! This is
         an example of a game you can make in play lab.
-      FoodFight_instruction: This is an example of a game you can make in play lab.
+      FoodFight_instruction: "這是一個遊戲範例，你也可以在 play lab 裡自己做一個。"
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: "現在我們來建立 20 個互有重疊的圓，在每個圓之後轉向 18
         度。"
@@ -4944,7 +4891,7 @@
         這裡也太多活要做了吧！\r
         \r
         使用你所學到的來收集所有花蜜及蜂蜜。
-      grade3_Conditionals_11 BAD_instruction: "評量：使用一個「當…」迴圈來採集這些花朵上的所有花蜜。"
+      grade3_Conditionals_11 BAD_instruction: "評量：使用一個`當…`迴圈來採集這些花朵上的所有花蜜。"
       grade3_Conditionals_11_instruction: |-
         我們把所有東西都放在一起吧！\r
         \r
@@ -5061,7 +5008,7 @@
         你能收集到花蜜嗎？用的積木愈少愈好。
       grade3_Loops_12_instruction: "你能用最快的方式，讓蜜蜂收集到所有的花蜜及蜂蜜嗎？"
       grade3_Loops_2_instruction: "這一回，用一個迴圈來收集所有的花蜜。"
-      grade3_Loops_3_instruction: "使用一個「重複」迴圈來收集所有的花蜜。"
+      grade3_Loops_3_instruction: "使用一個`重複`迴圈來收集所有的花蜜。"
       grade3_Loops_4_instruction: |-
         Now use the `repeat` block to collect all of the
         nectar and make all of the honey.
@@ -6212,9 +6159,7 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
-      InspirationalArtwork_instruction: |-
-        If this picture inspires you, try to make
-        something similar. Otherwise, create something all your own.
+      InspirationalArtwork_instruction: "如果這個圖形給了你靈感，試著自己做一個類似的。或者，你也可以隨意的創作。"
       'Internet Simulator: Broadcast Mode_instruction': |
         Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
@@ -6433,6 +6378,7 @@
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
+      LaurelDebugging4Video1_instruction: "移動 Laurel，幫助牠找到愈多的黃金愈好！"
       level 'grade3_Loops_10_instruction: |-
         Such a busy bee!\r
         \r
@@ -6528,25 +6474,25 @@
         function even more useful?
       MC HOC 2016 Level 1_instruction: "當這隻綿羊被「使用」時，會執行「掉落羊毛」的指令。使用方向鍵走到綿羊那，按下空格鍵或是點擊畫面空白處就可以「使用」牠。採集羊毛以取得勝利。"
       MC HOC 2016 Level 10_instruction: "是時候讓你打造自己的 Minecraft 啦！你可以生成生物，讓牠們做你要牠們做的事，好好享受遊戲吧！"
-      MC HOC 2016 Level 2-2_instruction: "讓呆住的雞動起來。生「當生成時」裡放置「移動」和「轉向」的積木。"
+      MC HOC 2016 Level 2-2_instruction: "讓呆住的雞動起來。在`當生成時`裡放置`移動`和`轉向`積木。"
       MC HOC 2016 Level 2_instruction: "這隻雞竟然忘了怎麼移動！在「當生成時」裡放置移動和轉向積木，讓牠自由活動。 "
       MC HOC 2016 Level 3_instruction: |
         好極了，雞動起來了！不過現在牠又停住了。
-        要讓雞走來走去的方式是，使用「循環無限次」指令。
+        要讓雞走來走去的方式是，使用`重複無限次`指令。
         \r
-      MC HOC 2016 Level 4_instruction: "現在雞都朝同個方向移動，看起來有點怪吧，你可以利用隨機移動、隨機轉向，讓牠們看起來更真實。"
-      MC HOC 2016 Level 5_instruction: "這些乳牛迷路了！在「循環無限次」中放置「移動一步-向目標」積木，將牠們引領到草地。"
-      MC HOC 2016 Level 6_instruction: "現在請使用「生成」積木製造殭屍。在夜晚降臨時出現了 3 個殭屍，讓它們向你移動。喔，在天亮前，請保住你的小命。"
+      MC HOC 2016 Level 4_instruction: "現在雞都朝同個方向移動，看起來有點怪吧，你可以利用`隨機移動`、`隨機轉向`，讓牠們看起來更真實。"
+      MC HOC 2016 Level 5_instruction: "這些乳牛迷路了！在`重複無限次`中放置`移動一步-向目標`積木，將牠們引領到草地。"
+      MC HOC 2016 Level 6_instruction: "現在請使用`生成`積木製造殭屍。在夜晚降臨時出現了 3 個殭屍，讓它們向你移動。喔，在天亮前，請保住你的小命。"
       MC HOC 2016 Level 7_instruction: "我們來組合你之前學到的。生成一隻乳牛，讓它走到牧場，接著靠近牠以取得牛奶。"
       MC HOC 2016 Level 8_instruction: "到綿羊那邊的路被石牆擋住了。幸好這裡有一個苦力怕。苦力怕在你碰觸後就會爆炸。利用苦力怕炸掉牆壁，你才能到達羊旁邊！"
       MC HOC 2016 Level 9_instruction: |
         這些殭屍正在攻擊村莊！為鐵魔像編程，讓牠與你並肩作戰，打倒所有殭屍，完成拯救村莊的任務！\r
       MC HOC 2016 Nerop_instruction: "我們來探索世界吧！用方向鍵可移動；按空格鍵或點擊畫面空白處可使用物品；使用門可以進入房屋。"
-      MC HOC 2016 New Drop_instruction: "在 Minecraft 中，綿羊身上有羊毛。在 「當使用時」指令裡放置「掉落」積木，然後走過去，讓綿羊掉出物品。"
+      MC HOC 2016 New Drop_instruction: "在 Minecraft 中，綿羊身上有羊毛。在 `當使用時`指令裡放置`掉落`積木，然後走過去，讓綿羊掉出物品。"
       MC HOC 2016 New pn_instruction: "我們來探索世界吧！用方向鍵可移動；按空格鍵或點擊畫面空白處可使用物品；使用門可以進入房屋。"
-      MC HOC 2016 New Spawn_instruction: "生成表示添加一些東西到遊戲裡，在「當運行時」下放置「生成」積木，遊戲開始時就會添加指定的東西。"
+      MC HOC 2016 New Spawn_instruction: "生成表示添加一些東西到遊戲裡，在`當運行時`下放置`生成`積木，遊戲開始時就會添加指定的東西。"
       MC HOC 2016 New Walk_instruction: "我們來探索世界吧！用方向鍵可移動；按空格鍵或點擊畫面空白處可使用物品；使用門可以進入房屋。"
-      MC HOC 2016 SCORE LEVEL_instruction: "大部分的遊戲會有分數機制吧。與這些鐵魔像捉迷藏，再用「增加 1 分」積木，在你標記他們時給自己加分。達到
+      MC HOC 2016 SCORE LEVEL_instruction: "大部分的遊戲會有分數機制吧。與這些鐵魔像捉迷藏，再用`增加 1 分`積木，在你標記他們時給自己加分。達到
         5 分就勝利！"
       MC HOC 2016 Village Test_instruction: "不好了！殭屍把你困住啦！對鐵魔像編寫程式，讓它們追蹤並攻擊殭屍！"
       Middle School Hackathon Pt 1_instruction: "（點擊觀看完整說明）"
@@ -6731,7 +6677,7 @@
       NetSim_Variant3_instruction: |-
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: "畫些厲害的東西！你的程式碼會被保存成專案，讓你可以隨時回來繼續。"
+      New Artist Project_instruction: "畫些厲害的東西！你的程式碼會被保存成專案，讓你可以隨時回來繼續創作。"
       NEW Course 4 Artist Functions 1_instruction: "你能使用一個重複迴圈，畫出一個邊長 100 像素的正方形嗎？"
       NEW Course 4 Artist Functions 10.1_instruction: |-
         Use the functions from the
@@ -7124,6 +7070,9 @@
         Have Robin talk back to Jorge when you click on
         her.
       playEventsK7_instruction: What else can you do in this fun scene?
+      playLabDebugVideo1_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       Poorva copy U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -7285,17 +7234,18 @@
       scrat 19 (copy 1)_instruction: "再練習一次「如果…否則」積木，你可以一次就完成嗎？"
       scrat 19_instruction: "再練習一次「如果…否則」積木，你可以一次就成功嗎？"
       scrat 20_instruction: "你可以只靠 3 個積木，來幫我完成一個更複雜的關卡嗎？只要你成功了，不管是多長的曲徑，我都能自己通過囉！快點！冰快融化啦！"
+      skratDebugVideo1_instruction: Get Skrat to the Acorn.
       SpecialFrozenLevel_instruction: "您已經變成一個專業的藝術家囉！開始打造一個冬季仙境吧。"
       Standalone_Artist_1_instruction: |-
         歡迎使用小藝術家！首先，讓我們試試建立一個簡單的正方形，用的是「轉向-右方」積木和「移動-向前」積木。
         每邊長度應該是 100 像素。
-      Standalone_Artist_2_instruction: "用 120 度、60度當做角度，並以 150 像素當做邊長，畫出這顆鑽石吧。"
+      Standalone_Artist_2_instruction: "用 120 度、60度當做角度，並以 150 像素當做邊長，畫出這個菱形吧。"
       Standalone_Artist_3_instruction: "你能用邊長 100 像素及旋轉 60 度，來畫出這個六邊形嗎？"
       Standalone_Artist_4_instruction: "現在你有了一個新的積木可以玩囉，這個積木是迴圈（loop），它能將一連串的指令重複執行。如果你循環這些指令
         6 次，會發生什麼事呢？"
-      Standalone_Artist_5.5_instruction: "注意我們是如何利用迴圈簡化程式，我們把畫菱形的程式放到迴圈裡，並循環整個序列 12
-        次以畫出這朵花。提示：每畫完一次菱形後，你需要轉向 30 度，這樣子你才不會畫在相同的菱形上。"
-      Standalone_Artist_5_instruction: "你需要重複循環菱形多少次，才能用它畫出這朵花？"
+      Standalone_Artist_5.5_instruction: "注意我們是如何利用重複積木把畫一個菱形的程式再簡化的。接著，我們要把這個程式放到迴圈裡，並循環整個序列
+        12 次以畫出這朵花。提示：每畫完一次菱形後，你需要轉向 30 度，這樣子你才不會畫在相同的菱形上。"
+      Standalone_Artist_5_instruction: "你需要重複畫出菱形多少次，才能用它創造出這朵花？"
       Standalone_Artist_6_instruction: "循環這個畫六邊形的程式 6 次以創作出這個花樣。你知道每畫完一次六邊形要轉多少角度嗎？提示：把一圈的度數除以循環次數。"
       Standalone_Artist_7_instruction: "函式是另一種編程的工具，它可以幫助你避免重複打相同的程式編碼。這個函式會畫出花朵，所以你可以在任何你想要的時候用它來畫花朵。用這個函式和新的「跳躍」積木來繪製這些花朵。提示：花朵之間的間隔距離是
         150 像素。"

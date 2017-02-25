@@ -851,7 +851,7 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Tu pridaj blok skóre
         playlab_add_blocks: Tu pridaj svoje bloky
-        set_variable: Sem pritiahni blok čísel, aby si mohol nastaviť svoju premennú
+        set_variable: Aby si mohol nastaviť svoju premennú, blok čísel potiahni sem
         place_variable: Drag your variable inside this block
         bee_for_loop: Drag the largest number of nectar you want the bee to collect
           here

@@ -1187,6 +1187,10 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
+      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
+      artistFunctionsVideo1_instruction: |-
+        Follow the instructions to make your own
+        function.
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -1232,6 +1236,8 @@
         or 0 nectar, but you don't know which one! Be careful not to collect nectar
         from a purple flower if it doesn't have any. Check if the nectar is equal
         to 1 by using the if block.
+      beeDebugVideo1_instruction: Dùng một vòng lặp `repeat`để thu thập tất cả phấn
+        hoa.
       Bergeron Robot Maze1_instruction: |
         Can you help me catch the naughty pig? Stack
         a couple of `move forward` blocks below the `when run` block and press "Run".
@@ -1375,6 +1381,9 @@
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
+      birdsDebugVideo1_instruction: |-
+        Trace the path and lead me to the silly pig.
+        Avoid TNT or feathers will fly!
       Brad Spooky House Copy_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -1668,6 +1677,14 @@
       Collector Demo_instruction: |-
         Look at all this loot! Help me get as many coins
         as I can so I can improve my farm. I can only use 9 blocks though!
+      collector example_instruction: |-
+        Put these blocks in order to collect all of
+        the gold and solve the puzzle.
+      collectorDebugVideo2_instruction: |-
+        Put these blocks in order to collect all
+        of the gold and solve the puzzle.
+      collectorSkinVideo1_instruction: Collect all four piles to pass this level.
+      collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? "
       Course 2 Bee Loops 13_instruction: |-
@@ -2758,8 +2775,8 @@
         Eureka!  Collect as much gold as you
         can!
       courseA_collector_loops2_instruction: |-
-        Here are three piles of gold!  Collect
-        all three.
+        Collect all three piles to pass this
+        level.
       courseA_collector_loops3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `[E-->]` block?
@@ -2861,7 +2878,9 @@
       courseB_collector_loops11_instruction: |-
         Eureka!  Collect as much gold as you
         can!
-      courseB_collector_loops2_instruction: Four piles of gold!  Collect all four.
+      courseB_collector_loops2_instruction: |-
+        Collect all four piles to pass this
+        level.
       courseB_collector_loops3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
@@ -2871,8 +2890,8 @@
       courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
         get all of the gold. "
       courseB_collector_loops6_instruction: |-
-        What should you add to this code to
-        get all of the gold?
+        Figure out the code to help Laurel get
+        all of the gold!
       courseB_collector_loops7_instruction: Write the code to get all of this gold.
       courseB_collector_loops8_instruction: |-
         **Challenge: ** The gold goes all the
@@ -3217,8 +3236,8 @@
         (Each side is 100 pixels long and you'll need to turn 120 degrees
         for each exterior angle.)
       courseD_artist_nestedLoops10_instruction: |-
-        Take the triangles from before,
-        but this time only make 7 of them, and lay them out in a row.
+        Take the squares from before, but
+        this time only make 7 of them, and lay them out in a row.
       courseD_artist_nestedLoops1a_instruction: |-
         Now loop the triangle 6 times. \r
         After
@@ -4172,6 +4191,15 @@
       CSDU6 - Arrays - lengthMinus1_instruction: |-
         Use list.length - 1 to log the
         last item in the array to the console. (Click to see full instructions)
+      CSDU6 - for loop - color buttons with for_instruction: |-
+        Write the contents
+        of the array to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - color buttons_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - why for_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -7528,6 +7556,9 @@
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
+      LaurelDebugging4Video1_instruction: |-
+        Move Laurel around and get as much gold
+        as you can!
       level 'grade3_Loops_10_instruction: |-
         Such a busy bee!\r
         \r
@@ -8393,6 +8424,9 @@
         Have Robin talk back to Jorge when you click on
         her.
       playEventsK7_instruction: What else can you do in this fun scene?
+      playLabDebugVideo1_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       Poorva copy U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -8573,6 +8607,7 @@
       scrat 20_instruction: Bạn có thể thêm chỉ 3 khối để giúp tôi giải quyết một
         mê cung phức tạp hơn? Nếu bạn làm đúng, tôi có thể đi bộ bất kỳ con đường
         cong nào, mặc cho chiều dài. Nhanh lên! Băng đang tan!
+      skratDebugVideo1_instruction: Get Skrat to the Acorn.
       SpecialFrozenLevel_instruction: Bạn đã chính thức trở thành một nghệ sĩ bậc
         thầy! Tạo một Xứ sở thần tiên vào mùa đông.
       Standalone_Artist_1_instruction: |-

@@ -981,7 +981,7 @@
   dashboard_announce_learn_more_button: "толығырақ білу"
   dashboard_announce_try_now_button: "Қазір қолданып көріңіз"
   dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_watch_video_button: Watch video
+  dashboard_announce_watch_video_button: "Бейнені көріңіз"
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -1032,6 +1032,12 @@
     students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
     saying "I''m taking the #APCSP exam because..." The best submissions will be featured
     in our video and the winning students will receive Code.org swag!'
+  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
+    to break records. Student participation in the exam could dramatically shift diversity
+    in AP Computer Science, but we need your help. Encourage every CS Principles student
+    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
+    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
+    target='_blank'>#APCSP video challenge</a>.
   code_hoc_coming: '"Код Жазу Сағаты" - 8-14 желтоқсанда басталады!'
   code_sign_up: "Информатика Апталығына қатысу үшін тіркеліңіз"
   host_an_hour: Host an hour
@@ -1934,9 +1940,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "ойнау"
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

@@ -992,7 +992,7 @@
     spojili v otvorenom liste, kde žiadajú, aby americký kongres financoval výuku
     informatiky v rámci celej školskej dochádzky na základných i stredných školách.
   dashboard_announce_petition_button: Pridaj svoje meno
-  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond_button: Pokračovať ďalej
   dashboard_announce_all: Sleduj nové vlastnosti a aktualizácie na našom učiteľskom
     blogu. <a href='%{teacher_blog_url}' target='_blank'>Pozri posledné oznámenia.</a>
   dashboard_announce_hoc_launch: Tisíce vyučujúcich vo viac než 180 krajinách odštartuje
@@ -1037,6 +1037,12 @@
     students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
     saying "I''m taking the #APCSP exam because..." The best submissions will be featured
     in our video and the winning students will receive Code.org swag!'
+  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
+    to break records. Student participation in the exam could dramatically shift diversity
+    in AP Computer Science, but we need your help. Encourage every CS Principles student
+    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
+    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
+    target='_blank'>#APCSP video challenge</a>.
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   host_an_hour: Host an hour
@@ -1924,9 +1930,3 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.
