@@ -425,7 +425,13 @@ FeedbackUtils.prototype.calculateStageProgress = function (
 
   const newPassedLevels = 1;
   const newPerfectLevels = isPerfect ? 1 : 0;
-  const newHintUsageLevels = hintsUsed === 0 ? 1 : hintsUsed === 1 ? 0.5 : 0;
+
+  let newHintUsageLevels = 0;
+  if (hintsUsed === 0) {
+    newHintUsageLevels = 1;
+  } else if (hintsUsed === 1) {
+    newHintUsageLevels = 0.5;
+  }
 
   const newPassedProgress = newPassedLevels * 0.3 / levels.length;
   const newPerfectProgress = newPerfectLevels * 0.4 / levels.length;
