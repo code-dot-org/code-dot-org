@@ -14,7 +14,11 @@ const CsFundamentalsSection = React.createClass({
   },
 
   onPrintCertificateClick() {
-    window.location = '';
+    window.location = ''; //TODO - implement custom certificate printing
+  },
+
+  onOnlineLearningClick() {
+    window.location = '../s/K5PD';
   },
 
   renderCompletedCourseBox() {
@@ -28,17 +32,17 @@ const CsFundamentalsSection = React.createClass({
             Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
             will be able to order supplies for your classroom. You can print a certificate for completing our workshop.
           </p>
-          <Button bsStyle="primary" onclick={this.onStartSurveyClick()}>
+          <Button bsStyle="primary" onClick={this.onStartSurveyClick}>
             Start survey
           </Button>
-          <Button>
+          <Button onClick={this.onPrintCertificateClick}>
             Print certificate
           </Button>
         </div>
       );
     } else {
       return (
-        <div id="csfPrintCertificate" onclick={this.onPrintCertificateClick()}>
+        <div id="csfPrintCertificate" onClick={this.onPrintCertificateClick}>
           <h3>
             Thank you
           </h3>
@@ -62,7 +66,7 @@ const CsFundamentalsSection = React.createClass({
         <p>
           Supplement your in-person session with this online K-5 Professional Learning course.
         </p>
-        <Button bsStyle="primary">
+        <Button bsStyle="primary" onClick={this.onOnlineLearningClick}>
           Learn online
         </Button>
       </div>
