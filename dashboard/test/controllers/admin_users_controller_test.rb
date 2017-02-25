@@ -3,6 +3,8 @@ require 'test_helper'
 class AdminUsersControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  self.fixture_table_names = []
+
   setup_all do
     @admin = create(:admin)
 

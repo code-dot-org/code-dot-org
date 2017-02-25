@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
-  setup do
+  setup_all do
     @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF
     @teacher = create :teacher
     @enrollment = create :pd_enrollment, workshop: @workshop, user: @teacher,
@@ -18,7 +18,7 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
     }.stringify_keys
   end
 
-  setup_all do
+  setup do
     @mock_rsa = mock
     OpenSSL::PKey::RSA.stubs(:new).with(@fake_rsa_key).returns(@mock_rsa)
     @mock_rsa.stubs(:public_encrypt).returns('fake encrypted token')

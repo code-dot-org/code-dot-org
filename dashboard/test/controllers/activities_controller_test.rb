@@ -24,6 +24,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
+  self.fixture_table_names = []
+
   setup do
     client_state.reset
     Gatekeeper.clear

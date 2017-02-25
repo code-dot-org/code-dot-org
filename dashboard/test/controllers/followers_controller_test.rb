@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class FollowersControllerTest < ActionController::TestCase
+  self.fixture_table_names = []
+
   setup_all do
     @laurel = create(:teacher)
     @laurel_section_1 = create(:section, user: @laurel)
