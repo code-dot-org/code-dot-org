@@ -5,6 +5,7 @@ import BaseDialog from './BaseDialog';
 import color from "../util/color";
 import locale from '@cdo/locale';
 
+const ANIMATION_OVERLAP = 0.2;
 const MIN_PROGRESS_WIDTH = 22;
 const MAX_PROGRESS_WIDTH = 400;
 
@@ -209,10 +210,10 @@ const AchievementDialog = Radium(React.createClass({
           defaultStyles={Array(4).fill({ progress: 0 })}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
             return i === 0 ?
-              { progress: spring(1, {stiffness: 50, damping: 25}) } :
+              { progress: spring(1, { stiffness: 50, damping: 25 }) } :
               { progress: spring(
-                  prevInterpolatedStyles[i - 1].progress > 0.8 ? 1 : 0,
-                  {stiffness: 30, damping: 25}),
+                  prevInterpolatedStyles[i - 1].progress > (1 - ANIMATION_OVERLAP) ? 1 : 0,
+                  { stiffness: 30, damping: 25 }),
               };
           })}
         >
