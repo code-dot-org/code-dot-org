@@ -1692,11 +1692,11 @@ class UserTest < ActiveSupport::TestCase
       name: 'test user'
     }
 
-    assert_creates(User) do
+    user = assert_creates(User) do
       User.find_or_create_teacher params, admin
     end
-    assert User.last.teacher?
-    assert_equal admin, User.last.invited_by
+    assert user.teacher?
+    assert_equal admin, user.invited_by
   end
 
   test 'find_or_create_teacher finds existing teacher' do
