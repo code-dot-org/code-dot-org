@@ -90,9 +90,6 @@
     "disable_if_else_editing": "false",
     "contained_level_names": [
       "CSD - Predict - Array Length List Printing"
-    ],
-    "encrypted_examples": [
-
     ]
   },
   "published": true,

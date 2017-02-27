@@ -89,10 +89,7 @@
     "markdown_instructions": "# For Loop - Looping Through A List\r\n\r\nYou saw this for loop on the last level:\r\n\r\n<pre>\r\nfor(var i = 0; i < daysOfWeek.length; i++){\r\n  console.log(i);\r\n}\r\n</pre>\r\n\r\nWhich prints the numbers from 0 to one less than the list length in this case (0 to 6). Another way of looking at this is that it prints all the index values in the list!  This might be helpful to loop through a list!\r\n\r\n**Starter Code:** This program writes out each item of the array individually. \r\n\r\n**Write Code:** That uses the for loop from the last level to print out all the items in the list. \r\n\r\nHint: There should only be one line inside the loop.\r\n\r\nHint: The only thing that changes about each console.log statement is the index value. What can you use to count through each index in the array?",
     "start_blocks": "var daysOfWeek = [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"];\r\n\r\nconsole.log(daysOfWeek[0]);\r\nconsole.log(daysOfWeek[1]);\r\nconsole.log(daysOfWeek[2]);\r\nconsole.log(daysOfWeek[3]);\r\nconsole.log(daysOfWeek[4]);\r\nconsole.log(daysOfWeek[5]);\r\nconsole.log(daysOfWeek[6]);\r\n",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
