@@ -4,7 +4,6 @@ import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import { lessonIsHidden } from './progressHelpers';
 
 export const styles = {
   lightRow: {
@@ -57,22 +56,25 @@ const SummaryProgressRow = React.createClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
-    lessonNumber: PropTypes.number.isRequired,
+    lessonNumber: PropTypes.number,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    sectionId: PropTypes.string,
-    hiddenStageState: PropTypes.object.isRequired,
+    lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels } = this.props;
+    const { dark, lesson, lessonNumber, levels, lessonIsVisible } = this.props;
 
-    if (lessonIsHidden(this.props)) {
+    // Is this lesson hidden for whomever we're currently viewing as
+    if (!lessonIsVisible(lesson)) {
       return null;
     }
 
-    // Is this a hidden stage that we still render because we're a teacher
-    const hiddenForStudents = lessonIsHidden({...this.props, viewAs: ViewType.Student });
+    // Would this stage be hidden if we were a student?
+    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
+    let lessonTitle = lesson.name;
+    if (lessonNumber) {
+      lessonTitle = lessonNumber + ". " + lessonTitle;
+    }
 
     return (
       <tr
@@ -90,7 +92,7 @@ const SummaryProgressRow = React.createClass({
                 style={styles.icon}
               />
             }
-            {`${lessonNumber}. ${lesson.name}`}
+            {lessonTitle}
           </div>
         </td>
         <td style={styles.col2}>
