@@ -41,6 +41,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
 :javascript
   'use strict';
+  var showSectionProjects = #{show_section_projects};
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -100,7 +101,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
         // 3. sectionProjects url param is present
         // 4. the projects tab is specified in the url
         // The projects tab is accessible by direct url regardless of settings 1-3 above.
-        $scope.showSectionProjectsTab = #{show_section_projects} || $scope.tab === 'projects';
+        $scope.showSectionProjectsTab = showSectionProjects || $scope.tab === 'projects';
         var selectedSection = $scope.selectedSection = $scope.section || null;
 
         $scope.sectionNavigate = function(section) {
@@ -592,7 +593,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
   }]);
 
   app.controller('SectionProjectsController', ['$scope', '$routeParams', 'sectionsService',
-                                             function($scope, $routeParams,  sectionsService) {
+      function($scope, $routeParams,  sectionsService) {
     $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.tab = 'projects';
