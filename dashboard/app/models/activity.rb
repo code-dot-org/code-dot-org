@@ -66,11 +66,6 @@ class Activity < ActiveRecord::Base
     Activity.finished? test_result
   end
 
-  def self.recent(limit)
-    # yeah, this is a lot like .last -- but I want a dataset not an array
-    Activity.order('id desc').limit(limit)
-  end
-
   # Creates a new Activity which will be written eventually to the database. (Note that the id is
   # nil because it may not have been written yet.) An exception will be thrown if the object does
   # not pass validation. The object is only written asynchronously if the gatekeeper allows it for

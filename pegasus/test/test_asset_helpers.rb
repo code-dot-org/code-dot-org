@@ -14,6 +14,7 @@ class AssetHelpersTest < Minitest::Test
   MINIFIED_ASSET_NOT_IN_MAP = 'foo.min.js'
 
   def setup
+    CDO.stubs(:pegasus_skip_asset_map).returns(false)
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/dashboard_assets')
     Singleton.__init__(AssetMap)
   end
@@ -35,12 +36,11 @@ class AssetHelpersTest < Minitest::Test
       "incorrect minifiable asset path"
   end
 
-  def test_production_no_asset_map
+  def test_no_asset_map
     # This directory does not have a manifest file in it.
     # Update the asset map to be nil.
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
     Singleton.__init__(AssetMap)
-    CDO.stubs(:rack_env).returns(:production)
     CDO.stubs(:pretty_js).returns(false)
 
     e = assert_raises RuntimeError do
@@ -54,12 +54,12 @@ class AssetHelpersTest < Minitest::Test
     assert_equal 'Asset map not initialized', e.message
   end
 
-  def test_development_no_asset_map
+  def test_skip_flag_when_no_asset_map
     # This directory does not have a manifest file in it.
     # Update the asset map to be nil.
     CDO.stubs(:dashboard_assets_dir).returns('./test/fixtures/')
     Singleton.__init__(AssetMap)
-    CDO.stubs(:rack_env).returns(:development)
+    CDO.stubs(:pegasus_skip_asset_map).returns(true)
     CDO.stubs(:pretty_js).returns(true)
     assert_equal UNMINIFIED_ASSET_NAME, asset_path(UNMINIFIED_ASSET_NAME),
       "should recover gracefully when no asset map for unminifiable asset"
@@ -67,8 +67,7 @@ class AssetHelpersTest < Minitest::Test
       "should recover gracefully when no asset map for minifiable asset"
   end
 
-  def test_production_asset_not_in_map
-    CDO.stubs(:rack_env).returns(:production)
+  def test_asset_not_in_map
     CDO.stubs(:pretty_js).returns(false)
 
     e = assert_raises RuntimeError do
@@ -82,8 +81,8 @@ class AssetHelpersTest < Minitest::Test
     assert_equal "Asset not found in asset map: '#{MINIFIED_ASSET_NOT_IN_MAP}'", e.message
   end
 
-  def test_development_asset_not_in_map
-    CDO.stubs(:rack_env).returns(:development)
+  def test_skip_flag_when_asset_not_in_map
+    CDO.stubs(:pegasus_skip_asset_map).returns(true)
     CDO.stubs(:pretty_js).returns(true)
     assert_equal UNMINIFIED_ASSET_NOT_IN_MAP, asset_path(UNMINIFIED_ASSET_NOT_IN_MAP),
       "should recover gracefully when unminifiable asset is not found"

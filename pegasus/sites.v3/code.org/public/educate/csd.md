@@ -206,6 +206,10 @@ The CS Discoveries course is deeply inspired by the philosophy of ECS, based on 
 We will pilot the new course materials during the spring of 2016-17 with a group of 45 teachers across the US. The course will roll out formally in Summer 2017. Check back to
 this website frequently as we release drafted lesson plans!
 
+### <a name="standards"></a>Will CS Discoveries be mapped to standards?
+
+We are developing the course using the K-12 CS Framework and the interim CSTA standards as guidance. Once the course is complete, and the revised CSTA standards have been released, we will provide a mapping to those standards.
+
 <!--
 #### Can I pilot the new course?
 
