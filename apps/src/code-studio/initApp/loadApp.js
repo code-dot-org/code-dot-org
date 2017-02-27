@@ -116,7 +116,7 @@ export function setupApp(appOptions) {
 
         // If the program is the result for a contained level, store it with
         // the contained level id
-        const levelId = appOptions.hasContainedLevels ?
+        const levelId = (appOptions.hasContainedLevels && !appOptions.level.edit_blocks) ?
           getContainedLevelId() :
           appOptions.serverLevelId;
         clientState.writeSourceForLevel(appOptions.scriptName, levelId,
