@@ -43,6 +43,7 @@ group :development do
   gem 'ruby-progressbar', require: false
   gem 'thin'
   gem 'web-console'
+  gem 'taglib-ruby', require: false
 end
 
 group :development, :test do
