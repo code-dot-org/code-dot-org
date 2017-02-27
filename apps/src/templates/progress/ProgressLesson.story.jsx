@@ -23,7 +23,8 @@ const defaultProps = {
       name: 'Last progression'
     },
   ],
-  lessonIsVisible: () => true
+  lessonIsVisible: () => true,
+  lessonIsLocked: () => false
 };
 
 export default storybook => {
@@ -59,7 +60,7 @@ export default storybook => {
         )
       },
       {
-        name:'locked lesson as teacher',
+        name:'locked lesson',
         story: () => (
           <ProgressLesson
             {...defaultProps}
@@ -69,11 +70,12 @@ export default storybook => {
               status: LevelStatus.locked,
               name: undefined
             }))}
+            lessonIsLocked={() => true}
           />
         )
       },
       {
-        name:'unlocked lesson as teacher',
+        name:'unlocked lockable lesson',
         story: () => (
           <ProgressLesson
             {...defaultProps}

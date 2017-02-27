@@ -6,7 +6,7 @@ import color from "@cdo/apps/util/color";
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import i18n from '@cdo/locale';
-import { lessonIsVisible } from './progressHelpers';
+import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
@@ -50,7 +50,8 @@ const ProgressLesson = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
+    lessonIsLocked: PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -66,7 +67,7 @@ const ProgressLesson = React.createClass({
   },
 
   render() {
-    const { description, lesson, lessonNumber, levels, lessonIsVisible } = this.props;
+    const { description, lesson, lessonNumber, levels, lessonIsVisible, lessonIsLocked } = this.props;
 
     if (!lessonIsVisible(lesson)) {
       return null;
@@ -78,15 +79,15 @@ const ProgressLesson = React.createClass({
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
     // TODO - disable bubbles when locked
-    // TODO - teacher vs student
-    const locked = !levels.some(level => level.status !== LevelStatus.locked);
+    const locked = lessonIsLocked(lesson.id) ||
+      !levels.some(level => level.status !== LevelStatus.locked);
 
     return (
       <div
         style={{
           ...styles.main,
           ...(hiddenForStudents && styles.hiddenOrLocked),
-          ...(locked && styles.hiddenOrLocked)
+          ...(locked && styles.hiddenOrLocked),
         }}
       >
         <div
@@ -125,6 +126,6 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  viewAs: state.stageLock.viewAs,
+  lessonIsLocked: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);
