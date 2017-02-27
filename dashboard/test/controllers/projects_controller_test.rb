@@ -9,6 +9,8 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in create(:user)
   end
 
+  self.use_transactional_test_case = true
+
   setup_all do
     @driver = create :user
     @navigator = create :user

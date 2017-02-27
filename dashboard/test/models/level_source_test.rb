@@ -3,6 +3,7 @@ require 'test_helper'
 class LevelSourceTest < ActiveSupport::TestCase
   self.fixture_table_names = []
 
+  self.use_transactional_test_case = true
   setup_all do
     @level = create :level
     @level_source = create(:level_source, level_id: @level.id, data: 'data')

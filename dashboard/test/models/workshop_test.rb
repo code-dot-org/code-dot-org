@@ -20,6 +20,7 @@ class WorkshopTest < ActiveSupport::TestCase
     end
   end
 
+  self.use_transactional_test_case = true
   setup_all do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0)
     @old_workshop = create_workshop [[Time.now.utc - 10.days, Time.now.utc - 9.days]]

@@ -5,6 +5,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   include Rails.application.routes.url_helpers
   include SharedConstants
 
+  self.use_transactional_test_case = true
+
   setup_all do
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)

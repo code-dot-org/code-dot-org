@@ -13,9 +13,6 @@ elsif ENV['CI'] # this is set by circle
   # Coveralls.wear!('rails')
 end
 
-require 'minitest/test_profile'
-MiniTest::TestProfile.use!
-
 require 'minitest/reporters'
 Minitest::Reporters.use! [
   Minitest::Reporters::SpecReporter.new
@@ -49,7 +46,8 @@ Dashboard::Application.config.action_dispatch.show_exceptions = false
 
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
-require 'minitest/hooks/test'
+require 'testing/setup_all_and_teardown_all'
+require 'testing/transactional_test_case'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -116,6 +114,8 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   include FactoryGirl::Syntax::Methods
+  include ActiveSupport::Testing::SetupAllAndTeardownAll
+  include ActiveSupport::Testing::TransactionalTestCase
 
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
@@ -214,58 +214,6 @@ class ActiveSupport::TestCase
     teardown do
       Timecop.return
     end
-  end
-
-  include Minitest::Hooks
-  define_callbacks :setup_all, :teardown_all
-
-  # run setup_all and teardown_all callbacks within an ActiveRecord transaction.
-  def around_all
-    if _setup_all_callbacks.empty? && _teardown_all_callbacks.empty?
-      # Transaction not needed if no callbacks are present.
-      yield
-    else
-      pools = ActiveRecord::Base.connection_handler.connection_pool_list
-      all_connections = pools.map(&:connections).flatten
-      if all_connections.many?
-        warning = 'WARN: Multiple ActiveRecord connections are in use, this can make transactional tests fail in weird ways.'
-        CDO.log.warn warning
-        puts warning
-      end
-      ActiveRecord::Base.transaction(
-        isolation: :read_uncommitted,
-        requires_new: true
-      ) do
-        unless _setup_all_callbacks.empty?
-          begin
-            t0 = Minitest.clock_time
-            run_callbacks :setup_all
-          ensure
-            setup_time = Minitest.clock_time - t0
-            puts "\nSetup (#{format('%.2fs', setup_time)})"
-          end
-        end
-        yield
-        unless _teardown_all_callbacks.empty?
-          begin
-            t0 = Minitest.clock_time
-            run_callbacks :teardown_all
-          ensure
-            teardown_time = Minitest.clock_time - t0
-            puts "Teardown (#{format('%.2fs', teardown_time)})"
-          end
-        end
-        raise ActiveRecord::Rollback
-      end
-    end
-  end
-
-  def self.setup_all(*args, &block)
-    set_callback(:setup_all, :before, *args, &block)
-  end
-
-  def self.teardown_all(*args, &block)
-    set_callback(:teardown_all, :after, *args, &block)
   end
 
   def no_database
