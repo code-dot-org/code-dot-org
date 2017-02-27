@@ -36,7 +36,7 @@ class ChatClient
     # notify developers room and our own room
     "<b>#{name}</b> failed in #{RakeUtils.format_duration(Time.now - start_time)}".tap do |message|
       ChatClient.log message, color: 'red', notify: 1
-      ChatClient.developers message, color: 'red', notify: 1
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
     end
     # log detailed error information in our own room
     ChatClient.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'

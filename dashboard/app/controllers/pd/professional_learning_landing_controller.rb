@@ -13,12 +13,15 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     surveys_pending_enrollment = Pd::Enrollment.filter_for_survey_completion(enrollments, false)
     last_pending_enrollment = surveys_pending_enrollment && surveys_pending_enrollment.max_by(&:survey_sent_at)
 
+    summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize)
+
     # Link to the certificate
     @landing_page_data = {
       courses_teaching: courses_teaching,
       courses_completed: courses_completed,
       last_workshop_survey_url: last_pending_enrollment && CDO.code_org_url("/pd-workshop-survey/#{last_pending_enrollment.code}"),
-      last_workshop_survey_course: last_pending_enrollment.try(:workshop).try(:course)
+      last_workshop_survey_course: last_pending_enrollment.try(:workshop).try(:course),
+      summarized_plc_enrollments: summarized_plc_enrollments
     }
   end
 end
