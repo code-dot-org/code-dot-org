@@ -7,6 +7,7 @@ import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import i18n from '@cdo/locale';
 import { lessonIsVisible } from './progressHelpers';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   main: {
@@ -25,16 +26,19 @@ const styles = {
   headingText: {
     marginLeft: 10
   },
-  hidden: {
+  hiddenOrLocked: {
     background: color.white,
     borderStyle: 'dashed',
     borderWidth: 2,
     opacity: 0.6
   },
-  hiddenIcon: {
+  icon: {
     marginRight: 5,
     fontSize: 18,
     color: color.cyan
+  },
+  unlockedIcon: {
+    color: color.orange
   }
 };
 
@@ -73,11 +77,16 @@ const ProgressLesson = React.createClass({
     const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
+    // TODO - disable bubbles when locked
+    // TODO - teacher vs student
+    const locked = !levels.some(level => level.status !== LevelStatus.locked);
+
     return (
       <div
         style={{
           ...styles.main,
-          ...(hiddenForStudents && styles.hidden)
+          ...(hiddenForStudents && styles.hiddenOrLocked),
+          ...(locked && styles.hiddenOrLocked)
         }}
       >
         <div
@@ -87,7 +96,16 @@ const ProgressLesson = React.createClass({
           {hiddenForStudents &&
             <FontAwesome
               icon="eye-slash"
-              style={styles.hiddenIcon}
+              style={styles.icon}
+            />
+          }
+          {lesson.lockable &&
+            <FontAwesome
+              icon={locked ? 'lock' : 'unlock'}
+              style={{
+                ...styles.icon,
+                ...(!locked && styles.unlockedIcon)
+              }}
             />
           }
           <FontAwesome icon={icon}/>
@@ -107,5 +125,6 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
+  viewAs: state.stageLock.viewAs,
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

@@ -2,9 +2,6 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 
-// TODO - not sure I like these bubble color styles being keyed by these strings.
-// In a future PR, share with ProgressDot, likely by using an Enum of different
-// allowable values.
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 export const DOT_SIZE = 30;
