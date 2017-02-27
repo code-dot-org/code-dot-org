@@ -7,8 +7,9 @@ The next three lessons of this unit focus on the basic mechanics of working with
 - The = sign in programming is an instruction to store a value in memory, NOT a statement of equality.
 - “Variables” in computer programming are just named pieces of memory, NOT unknowns in an equation or symbols for undetermined values.
 Thus, lines of code that assign values to variables and expressions that use variables are really instructions to retrieve and store values in memory. And those values change while the program executes. Being able to reason about what’s happening in consecutive lines of code like:
- > a = a + b; <br>
- b = a + b;
+<br>
+`a = a + b;` <br>
+`b = a + b;`
 
 correlates highly with a person’s success in programming because you must have a good mental model for program execution and what the computer is doing.
 

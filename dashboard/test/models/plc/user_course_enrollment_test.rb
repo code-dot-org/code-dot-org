@@ -38,4 +38,28 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
     assert_equal [Plc::EnrollmentUnitAssignment::IN_PROGRESS, Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status)
   end
+
+  test 'summarize works as expected' do
+    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
+    expected_summary = {
+      courseName: @course.name,
+      link: Rails.application.routes.url_helpers.course_path(@course.get_url_name),
+      status: enrollment.status,
+      courseUnits: [
+        {
+          unitName: @course_unit1.unit_name,
+          link: "/s/#{@course_unit1.script.name}",
+          moduleAssignments: [],
+          status: 'start_blocked'
+        },
+        {
+          unitName: @course_unit2.unit_name,
+          link: "/s/#{@course_unit2.script.name}",
+          moduleAssignments: [],
+          status: 'start_blocked'
+        }
+      ]
+    }
+    assert_equal expected_summary, enrollment.summarize
+  end
 end

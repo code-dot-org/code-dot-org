@@ -6,11 +6,10 @@
   "user_id": 63,
   "properties": {
     "skin": "birds",
-    "maze_data": null,
     "contained_level_names": [
-      "2-3 artist loops multi 2"
+      "kiki_multi_test"
     ],
-    "maze": "[[2,1,1,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,1,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,1,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[2,1,1,0,0,0,0,0],[0,0,1,0,0,0,0,0],[0,0,1,1,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,1,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,3,0]]",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -29,13 +28,51 @@
     "disable_examples": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "start_direction": "0",
-    "step_mode": "1"
+    "start_direction": "2",
+    "step_mode": "1",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks/>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
+                  <next>
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_moveForward">
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
+                              <next>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_moveForward"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
 </Maze>

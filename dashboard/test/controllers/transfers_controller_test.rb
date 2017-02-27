@@ -233,6 +233,26 @@ class TransfersControllerTest < ActionController::TestCase
     assert_equal "You cannot move these students because this teacher already has them in another section.", json_response["error"]
   end
 
+  test "students cannot be transferred to other soft-deleted teachers" do
+    new_teacher = create(:teacher)
+    new_section_to_transfer_to = create(:section, user: new_teacher, login_type: 'word')
+    new_teacher.update!(deleted_at: DateTime.now)
+
+    post :create, params: {
+      new_section_code: new_section_to_transfer_to.code,
+      student_ids: @word_user_1.id.to_s,
+      current_section_code: @word_section.code,
+      stay_enrolled_in_current_section: true
+    }
+
+    assert_response 404
+    assert_equal(
+      "Sorry, but section #{new_section_to_transfer_to.code} does not exist. "\
+        "Please enter a different section code.",
+      json_response['error']
+    )
+  end
+
   test "current_section_code not required for students transferring within the same teacher" do
     new_student = create(:student)
 

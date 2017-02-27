@@ -83,6 +83,7 @@ def load_configuration
     'pegasus_unicorn_name'        => 'pegasus',
     'pegasus_workers'             => 8,
     'poste_host'                  => 'localhost.code.org:3000',
+    'pegasus_skip_asset_map'      => rack_env == :development,
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,

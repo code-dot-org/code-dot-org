@@ -4,8 +4,7 @@ import i18n from '@cdo/locale';
 import { levelType, lessonType } from './progressTypes';
 import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
 import { connect } from 'react-redux';
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import { lessonIsHidden } from './progressHelpers';
+import { lessonIsVisible } from './progressHelpers';
 
 const styles = {
   table: {
@@ -27,13 +26,13 @@ const SummaryProgressTable = React.createClass({
     levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(levelType)
     ).isRequired,
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    sectionId: PropTypes.string,
-    hiddenStageState: PropTypes.object.isRequired,
+
+    // redux provided
+    lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
-    const { lessons, levelsByLesson, viewAs, sectionId, hiddenStageState } = this.props;
+    const { lessons, levelsByLesson } = this.props;
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
@@ -56,21 +55,18 @@ const SummaryProgressTable = React.createClass({
         </thead>
         <tbody>
           {/*Filter our lessons to those that will be rendered, and then make
-            every other (remaining) one dark*/
-            lessons.map((lesson, index) => ({
-              key: index,
-              lessonNumber: index + 1,
-              levels: levelsByLesson[index],
-              lesson,
-              viewAs,
-              sectionId,
-              hiddenStageState
-            }))
-            .filter(props => !lessonIsHidden(props))
-            .map((props, index) => (
+            every other (remaining) one dark
+            */
+            lessons.map((lesson, index) => ({unfilteredIndex: index, lesson }))
+            .filter(item => this.props.lessonIsVisible(item.lesson))
+            .map((item, filteredIndex) => (
               <SummaryProgressRow
-                {...props}
-                dark={index % 2 === 1}
+                key={item.unfilteredIndex}
+                lessonNumber={item.lesson.stageNumber}
+                levels={levelsByLesson[item.unfilteredIndex]}
+                lesson={item.lesson}
+                dark={filteredIndex % 2 === 1}
+                lessonIsVisible={this.props.lessonIsVisible}
               />
             ))
           }
@@ -84,7 +80,5 @@ const SummaryProgressTable = React.createClass({
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 
 export default connect(state => ({
-  viewAs: state.stageLock.viewAs,
-  sectionId: state.sections.selectedSectionId,
-  hiddenStageState: state.hiddenStage,
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(SummaryProgressTable);

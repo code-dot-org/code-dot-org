@@ -2195,6 +2195,7 @@ en:
             Conditionals and Boolean Logic: Conditionals and Boolean Logic
             While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
             Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Unit 5 Overview: Unit 5 Overview
           description_audience: ''
         csp1-support:
           title: Unit 1 Online Professional Learning Course
@@ -2624,11 +2625,21 @@ en:
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
         csp5-support:
-          stage: {}
+          stage:
+            Unit 5 Overview: Unit 5 Overview
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
           description_short: Teacher Professional Learning Course for CSP Unit 1
-          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
         csp6-support:
           stage: {}
           title: Unit 6 Online Professional Learning Course
@@ -2685,3 +2696,10 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        workshop-gamelab:
+          stage:
+            Introduction: Introduction
+          title: Game Lab Workshop
+          description_audience: Teachers attending an in-person Game Lab Workshop
+          description_short: Level progression to accompany an in-person Game Lab Workshop
+          description: 'This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach '
