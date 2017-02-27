@@ -14,7 +14,7 @@ const CsFundamentalsSection = React.createClass({
   },
 
   onPrintCertificateClick() {
-    window.location = ''; //TODO - implement custom certificate printing
+    window.location = 'generate_csf_certificate';
   },
 
   onOnlineLearningClick() {
