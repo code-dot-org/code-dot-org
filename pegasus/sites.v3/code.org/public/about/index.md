@@ -42,13 +42,13 @@ Code.org increases diversity in computer science by reaching students of all bac
 ## Code.org in the News
 See all past [news and announcements](/about/news).
 
-<div class=col-50 style="float: left; padding-right: 20px;">
+<div class=col-45 style="float: left; margin: 1%">
 
 <%=view :display_video_thumbnail, id: "Nasdaq", video_code: "zxcBZg7jYlc", caption: "Nasdaq interviews Code.org founder Hadi Partovi", play_button: "center", letterbox: "false" %>
 
 </div>
 
-<div class=col-50 style="float: left; padding-right: 20px">
+<div class=col-45 style="float: left; margin: 1%">
 
 <%=view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false" %>
 
