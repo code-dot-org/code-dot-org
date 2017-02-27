@@ -58,7 +58,13 @@ class ActivitiesController < ApplicationController
           @level,
           params[:program].strip_utf8mb4
         )
-        slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
+        if share_checking_error
+          slog(
+            tag: 'share_checking_error',
+            error: "#{share_checking_error.class.name}: #{share_checking_error}",
+            level_source_id: @level_source.id
+          )
+        end
       end
     end
 
