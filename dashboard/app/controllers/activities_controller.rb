@@ -154,7 +154,7 @@ class ActivitiesController < ApplicationController
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
 
-    # Create the activity.
+    # Create the activity (do not persist to the DB).
     attributes = {
       user: current_user,
       level: @level,
@@ -165,6 +165,7 @@ class ActivitiesController < ApplicationController
       time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
       level_source_id: @level_source.try(:id)
     }
+    @activity = Activity.new(attributes)
 
     # Save the activity and user_level synchronously if the level might be saved
     # to the gallery (for which the activity.id and user_level.id is required).
@@ -173,11 +174,6 @@ class ActivitiesController < ApplicationController
     synchronous_save = solved &&
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
-    if synchronous_save
-      @activity = Activity.create!(attributes)
-    else
-      @activity = Activity.create_async!(attributes)
-    end
     if @script_level
       if synchronous_save
         @new_level_completed = User.track_level_progress_sync(
