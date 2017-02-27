@@ -54,7 +54,6 @@
   .col-36 { width: 36%; float:left; }
   .col-45 { width: 45%; float:left; }
   .col-50 { width: 50%; float:left; }
-  .col-50-student { width: 50%; float:left; }
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
   .col-80 { width: 80%; float:left; }
@@ -80,6 +79,10 @@
    border-bottom-left-radius: 5px;
  }
 
+ #block a:first-of-type {
+   font-size: 70px;
+ }
+
  #educate-curriculum-grid div:nth-child(2), #educate-resources-grid div:nth-child(2), #educate-resources-grid div:nth-child(5) {
    margin-right: .66%;
    margin-left: .66%;
@@ -100,14 +103,6 @@
  .educate-box {
    position: absolute;
    min-height: 250px;
- }
-
- .orange-button, .gray-button {
-   margin-bottom: 40px;
- }
-
- #block a:first-of-type {
-   font-size: 70px;
  }
 }
 
@@ -130,7 +125,6 @@
   .col-33 img { margin-left: 25px; }
   .col-36 { width: 100% }
   .col-45 { width: 100%; float:left; }
-  .col-50-student { width: 500px; float:left; }
   .col-63 { width: 100%;}
   .col-66 { width: 100% }
   .col-80 { width: 100% }
@@ -159,6 +153,9 @@
    border-top-right-radius: 5px;
  }
 
+ #block a:first-of-type {
+   font-size: 50px;
+ }
  #educate-curriculum-grid div:nth-child(2), #educate-resources-grid div:nth-child(2), #educate-resources-grid div:nth-child(5) {
    margin-right: 0%;
    margin-left: 0%;
@@ -180,14 +177,6 @@
    position: absolute;
    min-height: 210px;
  }
-
- .orange-button, .gray-button {
-   margin-bottom: 70px;
- }
-
- #block a:first-of-type {
-   font-size: 50px;
- }
 }
 
 
@@ -204,9 +193,5 @@
   .mobile-show-medium { display: none }
 
   .mobile-small-hide { display: none }
-  .col-50-student { width: 380px; float:left; }
 
-  .orange-button, .gray-button {
-    margin-bottom: 55px;
-  }
 }
