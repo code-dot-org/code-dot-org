@@ -42,4 +42,6 @@ Feature: Using the teacher dashboard
     And I click selector "a:contains('SectionName')" once I see it
     And I click selector "a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
-    And I wait until element "a:contains('thumb wars')" is visible
+    And I click selector "a:contains('thumb wars')" once I see it
+    And I go to the newly opened tab
+    And I wait until element ".project_name.header_text:contains('thumb wars')" is visible
