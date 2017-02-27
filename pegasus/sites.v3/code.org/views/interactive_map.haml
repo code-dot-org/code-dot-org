@@ -6,7 +6,8 @@
 #state-list.phone-feature
   %h2 Choose a State
   %form
-    %select.dropdown#state-dropdown{:style=>'width:70%; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px'}
+    %select.dropdown#state-dropdown
+      %option
       -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
         %option{value:abbr}= state
 
