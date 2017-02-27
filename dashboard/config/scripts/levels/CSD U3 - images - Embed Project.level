@@ -137,7 +137,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "true",
@@ -170,7 +171,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "fail_on_lint_errors": "false",
-    "debugger_disabled": "false"
+    "debugger_disabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
