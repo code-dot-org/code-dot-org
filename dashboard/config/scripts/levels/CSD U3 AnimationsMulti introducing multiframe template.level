@@ -130,7 +130,8 @@
       "console.log": null,
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "show_debug_watch": "false",
     "start_in_animation_tab": "false",

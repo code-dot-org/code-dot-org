@@ -120,7 +120,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "all_animations_single_frame": "false",
     "start_in_animation_tab": "false",
