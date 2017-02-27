@@ -1,41 +1,26 @@
-.educate-banner{
+.educate-banner {
   border-radius: 5px;
   width: 100%;
 }
 
-#educate-curriculum-grid, #educate-resources-grid{
+#educate-curriculum-grid, #educate-resources-grid {
   width: 100%;
 }
 
-#educate-curriculum-grid{
-  margin-top: 2%;
-}
-
-#educate-curriculum-grid div:nth-child(2), #educate-resources-grid div:nth-child(2), #educate-resources-grid div:nth-child(5) {
-  margin-right: .165%;
-  margin-left: .165%;
-}
-
-#educate-curriculum-grid div:nth-child(1), #educate-resources-grid div:nth-child(1),  #educate-resources-grid div:nth-child(4){
-  margin-right: .33%;
-}
-
-#educate-curriculum-grid div:nth-child(3), #educate-resources-grid div:nth-child(3),  #educate-resources-grid div:nth-child(6){
-  margin-left: .33%;
+#educate-curriculum-grid {
+  margin-top: 20px;
 }
 
 .educate-container {
-  position:relative;
+  position: relative;
   float: left;
-  height: 270px;
 }
 
 .educate-box {
   position: absolute;
-  min-height: 255px;
   width: 100%;
   color: white;
-  padding: 5%;
+  padding: 20px;
   border-radius: 5px;
 }
 
@@ -53,10 +38,10 @@
 .educate-button {
   position: absolute;
   bottom: 0;
-  margin-bottom: 8%;
+  margin-bottom: 5%;
 }
 
 .resources-h1 {
   text-align: center;
-  margin-top: 2%;
+  margin-top: -1%;
 }

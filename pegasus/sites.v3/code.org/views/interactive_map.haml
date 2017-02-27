@@ -4,17 +4,12 @@
 - require 'state_abbr'
 
 #state-list.phone-feature
-  .nav-collapse.collapse
-  .nav
-    .dropdown
-      %button.dropdown-toggle{:href => "#", "role" => "button", "data-toggle" => "dropdown", "data-target" => "#"}
-        Select Your State
-        %b.caret
-      %ul.dropdown-menu{"role" => "menu"}
-        -STATE_ABBR_WITH_DC_HASH.each do |abbr, name|
-          %a{:href => "/promote/#{abbr}"}
-            = name
-          %br
+  %h2 Choose a State
+  %form
+    %select.dropdown#state-dropdown
+      %option
+      -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
+        %option{value:abbr}= state
 
 %h2.tablet-feature Choose a State
 #map.tablet-feature
@@ -24,12 +19,10 @@
   %ul
     %li
       Only
-      %a{:href=>'/action', style: 'color: white; cursor: pointer; text-decoration: underline', target: '_blank'}
-        %strong
-          =credit_count
-        states
-      allow students to count computer science courses toward high school graduation.
-
+      = succeed " allow students to count computer science courses toward high school graduation." do
+        %a{href: '/action', target: '_blank'}<
+          %strong= credit_count
+          states
     %li
       There are currently
       %strong
@@ -44,7 +37,7 @@
   %p.info
     See a
     = succeed "." do
-      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', style: 'color: white; cursor: pointer; text-decoration: underline', target: '_blank'} summary of state efforts
+      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'} summary of state efforts
 
 :javascript
   var webServiceLocation = "/promote/state/";
@@ -66,6 +59,25 @@
         });
       }
     }
+
+    $("#state-dropdown").change(
+        function(){
+
+          var abbr = $('#state-dropdown option:selected').val();
+
+          // Load the selected state's information into the infobox
+          $.ajax({
+            url: webServiceLocation + abbr.toLowerCase(),
+            type: "get",
+          }).done(function(data) {
+            $("#infobox").html(data);
+          }).fail(function () {
+            if (#{use_url}) {
+              window.location = "/promote"
+            }
+          });
+        }
+      )
 
     // Load the SVG into the #map div
     $('#map').usmap({

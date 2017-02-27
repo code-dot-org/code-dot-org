@@ -1,0 +1,30 @@
+#promote-page h1 {
+  margin-bottom: 15px;
+}
+
+#resources-section {
+  margin-top: -50px;
+}
+
+#youtube-section h2 {
+  margin-top:  0px;
+}
+
+.col-18-promote-tools {
+  height: 260px;
+  margin: 1%;
+}
+
+.left {
+  float: left
+}
+
+#block a {
+  color: #7665a0;
+  text-decoration: none;
+}
+
+#text p {
+  font-size: 13px;
+  line-height: 18px;
+}

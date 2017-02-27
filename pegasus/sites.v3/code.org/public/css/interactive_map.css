@@ -6,24 +6,23 @@
 }
 
 #infobox {
-  text-align:left;
-  float:right;
+  text-align: left;
+  float: right;
 }
 
 .info {
-  font-size:18px;
+  font-size: 18px;
 }
 
-.dropdown-toggle{
-  background-color:#7665a0;
-  border:2px solid #7665a0;
-  width:100%;
-  margin-bottom: 2%;
-  font-size:18px;
+#state-dropdown {
+  width: 70%;
+  height: 34px;
+  background-color: rgb(226,228,227); color: rgb(89,89,89);
+  margin-bottom: 10px;
 }
 
-.dropdown-menu{
-  width:100%;
-  font-size:18px;
-  padding-left:10px;
+a:link, a:visited {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
 }

@@ -1,4 +1,3 @@
-//code.org/student
 ---
 title: Student Overview
 theme: responsive
@@ -6,7 +5,7 @@ theme: responsive
 
 %link{:href=>"/css/student.css", :rel=>"stylesheet"}
 
-.space
+%h1 Learn Computer Science
 
 - hoc_picture = capture_haml do
   %img.side-image{src: "/images/fit-485/student/hour_of_code.jpg"}
@@ -50,19 +49,19 @@ theme: responsive
 -# Show Hour of Code first when soon or actually Hour of Code time.  Otherwise, show Code Studio first.
 - if ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
   .full-resource-block
-    .left.col-50= hoc_picture
-    .right.col-50= hoc_text
+    .left.col-50-student= hoc_picture
+    .right.col-50-student= hoc_text
   .full-resource-block
-    .left.col-50= studio_text
-    .right.col-50= studio_picture
+    .left.col-50-student= studio_text
+    .right.col-50-student= studio_picture
 - else
   .full-resource-block
-    .left.col-50= studio_picture
-    .right.col-50= studio_text
+    .left.col-50-student= studio_picture
+    .right.col-50-student= studio_text
   .full-resource-block
-    .left.col-50= hoc_text
-    .right.col-50= hoc_picture
+    .left.col-50-student= hoc_text
+    .right.col-50-student= hoc_picture
 
 .full-resource-block
-  .left.col-50= other_picture
-  .right.col-50= other_text
+  .left.col-50-student= other_picture
+  .right.col-50-student= other_text

@@ -1,16 +1,16 @@
+%link{:href=>"../css/promote.css", :rel=>"stylesheet"}
+
 -DB[:cdo_promote_tools].where(section_s: section_name).each do |value|
   -url = value[:url_s]
   -if value[:title_s] == 'Convince your school or state' && ! state.nil_or_empty? && File.exists?(sites_dir("all/files/states/#{state}.pdf"))
     -url = "/files/states/#{state}.pdf"
 
-  %div.col-18eb{:style=> 'margin:1%; float:left; height:275px;'}
-    #block{:style=> 'float:left; padding:1%; padding-top:1%; padding-bottom:1%'}
-      %a{:href=>url, :target=>'_blank', :style=>'text-decoration:none; font-size:100px;'}
-        %i{:class=>"fa fa-file-" + value[:icon_s] + "-o"}
-      #text{:style=>'float:left; width:75%'}
-      %br
-      %br
+  .col-18-promote-tools
+    #block.left
+      %a{:href=>url, :target=>'_blank'}
+        %i{:class=>"fa fa-file-#{value[:icon_s]}-o", :style => 'margin-bottom:10px;' }
+      #text
       %a{:href=>url, :target=>'_blank'}
         =value[:title_s]
-      %p{:style=>'font-size:13px; line-height:18px'}
+      %p
         =value[:description_t]
