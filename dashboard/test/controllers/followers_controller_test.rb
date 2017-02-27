@@ -109,6 +109,21 @@ class FollowersControllerTest < ActionController::TestCase
     ), flash[:alert]
   end
 
+  test 'student_user_new errors when joining a section with a student owner' do
+    @laurel.update!(user_type: User::TYPE_STUDENT)
+    sign_in @laurel_student_1.student_user
+
+    assert_does_not_create(Follower) do
+      get :student_user_new, params: {section_code: @laurel_section_1.code}
+    end
+
+    assert_redirected_to '/'
+    assert_equal I18n.t(
+      'follower.error.section_not_found',
+      section_code: @laurel_section_1.code
+    ), flash[:alert]
+  end
+
   test "student_user_new does not allow joining your own section" do
     sign_in @chris
 
