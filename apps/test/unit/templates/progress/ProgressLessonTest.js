@@ -12,7 +12,8 @@ describe('ProgressLesson', () => {
     lesson: fakeLesson('lesson1', 1),
     levels: fakeLevels(3),
     lessonNumber: 3,
-    lessonIsVisible: () => true
+    lessonIsVisible: () => true,
+    lessonLockedForSection: () => false
   };
 
   it('renders with gray background when not hidden', () => {
@@ -45,4 +46,6 @@ describe('ProgressLesson', () => {
     );
     assert.equal(wrapper.props().style.background, color.white);
   });
+
+  // TODO - tests for lockable stages
 });

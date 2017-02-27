@@ -51,7 +51,7 @@ const ProgressLesson = React.createClass({
 
     // redux provided
     lessonIsVisible: PropTypes.func.isRequired,
-    lessonIsLocked: PropTypes.func.isRequired
+    lessonLockedForSection: PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -67,7 +67,7 @@ const ProgressLesson = React.createClass({
   },
 
   render() {
-    const { description, lesson, lessonNumber, levels, lessonIsVisible, lessonIsLocked } = this.props;
+    const { description, lesson, lessonNumber, levels, lessonIsVisible, lessonLockedForSection } = this.props;
 
     if (!lessonIsVisible(lesson)) {
       return null;
@@ -79,7 +79,7 @@ const ProgressLesson = React.createClass({
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
     // TODO - disable bubbles when locked
-    const locked = lessonIsLocked(lesson.id) ||
+    const locked = lessonLockedForSection(lesson.id) ||
       levels.every(level => level.status === LevelStatus.locked);
 
     return (
@@ -126,6 +126,6 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  lessonIsLocked: lessonId => lessonIsLockedForAllStudents(lessonId, state),
+  lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

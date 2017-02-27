@@ -27,6 +27,7 @@ describe('SummaryProgressTable', () => {
         lessons={lessons}
         levelsByLesson={levelsByLesson}
         lessonIsVisible={() => true}
+        lessonLockedForSection={() => false}
       />
     );
     const rows = wrapper.find('tbody').props().children;
@@ -41,6 +42,7 @@ describe('SummaryProgressTable', () => {
         lessons={lessons}
         levelsByLesson={levelsByLesson}
         lessonIsVisible={(lesson, viewAs) => lesson.id !== 2 || viewAs === ViewType.Teacher}
+        lessonLockedForSection={() => false}
       />
     );
 
@@ -57,6 +59,7 @@ describe('SummaryProgressTable', () => {
         lessons={lessons}
         levelsByLesson={levelsByLesson}
         lessonIsVisible={(lesson, viewAs) => lesson.id !== 2 || viewAs !== ViewType.Student}
+        lessonLockedForSection={() => false}
       />
     );
 
@@ -67,4 +70,6 @@ describe('SummaryProgressTable', () => {
     assert.deepEqual(rows.map(row => row.props.dark), [false, true, false, true]);
     assert.deepEqual(rows.map(row => row.props.lesson.id), [1, 2, 3, 4]);
   });
+
+  // TODO - lockable tests
 });
