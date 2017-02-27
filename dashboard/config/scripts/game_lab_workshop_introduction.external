@@ -1,0 +1,10 @@
+name 'Game Lab Workshop: Introduction'
+display_name 'Workshop Introduction'
+
+markdown <<MARKDOWN
+# Game Lab Workshop
+
+## In this workshop progression, you'll have the opportunity to explore Game Lab, build some simple apps, and get a feel for how the tool works with students in the classroom.
+
+## It is _not_ expected that you will master Game Lab or any of the programming concepts that it teaches during the course of this workshop.
+MARKDOWN
