@@ -10,7 +10,7 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.find(current_user.id)
 
     # If email has changed for a non-teacher: clear confirmed_at but don't send notification email
-    if  !@user.confirmation_required? && params[:user][:email].present?
+    if  !@user.confirmation_required? && params[:user] && params[:user][:email].present?
       @user.skip_reconfirmation!
       @user.confirmed_at = nil
     end
