@@ -1,3 +1,10 @@
+/**
+ * This is a set of helpers that is used to generate test level/lesson content.
+ * It lives in src because it's used by both story files and test files, and it
+ * better to have test require helpers from src, then story files in src reach
+ * into test.
+ */
+
 import _ from 'lodash';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { createStore } from 'redux';
