@@ -54,7 +54,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
         },
         {
           unitName: @course_unit2.unit_name,
-          link: "/@hs/#{@course_unit2.script.name}",
+          link: "/s/#{@course_unit2.script.name}",
           moduleAssignments: [],
           status: 'start_blocked'
         }
