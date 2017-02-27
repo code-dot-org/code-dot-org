@@ -68,42 +68,11 @@
 
   .i-agree-button { width: 9%; }
 
- /*This is applicable when side by side images with rounded corners need to be stacked on smaller sizes (e.g. code.org/student)*/
- .right .side-image, .right .side-description-area {
-   border-top-right-radius: 5px;
-   border-bottom-right-radius: 5px;
- }
-
- .left .side-image, .left .side-description-area {
-   border-top-left-radius: 5px;
-   border-bottom-left-radius: 5px;
- }
 
  #block a:first-of-type {
    font-size: 70px;
  }
 
- #educate-curriculum-grid div:nth-child(2), #educate-resources-grid div:nth-child(2), #educate-resources-grid div:nth-child(5) {
-   margin-right: .66%;
-   margin-left: .66%;
- }
-
- #educate-curriculum-grid div:nth-child(1), #educate-resources-grid div:nth-child(1),  #educate-resources-grid div:nth-child(4){
-   margin-right: 1.33%;
- }
-
- #educate-curriculum-grid div:nth-child(3), #educate-resources-grid div:nth-child(3),  #educate-resources-grid div:nth-child(6){
-   margin-left: 1.33%;
- }
-
- .educate-container {
-   height: 270px;
- }
-
- .educate-box {
-   position: absolute;
-   min-height: 250px;
- }
 }
 
 /* 970px and down: minimal headers */
@@ -141,42 +110,10 @@
 
   .mobile-pad-edge { padding: 20px; }
 
-/*This is applicable when side by side images with rounded corners need to be stacked on smaller sizes (e.g. code.org/student)*/
- .right .side-image, .right .side-description-area {
-   border-bottom-left-radius: 5px;
-   border-bottom-right-radius: 5px;
-   margin-top: -10%;
- }
-
-  .left .side-image, .left .side-description-area {
-   border-top-left-radius: 5px;
-   border-top-right-radius: 5px;
- }
-
  #block a:first-of-type {
    font-size: 50px;
  }
- #educate-curriculum-grid div:nth-child(2), #educate-resources-grid div:nth-child(2), #educate-resources-grid div:nth-child(5) {
-   margin-right: 0%;
-   margin-left: 0%;
- }
-
- #educate-curriculum-grid div:nth-child(1), #educate-resources-grid div:nth-child(1),  #educate-resources-grid div:nth-child(4){
-   margin-right: 0%;
- }
-
- #educate-curriculum-grid div:nth-child(3), #educate-resources-grid div:nth-child(3),  #educate-resources-grid div:nth-child(6){
-   margin-left: 0%;
- }
-
- .educate-container {
-   height: 230px;
- }
-
- .educate-box {
-   position: absolute;
-   min-height: 210px;
- }
+ 
 }
 
 

@@ -61,6 +61,16 @@
   .orange-button, .gray-button {
     margin-bottom: 40px;
   }
+
+  .right .side-image, .right .side-description-area {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .left .side-image, .left .side-description-area {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px)
@@ -70,6 +80,17 @@
   .orange-button, .gray-button {
     margin-bottom: 70px;
   }
+  
+ .right .side-image, .right .side-description-area {
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   margin-top: -10%;
+ }
+
+  .left .side-image, .left .side-description-area {
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+ }
 }
 
 @media screen and (min-width: 0px) and (max-width: 512px)
