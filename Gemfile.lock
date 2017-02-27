@@ -45,13 +45,6 @@ GIT
       oauth (>= 0.4.5, < 0.6)
 
 GIT
-  remote: git://github.com/wjordan/minitest-hooks.git
-  revision: 3796f8bda5e215734a06794b422fd04c62c8de4f
-  ref: cdo
-  specs:
-    minitest-hooks (1.4.0)
-
-GIT
   remote: https://github.com/wjordan/omniauth-windowslive.git
   revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
   ref: cdo
@@ -378,9 +371,6 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    minitest-test_profile (0.2.1)
-      coveralls
-      minitest
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multi_json (1.12.1)
@@ -704,9 +694,7 @@ DEPENDENCIES
   mini_magick
   minitest (~> 5.5)
   minitest-around
-  minitest-hooks!
   minitest-reporters
-  minitest-test_profile
   mocha
   mysql2 (~> 0.3.13)
   naturally
