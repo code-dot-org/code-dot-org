@@ -234,6 +234,11 @@ class User < ActiveRecord::Base
       end
       params[:school] ||= params[:ops_school]
 
+      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
+      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
+      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
+        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
+      end
       user = User.invite!(
         email: params[:email],
         user_type: TYPE_TEACHER,
