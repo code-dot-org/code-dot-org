@@ -81,7 +81,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
         'Application ID' => 1,
         'Decision' => 'Accept',
         'Workshop' => teachercon_name,
-        'Program' => 'csd'
+        'Program' => 'CSD'
       }
     )
 

@@ -85,7 +85,7 @@ class TeacherApplicationDecisionProcessor
     end
 
     workshop_string = row[DECISION_HEADERS[:workshop_string]]
-    program = row[DECISION_HEADERS[:program]]
+    program = row[DECISION_HEADERS[:program]].try(:downcase)
     regional_partner_override = row[DECISION_HEADERS[:partner_name]]
     decision = row[DECISION_HEADERS[:decision]]
     case decision

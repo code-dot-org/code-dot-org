@@ -86,6 +86,9 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
+    "markdown_instructions": "# For Loop - Looping Through A List\r\n\r\n* Print out all the items in the colors list using a for loop",
+    "start_blocks": "var colors = [\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"purple\"];\r\n\r\n\r\n\r\n\r\n",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

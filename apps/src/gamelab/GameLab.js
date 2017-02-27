@@ -268,6 +268,9 @@ GameLab.prototype.init = function (config) {
     this.studioApp_.reduxStore.dispatch(jsDebugger.initialize({
       runApp: this.runButtonClick,
     }));
+    if (config.level.expandDebugger) {
+      this.studioApp_.reduxStore.dispatch(jsDebugger.open());
+    }
   }
 
   this.studioApp_.setPageConstants(config, {
@@ -797,7 +800,7 @@ GameLab.prototype.initInterpreter = function () {
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  this.studioApp_.dispatch(jsDebugger.attach(this.JSInterpreter));
+  this.studioApp_.reduxStore.dispatch(jsDebugger.attach(this.JSInterpreter));
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,

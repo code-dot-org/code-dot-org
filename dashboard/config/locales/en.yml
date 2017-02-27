@@ -133,6 +133,25 @@ en:
     user_type_student: "Student"
     field_is_required: "is required"
     accept_terms: "You must agree to create an account"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'Select School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Other'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: "School Zip Code"
+    school_address: 'School Address'
   signin_form:
     title: 'Have an account already? Sign in'
     login: 'Email'

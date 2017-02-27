@@ -19,6 +19,8 @@ class AssetMap
   end
 
   def asset_path(asset)
+    # Don't require developers or unit tests to precompile assets.
+    return CDO.studio_url("/assets/#{asset}") if CDO.pegasus_skip_asset_map
     raise "Asset map not initialized" unless @asset_map
     asset_path = @asset_map[asset]
     raise "Asset not found in asset map: '#{asset}'" unless asset_path

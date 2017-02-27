@@ -407,6 +407,40 @@ en:
         How do you typically organize students in your classes?: How do you typically organize students in your classes?
         Students usually work in small groups: Students usually work in small groups
         Students usually work independently: Students usually work independently
+      U5 evaluation q1:
+        Are you new to even-drive programming?: Are you new to even-drive programming?
+        'No': 'No'
+        'Yes': 'Yes'
+      U5 evaluation q2:
+        Conditionals and Boolean Logic: Conditionals and Boolean Logic
+        Creating Functions that Return Values: Creating Functions that Return Values
+        ? Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?
+        : Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?
+        Processing Arrays: Processing Arrays
+        Simple Arrays: Simple Arrays
+        Variables and Strings: Variables and Strings
+        While Loops: While Loops
+      U5 evaluation q3:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U5 evaluation q4:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U5 evaluation q5:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U5 evaluation q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U5 evaluation q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
@@ -422,7 +456,9 @@ en:
       4.8 - 4.9 Lesson Connections: {}
       5.1 - 5.3 Lesson Connections: {}
       5.11 - 5.14 Lesson Connections: {}
+      5.15 - 5.17 Lesson Connections: {}
       5.4 - 5.6 Lesson Connections: {}
+      5.7- 5.10 Lesson Connections: {}
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
@@ -465,6 +501,7 @@ en:
       Boolean Expressions and Comparison Operators:
         description here: description here
         title: title
+      Boolean Logic and Expression Overview: {}
       Building a UI with Design Mode: {}
       CSD - Event Types: {}
       CSD - Functions Review: {}
@@ -607,9 +644,12 @@ en:
       'CSD: Accessing List Items': {}
       'CSD: Creating Variables In App Lab': {}
       'CSD: Dropdown & Conditionals': {}
+      'CSD: For Loops': {}
       'CSD: List Length': {}
       'CSD: Lists': {}
+      'CSD: Lists with For Loops': {}
       'CSD: Review Events': {}
+      'CSD: Stop': {}
       'CSD: colorLed list': {}
       'CSD: getText vs getNumber': {}
       'CSD: setProperty': {}
@@ -628,6 +668,7 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 - button check for understanding: {}
       CSDU6 - timed loop stop board: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
@@ -1379,6 +1420,8 @@ en:
       FrustrationSolutions:
         Frustration Solutions: Frustration Solutions
         Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
+      Functions that Return Values: {}
+      'Game Lab Workshop: Introduction': {}
       Getting Better User Input: {}
       Getting to Know Your Data: {}
       GoodBadVisualizations_v1:
@@ -1458,6 +1501,7 @@ en:
       Introduction to Unit 2: {}
       Introduction to Unit 3: {}
       Introduction to Unit 4: {}
+      Introduction to Unit 5: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1761,6 +1805,7 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Practice Performance Task in Unit 5: {}
       Practice Performance Tasks in Unit 1: {}
       Practice Performance Tasks in Unit 2: {}
       Practice Performance Tasks in Unit 3: {}
@@ -1768,6 +1813,8 @@ en:
         description here: description here
         title: title
       Processing Arrays: {}
+      'Project Breakdown: Building a Canvas Painter': {}
+      'Project Breakdown: Clicker Game': {}
       'Project Breakdown: Color Sleuth': {}
       'Project Breakdown: Image Scroller': {}
       'Project Breakdown: Multi-Screen App': {}
@@ -1799,6 +1846,7 @@ en:
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
+      'Stop: Check with Teacher': {}
       'Stop: Classes': {}
       'Stop: Common Styles Warm Up': {}
       'Stop: External Style Sheets': {}
@@ -1809,6 +1857,7 @@ en:
       'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
       'Stop: Website Navigation': {}
+      Strings Overview: {}
       Summary Tables 101: {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
@@ -2395,6 +2444,7 @@ en:
       Unit 4 Lesson 9 Introduction: {}
       Unit 4 Tool Talk: {}
       'Unit 4: Practice PT highlights': {}
+      Unit 5 Concepts and AP Assessments: {}
       Unit 5 Lesson 1:
         description here: description here
         title: title
@@ -2450,6 +2500,7 @@ en:
       Unit 5 Lesson 9 Introduction:
         description here: description here
         title: title
+      Unit 5 Teaching Philosophy and Commentary: {}
       Update your Hypothesis - Part 1: {}
       Update your Hypothesis - Part 2: {}
       'Using Output from Functions: The return Command': {}
@@ -2642,7 +2693,6 @@ en:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
       final practice pt vs. explore pt: {}
-      functions that return values: {}
       grade1_activity_frustration:
         Dealing with Frustration: Dealing with Frustration
       grade1_activity_groupTower:
@@ -2722,8 +2772,6 @@ en:
       pre-assessment survey heading1: {}
       pre-assessment survey heading2: {}
       pre-assessment survey heading3: {}
-      'project breakdown: canvas painter': {}
-      'project breakdown: clicker game': {}
       rbo-test1: {}
       sample external 1:
         sample external 1: sample external 1
@@ -3003,7 +3051,6 @@ en:
         bee leaves: bee leaves
       storyline5:
         wrapup: wrapup
-      strings overview: {}
       test cb level:
         description here: description here
         test cb level: test cb level
@@ -3021,9 +3068,6 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      unique level name here:
-        description here: description here
-        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -3166,6 +3210,7 @@ en:
         Unit 2 Self-Assessment: {}
         Unit 3 Self-Assessment: {}
         Unit 4 Self-Assessment: {}
+        Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
     match:
@@ -7452,6 +7497,12 @@ en:
         "/script_assets/msm/Unit%202/exercise_5.png": "/script_assets/msm/Unit%202/exercise_5.png"
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+      kiki_multi_test:
+        The bird will crash immediately into a wall: The bird will crash immediately into a wall
+        The bird will not move at all: The bird will not move at all
+        The bird will reach the pig: The bird will reach the pig
+        The bird will stop one space short of the pig: The bird will stop one space short of the pig
+        What will happen when you run this code?: What will happen when you run this code?
       msm variables multi 1:
         '15': '15'
         What is the value of x?: What is the value of x?

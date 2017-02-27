@@ -141,6 +141,22 @@ exports.install = function (blockly, blockInstallOptions) {
   var isK1 = blockInstallOptions.isK1;
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
+
+  // Add some defaults; specifically for those values we expect to be
+  // arrays, so that we can blindly .filter, .map, and .slice them, else
+  // we will fail horribly for any environment that doesn't define a
+  // fully-featured skin
+  skin.activityChoices = valueOr(skin.activityChoices, []);
+  skin.avatarList = valueOr(skin.avatarList, []);
+  skin.backgroundChoices = valueOr(skin.backgroundChoices, []);
+  skin.itemChoices = valueOr(skin.itemChoices, []);
+  skin.mapChoices = valueOr(skin.mapChoices, []);
+  skin.projectileChoices = valueOr(skin.projectileChoices, []);
+  skin.sounds = valueOr(skin.sounds, []);
+  skin.soundChoices = valueOr(skin.soundChoices, []);
+  skin.soundChoicesK1 = valueOr(skin.soundChoicesK1, []);
+  skin.spriteChoices = valueOr(skin.spriteChoices, []);
+
   startAvatars = skin.avatarList.slice(0); // copy avatar list
 
   generator.studio_eventHandlerPrologue = function () {

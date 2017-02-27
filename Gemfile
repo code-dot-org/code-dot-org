@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+# Force HTTPS for github-source gems.
+# This is a temporary workaround - remove when bundler version is >=2.0
+# @see https://github.com/bundler/bundler/issues/4978
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
@@ -25,9 +33,9 @@ gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.1'
-# Using own fork until upstream publishes new version with multi return value fix
-# See https://github.com/cheald/redis-slave-read/pull/2
-gem 'redis-slave-read', require: false, github: 'islemaster/redis-slave-read', ref: 'start-with-random-node'
+# Using commit ref until maintainer publishes a new version
+# Ref: https://github.com/cheald/redis-slave-read/pull/2
+gem 'redis-slave-read', require: false, github: 'cheald/redis-slave-read', ref: '370d5da2b71f795d8145fcf89c0648f866a125a6'
 
 gem 'google-api-client'
 

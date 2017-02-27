@@ -21,7 +21,7 @@ import { initFirebaseStorage } from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
 import { getDatabase } from '../storage/firebaseUtils';
 import experiments from "../util/experiments";
-import apiTimeoutList from '../timeoutList';
+import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
 import applabCommands from './commands';
@@ -597,6 +597,9 @@ Applab.init = function (config) {
     studioApp.reduxStore.dispatch(jsDebugger.initialize({
       runApp: Applab.runButtonClick,
     }));
+    if (config.level.expandDebugger) {
+      studioApp.reduxStore.dispatch(jsDebugger.open());
+    }
   }
 
   // Set up an error handler for student errors and warnings.

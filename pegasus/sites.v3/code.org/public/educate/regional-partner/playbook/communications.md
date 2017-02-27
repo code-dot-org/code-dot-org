@@ -21,7 +21,7 @@ ________________
 <br/>
 
 ## Regional Partner Weekly Update Emails
-Each week we send out an email with important action items, new collateral, CS Education news, etc. You can see an [archive of all weekly emails here](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing).
+Each week we send out an email with important action items, new collateral, CS Education news, etc. You can see an archive of all Group 1 weekly emails [here](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing) and Group 2 weekly emails [here](https://docs.google.com/document/d/1Z1gXtCTU5Veih9gAxLw4VsAHeSC4HA_A70O1VWH_ZZI/edit?usp=sharing).
 
 <br/>
 ________________

@@ -11,10 +11,6 @@
       "onBoardEvent": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "start_blocks": "// When buttonL is pressed, switch to \"blue_screen\"\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  \r\n});",
@@ -51,7 +47,8 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true"
+    "makerlab_enabled": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
