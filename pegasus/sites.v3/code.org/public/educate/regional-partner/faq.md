@@ -92,7 +92,7 @@ ________________
 
 ### **If we become a Regional Partner can we run other CS education workshops in addition to the Code.org programs?**
 
-We encourage your organization can run other CS education workshosp in addition to the Code.org programs! 
+We encourage your organization to run other CS education workshops in addition to the Code.org programs! 
 <br/>
 
 [**Back to the top**](#top)

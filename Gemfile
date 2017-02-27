@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+# Force HTTPS for github-source gems.
+# This is a temporary workaround - remove when bundler version is >=2.0
+# @see https://github.com/bundler/bundler/issues/4978
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'

@@ -1,3 +1,4 @@
+require 'cdo/chat_client'
 require 'cdo/google_drive'
 #require src_dir 'database'
 
@@ -22,7 +23,7 @@ class CsvToSqlTable
   end
 
   def import!
-    HipChat.log "Importing <b>#{@table}</b> table from <b>#{File.basename(@path)}</b>"
+    ChatClient.log "Importing <b>#{@table}</b> table from <b>#{File.basename(@path)}</b>"
 
     # Starting with 1 means the first item's ID is 2 which matches the id to the line number of the item.
     at = 1
@@ -36,7 +37,7 @@ class CsvToSqlTable
 
     set_table_mtime(File.mtime(@path))
 
-    HipChat.log "Imported <b>#{at - 1}</b> rows into <b>#{@table}</b>"
+    ChatClient.log "Imported <b>#{at - 1}</b> rows into <b>#{@table}</b>"
 
     @table
   end
@@ -131,7 +132,7 @@ class GSheetToCsv
   def up_to_date?
     @file ||= (@@gdrive ||= Google::Drive.new).file(@gsheet_path)
     unless @file
-      HipChat.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color: 'red', notify: 1
+      ChatClient.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color: 'red', notify: 1
       return
     end
 
@@ -140,7 +141,7 @@ class GSheetToCsv
       ctime = File.mtime(@csv_path).utc if File.file?(@csv_path)
       return mtime.to_s == ctime.to_s
     rescue GoogleDrive::Error => e
-      HipChat.log "<p>Error getting modified time for <b>#{@gsheet_path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
+      ChatClient.log "<p>Error getting modified time for <b>#{@gsheet_path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
       true # Assume the current thing is up to date.
     end
   end
@@ -151,11 +152,11 @@ class GSheetToCsv
   end
 
   def import!
-    HipChat.log "Downloading <b>#{@gsheet_path}</b> from Google Drive."
+    ChatClient.log "Downloading <b>#{@gsheet_path}</b> from Google Drive."
 
     @file ||= (@@gdrive ||= Google::Drive.new).file(@gsheet_path)
     unless @file
-      HipChat.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color: 'red', notify: 1
+      ChatClient.log "Google Drive file <b>#{@gsheet_path}</b> not found.", color: 'red', notify: 1
       return
     end
 
@@ -184,7 +185,7 @@ class GSheetToCsv
 
     File.utime(File.atime(@csv_path), @file.mtime, @csv_path)
 
-    HipChat.log "Downloaded <b>#{@gsheet_path}</b> (<b>#{File.size(@csv_path)}</b> btyes) from Google Drive."
+    ChatClient.log "Downloaded <b>#{@gsheet_path}</b> (<b>#{File.size(@csv_path)}</b> btyes) from Google Drive."
 
     return @csv_path
   end
@@ -252,7 +253,7 @@ namespace :seed do
             File.utime(File.atime(path), mtime, path)
           end
         else
-          HipChat.log "Google Drive file <b>#{gsheet}</b> not found.", color: 'red', notify: 1
+          ChatClient.log "Google Drive file <b>#{gsheet}</b> not found.", color: 'red', notify: 1
         end
       end
       sync_tasks << sync
