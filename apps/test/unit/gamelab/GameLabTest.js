@@ -1,9 +1,9 @@
 import $ from 'jquery';
+import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 import experiments from '@cdo/apps/util/experiments';
 import {expect} from '../../util/configuredChai';
 import GameLab from '@cdo/apps/gamelab/GameLab';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import reducers from '@cdo/apps/gamelab/reducers';
@@ -11,15 +11,13 @@ import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setExternalGlobals} from '../../util/testUtils';
 import "script!@code-dot-org/p5.play/examples/lib/p5";
 import "script!@code-dot-org/p5.play/lib/p5.play";
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe("GameLab", () => {
   before(setExternalGlobals);
 
-  before(() => sinon.stub(studioApp, 'handleEditCode_', () => undefined));
-  after(() => studioApp.handleEditCode_.restore());
-
-  before(() => sinon.stub(studioApp, 'getCode', () => ''));
-  after(() => studioApp.getCode.restore());
+  before(() => sinon.stub(ReactDOM, 'render', () => undefined));
+  after(() => ReactDOM.render.restore());
 
   before(() => experiments.setEnabled('collapse-debugger', true));
   after(() => experiments.setEnabled('collapse-debugger', false));
@@ -48,10 +46,17 @@ describe("GameLab", () => {
     });
     afterEach(() => document.body.removeChild(container));
 
+    let studioApp;
     beforeEach(() => {
       registerReducers({...commonReducers, ...reducers});
       instance = new GameLab();
-      studioApp.configure(config);
+      studioApp = {
+        setCheckForEmptyBlocks: sinon.spy(),
+        showRateLimitAlert: sinon.spy(),
+        reduxStore: getStore(),
+        setPageConstants: sinon.spy(),
+        init: sinon.spy(),
+      };
     });
 
 
@@ -71,13 +76,6 @@ describe("GameLab", () => {
         });
 
         describe("the expandDebugger level option", () => {
-          let codeWorkspace;
-          beforeEach(() => {
-            codeWorkspace = document.createElement('div');
-            codeWorkspace.id = 'codeWorkspace';
-            document.body.appendChild(codeWorkspace);
-          });
-          afterEach(() => document.body.removeChild(codeWorkspace));
           it("will leave the debugger closed when false", () => {
             expect(config.level.expandDebugger).not.to.be.true;
             instance.init(config);
