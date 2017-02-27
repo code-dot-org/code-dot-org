@@ -24,10 +24,6 @@
   text-decoration: none;
 }
 
-#block a:first-of-type {
-  font-size: 70px;
-}
-
 #text p {
   font-size: 13px;
   line-height: 18px;

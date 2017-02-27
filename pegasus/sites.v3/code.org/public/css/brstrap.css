@@ -105,6 +105,10 @@
  .orange-button, .gray-button {
    margin-bottom: 40px;
  }
+
+ #block a:first-of-type {
+   font-size: 70px;
+ }
 }
 
 /* 970px and down: minimal headers */
@@ -179,6 +183,10 @@
 
  .orange-button, .gray-button {
    margin-bottom: 70px;
+ }
+
+ #block a:first-of-type {
+   font-size: 50px;
  }
 }
 

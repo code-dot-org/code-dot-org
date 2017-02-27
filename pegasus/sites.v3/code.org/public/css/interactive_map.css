@@ -15,17 +15,30 @@
 }
 
 .dropdown-toggle {
-  background-color: #7665a0;
-  border: 2px solid #7665a0;
-  width: 100%;
   margin-bottom: 2%;
   font-size: 18px;
+  width:70%;
+  height: 34px;
+  background-color: rgb(226,228,227);
+  color: rgb(89,89,89);
+  margin-bottom: 10px;
+  border: 2px solid rgb(226,228,227)
 }
 
 .dropdown-menu {
-  width: 100%;
+  width: 70%;
   font-size: 18px;
   padding-left: 10px;
+  margin-top: -20px;
+  background-color:rgb(226,228,227);
+  color: rgb(89,89,89);
+}
+
+ul.dropdown-menu a:link, ul.dropdown-menu a:visited{
+  color: rgb(89,89,89);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 a:link, a:visited {
