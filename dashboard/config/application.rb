@@ -11,6 +11,7 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 require 'net_sim_api'
+require 'sound_library_api'
 require 'animation_library_api'
 
 require 'bootstrap-sass'
@@ -59,6 +60,7 @@ module Dashboard
     config.middleware.insert_after TablesApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
+    config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
     if CDO.dashboard_enable_pegasus && !ENV['SKIP_DASHBOARD_ENABLE_PEGASUS']
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
