@@ -91,12 +91,12 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
