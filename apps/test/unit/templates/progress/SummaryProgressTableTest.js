@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from '@cdo/apps/templates/progress/SummaryProgressTable';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import Immutable from 'immutable';
-import { fakeLesson, fakeLevels } from './progressTestUtils';
+import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('SummaryProgressTable', () => {
   const lessons = [
@@ -26,11 +26,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        viewAs={ViewType.Student}
-        sectionId={'11'}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {}
-        })}
+        lessonIsVisible={() => true}
       />
     );
     const rows = wrapper.find('tbody').props().children;
@@ -44,15 +40,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        viewAs={ViewType.Student}
-        sectionId={'11'}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {
-            '11': {
-              '2': true
-            }
-          }
-        })}
+        lessonIsVisible={(lesson, viewAs) => lesson.id !== 2 || viewAs === ViewType.Teacher}
       />
     );
 
@@ -68,15 +56,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         lessons={lessons}
         levelsByLesson={levelsByLesson}
-        viewAs={ViewType.Teacher}
-        sectionId={'11'}
-        hiddenStageState={Immutable.fromJS({
-          bySection: {
-            '11': {
-              '2': true
-            }
-          }
-        })}
+        lessonIsVisible={(lesson, viewAs) => lesson.id !== 2 || viewAs !== ViewType.Student}
       />
     );
 

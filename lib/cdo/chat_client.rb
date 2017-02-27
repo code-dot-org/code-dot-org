@@ -6,16 +6,6 @@ require 'cdo/slack'
 class ChatClient
   @@name = CDO.name[0..14]
 
-  TRUNCATION_PREFIX = '[TRUNCATED]'
-  MAX_MESSAGE_SIZE = 10_000
-
-  def self.developers(message, options={})
-    # Temporarily redirect developer logging to 'Server operations'.
-    # TODO(dave): rename or split HipChat.developers once we settle on a HipChat
-    # logging strategy.
-    message('server operations', message, options)
-  end
-
   def self.log(message, options={})
     message(CDO.hip_chat_log_room, message, options)
   end
@@ -46,7 +36,7 @@ class ChatClient
     # notify developers room and our own room
     "<b>#{name}</b> failed in #{RakeUtils.format_duration(Time.now - start_time)}".tap do |message|
       ChatClient.log message, color: 'red', notify: 1
-      ChatClient.developers message, color: 'red', notify: 1
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
     end
     # log detailed error information in our own room
     ChatClient.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'

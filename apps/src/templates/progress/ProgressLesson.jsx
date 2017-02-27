@@ -6,7 +6,7 @@ import color from "@cdo/apps/util/color";
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import i18n from '@cdo/locale';
-import { lessonIsHidden } from './progressHelpers';
+import { lessonIsVisible } from './progressHelpers';
 
 const styles = {
   main: {
@@ -46,9 +46,7 @@ const ProgressLesson = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    sectionId: PropTypes.string,
-    hiddenStageState: PropTypes.object.isRequired,
+    lessonIsVisible: PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -64,14 +62,14 @@ const ProgressLesson = React.createClass({
   },
 
   render() {
-    const { description, lesson, lessonNumber, levels } = this.props;
+    const { description, lesson, lessonNumber, levels, lessonIsVisible } = this.props;
 
-    if (lessonIsHidden(this.props)) {
+    if (!lessonIsVisible(lesson)) {
       return null;
     }
 
     // Is this a hidden stage that we still render because we're a teacher
-    const hiddenForStudents = lessonIsHidden({...this.props, viewAs: ViewType.Student });
+    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
@@ -109,7 +107,5 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  viewAs: state.stageLock.viewAs,
-  sectionId: state.sections.selectedSectionId,
-  hiddenStageState: state.hiddenStage,
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

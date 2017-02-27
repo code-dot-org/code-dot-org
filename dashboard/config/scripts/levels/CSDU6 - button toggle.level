@@ -60,6 +60,7 @@
       "buzzer.frequency": null,
       "buzzer.play": null,
       "timedLoop": null,
+      "stopTimedLoop": null,
       "forLoop_i_0_4": null,
       "onBoardEvent": null
     },
