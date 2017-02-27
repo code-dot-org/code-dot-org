@@ -7,10 +7,6 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -45,7 +41,8 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
