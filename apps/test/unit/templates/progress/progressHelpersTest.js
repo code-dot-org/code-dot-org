@@ -2,7 +2,10 @@ import { assert } from '../../../util/configuredChai';
 import Immutable from 'immutable';
 import sinon from 'sinon';
 import { fakeLesson } from '@cdo/apps/templates/progress/progressTestHelpers';
-import { lessonIsVisible } from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  lessonIsVisible,
+  lessonIsLockedForAllStudents
+} from '@cdo/apps/templates/progress/progressHelpers';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
 describe('progressHelpers', () => {
@@ -59,6 +62,52 @@ describe('progressHelpers', () => {
       state.stageLock.lockableAuthorized = true;
       assert.strictEqual(lessonIsVisible(lockableLesson, state, undefined), true);
     });
+  });
 
+  describe('lessonIsLockedForAllStudents', () => {
+    const unlockedStageId = 1000;
+    const lockedStageId = 1111;
+
+    const stateForSelectedSection = sectionId => ({
+      sections: {
+        selectedSectionId: sectionId
+      },
+      stageLock: {
+        stagesBySectionId: {
+          11: {
+            [lockedStageId]: [{
+              locked: true,
+              name: 'student1'
+            }, {
+              locked: true,
+              name: 'student2'
+            }],
+            [unlockedStageId]: [{
+              locked: true,
+              name: 'student1'
+            }, {
+              locked: false,
+              name: 'student2'
+            }],
+          },
+        }
+      }
+    });
+
+    it('returns false when we have no selected section', () => {
+      const state = stateForSelectedSection(null);
+      assert.strictEqual(lessonIsLockedForAllStudents(lockedStageId, state), false);
+      assert.strictEqual(lessonIsLockedForAllStudents(unlockedStageId, state), false);
+    });
+
+    it('returns false when the selected section has an unlocked student', () => {
+      const state = stateForSelectedSection(11);
+      assert.strictEqual(lessonIsLockedForAllStudents(unlockedStageId, state), false);
+    });
+
+    it('returns true when the selected section has no unlocked students', () => {
+      const state = stateForSelectedSection(11);
+      assert.strictEqual(lessonIsLockedForAllStudents(lockedStageId, state), true);
+    });
   });
 });
