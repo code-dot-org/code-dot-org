@@ -563,6 +563,18 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.unconfirmed_email
   end
 
+  test 'changing from teacher to student fails if the teacher has sections' do
+    teacher = create :teacher
+    create :section, user: teacher
+
+    teacher.user_type = User::TYPE_STUDENT
+    refute teacher.valid?
+    assert_equal(
+      ['You must first remove all sections in the teacher dashboard before converting to a student account'],
+      teacher.errors.full_messages
+    )
+  end
+
   test 'changing user from student to teacher saves email' do
     user = create :student, email: 'email@old.xx'
 

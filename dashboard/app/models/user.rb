@@ -157,6 +157,12 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
 
+  validate :must_be_a_teacher_if_has_sections, on: :update, if: -> {user_type_changed? && student?}
+  def must_be_a_teacher_if_has_sections
+    return if sections.empty?
+    errors.add :base, I18n.t('user.section_teacher_unable_to_change_usertype')
+  end
+
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
   # @param school_info_attr the attributes to set and check

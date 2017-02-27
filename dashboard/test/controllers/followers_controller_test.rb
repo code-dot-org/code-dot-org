@@ -94,8 +94,8 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal @chris_section, follower.section
   end
 
-  test "student_user_new errors when joining a section with deleted teacher" do
-    @laurel.update(deleted_at: Time.now)
+  test 'student_user_new errors when joining an invalid section' do
+    Section.any_instance.stubs(:valid?).returns(false)
     sign_in @laurel_student_1.student_user
 
     assert_does_not_create(Follower) do
