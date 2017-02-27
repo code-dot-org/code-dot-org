@@ -14,7 +14,9 @@ const CsFundamentalsSection = React.createClass({
   },
 
   onPrintCertificateClick() {
-    window.location = 'generate_csf_certificate';
+    const enrollmentCode = this.props.lastWorkshopSurveyUrl.substring(this.props.lastWorkshopSurveyUrl.lastIndexOf('/'));
+
+    window.location = `generate_csf_certificate${enrollmentCode}`;
   },
 
   onOnlineLearningClick() {

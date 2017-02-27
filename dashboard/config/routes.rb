@@ -351,7 +351,7 @@ Dashboard::Application.routes.draw do
     get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
     get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
 
-    get 'generate_csf_certificate', controller: 'csf_certificate', action: 'generate_certificate'
+    get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
