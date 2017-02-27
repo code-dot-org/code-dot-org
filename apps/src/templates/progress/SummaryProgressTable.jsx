@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import { levelType, lessonType } from './progressTypes';
 import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
 import { connect } from 'react-redux';
-import { lessonIsVisible } from './progressHelpers';
+import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
 
 const styles = {
   table: {
@@ -28,6 +28,7 @@ const SummaryProgressTable = React.createClass({
     ).isRequired,
 
     // redux provided
+    lessonLockedForSection: PropTypes.func.isRequired,
     lessonIsVisible: PropTypes.func.isRequired
   },
 
@@ -56,6 +57,7 @@ const SummaryProgressTable = React.createClass({
         <tbody>
           {/*Filter our lessons to those that will be rendered, and then make
             every other (remaining) one dark
+            TODO: add unit tests for locked
             */
             lessons.map((lesson, index) => ({unfilteredIndex: index, lesson }))
             .filter(item => this.props.lessonIsVisible(item.lesson))
@@ -66,6 +68,7 @@ const SummaryProgressTable = React.createClass({
                 levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
                 dark={filteredIndex % 2 === 1}
+                lockedForSection={this.props.lessonLockedForSection(item.lesson.id)}
                 lessonIsVisible={this.props.lessonIsVisible}
               />
             ))
@@ -80,5 +83,6 @@ const SummaryProgressTable = React.createClass({
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 
 export default connect(state => ({
+  lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(SummaryProgressTable);

@@ -80,7 +80,7 @@ const ProgressLesson = React.createClass({
 
     // TODO - disable bubbles when locked
     const locked = lessonIsLocked(lesson.id) ||
-      !levels.some(level => level.status !== LevelStatus.locked);
+      levels.every(level => level.status === LevelStatus.locked);
 
     return (
       <div
