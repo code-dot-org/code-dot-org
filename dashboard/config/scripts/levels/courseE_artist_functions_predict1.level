@@ -33,7 +33,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\"hint_id\":\"courseD_artist_functions2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a7f470d79f423a1dcac8b8c8920c402e/courseD_artist_functions2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\"hint_id\":\"courseD_artist_functions2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a7f470d79f423a1dcac8b8c8920c402e/courseE_artist_functions_predict1.mp3\"}]",
     "discard_background": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_artist_functions2_1\",\r\n  \"callout_text\": \"When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?\",\r\n  \"element_id\": \"#start\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "true",
