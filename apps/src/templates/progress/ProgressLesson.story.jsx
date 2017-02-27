@@ -3,6 +3,9 @@ import { UnconnectedProgressLesson as ProgressLesson } from './ProgressLesson';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import { fakeLesson, fakeLevels } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
+
+experiments.setEnabled('progressRedesign');
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
@@ -52,6 +55,34 @@ export default storybook => {
           <ProgressLesson
             {...defaultProps}
             lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
+          />
+        )
+      },
+      {
+        name:'locked lesson as teacher',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5).map(level => ({
+              ...level,
+              status: LevelStatus.locked,
+              name: undefined
+            }))}
+          />
+        )
+      },
+      {
+        name:'unlocked lesson as teacher',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5).map(level => ({
+              ...level,
+              status: LevelStatus.attempted,
+              name: undefined
+            }))}
           />
         )
       }
