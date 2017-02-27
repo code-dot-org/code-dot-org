@@ -1,54 +1,26 @@
 import React from 'react';
 import { UnconnectedProgressLesson as ProgressLesson } from './ProgressLesson';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import Immutable from 'immutable';
+import { fakeLesson, fakeLevels } from './progressTestHelpers';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
-  title: "Lesson 1: Bytes and File Sizes" ,
-  lesson: {
-    name: "Maze",
-    id: 1
-  },
+  lesson: fakeLesson('Maze', 1),
   lessonNumber: 3,
   levels: [
     {
-      status: 'not_tried',
+      status: LevelStatus.not_tried,
       url: '/step1/level1',
       name: 'First progression'
     },
+    ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
     {
-      status: 'perfect',
-      url: '/step2/level1',
-    },
-    {
-      status: 'not_tried',
-      url: '/step2/level2',
-    },
-    {
-      status: 'not_tried',
-      url: '/step2/level3',
-    },
-    {
-      status: 'not_tried',
-      url: '/step2/level4',
-    },
-    {
-      status: 'not_tried',
-      url: '/step2/level5',
-    },
-    {
-      status: 'not_tried',
+      status: LevelStatus.not_tried,
       url: '/step3/level1',
       name: 'Last progression'
     },
   ],
-  viewAs: ViewType.Teacher,
-  sectionId: "11",
-  hiddenStageState: Immutable.fromJS({
-    bySection: {
-      '11': { }
-    }
-  })
+  lessonIsVisible: () => true
 };
 
 export default storybook => {
@@ -69,11 +41,7 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { '1': true}
-              }
-            })}
+            lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
           />
         )
       },
@@ -83,12 +51,7 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            viewAs={ViewType.Student}
-            hiddenStageState={Immutable.fromJS({
-              bySection: {
-                '11': { '1': true}
-              }
-            })}
+            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
           />
         )
       }
