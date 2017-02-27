@@ -351,6 +351,7 @@ en:
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
+    section_teacher_unable_to_change_usertype: 'You must first remove all sections in the teacher dashboard before converting to a student account'
   user_level:
     completed: 'Completed'
     tried: 'Tried'
