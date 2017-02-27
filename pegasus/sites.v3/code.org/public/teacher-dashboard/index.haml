@@ -7,6 +7,11 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 - forbidden! unless dashboard_user[:user_type] == 'teacher'
 - error_string_none_selected = I18n.t('dashboard_error_none_selected').gsub(/"/,"\\\\\"")
 - error_string_other_section = I18n.t('dashboard_error_other_section').gsub(/"/,"\\\\\"")
+
+-#
+ The sectionProjects url param is used only for UI tests, and for manually verifying
+ the feature in production prior to launch. The DCDO flag will be used to launch the
+ feature in production. Shortly thereafter, all of these flags should be removed.
 - show_section_projects = DCDO.get('section_projects', CDO.section_projects) || !!request.params['sectionProjects']
 
 -#
@@ -614,7 +619,9 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
       function (sections) {
-        $scope.selectedSection = $.grep(sections, function(section) { return (section.id == $routeParams.id);})[0];
+        $scope.selectedSection = $.grep(sections, function (section) {
+          return (section.id == $routeParams.id);
+        })[0];
       }
     );
   }]);
