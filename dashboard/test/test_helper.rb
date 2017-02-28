@@ -14,9 +14,7 @@ elsif ENV['CI'] # this is set by circle
 end
 
 require 'minitest/reporters'
-Minitest::Reporters.use! [
-  Minitest::Reporters::SpecReporter.new
-]
+MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
@@ -46,8 +44,6 @@ Dashboard::Application.config.action_dispatch.show_exceptions = false
 
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
-require 'testing/setup_all_and_teardown_all'
-require 'testing/transactional_test_case'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -114,8 +110,6 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   include FactoryGirl::Syntax::Methods
-  include ActiveSupport::Testing::SetupAllAndTeardownAll
-  include ActiveSupport::Testing::TransactionalTestCase
 
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
@@ -214,13 +208,6 @@ class ActiveSupport::TestCase
     teardown do
       Timecop.return
     end
-  end
-
-  def no_database
-    Rails.logger.info '--------------'
-    Rails.logger.info 'DISCONNECTING DATABASE'
-    Rails.logger.info '--------------'
-    ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
 end
 
