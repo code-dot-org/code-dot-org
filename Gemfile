@@ -38,7 +38,6 @@ gem 'rack_csrf'
 
 group :development do
   gem 'annotate'
-  gem 'memoist'
   gem 'rack-mini-profiler'
   gem 'ruby-progressbar', require: false
   gem 'thin'
