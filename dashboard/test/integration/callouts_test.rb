@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class CalloutsTest < ActionDispatch::IntegrationTest
+  self.fixture_table_names = []
+
   setup do
     Script.stubs(:should_cache?).returns true
     Rails.application.config.stubs(:levelbuilder_mode).returns false
