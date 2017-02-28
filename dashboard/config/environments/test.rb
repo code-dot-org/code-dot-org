@@ -90,7 +90,7 @@ Dashboard::Application.configure do
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
   # Set to :debug to see everything in the log.
-  config.log_level = :debug
+  config.log_level = :info
 
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time.
