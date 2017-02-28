@@ -59,6 +59,17 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.white);
   });
 
+  it('disables bubbles when section is locked', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lessonLockedForSection={() => true}
+      />
+    );
+    assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
+  });
+
   it('renders with white background locked for individual student', () => {
     const wrapper = shallow(
       <ProgressLesson

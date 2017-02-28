@@ -16,7 +16,6 @@ describe('SummaryProgressRow', () => {
     lessonIsVisible: () => true
   };
 
-
   it('does not render when lessonIsVisible is false', () => {
     const wrapper = shallow(
       <SummaryProgressRow
@@ -55,6 +54,26 @@ describe('SummaryProgressRow', () => {
       />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
+  });
+
+  it('disables bubbles when locked for section', () => {
+    const wrapper = shallow(
+      <SummaryProgressRow
+        {...baseProps}
+        lockedForSection={true}
+      />
+    );
+    assert.strictEqual(wrapper.find('ProgressBubbleSet').props().disabled, true);
+  });
+
+  it('disables bubbles when locked for particular student', () => {
+    const wrapper = shallow(
+      <SummaryProgressRow
+        {...baseProps}
+        levels={baseProps.levels.map(level => ({...level, status: LevelStatus.locked}))}
+      />
+    );
+    assert.strictEqual(wrapper.find('ProgressBubbleSet').props().disabled, true);
   });
 
   it('has an eye slash icon when hidden for students', () => {

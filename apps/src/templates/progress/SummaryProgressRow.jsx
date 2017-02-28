@@ -86,7 +86,6 @@ const SummaryProgressRow = React.createClass({
       lessonTitle = lessonNumber + ". " + lessonTitle;
     }
 
-    // TODO - disable bubbles when locked
     const locked = lockedForSection ||
       levels.every(level => level.status === LevelStatus.locked);
 
@@ -123,6 +122,7 @@ const SummaryProgressRow = React.createClass({
           <ProgressBubbleSet
             start={1}
             levels={levels}
+            disabled={locked}
           />
         </td>
       </tr>

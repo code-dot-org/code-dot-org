@@ -24,7 +24,7 @@ const defaultProps = {
     },
   ],
   lessonIsVisible: () => true,
-  lessonIsLocked: () => false
+  lessonLockedForSection: () => false
 };
 
 export default storybook => {
@@ -70,7 +70,7 @@ export default storybook => {
               status: LevelStatus.locked,
               name: undefined
             }))}
-            lessonIsLocked={() => true}
+            lessonLockedForSection={() => true}
           />
         )
       },
