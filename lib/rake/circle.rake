@@ -118,7 +118,7 @@ end
 def browsers_to_run
   browsers = []
   browsers << 'ChromeLatestWin7' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
-  browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
+  browsers << 'FirefoxLatestWin7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
   browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
   browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)
   browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
