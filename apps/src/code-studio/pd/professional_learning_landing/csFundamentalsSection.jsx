@@ -6,7 +6,8 @@ import {TwoPartBanner} from './twoPartBanner';
 
 const CsFundamentalsSection = React.createClass({
   propTypes: {
-    lastWorkshopSurveyUrl: React.PropTypes.string
+    lastWorkshopSurveyUrl: React.PropTypes.string,
+    printCsfCertificateUrl: React.PropTypes.string
   },
 
   onStartSurveyClick() {
@@ -14,9 +15,7 @@ const CsFundamentalsSection = React.createClass({
   },
 
   onPrintCertificateClick() {
-    const enrollmentCode = this.props.lastWorkshopSurveyUrl.substring(this.props.lastWorkshopSurveyUrl.lastIndexOf('/'));
-
-    window.location = `generate_csf_certificate${enrollmentCode}`;
+    window.location = this.props.printCsfCertificateUrl;
   },
 
   onOnlineLearningClick() {

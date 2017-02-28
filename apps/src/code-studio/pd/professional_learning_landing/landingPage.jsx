@@ -17,6 +17,7 @@ const LandingPage = React.createClass({
     coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string),
     lastWorkshopSurveyUrl: React.PropTypes.string,
     lastWorkshopSurveyCourse: React.PropTypes.string,
+    printCsfCertificateUrl: React.PropTypes.string,
     professionalLearningCourseData: React.PropTypes.array
   },
 
@@ -66,6 +67,7 @@ const LandingPage = React.createClass({
         {this.shouldRenderCSFSection() && (
             <CsFundamentalsSection
               lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyCourse === 'CS Fundamentals' ? this.props.lastWorkshopSurveyUrl : null}
+              printCsfCertificateUrl={this.props.printCsfCertificateUrl}
             />
           )
         }
