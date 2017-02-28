@@ -8,16 +8,28 @@ import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import i18n from '@cdo/locale';
 import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 
 const styles = {
-  main: {
+  outer: {
+    display: 'table',
+    width: '100%',
+    marginBottom: 12,
     background: color.lightest_gray,
     borderWidth: 1,
     borderColor: color.border_gray,
     borderStyle: 'solid',
     borderRadius: 2,
+  },
+  rightCol: {
+    display: 'table-cell',
+    verticalAlign: 'top',
+    width: 240,
+    height: '100%',
+    borderRadius: 2,
+  },
+  main: {
     padding: 20,
-    marginBottom: 12
   },
   heading: {
     fontSize: 18,
@@ -82,42 +94,47 @@ const ProgressLesson = React.createClass({
       levels.every(level => level.status === LevelStatus.locked);
 
     return (
-      <div
-        style={{
-          ...styles.main,
-          ...(hiddenForStudents && styles.hiddenOrLocked),
-          ...(locked && styles.hiddenOrLocked),
-        }}
-      >
+      <div style={styles.outer}>
         <div
-          style={styles.heading}
-          onClick={this.toggleCollapsed}
+          style={{
+            ...styles.main,
+            ...(hiddenForStudents && styles.hiddenOrLocked),
+            ...(locked && styles.hiddenOrLocked),
+          }}
         >
-          {hiddenForStudents &&
-            <FontAwesome
-              icon="eye-slash"
-              style={styles.icon}
+          <div
+            style={styles.heading}
+            onClick={this.toggleCollapsed}
+          >
+            {hiddenForStudents &&
+              <FontAwesome
+                icon="eye-slash"
+                style={styles.icon}
+              />
+            }
+            {lesson.lockable &&
+              <FontAwesome
+                icon={locked ? 'lock' : 'unlock'}
+                style={{
+                  ...styles.icon,
+                  ...(!locked && styles.unlockedIcon)
+                }}
+              />
+            }
+            <FontAwesome icon={icon}/>
+            <span style={styles.headingText}>{title}</span>
+          </div>
+          {!this.state.collapsed &&
+            <ProgressLessonContent
+              description={description}
+              levels={levels}
+              disabled={locked}
             />
           }
-          {lesson.lockable &&
-            <FontAwesome
-              icon={locked ? 'lock' : 'unlock'}
-              style={{
-                ...styles.icon,
-                ...(!locked && styles.unlockedIcon)
-              }}
-            />
-          }
-          <FontAwesome icon={icon}/>
-          <span style={styles.headingText}>{title}</span>
         </div>
-        {!this.state.collapsed &&
-          <ProgressLessonContent
-            description={description}
-            levels={levels}
-            disabled={locked}
-          />
-        }
+        <div style={styles.rightCol}>
+          <ProgressLessonTeacherInfo/>
+        </div>
       </div>
     );
   }
