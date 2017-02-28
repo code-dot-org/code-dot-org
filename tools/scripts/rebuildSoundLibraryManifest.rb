@@ -71,9 +71,9 @@ class ManifestBuilder
           {
             # JSON-style file comment
             '//': [
-              'sound Library Manifest',
+              'Sound Library Manifest',
               'GENERATED FILE: DO NOT MODIFY DIRECTLY',
-              'See tools/scripts/rebuildsoundLibraryManifest.rb for more information.'
+              'See tools/scripts/rebuildSoundLibraryManifest.rb for more information.'
             ],
 
             # Strip aliases from metadata - they're no longer needed since they
@@ -294,7 +294,7 @@ The sound has been skipped.
 
       # Verify that the parsed metadata contains all expected fields
       next "sound #{name} is missing the 'name' attribute." unless metadata['name'].is_a?(String)
-      next "sound #{name} is missing the 'sound' attribute." unless metadata['time'].is_a?(Integer)
+      next "sound #{name} is missing the 'time' attribute." unless metadata['time'].is_a?(Integer)
 
       # Add last modification time for each file to the metadata so we can skip
       # unmodified files in future manifest updates
@@ -353,7 +353,7 @@ end
 # Parse command-line options and then start the rebuild process
 options = {}
 cli_parser = OptionParser.new do |opts|
-  opts.banner = "Usage: ./rebuildsoundLibraryManifest.rb [options]"
+  opts.banner = "Usage: ./rebuildSoundLibraryManifest.rb [options]"
   opts.separator ""
   opts.separator "Options:"
 

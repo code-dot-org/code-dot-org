@@ -20,7 +20,7 @@ include CdoCli
 begin
   require 'taglib'
 rescue LoadError
-  puts "You need taglib installed locally to run this script. Run 'brew install taglib' then 'gem install taglib-ruby' and then add 'gem 'taglib-ruby'' to Gemfile and run bundle install. Do not check in changes to Gemfile."
+  puts "You need taglib installed locally to run this script. Run 'brew install taglib' then 'gem install taglib-ruby'."
 end
 
 DEFAULT_S3_BUCKET = 'cdo-sound-library'.freeze
