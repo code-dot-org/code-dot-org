@@ -22,6 +22,7 @@ export const lessonType = (
     name: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     lockable: PropTypes.bool.isRequired,
-    stageNumber: PropTypes.number
+    stageNumber: PropTypes.number,
+    lesson_plan_html_url: PropTypes.string,
   })
 );
