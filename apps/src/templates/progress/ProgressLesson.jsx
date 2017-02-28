@@ -24,7 +24,7 @@ const styles = {
   rightCol: {
     display: 'table-cell',
     verticalAlign: 'top',
-    width: 240,
+    width: 200,
     height: '100%',
     borderRadius: 2,
   },
@@ -62,6 +62,8 @@ const ProgressLesson = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
+    showTeacherInfo: PropTypes.bool.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired
   },
@@ -79,7 +81,16 @@ const ProgressLesson = React.createClass({
   },
 
   render() {
-    const { description, lesson, lessonNumber, levels, lessonIsVisible, lessonLockedForSection } = this.props;
+    const {
+      description,
+      lesson,
+      lessonNumber,
+      levels,
+      showTeacherInfo,
+      viewAs,
+      lessonIsVisible,
+      lessonLockedForSection
+    } = this.props;
 
     if (!lessonIsVisible(lesson)) {
       return null;
@@ -94,13 +105,15 @@ const ProgressLesson = React.createClass({
       levels.every(level => level.status === LevelStatus.locked);
 
     return (
-      <div style={styles.outer}>
+      <div
+        style={{
+          ...styles.outer,
+          ...(hiddenForStudents && styles.hiddenOrLocked),
+          ...(locked && styles.hiddenOrLocked),
+        }}
+      >
         <div
-          style={{
-            ...styles.main,
-            ...(hiddenForStudents && styles.hiddenOrLocked),
-            ...(locked && styles.hiddenOrLocked),
-          }}
+          style={styles.main}
         >
           <div
             style={styles.heading}
@@ -132,9 +145,11 @@ const ProgressLesson = React.createClass({
             />
           }
         </div>
-        <div style={styles.rightCol}>
-          <ProgressLessonTeacherInfo/>
-        </div>
+        {showTeacherInfo && viewAs === ViewType.Teacher &&
+          <div style={styles.rightCol}>
+            <ProgressLessonTeacherInfo lesson={lesson}/>
+          </div>
+        }
       </div>
     );
   }
@@ -143,6 +158,8 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
+  showTeacherInfo: state.progress.showTeacherInfo,
+  viewAs: state.stageLock.viewAs,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);
