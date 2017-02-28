@@ -44,7 +44,6 @@
   .desktop-feature { }
 
   .col-18 { width: 18%; float:left; }
-  .col-18-promote-tools { width: 18%; float:left; }
   .col-20 { width: 20%; float:left; }
   .col-23 { width: 23%; float:left; }
   .col-25 { width: 25%; float:left; }
@@ -67,12 +66,6 @@
   .mobile-show-medium { display: none }
 
   .i-agree-button { width: 9%; }
-
-
- #block a:first-of-type {
-   font-size: 70px;
- }
-
 }
 
 /* 970px and down: minimal headers */
@@ -84,7 +77,6 @@
   .desktop-feature { display: none }
 
   .col-18 { width: 100%; float:left; }
-  .col-18-promote-tools { width: 31%; float:left; }
   .col-20 { width: 100%; float:left; }
   .col-23 { width: 100%; }
   .col-25 { width: 100%; }
@@ -110,10 +102,6 @@
 
   .mobile-pad-edge { padding: 20px; }
 
- #block a:first-of-type {
-   font-size: 50px;
- }
- 
 }
 
 
@@ -125,8 +113,7 @@
   .col-mobile-50 { width: 100%; float:left; }
   .col-mobile-44 { width: 100%; float:left; }
   .col-mobile-56 { width: 100%; float:left; }
-  .col-18-promote-tools { width: 48%; float:left; }
-
+  
   .mobile-show-medium { display: none }
 
   .mobile-small-hide { display: none }
