@@ -64,18 +64,19 @@
         function(){
 
           var abbr = $('#state-dropdown option:selected').val();
-
-          // Load the selected state's information into the infobox
-          $.ajax({
-            url: webServiceLocation + abbr.toLowerCase(),
-            type: "get",
-          }).done(function(data) {
-            $("#infobox").html(data);
-          }).fail(function () {
-            if (#{use_url}) {
-              window.location = "/promote"
-            }
-          });
+          console.log(abbr)
+          if (abbr != '') {          // Load the selected state's information into the infobox
+            $.ajax({
+              url: webServiceLocation + abbr.toLowerCase(),
+              type: "get",
+            }).done(function(data) {
+              $("#infobox").html(data);
+            }).fail(function () {
+              if (#{use_url}) {
+                window.location = "/promote"
+              }
+            });
+          }
         }
       )
 
