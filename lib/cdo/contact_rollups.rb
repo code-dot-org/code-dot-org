@@ -78,9 +78,12 @@ class ContactRollups
     end
 
     # parse all forms that collect user-reported address/location data
-    FORM_KINDS.each do |kind|
-      update_geo_data_from_forms(kind)
-    end
+    # The below passes locally and on circle but leads to
+    # "Sequel::DatabaseError: Mysql2::Error: Lock wait timeout exceeded; try restarting transaction"
+    # in test env. Temporarily disabling and will diagnose.
+    # FORM_KINDS.each do |kind|
+    #   update_geo_data_from_forms(kind)
+    # end
 
     count = ActiveRecord::Base.connection.execute("select count(*) from pegasus_test.contact_rollups_daily").first[0]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
