@@ -1,5 +1,10 @@
 # this comment will force dashboard unit tests to run which will have
 # coverage reports flagged with "dashboard"
+
+if ENV['DOES_NOT_EXIST']
+  puts "this will never be run...."
+end
+
 class Ability
   include CanCan::Ability
 
