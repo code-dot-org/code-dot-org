@@ -1,5 +1,9 @@
 # this comment will force dashboard unit tests to run which will have
 # coverage reports flagged with "dashboard"
+
+# now we add another comment to trigger a rerun of dashboard coverage
+# there should be no change in coverage since we didn't change any code
+
 class Ability
   include CanCan::Ability
 
