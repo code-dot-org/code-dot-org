@@ -2,9 +2,7 @@
 require 'test_helper'
 
 class SectionsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
-  setup_all do
+  setup do
     @teacher = create(:teacher)
 
     @word_section = create(:section, user: @teacher, login_type: 'word')
