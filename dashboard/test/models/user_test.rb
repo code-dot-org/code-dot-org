@@ -789,7 +789,7 @@ class UserTest < ActiveSupport::TestCase
       )
     end
 
-    user.backfill_user_scripts([twenty_hour, hoc])
+    user.backfill_user_scripts
     assert_equal [twenty_hour, hoc], user.working_on_scripts
   end
 
@@ -821,7 +821,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       assert_creates(UserScript) do
-        user.backfill_user_scripts([script])
+        user.backfill_user_scripts
       end
 
       user_script = UserScript.last
@@ -871,7 +871,7 @@ class UserTest < ActiveSupport::TestCase
       complete_script_for_user(student, script, completed_date)
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts([script])
+        student.backfill_user_scripts
       end
 
       user_script = UserScript.last
@@ -904,7 +904,7 @@ class UserTest < ActiveSupport::TestCase
       ul.save!
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts [script]
+        student.backfill_user_scripts
       end
 
       user_script = UserScript.last
@@ -929,7 +929,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.needs_to_backfill_user_scripts?
 
     assert_creates(UserScript) do
-      user.backfill_user_scripts [script]
+      user.backfill_user_scripts
     end
 
     # now is backfilled (has a user script)
@@ -1555,7 +1555,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.permission?(UserPermission::LEVELBUILDER)
 
-    no_database
+    ActiveRecord::Base.connection.disconnect!
 
     assert user.permission?(UserPermission::FACILITATOR)
     refute user.permission?(UserPermission::LEVELBUILDER)
