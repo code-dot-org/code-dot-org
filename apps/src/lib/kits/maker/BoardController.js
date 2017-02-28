@@ -11,10 +11,11 @@ import ChromeSerialPort from 'chrome-serialport';
 import PlaygroundIO from 'playground-io';
 
 import _ from 'lodash';
-import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
+import {
+  initializeCircuitPlaygroundComponents,
+  componentConstructors
+} from './PlaygroundComponents';
 import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
-import TouchSensor from './TouchSensor';
-import Piezo from './Piezo';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -111,32 +112,6 @@ export default class BoardController {
   }
 
   installComponentsOnInterpreter(codegen, jsInterpreter) {
-    /**
-     * Set of classes used by interpreter to understand the type of instantiated
-     * objects, allowing it to make methods and properties of instances available.
-     */
-    const componentConstructors = {
-      Led: five.Led,
-      Board: five.Board,
-      RGB: five.Led.RGB,
-      Button: five.Button,
-      Switch: five.Switch,
-      Piezo,
-      Thermometer: five.Thermometer,
-      Sensor: five.Sensor,
-      Pin: five.Pin,
-      Accelerometer: five.Accelerometer,
-      Animation: five.Animation,
-      /**
-       * @link https://en.wikipedia.org/wiki/Three_Laws_of_Robotics
-       * 1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
-       * 2. A robot must obey orders given it by human beings except where such orders would conflict with the First Law.
-       * 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
-       */
-      Servo: five.Servo,
-      TouchSensor
-    };
-
     Object.keys(componentConstructors).forEach(key => {
       codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
