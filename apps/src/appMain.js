@@ -5,6 +5,9 @@ var requiredBlockUtils = require('./required_block_utils');
 var studioApp = require('./StudioApp').singleton;
 var authoredHintUtils = require('./authoredHintUtils');
 
+// this comment will force all apps tests to be run
+// which includes coverage flagged with "unit" and "integration"
+
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
