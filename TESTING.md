@@ -79,9 +79,9 @@ See [the apps readme](./apps/README.md) for more details.
 
 If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
 
-1. `rake seed:secret_pictures seed:secret_words` to seed the missing data
+1. `rake seed:secret_pictures seed:secret_words` to seed the missing data, or
 
-2. `RAILS_ENV=test rake db:reset db:setup_or_migrate seed:secret_pictures seed:secret_words` to recreate the db and reseed the data.
+2. `RAILS_ENV=test rake db:reset db:setup_or_migrate seed:secret_pictures seed:secret_words` to recreate your local dashboard test db and reseed the data.
 
 If you just want to run a single file of tests, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb`
