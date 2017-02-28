@@ -26,7 +26,10 @@ export default storybook => {
         name: 'basic projects list',
         description: `This is a simple projects list with stub data.`,
         story: () => (
-          <ProjectsList projectsData={STUB_PROJECTS_DATA}/>
+          <ProjectsList
+            projectsData={STUB_PROJECTS_DATA}
+            studioUrlPrefix={'https://studio.code.org'}
+          />
         )
       },
     ]);
