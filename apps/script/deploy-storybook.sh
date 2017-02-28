@@ -19,8 +19,8 @@ rm -rf $DIR_TO_DEPLOY
 echo "Compiling application.css using rails asset pipeline"
 pushd ../dashboard
 rails assets:precompile
-cp public/assets/css/application-*.css ../apps/build/package/application.css || :
-cp public/assets/application-*.css ../apps/build/package/application.css || :
+cp public/assets/css/application-*.css ../apps/build/package/application.css 2>/dev/null || :
+cp public/assets/application-*.css ../apps/build/package/application.css 2>/dev/null || :
 popd
 
 # build the static storybook site
