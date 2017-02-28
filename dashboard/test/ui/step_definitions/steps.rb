@@ -1049,7 +1049,7 @@ end
 
 Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, class_name|
   item = @browser.find_element(:css, selector)
-  classes = item.attribute("class")
+  classes = item.attribute("class") || ''
   expect(classes.include?(class_name)).to eq(false)
 end
 
