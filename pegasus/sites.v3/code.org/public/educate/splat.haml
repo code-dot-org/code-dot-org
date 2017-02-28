@@ -18,12 +18,12 @@
   - redirect "/educate/curriculum/teacher-led"
 - elsif requested_path.include? "/educate/plc"
   - path = requested_path.gsub("plc", "professional-learning")
-  - new_path = path.gsub("algebra", "cs-in-algebra").gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
+  - new_path = path.gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
   - redirect new_path
 - elsif requested_path.eql? "/educate/facilitator"
   - redirect "/educate/professional-learning/facilitator"
 - elsif requested_path.include? "/educate/facilitator"
-  - path = requested_path.gsub("csf", "cs-fundamentals").gsub("csa", "cs-in-algebra").gsub("css", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles").gsub("csd", "cs-discoveries")
+  - path = requested_path.gsub("csf", "cs-fundamentals").gsub("css", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles").gsub("csd", "cs-discoveries")
   - new_path = path.gsub("/educate/facilitator-", "/educate/professional-learning/") + "-facilitator"
   - redirect new_path
 - elsif requested_path.eql? "/educate/k5-affiliates"
