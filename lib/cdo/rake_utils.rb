@@ -2,7 +2,7 @@ require 'os'
 require 'open-uri'
 require 'pathname'
 require 'cdo/aws/s3'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'digest'
 
 module RakeUtils
@@ -48,19 +48,19 @@ module RakeUtils
         begin
           if sudo('service', id.to_s, 'stop-with-status')
             success = true
-            HipChat.log "Successfully stopped service #{id}"
+            ChatClient.log "Successfully stopped service #{id}"
             break
           end
         rescue RuntimeError # sudo call raises a RuntimeError if it fails
-          HipChat.log "Service #{id} failed to stop, retrying (attempt #{i})"
+          ChatClient.log "Service #{id} failed to stop, retrying (attempt #{i})"
           next
         end
       end
       unless success
         # Alert the relevant room that the service may be hung...
-        HipChat.log "Could not stop #{id} after #{retry_count + 1} attempts"
+        ChatClient.log "Could not stop #{id} after #{retry_count + 1} attempts"
         # ...but we're trying one last time and going into a wait loop, so it can be stopped manually
-        HipChat.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
+        ChatClient.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
           "log into the server and manually stop the process. The build will resume automatically "\
           "once the #{id} has stopped."
         stop_service(id)
@@ -79,7 +79,7 @@ module RakeUtils
 
   def self.system_with_hipchat_logging(*args)
     command = command_(*args)
-    HipChat.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
+    ChatClient.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
     system_ command
   end
 
