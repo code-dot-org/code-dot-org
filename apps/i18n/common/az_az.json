@@ -339,6 +339,7 @@
   "workspaceHeaderShort": "iş sahəsi: ",
   "yes": "Bəli",
   "yourProgress": "Your Progress",
+  "englishOnlyWarning": "Sorry! This stage is not available in your language. The puzzles in this stage use a mix of English words and characters that can’t be translated right now. You can move on to Stage {nextStage}.",
   "exactNumberOfBlocks": "Only {numBlocks, plural, one {1 block} other {# blocks}} used!",
   "fewerNumberOfBlocks": "Fewer than {numBlocks, plural, one {1 block} other {# blocks}} used!",
   "puzzleCompleted": "Puzzle completed!",

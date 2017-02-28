@@ -159,6 +159,7 @@
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
   "emptyTopLevelBlock":  "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "end",
+  "englishOnlyWarning": "Sorry! This stage is not available in your language. The puzzles in this stage use a mix of English words and characters that can’t be translated right now. You can move on to Stage {nextStage}.",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
   "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
   "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
