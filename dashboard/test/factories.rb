@@ -150,6 +150,11 @@ FactoryGirl.define do
       end
     end
 
+    trait :spelling_bee do
+      game {create(:game, app: "maze", name: "Maze")}
+      skin 'letters'
+    end
+
     trait :blockly do
       game {create(:game, app: "maze", name: "Maze")}
     end
