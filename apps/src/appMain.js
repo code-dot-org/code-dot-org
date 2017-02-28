@@ -8,6 +8,10 @@ var authoredHintUtils = require('./authoredHintUtils');
 // this comment will force all apps tests to be run
 // which includes coverage flagged with "unit" and "integration"
 
+// now we will add another comment to force another run of apps coverage
+// there should be no change in overall coverage since we did not change
+// any code.
+
 // TODO (br-pair) : This is to expose methods we need in the global namespace
 // for testing purpose. Would be nice to eliminate this eventually.
 window.__TestInterface = {
