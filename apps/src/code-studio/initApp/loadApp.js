@@ -116,15 +116,15 @@ export function setupApp(appOptions) {
 
         // If the program is the result for a contained level, store it with
         // the contained level id
-        const levelId = appOptions.hasContainedLevels ?
+        const levelId = (appOptions.hasContainedLevels && !appOptions.level.edit_blocks) ?
           getContainedLevelId() :
           appOptions.serverLevelId;
         clientState.writeSourceForLevel(appOptions.scriptName, levelId,
             +new Date(), lastSavedProgram);
       }
       // report.callback will already have the correct milestone post URL in
-      // the contained level case
-      if (!appOptions.hasContainedLevels) {
+      // the contained level case, unless we're editing blocks
+      if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         report.callback = appOptions.report.callback;
       }
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
