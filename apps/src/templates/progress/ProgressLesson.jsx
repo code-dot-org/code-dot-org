@@ -78,7 +78,6 @@ const ProgressLesson = React.createClass({
     const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
-    // TODO - disable bubbles when locked
     const locked = lessonLockedForSection(lesson.id) ||
       levels.every(level => level.status === LevelStatus.locked);
 
@@ -116,6 +115,7 @@ const ProgressLesson = React.createClass({
           <ProgressLessonContent
             description={description}
             levels={levels}
+            disabled={locked}
           />
         }
       </div>
