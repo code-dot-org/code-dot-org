@@ -1,12 +1,11 @@
 class Pd::CsfCertificateController < ApplicationController
   before_action :authenticate_user!
+  load_resource :enrollment, class: 'Pd::Enrollment', find_by: :code, id_param: :enrollment_code
 
   def generate_certificate
-    enrollment = params[:enrollment_code] ? Pd::Enrollment.find_by(code: params[:enrollment_code]) : nil
-
     image = create_certificate_image2(
       dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      enrollment.try(:name) || '',
+      @enrollment.try(:name) || '',
       y: 444,
       height: 100
     )
