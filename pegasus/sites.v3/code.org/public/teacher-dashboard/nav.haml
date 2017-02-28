@@ -4,8 +4,6 @@ theme: none
 content-type: text/ng-template
 ---
 
-- show_section_projects = DCDO.get('section_projects', CDO.section_projects)
-
 #nav{"ng-show"=>"section.id"}
   #goback{style: "float:left"}
     %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
@@ -37,10 +35,9 @@ content-type: text/ng-template
           'ng-class' => 'tab == "assessments" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/assessments"}= I18n.t('dashboard_navigation_view_assessments_surveys')
 
-      -if show_section_projects
-        %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
-            'ng-class' => 'tab == "projects" ? "active tab" : "tab"'}
-          %a{'ng-href' => "#/sections/{{section.id}}/projects"}= 'Projects'
+      %li{'ng-show' => 'showSectionProjectsTab && section && section.students.length > 0 && !editingAll(section.students)',
+          'ng-class' => 'tab == "projects" ? "active tab" : "tab"'}
+        %a{'ng-href' => "#/sections/{{section.id}}/projects"}= 'Projects'
 
       %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
           'ng-class' => 'tab == "stats" ? "active tab" : "tab"'}

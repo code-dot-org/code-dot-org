@@ -789,7 +789,7 @@ class UserTest < ActiveSupport::TestCase
       )
     end
 
-    user.backfill_user_scripts
+    user.backfill_user_scripts([twenty_hour, hoc])
     assert_equal [twenty_hour, hoc], user.working_on_scripts
   end
 
@@ -821,7 +821,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       assert_creates(UserScript) do
-        user.backfill_user_scripts
+        user.backfill_user_scripts([script])
       end
 
       user_script = UserScript.last
@@ -871,7 +871,7 @@ class UserTest < ActiveSupport::TestCase
       complete_script_for_user(student, script, completed_date)
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts
+        student.backfill_user_scripts([script])
       end
 
       user_script = UserScript.last
@@ -904,7 +904,7 @@ class UserTest < ActiveSupport::TestCase
       ul.save!
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts
+        student.backfill_user_scripts [script]
       end
 
       user_script = UserScript.last
@@ -929,7 +929,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.needs_to_backfill_user_scripts?
 
     assert_creates(UserScript) do
-      user.backfill_user_scripts
+      user.backfill_user_scripts [script]
     end
 
     # now is backfilled (has a user script)
@@ -1555,7 +1555,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.permission?(UserPermission::LEVELBUILDER)
 
-    ActiveRecord::Base.connection.disconnect!
+    no_database
 
     assert user.permission?(UserPermission::FACILITATOR)
     refute user.permission?(UserPermission::LEVELBUILDER)
@@ -1682,5 +1682,49 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.update(email: 'valid@example.net')
     refute user.update(email: 'invalid@incomplete')
+  end
+
+  test 'find_or_create_teacher creates new teacher' do
+    admin = create :admin
+
+    params = {
+      email: 'email@example.net',
+      name: 'test user'
+    }
+
+    user = assert_creates(User) do
+      User.find_or_create_teacher params, admin
+    end
+    assert user.teacher?
+    assert_equal admin, user.invited_by
+  end
+
+  test 'find_or_create_teacher finds existing teacher' do
+    admin = create :admin
+    teacher = create :teacher
+
+    params = {
+      email: teacher.email,
+      name: teacher.name
+    }
+
+    found = assert_does_not_create(User) do
+      User.find_or_create_teacher params, admin
+    end
+    assert_equal teacher, found
+  end
+
+  test 'find_or_create_teacher with an invalid email raises ArgumentError' do
+    admin = create :admin
+
+    params = {
+      email: 'invalid',
+      name: 'test user'
+    }
+
+    e = assert_raises ArgumentError do
+      User.find_or_create_teacher params, admin
+    end
+    assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
 end

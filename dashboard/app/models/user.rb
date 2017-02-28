@@ -234,6 +234,11 @@ class User < ActiveRecord::Base
       end
       params[:school] ||= params[:ops_school]
 
+      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
+      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
+      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
+        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
+      end
       user = User.invite!(
         email: params[:email],
         user_type: TYPE_TEACHER,
@@ -874,9 +879,9 @@ class User < ActiveRecord::Base
   # Provides backwards compatibility with users created before the UserScript model
   # was introduced (cf. code-dot-org/website-ci#194).
   # TODO apply this migration to all users in database, then remove.
-  def backfill_user_scripts
+  def backfill_user_scripts(scripts = Script.all)
     # backfill progress in scripts
-    Script.all.each do |script|
+    scripts.each do |script|
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
         ul_map = user_levels_by_level(script)

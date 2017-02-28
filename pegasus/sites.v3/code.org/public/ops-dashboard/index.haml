@@ -579,6 +579,13 @@ title: "Ops Dashboard"
           function() {
             $scope.cohort = cohortsService.get({id: $routeParams.id});
             $scope.newTeachers = [];
+          }, function(error_response) {
+            // update will pass error details back if it fails with a 400 (bad request).
+            if (error_response.status == 400) {
+              $window.alert("Unable to save. " + error_response.data);
+            } else {
+              throw error_response;
+            }
           }
         ).catch($scope.genericError);
       };

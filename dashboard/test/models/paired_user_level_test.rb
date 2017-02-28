@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class PairedUserLevelTest < ActiveSupport::TestCase
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     user_1 = create :user
     user_2 = create :user
     user_3 = create :user
