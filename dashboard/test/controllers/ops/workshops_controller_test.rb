@@ -4,7 +4,8 @@ module Ops
     include Devise::Test::ControllerHelpers
     API = ::OPS::API
 
-    setup do
+    self.use_transactional_test_case = true
+    setup_all do
       @admin = create(:admin)
       @workshop = create(:workshop)
       @cohort = @workshop.cohorts.first

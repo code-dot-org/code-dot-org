@@ -8,9 +8,11 @@ end
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  setup do
+  self.fixture_table_names = []
+  self.use_transactional_test_case = true
+
+  setup_all do
     @teacher = create(:teacher)
-    sign_in @teacher
 
     # make them an authorized_Teacher
     cohort = create(:cohort)
@@ -26,10 +28,15 @@ class ApiControllerTest < ActionController::TestCase
     @student_4 = create(:follower, section: @section).student_user
     @student_5 = create(:follower, section: @section).student_user
 
-    @flappy_section = create(:section, user: @teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
+    flappy = Script.get_from_cache(Script::FLAPPY_NAME)
+    @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
-    @student_flappy_1.backfill_user_scripts
+    @student_flappy_1.backfill_user_scripts [flappy]
     @student_flappy_1.reload
+  end
+
+  setup do
+    sign_in @teacher
   end
 
   def create_script_with_lockable_stage

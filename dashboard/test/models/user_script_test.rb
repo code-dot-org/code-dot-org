@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class UserScriptTest < ActiveSupport::TestCase
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @script = create :script
     @script_levels = 1.upto(10).map do
       create :script_level, script: @script
