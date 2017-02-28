@@ -50,6 +50,10 @@ import {
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 
+if (window.DoesNotExist) {
+  console.log("this coverage went down...");
+}
+
 var copyrightStrings;
 
 /**
