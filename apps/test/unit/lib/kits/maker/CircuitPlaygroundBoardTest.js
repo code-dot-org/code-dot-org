@@ -11,9 +11,6 @@ describe('CircuitPlaygroundBoard', () => {
   let board, playground;
 
   beforeEach(() => {
-    // Don't use real Serial Port
-    sinon.stub(CircuitPlaygroundBoard, 'openSerialPort');
-
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
     sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport', () => {
@@ -45,7 +42,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   afterEach(() => {
-    CircuitPlaygroundBoard.openSerialPort.restore();
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
   });
 
