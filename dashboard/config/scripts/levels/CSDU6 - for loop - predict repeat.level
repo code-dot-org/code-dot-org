@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-02-23T15:47:28.000Z",
+  "created_at": "2017-03-01T16:52:01.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -87,11 +87,10 @@
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
     "markdown_instructions": "# For Loop - Condition Practice\r\n\r\nChange the condition of the for loop so that the word message prints 6 times.",
-    "start_blocks": "for (var i = 0; i < 4; i++) {\r\n  console.log(\"message\");\r\n}",
+    "start_blocks": "for (var i = 0; i < 0; i++) {\r\n  console.log(\"message\");\r\n}",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
+    "contained_level_names": [
+      "Repeat Predict Contained"
     ]
   },
   "published": true,

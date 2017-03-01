@@ -78,7 +78,7 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
