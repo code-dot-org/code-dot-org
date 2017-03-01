@@ -54,6 +54,7 @@ var AssetManager = React.createClass({
   onAssetListReceived: function (result) {
     assetListStore.reset(result.files);
     if (this.isMounted()) {
+      console.log(this.props.allowedExtensions);
       this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
     }
   },
