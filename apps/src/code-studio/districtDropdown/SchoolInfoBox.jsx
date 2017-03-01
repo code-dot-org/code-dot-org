@@ -121,9 +121,17 @@ class SchoolInfoBox extends React.Component {
     this.handleSchoolStateChange = this.handleSchoolStateChange.bind(this);
   }
 
-  handleCountryChange(e) {this.setState({country: e.target.value});}
-  handleSchoolTypeChange(e) {this.setState({schoolType: e.target.value});}
-  handleSchoolStateChange(e) {this.setState({schoolState: e.target.value});}
+  handleCountryChange(e) {
+    this.setState({country: e.target.value});
+  }
+
+  handleSchoolTypeChange(e) {
+    this.setState({schoolType: e.target.value});
+  }
+
+  handleSchoolStateChange(e) {
+    this.setState({schoolState: e.target.value});
+  }
 
   showSchoolState() {
     return this.state.country === "US";
