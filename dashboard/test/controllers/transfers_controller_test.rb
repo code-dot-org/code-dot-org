@@ -11,7 +11,7 @@ class TransfersControllerTest < ActionController::TestCase
     @word_user_1 = create(:follower, section: @word_section).student_user
 
     @picture_section = create(:section, user: @teacher, login_type: 'picture')
-    @picture_user_1 = create(:follower, section: @word_section).student_user
+    @picture_user_1 = create(:follower, section: @picture_section).student_user
   end
 
   test "returns an error when student ids are not provided" do
@@ -155,7 +155,7 @@ class TransfersControllerTest < ActionController::TestCase
       new_section_code: @picture_section.code,
       student_ids: @word_user_1.id.to_s
     }
-    assert_not Follower.exists?(student_user: @picture_user_1, section: @picture_section)
+    assert_not Follower.exists?(student_user: @word_user_1, section: @picture_section)
   end
 
   test "transferring to a new teacher causes a student to join the section" do
@@ -189,6 +189,7 @@ class TransfersControllerTest < ActionController::TestCase
 
     post :create, params: {
       new_section_code: @word_section.code,
+      current_section_code: @picture_section.code,
       student_ids: @picture_user_1.id.to_s
     }
 
