@@ -40,9 +40,7 @@ Please [contact us](/contact) if you, your company, or your foundation is intere
 <hr/>
 <a id="creditcard"></a>
 
-<div style="width:450px">
-<script type="text/javascript" src="https://secure.jotform.us/jsform/40637061509149"></script>
-</div>
+<script type="text/javascript" src="https://form.jotform.com/jsform/40637061509149"></script>
 
 <hr/>
 **Amazon.com customers:**
