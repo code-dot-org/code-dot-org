@@ -43,22 +43,61 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   connect() {
+    return Promise.resolve()
+        .then(() => this.connectToFirmware())
+        .then(() => this.initializeComponents())
+        .then(() => this.initializeEventForwarding());
+  }
+
+  /**
+   * Open the serial port connection and create a johnny-five board controller.
+   * Exposed as a separate step here for the sake of the setup page; generally
+   * recommended to just call connect(), above.
+   * @return {Promise}
+   */
+  connectToFirmware() {
     return new Promise((resolve, reject) => {
       const serialPort = CircuitPlaygroundBoard.openSerialPort(this.portName_);
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.fiveBoard_ = board;
-        this.prewiredComponents_ = {
-          board,
-          ...initializeCircuitPlaygroundComponents(board),
-          ...J5_CONSTANTS
-        };
         resolve();
       });
       board.once('error', reject);
-      board.on('disconnect', () => this.emit('disconnect'));
     });
+  }
+
+  /**
+   * Initialize a set of johnny-five component controllers.
+   * Exposed as a separate step here for the sake of the setup page; generally
+   * it'd be better to just call connect(), above.
+   * @throws {Error} if called before connecting to firmware
+   */
+  initializeComponents() {
+    if (!this.fiveBoard_) {
+      throw new Error('Cannot initialize components: Not connected to board firmware.');
+    }
+
+    this.prewiredComponents_ = {
+      board: this.fiveBoard_,
+      ...initializeCircuitPlaygroundComponents(this.fiveBoard_),
+      ...J5_CONSTANTS
+    };
+  }
+
+  /**
+   * Forward events from individual components out to listeners attached to
+   * this EventEmitter.
+   * @private
+   * @throws {Error} if called before connecting to firmware
+   */
+  initializeEventForwarding() {
+    if (!this.fiveBoard_) {
+      throw new Error('Cannot initialize event forwarding: Not connected to board firmware.');
+    }
+
+    this.fiveBoard_.on('disconnect', () => this.emit('disconnect'));
   }
 
   /**

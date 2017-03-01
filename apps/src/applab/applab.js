@@ -80,6 +80,22 @@ export default Applab;
 var jsInterpreterLogger = null;
 
 /**
+ * Maker Toolkit controller responsible for checking system requirements
+ * and setting up board connections.
+ * Should be initialized once on load if the level supports Maker Toolkit.
+ * @private {BoardController}
+ */
+let makerController = null;
+
+/**
+ * Maker Toolkit Board Controller for a currently-connected board, simulator,
+ * or stub implementation.
+ * In Maker Toolkit levels, should be initialized on run and cleared on reset.
+ * @private {CircuitPlaygroundBoard}
+ */
+let makerBoard = null;
+
+/**
  * Temporary: Some code depends on global access to logging, but only Applab
  * knows about the debugger UI where logging should occur.
  * Eventually, I'd like to replace this with window events that the debugger
@@ -147,8 +163,7 @@ function loadLevel() {
   }
 
   if (level.makerlabEnabled) {
-    Applab.makerController = new BoardController();
-    injectBoardController(Applab.makerController);
+    makerController = new BoardController();
   }
 }
 
@@ -999,8 +1014,9 @@ Applab.reset = function () {
     designMode.resetPropertyTab();
   }
 
-  if (Applab.makerController) {
-    Applab.makerController.reset();
+  if (makerBoard) {
+    makerBoard.destroy();
+    makerBoard = null;
   }
 
   if (level.showTurtleBeforeRun) {
@@ -1182,17 +1198,17 @@ Applab.execute = function () {
     }
   }
 
-  if (Applab.makerController) {
-    Applab.makerController
-        .connectAndInitialize(codegen, Applab.JSInterpreter)
-        .catch((error) => {
-          studioApp.displayPlayspaceAlert("error",
-              <div>{`Board connection error: ${error}`}</div>);
+  if (makerController) {
+    makerController.connectToBoard()
+        .then(board => {
+          board.installOnInterpreter(codegen, Applab.JSInterpreter);
+          injectBoardController(board);
+          board.once('disconnect', () => studioApp.resetButtonClick());
+          makerBoard = board;
         })
-        .then(() => {
-          Applab.makerController.onceOnDisconnect(() => studioApp.resetButtonClick());
-          Applab.beginVisualizationRun();
-        });
+        .catch(error => studioApp.displayPlayspaceAlert('error',
+            <div>{`Board connection error: ${error}`}</div>))
+        .then(Applab.beginVisualizationRun);
   } else {
     Applab.beginVisualizationRun();
   }
