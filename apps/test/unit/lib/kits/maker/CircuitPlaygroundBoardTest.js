@@ -8,7 +8,7 @@ import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBo
 process.hrtime = require('browser-process-hrtime');
 
 describe('CircuitPlaygroundBoard', () => {
-  let board;
+  let board, playground;
 
   beforeEach(() => {
     // Don't use real Serial Port
@@ -17,13 +17,16 @@ describe('CircuitPlaygroundBoard', () => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
     sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport', () => {
-      const playground = new Playground({});
+      playground = new Playground({});
       playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
 
       // mock-firmata doesn't implement these (yet) - and we want to monitor how
       // they are called.
       playground.sysexCommand = sinon.spy();
       playground.sysexResponse = sinon.spy();
+
+      // Also spy on these
+      sinon.spy(playground, 'reset');
 
       // Pretend to be totally ready
       playground.emit('connect');
@@ -52,6 +55,20 @@ describe('CircuitPlaygroundBoard', () => {
 
     it('returns a Promise that resolves when the board is ready to use', done => {
       board.connect().then(done);
+    });
+  });
+
+  describe(`destroy()`, () => {
+    it('exists', () => {
+      expect(board.destroy).to.be.a('function');
+    });
+
+    it('sends the board reset signal', done => {
+      board.connect().then(() => {
+        board.destroy();
+        expect(playground.reset).to.have.been.calledOnce;
+        done();
+      });
     });
   });
 });
