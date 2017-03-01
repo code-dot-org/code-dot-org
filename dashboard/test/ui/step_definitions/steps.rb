@@ -707,7 +707,13 @@ Then(/^I reload the page$/) do
 end
 
 def wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
+  wait_with_timeout.until do
+    begin
+      @browser.execute_script("return (typeof jQuery !== 'undefined');")
+    rescue Selenium::WebDriver::Error::ScriptTimeOutError
+      false
+    end
+  end
 end
 
 Then /^I wait for jquery to load$/ do
