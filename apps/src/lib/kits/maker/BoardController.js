@@ -7,7 +7,6 @@
 process.hrtime = require('browser-process-hrtime');
 
 import ChromeSerialPort from 'chrome-serialport';
-import {componentConstructors} from './PlaygroundComponents';
 import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 
@@ -83,14 +82,7 @@ export default class BoardController {
   }
 
   installComponentsOnInterpreter(codegen, jsInterpreter) {
-    Object.keys(componentConstructors).forEach(key => {
-      codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
-      jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
-    });
-
-    Object.keys(this.cdoBoard_.prewiredComponents_).forEach(key => {
-      jsInterpreter.createGlobalProperty(key, this.cdoBoard_.prewiredComponents_[key]);
-    });
+    this.cdoBoard_.installOnInterpreter(codegen, jsInterpreter);
   }
 
   onceOnDisconnect(cb) {

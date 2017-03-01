@@ -3,7 +3,10 @@ import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
 import five from 'johnny-five';
 import Playground from 'playground-io';
-import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
+import {
+  initializeCircuitPlaygroundComponents,
+  componentConstructors
+} from './PlaygroundComponents';
 
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
@@ -68,6 +71,23 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.fiveBoard_.io.reset();
     }
     this.fiveBoard_ = null;
+  }
+
+  /**
+   * Marshals the board component controllers and appropriate constants into the
+   * given JS Interpreter instance so they can be used by student code.
+   * @param {codegen} codegen
+   * @param {JSInterpreter} jsInterpreter
+   */
+  installOnInterpreter(codegen, jsInterpreter) {
+    Object.keys(componentConstructors).forEach(key => {
+      codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
+      jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
+    });
+
+    Object.keys(this.prewiredComponents_).forEach(key => {
+      jsInterpreter.createGlobalProperty(key, this.prewiredComponents_[key]);
+    });
   }
 
   pinMode(pin, modeConstant) {
