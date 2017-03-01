@@ -153,11 +153,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return this.fiveBoard_.analogRead(pin, callback);
   }
 
-  onBoardEvent(...args) {
-    CircuitPlaygroundBoard.onBoardEvent(...args);
-  }
-
-  static onBoardEvent(component, event, callback) {
+  onBoardEvent(component, event, callback) {
     if (BOARD_EVENT_ALIASES[event]) {
       event = BOARD_EVENT_ALIASES[event];
     }
