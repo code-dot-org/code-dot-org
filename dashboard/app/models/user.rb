@@ -234,6 +234,11 @@ class User < ActiveRecord::Base
       end
       params[:school] ||= params[:ops_school]
 
+      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
+      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
+      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
+        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
+      end
       user = User.invite!(
         email: params[:email],
         user_type: TYPE_TEACHER,
@@ -973,7 +978,7 @@ class User < ActiveRecord::Base
     end
 
     old_result = old_user_level.try(:best_result)
-    !Activity.passing?(old_result) && Activity.passing?(new_result)
+    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
   end
 
   # The synchronous handler for the track_level_progress helper.
@@ -987,7 +992,7 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
-      if !user_level.passing? && Activity.passing?(new_result)
+      if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
       if !user_level.perfect? &&

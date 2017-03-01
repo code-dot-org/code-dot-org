@@ -78,7 +78,7 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "submittable": "false",
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
@@ -86,10 +86,13 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop - Condition Practice\r\n\r\n",
+    "markdown_instructions": "# For Loop - Condition Practice\r\n\r\nChange the condition of the for loop so that the word message prints 6 times.",
     "start_blocks": "for (var i = 0; i < 4; i++) {\r\n  console.log(\"message\");\r\n}",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

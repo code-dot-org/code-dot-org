@@ -23,6 +23,7 @@
       },
       "image": null,
       "playSound": null,
+      "stopSound": null,
       "setPosition": null,
       "setScreen": null,
       "moveForward": null,

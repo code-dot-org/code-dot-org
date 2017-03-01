@@ -2692,6 +2692,8 @@ en:
             Physical Input: Physical Input
             List and For Loops: List and For Loops
             'Project: Board Output': 'Project: Board Output'
+            For Loops with UI and Board: For Loops with UI and Board
+            Lists and For Loops: Lists and For Loops
           title: Draft Unit 6
           description_audience: ''
           description_short: ''
@@ -2699,6 +2701,7 @@ en:
         workshop-gamelab:
           stage:
             Introduction: Introduction
+            Sprites: Sprites
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
           description_short: Level progression to accompany an in-person Game Lab Workshop
