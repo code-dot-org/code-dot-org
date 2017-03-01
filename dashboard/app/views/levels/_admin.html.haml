@@ -37,7 +37,7 @@
                   = submit_tag 'Clone'
             -if @level.is_a? LevelGroup
               %li
-                contained levels
+                sublevels
                 %ol
                   - @level.properties['pages'].each do |page|
                     - page['levels'].each do |level_name|

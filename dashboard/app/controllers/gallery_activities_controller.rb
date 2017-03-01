@@ -39,7 +39,7 @@ class GalleryActivitiesController < ApplicationController
       authorize! :save_to_gallery, @gallery_activity.user_level
 
       if @gallery_activity.save
-        render action: 'show', status: :created, location: @gallery_activity
+        return head :created
       else
         # Right now this never happens because we end up raising an exception in
         # one of the authorization checks.
