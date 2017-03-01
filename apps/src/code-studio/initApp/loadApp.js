@@ -434,6 +434,18 @@ window.apps = {
       } else {
         callback({});
       }
+    },
+    prepareForRemix: function () {
+      let prepareForRemix = getAppOptions().prepareForRemix;
+      return new Promise((resolve, reject) => {
+        if (prepareForRemix) {
+          prepareForRemix().then(() => {
+            resolve();
+          });
+        } else {
+          resolve();
+        }
+      });
     }
   },
 };
