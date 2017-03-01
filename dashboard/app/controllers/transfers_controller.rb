@@ -69,7 +69,7 @@ class TransfersController < ApplicationController
       return
     end
 
-    students = User.find_by_id(student_ids)
+    students = User.where(id: student_ids).all
     if students.count != student_ids.count
       render json: {
         error: I18n.t('move_students.student_not_found')
