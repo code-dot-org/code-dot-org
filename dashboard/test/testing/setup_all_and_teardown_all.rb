@@ -36,7 +36,7 @@ module ActiveSupport
         private
 
         def run_callbacks(name)
-          instance = new(name)
+          instance = new(name.to_s)
           instance.time_it do
             instance.capture_exceptions do
               instance.run_callbacks(name)

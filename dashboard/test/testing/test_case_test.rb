@@ -46,9 +46,8 @@ class TransactionTest < ActiveSupport::TestCase
     include ActiveSupport::Testing::SetupAllAndTeardownAll
     fixtures :callout
 
-    teardown_all do
+    def test_create_fixture
       TransactionTest.count = Callout.count
-      Callout.last.destroy
     end
   end
 
@@ -64,6 +63,7 @@ class TransactionTest < ActiveSupport::TestCase
 
     def test_fixture_created
       assert_equal TransactionTest.count, Callout.count
+      Callout.last.destroy
     end
   end
 
@@ -71,15 +71,18 @@ class TransactionTest < ActiveSupport::TestCase
     self.runnables.delete self
 
     def test_fixture_rolled_back
-      assert_equal TransactionTest.count - 1, Callout.count
+      assert_equal TransactionTest.count, Callout.count
     end
   end
 
   def test_run_tests
-    TransactionalTestCasePreTest.run(REPORTER)
-    TransactionalTestCaseTest.run(REPORTER)
-    TransactionalTestCasePostTest.run(REPORTER)
+    reporter = Minitest::StatisticsReporter.new
+    reporter.start
+    TransactionalTestCasePreTest.run reporter
+    TransactionalTestCaseTest.run reporter
+    TransactionalTestCasePostTest.run reporter
+    unless reporter.passed?
+      raise reporter.results.first.failure
+    end
   end
-
-  REPORTER = Minitest::Reporters::SpecReporter.new
 end
