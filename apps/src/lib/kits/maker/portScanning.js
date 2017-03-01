@@ -27,14 +27,14 @@ export function findPortWithViableDevice() {
   return Promise.resolve()
       .then(ensureAppInstalled)
       .then(listSerialDevices)
-      .then(list => new Promise((resolve, reject) => {
+      .then(list => {
         const bestOption = getPreferredPort(list);
         if (bestOption) {
-          resolve(bestOption.comName);
+          return bestOption.comName;
         } else {
-          reject(new Error('Did not find a usable device on a serial port.'));
+          throw new Error('Did not find a usable device on a serial port.');
         }
-      }));
+      });
 }
 
 
