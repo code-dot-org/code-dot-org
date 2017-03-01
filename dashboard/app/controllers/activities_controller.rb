@@ -1,3 +1,4 @@
+require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 
 class ActivitiesController < ApplicationController
@@ -207,7 +208,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    passed = Activity.passing?(test_result)
+    passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
       # bypass validations/transactions/etc
@@ -232,7 +233,9 @@ class ActivitiesController < ApplicationController
       test_result = params[:testResult].to_i
       old_result = client_state.level_progress(@script_level)
 
-      @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
+      if !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
+        @new_level_completed = true
+      end
 
       client_state.add_script(@script_level.script_id)
     end
