@@ -16,7 +16,8 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize)
 
     if courses_completed.include?(Pd::Workshop::COURSE_CSF)
-      enrollment = Pd::Enrollment.where(pd_workshop_id: ended_workshops.where(course: Pd::Workshop::COURSE_CSF).map(&:id), email: current_user.email).last
+      enrollment = Pd::Enrollment.where(pd_workshop_id: ended_workshops.where(course: Pd::Workshop::COURSE_CSF)).
+          for_user(current_user).order(:survey_sent_at).last
 
       print_csf_certificate_url = CDO.studio_url("/pd/generate_csf_certificate/#{enrollment.try(:code)}")
     end
