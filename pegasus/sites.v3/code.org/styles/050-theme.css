@@ -193,7 +193,7 @@ body {
 
 /* For mobile */
 .mobile-headers #pageheader {
-  height: 50px;
+  height: 40px;
   margin: 15px 0 0 0;
 }
 
@@ -206,8 +206,9 @@ body {
   margin: -8px 0 5px 0px;
 }
 .mobile-headers #pageheader img#logo {
-  width: 37px;
-  height: 37px;
+  width: 50px;
+  height: 50px;
+  margin-top: 4px;
 }
 
 .mobile-headers #pageheader img#logo-uk {
