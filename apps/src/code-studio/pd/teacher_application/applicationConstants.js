@@ -29,7 +29,7 @@ const group1CspWorkshops = {
   'Utah STEM Action Center and Utah Board of Education': 'June 26 - 30, 2017',
   'CodeVA': 'July 17 - 21, 2017',
   'Puget Sound Educational Service District': 'July 10 - 14, 2017',
-  'NorthEast Washington Educational Service District 101': 'July 10 - 14, 2017'
+  'NorthEast Washington Educational Service District 101': 'August 14 - 18, 2017'
 };
 
 const workshopNamePlaceholder = '2017 Workshop (exact date to be determined)';

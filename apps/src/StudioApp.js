@@ -517,6 +517,17 @@ StudioApp.prototype.init = function (config) {
     );
   }
 
+  // If we are in a non-english locale using our english-specific app
+  // (the Spelling Bee), display a warning.
+  if (config.locale !== 'en_us' && config.skinId === 'letters') {
+      this.displayWorkspaceAlert(
+        'error',
+        <div>
+          {msg.englishOnlyWarning({ nextStage: config.stagePosition + 1 })}
+        </div>
+      );
+  }
+
   var vizResizeBar = document.getElementById('visualizationResizeBar');
   if (vizResizeBar) {
     dom.addMouseDownTouchEvent(vizResizeBar,

@@ -55,7 +55,13 @@ module Ops
 
     # PATCH/PUT /ops/cohorts/1
     def update
-      update_teachers
+      begin
+        update_teachers
+      rescue ArgumentError => e
+        # Teacher params contain a validation error. Fail and pass the error message to the client.
+        render status: :bad_request, text: e.message
+        return
+      end
 
       @cohort.update!(cohort_params)
       respond_with @cohort

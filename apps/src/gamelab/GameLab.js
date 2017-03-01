@@ -268,6 +268,9 @@ GameLab.prototype.init = function (config) {
     this.studioApp_.reduxStore.dispatch(jsDebugger.initialize({
       runApp: this.runButtonClick,
     }));
+    if (config.level.expandDebugger) {
+      this.studioApp_.reduxStore.dispatch(jsDebugger.open());
+    }
   }
 
   this.studioApp_.setPageConstants(config, {

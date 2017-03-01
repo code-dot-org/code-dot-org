@@ -70,11 +70,19 @@ class Slack
     JSON.parse(response.read)['ok']
   end
 
+  # For more information about the Slack API, see
+  # https://api.slack.com/incoming-webhooks#sending_messages.
   # @param text [String] The text to post in Slack.
   # @param params [Hash] A hash of parameters to alter how the text is posted.
+  #   channel (required): The channel to post the text to. Note that the
+  #     CHANNEL_MAP is used to map the channel, if applicable.
+  #   username (unknown): The username of the user making the post.
+  #   color (optional): The color the post should be.
   # @return [Boolean] Whether the text was posted to Slack successfully.
+  # WARNING: This function mutates params.
   def self.message(text, params={})
     return false unless CDO.slack_endpoint
+    params[:channel] = "\##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text
 
     if params[:color]

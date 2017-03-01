@@ -19,13 +19,3 @@ The first 10 hour course provides students with the fundamental skills and knowl
 
 ### CS in Algebra Course B
 The second 10 hour course builds on the skills students developed in Course A through the development of a simple video game. Students will explore more advanced topics such as booleans and conditionals, all along building the small component functions that will eventually drive the logic in their culminating game.
-
-
-<a name="start"><a/>
-## How do I start teaching CS in Algebra?
-
-To prepare teachers for CS in Algebra, professional development program [here](/educate/professional-learning/cs-in-algebra).
-
-
-
-
