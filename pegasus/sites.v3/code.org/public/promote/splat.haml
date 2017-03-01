@@ -17,13 +17,12 @@ theme: responsive
 -twitter = {:url=>"https://code.org", :related=>'codeorg', :text=>'9 out of 10 parents agree, every student should have the opportunity to learn computer science.'}
 
 %script{:src=>"/js/jquery.placeholder.js"}
-%link{:href=>"../css/promote.css", :rel=>"stylesheet"}
 
 #promote-page
-  %h1 Promote Computer Science
+  %h1{:style=>'margin-bottom:15px;'} Promote Computer Science
 
-  .col-80{:id=>'thank-you-box'}
-    %p{:id=>'thank-you-message'}
+  %div.col-80{:id=>'thank-you-box', :style=>'margin-bottom:50px;'}
+    %p{:id=>'thank-you-message', :style=>'display: inline-block'}
       Thank you for filling out our petition. Please help us spread the word.
       = view :share_buttons, facebook:facebook, twitter:twitter
 
@@ -64,6 +63,33 @@ theme: responsive
       = view :top_quotes
 
 = view 'popup_window.js'
+
+:css
+  #thank-you-box {
+    display: none;
+    padding: 8px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(102, 209, 217, 0.5);
+    float: left;
+    margin-bottom: 15px
+  }
+  #thank-you-box .share-buttons {
+    float: none;
+    display: inline-block;
+    margin-top: 0px;
+  }
+  #thank-you-box .share-buttons button {
+    margin-top: 0px;
+  }
+  #thank-you-message {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
 :javascript
   var petition;
