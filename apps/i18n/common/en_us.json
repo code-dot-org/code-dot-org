@@ -338,6 +338,7 @@
   "unattachedBlockTipTitle": "Unattached blocks",
   "unattachedBlockTipBody": "Blocks that are not attached will not do anything. If you want these blocks in your program, try connecting them to other blocks.",
   "viewCode": "View code",
+  "viewLessonPlan": "View Lesson Plan",
   "viewPageAs": "View page as:",
   "viewSection": "View section",
   "visible": "Visible",
