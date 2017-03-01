@@ -7,7 +7,6 @@
 process.hrtime = require('browser-process-hrtime');
 
 import ChromeSerialPort from 'chrome-serialport';
-import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 
 /**
@@ -124,10 +123,7 @@ export default class BoardController {
   }
 
   onBoardEvent(component, event, callback) {
-    if (BOARD_EVENT_ALIASES[event]) {
-      event = BOARD_EVENT_ALIASES[event];
-    }
-    component.on(event, callback);
+    return CircuitPlaygroundBoard.onBoardEvent(component, event, callback);
   }
 
   static connect() {
