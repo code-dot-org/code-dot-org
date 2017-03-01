@@ -10,14 +10,14 @@ class ChatClientTest < Minitest::Test
   end
 
   def test_message_calls_slack
-    Slack.expects(:message).returns(true)
+    Slack.expects(:message).returns(false)
     ChatClient.message(FAKE_ROOM, FAKE_MESSAGE)
   end
 
   def test_log_calls_slack
     Slack.expects(:message).with do |_text, params|
       params[:channel] == CDO.hip_chat_log_room
-    end.returns(true)
+    end.returns(false)
     ChatClient.log(FAKE_MESSAGE)
   end
 end
