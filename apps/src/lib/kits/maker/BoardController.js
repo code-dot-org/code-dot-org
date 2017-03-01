@@ -6,16 +6,14 @@
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
 
-import five from 'johnny-five';
-import ChromeSerialPort from 'chrome-serialport';
-import PlaygroundIO from 'playground-io';
-
 import _ from 'lodash';
+import ChromeSerialPort from 'chrome-serialport';
 import {
   initializeCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
 import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
+import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -34,7 +32,6 @@ export const ADAFRUIT_VID = '0x239a';
 /** @const {string} The Circuit Playground product id as reported by Circuit playground boards */
 export const CIRCUIT_PLAYGROUND_PID = '0x8011';
 
-const SERIAL_BAUD = 57600;
 const J5_CONSTANTS = {
   INPUT: 0,
   OUTPUT: 1,
@@ -47,17 +44,18 @@ export default class BoardController {
   constructor() {
     ChromeSerialPort.extensionId = CHROME_APP_ID;
 
-    /** @private {five.Board} */
-    this.board_ = null;
     /** @private {Object} */
     this.prewiredComponents = null;
     /** @private {function} */
     this.onDisconnectCallback_ = null;
+
+    /** @private {CircuitPlaygroundBoard} */
+    this.cdoBoard_ = null;
   }
 
   connectAndInitialize(codegen, interpreter) {
-    return this.ensureBoardConnected()
-        .then(BoardController.ensureAppInstalled())
+    return BoardController.ensureAppInstalled()
+        .then(this.ensureBoardConnected.bind(this))
         .then(this.ensureComponentsInitialized.bind(this))
         .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
   }
@@ -84,7 +82,7 @@ export default class BoardController {
    */
   ensureBoardConnected() {
     return new Promise((resolve, reject) => {
-      if (this.board_) {
+      if (this.cdoBoard_) {
         // Already connected, just use existing board.
         resolve();
         return;
@@ -92,8 +90,8 @@ export default class BoardController {
 
       BoardController.connect()
           .then(board => {
-            this.board_ = board;
-            this.board_.on('disconnect', this.handleDisconnect_.bind(this));
+            this.cdoBoard_ = board;
+            this.cdoBoard_.fiveBoard_.on('disconnect', this.handleDisconnect_.bind(this));
             resolve();
           })
           .catch(reject);
@@ -106,8 +104,8 @@ export default class BoardController {
     }
 
     this.prewiredComponents = _.assign({},
-        initializeCircuitPlaygroundComponents(this.board_),
-        {board: this.board_},
+        initializeCircuitPlaygroundComponents(this.cdoBoard_.fiveBoard_),
+        {board: this.cdoBoard_.fiveBoard_},
         J5_CONSTANTS);
   }
 
@@ -134,32 +132,33 @@ export default class BoardController {
   }
 
   reset() {
-    if (!this.board_) {
+    if (!this.cdoBoard_ || !this.cdoBoard_.fiveBoard_) {
       return;
     }
-    this.board_.io.reset();
-    this.board_ = null;
+    this.cdoBoard_.fiveBoard_.io.reset();
+    this.cdoBoard_.fiveBoard_ = null;
+    this.cdoBoard_ = null;
     this.prewiredComponents = null;
   }
 
   pinMode(pin, modeConstant) {
-    this.board_.pinMode(pin, modeConstant);
+    this.cdoBoard_.fiveBoard_.pinMode(pin, modeConstant);
   }
 
   digitalWrite(pin, value) {
-    this.board_.digitalWrite(pin, value);
+    this.cdoBoard_.fiveBoard_.digitalWrite(pin, value);
   }
 
   digitalRead(pin, callback) {
-    return this.board_.digitalRead(pin, callback);
+    return this.cdoBoard_.fiveBoard_.digitalRead(pin, callback);
   }
 
   analogWrite(pin, value) {
-    this.board_.analogWrite(pin, value);
+    this.cdoBoard_.fiveBoard_.analogWrite(pin, value);
   }
 
   analogRead(pin, callback) {
-    return this.board_.analogRead(pin, callback);
+    return this.cdoBoard_.fiveBoard_.analogRead(pin, callback);
   }
 
   onBoardEvent(component, event, callback) {
@@ -175,27 +174,8 @@ export default class BoardController {
   }
 
   static connectToBoard(portName) {
-    return new Promise((resolve, reject) => {
-      const serialPort = new ChromeSerialPort.SerialPort(portName, {
-        bitrate: SERIAL_BAUD
-      }, true);
-      const io = new PlaygroundIO({ port: serialPort });
-
-      // Circuit Playground Firmata does not seem to proactively report its
-      // version, meaning we were hitting the default 5000ms timeout waiting
-      // for this on every connection attempt.
-      // Here we explicitly request a version as soon as the serialport is open
-      // to speed up the connection process.
-      io.on("open", function () {
-        // Requesting the version requires both of these calls. ¯\_(ツ)_/¯
-        io.reportVersion(function () {});
-        io.queryFirmware(function () {});
-      });
-
-      const board = new five.Board({io: io, repl: false});
-      board.once('ready', () => resolve(board));
-      board.once('error', reject);
-    });
+    const cdoBoard = new CircuitPlaygroundBoard(portName);
+    return cdoBoard.connect().then(() => cdoBoard);
   }
 
   static getDevicePortName() {
