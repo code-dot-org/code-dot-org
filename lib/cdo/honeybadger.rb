@@ -18,7 +18,7 @@ module Honeybadger
         '--environment=#{environment} '\
         '--revision=#{revision} '\
         '--user=#{environment} '\
-        '--api-key=#{CDO.CDO.cronjobs_honeybadger_api_key}'
+        '--api-key=#{CDO.cronjobs_honeybadger_api_key}'
     )
   end
 
