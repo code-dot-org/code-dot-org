@@ -23,7 +23,7 @@ class PardotTest < ActiveSupport::TestCase
 
   def test_empty_contacts
     # Test the rollup process with an empty database
-    build_and_verify_contact_rollups 0, {}
+    build_and_verify_contact_rollups Hash.new
   end
 
   def test_teachers
@@ -62,18 +62,14 @@ class PardotTest < ActiveSupport::TestCase
       "rolluptestteacher5@code.org": { "roles": "Teacher", "ages_taught": "9,10,11,14,15" }
     }
 
-    build_and_verify_contact_rollups 5, expected_values
+    build_and_verify_contact_rollups expected_values
   end
 
   private
 
-  def build_and_verify_contact_rollups(expected_count, expected_values)
+  def build_and_verify_contact_rollups(expected_values)
     # Run the rollup process
     ContactRollups.build_contact_rollups
-
-    # Should now have expected_count records in daily rollups table, and still none in main rollups table
-    assert_equal expected_count, ActiveRecord::Base.connection.execute("select count(*) from pegasus_test.contact_rollups_daily").first[0]
-    assert_equal 0, ActiveRecord::Base.connection.execute("select count(*) from pegasus_test.contact_rollups").first[0]
 
     # Verify expected values in contacts_rollup_daily
     expected_values.each do |email, expected_info|
