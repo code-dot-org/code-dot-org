@@ -132,11 +132,9 @@ export default class BoardController {
   }
 
   reset() {
-    if (!this.cdoBoard_ || !this.cdoBoard_.fiveBoard_) {
-      return;
+    if (this.cdoBoard_) {
+      this.cdoBoard_.destroy();
     }
-    this.cdoBoard_.fiveBoard_.io.reset();
-    this.cdoBoard_.fiveBoard_ = null;
     this.cdoBoard_ = null;
     this.prewiredComponents = null;
   }

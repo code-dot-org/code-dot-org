@@ -40,6 +40,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   /**
+   * Disconnect and clean up the board controller and all components.
+   */
+  destroy() {
+    if (this.fiveBoard_) {
+      this.fiveBoard_.io.reset();
+    }
+    this.fiveBoard_ = null;
+  }
+
+  /**
    * Create a serial port controller and open the serial port immediately.
    * @param {string} portName
    * @return {SerialPort}
