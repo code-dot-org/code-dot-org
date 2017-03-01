@@ -13,13 +13,19 @@ module Honeybadger
     # them.
     return if [:adhoc, :development].include? environment
 
-    system(
-      'bundle exec honeybadger deploy '\
-        "--environment=#{environment} "\
-        "--revision=#{revision} "\
-        "--user=#{environment} "\
-        "--api-key=#{CDO.cronjobs_honeybadger_api_key}"
-    )
+    [
+      CDO.dashboard_honeybadger_api_key,
+      CDO.pegasus_honeybadger_api_key,
+      CDO.cronjobs_honeybadger_api_key
+    ].each do |honeybadger_api_key|
+      system(
+        'bundle exec honeybadger deploy '\
+          "--environment=#{environment} "\
+          "--revision=#{revision} "\
+          "--user=#{environment} "\
+          "--api-key=#{honeybadger_api_key}"
+      )
+    end
   end
 
   # notify_command_error - log an error from an executed command to honeybadger.
