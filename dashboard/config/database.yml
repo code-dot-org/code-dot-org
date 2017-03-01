@@ -15,6 +15,7 @@ mysql_defaults: &mysql_defaults
   encoding: utf8
   collation: utf8_unicode_ci
   pool: 5
+  connect_timeout: 2
   master:
     username: <%= writer.user || 'root' %>
     password: <%= writer.password || '' %>

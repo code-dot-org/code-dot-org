@@ -23,6 +23,7 @@ require_relative '../deployment'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'cdo/git_utils'
+require 'cdo/honeybadger'
 require 'cdo/rake_utils'
 require 'cdo/only_one'
 
@@ -63,7 +64,9 @@ def build
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
     IO.write(deploy_dir('rebuild'), log)
 
-    ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", message_format: 'text', color: 'purple'
+    git_revision = `git rev-parse HEAD`
+    ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
+    Honeybadger.notify_new_release(rack_env, git_revision)
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
