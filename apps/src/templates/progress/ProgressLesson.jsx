@@ -24,6 +24,7 @@ const styles = {
   rightCol: {
     display: 'table-cell',
     verticalAlign: 'top',
+    // TODO - fixed width will likely get us into trouble for other languages
     width: 200,
     height: '100%',
     borderRadius: 2,
@@ -42,6 +43,8 @@ const styles = {
     background: color.white,
     borderStyle: 'dashed',
     borderWidth: 2,
+  },
+  translucent: {
     opacity: 0.6
   },
   icon: {
@@ -104,16 +107,19 @@ const ProgressLesson = React.createClass({
     const locked = lessonLockedForSection(lesson.id) ||
       levels.every(level => level.status === LevelStatus.locked);
 
+    const hiddenOrLocked = hiddenForStudents || locked;
     return (
       <div
         style={{
           ...styles.outer,
-          ...(hiddenForStudents && styles.hiddenOrLocked),
-          ...(locked && styles.hiddenOrLocked),
+          ...(hiddenOrLocked && styles.hiddenOrLocked)
         }}
       >
         <div
-          style={styles.main}
+          style={{
+            ...styles.main,
+            ...(hiddenOrLocked && styles.translucent)
+          }}
         >
           <div
             style={styles.heading}
