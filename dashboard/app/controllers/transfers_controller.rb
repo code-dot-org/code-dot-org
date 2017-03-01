@@ -89,6 +89,13 @@ class TransfersController < ApplicationController
 
     if new_section.user != current_user
       new_section_teacher = new_section.user
+      if new_section_teacher.nil?
+        # This occurs when the new section teacher is (soft)-deleted.
+        render json: {
+          error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
+        }, status: :not_found
+        return
+      end
       if students.any? {|student| Follower.exists?(student_user: student, user_id: new_section_teacher.id)}
         render json: {
           error: I18n.t('move_students.already_enrolled_in_new_section')

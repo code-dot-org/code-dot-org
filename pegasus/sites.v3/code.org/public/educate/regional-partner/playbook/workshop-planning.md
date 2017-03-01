@@ -18,12 +18,9 @@ Click on the program name below to find out more about the workshop requirements
 
 - **[CS Fundamentals](#csf)**<br/>
 - **[CS in Algebra](#algebra)**<br/>
-- **[CS in Science](#science)**<Br/>
+- **[CS in Science](#science)**<br/>
 - **[Exploring CS](#ecs)**<br/>
 - **[CS Principles](#csp)**<br/>
-
-
-
 <br/>
 
 

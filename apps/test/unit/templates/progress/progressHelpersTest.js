@@ -1,7 +1,7 @@
 import { assert } from '../../../util/configuredChai';
 import Immutable from 'immutable';
 import sinon from 'sinon';
-import { fakeLesson } from './progressTestUtils';
+import { fakeLesson } from '@cdo/apps/templates/progress/progressTestHelpers';
 import { lessonIsVisible } from '@cdo/apps/templates/progress/progressHelpers';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 

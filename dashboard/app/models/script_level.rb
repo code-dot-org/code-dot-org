@@ -94,7 +94,7 @@ class ScriptLevel < ActiveRecord::Base
     # to unplugged level (example: if you start a sequence of
     # assessments associated with an unplugged level you should
     # continue on that sequence instead of skipping to next stage)
-    level_to_follow = (level.unplugged? || stage.unplugged?) ? next_level : next_progression_level
+    level_to_follow = valid_progression_level? ? next_progression_level : next_level
 
     if script.professional_learning_course?
       if level.try(:plc_evaluation?)
@@ -132,6 +132,8 @@ class ScriptLevel < ActiveRecord::Base
   def valid_progression_level?
     return false if level.unplugged?
     return false if stage && stage.unplugged?
+    return false if I18n.locale != I18n.default_locale && level.spelling_bee?
+    return false if I18n.locale != I18n.default_locale && stage && stage.spelling_bee?
     true
   end
 
