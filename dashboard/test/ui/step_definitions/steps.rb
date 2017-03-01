@@ -711,6 +711,9 @@ def wait_for_jquery
     begin
       @browser.execute_script("return (typeof jQuery !== 'undefined');")
     rescue Selenium::WebDriver::Error::ScriptTimeOutError
+      puts 'execute_script timed out, likely because this is Safari and the \
+        browser was still on about:blank when wait_for_jquery was called.\
+        Ignoring this error and continuing to wait...'
       false
     end
   end
