@@ -5,7 +5,7 @@ class Pd::CsfCertificateController < ApplicationController
   def generate_certificate
     image = create_certificate_image2(
       dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @enrollment.try(:name) || '',
+      @enrollment.try(:full_name) || '',
       y: 444,
       height: 100
     )

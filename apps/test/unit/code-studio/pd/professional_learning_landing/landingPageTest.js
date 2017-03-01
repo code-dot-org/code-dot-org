@@ -14,11 +14,11 @@ describe("Tests for Professional Learning Landing Page", () => {
 
   describe("Tests related to the initial state of the landing page for given teacher", () => {
     it("page is as expected for CSF teacher", () => {
-      const landingPage = generateLandingPage({coursesTaught: ['CS Fundamentals'], printCsfCertificateUrl: 'otherUrl'});
+      const landingPage = generateLandingPage({coursesTaught: ['CS Fundamentals'], printCsfCertificateUrl: 'certificateUrl'});
       const csFundamentalsSection = landingPage.find('CsFundamentalsSection');
       expect(csFundamentalsSection).to.have.length(1);
       expect(csFundamentalsSection.prop('lastWorkshopSurveyUrl')).to.equal(null);
-      expect(csFundamentalsSection.prop('printCsfCertificateUrl')).to.equal('otherUrl');
+      expect(csFundamentalsSection.prop('printCsfCertificateUrl')).to.equal('certificateUrl');
       expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(0);
     });
 
