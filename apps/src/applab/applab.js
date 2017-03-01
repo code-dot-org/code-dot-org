@@ -597,6 +597,9 @@ Applab.init = function (config) {
     studioApp.reduxStore.dispatch(jsDebugger.initialize({
       runApp: Applab.runButtonClick,
     }));
+    if (config.level.expandDebugger) {
+      studioApp.reduxStore.dispatch(jsDebugger.open());
+    }
   }
 
   // Set up an error handler for student errors and warnings.
