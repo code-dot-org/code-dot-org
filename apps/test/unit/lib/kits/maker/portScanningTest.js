@@ -7,9 +7,9 @@ import {
   OSX_DEFAULT_PORTS,
   OTHER_BAD_SERIALPORTS
 } from './sampleSerialPorts';
-import {getPreferredPort} from '@cdo/apps/lib/kits/maker/BoardController';
+import {getPreferredPort} from '@cdo/apps/lib/kits/maker/portScanning';
 
-describe("BoardController", function () {
+describe("Maker Toolkit", function () {
   describe(`getPreferredPort(portList)`, () => {
     it('picks out an Adafruit Circuit Playground if there are multiple ports', () => {
       CIRCUIT_PLAYGROUND_PORTS.forEach(circuitPlaygroundPort => {
