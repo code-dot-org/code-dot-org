@@ -36,6 +36,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         resolve();
       });
       board.once('error', reject);
+      board.on('disconnect', () => this.emit('disconnect'));
     });
   }
 

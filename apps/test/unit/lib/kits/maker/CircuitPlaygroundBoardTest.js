@@ -156,4 +156,15 @@ describe('CircuitPlaygroundBoard', () => {
       });
     });
   });
+
+  it(`forwards a 'disconnect' event`, done => {
+    board.connect().then(() => {
+      const spy = sinon.spy();
+      board.on('disconnect', spy);
+      expect(spy).not.to.have.been.called;
+      playground.emit('disconnect');
+      expect(spy).to.have.been.calledOnce;
+      done();
+    });
+  });
 });

@@ -91,7 +91,7 @@ export default class BoardController {
       BoardController.connect()
           .then(board => {
             this.cdoBoard_ = board;
-            this.cdoBoard_.fiveBoard_.on('disconnect', this.handleDisconnect_.bind(this));
+            this.cdoBoard_.on('disconnect', this.handleDisconnect_.bind(this));
             resolve();
           })
           .catch(reject);
