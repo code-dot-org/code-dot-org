@@ -111,7 +111,7 @@ const BoardSetupStatus = React.createClass({
      */
     function forEachLedInSequence(func, delay) {
       return new Promise(resolve => {
-        const leds = bc.prewiredComponents.colorLeds;
+        const leds = bc.cdoBoard_.prewiredComponents_.colorLeds;
         leds.forEach((led, i) => setTimeout(() => func(led), delay * (i+1)));
         setTimeout(resolve, delay * leds.length);
       });
@@ -119,7 +119,7 @@ const BoardSetupStatus = React.createClass({
 
     return Promise.resolve()
         .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
-        .then(() => bc.prewiredComponents.buzzer.play(SONG_CHARGE, 104))
+        .then(() => bc.cdoBoard_.prewiredComponents_.buzzer.play(SONG_CHARGE, 104))
         .then(() => forEachLedInSequence(led => led.color('green'), 80))
         .then(() => forEachLedInSequence(led => led.off(), 80))
         .then(() => this.succeed(STATUS_BOARD_COMPONENTS));
