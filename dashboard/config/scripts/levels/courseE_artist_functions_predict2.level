@@ -1,21 +1,19 @@
 <Artist>
   <config><![CDATA[{
   "game_id": 23,
-  "created_at": "2016-11-23T04:43:10.000Z",
+  "created_at": "2017-02-27T23:32:06.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
     "skin": "artist_zombie",
     "x": "50",
-    "y": "100",
+    "y": "50",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "instructions": "This time, use lines of 8 hexagons with 25 pixel sides.",
     "ideal": "14",
     "embed": "false",
-    "markdown_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.\r\n\r\n- To make each hexagon, repeat the 6 times, turning 60 degrees.\r\n- To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,10 +30,14 @@
     "impressive": "true",
     "never_autoplay_video": "false",
     "permitted_errors": "0",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This drawing is a lot like the last one, except the function draws a different kind of line.\",\"hint_id\":\"courseD_artist_functions10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d4e6bb67e3a582bf6e1a5a1aa3bf01c6/courseD_artist_functions10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.\",\"hint_id\":\"courseD_artist_functions10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fe26bc24785bd33e6ab8b75fe9f18325/courseD_artist_functions10.mp3\"}]",
+    "authored_hints": "[]",
     "discard_background": "false",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": [
+      "coursee_prediction_artistfunction2"
+    ],
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
@@ -43,6 +45,69 @@
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw polygon"/>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw line of polygons</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">8</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw polygon"/>
+                  <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">40</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw polygon</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">40</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Actions">
@@ -157,25 +222,14 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">2</title>
+              <title name="TIMES">4</title>
               <statement name="DO">
                 <block type="procedures_callnoreturn">
-                  <mutation name="draw line of hexagons"/>
+                  <mutation name="draw line of polygons"/>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">60</title>
-                      <next>
-                        <block type="procedures_callnoreturn">
-                          <mutation name="draw line of hexagons"/>
-                          <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">120</title>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
+                      <title name="VALUE">90</title>
                     </block>
                   </next>
                 </block>
@@ -185,18 +239,18 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">draw hexagon</title>
+          <title name="NAME">draw polygon</title>
           <statement name="STACK">
             <block type="controls_repeat">
-              <title name="TIMES">6</title>
+              <title name="TIMES">4</title>
               <statement name="DO">
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">25</title>
+                  <title name="VALUE">40</title>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">60</title>
+                      <title name="VALUE">90</title>
                     </block>
                   </next>
                 </block>
@@ -206,17 +260,17 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">draw line of hexagons</title>
+          <title name="NAME">draw line of polygons</title>
           <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">8</title>
               <statement name="DO">
                 <block type="procedures_callnoreturn">
-                  <mutation name="draw hexagon"/>
+                  <mutation name="draw polygon"/>
                   <next>
                     <block type="jump_by_constant">
                       <title name="DIR">jumpForward</title>
-                      <title name="VALUE">25</title>
+                      <title name="VALUE">40</title>
                     </block>
                   </next>
                 </block>
