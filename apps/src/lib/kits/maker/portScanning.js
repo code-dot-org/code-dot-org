@@ -19,6 +19,31 @@ export const ADAFRUIT_VID = '0x239a';
 export const CIRCUIT_PLAYGROUND_PID = '0x8011';
 
 /**
+ * Scan system serial ports for a device compatible with Maker Toolkit.
+ * @returns {Promise.<string>} resolves to a serial port name for a viable
+ *   device, or rejects if no such device can be found.
+ */
+export function getDevicePortName() {
+  return Promise.resolve()
+      .then(ensureAppInstalled)
+      .then(() => new Promise((resolve, reject) => {
+        ChromeSerialPort.list((error, list) => {
+          if (error) {
+            reject(error);
+            return;
+          }
+
+          const bestOption = getPreferredPort(list);
+          if (bestOption) {
+            resolve(bestOption.comName);
+          } else {
+            reject(new Error('Did not find a usable device on a serial port.'));
+          }
+        });
+      }));
+}
+
+/**
  * Check whether the Code.org Serial Connector Chrome extension is usable.
  * @returns {Promise}
  */
@@ -30,29 +55,6 @@ export function ensureAppInstalled() {
         reject(error);
       } else {
         resolve();
-      }
-    });
-  });
-}
-
-/**
- * Scan system serial ports for a device compatible with Maker Toolkit.
- * @returns {Promise.<string>} resolves to a serial port name for a viable
- *   device, or rejects if no such device can be found.
- */
-export function getDevicePortName() {
-  return new Promise((resolve, reject) => {
-    ChromeSerialPort.list((error, list) => {
-      if (error) {
-        reject(error);
-        return;
-      }
-
-      const bestOption = getPreferredPort(list);
-      if (bestOption) {
-        resolve(bestOption.comName);
-      } else {
-        reject(new Error('Did not find a usable device on a serial port.'));
       }
     });
   });
