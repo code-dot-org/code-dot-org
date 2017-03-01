@@ -15,10 +15,10 @@ module Honeybadger
 
     system(
       'bundle exec honeybadger deploy '\
-        '--environment=#{environment} '\
-        '--revision=#{revision} '\
-        '--user=#{environment} '\
-        '--api-key=#{CDO.cronjobs_honeybadger_api_key}'
+        "--environment=#{environment} "\
+        "--revision=#{revision} "\
+        "--user=#{environment} "\
+        "--api-key=#{CDO.cronjobs_honeybadger_api_key}"
     )
   end
 
