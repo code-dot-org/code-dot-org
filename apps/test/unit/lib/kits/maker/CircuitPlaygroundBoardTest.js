@@ -27,6 +27,11 @@ describe('CircuitPlaygroundBoard', () => {
 
       // Also spy on these
       sinon.spy(playground, 'reset');
+      sinon.spy(playground, 'pinMode');
+      sinon.spy(playground, 'digitalWrite');
+      sinon.spy(playground, 'digitalRead');
+      sinon.spy(playground, 'analogWrite');
+      sinon.spy(playground, 'analogRead');
 
       // Pretend to be totally ready
       playground.emit('connect');
@@ -67,6 +72,86 @@ describe('CircuitPlaygroundBoard', () => {
       board.connect().then(() => {
         board.destroy();
         expect(playground.reset).to.have.been.calledOnce;
+        done();
+      });
+    });
+  });
+
+  describe(`pinMode(pin, modeConstant)`, () => {
+    it('exists', () => {
+      expect(board.pinMode).to.be.a('function');
+    });
+
+    it('forwards the call to firmata', done => {
+      board.connect().then(() => {
+        const pin = 11;
+        const arg2 = 1023;
+        board.pinMode(pin, arg2);
+        expect(playground.pinMode).to.have.been.calledWith(pin, arg2);
+        done();
+      });
+    });
+  });
+
+  describe(`digitalWrite(pin, value)`, () => {
+    it('exists', () => {
+      expect(board.digitalWrite).to.be.a('function');
+    });
+
+    it('forwards the call to firmata', done => {
+      board.connect().then(() => {
+        const pin = 11;
+        const arg2 = 1023;
+        board.digitalWrite(pin, arg2);
+        expect(playground.digitalWrite).to.have.been.calledWith(pin, arg2);
+        done();
+      });
+    });
+  });
+
+  describe(`digitalRead(pin, callback)`, () => {
+    it('exists', () => {
+      expect(board.digitalRead).to.be.a('function');
+    });
+
+    it('forwards the call to firmata', done => {
+      board.connect().then(() => {
+        const pin = 11;
+        const arg2 = () => {};
+        board.digitalRead(pin, arg2);
+        expect(playground.digitalRead).to.have.been.calledWith(pin, arg2);
+        done();
+      });
+    });
+  });
+
+  describe(`analogWrite(pin, value)`, () => {
+    it('exists', () => {
+      expect(board.analogWrite).to.be.a('function');
+    });
+
+    it('forwards the call to firmata', done => {
+      board.connect().then(() => {
+        const pin = 11;
+        const arg2 = 1023;
+        board.analogWrite(pin, arg2);
+        expect(playground.analogWrite).to.have.been.calledWith(pin, arg2);
+        done();
+      });
+    });
+  });
+
+  describe(`analogRead(pin, callback)`, () => {
+    it('exists', () => {
+      expect(board.analogRead).to.be.a('function');
+    });
+
+    it('forwards the call to firmata', done => {
+      board.connect().then(() => {
+        const pin = 11;
+        const arg2 = () => {};
+        board.analogRead(pin, arg2);
+        expect(playground.analogRead).to.have.been.calledWith(pin, arg2);
         done();
       });
     });
