@@ -47,6 +47,7 @@ Dashboard::Application.config.action_dispatch.show_exceptions = false
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
+require 'testing/lock_thread'
 require 'testing/transactional_test_case'
 
 class ActiveSupport::TestCase
