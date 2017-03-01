@@ -4,8 +4,8 @@ SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
 
-def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
-  Selenium::WebDriver::Wait.new(timeout: timeout)
+def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT, interval = 1)
+  Selenium::WebDriver::Wait.new(timeout: timeout, interval: interval)
 end
 
 def wait_with_short_timeout
