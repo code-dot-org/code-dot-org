@@ -1,13 +1,19 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import ProgressLessonContent from './ProgressLessonContent';
 import FontAwesome from '../FontAwesome';
 import color from "@cdo/apps/util/color";
-import { levelType } from './progressTypes';
+import { levelType, lessonType } from './progressTypes';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import i18n from '@cdo/locale';
+import { lessonIsVisible } from './progressHelpers';
 
 const styles = {
   main: {
     background: color.lightest_gray,
-    border: '1px solid ' + color.border_gray,
+    borderWidth: 1,
+    borderColor: color.border_gray,
+    borderStyle: 'solid',
     borderRadius: 2,
     padding: 20,
     marginBottom: 12
@@ -18,14 +24,29 @@ const styles = {
   },
   headingText: {
     marginLeft: 10
+  },
+  hidden: {
+    background: color.white,
+    borderStyle: 'dashed',
+    borderWidth: 2,
+    opacity: 0.6
+  },
+  hiddenIcon: {
+    marginRight: 5,
+    fontSize: 18,
+    color: color.cyan
   }
 };
 
 const ProgressLesson = React.createClass({
   propTypes: {
-    title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    levels: PropTypes.arrayOf(levelType).isRequired
+    lesson: lessonType.isRequired,
+    lessonNumber: PropTypes.number.isRequired,
+    levels: PropTypes.arrayOf(levelType).isRequired,
+
+    // redux provided
+    lessonIsVisible: PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -41,14 +62,34 @@ const ProgressLesson = React.createClass({
   },
 
   render() {
-    const { title, description, levels } = this.props;
+    const { description, lesson, lessonNumber, levels, lessonIsVisible } = this.props;
+
+    if (!lessonIsVisible(lesson)) {
+      return null;
+    }
+
+    // Is this a hidden stage that we still render because we're a teacher
+    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
+    const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
+
     return (
-      <div style={styles.main}>
+      <div
+        style={{
+          ...styles.main,
+          ...(hiddenForStudents && styles.hidden)
+        }}
+      >
         <div
           style={styles.heading}
           onClick={this.toggleCollapsed}
         >
+          {hiddenForStudents &&
+            <FontAwesome
+              icon="eye-slash"
+              style={styles.hiddenIcon}
+            />
+          }
           <FontAwesome icon={icon}/>
           <span style={styles.headingText}>{title}</span>
         </div>
@@ -63,4 +104,8 @@ const ProgressLesson = React.createClass({
   }
 });
 
-export default ProgressLesson;
+export const UnconnectedProgressLesson = ProgressLesson;
+
+export default connect(state => ({
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
+}))(ProgressLesson);

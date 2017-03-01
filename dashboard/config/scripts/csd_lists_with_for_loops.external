@@ -1,0 +1,14 @@
+name 'CSD: Lists with For Loops'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Lists with For Loops
+
+# Print an Array with a *for* Loop
+
+As you know, we can use variables as indexes in an array.  We can take advantage of this fact to create a `for` **loop which visits every index in an array**.
+
+![](https://images.code.org/5aeb9986535424b1d737b8221685196f-image-1447446416081.26.01 PM.png)
+
+In this `for` loop, the `i` eventually gets set to every possible index in the array. You are going to use a loop of this kind to display all the values in an array.
+
+MARKDOWN

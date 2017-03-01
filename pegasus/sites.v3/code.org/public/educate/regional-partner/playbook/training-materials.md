@@ -2,22 +2,23 @@
 title: training materials
 nav: regional_partner_playbook_nav
 ---
----
-<a id="top"></a>Regional Partner
+
+<a id="top"></a>
 # Training Materials
 
 ## Table of Contents
 - [Facilitation Summit](#fac)
 - [TeacherCon](#teachercon)
-- [Program Manager Summit](#pmsummit)
+- [September 2016 Summit](#pmsummit)
+- [February 2017 Summit] (#feb17)
 - [Virtual Trainings](#virtual)
 
 ________________
 <a id="fac"></a>
 <br/>
 
-## Facilitation Summit
-The following resources were discussed and distributed at Facilitation Summit in May 2016. Cink on the links to view them.
+## Facilitation Summit (May 2016)
+The following resources were discussed and distributed at Facilitation Summit in May 2016. Click on the links to view them.
 
 - [Worksheets and Agendas - PDF](https://www.dropbox.com/s/vc587goy08xkdun/PLP%20Facilitation%20Summit%20Packet.pdf?dl=0)
 - [The Need for CS and More About Code.org - Slides](https://docs.google.com/a/code.org/presentation/d/1v8gw4ooS3nH_e-eNnZqxnvQiopl0QJKRWdXhWoWzou4/edit?usp=sharing)<br/>
@@ -32,21 +33,27 @@ The following resources were discussed and distributed at Facilitation Summit in
 ________________
 <a id="teachercon"></a>
 <br/>
-## TeacherCon
+## TeacherCon (Summer 2016)
 Click on the following links to view the resources from TeacherCon 2016.<br>
 
 - [Worksheets and Agenda TeacherCon SLC (including faciitator selection rubric) - gdoc](https://docs.google.com/document/d/1qa_NKPiaGGCWfEexrwwk7GSO8vMQbyYGJE1lDmyt714/edit?usp=sharing)
 - [Overview of the Roadmap - Slides](https://docs.google.com/presentation/d/1XzZm6Z10bHq2jtMrDyOzY0A21j8so0hLnyUcfPO6MZ8/edit?usp=sharing)<br/>
 
-Fundraising
+<details>
+  <summary>Fundraising</summary>
+  <p>
 
 - [Exploring the Fundraising Playbook - Slides](https://docs.google.com/presentation/d/1QDzxylUW_Nbp0nzvnSsa8lSVI-63fFoCD0CMF48zpd8/edit?usp=sharing)
 - [Fundraising Examples from the Field - CodeVA - Slides](https://docs.google.com/presentation/d/1k6c-v6HhexjJ5u0Rqknc3X1JrHK62Aqk_6kK33UFQ6c/edit?usp=sharing)
 - [Fundraising Examples from the Field - SFAZ and GCU - Slides](https://docs.google.com/presentation/d/1iPT_iiAIFD1t73dcRFtuI-VIze7aYLXso563M8vLvxM/edit?usp=sharing)
 - [Building Your Funding Roadmap - Slides](https://docs.google.com/presentation/d/10wfV9wzbO1TM_E80TKYNAE-hsTy_RmZavbDrica0KXE/edit?usp=sharing)
 <br/>
+</p>
+</details>
 
-Teacher Implementation
+<details>
+  <summary>Teacher Implementation</summary>
+  <p>
 
 - [How to Keep Teachers Implementing - Broward - Slides](https://docs.google.com/presentation/d/1NuUhD0m0_dIaynB34ePqFJYZUf1t-b1C-wyMcAixsns/edit?usp=sharing)
 - [Power of 21 Activity Responses from Atlanta - How can we keep teachers implementing? - gdoc](https://docs.google.com/document/d/1eE-zj_NDiIITbM1c4jElFo4_XV8EfI8lhQQH3a9KFiQ/edit?usp=sharing)
@@ -55,27 +62,41 @@ Teacher Implementation
 - [IDLA Exemplar - What We've Accomplish - PDF](https://drive.google.com/file/d/0B_RYFwL0skoldmpFelpJcHo0RUJxcndzSUo5OXpKQWQ2NHR3/view?usp=sharing)
 - [Building Your Teacher Implementation Roadmap - Slides](https://docs.google.com/presentation/d/1OrcEOWndHgfYlCItbfgDB4LILAmG8PT29fq0ARO-JgQ/edit?usp=sharing)
 <br/>
+</p>
+</details>
 
-Facilitator Capacity
+<details>
+  <summary>Facilitator Capacity</summary>
+  <p>
 
 - [How Code.org Works With Facilitators - Slides](https://docs.google.com/presentation/d/1mbFc3tnLzjTdQBgAokTtfuCGoe0zGGAiyWP6CsKsvbI/edit?usp=sharing)
 - [Building Your Facilitator Capacity Roadmap - Slides](https://docs.google.com/presentation/d/1NfId_1wNwR7AnLbzG38saPbkBb5vwm1GPmBZ1HxIWzA/edit?usp=sharing)
 <br/>
+</p>
+</details>
 
-Community Building
+<details>
+  <summary>Community Building</summary>
+  <p>
 
 - [Examples of Community Building - Code Interactive - Slides](https://docs.google.com/presentation/d/1XIb124xm3UX-NYwNnCiofpU_ZZCtsnHvvbL0IadJ4hM/edit?usp=sharing)
 - [Examples of Community Building - 9 Dots, Nextech and RUSMP - Slides](https://docs.google.com/presentation/d/1YzXn87OOJbxOxamUZccubnMiT1vkwIrINGQ68bNhNN4/edit?usp=sharing)
 - [Building your Community Roadmap - Slides](https://docs.google.com/presentation/d/1xfvG8scD4jVRlaNAcpOhctIAHra-9VctpyoLx9PbcKE/edit?usp=sharing)
 <br/>
+</p>
+</details>
 
-CS Expansion
+<details>
+  <summary>CS Expansion</summary>
+  <p>
 
 - [Overview of how Code.org recruited districts - Slides](https://docs.google.com/presentation/d/1q7WUYBxrVEOd02r-1ybTsrcA7Tq2j4RtwH13Ej3rnIY/edit?usp=sharing)
 - [Examples: Partnering with School Districts - Orlando Science Center - Slides](https://docs.google.com/presentation/d/1UgEjboAy_T0ajXcUmhW-BY-jtIDW1XsbScQN3xGWLJQ/edit?usp=sharing)
 - [Example: Partnering with School Districts - Utah - Slides](https://docs.google.com/presentation/d/1jfFVYLy7oJoeCwhEmv86p5E9CoPmSb8FziwiE6lHZrw/edit?usp=sharing)
 - [Building your CS Expansion Roadmap - Slides](https://docs.google.com/presentation/d/1HMLVhOU7R5B0M6w-xVA68g2isXo07PHuay6UnNsRT0M/edit?usp=sharing)
 - [Administrator and Counselor PD Overview - Slides](https://docs.google.com/presentation/d/1rgA370lNX2L88S5sew5ZWThbBwXOlzSUVjb2Dcx-I84/edit?usp=sharing)
+</p>
+</details>
 
 [**Back to the top**](#top)
 <br/>
@@ -83,7 +104,7 @@ CS Expansion
 ________________
 <a id="pmsummit"></a>
 <br/>
-## Program Manager Summit
+## Program Manager Summit (September 2016)
 - [Funding Worksheet - gdoc](https://docs.google.com/document/d/1LnSNDbN44JuD6hXkaRnrDexQUQJiSJPI6f0Jg6JyeJc/edit)
 - [Roadmap Overview - gdoc](https://docs.google.com/document/d/19Y3Fe_5ugdG62Ew_azv00ZbuWATD9JMLHUDDl55A4KY/edit) 
 - [Program Manager Onboarding Deck - Saturday & Sunday - slides](https://docs.google.com/presentation/d/1rV7Hg7iQy9okYgz3apl_KOQBLAO_EbllF0D1D0KLSj0/edit?usp=sharing)
@@ -96,10 +117,38 @@ ________________
 
 [**Back to the top**](#top)
 <br/>
+
+________________
+<a id="feb17"></a>
+<br/>
+
+## February Summit (2017)
+The following resources were discussed and distributed at February Summit in February 2017. Click on the links to view them.
+
+Advocacy
+
+- [Advocacy Breakout - slides](https://docs.google.com/a/code.org/presentation/d/19gWTMaYhO9f4PcaPXFS3G2S7CbT9o-874OLPHMHXwog/edit?usp=sharing)
+- [K-12 Computer Science Framework Outline - gdoc](https://docs.google.com/document/d/1fYlxH7k9pVS5lFfr9c-eg23JALd5MzIlAMrhsuodV28/edit?usp=sharing)
+- [Advocacy Session Pre-work - gdoc](https://docs.google.com/document/d/14B4-rsWAGq6YvriTIYKh9re1tr6TyUaGznLFcxeCev4/edit?usp=sharing)
+
+Other Sessions
+
+- [All Session - slides](https://docs.google.com/presentation/d/1LezR-Li5LRmwvFmz3-O_kinG8FTO5BBcfZ6Nd45kvdo/edit?usp=sharing)
+- [Planning a Successful TeacherCon Event - gdoc](https://docs.google.com/document/d/1sQUwcJbAPNxnVdsrPoEdnRtTpJvckVtdTm1D5oqAoqo/edit?usp=sharing)
+- [Facilitator Relationship Reflection Worksheet - gdoc](https://docs.google.com/document/d/1yYzXR0pvFfll62s6S6zvtF7ZZI5VF1aJranL8cVC73o/edit?usp=sharing)
+- [Fostering Positive Relationships with your Facilitators! - gdoc](https://docs.google.com/document/d/14wOwufNtLnA2T83P-OjpCanHZi0act0VmypGo2ifHfc/edit?usp=sharing)
+
+[**Back to the top**](#top)
+<br/>
 ________________
 <a id="virtual"></a>
 <br/>
 ## Virtual Trainings
+
+<details>
+  <summary>**2016 Virtual Trainings**</summary>
+  <p> 
+
 June 2016:
 
 - June Office Hours - [Video](http://videos.code.org/plp/june-2016-monthly-call.mp4)
@@ -131,12 +180,13 @@ November 2016:
 - How to Run a Virtual Administrator and Counselor PD [Video](http://videos.code.org/plp/admin-counselor-virtual-PD.mp4)
 - How to Run a Virtual Administrator and Counselor PD [Slides](https://www.dropbox.com/s/jo8r385x38bx8j6/Running%20a%20Virtual%20Training.pptx?dl=0)
 - K-12 CS Framework [Video](http://videos.code.org/plp/k12-cs-framework.mp4)
-- K-12 CS Framework Slides Coming Soon!
 
 December 2016:
 
 - Teacher Application Process Overview [Video](https://videos.code.org/teacher/Teacher+Application+Process.mp4)
 - Teacher Application Process Overview [Slides](https://docs.google.com/presentation/d/1DC5Unjuy7p5K50MIJai5s-jnhexYFlIUZKkAGNqLLp4/edit?usp=sharing)
+</p>
+</details>
 
 January 2017:                                            
 

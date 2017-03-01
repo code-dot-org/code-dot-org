@@ -375,7 +375,8 @@ StudioApp.prototype.init = function (config) {
     });
   }
 
-  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
+  const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
+  this.authoredHintsController_.init(config.level.authoredHints, hintsUsedIds, config.scriptId, config.serverLevelId);
   if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
     this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
   }
@@ -514,6 +515,17 @@ StudioApp.prototype.init = function (config) {
         {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
       </div>
     );
+  }
+
+  // If we are in a non-english locale using our english-specific app
+  // (the Spelling Bee), display a warning.
+  if (config.locale !== 'en_us' && config.skinId === 'letters') {
+      this.displayWorkspaceAlert(
+        'error',
+        <div>
+          {msg.englishOnlyWarning({ nextStage: config.stagePosition + 1 })}
+        </div>
+      );
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
@@ -1989,12 +2001,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     }
     return;
   }
-
-  // Ensure global ace variable is the same as window.ace
-  // (important because they can be different in our test environment)
-  /* eslint-disable */
-  ace = window.ace;
-  /* eslint-enable */
 
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
   // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig

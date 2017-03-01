@@ -1,0 +1,35 @@
+name 'CSD: For Loops'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# *for* Loop
+
+It's very common to want to repeat a set of commands a particular number of times.  The `for` loop was created to wrap all of those components related to counting loops into a single line of code.
+
+<img src="https://images.code.org/b93a044fc07cb4bbabb95b43132a005b-image-1447342829632.png" style="width: 450px">
+
+<img src="https://images.code.org/d0d8f34d0f4aabaf66084ceac282448e-image-1447343652405.png" style="width: 450px">
+
+Programmers would typically read a loop `for (var i = 0; i < 10; i= i+1)` out like this: <br>
+**"for variable i starting at 0, while i is less than 10, increment i by 1"**
+
+You may notice that when you drag a `for` loop out from the toolbox that we've set it up for you with `i` as the variable. 
+
+<details> 
+<summary>**Why is `i` the variable?** [click to expand]</summary>  
+
+Using the single character `i` as the variable in a `for` loop has become a convention in programming for a variety of reasons. One reason is that `for` loops are often used when processing arrays - **you can think of `i` as shorthand for index. **   But there is no reason why you have to use `i` if you don't want to.  It's just a variable.  
+</details>
+
+## Three Parts of For Loop
+
+### Initialize Variable
+When ever you are counting you need a variable to keep track of the count. The first part of the for loop sets up the variable that will be used to count the number of times the loop will run.  This also sets up the starting value at which to start counting. The variable is set up before the loop is run and then that code is not returned to through out subsequent runs through the for loop.
+
+### Condition
+The condition determines how long the loop runs. It should be dependent on the variable you initialized in part 1 of the loop. The condition is checked before entering the for loop each time, including the first.
+
+### Incrementor
+
+The last piece of the for loop is the incrementor. It is the update piece of the loop. In order for the starting value of the variable to change we must update it each time through the loop. That is what the incrementor is used for. The incrementor is run at the end of each run through the for loop.
+
+MARKDOWN

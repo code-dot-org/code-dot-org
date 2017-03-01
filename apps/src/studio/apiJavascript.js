@@ -12,6 +12,14 @@ exports.setMap = function (value) {
   Studio.queueCmd(null, 'setMap', {'value': value});
 };
 
+exports.setMapAndColor = function (color, value) {
+  Studio.queueCmd(null, 'setMapAndColor', {
+    'value': value,
+    'color': color,
+  });
+};
+
+
 exports.setSprite = function (spriteIndex, value) {
   Studio.queueCmd(null, 'setSprite', {
     'spriteIndex': spriteIndex,

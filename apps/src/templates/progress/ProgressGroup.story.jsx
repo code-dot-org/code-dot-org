@@ -1,5 +1,34 @@
 import React from 'react';
 import ProgressGroup from './ProgressGroup';
+import { fakeLesson, fakeLevels, createStoreWithHiddenLesson } from './progressTestHelpers';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { Provider } from 'react-redux';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+
+const lessons = [
+  fakeLesson('Jigsaw', 1),
+  fakeLesson('Maze', 2),
+  fakeLesson('Artist', 3),
+  fakeLesson('Something', 4)
+];
+const levelsByLesson = [
+  [
+    {
+      status: LevelStatus.not_tried,
+      url: '/step1/level1',
+      name: 'First progression'
+    },
+    ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
+    {
+      status: LevelStatus.not_tried,
+      url: '/step3/level1',
+      name: 'Last progression'
+    },
+  ],
+  fakeLevels(2),
+  fakeLevels(2),
+  fakeLevels(2)
+];
 
 export default storybook => {
   storybook
@@ -8,134 +37,28 @@ export default storybook => {
       {
         name:'ProgressGroup with detail view',
         story: () => (
-          <ProgressGroup
-            groupName="My Group"
-            isSummaryView={false}
-            lessonNames={['Jigsaw', 'Maze', 'Artist']}
-            levelsByLesson={[
-              [
-                {
-                  status: 'not_tried',
-                  url: '/step1/level1',
-                  name: 'First progression'
-                },
-                {
-                  status: 'perfect',
-                  url: '/step2/level1',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step2/level2',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step2/level3',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step2/level4',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step2/level5',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step3/level1',
-                  name: 'Last progression'
-                },
-              ],
-
-              [
-                {
-                  status: 'not_tried',
-                  url: '/step1/level1',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step3/level1',
-                },
-              ],
-
-              [
-                {
-                  status: 'not_tried',
-                  url: '/step1/level1',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step3/level1',
-                },
-              ]
-            ]}
-          />
+          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+            <ProgressGroup
+              groupName="My Group"
+              isSummaryView={false}
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+            />
+          </Provider>
         )
       },
 
       {
         name:'ProgressGroup with summary view',
         story: () => (
-          <ProgressGroup
-            groupName="My Group"
-            isSummaryView={true}
-            lessonNames={['Jigsaw', 'Maze', 'Artist']}
-            levelsByLesson={[
-              [
-                {
-                  status: 'not_tried',
-                  url: '/step1/level1',
-                  name: 'First progression'
-                },
-                {
-                  status: 'perfect',
-                  url: '/step2/level1',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step2/level2',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step2/level3',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step2/level4',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step2/level5',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step3/level1',
-                  name: 'Last progression'
-                },
-              ],
-
-              [
-                {
-                  status: 'not_tried',
-                  url: '/step1/level1',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step3/level1',
-                },
-              ],
-
-              [
-                {
-                  status: 'not_tried',
-                  url: '/step1/level1',
-                },
-                {
-                  status: 'not_tried',
-                  url: '/step3/level1',
-                },
-              ]
-            ]}
-          />
+          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+            <ProgressGroup
+              groupName="My Group"
+              isSummaryView={true}
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+            />
+          </Provider>
         )
       },
 

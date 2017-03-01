@@ -16,6 +16,7 @@
 #  full_address          :string(255)
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  validation_type       :string(255)      default("full"), not null
 #
 # Indexes
 #
@@ -28,10 +29,17 @@ class SchoolInfo < ActiveRecord::Base
     SCHOOL_TYPE_CHARTER = "charter",
     SCHOOL_TYPE_PRIVATE = "private",
     SCHOOL_TYPE_PUBLIC = "public",
+    SCHOOL_TYPE_HOMESCHOOL = "homeschool",
+    SCHOOL_TYPE_AFTER_SCHOOL = "afterschool",
     SCHOOL_TYPE_OTHER = "other"
-  ]
+  ].freeze
 
   SCHOOL_STATE_OTHER = "other"
+
+  VALIDATION_TYPES = [
+    VALIDATION_FULL = 'full',
+    VALIDATION_NONE = 'none'
+  ].freeze
 
   belongs_to :school_district
   belongs_to :school
@@ -67,6 +75,17 @@ class SchoolInfo < ActiveRecord::Base
 
   validate :validate_with_country
   validate :validate_without_country
+  validate :validate_zip
+
+  def should_validate?
+    validation_type != VALIDATION_NONE
+  end
+
+  def validate_zip
+    if zip
+      errors.add(:zip, 'Invalid zip code') unless zip > 0
+    end
+  end
 
   # Validate records in the newer data format (see school_info_test.rb for details).
   # The following states are valid (from the spec at https://goo.gl/Gw57rL):
@@ -83,7 +102,7 @@ class SchoolInfo < ActiveRecord::Base
   #
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
-    return unless country
+    return unless country && should_validate?
     country == 'US' ? validate_us : validate_non_us
   end
 
@@ -157,6 +176,7 @@ class SchoolInfo < ActiveRecord::Base
   # validate records in the older data format (see school_info_test.rb for details).
   # This method reports errors if the record does NOT have a country and is invalid.
   def validate_without_country
+    return unless should_validate?
     return if country
 
     # don't allow any new fields in the old data format.

@@ -6,11 +6,13 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 const landingPageData = getScriptData('landingPageData');
 
-console.log(landingPageData);
-
 ReactDOM.render(
   <LandingPage
     coursesTaught={landingPageData['courses_teaching']}
+    coursesCompleted={landingPageData['courses_completed']}
+    lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
+    lastWorkshopSurveyCourse={landingPageData['last_workshop_survey_course']}
+    professionalLearningCourseData={landingPageData['summarized_plc_enrollments']}
   />,
   document.getElementById('landing-page-container')
 );

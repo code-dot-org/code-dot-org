@@ -4,6 +4,8 @@
 class StorageApps
   class NotFound < Sinatra::NotFound
   end
+  class BadRequest < Sinatra::BadRequest
+  end
 
   def initialize(storage_id)
     @storage_id = storage_id
@@ -27,7 +29,7 @@ class StorageApps
   end
 
   def delete(channel_id)
-    owner, id = storage_decrypt_channel_id(channel_id)
+    owner, id = storage_decrypt_channel_id_checked(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
     delete_count = @table.where(id: id).update(state: 'deleted')
@@ -39,8 +41,7 @@ class StorageApps
   end
 
   def get(channel_id)
-    owner, id = storage_decrypt_channel_id(channel_id)
-
+    owner, id = storage_decrypt_channel_id_checked(channel_id)
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
@@ -48,7 +49,7 @@ class StorageApps
   end
 
   def update(channel_id, value, ip_address)
-    owner, id = storage_decrypt_channel_id(channel_id)
+    owner, id = storage_decrypt_channel_id_checked(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
     row = {
@@ -64,7 +65,7 @@ class StorageApps
   end
 
   def get_abuse(channel_id)
-    _owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, id = storage_decrypt_channel_id_checked(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
@@ -73,7 +74,7 @@ class StorageApps
   end
 
   def increment_abuse(channel_id)
-    _owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, id = storage_decrypt_channel_id_checked(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
@@ -87,7 +88,7 @@ class StorageApps
   end
 
   def reset_abuse(channel_id)
-    _owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, id = storage_decrypt_channel_id_checked(channel_id)
 
     row = @table.where(id: id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
@@ -121,5 +122,15 @@ class StorageApps
     end
 
     storage_encrypt_channel_id(row[:storage_id], row[:id]) if row
+  end
+
+  # Call method to decrypt Channel Id, rescue from exceptions from base64 decode failure. This is invalid
+  # input to the request, which happens with some frequency in production. If this happens, raise BadRequest
+  # which will generate an HTTP 400 Bad Request response.
+  # @param channel_id [String] encrypted channel_id
+  def storage_decrypt_channel_id_checked(channel_id)
+    storage_decrypt_channel_id(channel_id)
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    raise BadRequest, "invalid channel `#{channel_id}`"
   end
 end

@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+# This script resets `User.terms_of_service_version` to nil for all users.
+
+require_relative '../../../dashboard/config/environment'
+
+begin
+  User.
+    with_deleted.
+    where.not(terms_of_service_version: nil).
+    find_each do |user|
+      user.update(terms_of_service_version: nil)
+    end
+end

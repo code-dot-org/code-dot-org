@@ -19,7 +19,7 @@ const group1CspWorkshops = {
   'Georgia Tech Center for Education Integrating Science, Mathematics, and Computing': 'July 17 - 22, 2017',
   'Idaho Digital Learning Academy': 'June 19 - 23, 2017',
   'Lumity': 'July 24 - 28, 2017',
-  'Nextech': 'July 18 - 22, 2017',
+  'Nextech': 'July 17 - 21, 2017',
   'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)': 'August 7 - 11, 2017',
   'Southern Nevada Regional Professional Development Program': 'June 12 - 16, 2017',
   'Code/Interactive': 'August 14 - 18, 2017',
@@ -29,7 +29,7 @@ const group1CspWorkshops = {
   'Utah STEM Action Center and Utah Board of Education': 'June 26 - 30, 2017',
   'CodeVA': 'July 17 - 21, 2017',
   'Puget Sound Educational Service District': 'July 10 - 14, 2017',
-  'NorthEast Washington Educational Service District 101': 'July 10 - 14, 2017'
+  'NorthEast Washington Educational Service District 101': 'August 14 - 18, 2017'
 };
 
 const workshopNamePlaceholder = '2017 Workshop (exact date to be determined)';

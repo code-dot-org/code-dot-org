@@ -126,6 +126,10 @@ class Level < ActiveRecord::Base
   def toolbox(type)
   end
 
+  def spelling_bee?
+    try(:skin) == 'letters'
+  end
+
   def unplugged?
     game && game.unplugged?
   end

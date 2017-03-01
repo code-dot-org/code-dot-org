@@ -12,9 +12,9 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 
 ## Available reports
 
-- [2016 Hour of Code impact study](/files/HourOfCodeImpactStudy_Jan2017.pdf)
-- [2015-16 Code.org Evaluation Report](/files/EvaluationReport2015-16.pdf)
-- [2015 Hour of Code impact report](/about/evaluation/hourofcode)
+- [2016 Hour of Code impact study (PDF)](/files/HourOfCodeImpactStudy_Jan2017.pdf)
+- [2015-16 Code.org Evaluation Report (PDF)](/files/EvaluationReport2015-16.pdf)
+- [Hour of Code impact report and teacher survey](/about/evaluation/hourofcode)
 - [Code.org's Impact on Computer Science Education: June 2014 - June 2015 Program Evaluation Report](/about/evaluation/summary)
 
 ## Learn More About Our Approach

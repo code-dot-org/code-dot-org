@@ -36,7 +36,7 @@ class Slack
     )
 
     begin
-      parsed_response = JSON.parse(response.string)
+      parsed_response = JSON.parse(response.read)
     rescue JSON::ParserError
       return nil
     end
@@ -67,26 +67,28 @@ class Slack
       "&topic=#{new_topic}"
     )
 
-    JSON.parse(response.string)['ok']
+    JSON.parse(response.read)['ok']
   end
 
   # @param text [String] The text to post in Slack.
+  # @param params [Hash] A hash of parameters to alter how the text is posted.
   # @return [Boolean] Whether the text was posted to Slack successfully.
   def self.message(text, params={})
     return false unless CDO.slack_endpoint
+    slackified_text = slackify text
 
     if params[:color]
       payload = {
         attachments: [{
-          fallback: text,
-          text: text,
+          fallback: slackified_text,
+          text: slackified_text,
           mrkdwn_in: [:text],
           color: COLOR_MAP[params[:color].to_sym] || params[:color]
         }]
       }.merge params
     else
       payload = {
-        text: text,
+        text: slackified_text,
         unfurl_links: true
       }.merge params
     end
@@ -122,5 +124,20 @@ class Slack
       return parsed_channel['id'] if parsed_channel['name'] == channel_name
     end
     nil
+  end
+
+  # Format with slack markdownish formatting instead of HTML.
+  # https://slack.zendesk.com/hc/en-us/articles/202288908-Formatting-your-messages
+  private_class_method def self.slackify(message)
+    message_copy = message.dup
+    message_copy.strip!
+    message_copy = "```#{message_copy[7..-1]}```" if message_copy =~ /^\/quote /
+    message_copy.
+      gsub(/<\/?i>/, '_').
+      gsub(/<\/?b>/, '*').
+      gsub(/<\/?pre>/, '```').
+      gsub(/<a href=['"]([^'"]+)['"]>/, '<\1|').
+      gsub(/<\/a>/, '>').
+      gsub(/<br\/?>/, "\n")
   end
 end
