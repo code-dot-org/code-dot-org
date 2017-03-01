@@ -3,9 +3,18 @@ import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
 import five from 'johnny-five';
 import Playground from 'playground-io';
+import {initializeCircuitPlaygroundComponents} from './PlaygroundComponents';
 
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
+
+const J5_CONSTANTS = {
+  INPUT: 0,
+  OUTPUT: 1,
+  ANALOG: 2,
+  PWM: 3,
+  SERVO: 4
+};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
@@ -20,6 +29,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {five.Board} A johnny-five board controller */
     this.fiveBoard_ = null;
+
+    /** @private {Object} Map of component controllers */
+    this.prewiredComponents_ = null;
   }
 
   /**
@@ -33,6 +45,11 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.fiveBoard_ = board;
+        this.prewiredComponents_ = {
+          board,
+          ...initializeCircuitPlaygroundComponents(board),
+          ...J5_CONSTANTS
+        };
         resolve();
       });
       board.once('error', reject);
@@ -44,6 +61,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * Disconnect and clean up the board controller and all components.
    */
   destroy() {
+    // Investigate: What do we need to tear down here?
+    this.prewiredComponents_ = null;
+
     if (this.fiveBoard_) {
       this.fiveBoard_.io.reset();
     }

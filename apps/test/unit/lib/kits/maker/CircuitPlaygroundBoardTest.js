@@ -61,6 +61,13 @@ describe('CircuitPlaygroundBoard', () => {
     it('returns a Promise that resolves when the board is ready to use', done => {
       board.connect().then(done);
     });
+
+    it('initializes a set of components', done => {
+      board.connect().then(() => {
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
+        done();
+      }).catch(done);
+    });
   });
 
   describe(`destroy()`, () => {
@@ -73,7 +80,7 @@ describe('CircuitPlaygroundBoard', () => {
         board.destroy();
         expect(playground.reset).to.have.been.calledOnce;
         done();
-      });
+      }).catch(done);
     });
   });
 
@@ -89,7 +96,7 @@ describe('CircuitPlaygroundBoard', () => {
         board.pinMode(pin, arg2);
         expect(playground.pinMode).to.have.been.calledWith(pin, arg2);
         done();
-      });
+      }).catch(done);
     });
   });
 
@@ -105,7 +112,7 @@ describe('CircuitPlaygroundBoard', () => {
         board.digitalWrite(pin, arg2);
         expect(playground.digitalWrite).to.have.been.calledWith(pin, arg2);
         done();
-      });
+      }).catch(done);
     });
   });
 
@@ -121,7 +128,7 @@ describe('CircuitPlaygroundBoard', () => {
         board.digitalRead(pin, arg2);
         expect(playground.digitalRead).to.have.been.calledWith(pin, arg2);
         done();
-      });
+      }).catch(done);
     });
   });
 
@@ -137,7 +144,7 @@ describe('CircuitPlaygroundBoard', () => {
         board.analogWrite(pin, arg2);
         expect(playground.analogWrite).to.have.been.calledWith(pin, arg2);
         done();
-      });
+      }).catch(done);
     });
   });
 
@@ -153,7 +160,7 @@ describe('CircuitPlaygroundBoard', () => {
         board.analogRead(pin, arg2);
         expect(playground.analogRead).to.have.been.calledWith(pin, arg2);
         done();
-      });
+      }).catch(done);
     });
   });
 
@@ -165,6 +172,6 @@ describe('CircuitPlaygroundBoard', () => {
       playground.emit('disconnect');
       expect(spy).to.have.been.calledOnce;
       done();
-    });
+    }).catch(done);
   });
 });

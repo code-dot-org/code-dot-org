@@ -6,12 +6,8 @@
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
 
-import _ from 'lodash';
 import ChromeSerialPort from 'chrome-serialport';
-import {
-  initializeCircuitPlaygroundComponents,
-  componentConstructors
-} from './PlaygroundComponents';
+import {componentConstructors} from './PlaygroundComponents';
 import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 
@@ -32,37 +28,25 @@ export const ADAFRUIT_VID = '0x239a';
 /** @const {string} The Circuit Playground product id as reported by Circuit playground boards */
 export const CIRCUIT_PLAYGROUND_PID = '0x8011';
 
-const J5_CONSTANTS = {
-  INPUT: 0,
-  OUTPUT: 1,
-  ANALOG: 2,
-  PWM: 3,
-  SERVO: 4
-};
-
 export default class BoardController {
   constructor() {
     ChromeSerialPort.extensionId = CHROME_APP_ID;
 
-    /** @private {Object} */
-    this.prewiredComponents = null;
-    /** @private {function} */
-    this.onDisconnectCallback_ = null;
-
     /** @private {CircuitPlaygroundBoard} */
     this.cdoBoard_ = null;
+
+    /** @private {function} */
+    this.onDisconnectCallback_ = null;
   }
 
   connectAndInitialize(codegen, interpreter) {
     return BoardController.ensureAppInstalled()
         .then(this.ensureBoardConnected.bind(this))
-        .then(this.ensureComponentsInitialized.bind(this))
         .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
   }
 
   connectWithComponents() {
-    return this.ensureBoardConnected()
-        .then(this.ensureComponentsInitialized.bind(this));
+    return this.ensureBoardConnected();
   }
 
   static ensureAppInstalled() {
@@ -98,25 +82,14 @@ export default class BoardController {
     });
   }
 
-  ensureComponentsInitialized() {
-    if (this.prewiredComponents) {
-      return;
-    }
-
-    this.prewiredComponents = _.assign({},
-        initializeCircuitPlaygroundComponents(this.cdoBoard_.fiveBoard_),
-        {board: this.cdoBoard_.fiveBoard_},
-        J5_CONSTANTS);
-  }
-
   installComponentsOnInterpreter(codegen, jsInterpreter) {
     Object.keys(componentConstructors).forEach(key => {
       codegen.customMarshalObjectList.push({instance: componentConstructors[key]});
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
 
-    Object.keys(this.prewiredComponents).forEach(key => {
-      jsInterpreter.createGlobalProperty(key, this.prewiredComponents[key]);
+    Object.keys(this.cdoBoard_.prewiredComponents_).forEach(key => {
+      jsInterpreter.createGlobalProperty(key, this.cdoBoard_.prewiredComponents_[key]);
     });
   }
 
@@ -136,7 +109,6 @@ export default class BoardController {
       this.cdoBoard_.destroy();
     }
     this.cdoBoard_ = null;
-    this.prewiredComponents = null;
   }
 
   pinMode(pin, modeConstant) {
