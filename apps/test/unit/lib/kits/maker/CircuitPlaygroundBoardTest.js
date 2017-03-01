@@ -84,6 +84,40 @@ describe('CircuitPlaygroundBoard', () => {
     });
   });
 
+  describe(`installOnInterpreter(codegen, jsInterpreter)`, () => {
+    it('exists', () => {
+      expect(board.installOnInterpreter).to.be.a('function');
+    });
+
+    it('adds component constructors to the customMarshalObjectList', done => {
+      board.connect().then(() => {
+        const codegen = {
+          customMarshalObjectList: []
+        };
+        const interpreter = {
+          createGlobalProperty: sinon.spy()
+        };
+        board.installOnInterpreter(codegen, interpreter);
+        expect(codegen.customMarshalObjectList).to.have.length(13);
+        done();
+      }).catch(done);
+    });
+
+    it('adds component constructors as global properties on the interpreter', done => {
+      board.connect().then(() => {
+        const codegen = {
+          customMarshalObjectList: []
+        };
+        const interpreter = {
+          createGlobalProperty: sinon.spy()
+        };
+        board.installOnInterpreter(codegen, interpreter);
+        expect(interpreter.createGlobalProperty).to.have.been.called;
+        done();
+      }).catch(done);
+    });
+  });
+
   describe(`pinMode(pin, modeConstant)`, () => {
     it('exists', () => {
       expect(board.pinMode).to.be.a('function');
