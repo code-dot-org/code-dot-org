@@ -80,7 +80,7 @@ class TransfersController < ApplicationController
       return
     end
 
-    if student_ids.count != current_user.followers.where(student_user_id: student_ids).count
+    if student_ids.count != current_user.followers.where(section_id: current_section.id, student_user_id: student_ids).count
       render json: {
         error: I18n.t('move_students.all_students_must_be_in_current_section')
       }, status: :forbidden
