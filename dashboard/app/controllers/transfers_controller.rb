@@ -6,9 +6,8 @@ class TransfersController < ApplicationController
   def create
     new_section_code = params[:new_section_code]
 
-    begin
-      new_section = Section.find_by!(code: new_section_code)
-    rescue ActiveRecord::RecordNotFound
+    new_section = Section.find_by_code(new_section_code)
+    unless new_section
       render json: {
         error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
       }, status: :not_found
@@ -32,9 +31,8 @@ class TransfersController < ApplicationController
       return
     end
 
-    begin
-      current_section = Section.find_by!(code: current_section_code)
-    rescue ActiveRecord::RecordNotFound
+    current_section = Section.find_by_code(current_section_code)
+    unless current_section
       render json: {
         error: I18n.t('move_students.current_section_dne', current_section_code: current_section_code)
       }, status: :not_found
@@ -71,9 +69,8 @@ class TransfersController < ApplicationController
       return
     end
 
-    begin
-      students = User.find(student_ids)
-    rescue ActiveRecord::RecordNotFound
+    students = User.find_by_id(student_ids)
+    if students.count != student_ids.count
       render json: {
         error: I18n.t('move_students.student_not_found')
       }, status: :not_found
