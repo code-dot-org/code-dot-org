@@ -5,139 +5,176 @@
     #left
       %a{:href=>'/'}
         %img#logo{:src=>'/images/logo.png'}
-    #right
 
-  %nav.navbar.navbar-default.mobile-feature{:style => "background-color: white; border: 1px solid white; float: right; width: 50%;"}
-    .container-fluid
-      .navbar-header
-        %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
-          %span.sr-only Toggle navigation
-          #nav-icon
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-      #navbar.navbar-collapse.collapse
-        %ul.nav.navbar-nav
-          %li{:style => "position:relative;"}
-            %a{:href => "/student"} Learn
-            %a{:href => "/educate"} Teach
-            %a{:href => "/promote"} Stats
-            %a{:href => "/help"} Help Us
-          %li.dropdown
-            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              About
-              %span.caret
-            %ul.dropdown-menu
-              %li{:style => "position:relative;"}
-                %a{:href => "/about"} About Us
-                %a{:href => "/about/leadership"} Leadership
-                %a{:href => "/about/donors"} Donors
-                %a{:href => "/about/partners"} Partners
-                %a{:href => "/about/team"} Full Team
-                %a{:href => "/about/news"} Newsroom
-                %a{:href => "/about/evaluation"} Evaluation
-                %a{:href => "/about/jobs"} Jobs
-                %a{:href => "/contact"} Contact Us
-                %a{:href => "/faq"} FAQs
+    #hoc-nav
+      %ul.hide-responsive-menu
+        %li
+          %a{href:resolve_url('/student')} Learn
+        %li
+          %a{href:resolve_url('/educate')} Teach
+        %li
+          %a{href:resolve_url('/promote')} Stats
+        %li
+          %a{href:resolve_url('/help')} Help Us
+        %li
+          %a#about-more{href: "#"}
+            About
+            %b.caret
+        %span.about-nav.hide-about
+          %li
+            %a{:href => "/about"} About Us
+          %li
+            %a{:href => "/about/leadership"} Leadership
+          %li
+            %a{:href => "/about/donors"} Donors
+          %li
+            %a{:href => "/about/partners"} Partners
+          %li
+            %a{:href => "/about/team"} Full Team
+          %li
+            %a{:href => "/about/news"} Newsroom
+          %li
+            %a{:href => "/about/evaluation"} Evaluation
+          %li
+            %a{:href => "/about/jobs"} Jobs
+          %li
+            %a{:href => "/contact"} Contact Us
+          %li
+            %a{:href => "/faq"} FAQs
+
+      %a#hoc-nav-hamburger{href: "#"}
+        &#9776;
+
 :css
-  ul{
-    list-style-type: none !important;
+  #hoc-nav {
+    display: inline-block;
+    text-align: left;
+    float: right;
+    width: 50%;
   }
 
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: black;
-  }
-
-  .navbar-default .navbar-toggle{
-    background-color: white;
-    margin-top: -42px;
-    border: 1px solid black;
-  }
-
-  @media (max-width: 1200px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-left,.navbar-right {
-        float: none !important;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .collapse.in{
-        display:block !important;
-    }
-  }
-
-  #nav-icon{
+  #hoc-nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
+    width: 250px;
+    right: 0;
   }
 
-  #nav-icon span:nth-child(1) {
-    top: 0px;
+  #hoc-nav ul li {
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    float: left;
+    padding: 0.25em 0em;
+    margin-right: 1em;
+    text-indent: 0;
+    list-style-type: none;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
-  #nav-icon span:nth-child(2),#nav-icon span:nth-child(3) {
-    top: 18px;
+  #hoc-nav ul li:before {
+    content: none;      /* Needed to remove the bullet disc. This was set from other CSS. */
   }
 
-  #nav-icon span:nth-child(4) {
-    top: 36px;
+  #hoc-nav ul li:last-child {
+    margin-right: 0;    /* No margin needed for the last item */
   }
 
-  #nav-icon.open span:nth-child(1) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
+  #hoc-nav ul li a {
+    font-family: 'Gotham 4r', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 
-  #nav-icon.open span:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+  #hoc-nav ul li a:hover {
+    border-bottom: solid 2px rgb(255, 138, 0);
   }
 
-  #nav-icon.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+  #hoc-nav-hamburger {
+    font-size: 36px;
+    color: white;
+    vertical-align: middle;
+    text-decoration: none;
+    display: none;
+    float: right;
+    margin-top: 10px;
   }
 
-  #nav-icon.open span:nth-child(4) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
+  @media (max-width: 992px) {
+    #hoc-nav{
+      position: relative;
+    }
+
+    #hoc-nav ul.hide-responsive-menu, .hide-about {
+      display: none;
+    }
+
+    #hoc-nav ul {
+      position: absolute;
+      top: 4em;
+      background-color: rgb(0, 178, 192);   /* Needed as the opaque fallback colour for IE8 */
+      background-color: rgba(0, 178, 192, .9);
+      z-index: 99;
+    }
+
+    #hoc-nav ul:after{   /* This is the arrow in the responsive menu */
+      bottom: 100%;
+      left: 16em;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(0, 178, 192, 0);
+      border-bottom-color: rgb(0, 178, 192);  /* Needed as the opaque fallback colour for IE8 */
+      border-bottom-color: rgba(0, 178, 192, .9);
+      border-width: 8px;
+    }
+
+    #hoc-nav ul li {
+      display: block;
+      float: none;
+      margin: 1em 2em 1em 1em;
+      white-space: normal;
+      overflow: visible;
+    }
+
+    #hoc-nav-hamburger {
+      display: inline-block;
+    }
+
+    #hoc-nav-hamburger:hover,
+    #hoc-nav-hamburger:active {
+      color: rgb(255, 138, 0);
+    }
   }
 
 :javascript
 
-  $(document).ready(function(){
-  	$('#nav-icon').click(function(){
-  		$(this).toggleClass('open');
-  	});
+  $(function() {
+
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+    //When ABOUT is clicked, show more about navigation options
+    $('#about-more').click(function(e){
+        $('#hoc-nav ul span').toggleClass('hide-about');
+        e.preventDefault();
+    });
+
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+    });
   });
