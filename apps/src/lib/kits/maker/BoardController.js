@@ -28,7 +28,6 @@ export const CIRCUIT_PLAYGROUND_PID = '0x8011';
 
 export default class BoardController {
   constructor() {
-    ChromeSerialPort.extensionId = CHROME_APP_ID;
 
     /** @private {CircuitPlaygroundBoard} */
     this.cdoBoard_ = null;
@@ -37,10 +36,13 @@ export default class BoardController {
     this.onDisconnectCallback_ = null;
   }
 
-  connectAndInitialize(codegen, interpreter) {
+  /**
+   * Establish a connection to a maker board and return a controller for it.
+   * @return {Promise.<CircuitPlaygroundBoard>}
+   */
+  connectToBoard() {
     return BoardController.ensureAppInstalled()
-        .then(this.ensureBoardConnected.bind(this))
-        .then(this.installComponentsOnInterpreter.bind(this, codegen, interpreter));
+        .then(this.ensureBoardConnected.bind(this));
   }
 
   connectWithComponents() {
@@ -48,6 +50,7 @@ export default class BoardController {
   }
 
   static ensureAppInstalled() {
+    ChromeSerialPort.extensionId = CHROME_APP_ID;
     return new Promise((resolve, reject) => {
       ChromeSerialPort.isInstalled(function (error) {
         if (error) {
@@ -66,7 +69,7 @@ export default class BoardController {
     return new Promise((resolve, reject) => {
       if (this.cdoBoard_) {
         // Already connected, just use existing board.
-        resolve();
+        resolve(this.cdoBoard_);
         return;
       }
 
@@ -74,7 +77,7 @@ export default class BoardController {
           .then(board => {
             this.cdoBoard_ = board;
             this.cdoBoard_.on('disconnect', this.handleDisconnect_.bind(this));
-            resolve();
+            resolve(board);
           })
           .catch(reject);
     });

@@ -1,4 +1,5 @@
 import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
+import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -57,51 +58,60 @@ const BoardSetupStatus = React.createClass({
       this.fail(STATUS_IS_CHROME);
     }
 
-    const bc = new BoardController();
+    let portName = null;
+    let boardController = null;
+
     Promise.resolve()
 
         // Is Chrome App Installed?
         .then(() => this.spin(STATUS_APP_INSTALLED))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
-        .then(() =>
-            BoardController.ensureAppInstalled()
-                .then(() => this.succeed(STATUS_APP_INSTALLED))
-                .catch(error => this.fail(STATUS_APP_INSTALLED)))
+        .then(() => {
+          return BoardController.ensureAppInstalled()
+              .then(() => this.succeed(STATUS_APP_INSTALLED))
+              .catch(error => this.fail(STATUS_APP_INSTALLED));
+        })
 
         // Is board plugged in?
         .then(() => this.spin(STATUS_BOARD_PLUG))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
-        .then(() =>
-            BoardController.getDevicePortName()
-                .then(() => this.succeed(STATUS_BOARD_PLUG))
-                .catch(error => this.fail(STATUS_BOARD_PLUG)))
+        .then(() => {
+          return BoardController.getDevicePortName()
+              .then(usablePort => {
+                portName = usablePort;
+                this.succeed(STATUS_BOARD_PLUG);
+              })
+              .catch(error => this.fail(STATUS_BOARD_PLUG));
+        })
 
         // Can we talk to the firmware?
         .then(() => this.spin(STATUS_BOARD_CONNECT))
-        .then(() =>
-            bc.ensureBoardConnected()
-                .then(() => this.succeed(STATUS_BOARD_CONNECT))
-                .catch(error => this.fail(STATUS_BOARD_CONNECT)))
+        .then(() => {
+          boardController = new CircuitPlaygroundBoard(portName);
+          return boardController.connectToFirmware()
+              .then(() => this.succeed(STATUS_BOARD_CONNECT))
+              .catch(error => this.fail(STATUS_BOARD_CONNECT));
+        })
 
         // Can we initialize components successfully?
         .then(() => this.spin(STATUS_BOARD_COMPONENTS))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
-        .then(() => bc.connectWithComponents())
-        .then(() => this.celebrateAllSuccessful(bc))
+        .then(() => boardController.initializeComponents())
+        .then(() => this.celebrateAllSuccessful(boardController))
         .catch(error => this.fail(STATUS_BOARD_COMPONENTS))
 
         // Put the board back in its original state, if possible
-        .then(() => bc.reset())
+        .then(() => boardController.destroy())
         .then(() => this.setState({isDetecting: false}));
   },
 
   /**
    * Play a song and animate some LEDs to demonstrate successful connection
    * to the board.
-   * @param {BoardController} bc
+   * @param {CircuitPlaygroundBoard} board
    * @returns {Promise} resolved when the song and animation are done.
    */
-  celebrateAllSuccessful(bc) {
+  celebrateAllSuccessful(board) {
     /**
      * Run given function for each LED on the board in sequence, with givcen
      * delay between them.
@@ -111,7 +121,7 @@ const BoardSetupStatus = React.createClass({
      */
     function forEachLedInSequence(func, delay) {
       return new Promise(resolve => {
-        const leds = bc.cdoBoard_.prewiredComponents_.colorLeds;
+        const leds = board.prewiredComponents_.colorLeds;
         leds.forEach((led, i) => setTimeout(() => func(led), delay * (i+1)));
         setTimeout(resolve, delay * leds.length);
       });
@@ -119,7 +129,7 @@ const BoardSetupStatus = React.createClass({
 
     return Promise.resolve()
         .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
-        .then(() => bc.cdoBoard_.prewiredComponents_.buzzer.play(SONG_CHARGE, 104))
+        .then(() => board.prewiredComponents_.buzzer.play(SONG_CHARGE, 104))
         .then(() => forEachLedInSequence(led => led.color('green'), 80))
         .then(() => forEachLedInSequence(led => led.off(), 80))
         .then(() => this.succeed(STATUS_BOARD_COMPONENTS));

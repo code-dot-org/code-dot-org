@@ -68,6 +68,53 @@ describe('CircuitPlaygroundBoard', () => {
         done();
       }).catch(done);
     });
+
+    it(`establishes forwarding for the 'disconnect' event`, done => {
+      board.connect().then(() => {
+        const spy = sinon.spy();
+        board.on('disconnect', spy);
+        expect(spy).not.to.have.been.called;
+        playground.emit('disconnect');
+        expect(spy).to.have.been.calledOnce;
+        done();
+      }).catch(done);
+    });
+  });
+
+  describe(`connectToFirmware()`, () => {
+    it('exists', () => {
+      expect(board.connectToFirmware).to.be.a('function');
+    });
+
+    it('returns a Promise that resolves when the firmware is connected', done => {
+      board.connectToFirmware().then(done);
+    });
+
+    it('does not initialize components', done => {
+      board.connectToFirmware().then(() => {
+        expect(board.prewiredComponents_).to.be.null;
+        done();
+      }).catch(done);
+    });
+  });
+
+  describe(`initializeComponents()`, () => {
+    it('exists', () => {
+      expect(board.initializeComponents).to.be.a('function');
+    });
+
+    it('throws if called before connecting to firmware', () => {
+      expect(() => board.initializeComponents())
+          .to.throw(Error, 'Cannot initialize components: Not connected to board firmware.');
+    });
+
+    it('initializes a set of components', done => {
+      board.connectToFirmware().then(() => {
+        board.initializeComponents();
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
+        done();
+      }).catch(done);
+    });
   });
 
   describe(`destroy()`, () => {
@@ -229,16 +276,5 @@ describe('CircuitPlaygroundBoard', () => {
         expect(fakeEventEmitter.on).to.have.been.calledWith('tap:double', callback);
       });
     });
-  });
-
-  it(`forwards a 'disconnect' event`, done => {
-    board.connect().then(() => {
-      const spy = sinon.spy();
-      board.on('disconnect', spy);
-      expect(spy).not.to.have.been.called;
-      playground.emit('disconnect');
-      expect(spy).to.have.been.calledOnce;
-      done();
-    }).catch(done);
   });
 });
