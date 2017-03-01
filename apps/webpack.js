@@ -122,6 +122,7 @@ var storybookConfig = _.extend({}, baseConfig, {
     new webpack.ProvidePlugin({React: 'react'}),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(false),
+      IN_STORYBOOK: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
       BUILD_STYLEGUIDE: JSON.stringify(true),

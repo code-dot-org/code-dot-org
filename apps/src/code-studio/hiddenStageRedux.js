@@ -80,7 +80,7 @@ export function toggleHidden(scriptName, sectionId, stageId, hidden) {
   };
 }
 
-function setInitialized(hideableAllowed) {
+export function setInitialized(hideableAllowed) {
   return {
     type: SET_INITIALIZED,
     hideableAllowed
