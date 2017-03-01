@@ -7,9 +7,43 @@ import {
   OSX_DEFAULT_PORTS,
   OTHER_BAD_SERIALPORTS
 } from './sampleSerialPorts';
-import {getPreferredPort} from '@cdo/apps/lib/kits/maker/portScanning';
+import ChromeSerialPort from './FakeChromeSerialPort';
+import {
+  findPortWithViableDevice,
+  getPreferredPort
+} from '@cdo/apps/lib/kits/maker/portScanning';
 
 describe("Maker Toolkit", function () {
+  describe(`findPortWithViableDevice()`, () => {
+    // Testing against FakeChromeSerialPort.js
+    afterEach(() => {
+      ChromeSerialPort.test_reset();
+    });
+
+    it('resolves with a port if a viable device is found', done => {
+      ChromeSerialPort.test_setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
+      findPortWithViableDevice()
+          .then(port => {
+            expect(port).to.equal('COM5');
+            done();
+          })
+          .catch(done);
+    });
+
+    it('rejects if no viable device is found', done => {
+      ChromeSerialPort.test_setDeviceList(OTHER_BAD_SERIALPORTS);
+      findPortWithViableDevice()
+          .then(port => {
+            done(new Error('Expected promise to reject, but it resolved to ' + port));
+          })
+          .catch(err => {
+            expect(err.message).to.equal('Did not find a usable device on a serial port.');
+            done();
+          })
+          .catch(done);
+    });
+  });
+
   describe(`getPreferredPort(portList)`, () => {
     it('picks out an Adafruit Circuit Playground if there are multiple ports', () => {
       CIRCUIT_PLAYGROUND_PORTS.forEach(circuitPlaygroundPort => {
