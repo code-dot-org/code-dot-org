@@ -3,9 +3,6 @@ import { UnconnectedProgressLesson as ProgressLesson } from './ProgressLesson';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import { fakeLesson, fakeLevels } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
-
-experiments.setEnabled('progressRedesign');
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
@@ -23,6 +20,8 @@ const defaultProps = {
       name: 'Last progression'
     },
   ],
+  showTeacherInfo: false,
+  viewAs: ViewType.Teacher,
   lessonIsVisible: () => true,
   lessonLockedForSection: () => false
 };

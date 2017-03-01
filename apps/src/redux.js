@@ -61,16 +61,29 @@ if (IN_UNIT_TEST) {
   };
 }
 
+if (IN_STORYBOOK) {
+  // Storybooks need the ability to create multiple distinct stores instead of
+  // using a singletone
+  module.exports.createStoreWithReducers = createStoreWithReducers;
+}
+
 /**
  * Get a reference to our redux store. If it doesn't exist yet, create it.
  */
 export function getStore() {
   if (!reduxStore) {
-    reduxStore = createStore(Object.keys(globalReducers).length > 0 ?
-                             redux.combineReducers(globalReducers) : s => s);
+    reduxStore = createStoreWithReducers();
   }
 
   return reduxStore;
+}
+
+/**
+ * Create our store
+ */
+function createStoreWithReducers() {
+  return createStore(Object.keys(globalReducers).length > 0 ?
+    redux.combineReducers(globalReducers) : s => s);
 }
 
 /**
