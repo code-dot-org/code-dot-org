@@ -41,7 +41,11 @@ class ChannelsApi < Sinatra::Base
   get '/v3/channels' do
     dont_cache
     content_type :json
-    StorageApps.new(storage_id('user')).to_a.to_json
+    begin
+      StorageApps.new(storage_id('user')).to_a.to_json
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
   end
 
   #
@@ -60,7 +64,11 @@ class ChannelsApi < Sinatra::Base
     storage_app = StorageApps.new(storage_id('user'))
 
     if src_channel
-      data = storage_app.get(src_channel)
+      begin
+        data = storage_app.get(src_channel)
+      rescue ArgumentError, OpenSSL::Cipher::CipherError
+        bad_request
+      end
       data['name'] = "Remix: #{data['name']}"
       data['hidden'] = false
       data['frozen'] = false
@@ -87,7 +95,11 @@ class ChannelsApi < Sinatra::Base
   get %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
     content_type :json
-    StorageApps.new(storage_id('user')).get(id).to_json
+    begin
+      StorageApps.new(storage_id('user')).get(id).to_json
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
   end
 
   #
@@ -97,7 +109,11 @@ class ChannelsApi < Sinatra::Base
   #
   delete %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
-    StorageApps.new(storage_id('user')).delete(id)
+    begin
+      StorageApps.new(storage_id('user')).delete(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
     no_content
   end
   post %r{/v3/channels/([^/]+)/delete$} do |_name|
@@ -117,7 +133,11 @@ class ChannelsApi < Sinatra::Base
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
-    value = StorageApps.new(storage_id('user')).update(id, value, request.ip)
+    begin
+      value = StorageApps.new(storage_id('user')).update(id, value, request.ip)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
 
     dont_cache
     content_type :json
@@ -152,8 +172,11 @@ class ChannelsApi < Sinatra::Base
   get %r{/v3/channels/([^/]+)/abuse$} do |id|
     dont_cache
     content_type :json
-
-    value = StorageApps.new(storage_id('user')).get_abuse(id)
+    begin
+      value = StorageApps.new(storage_id('user')).get_abuse(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
     {abuse_score: value }.to_json
   end
 
@@ -165,8 +188,11 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/abuse$} do |id|
     dont_cache
     content_type :json
-
-    value = StorageApps.new(storage_id('user')).increment_abuse(id)
+    begin
+      value = StorageApps.new(storage_id('user')).increment_abuse(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
     {abuse_score: value }.to_json
   end
 
@@ -181,8 +207,11 @@ class ChannelsApi < Sinatra::Base
 
     dont_cache
     content_type :json
-
-    value = StorageApps.new(storage_id('user')).reset_abuse(id)
+    begin
+      value = StorageApps.new(storage_id('user')).reset_abuse(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
     {abuse_score: value }.to_json
   end
   post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
