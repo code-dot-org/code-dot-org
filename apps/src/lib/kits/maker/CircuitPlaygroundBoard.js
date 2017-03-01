@@ -9,6 +9,9 @@ import {
 } from './PlaygroundComponents';
 import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 
+// Polyfill node's process.hrtime for the browser, gets used by johnny-five.
+process.hrtime = require('browser-process-hrtime');
+
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
 

@@ -1,4 +1,4 @@
-import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
+import {ensureAppInstalled, getDevicePortName} from '@cdo/apps/lib/kits/maker/BoardController';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import React from 'react';
@@ -67,7 +67,7 @@ const BoardSetupStatus = React.createClass({
         .then(() => this.spin(STATUS_APP_INSTALLED))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() => {
-          return BoardController.ensureAppInstalled()
+          return ensureAppInstalled()
               .then(() => this.succeed(STATUS_APP_INSTALLED))
               .catch(error => this.fail(STATUS_APP_INSTALLED));
         })
@@ -76,7 +76,7 @@ const BoardSetupStatus = React.createClass({
         .then(() => this.spin(STATUS_BOARD_PLUG))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() => {
-          return BoardController.getDevicePortName()
+          return getDevicePortName()
               .then(usablePort => {
                 portName = usablePort;
                 this.succeed(STATUS_BOARD_PLUG);
