@@ -198,6 +198,39 @@ describe('CircuitPlaygroundBoard', () => {
     });
   });
 
+  describe(`onBoardEvent(component, event, callback)`, () => {
+    it('exists', () => {
+      expect(board.onBoardEvent).to.be.a('function');
+    });
+
+    it('forwards the call to the component', () => {
+      const fakeEventEmitter = { on: sinon.spy() };
+      const event = 'someEvent';
+      const callback = () => {};
+      board.onBoardEvent(fakeEventEmitter, event, callback);
+      expect(fakeEventEmitter.on).to.have.been.calledWith(event, callback);
+    });
+
+    describe(`event aliases`, () => {
+      let fakeEventEmitter, callback;
+
+      beforeEach(function () {
+        fakeEventEmitter = { on: sinon.spy() };
+        callback = () => {};
+      });
+
+      it(`aliases 'tap:single' event to 'singleTap'`, function () {
+        board.onBoardEvent(fakeEventEmitter, 'singleTap', callback);
+        expect(fakeEventEmitter.on).to.have.been.calledWith('tap:single', callback);
+      });
+
+      it(`aliases 'tap:double' event to 'doubleTap'`, function () {
+        board.onBoardEvent(fakeEventEmitter, 'doubleTap', callback);
+        expect(fakeEventEmitter.on).to.have.been.calledWith('tap:double', callback);
+      });
+    });
+  });
+
   it(`forwards a 'disconnect' event`, done => {
     board.connect().then(() => {
       const spy = sinon.spy();

@@ -7,6 +7,7 @@ import {
   initializeCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
+import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
 
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
@@ -108,6 +109,17 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   analogRead(pin, callback) {
     return this.fiveBoard_.analogRead(pin, callback);
+  }
+
+  onBoardEvent(...args) {
+    CircuitPlaygroundBoard.onBoardEvent(...args);
+  }
+
+  static onBoardEvent(component, event, callback) {
+    if (BOARD_EVENT_ALIASES[event]) {
+      event = BOARD_EVENT_ALIASES[event];
+    }
+    component.on(event, callback);
   }
 
   /**
