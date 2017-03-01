@@ -77,7 +77,7 @@ module RakeUtils
     status
   end
 
-  def self.system_with_hipchat_logging(*args)
+  def self.system_with_chat_logging(*args)
     command = command_(*args)
     ChatClient.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
     system_ command
