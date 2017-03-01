@@ -30,7 +30,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return new Promise((resolve, reject) => {
       const serialPort = CircuitPlaygroundBoard.openSerialPort(this.portName_);
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
-      const board = new five.Board({io: playground, repl: false});
+      const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.fiveBoard_ = board;
         resolve();
@@ -47,6 +47,26 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.fiveBoard_.io.reset();
     }
     this.fiveBoard_ = null;
+  }
+
+  pinMode(pin, modeConstant) {
+    this.fiveBoard_.pinMode(pin, modeConstant);
+  }
+
+  digitalWrite(pin, value) {
+    this.fiveBoard_.digitalWrite(pin, value);
+  }
+
+  digitalRead(pin, callback) {
+    return this.fiveBoard_.digitalRead(pin, callback);
+  }
+
+  analogWrite(pin, value) {
+    this.fiveBoard_.analogWrite(pin, value);
+  }
+
+  analogRead(pin, callback) {
+    return this.fiveBoard_.analogRead(pin, callback);
   }
 
   /**

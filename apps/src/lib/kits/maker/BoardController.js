@@ -140,23 +140,23 @@ export default class BoardController {
   }
 
   pinMode(pin, modeConstant) {
-    this.cdoBoard_.fiveBoard_.pinMode(pin, modeConstant);
+    this.cdoBoard_.pinMode(pin, modeConstant);
   }
 
   digitalWrite(pin, value) {
-    this.cdoBoard_.fiveBoard_.digitalWrite(pin, value);
+    this.cdoBoard_.digitalWrite(pin, value);
   }
 
   digitalRead(pin, callback) {
-    return this.cdoBoard_.fiveBoard_.digitalRead(pin, callback);
+    return this.cdoBoard_.digitalRead(pin, callback);
   }
 
   analogWrite(pin, value) {
-    this.cdoBoard_.fiveBoard_.analogWrite(pin, value);
+    this.cdoBoard_.analogWrite(pin, value);
   }
 
   analogRead(pin, callback) {
-    return this.cdoBoard_.fiveBoard_.analogRead(pin, callback);
+    return this.cdoBoard_.analogRead(pin, callback);
   }
 
   onBoardEvent(component, event, callback) {
