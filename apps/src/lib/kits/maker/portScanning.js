@@ -26,37 +26,36 @@ export const CIRCUIT_PLAYGROUND_PID = '0x8011';
 export function findPortWithViableDevice() {
   return Promise.resolve()
       .then(ensureAppInstalled)
-      .then(() => new Promise((resolve, reject) => {
-        ChromeSerialPort.list((error, list) => {
-          if (error) {
-            reject(error);
-            return;
-          }
-
-          const bestOption = getPreferredPort(list);
-          if (bestOption) {
-            resolve(bestOption.comName);
-          } else {
-            reject(new Error('Did not find a usable device on a serial port.'));
-          }
-        });
+      .then(listSerialDevices)
+      .then(list => new Promise((resolve, reject) => {
+        const bestOption = getPreferredPort(list);
+        if (bestOption) {
+          resolve(bestOption.comName);
+        } else {
+          reject(new Error('Did not find a usable device on a serial port.'));
+        }
       }));
 }
 
+
 /**
- * Check whether the Code.org Serial Connector Chrome extension is usable.
- * @returns {Promise}
+ * Check whether the Code.org Serial Connector Chrome extension is available.
+ * @returns {Promise} Resolves if installed, rejects if not.
  */
 export function ensureAppInstalled() {
   ChromeSerialPort.extensionId = CHROME_APP_ID;
   return new Promise((resolve, reject) => {
-    ChromeSerialPort.isInstalled(function (error) {
-      if (error) {
-        reject(error);
-      } else {
-        resolve();
-      }
-    });
+    ChromeSerialPort.isInstalled((error) => error ? reject(error) : resolve());
+  });
+}
+
+/**
+ * Ask the serial port bridge extension for a list of connected devices.
+ * @returns {Promise.<Array.<SerialPortInfo>>}
+ */
+function listSerialDevices() {
+  return new Promise((resolve, reject) => {
+    ChromeSerialPort.list((error, list) => error ? reject(error) : resolve(list));
   });
 }
 
