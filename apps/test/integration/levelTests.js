@@ -17,6 +17,8 @@ require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
 import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
+import runState from '@cdo/apps/redux/runState';
+import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -110,7 +112,7 @@ describe('Level tests', function () {
   beforeEach(function () {
     // Recreate our redux store so that we have a fresh copy
     stubRedux();
-    registerReducers({stageLock});
+    registerReducers({stageLock, runState, ...jsDebuggerReducers});
 
     tickInterval = window.setInterval(function () {
       if (clock) {

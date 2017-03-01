@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
@@ -11,6 +10,56 @@ class UserTest < ActiveSupport::TestCase
   test 'make_teachers_21' do
     teacher = create :teacher, birthday: Time.now - 18.years
     assert_equal '21+', teacher.age
+  end
+
+  # Disable this test if and when we do require teachers to complete school data
+  test 'school info should not be validated' do
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: nil
+    }
+    assert_creates(User) do
+      create :teacher, school_info_attributes: school_attributes
+    end
+  end
+
+  test 'ensure school info values are saved correctly when state and zip are passed in different ways' do
+    # state and zip fields are usually passed as school_state and school_zip, but should
+    # be accepted both ways when preprocessed
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      school_state: 'CA',
+      school_zip: '94107'
+    }
+    teacher = create :teacher, school_info_attributes: school_attributes
+    assert teacher.school_info.state == 'CA', teacher.school_info.state
+    assert teacher.school_info.zip == 94107, teacher.school_info.zip
+
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: 'CA',
+      zip: '94107'
+    }
+    teacher = create :teacher, school_info_attributes: school_attributes
+    assert teacher.school_info.state == 'CA', teacher.school_info.state
+    assert teacher.school_info.zip == 94107, teacher.school_info.zip
+  end
+
+  test 'identical school info should not be duplicated in the database' do
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: 'CA'
+    }
+    teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
+    attr = teachers[0].process_school_info_attributes(school_attributes)
+    school_info = SchoolInfo.where(attr).first
+    assert teachers[0].school_info == school_info, "Teacher info: #{teachers[0].school_info.inspect} not equal to #{school_info.inspect}"
+    assert teachers[1].school_info == school_info, "Teacher info: #{teachers[1].school_info.inspect} not equal to #{school_info.inspect}"
+    assert SchoolInfo.where(attr).count == 1
   end
 
   test 'normalize_email' do
@@ -270,32 +319,26 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], user.gallery_activities
 
     assert_does_not_create(GalleryActivity) do
-      create(:activity, user: user)
       create(:user_level, user: user)
     end
 
     ga2 = nil
     assert_creates(GalleryActivity) do
       user_level2 = create(:user_level, user: user)
-      activity2 = create(:activity, user: user)
       ga2 = GalleryActivity.create!(
-        activity_id: activity2.id,
         user: user,
         user_level: user_level2
       )
     end
 
     assert_does_not_create(GalleryActivity) do
-      create(:activity, user: user)
       create(:user_level, user: user)
     end
 
     ga4 = nil
     assert_creates(GalleryActivity) do
       user_level4 = create(:user_level, user: user)
-      activity4 = create(:activity, user: user)
       ga4 = GalleryActivity.create!(
-        activity_id: activity4.id,
         user: user,
         user_level: user_level4
       )
@@ -939,7 +982,7 @@ class UserTest < ActiveSupport::TestCase
       password: "[FILTERED]",
       password_confirmation: "[FILTERED]",
       current_password: "",
-      locale: "en-us",
+      locale: "en-US",
       gender: "",
       age: "10"
     )
@@ -1639,5 +1682,49 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.update(email: 'valid@example.net')
     refute user.update(email: 'invalid@incomplete')
+  end
+
+  test 'find_or_create_teacher creates new teacher' do
+    admin = create :admin
+
+    params = {
+      email: 'email@example.net',
+      name: 'test user'
+    }
+
+    user = assert_creates(User) do
+      User.find_or_create_teacher params, admin
+    end
+    assert user.teacher?
+    assert_equal admin, user.invited_by
+  end
+
+  test 'find_or_create_teacher finds existing teacher' do
+    admin = create :admin
+    teacher = create :teacher
+
+    params = {
+      email: teacher.email,
+      name: teacher.name
+    }
+
+    found = assert_does_not_create(User) do
+      User.find_or_create_teacher params, admin
+    end
+    assert_equal teacher, found
+  end
+
+  test 'find_or_create_teacher with an invalid email raises ArgumentError' do
+    admin = create :admin
+
+    params = {
+      email: 'invalid',
+      name: 'test user'
+    }
+
+    e = assert_raises ArgumentError do
+      User.find_or_create_teacher params, admin
+    end
+    assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
 end

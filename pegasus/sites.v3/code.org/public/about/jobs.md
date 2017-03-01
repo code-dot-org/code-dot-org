@@ -36,11 +36,8 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Product and Engineering**
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
-- **Professional Learning**
-	- [Program Coordinator](#coord)
 - **Internships**
- 	- [Curriculum Team Intern](#edintern)
- 	- [Fundraising Team Intern](#fundintern)
+  	- [Fundraising Team Intern](#fundintern)
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
@@ -177,59 +174,6 @@ In addition, candidates:
 
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-
-## <a name="coord"href="#coord">Program Coordinator (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for a Program Coordinator to join Code.org’s Professional Learning & Community team. Our PLC team is responsible for the success of Code.org professional development across the U.S. This role will work collaboratively with a team of program managers and coordinators. 
-
-This is a full time, exempt position based in our Seattle office. Duties of this role are focused on providing support to program managers, which includes: 
-
-- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
-- Drafting communications to stakeholders, responding to requests for information, preparing materials for training workshops, distributing materials externally
-- Updating and managing event attendee lists and tracking numbers and teacher activity across programs
-- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-**Experience and Qualifications:**
-
-We are looking for a self-starter, skilled in successfully delivering projects, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Proficiency with Google Apps (Docs, Sheets, Slides, Forms) or the ability to learn these and other new applications quickly is required. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
-
-The ideal candidate has the following qualifications:
-
-- Has a bachelors degree (Computer Science background/experience not required)
-- Ability and willingness to travel up to 20% time 
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="edintern"href="#edintern">Curriculum Team Intern (Seattle, WA)</a>
-
-**Internship Summary:**
-
-We are looking for a Winter/Spring intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
-
-Responsibilities of the may position include: 
-
-- Working closely with the Curriculum team to assist in designing, developing, and writing original curricular materials:lesson plans, formative/summative assessments, videos, answer keys, project exemplars
-- Using in-house content management tools to structure resources
-
-
-**Experience and Qualifications:**
-
-The ideal candidate has experience in computer science and a background in education; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
-
-The candidate should also: 
-
-- Have basic to comprehensive knowledge of computer science (required) 
-- Have some prior curriculum writing experience / activity design experience (required)
-- Proficiency in working with Microsoft Office and Google Docs (required) 
-- Be working to obtain a Bachelor’s degree or higher in Education or Computer Science (preferred)
-
-
-To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="fundintern"href="#fundintern">Fundraising Team Intern (Seattle, WA)</a>

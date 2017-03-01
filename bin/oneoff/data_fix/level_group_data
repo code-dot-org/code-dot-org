@@ -1,9 +1,18 @@
 #!/usr/bin/env ruby
 
-# This script creates a UserLevel for each sublevel of a LevelGroup level
-# (if one does not already exist). Though current production code creates a
-# UserLevel for each sublevel, there was a period of time where this was not the
-# case.
+# This script performs two data migrations related to LevelGroup levels:
+#
+# (1) It migrates LevelSource.data for a LevelGroup level from the format
+#   [{"level_id"=>4840, "result"=>"-1"}, {"level_id"=>4843, "result"=>"3"}]
+# to the format
+#   {"4840"=>{"result"=>"-1", "valid"=>true}, "4843"=>{"result"=>"3", "valid"=>true}}
+# for those using the former format. The latter format was adopted in
+#   https://github.com/code-dot-org/code-dot-org/pull/7874
+# without migrating the old data.
+#
+# (2) It creates a UserLevel for each sublevel of a LevelGroup level (if one
+# does not already exist). Though current production code creates a UserLevel
+# for each sublevel, there was a period of time where this was not the case.
 #
 # The script expects a data file of user_level_id's to (possibly) fix. This list
 # was generated via the following SQL.
@@ -14,6 +23,8 @@
 #     ON user_levels.user_id = user_scripts.user_id
 #       AND user_levels.script_id = user_scripts.script_id
 #   WHERE
+#     user_levels.level_source_id IS NOT NULL
+#   AND
 #     user_scripts.script_id IN (
 #       SELECT script_levels.script_id
 #       FROM script_levels
@@ -41,33 +52,69 @@ require 'digest/md5'
 DATA_FILE = '/tmp/user_level_ids.csv'.freeze
 
 # Validates raw_data and extracts the answer data from it. Raises an exception
-# if raw_data is not of the appropriate format.
+# if raw_data is not of the expected format.
 # @param raw_data [Hash] The LevelGroup value (within LevelSource.data) for a
-#   sublevel.
-# @return [JSON] The JSON to persist in LevelSource.data for the sublevel.
-def get_data(raw_data)
+#   sublevel level_id key.
+# @param user_level_id [Integer] The relevant user_level_id, for logging.
+# @return [String] The string to persist in LevelSource.data for the sublevel.
+def get_data(raw_data, sublevel_level_id)
   unless raw_data.keys == ['result', 'valid']
-    raise "raw_data malformed: #{raw_data}"
+    raise "Malformed raw_data: #{raw_data} (#{user_level_id})."
   end
 
-  return raw_data['result'].to_json
+  return raw_data['result']
 end
 
 # Retrieves the UserLevel and the (JSON-parsed) LevelSource.data associated with
-# a user_level_id. Raises an exception if the UserLevel is missing.
+# user_level_id. Raises an exception if the UserLevel or LevelSource is missing.
 # @param user_level_id [Integer] The ID of the user_level.
-# @return [Array[UserLevel, {nil | Hash}]] An array of a UserLevel and the
-#   corresponding (JSON-parsed) LevelSource.data.
+# @return [Array[UserLevel, Hash]] An array of a UserLevel and the corresponding
+#   (JSON-parsed) LevelSource.data.
 def get_user_level_and_level_source_data(user_level_id)
   user_level = UserLevel.find_by_id(user_level_id)
   unless user_level
-    raise "Missing UserLevel: #{user_level_id}"
+    raise "Missing UserLevel: #{user_level_id}."
   end
 
   level_source = LevelSource.find_by_id(user_level.level_source_id)
-  level_source_data = level_source ? JSON.parse(level_source.data) : nil
+  unless level_source
+    raise "Missing LevelSource: #{user_level.level_source_id} "\
+      "(#{user_level_id})."
+  end
+  level_source_data = JSON.parse(level_source.data)
 
   [user_level, level_source_data]
+end
+
+# For LevelGroup levels, this method migrates old format LevelSource data
+# (an array) to the new format (a hash). For an example of the old and new
+# format, see the file comment.
+# @param user_level [UserLevel] The LevelGroup UserLevel.
+# @param level_source_data [Object] The associated JSON-parsed LevelSource.data.
+def migrate_level_group_user_level(user_level, level_source_data)
+  return if level_source_data.is_a? Hash
+
+  new_data = {}
+  level_source_data.each do |sublevel_data_hash|
+    new_data[sublevel_data_hash['level_id']] = {
+      result: sublevel_data_hash['result'],
+      # Lacking better, we default to calling the result valid.
+      valid: true
+    }
+  end
+  new_data_md5 = Digest::MD5.hexdigest new_data
+
+  level_source = LevelSource.
+    create_with(data: new_data).
+    find_or_create_by(
+      md5: new_data_md5,
+      level_id: user_level.level_id
+    )
+  user_level.level_source_id = level_source.id
+
+  user_level.save!(touch: false)
+
+  new_data
 end
 
 # Creates a UserLevel for each sublevel in the LevelGroup UserLevel, if one does
@@ -76,7 +123,7 @@ end
 # @param sublevel_level_id [Integer] The level_id of the sublevel.
 # @param sublevel_raw_data [Hash] The data for the sublevel LevelSource.
 def create_sublevel_user_level(user_level, sublevel_level_id, sublevel_raw_data)
-  # Determine if there is an existing sublevel UserLevel, continuing if so.
+  # Determine if there is an existing sublevel UserLevel, doing nothing if so.
   sublevel_user_level = UserLevel.
     where(
       user_id: user_level.user_id,
@@ -87,8 +134,8 @@ def create_sublevel_user_level(user_level, sublevel_level_id, sublevel_raw_data)
   return if sublevel_user_level
 
   # Before creating the sublevel UserLevel, verify the existence of an
-  # appropriate LevelSource, creating one if not.
-  data = get_data sublevel_raw_data
+  # appropriate LevelSource, creating the LevelSource if it does not exist.
+  data = get_data sublevel_raw_data, user_level.id
   md5 = Digest::MD5.hexdigest data
   sublevel_level_source = LevelSource.
     create_with(data: data).
@@ -126,7 +173,8 @@ def main
     user_level, level_source_data = get_user_level_and_level_source_data(
       user_level_id
     )
-    next unless user_level && level_source_data
+
+    level_source_data = migrate_level_group_user_level user_level, level_source_data
 
     ActiveRecord::Base.transaction do
       level_source_data.each do |sublevel_level_id, sublevel_level_raw_data|

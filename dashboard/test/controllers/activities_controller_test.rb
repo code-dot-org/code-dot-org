@@ -157,7 +157,7 @@ class ActivitiesControllerTest < ActionController::TestCase
         script_level_id: @script_level.id,
         level_id: @script_level.level.id,
         user_agent: 'Rails Testing',
-        locale: :'en-us'
+        locale: :'en-US'
       }],
       slogger.records
     )
@@ -429,7 +429,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
-    assert_nil GalleryActivity.last.activity_id
     assert_equal UserLevel.last.id, GalleryActivity.last.user_level_id
     assert_equal LevelSource.last.id,  GalleryActivity.last.level_source_id
   end
@@ -460,7 +459,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
-    assert_nil GalleryActivity.last.activity_id
   end
 
   test "logged in milestone should not save to gallery when passing a level with undefined impressiveness" do
@@ -615,8 +613,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
       save_to_gallery_url: "/gallery"\
-        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
-        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -658,8 +655,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
       save_to_gallery_url: "/gallery"\
-        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
-        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -694,8 +690,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
       save_to_gallery_url: "/gallery"\
-        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
-        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -732,8 +727,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
       save_to_gallery_url: "/gallery"\
-        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
-        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -770,8 +764,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
       save_to_gallery_url: "/gallery"\
-        "?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}"\
-        "&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -1176,7 +1169,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     stage = create :stage, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
+    script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{\"maze 1\": {\"active\": false}}"
 
     post :milestone,
       params: @milestone_params.merge(

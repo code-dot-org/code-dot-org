@@ -14,7 +14,6 @@
 #
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require 'cdo/hip_chat'
 require 'cdo/properties'
 
 # Provides helper methods (analyze_day_fast and add_hashes) as well as the

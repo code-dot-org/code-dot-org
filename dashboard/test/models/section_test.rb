@@ -26,6 +26,18 @@ class SectionTest < ActiveSupport::TestCase
     assert_match letters_without_vowels_regex, s3.code
   end
 
+  test 'name is required' do
+    section = Section.new user: create(:teacher)
+    refute section.valid?
+    assert_equal ['Name is required'], section.errors.full_messages
+  end
+
+  test 'user is required' do
+    section = Section.new name: 'a section'
+    refute section.valid?
+    assert_equal ['User is required'], section.errors.full_messages
+  end
+
   test "user must be teacher" do
     teacher = create(:teacher)
     student = create(:student)

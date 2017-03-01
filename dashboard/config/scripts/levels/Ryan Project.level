@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "free_play": "false",
+    "free_play": "true",
     "disable_sharing": "false",
     "coordinate_grid_background": "false",
     "edge_collisions": "false",
@@ -36,6 +36,8 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

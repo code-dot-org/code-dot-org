@@ -67,4 +67,20 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
       )
     end
   end
+
+  def summarize
+    {
+      courseName: plc_course.name,
+      link: Rails.application.routes.url_helpers.course_path(plc_course.get_url_name),
+      status: status,
+      courseUnits: plc_unit_assignments.map do |unit_assignment|
+        {
+          unitName: unit_assignment.plc_course_unit.unit_name,
+          link: Rails.application.routes.url_helpers.script_path(unit_assignment.plc_course_unit.script),
+          moduleAssignments: unit_assignment.summarize_progress,
+          status: unit_assignment.status
+        }
+      end
+    }
+  end
 end

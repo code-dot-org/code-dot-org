@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ClientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -195,17 +196,30 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const container = document.createElement('div');
     const hintsUsed = options.response.hints_used +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
+    const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
+    const actualBlocks = this.getNumCountableBlocks();
+
+    const progress = experiments.isEnabled('g.stageprogress') ?
+      this.calculateStageProgress(
+        actualBlocks <= idealBlocks,
+        hintsUsed,
+        options.response.level_id) :
+      {};
 
     document.body.appendChild(container);
     ReactDOM.render(
       <AchievementDialog
         puzzleNumber={options.level.puzzle_number || 0}
-        idealBlocks={this.studioApp_.IDEAL_BLOCK_NUM}
-        actualBlocks={this.getNumCountableBlocks()}
+        idealBlocks={idealBlocks}
+        actualBlocks={actualBlocks}
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={options.onContinue}
         showStageProgress={experiments.isEnabled('g.stageprogress')}
+        oldStageProgress={progress.oldStageProgress}
+        newPassedProgress={progress.newPassedProgress}
+        newPerfectProgress={progress.newPerfectProgress}
+        newHintUsageProgress={progress.newHintUsageProgress}
       />, container);
     return;
   }
@@ -368,6 +382,67 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+FeedbackUtils.prototype.calculateStageProgress = function (
+    isPerfect, hintsUsed, currentLevelId) {
+  const stage = this.studioApp_.reduxStore.getState().progress.stages[0];
+  const scriptName = stage.script_name;
+  const levels = stage.levels;
+  const progress = ClientState.allLevelsProgress();
+  const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
+
+  let numPassed = 0,
+    numPerfect = 0,
+    numZeroHints = 0,
+    numOneHint = 0;
+  for (let i = 0; i < levels.length; i++) {
+    if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
+      continue;
+    }
+    const levelProgress = ClientState.bestProgress(levels[i].ids, scriptName, progress);
+    if (levelProgress > TestResults.MINIMUM_PASS_RESULT) {
+      numPassed++;
+      if (levelProgress > TestResults.MINIMUM_OPTIMAL_RESULT) {
+        numPerfect++;
+      }
+      const numHintsUsed = oldFinishedHints.filter(hint => levels[i].ids.indexOf(hint.levelId) !== -1).length;
+      if (numHintsUsed === 0) {
+        numZeroHints++;
+      } else if (numHintsUsed === 1) {
+        numOneHint++;
+      }
+    }
+  }
+
+  const passedScore = numPassed / levels.length;
+  const perfectScore = numPerfect / levels.length;
+  const hintScore = numZeroHints / levels.length +
+    0.5 * numOneHint / levels.length;
+  const oldStageProgress = 0.3 * passedScore +
+    0.4 * perfectScore +
+    0.3 * hintScore;
+
+  const newPassedLevels = 1;
+  const newPerfectLevels = isPerfect ? 1 : 0;
+
+  let newHintUsageLevels = 0;
+  if (hintsUsed === 0) {
+    newHintUsageLevels = 1;
+  } else if (hintsUsed === 1) {
+    newHintUsageLevels = 0.5;
+  }
+
+  const newPassedProgress = newPassedLevels * 0.3 / levels.length;
+  const newPerfectProgress = newPerfectLevels * 0.4 / levels.length;
+  const newHintUsageProgress = newHintUsageLevels * 0.3 / levels.length;
+
+  return {
+    oldStageProgress,
+    newPassedProgress,
+    newPerfectProgress,
+    newHintUsageProgress,
+  };
 };
 
 /**

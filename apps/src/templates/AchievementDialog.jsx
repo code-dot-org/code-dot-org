@@ -1,9 +1,12 @@
+import { Motion, StaggeredMotion, spring } from 'react-motion';
 import React from 'react';
 import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
 import locale from '@cdo/locale';
 
+const ANIMATION_OVERLAP = 0.2;
+const MIN_PROGRESS_WIDTH = 22;
 const MAX_PROGRESS_WIDTH = 400;
 
 const styles = {
@@ -115,6 +118,10 @@ const AchievementDialog = Radium(React.createClass({
     assetUrl: React.PropTypes.func,
     onContinue: React.PropTypes.func,
     showStageProgress: React.PropTypes.bool,
+    oldStageProgress: React.PropTypes.number,
+    newPassedProgress: React.PropTypes.number,
+    newPerfectProgress: React.PropTypes.number,
+    newHintUsageProgress: React.PropTypes.number,
   },
 
   getInitialState() {
@@ -153,9 +160,9 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
-  achievementRow(flag, message) {
+  achievementRow(flag, message, style) {
     return (
-      <p style={styles.achievement.row}>
+      <p style={{...styles.achievement.row, ...style}}>
         {this.icon(flag)}
         <span style={styles.achievement.text}>{message}</span>
       </p>
@@ -176,8 +183,9 @@ const AchievementDialog = Radium(React.createClass({
     return tooManyHints ? locale.usingHints() : locale.withoutHints();
   },
 
-  stageProgress() {
-    return 0.75;
+  progressToBarWidth(progress) {
+    return MIN_PROGRESS_WIDTH +
+      progress * (MAX_PROGRESS_WIDTH - MIN_PROGRESS_WIDTH);
   },
 
   render() {
@@ -198,26 +206,69 @@ const AchievementDialog = Radium(React.createClass({
         handleClose={this.handleClose.bind(this, !tooManyBlocks)}
         assetUrl={this.props.assetUrl}
       >
-        <div style={styles.checkmarks}>
-          {this.achievementRow(true, locale.puzzleCompleted())}
-          {this.achievementRow(!tooManyBlocks, this.blocksUsedMessage(blockDelta, params))}
-          {this.achievementRow(!tooManyHints, this.hintsMessage(tooManyHints))}
-        </div>
-        {this.props.showStageProgress &&
-          <div style={styles.stageRewards}>
-            <div style={styles.stageRewardsTitle}>
-              {locale.stageRewards()}
-            </div>
-            <div style={styles.progressBackground}>
-              <div
-                style={{
-                  ...styles.progressForeground,
-                  width: this.stageProgress() * MAX_PROGRESS_WIDTH
-                }}
-              />
-            </div>
-          </div>
-        }
+        <StaggeredMotion
+          defaultStyles={Array(4).fill({ progress: 0 })}
+          styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
+            return i === 0 ?
+              { progress: spring(1, { stiffness: 50, damping: 25 }) } :
+              { progress: spring(
+                  prevInterpolatedStyles[i - 1].progress > (1 - ANIMATION_OVERLAP) ? 1 : 0,
+                  { stiffness: 30, damping: 25 }),
+              };
+          })}
+        >
+          {interpolatingValues => {
+              const interpolatingStyles =
+                interpolatingValues.map(val => ({ opacity: val.progress }));
+              return (<div>
+                <div style={styles.checkmarks}>
+                  {this.achievementRow(
+                      true,
+                      locale.puzzleCompleted(),
+                      interpolatingStyles[1])}
+                  {this.achievementRow(
+                      !tooManyBlocks,
+                      this.blocksUsedMessage(blockDelta, params),
+                      interpolatingStyles[2])}
+                  {this.achievementRow(
+                      !tooManyHints,
+                      this.hintsMessage(tooManyHints),
+                      interpolatingStyles[3])}
+                </div>
+                {this.props.showStageProgress &&
+                  <div style={styles.stageRewards}>
+                    <div style={styles.stageRewardsTitle}>
+                      {locale.stageRewards()}
+                    </div>
+                    <div style={styles.progressBackground}>
+                      <Motion
+                        defaultStyle={{
+                          width: this.progressToBarWidth(this.props.oldStageProgress)
+                        }}
+                        style={{
+                          width: spring(this.progressToBarWidth(
+                              this.props.oldStageProgress +
+                              (interpolatingValues[1].progress > 0 ? this.props.newPassedProgress : 0) +
+                              (interpolatingValues[2].progress > 0 ? this.props.newPerfectProgress : 0) +
+                              (interpolatingValues[3].progress > 0 ? this.props.newHintUsageProgress : 0)),
+                            { stiffness: 70, damping: 25 })
+                        }}
+                      >
+                        {interpolatingStyle =>
+                          <div
+                            style={{
+                              ...styles.progressForeground,
+                              ...interpolatingStyle,
+                            }}
+                          />}
+                      </Motion>
+                    </div>
+                  </div>
+                }
+              </div>);
+            }
+          }
+        </StaggeredMotion>
         <div style={styles.footer}>
           <p style={styles.feedbackMessage}>{feedbackMessage}</p>
 
