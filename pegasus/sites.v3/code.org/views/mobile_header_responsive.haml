@@ -3,7 +3,141 @@
 #pageheader
   .container_responsive
     #left
-      %a{:href=>"/"}
+      %a{:href=>'/'}
         %img#logo{:src=>'/images/logo.png'}
     #right
-      %i{:class=> "fa fa-bars" }
+
+  %nav.navbar.navbar-default.mobile-feature{:style => "background-color: white; border: 1px solid white; float: right; width: 50%;"}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          #nav-icon
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+      #navbar.navbar-collapse.collapse
+        %ul.nav.navbar-nav
+          %li{:style => "position:relative;"}
+            %a{:href => "/student"} Learn
+            %a{:href => "/educate"} Teach
+            %a{:href => "/promote"} Stats
+            %a{:href => "/help"} Help Us
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              About
+              %span.caret
+            %ul.dropdown-menu
+              %li{:style => "position:relative;"}
+                %a{:href => "/about"} About Us
+                %a{:href => "/about/leadership"} Leadership
+                %a{:href => "/about/donors"} Donors
+                %a{:href => "/about/partners"} Partners
+                %a{:href => "/about/team"} Full Team
+                %a{:href => "/about/news"} Newsroom
+                %a{:href => "/about/evaluation"} Evaluation
+                %a{:href => "/about/jobs"} Jobs
+                %a{:href => "/contact"} Contact Us
+                %a{:href => "/faq"} FAQs
+:css
+  ul{
+    list-style-type: none !important;
+  }
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+  }
+
+  .navbar-default .navbar-toggle{
+    background-color: white;
+    margin-top: -42px;
+    border: 1px solid black;
+  }
+
+  @media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+  }
+
+  #nav-icon{
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav-icon span:nth-child(1) {
+    top: 0px;
+  }
+
+  #nav-icon span:nth-child(2),#nav-icon span:nth-child(3) {
+    top: 18px;
+  }
+
+  #nav-icon span:nth-child(4) {
+    top: 36px;
+  }
+
+  #nav-icon.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  #nav-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #nav-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #nav-icon.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+:javascript
+
+  $(document).ready(function(){
+  	$('#nav-icon').click(function(){
+  		$(this).toggleClass('open');
+  	});
+  });
