@@ -43,9 +43,43 @@
             %a{:href => "/faq"} FAQs
 
       %a#hoc-nav-hamburger{href: "#"}
-        &#9776;
+        %span
 
 :css
+  #hoc-nav-hamburger { cursor: pointer; padding: 10px 35px 16px 0px; }
+
+  #hoc-nav-hamburger span, #hoc-nav-hamburger span:before, #hoc-nav-hamburger span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+  #hoc-nav-hamburger span:before {
+    top: -10px;
+  }
+  #hoc-nav-hamburger span:after {
+    bottom: -10px;
+  }
+
+  #hoc-nav-hamburger span, #hoc-nav-hamburger span:before, #hoc-nav-hamburger span:after {
+    transition: all 500ms ease-in-out;
+  }
+  #hoc-nav-hamburger.active span {
+    background-color: transparent;
+  }
+  #hoc-nav-hamburger.active span:before, #hoc-nav-hamburger.active span:after {
+    top: 0;
+  }
+  #hoc-nav-hamburger.active span:before {
+    transform: rotate(45deg);
+  }
+  #hoc-nav-hamburger.active span:after {
+    transform: rotate(-45deg);
+  }
   #hoc-nav {
     display: inline-block;
     text-align: left;
@@ -160,21 +194,24 @@
 
   $(function() {
 
-    // When nav hamburger is clicked, toggle responsive menu
     $('#hoc-nav-hamburger').click(function(e){
         $('#hoc-nav ul').toggleClass('hide-responsive-menu');
         e.preventDefault();
     });
-    //When ABOUT is clicked, show more about navigation options
+
     $('#about-more').click(function(e){
         $('#hoc-nav ul span').toggleClass('hide-about');
         e.preventDefault();
     });
 
-    // When clicking anywhere outside the responsive menus, dismiss them
     $(document).click(function(e) {
       if(!$(e.target).closest('#hoc-nav').length) {
         $('#hoc-nav ul').addClass('hide-responsive-menu');
       }
+    });
+
+    document.querySelector( "#hoc-nav-hamburger" )
+      .addEventListener( "click", function() {
+      this.classList.toggle( "active" );
     });
   });
