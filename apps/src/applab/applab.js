@@ -15,7 +15,6 @@ import AppLabView from './AppLabView';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
-import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
 import AppStorage from './appStorage';
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
@@ -44,8 +43,6 @@ import * as applabConstants from './constants';
 const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
-import {connectToMakerBoard} from '../lib/kits/maker/BoardController';
-import {injectBoardController} from '../lib/kits/maker/commands';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
@@ -62,6 +59,9 @@ import {
   actions as jsDebugger,
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import connectToMakerBoard from '../lib/kits/maker/connectToMakerBoard';
+import * as makerCommands from '../lib/kits/maker/commands';
+import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
 var project = require('@cdo/apps/code-studio/initApp/project');
 
 var ResultType = studioApp.ResultType;
@@ -1199,7 +1199,7 @@ Applab.execute = function () {
     connectToMakerBoard()
         .then(board => {
           board.installOnInterpreter(codegen, Applab.JSInterpreter);
-          injectBoardController(board);
+          makerCommands.injectBoardController(board);
           board.once('disconnect', () => studioApp.resetButtonClick());
           makerBoard = board;
         })

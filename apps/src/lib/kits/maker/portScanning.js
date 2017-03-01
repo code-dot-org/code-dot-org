@@ -1,9 +1,5 @@
-/**
- * @file Serialport scanning and board controller creation for Maker Toolkit.
- */
-
+/** @file Serialport scanning logic for Maker Toolkit */
 import ChromeSerialPort from 'chrome-serialport';
-import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -21,18 +17,6 @@ export const ADAFRUIT_VID = '0x239a';
 
 /** @const {string} The Circuit Playground product id as reported by Circuit playground boards */
 export const CIRCUIT_PLAYGROUND_PID = '0x8011';
-
-/**
- * Establish a connection to a maker board and return a controller for it.
- * @returns {Promise.<CircuitPlaygroundBoard>}}
- */
-export function connectToMakerBoard() {
-  return Promise.resolve()
-      .then(ensureAppInstalled)
-      .then(getDevicePortName)
-      .then(port => new CircuitPlaygroundBoard(port))
-      .then(board => board.connect().then(() => board));
-}
 
 /**
  * Check whether the Code.org Serial Connector Chrome extension is usable.
