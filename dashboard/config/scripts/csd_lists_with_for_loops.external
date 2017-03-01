@@ -3,7 +3,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Lists with For Loops
 
-# Print an Array with a *for* Loop
+## Print an Array with a *for* Loop
 
 As you know, we can use variables as indexes in an array.  We can take advantage of this fact to create a `for` **loop which visits every index in an array**.
 
