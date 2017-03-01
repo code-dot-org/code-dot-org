@@ -15,7 +15,8 @@ class SurveyResultsController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list
-  # through. Also sanitize the parameters to only contain UTF-8.
+  # through. Also sanitize the parameters to only contain UTF-8 and truncate as
+  # necessary.
   def survey_result_params
     whitelisted_params = params.require(:survey).
       permit(SurveyResult::ALL_ATTRS.map(&:to_sym) + [:kind])
@@ -25,6 +26,11 @@ class SurveyResultsController < ApplicationController
         invalid: :replace,
         undef: :replace
       )
+    end
+    if whitelisted_params[:nps_comment] &&
+      whitelisted_params[:nps_comment].length > 1000
+      whitelisted_params[:nps_comment] = whitelisted_params[:nps_comment].
+        truncate(1000)
     end
     whitelisted_params
   end

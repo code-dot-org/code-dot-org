@@ -1,7 +1,9 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class ScriptLevelTest < ActiveSupport::TestCase
   include Rails.application.routes.url_helpers
+  include SharedConstants
 
   def setup
     @script_level = create(:script_level)
@@ -57,14 +59,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
-    assert_equal 'puzzle', summary[:kind]
+    assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
-    assert_equal 'puzzle', summary[:kind]
+    assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 2, summary[:title]
   end
 
@@ -73,7 +75,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "#{root_url.chomp('/')}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
-    assert_equal 'puzzle', summary[:kind]
+    assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
   end
 
@@ -142,6 +144,59 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level_after = create(:script_level, script: script, stage: stage, position: 2, chapter: 2)
 
     assert_equal script_level_after, script_level_unplugged.next_level
+  end
+
+  test 'calling next_level when next level is spelling_bee skips the level in non-english' do
+    script = create(:script, name: 's1')
+    stage = create(:stage, script: script, absolute_position: 1)
+    first = create(:script_level, script: script, stage: stage, position: 1)
+    second = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, stage: stage, position: 2)
+    third = create(:script_level, script: script, stage: stage, position: 3)
+
+    I18n.locale = 'non-default-locale'
+    assert_equal third, first.next_progression_level
+
+    I18n.locale = I18n.default_locale
+    assert_equal second, first.next_progression_level
+  end
+
+  test 'calling next_level on an spelling_bee level works in any locale' do
+    script = create(:script, name: 's1')
+    stage = create(:stage, script: script, absolute_position: 1)
+    first = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, stage: stage, position: 1, chapter: 1)
+    second = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, stage: stage, position: 2, chapter: 2)
+
+    I18n.locale = 'non-default-locale'
+    assert_equal second, first.next_level
+
+    I18n.locale = I18n.default_locale
+    assert_equal second, first.next_level
+  end
+
+  test 'calling next_level when next level is spelling_bee skips the entire spelling_bee stage in non-english' do
+    script = create(:script, name: 's1')
+    first_stage = create(:stage, script: script, absolute_position: 1)
+    script_level_first = create(:script_level, script: script, stage: first_stage, position: 1, chapter: 1)
+
+    spelling_bee_stage = create(:stage, script: script, absolute_position: 2)
+    spelling_bee_first = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, stage: spelling_bee_stage, position: 1, chapter: 2)
+    create(:script_level, levels: [create(:match)], script: script, stage: spelling_bee_stage, position: 2, chapter: 3)
+    create(:script_level, levels: [create(:match)], script: script, stage: spelling_bee_stage, position: 3, chapter: 4)
+
+    non_spelling_bee_stage = create(:stage, script: script, absolute_position: 3)
+    non_spelling_bee_first = create(:script_level, script: script, stage: non_spelling_bee_stage, position: 1, chapter: 5)
+
+    # make sure everything is in the order we want it to be
+    script.reload
+    assert_equal [first_stage, spelling_bee_stage, non_spelling_bee_stage], script.stages
+    assert_equal script_level_first, script.script_levels.first
+    assert_equal non_spelling_bee_first, script.script_levels.last
+
+    I18n.locale = 'non-default-locale'
+    assert_equal non_spelling_bee_first, script_level_first.next_progression_level
+
+    I18n.locale = I18n.default_locale
+    assert_equal spelling_bee_first, script_level_first.next_progression_level
   end
 
   test 'end of stage' do

@@ -44,13 +44,17 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
+"@code-dot-org/js-numbers@0.1.0-cdo.0":
+  version "0.1.0-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
+
 "@code-dot-org/p5.play@1.1.3-cdo":
   version "1.1.3-cdo"
   resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.1.3-cdo.tgz#aaf4abf1101666228b48370cd5b9fc6efeeb3efb"
 
-"@code-dot-org/piskel@0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.9.1.tgz#88d90402c12865da869b35ff521fd2e59dfc3ec2"
+"@code-dot-org/piskel@0.10.0-cdo.0":
+  version "0.10.0-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.10.0-cdo.0.tgz#d7a8e52de51af9880d88473355a0d2e1b9d120d6"
 
 "@kadira/react-split-pane@^1.4.0":
   version "1.4.7"
@@ -2698,6 +2702,10 @@ crypto-browserify@~3.2.6:
 crypto-browserify@1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/crypto-browserify/-/crypto-browserify-1.0.9.tgz#cc5449685dfb85eb11c9828acc7cb87ab5bbfcc0"
+
+crypto-js:
+  version "3.1.9-1"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-3.1.9-1.tgz#fda19e761fc077e01ffbfdc6e9fdfc59e8806cd8"
 
 csextends@^1.0.3:
   version "1.0.3"
@@ -7995,9 +8003,9 @@ pkg-up@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-playground-io@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/playground-io/-/playground-io-0.4.0.tgz#743a69f2376966f338ee16febfa8f7c2c46b3111"
+playground-io@code-dot-org/playground-io#v0.4.0-cdo.1:
+  version "0.4.0-cdo.1"
+  resolved "https://codeload.github.com/code-dot-org/playground-io/tar.gz/8a476b8d99f300940542b7ddbed81cff735cca99"
   dependencies:
     buffer "^4.6.0"
     firmata "^0.11.3"

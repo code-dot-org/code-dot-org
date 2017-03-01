@@ -1,6 +1,7 @@
 require_relative '../../src/env'
 require src_dir 'course'
 require 'pdf/collate'
+require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/yaml'
 
@@ -28,7 +29,7 @@ def collate_to_pdf_to_fetch_file(collate_file)
     end
 
     new_remote_url = RakeUtils.replace_file_with_s3_backed_fetch_file(output_filename, fetchfile_path, bucket: 'cdo-fetch')
-    HipChat.log "<b>#{output_filename}</b> generated from <b>#{collate_file}</b>, now at <a href='#{new_remote_url}'>#{new_remote_url}</a>."
+    ChatClient.log "<b>#{output_filename}</b> generated from <b>#{collate_file}</b>, now at <a href='#{new_remote_url}'>#{new_remote_url}</a>."
   end
   fetchfile_path
 end
@@ -39,8 +40,8 @@ Dir.glob(pegasus_dir('sites/**/*.collate')).each do |collate_file|
   begin
     all_output_files << collate_to_pdf_to_fetch_file(collate_file)
   rescue Exception => e
-    HipChat.log "PDF generation failure for #{collate_file}"
-    HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+    ChatClient.log "PDF generation failure for #{collate_file}"
+    ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
     raise
   end
 end

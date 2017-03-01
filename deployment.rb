@@ -49,6 +49,7 @@ def load_configuration
     'build_code_studio'           => false,
     'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
+    'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
@@ -82,6 +83,7 @@ def load_configuration
     'pegasus_unicorn_name'        => 'pegasus',
     'pegasus_workers'             => 8,
     'poste_host'                  => 'localhost.code.org:3000',
+    'pegasus_skip_asset_map'      => rack_env == :development,
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
@@ -132,6 +134,12 @@ def load_configuration
     #raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
 
     config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
+
+    # test environment should use precompiled, minified, digested assets like production,
+    # unless it's being used for unit tests. This logic should be kept in sync with
+    # the logic for setting config.assets.* under dashboard/config/.
+    ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
+    config['pretty_js'] = [:development, :staging].include?(rack_env) || (rack_env == :test && ci_test)
 
     config.merge! global_config
     config.merge! local_config
@@ -293,6 +301,7 @@ class CDOImpl < OpenStruct
       Gem.path.each do |gem|
         b.gsub!(gem, '[GEM]')
       end
+      b.gsub! Bundler.system_bindir, '[BIN]'
     end
     backtrace.join("\n")
   end

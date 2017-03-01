@@ -73,13 +73,15 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
 
   def test_process_decisions_row_accept_teachercon
     teachercon_name = 'June 18 - 23, 2017: Houston'
-    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, teachercon_name)
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, nil)
+    @mock_teacher_application.expects(:regional_partner_name).returns('Code Partner')
 
     result = @processor.process_decision_row(
       {
         'Application ID' => 1,
         'Decision' => 'Accept',
-        'Workshop' => teachercon_name
+        'Workshop' => teachercon_name,
+        'Program' => 'CSD'
       }
     )
 
@@ -89,7 +91,37 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       preferred_first_name_s: 'Tracy',
       course_name_s: 'CS Principles',
       teachercon_location_s: 'Houston',
-      teachercon_dates_s: 'June 18 - 23, 2017'
+      teachercon_dates_s: 'June 18 - 23, 2017',
+      regional_partner_name_s: 'Code Partner'
+    }
+    assert_equal expected, result
+    assert_result_in_set :accept_teachercon, result
+  end
+
+  def test_process_decisions_row_accept_teachercon_with_partner_override
+    teachercon_name = 'June 18 - 23, 2017: Houston'
+    new_partner_name = 'manually selected partner override'
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, new_partner_name)
+    @mock_teacher_application.expects(:regional_partner_name).returns(new_partner_name)
+
+    result = @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        'Decision' => 'Accept',
+        'Workshop' => teachercon_name,
+        'Program' => 'csd',
+        'Partner Name' => new_partner_name
+      }
+    )
+
+    expected = {
+      name: 'Tracy Teacher',
+      email: 'tracy.teacher@example.net',
+      preferred_first_name_s: 'Tracy',
+      course_name_s: 'CS Principles',
+      teachercon_location_s: 'Houston',
+      teachercon_dates_s: 'June 18 - 23, 2017',
+      regional_partner_name_s: 'manually selected partner override'
     }
     assert_equal expected, result
     assert_result_in_set :accept_teachercon, result
@@ -97,7 +129,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
 
   def test_process_decisions_row_accept_partner
     partner_workshop = 'Code Partner: June 1 - 5, 2017'
-    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, partner_workshop)
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csp', partner_workshop)
 
     @processor.expects(:lookup_workshop).with(partner_workshop).returns(
       {
@@ -113,7 +145,8 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       {
         'Application ID' => 1,
         'Decision' => 'Accept',
-        'Workshop' => partner_workshop
+        'Workshop' => partner_workshop,
+        'Program' => 'csp'
       }
     )
 
@@ -198,6 +231,26 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
         'Primary Email' => new_primary_email
       }
     )
+  end
+
+  def test_teachercon_acceptance_without_partner_raises_error
+    teachercon_name = 'June 18 - 23, 2017: Houston'
+    @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, nil)
+    @mock_teacher_application.expects(:regional_partner_name).returns(nil)
+    @mock_teacher_application.stubs(id: 1)
+
+    e = assert_raises RuntimeError do
+      @processor.process_decision_row(
+        {
+          'Application ID' => 1,
+          'Decision' => 'Accept',
+          'Workshop' => teachercon_name,
+          'Program' => 'csd'
+        }
+      )
+    end
+
+    assert_equal 'Missing regional partner name for application id: 1', e.message
   end
 
   private

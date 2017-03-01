@@ -54,14 +54,20 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
+  validates_presence_of :user
   def user_must_be_teacher
-    errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
+    return unless user
+    errors.add(:user_id, 'must be a teacher') unless user.teacher?
   end
   validate :user_must_be_teacher
 
   before_create :assign_code
   def assign_code
     self.code = unused_random_code
+  end
+
+  def teacher_dashboard_url
+    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
   end
 
   # return a version of self.students in which all students' names are
