@@ -7042,18 +7042,12 @@ en:
         it will be different each time you run it: it will be different each time you run it
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
-        ? Here is the exact same function from the last puzzle, but the amount of honey to collect in this puzzle is different than in the last.  What will happen when you click "Run"?
-        : Here is the exact same function from the last puzzle, but the amount of honey to collect in this puzzle is different than in the last.  What will happen when you click "Run"?
-        ? Here is the exact same function from the last puzzle. The amount of honey in this puzzle is different than the last.  What will happen when you click "Run"?
-        : Here is the exact same function from the last puzzle. The amount of honey in this puzzle is different than the last.  What will happen when you click "Run"?
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
         : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
         I don't know.: I don't know.
         Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
         The bee will try to collect too much honey from the flowers.: The bee will try to collect too much honey from the flowers.
         The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
-        The function will work to solve this puzzle, too.: The function will work to solve this puzzle, too.
-        The function will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The function will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
         The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
         The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
       courseE_multi_farmer_functions11_predict:
@@ -7061,7 +7055,6 @@ en:
         Incorrect.  The farmer does not call "check and pick" until she gets to the corn.: Incorrect.  The farmer does not call "check and pick" until she gets to the corn.
         Incorrect. The farmer only makes one turn, and ends at the corn.: Incorrect. The farmer only makes one turn, and ends at the corn.
         Look at the functions defined below.  What will the farmer harvest?: Look at the functions defined below.  What will the farmer harvest?
-        The farmer will harvest all of the pumpkins: The farmer will harvest all of the pumpkins
         The farmer will harvest all of the pumpkins.: The farmer will harvest all of the pumpkins.
         The farmer will harvest the corn.: The farmer will harvest the corn.
         The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
@@ -7078,14 +7071,12 @@ en:
       courseF_multi_artist_variables3a_predict1:
         Correct!  The `length` variable is being used in the `turn` block.: Correct!  The `length` variable is being used in the `turn` block.
         I don't know.: I don't know.
-        Incorrect. The `length` variable (set to 50) is being used in the `turn` block.: Incorrect. The `length` variable (set to 50) is being used in the `turn` block.
         Incorrect. The variable `length` is being used in the wrong spot!: Incorrect. The variable `length` is being used in the wrong spot!
         Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
         ? The `length` variable is set to 50 and is being used in the `turn` block, so the artist will draw three sides with 50 degree turns.
         : The `length` variable is set to 50 and is being used in the `turn` block, so the artist will draw three sides with 50 degree turns.
         The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
         The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
-        The artist will draw three sides with 120 degree turns.: The artist will draw three sides with 120 degree turns.
         The artist will draw three sides with 50 degree turns.: The artist will draw three sides with 50 degree turns.
         We have set the variable `length` to 50.  What will happen when you click "Run"?: We have set the variable `length` to 50.  What will happen when you click "Run"?
       coursee_prediction_artistfunction2:
