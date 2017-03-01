@@ -54,6 +54,27 @@ export function initializeCircuitPlaygroundComponents(board) {
 }
 
 /**
+ * De-initializes any Johnny-Five components that might have been created
+ * by initializeCircuitPlaygroundComponents
+ * @param {Object} components - map of components, as originally returned by
+ *   initializeCircuitPlaygroundComponents.  Additional members of this object
+ *   will be ignored.
+ */
+export function deinitializeCircuitPlaygroundComponents(components) {
+  // TODO: colorLeds: initializeColorLeds(board),
+  // TODO: led: new five.Led({board, pin: 13}),
+  // TODO: toggleSwitch: new five.Switch({board, pin: '21'}),
+  // TODO: buzzer
+  // TODO: soundSensor: initializeSoundSensor(board),
+  // TODO: tempSensor: initializeThermometer(board),
+  // TODO: lightSensor: initializeLightSensor(board),
+  // TODO: accelerometer: initializeAccelerometer(board),
+  // TODO: buttonL: initializeButton(board, '4'),
+  // TODO: buttonR: initializeButton(board, '19'),
+  // TODO: initializeTouchPads(board)
+}
+
+/**
  * Set of classes used by interpreter to understand the type of instantiated
  * objects, allowing it to make methods and properties of instances available.
  */
