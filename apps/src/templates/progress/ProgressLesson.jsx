@@ -6,7 +6,8 @@ import color from "@cdo/apps/util/color";
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import i18n from '@cdo/locale';
-import { lessonIsVisible } from './progressHelpers';
+import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 const styles = {
   main: {
@@ -25,16 +26,19 @@ const styles = {
   headingText: {
     marginLeft: 10
   },
-  hidden: {
+  hiddenOrLocked: {
     background: color.white,
     borderStyle: 'dashed',
     borderWidth: 2,
     opacity: 0.6
   },
-  hiddenIcon: {
+  icon: {
     marginRight: 5,
     fontSize: 18,
     color: color.cyan
+  },
+  unlockedIcon: {
+    color: color.orange
   }
 };
 
@@ -46,7 +50,8 @@ const ProgressLesson = React.createClass({
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
+    lessonLockedForSection: PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -62,7 +67,7 @@ const ProgressLesson = React.createClass({
   },
 
   render() {
-    const { description, lesson, lessonNumber, levels, lessonIsVisible } = this.props;
+    const { description, lesson, lessonNumber, levels, lessonIsVisible, lessonLockedForSection } = this.props;
 
     if (!lessonIsVisible(lesson)) {
       return null;
@@ -73,11 +78,15 @@ const ProgressLesson = React.createClass({
     const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
+    const locked = lessonLockedForSection(lesson.id) ||
+      levels.every(level => level.status === LevelStatus.locked);
+
     return (
       <div
         style={{
           ...styles.main,
-          ...(hiddenForStudents && styles.hidden)
+          ...(hiddenForStudents && styles.hiddenOrLocked),
+          ...(locked && styles.hiddenOrLocked),
         }}
       >
         <div
@@ -87,7 +96,16 @@ const ProgressLesson = React.createClass({
           {hiddenForStudents &&
             <FontAwesome
               icon="eye-slash"
-              style={styles.hiddenIcon}
+              style={styles.icon}
+            />
+          }
+          {lesson.lockable &&
+            <FontAwesome
+              icon={locked ? 'lock' : 'unlock'}
+              style={{
+                ...styles.icon,
+                ...(!locked && styles.unlockedIcon)
+              }}
             />
           }
           <FontAwesome icon={icon}/>
@@ -97,6 +115,7 @@ const ProgressLesson = React.createClass({
           <ProgressLessonContent
             description={description}
             levels={levels}
+            disabled={locked}
           />
         }
       </div>
@@ -107,5 +126,6 @@ const ProgressLesson = React.createClass({
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
+  lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);
