@@ -319,9 +319,16 @@ class Blockly < Level
   def localized_authored_hints
     if should_localize? && authored_hints
       localized_hints = JSON.parse(authored_hints).map do |hint|
-        hint['hint_markdown'] = I18n.t("data.authored_hints").
+        translated_text = I18n.t("data.authored_hints").
             try(:[], "#{name}_authored_hint".to_sym).
             try(:[], hint['hint_id'].to_sym)
+
+        original_text = hint['hint_markdown']
+
+        if translated_text != original_text
+          hint['hint_markdown'] = translated_text
+          hint["tts_url"] = tts_url(TTSSafeRenderer.render(translated_text))
+        end
 
         hint
       end
