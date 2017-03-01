@@ -44,7 +44,7 @@ import * as applabConstants from './constants';
 const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
-import BoardController from '../lib/kits/maker/BoardController';
+import {connectToMakerBoard} from '../lib/kits/maker/BoardController';
 import {injectBoardController} from '../lib/kits/maker/commands';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
@@ -80,12 +80,11 @@ export default Applab;
 var jsInterpreterLogger = null;
 
 /**
- * Maker Toolkit controller responsible for checking system requirements
- * and setting up board connections.
- * Should be initialized once on load if the level supports Maker Toolkit.
- * @private {BoardController}
+ * Whether Maker Toolkit is enabled on this level.  Will be initialized on
+ * level load.
+ * @private {boolean}
  */
-let makerController = null;
+let makerEnabled = false;
 
 /**
  * Maker Toolkit Board Controller for a currently-connected board, simulator,
@@ -162,9 +161,7 @@ function loadLevel() {
     Applab.scale[key] = level.scale[key];
   }
 
-  if (level.makerlabEnabled) {
-    makerController = new BoardController();
-  }
+  makerEnabled = !!level.makerlabEnabled;
 }
 
 //
@@ -1198,8 +1195,8 @@ Applab.execute = function () {
     }
   }
 
-  if (makerController) {
-    makerController.connectToBoard()
+  if (makerEnabled) {
+    connectToMakerBoard()
         .then(board => {
           board.installOnInterpreter(codegen, Applab.JSInterpreter);
           injectBoardController(board);
