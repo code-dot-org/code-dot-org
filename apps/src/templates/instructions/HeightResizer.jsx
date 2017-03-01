@@ -59,6 +59,9 @@ var HeightResizer = React.createClass({
   },
 
   onMouseDown: function (event) {
+    if (event.button !== 0) {
+      return;
+    }
     event.stopPropagation();
     event.preventDefault();
 
