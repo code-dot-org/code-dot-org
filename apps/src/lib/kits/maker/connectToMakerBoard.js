@@ -1,7 +1,7 @@
 /**
  * @file Serialport scanning and board controller creation for Maker Toolkit.
  */
-import {getDevicePortName} from './portScanning';
+import {findPortWithViableDevice} from './portScanning';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 
 /**
@@ -10,7 +10,7 @@ import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
  */
 export default function connectToMakerBoard() {
   return Promise.resolve()
-      .then(getDevicePortName)
+      .then(findPortWithViableDevice)
       .then(port => new CircuitPlaygroundBoard(port))
       .then(board => board.connect().then(() => board));
 }

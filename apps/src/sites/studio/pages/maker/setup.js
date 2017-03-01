@@ -1,5 +1,5 @@
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
-import {ensureAppInstalled, getDevicePortName} from '@cdo/apps/lib/kits/maker/portScanning';
+import {ensureAppInstalled, findPortWithViableDevice} from '@cdo/apps/lib/kits/maker/portScanning';
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -76,7 +76,7 @@ const BoardSetupStatus = React.createClass({
         .then(() => this.spin(STATUS_BOARD_PLUG))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() => {
-          return getDevicePortName()
+          return findPortWithViableDevice()
               .then(usablePort => {
                 portName = usablePort;
                 this.succeed(STATUS_BOARD_PLUG);

@@ -23,7 +23,7 @@ export const CIRCUIT_PLAYGROUND_PID = '0x8011';
  * @returns {Promise.<string>} resolves to a serial port name for a viable
  *   device, or rejects if no such device can be found.
  */
-export function getDevicePortName() {
+export function findPortWithViableDevice() {
   return Promise.resolve()
       .then(ensureAppInstalled)
       .then(() => new Promise((resolve, reject) => {
