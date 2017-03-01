@@ -46,6 +46,7 @@ window.dashboard.assets = require('@cdo/apps/code-studio/assets');
 window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.teacher = require('@cdo/apps/code-studio/teacher');
 window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
+window.dashboard.schoolInfoBox = require('@cdo/apps/code-studio/districtDropdown/SchoolInfoBox.jsx');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
 import { registerGetResult, registerLevel, onAnswerChanged } from '@cdo/apps/code-studio/levels/codeStudioLevels';
