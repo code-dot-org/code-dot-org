@@ -75,9 +75,16 @@ export function deinitializeCircuitPlaygroundComponents(components) {
     components.buzzer.stop();
   }
 
-  // TODO: soundSensor: initializeSoundSensor(board),
+  if (components.soundSensor) {
+    components.soundSensor.disable();
+  }
+
   // TODO: tempSensor: initializeThermometer(board),
-  // TODO: lightSensor: initializeLightSensor(board),
+
+  if (components.lightSensor) {
+    components.lightSensor.disable();
+  }
+
   // TODO: accelerometer: initializeAccelerometer(board),
   // TODO: buttonL: initializeButton(board, '4'),
   // TODO: buttonR: initializeButton(board, '19'),

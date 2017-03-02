@@ -97,6 +97,30 @@ describe('Circuit Playground Components', () => {
 
       expect(components.buzzer.stop).to.have.been.calledOnce;
     });
+
+    it('calls disable on the soundSensor', () => {
+      const components = {
+        soundSensor: initializeSoundSensor(board)
+      };
+
+      sinon.spy(components.soundSensor, 'disable');
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      expect(components.soundSensor.disable).to.have.been.calledOnce;
+    });
+
+    it('calls disable on the lightSensor', () => {
+      const components = {
+        lightSensor: initializeLightSensor(board)
+      };
+
+      sinon.spy(components.lightSensor, 'disable');
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      expect(components.lightSensor.disable).to.have.been.calledOnce;
+    });
   });
 
   describe('initializeSoundSensor()', () => {
