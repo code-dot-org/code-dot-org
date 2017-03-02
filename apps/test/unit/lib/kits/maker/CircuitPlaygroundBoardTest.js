@@ -50,10 +50,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`connect()`, () => {
-    it('exists', () => {
-      expect(board.connect).to.be.a('function');
-    });
-
     it('returns a Promise that resolves when the board is ready to use', done => {
       board.connect().then(done);
     });
@@ -78,10 +74,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`connectToFirmware()`, () => {
-    it('exists', () => {
-      expect(board.connectToFirmware).to.be.a('function');
-    });
-
     it('returns a Promise that resolves when the firmware is connected', done => {
       board.connectToFirmware().then(done);
     });
@@ -95,10 +87,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`initializeComponents()`, () => {
-    it('exists', () => {
-      expect(board.initializeComponents).to.be.a('function');
-    });
-
     it('throws if called before connecting to firmware', () => {
       expect(() => board.initializeComponents())
           .to.throw(Error, 'Cannot initialize components: Not connected to board firmware.');
@@ -114,10 +102,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`destroy()`, () => {
-    it('exists', () => {
-      expect(board.destroy).to.be.a('function');
-    });
-
     it('sends the board reset signal', done => {
       board.connect().then(() => {
         board.destroy();
@@ -128,10 +112,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`installOnInterpreter(codegen, jsInterpreter)`, () => {
-    it('exists', () => {
-      expect(board.installOnInterpreter).to.be.a('function');
-    });
-
     it('adds component constructors to the customMarshalObjectList', done => {
       board.connect().then(() => {
         const codegen = {
@@ -162,10 +142,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`pinMode(pin, modeConstant)`, () => {
-    it('exists', () => {
-      expect(board.pinMode).to.be.a('function');
-    });
-
     it('forwards the call to firmata', done => {
       board.connect().then(() => {
         const pin = 11;
@@ -178,10 +154,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`digitalWrite(pin, value)`, () => {
-    it('exists', () => {
-      expect(board.digitalWrite).to.be.a('function');
-    });
-
     it('forwards the call to firmata', done => {
       board.connect().then(() => {
         const pin = 11;
@@ -194,10 +166,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`digitalRead(pin, callback)`, () => {
-    it('exists', () => {
-      expect(board.digitalRead).to.be.a('function');
-    });
-
     it('forwards the call to firmata', done => {
       board.connect().then(() => {
         const pin = 11;
@@ -210,10 +178,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`analogWrite(pin, value)`, () => {
-    it('exists', () => {
-      expect(board.analogWrite).to.be.a('function');
-    });
-
     it('forwards the call to firmata', done => {
       board.connect().then(() => {
         const pin = 11;
@@ -226,10 +190,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`analogRead(pin, callback)`, () => {
-    it('exists', () => {
-      expect(board.analogRead).to.be.a('function');
-    });
-
     it('forwards the call to firmata', done => {
       board.connect().then(() => {
         const pin = 11;
@@ -242,10 +202,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`onBoardEvent(component, event, callback)`, () => {
-    it('exists', () => {
-      expect(board.onBoardEvent).to.be.a('function');
-    });
-
     it('forwards the call to the component', () => {
       const fakeEventEmitter = { on: sinon.spy() };
       const event = 'someEvent';
