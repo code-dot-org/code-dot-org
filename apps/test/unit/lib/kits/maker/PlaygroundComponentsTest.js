@@ -4,7 +4,7 @@ import Playground from 'playground-io';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import {
-  deinitializeColorLeds,
+  deinitializeCircuitPlaygroundComponents,
   initializeAccelerometer,
   initializeButton,
   initializeColorLeds,
@@ -61,17 +61,41 @@ describe('Circuit Playground Components', () => {
     });
   });
 
-  describe('deinitializeColorLeds()', () => {
-    it('calls stop on every LED', () => {
-      const components = initializeColorLeds(board);
+  describe('deinitializeCircuitPlaygroundComponents()', () => {
+    it('calls stop on every color LED', () => {
+      const components = {
+        colorLeds: initializeColorLeds(board)
+      };
 
-      components.forEach(led => sinon.spy(led, 'stop'));
+      components.colorLeds.forEach(led => sinon.spy(led, 'stop'));
 
-      deinitializeColorLeds(components);
+      deinitializeCircuitPlaygroundComponents(components);
 
       for (let i = 0; i < 10; i++) {
-        expect(components[i].stop).to.have.been.calledOnce;
+        expect(components.colorLeds[i].stop).to.have.been.calledOnce;
       }
+    });
+
+    it('calls stop on the red LED', () => {
+      const components = {
+        led: new five.Led({board, pin: 13})
+      };
+
+      sinon.spy(components.led, 'stop');
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      expect(components.led.stop).to.have.been.calledOnce;
+    });
+
+    it('calls stop on the buzzer', () => {
+      const components = {
+        buzzer: { stop: sinon.spy() }
+      };
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      expect(components.buzzer.stop).to.have.been.calledOnce;
     });
   });
 
