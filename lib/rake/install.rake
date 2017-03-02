@@ -39,7 +39,7 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        if ENV['CI']
+        if ENV['CI'] && ENV['CIRCLE_NODE_INDEX'] != '1'
           RakeUtils.rake_stream_output 'parallel:create'
           RakeUtils.rake_stream_output 'parallel:rake[db:test:prepare]'
         else

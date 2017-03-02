@@ -74,12 +74,12 @@ namespace :test do
       ChatClient.wrap('dashboard ruby unit tests') do
         # Unit tests mess with the database so stop the service before running them
         RakeUtils.stop_service CDO.dashboard_unicorn_name
-        RakeUtils.rake 'db:test:prepare'
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
-        TestRunUtils.run_dashboard_tests
+        ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
+        RakeUtils.rake_stream_output 'parallel:drop parallel:create parallel:rake[db:test:prepare]'
+        TestRunUtils.run_dashboard_tests(true)
         ENV.delete 'UNIT_TEST'
-        RakeUtils.rake "seed:all"
         RakeUtils.start_service CDO.dashboard_unicorn_name
       end
     end
