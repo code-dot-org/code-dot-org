@@ -42,7 +42,6 @@ const styles = {
   hiddenOrLocked: {
     background: color.white,
     borderStyle: 'dashed',
-    borderWidth: 2,
   },
   translucent: {
     opacity: 0.6
