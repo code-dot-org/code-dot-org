@@ -3,6 +3,27 @@ require_relative 'env'
 
 # Honeybadger extensions for command error logging
 module Honeybadger
+  # Notify Honeybadger of a new release. This noops for adhoc and development
+  # environments. For API information, run `bundle exec honeybadger help deploy`
+  # or https://github.com/honeybadger-io/honeybadger-ruby#deployment-tracking-via-command-line.
+  # @param environment [String] The environment with the new release.
+  # @param revision [String] The git revision hash of the new release.
+  def self.notify_new_release(environment, revision)
+    # As adhoc and development environments are not "linear", we do not track
+    # them.
+    return if [:adhoc, :development].include? environment
+
+    Dir.chdir(dashboard_dir) do
+      system(
+        'bundle exec honeybadger deploy '\
+          "--environment=#{environment} "\
+          "--revision=#{revision} "\
+          "--user=#{environment} "\
+          "--api-key=#{CDO.dashboard_honeybadger_api_key}"
+      )
+    end
+  end
+
   # notify_command_error - log an error from an executed command to honeybadger.
   #   Attempts to parse the underlying exception from stderr,
   #   and logs captured stdout and environment variables (with sensitive values hidden) in the context.

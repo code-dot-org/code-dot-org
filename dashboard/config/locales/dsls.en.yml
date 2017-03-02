@@ -628,6 +628,9 @@ en:
       CSD U5 data visualization:
         description here: description here
         title: title
+      CSD U5 data visualization sheet:
+        description here: description here
+        title: title
       CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
@@ -673,6 +676,7 @@ en:
       CSDU2L04 - Stop: {}
       CSDU6 - button check for understanding: {}
       CSDU6 - timed loop stop board: {}
+      CSDU6 Innovation: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Journal Entry Placeholder:
@@ -7079,6 +7083,15 @@ en:
         The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
         The artist will draw three sides with 50 degree turns.: The artist will draw three sides with 50 degree turns.
         We have set the variable `length` to 50.  What will happen when you click "Run"?: We have set the variable `length` to 50.  What will happen when you click "Run"?
+      courseF_multi_playlab_variables4c_predictive1:
+        'Correct. ': 'Correct. '
+        I don't know.: I don't know.
+        'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. ': 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. '
+        Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.: Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
+        The pirate would say, "Ali" and that is all.: The pirate would say, "Ali" and that is all.
+        The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.: The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.
+        The pirate would say, "It be a pleasure meetin' ya." and that is all.: The pirate would say, "It be a pleasure meetin' ya." and that is all.
+        What would happen if the user entered the name "Ali" at the prompt?: What would happen if the user entered the name "Ali" at the prompt?
       coursee_prediction_artistfunction2:
         Correct!: Correct!
         Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
