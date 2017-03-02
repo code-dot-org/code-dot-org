@@ -5,7 +5,7 @@ $(function () {
   });
 
   $('#about-more').click(function (e){
-    $('#nav ul span').slideToggle()
+    $('#nav ul span').slideToggle();
     e.preventDefault();
   });
 
