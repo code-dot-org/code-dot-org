@@ -218,6 +218,32 @@ describe('Circuit Playground Components', () => {
 
       expect(components.lightSensor.disable).to.have.been.calledOnce;
     });
+
+    it('calls stop on the accelerometer', () => {
+      // Spy on the controller template, because stop() ends up readonly on
+      // the returned component.
+      const spy = sinon.spy(Playground.Accelerometer.stop, 'value');
+
+      let err;
+      try {
+        const components = {
+          accelerometer: initializeAccelerometer(board)
+        };
+
+        deinitializeCircuitPlaygroundComponents(components);
+
+        expect(spy).to.have.been.calledOnce;
+      } catch (e) {
+        err = e;
+      }
+
+      // Finally - make sure we restore the spied method and rethrow any
+      // exception (which could be a failed assertion)
+      spy.restore();
+      if (err) {
+        throw err;
+      }
+    });
   });
 });
 
