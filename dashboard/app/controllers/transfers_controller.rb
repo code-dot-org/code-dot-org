@@ -4,11 +4,11 @@ class TransfersController < ApplicationController
 
   # POST /sections/:id/transfers
   def create
+    # TODO(asher): Much of the permissioning here should be done through CanCan.
     new_section_code = params[:new_section_code]
 
-    begin
-      new_section = Section.find_by!(code: new_section_code)
-    rescue ActiveRecord::RecordNotFound
+    new_section = Section.find_by_code(new_section_code)
+    unless new_section
       render json: {
         error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
       }, status: :not_found
@@ -32,9 +32,8 @@ class TransfersController < ApplicationController
       return
     end
 
-    begin
-      current_section = Section.find_by!(code: current_section_code)
-    rescue ActiveRecord::RecordNotFound
+    current_section = Section.find_by_code(current_section_code)
+    unless current_section
       render json: {
         error: I18n.t('move_students.current_section_dne', current_section_code: current_section_code)
       }, status: :not_found
@@ -71,16 +70,15 @@ class TransfersController < ApplicationController
       return
     end
 
-    begin
-      students = User.find(student_ids)
-    rescue ActiveRecord::RecordNotFound
+    students = User.where(id: student_ids).all
+    if students.count != student_ids.count
       render json: {
         error: I18n.t('move_students.student_not_found')
       }, status: :not_found
       return
     end
 
-    if student_ids.count != current_user.followers.where(student_user_id: student_ids).count
+    if student_ids.count != current_user.followers.where(section_id: current_section.id, student_user_id: student_ids).count
       render json: {
         error: I18n.t('move_students.all_students_must_be_in_current_section')
       }, status: :forbidden
