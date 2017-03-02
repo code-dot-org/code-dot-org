@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import ProjectsList from './ProjectsList';
 import _ from 'lodash';
 import color from "../../util/color";
+import commonMsg from '@cdo/locale';
 
 const ALL_STUDENTS = '_all_students';
 
@@ -27,7 +28,7 @@ const styles = {
   }
 };
 
-class SectionProjectsList extends React.Component {
+class SectionProjectsList extends Component {
   constructor(props) {
     super(props);
 
@@ -40,11 +41,11 @@ class SectionProjectsList extends React.Component {
   }
 
   getStudentNames(projectsData) {
-    const studentsMap = {};
-    projectsData.forEach(project => {
-      studentsMap[project['studentName']] = true;
-    });
-    return Object.keys(studentsMap);
+    return _(projectsData)
+      .map(p => p.studentName)
+      .uniq()
+      .sortBy()
+      .value();
   }
 
   onChangeStudent(event) {
@@ -76,7 +77,7 @@ class SectionProjectsList extends React.Component {
               onChange={this.onChangeStudent.bind(this)}
               style={styles.filterDropdown}
             >
-              <option value={ALL_STUDENTS} key={ALL_STUDENTS}>All</option>
+              <option value={ALL_STUDENTS} key={ALL_STUDENTS}>{commonMsg.allStudents()}</option>
               {
                 this.state.studentNames.map(studentName => (
                   <option value={studentName} key={studentName}>{studentName}</option>
@@ -96,10 +97,10 @@ class SectionProjectsList extends React.Component {
 }
 
 SectionProjectsList.propTypes = {
-  projectsData: React.PropTypes.array.isRequired,
+  projectsData: PropTypes.array.isRequired,
   // The prefix for the code studio url in the current environment,
   // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-  studioUrlPrefix: React.PropTypes.string.isRequired,
+  studioUrlPrefix: PropTypes.string.isRequired,
 };
 
 export default SectionProjectsList;
