@@ -82,15 +82,16 @@ const ProgressLevelSet = React.createClass({
   propTypes: {
     start: PropTypes.number.isRequired,
     name: PropTypes.string,
-    levels: PropTypes.arrayOf(levelType).isRequired
+    levels: PropTypes.arrayOf(levelType).isRequired,
+    disabled: PropTypes.bool.isRequired,
   },
 
   getIcon() {
     const { levels } = this.props;
     const level = levels[0];
 
-    // TODO - Once we know what locked levels and peer reviews are going to look
-    // like in the redesign, we'll need add logic for those here.
+    // TODO - Once we know what peer reviews are going to look like in the
+    // redesign, we'll need add logic for those here.
 
     if (level.icon) {
       // Eventually I'd like to have dashboard return an icon type. For now, I'm just
@@ -106,7 +107,7 @@ const ProgressLevelSet = React.createClass({
   },
 
   render() {
-    const { name, levels, start } = this.props;
+    const { name, levels, start, disabled } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const status = multiLevelStep ? 'multi_level' : levels[0].status;
@@ -154,6 +155,7 @@ const ProgressLevelSet = React.createClass({
                 <ProgressBubbleSet
                   start={start}
                   levels={levels}
+                  disabled={disabled}
                 />
               </td>
             </tr>

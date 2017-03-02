@@ -10,7 +10,12 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { createStore } from 'redux';
 import Immutable from 'immutable';
 
-export const fakeLesson = (name, id, lockable=false) => ({name, id, lockable});
+export const fakeLesson = (name, id, lockable=false, stageNumber=undefined) => ({
+  name,
+  id,
+  lockable,
+  stageNumber
+});
 
 export const fakeLevels = numLevels => _.range(numLevels).map(index => ({
   status: LevelStatus.not_tried,
