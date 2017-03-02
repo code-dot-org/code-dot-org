@@ -7,7 +7,6 @@ ruby:
 eslint:
   enabled: true
   config_file: .eslintrc.js
-  ignore_file: "apps/.eslintignore"
 
 scss:
   config_file: .scss-lint.yml
