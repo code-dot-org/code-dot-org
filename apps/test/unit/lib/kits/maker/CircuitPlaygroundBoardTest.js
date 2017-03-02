@@ -50,39 +50,36 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`connect()`, () => {
-    it('returns a Promise that resolves when the board is ready to use', done => {
-      board.connect().then(done);
+    it('returns a Promise that resolves when the board is ready to use', () => {
+      return board.connect();
     });
 
-    it('initializes a set of components', done => {
-      board.connect().then(() => {
+    it('initializes a set of components', () => {
+      return board.connect().then(() => {
         expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
-        done();
-      }).catch(done);
+      });
     });
 
-    it(`establishes forwarding for the 'disconnect' event`, done => {
-      board.connect().then(() => {
+    it(`establishes forwarding for the 'disconnect' event`, () => {
+      return board.connect().then(() => {
         const spy = sinon.spy();
         board.on('disconnect', spy);
         expect(spy).not.to.have.been.called;
         playground.emit('disconnect');
         expect(spy).to.have.been.calledOnce;
-        done();
-      }).catch(done);
+      });
     });
   });
 
   describe(`connectToFirmware()`, () => {
-    it('returns a Promise that resolves when the firmware is connected', done => {
-      board.connectToFirmware().then(done);
+    it('returns a Promise that resolves when the firmware is connected', () => {
+      return board.connectToFirmware();
     });
 
-    it('does not initialize components', done => {
-      board.connectToFirmware().then(() => {
+    it('does not initialize components', () => {
+      return board.connectToFirmware().then(() => {
         expect(board.prewiredComponents_).to.be.null;
-        done();
-      }).catch(done);
+      });
     });
   });
 
@@ -92,28 +89,26 @@ describe('CircuitPlaygroundBoard', () => {
           .to.throw(Error, 'Cannot initialize components: Not connected to board firmware.');
     });
 
-    it('initializes a set of components', done => {
-      board.connectToFirmware().then(() => {
+    it('initializes a set of components', () => {
+      return board.connectToFirmware().then(() => {
         board.initializeComponents();
         expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
-        done();
-      }).catch(done);
+      });
     });
   });
 
   describe(`destroy()`, () => {
-    it('sends the board reset signal', done => {
-      board.connect().then(() => {
+    it('sends the board reset signal', () => {
+      return board.connect().then(() => {
         board.destroy();
         expect(playground.reset).to.have.been.calledOnce;
-        done();
-      }).catch(done);
+      });
     });
   });
 
   describe(`installOnInterpreter(codegen, jsInterpreter)`, () => {
-    it('adds component constructors to the customMarshalObjectList', done => {
-      board.connect().then(() => {
+    it('adds component constructors to the customMarshalObjectList', () => {
+      return board.connect().then(() => {
         const codegen = {
           customMarshalObjectList: []
         };
@@ -122,12 +117,11 @@ describe('CircuitPlaygroundBoard', () => {
         };
         board.installOnInterpreter(codegen, interpreter);
         expect(codegen.customMarshalObjectList).to.have.length(13);
-        done();
-      }).catch(done);
+      });
     });
 
-    it('adds component constructors as global properties on the interpreter', done => {
-      board.connect().then(() => {
+    it('adds component constructors as global properties on the interpreter', () => {
+      return board.connect().then(() => {
         const codegen = {
           customMarshalObjectList: []
         };
@@ -136,68 +130,62 @@ describe('CircuitPlaygroundBoard', () => {
         };
         board.installOnInterpreter(codegen, interpreter);
         expect(interpreter.createGlobalProperty).to.have.been.called;
-        done();
-      }).catch(done);
+      });
     });
   });
 
   describe(`pinMode(pin, modeConstant)`, () => {
-    it('forwards the call to firmata', done => {
-      board.connect().then(() => {
+    it('forwards the call to firmata', () => {
+      return board.connect().then(() => {
         const pin = 11;
         const arg2 = 1023;
         board.pinMode(pin, arg2);
         expect(playground.pinMode).to.have.been.calledWith(pin, arg2);
-        done();
-      }).catch(done);
+      });
     });
   });
 
   describe(`digitalWrite(pin, value)`, () => {
-    it('forwards the call to firmata', done => {
-      board.connect().then(() => {
+    it('forwards the call to firmata', () => {
+      return board.connect().then(() => {
         const pin = 11;
         const arg2 = 1023;
         board.digitalWrite(pin, arg2);
         expect(playground.digitalWrite).to.have.been.calledWith(pin, arg2);
-        done();
-      }).catch(done);
+      });
     });
   });
 
   describe(`digitalRead(pin, callback)`, () => {
-    it('forwards the call to firmata', done => {
-      board.connect().then(() => {
+    it('forwards the call to firmata', () => {
+      return board.connect().then(() => {
         const pin = 11;
         const arg2 = () => {};
         board.digitalRead(pin, arg2);
         expect(playground.digitalRead).to.have.been.calledWith(pin, arg2);
-        done();
-      }).catch(done);
+      });
     });
   });
 
   describe(`analogWrite(pin, value)`, () => {
-    it('forwards the call to firmata', done => {
-      board.connect().then(() => {
+    it('forwards the call to firmata', () => {
+      return board.connect().then(() => {
         const pin = 11;
         const arg2 = 1023;
         board.analogWrite(pin, arg2);
         expect(playground.analogWrite).to.have.been.calledWith(pin, arg2);
-        done();
-      }).catch(done);
+      });
     });
   });
 
   describe(`analogRead(pin, callback)`, () => {
-    it('forwards the call to firmata', done => {
-      board.connect().then(() => {
+    it('forwards the call to firmata', () => {
+      return board.connect().then(() => {
         const pin = 11;
         const arg2 = () => {};
         board.analogRead(pin, arg2);
         expect(playground.analogRead).to.have.been.calledWith(pin, arg2);
-        done();
-      }).catch(done);
+      });
     });
   });
 
