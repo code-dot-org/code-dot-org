@@ -1,0 +1,146 @@
+#nav-hamburger {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-hamburger span, #nav-hamburger span:before, #nav-hamburger span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+#nav-hamburger span:before {
+  top: -10px;
+}
+
+#nav-hamburger span:after {
+  bottom: -10px;
+}
+
+#nav-hamburger span, #nav-hamburger span:before, #nav-hamburger span:after {
+  transition: all 500ms ease-in-out;
+}
+
+#nav-hamburger.active span {
+  background-color: transparent;
+}
+
+#nav-hamburger.active span:before, #nav-hamburger.active span:after {
+  top: 0;
+}
+
+#nav-hamburger.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-hamburger.active span:after {
+  transform: rotate(-45deg);
+}
+
+#nav {
+  display: inline-block;
+  text-align: left;
+  float: right;
+  width: 50%;
+}
+
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  right: 0;
+}
+
+#nav ul li {
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+  float: left;
+  padding: 0.25em 0em;
+  margin-right: 1em;
+  text-indent: 0;
+  list-style-type: none;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#nav ul li:before {
+  content: none;
+}
+
+#nav ul li:last-child {
+  margin-right: 0;
+}
+
+#nav ul li a {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#nav ul li a:hover {
+  border-bottom: solid 2px rgb(255, 138, 0);
+}
+
+#nav-hamburger {
+  vertical-align: middle;
+  text-decoration: none;
+  display: none;
+  float: right;
+  margin-top: 8px;
+}
+
+@media (max-width: 992px) {
+  #nav{
+    position: relative;
+  }
+
+  #nav ul.hide-responsive-menu, .hide-about {
+    display: none;
+  }
+
+  #nav ul {
+    position: absolute;
+    top: 4em;
+    background-color: rgb(0, 178, 192);   /* Needed as the opaque fallback colour for IE8 */
+    background-color: rgba(0, 178, 192, .9);
+    z-index: 99;
+  }
+
+  #nav ul:after {   /* This is the arrow in the responsive menu */
+    bottom: 100%;
+    left: 16em;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 178, 192, 0);
+    border-bottom-color: rgb(0, 178, 192);  /* Needed as the opaque fallback color for IE8 */
+    border-bottom-color: rgba(0, 178, 192, .9);
+    border-width: 8px;
+  }
+
+  #nav ul li {
+    display: block;
+    float: none;
+    margin: 1em 2em 1em 1em;
+    white-space: normal;
+    overflow: visible;
+  }
+
+  #nav-hamburger {
+    display: inline-block;
+  }
+}
