@@ -40,6 +40,7 @@ namespace :install do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
         if ENV['CI']
+          RakeUtils.rake_stream_output 'parallel:create'
           RakeUtils.rake_stream_output 'parallel:rake[db:test:prepare]'
         else
           RakeUtils.rake 'dashboard:setup_db'
