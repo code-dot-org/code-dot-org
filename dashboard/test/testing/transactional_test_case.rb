@@ -12,15 +12,18 @@ module ActiveSupport
         class_attribute :use_transactional_test_case
         self.use_transactional_test_case = false
 
+        setup do
+          pools = ActiveRecord::Base.connection_handler.connection_pool_list
+          all_connections = pools.map(&:connections).flatten
+          if all_connections.many?
+            warning = 'WARN: Multiple ActiveRecord connections are in use, this can make transactional tests fail in weird ways.'
+            CDO.log.warn warning
+            puts warning
+          end
+        end
+
         setup_all do
           if use_transactional_test_case?
-            pools = ActiveRecord::Base.connection_handler.connection_pool_list
-            all_connections = pools.map(&:connections).flatten
-            if all_connections.many?
-              warning = 'WARN: Multiple ActiveRecord connections are in use, this can make transactional tests fail in weird ways.'
-              CDO.log.warn warning
-              puts warning
-            end
             @test_case_connections = enlist_transaction_connections
             @test_case_connections.each do |connection|
               connection.begin_transaction joinable: false, lock_thread: true
