@@ -62,15 +62,19 @@ export function initializeCircuitPlaygroundComponents(board) {
  */
 export function deinitializeCircuitPlaygroundComponents(components) {
   if (components.colorLeds) {
-    deinitializeColorLeds(components.colorLeds);
+    components.colorLeds.forEach(led => led.stop());
   }
 
   if (components.led) {
     components.led.stop();
   }
 
-  // TODO: toggleSwitch: new five.Switch({board, pin: '21'}),
-  // TODO: buzzer
+  // No reset needed for five.Switch
+
+  if (components.buzzer) {
+    components.buzzer.stop();
+  }
+
   // TODO: soundSensor: initializeSoundSensor(board),
   // TODO: tempSensor: initializeThermometer(board),
   // TODO: lightSensor: initializeLightSensor(board),
@@ -115,17 +119,6 @@ function initializeColorLed(board, pin) {
     board,
     controller: PlaygroundIO.Pixel,
     pin
-  });
-}
-
-/**
- * @param {Array.<five.Led.RGB>} colorLeds - as returned by initializeColorLeds
- */
-export function deinitializeColorLeds(colorLeds) {
-  colorLeds.forEach(led => {
-    // Some LED commands animate host-side (like `blink()`)
-    // This clears any intervals or timers that might be running.
-    led.stop();
   });
 }
 
