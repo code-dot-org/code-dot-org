@@ -427,16 +427,11 @@ window.apps = {
       }
     },
     prepareForRemix: function () {
-      let prepareForRemix = getAppOptions().prepareForRemix;
-      return new Promise((resolve, reject) => {
-        if (prepareForRemix) {
-          prepareForRemix().then(() => {
-            resolve();
-          });
-        } else {
-          resolve();
-        }
-      });
+      const {prepareForRemix} = getAppOptions();
+      if (prepareForRemix) {
+        return prepareForRemix();
+      }
+      return Promise.resolve(); // Return an insta-resolved promise.
     }
   },
 };
