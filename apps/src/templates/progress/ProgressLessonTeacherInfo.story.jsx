@@ -6,7 +6,7 @@ import { LevelKind } from '@cdo/apps/util/sharedConstants';
 import { initProgress, lessons, showTeacherInfo } from '@cdo/apps/code-studio/progressRedux';
 import { authorizeLockable, setViewType, ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import { setSections } from '@cdo/apps/code-studio/sectionsRedux';
-import { setInitialized } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { setInitialized, updateHiddenStage } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 const lockableStage = {
   id: 123,
@@ -48,6 +48,7 @@ const createStore = ({preload=false, allowHidden=true} = {}) => {
   store.dispatch(authorizeLockable());
   store.dispatch(showTeacherInfo());
   store.dispatch(setViewType(ViewType.Teacher));
+  store.dispatch(updateHiddenStage('11', lockableWithLessonPlan.id, true));
   store.dispatch(setInitialized(allowHidden));
   if (!preload) {
     const sections = {
@@ -69,6 +70,11 @@ const createStore = ({preload=false, allowHidden=true} = {}) => {
   return store;
 };
 
+const style= {
+  width: 200,
+  height: 200
+};
+
 export default storybook => {
   storybook
     .storiesOf('ProgressLessonTeacherInfo', module)
@@ -80,7 +86,7 @@ export default storybook => {
           const state = store.getState();
           return (
             <Provider store={store}>
-              <div style={{width: 200, height: 200}}>
+              <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
                 />
@@ -96,7 +102,7 @@ export default storybook => {
           const state = store.getState();
           return (
             <Provider store={store}>
-              <div style={{width: 200, height: 200}}>
+              <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
                 />
@@ -113,7 +119,7 @@ export default storybook => {
           const state = store.getState();
           return (
             <Provider store={store}>
-              <div style={{width: 200, height: 200}}>
+              <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
                 />
@@ -130,7 +136,7 @@ export default storybook => {
           const state = store.getState();
           return (
             <Provider store={store}>
-              <div style={{width: 200, height: 200}}>
+              <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[1]}
                 />
@@ -148,7 +154,7 @@ export default storybook => {
           const state = store.getState();
           return (
             <Provider store={store}>
-              <div style={{width: 200, height: 200}}>
+              <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[1]}
                 />

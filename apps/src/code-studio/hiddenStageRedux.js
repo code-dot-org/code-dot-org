@@ -50,7 +50,7 @@ export default function reducer(state = initialState, action) {
 }
 
 // action creators
-function updateHiddenStage(sectionId, stageId, hidden) {
+export function updateHiddenStage(sectionId, stageId, hidden) {
   return {
     type: UPDATE_HIDDEN_STAGE,
     sectionId,

@@ -1,9 +1,14 @@
+/**
+ * A bunch of teacher info that shows up in a blue box to the right of the detail
+ * view for a given lesson.
+ */
+
 import React from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
 import { lessonType } from './progressTypes';
-import HiddenStageToggle from '@cdo/apps/code-studio/components/progress/HiddenStageToggle';
+import HiddenStageToggle from './HiddenStageToggle';
 import StageLock from './StageLock';
 import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ProgressButton from './ProgressButton';
@@ -16,10 +21,6 @@ const styles = {
     borderColor: color.cyan,
     borderStyle: 'solid',
     textAlign: 'center'
-  },
-  hiddenToggle: {
-    marginTop: 10,
-    marginBottom: -5
   },
   buttonContainer: {
     marginTop: 5,
@@ -76,12 +77,10 @@ const ProgressLessonTeacherInfo = React.createClass({
           <StageLock lesson={lesson}/>
         }
         {showHiddenStageToggle &&
-          <div style={styles.hiddenToggle}>
-            <HiddenStageToggle
-              hidden={!!isHidden}
-              onChange={this.onClickHiddenToggle}
-            />
-          </div>
+          <HiddenStageToggle
+            hidden={!!isHidden}
+            onChange={this.onClickHiddenToggle}
+          />
         }
       </div>
     );
