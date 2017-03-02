@@ -80,7 +80,7 @@
   margin-right: 0;
 }
 
-#nav ul li a {
+#nav ul li a, #about-more {
   font-family: 'Gotham 4r', sans-serif;
   font-size: 18px;
   color: white;
@@ -88,7 +88,12 @@
   text-decoration: none;
 }
 
-#nav ul li a:hover {
+#about-more {
+  width: 90px;
+  cursor: pointer;
+}
+
+#nav ul li a:hover, #about-more:hover {
   border-bottom: solid 2px rgb(255, 138, 0);
 }
 
