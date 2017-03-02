@@ -1,6 +1,31 @@
 import React from 'react';
 import ProjectsList from './ProjectsList';
 import _ from 'lodash';
+import color from "../../util/color";
+
+const ALL_STUDENTS = '_all_students';
+
+const styles = {
+  filterDropdown: {
+    margin: 0,
+    color: 'dimgray'
+  },
+  filterRow: {
+    backgroundColor: color.teal,
+    borderBottom: 'solid 1px white',
+    color: color.white,
+    padding: 10,
+    fontSize: 14
+  },
+  filterSpan: {
+    float: 'right',
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
+  clearDiv: {
+    clear: 'both'
+  }
+};
 
 class SectionProjectsList extends React.Component {
   constructor(props) {
@@ -10,18 +35,14 @@ class SectionProjectsList extends React.Component {
 
     this.state = {
       studentNames,
-      // Show all students
-      selectedStudent: '',
+      selectedStudent: ALL_STUDENTS,
     };
   }
 
   getStudentNames(projectsData) {
     const studentsMap = {};
     projectsData.forEach(project => {
-      const studentName = project['studentName'];
-      if (studentName) {
-        studentsMap[studentName] = true;
-      }
+      studentsMap[project['studentName']] = true;
     });
     return Object.keys(studentsMap);
   }
@@ -42,23 +63,29 @@ class SectionProjectsList extends React.Component {
 
   render() {
     const filteredProjectsData = this.props.projectsData.filter(project => (
-      !this.state.selectedStudent ||
-        (this.state.selectedStudent === project['studentName'])
+      [ALL_STUDENTS, project['studentName']].includes(this.state.selectedStudent)
     ));
 
     return (
       <div>
-        <select
-          value={this.state.selectedStudent}
-          onChange={this.onChangeStudent.bind(this)}
-        >
-          <option value="">All Students</option>
-          {
-            this.state.studentNames.map(studentName => (
-              <option value={studentName}>{studentName}</option>
-            ))
-          }
-        </select>
+        <div style={styles.filterRow}>
+          <span style={styles.filterSpan}>
+            Filter by student:&nbsp;
+            <select
+              value={this.state.selectedStudent}
+              onChange={this.onChangeStudent.bind(this)}
+              style={styles.filterDropdown}
+            >
+              <option value={ALL_STUDENTS} key={ALL_STUDENTS}>All</option>
+              {
+                this.state.studentNames.map(studentName => (
+                  <option value={studentName} key={studentName}>{studentName}</option>
+                ))
+              }
+            </select>
+          </span>
+          <div style={styles.clearDiv}></div>
+        </div>
         <ProjectsList
           projectsData={filteredProjectsData}
           studioUrlPrefix={this.props.studioUrlPrefix}
