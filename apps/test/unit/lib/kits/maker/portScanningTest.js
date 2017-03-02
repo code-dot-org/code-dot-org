@@ -17,11 +17,11 @@ describe("Maker Toolkit", function () {
   describe(`findPortWithViableDevice()`, () => {
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
-      ChromeSerialPort.test_reset();
+      ChromeSerialPort.stub.reset();
     });
 
     it('resolves with a port if a viable device is found', done => {
-      ChromeSerialPort.test_setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
+      ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
       findPortWithViableDevice()
           .then(port => {
             expect(port).to.equal('COM5');
@@ -31,7 +31,7 @@ describe("Maker Toolkit", function () {
     });
 
     it('rejects if no viable device is found', done => {
-      ChromeSerialPort.test_setDeviceList(OTHER_BAD_SERIALPORTS);
+      ChromeSerialPort.stub.setDeviceList(OTHER_BAD_SERIALPORTS);
       findPortWithViableDevice()
           .then(port => {
             done(new Error('Expected promise to reject, but it resolved to ' + port));
