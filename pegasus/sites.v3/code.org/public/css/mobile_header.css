@@ -121,7 +121,6 @@
   #nav ul {
     position: absolute;
     top: 4em;
-    background-color: rgb(0, 178, 192);   /* Needed as the opaque fallback colour for IE8 */
     background-color: rgba(0, 178, 192, .9);
     z-index: 99;
   }
@@ -136,7 +135,6 @@
     position: absolute;
     pointer-events: none;
     border-color: rgba(0, 178, 192, 0);
-    border-bottom-color: rgb(0, 178, 192);  /* Needed as the opaque fallback color for IE8 */
     border-bottom-color: rgba(0, 178, 192, .9);
     border-width: 8px;
   }
