@@ -250,6 +250,15 @@ designMode.updateProperty = function (element, name, value) {
       break;
     case 'icon-color':
       element.setAttribute('data-icon-color', value);
+      const imageUrl = element.getAttribute('data-canonical-image-url');
+      if (ICON_PREFIX_REGEX.test(imageUrl)) {
+        const url = assetPrefix.renderIconToString(imageUrl, element);
+        if (element.nodeName == "IMG") {
+          element.src = url;
+        } else {
+          element.style.backgroundImage = 'url(' + url + ')';
+        }
+      }
       break;
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
@@ -475,6 +484,8 @@ designMode.readProperty = function (element, name) {
       return parseFloat(element.style.fontSize);
     case 'textAlign':
       return element.style.textAlign;
+    case 'icon-color':
+      return element.getAttribute('data-icon-color');
     case 'image':
       return element.getAttribute('data-canonical-image-url');
     case 'screen-image':
