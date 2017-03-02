@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-02-13T20:02:35.000Z",
+  "created_at": "2017-03-01T19:50:59.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -86,10 +86,11 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
-    "markdown_instructions": "# For Loop - Condition\r\n\r\n* Run the program - how many times does it print?\r\n* Change the 4 to another positive number less than 10. What happens?\r\n* What happens if you change the 4 to a negative number?",
-    "start_blocks": "for (var i = 0; i < 4; i= i+1) {\r\n  console.log(\"message\");\r\n}",
+    "start_blocks": "for (var i = 0; i < 8; i++) {\r\n  console.log(i);\r\n}",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": [
+      "Predict Loop I"
+    ]
   },
   "published": true,
   "notes": "",
