@@ -4,36 +4,32 @@ import SchoolType from "./SchoolType";
 import SchoolState from "./SchoolState";
 // import i18n from '@cdo/locale'; // TODO
 
-class SchoolInfoBox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+const SchoolInfoBox = React.createClass({
+  getInitialState: function () {
+    return {
       country: "US",
       schoolType: "",
       schoolState: "",
     };
-    this.handleCountryChange = this.handleCountryChange.bind(this);
-    this.handleSchoolTypeChange = this.handleSchoolTypeChange.bind(this);
-    this.handleSchoolStateChange = this.handleSchoolStateChange.bind(this);
-  }
+  },
 
-  handleCountryChange(e) {
+  handleCountryChange: function (e) {
     this.setState({country: e.target.value});
-  }
+  },
 
-  handleSchoolTypeChange(e) {
+  handleSchoolTypeChange: function (e) {
     this.setState({schoolType: e.target.value});
-  }
+  },
 
-  handleSchoolStateChange(e) {
+  handleSchoolStateChange: function (e) {
     this.setState({schoolState: e.target.value});
-  }
+  },
 
-  showSchoolState() {
+  showSchoolState: function () {
     return this.state.country === "US";
-  }
+  },
 
-  render() {
+  render: function () {
     return (
         <div>
           <h5 style={{fontWeight: "bold"}}>School Information (optional)</h5>
@@ -44,6 +40,6 @@ class SchoolInfoBox extends React.Component {
         </div>
     );
   }
-}
+});
 
 export default SchoolInfoBox;
