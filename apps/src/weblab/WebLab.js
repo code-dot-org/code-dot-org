@@ -326,9 +326,7 @@ WebLab.prototype.getCodeAsync = function () {
 
 WebLab.prototype.prepareForRemix = function () {
   return new Promise((resolve, reject) => {
-    filesApi.prepareForRemix(() => {
-      resolve();
-    });
+    filesApi.prepareForRemix(resolve);
   });
 };
 

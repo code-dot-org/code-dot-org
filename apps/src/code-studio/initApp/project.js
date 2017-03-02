@@ -552,9 +552,7 @@ var projects = module.exports = {
       }.bind(this);
 
       if (preparingRemix) {
-        this.sourceHandler.prepareForRemix().then(() => {
-          completeAsyncSave();
-        });
+        this.sourceHandler.prepareForRemix().then(completeAsyncSave);
       } else {
         completeAsyncSave();
       }
