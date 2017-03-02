@@ -78,7 +78,7 @@ namespace :test do
         ENV['UNIT_TEST'] = '1'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         RakeUtils.rake_stream_output 'parallel:create parallel:rake[db:test:prepare]'
-        TestRunUtils.run_dashboard_tests(true)
+        TestRunUtils.run_dashboard_tests(parallel: true)
         ENV.delete 'UNIT_TEST'
         RakeUtils.start_service CDO.dashboard_unicorn_name
       end
