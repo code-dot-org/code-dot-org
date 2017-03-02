@@ -140,7 +140,9 @@ module RakeUtils
   end
 
   def self.nproc
-    ENV['PARALLEL_TEST_PROCESSORS'] || Parallel.processor_count
+    ENV['PARALLEL_TEST_PROCESSORS'] ||
+      (File.executable?('/usr/bin/nproc') && `/usr/bin/nproc`) ||
+      Parallel.processor_count
   end
 
   def self.bundle_install(*args)
