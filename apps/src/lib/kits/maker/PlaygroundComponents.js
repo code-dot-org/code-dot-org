@@ -61,7 +61,10 @@ export function initializeCircuitPlaygroundComponents(board) {
  *   will be ignored.
  */
 export function deinitializeCircuitPlaygroundComponents(components) {
-  // TODO: colorLeds: initializeColorLeds(board),
+  if (components.colorLeds) {
+    deinitializeColorLeds(components.colorLeds);
+  }
+
   // TODO: led: new five.Led({board, pin: 13}),
   // TODO: toggleSwitch: new five.Switch({board, pin: '21'}),
   // TODO: buzzer
@@ -109,6 +112,17 @@ function initializeColorLed(board, pin) {
     board,
     controller: PlaygroundIO.Pixel,
     pin
+  });
+}
+
+/**
+ * @param {Array.<five.Led.RGB>} colorLeds - as returned by initializeColorLeds
+ */
+export function deinitializeColorLeds(colorLeds) {
+  colorLeds.forEach(led => {
+    // Some LED commands animate host-side (like `blink()`)
+    // This clears any intervals or timers that might be running.
+    led.stop();
   });
 }
 
