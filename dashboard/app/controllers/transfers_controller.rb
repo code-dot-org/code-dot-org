@@ -4,6 +4,7 @@ class TransfersController < ApplicationController
 
   # POST /sections/:id/transfers
   def create
+    # TODO(asher): Much of the permissioning here should be done through CanCan.
     new_section_code = params[:new_section_code]
 
     new_section = Section.find_by_code(new_section_code)
