@@ -65,7 +65,10 @@ export function deinitializeCircuitPlaygroundComponents(components) {
     deinitializeColorLeds(components.colorLeds);
   }
 
-  // TODO: led: new five.Led({board, pin: 13}),
+  if (components.led) {
+    components.led.stop();
+  }
+
   // TODO: toggleSwitch: new five.Switch({board, pin: '21'}),
   // TODO: buzzer
   // TODO: soundSensor: initializeSoundSensor(board),
