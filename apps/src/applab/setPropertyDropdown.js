@@ -42,6 +42,7 @@ var PROP_INFO = {
   // it won't show up in the dropdown.
   pictureImage: { friendlyName: 'image', internalName: 'picture', type: 'string' },
   picture: { friendlyName: 'picture', internalName: 'picture', type: 'string', alias: true },
+  iconColor: { friendlyName: 'icon-color', internalName: 'icon-color', type: 'string' },
   groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string' },
   checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean' },
   readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean' },
@@ -78,6 +79,7 @@ PROPERTIES[ElementType.BUTTON] = {
     'fontSize',
     'textAlign',
     'image',
+    'iconColor',
     'hidden'
   ]
 };
@@ -157,6 +159,7 @@ PROPERTIES[ElementType.IMAGE] = {
     'y',
     'pictureImage',
     'picture', // Since this is an alias, it is not shown in the dropdown but is allowed as a value
+    'iconColor',
     'hidden'
   ]
 };
@@ -173,7 +176,8 @@ PROPERTIES[ElementType.SCREEN] = {
   propertyNames: [
     'text',
     'backgroundColor',
-    'screenImage'
+    'screenImage',
+    'iconColor'
   ]
 };
 PROPERTIES[ElementType.TEXT_AREA] = {
