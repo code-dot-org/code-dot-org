@@ -1,0 +1,47 @@
+name '5.4 - 5.6 Lesson Connections'
+css 'unplugged'
+markdown <<MARKDOWN
+# Unit 5 Lessons 4 - 6 Connections
+
+The next three lessons of this unit focus on the basic mechanics of working with variables in programs. Developing a good mental model for how variables work in computer programs is absolutely essential to long-term success as a programmer. However, because most students have had years’ worth of math classes before taking this course, there are two major misconceptions that early students often have about variables. We suggest that you try to avoid relating this material to mathematics at all. Some of the words and symbols are the same, but:
+- The = sign in programming is an instruction to store a value in memory, NOT a statement of equality.
+- “Variables” in computer programming are just named pieces of memory, NOT unknowns in an equation or symbols for undetermined values.
+Thus, lines of code that assign values to variables and expressions that use variables are really instructions to retrieve and store values in memory. And those values change while the program executes. Being able to reason about what’s happening in consecutive lines of code like:
+<br>
+`a = a + b;` <br>
+`b = a + b;`
+
+correlates highly with a person’s success in programming because you must have a good mental model for program execution and what the computer is doing.
+
+## Lesson 4: Controlling Memory with Variables
+
+**Lesson Type:** Event Driven Programming | Pair Problem Solving
+
+<a href = “https://curriculum.code.org/csp/unit5/4/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+This lesson introduces students to variables and how they work. The lesson shows students how to create and assign values to variables and navigates through a series of common misconceptions about variables and how they work. Variables are often difficult to learn because they are not visual, they are abstract, and one must have a good mental model for what’s happening in the computer and with program instructions, in order to reason about the code and develop one’s own solutions to problems.
+<br><br>
+<hr />
+
+## Lesson 5: Building an App: Clicker Game
+
+**Lesson Type:** Event Driven Programming | Pair Problem Solving
+
+<a href = “https://curriculum.code.org/csp/unit5/5/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+In this lesson, students add variables to two different exemplar apps to keep track of a score, or a count of some number of button clicks. The major topic is variable scope and understanding the differences, benefits, and drawbacks, of using global versus local variables. This lesson focuses more on using global variables, since in event-driven apps that’s what you need to keep track of data across multiple events.
+The topic and concept of variable scope is a big one in any programming language. However, since many languages do it differently, the concept of variable scope isn’t listed explicitly as a learning objective in the CSP framework. As a concept, though, variable scoping is a form of abstraction - a programming language lets you create variables with as narrow or broad a scope as you need to program a certain task. As a general practice, you usually want to create variables with the most narrow scope you can for the task at hand, since the other extreme - everything is global - can become unwieldy or hard to manage, and it doesn’t promote code reuse.
+<br><br>
+<hr />
+
+## Lesson 6: User Input and Strings
+
+**Lesson Type:** Event Driven Programming | Pair Problem Solving
+
+<a href = “https://curriculum.code.org/csp/unit5/6/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+In the final lesson of this ‘chunk’, students are introduced to the string data type as a way of representing arbitrary sequences of ASCII characters. They will use variables and strings to accept input from a user as they work on mastering two new UI elements, the text input and the text area.
+
+Strings are a feature of essentially every programming language, and they allow for variable-length pieces of text to be represented, stored, and manipulated. While a single string can be stored in a variable, it is worth noting that a string will typically use much more memory than a number. Numbers are typically stored in fixed-width 8-, 16-, 32-, or 64-bit chunks. ASCII characters require a single byte and so a string of 100 characters, short by most standards, would require 800 bits in order to be stored in memory. While “typed” programming languages require you to declare the size and type of a variable before you use them, in more dynamic programming languages, including JavaScript, this memory management is abstracted away.
+
+MARKDOWN

@@ -1,13 +1,47 @@
 %script{src: asset_path('browser-detector.js')}
 
-#warning-banner{style: 'display: none; height: 25px;'}
-  %i.fa.fa-warning.warning-sign
+#warning-banner{style: 'display: none'}
+
+  %i.fa.fa-warning.warning-sign.banner-icon#warning-icon{style: 'display: none'}
+  %i.fa.fa-close.close-button.banner-icon#dismiss-icon{style: 'display: none; cursor: pointer', onclick: '$("#warning-banner").slideUp();'}
   &nbsp;
-  != t("compatibility.upgrade.unsupported_message", supported_browsers_url: 'https://support.code.org/hc/en-us/articles/202591743')
+  #unsupported-browser.banner-text{style: 'display: none'}!= t("compatibility.upgrade.unsupported_message", supported_browsers_url: 'https://support.code.org/hc/en-us/articles/202591743')
+  #applab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.applab_unsupported_tablet")
+  #gamelab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.gamelab_unsupported_tablet")
+  #weblab-unsupported-browser.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_browser")
+  #weblab-unsupported-local-storage.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_locale_storage")
 
 :javascript
   $(document).ready(function () {
+    var textDivId = null;
+    var dismissable = false;
+
     if (isUnsupportedBrowser()) {
+      textDivId = '#unsupported-browser';
+    } else if (typeof appOptions !== 'undefined') {
+      if (isMobileDevice()) {
+        if (appOptions.app === 'applab') {
+          textDivId = '#applab-unsupported-tablet';
+        } else if (appOptions.app === 'gamelab') {
+          textDivId = '#gamelab-unsupported-tablet';
+        }
+        dismissable = true;
+      } else if (isIE11() && appOptions.app === 'weblab') {
+        textDivId = '#weblab-unsupported-browser';
+        dismissable = true;
+      } else if (appOptions.app === 'weblab' && !isStorageAvailable('localStorage')) {
+        textDivId = '#weblab-unsupported-local-storage';
+        dismissable = true;
+      }
+    }
+
+    if (textDivId) {
+      $(textDivId).show();
+      if (dismissable) {
+        $("#dismiss-icon").show();
+      } else {
+        $("#warning-icon").show();
+      }
       $("#warning-banner").show();
     }
   });

@@ -4,7 +4,7 @@ title: Code.org Advocacy Coalition
 ---
 
 # Code.org Advocacy Coalition
-The Code.org Advocacy Coalition is a non-partisan group that believes computer science should be part of the core curriculum in education, and that we must increase participation and access for female students and underrepresented minority students.  
+The Code.org Advocacy Coalition is a non-partisan group that believes computer science should be part of the core curriculum in education, and that we must increase participation and access for female students and underrepresented minority students. Download a description of the coalition [here](https://drive.google.com/open?id=0B58r1w66kPdsbmJTaWVhSWRaM0E). 
 ## Map
 
 <%= view :interactive_map, use_url: false %>
@@ -52,9 +52,12 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.aauw.org/">American Association for University Women</a> 
 * <a href="http://anitaborg.org/">Anita Borg Institute</a> 
 * <a href="https://www.ncwit.org/">Association for Computing Machinery</a> 
+* <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
+* <a href="http://www.ccboe.com/">Charles County Pulic Schools</a>
 * <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a> 
 * <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>
 * <a href="http://cra.org/">Computing Research Association</a>
+* <a href="http://www.cccoe.k12.ca.us/index.html">Contra Costa County Office of Education</a>
 * <a href="http://csta.acm.org/">CSTA</a> 
 * <a href="https://www.google.com/edu/">Google</a> 
 * <a href="http://expandingcomputing.cs.umass.edu/">Expanding Computing Education Pathways (ECEP)</a>
@@ -63,11 +66,15 @@ For more information, please contact advocacy@code.org.
 * <a href="http://www.microsoft.com/about/corporatecitizenship/en-us/working-responsibly/principled-business-practices/integrity-governance/political-engagement/"_blank">Microsoft</a> 
 * <a href="https://www.nms.org/">National Math and Science Initiative</a> 
 * <a href="https://www.ncwit.org/">NCWIT</a>
+* <a href="http://nextech.org/">Nextech</a>
+* <a href="http://www.osc.org/">Orlando Science Center</a>
 * <a href="https://www.sas.com">SAS</a>
+* <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
 * <a href="http://stand.org/">Stand for Children</a> 
 * <a href="https://www.studentsfirst.org/">Students First</a> 
 * <a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative/">Teach for America</a> 
 * <a href="http://www.technet.org/">TechNet</a> 
+* <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
 
 [#tools-section]
 

@@ -380,8 +380,10 @@ def update_district
   users = User.where("length(email) > 0")
 
   users.find_each do |user|
-    PEGASUS_REPORTING_DB[DEST_TABLE_NAME.to_sym].where(email: user.email).
-      update(school_name: user.ops_school) unless user.ops_school.nil?
+    unless user.ops_school.nil?
+      PEGASUS_REPORTING_DB[DEST_TABLE_NAME.to_sym].where(email: user.email).
+        update(school_name: user.ops_school)
+    end
 
     unless user.district_id.nil?
       district = districts[user.district_id]

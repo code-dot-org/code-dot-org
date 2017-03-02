@@ -32,8 +32,11 @@
     "markdown_instructions": "You'll need to loop your triangle 12 times to draw this pattern. \r\n\r\nDivide the number of degrees in a circle (360) by the number of shapes you're drawing (12) to figure out how far to turn after each shape.",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Need help with the angles?  \\n**360/12 = 30**\",\r\n  \"hint_id\": \"2-3_Artist_Nested_Loops_3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Remeber to put all of the grey code and your turn block inside of a loop.\",\r\n  \"hint_id\": \"2-3_Artist_Nested_Loops_3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Need help with the angles?  \\n**360/12 = 30**\",\"hint_id\":\"2-3_Artist_Nested_Loops_3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7bb7f97e05e492be641bbc6c8d671847/2-3 Artist Nested Loops 3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to put all of the grey code and your turn block inside of a loop.\",\"hint_id\":\"2-3_Artist_Nested_Loops_3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ec3287abc3f95bd2b2a80e7727de51f5/2-3 Artist Nested Loops 3.mp3\"}]",
     "discard_background": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

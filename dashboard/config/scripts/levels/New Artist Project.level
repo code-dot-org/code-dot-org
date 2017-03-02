@@ -479,6 +479,13 @@
               </block>
             </value>
           </block>
+          <block type="jump_to">
+            <title name="VALUE">7</title>
+          </block>
+          <block type="jump_to_xy">
+            <title name="XPOS">0</title>
+            <title name="YPOS">0</title>
+          </block>
         </category>
         <category name="Brushes">
           <block type="draw_colour" inline="true" id="draw-color">

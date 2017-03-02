@@ -4,6 +4,9 @@ import color from "../../util/color";
 import commonMsg from '@cdo/locale';
 
 const styles = {
+  table: {
+    width: '100%',
+  },
   cell: {
     border: '1px solid gray',
     padding: 10,
@@ -49,27 +52,30 @@ function dateFormatter(dateString) {
   return date.toLocaleDateString();
 }
 
-/**
- * Looks up the channel id and the project type in the row data, to generate
- * a URL to decorate the project name with.
- * @param {string} name Project name.
- * @param {Object} rowData
- * @param {string} rowData.type Project type (e.g. 'applab').
- * @param {string} rowData.channel Encrypted, base64-encoded channel id.
- * @returns {React} A named link to the specified project.
- */
-function nameFormatter(name, {rowData}) {
-  // Avoid generating malicious URLs in case the user somehow manipulates these inputs.
-  const type = encodeURIComponent(rowData.type);
-  const channel = encodeURIComponent(rowData.channel);
-
-  const url = `/projects/${type}/${channel}`;
-  return <a href={url} target="_blank">{name}</a>;
-}
-
 const ProjectsList = React.createClass({
   propTypes: {
     projectsData: React.PropTypes.array.isRequired,
+    // The prefix for the code studio url in the current environment,
+    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
+    studioUrlPrefix: React.PropTypes.string.isRequired,
+  },
+
+  /**
+   * Looks up the channel id and the project type in the row data, to generate
+   * a URL to decorate the project name with.
+   * @param {string} name Project name.
+   * @param {Object} rowData
+   * @param {string} rowData.type Project type (e.g. 'applab').
+   * @param {string} rowData.channel Encrypted, base64-encoded channel id.
+   * @returns {React} A named link to the specified project.
+   */
+  nameFormatter(name, {rowData}) {
+    // Avoid generating malicious URLs in case the user somehow manipulates these inputs.
+    const type = encodeURIComponent(rowData.type);
+    const channel = encodeURIComponent(rowData.channel);
+
+    const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
+    return <a href={url} target="_blank">{name}</a>;
   },
 
   getColumns() {
@@ -81,7 +87,7 @@ const ProjectsList = React.createClass({
           props: {style: styles.headerCell},
         },
         cell: {
-          format: nameFormatter,
+          format: this.nameFormatter,
           props: {style: styles.nameCell}
         }
       },
@@ -125,6 +131,7 @@ const ProjectsList = React.createClass({
       <Table.Provider
         className="pure-table pure-table-striped"
         columns={this.getColumns()}
+        style={styles.table}
       >
         <Table.Header />
 

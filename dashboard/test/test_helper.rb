@@ -1,6 +1,11 @@
-if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
+if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
+  SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
+  if ENV['CIRCLECI']
+    require 'codecov'
+    SimpleCov.formatter = SimpleCov::Formatter::Codecov
+  end
 elsif ENV['CI'] # this is set by circle
   # TODO(bjordan): Temporarily disabled, re-enable with proper handling for
   # parallel testing https://coveralls.zendesk.com/hc/en-us/articles/203484329
@@ -131,11 +136,11 @@ class ActiveSupport::TestCase
   def assert_change(expressions, message = nil, &block)
     expressions = Array(expressions)
 
-    exps = expressions.map { |e|
+    exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
       # rubocop:enable Lint/Eval
-    }
+    end
     before = exps.map(&:call)
 
     yield
@@ -152,11 +157,11 @@ class ActiveSupport::TestCase
   def assert_no_change(expressions, message = nil, &block)
     expressions = Array(expressions)
 
-    exps = expressions.map { |e|
+    exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
       e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
       # rubocop:enable Lint/Eval
-    }
+    end
     before = exps.map(&:call)
 
     yield

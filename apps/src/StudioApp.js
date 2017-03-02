@@ -375,8 +375,9 @@ StudioApp.prototype.init = function (config) {
     });
   }
 
-  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
-  if (config.authoredHintViewRequestsUrl) {
+  const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
+  this.authoredHintsController_.init(config.level.authoredHints, hintsUsedIds, config.scriptId, config.serverLevelId);
+  if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
     this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
   }
 
@@ -514,6 +515,17 @@ StudioApp.prototype.init = function (config) {
         {msg.pairingNavigatorWarning({driver: config.level.pairingDriver})}
       </div>
     );
+  }
+
+  // If we are in a non-english locale using our english-specific app
+  // (the Spelling Bee), display a warning.
+  if (config.locale !== 'en_us' && config.skinId === 'letters') {
+      this.displayWorkspaceAlert(
+        'error',
+        <div>
+          {msg.englishOnlyWarning({ nextStage: config.stagePosition + 1 })}
+        </div>
+      );
   }
 
   var vizResizeBar = document.getElementById('visualizationResizeBar');
@@ -1836,7 +1848,8 @@ StudioApp.prototype.configureDom = function (config) {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = { category : { x: 20 } };
       }
-      // Enable param & var editing in levelbuilder, regardless of level setting
+      // Enable if/else, param & var editing in levelbuilder, regardless of level setting
+      config.level.disableIfElseEditing = false;
       config.level.disableParamEditing = false;
       config.level.disableVariableEditing = false;
     }
@@ -1989,12 +2002,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     return;
   }
 
-  // Ensure global ace variable is the same as window.ace
-  // (important because they can be different in our test environment)
-  /* eslint-disable */
-  ace = window.ace;
-  /* eslint-enable */
-
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
   // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
   // was initialized, so include it initially, and conditionally remove it here.
@@ -2107,7 +2114,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     config.dropletConfig,
     config.level.codeFunctions,
     config.level.autocompletePaletteApisOnly,
-    this.Dialog);
+    this.Dialog,
+    config.app);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
@@ -2385,6 +2393,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   var div = document.getElementById('codeWorkspace');
   var options = {
     toolbox: config.level.toolbox,
+    disableIfElseEditing: utils.valueOr(config.level.disableIfElseEditing, false),
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
@@ -2869,6 +2878,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,
+    isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
     isShareView: !!config.share,

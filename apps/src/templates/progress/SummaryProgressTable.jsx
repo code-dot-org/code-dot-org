@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
-import ProgressBubbleSet from './ProgressBubbleSet';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
-
-const lighterBorder = color.border_light_gray;
+import { levelType, lessonType } from './progressTypes';
+import SummaryProgressRow, { styles as rowStyles } from './SummaryProgressRow';
+import { connect } from 'react-redux';
+import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
 
 const styles = {
   table: {
@@ -11,62 +12,29 @@ const styles = {
     borderStyle: 'solid',
     borderLeftColor: color.border_gray,
     borderTopColor: color.border_gray,
-    borderRightColor: lighterBorder,
-    borderBottomColor: lighterBorder
+    borderRightColor: color.border_light_gray,
+    borderBottomColor: color.border_light_gray
   },
   headerRow: {
     backgroundColor: color.table_header,
-  },
-  lightRow: {
-    backgroundColor: color.table_light_row
-  },
-  darkRow: {
-    backgroundColor: color.table_dark_row
-  },
-  col1: {
-    width: 200,
-    minWidth: 200,
-    maxWidth: 200,
-    lineHeight: '52px',
-    color: color.charcoal,
-    letterSpacing: -0.11,
-    whiteSpace: 'nowrap',
-    paddingLeft: 20,
-    paddingRight: 20,
-    borderRightWidth: 1,
-    borderRightColor: lighterBorder,
-    borderRightStyle: 'solid',
-  },
-  col2: {
-    width: '100%',
-    paddingLeft: 20,
-    paddingRight: 20
-  },
-  colText: {
-    color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 12,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
   }
 };
 
 const SummaryProgressTable = React.createClass({
   propTypes: {
-    lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          status: PropTypes.string.isRequired,
-          url: PropTypes.string.isRequired
-        })
-      )
+      PropTypes.arrayOf(levelType)
     ).isRequired,
+
+    // redux provided
+    lessonLockedForSection: PropTypes.func.isRequired,
+    lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
-    const { lessonNames, levelsByLesson } = this.props;
-    if (lessonNames.length !== levelsByLesson.length) {
+    const { lessons, levelsByLesson } = this.props;
+    if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
 
@@ -74,33 +42,33 @@ const SummaryProgressTable = React.createClass({
       <table style={styles.table}>
         <thead>
           <tr style={styles.headerRow}>
-            <td style={styles.col1}>
-              <div style={styles.colText}>{i18n.lessonName()}</div>
+            <td style={rowStyles.col1}>
+              <div style={rowStyles.colText}>
+                {i18n.lessonName()}
+              </div>
             </td>
-            <td style={styles.col2}>
-              <div style={styles.colText}>{i18n.yourProgress()}</div>
+            <td style={rowStyles.col2}>
+              <div style={rowStyles.colText}>
+                {i18n.yourProgress()}
+              </div>
             </td>
           </tr>
         </thead>
         <tbody>
-          {
-            lessonNames.map((lessonName, index) => (
-              <tr
-                key={index}
-                style={(index % 2 === 0) ? styles.lightRow : styles.darkRow}
-              >
-                <td style={styles.col1}>
-                  <div style={styles.colText}>
-                    {`${index + 1}. ${lessonName}`}
-                  </div>
-                </td>
-                <td style={styles.col2}>
-                  <ProgressBubbleSet
-                    start={1}
-                    levels={levelsByLesson[index]}
-                  />
-                </td>
-              </tr>
+          {/*Filter our lessons to those that will be rendered, and then make
+            every other (remaining) one dark */
+            lessons.map((lesson, index) => ({unfilteredIndex: index, lesson }))
+            .filter(item => this.props.lessonIsVisible(item.lesson))
+            .map((item, filteredIndex) => (
+              <SummaryProgressRow
+                key={item.unfilteredIndex}
+                lessonNumber={item.lesson.stageNumber}
+                levels={levelsByLesson[item.unfilteredIndex]}
+                lesson={item.lesson}
+                dark={filteredIndex % 2 === 1}
+                lockedForSection={this.props.lessonLockedForSection(item.lesson.id)}
+                lessonIsVisible={this.props.lessonIsVisible}
+              />
             ))
           }
         </tbody>
@@ -109,4 +77,10 @@ const SummaryProgressTable = React.createClass({
   }
 });
 
-export default SummaryProgressTable;
+// Provide non-connected version for testing
+export const UnconnectedSummaryProgressTable = SummaryProgressTable;
+
+export default connect(state => ({
+  lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
+}))(SummaryProgressTable);

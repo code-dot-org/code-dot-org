@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class PeerReviewsControllerTest < ActionController::TestCase
+  include SharedConstants
+
   setup do
     @user = create :teacher
     @other_user = create :teacher
@@ -72,8 +75,8 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     @peer_review.update(reviewer_id: plc_reviewer.id)
     post :update, params: {
-        id: @peer_review.id,
-        peer_review: {status: 'accepted', data: 'This is great'}
+      id: @peer_review.id,
+      peer_review: {status: LEVEL_STATUS.accepted, data: 'This is great'}
     }
     @peer_review.reload
     assert @peer_review.from_instructor
@@ -84,7 +87,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @peer_review.update(reviewer_id: @user.id)
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: 'accepted', data: 'This is great'}
+      peer_review: {status: LEVEL_STATUS.accepted, data: 'This is great'}
     }
     assert_redirected_to script_path(@script)
   end
@@ -93,7 +96,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @peer_review.update(reviewer_id: @user.id)
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: 'accepted', data: panda_panda}
+      peer_review: {status: LEVEL_STATUS.accepted, data: panda_panda}
     }
     @peer_review.reload
     assert_equal 'Panda', @peer_review.data

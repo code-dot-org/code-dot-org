@@ -18,7 +18,7 @@ require 'cdo/only_one'
 require 'cdo/db'
 require 'cdo/solr'
 require 'cdo/geocoder'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 
 raise "No SOLR server configured." unless CDO.solr_server
 SOLR = Solr::Server.new(host: CDO.solr_server)
@@ -76,13 +76,11 @@ def main
         begin
           SOLR.update([document])
         rescue => e
-          HipChat.log "Unable to index form #{document[:id]}: #{e}"
+          ChatClient.log "Unable to index form #{document[:id]}: #{e}"
           raise
         end
       end
     end
-
-#    HipChat.log "#{documents.count} users indexed into SOLR (ids: #{start_id} - #{last_id})"
   end
 
   save_last_id(last_id)

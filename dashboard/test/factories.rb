@@ -150,6 +150,11 @@ FactoryGirl.define do
       end
     end
 
+    trait :spelling_bee do
+      game {create(:game, app: "maze", name: "Maze")}
+      skin 'letters'
+    end
+
     trait :blockly do
       game {create(:game, app: "maze", name: "Maze")}
     end
@@ -209,19 +214,19 @@ FactoryGirl.define do
 
   factory :multi, parent: :level, class: Applab do
     game {create(:game, app: "multi")}
-    properties {
+    properties do
       {
         question: 'question text',
         answers: [
           {text: 'answer1', correct: true},
           {text: 'answer2', correct: false},
           {text: 'answer3', correct: false},
-          {text: 'answer4', correct: false}],
-        questions: [
-          {text: 'question text'}],
+          {text: 'answer4', correct: false}
+        ],
+        questions: [{text: 'question text'}],
         options: {hide_submit: false}
       }
-    }
+    end
   end
 
   factory :evaluation_multi, parent: :level, class: EvaluationMulti do
@@ -255,9 +260,8 @@ FactoryGirl.define do
 
   factory :gallery_activity do
     user
-    activity { create(:activity, level_source: create(:level_source, :with_image)) }
-    level_source { activity.level_source }
-    user_level { create(:user_level, level: activity.level) }
+    user_level { create(:user_level) }
+    level_source { create(:level_source, :with_image, level: user_level.level) }
   end
 
   factory :script do
@@ -664,6 +668,34 @@ FactoryGirl.define do
     trait :with_school do
       association :school, factory: :charter_school
     end
+  end
+
+  factory :school_info_us_homeschool, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
+    state 'NJ'
+    zip '08534'
+  end
+
+  factory :school_info_us_after_school, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
+    state 'NJ'
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_non_us_homeschool, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
+    full_address '31 West Bank, London, England'
+  end
+
+  factory :school_info_non_us_after_school, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
+    school_name 'Grazebrook'
+    full_address '31 West Bank, London, England'
   end
 
   # end school info

@@ -35,6 +35,32 @@ export function scrollTo(element, scrollTop, animate=400) {
   }
 }
 
+/**
+ * Converts any inline XML in the container element into embedded
+ * readonly BlockSpaces
+ * @param {Element} container The element in which to search for XML
+ */
+export function convertXmlToBlockly(container) {
+  const xmls = container.getElementsByTagName('xml');
+  Array.prototype.forEach.call(xmls, function (xml) {
+    // create a container and insert the blockspace into it
+    const container = xml.parentNode.insertBefore(document.createElement('div'), xml);
+    const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
+      noScrolling: true
+    });
+
+    // then, calculate the minimum required size for the container
+    const metrics = blockSpace.getMetrics();
+    const height = metrics.contentHeight + (metrics.contentTop * 2);
+    const width = metrics.contentWidth + metrics.contentLeft;
+
+    // and shrink it, triggering a blockspace resize when we do so
+    container.style.height = height + "px";
+    container.style.width = width + "px";
+    blockSpace.blockSpaceEditor.svgResize();
+  });
+}
+
 export function shouldDisplayChatTips(skinId) {
   /*eslint-disable no-fallthrough*/
   switch (skinId) {

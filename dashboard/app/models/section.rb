@@ -54,14 +54,20 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
+  validates_presence_of :user
   def user_must_be_teacher
-    errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
+    return unless user
+    errors.add(:user_id, 'must be a teacher') unless user.teacher?
   end
   validate :user_must_be_teacher
 
   before_create :assign_code
   def assign_code
     self.code = unused_random_code
+  end
+
+  def teacher_dashboard_url
+    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
   end
 
   # return a version of self.students in which all students' names are
@@ -71,7 +77,13 @@ class Section < ActiveRecord::Base
   def name_safe_students
     # Create a prefix tree of student names
     trie = Rambling::Trie.create
+
+    # Add whitespace-normalized versions of the student names to the
+    # trie. Because FullNameSplitter implicitly performs whitespace
+    # normalization, this is necessary to ensure that we can recognize
+    # the name on the other side
     self.students.each do |student|
+      student.name = student.name.strip.split(/\s+/).join(' ')
       trie.add student.name
     end
 
@@ -94,9 +106,23 @@ class Section < ActiveRecord::Base
         student.name.split('').each do |letter|
           leaf = leaf[letter.to_sym]
         end
+
         # we then traverse up the trie until we encounter the
-        # "rightmost" letter in the student's name which is not unique
-        leaf = leaf.parent while leaf.parent && leaf.parent.children.count == 1
+        # "rightmost" letter in the student's name which is not unique.
+        # "Not unique" means that either the letter has siblings
+        # (implying other names that share characters with our own) or
+        # its parent is a terminal node (implying a name that's a strict
+        # subset of our own)
+        leaf = leaf.parent until leaf.parent.nil? ||
+            leaf.parent.children.count > 1 ||
+            leaf.parent.terminal?
+
+        # If our "rightmost" character is a space, add an additional
+        # letter for visibility if we can. Note that by this stage we
+        # are guaranteed to have no more than one child, so we can
+        # condifently pick the first.
+        leaf = leaf.children.first if leaf.children.any? && leaf.letter == :" "
+
         # finally, we assemble the student's unique name by continuing
         # our way up the trie
         newname = ""
@@ -114,8 +140,8 @@ class Section < ActiveRecord::Base
   def students_attributes=(params)
     follower_params = params.collect do |student|
       {
-       user_id: user.id,
-       student_user_attributes: student
+        user_id: user.id,
+        student_user_attributes: student
       }
     end
 

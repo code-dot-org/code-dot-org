@@ -78,10 +78,12 @@ class Level < ActiveRecord::Base
   def assign_attributes(new_attributes)
     attributes = new_attributes.stringify_keys
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
-    assign_nested_attributes_for_one_to_one_association(
-      :level_concept_difficulty,
-      concept_difficulty_attributes
-    ) if concept_difficulty_attributes
+    if concept_difficulty_attributes
+      assign_nested_attributes_for_one_to_one_association(
+        :level_concept_difficulty,
+        concept_difficulty_attributes
+      )
+    end
     super(attributes)
   end
 
@@ -122,6 +124,10 @@ class Level < ActiveRecord::Base
 
   # Overriden by different level types.
   def toolbox(type)
+  end
+
+  def spelling_bee?
+    try(:skin) == 'letters'
   end
 
   def unplugged?
@@ -249,14 +255,25 @@ class Level < ActiveRecord::Base
     end
   end
 
-  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE =
-    ['Unplugged', # no solutions
-     'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', 'LevelGroup', # dsl defined, covered in dsl
-     'Applab', 'Gamelab', # all applab and gamelab are freeplay
-     'EvaluationQuestion', # plc evaluation
-     'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation',
-     'PublicKeyCryptography'
-    ] # widgets
+  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Unplugged', # no solutions
+    'TextMatch', # dsl defined, covered in dsl
+    'Multi', # dsl defined, covered in dsl
+    'External', # dsl defined, covered in dsl
+    'Match', # dsl defined, covered in dsl
+    'ContractMatch', # dsl defined, covered in dsl
+    'LevelGroup', # dsl defined, covered in dsl
+    'Applab', # freeplay
+    'Gamelab', # freeplay
+    'EvaluationQuestion', # plc evaluation
+    'NetSim', # widget
+    'Odometer', # widget
+    'Vigenere', # widget
+    'FrequencyAnalysis', # widget
+    'TextCompression', # widget
+    'Pixelation', # widget
+    'PublicKeyCryptography' # widget
+  ]
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 
   def self.where_we_want_to_calculate_ideal_level_source

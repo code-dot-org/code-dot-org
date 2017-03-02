@@ -113,6 +113,21 @@ class PosteTest < SequelTestCase
     assert_equal my_int_encrypted,
       Poste.encrypt_id(Poste.decrypt_id(my_int_encrypted))
   end
+
+  def test_decrypt_bad_code_returns_nil
+    my_int = 123456
+    CDO.stubs(poste_secret: 'secret 1')
+    my_int_encrypted = Poste.encrypt_id(my_int)
+
+    # Wrong secret logs a bad decrypt warning and returns nil
+    CDO.stubs(poste_secret: 'secret 2')
+    CDO.log.expects(:warn).with("Unable to decrypt poste id: #{my_int_encrypted}. Error: bad decrypt")
+    assert_nil Poste.decrypt_id(my_int_encrypted)
+
+    # Invalid encrypted id logs invalid base64 warning and returns nil
+    CDO.log.expects(:warn).with('Unable to decrypt poste id: invalid. Error: invalid base64')
+    assert_nil Poste.decrypt_id('invalid')
+  end
 end
 
 class Poste2Test < SequelTestCase

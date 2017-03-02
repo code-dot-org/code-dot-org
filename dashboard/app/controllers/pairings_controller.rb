@@ -24,12 +24,13 @@ class PairingsController < ApplicationController
 
   def sections_summary
     current_user.sections_as_student.map do |section|
-      {id: section.id,
-       name: section.name,
-       students:
-         (section.students - [current_user]).map do |student|
-           {id: student.id, name: student.name}
-         end
+      {
+        id: section.id,
+        name: section.name,
+        students:
+          (section.students - [current_user]).map do |student|
+            {id: student.id, name: student.name}
+          end
       }
     end
   end

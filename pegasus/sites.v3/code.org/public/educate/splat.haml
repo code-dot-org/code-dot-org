@@ -15,21 +15,21 @@
 - elsif requested_path.eql? "/educate/allhourofcode"
   - redirect "/educate/curriculum/all-hour-of-code"
 - elsif requested_path.eql? "/educate/teacher-led"
-  - redirect "/educate/curriculum/teacher-led"  
+  - redirect "/educate/curriculum/teacher-led"
 - elsif requested_path.include? "/educate/plc"
   - path = requested_path.gsub("plc", "professional-learning")
-  - new_path = path.gsub("algebra", "cs-in-algebra").gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
+  - new_path = path.gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
   - redirect new_path
 - elsif requested_path.eql? "/educate/facilitator"
   - redirect "/educate/professional-learning/facilitator"
 - elsif requested_path.include? "/educate/facilitator"
-  - path = requested_path.gsub("csf", "cs-fundamentals").gsub("csa", "cs-in-algebra").gsub("css", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles").gsub("csd", "cs-discoveries")
+  - path = requested_path.gsub("csf", "cs-fundamentals").gsub("css", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles").gsub("csd", "cs-discoveries")
   - new_path = path.gsub("/educate/facilitator-", "/educate/professional-learning/") + "-facilitator"
   - redirect new_path
 - elsif requested_path.eql? "/educate/k5-affiliates"
   - redirect "/educate/professional-learning/cs-fundamentals-facilitator"
 - elsif requested_path.eql? "/educate/k5-affiliates-directory"
-  - redirect "/educate/professional-learning/cs-fundamentals-directory"  
+  - redirect "/educate/professional-learning/cs-fundamentals-directory"
 - elsif requested_path.include? "/educate/professional-learning-partner/playbook"
   - redirect "/educate/regional-partner/playbook"
 - elsif requested_path.include? "/educate/professional-learning-partner"
@@ -64,9 +64,13 @@
   - redirect "/educate/resources/inspire"
 - elsif requested_path.eql? "/educate/it"
   - redirect "/educate/resources/tech-requirements"
-- elsif requested_path.eql? "/educate/marketingkit"
-  - redirect "/educate/resources/marketing-kit"
 - elsif requested_path.eql? "/educate/videos"
-  - redirect "/educate/resources/videos"  
+  - redirect "/educate/resources/videos"
 - elsif requested_path.eql? "/educate/hoc"
   - redirect "https://hourofcode.com/"
+- elsif requested_path.eql? "/educate/resources/marketingkit"
+  - redirect "/educate/resources/recruit"
+- elsif requested_path.eql? "/educate/marketingkit"
+  - redirect "/educate/resources/recruit"
+- elsif requested_path.eql? "/educate/blurbs"
+  - redirect "/educate/resources/recruit"

@@ -174,6 +174,9 @@ module LevelsHelper
 
     if AuthoredHintViewRequest.enabled?
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
+      if current_user && @script
+        view_options(authored_hints_used_ids: Set.new(AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).map(&:hint_id)))
+      end
     end
 
     if @user
@@ -227,18 +230,18 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab
     hide_source = app_options[:hideSource]
     render partial: 'levels/apps_dependencies',
-           locals: {
-               app: app_options[:app],
-               use_droplet: use_droplet,
-               use_netsim: use_netsim,
-               use_blockly: use_blockly,
-               use_applab: use_applab,
-               use_gamelab: use_gamelab,
-               use_weblab: use_weblab,
-               use_phaser: use_phaser,
-               hide_source: hide_source,
-               static_asset_base_path: app_options[:baseUrl]
-           }
+      locals: {
+        app: app_options[:app],
+        use_droplet: use_droplet,
+        use_netsim: use_netsim,
+        use_blockly: use_blockly,
+        use_applab: use_applab,
+        use_gamelab: use_gamelab,
+        use_weblab: use_weblab,
+        use_phaser: use_phaser,
+        hide_source: hide_source,
+        static_asset_base_path: app_options[:baseUrl]
+      }
   end
 
   # Options hash for Widget
@@ -296,9 +299,9 @@ module LevelsHelper
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
     app_options[:report] = {
-        fallback_response: @fallback_response,
-        callback: @callback,
-        sublevelCallback: @sublevel_callback,
+      fallback_response: @fallback_response,
+      callback: @callback,
+      sublevelCallback: @sublevel_callback,
     }
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share
@@ -387,21 +390,25 @@ module LevelsHelper
       )
 
       # stage-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {
-          script_name: script.name,
-          stage: script_level.stage.absolute_position,
-        },
-        default: nil
-      ) if enabled.nil?
+      if enabled.nil?
+        enabled = Gatekeeper.allows(
+          'showUnusedBlocks',
+          where: {
+            script_name: script.name,
+            stage: script_level.stage.absolute_position,
+          },
+          default: nil
+        )
+      end
 
       # script-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {script_name: script.name},
-        default: nil
-      ) if enabled.nil?
+      if enabled.nil?
+        enabled = Gatekeeper.allows(
+          'showUnusedBlocks',
+          where: {script_name: script.name},
+          default: nil
+        )
+      end
 
       # global
       enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
@@ -475,9 +482,9 @@ module LevelsHelper
     app_options[:showExampleTestButtons] = true if l.enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
-        fallback_response: @fallback_response,
-        callback: @callback,
-        sublevelCallback: @sublevel_callback,
+      fallback_response: @fallback_response,
+      callback: @callback,
+      sublevelCallback: @sublevel_callback,
     }
 
     unless params[:no_last_attempt]
@@ -493,8 +500,10 @@ module LevelsHelper
     end
 
     # Request-dependent option
-    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
-        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    if request
+      app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+          (!Rails.env.production? && request.location.try(:country_code) == 'RD')
+    end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share
@@ -508,12 +517,12 @@ module LevelsHelper
     # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-        thank_you: URI.escape(I18n.t('footer.thank_you')),
-        help_from_html: I18n.t('footer.help_from_html'),
-        art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-        code_from_html: URI.escape(I18n.t('footer.code_from_html')),
-        powered_by_aws: I18n.t('footer.powered_by_aws'),
-        trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      thank_you: URI.escape(I18n.t('footer.thank_you')),
+      help_from_html: I18n.t('footer.help_from_html'),
+      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+      code_from_html: URI.escape(I18n.t('footer.code_from_html')),
+      powered_by_aws: I18n.t('footer.powered_by_aws'),
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
   end
 

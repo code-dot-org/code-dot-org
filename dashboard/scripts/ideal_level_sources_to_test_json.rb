@@ -17,7 +17,7 @@ def main
       where('ideal_level_source_id is not null').
       all.reject {|level| level.try(:free_play) || !level.is_a?(Blockly) || !level.custom?}
 
-  level_hashes = levels_to_test.map { |level|
+  level_hashes = levels_to_test.map do |level|
     level_hash = {
       levelDefinition: level.blockly_level_options,
       tests: [{
@@ -40,7 +40,7 @@ def main
     end
 
     level_hash
-  }
+  end
 
   puts(JSON.pretty_generate({levels: level_hashes}))
 end
