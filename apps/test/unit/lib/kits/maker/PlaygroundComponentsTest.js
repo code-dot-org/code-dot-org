@@ -61,68 +61,6 @@ describe('Circuit Playground Components', () => {
     });
   });
 
-  describe('deinitializeCircuitPlaygroundComponents()', () => {
-    it('calls stop on every color LED', () => {
-      const components = {
-        colorLeds: initializeColorLeds(board)
-      };
-
-      components.colorLeds.forEach(led => sinon.spy(led, 'stop'));
-
-      deinitializeCircuitPlaygroundComponents(components);
-
-      for (let i = 0; i < 10; i++) {
-        expect(components.colorLeds[i].stop).to.have.been.calledOnce;
-      }
-    });
-
-    it('calls stop on the red LED', () => {
-      const components = {
-        led: new five.Led({board, pin: 13})
-      };
-
-      sinon.spy(components.led, 'stop');
-
-      deinitializeCircuitPlaygroundComponents(components);
-
-      expect(components.led.stop).to.have.been.calledOnce;
-    });
-
-    it('calls stop on the buzzer', () => {
-      const components = {
-        buzzer: { stop: sinon.spy() }
-      };
-
-      deinitializeCircuitPlaygroundComponents(components);
-
-      expect(components.buzzer.stop).to.have.been.calledOnce;
-    });
-
-    it('calls disable on the soundSensor', () => {
-      const components = {
-        soundSensor: initializeSoundSensor(board)
-      };
-
-      sinon.spy(components.soundSensor, 'disable');
-
-      deinitializeCircuitPlaygroundComponents(components);
-
-      expect(components.soundSensor.disable).to.have.been.calledOnce;
-    });
-
-    it('calls disable on the lightSensor', () => {
-      const components = {
-        lightSensor: initializeLightSensor(board)
-      };
-
-      sinon.spy(components.lightSensor, 'disable');
-
-      deinitializeCircuitPlaygroundComponents(components);
-
-      expect(components.lightSensor.disable).to.have.been.calledOnce;
-    });
-  });
-
   describe('initializeSoundSensor()', () => {
     it('initializes one sensor', () => {
       const sensor = initializeSoundSensor(board);
@@ -217,6 +155,68 @@ describe('Circuit Playground Components', () => {
       expect(board.io.sysexCommand.getCall(5)).to.have.been.calledWith([0x40, 0x41, 9]);
       expect(board.io.sysexCommand.getCall(6)).to.have.been.calledWith([0x40, 0x41, 10]);
       expect(board.io.sysexCommand.getCall(7)).to.have.been.calledWith([0x40, 0x41, 12]);
+    });
+  });
+
+  describe('deinitializeCircuitPlaygroundComponents()', () => {
+    it('calls stop on every color LED', () => {
+      const components = {
+        colorLeds: initializeColorLeds(board)
+      };
+
+      components.colorLeds.forEach(led => sinon.spy(led, 'stop'));
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      for (let i = 0; i < 10; i++) {
+        expect(components.colorLeds[i].stop).to.have.been.calledOnce;
+      }
+    });
+
+    it('calls stop on the red LED', () => {
+      const components = {
+        led: new five.Led({board, pin: 13})
+      };
+
+      sinon.spy(components.led, 'stop');
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      expect(components.led.stop).to.have.been.calledOnce;
+    });
+
+    it('calls stop on the buzzer', () => {
+      const components = {
+        buzzer: { stop: sinon.spy() }
+      };
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      expect(components.buzzer.stop).to.have.been.calledOnce;
+    });
+
+    it('calls disable on the soundSensor', () => {
+      const components = {
+        soundSensor: initializeSoundSensor(board)
+      };
+
+      sinon.spy(components.soundSensor, 'disable');
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      expect(components.soundSensor.disable).to.have.been.calledOnce;
+    });
+
+    it('calls disable on the lightSensor', () => {
+      const components = {
+        lightSensor: initializeLightSensor(board)
+      };
+
+      sinon.spy(components.lightSensor, 'disable');
+
+      deinitializeCircuitPlaygroundComponents(components);
+
+      expect(components.lightSensor.disable).to.have.been.calledOnce;
     });
   });
 });
