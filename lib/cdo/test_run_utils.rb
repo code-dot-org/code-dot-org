@@ -29,7 +29,11 @@ module TestRunUtils
   def self.run_dashboard_tests
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard tests') do
-        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
+        if ENV['CI']
+          RakeUtils.rake_stream_output 'rake parallel:test'
+        else
+          RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
+        end
       end
     end
   end

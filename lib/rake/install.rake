@@ -39,7 +39,11 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        RakeUtils.rake 'dashboard:setup_db'
+        if ENV['CI']
+          RakeUtils.rake_stream_output 'parallel:rake[db:test:prepare]'
+        else
+          RakeUtils.rake 'dashboard:setup_db'
+        end
       end
     end
   end
