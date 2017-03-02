@@ -17,11 +17,13 @@ export default {
     callback(null, deviceList);
   },
 
-  test_setDeviceList(list) {
-    deviceList = list;
-  },
+  stub: {
+    setDeviceList(list) {
+      deviceList = list;
+    },
 
-  test_reset() {
-    deviceList = [];
+    reset() {
+      deviceList = [];
+    }
   }
 };
