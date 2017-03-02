@@ -1,13 +1,12 @@
 $(function () {
 
   $('#nav-hamburger').click(function (e){
-      $('#nav ul').toggleClass('hide-responsive-menu');
-      e.preventDefault();
+    $('#nav ul').slideToggle();
   });
 
   $('#about-more').click(function (e){
-      $('#nav ul span').toggleClass('hide-about');
-      e.preventDefault();
+    $('#nav ul span').slideToggle()
+    e.preventDefault();
   });
 
   $(document).click(function (e) {
