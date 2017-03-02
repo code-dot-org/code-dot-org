@@ -66,32 +66,33 @@ const BoardSetupStatus = React.createClass({
         // Is Chrome App Installed?
         .then(() => this.spin(STATUS_APP_INSTALLED))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
-        .then(() => {
-          return ensureAppInstalled()
-              .then(() => this.succeed(STATUS_APP_INSTALLED))
-              .catch(error => this.fail(STATUS_APP_INSTALLED));
-        })
+        .then(() =>
+            ensureAppInstalled()
+                .then(() => this.succeed(STATUS_APP_INSTALLED))
+                .catch(error => this.fail(STATUS_APP_INSTALLED))
+        )
 
         // Is board plugged in?
         .then(() => this.spin(STATUS_BOARD_PLUG))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
-        .then(() => {
-          return findPortWithViableDevice()
-              .then(usablePort => {
-                portName = usablePort;
-                this.succeed(STATUS_BOARD_PLUG);
-              })
-              .catch(error => this.fail(STATUS_BOARD_PLUG));
-        })
+        .then(() =>
+            findPortWithViableDevice()
+                .then(usablePort => {
+                  portName = usablePort;
+                  this.succeed(STATUS_BOARD_PLUG);
+                })
+                .catch(error => this.fail(STATUS_BOARD_PLUG))
+        )
 
         // Can we talk to the firmware?
         .then(() => this.spin(STATUS_BOARD_CONNECT))
         .then(() => {
-          boardController = new CircuitPlaygroundBoard(portName);
-          return boardController.connectToFirmware()
-              .then(() => this.succeed(STATUS_BOARD_CONNECT))
-              .catch(error => this.fail(STATUS_BOARD_CONNECT));
-        })
+              boardController = new CircuitPlaygroundBoard(portName);
+              return boardController.connectToFirmware()
+                  .then(() => this.succeed(STATUS_BOARD_CONNECT))
+                  .catch(error => this.fail(STATUS_BOARD_CONNECT));
+            }
+        )
 
         // Can we initialize components successfully?
         .then(() => this.spin(STATUS_BOARD_COMPONENTS))
