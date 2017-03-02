@@ -30,7 +30,7 @@ module TestRunUtils
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard tests') do
         if ENV['CI']
-          RakeUtils.rake_stream_output 'rake parallel:test'
+          RakeUtils.rake_stream_output 'parallel:test'
         else
           RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
         end
