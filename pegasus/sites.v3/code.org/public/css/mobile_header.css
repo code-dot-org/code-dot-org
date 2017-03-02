@@ -100,6 +100,10 @@
   margin-top: 8px;
 }
 
+.about-nav li a {
+  margin-left: 20px;
+}
+
 @media (max-width: 992px) {
   #nav{
     position: relative;

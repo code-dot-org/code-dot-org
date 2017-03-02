@@ -9,12 +9,6 @@ $(function () {
     e.preventDefault();
   });
 
-  $(document).click(function (e) {
-    if (!$(e.target).closest('#nav').length) {
-      $('#nav ul').addClass('hide-responsive-menu');
-    }
-  });
-
   document.querySelector( "#nav-hamburger" )
     .addEventListener( "click", function () {
     this.classList.toggle( "active" );
