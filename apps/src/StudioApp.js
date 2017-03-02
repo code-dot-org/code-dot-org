@@ -60,6 +60,9 @@ var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
+var y = 10;
+y = 5;
+
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
