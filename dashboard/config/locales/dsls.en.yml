@@ -628,6 +628,9 @@ en:
       CSD U5 data visualization:
         description here: description here
         title: title
+      CSD U5 data visualization sheet:
+        description here: description here
+        title: title
       CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
