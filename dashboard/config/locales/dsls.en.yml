@@ -407,6 +407,40 @@ en:
         How do you typically organize students in your classes?: How do you typically organize students in your classes?
         Students usually work in small groups: Students usually work in small groups
         Students usually work independently: Students usually work independently
+      U5 evaluation q1:
+        Are you new to even-drive programming?: Are you new to even-drive programming?
+        'No': 'No'
+        'Yes': 'Yes'
+      U5 evaluation q2:
+        Conditionals and Boolean Logic: Conditionals and Boolean Logic
+        Creating Functions that Return Values: Creating Functions that Return Values
+        ? Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?
+        : Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?
+        Processing Arrays: Processing Arrays
+        Simple Arrays: Simple Arrays
+        Variables and Strings: Variables and Strings
+        While Loops: While Loops
+      U5 evaluation q3:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U5 evaluation q4:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U5 evaluation q5:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U5 evaluation q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U5 evaluation q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
@@ -420,6 +454,11 @@ en:
       4.1 - 4.4 Lesson Connections: {}
       4.5 - 4.7 Lesson Connections: {}
       4.8 - 4.9 Lesson Connections: {}
+      5.1 - 5.3 Lesson Connections: {}
+      5.11 - 5.14 Lesson Connections: {}
+      5.15 - 5.17 Lesson Connections: {}
+      5.4 - 5.6 Lesson Connections: {}
+      5.7- 5.10 Lesson Connections: {}
       A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
       AP Test Prep Guidance: {}
@@ -441,6 +480,7 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      Arrays Overview: {}
       Assessing Student Learning in Unit 1: {}
       Assessing Student Learning in Unit 2: {}
       Assessing Student Learning in Unit 4: {}
@@ -461,6 +501,7 @@ en:
       Boolean Expressions and Comparison Operators:
         description here: description here
         title: title
+      Boolean Logic and Expression Overview: {}
       Building a UI with Design Mode: {}
       CSD - Event Types: {}
       CSD - Functions Review: {}
@@ -471,6 +512,10 @@ en:
       CSD Design Instructions Site: {}
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
+      'CSD Map: Board Buttons': {}
+      'CSD Map: Timed For Loop': {}
+      'CSD Map: Timed Loop': {}
+      'CSD Map: onBoardEvent': {}
       CSD Recipe Stop: {}
       'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
@@ -580,6 +625,12 @@ en:
       CSD U4L22 SFLP: {}
       CSD U4L23 SFLP: {}
       CSD U4L24 SFLP: {}
+      CSD U5 data visualization:
+        description here: description here
+        title: title
+      CSD U5 data visualization sheet:
+        description here: description here
+        title: title
       CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
@@ -596,11 +647,17 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      'CSD: Accessing List Items': {}
       'CSD: Creating Variables In App Lab': {}
       'CSD: Dropdown & Conditionals': {}
+      'CSD: For Loops': {}
+      'CSD: List Length': {}
       'CSD: Lists': {}
+      'CSD: Lists with For Loops': {}
       'CSD: Review Events': {}
+      'CSD: Stop': {}
       'CSD: colorLed list': {}
+      'CSD: getText vs getNumber': {}
       'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Pick Elements Styled: {}
@@ -617,6 +674,9 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 - button check for understanding: {}
+      CSDU6 - timed loop stop board: {}
+      CSDU6 Innovation: {}
       CSDU6 SFLP:
         CSDU6 SFLP: CSDU6 SFLP
       CSP Journal Entry Placeholder:
@@ -926,6 +986,7 @@ en:
         description here: description here
         title: title
       Common Misconceptions about Functions: {}
+      Conditionals Overview: {}
       Conditions and Logic: {}
       Controlling Memory - Other ways to assign values:
         description here: description here
@@ -940,6 +1001,7 @@ en:
       Debugging with Console.log:
         description here: description here
         title: title
+      Design Mode Overview: {}
       Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
@@ -962,6 +1024,8 @@ en:
       Digital Footprint instantframe wiz_kid_liz:
         description here: description here
         title: title
+      DigitalCitizenship2:
+        Digital Citizenship: Digital Citizenship
       Discovery Learning in Unit 1: {}
       Documentation in App Lab: {}
       Downloading the Data Set: {}
@@ -1341,6 +1405,7 @@ en:
       Event-Driven Programming Patterns:
         description here: description here
         title: title
+      Events Overview: {}
       Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
@@ -1362,6 +1427,10 @@ en:
       FrustrationSolutions:
         Frustration Solutions: Frustration Solutions
         Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
+      Functions that Return Values: {}
+      'Game Lab Workshop: Draw Loop': {}
+      'Game Lab Workshop: Introduction': {}
+      'Game Lab Workshop: Variables to Sprites': {}
       Getting Better User Input: {}
       Getting to Know Your Data: {}
       GoodBadVisualizations_v1:
@@ -1441,6 +1510,7 @@ en:
       Introduction to Unit 2: {}
       Introduction to Unit 3: {}
       Introduction to Unit 4: {}
+      Introduction to Unit 5: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1744,12 +1814,19 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Practice Performance Task in Unit 5: {}
       Practice Performance Tasks in Unit 1: {}
       Practice Performance Tasks in Unit 2: {}
       Practice Performance Tasks in Unit 3: {}
       Prepare for your presentation:
         description here: description here
         title: title
+      Processing Arrays: {}
+      'Project Breakdown: Building a Canvas Painter': {}
+      'Project Breakdown: Clicker Game': {}
+      'Project Breakdown: Color Sleuth': {}
+      'Project Breakdown: Image Scroller': {}
+      'Project Breakdown: Multi-Screen App': {}
       Public Key Crypto Widget Instructions:
         description here: description here
         title: title
@@ -1778,6 +1855,7 @@ en:
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
+      'Stop: Check with Teacher': {}
       'Stop: Classes': {}
       'Stop: Common Styles Warm Up': {}
       'Stop: External Style Sheets': {}
@@ -1788,6 +1866,7 @@ en:
       'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
       'Stop: Website Navigation': {}
+      Strings Overview: {}
       Summary Tables 101: {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
@@ -2374,6 +2453,7 @@ en:
       Unit 4 Lesson 9 Introduction: {}
       Unit 4 Tool Talk: {}
       'Unit 4: Practice PT highlights': {}
+      Unit 5 Concepts and AP Assessments: {}
       Unit 5 Lesson 1:
         description here: description here
         title: title
@@ -2429,12 +2509,14 @@ en:
       Unit 5 Lesson 9 Introduction:
         description here: description here
         title: title
+      Unit 5 Teaching Philosophy and Commentary: {}
       Update your Hypothesis - Part 1: {}
       Update your Hypothesis - Part 2: {}
       'Using Output from Functions: The return Command': {}
       'Variable Scope: Local vs. Global':
         U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
         description here: description here
+      Variables Overview: {}
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
@@ -2444,6 +2526,7 @@ en:
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
+      While Loops Overview: {}
       Why Teach Number Systems?: {}
       'Worked Example: If-statements and Robot':
         description here: description here
@@ -2451,6 +2534,7 @@ en:
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
+      boolean logic and expressions overview: {}
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -2567,9 +2651,7 @@ en:
       courseD_external_binary1:
         Binary Drawing: Binary Drawing
       courseF_external_variableConstant: {}
-      coursee-privateandpersonalinformation:
-        description here: description here
-        title: title
+      coursee-privateandpersonalinformation: {}
       coursef_powerofwords:
         description here: description here
         title: title
@@ -2995,9 +3077,6 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
-      unique level name here:
-        description here: description here
-        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -3140,6 +3219,7 @@ en:
         Unit 2 Self-Assessment: {}
         Unit 3 Self-Assessment: {}
         Unit 4 Self-Assessment: {}
+        Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
     match:
@@ -3352,6 +3432,15 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
+      'CSD: Variables Matching':
+        "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)": "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)"
+        "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)": "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)"
+        "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)": "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)"
+        <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">: <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">
+        Program 1: Program 1
+        Program 2: Program 2
+        Program 3: Program 3
+        Program 4: Program 4
       CSDU2 Match RGB Colors:
         Question: Question
         'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
@@ -4556,6 +4645,20 @@ en:
         Contact Us: Contact Us
         Use It: Use It
         Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
+      CSDU6 - timed loop predict counter multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        How many times with the word 'looped' be printed in the console?: How many times with the word 'looped' be printed in the console?
+        inifinite: inifinite
+      CSDU6 - timed loop question for:
+        The button background will be violet: The button background will be violet
+        The button background will change to each of the colors in the list: The button background will change to each of the colors in the list
+        The button background will not change: The button background will not change
+        The button will change background color each time it is clicked: The button will change background color each time it is clicked
+        When you run this code, what will you see?: When you run this code, what will you see?
       CSDU6 LED predict multi:
         Alternate between on and off each click: Alternate between on and off each click
         Blink on and off randomly: Blink on and off randomly
@@ -6941,6 +7044,64 @@ en:
         '50': '50'
         How many times will the comparison c > 5 be tested when this code is run?: How many times will the comparison c > 5 be tested when this code is run?
         it will be different each time you run it: it will be different each time you run it
+      courseE_multi_bee_functions_predict1:
+        Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
+        ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        I don't know.: I don't know.
+        Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
+        The bee will try to collect too much honey from the flowers.: The bee will try to collect too much honey from the flowers.
+        The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
+        The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
+        The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
+      courseE_multi_farmer_functions11_predict:
+        Correct!: Correct!
+        Incorrect.  The farmer does not call "check and pick" until she gets to the corn.: Incorrect.  The farmer does not call "check and pick" until she gets to the corn.
+        Incorrect. The farmer only makes one turn, and ends at the corn.: Incorrect. The farmer only makes one turn, and ends at the corn.
+        Look at the functions defined below.  What will the farmer harvest?: Look at the functions defined below.  What will the farmer harvest?
+        The farmer will harvest all of the pumpkins.: The farmer will harvest all of the pumpkins.
+        The farmer will harvest the corn.: The farmer will harvest the corn.
+        The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
+        The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
+      courseE_prediction_artistFunction1:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseF_multi_artist_variables3a_predict1:
+        Correct!  The `length` variable is being used in the `turn` block.: Correct!  The `length` variable is being used in the `turn` block.
+        I don't know.: I don't know.
+        Incorrect. The variable `length` is being used in the wrong spot!: Incorrect. The variable `length` is being used in the wrong spot!
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        ? The `length` variable is set to 50 and is being used in the `turn` block, so the artist will draw three sides with 50 degree turns.
+        : The `length` variable is set to 50 and is being used in the `turn` block, so the artist will draw three sides with 50 degree turns.
+        The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
+        The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
+        The artist will draw three sides with 50 degree turns.: The artist will draw three sides with 50 degree turns.
+        We have set the variable `length` to 50.  What will happen when you click "Run"?: We have set the variable `length` to 50.  What will happen when you click "Run"?
+      courseF_multi_playlab_variables4c_predictive1:
+        'Correct. ': 'Correct. '
+        I don't know.: I don't know.
+        'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. ': 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. '
+        Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.: Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
+        The pirate would say, "Ali" and that is all.: The pirate would say, "Ali" and that is all.
+        The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.: The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.
+        The pirate would say, "It be a pleasure meetin' ya." and that is all.: The pirate would say, "It be a pleasure meetin' ya." and that is all.
+        What would happen if the user entered the name "Ali" at the prompt?: What would happen if the user entered the name "Ali" at the prompt?
+      coursee_prediction_artistfunction2:
+        Correct!: Correct!
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        Incorrect. The program does not call "draw line of polygons".: Incorrect. The program does not call "draw line of polygons".
+        The artist will draw four squares in a window pattern.: The artist will draw four squares in a window pattern.
+        The artist will draw four squares on top of one another.: The artist will draw four squares on top of one another.
+        The artist will draw only one line of squares.: The artist will draw only one line of squares.
+        The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
+        What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
       csp_ap_exam_signup:
         'No': 'No'
         'Yes': 'Yes'
@@ -7403,6 +7564,12 @@ en:
         "/script_assets/msm/Unit%202/exercise_5.png": "/script_assets/msm/Unit%202/exercise_5.png"
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+      kiki_multi_test:
+        The bird will crash immediately into a wall: The bird will crash immediately into a wall
+        The bird will not move at all: The bird will not move at all
+        The bird will reach the pig: The bird will reach the pig
+        The bird will stop one space short of the pig: The bird will stop one space short of the pig
+        What will happen when you run this code?: What will happen when you run this code?
       msm variables multi 1:
         '15': '15'
         What is the value of x?: What is the value of x?

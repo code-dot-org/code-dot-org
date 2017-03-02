@@ -12,7 +12,6 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 
 - **[Alabama](#al)**<br/>
 - **[Arizona](#az)**<br/>
-- **[Arkansas](#ar)**</br/>
 - **[California](#ca)**<br/>
 - **[Colorado](#co)**</br/>
 - **[Florida](#fl)**<br/>
@@ -92,39 +91,6 @@ kathryn.scott@gcu.edu
 Science Foundation of Arizona<br/>
 Linda Coyle, Director of Education<br/>
 lcoyle@sfaz.org
-
-<br/>
-
-[**Back to the top**](#top)
-<br/>
-
-________________
-<a id="ar"></a>
-
-## Arkansas
-### [Arch Ford Education Service Cooperative](http://www.archford.org/)
-Eastern Arkansas	
-
-**Programs**<br/>
-CS Principles<br/>
-CS Discoveries<br/>
-
-**Contact Information**<br/> 
-Lenett Thrasher<br/> 
-lenett.thrasher@archford.org
-
-<br/>
-
-### [Southwest Arkansas Education Cooperative](http://www.swaec.org/)
-Western Arkansas	
-
-**Programs**<br/>
-CS Principles<br/>
-CS Discoveries<br/>
-
-**Contact Information**<br/> 
-David Henderson<br/> 
-david.henderson@swaec.org
 
 <br/>
 
@@ -224,8 +190,11 @@ CS Discoveries<br/>
 **Contact us for advice on:** CS Principles Workshop planning, networking, community relations<br/>
 
 **Contact Information**<br/>
+Mike Leffin (primary)<br/>
+mleffin@rcoe.us<br/>
+
 Dennis Large<br/>
-dlarge@rcoe.us
+dlarge@rcoe.us<br/>
 
 <br/>
 
@@ -268,8 +237,11 @@ CS Discoveries<br/>
 **Contact us for advice on:** Organizational Structures, Computer Science Programs, Robotics, Professional Learning Events, etc.
 
 **Contact Information**<br/>
-Brandon Petersen<Br/>
+Brandon Petersen<br/>
 brandon.petersen@sharefairnation.org
+
+Greg Hesse<br/>
+ghessee@coloradoedinitiative.org
 
 [**Back to the top**](#top)
 <br/>
@@ -301,7 +273,7 @@ CS in Algebra<br/>
 
 **Contact Information** <br/>
 
-Lisa Milenkovic (Primary)<br/>
+Dr. Lisa Milenkovic (Primary)<br/>
 lisa.milenkovic@browardschools.com<br/>
 
 Christine Semisch<br/>
@@ -320,8 +292,14 @@ CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact Information**<br/>
-Jessica Borland	<br/>
-jborland@fscj.edu
+Dr. Betina Malhotra (primary)<br/>
+betina.malhotra@fscj.edu <br/>
+
+Dr. Vanessa Howard<br/>
+vanessa.howard@fscj.edu<br/>
+
+Dr. Tiffany Hunter<br/>
+tiffany.hunter@fscj.edu 
 
 <br/>
 
@@ -341,7 +319,10 @@ CS in Algebra<br/>
 **Contact Information**<br/>
 
 Heather Norton<br/>
-classes@osc.org<br/>
+hnorton@osc.org<br/>
+
+Emily Duguid<br/>
+eduguid@osc.org
 
 <br/>
 
@@ -366,7 +347,10 @@ CS in Algebra<br/>
 
 **Contact Information**<br/>
 Tamara Pearson<br/>
-tamara.pearson@ceismc.gatech.edu
+tamara.pearson@ceismc.gatech.edu<br/>
+
+Chris Thompson<br/>
+chris.thompson@ceismc.gatech.edu<br/>
 
 <br/>
 
@@ -431,9 +415,8 @@ CS in Science<br/>
 CS in Algebra<br/>
 
 **Contact Information**<br/>
-Janet Morris	<Br/>
-jmorris@lumity.org
-
+Andi Grabmeyer<br/>
+agrabemeyer@lumity.org 
 <br/>
 
 [**Back to the top**](#top)
@@ -457,7 +440,7 @@ CS in Algebra<br/>
 **Contact us for advice on:** Recruiting districts, running workshops, CS Ed Week events<br/>
 
 **Contact Information**<br/>
-Stephanie Zircher<Br/>
+Stephanie Zircher<br/>
 stephanie@nextech.org
 
 <br/>
@@ -481,7 +464,7 @@ CS Discoveries<br/>
 **Contact us for advice on:** K-12 STEAM initiatives, entrepreneurship, startups, and coworking<br/>
 
 **Contact Information**<br/>
-Kristine Sorensen<Br/>
+Kristine Sorensen<br/>
 Kristine@newbo.co
 
 <br/>
@@ -492,7 +475,7 @@ ________________
 <a id="ky"></a>
 
 ## Kentucky
-### [AdvanceKY](http://www.advanceky.com)<br/>
+### [AdvanceKentucky](http://www.advanceky.com)<br/>
 Kentucky	
 
 AdvanceKentucky is a statewide math-science initiative of the Kentucky Science and Technology Corporation (KSTC) dedicated to helping Kentucky’s students reach new heights in rigorous academic achievement.
@@ -504,8 +487,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** AP program, NMSI model, organizing professional development <br/>
 
 **Contact Information**<br/>
-Monique Morton<Br/>
-mmorton@kstc.com<Br/>
+Monique Morton<br/>
+mmorton@kstc.com<br/>
 
 <br/>
 
@@ -531,14 +514,8 @@ CS Discoveries<br/>
 **Contact us for advice on:** Engaging employers and higher education partners on supporting K-12 computer science. Education-ese such as frameworks, standards, assessment, curriculum, instruction, STEM; state policy actions; and implementing statewide programming.
 
 **Contact Information**<br/>
-Jason Judd<Br/>
-jason@educatemaine.org<Br/>
-
-Chanel Lewis<br/>
-chanel@educatemaine.org<br/>
-
-Angela Oechslie<br/>
-angela@educatemaine.org<br/>
+Jason Judd<br/>
+jason@educatemaine.org<br/>
 
 Tom Keller<br/>
 tkeller@mmsa.org<br/>
@@ -576,7 +553,7 @@ CS Discoveries (starting in the 2017-2018 school year)<br/>
 CS in Science<br/>
 CS in Algebra<br/>
 
-**Contact Information**<Br/>
+**Contact Information**<br/>
 Traci Chappelear<br/>
 tchappelear@ccboe.com
 
@@ -621,8 +598,11 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Devin Holmes<Br/>
-devin@americacampaign.org<Br/>
+Devin Holmes<br/>
+devin@americacampaign.org<br/>
+
+Lander Bachert<br/>
+Lander@bigskycodeacademy.org<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -660,12 +640,8 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Laura Doyle<br/>
-segedil1@tcnj.edu<br/>
-
 Henry Harms<br/>
-harms@tcnj.edu<br/>
-[**Back to the top**](#top)
+harms@tcnj.edu<br/><br/>[**Back to the top**](#top)
 <br/>
 ________________
 <a id="ny"></a>
@@ -705,11 +681,14 @@ CS Discoveries<br/>
 **Contact us for advice on:** Ideas for funding and partnerships, facilitator capacity building, instructional strategy pedagogy, strategic planning in districts, approaches to state-wide policy change, ways to partner with faculty and universities, online and blended learning models.<br/>
 
 **Contact Information**<br/>
-Dave Frye	<Br/>
-dafrye@ncsu.edu
+Dave Frye<br/>
+dafrye@ncsu.edu<br/>
+
+Sam Morris<br/>
+srmorri3@ncsu.edu<br/>
 
 Greg Garner<br/>
-greg_garner@ncsu.edu
+greg_garner@ncsu.edu<br/>
 
 <br/>
 
@@ -727,7 +706,7 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Kelly Gaier Evans 	<br/>
+Kelly Gaier Evans<br/>
 gaierk@battelle.org
 
 <br/>
@@ -771,7 +750,7 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Lauren Poutasse<br/>
+Lauren Poutasse (primary)<br/>
 lpoutasse@dciu.org <br/>
 
 Jon Regino<br/>
@@ -800,7 +779,7 @@ CS Discoveries<br/>
 AP CSP teacher PD, student summer camps
 
 **Contact Information**<br/>
-Dr. Jennifer Albert<br/>
+Dr. Jennifer Albert (primary)<br/>
 jalbert@citadel.edu<br/>
 
 Shankar Banik<br/>
@@ -823,7 +802,8 @@ CS Principles<br/>
 CS Discoveries<br/>
 
 **Contact Information**<br/>
-Jarrod Lockhart<br/>	jarrod.Lockhart@tn.gov<br/>
+Deborah Knoll<br/>
+Deborah.knoll@tn.gov<br/>
 
 [**Back to the top**](#top)
 <br/>
@@ -870,12 +850,10 @@ This includes communications/social media, recruitment of teacher participants, 
 
 **Contact Information** 
 Main Contact:
-Susan Boone<br/>
-susan.boone@rice.edu<br/>
-
-Additional Contacts:
 Alice Fisher<br/>
 afisher@rice.edu<br/>
+
+Additional Contacts:
 
 Anne Papakonstantinou<br/>
 apapa@rice.edu<br/>

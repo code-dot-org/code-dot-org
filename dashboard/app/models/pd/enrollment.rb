@@ -21,10 +21,12 @@
 # Indexes
 #
 #  index_pd_enrollments_on_code            (code) UNIQUE
+#  index_pd_enrollments_on_email           (email)
 #  index_pd_enrollments_on_pd_workshop_id  (pd_workshop_id)
 #
 
 class Pd::Enrollment < ActiveRecord::Base
+  include SchoolInfoDeduplicator
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
@@ -46,6 +48,10 @@ class Pd::Enrollment < ActiveRecord::Base
 
   validate :validate_school_name, unless: :created_before_school_info?
   validates_presence_of :school_info, unless: :created_before_school_info?
+
+  def self.for_user(user)
+    where('email = ? OR user_id = ?', user.email, user.id)
+  end
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
   def created_before_name_split?
@@ -75,6 +81,36 @@ class Pd::Enrollment < ActiveRecord::Base
     user_id
   end
 
+  def completed_survey?
+    return true if completed_survey_id.present?
+
+    # Until the survey is processed (via process_forms cron job), it won't show up in the enrollment model.
+    # Check pegasus forms directly to be sure.
+    PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: id).any?
+  end
+
+  # Filters a list of enrollments for survey completion, checking with Pegasus (in batch) to include
+  # new unprocessed surveys that don't yet show up in this model.
+  # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
+  # @param select_completed [Boolean] if true, return only enrollments with completed surveys,
+  #   otherwise return only those without completed surveys. Defaults to true.
+  # @return [Enumerable<Pd::Enrollment>]
+  def self.filter_for_survey_completion(enrollments, select_completed = true)
+    raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
+      enrollments.is_a?(Enumerable) && enrollments.all?{|e| e.is_a?(Pd::Enrollment)}
+
+    ids_with_processed_surveys, ids_without_processed_surveys =
+      enrollments.partition{|e| e.completed_survey_id.present?}.map{|list| list.map(&:id)}
+
+    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: ids_without_processed_surveys).map(:id)
+
+    filtered_ids = select_completed ?
+      ids_with_processed_surveys + ids_with_unprocessed_surveys :
+      ids_without_processed_surveys - ids_with_unprocessed_surveys
+
+    enrollments.select{|e| filtered_ids.include? e.id}
+  end
+
   before_create :assign_code
   def assign_code
     self.code = unused_random_code
@@ -95,6 +131,14 @@ class Pd::Enrollment < ActiveRecord::Base
 
     # Teachers enrolled in the workshop are "students" in the section.
     workshop.section.students.exists?(user.id)
+  end
+
+  def exit_survey_url
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+      CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
+    else
+      CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
+    end
   end
 
   def send_exit_survey
@@ -139,41 +183,8 @@ class Pd::Enrollment < ActiveRecord::Base
 
   protected
 
-  # Returns true if the SchoolInfo already exists and we should reuse that.
-  # Returns false if the SchoolInfo is new and should be stored.
-  # Validates the SchoolInfo first so that we fall into the latter path in
-  # that case.
   def check_school_info(school_info_attr)
-    attr = {
-      country: school_info_attr['country'],
-      school_type: school_info_attr['school_type'],
-      state: school_info_attr['school_state'],
-      zip: school_info_attr['school_zip'],
-      school_district_id: school_info_attr['school_district_id'],
-      school_district_other: school_info_attr['school_district_other'],
-      school_district_name: school_info_attr['school_district_name'],
-      school_id: school_info_attr['school_id'],
-      school_other: school_info_attr['school_other'],
-      school_name: school_info_attr['school_name'],
-      full_address: school_info_attr['full_address'],
-    }
-
-    # Remove empty attributes.  Notably school_district_id can come through
-    # as an empty string when we don't want anything.
-    attr.delete_if { |_, e| e.blank? }
-
-    # The checkbox comes through as "true" when we really want true.
-    attr[:school_district_other] = true if attr[:school_district_other] == "true"
-    attr[:school_other] = true if attr[:school_other] == "true"
-
-    return false unless SchoolInfo.new(attr).valid?
-
-    if school_info = SchoolInfo.where(attr).first
-      self.school_info = school_info
-      return true
-    end
-
-    return false
+    deduplicate_school_info(school_info_attr, self)
   end
 
   private

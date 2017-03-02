@@ -4,8 +4,8 @@ zh-TW:
       name:
         course1:
           title: 課程 1
-          description: 初學者看這裡！在課程 1 中，學生們將會學習編寫電腦程式，這將有助於學生學習與他人合作，培養解決問題的能力，並堅定完成困難的任務。在這堂課之後，學生們將自由設計自己的遊戲或故事，並分享給任何人。這課程適合初年級的學生。
-          description_short: 初學者從課程1開始。
+          description: 課程 1 主要在讓初學者學習創建計算機程式，在這個過程中讓他們學習與他人合作、提高解決問題能力，並培養完成困難任務的毅力。在課程結束之後，學生就可以設計及分享自己的遊戲或故事。建議年級 K-1。
+          description_short: 初學者看這！從課程 1 開始學習。
           description_audience: 年齡 4-6
           stage:
             'Artist: Loops': '小藝術家 - 迴圈（Loops）'
@@ -22,14 +22,14 @@ zh-TW:
             'Maze: Loops': '迷宮 - 迴圈（Loops）'
             'Maze: Sequence': '迷宮 - 序列（Sequence）'
             Move it, Move it: 移動它，移動它
-            'Real-life Algorithms: Plant a Seed': '生活中的演算法: 種一棵種子'
+            'Real-life Algorithms: Plant a Seed': '生活中的演算法 - 植物種植'
             Spelling Bee: 拼字比賽
             'Studio: Create a Story': 'Play Lab：創作一個故事'
             The Big Event: 大事件
         course2:
           title: 課程 2
-          description: 課程 2 給已有閱讀能力、但沒有任何寫程式經驗的學生。在這個課程裡，學生將編寫程式來解決問題，並且開發有互動的遊戲或故事分享給任何人。建議給二至五年級的學生參加。
-          description_short: 有閱讀能力的學生可以進入課程 2
+          description: 課程 2 適合有閱讀能力但沒有編程經驗的學生，在課程中，學生會學習建立程式以解決問題，開發並分享互動式的遊戲或故事。建議年級 2-5。
+          description_short: 有閱讀能力的學生可以從課程 2 開始。
           description_audience: 年齡 6+（需閱讀能力）
           stage:
             'Artist: Debugging': '小藝術家 - 除錯（Debugging）'
@@ -46,8 +46,8 @@ zh-TW:
             Graph Paper Programming: 圖紙編程
             'Maze: Loops': '迷宮 - 迴圈（Loops）'
             'Maze: Sequence': '迷宮 - 序列（Sequence）'
-            'Real-life Algorithms: Paper Planes': '真實生活裡的演算法: 紙飛機'
-            Relay programming: 接力程式設計
+            'Real-life Algorithms: Paper Planes': '生活中的演算法 - 紙飛機'
+            Relay programming: 接力編程
             'Studio: Create a Story': 'Play Lab：創作一個故事'
             The Big Event: 大事件
             Your Digital Footprint: 你的數位足跡
@@ -67,7 +67,7 @@ zh-TW:
             'Bee: Nested Loops': '蜜蜂：巢狀迴圈（Nested Loops）'
             Bounce: 彈跳
             Computational Thinking: 計算機式思維
-            Crowdsourcing: 網路資源
+            Crowdsourcing: 群眾外包（Crowdsourcing）
             Dice Race: 擲骰子比賽
             Digital Citizenship: 數位公民
             'Farmer: While Loops': '農夫 - 條件迴圈（While Loops）'
@@ -75,8 +75,8 @@ zh-TW:
             Internet: 網際網路 Internet
             Maze: 迷宮
             'Maze: Conditionals': '迷宮 - 條件判斷（Conditionals）'
-            Songwriting: 用參數作曲
-            'Studio: Create a Game': 'Play Lab：設計一個遊戲'
+            Songwriting: 歌曲創作
+            'Studio: Create a Game': 'Play Lab - 設計一個遊戲'
             'Studio: Create a Story': 'Play Lab：創作一個故事'
         playlab:
           title: Play Lab
@@ -105,7 +105,7 @@ zh-TW:
         course4:
           title: 課程 4
           description: 課程 4 是設計給完成課程 2 和 3 的學生 。隨著難度增加，學生在解決關卡的問題時，也能夠學習結合多種概念。當完成本課程的時候，學生將創建能夠展示多種技能的程式，包括用於迴圈和帶參數的函式。建議 4-5 年級的學生學習。
-          description_short: 完成課程 2 和課程 3 後，可以進入課程 4
+          description_short: 學生在完成課程 2 和課程 3 後，才可以進入課程 4。
           description_audience: 年齡 9-18
           stage:
             Artist: 藝術家
@@ -118,18 +118,18 @@ zh-TW:
             'Bee: Functions with Parameters': '蜜蜂：函式帶參數（Parameters）'
             Extreme Challenge - Comprehensive: 終極挑戰：綜合應用
             Maze and Bee: 迷宮和蜜蜂
-            'Play Lab: For Loops': '播放實驗室: For 迴圈'
-            'Play Lab: Functions with Parameters': '播放實驗室: 帶參數的函數'
-            'Play Lab: Variables': '播放實驗室: 變數'
-            Super Challenge - For Loops: 高級挑戰：For 迴圈
-            Super Challenge - Functions and Parameters: 高級挑戰：函式與參數
-            Super Challenge - Variables: 高級挑戰：變數
-            'Unplugged: Binary': '真人分享: 二進位'
-            'Unplugged: Envelope Variables': '不用電器設備活動：信封中的變數'
-            'Unplugged: For Loop Fun': '真人分享: For 迴圈的樂趣'
-            'Unplugged: Madlibs': '不用電器設備活動：接字遊戲'
-            'Unplugged: Songwriting with Parameters': '不插電：利用參數創作歌曲'
-            'Unplugged: Tangrams': '不用電器設備活動：七巧版'
+            'Play Lab: For Loops': 'Play Lab - 計數迴圈（For Loops）'
+            'Play Lab: Functions with Parameters': 'Play Lab - 函式帶參數'
+            'Play Lab: Variables': 'Play Lab - 變數（Variables）'
+            Super Challenge - For Loops: 超級挑戰 - 計數迴圈（For Loops）
+            Super Challenge - Functions and Parameters: 超級挑戰 - 函式（Functions）與參數（Parameters）
+            Super Challenge - Variables: 超級挑戰 - 變數（Variables）
+            'Unplugged: Binary': '不插電活動 - 二進制'
+            'Unplugged: Envelope Variables': '不插電活動 - 信封裡的變數'
+            'Unplugged: For Loop Fun': '不插電活動 - 迴圈樂無窮'
+            'Unplugged: Madlibs': '不插電活動 - 文字接龍'
+            'Unplugged: Songwriting with Parameters': '不插電活動 - 用參數寫歌'
+            'Unplugged: Tangrams': '不插電活動 - 七巧版'
         Course4pre:
           title: 課程 4 前備能力
           description: 對沒有參與課程 2 和課程 3 的學生作的概念簡述。
@@ -179,13 +179,13 @@ zh-TW:
             'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Pythagorean Theorem'
             'Unplugged: Conditionals and Piecewise Functions': '讓我們開始︰ 條件和分段函數'
             'Unplugged: Contracts': 'Unplugged: Contracts, Domain, and Range'
-            'Unplugged: The Design Recipe': '讓我們開始︰ 設計程式'
-            'Unplugged: Video Games and Coordinate Planes': '讓我們開始: 電玩遊戲和座標平面'
+            'Unplugged: The Design Recipe': '不插電活動 - 設計流程'
+            'Unplugged: Video Games and Coordinate Planes': '不插電活動 - 電視遊戲和座標平面'
           description_audience: ''
         infinity:
           title: 迪士尼無限 Play Lab
-          description: 用遊戲實驗室來創造一個由《迪士尼無限世界》的角色所主演的故事或遊戲。
-          description_short: 用遊戲實驗室來創造一個由《迪士尼無限世界》的角色所主演的故事或遊戲。
+          description: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
+          description_short: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
           stage:
             Infinity: 無限
         algebrademo:
@@ -213,7 +213,7 @@ zh-TW:
             'Programming Concept: Loops': 'Programming Concept: Loops'
             Reflection: Reflection
             Teacher Dashboard: 教師控制台
-            Unplugged lessons: Unplugged lessons
+            Unplugged lessons: 不插電的教學活動
             Writing computer programs: 編寫電腦程式
           description_audience: ''
         netsim:
@@ -246,7 +246,7 @@ zh-TW:
         20-hour:
           title: 計算機科學課程快速入門
           description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
-          description_short: 在課程2-4的這20小時課程中，將可學習到電腦科學與程式撰寫的核心概念
+          description_short: 這個 20 小時課程中，其中的課程 2-4 包含了核心的計算機科學和編程概念。
           description_audience: 年齡 10-18
           stage:
             Abstraction: 抽象概念
@@ -292,28 +292,28 @@ zh-TW:
           description_audience: ''
         flappy:
           title: 像素鳥程式
-          description: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
-          description_short: 在10分鐘以內寫出你自己的Flappy遊戲!
+          description: 想要在 10 分鐘內寫個你自己的遊戲嗎？試試我們的像素鳥程式教程！
+          description_short: 在 10 分鐘內寫個你自己的像素鳥遊戲！
           stage:
             Flappy Code: 像素鳥程式
           description_audience: ''
         jigsaw:
           title: 拼圖
-          description: 試試拼圖課程
-          description_short: 試試拼圖課程
+          description: 試試我們的拼圖教程
+          description_short: 試試我們的拼圖教程
           stage:
             Jigsaw: 拼圖
           description_audience: ''
         step:
-          title: 下一步
-          description: 步驟教學
-          description_short: 步驟教學
+          title: 步進
+          description: 步驟教程
+          description_short: 步驟教程
           stage:
-            Step: 下一步
+            Step: 步進
           description_audience: ''
         Hour of Code:
           title: 一小時玩程式 2013
-          description: 跟著憤怒鳥、植物大戰殭屍的角色們一起，進入電腦科學的世界吧！
+          description: 跟著憤怒鳥、植物大戰殭屍的角色們一起進入計算機科學的世界吧！
           description_short: 和許多有趣的角色一塊兒學學計算機科學基礎！
           stage:
             Hour of Code 2013: 一小時玩程式 2013
@@ -323,14 +323,14 @@ zh-TW:
           description: 試試這些有趣的編碼拼圖。盡力 ！
           description_short: 挑戰自己 ！
           stage:
-            Puzzles: 關卡
+            Puzzles: 所有關卡
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: 試試這些有趣的編碼拼圖。盡力 ！
           description_short: 挑戰自己 ！
           stage:
-            Puzzles: 關卡
+            Puzzles: 所有關卡
           description_audience: ''
         cspunit1:
           title: "（舊）計算機科學原理 單元 1 - 數位資訊"
@@ -400,8 +400,8 @@ zh-TW:
             Impact of Computer Science: Impact of Computer Science
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
-            Teaching Strategies: Teaching Strategies
-            What is CSP?: What is CSP?
+            Teaching Strategies: 教學策略
+            What is CSP?: CSP 是什麼？
         CSPLessonSamples:
           title: CSP Lesson Samples
           description: Lesson samples for CSP
@@ -419,8 +419,8 @@ zh-TW:
             Impact of Computer Science: Impact of Computer Science
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
-            Teaching Strategies: Teaching Strategies
-            What is ECS?: What is ECS?
+            Teaching Strategies: 教學策略
+            What is ECS?: ECS 是什麼？
         sciencePD:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -437,7 +437,7 @@ zh-TW:
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
-            What to Expect: What to Expect
+            What to Expect: 有什麼期待
           description_audience: ''
         rbo-reference:
           title: rbo-reference
@@ -484,8 +484,8 @@ zh-TW:
             Understanding Program Flow and Logic: Understanding Program Flow and Logic
             User Input and Strings: User Input and Strings
             Using Simple Commands: Using Simple Commands
-            Using Variables in Apps: Using Variables in Apps
-            While Loops: '"當..."迴圈'
+            Using Variables in Apps: 在 App 中使用變數
+            While Loops: 當…迴圈
           description_audience: ''
         algebraPD3:
           title: Phase 3 PD
@@ -511,8 +511,8 @@ zh-TW:
             Impact of Computer Science: Impact of Computer Science
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
-            Teaching Strategies: Teaching Strategies
-            What is ECS?: What is ECS?
+            Teaching Strategies: 教學策略
+            What is ECS?: ECS 是什麼？
         ECSPD-iZone:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -523,8 +523,8 @@ zh-TW:
             Impact of Computer Science: Impact of Computer Science
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
-            Teaching Strategies: Teaching Strategies
-            What is ECS?: What is ECS?
+            Teaching Strategies: 教學策略
+            What is ECS?: ECS 是什麼？
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -568,7 +568,7 @@ zh-TW:
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
-            What to Expect: What to Expect
+            What to Expect: 有什麼期待
           description_audience: ''
         sciencePD-iZone:
           title: Computer Science in Science PD
@@ -587,7 +587,7 @@ zh-TW:
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
-            What to Expect: What to Expect
+            What to Expect: 有什麼期待
           description_audience: ''
         sciencePD2:
           title: 'CS in Science: Part 2'
@@ -705,6 +705,7 @@ zh-TW:
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
+            Standalone video: Standalone video
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -923,8 +924,8 @@ zh-TW:
             Graph Paper Programming: 圖紙編程
             Happy Maps: 快樂地圖
             Move it, Move it: 移動它，移動它
-            'Real-life Algorithms: Plant a Seed': '生活中的演算法: 種一棵種子'
-            Songwriting: 用參數作曲
+            'Real-life Algorithms: Plant a Seed': '生活中的演算法 - 植物種植'
+            Songwriting: 歌曲創作
             The Big Event: 大事件
         afterschool1:
           title: 課後活動 1
@@ -967,14 +968,14 @@ zh-TW:
         ECSPD3-Unit2:
           title: 'Exploring Computer Science: Unit 2'
           description: Online Professional Development Course
-          description_short: Unit 2 Online PD
+          description_short: 單元 2 線上 PD
           stage:
             Close & Next Steps: 關閉 & 下一步
             Getting Started: Getting Started
             Intro to Unit 2: Intro to Unit 2
             Lesson Overviews: Lesson Overviews
-            Teaching Strategies: Teaching Strategies
-            Unit 2 Challenge: Unit 2 Challenge
+            Teaching Strategies: 教學策略
+            Unit 2 Challenge: 單元 2 挑戰
           description_audience: ''
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
@@ -984,7 +985,7 @@ zh-TW:
             Close & Next Steps: 關閉 & 下一步
             Getting Started: Getting Started
             Intro to Unit 3: Intro to Unit 3
-            Teaching Strategies: Teaching Strategies
+            Teaching Strategies: 教學策略
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
           description_audience: ''
@@ -996,7 +997,7 @@ zh-TW:
             Close & Next Steps: 關閉 & 下一步
             Getting Started: Getting Started
             Intro to Unit 4: Intro to Unit 4
-            Teaching Strategies: Teaching Strategies
+            Teaching Strategies: 教學策略
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
           description_audience: ''
@@ -1077,11 +1078,11 @@ zh-TW:
           stage:
             Close and Next Steps: 關閉 & 下一步
             Getting Started: Getting Started
-            Teaching Support - Lessons 1-3: Teaching Support - Lessons 1-3
-            Teaching Support - Lessons 13-16: Teaching Support - Lessons 13-16
-            Teaching Support - Lessons 17-20: Teaching Support - Lessons 17-20
-            Teaching Support - Lessons 4-7: Teaching Support - Lessons 4-7
-            Teaching Support - Lessons 8-12: Teaching Support - Lessons 8-12
+            Teaching Support - Lessons 1-3: 教學支援：1 - 3 課
+            Teaching Support - Lessons 13-16: 教學支援：13 - 16 課
+            Teaching Support - Lessons 17-20: 教學支援：17 - 20 課
+            Teaching Support - Lessons 4-7: 教學支援：4 - 7 課
+            Teaching Support - Lessons 8-12: 教學支援：8 - 12 課
           description_audience: ''
         CSPPD3-Unit2:
           title: 計算機科學原理：單元 2 專業發展
@@ -1152,7 +1153,7 @@ zh-TW:
             Loops and Simulations: Loops and Simulations
             'Practice PT: Create': 'Practice PT: Create'
             Processing Arrays: Processing Arrays
-            While Loops: '"當..."迴圈'
+            While Loops: 當…迴圈
           description_audience: ''
         CSP-Unit3-Support:
           title: 計算機科學原理：單元 3 專業發展
@@ -1237,7 +1238,7 @@ zh-TW:
             Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             The Cost of Free: The Cost of Free
-            What is Big Data?: What is Big Data?
+            What is Big Data?: 大數據是什麼？
           description_audience: ''
         CSPPD3-Unit4:
           title: 計算機科學原理：單元 4 專業發展
@@ -1307,7 +1308,7 @@ zh-TW:
             'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
             'Unplugged: Contracts': 'Unplugged: Contracts'
             'Unplugged: Fast Functions': 'Unplugged: Fast Functions'
-            'Unplugged: The Design Recipe': '讓我們開始︰ 設計程式'
+            'Unplugged: The Design Recipe': '不插電活動 - 設計流程'
           description_audience: ''
         AlgebraB:
           title: Computer Science in Algebra
@@ -1324,7 +1325,7 @@ zh-TW:
             'Unplugged: Booleans': 'Unplugged: Booleans'
             'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Distance Formula'
             'Unplugged: Conditionals and Piecewise Functions': '讓我們開始︰ 條件和分段函數'
-            'Unplugged: Video Games and Coordinate Planes': '讓我們開始: 電玩遊戲和座標平面'
+            'Unplugged: Video Games and Coordinate Planes': '不插電活動 - 電視遊戲和座標平面'
           description_audience: ''
         gamelab-hackathon:
           title: Gamelab Hackathon
@@ -1432,7 +1433,7 @@ zh-TW:
             Rapid Research - Data Innovations: Rapid Research - Data Innovations
             Simple Encryption: Simple Encryption
             The Cost of Free: The Cost of Free
-            What is Big Data?: What is Big Data?
+            What is Big Data?: 大數據是什麼？
             Rapid Research - Cybercrime: Rapid Research - Cybercrime
             Practice PT - Big Data and Security Dilemmas: Practice PT - Big Data and Security Dilemmas
             Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
@@ -1461,8 +1462,8 @@ zh-TW:
             Processing Arrays: Processing Arrays
             Understanding Program Flow and Logic: Understanding Program Flow and Logic
             User Input and Strings: User Input and Strings
-            Using Variables in Apps: Using Variables in Apps
-            While Loops: '"當..."迴圈'
+            Using Variables in Apps: 在 App 中使用變數
+            While Loops: 當…迴圈
             Edited lessons ABOVE this line: Edited lessons ABOVE this line
             Buttons and Events: Buttons and Events
             Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
@@ -1529,9 +1530,9 @@ zh-TW:
             Platform Jumper: Platform Jumper
             Defender: Defender
             'Project: Build a Game': 'Project: Build a Game'
-            Velocity: Velocity
+            Velocity: 速度
             The Game Design Process: The Game Design Process
-            Using the Game Design Process: Using the Game Design Process
+            Using the Game Design Process: 使用遊戲設計流程
           description_audience: ''
         2016_sciencePD_phase1:
           title: 'CS in Science: Part 1'
@@ -1549,7 +1550,7 @@ zh-TW:
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
-            What to Expect: What to Expect
+            What to Expect: 有什麼期待
           description_audience: ''
         TEMP CSD Unit 3:
           title: " TEMP CSD 單元 3 - 互動遊戲與動畫"
@@ -1602,7 +1603,7 @@ zh-TW:
             The Tutorial: The Tutorial
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
-            What to Expect: What to Expect
+            What to Expect: 有什麼期待
           description_audience: ''
         cspoptional:
           title: 計算機科學原理選修單元
@@ -1847,7 +1848,7 @@ zh-TW:
             Programming: Programming
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
-            'Real-life Algorithms: Plant a Seed': '生活中的演算法: 種一棵種子'
+            'Real-life Algorithms: Plant a Seed': '生活中的演算法 - 植物種植'
             'Programming Unplugged: Happy Maps': 'Programming Unplugged: Happy Maps'
         grade4:
           title: Grade 4
@@ -1867,7 +1868,7 @@ zh-TW:
             More Programming with Scratch: 更多 Scratch 的編程學習資源
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: 用參數作曲
+            Songwriting: 歌曲創作
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -1908,11 +1909,11 @@ zh-TW:
             Final Project - Review/Revise Day: Final Project - Review/Revise Day
             'Final Project - Unplugged: Design Process': 'Final Project - Unplugged: Design Process'
             'Final Project - Work Day: Build Project Online': 'Final Project - Work Day: Build Project Online'
-            'Play Lab: Variables': '播放實驗室: 變數'
+            'Play Lab: Variables': 'Play Lab - 變數（Variables）'
             Try programming with Khan Academy: Try programming with Khan Academy
-            'Unplugged: Envelope Variables': '不用電器設備活動：信封中的變數'
-            'Unplugged: For Loop Fun': '真人分享: For 迴圈的樂趣'
-            'Unplugged: Songwriting with Parameters': '不插電：利用參數創作歌曲'
+            'Unplugged: Envelope Variables': '不插電活動 - 信封裡的變數'
+            'Unplugged: For Loop Fun': '不插電活動 - 迴圈樂無窮'
+            'Unplugged: Songwriting with Parameters': '不插電活動 - 用參數寫歌'
         ecs-unit1:
           title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -1943,8 +1944,8 @@ zh-TW:
             Getting Started: Getting Started
             Intro to Unit 2: Intro to Unit 2
             Lesson Overviews: Lesson Overviews
-            Teaching Strategies: Teaching Strategies
-            Unit 2 Challenge: Unit 2 Challenge
+            Teaching Strategies: 教學策略
+            Unit 2 Challenge: 單元 2 挑戰
           description_audience: ''
         ecs-unit3:
           title: ECS Unit 3
@@ -1954,7 +1955,7 @@ zh-TW:
             Close & Next Steps: 關閉 & 下一步
             Getting Started: Getting Started
             Intro to Unit 3: Intro to Unit 3
-            Teaching Strategies: Teaching Strategies
+            Teaching Strategies: 教學策略
             Unit 3 Challenge: Unit 3 Challenge
             Unit 3 Day-by-Day: Unit 3 Day-by-Day
           description_audience: ''
@@ -1966,7 +1967,7 @@ zh-TW:
             Close & Next Steps: 關閉 & 下一步
             Getting Started: Getting Started
             Intro to Unit 4: Intro to Unit 4
-            Teaching Strategies: Teaching Strategies
+            Teaching Strategies: 教學策略
             Unit 4 Challenge: Unit 4 Challenge
             Unit 4 Day-by-Day: Unit 4 Day-by-Day
           description_audience: ''
@@ -2017,7 +2018,7 @@ zh-TW:
             'Maze: Nested Loops': 'Maze: Nested Loops'
             More Programming with CS4FN: More Programming with CS4FN
             Robot Running the Farm: Robot Running the Farm
-            Unplugged Conditionals with Loops: Unplugged Conditionals with Loops
+            Unplugged Conditionals with Loops: 不插電活動 - 條件判斷帶迴圈
         alltheplcthings:
           title: Sample course for PLC things
           description: This is a sample course that has all of the plc special things. Enrollment in this course does nothing. Right now, it's just a copy of TeacherCon
@@ -2051,13 +2052,13 @@ zh-TW:
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
-            Velocity: Velocity
+            Velocity: 速度
             Collision Detection: Collision Detection
             Complex Sprite Movement: Complex Sprite Movement
             Collisions: Collisions
             Functions: 函式
             The Game Design Process: The Game Design Process
-            Using the Game Design Process: Using the Game Design Process
+            Using the Game Design Process: 使用遊戲設計流程
             'Project: Build a Game': 'Project: Build a Game'
             'Project: Design a Game': 'Project: Design a Game'
           description_audience: ''
@@ -2083,7 +2084,7 @@ zh-TW:
             How to behave in the lab_How to use Code_org puzzles: How to behave in the lab/How to use Code.org puzzles
             Programming at home with my pet: Programming at home with my pet
             Binary Bracelets: 二進制手環
-            'Real-life Algorithms: Paper Planes': '真實生活裡的演算法: 紙飛機'
+            'Real-life Algorithms: Paper Planes': '生活中的演算法 - 紙飛機'
             The Big Event: 大事件
         transferring-over:
           stage:
@@ -2108,7 +2109,7 @@ zh-TW:
             Loops: 迴圈
             Nested Loops: 巢狀迴圈
             Variables: 變數
-            While Loops: '"當..."迴圈'
+            While Loops: 當…迴圈
           description_audience: ''
           description_short: ''
           description: ''
@@ -2144,7 +2145,7 @@ zh-TW:
             Intro to Problem Solving: Intro to Problem Solving
             The Problem Solving Process: The Problem Solving Process
             Exploring Problem Solving: Exploring Problem Solving
-            What is a Computer?: What is a Computer?
+            What is a Computer?: 電腦是什麼？
             Representing Information: Representing Information
             Processing with Bits: Processing with Bits
             Human vs. Computer Processing: Human vs. Computer Processing
@@ -2189,9 +2190,9 @@ zh-TW:
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 1.
           stage:
             Unit 1 Overview: Unit 1 Overview
             'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
@@ -2275,10 +2276,10 @@ zh-TW:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 2. '
         csd4:
           stage:
             Analysis of Design: Analysis of Design
@@ -2328,7 +2329,7 @@ zh-TW:
           stage:
             'Debugging: Bugs in Codeville': 'Debugging: Bugs in Codeville'
             'Persistence & Frustration: Stevie and the Marbles': 'Persistence & Frustration: Stevie and the Marbles'
-            'Real-life Algorithms: Plant a Seed': '生活中的演算法: 種一棵種子'
+            'Real-life Algorithms: Plant a Seed': '生活中的演算法 - 植物種植'
             Learn to Drag and Drop: Learn to Drag and Drop
             'Programming: Happy Maps': 'Programming: Happy Maps'
             Programming in Maze: Programming in Maze
@@ -2361,7 +2362,7 @@ zh-TW:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
-            'Real-life Algorithms: Plant a Seed': '生活中的演算法: 種一棵種子'
+            'Real-life Algorithms: Plant a Seed': '生活中的演算法 - 植物種植'
             Your Digital Footprint: 你的數位足跡
           title: 'CS Fundamentals: Course B'
           description_audience: ''
@@ -2370,7 +2371,7 @@ zh-TW:
         coursec-draft:
           stage:
             Programming in Maze: Programming in Maze
-            'Real-life Algorithms: Paper Planes': '真實生活裡的演算法: 紙飛機'
+            'Real-life Algorithms: Paper Planes': '生活中的演算法 - 紙飛機'
             Programming in Collector: Programming in Collector
             Programming in Artist: Programming in Artist
             'Loops: Getting Loopy': 'Loops: Getting Loopy'
@@ -2395,8 +2396,8 @@ zh-TW:
           stage:
             'Algorithms: Graph Paper Programming': 'Algorithms: Graph Paper Programming'
             Events in Bounce: Events in Bounce
-            Nested Loops in Maze: Nested Loops in Maze
-            Nested Loops in Artist: Nested Loops in Artist
+            Nested Loops in Maze: 迷宮裡的巢狀迴圈（Nested Loops）
+            Nested Loops in Artist: 小藝術家裡的巢狀迴圈（Nested Loops）
             'Algorithms: Relay Programming': 'Algorithms: Relay Programming'
             Debugging in Bee: Debugging in Bee
             While Loops in Farmer: While Loops in Farmer
@@ -2409,9 +2410,9 @@ zh-TW:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: 數位公民
-            'Unplugged: Binary': '真人分享: 二進位'
+            'Unplugged: Binary': '不插電活動 - 二進制'
             Artist Binary: 小藝術家 - 二進制（Binary）
-            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops in Bee: 蜜蜂裡的巢狀迴圈（Nested Loops）
             Nested Loops: 巢狀迴圈
           title: 'CS Fundamentals: Course D'
           description_audience: ''
@@ -2434,7 +2435,7 @@ zh-TW:
             More Programming with Scratch: 更多 Scratch 的編程學習資源
             Private and Personal Information: Private and Personal Information
             Internet: 網際網路 Internet
-            Crowdsourcing: 網路資源
+            Crowdsourcing: 群眾外包（Crowdsourcing）
             Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
@@ -2444,8 +2445,8 @@ zh-TW:
           stage:
             Digital Citizenship: 數位公民
             Envelope Variables: 信封變數
-            Variables in Play Lab: Variables in Play Lab
-            Variables in Artist: Variables in Artist
+            Variables in Play Lab: Play Lab 裡的變數
+            Variables in Artist: 小藝術家裡的變數
             For Loop Fun: 有趣的計數迴圈
             For Loops in Bee: For Loops in Bee
             For Loops in Artist: For Loops in Artist
@@ -2459,7 +2460,7 @@ zh-TW:
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
             The Power of Words: The Power of Words
-            Songwriting with Parameters: 用參數作曲
+            Songwriting with Parameters: 用參數寫歌
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2487,7 +2488,7 @@ zh-TW:
             Sports: Sports
           title: 編寫一個你自己的運動遊戲程式
           description_audience: ''
-          description_short: 為你自己的運動寫程式碼
+          description_short: 搞個混搭的運動遊戲
           description: 搞個混搭的運動遊戲
         2016_sciencePD-phase2b:
           stage:
@@ -2535,10 +2536,10 @@ zh-TW:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
         csdgraveyard:
           stage:
             new stage: new stage
@@ -2561,10 +2562,10 @@ zh-TW:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             Unit 4 Overview: Unit 4 Overview
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
         sciencepd4:
           stage:
             Welcome!: 歡迎！
@@ -2615,3 +2616,56 @@ zh-TW:
           description_audience: ''
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage: [ ]
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+        csp6-support:
+          stage: [ ]
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+        unit6-csd-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+            Foo: Foo
+            Lists: 清單
+            Lights: Lights
+          title: Draft Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''

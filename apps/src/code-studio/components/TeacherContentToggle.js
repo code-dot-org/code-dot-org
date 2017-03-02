@@ -2,8 +2,9 @@ import $ from 'jquery';
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import { ViewType, fullyLockedStageMapping } from '../stageLockRedux';
-import { isHiddenFromState } from '../hiddenStageRedux';
+import { ViewType } from '../stageLockRedux';
+import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
+import { isHiddenForSection } from '../hiddenStageRedux';
 
 const styles = {
   container: {
@@ -112,11 +113,9 @@ export default connect(state => {
   if (viewAs === ViewType.Student) {
     const { currentStageId } = state.progress;
     const { selectedSectionId } = state.sections;
-    const hiddenStageMap = state.hiddenStage.get('bySection');
 
-    const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
-    isLockedStage = !!fullyLocked[currentStageId];
-    isHiddenStage = isHiddenFromState(hiddenStageMap, selectedSectionId, currentStageId);
+    isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
+    isHiddenStage = isHiddenForSection(state.hiddenStage, selectedSectionId, currentStageId);
   }
 
   return {

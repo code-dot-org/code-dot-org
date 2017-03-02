@@ -574,6 +574,8 @@
   "setScoreText": "հավաքածու հաշիվը",
   "setScoreTextTooltip": "Սահմանում է տեքստը կցուցադրվեն հաշվով տարածքում:",
   "setScoreTooltip": "Sets the player's score to the specified amount",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "է Manny պատկերով",
   "setSpriteSid": "է Sid պատկերով",
   "setSpriteGranny": "է Granny պատկերով",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "Ինչպես շատ արագ արագությամբ",
   "setSpriteSpeedTooltip": "Կոմպլեկտներ արագությունը դերասանի",
   "setSpriteZombie": "մի zombie պատկերով",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Makes all the selected actors chase another actor",
   "setSpritesFleeTooltip": "Makes all the selected actors flee from another actor",
   "setSpritesStopTooltip": "Makes all the selected actors stop wandering, chasing, or fleeing",
@@ -671,6 +674,7 @@
   "showTSDefText": "տեսակ տեքստ Մականուն",
   "showTitleScreenTooltip": "Ցույց են տալիս, մի ​​տիտղոս էկրանը հետ կապված Վերնագրերում եւ տեքստերում:",
   "size": "չափ",
+  "setActor": "set actor",
   "setDroid": "հավաքածու Droid",
   "setDroidHidden": "թաքցված",
   "setDroidRandom": "պատահական",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Շնորհավորում ենք, դուք ավելացրել է կոդը կատարելու Mouse Droids: Դուք կարող եք գնալ հաջորդ հանելուկ, կամ փորձեք կրկին ստանալ 20 Mouse Droids: Փորձեք դարձնելով այն ավելի հեշտ է, ավելացնելով ավելի նրանց! (Սեղմեք եւ պահեք ստեղները ձեր ստեղնաշարի (կամ էկրանի), տեղափոխել արագ.):",
   "failedChangeSettingTimeout": "Ստացեք երեք Rebel օդաչուները պետք է առաջ շարժվել:",
   "failedChangeSettingSettings": "Դարձրեք խաղը ձեր սեփական. Անցնել այս հանելուկ, դուք պետք է փոխել ձեր Droid եւ սահմանել դրա արագությունը.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

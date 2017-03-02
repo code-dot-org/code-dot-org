@@ -16,8 +16,6 @@ import mazeMsg from './locale';
 
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
-const COLLECTED_SOME = 2;
-const COLLECTED_EVERYTHING = 3;
 const COLLECTED_TOO_MANY = 4;
 const COLLECTED_NOT_ENOUGH = 5;
 
@@ -39,11 +37,14 @@ export default class Collector extends Subtype {
     return true;
   }
 
-  /**
-   * @override
-   */
-  shouldCheckSuccessOnMove() {
-    return false;
+  collect(id, row, col) {
+    const currVal = this.maze_.map.getValue(row, col);
+    if (currVal < 1) {
+      this.maze_.executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
+    } else {
+      this.maze_.executionInfo.queueAction('pickup', id);
+      this.maze_.map.setValue(row, col, currVal - 1);
+    }
   }
 
   /**
@@ -123,12 +124,10 @@ export default class Collector extends Subtype {
       executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
     } else if (this.studioApp_.feedback_.getNumCountableBlocks() > this.maxBlocks_) {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
-    } else if (this.collectedAll()) {
-      executionInfo.terminateWithValue(COLLECTED_EVERYTHING);
     } else if (this.minCollected_ && this.getTotalCollected() < this.minCollected_) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
     } else {
-      executionInfo.terminateWithValue(COLLECTED_SOME);
+      executionInfo.terminateWithValue(true);
     }
   }
 
@@ -151,14 +150,16 @@ export default class Collector extends Subtype {
         return mazeMsg.collectorTooManyBlocks({blockLimit: this.maxBlocks_});
       case COLLECTED_NOTHING:
         return mazeMsg.collectorCollectedNothing();
-      case COLLECTED_SOME:
-        return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
-      case COLLECTED_EVERYTHING:
-        return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
       case COLLECTED_TOO_MANY:
         return mazeMsg.collectorCollectedTooMany();
       case COLLECTED_NOT_ENOUGH:
         return mazeMsg.collectorCollectedNotEnough({goal: this.minCollected_});
+      case true:
+        if (this.collectedAll()) {
+          return mazeMsg.collectorCollectedEverything({count: this.getPotentialMaxCollected()});
+        } else {
+          return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
+        }
       default:
         return null;
     }
@@ -177,10 +178,12 @@ export default class Collector extends Subtype {
       case COLLECTED_TOO_MANY:
       case COLLECTED_NOT_ENOUGH:
         return TestResults.APP_SPECIFIC_FAIL;
-      case COLLECTED_SOME:
-        return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
-      case COLLECTED_EVERYTHING:
-        return TestResults.ALL_PASS;
+      case true:
+        if (this.collectedAll()) {
+          return TestResults.ALL_PASS;
+        } else {
+          return TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
+        }
     }
 
     return this.studioApp_.getTestResults(false);
@@ -191,5 +194,64 @@ export default class Collector extends Subtype {
    */
   getEmptyTile() {
     return 'null0';
+  }
+
+  /**
+   * @override
+   */
+  drawTile(svg, tileSheetLocation, row, col, tileId) {
+    super.drawTile(svg, tileSheetLocation, row, col, tileId);
+    this.drawCorners(svg, row, col, tileId);
+  }
+
+  drawCorners(svg, row, col, tileId) {
+    const corners = {
+      'NE': [1, -1],
+      'NW': [-1, -1],
+      'SE': [1, 1],
+      'SW': [-1, 1],
+    };
+
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    const SQUARE_SIZE = 50;
+
+    const pegmanElement = document.getElementsByClassName('pegman-location')[0];
+
+    if (!this.isWallOrOutOfBounds_(col, row)) {
+      Object.keys(corners).filter(corner => {
+        // we need a corner if there is a wall in the corner direction and open
+        // space in the two cardinal directions "surrounding" the corner
+        const direction = corners[corner];
+        const needsCorner = !this.isWallOrOutOfBounds_(col + direction[0], row) &&
+            !this.isWallOrOutOfBounds_(col, row + direction[1]) &&
+            this.isWallOrOutOfBounds_(col + direction[0], row + direction[1]);
+
+        return needsCorner;
+      }).forEach(corner => {
+        const tileClip = document.createElementNS(SVG_NS, 'clipPath');
+        tileClip.setAttribute('id', `tileCorner${corner}ClipPath${tileId}`);
+        const tileClipRect = document.createElementNS(SVG_NS, 'rect');
+        tileClipRect.setAttribute('width', SQUARE_SIZE / 2);
+        tileClipRect.setAttribute('height', SQUARE_SIZE / 2);
+
+        // clip the asest to only the quadrant we care about
+        const direction = corners[corner];
+        tileClipRect.setAttribute('x', col * SQUARE_SIZE + (direction[0] + 1) * SQUARE_SIZE / 4);
+        tileClipRect.setAttribute('y', row * SQUARE_SIZE + (direction[1] + 1) * SQUARE_SIZE / 4);
+        tileClip.appendChild(tileClipRect);
+        svg.appendChild(tileClip);
+
+        // Create image.
+        const img = document.createElementNS(SVG_NS, 'image');
+        img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', this.skin_.corners);
+        img.setAttribute('height', SQUARE_SIZE);
+        img.setAttribute('width', SQUARE_SIZE);
+        img.setAttribute('x', SQUARE_SIZE * col);
+        img.setAttribute('y', SQUARE_SIZE * row);
+        img.setAttribute('id', `tileCorner${corner}${tileId}`);
+        img.setAttribute('clip-path', `url(#${tileClip.id})`);
+        svg.insertBefore(img, pegmanElement);
+      });
+    }
   }
 }

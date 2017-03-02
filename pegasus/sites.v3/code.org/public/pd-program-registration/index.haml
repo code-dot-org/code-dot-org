@@ -9,8 +9,9 @@ title: "Code.org Professional Learning Program Registration"
   user_id = dashboard_user[:id]
   application = DASHBOARD_DB[:pd_teacher_applications].where(user_id: user_id).first
 
-  application_json, accepted_workshop, assigned_tc_city, selected_course = nil
+  application_json, accepted_workshop, assigned_tc_city, selected_course, email = nil
   if application
+    email = application[:primary_email]
     application_json = JSON.parse(application[:application])
     accepted_workshop = application[:accepted_workshop]
     assigned_tc_city = accepted_workshop.to_s.scan(/Houston|Phoenix|Philadelphia/).first
@@ -94,6 +95,7 @@ title: "Code.org Professional Learning Program Registration"
 - else
 
   %form#pd-program-registration-form{role: 'form'}
+    %input{name: 'email_s', type: 'hidden', value: email}
     %input{name: 'user_id_i', type: 'hidden', value: user_id}
     %input{name: 'pd_teacher_application_id_i', type: 'hidden', value: application[:id]}
     %input{name: 'first_name_s', type: 'hidden', value: application_json['firstName']}

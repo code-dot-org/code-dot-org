@@ -558,6 +558,12 @@ describe('FirebaseStorage', () => {
         }
       }
     };
+    const EXISTING_COUNTER_DATA = {
+      cities: {
+        lastId: 2,
+        rowCount: 2
+      }
+    };
     const NEW_TABLE_DATA_JSON = `{
       "cities": [
         {"city": "Seattle", "state": "WA"},
@@ -572,6 +578,7 @@ describe('FirebaseStorage', () => {
         }
       }
     };
+    const BAD_JSON = '{';
 
     function verifyTable(expectedTablesData) {
       return getDatabase().child(`storage/tables`).once('value')
@@ -592,6 +599,7 @@ describe('FirebaseStorage', () => {
     it('does not overwrite existing data when overwrite is false', done => {
       const overwrite = false;
       getDatabase().child(`storage/tables`).set(EXISTING_TABLE_DATA)
+        .then(() => getDatabase().child('counters/tables').set(EXISTING_COUNTER_DATA))
         .then(() => {
           FirebaseStorage.populateTable(
             NEW_TABLE_DATA_JSON,
@@ -602,8 +610,11 @@ describe('FirebaseStorage', () => {
         });
     });
 
-    it('does overwrite existing data when overwrite is true', done => {
-      const overwrite = true;
+    // Some users got into a bad state where populateTables wrote storage/tables,
+    // but failed to write counters/tables due to a security rule violation. Make
+    // sure we overwrite tables for users in that state.
+    it('does overwrite existing data when counters/tables node is empty', done => {
+      const overwrite = false;
       getDatabase().child(`storage/tables`).set(EXISTING_TABLE_DATA)
         .then(() => {
           FirebaseStorage.populateTable(
@@ -613,6 +624,36 @@ describe('FirebaseStorage', () => {
             error => {throw error;});
 
         });
+    });
+
+    it('does overwrite existing data when overwrite is true', done => {
+      const overwrite = true;
+      getDatabase().child(`storage/tables`).set(EXISTING_TABLE_DATA)
+        .then(() => getDatabase().child('counters/tables').set(EXISTING_COUNTER_DATA))
+        .then(() => {
+          FirebaseStorage.populateTable(
+            NEW_TABLE_DATA_JSON,
+            overwrite,
+            () => verifyTable(NEW_TABLE_DATA).then(done),
+            error => {throw error;});
+
+        });
+    });
+
+    it('prints a friendly error message when given bad table json', done => {
+      const overwrite = false;
+
+      FirebaseStorage.populateTable(
+        BAD_JSON,
+        overwrite,
+        () => {throw 'expected JSON error to be reported';},
+        validateError);
+
+      function validateError(error) {
+        expect(error).to.contain('SyntaxError');
+        expect(error).to.contain('while parsing initial table data: {');
+        done();
+      }
     });
   });
 
@@ -626,6 +667,7 @@ describe('FirebaseStorage', () => {
     const NEW_KEY_VALUE_DATA = {
       "click_count": "5"
     };
+    const BAD_JSON = '{';
 
     function verifyKeyValue(expectedData) {
       return getDatabase().child(`storage/keys`).once('value')
@@ -666,6 +708,22 @@ describe('FirebaseStorage', () => {
             () => verifyKeyValue(NEW_KEY_VALUE_DATA).then(done),
             error => {throw error;});
         });
+    });
+
+    it('prints a friendly error message when given bad key value json', done => {
+      const overwrite = false;
+
+      FirebaseStorage.populateKeyValue(
+        BAD_JSON,
+        overwrite,
+        () => {throw 'expected JSON error to be reported';},
+        validateError);
+
+      function validateError(error) {
+        expect(error).to.contain('SyntaxError');
+        expect(error).to.contain('while parsing initial key/value data: {');
+        done();
+      }
     });
   });
 

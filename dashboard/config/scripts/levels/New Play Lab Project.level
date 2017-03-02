@@ -284,6 +284,17 @@
               </block>
             </value>
           </block>
+          <block type="studio_setMap">
+            <title name="VALUE">random</title>
+          </block>
+          <block type="studio_setMapAndColor" inline="true">
+            <title name="VALUE">random</title>
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Events">
           <block type="studio_whenSpriteCollided">

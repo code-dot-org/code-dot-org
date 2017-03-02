@@ -23,14 +23,12 @@ This problem extends into the software workplace, which suffers a similar lack o
 
 <center><img src="/images/diversitypipeline2.png" /></center>
 <br/><br/>
-Our focus is primarily on K-12 learning, which is where the diversity problem begins: Among women, those who try AP Computer Science in high school are 10 times more likely to major in computer science. Black and Hispanic students who try AP Computer Science in high school are 7-8 times more likely to major in computer science (see tables 3, 7, 8 in [this document](http://research.collegeboard.org/sites/default/files/publications/2012/7/researchreport-2007-4-ap-students-college-analysis-five-year-academic-careers.pdf)).
-
-But more importantly, computer science is now a foundational science for all 21st century careers, making access in K-12 to this knowledge an equity issue the country must address.
+Our focus is primarily on K-12 learning, which is where the diversity problem begins: Among women, those who try AP Computer Science in high school are 10 times more likely to major in computer science. Black and Hispanic students who try AP Computer Science in high school are 7-8 times more likely to major in computer science (see tables 3, 7, 8 in [this document](http://research.collegeboard.org/sites/default/files/publications/2012/7/researchreport-2007-4-ap-students-college-analysis-five-year-academic-careers.pdf)). But more importantly, computer science is now a foundational science for all 21st century careers, making access in K-12 to this knowledge an equity issue the country must address.
 
 ## Diversity of students in our courses
 <center><img src="/images/infographics/fit-800/diversity-courses.png"/></center>
 
-Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diveresity. Below are examples of some of the other tactics we use address diversity issues:
+Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among underrepresented minorities: African Americans, Hispanic/Latino students, Native American/Alaskans, and Native Hawaiian/Pacific Islanders. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diversity. Below are examples of some of the other tactics we use address diversity issues:
 
 
 ## Curriculum materials designed to recruit, engage, and retain women and underrepresented students of color
@@ -60,9 +58,10 @@ The results speak for themselves:
 
 All of our professional development workshops for teachers include a session on equity and access, to help teachers build awareness of their own stereotypes, and to give them tools to recruit or retain a diverse CS student population.  We also host professional development workshops with district administrators and counselors, who play a critical role in helping high school students choose their fields of study, in order to guide them to help recruit diverse students to the new computer sciences we help them establish in their schools. By focusing our efforts on schools with underserved populations, particularly in urban or rural geographies, we reach the students who typically don't participate in computer science.
 
-**The results:** among our school district partnerships, the students in our high school computer science classes are 37% female, and 56% black or Hispanic.  
+The results are most evident in our roll-out of the [CS Principles](https://code.org/educate/csp) course which was designed from the ground up to broaden participation in computer science. Endorsed by the College Board, this course prepares students for the new AP exam in computer science. Code.org has helped expand access to this course in urban school districts such as New York City, Chicago, or Oakland, as well as in rural schools in Idaho or Alabama. Because of our focus on reaching underprivileged students, there are more underrepresented minorities enrolled in our CS Principles classrooms than the total nation's AP Computer Science exam takers in 2016!
 
 <center><img width="70%" src="/images/2015AR/diversity.jpg" /></center>
+
 
 ## Changing state level policies to increase participation in CS
 

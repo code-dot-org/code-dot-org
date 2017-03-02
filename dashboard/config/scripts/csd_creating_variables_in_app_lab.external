@@ -1,13 +1,14 @@
 name 'CSD: Creating Variables In App Lab'
-href 'path/to/html/in/asset/folder'
+display_name 'Variables in App Lab'
 markdown <<MARKDOWN
-# Where should you create variables?
+# Variables in App Lab
+## Where should you create variables?
 
 In Game Lab you got very used to creating all your variables at the top above the draw loop. In App Lab you will want to continue to use a similar method. 
 
-**Stick to this: All variables should be created and given an initial value at the very top of your program above all your event handlers and any functions you write. This will also make it easy to go look for them later as you will know where they are. ** 
+**Stick to this: All variables should be created and given an initial value at the very TOP of your program above all your event handlers and any functions you write.** This will also make it easy to go look for them later as you will know where they are. 
 
-# Why create your variables at the top?
+## Why create your variables at the top?
 
 Where you create your variables matter. In Javascript you have two choices: 
 
@@ -17,7 +18,7 @@ Where you create your variables matter. In Javascript you have two choices:
 
 The term for this concept is **"variable scope."** The **scope** of a variable defines which parts of your code can access and modify the variable.
 
-# Understanding Variable Scope
+## Understanding Variable Scope
 
 Javascript has two scopes: **global** and **local**. Here's the difference...
 

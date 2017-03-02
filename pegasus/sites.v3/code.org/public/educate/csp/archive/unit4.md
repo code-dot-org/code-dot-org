@@ -9,7 +9,7 @@ nav: educate_nav
 
 ### Quick Links
 
-[General CS Principles Forum](http://forum.code.org/c/csp) | [Unit 4 Discussion Forum](http://forum.code.org/c/csp-unit4) | [CS Principles Unit 4 in Code Studio](https://studio.code.org/s/cspunit4)  | [Writing Team](team) 
+[General CS Principles Forum](http://forum.code.org/c/csp) | [Unit 4 Discussion Forum](http://forum.code.org/c/csp4) | [CS Principles Unit 4 in Code Studio](https://studio.code.org/s/cspunit4)  | [Writing Team](team) 
 
 
 

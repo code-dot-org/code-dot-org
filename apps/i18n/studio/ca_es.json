@@ -574,6 +574,8 @@
   "setScoreText": "assigna la puntuació",
   "setScoreTextTooltip": "Estableix el text que es mostrarà a la zona de puntuació.",
   "setScoreTooltip": "Sets the player's score to the specified amount",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "to a Manny image",
   "setSpriteSid": "to a Sid image",
   "setSpriteGranny": "to a Granny image",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "a una velocitat molt ràpida",
   "setSpriteSpeedTooltip": "Estableix la velocitat d'actor",
   "setSpriteZombie": "a una imatge zombie",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Makes all the selected actors chase another actor",
   "setSpritesFleeTooltip": "Makes all the selected actors flee from another actor",
   "setSpritesStopTooltip": "Makes all the selected actors stop wandering, chasing, or fleeing",
@@ -671,6 +674,7 @@
   "showTSDefText": "escriu el text aquí",
   "showTitleScreenTooltip": "Mostra una pantalla de títol amb el títol associat i text.",
   "size": "mida",
+  "setActor": "set actor",
   "setDroid": "set droid",
   "setDroidHidden": "to hidden",
   "setDroidRandom": "to random",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Arriba a tres Pilots Rebels per seguir endavant.",
   "failedChangeSettingSettings": "Fes el joc al teu gust. Per passar aquest nivell has de canviar el teu droide i la seva velocitat.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

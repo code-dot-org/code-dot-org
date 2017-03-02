@@ -424,6 +424,10 @@ var TopInstructions = React.createClass({
    */
   scrollInstructionsToBottom() {
     const instructions = this.refs.instructions;
+    if (!instructions) {
+      // If we have a contained level instead of instructions, do nothing
+      return;
+    }
     const contentContainer = instructions.parentElement;
     if (instructions.children.length > 1) {
       const lastChild = instructions.children[instructions.children.length - 1];

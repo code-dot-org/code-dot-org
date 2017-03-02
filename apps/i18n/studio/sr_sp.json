@@ -574,6 +574,8 @@
   "setScoreText": "постави резултат",
   "setScoreTextTooltip": "Подешавање текста који се приказује поред резултата.",
   "setScoreTooltip": "Sets the player's score to the specified amount",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "постави на слику Менија",
   "setSpriteSid": "постави на слику Сида",
   "setSpriteGranny": "постави на слику Гренија",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "на веома велику брзину",
   "setSpriteSpeedTooltip": "Постави брзину лика",
   "setSpriteZombie": "постави зоби слику",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Makes all the selected actors chase another actor",
   "setSpritesFleeTooltip": "Makes all the selected actors flee from another actor",
   "setSpritesStopTooltip": "Makes all the selected actors stop wandering, chasing, or fleeing",
@@ -671,6 +674,7 @@
   "showTSDefText": "овде унеси текст",
   "showTitleScreenTooltip": "Прикажи наслов екрана са повезаним насловом и текстом.",
   "size": "величина",
+  "setActor": "set actor",
   "setDroid": "постави дроида",
   "setDroidHidden": "у скривени",
   "setDroidRandom": "у насумични",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Честитамо, написали сте програм за прављење Миш-дроида. Можете да пређете на следећу игру или д апокушате поново да дођете до 20 Миш-дроида. Олакшајте себи посао тако што направите што више Миш-дроида! Притисните и држите стрелицу на вашој тастатури да се крећете брже",
   "failedChangeSettingTimeout": "Ухвати три пилота побуњеника како би наставио даље.",
   "failedChangeSettingSettings": "Играј игру другачије. Промени дроида и подеси му брзину.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

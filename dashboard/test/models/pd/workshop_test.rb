@@ -443,6 +443,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert e.message.include? 'bad email'
   end
 
+  test 'workshop starting date picks the day of the first session' do
+    session = create :pd_session, start: Date.today + 15.days
+    session2 = create :pd_session, start: Date.today + 20.days
+    @workshop.sessions << session
+    @workshop.sessions << session2
+    assert_equal session.start, @workshop.workshop_starting_date
+  end
+
+  test 'workshop_dashboard_url' do
+    expected_url = "http://#{CDO.dashboard_hostname}/pd/workshop_dashboard/workshops/#{@workshop.id}"
+    assert_equal expected_url, @workshop.workshop_dashboard_url
+  end
+
   private
 
   def session_on_day(day_offset)

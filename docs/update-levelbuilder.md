@@ -6,13 +6,13 @@ This .md file should only contain information which is specific to Code.org engi
 ## To update levelbuilder to match test:
 
 1. On GitHub, open a pull request from `test` into `levelbuilder`, link: [levelbuilder...test](https://github.com/code-dot-org/code-dot-org/compare/levelbuilder...test?expand=1)
-1. Click the "Merge pull request" button and watch the "levelbuilder" room in Hipchat to make sure the build succeeds. If anything breaks, see the "Did it break section" below.
+1. Click the "Merge pull request" button and watch the "levelbuilder" room in Slack to make sure the build succeeds. If anything breaks, see the "Did it break section" below.
 
 ## To commit changes from levelbuilder into staging:
 
 1. `ssh -t gateway.code.org ssh -t levelbuilder-staging levelbuilder/bin/content-push`
 1. On GitHub, open a pull request from `levelbuilder` into `staging`. link: [staging...levelbuilder](https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder)
-2. Click the "Merge pull request" button and watch the "Staging" room in Hipchat to make sure the build succeeds. If anything breaks, see the "Did it break section" below. 
+2. Click the "Merge pull request" button and watch the "infra-staging" room in Slack to make sure the build succeeds. If anything breaks, see the "Did it break section" below. 
 
 # Did it break?
 

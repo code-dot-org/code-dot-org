@@ -45,7 +45,7 @@ if (IN_UNIT_TEST) {
 
   module.exports.stubRedux = function () {
     if (__oldReduxStore) {
-      throw new Error("Reduce store has already been stubbed. Did you forget to call restore?");
+      throw new Error("Redux store has already been stubbed. Did you forget to call restore?");
     }
     __oldReduxStore = reduxStore;
     __oldGlobalReducers = globalReducers;

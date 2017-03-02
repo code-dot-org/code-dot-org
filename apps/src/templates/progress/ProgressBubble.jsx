@@ -1,11 +1,9 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
-// TODO - not sure I like these bubble color styles being keyed by these strings.
-// In a future PR, share with progress_dot, likely by using an Enum of different
-// allowable values.
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/progress_dot';
+import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 export const DOT_SIZE = 30;
 
@@ -28,6 +26,8 @@ const styles = {
     marginTop: 5,
     marginBottom: 5,
     transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
+  },
+  enabled: {
     ':hover': {
       textDecoration: 'none',
       color: color.white,
@@ -40,24 +40,40 @@ const ProgressBubble = React.createClass({
   propTypes: {
     number: PropTypes.number.isRequired,
     status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
-    url: PropTypes.string
+    url: PropTypes.string,
+    disabled: PropTypes.bool.isRequired
   },
 
   render() {
-    const { number, status, url } = this.props;
+    const { number, status, url, disabled } = this.props;
 
     const style = {
       ...styles.main,
-      ...BUBBLE_COLORS[status]
+      ...(!disabled && styles.enabled),
+      ...(BUBBLE_COLORS[disabled ? LevelStatus.not_tried : status])
     };
 
-    return (
-      <a href={url ? url + location.search : undefined}>
-        <div style={style}>
-          {number}
-        </div>
-      </a>
+    let href = '';
+    if (!disabled && url) {
+      href = url + location.search;
+    }
+
+    let bubble = (
+      <div style={style}>
+        {number}
+      </div>
     );
+
+    // If we have an href, wrap in an achor tag
+    if (href) {
+      bubble = (
+        <a href={href}>
+          {bubble}
+        </a>
+      );
+    }
+
+    return bubble;
   }
 });
 

@@ -18,23 +18,16 @@ Click on the program name below to find out more about the workshop requirements
 
 - **[CS Fundamentals](#csf)**<br/>
 - **[CS in Algebra](#algebra)**<br/>
-- **[CS in Science](#science)**<Br/>
+- **[CS in Science](#science)**<br/>
 - **[Exploring CS](#ecs)**<br/>
 - **[CS Principles](#csp)**<br/>
-
-
-
-<br/><br/>
+<br/>
 
 
 #### [Click here](https://docs.google.com/presentation/d/1zFiNhlHqk6Gldzpbyc_MbgA0ovTswa4cns0AfT8jdAc/edit#slide=id.gdebb9aea3_0_101) to review the slides from the 'Planning Code.org Summer Workshops' webinar. 
 
-
-
 ________________
 <a id="csf"></a>
-<br/>
-<br/>
 
 ## **Computer Science Fundamentals**
 
@@ -44,12 +37,12 @@ Refer to the [CS Fundamentals Facilitator Handbook](https://docs.google.com/docu
 <br/>
 ________________
 <a id="algebra"></a>
-<br/>
-<br/>
 
 ## **Computer Science in Algebra**
-**Middle School Workshop Preparation Process**<br/>
-
+<details>
+  <summary>**Workshop Preparation Process**</summary>
+  <p>
+  
 1. Setup your CS in Algebra workshop in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
 2. Make sure ALL facilitators (veteran + facilitators in training) are added to the workshop **If you forget to add them, they will not get paid!*<br/>
 *(Skip to step 4 if this is not a summer workshop)*
@@ -65,8 +58,12 @@ ________________
 	- Decide if you or your facilitators take attendance. 
 	- Make sure all teachers are registered with a Teacher Account! If they have a Student Account, [follow these steps](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.chfy8viz3je8) to help them switch it.
 	- If, Summer, send an email with your Phase 3 workshop registration links ([see this template](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.udcag7rgm3fg))
+</p>
+</details>
 
-**Securing a Venue**<br/>
+<details>
+<summary>**Securing a venue**</summary>
+  <p>
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
 
 | |Requirements and Suggestions| 
@@ -75,12 +72,19 @@ These guidelines explain the type of space your facilitators need to run a succe
 |**Rooms and <br/>Set Up**| Reservation time: <br/>Rooms need to be reserved from 7:30am to 4:30pm.<Br/><br/> General itinerary:<br/> 7:30 am - 8:00 am - facilitators arrive and set up room<br/>8:00 am - 8:30 am - teachers arrive, register & eat breakfast</br> 8:30 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 4:00 pm - workshop time<br/>4:00 pm - 4:30 pm - facilitators clean up for the night<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We recommend doing this to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with blue painter's tape<br/>- Space to store supplies overnight: We recommend asking your venue if supplies and posters can be left in the room and locked up overnight to avoid having to pack everything up each day.<br/><br/>Table set up and Seating:<br/>- Classroom style seating with tables that can seat pairs.| 
 |**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
+</p>
+</details>
 
-<br/><br/>
-
-**When to Host the Academic Year Workshop**<br/>
+<details>
+  <summary>**When to Host the Academic Year Workshop**</summary>
+  <p>
 Phase 3 is best held in early October prior to when order of operations and early math take place in the classroom, which are the concepts that CS in Algebra Course A integrate into.
-	
+</p>
+</details>
+
+<details>
+  <summary>**Ordering Supplies and Catering**</summary>
+  <p>	
 **Ordering Supplies**<br/>
 [Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
 
@@ -88,17 +92,19 @@ Phase 3 is best held in early October prior to when order of operations and earl
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
 
 Always accommodate vegetarian needs, roughly ⅓ of the order. In communications to teachers and workshop attendees ask that if they have special dietary restrictions that they plan accordingly. It’s very difficult to plan for every need, and is often more expensive.<br/><br/>
+</p>
+</details>
 
 [**Back to the top**](#top)
 <br/>
 
 ________________
 <a id="science"></a>
-<br/>
-<br/>
 
 ## **Computer Science in Science**
-**Middle School Workshop Preparation Process**<br/>
+<details>
+<summary>**Workshop Preparation Process**</summary>
+  <p>
 
 1. Setup your CS in Science workshop in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
 2. Make sure ALL facilitators (veteran + facilitators in training) are added to the workshop **If you forget to add them, they will not get paid!*<br/>
@@ -114,11 +120,13 @@ ________________
 	- Decide if you or your facilitators take attendance. 
 	- Make sure all teachers are registered with a Teacher Account! If they have a Student Account, [follow these steps](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.chfy8viz3je8) to help them switch it.
 	- If Summer, send an email with your Phase 3 workshop registration links ([see this template](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.udcag7rgm3fg))
+</p>
+</details>
 
-
-
-**Securing a Venue**<br/>
-These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
+<details>
+<summary>**Securing a Venue**</summary>
+  <p>
+These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.<br/>
 
 | |Requirements and Suggestions| 
 |:-----|:-----------|
@@ -126,11 +134,14 @@ These guidelines explain the type of space your facilitators need to run a succe
 |**Rooms and <br/>Set Up**| Reservation time: <br/>Rooms need to be reserved from 7:30am to 4:30pm.<Br/><br/> General itinerary:<br/> 7:30 am - 8:00 am - facilitators arrive and set up room<br/>8:00 am - 8:30 am - teachers arrive, register & eat breakfast</br> 8:30 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 4:00 pm - workshop time<br/>4:00 pm - 4:30 pm - facilitators clean up for the night <br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We recommend doing this to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with blue painter's tape<br/>- Space to store supplies overnight: We recommend asking your venue if supplies and posters can be left in the room and locked up overnight to avoid having to pack everything up each day.<br/><br/>Table set up and Seating:<br/>- Classroom style seating with tables that can seat pairs.| 
 |**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
+</p>
+</details>
 
-<br/><br/>
-
-**When to Schedule Phase 3 Workshops**<br/> 
-
+<details>
+<summary>
+**Scheduling and Agendas**</summary>
+  <p>
+**When Workshops Should be Held**<br/>
 - Session A should be held 1-2 months after school starts.
 - Session B should be held second semester in the February/March timeframe.
  
@@ -141,29 +152,34 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- [Session A](/files/science-p3a-agenda.pdf)<br/>
 	- [Session B](/files/science-p3b-agenda.pdf)<br/>
 
-	
+</p>
+</details>
+
+<details>
+<summary>
+**Ordering Supplies and Catering**</summary>
+  <p>
 	
 [**Ordering Supplies**](/educate/professional-learning-partner/playbook/ordering-supplies)<br/>
 Click here to access the Marketplace and your supply ordering resources.
- 
-	
 
 **Catering** <br/>
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
 
 Always accommodate vegetarian needs, roughly ⅓ of the order. In communications to teachers and workshop attendees ask that if they have special dietary restrictions that they plan accordingly. It’s very difficult to plan for every need, and is often more expensive.<br/><br/>
+</p>
+</details>
 
 [**Back to the top**](#top)
 <br/>
 
 ________________
 <a id="ecs"></a>
-<br/>
-<br/>
 
 ## **Exploring Computer Science**
-
-**ECS Workshop Preparation Process**<br/>
+<details>
+  <summary>**Workshop Preparation Process**</summary>
+  <p>
 
 1. Setup your ECS workshops in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
 2. Make sure ALL facilitators (veteran + facilitators in training) are added to the workshop. **If you forget to add them, they will not get paid!*<br/>
@@ -175,9 +191,12 @@ ________________
 8. One and a half weeks prior - [create a facilitator 1-pager](/educate/professional-learning-partner/playbook/facilitator-support) and email it to your facilitators<br/>
 9. Two days prior - make sure all your supplies have arrived<br/>
 10. Day of the workshop - decide if you or your facilitators take attendance, if summer, send [an email](https://docs.google.com/document/d/1jXQ275B8tVhYieI2yFCIUqIiJ-dnK4ZPuO7YC2SMkhg/edit#heading=h.qz8c6xpaktl) with your Phase 3 workshop registration links (see this template)<br/>
+</p>
+</details>
 
-
-**Securing a Venue**<br/>
+<details>
+  <summary>**Securing a Venue**</summary>
+  <p>
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
 
 | |Requirements and Suggestions| 
@@ -186,10 +205,13 @@ These guidelines explain the type of space your facilitators need to run a succe
 |**Rooms and <br/>Set Up**|Reservation time: <br/>Rooms need to be reserved from 7:30 am to 4:30 pm (M-Th) and 7:30 am to 2:30 pm (F).<Br/><br/> General itinerary:<br/> 7:30 am - 8:30 am - facilitators arrive and set up room<br/>8:30 am - 9:00 am - teachers arrive, register & eat breakfast</br> 9:00 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 3:30 pm - workshop time<br/>3:30 pm - 4:30 pm - facilitators clean up for the night<br/>Note: ECS workshops end at 1:30 pm on Fridays.<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|  
 |**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.<br/> 
-<br/>
-<br/>
-**When Follow-up Workshops Should be Held**<br/>
+</p>
+</details>
 
+<details>
+  <summary>**Scheduling and Agendas**</summary>
+  <p>
+**When Workshops Should be Held**<br/>
 - Workshop 1 = unit 3
 	- 6-8 weeks into school
 	- You need to balance the content (unit 3) with the ability to check in on how it’s going with building classroom culture.
@@ -209,7 +231,12 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- [Session B](/files/ecs-p3b-agenda.pdf)<Br/>
 	- [Session C](/files/ecs-p3c-agenda.pdf)<br/>
 	- [Session D](/files/ecs-p3d-agenda.pdf)<br/>
- 
+ </p>
+</details>
+
+<details>
+  <summary>**Ordering Supplies and Catering**</summary>
+  <p> 
 **Ordering Supplies**<br/>
 [Click here](/educate/professional-learning-partner/playbook/ordering-supplies) to access the Marketplace and your supply ordering resources.
 
@@ -218,18 +245,19 @@ These guidelines explain the type of space your facilitators need to run a succe
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
 
 Always accommodate vegetarian needs, roughly ⅓ of the order. In communications to teachers and workshop attendees ask that if they have special dietary restrictions that they plan accordingly. It’s very difficult to plan for every need, and is often more expensive.<br/><br/>
+</p>
+</details>
 
 [**Back to the top**](#top)
 <br/>
 
 ________________
 <a id="csp"></a>
-<br/>
-<br/>
 
 ## **Computer Science Principles**
-
-**Workshop Preparation Process**<br/>
+<details>
+  <summary>**Workshop Preparation Process**</summary>
+  <p> 
 
 1. Setup your CS Principles Workshop in the [Code.org Organizer Dashboard](/educate/professional-learning-partner/playbook/workshop-dashboard). **This should be done as soon as you know the workshop dates - please let us know if you are having any difficulties.*<br/>
 2. Make sure ALL facilitators are added to the workshop *If you forget to add them, they will not get paid!*<br/>
@@ -244,8 +272,12 @@ ________________
 	 - Login to the workshop organizer dashboard to [“Start Workshop”](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.wmocqedffowl) and have teachers join it.
 	- Decide if you or your facilitators take attendance. 
 	- Make sure all teachers are registered with a Teacher Account! If they have a Student Account, [follow these steps](https://docs.google.com/document/d/1FEkjohxBfOkoSjPC0C3EvXztEf-kcocN8uk16WI2tlo/edit#bookmark=id.chfy8viz3je8) to help them switch it.<br/>
+</p>
+</details>
 
-**Securing a Venue**<br/>
+<details>
+  <summary>**Securing a Venue**</summary>
+  <p> 
 These guidelines explain the type of space your facilitators need to run a successful workshop and provide important tips to consider for logistics and teacher experience.  <br/>
 
 | |Requirements and Suggestions| 
@@ -255,7 +287,12 @@ These guidelines explain the type of space your facilitators need to run a succe
 |**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.| 
 <br/>
+</p>
+</details>
 
+<details>
+  <summary>**Scheduling and Communication**</summary>
+  <p> 
 **When Follow-up Workshops Should be Held**<br/>
 
 - Workshop 1 = end of unit 1, first half of unit 2
@@ -272,30 +309,45 @@ These guidelines explain the type of space your facilitators need to run a succe
 	- Early March  at the latest
 	- Ideally this should occur 1 month prior to teachers beginning to teach Unit 6<br/>
 
-Take a look at the [CSP pacing guide](https://code.org/curriculum/docs/csp/units_horizSnap.png) for more information.<br/>
-<br/>
-<br/>
-<br/>
-**Workshop Resources**
-
-- [Phase 2: Summer Workshop Agenda](/files/csp-p2-agenda.pdf)<br/>
-- Phase 3: Academic Year Development <br/>
-	- Session A
-		- [Agenda](https://code.org/files/CSPFirstQuarterWorkshop-teachers.pdf)
-		- [Teacher Packet](https://docs.google.com/document/d/13CPBruuyfu9xA7mhMBNEVvS0_TbfAF4PK-tlPmiKaqg/edit?usp=sharing)
-		- [Facilitator Prep](https://docs.google.com/document/d/1oE3khvNrgIuUl4gmqEzG1qbocHbmI3RLo0l69Irc3wc/edit?usp=sharing)
-		- [Template Slide Deck](https://docs.google.com/presentation/d/1YC0M0hASMuIs4ZXJoYJ15tv78PMG5hMoRkKgdpl-rPY/edit?usp=sharing)
-	- Session B
-		- [Teacher Packet](https://docs.google.com/document/d/109MZiM8CVW3hbdeCtMdjMlzEF2PhkJF3n2tvOxKRm1E/edit?usp=sharing)
-		- [Facilitator Prep](https://docs.google.com/document/d/1n0CvzrNYUV6WH0GC3l9QBV7M-5Mt0hxy-_xCmhzOq2A/edit?usp=sharing)
-		- [Template Slide Deck](https://docs.google.com/presentation/d/1XRlmGCL33jj2Yiomr-6h_Sf819C3k-1hsKshVvtz350/edit?usp=sharing)
-
-	- Session C<br/>
-	- Session D<br/>
+Take a look at the <a href="https://code.org/curriculum/docs/csp/units_horizSnap.png" target=_blank>CSP pacing guide</a> for more information.<br/>
 
 **Automated Emails**<br/>
 Teachers attending your workshop will receive [this](https://docs.google.com/document/d/1KQ3OOb87mF1NZ3sSs_5VmQLQjDEBwxvRTG-3hCR2uG0/edit?usp=sharing) email 2 weeks prior to the training. 
+</p>
+</details>
 
+<details>
+  <summary>**Teacher Packets and Agendas**</summary>
+  <p> 
+**Workshop Resources**
+
+- <a href="/files/csp-p2-agenda.pdf" target=_blank>Phase 2: Summer Workshop Agenda</a>
+-  Phase 3: Academic Year Development<br/>
+	- Session A
+		- <a href="https://code.org/files/CSPFirstQuarterWorkshop-teachers.pdf" target=_blank>Agenda</a>
+		- <a href="https://docs.google.com/document/d/13CPBruuyfu9xA7mhMBNEVvS0_TbfAF4PK-tlPmiKaqg/edit?usp=sharing" target=_blank>Teacher Packet</a>
+		- <a href="https://docs.google.com/document/d/1oE3khvNrgIuUl4gmqEzG1qbocHbmI3RLo0l69Irc3wc/edit?usp=sharing" target=_blank>Facilitator Prep</a>
+		- <a href="https://docs.google.com/presentation/d/1YC0M0hASMuIs4ZXJoYJ15tv78PMG5hMoRkKgdpl-rPY/edit?usp=sharing" target=_blank>Template Slide Deck</a>
+	- Session B
+		- <a href=""target=_blank>Agenda</a>
+		- <a href="https://docs.google.com/document/d/109MZiM8CVW3hbdeCtMdjMlzEF2PhkJF3n2tvOxKRm1E/edit?usp=sharing" target=_blank>Teacher Packet</a>
+		- <a href="https://docs.google.com/document/d/1n0CvzrNYUV6WH0GC3l9QBV7M-5Mt0hxy-_xCmhzOq2A/edit?usp=sharing" target=_blank>Facilitator Pref</a>
+		- <a href="https://docs.google.com/presentation/d/1XRlmGCL33jj2Yiomr-6h_Sf819C3k-1hsKshVvtz350/edit?usp=sharing" target=_blank>Template Slide Deck</a>
+
+	- Session C<br/>
+		- <a href="https://docs.google.com/document/d/1Aii-9EIUhhx0LiLjp67FNqATw3xYKFSQ9t69kFZthC4/edit?usp=sharing" target=_blank>Teacher Packet</a>
+		- <a href="https://docs.google.com/document/d/1EaUpJx_45Pgn9ot267KXE3NHdmkoulHDvNF5qKrUJdw/edit?usp=sharing"target=_blank>Facilitator Prep</a>
+		- <a href="https://docs.google.com/presentation/d/14Gi-sJoMuXj3ldKP3kZ9wVPfhEShboN2Q-cUyFiL9e0/edit?usp=sharing" target=_blank>Template Slide Deck</a>
+	- Session D<br/>
+		- <a href="https://docs.google.com/document/d/1pTGlgbcL0MYGpdt1gkLZCnF5yW9p-ZNmQExLF-TSaqA/edit?usp=sharing" target=_blank>Teacher Packet</a>
+		- <a href="https://docs.google.com/document/d/12eovKZ0cKnmI4dSwQzVn2Mo9OiPTtZweJ2yMV9R4Ui8/edit?usp=sharing" target=_blank>Facilitator Prep</a>
+		- <a href="https://docs.google.com/presentation/d/1pkLbIoaeW_LB6VELNzCh1VNX7uPBsqoZ7ZuX2tOCCfI/edit?usp=sharing" target=_blank>Template Slide Deck</a>
+</p>
+</details>
+
+<details>
+  <summary>**Ordering Supplies and Catering**</summary>
+  <p> 
 **Ordering Supplies**<br/>
 Code.org will send each partner a full year's worth of supplies for the continuing workshops prior to your first continuing workshop.
 
@@ -304,8 +356,8 @@ Code.org will send each partner a full year's worth of supplies for the continui
 For multi-day events like summer workshops, provide a heartier breakfast to get teachers through the day, ideally breakfast sandwiches or a hot buffet, with juice and coffee service. In addition, the lunch option should vary from day to day.<br/>
 
 Always accommodate vegetarian needs, roughly ⅓ of the order. In communications to teachers and workshop attendees ask that if they have special dietary restrictions that they plan accordingly. It’s very difficult to plan for every need, and is often more expensive.<br/><br/>
-
-
+</p>
+</details>
 
 [**Back to the top**](#top)
 <br/>

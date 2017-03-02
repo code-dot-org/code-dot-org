@@ -27,3 +27,21 @@ Feature: Using the teacher dashboard
     And I wait until I see selector "a[href*='/s/allthethings/stage/2/puzzle/1']"
     Then selector "a[href*='/s/allthethings/stage/2/puzzle/1']" has class "perfect"
     But selector "a[href*='/s/allthethings/stage/2/puzzle/2']" doesn't have class "perfect"
+
+  Scenario: Loading section projects
+    Given I create a teacher-associated student named "Sally"
+    And I am on "http://studio.code.org/projects/applab"
+    And I click selector ".project_edit" once I see it
+    And I wait until element ".project_name.header_input" is visible
+    And I type "thumb wars" into ".project_name.header_input"
+    And I click selector ".project_save"
+    And I wait until element ".project_edit" is visible
+    And I sign out
+    When I sign in as "Teacher_Sally"
+    And I am on "http://code.org/teacher-dashboard?sectionProjects=1/#sections"
+    And I click selector "a:contains('SectionName')" once I see it
+    And I click selector "a:contains('Projects')" once I see it
+    And I wait until element "#projects-list" is visible
+    And I click selector "a:contains('thumb wars')" once I see it
+    And I go to the newly opened tab
+    And I wait until element ".project_name.header_text:contains('thumb wars')" is visible

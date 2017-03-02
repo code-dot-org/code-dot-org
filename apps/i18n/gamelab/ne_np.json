@@ -4,6 +4,7 @@
   "animationPicker_failedToParseImage": "The image could not be parsed",
   "animationPicker_title": "Animation Library",
   "animationPicker_unsupportedType": "Sorry, this file type is not supported.",
+  "animationPicker_unsupportedSize": "Please make sure the image you are trying to upload is smaller than 100 KB.",
   "animationPicker_uploadImage": "Upload image",
   "animationPicker_uploading": "Uploading...",
   "animationPicker_warning": "Warning: Do not upload anything that contains personal information.",

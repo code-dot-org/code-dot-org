@@ -19,10 +19,12 @@
 #
 
 require 'cdo/script_constants'
+require 'cdo/shared_constants'
 
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include ScriptConstants
+  include SharedConstants
 
   include Seeded
   has_many :levels, through: :script_levels
@@ -548,12 +550,12 @@ class Script < ActiveRecord::Base
         assessment: assessment
       }
       script_level_attributes[:properties] = properties.to_json if properties
-      script_level = script.script_levels.detect{|sl|
+      script_level = script.script_levels.detect do |sl|
         script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
           sl.levels == levels
-      } || ScriptLevel.create(script_level_attributes) {|sl|
+      end || ScriptLevel.create(script_level_attributes) do |sl|
         sl.levels = levels
-      }
+      end
       # Set/create Stage containing custom ScriptLevel
       if stage_name
         stage = script.stages.detect{|s| s.name == stage_name} ||
@@ -697,7 +699,7 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete.times do |x|
         levels << {
           ids: [x],
-          kind: 'peer_review',
+          kind: LEVEL_KIND.peer_review,
           title: '',
           url: '',
           name: I18n.t('peer_review.reviews_unavailable'),

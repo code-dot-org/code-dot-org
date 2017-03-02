@@ -1,0 +1,43 @@
+name 'Strings Overview'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Strings Overview and How To Guide
+
+## Vocabulary: 
+
+- **String:** an arbitrary-length sequence of ASCII characters. The characters used to indicate the beginning and end of a string are quotes: `""`. Example strings: `"hello"`, `"hello world!"`, `"This is a string"` The quotes are important to distinguish strings from things like variable names. So the variable name blue is different from the string `"blue"`
+- **Concatenate:** to link together or join
+- **String Concatenation:** In code, the act of bringing together multiple strings into one. 
+ - This is often used to join a default string to something the user provided, such as `"hello " + username + "!"`, where the value of the variable username is a string. If the user provided the text `"Molly"` then the full string after concatenation would be `"hello Molly!"`
+
+The primary data type students have used so far is **Numbers**. If we want to interact with user-submitted text, however, we'll need to learn about a new data type called a **String**.  A string is a **sequence of ASCII characters**.
+
+**Example** | **Rule**
+---|---
+`"aString"` | Strings **might** look a lot like a variable name but there are **many differences**.
+`"look at all these spaces"` | Strings can **contain spaces**.
+`" bills are the coolest"` | Strings can **contain special characters** (and even start with them).
+`"11"` | Strings might **contain only digits**. This looks like a number but it is really 2 ASCII characters.
+`""` | Strings might **contain no characters**.
+<br>
+You can **store strings in a variable just like a number**. In this example the variable name is `str` but you should choose a name that is **descriptive and meaningful**.
+
+![](https://images.code.org/56e6b30a51556aa3b516e0a49b51cbeb-image-1445894334432.18.40 PM.png)
+
+**Combining Strings:** often you will want to combine multiple strings to create one longer string. You can do this with the `+` operator. The formal name of this process is **concatenation**.
+
+## Importance of Double Quotes
+
+You may have noticed that the strings we've seen are **wrapped in double quotes**. These double quotes **are not part of the string**. Instead this is how you indicate that a sequence of characters **is a string and not the name of a variable**.
+
+As you start writing programs with strings **it is common to generate errors from forgetting to place them in double quotes**. We're going to generate some of those errors now so that we can recognize them more easily later.
+
+![](https://images.code.org/89235457b9b9bf76ac4f8221cae5a62e-image-1445987270682.07.24 PM.png)
+
+
+**Check out the following for additional information about strings** 
+
+- <a href = “http://www.w3schools.com/js/js_strings.asp” target=_blank> Strings - w3schools <i class="fa fa-external-link-square"/></a>
+
+MARKDOWN

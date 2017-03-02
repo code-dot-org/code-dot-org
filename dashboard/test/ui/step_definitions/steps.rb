@@ -44,6 +44,15 @@ def color_for_status(status)
   }[status.to_sym]
 end
 
+# When an individual step fails in a call to steps, one gets no feedback about
+# which step failed. This splits a set of steps into individual steps, and calls
+# each separately, so that when one fails we're told which.
+def individual_steps(steps)
+  steps.split("\n").map(&:strip).each do |separate_step|
+    steps separate_step
+  end
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   url = replace_hostname(url)
@@ -203,16 +212,16 @@ When /^I inject simulation$/ do
 end
 
 When /^I press "([^"]*)"$/ do |button|
-  wait_with_short_timeout.until {
+  wait_with_short_timeout.until do
     @button = @browser.find_element(id: button)
-  }
+  end
   @button.click
 end
 
 When /^I press the first "([^"]*)" element$/ do |selector|
-  wait_with_short_timeout.until {
+  wait_with_short_timeout.until do
     @element = @browser.find_element(:css, selector)
-  }
+  end
   begin
     @element.click
   rescue
@@ -223,9 +232,9 @@ When /^I press the first "([^"]*)" element$/ do |selector|
 end
 
 When /^I press the "([^"]*)" button$/ do |button_text|
-  wait_with_short_timeout.until {
+  wait_with_short_timeout.until do
     @button = @browser.find_element(:css, "input[value='#{button_text}']")
-  }
+  end
   @button.click
 end
 
@@ -308,9 +317,9 @@ When /^I press dropdown item "([^"]*)"$/ do |index|
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
-  wait_with_timeout.until {
+  wait_with_timeout.until do
     @button = @browser.find_element(:xpath, xpath)
-  }
+  end
   @button.click
 end
 
@@ -698,7 +707,16 @@ Then(/^I reload the page$/) do
 end
 
 def wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
+  wait_with_timeout.until do
+    begin
+      @browser.execute_script("return (typeof jQuery !== 'undefined');")
+    rescue Selenium::WebDriver::Error::ScriptTimeOutError
+      puts "execute_script timed out after 30 seconds, likely because this is \
+Safari and the browser was still on about:blank when wait_for_jquery \
+was called. Ignoring this error and continuing to wait..."
+      false
+    end
+  end
 end
 
 Then /^I wait for jquery to load$/ do
@@ -706,9 +724,9 @@ Then /^I wait for jquery to load$/ do
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_id|
-  wait_with_short_timeout.until {
+  wait_with_short_timeout.until do
     @child_item = @browser.find_element(:id, child_id)
-  }
+  end
   actual_parent_item = @child_item.find_element(:xpath, "..")
   actual_parent_id = actual_parent_item.attribute('id')
   expect(actual_parent_id).to eq(parent_id)
@@ -778,8 +796,8 @@ def generate_user(name)
   password = name + "password" # hack
   @users ||= {}
   @users[name] = {
-      password: password,
-      email: email
+    password: password,
+    email: email
   }
   return email, password
 end
@@ -794,7 +812,7 @@ def generate_teacher_student(name, teacher_authorized)
   # enroll in a plc course as a way of becoming an authorized teacher
   enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
-  steps %Q{
+  individual_steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
     And I dismiss the language selector

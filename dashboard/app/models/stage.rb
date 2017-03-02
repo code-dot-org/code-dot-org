@@ -43,7 +43,13 @@ class Stage < ActiveRecord::Base
   def unplugged?
     script_levels = script.script_levels.select{|sl| sl.stage_id == id}
     return false unless script_levels.first
-    script_levels.first.level.unplugged?
+    script_levels.first.oldest_active_level.unplugged?
+  end
+
+  def spelling_bee?
+    script_levels = script.script_levels.select{|sl| sl.stage_id == id}
+    return false unless script_levels.first
+    script_levels.first.oldest_active_level.spelling_bee?
   end
 
   def localized_title
@@ -89,17 +95,17 @@ class Stage < ActiveRecord::Base
   def summarize
     stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
       stage_data = {
-          script_id: script.id,
-          script_name: script.name,
-          script_stages: script.stages.to_a.size,
-          freeplay_links: script.freeplay_links,
-          id: id,
-          position: absolute_position,
-          name: localized_name,
-          title: localized_title,
-          flex_category: localized_category,
-          lockable: !!lockable,
-          levels: cached_script_levels.map(&:summarize),
+        script_id: script.id,
+        script_name: script.name,
+        script_stages: script.stages.to_a.size,
+        freeplay_links: script.freeplay_links,
+        id: id,
+        position: absolute_position,
+        name: localized_name,
+        title: localized_title,
+        flex_category: localized_category,
+        lockable: !!lockable,
+        levels: cached_script_levels.map(&:summarize),
       }
 
       # Use to_a here so that we get access to the cached script_levels.

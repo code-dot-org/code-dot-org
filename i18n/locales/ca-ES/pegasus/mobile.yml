@@ -623,7 +623,7 @@
   dashboard_sections_name: "Nom de la secció"
   dashboard_sections_choose_secret: "Si t'agradaria donar comptes als seus estudiants, tria un tipus de contrassenya de <b>paraula</b> o d' <b>imatge</b> per a aquesta secció."
   dashboard_sections_secret_word: "Una <b>paraula</b> li permet posar una contrassenya per a cada alumne."
-  dashboard_sections_secret_picture: "Una <b>imatge</b> li permet posar una foto secreta per a cada alumne, ideal per a joves estudiants que encara saben escriure."
+  dashboard_sections_secret_picture: "Una <b>imatge</b> us permet establir una imatge secreta per a cada alumne, ideal per a alumnes més petits que encara no saben escriure."
   dashboard_sections_secret_none: "Si volguessis que els teus alumnes es gestionessin els seus comptes, incloent el fet de triar la contrasenya, tria un tipus secret de <b>cap</b>."
   dashboard_sections_print_secrets: "Pots imprimir un full de targetes on hi ha la informació del compte per repartir als teus alumnes individualment."
   dashboard_sections_switch_section: 'Canvia de secció:'
@@ -643,10 +643,10 @@
   dashboard_sections_assign_activity: "Assign Course"
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
-  dashboard_students_add_student: "Afegeix alumne"
-  dashboard_students_add_students: "Afegiu múltiples alumnes"
+  dashboard_students_add_student: "Afegeix un alumne"
+  dashboard_students_add_students: "Afegeix diversos alumnes"
   dashboard_students_add_multiple: 'Escriu o enganxa els noms dels teus alumnes, un per línia:'
-  dashboard_students_new_section: "Has creat una secció nova! Ara afegeix els teus alumnes utilitzant els botons de <b>Afegeix alumne</b>i<b>Afegeix múltiples alumnes</b>."
+  dashboard_students_new_section: "Heu creat un grup nou! Ara afegiu els vostres alumnes utilitzant els botons <b>Afegeix alumne</b> i <b>Afegeix diversos alumnes</b>."
   dashboard_students_placeholder_name: "Nom de l'alumne"
   dashboard_students_name: "Nom"
   dashboard_students_progress: "Progrés"
@@ -654,23 +654,23 @@
   dashboard_students_gender: "Sexe"
   dashboard_students_male: "Home"
   dashboard_students_female: "Dona"
-  dashboard_students_secret: "Imatge secreta"
+  dashboard_students_secret: "Contrasenya"
   dashboard_students_password: "contrasenya"
   dashboard_students_username: 'Nom d''usuari: %{student_username}'
   dashboard_students_email: 'Correu electrònic: %{student_email}'
   dashboard_students_completed_levels: "Nivells completats"
   dashboard_students_total_lines: "Línies de codi"
-  dashboard_students_show_secret: "Mostra imatge secreta"
-  dashboard_students_auto_generated: "Auto-generat"
-  dashboard_students_reset_secret: "Reinicia imatge secreta"
-  dashboard_students_reset_password: "Restablir contrasenya"
-  dashboard_students_share_section: 'Comparteix la pàgina d''inici de sessió amb els teus alumnes:'
-  dashboard_students_print_info: "Imprimeix targetes amb la informació d'accés dels teus alumnes."
+  dashboard_students_show_secret: "Mostra la contrasenya"
+  dashboard_students_auto_generated: "Auto-generada"
+  dashboard_students_reset_secret: "Reinicialitza la contrasenya"
+  dashboard_students_reset_password: "Reinicialitza la contrasenya"
+  dashboard_students_share_section: 'Comparteix la pàgina d''inici de sessió amb els vostres alumnes:'
+  dashboard_students_print_info: "Imprimeix targetes amb la informació d'accés dels vostres alumnes."
   dashboard_students_secret_picture_title: "Imatge secreta"
-  dashboard_students_secret_picture: "Aquesta secció utilitza <b>imatges</b> com a informació secreta. Això vol dir que cadascun dels teus alumnes té una imatge secreta que utilitza en lloc de la contrasenya per a validar-se. Cal que els alumnes utilitzin la pàgina web indicada per iniciar la sessió."
-  dashboard_students_reset_picture: "Pots restablir la imatge secreta d'un alumne en qualsevol moment triant<b>Mostra imatge secreta</b>seguit de<b>Restableix imatge secreta</b>. Una nova imatge secreta es generarà per a l'alumne i la podrà utilitzar quan inicii sessió."
-  dashboard_students_secret_word_title: "Paraula secreta"
-  dashboard_students_secret_word: "Paraula secreta"
+  dashboard_students_secret_picture: "Aquest grup utilitza <b>imatges</b> com a contrasenya. Això significa que cadascun dels vostres alumnes utilitza una imatge secreta per entrar, enlloc d'una paraula de pas. Cal que els alumnes utilitzin la pàgina web indicada per iniciar la sessió."
+  dashboard_students_reset_picture: "Podeu reinicialitzar la imatge secreta d'un alumne en qualsevol moment fent clic a <b>Mostra contrasenya</b> i després a <b>Reinicialitza la contrasenya</b>. Es generarà una nova imatge per a l'alumne i la podrà utilitzar quan iniciï la sessió."
+  dashboard_students_secret_word_title: "Paraula de pas"
+  dashboard_students_secret_word: "Aquest grup utilitza <b>paraules de pas</b> com a contrasenya. Això significa que cadascun dels vostres alumnes utilitza una paraula de pas per entrar. Cal que els alumnes utilitzin la pàgina web indicada per iniciar la sessió."
   dashboard_students_reset_word: 'Podeu restablir paraules secretes d''un estudiant en qualsevol moment triant <b>Mostra secreta</b> i llavors <b>restaurar secreta</b>. Es generarà un nou parell de paraules secretes per a que els estudiants l''utilitzin quan iniciïn sessió. '
   dashboard_students_join_link: "Digues als alumnes que es facin el seu propi compte i s'uneixin a la teva secció a"
   dashboard_students_no_email: "Si els estudiants no tenen adreces de correu electrònic, o voldries crear comptes per a ells, canvia el tipus secret d aquesta secció a <b>paraula</b> o <b>fotografia</b>."
@@ -758,6 +758,9 @@
   dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
   dashboard_announce_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "L'hora del Codi és aquí - 8-14 de desembre!"
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
   host_an_hour: "Host an hour"
@@ -869,6 +872,12 @@
   course2_name: "Curs 2"
   course3_name: "Curs 3"
   course4_name: "Curs 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "Curs Accelerat"
   cspunit1_name: '(old) Unit 1: Digital Information'
   cspunit2_name: '(old) Unit 2: The Internet'
@@ -886,6 +895,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Full Test - 50 questions"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -907,6 +917,7 @@
   math_category_name: "Mates"
   hoc_category_name: "Hora del codi"
   csf_category_name: "CS Fundamentals"
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"

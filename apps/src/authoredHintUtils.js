@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import experiments from './util/experiments';
 import processMarkdown from 'marked';
 import renderer from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
@@ -104,6 +105,18 @@ authoredHintUtils.getFinishedHints_ = function () {
 };
 
 /**
+ * This only retrieves the hints stored in localStorage, which likely won't
+ * include things from older sessions.
+ *
+ * TODO(ram): Grab *all* the old hint requests from the server, preferably on
+ *   level load
+ * @return {FinishedHint[]}
+ */
+authoredHintUtils.getOldFinishedHints = function () {
+  return authoredHintUtils.getFromLocalStorage_('old_finished_authored_hint_views', []);
+};
+
+/**
  * @return {AttemptRecord}
  */
 authoredHintUtils.getLastAttemptRecord_ = function () {
@@ -125,6 +138,11 @@ authoredHintUtils.clearUnfinishedHints = function () {
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
+  if (experiments.isEnabled('g.stageprogress')) {
+    const oldHints = authoredHintUtils.getOldFinishedHints();
+    trySetLocalStorage('old_finished_authored_hint_views',
+        JSON.stringify(oldHints.concat(authoredHintUtils.getFinishedHints_())));
+  }
   trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
@@ -280,4 +298,16 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       alreadySeen: false
     };
   });
+};
+
+/**
+ * Returns the number of hints that the user has opened on the given level, but
+ * haven't been reported to the server yet.
+ */
+authoredHintUtils.currentOpenedHintCount = function (levelId) {
+  const unfinished = authoredHintUtils.getUnfinishedHints_();
+  const finished = authoredHintUtils.getFinishedHints_();
+  return unfinished.concat(finished).filter((hint) => {
+    return hint.levelId === levelId;
+  }).length;
 };

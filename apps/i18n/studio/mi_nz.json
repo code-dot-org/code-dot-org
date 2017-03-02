@@ -574,6 +574,8 @@
   "setScoreText": "tautuhi whiwhinga",
   "setScoreTextTooltip": "Ka tautuhia te kuputuhi kia whakaaturia ki te wāhi tapeke.",
   "setScoreTooltip": "Ka tautuhia te tapeke a te kaitākaro ki tētahi rahinga i tohua",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "ki tētahi ata Manny",
   "setSpriteSid": "ki tētahi ata Sid",
   "setSpriteGranny": "ki tētahi ata Granny",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "ki tētahi terenga tere rawa",
   "setSpriteSpeedTooltip": "Ka tautuhia te terenga o tētahi kaitapere",
   "setSpriteZombie": "ki tētahi ata kairoro",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Ka tonoa ngā kaitapere katoa i tohua kia whai i tētahi atu kaitapere",
   "setSpritesFleeTooltip": "Ka tonoa ngā kaitapere katoa i tohua kia rere i tētahi atu kaitapere",
   "setSpritesStopTooltip": "Ka tonoa ngā kaitapere katoa i tohua kia kāti te karore haere, te whai, te rere rānei",
@@ -671,6 +674,7 @@
   "showTSDefText": "patohia te kuputuhi ki konei",
   "showTitleScreenTooltip": "Whakaaturia tētahi mata taitara me te taitara, kuputuhi hoki e hāngai ana.",
   "size": "rahinga",
+  "setActor": "set actor",
   "setDroid": "tautuhi karetao",
   "setDroidHidden": "kia huna",
   "setDroidRandom": "kia matapōkere",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Koia kei a koe! Kua whakauru koe i te waehere hei hanga i nga Droid Kiore. Kei a koe te tikanga, kia neke ki te kēmu whai ake, kia hoki anō kia whiwhi koe i ngā Droid Kiore 20. Kia ngāwari ake te mahi, hangaia te maha. (Kia tere ake te neke, pēhia kia mau tonu ngā pātuhi neke i te papapātuhi, mata rānei.)",
   "failedChangeSettingTimeout": "Tikina kia toru ngā Rebel Pilots kia kōkiri ki mua.",
   "failedChangeSettingSettings": "Whakamaua tō kēmu kia tīna. Kia tutuki tēnei wahanga, me huri te droid, tautuhia hoki te tere.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

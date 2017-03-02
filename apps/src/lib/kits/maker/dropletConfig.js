@@ -1,33 +1,27 @@
-import api from './api';
+import * as api from './api';
 import _ from 'lodash';
 import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
-    N_COLOR_LEDS,
-    SENSOR_VARS,
-    BUTTON_VARS,
-    COMPONENT_EVENTS
+  N_COLOR_LEDS,
+  SENSOR_VARS,
+  BUTTON_VARS,
+  COMPONENT_EVENTS,
+  SONG_CHARGE
 } from './PlaygroundConstants';
 
-const playSongConfig = {
-  song: [
-    ["A", 500], [null, 50], ["A", 500], [null, 50], ["A", 500], [null, 50],
-    ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 500], [null, 50],
-    ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 650], [null, 50],
-    [null, 500], ["E5", 500], [null, 50], ["E5", 500], [null, 50], ["E5", 500],
-    [null, 50], ["F5", 350], [null, 50], ["C5", 150], [null, 50], ["G4", 500],
-    [null, 50], ["F", 350], [null, 50], ["C5", 150], [null, 50], ["A", 650],
-    [null, 50], [null, 500],
-  ],
-  tempo: 100000
-};
-
-const MAKER_CATEGORY = 'Maker';
+export const MAKER_CATEGORY = 'Maker';
 const CIRCUIT_CATEGORY = 'Circuit';
 
 const pixelType = '[ColorLed].';
 const colorPixelVariables = _.range(N_COLOR_LEDS).map(index => `colorLeds[${index}]`);
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
+
+export function stringifySong(song) {
+  return '[\n' +
+      song.map(note => `  ${JSON.stringify(note)}`).join(',\n') +
+      '\n]';
+}
 
 /**
  * Relies on `this` being the Droplet socket when in droplet mode, and, in
@@ -76,6 +70,7 @@ export const blocks = [
   {func: 'digitalRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['"D4"']},
   {func: 'analogWrite', parent: api, category: MAKER_CATEGORY, paletteParams: ['pin', 'value'], params: ['5', '150']},
   {func: 'analogRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
+  {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
 
   /**
    * Circuit-Playground-specific blocks
@@ -100,7 +95,7 @@ export const blocks = [
   {func: 'buzzer.note', category: CIRCUIT_CATEGORY, paletteParams: ['note', 'duration'], params: ['"A4"', '100'], paramButtons: { minArgs: 1, maxArgs: 2}},
   {func: 'buzzer.off', category: CIRCUIT_CATEGORY},
   {func: 'buzzer.stop', category: CIRCUIT_CATEGORY},
-  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['song'], params: [JSON.stringify(playSongConfig)]},
+  {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
 
   // TODO(bjordan): re-add when dropdowns work with object refs
   //{func: 'accelerometer', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},

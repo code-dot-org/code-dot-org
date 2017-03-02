@@ -1,6 +1,7 @@
 import {assert} from '../../util/configuredChai';
+import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import sinon from 'sinon';
-import {injectErrorHandler} from '@cdo/apps/javascriptMode';
+import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();
@@ -13,7 +14,6 @@ var AppStorage = require('@cdo/apps/applab/appStorage');
 describe('createRecord callbacks', function () {
   var xhr;
   var lastRequest;
-  let originalWindowApplab;
 
   // Intercept all XHR requests, storing the last one
   before(function () {
@@ -21,8 +21,7 @@ describe('createRecord callbacks', function () {
     xhr.onCreate = function (req) {
       lastRequest = req;
     };
-    originalWindowApplab = window.Applab;
-    window.Applab = {
+    replaceOnWindow('Applab', {
       // used in design mode
       appWidth: 320,
       appHeight: 480,
@@ -32,13 +31,13 @@ describe('createRecord callbacks', function () {
       JSInterpreter: {
         getNearestUserCodeLine: () => 0
       },
-    };
+    });
   });
 
   after(function () {
     lastRequest = null;
     xhr.restore();
-    window.Applab = originalWindowApplab;
+    restoreOnWindow('Applab');
   });
 
   it('calls onSuccess for 200', function () {

@@ -31,13 +31,13 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 - **Advocacy and Government Affairs**
 	- [Director of State Government Affairs](#govaffairs)
+- **Fundraising**
+	- [Fundraising Consultant](#fund)
 - **Product and Engineering**
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
-- **Professional Learning**
-	- [Program Coordinator](#coord)
 - **Internships**
- 	- [Curriculum Team Intern](#edintern)
+  	- [Fundraising Team Intern](#fundintern)
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
@@ -94,6 +94,26 @@ Additionally, the ideal candidate has:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="fund"href="#fund">Fundraising Consultant (Seattle, WA; location flexible)</a>
+
+**Scope of Work:**
+
+Code.org is seeking a part-time Fundraising Consultant to conduct research and provide consultation services to select Code.org partners regarding the feasibility and process for applying to various grant programs.
+
+**Experience Required:**
+
+We are looking for a consultant with 3+ years experience seeking grants, able to identify early-stage potential opportunities, stay abreast of new opportunities that are released, and quickly be able to understand how to apply for and win funding. Consultant must have proven experience in successfully applying for at least one of the following:
+
+- Grants from private individuals, family foundations, or large, established foundations (corporate, family, or other)
+- Grants and/or contracts from cities, counties, states, and/or the Federal government, preferably including i3/EIR, NSF, Dept. of Ed, etc.
+
+The person we contract for this role will be experienced in building relationships with grantmakers and/or policymakers to access funds or give input into funding opportunities, and be able to guide and coach others in both seeking grants and building relationships.
+
+**Contract Terms:**
+
+Consultant will be expected to devote up to 15 hours per week for at least the next year (as needed, on contract); the work will require a minimum of 5 hours per month to cover ongoing communications and research time to stay current on grant opportunities, Code.org activities, and activities of our Regional Partners. 
+
+Interested contractors should email a resume and cover letter, and any relevant work samples, to <a href="mailto:jobs@code.org">jobs@code.org</a>. You may also choose to include a LinkedIn or related online profile. Compensation will be a contracted hourly rate, depending on experience. 
 
 ## <a name="senior"href="#senior">Senior Software Engineer (Seattle, WA)</a>
 
@@ -156,54 +176,28 @@ In addition, candidates:
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="coord"href="#coord">Program Coordinator (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for a Program Coordinator to join Code.org’s Professional Learning & Community team. Our PLC team is responsible for the success of Code.org professional development across the U.S. This role will work collaboratively with a team of program managers and coordinators. 
-
-This is a full time, exempt position based in our Seattle office. Duties of this role are focused on providing support to program managers, which includes: 
-
-- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
-- Drafting communications to stakeholders, responding to requests for information, preparing materials for training workshops, distributing materials externally
-- Updating and managing event attendee lists and tracking numbers and teacher activity across programs
-- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-**Experience and Qualifications:**
-
-We are looking for a self-starter, skilled in successfully delivering projects, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Proficiency with Google Apps (Docs, Sheets, Slides, Forms) or the ability to learn these and other new applications quickly is required. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
-
-The ideal candidate has the following qualifications:
-
-- Has a bachelors degree (Computer Science background/experience not required)
-- Ability and willingness to travel up to 20% time 
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="edintern"href="#edintern">Curriculum Team Intern (Seattle, WA)</a>
+## <a name="fundintern"href="#fundintern">Fundraising Team Intern (Seattle, WA)</a>
 
 **Internship Summary:**
 
-We are looking for a Winter/Spring intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
+Code.org is looking for a Fundraising Intern to join Code.org’s Fundraising team. Our team is responsible for raising funds to sustain Code.org’s operations. This is a spring (March-May) internship, part-time, approximately 10-15 hours per week on a flexible schedule. Intern’s responsibilities would include:
 
-Responsibilities of the may position include: 
-
-- Working closely with the Curriculum team to assist in designing, developing, and writing original curricular materials:lesson plans, formative/summative assessments, videos, answer keys, project exemplars
-- Using in-house content management tools to structure resources
+- Researching potential fundraising sources using the Foundation Center and other online resources for Code.org and our regional partners 
+- Developing reports of qualified potential funding sources 
+- Developing an application calendar to assist the Fundraising team in prioritizing work
+- Other special projects, as needed
 
 
 **Experience and Qualifications:**
 
-The ideal candidate has experience in computer science and a background in education; has strong writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. 
+Must be extremely detail-oriented, possess strong research skills, excel at written and verbal communications in English, and be tech-savvy (computer science background/experience not required). Candidate should be flexible and willing to work in a fast-paced, start-up environment.
 
-The candidate should also: 
+Required Qualifications:
 
-- Have basic to comprehensive knowledge of computer science (required) 
-- Have some prior curriculum writing experience / activity design experience (required)
-- Proficiency in working with Microsoft Office and Google Docs (required) 
-- Be working to obtain a Bachelor’s degree or higher in Education or Computer Science (preferred)
+- Minimum 2 years of undergraduate studies completed
+- Experience with Google suite of products
+- Have interest and prior experience in gathering online research
+- Ability to work legally in the United States
 
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
