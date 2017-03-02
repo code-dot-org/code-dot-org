@@ -1,16 +1,29 @@
 import React from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
+import { fakeLevels } from './progressTestHelpers';
 
-/**
- * Make an array of size n where each element is theprovided item
- */
-const arrayOfItem = (n, item) => {
-  let contents = [];
-  for (var i = 0; i < n; i++) {
-    contents.push(item);
-  }
-  return contents;
-};
+const levels = [
+  {
+    status: 'perfect',
+    url: '/foo/bar',
+  },
+  {
+    status: 'not_tried',
+    url: '/foo/bar',
+  },
+  {
+    status: 'attempted',
+    url: '/foo/bar',
+  },
+  {
+    status: 'passed',
+    url: '/foo/bar',
+  },
+  {
+    status: 'submitted',
+    url: '/foo/bar',
+  },
+];
 
 export default storybook => {
   storybook
@@ -21,28 +34,7 @@ export default storybook => {
         story: () => (
           <ProgressBubbleSet
             start={3}
-            levels={[
-              {
-                status: 'perfect',
-                url: '/foo/bar',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/bar',
-              },
-              {
-                status: 'attempted',
-                url: '/foo/bar',
-              },
-              {
-                status: 'passed',
-                url: '/foo/bar',
-              },
-              {
-                status: 'submitted',
-                url: '/foo/bar',
-              },
-            ]}
+            levels={levels}
           />
         )
       },
@@ -51,12 +43,20 @@ export default storybook => {
         story: () => (
           <ProgressBubbleSet
             start={1}
-            levels={arrayOfItem(20, {
-              status: 'not_tried',
-              url: '/foo/bar'
-            })}
+            levels={fakeLevels(20)}
           />
         )
-      }
+      },
+      {
+        name:'disabled bubble set',
+        description: 'should be white and not clickable',
+        story: () => (
+          <ProgressBubbleSet
+            start={1}
+            levels={levels}
+            disabled={true}
+          />
+        )
+      },
     ]);
 };
