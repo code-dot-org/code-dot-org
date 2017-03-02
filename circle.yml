@@ -46,7 +46,8 @@ dependencies:
     - sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
     - sudo apt-get install libicu-dev enscript moreutils pdftk
     - sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
-    - bundle install --without ''
+    # Use vendor/bundle path so gems will be cached correctly
+    - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3 --without ''
     - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "npm_use_sudo: false" >> locals.yml'
     - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
