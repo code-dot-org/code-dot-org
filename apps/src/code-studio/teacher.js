@@ -12,7 +12,8 @@ import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
-import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux';
+import { ViewType, setViewType } from './stageLockRedux';
+import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
 import { setSections, selectSection } from './sectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
@@ -135,11 +136,10 @@ function renderIntoLessonTeacherPanel() {
     if (stageLockedText) {
       const state = store.getState();
 
-      const { currentStageId } = state.progress;
-      const { selectedSectionId } = state.sections;
-      const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
 
-      if (fullyLocked[currentStageId]) {
+
+      const { currentStageId } = state.progress;
+      if (lessonIsLockedForAllStudents(currentStageId, state)) {
         $(stageLockedText).text(commonMsg.stageLocked());
       } else {
         $(stageLockedText).text(commonMsg.stageNotFullyLocked());
