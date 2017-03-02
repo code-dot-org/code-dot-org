@@ -7,7 +7,7 @@ import {
   OSX_DEFAULT_PORTS,
   OTHER_BAD_SERIALPORTS
 } from './sampleSerialPorts';
-import ChromeSerialPort from './FakeChromeSerialPort';
+import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPort
 import {
   findPortWithViableDevice,
   getPreferredPort
@@ -15,7 +15,7 @@ import {
 
 describe("Maker Toolkit", function () {
   describe(`findPortWithViableDevice()`, () => {
-    // Testing against FakeChromeSerialPort.js
+    // Testing against StubChromeSerialPort.js
     afterEach(() => {
       ChromeSerialPort.test_reset();
     });
