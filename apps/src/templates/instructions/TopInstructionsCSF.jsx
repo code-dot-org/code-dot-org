@@ -46,7 +46,6 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 const CONTAINED_LEVEL_PADDING = 10;
-
 const MIN_CONTAINED_LEVEL_HEIGHT = 50;
 
 // Minecraft-specific styles
