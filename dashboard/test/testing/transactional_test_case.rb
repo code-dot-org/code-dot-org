@@ -23,6 +23,8 @@ module ActiveSupport
         end
 
         setup_all do
+          # Global fixture-setup happens once, and must persist outside any transaction.
+          setup_fixtures
           if use_transactional_test_case?
             @test_case_connections = enlist_transaction_connections
             @test_case_connections.each do |connection|
