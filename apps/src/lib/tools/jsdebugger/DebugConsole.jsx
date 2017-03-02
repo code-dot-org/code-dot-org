@@ -15,6 +15,51 @@ import {
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 
+const DEBUG_INPUT_HEIGHT = 16;
+const DEBUG_CONSOLE_LEFT_PADDING = 3;
+
+const INPUT_OUTPUT_SHARED_STYLE = {
+  borderWidth: 0,
+  padding: 0,
+  outline: 0,
+  userSelect: 'text',
+};
+
+const style = {
+  debugOutput: {
+    ...INPUT_OUTPUT_SHARED_STYLE,
+    paddingLeft: DEBUG_CONSOLE_LEFT_PADDING,
+    overflow: 'auto',
+    lineHeight: 'normal',
+    cursor: 'text',
+    whiteSpace: 'pre-wrap',
+    flexGrow: 1,
+  },
+  debugInputWrapper: {
+    flexGrow: 0,
+    flexShrink: 0,
+    display: 'flex',
+  },
+  debugInputPrompt: {
+    height: DEBUG_INPUT_HEIGHT,
+    display: 'block',
+    paddingLeft: DEBUG_CONSOLE_LEFT_PADDING,
+    width: 15,
+    cursor: 'text',
+    flexGrow: 0,
+  },
+  debugInput: {
+    ...INPUT_OUTPUT_SHARED_STYLE,
+    maxHeight: DEBUG_INPUT_HEIGHT,
+    height: DEBUG_INPUT_HEIGHT,
+    lineHeight: DEBUG_INPUT_HEIGHT,
+    flexGrow: 1,
+    marginBottom: 0,
+    boxShadow: 'none',
+  },
+};
+
+
 const WATCH_COMMAND_PREFIX = "$watch ";
 const UNWATCH_COMMAND_PREFIX = "$unwatch ";
 
@@ -37,7 +82,6 @@ function moveCaretToEndOfDiv(element) {
   selection.removeAllRanges();
   selection.addRange(range);
 }
-
 
 /**
  * The console for our debugger UI
@@ -75,11 +119,11 @@ const DebugConsole = connect(
   },
 
   onInputKeyDown(e) {
-    var input = e.target.textContent;
+    var input = e.target.value;
     if (e.keyCode === KeyCodes.ENTER) {
       e.preventDefault();
       this.props.commandHistory.push(input);
-      e.target.textContent = '';
+      e.target.value = '';
       this.appendLog('> ' + input);
       if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
         this.props.addWatchExpression(
@@ -100,11 +144,11 @@ const DebugConsole = connect(
         this.appendLog('< (not running)');
       }
     } else if (e.keyCode === KeyCodes.UP) {
-      e.target.textContent = this.props.commandHistory.goBack(input);
+      e.target.value = this.props.commandHistory.goBack(input);
       moveCaretToEndOfDiv(e.target);
       e.preventDefault(); // Block default Home/End-like behavior in Chrome
     } else if (e.keyCode === KeyCodes.DOWN) {
-      e.target.textContent = this.props.commandHistory.goForward(input);
+      e.target.value = this.props.commandHistory.goForward(input);
       moveCaretToEndOfDiv(e.target);
       e.preventDefault(); // Block default Home/End-like behavior in Chrome
     }
@@ -122,7 +166,7 @@ const DebugConsole = connect(
     // TODO: this needs to get called on ATTACH action being dispatched
     // alternatively, the text content should get stored in redux.
     if (this._debugInput) {
-      this._debugInput.textContent = '';
+      this._debugInput.value = '';
     }
   },
 
@@ -156,7 +200,11 @@ const DebugConsole = connect(
       <div
         id="debug-console"
         className={classes}
-        style={this.props.style}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          ...this.props.style
+        }}
         ref={
           // we currently need this ref because JsDebugger does some
           // imperative DOM manipulation to change the style of the element
@@ -170,26 +218,27 @@ const DebugConsole = connect(
         <div
           id="debug-output"
           onMouseUp={this.onDebugOutputMouseUp}
-          className="debug-output"
           ref={el => this._debugOutput = el}
+          style={style.debugOutput}
         >
           {this.props.logOutput}
         </div>
-        <span
-          className="debug-input-prompt"
-          style={{cursor: 'text'}}
-          onClick={this.focus}
-        >
-          &gt;
-        </span>
-        <div
-          contentEditable
-          spellCheck="false"
-          id="debug-input"
-          className="debug-input"
-          ref={el => this._debugInput = el}
-          onKeyDown={this.onInputKeyDown}
-        />
+        <div style={style.debugInputWrapper}>
+          <span
+            style={style.debugInputPrompt}
+            onClick={this.focus}
+          >
+            &gt;
+          </span>
+          <input
+            type="text"
+            spellCheck="false"
+            id="debug-input"
+            style={style.debugInput}
+            ref={el => this._debugInput = el}
+            onKeyDown={this.onInputKeyDown}
+          />
+        </div>
       </div>
     );
   },
