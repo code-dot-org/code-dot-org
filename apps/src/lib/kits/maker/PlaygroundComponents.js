@@ -88,7 +88,10 @@ export function deinitializeCircuitPlaygroundComponents(components) {
     components.lightSensor.disable();
   }
 
-  // TODO: accelerometer: initializeAccelerometer(board),
+  if (components.accelerometer) {
+    components.accelerometer.stop();
+  }
+
   // TODO: buttonL: initializeButton(board, '4'),
   // TODO: buttonR: initializeButton(board, '19'),
   // TODO: initializeTouchPads(board)
