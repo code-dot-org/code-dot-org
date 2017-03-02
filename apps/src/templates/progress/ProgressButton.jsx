@@ -105,7 +105,7 @@ const ProgressButton = React.createClass({
   },
 
   render() {
-    const { href, text, icon, target, style, onClick } = this.props;
+    const { href, text, icon, target, style, onClick, ...otherProps } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -118,6 +118,7 @@ const ProgressButton = React.createClass({
 
     return (
       <Tag
+        {...otherProps}
         style={[styles.main, styles.colors[color], styles.sizes[size], style]}
         href={href}
         target={target}

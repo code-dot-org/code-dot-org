@@ -28,11 +28,18 @@ const nonLockableStage = {
   lesson_plan_html_url: 'lesson_plan.html'
 };
 
+const lockableWithLessonPlan = {
+  ...lockableStage,
+  id: 125,
+  lesson_plan_html_url: 'lesson_plan.html'
+};
+
 const createStore = ({preload=false, allowHidden=true} = {}) => {
   const store = createStoreWithReducers();
   const stages = [
     lockableStage,
-    nonLockableStage
+    nonLockableStage,
+    lockableWithLessonPlan
   ];
   store.dispatch(initProgress({
     scriptName: 'csp1',
@@ -100,9 +107,26 @@ export default storybook => {
       },
 
       {
+        name:'hideable allowed, lockable lesson with lesson plan',
+        story: () => {
+          const store = createStore();
+          const state = store.getState();
+          return (
+            <Provider store={store}>
+              <div style={{width: 200, height: 200}}>
+                <ProgressLessonTeacherInfo
+                  lesson={lessons(state.progress)[2]}
+                />
+              </div>
+            </Provider>
+          );
+        }
+      },
+
+      {
         name:'hideable allowed, nonlockable lesson with lesson plan',
         story: () => {
-          const store = createStore({allowHidden: true});
+          const store = createStore();
           const state = store.getState();
           return (
             <Provider store={store}>
