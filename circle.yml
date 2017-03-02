@@ -92,7 +92,7 @@ dependencies:
         timeout: 840
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
-    - rake firebase:ci
+    - bundle exec rake firebase:ci
     # Make sure building did not introduce unexpected changes.  If it did, fail
     # here before we start running any test steps.
     - bundle exec rake circle:check_for_unexpected_apps_changes
