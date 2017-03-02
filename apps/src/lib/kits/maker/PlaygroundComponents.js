@@ -79,7 +79,10 @@ export function deinitializeCircuitPlaygroundComponents(components) {
     components.soundSensor.disable();
   }
 
-  // TODO: tempSensor: initializeThermometer(board),
+  // five.Thermometer makes an untracked setInterval call, so it can't be
+  // cleaned up.
+  // TODO: Fork / fix johnny-five Thermometer to be clean-uppable
+  // See https://github.com/rwaldron/johnny-five/issues/1297
 
   if (components.lightSensor) {
     components.lightSensor.disable();
