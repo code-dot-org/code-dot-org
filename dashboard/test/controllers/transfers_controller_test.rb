@@ -52,13 +52,6 @@ class TransfersControllerTest < ActionController::TestCase
     assert_equal "Please provide current_section_code.", json_response["error"]
   end
 
-  test "returns an error when stay_enrolled_in_current_section is not provided and a student is being transferred to another teacher" do
-    @params[:new_section_code] = @other_teacher_section.code
-    post :create, params: @params
-    assert_response 400
-    assert_equal "Please provide stay_enrolled_in_current_section.", json_response["error"]
-  end
-
   test "returns an error when the current_section_code is invalid" do
     @params[:current_section_code] = NONEXISTENT_SECTION_CODE
 
