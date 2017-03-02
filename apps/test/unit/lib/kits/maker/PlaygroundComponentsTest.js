@@ -4,6 +4,7 @@ import Playground from 'playground-io';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import {
+  deinitializeColorLeds,
   initializeAccelerometer,
   initializeButton,
   initializeColorLeds,
@@ -57,6 +58,20 @@ describe('Circuit Playground Components', () => {
       const newControllers = initializeColorLeds(boardTwo);
       expect(newControllers[0].board === boardTwo).to.be.true;
       expect(boardTwo.io.sysexCommand.callCount).to.equal(20);
+    });
+  });
+
+  describe('deinitializeColorLeds()', () => {
+    it('calls stop on every LED', () => {
+      const components = initializeColorLeds(board);
+
+      components.forEach(led => sinon.spy(led, 'stop'));
+
+      deinitializeColorLeds(components);
+
+      for (let i = 0; i < 10; i++) {
+        expect(components[i].stop).to.have.been.calledOnce;
+      }
     });
   });
 
