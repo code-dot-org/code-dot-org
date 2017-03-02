@@ -49,6 +49,10 @@ var SoundLibrary = React.createClass({
         top: '5px',
         fontSize: '16px',
         color: '#999'
+      },
+      button: {
+        float: 'right',
+        margin: '20px 0px'
       }
     };
 
@@ -67,7 +71,7 @@ var SoundLibrary = React.createClass({
           search={this.state.search}
           selectedSound={this.state.selectedSound}
         />
-        <button onClick={this.onClickChoose} >{'Choose'}</button>
+        <button className={"primary"} onClick={this.onClickChoose} style={styles.button}>{'Choose'}</button>
       </div>
     );
   }
