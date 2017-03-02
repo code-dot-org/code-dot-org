@@ -248,18 +248,21 @@ designMode.updateProperty = function (element, name, value) {
     case 'textAlign':
       element.style.textAlign = value;
       break;
-    case 'icon-color':
+    case 'icon-color': {
+      // This case is block-wrapped to allow scoped lexical declaration.
+      // See http://eslint.org/docs/rules/no-case-declarations
       element.setAttribute('data-icon-color', value);
       const imageUrl = element.getAttribute('data-canonical-image-url');
       if (ICON_PREFIX_REGEX.test(imageUrl)) {
         const url = assetPrefix.renderIconToString(imageUrl, element);
-        if (element.nodeName == "IMG") {
+        if (element.nodeName === "IMG") {
           element.src = url;
         } else {
           element.style.backgroundImage = 'url(' + url + ')';
         }
       }
       break;
+    }
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
