@@ -14,19 +14,13 @@ module Honeybadger
     return if [:adhoc, :development].include? environment
 
     Dir.chdir(dashboard_dir) do
-      [
-        CDO.dashboard_honeybadger_api_key,
-        CDO.pegasus_honeybadger_api_key,
-        CDO.cronjobs_honeybadger_api_key
-      ].each do |honeybadger_api_key|
-        system(
-          'bundle exec honeybadger deploy '\
-            "--environment=#{environment} "\
-            "--revision=#{revision} "\
-            "--user=#{environment} "\
-            "--api-key=#{honeybadger_api_key}"
-        )
-      end
+      system(
+        'bundle exec honeybadger deploy '\
+          "--environment=#{environment} "\
+          "--revision=#{revision} "\
+          "--user=#{environment} "\
+          "--api-key=#{CDO.dashboard_honeybadger_api_key}"
+      )
     end
   end
 
