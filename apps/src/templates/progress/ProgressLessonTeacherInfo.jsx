@@ -2,12 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
-import FontAwesome from '../FontAwesome';
 import { lessonType } from './progressTypes';
-import progressStyles from '@cdo/apps/code-studio/components/progress/progressStyles';
 import HiddenStageToggle from '@cdo/apps/code-studio/components/progress/HiddenStageToggle';
-import StageLock from '@cdo/apps/code-studio/components/progress/StageLock';
+import StageLock from './StageLock';
 import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import ProgressButton from './ProgressButton';
 
 const styles = {
   main: {
@@ -22,10 +21,15 @@ const styles = {
     marginTop: 10,
     marginBottom: -5
   },
-  // TODO - unified button?
-  lessonPlanButton: progressStyles.blueButton,
-  lessonPlanText: {
-    marginLeft: 10
+  buttonContainer: {
+    marginTop: 5,
+    marginLeft: 15,
+    marginRight: 15
+  },
+  button: {
+    width: '100%',
+    paddingLeft: 0,
+    paddingRight: 0,
   }
 };
 
@@ -47,10 +51,6 @@ const ProgressLessonTeacherInfo = React.createClass({
     toggleHidden(scriptName, sectionId, lesson.id, value === 'hidden');
   },
 
-  clickLessonPlan() {
-    window.open(this.props.lesson.lesson_plan_html_url, '_blank');
-  },
-
   render() {
     const { sectionId, scriptAllowsHiddenStages, hiddenStageState, hasNoSections, lesson } = this.props;
 
@@ -60,6 +60,21 @@ const ProgressLessonTeacherInfo = React.createClass({
 
     const element =  (
       <div style={styles.main}>
+        {lesson.lesson_plan_html_url &&
+          <div style={styles.buttonContainer}>
+            <ProgressButton
+              href={lesson.lesson_plan_html_url}
+              text={i18n.viewLessonPlan()}
+              icon="file-text"
+              color="blue"
+              target="_blank"
+              style={styles.button}
+            />
+          </div>
+        }
+        {lesson.lockable && !hasNoSections &&
+          <StageLock lesson={lesson}/>
+        }
         {showHiddenStageToggle &&
           <div style={styles.hiddenToggle}>
             <HiddenStageToggle
@@ -67,20 +82,6 @@ const ProgressLessonTeacherInfo = React.createClass({
               onChange={this.onClickHiddenToggle}
             />
           </div>
-        }
-        {lesson.lockable && !hasNoSections &&
-          <StageLock stage={lesson}/>
-        }
-        {lesson.lesson_plan_html_url &&
-          <button
-            style={styles.lessonPlanButton}
-            onClick={this.clickLessonPlan}
-          >
-            <FontAwesome icon="file-text"/>
-            <span style={styles.lessonPlanText}>
-              {i18n.viewLessonPlan()}
-            </span>
-          </button>
         }
       </div>
     );
