@@ -6,13 +6,15 @@ import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import Immutable from 'immutable';
 import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from "@cdo/apps/util/color";
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 describe('ProgressLesson', () => {
   const defaultProps = {
     lesson: fakeLesson('lesson1', 1),
     levels: fakeLevels(3),
     lessonNumber: 3,
-    lessonIsVisible: () => true
+    lessonIsVisible: () => true,
+    lessonLockedForSection: () => false
   };
 
   it('renders with gray background when not hidden', () => {
@@ -44,5 +46,85 @@ describe('ProgressLesson', () => {
       />
     );
     assert.equal(wrapper.props().style.background, color.white);
+  });
+
+  it('renders with white background when section is locked', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lessonLockedForSection={() => true}
+      />
+    );
+    assert.equal(wrapper.props().style.background, color.white);
+  });
+
+  it('disables bubbles when section is locked', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lessonLockedForSection={() => true}
+      />
+    );
+    assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
+  });
+
+  it('renders with white background locked for individual student', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lessonLockedForSection={() => false}
+        levels={defaultProps.levels.map(level => ({...level, status: LevelStatus.locked}))}
+      />
+    );
+    assert.equal(wrapper.props().style.background, color.white);
+  });
+
+  it('renders with gray background when section is lockable but unlocked', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lessonLockedForSection={() => false}
+      />
+    );
+    assert.equal(wrapper.props().style.background, color.lightest_gray);
+  });
+
+  it('has an unlocked icon when section is lockable but unlocked', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lessonLockedForSection={() => false}
+      />
+    );
+    assert.equal(wrapper.children().at(0).children().at(0).props().icon, 'unlock');
+  });
+
+  it('has an locked icon when section is lockable and locked', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lessonLockedForSection={() => true}
+      />
+    );
+    assert.equal(wrapper.children().at(0).children().at(0).props().icon, 'lock');
+  });
+
+  it('has both a hidden and a locked icon when section is lockable and locked and hidden', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonLockedForSection={() => true}
+      />
+    );
+    assert.equal(wrapper.children().at(0).children().at(0).props().icon, 'eye-slash');
+    assert.equal(wrapper.children().at(0).children().at(1).props().icon, 'lock');
   });
 });

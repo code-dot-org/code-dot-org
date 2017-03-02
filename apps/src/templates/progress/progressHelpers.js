@@ -1,4 +1,4 @@
-import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { ViewType, fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
 import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
 
 /**
@@ -26,4 +26,20 @@ export function lessonIsVisible(lesson, state, viewAs) {
 
   const isHidden = isHiddenForSection(hiddenStageState, sectionId, lesson.id);
   return !isHidden || viewAs === ViewType.Teacher;
+}
+
+/**
+ * Check to see if a stage/lesson is locked for all stages in the current section
+ * or not. If called as a student, this should always return false since they
+ * don't have a selected section.
+ * @param {number} lessonId - Id representing the stage/lesson we're curious about
+ * @param {object} state - State of our entire redux store
+ * @returns {boolean} True if the given lesson is locked for all students in the
+ *   currently selected section.
+ */
+export function lessonIsLockedForAllStudents(lessonId, state) {
+  const currentSectionId = state.sections.selectedSectionId;
+  const currentSection = state.stageLock.stagesBySectionId[currentSectionId];
+  const fullyLockedStages = fullyLockedStageMapping(currentSection);
+  return !!fullyLockedStages[lessonId];
 }

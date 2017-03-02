@@ -2,28 +2,13 @@ import React from 'react';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from './SummaryProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { fakeLesson, fakeLevels } from './progressTestHelpers';
 
 const lessons = [
-  {
-    name: 'Jigsaw',
-    id: 1,
-    lockable: false,
-  },
-  {
-    name: 'Maze',
-    id: 2,
-    lockable: false
-  },
-  {
-    name: 'Artist',
-    id: 3,
-    lockable: false
-  },
-  {
-    name: 'Something',
-    id: 4,
-    lockable: false
-  },
+  fakeLesson('Jigsaw', 1, false, 1),
+  fakeLesson('Maze', 2, false, 2),
+  fakeLesson('Artist', 3, false, 3),
+  fakeLesson('Something', 4, false, 4)
 ];
 const levelsByLesson = [
   [
@@ -32,62 +17,16 @@ const levelsByLesson = [
       url: '/step1/level1',
       name: 'First progression'
     },
-    {
-      status: LevelStatus.perfect,
-      url: '/step2/level1',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step2/level2',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step2/level3',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step2/level4',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step2/level5',
-    },
+    ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
     {
       status: LevelStatus.not_tried,
       url: '/step3/level1',
       name: 'Last progression'
     },
   ],
-  [
-    {
-      status: LevelStatus.not_tried,
-      url: '/step1/level1',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step3/level1',
-    },
-  ],
-  [
-    {
-      status: LevelStatus.not_tried,
-      url: '/step1/level1',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step3/level1',
-    },
-  ],
-  [
-    {
-      status: LevelStatus.not_tried,
-      url: '/step4/level1',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step4/level1',
-    },
-  ]
+  fakeLevels(2),
+  fakeLevels(2),
+  fakeLevels(2)
 ];
 
 export default storybook => {
@@ -101,6 +40,7 @@ export default storybook => {
             lessons={lessons}
             levelsByLesson={levelsByLesson}
             lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
           />
         )
       },
@@ -112,6 +52,7 @@ export default storybook => {
             levelsByLesson={levelsByLesson}
             lessonIsVisible={(lesson, viewAs) =>
               (lesson.id !== 2 || viewAs !== ViewType.Student)}
+            lessonLockedForSection={() => false}
           />
         )
       },
@@ -123,6 +64,7 @@ export default storybook => {
             levelsByLesson={levelsByLesson}
             lessonIsVisible={(lesson, viewAs) =>
               (lesson.id !== 3 || viewAs !== ViewType.Student)}
+            lessonLockedForSection={() => false}
           />
         )
       },
@@ -135,6 +77,7 @@ export default storybook => {
             levelsByLesson={levelsByLesson}
             lessonIsVisible={(lesson, viewAs) =>
               (lesson.id !== 2 || viewAs === ViewType.Teacher)}
+            lessonLockedForSection={() => false}
           />
         )
       },
@@ -147,6 +90,84 @@ export default storybook => {
             levelsByLesson={levelsByLesson}
             lessonIsVisible={(lesson, viewAs) =>
               (lesson.id !== 3 || viewAs === ViewType.Teacher)}
+            lessonLockedForSection={() => false}
+          />
+        )
+      },
+      {
+        name:'locked lesson in current section',
+        story: () => (
+          <SummaryProgressTable
+            lessons={[
+              fakeLesson('Jigsaw', 1, false, 1),
+              fakeLesson('Assessment One', 2, true),
+              fakeLesson('Artist', 3, false, 2),
+            ]}
+            levelsByLesson={[
+              fakeLevels(3),
+              fakeLevels(4),
+              fakeLevels(2)
+            ]}
+            lessonIsVisible={() => true}
+            lessonLockedForSection={(lessonId) => lessonId === 2}
+          />
+        )
+      },
+      {
+        name:'locked lesson as student',
+        story: () => (
+          <SummaryProgressTable
+            lessons={[
+              fakeLesson('Jigsaw', 1, false, 1),
+              fakeLesson('Assessment One', 2, true),
+              fakeLesson('Artist', 3, false, 2),
+            ]}
+            levelsByLesson={[
+              fakeLevels(3),
+              fakeLevels(4).map(level => ({...level, status: LevelStatus.locked })),
+              fakeLevels(2)
+            ]}
+            lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
+          />
+        )
+      },
+      {
+        name:'unlocked lesson in current section',
+        story: () => (
+          <SummaryProgressTable
+            lessons={[
+              fakeLesson('Jigsaw', 1, false, 1),
+              fakeLesson('Assessment One', 2, true),
+              fakeLesson('Artist', 3, false, 2),
+            ]}
+            levelsByLesson={[
+              fakeLevels(3),
+              fakeLevels(4),
+              fakeLevels(2)
+            ]}
+            lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
+          />
+        )
+      },
+      {
+        name:'locked, hidden lesson',
+        story: () => (
+          <SummaryProgressTable
+            lessons={[
+              fakeLesson('Jigsaw', 1, false, 1),
+              fakeLesson('Assessment One', 2, true),
+              fakeLesson('Artist', 3, false, 2),
+            ]}
+            levelsByLesson={[
+              fakeLevels(3),
+              fakeLevels(4),
+              fakeLevels(2)
+            ]}
+            lessonIsVisible={(lesson, viewAs) =>
+              (lesson.id !== 2 || viewAs !== ViewType.Student)}
+            lessonLockedForSection={(lessonId) => lessonId === 2}
           />
         )
       }
