@@ -143,7 +143,7 @@ var karmaConfig = _.extend({}, baseConfig, {
       'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
       // Use mock-firmata to unit test playground-io maker components
       'firmata': 'mock-firmata/mock-firmata',
-      'chrome-serialport': path.resolve(__dirname, 'test', 'unit', 'lib', 'kits', 'maker', 'FakeChromeSerialPort.js'),
+      'chrome-serialport': path.resolve(__dirname, 'test', 'unit', 'lib', 'kits', 'maker', 'StubChromeSerialPort.js'),
     }),
   }),
   externals: {
