@@ -7094,8 +7094,6 @@ en:
         'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
         The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
         What will happen when you click "Run"?: What will happen when you click "Run"?
-        right answer: right answer
-        wrong answer: wrong answer
       courseF_multi_artist_variables3a_predict1:
         Correct!  The `length` variable is being used in the `turn` block.: Correct!  The `length` variable is being used in the `turn` block.
         I don't know.: I don't know.
@@ -7110,14 +7108,11 @@ en:
       courseF_multi_bee_for3_predict1:
         Correct!: Correct!
         Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
-        Question: Question
         Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
         The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
         'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
         'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
         'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
-        right answer: right answer
-        wrong answer: wrong answer
       courseF_multi_playlab_variables4c_predictive1:
         'Correct. ': 'Correct. '
         I don't know.: I don't know.
