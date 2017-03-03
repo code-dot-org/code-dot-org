@@ -72,8 +72,6 @@ namespace :test do
   task :dashboard_ci do
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard ruby unit tests') do
-        # Unit tests mess with the database so stop the service before running them
-        RakeUtils.stop_service CDO.dashboard_unicorn_name
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
@@ -142,7 +140,6 @@ namespace :test do
         TestRunUtils.run_dashboard_tests(parallel: true)
 
         ENV.delete 'UNIT_TEST'
-        RakeUtils.start_service CDO.dashboard_unicorn_name
       end
     end
   end
