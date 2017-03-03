@@ -76,6 +76,8 @@ namespace :test do
         ENV['UNIT_TEST'] = '1'
         ENV['CODECOV_FLAGS'] = 'dashboard'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
+        # Parallel tests don't seem to run more quickly over 16 processes.
+        ENV['PARALLEL_TEST_PROCESSORS'] = 16 if RakeUtils.nproc > 16
 
         # Hash of all seed-data content: All fixture files plus schema.rb.
         fixture_path = "#{dashboard_dir}/test/fixtures/"
