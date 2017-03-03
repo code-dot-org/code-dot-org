@@ -12,11 +12,25 @@ const STUB_PROJECTS_DATA = [
     updatedAt: '2016-12-31T23:59:59.999-08:00'
   },
   {
+    channel: 'AAAABBBBCCCCDDDDEE',
+    name: 'Cats and Kittens',
+    studentName: 'Charlie',
+    type: 'weblab',
+    updatedAt: '2016-11-30T00:00:00.001-08:00'
+  },
+  {
     channel: 'NOPQRSTUVWXYZ567879',
     name: 'Batyote',
     studentName: 'Bob',
     type: 'gamelab',
     updatedAt: '2017-01-01T00:00:00.001-08:00'
+  },
+  {
+    channel: 'VVVVWWWWXXXXYYYYZZ',
+    name: 'Another App',
+    studentName: 'Alice',
+    type: 'applab',
+    updatedAt: '2016-10-29T00:00:00.001-08:00'
   },
 ];
 
@@ -49,18 +63,28 @@ describe('SectionProjectsList', () => {
 
   it ('initially shows all projects', () => {
     const rows = root.find('tr');
-    expect(rows).to.have.length(3);
+    expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
     assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice');
-    assertRowContents(rows.nodes[2], 'Batyote', 'Bob');
+    assertRowContents(rows.nodes[2], 'Cats and Kittens', 'Charlie');
+    assertRowContents(rows.nodes[3], 'Batyote', 'Bob');
+    assertRowContents(rows.nodes[4], 'Another App', 'Alice');
   });
 
   it ('filters projects when a student is selected from the dropdown', () => {
     root.find('select').simulate('change', {target: {value: 'Alice'}});
 
     const rows = root.find('tr');
-    expect(rows).to.have.length(2);
+    expect(rows).to.have.length(3);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
     assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice');
+    assertRowContents(rows.nodes[2], 'Another App', 'Alice');
+  });
+
+  describe('getStudentNames', () => {
+    it('shows students in alphabetical order and without duplicates', () => {
+      expect(SectionProjectsList.getStudentNames(STUB_PROJECTS_DATA)).to.deep.equal(
+        ['Alice', 'Bob', 'Charlie']);
+    });
   });
 });
