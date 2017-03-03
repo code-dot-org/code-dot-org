@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class CalloutsTest < ActionDispatch::IntegrationTest
-
   setup do
     Script.stubs(:should_cache?).returns true
     Rails.application.config.stubs(:levelbuilder_mode).returns false
