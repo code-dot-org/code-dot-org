@@ -30,8 +30,7 @@ module TestRunUtils
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard tests') do
         if ENV['CI'] || parallel
-          require 'parallel_tests'
-          ParallelTests::CLI.new.run("--runtime-log #{pegasus_dir('cache')}/dashboard_runtime_test.log")
+          RakeUtils.rake_stream_output 'parallel:test'
         else
           RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
         end
