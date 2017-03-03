@@ -73,7 +73,8 @@
       "start": null,
       "getAveragedValue": null,
       "toggleSwitch.isOpen": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+      "stopTimedLoop": null
     },
     "edit_code": true,
     "embed": "false",
@@ -108,13 +109,17 @@
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "true",
     "disable_if_else_editing": "false",
-    "markdown_instructions": "# Ending The Song and Light Show\r\n\r\nHere's the randomized light and music app you created earlier. Using a counter variable and the `exit()` command, can you make the program stop after 10 loops? Make sure you also turn off all of the LEDs when the show is over!",
+    "markdown_instructions": "# Ending The Song and Light Show\r\n\r\nHere's the randomized light and music app you created earlier. Using the `stopTimedLoop()` command, can you make the program stop at some point? You can choose one of the following ways to stop:\r\n\r\n* Use a _counter_ variable and stop the loop after the counter has reached a certain point (like a _for loop_)\r\n* Add a button and event handler to call `stopTimedLoop()` when clicked.\r\n\r\n_Make sure you also turn off all of the LEDs when the show is over!_",
     "project_template_level_name": "CSDU6 - timed loop random template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
