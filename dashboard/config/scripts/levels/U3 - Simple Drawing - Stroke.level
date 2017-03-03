@@ -154,7 +154,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "false",
@@ -180,7 +181,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "project_template_level_name": "U3 - Simple Drawing - Road Template"
+    "project_template_level_name": "U3 - Simple Drawing - Road Template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
