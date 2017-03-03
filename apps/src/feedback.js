@@ -385,6 +385,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
 };
 
+// TODO(ram): split this up into something more modular
 FeedbackUtils.prototype.calculateStageProgress = function (
     isPerfect, hintsUsed, currentLevelId, finiteIdealBlocks) {
   const stage = this.studioApp_.reduxStore.getState().progress.stages[0];
