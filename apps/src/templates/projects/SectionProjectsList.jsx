@@ -1,27 +1,19 @@
 import React, {Component, PropTypes} from 'react';
 import ProjectsList from './ProjectsList';
+import StudentFilterDropdown from './StudentFilterDropdown';
 import _ from 'lodash';
 import color from "../../util/color";
-import commonMsg from '@cdo/locale';
 
 const ALL_STUDENTS = '_all_students';
 
 const styles = {
-  filterDropdown: {
-    margin: 0,
-    color: 'dimgray'
+  filterComponent: {
+    float: 'right',
   },
   filterRow: {
     backgroundColor: color.teal,
     borderBottom: 'solid 1px white',
-    color: color.white,
     padding: 10,
-    fontSize: 14
-  },
-  filterSpan: {
-    float: 'right',
-    display: 'inline-flex',
-    alignItems: 'center',
   },
   clearDiv: {
     clear: 'both'
@@ -48,8 +40,7 @@ class SectionProjectsList extends Component {
       .value();
   }
 
-  onChangeStudent(event) {
-    const selectedStudent = event.target.value;
+  onChangeStudent(selectedStudent) {
     this.setState({selectedStudent});
   }
 
@@ -70,21 +61,12 @@ class SectionProjectsList extends Component {
     return (
       <div>
         <div style={styles.filterRow}>
-          <span style={styles.filterSpan}>
-            Filter by student:&nbsp;
-            <select
-              value={this.state.selectedStudent}
-              onChange={this.onChangeStudent.bind(this)}
-              style={styles.filterDropdown}
-            >
-              <option value={ALL_STUDENTS} key={ALL_STUDENTS}>{commonMsg.allStudents()}</option>
-              {
-                this.state.studentNames.map(studentName => (
-                  <option value={studentName} key={studentName}>{studentName}</option>
-                ))
-              }
-            </select>
-          </span>
+          <StudentFilterDropdown
+            onChangeStudent={this.onChangeStudent.bind(this)}
+            selectedStudent={this.state.selectedStudent}
+            studentNames={this.state.studentNames}
+            style={styles.filterComponent}
+          />
           <div style={styles.clearDiv}></div>
         </div>
         <ProjectsList
