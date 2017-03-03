@@ -2,6 +2,7 @@ var React = require('react');
 var SoundListEntry = require('./SoundListEntry');
 var soundLibrary = require('../soundLibrary.json');
 import Immutable from 'immutable';
+import Sounds from '../../Sounds';
 
 /**
  * A component for managing sounds from soundLibrary.json.
@@ -11,6 +12,10 @@ var SoundList = React.createClass({
     assetChosen: React.PropTypes.func.isRequired,
     search: React.PropTypes.string.isRequired,
     selectedSound: React.PropTypes.object.isRequired
+  },
+
+  componentWillMount: function () {
+    this.sounds = new Sounds();
   },
 
   getMatches: function (searchQuery) {
@@ -36,6 +41,7 @@ var SoundList = React.createClass({
           assetChosen={this.props.assetChosen}
           soundMetadata={sound}
           isSelected={isSelected}
+          soundsRegistry={this.sounds}
         />
       );
     }.bind(this));
