@@ -38,7 +38,12 @@ class SectionProjectsList extends Component {
 
   componentWillReceiveProps(nextProps) {
     const studentNames = SectionProjectsList.getStudentNames(nextProps.projectsData);
-    this.setState({studentNames});
+    let newState = {studentNames};
+
+    if (!studentNames.includes(this.state.selectedStudent)) {
+      newState.selectedStudent = ALL_STUDENTS;
+    }
+    this.setState(newState);
   }
 
   render() {
