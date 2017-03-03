@@ -6,6 +6,7 @@ import _ from 'lodash';
 import { stageShape } from './types';
 import CourseProgressRow from './course_progress_row.jsx';
 import HrefButton from '@cdo/apps/templates/HrefButton';
+import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import SectionSelector from './SectionSelector';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import color from "@cdo/apps/util/color";
@@ -79,29 +80,48 @@ const CourseProgress = React.createClass({
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
     const progressRedesign = experiments.isEnabled('progressRedesign');
+    let headerButtons;
+    if (progressRedesign) {
+      headerButtons = (
+        <div>
+          <ProgressButton
+            href={`/s/${scriptName}/next.next`}
+            text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
+            size={ProgressButton.ButtonSize.large}
+          />
+          <ProgressButton
+            href="//support.code.org"
+            text={i18n.getHelp()}
+            color={ProgressButton.ButtonColor.white}
+            size={ProgressButton.ButtonSize.large}
+            style={{marginLeft: 10}}
+          />
+        </div>
+      );
+    } else {
+      headerButtons = (
+        <div>
+          <HrefButton
+            href={`/s/${scriptName}/next.next`}
+            text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
+            type="primary"
+            style={{marginBottom: 10}}
+          />
+          <HrefButton
+            href="//support.code.org"
+            text={i18n.getHelp()}
+            type="default"
+            style={{marginLeft: 10, marginBottom: 10}}
+          />
+        </div>
+      );
+    }
 
     return (
       <div>
         {this.props.onOverviewPage && (
           <div style={styles.buttonRow}>
-            <div>
-              {!this.props.professionalLearningCourse &&
-                <HrefButton
-                  href={`/s/${scriptName}/next.next`}
-                  text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
-                  type="primary"
-                  style={{marginBottom: 10}}
-                />
-              }
-              {!this.props.professionalLearningCourse &&
-                <HrefButton
-                  href="//support.code.org"
-                  text={i18n.getHelp()}
-                  type="default"
-                  style={{marginLeft: 10, marginBottom: 10}}
-                />
-              }
-            </div>
+            {!this.props.professionalLearningCourse && headerButtons}
             <div style={styles.right}>
               {viewAs === ViewType.Teacher &&
                 <span style={styles.sectionSelector}>
