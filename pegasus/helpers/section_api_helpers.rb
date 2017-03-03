@@ -297,7 +297,7 @@ class DashboardSection
       )
     rescue Sequel::UniqueConstraintViolation
       tries += 1
-      retry if tries < 2
+      retry if tries < 3
       raise
     end
 
