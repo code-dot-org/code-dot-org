@@ -25,7 +25,7 @@
 class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   attributes :id, :workshop_type, :organizer, :location_name, :location_address, :course,
     :subject, :capacity, :notes, :section_id, :section_code, :state, :facilitators, :enrolled_teacher_count,
-    :sessions, :account_required_for_attendance?, :enrollment_id
+    :sessions, :account_required_for_attendance?, :enrollment_id, :enrollment_code
 
   def section_code
     return nil unless object.section
@@ -54,5 +54,9 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
 
   def enrollment_id
     @scope.try(:[], :enrollment_id)
+  end
+
+  def enrollment_code
+    @scope.try(:[], :enrollment_code)
   end
 end

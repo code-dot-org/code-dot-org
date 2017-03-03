@@ -1,7 +1,8 @@
 import React from 'react';
+import $ from 'jquery';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
-import {Table, Button} from 'react-bootstrap';
+import {Table, Button, Modal} from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshop_dashboard/workshopConstants';
 
@@ -21,6 +22,38 @@ const UpcomingWorkshops = React.createClass({
 const UpcomingWorkshopsTable = React.createClass({
   propTypes: {
     workshops: React.PropTypes.arrayOf(workshopShape)
+  },
+
+  getInitialState() {
+    return {
+      showCancelModal: false,
+      cancelledEnrollmentCode: undefined
+    };
+  },
+
+  cancelEnrollment(event) {
+    $.ajax({
+      method: "GET",
+      url: `/pd/workshop_enrollment/${this.state.cancelledEnrollmentCode}/cancel`
+    }).done(() => {
+      window.location.reload(true);
+    }).fail(data => {
+      alert(`Could not cancel enrollment for enrollment code ${this.state.cancelledEnrollmentCode}`);
+    });
+  },
+
+  dismissCancelModal(event) {
+    this.setState({
+      showCancelModal: false,
+      cancelledEnrollmentCode: undefined
+    });
+  },
+
+  showCancelModal(enrollmentCode) {
+    this.setState({
+      showCancelModal: true,
+      cancelledEnrollmentCode: enrollmentCode
+    });
   },
 
   renderWorkshopsTable() {
@@ -88,7 +121,7 @@ const UpcomingWorkshopsTable = React.createClass({
         <td>
           {workshop.enrollment_id &&
             (
-              <Button>
+              <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
                 Cancel enrollment
               </Button>
             )
@@ -101,6 +134,19 @@ const UpcomingWorkshopsTable = React.createClass({
   render() {
     return (
       <div>
+        <Modal show={this.state.showCancelModal} onHide={this.dismissCancelModal} style={{width: 560}}>
+          <Modal.Body>
+            Are you sure you want to cancel your enrollment in this course?
+          </Modal.Body>
+          <Modal.Footer style={{}}>
+            <Button onClick={this.cancelEnrollment} bsStyle="primary">
+              Yes - cancel my enrollment
+            </Button>
+            <Button onClick={this.dismissCancelModal}>
+              No - stay enrolled in this class
+            </Button>
+          </Modal.Footer>
+        </Modal>
         <h2>
           Upcoming workshops
         </h2>
@@ -110,4 +156,4 @@ const UpcomingWorkshopsTable = React.createClass({
   }
 });
 
-export default UpcomingWorkshops;
+export {UpcomingWorkshops, UpcomingWorkshopsTable};
