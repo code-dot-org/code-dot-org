@@ -91,8 +91,8 @@ group :development, :test do
   gem 'spring-commands-testunit'
 
   # For pegasus PDF generation / merging testing.
-  gem 'pdf-reader', require: false
   gem 'parallel_tests'
+  gem 'pdf-reader', require: false
 end
 
 group :doc do
