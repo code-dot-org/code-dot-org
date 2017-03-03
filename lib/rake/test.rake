@@ -108,6 +108,7 @@ namespace :test do
 
         seed_file = Tempfile.new(['db_seed', '.sql'])
         auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
+        writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost')
 
         if seed_data
           File.write(seed_file, seed_data)
@@ -117,7 +118,7 @@ namespace :test do
           RakeUtils.rake_stream_output 'db:create db:test:prepare'
           ENV.delete 'TEST_ENV_NUMBER'
           # Store new DB contents
-          `mysqldump -uroot dashboard_test1 --skip-comments | sed '#{auto_inc}' > #{seed_file.path}`
+          `mysqldump -u#{writer.user} dashboard_test1 --skip-comments | sed '#{auto_inc}' > #{seed_file.path}`
           gzip_data = Zlib::GzipWriter.wrap(StringIO.new) { |gz| IO.copy_stream(seed_file.path, gz); gz.finish }.tap(&:rewind)
 
           s3_client.put_object(
@@ -129,7 +130,7 @@ namespace :test do
           CDO.log.info "Uploaded seed data to #{s3_key}"
         end
 
-        cloned_data = `mysqldump -uroot dashboard_test2 --skip-comments | sed '#{auto_inc}'`
+        cloned_data = `mysqldump -u#{writer.user} dashboard_test2 --skip-comments | sed '#{auto_inc}'`
         if seed_data.equal?(cloned_data)
           CDO.log.info 'Test data not modified'
         else
@@ -137,7 +138,7 @@ namespace :test do
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          pipes = Array.new(procs) { |i| ">(mysql -uroot dashboard_test#{i+1})" }.join(' ')
+          pipes = Array.new(procs) { |i| ">(mysql -u#{writer.user} dashboard_test#{i+1})" }.join(' ')
           RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
         end
 

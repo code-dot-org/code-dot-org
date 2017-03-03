@@ -51,12 +51,6 @@ require 'testing/lock_thread'
 require 'testing/transactional_test_case'
 
 require 'parallel_tests/test/runtime_logger'
-class ParallelTests::Test::Runner
-  def self.runtime_log
-    pegasus_dir 'cache/dashboard_runtime_test.log'
-  end
-end
-
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
