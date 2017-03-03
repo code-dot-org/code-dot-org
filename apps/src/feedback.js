@@ -203,7 +203,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       this.calculateStageProgress(
         actualBlocks <= idealBlocks,
         hintsUsed,
-        options.response.level_id) :
+        options.response.level_id,
+        Number.isFinite(idealBlocks)) :
       {};
 
     document.body.appendChild(container);
@@ -385,7 +386,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 };
 
 FeedbackUtils.prototype.calculateStageProgress = function (
-    isPerfect, hintsUsed, currentLevelId) {
+    isPerfect, hintsUsed, currentLevelId, finiteIdealBlocks) {
   const stage = this.studioApp_.reduxStore.getState().progress.stages[0];
   const scriptName = stage.script_name;
   const levels = stage.levels;
@@ -433,8 +434,11 @@ FeedbackUtils.prototype.calculateStageProgress = function (
     newHintUsageLevels = 0.5;
   }
 
-  const newPassedProgress = newPassedLevels * 0.3 / levels.length;
-  const newPerfectProgress = newPerfectLevels * 0.4 / levels.length;
+  const passedWeight = finiteIdealBlocks ? 0.3 : 0.7;
+  const perfectWeight = finiteIdealBlocks ? 0.4 : 0;
+
+  const newPassedProgress = newPassedLevels * passedWeight / levels.length;
+  const newPerfectProgress = newPerfectLevels * perfectWeight / levels.length;
   const newHintUsageProgress = newHintUsageLevels * 0.3 / levels.length;
 
   return {
