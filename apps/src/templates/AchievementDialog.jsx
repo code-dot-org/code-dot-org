@@ -189,6 +189,7 @@ const AchievementDialog = Radium(React.createClass({
   },
 
   render() {
+    const showNumBlocksRow = Number.isFinite(this.props.idealBlocks);
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
     const tooManyHints = this.props.hintsUsed > 0;
@@ -226,14 +227,14 @@ const AchievementDialog = Radium(React.createClass({
                       true,
                       locale.puzzleCompleted(),
                       interpolatingStyles[1])}
-                  {this.achievementRow(
+                  {showNumBlocksRow && this.achievementRow(
                       !tooManyBlocks,
                       this.blocksUsedMessage(blockDelta, params),
                       interpolatingStyles[2])}
                   {this.achievementRow(
                       !tooManyHints,
                       this.hintsMessage(tooManyHints),
-                      interpolatingStyles[3])}
+                      interpolatingStyles[showNumBlocksRow ? 3 : 2])}
                 </div>
                 {this.props.showStageProgress &&
                   <div style={styles.stageRewards}>
@@ -250,7 +251,8 @@ const AchievementDialog = Radium(React.createClass({
                               this.props.oldStageProgress +
                               (interpolatingValues[1].progress > 0 ? this.props.newPassedProgress : 0) +
                               (interpolatingValues[2].progress > 0 ? this.props.newPerfectProgress : 0) +
-                              (interpolatingValues[3].progress > 0 ? this.props.newHintUsageProgress : 0)),
+                              (interpolatingValues[showNumBlocksRow ? 3 : 2].progress > 0 ?
+                                this.props.newHintUsageProgress : 0)),
                             { stiffness: 70, damping: 25 })
                         }}
                       >
