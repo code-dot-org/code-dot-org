@@ -77,16 +77,68 @@ namespace :test do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
-        # Prepare single DB
-        ENV['TEST_ENV_NUMBER'] = '1'
-        RakeUtils.rake_stream_output 'db:create db:test:prepare'
-        ENV.delete 'TEST_ENV_NUMBER'
-        require 'parallel_tests'
-        procs = ParallelTests.determine_number_of_processes(nil)
-        # Clone single DB across all processes
-        pipes = Array.new(procs) { |i| ">(mysql -uroot dashboard_test#{i+1})" }.last(procs-1).join(' ')
-        RakeUtils.system_stream_output "/bin/bash -c 'mysqldump -uroot dashboard_test | tee #{pipes} > /dev/null'"
+
+        # Hash of all seed-data content: All fixture files plus schema.rb.
+        fixture_path = "#{Rails.root}/test/fixtures/"
+        fixture_hash = Digest::MD5.hexdigest(
+          Dir["#{fixture_path}/{**,*}/*.yml"].
+            push(dashboard_dir('db/schema.rb')).
+            select(&File.method(:file?)).
+            sort.
+            map(&Digest::MD5.method(:file)).
+            join
+        )
+        CDO.log.info "Fixture hash: #{fixture_hash}"
+
+        # Try to fetch seed data
+        bucket_name = 'cdo-build-package'
+        s3_key = "test_db/#{fixture_hash}.gz"
+        s3_client = Aws::S3::Client.new
+        require 'zlib'
+        require 'stringio'
+
+        seed_data = begin
+          response = s3_client.get_object(bucket: bucket_name, key: s3_key)
+          Zlib::GzipReader.new(response.body).read
+        rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
+          CDO.log.info "Seed data not found on S3 at #{s3_key}"
+          nil
+        end
+
+        unless seed_data
+          # Generate new DB contents
+          ENV['TEST_ENV_NUMBER'] = '1'
+          RakeUtils.rake_stream_output 'db:create db:test:prepare'
+          ENV.delete 'TEST_ENV_NUMBER'
+          # Store new DB contents
+          seed_data = `mysqldump -uroot dashboard_test1 --skip-comments > seed_file`
+          gzip_data = Zlib::GzipWriter.wrap(StringIO.new) { |gz| gz.write(seed_data); gz.finish }.rewind
+
+          s3_client.put_object(
+            bucket: bucket_name,
+            key: s3_key,
+            body: gzip_data,
+            acl: 'public-read'
+          )
+          CDO.log.info "Uploaded seed data to #{s3_key}"
+        end
+
+        seed_file = Tempfile.new(['db_seed', '.sql'])
+        File.write(seed_file, seed_data)
+        cloned_data = `mysqldump -uroot dashboard_test2 --skip-comments`
+        if seed_data.equal?(cloned_data)
+          CDO.log.info 'Test data not modified'
+        else
+          # Clone single DB across all databases
+          require 'parallel_tests'
+          procs = ParallelTests.determine_number_of_processes(nil)
+          CDO.log.info "Test data modified, cloning across #{procs} databases..."
+          pipes = Array.new(procs) { |i| ">(mysql -uroot dashboard_test#{i+1})" }.last(procs-1).join(' ')
+          RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file} #{pipes} >/dev/null'"
+        end
+
         TestRunUtils.run_dashboard_tests(parallel: true)
+
         ENV.delete 'UNIT_TEST'
         RakeUtils.start_service CDO.dashboard_unicorn_name
       end
