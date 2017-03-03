@@ -316,9 +316,9 @@
             The Maze: "بھول بھلیا"
           description_audience: ''
         events:
-          title: Events
-          description: ''
-          description_short: Events
+          title: "موقعے"
+          description: "موقعے"
+          description_short: "موقعے"
           stage:
             Bounce: Bounce
             Calc: Calc
@@ -2033,7 +2033,7 @@
           stage:
             Being Safe Online: Being Safe Online
             Debugging: Debugging
-            Events: Events
+            Events: "موقعے"
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
@@ -2077,7 +2077,7 @@
           stage:
             Being Safe Online: Being Safe Online
             Debugging: Debugging
-            Events: Events
+            Events: "موقعے"
             Events Unplugged: Events Unplugged
             'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
             Loops: "لوپس"
@@ -2313,7 +2313,7 @@
           stage:
             Binary: Binary
             Conditionals: "شرائط"
-            Events: Events
+            Events: "موقعے"
             For Loops: For Loops
             Functions: Functions
             Functions with Parameters: Functions with Parameters
@@ -2417,6 +2417,13 @@
               4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons
               7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to
+              Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays
+              and Functions with Return Values
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2945,6 +2952,15 @@
             Foo: Foo
             Lists: "فہرستیں"
             Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: For Loops
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
           title: Draft Unit 6
           description_audience: ''
           description_short: ''

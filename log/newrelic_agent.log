@@ -1,0 +1,25 @@
+# Logfile created on 2017-02-24 21:17:12 -0800 by logger.rb/47272
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] WARN : No configuration file found. Working directory = /Users/tcparker/Documents/workspace/code-dot-org
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] WARN : Looked in these locations (based on defaults): /Users/tcparker/Documents/workspace/code-dot-org/config/newrelic.yml, /Users/tcparker/Documents/workspace/code-dot-org/newrelic.yml, /Users/tcparker/Documents/workspace/code-dot-org/dashboard/config/newrelic.yml, /Users/tcparker/Documents/workspace/code-dot-org/dashboard/newrelic.yml, /Users/tcparker/.newrelic/newrelic.yml, /Users/tcparker/newrelic.yml
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Environment: development
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : No known dispatcher detected.
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Application: development
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing ActiveJob instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing ActiveRecord 4+ instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing HTTPClient instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Memcache instrumentation for dalli gem
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Net instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Sinatra instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Redis Instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Sequel instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Rails 5 Controller instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Installing Rails 5 view instrumentation
+[2017-02-24 21:17:12 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Finished instrumentation
+[2017-02-24 21:17:13 -0800 Tanyas-MacBook-Air.local (32833)] INFO : Doing deferred dependency-detection before Rack startup

@@ -1035,6 +1035,10 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
+      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
+      artistFunctionsVideo1_instruction: |-
+        Follow the instructions to make your own
+        function.
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -1079,6 +1083,8 @@
         0 Portion Nektar haben, aber du weißt nicht genau, welche. Achte darauf, nicht
         von einer lila Blume Nektar zu sammeln, wenn sie keinen hat. Überprüfe, ob
         die Nektarmenge gleich 1 ist, indem du einen „Wenn“-Baustein benutzt.
+      beeDebugVideo1_instruction: Kannst du eine Schleife verwenden um den ganzen
+        Nektar einzusammeln?
       Bergeron Robot Maze1_instruction: |
         Can you help me catch the naughty pig? Stack
         a couple of `move forward` blocks below the `when run` block and press "Run".
@@ -1222,6 +1228,9 @@
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
+      birdsDebugVideo1_instruction: |-
+        Trace the path and lead me to the silly pig.
+        Avoid TNT or feathers will fly!
       Brad Spooky House Copy_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -1513,6 +1522,14 @@
       Collector Demo_instruction: |-
         Look at all this loot! Help me get as many coins
         as I can so I can improve my farm. I can only use 9 blocks though!
+      collector example_instruction: |-
+        Put these blocks in order to collect all of
+        the gold and solve the puzzle.
+      collectorDebugVideo2_instruction: |-
+        Put these blocks in order to collect all
+        of the gold and solve the puzzle.
+      collectorSkinVideo1_instruction: Collect all four piles to pass this level.
+      collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? "
       Course 2 Bee Loops 13_instruction: |-
@@ -2347,19 +2364,16 @@
       courseA_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
-      courseA_artist_loops10_instruction: |-
-        Help me put down stones so I don't fall
-        in!
-      courseA_artist_loops11_instruction: |-
-        Help me build steps to watch the ship
-        sail away.
-      courseA_artist_loops12_instruction: |-
-        The artist saw something funny in the
-        distance.  Draw what you think he saw.
+      courseA_artist_loops10_instruction: Hilf mir, Stein abzulegen, so das ich nicht
+        hineinfalle!
+      courseA_artist_loops11_instruction: Hilf mir, Stufen zu bauen, um das Schiff
+        davonsegeln zu sehen.
+      courseA_artist_loops12_instruction: Der Zeichner sah etwas Lustiges in der Ferne.
+        Zeichne, was Du denkst, was er sah!
       courseA_artist_loops2_instruction: |-
         Help the artist draw this line two times
         forward.
-      courseA_artist_loops3_instruction: Draw a line forward five times.
+      courseA_artist_loops3_instruction: Zeichne eine Linie fünfmal geradeaus.
       courseA_artist_loops4_instruction: |-
         Now, use a `repeat` loop to draw this line
         five times!
@@ -2371,10 +2385,9 @@
         Use the `repeat` loop to add waves to the
         water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
-      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
-      courseA_collector_loops1_instruction: |-
-        Move Laurel around and get as much gold
-        as you can!
+      courseA_artist_loops9_instruction: 'Herausforderung: Repariere die Treppe!'
+      courseA_collector_loops1_instruction: Bewege Laurel umher und sammle so viel
+        Gold, wie Du kannst!
       courseA_collector_loops10_instruction: |-
         Help me get all of the gold from this
         deep valley.
@@ -2384,61 +2397,52 @@
       courseA_collector_loops12_instruction: |-
         Eureka!  Collect as much gold as you
         can!
-      courseA_collector_loops2_instruction: |-
-        Here are three piles of gold!  Collect
-        all three.
+      courseA_collector_loops2_instruction: Da sind drei Stapel Gold. Sammle Sie alle
+        ein!
       courseA_collector_loops3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `[E-->]` block?
-      courseA_collector_loops4_instruction: |-
-        Fix Laurel's path to get all of this
-        gold.
+      courseA_collector_loops4_instruction: Repariere Laurels Weg, um zu dem Gold
+        zu kommen!
       courseA_collector_loops5_instruction: |-
         Use what you learned to get all of the
         coins.
-      courseA_collector_loops6_instruction: |-
-        Add blocks to this code to collect all
-        of the coins.
+      courseA_collector_loops6_instruction: Füge Blöcke zu diesem Code hinzu, um alle
+        Münzen einzusammeln!
       courseA_collector_loops7_instruction: |-
         What should you add to this code to
         get all of the gold?
       courseA_collector_loops8_instruction: Write the code to get all of this gold.
-      courseA_collector_loops9_instruction: |-
-        **Challenge:** The gold goes all the
-        way up these stairs!  Write the code to help me get it all.
-      courseA_maze_seq1_instruction: |-
-        Play with these blocks to see if you can get
-        me to the pig!
-      courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
-        the pig! "
-      courseA_maze_seq11_instruction: |-
-        Move one way, then another to get the bird
-        to the pig.
-      courseA_maze_seq12_instruction: 'Get that pig! '
-      courseA_maze_seq13_instruction: Get the pig any way you can!
+      courseA_collector_loops9_instruction: "**Aufgabe:** Das Gold liegt die ganze
+        Treppe herauf. Schreibe Code, um mir zu helfen, alles einzusammeln!"
+      courseA_maze_seq1_instruction: Bring den Vogel zum bösen Schwein!
+      courseA_maze_seq10_instruction: 'Herausforderung: Geh um das TNT herum, um den
+        Vogel zum Schwein zu bringen! '
+      courseA_maze_seq11_instruction: Gehe den einen Weg, dann den anderen, um den
+        Vogel zum Schwein zu bringen!
+      courseA_maze_seq12_instruction: Hole das Schwein!
+      courseA_maze_seq13_instruction: Hole das Schwein auf irgendeinem Weg!
       courseA_maze_seq2_instruction: Bring mich zum Schwein, indem du den Code änderst.
-      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
-      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq3_instruction: Repariere den Code, um den Vogel zum Schwein
+        zu bringen!
+      courseA_maze_seq4_instruction: ENTFERNE einen Block, um den Vogel zum Schwein
+        zu bringen!
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
-      courseA_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
-      courseA_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
-      courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
-      courseA_maze_seq9_instruction: |-
-        Debug this level by adding blocks to get the
-        bird to the pig!
+      courseA_maze_seq6_instruction: Gehe einen Weg und dann einen anderen, um den
+        Vogel zum Schwein zu bringen!
+      courseA_maze_seq7_instruction: Finde heraus, was fehlt, und füge dann Blöcke
+        hinzu, um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq8_instruction: Löse dieses Level und bring den Vogel zum Schwein!
+      courseA_maze_seq9_instruction: Repariere dieses Level, indem Du Blöcke hinzufügst,
+        um den Vogel zum Schwein zu kriegen!
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       courseA_playLab_events2_instruction: |-
         Jorge the Dog wants to say "Hi there."  Can
         you help him?
-      courseA_playLab_events3_instruction: |-
-        Connect the `move left` block to the
-        `when left` event block that is already in the workspace.
+      courseA_playLab_events3_instruction: Verbinde den "nach links bewegen"-Block
+        mit dem "wenn links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseA_playLab_events4_instruction: |-
         Now, get Jorge to move right when the
         `right` button is clicked.
@@ -2461,9 +2465,8 @@
       courseB_artist_loops2_instruction: |-
         The Artist is trying to draw a line six
         times, but can't get it right.  Can you help?
-      courseB_artist_loops3_instruction: |-
-        Help the artist draw a line 7 times to
-        make a garden wall.
+      courseB_artist_loops3_instruction: Hilfe dem Künstler, eine Linie siebenmal
+        zu zeichnen, um eine Gartenmauer zu bauen.
       courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
         the bugs in the code and help the artist prepare the ground. "
       courseB_artist_loops5_instruction: |-
@@ -2482,24 +2485,24 @@
       courseB_collector_loops1_instruction: |-
         This is Laurel the Adventurer!  Can
         you move her around and get gold?
-      courseB_collector_loops10_instruction: |-
-        Help Laurel get all of the gold from
-        this cave.
+      courseB_collector_loops10_instruction: Hilf Laurel, alles Gold aus der Höhle
+        zu holen!
       courseB_collector_loops11_instruction: |-
         Eureka!  Collect as much gold as you
         can!
-      courseB_collector_loops2_instruction: Four piles of gold!  Collect all four.
+      courseB_collector_loops2_instruction: |-
+        Collect all four piles to pass this
+        level.
       courseB_collector_loops3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
-      courseB_collector_loops4_instruction: |-
-        Fix Laurel's path to get all of this
-        gold!
+      courseB_collector_loops4_instruction: Repariere Laurels Weg, um alles Gold zu
+        bekommen!
       courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
         get all of the gold. "
       courseB_collector_loops6_instruction: |-
-        What should you add to this code to
-        get all of the gold?
+        Figure out the code to help Laurel get
+        all of the gold!
       courseB_collector_loops7_instruction: Write the code to get all of this gold.
       courseB_collector_loops8_instruction: |-
         **Challenge: ** The gold goes all the
@@ -2507,9 +2510,8 @@
       courseB_collector_loops9_instruction: |-
         *"Help me get the gold from this deep
         valley."*
-      courseB_collector_prog1_instruction: |-
-        This is Laurel the Adventurer!  Can you
-        move her around and get gold?
+      courseB_collector_prog1_instruction: Dies ist Laurel, der Abenteurer. Kannst
+        Du sie herumführen und Gold einsammeln?
       courseB_collector_prog2_instruction: Four piles of gold!  Collect all four.
       courseB_collector_prog3_instruction: |-
         How can Laurel collect all five piles
@@ -2524,12 +2526,10 @@
       courseB_maze_seq3_instruction: '*"Fix the code to get me to the pig!"*'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
-      courseB_maze_seq6_instruction: |-
-        Move one way, then another to get the bird
-        to the pig!
-      courseB_maze_seq7_instruction: |-
-        Figure out what is missing and then add blocks
-        to get the bird to the pig!
+      courseB_maze_seq6_instruction: Gehe einen Weg und dann einen anderen, um den
+        Vogel zum Schwein zu bringen!
+      courseB_maze_seq7_instruction: Finde heraus, was fehlt, und füge dann Blöcke
+        hinzu, um den Vogel zum Schwein zu bringen!
       courseB_maze_seq8_instruction: |-
         Your turn!  What do you need to do to get the
         bird to the pig?
@@ -2841,8 +2841,8 @@
         (Each side is 100 pixels long and you'll need to turn 120 degrees
         for each exterior angle.)
       courseD_artist_nestedLoops10_instruction: |-
-        Take the triangles from before,
-        but this time only make 7 of them, and lay them out in a row.
+        Take the squares from before, but
+        this time only make 7 of them, and lay them out in a row.
       courseD_artist_nestedLoops1a_instruction: |-
         Now loop the triangle 6 times. \r
         After
@@ -3799,6 +3799,15 @@
       CSDU6 - Arrays - lengthMinus1_instruction: |-
         Use list.length - 1 to log the
         last item in the array to the console. (Click to see full instructions)
+      CSDU6 - for loop - color buttons with for_instruction: |-
+        Write the contents
+        of the array to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - color buttons_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - why for_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -7085,6 +7094,8 @@
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
+      LaurelDebugging4Video1_instruction: Bewege Laurel umher und sammle so viel Gold,
+        wie Du kannst!
       level 'grade3_Loops_10_instruction: |-
         Such a busy bee!\r
         \r
@@ -7910,6 +7921,9 @@
         Have Robin talk back to Jorge when you click on
         her.
       playEventsK7_instruction: What else can you do in this fun scene?
+      playLabDebugVideo1_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       Poorva copy U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -8088,6 +8102,7 @@
         ein komplizierteres Labyrinth zu lösen? Wenn du es richtig machst, kann ich
         auf jedem kurvigen Weg entlang gehen, egal wie lang. Beeile dich! Das Eis
         schmilzt!
+      skratDebugVideo1_instruction: Get Skrat to the Acorn.
       SpecialFrozenLevel_instruction: Du bist ein richtiger Künstler geworden. Zeichne
         ein Winter-Wunderland.
       Standalone_Artist_1_instruction: Willkommen zu Künstler! Als Erstes versuchen

@@ -19,6 +19,7 @@
     attributes:
       user:
         name: Nama Tampilan
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: email
         username: nama pengguna
         password: kata sandi
@@ -139,9 +140,29 @@
     user_type_student: siswa
     field_is_required: diperlukan
     accept_terms: You must agree to create an account
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: Select School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: Lain
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
   signin_form:
     title: Punya akun? Masuk disini
     login: email
+    login_username: Email or Username
     password: Kata sandi
     remember: Ingat saya
     submit: Masuk
@@ -497,6 +518,12 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
   move_students:
     new_section_dne: Maaf, tapi bagian %{new_section_code} tidak ada. Harap masukkan
       kode bagian berbeda.
@@ -559,7 +586,7 @@
     copyright: Hak cipta
     more: Lebih
     feedback: Berikan pendapat
-    translate: Bantu menterjemahkan ke bahasa anda
+    translate: Bantu kami menerjemahkan ke bahasa anda
     support: Dukungan
     support_url: http://support.code.org
     tos_short: Ketentuan
@@ -591,6 +618,18 @@
         browsers</a>. You can try viewing the page, but expect functionality to be
         broken.
       link: Pelajari lebih banyak
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Harap sabar, Ternyata diperlukan waktu yang lebih lama dari biasanya...
   try_reloading: Coba tampilkan halaman lagi
   next_stage: Selesai! Lanjutkan untuk tahap berikutnya

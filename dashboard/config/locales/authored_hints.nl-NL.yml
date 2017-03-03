@@ -2,152 +2,150 @@
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Als je het blok 'beweeg vooruit door 100 pixels', zal
+          ik automatisch een lijn tekenen.
+        2-3_Artist_1_new_b: Problemen met het draaien van de hoek? Gebruik het blok
+          'rechts 90 graden'.
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees
-          in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: 'Heeft u problemen met de hoeken? Draai dan 360 graden in
+          8 bochten. Wat is 360/8? '
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns
-          1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: Er zijn 360 graden in een cirkel, zodat als de kunstenaar
+          telkens 1 graad door de lus draait, hij moet om te gaan door 360 tijden.
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct
-          direction. Can you make them turn first before drawing the line?
+        2-3_Artist_2_new_a: Het lijkt erop dat de kunstenaar niet de juiste kant op
+          kijkt. Kun je hem eerst draaien voor je de lijn tekent?
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how
-          tall the hat needs to be!
-        2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction.
-          Can you make them turn first before drawing the line?
+        2-3_Artist_3new_a: Wat is 100-70? Op basis van het probleem in het verhaal
+          is dat hoe hoog de hoed moet zijn!
+        2-3_Artist_3new_b: Het lijkt erop dat de kunstenaar niet de juiste kant op
+          kijkt. Kun je hem eerst draaien voor je de lijn tekent?
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: Om het huis af te maken moet je een vierkant tekenen!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start
-          by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side
-          of the square...100 pixels!
+        2-3_Artist_6_a: 'Om die kleine hoeken te maken, moet je telkens * verder *
+          draaien dan je met het vierkant deed.   '
+        2-3_Artist_6_b: Omdat ik al naar rechts kijk, kun je het best eerst vooruit
+          bewegen, en dan naar links draaien om de driehoek te maken.
+        2-3_Artist_6_c: Elke zijde van de driehoek heeft dezelfde lengte als elke
+          kant van het plein... 100 pixels!
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: The easiest way to solve this puzzle is to draw the first
-          square and end with the artist pointing down before starting your second
-          square.
+        2-3_Artist_7_a: De simpelste manier om deze puzzel op te lossen is om het
+          eerste vierkant te tekenen en te zorgen dan de kunstenaar aan het eind naar
+          beneden kijk voor je begint met je tweede vierkant.
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: If you cut 200 in half, how many pixels wide does each square
-          need to be?
+        2-3_Artist_8_a: Als je 200 doormidden deelt, hoeveel pixels breed moet ieder
+          vierkant dan worden?
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: Deze diamant is eigenlijk gewoon een vierkant op zijn kant
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: Elke stap is 100 pixels breed en 100 pixels hoog.
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
+        2-3_Artist_9_a: Deze diamant is eigenlijk geween een vierkant die 45 graden
+          is gedraaid.
         2-3_Artist_9_b: |-
-          Don't forget to turn the artist left by 45 degrees before you start drawing your square!
-
+          Vergeet niet om de kunstenaar 45 graden naar links te draaien voor je begint je vierkant te tekenen
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Remember, you want the control panel 10 pixels
-          *wider*...so be sure to **add** 10 to whatever number you change.
-        2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart
-          by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you
-          get too lost, just click \"Start over\" and your code will be reset."
+        2-3_Artist_Debugging_10_a: Denk eraan, je wilt het controle paneel 10 pixels
+          * breder *... dus zorg ervoor dat je 10 tot welk nummer je wilt veranderen
+          * toevoegt *.
+        2-3_Artist_Debugging_10_b: "** Proberen en fouten maken is prima hier!**."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Tip: Elke snorhaar is 75 pixels lang.'
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
-        2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening,
-          try slowing it down with the slider.
+        2-3_Artist_Debugging_3_a: Een van de bochten is 15 graden te klein.
+        2-3_Artist_Debugging_3_b: Als het programma te snel gaat om te kunnen zien
+          wat er gebeurt, probeer het dan te vertragen met de schuifregelaar.
       2-3 Artist Debugging 7_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump
-          backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Wat gebeurt er als je de kunstenaar naar achteren
+          laat bewegen of springen nadat hij de eerste lijn tekent?
       2-3 Artist Debugging 8_authored_hint:
-        2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-
-          How many times *should* the shape repeat?
-
-          Where can you change that in the program?
+        2-3_Artist_Debugging_8_a: Hoeveel keer werd mijn vorm herhaald?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left
-          before starting to draw!
-        2-3_Artist_Debugging_9_b: You don't need to add another block to get the full
-          turn, just add 60 degrees to the `turn left` block that's already there!
+        2-3_Artist_Debugging_9_a: De kunstenaar moet 60 graden verder naar links draaien
+          voor je begint met tekenen!
+        2-3_Artist_Debugging_9_b: Je hoeft geen ander blok toe te voegen om de volledige
+          draai te krijgen, voeg enkel 60 graden aan het 'draai naar links' blok toe
+          dat er al is!
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: De vierkanten hebben elk zijden van 100 pixels,
+          dat betekent dat je 175 pixels vooruit moet bewegen voor je je tweede vierkant
+          tekent.
+        2-3_Artist_Functions_1_b: Het is oke om overlappende lijnen te gebruiken om
+          je bril te tekenen.
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and
-          length of sides within the function, but also the angle the artist turns
-          between each side.
+        2-3_Artist_Functions_11_a: Je moet niet alleen het aantal en de lengte van
+          de zijden binnen de functie wijzigen, maar ook de hoek die de kunstenaar
+          draait tussen iedere zijde.
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need
-          to add.
+        2-3_Artist_Functions_12_a: Probeer de code eerst om te zien wat je nog moet
+          toevoegen.
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Je programma: moet:
+          - functie gebruiken
+          - 100 + 75 pixels vooruit bewegen
+          - functie gebruiken
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each
-          square to complete this design.
+        2-3_Artist_Functions_4_a: De kunstenaar moet 120 graden draaien tussen elk
+          vierkant om dit ontwerp te voltooien.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
+          Vergeet niet dat de code van de laatste puzzel was:
 
           ![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: Je nieuwe bocht moet komen aan het ** einde **
+          van de code binnen de lus.
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to
-          turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will
-          need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees
-          to create a wide corner.
+        2-3_Artist Loops_New_12_a: Voordat je begint met de diamant, moet de kunstenaar
+          60 graden naar rechts draaien om op de goede weg te komen.
+        2-3_Artist Loops_New_12_b: Nadat de kunstenaar 100 pixels vooruit is gegaan,
+          moet hij 120 graden naar rechts draaien om de scherpe hoek te maken.
+        2-3_Artist Loops_New_12_c: De kunstenaar moet maar 60 graden naar rechts om
+          een stompe hoek te maken.
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already
-          facing the right direction to start the next one.  \n\nBecause of this,
-          we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n-
-          move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen
-          do it all again!"
-      2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right
-          before he starts drawing.
-        2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would
-          the code be to draw half of a square?
-      2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside
-          of your loop.
-      2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your
-          turn block inside of a loop.
-      2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-      2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from
-          the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
-      2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat
-          is 360/10?"
-      2-3 Artist Nested Loops 9_authored_hint:
-        2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+        2-3_Artist_Loops_New_13_a: |-
+          Aan het eind van iedere diamant kijkt de kunstenaar al de goede kant op om de volgende diamant te starten.
+          Daarom hoeven we geen extra 'draai links met' blok toe te voegen voor we weer starten.
+        2-3_Artist_Loops_New_13_b: |-
+          Voor elke diamant moet de kunstenaar:
+          - bewegen
+          - 120 graden naar rechts draaien
+          - bewegen
+          - 60 graden naar rechts draaien.
 
-          **360 / 12 = 30**
+          En het dan opnieuw doen!
+      2-3 Artist Loops New 9_authored_hint:
+        2-3_Artist_Loops_New_9_a: De kunstenaar moet 45 graden naar rechts draaien
+          voordat hij begint te tekenen.
+        2-3_Artist_Loops_New_9_b: Deze V is eigenlijk maar de helft van een vierkant.
+          Wat zou de code moeten zijn om een half vierkant te tekenen?
+      2-3 Artist Nested Loops 1_authored_hint:
+        2-3_Artist_Nested_Loops_1_a: Vergeet niet om alle grijze blokken binnen je
+          lus te plaatsen.
+      2-3 Artist Nested Loops 3_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: Hulp nodig bij de hoeken?   ** 360/12 = 30 **
+        2-3_Artist_Nested_Loops_3_b: Vergeet niet om alle grijze blokken en je draai
+          blok binnen een lus te plaatsen.
+      2-3 Artist Nested Loops 4_authored_hint:
+        2-3_Artist_Nested_Loops_3_a: Hulp nodig bij de hoeken?   ** 360/12 = 30 **
+      2-3 Artist Nested Loops 5_authored_hint:
+        2-3_Artist_Nested_Loops_5_a: |-
+          Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
+
+          Als je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?
+      2-3 Artist Nested Loops 7_authored_hint:
+        2-3_Artist_Nested_Loops_7_a: Hoe ver moet je draaien in elke lus?
+      2-3 Artist Nested Loops 9_authored_hint:
+        2-3_Artist_Nested_Loops_9_a: Hulp nodig bij het vinden van de juiste hoek?
+          ** 360 / 12 = 30 **
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
+        2-3_Bee_Conditionals_14_a: Vind je het lastig om te bedenken hoe je de blokken
+          beneden kunt krijgen? Probeer de rode bloem op precies dezelfde manier te
+          behandelen als de paarse bloem!
         2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
           out how to use an extra `repeat` loop to cut down on code?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
@@ -448,6 +446,10 @@
 
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing
+          the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: []
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can
           change the number at the top of the block.
@@ -1150,10 +1152,10 @@
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseC_artist_prog1_authored_hint: []
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: If you use the block to have me `move forward by 100
-          pixels`, I will draw a line automatically.
-        courseC_artist_prog2_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        courseC_artist_prog2_a: Als je het blok 'beweeg vooruit door 100 pixels',
+          zal ik automatisch een lijn tekenen.
+        courseC_artist_prog2_b: Problemen met het draaien van de hoek? Gebruik het
+          blok 'rechts 90 graden'.
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
           To create this window, just draw a square with 100 pixel sides.
@@ -1410,10 +1412,10 @@
           blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Je programma: moet:
+          - functie gebruiken
+          - 100 + 75 pixels vooruit bewegen
+          - functie gebruiken
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -1467,10 +1469,10 @@
         courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle
           code with another `repeat` loop.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get
-          from the top of one square to the place where you will start the next. \n\nIf
-          your squares are 20 pixels tall and they are 20 pixels apart, how far do
-          you need to jump?"
+        courseD_artist_nestedLoops3_a: |-
+          Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
+
+          Als je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
           this puzzle quickly. '
       courseD_artist_nestedLoops4_authored_hint:
@@ -1927,11 +1929,11 @@
         courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What
           comes next?
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make
-          your glasses.
+        courseE_artist_functions1_a: De vierkanten hebben elk zijden van 100 pixels,
+          dat betekent dat je 175 pixels vooruit moet bewegen voor je je tweede vierkant
+          tekent.
+        courseE_artist_functions1_b: Het is oke om overlappende lijnen te gebruiken
+          om je bril te tekenen.
       courseE_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -1939,10 +1941,10 @@
           blocks, create a `draw hexagon` function and call that multiple times.
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Je programma: moet:
+          - functie gebruiken
+          - 100 + 75 pixels vooruit bewegen
+          - functie gebruiken
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -2462,10 +2464,10 @@
         hint1: You can use four `move forward` blocks or use the `repeat 4 times`
           block to make your program shorter.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Als je het blok 'beweeg vooruit door 100 pixels', zal
+          ik automatisch een lijn tekenen.
+        2-3_Artist_1_new_b: Problemen met het draaien van de hoek? Gebruik het blok
+          'rechts 90 graden'.
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel
           sides.
@@ -2490,8 +2492,8 @@
           Remember that the code from the last puzzle was:
 
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
-          inside the loop.
+        2-3_Artist_Loops_New_11_b: Je nieuwe bocht moet komen aan het ** einde **
+          van de code binnen de lus.
       grade2_MakeDogTag_BFP_authored_hint: []
       grade2_maze_debuggingFP_authored_hint: []
       grade2_maze_intro4_authored_hint:
@@ -2541,12 +2543,7 @@
           first and see what things repeat over and over before you put the loops
           in.
       grade2_PuppyLoops_10_authored_hint:
-        2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-
-          How many times *should* the shape repeat?
-
-          Where can you change that in the program?
+        2-3_Artist_Debugging_8_a: Hoeveel keer werd mijn vorm herhaald?
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -2567,10 +2564,10 @@
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over`
           to get it back!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Tip: Elke snorhaar is 75 pixels lang.'
       grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump
-          backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Wat gebeurt er als je de kunstenaar naar achteren
+          laat bewegen of springen nadat hij de eerste lijn tekent?
       grade3_bee_conditionals_new1a_authored_hint:
         grade3_bee_conditionals_new1a_a: Be sure to use an `if` statement to check
           each space to see if it has a flower or nothing.
@@ -2610,8 +2607,9 @@
           where the bee needs to move forward, then turn left several times to complete
           the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the
-          blocks down?  Try treating the red flower exactly the same as a purple flower!
+        2-3_Bee_Conditionals_14_a: Vind je het lastig om te bedenken hoe je de blokken
+          beneden kunt krijgen? Probeer de rode bloem op precies dezelfde manier te
+          behandelen als de paarse bloem!
         2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure
           out how to use an extra `repeat` loop to cut down on code?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:
@@ -2844,17 +2842,17 @@
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means
-          that you will have to move forward 175 pixels before drawing your second
-          square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your
-          glasses.
+        2-3_Artist_Functions_1_a: De vierkanten hebben elk zijden van 100 pixels,
+          dat betekent dat je 175 pixels vooruit moet bewegen voor je je tweede vierkant
+          tekent.
+        2-3_Artist_Functions_1_b: Het is oke om overlappende lijnen te gebruiken om
+          je bril te tekenen.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Je programma: moet:
+          - functie gebruiken
+          - 100 + 75 pixels vooruit bewegen
+          - functie gebruiken
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks,
           create a `draw triangle` function and call that multiple times.
@@ -3049,17 +3047,17 @@
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`,
-          I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right
-          90 degrees` block.
+        2-3_Artist_1_new_a: Als je het blok 'beweeg vooruit door 100 pixels', zal
+          ik automatisch een lijn tekenen.
+        2-3_Artist_1_new_b: Problemen met het draaien van de hoek? Gebruik het blok
+          'rechts 90 graden'.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each
-          time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start
-          by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side
-          of the square...100 pixels!
+        2-3_Artist_6_a: 'Om die kleine hoeken te maken, moet je telkens * verder *
+          draaien dan je met het vierkant deed.   '
+        2-3_Artist_6_b: Omdat ik al naar rechts kijk, kun je het best eerst vooruit
+          bewegen, en dan naar links draaien om de driehoek te maken.
+        2-3_Artist_6_c: Elke zijde van de driehoek heeft dezelfde lengte als elke
+          kant van het plein... 100 pixels!
       grade4_review_bee1_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after
           the other.
@@ -3569,6 +3567,9 @@
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different
           that you have to do at each honeycomb?
+      playLabDebugVideo1_authored_hint:
+        courseA_playLab_events2_a: "Here is the block you should connect to the `when
+          run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:
         sample3_a: |-
           Try writing the code once and looping it seven times:

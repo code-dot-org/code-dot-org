@@ -12,6 +12,7 @@ fr:
     attributes:
       user:
         name: 'Nom à afficher'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'E-mail'
         username: 'nom d''utilisateur'
         password: 'mot de passe'
@@ -110,9 +111,29 @@ fr:
     user_type_student: "Élève"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter les conditions d'utilisation pour créer un compte"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'Select School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: 'Autres'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: "School Zip Code"
+    school_address: 'School Address'
   signin_form:
     title: 'Tu as déjà un compte ? Authentification'
     login: 'E-mail'
+    login_username: 'Email or Username'
     password: 'Mot de passe'
     remember: 'Se souvenir de moi'
     submit: 'Connexion'
@@ -371,6 +392,7 @@ fr:
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
   move_students:
     new_section_dne: "Désolé, la section %{new_section_code} n’existe pas. Veuillez saisir un code de section différent."
     section_code_not_entered: "Veuillez donner le code de section de la section courante."
@@ -434,6 +456,10 @@ fr:
     upgrade:
       unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
       link: "Pour en savoir plus"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'Cela prend plus de temps que d''habitude...'
   try_reloading: 'Essaie de recharger la page'
   next_stage: 'Terminé! Continue vers l''étape suivante'

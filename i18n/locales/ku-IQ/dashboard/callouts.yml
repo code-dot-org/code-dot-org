@@ -189,6 +189,8 @@ ku:
         courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+      courseA_collector_loops1_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_playLab_events2_callout: [ ]
@@ -199,10 +201,14 @@ ku:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+      courseB_collector_loops1_callout:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_maze_seq7_callout:
         courseB_maze_seq7_1: These grey blocks are made of stone!  That means that they can't be trashed.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog2_callout: [ ]
+      courseC_collector_prog1_callout:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog8_callout: [ ]
@@ -792,6 +798,7 @@ ku:
       Play Lab Rocket 3_callout:
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
       Play Lab Rocket Free Play_callout: [ ]
+      playLabDebugVideo1_callout: [ ]
       Poorva copy U3L2 Using Simple Commands_callout: [ ]
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't know until you run the code!

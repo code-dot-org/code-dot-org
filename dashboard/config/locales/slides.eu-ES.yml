@@ -128,8 +128,8 @@
       8:
         image: notes/flappy08.jpg
         text: Atal honetako ariketa bakoitzean, bloke berde itxura duten gertaera
-          mota berriak ikusiko ditugu, zuk erabakiko beharko duzu zein bloke diren
-          egokiak gertaera horiei erantzuteko.
+          mota berriak ikusiko ditugu, zuk erabaki beharko duzu zein bloke diren egokiak
+          gertaera horiei erantzuteko.
       9:
         image: notes/flappy09.jpg
         text: Honelako gezitxo bat ikusten duzunean, horrek esan nahi du aukerak aldatu
@@ -3155,11 +3155,11 @@
     mc_2016_intro:
       1:
         image: notes/mc_2016_intro_1.jpg
-        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
-          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
-          but the world has stopped. The sheep aren't moving, the chickens aren't
-          laying eggs, and zombies are just standing still. It's up to you to add
-          the code to make the Minecraft world work.
+        text: Kaixo, nire izena Jens da eta Minecraft-en sortzaile diseinugile burua
+          naiz. Datorren orduan, zure berezko Minecraft-jokoa egingo duzu. Honek Minecraft-en
+          antza du baina mundua gelditu da. Ardiak ez dira mugitzen ari, oilaskoak
+          ez dira arrautzak jartzen ari, eta oraintxe zonbiak bare egoten ari dira.
+          Zure esku dago Kodea gehitzea Minecraft-en mundua ibil dadin.
       2:
         image: notes/mc_2016_intro_2.jpg
         text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m

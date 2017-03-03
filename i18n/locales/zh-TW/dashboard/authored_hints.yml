@@ -2,109 +2,109 @@ zh-TW:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: 如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。
+        2-3_Artist_1_new_b: 要如何才能轉彎？試試`轉向-右方 90 度`積木。
       2-3 Artist 11_authored_hint:
-        2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees in 8 turns.  What is 360/8? '
+        2-3_Artist_11_a: '遇到角度的問題了嗎？你需要轉 8 次才能圍成一圈，也就是 360 度，那麼 360 ÷ 8 是多少呢？ '
       2-3 Artist 12_authored_hint:
-        2-3_Artist_12_a: There are 360 degrees in a circle, so if the artist turns 1 degree each time through the loop, he'll need to go through 360 times.
+        2-3_Artist_12_a: 一圈共是 360 度，所以，如果小藝術家每次轉 1 度的話，就要重複做 360 次才會轉一圈。
       2-3 Artist 2 new_authored_hint:
-        2-3_Artist_2_new_a: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
+        2-3_Artist_2_new_a: 小藝術家好像沒有按照正確的方向前進，你可以讓他在畫線之前轉個彎嗎？
       2-3 Artist 3new_authored_hint:
-        2-3_Artist_3new_a: What is 100-70?  Based on the story problem, that's how tall the hat needs to be!
-        2-3_Artist_3new_b: The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?
+        2-3_Artist_3new_a: 100 - 70 是多少呢？依照問題的描述，就可以得出帽子的高度！
+        2-3_Artist_3new_b: 小藝術家好像沒有按照正確的方向前進，你可以讓他在畫線之前轉個彎嗎？
       2-3 Artist 4_authored_hint:
-        2-3_Artist_4_a: To finish the house, all we need to do is draw a square!
+        2-3_Artist_4_a: 要蓋出這個房子的話，我們需要畫個正方形！
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_a: '如果要做出這些小小的角度，我們必須讓每次畫完正方形之後的轉向角度大一些。   '
+        2-3_Artist_6_b: 因為我們已經面向右邊，所以最簡單的方式，就是先往前移動，再向左轉，就可以製作出這個三角形。
+        2-3_Artist_6_c: 三角形的每個邊長和正方形的邊長一樣，都是 100 像素！
       2-3 Artist 7_authored_hint:
-        2-3_Artist_7_a: The easiest way to solve this puzzle is to draw the first square and end with the artist pointing down before starting your second square.
+        2-3_Artist_7_a: 要解決這個關卡最簡單的方法就是，在畫完第一個正方形時，讓小畫家在面朝下方，接著再畫出第二個正方形。
       2-3 Artist 8_authored_hint:
-        2-3_Artist_8_a: If you cut 200 in half, how many pixels wide does each square need to be?
+        2-3_Artist_8_a: 如果把 200 分成兩半，每個正方形是多少像素？
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: 這個菱形實際上就只是一個旁邊的正方形。
       2-3 Artist 9 REPLACEMENT_authored_hint:
-        step_size: Each step is 100 pixels wide and 100 pixels high.
+        step_size: 每一步都是 100 像素寬跟 100 像素高。
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
+        2-3_Artist_9_a: 這個菱形實際上只是正方形轉了 45 度。
         2-3_Artist_9_b: |-
-          Don't forget to turn the artist left by 45 degrees before you start drawing your square!
+          別忘了將藝術家向左轉 45 度再開始畫正方形！
           
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Remember, you want the control panel 10 pixels *wider*...so be sure to **add** 10 to whatever number you change.
-        2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you get too lost, just click \"Start over\" and your code will be reset."
+        2-3_Artist_Debugging_10_a: 記得，你想要讓控制面板 *寬* 10 像素......所以確保要 **增加** 10 到任何你想要改變的數字。
+        2-3_Artist_Debugging_10_b: "**錯誤嘗試在這裡完全沒關係！**  \n\n可以從一次改變一個數字開始。\n\n每個數字會有什麼效果？\n\n如果你有點混淆了，只要按下「重新開始」，然後你的程式碼就會被重置。"
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 提示：每個鬚鬚都是 75 像素長。
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
-        2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening, try slowing it down with the slider.
+        2-3_Artist_Debugging_3_a: 其中的一個轉向角度太小，只有 15 度。
+        2-3_Artist_Debugging_3_b: 如果程式跑得太快，看不清楚發生了什麼，可以嘗試使用拉桿來降低速度。
       2-3 Artist Debugging 7_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: 如果你讓藝術家畫完第一條線之後就向後移動或跳躍的話，會發生什麼？
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
+          我的形狀重複了幾次？
           
-          How many times *should* the shape repeat?
+          形狀 *應該* 要重複幾次？
           
-          Where can you change that in the program?
+          怎樣在你的程式裡做出對應的改變？
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left before starting to draw!
-        2-3_Artist_Debugging_9_b: You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!
+        2-3_Artist_Debugging_9_a: 藝術家必須要向左再轉 60 度之後才能開始繪畫！
+        2-3_Artist_Debugging_9_b: 你不需要添加另一個積木才能轉整圈，只要在`轉向-左方`積木上增加 60 度就行了！
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: 正方形每邊都有 100 像素，這代表你需要向前移動 175 像素之後才能開始畫第二個正方形。
+        2-3_Artist_Functions_1_b: 畫出眼鏡時可以讓你的兩條線重疊沒關係。
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
+        2-3_Artist_Functions_11_a: 你不只需要改變函數中的數字跟每個邊長的長度，還需要改變藝術家在每邊需要轉的角度。
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: 試著先運行程式碼，再看看你需要加些什麼。
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          你的程式應該要：
+          - 使用函式
+          - 向前移動 100 + 75 像素
+          - 使用函式
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "* * 115 + 45 = 160 * *"
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
+        2-3_Artist_Functions_4_a: 藝術家需要在每個正方形之間轉 120 度才能完成這個設計。
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
+          記得前一個謎題的程式碼是：
           
           ![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: 你的下一個轉彎動作應該要在迴圈中程式碼的最後面。
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees to create a wide corner.
+        2-3_Artist Loops_New_12_a: 開始畫菱形之前，藝術家需要向左轉 60 度才能夠朝向正確的路徑。
+        2-3_Artist Loops_New_12_b: 在藝術家向前走 100 像素之後，他需要向右轉 120 度才能做出銳角。
+        2-3_Artist Loops_New_12_c: 這個藝術家只需要向右轉 60 度就能創造出鈍角。
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already facing the right direction to start the next one.  \n\nBecause of this, we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n- move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen do it all again!"
+        2-3_Artist_Loops_New_13_a: "在畫出一個菱形之後，藝術家已經面對了開始下一個的方向。\n\n因為這樣，我們不需要增加額外的`轉向-左方`積木。"
+        2-3_Artist_Loops_New_13_b: "要做出每個菱形，藝術家需要：\n- 移動\n- 向右轉 120 度\n- 移動\n- 向右轉 60 度"
       2-3 Artist Loops New 9_authored_hint:
-        2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right before he starts drawing.
-        2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would the code be to draw half of a square?
+        2-3_Artist_Loops_New_9_a: 這個藝術家需要向右轉 45 度之後才能開始繪畫。
+        2-3_Artist_Loops_New_9_b: 這個 V 形，其實就只是半個正方形。怎樣的程式碼可以畫出半個正方形？
       2-3 Artist Nested Loops 1_authored_hint:
-        2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
+        2-3_Artist_Nested_Loops_1_a: 記得要把所有灰色方塊放在你的迴圈中。
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_a: "需要我幫你找到正確的角度嗎？\n**360 / 12 = 30**"
+        2-3_Artist_Nested_Loops_3_b: 記得要把所有要把所有的灰色方塊跟你的轉彎方塊放在迴圈內。
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "需要我幫你找到正確的角度嗎？\n**360 / 12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?"
+        2-3_Artist_Nested_Loops_5_a: "試著用`跳躍-向前`積木，讓小藝術家在畫完一個正方形後，跳到下一個要開始的地方。\n\n如果你的正方形是 20 像素高，而且兩個正方形相隔 20 像素遠，你需要跳多遠？"
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "How far should you turn in each loop?  \n\nWhat is 360/10?"
+        2-3_Artist_Nested_Loops_7_a: "你需要在每個迴圈轉幾度？\n\n360/10 是多少？"
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
-          Need help finding the correct angle?
+          需要幫忙來找到正確的角度嗎？
           
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: 有點難想出怎樣把方塊弄下來嗎？試著用對待紫花的方式對待紅花！
+        2-3_Bee_Conditionals_14_b: 如果紅花變成紫花，想一想，要怎麼另外使用`重複`迴圈來減少代碼的使用？
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
@@ -113,9 +113,9 @@ zh-TW:
       2-3 Bee Conditionals 6_authored_hint:
         2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
       2-3 Bee Debugging 1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: 在你找到並修正了不正確的積木的過程中，有發現哪些地方可以用一個`重複`迴圈讓程式變得更簡單嗎？
       2-3 Bee Debugging 2_authored_hint:
-        2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_2_a: 在你找到並修正了不正確的積木的過程中，有發現哪些地方可以用一個`重複`迴圈讓程式變得更簡單嗎？
       2-3 Bee Debugging 4_authored_hint:
         2-3_Bee_Debugging_4_a: Is there any place where the bee does something that doesn't make sense? What happens when you change that block?
       2-3 Bee Functions 4_authored_hint:
@@ -135,31 +135,31 @@ zh-TW:
       2-3 Bee Loops 3_authored_hint:
         2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
       2-3 Bee Loops 3B_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: 你需要 2 個不同的`重複`迴圈，一個接著一個。
       2-3 Bee Loops 4_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       2-3 Bee Loops 4A_authored_hint:
         2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_c: 如果你還不能準確的使用迴圈，可以先用長串的指令，然後再找出有什麼地方是可以用`重複`迴圈來替代的。
       2-3 Bee Loops 5_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: 如果你不能馬上的就使用`重複`積木來寫出程式，可以先把一個個的指令寫出來，然後找出指令間共同的模式。
       2-3 Bee Loops 6_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
+        2-3_Bee_Loops_6_a: 如果你沒有辦法很快的分辨出要在`重複`迴圈中放些什麼積木，可以試著先按照順序拖曳出每個積木，並在拖曳過程中找出它們的規律。
+        2-3_Bee_Loops_6_b: 你的`重複`迴圈裡應該要有 6 個積木才對。
       2-3 Bee Loops 7_authored_hint:
         2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       2-3 Maze 1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: 要使用`移動-向前`積木的方式是，從工具箱把它拖曳到工作區中，並把它連接在`當運行時`積木下方。
       2-3 Maze 16_authored_hint:
         2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_b: "如果要在`重複`迴圈中放置多個積木，只要拖曳一個迴圈到工作區，然後再把工作區上的積木堆拖曳到裡面。\n\n把它們放到`當運行時`積木就大功告成囉！"
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: There are two ways to solve this puzzle!
       2-3 Maze Loops 17_authored_hint:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
-        2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
+        2-3_Maze_Loops_17_b: 你把預先建立好的程式給刪除了嗎？點擊`重新開始`按鈕把程式找回來吧！
       2-3 Maze Loops 18_authored_hint:
         2-3_Maze_Loops_18_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
       2-3 Maze Loops 19_authored_hint:
@@ -182,7 +182,7 @@ zh-TW:
           That means both short sides add up to 200 pixels.
           
           **What is 200 / 2?**
-        4-5_Artist_3_b: If you can't see where the `repeat` loop goes right away, try coding out the whole solution and look for a pattern.
+        4-5_Artist_3_b: 如果你無法直接用`重複`積木來建立迴圈，試著先把需要的積木一個個的貼合起來，然後找到它們之間的規律。
       4-5 Artist 4_authored_hint:
         4-5_Artist_4_a: "There are 360 degrees in a circle! \n\nThat's how many times you need to repeat this code (turning 1 degree at a time) before the circle is done!"
       4-5 Artist 5_authored_hint:
@@ -210,9 +210,9 @@ zh-TW:
       4-5 Artist Patterns 5_authored_hint:
         4-5_Artist_Patterns_5_a: "Now, when the artist finished each diamond, he's facing the opposite direction from where he needs to be to start the next one.  \n\nHow many degrees does he need to be turned to set himself straight?"
       4-5 Bee Conditionals 4_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
       4-5 Bee Conditionals 5_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
       4-5 Bee Conditionals 6_authored_hint:
         4-5 Bee Conditionals 6_a: You can solve this puzzle using only the blocks on the workspace.  What order should they go in?
         4-5 Bee Conditionals 6_b: Make sure that you are checking to see if the flower has more than **0** nectar at least **3** times to solve this puzzle.
@@ -222,14 +222,14 @@ zh-TW:
         4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
       4-5 Maze 10_authored_hint:
         4-5_Maze_10_a: |-
-          If you can't see how to use loops to solve the puzzle right away, try solving it the long way first, then looking for a pattern.
+          如果你不是很了解怎樣利用迴圈解決問題，試著先寫出長一點的程式，接著從裡頭找尋模式。
           
-          What should you put a `repeat` around to make the code shorter?
+          你應該在`重複`積木裡放什麼程式，才能讓程式變得比較短？
       4-5 Maze 4_authored_hint:
         4-5_Maze_4_a: If you are having a hard time figuring out where to put the repeat, try coding everything out and looking for a pattern.
       4-5 Maze 5_authored_hint:
-        4-5_Maze_5_a: Try using a `repeat` loop anytime you need to `move forward` more than two steps.
-        4-5_Maze_5_b: You can use more than one `repeat` loop in a puzzle.
+        4-5_Maze_5_a: 每次你用了二次以上的`移動-向前`積木時，試著改用`重複`迴圈來取代這些步驟。
+        4-5_Maze_5_b: 你可以在這個關卡中使用多個`重複`迴圈。
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: "Try tracing out a path with your finger.  \nIs it the shortest path you can find?"
       4-5 Maze 7_authored_hint:
@@ -255,7 +255,7 @@ zh-TW:
           
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
-        4-5_While_Loops_8_a: Each item will need its own `while` loop.
+        4-5_While_Loops_8_a: 每個項目都需要有自己的`當…`迴圈。
       aE1_authored_hint: [ ]
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.
@@ -292,14 +292,17 @@ zh-TW:
         aE8_a: "To make a square from your line, you will need to: \n-  draw the line \n-  use the curvy corner\n\nRepeat these steps 4 times."
       Artist Inspiration_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
-        specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
-        after: When you're done with each "petal", be sure to `move forward` 20 pixels before you make a 60 degree rotation.
+        double_loop: 試著放置一個`計數迴圈`到`重複`積木裡頭。
+        specifics: "畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。\n\n`設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。"
+        after: 當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。
         solution: |-
           **Solution**
           
           
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: [ ]
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
       artistLoopsK2gradek_artist_loops3_authored_hint:
@@ -324,7 +327,7 @@ zh-TW:
         artistLoopsKB_a: There should be 3 blocks inside of your loop to solve this puzzle.
       artistLoopsKFP_authored_hint: [ ]
       Bergeron Robot Maze1_authored_hint:
-        2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
+        2-3_Maze_1_a: 要使用`移動-向前`積木的方式是，從工具箱把它拖曳到工作區中，並把它連接在`當運行時`積木下方。
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'The half-hexagon has a **length of 30** and turns right by **60 degrees**.  '
         Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
@@ -349,9 +352,9 @@ zh-TW:
       Course 4 Artist 9_authored_hint:
         Course_4_Artist_9_a: "Need to know how much to turn? \n\nWhat is 360 divided by 10?"
       Course 4 Artist Binary Free Play 2b_authored_hint:
-        Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One counts up from 1 to 8, the other counts down from 8 to 1.
-        Course_4_Artist_Binary_Free_Play_2b_b: Each `for loop` has three repeats.  The first draws the leftmost set of 1s, the second draws the 0s in the middle and the third draws the 1s on the right.
-        Course_4_Artist_Binary_Free_Play_2b_c: In each repeat you need `counter` for 1s and `16-(2 x counter)` for 0s.
+        Course_4_Artist_Binary_Free_Play_2b_a: 這個程式中使用了 2 個`計數迴圈`，第一個從 1 算到 8，另一個則是從 8 算到 1。
+        Course_4_Artist_Binary_Free_Play_2b_b: 每個`計數迴圈`裡有 3 個`重複`積木，第一個畫出左半部、第二個畫出中間、第三個畫出右半部。
+        Course_4_Artist_Binary_Free_Play_2b_c: 在每一次的循環裡，你需要為 1s 使用 `counter` 計數，還有為 0s 使用 `16-(2 x counter)` 來計數。
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **Solution:**
           
@@ -363,28 +366,28 @@ zh-TW:
         Course_4_Artist_For_Loops_11a_a: '360 divided by the number of sides a shape has is the number of degrees you''ll need to turn. '
         Course_4_Artist_For_Loops_11a_b: 'Each time, you will need to move forward by 10 times the length of the current number of sides. '
       Course 4 Artist For Loops 3_authored_hint:
-        Course_4_Artist_For_Loops_3_a: To have the `for` loop drive your movement, make sure that you're using `counter` as your distance.
+        Course_4_Artist_For_Loops_3_a: 如果要使用`計數`迴圈來作為移動的依據，請檢查你是不是使用了`counter`當作距離。
       Course 4 Artist For Loops 4_authored_hint:
-        Course_4_Artist_For_Loops_4_a: "**What is the smallest number you will need?  \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop."
+        Course_4_Artist_For_Loops_4_a: "**需要的數字至少要是多少？\n最大的數字又是多少？\n每循環一次要增加多少？**\n\n這些問題是你每次在使用`計數`迴圈要思考的。"
       Course 4 Artist For Loops Challenge_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: The largest shape has 19 sides. The smallest has just two.
-        Course_4_Artist_For_Loops_Challenge_b: The `for` loop counts up by two each time through.
+        Course_4_Artist_For_Loops_Challenge_b: '`計數`迴圈會在每一次循環增加或減少數字。'
       Course 4 Artist For Loops Challenge_a_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: The largest polygon has 19 sides.
         Course_4_Artist_For_Loops_Challenge_b: Each polygon is incomplete, with one side fewer than it should have.
       Course 4 Artist For Loops inspire_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.
-        Course_4_Artist_For_Loops_inspire_b: Try a `for` loop that goes from 3 to 10 with an increment of 1.
-        Course_4_Artist_For_Loops_inspire_c: There are two iterations of the same repeat loop inside the `for` loop, but the second repeat turns the opposite direction.
+        Course_4_Artist_For_Loops_inspire_b: 試試看這個`計數`迴圈，從 3 算到 10，每次增加 1。
+        Course_4_Artist_For_Loops_inspire_c: 在這個`計數`迴圈裡用了二個`重複`積木，不過第二個會轉成相反的方向。
         Course_4_Artist_For_Loops_inspire_d: "**Solution:**  \n\n![Solution](https://images.code.org/418dfd57794706de541f1c162911a6e2-image-1469641233597.png)"
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: Part of understanding how to use functions is figuring out which ones you need, and which ones you don't.
-        Course_4_Artist_Functions_challenge_b: Use a `for loop`, then use its counter variable inside of a nested `repeat` loop.
+        Course_4_Artist_Functions_challenge_b: 使用一個`計數迴圈`，然後在巢狀式的`重複`迴圈裡頭，使用它的計數變數。
         Course_4_Artist_Functions_challenge_c: Each iteration, you should draw a square then jump forward.
-        Course_4_Artist_Functions_challenge_d: You will need to turn left by 90 degrees outside of your `repeat`, but still inside the `for loop`.
+        Course_4_Artist_Functions_challenge_d: 你需要在`重複`積木的外面添加向左轉 90 度的指令，不過指令還是要在`計數迴圈`裡頭。
       Course 4 Artist Functions Inspiration_authored_hint:
-        Course_4_Artist_Functions_Inspiration_a: Start with the code from the last puzzle and add an extra `turn right` of three degrees inside the repeat loop.
-        Course_4_Artist_Functions_Inspiration_b: Try turning by more than 90 degrees outside of the `repeat loop`, but still inside the `for loop`.
+        Course_4_Artist_Functions_Inspiration_a: 利用上個關卡的程式，再添加額外的`轉向-右方 3 度`積木到重複迴圈裡頭。
+        Course_4_Artist_Functions_Inspiration_b: 試試把`重複迴圈`之外的轉向角度改成比 90 度大，轉向的指令還是要放在`計數迴圈`裡。
         Course_4_Artist_Functions_Inspiration_c: |-
           **Solution:**
           ![Solution](https://images.code.org/0c94bcde33a00595aa099fea964ca80e-image-1469641309381.png)
@@ -396,7 +399,7 @@ zh-TW:
           **Solution:**
           ![Blocks for solution](https://images.code.org/35fa852515d73aa8cf6c2bde4f2d46a3-image-1469641128278.png)
       Course 4 Artist Vars 13_authored_hint:
-        Course_4_Artist_Vars_13_a: You need two repeat loops (one inside the other) both repeating `sides` times.
+        Course_4_Artist_Vars_13_a: 你需要 2 個重複迴圈（一個包著一個），兩個都重複 `sides`次。
         Course_4_Artist_Vars_13_b: "The inner repeat loop draws an octagon (turning to the left).   \n\nAfterwards, you need to move forward and turn right only in the outer loop."
         Course_4_Artist_Vars_13_c: To adjust the shape to stay the same size when the number of sides change, use the math block to divide the length in pixels by the number of sides.
       Course 4 Artist Vars 6_authored_hint:
@@ -404,21 +407,21 @@ zh-TW:
       Course 4 Artist Vars 8_authored_hint:
         Course_4_Artist_Vars_8_a: If you divide your starting length by the number of sides, the length of each side will get shorter as the number of sides gets higher.
       Course 4 Bee Params 7_authored_hint:
-        notice_pattern: 'Do you see a pattern in how the number of nectar changes? '
-        count_with_for: Notice that the nectar goes up in steps. What kind of block can you use to do the same thing many times while counting up?
+        notice_pattern: '你找到花蜜數量變化的模式了嗎？ '
+        count_with_for: 注意花蜜數量變化的方式，哪個積木可以用來重複執行程式，同時又可以每次向上計數呢？
       Course 4 Bee Params 8_authored_hint:
-        Course_4_Bee_Params_8_a: It's okay to ask for a honey number and a nectar number each time.  If there's none of something, the number can be 0.
+        Course_4_Bee_Params_8_a: 可以試試在每次都去查詢蜂蜜或花蜜的數量，如果沒有的話，數量會是 0。
       Course 4 Play Lab Params 2_authored_hint:
-        Course_4_Play_Lab_Params_2_a: You will need to click "edit" on the jump function and update it so that it uses the `height` parameter.
+        Course_4_Play_Lab_Params_2_a: 你必須在 jump（跳躍）函式上點擊「編輯」，然後更新它，讓它可以使用 `height`（高度）參數。
       Course 4 Play Lab Vars 2_authored_hint:
-        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
+        Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       Course 4 Play Labs For Loops 2_authored_hint:
-        Course_4_Play_Labs_For_Loops_2_a: What would you add to your `for` loop every time to skip the even numbers?
+        Course_4_Play_Labs_For_Loops_2_a: 在`計數`迴圈上每次要加多少，才可以跳過偶數？
       Course 4 Playlab For Loop Freeplay_authored_hint: [ ]
       Course 4 Playlab For Loops 4b_authored_hint:
-        Course_4_Playlab_For_Loops_4b_a: The flags are about 330 pixels away from the characters.
-        Course_4_Playlab_For_Loops_4b_b: How can you make each character reach 330 pixels in the same number of moves with different starting and stopping numbers?
-        Course_4_Playlab_For_Loops_4b_c: Remember, it doesn't matter how much a character passes the flag by on its last step, as long as it takes each character the same number of steps to get to the flag.
+        Course_4_Playlab_For_Loops_4b_a: 這個旗子離角色大概有 330 像素遠。
+        Course_4_Playlab_For_Loops_4b_b: 在計數的起始數值和結束數值不同的情況下，你要怎麼樣才能讓每個角色都能移動 330 像素？
+        Course_4_Playlab_For_Loops_4b_c: 記住，不管角色的最後一步移動距離多大，只要他能通過旗子就可以了。
       Course 4 Playlab For Loops 5b_authored_hint:
         Course_4_Playlab_For_Loops_5b_a: The characters are about 175 pixels away from the center.
         Course_4_Playlab_For_Loops_5b_b: Remember, a character's next step will be longer than their last, since the counter keeps getting larger.
@@ -427,7 +430,7 @@ zh-TW:
         Course_4_SCF_1_a: Each hexagon has 40 pixel sides.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
-        Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "
+        Course_4_SCF_1_d: "在你畫出第三排的多邊形之前，你需要向右轉 60 度，然後向前跳 40 像素。\n\n在你到了正確的垂直位置後，你必須讓小藝術家再轉過頭來，然後向前跳 440 像素（比你的函式 `shift down/forward` 還要多 120 像素）。 "
         Course_4_SCF_1_e: |-
           **Solution:**
           
@@ -435,7 +438,7 @@ zh-TW:
       Course 4 SCF 1a_authored_hint:
         Course_4_SCF_1a_a: Remember your functions from stage 16.
         Course_4_SCF_1a_b: "Look at this path as your main route:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
-        Course_4_SCF_1a_c: You should consider using a `for loop`. Not for the steps, but for the function parameter.
+        Course_4_SCF_1a_c: 請考慮使用一個`計數迴圈`，不是用在指令步驟，而是要用在函式的參數上。
         Course_4_SCF_1a_d: |-
           **Solution:**
           
@@ -443,7 +446,7 @@ zh-TW:
       Course 4 SCF 1b_authored_hint:
         Course_4_SCF_1b_a: "Notice that the shape of all honey points is similar.  \n\nGood place for a function!"
         Course_4_SCF_1b_b: "Look at this idea for how the bee might travel:  \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
-        Course_4_SCF_1b_c: You should consider using a `for loop` for the distance the bee travels.
+        Course_4_SCF_1b_c: 你應該思考一下如何使用一個`計數迴圈`來作為蜜蜂的移動依據。
         Course_4_SCF_1b_d: |-
           **Solution:**
           
@@ -459,10 +462,10 @@ zh-TW:
           ![Solution Blocks](https://images.code.org/de5a99b0fb4c079504ff7cca9a249f02-image-1469727175091.png)
       Course 4 SCF 3_authored_hint:
         Course_4_SCF_3_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
-        Course_4_SCF_3_b: 'This is a series of octagons with sides that are `counter` pixels long. '
-        Course_4_SCF_3_c: 'Each octagon is called from inside a `for` loop that goes from 200 down to 2 by 2. '
+        Course_4_SCF_3_b: '這是一系列的八邊形，計數 `counter` 使用了 `sides` ，並當作每個形狀的邊長。 '
+        Course_4_SCF_3_c: '每個八邊形都是由每次的循環構成，迴圈的計數方式是從 200 算到 2，間隔數是 2。 '
         Course_4_SCF_3_d: 'Don''t forget to turn by 22.5 degrees at the end of each iteration. '
-        Course_4_SCF_3_e: Both the color of each octagon and the width of the pen are controlled by the `counter` variable.
+        Course_4_SCF_3_e: 每個八邊形的顏色還有線條的寬度是利用 `counter` 變數來控制的。
         Course_4_SCF_3_f: |-
           **Solution:**
           
@@ -579,9 +582,9 @@ zh-TW:
         Course_4_SCV_6_b: 'You will benefit from creating 8 variables: red1, green1, blue1, red2, green2, blue2, length, and sides.'
         Course_4_SCV_6_c: Each of the shape's 5 sides is broken up into pieces of `length`/`sides` where the zig is teal (rgb = 0,175,200) and the zag is purple (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'To zig, turn left by `360`/`sides`.  To zag, turn right by `360`/`sides`. '
-        Course_4_SCV_6_e: 'The rest of the program is very standard for making a full 360 degree rotation from a shape, except that we are overlapping the shapes by half, so we have to turn right by `180`/`sides`, which means that we need twice as many of them as usual (`sides`*`2` repetitions). '
+        Course_4_SCV_6_e: '程式的其它部分很基礎，就是要在一個形狀上製作出一個 360 的迴轉，不同之處在於我們將這些形狀重疊一半，所以我們要向右轉 180 ÷ sides（邊數）度，意思是我們必須要比平常還要多 2 倍（sides*2 重複） '
         Course_4_SCV_6_f: |-
-          **Solution:**
+          **解決方案：**
           
           ![Solution](https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
       courseA_artist_loops10_authored_hint:
@@ -802,8 +805,8 @@ zh-TW:
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseC_artist_prog1_authored_hint: [ ]
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        courseC_artist_prog2_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        courseC_artist_prog2_a: 如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。
+        courseC_artist_prog2_b: 要如何才能轉彎？試試`轉向-右方 90 度`積木。
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
           To create this window, just draw a square with 100 pixel sides.
@@ -910,7 +913,7 @@ zh-TW:
         courseC_maze_loops5_a: The best solution uses two `move forward` commands and one loop.
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_a: If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.
-        courseC_maze_loops6_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        courseC_maze_loops6_b: "如果要在`重複`迴圈中放置多個積木，只要拖曳一個迴圈到工作區，然後再把工作區上的積木堆拖曳到裡面。\n\n把它們放到`當運行時`積木就大功告成囉！"
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
       courseC_maze_loops8_authored_hint:
@@ -987,10 +990,10 @@ zh-TW:
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          你的程式應該要：
+          - 使用函式
+          - 向前移動 100 + 75 像素
+          - 使用函式
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -1020,14 +1023,14 @@ zh-TW:
       courseD_artist_nestedLoops1_authored_hint:
         courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
       courseD_artist_nestedLoops10_authored_hint:
-        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the second half of the last puzzle.
+        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the first half of the last puzzle.
         courseD_artist_nestedLoops10_b: Make sure the outer loop of the code is set to run 7 times and remove the outer turn.
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: 'You will need to draw a total of 6 triangles, each rotated 60 degrees.  '
       courseD_artist_nestedLoops2_authored_hint:
         courseD_artist_nestedLoops2_a: Nest your loops by surrounding your triangle code with another `repeat` loop.
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?"
+        courseD_artist_nestedLoops3_a: "試著用`跳躍-向前`積木，讓小藝術家在畫完一個正方形後，跳到下一個要開始的地方。\n\n如果你的正方形是 20 像素高，而且兩個正方形相隔 20 像素遠，你需要跳多遠？"
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve this puzzle quickly. '
       courseD_artist_nestedLoops4_authored_hint:
         courseD_artist_nestedLoops4_a: |-
@@ -1090,7 +1093,7 @@ zh-TW:
       courseD_bee_conditionals7_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
-        courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        courseD_bee_conditionals8_a: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
           
@@ -1358,17 +1361,17 @@ zh-TW:
         courseE_artist_concept4_a: There are several ways to solve this puzzle. Can you make a plan?
         courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What comes next?
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        courseE_artist_functions1_b: It is okay to draw overlapping lines to make your glasses.
+        courseE_artist_functions1_a: 正方形每邊都有 100 像素，這代表你需要向前移動 175 像素之後才能開始畫第二個正方形。
+        courseE_artist_functions1_b: 畫出眼鏡時可以讓你的兩條線重疊沒關係。
       courseE_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          你的程式應該要：
+          - 使用函式
+          - 向前移動 100 + 75 像素
+          - 使用函式
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -1507,7 +1510,7 @@ zh-TW:
           
           ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
       courseF_artist_for4_authored_hint:
-        courseF_artist_for4_a: "**What is the smallest number you will need?  \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop."
+        courseF_artist_for4_a: "**需要的數字至少要是多少？\n最大的數字又是多少？\n每循環一次要增加多少？**\n\n這些問題是你每次在使用`計數`迴圈要思考的。"
       courseF_artist_for5_authored_hint:
         courseF_artist_for5_a: You don't need the `repeat` loop inside when making this spiral!
       courseF_artist_for7_authored_hint:
@@ -1737,8 +1740,8 @@ zh-TW:
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: 如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。
+        2-3_Artist_1_new_b: 要如何才能轉彎？試試`轉向-右方 90 度`積木。
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel sides.
       grade2_MakeDogTag_3_authored_hint:
@@ -1758,7 +1761,7 @@ zh-TW:
           Remember that the code from the last puzzle was:
           
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: 你的下一個轉彎動作應該要在迴圈中程式碼的最後面。
       grade2_MakeDogTag_BFP_authored_hint: [ ]
       grade2_maze_debuggingFP_authored_hint: [ ]
       grade2_maze_intro4_authored_hint:
@@ -1796,16 +1799,16 @@ zh-TW:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_puppy_loops6_authored_hint:
         2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_b: "如果要在`重複`迴圈中放置多個積木，只要拖曳一個迴圈到工作區，然後再把工作區上的積木堆拖曳到裡面。\n\n把它們放到`當運行時`積木就大功告成囉！"
       grade2_puppy_loops7_authored_hint:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
+          我的形狀重複了幾次？
           
-          How many times *should* the shape repeat?
+          形狀 *應該* 要重複幾次？
           
-          Where can you change that in the program?
+          怎樣在你的程式裡做出對應的改變？
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -1814,14 +1817,14 @@ zh-TW:
         hint1: The best solution uses two `move forward` commands and one loop.
       grade2_PuppyLoops_6_authored_hint:
         2-3_Maze_16_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
-        2-3_Maze_16_b: "To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \n\nConnect it all back to the `when run` block and you're good to go!"
+        2-3_Maze_16_b: "如果要在`重複`迴圈中放置多個積木，只要拖曳一個迴圈到工作區，然後再把工作區上的積木堆拖曳到裡面。\n\n把它們放到`當運行時`積木就大功告成囉！"
       grade2_PuppyLoops_7_authored_hint:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
-        2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
+        2-3_Maze_Loops_17_b: 你把預先建立好的程式給刪除了嗎？點擊`重新開始`按鈕把程式找回來吧！
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 提示：每個鬚鬚都是 75 像素長。
       grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: 如果你讓藝術家畫完第一條線之後就向後移動或跳躍的話，會發生什麼？
       grade3_bee_conditionals_new1a_authored_hint:
         grade3_bee_conditionals_new1a_a: Be sure to use an `if` statement to check each space to see if it has a flower or nothing.
       grade3_bee_conditionals_new2a_authored_hint:
@@ -1840,13 +1843,13 @@ zh-TW:
       grade3_bee_conditionals_quantum4_authored_hint:
         remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       grade3_bee_conditionals_quantum5_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
         grade3_bee_conditionals_quantum5_a: This puzzle is tricky, because you can't check blank squares, nectar *and* honey with a single conditional.
       grade3_Conditionals_10 BAD_authored_hint:
         4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
       grade3_Conditionals_11_authored_hint:
-        2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_a: 有點難想出怎樣把方塊弄下來嗎？試著用對待紫花的方式對待紅花！
+        2-3_Bee_Conditionals_14_b: 如果紅花變成紫花，想一想，要怎麼另外使用`重複`迴圈來減少代碼的使用？
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
       grade3_Conditionals_12_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
@@ -1857,13 +1860,13 @@ zh-TW:
       grade3_Conditionals_TeacherIDo_authored_hint:
         2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
       grade3_ConditionalsElse_4_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
       grade3_ConditionalsElse_5_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
       grade3_ConditionalsElse_TeacherIDo_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
       grade3_Debugging_1_authored_hint:
-        2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
+        2-3_Bee_Debugging_1_a: 在你找到並修正了不正確的積木的過程中，有發現哪些地方可以用一個`重複`迴圈讓程式變得更簡單嗎？
       grade3_Debugging_10_authored_hint:
         grade3_Debugging_10_a: |-
           Start by looking at just the first loop.
@@ -1913,19 +1916,19 @@ zh-TW:
       grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: 如果你不能馬上的就使用`重複`積木來寫出程式，可以先把一個個的指令寫出來，然後找出指令間共同的模式。
       grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
+        2-3_Bee_Loops_6_a: 如果你沒有辦法很快的分辨出要在`重複`迴圈中放些什麼積木，可以試著先按照順序拖曳出每個積木，並在拖曳過程中找出它們的規律。
+        2-3_Bee_Loops_6_b: 你的`重複`迴圈裡應該要有 6 個積木才對。
       grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: 你需要 2 個不同的`重複`迴圈，一個接著一個。
       grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_c: 如果你還不能準確的使用迴圈，可以先用長串的指令，然後再找出有什麼地方是可以用`重複`迴圈來替代的。
       grade3_Loops_8_authored_hint:
         2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
       grade3_Loops_9_authored_hint:
@@ -2016,14 +2019,14 @@ zh-TW:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
-        2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
+        2-3_Artist_Functions_1_a: 正方形每邊都有 100 像素，這代表你需要向前移動 175 像素之後才能開始畫第二個正方形。
+        2-3_Artist_Functions_1_b: 畫出眼鏡時可以讓你的兩條線重疊沒關係。
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          你的程式應該要：
+          - 使用函式
+          - 向前移動 100 + 75 像素
+          - 使用函式
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
       grade4_artist_functions3a_authored_hint:
@@ -2034,7 +2037,7 @@ zh-TW:
         Course_4_SCF_1_a: Each hexagon has 40 pixel sides.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
-        Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "
+        Course_4_SCF_1_d: "在你畫出第三排的多邊形之前，你需要向右轉 60 度，然後向前跳 40 像素。\n\n在你到了正確的垂直位置後，你必須讓小藝術家再轉過頭來，然後向前跳 440 像素（比你的函式 `shift down/forward` 還要多 120 像素）。 "
         Course_4_SCF_1_e: |-
           **Solution:**
           
@@ -2043,7 +2046,7 @@ zh-TW:
         Course_4_SCF_1_a: Each hexagon has 40 pixel sides.
         Course_4_SCF_1_b: There is a 120 pixel jump between each hexagon in each horizontal line.
         Course_4_SCF_1_c: "Before you draw the second row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 320 pixels."
-        Course_4_SCF_1_d: "Before you draw the third row of hexagons, you need to turn right by 60 degrees and jump forward 40 pixels.  \n\nOnce you're in the correct vertical location, you have to turn your artist back again and jump backward 440 pixels (120 pixels farther than your `shift down/forward` function. "
+        Course_4_SCF_1_d: "在你畫出第三排的多邊形之前，你需要向右轉 60 度，然後向前跳 40 像素。\n\n在你到了正確的垂直位置後，你必須讓小藝術家再轉過頭來，然後向前跳 440 像素（比你的函式 `shift down/forward` 還要多 120 像素）。 "
         Course_4_SCF_1_e: |-
           **Solution:**
           
@@ -2104,9 +2107,9 @@ zh-TW:
       grade4_bee_conditionals_new3b_authored_hint:
         grade4_bee_conditionals_new3b_a: An `if/else` statement could really help you out here.
       grade4_bee_conditionals_quantum4_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
       grade4_bee_conditionals_quantum5_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "**記住：**這個關卡在每次運行時都會有變化。\n\n你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。"
       grade4_bee_functions1_authored_hint:
         grade4_bee_functions1_a: There is more than one right answer to this puzzle.
       grade4_bee_functions10_authored_hint:
@@ -2157,22 +2160,22 @@ zh-TW:
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
-        2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
+        2-3_Artist_1_new_a: 如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。
+        2-3_Artist_1_new_b: 要如何才能轉彎？試試`轉向-右方 90 度`積木。
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
-        2-3_Artist_6_b: Since I'm already facing to the right, it's easiest to start by moving forward, then make left turns to create the triangle.
-        2-3_Artist_6_c: Each side of the triangle is the same length as each side of the square...100 pixels!
+        2-3_Artist_6_a: '如果要做出這些小小的角度，我們必須讓每次畫完正方形之後的轉向角度大一些。   '
+        2-3_Artist_6_b: 因為我們已經面向右邊，所以最簡單的方式，就是先往前移動，再向左轉，就可以製作出這個三角形。
+        2-3_Artist_6_c: 三角形的每個邊長和正方形的邊長一樣，都是 100 像素！
       grade4_review_bee1_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: 你需要 2 個不同的`重複`迴圈，一個接著一個。
       grade4_review_bee2_authored_hint:
         2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
       grade4_review_bee3_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       grade5_artist_binary10_authored_hint:
-        Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One counts up from 1 to 8, the other counts down from 8 to 1.
-        Course_4_Artist_Binary_Free_Play_2b_b: Each `for loop` has three repeats.  The first draws the leftmost set of 1s, the second draws the 0s in the middle and the third draws the 1s on the right.
-        Course_4_Artist_Binary_Free_Play_2b_c: In each repeat you need `counter` for 1s and `16-(2 x counter)` for 0s.
+        Course_4_Artist_Binary_Free_Play_2b_a: 這個程式中使用了 2 個`計數迴圈`，第一個從 1 算到 8，另一個則是從 8 算到 1。
+        Course_4_Artist_Binary_Free_Play_2b_b: 每個`計數迴圈`裡有 3 個`重複`積木，第一個畫出左半部、第二個畫出中間、第三個畫出右半部。
+        Course_4_Artist_Binary_Free_Play_2b_c: 在每一次的循環裡，你需要為 1s 使用 `counter` 計數，還有為 0s 使用 `16-(2 x counter)` 來計數。
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **Solution:**
           ![solution](https://images.code.org/866a92e042a546de3afcf462a8b5c695-image-1444438735003.58.28.png)
@@ -2200,7 +2203,7 @@ zh-TW:
           
           ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
       grade5_artist_for_loops4_authored_hint:
-        Course_4_Artist_For_Loops_4_a: "**What is the smallest number you will need?  \nWhat is the largest number?  \nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop."
+        Course_4_Artist_For_Loops_4_a: "**需要的數字至少要是多少？\n最大的數字又是多少？\n每循環一次要增加多少？**\n\n這些問題是你每次在使用`計數`迴圈要思考的。"
       grade5_artist_for_loops5_authored_hint:
         grade5_artist_for_loops5_a: You don't need the traditional repeat loop when making this spiral!
       grade5_artist_for_loops7_authored_hint:
@@ -2215,8 +2218,8 @@ zh-TW:
         Course_4_Artist_For_Loops_11a_b: 'Each time, you will need to move forward by 10 times the length of the current number of sides. '
       grade5_artist_for_loopsfreeplay11_authored_hint:
         Course_4_Artist_For_Loops_inspire_a: The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.
-        Course_4_Artist_For_Loops_inspire_b: Try a `for` loop that goes from 3 to 10 with an increment of 1.
-        Course_4_Artist_For_Loops_inspire_c: There are two iterations of the same repeat loop inside the `for` loop, but the second repeat turns the opposite direction.
+        Course_4_Artist_For_Loops_inspire_b: 試試看這個`計數`迴圈，從 3 算到 10，每次增加 1。
+        Course_4_Artist_For_Loops_inspire_c: 在這個`計數`迴圈裡用了二個`重複`積木，不過第二個會轉成相反的方向。
         Course_4_Artist_For_Loops_inspire_d: "**Solution:**  ![Solution](https://images.code.org/d619892fc17ff491c201d86bb917e523-image-1441005190828.12.30.png) "
       grade5_artist_for_loopsfreeplay12_authored_hint:
         grade5_artist_for_loopsfreeplay12_a: The image in the drawing was made using a counter for the `set alpha` and `counter` / 10 as a brush size.
@@ -2227,9 +2230,9 @@ zh-TW:
           ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
       grade5_artist_functionparameters10_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
-        specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
-        after: When you're done with each "petal", be sure to `move forward` 20 pixels before you make a 60 degree rotation.
+        double_loop: 試著放置一個`計數迴圈`到`重複`積木裡頭。
+        specifics: "畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。\n\n`設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。"
+        after: 當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。
         solution: |-
           **Solution**
           
@@ -2272,7 +2275,7 @@ zh-TW:
           **Solution:**
           ![Blocks for solution](https://images.code.org/1865aaf1b4a8ba84a5e8a7408401092d-image-1440060930335.43.39.png)
       grade5_artist_variables_octagons13_authored_hint:
-        Course_4_Artist_Vars_13_a: You need two repeat loops (one inside the other) both repeating `sides` times.
+        Course_4_Artist_Vars_13_a: 你需要 2 個重複迴圈（一個包著一個），兩個都重複 `sides`次。
         Course_4_Artist_Vars_13_b: "The inner repeat loop draws an octagon (turning to the left).   \n\nAfterwards, you need to move forward and turn right only in the outer loop."
         Course_4_Artist_Vars_13_c: To adjust the shape to stay the same size when the number of sides change, use the math block to divide the length in pixels by the number of sides.
       grade5_artist_variables_square7_authored_hint:
@@ -2323,7 +2326,7 @@ zh-TW:
         grade5_bee_parameters_new9a_a: A `for` loop can help you with this stair step pattern, too!
         grade5_bee_parameters_new9a_b: For each stair, you'll need to call the function once, turn right, call the function again, then turn left.
       grade5_playlab_variables2_authored_hint:
-        Course_4_Play_Lab_Vars_2_a: Make sure to set the number for `dog_speed` to something larger than `cat_speed`.
+        Course_4_Play_Lab_Vars_2_a: 確定在 `dog_speed`（小狗的速度）上設定的數值要大於 `cat_speed`（小貓的速度）。
       gradek_adventurer_loops3_authored_hint:
         gradek_adventurer_loops3_a: To change how far the adventurer goes, change the number of times that the loop runs.
         gradek_adventurer_loops3_b: Don't forget that the adventurer needs to walk down and collect gold after she finishes the `repeat` loop!
@@ -2408,9 +2411,9 @@ zh-TW:
         pointer_harvester_test: What kind of block can I use to check something and make a decision?
       Inspirational Artwork_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
-        specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
-        after: When you're done with each "petal", be sure to `move forward` 20 pixels before you make a 60 degree rotation.
+        double_loop: 試著放置一個`計數迴圈`到`重複`積木裡頭。
+        specifics: "畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。\n\n`設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。"
+        after: 當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。
         solution: |-
           **Solution**
           
@@ -2449,19 +2452,19 @@ zh-TW:
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       level 'grade3_Loops_11_authored_hint:
-        2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
+        2-3_Bee_Loops_5_a: 如果你不能馬上的就使用`重複`積木來寫出程式，可以先把一個個的指令寫出來，然後找出指令間共同的模式。
       level 'grade3_Loops_12_authored_hint:
-        2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
-        2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
+        2-3_Bee_Loops_6_a: 如果你沒有辦法很快的分辨出要在`重複`迴圈中放些什麼積木，可以試著先按照順序拖曳出每個積木，並在拖曳過程中找出它們的規律。
+        2-3_Bee_Loops_6_b: 你的`重複`迴圈裡應該要有 6 個積木才對。
       level 'grade3_Loops_4_authored_hint:
-        2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
+        2-3_Bee_Loops_3B_a: 你需要 2 個不同的`重複`迴圈，一個接著一個。
       level 'grade3_Loops_5_authored_hint:
         2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
         2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
-        2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
+        2-3_Bee_Loops_4A_c: 如果你還不能準確的使用迴圈，可以先用長串的指令，然後再找出有什麼地方是可以用`重複`迴圈來替代的。
       level 'grade3_Loops_8_authored_hint:
         2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
       level 'grade3_Loops_9_authored_hint:
@@ -2489,9 +2492,9 @@ zh-TW:
         NEW_Course_4_Artist_Params_14_a: It's okay to run the program a few times to figure out how the function works with different parameters.
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: We set the brush width to 1, then the color to blue before we did anything else.
-        double_loop: Try putting a `for loop` inside of a `repeat` loop.
-        specifics: "The `for loop` runs from three to seventeen for each of the six \"petals\" before moving on to create the next, drawing shapes with only an odd number of sides.\n        \nThe `set alpha` block uses division to fade the color as the counter gets higher."
-        after: When you're done with each "petal", be sure to `move forward` 20 pixels before you make a 60 degree rotation.
+        double_loop: 試著放置一個`計數迴圈`到`重複`積木裡頭。
+        specifics: "畫出 6 個「花瓣」的這個`計數迴圈`，每一次都會從 3 開始執行到 17，而畫出的形狀的邊數都會是奇數。\n\n`設置透明度`的積木中用了計數器，當計數器的值愈高時，顏色會變得愈淡。"
+        after: 當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。
         solution: |-
           **Solution**
           
@@ -2512,13 +2515,15 @@ zh-TW:
           Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
           
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
+        turn_at_honeycomb_pointer: 除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？
       Planning Farmer_authored_hint:
         conditional_pointer: |-
           Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
           
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
-        turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
+        turn_at_honeycomb_pointer: 除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？
+      playLabDebugVideo1_authored_hint:
+        courseA_playLab_events2_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:
         sample3_a: |-
           Try writing the code once and looping it seven times:

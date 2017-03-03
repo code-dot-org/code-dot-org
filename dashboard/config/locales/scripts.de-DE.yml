@@ -250,7 +250,7 @@
             'Programming Concept: Functions': 'Programming Concept: Functions'
             'Programming Concept: Loops': 'Programming Concept: Loops'
             Reflection: Reflection
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Unplugged lessons: Unplugged lessons
             Writing computer programs: Writing computer programs
           description_audience: ''
@@ -410,7 +410,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -548,7 +548,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Next Steps: Next Steps
             Strings and Images: Zeichenfolgen und Bilder
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             The Big Game: The Big Game
             The Design Recipe: Das Design-Rezept
           description_audience: ''
@@ -586,7 +586,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -600,7 +600,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -769,7 +769,7 @@
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
-            Standalone video: Standalone video
+            Standalone video: Video
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -787,7 +787,7 @@
             Next Steps: Next Steps
             Rocket-Height: Rocket-Height
             Strings and Images: Zeichenfolgen und Bilder
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Writing Contracts: Writing Contracts
           description_audience: ''
         cspfacilitator:
@@ -862,7 +862,7 @@
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Das Design-Rezept
@@ -1484,7 +1484,7 @@
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -1765,7 +1765,7 @@
           stage:
             Evaluation Blocks: Auswertungsbausteine
             Introduction to PD: Introduction to PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
           description_audience: ''
@@ -2343,7 +2343,7 @@
           description_short: "\\tPhase 3: School Year Support"
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Lehrer-Dashboard
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Das Design-Rezept
@@ -2430,6 +2430,13 @@
               4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons
               7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to
+              Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays
+              and Functions with Return Values
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2952,16 +2959,25 @@
           description: ''
         gamelab-demo:
           stage:
-            Simple Sprite Movement: Simple Sprite Movement
+            Simple Sprite Movement: Einfache Sprite-Bewegung
         csd6-draft:
           stage:
             UI and Input: UI and Input
             Computing Innovations: Computing Innovations
             Input Uplugged: Input Uplugged
             The Circuit Playground: The Circuit Playground
-            Foo: Foo
+            Foo: Kram
             Lists: Listen
             Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: '"Zähle mit"-Schleifen'
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
           title: Draft Unit 6
           description_audience: ''
           description_short: ''

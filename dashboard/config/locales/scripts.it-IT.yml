@@ -150,9 +150,10 @@
             'Play Lab: For Loops': 'Laboratorio: Cicli con Contatore'
             'Play Lab: Functions with Parameters': 'Laboratorio: Funzioni con Parametri'
             'Play Lab: Variables': 'Laboratorio: Variabili'
-            Super Challenge - For Loops: Super Sfida - Cicli con Contatore
-            Super Challenge - Functions and Parameters: Super Sfida - Funzioni e Parametri
-            Super Challenge - Variables: Super Sfida - Variabili
+            Super Challenge - For Loops: Super Sfida sui Cicli con Contatore
+            Super Challenge - Functions and Parameters: Super Sfida su Funzioni e
+              Parametri
+            Super Challenge - Variables: Super Sfida sulle Variabili
             'Unplugged: Binary': Binario
             'Unplugged: Envelope Variables': Variabili e Buste
             'Unplugged: For Loop Fun': Divertiti usando i Cicli con Contatore
@@ -2459,6 +2460,13 @@
               4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons
               7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to
+              Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays
+              and Functions with Return Values
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2992,6 +3000,15 @@
             Foo: Foo
             Lists: Liste
             Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: Cicli con Contatore
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
           title: Draft Unit 6
           description_audience: ''
           description_short: ''

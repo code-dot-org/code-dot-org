@@ -80,7 +80,7 @@
   congrats_guest_speaker_desc: "Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat."
   congrats_guest_speaker_cta: "Find a guest speaker"
   congrats_third_party_title: "Use your new skills with these apps and websites"
-  third_party_gradelevel_kto8: "Grades K-8"
+  third_party_gradelevel_kto8: "DBHko 2. maila"
   third_party_gradelevel_kto2: "Grades K-2"
   third_party_gradelevel_2to8: "Grades 2-8"
   third_party_gradelevel_4to12: "Grades 4-12"
@@ -756,6 +756,7 @@
   dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
   dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
   dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
+  dashboard_announce_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
   code_hoc_coming: "Kode-ordua iritsi da-Abenduak 8-14!"
   code_sign_up: "Izena eman Informatikaren Ikaskuntzaren Astean parte hartzeko"
   host_an_hour: "Host an hour"

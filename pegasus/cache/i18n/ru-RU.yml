@@ -1060,6 +1060,12 @@
     students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
     saying "I''m taking the #APCSP exam because..." The best submissions will be featured
     in our video and the winning students will receive Code.org swag!'
+  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
+    to break records. Student participation in the exam could dramatically shift diversity
+    in AP Computer Science, but we need your help. Encourage every CS Principles student
+    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
+    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
+    target='_blank'>#APCSP video challenge</a>.
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
   code_sign_up: "Зарегистрируйтесь для участия в неделе информатики"
   host_an_hour: "Провести час"
@@ -1191,12 +1197,12 @@
   course2_name: "Курс 2"
   course3_name: "Курс 3"
   course4_name: "Курс 4"
-  coursea-draft_name: Course A
-  courseb-draft_name: Course B
-  coursec-draft_name: Course C
-  coursed-draft_name: Course D
-  coursee-draft_name: Course E
-  coursef-draft_name: Course F
+  coursea-draft_name: "Курс A"
+  courseb-draft_name: "Курс B"
+  coursec-draft_name: "Курс С"
+  coursed-draft_name: "Курс D"
+  coursee-draft_name: "Курс E"
+  coursef-draft_name: "Курс F"
   accelerated_name: "Ускоренный курс"
   cspunit1_name: "Урок 1: Цифровая информация"
   cspunit2_name: "Урок 2: Интернет"
@@ -1987,9 +1993,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.

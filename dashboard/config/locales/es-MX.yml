@@ -20,6 +20,7 @@
     attributes:
       user:
         name: Mostrar Nombre
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: Correo electrónico
         username: Nombre de usuario
         password: Contraseña
@@ -142,9 +143,29 @@
     user_type_student: estudiante
     field_is_required: es requerido
     accept_terms: Debes estar de acuerdo para crear una cuenta
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: Select School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: Otros
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
   signin_form:
     title: "¿Ya tienes una cuenta? Inicia sesión"
     login: Correo electrónico
+    login_username: Email or Username
     password: Contraseña
     remember: Recordarme
     submit: Iniciar Sesión
@@ -499,6 +520,12 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Introduzca
       un código de sección diferente.
@@ -592,6 +619,18 @@
         navegadores compatibles</a>. Puede tratar de ver la página, pero se espera
         una funcionalidad rota.
       link: Aprende más
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: Esto está tardando más tiempo de lo habitual...
   try_reloading: Intente recargar la página
   next_stage: "¡Acabado! Sigue a la siguiente etapa"

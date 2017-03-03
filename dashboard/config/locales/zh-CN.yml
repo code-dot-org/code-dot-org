@@ -12,6 +12,7 @@
     attributes:
       user:
         name: "显示名称"
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: "电子邮件"
         username: "用户名"
         password: "密码"
@@ -116,9 +117,29 @@
     user_type_student: "学生"
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: Select School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: "其他"
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
   signin_form:
     title: "已经有账号了？登录"
     login: "电子邮件"
+    login_username: Email or Username
     password: "密码:"
     remember: "记住我"
     submit: "登录"
@@ -411,6 +432,12 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_not_entered: "请提供 current_section_code。"
@@ -487,6 +514,18 @@
       unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
         target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。"
       link: "了解详情"
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: "请再多等一会儿..."
   try_reloading: "请重新刷新页面"
   next_stage: "完成 ！继续下一个阶段"

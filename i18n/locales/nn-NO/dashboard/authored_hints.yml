@@ -2,7 +2,7 @@ nn:
   data:
     authored_hints:
       2-3 Artist 1 new_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
+        2-3_Artist_1_new_a: Hvis du bruker blokken for å få meg til å "gå fremover 100 piksler", vil jeg tegne en linje automatisk.
         2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
       2-3 Artist 11_authored_hint:
         2-3_Artist_11_a: 'Having trouble with the angles? You need to go 360 degrees in 8 turns.  What is 360/8? '
@@ -90,7 +90,7 @@ nn:
         2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
@@ -300,6 +300,9 @@ nn:
           
           
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: [ ]
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
       artistLoopsK2gradek_artist_loops3_authored_hint:
@@ -802,7 +805,7 @@ nn:
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseC_artist_prog1_authored_hint: [ ]
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
+        courseC_artist_prog2_a: Hvis du bruker blokken for å få meg til å "gå fremover 100 piksler", vil jeg tegne en linje automatisk.
         courseC_artist_prog2_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
       courseC_artist_prog3_authored_hint:
         courseC_artist_prog3_a: |-
@@ -1020,7 +1023,7 @@ nn:
       courseD_artist_nestedLoops1_authored_hint:
         courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
       courseD_artist_nestedLoops10_authored_hint:
-        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the second half of the last puzzle.
+        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the first half of the last puzzle.
         courseD_artist_nestedLoops10_b: Make sure the outer loop of the code is set to run 7 times and remove the outer turn.
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: 'You will need to draw a total of 6 triangles, each rotated 60 degrees.  '
@@ -1737,7 +1740,7 @@ nn:
       grade2_collector_2_authored_hint:
         hint1: You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.
       grade2_MakeDogTag_1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
+        2-3_Artist_1_new_a: Hvis du bruker blokken for å få meg til å "gå fremover 100 piksler", vil jeg tegne en linje automatisk.
         2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
       grade2_MakeDogTag_2_authored_hint:
         2-3_Artist_2_new_a: To create this window, just draw a square with 100 pixel sides.
@@ -2157,7 +2160,7 @@ nn:
       grade4_bee_nestedLoops5_authored_hint:
         grade4_bee_nestedLoops5_a: You will need 4 repeat blocks!
       grade4_review_artist1_authored_hint:
-        2-3_Artist_1_new_a: If you use the block to have me `move forward by 100 pixels`, I will draw a line automatically.
+        2-3_Artist_1_new_a: Hvis du bruker blokken for å få meg til å "gå fremover 100 piksler", vil jeg tegne en linje automatisk.
         2-3_Artist_1_new_b: Having trouble turning the corner? Use the `turn right 90 degrees` block.
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'To make those little angles, you have to turn *farther* each time than you did with the square.   '
@@ -2519,6 +2522,8 @@ nn:
           
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
+      playLabDebugVideo1_authored_hint:
+        courseA_playLab_events2_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:
         sample3_a: |-
           Try writing the code once and looping it seven times:

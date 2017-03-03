@@ -1081,6 +1081,10 @@
       Artist Inspiration_instruction: |-
         <a href="https://studio.code.org/c/" target="_blank">Clicca qui</a> (LINK DA AGGIORNARE) e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
+      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
+      artistFunctionsVideo1_instruction: |-
+        Follow the instructions to make your own
+        function.
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -1125,6 +1129,8 @@
         di nettare pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere
         nettare da un fiore viola se ne ha una quantità pari a 0. Usa il blocco "se"
         per controllare se la quantità è 0 oppure 1.
+      beeDebugVideo1_instruction: Riesci ad usare un ciclo per raccogliere tutto il
+        nettare?
       Bergeron Robot Maze1_instruction: |
         Can you help me catch the naughty pig? Stack
         a couple of `move forward` blocks below the `when run` block and press "Run".
@@ -1268,6 +1274,9 @@
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
+      birdsDebugVideo1_instruction: |-
+        Trace the path and lead me to the silly pig.
+        Avoid TNT or feathers will fly!
       Brad Spooky House Copy_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -1559,6 +1568,14 @@
       Collector Demo_instruction: |-
         Look at all this loot! Help me get as many coins
         as I can so I can improve my farm. I can only use 9 blocks though!
+      collector example_instruction: |-
+        Put these blocks in order to collect all of
+        the gold and solve the puzzle.
+      collectorDebugVideo2_instruction: |-
+        Put these blocks in order to collect all
+        of the gold and solve the puzzle.
+      collectorSkinVideo1_instruction: Collect all four piles to pass this level.
+      collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? "
       Course 2 Bee Loops 13_instruction: Questo è un esercizio di verifica -- Usa
@@ -2644,8 +2661,8 @@
         Eureka!  Collect as much gold as you
         can!
       courseA_collector_loops2_instruction: |-
-        Here are three piles of gold!  Collect
-        all three.
+        Collect all three piles to pass this
+        level.
       courseA_collector_loops3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `[E-->]` block?
@@ -2747,7 +2764,9 @@
       courseB_collector_loops11_instruction: |-
         Eureka!  Collect as much gold as you
         can!
-      courseB_collector_loops2_instruction: Four piles of gold!  Collect all four.
+      courseB_collector_loops2_instruction: |-
+        Collect all four piles to pass this
+        level.
       courseB_collector_loops3_instruction: |-
         How can Laurel collect all five piles
         of gold using only one `E -->` block?
@@ -2757,8 +2776,8 @@
       courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
         get all of the gold. "
       courseB_collector_loops6_instruction: |-
-        What should you add to this code to
-        get all of the gold?
+        Figure out the code to help Laurel get
+        all of the gold!
       courseB_collector_loops7_instruction: Write the code to get all of this gold.
       courseB_collector_loops8_instruction: |-
         **Challenge: ** The gold goes all the
@@ -3101,8 +3120,8 @@
         (Each side is 100 pixels long and you'll need to turn 120 degrees
         for each exterior angle.)
       courseD_artist_nestedLoops10_instruction: |-
-        Take the triangles from before,
-        but this time only make 7 of them, and lay them out in a row.
+        Take the squares from before, but
+        this time only make 7 of them, and lay them out in a row.
       courseD_artist_nestedLoops1a_instruction: |-
         Now loop the triangle 6 times. \r
         After
@@ -4060,6 +4079,15 @@
       CSDU6 - Arrays - lengthMinus1_instruction: |-
         Use list.length - 1 to log the
         last item in the array to the console. (Click to see full instructions)
+      CSDU6 - for loop - color buttons with for_instruction: |-
+        Write the contents
+        of the array to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - color buttons_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - why for_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -7406,6 +7434,9 @@
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
+      LaurelDebugging4Video1_instruction: |-
+        Move Laurel around and get as much gold
+        as you can!
       level 'grade3_Loops_10_instruction: |-
         Such a busy bee!\r
         \r
@@ -7963,12 +7994,9 @@
       NEW Course 4 Bee For Loops 95_instruction: Date un'occhiata a ogni parre del
         ciclo for che hai appena creato.  Puoi capire quali numeri si devono raddoppiare
         per risolvere questo puzzle? Perché funziona?
-      NEW Course 4 Play Lab Params 11_instruction: |-
-        Tempo di giocare: divertiti a creare il gioco che preferisci. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi.<br><br>
-        Ecco alcune idee:<br><br>
-        <b>Inseguimento</b>: fai pattugliare il personaggio 2 mentre guidi il personaggio 1 al suo inseguimento usando i tasti freccia<br><br>
-        <b>Colpisci il fantasma</b>: fai apparire un personaggio in punti casuali dello schermo ed incrementa il punteggio se lo si clicca prima che scompaia<br><br>
-        <b>Indovina chi sono</b>: due personaggi appaiono e scompaiono in punti casuali dello schermo. Uno di essi ogni volta cambia aspetto, mentre l'altro rimane sempre lo stesso. Incrementa il punteggio solo quando si clicca su quello che cambia.
+      NEW Course 4 Play Lab Params 11_instruction: 'Tempo di giocare: divertiti a
+        creare il gioco che preferisci. Ecco <a href="http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15">alcune
+        idee</a>. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi.'
       NEW Course 4 Play Lab Params 5 5_instruction: Proviamo di nuovo, ma con meno
         aiuti. Cosa devi modificare questa volta per far fare la ricognizione ai personaggi?
       NEW Course 4 Play Lab Vars 4 5_instruction: Cosa pensi che faccia questo codice?
@@ -8280,6 +8308,9 @@
         Have Robin talk back to Jorge when you click on
         her.
       playEventsK7_instruction: What else can you do in this fun scene?
+      playLabDebugVideo1_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       Poorva copy U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -8460,6 +8491,7 @@
         un labirinto più complesso? Se lo fai correttamente, riuscirò a camminare
         lungo un percorso tortuoso di qualsiasi lunghezza. Fai in fretta! Il ghiaccio
         si sta sciogliendo!
+      skratDebugVideo1_instruction: Get Skrat to the Acorn.
       SpecialFrozenLevel_instruction: Sei ufficialmente diventato un maestro artista!
         Crea un meraviglioso paesaggio invernale.
       Standalone_Artist_1_instruction: Benvenuto all'Artista! Prima di tutto, cerchiamo

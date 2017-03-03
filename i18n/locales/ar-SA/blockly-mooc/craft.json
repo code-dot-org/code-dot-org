@@ -1,5 +1,5 @@
 {
-  "blockActionAdd":"أضف",
+  "blockActionAdd":"إضافة",
   "blockActionAttack":"هجوم",
   "blockActionDestroyEntity":"تختفي",
   "blockActionDrop":"اسقط",
@@ -97,7 +97,6 @@
   "houseSelectHard":"صعب",
   "houseSelectLetsBuild":"هيا بنا نبني منزلاً.",
   "houseSelectMedium":"متوسط",
-  "keepPlayingButton":"مواصلة اللعب",
   "level10FailureMessage":"قم بتغطية الحمم للسير عليها، ثم احفر للحصول على كتلتين حديديتين على الجانب الآخر.",
   "level11FailureMessage":"في حالة وجود حمم أمامك، تأكد من وضع الحصاة أمامك. يتيح لك ذلك حفر صف الموارد المعني بأمان.",
   "level12FailureMessage":"تأكد من حفر 3 كتل من الحجر الأحمر. ويجمع ذلك ما تعلمته من بناء منزلك واستخدام عبارات \"if\" لتجنب السقوط في الحمم.",
@@ -155,7 +154,6 @@
   "playerSelectChooseSelectButton":"تحديد",
   "playerSelectLetsGetStarted":"لنبدأ.",
   "reinfFeedbackMsg":"يمكنك الضغط على \"Keep Playing\" للعودة إلى ممارسة اللعبة.",
-  "replayButton":"إعادة تشغيل",
   "score":"مجموع النقاط",
   "selectChooseButton":"تحديد",
   "soundTypeBump":"ارتطام",
