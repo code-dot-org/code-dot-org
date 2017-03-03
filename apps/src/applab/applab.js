@@ -63,6 +63,7 @@ import {
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var project = require('@cdo/apps/code-studio/initApp/project');
+import html2canvas from 'html2canvas';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -1441,16 +1442,33 @@ Applab.onPuzzleComplete = function (submit) {
   };
 
   var divApplab = document.getElementById('divApplab');
-  if (!divApplab || typeof divApplab.toDataURL === 'undefined') { // don't try it if function is not defined
+  if (!divApplab) {
     sendReport();
   } else {
-    divApplab.toDataURL("image/png", {
-      callback: function (pngDataUrl) {
+    var el = document.getElementById('screen1');
+    console.log(`calling html2canvas on ${el.id}`)
+    html2canvas(el, {
+      onrendered(canvas) {
+        console.log(`html2canvas onrendered`)
+        var pngDataUrl = canvas.toDataURL("image/png");
+        console.log('html2canvas toDataURL complete')
+        console.log(pngDataUrl)
         Applab.feedbackImage = pngDataUrl;
         Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
 
+        document.body.append(canvas);
+        canvas.style.position = 'absolute';
+        canvas.style.top = '5px';
+        canvas.style.right = '5px';
+        canvas.style.zIndex = '100';
+        canvas.style.border = 'solid 5px green';
+
         sendReport();
-      }
+      },
+      // width: 320,
+      // height: 320,
+      background: '#eee',
+      logging: true
     });
   }
 };
