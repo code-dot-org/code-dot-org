@@ -15,7 +15,7 @@
 # emergency:
 #     Same as Scale, plus all progress tracking and sharing disabled.
 
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 
 class FeatureModeManager
   # A map from mode symbol to gatekeeper and dcdo settings. The gatekeeper settings are
@@ -106,7 +106,7 @@ class FeatureModeManager
       end
     end
 
-    HipChat.log "Set scale feature mode for environment #{Rails.env} to #{mode}"
+    ChatClient.log "Set scale feature mode for environment #{Rails.env} to #{mode}"
   end
 
   # Returns the matching mode if the dcdo and gatekeeper settings match

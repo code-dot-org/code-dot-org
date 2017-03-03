@@ -29,8 +29,9 @@ describe('The DebugConsole component', () => {
     restoreRedux();
   });
 
-  const debugOutput = () => root.find('div.debug-output');
-  const debugInput = () => root.find('div.debug-input');
+  const debugOutput = () => root.find('#debug-output');
+  const debugInput = () => root.find('#debug-input');
+  const debugInputText = () => debugInput().get(0).value;
 
   it("renders a debug output div", () => {
     expect(debugOutput().isEmpty()).to.be.false;
@@ -51,7 +52,7 @@ describe('The DebugConsole component', () => {
   }
   function type(text) {
     for (let i = 0; i < text.length; i++) {
-      debugInput().get(0).textContent += text[i];
+      debugInput().get(0).value += text[i];
       typeKey(text[i]);
     }
   }
@@ -75,7 +76,7 @@ describe('The DebugConsole component', () => {
       });
 
       it("the text gets removed from the input", () => {
-        expect(debugInput().text()).not.to.contain("console.log('hello');");
+        expect(debugInputText()).not.to.contain("console.log('hello');");
       });
     });
 
@@ -103,30 +104,30 @@ describe('The DebugConsole component', () => {
       submit('3+3');
     });
 
-    it("the up arrow cycles up throw previous expressions", () => {
-      expect(debugInput().text()).to.equal('');
+    it("the up arrow cycles up through previous expressions", () => {
+      expect(debugInputText()).to.equal('');
       typeKey(KeyCodes.UP);
-      expect(debugInput().text()).to.equal('3+3');
+      expect(debugInputText()).to.equal('3+3');
       typeKey(KeyCodes.UP);
-      expect(debugInput().text()).to.equal('2+2');
+      expect(debugInputText()).to.equal('2+2');
       typeKey(KeyCodes.UP);
-      expect(debugInput().text()).to.equal('1+1');
+      expect(debugInputText()).to.equal('1+1');
       typeKey(KeyCodes.UP);
-      expect(debugInput().text()).to.equal('1+1');
+      expect(debugInputText()).to.equal('1+1');
     });
 
-    it("the down arrow cycles back down throuh the expressions", () => {
+    it("the down arrow cycles back down through the expressions", () => {
       for (let i = 0; i < 3; i++) {
         // first go back three
         typeKey(KeyCodes.UP);
       }
-      expect(debugInput().text()).to.equal('1+1');
+      expect(debugInputText()).to.equal('1+1');
       typeKey(KeyCodes.DOWN);
-      expect(debugInput().text()).to.equal('2+2');
+      expect(debugInputText()).to.equal('2+2');
       typeKey(KeyCodes.DOWN);
-      expect(debugInput().text()).to.equal('3+3');
+      expect(debugInputText()).to.equal('3+3');
       typeKey(KeyCodes.DOWN);
-      expect(debugInput().text()).to.equal('');
+      expect(debugInputText()).to.equal('');
     });
   });
 
@@ -162,11 +163,11 @@ describe('The DebugConsole component', () => {
       });
 
       it("the text gets removed from the input", () => {
-        expect(debugInput().text()).not.to.contain("1+1;");
+        expect(debugInputText()).not.to.contain("1+1;");
       });
     });
 
-    describe("When typing bad code into the text input and presseing enter,", () => {
+    describe("When typing bad code into the text input and pressing enter,", () => {
       beforeEach(() => submit("a+b;"));
 
       it("the text gets appended to the output", () => {

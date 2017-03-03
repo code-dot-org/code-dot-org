@@ -94,7 +94,7 @@ get '/v2/hoc/certificate/:filename' do |filename|
   begin
     data = JSON.parse(Base64.urlsafe_decode64(encoded))
   rescue ArgumentError, OpenSSL::Cipher::CipherError, JSON::ParserError
-    raise Sinatra::BadRequest
+    bad_request
   end
 
   extnames = ['.jpg', '.jpeg', '.png']
@@ -120,7 +120,7 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
   begin
     label = Base64.urlsafe_decode64(encoded)
   rescue ArgumentError, OpenSSL::Cipher::CipherError
-    raise Sinatra::BadRequest
+    bad_request
   end
 
   extnames = ['.jpg', '.jpeg', '.png']

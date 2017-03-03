@@ -22,9 +22,8 @@ gem 'responders', '~> 2.0'
 gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
 gem 'mysql2', '~> 0.3.13'
-# Ref: https://github.com/bdurand/seamless_database_pool/issues/28
-# Ref: https://github.com/bdurand/seamless_database_pool/issues/31
-# Ref: https://github.com/bdurand/seamless_database_pool/pull/33
+# Ref: https://github.com/bdurand/seamless_database_pool/issues/38
+# Ref: https://github.com/bdurand/seamless_database_pool/pull/39
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
 gem 'dalli' # memcached
@@ -46,7 +45,6 @@ gem 'rack_csrf'
 
 group :development do
   gem 'annotate'
-  gem 'memoist'
   gem 'rack-mini-profiler'
   gem 'ruby-progressbar', require: false
   gem 'thin'

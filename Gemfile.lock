@@ -692,7 +692,6 @@ DEPENDENCIES
   le (~> 2.2)
   lograge
   marked-rails
-  memoist
   mini_magick
   minitest (~> 5.5)
   minitest-around

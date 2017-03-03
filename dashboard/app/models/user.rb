@@ -978,7 +978,7 @@ class User < ActiveRecord::Base
     end
 
     old_result = old_user_level.try(:best_result)
-    !Activity.passing?(old_result) && Activity.passing?(new_result)
+    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
   end
 
   # The synchronous handler for the track_level_progress helper.
@@ -992,7 +992,7 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
-      if !user_level.passing? && Activity.passing?(new_result)
+      if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
       if !user_level.perfect? &&
