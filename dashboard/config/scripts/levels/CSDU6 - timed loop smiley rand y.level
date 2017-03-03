@@ -205,11 +205,16 @@
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 - timed loop smiley template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",

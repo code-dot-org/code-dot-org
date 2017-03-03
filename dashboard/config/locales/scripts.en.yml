@@ -2706,3 +2706,12 @@ en:
           description_audience: Teachers attending an in-person Game Lab Workshop
           description_short: Level progression to accompany an in-person Game Lab Workshop
           description: 'This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach '
+        csd5-draft:
+          stage:
+            new stage: new stage
+            Interpreting Data: Interpreting Data
+            Data in the Real World: Data in the Real World
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
