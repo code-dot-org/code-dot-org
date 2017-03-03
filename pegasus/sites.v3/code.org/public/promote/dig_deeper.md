@@ -1,3 +1,7 @@
+---
+title: Dig Deeper into AP
+---
+
 # Dig Deeper into AP
 
 The AP Computer Science A exam is widely accepted by the computer science education community as one of the most reliable measures of computer science high school course-taking patterns. The College Board’s rigorous methodology and data gathering has enabled us to see trends in AP Computer Science A exam-taking over time, by state, by gender, and by ethnic group. This page contains a summary of that data. 
@@ -8,7 +12,98 @@ This data comes directly from the public spreadsheets available on a per-state b
 
 ## AP Computer Science A Over Time
 
-* [Insert Tableau Graph]
+### By itself
+
+<div class='tableauPlaceholder' id='viz1488497776361' style='position: relative'>
+   <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AP&#47;APassessmentdatadraft&#47;Byminoritystatus&#47;1_rss.png' style='border: none' /></a></noscript>
+   <object class='tableauViz'  style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='site_root' value='' />
+      <param name='name' value='APassessmentdatadraft&#47;Byminoritystatus' />
+      <param name='tabs' value='yes' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AP&#47;APassessmentdatadraft&#47;Byminoritystatus&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+   </object>
+</div>
+
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1488497776361');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '804px';
+    vizElement.style.height = '695px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+### Side by side
+
+[col-50]
+
+<div class='tableauPlaceholder' id='viz1488497776361' style='position: relative'>
+   <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AP&#47;APassessmentdatadraft&#47;Byminoritystatus&#47;1_rss.png' style='border: none' /></a></noscript>
+   <object class='tableauViz'  style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='site_root' value='' />
+      <param name='name' value='APassessmentdatadraft&#47;Byminoritystatus' />
+      <param name='tabs' value='yes' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AP&#47;APassessmentdatadraft&#47;Byminoritystatus&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+   </object>
+</div>
+
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1488497776361');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '804px';
+    vizElement.style.height = '695px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+[/col-50]
+
+[col-50]
+
+<div class='tableauPlaceholder' id='viz1488497776361' style='position: relative'>
+   <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AP&#47;APassessmentdatadraft&#47;Byminoritystatus&#47;1_rss.png' style='border: none' /></a></noscript>
+   <object class='tableauViz'  style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='site_root' value='' />
+      <param name='name' value='APassessmentdatadraft&#47;Byminoritystatus' />
+      <param name='tabs' value='yes' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AP&#47;APassessmentdatadraft&#47;Byminoritystatus&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+   </object>
+</div>
+
+<script type='text/javascript'>
+    var divElement = document.getElementById('viz1488497776361');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '804px';
+    vizElement.style.height = '695px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+[/col-50]
 
 _Change in ethnic group categories: In 2016, the College Board changed the ethnic group categories that they report. Prior to 2016, we considered the following to be underrepresented minority groups: American Indian, Black, Mexican American, Puerto Rican, and Other Hispanic. In 2016, we considered the following categories: American Indian/Alaska Native, Black, Hispanic/Latino, and Native Hawaiian/Other Pacific Islander._
 
