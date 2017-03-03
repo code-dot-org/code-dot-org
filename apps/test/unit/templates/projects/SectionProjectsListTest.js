@@ -71,14 +71,63 @@ describe('SectionProjectsList', () => {
     assertRowContents(rows.nodes[4], 'Another App', 'Alice');
   });
 
+  it ('shows the correct list of students in the student filter dropdown', () => {
+    const options = root.find('option');
+    expect(options).to.have.length(4);
+    expect(options.nodes[0].innerText).to.equal('All');
+    expect(options.nodes[1].innerText).to.equal('Alice');
+    expect(options.nodes[2].innerText).to.equal('Bob');
+    expect(options.nodes[3].innerText).to.equal('Charlie');
+
+    const select = root.find('select');
+    expect(select.nodes[0].value).to.equal('_all_students');
+  });
+
   it ('filters projects when a student is selected from the dropdown', () => {
-    root.find('select').simulate('change', {target: {value: 'Alice'}});
+    const select = root.find('select');
+    select.simulate('change', {target: {value: 'Alice'}});
+    expect(select.nodes[0].value).to.equal('Alice');
 
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
     assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice');
     assertRowContents(rows.nodes[2], 'Another App', 'Alice');
+  });
+
+  it('shows all students projects if the current students projects all disappear', () => {
+    const select = root.find('select');
+    select.simulate('change', {target: {value: 'Charlie'}});
+    expect(select.nodes[0].value).to.equal('Charlie');
+
+    let rows = root.find('tr');
+    expect(rows).to.have.length(2);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
+    assertRowContents(rows.nodes[1], 'Cats and Kittens', 'Charlie');
+
+    // Remove Charlie's project from the list
+    const newProjectsData = Array.from(STUB_PROJECTS_DATA);
+    const charlieProjectIndex = newProjectsData.findIndex(project => (
+      project.studentName === 'Charlie'
+    ));
+    newProjectsData.splice(charlieProjectIndex, 1);
+    root.setProps({projectsData: newProjectsData});
+
+    // We should now see all students projects, except Charlie's
+    rows = root.find('tr');
+    expect(select.nodes[0].value).to.equal('_all_students');
+    expect(rows).to.have.length(4);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
+    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice');
+    assertRowContents(rows.nodes[2], 'Batyote', 'Bob');
+    assertRowContents(rows.nodes[3], 'Another App', 'Alice');
+
+    // Charlie should no longer appear in the dropdown
+    const options = root.find('option');
+    expect(options).to.have.length(3);
+    expect(options.nodes[0].innerText).to.equal('All');
+    expect(options.nodes[1].innerText).to.equal('Alice');
+    expect(options.nodes[2].innerText).to.equal('Bob');
   });
 
   describe('getStudentNames', () => {
