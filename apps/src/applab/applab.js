@@ -1441,14 +1441,39 @@ Applab.onPuzzleComplete = function (submit) {
     }
   };
 
-  var divApplab = document.getElementById('divApplab');
-  if (!divApplab) {
+  var visualization = document.getElementById('visualization');
+  var thumbnailElement = document.getElementById(Applab.thumbnailElementId);
+  if (!thumbnailElement) {
+    console.log(`${Applab.thumbnailElementId} not found. skipping screenshot.`)
     sendReport();
   } else {
-    var el = document.getElementById('screen1');
-    console.log(`calling html2canvas on ${el.id}`)
-    html2canvas(el, {
+    let didPinVizSize = false;
+
+    if (!visualization.style.maxWidth) {
+      // The user has not manually resized the visualization column with the grippy.
+      // In order for the screenshot to take correctly, we need to set the column size,
+      // and then remember to clear it later so that the layout becomes responsive again.
+      Applab.pinVisualizationSize();
+      didPinVizSize = true;
+    }
+
+    // console.log(`calling html2canvas on ${visualization.id}`)
+    // console.log(`visualizationResizeBar.style: ${document.getElementById('visualizationResizeBar').getAttribute('style')}`)
+    // console.log(`visualizationColumn.style: ${document.getElementById('visualizationColumn').getAttribute('style')}`)
+    // console.log(`visualization.style: ${visualization.getAttribute('style')}`)
+    // console.log(`visualization children:`)
+    // for (var i = 0; i < visualization.children.length; i++) {
+    //   var child = visualization.children[i];
+    //   console.log(`  ${child.id}.style: ${child.getAttribute('style')}`)
+    // }
+
+    console.log(`calling html2canvas`)
+    debugger;
+    html2canvas(thumbnailElement, {
       onrendered(canvas) {
+        if (didPinVizSize) {
+          Applab.clearVisualizationSize();
+        }
         console.log(`html2canvas onrendered`)
         var pngDataUrl = canvas.toDataURL("image/png");
         console.log('html2canvas toDataURL complete')
@@ -1468,10 +1493,24 @@ Applab.onPuzzleComplete = function (submit) {
       // width: 320,
       // height: 320,
       background: '#eee',
-      logging: true
+      //logging: true,
+      //letterRendering: true,
     });
   }
 };
+
+Applab.thumbnailElementId = 'visualization';
+
+Applab.clearVisualizationSize = function () {
+  console.log(`Applab.clearVisualizationSize`)
+  studioApp.clearVisualizationSize();
+};
+
+Applab.pinVisualizationSize = function () {
+  console.log(`Applab.pinVisualizationSize`)
+  studioApp.resizeVisualization($('#visualization').width());
+};
+
 
 Applab.executeCmd = function (id, name, opts) {
   var cmd = {
