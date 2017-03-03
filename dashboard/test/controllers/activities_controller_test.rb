@@ -25,7 +25,18 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   setup do
+    client_state.reset
+    Gatekeeper.clear
+
+    # rubocop:disable Lint/Void
+    LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
+    # rubocop:enable Lint/Void
+    CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
+
+    Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
+
     @user = create(:user, total_lines: 15)
+    sign_in(@user)
 
     @activity = create(:activity, user: @user)
 
@@ -56,15 +67,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # Stub out the SQS client to invoke the handler on queued messages only when requested.
     @fake_queue = FakeQueue.new(AsyncProgressHandler.new)
-
-    client_state.reset
-    Gatekeeper.clear
-    # rubocop:disable Lint/Void
-    LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
-    # rubocop:enable Lint/Void
-    CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
-    Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
-    sign_in(@user)
     AsyncProgressHandler.stubs(:progress_queue).returns(@fake_queue)
   end
 
