@@ -93,6 +93,8 @@ const ProgressLessonTeacherInfo = React.createClass({
   }
 });
 
+export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
+
 export default connect(state => ({
   sectionId: state.sections.selectedSectionId,
   scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
