@@ -1,8 +1,8 @@
-var React = require('react');
-var SoundList = require('./SoundList');
+import React from 'react';
+import SoundList from './SoundList';
 
 /**
- * A component for managing sounds.
+ * A component for managing sounds, searching sounds, and categories of sounds.
  */
 var SoundLibrary = React.createClass({
   propTypes: {

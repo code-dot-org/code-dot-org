@@ -1,8 +1,8 @@
-var React = require('react');
-var SoundListEntry = require('./SoundListEntry');
-var soundLibrary = require('../soundLibrary.json');
+import React from 'react';
+import SoundListEntry from './SoundListEntry';
 import Immutable from 'immutable';
 import Sounds from '../../Sounds';
+var soundLibrary = require('../soundLibrary.json');
 
 /**
  * A component for managing sounds from soundLibrary.json.
