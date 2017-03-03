@@ -134,11 +134,16 @@ namespace :test do
         if seed_data.equal?(cloned_data)
           CDO.log.info 'Test data not modified'
         else
+          seed_2_file = Tempfile.new(['db_seed', '.sql'])
+          File.write(seed_2_file, cloned_data)
+          puts "Diff:\n"
+          puts `diff #{seed_file.path} #{seed_2_file.path}`
+
           # Clone single DB across all databases
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          pipes = Array.new(procs) { |i| ">(mysql -u#{writer.user} dashboard_test#{i+1})" }.join(' ')
+          pipes = Array.new(procs) { |i| ">(mysql -u#{writer.user} dashboard_test#{i + 1})" }.join(' ')
           RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
         end
 

@@ -2,8 +2,8 @@ require 'test_helper'
 
 module Pd::Payment
   class PaymentCalculatorStandardTest < ActiveSupport::TestCase
-
     self.use_transactional_test_case = true
+
     setup_all do
       # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
       @workshop = create :pd_ended_workshop,

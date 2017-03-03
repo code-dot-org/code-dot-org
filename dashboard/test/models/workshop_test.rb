@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class WorkshopTest < ActiveSupport::TestCase
-
   # see also tests in OpsMailerTest
 
   def create_workshop(segment_starts_and_ends)

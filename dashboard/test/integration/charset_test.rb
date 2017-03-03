@@ -5,7 +5,6 @@ require 'test_helper'
 # not used when they should on reads. These tests test that they are
 # rejected before attempting to read or write them from the db.
 class CharsetTest < ActionDispatch::IntegrationTest
-
   def setup
     Script.stubs(:should_cache?).returns true
   end
