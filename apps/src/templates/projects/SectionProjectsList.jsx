@@ -37,10 +37,6 @@ class SectionProjectsList extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (_.isEqual(nextProps, this.props)) {
-      return;
-    }
-
     const studentNames = SectionProjectsList.getStudentNames(nextProps.projectsData);
     this.setState({studentNames});
   }
