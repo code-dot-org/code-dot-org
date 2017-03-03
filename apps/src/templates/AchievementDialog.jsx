@@ -189,7 +189,7 @@ const AchievementDialog = Radium(React.createClass({
   },
 
   render() {
-    const showNumBlocksRow = Number.isFinite(this.props.idealBlocks);
+    const showNumBlocksRow = isFinite(this.props.idealBlocks);
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
     const tooManyHints = this.props.hintsUsed > 0;
