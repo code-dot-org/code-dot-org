@@ -133,7 +133,7 @@ namespace :test do
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          pipes = Array.new(procs) { |i| ">(mysql -uroot dashboard_test#{i})" }.join(' ')
+          pipes = Array.new(procs) { |i| ">(mysql -uroot dashboard_test#{i+1})" }.join(' ')
           RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
         end
 
