@@ -27,11 +27,16 @@ class LevelSource < ActiveRecord::Base
   # For more context, see https://github.com/code-dot-org/code-dot-org/pull/13579.
   belongs_to :level
   has_one :level_source_image
-
   has_many :activities
 
   validates_length_of :data, maximum: 20000
   validates :data, no_utf8mb4: true
+
+  before_save :recompute_md5
+
+  def recompute_md5
+    self.md5 = Digest::MD5.hexdigest(data)
+  end
 
   # This string used to sometimes appear in program XML.
   # We now strip it out, but it remains in some old LevelSource.data.
