@@ -18,7 +18,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     if params[:include_enrollments]
       return_val = @workshops.map do |workshop|
         enrollment = workshop.enrollments.where('email = ? OR user_id = ?', current_user.email, current_user.id).first
-        Api::V1::Pd::WorkshopSerializer.new(workshop, scope: {enrollment_id: enrollment.try(&:id)}).attributes
+        Api::V1::Pd::WorkshopSerializer.new(workshop, scope: {enrollment_id: enrollment.try(:id), enrollment_code: enrollment.try(:code)}).attributes
       end
 
       render json: return_val
