@@ -4,8 +4,6 @@ module Ops
     include Devise::Test::IntegrationHelpers
     API = ::OPS::API
 
-    self.fixture_table_names = []
-
     setup do
       @admin = create :admin
 

@@ -4,7 +4,6 @@ require 'cdo/shared_constants'
 class PeerReviewsControllerTest < ActionController::TestCase
   include SharedConstants
 
-  self.fixture_table_names = []
   self.use_transactional_test_case = true
 
   setup_all do

@@ -8,7 +8,6 @@ end
 class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  self.fixture_table_names = []
   self.use_transactional_test_case = true
 
   setup_all do

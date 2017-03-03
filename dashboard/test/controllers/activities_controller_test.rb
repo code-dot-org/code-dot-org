@@ -24,8 +24,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
-  self.fixture_table_names = []
-
   setup do
     @user = create(:user, total_lines: 15)
 

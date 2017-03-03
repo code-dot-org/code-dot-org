@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class WorkshopTest < ActiveSupport::TestCase
-  self.fixture_table_names = []
 
   # see also tests in OpsMailerTest
 
