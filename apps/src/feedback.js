@@ -204,7 +204,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         actualBlocks <= idealBlocks,
         hintsUsed,
         options.response.level_id,
-        Number.isFinite(idealBlocks)) :
+        isFinite(idealBlocks)) :
       {};
 
     document.body.appendChild(container);
