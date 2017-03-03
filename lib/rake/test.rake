@@ -77,7 +77,15 @@ namespace :test do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
-        RakeUtils.rake_stream_output 'parallel:create parallel:rake[db:test:prepare]'
+        # Prepare single DB
+        ENV['TEST_ENV_NUMBER'] = '1'
+        RakeUtils.rake_stream_output 'db:create db:test:prepare'
+        ENV.delete 'TEST_ENV_NUMBER'
+        require 'parallel_tests'
+        procs = ParallelTests.determine_number_of_processes(nil)
+        # Clone single DB across all processes
+        pipes = Array.new(procs) { |i| ">(mysql -uroot dashboard_test#{i+1})" }.last(procs-1).join(' ')
+        RakeUtils.system_stream_output "/bin/bash -c 'mysqldump -uroot dashboard_test | tee #{pipes} > /dev/null'"
         TestRunUtils.run_dashboard_tests(parallel: true)
         ENV.delete 'UNIT_TEST'
         RakeUtils.start_service CDO.dashboard_unicorn_name
