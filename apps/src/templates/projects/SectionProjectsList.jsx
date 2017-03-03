@@ -1,10 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import ProjectsList from './ProjectsList';
-import StudentFilterDropdown from './StudentFilterDropdown';
+import StudentFilterDropdown, {ALL_STUDENTS} from './StudentFilterDropdown';
 import _ from 'lodash';
 import color from "../../util/color";
-
-const ALL_STUDENTS = '_all_students';
 
 const styles = {
   filterComponent: {
@@ -30,6 +28,14 @@ class SectionProjectsList extends Component {
       studentNames,
       selectedStudent: ALL_STUDENTS,
     };
+  }
+
+  static getStudentNames(projectsData) {
+    return _(projectsData)
+      .map(p => p.studentName)
+      .uniq()
+      .sortBy()
+      .value();
   }
 
   onChangeStudent(selectedStudent) {
@@ -76,14 +82,6 @@ SectionProjectsList.propTypes = {
   // The prefix for the code studio url in the current environment,
   // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
   studioUrlPrefix: PropTypes.string.isRequired,
-};
-
-SectionProjectsList.getStudentNames = function (projectsData) {
-  return _(projectsData)
-    .map(p => p.studentName)
-    .uniq()
-    .sortBy()
-    .value();
 };
 
 export default SectionProjectsList;

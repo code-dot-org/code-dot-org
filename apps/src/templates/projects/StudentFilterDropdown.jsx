@@ -3,7 +3,7 @@ import Radium from 'radium';
 import color from "../../util/color";
 import commonMsg from '@cdo/locale';
 
-const ALL_STUDENTS = '_all_students';
+export const ALL_STUDENTS = '_all_students';
 
 const styles = {
   filterWrapper: {
@@ -21,10 +21,6 @@ const styles = {
 };
 
 class StudentFilterDropdown extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   onChange(event) {
     const selectedStudent = event.target.value;
     this.props.onChangeStudent(selectedStudent);
