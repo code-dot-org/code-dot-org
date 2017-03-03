@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# What Happens Between Repetitions\r\n\r\nWhen the `timedLoop()` is waiting for the next repetition, the rest of your program is free to do whatever else it needs to do, including respond to events.\r\n\r\nAdd an event handler for the \"smiley\" image. You can make the event do whatever you like - just test it to make sure that your event responds each time the image is moved.\r\n\r\n_Challenge: At this point you've got the start of a simple clicker gamer. Consider keeping track of score, or adding additional event handlers._",
+    "markdown_instructions": "# What Happens Between Repetitions\r\n\r\nWhen the `timedLoop()` is waiting for the next repetition, the rest of your program is free to do whatever else it needs to do, including respond to events.\r\n\r\nAdd an event handler for the \"smiley\" image. You can make the event do whatever you like - just test it to make sure that your event responds each time the image is moved.\r\n\r\n**Heads Up**: Make sure to put your event handler **outside** of the loop, otherwise a new event handler will be added _every time your loop is run!_ \r\n\r\n_Challenge: At this point you've got the start of a simple clicker gamer. Consider keeping track of score, or adding additional event handlers._",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -205,12 +205,16 @@
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSDU6 - timed loop smiley template",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",

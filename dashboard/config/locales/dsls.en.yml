@@ -625,10 +625,20 @@ en:
       CSD U4L22 SFLP: {}
       CSD U4L23 SFLP: {}
       CSD U4L24 SFLP: {}
+      CSD U5 Real World Data Waze: {}
+      CSD U5 collection UPS2:
+        description here: description here
+        title: title
+      CSD U5 collection ads2:
+        description here: description here
+        title: title
       CSD U5 data visualization:
         description here: description here
         title: title
       CSD U5 data visualization sheet:
+        description here: description here
+        title: title
+      CSD U5 video2:
         description here: description here
         title: title
       CSD U6L03 Overview: {}
@@ -3077,6 +3087,9 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
+      unique level name here:
+        description here: description here
+        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -7072,6 +7085,15 @@ en:
         The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
         The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
         What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseF_multi_artist_for10_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrect. The artist turns between iterations of the `for` loop.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
       courseF_multi_artist_variables3a_predict1:
         Correct!  The `length` variable is being used in the `turn` block.: Correct!  The `length` variable is being used in the `turn` block.
         I don't know.: I don't know.
@@ -7083,6 +7105,14 @@ en:
         The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
         The artist will draw three sides with 50 degree turns.: The artist will draw three sides with 50 degree turns.
         We have set the variable `length` to 50.  What will happen when you click "Run"?: We have set the variable `length` to 50.  What will happen when you click "Run"?
+      courseF_multi_bee_for3_predict1:
+        Correct!: Correct!
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
+        'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
+        'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
       courseF_multi_playlab_variables4c_predictive1:
         'Correct. ': 'Correct. '
         I don't know.: I don't know.

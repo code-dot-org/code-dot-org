@@ -1,5 +1,5 @@
 Before('@as_student') do
-  steps 'Given I create a student named "TestStudent"'
+  steps "Given I create a student named \"Test_#{rand(100000)}_student\""
 end
 
 After('@as_student') do
@@ -8,7 +8,7 @@ After('@as_student') do
 end
 
 Before('@as_taught_student') do
-  steps 'Given I create a teacher-associated student named "TestTaughtStudent"'
+  steps "Given I create a teacher-associated student named \"Teach_#{rand(100000)}student\""
 end
 
 After('@as_taught_student') do
@@ -17,7 +17,7 @@ After('@as_taught_student') do
 end
 
 Before('@as_authorized_taught_student') do
-  steps 'Given I create an authorized teacher-associated student named "TestTaughtStudent"'
+  steps "Given I create an authorized teacher-associated student named \"Teach_#{rand(100000)}student\""
 end
 
 After('@as_authorized_taught_student') do

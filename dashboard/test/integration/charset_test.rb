@@ -9,28 +9,34 @@ class CharsetTest < ActionDispatch::IntegrationTest
     Script.stubs(:should_cache?).returns true
   end
 
-  def no_database
-    Rails.logger.info '--------------'
-    Rails.logger.info 'DISCONNECTING DATABASE'
-    Rails.logger.info '--------------'
-
-    ActiveRecord::Base.connection.disconnect!
-  end
-
   test "attempting to log in as user with utf8mb4 chars does not hit the db" do
     # make sure all the classes are loaded
     post '/users/sign_in', params: {
-      login: 'not a user',
-      password: 'not a password'
+      user: {
+        login: 'not a user',
+        password: 'not a password'
+      }
     }
     assert_response :success
     assert_select 'div.alert', 'Invalid email or password.'
 
     no_database
 
+    # normal request should error on DB access attempt
     post '/users/sign_in', params: {
-      login: panda_panda,
-      password: 'not a password'
+      user: {
+        login: 'not a user',
+        password: 'not a password'
+      }
+    }
+    assert_response :internal_server_error
+
+    # Panda request should not error
+    post '/users/sign_in', params: {
+      user: {
+        login: panda_panda,
+        password: 'not a password'
+      }
     }
     assert_response :success
     assert_select 'div.alert', 'Invalid email or password.'
