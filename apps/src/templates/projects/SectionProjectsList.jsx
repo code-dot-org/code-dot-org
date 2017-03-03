@@ -24,20 +24,12 @@ class SectionProjectsList extends Component {
   constructor(props) {
     super(props);
 
-    const studentNames = this.getStudentNames(props.projectsData);
+    const studentNames = SectionProjectsList.getStudentNames(props.projectsData);
 
     this.state = {
       studentNames,
       selectedStudent: ALL_STUDENTS,
     };
-  }
-
-  getStudentNames(projectsData) {
-    return _(projectsData)
-      .map(p => p.studentName)
-      .uniq()
-      .sortBy()
-      .value();
   }
 
   onChangeStudent(selectedStudent) {
@@ -49,7 +41,7 @@ class SectionProjectsList extends Component {
       return;
     }
 
-    const studentNames = this.getStudentNames(nextProps.projectsData);
+    const studentNames = SectionProjectsList.getStudentNames(nextProps.projectsData);
     this.setState({studentNames});
   }
 
@@ -83,6 +75,14 @@ SectionProjectsList.propTypes = {
   // The prefix for the code studio url in the current environment,
   // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
   studioUrlPrefix: PropTypes.string.isRequired,
+};
+
+SectionProjectsList.getStudentNames = function (projectsData) {
+  return _(projectsData)
+    .map(p => p.studentName)
+    .uniq()
+    .sortBy()
+    .value();
 };
 
 export default SectionProjectsList;
