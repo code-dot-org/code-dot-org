@@ -144,6 +144,7 @@ namespace :test do
         TestRunUtils.run_dashboard_tests(parallel: true)
 
         ENV.delete 'UNIT_TEST'
+        ENV.delete 'CODECOV_FLAGS'
       end
     end
   end
