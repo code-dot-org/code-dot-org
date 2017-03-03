@@ -8,15 +8,34 @@ var SoundListEntry = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func.isRequired,
     soundMetadata: React.PropTypes.object.isRequired,
-    isSelected: React.PropTypes.bool.isRequired
+    isSelected: React.PropTypes.bool.isRequired,
+    soundsRegistry: React.PropTypes.object.isRequired
   },
 
-  playSound: function () {
-    if (this.props.isSelected) {
-      console.log("its selected please play");
+  getInitialState: function () {
+    return {
+      isPlaying: false
+    };
+  },
+
+  componentWillReceiveProps: function (nextProps) {
+    if (!nextProps.isSelected) {
+      this.setState({isPlaying: false});
+    }
+  },
+
+  clickSoundControl: function () {
+    if (this.state.isPlaying) {
+      this.props.soundsRegistry.stopAllAudio();
+      this.setState({isPlaying: false});
     } else {
-      // select it
-      // play it
+      this.setState({isPlaying: true});
+      this.props.soundsRegistry.playURL(
+        this.props.soundMetadata.sourceUrl,
+        { onEnded: function () {
+          this.setState({isPlaying: false});
+        }.bind(this)
+      });
     }
   },
 
@@ -42,11 +61,11 @@ var SoundListEntry = React.createClass({
       },
       icon: {
         float: 'left',
-        padding: '6px 5px'
+        padding: '6px 10px 6px 2px'
       },
       metadata: {
         float: 'left',
-        width: '160px',
+        width: '175px',
         overflow: 'hidden',
         textOverflow: 'ellipsis'
       },
@@ -60,6 +79,7 @@ var SoundListEntry = React.createClass({
     };
 
     const selectedColor = this.props.isSelected ? styles.selected : styles.notSelected;
+    const playIcon = this.state.isPlaying ? 'fa-pause-circle' : 'fa-play-circle';
 
     return (
       <div
@@ -68,7 +88,7 @@ var SoundListEntry = React.createClass({
         onClick={this.props.assetChosen.bind(null, this.props.soundMetadata)}
       >
         <div style={styles.icon}>
-          <i onClick={this.playSound} className={'fa fa-play-circle fa-2x'} />
+          <i onClick={this.clickSoundControl} className={'fa ' + playIcon + ' fa-2x'} />
         </div>
         <div style={styles.metadata}>
           <span style={styles.soundName}>
