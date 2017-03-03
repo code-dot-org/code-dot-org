@@ -8,9 +8,6 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
       full_name: @teacher.name, email: @teacher.email, completed_survey_id: 1234
 
     @fake_rsa_key = 'fake rsa key'
-    @mock_rsa = mock
-    OpenSSL::PKey::RSA.stubs(:new).with(@fake_rsa_key).returns(@mock_rsa)
-    @mock_rsa.stubs(:public_encrypt).returns('fake encrypted token')
 
     @secrets = {
       rsa_public_key: Base64.encode64(@fake_rsa_key),
@@ -19,6 +16,9 @@ class Pd::MimeoSsoControllerTest < ::ActionController::TestCase
       company_name: 'fake company name',
       redirect_url: 'fake redirect url'
     }.stringify_keys
+    @mock_rsa = mock
+    OpenSSL::PKey::RSA.stubs(:new).with(@fake_rsa_key).returns(@mock_rsa)
+    @mock_rsa.stubs(:public_encrypt).returns('fake encrypted token')
     CDO.stubs(:mimeo_sso).returns @secrets
   end
 

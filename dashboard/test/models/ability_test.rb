@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class AbilityTest < ActiveSupport::TestCase
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @public_script = create(:script).tap do |script|
       @public_script_level = create(:script_level, script: script)
     end
