@@ -1,14 +1,14 @@
-var React = require('react');
-var AssetManager = require('./AssetManager');
-var color = require("../../util/color");
-var SoundLibrary = require('./SoundLibrary');
+import React from 'react';
+import AssetManager from './AssetManager';
+import color from "../../util/color";
+import SoundLibrary from './SoundLibrary';
 
 const audioExtension = '.mp3';
 
 /**
- * A component for managing hosted assets.
+ * A component for managing hosted sounds and the Sound Library.
  */
-var ImagePicker = React.createClass({
+var SoundPicker = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
     assetsChanged: React.PropTypes.func,
@@ -102,4 +102,4 @@ var ImagePicker = React.createClass({
     );
   }
 });
-module.exports = ImagePicker;
+module.exports = SoundPicker;
