@@ -40,6 +40,7 @@ const styles = {
       cursor: 'pointer',
     },
     boxSizing: 'border-box',
+    overflow: 'hidden'
   },
   icon: {
     marginRight: 5
@@ -109,11 +110,12 @@ const ProgressButton = React.createClass({
     icon: PropTypes.string,
     target: PropTypes.string,
     style: PropTypes.object,
+    disabled: PropTypes.bool,
     onClick: PropTypes.func
   },
 
   render() {
-    const { href, text, icon, target, style, onClick, ...otherProps } = this.props;
+    const { href, text, icon, target, style, onClick, disabled } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -126,10 +128,10 @@ const ProgressButton = React.createClass({
 
     return (
       <Tag
-        {...otherProps}
         style={[styles.main, styles.colors[color], styles.sizes[size], style]}
         href={href}
         target={target}
+        disabled={disabled}
         onClick={onClick}
       >
         {icon && <FontAwesome icon={icon} style={styles.icon}/>}

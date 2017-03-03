@@ -24,7 +24,6 @@ const styles = {
   rightCol: {
     display: 'table-cell',
     verticalAlign: 'top',
-    // TODO - fixed width will likely get us into trouble for other languages
     width: 200,
     height: '100%',
     borderRadius: 2,
