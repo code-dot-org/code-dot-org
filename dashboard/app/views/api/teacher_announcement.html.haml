@@ -2,31 +2,36 @@
 - code_studio_video_url = 'https://www.youtube.com/watch?v=ZRNRVu4DFcs'
 - beyond_url = 'https://code.org/educate'
 - recruit_ap_students = 'http://teacherblog.code.org/post/156689658029/ask-your-cs-principles-students-to-star-in-our'
-- gift_url = 'http://teacherblog.code.org/post/157254660224/lets-make-history-for-ap-computer-science'
+- recruit_ap_students_gift_url = 'http://teacherblog.code.org/post/157254660224/lets-make-history-for-ap-computer-science'
+- recruit_ap_students_video_url = 'https://www.youtube.com/watch?v=ed_zuLHlMdQ'
 
 .teacher-announce
-  .announce-heading{style: 'height: 20px;'}
+  .announce-heading{style: 'height: 20px; box-sizing: content-box'}
     = t('home.announcement_title')
   #us-announcement{style: 'display: none;'}
+
+    .announce-content
+      %a{href: recruit_ap_students_video_url, target: '_blank'}
+        .content-img-container
+          = image_tag(CDO.shared_image_url('/teacher-announcement/recruit-ap-students-video.jpg'), width: '200px')
+      .content-text
+        != t('home.announcement_apcsp_recruitment3', gift_url: recruit_ap_students_gift_url, video_url: recruit_ap_students_video_url)
+      .announce-learn-more
+        %a{href: recruit_ap_students_video_url, target: '_blank'}
+          %button.primary= t('home.announcement_watch_video_button')
+
     .announce-content
       %a{href: beyond_url, target: '_blank'}
         .content-img-container
           = image_tag(CDO.shared_image_url('/teacher-announcement/teacher-recruitment.jpg'), width: '200px')
       .content-text
-        != t('home.announcement_teacher_recruitment')
+        != t('home.announcement_teacher_recruitment2')
       .announce-learn-more
         %a{href: beyond_url, target: '_blank'}
           %button.primary= t('home.announcement_learn_more_button')
-    .announce-content
-      %a{href: gift_url, target: '_blank'}
-        .content-img-container
-          = image_tag(CDO.shared_image_url('/teacher-announcement/recruit-ap-students.jpg'), width: '200px')
-      .content-text
-        != t('home.announcement_apcsp_recruitment2', gift_url: gift_url, challenge_url: recruit_ap_students)
-      .announce-learn-more
-        %a{href: gift_url, target: '_blank'}
-          %button.primary= t('home.announcement_learn_more_button')
+
   #non-us-announcement{style: 'display: none;'}
+
     .announce-content
       %a{href: code_studio_video_url, target: '_blank'}
         .content-img-container
@@ -36,22 +41,10 @@
       .announce-learn-more
         %a{href: beyond_url, target: '_blank'}
           %button.primary= t('home.announcement_go_beyond_button')
+
   .mini-announcement
     .content-text
       %i.fa.fa-hand-o-right
       != t('home.announcement_all', teacher_blog_url: teacher_blog_url)
 
 #clearboth{style: 'clear: both;'}
-
-:javascript
-  $(document).ready(function () {
-    $.getJSON( "/v2/client-location", function (data) {
-      country_code = data['country_code'];
-      if (country_code === 'US') {
-        $('#us-announcement').show();
-      }
-      else {
-        $('#non-us-announcement').show();
-      }
-    });
-  });

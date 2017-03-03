@@ -12,7 +12,7 @@
     ],
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "var counter = 0;\r\ntimedLoop(1000, function(exit) {\r\n  console.log('looped');\r\n  counter = counter + 1;\r\n  if (counter > 2) {\r\n    exit();\r\n  }\r\n});",
+    "start_blocks": "var counter = 0;\r\ntimedLoop(1000, function() {\r\n  console.log('looped');\r\n  counter = counter + 1;\r\n  if (counter > 2) {\r\n    stopTimedLoop();\r\n  }\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -45,7 +45,11 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "encrypted_examples": [
+
+    ],
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
