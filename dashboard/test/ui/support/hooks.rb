@@ -1,5 +1,5 @@
 Before('@as_student') do
-  steps 'Given I create a student named "TestStudent"'
+  steps 'Given I am a student'
 end
 
 After('@as_student') do
