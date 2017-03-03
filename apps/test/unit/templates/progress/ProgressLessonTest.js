@@ -13,6 +13,8 @@ describe('ProgressLesson', () => {
     lesson: fakeLesson('lesson1', 1),
     levels: fakeLevels(3),
     lessonNumber: 3,
+    showTeacherInfo: false,
+    viewAs: ViewType.Teacher,
     lessonIsVisible: () => true,
     lessonLockedForSection: () => false
   };
@@ -101,10 +103,10 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => false}
       />
     );
-    assert.equal(wrapper.children().at(0).children().at(0).props().icon, 'unlock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'unlock');
   });
 
-  it('has an locked icon when section is lockable and locked', () => {
+  it('has a locked icon when section is lockable and locked', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -112,7 +114,7 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => true}
       />
     );
-    assert.equal(wrapper.children().at(0).children().at(0).props().icon, 'lock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
   });
 
   it('has both a hidden and a locked icon when section is lockable and locked and hidden', () => {
@@ -124,7 +126,7 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => true}
       />
     );
-    assert.equal(wrapper.children().at(0).children().at(0).props().icon, 'eye-slash');
-    assert.equal(wrapper.children().at(0).children().at(1).props().icon, 'lock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'eye-slash');
+    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'lock');
   });
 });
