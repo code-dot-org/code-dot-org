@@ -37,6 +37,7 @@ import {Provider} from 'react-redux';
 import reducers from './reducers';
 import {add as addWatcher} from '../redux/watchedExpressions';
 import * as actions from './actions';
+import * as selectors from './selectors';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 import * as applabConstants from './constants';
@@ -78,13 +79,6 @@ export default Applab;
  * @type {JsInterpreterLogger} observes the interpreter and logs to console
  */
 var jsInterpreterLogger = null;
-
-/**
- * Whether Maker Toolkit is enabled on this level.  Will be initialized on
- * level load.
- * @private {boolean}
- */
-let makerEnabled = false;
 
 /**
  * Maker Toolkit Board Controller for a currently-connected board, simulator,
@@ -160,8 +154,6 @@ function loadLevel() {
   for (var key in level.scale) {
     Applab.scale[key] = level.scale[key];
   }
-
-  makerEnabled = !!level.makerlabEnabled;
 }
 
 //
@@ -797,6 +789,10 @@ Applab.init = function (config) {
     showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
   });
 
+  if (config.level.makerlabEnabled) {
+    studioApp.reduxStore.dispatch(actions.maker.enable());
+  }
+
   studioApp.reduxStore.dispatch(changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
@@ -1195,7 +1191,7 @@ Applab.execute = function () {
     }
   }
 
-  if (makerEnabled) {
+  if (isMakerEnabled()) {
     connectToMakerBoard()
         .then(board => {
           board.installOnInterpreter(codegen, Applab.JSInterpreter);
@@ -1673,3 +1669,7 @@ Applab.readProperty = function (element, property) {
 Applab.getAppReducers = function () {
   return reducers;
 };
+
+function isMakerEnabled() {
+  return selectors.maker.isEnabled(studioApp.reduxStore.getState());
+}
