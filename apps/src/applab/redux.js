@@ -1,4 +1,5 @@
 /** @file App Lab redux module */
+import _ from 'lodash';
 import * as utils from '../utils';
 import { ApplabInterfaceMode } from './constants';
 import data from '../storage/redux/data';
@@ -6,12 +7,17 @@ import screens from './redux/screens';
 import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
 import {
   reducer as maker,
-  actions as makerActions
+  actions as makerActions,
+  selectors as makerSelectors,
 } from '../lib/kits/maker/redux';
 
 // State model?
 
 // Selectors
+export const selectors = {
+  // Curry maker selectors so they accept the root state.
+  maker: _.mapValues(makerSelectors, selector => state => selector(state.maker)),
+};
 
 // Actions
 
