@@ -206,12 +206,16 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
-    "hide_view_data_button": "false",
-    "show_debug_watch": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
-    "contained_level_names": null
+    "makerlab_enabled": "true",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",

@@ -1,5 +1,5 @@
 ---
-title: Hour of Code employee engagement
+title: Volunteer in a Classroom
 require_https: true
 ---
 
@@ -13,30 +13,32 @@ You can join Code.org to help introduce millions of students to computer science
 ## What is the Hour of Code? 
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code”, to show that anybody can learn the basics, and to broaden participation in the field of computer science. Since 2013, the Hour of Code has been part of Computer Science Education Week, an annual celebration of the computing field and its heritage. Now a global movement, the Hour of Code has reached over 100 million students of diverse backgrounds in 180+ countries! 
 
-Computer science is the defining field of the 21st century, yet most schools don’t teach it. Help us bring computer science to more students in your community by getting your employees involved and volunteering in Hour of Code classrooms during Computer Science Education Week, December 5-11, 2016!
+Computer science is the defining field of the 21st century, yet most schools don’t teach it. Help us bring computer science to more students in your community by getting your employees involved and volunteering in Hour of Code classrooms during Computer Science Education Week, December 10-16, 2017! 
+
+Learn more about the Hour of Code [here](https://www.hourofcode.com).
 
 ## Overview
-The Hour of Code volunteer in a classroom program gives your employees the opportunity to be a guest speaker and help students through online tutorials in their local classrooms or via video call. This opportunity is provided year-round, however, the demand for volunteers in our teachers' classrooms is much higher during CSEdWeek.
+The Hour of Code volunteer in a classroom program gives your employees the opportunity to be a guest speaker and help students through online tutorials in their local classrooms or via video call. This opportunity is provided year-round, however, the demand for volunteers in our teachers' classrooms is much higher during Computer Science Education Week.
 
-The general timeline shown below covers what to expect when running this program for CSEdWeek:
+The general timeline shown below covers what to expect when running this program for Computer Science Education Week:
 
 |Date|Action|
 |-----|------|
 |Mid-late August|Company administrators attend Code.org hosted Hour of Code Corporate Partner Call|
 |Mid September - early October|Company administrators send [first communication](#communication1) about program to employees|
-|Mid October|Company employees attend Code.org hosted Volunteer Training Webinar<br>[see last year's recording](https://www.youtube.com/watch?v=aZWz5XX5PXk)|
+|Mid October|Company employees attend Code.org hosted Volunteer Training Webinar<br>Check out last year's [recording](https://www.youtube.com/watch?v=aZWz5XX5PXk)!|
 |Late October - mid November|Company administrators send [second communication](#communication2) to employees about program|
-|October - November|Teachers reach out to employees to signed up|
+|October - November|Teachers reach out to employees who have signed up|
 |Second week in December<br><strong>CS Education Week</strong>|Employees who were contacted by teachers volunteer in classrooms|
-|Mid December|Code.org sends employee volunteers participation and feedback survey|
-|Late January - February|Company's receive Hour of Code impact report and participation numbers|
+|Mid December|Employee volunteers receive participation and feedback survey|
+|Late January - February|Companyies receive Hour of Code impact report and participation numbers|
 <br/>
 Code.org also offers this volunteer toolkit! It provides your employees with all the information they need to know before heading to a classroom. Code.org will send this out to employees once they sign up.
 <br/>
 
 ## <a name="communication1" href"communication1"> First communication to your employees: Volunteer in a classroom!</a>
 _____________________________________________
-**Purpose:** To announce to your employees your company’s participation in the Hour of Code and how they can become a volunteer.<br/>
+**Purpose:** To announce to your employees about your company’s participation in the Hour of Code and how they can become a volunteer.<br/>
 **Subject:** Calling all Hour of Code Volunteers!<br/>
 **Audience:** Your employees
 <br/>
@@ -47,14 +49,14 @@ Computer science is the defining field of the 21st century, yet most schools don
 
 I am excited to announce that [COMPANY] will be joining Code.org this year to help promote the “Hour of Code”! The Hour of Code is a global movement reaching over 100 million students of diverse backgrounds in 180+ countries to help broaden participation in computer science and promote diversity in tech.
 
-Last year, we had over [xxxx] employees volunteer and we hope to exceed our goal this year! 
+Last year, we had over [X] employees volunteer and we hope to exceed our goal this year! 
 
 How you can get involved:
 <strong>Volunteer in a Classroom</strong><br/>
 Volunteer in-person or virtually and inspire students to learn an Hour of Code! 
 <ul>
-<li>October 12 - 12pm PT / 3pm ET: Volunteer Training Webinar— Sign up to volunteer [here](/volunteer)</li>
-<li>A recorded link will be available on our Volunteer page after Oct. 12</li>
+<li>[DATE TBD]: Volunteer Training Webinar— Sign up to volunteer [here](/volunteer)</li>
+<li>A recorded link will be available on Code.org's [Volunteer how-to page](https://hourofcode.com/us/how-to/volunteers)</li>
 <li>October - December: Teachers will reach out to you to plan</li> 
 <li>Second week in December (Computer Science Education Week): have fun volunteering at Hour of Code events!</li> 
 </ul>
@@ -128,8 +130,8 @@ Your employees are volunteering in their communities and spreading the word abou
 
 ### Engineer-specific
 <ul>
-<li>If your very first line of code changed your life, help students near you do their first #HourOfCode  https://code.org/volunteer</li>
-<li>If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer</li>
+<li>If your very first line of code changed your life, help students near you do their first #HourOfCode</li>
+<li>If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode</li>
 </ul>
 
 ### Share our Videos: 
@@ -146,7 +148,7 @@ Your employees are volunteering in their communities and spreading the word abou
 <li>"Code Stars" - short film: (9 min) Learn about a new "superpower" that isn't being taught in 90% of US schools. Starring Bill Gates, Mark Zuckerberg, will.i.am, Chris Bosh, Jack Dorsey, Tony Hsieh, Drew Houston, Gabe Newell, Ruchi Sanghvi, Elena Silenok, Vanessa Hurst, and Hadi Partovi. </li>
 </ul>
 
-###Other resources:
+### Other resources:
 Hour of Code promotional resources: Includes brochures, one-pagers, images, stats, posters, etc.
 About Code.org<br/><br/>
 Promote through Code.org SWAG (all proceeds go to supporting more students gain access to computer science education)
