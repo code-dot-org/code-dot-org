@@ -4,7 +4,7 @@ description 'description here'
 markdown <<MARKDOWN
 ### Collecting Data with Sensors
 
-Check out this video below to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from.
+Watch this video to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Uu-uTo_ma9c" frameborder="0" allowfullscreen></iframe>
 MARKDOWN
