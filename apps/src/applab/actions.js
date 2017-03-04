@@ -1,6 +1,8 @@
 /** @file Redux action-creators for App Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import * as utils from '../utils';
+import {actions as maker} from '../lib/kits/maker/redux';
+export {maker};
 
 /** @enum {string} */
 export const ActionType = utils.makeEnum(
