@@ -37,7 +37,6 @@ export function findPortWithViableDevice() {
       });
 }
 
-
 /**
  * Check whether the Code.org Serial Connector Chrome extension is available.
  * @returns {Promise} Resolves if installed, rejects if not.

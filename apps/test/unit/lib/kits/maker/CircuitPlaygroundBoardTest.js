@@ -4,7 +4,7 @@ import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 
-// Polyfilll node process.hrtime for the browser, which gets used by johnny-five
+// Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
 
 describe('CircuitPlaygroundBoard', () => {
