@@ -1,5 +1,4 @@
-/** @file Redux reducer functions for App Lab.
- *  @see http://redux.js.org/docs/basics/Reducers.html */
+/** @file App Lab redux module */
 import { ActionType } from './actions';
 import { ApplabInterfaceMode } from './constants';
 import data from '../storage/redux/data';
@@ -7,6 +6,13 @@ import screens from './redux/screens';
 import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
 import {reducer as maker} from '../lib/kits/maker/redux';
 
+// State model?
+
+// Selectors
+
+// Actions
+
+// Reducers
 function interfaceMode(state, action) {
   state = state || ApplabInterfaceMode.CODE;
 
@@ -18,10 +24,10 @@ function interfaceMode(state, action) {
   }
 }
 
-export default {
+export const reducers = {
   ...jsDebuggerReducers,
   maker,
   data,
   interfaceMode,
-  screens
+  screens,
 };
