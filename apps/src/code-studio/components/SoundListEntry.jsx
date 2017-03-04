@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
+import * as color from "../../util/color";
 
 /**
  * Component for a single sound tile in the Sound Library.
@@ -55,10 +56,10 @@ var SoundListEntry = React.createClass({
         borderRadius: '5px'
       },
       selected: {
-        backgroundColor: '#cfc9de'
+        backgroundColor: color.lighter_purple
       },
       notSelected: {
-        backgroundColor: '#ffffff'
+        backgroundColor: color.white
       },
       icon: {
         float: 'left',
@@ -74,7 +75,7 @@ var SoundListEntry = React.createClass({
         fontSize: '14px'
       },
       time: {
-        color: '#5b6770',
+        color: color.charcoal,
         fontSize: '11px'
       }
     };
