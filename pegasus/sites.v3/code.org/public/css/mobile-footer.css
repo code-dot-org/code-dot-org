@@ -49,6 +49,7 @@
   padding: 8px 16px;
   margin: 0 24px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 #copyright {
@@ -56,6 +57,11 @@
   color: white;
   font-size: 12px;
   opacity: 0.5;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 970px) {
@@ -66,13 +72,16 @@
   }
 
   .language-dropdown {
-    width: 40%;
-    display: inline;
     padding-right: 5%;
-    padding-bottom: 3px;
   }
 
-  .social-media {
+  .social-language-box {
+    text-align: center;
+  }
+
+  .language-dropdown, .social-media {
+    margin-top: 20px;
+    text-align: center;
     width: 40%;
     display: inline;
     padding-bottom: 3px;
