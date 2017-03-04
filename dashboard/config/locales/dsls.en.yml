@@ -7094,6 +7094,21 @@ en:
         'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
         The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
         What will happen when you click "Run"?: What will happen when you click "Run"?
+        right answer: right answer
+        wrong answer: wrong answer
+      courseF_multi_artist_fwp2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Using parameters lets you use a single function to create different outcomes.: Incorrect.  Using parameters lets you use a single function to create different outcomes.
+        Question: Question
+        The artist will use the same function to draw two different sized boxes.: The artist will use the same function to draw two different sized boxes.
+        The artist will use two different functions to draw the same sized box twice.: The artist will use two different functions to draw the same sized box twice.
+        The artist will use two different functions to draw two different sized boxes.: The artist will use two different functions to draw two different sized boxes.
+        The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
+        The program uses parameters to make a single function to create two different size boxes.: The program uses parameters to make a single function to create two different size boxes.
+        What will happen when you run this program?: What will happen when you run this program?
+        right answer: right answer
+        wrong answer: wrong answer
       courseF_multi_artist_variables3a_predict1:
         Correct!  The `length` variable is being used in the `turn` block.: Correct!  The `length` variable is being used in the `turn` block.
         I don't know.: I don't know.
@@ -7113,6 +7128,14 @@ en:
         'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
         'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
         'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
+        right answer: right answer
+        wrong answer: wrong answer
+      courseF_multi_bee_fwp9_predict1:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       courseF_multi_playlab_variables4c_predictive1:
         'Correct. ': 'Correct. '
         I don't know.: I don't know.
