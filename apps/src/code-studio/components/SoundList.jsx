@@ -11,6 +11,7 @@ var SoundList = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func.isRequired,
     search: React.PropTypes.string.isRequired,
+    category: React.PropTypes.string.isRequired,
     selectedSound: React.PropTypes.object.isRequired
   },
 
@@ -19,7 +20,7 @@ var SoundList = React.createClass({
   },
 
   getMatches: function (searchQuery) {
-    let results = searchSounds(searchQuery);
+    let results = searchSounds(searchQuery, this.props.category);
     return results;
   },
 
@@ -62,7 +63,7 @@ module.exports = SoundList;
  * @return {Array} - Limited list of sounds
  *         from the library that match the search query.
  */
-function searchSounds(searchQuery) {
+function searchSounds(searchQuery, categoryQuery) {
   // Make sure to generate the search regex in advance, only once.
   // Search is case-insensitive
   // Match any word boundary or underscore followed by the search query.
@@ -77,6 +78,19 @@ function searchSounds(searchQuery) {
       .reduce((resultSet, nextAlias) => {
         return resultSet.union(soundLibrary.aliases[nextAlias]);
       }, Immutable.Set());
+
+  if (categoryQuery !== '' && categoryQuery !== 'category_all') {
+    let categoryResultSet = Object.keys(soundLibrary.aliases)
+      .filter(alias => alias === categoryQuery)
+      .reduce((resultSet, nextAlias) => {
+        return resultSet.union(soundLibrary.aliases[nextAlias]);
+      }, Immutable.Set());
+    if (searchQuery !== '') {
+      resultSet = resultSet.intersect(categoryResultSet.toArray());
+    } else {
+      resultSet = categoryResultSet;
+    }
+  }
 
   const results = resultSet
       .sort()

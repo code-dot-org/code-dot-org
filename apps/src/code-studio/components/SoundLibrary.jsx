@@ -1,5 +1,17 @@
 import React from 'react';
 import SoundList from './SoundList';
+import SoundCategory from './SoundCategory';
+
+const SOUND_CATEGORIES = {
+  'category_digital': 'Digital',
+  'category_gameplay': 'Game play',
+  'category_jingles': 'Jingles',
+  'category_female_voiceover': 'Female voiceovers',
+  'category_male_voiceover': 'Male voiceovers',
+  'category_objects': 'Objects',
+  'category_UI': 'User interfaces',
+  'category_all': 'All'
+};
 
 /**
  * A component for managing sounds, searching sounds, and categories of sounds.
@@ -11,7 +23,7 @@ var SoundLibrary = React.createClass({
   },
 
   getInitialState: function () {
-    return {search: '', selectedSound: {}};
+    return {search: '', category: '', selectedSound: {}};
   },
 
   search: function (e) {
@@ -30,9 +42,28 @@ var SoundLibrary = React.createClass({
     this.props.assetChosen(this.state.selectedSound.sourceUrl);
   },
 
+  onCategoryChange: function (category) {
+    this.setState({category: category});
+  },
+
+  clearCategories: function () {
+    this.setState({category: '', search: ''});
+  },
+
+  animationCategoriesRendering: function () {
+    return Object.keys(SOUND_CATEGORIES).map(category =>
+      <SoundCategory
+        key={SOUND_CATEGORIES[category]}
+        displayName={SOUND_CATEGORIES[category]}
+        category={category}
+        onSelect={this.onCategoryChange}
+      />
+    );
+  },
+
   render: function () {
     var styles = {
-      root: {
+      searchArea: {
         float: this.props.alignment || 'right',
         position: 'relative',
         margin: '10px 0'
@@ -53,12 +84,34 @@ var SoundLibrary = React.createClass({
       button: {
         float: 'right',
         margin: '20px 0px'
+      },
+      categoryArea: {
+        float: 'left',
+        marginBottom: '20px'
+      },
+      allCategoriesText: {
+        fontSize: '16px',
+        color: '#7665a0',
+        font: 'Gotham 5r',
+        paddingRight: '5px',
+        cursor: 'pointer'
+      },
+      breadcrumbs: {
+        float: 'left',
+        marginTop: '16px'
+      },
+      categoryText: {
+        fontSize: '14px'
       }
     };
 
     return (
       <div>
-        <div style={styles.root}>
+        <div style={styles.breadcrumbs}>
+          <span onClick={this.clearCategories} style={styles.allCategoriesText}>All categories</span>
+          {this.state.category !== '' && <span style={styles.categoryText}>{'>> ' + SOUND_CATEGORIES[this.state.category]}</span>}
+        </div>
+        <div style={styles.searchArea}>
           <input
             onChange={this.search}
             style={styles.input}
@@ -66,12 +119,22 @@ var SoundLibrary = React.createClass({
           />
           <i className="fa fa-search" style={styles.sound}/>
         </div>
-        <SoundList
-          assetChosen={this.selectSound}
-          search={this.state.search}
-          selectedSound={this.state.selectedSound}
-        />
-        <button className={"primary"} onClick={this.onClickChoose} style={styles.button}>{'Choose'}</button>
+        {this.state.category === '' &&
+          <div style={styles.categoryArea}>
+            {this.animationCategoriesRendering()}
+          </div>
+        }
+        {this.state.category !== '' &&
+          <div>
+            <SoundList
+              assetChosen={this.selectSound}
+              search={this.state.search}
+              category={this.state.category}
+              selectedSound={this.state.selectedSound}
+            />
+            <button className={"primary"} onClick={this.onClickChoose} style={styles.button}>{'Choose'}</button>
+          </div>
+        }
       </div>
     );
   }
