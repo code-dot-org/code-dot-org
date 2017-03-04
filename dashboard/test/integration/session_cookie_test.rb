@@ -1,5 +1,5 @@
-require 'cdo/script_config'
 require 'test_helper'
+require 'cdo/script_config'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
   test 'session cookie name contains environment' do

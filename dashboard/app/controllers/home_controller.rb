@@ -58,4 +58,9 @@ class HomeController < ApplicationController
   def terms_and_privacy
     render partial: 'home/tos_and_privacy'
   end
+
+  # This static page contains the teacher announcements for US and non-US visitors.
+  def teacher_announcements
+    render template: 'api/teacher_announcement', layout: false
+  end
 end

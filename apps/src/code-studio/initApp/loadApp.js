@@ -425,6 +425,13 @@ window.apps = {
       } else {
         callback({});
       }
+    },
+    prepareForRemix: function () {
+      const {prepareForRemix} = getAppOptions();
+      if (prepareForRemix) {
+        return prepareForRemix();
+      }
+      return Promise.resolve(); // Return an insta-resolved promise.
     }
   },
 };
