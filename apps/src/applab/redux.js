@@ -27,7 +27,7 @@ const CHANGE_INTERFACE_MODE = 'applab/CHANGE_INTERFACE_MODE';
  * @param {!ApplabInterfaceMode} interfaceMode
  * @returns {{type: string, interfaceMode: ApplabInterfaceMode}}
  */
-export function changeInterfaceMode(interfaceMode) {
+function changeInterfaceMode(interfaceMode) {
   if (!interfaceMode) {
     throw new Error("Expected an interace mode!");
   }
