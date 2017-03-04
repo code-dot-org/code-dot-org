@@ -1,4 +1,5 @@
 import React from 'react';
+import * as color from "../../util/color";
 
 /**
  * A component for displaying a sound category.
@@ -17,13 +18,13 @@ var SoundCategory = React.createClass({
   render: function () {
     var styles = {
       category: {
-        backgroundColor: '#0094ca',
+        backgroundColor: color.cyan,
         border: 'solid 0px',
         borderRadius: '5px',
         width: '175px',
         padding: '10px',
         margin: '10px',
-        color: 'white',
+        color: color.white,
         float: 'left',
         cursor: 'pointer'
       },

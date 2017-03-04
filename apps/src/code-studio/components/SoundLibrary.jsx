@@ -1,6 +1,7 @@
 import React from 'react';
 import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
+import * as color from "../../util/color";
 
 const SOUND_CATEGORIES = {
   'category_digital': 'Digital',
@@ -91,7 +92,7 @@ var SoundLibrary = React.createClass({
       },
       allCategoriesText: {
         fontSize: '16px',
-        color: '#7665a0',
+        color: color.purple,
         font: 'Gotham 5r',
         paddingRight: '5px',
         cursor: 'pointer'
