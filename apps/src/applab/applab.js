@@ -64,6 +64,8 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var project = require('@cdo/apps/code-studio/initApp/project');
 import html2canvas from 'html2canvas';
+// Needed by html2canvas in ﻿SVGContainer.prototype.hasFabric to work on IE11
+window.html2canvas = html2canvas;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -1457,44 +1459,51 @@ Applab.onPuzzleComplete = function (submit) {
       didPinVizSize = true;
     }
 
-    // console.log(`calling html2canvas on ${visualization.id}`)
-    // console.log(`visualizationResizeBar.style: ${document.getElementById('visualizationResizeBar').getAttribute('style')}`)
-    // console.log(`visualizationColumn.style: ${document.getElementById('visualizationColumn').getAttribute('style')}`)
-    // console.log(`visualization.style: ${visualization.getAttribute('style')}`)
-    // console.log(`visualization children:`)
-    // for (var i = 0; i < visualization.children.length; i++) {
-    //   var child = visualization.children[i];
-    //   console.log(`  ${child.id}.style: ${child.getAttribute('style')}`)
-    // }
+    console.log(`calling html2canvas`);
+    const startTime = Date.now();
 
-    console.log(`calling html2canvas`)
-    debugger;
-    html2canvas(thumbnailElement, {
-      onrendered(canvas) {
-        if (didPinVizSize) {
-          Applab.clearVisualizationSize();
-        }
-        console.log(`html2canvas onrendered`)
-        var pngDataUrl = canvas.toDataURL("image/png");
-        console.log('html2canvas toDataURL complete')
-        console.log(pngDataUrl)
-        Applab.feedbackImage = pngDataUrl;
-        Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
-
-        document.body.append(canvas);
-        canvas.style.position = 'absolute';
-        canvas.style.top = '5px';
-        canvas.style.right = '5px';
-        canvas.style.zIndex = '100';
-        canvas.style.border = 'solid 5px green';
-
-        sendReport();
-      },
-      // width: 320,
-      // height: 320,
+    // Record a square image showing the top two thirds of the app window.
+    //
+    // Note that without the height and width constraints we will get somewhere
+    // between the full app window and just the top two thirds, depending on the current
+    // width of the app window. In the future, if we want to capture the whole app
+    // window or a center-crop, tweaking or removing the width/height options will be
+    // insufficient. However the whole app window could be attained by capturing
+    // #visualizationColumn and then cropping appropriately.
+    const vizWidth = $('#visualization').width();
+    const options = {
       background: '#eee',
-      //logging: true,
-      //letterRendering: true,
+      width: vizWidth,
+      height: vizWidth,
+    };
+    html2canvas(thumbnailElement, options).then(canvas => {
+      if (didPinVizSize) {
+        Applab.clearVisualizationSize();
+      }
+      const renderTime = (Date.now() - startTime) / 1000;
+      console.log(`html2canvas rendered in ${renderTime} seconds`);
+      var pngDataUrl = canvas.toDataURL("image/png");
+
+      Applab.feedbackImage = pngDataUrl;
+      Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
+
+      // print image at top right for debugging purposes
+      // document.body.appendChild(canvas);
+      // canvas.style.position = 'absolute';
+      // canvas.style.top = '5px';
+      // canvas.style.right = '5px';
+      // canvas.style.zIndex = '100';
+      // canvas.style.border = 'solid 5px green';
+
+      sendReport();
+    }).catch(e => {
+      console.warn(`html2canvas error: ${e}`);
+
+      if (didPinVizSize) {
+        Applab.clearVisualizationSize();
+      }
+
+      sendReport();
     });
   }
 };
