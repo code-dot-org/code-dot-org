@@ -38,7 +38,6 @@ import {getStore} from '../redux';
 import {actions, reducers, selectors} from './redux';
 import {add as addWatcher} from '../redux/watchedExpressions';
 import { changeScreen } from './redux/screens';
-var changeInterfaceMode = actions.changeInterfaceMode;
 import * as applabConstants from './constants';
 const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
@@ -760,7 +759,7 @@ Applab.init = function (config) {
     designMode.renderDesignWorkspace();
     designMode.loadDefaultScreen();
 
-    getStore().dispatch(changeInterfaceMode(
+    getStore().dispatch(actions.changeInterfaceMode(
       Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
     designMode.configureDragAndDrop();
@@ -792,7 +791,7 @@ Applab.init = function (config) {
     getStore().dispatch(actions.maker.enable());
   }
 
-  getStore().dispatch(changeInterfaceMode(
+  getStore().dispatch(actions.changeInterfaceMode(
     Applab.startInDesignMode() ? ApplabInterfaceMode.DESIGN : ApplabInterfaceMode.CODE));
 
   Applab.reactInitialProps_ = {
