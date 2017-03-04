@@ -34,7 +34,7 @@ import executionLog from '../executionLog';
 import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
 import {Provider} from 'react-redux';
-import reducers from './reducers';
+import {reducers} from './redux';
 import {add as addWatcher} from '../redux/watchedExpressions';
 import * as actions from './actions';
 import * as selectors from './selectors';
