@@ -66,6 +66,21 @@ const craftStyles = {
   },
 };
 
+const containedLevelStyles = {
+  background: {
+    backgroundColor: color.background_gray,
+    overflowY: 'scroll',
+  },
+  level: {
+    paddingTop: CONTAINED_LEVEL_PADDING,
+    paddingLeft: CONTAINED_LEVEL_PADDING,
+    paddingRight: CONTAINED_LEVEL_PADDING,
+  },
+  heightResizer: {
+    backgroundColor: color.background_gray,
+  },
+};
+
 const styles = {
   main: {
     position: 'absolute',
@@ -148,18 +163,6 @@ const styles = {
   instructionsWithTipsRtl: {
     width: 'calc(100% - 20px)',
     float: 'left'
-  },
-  containedLevelBackground: {
-    backgroundColor: color.background_gray,
-    overflowY: 'scroll',
-  },
-  containedLevel: {
-    paddingTop: CONTAINED_LEVEL_PADDING,
-    paddingLeft: CONTAINED_LEVEL_PADDING,
-    paddingRight: CONTAINED_LEVEL_PADDING,
-  },
-  heightResizer: {
-    backgroundColor: color.background_gray,
   },
 };
 
@@ -544,11 +547,11 @@ var TopInstructions = React.createClass({
         <div style={mainStyle} className="editor-column">
           <div
             style={{
-              ...styles.containedLevelBackground,
+              ...containedLevelStyles.background,
               height: topInstructionsHeight,
             }}
           >
-            <div style={styles.containedLevel} className="contained-level">
+            <div style={containedLevelStyles.level} className="contained-level">
               <ContainedLevel ref="containedLevel" />
             </div>
           </div>
@@ -556,7 +559,7 @@ var TopInstructions = React.createClass({
             <HeightResizer
               position={this.props.height}
               onResize={this.handleHeightResize}
-              style={styles.heightResizer}
+              style={containedLevelStyles.heightResizer}
             />}
         </div>
       );
