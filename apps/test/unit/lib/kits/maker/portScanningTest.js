@@ -20,14 +20,12 @@ describe("Maker Toolkit", function () {
       ChromeSerialPort.stub.reset();
     });
 
-    it('resolves with a port if a viable device is found', done => {
+    it('resolves with a port if a viable device is found', () => {
       ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
-      findPortWithViableDevice()
+      return findPortWithViableDevice()
           .then(port => {
             expect(port).to.equal('COM5');
-            done();
-          })
-          .catch(done);
+          });
     });
 
     it('rejects if no viable device is found', done => {
