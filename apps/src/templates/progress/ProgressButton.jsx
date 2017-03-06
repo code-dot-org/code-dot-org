@@ -29,13 +29,18 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     borderStyle: 'solid',
     borderWidth: 1,
-    borderRadius: 3,
+    borderRadiusTopLeft: 3,
+    borderRadiusTopRight: 3,
+    borderRadiusBottomLeft: 3,
+    borderRadiusBottomRight: 3,
     textDecoration: 'none',
     borderColor: color.border_gray,
     ':hover': {
       backgroundColor: color.white,
       cursor: 'pointer',
-    }
+    },
+    boxSizing: 'border-box',
+    overflow: 'hidden'
   },
   icon: {
     marginRight: 5
@@ -54,6 +59,10 @@ const styles = {
       color: color.charcoal,
       backgroundColor: color.lightest_gray,
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.73)',
+      ':disabled': {
+        backgroundColor: color.lighter_gray,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
+      }
     },
     [ButtonColor.blue]: {
       color: color.white,
@@ -101,11 +110,12 @@ const ProgressButton = React.createClass({
     icon: PropTypes.string,
     target: PropTypes.string,
     style: PropTypes.object,
+    disabled: PropTypes.bool,
     onClick: PropTypes.func
   },
 
   render() {
-    const { href, text, icon, target, style, onClick } = this.props;
+    const { href, text, icon, target, style, onClick, disabled } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -121,6 +131,7 @@ const ProgressButton = React.createClass({
         style={[styles.main, styles.colors[color], styles.sizes[size], style]}
         href={href}
         target={target}
+        disabled={disabled}
         onClick={onClick}
       >
         {icon && <FontAwesome icon={icon} style={styles.icon}/>}
