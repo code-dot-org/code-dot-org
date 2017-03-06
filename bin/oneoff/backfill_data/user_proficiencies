@@ -162,7 +162,7 @@ def compute_basic_proficiency_at(proficiency, line)
   # obtain basic proficiency.
   proficiency_from_history = increment_user_proficiency(
     UserProficiency.new, line
-  ).basic_proficiency?
+  ).proficient?
   # If it did, return TIME_CUTOFF.
   return TIME_CUTOFF if proficiency_from_history
   # Otherwise, if the incremental behavior sufficed by itself - as observed
@@ -170,7 +170,7 @@ def compute_basic_proficiency_at(proficiency, line)
   return proficiency.basic_proficiency_at if proficiency.basic_proficiency_at
   # Otherwise, if the historical and incremental behavior together suffice,
   # return last_progress_at.
-  return proficiency.last_progress_at if proficiency.basic_proficiency?
+  return proficiency.last_progress_at if proficiency.proficient?
   # Otherwise, basic proficiency has not been obtained, so return nil.
   return nil
 end
