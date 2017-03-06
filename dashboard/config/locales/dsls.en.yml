@@ -1012,6 +1012,7 @@ en:
         description here: description here
         title: title
       Design Mode Overview: {}
+      Design Mode Practice: {}
       Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
@@ -1416,6 +1417,7 @@ en:
         description here: description here
         title: title
       Events Overview: {}
+      Events Practice: {}
       Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
@@ -1877,6 +1879,7 @@ en:
       'Stop: Validator': {}
       'Stop: Website Navigation': {}
       Strings Overview: {}
+      Strings Practice: {}
       Summary Tables 101: {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
@@ -2527,6 +2530,7 @@ en:
         U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
         description here: description here
       Variables Overview: {}
+      Variables Practice: {}
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
@@ -7057,6 +7061,52 @@ en:
         '50': '50'
         How many times will the comparison c > 5 be tested when this code is run?: How many times will the comparison c > 5 be tested when this code is run?
         it will be different each time you run it: it will be different each time you run it
+      courseA_multi_artist_loops11_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist repeats `South` and `East` four times to make a staircase.: Incorrect.  The artist repeats `South` and `East` four times to make a staircase.
+        Take a good look at the code below.  What will happen when you click "Run"?: Take a good look at the code below.  What will happen when you click "Run"?
+        The artist repeats `South` and `East` four times to make a staircase.: The artist repeats `South` and `East` four times to make a staircase.
+        The artist will draw a square: The artist will draw a square
+        The artist will draw a stair pattern.: The artist will draw a stair pattern.
+        The artist won't move at all.: The artist won't move at all.
+      courseA_multi_collector_loops11_predict2:
+        Correct.: Correct.
+        I don't know.: I don't know.
+        ? Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        : Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        Laurel collect all of the treasure.: Laurel collect all of the treasure.
+        Laurel will collect all of the treasure along the top and side, but not along the bottom.: Laurel will collect all of the treasure along the top and side, but not along the bottom.
+        Laurel will not collect any treasure at all.: Laurel will not collect any treasure at all.
+        ? The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        : The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        The code below uses loops.  What will happen when you click "Run"?: The code below uses loops.  What will happen when you click "Run"?
+      courseA_multi_collector_loops3_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.
+        Laurel will move forward and collect treasure five times in a row.: Laurel will move forward and collect treasure five times in a row.
+        Laurel will move forward and collect treasure one time.: Laurel will move forward and collect treasure one time.
+        Laurel won't move at all.: Laurel won't move at all.
+        Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
+        The program uses a `repeat` loop to get Laurel to move forward five times.: The program uses a `repeat` loop to get Laurel to move forward five times.
+      courseA_multi_maze_seq12_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The bird turns the wrong way at the end.: Incorrect. The bird turns the wrong way at the end.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird should go North at the end, not South.: The bird should go North at the end, not South.
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will only go straight.: The bird will only go straight.
+        The bird will turn the wrong way at the end.: The bird will turn the wrong way at the end.
+      courseA_multi_maze_seq2_predict1:
+        Correct.: Correct.
+        I don't know.: I don't know.
+        Incorrect. The program needs one more block to get to the pig.: Incorrect. The program needs one more block to get to the pig.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will not reach the pig.: The bird will not reach the pig.
+        The program needs one more block to get to the pig.: The program needs one more block to get to the pig.
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
@@ -7094,6 +7144,15 @@ en:
         'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
         The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
         What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_artist_fwp2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Using parameters lets you use a single function to create different outcomes.: Incorrect.  Using parameters lets you use a single function to create different outcomes.
+        The artist will use the same function to draw two different sized boxes.: The artist will use the same function to draw two different sized boxes.
+        The artist will use two different functions to draw the same sized box twice.: The artist will use two different functions to draw the same sized box twice.
+        The artist will use two different functions to draw two different sized boxes.: The artist will use two different functions to draw two different sized boxes.
+        The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
+        What will happen when you run this program?: What will happen when you run this program?
       courseF_multi_artist_variables3a_predict1:
         Correct!  The `length` variable is being used in the `turn` block.: Correct!  The `length` variable is being used in the `turn` block.
         I don't know.: I don't know.
@@ -7113,6 +7172,17 @@ en:
         'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
         'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
         'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
+      courseF_multi_bee_fwp9_predict1:
+        ? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        : Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        Correct! The function is set to collect as many nectar or honey as is passed through a parameter.: Correct! The function is set to collect as many nectar or honey as is passed through a parameter.
+        I don't know.: I don't know.
+        Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.
+        Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.
+        'The bee will collect only one nectar or honey in each iteration of the loop. ': 'The bee will collect only one nectar or honey in each iteration of the loop. '
+        'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ': 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
+        The bee will not collect any nectar or honey.: The bee will not collect any nectar or honey.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
       courseF_multi_playlab_variables4c_predictive1:
         'Correct. ': 'Correct. '
         I don't know.: I don't know.
@@ -7463,11 +7533,11 @@ en:
         <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">: <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
         <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
       cspu5_assess3_bakeSale:
-        'Add after line 3:     numItems = numItems - 1;': 'Add after line 3:     numItems = numItems - 1;'
-        'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
-        'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
-        'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
-        'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
+        'Add after line 3:     <pre>numItems = numItems - 1;</pre>': 'Add after line 3:     <pre>numItems = numItems - 1;</pre>'
+        'Add after line 4:     <pre>numItems = 0;</pre>': 'Add after line 4:     <pre>numItems = 0;</pre>'
+        'Change Line 1 to:  <pre>var total = -1;</pre>': 'Change Line 1 to:  <pre>var total = -1;</pre>'
+        'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>': 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
+        'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>': 'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>'
       cspu5_assess3_counter:
         '0': '0'
         '1': '1'

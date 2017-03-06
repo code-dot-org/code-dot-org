@@ -265,6 +265,7 @@ What follows below are results and data collected between **January 1 - December
 
 <p align="center">
     <strong>Fig. 0 - Number of students demonstrating basic proficiency in 2016 by age</strong><br/>
+       <img src="/images/proficiency/darkblue_sq.png"> demonstrated proficiency <img src="/images/proficiency/lightblue_sq.png">      not yet demonstrating proficiency<br/>
     <img src="/images/proficiency/proficiency-chart.png" width="80%"/><br/>
     Age
 </p>
@@ -293,6 +294,7 @@ From our data we see that most students in the K-12 age range are using the mate
     <strong>
         Fig. 1 - Students with and without a teacher as a % of all students within their age group
     </strong><br/>
+       <img src="/images/proficiency/darkblue_sq.png"> with teacher <img src="/images/proficiency/lightblue_sq.png"> without teacher<br/>
     <img src="/images/proficiency/with-without-teacher.png" width="80%"/><br/>
     Age
 </p>
@@ -310,11 +312,11 @@ The table below shows, for each concept, the raw number of students who solved 3
 
 
 
-## How long does it take to demonstrate proficiency?
+## Activity of students demonstrating proficiency 
 
-Roughly speaking, a majority of students who reach the proficiency bar do so after working on about 100 puzzles and most have done so by 200 puzzles.  Overall, most student activity is confined to one course as the number of coding puzzles in a course ranges from 109 to 161.  Many students reaching proficiency in 100 puzzles are older students using the accelerated course which has 109 coding puzzles. 
+Roughly speaking, a majority of students who reach the proficiency bar do so having worked on 100 puzzles or fewer, and most have done so by 200 puzzles or fewer.  Overall, most student activity is confined to one course as the number of coding puzzles in a course ranges from 109 to 161.  Many students reaching proficiency in 100 puzzles or fewer are older students using the accelerated course which has 109 coding puzzles. 
 
-The chart below shows for all students who eventually reach the proficiency bar, how many total puzzles they attempted.  For example, of all students who eventually reached proficiency roughly 50% have done so in 100 puzzles or fewer.   Note that it does not indicate the moment when they actually reached proficiency. Rather, it shows for a student who reached proficiency, the all-time number of puzzles that student attempted.  
+The chart below shows for all students who eventually reach the proficiency bar, how many *total* puzzles they attempted. Note that it does not indicate the moment when they actually reached proficiency. Rather, it shows for a student who reached proficiency, the all-time number of puzzles that student attempted.  
 
 <p></p>
 
@@ -326,7 +328,7 @@ The chart below shows for all students who eventually reach the proficiency bar,
 
 </p>
 
-*Note: in the graph above we cut the x-axis off at 200 puzzles because the remaining portion of the curve flattens out considerably over another 680 puzzles. The remaining ~10% likely represents students who did every puzzle in many, or all, of the different courses.*
+*Note: in the graph above we cut the x-axis off at 200 puzzles because the remaining portion of the curve flattens out considerably over another ~400 puzzles. The remaining ~10% likely represents students who did every puzzle in many, or all, of the different courses.*
 
 ## Does the age of the student make a difference?
 
@@ -419,7 +421,6 @@ Some of the things we are planning to do in the near future related to this K-5 
 * Remake the concept-difficulty matrix (and associated puzzle tags) to make it more objective, reliable and auditable
 * Do classroom observations and studies to validate and calibrate proficiency measures from data
 * Apply more rigorous statistical models and techniques (such as ELO modeling) for analysis
-* 
 * Do a public data release
 
 We have some ideas about how to improve our work but we also invite feedback and others’ ideas about what we could be doing.  If you have suggestions or thoughts on how we can continue or improve this research or if you’d like to get involved, we’d welcome your input and feedback.  Please contact us at [data@code.org](mailto:data@code.org) we’d welcome your feedback. 
