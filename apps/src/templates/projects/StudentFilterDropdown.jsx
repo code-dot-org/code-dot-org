@@ -21,13 +21,6 @@ const styles = {
 };
 
 class StudentFilterDropdown extends Component {
-  static propTypes = {
-    onChangeStudent: PropTypes.func.isRequired,
-    selectedStudent: PropTypes.string.isRequired,
-    studentNames: PropTypes.array.isRequired,
-    style: PropTypes.object,
-  };
-
   onChange(event) {
     const selectedStudent = event.target.value;
     this.props.onChangeStudent(selectedStudent);
@@ -56,5 +49,12 @@ class StudentFilterDropdown extends Component {
     );
   }
 }
+
+StudentFilterDropdown.propTypes = {
+  onChangeStudent: PropTypes.func.isRequired,
+  selectedStudent: PropTypes.string.isRequired,
+  studentNames: PropTypes.array.isRequired,
+  style: PropTypes.object,
+};
 
 export default Radium(StudentFilterDropdown);
