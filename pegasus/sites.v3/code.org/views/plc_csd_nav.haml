@@ -2,12 +2,12 @@
   %span.about_list
     -current_url = '/educate/professional-learning/cs-discoveries'
     -{'Middle School Courses'=>'/educate/curriculum/middle-school',
-      'About the Professional Learning Program'=>'#about',
-      'How does it work?'=>'#components',
-      'What are the commitments?'=>'#commitments',
-      'Who can participate?'=>'#participate',
-      'Where is it offered?'=>'#locations',
-      'How to apply?'=>'#apply'}.each_pair do |label,url|
+      'About the Professional Learning Program'=>current_url+'#about',
+      'How does it work?'=>current_url+'#components',
+      'What are the commitments?'=>current_url+'#commitments',
+      'Who can participate?'=>current_url+'#participate',
+      'Where is it offered?'=>current_url+'#locations',
+      'How to apply?'=>current_url+'#apply'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else
