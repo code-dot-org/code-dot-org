@@ -44,9 +44,6 @@
       "CSD U3 Boolean MC"
     ],
     "show_debug_watch": "true",
-    "encrypted_examples": [
-
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "true"
