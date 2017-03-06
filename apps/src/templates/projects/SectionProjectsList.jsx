@@ -19,13 +19,6 @@ const styles = {
 };
 
 class SectionProjectsList extends Component {
-  static propTypes = {
-    projectsData: PropTypes.array.isRequired,
-    // The prefix for the code studio url in the current environment,
-    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired,
-  };
-
   constructor(props) {
     super(props);
 
@@ -83,4 +76,12 @@ class SectionProjectsList extends Component {
     );
   }
 }
+
+SectionProjectsList.propTypes = {
+  projectsData: PropTypes.array.isRequired,
+  // The prefix for the code studio url in the current environment,
+  // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
+  studioUrlPrefix: PropTypes.string.isRequired,
+};
+
 export default SectionProjectsList;
