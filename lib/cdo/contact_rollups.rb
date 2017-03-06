@@ -18,6 +18,7 @@ class ContactRollups
   # Connection to write to Pegasus reporting database.
   PEGASUS_REPORTING_DB_WRITER = sequel_connect(CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_writer)
 
+  # Connection to read from Dashboard reporting database.
   DASHBOARD_REPORTING_DB_READER = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
 
   # Columns to disregard
