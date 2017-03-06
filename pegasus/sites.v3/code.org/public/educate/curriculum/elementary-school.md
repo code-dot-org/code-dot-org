@@ -135,6 +135,11 @@ The Code Studio teacher home page makes it easy for teachers to view lesson plan
 ### <strong>Tech support & teacher forums</strong>
 Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
 
+### <strong>Pilot the '17-'18 version of the curriculum!</strong>
+We are revising Courses 1 - 4 based on the great feedback we've gotten in the last couple of years. In particular, the biggest change we are making
+is to break the content up into 6 courses aligned to each K-5 grade level. We're collecting feedback in Spring 2017 in preparation for making these courses broadly
+available for the '17 - '18 school year. [Learn more and sign up for the pilot](/educate/curriculum/cs-fundamentals-pilot).
+
 [solid-block-header]
 
 <a name="other"></a>Other Resources

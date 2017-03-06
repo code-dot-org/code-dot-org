@@ -93,7 +93,7 @@ level 'courseF_bee_fwp5'
 level 'courseF_bee_fwp6'
 level 'courseF_bee_fwp7'
 level 'courseF_bee_fwp8'
-level 'courseF_bee_fwp9'
+assessment 'courseF_bee_fwp9_predict1'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'courseF_video_csMatters'

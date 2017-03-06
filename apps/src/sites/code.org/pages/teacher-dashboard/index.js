@@ -5,7 +5,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ProjectsList from '@cdo/apps/templates/projects/ProjectsList';
+import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 
 function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
@@ -20,7 +20,7 @@ function renderSectionProjects(sectionId) {
     dataType: 'json'
   }).done(projectsData => {
     ReactDOM.render(
-      <ProjectsList
+      <SectionProjectsList
         projectsData={projectsData}
         studioUrlPrefix={studioUrlPrefix}
       />,
