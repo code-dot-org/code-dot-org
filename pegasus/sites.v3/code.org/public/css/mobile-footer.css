@@ -112,10 +112,6 @@
     margin: 0;
   }
 
-  #footer-links ul.hide-responsive-footer-menu {
-    display: none;
-  }
-
   #footer-links ul {
     position: absolute;
     bottom: 38px;
