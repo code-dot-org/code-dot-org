@@ -84,4 +84,10 @@ class UserProficiencyTest < ActiveSupport::TestCase
     @proficiency.events_d3_count = 3
     assert @proficiency.basic_proficiency?
   end
+
+  test 'basic_proficiency with difficulty' do
+    @proficiency.sequencing_d1_count = 3
+    assert @proficiency.basic_proficiency?(difficulty: 1)
+    refute @proficiency.basic_proficiency?(difficulty: 5)
+  end
 end

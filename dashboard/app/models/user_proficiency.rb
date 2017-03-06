@@ -338,8 +338,10 @@ class UserProficiency < ActiveRecord::Base
   # or more total D3, D4, or D5 levels.
   # WARNING (April 2015): This definition is expected to change, possibly with
   # an age-related bent.
+  # @param difficulty [Integer] the difficulty level at which to assess basic
+  #   proficiency. Default is 3.
   # @return [Boolean] if the user has achieved basic proficiency.
-  def basic_proficiency?
+  def basic_proficiency?(difficulty: 3)
     concept_proficiency_count = 0
     # Meta-concepts with one sub-concept.
     [
@@ -348,19 +350,19 @@ class UserProficiency < ActiveRecord::Base
       ConceptDifficulties::VARIABLES,
       ConceptDifficulties::CONDITIONALS
     ].each do |concept|
-      if get_level_count(concept, 3) >= 3
+      if get_level_count(concept, difficulty) >= 3
         concept_proficiency_count += 1
       end
     end
     # The loops meta-concept.
-    if get_level_count(ConceptDifficulties::REPEAT_LOOPS, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::REPEAT_UNTIL_WHILE, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::FOR_LOOPS, 3) >= 3
+    if get_level_count(ConceptDifficulties::REPEAT_LOOPS, difficulty) >= 3 ||
+       get_level_count(ConceptDifficulties::REPEAT_UNTIL_WHILE, difficulty) >= 3 ||
+       get_level_count(ConceptDifficulties::FOR_LOOPS, difficulty) >= 3
       concept_proficiency_count += 1
     end
     # The functions meta-concept.
-    if get_level_count(ConceptDifficulties::FUNCTIONS, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::FUNCTIONS_WITH_PARAMS, 3) >= 3
+    if get_level_count(ConceptDifficulties::FUNCTIONS, difficulty) >= 3 ||
+       get_level_count(ConceptDifficulties::FUNCTIONS_WITH_PARAMS, difficulty) >= 3
       concept_proficiency_count += 1
     end
 
