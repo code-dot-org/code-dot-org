@@ -141,7 +141,7 @@ class ScriptLevel < ActiveRecord::Base
     return false if unplugged?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && stage && stage.spelling_bee?
-    return false if ScriptLevelsController.stage_hidden_for_user?(self, user)
+    return false if user && user.hidden_stage?(self)
     return false if user && user.user_level_locked?(self, level)
     true
   end
@@ -309,5 +309,11 @@ class ScriptLevel < ActiveRecord::Base
 
     # Everything else is okay.
     return true
+  end
+
+  # Is the stage containing this script_level hidden for the provided section
+  def stage_hidden_for_section?(section_id)
+    return false if section_id.nil?
+    !SectionHiddenStage.find_by(stage_id: self.stage.id, section_id: section_id).nil?
   end
 end

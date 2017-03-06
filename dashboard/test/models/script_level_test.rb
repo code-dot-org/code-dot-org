@@ -213,10 +213,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level_unhidden = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
 
     student = create :student
-    ScriptLevelsController.stubs(:stage_hidden_for_user?).with(script_level_current, student).returns(false)
-    ScriptLevelsController.stubs(:stage_hidden_for_user?).with(script_level_hidden1, student).returns(true)
-    ScriptLevelsController.stubs(:stage_hidden_for_user?).with(script_level_hidden2, student).returns(true)
-    ScriptLevelsController.stubs(:stage_hidden_for_user?).with(script_level_unhidden, student).returns(false)
+    student.stubs(:hidden_stage?).with(script_level_current).returns(false)
+    student.stubs(:hidden_stage?).with(script_level_hidden1).returns(true)
+    student.stubs(:hidden_stage?).with(script_level_hidden2).returns(true)
+    student.stubs(:hidden_stage?).with(script_level_unhidden).returns(false)
 
     assert_equal script_level_unhidden, script_level_current.next_progression_level(student)
   end
