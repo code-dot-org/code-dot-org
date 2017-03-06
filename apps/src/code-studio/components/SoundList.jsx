@@ -1,7 +1,7 @@
 import React from 'react';
 import SoundListEntry from './SoundListEntry';
-import Immutable from 'immutable';
 import Sounds from '../../Sounds';
+import {searchAssets} from '../assets/searchAssets';
 var soundLibrary = require('../soundLibrary.json');
 
 /**
@@ -20,8 +20,9 @@ var SoundList = React.createClass({
   },
 
   getMatches: function (searchQuery) {
-    let results = searchSounds(searchQuery, this.props.category);
-    return results;
+    // Sound library does not use pagination so give a range from 0 - 400
+    const searchedData = searchAssets(searchQuery, this.props.category, soundLibrary, 0, 400);
+    return searchedData.results;
   },
 
   render: function () {
@@ -55,46 +56,3 @@ var SoundList = React.createClass({
   }
 });
 module.exports = SoundList;
-
-/**
- * Given a search query, generate a results list of sound objects that
- * can be displayed and used to add a sound to the project.
- * @param {string} searchQuery - text entered by the user to find a sound
- * @return {Array} - Limited list of sounds
- *         from the library that match the search query.
- */
-function searchSounds(searchQuery, categoryQuery) {
-  // Make sure to generate the search regex in advance, only once.
-  // Search is case-insensitive
-  // Match any word boundary or underscore followed by the search query.
-  // Example: searchQuery "bar"
-  //   Will match: "barbell", "foo-bar", "foo_bar" or "foo bar"
-  //   Will not match: "foobar", "ubar"
-  const searchRegExp = new RegExp('(?:\\b|_)' + searchQuery, 'i');
-
-  // Generate the set of all results associated with all matched aliases
-  let resultSet = Object.keys(soundLibrary.aliases)
-      .filter(alias => searchRegExp.test(alias))
-      .reduce((resultSet, nextAlias) => {
-        return resultSet.union(soundLibrary.aliases[nextAlias]);
-      }, Immutable.Set());
-
-  if (categoryQuery !== '' && categoryQuery !== 'category_all') {
-    let categoryResultSet = Object.keys(soundLibrary.aliases)
-      .filter(alias => alias === categoryQuery)
-      .reduce((resultSet, nextAlias) => {
-        return resultSet.union(soundLibrary.aliases[nextAlias]);
-      }, Immutable.Set());
-    if (searchQuery !== '') {
-      resultSet = resultSet.intersect(categoryResultSet.toArray());
-    } else {
-      resultSet = categoryResultSet;
-    }
-  }
-
-  const results = resultSet
-      .sort()
-      .map(result => soundLibrary.metadata[result])
-      .toArray();
-  return results;
-}
