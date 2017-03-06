@@ -23,6 +23,11 @@ export const fakeLevels = numLevels => _.range(numLevels).map(index => ({
   name: `Level ${index + 1}`
 }));
 
+/**
+ * Creates the shell of a redux store with the provided lessonId being hidden
+ * @param {ViewType} viewAs
+ * @param {number?} lessonId - Lesson to hide (or null if none)
+ */
 export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
   return createStore(state => state, {
     stageLock: { viewAs },

@@ -15,7 +15,6 @@ export const styles = {
   },
   hiddenRow: {
     borderStyle: 'dashed',
-    borderWidth: 2,
     borderColor: color.border_gray,
     opacity: 0.6,
     backgroundColor: color.table_light_row
