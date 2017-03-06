@@ -29,7 +29,7 @@ var SoundLibrary = React.createClass({
 
   search: function (e) {
     this.setState({
-      search: e.target.value.toLowerCase().replace(/[^-a-z0-9]/g, '')
+      search: e.target.value
     });
   },
 
@@ -120,12 +120,12 @@ var SoundLibrary = React.createClass({
           />
           <i className="fa fa-search" style={styles.sound}/>
         </div>
-        {this.state.category === '' &&
+        {(this.state.category === '' && this.state.search === '') &&
           <div style={styles.categoryArea}>
             {this.animationCategoriesRendering()}
           </div>
         }
-        {this.state.category !== '' &&
+        {(this.state.category !== '' || this.state.search !== '') &&
           <div>
             <SoundList
               assetChosen={this.selectSound}
