@@ -116,7 +116,7 @@ experimental:
         - staging
 deployment:
   storybook:
-    branch: reenable-storybook-deploy
+    branch: staging
     commands:
       - 'echo "sync_assets: false" >> locals.yml'
       - 'cd apps && npm run storybook:deploy'
