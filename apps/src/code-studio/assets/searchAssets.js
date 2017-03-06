@@ -8,8 +8,7 @@ import Immutable from 'immutable';
  * @param {object} assetLibrary - json content for soundLibrary or animationLibrary
  * @param {int} currentPage - current range of animations to display
  * @param {int} maxResults - max number of results to return in an array
- * @return {Array.<SerializedAnimationProps>} - Limited list of animations
- *         from the library that match the search query.
+ * @return {Array} - Limited list of assets from the library that match the search query.
  */
 export function searchAssets(searchQuery, categoryQuery, assetLibrary, currentPage, maxResults) {
   // Make sure to generate the search regex in advance, only once.
