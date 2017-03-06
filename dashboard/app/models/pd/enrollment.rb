@@ -49,6 +49,10 @@ class Pd::Enrollment < ActiveRecord::Base
   validate :validate_school_name, unless: :created_before_school_info?
   validates_presence_of :school_info, unless: :created_before_school_info?
 
+  def self.for_user(user)
+    where('email = ? OR user_id = ?', user.email, user.id)
+  end
+
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
   def created_before_name_split?
     persisted? && created_at < '2016-11-10'

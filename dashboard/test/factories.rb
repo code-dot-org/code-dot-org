@@ -150,6 +150,11 @@ FactoryGirl.define do
       end
     end
 
+    trait :spelling_bee do
+      game {create(:game, app: "maze", name: "Maze")}
+      skin 'letters'
+    end
+
     trait :blockly do
       game {create(:game, app: "maze", name: "Maze")}
     end
@@ -240,7 +245,6 @@ FactoryGirl.define do
   factory :level_source do
     level
     data '<xml/>'
-    md5 { Digest::MD5.hexdigest(data) }
     trait :with_image do
       level { create(:level, game: Game.find_by_app(Game::ARTIST))}
       after :create do |level_source, _|

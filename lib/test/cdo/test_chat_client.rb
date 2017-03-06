@@ -2,15 +2,22 @@ require_relative '../../../shared/test/test_helper'
 require 'cdo/chat_client'
 
 class ChatClientTest < Minitest::Test
-  def test_message_calls_slack
-    Slack.expects(:message).returns(false)
-    ChatClient.message('fake-room', 'fake-message')
+  FAKE_MESSAGE = 'fake-message'.freeze
+  FAKE_ROOM = 'fake-room'.freeze
+
+  def setup
+    CDO.hip_chat_logging = true
   end
 
-  # TODO(asher): This test currently fails, as ChatClient#message mutates the
-  # channel before calling Slack#message. Fix this, then uncomment the test.
+  def test_message_calls_slack
+    Slack.expects(:message).returns(false)
+    ChatClient.message(FAKE_ROOM, FAKE_MESSAGE)
+  end
+
   def test_log_calls_slack
-    # Slack.expects(:message).with(channel: CDO.hip_chat_log_room).returns(false)
-    # ChatClient.log('fake-message')
+    Slack.expects(:message).with do |_text, params|
+      params[:channel] == CDO.hip_chat_log_room
+    end.returns(false)
+    ChatClient.log(FAKE_MESSAGE)
   end
 end

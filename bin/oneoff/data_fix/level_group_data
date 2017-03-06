@@ -78,12 +78,11 @@ def get_user_level_and_level_source_data(user_level_id)
 
   level_source = LevelSource.find_by_id(user_level.level_source_id)
   unless level_source
-    raise "Missing LevelSource: #{user_level.level_source_id} "\
-      "(#{user_level_id})."
+    raise "Missing LevelSource: #{user_level.level_source_id} (#{user_level_id})."
   end
-  level_source_data = JSON.parse(level_source.data)
+  level_source_data_parsed = JSON.parse(level_source.data)
 
-  [user_level, level_source_data]
+  [user_level, level_source_data_parsed]
 end
 
 # For LevelGroup levels, this method migrates old format LevelSource data
@@ -97,17 +96,18 @@ def migrate_level_group_user_level(user_level, level_source_data)
   new_data = {}
   level_source_data.each do |sublevel_data_hash|
     new_data[sublevel_data_hash['level_id']] = {
-      result: sublevel_data_hash['result'],
+      'result' => sublevel_data_hash['result'],
       # Lacking better, we default to calling the result valid.
-      valid: true
+      'valid' => true
     }
   end
-  new_data_md5 = Digest::MD5.hexdigest new_data
+  new_data_json = new_data.to_json
+  new_data_json_md5 = Digest::MD5.hexdigest new_data_json
 
   level_source = LevelSource.
-    create_with(data: new_data).
+    create_with(data: new_data_json).
     find_or_create_by(
-      md5: new_data_md5,
+      md5: new_data_json_md5,
       level_id: user_level.level_id
     )
   user_level.level_source_id = level_source.id
@@ -167,24 +167,47 @@ end
 # The main method for the script. Reads the CSV and persists UserLevel and
 # LevelSource objects as necessary.
 def main
+  user_level_ids = []
   CSV.foreach(DATA_FILE, headers: true, col_sep: "\t") do |row|
-    user_level_id = row['user_level_id'].to_i
+    user_level_ids << row['user_level_id'].to_i
+  end
 
-    user_level, level_source_data = get_user_level_and_level_source_data(
-      user_level_id
-    )
+  puts "READ #{user_level_ids.count} IDs..."
 
-    level_source_data = migrate_level_group_user_level user_level, level_source_data
-
-    ActiveRecord::Base.transaction do
-      level_source_data.each do |sublevel_level_id, sublevel_level_raw_data|
-        create_sublevel_user_level(
-          user_level,
-          sublevel_level_id,
-          sublevel_level_raw_data
-        )
+  e_user_level_id = nil
+  begin
+    print "Should I migrate the LevelGroup LevelSources? "
+    if gets.chomp == 'Y'
+      user_level_ids.each do |user_level_id|
+        e_user_level_id = user_level_id
+        user_level, level_source_data_parsed =
+          get_user_level_and_level_source_data user_level_id
+        migrate_level_group_user_level user_level, level_source_data_parsed
       end
     end
+
+    print "Should I migrate the sublevel LevelSources? "
+    if gets.chomp == 'Y'
+      user_level_ids.each do |user_level_id|
+        e_user_level_id = user_level_id
+        user_level, level_source_data_parsed =
+          get_user_level_and_level_source_data user_level_id
+
+        ActiveRecord::Base.transaction do
+          level_source_data_parsed.
+            each do |sublevel_level_id, sublevel_level_raw_data|
+            create_sublevel_user_level(
+              user_level,
+              sublevel_level_id,
+              sublevel_level_raw_data
+            )
+          end
+        end
+      end
+    end
+  rescue Exception => e
+    puts "EXCEPTION ON USER_LEVEL_ID: #{e_user_level_id}."
+    raise e
   end
 end
 

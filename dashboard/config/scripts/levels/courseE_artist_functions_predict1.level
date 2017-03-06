@@ -6,9 +6,8 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "This time, use the `draw a square` function to create the glasses. \r\n",
-    "x": "30",
-    "y": "225",
+    "x": "230",
+    "y": "175",
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -17,7 +16,7 @@
     "slider_speed": "0.7",
     "video_key": "C3_artist_functions",
     "embed": "false",
-    "markdown_instructions": "Functions let you define new blocks! \r\n\r\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \r\n<hr/>\r\n\r\nThe squares are 75 pixels apart.",
+    "markdown_instructions": "Here is a puzzle that uses a function that we have defined. \r\n",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -33,14 +32,20 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\"hint_id\":\"courseD_artist_functions2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a7f470d79f423a1dcac8b8c8920c402e/courseD_artist_functions2.mp3\"}]",
+    "authored_hints": "[]",
     "discard_background": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_artist_functions2_1\",\r\n  \"callout_text\": \"When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?\",\r\n  \"element_id\": \"#start\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[]",
     "instructions_important": "true",
-    "contained_level_names": null
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "contained_level_names": [
+      "courseE_prediction_artistFunction1"
+    ]
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -49,10 +54,21 @@
           <next>
             <block type="procedures_callnoreturn" movable="false" id="start">
               <mutation name="draw a square"/>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpBackward</title>
+                  <title name="VALUE">175</title>
+                  <next>
+                    <block type="procedures_callnoreturn">
+                      <mutation name="draw a square"/>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false" x="250">
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
           <mutation/>
           <title name="NAME">draw a square</title>
           <statement name="STACK">
@@ -109,83 +125,9 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="draw_colour" inline="true">
-              <value name="COLOUR">
-                <block type="colour_picker">
-                  <title name="COLOUR">#0000cd</title>
-                </block>
-              </value>
-              <next>
-                <block type="draw_a_square_custom" inline="false">
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">100</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">175</title>
-                      <next>
-                        <block type="draw_a_square_custom" inline="false">
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">100</title>
-                            </block>
-                          </value>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </solution_blocks>
     <predraw_blocks>
       <xml>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">45</title>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="draw ear stems"/>
-              <next>
-                <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">135</title>
-                  <next>
-                    <block type="jump" inline="true">
-                      <title name="DIR">jumpForward</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">275</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="draw_turn_by_constant">
-                          <title name="DIR">turnLeft</title>
-                          <title name="VALUE">45</title>
-                          <next>
-                            <block type="procedures_callnoreturn">
-                              <mutation name="draw ear stems"/>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
         <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">draw ear stems</title>

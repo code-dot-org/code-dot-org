@@ -1,4 +1,5 @@
 require_relative '../../deployment'
+require 'cdo/chat_client'
 
 if rack_env?(:development) || rack_env?(:test)
   require 'cdo/rake_utils'
@@ -26,37 +27,37 @@ end
 namespace :eyes do
   task :merge, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
-    HipChat.log "#{MERGE_EMOJI}  Merging baselines #{args}"
+    ChatClient.log "#{MERGE_EMOJI}  Merging baselines #{args}"
     EyesUtils.merge_eyes_baselines(args[:branch], args[:base])
   end
   task :force_merge, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
-    HipChat.log "#{Emoji.find_by_alias('muscle').raw}  Force merging baselines #{args}"
+    ChatClient.log "#{Emoji.find_by_alias('muscle').raw}  Force merging baselines #{args}"
     EyesUtils.force_merge_eyes_baselines(args[:branch], args[:base])
   end
   task :copy, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
-    HipChat.log "#{Emoji.find_by_alias('clipboard').raw}  Copying baselines #{args}"
+    ChatClient.log "#{Emoji.find_by_alias('clipboard').raw}  Copying baselines #{args}"
     EyesUtils.copy_eyes_baselines(args[:branch], args[:base])
   end
   task :force_copy, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
-    HipChat.log "#{Emoji.find_by_alias('muscle').raw}#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
+    ChatClient.log "#{Emoji.find_by_alias('muscle').raw}#{Emoji.find_by_alias('clipboard').raw}  Force copying baselines #{args}"
     EyesUtils.force_copy_eyes_baselines(args[:branch], args[:base])
   end
   task :create, [:branch] do |_, args|
     EyesUtils.check_eyes_set
-    HipChat.log "#{Emoji.find_by_alias('baby').raw}  Creating branch #{args}"
+    ChatClient.log "#{Emoji.find_by_alias('baby').raw}  Creating branch #{args}"
     create_branch(args[:branch])
   end
   task :delete, [:branch] do |_, args|
     EyesUtils.check_eyes_set
-    HipChat.log "Deleting branch #{args}"
+    ChatClient.log "Deleting branch #{args}"
     EyesUtils.delete_eyes_branch(args[:branch])
   end
   task :merge_delete, [:branch, :base] do |_, args|
     EyesUtils.check_eyes_set
-    HipChat.log "Deleting branch #{args}"
+    ChatClient.log "Deleting branch #{args}"
     EyesUtils.merge_delete_eyes_branch(args[:branch], args[:base])
   end
 end

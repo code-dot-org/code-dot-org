@@ -879,9 +879,9 @@ class User < ActiveRecord::Base
   # Provides backwards compatibility with users created before the UserScript model
   # was introduced (cf. code-dot-org/website-ci#194).
   # TODO apply this migration to all users in database, then remove.
-  def backfill_user_scripts
+  def backfill_user_scripts(scripts = Script.all)
     # backfill progress in scripts
-    Script.all.each do |script|
+    scripts.each do |script|
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
         ul_map = user_levels_by_level(script)
@@ -978,7 +978,7 @@ class User < ActiveRecord::Base
     end
 
     old_result = old_user_level.try(:best_result)
-    !Activity.passing?(old_result) && Activity.passing?(new_result)
+    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
   end
 
   # The synchronous handler for the track_level_progress helper.
@@ -992,7 +992,7 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
-      if !user_level.passing? && Activity.passing?(new_result)
+      if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
       if !user_level.perfect? &&

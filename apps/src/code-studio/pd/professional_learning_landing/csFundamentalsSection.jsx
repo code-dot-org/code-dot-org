@@ -6,7 +6,20 @@ import {TwoPartBanner} from './twoPartBanner';
 
 const CsFundamentalsSection = React.createClass({
   propTypes: {
-    lastWorkshopSurveyUrl: React.PropTypes.string
+    lastWorkshopSurveyUrl: React.PropTypes.string,
+    printCsfCertificateUrl: React.PropTypes.string
+  },
+
+  onStartSurveyClick() {
+    window.location = this.props.lastWorkshopSurveyUrl;
+  },
+
+  onPrintCertificateClick() {
+    window.location = this.props.printCsfCertificateUrl;
+  },
+
+  onOnlineLearningClick() {
+    window.location = '../s/K5PD';
   },
 
   renderCompletedCourseBox() {
@@ -20,17 +33,17 @@ const CsFundamentalsSection = React.createClass({
             Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
             will be able to order supplies for your classroom. You can print a certificate for completing our workshop.
           </p>
-          <Button bsStyle="primary">
+          <Button bsStyle="primary" onClick={this.onStartSurveyClick}>
             Start survey
           </Button>
-          <Button>
+          <Button onClick={this.onPrintCertificateClick}>
             Print certificate
           </Button>
         </div>
       );
     } else {
       return (
-        <div id="csfPrintCertificate">
+        <div id="csfPrintCertificate" onClick={this.onPrintCertificateClick}>
           <h3>
             Thank you
           </h3>
@@ -54,7 +67,7 @@ const CsFundamentalsSection = React.createClass({
         <p>
           Supplement your in-person session with this online K-5 Professional Learning course.
         </p>
-        <Button bsStyle="primary">
+        <Button bsStyle="primary" onClick={this.onOnlineLearningClick}>
           Learn online
         </Button>
       </div>

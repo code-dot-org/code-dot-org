@@ -8,7 +8,19 @@
     "skin": "applab",
     "code_functions": {
       "setScreen": null,
-      "onBoardEvent": null
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonL",
+            "buttonR"
+          ],
+          "1": [
+            "down",
+            "press",
+            "up"
+          ]
+        }
+      }
     },
     "edit_code": true,
     "embed": "false",
@@ -48,7 +60,11 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",

@@ -16,6 +16,7 @@ Dashboard::Application.routes.draw do
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
+  get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -350,6 +351,8 @@ Dashboard::Application.routes.draw do
 
     get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
     get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
+
+    get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
