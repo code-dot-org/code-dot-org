@@ -1,0 +1,5 @@
+name 'courseA_multi_maze_seq2_predict1'
+question 'Look at the program below. What will happen when you click "Run"?'
+wrong 'The bird will get to the pig.', feedback: 'Incorrect. The program needs one more block to get to the pig.'
+right 'The bird will not reach the pig.', feedback: 'Correct.'
+wrong 'I don\'t know.', feedback: 'The program needs one more block to get to the pig.'

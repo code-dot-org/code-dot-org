@@ -93,10 +93,10 @@
     },
     "show_debug_watch": "true",
     "encrypted_examples": "I1DAR1BMXjpehzsR6JSwBmOv6Y50vGYiLPNnR9ki/Hbi78C6qso9CFlInon4\naEIZ\n",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "true"
+    "expand_debugger": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,0 +1,6 @@
+name 'courseA_multi_maze_seq12_predict2'
+question 'Look at the program below. What will happen when you click "Run"?'
+wrong 'The bird will get to the pig.', feedback: 'Incorrect. The bird turns the wrong way at the end.'
+wrong 'The bird will only go straight.', feedback: 'Incorrect. The bird turns the wrong way at the end.'
+right 'The bird will turn the wrong way at the end.', feedback: 'Correct!'
+wrong 'I don\'t know.', feedback: 'The bird should go North at the end, not South.'

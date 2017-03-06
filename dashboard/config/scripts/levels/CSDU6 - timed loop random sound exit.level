@@ -115,11 +115,8 @@
     "disable_if_else_editing": "false",
     "markdown_instructions": "# Ending The Song and Light Show\r\n\r\nHere's the randomized light and music app you created earlier. Using the `stopTimedLoop()` command, can you make the program stop at some point? You can choose one of the following ways to stop:\r\n\r\n* Use a _counter_ variable and stop the loop after the counter has reached a certain point (like a _for loop_)\r\n* Add a button and event handler to call `stopTimedLoop()` when clicked.\r\n\r\n_Make sure you also turn off all of the LEDs when the show is over!_",
     "project_template_level_name": "CSDU6 - timed loop random template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

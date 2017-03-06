@@ -211,12 +211,9 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "display_name": "Challenge: Tug o' War",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "expand_debugger": "false",
-    "watchers_prepopulated": "[\"score\"]"
+    "watchers_prepopulated": "[\"score\"]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
