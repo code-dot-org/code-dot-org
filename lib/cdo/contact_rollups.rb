@@ -26,6 +26,8 @@ class ContactRollups
   PEGASUS_DB_NAME = "pegasus_#{Rails.env}"
   DASHBOARD_DB_NAME = "dashboard_#{Rails.env}"
 
+  UNITED_STATES = "united states"
+
   # Table name of table structure to copy from to create the destination working table
   TEMPLATE_TABLE_NAME = "contact_rollups"
   # Table name of destination working table
@@ -378,36 +380,36 @@ class ContactRollups
       email = data['email_s'].presence
       next if email.nil?
 
-      # get user-supplied address/location data from form if present, from any of the differently-named location fields across all form kinds
+      # Get user-supplied address/location data from form if present, from any of the differently-named location fields across all form kinds
       street_address = data['location_street_address_s'].presence || data['user_street_address_s'].presence
       city = data['location_city_s'].presence || data['user_city_s'].presence || data['teacher_city_s'].presence
       state = data['location_state_s'].presence || data['teacher_state_s'].presence
       if state.nil?
-        # note that the 'user_state_s' record is in fact a *state code*, not a state name
+        # Note that the 'user_state_s' record is in fact a *state code*, not a state name
         state_code = data['location_state_code_s'].presence || data['state_code_s'].presence || data['user_state_s'].presence
         state = get_us_state_from_abbr(abbr: state_code, include_dc: true).presence unless state_code.nil?
       end
       postal_code = data['location_postal_code_s'].presence || data['zip_code_s'].presence || data['user_postal_code_s'].presence
       country = data['location_country_s'].presence || data['country_s'].presence || data['teacher_country_s'].presence
 
-      # skip if this form data has no address/location info at all
+      # In practice, self-reported country data (often free text) from forms is garbage. The exception is a frequent reliable
+      # value of exactly "united states", which is what gets filled in automatically if you enter a zip code on the petition form.
+      # Trust this value if we see it, otherwise do not use country from forms; fall back to any country we got from IP geo lookup.
+      country = nil unless country.presence && country.downcase == UNITED_STATES
+
+      # Skip if this form data has no address/location info at all
       next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil?
 
       # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed.
-      street_address = street_address[0...255] unless street_address.nil?
-      city = city[0...255] unless city.nil?
-      state = state[0...255] unless state.nil?
-      postal_code = postal_code[0...255] unless postal_code.nil?
-      country = country[0...255] unless country.nil?
+      update_data = {}
+      update_data[:street_address] = street_address[0...255] unless street_address.nil?
+      update_data[:city] = city[0...255] unless city.nil?
+      update_data[:state] = state[0...255] unless state.nil?
+      update_data[:postal_code] = postal_code[0...255] unless postal_code.nil?
+      update_data[:country] = country[0...255] unless country.nil?
 
       # add to batch to update
-      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(
-        street_address: street_address,
-        city: city,
-        state: state,
-        postal_code: postal_code,
-        country: country
-      ) + ";"
+      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";"
 
       num_updated += 1
 
