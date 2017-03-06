@@ -2,16 +2,12 @@ import {assert} from '../../util/configuredChai';
 import {mount} from 'enzyme';
 import {setExternalGlobals} from './../../util/testUtils';
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
 import {StatelessInlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
 
 
 describe('InlineAudio', function () {
-  let renderer;
-
   beforeEach(function () {
     setExternalGlobals();
-    renderer = ReactTestUtils.createRenderer();
   });
 
   it('uses a given src if there is one', function () {
