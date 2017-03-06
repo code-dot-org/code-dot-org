@@ -129,34 +129,34 @@ SLICE_SIZE = 5_000
 # @param line [Array] an array giving UserProficiency values
 # @return [Boolean] a boolean indicating whether basic proficiency has been
 #   achieved.
-def proficient?(line)
+def proficient?(line, difficulty: 3)
   concept_count = 0
 
   # Sequencing.
-  if line[3] + line[4] + line[5] >= 3
+  if line[difficulty..5].inject(0, :+) >= difficulty
     concept_count += 1
   end
   # Loops.
-  if line[13] + line[14] + line[15] >= 3 ||
-    line[18] + line[19] + line[20] >= 3 ||
-    line[23] + line[24] + line[25] >= 3
+  if line[difficulty + 10..15].inject(0, :+) >= 3 ||
+    line[difficulty + 15..20].inject(0, :+) >= 3 ||
+    line[difficulty + 20..25].inject(0, :+) >= 3
     concept_count += 1
   end
   # Events.
-  if line[28] + line[29] + line[30] >= 3
+  if line[difficulty + 25..30].inject(0, :+) >= 3
     concept_count += 1
   end
   # Variables.
-  if line[33] + line[34] + line[35] >= 3
+  if line[difficulty + 30..35].inject(0, :+) >= 3
     concept_count += 1
   end
   # Functions.
-  if line[38] + line[39] + line[40] >= 3 ||
-    line[43] + line[44] + line[45] >= 3
+  if line[difficulty + 35..40].inject(0, :+) >= 3 ||
+    line[difficulty + 40..45].inject(0, :+) >= 3
     concept_count += 1
   end
   # Conditionals.
-  if line[48] + line[49] + line[50] >= 3
+  if line[difficulty + 45..50].inject(0, :+) >= 3
     concept_count += 1
   end
 

@@ -8,9 +8,12 @@
     "video_key": "CSF_EF_cs_matters",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "display_name": "End of Course Projects"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

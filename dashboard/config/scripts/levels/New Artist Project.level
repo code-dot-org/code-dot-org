@@ -33,10 +33,16 @@
     "scrollbars": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "discard_background": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -543,8 +549,7 @@
           </block>
         </category>
         <category name="Loops">
-          <block type="controls_for_counter" inline="true">
-            <mutation counter="counter"/>
+          <block type="controls_for" inline="true">
             <value name="FROM">
               <block type="math_number">
                 <title name="NUM">???</title>
