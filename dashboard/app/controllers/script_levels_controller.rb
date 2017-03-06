@@ -64,7 +64,7 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if stage_hidden_for_user?(@script_level, current_user)
+    if ScriptLevelsController.stage_hidden_for_user?(@script_level, current_user)
       view_options(full_width: true)
       render 'levels/_hidden_stage'
       return
@@ -331,7 +331,7 @@ class ScriptLevelsController < ApplicationController
     render 'levels/show', formats: [:html]
   end
 
-  def stage_hidden_for_user?(script_level, user)
+  def self.stage_hidden_for_user?(script_level, user)
     return false if !user || user.try(:teacher?)
 
     sections = user.sections_as_student.select{|s| s.deleted_at.nil?}

@@ -201,6 +201,46 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal spelling_bee_first, script_level_first.next_progression_level
   end
 
+  test 'calling next_level when next level is hidden skips to next unhidden level' do
+    script = create(:script, name: 's1')
+    stage1 = create(:stage, script: script, absolute_position: 1)
+    stage2 = create(:stage, script: script, absolute_position: 2)
+    stage3 = create(:stage, script: script, absolute_position: 3)
+
+    script_level_current = create(:script_level, script: script, stage: stage1, position: 1, chapter: 1)
+    script_level_hidden1 = create(:script_level, script: script, stage: stage2, position: 1, chapter: 2)
+    script_level_hidden2 = create(:script_level, script: script, stage: stage2, position: 2, chapter: 3)
+    script_level_unhidden = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
+
+    student = create :student
+    ScriptLevelsController.stubs(:stage_hidden_for_user?).with(script_level_current, student).returns(false)
+    ScriptLevelsController.stubs(:stage_hidden_for_user?).with(script_level_hidden1, student).returns(true)
+    ScriptLevelsController.stubs(:stage_hidden_for_user?).with(script_level_hidden2, student).returns(true)
+    ScriptLevelsController.stubs(:stage_hidden_for_user?).with(script_level_unhidden, student).returns(false)
+
+    assert_equal script_level_unhidden, script_level_current.next_progression_level(student)
+  end
+
+  test 'calling next_level when next level is locked skips to next unlocked level' do
+    script = create(:script, name: 's1')
+    stage1 = create(:stage, script: script, absolute_position: 1)
+    stage2 = create(:stage, script: script, absolute_position: 2)
+    stage3 = create(:stage, script: script, absolute_position: 3)
+
+    script_level_current = create(:script_level, script: script, stage: stage1, position: 1, chapter: 1)
+    script_level_locked1 = create(:script_level, script: script, stage: stage2, position: 1, chapter: 2)
+    script_level_locked2 = create(:script_level, script: script, stage: stage2, position: 2, chapter: 3)
+    script_level_unlocked = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
+
+    student = create :student
+    student.stubs(:user_level_locked?).with(script_level_current, script_level_current.level).returns(false)
+    student.stubs(:user_level_locked?).with(script_level_locked1, script_level_locked1.level).returns(true)
+    student.stubs(:user_level_locked?).with(script_level_locked2, script_level_locked2.level).returns(true)
+    student.stubs(:user_level_locked?).with(script_level_unlocked, script_level_unlocked.level).returns(false)
+
+    assert_equal script_level_unlocked, script_level_current.next_progression_level(student)
+  end
+
   test 'end of stage' do
     script = Script.find_by_name('course1')
 

@@ -1269,11 +1269,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [stage1.id.to_s], hidden
 
     # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    assert_equal true, ScriptLevelsController.stage_hidden_for_user?(stage1.script_levels.first, student)
+    assert_equal false, ScriptLevelsController.stage_hidden_for_user?(stage2.script_levels.first, student)
+    assert_equal false, ScriptLevelsController.stage_hidden_for_user?(stage3.script_levels.first, student)
   end
 
   test "user in two sections, neither attached to course" do
@@ -1304,11 +1302,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [stage1.id.to_s, stage2.id.to_s, stage3.id.to_s], hidden
 
     # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    assert_equal true, ScriptLevelsController.stage_hidden_for_user?(stage1.script_levels.first, student)
+    assert_equal true, ScriptLevelsController.stage_hidden_for_user?(stage2.script_levels.first, student)
+    assert_equal true, ScriptLevelsController.stage_hidden_for_user?(stage3.script_levels.first, student)
   end
 
   test "user in two sections, one attached to course one not" do
@@ -1338,11 +1334,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [stage1.id.to_s, stage2.id.to_s], hidden
 
     # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    assert_equal true, ScriptLevelsController.stage_hidden_for_user?(stage1.script_levels.first, student)
+    assert_equal true, ScriptLevelsController.stage_hidden_for_user?(stage2.script_levels.first, student)
+    assert_equal false, ScriptLevelsController.stage_hidden_for_user?(stage3.script_levels.first, student)
   end
 
   test "user not signed in" do
