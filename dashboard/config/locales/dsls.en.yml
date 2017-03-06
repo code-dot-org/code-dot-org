@@ -7064,10 +7064,8 @@ en:
       courseA_multi_artist_loops11_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  The artist repeats `East` and `Down` four times to make a staircase.: Incorrect.  The artist repeats `East` and `Down` four times to make a staircase.
         Incorrect.  The artist repeats `South` and `East` four times to make a staircase.: Incorrect.  The artist repeats `South` and `East` four times to make a staircase.
         Take a good look at the code below.  What will happen when you click "Run"?: Take a good look at the code below.  What will happen when you click "Run"?
-        The artist repeats `East` and `Down` four times to make a staircase.: The artist repeats `East` and `Down` four times to make a staircase.
         The artist repeats `South` and `East` four times to make a staircase.: The artist repeats `South` and `East` four times to make a staircase.
         The artist will draw a square: The artist will draw a square
         The artist will draw a stair pattern.: The artist will draw a stair pattern.
@@ -7178,23 +7176,13 @@ en:
         ? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
         : Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
         Correct! The function is set to collect as many nectar or honey as is passed through a parameter.: Correct! The function is set to collect as many nectar or honey as is passed through a parameter.
-        Correct! The functions are empty!: Correct! The functions are empty!
         I don't know.: I don't know.
-        Incorrect.  Clicking to look inside of the function shows that it is empty!: Incorrect.  Clicking to look inside of the function shows that it is empty!
         Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.
-        Incorrect.  While the program looks like it should run properly, clicking to look inside of the function shows that it is empty!: Incorrect.  While the program looks like it should run properly, clicking to look inside of the function shows that it is empty!
         Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.
-        Question: Question
         'The bee will collect only one nectar or honey in each iteration of the loop. ': 'The bee will collect only one nectar or honey in each iteration of the loop. '
-        'The bee will collect three nectar or honey, then two nectar and honey in a stair-step pattern. ': 'The bee will collect three nectar or honey, then two nectar and honey in a stair-step pattern. '
         'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ': 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
         The bee will not collect any nectar or honey.: The bee will not collect any nectar or honey.
         What will happen when you click "Run"?: What will happen when you click "Run"?
-        While the program looks like it should run properly, clicking to look inside of the function shows that it is empty!: While the program looks like it should run properly, clicking to look inside of the function shows that it is empty!
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
       courseF_multi_playlab_variables4c_predictive1:
         'Correct. ': 'Correct. '
         I don't know.: I don't know.
@@ -7546,16 +7534,10 @@ en:
         <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
       cspu5_assess3_bakeSale:
         'Add after line 3:     <pre>numItems = numItems - 1;</pre>': 'Add after line 3:     <pre>numItems = numItems - 1;</pre>'
-        'Add after line 3:     numItems = numItems - 1;': 'Add after line 3:     numItems = numItems - 1;'
         'Add after line 4:     <pre>numItems = 0;</pre>': 'Add after line 4:     <pre>numItems = 0;</pre>'
-        'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
         'Change Line 1 to:  <pre>var total = -1;</pre>': 'Change Line 1 to:  <pre>var total = -1;</pre>'
-        'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
         'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>': 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
-        'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
-        'Change Line 3 to:  <pre>total = promptNum("Enter next item price");</pre>': 'Change Line 3 to:  <pre>total = promptNum("Enter next item price");</pre>'
-        'Change Line 3 to:  total = promptNum("Enter next item price");': 'Change Line 3 to:  total = promptNum("Enter next item price");'
-        'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
+        'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>': 'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>'
       cspu5_assess3_counter:
         '0': '0'
         '1': '1'

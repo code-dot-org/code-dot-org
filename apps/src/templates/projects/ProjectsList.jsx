@@ -83,7 +83,7 @@ const ProjectsList = React.createClass({
       {
         property: 'name',
         header: {
-          label: 'Project Name',
+          label: commonMsg.projectName(),
           props: {style: styles.headerCell},
         },
         cell: {
@@ -94,7 +94,7 @@ const ProjectsList = React.createClass({
       {
         property: 'studentName',
         header: {
-          label: 'Student Name',
+          label: commonMsg.studentName(),
           props: {style: styles.headerCell},
         },
         cell: {
@@ -104,7 +104,7 @@ const ProjectsList = React.createClass({
       {
         property: 'type',
         header: {
-          label: 'Type',
+          label: commonMsg.projectType(),
           props: {style: styles.headerCell},
         },
         cell: {
@@ -115,7 +115,7 @@ const ProjectsList = React.createClass({
       {
         property: 'updatedAt',
         header: {
-          label: 'Last Edited',
+          label: commonMsg.lastEdited(),
           props: {style: styles.headerCell},
         },
         cell: {
