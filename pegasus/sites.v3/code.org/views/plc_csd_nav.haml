@@ -1,14 +1,14 @@
 #about_nav
   %span.about_list
-    -current_url = '/educate/professional-learning/cs-discoveries'
+    -target_url = '/educate/professional-learning/cs-discoveries'
     -{'Middle School Courses'=>'/educate/curriculum/middle-school',
-      'About the Professional Learning Program'=>current_url+'#about',
-      'How does it work?'=>current_url+'#components',
-      'What are the commitments?'=>current_url+'#commitments',
-      'Who can participate?'=>current_url+'#participate',
-      'Where is it offered?'=>current_url+'#locations',
-      'How to apply?'=>current_url+'#apply'}.each_pair do |label,url|
-      - if current_url == url
+      'About the Professional Learning Program'=>target_url+'#about',
+      'How does it work?'=>target_url+'#components',
+      'What are the commitments?'=>target_url+'#commitments',
+      'Who can participate?'=>target_url+'#participate',
+      'Where is it offered?'=>target_url+'#locations',
+      'How to apply?'=>target_url+'#apply'}.each_pair do |label,url|
+      - if target_url == url
         %span.about_list_item_selected= label
       -else
         %a.about_list_item{:href=>url}= label
