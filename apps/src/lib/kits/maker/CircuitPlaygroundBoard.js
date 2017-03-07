@@ -7,7 +7,7 @@ import {
   initializeCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
-import {BOARD_EVENT_ALIASES} from './PlaygroundConstants';
+import {BOARD_EVENT_ALIASES, SONG_CHARGE} from './PlaygroundConstants';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -131,6 +131,36 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     Object.keys(this.prewiredComponents_).forEach(key => {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents_[key]);
     });
+  }
+
+  /**
+   * Play a song and animate some LEDs to demonstrate successful connection
+   * to the board.
+   * @returns {Promise} resolved when the song and animation are done.
+   */
+  celebrateSuccessfulConnection() {
+    const {buzzer, colorLeds} = this.prewiredComponents_;
+
+    /**
+     * Run given function for each LED on the board in sequence, with givcen
+     * delay between them.
+     * @param {function(five.Led.RGB)} func
+     * @param {number} delay in milliseconds
+     * @returns {Promise} resolves after func is called for the last LED
+     */
+    function forEachLedInSequence(func, delay) {
+      return new Promise(resolve => {
+        colorLeds.forEach((led, i) => {
+          setTimeout(() => func(led), delay * (i+1));
+        });
+        setTimeout(resolve, delay * colorLeds.length);
+      });
+    }
+
+    return Promise.resolve()
+        .then(() => buzzer.play(SONG_CHARGE, 104))
+        .then(() => forEachLedInSequence(led => led.color('green'), 80))
+        .then(() => forEachLedInSequence(led => led.off(), 80));
   }
 
   pinMode(pin, modeConstant) {

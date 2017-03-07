@@ -3,6 +3,7 @@ import {expect} from '../../../../util/configuredChai';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
+import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -131,6 +132,77 @@ describe('CircuitPlaygroundBoard', () => {
         board.installOnInterpreter(codegen, interpreter);
         expect(interpreter.createGlobalProperty).to.have.been.called;
       });
+    });
+  });
+
+  describe(`celebrateSuccessfulConnection()`, () => {
+    let clock, yieldToPromiseChain;
+
+    beforeEach(() => {
+      // Promise chains and fake timers don't work together so well, so we
+      // give ourselves a real `setTimeout(cb, 0)` function that will let any
+      // promise chains run as far as they can before entering the callback.
+      const realSetTimeout = window.setTimeout;
+      yieldToPromiseChain = cb => realSetTimeout(cb, 0);
+
+      // Now use fake timers so we can test exactly when the different commands
+      // are sent to the board
+      clock = sinon.useFakeTimers();
+    });
+
+    afterEach(() => {
+      clock.restore();
+    });
+
+    it('plays a song and animates lights', done => {
+      board.connect().then(() => {
+        // Mock board components that will be used to celebrate
+        const buzzer = sinon.mock(board.prewiredComponents_.buzzer);
+        const leds = board.prewiredComponents_.colorLeds.map(led => sinon.mock(led));
+
+        // Right after the first call we'll expect the buzzer to start playing
+        // its song.  This method uses a promise chain for animations, so we
+        // have to yield the test 'thread' to let the promise chain run until
+        // it needs to wait for something.
+        buzzer.expects('play').once().calledWith(SONG_CHARGE, 104);
+        // Set up no expectations for leds - they don't do anything immediately.
+
+        // Now invoke the method under test and yield to the promise chain once.
+        const promiseUnderTest = board.celebrateSuccessfulConnection();
+        yieldToPromiseChain(() => {
+          // Check expected calls after first invocation and yield.
+          buzzer.verify();
+          leds.forEach(led => led.verify());
+
+          // The initial invocation set up timers to enable each LED in sequence
+          for (let i = 0; i < leds.length; i++) {
+            leds[i].expects('color').once().calledWith('blue');
+            clock.tick(80);
+            leds[i].verify();
+          }
+          // No new buzzer commands
+          buzzer.verify();
+
+          // Yield to the promise chain again now that the initial
+          // forEachLedInSequence promise has resolved.
+          yieldToPromiseChain(() => {
+
+            // The next 'from' set up timers to disable each LED in sequence
+            for (let i = 0; i < leds.length; i++) {
+              leds[i].expects('off').once();
+              clock.tick(80);
+              leds[i].verify();
+            }
+            // No new buzzer commands
+            buzzer.verify();
+
+            // Don't end the test unless the main promise resolves.
+            // It should be resolved at this point, because enough time passed
+            // while the LEDs were animating.
+            promiseUnderTest.then(done);
+          });
+        });
+      }).catch(done);
     });
   });
 
