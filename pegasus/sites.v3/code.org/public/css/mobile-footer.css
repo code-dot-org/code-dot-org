@@ -6,6 +6,7 @@
 
 #footer-links ul {
   list-style: none;
+  /*display: none;*/
   margin: 0;
   padding: 0;
 }
@@ -64,11 +65,13 @@
   color: white;
 }
 
-@media (max-width: 970px) {
+/*medium screens*/
+@media screen and (max-width: 970px)
+{
   #pagefooter {
     overflow: visible;
     padding: 0;
-    height: 150px;
+    height: 120px;
   }
 
   .language-dropdown {
@@ -80,7 +83,6 @@
   }
 
   .language-dropdown, .social-media {
-    margin-top: 20px;
     text-align: center;
     width: 40%;
     display: inline;
@@ -100,7 +102,9 @@
   }
 }
 
-@media (max-width: 601px) {
+/*small screens, stacked links*/
+@media screen and (min-width: 0px) and (max-width: 600px)
+{
   #pagefooter {
     overflow: visible;
     padding: 0;
@@ -113,6 +117,7 @@
   }
 
   #footer-links ul {
+    display: none;
     position: absolute;
     bottom: 38px;
     width: 100%;
@@ -142,11 +147,5 @@
 
   #copyright {
     padding: 12px 12px 36px 12px;
-  }
-}
-
-@media (max-width: 512px) {
-  #pagefooter {
-    height: 170px;
   }
 }
