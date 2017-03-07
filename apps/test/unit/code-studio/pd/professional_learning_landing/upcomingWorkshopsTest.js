@@ -18,7 +18,6 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_id: 20,
       enrollment_code: 'code1'
     },
     {
@@ -33,7 +32,6 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_id: 21,
       enrollment_code: 'code2'
     },
     {
@@ -48,7 +46,6 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_id: undefined,
       enrollment_code: ''
     }
   ];

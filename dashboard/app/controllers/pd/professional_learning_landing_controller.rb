@@ -1,6 +1,4 @@
 class Pd::ProfessionalLearningLandingController < ApplicationController
-  before_action :require_admin
-
   def index
     # Get the courses that this user teaches
     workshops = Pd::Workshop.enrolled_in_by(current_user)
