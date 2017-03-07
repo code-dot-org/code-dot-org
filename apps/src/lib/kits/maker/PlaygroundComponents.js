@@ -20,7 +20,7 @@ import Piezo from './Piezo';
  *        components initialized.
  * @returns {Object.<String, Object>} board components
  */
-export function initializeCircuitPlaygroundComponents(board) {
+export function createCircuitPlaygroundComponents(board) {
   return {
     colorLeds: initializeColorLeds(board),
 
@@ -55,12 +55,12 @@ export function initializeCircuitPlaygroundComponents(board) {
 
 /**
  * De-initializes any Johnny-Five components that might have been created
- * by initializeCircuitPlaygroundComponents
+ * by createCircuitPlaygroundComponents
  * @param {Object} components - map of components, as originally returned by
- *   initializeCircuitPlaygroundComponents.  Additional members of this object
+ *   createCircuitPlaygroundComponents.  Additional members of this object
  *   will be ignored.
  */
-export function deinitializeCircuitPlaygroundComponents(components) {
+export function destroyCircuitPlaygroundComponents(components) {
   if (components.colorLeds) {
     components.colorLeds.forEach(led => led.stop());
   }

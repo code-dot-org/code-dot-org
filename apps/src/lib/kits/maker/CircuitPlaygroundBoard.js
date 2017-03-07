@@ -4,8 +4,8 @@ import ChromeSerialPort from 'chrome-serialport';
 import five from 'johnny-five';
 import Playground from 'playground-io';
 import {
-  initializeCircuitPlaygroundComponents,
-  deinitializeCircuitPlaygroundComponents,
+  createCircuitPlaygroundComponents,
+  destroyCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
 import {BOARD_EVENT_ALIASES, SONG_CHARGE} from './PlaygroundConstants';
@@ -85,7 +85,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     this.prewiredComponents_ = {
       board: this.fiveBoard_,
-      ...initializeCircuitPlaygroundComponents(this.fiveBoard_),
+      ...createCircuitPlaygroundComponents(this.fiveBoard_),
       ...J5_CONSTANTS
     };
   }
@@ -109,7 +109,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   destroy() {
     if (this.prewiredComponents_) {
-      deinitializeCircuitPlaygroundComponents(this.prewiredComponents_);
+      destroyCircuitPlaygroundComponents(this.prewiredComponents_);
     }
     this.prewiredComponents_ = null;
 
