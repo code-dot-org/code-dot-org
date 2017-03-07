@@ -134,6 +134,36 @@ namespace :seed do
     end
   end
 
+  task regional_partners: :environment do
+    RegionalPartner.transaction do
+      RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
+    end
+  end
+
+  task regional_partners_school_districts: :environment do
+    seed_regional_partners_school_districts(false)
+  end
+
+  task force_regional_partners_school_districts: :environment do
+    seed_regional_partners_school_districts(true)
+  end
+
+  def seed_regional_partners_school_districts(force)
+    # use a much smaller dataset in environments that reseed data frequently.
+    mapping_tsv = CDO.stub_school_data ?
+        'test/fixtures/regional_partners_school_districts.tsv' :
+        'config/regional_partners_school_districts.tsv'
+
+    expected_count = `grep -v 'NO PARTNER' #{mapping_tsv} | wc -l`.to_i - 1
+    raise "#{mapping_tsv} contains no data" unless expected_count > 0
+    RegionalPartnersSchoolDistrict.transaction do
+      if (RegionalPartnersSchoolDistrict.count < expected_count) || force
+        # This step can take up to 1 minute to complete when not using stubbed data.
+        RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv(mapping_tsv)
+      end
+    end
+  end
+
   task prize_providers: :environment do
     PrizeProvider.transaction do
       PrizeProvider.reset_db
@@ -273,10 +303,10 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures, :school_districts, :schools]
+  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
 end
