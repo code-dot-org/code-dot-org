@@ -19,7 +19,32 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
 
   self.primary_keys = :school_district_id, :regional_partner_id
 
+  CSV_HEADERS = {
+    school_district_id: 'LEAID',
+    regional_partner_name: 'RegionalPartner',
+    course: 'course',
+    workshop_days: 'workshop_days'
+  }.freeze
+
+  CSV_IMPORT_OPTIONS = { col_sep: "\t", headers: true}
+
   NO_PARTNER = 'NO PARTNER'
 
   validates_inclusion_of :course, in: ['csp', 'csd'], allow_nil: true
+
+  def self.find_or_create_all_from_tsv(filename)
+    CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
+      regional_partner_name = row[CSV_HEADERS[:regional_partner_name]]
+      next if regional_partner_name == NO_PARTNER
+      school_district_id = row[CSV_HEADERS[:school_district_id]]
+
+      regional_partner = RegionalPartner.find_by(name: regional_partner_name)
+      raise "regional partner name not found: #{regional_partner_name}" unless regional_partner
+      school_district = SchoolDistrict.find(school_district_id)
+      course = row[CSV_HEADERS[:course]]
+      workshop_days = row[CSV_HEADERS[:workshop_days]]
+
+      RegionalPartnersSchoolDistrict.create(school_district: school_district, regional_partner: regional_partner, course: course, workshop_days: workshop_days)
+    end
+  end
 end
