@@ -496,9 +496,8 @@ EOS
 
     level = Level.create(
       name: level_name,
-      user_id: 0,
-      type: 'Maze',
-      authored_hints: JSON.generate(
+      user: create(:user),
+      callout_json: JSON.generate(
         [
           {"callout_text": "first english markdown", "localization_key": "first"},
           {"callout_text": "second english markdown", "localization_key": "second"},
@@ -510,6 +509,7 @@ EOS
 
     assert_equal callouts[0].callout_text, "first test markdown"
     assert_equal callouts[1].callout_text, "second test markdown"
+    I18n.locale = I18n.default_locale
   end
 
   test 'handles bad callout localization data' do
@@ -519,9 +519,8 @@ EOS
 
     level = Level.create(
       name: level_name,
-      user_id: 0,
-      type: 'Maze',
-      authored_hints: JSON.generate(
+      user: create(:user),
+      callout_json: JSON.generate(
         [
           {"callout_text": "first english markdown", "localization_key": "first"},
           {"callout_text": "second english markdown", "localization_key": "second"},
@@ -557,5 +556,6 @@ EOS
 
     assert_equal callouts[0].callout_text, "first english markdown"
     assert_equal callouts[1].callout_text, "second english markdown"
+    I18n.locale = I18n.default_locale
   end
 end
