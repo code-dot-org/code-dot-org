@@ -47,11 +47,13 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'workshops_user_enrolled_in returns workshops the user is enrolled in' do
     teacher = create :teacher
     sign_in(teacher)
+    other_teacher = create :teacher
 
     workshop_2 = create :pd_workshop
 
     enrollment_1 = create(:pd_enrollment, workshop: @workshop, email: teacher.email, user_id: nil)
     enrollment_2 = create(:pd_enrollment, workshop: workshop_2, email: 'other@example.com', user_id: teacher.id)
+    create(:pd_enrollment, workshop: @workshop, email: other_teacher.email, user_id: other_teacher.id)
 
     get :workshops_user_enrolled_in
 
