@@ -134,12 +134,6 @@ namespace :seed do
     end
   end
 
-  task regional_partners: :environment do
-    RegionalPartner.transaction do
-      RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
-    end
-  end
-
   task regional_partners_school_districts: :environment do
     seed_regional_partners_school_districts(false)
   end
