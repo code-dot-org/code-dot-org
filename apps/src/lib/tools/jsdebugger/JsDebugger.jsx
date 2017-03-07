@@ -367,7 +367,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
       marginRight: 5
     };
 
-    const openStyle = {display: 'block'};
+    const openStyle = {};
     if (!this.state.open && this.state.transitionType !== 'closing') {
       openStyle.display = 'none';
     }

@@ -72,7 +72,11 @@
       "U3 Variables misconceptions 2",
       "U3 Variables misconceptions 3",
       "U3 Variables misconceptions 4"
-    ]
+    ],
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "true"
   },
   "published": true,
   "notes": "",

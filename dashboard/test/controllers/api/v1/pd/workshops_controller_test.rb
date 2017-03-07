@@ -3,7 +3,8 @@ require 'test_helper'
 class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   freeze_time
 
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @admin = create(:admin)
     @organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
@@ -12,6 +13,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @standalone_workshop = create(:pd_workshop)
 
     # Don't actually call the geocoder.
+  end
+
+  setup do
     Pd::Workshop.stubs(:process_location)
   end
 
@@ -44,15 +48,23 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_2.id, response[0]['id']
   end
 
-  test 'with the enrollments param, enrollment IDs are included in the response' do
-    sign_in @organizer
-    enrollment = create :pd_enrollment, workshop: @workshop, email: @organizer.email
+  test 'workshops_user_enrolled_in returns workshops the user is enrolled in' do
+    teacher = create :teacher
+    sign_in(teacher)
+    other_teacher = create :teacher
 
-    get :index, params: {include_enrollments: true}
-    assert_response :success
+    workshop_2 = create :pd_workshop
+
+    enrollment_1 = create(:pd_enrollment, workshop: @workshop, email: teacher.email, user_id: nil)
+    enrollment_2 = create(:pd_enrollment, workshop: workshop_2, email: 'other@example.com', user_id: teacher.id)
+    create(:pd_enrollment, workshop: @workshop, email: other_teacher.email, user_id: other_teacher.id)
+
+    get :workshops_user_enrolled_in
+
     response = JSON.parse(@response.body)
-    assert_equal @workshop.id, response[0]['id']
-    assert_equal enrollment.id, response[0]['enrollment_id']
+    assert_equal 2, response.length
+    assert_equal enrollment_1.code, response.find { |workshop| @workshop.id == workshop['id']}['enrollment_code']
+    assert_equal enrollment_2.code, response.find { |workshop| workshop_2.id == workshop['id']}['enrollment_code']
   end
 
   test 'workshop organizers cannot list workshops they are not organizing' do

@@ -44,26 +44,17 @@ describe('StatusProgressDot', () => {
     courseOverviewPage: true,
     postMilestoneDisabled: false,
     signInState: SignInState.SignedIn,
-    saveAnswersBeforeNavigation: false
+    saveAnswersBeforeNavigation: false,
+    lessonIsLockedForAllStudents: () => false
   };
-  const level = baseProps.level; // TODO - get rid of
-
-  before(() => {
-    sinon.stub(stageLockRedux, 'fullyLockedStageMapping', () => ({
-      [fullyLockedStageId]: true,
-      [partiallyLockedStageId]: false
-    }));
-  });
-  after(() => {
-    stageLockRedux.fullyLockedStageMapping.restore();
-  });
 
   describe('handling lockable assessments', () => {
     it('overrides status to be locked when viewing fully locked section as student', () => {
       const props = {
         ...baseProps,
         stageId: fullyLockedStageId,
-        viewAs: ViewType.Student
+        viewAs: ViewType.Student,
+        lessonIsLockedForAllStudents: () => true
       };
 
       const wrapper = shallow(<StatusProgressDot {...props}/>);
@@ -74,7 +65,8 @@ describe('StatusProgressDot', () => {
       const props = {
         ...baseProps,
         stageId: fullyLockedStageId,
-        viewAs: ViewType.Teacher
+        viewAs: ViewType.Teacher,
+        lessonIsLockedForAllStudents: () => true
       };
       const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.perfect);
@@ -84,7 +76,8 @@ describe('StatusProgressDot', () => {
       const props = {
         ...baseProps,
         stageId: partiallyLockedStageId,
-        viewAs: ViewType.Student
+        viewAs: ViewType.Student,
+        lessonIsLockedForAllStudents: () => false
       };
       const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.perfect);

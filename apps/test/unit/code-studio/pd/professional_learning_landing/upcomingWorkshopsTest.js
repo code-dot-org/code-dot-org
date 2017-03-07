@@ -18,7 +18,6 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_id: 20,
       enrollment_code: 'code1'
     },
     {
@@ -33,7 +32,6 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_id: 21,
       enrollment_code: 'code2'
     },
     {
@@ -48,7 +46,6 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_id: undefined,
       enrollment_code: ''
     }
   ];
@@ -64,9 +61,11 @@ describe("Tests for the upcoming workshops page", () => {
     expect(upcomingWorkshopsTable.find('tbody tr')).to.have.length(3);
     expect(upcomingWorkshopsTable.find('tbody tr Button')).to.have.length(2);
     expect(upcomingWorkshopsTable.state('showCancelModal')).to.be.false;
+    expect(upcomingWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
 
     // Pushing the button should bring up the modal
     upcomingWorkshopsTable.find('tbody tr Button').first().simulate('click');
     expect(upcomingWorkshopsTable.state('showCancelModal')).to.be.true;
+    expect(upcomingWorkshopsTable.state('enrollmentCodeToCancel')).to.equal('code1');
   });
 });

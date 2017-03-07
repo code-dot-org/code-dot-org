@@ -53,6 +53,32 @@ export function initializeCircuitPlaygroundComponents(board) {
   };
 }
 
+/**
+ * Set of classes used by interpreter to understand the type of instantiated
+ * objects, allowing it to make methods and properties of instances available.
+ */
+export const componentConstructors = {
+  Led: five.Led,
+  Board: five.Board,
+  RGB: five.Led.RGB,
+  Button: five.Button,
+  Switch: five.Switch,
+  Piezo,
+  Thermometer: five.Thermometer,
+  Sensor: five.Sensor,
+  Pin: five.Pin,
+  Accelerometer: five.Accelerometer,
+  Animation: five.Animation,
+  /**
+   * @link https://en.wikipedia.org/wiki/Three_Laws_of_Robotics
+   * 1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+   * 2. A robot must obey orders given it by human beings except where such orders would conflict with the First Law.
+   * 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+   */
+  Servo: five.Servo,
+  TouchSensor
+};
+
 export function initializeColorLeds(board) {
   return _.range(N_COLOR_LEDS).map(i => initializeColorLed(board, i));
 }

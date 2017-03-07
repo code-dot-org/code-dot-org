@@ -8,9 +8,8 @@
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
-    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":19},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":25},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":19},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":25},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Put the variables in the correct places to create this conversation.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -33,7 +32,6 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Now, Pirate Pegleg has some questions for Brian.\r\n\r\nThis code uses an `ask` block, so you can type Brian's answers after you click \"Run\". \r\n\r\nPut the variables in the correct places to create this conversation.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -46,10 +44,16 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions_important": "false",
-    "contained_level_names": null
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "contained_level_names": [
+      "courseF_multi_playlab_variables4c_predictive1"
+    ]
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
@@ -58,87 +62,33 @@
           <next>
             <block type="studio_ask">
               <title name="TEXT">What be yer name?</title>
-              <title name="VAR">A1</title>
+              <title name="VAR">A1  </title>
               <next>
                 <block type="studio_saySpriteParams" inline="true">
-                  <title name="SPRITE">1</title>
+                  <title name="SPRITE">0</title>
                   <value name="TEXT">
-                    <block type="variables_get">
-                      <title name="VAR">A1</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="studio_saySpriteParams" inline="true">
-                      <title name="SPRITE">0</title>
-                      <value name="TEXT">
-                        <block type="text_join_simple" inline="false" inputcount="3">
-                          <value name="ADD0">
-                            <block type="text">
-                              <title name="TEXT">It be a pleasure, </title>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="variables_get">
-                              <title name="VAR">A1</title>
-                            </block>
-                          </value>
-                          <value name="ADD2">
-                            <block type="text">
-                              <title name="TEXT">.</title>
-                            </block>
-                          </value>
+                    <block type="text_join_simple" inline="false" inputcount="3">
+                      <value name="ADD0">
+                        <block type="text">
+                          <title name="TEXT">It be a pleasure meetin' ya, </title>
                         </block>
                       </value>
-                      <next>
-                        <block type="studio_ask">
-                          <title name="TEXT">How old are you?</title>
-                          <title name="VAR">A2</title>
-                          <next>
-                            <block type="studio_saySpriteParams" inline="true">
-                              <title name="SPRITE">1</title>
-                              <next>
-                                <block type="studio_saySpriteParams" inline="true">
-                                  <title name="SPRITE">0</title>
-                                  <value name="TEXT">
-                                    <block type="text_join_simple" inline="false" inputcount="5">
-                                      <value name="ADD0">
-                                        <block type="text">
-                                          <title name="TEXT">Ye be pretty tall for a </title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD2">
-                                        <block type="text">
-                                          <title name="TEXT"> year old, </title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD4">
-                                        <block type="text">
-                                          <title name="TEXT">.</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
+                      <value name="ADD1">
+                        <block type="variables_get">
+                          <title name="VAR">A1</title>
                         </block>
-                      </next>
+                      </value>
+                      <value name="ADD2">
+                        <block type="text">
+                          <title name="TEXT">.</title>
+                        </block>
+                      </value>
                     </block>
-                  </next>
+                  </value>
                 </block>
               </next>
             </block>
           </next>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">A2</title>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">A2</title>
-        </block>
-        <block type="variables_get">
-          <title name="VAR">A1</title>
         </block>
       </xml>
     </start_blocks>
@@ -337,101 +287,5 @@
   </category>
       </xml>
     </toolbox_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="when_run">
-          <next>
-            <block type="studio_ask">
-              <title name="TEXT">What be yer name?</title>
-              <title name="VAR">A1</title>
-              <next>
-                <block type="studio_saySpriteParams" inline="true">
-                  <title name="SPRITE">1</title>
-                  <value name="TEXT">
-                    <block type="variables_get">
-                      <title name="VAR">A1</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="studio_saySpriteParams" inline="true">
-                      <title name="SPRITE">0</title>
-                      <value name="TEXT">
-                        <block type="text_join_simple" inline="false" inputcount="3">
-                          <value name="ADD0">
-                            <block type="text">
-                              <title name="TEXT">It be a pleasure, </title>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="variables_get">
-                              <title name="VAR">A1</title>
-                            </block>
-                          </value>
-                          <value name="ADD2">
-                            <block type="text">
-                              <title name="TEXT">.</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="studio_ask">
-                          <title name="TEXT">How old are you?</title>
-                          <title name="VAR">A2</title>
-                          <next>
-                            <block type="studio_saySpriteParams" inline="true">
-                              <title name="SPRITE">1</title>
-                              <value name="TEXT">
-                                <block type="variables_get">
-                                  <title name="VAR">A2</title>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="studio_saySpriteParams" inline="true">
-                                  <title name="SPRITE">0</title>
-                                  <value name="TEXT">
-                                    <block type="text_join_simple" inline="false" inputcount="5">
-                                      <value name="ADD0">
-                                        <block type="text">
-                                          <title name="TEXT">Ye be pretty tall for a </title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD1">
-                                        <block type="variables_get">
-                                          <title name="VAR">A2</title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD2">
-                                        <block type="text">
-                                          <title name="TEXT"> year old, </title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD3">
-                                        <block type="variables_get">
-                                          <title name="VAR">A1</title>
-                                        </block>
-                                      </value>
-                                      <value name="ADD4">
-                                        <block type="text">
-                                          <title name="TEXT">.</title>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </solution_blocks>
   </blocks>
 </Studio>

@@ -10,7 +10,7 @@ const UpcomingWorkshops = React.createClass({
   render() {
     return (
       <WorkshopTableLoader
-        queryUrl="/api/v1/pd/workshops/?state=Not%20Started&include_enrollments=1"
+        queryUrl="/api/v1/pd/workshops_user_enrolled_in"
         hideNoWorkshopsMessage={true}
       >
         <UpcomingWorkshopsTable/>
@@ -27,32 +27,32 @@ const UpcomingWorkshopsTable = React.createClass({
   getInitialState() {
     return {
       showCancelModal: false,
-      cancelledEnrollmentCode: undefined
+      enrollmentCodeToCancel: undefined
     };
   },
 
   cancelEnrollment(event) {
     $.ajax({
       method: "GET",
-      url: `/pd/workshop_enrollment/${this.state.cancelledEnrollmentCode}/cancel`
+      url: `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`
     }).done(() => {
       window.location.reload(true);
     }).fail(data => {
-      alert(`Could not cancel enrollment for enrollment code ${this.state.cancelledEnrollmentCode}`);
+      alert(`Could not cancel enrollment for enrollment code ${this.state.enrollmentCodeToCancel}`);
     });
   },
 
   dismissCancelModal(event) {
     this.setState({
       showCancelModal: false,
-      cancelledEnrollmentCode: undefined
+      enrollmentCodeToCancel: undefined
     });
   },
 
   showCancelModal(enrollmentCode) {
     this.setState({
       showCancelModal: true,
-      cancelledEnrollmentCode: enrollmentCode
+      enrollmentCodeToCancel: enrollmentCode
     });
   },
 
@@ -119,7 +119,7 @@ const UpcomingWorkshopsTable = React.createClass({
           </div>
         </td>
         <td>
-          {workshop.enrollment_id &&
+          {workshop.enrollment_code &&
             (
               <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
                 Cancel enrollment
@@ -138,7 +138,7 @@ const UpcomingWorkshopsTable = React.createClass({
           <Modal.Body>
             Are you sure you want to cancel your enrollment in this course?
           </Modal.Body>
-          <Modal.Footer style={{}}>
+          <Modal.Footer>
             <Button onClick={this.cancelEnrollment} bsStyle="primary">
               Yes - cancel my enrollment
             </Button>

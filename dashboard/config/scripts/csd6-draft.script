@@ -1,5 +1,5 @@
 stage 'Computing Innovations'
-level 'CSDU6 SFLP'
+named_level 'CSDU6 Innovation'
 
 stage 'Input Unplugged'
 level 'CSDU6 GameLab Input 1'
@@ -80,6 +80,7 @@ named_level 'CSD: For Loop'
 level 'CSDU6 - for loop - 2'
 level 'CSDU6 - for loop - 6'
 level 'CSDU6 - for loop - predict repeat'
+level 'CSDU6 - for loop - predict print'
 
 stage 'Lists and For Loops'
 named_level 'CSD: Lists with For Loops'
@@ -134,3 +135,6 @@ level 'CSDU6 - button debug'
 level 'CSDU6 - button tug o war right button'
 level 'CSDU6 - button tug o war left button'
 named_level 'CSDU6 - button tug o war challenge'
+
+stage 'Analog Input'
+named_level 'CSDU6 - sensors experiment'

@@ -8,6 +8,7 @@ require 'active_support'
 require 'active_support/core_ext/object/blank'
 require 'cdo/db'
 require 'cdo/geocoder'
+require 'cdo/only_one'
 
 BATCH_SIZE = 1000
 
