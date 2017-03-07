@@ -11,24 +11,15 @@ class MergeProfessionalLearningPartnerIntoRegionalPartner < ActiveRecord::Migrat
     ensure
       ActiveRecord::Base.record_timestamps = true
     end
-
-    drop_table :professional_learning_partners
   end
 
   def down
-    create_table :professional_learning_partners do |t|
-      t.string :name, null: false
-      t.references :contact, null: false
-      t.boolean :urban
-      t.index [:name, :contact_id], unique: true
-    end
-
     RegionalPartner.where("contact_id IS NOT NULL AND urban IS NOT NULL").each do |regional_partner|
-      ProfessionalLearningPartner.create(
+      ProfessionalLearningPartner.where(
         name: regional_partner.name,
         contact_id: regional_partner.contact_id,
         urban: regional_partner.urban
-      )
+      ).first_or_create
     end
   end
 end
