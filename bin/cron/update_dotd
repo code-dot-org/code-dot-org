@@ -4,6 +4,7 @@ require 'open-uri'
 require 'json'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require_relative '../../deployment'
+require 'cdo/only_one'
 require 'cdo/slack'
 
 SLACK_TOKEN = CDO.slack_token.freeze

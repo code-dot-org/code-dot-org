@@ -7110,30 +7110,22 @@ en:
       courseB_multi_artist_loops8_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.  The artist draws lines back and forth, then jumps down, creating a ladder.: Incorrect.  The artist draws lines back and forth, then jumps down, creating a ladder.
-        Incorrect.  The artist draws lines back and forth, then jumps down, creating a ladder..: Incorrect.  The artist draws lines back and forth, then jumps down, creating a ladder..
         Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.: Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.
         Run through the code below in your mind.  What will happen when you click "Run"?: Run through the code below in your mind.  What will happen when you click "Run"?
         Take a good look at the code below.  What will happen when you click "Run"?: Take a good look at the code below.  What will happen when you click "Run"?
         The artist draws lines back and forth, then jumps down, creating a ladder.: The artist draws lines back and forth, then jumps down, creating a ladder.
         The artist will draw a ladder with 4 steps.: The artist will draw a ladder with 4 steps.
-        The artist will draw a ladder with 6 steps.: The artist will draw a ladder with 6 steps.
-        The artist will draw a ladder.: The artist will draw a ladder.
         The artist will draw a single line.: The artist will draw a single line.
-        The artist will draw a square: The artist will draw a square
         The artist will draw a square with 4 sides.: The artist will draw a square with 4 sides.
-        The artist won't move at all.: The artist won't move at all.
       courseB_multi_collector_loops3_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. The `repeat` loop only instructs Laurel to move forward and collect treasure three times.: Incorrect. The `repeat` loop only instructs Laurel to move forward and collect treasure three times.
-        Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.
         Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.
         Laurel will move forward and collect all of the treasure.: Laurel will move forward and collect all of the treasure.
         Laurel will move forward and collect treasure three times in a row.: Laurel will move forward and collect treasure three times in a row.
         Laurel won't move at all.: Laurel won't move at all.
         Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
-        The program uses a `repeat` loop to get Laurel to move forward five times.: The program uses a `repeat` loop to get Laurel to move forward five times.
         The program uses a `repeat` loop to get Laurel to move forward three times.: The program uses a `repeat` loop to get Laurel to move forward three times.
       courseB_multi_maze_seq10_predict1:
         Correct!: Correct!

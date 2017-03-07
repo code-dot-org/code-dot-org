@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
+require 'cdo/only_one'
 require 'json'
 
 def main
