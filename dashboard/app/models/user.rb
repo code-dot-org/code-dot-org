@@ -879,9 +879,9 @@ class User < ActiveRecord::Base
   # Provides backwards compatibility with users created before the UserScript model
   # was introduced (cf. code-dot-org/website-ci#194).
   # TODO apply this migration to all users in database, then remove.
-  def backfill_user_scripts
+  def backfill_user_scripts(scripts = Script.all)
     # backfill progress in scripts
-    Script.all.each do |script|
+    scripts.each do |script|
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
         ul_map = user_levels_by_level(script)

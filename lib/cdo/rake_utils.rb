@@ -4,6 +4,7 @@ require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'digest'
+require 'parallel'
 
 module RakeUtils
   def self.system__(command)
@@ -139,8 +140,10 @@ module RakeUtils
   end
 
   def self.nproc
-    # TODO: Replace with system processor count.
-    1
+    count = ENV['PARALLEL_TEST_PROCESSORS'] ||
+      (File.executable?('/usr/bin/nproc') && `/usr/bin/nproc`) ||
+      Parallel.processor_count
+    count.to_i
   end
 
   def self.bundle_install(*args)

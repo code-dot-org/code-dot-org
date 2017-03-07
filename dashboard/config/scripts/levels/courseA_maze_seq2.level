@@ -9,7 +9,7 @@
     "skin": "birds",
     "instructions": "Fix the code to get the bird to the pig.",
     "start_direction": "3",
-    "step_mode": "0",
+    "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "ideal": "4",
@@ -30,6 +30,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This program is missing one block. Can you figure out which one?\",\"hint_id\":\"courseA_maze_seq2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57e4e54aa1f38237e9befdf5d1315d80/courseA_maze_seq2.mp3\"}]",
     "markdown_instructions": "*\"A bug! Fix the code to get me to the pig.\"*\r\n  \r\n<img src=\"https://images.code.org/2843193ce2d869ad2f06f0f5b114c9d0-image-1467924400663.gif\" width=\"200px\"/>",
     "instructions_important": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

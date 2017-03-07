@@ -7,7 +7,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   include LevelsHelper  # Test the levels helper stuff here because it has to do w/ routes...
   include ScriptLevelsHelper
 
-  setup do
+  self.use_transactional_test_case = true
+
+  setup_all do
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
@@ -38,11 +40,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       position: 2
     )
     create(:script_level, script: @custom_script, stage: @custom_stage_3, position: 1)
-    client_state.reset
 
     @script = @custom_script
     @script_level = @custom_s1_l1
+  end
 
+  setup do
+    client_state.reset
     Gatekeeper.clear
   end
 
@@ -1154,7 +1158,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 2": {"active": false}}'
+        properties: '{"variants": {"maze 2": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level
@@ -1167,7 +1171,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level2
@@ -1181,7 +1185,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         create(
           :script_level,
           levels: [level, level2],
-          properties: '{"maze 1": {"active": false}, "maze 2": {"active": false}}'
+          properties: '{"variants": {"maze 1": {"active": false}, "maze 2": {"active": false}}}'
         )
       )
     end
@@ -1199,7 +1203,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level
@@ -1220,7 +1224,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level

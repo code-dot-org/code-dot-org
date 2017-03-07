@@ -2874,6 +2874,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
+    locale: config.locale,
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
