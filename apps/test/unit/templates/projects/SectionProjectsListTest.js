@@ -10,7 +10,7 @@ const STUB_PROJECTS_DATA = [
     name: 'Antelope Freeway',
     studentName: 'Alice',
     type: 'applab',
-    updatedAt: '2016-12-31T23:59:59.999-08:00'
+    updatedAt: '2016-12-29T23:59:59.999-08:00'
   },
   {
     channel: 'AAAABBBBCCCCDDDDEE',
@@ -71,7 +71,7 @@ describe('SectionProjectsList', () => {
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
     assertRowContents(rows.nodes[1], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
     assertRowContents(rows.nodes[3], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
     assertRowContents(rows.nodes[4], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
   });
@@ -87,7 +87,7 @@ describe('SectionProjectsList', () => {
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
     assertRowContents(rows.nodes[1], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
     assertRowContents(rows.nodes[3], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
     assertRowContents(rows.nodes[4], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
 
@@ -99,7 +99,7 @@ describe('SectionProjectsList', () => {
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
     assertRowContents(rows.nodes[1], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
     assertRowContents(rows.nodes[2], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[3], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[3], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
     assertRowContents(rows.nodes[4], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
   });
 
@@ -123,7 +123,7 @@ describe('SectionProjectsList', () => {
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
     assertRowContents(rows.nodes[2], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
   });
 
@@ -151,7 +151,7 @@ describe('SectionProjectsList', () => {
     expect(rows).to.have.length(4);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
     assertRowContents(rows.nodes[1], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
     assertRowContents(rows.nodes[3], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
 
     // Charlie should no longer appear in the dropdown
