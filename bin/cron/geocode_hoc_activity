@@ -5,6 +5,7 @@
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
+require 'cdo/only_one'
 require 'cdo/properties'
 
 BATCH_SIZE = 5000

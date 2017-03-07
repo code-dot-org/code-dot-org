@@ -2,6 +2,7 @@
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/contact_rollups_sync'
+require 'cdo/only_one'
 
 def main
   ContactRollupsSync.sync_contact_rollups_to_main
