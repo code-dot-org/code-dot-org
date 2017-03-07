@@ -148,7 +148,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_level_after, script_level_unplugged.next_level
   end
 
-  test 'calling next_level when next level is spelling_bee skips the level in non-english' do
+  test 'calling next_progression_level when next level is spelling_bee skips the level in non-english' do
     script = create(:script, name: 's1')
     stage = create(:stage, script: script, absolute_position: 1)
     first = create(:script_level, script: script, stage: stage, position: 1)
@@ -175,7 +175,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal second, first.next_level
   end
 
-  test 'calling next_level when next level is spelling_bee skips the entire spelling_bee stage in non-english' do
+  test 'calling next_progression_level when next level is spelling_bee skips the entire spelling_bee stage in non-english' do
     script = create(:script, name: 's1')
     first_stage = create(:stage, script: script, absolute_position: 1)
     script_level_first = create(:script_level, script: script, stage: first_stage, position: 1, chapter: 1)
@@ -201,7 +201,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal spelling_bee_first, script_level_first.next_progression_level
   end
 
-  test 'calling next_level when next level is hidden skips to next unhidden level' do
+  test 'calling next_progression_level when next level is hidden skips to next unhidden level' do
     script = create(:script, name: 's1')
     stage1 = create(:stage, script: script, absolute_position: 1)
     stage2 = create(:stage, script: script, absolute_position: 2)
@@ -221,7 +221,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_level_unhidden, script_level_current.next_progression_level(student)
   end
 
-  test 'calling next_level when next level is locked skips to next unlocked level' do
+  test 'calling next_progression_level when next level is locked skips to next unlocked level' do
     script = create(:script, name: 's1')
     stage1 = create(:stage, script: script, absolute_position: 1)
     stage2 = create(:stage, script: script, absolute_position: 2)
@@ -233,12 +233,74 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level_unlocked = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
 
     student = create :student
-    student.stubs(:user_level_locked?).with(script_level_current, script_level_current.level).returns(false)
-    student.stubs(:user_level_locked?).with(script_level_locked1, script_level_locked1.level).returns(true)
-    student.stubs(:user_level_locked?).with(script_level_locked2, script_level_locked2.level).returns(true)
-    student.stubs(:user_level_locked?).with(script_level_unlocked, script_level_unlocked.level).returns(false)
+    student.stubs(:user_level_locked?).with(script_level_current, script_level_current.levels.first).returns(false)
+    student.stubs(:user_level_locked?).with(script_level_locked1, script_level_locked1.levels.first).returns(true)
+    student.stubs(:user_level_locked?).with(script_level_locked2, script_level_locked2.levels.first).returns(true)
+    student.stubs(:user_level_locked?).with(script_level_unlocked, script_level_unlocked.levels.first).returns(false)
 
     assert_equal script_level_unlocked, script_level_current.next_progression_level(student)
+  end
+
+  test 'next_level_or_redirect_path_for_user does not skip over next unplugged level from unplugged level' do
+    script = create(:script, name: 's1')
+
+    levels = [
+      create(:level, game: Game.find_by_app(Game::UNPLUG)),
+      create(:level, game: Game.find_by_app(Game::UNPLUG)),
+      create(:level)
+    ]
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      stage = create(:stage, script: script, absolute_position: pos)
+      create(:script_level, script: script, stage: stage, position: pos, chapter: pos, levels: [level])
+    end
+
+    student = create :student
+
+    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
+  end
+
+  test 'next_level_or_redirect_path_for_user does not skip over next bee level from bee level' do
+    script = create(:script, name: 's1')
+
+    levels = [
+      create(:level, :spelling_bee),
+      create(:level, :spelling_bee),
+      create(:level)
+    ]
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      stage = create(:stage, script: script, absolute_position: pos)
+      create(:script_level, script: script, stage: stage, position: pos, chapter: pos, levels: [level])
+    end
+
+    student = create :student
+    I18n.locale = 'non-default-locale'
+    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
+  end
+
+  test 'next_level_or_redirect_path_for_user does skip over hidden levels from unplugged level' do
+    script = create(:script, name: 's1')
+    levels = [
+      create(:level, game: Game.find_by_app(Game::UNPLUG)),
+      create(:level),
+      create(:level),
+      create(:level)
+    ]
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      stage = create(:stage, script: script, absolute_position: pos)
+      create(:script_level, script: script, stage: stage, position: pos, chapter: pos, levels: [level])
+    end
+
+    student = create :student
+    student.stubs(:hidden_stage?).with(script_levels[0]).returns(false)
+    student.stubs(:hidden_stage?).with(script_levels[1]).returns(true)
+    student.stubs(:hidden_stage?).with(script_levels[2]).returns(true)
+    student.stubs(:hidden_stage?).with(script_levels[3]).returns(false)
+
+    # unplugged level, followed by hidden level. we should skip over hidden level
+    assert_equal script_levels[3].path, script_levels[0].next_level_or_redirect_path_for_user(student)
   end
 
   test 'end of stage' do
