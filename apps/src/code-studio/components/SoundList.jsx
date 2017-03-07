@@ -2,12 +2,20 @@ import React from 'react';
 import SoundListEntry from './SoundListEntry';
 import Sounds from '../../Sounds';
 import {searchAssets} from '../assets/searchAssets';
-var soundLibrary = require('../soundLibrary.json');
+import soundLibrary from '../soundLibrary.json';
+
+const styles = {
+  root: {
+    height: 330,
+    overflowY: 'scroll',
+    clear: 'both'
+  }
+};
 
 /**
  * A component for managing sounds from soundLibrary.json.
  */
-var SoundList = React.createClass({
+const SoundList = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func.isRequired,
     search: React.PropTypes.string.isRequired,
@@ -15,28 +23,20 @@ var SoundList = React.createClass({
     selectedSound: React.PropTypes.object.isRequired
   },
 
-  componentWillMount: function () {
+  componentWillMount() {
     this.sounds = new Sounds();
   },
 
-  getMatches: function (searchQuery) {
+  getMatches(searchQuery) {
     // Sound library does not use pagination so give a range from 0 - 400
     const searchedData = searchAssets(searchQuery, this.props.category, soundLibrary, 0, 400);
     return searchedData.results;
   },
 
-  render: function () {
-    var styles = {
-      root: {
-        height: '330px',
-        overflowY: 'scroll',
-        clear: 'both'
-      }
-    };
-
-    var results = this.getMatches(this.props.search);
-    var soundEntries = results.map(function (sound) {
-      var isSelected = this.props.selectedSound.name === sound.name ? true : false;
+  render() {
+    const results = this.getMatches(this.props.search);
+    const soundEntries = results.map(sound => {
+      const isSelected = this.props.selectedSound.name === sound.name ? true : false;
       return (
         <SoundListEntry
           key={sound.name}
@@ -46,7 +46,7 @@ var SoundList = React.createClass({
           soundsRegistry={this.sounds}
         />
       );
-    }.bind(this));
+    });
 
     return (
       <div style={styles.root}>
