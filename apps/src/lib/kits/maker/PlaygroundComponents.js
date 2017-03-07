@@ -26,11 +26,11 @@ export function initializeCircuitPlaygroundComponents(board) {
 
     led: new five.Led({board, pin: 13}),
 
-    toggleSwitch: new five.Switch({board, pin: '21'}),
+    toggleSwitch: new five.Switch({board, pin: 21}),
 
     buzzer: new Piezo({
       board,
-      pin: '5',
+      pin: 5,
       controller: PlaygroundIO.Piezo
     }),
 
