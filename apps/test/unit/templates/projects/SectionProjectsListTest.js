@@ -9,7 +9,7 @@ const STUB_PROJECTS_DATA = [
     channel: 'ABCDEFGHIJKLM01234',
     name: 'Antelope Freeway',
     studentName: 'Alice',
-    type: 'applab',
+    type: 'weblab',
     updatedAt: '2016-12-29T23:59:59.999-08:00'
   },
   {
@@ -21,14 +21,14 @@ const STUB_PROJECTS_DATA = [
   },
   {
     channel: 'NOPQRSTUVWXYZ567879',
-    name: 'Batyote',
+    name: 'Dominoes',
     studentName: 'Bob',
     type: 'gamelab',
     updatedAt: '2017-01-01T00:00:00.001-08:00'
   },
   {
     channel: 'VVVVWWWWXXXXYYYYZZ',
-    name: 'Another App',
+    name: 'A1 Locksmith',
     studentName: 'Alice',
     type: 'applab',
     updatedAt: '2016-10-29T00:00:00.001-08:00'
@@ -67,13 +67,27 @@ describe('SectionProjectsList', () => {
   });
 
   it('initially shows all projects, most recently edited first', () => {
-    const rows = root.find('tr');
+    let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[1], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
     assertRowContents(rows.nodes[3], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[4], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[4], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+
+    const lastEditedHeader = root.find('th').at(COLUMNS.LAST_EDITED);
+    expect(lastEditedHeader.node.innerText).to.contain('Last Edited');
+
+    // Show least recently edited first
+    lastEditedHeader.simulate('click');
+
+    rows = root.find('tr');
+    expect(rows).to.have.length(5);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[2], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[3], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[4], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
   });
 
   it('can be sorted by project name', () => {
@@ -86,10 +100,10 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[3], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[4], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[1], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[3], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[4], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
 
     // Sort in descending order by project name
     projectNameHeader.simulate('click');
@@ -97,10 +111,68 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[2], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[3], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[4], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+  });
+
+  it('can be sorted by student name', () => {
+    const projectNameHeader = root.find('th').at(COLUMNS.STUDENT_NAME);
+    expect(projectNameHeader.node.innerText).to.contain('Student Name');
+
+    // Sort in ascending order by student name
+    projectNameHeader.simulate('click');
+
+    let rows = root.find('tr');
+    expect(rows).to.have.length(5);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[2], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[3], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[4], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+
+    // Sort in descending order by student name
+    projectNameHeader.simulate('click');
+
+    rows = root.find('tr');
+    expect(rows).to.have.length(5);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
     assertRowContents(rows.nodes[1], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[2], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[3], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[2], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    // There is no secondary sort key. When the sort by name is reversed, elements with the same
+    // primary sort key do not change in order relative to each other.
+    assertRowContents(rows.nodes[3], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[4], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+  });
+
+  it('can be sorted by app type', () => {
+    const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
+    expect(appTypeHeader.node.innerText).to.contain('Type');
+
+    // Sort in ascending order by app type
+    appTypeHeader.simulate('click');
+
+    let rows = root.find('tr');
+    expect(rows).to.have.length(5);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[2], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[3], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[4], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+
+    // Sort in descending order by student name
+    appTypeHeader.simulate('click');
+
+    rows = root.find('tr');
+    expect(rows).to.have.length(5);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    // There is no secondary sort key. When the sort by name is reversed, elements with the same
+    // primary sort key do not change in order relative to each other.
+    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[2], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[3], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[4], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
   });
 
   it('shows the correct list of students in the student filter dropdown', () => {
@@ -123,8 +195,26 @@ describe('SectionProjectsList', () => {
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[2], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[2], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+  });
+
+  it('can filter by student and then sort by app type', () => {
+    const select = root.find('select');
+    select.simulate('change', {target: {value: 'Alice'}});
+    expect(select.nodes[0].value).to.equal('Alice');
+
+    const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
+    expect(appTypeHeader.node.innerText).to.contain('Type');
+
+    // Sort in ascending order by app type
+    appTypeHeader.simulate('click');
+
+    const rows = root.find('tr');
+    expect(rows).to.have.length(3);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
   });
 
   it('shows all students projects if the current students projects all disappear', () => {
@@ -150,9 +240,9 @@ describe('SectionProjectsList', () => {
     expect(select.nodes[0].value).to.equal('_all_students');
     expect(rows).to.have.length(4);
     assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[3], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[1], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[3], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
 
     // Charlie should no longer appear in the dropdown
     const options = root.find('option');
