@@ -4,7 +4,8 @@
 #
 #  id    :integer          not null, primary key
 #  name  :string(255)      not null
-#  group :integer          not null
+#  group :integer
+#  contact_id :integer
 #
 
 class RegionalPartner < ActiveRecord::Base
