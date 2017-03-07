@@ -81,12 +81,13 @@ namespace :ci do
     end
   end
 
-  task all: [
-    'firebase:ci',
-    :build_with_cloudfront,
-    :deploy_multi,
-    :publish_github_release
-  ]
+  all_tasks = []
+  all_tasks << 'firebase:ci'
+  all_tasks << :build_with_cloudfront
+  all_tasks << :deploy_multi
+  all_tasks << :publish_github_release if rack_env?(:production)
+  task all: all_tasks
+
   task test: [
     :all,
     'test:ci'
