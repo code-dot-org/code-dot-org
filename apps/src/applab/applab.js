@@ -35,7 +35,7 @@ import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
-import {actions, reducers, selectors} from './redux';
+import {actions, reducers, selectors} from './redux/applab';
 import {add as addWatcher} from '../redux/watchedExpressions';
 import { changeScreen } from './redux/screens';
 import * as applabConstants from './constants';

@@ -3,7 +3,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import ScreenSelector from '@cdo/apps/applab/ScreenSelector';
-import {reducers} from '@cdo/apps/applab/redux';
+import {reducers} from '@cdo/apps/applab/redux/applab';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 

@@ -1,13 +1,13 @@
 /** @file Tests for App Lab redux module */
 import _ from 'lodash';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../../util/configuredChai';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {ApplabInterfaceMode} from '@cdo/apps/applab/constants';
 import {
   reducer as makerReducer,
   selectors as makerSelectors
 } from '@cdo/apps/lib/kits/maker/redux';
-import {reducers, selectors, actions} from '@cdo/apps/applab/redux';
+import {reducers, selectors, actions} from '@cdo/apps/applab/redux/applab';
 
 describe('App Lab redux module', () => {
   let store;

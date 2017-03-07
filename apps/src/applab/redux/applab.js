@@ -1,14 +1,14 @@
 /** @file App Lab redux module */
 import _ from 'lodash';
-import { ApplabInterfaceMode } from './constants';
-import data from '../storage/redux/data';
-import screens from './redux/screens';
-import {reducers as jsDebuggerReducers} from '../lib/tools/jsdebugger/redux';
+import { ApplabInterfaceMode } from '../constants';
+import data from '../../storage/redux/data';
+import screens from './screens';
+import {reducers as jsDebuggerReducers} from '../../lib/tools/jsdebugger/redux';
 import {
   reducer as maker,
   actions as makerActions,
   selectors as makerSelectors,
-} from '../lib/kits/maker/redux';
+} from '../../lib/kits/maker/redux';
 
 // Selectors
 
