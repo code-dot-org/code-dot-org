@@ -4,6 +4,7 @@ import Playground from 'playground-io';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import {
+  initializeCircuitPlaygroundComponents,
   deinitializeCircuitPlaygroundComponents,
   initializeAccelerometer,
   initializeButton,
@@ -13,7 +14,9 @@ import {
   initializeThermometer,
   initializeTouchPads,
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
+import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
+import {TOUCH_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -25,136 +28,332 @@ describe('Circuit Playground Components', () => {
     board = newBoard();
   });
 
-  describe('initializeColorLeds()', () => {
-    it('initializes all ten LEDs', () => {
-      const components = initializeColorLeds(board);
-
-      // Return ten controllers
+  describe(`initializeCircuitPlaygroundComponents()`, () => {
+    it(`returns an exact set of expected components`, () => {
+      // This test is here to warn us if we add a new component but
+      // don't cover it with new tests.  If that happens, make sure you
+      // add matching tests below!
+      const components = initializeCircuitPlaygroundComponents(board);
       expect(Object.keys(components)).to.deep.equal([
-        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+         'colorLeds',
+          'led',
+          'toggleSwitch',
+          'buzzer',
+          'soundSensor',
+          'tempSensor',
+          'lightSensor',
+          'accelerometer',
+          'buttonL',
+          'buttonR',
+          'touchPad0',
+          'touchPad1',
+          'touchPad2',
+          'touchPad3',
+          'touchPad6',
+          'touchPad9',
+          'touchPad10',
+          'touchPad12',
       ]);
-
-      // Every returned controller is a five.Led.RGB
-      Object.keys(components).forEach(key => {
-        expect(components[key]).to.be.an.instanceOf(five.Led.RGB);
-      });
-
-      // 20 sysex calls during initialization, two per LED.
-      for (let i = 0; i < 10; i++) {
-        // TODO (bbuchanan): Record what these calls mean.
-        expect(board.io.sysexCommand.getCall(i*2)).to.have.been.calledWith([0x40, 0x10, i, 0, 0, 0, 0]);
-        expect(board.io.sysexCommand.getCall(i*2+1)).to.have.been.calledWith([0x40, 0x11]);
-      }
     });
 
-    it('can initialize a second set of leds with a second board', () => {
+    it('can initialize a second set of components with a second board', () => {
       // Checks a necessary condition for a true johnny-five level reset.
       const boardOne = newBoard();
-      const controllers = initializeColorLeds(boardOne);
-      expect(controllers[0].board === boardOne).to.be.true;
-      expect(boardOne.io.sysexCommand.callCount).to.equal(20);
+      const componentsOne = initializeCircuitPlaygroundComponents(boardOne);
+      expect(componentsOne.led.board === boardOne).to.be.true;
 
       const boardTwo = newBoard();
-      const newControllers = initializeColorLeds(boardTwo);
-      expect(newControllers[0].board === boardTwo).to.be.true;
-      expect(boardTwo.io.sysexCommand.callCount).to.equal(20);
-    });
-  });
-
-  describe('initializeSoundSensor()', () => {
-    it('initializes one sensor', () => {
-      const sensor = initializeSoundSensor(board);
-      expect(sensor).to.be.an.instanceOf(five.Sensor);
-      // Doesn't use sysex at first
-      expect(board.io.sysexCommand.callCount).to.equal(0);
+      const componentsTwo = initializeCircuitPlaygroundComponents(boardTwo);
+      expect(componentsTwo.led.board === boardTwo).to.be.true;
     });
 
-    it('gets sensor methods', () => {
-      const sensor = initializeSoundSensor(board);
-      expect(sensor).to.haveOwnProperty('start');
-      expect(sensor).to.haveOwnProperty('getAveragedValue');
-      expect(sensor).to.haveOwnProperty('setScale');
+    describe('colorLeds', () => {
+      it('creates an array of controllers', () => {
+        const {colorLeds} = initializeCircuitPlaygroundComponents(board);
+        expect(colorLeds).to.be.an.instanceOf(Array);
+        expect(colorLeds).to.have.length(10);
+      });
+
+      // Describe each Led by key/pin
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].forEach(pin => {
+        describe(`colorLeds[${pin}]`, () => {
+          let led;
+
+          beforeEach(() => {
+            led = initializeCircuitPlaygroundComponents(board).colorLeds[pin];
+          });
+
+          it('creates a five.Led.RGB', () => {
+            expect(led).to.be.an.instanceOf(five.Led.RGB);
+          });
+
+          it('bound to the board controller', () => {
+            expect(led.board).to.equal(board);
+          });
+
+          it(`on pin ${pin}`, () => {
+            expect(led.pin).to.equal(pin);
+          });
+        });
+      });
     });
-  });
 
-  describe('initializeLightSensor()', () => {
-    it('initializes one sensor', () => {
-      const sensor = initializeLightSensor(board);
-      expect(sensor).to.be.an.instanceOf(five.Sensor);
-      // Doesn't use sysex at first
-      expect(board.io.sysexCommand.callCount).to.equal(0);
+    describe('led', () => {
+      let led;
+
+      beforeEach(() => {
+        led = initializeCircuitPlaygroundComponents(board).led;
+      });
+
+      it('creates a five.Led', () => {
+        expect(led).to.be.an.instanceOf(five.Led);
+      });
+
+      it('bound to the board controller', () => {
+        expect(led.board).to.equal(board);
+      });
+
+      it('on pin 13', () => {
+        expect(led.pin).to.equal(13);
+      });
     });
 
-    it('gets sensor methods', () => {
-      const sensor = initializeLightSensor(board);
-      expect(sensor).to.haveOwnProperty('start');
-      expect(sensor).to.haveOwnProperty('getAveragedValue');
-      expect(sensor).to.haveOwnProperty('setScale');
+    describe('toggleSwitch', () => {
+      let toggleSwitch;
+
+      beforeEach(() => {
+        toggleSwitch = initializeCircuitPlaygroundComponents(board).toggleSwitch;
+      });
+
+      it('creates a five.Switch', () => {
+        expect(toggleSwitch).to.be.an.instanceOf(five.Switch);
+      });
+
+      it('bound to the board controller', () => {
+        expect(toggleSwitch.board).to.equal(board);
+      });
+
+      it('on pin 21', () => {
+        expect(toggleSwitch.pin).to.equal(21);
+      });
+
+      // Note to self: Possible bug with toggleswitch.close event when it was
+      // open on app start?
     });
-  });
 
-  describe('initializeThermometer()', () => {
-    it('initializes one sensor', () => {
-      const thermometer = initializeThermometer(board);
-      expect(thermometer).to.be.an.instanceOf(five.Thermometer);
-      // Doesn't use sysex at first
-      expect(board.io.sysexCommand.callCount).to.equal(0);
+    describe('buzzer', () => {
+      let buzzer;
+
+      beforeEach(() => {
+        buzzer = initializeCircuitPlaygroundComponents(board).buzzer;
+      });
+
+      it('creates a Piezo (our own wrapper around five.Piezo)', () => {
+        expect(buzzer).to.be.an.instanceOf(Piezo);
+        expect(buzzer).to.be.an.instanceOf(five.Piezo);
+      });
+
+      it('bound to the board controller', () => {
+        expect(buzzer.board).to.equal(board);
+      });
+
+      it('on pin 5', () => {
+        expect(buzzer.pin).to.equal(5);
+      });
+
+      // See PiezoTest.js for more on our Piezo wrapper
     });
 
-    it('gets sensor methods', () => {
-      const sensor = initializeThermometer(board);
-      expect(sensor).to.haveOwnProperty('start');
-      expect(sensor).to.haveOwnProperty('getAveragedValue');
-      expect(sensor).to.haveOwnProperty('setScale');
+    describe('soundSensor', () => {
+      let soundSensor;
+
+      beforeEach(() => {
+        soundSensor = initializeCircuitPlaygroundComponents(board).soundSensor;
+      });
+
+      it('creates a five.Sensor', () => {
+        expect(soundSensor).to.be.an.instanceOf(five.Sensor);
+      });
+
+      it('bound to the board controller', () => {
+        expect(soundSensor.board).to.equal(board);
+      });
+
+      it('on pin 4', () => {
+        expect(soundSensor.pin).to.equal(4);
+      });
+
+      it('with sensor methods', () => {
+        expect(soundSensor).to.haveOwnProperty('start');
+        expect(soundSensor).to.haveOwnProperty('getAveragedValue');
+        expect(soundSensor).to.haveOwnProperty('setScale');
+      });
     });
-  });
 
-  describe('initializeButton()', () => {
-    it('initializes one button', () => {
-      const button = initializeButton(board, '4');
-      expect(button).to.be.an.instanceOf(five.Button);
-      expect(button).to.haveOwnProperty('isPressed');
-      // Doesn't use sysex at first
-      expect(board.io.sysexCommand.callCount).to.equal(0);
+    describe('tempSensor', () => {
+      let tempSensor;
+
+      beforeEach(() => {
+        tempSensor = initializeCircuitPlaygroundComponents(board).tempSensor;
+      });
+
+      it('creates a five.Thermometer', () => {
+        expect(tempSensor).to.be.an.instanceOf(five.Thermometer);
+      });
+
+      it('bound to the board controller', () => {
+        expect(tempSensor.board).to.equal(board);
+      });
+
+      it('on pin 0', () => {
+        expect(tempSensor.pin).to.equal(0);
+      });
+
+      it('with sensor methods', () => {
+        expect(tempSensor).to.haveOwnProperty('start');
+        expect(tempSensor).to.haveOwnProperty('getAveragedValue');
+        expect(tempSensor).to.haveOwnProperty('setScale');
+      });
     });
-  });
 
-  describe('initializeAccelerometer()', () => {
-    it('initializes accelerometer', () => {
-      const sensor = initializeAccelerometer(board);
-      expect(sensor).to.be.an.instanceOf(five.Accelerometer);
-      expect(sensor).to.haveOwnProperty('getOrientation');
-      expect(sensor).to.haveOwnProperty('getAcceleration');
-      // Doesn't use sysex at first
-      expect(board.io.sysexCommand.callCount).to.equal(0);
+    describe('lightSensor', () => {
+      let lightSensor;
+
+      beforeEach(() => {
+        lightSensor = initializeCircuitPlaygroundComponents(board).lightSensor;
+      });
+
+      it('creates a five.Sensor', () => {
+        expect(lightSensor).to.be.an.instanceOf(five.Sensor);
+      });
+
+      it('bound to the board controller', () => {
+        expect(lightSensor.board).to.equal(board);
+      });
+
+      it('on pin 5', () => {
+        expect(lightSensor.pin).to.equal(5);
+      });
+
+      it('with sensor methods', () => {
+        expect(lightSensor).to.haveOwnProperty('start');
+        expect(lightSensor).to.haveOwnProperty('getAveragedValue');
+        expect(lightSensor).to.haveOwnProperty('setScale');
+      });
     });
-  });
 
-  describe('initializeTouchPads()', () => {
-    it('initializes all touch pads', () => {
-      const pads = initializeTouchPads(board);
-      expect(Object.keys(pads)).to.have.length(8);
-      for (const key in pads) {
-        if (!pads.hasOwnProperty(key)) {
-          continue;
-        }
-        const pad = pads[key];
-        expect(/touchPad\d+/.test(key)).to.be.true;
-        expect(pad).to.be.an.instanceOf(TouchSensor);
-        expect(pad.touchpadsController_).to.be.an.instanceOf(five.Touchpad);
-      }
+    describe('buttonL', () => {
+      let buttonL;
 
-      // Check exact sysex calls
-      expect(board.io.sysexCommand.callCount).to.equal(8);
-      // TODO (bbuchanan): Record what these calls mean.
-      expect(board.io.sysexCommand.getCall(0)).to.have.been.calledWith([0x40, 0x41, 0]);
-      expect(board.io.sysexCommand.getCall(1)).to.have.been.calledWith([0x40, 0x41, 1]);
-      expect(board.io.sysexCommand.getCall(2)).to.have.been.calledWith([0x40, 0x41, 2]);
-      expect(board.io.sysexCommand.getCall(3)).to.have.been.calledWith([0x40, 0x41, 3]);
-      expect(board.io.sysexCommand.getCall(4)).to.have.been.calledWith([0x40, 0x41, 6]);
-      expect(board.io.sysexCommand.getCall(5)).to.have.been.calledWith([0x40, 0x41, 9]);
-      expect(board.io.sysexCommand.getCall(6)).to.have.been.calledWith([0x40, 0x41, 10]);
-      expect(board.io.sysexCommand.getCall(7)).to.have.been.calledWith([0x40, 0x41, 12]);
+      beforeEach(() => {
+        buttonL = initializeCircuitPlaygroundComponents(board).buttonL;
+      });
+
+      it('creates a five.Button', () => {
+        expect(buttonL).to.be.an.instanceOf(five.Button);
+      });
+
+      it('bound to the board controller', () => {
+        expect(buttonL.board).to.equal(board);
+      });
+
+      it('on pin 4', () => {
+        expect(buttonL.pin).to.equal(4);
+      });
+
+      it('with an isPressed property', () => {
+        expect(buttonL).to.haveOwnProperty('isPressed');
+        expect(buttonL.isPressed).to.be.false;
+      });
+    });
+
+    describe('buttonR', () => {
+      let buttonR;
+
+      beforeEach(() => {
+        buttonR = initializeCircuitPlaygroundComponents(board).buttonR;
+      });
+
+      it('creates a five.Button', () => {
+        expect(buttonR).to.be.an.instanceOf(five.Button);
+      });
+
+      it('bound to the board controller', () => {
+        expect(buttonR.board).to.equal(board);
+      });
+
+      it('on pin 19', () => {
+        expect(buttonR.pin).to.equal(19);
+      });
+
+      it('with an isPressed property', () => {
+        expect(buttonR).to.haveOwnProperty('isPressed');
+        expect(buttonR.isPressed).to.be.false;
+      });
+    });
+
+    describe('accelerometer', () => {
+      let accelerometer;
+
+      beforeEach(() => {
+        accelerometer = initializeCircuitPlaygroundComponents(board).accelerometer;
+      });
+
+      it('creates a five.Accelerometer', () => {
+        expect(accelerometer).to.be.an.instanceOf(five.Accelerometer);
+      });
+
+      it('bound to the board controller', () => {
+        expect(accelerometer.board).to.equal(board);
+      });
+
+      // No pin?  Doesn't report one.
+
+      it('with a getOrientation method', () => {
+        expect(accelerometer).to.haveOwnProperty('getOrientation');
+        expect(accelerometer.getOrientation('x')).to.equal(0);
+        expect(accelerometer.getOrientation('y')).to.equal(0);
+        expect(accelerometer.getOrientation('z')).to.equal(0);
+      });
+
+      it('and a getAcceleration method', () => {
+        expect(accelerometer).to.haveOwnProperty('getAcceleration');
+        expect(accelerometer.getAcceleration('x')).to.equal(0);
+        expect(accelerometer.getAcceleration('y')).to.equal(0);
+        expect(accelerometer.getAcceleration('z')).to.equal(0);
+        expect(accelerometer.getAcceleration('total')).to.equal(0);
+      });
+    });
+
+    describe('touchPads', () => {
+      it('only creates one five.Touchpad for all the TouchSensors', () => {
+        const components = initializeCircuitPlaygroundComponents(board);
+        const theOnlyTouchpadController = components.touchPad0.touchpadsController_;
+        expect(theOnlyTouchpadController.board).to.equal(board);
+        TOUCH_PINS.forEach(pin => {
+          expect(components[`touchPad${pin}`].touchpadsController_).to.equal(theOnlyTouchpadController);
+        });
+      });
+
+      TOUCH_PINS.forEach(pin => {
+        describe(`touchPin${pin}`, () => {
+          let touchPad;
+
+          beforeEach(() => {
+            touchPad = initializeCircuitPlaygroundComponents(board)[`touchPad${pin}`];
+          });
+
+          it('creates a TouchSensor', () => {
+            expect(touchPad).to.be.an.instanceOf(TouchSensor);
+          });
+
+          it(`on pin ${pin}`, () => {
+            expect(touchPad.pinIndex_).to.equal(pin);
+          });
+
+          // See TouchSensorTest.js for more details on TouchSensors.
+        });
+      });
     });
   });
 
@@ -187,7 +386,7 @@ describe('Circuit Playground Components', () => {
 
     it('calls stop on the buzzer', () => {
       const components = {
-        buzzer: { stop: sinon.spy() }
+        buzzer: {stop: sinon.spy()}
       };
 
       deinitializeCircuitPlaygroundComponents(components);
