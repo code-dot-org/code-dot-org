@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
+import {COLUMNS} from '@cdo/apps/templates/projects/ProjectsList';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 
@@ -36,17 +37,21 @@ const STUB_PROJECTS_DATA = [
 
 const STUDIO_URL_PREFIX = '//foo-studio.code.org';
 
-const PROJECT_NAME_COLUMN_INDEX = 0;
-const STUDENT_NAME_COLUMN_INDEX = 1;
-
 /**
  * @param {HTMLTableRowElement} rowElement HTML row element in the projects list table
  * @param {string} projectName Expected project name
  * @param {string} studentName Expected student name
+ * @param {string} appType Expected app type (App Lab, Game Lab, etc)
+ * @param {string} lastEdited Expected last edited date (Month DD, YYYY). Note that this
+ *   format is used only in unit tests due to incorrect date formatting in PhantomJS.
+ *   The desired date format which we will show in all browsers is MM/DD/YYYY.
  */
-function assertRowContents(rowElement, projectName, studentName) {
-  expect(rowElement.childNodes[PROJECT_NAME_COLUMN_INDEX].innerText).to.equal(projectName);
-  expect(rowElement.childNodes[STUDENT_NAME_COLUMN_INDEX].innerText).to.equal(studentName);
+function assertRowContents(rowElement, projectName, studentName, appType, lastEdited) {
+  expect(rowElement.childNodes[COLUMNS.PROJECT_NAME].innerText).to.equal(projectName);
+  expect(rowElement.childNodes[COLUMNS.STUDENT_NAME].innerText).to.equal(studentName);
+  expect(rowElement.childNodes[COLUMNS.APP_TYPE].innerText).to.equal(appType);
+  // Temporarily comment out this line to make tests pass locally in Chrome
+  expect(rowElement.childNodes[COLUMNS.LAST_EDITED].innerText).to.equal(lastEdited);
 }
 
 describe('SectionProjectsList', () => {
@@ -61,17 +66,17 @@ describe('SectionProjectsList', () => {
     );
   });
 
-  it ('initially shows all projects', () => {
+  it('initially shows all projects, most recently edited first', () => {
     const rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
-    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice');
-    assertRowContents(rows.nodes[2], 'Cats and Kittens', 'Charlie');
-    assertRowContents(rows.nodes[3], 'Batyote', 'Bob');
-    assertRowContents(rows.nodes[4], 'Another App', 'Alice');
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[3], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[4], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
   });
 
-  it ('shows the correct list of students in the student filter dropdown', () => {
+  it('shows the correct list of students in the student filter dropdown', () => {
     const options = root.find('option');
     expect(options).to.have.length(4);
     expect(options.nodes[0].innerText).to.equal('All');
@@ -83,16 +88,16 @@ describe('SectionProjectsList', () => {
     expect(select.nodes[0].value).to.equal('_all_students');
   });
 
-  it ('filters projects when a student is selected from the dropdown', () => {
+  it('filters projects when a student is selected from the dropdown', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Alice'}});
     expect(select.nodes[0].value).to.equal('Alice');
 
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
-    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
-    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice');
-    assertRowContents(rows.nodes[2], 'Another App', 'Alice');
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[2], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
   });
 
   it('shows all students projects if the current students projects all disappear', () => {
@@ -102,8 +107,8 @@ describe('SectionProjectsList', () => {
 
     let rows = root.find('tr');
     expect(rows).to.have.length(2);
-    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
-    assertRowContents(rows.nodes[1], 'Cats and Kittens', 'Charlie');
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
 
     // Remove Charlie's project from the list
     const newProjectsData = Array.from(STUB_PROJECTS_DATA);
@@ -117,10 +122,10 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(select.nodes[0].value).to.equal('_all_students');
     expect(rows).to.have.length(4);
-    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name');
-    assertRowContents(rows.nodes[1], 'Antelope Freeway', 'Alice');
-    assertRowContents(rows.nodes[2], 'Batyote', 'Bob');
-    assertRowContents(rows.nodes[3], 'Another App', 'Alice');
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[3], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
 
     // Charlie should no longer appear in the dropdown
     const options = root.find('option');
