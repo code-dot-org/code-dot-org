@@ -41,7 +41,7 @@ module GitHub
       raise ArgumentError("PR#{pr_number} is already merged")
     end
 
-    uri = URI.parse "{PULL_API_BASE}/{#pr_number}/merge"
+    uri = URI.parse "#{PULL_API_BASE}/#{pr_number}/merge"
     http = Net::HTTP.new uri.host, uri.port
     http.use_ssl = true
     request = Net::HTTP::Put.new(uri.request_uri)
@@ -51,6 +51,7 @@ module GitHub
     response.code == '200'
   end
 
+  # GitHub API: https://developer.github.com/v3/pulls/#get-if-a-pull-request-has-been-merged
   # @param pr_number [Integer] The number of the pull request to check.
   # @return [Boolean] Whether the pull request has been merged.
   def self.merged?(pr_number)
@@ -60,6 +61,6 @@ module GitHub
     request = Net::HTTP::Get.new(uri.request_uri)
     response = http.request(request)
 
-    response.code.to_i == '204'
+    response.code == '204'
   end
 end

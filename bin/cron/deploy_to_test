@@ -13,7 +13,7 @@ def check_and_update_developers_topic
     ChatClient.message(
       'infra-test',
       "auto-DTT aborted (\#developers topic is #{current_topic}).",
-      color: yellow
+      color: 'yellow'
     )
     return false
   end
@@ -38,7 +38,7 @@ def main
     ChatClient.message(
       'infra-test',
       'GitHub.create_pull request failed.',
-      color: red
+      color: 'red'
     )
     return
   end
@@ -51,7 +51,7 @@ def main
     ChatClient.message(
       'infra-test',
       "GitHub.merge_pull_request(#{pr_number}) failed.",
-      color: red
+      color: 'red'
     )
     return
   end
@@ -59,7 +59,7 @@ def main
   ChatClient.mesage(
     'infra-test',
     "auto-DTT (PR\##{pr_number})",
-    color: green
+    color: 'green'
   )
 end
 
