@@ -18,27 +18,30 @@ class ContactRollups
   # Connection to write to Pegasus reporting database.
   PEGASUS_REPORTING_DB_WRITER = sequel_connect(CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_writer)
 
+  # Connection to read from Dashboard reporting database.
+  DASHBOARD_REPORTING_DB_READER = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+
   # Columns to disregard
   EXCLUDED_COLUMNS = %w(id pardot_id pardot_sync_at updated_at).freeze
 
   UPDATE_BATCH_SIZE = 100
 
-  PEGASUS_DB_NAME = "pegasus_#{Rails.env}"
-  DASHBOARD_DB_NAME = "dashboard_#{Rails.env}"
+  PEGASUS_DB_NAME = "pegasus_#{Rails.env}".freeze
+  DASHBOARD_DB_NAME = "dashboard_#{Rails.env}".freeze
 
-  UNITED_STATES = "united states"
+  UNITED_STATES = "united states".freeze
 
   # Table name of table structure to copy from to create the destination working table
-  TEMPLATE_TABLE_NAME = "contact_rollups"
+  TEMPLATE_TABLE_NAME = "contact_rollups".freeze
   # Table name of destination working table
-  DEST_TABLE_NAME = "contact_rollups_daily"
+  DEST_TABLE_NAME = "contact_rollups_daily".freeze
 
   # List of valid PD courses. If more courses get added, need to update this list and also schema in Pardot. We
   # need to filter here to known courses in the Pardot schema - we can't blindly pass values through
-  COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'"
+  COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'".freeze
 
   # Values of forms.kind field we care about
-  FORM_KINDS = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey)
+  FORM_KINDS = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey).freeze
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
@@ -393,7 +396,7 @@ class ContactRollups
       country = data['location_country_s'].presence || data['country_s'].presence || data['teacher_country_s'].presence
 
       # In practice, self-reported country data (often free text) from forms is garbage. The exception is a frequent reliable
-      # value of exactly "united states", which is what gets filled in automatically if you enter a zip code on the petition form.
+      # value of "united states", which is what gets filled in automatically if you enter a zip code on the petition form.
       # Trust this value if we see it, otherwise do not use country from forms; fall back to any country we got from IP geo lookup.
       country = nil unless country.presence && country.downcase == UNITED_STATES
 
@@ -533,7 +536,7 @@ class ContactRollups
 
     start = Time.now
     log "Updating district information from dashboard.pd_enrollments"
-    DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
         select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
         inner_join(:school_infos, id: :school_info_id).
         inner_join(:school_districts, id: :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
@@ -550,7 +553,7 @@ class ContactRollups
   def self.update_school
     start = Time.now
     log "Updating school information from dashboard.pd_enrollments"
-    DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
       PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
     end
     log_completion(start)
