@@ -1,6 +1,5 @@
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '@cdo/apps/lib/kits/maker/portScanning';
-import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -98,42 +97,17 @@ const BoardSetupStatus = React.createClass({
         .then(() => this.spin(STATUS_BOARD_COMPONENTS))
         .then(() => promiseWaitFor(200)) // Artificial delay feels better
         .then(() => boardController.initializeComponents())
-        .then(() => this.celebrateAllSuccessful(boardController))
-        .catch(error => this.fail(STATUS_BOARD_COMPONENTS))
+        .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
+        .then(() => boardController.celebrateSuccessfulConnection())
+        .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
+        .catch(error => {
+          console.log(error);
+          this.fail(STATUS_BOARD_COMPONENTS);
+        })
 
         // Put the board back in its original state, if possible
         .then(() => boardController.destroy())
         .then(() => this.setState({isDetecting: false}));
-  },
-
-  /**
-   * Play a song and animate some LEDs to demonstrate successful connection
-   * to the board.
-   * @param {CircuitPlaygroundBoard} board
-   * @returns {Promise} resolved when the song and animation are done.
-   */
-  celebrateAllSuccessful(board) {
-    /**
-     * Run given function for each LED on the board in sequence, with givcen
-     * delay between them.
-     * @param {function(five.Led.RGB)} func
-     * @param {number} delay in milliseconds
-     * @returns {Promise} resolves after func is called for the last LED
-     */
-    function forEachLedInSequence(func, delay) {
-      return new Promise(resolve => {
-        const leds = board.prewiredComponents_.colorLeds;
-        leds.forEach((led, i) => setTimeout(() => func(led), delay * (i+1)));
-        setTimeout(resolve, delay * leds.length);
-      });
-    }
-
-    return Promise.resolve()
-        .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
-        .then(() => board.prewiredComponents_.buzzer.play(SONG_CHARGE, 104))
-        .then(() => forEachLedInSequence(led => led.color('green'), 80))
-        .then(() => forEachLedInSequence(led => led.off(), 80))
-        .then(() => this.succeed(STATUS_BOARD_COMPONENTS));
   },
 
   componentDidMount() {
