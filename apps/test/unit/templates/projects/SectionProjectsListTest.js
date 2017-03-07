@@ -10,28 +10,28 @@ const STUB_PROJECTS_DATA = [
     name: 'Antelope Freeway',
     studentName: 'Alice',
     type: 'weblab',
-    updatedAt: '2016-12-29T23:59:59.999-08:00'
+    updatedAt: '2016-12-29T11:00:00-00:00'
   },
   {
     channel: 'AAAABBBBCCCCDDDDEE',
     name: 'Cats and Kittens',
     studentName: 'Charlie',
     type: 'weblab',
-    updatedAt: '2016-11-30T00:00:00.001-08:00'
+    updatedAt: '2016-11-30T11:00:00-00:00'
   },
   {
     channel: 'NOPQRSTUVWXYZ567879',
     name: 'Dominoes',
     studentName: 'Bob',
     type: 'gamelab',
-    updatedAt: '2017-01-01T00:00:00.001-08:00'
+    updatedAt: '2017-01-01T11:00:00-00:00'
   },
   {
     channel: 'VVVVWWWWXXXXYYYYZZ',
     name: 'A1 Locksmith',
     studentName: 'Alice',
     type: 'applab',
-    updatedAt: '2016-10-29T00:00:00.001-08:00'
+    updatedAt: '2016-10-29T11:00:00-00:00'
   },
 ];
 
@@ -64,6 +64,26 @@ describe('SectionProjectsList', () => {
         studioUrlPrefix={STUDIO_URL_PREFIX}
       />
     );
+  });
+
+  describe('test data', () => {
+    // The Date object in PhantomJS does not respect the options to specify the
+    // time zone when outputting the date in any localized format. Our unit tests
+    // need to pass in UTC (for CircleCI and staging) as well as any time zones
+    // in which developers are running unit tests locally. Therefore, use only
+    // timestamps at 11am UTC, since it is the same calendar date in every time zone
+    // in the world at that time of day (time zones range from GMT-11 to GMT+12).
+    it('contains only timestamps at 11am UTC', () => {
+      for (let i = 0; i < STUB_PROJECTS_DATA.length; i++) {
+        const date = new Date(STUB_PROJECTS_DATA[i].updatedAt);
+        expect(date.getUTCHours()).to.equal(11);
+      }
+    });
+
+    it('is compatible with the time zone of the test browser', () => {
+      const date = new Date(STUB_PROJECTS_DATA[0].updatedAt);
+      expect(date.toLocaleDateString()).to.equal('December 29, 2016');
+    });
   });
 
   it('initially shows all projects, most recently edited first', () => {
