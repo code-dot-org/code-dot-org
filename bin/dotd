@@ -171,6 +171,11 @@ should_i "DTP" do
     open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
   end
 
+  should_i "create a new release of the code-dot-org repository on github" do
+    wait_for "the production server to fetch the latest changes"
+    run_on("production-daemon", "cd production; ./bin/create-release")
+  end
+
   wait_for "DTP to finish"
 
   puts <<-EOS.unindent
