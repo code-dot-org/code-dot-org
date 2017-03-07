@@ -43,6 +43,9 @@ def main
     return
   end
 
+  # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
+  # (particularly deploy).
+
   merged = GitHub.merge_pull_request(pr_number)
   unless merged
     ChatClient.message(
