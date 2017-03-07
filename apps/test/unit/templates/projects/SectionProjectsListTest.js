@@ -76,6 +76,33 @@ describe('SectionProjectsList', () => {
     assertRowContents(rows.nodes[4], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
   });
 
+  it('can be sorted by project name', () => {
+    const projectNameHeader = root.find('th').at(COLUMNS.PROJECT_NAME);
+    expect(projectNameHeader.node.innerText).to.contain('Project Name');
+
+    // Sort in ascending order by project name
+    projectNameHeader.simulate('click');
+
+    let rows = root.find('tr');
+    expect(rows).to.have.length(5);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[2], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[3], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[4], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+
+    // Sort in descending order by project name
+    projectNameHeader.simulate('click');
+
+    rows = root.find('tr');
+    expect(rows).to.have.length(5);
+    assertRowContents(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(rows.nodes[1], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[2], 'Batyote', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[3], 'Antelope Freeway', 'Alice', 'App Lab', 'December 31, 2016');
+    assertRowContents(rows.nodes[4], 'Another App', 'Alice', 'App Lab', 'October 29, 2016');
+  });
+
   it('shows the correct list of students in the student filter dropdown', () => {
     const options = root.find('option');
     expect(options).to.have.length(4);
