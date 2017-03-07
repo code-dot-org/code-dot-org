@@ -4,30 +4,29 @@ require 'cdo/chat_client'
 require 'cdo/github'
 require 'cdo/only_one'
 
-# Checks whether the topic of Slack#developers includes "DTT: yes", updating it
-# to reflect auto-DTT if so.
-# @return [Boolean] Whether to proceed with the auto-DTT.
-def check_and_update_developers_topic
+# @return [Boolean] Whether  the topic of Slack#developers includes "DTT: yes".
+def dtt_yes?
   current_topic = Slack.get_topic('developers')
-  unless current_topic.include? 'DTT: yes'
-    ChatClient.message(
-      'infra-test',
-      "auto-DTT aborted (\#developers topic is #{current_topic}).",
-      color: 'yellow'
-    )
-    return false
-  end
+  current_topic.include? 'DTT: yes'
+end
 
+# Updates the DTT portion of topic of Slack#developers to indicate robo-DTT.
+def update_dtt_topic
+  current_topic = Slack.get_topic('developers')
+  raise unless current_topic.include? 'DTT: yes'
   new_topic = current_topic.gsub('DTT: yes', 'DTT: no (robo-DTT in progress)')
   Slack.update_topic(new_topic)
-
-  # TODO(asher): Determine if we should continue with the DTT if the Slack topic
-  # update failed.
-  true
 end
 
 def main
-  return unless check_and_update_developers_topic
+  unless dtt_yes?
+    ChatClient.message(
+      'infra-test',
+      "auto-DTT skipped (\#developers topic is #{current_topic}).",
+      color: 'yellow'
+    )
+  end
+  update_dtt_topic
 
   pr_number = GitHub.create_pull_request(
     title: 'DTT (Staging > Test) [robo-dtt]',
