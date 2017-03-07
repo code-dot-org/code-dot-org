@@ -23,11 +23,7 @@ export function enable() {
 }
 
 // Reducer
-export function reducer(state, action) {
-  if (!state) {
-    state = new MakerState();
-  }
-
+export function reducer(state = new MakerState(), action) {
   if (action.type === ENABLE) {
     return state.set('enabled', true);
   }
