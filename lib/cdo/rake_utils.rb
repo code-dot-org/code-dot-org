@@ -4,7 +4,7 @@ require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'digest'
-require 'parallel/processor_count'
+require 'parallel'
 
 module RakeUtils
   def self.system__(command)

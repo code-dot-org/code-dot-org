@@ -18,25 +18,30 @@ class ContactRollups
   # Connection to write to Pegasus reporting database.
   PEGASUS_REPORTING_DB_WRITER = sequel_connect(CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_writer)
 
+  # Connection to read from Dashboard reporting database.
+  DASHBOARD_REPORTING_DB_READER = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+
   # Columns to disregard
   EXCLUDED_COLUMNS = %w(id pardot_id pardot_sync_at updated_at).freeze
 
   UPDATE_BATCH_SIZE = 100
 
-  PEGASUS_DB_NAME = "pegasus_#{Rails.env}"
-  DASHBOARD_DB_NAME = "dashboard_#{Rails.env}"
+  PEGASUS_DB_NAME = "pegasus_#{Rails.env}".freeze
+  DASHBOARD_DB_NAME = "dashboard_#{Rails.env}".freeze
+
+  UNITED_STATES = "united states".freeze
 
   # Table name of table structure to copy from to create the destination working table
-  TEMPLATE_TABLE_NAME = "contact_rollups"
+  TEMPLATE_TABLE_NAME = "contact_rollups".freeze
   # Table name of destination working table
-  DEST_TABLE_NAME = "contact_rollups_daily"
+  DEST_TABLE_NAME = "contact_rollups_daily".freeze
 
   # List of valid PD courses. If more courses get added, need to update this list and also schema in Pardot. We
   # need to filter here to known courses in the Pardot schema - we can't blindly pass values through
-  COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'"
+  COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'".freeze
 
   # Values of forms.kind field we care about
-  FORM_KINDS = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey)
+  FORM_KINDS = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey).freeze
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
@@ -378,36 +383,36 @@ class ContactRollups
       email = data['email_s'].presence
       next if email.nil?
 
-      # get user-supplied address/location data from form if present, from any of the differently-named location fields across all form kinds
+      # Get user-supplied address/location data from form if present, from any of the differently-named location fields across all form kinds
       street_address = data['location_street_address_s'].presence || data['user_street_address_s'].presence
       city = data['location_city_s'].presence || data['user_city_s'].presence || data['teacher_city_s'].presence
       state = data['location_state_s'].presence || data['teacher_state_s'].presence
       if state.nil?
-        # note that the 'user_state_s' record is in fact a *state code*, not a state name
+        # Note that the 'user_state_s' record is in fact a *state code*, not a state name
         state_code = data['location_state_code_s'].presence || data['state_code_s'].presence || data['user_state_s'].presence
         state = get_us_state_from_abbr(abbr: state_code, include_dc: true).presence unless state_code.nil?
       end
       postal_code = data['location_postal_code_s'].presence || data['zip_code_s'].presence || data['user_postal_code_s'].presence
       country = data['location_country_s'].presence || data['country_s'].presence || data['teacher_country_s'].presence
 
-      # skip if this form data has no address/location info at all
+      # In practice, self-reported country data (often free text) from forms is garbage. The exception is a frequent reliable
+      # value of "united states", which is what gets filled in automatically if you enter a zip code on the petition form.
+      # Trust this value if we see it, otherwise do not use country from forms; fall back to any country we got from IP geo lookup.
+      country = nil unless country.presence && country.downcase == UNITED_STATES
+
+      # Skip if this form data has no address/location info at all
       next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil?
 
       # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed.
-      street_address = street_address[0...255] unless street_address.nil?
-      city = city[0...255] unless city.nil?
-      state = state[0...255] unless state.nil?
-      postal_code = postal_code[0...255] unless postal_code.nil?
-      country = country[0...255] unless country.nil?
+      update_data = {}
+      update_data[:street_address] = street_address[0...255] unless street_address.nil?
+      update_data[:city] = city[0...255] unless city.nil?
+      update_data[:state] = state[0...255] unless state.nil?
+      update_data[:postal_code] = postal_code[0...255] unless postal_code.nil?
+      update_data[:country] = country[0...255] unless country.nil?
 
       # add to batch to update
-      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(
-        street_address: street_address,
-        city: city,
-        state: state,
-        postal_code: postal_code,
-        country: country
-      ) + ";"
+      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";"
 
       num_updated += 1
 
@@ -531,7 +536,7 @@ class ContactRollups
 
     start = Time.now
     log "Updating district information from dashboard.pd_enrollments"
-    DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
         select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
         inner_join(:school_infos, id: :school_info_id).
         inner_join(:school_districts, id: :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
@@ -548,7 +553,7 @@ class ContactRollups
   def self.update_school
     start = Time.now
     log "Updating school information from dashboard.pd_enrollments"
-    DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
       PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
     end
     log_completion(start)
