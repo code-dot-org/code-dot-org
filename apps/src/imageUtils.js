@@ -1,3 +1,5 @@
+const ARTIST_SHARE_FRAME = '/assets/blank_sharing_drawing.png';
+
 export function fetchURLAsBlob(url, onComplete) {
   let xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
@@ -42,6 +44,24 @@ export function URIFromImageData(imageData) {
   const context = canvas.getContext('2d');
   context.putImageData(imageData, 0, 0);
   return canvas.toDataURL();
+}
+
+export function dataURIToFramedBlob(dataURI, callback) {
+  const frame = new Image();
+  const imageData = new Image();
+  imageData.src = `data:image/png;base64,${decodeURIComponent(dataURI)}`;
+  frame.onload = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = frame.width;
+    canvas.height = frame.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(frame, 0, 0);
+    ctx.drawImage(imageData, 175, 52);
+    if (canvas.toBlob) {
+      canvas.toBlob(callback);
+    }
+  };
+  frame.src = ARTIST_SHARE_FRAME;
 }
 
 function imageFromURI(uri) {
