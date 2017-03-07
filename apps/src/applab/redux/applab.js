@@ -1,21 +1,11 @@
 /** @file App Lab redux module */
-import _ from 'lodash';
 import { ApplabInterfaceMode } from '../constants';
 import data from '../../storage/redux/data';
 import screens from './screens';
 import {reducers as jsDebuggerReducers} from '../../lib/tools/jsdebugger/redux';
-import {
-  reducer as maker,
-  actions as makerActions,
-  selectors as makerSelectors,
-} from '../../lib/kits/maker/redux';
+import {reducer as maker} from '../../lib/kits/maker/redux';
 
 // Selectors
-
-export const selectors = {
-  // Curry maker selectors so they accept the root state.
-  maker: _.mapValues(makerSelectors, selector => state => selector(state.maker)),
-};
 
 // Actions
 
@@ -39,7 +29,6 @@ function changeInterfaceMode(interfaceMode) {
 
 export const actions = {
   changeInterfaceMode,
-  maker: makerActions,
 };
 
 // Reducers

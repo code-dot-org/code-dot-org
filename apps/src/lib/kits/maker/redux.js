@@ -7,23 +7,20 @@ const MakerState = Immutable.Record({
 });
 
 // Selectors
-export function isEnabled(state) {
-  return state.enabled;
+function getRoot(state) {
+  // Global knowledge eww
+  return state.maker;
 }
 
-export const selectors = {
-  isEnabled,
-};
+export function isEnabled(state) {
+  return getRoot(state).enabled;
+}
 
 // Actions
 const ENABLE = 'maker/ENABLE';
 export function enable() {
   return {type: ENABLE};
 }
-
-export const actions = {
-  enable,
-};
 
 // Reducer
 export function reducer(state, action) {

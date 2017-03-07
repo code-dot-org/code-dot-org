@@ -35,7 +35,7 @@ import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
-import {actions, reducers, selectors} from './redux/applab';
+import {actions, reducers} from './redux/applab';
 import {add as addWatcher} from '../redux/watchedExpressions';
 import { changeScreen } from './redux/screens';
 import * as applabConstants from './constants';
@@ -61,6 +61,10 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import connectToMakerBoard from '../lib/kits/maker/connectToMakerBoard';
 import * as makerCommands from '../lib/kits/maker/commands';
 import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
+import {
+  enable as enableMaker,
+  isEnabled as isMakerEnabled
+} from '../lib/kits/maker/redux';
 var project = require('@cdo/apps/code-studio/initApp/project');
 
 var ResultType = studioApp.ResultType;
@@ -788,7 +792,7 @@ Applab.init = function (config) {
   });
 
   if (config.level.makerlabEnabled) {
-    getStore().dispatch(actions.maker.enable());
+    getStore().dispatch(enableMaker());
   }
 
   getStore().dispatch(actions.changeInterfaceMode(
@@ -1189,7 +1193,7 @@ Applab.execute = function () {
     }
   }
 
-  if (isMakerEnabled()) {
+  if (isMakerEnabled(getStore().getState())) {
     connectToMakerBoard()
         .then(board => {
           board.installOnInterpreter(codegen, Applab.JSInterpreter);
@@ -1667,7 +1671,3 @@ Applab.readProperty = function (element, property) {
 Applab.getAppReducers = function () {
   return reducers;
 };
-
-function isMakerEnabled() {
-  return selectors.maker.isEnabled(getStore().getState());
-}
