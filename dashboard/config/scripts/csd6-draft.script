@@ -135,3 +135,6 @@ level 'CSDU6 - button debug'
 level 'CSDU6 - button tug o war right button'
 level 'CSDU6 - button tug o war left button'
 named_level 'CSDU6 - button tug o war challenge'
+
+stage 'Analog Input'
+named_level 'CSDU6 - sensors experiment'
