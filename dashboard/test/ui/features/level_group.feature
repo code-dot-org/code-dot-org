@@ -1,10 +1,9 @@
 @no_mobile
-@no_circle
 @as_student
 Feature: Level Group
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1/page/1?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
@@ -27,7 +26,7 @@ Scenario: Submit three answers.
   And I wait for 5 seconds
 
   # Go back to the page to see that same options are selected.
-  Then I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
+  Then I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1/page/1?noautoplay=true"
   And element ".level-group-content:nth(0) #checked_2" is visible
   And element ".level-group-content:nth(1) #checked_1" is visible
   And element ".level-group-content:nth(2) #checked_2" is visible
