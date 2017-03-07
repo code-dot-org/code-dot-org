@@ -54,7 +54,7 @@ module Pd::Payment
     end
 
     test 'large venue plp non-urban' do
-      plp = create :professional_learning_partner, contact: @workshop.organizer, urban: false
+      plp = create :regional_partner, contact: @workshop.organizer, urban: false
 
       # Add an extra qualified teacher to go over the large venue threshold.
       create :pd_workshop_participant, workshop: @workshop,
@@ -81,7 +81,7 @@ module Pd::Payment
     end
 
     test 'small venue plp urban' do
-      plp = create :professional_learning_partner, contact: @workshop.organizer, urban: true
+      plp = create :regional_partner, contact: @workshop.organizer, urban: true
 
       workshop_summary = PaymentCalculatorStandard.instance.calculate(@workshop)
 
