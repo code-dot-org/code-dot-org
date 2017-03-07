@@ -4,8 +4,8 @@ import Playground from 'playground-io';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
 import {
-  initializeCircuitPlaygroundComponents,
-  deinitializeCircuitPlaygroundComponents,
+  createCircuitPlaygroundComponents,
+  destroyCircuitPlaygroundComponents,
   initializeAccelerometer,
   initializeButton,
   initializeColorLeds,
@@ -28,12 +28,12 @@ describe('Circuit Playground Components', () => {
     board = newBoard();
   });
 
-  describe(`initializeCircuitPlaygroundComponents()`, () => {
+  describe(`createCircuitPlaygroundComponents()`, () => {
     it(`returns an exact set of expected components`, () => {
       // This test is here to warn us if we add a new component but
       // don't cover it with new tests.  If that happens, make sure you
       // add matching tests below!
-      const components = initializeCircuitPlaygroundComponents(board);
+      const components = createCircuitPlaygroundComponents(board);
       expect(Object.keys(components)).to.deep.equal([
          'colorLeds',
           'led',
@@ -59,17 +59,17 @@ describe('Circuit Playground Components', () => {
     it('can initialize a second set of components with a second board', () => {
       // Checks a necessary condition for a true johnny-five level reset.
       const boardOne = newBoard();
-      const componentsOne = initializeCircuitPlaygroundComponents(boardOne);
+      const componentsOne = createCircuitPlaygroundComponents(boardOne);
       expect(componentsOne.led.board === boardOne).to.be.true;
 
       const boardTwo = newBoard();
-      const componentsTwo = initializeCircuitPlaygroundComponents(boardTwo);
+      const componentsTwo = createCircuitPlaygroundComponents(boardTwo);
       expect(componentsTwo.led.board === boardTwo).to.be.true;
     });
 
     describe('colorLeds', () => {
       it('creates an array of controllers', () => {
-        const {colorLeds} = initializeCircuitPlaygroundComponents(board);
+        const {colorLeds} = createCircuitPlaygroundComponents(board);
         expect(colorLeds).to.be.an.instanceOf(Array);
         expect(colorLeds).to.have.length(10);
       });
@@ -80,7 +80,7 @@ describe('Circuit Playground Components', () => {
           let led;
 
           beforeEach(() => {
-            led = initializeCircuitPlaygroundComponents(board).colorLeds[pin];
+            led = createCircuitPlaygroundComponents(board).colorLeds[pin];
           });
 
           it('creates a five.Led.RGB', () => {
@@ -102,7 +102,7 @@ describe('Circuit Playground Components', () => {
       let led;
 
       beforeEach(() => {
-        led = initializeCircuitPlaygroundComponents(board).led;
+        led = createCircuitPlaygroundComponents(board).led;
       });
 
       it('creates a five.Led', () => {
@@ -122,7 +122,7 @@ describe('Circuit Playground Components', () => {
       let toggleSwitch;
 
       beforeEach(() => {
-        toggleSwitch = initializeCircuitPlaygroundComponents(board).toggleSwitch;
+        toggleSwitch = createCircuitPlaygroundComponents(board).toggleSwitch;
       });
 
       it('creates a five.Switch', () => {
@@ -145,7 +145,7 @@ describe('Circuit Playground Components', () => {
       let buzzer;
 
       beforeEach(() => {
-        buzzer = initializeCircuitPlaygroundComponents(board).buzzer;
+        buzzer = createCircuitPlaygroundComponents(board).buzzer;
       });
 
       it('creates a Piezo (our own wrapper around five.Piezo)', () => {
@@ -168,7 +168,7 @@ describe('Circuit Playground Components', () => {
       let soundSensor;
 
       beforeEach(() => {
-        soundSensor = initializeCircuitPlaygroundComponents(board).soundSensor;
+        soundSensor = createCircuitPlaygroundComponents(board).soundSensor;
       });
 
       it('creates a five.Sensor', () => {
@@ -194,7 +194,7 @@ describe('Circuit Playground Components', () => {
       let tempSensor;
 
       beforeEach(() => {
-        tempSensor = initializeCircuitPlaygroundComponents(board).tempSensor;
+        tempSensor = createCircuitPlaygroundComponents(board).tempSensor;
       });
 
       it('creates a five.Thermometer', () => {
@@ -220,7 +220,7 @@ describe('Circuit Playground Components', () => {
       let lightSensor;
 
       beforeEach(() => {
-        lightSensor = initializeCircuitPlaygroundComponents(board).lightSensor;
+        lightSensor = createCircuitPlaygroundComponents(board).lightSensor;
       });
 
       it('creates a five.Sensor', () => {
@@ -246,7 +246,7 @@ describe('Circuit Playground Components', () => {
       let buttonL;
 
       beforeEach(() => {
-        buttonL = initializeCircuitPlaygroundComponents(board).buttonL;
+        buttonL = createCircuitPlaygroundComponents(board).buttonL;
       });
 
       it('creates a five.Button', () => {
@@ -271,7 +271,7 @@ describe('Circuit Playground Components', () => {
       let buttonR;
 
       beforeEach(() => {
-        buttonR = initializeCircuitPlaygroundComponents(board).buttonR;
+        buttonR = createCircuitPlaygroundComponents(board).buttonR;
       });
 
       it('creates a five.Button', () => {
@@ -296,7 +296,7 @@ describe('Circuit Playground Components', () => {
       let accelerometer;
 
       beforeEach(() => {
-        accelerometer = initializeCircuitPlaygroundComponents(board).accelerometer;
+        accelerometer = createCircuitPlaygroundComponents(board).accelerometer;
       });
 
       it('creates a five.Accelerometer', () => {
@@ -327,7 +327,7 @@ describe('Circuit Playground Components', () => {
 
     describe('touchPads', () => {
       it('only creates one five.Touchpad for all the TouchSensors', () => {
-        const components = initializeCircuitPlaygroundComponents(board);
+        const components = createCircuitPlaygroundComponents(board);
         const theOnlyTouchpadController = components.touchPad0.touchpadsController_;
         expect(theOnlyTouchpadController.board).to.equal(board);
         TOUCH_PINS.forEach(pin => {
@@ -340,7 +340,7 @@ describe('Circuit Playground Components', () => {
           let touchPad;
 
           beforeEach(() => {
-            touchPad = initializeCircuitPlaygroundComponents(board)[`touchPad${pin}`];
+            touchPad = createCircuitPlaygroundComponents(board)[`touchPad${pin}`];
           });
 
           it('creates a TouchSensor', () => {
@@ -357,7 +357,7 @@ describe('Circuit Playground Components', () => {
     });
   });
 
-  describe('deinitializeCircuitPlaygroundComponents()', () => {
+  describe('destroyCircuitPlaygroundComponents()', () => {
     it('calls stop on every color LED', () => {
       const components = {
         colorLeds: initializeColorLeds(board)
@@ -365,7 +365,7 @@ describe('Circuit Playground Components', () => {
 
       components.colorLeds.forEach(led => sinon.spy(led, 'stop'));
 
-      deinitializeCircuitPlaygroundComponents(components);
+      destroyCircuitPlaygroundComponents(components);
 
       for (let i = 0; i < 10; i++) {
         expect(components.colorLeds[i].stop).to.have.been.calledOnce;
@@ -379,7 +379,7 @@ describe('Circuit Playground Components', () => {
 
       sinon.spy(components.led, 'stop');
 
-      deinitializeCircuitPlaygroundComponents(components);
+      destroyCircuitPlaygroundComponents(components);
 
       expect(components.led.stop).to.have.been.calledOnce;
     });
@@ -389,7 +389,7 @@ describe('Circuit Playground Components', () => {
         buzzer: {stop: sinon.spy()}
       };
 
-      deinitializeCircuitPlaygroundComponents(components);
+      destroyCircuitPlaygroundComponents(components);
 
       expect(components.buzzer.stop).to.have.been.calledOnce;
     });
@@ -401,7 +401,7 @@ describe('Circuit Playground Components', () => {
 
       sinon.spy(components.soundSensor, 'disable');
 
-      deinitializeCircuitPlaygroundComponents(components);
+      destroyCircuitPlaygroundComponents(components);
 
       expect(components.soundSensor.disable).to.have.been.calledOnce;
     });
@@ -413,7 +413,7 @@ describe('Circuit Playground Components', () => {
 
       sinon.spy(components.lightSensor, 'disable');
 
-      deinitializeCircuitPlaygroundComponents(components);
+      destroyCircuitPlaygroundComponents(components);
 
       expect(components.lightSensor.disable).to.have.been.calledOnce;
     });
@@ -429,7 +429,7 @@ describe('Circuit Playground Components', () => {
           accelerometer: initializeAccelerometer(board)
         };
 
-        deinitializeCircuitPlaygroundComponents(components);
+        destroyCircuitPlaygroundComponents(components);
 
         expect(spy).to.have.been.calledOnce;
       } catch (e) {
