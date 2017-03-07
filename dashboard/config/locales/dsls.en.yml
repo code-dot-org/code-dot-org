@@ -7112,9 +7112,8 @@ en:
         I don't know.: I don't know.
         Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.: Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.
         Run through the code below in your mind.  What will happen when you click "Run"?: Run through the code below in your mind.  What will happen when you click "Run"?
-        Take a good look at the code below.  What will happen when you click "Run"?: Take a good look at the code below.  What will happen when you click "Run"?
         The artist draws lines back and forth, then jumps down, creating a ladder.: The artist draws lines back and forth, then jumps down, creating a ladder.
-        The artist will draw a ladder with 4 steps.: The artist will draw a ladder with 4 steps.
+        The artist will draw a ladder with 6 steps.: The artist will draw a ladder with 6 steps.
         The artist will draw a single line.: The artist will draw a single line.
         The artist will draw a square with 4 sides.: The artist will draw a square with 4 sides.
       courseB_multi_collector_loops3_predict1:
