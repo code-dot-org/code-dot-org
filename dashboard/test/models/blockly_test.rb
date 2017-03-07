@@ -162,7 +162,7 @@ XML
 
     level = Level.create(
       name: level_name,
-      user_id: 0,
+      user: create(:user),
       type: 'Maze',
       authored_hints: JSON.generate(
         [
@@ -179,6 +179,7 @@ XML
 
     assert_equal localized_hints[1]["hint_markdown"], "second test markdown"
     assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/sharon22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
+    I18n.locale = I18n.default_locale
   end
 
   test 'handles bad authored hint localization data' do
@@ -188,7 +189,7 @@ XML
 
     level = Level.create(
       name: level_name,
-      user_id: 0,
+      user: create(:user),
       type: 'Maze',
       authored_hints: JSON.generate(
         [
@@ -220,5 +221,6 @@ XML
     I18n.backend.store_translations test_locale, custom_i18n
 
     assert_nil level.localized_authored_hints
+    I18n.locale = I18n.default_locale
   end
 end
