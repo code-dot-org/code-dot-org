@@ -150,6 +150,11 @@ class User < ActiveRecord::Base
     class_name: 'District',
     foreign_key: 'contact_id'
 
+  has_many :regional_partner_organizers,
+    foreign_key: :organizer_id
+  has_many :regional_partners,
+    through: :regional_partner_organizers
+
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 

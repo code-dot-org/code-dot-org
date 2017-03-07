@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307160737) do
+ActiveRecord::Schema.define(version: 20170307224649) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -562,6 +562,13 @@ ActiveRecord::Schema.define(version: 20170307160737) do
     t.datetime "updated_at", null: false
     t.index ["script_id", "level_id"], name: "index_puzzle_ratings_on_script_id_and_level_id", using: :btree
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
+  end
+
+  create_table "regional_partner_organizers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "organizer_id",        null: false
+    t.integer "regional_partner_id", null: false
+    t.index ["organizer_id"], name: "index_regional_partner_organizers_on_organizer_id", using: :btree
+    t.index ["regional_partner_id"], name: "index_regional_partner_organizers_on_regional_partner_id", using: :btree
   end
 
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
