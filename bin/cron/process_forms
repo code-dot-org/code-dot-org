@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/chat_client'
+require 'cdo/only_one'
 require 'cdo/solr'
 require src_dir 'forms'
 
