@@ -61,9 +61,11 @@ describe("Tests for the upcoming workshops page", () => {
     expect(upcomingWorkshopsTable.find('tbody tr')).to.have.length(3);
     expect(upcomingWorkshopsTable.find('tbody tr Button')).to.have.length(2);
     expect(upcomingWorkshopsTable.state('showCancelModal')).to.be.false;
+    expect(upcomingWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
 
     // Pushing the button should bring up the modal
     upcomingWorkshopsTable.find('tbody tr Button').first().simulate('click');
     expect(upcomingWorkshopsTable.state('showCancelModal')).to.be.true;
+    expect(upcomingWorkshopsTable.state('enrollmentCodeToCancel')).to.equal('code1');
   });
 });
