@@ -90,11 +90,17 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def next_level_or_redirect_path_for_user(user)
-    # if we're coming from an unplugged level, it's ok to continue
-    # to unplugged level (example: if you start a sequence of
-    # assessments associated with an unplugged level you should
-    # continue on that sequence instead of skipping to next stage)
-    level_to_follow = unplugged? ? next_level : next_progression_level(user)
+    # if we're coming from an unplugged level, it's ok to continue to unplugged
+    # level (example: if you start a sequence of assessments associated with an
+    # unplugged level you should continue on that sequence instead of skipping to
+    # next stage)
+    if valid_progression_level?(user)
+      level_to_follow = next_progression_level(user)
+    else
+      # don't ever continue continue to a locked/hidden level
+      level_to_follow = next_level
+      level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
+    end
 
     if script.professional_learning_course?
       if level.try(:plc_evaluation?)
@@ -133,17 +139,20 @@ class ScriptLevel < ActiveRecord::Base
     valid_progression_level?(user) ? self : next_progression_level(user)
   end
 
-  def unplugged?
-    level.unplugged? || (stage && stage.unplugged?)
-  end
-
   def valid_progression_level?(user=nil)
-    return false if unplugged?
+    return false if level.unplugged?
+    return false if stage && stage.unplugged?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && stage && stage.spelling_bee?
-    return false if user && user.hidden_stage?(self)
-    return false if user && user.user_level_locked?(self, level)
+    return false if locked_or_hidden?(user)
     true
+  end
+
+  def locked_or_hidden?(user)
+    return false unless user
+    return true if user.hidden_stage?(self)
+    return true if user.user_level_locked?(self, level)
+    false
   end
 
   def previous_level
