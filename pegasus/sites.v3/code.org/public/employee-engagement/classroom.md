@@ -68,7 +68,8 @@ Join us in hosting an Hour of Code! [INCLUDE EVENT DETAILS]
 Sign up today to help lead this movement forward!
 
 -SIGNED
-<br/>P.s. Try an [Hour of Code tutorial](/learn) yourself!
+<br/>
+P.s. Try an [Hour of Code tutorial](/learn) yourself!
 
 _____________________________________________
 ## <a name="communication2" href"communication2"> Second communication to your employees: It's not too late to be a volunteer!</a>
@@ -136,6 +137,7 @@ Your employees are volunteering in their communities and spreading the word abou
 
 ### Share our Videos: 
 **Women in tech related videos:**
+
 <ul>
 <li>Change the world: Starring Sheryl Sandberg, Jasmine Lawrence, Karlie Kloss, May-Li Khoe, Mia Epner, Alice Steinglass, Jess Lee, Paola Mejía Minaya, Malala Yousafzai, and Susan Wojcicki.</li>
 <li>Malala challenges girls to do an Hour of Code: Starring Malala Yousafzai, activist for female education and Nobel Prize laureate.</li>

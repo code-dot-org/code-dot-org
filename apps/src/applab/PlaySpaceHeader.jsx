@@ -4,7 +4,7 @@ import React from 'react';
 
 import {ApplabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
-import * as actions from './actions';
+import {actions} from './redux/applab';
 import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
 import ToggleGroup from '../templates/ToggleGroup';

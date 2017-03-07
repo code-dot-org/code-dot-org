@@ -33,6 +33,10 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 	- [Director of State Government Affairs](#govaffairs)
 - **Fundraising**
 	- [Fundraising Consultant](#fund)
+- **Marketing**
+	- [Director of Marketing Communications](#director)
+	- [Marketing Associate](#associate)
+	- [Marketing Coordinator](#markcoordinator)
 - **Product and Engineering**
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
@@ -114,6 +118,106 @@ The person we contract for this role will be experienced in building relationshi
 Consultant will be expected to devote up to 15 hours per week for at least the next year (as needed, on contract); the work will require a minimum of 5 hours per month to cover ongoing communications and research time to stay current on grant opportunities, Code.org activities, and activities of our Regional Partners. 
 
 Interested contractors should email a resume and cover letter, and any relevant work samples, to <a href="mailto:jobs@code.org">jobs@code.org</a>. You may also choose to include a LinkedIn or related online profile. Compensation will be a contracted hourly rate, depending on experience. 
+
+## <a name="director"href="#director">Director of Marketing & Communications (Seattle, WA)</a>
+**Job Summary:**
+
+In the last 3 years, Code.org has grown exponentially. We currently have over 15 million student accounts with 10,000 additional created every day. Our social media accounts have over 2.5 million followers and a third of US schools joined the Hour of Code last year. We need your help to continue to drive momentum and opportunity for computer science education. You can find our newsroom <a href="https://code.org/about/news">here</a>.
+
+Code.org is looking for a talented and creative manager to set and execute a strategic, comprehensive marketing and communications plan for the organization. The Director of Marketing & Communications will work closely with Code.org’s leadership team as the communications partner on a variety of initiatives. 
+
+Responsibilities of the position include:
+
+- Designing and managing organization-wide communications strategy 
+- Driving and managing media and PR strategy 
+- Managing and establishing key partnerships with communications teams at related organizations
+- Managing the international Hour of Code campaign and partnerships
+- Designing and managing email communication plan for marketing and grassroots lobbying campaigns
+- Manage a small team responsible for social media, web content, email campaigns and event marketing and communications
+- Working with external vendors supporting our efforts in PR and advocacy
+
+**Experience and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Excellent written and verbal communication skills and sound editorial judgment
+- Previous success in public and media relations; creating compelling stories to drive brand strategy and developing relationships with the press
+- Strong project management and strategic partnership skills to drive marketing campaigns with external partners
+- Experienced manager able to hire and develop a marketing and communications team
+- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
+- Proficient in using Google suite of applications, presentation and layout skills 
+- 5-7 years of relevant work experience in communications and technology
+- Bachelor’s degree in communications, public relations, or related field
+- Familiarity or background in educational communications preferred, no background in Computer Science needed
+
+To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="associate"href="#associate">Marketing Associate (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for a Marketing Associate who will support communications across the organization. The primary responsibility of this position will be assisting the Director of Marketing in the planning and execution of the annual Hour of Code campaign. The Hour of Code initiative encourages students to try computer science during Computer Science Education Week in December. The Marketing Associate will make essential contributions to this global and highly visible marketing effort, supporting social media and email outreach, live events, partnership cultivation, and more. 
+
+The Marketing Associate will have a wide variety of additional day-to-day responsibilities supporting the marketing team, including everything from running email campaigns reaching millions of teachers, parents, students and volunteers to supporting public relations, media coverage, and events. 
+
+Other responsibilities of the position may include:
+
+- Managing, maintaining, and growing our social media presence 
+- Writing, sourcing and editing compelling stories for our blog or external press
+- Creating website content on code.org, csedweek.org, and hourofcode.com
+
+**Experience and Qualifications:**
+
+We are looking for a self-starter, experienced in communications, who can multi-task, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, tech-savvy, and able to swiftly prioritize duties as needed on multiple ongoing projects. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+The ideal candidate has the following qualifications:
+
+- Excellent written and verbal communication skills
+- Strong copywriting and content development experience 
+- Knowledge and understanding of current trends in social media 
+- Passion for digital media and devices, an “early adopter” of digital trends
+- Familiar with methodologies of website and media tracking tools 
+- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
+- Proficient in using Google suite of applications, presentation and layout skills 
+- 2-5 years of relevant experience in communications and technology
+- Bachelor’s degree in communications, public relations, related field or equivalent work experience
+- Familiarity or background in educational communications preferred, no background in Computer Science needed
+
+To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="markcoordinator"href="#markcoordinator">Marketing Coordinator (Seattle, WA)</a>
+
+**Job Summary:**
+
+We are looking for a Marketing Coordinator to support communications, marketing, and public relations efforts at Code.org. The Marketing Coordinator will collaborate with members of our marketing team and across the organization to make sure projects get the resources and attention they need to be successful. 
+
+Other responsibilities of the position may include:
+
+- Work with marketing team to coordinate day-to-day activities that lead to the completion of projects and tasks
+Managing, maintaining, and growing our social media presence 
+- Writing, sourcing and editing compelling stories for our blog or external press
+- Working with our advocacy team on grassroots lobbying campaigns across the country
+- Supporting public relations, media coverage, and events 
+- Creating website content on code.org, csedweek.org, and hourofcode.com
+
+**Experience and Qualifications:**
+
+We are looking for a self-starter, experienced in communications, who can multi-task, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, tech-savvy, and able to swiftly prioritize duties as needed on multiple ongoing projects. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+The ideal candidate has the following qualifications:
+
+- Excellent written and verbal communication skills
+- Strong copywriting and content development experience 
+- Knowledge and understanding of current trends in social media 
+- Passion for digital media and devices, an “early adopter” of digital trends
+- Familiar with methodologies of website and media tracking tools 
+- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
+- Proficient in using Google suite of applications, presentation and layout skills 
+- 2+ years of relevant experience in communications and technology
+- Bachelor’s degree in communications, public relations, related field or equivalent work experience
+- Familiarity or background in educational communications preferred, no background in Computer Science needed
+
+To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="senior"href="#senior">Senior Software Engineer (Seattle, WA)</a>
 

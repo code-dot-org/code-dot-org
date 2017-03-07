@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
-  load_and_authorize_resource class: 'Pd::Workshop', except: :k5_public_map_index
+  load_and_authorize_resource class: 'Pd::Workshop', except: [:k5_public_map_index, :workshops_user_enrolled_in]
 
   # GET /api/v1/pd/workshops
   def index
@@ -15,16 +15,15 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.organized_by(current_user)
     end
 
-    if params[:include_enrollments]
-      return_val = @workshops.map do |workshop|
-        enrollment = workshop.enrollments.where('email = ? OR user_id = ?', current_user.email, current_user.id).first
-        Api::V1::Pd::WorkshopSerializer.new(workshop, scope: {enrollment_id: enrollment.try(&:id)}).attributes
-      end
+    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+  end
 
-      render json: return_val
-    else
-      render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+  def workshops_user_enrolled_in
+    workshops = ::Pd::Enrollment.for_user(current_user).map do |enrollment|
+      Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
+
+    render json: workshops
   end
 
   # Upcoming (not started) public CSF workshops.
