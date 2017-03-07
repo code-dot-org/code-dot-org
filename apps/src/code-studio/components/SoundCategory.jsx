@@ -1,38 +1,38 @@
 import React from 'react';
 import * as color from "../../util/color";
 
+const styles = {
+  category: {
+    backgroundColor: color.cyan,
+    border: 'solid 0px',
+    borderRadius: 5,
+    width: 175,
+    padding: 10,
+    margin: 10,
+    color: color.white,
+    float: 'left',
+    cursor: 'pointer'
+  },
+  categoryArea: {
+    width: '100%'
+  }
+};
+
 /**
  * A component for displaying a sound category.
  */
-var SoundCategory = React.createClass({
+const SoundCategory = React.createClass({
   propTypes: {
     displayName: React.PropTypes.string,
     category: React.PropTypes.string,
     onSelect: React.PropTypes.func.isRequired
   },
 
-  selectCategory: function () {
+  selectCategory() {
     this.props.onSelect(this.props.category);
   },
 
-  render: function () {
-    var styles = {
-      category: {
-        backgroundColor: color.cyan,
-        border: 'solid 0px',
-        borderRadius: '5px',
-        width: '175px',
-        padding: '10px',
-        margin: '10px',
-        color: color.white,
-        float: 'left',
-        cursor: 'pointer'
-      },
-      categoryArea: {
-        width: '100%'
-      }
-    };
-
+  render() {
     return (
       <div style={styles.category} onClick={this.selectCategory}>
         {this.props.displayName}

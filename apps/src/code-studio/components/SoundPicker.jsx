@@ -4,11 +4,29 @@ import color from "../../util/color";
 import SoundLibrary from './SoundLibrary';
 
 const audioExtension = '.mp3';
+const styles = {
+  root: {
+    margin: "0 0 0 5px"
+  },
+  divider: {
+    borderColor: color.purple,
+    margin: '5px 0'
+  },
+  warning: {
+    color: color.red,
+    fontSize: 13,
+    fontWeight: 'bold',
+  },
+};
+const MODE = {
+    files : 'files',
+    sounds : 'sounds'
+};
 
 /**
  * A component for managing hosted sounds and the Sound Library.
  */
-var SoundPicker = React.createClass({
+const SoundPicker = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
     assetsChanged: React.PropTypes.func,
@@ -18,67 +36,57 @@ var SoundPicker = React.createClass({
     useFilesApi: React.PropTypes.bool.isRequired
   },
 
-  getInitialState: function () {
-    return {mode: 'files'};
+  getInitialState() {
+    return {mode: MODE.files};
   },
 
-  getAssetNameWithPrefix: function (sound) {
+  getAssetNameWithPrefix(sound) {
     this.props.assetChosen(sound);
   },
 
-  setSoundMode: function () {
-    this.setState({mode: 'sounds'});
+  setSoundMode() {
+    this.setState({mode: MODE.sounds});
   },
 
-  setFileMode: function () {
-    this.setState({mode: 'files'});
+  setFileMode() {
+    this.setState({mode: MODE.files});
   },
 
-  render: function () {
-    var isFileMode = this.state.mode === 'files';
-    var styles = {
-      root: {
-        margin: "0 0 0 5px"
-      },
+  render() {
+    const isFileMode = this.state.mode === MODE.files;
+    const headerStyles = {
       fileModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
         fontFamily: isFileMode ? '"Gotham 5r"' : null,
         color: isFileMode ? null : '#999',
-        fontSize: '16px',
+        fontSize: 16,
         cursor: 'pointer'
       },
       soundModeToggle: {
         margin: 0,
-        fontSize: '16px',
+        fontSize: 16,
         fontFamily: isFileMode ? null : '"Gotham 5r"',
         color: isFileMode ? '#999' : null,
         cursor: 'pointer'
       },
-      divider: {
-        borderColor: color.purple,
-        margin: '5px 0'
-      },
-      warning: {
-        color: color.red,
-        fontSize: 13,
-        fontWeight: 'bold',
-      },
     };
 
-    var modeSwitch, title = this.props.assetChosen ?
-      <p className="dialog-title">Choose Sounds</p> :
-      <p className="dialog-title">Manage Sounds</p>;
+    let modeSwitch, title = this.props.assetChosen ?
+      <p>Choose Sounds</p> :
+      <p>Manage Sounds</p>;
 
     if (this.props.assetChosen) {
-      modeSwitch = (<div>
-        <p onClick={this.setFileMode} style={styles.fileModeToggle}>My Files</p>
-        <p onClick={this.setSoundMode} style={styles.soundModeToggle}>Sound library</p>
-        <hr style={styles.divider}/>
-      </div>);
+      modeSwitch = (
+        <div>
+          <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>My Files</p>
+          <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>Sound library</p>
+          <hr style={styles.divider}/>
+        </div>
+      );
     }
 
-    var body = !this.props.assetChosen || this.state.mode === 'files' ?
+    const body = !this.props.assetChosen || this.state.mode === MODE.files ?
       <AssetManager
         assetChosen={this.props.assetChosen}
         assetsChanged={this.props.assetsChanged}
