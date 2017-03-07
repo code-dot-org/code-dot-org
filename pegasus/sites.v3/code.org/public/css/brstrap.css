@@ -56,6 +56,7 @@
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
   .col-80 { width: 80%; float:left; }
+  .col-95 { width: 95%; float:left; }
   .col-80-right { width: 80%; float: right; }
   .left-nav { width: 100px; float: left; }
 
@@ -89,6 +90,7 @@
   .col-63 { width: 100%;}
   .col-66 { width: 100% }
   .col-80 { width: 100% }
+  .col-95 { width: 95%; float:left; }
 
   .col-mobile-50 { width: 100%; float:left; }
   .col-mobile-44 { width: 44%; float:left; }
@@ -113,7 +115,7 @@
   .col-mobile-50 { width: 100%; float:left; }
   .col-mobile-44 { width: 100%; float:left; }
   .col-mobile-56 { width: 100%; float:left; }
-  
+
   .mobile-show-medium { display: none }
 
   .mobile-small-hide { display: none }
