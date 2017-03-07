@@ -363,13 +363,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'plp' do
-    assert_nil @workshop.professional_learning_partner
+    assert_nil @workshop.regional_partner
 
     # Now create a plp associated with the organizer
-    plp = create :professional_learning_partner, contact: @organizer
+    plp = create :regional_partner, contact: @organizer
 
-    assert @workshop.professional_learning_partner
-    assert_equal plp, @workshop.professional_learning_partner
+    assert @workshop.regional_partner
+    assert_equal plp, @workshop.regional_partner
   end
 
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
