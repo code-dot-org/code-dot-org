@@ -10805,6 +10805,10 @@ urlgrey@>=0.4.0:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/urlgrey/-/urlgrey-0.4.4.tgz#892fe95960805e85519f1cd4389f2cb4cbb7652f"
 
+us@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/us/-/us-2.0.0.tgz#e8d0c1e14c2e05b6534a028256aca21025c45dde"
+
 user-home@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/user-home/-/user-home-1.1.1.tgz#2b5be23a32b63a7c9deb8d0f28d485724a3df190"
