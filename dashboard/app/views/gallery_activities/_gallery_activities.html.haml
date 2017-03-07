@@ -12,5 +12,5 @@
       %div.caption
         =t('gallery.caption_by_name_age', name: user.initial, age: user.age)
     %div.caption
-      =t('gallery.caption_time_ago', time_ago: time_ago_in_words(level_source.created_at))
+      =t('gallery.caption_time_ago', time_ago: time_ago_in_words(gallery_activity.created_at))
 %br{clear: :all}
