@@ -2550,7 +2550,8 @@ code {
   color: $purple;
 }
 
-.instructions-markdown ul li {
+.instructions-markdown ul li, .instructions-markdown ol li {
   font-size: 16px;
   margin-bottom: 5px;
+  line-height: 1.2em;
 }
