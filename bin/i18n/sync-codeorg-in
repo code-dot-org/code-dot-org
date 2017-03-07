@@ -26,23 +26,6 @@ def copy_to_yml(label, data, allow_full_length=false)
   end
 end
 
-def reformat_quotes
-  filenames = [
-    "instructions",
-    "markdown_instructions",
-    'failure_message_overrides',
-  ]
-
-  filenames.each do |filename|
-    temp_file = Tempfile.new("temp#{filename}.yml")
-    File.open("dashboard/config/locales/#{filename}.en.yml", "r") do |f|
-      f.each_line {|line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
-    end
-    temp_file.close
-    FileUtils.mv(temp_file.path, "dashboard/config/locales/#{filename}.en.yml")
-  end
-end
-
 # Pull in various fields for levelbuilder levels from .level files and
 # save them to [field_name].en.yml files to be translated. Fields included:
 #   instructions
@@ -57,9 +40,9 @@ def localize_level_content
   level_authored_hints = Hash.new
   level_callouts = Hash.new
 
-  instruction_pattern = /^\s*"instructions": (".*?"),?\n$/
-  markdown_instruction_pattern = /^\s*"markdown_instructions": (".*?"),?\n$/
-  failure_message_override_pattern = /^\s*"failure_message_override": (".*?"),?\n$/
+  instruction_pattern = /^\s*"instructions": "(.*?)",?\n$/
+  markdown_instruction_pattern = /^\s*"markdown_instructions": "(.*?)",?\n$/
+  failure_message_override_pattern = /^\s*"failure_message_override": "(.*?)",?\n$/
   authored_hint_pattern = /^\s*"authored_hints": "(.*?)",?\n$/
   callout_pattern = /^\s*"callout_json": "(.*?)",?\n$/
 
@@ -117,7 +100,6 @@ def localize_level_content
   copy_to_yml("failure_message_overrides", level_failure_message_overrides)
   copy_to_yml("authored_hints", level_authored_hints, true)
   copy_to_yml("callouts", level_callouts, true)
-  reformat_quotes
 end
 
 pull_in_files_for_translation
