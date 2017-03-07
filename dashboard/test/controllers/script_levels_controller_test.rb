@@ -1158,7 +1158,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 2": {"active": false}}'
+        properties: '{"variants": {"maze 2": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level
@@ -1171,7 +1171,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level2
@@ -1185,7 +1185,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         create(
           :script_level,
           levels: [level, level2],
-          properties: '{"maze 1": {"active": false}, "maze 2": {"active": false}}'
+          properties: '{"variants": {"maze 1": {"active": false}, "maze 2": {"active": false}}}'
         )
       )
     end
@@ -1203,7 +1203,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level
@@ -1224,7 +1224,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: '{"maze 1": {"active": false}}'
+        properties: '{"variants": {"maze 1": {"active": false}}}'
       )
     )
     assert_equal assigns(:level), level

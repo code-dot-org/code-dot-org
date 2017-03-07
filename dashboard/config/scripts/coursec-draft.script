@@ -14,6 +14,7 @@ level 'courseC_maze_programming5'
 level 'courseC_maze_programming6'
 level 'courseC_maze_programming7'
 level 'courseC_maze_programming8'
+assessment 'courseC_maze_programming8_predict1'
 level 'courseC_maze_programming9'
 
 stage 'Debugging in Maze'

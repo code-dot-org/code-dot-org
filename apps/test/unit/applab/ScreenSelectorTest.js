@@ -1,18 +1,13 @@
 import {expect} from '../../util/configuredChai';
-import sinon from 'sinon';
 import React from 'react';
 import {mount} from 'enzyme';
-import ReactTestUtils from 'react-addons-test-utils';
-import {Provider} from 'react-redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import ScreenSelector from '@cdo/apps/applab/ScreenSelector';
-import reducers from '@cdo/apps/applab/reducers';
+import {reducers} from '@cdo/apps/applab/redux/applab';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 
 describe('The ScreenSelector component', () => {
-  let selector;
-
   beforeEach(() => {
     stubRedux();
     registerReducers(commonReducers);
@@ -54,6 +49,4 @@ describe('The ScreenSelector component', () => {
     }));
     expect(render().find('select').props().style.display).not.to.equal('none');
   });
-
-
 });
