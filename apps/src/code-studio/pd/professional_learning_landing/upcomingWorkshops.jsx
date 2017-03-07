@@ -10,7 +10,7 @@ const UpcomingWorkshops = React.createClass({
   render() {
     return (
       <WorkshopTableLoader
-        queryUrl="/api/v1/pd/workshops/?state=Not%20Started&include_enrollments=1"
+        queryUrl="/api/v1/pd/workshops_user_enrolled_in"
         hideNoWorkshopsMessage={true}
       >
         <UpcomingWorkshopsTable/>
@@ -119,7 +119,7 @@ const UpcomingWorkshopsTable = React.createClass({
           </div>
         </td>
         <td>
-          {workshop.enrollment_id &&
+          {workshop.enrollment_code &&
             (
               <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
                 Cancel enrollment
