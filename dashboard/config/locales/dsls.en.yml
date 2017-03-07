@@ -7111,6 +7111,7 @@ en:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.: Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.
+        Run through the code below in your mind.  What will happen when you click "Run"?: Run through the code below in your mind.  What will happen when you click "Run"?
         Take a good look at the code below.  What will happen when you click "Run"?: Take a good look at the code below.  What will happen when you click "Run"?
         The artist draws lines back and forth, then jumps down, creating a ladder.: The artist draws lines back and forth, then jumps down, creating a ladder.
         The artist will draw a ladder with 4 steps.: The artist will draw a ladder with 4 steps.
@@ -7143,6 +7144,15 @@ en:
         The bird will get to the pig.: The bird will get to the pig.
         The bird will not reach the pig.: The bird will not reach the pig.
         The program has all of the blocks needed to get to the pig.: The program has all of the blocks needed to get to the pig.
+      courseC_multi_maze_programming8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
+        The bird run into the TNT.: The bird run into the TNT.
+        The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
+        The bird will make it to the pig.: The bird will make it to the pig.
+        This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
