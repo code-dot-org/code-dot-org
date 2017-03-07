@@ -26,7 +26,8 @@ class ContactRollups
 
   UPDATE_BATCH_SIZE = 100
 
-  PEGASUS_DB_NAME = "pegasus_#{Rails.env}".freeze
+  PEGASUS_ENV = (Rails.env.production? ? "" : "_#{Rails.env}").freeze
+  PEGASUS_DB_NAME = "pegasus#{PEGASUS_ENV}".freeze
   DASHBOARD_DB_NAME = "dashboard_#{Rails.env}".freeze
 
   UNITED_STATES = "united states".freeze
@@ -57,9 +58,10 @@ class ContactRollups
   def self.build_contact_rollups
     start = Time.now
 
-    ActiveRecord::Base.connection.execute "SET SQL_SAFE_UPDATES = 0"
-    # set READ UNCOMMITTED transaction isolation level to avoid taking locks on tables we are reading from during
-    # what can be multi-minute operations
+    PEGASUS_REPORTING_DB_WRITER.run "SET SQL_SAFE_UPDATES = 0"
+    # set READ UNCOMMITTED transaction isolation level on both read connections to avoid taking locks
+    # on tables we are reading from during what can be multi-minute operations
+    DASHBOARD_REPORTING_DB_READER.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     ActiveRecord::Base.connection.execute "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     create_destination_table
     insert_from_pegasus_forms
@@ -85,7 +87,7 @@ class ContactRollups
       update_geo_data_from_forms(kind)
     end
 
-    count = ActiveRecord::Base.connection.execute("select count(*) from pegasus_test.contact_rollups_daily").first[0]
+    count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
   end
 
@@ -204,7 +206,8 @@ class ContactRollups
     SELECT email COLLATE utf8_general_ci, name, users.id, 'Teacher', city, state, postal_code, country FROM #{DASHBOARD_DB_NAME}.users AS users
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
     WHERE users.user_type = 'teacher' AND LENGTH(email) > 0 AND user_geos.indexed_at IS NOT NULL
-    ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name), #{DEST_TABLE_NAME}.dashboard_user_id = VALUES(dashboard_user_id)"
+    ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name), #{DEST_TABLE_NAME}.dashboard_user_id = VALUES(dashboard_user_id),
+    #{DEST_TABLE_NAME}.roles = VALUES(roles)"
     log_completion(start)
   end
 
