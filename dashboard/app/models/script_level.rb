@@ -59,9 +59,13 @@ class ScriptLevel < ActiveRecord::Base
   def oldest_active_level
     return levels[0] if levels.length == 1
     return levels.min_by(&:created_at) unless properties
+
     properties_hash = JSON.parse(properties)
+    variants = properties_hash['variants']
+    return levels.min_by(&:created_at) unless variants
+
     levels.sort_by(&:created_at).find do |level|
-      !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+      !variants[level.name] || variants[level.name]['active'] != false
     end
   end
 

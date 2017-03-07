@@ -3,7 +3,8 @@ require 'test_helper'
 class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   freeze_time
 
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @admin = create(:admin)
     @organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
@@ -12,6 +13,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @standalone_workshop = create(:pd_workshop)
 
     # Don't actually call the geocoder.
+  end
+
+  setup do
     Pd::Workshop.stubs(:process_location)
   end
 

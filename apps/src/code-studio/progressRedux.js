@@ -240,7 +240,7 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
  * Note, that this does not include levels
  * @returns {Lesson}
  */
-const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber']);
+const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']);
 export const lessons = state => state.stages.map(lessonFromStage);
 
 /**

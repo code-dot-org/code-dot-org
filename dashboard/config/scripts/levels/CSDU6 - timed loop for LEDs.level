@@ -54,7 +54,8 @@
       "buzzer.off": null,
       "buzzer.frequency": null,
       "timedLoop": null,
-      "forLoop_i_0_4": null
+      "forLoop_i_0_4": null,
+      "stopTimedLoop": null
     },
     "edit_code": true,
     "embed": "false",
@@ -89,11 +90,12 @@
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
+    "beginner_mode": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "true",
     "disable_if_else_editing": "false",
     "markdown_instructions": "# Turn on Each RGB LED and Exit\r\n\r\nUsing a _timed loop_ in place of a _for loop_ loop requires that you set up a counter variable, increment it each time the loop is run, and use a conditional to determine when to exit the loop. Set up a _timed loop_ to turn on each of the color LEDs one at a time and then exit. Refer back to the previous page for examples.",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

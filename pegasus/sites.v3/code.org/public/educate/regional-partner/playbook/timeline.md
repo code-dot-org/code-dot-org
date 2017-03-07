@@ -44,10 +44,12 @@ table {width: 100%;}
 | March 10, 2017 | Code.org notifies Cycle #4 applicants of decisions |
 | March 13th - 24th, 2017 | Teacher Appplication Review Cycle #5 |
 | March 15, 2017 | <span style="color:green">Final statuses sent to all facilitator applicants</span> |
-| March 17, 2017 | Regional Partner Cycle #5 application reviews due |
+| March 17, 2017 | <span style="color:green">Code.org begins introducing Regional Partners to new facilitators</span> |
 | March 17, 2017<br/> 10:00 am - 10:30 am PT<br/> | Virtual Meeting: NCWIT Programs and Resources<br/> Click [here](https://code.zoom.us/j/668439281) to join the Zoom Meeting. **(Required)** |
-| March 24, 2017 | Code.org notifies Cycle #5 applicants of decisions |
+| March 21, 2017 | Regional Partner Cycle #5 application reviews due |
 | March 24th-26th 2017 | <span style="color:green">CSP Local Leads Facilitator Training (arrive Friday night)<br/>Location: Chicago, IL</span>|
+| March 27, 2017 | Code.org notifies Cycle #5 applicants of decisions |
+
 
 ## April Areas of Focus
 
@@ -74,6 +76,7 @@ table {width: 100%;}
 | **May** ||
 |-----------------|--------------------------------------------------|
 | All Month | Group 1 Budget Reviews |
+| May 1, 2017 | How to Run Traditional Programs (ECS, CS in Science, CS in Algebra) folder release |
 | May 15, 2017 | Unclaimed seats for TeacherCon 2 released to waitlisted applicants |
 | May 20th - 21st, 2017 | <span style="color:green">All TeacherCon Leads Facilitator Training (arrive Friday night)<br/> Location: Chicago, IL<br/></span>|
 | May 30, 2017 | Unclaimed seats for TeacherCon 3 released to waitlisted applicants |

@@ -1,0 +1,12 @@
+name 'CSD U5 data visualization sheet'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Pizza Party Data
+
+The pizza part data has been put into a spreadsheet for you.  To use use spreadsheet, you'll need to make your own copy of it.
+
+* Click on this link: [Pizza Topping Choices](https://docs.google.com/spreadsheets/d/1q1vdgmIlGgxiqJs_VnqHvko18UD6XvRXrnY3JSU97NQ)
+* Go to the "File" menu and choose "Make a Copy"
+* You can now work on your new copy.
+MARKDOWN

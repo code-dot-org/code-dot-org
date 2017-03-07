@@ -4,6 +4,7 @@ class TransfersController < ApplicationController
 
   # POST /sections/:id/transfers
   def create
+    # TODO(asher): Much of the permissioning here should be done through CanCan.
     new_section_code = params[:new_section_code]
 
     new_section = Section.find_by_code(new_section_code)
@@ -77,7 +78,7 @@ class TransfersController < ApplicationController
       return
     end
 
-    if student_ids.count != current_user.followers.where(student_user_id: student_ids).count
+    if student_ids.count != current_user.followers.where(section_id: current_section.id, student_user_id: student_ids).count
       render json: {
         error: I18n.t('move_students.all_students_must_be_in_current_section')
       }, status: :forbidden

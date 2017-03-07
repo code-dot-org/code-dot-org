@@ -10,7 +10,12 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { createStore } from 'redux';
 import Immutable from 'immutable';
 
-export const fakeLesson = (name, id, lockable=false) => ({name, id, lockable});
+export const fakeLesson = (name, id, lockable=false, stageNumber=undefined) => ({
+  name,
+  id,
+  lockable,
+  stageNumber
+});
 
 export const fakeLevels = numLevels => _.range(numLevels).map(index => ({
   status: LevelStatus.not_tried,
@@ -18,6 +23,11 @@ export const fakeLevels = numLevels => _.range(numLevels).map(index => ({
   name: `Level ${index + 1}`
 }));
 
+/**
+ * Creates the shell of a redux store with the provided lessonId being hidden
+ * @param {ViewType} viewAs
+ * @param {number?} lessonId - Lesson to hide (or null if none)
+ */
 export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
   return createStore(state => state, {
     stageLock: { viewAs },

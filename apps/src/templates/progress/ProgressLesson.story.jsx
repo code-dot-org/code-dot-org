@@ -20,7 +20,10 @@ const defaultProps = {
       name: 'Last progression'
     },
   ],
-  lessonIsVisible: () => true
+  showTeacherInfo: false,
+  viewAs: ViewType.Teacher,
+  lessonIsVisible: () => true,
+  lessonLockedForSection: () => false
 };
 
 export default storybook => {
@@ -52,6 +55,35 @@ export default storybook => {
           <ProgressLesson
             {...defaultProps}
             lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
+          />
+        )
+      },
+      {
+        name:'locked lesson',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5).map(level => ({
+              ...level,
+              status: LevelStatus.locked,
+              name: undefined
+            }))}
+            lessonLockedForSection={() => true}
+          />
+        )
+      },
+      {
+        name:'unlocked lockable lesson',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5).map(level => ({
+              ...level,
+              status: LevelStatus.attempted,
+              name: undefined
+            }))}
           />
         )
       }
