@@ -298,7 +298,7 @@ Devise.setup do |config|
       host: CDO.dashboard_hostname,
       identifier: CDO.dashboard_schoolproject_key,
       secret: CDO.dashboard_schoolproject_secret,
-      redirect_uri: CDO.studio_url('users/auth/openid_connect/callback', 'https')
+      redirect_uri: CDO.studio_url('/users/auth/the_school_project/callback', 'https:')
     }
   }
 
