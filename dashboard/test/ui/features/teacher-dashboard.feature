@@ -31,12 +31,24 @@ Feature: Using the teacher dashboard
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
     And I am on "http://studio.code.org/projects/applab"
+
+    # rename the project
     And I click selector ".project_edit" once I see it
     And I wait until element ".project_name.header_input" is visible
     And I type "thumb wars" into ".project_name.header_input"
     And I click selector ".project_save"
+
+    # try renaming the project a second time in case the initial save
+    # of the new project interfered with the first renaming
+    And I click selector ".project_edit" once I see it
+    And I wait until element ".project_name.header_input" is visible
+    And I type "thumb wars" into ".project_name.header_input"
+    And I click selector ".project_save"
+
     And I wait until element ".project_edit" is visible
+    Then element ".project_name.header_text" contains text "thumb wars"
     And I sign out
+
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard?sectionProjects=1/#sections"
     And I click selector "a:contains('SectionName')" once I see it
