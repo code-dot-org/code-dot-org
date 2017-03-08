@@ -54,7 +54,7 @@ def main
 
   ChatClient.mesage(
     'infra-test',
-    "robo-DTT (PR\##{pr_number})",
+    "robo-DTT created and merged <a href=\"#{GitHub.get_html_url(pr_number)}\">PR\##{pr_number}</a>",
     color: 'green'
   )
 rescue Exception => e
