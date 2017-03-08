@@ -6,7 +6,7 @@ import React from 'react';
 import CsFundamentalsSection from './csFundamentalsSection';
 import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSection';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
-import UpcomingWorkshops from './upcomingWorkshops';
+import {UpcomingWorkshops} from './upcomingWorkshops';
 import _ from 'lodash';
 
 const CSPCSDcourses = ['CS Principles', 'CS Discoveries'];

@@ -15,7 +15,7 @@ const workshopShape = React.PropTypes.shape({
     name: React.PropTypes.string.isRequired,
     email: React.PropTypes.string.isRequired
   }).isRequired,
-  enrollment_id: React.PropTypes.number
+  enrollment_code: React.PropTypes.string
 });
 
 module.exports.workshopShape = workshopShape;
