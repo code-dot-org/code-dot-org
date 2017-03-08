@@ -473,7 +473,6 @@ class User < ActiveRecord::Base
         user.user_type = auth.extra.raw_info.role
         user.locale = auth.extra.raw_info.locale
         user.school = auth.extra.raw_info.school.name
-        user.age = 5 unless user.user_type == TYPE_TEACHER
       end
 
       # treat clever admin types as teachers
