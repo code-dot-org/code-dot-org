@@ -10,7 +10,7 @@ const SOUND_CATEGORIES = {
   category_female_voiceover: 'Female voiceovers',
   category_male_voiceover: 'Male voiceovers',
   category_objects: 'Objects',
-  category_UI: 'User interfaces',
+  category_ui: 'User interfaces',
   category_all: 'All'
 };
 
