@@ -1,6 +1,7 @@
 import React from 'react';
 import AssetManager from './AssetManager';
 import color from "../../util/color";
+import { SOUND_PREFIX, DEFAULT_SOUND_PATH_PREFIX } from '../../assetManagement/assetPrefix';
 import SoundLibrary from './SoundLibrary';
 
 const audioExtension = '.mp3';
@@ -41,7 +42,8 @@ const SoundPicker = React.createClass({
   },
 
   getAssetNameWithPrefix(sound) {
-    this.props.assetChosen(sound);
+    const soundName = sound.replace(DEFAULT_SOUND_PATH_PREFIX, SOUND_PREFIX);
+    this.props.assetChosen(soundName);
   },
 
   setSoundMode() {

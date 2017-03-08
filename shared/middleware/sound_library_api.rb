@@ -15,18 +15,18 @@ SOUND_LIBRARY_BUCKET = 'cdo-sound-library'.freeze
 #
 class SoundLibraryApi < Sinatra::Base
   #
-  # GET /api/v1/sound-library/<version-id>/<filename>
+  # GET /api/v1/sound-library/<filename>
   #
   # Retrieve a file from the sound library
   #
-  get %r{/api/v1/sound-library/([^/]+)/(.+)} do |version_id, sound_name|
-    not_found if version_id.empty? || sound_name.empty?
+  get %r{/api/v1/sound-library/(.+)} do |sound_name|
+    not_found if sound_name.empty?
 
     begin
       result = Aws::S3::Bucket.
         new(SOUND_LIBRARY_BUCKET).
         object(sound_name).
-        get(version_id: version_id)
+        get
       content_type result.content_type
       cache_for 3600
       result.body
