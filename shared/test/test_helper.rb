@@ -15,7 +15,11 @@ require 'mocha/mini_test'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
-Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
+reporters = [Minitest::Reporters::SpecReporter.new]
+if ENV['CIRCLECI']
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/shared")
+end
+Minitest::Reporters.use! reporters
 WebMock.disable_net_connect!
 
 VCR.configure do |c|
