@@ -448,8 +448,8 @@ function handleExecutionError(err, lineNumber) {
   outputError(String(err), lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
-  // complete puzzle, which will prevent further execution
-  Applab.onPuzzleComplete();
+  // prevent further execution
+  Applab.clearEventHandlersKillTickLoop();
 }
 
 Applab.getCode = function () {
