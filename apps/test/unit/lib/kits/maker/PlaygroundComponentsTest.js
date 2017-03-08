@@ -430,6 +430,10 @@ describe('Circuit Playground Components', () => {
   });
 
   describe(`componentConstructors`, () => {
+    it('contains a five.Board constructor', () => {
+      expect(Object.values(componentConstructors)).to.contain(five.Board);
+    });
+
     it('contains a constructor for every created component', () => {
       const constructors = Object.values(componentConstructors);
       const components = createCircuitPlaygroundComponents(board);
