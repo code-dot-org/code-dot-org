@@ -378,15 +378,6 @@ class Pd::Workshop < ActiveRecord::Base
     [actual_hours, max_hours].compact.min
   end
 
-  # @return [RegionalPartner] partner associated with the workshop if
-  #         defined, or the partner for whom this workshop's organizer
-  #         is the dedicated contact.
-  def associated_regional_partner
-    return regional_partner if regional_partner
-
-    RegionalPartner.find_by_contact_id organizer.id
-  end
-
   # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.
   def account_required_for_attendance?
     ![Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
