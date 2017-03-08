@@ -60,6 +60,7 @@ const WorkshopForm = React.createClass({
       location_address: React.PropTypes.string.isRequired,
       capacity: React.PropTypes.number.isRequired,
       workshop_type: React.PropTypes.string.isRequired,
+      regional_partner_id: React.PropTypes.number,
       course: React.PropTypes.string.isRequired,
       subject: React.PropTypes.string,
       notes: React.PropTypes.string,
@@ -98,6 +99,7 @@ const WorkshopForm = React.createClass({
           'location_address',
           'capacity',
           'workshop_type',
+          'regional_partner_id',
           'course',
           'subject',
           'notes'
@@ -309,6 +311,37 @@ const WorkshopForm = React.createClass({
     }
   },
 
+  shouldRenderRegionalPartnerSelect() {
+    return window.dashboard.workshop.available_regional_partners.length;
+  },
+
+  renderRegionalPartnerSelect(validation) {
+    if (this.shouldRenderRegionalPartnerSelect()) {
+      const options = window.dashboard.workshop.available_regional_partners.map((partner) => {
+        return (<option key={partner.id} value={partner.id}>{partner.name}</option>);
+      });
+      // we always present an empty placeholder for an optional field
+      const placeHolder = <option />;
+      return (
+        <FormGroup validationState={validation.style.regional_partner_id}>
+          <ControlLabel>Regional Partner</ControlLabel>
+          <FormControl
+            componentClass="select"
+            value={this.state.regional_partner_id || ''}
+            name="regional_partner_id"
+            onChange={this.handleFieldChange}
+            style={this.props.readOnly && styles.readOnlyInput}
+            disabled={this.props.readOnly}
+          >
+            {placeHolder}
+            {options}
+          </FormControl>
+          <HelpBlock>{validation.help.regional_partner_id}</HelpBlock>
+        </FormGroup>
+      );
+    }
+  },
+
   getInputStyle() {
     return this.props.readOnly && styles.readOnlyInput;
   },
@@ -402,6 +435,7 @@ const WorkshopForm = React.createClass({
       location_address: this.state.location_address,
       capacity: this.state.capacity,
       workshop_type: this.state.workshop_type,
+      regional_partner_id: this.state.regional_partner_id,
       course: this.state.course,
       subject: this.state.subject,
       notes: this.state.notes,
@@ -609,10 +643,13 @@ const WorkshopForm = React.createClass({
             <Col sm={2}>
               {this.renderWorkshopTypeSelect(validation)}
             </Col>
-            <Col sm={3}>
+            <Col sm={2}>
+              {this.renderRegionalPartnerSelect(validation)}
+            </Col>
+            <Col sm={2}>
               {this.renderCourseSelect(validation)}
             </Col>
-            <Col sm={3}>
+            <Col sm={2}>
               {this.renderSubjectSelect(validation)}
             </Col>
           </Row>

@@ -84,6 +84,7 @@ const Workshop = React.createClass({
           'capacity',
           'enrolled_teacher_count',
           'workshop_type',
+          'regional_partner_id',
           'course',
           'subject',
           'notes',

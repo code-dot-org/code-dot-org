@@ -140,6 +140,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :location_address,
       :capacity,
       :workshop_type,
+      :regional_partner_id,
       :course,
       :subject,
       :notes,
