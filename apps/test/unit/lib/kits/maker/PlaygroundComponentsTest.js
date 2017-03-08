@@ -6,13 +6,6 @@ import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,
   destroyCircuitPlaygroundComponents,
-  initializeAccelerometer,
-  initializeButton,
-  initializeColorLeds,
-  initializeLightSensor,
-  initializeSoundSensor,
-  initializeThermometer,
-  initializeTouchPads,
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
@@ -358,89 +351,79 @@ describe('Circuit Playground Components', () => {
   });
 
   describe('destroyCircuitPlaygroundComponents()', () => {
-    it('calls stop on every color LED', () => {
-      const components = {
-        colorLeds: initializeColorLeds(board)
-      };
+    let components;
 
-      components.colorLeds.forEach(led => sinon.spy(led, 'stop'));
+    beforeEach(() => {
+      components = createCircuitPlaygroundComponents(board);
+    });
 
+    it('can be safely called on empty object', () => {
+      expect(() => {
+        destroyCircuitPlaygroundComponents({});
+      }).not.to.throw;
+    });
+
+    it('destroys everything that createCircuitPlaygroundComponents creates', () => {
+      expect(Object.keys(components)).to.have.length(18);
       destroyCircuitPlaygroundComponents(components);
+      expect(Object.keys(components)).to.have.length(0);
+    });
 
-      for (let i = 0; i < 10; i++) {
-        expect(components.colorLeds[i].stop).to.have.been.calledOnce;
-      }
+    it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
+      components.someOtherComponent = {};
+      expect(Object.keys(components)).to.have.length(19);
+      destroyCircuitPlaygroundComponents(components);
+      expect(Object.keys(components)).to.have.length(1);
+      expect(components).to.haveOwnProperty('someOtherComponent');
+    });
+
+    it('calls stop on every color LED', () => {
+      const spies = components.colorLeds.map(led => sinon.spy(led, 'stop'));
+      destroyCircuitPlaygroundComponents(components);
+      spies.forEach(spy => expect(spy).to.have.been.calledOnce);
     });
 
     it('calls stop on the red LED', () => {
-      const components = {
-        led: new five.Led({board, pin: 13})
-      };
-
-      sinon.spy(components.led, 'stop');
-
+      const spy = sinon.spy(components.led, 'stop');
       destroyCircuitPlaygroundComponents(components);
-
-      expect(components.led.stop).to.have.been.calledOnce;
+      expect(spy).to.have.been.calledOnce;
     });
 
     it('calls stop on the buzzer', () => {
-      const components = {
-        buzzer: {stop: sinon.spy()}
-      };
-
+      const spy = sinon.spy(components.buzzer, 'stop');
       destroyCircuitPlaygroundComponents(components);
-
-      expect(components.buzzer.stop).to.have.been.calledOnce;
+      expect(spy).to.have.been.calledOnce;
     });
 
     it('calls disable on the soundSensor', () => {
-      const components = {
-        soundSensor: initializeSoundSensor(board)
-      };
-
-      sinon.spy(components.soundSensor, 'disable');
-
+      const spy = sinon.spy(components.soundSensor, 'disable');
       destroyCircuitPlaygroundComponents(components);
-
-      expect(components.soundSensor.disable).to.have.been.calledOnce;
+      expect(spy).to.have.been.calledOnce;
     });
 
     it('calls disable on the lightSensor', () => {
-      const components = {
-        lightSensor: initializeLightSensor(board)
-      };
-
-      sinon.spy(components.lightSensor, 'disable');
-
+      const spy = sinon.spy(components.lightSensor, 'disable');
       destroyCircuitPlaygroundComponents(components);
-
-      expect(components.lightSensor.disable).to.have.been.calledOnce;
+      expect(spy).to.have.been.calledOnce;
     });
 
     it('calls stop on the accelerometer', () => {
       // Spy on the controller template, because stop() ends up readonly on
       // the returned component.
       const spy = sinon.spy(Playground.Accelerometer.stop, 'value');
+      const components = createCircuitPlaygroundComponents(board);
+      destroyCircuitPlaygroundComponents(components);
 
-      let err;
+      let assertionError;
       try {
-        const components = {
-          accelerometer: initializeAccelerometer(board)
-        };
-
-        destroyCircuitPlaygroundComponents(components);
-
         expect(spy).to.have.been.calledOnce;
       } catch (e) {
-        err = e;
+        assertionError = e;
       }
 
-      // Finally - make sure we restore the spied method and rethrow any
-      // exception (which could be a failed assertion)
       spy.restore();
-      if (err) {
-        throw err;
+      if (assertionError) {
+        throw assertionError;
       }
     });
   });
