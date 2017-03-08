@@ -7151,12 +7151,9 @@ en:
         I don't know.: I don't know.
         Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.: Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.
         Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
-        Question: Question
         The artist draws a shape with four equal sides tilted on its corner, making a diamond.: The artist draws a shape with four equal sides tilted on its corner, making a diamond.
         The artist will draw a single line.: The artist will draw a single line.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
-        right answer: right answer
-        wrong answer: wrong answer
       courseC_multi_maze_debugging8_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7734,11 +7731,7 @@ en:
         Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
         Laurel will not collect any treasure.: Laurel will not collect any treasure.
         Laurel will only be able to collect 2 pieces of treasure using this code.: Laurel will only be able to collect 2 pieces of treasure using this code.
-        Look closely at the code below.  How many pieces of treasure will Laurel collect after you click "Run"?: Look closely at the code below.  How many pieces of treasure will Laurel collect after you click "Run"?
         Look closely at the code below.  How many pieces of treasure will Laurel successfully collect after you click "Run"?: Look closely at the code below.  How many pieces of treasure will Laurel successfully collect after you click "Run"?
-        right answer: right answer
-        that was wrong because X: that was wrong because X
-        wrong answer: wrong answer
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
