@@ -213,7 +213,10 @@
     "display_name": "Challenge: Tug o' War",
     "expand_debugger": "false",
     "watchers_prepopulated": "[\"score\"]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
