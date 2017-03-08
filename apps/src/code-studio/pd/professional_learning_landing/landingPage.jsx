@@ -66,6 +66,7 @@ const LandingPage = React.createClass({
         {this.renderHeaderImage()}
         {this.shouldRenderCSFSection() && (
             <CsFundamentalsSection
+              completedCsf={this.props.coursesCompleted && this.props.coursesCompleted.includes('CS Fundamentals')}
               lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyCourse === 'CS Fundamentals' ? this.props.lastWorkshopSurveyUrl : null}
               printCsfCertificateUrl={this.props.printCsfCertificateUrl}
             />
