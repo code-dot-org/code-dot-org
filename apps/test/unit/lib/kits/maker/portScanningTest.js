@@ -7,21 +7,27 @@ import {
   OSX_DEFAULT_PORTS,
   OTHER_BAD_SERIALPORTS
 } from './sampleSerialPorts';
-import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPort
+import StubChromeSerialPort from './StubChromeSerialPort';
 import {
   findPortWithViableDevice,
-  getPreferredPort
+  getPreferredPort,
+  __RewireAPI__
 } from '@cdo/apps/lib/kits/maker/portScanning';
 
 describe("Maker Toolkit", function () {
   describe(`findPortWithViableDevice()`, () => {
+    beforeEach(() => {
+      __RewireAPI__.__Rewire__('ChromeSerialPort', StubChromeSerialPort);
+    });
+
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
-      ChromeSerialPort.stub.reset();
+      StubChromeSerialPort.stub.reset();
+      __RewireAPI__.__ResetDependency__('ChromeSerialPort');
     });
 
     it('resolves with a port if a viable device is found', () => {
-      ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
+      StubChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
       return findPortWithViableDevice()
           .then(port => {
             expect(port).to.equal('COM5');
@@ -29,7 +35,7 @@ describe("Maker Toolkit", function () {
     });
 
     it('rejects if no viable device is found', done => {
-      ChromeSerialPort.stub.setDeviceList(OTHER_BAD_SERIALPORTS);
+      StubChromeSerialPort.stub.setDeviceList(OTHER_BAD_SERIALPORTS);
       findPortWithViableDevice()
           .then(port => {
             done(new Error('Expected promise to reject, but it resolved to ' + port));
