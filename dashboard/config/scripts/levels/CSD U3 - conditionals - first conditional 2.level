@@ -95,10 +95,10 @@
     "show_debug_watch": "true",
     "palette_category_at_start": "sprites",
     "encrypted_examples": "otHtmdSvKzk2KdHkRXuP7DwmSrgKHjTVy6htuKX4oq3s3npbJAXd9nwMuMGE\ntdEi\n",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
