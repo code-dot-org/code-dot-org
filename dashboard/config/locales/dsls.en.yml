@@ -7107,6 +7107,51 @@ en:
         The bird will get to the pig.: The bird will get to the pig.
         The bird will not reach the pig.: The bird will not reach the pig.
         The program needs one more block to get to the pig.: The program needs one more block to get to the pig.
+      courseB_multi_artist_loops8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.: Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.
+        Run through the code below in your mind.  What will happen when you click "Run"?: Run through the code below in your mind.  What will happen when you click "Run"?
+        The artist draws lines back and forth, then jumps down, creating a ladder.: The artist draws lines back and forth, then jumps down, creating a ladder.
+        The artist will draw a ladder with 6 steps.: The artist will draw a ladder with 6 steps.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a square with 4 sides.: The artist will draw a square with 4 sides.
+      courseB_multi_collector_loops3_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `repeat` loop only instructs Laurel to move forward and collect treasure three times.: Incorrect. The `repeat` loop only instructs Laurel to move forward and collect treasure three times.
+        Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.
+        Laurel will move forward and collect all of the treasure.: Laurel will move forward and collect all of the treasure.
+        Laurel will move forward and collect treasure three times in a row.: Laurel will move forward and collect treasure three times in a row.
+        Laurel won't move at all.: Laurel won't move at all.
+        Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
+        The program uses a `repeat` loop to get Laurel to move forward three times.: The program uses a `repeat` loop to get Laurel to move forward three times.
+      courseB_multi_maze_seq10_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The bird runs into the TNT with his first move.: Incorrect. The bird runs into the TNT with his first move.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird not move at all.: The bird not move at all.
+        The bird runs into the TNT with his first move.: The bird runs into the TNT with his first move.
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will run into the TNT right away.: The bird will run into the TNT right away.
+      courseB_multi_maze_seq1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The program has all of the blocks needed to get to the pig.: Incorrect. The program has all of the blocks needed to get to the pig.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will not reach the pig.: The bird will not reach the pig.
+        The program has all of the blocks needed to get to the pig.: The program has all of the blocks needed to get to the pig.
+      courseC_multi_maze_programming8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
+        The bird run into the TNT.: The bird run into the TNT.
+        The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
+        The bird will make it to the pig.: The bird will make it to the pig.
+        This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?

@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import sinon from 'sinon';
 import {expect} from '../../../../util/configuredChai';
 import {
   CIRCUIT_PLAYGROUND_PORTS,
@@ -8,9 +7,41 @@ import {
   OSX_DEFAULT_PORTS,
   OTHER_BAD_SERIALPORTS
 } from './sampleSerialPorts';
-import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
+import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPort
+import {
+  findPortWithViableDevice,
+  getPreferredPort
+} from '@cdo/apps/lib/kits/maker/portScanning';
 
-describe("BoardController", function () {
+describe("Maker Toolkit", function () {
+  describe(`findPortWithViableDevice()`, () => {
+    // Testing against StubChromeSerialPort.js
+    afterEach(() => {
+      ChromeSerialPort.stub.reset();
+    });
+
+    it('resolves with a port if a viable device is found', () => {
+      ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
+      return findPortWithViableDevice()
+          .then(port => {
+            expect(port).to.equal('COM5');
+          });
+    });
+
+    it('rejects if no viable device is found', done => {
+      ChromeSerialPort.stub.setDeviceList(OTHER_BAD_SERIALPORTS);
+      findPortWithViableDevice()
+          .then(port => {
+            done(new Error('Expected promise to reject, but it resolved to ' + port));
+          })
+          .catch(err => {
+            expect(err.message).to.equal('Did not find a usable device on a serial port.');
+            done();
+          })
+          .catch(done);
+    });
+  });
+
   describe(`getPreferredPort(portList)`, () => {
     it('picks out an Adafruit Circuit Playground if there are multiple ports', () => {
       CIRCUIT_PLAYGROUND_PORTS.forEach(circuitPlaygroundPort => {
@@ -22,7 +53,7 @@ describe("BoardController", function () {
           ...OSX_DEFAULT_PORTS,
           ...OTHER_BAD_SERIALPORTS
         ]);
-        expect(BoardController.getPreferredPort(ports)).to.equal(circuitPlaygroundPort);
+        expect(getPreferredPort(ports)).to.equal(circuitPlaygroundPort);
       });
     });
 
@@ -34,7 +65,7 @@ describe("BoardController", function () {
           ...OSX_DEFAULT_PORTS,
           ...OTHER_BAD_SERIALPORTS
         ]);
-        expect(BoardController.getPreferredPort(ports)).to.equal(floraPort);
+        expect(getPreferredPort(ports)).to.equal(floraPort);
       });
     });
 
@@ -45,7 +76,7 @@ describe("BoardController", function () {
           ...OSX_DEFAULT_PORTS,
           ...OTHER_BAD_SERIALPORTS
         ]);
-        expect(BoardController.getPreferredPort(ports)).to.equal(redboardPort);
+        expect(getPreferredPort(ports)).to.equal(redboardPort);
       });
     });
 
@@ -54,27 +85,7 @@ describe("BoardController", function () {
         ...OSX_DEFAULT_PORTS,
         ...OTHER_BAD_SERIALPORTS
       ];
-      expect(BoardController.getPreferredPort(ports)).to.be.undefined;
-    });
-  });
-
-  describe('event aliases', function () {
-    let boardController, fakeEventEmitter, callback;
-
-    beforeEach(function () {
-      boardController = new BoardController();
-      fakeEventEmitter = { on: sinon.spy() };
-      callback = () => {};
-    });
-
-    it(`aliases 'tap:single' event to 'singleTap'`, function () {
-      boardController.onBoardEvent(fakeEventEmitter, 'singleTap', callback);
-      expect(fakeEventEmitter.on).to.have.been.calledWith('tap:single', callback);
-    });
-
-    it(`aliases 'tap:double' event to 'doubleTap'`, function () {
-      boardController.onBoardEvent(fakeEventEmitter, 'doubleTap', callback);
-      expect(fakeEventEmitter.on).to.have.been.calledWith('tap:double', callback);
+      expect(getPreferredPort(ports)).to.be.undefined;
     });
   });
 });
