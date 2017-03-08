@@ -11,10 +11,18 @@ def dtt_yes?
 end
 
 # Updates the DTT portion of topic of Slack#developers to indicate robo-DTT.
-def update_dtt_topic
+def update_developers_topic_robo_dtt
   current_topic = Slack.get_topic('developers')
   raise unless current_topic.include? 'DTT: yes'
   new_topic = current_topic.gsub('DTT: yes', 'DTT: no (robo-DTT in progress)')
+  Slack.update_topic(new_topic)
+end
+
+# Updates the DTT portion of topic of Slack#developers to indicate DTT yes.
+def update_developers_topic_robo_failed
+  current_topic = Slack.get_topic('developers')
+  raise unless current_topic.include? 'DTT: no (robo-DTT in progress)'
+  new_topic = current_topic.gsub('DTT: no (robo-DTT in progress)', 'DTT: robo-DTT failed')
   Slack.update_topic(new_topic)
 end
 
@@ -22,11 +30,11 @@ def main
   unless dtt_yes?
     ChatClient.message(
       'infra-test',
-      "auto-DTT skipped (\#developers topic is #{current_topic}).",
+      "robo-DTT skipped (\#developers topic is #{current_topic}).",
       color: 'yellow'
     )
   end
-  update_dtt_topic
+  update_developers_topic_robo_dtt
 
   pr_number = GitHub.create_pull_request(
     base: 'test',
@@ -39,6 +47,7 @@ def main
       'GitHub.create_pull request failed.',
       color: 'red'
     )
+    update_developers_topic_robo_failed
     return
   end
 
@@ -52,14 +61,22 @@ def main
       "GitHub.merge_pull_request(#{pr_number}) failed.",
       color: 'red'
     )
+    update_developers_topic_robo_failed
     return
   end
 
   ChatClient.mesage(
     'infra-test',
-    "auto-DTT (PR\##{pr_number})",
+    "robo-DTT (PR\##{pr_number})",
     color: 'green'
   )
+rescue Exception => e
+  ChatClient.message(
+    'infra-test',
+    "EXCEPTION: #{e.message}",
+    color: 'red'
+  )
+  update_developers_topic_robo_failed
 end
 
 main if only_one_running?(__FILE__)
