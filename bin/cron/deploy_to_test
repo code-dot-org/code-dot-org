@@ -29,9 +29,9 @@ def main
   update_dtt_topic
 
   pr_number = GitHub.create_pull_request(
-    title: 'DTT (Staging > Test) [robo-dtt]',
+    base: 'test',
     head: 'staging',
-    base: 'test'
+    title: 'DTT (Staging > Test) [robo-dtt]'
   )
   if pr_number.nil?
     ChatClient.message(
