@@ -10,7 +10,6 @@
 #  code         :string(255)
 #  script_id    :integer
 #  grade        :string(255)
-#  admin_code   :string(255)
 #  login_type   :string(255)      default("email"), not null
 #  deleted_at   :datetime
 #  stage_extras :boolean          default(FALSE), not null

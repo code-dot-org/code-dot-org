@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306221907) do
+ActiveRecord::Schema.define(version: 20170307160737) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -682,7 +682,6 @@ ActiveRecord::Schema.define(version: 20170306221907) do
     t.string   "code"
     t.integer  "script_id"
     t.string   "grade"
-    t.string   "admin_code"
     t.string   "login_type",   default: "email", null: false
     t.datetime "deleted_at"
     t.boolean  "stage_extras", default: false,   null: false
