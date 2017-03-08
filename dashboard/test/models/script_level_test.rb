@@ -277,7 +277,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student = create :student
     I18n.locale = 'non-default-locale'
     assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
-    I18n.locale = I18n.default_locale
   end
 
   test 'next_level_or_redirect_path_for_user does skip over hidden levels from unplugged level' do
