@@ -6,6 +6,7 @@ import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,
   destroyCircuitPlaygroundComponents,
+  componentConstructors,
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
@@ -425,6 +426,37 @@ describe('Circuit Playground Components', () => {
       if (assertionError) {
         throw assertionError;
       }
+    });
+  });
+
+  describe(`componentConstructors`, () => {
+    it('contains a constructor for every created component', () => {
+      const constructors = Object.values(componentConstructors);
+      const components = createCircuitPlaygroundComponents(board);
+
+      function isPlainObject(obj) {
+        // Check whether the constructor is native object
+        return obj.constructor === ({}).constructor;
+      }
+
+      // Recursively walk component map to check all components
+      function hasNeededConstructors(x) {
+        if (Array.isArray(x)) {
+          x.forEach(hasNeededConstructors);
+        } else if (isPlainObject(x)) {
+          Object.values(x).forEach(hasNeededConstructors);
+        } else {
+          expect(constructors).to.contain(x.constructor);
+        }
+      }
+
+      hasNeededConstructors(components);
+    });
+
+    it('uses the constructor name', () => {
+      Object.keys(componentConstructors).forEach(key => {
+        expect(key).to.equal(componentConstructors[key].name);
+      });
     });
   });
 });
