@@ -17,7 +17,8 @@
 #state-dropdown {
   width: 70%;
   height: 34px;
-  background-color: rgb(226,228,227); color: rgb(89,89,89);
+  background-color: #e2e4e3;
+  color: #595959;
   margin-bottom: 10px;
 }
 
