@@ -73,12 +73,14 @@
 
 -# '#school-name' is outside of '#school' so that we can still show it when the school dropdown is hidden.
 .itemblock{style: "display: none;"}
-  .labelblock= t('school_info.school_name')
+  #school-name-title.labelblock= t('school_info.school_name')
+  #school-organization-name-title.labelblock{style: "display: none"}= t('school_info.school_organization_name')
   %div.controls
     %input#school-name.form-control.fieldblock{name: "#{form_name}[school_name]", type: "text", required: false, style: "width: calc(100% - 15px);"}
 
 #school-zip.itemblock{style: "display: none;"}
-  .labelblock= t('school_info.school_zip')
+  #school-zip-title.labelblock= t('school_info.school_zip')
+  #school-organization-zip-title.labelblock{style: "display: none"}= t('school_info.school_organization_zip')
   %input#school-zipcode.form-control.fieldblock{name: "#{form_name}[school_zip]", type: "text", required: false, style: "width: calc(100% - 15px);"}
   .error_in_field{style: "padding: 0px; text-align: center;"}
 
