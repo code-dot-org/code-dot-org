@@ -8,8 +8,8 @@
 - video_actions.each_with_index do |entry, index|
   - video_code = entry[:param2_s]
   - download_path = entry[:param3_s]
-  - facebook = {:u=>"http://#{request.site}/"}
-  - twitter = {:related=>'codeorg', :text=>'Anybody can learn computer science, starting with an #HourOfCode. https://hourofcode.com'}
+  - facebook = {:u=>entry[:param4_s]}
+  - twitter = {:related=>'codeorg', :text=>entry[:param5_s]}
 
   #videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
     = view :display_video_lightbox, id: "mainvideo", video_code: video_code, download_filename: download_filename, download_path: download_path, facebook:facebook, twitter:twitter
