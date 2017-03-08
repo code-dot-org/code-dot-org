@@ -55,6 +55,9 @@ class ContactRollups
       {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
     ].freeze
 
+  ROLE_TEACHER = "Teacher".freeze
+  ROLE_FORM_SUBMITTER = "Form Submitter".freeze
+
   def self.build_contact_rollups
     start = Time.now
 
@@ -84,7 +87,7 @@ class ContactRollups
 
     # parse all forms that collect user-reported address/location data
     FORM_KINDS.each do |kind|
-      update_geo_data_from_forms(kind)
+      update_data_from_forms(kind)
     end
 
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
@@ -204,7 +207,7 @@ class ContactRollups
     PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
     -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
-    SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), 'Teacher'),
+    SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
     user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users AS users
     LEFT OUTER JOIN pegasus_development.contact_rollups_daily AS src ON src.email = users.email
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
@@ -240,7 +243,7 @@ class ContactRollups
     log "Inserting contacts and IP geo data from pegasus.forms"
     PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, city, state, postal_code, country)
-    SELECT email, name, 'Form Submitter', kind, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
+    SELECT email, name, '#{ROLE_FORM_SUBMITTER}', kind, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
     LEFT OUTER JOIN #{PEGASUS_DB_NAME}.form_geos on form_geos.form_id = forms.id
     ON DUPLICATE KEY UPDATE
     -- Update forms_submitted with the list of all forms submitted by this email address
@@ -373,9 +376,9 @@ class ContactRollups
     Sequel.connect(CDO.pegasus_reporting_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
   end
 
-  def self.update_geo_data_from_forms(form_kind)
+  def self.update_data_from_forms(form_kind)
     start = Time.now
-    log "Updating geo data for form kind #{form_kind}"
+    log "Updating data for form kind #{form_kind}"
 
     record_count = 0
     num_updated = 0
@@ -430,7 +433,7 @@ class ContactRollups
       # add to batch to update
       update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";" unless update_data.empty?
 
-      if role.presence
+      if role.present?
         # If role (role_s field) was a field on this form, append it to a comma-separate list of roles
         # that have been submitted on forms for this email
         update_batch += "
