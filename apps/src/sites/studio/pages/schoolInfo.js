@@ -283,6 +283,17 @@ window.SchoolInfoManager = function (existingOptions) {
         show('#school-address');
       }
     }
+    if (isAfterSchool()) {
+      $("#school-name-title").hide();
+      $("#school-organization-name-title").show();
+      $("#school-zip-title").hide();
+      $("#school-organization-zip-title").show();
+    } else {
+      $("#school-name-title").show();
+      $("#school-organization-name-title").hide();
+      $("#school-zip-title").show();
+      $("#school-organization-zip-title").hide();
+    }
   });
 
   $('#school-state').change(function () {
