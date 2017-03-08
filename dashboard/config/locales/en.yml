@@ -152,6 +152,8 @@ en:
     school_name: 'School Name'
     school_zip: "School Zip Code"
     school_address: 'School Address'
+    school_organization_name: 'School/Organization Name (optional)'
+    school_organization_zip: 'School/Organization Zip Code (optional)'
   signin_form:
     title: 'Have an account already? Sign in'
     login: 'Email'
