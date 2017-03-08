@@ -183,7 +183,7 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:section).find_by(sections: {code: section_code})
   end
 
-  def self.in_state(state)
+  def self.in_state(state, error_on_bad_state: true)
     case state
       when STATE_NOT_STARTED
         where(started_at: nil)
@@ -192,7 +192,8 @@ class Pd::Workshop < ActiveRecord::Base
       when STATE_ENDED
         where.not(started_at: nil).where.not(ended_at: nil)
       else
-        raise "Unrecognized state: #{state}"
+        raise "Unrecognized state: #{state}" if error_on_bad_state
+        none
     end
   end
 
@@ -204,6 +205,12 @@ class Pd::Workshop < ActiveRecord::Base
   # Filters by scheduled start date (date of first session)
   def self.start_on_or_after(date)
     joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
+  end
+
+  # Orders by the scheduled start date (date of the first session),
+  # @param :desc [Boolean] optional - when true, sort descending
+  def self.order_by_start(desc: false)
+    joins(:sessions).group(:pd_workshop_id).order('DATE(MIN(start))' + (desc ? ' DESC' : ''))
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.

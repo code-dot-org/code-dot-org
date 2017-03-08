@@ -49,4 +49,54 @@ module Pd::WorkshopFilters
 
     workshops
   end
+
+  # Apply filters to a set of workshops based on query params. All filters are optional:
+  # - state
+  # - start (first session on or after)
+  # - end (first session on or before)
+  # - course
+  # - organizer (id)
+  # - date_order ('asc' or 'desc', otherwise default to 'asc')
+  # Most fields, if incorrect will simply yield an empty result set
+  # However date fields are verified and an ArgumentError will be raised if they're invalid.
+  # @param workshops [Pd::Workshop::ActiveRecord_Relation] workshop query to filter
+  # raises [ArgumentError] when date params are invalid
+  # returns [Pd::Workshop::ActiveRecord_Relation] filtered workshop query.
+  # Note the filters won't actually be run in SQL until the results are examined.
+  def filter_workshops(workshops)
+    filter_params.tap do |params|
+      workshops = workshops.in_state(params[:state], error_on_bad_state: false) if params[:state]
+      workshops = workshops.start_on_or_after(ensure_date(params[:start])) if params[:start]
+      workshops = workshops.start_on_or_before(ensure_date(params[:end])) if params[:end]
+      workshops = workshops.where(course: params[:course]) if params[:course]
+      workshops = workshops.where(organizer: params[:organizer]) if params[:organizer]
+      workshops = workshops.order_by_start(desc: params[:date_order].downcase == 'desc') if params[:date_order]
+    end
+
+    workshops
+  end
+
+  # Permitted params used in #filter_workshops
+  def filter_params
+    params.permit(
+      :state,
+      :start,
+      :end,
+      :course,
+      :organizer,
+      :date_order
+    )
+  end
+
+  private
+
+  # Verifies a date string is valid
+  # param @date_str [String] the string to verify
+  # raises [ArgumentError] if the date string is invalid
+  # returns [String] the original value
+  def ensure_date(date_str)
+    # will raise ArgumentError if it's not a valid date string
+    DateTime.parse(date_str)
+    date_str
+  end
 end

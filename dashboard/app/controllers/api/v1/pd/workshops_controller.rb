@@ -1,4 +1,5 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
+  include Pd::WorkshopFilters
   load_and_authorize_resource class: 'Pd::Workshop', except: [:k5_public_map_index, :workshops_user_enrolled_in]
 
   # GET /api/v1/pd/workshops
@@ -24,6 +25,20 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     end
 
     render json: workshops
+  end
+
+  # GET /api/v1/pd/workshops/filter
+  def filter
+    limit = params[:limit].try(:to_i)
+    workshops = filter_workshops(@workshops)
+    limited_workshops = workshops.limit(limit)
+
+    render json: {
+      limit: limit,
+      total_count: workshops.length,
+      filters: filter_params,
+      workshops: limited_workshops.map{|w| Api::V1::Pd::WorkshopSerializer.new(w).attributes}
+    }
   end
 
   # Upcoming (not started) public CSF workshops.

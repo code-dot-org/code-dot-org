@@ -8,11 +8,11 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   setup do
-    @params = {}
+    @params = ActionController::Parameters.new
     FakeController.any_instance.stubs(params: @params)
 
     @user = mock
-    @user.expects(admin?: true)
+    @user.stubs(admin?: true)
     FakeController.any_instance.stubs(current_user: @user)
 
     @workshop_query = mock
@@ -21,12 +21,12 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller = FakeController.new
   end
 
-  test 'defaults' do
+  test 'load_filtered_ended_workshops defaults' do
     set_default_date_expectations
     @controller.load_filtered_ended_workshops
   end
 
-  test 'organizer view' do
+  test 'load_filtered_ended_workshops organizer view' do
     set_default_date_expectations
     @user.unstub :admin?
     @user.expects admin?: false
@@ -34,7 +34,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.load_filtered_ended_workshops
   end
 
-  test 'query by start' do
+  test 'load_filtered_ended_workshops query by start' do
     start_date = mock
     end_date = mock
     expects(:start_on_or_after).with(start_date)
@@ -43,7 +43,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.load_filtered_ended_workshops
   end
 
-  test 'query by end' do
+  test 'load_filtered_ended_workshops query by end' do
     start_date = mock
     end_date = mock
 
@@ -54,7 +54,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.load_filtered_ended_workshops
   end
 
-  test 'include course' do
+  test 'load_filtered_ended_workshops include course' do
     set_default_date_expectations
     expects(:where).with(course: Pd::Workshop::COURSE_CSF)
 
@@ -62,13 +62,101 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.load_filtered_ended_workshops
   end
 
-  test 'exclude course' do
+  test 'load_filtered_ended_workshops exclude course' do
     set_default_date_expectations
     expects :where
     expects(:not).with(course: Pd::Workshop::COURSE_CSF)
 
     params course: '-csf'
     @controller.load_filtered_ended_workshops
+  end
+
+  test 'filter_workshops default' do
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with state' do
+    expects(:in_state).with('Not Started', error_on_bad_state: false)
+    params state: 'Not Started'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with start and end' do
+    start_date = Date.today.to_s
+    end_date = (Date.today + 1.day).to_s
+    expects(:start_on_or_after).with(start_date)
+    expects(:start_on_or_before).with(end_date)
+
+    params start: start_date, end: end_date
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with invalid start date raises error' do
+    params start: 'invalid'
+    assert_raises ArgumentError do
+      @controller.filter_workshops @workshop_query
+    end
+  end
+
+  test 'filter_workshops with invalid end date raises error' do
+    params end: 'invalid'
+    assert_raises ArgumentError do
+      @controller.filter_workshops @workshop_query
+    end
+  end
+
+  test 'filter_workshops with course' do
+    expects(:where).with(course: Pd::Workshop::COURSE_CSF)
+    params course: Pd::Workshop::COURSE_CSF
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with organizer id' do
+    expects(:where).with(organizer: 123)
+    params organizer: 123
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with date order asc' do
+    expects(:order_by_start).with(desc: false)
+    params date_order: 'asc'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with date order desc' do
+    expects(:order_by_start).with(desc: true)
+    params date_order: 'desc'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with unexpected date order defaults to asc' do
+    expects(:order_by_start).with(desc: false)
+    params date_order: 'garbage'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_params contains only supplied params' do
+    params state: Pd::Workshop::STATE_IN_PROGRESS, course: Pd::Workshop::COURSE_CSF
+    assert_equal %w[state course], @controller.filter_params.keys
+  end
+
+  test 'filter_params does not contain unexpected params' do
+    params unexpected: 'irrelevant'
+    assert_empty @controller.filter_params.keys
+  end
+
+  test 'filter_params accepts all filters' do
+    expected_keys = [
+      :state,
+      :start,
+      :end,
+      :course,
+      :organizer,
+      :date_order
+    ]
+
+    params expected_keys.map{|k| [k, 'some value']}.to_h
+    assert_equal expected_keys.map(&:to_s), @controller.filter_params.keys
   end
 
   private
