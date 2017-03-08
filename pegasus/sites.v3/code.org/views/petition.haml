@@ -43,12 +43,6 @@
         .col-18.i-agree-button
           %button#gobutton.button_enabled{:style=>"min-width:100px; margin-bottom:10px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t :i_agree
 
-  #thanks{:style=>"display:none"}
-    %br
-    %span.col-80{:style=>"font-size: 18px"}=I18n.t :petition_thankyou
-    %br
-    %br
-
 
 :javascript
 
@@ -78,18 +72,7 @@
 
   Petition.prototype.processResponse = function(data)
   {
-    var display = $("#mobile-header").css("display");
-    var mobileDisplay = display !== undefined && display != "none";
-
-    if (mobileDisplay)
-    {
-      var form = $("#form");
-      var thanks = $("#thanks");
-
-      form.hide();
-      thanks.show();
-    }
-    else if (data.state_code_s && data.state_code_s != "")
+    if (data.state_code_s && data.state_code_s != "")
     {
       window.location.href = "/promote/" + data.state_code_s;
     }

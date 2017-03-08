@@ -69,6 +69,11 @@
     position: absolute;
     min-height: 250px;
   }
+
+  #regional-partner-playbook * {
+      margin-right: 1.33%;
+  }
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px)
@@ -92,6 +97,6 @@
 
   .educate-box {
     position: absolute;
-    min-height: 210px;
+    min-height: 220px;
   }
 }
