@@ -39,6 +39,26 @@ module GitHub
     response['merged']
   end
 
+  # Creates and merges a pull request.
+  # @param base [String] The base branch of the requested pull request.
+  # @param head [String] The head branch of the requested pull request.
+  # @param title [String] The title of the requested pull request.
+  # @return [nil | Integer] The PR number of the newly created DTT if successful
+  #   or nil if unsuccessful.
+  def self.create_and_merge_pull_request(base:, head:, title:)
+    pr_number = create_pull_request(base: base, head: head, title: title)
+    success = merge_pull_request(pr_number)
+    success ? pr_number : nil
+  end
+
+  # Builds the HTML URL from a pull request number. Does not validate the pull
+  # request number.
+  # @param pr_number [Integer] The pull request number.
+  # @return [String] The HTML URL for the pull request.
+  def self.get_html_url(pr_number)
+    "https://github.com/#{REPO}/pull/#{pr_number}"
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_merged
   # @param pr_number [Integer] The number of the pull request to check.
   # @return [Boolean] Whether the pull request has been merged.
