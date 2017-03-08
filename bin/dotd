@@ -3,11 +3,12 @@
 require 'cgi'
 require 'logger'
 require 'tmpdir'
-require_relative '../lib/cdo/cdo_cli'
+require 'cdo/cdo_cli'
+require 'cdo/github'
 include CdoCli
 
-LOG_FILE = "#{Dir.tmpdir}/dotd.log"
-LOGGER = Logger.new(LOG_FILE, 'daily')
+LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
+LOGGER = Logger.new(LOG_FILE, 'daily').freeze
 
 LOGGER.formatter = proc do |_serverity, time, _progname, msg|
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
@@ -129,7 +130,9 @@ EOS
 user_name = ask_for_name
 
 should_i "morning DTT" do
-  open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
+  GitHub.create_pull_request(
+    base: 'test', head: 'staging', title: 'DTT (Staging > Test)'
+  )
   wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
 end
 
@@ -168,7 +171,9 @@ should_i "DTP" do
     puts <<-EOS.unindent
       Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
     EOS
-    open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
+    GitHub.create_pull_request(
+      base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
+    )
   end
 
   wait_for "DTP to finish"
