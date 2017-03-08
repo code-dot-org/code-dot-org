@@ -10,7 +10,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     courses_completed = ended_workshops.pluck(:course).uniq
 
     enrollments = Pd::Enrollment.where(email: current_user.email)
-    surveys_pending_enrollment = Pd::Enrollment.filter_for_survey_completion(enrollments, false)
+    surveys_pending_enrollment = Pd::Enrollment.filter_for_survey_completion(enrollments.where.not(survey_sent_at: nil), false)
     last_pending_enrollment = surveys_pending_enrollment.any? && surveys_pending_enrollment.last
 
     summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize)
