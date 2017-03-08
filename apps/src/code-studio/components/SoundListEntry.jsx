@@ -69,8 +69,9 @@ const SoundListEntry = React.createClass({
     } else {
       this.setState({isPlaying: true});
       this.props.soundsRegistry.playURL(
-        this.props.soundMetadata.sourceUrl,
-        { onEnded: () => this.setState({isPlaying: false}) }
+        this.props.soundMetadata.sourceUrl, {
+          onEnded: () => this.setState({isPlaying: false})
+        }
       );
     }
   },
@@ -107,8 +108,8 @@ module.exports = Radium(SoundListEntry);
 // Convert a number, numSeconds, into a string formatted as MM:SS or "Less than 1 second"
 // if the time is 0 seconds
 const getTimeString = function (numSeconds) {
-  let sec_num = parseInt(numSeconds, 10);
-  let hours   = Math.floor(sec_num / 3600);
+  const sec_num = parseInt(numSeconds, 10);
+  const hours   = Math.floor(sec_num / 3600);
   let minutes = Math.floor((sec_num - (hours * 3600)) / 60);
   let seconds = sec_num - (hours * 3600) - (minutes * 60);
 
@@ -116,7 +117,11 @@ const getTimeString = function (numSeconds) {
     return 'Less than 1 second';
   }
 
-  if (minutes < 10) {minutes = "0"+minutes;}
-  if (seconds < 10) {seconds = "0"+seconds;}
+  if (minutes < 10) {
+    minutes = "0"+minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0"+seconds;
+  }
   return minutes+':'+seconds;
 };

@@ -22,7 +22,7 @@ const styles = {
   },
   input: {
     width: 300,
-    border: '1px solid #999',
+    border: '1px solid ' + color.light_gray,
     borderRadius: 4,
     padding: '3px 7px'
   },
@@ -31,7 +31,7 @@ const styles = {
     right: 5,
     top: 5,
     fontSize: 16,
-    color: '#999'
+    color: color.light_gray
   },
   button: {
     float: 'right',
@@ -123,7 +123,7 @@ const SoundLibrary = React.createClass({
             All categories
           </span>
           {this.state.category !== '' &&
-            <span style={styles.categoryText}>{'>> ' + SOUND_CATEGORIES[this.state.category]}</span>
+            <span style={styles.categoryText}>{'> ' + SOUND_CATEGORIES[this.state.category]}</span>
           }
         </div>
         <div style={styles.searchArea}>
