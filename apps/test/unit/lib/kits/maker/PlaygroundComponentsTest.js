@@ -16,10 +16,15 @@ import {TOUCH_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 process.hrtime = require('browser-process-hrtime');
 
 describe('Circuit Playground Components', () => {
-  let board;
+  let board, clock;
 
   beforeEach(() => {
+    clock = sinon.useFakeTimers();
     board = newBoard();
+  });
+
+  afterEach(() => {
+    clock.restore();
   });
 
   describe(`createCircuitPlaygroundComponents()`, () => {
@@ -378,108 +383,82 @@ describe('Circuit Playground Components', () => {
       expect(components).to.haveOwnProperty('someOtherComponent');
     });
 
-    describe('cleans up colorLeds', () => {
-      let clock;
-
-      beforeEach(() => {
-        clock = sinon.useFakeTimers();
-      });
-
-      afterEach(() => {
-        clock.restore();
-      });
-
-      it('calls stop on every color LED', () => {
-        const spies = components.colorLeds.map(led => sinon.spy(led, 'stop'));
-        destroyCircuitPlaygroundComponents(components);
-        spies.forEach(spy => expect(spy).to.have.been.calledOnce);
-      });
-
-      it('stops Led.RGB.blink()', () => {
-        // Spy on 'toggle' which blink calls internally.
-        const spy = sinon.spy(components.colorLeds[0], 'toggle');
-
-        // Set up a blink behavior
-        components.colorLeds[0].blink(50);
-        expect(spy).not.to.have.been.called;
-
-        // Make sure the blink has started
-        clock.tick(50);
-        expect(spy).to.have.been.calledOnce;
-        clock.tick(50);
-        expect(spy).to.have.been.calledTwice;
-
-        // Now destroy the component
-        destroyCircuitPlaygroundComponents(components);
-
-        // Blink should no longer be calling toggle().
-        clock.tick(50);
-        expect(spy).to.have.been.calledTwice;
-        clock.tick(50);
-        expect(spy).to.have.been.calledTwice;
-      });
+    it('calls stop on every color LED', () => {
+      const spies = components.colorLeds.map(led => sinon.spy(led, 'stop'));
+      destroyCircuitPlaygroundComponents(components);
+      spies.forEach(spy => expect(spy).to.have.been.calledOnce);
     });
 
-    describe('cleans up led', () => {
-      let clock;
+    it('stops Led.RGB.blink()', () => {
+      // Spy on 'toggle' which blink calls internally.
+      const spy = sinon.spy(components.colorLeds[0], 'toggle');
 
-      beforeEach(() => {
-        clock = sinon.useFakeTimers();
-      });
+      // Set up a blink behavior
+      components.colorLeds[0].blink(50);
+      expect(spy).not.to.have.been.called;
 
-      afterEach(() => {
-        clock.restore();
-      });
+      // Make sure the blink has started
+      clock.tick(50);
+      expect(spy).to.have.been.calledOnce;
+      clock.tick(50);
+      expect(spy).to.have.been.calledTwice;
 
-      it('calls stop on the red LED', () => {
-        const spy = sinon.spy(components.led, 'stop');
-        destroyCircuitPlaygroundComponents(components);
-        expect(spy).to.have.been.calledOnce;
-      });
+      // Now destroy the component
+      destroyCircuitPlaygroundComponents(components);
 
-      it('stops Led.blink()', () => {
-        // Spy on 'toggle' which blink calls internally.
-        const spy = sinon.spy(components.led, 'toggle');
-
-        // Set up a blink behavior
-        components.led.blink(50);
-        expect(spy).not.to.have.been.called;
-
-        // Make sure the blink has started
-        clock.tick(50);
-        expect(spy).to.have.been.calledOnce;
-        clock.tick(50);
-        expect(spy).to.have.been.calledTwice;
-
-        // Now destroy the component
-        destroyCircuitPlaygroundComponents(components);
-
-        // Blink should no longer be calling toggle().
-        clock.tick(50);
-        expect(spy).to.have.been.calledTwice;
-        clock.tick(50);
-        expect(spy).to.have.been.calledTwice;
-      });
+      // Blink should no longer be calling toggle().
+      clock.tick(50);
+      expect(spy).to.have.been.calledTwice;
+      clock.tick(50);
+      expect(spy).to.have.been.calledTwice;
     });
 
-    describe('cleans up buzzer', () => {
-      let clock, frequencySpy;
+    it('calls stop on the red LED', () => {
+      const spy = sinon.spy(components.led, 'stop');
+      destroyCircuitPlaygroundComponents(components);
+      expect(spy).to.have.been.calledOnce;
+    });
+
+    it('stops Led.blink()', () => {
+      // Spy on 'toggle' which blink calls internally.
+      const spy = sinon.spy(components.led, 'toggle');
+
+      // Set up a blink behavior
+      components.led.blink(50);
+      expect(spy).not.to.have.been.called;
+
+      // Make sure the blink has started
+      clock.tick(50);
+      expect(spy).to.have.been.calledOnce;
+      clock.tick(50);
+      expect(spy).to.have.been.calledTwice;
+
+      // Now destroy the component
+      destroyCircuitPlaygroundComponents(components);
+
+      // Blink should no longer be calling toggle().
+      clock.tick(50);
+      expect(spy).to.have.been.calledTwice;
+      clock.tick(50);
+      expect(spy).to.have.been.calledTwice;
+    });
+
+    it('calls stop on the buzzer', () => {
+      const spy = sinon.spy(components.buzzer, 'stop');
+      destroyCircuitPlaygroundComponents(components);
+      expect(spy).to.have.been.calledOnce;
+    });
+
+    describe('stops Piezo.play()', () => {
+      let frequencySpy;
 
       beforeEach(() => {
-        clock = sinon.useFakeTimers();
         // Spy on 'frequency' which play calls internally.
         frequencySpy = sinon.spy(Playground.Piezo.frequency, 'value');
       });
 
       afterEach(() => {
         frequencySpy.restore();
-        clock.restore();
-      });
-
-      it('calls stop on the buzzer', () => {
-        const spy = sinon.spy(components.buzzer, 'stop');
-        destroyCircuitPlaygroundComponents(components);
-        expect(spy).to.have.been.calledOnce;
       });
 
       it('stops Piezo.play()', function () {
