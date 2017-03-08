@@ -1268,12 +1268,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # when attached to course, we should hide only if hidden in every section
     assert_equal [stage1.id.to_s], hidden
 
-    # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    # validate hidden_stage? gives same result
+    assert_equal true, student.hidden_stage?(stage1.script_levels.first)
+    assert_equal false, student.hidden_stage?(stage2.script_levels.first)
+    assert_equal false, student.hidden_stage?(stage3.script_levels.first)
   end
 
   test "user in two sections, neither attached to course" do
@@ -1303,12 +1301,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # when not attached to course, we should hide when hidden in any section
     assert_equal [stage1.id.to_s, stage2.id.to_s, stage3.id.to_s], hidden
 
-    # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    # validate hidden_stage? gives same result
+    assert_equal true, student.hidden_stage?(stage1.script_levels.first)
+    assert_equal true, student.hidden_stage?(stage2.script_levels.first)
+    assert_equal true, student.hidden_stage?(stage3.script_levels.first)
   end
 
   test "user in two sections, one attached to course one not" do
@@ -1337,12 +1333,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # only the stages hidden in the attached section are considered hidden
     assert_equal [stage1.id.to_s, stage2.id.to_s], hidden
 
-    # validate stage_hidden_for_user? gives same result
-    controller = ScriptLevelsController.new
-    controller.stubs(:current_user).returns(student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage1.script_levels.first, student)
-    assert_equal true, controller.send(:stage_hidden_for_user?, stage2.script_levels.first, student)
-    assert_equal false, controller.send(:stage_hidden_for_user?, stage3.script_levels.first, student)
+    # validate hidden_stage? gives same result
+    assert_equal true, student.hidden_stage?(stage1.script_levels.first)
+    assert_equal true, student.hidden_stage?(stage2.script_levels.first)
+    assert_equal false, student.hidden_stage?(stage3.script_levels.first)
   end
 
   test "user not signed in" do

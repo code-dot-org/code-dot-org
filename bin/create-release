@@ -5,11 +5,13 @@ require 'cdo/cdo_cli'
 include CdoCli
 
 require 'octokit'
+require 'optparse'
 require 'open3'
+require 'ostruct'
 require 'tempfile'
 require 'tzinfo'
 
-REPO = 'code-dot-org/code-dot-org'
+REPO = 'code-dot-org/code-dot-org'.freeze
 
 def git_generate_changelog
   changes, _err, status = Open3.capture3("git log --merges --oneline production^1..production^2 --format=\"%s %b\"")
@@ -100,7 +102,7 @@ def edit(content)
   content
 end
 
-def main
+def main(options)
   changes = git_generate_changelog
 
   if changes.nil?
@@ -122,24 +124,41 @@ def main
   end
 
   puts "Creating release #{next_release_version}"
-  loop do
-    puts "Does this changelog look correct?"
-    puts changes
-    print "[#{underline 'Y'}es]/#{underline 'E'}dit/#{underline 'S'}kip: "
-    response = gets.strip.downcase
-    if 'yes'.start_with?(response)
-      puts "POSTing changelog to github ..."
-      create_release(next_release_version, changes)
-      break
-    elsif 'skip'.start_with?(response)
-      puts "Skipping release"
-      break
-    elsif 'edit'.start_with?(response)
-      changes = edit(changes)
-    else
-      puts "Sorry, I didn't understand that.\n\n"
+  if options.interactive
+    loop do
+      puts "Does this changelog look correct?"
+      puts changes
+      print "[#{underline 'Y'}es]/#{underline 'E'}dit/#{underline 'S'}kip: "
+      response = gets.strip.downcase
+      if 'yes'.start_with?(response)
+        puts "POSTing changelog to github ..."
+        create_release(next_release_version, changes)
+        break
+      elsif 'skip'.start_with?(response)
+        puts "Skipping release"
+        break
+      elsif 'edit'.start_with?(response)
+        changes = edit(changes)
+      else
+        puts "Sorry, I didn't understand that.\n\n"
+      end
     end
+  else
+    create_release(next_release_version, changes)
   end
 end
 
-main if only_one_running?(__FILE__)
+options = OpenStruct.new
+options.interactive = true
+OptionParser.new do |opts|
+  opts.banner = 'Usage: ./create-release [options]'
+  opts.on('-f', '--force', "Non-interactive mode - no confirmation or edits.") do
+    options.interactive = false
+  end
+  opts.on_tail('-h', '--help', 'Show this message.') do
+    puts opts
+    exit
+  end
+end.parse!
+
+main(options) if only_one_running?(__FILE__)
