@@ -11,7 +11,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
     enrollments = Pd::Enrollment.where(email: current_user.email)
     surveys_pending_enrollment = Pd::Enrollment.filter_for_survey_completion(enrollments, false)
-    last_pending_enrollment = surveys_pending_enrollment && surveys_pending_enrollment.max_by(&:survey_sent_at)
+    last_pending_enrollment = surveys_pending_enrollment.any? && surveys_pending_enrollment.last
 
     summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize)
 
