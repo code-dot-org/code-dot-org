@@ -41,33 +41,15 @@ def main
   end
   update_developers_topic_robo_dtt
 
-  pr_number = GitHub.create_pull_request(
+  # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
+  # (particularly deploy).
+  pr_number = GitHub.create_and_merge_pull_request(
     base: 'test',
     head: 'staging',
     title: 'DTT (Staging > Test) [robo-dtt]'
   )
   if pr_number.nil?
-    ChatClient.message(
-      'infra-test',
-      'GitHub.create_pull_request failed.',
-      color: 'red'
-    )
-    update_developers_topic_robo_failed
-    return
-  end
-
-  # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
-  # (particularly deploy).
-
-  merged = GitHub.merge_pull_request(pr_number)
-  unless merged
-    ChatClient.message(
-      'infra-test',
-      "GitHub.merge_pull_request(#{pr_number}) failed.",
-      color: 'red'
-    )
-    update_developers_topic_robo_failed
-    return
+    raise Exception.new('GitHub.create_and_merge_pull_request failed.')
   end
 
   ChatClient.mesage(
