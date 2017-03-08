@@ -203,9 +203,12 @@ class ContactRollups
     log "Inserting teacher contacts and IP geo data from dashboard.users"
     PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
-    SELECT email COLLATE utf8_general_ci, name, users.id, 'Teacher', city, state, postal_code, country FROM #{DASHBOARD_DB_NAME}.users AS users
+    -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
+    SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), 'Teacher'),
+    user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users AS users
+    LEFT OUTER JOIN pegasus_development.contact_rollups_daily AS src ON src.email = users.email
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
-    WHERE users.user_type = 'teacher' AND LENGTH(email) > 0 AND user_geos.indexed_at IS NOT NULL
+    WHERE users.user_type = 'teacher' AND LENGTH(users.email) > 0
     ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name), #{DEST_TABLE_NAME}.dashboard_user_id = VALUES(dashboard_user_id),
     #{DEST_TABLE_NAME}.roles = VALUES(roles)"
     log_completion(start)
@@ -236,10 +239,18 @@ class ContactRollups
     start = Time.now
     log "Inserting contacts and IP geo data from pegasus.forms"
     PEGASUS_REPORTING_DB_WRITER.run "
-    INSERT IGNORE INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, city, state, postal_code, country)
-    SELECT email, name, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, city, state, postal_code, country)
+    SELECT email, name, 'Form Submitter', kind, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
     LEFT OUTER JOIN #{PEGASUS_DB_NAME}.form_geos on form_geos.form_id = forms.id
-    WHERE form_geos.indexed_at IS NOT NULL"
+    ON DUPLICATE KEY UPDATE
+    -- Update forms_submitted with the list of all forms submitted by this email address
+    #{DEST_TABLE_NAME}.forms_submitted =
+    -- Add the form kind for this form to the list for this email address if it is not already present for this email.
+    -- Use LOCATE to determine if this form kind is already present and CONCAT+COALESCE to add it if it is not.
+    CASE LOCATE(VALUES(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''), VALUES(forms_submitted)),4096)
+      ELSE #{DEST_TABLE_NAME}.forms_submitted
+    END"
     log_completion(start)
   end
 
@@ -403,8 +414,10 @@ class ContactRollups
       # Trust this value if we see it, otherwise do not use country from forms; fall back to any country we got from IP geo lookup.
       country = nil unless country.presence && country.downcase == UNITED_STATES
 
-      # Skip if this form data has no address/location info at all
-      next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil?
+      role = data['role_s']
+
+      # Skip if this form data has no info at all
+      next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil? && role.nil?
 
       # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed.
       update_data = {}
@@ -415,7 +428,22 @@ class ContactRollups
       update_data[:country] = country[0...255] unless country.nil?
 
       # add to batch to update
-      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";"
+      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";" unless update_data.empty?
+
+      if role.presence
+        # If role (role_s field) was a field on this form, append it to a comma-separate list of roles
+        # that have been submitted on forms for this email
+        update_batch += "
+        UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+        INNER JOIN #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} AS src ON src.email = #{DEST_TABLE_NAME}.email
+        SET #{DEST_TABLE_NAME}.form_roles =
+        -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+        CASE LOCATE('#{role}', COALESCE(src.form_roles,''))
+          WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(src.form_roles, ','), ''), '#{role}'),4096)
+          ELSE src.form_roles
+        END
+        WHERE #{DEST_TABLE_NAME}.email = '#{email}';"
+      end
 
       num_updated += 1
 
