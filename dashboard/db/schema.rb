@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224150102) do
+ActiveRecord::Schema.define(version: 20170307160737) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -565,8 +565,11 @@ ActiveRecord::Schema.define(version: 20170224150102) do
   end
 
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string  "name",  null: false
-    t.integer "group", null: false
+    t.string  "name",       null: false
+    t.integer "group"
+    t.integer "contact_id"
+    t.boolean "urban"
+    t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
   create_table "regional_partners_school_districts", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -679,7 +682,6 @@ ActiveRecord::Schema.define(version: 20170224150102) do
     t.string   "code"
     t.integer  "script_id"
     t.string   "grade"
-    t.string   "admin_code"
     t.string   "login_type",   default: "email", null: false
     t.datetime "deleted_at"
     t.boolean  "stage_extras", default: false,   null: false

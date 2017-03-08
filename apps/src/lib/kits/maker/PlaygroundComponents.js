@@ -20,17 +20,17 @@ import Piezo from './Piezo';
  *        components initialized.
  * @returns {Object.<String, Object>} board components
  */
-export function initializeCircuitPlaygroundComponents(board) {
+export function createCircuitPlaygroundComponents(board) {
   return {
     colorLeds: initializeColorLeds(board),
 
     led: new five.Led({board, pin: 13}),
 
-    toggleSwitch: new five.Switch({board, pin: '21'}),
+    toggleSwitch: new five.Switch({board, pin: 21}),
 
     buzzer: new Piezo({
       board,
-      pin: '5',
+      pin: 5,
       controller: PlaygroundIO.Piezo
     }),
 
@@ -51,6 +51,64 @@ export function initializeCircuitPlaygroundComponents(board) {
 
     ...initializeTouchPads(board)
   };
+}
+
+/**
+ * De-initializes any Johnny-Five components that might have been created
+ * by createCircuitPlaygroundComponents
+ * @param {Object} components - map of components, as originally returned by
+ *   createCircuitPlaygroundComponents.  This object will be mutated: Destroyed
+ *   components will be removed. Additional members of this object will be
+ *   ignored.
+ */
+export function destroyCircuitPlaygroundComponents(components) {
+  if (components.colorLeds) {
+    components.colorLeds.forEach(led => led.stop());
+  }
+  delete components.colorLeds;
+
+  if (components.led) {
+    components.led.stop();
+  }
+  delete components.led;
+
+  // No reset needed for five.Switch
+  delete components.toggleSwitch;
+
+  if (components.buzzer) {
+    components.buzzer.stop();
+  }
+  delete components.buzzer;
+
+  if (components.soundSensor) {
+    components.soundSensor.disable();
+  }
+  delete components.soundSensor;
+
+  // five.Thermometer makes an untracked setInterval call, so it can't be
+  // cleaned up.
+  // TODO: Fork / fix johnny-five Thermometer to be clean-uppable
+  // See https://github.com/rwaldron/johnny-five/issues/1297
+  delete components.tempSensor;
+
+  if (components.lightSensor) {
+    components.lightSensor.disable();
+  }
+  delete components.lightSensor;
+
+  if (components.accelerometer) {
+    components.accelerometer.stop();
+  }
+  delete components.accelerometer;
+
+  // No reset needed for five.Button
+  delete components.buttonL;
+  delete components.buttonR;
+
+  // Remove listeners from each TouchSensor
+  TOUCH_PINS.forEach(pin => {
+    delete components[`touchPad${pin}`];
+  });
 }
 
 /**
@@ -79,7 +137,7 @@ export const componentConstructors = {
   TouchSensor
 };
 
-export function initializeColorLeds(board) {
+function initializeColorLeds(board) {
   return _.range(N_COLOR_LEDS).map(i => initializeColorLed(board, i));
 }
 
@@ -91,7 +149,7 @@ function initializeColorLed(board, pin) {
   });
 }
 
-export function initializeSoundSensor(board) {
+function initializeSoundSensor(board) {
   const sensor = new five.Sensor({
     board,
     pin: "A4",
@@ -101,7 +159,7 @@ export function initializeSoundSensor(board) {
   return sensor;
 }
 
-export function initializeLightSensor(board) {
+function initializeLightSensor(board) {
   const sensor = new five.Sensor({
     board,
     pin: "A5",
@@ -111,7 +169,7 @@ export function initializeLightSensor(board) {
   return sensor;
 }
 
-export function initializeThermometer(board) {
+function initializeThermometer(board) {
   const sensor = new five.Thermometer({
     board,
     controller: Thermometer,
@@ -155,7 +213,7 @@ function addSensorFeatures(fmap, sensor) {
   };
 }
 
-export function initializeButton(board, pin) {
+function initializeButton(board, pin) {
   const button = new five.Button({board, pin});
   Object.defineProperty(button, 'isPressed', {
     get: () => button.value === 1
@@ -163,7 +221,7 @@ export function initializeButton(board, pin) {
   return button;
 }
 
-export function initializeAccelerometer(board) {
+function initializeAccelerometer(board) {
   const accelerometer = new five.Accelerometer({
     board,
     controller: PlaygroundIO.Accelerometer
@@ -180,7 +238,7 @@ export function initializeAccelerometer(board) {
   return accelerometer;
 }
 
-export function initializeTouchPads(board) {
+function initializeTouchPads(board) {
   // We make one playground-io Touchpad component for all captouch sensors,
   // then wrap it in our own separate objects to get the API we want to
   // expose to students.
