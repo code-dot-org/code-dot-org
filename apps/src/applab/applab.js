@@ -900,11 +900,6 @@ Applab.render = function () {
     Applab.reactMountPoint_);
 };
 
-// Expose on Applab object for use in code-studio
-Applab.canExportApp = function () {
-  return experiments.isEnabled('applab-export');
-};
-
 Applab.exportApp = function () {
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;

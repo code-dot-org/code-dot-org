@@ -31,4 +31,4 @@ class FieldError
 end
 
 # Load forms
-Dir.glob(pegasus_dir('forms/*.rb')).each {|path| load path}
+Dir.glob(pegasus_dir('forms/*.rb')).each {|path| require path}
