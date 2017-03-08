@@ -66,7 +66,7 @@ module Pd::Payment
     # @param workshop [Pd::Workshop]
     # @return [String] payment type
     def get_payment_type(workshop)
-      partner = workshop.regional_partner
+      partner = workshop.associated_regional_partner
       return nil unless partner
       partner.urban? ? 'PLP Urban' : 'PLP Non-urban'
     end
