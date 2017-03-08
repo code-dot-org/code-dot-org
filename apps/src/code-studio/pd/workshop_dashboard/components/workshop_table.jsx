@@ -11,16 +11,27 @@ import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import { workshopShape } from '../types.js';
+import {Link} from 'react-router';
 
 const WorkshopTable = React.createClass({
   propTypes: {
-    workshops: React.PropTypes.arrayOf(workshopShape),
+    workshops: React.PropTypes.shape({
+      limit: React.PropTypes.number,
+      total_count: React.PropTypes.number,
+      filters: React.PropTypes.object,
+      workshops: React.PropTypes.arrayOf(workshopShape)
+    }),
     canEdit: React.PropTypes.bool,
     onDelete: React.PropTypes.func,
     showSignupUrl: React.PropTypes.bool,
     showOrganizer: React.PropTypes.bool,
     surveyBaseUrl: React.PropTypes.string,
-    tableId: React.PropTypes.string
+    tableId: React.PropTypes.string,
+    moreUrl: React.PropTypes.string
+  },
+
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
   },
 
   getDefaultProps() {
@@ -36,7 +47,7 @@ const WorkshopTable = React.createClass({
     return {
       sortingColumns: {
         0: {
-          direction: 'asc',
+          direction: 'desc',
           position: 0
         }
       }
@@ -99,8 +110,13 @@ const WorkshopTable = React.createClass({
     );
   },
 
+  handleMoreClick(event) {
+    event.preventDefault();
+    this.context.router.push(this.props.moreUrl);
+  },
+
   render() {
-    const rows = _.map(this.props.workshops,
+    const rows = _.map(this.props.workshops.workshops,
       row => _.merge(row, {
         signups: `${row.enrolled_teacher_count} / ${row.capacity}`,
         firstSessionStart: row.sessions[0].start
@@ -213,6 +229,18 @@ const WorkshopTable = React.createClass({
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id"/>
+        {
+          this.props.moreUrl && this.props.workshops.total_count > this.props.workshops.workshops.length &&
+          <tfoot>
+            <tr>
+              <td>
+                <Link to={this.props.moreUrl}>
+                  {this.props.workshops.total_count - this.props.workshops.workshops.length} more...
+                </Link>
+              </td>
+            </tr>
+          </tfoot>
+        }
       </Table.Provider>
     );
   }

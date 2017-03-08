@@ -16,7 +16,8 @@ const WorkshopTableLoader = React.createClass({
     queryUrl: React.PropTypes.string.isRequired,
     canDelete: React.PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
     children: React.PropTypes.element.isRequired, // Require exactly 1 child component.
-    hideNoWorkshopsMessage: React.PropTypes.bool // Should we show "no workshops found" if no workshops are found?
+    hideNoWorkshopsMessage: React.PropTypes.bool, // Should we show "no workshops found" if no workshops are found?
+    params: React.PropTypes.object
   },
 
   getInitialState() {
@@ -27,9 +28,16 @@ const WorkshopTableLoader = React.createClass({
   },
 
   componentDidMount() {
+    this.load();
+  },
+
+  load(props = this.props) {
+    this.setState({loading: true});
+    const url = props.params ? `${props.queryUrl}?${$.param(props.params)}` : props.queryUrl;
+
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: this.props.queryUrl,
+      url: url,
       dataType: 'json'
     })
     .done(data => {
@@ -40,7 +48,18 @@ const WorkshopTableLoader = React.createClass({
     });
   },
 
+  componentWillReceiveProps(nextProps) {
+    if (!_.isEqual(this.props, nextProps)) {
+      this.abortPendingRequests();
+      this.load(nextProps);
+    }
+  },
+
   componentWillUnmount() {
+    this.abortPendingRequests();
+  },
+
+  abortPendingRequests() {
     if (this.loadRequest) {
       this.loadRequest.abort();
     }
@@ -65,7 +84,7 @@ const WorkshopTableLoader = React.createClass({
       return <Spinner/>;
     }
 
-    if (this.state.workshops.length === 0 ) {
+    if (!this.state.workshops.length && !this.state.workshops.total_count) {
       if (this.props.hideNoWorkshopsMessage) {
         return null;
       } else {
