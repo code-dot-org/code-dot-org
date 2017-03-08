@@ -19,10 +19,9 @@ Petition.prototype.showNoError = function (noError) {
 };
 
 Petition.prototype.processResponse = function (data) {
-  if (data.state_code_s && data.state_code_s != "") {
+  if (data.state_code_s && data.state_code_s !== "") {
     window.location.href = "/promote/" + data.state_code_s;
-  }
-  else {
+  } else {
     window.location.href = "/promote/thanks";
   }
 };
@@ -31,9 +30,9 @@ Petition.prototype.processError = function (data) {
   $("#gobutton").removeAttr('disabled');
   $("#gobutton").addClass("button_enabled").removeClass("button_disabled");
 
-  var badEmail = (data.status === 400 && data.responseJSON.email_s !=== undefined);
+  var badEmail = (data.status === 400 && data.responseJSON.email_s !== undefined);
 
-  var badAge = !badEmail && (data.status === 400 && data.responseJSON.age_i !=== undefined);
+  var badAge = !badEmail && (data.status === 400 && data.responseJSON.age_i !== undefined);
 
   Petition.prototype.showAgeError(badAge);
   Petition.prototype.showEmailError(badEmail);
