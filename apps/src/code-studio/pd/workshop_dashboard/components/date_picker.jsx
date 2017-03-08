@@ -151,4 +151,4 @@ const DatePicker = React.createClass({
     );
   }
 });
-export default Radium(DatePicker);
+export default DatePicker;
