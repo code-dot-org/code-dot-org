@@ -20,8 +20,8 @@ const styles = {
   },
 };
 const MODE = {
-    files : 'files',
-    sounds : 'sounds'
+  files : 'files',
+  sounds : 'sounds'
 };
 
 /**
@@ -61,7 +61,7 @@ const SoundPicker = React.createClass({
         float: 'left',
         margin: '0 20px 0 0',
         fontFamily: isFileMode ? '"Gotham 5r"' : null,
-        color: isFileMode ? null : '#999',
+        color: isFileMode ? null : color.light_gray,
         fontSize: 16,
         cursor: 'pointer'
       },
@@ -69,14 +69,17 @@ const SoundPicker = React.createClass({
         margin: 0,
         fontSize: 16,
         fontFamily: isFileMode ? null : '"Gotham 5r"',
-        color: isFileMode ? '#999' : null,
+        color: isFileMode ? color.light_gray : null,
         cursor: 'pointer'
       },
     };
 
-    let modeSwitch, title = this.props.assetChosen ?
-      <p>Choose Sounds</p> :
-      <p>Manage Sounds</p>;
+    let modeSwitch;
+    let title = (
+      <p>
+        {this.props.assetChosen ? "Choose Sounds" : "Manage Sounds"}
+      </p>
+    );
 
     if (this.props.assetChosen) {
       modeSwitch = (

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as color from "../../util/color";
+import color from "@cdo/apps/util/color";
 
 const styles = {
   category: {
