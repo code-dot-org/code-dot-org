@@ -2638,7 +2638,7 @@ en:
             Measuring Student Learning: Measuring Student Learning
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description_short: Teacher Professional Learning Course for CSP Unit 5
           description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
         csp6-support:
           stage: {}
@@ -2694,6 +2694,8 @@ en:
             'Project: Board Output': 'Project: Board Output'
             For Loops with UI and Board: For Loops with UI and Board
             Lists and For Loops: Lists and For Loops
+            Analog Input: Analog Input
+            Polling Events: Polling Events
           title: Draft Unit 6
           description_audience: ''
           description_short: ''
@@ -2706,3 +2708,12 @@ en:
           description_audience: Teachers attending an in-person Game Lab Workshop
           description_short: Level progression to accompany an in-person Game Lab Workshop
           description: 'This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach '
+        csd5-draft:
+          stage:
+            new stage: new stage
+            Interpreting Data: Interpreting Data
+            Data in the Real World: Data in the Real World
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

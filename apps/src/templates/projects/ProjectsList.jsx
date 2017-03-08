@@ -1,7 +1,17 @@
 import React from 'react';
-import {Table} from 'reactabular';
+import {Table, sort} from 'reactabular';
 import color from "../../util/color";
 import commonMsg from '@cdo/locale';
+import wrappedSortable from '../tables/wrapped_sortable';
+import orderBy from 'lodash/orderBy';
+
+/** @enum {number} */
+export const COLUMNS = {
+  PROJECT_NAME: 0,
+  STUDENT_NAME: 1,
+  APP_TYPE: 2,
+  LAST_EDITED: 3,
+};
 
 const styles = {
   table: {
@@ -44,7 +54,7 @@ function typeFormatter(type) {
 
 /**
  * Takes a date formatted as YYYY-MM-DD and returns it as MM/DD/YYYY.
- * @param {string} date
+ * @param {string} dateString
  * @returns {string}
  */
 function dateFormatter(dateString) {
@@ -58,6 +68,36 @@ const ProjectsList = React.createClass({
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: React.PropTypes.string.isRequired,
+  },
+
+  getInitialState() {
+    const sortingColumns = {
+      [COLUMNS.LAST_EDITED]: {
+        direction: 'desc',
+        position: 0
+      }
+    };
+    return {sortingColumns};
+  },
+
+  getSortingColumns() {
+    return this.state.sortingColumns || {};
+  },
+
+  // The user requested a new sorting column. Adjust the state accordingly.
+  onSort(selectedColumn) {
+    this.setState({
+      sortingColumns: sort.byColumn({
+        sortingColumns: this.state.sortingColumns,
+        // Custom sortingOrder removes 'no-sort' from the cycle
+        sortingOrder: {
+          FIRST: 'asc',
+          asc: 'desc',
+          desc: 'asc'
+        },
+        selectedColumn
+      })
+    });
   },
 
   /**
@@ -78,13 +118,14 @@ const ProjectsList = React.createClass({
     return <a href={url} target="_blank">{name}</a>;
   },
 
-  getColumns() {
+  getColumns(sortable) {
     return [
       {
         property: 'name',
         header: {
-          label: 'Project Name',
+          label: commonMsg.projectName(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           format: this.nameFormatter,
@@ -94,8 +135,9 @@ const ProjectsList = React.createClass({
       {
         property: 'studentName',
         header: {
-          label: 'Student Name',
+          label: commonMsg.studentName(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           props: {style: styles.cell}
@@ -104,8 +146,9 @@ const ProjectsList = React.createClass({
       {
         property: 'type',
         header: {
-          label: 'Type',
+          label: commonMsg.projectType(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           format: typeFormatter,
@@ -115,8 +158,9 @@ const ProjectsList = React.createClass({
       {
         property: 'updatedAt',
         header: {
-          label: 'Last Edited',
+          label: commonMsg.lastEdited(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           format: dateFormatter,
@@ -127,15 +171,31 @@ const ProjectsList = React.createClass({
   },
 
   render() {
+    const sortableOptions = {
+      // Dim inactive sorting icons in the column headers
+      default: {color: 'rgba(255, 255, 255, 0.2 )'}
+    };
+
+    // Define a sorting transform that can be applied to each column
+    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const columns = this.getColumns(sortable);
+    const sortingColumns = this.getSortingColumns();
+
+    const sortedRows = sort.sorter({
+      columns,
+      sortingColumns,
+      sort: orderBy,
+    })(this.props.projectsData);
+
     return (
       <Table.Provider
         className="pure-table pure-table-striped"
-        columns={this.getColumns()}
+        columns={columns}
         style={styles.table}
       >
         <Table.Header />
 
-        <Table.Body rows={this.props.projectsData} rowKey="channel" />
+        <Table.Body rows={sortedRows} rowKey="channel" />
       </Table.Provider>
     );
   }

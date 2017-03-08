@@ -18,27 +18,31 @@ class ContactRollups
   # Connection to write to Pegasus reporting database.
   PEGASUS_REPORTING_DB_WRITER = sequel_connect(CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_writer)
 
-  PEGASUS_REPORTING_DB = sequel_connect(CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_writer)
+  # Connection to read from Dashboard reporting database.
+  DASHBOARD_REPORTING_DB_READER = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
 
   # Columns to disregard
   EXCLUDED_COLUMNS = %w(id pardot_id pardot_sync_at updated_at).freeze
 
   UPDATE_BATCH_SIZE = 100
 
-  PEGASUS_DB_NAME = "pegasus_#{Rails.env}"
-  DASHBOARD_DB_NAME = "dashboard_#{Rails.env}"
+  PEGASUS_ENV = (Rails.env.production? ? "" : "_#{Rails.env}").freeze
+  PEGASUS_DB_NAME = "pegasus#{PEGASUS_ENV}".freeze
+  DASHBOARD_DB_NAME = "dashboard_#{Rails.env}".freeze
+
+  UNITED_STATES = "united states".freeze
 
   # Table name of table structure to copy from to create the destination working table
-  TEMPLATE_TABLE_NAME = "contact_rollups"
+  TEMPLATE_TABLE_NAME = "contact_rollups".freeze
   # Table name of destination working table
-  DEST_TABLE_NAME = "contact_rollups_daily"
+  DEST_TABLE_NAME = "contact_rollups_daily".freeze
 
   # List of valid PD courses. If more courses get added, need to update this list and also schema in Pardot. We
   # need to filter here to known courses in the Pardot schema - we can't blindly pass values through
-  COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'"
+  COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'".freeze
 
   # Values of forms.kind field we care about
-  FORM_KINDS = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey)
+  FORM_KINDS = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey).freeze
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
@@ -51,12 +55,16 @@ class ContactRollups
       {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
     ].freeze
 
+  ROLE_TEACHER = "Teacher".freeze
+  ROLE_FORM_SUBMITTER = "Form Submitter".freeze
+
   def self.build_contact_rollups
     start = Time.now
 
-    ActiveRecord::Base.connection.execute "SET SQL_SAFE_UPDATES = 0"
-    # set READ UNCOMMITTED transaction isolation level to avoid taking locks on tables we are reading from during
-    # what can be multi-minute operations
+    PEGASUS_REPORTING_DB_WRITER.run "SET SQL_SAFE_UPDATES = 0"
+    # set READ UNCOMMITTED transaction isolation level on both read connections to avoid taking locks
+    # on tables we are reading from during what can be multi-minute operations
+    DASHBOARD_REPORTING_DB_READER.run "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     ActiveRecord::Base.connection.execute "SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED"
     create_destination_table
     insert_from_pegasus_forms
@@ -78,14 +86,11 @@ class ContactRollups
     end
 
     # parse all forms that collect user-reported address/location data
-    # The below passes locally and on circle but leads to
-    # "Sequel::DatabaseError: Mysql2::Error: Lock wait timeout exceeded; try restarting transaction"
-    # in test env. Temporarily disabling and will diagnose.
-    # FORM_KINDS.each do |kind|
-    #   update_geo_data_from_forms(kind)
-    # end
+    FORM_KINDS.each do |kind|
+      update_data_from_forms(kind)
+    end
 
-    count = ActiveRecord::Base.connection.execute("select count(*) from pegasus_test.contact_rollups_daily").first[0]
+    count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
   end
 
@@ -179,18 +184,11 @@ class ContactRollups
   def self.create_destination_table
     start = Time.now
     log "Creating destination table"
-
     # Ensure destination table exists and is empty. Since this code runs on the reporting replica and the destination
     # table should exist only there, we can't use a migration to create it. Create the destination table explicitly in code.
     # Create it based on master contact_rollups table. Create it every time to keep up with schema changes in contact_rollups.
-
-    # Don't create this table if we are running inside a test as it runs afoul of the transaction created on the ActiveRecord
-    # connection to roll back changes from the test. The test will ensure this table is created.
-    unless Rails.env.test?
-      PEGASUS_REPORTING_DB.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
-      PEGASUS_REPORTING_DB.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
-    end
-
+    PEGASUS_REPORTING_DB_WRITER.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
+    PEGASUS_REPORTING_DB_WRITER.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
     log_completion(start)
   end
 
@@ -206,19 +204,23 @@ class ContactRollups
   def self.insert_from_dashboard_contacts
     start = Time.now
     log "Inserting teacher contacts and IP geo data from dashboard.users"
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, dashboard_user_id, roles, city, state, postal_code, country)
-    SELECT email COLLATE utf8_general_ci, name, users.id, 'Teacher', city, state, postal_code, country FROM #{DASHBOARD_DB_NAME}.users AS users
+    -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
+    SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
+    user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users AS users
+    LEFT OUTER JOIN pegasus_development.contact_rollups_daily AS src ON src.email = users.email
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
-    WHERE users.user_type = 'teacher' AND LENGTH(email) > 0 -- AND user_geos.indexed_at IS NOT NULL -- TODO BUGBUG
-    ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name), #{DEST_TABLE_NAME}.dashboard_user_id = VALUES(dashboard_user_id)"
+    WHERE users.user_type = 'teacher' AND LENGTH(users.email) > 0
+    ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name), #{DEST_TABLE_NAME}.dashboard_user_id = VALUES(dashboard_user_id),
+    #{DEST_TABLE_NAME}.roles = VALUES(roles)"
     log_completion(start)
   end
 
   def self.insert_from_dashboard_pd_enrollments
     start = Time.now
     log "Inserting contacts from dashboard.pd_enrollments"
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name)
     SELECT email, name FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
     WHERE LENGTH(pd_enrollments.email) > 0
@@ -229,7 +231,7 @@ class ContactRollups
   def self.insert_from_pegasus_contacts
     start = Time.now
     log "Inserting contacts from pegasus.contacts"
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, opted_out, name)
     SELECT email, IF(unsubscribed_at IS null, null, true) AS opted_out, name FROM #{PEGASUS_DB_NAME}.contacts WHERE LENGTH(email) > 0
     ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name)"
@@ -239,11 +241,19 @@ class ContactRollups
   def self.insert_from_pegasus_forms
     start = Time.now
     log "Inserting contacts and IP geo data from pegasus.forms"
-    ActiveRecord::Base.connection.execute "
-    INSERT IGNORE INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, city, state, postal_code, country)
-    SELECT email, name, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
+    PEGASUS_REPORTING_DB_WRITER.run "
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles, forms_submitted, city, state, postal_code, country)
+    SELECT email, name, '#{ROLE_FORM_SUBMITTER}', kind, city, state, postal_code, country FROM #{PEGASUS_DB_NAME}.forms
     LEFT OUTER JOIN #{PEGASUS_DB_NAME}.form_geos on form_geos.form_id = forms.id
-    WHERE form_geos.indexed_at IS NOT NULL"
+    ON DUPLICATE KEY UPDATE
+    -- Update forms_submitted with the list of all forms submitted by this email address
+    #{DEST_TABLE_NAME}.forms_submitted =
+    -- Add the form kind for this form to the list for this email address if it is not already present for this email.
+    -- Use LOCATE to determine if this form kind is already present and CONCAT+COALESCE to add it if it is not.
+    CASE LOCATE(VALUES(forms_submitted), COALESCE(#{DEST_TABLE_NAME}.forms_submitted,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.forms_submitted, ','), ''), VALUES(forms_submitted)),4096)
+      ELSE #{DEST_TABLE_NAME}.forms_submitted
+    END"
     log_completion(start)
   end
 
@@ -262,7 +272,7 @@ class ContactRollups
   end
 
   def self.append_to_role_list_from_permission(permission_name, dest_value)
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.user_permissions AS user_permissions ON user_permissions.user_id = users.id
@@ -275,7 +285,7 @@ class ContactRollups
     start = Time.now
     log "Appending '#{dest_field}' field with #{dest_value} from forms of kind #{form_kinds}"
 
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{PEGASUS_DB_NAME}.forms ON forms.email = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.email
     SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field}, ','), ''), #{dest_value})
@@ -284,7 +294,7 @@ class ContactRollups
   end
 
   def self.append_plp_to_role_list
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
     INNER JOIN #{DASHBOARD_DB_NAME}.professional_learning_partners AS professional_learning_partners ON professional_learning_partners.contact_id = users.id
@@ -295,7 +305,7 @@ class ContactRollups
   def self.update_courses_facilitated
     start = Time.now
     log "Updating courses_facilitated"
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
     (SELECT facilitator_id, GROUP_CONCAT(course) AS courses FROM
       (SELECT DISTINCT facilitator_id, course FROM #{DASHBOARD_DB_NAME}.pd_course_facilitators
@@ -312,7 +322,7 @@ class ContactRollups
   def self.update_professional_learning_enrollment
     start = Time.now
     log "Updating professional learning enrollment"
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT user_id, GROUP_CONCAT(course) AS courses FROM
          (SELECT DISTINCT pd_enrollments.user_id, pd_workshops.course FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
@@ -330,7 +340,7 @@ class ContactRollups
   def self.update_professional_learning_attendance
     start = Time.now
     log "Updating professional learning attendance"
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
       (SELECT teacher_id, GROUP_CONCAT(course) as courses FROM
         (SELECT DISTINCT teacher_id, course FROM
@@ -366,9 +376,9 @@ class ContactRollups
     Sequel.connect(CDO.pegasus_reporting_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
   end
 
-  def self.update_geo_data_from_forms(form_kind)
+  def self.update_data_from_forms(form_kind)
     start = Time.now
-    log "Updating geo data for form kind #{form_kind}"
+    log "Updating data for form kind #{form_kind}"
 
     record_count = 0
     num_updated = 0
@@ -390,36 +400,53 @@ class ContactRollups
       email = data['email_s'].presence
       next if email.nil?
 
-      # get user-supplied address/location data from form if present, from any of the differently-named location fields across all form kinds
+      # Get user-supplied address/location data from form if present, from any of the differently-named location fields across all form kinds
       street_address = data['location_street_address_s'].presence || data['user_street_address_s'].presence
       city = data['location_city_s'].presence || data['user_city_s'].presence || data['teacher_city_s'].presence
       state = data['location_state_s'].presence || data['teacher_state_s'].presence
       if state.nil?
-        # note that the 'user_state_s' record is in fact a *state code*, not a state name
+        # Note that the 'user_state_s' record is in fact a *state code*, not a state name
         state_code = data['location_state_code_s'].presence || data['state_code_s'].presence || data['user_state_s'].presence
         state = get_us_state_from_abbr(abbr: state_code, include_dc: true).presence unless state_code.nil?
       end
       postal_code = data['location_postal_code_s'].presence || data['zip_code_s'].presence || data['user_postal_code_s'].presence
       country = data['location_country_s'].presence || data['country_s'].presence || data['teacher_country_s'].presence
 
-      # skip if this form data has no address/location info at all
-      next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil?
+      # In practice, self-reported country data (often free text) from forms is garbage. The exception is a frequent reliable
+      # value of "united states", which is what gets filled in automatically if you enter a zip code on the petition form.
+      # Trust this value if we see it, otherwise do not use country from forms; fall back to any country we got from IP geo lookup.
+      country = nil unless country.presence && country.downcase == UNITED_STATES
+
+      role = data['role_s']
+
+      # Skip if this form data has no info at all
+      next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil? && role.nil?
 
       # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed.
-      street_address = street_address[0...255] unless street_address.nil?
-      city = city[0...255] unless city.nil?
-      state = state[0...255] unless state.nil?
-      postal_code = postal_code[0...255] unless postal_code.nil?
-      country = country[0...255] unless country.nil?
+      update_data = {}
+      update_data[:street_address] = street_address[0...255] unless street_address.nil?
+      update_data[:city] = city[0...255] unless city.nil?
+      update_data[:state] = state[0...255] unless state.nil?
+      update_data[:postal_code] = postal_code[0...255] unless postal_code.nil?
+      update_data[:country] = country[0...255] unless country.nil?
 
       # add to batch to update
-      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(
-        street_address: street_address,
-        city: city,
-        state: state,
-        postal_code: postal_code,
-        country: country
-      ) + ";"
+      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";" unless update_data.empty?
+
+      if role.present?
+        # If role (role_s field) was a field on this form, append it to a comma-separate list of roles
+        # that have been submitted on forms for this email
+        update_batch += "
+        UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+        INNER JOIN #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} AS src ON src.email = #{DEST_TABLE_NAME}.email
+        SET #{DEST_TABLE_NAME}.form_roles =
+        -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+        CASE LOCATE('#{role}', COALESCE(src.form_roles,''))
+          WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(src.form_roles, ','), ''), '#{role}'),4096)
+          ELSE src.form_roles
+        END
+        WHERE #{DEST_TABLE_NAME}.email = '#{email}';"
+      end
 
       num_updated += 1
 
@@ -457,7 +484,7 @@ class ContactRollups
   def self.update_grades_taught
     start = Time.now
     log "Updating grades taught from dashboard.users"
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
     (SELECT dashboard_user_id, GROUP_CONCAT(grade) as grades FROM
       (SELECT DISTINCT #{DEST_TABLE_NAME}.dashboard_user_id, sections.grade FROM #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
@@ -484,7 +511,7 @@ class ContactRollups
     # for age = 4, include 4 and below
     max_birthday_clause = "students.birthday <= DATE_ADD(NOW(), INTERVAL -#{age} YEAR) AND" unless age <= 4
 
-    ActiveRecord::Base.connection.execute "
+    PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}, (
     SELECT DISTINCT sections.user_id AS teacher_user_id
     FROM #{DASHBOARD_DB_NAME}.users AS students
@@ -527,7 +554,10 @@ class ContactRollups
     users = User.where("length(email) > 0")
 
     users.find_each do |user|
-      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).update(school_name: user.ops_school) unless user.ops_school.nil?
+      unless user.ops_school.nil?
+        PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: user.email).
+            update(school_name: user.ops_school)
+      end
 
       unless user.district_id.nil?
         district = districts[user.district_id]
@@ -540,33 +570,26 @@ class ContactRollups
 
     start = Time.now
     log "Updating district information from dashboard.pd_enrollments"
-
-    ActiveRecord::Base.connection.execute "
-      UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT email, school_districts.name as district_name, school_districts.city as district_city,
-        school_districts.state as district_state, school_districts.zip as district_zip
-      FROM #{DASHBOARD_DB_NAME}.pd_enrollments
-      INNER JOIN #{DASHBOARD_DB_NAME}.school_infos ON school_infos.id = pd_enrollments.school_info_id
-      INNER JOIN #{DASHBOARD_DB_NAME}.school_districts ON school_districts.id = school_infos.school_district_id
-      WHERE email IS NOT NULL AND school_info_id IS NOT NULL) src
-      SET #{DEST_TABLE_NAME}.district_name = src.district_name, #{DEST_TABLE_NAME}.district_city = src.district_city,
-      #{DEST_TABLE_NAME}.district_state = src.district_state, #{DEST_TABLE_NAME}.district_zip = src.district_zip
-      WHERE #{DEST_TABLE_NAME}.email = src.email"
-
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).exclude(school_info_id: nil).
+        select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
+        inner_join(:school_infos, id: :school_info_id).
+        inner_join(:school_districts, id: :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
+      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(
+        district_name: pd_enrollment[:district_name],
+        district_city: pd_enrollment[:city],
+        district_state: pd_enrollment[:state],
+        district_zip: pd_enrollment[:zip]
+      )
+    end
     log_completion(start)
   end
 
   def self.update_school
     start = Time.now
     log "Updating school information from dashboard.pd_enrollments"
-
-    ActiveRecord::Base.connection.execute "
-      UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT email, school FROM #{DASHBOARD_DB_NAME}.pd_enrollments
-      WHERE email IS NOT NULL and LENGTH(school) > 0) src
-      SET #{DEST_TABLE_NAME}.school_name = school
-      WHERE #{DEST_TABLE_NAME}.email = src.email"
-
+    DASHBOARD_REPORTING_DB_READER[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
+      PEGASUS_REPORTING_DB_WRITER[DEST_TABLE_NAME.to_sym].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
+    end
     log_completion(start)
   end
 

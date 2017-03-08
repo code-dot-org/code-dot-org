@@ -43,7 +43,7 @@ div[role=dialog] {
   }
 
   div.modal-content {
-    margin: 0;
+    margin: 0 !important;
     @import "bootstrap-sass/assets/stylesheets/bootstrap";
     @include buttons();
 

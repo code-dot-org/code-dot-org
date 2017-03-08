@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/chat_client'
+require 'cdo/only_one'
 require 'cdo/solr'
 require src_dir 'forms'
 
@@ -101,7 +102,13 @@ def index_batch_of_forms(batch_size)
 
         documents << index_data
       rescue
-        ChatClient.log "Form #{form[:id]} couldn't be indexed.", color: 'red', notify: 1
+        ChatClient.log(
+          "Form #{form[:id]} couldn't be indexed "\
+            "(see <a href=\"http://wiki.code.org/display/Operations/Form+%23%23%23%23%23%23+Could+not+be+indexed\">here</a> "\
+            "for instructions)",
+          color: 'red',
+          notify: 1
+        )
         raise
       end
 

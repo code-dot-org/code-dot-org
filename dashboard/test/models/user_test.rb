@@ -789,7 +789,7 @@ class UserTest < ActiveSupport::TestCase
       )
     end
 
-    user.backfill_user_scripts
+    user.backfill_user_scripts([twenty_hour, hoc])
     assert_equal [twenty_hour, hoc], user.working_on_scripts
   end
 
@@ -821,7 +821,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       assert_creates(UserScript) do
-        user.backfill_user_scripts
+        user.backfill_user_scripts([script])
       end
 
       user_script = UserScript.last
@@ -871,7 +871,7 @@ class UserTest < ActiveSupport::TestCase
       complete_script_for_user(student, script, completed_date)
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts
+        student.backfill_user_scripts([script])
       end
 
       user_script = UserScript.last
@@ -904,7 +904,7 @@ class UserTest < ActiveSupport::TestCase
       ul.save!
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts
+        student.backfill_user_scripts [script]
       end
 
       user_script = UserScript.last
@@ -929,7 +929,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.needs_to_backfill_user_scripts?
 
     assert_creates(UserScript) do
-      user.backfill_user_scripts
+      user.backfill_user_scripts [script]
     end
 
     # now is backfilled (has a user script)
@@ -1159,6 +1159,20 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).never
     track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
+  end
+
+  test 'track_level_progress_sync does call track_profiency when manual_pass to perfect' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    UserLevel.create!(
+      user: user,
+      level: csf_script_level.level,
+      script: Script.get_from_cache('20-hour'),
+      best_result: ActivityConstants::MANUAL_PASS_RESULT
+    )
+
+    User.expects(:track_proficiency).once
+    track_progress(user.id, csf_script_level, 100)
   end
 
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
@@ -1555,7 +1569,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.permission?(UserPermission::LEVELBUILDER)
 
-    ActiveRecord::Base.connection.disconnect!
+    no_database
 
     assert user.permission?(UserPermission::FACILITATOR)
     refute user.permission?(UserPermission::LEVELBUILDER)

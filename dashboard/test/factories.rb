@@ -245,7 +245,6 @@ FactoryGirl.define do
   factory :level_source do
     level
     data '<xml/>'
-    md5 { Digest::MD5.hexdigest(data) }
     trait :with_image do
       level { create(:level, game: Game.find_by_app(Game::ARTIST))}
       after :create do |level_source, _|
@@ -732,11 +731,6 @@ FactoryGirl.define do
     course Pd::Workshop::COURSES.first
   end
 
-  factory :professional_learning_partner do
-    sequence(:name) { |n| "PLP #{n}" }
-    contact {create :teacher}
-  end
-
   factory :school_district do
     name "A school district"
     city "Seattle"
@@ -768,6 +762,7 @@ FactoryGirl.define do
 
   factory :regional_partner do
     sequence(:name) { |n| "Partner#{n}" }
+    contact {create :teacher}
     group 1
   end
 

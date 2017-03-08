@@ -4,18 +4,18 @@ nav: about_nav
 ---
 
 # Towards Measuring Basic Coding Proficiency
-
+*March, 2017*
 ## Summary
 
-This report explains Code.org’s investigations into whether or not students using its courses designed for K-5 were achieving any level of "basic coding proficiency".  Since the course materials weren’t originally engineered to measure coding proficiency, nor was the curriculum designed with specific coding proficiency targets in mind, our challenge was to see what we could learn from data we had on hand. We have collected a relatively massive amount of user activity data over the year, and despite the fact that no universal definition of “coding proficiency” exists for this age group, we wanted see if we could at least gain some insight into how well students were doing with the coding concepts presented across the courses we offer on our platform. This paper gives background about the puzzles in our courses and the kinds of data we collect, explains our methods for tagging puzzles for concepts and difficulty, and defining what “proficiency” means for our platform. Finally we present a few of our results and describe learnings and future work.
+This report explains Code.org’s investigations into whether or not students using its courses designed for K-8 were achieving any level of "basic coding proficiency".  Since the course materials weren’t originally engineered to measure coding proficiency, nor was the curriculum designed with specific coding proficiency targets in mind, our challenge was to see what we could learn from data we had on hand. We have collected a relatively massive amount of user activity data over the year, and despite the fact that no universal definition of “coding proficiency” exists for this age group, we wanted see if we could at least gain some insight into how well students were doing with the coding concepts presented across the courses we offer on our platform. This paper gives background about the puzzles in our courses and the kinds of data we collect, explains our methods for tagging puzzles for concepts and difficulty, and defining what “proficiency” means for our platform. Finally we present a few of our results and describe learnings and future work.
 
 This report describes a starting point for us as our organization begins to turn its eye toward more rigorous experimental designs, statistical analysis and modeling to measure student learning.  We have some ideas about how to improve our work but we also invite feedback and others’ ideas about what we could be doing. If you’d like to get involved please contact [data@code.org](mailto:data@code.org)
 
 ## Background
 
-Code.org’s Computer Science Fundamentals program consists of five courses geared toward K-5 students.  Courses 1-4 are designed to be approximately 20 class-hours long, including "unplugged" activities which are lessons that happen off the computer.  Many of our materials are designed to be taught by a teacher in a classroom. They are typically taught once or twice a week over the course of a semester.
+Code.org’s Computer Science Fundamentals program consists of five courses geared toward K-8 students.  Courses 1-4 are designed to be approximately 20 class-hours long, including "unplugged" activities which are lessons that happen off the computer.  Many of our materials are designed to be taught by a teacher in a classroom. They are typically taught once or twice a week over the course of a semester.
 
-The primary feature of these courses are programming puzzles that guide students through using a certain programming concept (like a loop) to solve a small problem.  Our puzzles are similar to what are known as "Parson’s Puzzles" (NOTE:  Dale Parsons and Patricia Haden. 2006. Parson's programming puzzles: a fun and effective learning tool for first programming courses. https://dl.acm.org/citation.cfm?id=1151890) in which a small challenge or puzzle is laid forth, and you are presented with a set of coding blocks as tools to solve that problem.  This approach to learning programming makes it impossible to make certain kinds of typical “beginner mistakes” related to syntax and, in theory, allows the learner’s cognitive load to focus more on how to use code as a problem-solving medium.
+The primary feature of these courses are programming puzzles that guide students through using a certain programming concept (like a loop) to solve a small problem.  Our puzzles are similar to what are known as "Parson’s Puzzles" <sup><a name="ftnt1ref" href="#ftnt1">[1]</a></sup> in which a small challenge or puzzle is laid forth, and you are presented with a set of coding blocks as tools to solve that problem.  This approach to learning programming makes it impossible to make certain kinds of typical “beginner mistakes” related to syntax and, in theory, allows the learner’s cognitive load to focus more on how to use code as a problem-solving medium.
 
 Computer Science Fundamentals courses are broken into "stages" (roughly speaking, each stage is one lesson or class-hour) and each stage is comprised of a sequence of “levels” - usually 10-15 per stage. 
 
@@ -23,49 +23,48 @@ Most levels are coding levels (which we’ll call "puzzles" for this paper) but 
 
 <table>
   <tr>
-    <td>CS Fundamentals Course</td>
-    <td>Who’s it for?</td>
-    <td>Concepts </td>
+    <th>CS Fundamentals Course</th>
+    <th>Who’s it for?</th>
+    <th>Concepts </th>
   </tr>
   <tr>
-    <td>Course 1
-18 stages
+    <td><a href="https://studio.code.org/s/course1" target="_blank">Course 1</a><br>
+18 stages<br>
 119/146 coding levels</td>
-    <td>Pre-readers (K-1)
-
-NOTE:this course was not used in measuring student proficiency</td>
+    <td>Pre-readers (K-1)<br>
+NOTE: this course was not used in measuring student proficiency</td>
     <td>Instruction Sequencing, Loops</td>
   </tr>
   <tr>
-    <td>Course 2
-19 stages
+    <td><a href="https://studio.code.org/s/course2" target="_blank">Course 2</a><br>
+19 stages<br>
 128/159 coding levels</td>
-    <td>Elementary school students Recommended starting point for students in 2nd-5th grade who have never tried CS before</td>
+    <td>Elementary school students<br>Recommended starting point for students in 2nd-5th grade who have never tried CS before</td>
     <td>Sequencing, Loops (+ small amount of Conditionals and Events)
 </td>
   </tr>
   <tr>
-    <td>Course 3
-21 stages
+    <td><a href="https://studio.code.org/s/course3" target="_blank">Course 3</a><br>
+21 stages<br>
 148/177 coding levels</td>
-    <td>Elementary school students
+    <td>Elementary school students<br>
 Designed for students 3rd-5th grade after completing course 2</td>
     <td>Sequencing, Loops, Conditionals, Events, Functions
 </td>
   </tr>
   <tr>
-    <td>Course 4
-22 stages
+    <td><a href="https://studio.code.org/s/course4" target="_blank">Course 4</a><br>
+22 stages<br>
 161/167 coding levels</td>
-    <td>Elementary school students
+    <td>Elementary school students<br>
 Designed for 5-6th grade students after completing course 3</td>
     <td>Sequencing, Lots of Loops, Conditionals, Events, Functions with parameters, Variables</td>
   </tr>
   <tr>
-    <td>Accelerated Course
-20 stages
+    <td><a href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a><br>
+20 stages<br>
 109/109 coding levels</td>
-    <td>Middle and high school students Designed for older students new to computer science. The course covers most of the material in courses 2 and 3 (and a few concepts from course 4) in an accelerated format.</td>
+    <td>Middle and high school students<br>Designed for older students new to computer science. The course covers most of the material in courses 2 and 3 (and a few concepts from course 4) in an accelerated format.</td>
     <td>Sequencing, Loops, Conditionals, Events, Functions</td>
   </tr>
 </table>
@@ -85,7 +84,7 @@ However, these measures were far too coarse-grained to tell us much beyond basic
 
 We wanted to take a step further to see if students in our CS Fundamentals courses were actually learning and applying CS concepts.  Most of the students using these courses are in elementary school and coding for the first time.  So while the courses ask students to solve puzzles using very basic coding concepts, anecdotally, we hear from teachers and professional development facilitators that students *are* *learning* the fundamentals of sequencing instructions, loops, conditionals, events, and more. 
 
-As we looked into measuring this, we could not find an externally validated assessment for measuring computer science for this age group. Furthermore, the research on learning trajectories for students in this age range is at best in the nascent stages. (NOTE: K–12 Computer Science Framework. (2016).  Chapter 10 - The Role of Research in the Development and Future of the Framework.  Retrieved from http://www.k12cs.org )  Measuring actual student learning in anything is a difficult and rigorous process and one for which our courses and puzzles were not originally designed. The CS Fundamentals puzzles are designed to help students learn to use basic coding concepts like sequence, iteration, and conditional logic, not for assessments. 
+As we looked into measuring this, we could not find an externally validated assessment for measuring computer science for this age group. Furthermore, the research on learning trajectories for students in this age range is at best in the nascent stages.<sup><a name="ftnt2ref" href="#ftnt2">[2]</a></sup> Measuring actual student learning in anything is a difficult and rigorous process and one for which our courses and puzzles were not originally designed. The CS Fundamentals puzzles are designed to help students learn to use basic coding concepts like sequence, iteration, and conditional logic, not for assessments. 
 
 Our challenge then became: given all of this student activity data can we detect whether or not students are demonstrating any "proficiency" at coding? Could we take this student activity data, combined with our knowledge about the puzzles themselves, to determine if the user was doing more than passively watching the screen, randomly moving coding blocks around, and hitting run?
 
@@ -107,41 +106,41 @@ Since then we also broke some of the concepts up into more descriptive parts. Fo
 
 <table>
   <tr>
-    <td>Sequencing (Algorithms)
+    <td valign="top">Sequencing (Algorithms)
 </td>
-    <td>Conditionals</td>
-    <td>Variables</td>
-    <td>Loops 
-Repeat
-Repeat Until / Repeat While
-For Loops
+    <td valign="top">Conditionals</td>
+    <td valign="top">Variables</td>
+    <td valign="top">Loops
+<li>Repeat
+<li>Repeat Until / Repeat While
+<li>For Loops
 </td>
-    <td>Functions 
-Defining and Calling 
-Defining and Calling w/Params
+    <td valign="top">Functions 
+<li>Defining and Calling 
+<li>Defining and Calling w/Params
 </td>
-    <td>Events</td>
+    <td valign="top">Events</td>
   </tr>
 </table>
-
+<br><br>
 
 The courses also present concepts such as debugging, collaboration, internet safety, and more, but those concepts and lessons are often "unplugged" or happen in the classroom outside the the Code Studio environment.  The metrics presented here only measure student performance on puzzles in Code Studio related to computer programming.
 
 We decided to rate puzzles for "difficulty" on a 5-point scale, with 1 being “easy” and 5 being “hard”.  Generally speaking, a rating of 1 meant the puzzle required virtually no problem solving - it might simply ask the student to click a button and observe the results, a stepping stone in a longer progression.  A rating of 5 meant the puzzle was very challenging, or the solution required sophisticated application of concepts to get it right or to produce the optimal solution.
 
-We produced a matrix of the concepts v. difficulty ratings.   Theoretically, each cell contained a list of items, typical for our puzzles, that we thought matched the given concept and difficulty.  Here’s a snippet that shows the difference between difficulty 1 and 5 for repeat loops:
+We produced a matrix of the concepts v. difficulty ratings.   Theoretically, each cell contained a list of items, typical for our puzzles, that we thought matched the given concept and difficulty.  Here’s a snippet that shows the difference between difficulty 1 and 5 for repeat loops:<br><br>
 
-<table>
+<div align="center"><table width="70%">
   <tr>
-    <td>Difficulty</td>
-    <td>Concept: Repeat Loops</td>
+    <th>Difficulty</th>
+    <th>Concept: Repeat Loops</th>
   </tr>
   <tr>
     <td>1</td>
-    <td>a) Move existing code into a loop with prompting
-b) Construct a simple (1-instruction) loop with prompting
-c) Identify areas of a program that repeat exactly
-d) Modify or delete a single loop instruction with prompting
+    <td>a) Move existing code into a loop with prompting<br/>
+b) Construct a simple (1-instruction) loop with prompting<br/>
+c) Identify areas of a program that repeat exactly<br/>
+d) Modify or delete a single loop instruction with prompting<br/>
 e) Change loop run parameter</td>
   </tr>
   <tr>
@@ -150,22 +149,25 @@ e) Change loop run parameter</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>a) Use a single nested loop layer without prompting
-b) Use multiple nested loops in sequence with or without prompting
+    <td>a) Use a single nested loop layer without prompting<br/>
+b) Use multiple nested loops in sequence with or without prompting<br/>
 c) Use nested loops more than one layer deep with prompting</td>
   </tr>
-</table>
+</table></div>
 
+<br><br>
 
 We shared the resulting [concept-difficulty matrix](https://docs.google.com/spreadsheets/d/15u3XKI8dr2ysFlp-pymvyX6XCvUe3YeK05M-AaM6H1o/edit#gid=0) for review in May of 2016. 
 
 You can read more the work that led up to that in this page we created to define: [What is Basic Coding Proficiency?](https://code.org/about/evaluation/proficiency)
 
-Once we had the matrix, we set about tagging each of the ~500 puzzles across all of the CS Fundamentals courses to associate each puzzle with one or more concepts, and for each concept, a difficulty rating.  For example, the puzzle shown below has different levels of difficulty for different concepts.  It is tagged:  *Sequencing-4, Repeat Until Loops-2 *and* Conditionals-2.* 
+Once we had the matrix, we set about tagging each of the ~500 puzzles across all of the CS Fundamentals courses to associate each puzzle with one or more concepts, and for each concept, a difficulty rating.  For example, the puzzle shown below has different levels of difficulty for different concepts.  It is tagged:  *Sequencing-4, Repeat Until Loops-2 and Conditionals-2.* 
 
-![image alt text](image_0.png)
+<p align="center"><img src="/images/proficiency/puzzle-screenshot.png" width="80%"/>
+<br/>
+<a href="https://studio.code.org/s/course3/stage/8/puzzle/3" target="_blank">https://studio.code.org/s/course3/stage/8/puzzle/3</a>
+</p>
 
-[https://studio.code.org/s/course3/stage/8/puzzle/3](https://studio.code.org/s/course3/stage/8/puzzle/3)
 
 Once tagged, we turned the crank on the database to produce all of the student activity data side by side with the concept-difficulty rating of each puzzle they completed. Our hope was that doing even superficial analysis of this new data would yield more insights and point us in the direction of determining some level of "coding proficiency".
 
@@ -173,7 +175,7 @@ Once tagged, we turned the crank on the database to produce all of the student a
 
 The first step of our analysis was simply trying to get a handle on what a student has demonstrated when they complete a particular puzzle. We expect that this will be an area where we continually iterate and improve our understanding, but as a first attempt we looked at three factors:
 
-1. **Did they ****complete**** the puzzle correctly?** On many puzzles, the student cannot complete the puzzle without using the concept correctly. Students who don’t get it may try over and over again or skip to the next puzzle leaving it temporarily incomplete.  We only counted puzzles that were solved correctly.
+1. **Did they complete the puzzle correctly?** On many puzzles, the student cannot complete the puzzle without using the concept correctly. Students who don’t get it may try over and over again or skip to the next puzzle leaving it temporarily incomplete.  We only counted puzzles that were solved correctly.
 
 2. **Did they complete the puzzle with optimal block counts?** Most of the puzzles on Code Studio show an "optimal" block count - the expected number of lines of code in the desired solution. We chose to use optimal block count as an indicator of “proficiency” since in many cases the optimal block count is not achievable without applying the desired concept - this is especially true for puzzles with loops. For example, you can pass the puzzle without a loop by manually repeating lines of code over and over, but only students who use loops can pass with the optimal block count.  
 
@@ -203,113 +205,7 @@ It’s also worth noting that some pairs, like Sequencing at difficulty 3 are pr
 
 The heat map below shows the total number of concept-to-difficulty mappings across all puzzles that we counted toward "proficiency".	  Notice that “sequencing” is prevalent - every puzzle that we tagged had some level of sequencing involved.
 
-### Total # of Concept-Difficulty Mappings across Courses 2, 3, 4 and Accelerated
-
-<table>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>Difficulty</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>CO
-NCEPT</td>
-    <td>Sequencing</td>
-    <td>137</td>
-    <td>56</td>
-    <td>199</td>
-    <td>50</td>
-    <td>91</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Conditionals</td>
-    <td>9</td>
-    <td>19</td>
-    <td>13</td>
-    <td>9</td>
-    <td>8</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Repeat Loop</td>
-    <td>123</td>
-    <td>70</td>
-    <td>58</td>
-    <td>51</td>
-    <td>35</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Repeat Until/While Loop</td>
-    <td>27</td>
-    <td>15</td>
-    <td>8</td>
-    <td>25</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>For Loop</td>
-    <td>25</td>
-    <td>1</td>
-    <td>7</td>
-    <td>25</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Variables</td>
-    <td>44</td>
-    <td>8</td>
-    <td>39</td>
-    <td>3</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Functions</td>
-    <td>38</td>
-    <td>5</td>
-    <td>24</td>
-    <td>1</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Functions w/Params</td>
-    <td>14</td>
-    <td>7</td>
-    <td>10</td>
-    <td>8</td>
-    <td>7</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Events</td>
-    <td>17</td>
-    <td>13</td>
-    <td>12</td>
-    <td>7</td>
-    <td>2</td>
-  </tr>
-</table>
-
-
-* Note that there are 3 sub-categories of loops. Proficiency in any one sub-category was required to achieve "proficiency in loops". Similar is true for functions.
+<p align="center"><img src="/images/proficiency/concept-difficulty-mapping.png" width="70%"/></p>
 
 **How many concepts? Three.**
 
@@ -323,9 +219,9 @@ Tagging puzzles for difficulty was problematic and, when vetted internally, show
 
 <table>
   <tr>
-    <td>Difficulty 1 - 2</td>
-    <td>Difficulty 3</td>
-    <td>Difficulty 4-5</td>
+    <th>Difficulty 1 - 2</th>
+    <th>Difficulty 3</th>
+    <th>Difficulty 4-5</th>
   </tr>
   <tr>
     <td>Difficulty 1 and 2 tend to measure measure introduction or basic exposure to a concept or idea. The student does not have to understand the concepts to solve puzzles at these levels. While they may use loops, conditionals, etc., the puzzles are simple or the student is prompted to do it in the right way.</td>
@@ -334,18 +230,21 @@ Tagging puzzles for difficulty was problematic and, when vetted internally, show
   </tr>
 </table>
 
-
-** **
-
 Since Difficulty 3 was the first where students tended to be solving problems rather than simply following instructions, we chose difficulty level 3 as the lower cut off point for demonstrating "basic proficiency".  We hope to have many students go beyond this basic level to reach difficulty levels 4 and 5. And, our middle school and high school courses go much further in teaching computer science. 
 
 **Finally, our definition of "proficiency"**
 
 In the end our definition for showing "basic coding proficiency" is:
 
-*A student has demonstrated basic coding proficiency when they have solved three or more puzzles, for three or more concept-areas, at difficulty level 3 or higher, across one or more CS Fundamentals courses in Code Studio.*
+<p style="width: 70%; margin: auto;">
+<em>
+A student has demonstrated basic coding proficiency when they have solved three or more puzzles, for three or more concept-areas, at difficulty level 3 or higher, across one or more CS Fundamentals courses in Code Studio.
+</em>
+</p>
+<br/>
 
 The fact that there is some symmetry to this definition (3 puzzles, 3 concepts, difficulty 3) is purely coincidental.  We were not trying to be cute or to develop some kind of mnemonic.  Given the distribution of concept-difficulties (see the heat map above) this seemed to be a fair bar for our initial definition of "basic proficiency" and is helpful for visualizing progress, but it also has flaws, described later in this document, which we hope to improve over time.
+
 
 # Results
 
@@ -353,44 +252,30 @@ We have only begun to dig more deeply into the data to look for patterns and we 
 
 ### Dates and Scope of Data
 
-What follows below are results and data collected between **January 1 - December 31, 2016 **from student users who were **logged in** to the Code Studio environment.  Code Studio does not require users to be logged in order to use the puzzles.  A large number of users, roughly a third, use these materials without logging in. However, most of the non-logged in user sessions are show activity on puzzles early in courses, so our assumption is that most of these students either drop out or create accounts before they reach basic coding proficiency. 
+What follows below are results and data collected between **January 1 - December 31, 2016** from student users who were **logged in** to the Code Studio environment.  Code Studio does not require users to be logged in order to use the puzzles.  A large number of users, roughly a third, use these materials without logging in. However, most of the non-logged in user sessions are show activity on puzzles early in courses, so our assumption is that most of these students either drop out or create accounts before they reach basic coding proficiency. 
 
 ## How many students? 
 
-<table>
-  <tr>
-    <td></td>
-    <td>Number of students</td>
-    <td>% of all student users</td>
-  </tr>
-  <tr>
-    <td>Students demonstrating basic coding proficiency </td>
-    <td>887,829</td>
-    <td>23%</td>
-  </tr>
-</table>
+<p align="center"><img src="/images/proficiency/students-proficient.png" width="70%"/></p>
+
+887,829 students of all ages demonstrated proficiency according to our definition (3 concepts, 3 correct puzzles, difficulty 3 or higher). This number represents roughly 23% of all students who successfully complete any puzzles in our system. Here is a view of how the raw numbers break down with students who are in the K-12 age range.<sup><a name="ftnt3ref" href="#ftnt3">[3]</a></sup>
+
+<p></p>
 
 
-887,829 students of all ages demonstrated proficiency according to our definition (3 concepts, 3 correct puzzles, difficulty 3 or higher). This number represents roughly 23% of all students who successfully complete any puzzles in our system. Here is a view of how the raw numbers break down with students who are in the K-12 age range (NOTE:  Student ages are derived from birthdate which comes from a variety of sources. It can be self-reported, reported by teacher, or from an external linked account like Google or Facebook. Over 90% of student accounts have an age associated.).  
-
-<table>
-  <tr>
-    <td>Fig. 0 - Number of students demonstrating basic proficiency in 2016 by age</td>
-  </tr>
-  <tr>
-    <td>   demonstrated proficiency      not yet demonstrating proficiency </td>
-  </tr>
-  <tr>
-    <td>Age</td>
-  </tr>
-</table>
+<p align="center">
+    <strong>Fig. 0 - Number of students demonstrating basic proficiency in 2016 by age</strong><br/>
+       <img src="/images/proficiency/darkblue_sq.png"> demonstrated proficiency <img src="/images/proficiency/lightblue_sq.png">      not yet demonstrating proficiency<br/>
+    <img src="/images/proficiency/proficiency-chart.png" width="80%"/><br/>
+    Age
+</p>
 
 
 ### An important note on percentages
 
 Why do "only" 23% demonstrate basic coding proficiency? It’s important to note that the students using Code Studio aren’t all studying as part of a long-term course. Again, roughly a third of the students using Code Studio never even register for an account and their usage cannot be measured in this fashion, even if they complete every single puzzle in every single course.  Looking only at students with registered accounts, they fall into three roughly equal-sized buckets in terms of their general activity on our system: 
 
-1. Roughly a third use the materials for *less than a day*. Many teachers and schools use CS Fundamentals courses for Hour of Code (NOTE:  The Hour of Code is an annual event to celebrate and increase participation in computer science by encouraging as many people as possible around the world to spend one hour engaged in some kind of coding activity during Computer Science Education Week (early December).  See: https://hourofcode.com/us) activities; students work on the first few puzzles for a one-time event and never come back. 
+1. Roughly a third use the materials for *less than a day*. Many teachers and schools use CS Fundamentals courses for Hour of Code<sup><a name="ftnt4ref" href="#ftnt4">[4]</a></sup> activities; students work on the first few puzzles for a one-time event and never come back. 
 
 2. Roughly a third try puzzles for less than a month, which probably isn’t enough time to complete enough qualifying puzzles. 
 
@@ -398,140 +283,79 @@ Why do "only" 23% demonstrate basic coding proficiency? It’s important to note
 
 Given the nature of how different students, schools, and teachers use Code Studio, we don’t set goals around the *percentage* of these students who demonstrate proficiency, because the fidelity or mode of implementation varies wildly from Hour of Code activities (one hour) all the way to complete course implementations (20+ hours). What’s more important to us is the absolute number of students who demonstrate proficiency, and the absolute number of teachers who implement a high-fidelity course in their classrooms. 
 
-In the charts below, unless noted otherwise, when we report a percentage,* the denominator is **the set of registered student accounts on Code Studio where the students completed at least one puzzle (with optimal block counts and without viewing hints) in any one of the courses where student progress counts towards our measure of coding proficiency during the period of Jan. 1 - Dec. 31, 2016.*
+In the charts below, unless noted otherwise, when we report a percentage, *the denominator is the set of registered student accounts on Code Studio where the students completed at least one puzzle (with optimal block counts and without viewing hints) in any one of the courses where student progress counts towards our measure of coding proficiency during the period of Jan. 1 - Dec. 31, 2016.*
 
 ### Breakdown between classrooms vs. independent study
 
 From our data we see that most students in the K-12 age range are using the materials "with a teacher" which means that the student account has been assigned to a section that belongs to a teacher account.  
 
-<table style="border: none;">
-  <tr>
-    <td style="border: none; font-weight: bold; text-align: center">Fig. 1 - Students with and without a teacher as a % of all students within their age group</td>
-  </tr>
-  <tr>
-    <td style="border: none;  text-align: center">
 
-    <img src="proficiency2016_images/image05.png" style=" display:block; margin: auto"><img src="proficiency2016_images/image01.png" style=" display:block; width:100%;">Age</td>
-  </tr>
-</table>
-
+<p align="center">
+    <strong>
+        Fig. 1 - Students with and without a teacher as a % of all students within their age group
+    </strong><br/>
+       <img src="/images/proficiency/darkblue_sq.png"> with teacher <img src="/images/proficiency/lightblue_sq.png"> without teacher<br/>
+    <img src="/images/proficiency/with-without-teacher.png" width="80%"/><br/>
+    Age
+</p>
 
 ### Breakdown by concept and difficulty
 
 The table below shows, for each concept, the raw number of students who solved 3 or more puzzles (with optimal block count and no hints) at or above each level of difficulty. Recall that difficulty 3 is where we set the bar to say a student "demonstrated proficiency" for any given concept, but this table effectively shows what it would look like if we had set the bar at other levels of difficulty.
 
-**Fig. 2 - Number of students demonstrating proficiency across concepts and levels of difficulty**
 
-<table>
-  <tr>
-    <td></td>
-    <td>Difficulty 1</td>
-    <td>Difficulty 2</td>
-    <td>Difficulty 3</td>
-    <td>Difficulty 4</td>
-    <td>Difficulty 5</td>
-  </tr>
-  <tr>
-    <td>Sequencing</td>
-    <td>3,619,302</td>
-    <td>3,555,217</td>
-    <td>3,286,079</td>
-    <td>1,112,935</td>
-    <td>981,516</td>
-  </tr>
-  <tr>
-    <td>Conditionals</td>
-    <td>1,018,804</td>
-    <td>1,013,773</td>
-    <td>771,871</td>
-    <td>431,386</td>
-    <td>93,874</td>
-  </tr>
-  <tr>
-    <td>Loops</td>
-    <td>2,343,097</td>
-    <td>1,922,722</td>
-    <td>1,734,299</td>
-    <td>1,387,980</td>
-    <td>353,852</td>
-  </tr>
-  <tr>
-    <td>Variables</td>
-    <td>341,402</td>
-    <td>249,063</td>
-    <td>146,267</td>
-    <td>13,906</td>
-    <td>7,438</td>
-  </tr>
-  <tr>
-    <td>Functions</td>
-    <td>547,077</td>
-    <td>450,360</td>
-    <td>313,938</td>
-    <td>22,290</td>
-    <td>7,525</td>
-  </tr>
-  <tr>
-    <td>Events</td>
-    <td>582,198</td>
-    <td>546,671</td>
-    <td>473,030</td>
-    <td>106,810</td>
-    <td>N/A</td>
-  </tr>
-</table>
+<p align="center">
+    <strong>Fig. 2 - Number of students demonstrating proficiency across concepts and levels of difficulty**
+</strong><br/>
+<img src="/images/proficiency/concept-difficulty-breakdown.png" width="80%"/>
+</p>
 
 
-## How long does it take to demonstrate proficiency?
 
-Roughly speaking, a majority of students who reach the proficiency bar do so after working on about 100 puzzles and most have done so by 200 puzzles.  Overall, most student activity is confined to one course as the number of coding puzzles in a course ranges from 109 to 161.  Many students reaching proficiency in 100 puzzles are older students using the accelerated course which has 109 coding puzzles. 
+## Activity of students demonstrating proficiency 
 
-The chart below shows for all students who eventually reach the proficiency bar, how many total puzzles they attempted.  For example, of all students who eventually reached proficiency roughly 50% have done so in 100 puzzles or fewer.   Note that it does not indicate the moment when they actually reached proficiency. Rather, it shows for a student who reached proficiency, the all-time number of puzzles that student attempted.  
+Roughly speaking, a majority of students who reach the proficiency bar do so having worked on 100 puzzles or fewer, and most have done so by 200 puzzles or fewer.  Overall, most student activity is confined to one course as the number of coding puzzles in a course ranges from 109 to 161.  Many students reaching proficiency in 100 puzzles or fewer are older students using the accelerated course which has 109 coding puzzles. 
 
-<table>
-  <tr>
-    <td>Fig. 3 - Cumulative % of students demonstrating proficiency by number of puzzles attempted</td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-</table>
+The chart below shows for all students who eventually reach the proficiency bar, how many *total* puzzles they attempted. Note that it does not indicate the moment when they actually reached proficiency. Rather, it shows for a student who reached proficiency, the all-time number of puzzles that student attempted.  
 
+<p></p>
 
-Note: in the graph above we cut the x-axis off at 200 puzzles because the remaining portion of the curve flattens out considerably over another 680 puzzles. The remaining ~10% likely represents students who did every puzzle in many, or all, of the different courses.
+<p align="center">
+    <strong>
+        Fig. 3 - Cumulative % of students demonstrating proficiency by number of puzzles attempted
+    </strong><br/>
+    <img src="/images/proficiency/cumulative.png" width="80%"/><br/>
+
+</p>
+
+*Note: in the graph above we cut the x-axis off at 200 puzzles because the remaining portion of the curve flattens out considerably over another ~400 puzzles. The remaining ~10% likely represents students who did every puzzle in many, or all, of the different courses.*
 
 ## Does the age of the student make a difference?
 
 Keeping in mind that 23% of all students demonstrate proficiency, the chart below shows how it breaks down by age. You can see that larger *percentages* of older students reach proficiency, though it’s worth noting (see above) that fewer older students overall use the courses.  For the chart below we’ve confined the data to the age range 7-13 which is the age the puzzles were designed for.
 
-<table>
-  <tr>
-    <td>Fig. 4 - Students demonstrating basic proficiency as % of all students within their age group</td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Age</td>
-  </tr>
-</table>
 
+<p></p>
+
+<p align="center">
+    <strong>
+        Fig. 4 - Students demonstrating basic proficiency as % of all students within their age group
+    </strong><br/>
+    <img src="/images/proficiency/age-group.png" width="70%"/><br/>
+    Age
+
+</p>
 
 Because of where we set the bar, it’s pretty difficult for young students to demonstrate proficiency.  We did not count *any* of the puzzles in course 1 (course for pre-readers) toward the proficiency measure.  We suspect that older students’ reading level, physical dexterity with computer controls and the fact that they are more likely to be using these courses in a classroom setting, contribute to these effects.  
 
 ## Does having a teacher make a difference?
 
-We found students associated with teachers (NOTE:  Our database keeps track of accounts associated with a "class" that a teacher (self-identified) sets up in Code Studio.) were more likely to demonstrate proficiency. Having a teacher appears to make a slight difference for younger students, but for older students the difference is quite pronounced.  There are a variety of factors that may lead to this that we don’t have insight into at the moment.  For example, a younger student who appears to be working “on their own” might be at home side by side with a parent, whereas an older student might actually be on their own.  This is another area of potential future investigation.
+We found students associated with teachers<sup><a name="ftnt5ref" href="#ftnt5">[5]</a></sup> were more likely to demonstrate proficiency. Having a teacher appears to make a slight difference for younger students, but for older students the difference is quite pronounced.  There are a variety of factors that may lead to this that we don’t have insight into at the moment.  For example, a younger student who appears to be working “on their own” might be at home side by side with a parent, whereas an older student might actually be on their own.  This is another area of potential future investigation.
 
 <table>
   <tr>
-    <td>Fig. 5 - Students demonstrating proficiency with or without a teacher as % of all students
-</td>
-    <td>Fig. 6. - Students demonstrating basic proficiency with or without a teacher as % of all students in their age group
-
-
-Age
-without teacher       with teacher</td>
+    <td style="border: 0;" width="30%" valign="top"><strong>Fig. 5 - Students demonstrating proficiency with or without a teacher as % of all students</strong><br><br><img src="/images/proficiency/with-without-all-students.png" width="90%"/></td>
+    <td style="border: 0;" width="60%" valign="top"><strong>Fig. 6. - Students demonstrating basic proficiency with or without a teacher as % of all students in their age group</strong><br><br><img src="/images/proficiency/teacher-age-group.png" width="90%"/></td>
   </tr>
 </table>
 
@@ -540,16 +364,15 @@ without teacher       with teacher</td>
 
 Males are more likely to demonstrate proficiency than female students. Trying to slice the data other ways - by age, by course, with or without a teacher, etc., - the gender difference remained not only present, but roughly the same proportionally.  
 
+<p></p>
 
-<table width=100%>
-  <tr>
-    <td>Fig. 7 - Percentage of students (all ages) demonstrating proficiency by gender</td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-</table>
+<p align="center">
+    <strong>
+        Fig. 7 - Percentage of students (all ages) demonstrating proficiency by gender
+    </strong><br/>
+    <img src="/images/proficiency/gender.png" width="30%"/>
 
+</p>
 
 We’re curious why we see this gender disparity - is it something inherent in our course materials, or other factors? We cannot make any broad generalizations about course implementation details that may affect this. For example, anecdotally, we know that some teachers use our materials as instruction for all students in the classroom, while others leave it as an optional or "special" activity. There are plenty of other external factors that influence classrooms or might drive students to our site to learn on their own that we do not account for in these measures.  What can we do to improve this? We’ll continue to look into it.
 
@@ -583,7 +406,7 @@ To clarify these kinds of issues, we are drafting a new version of the matrix th
 
 An ideal metric of student proficiency would be predictive of future student performance. At this point, we can’t yet say how predictive this measure will be. 
 
-In our current toolset in Code Studio, every student gets the same puzzles in the same order. Thus, we can not easily test how students would perform on harder puzzles if they saw them earlier in the sequence. There is no indication of puzzles that are too easy. We also can’t easily measure how completing level-three difficulty puzzles might vary based on the problem context - is reasoning about a loop in a "zombie" puzzle different from a similar loop in “angry birds”? Nonetheless, we are beginning to look at what we can understand around predictivity in our current environment. 
+In our current toolset in Code Studio, every student gets the same puzzles in the same order. Thus, we cannot easily test how students would perform on harder puzzles if they saw them earlier in the sequence. There is no indication of puzzles that are too easy. We also can’t easily measure how completing level-three difficulty puzzles might vary based on the problem context - is reasoning about a loop in a "zombie" puzzle different from a similar loop in “angry birds”? Nonetheless, we are beginning to look at what we can understand around predictivity in our current environment. 
 
 One area in particular we’d like to explore is how many puzzles a student should solve to demonstrate proficiency.  We are currently using 3 to make sure we don’t give a student credit for anomalous successes  (perhaps with help from a neighbor or teacher). At the same time, 3 puzzles may be too few. We’ll look at whether changing the metric to require 4, 8, or 10+ puzzles makes it more predictive, but need to investigate further to find the right balance based on the number of puzzles that actually exist for certain concept-difficulty pairings.  However, we don’t want to make the number so large that it effectively makes it impossible to achieve "proficiency" in cases where there are only a handful of puzzles available for a particular concept.
 
@@ -596,12 +419,21 @@ We plan to continue to measure and refine our metrics to assess student proficie
 Some of the things we are planning to do in the near future related to this K-5 "coding proficiency" work:
 
 * Remake the concept-difficulty matrix (and associated puzzle tags) to make it more objective, reliable and auditable
-
 * Do classroom observations and studies to validate and calibrate proficiency measures from data
-
 * Apply more rigorous statistical models and techniques (such as ELO modeling) for analysis
-
 * Do a public data release
 
 We have some ideas about how to improve our work but we also invite feedback and others’ ideas about what we could be doing.  If you have suggestions or thoughts on how we can continue or improve this research or if you’d like to get involved, we’d welcome your input and feedback.  Please contact us at [data@code.org](mailto:data@code.org) we’d welcome your feedback. 
+
+---
+
+<a name="ftnt1" href="#ftnt1ref">[1]</a> Dale Parsons and Patricia Haden. 2006. *Parson's programming puzzles: a fun and effective learning tool for first programming courses.* [https://dl.acm.org/citation.cfm?id=1151890](https://dl.acm.org/citation.cfm?id=1151890))
+
+<a name="ftnt2" href="#ftnt2ref">[2]</a> *K–12 Computer Science Framework.* (2016).  Chapter 10 - The Role of Research in the Development and Future of the Framework.  Retrieved from http://www.k12cs.org 
+
+<a name="ftnt3" href="#ftnt3ref">[3]</a> Student ages are derived from birthdate which comes from a variety of sources. It can be self-reported, reported by teacher, or from an external linked account like Google or Facebook. Over 90% of student accounts have an age associated.
+
+<a name="ftnt4" href="#ftnt4ref">[4]</a> The Hour of Code is an annual event to celebrate and increase participation in computer science by encouraging as many people as possible around the world to spend one hour engaged in some kind of coding activity during Computer Science Education Week (early December).  See: [https://hourofcode.com/us](https://hourofcode.com/us)
+
+<a name="ftnt5" href="#ftnt5ref">[5]</a> Our database keeps track of accounts associated with a “class” that a teacher (self-identified) sets up in Code Studio.
 
