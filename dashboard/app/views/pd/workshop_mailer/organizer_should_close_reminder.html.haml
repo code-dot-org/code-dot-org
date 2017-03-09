@@ -1,0 +1,15 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  This is an email reminding you that your
+  = @workshop.course
+  = @workshop.subject
+  = link_to 'workshop', "/pd/workshop_dashboard/workshops/#{@workshop.id}"
+  on
+  = @workshop.sessions.first.formatted_date
+  at
+  = "#{@workshop.location_name}"
+  was scheduled to end more than a day ago. Please close it or something.

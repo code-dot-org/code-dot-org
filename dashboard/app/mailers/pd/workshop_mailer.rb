@@ -76,6 +76,15 @@ class Pd::WorkshopMailer < ActionMailer::Base
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
+  def organizer_should_close_reminder(workshop)
+    @workshop = workshop
+
+    mail content_type: 'text/html',
+      from: from_no_reply,
+      subject: 'Code.org workshop needs closing',
+      to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
   def teacher_enrollment_reminder(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
