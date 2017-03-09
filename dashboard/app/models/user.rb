@@ -961,7 +961,7 @@ class User < ActiveRecord::Base
       end
 
       if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.basic_proficiency?
+          user_proficiency.proficient?
         user_proficiency.basic_proficiency_at = time_now
       end
 
@@ -1015,7 +1015,7 @@ class User < ActiveRecord::Base
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
-      if !user_level.perfect? &&
+      if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         ([
           ScriptConstants::TWENTY_HOUR_NAME,

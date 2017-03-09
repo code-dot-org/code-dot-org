@@ -50,7 +50,7 @@ module Pd::Payment
     end
 
     test 'plp non-urban' do
-      plp = create :professional_learning_partner, contact: @workshop.organizer, urban: false
+      plp = create :regional_partner, contact: @workshop.organizer, urban: false
 
       workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(@workshop)
 
@@ -72,7 +72,7 @@ module Pd::Payment
     end
 
     test 'plp urban' do
-      plp = create :professional_learning_partner, contact: @workshop.organizer, urban: true
+      plp = create :regional_partner, contact: @workshop.organizer, urban: true
 
       workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(@workshop)
 
