@@ -448,8 +448,13 @@ function handleExecutionError(err, lineNumber) {
   outputError(String(err), lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
-  // complete puzzle, which will prevent further execution
-  Applab.onPuzzleComplete();
+  // prevent further execution
+  Applab.clearEventHandlersKillTickLoop();
+
+  // Used by level tests
+  if (Applab.onExecutionError) {
+    Applab.onExecutionError();
+  }
 }
 
 Applab.getCode = function () {
@@ -571,6 +576,8 @@ Applab.init = function (config) {
     isSignedIn: config.isSignedIn
   };
   Applab.isReadOnlyView = config.readonlyWorkspace;
+
+  Applab.onExecutionError = config.onExecutionError;
 
   loadLevel();
 

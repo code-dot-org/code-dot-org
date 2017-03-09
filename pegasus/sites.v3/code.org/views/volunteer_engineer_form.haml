@@ -16,7 +16,7 @@
     %h2= I18n.t(:volunteer_engineer_submission_update_information)
     %h3= I18n.t(:volunteer_engineer_submission_header_shared)
 
-  - else 
+  - else
     %h2= I18n.t(:volunteer_engineer_submission_header_shared)
 
   .alert.alert-danger#error-message{style: 'display: none', role: 'alert'}
@@ -99,12 +99,18 @@
       %input#volunteer-email.form-control{name: "email_s", placeholder: I18n.t(:volunteer_engineer_submission_field_email_placeholder), type: "text", required: true, value: form.data['email_s']}/
 
   %br
-  .form-group
+  .form-group{style: "margin-bottom: 0px"}
     %p= I18n.t(:volunteer_engineer_submission_final_paragraph)
     %div
       %label{style: 'font-weight: normal;', for: 'volunteer-allow-contact'}
         %input#volunteer-allow-contact{name: 'allow_contact_b', type: 'checkbox', value: '1', required: true, checked: true}
           = I18n.t(:volunteer_engineer_submission_checkbox_contact)
+
+  .form-group
+    %div
+      %label{style: 'font-weight: normal;', for: 'volunteer-age-18-plus'}
+        %input#volunteer-age-18-plus{name: 'age_18_plus_b', type: 'checkbox', value: '1', required: true, checked: true}
+          = I18n.t(:volunteer_engineer_submission_checkbox_age_18_plus)
 
   .form-group
     %button.btn.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
@@ -146,7 +152,7 @@
   function processVolunteerEngineerFormResponse(data)
   {
     $('form').hide();
-    $('#volunteer-engineer-thanks').show();
+    $('#volunteer-engineer-thanks').fadeIn();
     $('#edit-link-tag').attr('href', '/volunteer/engineer/edit/' + data.secret);
   }
 
@@ -165,7 +171,10 @@
 
     $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
 
-    $('body').scrollTop(0);
+    $('html, body').animate({
+      scrollTop: $('#volunteer-engineer-submit-form').offset().top
+    }, 1000);
+
     $("#btn-submit").removeAttr('disabled');
     $("#btn-submit").removeClass("button_disabled").addClass("button_enabled");
   }

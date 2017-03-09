@@ -961,7 +961,7 @@ class User < ActiveRecord::Base
       end
 
       if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.basic_proficiency?
+          user_proficiency.proficient?
         user_proficiency.basic_proficiency_at = time_now
       end
 

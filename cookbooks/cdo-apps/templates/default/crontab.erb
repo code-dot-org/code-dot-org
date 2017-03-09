@@ -59,6 +59,7 @@
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'fetch_external_resources'), notify:'dev+crontab@code.org'
       cronjob at:'30 17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
       cronjob at:'0 13 * * *', do:deploy_dir('tools', 'scripts', 'brokenLinkChecker', 'brokenLinkChecker.js'), notify:'dev+crontab@code.org'
+      cronjob at:'30 15 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
     end
 
     if node.chef_environment == 'production' # production daemon

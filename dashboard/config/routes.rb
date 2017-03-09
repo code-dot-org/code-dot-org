@@ -232,6 +232,8 @@ Dashboard::Application.routes.draw do
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
+  get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
+  post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -323,6 +325,7 @@ Dashboard::Application.routes.draw do
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
+      resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
 
       get :teacher_applications, to: 'teacher_applications#index'
