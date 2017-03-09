@@ -566,11 +566,11 @@ ActiveRecord::Schema.define(version: 20170308012502) do
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
-  create_table "regional_partner_organizers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "organizer_id",        null: false
+  create_table "regional_partner_program_managers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "program_manager_id",  null: false
     t.integer "regional_partner_id", null: false
-    t.index ["organizer_id"], name: "index_regional_partner_organizers_on_organizer_id", using: :btree
-    t.index ["regional_partner_id"], name: "index_regional_partner_organizers_on_regional_partner_id", using: :btree
+    t.index ["program_manager_id"], name: "index_regional_partner_program_managers_on_program_manager_id", using: :btree
+    t.index ["regional_partner_id"], name: "index_regional_partner_program_managers_on_regional_partner_id", using: :btree
   end
 
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
