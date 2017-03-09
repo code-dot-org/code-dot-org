@@ -56,11 +56,4 @@ namespace :db do
     Sequel::Migrator.run(DB, migrations_dir)
     Rake::Task['db:version'].execute
   end
-
-  task :help do
-    puts 'db:version'
-    puts 'db:migrate'
-    puts 'db:rollback'
-    puts 'db:reset'
-  end
 end
