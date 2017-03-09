@@ -257,6 +257,10 @@ class Pd::Workshop < ActiveRecord::Base
     Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
   end
 
+  def self.should_have_ended
+    self.in_state(STATE_IN_PROGRESS).where("started_at < ?", Time.zone.now - 24.hours)
+  end
+
   def course_name
     COURSE_NAMES_MAP[course]
   end
@@ -333,9 +337,23 @@ class Pd::Workshop < ActiveRecord::Base
     raise "Failed to send #{days} day workshop reminders: #{errors.join(', ')}" unless errors.empty?
   end
 
+  def self.send_reminder_to_close
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+    should_have_ended.each do |workshop|
+      begin
+        Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
+      rescue => e
+        errors << "organizer should close workshop #{workshop.id} - #{e.message}"
+      end
+    end
+    raise "Failed to send should close workshop reminders: #{errors.join(', ')}" unless errors.empty?
+  end
+
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
+    send_reminder_to_close
   end
 
   def self.process_ended_workshop_async(id)
