@@ -6,7 +6,7 @@ end
 When /^I save pixelation data and reload$/ do
   steps %{
     And I press "save_image"
-    And I wait for 10 seconds
+    And I wait until Ajax requests are finished
     And I reload the page
     And I wait to see "#x-close"
     And element ".modal-body .dialog-title" is visible
