@@ -174,10 +174,9 @@ module.exports = {
       delayLoadLevelDefinition: function () {
         return levelDefinition;
       },
-      runBeforeClick: function () {
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
+      onExecutionError: function () {
+        // Trigger the custom validator and done callback
+        Applab.onPuzzleComplete();
       },
       customValidator: function (assert) {
         var errorText = 'Unknown identifier: turnRight';
@@ -231,10 +230,9 @@ module.exports = {
           executePaletteApisOnly: false
         });
       },
-      runBeforeClick: function () {
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
+      onExecutionError: function () {
+        // Trigger the custom validator and done callback
+        Applab.onPuzzleComplete();
       },
       customValidator: function (assert) {
         var button = document.getElementById('id');
