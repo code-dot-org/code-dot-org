@@ -32,14 +32,10 @@ Feature: Using the teacher dashboard
     Given I create a teacher-associated student named "Sally"
     And I am on "http://studio.code.org/projects/applab"
 
-    # rename the project
-    And I click selector ".project_edit" once I see it
-    And I wait until element ".project_name.header_input" is visible
-    And I type "thumb wars" into ".project_name.header_input"
-    And I click selector ".project_save"
+    # Make sure the initial save doesn't interfere with renaming the project
+    And I wait for initial applab save to complete
 
-    # try renaming the project a second time in case the initial save
-    # of the new project interfered with the first renaming
+    # rename the project
     And I click selector ".project_edit" once I see it
     And I wait until element ".project_name.header_input" is visible
     And I type "thumb wars" into ".project_name.header_input"
