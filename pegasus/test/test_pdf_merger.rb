@@ -36,50 +36,50 @@ class PDFMergerTest < Minitest::Test
   end
 
   def test_reading_pdfs
-    assert_equal(14, PDF::Reader.new(@local_pdf1).pages.size)
-    assert_equal(14, PDF::Reader.new(@local_pdf2).pages.size)
+    assert_equal 14, PDF::Reader.new(@local_pdf1).pages.size
+    assert_equal 14, PDF::Reader.new(@local_pdf2).pages.size
   end
 
   def test_merge_two_local_pdfs
-    assert(!File.exist?(@output))
+    refute File.exist?(@output), "Expected file #{@output} not to exist."
     PDF.merge_pdfs(@output, @local_pdf1, @local_pdf2)
-    assert(File.exist?(@output))
-    assert_equal(28, PDF::Reader.new(@output).pages.size)
+    assert File.exist?(@output), "Expected file #{@output} to exist."
+    assert_equal 28, PDF::Reader.new(@output).pages.size
   end
 
   def test_merge_two_remote_pdfs
     VCR.use_cassette('pdf/merge_remote') do
-      assert(!File.exist?(@output))
+      refute File.exist?(@output), "Expected file #{@output} not to exist."
       PDF.merge_pdfs(@output, @remote_pdf1, @remote_pdf2)
-      assert(File.exist?(@output))
-      assert_equal(12, PDF::Reader.new(@output).pages.size)
+      assert File.exist?(@output), "Expected file #{@output} to exist."
+      assert_equal 12, PDF::Reader.new(@output).pages.size
     end
   end
 
   def test_merge_from_file
     VCR.use_cassette('pdf/merge_remote') do
-      assert(!File.exist?(@remote_collate_output_file))
+      refute File.exist?(@remote_collate_output_file), "Expected file #{@remote_collate_output_file} not to exist."
       merge_file_pdfs(@remote_collate_file, @remote_collate_output_file)
-      assert(File.exist?(@remote_collate_output_file))
-      assert_equal(12, PDF::Reader.new(@remote_collate_output_file).pages.size)
+      assert File.exist?(@remote_collate_output_file), "Expected file #{@remote_collate_output_file} to exist."
+      assert_equal 12, PDF::Reader.new(@remote_collate_output_file).pages.size
     end
   end
 
   def test_merge_local_from_file
-    assert(!File.exist?(@local_collate_output_file))
+    refute File.exist?(@local_collate_output_file), "Expected file #{@local_collate_output_file} not to exist."
     merge_file_pdfs(@local_collate_file, @local_collate_output_file)
-    assert(File.exist?(@local_collate_output_file))
-    assert_equal(28, PDF::Reader.new(@local_collate_output_file).pages.size)
+    assert File.exist?(@local_collate_output_file), "Expected file #{@local_collate_output_file} to exist."
+    assert_equal 28, PDF::Reader.new(@local_collate_output_file).pages.size
   end
 
   def test_merge_with_numbers
-    assert(!File.exist?(@numbered_collate_output_file))
+    refute File.exist?(@numbered_collate_output_file), "Expected file #{@numbered_collate_output_file} not to exist."
     merge_file_pdfs(@numbered_collate_file, @temp_generated_unnumbered_pdf)
     PDF.number_pdf(@temp_generated_unnumbered_pdf, @numbered_collate_output_file)
-    assert(File.exist?(@numbered_collate_output_file))
+    assert File.exist?(@numbered_collate_output_file), "Expected file #{@numbered_collate_output_file} to exist."
     pages = PDF::Reader.new(@numbered_collate_output_file).pages
-    assert_equal(28, pages.size, "Has #{pages.size} pages, should have 28.")
-    assert(pages[27].text.include?('28'))
+    assert_equal 28, pages.size, "Has #{pages.size} pages, should have 28."
+    assert_includes pages[27].text, '28'
   end
 
   def teardown
