@@ -12,7 +12,6 @@ class PDFMergerTest < Minitest::Test
   include PDF
 
   def setup
-    assert_local_dependencies
     @output = File.expand_path('../fixtures/output/out.pdf', __FILE__)
     @remote_collate_output_file = File.expand_path('../fixtures/output/remote_files.pdf', __FILE__)
     @local_collate_output_file =  File.expand_path('../fixtures/output/local_files.pdf', __FILE__)
@@ -81,11 +80,13 @@ Expected '#{dependency[:name]}' to be installed.
   end
 
   def test_reading_pdfs
+    assert_local_dependencies
     assert_equal 14, PDF::Reader.new(@local_pdf1).pages.size
     assert_equal 14, PDF::Reader.new(@local_pdf2).pages.size
   end
 
   def test_merge_two_local_pdfs
+    assert_local_dependencies
     refute File.exist?(@output), "Expected file #{@output} not to exist."
     PDF.merge_pdfs(@output, @local_pdf1, @local_pdf2)
     assert File.exist?(@output), "Expected file #{@output} to exist."
@@ -93,6 +94,7 @@ Expected '#{dependency[:name]}' to be installed.
   end
 
   def test_merge_two_remote_pdfs
+    assert_local_dependencies
     VCR.use_cassette('pdf/merge_remote') do
       refute File.exist?(@output), "Expected file #{@output} not to exist."
       PDF.merge_pdfs(@output, @remote_pdf1, @remote_pdf2)
@@ -102,6 +104,7 @@ Expected '#{dependency[:name]}' to be installed.
   end
 
   def test_merge_from_file
+    assert_local_dependencies
     VCR.use_cassette('pdf/merge_remote') do
       refute File.exist?(@remote_collate_output_file), "Expected file #{@remote_collate_output_file} not to exist."
       merge_file_pdfs(@remote_collate_file, @remote_collate_output_file)
@@ -111,6 +114,7 @@ Expected '#{dependency[:name]}' to be installed.
   end
 
   def test_merge_local_from_file
+    assert_local_dependencies
     refute File.exist?(@local_collate_output_file), "Expected file #{@local_collate_output_file} not to exist."
     merge_file_pdfs(@local_collate_file, @local_collate_output_file)
     assert File.exist?(@local_collate_output_file), "Expected file #{@local_collate_output_file} to exist."
@@ -118,6 +122,7 @@ Expected '#{dependency[:name]}' to be installed.
   end
 
   def test_merge_with_numbers
+    assert_local_dependencies
     refute File.exist?(@numbered_collate_output_file), "Expected file #{@numbered_collate_output_file} not to exist."
     merge_file_pdfs(@numbered_collate_file, @temp_generated_unnumbered_pdf)
     PDF.number_pdf(@temp_generated_unnumbered_pdf, @numbered_collate_output_file)
