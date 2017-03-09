@@ -23,28 +23,18 @@
 #  index_levels_on_name     (name)
 #
 
-class External < DSLDefined
-  # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
-  def has_submit_button?
-    properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
-  end
-
+class CurriculumReference < External
   def dsl_default
     <<-TEXT.strip_heredoc.chomp
+    # Update the following lines to give you level a unique name and point at
+    # the appropriate url on docs.code.org
     name '#{name || 'unique level name here'}'
-    title 'title'
-    description 'description here'
+    reference '/csd/maker_leds/index.html'
     TEXT
   end
 
-  def icon
-    'fa-file-text'
-  end
-
-  def update(params)
-    # TODO: can we catch duplicate names?
-    # if params[:name] && Level.find(
-
-    super(params)
+  def reference_html
+    return nil unless properties['reference']
+    AWS::S3.download_from_bucket('cdo-curriculum', "documentation#{properties['reference']}")
   end
 end

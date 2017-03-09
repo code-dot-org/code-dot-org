@@ -23,28 +23,5 @@
 #  index_levels_on_name     (name)
 #
 
-class External < DSLDefined
-  # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
-  def has_submit_button?
-    properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
-  end
-
-  def dsl_default
-    <<-TEXT.strip_heredoc.chomp
-    name '#{name || 'unique level name here'}'
-    title 'title'
-    description 'description here'
-    TEXT
-  end
-
-  def icon
-    'fa-file-text'
-  end
-
-  def update(params)
-    # TODO: can we catch duplicate names?
-    # if params[:name] && Level.find(
-
-    super(params)
-  end
+class Map < CurriculumReference
 end
