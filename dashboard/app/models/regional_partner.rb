@@ -16,10 +16,10 @@
 class RegionalPartner < ActiveRecord::Base
   belongs_to :contact, class_name: 'User'
 
-  has_many :regional_partner_organizers
-  has_many :organizers,
+  has_many :regional_partner_program_managers
+  has_many :program_managers,
     class_name: 'User',
-    through: :regional_partner_organizers
+    through: :regional_partner_program_managers
 
   has_many :pd_workshops
 
