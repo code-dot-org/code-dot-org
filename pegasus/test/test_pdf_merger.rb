@@ -12,6 +12,7 @@ class PDFMergerTest < Minitest::Test
   include PDF
 
   def setup
+    assert_local_dependencies
     @output = File.expand_path('../fixtures/output/out.pdf', __FILE__)
     @remote_collate_output_file = File.expand_path('../fixtures/output/remote_files.pdf', __FILE__)
     @local_collate_output_file =  File.expand_path('../fixtures/output/local_files.pdf', __FILE__)
@@ -27,6 +28,38 @@ class PDFMergerTest < Minitest::Test
     @remote_collate_file = File.expand_path('../fixtures/remote_files.collate', __FILE__)
     @local_collate_file =  File.expand_path('../fixtures/local_files.collate', __FILE__)
     @numbered_collate_file = File.expand_path('../fixtures/numbered_files.collate', __FILE__)
+  end
+
+  def assert_local_dependencies
+    [
+      {
+        name: 'gs',
+        url: 'https://www.ghostscript.com/',
+        osx: 'brew install gs',
+        ubuntu: 'sudo apt-get install ghostscript'
+      },
+      {
+        name: 'pdftk',
+        url: 'https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/',
+        osx: 'brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb',
+        ubuntu: 'sudo apt-get install pdftk'
+      },
+      {
+        name: 'enscript',
+        url: 'https://www.gnu.org/software/enscript/',
+        osx: 'brew install enscript',
+        ubuntu: 'sudo apt-get install enscript'
+      }
+    ].each do |dependency|
+      found = system 'which', dependency[:name], out: '/dev/null'
+      assert found, <<-MSG
+Expected '#{dependency[:name]}' to be installed.
+      This test depends on #{dependency[:name]} (#{dependency[:url]})
+      You should install it locally:
+         OSX: #{dependency[:osx]}
+      Ubuntu: #{dependency[:ubuntu]}
+      MSG
+    end
   end
 
   def delete_outfiles
