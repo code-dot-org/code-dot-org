@@ -1,6 +1,8 @@
 require 'net/http'
 require 'octokit'
 
+require_relative '../../deployment'
+
 # This module serves as a thin wrapper around Octokit, itself a wrapper around
 # the GitHub API.
 module GitHub
