@@ -2,6 +2,7 @@
   float: right;
   color: white;
   font-size: 12px;
+  z-index: 2;
 }
 
 #footer-links ul {
