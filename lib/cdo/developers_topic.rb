@@ -84,7 +84,7 @@ module DevelopersTopic
     raise unless current_topic.include? subtopic_prefix
     start_index = current_topic.index subtopic_prefix
     end_index = current_topic.index(';', start_index) || current_topic.length
-    current_topic[start_index + 5...end_index]
+    current_topic[(start_index + subtopic_prefix.length)...end_index]
   end
 
   # @param branch [String] One of 'staging', 'test', 'production'.
