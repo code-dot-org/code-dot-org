@@ -200,6 +200,23 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal end_expected, Pd::Workshop.end_in_days(10).all.map(&:id)
   end
 
+  test 'should have ended' do
+    workshop_recently_started = create :pd_workshop
+    workshop_recently_started.started_at = Time.now - 12.hours
+    workshop_recently_started.save!
+
+    workshop_should_have_ended = create :pd_workshop
+    workshop_should_have_ended.started_at = Time.now - 25.hours
+    workshop_should_have_ended.save!
+
+    workshop_already_ended = create :pd_workshop
+    workshop_already_ended.started_at = Time.now - 25.hours
+    workshop_already_ended.ended_at = Time.now - 10.hours
+    workshop_already_ended.save!
+
+    assert_equal [workshop_should_have_ended.id], Pd::Workshop.should_have_ended.all.map(&:id)
+  end
+
   test 'process_ended_workshop_async' do
     workshop = create :pd_ended_workshop
     Pd::Workshop.expects(:find).with(workshop.id).returns(workshop)
