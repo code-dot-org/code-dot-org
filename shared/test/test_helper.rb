@@ -1,19 +1,12 @@
-# Common settings Shared Rake test.
+# Test settings for shared directory
 
-ENV['RACK_ENV'] = 'test'
+require_relative './common_test_helper'
 
-require 'minitest/autorun'
-require 'rack/test'
-require 'minitest/reporters'
-require 'minitest/around/unit'
 require 'webmock'
 require 'vcr'
-require_relative '../../deployment'
 require 'cdo/db'
 require 'cdo/aws/s3'
 require 'mocha/mini_test'
-
-raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
 reporters = [Minitest::Reporters::SpecReporter.new]
 if ENV['CIRCLECI']
