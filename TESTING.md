@@ -98,9 +98,22 @@ Or you can just use this shortcut (after you've installed chromedriver):
 `rake test:ui feature=dashboard/test/ui/features/sometest.feature`
 
 ### Pegasus Tests
-`cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~10 seconds to run.
+`cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
 
-If you get a database complaint like missing pegasus_test table, try running `RAILS_ENV=test bundle exec rake db:ensure_created` and `RAILS_ENV=test bundle exec rake db:reset`.
+Pegasus tests depend on the `pegasus_test` database.  Here are the steps to recreate that database (run from the pegasus directory):
+
+1. Manually drop the `pegasus_test` database.
+   ```bash
+   mysql -uroot -e "drop database pegasus_test;"
+   ```
+   You will probably have to customize the credentials in that command to run it.
+2. Recreate and reseed the database.
+   ```bash
+   RAILS_ENV=test rake db:ensure_created db:reset seed:migrate seed:tutorials seed:beyond_tutorials
+   ```
+   This will take about four minutes.
+
+Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `pdftk` and `enscript` installed.
 
 ###Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.
