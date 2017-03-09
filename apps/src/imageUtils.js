@@ -1,4 +1,4 @@
-const ARTIST_SHARE_FRAME = '/assets/blank_sharing_drawing.png';
+import artistShareFrame from '../static/turtle/blank_sharing_drawing.png';
 
 export function fetchURLAsBlob(url, onComplete) {
   let xhr = new XMLHttpRequest();
@@ -37,6 +37,15 @@ export function imageDataFromURI(uri) {
   });
 }
 
+export function dataURIFromURI(uri) {
+  return imageFromURI(uri).then(image => {
+    const canvas = document.createElement('canvas');
+    canvas.width = image.width;
+    canvas.height = image.height;
+    return canvas.toDataURL();
+  });
+}
+
 export function URIFromImageData(imageData) {
   const canvas = document.createElement('canvas');
   canvas.width = imageData.width;
@@ -49,19 +58,19 @@ export function URIFromImageData(imageData) {
 export function dataURIToFramedBlob(dataURI, callback) {
   const frame = new Image();
   const imageData = new Image();
-  imageData.src = `data:image/png;base64,${decodeURIComponent(dataURI)}`;
+  imageData.src = dataURI;
   frame.onload = () => {
     const canvas = document.createElement('canvas');
     canvas.width = frame.width;
     canvas.height = frame.height;
     const ctx = canvas.getContext('2d');
     ctx.drawImage(frame, 0, 0);
-    ctx.drawImage(imageData, 175, 52);
+    ctx.drawImage(imageData, 175, 52, 154, 154);
     if (canvas.toBlob) {
       canvas.toBlob(callback);
     }
   };
-  frame.src = ARTIST_SHARE_FRAME;
+  frame.src = artistShareFrame;
 }
 
 function imageFromURI(uri) {
