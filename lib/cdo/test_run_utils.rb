@@ -1,11 +1,11 @@
 require_relative './rake_utils'
 require_relative '../../deployment'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 
 module TestRunUtils
   def self.run_apps_tests
     Dir.chdir(apps_dir) do
-      HipChat.wrap('apps tests') do
+      ChatClient.wrap('apps tests') do
         RakeUtils.system 'npm run test-low-memory'
       end
     end
@@ -20,23 +20,27 @@ module TestRunUtils
 
   def self.run_blockly_core_tests
     Dir.chdir(blockly_core_dir) do
-      HipChat.wrap('blockly core tests') do
+      ChatClient.wrap('blockly core tests') do
         RakeUtils.system './test.sh'
       end
     end
   end
 
-  def self.run_dashboard_tests
+  def self.run_dashboard_tests(parallel: false)
     Dir.chdir(dashboard_dir) do
-      HipChat.wrap('dashboard tests') do
-        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
+      ChatClient.wrap('dashboard tests') do
+        if parallel
+          RakeUtils.rake_stream_output 'parallel:test'
+        else
+          RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
+        end
       end
     end
   end
 
   def self.run_pegasus_tests
     Dir.chdir(pegasus_dir) do
-      HipChat.wrap('pegasus tests') do
+      ChatClient.wrap('pegasus tests') do
         RakeUtils.rake_stream_output 'test'
       end
     end
@@ -44,7 +48,7 @@ module TestRunUtils
 
   def self.run_shared_tests
     Dir.chdir(shared_dir) do
-      HipChat.wrap('shared tests') do
+      ChatClient.wrap('shared tests') do
         RakeUtils.rake_stream_output 'test'
       end
     end

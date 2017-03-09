@@ -81,7 +81,7 @@ require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
-  include SerializedProperties
+  include SerializedProperties, SchoolInfoDeduplicator
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
@@ -153,6 +153,27 @@ class User < ActiveRecord::Base
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
+  belongs_to :school_info
+  accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
+  validates_presence_of :school_info, unless: :school_info_optional?
+
+  # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
+  # based on the passed attributes.
+  # @param school_info_attr the attributes to set and check
+  # @return [Boolean] true if we should reject (ignore and skip writing) the record,
+  # false if we should accept and write it
+  def preprocess_school_info(school_info_attr)
+    # Suppress validation - all parts of this form are optional when accesssed through the registration form
+    school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
+    # students are never asked to fill out this data, so silently reject it for them
+    student? || deduplicate_school_info(school_info_attr, self)
+  end
+
+  # Not deployed to everyone, so we don't require this for anybody, yet
+  def school_info_optional?
+    true # update if/when A/B test is done and accepted
+  end
+
   belongs_to :invited_by, polymorphic: true
 
   # TODO: I think we actually want to do this.
@@ -213,6 +234,11 @@ class User < ActiveRecord::Base
       end
       params[:school] ||= params[:ops_school]
 
+      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
+      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
+      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
+        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
+      end
       user = User.invite!(
         email: params[:email],
         user_type: TYPE_TEACHER,
@@ -618,6 +644,26 @@ class User < ActiveRecord::Base
       first
   end
 
+  # Is the stage containing the provided script_level hidden for this user?
+  def hidden_stage?(script_level)
+    return false if self.try(:teacher?)
+
+    sections = self.sections_as_student.select{|s| s.deleted_at.nil?}
+    return false if sections.empty?
+
+    script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
+
+    if !script_sections.empty?
+      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
+      # hides the stage
+      script_sections.all?{|s| script_level.stage_hidden_for_section?(s.id) }
+    else
+      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # hide it
+      sections.any?{|s| script_level.stage_hidden_for_section?(s.id) }
+    end
+  end
+
   def student?
     user_type == TYPE_STUDENT
   end
@@ -853,9 +899,9 @@ class User < ActiveRecord::Base
   # Provides backwards compatibility with users created before the UserScript model
   # was introduced (cf. code-dot-org/website-ci#194).
   # TODO apply this migration to all users in database, then remove.
-  def backfill_user_scripts
+  def backfill_user_scripts(scripts = Script.all)
     # backfill progress in scripts
-    Script.all.each do |script|
+    scripts.each do |script|
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
         ul_map = user_levels_by_level(script)
@@ -915,7 +961,7 @@ class User < ActiveRecord::Base
       end
 
       if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.basic_proficiency?
+          user_proficiency.proficient?
         user_proficiency.basic_proficiency_at = time_now
       end
 
@@ -952,7 +998,7 @@ class User < ActiveRecord::Base
     end
 
     old_result = old_user_level.try(:best_result)
-    !Activity.passing?(old_result) && Activity.passing?(new_result)
+    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
   end
 
   # The synchronous handler for the track_level_progress helper.
@@ -966,10 +1012,10 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
-      if !user_level.passing? && Activity.passing?(new_result)
+      if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
-      if !user_level.perfect? &&
+      if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         ([
           ScriptConstants::TWENTY_HOUR_NAME,

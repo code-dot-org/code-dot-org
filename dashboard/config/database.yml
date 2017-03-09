@@ -15,6 +15,7 @@ mysql_defaults: &mysql_defaults
   encoding: utf8
   collation: utf8_unicode_ci
   pool: 5
+  connect_timeout: 2
   master:
     username: <%= writer.user || 'root' %>
     password: <%= writer.password || '' %>
@@ -58,7 +59,7 @@ test:
   password: <%= writer.password || '' %>
   host: 'localhost'
   pool: <%= ENV['CI'] ? 20 : 5 %>
-  database: 'dashboard_test'
+  database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
 
 production:
   <<: *mysql_defaults

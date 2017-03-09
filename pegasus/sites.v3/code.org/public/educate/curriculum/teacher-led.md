@@ -81,7 +81,7 @@ This activity builds off of the classic game of Rock/Paper/Scissors, known to mo
 [STEM Projects](https://www.tynker.com/hour-of-code/tynker-stem-teacher-guide.pdf)   
 **Ages 5-18. Programming, Science (Ecology), Science (Space), Web-based.** Code and animate a Solar System simulation, an interactive ecological pyramid, a working analog clock, and more. 
 
-[Bomberbot Hour of Code Activities](http://www.bomberbot.com/hourofcode)   
+[Bomberbot Hour of Code Activities](http://go.bomberbot.com/hourofcode)
 **Ages 8-12. Sequence, Algorithms, Programming, Unplugged or Web-based.** Students will learn a series of programming concepts and apply them to programming a robot. 
 
 [Input and Output, Math Activity](https://app.vidcode.io/doc/unplugged-activity-math.pdf)  
@@ -139,10 +139,7 @@ Your class will be be creating a 'history of computers' web page/Scratch project
 **Ages 12-16. Science (Climate), Science (Environment), Unplugged.** Students draw a picture, and take turns giving the class steps to recreate their drawing.
  
 [Mozilla Homework Excuse Generator](https://d157rqmxrxj6ey.cloudfront.net/mozillalearning/11701/)  
-**Ages 13-18. Programming, Language Arts, Web-based.** Use Mozilla's code editor, Thimble, to edit strings inside JavaScript arrays and customize the homework excuse generators. 
-
-[Fact or Fiction?](http://www.vizwik.com/hoc)  
-**Ages 16-18. Programming, Build an App, Web-based.** Students create an app to survey whether their classmates think a statement is find a fact or fiction.
+**Ages 13-18. Programming, Language Arts, Web-based.** Use Mozilla's code editor, Thimble, to edit strings inside JavaScript arrays and customize the homework excuse generators.
 
 [Oral History Project](http://www.cs.southwestern.edu/OHProject/materials-overview.html)  
 **Ages 14-18. Programming, Storytelling, Unplugged** 

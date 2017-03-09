@@ -50,6 +50,9 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "show_debug_watch": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "true",
     "contained_level_names": null
   },
   "published": true,

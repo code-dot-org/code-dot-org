@@ -18,12 +18,9 @@ Click on the program name below to find out more about the workshop requirements
 
 - **[CS Fundamentals](#csf)**<br/>
 - **[CS in Algebra](#algebra)**<br/>
-- **[CS in Science](#science)**<Br/>
+- **[CS in Science](#science)**<br/>
 - **[Exploring CS](#ecs)**<br/>
 - **[CS Principles](#csp)**<br/>
-
-
-
 <br/>
 
 
@@ -332,6 +329,7 @@ Teachers attending your workshop will receive [this](https://docs.google.com/doc
 		- <a href="https://docs.google.com/document/d/1oE3khvNrgIuUl4gmqEzG1qbocHbmI3RLo0l69Irc3wc/edit?usp=sharing" target=_blank>Facilitator Prep</a>
 		- <a href="https://docs.google.com/presentation/d/1YC0M0hASMuIs4ZXJoYJ15tv78PMG5hMoRkKgdpl-rPY/edit?usp=sharing" target=_blank>Template Slide Deck</a>
 	- Session B
+		- <a href=""target=_blank>Agenda</a>
 		- <a href="https://docs.google.com/document/d/109MZiM8CVW3hbdeCtMdjMlzEF2PhkJF3n2tvOxKRm1E/edit?usp=sharing" target=_blank>Teacher Packet</a>
 		- <a href="https://docs.google.com/document/d/1n0CvzrNYUV6WH0GC3l9QBV7M-5Mt0hxy-_xCmhzOq2A/edit?usp=sharing" target=_blank>Facilitator Pref</a>
 		- <a href="https://docs.google.com/presentation/d/1XRlmGCL33jj2Yiomr-6h_Sf819C3k-1hsKshVvtz350/edit?usp=sharing" target=_blank>Template Slide Deck</a>

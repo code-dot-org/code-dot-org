@@ -44,7 +44,7 @@
   opacity: 1;
 }
 
-$debug-area-initial-height: 120px;
+$debug-area-initial-height: 43px;
 #debug-area {
   position: absolute;
   bottom: 0;
@@ -145,47 +145,6 @@ $debug-header-border-width: 1px;
 .debug-console * {
   font-family: monospace;
   font-size: 12px;
-}
-
-$debug-console-left-padding: 3px;
-$debug-prompt-width: 15px;
-$debug-input-height: 16px;
-
-.debug-input-prompt {
-  position: absolute;
-  bottom: 0;
-  height: $debug-input-height;
-  display: block;
-  left: $debug-console-left-padding;
-  width: $debug-prompt-width;
-}
-
-.debug-input, .debug-output {
-  position: absolute;
-  border-width: 0px;
-  padding: 0px;
-  outline: none;
-  @include user-selects(text);
-}
-
-.debug-output {
-  top: 0;
-  bottom: $debug-input-height;
-  left: $debug-console-left-padding;
-  right: 0;
-  overflow: auto;
-  line-height: normal;
-  cursor: text;
-  white-space: pre-wrap;
-}
-
-.debug-input {
-  bottom: 0;
-  max-height: $debug-input-height;
-  height: $debug-input-height;
-  left: $debug-console-left-padding + $debug-prompt-width;
-  right: 0;
-  margin-top: -3px;
 }
 
 #slider-cell {

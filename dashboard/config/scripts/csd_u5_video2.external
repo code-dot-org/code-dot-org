@@ -1,0 +1,10 @@
+name 'CSD U5 video2'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+### Collecting Data on User Behavior
+
+Watch this video to learn how this problem is solved by Netflix. As you watch think about what data is being collected and where it's coming from.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hqFHAnkSP2U" frameborder="0" allowfullscreen></iframe>
+MARKDOWN

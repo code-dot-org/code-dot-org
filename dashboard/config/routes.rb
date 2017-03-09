@@ -16,6 +16,7 @@ Dashboard::Application.routes.draw do
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
+  get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -231,6 +232,8 @@ Dashboard::Application.routes.draw do
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
+  get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
+  post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -350,6 +353,8 @@ Dashboard::Application.routes.draw do
 
     get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
     get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
+
+    get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -371,6 +376,7 @@ Dashboard::Application.routes.draw do
     end
   end
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
+  get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'

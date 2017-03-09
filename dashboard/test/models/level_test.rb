@@ -414,7 +414,7 @@ EOS
 
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)
-    assert_equal nil, level.examples
+    assert_nil level.examples
   end
 
   test 'cached_find' do
@@ -474,5 +474,86 @@ EOS
 
     level.calculate_ideal_level_source_id
     assert_equal right, level.ideal_level_source
+  end
+
+  test 'localizes callouts' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+          "#{level_name}_callout" => {
+            "first": "first test markdown",
+            "second": "second test markdown",
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      user: create(:user),
+      callout_json: JSON.generate(
+        [
+          {"callout_text": "first english markdown", "localization_key": "first"},
+          {"callout_text": "second english markdown", "localization_key": "second"},
+        ]
+      )
+    )
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first test markdown"
+    assert_equal callouts[1].callout_text, "second test markdown"
+  end
+
+  test 'handles bad callout localization data' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+    I18n.locale = test_locale
+
+    level = Level.create(
+      name: level_name,
+      user: create(:user),
+      callout_json: JSON.generate(
+        [
+          {"callout_text": "first english markdown", "localization_key": "first"},
+          {"callout_text": "second english markdown", "localization_key": "second"},
+        ]
+      )
+    )
+
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+          "#{level_name}_callout" => []
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first english markdown"
+    assert_equal callouts[1].callout_text, "second english markdown"
+
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first english markdown"
+    assert_equal callouts[1].callout_text, "second english markdown"
   end
 end

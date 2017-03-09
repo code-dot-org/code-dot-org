@@ -4,6 +4,7 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'net/http'
 require 'net/http/responses'
 require_relative('../../dashboard/config/environment')
+require 'cdo/only_one'
 require 'cdo/properties'
 
 # Global variable for Pardot API key. This can become invalid and need to be refreshed
