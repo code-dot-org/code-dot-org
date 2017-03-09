@@ -17,7 +17,7 @@ def main
 
   primary_dotd_user = nil
   if primary_dotd_email
-    primary_dotd_user = Slack.mention_name(primary_dotd_email)
+    primary_dotd_user = Slack.user_name(primary_dotd_email)
   end
   primary_dotd_user = '(ERROR: check schedule)' unless primary_dotd_user
 
