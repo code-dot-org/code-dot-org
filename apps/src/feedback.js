@@ -213,7 +213,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       {};
 
     let onContinue = options.onContinue;
-    if (lastInStage) {
+    if (experiments.isEnabled('g.endstage') && lastInStage) {
       onContinue = () => {
         ReactDOM.render(
           <StageAchievementDialog
@@ -466,6 +466,7 @@ FeedbackUtils.prototype.calculateStageProgress = function (
 
   const newStageProgress = oldStageProgress +
     newPassedProgress +
+    newPerfectProgress +
     newHintUsageProgress;
 
   return {
