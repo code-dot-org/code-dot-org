@@ -1858,7 +1858,7 @@ StudioApp.prototype.configureDom = function (config) {
       // of a larger page.
       smallFooter.style.boxSizing = "border-box";
     }
-    if (!config.embed && !config.hideSource) {
+    if (this.reduxStore.getState().pageConstants.isResponsive) {
       smallFooter.className += " responsive";
     }
   }
