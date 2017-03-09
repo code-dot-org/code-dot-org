@@ -1,6 +1,6 @@
 # Run 'rake' or 'rake -P' to get a list of valid Rake commands.
 
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
@@ -18,33 +18,33 @@ namespace :test do
 
   task :regular_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
-      HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '120', '--magic_retry', '--with-status-page', '--fail_fast'
+      ChatClient.log 'Running <b>dashboard</b> UI tests...'
+      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '120', '--magic_retry', '--with-status-page', '--fail_fast'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
-        HipChat.log message
-        HipChat.developers message, color: 'green'
+        ChatClient.log message
+        ChatClient.message 'server operations', message, color: 'green'
       else
         message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
-        HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
+        ChatClient.log message, color: 'red'
+        ChatClient.message 'server operations', message, color: 'red', notify: 1
       end
     end
   end
 
   task :eyes_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
-      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
+      ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `grep -lr '@eyes' features`.split("\n")
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-        HipChat.log message
-        HipChat.developers message, color: 'green'
+        ChatClient.log message
+        ChatClient.message 'server operations', message, color: 'green'
       else
         message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-        HipChat.log message, color: 'red'
-        HipChat.developers message, color: 'red', notify: 1
+        ChatClient.log message, color: 'red'
+        ChatClient.message 'server operations', message, color: 'red', notify: 1
       end
     end
   end
@@ -55,7 +55,7 @@ namespace :test do
   task :ui_test_flakiness do
     Dir.chdir(deploy_dir) do
       flakiness_output = `./bin/test_flakiness 5`
-      HipChat.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
+      ChatClient.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
     end
   end
 
@@ -71,16 +71,86 @@ namespace :test do
 
   task :dashboard_ci do
     Dir.chdir(dashboard_dir) do
-      HipChat.wrap('dashboard ruby unit tests') do
-        # Unit tests mess with the database so stop the service before running them
-        RakeUtils.stop_service CDO.dashboard_unicorn_name
-        RakeUtils.rake 'db:test:prepare'
+      ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
-        TestRunUtils.run_dashboard_tests
+        ENV['CODECOV_FLAGS'] = 'dashboard'
+        ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
+        # Parallel tests don't seem to run more quickly over 16 processes.
+        ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
+
+        # Hash of all seed-data content: All fixture files plus schema.rb.
+        fixture_path = "#{dashboard_dir}/test/fixtures/"
+        fixture_hash = Digest::MD5.hexdigest(
+          Dir["#{fixture_path}/{**,*}/*.yml"].
+            push(dashboard_dir('db/schema.rb')).
+            select(&File.method(:file?)).
+            sort.
+            map(&Digest::MD5.method(:file)).
+            join
+        )
+        CDO.log.info "Fixture hash: #{fixture_hash}"
+
+        # Try to fetch seed data from S3
+        bucket_name = 'cdo-build-package'
+        s3_key = "test_db/#{fixture_hash}.gz"
+        s3_client = Aws::S3::Client.new
+        require 'zlib'
+        require 'stringio'
+
+        seed_data = begin
+          response = s3_client.get_object(bucket: bucket_name, key: s3_key)
+          Zlib::GzipReader.new(response.body).read
+        rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
+          CDO.log.info "Seed data not found on S3 at #{s3_key}"
+          nil
+        end
+
+        seed_file = Tempfile.new(['db_seed', '.sql'])
+        auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
+        writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost')
+
+        if seed_data
+          File.write(seed_file, seed_data)
+        else
+          # Generate new DB contents
+          ENV['TEST_ENV_NUMBER'] = '1'
+          RakeUtils.rake_stream_output 'db:create db:test:prepare'
+          ENV.delete 'TEST_ENV_NUMBER'
+          # Store new DB contents
+          `mysqldump -u#{writer.user} dashboard_test1 --skip-comments | sed '#{auto_inc}' > #{seed_file.path}`
+          gzip_data = Zlib::GzipWriter.wrap(StringIO.new) { |gz| IO.copy_stream(seed_file.path, gz); gz.finish }.tap(&:rewind)
+
+          s3_client.put_object(
+            bucket: bucket_name,
+            key: s3_key,
+            body: gzip_data,
+            acl: 'public-read'
+          )
+          CDO.log.info "Uploaded seed data to #{s3_key}"
+        end
+
+        cloned_data = `mysqldump -u#{writer.user} dashboard_test2 --skip-comments | sed '#{auto_inc}'`
+        if seed_data.equal?(cloned_data)
+          CDO.log.info 'Test data not modified'
+        else
+          seed_2_file = Tempfile.new(['db_seed', '.sql'])
+          File.write(seed_2_file, cloned_data)
+          puts "Diff:\n"
+          puts `diff #{seed_file.path} #{seed_2_file.path}`
+
+          # Clone single DB across all databases
+          require 'parallel_tests'
+          procs = ParallelTests.determine_number_of_processes(nil)
+          CDO.log.info "Test data modified, cloning across #{procs} databases..."
+          pipes = Array.new(procs) { |i| ">(mysql -u#{writer.user} dashboard_test#{i + 1})" }.join(' ')
+          RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
+        end
+
+        TestRunUtils.run_dashboard_tests(parallel: true)
+
         ENV.delete 'UNIT_TEST'
-        RakeUtils.rake "seed:all"
-        RakeUtils.start_service CDO.dashboard_unicorn_name
+        ENV.delete 'CODECOV_FLAGS'
       end
     end
   end
@@ -159,12 +229,12 @@ def run_tests_if_changed(test_name, changed_globs)
 
   relevant_changed_files = GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs)
   if relevant_changed_files.empty?
-    HipChat.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
+    ChatClient.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
   else
-    HipChat.log "Files affecting #{justified_test_name} tests *modified* from #{base_branch}. Starting tests. Changed files:"
+    ChatClient.log "Files affecting #{justified_test_name} tests *modified* from #{base_branch}. Starting tests. Changed files:"
     padding = ' ' * 4
     separator = "\n"
-    HipChat.log separator + padding + relevant_changed_files.join(separator + padding)
+    ChatClient.log separator + padding + relevant_changed_files.join(separator + padding)
     yield
   end
 end

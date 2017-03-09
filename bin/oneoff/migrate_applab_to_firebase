@@ -2,7 +2,6 @@
 
 require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/db'
-require 'cdo/hip_chat'
 require 'net/http'
 require 'parallel'
 require 'time'

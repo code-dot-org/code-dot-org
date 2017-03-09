@@ -24,6 +24,7 @@
       "getImageURL": null,
       "setImageURL": null,
       "playSound": null,
+      "stopSound": null,
       "showElement": null,
       "hideElement": null,
       "deleteElement": null,
@@ -164,6 +165,7 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

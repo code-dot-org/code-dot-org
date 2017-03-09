@@ -15,11 +15,12 @@ const styles = {
 const ProgressLessonContent = React.createClass({
   propTypes: {
     description: PropTypes.string,
-    levels: PropTypes.arrayOf(levelType).isRequired
+    levels: PropTypes.arrayOf(levelType).isRequired,
+    disabled: PropTypes.bool.isRequired
   },
 
   render() {
-    const { description, levels } = this.props;
+    const { description, levels, disabled } = this.props;
     const progressions = progressionsFromLevels(levels);
     return (
       <div>
@@ -32,6 +33,7 @@ const ProgressLessonContent = React.createClass({
             start={progression.start + 1}
             name={progression.name}
             levels={progression.levels}
+            disabled={disabled}
           />
         ))}
       </div>

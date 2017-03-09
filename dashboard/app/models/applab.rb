@@ -44,6 +44,7 @@ class Applab < Blockly
     data_properties
     hide_view_data_button
     show_debug_watch
+    expand_debugger
     watchers_prepopulated
     fail_on_lint_errors
     debugger_disabled

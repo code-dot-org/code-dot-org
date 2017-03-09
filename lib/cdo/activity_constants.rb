@@ -11,9 +11,30 @@ module ActivityConstants
   MINIMUM_PASS_RESULT = 20
   MAXIMUM_NONOPTIMAL_RESULT = 29
   FREE_PLAY_RESULT = 30
+  MANUAL_PASS_RESULT = 90
   BEST_PASS_RESULT = 100
 
   UNREVIEWED_SUBMISSION_RESULT = 1000
   REVIEW_REJECTED_RESULT = 1500
   REVIEW_ACCEPTED_RESULT = 2000
+
+  def self.best?(result)
+    return false if result.nil?
+    result == BEST_PASS_RESULT
+  end
+
+  def self.perfect?(result)
+    return false if result.nil?
+    result > MAXIMUM_NONOPTIMAL_RESULT
+  end
+
+  def self.passing?(result)
+    return false if result.nil?
+    result >= MINIMUM_PASS_RESULT
+  end
+
+  def self.finished?(result)
+    return false if result.nil?
+    result >= MINIMUM_FINISHED_RESULT
+  end
 end

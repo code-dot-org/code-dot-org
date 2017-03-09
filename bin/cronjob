@@ -11,14 +11,13 @@
 #   or returned output.
 #
 # ERROR (not currently differentiated): A non-0 exit code could be elevated to mean error and
-#   result in a red HipChat message and/or channel notification.
+#   result in a HoneyBadger error.
 #
 # CRONJOBs are defined the cdo-apps::crontab Chef recipe: `chef/cookbooks/cdo-apps/recipes/crontab.rb`.
 #
 
 require_relative '../deployment.rb'
 require 'mail'
-require 'cdo/hip_chat'
 require 'cdo/honeybadger'
 require 'open3'
 

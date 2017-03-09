@@ -62,13 +62,13 @@ module Pd::Payment
 
     # Determines the payment type.
     # Override in derived classes. Default is either "PLP Urban" or "PLP Non-urban"
-    # for workshops organized by a PLP, otherwise nil.
+    # for workshops organized by a Regional Partner, otherwise nil.
     # @param workshop [Pd::Workshop]
     # @return [String] payment type
     def get_payment_type(workshop)
-      plp = workshop.professional_learning_partner
-      return nil unless plp
-      plp.urban? ? 'PLP Urban' : 'PLP Non-urban'
+      partner = workshop.regional_partner
+      return nil unless partner
+      partner.urban? ? 'PLP Urban' : 'PLP Non-urban'
     end
 
     # Is the workshop qualified for payment?

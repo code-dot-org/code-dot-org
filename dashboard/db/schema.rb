@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221004101) do
+ActiveRecord::Schema.define(version: 20170307160737) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -181,17 +181,14 @@ ActiveRecord::Schema.define(version: 20170221004101) do
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
-    t.integer  "activity_id"
     t.integer  "user_level_id"
     t.integer  "level_source_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "autosaved"
     t.string   "app",             default: "turtle", null: false
-    t.index ["activity_id"], name: "index_gallery_activities_on_activity_id", using: :btree
     t.index ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
     t.index ["level_source_id"], name: "index_gallery_activities_on_level_source_id", using: :btree
-    t.index ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", using: :btree
     t.index ["user_id", "level_source_id"], name: "index_gallery_activities_on_user_id_and_level_source_id", using: :btree
     t.index ["user_level_id"], name: "index_gallery_activities_on_user_level_id", using: :btree
   end
@@ -568,8 +565,11 @@ ActiveRecord::Schema.define(version: 20170221004101) do
   end
 
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string  "name",  null: false
-    t.integer "group", null: false
+    t.string  "name",       null: false
+    t.integer "group"
+    t.integer "contact_id"
+    t.boolean "urban"
+    t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
   create_table "regional_partners_school_districts", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -682,7 +682,6 @@ ActiveRecord::Schema.define(version: 20170221004101) do
     t.string   "code"
     t.integer  "script_id"
     t.string   "grade"
-    t.string   "admin_code"
     t.string   "login_type",   default: "email", null: false
     t.datetime "deleted_at"
     t.boolean  "stage_extras", default: false,   null: false

@@ -150,6 +150,11 @@ FactoryGirl.define do
       end
     end
 
+    trait :spelling_bee do
+      game {create(:game, app: "maze", name: "Maze")}
+      skin 'letters'
+    end
+
     trait :blockly do
       game {create(:game, app: "maze", name: "Maze")}
     end
@@ -240,7 +245,6 @@ FactoryGirl.define do
   factory :level_source do
     level
     data '<xml/>'
-    md5 { Digest::MD5.hexdigest(data) }
     trait :with_image do
       level { create(:level, game: Game.find_by_app(Game::ARTIST))}
       after :create do |level_source, _|
@@ -665,6 +669,34 @@ FactoryGirl.define do
     end
   end
 
+  factory :school_info_us_homeschool, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
+    state 'NJ'
+    zip '08534'
+  end
+
+  factory :school_info_us_after_school, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
+    state 'NJ'
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_non_us_homeschool, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_HOMESCHOOL
+    full_address '31 West Bank, London, England'
+  end
+
+  factory :school_info_non_us_after_school, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL
+    school_name 'Grazebrook'
+    full_address '31 West Bank, London, England'
+  end
+
   # end school info
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
@@ -699,11 +731,6 @@ FactoryGirl.define do
     course Pd::Workshop::COURSES.first
   end
 
-  factory :professional_learning_partner do
-    sequence(:name) { |n| "PLP #{n}" }
-    contact {create :teacher}
-  end
-
   factory :school_district do
     name "A school district"
     city "Seattle"
@@ -735,6 +762,7 @@ FactoryGirl.define do
 
   factory :regional_partner do
     sequence(:name) { |n| "Partner#{n}" }
+    contact {create :teacher}
     group 1
   end
 

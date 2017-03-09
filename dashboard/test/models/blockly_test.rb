@@ -141,4 +141,84 @@ XML
     level.destroy
     assert_equal xml, xml2
   end
+
+  test 'localizes authored hints' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_authored_hints'
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'authored_hints' => {
+          "#{level_name}_authored_hint" => {
+            "first": "first test markdown",
+            "second": "second test markdown",
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      user: create(:user),
+      type: 'Maze',
+      authored_hints: JSON.generate(
+        [
+          {"hint_markdown": "first english markdown", "hint_id": "first"},
+          {"hint_markdown": "second english markdown", "hint_id": "second"},
+        ]
+      )
+    )
+
+    localized_hints = JSON.parse(level.localized_authored_hints)
+
+    assert_equal localized_hints[0]["hint_markdown"], "first test markdown"
+    assert_equal localized_hints[0]["tts_url"], "https://tts.code.org/sharon22k/180/100/1889ea7b2140fc1aef28a2145df32fbb/test_localize_authored_hints.mp3"
+
+    assert_equal localized_hints[1]["hint_markdown"], "second test markdown"
+    assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/sharon22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
+  end
+
+  test 'handles bad authored hint localization data' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_authored_hints'
+    I18n.locale = test_locale
+
+    level = Level.create(
+      name: level_name,
+      user: create(:user),
+      type: 'Maze',
+      authored_hints: JSON.generate(
+        [
+          {"hint_markdown": "first english markdown", "hint_id": "first"},
+          {"hint_markdown": "second english markdown", "hint_id": "second"},
+        ]
+      )
+    )
+
+    custom_i18n = {
+      'data' => {
+        'authored_hints' => {
+          "#{level_name}_authored_hint" => []
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_nil level.localized_authored_hints
+
+    custom_i18n = {
+      'data' => {
+        'authored_hints' => {
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_nil level.localized_authored_hints
+  end
 end

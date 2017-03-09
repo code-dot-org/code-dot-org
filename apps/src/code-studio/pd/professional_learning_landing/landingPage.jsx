@@ -5,7 +5,8 @@
 import React from 'react';
 import CsFundamentalsSection from './csFundamentalsSection';
 import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSection';
-import UpcomingWorkshops from './upcomingWorkshops';
+import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
+import {UpcomingWorkshops} from './upcomingWorkshops';
 import _ from 'lodash';
 
 const CSPCSDcourses = ['CS Principles', 'CS Discoveries'];
@@ -15,7 +16,9 @@ const LandingPage = React.createClass({
     coursesCompleted: React.PropTypes.arrayOf(React.PropTypes.string),
     coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string),
     lastWorkshopSurveyUrl: React.PropTypes.string,
-    lastWorkshopSurveyCourse: React.PropTypes.string
+    lastWorkshopSurveyCourse: React.PropTypes.string,
+    printCsfCertificateUrl: React.PropTypes.string,
+    professionalLearningCourseData: React.PropTypes.array
   },
 
   renderHeaderImage() {
@@ -64,6 +67,7 @@ const LandingPage = React.createClass({
         {this.shouldRenderCSFSection() && (
             <CsFundamentalsSection
               lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyCourse === 'CS Fundamentals' ? this.props.lastWorkshopSurveyUrl : null}
+              printCsfCertificateUrl={this.props.printCsfCertificateUrl}
             />
           )
         }
@@ -77,6 +81,12 @@ const LandingPage = React.createClass({
         }
         {
           <UpcomingWorkshops/>
+        }
+        {
+          !_.isEmpty(this.props.professionalLearningCourseData) &&
+          <ProfessionalLearningCourseProgress
+            professionalLearningCourseData={this.props.professionalLearningCourseData}
+          />
         }
       </div>
     );

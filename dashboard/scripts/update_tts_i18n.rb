@@ -2,7 +2,7 @@
 require_relative('../config/environment')
 require 'cdo/properties'
 
-ENABLED_LANGUAGES = [:'es-es', :'it-it', :'pt-br']
+ENABLED_LANGUAGES = [:'es-ES', :'it-IT', :'pt-BR']
 
 k1_script_names = [
   Script::COURSEA_DRAFT_NAME,
@@ -34,11 +34,29 @@ ENABLED_LANGUAGES.each do |lang|
     script.levels.each do |level|
       next unless level.is_a?(Blockly)
 
+      # Instructions
+
       translated_text = TTSSafeRenderer.render(level.localized_instructions || "")
       english_text = TTSSafeRenderer.render(level.instructions || "")
 
       if text_translated?(translated_text, english_text)
         level.tts_upload_to_s3(translated_text)
+      end
+
+      # Authored Hints
+
+      if level.localized_authored_hints
+        translated_hints = JSON.parse(level.localized_authored_hints)
+        english_hints = JSON.parse(level.authored_hints)
+
+        translated_hints.zip(english_hints).each do |translated_hint, english_hint|
+          translated_text = TTSSafeRenderer.render(translated_hint["hint_markdown"])
+          english_text = TTSSafeRenderer.render(english_hint["hint_markdown"])
+
+          if text_translated?(translated_text, english_text)
+            level.tts_upload_to_s3(translated_text)
+          end
+        end
       end
     end
   end
