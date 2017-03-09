@@ -1,5 +1,4 @@
 $(function () {
-
   $('#nav-hamburger').click(function (e){
     $('#nav ul').slideToggle();
   });
