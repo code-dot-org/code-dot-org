@@ -306,7 +306,7 @@ The sound has been skipped.
       metadata['version'] = objects['mp3'].object.version_id
 
       # Generate appropriate sourceUrl pointing to the sound library API
-      metadata['sourceUrl'] = "/api/v1/sound-library/#{metadata['version']}/#{name}.mp3"
+      metadata['sourceUrl'] = "/api/v1/sound-library/#{name}.mp3"
 
       verbose <<-EOS
 #{bold name} @ #{metadata['version']}
