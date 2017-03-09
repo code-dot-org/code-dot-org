@@ -25,6 +25,8 @@ class ContactRollups
   EXCLUDED_COLUMNS = %w(id pardot_id pardot_sync_at updated_at).freeze
 
   UPDATE_BATCH_SIZE = 100
+  # interval in seconds to wait between log output for lengthy operations
+  LOG_OUTPUT_INTERVAL = 5
 
   PEGASUS_ENV = (Rails.env.production? ? "" : "_#{Rails.env}").freeze
   PEGASUS_DB_NAME = "pegasus#{PEGASUS_ENV}".freeze
@@ -121,6 +123,7 @@ class ContactRollups
 
     contact_rollup_src = grab_next(src_iterator)
     contact_rollup_dest = grab_next(dest_iterator)
+    time_last_output = Time.now
     until contact_rollup_src.nil?
       email_src = contact_rollup_src[:email]
 
@@ -173,11 +176,16 @@ class ContactRollups
         end
       end
 
+      num_total = num_inserts + num_updates + num_unchanged
+      if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
+        log "Total source rows processed: #{num_total}"
+        time_last_output = Time.now
+      end
+
       # Go on to the next source record
       contact_rollup_src = grab_next(src_iterator)
     end
 
-    num_total = num_inserts + num_updates + num_unchanged
     log("#{Time.now} Completed. #{num_total} source rows processed. #{num_inserts} insert(s), #{num_updates} update(s), #{num_unchanged} unchanged.")
   end
 
@@ -465,8 +473,8 @@ class ContactRollups
         conn = mysql_multi_connection
 
         update_batch = ""
-        if Time.now - time_last_output > 5
-          log "#{record_count} "
+        if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
+          log "Total records processed: #{record_count}"
           time_last_output = Time.now
         end
       end
