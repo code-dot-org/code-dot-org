@@ -1,7 +1,7 @@
 # See docs/pdf-lesson-plan-generation.md for more information on running and testing
 
 require_relative '../../lib/cdo/pegasus'
-require_relative '../../shared/test/test_helper'
+require_relative './test_helper'
 require 'minitest/autorun'
 require 'rubygems'
 require 'pdf-reader'
