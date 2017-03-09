@@ -12,7 +12,6 @@ var ALLOWED_KEYS = new Set([
   'hasDataMode',
   'hasDesignMode',
   'isEmbedView',
-  'isResponsive',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
   'isShareView',
