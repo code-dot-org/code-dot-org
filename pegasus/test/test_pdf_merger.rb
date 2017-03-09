@@ -52,13 +52,25 @@ class PDFMergerTest < Minitest::Test
       }
     ].each do |dependency|
       found = system 'which', dependency[:name], out: '/dev/null'
-      assert found, <<-MSG
+      missing_dependency_message = <<-MSG
 Expected '#{dependency[:name]}' to be installed.
-      This test depends on #{dependency[:name]} (#{dependency[:url]})
-      You should install it locally:
-         OSX: #{dependency[:osx]}
-      Ubuntu: #{dependency[:ubuntu]}
+    This test depends on #{dependency[:name]} (#{dependency[:url]})
+    You should install it locally:
+       OSX: #{dependency[:osx]}
+    Ubuntu: #{dependency[:ubuntu]}
       MSG
+
+      if RUBY_PLATFORM.include? 'linux'
+        # Require dependencies on linux which our servers use
+        assert found, missing_dependency_message
+      else
+        # Skip these tests if we are on OSX and missing dependencies;
+        # There's a known problem installing pdftk on OSX right now (see SETUP.md)
+        unless found
+          puts missing_dependency_message
+          skip missing_dependency_message
+        end
+      end
     end
   end
 
