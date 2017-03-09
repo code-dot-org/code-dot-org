@@ -7,9 +7,9 @@ require 'minitest/reporters'
 require 'minitest/around/unit'
 require 'mocha/mini_test'
 require 'vcr'
+require_relative '../../deployment'
 require 'cdo/db'
 require 'cdo/aws/s3'
-require_relative '../../deployment'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
