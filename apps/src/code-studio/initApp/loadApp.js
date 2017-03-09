@@ -102,8 +102,9 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
+        const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;
         // Add the frame to the drawing.
-        dataURIToFramedBlob(report.image, blob => {
+        dataURIToFramedBlob(dataURI, blob => {
           files.putFile(SHARE_IMAGE_NAME, blob);
         });
         return;
