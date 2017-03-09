@@ -100,18 +100,7 @@ Or you can just use this shortcut (after you've installed chromedriver):
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
 
-Pegasus tests depend on the `pegasus_test` database.  Here are the steps to recreate that database (run from the pegasus directory):
-
-1. Manually drop the `pegasus_test` database.
-   ```bash
-   mysql -uroot -e "drop database pegasus_test;"
-   ```
-   You will probably have to customize the credentials in that command to run it.
-2. Recreate and reseed the database.
-   ```bash
-   RAILS_ENV=test rake db:ensure_created db:reset seed:migrate seed:tutorials seed:beyond_tutorials
-   ```
-   This will take about four minutes.
+Pegasus tests depend on the `pegasus_test` database.  If you have database-related errors, you can recreate and reseed the test database with `RAILS_ENV=test rake test:reset_dependencies`.  This will take about four minutes.
 
 Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `pdftk` and `enscript` installed.
 
