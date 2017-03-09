@@ -14,5 +14,10 @@
           $('#non-us-announcement').show();
         }
       });
+      $(".track-link").each(function () {
+        $(this).click(function () {
+          trackEvent('teacher_announcement','click', $(this).data('id'));
+        });
+      });
     });
   });
