@@ -19,11 +19,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   end
 
   def workshops_user_enrolled_in
-    workshops = ::Pd::Enrollment.for_user(current_user).map do |enrollment|
+    workshops = ::Pd::Enrollment.for_user(current_user).where(survey_sent_at: nil).map do |enrollment|
       Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
 
-    render json: workshops
+    render json: workshops || []
   end
 
   # Upcoming (not started) public CSF workshops.

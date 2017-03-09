@@ -6,6 +6,7 @@ import {TwoPartBanner} from './twoPartBanner';
 
 const CsFundamentalsSection = React.createClass({
   propTypes: {
+    completedCsf: React.PropTypes.bool,
     lastWorkshopSurveyUrl: React.PropTypes.string,
     printCsfCertificateUrl: React.PropTypes.string
   },
@@ -77,15 +78,18 @@ const CsFundamentalsSection = React.createClass({
   render() {
     return (
       <div>
+        {this.props.completedCsf && (
+            <div>
+              <br/>
+              <TwoPartBanner
+                textElement={this.renderCompletedCourseBox()}
+                imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
+                imagePosition="imageLeft"
+              />
+            </div>
+          )
+        }
         <br/>
-        <TwoPartBanner
-          textElement={this.renderCompletedCourseBox()}
-          imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
-          imagePosition="imageLeft"
-        />
-
-        <br/>
-
         <TwoPartBanner
           textElement={this.renderOnlineProfessionalLearningBox()}
           imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
