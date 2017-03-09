@@ -605,20 +605,13 @@ class User < ActiveRecord::Base
     user_level.nil? || user_level.locked?(script_level.stage)
   end
 
-  # Returns the level in this script that the user most recently made progress on
-  def last_progressed_level(script)
-    user_levels.
-      where(script_id: script.id).
-      sort_by(&:updated_at).
-      last
-  end
-
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
-    user_level = last_progressed_level(script)
+    # Find the user level that we've most recently had progress on
+    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
 
     script_level_index = 0
     if user_level
