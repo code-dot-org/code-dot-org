@@ -7154,6 +7154,18 @@ en:
         The artist draws a shape with four equal sides tilted on its corner, making a diamond.: The artist draws a shape with four equal sides tilted on its corner, making a diamond.
         The artist will draw a single line.: The artist will draw a single line.
         The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        Question: Question
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        right answer: right answer
+        wrong answer: wrong answer
       courseC_multi_maze_debugging8_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7164,6 +7176,18 @@ en:
         Skrat will go the wrong way after his final turn.: Skrat will go the wrong way after his final turn.
         'The first error is that Skrat goes the wrong way after his final turn. ': 'The first error is that Skrat goes the wrong way after his final turn. '
         The program won't fail. Skrat will get to the acorn.: The program won't fail. Skrat will get to the acorn.
+      courseC_multi_maze_loops10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.: Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.
+        Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
+        Question: Question
+        The bird will not travel far enough in the first loop.: The bird will not travel far enough in the first loop.
+        The bird will reach the pig with no problems.: The bird will reach the pig with no problems.
+        The bird will travel too far in the first loop.: The bird will travel too far in the first loop.
+        The first loop only lets the bird move forward 1 space, when it needs to move forward 3.: The first loop only lets the bird move forward 1 space, when it needs to move forward 3.
+        right answer: right answer
+        wrong answer: wrong answer
       courseC_multi_maze_loops2_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7184,6 +7208,17 @@ en:
         The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
         The bird will make it to the pig.: The bird will make it to the pig.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseD_multi_bee_nestedLoops2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Look closely at the nested loops below.  What will happen when you click "Run"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        The bee will get 3 units of nectar.: The bee will get 3 units of nectar.
+        The bee will get all of the nectar.: The bee will get all of the nectar.
+        The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
+        right answer: right answer
+        wrong answer: wrong answer
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
