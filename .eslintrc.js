@@ -3,6 +3,7 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
+  "parser": "babel-eslint",
   "plugins": [
     "react"
   ],
