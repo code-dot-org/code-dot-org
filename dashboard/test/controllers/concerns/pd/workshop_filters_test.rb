@@ -16,14 +16,12 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     FakeController.any_instance.stubs(current_user: @user)
 
     @workshop_query = mock
-    Pd::Workshop.stubs(:in_state).with('Ended').returns(@workshop_query)
-
     @controller = FakeController.new
   end
 
   test 'load_filtered_ended_workshops defaults' do
     set_default_date_expectations
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
   test 'load_filtered_ended_workshops organizer view' do
@@ -31,7 +29,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @user.unstub :admin?
     @user.expects admin?: false
     expects(:organized_by).with(@user)
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
   test 'load_filtered_ended_workshops query by start' do
@@ -39,19 +37,19 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     end_date = mock
     expects(:start_on_or_after).with(start_date)
     expects(:start_on_or_before).with(end_date)
+
     params start: start_date, end: end_date, query_by: 'schedule'
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
   test 'load_filtered_ended_workshops query by end' do
     start_date = mock
     end_date = mock
-
     expects(:end_on_or_after).with(start_date)
     expects(:end_on_or_before).with(end_date)
 
     params start: start_date, end: end_date, query_by: 'end'
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
   test 'load_filtered_ended_workshops include course' do
@@ -59,7 +57,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     expects(:where).with(course: Pd::Workshop::COURSE_CSF)
 
     params course: 'csf'
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
   test 'load_filtered_ended_workshops exclude course' do
@@ -68,10 +66,12 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     expects(:not).with(course: Pd::Workshop::COURSE_CSF)
 
     params course: '-csf'
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
   test 'filter_workshops default' do
+    # Since @workshop_query is a mock with no expectations, this verifies that no filters are applied.
+    # It will fail with "Minitest::Assertion: unexpected invocation" if any calls are made to @workshop_query.
     @controller.filter_workshops @workshop_query
   end
 
@@ -112,8 +112,8 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   test 'filter_workshops with organizer id' do
-    expects(:where).with(organizer: 123)
-    params organizer: 123
+    expects(:where).with(organizer_id: 123)
+    params organizer_id: 123
     @controller.filter_workshops @workshop_query
   end
 
@@ -151,7 +151,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       :start,
       :end,
       :course,
-      :organizer,
+      :organizer_id,
       :date_order
     ]
 
@@ -163,6 +163,13 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
 
   def params(additional_params)
     @params.merge!(additional_params)
+  end
+
+  # Sets up expectation for Pd::Workshop.in_state('Ended') to return the mocked @workshop_query and calls
+  # @controller.load_filtered_ended_workshops
+  def load_filtered_ended_workshops
+    Pd::Workshop.expects(:in_state).with('Ended').returns(@workshop_query)
+    @controller.load_filtered_ended_workshops
   end
 
   # Defaults to 1 week ending today by scheduled start date

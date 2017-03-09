@@ -55,7 +55,7 @@ module Pd::WorkshopFilters
   # - start (first session on or after)
   # - end (first session on or before)
   # - course
-  # - organizer (id)
+  # - organizer_id
   # - date_order ('asc' or 'desc', otherwise default to 'asc')
   # Most fields, if incorrect will simply yield an empty result set
   # However date fields are verified and an ArgumentError will be raised if they're invalid.
@@ -69,7 +69,7 @@ module Pd::WorkshopFilters
       workshops = workshops.start_on_or_after(ensure_date(params[:start])) if params[:start]
       workshops = workshops.start_on_or_before(ensure_date(params[:end])) if params[:end]
       workshops = workshops.where(course: params[:course]) if params[:course]
-      workshops = workshops.where(organizer: params[:organizer]) if params[:organizer]
+      workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
       workshops = workshops.order_by_start(desc: params[:date_order].downcase == 'desc') if params[:date_order]
     end
 
@@ -83,7 +83,7 @@ module Pd::WorkshopFilters
       :start,
       :end,
       :course,
-      :organizer,
+      :organizer_id,
       :date_order
     )
   end
@@ -96,7 +96,6 @@ module Pd::WorkshopFilters
   # returns [String] the original value
   def ensure_date(date_str)
     # will raise ArgumentError if it's not a valid date string
-    DateTime.parse(date_str)
-    date_str
+    DateTime.parse(date_str) && date_str
   end
 end
