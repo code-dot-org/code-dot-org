@@ -6,7 +6,7 @@ module Pd
 
       @available_regional_partners = current_user.regional_partners.to_a
       contact_rp = RegionalPartner.find_by(contact: current_user)
-      @available_regional_partners << contact_rp if contact_rp
+      @available_regional_partners |= [contact_rp] if contact_rp
       @available_regional_partners.map! do |rp|
         {id: rp.id, name: rp.name}
       end
