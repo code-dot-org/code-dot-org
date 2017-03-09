@@ -78,7 +78,7 @@ describe(`Testing promise chains`, () => {
     sequence.push('B');
   });
 
-  it(`Promise "then" calls seem to be queued in the order they are received`, done => {
+  it(`Promise "then" calls might seem to be queued in the order they are received`, done => {
     Promise.resolve().then(() => {
       sequence.push('B');
     });
@@ -90,113 +90,12 @@ describe(`Testing promise chains`, () => {
     });
   });
 
-  it(`But in complex situations this gets very hard to reason about`, done => {
+  it(`But this is not always true`, done => {
     const promiseChainBeingTested = Promise.resolve()
-        .then(() => {
-          return new Promise(resolve => setTimeout(() => {
-            sequence.push('A');
-            resolve();
-          }, 1));
-        })
-        .then(() => {
-          return new Promise(resolve => setTimeout(() => {
-            sequence.push('B');
-            resolve();
-          }, 1));
-        })
-        .then(() => {
-          sequence.push('C');
-        });
-
-    sequence.push('_');
-
-    const testCode = Promise.resolve()
-        .then(() => {
-          sequence.push('a');
-          clock.tick(1);
-        })
-        .then(() => {
-          sequence.push('b');
-        })
-        .then(() => {
-          sequence.push('c');
-          clock.tick(1);
-        })
-        .then(() => {
-          sequence.push('d');
-        });
-
-    Promise.all([promiseChainBeingTested, testCode]).then(() => {
-      expect(sequence).to.deep.equal(['_', 'a', 'A', 'b', 'c', 'B', 'd', 'C']);
-      done();
-    }).catch(done);
-  });
-
-  it(`especially when one chain has a mix of immediate and async promises.`, done => {
-    const promiseChainBeingTested = Promise.resolve()
-        .then(() => {
-          sequence.push('A');
-        })
-        .then(() => {
-          return new Promise(resolve => setTimeout(() => {
-            sequence.push('B');
-            resolve();
-          }, 1));
-        })
-        .then(() => {
-          sequence.push('C');
-        })
-        .then(() => {
-          return new Promise(resolve => setTimeout(() => {
-            sequence.push('D');
-            resolve();
-          }, 1));
-        });
-
-    sequence.push('_');
-
-    const testCode = Promise.resolve()
-        .then(() => {
-          sequence.push('a');
-        })
-        .then(() => {
-          sequence.push('b');
-          clock.tick(1);
-        })
-        .then(() => {
-          sequence.push('c');
-        })
-        .then(() => {
-          sequence.push('d');
-        })
-        .then(() => {
-          sequence.push('e');
-          clock.tick(1);
-        });
-
-    Promise.all([promiseChainBeingTested, testCode]).then(() => {
-      expect(sequence).to.deep.equal(['_', 'A', 'a', 'b', 'B', 'c', 'C', 'd', 'e', 'D']);
-      done();
-    }).catch(done);
-  });
-
-
-  it(`By wrapping _real_ setTimeout our test can yield to the promise chain.`, done => {
-    Promise.resolve()
-        .then(() => {
-          sequence.push('A');
-        })
         .then(() => {
           sequence.push('B');
           return new Promise(resolve => setTimeout(() => {
-            sequence.push('C');
-            resolve();
-          }, 1));
-        })
-        .then(() => {
-          sequence.push('D');
-          return new Promise(resolve => setTimeout(() => {
-            sequence.push('E');
+            sequence.push('D');
             resolve();
           }, 1));
         })
@@ -204,19 +103,66 @@ describe(`Testing promise chains`, () => {
           sequence.push('F');
         });
 
-    sequence.push('_');
+    sequence.push('a');
+    const testCode = Promise.resolve()
+        .then(() => {
+          sequence.push('c');
+          clock.tick(1);
+          sequence.push('e');
+        })
+        .then(() => {
+          sequence.push('g');
+        })
+        .then(() => {
+          sequence.push('h');
+        });
+
+    Promise.all([promiseChainBeingTested, testCode]).then(() => {
+      // If then() callbacks occurred in the order of the then() calls (FIFO)
+      // we might expect the sequence:
+      //                               a    B    c    D    e    F    g    h
+      // But instead we get:
+      expect(sequence).to.deep.equal(['a', 'B', 'c', 'D', 'e', 'g', 'F', 'h']);
+      done();
+    }).catch(done);
+  });
+
+  it(`By wrapping _real_ setTimeout our test can yield to the promise chain.`, done => {
+    Promise.resolve()
+        .then(() => {
+          sequence.push('B');
+        })
+        .then(() => {
+          sequence.push('C');
+          return new Promise(resolve => setTimeout(() => {
+            sequence.push('E');
+            resolve();
+          }, 1));
+        })
+        .then(() => {
+          sequence.push('F');
+          return new Promise(resolve => setTimeout(() => {
+            sequence.push('H');
+            resolve();
+          }, 1));
+        })
+        .then(() => {
+          sequence.push('I');
+        });
+
 
     // This causes more nesting, but otherwise less complicated test code
     // that's somewhat less tied to implementation
+    sequence.push('a');
     yieldToPromiseChain(() => {
-      sequence.push('a');
+      sequence.push('d');
       clock.tick(1);
       yieldToPromiseChain(() => {
-        sequence.push('b');
+        sequence.push('g');
         clock.tick(1);
         yieldToPromiseChain(() => {
-          sequence.push('c');
-          expect(sequence).to.deep.equal(['_', 'A', 'B', 'a', 'C', 'D', 'b', 'E', 'F', 'c']);
+          sequence.push('j');
+          expect(sequence).to.deep.equal(['a', 'B', 'C', 'd', 'E', 'F', 'g', 'H', 'I', 'j']);
           done();
         });
       });
