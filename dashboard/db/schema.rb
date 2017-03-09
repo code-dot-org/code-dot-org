@@ -546,13 +546,6 @@ ActiveRecord::Schema.define(version: 20170307160737) do
     t.index ["user_id"], name: "index_prizes_on_user_id", using: :btree
   end
 
-  create_table "professional_learning_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string  "name",       null: false
-    t.integer "contact_id", null: false
-    t.boolean "urban"
-    t.index ["name", "contact_id"], name: "index_professional_learning_partners_on_name_and_contact_id", unique: true, using: :btree
-  end
-
   create_table "puzzle_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "script_id"

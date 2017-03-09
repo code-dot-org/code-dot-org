@@ -1,9 +1,8 @@
 /** Body of the animation picker dialog */
 import React from 'react';
 import Radium from 'radium';
-import Immutable from 'immutable';
 import color from "../../util/color";
-import {AllAnimationsCategory, AnimationCategories} from '../constants';
+import {AnimationCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -11,6 +10,7 @@ import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 import PaginationWrapper from '../../templates/PaginationWrapper';
+import {searchAssets} from '../../code-studio/assets/searchAssets';
 
 const MAX_SEARCH_RESULTS = 27;
 const animationPickerStyles = {
@@ -93,7 +93,7 @@ const AnimationPickerBody = React.createClass({
   },
 
   render() {
-    let {results, pageCount} = searchAnimations(this.state.searchQuery, this.state.categoryQuery, this.state.currentPage);
+    let {results, pageCount} = searchAssets(this.state.searchQuery, this.state.categoryQuery, animationLibrary, this.state.currentPage, MAX_SEARCH_RESULTS);
     return (
       <div>
         <h1 style={styles.title}>
@@ -162,54 +162,3 @@ export const WarningLabel = ({children}) => (
 WarningLabel.propTypes = {
   children: React.PropTypes.node
 };
-
-/**
- * Given a search query, generate a results list of animationProps objects that
- * can be displayed and used to add an animation to the project.
- * @param {string} searchQuery - text entered by the user to find an animation
- * @param {string} categoryQuery - name of category user selected to filter animations
- * @param {int} currentPage - current range of animations to display
- * @return {Array.<SerializedAnimationProps>} - Limited list of animations
- *         from the library that match the search query.
- */
-function searchAnimations(searchQuery, categoryQuery, currentPage) {
-  // Make sure to generate the search regex in advance, only once.
-  // Search is case-insensitive
-  // Match any word boundary or underscore followed by the search query.
-  // Example: searchQuery "bar"
-  //   Will match: "barbell", "foo-bar", "foo_bar" or "foo bar"
-  //   Will not match: "foobar", "ubar"
-  const searchRegExp = new RegExp('(?:\\b|_)' + searchQuery, 'i');
-
-  // Generate the set of all results associated with all matched aliases
-  let resultSet = Object.keys(animationLibrary.aliases)
-      .filter(alias => searchRegExp.test(alias))
-      .reduce((resultSet, nextAlias) => {
-        return resultSet.union(animationLibrary.aliases[nextAlias]);
-      }, Immutable.Set());
-
-  if (categoryQuery !== '' && categoryQuery !== AllAnimationsCategory) {
-    let categoryResultSet = Object.keys(animationLibrary.aliases)
-      .filter(alias => alias === categoryQuery)
-      .reduce((resultSet, nextAlias) => {
-        return resultSet.union(animationLibrary.aliases[nextAlias]);
-      }, Immutable.Set());
-    if (searchQuery !== '') {
-      resultSet = resultSet.intersect(categoryResultSet.toArray());
-    } else {
-      resultSet = categoryResultSet;
-    }
-  }
-
-  // Finally alphabetize the results (for stability), take only the first
-  // MAX_SEARCH_RESULTS so we don't load too many images at once, and return
-  // the associated metadata for each result.
-  const results = resultSet
-      .sort()
-      .map(result => animationLibrary.metadata[result])
-      .toArray();
-  return {
-    pageCount: Math.ceil(results.length / MAX_SEARCH_RESULTS),
-    results: results.slice(currentPage*MAX_SEARCH_RESULTS, (currentPage+1)*MAX_SEARCH_RESULTS)
-  };
-}
