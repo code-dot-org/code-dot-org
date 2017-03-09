@@ -14,8 +14,6 @@ describe('image utils', () => {
     dataURIToFramedBlob(dataURI, actual => {
       dataURIFromURI(expected).then(expected => {
         dataURIFromURI(actual).then(actual => {
-          console.log('comparing');
-          //console.log(actual);
           expect(expected).to.equal(actual);
           done();
         });
