@@ -450,6 +450,8 @@ function handleExecutionError(err, lineNumber) {
 
   // prevent further execution
   Applab.clearEventHandlersKillTickLoop();
+
+  // Used by level tests
   if (Applab.onExecutionError) {
     Applab.onExecutionError();
   }
