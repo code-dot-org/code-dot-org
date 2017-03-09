@@ -324,7 +324,7 @@ const WorkshopForm = React.createClass({
       const placeHolder = <option />;
       return (
         <FormGroup validationState={validation.style.regional_partner_id}>
-          <ControlLabel>Regional Partner</ControlLabel>
+          <ControlLabel>Regional Partner (optional)</ControlLabel>
           <FormControl
             componentClass="select"
             value={this.state.regional_partner_id || ''}
@@ -643,14 +643,16 @@ const WorkshopForm = React.createClass({
             <Col sm={2}>
               {this.renderWorkshopTypeSelect(validation)}
             </Col>
-            <Col sm={2}>
-              {this.renderRegionalPartnerSelect(validation)}
-            </Col>
-            <Col sm={2}>
+            <Col sm={3}>
               {this.renderCourseSelect(validation)}
             </Col>
-            <Col sm={2}>
+            <Col sm={3}>
               {this.renderSubjectSelect(validation)}
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={10}>
+              {this.renderRegionalPartnerSelect(validation)}
             </Col>
           </Row>
           <Row>
