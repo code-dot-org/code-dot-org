@@ -307,8 +307,11 @@ var projects = module.exports = {
     return current.level === '/projects/applab';
   },
 
-  isInitialSaveCompleteForTesting() {
-    return initialSaveComplete;
+  __TestInterface: {
+    // Used by UI tests
+    isInitialSaveComplete() {
+      return initialSaveComplete;
+    },
   },
 
   //////////////////////////////////////////////////////////////////////
