@@ -34,8 +34,7 @@
       "grade2_multi_collector_A_predict1"
     ],
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false",
-    "maze_data": null
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",

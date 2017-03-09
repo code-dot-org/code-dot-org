@@ -56,13 +56,10 @@
     "makerlab_enabled": "false",
     "project_template_level_name": "CSPU5 Adding Screens Template",
     "show_debug_watch": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
