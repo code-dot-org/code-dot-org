@@ -138,6 +138,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   window.dashboard.project.isOwner = function () {
     return true;
   };
+  const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
+    'Define onExecutionError() in your level test case to handle this.';
 
   loadApp({
     skinId: skinId,
@@ -154,6 +156,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     isSignedIn: true,
     isAdmin: true,
     onFeedback: finished.bind(this),
+    onExecutionError: testData.onExecutionError ? testData.onExecutionError :
+      () => { throw unexpectedExecutionErrorMsg; },
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already

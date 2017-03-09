@@ -450,6 +450,9 @@ function handleExecutionError(err, lineNumber) {
 
   // prevent further execution
   Applab.clearEventHandlersKillTickLoop();
+  if (Applab.onExecutionError) {
+    Applab.onExecutionError();
+  }
 }
 
 Applab.getCode = function () {
@@ -571,6 +574,8 @@ Applab.init = function (config) {
     isSignedIn: config.isSignedIn
   };
   Applab.isReadOnlyView = config.readonlyWorkspace;
+
+  Applab.onExecutionError = config.onExecutionError;
 
   loadLevel();
 
