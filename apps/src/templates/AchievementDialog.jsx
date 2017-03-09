@@ -1,13 +1,12 @@
-import { Motion, StaggeredMotion, spring } from 'react-motion';
+import { StaggeredMotion, spring } from 'react-motion';
 import React from 'react';
 import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
 import locale from '@cdo/locale';
+import StageProgressBar from './StageProgressBar';
 
-const ANIMATION_OVERLAP = 0.2;
-const MIN_PROGRESS_WIDTH = 22;
-const MAX_PROGRESS_WIDTH = 400;
+const ANIMATION_OVERLAP = 0.05;
 
 const styles = {
   checkmarks: {
@@ -72,40 +71,6 @@ const styles = {
     background: '#eee',
     color: '#5b6770',
     border: '1px solid #c5c5c5',
-  },
-  stageRewards: {
-    position: 'absolute',
-    background: '#f3eeff',
-    top: 240,
-    left: 100,
-    width: '500px',
-    height: '75px',
-    border: '1px solid #d2cae6',
-    borderRadius: 3,
-  },
-  stageRewardsTitle: {
-    textAlign: 'center',
-    color: '#655689',
-    fontSize: 14,
-    fontWeight: 'bold',
-    padding: 10,
-  },
-  progressBackground: {
-    position: 'absolute',
-    background: '#fff',
-    borderRadius: 10,
-    border: '1px solid #d2cae6',
-    height: 20,
-    width: MAX_PROGRESS_WIDTH,
-    left: 50,
-  },
-  progressForeground: {
-    position: 'absolute',
-    background: '#eaa721',
-    borderRadius: 11,
-    height: 22,
-    top: -1,
-    left: -1,
   },
 };
 
@@ -183,11 +148,6 @@ const AchievementDialog = Radium(React.createClass({
     return tooManyHints ? locale.usingHints() : locale.withoutHints();
   },
 
-  progressToBarWidth(progress) {
-    return MIN_PROGRESS_WIDTH +
-      progress * (MAX_PROGRESS_WIDTH - MIN_PROGRESS_WIDTH);
-  },
-
   render() {
     const showNumBlocksRow = isFinite(this.props.idealBlocks);
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
@@ -211,10 +171,10 @@ const AchievementDialog = Radium(React.createClass({
           defaultStyles={Array(4).fill({ progress: 0 })}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
             return i === 0 ?
-              { progress: spring(1, { stiffness: 50, damping: 25 }) } :
+              { progress: spring(1, { stiffness: 100, damping: 25 }) } :
               { progress: spring(
                   prevInterpolatedStyles[i - 1].progress > (1 - ANIMATION_OVERLAP) ? 1 : 0,
-                  { stiffness: 30, damping: 25 }),
+                  { stiffness: 60, damping: 25 }),
               };
           })}
         >
@@ -237,35 +197,15 @@ const AchievementDialog = Radium(React.createClass({
                       interpolatingStyles[showNumBlocksRow ? 3 : 2])}
                 </div>
                 {this.props.showStageProgress &&
-                  <div style={styles.stageRewards}>
-                    <div style={styles.stageRewardsTitle}>
-                      {locale.stageRewards()}
-                    </div>
-                    <div style={styles.progressBackground}>
-                      <Motion
-                        defaultStyle={{
-                          width: this.progressToBarWidth(this.props.oldStageProgress)
-                        }}
-                        style={{
-                          width: spring(this.progressToBarWidth(
-                              this.props.oldStageProgress +
-                              (interpolatingValues[1].progress > 0 ? this.props.newPassedProgress : 0) +
-                              (interpolatingValues[2].progress > 0 ? this.props.newPerfectProgress : 0) +
-                              (interpolatingValues[showNumBlocksRow ? 3 : 2].progress > 0 ?
-                                this.props.newHintUsageProgress : 0)),
-                            { stiffness: 70, damping: 25 })
-                        }}
-                      >
-                        {interpolatingStyle =>
-                          <div
-                            style={{
-                              ...styles.progressForeground,
-                              ...interpolatingStyle,
-                            }}
-                          />}
-                      </Motion>
-                    </div>
-                  </div>
+                  <StageProgressBar
+                    stageProgress={
+                        this.props.oldStageProgress +
+                        (interpolatingValues[1].progress * this.props.newPassedProgress) +
+                        (interpolatingValues[2].progress * this.props.newPerfectProgress) +
+                        (interpolatingValues[showNumBlocksRow ? 3 : 2].progress *
+                          this.props.newHintUsageProgress)
+                    }
+                  />
                 }
               </div>);
             }
