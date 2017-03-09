@@ -70,4 +70,27 @@ module GitHub
   def self.pull_merged?(pr_number)
     Octokit.pull_merged?(REPO, pr_number)
   end
+
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
+  # @param base [String] The base branch of the requested pull request.
+  # @param head [String] The head branch of the requested pull request.
+  # @raise [Exception] From calling Octokit.compare.
+  # @return [Array[String]] The commit messages of all commits between base and
+  #   head.
+  def self.compare(base:, head:)
+    base_sha = sha(base)
+    head_sha = sha(head)
+
+    response = Octokit.compare(REPO, head_sha, base_sha)
+    response.commits.map(&:commit).map(&:message)
+  end
+
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Repositories.html#branch-instance_method
+  # @param branch [String] The name of the branch.
+  # @raise [Octokit::NotFound] If the specified branch does not exist.
+  # @return [String] The sha hash of the most recent commit to branch.
+  def self.sha(branch)
+    response = Octokit.branch(REPO, branch)
+    response.commit.sha
+  end
 end
