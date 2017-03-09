@@ -371,3 +371,7 @@ end
 And /^Firebase is disabled$/ do
   expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(false)
 end
+
+And /^I wait for initial applab save to complete$/ do
+  wait_with_timeout.until { @browser.execute_script("return dashboard.project.isInitialSaveCompleteForTesting();") == true}
+end
