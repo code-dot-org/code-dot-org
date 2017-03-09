@@ -63,6 +63,7 @@ var currentSourceVersionId;
 var currentAbuseScore = 0;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
+let initialSaveComplete = false;
 
 /**
  * Current state of our sources API data
@@ -241,8 +242,7 @@ var projects = module.exports = {
   },
 
   /**
-   * @returns {boolean} true if project has been reported enough times to
-   *   exceed our threshold
+   * @returns {boolean} true if project has a profanity or privacy violation
    */
   hasPrivacyProfanityViolation() {
     return currentHasPrivacyProfanityViolation;
@@ -304,6 +304,13 @@ var projects = module.exports = {
 
   useFirebaseForNewProject() {
     return current.level === '/projects/applab';
+  },
+
+  __TestInterface: {
+    // Used by UI tests
+    isInitialSaveComplete() {
+      return initialSaveComplete;
+    },
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -581,6 +588,7 @@ var projects = module.exports = {
       current.migratedToS3 = true;
 
       channels.update(channelId, current, function (err, data) {
+        initialSaveComplete = true;
         this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));

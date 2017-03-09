@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Continuous Updates\r\n\r\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. Can you make your app continually update the background color by moving everything except for the `setScale()` blocks into a _timed loop_. Test out different timings for your loop to see which speed is most pleasing to you.",
+    "markdown_instructions": "# Continuous Updates\r\n\r\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\r\n\r\nMove your `setScale()` blocks into a an event handler for one of the sensors to make the app update continually.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -211,10 +211,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - sensors rgb template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -79,6 +79,7 @@ class ActiveSupport::TestCase
 
   teardown do
     Dashboard::Application.config.action_controller.perform_caching = false
+    I18n.locale = I18n.default_locale
     set_env :test
   end
 

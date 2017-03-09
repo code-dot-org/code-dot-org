@@ -9,6 +9,8 @@ class VolunteerContact2015
     result[:type_task_onsite_b] = nil_if_empty data[:type_task_onsite_b]
     result[:type_task_remote_b] = nil_if_empty data[:type_task_remote_b]
     result[:type_task_mentor_b] = nil_if_empty data[:type_task_mentor_b]
+    result[:understand_damages_b] = required data[:understand_damages_b]
+    result[:age_18_plus_b] = required data[:age_18_plus_b]
 
     # We use the volunteer's ID from the forms table (kind: VolunteerEngineerSubmission2015)
     # to get the volunteer's name and email when emailing the volunteer about the teacher.

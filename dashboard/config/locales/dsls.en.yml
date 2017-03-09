@@ -7164,6 +7164,15 @@ en:
         Skrat will go the wrong way after his final turn.: Skrat will go the wrong way after his final turn.
         'The first error is that Skrat goes the wrong way after his final turn. ': 'The first error is that Skrat goes the wrong way after his final turn. '
         The program won't fail. Skrat will get to the acorn.: The program won't fail. Skrat will get to the acorn.
+      courseC_multi_maze_loops2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The repeat block will `move the bird forward` 5 times, taking him to the pig.: Incorrect. The repeat block will `move the bird forward` 5 times, taking him to the pig.
+        Take a close look at the code below. What do you think will happen when you click "Run"?: Take a close look at the code below. What do you think will happen when you click "Run"?
+        The bird will move forward only one space.: The bird will move forward only one space.
+        The bird will not move.: The bird will not move.
+        The bird will repeat `move forward` 5 times, taking him to the pig.: The bird will repeat `move forward` 5 times, taking him to the pig.
+        The repeat block will `move the bird forward` 5 times, taking him to the pig.: The repeat block will `move the bird forward` 5 times, taking him to the pig.
       courseC_multi_maze_programming8_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
