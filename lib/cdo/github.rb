@@ -1,4 +1,3 @@
-require 'cdo/chat_client'
 require 'net/http'
 require 'octokit'
 
@@ -8,8 +7,11 @@ module GitHub
   REPO = "code-dot-org/code-dot-org".freeze
 
   # Configures Octokit with our GitHub access token.
+  # @raise [RuntimeError] If CDO.github_access_token is not defined.
   def self.configure_octokit
-    raise unless CDO.github_access_token
+    unless CDO.github_access_token
+      raise "CDO.github_access_token undefined"
+    end
     Octokit.configure do |client|
       client.access_token = CDO.github_access_token
     end
@@ -47,6 +49,8 @@ module GitHub
   # @param head [String] The head branch of the requested pull request.
   # @param title [String] The title of the requested pull request.
   # @raise [Exception] From calling create_pull_request and merge_pull_request.
+  # @example For a DTT:
+  #   create_and_merge_pull_request(base: 'test', head: 'staging', title: 'DTT')
   # @return [nil | Integer] The PR number of the newly created DTT if successful
   #   or nil if unsuccessful.
   def self.create_and_merge_pull_request(base:, head:, title:)
@@ -75,13 +79,14 @@ module GitHub
   # @param base [String] The base branch of the requested pull request.
   # @param head [String] The head branch of the requested pull request.
   # @raise [Exception] From calling Octokit.compare.
+  # @example For a DTT, compare(base: 'test', head: 'staging').
   # @return [Array[String]] The commit messages of all commits between base and
   #   head.
   def self.compare(base:, head:)
     base_sha = sha(base)
     head_sha = sha(head)
 
-    response = Octokit.compare(REPO, head_sha, base_sha)
+    response = Octokit.compare(REPO, base_sha, head_sha)
     response.commits.map(&:commit).map(&:message)
   end
 
