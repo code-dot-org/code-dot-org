@@ -6,6 +6,7 @@ import {TwoPartBanner} from './twoPartBanner';
 
 const CsFundamentalsSection = React.createClass({
   propTypes: {
+    csfCompleted: React.PropTypes.bool,
     lastWorkshopSurveyUrl: React.PropTypes.string,
     printCsfCertificateUrl: React.PropTypes.string
   },
