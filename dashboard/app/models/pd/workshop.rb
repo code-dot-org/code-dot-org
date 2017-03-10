@@ -359,7 +359,7 @@ class Pd::Workshop < ActiveRecord::Base
         errors << "organizer should close workshop #{workshop.id} - #{e.message}"
       end
     end
-    raise "Failed to send should close workshop reminders: #{errors.join(', ')}" unless errors.empty?
+    raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
 
   def self.send_automated_emails
