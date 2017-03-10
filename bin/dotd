@@ -20,6 +20,9 @@ LOGGER.formatter = proc do |_serverity, time, _progname, msg|
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
+# Global to prevent it from being passed around everywhere.
+@dotd_name = ''
+
 # Prints the script intro to the console.
 def puts_script_intro
   puts <<-EOS.unindent
@@ -54,23 +57,21 @@ def puts_script_conclusion
   EOS
 end
 
-# Prompts the user for their name. Also performs some console output.
-# @return [String] The user's name.
+# Prompts the user for their name, setting the global variable @dotd_name and
+# warns them of changing options.
 def ask_for_name
-  name = ''
-  until name != ''
+  until @dotd_name != ''
     print "Who are you? "
-    name = gets.chomp
+    @dotd_name = gets.chomp
   end
 
-  welcome = "  Hi #{name}! Please follow along carefully, as options and "\
-    "codepaths are changing often."
+  welcome = "  Hi #{@dotd_name}! Please follow along carefully, as options "\
+    "and codepaths are changing often."
   puts ''
   puts welcome
   puts ''
 
-  LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DotD")
-  name
+  LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{@dotd_name} is DotD")
 end
 
 # Prompts the user whether block should be executed by asking question,
@@ -129,14 +130,13 @@ end
 #   content push, e.g., 'staging' or 'levelbuilder-staging'.
 # @param environment_name [String] The environment name for the server, e.g.,
 #   'staging' or 'levelbuilder'.
-# @param user_name [String] The user performing the action.
-def content_push(server_name, environment_name, user_name)
+def content_push(server_name, environment_name)
   puts <<-EOS.unindent
     Follow the prompts given by the content-push script.
       If you need to do something fancier (or if the changed files do not
       "look ok" when it asks you), log in to staging and hand-craft the commit.
   EOS
-  success = run_on(server_name, "#{environment_name}/bin/content-push --name=\"#{user_name}\"")
+  success = run_on(server_name, "#{environment_name}/bin/content-push --name=\"#{@dotd_name}\"")
 
   puts ''
   # Notice if the content push fails, and be helpful about fixing the problem.
@@ -216,16 +216,16 @@ end
 
 def main
   puts_script_intro
-  user_name = ask_for_name
+  ask_for_name
 
   do_dtt_subroutine
 
   should_i "commit content changes from staging" do
-    content_push 'staging', 'staging', user_name
+    content_push 'staging', 'staging'
   end
 
   should_i "commit content changes from levelbuilder" do
-    content_push 'levelbuilder-staging', 'levelbuilder', user_name
+    content_push 'levelbuilder-staging', 'levelbuilder'
 
     view_commits base: 'staging', head: 'levelbuilder'
     should_i "merge from levelbuilder to staging" do
@@ -236,7 +236,7 @@ def main
       new_sha_abbr = new_sha[0, 4] + '...' + new_sha[-4, 4]
       wait_for "staging to finish building with sha #{new_sha_abbr}."
       should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
-        content_push 'staging', 'staging', user_name
+        content_push 'staging', 'staging'
       end
     end
   end
