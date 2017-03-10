@@ -1,4 +1,4 @@
-require_relative '../../shared/test/test_helper'
+require_relative './test_helper'
 require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
 require 'channels_api'
