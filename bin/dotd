@@ -39,6 +39,21 @@ def puts_script_intro
   EOS
 end
 
+# Prints the script conclusion to the console.
+def puts_script_conclusion
+  puts <<-EOS.unindent
+    * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
+  EOS
+  press_enter_to_continue
+
+  puts <<-EOS.unindent
+
+  #{bold "You're done!"}
+
+      d[ o_0 ]b
+  EOS
+end
+
 # Prompts the user for their name. Also performs some console output.
 # @return [String] The user's name.
 def ask_for_name
@@ -269,17 +284,7 @@ def main
     EOS
   end
 
-  puts <<-EOS.unindent
-    * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
-  EOS
-  press_enter_to_continue
-
-  puts <<-EOS.unindent
-
-  #{bold "You're done!"}
-
-      d[ o_0 ]b
-  EOS
+  puts_script_conclusion
 end
 
 main
