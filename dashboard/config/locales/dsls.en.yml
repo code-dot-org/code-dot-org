@@ -7134,7 +7134,6 @@ en:
         I don't know.: I don't know.
         Incorrect. The bird runs into the TNT with his first move.: Incorrect. The bird runs into the TNT with his first move.
         Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
-        The bird not move at all.: The bird not move at all.
         The bird runs into the TNT with his first move.: The bird runs into the TNT with his first move.
         The bird will get to the pig.: The bird will get to the pig.
         The bird will not move at all.: The bird will not move at all.
@@ -7207,13 +7206,9 @@ en:
         C: C
         Correct!: Correct!
         I don't know.: I don't know.
-        I don\t know.: I don\t know.
         Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
-        Question: Question
         Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
         The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
-        right answer: right answer
-        wrong answer: wrong answer
       courseD_multi_bee_nestedLoops2_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -8254,17 +8249,6 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
-      unique level name here:
-        '1': '1'
-        '2': '2'
-        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
-        CSS: CSS
-        Question: Question
-        Stylesheet: Stylesheet
-        description here: description here
-        right answer: right answer
-        title: title
-        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
