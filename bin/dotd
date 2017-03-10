@@ -8,6 +8,7 @@ require 'cgi'
 require 'logger'
 require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
+require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/github'
 include CdoCli
 
@@ -189,6 +190,8 @@ def main
   puts_script_intro
   user_name = ask_for_name
 
+  # Perform actions related to the morning DTT (no content scoops).
+  print_dtt_subtopic
   should_i "morning DTT" do
     view_commits base: 'test', head: 'staging'
     should_i "merge from staging to test" do
@@ -199,7 +202,14 @@ def main
       )
       new_sha = GitHub.sha 'test'
       url = GitHub.html_url(pr_number)
-      wait_for "DTT (#{url}) to complete, re-run / investigate failures, and update infra#test topic to commit #{new_sha}"
+      wait_for "DTT (#{url}) to complete, re-run / investigate failures, and "\
+        "update infra#test topic to commit #{new_sha}"
+      # TODO(asher): Prompt for whether the DTT was green, update
+      # Slack#infra-test topic appropriately.
+
+      should_i "reset DTT subtopic to yes", log_action: false do
+        DevelopersTopic.set_dtt_subtopic "yes"
+      end
     end
   end
 
