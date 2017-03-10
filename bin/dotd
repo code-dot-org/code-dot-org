@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+# This script attempts to automate and guide the Developer Of The Day through
+# our deploy processes. In particular, it includes the AM DTT, the PM DTT with
+# content scoops from staging and levelbuilder, the DTP, and the DTL.
+
 require 'cgi'
 require 'logger'
 require 'tmpdir'
@@ -7,7 +11,8 @@ require_relative '../lib/cdo/cdo_cli'
 require_relative '../lib/cdo/github'
 include CdoCli
 
-LOG_FILE = "#{Dir.tmpdir}/dotd.log"
+LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
+# TODO(asher): This is not a constant, so should not be NAMED as one.
 LOGGER = Logger.new(LOG_FILE, 'daily')
 
 LOGGER.formatter = proc do |_serverity, time, _progname, msg|
@@ -27,6 +32,11 @@ def ask_for_name
   name
 end
 
+# Prompts the user whether block should be executed by asking question,
+# executing the block, doing nothing, or exiting the program depending on user
+# response.
+# @param question [String] The question to prompt the user with.
+# @block The block to run if the user responsds affirmatively.
 def should_i(question)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
@@ -46,11 +56,14 @@ def should_i(question)
   end
 end
 
+# Prompts the user to press enter, pausing until any key is pressed.
 def press_enter_to_continue
   puts dim 'Press enter to continue...'
   gets
 end
 
+# Prompts the user to wait for thing, pausing until any key is pressed.
+# @param thing [String] The thing to wait for.
 def wait_for(thing)
   puts "\nWait for #{thing}"
   press_enter_to_continue
@@ -71,12 +84,21 @@ def open_in_default_browser(url)
   end
 end
 
+# Runs command on server_name.
+# @param server_name [String] The server to run the command on.
+# @param command [String] The command to be run.
 def run_on(server_name, command)
-  # double-escape the command string, once for each remote shell we're
-  # passing through
+  # Double-escape the command string, once for each remote shell we're passing
+  # through.
   system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
 end
 
+# Performs a guided content push.
+# @param server_name [String] The name of the server on which to perform the
+#   content push, e.g., 'staging' or 'levelbuilder-staging'.
+# @param environment_name [String] The environment name for the server, e.g.,
+#   'staging' or 'levelbuilder'.
+# @param user_name [String] The user performing the action.
 def content_push(server_name, environment_name, user_name)
   puts <<-EOS.unindent
     Follow the prompts given by the content-push script.
@@ -126,101 +148,105 @@ def view_commits(base:, head:)
   end
 end
 
-puts <<-EOS.unindent
+def main
+  puts <<-EOS.unindent
 
-  #{bold 'Welcome to Robo-Dev-of-the-Day!'}
+    #{bold 'Welcome to Robo-Dev-of-the-Day!'}
 
-    d[ o_0 ]b
+      d[ o_0 ]b
 
-  #{bold 'Documentation'}
+    #{bold 'Documentation'}
 
-    Dev-of-the-Day Checklist
-    #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
+      Dev-of-the-Day Checklist
+      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
 
-    Known Issues
-    #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
+      Known Issues
+      #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
 
-EOS
+  EOS
 
-user_name = ask_for_name
+  user_name = ask_for_name
 
-should_i "morning DTT" do
-  view_commits base: 'test', head: 'staging'
-  should_i "merge from staging to test" do
-    pr_number = GitHub.create_and_merge_pull_request(
-      base: 'test',
-      head: 'staging',
-      title: 'DTT (Staging > Test)'
-    )
-    new_sha = GitHub.sha 'test'
-    url = GitHub.html_url(pr_number)
-    wait_for "DTT (#{url}) to complete, re-run / investigate failures, and update infra#test topic to commit #{new_sha}"
-  end
-end
-
-should_i "commit content changes from staging" do
-  content_push 'staging', 'staging', user_name
-end
-
-should_i "commit content changes from levelbuilder" do
-  content_push 'levelbuilder-staging', 'levelbuilder', user_name
-
-  view_commits base: 'staging', head: 'levelbuilder'
-  should_i "merge from levelbuilder to staging" do
-    GitHub.create_and_merge_pull_request(
-      base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
-    )
-    new_sha = GitHub.sha 'staging'
-    wait_for "staging to finish building with sha #{new_sha}. If a staging build was already running, wait for a build which includes the levelbuilder content."
-    should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
-      content_push 'staging', 'staging', user_name
+  should_i "morning DTT" do
+    view_commits base: 'test', head: 'staging'
+    should_i "merge from staging to test" do
+      pr_number = GitHub.create_and_merge_pull_request(
+        base: 'test',
+        head: 'staging',
+        title: 'DTT (Staging > Test)'
+      )
+      new_sha = GitHub.sha 'test'
+      url = GitHub.html_url(pr_number)
+      wait_for "DTT (#{url}) to complete, re-run / investigate failures, and update infra#test topic to commit #{new_sha}"
     end
   end
-end
 
-should_i "DTT" do
-  puts <<-EOS.unindent
-    Update Developer room status with "DTT: NO (@yourname DTP candidate)"
-  EOS
-  open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
-  wait_for "a green test run"
-  puts <<-EOS.unindent
-    Restore Developer room status to "DTT: yes"
-  EOS
-end
-
-wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
-should_i "DTP" do
-  open_pull_request 'production', 'test', 'DTP (Test > Production)'
-
-  should_i "deploy Levelbuilder while the deploy to production is happening" do
-    puts <<-EOS.unindent
-      Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
-    EOS
-    open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
+  should_i "commit content changes from staging" do
+    content_push 'staging', 'staging', user_name
   end
 
-  wait_for "DTP to finish"
+  should_i "commit content changes from levelbuilder" do
+    content_push 'levelbuilder-staging', 'levelbuilder', user_name
+
+    view_commits base: 'staging', head: 'levelbuilder'
+    should_i "merge from levelbuilder to staging" do
+      GitHub.create_and_merge_pull_request(
+        base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
+      )
+      new_sha = GitHub.sha 'staging'
+      wait_for "staging to finish building with sha #{new_sha}. If a staging build was already running, wait for a build which includes the levelbuilder content."
+      should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
+        content_push 'staging', 'staging', user_name
+      end
+    end
+  end
+
+  should_i "DTT" do
+    puts <<-EOS.unindent
+      Update Developer room status with "DTT: NO (@yourname DTP candidate)"
+    EOS
+    open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
+    wait_for "a green test run"
+    puts <<-EOS.unindent
+      Restore Developer room status to "DTT: yes"
+    EOS
+  end
+
+  wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
+  should_i "DTP" do
+    open_pull_request 'production', 'test', 'DTP (Test > Production)'
+
+    should_i "deploy Levelbuilder while the deploy to production is happening" do
+      puts <<-EOS.unindent
+        Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
+      EOS
+      open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
+    end
+
+    wait_for "DTP to finish"
+
+    puts <<-EOS.unindent
+
+      * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
+      * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
+      * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
+      * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
+      * Ensure that no frontends were skipped in the Production room on Slack.
+      * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
+    EOS
+  end
+
+  puts <<-EOS.unindent
+    * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
+  EOS
+  press_enter_to_continue
 
   puts <<-EOS.unindent
 
-    * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
-    * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
-    * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
-    * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
-    * Ensure that no frontends were skipped in the Production room on Slack.
-    * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
+  #{bold "You're done!"}
+
+      d[ o_0 ]b
   EOS
 end
 
-puts <<-EOS.unindent
-  * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
-EOS
-press_enter_to_continue
-
-puts <<-EOS.unindent
-
-#{bold "You're done!"}
-
-    d[ o_0 ]b
-EOS
+main
