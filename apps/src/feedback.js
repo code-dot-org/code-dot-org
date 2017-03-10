@@ -1,6 +1,7 @@
 /* global trackEvent */
 
 import $ from 'jquery';
+import { getStore } from './redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ClientState from '@cdo/apps/code-studio/clientState';
@@ -205,7 +206,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const stageName = `Stage ${window.appOptions.stagePosition}`;
 
     const progress = experiments.isEnabled('g.stageprogress') ?
-      this.calculateStageProgress(
+      FeedbackUtils.calculateStageProgress(
         actualBlocks <= idealBlocks,
         hintsUsed,
         options.response.level_id,
@@ -408,9 +409,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 };
 
 // TODO(ram): split this up into something more modular
-FeedbackUtils.prototype.calculateStageProgress = function (
+FeedbackUtils.calculateStageProgress = function (
     isPerfect, hintsUsed, currentLevelId, finiteIdealBlocks) {
-  const stage = this.studioApp_.reduxStore.getState().progress.stages[0];
+  const stage = getStore().getState().progress.stages[0];
   const scriptName = stage.script_name;
   const levels = stage.levels;
   const progress = ClientState.allLevelsProgress();

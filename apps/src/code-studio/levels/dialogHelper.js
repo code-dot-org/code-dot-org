@@ -1,8 +1,11 @@
 /* globals appOptions, Dialog, CDOSounds */
 import $ from 'jquery';
+import experiments from '@cdo/apps/util/experiments';
 import React from 'react';
 import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
+import StageAchievementDialog from '@cdo/apps/templates/StageAchievementDialog';
+import Feedback from '@cdo/apps/feedback';
 import { getResult } from './codeStudioLevels';
 
 /*
@@ -23,14 +26,14 @@ function dialogHidden() {
   }
 }
 
-export function showDialog(type, callback) {
+export function showDialog(type, callback, onHidden) {
   dialogType = type;
 
   // Use our prefabricated dialog content.
   var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
   var dialog = new window.Dialog({
     body: content,
-    onHidden: dialogHidden,
+    onHidden: onHidden || dialogHidden,
     autoResizeScrollableElement: '.scrollable-element'
   });
 
@@ -132,12 +135,13 @@ export function processResults(onComplete, beforeHook) {
           onComplete(willRedirect);
         }
 
+        const stageInfo = lastServerResponse.previousStageInfo;
+        const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
+
         if (lastServerResponse.videoInfo) {
           window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.endOfStageExperience) {
           const body = document.createElement('div');
-          const stageInfo = lastServerResponse.previousStageInfo;
-          const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
           ReactDOM.render(
             <PlayZone
               stageName={stageName}
@@ -154,7 +158,33 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            showDialog("success");
+            if (experiments.isEnabled('g.endstage')) {
+              showDialog("success", () => {
+                const div = document.createElement('div');
+
+                const progress = Feedback.calculateStageProgress(
+                  true /* isPerfect */,
+                  0 /* hintsUsed */,
+                  appOptions.serverLevelId,
+                  false /* finiteIdealBlocks */);
+
+                document.body.appendChild(div);
+                ReactDOM.render(
+                  <StageAchievementDialog
+                    stageName={stageName}
+                    // This is a hack
+                    assetUrl={path => '/blockly/' + path}
+                    onContinue={dialogHidden}
+                    showStageProgress={experiments.isEnabled('g.stageprogress')}
+                    newStageProgress={progress.newStageProgress}
+                    numStars={Math.round((progress.newStageProgress * 3) + 0.5)}
+                  />,
+                  div
+                );
+              }, () => {});
+            } else {
+              showDialog("success");
+            }
           } else {
             window.location.href = lastServerResponse.nextRedirect;
           }
