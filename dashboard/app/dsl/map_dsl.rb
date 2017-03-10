@@ -1,0 +1,2 @@
+class MapDSL < CurriculumReferenceDSL
+end

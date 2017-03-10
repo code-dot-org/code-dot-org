@@ -24,4 +24,7 @@
 #
 
 class Map < CurriculumReference
+  def icon
+    "fa-map"
+  end
 end
