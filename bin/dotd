@@ -202,7 +202,7 @@ def do_dtt_subroutine
         title: 'DTT (Staging > Test)'
       )
       new_sha_abbr = GitHub.sha('test')[0, 7]
-      url = GitHub.html_url(pr_number)
+      url = GitHub.url(pr_number)
       wait_for "DTT (#{url}) to complete, re-run / investigate failures, and "\
         "update infra#test topic to commit #{new_sha_abbr}"
       # TODO(asher): Prompt for whether the DTT was green, update
@@ -259,7 +259,7 @@ def main
         pr_number = GitHub.create_and_merge_pull_request(
           base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
         )
-        dtl_message = "  DTL PR: #{GitHub.html_url(pr_number)}"
+        dtl_message = "  DTL PR: #{GitHub.url(pr_number)}"
         puts dim(dtl_message).to_s
       end
     end
