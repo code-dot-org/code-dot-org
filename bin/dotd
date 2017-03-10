@@ -264,11 +264,17 @@ def main
   should_i "DTP" do
     open_pull_request 'production', 'test', 'DTP (Test > Production)'
 
-    should_i "deploy Levelbuilder while the deploy to production is happening" do
-      puts <<-EOS.unindent
-        Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
-      EOS
-      open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
+    should_i "DTL" do
+      # TODO(asher): Remove this wait step if it is truly unnecessary now.
+      wait_for "Slack#levelbuilder to indicate they are ready for a deploy"
+      view_commits base: 'levelbuilder', head: 'test'
+      should_i "merge from test to levelbuilder" do
+        pr_number = GitHub.create_and_merge_pull_request(
+          base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
+        )
+        dtl_message = "  DTL PR: #{GitHub.html_url(pr_number)}"
+        puts dim(dtl_message).to_s
+      end
     end
 
     wait_for "DTP to finish"
