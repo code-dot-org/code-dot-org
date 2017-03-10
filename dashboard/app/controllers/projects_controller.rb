@@ -131,6 +131,9 @@ class ProjectsController < ApplicationController
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
     )
+    if params[:key] == 'artist'
+      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+    end
     render 'levels/show'
   end
 

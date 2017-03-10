@@ -1,4 +1,4 @@
-require_relative '../../../shared/test/test_helper'
+require_relative '../test_helper'
 require 'cdo/share_filtering'
 
 class ShareFilteringTest < Minitest::Test

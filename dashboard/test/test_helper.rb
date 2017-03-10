@@ -14,9 +14,11 @@ elsif ENV['CI'] # this is set by circle
 end
 
 require 'minitest/reporters'
-Minitest::Reporters.use! [
-  Minitest::Reporters::SpecReporter.new
-]
+reporters = [Minitest::Reporters::SpecReporter.new]
+if ENV['CIRCLECI']
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
+end
+Minitest::Reporters.use! reporters
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
