@@ -1,7 +1,5 @@
 require_relative '../../router'
 
-CDO.pegasus_skip_asset_map = true
-
 # Wrapper for the Pegasus "Documents" app that sets necessary environment
 # variables for testing requests against it.
 class MockPegasus
