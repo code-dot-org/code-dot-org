@@ -13,16 +13,14 @@ def wait_with_short_timeout
 end
 
 def element_stale?(element)
-  begin
-    element.enabled?
-    false
-  rescue Selenium::WebDriver::Error::StaleElementReferenceError
-    true
-  end
+  element.enabled?
+  false
+rescue Selenium::WebDriver::Error::StaleElementReferenceError
+  true
 end
 
-def page_load(page_load)
-  if page_load
+def page_load(wait_until_unload)
+  if wait_until_unload
     html = @browser.find_element(tag_name: 'html')
     yield
     wait_with_short_timeout.until do
@@ -179,7 +177,7 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
 end
 
-When /^I wait until Ajax requests are finished$/ do
+When /^I wait until jQuery Ajax requests are finished$/ do
   wait_with_short_timeout.until { @browser.execute_script("return $.active == 0") }
 end
 

@@ -37,7 +37,7 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   # Enter answers to only the first multi on the third page.
   And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
 
-  And I wait until Ajax requests are finished
+  And I wait until jQuery Ajax requests are finished
 
   # Go back to the first page to see that correct options are selected.
   Then I am on "http://studio.code.org/s/allthethings/stage/23/puzzle/2/page/1?noautoplay=true"
