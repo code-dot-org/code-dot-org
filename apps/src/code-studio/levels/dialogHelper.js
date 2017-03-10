@@ -158,7 +158,7 @@ export function processResults(onComplete, beforeHook) {
           dialog.show();
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
-            if (experiments.isEnabled('g.endstage')) {
+            if (experiments.isEnabled('g.endstage') && Feedback.isLastLevel()) {
               showDialog("success", () => {
                 const div = document.createElement('div');
 

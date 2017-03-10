@@ -202,7 +202,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const actualBlocks = this.getNumCountableBlocks();
 
     // TODO: this is not always true
-    const lastInStage = true;
+    const lastInStage = FeedbackUtils.isLastLevel();
     const stageName = `Stage ${window.appOptions.stagePosition}`;
 
     const progress = experiments.isEnabled('g.stageprogress') ?
@@ -477,6 +477,12 @@ FeedbackUtils.calculateStageProgress = function (
     newHintUsageProgress,
     newStageProgress,
   };
+};
+
+FeedbackUtils.isLastLevel = function () {
+  const stage = getStore().getState().progress.stages[0];
+  return stage.levels[stage.levels.length - 1].ids.indexOf(
+    window.appOptions.serverLevelId) !== -1;
 };
 
 /**
