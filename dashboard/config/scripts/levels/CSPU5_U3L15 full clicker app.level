@@ -96,7 +96,6 @@
     "slider_speed": "1.0",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "DebtxaKrC/hG8gBSawW+8moiiXVQlLTu/qShg32qbWE71x/YzaeYSBjA00Xb\nUw4orbIqMh8yr7pdepEf4SGPvQ==\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "display_name": "Make Your Own Clicker Game",
     "hide_share_and_remix": "false",
@@ -104,7 +103,8 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
