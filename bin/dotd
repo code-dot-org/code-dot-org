@@ -65,11 +65,11 @@ def ask_for_name
     @dotd_name = gets.chomp
   end
 
-  welcome = "  Hi #{@dotd_name}! Please follow along carefully, as options "\
-    "and codepaths are changing often."
-  puts ''
-  puts welcome
-  puts ''
+  puts <<-EOS.unindent_with_indent(2)
+
+    Hi #{@dotd_name}!
+
+  EOS
 
   LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{@dotd_name} is DotD")
 end
@@ -78,16 +78,14 @@ end
 # executing the block, doing nothing, or exiting the program depending on user
 # response.
 # @param question [String] The question to prompt the user with.
-# @param log_action [Boolean] Whether to log the action to LOGGER. Default is
-#   true.
 # @block The block to run if the user responsds affirmatively.
-def should_i(question, log_action: true)
+def should_i(question)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
     puts ''
     if 'yes'.start_with?(response) # also catches blank/return ;)
-      LOGGER.info(question) if log_action
+      LOGGER.info(question)
       yield
       return
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
@@ -103,7 +101,7 @@ def should_i(question, log_action: true)
   end
 end
 
-# Prompts the user to press enter, pausing until any key is pressed.
+# Prompts the user to press enter, waiting until this is done.
 def press_enter_to_continue
   puts dim 'Press enter to continue...'
   gets
@@ -169,24 +167,26 @@ end
 # @param head [String] The head branch to compare against.
 # @example For a DTT: view_commits(base: 'test', head: 'staging')
 def view_commits(base:, head:)
-  puts "  Commits in #{head} to be merged into #{base}"
-  puts ''
-  GitHub.compare(base: base, head: head).each do |commit_message|
-    # Truncate the message to its first line.
-    commit_message_truncated = "    #{commit_message[/.*/].chomp}"
-    puts dim(commit_message_truncated).to_s
-  end
-  puts ''
+  commit_list = GitHub.
+      compare(base: base, head: head).
+      map{|msg| dim msg.lines.first}.
+      join("\n    ")
+  puts <<-EOS.unindent_with_indent(2)
+    Commits in #{head} to be merged into #{base}
+
+      #{commit_list}
+
+  EOS
 end
 
 # Prints the DTT subtopic, formatted based on its contents.
 def print_dtt_subtopic
+  message = "Slack#developers says DTT: #{DevelopersTopic.dtt_subtopic}"
   if DevelopersTopic.dtt?
-    output_text = dim "CURRENT DTT SUBTOPIC: #{DevelopersTopic.dtt_subtopic}"
+    puts dim message
   else
-    output_text = red "CURRENT DTT SUBTOPIC: #{DevelopersTopic.dtt_subtopic}"
+    puts red message
   end
-  puts output_text
 end
 
 # Asks if the DTT subroutine should be performed, doing so if requested.
@@ -201,14 +201,14 @@ def do_dtt_subroutine
         head: 'staging',
         title: 'DTT (Staging > Test)'
       )
-      new_sha = GitHub.sha 'test'
+      new_sha_abbr = GitHub.sha('test')[0, 7]
       url = GitHub.html_url(pr_number)
       wait_for "DTT (#{url}) to complete, re-run / investigate failures, and "\
-        "update infra#test topic to commit #{new_sha}"
+        "update infra#test topic to commit #{new_sha_abbr}"
       # TODO(asher): Prompt for whether the DTT was green, update
       # Slack#infra-test topic appropriately.
 
-      should_i "reset DTT subtopic to yes", log_action: false do
+      should_i "reset DTT subtopic to yes" do
         DevelopersTopic.set_dtt_subtopic "yes"
       end
     end
@@ -233,8 +233,7 @@ def main
       GitHub.create_and_merge_pull_request(
         base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
       )
-      new_sha = GitHub.sha 'staging'
-      new_sha_abbr = new_sha[0, 4] + '...' + new_sha[-4, 4]
+      new_sha_abbr = GitHub.sha('staging')[0, 7]
       wait_for "staging to finish building with sha #{new_sha_abbr}."
       should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
         content_push 'staging', 'staging'
