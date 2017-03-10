@@ -189,13 +189,25 @@ def print_dtt_message
   end
 end
 
+# Prints the DTP message, formatted based on its contents.
+def print_dtp_message
+  message = "Slack#developers says DTP: #{DevelopersTopic.dtp}"
+  if DevelopersTopic.dtp?
+    puts dim message
+  else
+    puts red message
+  end
+end
+
 # Asks if the DTT subroutine should be performed, doing so if requested.
 def do_dtt_subroutine
   print_dtt_message
   should_i "DTT" do
     view_commits base: 'test', head: 'staging'
     should_i "merge from staging to test" do
-      DevelopersTopic.set_dtt "no (@#{@dotd_name} in progress)"
+      should_i "reset DTT message to in progress" do
+        DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
+      end
       pr_number = GitHub.create_and_merge_pull_request(
         base: 'test',
         head: 'staging',
@@ -208,7 +220,7 @@ def do_dtt_subroutine
       # TODO(asher): Prompt for whether the DTT was green, update
       # Slack#infra-test topic appropriately.
 
-      should_i "reset DTT to yes" do
+      should_i "reset DTT message to yes" do
         DevelopersTopic.set_dtt "yes"
       end
     end
@@ -244,7 +256,12 @@ def main
   do_dtt_subroutine
 
   wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
+
+  print_dtp_subtopic
   should_i "DTP" do
+    should_i "set DTP message to in progress" do
+      DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
+    end
     GitHub.open_pull_request_in_browser(
       base: 'production',
       head: 'test',
@@ -259,12 +276,14 @@ def main
         pr_number = GitHub.create_and_merge_pull_request(
           base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
         )
-        dtl_message = "  DTL PR: #{GitHub.url(pr_number)}"
-        puts dim(dtl_message).to_s
+        puts dim "  DTL PR: #{GitHub.url(pr_number)}"
       end
     end
 
     wait_for "DTP to finish"
+    should_i "reset DTP message to yes" do
+      DevelopersTopic.set_dtp "yes"
+    end
 
     puts <<-EOS.unindent
 
