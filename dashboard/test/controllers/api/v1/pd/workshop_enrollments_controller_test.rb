@@ -66,11 +66,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_response :forbidden
   end
 
-  test 'teachers cannot see enrollments' do
-    sign_in create(:teacher)
-    get :index, params: {workshop_id: @workshop.id}
-    assert_response :forbidden
-  end
+  generate_user_tests_for :index, user: :teacher,
+    response: :forbidden, params: -> {{workshop_id: @workshop.id}}
 
   test 'admins can delete enrollments from any workshop' do
     sign_in create(:admin)

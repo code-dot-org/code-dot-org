@@ -29,10 +29,7 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
     end
   end
 
-  test 'not logged in users are redirected to sign in' do
-    put :create, params: test_params
-    assert_redirected_to_sign_in
-  end
+  generate_redirect_to_sign_in_test_for :create, method: :put, params: -> {test_params}
 
   test 'admins can index teacher applications' do
     5.times do

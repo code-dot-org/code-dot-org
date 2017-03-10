@@ -1,23 +1,8 @@
 require 'test_helper'
 
 class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCase
-  test 'admins can see workshop organizers' do
-    sign_in create(:admin)
-    get :index
-    assert_response :success
-  end
-
-  test 'workshop organizers cannot see workshop organizers' do
-    sign_in create(:workshop_organizer)
-    get :index
-    assert_response :forbidden
-  end
-
-  test 'teachers cannot see workshop organizers' do
-    sign_in create(:teacher)
-    get :index
-    assert_response :forbidden
-  end
+  generate_user_tests_for :index, response: :success, user: :admin
+  generate_user_tests_for :index, response: :forbidden, user: [:teacher, :workshop_organizer]
 
   test 'results' do
     organizers = 2.times.map do
