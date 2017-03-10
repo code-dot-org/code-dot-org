@@ -135,13 +135,12 @@ export function processResults(onComplete, beforeHook) {
           onComplete(willRedirect);
         }
 
-        const stageInfo = lastServerResponse.previousStageInfo;
-        const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
-
         if (lastServerResponse.videoInfo) {
           window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.endOfStageExperience) {
           const body = document.createElement('div');
+          const stageInfo = lastServerResponse.previousStageInfo;
+          const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
           ReactDOM.render(
             <PlayZone
               stageName={stageName}
@@ -159,6 +158,8 @@ export function processResults(onComplete, beforeHook) {
         } else if (lastServerResponse.nextRedirect) {
           if (appOptions.dialog.shouldShowDialog) {
             if (experiments.isEnabled('g.endstage') && Feedback.isLastLevel()) {
+              const stageInfo = lastServerResponse.previousStageInfo;
+              const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
               showDialog("success", () => {
                 const div = document.createElement('div');
                 document.body.appendChild(div);
