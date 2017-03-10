@@ -35,10 +35,11 @@
     "honey_goal": "0",
     "serialized_maze": "[[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":15,\"range\":15,\"featureType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":15,\"range\":15,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":15,\"range\":15,\"featureType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}]]",
     "authored_hints": "[]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": [
+      "courseD_multi_bee_debugging9_predict1"
+    ]
   },
   "published": true,
   "notes": "",
@@ -50,22 +51,23 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat" deletable="false">
+            <block type="controls_repeat">
               <title name="TIMES">2</title>
               <statement name="DO">
-                <block type="controls_repeat" deletable="false">
+                <block type="controls_repeat">
                   <title name="TIMES">3</title>
                   <statement name="DO">
                     <block type="maze_moveForward"/>
                   </statement>
                   <next>
-                    <block type="maze_moveForward" deletable="false">
+                    <block type="controls_repeat">
+                      <title name="TIMES">15</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
                       <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">20</title>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
                         </block>
                       </next>
                     </block>

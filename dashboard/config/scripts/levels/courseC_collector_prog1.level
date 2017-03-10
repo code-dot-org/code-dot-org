@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Play around with the blocks to see if you can help Laurel collect some treasure.",
-    "markdown_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one pile to pass this level.",
+    "markdown_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
