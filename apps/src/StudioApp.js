@@ -2842,7 +2842,7 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
  */
 StudioApp.prototype.isResponsiveFromConfig = function (config) {
   const isResponsiveEmbedView = !!(config.embed && config.responsiveEmbedded);
-  const isWorkspaceView = !config.embed && !config.share;
+  const isWorkspaceView = !config.hideSource;
   return isResponsiveEmbedView || isWorkspaceView;
 };
 
