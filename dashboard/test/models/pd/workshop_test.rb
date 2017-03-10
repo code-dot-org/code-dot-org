@@ -202,16 +202,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'should have ended' do
     workshop_recently_started = create :pd_workshop
-    workshop_recently_started.started_at = Time.now - 12.hours
+    workshop_recently_started.started_at = Time.now
+    workshop_recently_started.sessions << (build :pd_session, start: Time.zone.now - 13.hours, end: Time.zone.now - 12.hours)
     workshop_recently_started.save!
 
     workshop_should_have_ended = create :pd_workshop
-    workshop_should_have_ended.started_at = Time.now - 25.hours
+    workshop_should_have_ended.started_at = Time.now
+    workshop_should_have_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_should_have_ended.save!
 
     workshop_already_ended = create :pd_workshop
-    workshop_already_ended.started_at = Time.now - 25.hours
-    workshop_already_ended.ended_at = Time.now - 10.hours
+    workshop_already_ended.started_at = Time.now
+    workshop_already_ended.ended_at = Time.now - 1.hours
+    workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_already_ended.save!
 
     assert_equal [workshop_should_have_ended.id], Pd::Workshop.should_have_ended.all.map(&:id)
