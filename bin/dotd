@@ -69,6 +69,7 @@ def should_i(question, log_action: true)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
+    puts ''
     if 'yes'.start_with?(response) # also catches blank/return ;)
       LOGGER.info(question) if log_action
       yield
@@ -76,7 +77,9 @@ def should_i(question, log_action: true)
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
       return
     elsif 'quit'.start_with?(response)
-      puts "Something weird going on? Take a look at: http://wiki.code.org/display/PROD/Daily+Deployment"
+      puts bold "  Something weird going on? Take a look at: "\
+        "http://wiki.code.org/display/PROD/Daily+Deployment"
+      puts ''
       exit(-1)
     else
       puts "Sorry, I didn't understand that.\n\n"
@@ -164,16 +167,19 @@ def open_pull_request(base, compare, title)
 end
 
 # Prints the commit messages of commits present in branch head but not branch
-# base.
+# base. Truncates all such messages to the first line.
 # @param base [String] The base branch to compare.
 # @param head [String] The head branch to compare against.
 # @example For a DTT: view_commits(base: 'test', head: 'staging')
 def view_commits(base:, head:)
+  puts "  Commits in #{head} to be merged into #{base}"
+  puts ''
   GitHub.compare(base: base, head: head).each do |commit_message|
-    # Empirically, commit messages often contain blank lines. For console
-    # readability, we attempt to remove them.
-    puts commit_message.gsub("\n\n", "\n")
+    # Truncate the message to its first line.
+    commit_message_truncated = "    #{commit_message[/.*/].chomp}"
+    puts dim(commit_message_truncated).to_s
   end
+  puts ''
 end
 
 # Prints the DTT subtopic, formatted based on its contents.
