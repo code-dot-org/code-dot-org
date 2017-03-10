@@ -38,7 +38,7 @@ def puts_script_intro
   EOS
 end
 
-# Prompts the user for their name.
+# Prompts the user for their name. Also performs some console output.
 # @return [String] The user's name.
 def ask_for_name
   name = ''
@@ -46,7 +46,13 @@ def ask_for_name
     print "Who are you? "
     name = gets.chomp
   end
-  puts "Hi #{name}!"
+
+  welcome = "  Hi #{name}! Please follow along carefully, as options and "\
+    "codepaths are changing often."
+  puts ''
+  puts welcome
+  puts ''
+
   LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DotD")
   name
 end
