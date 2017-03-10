@@ -192,13 +192,10 @@ def print_dtt_subtopic
   puts output_text
 end
 
-def main
-  puts_script_intro
-  user_name = ask_for_name
-
-  # Perform actions related to the morning DTT (no content scoops).
+# Asks if the DTT subroutine should be performed, doing so if requested.
+def do_dtt_subroutine
   print_dtt_subtopic
-  should_i "morning DTT" do
+  should_i "DTT" do
     view_commits base: 'test', head: 'staging'
     should_i "merge from staging to test" do
       pr_number = GitHub.create_and_merge_pull_request(
@@ -218,6 +215,13 @@ def main
       end
     end
   end
+end
+
+def main
+  puts_script_intro
+  user_name = ask_for_name
+
+  do_dtt_subroutine
 
   should_i "commit content changes from staging" do
     content_push 'staging', 'staging', user_name
@@ -239,16 +243,7 @@ def main
     end
   end
 
-  should_i "DTT" do
-    puts <<-EOS.unindent
-      Update Developer room status with "DTT: NO (@yourname DTP candidate)"
-    EOS
-    open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
-    wait_for "a green test run"
-    puts <<-EOS.unindent
-      Restore Developer room status to "DTT: yes"
-    EOS
-  end
+  do_dtt_subroutine
 
   wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
   should_i "DTP" do
