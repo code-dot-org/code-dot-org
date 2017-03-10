@@ -1,11 +1,9 @@
+require_relative './test_helper'
 require_relative '../src/env'
 require 'rack/test'
 require 'minitest/autorun'
 require 'webmock/minitest'
 require 'mocha/mini_test'
-
-# Allow us to hit /learn without precompiling dashboard assets first.
-CDO.pegasus_skip_asset_map = true
 
 # General purpose Pegasus site tester for incremental test coverage of the Router logic.
 class SiteTest < Minitest::Test
