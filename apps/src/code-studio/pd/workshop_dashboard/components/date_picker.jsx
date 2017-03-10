@@ -45,7 +45,7 @@ const DateInputWithIcon = Radium(React.createClass({
     onChange: React.PropTypes.func,
     onClick: React.PropTypes.func,
     value: React.PropTypes.string,
-    onBlur: React.PropTypes.func,
+    onBlur: React.PropTypes.func
   },
 
   // Called by ReactDatePicker to focus on the custom input.
