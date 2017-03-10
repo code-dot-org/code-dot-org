@@ -175,6 +175,16 @@ def view_commits(base:, head:)
   end
 end
 
+# Prints the DTT subtopic, formatted based on its contents.
+def print_dtt_subtopic
+  if DevelopersTopic.dtt?
+    output_text = dim "CURRENT DTT SUBTOPIC: #{DevelopersTopic.dtt_subtopic}"
+  else
+    output_text = red "CURRENT DTT SUBTOPIC: #{DevelopersTopic.dtt_subtopic}"
+  end
+  puts output_text
+end
+
 def main
   puts_script_intro
   user_name = ask_for_name
