@@ -51,23 +51,8 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, in_section: true, attended: true
   end
 
-  test 'admins can view the report' do
-    sign_in @admin
-    get :index
-    assert_response :success
-  end
-
-  test 'workshop organizers can view the report' do
-    sign_in @organizer
-    get :index
-    assert_response :success
-  end
-
-  test 'other users cannot view report' do
-    sign_in create(:teacher)
-    get :index
-    assert_response :forbidden
-  end
+  generate_user_tests_for :index, user: [:admin, :workshop_organizer]
+  generate_user_tests_for :index, response: :forbidden, user: :teacher
 
   test 'admins get payment info' do
     sign_in @admin

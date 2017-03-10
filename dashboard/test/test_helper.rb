@@ -249,22 +249,62 @@ class ActionController::TestCase
   end
 
   def self.generate_admin_only_tests_for(action, params = {})
-    test "should get #{action}" do
-      sign_in create(:admin)
-      get action, params: params
-      assert_response :success
-    end
+    generate_user_tests_for action, user: :admin, params: params
+    generate_user_tests_for action, response: :forbidden, params: params
+    generate_redirect_to_sign_in_test_for action, params: params
+  end
 
-    test "should not get #{action} if not signed in" do
+  # Generates a test case ensuring redirect to sign in for not signed in users
+  # @param action [String] the controller action to test
+  # @param method [Symbol, String] http method with which to perform the action (default :get)
+  # @param params [Hash, Proc] params to pass to the action. It can be a direct hash,
+  #   or a proc that generates a hash at runtime in the context of the test case.
+  def self.generate_redirect_to_sign_in_test_for(action, method: :get, params: {})
+    test "not signed in #{method} #{action} redirects to sign in" do
+      # params can be a hash, or a proc that will generate a hash at runtime
+      # (e.g. to create fixtures).
+      params = self.instance_exec(&params) if params.is_a? Proc
+
       sign_out :user
-      get action, params: params
+      send method, action, params: params
       assert_redirected_to_sign_in
     end
+  end
 
-    test "should not get #{action} if not admin" do
-      sign_in create(:user)
-      get action, params: params
-      assert_response :forbidden
+  # Generates basic response validation test cases for logged-in users, one test case per specified user.
+  # @param action [String] the controller action to test
+  # @param method [Symbol, String] http method with which to perform the action (default :get)
+  # @param response [Symbol, String, Number] expected response (default :success)
+  # @param user [Symbol, String, Array<Symbol, String>, Proc] user to log in (default :user)
+  #   It can be a single or array of factory names to be passed to FactoryGirl.create,
+  #   or a proc that runs in the context of the test case and returns a user.
+  #   In the case of an array, one test case will be generated per user.
+  # @param params [Hash, Proc] params to pass to the action. It can be a direct hash,
+  #   or a proc that generates a hash at runtime in the context of the test case.
+  # @param name [String] optional name of the test case.
+  #   Otherwise it will be generated based on parameter values.
+  #   Note: It is recommended to supply a name when varying params or user procs,
+  #     as the default generated names may be ambiguous and may conflict.
+  def self.generate_user_tests_for(action, method: :get, response: :success,
+    user: :user, params: {}, name: nil)
+
+    # user can be a single item or an array
+    [user].flatten.each do |each_user|
+      test_name = name ||
+        "#{each_user.is_a?(Proc) ? 'supplied user' : each_user} calling #{method} #{action} should receive #{response}"
+
+      test test_name do
+        # user can be a symbol (or array of symbols) for FactoryGirl creation,
+        # or a proc that returns a user object at runtime
+        actual_user = each_user.is_a?(Proc) ? self.instance_exec(&each_user) : create(each_user)
+
+        # params can be a hash, or a proc that returns a hash at runtime
+        params = self.instance_exec(&params) if params.is_a? Proc
+
+        sign_in actual_user
+        send method, action, params: params
+        assert_response response
+      end
     end
   end
 
