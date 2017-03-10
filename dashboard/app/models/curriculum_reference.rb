@@ -33,8 +33,18 @@ class CurriculumReference < External
     TEXT
   end
 
+  # TODO: likely not needed. probably a better name if it is needed
+  def href
+    return nil unless properties['reference']
+    "https://docs.code.org#{properties['reference']}"
+  end
+
   def reference_html
     return nil unless properties['reference']
-    AWS::S3.download_from_bucket('cdo-curriculum', "documentation#{properties['reference']}")
+    html = AWS::S3.download_from_bucket('cdo-curriculum', "documentation#{properties['reference']}")
+    html
+    # doc = Nokogiri::HTML(html)
+    # body = doc.at_css('body')
+    # body.to_html
   end
 end
