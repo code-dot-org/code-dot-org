@@ -10,6 +10,13 @@ const STUB_PROJECTS_DATA = [
     updatedAt: '2016-12-31T23:59:59.999-08:00'
   },
   {
+    channel: 'AAAABBBBCCCCDDDDEE',
+    name: 'Cats and Kittens',
+    studentName: 'Charlie',
+    type: 'weblab',
+    updatedAt: '2016-11-30T00:00:00.001-08:00'
+  },
+  {
     channel: 'NOPQRSTUVWXYZ567879',
     name: 'Batyote',
     studentName: 'Bob',

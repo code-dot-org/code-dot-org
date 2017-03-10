@@ -23,8 +23,7 @@ Scenario: Submit three answers.
 
   And I press ".submitButton:first" using jQuery
   And I wait to see ".modal"
-  And I press ".modal #ok-button" using jQuery
-  And I wait for 5 seconds
+  And I press ".modal #ok-button" using jQuery to load a new page
 
   # Go back to the page to see that same options are selected.
   Then I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"

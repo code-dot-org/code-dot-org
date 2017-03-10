@@ -644,6 +644,26 @@ class User < ActiveRecord::Base
       first
   end
 
+  # Is the stage containing the provided script_level hidden for this user?
+  def hidden_stage?(script_level)
+    return false if self.try(:teacher?)
+
+    sections = self.sections_as_student.select{|s| s.deleted_at.nil?}
+    return false if sections.empty?
+
+    script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
+
+    if !script_sections.empty?
+      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
+      # hides the stage
+      script_sections.all?{|s| script_level.stage_hidden_for_section?(s.id) }
+    else
+      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # hide it
+      sections.any?{|s| script_level.stage_hidden_for_section?(s.id) }
+    end
+  end
+
   def student?
     user_type == TYPE_STUDENT
   end
@@ -941,7 +961,7 @@ class User < ActiveRecord::Base
       end
 
       if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.basic_proficiency?
+          user_proficiency.proficient?
         user_proficiency.basic_proficiency_at = time_now
       end
 
@@ -995,7 +1015,7 @@ class User < ActiveRecord::Base
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
-      if !user_level.perfect? &&
+      if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         ([
           ScriptConstants::TWENTY_HOUR_NAME,
