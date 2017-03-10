@@ -138,6 +138,7 @@ def content_push(server_name, environment_name, user_name)
   EOS
   success = run_on(server_name, "#{environment_name}/bin/content-push --name=\"#{user_name}\"")
 
+  puts ''
   # Notice if the content push fails, and be helpful about fixing the problem.
   unless success
     puts "#{bold 'Uh-oh!'}  It looks like the #{server_name} content push failed!"
@@ -232,7 +233,8 @@ def main
         base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
       )
       new_sha = GitHub.sha 'staging'
-      wait_for "staging to finish building with sha #{new_sha}. If a staging build was already running, wait for a build which includes the levelbuilder content."
+      new_sha_abbr = new_sha[0, 4] + '...' + new_sha[-4, 4]
+      wait_for "staging to finish building with sha #{new_sha_abbr}."
       should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
         content_push 'staging', 'staging', user_name
       end
