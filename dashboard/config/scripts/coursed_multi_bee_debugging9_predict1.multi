@@ -1,0 +1,6 @@
+name 'courseD_multi_bee_debugging9_predict1'
+question 'Look closely at the code below.  Why won\'t the bee collect all of the nectar when you click "Run"?'
+wrong 'wrong answer', feedback: 'that was wrong because X'
+wrong 'wrong answer', feedback: 'that was wrong because X'
+right 'right answer', feedback: 'that was wrong because X'
+wrong 'I don\t know.', feedback: 'that was wrong because X'

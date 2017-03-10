@@ -688,6 +688,7 @@ en:
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
       CSDU6 - button check for understanding: {}
+      CSDU6 - sensor projects challenge: {}
       CSDU6 - timed loop stop board: {}
       CSDU6 Innovation: {}
       CSDU6 SFLP:
@@ -7213,6 +7214,12 @@ en:
         Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
         The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
         right answer: right answer
+        wrong answer: wrong answer
+      courseD_multi_bee_debugging9_predict1:
+        I don\t know.: I don\t know.
+        Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?: Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?
+        right answer: right answer
+        that was wrong because X: that was wrong because X
         wrong answer: wrong answer
       courseD_multi_bee_nestedLoops2_predict1:
         Correct!: Correct!
