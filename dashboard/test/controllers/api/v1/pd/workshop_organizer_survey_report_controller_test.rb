@@ -24,7 +24,7 @@ class Api::V1::Pd::WorkshopOrganizerSurveyReportControllerTest < ::ActionControl
     assert_response :success
   end
 
-  test "teachers who are not facilitators can't view workshops that are not their own" do
+  test "teachers who are not organizers cannot view surveys" do
     teacher = create :teacher
     sign_in teacher
 
