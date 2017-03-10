@@ -115,21 +115,6 @@ def wait_for(thing)
   press_enter_to_continue
 end
 
-def open_url(url)
-  open_in_default_browser(url)
-  puts dim "Browser didn't open? go to:"
-  puts dim url
-end
-
-def open_in_default_browser(url)
-  # Based on http://stackoverflow.com/a/14053693/5000129
-  if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
-    system "sensible-browser \"#{url}\""
-  else
-    system "open \"#{url}\""
-  end
-end
-
 # Runs command on server_name.
 # @param server_name [String] The server to run the command on.
 # @param command [String] The command to be run.
@@ -175,10 +160,6 @@ def content_push(server_name, environment_name, user_name)
       press_enter_to_continue
     end
   end
-end
-
-def open_pull_request(base, compare, title)
-  open_url "https://github.com/code-dot-org/code-dot-org/compare/#{base}...#{compare}?expand=1&title=#{CGI.escape title}"
 end
 
 # Prints the commit messages of commits present in branch head but not branch
@@ -262,7 +243,11 @@ def main
 
   wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
   should_i "DTP" do
-    open_pull_request 'production', 'test', 'DTP (Test > Production)'
+    GitHub.open_pull_request_in_browser(
+      base: 'production',
+      head: 'test',
+      title: 'DTP (Test > Production)'
+    )
 
     should_i "DTL" do
       # TODO(asher): Remove this wait step if it is truly unnecessary now.
