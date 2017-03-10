@@ -19,6 +19,20 @@ class Slack
 
   SLACK_TOKEN = CDO.slack_token.freeze
 
+  # Returns the user (mention) name of the user.
+  # WARNING: Does not include the mention character '@'.
+  # @param email [String] The email of the Slack user.
+  # @raise [ArgumentError] If the email does not correspond to a Slack user.
+  # @return [nil | String] The user (mention) name for the Slack user.
+  def self.user_name(email)
+    users_list = open("https://slack.com/api/users.list?token=#{SLACK_TOKEN}").
+      read
+    members = JSON.parse(users_list)['members']
+    user = members.find {|member| email == member['profile']['email']}
+    raise "Slack email #{email} not found" unless user
+    user['name']
+  end
+
   # @param channel_name [String] The channel to fetch the topic.
   # @return [String | nil] The existing topic, nil if not found.
   def self.get_topic(channel_name, use_channel_map = false)

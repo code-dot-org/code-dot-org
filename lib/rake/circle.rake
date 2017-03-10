@@ -62,6 +62,9 @@ namespace :circle do
       next
     end
 
+    # Make sure the destination for our JUnit XML test reports exists
+    RakeUtils.system_stream_output 'mkdir -p $CIRCLE_TEST_REPORTS/cucumber'
+
     Dir.chdir('dashboard') do
       RakeUtils.exec_in_background "RAILS_ENV=test bundle exec unicorn -c config/unicorn.rb -E test -l #{CDO.dashboard_port}"
     end

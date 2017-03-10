@@ -4,6 +4,7 @@ require 'cgi'
 require 'logger'
 require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
+require_relative '../lib/cdo/github'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log"
@@ -13,6 +14,8 @@ LOGGER.formatter = proc do |_serverity, time, _progname, msg|
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
+# Prompts the user for their name.
+# @return [String] The user's name.
 def ask_for_name
   name = ''
   until name != ''
@@ -110,6 +113,19 @@ def open_pull_request(base, compare, title)
   open_url "https://github.com/code-dot-org/code-dot-org/compare/#{base}...#{compare}?expand=1&title=#{CGI.escape title}"
 end
 
+# Prints the commit messages of commits present in branch head but not branch
+# base.
+# @param base [String] The base branch to compare.
+# @param head [String] The head branch to compare against.
+# @example For a DTT: view_commits(base: 'test', head: 'staging')
+def view_commits(base:, head:)
+  GitHub.compare(base: base, head: head).each do |commit_message|
+    # Empirically, commit messages often contain blank lines. For console
+    # readability, we attempt to remove them.
+    puts commit_message.gsub("\n\n", "\n")
+  end
+end
+
 puts <<-EOS.unindent
 
   #{bold 'Welcome to Robo-Dev-of-the-Day!'}
@@ -129,8 +145,17 @@ EOS
 user_name = ask_for_name
 
 should_i "morning DTT" do
-  open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
-  wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
+  view_commits base: 'test', head: 'staging'
+  should_i "merge from staging to test" do
+    pr_number = GitHub.create_and_merge_pull_request(
+      base: 'test',
+      head: 'staging',
+      title: 'DTT (Staging > Test)'
+    )
+    new_sha = GitHub.sha 'test'
+    url = GitHub.html_url(pr_number)
+    wait_for "DTT (#{url}) to complete, re-run / investigate failures, and update infra#test topic to commit #{new_sha}"
+  end
 end
 
 should_i "commit content changes from staging" do
@@ -140,9 +165,13 @@ end
 should_i "commit content changes from levelbuilder" do
   content_push 'levelbuilder-staging', 'levelbuilder', user_name
 
+  view_commits base: 'staging', head: 'levelbuilder'
   should_i "merge from levelbuilder to staging" do
-    open_pull_request 'staging', 'levelbuilder', 'Levelbuilder > Staging'
-    wait_for "staging to finish building. if a staging build was already running, wait for a second build which will include the levelbuilder content"
+    GitHub.create_and_merge_pull_request(
+      base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
+    )
+    new_sha = GitHub.sha 'staging'
+    wait_for "staging to finish building with sha #{new_sha}. If a staging build was already running, wait for a build which includes the levelbuilder content."
     should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
       content_push 'staging', 'staging', user_name
     end
@@ -169,11 +198,6 @@ should_i "DTP" do
       Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
     EOS
     open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
-  end
-
-  should_i "create a new release of the code-dot-org repository on github" do
-    wait_for "the production server to fetch the latest changes"
-    run_on("production-daemon", "cd production; ./bin/create-release")
   end
 
   wait_for "DTP to finish"

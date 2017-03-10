@@ -15,7 +15,6 @@ Feature: Legacy Share Remix
     And I navigate to the share URL
     And I select the "How it works" small footer item
     And I wait to see ".project_remix"
-    And I press the first ".project_remix" element
-    And I wait for 10 seconds
+    And I press the first ".project_remix" element to load a new page
     And check that the URL contains "/projects/artist/"
     And check that the URL contains "/edit"

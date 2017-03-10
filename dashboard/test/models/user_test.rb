@@ -1161,6 +1161,20 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
   end
 
+  test 'track_level_progress_sync does call track_profiency when manual_pass to perfect' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    UserLevel.create!(
+      user: user,
+      level: csf_script_level.level,
+      script: Script.get_from_cache('20-hour'),
+      best_result: ActivityConstants::MANUAL_PASS_RESULT
+    )
+
+    User.expects(:track_proficiency).once
+    track_progress(user.id, csf_script_level, 100)
+  end
+
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
     script_level = create :script_level
     student = create :student
