@@ -12,7 +12,7 @@ class Api::V1::TestLogsController < ApplicationController
     bucket = Aws::S3::Bucket.new('cucumber-logs')
     objects = bucket.objects({prefix: "#{params[:prefix]}/"})
     objects_to_render = objects.select {|summary| boundary_time <= summary.last_modified}
-    json_result = Parallel.map(objects_to_render) do |summary|
+    json_result = Parallel.map(objects_to_render, in_threads: Parallel.processor_count) do |summary|
       object = bucket.object(summary.key)
       {
         key: summary.key,
