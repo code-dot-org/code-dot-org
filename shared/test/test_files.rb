@@ -192,6 +192,14 @@ class FilesTest < FilesApiTestBase
     assert unsupported_media_type?
   end
 
+  def test_bad_channel_id
+    bad_channel_id = 'undefined'
+    api = FilesApiTestHelper.new(current_session, 'files', bad_channel_id)
+    file_infos = api.list_objects
+    assert_equal '', file_infos['filesVersionId']
+    assert_equal [], file_infos['files']
+  end
+
   private
 
   def post_file(api, uploaded_file)
