@@ -616,7 +616,7 @@ class User < ActiveRecord::Base
     script_level_index = 0
     if user_level
       last_script_level = user_level.level.script_levels.where(script_id: script.id).first
-      script_level_index = script.script_levels.find_index(last_script_level) if last_script_level
+      script_level_index = last_script_level.chapter - 1 if last_script_level
     end
 
     next_unpassed = script.script_levels[script_level_index..-1].detect do |script_level|
