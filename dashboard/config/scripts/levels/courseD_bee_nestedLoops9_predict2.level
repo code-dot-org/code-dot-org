@@ -36,13 +36,64 @@
     "fast_get_nectar_animation": "true",
     "instructions_important": "false",
     "authored_hints": "[]",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "contained_level_names": null
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":2}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "contained_level_names": [
+      "courseD_multi_bee_nestedLoops9_predict2"
+    ]
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward">
+                      <next>
+                        <block type="maze_honey"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">2</title>
+                          <statement name="DO">
+                            <block type="maze_moveForward">
+                              <next>
+                                <block type="maze_honey"/>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_moveForward"/>
@@ -59,33 +110,5 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat">
-              <title name="TIMES">2</title>
-              <statement name="DO">
-                <block type="controls_repeat">
-                  <title name="TIMES">5</title>
-                  <statement name="DO">
-                    <block type="maze_moveForward">
-                      <next>
-                        <block type="maze_honey"/>
-                      </next>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </solution_blocks>
   </blocks>
 </Karel>

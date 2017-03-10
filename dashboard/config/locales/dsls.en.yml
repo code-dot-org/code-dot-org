@@ -7137,6 +7137,7 @@ en:
         The bird not move at all.: The bird not move at all.
         The bird runs into the TNT with his first move.: The bird runs into the TNT with his first move.
         The bird will get to the pig.: The bird will get to the pig.
+        The bird will not move at all.: The bird will not move at all.
         The bird will run into the TNT right away.: The bird will run into the TNT right away.
       courseB_multi_maze_seq1_predict1:
         Correct!: Correct!
@@ -7162,10 +7163,7 @@ en:
         I don't know.: I don't know.
         Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
         Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
-        Question: Question
         The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
-        right answer: right answer
-        wrong answer: wrong answer
       courseC_multi_maze_debugging8_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7181,13 +7179,10 @@ en:
         I don't know.: I don't know.
         Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.: Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.
         Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
-        Question: Question
         The bird will not travel far enough in the first loop.: The bird will not travel far enough in the first loop.
         The bird will reach the pig with no problems.: The bird will reach the pig with no problems.
         The bird will travel too far in the first loop.: The bird will travel too far in the first loop.
         The first loop only lets the bird move forward 1 space, when it needs to move forward 3.: The first loop only lets the bird move forward 1 space, when it needs to move forward 3.
-        right answer: right answer
-        wrong answer: wrong answer
       courseC_multi_maze_loops2_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7206,6 +7201,19 @@ en:
         The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
         The bird will make it to the pig.: The bird will make it to the pig.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        I don't know.: I don't know.
+        I don\t know.: I don\t know.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        Question: Question
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        right answer: right answer
+        wrong answer: wrong answer
       courseD_multi_bee_nestedLoops2_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7215,8 +7223,17 @@ en:
         The bee will get 3 units of nectar.: The bee will get 3 units of nectar.
         The bee will get all of the nectar.: The bee will get all of the nectar.
         The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
-        right answer: right answer
-        wrong answer: wrong answer
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        Look closely at the code below. How much honey will the bee collect when you click "Run"?: Look closely at the code below. How much honey will the bee collect when you click "Run"?
+        ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
@@ -8242,8 +8259,12 @@ en:
         '2': '2'
         CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
         CSS: CSS
+        Question: Question
         Stylesheet: Stylesheet
         description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
