@@ -45,8 +45,7 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
 
   test 'program managers have plp permissions' do
     user = create(:workshop_organizer)
-    rp = create :regional_partner
-    create :regional_partner_program_manager, regional_partner: rp, program_manager: user
+    create :regional_partner_program_manager, program_manager: user
 
     sign_in user
     get :index
