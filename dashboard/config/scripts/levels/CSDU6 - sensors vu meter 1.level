@@ -108,7 +108,11 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - sensors vu meter template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# Collecting and Scaling Input\r\n\r\nWhich sensor do you need to take input from?\r\nWhat scale of input is appropriate for this app?\r\n\r\n# Do This\r\n\r\nAdd an event handler to continually collect data from your chosen sensor and use `console.log()` to track how it changes to user interaction. If necessary, change the scale of your input to meet your needs."
   },
   "published": true,
   "notes": "",
