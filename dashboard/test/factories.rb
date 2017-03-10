@@ -763,7 +763,7 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) { |n| "Partner#{n}" }
     contact {create :teacher}
-    #group 1
+    group 1
   end
 
   factory :regional_partner_program_manager do
