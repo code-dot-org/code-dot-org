@@ -12,7 +12,7 @@ export const VISUALIZATION_DIV_ID = 'visualization';
  *          elements in the current view.
  */
 export function isResponsiveFromState(state) {
-  return !state.pageConstants.isEmbedView && !state.pageConstants.hideSource;
+  return state.pageConstants.isResponsive;
 }
 
 /**

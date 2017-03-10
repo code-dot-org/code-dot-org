@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { getStore } from '../redux';
 import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
@@ -22,9 +23,12 @@ import {
   getContainedLevelId,
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
+import { dataURIToFramedBlob } from '@cdo/apps/imageUtils';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
+
+const SHARE_IMAGE_NAME = '_share_image.png';
 
 /**
  * When we have a publicly cacheable script, the server does not send down the
@@ -98,6 +102,11 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
+        const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;
+        // Add the frame to the drawing.
+        dataURIToFramedBlob(dataURI, blob => {
+          files.putFile(SHARE_IMAGE_NAME, blob);
+        });
         return;
       }
       if (appOptions.channel && !appOptions.level.edit_blocks &&
