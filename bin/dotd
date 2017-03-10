@@ -195,6 +195,7 @@ def do_dtt_subroutine
   should_i "DTT" do
     view_commits base: 'test', head: 'staging'
     should_i "merge from staging to test" do
+      DevelopersTopic.set_dtt_subtopic "no (@#{@dotd_name} in progress)"
       pr_number = GitHub.create_and_merge_pull_request(
         base: 'test',
         head: 'staging',
