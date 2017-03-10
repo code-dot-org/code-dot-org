@@ -61,13 +61,15 @@ end
 # executing the block, doing nothing, or exiting the program depending on user
 # response.
 # @param question [String] The question to prompt the user with.
+# @param log_action [Boolean] Whether to log the action to LOGGER. Default is
+#   true.
 # @block The block to run if the user responsds affirmatively.
-def should_i(question)
+def should_i(question, log_action: true)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
     if 'yes'.start_with?(response) # also catches blank/return ;)
-      LOGGER.info(question)
+      LOGGER.info(question) if log_action
       yield
       return
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
