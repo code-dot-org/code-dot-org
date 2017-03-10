@@ -1,7 +1,7 @@
 / This partial contains general content-display code applicable across all of our content-based level types.
 / Set 'data' and 'app' to use this partial.
-/ Note that content_class, source_level, and hide_header are optional.
-- app, data, content_class, source_level, hide_header = %i(app data content_class source_level hide_header).map{ |x| local_assigns[x] }
+/ Note that content_class, source_level, hide_header, and postcontent are optional.
+- app, data, content_class, source_level, hide_header, postcontent = %i(app data content_class source_level hide_header postcontent).map{ |x| local_assigns[x] }
 
 - unless data['title'].blank? || hide_header
   %h1!= string_or_image(app, data['title'], source_level) unless app == 'external'
@@ -18,9 +18,4 @@
     #markdown
       / Render markdown text through the ActionView template engine.
       = ActionView::Base.new.render(inline: data['markdown'], type: :md)
-
-  - if @level.class == External
-    - if @script.try(:professional_learning_course?) && @script_level
-      = link_to @script_level.end_of_stage? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large pull-right btn-primary submitButton'
-    - elsif !@level.has_submit_button?
-      %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
+  = postcontent
