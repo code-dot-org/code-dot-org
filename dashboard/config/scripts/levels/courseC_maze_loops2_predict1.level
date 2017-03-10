@@ -34,8 +34,7 @@
     "disable_if_else_editing": "false",
     "contained_level_names": [
       "courseC_multi_maze_loops2_predict1"
-    ],
-    "maze_data": null
+    ]
   },
   "published": true,
   "notes": "",
