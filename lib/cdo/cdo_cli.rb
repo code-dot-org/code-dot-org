@@ -22,6 +22,10 @@ module CdoCli
   def underline(text)
     stylize(text, 4)
   end
+
+  def red(text)
+    stylize(text, 31)
+  end
 end
 
 # Utility to strip consistent leading whitespace from heredoc strings, allowing

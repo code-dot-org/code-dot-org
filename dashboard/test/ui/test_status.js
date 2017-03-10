@@ -69,14 +69,14 @@ function Test(fromRow) {
   this.updateView();
 }
 
-Test.prototype.setLastModified = function (lastModified) {
+Test.prototype.setLastModified = function (object, lastModified) {
   // Do no updating if things haven't changed.
   if (this.lastModified_ && lastModified <= this.lastModified_) {
     return Promise.resolve();
   }
 
   if (lastModified > RUN_START_TIME && this.status !== STATUS_SUCCEEDED) {
-    return this.fetchStatus()
+    return this.fetchStatus(object)
       .then(() => this.lastModified_ = lastModified);
   } else {
     this.lastModified_ = lastModified;
@@ -85,7 +85,7 @@ Test.prototype.setLastModified = function (lastModified) {
   }
 };
 
-Test.prototype.fetchStatus = function () {
+Test.prototype.fetchStatus = function (object) {
   this.isUpdating_ = true;
   this.updateView();
   const ensure = () => {
@@ -93,13 +93,7 @@ Test.prototype.fetchStatus = function () {
     this.updateView();
   };
 
-  return fetch(`${API_BASEPATH}/${this.s3Key()}`, {mode: 'no-cors'})
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw new Error(`While fetching status, "${response.url}" returned ${response.status}.`);
-    })
+  return Promise.resolve(object)
     .then(json => {
       if (json.commit === COMMIT_HASH) {
         this.versionId = json.version_id;
@@ -302,6 +296,9 @@ function refresh() {
   // Fetches all logs for this branch and maps them to the tests in this run.
   // Passes last modification times to the test objects so they can decide
   // whether to update.
+  if(refreshButton.disabled) {
+    return;
+  }
   refreshButton.disabled = true;
   const ensure = () => {
     refreshButton.disabled = false;
@@ -331,14 +328,13 @@ function refresh() {
 }
 
 /**
- * @param {string} key
- * @param {string} last_modified
+ * @param {object} object
  * @returns {Promise}
  */
-function refreshIndividualTest({key, last_modified}) {
-  const test = testFromS3Key(key);
+function refreshIndividualTest(object) {
+  const test = testFromS3Key(object.key);
   if (test) {
-    return test.setLastModified(new Date(last_modified));
+    return test.setLastModified(object, new Date(object.last_modified));
   }
   // If we can't find the test, we don't care about it.
   return Promise.resolve();
