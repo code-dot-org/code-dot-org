@@ -19,6 +19,25 @@ LOGGER.formatter = proc do |_serverity, time, _progname, msg|
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
+# Prints the script intro to the console.
+def puts_script_intro
+  puts <<-EOS.unindent
+
+    #{bold 'Welcome to Robo-Dev-of-the-Day!'}
+
+      d[ o_0 ]b
+
+    #{bold 'Documentation'}
+
+      Dev-of-the-Day Checklist
+      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
+
+      Known Issues
+      #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
+
+  EOS
+end
+
 # Prompts the user for their name.
 # @return [String] The user's name.
 def ask_for_name
@@ -149,22 +168,7 @@ def view_commits(base:, head:)
 end
 
 def main
-  puts <<-EOS.unindent
-
-    #{bold 'Welcome to Robo-Dev-of-the-Day!'}
-
-      d[ o_0 ]b
-
-    #{bold 'Documentation'}
-
-      Dev-of-the-Day Checklist
-      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
-
-      Known Issues
-      #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
-
-  EOS
-
+  puts_script_intro
   user_name = ask_for_name
 
   should_i "morning DTT" do
