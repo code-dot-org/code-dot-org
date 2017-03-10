@@ -202,12 +202,12 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Filters by scheduled start date (date of first session)
-  def self.start_on_or_before(date)
+  def self.scheduled_start_on_or_before(date)
     joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
   end
 
   # Filters by scheduled start date (date of first session)
-  def self.start_on_or_after(date)
+  def self.scheduled_start_on_or_after(date)
     joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
   end
 
@@ -239,6 +239,24 @@ class Pd::Workshop < ActiveRecord::Base
     )
   end
 
+  # Filters by scheduled end date (date of last session)
+  def self.scheduled_end_on_or_before(date)
+    joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) <= ?)", date)
+  end
+
+  # Filters by scheduled end date (date of last session)
+  def self.scheduled_end_on_or_after(date)
+    joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) >= ?)", date)
+  end
+
+  def self.scheduled_start_in_days(days)
+    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
+  end
+
+  def self.scheduled_end_in_days(days)
+    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+  end
+
   # Filters by date the workshop actually ended, regardless of scheduled session times.
   def self.end_on_or_before(date)
     where('(DATE(ended_at) <= ?)', date)
@@ -247,14 +265,6 @@ class Pd::Workshop < ActiveRecord::Base
   # Filters by date the workshop actually ended, regardless of scheduled session times.
   def self.end_on_or_after(date)
     where('(DATE(ended_at) >= ?)', date)
-  end
-
-  def self.start_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MIN(start)) = ?)", Date.today + days.days)
-  end
-
-  def self.end_in_days(days)
-    Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
   end
 
   def self.should_have_ended
@@ -311,7 +321,7 @@ class Pd::Workshop < ActiveRecord::Base
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
-    start_in_days(days).each do |workshop|
+    scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
         begin
           email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
