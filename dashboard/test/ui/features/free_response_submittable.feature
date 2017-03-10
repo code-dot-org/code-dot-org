@@ -15,8 +15,7 @@ Scenario: Loading the level
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.
   And I type "sample response" into ".free-response > textarea"
-  And I press ".submitButton" using jQuery
-  And I wait for 5 seconds
+  And I press ".submitButton" using jQuery to load a new page
 
   # Reload the page to see that unsubmit is the option.
   And I am on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
@@ -28,10 +27,7 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   # Unsubmit.
   And I press ".unsubmitButton" using jQuery
   And I wait to see ".modal"
-  And I press the first ".modal #ok-button" element
-
-  # Make sure that submit is the option after the page reloads.
-  And I wait for 5 seconds
+  And I press the first ".modal #ok-button" element to load a new page
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
   And element ".submitButton" is not disabled

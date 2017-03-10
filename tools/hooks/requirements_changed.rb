@@ -7,7 +7,8 @@ REQUIREMENTS = {
   "package.json" => "yarn",
   "bower.json" => "bower install",
   "Gemfile" => "bundle install",
-  "Berksfile" => "berks install"
+  "Berksfile" => "berks install",
+  "schema.rb" => "rake db:migrate"
 }
 
 def get_modified_files

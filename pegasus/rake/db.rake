@@ -7,13 +7,22 @@ end
 # Creates the MySQL database with the given database if it doesn't exist already.
 def create_database(uri)
   db = URI.parse(uri)
+  execute_db_statement(db, "CREATE DATABASE IF NOT EXISTS #{db.path[1..-1]}")
+end
 
+# Drops the MySQL database
+def drop_database(uri)
+  db = URI.parse(uri)
+  execute_db_statement(db, "DROP DATABASE #{db.path[1..-1]}")
+end
+
+def execute_db_statement(db, statement)
   command = [
     'mysql',
     "--user=#{db.user}",
     "--host=#{db.host}",
   ]
-  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{db.path[1..-1]}\""
+  command << "--execute=\"#{statement}\""
   command << "--password=#{db.password}" unless db.password.nil?
 
   system command.join(' ')
@@ -33,6 +42,17 @@ namespace :db do
   desc 'Ensures that Pegasus database is created'
   task :ensure_created do
     create_database CDO.pegasus_db_writer
+  end
+
+  desc 'Recreate the pegasus database (test only)'
+  task recreate: [:drop, :ensure_created, :migrate]
+
+  desc 'Drop the pegasus database (test only)'
+  task :drop do
+    unless [:test].include? CDO.rack_env
+      raise Exception.new 'Dropping the database is only permitted in test environment.'
+    end
+    drop_database CDO.pegasus_db_writer
   end
 
   desc 'Perform migration up to latest migration available'
@@ -55,12 +75,5 @@ namespace :db do
     Sequel::Migrator.run(DB, migrations_dir, target: 0)
     Sequel::Migrator.run(DB, migrations_dir)
     Rake::Task['db:version'].execute
-  end
-
-  task :help do
-    puts 'db:version'
-    puts 'db:migrate'
-    puts 'db:rollback'
-    puts 'db:reset'
   end
 end

@@ -1,5 +1,4 @@
-require_relative '../../shared/test/test_helper'
-require 'mocha/mini_test'
+require_relative './test_helper'
 require_relative 'fixtures/mock_pegasus'
 # needed by /v3/edit-csp-app/splat.haml
 require_relative '../../shared/middleware/helpers/table'
