@@ -26,7 +26,7 @@ exports.install = function (blockly, blockInstallOptions) {
     name: 'collector_collect_simplified',
     helpUrl: '',
     title: msg.get(),
-    titleImage: skin.collect_block,
+    titleImage: skin.collectBlock,
     tooltip: msg.collectorCollectTooltip(),
     functionName: 'Maze.collect'
   });
