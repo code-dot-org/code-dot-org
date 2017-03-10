@@ -100,4 +100,26 @@ module GitHub
     response = Octokit.branch(REPO, branch)
     response.commit.sha
   end
+
+  # Opens a browser URL with a candidate pull request merging head into base.
+  # @param base [String] The base branch of the comparison.
+  # @param head [String] The head branch of the comparison.
+  # @param title [String] The title of the candidate pull request.
+  # @raise [RuntimeError] If the environment is not development.
+  def self.open_pull_request_in_browser(base:, head:, title:)
+    unless rack_env?(:development)
+      raise "GitHub.open_pull_request_in_browser called on non-dev environment"
+    end
+    open_url "https://github.com/#{REPO}/compare/#{base}...#{head}"\
+      "?expand=1&title=#{CGI.escape title}"
+  end
+
+  private_class_method def self.open_url(url)
+    # Based on http://stackoverflow.com/a/14053693/5000129
+    if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
+      system "sensible-browser \"#{url}\""
+    else
+      system "open \"#{url}\""
+    end
+  end
 end

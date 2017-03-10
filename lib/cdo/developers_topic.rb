@@ -95,6 +95,6 @@ module DevelopersTopic
     current_topic = Slack.get_topic 'developers'
     branch_subtopic = branch_subtopic(branch)
     new_topic = current_topic.gsub "#{subtopic_prefix}#{branch_subtopic}", "#{subtopic_prefix}#{new_subtopic}"
-    Slack.set_topic 'developers', new_topic
+    Slack.update_topic 'developers', new_topic
   end
 end
