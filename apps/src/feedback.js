@@ -223,7 +223,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
             onContinue={options.onContinue}
             showStageProgress={experiments.isEnabled('g.stageprogress')}
             newStageProgress={progress.newStageProgress}
-            numStars={Math.round((progress.newStageProgress * 3) + 0.5)}
+            numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
           />,
           container
         );

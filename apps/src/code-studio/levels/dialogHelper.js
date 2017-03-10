@@ -161,14 +161,12 @@ export function processResults(onComplete, beforeHook) {
             if (experiments.isEnabled('g.endstage') && Feedback.isLastLevel()) {
               showDialog("success", () => {
                 const div = document.createElement('div');
-
+                document.body.appendChild(div);
                 const progress = Feedback.calculateStageProgress(
                   true /* isPerfect */,
                   0 /* hintsUsed */,
                   appOptions.serverLevelId,
                   false /* finiteIdealBlocks */);
-
-                document.body.appendChild(div);
                 ReactDOM.render(
                   <StageAchievementDialog
                     stageName={stageName}
@@ -177,7 +175,7 @@ export function processResults(onComplete, beforeHook) {
                     onContinue={dialogHidden}
                     showStageProgress={experiments.isEnabled('g.stageprogress')}
                     newStageProgress={progress.newStageProgress}
-                    numStars={Math.round((progress.newStageProgress * 3) + 0.5)}
+                    numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
                   />,
                   div
                 );
