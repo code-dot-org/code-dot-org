@@ -114,6 +114,10 @@
 }
 
 @media (max-width: 992px) {
+  #pageheader-wrapper {
+    padding-top: 5px;
+  }
+
   #nav{
     position: relative;
   }

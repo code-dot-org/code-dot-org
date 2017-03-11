@@ -45,8 +45,8 @@ body {
 }
 
 #pageheader img#logo {
-  width: 75px;
-  height: 75px;
+  width: 87px;
+  height: 87px;
   display: block;
   margin-top: -5px;
 }
@@ -207,9 +207,8 @@ body {
   margin: -8px 0 5px 0px;
 }
 .mobile-headers #pageheader img#logo {
-  width: 50px;
-  height: 50px;
-  margin-top: 4px;
+  width: 65px;
+  height: 65px;
 }
 
 .mobile-headers #pageheader img#logo-uk {
