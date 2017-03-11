@@ -275,8 +275,8 @@ class ContactRollups
     log_completion(start)
 
     start = Time.now
-    log "Updating Professional Learning Partner role"
-    append_plp_to_role_list
+    log "Updating Regional Partner role"
+    append_regional_partner_to_role_list
     log_completion(start)
   end
 
@@ -302,12 +302,12 @@ class ContactRollups
     log_completion(start)
   end
 
-  def self.append_plp_to_role_list
+  def self.append_regional_partner_to_role_list
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
     INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
-    INNER JOIN #{DASHBOARD_DB_NAME}.professional_learning_partners AS professional_learning_partners ON professional_learning_partners.contact_id = users.id
-    SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), 'PLP')
+    INNER JOIN #{DASHBOARD_DB_NAME}.regional_partners AS regional_partners ON regional_partners.contact_id = users.id
+    SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), 'Regional Partner')
     WHERE LENGTH(users.email) > 0 AND #{DEST_TABLE_NAME}.id > 0"
   end
 
