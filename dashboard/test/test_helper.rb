@@ -250,7 +250,7 @@ class ActionController::TestCase
 
   def self.generate_admin_only_tests_for(action, params = {})
     test_user_gets_response_for action, user: :admin, params: params
-    test_user_gets_response_for action, response: :forbidden, params: params
+    test_user_gets_response_for action, user: :user, response: :forbidden, params: params
     test_redirect_to_sign_in_for action, params: params
   end
 
