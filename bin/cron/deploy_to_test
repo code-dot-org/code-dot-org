@@ -19,7 +19,7 @@ def main
     )
     return
   end
-  DevelopersTopic.set_dtt_subtopic TOPIC_DTT_IN_PROGRESS
+  DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
   # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
   # (particularly deploy).
@@ -34,7 +34,7 @@ def main
 
   ChatClient.message(
     'infra-test',
-    "robo-DTT created and merged <a href=\"#{GitHub.html_url(pr_number)}\">PR\##{pr_number}</a>",
+    "robo-DTT created and merged <a href=\"#{GitHub.url(pr_number)}\">PR\##{pr_number}</a>",
     color: 'green'
   )
 rescue Exception => e
@@ -43,7 +43,7 @@ rescue Exception => e
     "EXCEPTION: #{e.message}",
     color: 'red'
   )
-  DevelopersTopic.set_dtt_subtopic TOPIC_DTT_FAILED
+  DevelopersTopic.set_dtt TOPIC_DTT_FAILED
 end
 
 main if only_one_running?(__FILE__)
