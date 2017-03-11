@@ -169,6 +169,8 @@ function isDraggableContainer(element) {
   return $(element).hasClass('ui-draggable');
 }
 
+var debug = true;
+
 /**
  * Handle a change from our properties table.
  * @param element {Element}
@@ -176,6 +178,10 @@ function isDraggableContainer(element) {
  * @param value {string}
  */
 designMode.onPropertyChange = function (element, name, value) {
+  console.log("onPropertyChange: " + name + " = " + value);
+  if (debug) {
+    debugger;
+  }
   designMode.updateProperty(element, name, value);
   designMode.editElementProperties(element);
 };
@@ -444,6 +450,9 @@ designMode.updateProperty = function (element, name, value) {
       handled = false;
   }
 
+  // For labels, this is what snaps to fit. We need to not snap to fit if the element has previously been resized,
+  // which we approximate by determining if it fit perfectly before the property change. Also needs to work on first
+  // time creation.
   if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
     handled = true;
   }
