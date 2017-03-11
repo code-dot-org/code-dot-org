@@ -167,6 +167,9 @@ export default {
   },
 
   resizeToFitText: function (element) {
+    var oldWidth = parseInt(element.style.width, 10);
+    var oldHeight = parseInt(element.style.height, 10);
+
     // Resize the label to fit the text, unless there is no text in which case make it 15 x 15 so the user has something to drag around
     if (element.textContent) {
       var clone = $(element).clone().css({
@@ -180,15 +183,24 @@ export default {
       var padding = parseInt(element.style.padding, 10);
 
       if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-        //Truncate the width before it runs off the edge of the screen
-        element.style.width = Math.min(clone.width() + 1 + 2 * padding, applabConstants.APP_WIDTH - clone.position().left) + 'px';
+        // Truncate the width before it runs off the edge of the screen
+        var newWidth = Math.min(clone.width() + 1 + 2 * padding, applabConstants.APP_WIDTH - clone.position().left);
+        // Don't reduce size
+        if (newWidth > oldWidth) {
+          element.style.width = newWidth + 'px';
+        }
       }
       if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
-        element.style.height = clone.height() + 1 + 2 * padding + 'px';
+        var newHeight = clone.height() + 1 + 2 * padding + 'px';
+        // Don't reduce size
+        if (newHeight > oldHeight) {
+          element.style.height = newWidth + 'px';
+        }
       }
 
       clone.remove();
     } else {
+      if (oldWidth <)
       element.style.width = '15px';
       element.style.height = '15px';
     }
@@ -201,6 +213,8 @@ export default {
     switch (name) {
       case 'text':
       case 'fontSize':
+        // If it has already been resized (i.e, doesn't fit exactly now), then don't resize to fit.
+        var size =
         this.resizeToFitText(element);
         break;
       case 'lock-width':
