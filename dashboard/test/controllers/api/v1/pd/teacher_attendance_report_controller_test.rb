@@ -51,8 +51,9 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, in_section: true, attended: true
   end
 
-  generate_user_tests_for :index, user: [:admin, :workshop_organizer]
-  generate_user_tests_for :index, response: :forbidden, user: :teacher
+  test_user_gets_response_for :index, user: :admin
+  test_user_gets_response_for :index, user: :workshop_organizer
+  test_user_gets_response_for :index, response: :forbidden, user: :teacher
 
   test 'admins get payment info' do
     sign_in @admin

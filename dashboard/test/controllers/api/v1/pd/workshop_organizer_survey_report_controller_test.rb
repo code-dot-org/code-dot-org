@@ -6,6 +6,18 @@ class Api::V1::Pd::WorkshopOrganizerSurveyReportControllerTest < ::ActionControl
     AWS::S3.stubs(:download_from_bucket).returns(Hash[@course.to_sym, {}].to_json)
   end
 
-  generate_user_tests_for :index, user: [:admin, :workshop_organizer], params: -> {{course: @course}}
-  generate_user_tests_for :index, response: :forbidden, user: :teacher, params: -> {{course: @course}}
+  [:admin, :workshop_organizer].each do |user_type|
+    test_user_gets_response_for(
+      :index,
+      user: user_type,
+      params: -> {{course: @course}}
+    )
+  end
+
+  test_user_gets_response_for(
+    :index,
+    response: :forbidden,
+    user: :teacher,
+    params: -> {{course: @course}}
+  )
 end

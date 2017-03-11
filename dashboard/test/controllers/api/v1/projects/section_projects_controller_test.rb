@@ -35,17 +35,35 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
       then.returns(stub_storage_apps)
   end
 
-  generate_user_tests_for :index, name: 'student cannot access section projects',
-    response: :forbidden, user: -> {@student}, params: -> {{section_id: @section.id}}
+  test_user_gets_response_for(
+    :index,
+    name: 'student cannot access section projects',
+    response: :forbidden,
+    user: -> {@student},
+    params: -> {{section_id: @section.id}}
+  )
 
-  generate_user_tests_for :index, name: 'teacher can access their own section projects',
-    response: :success, user: -> {@teacher}, params: -> {{section_id: @section.id}}
+  test_user_gets_response_for(
+    :index,
+    name: 'teacher can access their own section projects',
+    user: -> {@teacher},
+    params: -> {{section_id: @section.id}}
+  )
 
-  generate_user_tests_for :index, name: 'teacher cannot access another teachers section projects',
-    response: :forbidden, user: :teacher, params: -> {{section_id: @section.id}}
+  test_user_gets_response_for(
+    :index,
+    name: 'teacher cannot access another teachers section projects',
+    response: :forbidden,
+    user: :teacher,
+    params: -> {{section_id: @section.id}}
+  )
 
-  generate_user_tests_for :index, name: 'admin can access section projects',
-    user: :admin, params: -> {{section_id: @section.id}}
+  test_user_gets_response_for(
+    :index,
+    name: 'admin can access section projects',
+    user: :admin,
+    params: -> {{section_id: @section.id}}
+  )
 
   test 'section projects details are correct' do
     sign_in(@teacher)

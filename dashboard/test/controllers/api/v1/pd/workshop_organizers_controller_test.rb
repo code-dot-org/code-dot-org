@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCase
-  generate_user_tests_for :index, response: :success, user: :admin
-  generate_user_tests_for :index, response: :forbidden, user: [:teacher, :workshop_organizer]
+  test_user_gets_response_for :index, response: :success, user: :admin
+
+  [:teacher, :workshop_organizer].each do |user_type|
+    test_user_gets_response_for :index, response: :forbidden, user: user_type
+  end
 
   test 'results' do
     organizers = 2.times.map do

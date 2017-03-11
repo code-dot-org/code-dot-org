@@ -29,7 +29,7 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
     end
   end
 
-  generate_redirect_to_sign_in_test_for :create, method: :put, params: -> {test_params}
+  test_redirect_to_sign_in_for :create, method: :put, params: -> {test_params}
 
   test 'admins can index teacher applications' do
     5.times do
@@ -58,11 +58,7 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
     assert_response 404
   end
 
-  test 'index for non admins with no key returns 404' do
-    sign_in create(:teacher)
-    get :index
-    assert_response 404
-  end
+  test_user_gets_response_for :index, user: :teacher, response: :not_found
 
   test 'strip_utf8mb4' do
     sign_in create(:teacher)

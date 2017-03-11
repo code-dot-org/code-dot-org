@@ -55,8 +55,11 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
       subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
   end
 
-  generate_user_tests_for :index, user: [:admin, :workshop_organizer]
-  generate_user_tests_for :index, response: :forbidden, user: :teacher
+  [:admin, :workshop_organizer].each do |user_type|
+    test_user_gets_response_for :index, user: user_type
+  end
+
+  test_user_gets_response_for :index, response: :forbidden, user: :teacher
 
   test 'admins get payment info' do
     sign_in @admin
