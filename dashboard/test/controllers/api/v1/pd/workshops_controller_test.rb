@@ -129,6 +129,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test_user_gets_response_for(
     :show,
     name: 'facilitators can view a workshop they are facilitating',
+    user: -> {@facilitator},
     params: -> {{id: @workshop}}
   ) do
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
