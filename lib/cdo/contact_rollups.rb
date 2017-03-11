@@ -72,7 +72,7 @@ class ContactRollups
     insert_from_pegasus_forms
     insert_from_dashboard_contacts
     insert_from_dashboard_pd_enrollments
-    insert_from_pegasus_contacts
+    update_unsubscribe_info
     update_roles
     update_grades_taught
     update_ages_taught
@@ -236,13 +236,14 @@ class ContactRollups
     log_completion(start)
   end
 
-  def self.insert_from_pegasus_contacts
+  def self.update_unsubscribe_info
     start = Time.now
     log "Inserting contacts from pegasus.contacts"
     PEGASUS_REPORTING_DB_WRITER.run "
-    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, opted_out, name)
-    SELECT email, IF(unsubscribed_at IS null, null, true) AS opted_out, name FROM #{PEGASUS_DB_NAME}.contacts WHERE LENGTH(email) > 0
-    ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name)"
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+    INNER JOIN #{PEGASUS_DB_NAME}.contacts on contacts.email = #{DEST_TABLE_NAME}.email
+    SET opted_out = true
+    WHERE unsubscribed_at IS NOT NULL"
     log_completion(start)
   end
 
@@ -415,7 +416,7 @@ class ContactRollups
       if state.nil?
         # Note that the 'user_state_s' record is in fact a *state code*, not a state name
         state_code = data['location_state_code_s'].presence || data['state_code_s'].presence || data['user_state_s'].presence
-        state = get_us_state_from_abbr(abbr: state_code, include_dc: true).presence unless state_code.nil?
+        state = get_us_state_from_abbr(state_code, true).presence unless state_code.nil?
       end
       postal_code = data['location_postal_code_s'].presence || data['zip_code_s'].presence || data['user_postal_code_s'].presence
       country = data['location_country_s'].presence || data['country_s'].presence || data['teacher_country_s'].presence
@@ -427,19 +428,24 @@ class ContactRollups
 
       role = data['role_s']
 
+      any_update = false
+
       # Skip if this form data has no info at all
-      next if street_address.nil? && city.nil? && state.nil? && postal_code.nil? && country.nil? && role.nil?
+      if street_address.present? || city.present? || state.present? || postal_code.present? || country.present?
+        # If any geo input is present in form, update ALL geo fields including setting NULL values in DB for any that
+        # we don't have from this form. This will clear out any previous geo data from IP geo.
+        # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed
+        update_data = {}
+        update_data[:street_address] = street_address.present? ? street_address[0...255] : nil
+        update_data[:city] = city.present? ? city[0...255] : nil
+        update_data[:state] = state.present? ? state[0...255] : nil
+        update_data[:postal_code] = postal_code.present? ? postal_code[0...255] : nil
+        update_data[:country] = country.present? ? country[0...255] : nil
 
-      # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed.
-      update_data = {}
-      update_data[:street_address] = street_address[0...255] unless street_address.nil?
-      update_data[:city] = city[0...255] unless city.nil?
-      update_data[:state] = state[0...255] unless state.nil?
-      update_data[:postal_code] = postal_code[0...255] unless postal_code.nil?
-      update_data[:country] = country[0...255] unless country.nil?
-
-      # add to batch to update
-      update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";" unless update_data.empty?
+        # add to batch to update
+        update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";" unless update_data.empty?
+        any_update = true
+      end
 
       if role.present?
         # If role (role_s field) was a field on this form, append it to a comma-separate list of roles
@@ -454,7 +460,10 @@ class ContactRollups
           ELSE src.form_roles
         END
         WHERE #{DEST_TABLE_NAME}.email = '#{email}';"
+        any_update = true
       end
+
+      next unless any_update
 
       num_updated += 1
 
