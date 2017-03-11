@@ -63,6 +63,10 @@ import * as makerCommands from '../lib/kits/maker/commands';
 import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
 import {
   enable as enableMaker,
+  startConnecting as startConnectingMaker,
+  reportConnected as reportMakerConnected,
+  reportConnectionError as reportMakerConnectionError,
+  disconnect as disconnectMaker,
   isEnabled as isMakerEnabled
 } from '../lib/kits/maker/redux';
 var project = require('@cdo/apps/code-studio/initApp/project');
@@ -1012,6 +1016,7 @@ Applab.reset = function () {
     designMode.resetPropertyTab();
   }
 
+  getStore().dispatch(disconnectMaker());
   if (makerBoard) {
     makerBoard.destroy();
     makerBoard = null;
@@ -1197,15 +1202,16 @@ Applab.execute = function () {
   }
 
   if (isMakerEnabled(getStore().getState())) {
+    getStore().dispatch(startConnectingMaker());
     connectToMakerBoard()
         .then(board => {
           board.installOnInterpreter(codegen, Applab.JSInterpreter);
           makerCommands.injectBoardController(board);
           board.once('disconnect', () => studioApp.resetButtonClick());
           makerBoard = board;
+          getStore().dispatch(reportMakerConnected());
         })
-        .catch(error => studioApp.displayPlayspaceAlert('error',
-            <div>{`Board connection error: ${error}`}</div>))
+        .catch(error => getStore().dispatch(reportMakerConnectionError()))
         .then(Applab.beginVisualizationRun);
   } else {
     Applab.beginVisualizationRun();

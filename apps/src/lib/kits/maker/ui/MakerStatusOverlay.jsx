@@ -1,14 +1,16 @@
 /** @file Maker connection status visualization overlay */
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
+import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
+import {isConnecting, hasConnectionError} from '../redux';
 
 /**
  * Overlay for the play space that displays maker status updates
  * when there are connection issues.
  */
-export default class MakerStatusOverlay extends Component {
+class MakerStatusOverlay extends Component {
   render() {
     const style = {
       position: 'absolute',
@@ -28,17 +30,36 @@ export default class MakerStatusOverlay extends Component {
           )`
     };
 
-    return (
-      <div style={style}>
-        <BoardNotFound/>
-      </div>
-    );
+    if (this.props.isConnecting) {
+      return (
+        <div style={style}>
+          <WaitingToConnect/>
+        </div>
+      );
+    } else if (this.props.hasConnectionError) {
+      return (
+        <div style={style}>
+          <BoardNotFound/>
+        </div>
+      );
+    } else {
+      return null;
+    }
+
   }
 }
 MakerStatusOverlay.propTypes = {
   vizWidth: PropTypes.number.isRequired,
   vizHeight: PropTypes.number.isRequired,
+  isConnecting: PropTypes.bool.isRequired,
+  hasConnectionError: PropTypes.bool.isRequired,
 };
+export default connect(
+  state => ({
+    isConnecting: isConnecting(state),
+    hasConnectionError: hasConnectionError(state),
+  })
+)(MakerStatusOverlay);
 
 class WaitingToConnect extends Component {
   render() {
