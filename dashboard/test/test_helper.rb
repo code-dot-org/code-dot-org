@@ -271,7 +271,7 @@ class ActionController::TestCase
     end
   end
 
-  # Generates basic response validation test cases for logged-in users, one test case per specified user.
+  # Generates a basic response validation test case for a user, logged-in or not.
   # @param action [String] the controller action to test
   # @param method [Symbol, String] http method with which to perform the action (default :get)
   # @param response [Symbol, String, Number] expected response (default :success)
