@@ -1,3 +1,7 @@
+#pageheader-wrapper {
+  z-index: 5;
+}
+
 #nav-hamburger {
   cursor: pointer;
   padding: 10px 35px 16px 0px;
