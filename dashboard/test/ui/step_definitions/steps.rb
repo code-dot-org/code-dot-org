@@ -15,7 +15,7 @@ end
 def element_stale?(element)
   element.enabled?
   false
-rescue Selenium::WebDriver::Error::StaleElementReferenceError
+rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
 

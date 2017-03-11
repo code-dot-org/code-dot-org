@@ -79,7 +79,11 @@ class BucketHelper
   end
 
   def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
-    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    begin
+      owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return {status: 'NOT_FOUND'}
+    end
     key = s3_path owner_id, channel_id, filename
     begin
       s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
