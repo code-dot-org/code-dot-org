@@ -385,6 +385,10 @@ class ContactRollups
     Sequel.connect(CDO.pegasus_reporting_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
   end
 
+  # Extracts and formats address data from form data
+  # @param form_data [Hash] data from a form
+  # @return [Hash] hash of extracted address data. Note it may be empty if no address fields were found.
+  #   Possible hash keys: [:street_address, :city, :state, :postal_code, :country]
   def self.get_address_data_from_form_data(form_data)
     {}.tap do |address_data|
       # Get user-supplied address/location data from form if present, from any of the differently-named location fields across all form kinds
@@ -415,6 +419,10 @@ class ContactRollups
     end
   end
 
+  # Gets the update sql command for address data from a form's data
+  # @param form_data [Hash] form data
+  # @param email [String] email associated with this form
+  # @return [String, nil] sql update command for this form's address data, or nil
   def self.get_address_update_from_form_data(form_data, email)
     address_data = get_address_data_from_form_data form_data
 
@@ -422,6 +430,10 @@ class ContactRollups
     conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(address_data) + ';'
   end
 
+  # Gets the update sql command for role
+  # @param role [String, nil] form role, or empty / nil if there is no role
+  # @param email [String] email associated with this form
+  # @return [String, nil] sql update command for this form role and email, or nil if there is no role.
   def self.get_role_update_from_form_role(role, email)
     return nil unless role.present?
 
@@ -440,6 +452,8 @@ class ContactRollups
     "
   end
 
+  # Updates data based on all forms of a given kind, in batches
+  # @param form_kind [Symbol] form kind
   def self.update_data_from_forms(form_kind)
     start = Time.now
     log "Updating data for form kind #{form_kind}"
