@@ -34,5 +34,5 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_equal Pd::Workshop::COURSE_CSF, response[:last_workshop_survey_course]
   end
 
-  generate_user_tests_for :index, name: 'admins only', user: :teacher, response: :forbidden
+  test_user_gets_response_for :index, name: 'admins only', user: :teacher, response: :forbidden
 end

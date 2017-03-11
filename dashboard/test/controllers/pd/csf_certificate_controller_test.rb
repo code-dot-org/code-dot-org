@@ -7,8 +7,12 @@ class Pd::CsfCertificateControllerTest < ::ActionController::TestCase
     @enrollment = create :pd_enrollment
   end
 
-  generate_user_tests_for :generate_certificate, name: 'Generates certificate for a real user',
-    user: -> {@user}, params: -> {{enrollment_code: @enrollment.code}}
+  test_user_gets_response_for(
+    :generate_certificate,
+    name: 'Generates certificate for a real user',
+    user: -> {@user},
+    params: -> {{enrollment_code: @enrollment.code}}
+  )
 
   test 'Generates no certificate for an invalid enrollment' do
     assert_raise ActiveRecord::RecordNotFound do
@@ -16,5 +20,5 @@ class Pd::CsfCertificateControllerTest < ::ActionController::TestCase
     end
   end
 
-  generate_redirect_to_sign_in_test_for :generate_certificate, params: -> {{enrollment_code: @enrollment.code}}
+  test_redirect_to_sign_in_for :generate_certificate, params: -> {{enrollment_code: @enrollment.code}}
 end

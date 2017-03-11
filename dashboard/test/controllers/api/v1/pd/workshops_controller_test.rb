@@ -118,20 +118,29 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
 
-  generate_user_tests_for :show, response: :forbidden,
-    user: -> {@organizer}, params: -> {{id: @standalone_workshop.id}},
-    name: 'workshop organizers cannot view a workshop they are not organizing'
+  test_user_gets_response_for(
+    :show,
+    name: 'workshop organizers cannot view a workshop they are not organizing',
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  test 'facilitators can view a workshop they are facilitating' do
-    sign_in @facilitator
-    get :show, params: {id: @workshop}
-    assert_response :success
+  test_user_gets_response_for(
+    :show,
+    name: 'facilitators can view a workshop they are facilitating',
+    params: -> {{id: @workshop}}
+  ) do
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
 
-  generate_user_tests_for :show, response: :forbidden,
-    user: -> {@facilitator}, params: -> {{id: @standalone_workshop.id}},
-    name: 'facilitators cannot view a workshop they are not organizing'
+  test_user_gets_response_for(
+    :show,
+    name: 'facilitators cannot view a workshop they are not organizing',
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
   # Action: Create
 
@@ -159,8 +168,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     end
   end
 
-  generate_user_tests_for :create, method: :post, response: :forbidden,
-    user: :facilitator, params: -> {{pd_workshop: workshop_params}}
+  test_user_gets_response_for(
+    :create,
+    name: 'facilitators cannot create workshops',
+    method: :post,
+    response: :forbidden,
+    user: :facilitator,
+    params: -> {{pd_workshop: workshop_params}}
+  )
 
   # Action: Destroy
 
@@ -180,11 +195,23 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  generate_user_tests_for :destroy, method: :delete, response: :forbidden,
-    name: 'organizers cannot delete workshops they do not own', params: -> {{id: @standalone_workshop.id}}
+  test_user_gets_response_for(
+    :destroy,
+    name: 'organizers cannot delete workshops they do not own',
+    method: :delete,
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  generate_user_tests_for :destroy, method: :delete, response: :forbidden,
-    user: :facilitator, params: -> {{id: @workshop.id}}
+  test_user_gets_response_for(
+    :destroy,
+    name: 'facilitators cannot delete workshops',
+    method: :delete,
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id}}
+  )
 
   # Action: Update
 
@@ -211,8 +238,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :forbidden
   end
 
-  generate_user_tests_for :update, method: :put, response: :forbidden,
-    user: :facilitator, params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
+  test_user_gets_response_for(
+    :update,
+    name: 'facilitators cannot update workshops',
+    method: :put,
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
+  )
 
   test 'updating with the same location_address does not re-process location' do
     sign_in @organizer
@@ -383,25 +416,45 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # No access
 
-  generate_user_tests_for :index, response: :forbidden, user: [:teacher, :user]
-  generate_user_tests_for :show, response: :forbidden, user: [:teacher, :user], params: -> {{id: @workshop.id}}
+  [:teacher, :user].each do |user_type|
+    test_user_gets_response_for :index, response: :forbidden, user: user_type
+    test_user_gets_response_for :show, response: :forbidden, user: user_type, params: -> {{id: @workshop.id}}
+  end
 
   test 'anyone can see the K5 public map index' do
     get :k5_public_map_index
     assert_response :success
   end
 
-  generate_user_tests_for :summary, name: 'facilitators can get summary for their workshops',
-    user: -> {@facilitator}, params: -> {{id: @workshop.id}}
+  test_user_gets_response_for(
+    :summary,
+    name: 'facilitators can get summary for their workshops',
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id}}
+  )
 
-  generate_user_tests_for :summary, name: 'facilitators cannot get summary for other workshops',
-    response: :forbidden, user: -> {@facilitator}, params: -> {{id: @standalone_workshop.id}}
+  test_user_gets_response_for(
+    :summary,
+    name: 'facilitators cannot get summary for other workshops',
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  generate_user_tests_for :summary, name: 'organizers can get summary for their workshops',
-    user: -> {@organizer}, params: -> {{id: @workshop.id}}
+  test_user_gets_response_for(
+    :summary,
+    name: 'organizers can get summary for their workshops',
+    user: -> {@organizer},
+    params: -> {{id: @workshop.id}}
+  )
 
-  generate_user_tests_for :summary, name: 'organizers cannot get summary for other workshops',
-    response: :forbidden, user: -> {@organizer}, params: -> {{id: @standalone_workshop.id}}
+  test_user_gets_response_for(
+    :summary,
+    name: 'organizers cannot get summary for other workshops',
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
   test 'summary' do
     sign_in @admin
