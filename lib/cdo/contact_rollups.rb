@@ -428,20 +428,19 @@ class ContactRollups
 
       role = data['role_s']
 
+      # If any geo input is present in form, update ALL geo fields including setting NULL values in DB for any that
+      # we don't have from this form. This will clear out any previous geo data from IP geo.
+      # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed
+      update_data = {}
+      update_data[:street_address] = street_address[0...255] if street_address.present?
+      update_data[:city] = city[0...255] if city.present?
+      update_data[:state] = state[0...255] if state.present?
+      update_data[:postal_code] = postal_code[0...255] if postal_code.present?
+      update_data[:country] = country[0...255] if country.present?
+
       any_update = false
 
-      # Skip if this form data has no info at all
-      if street_address.present? || city.present? || state.present? || postal_code.present? || country.present?
-        # If any geo input is present in form, update ALL geo fields including setting NULL values in DB for any that
-        # we don't have from this form. This will clear out any previous geo data from IP geo.
-        # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed
-        update_data = {}
-        update_data[:street_address] = street_address.present? ? street_address[0...255] : nil
-        update_data[:city] = city.present? ? city[0...255] : nil
-        update_data[:state] = state.present? ? state[0...255] : nil
-        update_data[:postal_code] = postal_code.present? ? postal_code[0...255] : nil
-        update_data[:country] = country.present? ? country[0...255] : nil
-
+      unless update_data.empty
         # add to batch to update
         update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";" unless update_data.empty?
         any_update = true
