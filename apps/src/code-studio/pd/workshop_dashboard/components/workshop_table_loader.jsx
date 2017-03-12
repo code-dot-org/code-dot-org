@@ -33,7 +33,8 @@ const WorkshopTableLoader = React.createClass({
 
   load(props = this.props) {
     this.setState({loading: true});
-    const url = props.params ? `${props.queryUrl}?${$.param(props.params)}` : props.queryUrl;
+    const effectiveParams = _.omitBy(props.params, value => value === null || value === undefined);
+    const url = props.params ? `${props.queryUrl}?${$.param(effectiveParams)}` : props.queryUrl;
 
     this.loadRequest = $.ajax({
       method: 'GET',
@@ -74,8 +75,7 @@ const WorkshopTableLoader = React.createClass({
       url: '/api/v1/pd/workshops/' + workshopId
     })
     .done(() => {
-      const workshops = _.reject(_.cloneDeep(this.state.workshops), w => w.id === workshopId);
-      this.setState({workshops: workshops});
+      this.load();
     });
   },
 

@@ -2,23 +2,48 @@
  * Workshop Filter.
  * Route: /workshops/filter
  */
-import React from 'react';
-import $ from 'jquery';
-import _ from 'lodash';
-import Select from 'react-select';
-import 'react-select/dist/react-select.css';
-import WorkshopTable from './components/workshop_table';
-import WorkshopTableLoader from './components/workshop_table_loader';
-import DatePicker from './components/date_picker';
-import {DATE_FORMAT} from './workshopConstants';
-import moment from 'moment';
+import React from "react";
+import $ from "jquery";
+import _ from "lodash";
+import Select from "react-select";
+import "react-select/dist/react-select.css";
+import WorkshopTable from "./components/workshop_table";
+import WorkshopTableLoader from "./components/workshop_table_loader";
+import DatePicker from "./components/date_picker";
+import {DATE_FORMAT} from "./workshopConstants";
+import moment from "moment";
 import {
   Grid,
   Row,
   Col,
   FormGroup,
-  ControlLabel
-} from 'react-bootstrap';
+  ControlLabel,
+  DropdownButton,
+  Button,
+  MenuItem,
+  Clearfix
+} from "react-bootstrap";
+
+// Default max height for the React-Select menu popup, as defined in the imported react-select.css,
+// is 200px for the container, and 198 for the actual menu (to accommodate 2px for the border).
+// React-Select has props for overriding these default css styles. Increase the max height here:
+const selectMenuMaxHeight = 400;
+const selectStyleProps = {
+  menuContainerStyle: {
+    maxHeight: selectMenuMaxHeight
+  },
+  menuStyle: {
+    maxHeight: selectMenuMaxHeight - 2
+  }
+};
+
+const limitOptions = [
+  {value: 25, text: 'first 25'},
+  {value: 50, text: 'first 50'},
+  {value: null, text: 'all'}
+];
+
+const QUERY_API_URL = "/api/v1/pd/workshops/filter";
 
 const WorkshopFilter = React.createClass({
   propTypes: {
@@ -29,6 +54,7 @@ const WorkshopFilter = React.createClass({
         end: React.PropTypes.string,
         state: React.PropTypes.string,
         course: React.PropTypes.string,
+        subject: React.PropTypes.string,
         organizer: React.PropTypes.string
       })
     })
@@ -41,7 +67,9 @@ const WorkshopFilter = React.createClass({
   getInitialState() {
     return {
       organizersLoading: true,
-      organizers: undefined
+      organizers: undefined,
+      limit: limitOptions[0],
+      orderBy: undefined
     };
   },
 
@@ -62,6 +90,11 @@ const WorkshopFilter = React.createClass({
         organizersLoading: false,
         organizers: data
       });
+    })
+    .fail((data) => {
+      if (data.statusText !== "abort") {
+        alert("We're sorry, we were unable to load available workshop organizers. Please refresh this page to try again");
+      }
     });
   },
 
@@ -90,12 +123,67 @@ const WorkshopFilter = React.createClass({
 
   handleCourseChange(selected) {
     const course = selected ? selected.value : null;
-    this.updateLocationAndSetFilters({course});
+    this.updateLocationAndSetFilters({course, subject: null});
+  },
+
+  handleSubjectChange(selected) {
+    const subject = selected ? selected.value : null;
+    this.updateLocationAndSetFilters({subject});
   },
 
   handleOrganizerChange(selected) {
     const organizer = selected ? selected.value : null;
     this.updateLocationAndSetFilters({organizer});
+  },
+
+  handleLimitChange(limit) {
+    this.setState({limit});
+  },
+
+  handleTableSort(sort) {
+    // As an optimization, only re-query with an oderBy when fewer than all workshops are loaded.
+    // In the case where all workshops are loaded, they can be sorted in the client.
+    if (this.state.limit.value && this.workshopCount > this.state.limit.value) {
+      this.setState({orderBy: `${sort.property} ${sort.direction}`});
+    }
+  },
+
+  handleDownloadCSVClick() {
+    const downloadUrl=`${QUERY_API_URL}.csv?${$.param(this.getFiltersFromUrlParams())}`;
+    window.open(downloadUrl);
+  },
+
+  generateTableCaption(workshops) {
+    this.workshopCount = workshops.total_count;
+    return (
+      <div>
+        {"Show "}
+        <DropdownButton
+          bsSize="xsmall"
+          title={this.state.limit.text}
+          id="workshop-limit-dropdown"
+          noCaret
+        >
+          {limitOptions.map((option, i) =>
+            <MenuItem
+              key={i}
+              eventKey={option}
+              onSelect={this.handleLimitChange}
+            >
+              {option.text}
+            </MenuItem>
+          )}
+        </DropdownButton>
+        {` of ${workshops.total_count} workshops.`}
+        &nbsp;
+        <Button
+          bsSize="xsmall"
+          onClick={this.handleDownloadCSVClick}
+        >
+          Download all as CSV
+        </Button>
+      </div>
+    );
   },
 
   formatDate(date) {
@@ -124,6 +212,7 @@ const WorkshopFilter = React.createClass({
       end: urlParams.end,
       state: urlParams.state,
       course: urlParams.course,
+      subject: urlParams.subject,
       organizer: urlParams.organizer
     });
   },
@@ -158,18 +247,22 @@ const WorkshopFilter = React.createClass({
   },
 
   render() {
-    const filters = this.getFiltersFromUrlParams();
+    // limit and orderBy are intentionally stored in state and not reflected in the URL
+    const filters = {
+      ...this.getFiltersFromUrlParams(),
+      limit: this.state.limit.value,
+      order_by: this.state.orderBy
+    };
 
     const permission = window.dashboard.workshop.permission;
     const isAdmin = permission === "admin";
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
 
-
     return (
       <Grid fluid>
         <Row>
-          <Col sm={4}>
+          <Col md={3} sm={4}>
             <FormGroup>
               <ControlLabel>Status</ControlLabel>
               <Select
@@ -180,7 +273,7 @@ const WorkshopFilter = React.createClass({
               />
             </FormGroup>
           </Col>
-          <Col sm={4}>
+          <Col md={3} sm={4}>
             <FormGroup>
               <ControlLabel>From</ControlLabel>
               <DatePicker
@@ -193,7 +286,7 @@ const WorkshopFilter = React.createClass({
               />
             </FormGroup>
           </Col>
-          <Col sm={4}>
+          <Col md={3} sm={4}>
             <FormGroup>
               <ControlLabel>To</ControlLabel>
               <DatePicker
@@ -206,9 +299,8 @@ const WorkshopFilter = React.createClass({
               />
             </FormGroup>
           </Col>
-        </Row>
-        <Row>
-          <Col sm={4}>
+          <Clearfix visibleMdBlock />
+          <Col lg={3} md={4} sm={6}>
             <FormGroup>
               <ControlLabel>Course</ControlLabel>
               <Select
@@ -216,12 +308,30 @@ const WorkshopFilter = React.createClass({
                 onChange={this.handleCourseChange}
                 placeholder={null}
                 options={window.dashboard.workshop.COURSES.map(v => ({value: v, label: v}))}
+                {...selectStyleProps}
               />
             </FormGroup>
           </Col>
+          <Clearfix visibleLgBlock />
+          {
+            filters.course && window.dashboard.workshop.SUBJECTS[filters.course] &&
+            <Col md={5} sm={6}>
+              <FormGroup>
+                <ControlLabel>Subject</ControlLabel>
+                <Select
+                  value={filters.subject}
+                  onChange={this.handleSubjectChange}
+                  placeholder={null}
+                  options={window.dashboard.workshop.SUBJECTS[filters.course].map(v => ({value: v, label: v}))}
+                  {...selectStyleProps}
+                />
+              </FormGroup>
+            </Col>
+          }
+          <Clearfix visibleSmBlock />
           {
             isAdmin &&
-            <Col sm={8}>
+            <Col md={6}>
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
                 <Select
@@ -231,6 +341,7 @@ const WorkshopFilter = React.createClass({
                   isLoading={this.state.organizersLoading}
                   matchProp="label"
                   placeholder={null}
+                  {...selectStyleProps}
                 />
               </FormGroup>
             </Col>
@@ -238,12 +349,15 @@ const WorkshopFilter = React.createClass({
         </Row>
         <Row>
           <WorkshopTableLoader
-            queryUrl="/api/v1/pd/workshops/filter"
+            queryUrl={QUERY_API_URL}
             params={filters}
-            workshopCountParam="total_count"
+            canDelete
           >
             <WorkshopTable
+              showStatus
               showOrganizer={isAdmin}
+              generateCaption={this.generateTableCaption}
+              onSort={this.handleTableSort}
             />
           </WorkshopTableLoader>
         </Row>
