@@ -7,8 +7,26 @@ import {Button, ButtonToolbar} from 'react-bootstrap';
 import WorkshopTable from './components/workshop_table';
 import WorkshopTableLoader from './components/workshop_table_loader';
 
-const MAX_WORKSHOPS_PER_TABLE = 10;
-const FILTER_URL = "/api/v1/pd/workshops/filter";
+const FILTER_API_URL = "/api/v1/pd/workshops/filter";
+const defaultFilters = {
+  date_order: 'desc',
+  limit: 5
+};
+const filterParams = {
+  inProgress: {
+    ...defaultFilters,
+    limit: null, // Always show all 'In Progress' workshops
+    state: 'In Progress'
+  },
+  notStarted: {
+    ...defaultFilters,
+    state: 'Not Started'
+  },
+  ended: {
+    ...defaultFilters,
+    state: 'Ended'
+  }
+};
 
 const WorkshopIndex = React.createClass({
   contextTypes: {
@@ -31,6 +49,11 @@ const WorkshopIndex = React.createClass({
     this.context.router.push('/survey_results');
   },
 
+  handleFilterClick(e) {
+    e.preventDefault();
+    this.context.router.push('/workshops/filter');
+  },
+
   generateFilterUrl(state) {
     return `/workshops/filter?${$.param({state})}`;
   },
@@ -42,10 +65,6 @@ const WorkshopIndex = React.createClass({
     const isOrganizer = permission.indexOf('organizer') >= 0;
     const isPlp = permission.indexOf('plp') >= 0;
     const showOrganizer = isAdmin;
-    const commonFilters = {
-      limit: MAX_WORKSHOPS_PER_TABLE,
-      date_order: 'desc'
-    };
 
     return (
       <div>
@@ -57,11 +76,17 @@ const WorkshopIndex = React.createClass({
           {(isAdmin || isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
           {isPlp && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
           {isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
+          <Button
+            href={this.context.router.createHref("/workshops/filter")}
+            onClick={this.handleFilterClick}
+          >
+            Filter View
+          </Button>
         </ButtonToolbar>
         <h2>In Progress</h2>
         <WorkshopTableLoader
-          queryUrl={FILTER_URL}
-          params={{...commonFilters, state: 'In Progress'}}
+          queryUrl={FILTER_API_URL}
+          params={filterParams.inProgress}
           canDelete
         >
           <WorkshopTable
@@ -72,8 +97,8 @@ const WorkshopIndex = React.createClass({
         </WorkshopTableLoader>
         <h2>Upcoming</h2>
         <WorkshopTableLoader
-          queryUrl={FILTER_URL}
-          params={{...commonFilters, state: 'Not Started'}}
+          queryUrl={FILTER_API_URL}
+          params={filterParams.notStarted}
           canDelete
         >
           <WorkshopTable
@@ -86,13 +111,12 @@ const WorkshopIndex = React.createClass({
         </WorkshopTableLoader>
         <h2>Past</h2>
         <WorkshopTableLoader
-          queryUrl={FILTER_URL}
-          params={{...commonFilters, state: 'Ended'}}
+          queryUrl={FILTER_API_URL}
+          params={filterParams.ended}
         >
           <WorkshopTable
             tableId="endedWorkshopsTable"
             showOrganizer={showOrganizer}
-            surveyBaseUrl={isPlp ? "/organizer_survey_results" : "/survey_results"}
             moreUrl={this.generateFilterUrl('Ended')}
           />
         </WorkshopTableLoader>
