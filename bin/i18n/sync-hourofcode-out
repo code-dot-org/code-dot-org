@@ -35,37 +35,36 @@ end
 def copy_from_i18n_source_to_hoc
   puts "Copying files from cdo/i18n to hoc.com/i18n..."
   Languages.get_hoc_languages.each do |prop|
-    unless prop[:locale_s] == "en-US"
-      i18n_path = "i18n/locales/#{prop[:locale_s]}/hourofcode"
-      hoc_path = "pegasus/sites.v3/hourofcode.com/i18n"
-      FileUtils.cp(i18n_path + "/#{prop[:unique_language_s]}.yml", hoc_path)
+    next if prop[:locale_s] == "en-US"
+    i18n_path = "i18n/locales/#{prop[:locale_s]}/hourofcode"
+    hoc_path = "pegasus/sites.v3/hourofcode.com/i18n"
+    FileUtils.cp(i18n_path + "/#{prop[:unique_language_s]}.yml", hoc_path)
 
-      language_folder = hoc_path + "/public/#{prop[:unique_language_s]}"
-      unless File.directory?(language_folder)
-        FileUtils.mkdir_p(language_folder)
-        FileUtils.mkdir_p(language_folder + "/files")
-        FileUtils.mkdir_p(language_folder + "/images")
-        FileUtils.mkdir_p(language_folder + "/how-to")
-        FileUtils.mkdir_p(language_folder + "/promote")
-      end
-
-      i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/*.md"]
-      i18n_dir.each do |file|
-        FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/#{File.basename(file)}")
-      end
-
-      i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/how-to/*.md"]
-      i18n_dir.each do |file|
-        FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/how-to/#{File.basename(file)}")
-      end
-
-      i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/promote/*.md"]
-      i18n_dir.each do |file|
-        FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/promote/#{File.basename(file)}")
-      end
-
-      puts "Copied locale #{prop[:unique_language_s]}"
+    language_folder = hoc_path + "/public/#{prop[:unique_language_s]}"
+    unless File.directory?(language_folder)
+      FileUtils.mkdir_p(language_folder)
+      FileUtils.mkdir_p(language_folder + "/files")
+      FileUtils.mkdir_p(language_folder + "/images")
+      FileUtils.mkdir_p(language_folder + "/how-to")
+      FileUtils.mkdir_p(language_folder + "/promote")
     end
+
+    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/#{File.basename(file)}")
+    end
+
+    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/how-to/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/how-to/#{File.basename(file)}")
+    end
+
+    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/promote/*.md"]
+    i18n_dir.each do |file|
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/promote/#{File.basename(file)}")
+    end
+
+    puts "Copied locale #{prop[:unique_language_s]}"
   end
 end
 
@@ -81,11 +80,10 @@ def clean_crowdin_markdown_errors
     puts file
     metadata_pattern = /(---.*?---)/m
     metadata_matches = File.read(file).match metadata_pattern
-    if metadata_matches
-      original_metadata = metadata_matches.captures.first
-      fixed_metadata = original_metadata.gsub(/ ([a-z]*:)/m, "\n\\1")
-      File.write(file, File.read(file).gsub(original_metadata, fixed_metadata))
-    end
+    next unless metadata_matches
+    original_metadata = metadata_matches.captures.first
+    fixed_metadata = original_metadata.gsub(/ ([a-z]*:)/m, "\n\\1")
+    File.write(file, File.read(file).gsub(original_metadata, fixed_metadata))
   end
 
   # fix social media buttons in promote/index

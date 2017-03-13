@@ -7210,20 +7210,41 @@ en:
         Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
         Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
         The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+      courseD_multi_bee_conditionals1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.: Incorrect.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        Question: Question
+        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+        'The bee will move to the flower and then do nothing, no matter what. ': 'The bee will move to the flower and then do nothing, no matter what. '
+        'The bee will move to the flower and try to get nectar, no matter what. ': 'The bee will move to the flower and try to get nectar, no matter what. '
         right answer: right answer
         wrong answer: wrong answer
+      courseD_multi_bee_conditionals7_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
       courseD_multi_bee_debugging9_predict1:
         Correct!: Correct!
-        I don\'t know.: I don\'t know.
+        I don't know.: I don't know.
         Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.: Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.
         Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.: Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.
         Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?: Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?
         The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.: The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.
         The bee will turn the wrong way when making a square.: The bee will turn the wrong way when making a square.
         'The loop does not run long enough for the bee to get to all flower bunches. ': 'The loop does not run long enough for the bee to get to all flower bunches. '
-        right answer: right answer
-        that was wrong because X: that was wrong because X
-        wrong answer: wrong answer
       courseD_multi_bee_nestedLoops2_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7244,6 +7265,32 @@ en:
         Look closely at the code below. How much honey will the bee collect when you click "Run"?: Look closely at the code below. How much honey will the bee collect when you click "Run"?
         ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
         : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+      courseD_multi_farmer_while10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        Incorrect. There is no code to remove dirt from the pile.: Incorrect. There is no code to remove dirt from the pile.
+        Nothing.  This code will leave only level ground.: Nothing.  This code will leave only level ground.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Take a good look at the code below. What will be left at the end of this puzzle?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        This code will leave the holes completely untouched.: This code will leave the holes completely untouched.
+        This code will leave the pile completely untouched.: This code will leave the pile completely untouched.
+      courseD_multi_farmer_while4_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        Look closely at the code below.  What will happen after you click "Run"?: Look closely at the code below.  What will happen after you click "Run"?
+        Nothing will happen.: Nothing will happen.
+        The farmer will never stop removing dirt.: The farmer will never stop removing dirt.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
+      courseD_multi_maze_until2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.: Incorrect.
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Take a close look at the code below.  What do you think will happen when you click "Run"?
+        right answer: right answer
+        wrong answer: wrong answer
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?

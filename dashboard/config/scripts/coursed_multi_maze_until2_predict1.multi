@@ -1,0 +1,5 @@
+name 'courseD_multi_maze_until2_predict1'
+question 'Take a close look at the code below.  What do you think will happen when you click "Run"?'
+wrong 'wrong answer', feedback: 'Incorrect.'
+right 'right answer', feedback: 'Correct!'
+wrong 'I don\'t know.', feedback: 'Incorrect.'

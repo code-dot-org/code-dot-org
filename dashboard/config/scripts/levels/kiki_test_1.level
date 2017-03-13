@@ -424,5 +424,49 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_waitParams" inline="true">
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">7</title>
+        </block>
+        <block type="studio_setSpriteXY" inline="true">
+          <value name="SPRITE">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="XPOS">
+            <block type="math_number">
+              <title name="NUM">200</title>
+            </block>
+          </value>
+          <value name="YPOS">
+            <block type="math_number">
+              <title name="NUM">200</title>
+            </block>
+          </value>
+        </block>
+        <block type="when_run"/>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
   </blocks>
 </Studio>
