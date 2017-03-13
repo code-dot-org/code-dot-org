@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import ReactTooltip from 'react-tooltip';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { levelProgressShape } from './types';
@@ -225,6 +226,15 @@ export const ProgressDot = Radium(React.createClass({
     return '';
   },
 
+  checkForLevelName() {
+    const { level } = this.props;
+    if (level.name !== undefined) {
+      return false;
+    } else {
+      return true;
+    }
+  },
+
   render() {
     const { level, status, courseOverviewPage, currentLevelId } = this.props;
 
@@ -253,18 +263,24 @@ export const ProgressDot = Radium(React.createClass({
          ]}
       >
         {(iconClassFromIconType[level.icon] && !isPeerReview) ?
-          <i
-            className={this.iconClassName()}
-            style={[
-              styles.dot.common,
-              styles.dot.puzzle,
-              courseOverviewPage && styles.dot.overview,
-              styles.dot.icon,
-              smallDot && styles.dot.icon_small,
-              status && status !== LevelStatus.not_tried && styles.dot.icon_complete,
-              outlineCurrent && {textShadow: createOutline(color.level_current)}
-            ]}
-          /> :
+          <span data-tip data-for={level.activeId} data-tip-disable={this.checkForLevelName()}>
+            <i
+              className={this.iconClassName()}
+              style={[
+                styles.dot.common,
+                styles.dot.puzzle,
+                courseOverviewPage && styles.dot.overview,
+                styles.dot.icon,
+                smallDot && styles.dot.icon_small,
+                status && status !== LevelStatus.not_tried && styles.dot.icon_complete,
+                outlineCurrent && {textShadow: createOutline(color.level_current)}
+              ]}
+            />
+            <ReactTooltip id={level.activeId} aria-haspopup="true" role="example" delayShow={1000} wrapper="span">
+              {level.name}
+            </ReactTooltip>
+          </span> :
+
           <div
             className={this.iconClassName()}
             style={[
@@ -278,12 +294,19 @@ export const ProgressDot = Radium(React.createClass({
               styles.status[status || LevelStatus.not_tried],
             ]}
           >
+
+          <div data-tip data-for={level.activeId}>
             <BubbleInterior
               showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
               title={level.title || undefined}
             />
+            <ReactTooltip id={level.activeId} aria-haspopup="true" role="example">
+              {level.name}
+            </ReactTooltip>
           </div>
+
+        </div>
         }
         {
           showLevelName &&

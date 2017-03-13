@@ -117,7 +117,6 @@ const SummaryProgressRow = React.createClass({
             }
             <div data-tip data-for={lessonTitle}>
               {lessonTitle}
-
               <ReactTooltip id={lessonTitle} aria-haspopup="true" role="example">
                 {lesson.name}
               </ReactTooltip>
