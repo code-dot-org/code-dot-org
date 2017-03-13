@@ -29,10 +29,10 @@ module Pd::Payment
       end
     end
 
-    test 'non-plp' do
+    test 'non-regional partner' do
       workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(@workshop)
 
-      assert_nil workshop_summary.plp
+      assert_nil workshop_summary.workshop.regional_partner
       assert_equal 11, workshop_summary.num_teachers
       assert_equal 10, workshop_summary.num_qualified_teachers
       assert_equal 29, workshop_summary.total_teacher_attendance_days
@@ -49,12 +49,14 @@ module Pd::Payment
       assert_equal 2530, payment.total
     end
 
-    test 'plp non-urban' do
-      plp = create :regional_partner, contact: @workshop.organizer, urban: false
+    test 'regional partner non-urban' do
+      rp = create :regional_partner, urban: false
+
+      @workshop.regional_partner = rp
 
       workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(@workshop)
 
-      assert_equal plp, workshop_summary.plp
+      assert_equal rp, workshop_summary.workshop.regional_partner
       assert_equal 11, workshop_summary.num_teachers
       assert_equal 10, workshop_summary.num_qualified_teachers
       assert_equal 29, workshop_summary.total_teacher_attendance_days
@@ -71,12 +73,14 @@ module Pd::Payment
       assert_equal 2530, payment.total
     end
 
-    test 'plp urban' do
-      plp = create :regional_partner, contact: @workshop.organizer, urban: true
+    test 'regional partner urban' do
+      rp = create :regional_partner, urban: true
+
+      @workshop.regional_partner = rp
 
       workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(@workshop)
 
-      assert_equal plp, workshop_summary.plp
+      assert_equal rp, workshop_summary.workshop.regional_partner
       assert_equal 11, workshop_summary.num_teachers
       assert_equal 10, workshop_summary.num_qualified_teachers
       assert_equal 29, workshop_summary.total_teacher_attendance_days
