@@ -40,7 +40,7 @@ class LevelSourceImage < ActiveRecord::Base
     save
   end
 
-  S3_BUCKET = 'cdo-art'
+  S3_BUCKET = 'cdo-art'.freeze
 
   def upload_image(filename, image)
     AWS::S3.upload_to_bucket(S3_BUCKET, filename, image, no_random: true)

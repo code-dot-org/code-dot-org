@@ -61,11 +61,11 @@ module GitHub
     success ? pr_number : nil
   end
 
-  # Builds the HTML URL from a pull request number. Does not validate the pull
+  # Builds the GitHub URL from a pull request number. Does not validate the pull
   # request number.
   # @param pr_number [Integer] The pull request number.
   # @return [String] The HTML URL for the pull request.
-  def self.html_url(pr_number)
+  def self.url(pr_number)
     "https://github.com/#{REPO}/pull/#{pr_number}"
   end
 

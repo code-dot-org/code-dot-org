@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 
-  TEMPLATES = %w(projects)
+  TEMPLATES = %w(projects).freeze
 
   STANDALONE_PROJECTS = {
     artist: {
@@ -40,7 +40,7 @@ class ProjectsController < ApplicationController
     eval: {
       name: 'Eval Free Play'
     }
-  }.with_indifferent_access
+  }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
 

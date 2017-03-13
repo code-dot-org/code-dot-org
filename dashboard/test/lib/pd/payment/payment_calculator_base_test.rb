@@ -27,34 +27,44 @@ module Pd::Payment
       assert_equal '09/16/2016 - 09/30/2016', PaymentCalculatorBase.instance.get_pay_period(workshop_30)
     end
 
-    test 'workshop payment type and plp' do
-      workshop_no_plp = create :pd_ended_workshop
-      create :pd_workshop_participant, workshop: workshop_no_plp, enrolled: true, in_section: true, attended: true
+    test 'workshop payment type and regional_partner' do
+      workshop_no_regional_partner = create :pd_ended_workshop
+      create :pd_workshop_participant, workshop: workshop_no_regional_partner, enrolled: true, in_section: true, attended: true
 
-      workshop_plp_urban = create :pd_ended_workshop
-      plp_urban = create :regional_partner, contact: workshop_plp_urban.organizer, urban: true
-      create :pd_workshop_participant, workshop: workshop_plp_urban, enrolled: true, in_section: true, attended: true
+      regional_partner_urban = create :regional_partner, urban: true
+      workshop_regional_partner_urban = create :pd_ended_workshop, regional_partner: regional_partner_urban
+      create :pd_workshop_participant, workshop: workshop_regional_partner_urban, enrolled: true, in_section: true, attended: true
 
-      workshop_plp_non_urban = create :pd_ended_workshop
-      plp_non_urban = create :regional_partner, contact: workshop_plp_non_urban.organizer, urban: false
-      create :pd_workshop_participant, workshop: workshop_plp_non_urban, enrolled: true, in_section: true, attended: true
+      regional_partner_non_urban = create :regional_partner, urban: false
+      workshop_regional_partner_non_urban = create :pd_ended_workshop, regional_partner: regional_partner_non_urban
+      create :pd_workshop_participant, workshop: workshop_regional_partner_non_urban, enrolled: true, in_section: true, attended: true
 
-      summary_no_plp = PaymentCalculatorBase.instance.calculate workshop_no_plp
-      summary_plp_urban = PaymentCalculatorBase.instance.calculate workshop_plp_urban
-      summary_plp_non_urban = PaymentCalculatorBase.instance.calculate workshop_plp_non_urban
+      regional_partner_nil_urban = create :regional_partner, urban: nil
+      workshop_regional_partner_nil_urban = create :pd_ended_workshop, regional_partner: regional_partner_nil_urban
+      create :pd_workshop_participant, workshop: workshop_regional_partner_nil_urban, enrolled: true, in_section: true, attended: true
 
-      assert_nil summary_no_plp.plp
-      assert_nil summary_no_plp.payment.type
+      summary_no_regional_partner = PaymentCalculatorBase.instance.calculate workshop_no_regional_partner
+      summary_regional_partner_urban = PaymentCalculatorBase.instance.calculate workshop_regional_partner_urban
+      summary_regional_partner_non_urban = PaymentCalculatorBase.instance.calculate workshop_regional_partner_non_urban
+      summary_regional_partner_nil_urban = PaymentCalculatorBase.instance.calculate workshop_regional_partner_nil_urban
 
-      assert_equal plp_urban, summary_plp_urban.plp
-      assert summary_plp_urban.payment
-      assert_equal summary_plp_urban, summary_plp_urban.payment.summary
-      assert_equal 'PLP Urban', summary_plp_urban.payment.type
+      assert_nil summary_no_regional_partner.workshop.regional_partner
+      assert_nil summary_no_regional_partner.payment.type
 
-      assert_equal plp_non_urban, summary_plp_non_urban.plp
-      assert summary_plp_non_urban.payment
-      assert_equal summary_plp_non_urban, summary_plp_non_urban.payment.summary
-      assert_equal 'PLP Non-urban', summary_plp_non_urban.payment.type
+      assert_equal regional_partner_urban, summary_regional_partner_urban.workshop.regional_partner
+      assert summary_regional_partner_urban.payment
+      assert_equal summary_regional_partner_urban, summary_regional_partner_urban.payment.summary
+      assert_equal 'PLP Urban', summary_regional_partner_urban.payment.type
+
+      assert_equal regional_partner_non_urban, summary_regional_partner_non_urban.workshop.regional_partner
+      assert summary_regional_partner_non_urban.payment
+      assert_equal summary_regional_partner_non_urban, summary_regional_partner_non_urban.payment.summary
+      assert_equal 'PLP Non-urban', summary_regional_partner_non_urban.payment.type
+
+      assert_equal regional_partner_nil_urban, summary_regional_partner_nil_urban.workshop.regional_partner
+      assert summary_regional_partner_nil_urban.payment
+      assert_equal summary_regional_partner_nil_urban, summary_regional_partner_nil_urban.payment.summary
+      assert_equal 'PLP Non-urban', summary_regional_partner_nil_urban.payment.type
     end
 
     test 'attendance' do

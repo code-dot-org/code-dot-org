@@ -9,7 +9,7 @@ class FeatureModeController < ApplicationController
   MAX_UPDATE_TIME = 30
 
   PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for " \
-      'changes to take effect, then send a CloudFront cache invalidation.'
+      'changes to take effect, then send a CloudFront cache invalidation.'.freeze
 
   # Shows the current or pending feature mode.
   def show
