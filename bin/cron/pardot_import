@@ -16,17 +16,17 @@ class InvalidApiKeyException < Exception
 end
 
 # URL for Pardot login
-PARDOT_AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4"
+PARDOT_AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4".freeze
 
-PARDOT_API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4"
+PARDOT_API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
 # URL for prospect batch creation
-PARDOT_BATCH_CREATE_URL = "#{PARDOT_API_V4_BASE}/do/batchCreate"
+PARDOT_BATCH_CREATE_URL = "#{PARDOT_API_V4_BASE}/do/batchCreate".freeze
 # URL for prospect batch update
-PARDOT_BATCH_UPDATE_URL = "#{PARDOT_API_V4_BASE}/do/batchUpdate"
+PARDOT_BATCH_UPDATE_URL = "#{PARDOT_API_V4_BASE}/do/batchUpdate".freeze
 # URL for prospect query
-PARDOT_PROSPECT_QUERY_URL = "#{PARDOT_API_V4_BASE}/do/query"
+PARDOT_PROSPECT_QUERY_URL = "#{PARDOT_API_V4_BASE}/do/query".freeze
 
-PARDOT_SUCCESS_HTTP_CODES = %w(200 201)
+PARDOT_SUCCESS_HTTP_CODES = %w(200 201).freeze
 
 # Max # of prospects allowed in one batch
 MAX_PROSPECT_BATCH_SIZE = 50
