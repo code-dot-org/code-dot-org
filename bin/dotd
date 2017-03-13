@@ -72,11 +72,22 @@ def puts_script_conclusion
   EOS
 end
 
+def puts_quit_message
+  puts <<-EOS.unindent
+
+    #{bold 'Something weird going on? Take a look at: '\
+      'http://wiki.code.org/display/PROD/Daily+Deployment'}
+
+    You can find a log of your day at #{LOG_FILE}
+
+  EOS
+end
+
 # Prompts the user for their name, setting the global variable @dotd_name and
 # warns them of changing options.
 def ask_for_name
   until @dotd_name != ''
-    print "Who are you? "
+    print 'Who are you? '
     @dotd_name = gets.chomp
   end
 
@@ -106,9 +117,7 @@ def should_i(question)
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
       return
     elsif 'quit'.start_with?(response)
-      puts bold "  Something weird going on? Take a look at: "\
-        "http://wiki.code.org/display/PROD/Daily+Deployment"
-      puts ''
+      puts_quit_message
       exit(-1)
     else
       puts "Sorry, I didn't understand that.\n\n"
@@ -217,10 +226,10 @@ end
 # Asks if the DTT subroutine should be performed, doing so if requested.
 def do_dtt_subroutine
   print_dtt_message
-  should_i "DTT" do
+  should_i 'DTT' do
     view_commits base: 'test', head: 'staging'
-    should_i "merge from staging to test" do
-      should_i "reset DTT message to in progress" do
+    should_i 'merge from staging to test' do
+      should_i 'reset DTT message to in progress' do
         DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
       end
       pr_number = GitHub.create_and_merge_pull_request(
@@ -235,8 +244,8 @@ def do_dtt_subroutine
       # TODO(asher): Prompt for whether the DTT was green, update
       # Slack#infra-test topic appropriately.
 
-      should_i "reset DTT message to yes" do
-        DevelopersTopic.set_dtt "yes"
+      should_i 'reset DTT message to yes' do
+        DevelopersTopic.set_dtt 'yes'
       end
     end
   end
@@ -248,21 +257,21 @@ def main
 
   do_dtt_subroutine
 
-  should_i "commit content changes from staging" do
+  should_i 'commit content changes from staging' do
     content_push 'staging', 'staging'
   end
 
-  should_i "commit content changes from levelbuilder" do
+  should_i 'commit content changes from levelbuilder' do
     content_push 'levelbuilder-staging', 'levelbuilder'
 
     view_commits base: 'staging', head: 'levelbuilder'
-    should_i "merge from levelbuilder to staging" do
+    should_i 'merge from levelbuilder to staging' do
       GitHub.create_and_merge_pull_request(
         base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
       )
       new_sha_abbr = GitHub.sha('staging')[0, 7]
       wait_for "staging to finish building with sha #{new_sha_abbr}."
-      should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
+      should_i 'commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD' do
         content_push 'staging', 'staging'
       end
     end
@@ -270,11 +279,11 @@ def main
 
   do_dtt_subroutine
 
-  wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
+  wait_for 'between 1:30PM and 3:30PM (Pacific) to DTP'
 
   print_dtp_message
-  should_i "DTP" do
-    should_i "set DTP message to in progress" do
+  should_i 'DTP' do
+    should_i 'set DTP message to in progress' do
       DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
     end
     GitHub.open_pull_request_in_browser(
@@ -283,11 +292,11 @@ def main
       title: 'DTP (Test > Production)'
     )
 
-    should_i "DTL" do
+    should_i 'DTL' do
       # TODO(asher): Remove this wait step if it is truly unnecessary now.
-      wait_for "Slack#levelbuilder to indicate they are ready for a deploy"
+      wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
       view_commits base: 'levelbuilder', head: 'test'
-      should_i "merge from test to levelbuilder" do
+      should_i 'merge from test to levelbuilder' do
         pr_number = GitHub.create_and_merge_pull_request(
           base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
         )
@@ -295,15 +304,18 @@ def main
       end
     end
 
-    wait_for "DTP to finish"
-    should_i "reset DTP message to yes" do
-      DevelopersTopic.set_dtp "yes"
+    wait_for 'DTP to finish'
+    should_i 'reset DTP message to yes' do
+      DevelopersTopic.set_dtp 'yes'
     end
 
     puts_after_dtp_tasks
   end
 
   puts_script_conclusion
+rescue
+  puts_quit_message
+  raise
 end
 
 main
