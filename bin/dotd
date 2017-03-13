@@ -42,6 +42,21 @@ def puts_script_intro
   EOS
 end
 
+# Prints task list after the DTP to the console.
+def puts_after_dtp_tasks
+  # TODO(asher): Automate the Slack#infra-production update.
+  puts <<-EOS.unindent
+
+    * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
+    * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
+    * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
+    * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
+    * Ensure that no frontends were skipped in the Production room on Slack.
+    * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
+
+  EOS
+end
+
 # Prints the script conclusion to the console.
 def puts_script_conclusion
   puts <<-EOS.unindent
@@ -257,7 +272,7 @@ def main
 
   wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
 
-  print_dtp_subtopic
+  print_dtp_message
   should_i "DTP" do
     should_i "set DTP message to in progress" do
       DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
@@ -285,15 +300,7 @@ def main
       DevelopersTopic.set_dtp "yes"
     end
 
-    puts <<-EOS.unindent
-
-      * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
-      * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
-      * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
-      * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
-      * Ensure that no frontends were skipped in the Production room on Slack.
-      * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
-    EOS
+    puts_after_dtp_tasks
   end
 
   puts_script_conclusion
