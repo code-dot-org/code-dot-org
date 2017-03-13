@@ -45,4 +45,11 @@ class String
   def unindent
     gsub /^#{scan(/^[ \t]+/).min_by(&:length)}/, ''
   end
+
+  # Strip leading whitespace from each line that is the same as the amount of
+  # whitespace on the least-indented line of the string. Then indent the
+  # resulting lines by num_start_spaces spaces.
+  def unindent_with_indent(num_start_spaces)
+    gsub /^#{scan(/^[ \t]+/).min_by(&:length)}/, ' ' * num_start_spaces
+  end
 end
