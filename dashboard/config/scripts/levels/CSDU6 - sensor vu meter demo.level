@@ -216,7 +216,8 @@
     "contained_level_names": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "teacher_markdown": "### Exemplar\r\n\r\nThis project is a bit more sophisticated than the last. Students first need to set the scale of the sound sensor to 0-9 so that it maps nicely to the color LEDs, and then use a for loop to turn on or off the appropriate LEDs.\r\n\r\n<a href=\"https://studio.code.org/projects/applab/LYYQfAAFnOzsmTSj_b0ZwA/view\">View Exemplar Code</a>"
   },
   "published": true,
   "notes": "",
