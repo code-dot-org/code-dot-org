@@ -295,13 +295,13 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           >
 
-          <div data-tip data-for={level.activeId}>
+          <div data-tip data-for={level.activeId} data-tip-disable={this.checkForLevelName()}>
             <BubbleInterior
               showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
               title={level.title || undefined}
             />
-            <ReactTooltip id={level.activeId} aria-haspopup="true" role="example">
+            <ReactTooltip id={level.activeId} aria-haspopup="true" role="example" delayShow={1000}>
               {level.name}
             </ReactTooltip>
           </div>
