@@ -6,6 +6,9 @@ require 'cdo/solr'
 require src_dir 'forms'
 
 SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
+# As the NULLness of various date columns indicates further processing is
+# necessary, we use this date to represent that an unrecoverable error happened.
+DATE_FOR_ERRORS = '1980-01-01 00:00:00'.freeze
 
 # load helpers
 load pegasus_dir('helpers.rb')
@@ -58,7 +61,11 @@ def process_batch_of_forms(batch_size)
       end
     rescue AbortFormError => e
       ChatClient.log "Unable to process form #{form[:id]} because #{e.message}."
-      DB[:forms].where(id: form[:id]).update(processed_at: 0, indexed_at: 0, notified_at: 0)
+      DB[:forms].where(id: form[:id]).update(
+        processed_at: DATE_FOR_ERRORS,
+        indexed_at: DATE_FOR_ERRORS,
+        notified_at: DATE_FOR_ERRORS
+      )
       next
     end
 
