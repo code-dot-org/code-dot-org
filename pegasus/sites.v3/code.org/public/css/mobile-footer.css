@@ -71,7 +71,7 @@
   #pagefooter {
     overflow: visible;
     padding: 0;
-    height: 145px;
+    height: 150px;
   }
 
   .language-dropdown {
@@ -110,12 +110,13 @@
   #pagefooter {
     overflow: visible;
     padding: 0;
-    height: 180px;
+    height: 160px;
   }
 
   #footer-links {
     position: relative;
     margin: 0;
+    padding-top: 0px;
   }
 
   #footer-links ul {
