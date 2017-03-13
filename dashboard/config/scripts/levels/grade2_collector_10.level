@@ -30,9 +30,9 @@
     "markdown_instructions": "You're almost done!  \r\n\r\nCollect as many pieces of treasure as you can to finish the stage!",
     "callout_json": "[]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P9: Efficacy Repairing Puzzle",

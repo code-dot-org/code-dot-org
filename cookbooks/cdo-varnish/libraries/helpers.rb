@@ -154,12 +154,11 @@ def process_request(behavior, _)
   )
   REMOVED_HEADERS.each do |remove_header|
     name, value = remove_header.split ':'
-    unless behavior[:headers].include? name
-      if value.nil?
-        out << "\nunset req.http.#{name};"
-      else
-        out << "\nset req.http.#{name} = \"#{value}\";"
-      end
+    next if behavior[:headers].include? name
+    if value.nil?
+      out << "\nunset req.http.#{name};"
+    else
+      out << "\nset req.http.#{name} = \"#{value}\";"
     end
   end
   out

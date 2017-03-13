@@ -32,9 +32,9 @@
     "instructions_important": "false",
     "video_key": "C1_zuck_repeat_loop",
     "min_collected": "6",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

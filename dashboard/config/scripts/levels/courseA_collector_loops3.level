@@ -33,9 +33,9 @@
     "video_key": "C1_zuck_repeat_loop",
     "min_collected": "5",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a `repeat` loop to do the job!\",\"hint_id\":\"courseA_collector_loops3\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ee56af25ac584625059e7f288dcdd217/courseA_collector_loops3.mp3\"}]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
