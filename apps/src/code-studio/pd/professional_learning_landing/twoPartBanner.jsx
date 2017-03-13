@@ -4,14 +4,12 @@ import React from 'react';
 
 const styles = {
   container: {
-    display: 'table',
-    tableLayout: 'fixed',
+    display: 'flex',
     height: '240px',
     width: '100%',
   },
 
   image: {
-    display: 'table-cell',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -19,24 +17,28 @@ const styles = {
     height: '100%',
     border: '1px solid black',
     boxSizing: 'border-box',
+    flex: 1
   },
 
   text: {
-    display: 'table-cell',
     fontSize: '24px',
     backgroundColor: '#00adbc',
     color: 'white',
-    padding: '20px'
+    flex: 1
   },
 
   left: {
     borderTopLeftRadius: '10px',
     borderBottomLeftRadius: '10px',
+    flexBasis: 0,
+    flexGrow: 1
   },
 
   right: {
     borderTopRightRadius: '10px',
     borderBottomRightRadius: '10px',
+    flexBasis: 0,
+    flexGrow: 1
   }
 };
 
@@ -68,11 +70,19 @@ const TwoPartBanner = React.createClass({
     };
 
     const imageElement = (
-      <div key="image" style={appliedImageStyle}/>
+      <div key="image" style={appliedImageStyle}>
+        &nbsp;
+      </div>
     );
-    const textElement = React.cloneElement(this.props.textElement, {key: 'text', style: appliedTextStyle});
+    const textElement = React.cloneElement((this.props.textElement), {key: 'text', style: {padding: '20px'}});
 
-    return this.props.imagePosition === 'imageLeft' ? [imageElement, textElement] : [textElement, imageElement];
+    const wrappedTextElement = (
+      <div style={appliedTextStyle}>
+        {textElement}
+      </div>
+    );
+
+    return this.props.imagePosition === 'imageLeft' ? [imageElement, wrappedTextElement] : [wrappedTextElement, imageElement];
   },
 
   render() {
