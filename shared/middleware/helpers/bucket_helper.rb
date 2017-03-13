@@ -115,16 +115,15 @@ class BucketHelper
     src_prefix = s3_path src_owner_id, src_channel_id
     result = @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
-      if (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
-        mime_type = Sinatra::Base.mime_type(File.extname(filename))
-        category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
+      mime_type = Sinatra::Base.mime_type(File.extname(filename))
+      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
-        src = "#{@bucket}/#{src_prefix}#{filename}"
-        dest = s3_path dest_owner_id, dest_channel_id, filename
-        response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+      src = "#{@bucket}/#{src_prefix}#{filename}"
+      dest = s3_path dest_owner_id, dest_channel_id, filename
+      response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
-        {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
-      end
+      {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
     end
     result.compact
   end

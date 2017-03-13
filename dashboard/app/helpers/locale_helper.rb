@@ -26,11 +26,10 @@ module LocaleHelper
   def options_for_locale_select
     options = []
     Dashboard::Application::LOCALES.each do |locale, data|
-      if I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-        name = data[:native]
-        name = (data[:debug] ? "#{name} DBG" : name)
-        options << [name, locale]
-      end
+      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
+      name = data[:native]
+      name = (data[:debug] ? "#{name} DBG" : name)
+      options << [name, locale]
     end
     options
   end
