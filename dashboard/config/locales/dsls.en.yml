@@ -7210,20 +7210,15 @@ en:
         Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
         Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
         The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
-        right answer: right answer
-        wrong answer: wrong answer
       courseD_multi_bee_debugging9_predict1:
         Correct!: Correct!
-        I don\'t know.: I don\'t know.
+        I don't know.: I don't know.
         Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.: Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.
         Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.: Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.
         Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?: Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?
         The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.: The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.
         The bee will turn the wrong way when making a square.: The bee will turn the wrong way when making a square.
         'The loop does not run long enough for the bee to get to all flower bunches. ': 'The loop does not run long enough for the bee to get to all flower bunches. '
-        right answer: right answer
-        that was wrong because X: that was wrong because X
-        wrong answer: wrong answer
       courseD_multi_bee_nestedLoops2_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
