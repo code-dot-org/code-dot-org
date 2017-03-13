@@ -30,9 +30,9 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out where to put the repeat loops, program it out step-by-step and look for a pattern. \",\"hint_id\":\"courseB_collector_loops8_challenge_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/71f06a7350271ddd193c9d6c11b1a6a0/courseB_collector_loops8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Does the code feel a little long?  You can make it much shorter by moving two of your `repeat` loops inside of another loop.\",\"hint_id\":\"courseB_collector_loops8_challenge_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/826f7675c60d3ad4c16e6c886f25bce6/courseB_collector_loops8.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "10",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
