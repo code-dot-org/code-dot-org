@@ -21,7 +21,7 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
             Thank you for completing a Code.org professional learning workshop! Please complete this survey so that we
             may improve your experience.
           </p>
-          <Button bsStyle="primary" onClick={() => {window.location = this.props.lastWorkshopSurveyUrl;}}>
+          <Button bsStyle="primary" onClick={() => {window.open(this.props.lastWorkshopSurveyUrl, '_blank');}}>
             Start Survey
           </Button>
         </div>
