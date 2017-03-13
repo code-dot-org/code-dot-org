@@ -71,7 +71,7 @@
   #pagefooter {
     overflow: visible;
     padding: 0;
-    height: 120px;
+    height: 145px;
   }
 
   .language-dropdown {
@@ -92,13 +92,15 @@
   #footer-links {
     float: none;
     margin-bottom: 20px;
+    padding-top: 20px;
     text-align: center;
   }
 
   #copyright {
     float: none;
     text-align: center;
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -108,7 +110,7 @@
   #pagefooter {
     overflow: visible;
     padding: 0;
-    height: 170px;
+    height: 180px;
   }
 
   #footer-links {
@@ -146,6 +148,7 @@
   }
 
   #copyright {
-    padding: 12px 12px 36px 12px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
