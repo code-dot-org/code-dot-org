@@ -64,7 +64,6 @@ def load_configuration
     'reporting_db_reader'         => 'mysql://root@localhost/',
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
-    'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
