@@ -88,11 +88,10 @@ untranslated_apps = %w(
 )
 
 locales.each_value do |locale|
-  if locale != 'en-US'
-    untranslated_apps.each do |app|
-      app_locale = locale.sub '-', '_'
-      app_locale.downcase!
-      FileUtils.cp_r "i18n/#{app}/en_us.json", "i18n/#{app}/#{app_locale}.json"
-    end
+  next unless locale != 'en-US'
+  untranslated_apps.each do |app|
+    app_locale = locale.sub '-', '_'
+    app_locale.downcase!
+    FileUtils.cp_r "i18n/#{app}/en_us.json", "i18n/#{app}/#{app_locale}.json"
   end
 end
