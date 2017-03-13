@@ -126,6 +126,7 @@ level 'courseD_video_ifElse'
 level 'courseD_maze_until8'
 level 'courseD_maze_until9'
 level 'courseD_maze_until10'
+assessment 'courseD_maze_until10_predict2'
 
 stage 'Conditionals & Loops in Farmer'
 level 'courseD_farmer_condLoops1'

@@ -213,11 +213,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# \"Love\" Tester\r\n\r\nThe \"Love\" Tester is a classic carnival game. It works by having a user place their palm flat on a sensor or hold a metal handle. The tester then displays how in love that person is. The simplest version of these machines simply measure the temperature of the user’s hand and equate more love with a higher temperature.\r\n\r\nTest out this \"Love\" Tester by holding your thumb down on your Circuit Playground's temperature sensor. Compare your results with those of your neighbors - do all of the boards respond in the same way?",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "### Exemplar\r\n\r\nThe \"Love\" Tester is challenging because unlike the previous two projects, you can't directly map the input value to the output. Instead students will need to use a conditional to respond to different ranges of input. This project always necessitates a bit of calibration since the simple temperature sensors aren't consistent across multiple boards.\r\n\r\n<a href=\"https://studio.code.org/projects/applab/-Xm7_vzUCC42YSGMr9tSRA/view\">View Exemplar Code</a>"
+    "teacher_markdown": "### Exemplar\r\n\r\nThe \"Love\" Tester is challenging because unlike the previous two projects, you can't directly map the input value to the output. Instead students will need to use a conditional to respond to different ranges of input. This project always necessitates a bit of calibration since the simple temperature sensors aren't consistent across multiple boards.\r\n\r\n<a href=\"https://studio.code.org/projects/applab/-Xm7_vzUCC42YSGMr9tSRA/view\">View Exemplar Code</a>",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
