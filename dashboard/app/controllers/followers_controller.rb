@@ -61,7 +61,7 @@ class FollowersController < ApplicationController
 
     user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
 
-    @user = User.new(follower_params(user_type))
+    @user = User.new(followers_params(user_type))
 
     @user.user_type = user_type
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
