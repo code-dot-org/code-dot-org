@@ -5,6 +5,7 @@ module OPS
   DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
 end
 
+# rubocop:disable Metrics/BlockLength
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 
@@ -47,6 +48,8 @@ Dashboard::Application.routes.draw do
   get 'xhr', to: 'xhr_proxy#get', format: false
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
+
+  get 'docs/*docs_route', to: 'docs_proxy#get'
 
   resources :sections, only: [:show] do
     member do
