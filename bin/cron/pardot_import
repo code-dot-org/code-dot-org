@@ -16,17 +16,17 @@ class InvalidApiKeyException < Exception
 end
 
 # URL for Pardot login
-PARDOT_AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4"
+PARDOT_AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4".freeze
 
-PARDOT_API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4"
+PARDOT_API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
 # URL for prospect batch creation
-PARDOT_BATCH_CREATE_URL = "#{PARDOT_API_V4_BASE}/do/batchCreate"
+PARDOT_BATCH_CREATE_URL = "#{PARDOT_API_V4_BASE}/do/batchCreate".freeze
 # URL for prospect batch update
-PARDOT_BATCH_UPDATE_URL = "#{PARDOT_API_V4_BASE}/do/batchUpdate"
+PARDOT_BATCH_UPDATE_URL = "#{PARDOT_API_V4_BASE}/do/batchUpdate".freeze
 # URL for prospect query
-PARDOT_PROSPECT_QUERY_URL = "#{PARDOT_API_V4_BASE}/do/query"
+PARDOT_PROSPECT_QUERY_URL = "#{PARDOT_API_V4_BASE}/do/query".freeze
 
-PARDOT_SUCCESS_HTTP_CODES = %w(200 201)
+PARDOT_SUCCESS_HTTP_CODES = %w(200 201).freeze
 
 # Max # of prospects allowed in one batch
 MAX_PROSPECT_BATCH_SIZE = 50
@@ -161,17 +161,16 @@ def sync_contacts_with_pardot(config)
     prospect = {}
     MYSQL_TO_PARDOT_MAP.each do |mysql_key, pardot_info|
       db_value = contact_rollup[mysql_key]
-      if db_value.present?
-        if pardot_info[:multi]
-          # For multi data fields (multiselect,etc.), we set value names as [fieldname]_0, [fieldname]_1, etc
-          values = db_value.split(",")
-          values.each do |value, index|
-            prospect["#{pardot_info[:field]}_#{index}"] = value
-          end
-        else
-          # For single data fields, just set [fieldname] = value
-          prospect[pardot_info[:field]] = db_value
+      next unless db_value.present?
+      if pardot_info[:multi]
+        # For multi data fields (multiselect,etc.), we set value names as [fieldname]_0, [fieldname]_1, etc
+        values = db_value.split(",")
+        values.each do |value, index|
+          prospect["#{pardot_info[:field]}_#{index}"] = value
         end
+      else
+        # For single data fields, just set [fieldname] = value
+        prospect[pardot_info[:field]] = db_value
       end
     end
     # special case: if contact has opted out, set the two different Pardot flavors of opted out
@@ -194,15 +193,14 @@ def sync_contacts_with_pardot(config)
     # If the URL is longer than an empirically determined maximum safe length, or if
     # we have hit our max # of prospects allowed by Pardot in one batch API call, go ahead
     # and submit the batch
-    if url.length > URL_LENGTH_SEND_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE
-      submit_prospect_batch(prospects, config)
-      num_operations += prospects.length
-      if num_operations > num_operations_last_print + 1000
-        log "Prospect total operations so far: #{num_operations}"
-        num_operations_last_print = num_operations
-      end
-      prospects = []
+    next unless url.length > URL_LENGTH_SEND_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE
+    submit_prospect_batch(prospects, config)
+    num_operations += prospects.length
+    if num_operations > num_operations_last_print + 1000
+      log "Prospect total operations so far: #{num_operations}"
+      num_operations_last_print = num_operations
     end
+    prospects = []
   end
 
   # Submit any batch remainder

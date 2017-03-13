@@ -13,17 +13,16 @@ SOLR = Solr::Server.new(host: CDO.solr_server)
 
 DB[:forms].where(kind: 'VolunteerEngineerSubmission2015').each do |volunteer|
   data = JSON.parse(volunteer[:data])
-  if data['volunteer_after_hoc_b'] == 'on' || data['allow_contact_b'] == 'on'
-    puts "Fixing ID: #{volunteer[:id]}..."
+  next unless data['volunteer_after_hoc_b'] == 'on' || data['allow_contact_b'] == 'on'
+  puts "Fixing ID: #{volunteer[:id]}..."
 
-    # Delete the existing SOLR entry, so reindexing doesn't create duplicates.
-    SOLR.delete_by_id volunteer[:id]
+  # Delete the existing SOLR entry, so reindexing doesn't create duplicates.
+  SOLR.delete_by_id volunteer[:id]
 
-    # Fix the DB by updating the field, resetting indexed_at so the form gets
-    # reindexed.
-    data['volunteer_after_hoc_b'] = '1' if data['volunteer_after_hoc_b'] == 'on'
-    data['allow_contact_b'] = '1' if data['allow_contact_b'] == 'on'
-    DB[:forms].where(id: volunteer[:id]).
-      update(data: data.to_json, indexed_at: nil, updated_at: time_now)
-  end
+  # Fix the DB by updating the field, resetting indexed_at so the form gets
+  # reindexed.
+  data['volunteer_after_hoc_b'] = '1' if data['volunteer_after_hoc_b'] == 'on'
+  data['allow_contact_b'] = '1' if data['allow_contact_b'] == 'on'
+  DB[:forms].where(id: volunteer[:id]).
+    update(data: data.to_json, indexed_at: nil, updated_at: time_now)
 end

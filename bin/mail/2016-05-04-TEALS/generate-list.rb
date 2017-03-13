@@ -54,15 +54,14 @@ SOLR.query(q: volunteer_query).reverse_each do |result|
 
   # Duplicate :name as :name_s because this email template uses :name as a greeting,
   # but :name is used for constructing the to line and stripped from params.
-  unless UNSUBSCRIBERS[email]
-    results[email] = {
-      email: email,
-      name: name,
-      name_s: name,
-      state: state,
-      num_volunteers: num_volunteers
-    }
-  end
+  next if UNSUBSCRIBERS[email]
+  results[email] = {
+    email: email,
+    name: name,
+    name_s: name,
+    state: state,
+    num_volunteers: num_volunteers
+  }
 end
 
 puts "#{results.length} US volunteers."

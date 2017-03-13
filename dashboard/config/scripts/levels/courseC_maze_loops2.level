@@ -8,7 +8,7 @@
     "maze": "[[0,0,0,0,4,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,4,1,0,0,0],[0,0,0,0,2,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
     "instructions": "Can you get the bird to the pig by creating a loop that uses only one `move forward` block inside of a `repeat`?",
-    "start_direction": "1",
+    "start_direction": "0",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
