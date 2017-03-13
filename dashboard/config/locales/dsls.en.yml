@@ -7293,7 +7293,6 @@ en:
       courseD_multi_maze_until2_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.: Incorrect.
         ? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
         : Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
         ? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
@@ -7303,8 +7302,6 @@ en:
         The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
         The bird will not move at all.: The bird will not move at all.
         The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
-        right answer: right answer
-        wrong answer: wrong answer
       courseE_multi_bee_functions_predict1:
         Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
         ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
