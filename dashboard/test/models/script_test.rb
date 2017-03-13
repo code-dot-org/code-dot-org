@@ -344,7 +344,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     populate_cache_and_disconnect_db
 
-    assert_equal expected, level.level_concept_difficulty
+    assert_equal expected, level.reload.level_concept_difficulty
   end
 
   test 'get_without_cache raises exception for bad id' do
