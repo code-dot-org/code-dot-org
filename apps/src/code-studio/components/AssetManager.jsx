@@ -128,11 +128,16 @@ var AssetManager = React.createClass({
         </div>
       );
     } else if (this.state.assets.length === 0) {
+      const emptyText = this.props.allowedExtensions === '.mp3'?
+        (<div>
+          <div>Go to the "Sound library" to find sounds for your project.</div>
+          <div>To upload your own sound, click "Upload File." Your uploaded assets will appear here.</div>
+          </div>)
+        : ('Your assets will appear here. Click "Upload File" to add a new asset for this project.');
       assetList = (
         <div>
-          <div style={{margin: '1em 0'}}>
-            Your assets will appear here. Click "Upload File" to add a new asset
-            for this project.
+          <div style={{margin: '1em 0', fontSize: '16px', lineHeight: '20px'}}>
+            {emptyText}
           </div>
           {uploadButton}
         </div>
