@@ -458,25 +458,24 @@ class ContactRollups
 
       num_updated += 1
 
-      if num_updated % UPDATE_BATCH_SIZE == 0
-        begin
-          conn.run update_batch
-        rescue => e
-          log "Error: #{e}. Cmd: #{update_batch}"
-          raise
-        end
+      next unless num_updated % UPDATE_BATCH_SIZE == 0
+      begin
+        conn.run update_batch
+      rescue => e
+        log "Error: #{e}. Cmd: #{update_batch}"
+        raise
+      end
 
-        # Discard the connection and get a new one after each batch. Currently, if you use multiple statements in a batch, the first call will succeed; the next call on
-        # the same connection AFTER you do a multi-statement call will fail with a MySQL error that commands are out of order. The innertubes suggest that this may be a problem in mysql2 gem.
-        # Fortunately, it is fairly cheap to get a new connection for each batch (time to get new connection is negligible compared to batch time).
-        conn.disconnect
-        conn = mysql_multi_connection
+      # Discard the connection and get a new one after each batch. Currently, if you use multiple statements in a batch, the first call will succeed; the next call on
+      # the same connection AFTER you do a multi-statement call will fail with a MySQL error that commands are out of order. The innertubes suggest that this may be a problem in mysql2 gem.
+      # Fortunately, it is fairly cheap to get a new connection for each batch (time to get new connection is negligible compared to batch time).
+      conn.disconnect
+      conn = mysql_multi_connection
 
-        update_batch = ""
-        if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
-          log "Total records processed: #{record_count}"
-          time_last_output = Time.now
-        end
+      update_batch = ""
+      if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
+        log "Total records processed: #{record_count}"
+        time_last_output = Time.now
       end
     end
 
