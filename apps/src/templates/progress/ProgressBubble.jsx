@@ -66,7 +66,6 @@ const ProgressBubble = React.createClass({
 
       <div style={style} data-tip data-for={levelName}>
         {number}
-
         <ReactTooltip id={levelName} aria-haspopup="true" role="example">
           <FontAwesome icon={levelIcon} style={{ paddingRight: '.5em', paddingLeft: '.5em'}}/>
           {levelName}
