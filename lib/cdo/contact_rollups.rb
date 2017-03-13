@@ -43,8 +43,15 @@ class ContactRollups
   # need to filter here to known courses in the Pardot schema - we can't blindly pass values through
   COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'".freeze
 
-  # Values of forms.kind field we care about
-  FORM_KINDS = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey).freeze
+  # Values of forms.kind field with form data we care about
+  FORM_KINDS_WITH_DATA = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey).freeze
+
+  # Kinds of forms that indicate this contact is a teacher
+  FORM_LIST_TEACHER = "'BringToSchool2013','ClassSubmission','DistrictPartnerSubmission',
+      'PLP interest form','Teacher interest form','School interest form','HelpUs2013',
+      'K5OnlineProfessionalDevelopmentPostSurvey','K5ProfessionalDevelopmentSurvey',
+      'ProfessionalDevelopmentWorkshop','ProfessionalDevelopmentWorkshopSignup',
+      'StudentNomination','TeacherNomination'"
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
@@ -72,6 +79,7 @@ class ContactRollups
     insert_from_pegasus_forms
     insert_from_dashboard_contacts
     insert_from_dashboard_pd_enrollments
+    update_teachers_from_forms
     update_unsubscribe_info
     update_roles
     update_grades_taught
@@ -87,8 +95,8 @@ class ContactRollups
       append_to_list_field_from_form(form_info[:kind], form_info[:dest_field], form_info[:dest_value])
     end
 
-    # parse all forms that collect user-reported address/location data
-    FORM_KINDS.each do |kind|
+    # parse all forms that collect user-reported address/location or other data of interest
+    FORM_KINDS_WITH_DATA.each do |kind|
       update_data_from_forms(kind)
     end
 
@@ -229,10 +237,36 @@ class ContactRollups
     start = Time.now
     log "Inserting contacts from dashboard.pd_enrollments"
     PEGASUS_REPORTING_DB_WRITER.run "
-    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name)
-    SELECT email, name FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
+    INSERT INTO #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} (email, name, roles)
+    SELECT email, name, '#{ROLE_TEACHER}'
+    FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
     WHERE LENGTH(pd_enrollments.email) > 0
-    ON DUPLICATE KEY UPDATE name = #{DEST_TABLE_NAME}.name"
+    ON DUPLICATE KEY UPDATE name = #{DEST_TABLE_NAME}.name,
+    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+    roles =
+    CASE LOCATE(values(roles), COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),values(roles)),255)
+      ELSE #{DEST_TABLE_NAME}.roles
+    END"
+
+    log_completion(start)
+  end
+
+  def self.update_teachers_from_forms
+    start = Time.now
+    log "Updating teacher roles based on submitted forms"
+    PEGASUS_REPORTING_DB_WRITER.run "
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
+    INNER JOIN #{PEGASUS_DB_NAME}.forms on forms.email = #{DEST_TABLE_NAME}.email
+    SET roles =
+    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+    CASE LOCATE('#{ROLE_TEACHER}', COALESCE(#{DEST_TABLE_NAME}.roles,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),'#{ROLE_TEACHER}'),255)
+      ELSE #{DEST_TABLE_NAME}.roles
+    END
+    WHERE forms.kind in (#{FORM_LIST_TEACHER})
+    OR #{DEST_TABLE_NAME}.form_roles like '%educator%'"
+
     log_completion(start)
   end
 
@@ -411,12 +445,17 @@ class ContactRollups
       # If any geo input is present in form, update ALL geo fields including setting NULL values in DB for any that
       # we don't have from this form. This will clear out any previous geo data from IP geo.
       # Truncate all fields to 255 chars. We have some data longer than 255 chars but it is all garbage that somebody typed
-      address_data[:street_address] = street_address[0...255] if street_address.present?
-      address_data[:city] = city[0...255] if city.present?
-      address_data[:state] = state[0...255] if state.present?
-      address_data[:postal_code] = postal_code[0...255] if postal_code.present?
-      address_data[:country] = country[0...255] if country.present?
+      address_data[:street_address] = truncate_or_nil(street_address)
+      address_data[:city] = truncate_or_nil(city)
+      address_data[:state] = truncate_or_nil(state)
+      address_data[:postal_code] = truncate_or_nil(postal_code)
+      address_data[:country] = truncate_or_nil(country)
     end
+  end
+
+  # returns left most 255 characters of string if non-nil, otherwise nil
+  def self.truncate_or_nil(value)
+    value.present? ? value[0...255] : nil
   end
 
   # Gets the update sql command for address data from a form's data
