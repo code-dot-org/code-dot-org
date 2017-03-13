@@ -196,13 +196,12 @@ def main
 
     min_attempts_per_hour = HARD_LEVEL_ATTEMPTS_PER_HOUR[i[:level]] || MINIMUM_ATTEMPTS_PER_HOUR
 
-    if finishes == 0 && starts > min_attempts_per_hour * HOURS_TO_TEST
-      level_url = "https://studio.code.org/levels/#{i[:level]}"
+    next unless finishes == 0 && starts > min_attempts_per_hour * HOURS_TO_TEST
+    level_url = "https://studio.code.org/levels/#{i[:level]}"
 
-      log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{HOURS_TO_TEST} hour(s)]
-      log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
-      ChatClient.message 'ActivityMonitor', log_string, color: 'yellow', notify: 1
-    end
+    log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{HOURS_TO_TEST} hour(s)]
+    log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
+    ChatClient.message 'ActivityMonitor', log_string, color: 'yellow', notify: 1
   end
 end
 

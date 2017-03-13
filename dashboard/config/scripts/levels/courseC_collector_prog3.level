@@ -33,8 +33,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The program will only run the blocks that are connected to the `when run` block.\",\"hint_id\":\"courseC_collector_prog3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/826e08bdf5c10323337f76d8b8c9225a/courseC_collector_prog3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to run your code one line at a time.  Do you see where the code goes wrong?\",\"hint_id\":\"courseC_collector_prog3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b1c98ad231fb26803a2865514eeec66/courseC_collector_prog3.mp3\"}]",
     "ideal": "6",
     "hide_share_and_remix": "false",
-    "contained_level_names": null,
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Sequence matters. Blocks already in the workspace, but not connected.  Order these blocks to solve the puzzle.",

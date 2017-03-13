@@ -27,13 +27,12 @@ module Rack
         headers = behavior[:headers]
         REMOVED_HEADERS.each do |remove_header|
           name, value = remove_header.split ':'
-          unless headers.include? name
-            http_header = "HTTP_#{name.upcase.tr('-', '_')}"
-            if value.nil?
-              env.delete http_header
-            else
-              env[http_header] = value
-            end
+          next if headers.include? name
+          http_header = "HTTP_#{name.upcase.tr('-', '_')}"
+          if value.nil?
+            env.delete http_header
+          else
+            env[http_header] = value
           end
         end
 
