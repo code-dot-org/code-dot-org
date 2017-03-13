@@ -53,7 +53,7 @@ module ProxyHelper
       # Pass through failure codes.
       render_error_response media.code, "Failed request #{media.code}"
 
-    elsif !allowed_content_types.include?(media.content_type)
+    elsif allowed_content_types && !allowed_content_types.include?(media.content_type)
       # Reject disallowed content types.
       render_error_response 400, "Illegal content type #{media.content_type}"
 
