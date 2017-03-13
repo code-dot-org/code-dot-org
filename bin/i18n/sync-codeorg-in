@@ -102,12 +102,11 @@ def localize_level_content
 
         # Callouts
         callout_match = line.match callout_pattern
-        if callout_match
-          callout_json = JSON.load(%Q("#{callout_match.captures.first}"))
-          level_callouts[callout_level] = JSON.parse(callout_json).reduce({}) do |memo, callout|
-            memo[callout['localization_key']] = callout['callout_text'] unless callout['localization_key'].empty?
-            memo
-          end
+        next unless callout_match
+        callout_json = JSON.load(%Q("#{callout_match.captures.first}"))
+        level_callouts[callout_level] = JSON.parse(callout_json).reduce({}) do |memo, callout|
+          memo[callout['localization_key']] = callout['callout_text'] unless callout['localization_key'].empty?
+          memo
         end
       end
     end
