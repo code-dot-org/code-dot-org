@@ -440,7 +440,7 @@ class ContactRollups
 
       any_update = false
 
-      unless update_data.empty
+      unless update_data.empty?
         # add to batch to update
         update_batch += conn[DEST_TABLE_NAME.to_sym].where(email: email).update_sql(update_data) + ";" unless update_data.empty?
         any_update = true
