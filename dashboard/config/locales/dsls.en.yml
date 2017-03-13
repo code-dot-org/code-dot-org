@@ -7213,19 +7213,13 @@ en:
       courseD_multi_bee_conditionals1_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect.: Incorrect.
         Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
-        Question: Question
         Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
         The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
         'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
         'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
-        'The bee will move to the flower and then do nothing, no matter what. ': 'The bee will move to the flower and then do nothing, no matter what. '
-        'The bee will move to the flower and try to get nectar, no matter what. ': 'The bee will move to the flower and try to get nectar, no matter what. '
-        right answer: right answer
-        wrong answer: wrong answer
       courseD_multi_bee_conditionals7_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
