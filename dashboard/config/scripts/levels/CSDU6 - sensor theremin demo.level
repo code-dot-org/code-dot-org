@@ -213,7 +213,11 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# Light Theremin\r\n\r\nA theremin is an instrument that can be played without the musician actually touching it! Traditional theremins use magnetic fields for user interaction, but a simpler version can be made by detecting and reacting to light.\r\n\r\nTest out this theremin by waving your hand over the light sensor on your Circuit Playground. How does the tone change as the amount of light detected changes?",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "### Exemplar\r\n\r\nThis project can be completed with just a single event handler that takes the current value of the light sensor and uses it to set the frequency of the buzzer.\r\n\r\n<a href=\"https://studio.code.org/projects/applab/0qgvnaxa8WQjqHkpt9nDNw/view\">View Exemplar Code</a>"
   },
   "published": true,
   "notes": "",

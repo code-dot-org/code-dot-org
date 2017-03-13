@@ -32,9 +32,9 @@
     "instructions_important": "false",
     "min_collected": "2",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Where does this program go wrong?\\n\\n- Does it work at the first step?\\n- Does it work at the second step? \\n- Where do things go wrong?\",\"hint_id\":\"courseC_collector_prog5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0e77b78d5953222469af5a3e832adb14/courseC_collector_prog5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.\",\"hint_id\":\"courseC_collector_prog5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/28bcbdbc7241b4953d89560c561f8ced/courseC_collector_prog5.mp3\"}]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "All blocks already attached, but some in wrong order. How do you fix?",
