@@ -10,7 +10,7 @@ $(function () {
   });
 
 //Handles cases when user resizes the screen
-  addEventListener('resize', function() {
+  addEventListener('resize', function () {
     if (innerWidth >= 600) {
       $('#footer-links ul').show();
     }  else {
