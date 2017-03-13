@@ -46,8 +46,8 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions": "Text",
-    "contained_level_names": null,
-    "failure_message_override": "Game over!"
+    "failure_message_override": "Game over!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

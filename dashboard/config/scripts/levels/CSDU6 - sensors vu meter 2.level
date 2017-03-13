@@ -109,10 +109,7 @@
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - sensors vu meter template",
     "markdown_instructions": "# VU Meter: Displaying Output\r\n\r\nHow will your collected data be displayed?\r\nDoes your data need to be transformed or processed before being displayed?\r\n\r\n# Do This\r\n\r\nReplace your call to `console.log()` with the kind of output you need for your project.\r\n\r\n_Tip: You may want to use a conditional to determine which LEDs to turn on, and which one's to turn off_",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
