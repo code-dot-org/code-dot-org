@@ -21,8 +21,8 @@ def tests_running?
   !`pgrep -f runner.rb`.empty? || !`pgrep -f cucumber`.empty? || !`pgrep -f 'rake test'`.empty?
 end
 
-SUCCESS_MSG = "successfully killed all tests"
-FAIL_MSG = "failed to kill all tests"
+SUCCESS_MSG = "successfully killed all tests".freeze
+FAIL_MSG = "failed to kill all tests".freeze
 
 kill_tests
 sleep 2
