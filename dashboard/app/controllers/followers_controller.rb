@@ -65,7 +65,7 @@ class FollowersController < ApplicationController
     if current_user
       @user.errors.add(:username, "Please signout before proceeding")
     else
-      @user.user_type = user_type == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
+      @user.user_type = user_type
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         if @user.save
           @section.add_student(@user)
