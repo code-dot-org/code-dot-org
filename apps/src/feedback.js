@@ -201,7 +201,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
     const actualBlocks = this.getNumCountableBlocks();
 
-    // TODO: this is not always true
     const lastInStage = FeedbackUtils.isLastLevel();
     const stageName = `Stage ${window.appOptions.stagePosition}`;
 
@@ -239,6 +238,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={onContinue}
+        bannerMode={experiments.isEnabled('g.bannermode')}
         showStageProgress={experiments.isEnabled('g.stageprogress')}
         oldStageProgress={progress.oldStageProgress}
         newPassedProgress={progress.newPassedProgress}
