@@ -15,9 +15,9 @@
   at
   = mail_to(@workshop.organizer.email) + '.'
 
-= render partial: 'workshop_logistics'
-
 = render partial: 'workshop_details'
+
+= render partial: 'workshop_logistics'
 
 - unless @workshop.notes.blank?
   %p
