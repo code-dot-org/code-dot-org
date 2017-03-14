@@ -1,10 +1,11 @@
 $(function () {
   $('#nav-hamburger').click(function (e){
     $('#nav ul').slideToggle();
+    e.preventDefault();
   });
 
   $('#about-more').click(function (e){
-    $('#nav ul span').toggle('hide-about');
+    $('#nav ul span').slideToggle();
     e.preventDefault();
   });
 
