@@ -1,10 +1,10 @@
-%link{:href=>"/css/mobile_header.css", :rel=>"stylesheet"}
-%script{src: "/js/mobile_header.js"}
+%link{:href=>'/css/mobile_header.css', :rel=>'stylesheet'}
+%script{src: '/js/mobile_header.js'}
 
 
 
 #pageheader-wrapper
-  - pageheader_class = request.path_info == "/" ? "pageheader-translucent" : ""
+  - pageheader_class = request.path_info == '/' ? 'pageheader-translucent' : ''
   #pageheader{class: pageheader_class}
     .container_responsive
       #left
@@ -14,38 +14,38 @@
       #nav
         %ul.hide-responsive-menu
           %li
-            %a{href:resolve_url('/student')} Learn
+            %a{href: '/student'} Learn
           %li
-            %a{href:resolve_url('/educate')} Teach
+            %a{href: '/educate'} Teach
           %li
-            %a{href:resolve_url('/promote')} Stats
+            %a{href: '/promote'} Stats
           %li
-            %a{href:resolve_url('/help')} Help Us
+            %a{href: '/help'} Help Us
           %li
             #about-more
               About
               %b.caret
           %span.about-nav.hide-about
             %li
-              %a{:href => "/about"} About Us
+              %a{:href => '/about'} About Us
             %li
-              %a{:href => "/about/leadership"} Leadership
+              %a{:href => '/about/leadership'} Leadership
             %li
-              %a{:href => "/about/donors"} Donors
+              %a{:href => '/about/donors'} Donors
             %li
-              %a{:href => "/about/partners"} Partners
+              %a{:href => '/about/partners'} Partners
             %li
-              %a{:href => "/about/team"} Full Team
+              %a{:href => '/about/team'} Full Team
             %li
-              %a{:href => "/about/news"} Newsroom
+              %a{:href => '/about/news'} Newsroom
             %li
-              %a{:href => "/about/evaluation"} Evaluation
+              %a{:href => '/about/evaluation'} Evaluation
             %li
-              %a{:href => "/about/jobs"} Jobs
+              %a{:href => '/about/jobs'} Jobs
             %li
-              %a{:href => "/contact"} Contact Us
+              %a{:href => '/contact'} Contact Us
             %li
-              %a{:href => "/faq"} FAQs
+              %a{:href => '/faq'} FAQs
 
         #nav-hamburger
           %span
