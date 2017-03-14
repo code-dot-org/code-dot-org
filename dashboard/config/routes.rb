@@ -48,6 +48,8 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
+  get 'docs/*docs_route', to: 'docs_proxy#get'
+
   resources :sections, only: [:show] do
     member do
       post 'log_in'
@@ -325,6 +327,7 @@ Dashboard::Application.routes.draw do
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
+      resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
 
       get :teacher_applications, to: 'teacher_applications#index'
@@ -332,12 +335,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'my_professional_learning', to: 'pd/professional_learning_landing#index'
+
   namespace :pd do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-    get 'professional_learning_landing', to: 'professional_learning_landing#index'
 
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'

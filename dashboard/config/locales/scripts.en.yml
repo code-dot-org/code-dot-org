@@ -2696,6 +2696,7 @@ en:
             Lists and For Loops: Lists and For Loops
             Analog Input: Analog Input
             Polling Events: Polling Events
+            Sensor Applications: Sensor Applications
           title: Draft Unit 6
           description_audience: ''
           description_short: ''
@@ -2704,6 +2705,8 @@ en:
           stage:
             Introduction: Introduction
             Sprites: Sprites
+            Input: Input
+            'Project: Interactive Card': 'Project: Interactive Card'
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
           description_short: Level progression to accompany an in-person Game Lab Workshop

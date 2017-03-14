@@ -2,38 +2,16 @@
 
 require_relative '../../deployment'
 require 'cdo/chat_client'
+require 'cdo/developers_topic'
 require 'cdo/github'
 require 'cdo/only_one'
 
 DEVELOPERS = 'developers'.freeze
-TOPIC_DTT_YES = 'DTT: yes'.freeze
-TOPIC_DTT_IN_PROGRESS = 'DTT: no (robo-DTT in progress)'.freeze
-TOPIC_DTT_FAILED = 'DTT: robo-DTT failed'.freeze
-
-# @return [Boolean] Whether  the topic of Slack#developers includes "DTT: yes".
-def dtt_yes?
-  current_topic = Slack.get_topic(DEVELOPERS)
-  current_topic.include? TOPIC_DTT_YES
-end
-
-# Updates the DTT portion of topic of Slack#developers to indicate robo-DTT.
-def update_developers_topic_robo_dtt
-  current_topic = Slack.get_topic(DEVELOPERS)
-  raise unless current_topic.include? TOPIC_DTT_YES
-  new_topic = current_topic.gsub(TOPIC_DTT_YES, TOPIC_DTT_IN_PROGRESS)
-  Slack.update_topic(DEVELOPERS, new_topic)
-end
-
-# Updates the DTT portion of topic of Slack#developers to indicate DTT yes.
-def update_developers_topic_robo_failed
-  current_topic = Slack.get_topic(DEVELOPERS)
-  raise unless current_topic.include? TOPIC_DTT_IN_PROGRESS
-  new_topic = current_topic.gsub(TOPIC_DTT_IN_PROGRESS, TOPIC_DTT_FAILED)
-  Slack.update_topic(DEVELOPERS, new_topic)
-end
+TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
+TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
 
 def main
-  unless dtt_yes?
+  unless DevelopersTopic.dtt?
     ChatClient.message(
       'infra-test',
       'robo-DTT skipped (DTT was not yes)',
@@ -41,7 +19,7 @@ def main
     )
     return
   end
-  update_developers_topic_robo_dtt
+  DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
   # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
   # (particularly deploy).
@@ -56,7 +34,7 @@ def main
 
   ChatClient.message(
     'infra-test',
-    "robo-DTT created and merged <a href=\"#{GitHub.html_url(pr_number)}\">PR\##{pr_number}</a>",
+    "robo-DTT created and merged <a href=\"#{GitHub.url(pr_number)}\">PR\##{pr_number}</a>",
     color: 'green'
   )
 rescue Exception => e
@@ -65,7 +43,7 @@ rescue Exception => e
     "EXCEPTION: #{e.message}",
     color: 'red'
   )
-  update_developers_topic_robo_failed
+  DevelopersTopic.set_dtt TOPIC_DTT_FAILED
 end
 
 main if only_one_running?(__FILE__)

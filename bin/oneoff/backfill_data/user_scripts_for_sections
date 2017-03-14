@@ -63,15 +63,14 @@ begin
           user_id: user_id,
           script_id: script_id
         )
-        unless user_script
-          UserScript.create!(
-            user_id: user_id,
-            script_id: script_id,
-            assigned_at: assigned_at,
-            created_at: TIME_NOW,
-            updated_at: TIME_NOW
-          )
-        end
+        next if user_script
+        UserScript.create!(
+          user_id: user_id,
+          script_id: script_id,
+          assigned_at: assigned_at,
+          created_at: TIME_NOW,
+          updated_at: TIME_NOW
+        )
       end
     end
   end

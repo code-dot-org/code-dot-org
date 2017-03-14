@@ -12,6 +12,25 @@ def wait_with_short_timeout
   wait_with_timeout(SHORT_WAIT_TIMEOUT)
 end
 
+def element_stale?(element)
+  element.enabled?
+  false
+rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+  true
+end
+
+def page_load(wait_until_unload)
+  if wait_until_unload
+    html = @browser.find_element(tag_name: 'html')
+    yield
+    wait_with_short_timeout.until do
+      element_stale?(html)
+    end
+  else
+    yield
+  end
+end
+
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
     raise 'Should not use learn.code.org' unless /\/\/learn.code.org\//.match(url).nil?
@@ -158,6 +177,10 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
 end
 
+When /^I wait until jQuery Ajax requests are finished$/ do
+  wait_with_short_timeout.until { @browser.execute_script("return $.active == 0") }
+end
+
 Then /^I make all links open in the current tab$/ do
   @browser.execute_script("$('a[target=_blank]').attr('target', '_parent');")
 end
@@ -211,35 +234,39 @@ When /^I inject simulation$/ do
   @browser.execute_script("var fileref=document.createElement('script');  fileref.setAttribute('type','text/javascript'); fileref.setAttribute('src', '/assets/jquery.simulate.js'); document.getElementsByTagName('head')[0].appendChild(fileref)")
 end
 
-When /^I press "([^"]*)"$/ do |button|
+When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
   wait_with_short_timeout.until do
     @button = @browser.find_element(id: button)
   end
-  @button.click
+  page_load(load) { @button.click }
 end
 
-When /^I press the first "([^"]*)" element$/ do |selector|
+When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector, load|
   wait_with_short_timeout.until do
     @element = @browser.find_element(:css, selector)
   end
-  begin
-    @element.click
-  rescue
-    # Single retry to compensate for element changing between find and click
-    @element = @browser.find_element(:css, selector)
-    @element.click
+  page_load(load) do
+    begin
+      @element.click
+    rescue
+      # Single retry to compensate for element changing between find and click
+      @element = @browser.find_element(:css, selector)
+      @element.click
+    end
   end
 end
 
-When /^I press the "([^"]*)" button$/ do |button_text|
+When /^I press the "([^"]*)" button( to load a new page)?$/ do |button_text, load|
   wait_with_short_timeout.until do
     @button = @browser.find_element(:css, "input[value='#{button_text}']")
   end
-  @button.click
+  page_load(load) { @button.click }
 end
 
-When /^I press "([^"]*)" using jQuery$/ do |selector|
-  @browser.execute_script("$(#{selector.dump}).click()")
+When /^I press "([^"]*)" using jQuery( to load a new page)?$/ do |selector, load|
+  page_load(load) do
+    @browser.execute_script("$(#{selector.dump}).click()")
+  end
 end
 
 When /^I press SVG selector "([^"]*)"$/ do |selector|
@@ -323,9 +350,11 @@ When /^I press a button with xpath "([^"]*)"$/ do |xpath|
   @button.click
 end
 
-When /^I click selector "([^"]*)"$/ do |jquery_selector|
+When /^I click selector "([^"]*)"( to load a new page)?$/ do |jquery_selector, load|
   # normal a href links can only be clicked this way
-  @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+  page_load(load) do
+    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+  end
 end
 
 When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
@@ -698,11 +727,9 @@ Then(/^check that level (\d+) on this stage is not done$/) do |level|
 end
 
 Then(/^I reload the page$/) do
-  # Make sure the old page is gone before this step completes, since selenium's navigate.refresh
-  # does not reliably do this for us.
-  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
-  @browser.navigate.refresh
-  wait_with_short_timeout.until { @browser.execute_script('return !(window && window.seleniumNavigationPending);') }
+  page_load(true) do
+    @browser.navigate.refresh
+  end
   wait_for_jquery
 end
 
@@ -879,7 +906,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I click selector "#user_terms_of_service_version"
-    And I click selector "#signup-button"
+    And I click selector "#signup-button" to load a new page
     And I wait until current URL contains "http://code.org/teacher-dashboard"
   }
 end
