@@ -375,7 +375,7 @@ And /^Firebase is disabled$/ do
 end
 
 And /^I wait for initial applab save to complete$/ do
-  wait_with_timeout.until do
+  wait_until do
     @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
   end
 end
