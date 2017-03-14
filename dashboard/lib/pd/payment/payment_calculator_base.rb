@@ -81,9 +81,9 @@ module Pd::Payment
     end
 
     # Override in derived classes to apply teacher qualification rules.
-    # Return true/false for a given teacher, whether the teacher is qualified.
+    # Return true/false for a given enrollment, based on whether the enrolled teacher is qualified.
     # @param enrollment [Pd::Enrollment]
-    # @return [Boolean] whether or not the teacher is qualified for payment.
+    # @return [Boolean] whether or not the enrolled teacher is qualified for payment.
     def teacher_qualified?(enrollment)
       true
     end
