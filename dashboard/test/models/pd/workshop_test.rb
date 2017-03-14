@@ -351,8 +351,54 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.map(&:id), Pd::Workshop.order_by_start.pluck(:id)
-    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_start(desc: true).pluck(:id)
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_scheduled_start.pluck(:id)
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_scheduled_start(desc: false).pluck(:id)
+    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_scheduled_start(desc: true).pluck(:id)
+  end
+
+  test 'order_by_enrollment_count' do
+    # Deleted enrollment should not be counted
+    create :pd_enrollment, workshop: @workshop, deleted_at: Time.now
+
+    # Workshops with 0 (not counting deleted), 1 and 2 enrollments
+    workshops = [
+      @workshop,
+      build(:pd_workshop, num_enrollments: 1),
+      build(:pd_workshop, num_enrollments: 2)
+    ]
+    # save out of order
+    workshops.shuffle.each(&:save!)
+
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_enrollment_count.pluck(:id)
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_enrollment_count(desc: false).pluck(:id)
+    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_enrollment_count(desc: true).pluck(:id)
+  end
+
+  test 'order_by_enrollment_count with duplicates' do
+    workshops = [
+      @workshop,
+      build(:pd_workshop),
+      build(:pd_workshop, num_enrollments: 1),
+    ]
+    # save out of order
+    workshops.shuffle.each(&:save!)
+
+    assert_equal [0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map{|w| w.enrollments.count}
+    assert_equal [1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map{|w| w.enrollments.count}
+  end
+
+  test 'order_by_state' do
+    workshops = [
+      build(:pd_ended_workshop), # Ended
+      build(:pd_workshop, started_at: Time.now), # In Progress
+      @workshop, # Not Started
+    ]
+    # save out of order
+    workshops.shuffle.each(&:save!)
+
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_state.pluck(:id)
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_state(desc: false).pluck(:id)
+    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
   end
 
   test 'time constraints' do

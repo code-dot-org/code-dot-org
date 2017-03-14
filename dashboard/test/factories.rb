@@ -527,11 +527,15 @@ FactoryGirl.define do
     transient do
       num_sessions 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
+      num_enrollments 0
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
         workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
+      end
+      evaluator.num_enrollments.times do
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop)
       end
     end
   end

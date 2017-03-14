@@ -213,8 +213,30 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
-  def self.order_by_start(desc: false)
-    joins(:sessions).group(:pd_workshop_id).order('DATE(MIN(start))' + (desc ? ' DESC' : ''))
+  def self.order_by_scheduled_start(desc: false)
+    joins(:sessions).
+    group('pd_workshops.id').
+    order('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : ''))
+  end
+
+  # Orders by the number of active enrollments
+  # @param :desc [Boolean] optional - when true, sort descending
+  def self.order_by_enrollment_count(desc: false)
+    left_outer_joins(:enrollments).
+    group('pd_workshops.id').
+    order('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : ''))
+  end
+
+  # Orders by the workshop state, in order: Not Started, In Progress, Ended
+  # @param :desc [Boolean] optional - when true, sort descending
+  def self.order_by_state(desc: false)
+    order(%Q(
+      CASE
+        WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"
+        WHEN ended_at IS NULL THEN "#{STATE_IN_PROGRESS}"
+        ELSE "#{STATE_ENDED}"
+      END #{desc ? ' DESC' : ''})
+    )
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.
