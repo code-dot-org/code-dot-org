@@ -105,9 +105,31 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     end
   end
 
+  test 'filter_workshops with unparseable order_by raises error' do
+    params order_by: 'this is too many words'
+    e = assert_raises ArgumentError do
+      @controller.filter_workshops @workshop_query
+    end
+    assert e.message.start_with? 'Unable to parse order_by param:'
+  end
+
+  test 'filter_workshops with invalid order_by raises error' do
+    params order_by: 'invalid'
+    e = assert_raises ArgumentError do
+      @controller.filter_workshops @workshop_query
+    end
+    assert e.message.start_with? 'Invalid order_by field:'
+  end
+
   test 'filter_workshops with course' do
     expects(:where).with(course: Pd::Workshop::COURSE_CSF)
     params course: Pd::Workshop::COURSE_CSF
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with subject' do
+    expects(:where).with(subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)
+    params subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
     @controller.filter_workshops @workshop_query
   end
 
@@ -117,21 +139,55 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @controller.filter_workshops @workshop_query
   end
 
-  test 'filter_workshops with date order asc' do
-    expects(:order_by_start).with(desc: false)
-    params date_order: 'asc'
+  # Normal sort fields
+  %w(location_name workshop_type course subject).each do |sort_field|
+    test "filter_workshops with order_by #{sort_field}" do
+      expects(:order).with(sort_field)
+      params order_by: sort_field
+      @controller.filter_workshops @workshop_query
+    end
+
+    test "filter_workshops with order_by #{sort_field} desc" do
+      expects(:order).with(sort_field + ' desc')
+      params order_by: sort_field + ' desc'
+      @controller.filter_workshops @workshop_query
+    end
+  end
+
+  # Specialty sort fields
+  test 'filter_workshops with order_by date' do
+    expects(:order_by_scheduled_start).with(desc: false)
+    params order_by: 'date'
     @controller.filter_workshops @workshop_query
   end
 
-  test 'filter_workshops with date order desc' do
-    expects(:order_by_start).with(desc: true)
-    params date_order: 'desc'
+  test 'filter_workshops with order_by date desc' do
+    expects(:order_by_scheduled_start).with(desc: true)
+    params order_by: 'date desc'
     @controller.filter_workshops @workshop_query
   end
 
-  test 'filter_workshops with unexpected date order defaults to asc' do
-    expects(:order_by_start).with(desc: false)
-    params date_order: 'garbage'
+  test 'filter_workshops with order_by enrollments' do
+    expects(:order_by_enrollment_count).with(desc: false)
+    params order_by: 'enrollments'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with order_by enrollments desc' do
+    expects(:order_by_enrollment_count).with(desc: true)
+    params order_by: 'enrollments desc'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with order_by state' do
+    expects(:order_by_state).with(desc: false)
+    params order_by: 'state'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with order_by state desc' do
+    expects(:order_by_state).with(desc: true)
+    params order_by: 'state desc'
     @controller.filter_workshops @workshop_query
   end
 
@@ -151,8 +207,9 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       :start,
       :end,
       :course,
+      :subject,
       :organizer_id,
-      :date_order
+      :order_by
     ]
 
     params expected_keys.map{|k| [k, 'some value']}.to_h

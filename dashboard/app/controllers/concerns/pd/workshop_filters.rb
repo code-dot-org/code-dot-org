@@ -55,12 +55,20 @@ module Pd::WorkshopFilters
   # - start (first session on or after)
   # - end (first session on or before)
   # - course
+  # - subject
   # - organizer_id
-  # - date_order ('asc' or 'desc', otherwise default to 'asc')
+  # - order_by (field followed by optional asc|desc)
+  #   - location_name
+  #   - workshop_type
+  #   - course
+  #   - subject
+  #   - date (scheduled start date)
+  #   - enrollments (active enrollment count)
+  #   - state
   # Most fields, if incorrect will simply yield an empty result set
-  # However date fields are verified and an ArgumentError will be raised if they're invalid.
+  # However date and order fields are verified and an ArgumentError will be raised if they're invalid.
   # @param workshops [Pd::Workshop::ActiveRecord_Relation] workshop query to filter
-  # raises [ArgumentError] when date params are invalid
+  # raises [ArgumentError] when date or order params are invalid
   # returns [Pd::Workshop::ActiveRecord_Relation] filtered workshop query.
   # Note the filters won't actually be run in SQL until the results are examined.
   def filter_workshops(workshops)
@@ -69,8 +77,33 @@ module Pd::WorkshopFilters
       workshops = workshops.start_on_or_after(ensure_date(params[:start])) if params[:start]
       workshops = workshops.start_on_or_before(ensure_date(params[:end])) if params[:end]
       workshops = workshops.where(course: params[:course]) if params[:course]
+      workshops = workshops.where(subject: params[:subject]) if params[:subject]
       workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]
-      workshops = workshops.order_by_start(desc: params[:date_order].downcase == 'desc') if params[:date_order]
+
+      order_by = params[:order_by]
+      if order_by
+        parsed = order_by.downcase.match /^(\w+)(?: (asc|desc))?$/
+        raise ArgumentError, "Unable to parse order_by param: #{order_by}" unless parsed
+        field, direction = parsed[1..2]
+        case field
+          when 'location_name'
+            workshops = workshops.order("location_name #{direction}".strip)
+          when 'workshop_type'
+            workshops = workshops.order("workshop_type #{direction}".strip)
+          when 'course'
+            workshops = workshops.order("course #{direction}".strip)
+          when 'subject'
+            workshops = workshops.order("subject #{direction}".strip)
+          when 'date'
+            workshops = workshops.order_by_scheduled_start(desc: direction == 'desc')
+          when 'enrollments'
+            workshops = workshops.order_by_enrollment_count(desc: direction == 'desc')
+          when 'state'
+            workshops = workshops.order_by_state(desc: direction == 'desc')
+          else
+            raise ArgumentError, "Invalid order_by field: #{field}"
+        end
+      end
     end
 
     workshops
@@ -83,8 +116,9 @@ module Pd::WorkshopFilters
       :start,
       :end,
       :course,
+      :subject,
       :organizer_id,
-      :date_order
+      :order_by
     )
   end
 
