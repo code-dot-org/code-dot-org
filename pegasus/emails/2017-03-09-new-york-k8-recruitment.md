@@ -1,13 +1,14 @@
 ---
 from: 'Sarah Fairweather (Code.org) <teacher@code.org>'
 subject: "Applications Now Open! Code.org's AP CSP and CS Discoveries PD through C/I"
+reply-to: 'Jen Noborikawa <jen@weare.ci>'
 ---
 
 *Note: this email is being sent on behalf of Code.org Regional Partner Code/Interactive*
 
 We're calling all teachers to make 2017-18 the year you become a computer science educator! Below are year-long intensive opportunities to bring computer science education to your school. No prior CS experience is required!
 
-We know how overwhelming it can feel approaching a new content area. Trust us — we’ll get you where you need to be! Check out this testimonial from a CS4ALL elementary school teacher.
+We know how overwhelming it can feel approaching a new content area. Trust us — we’ll get you where you need to be! Check out [this testimonial](https://docs.google.com/document/d/1BZ9-QoyIVMbZXHsXXTxYVj-ZfotEM3VOhQdheKTbhYg/edit) from a CS4ALL elementary school teacher.
 
 ### Apply to bring CS to your elementary school with the Software Engineering Program Jr. (SEPjr)!
 ### *Grades K-5: Deadline March 13th*

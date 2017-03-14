@@ -56,7 +56,7 @@ The CS Principles Professional Learning Program is available in regions served b
 
 ## <a name="apply"></a>How to apply?
 
-Applications for the 2017-18 CS Principles Learning Program are now open! We are accepting applications until March 17, 2017, so apply now if you're ready to get started. 
+Applications for the 2017-18 CS Principles Learning Program are now open! We are accepting applications until April 14, 2017, so apply now if you're ready to get started. 
 
 [<button>Apply now!</button>](/educate/professional-learning/cs-principles-apply)
 

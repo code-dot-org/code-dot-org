@@ -76,6 +76,18 @@ Code.org offers a four course [Computer Science Fundamentals](https://studio.cod
 
 [solid-block-header]
 
+AP Computer Science A in Java
+
+[/solid-block-header]
+
+There are two AP computer science offerings, and students can take either course in any order. The AP Computer Science A course and exam focuses on computing skills related to programming in Java. The new AP Computer Science Principles course complements AP Computer Science A as it aims to broaden participation in the study of computer science.
+
+While Code.org does not have an AP Computer Science A curriculum, there already exists a number of great curricula and programs available to teacher and students.
+
+[<button>Learn more about AP CS A resources</button>](/educate/curriculum/3rd-party/apcsa)
+
+[solid-block-header]
+
 Other Resources
 
 [/solid-block-header]

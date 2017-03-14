@@ -36,11 +36,10 @@ def copy_untranslated_apps
   untranslated_apps = %w(applab calc eval gamelab netsim weblab)
 
   Languages.get_locale.each do |prop|
-    if prop[:locale_s] != 'en-US'
-      untranslated_apps.each do |app|
-        app_locale = prop[:locale_s].tr('-', '_').downcase!
-        FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
-      end
+    next unless prop[:locale_s] != 'en-US'
+    untranslated_apps.each do |app|
+      app_locale = prop[:locale_s].tr('-', '_').downcase!
+      FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
     end
   end
 end
@@ -121,23 +120,22 @@ def check_for_mismatching_links_or_images
         get_links_and_images(source_data[key]) != get_links_and_images(locale_data[key])
       end
 
-      unless mismatching_keys.empty?
-        mismatch_found = true
-        outputfile.write("mismatching values in #{locale_file}\n")
-        outputfile.write("and therefore also in i18n/locales/#{locale}/dashboard/#{category}.yml:\n")
-        mismatching_keys.each do |key|
-          outputfile.write("\t#{key}\n")
-          outputfile.write("\t\ten:\n")
-          get_links_and_images(source_data[key]).each do |x|
-            outputfile.write("\t\t\t#{x}\n")
-          end
-          outputfile.write("\t\t#{locale}:\n")
-          get_links_and_images(locale_data[key]).each do |x|
-            outputfile.write("\t\t\t#{x}\n")
-          end
+      next if mismatching_keys.empty?
+      mismatch_found = true
+      outputfile.write("mismatching values in #{locale_file}\n")
+      outputfile.write("and therefore also in i18n/locales/#{locale}/dashboard/#{category}.yml:\n")
+      mismatching_keys.each do |key|
+        outputfile.write("\t#{key}\n")
+        outputfile.write("\t\ten:\n")
+        get_links_and_images(source_data[key]).each do |x|
+          outputfile.write("\t\t\t#{x}\n")
         end
-        outputfile.write("\n")
+        outputfile.write("\t\t#{locale}:\n")
+        get_links_and_images(locale_data[key]).each do |x|
+          outputfile.write("\t\t\t#{x}\n")
+        end
       end
+      outputfile.write("\n")
     end
 
     if mismatch_found
