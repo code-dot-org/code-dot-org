@@ -24,7 +24,10 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
-var Submit = require('../submitHelper');
+import {
+  setupSubmitButtons,
+  onSubmitComplete
+} from '../submitHelper';
 var dom = require('../dom');
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 
@@ -197,12 +200,6 @@ GameLab.prototype.init = function (config) {
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
 
-  this.submit = new Submit({
-    studioApp: this.studioApp_,
-    onPuzzleComplete: this.onPuzzleComplete.bind(this),
-    unsubmitUrl: this.level.unsubmitUrl
-  });
-
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
 
@@ -261,7 +258,11 @@ GameLab.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
     }
 
-    this.submit.setupButtons();
+    setupSubmitButtons({
+      studioApp: this.studioApp_,
+      onPuzzleComplete: this.onPuzzleComplete.bind(this),
+      unsubmitUrl: this.level.unsubmitUrl
+    });
 
     this.setCrosshairCursorForPlaySpace();
   }.bind(this);
@@ -539,7 +540,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
   this.waitingForReport = true;
 
   const sendReport = () => {
-    const onComplete = submit ? this.submit.onSubmitComplete : this.onReportComplete.bind(this);
+    const onComplete = submit ? onSubmitComplete : this.onReportComplete.bind(this);
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
