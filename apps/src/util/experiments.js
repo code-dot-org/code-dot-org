@@ -24,23 +24,42 @@ experiments.getQueryString_ = function () {
   return window.location.search;
 };
 
-experiments.getEnabledExperiments = function () {
+experiments.getStoredExperiments_ = function () {
   try {
     const jsonList = localStorage.getItem(STORAGE_KEY);
-    const enabled = jsonList ? JSON.parse(jsonList) : [];
-    return enabled;
+    const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
+    const now = Date.now();
+    const enabledExperiments = storedExperiments.filter(
+        experiment => experiment.expiration > now);
+    if (enabledExperiments.length < storedExperiments.length) {
+      trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
+    }
+    return enabledExperiments;
   } catch (e) {
     return [];
   }
 };
 
+experiments.getEnabledExperiments = function () {
+  return this.getStoredExperiments_().map(experiment => experiment.key);
+};
+
 experiments.setEnabled = function (key, shouldEnable) {
-  const allEnabled = this.getEnabledExperiments();
-  if (allEnabled.indexOf(key) < 0 && shouldEnable) {
-    allEnabled.push(key);
-    trackEvent(GA_EVENT, 'enable', key);
-  } else if (allEnabled.indexOf(key) >= 0 && !shouldEnable) {
-    allEnabled.splice(allEnabled.indexOf(key), 1);
+  const allEnabled = this.getStoredExperiments_();
+  const experimentIndex =
+    allEnabled.findIndex(experiment => experiment.key === key);
+  if (shouldEnable) {
+    const expirationDate = new Date();
+    expirationDate.setHours(expirationDate.getHours() + 12);
+    const expiration = expirationDate.getTime();
+    if (experimentIndex < 0) {
+      allEnabled.push({ key, expiration });
+      trackEvent(GA_EVENT, 'enable', key);
+    } else {
+      allEnabled[experimentIndex].expiration = expiration;
+    }
+  } else if (experimentIndex >= 0) {
+    allEnabled.splice(experimentIndex, 1);
     trackEvent(GA_EVENT, 'disable', key);
   } else {
     return;
@@ -54,9 +73,16 @@ experiments.setEnabled = function (key, shouldEnable) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-  let enabled = this.getEnabledExperiments().indexOf(key) >= 0;
-  const query = queryString.parse(this.getQueryString_());
+  let enabled = false;
 
+  const storedExperiments = this.getStoredExperiments_();
+  const experimentIndex = storedExperiments
+    .findIndex(experiment => experiment.key === key);
+  if (experimentIndex >= 0) {
+    enabled = true;
+  }
+
+  const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];
   const disableQuery = query['disableExperiments'];
 
