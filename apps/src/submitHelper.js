@@ -1,60 +1,84 @@
+/**
+ * This helper can be used by an app (e.g. GameLab) to handle the pressing of
+ * submit/unsubmit buttons if the level is submittable.
+ */
+
 import commonMsg from '@cdo/locale';
 import dom from './dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DialogButtons from './templates/DialogButtons';
 
-const Submit = module.exports = function (options) {
-  this.studioApp = options.studioApp;
-  this.onPuzzleComplete = options.onPuzzleComplete.bind(this);
-  this.unsubmitUrl = options.unsubmitUrl;
-};
+// Parameters provided by the calling app.
+var submitParams;
 
-// The DOM should have submitButton and unsubmitButton.  Set up handlers for them.
-Submit.prototype.setupButtons = function () {
+/**
+ * Set up the handlers for the submit and unsubmit buttons.
+ * The DOM should have submitButton and unsubmitButton by now.
+ * Also store some parameters to be used in these handlers.
+ *
+ * @param {Object} params
+ * @param {Object} params.studioApp - The studioApp itself.
+ * @param {function} params.onPuzzleComplete - Function to call when submitting.
+ * @param {string} params.unsubmitUrl - URL to post to when unsubmitting.
+ */
+export function setupSubmitButtons(params) {
+  submitParams = params;
+
   const submitButton = document.getElementById('submitButton');
   if (submitButton) {
-    dom.addClickTouchEvent(submitButton, this.onPuzzleSubmit.bind(this));
+    dom.addClickTouchEvent(submitButton, onPuzzleSubmit);
   }
 
   const unsubmitButton = document.getElementById('unsubmitButton');
   if (unsubmitButton) {
-    dom.addClickTouchEvent(unsubmitButton, this.onPuzzleUnsubmit.bind(this));
+    dom.addClickTouchEvent(unsubmitButton, onPuzzleUnsubmit);
   }
-};
+}
 
-// If submit succeeds, then redirect appropriately.
-Submit.prototype.onSubmitComplete = function (response) {
+/**
+ * If submit succeeds, then redirect appropriately.  Called by the app.
+ *
+ * @param {Object} response
+ * @param {string} response.redirect - URL to go to.
+ */
+export function onSubmitComplete(response) {
   window.location.href = response.redirect;
-};
+}
 
-// When submit button is pressed, confirm, and then do it.
-Submit.prototype.onPuzzleSubmit = function () {
-  this.showConfirmationDialog({
+/**
+ * When submit button is pressed, confirm, and then do it.
+ */
+function onPuzzleSubmit() {
+  showConfirmationDialog({
     title: commonMsg.submitYourProject(),
     text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: () => this.onPuzzleComplete(true)
+    onConfirm: () => submitParams.onPuzzleComplete(true)
   });
-};
+}
 
-// When unsubmit button is pressed, confirm, and then do it.
-Submit.prototype.onPuzzleUnsubmit = function () {
-  this.showConfirmationDialog({
+/**
+ * When unsubmit button is pressed, confirm, and then do it.
+ */
+function onPuzzleUnsubmit() {
+  showConfirmationDialog({
     title: commonMsg.unsubmitYourProject(),
     text: commonMsg.unsubmitYourProjectConfirm(),
-    onConfirm: () => this.unsubmit()
+    onConfirm: () => unsubmit()
   });
-};
+}
 
-// Tell the server we're unsubmitting the solution.
-Submit.prototype.unsubmit = function () {
+/**
+ * Tell the server we're unsubmitting the solution.
+ */
+function unsubmit() {
   $.post(
-    this.unsubmitUrl,
+    submitParams.unsubmitUrl,
     {"_method": 'PUT', user_level: {submitted: false}},
     function () {
       location.reload();
     });
-};
+}
 
 /**
  * Show a modal dialog with a title, text, and OK and Cancel buttons
@@ -63,7 +87,7 @@ Submit.prototype.unsubmit = function () {
  * @param {callback} [onConfirm] what to do when the user clicks OK
  * @param {string} [filterSelector] Optional selector to filter for.
  */
-Submit.prototype.showConfirmationDialog = function (config) {
+function showConfirmationDialog(config) {
   config.text = config.text || "";
   config.title = config.title || "";
 
@@ -79,7 +103,7 @@ Submit.prototype.showConfirmationDialog = function (config) {
     />, buttons);
   contentDiv.appendChild(buttons);
 
-  const dialog = this.studioApp.createModalDialog({
+  const dialog = submitParams.studioApp.createModalDialog({
     contentDiv: contentDiv,
     defaultBtnSelector: '#confirm-button'
   });
@@ -102,5 +126,4 @@ Submit.prototype.showConfirmationDialog = function (config) {
   }
 
   dialog.show();
-};
-
+}
