@@ -6,6 +6,8 @@ $(function () {
 
   $('#about-more').click(function (e){
     $('#nav ul span').slideToggle();
+    $('#more').toggle();
+    $('#less').toggle();
     e.preventDefault();
   });
 
