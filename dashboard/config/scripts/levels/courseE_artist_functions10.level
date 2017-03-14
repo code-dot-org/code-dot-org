@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "instructions": "This time, use lines of 8 hexagons with 25 pixel sides.",
-    "ideal": "14",
+    "ideal": "19",
     "embed": "false",
     "markdown_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.\r\n\r\n- To make each hexagon, repeat the 6 times, turning 60 degrees.\r\n- To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
     "disable_param_editing": "true",
@@ -35,6 +35,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This drawing is a lot like the last one, except the function draws a different kind of line.\",\"hint_id\":\"courseD_artist_functions10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d4e6bb67e3a582bf6e1a5a1aa3bf01c6/courseD_artist_functions10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.\",\"hint_id\":\"courseD_artist_functions10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fe26bc24785bd33e6ab8b75fe9f18325/courseD_artist_functions10.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -162,16 +164,24 @@
                 <block type="procedures_callnoreturn">
                   <mutation name="draw line of hexagons"/>
                   <next>
-                    <block type="draw_turn_by_constant">
+                    <block type="draw_turn" inline="true">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">60</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">60</title>
+                        </block>
+                      </value>
                       <next>
                         <block type="procedures_callnoreturn">
                           <mutation name="draw line of hexagons"/>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn" inline="true">
                               <title name="DIR">turnRight</title>
-                              <title name="VALUE">120</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">120</title>
+                                </block>
+                              </value>
                             </block>
                           </next>
                         </block>
@@ -190,13 +200,21 @@
             <block type="controls_repeat">
               <title name="TIMES">6</title>
               <statement name="DO">
-                <block type="draw_move_by_constant">
+                <block type="draw_move" inline="true">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">25</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">25</title>
+                    </block>
+                  </value>
                   <next>
-                    <block type="draw_turn_by_constant">
+                    <block type="draw_turn" inline="true">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">60</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">60</title>
+                        </block>
+                      </value>
                     </block>
                   </next>
                 </block>
@@ -214,9 +232,13 @@
                 <block type="procedures_callnoreturn">
                   <mutation name="draw hexagon"/>
                   <next>
-                    <block type="jump_by_constant">
+                    <block type="jump" inline="true">
                       <title name="DIR">jumpForward</title>
-                      <title name="VALUE">25</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
                     </block>
                   </next>
                 </block>
