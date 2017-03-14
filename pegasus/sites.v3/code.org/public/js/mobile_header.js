@@ -4,12 +4,12 @@ $(function () {
   });
 
   $('#about-more').click(function (e){
-    $('#nav ul span').slideToggle();
+    $('#nav ul span').toggle('hide-about');
     e.preventDefault();
   });
 
-  document.querySelector( "#nav-hamburger" )
-    .addEventListener( "click", function () {
-    this.classList.toggle( "active" );
+  document.querySelector( '#nav-hamburger' )
+    .addEventListener( 'click', function () {
+    this.classList.toggle( 'active' );
   });
 });

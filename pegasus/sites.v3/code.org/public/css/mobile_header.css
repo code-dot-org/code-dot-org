@@ -1,5 +1,5 @@
 #pageheader-wrapper {
-  z-index: 5;
+  z-index: 99;
 }
 
 #nav-hamburger {
@@ -135,6 +135,7 @@
     top: 4em;
     background-color: rgba(0, 178, 192, .9);
     z-index: 99;
+    /*overflow: auto;*/
   }
 
   #nav ul:after {   /*  This is the arrow in the responsive menu.  */
