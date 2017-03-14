@@ -48,6 +48,8 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
+  get 'docs/*docs_route', to: 'docs_proxy#get'
+
   resources :sections, only: [:show] do
     member do
       post 'log_in'
