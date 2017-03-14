@@ -159,6 +159,14 @@ When /^I wait until element "([^"]*)" is (not )?visible$/ do |selector, negation
   wait_until { @browser.execute_script(jquery_is_element_visible(selector)) == negation.nil? }
 end
 
+When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
+  wait_until do
+    element = @browser.find_element(selection_criteria)
+    element.enabled? == negation.nil?
+  end
+end
+
 Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to be visible$/ do |seconds, selector|
   wait_for_jquery
   Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
