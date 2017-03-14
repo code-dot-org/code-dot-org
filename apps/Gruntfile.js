@@ -246,12 +246,6 @@ testsContext.keys().forEach(testsContext);
           src: ['*.js'],
           dest: 'build/package/js/fileupload/',
         },
-        {
-          expand: true,
-          cwd: 'lib/jsinterpreter',
-          src: ['*.js'],
-          dest: 'build/package/js/jsinterpreter/'
-        }
       ]
     }
   };
@@ -562,8 +556,6 @@ testsContext.keys().forEach(testsContext);
   config.uglify = {
     lib: {
       files: _.fromPairs([
-        'jsinterpreter/interpreter.js',
-        'jsinterpreter/acorn.js',
         'p5play/p5.play.js',
         'p5play/p5.js'
       ].map(function (src) {
