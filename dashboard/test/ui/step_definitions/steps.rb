@@ -79,9 +79,11 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   url = replace_hostname(url)
-  @browser.navigate.to url
-  refute_bad_gateway
-  refute_site_unreachable
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
+    @browser.navigate.to url
+    refute_bad_gateway
+    refute_site_unreachable
+  end
   install_js_error_recorder
 end
 
