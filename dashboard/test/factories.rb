@@ -1,4 +1,3 @@
-# rubocop:disable Metrics/BlockLength
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :section_hidden_stage do
@@ -731,11 +730,6 @@ FactoryGirl.define do
     course Pd::Workshop::COURSES.first
   end
 
-  factory :professional_learning_partner do
-    sequence(:name) { |n| "PLP #{n}" }
-    contact {create :teacher}
-  end
-
   factory :school_district do
     name "A school district"
     city "Seattle"
@@ -767,6 +761,7 @@ FactoryGirl.define do
 
   factory :regional_partner do
     sequence(:name) { |n| "Partner#{n}" }
+    contact {create :teacher}
     group 1
   end
 
@@ -775,4 +770,3 @@ FactoryGirl.define do
     association :regional_partner
   end
 end
-# rubocop:enable Metrics/BlockLength

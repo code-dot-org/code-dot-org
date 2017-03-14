@@ -8,8 +8,8 @@ const landingPageData = getScriptData('landingPageData');
 
 ReactDOM.render(
   <LandingPage
-    coursesTaught={landingPageData['courses_teaching']}
-    coursesCompleted={landingPageData['courses_completed']}
+    coursesTaught={landingPageData['courses_teaching'] || []}
+    coursesCompleted={landingPageData['courses_completed'] || []}
     lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
     lastWorkshopSurveyCourse={landingPageData['last_workshop_survey_course']}
     printCsfCertificateUrl={landingPageData['print_csf_certificate_url']}

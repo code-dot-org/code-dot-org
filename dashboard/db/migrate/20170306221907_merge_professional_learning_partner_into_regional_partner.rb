@@ -1,3 +1,8 @@
+# empty model included here for future compatibility, since the actual
+# model has since been removed
+class ProfessionalLearningPartner < ActiveRecord::Base
+end
+
 class MergeProfessionalLearningPartnerIntoRegionalPartner < ActiveRecord::Migration[5.0]
   def up
     ActiveRecord::Base.record_timestamps = false

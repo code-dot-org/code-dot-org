@@ -6,7 +6,7 @@ require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
 include CdoCli
 
-LOG_FILE = "#{Dir.tmpdir}/dotd.log"
+LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
 LOGGER = Logger.new(LOG_FILE, 'daily')
 
 LOGGER.formatter = proc do |_serverity, time, _progname, msg|

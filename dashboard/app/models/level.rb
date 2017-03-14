@@ -284,7 +284,7 @@ class Level < ActiveRecord::Base
     'TextCompression', # widget
     'Pixelation', # widget
     'PublicKeyCryptography' # widget
-  ]
+  ].freeze
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 
   def self.where_we_want_to_calculate_ideal_level_source

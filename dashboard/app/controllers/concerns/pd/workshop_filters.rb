@@ -6,8 +6,8 @@ module Pd::WorkshopFilters
   # Query by either:
   #   schedule - the workshop's scheduled start date (date of first session)
   #   end - the date the workshop was ended
-  QUERY_BY_SCHEDULE = 'schedule'
-  QUERY_BY_END = 'end'
+  QUERY_BY_SCHEDULE = 'schedule'.freeze
+  QUERY_BY_END = 'end'.freeze
 
   # Currently only csf is needed. This can be extended in the future.
   COURSE_MAP = {

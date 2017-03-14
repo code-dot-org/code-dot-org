@@ -45,7 +45,7 @@ ________________
 
 ## Alabama
 ### [A+ College Ready](http://www.apluscollegeready.org)
-Alabama	
+Alabama
 
 A+ College Ready works to dramatically increase the number of students in Alabama taking math, science, and English AP courses, earning qualifying scores on AP exams and attending and succeeding in college.
 
@@ -54,8 +54,8 @@ CS Principles<br/>
 
 **Contact us for adivce on:** Working with districts statewide
 
-**Contact Information**<br/> 
-Melissa Crook<br/> 
+**Contact Information**<br/>
+Melissa Crook<br/>
 melissa@aplusala.org
 
 <br/>
@@ -115,7 +115,7 @@ CS Discoveries<br/>
 **Contact Information** <br/>
 Laura Lee	<br/>
 laura.lee@9-dots.org
-	
+
 <br/>
 
 ### [Alameda County Office of Education](http://www.acoe.org/acoe/EdServices/ProgramsandServices/Technology/ACOE-CTAP)<br/>
@@ -149,7 +149,7 @@ fnieto@acoe.org
 ### [Contra Costa County Office of Education](http://www.cccoe.k12.ca.us/)<br/>
 East Bay, California	<br/>
 
-The Contra Costa County Office of Education (CCCOE) plays a leadership role in the delivery of quality education to more than 174,000 K-12 students in Contra Costa. Under the leadership of an elected superintendent of schools and a five-member elected board of education, the CCCOE provides services to students, school districts, and the community. 
+The Contra Costa County Office of Education (CCCOE) plays a leadership role in the delivery of quality education to more than 174,000 K-12 students in Contra Costa. Under the leadership of an elected superintendent of schools and a five-member elected board of education, the CCCOE provides services to students, school districts, and the community.
 
 **Programs**<br/>
 CS Principles<br/>
@@ -160,6 +160,9 @@ CS Discoveries<br/>
 **Contact Information**<br/>
 Hilary Dito<br/>
 hdito@cccoe.k12.ca.us<br/>
+
+Christen Schwartz<br/>
+cschwartz@ccoe.k12.ca.us
 
 <br/>
 
@@ -226,7 +229,7 @@ ________________
 
 ## Colorado
 ### Share Fair Nation and Colorado Education Initiative<br/>
-Colorado	
+Colorado
 
 Share Fair Nation is a non-profit organization created by the Morgridge Family Foundation a year and a half ago as part of their efforts to provide professional learning opportunities and support as a result of their transformative investments to the education sector. Share Fair Nation's mission is to teach and inspire educators in emerging practices, with the ultimate goals of engaging students and preparing them for success in a modern workforce. Technology is critical to our mission, because it's critical to our learners. Today's students are digital natives so technology helps them engage, and more importantly, it will be a tremendous force in tomorrow's job market.
 
@@ -299,14 +302,14 @@ Dr. Vanessa Howard<br/>
 vanessa.howard@fscj.edu<br/>
 
 Dr. Tiffany Hunter<br/>
-tiffany.hunter@fscj.edu 
+tiffany.hunter@fscj.edu
 
 <br/>
 
 ### [Orlando Science Center](https://www.osc.org/)<br/>
 Orlando, Florida<br/>
 
-Orlando Science Center is one of America’s top hands-on science centers where learning is always fun.  A beautiful, 207,000 sq. ft. facility that is architecturally distinctive and built for the future with spacious exhibit halls, nature habitats, classrooms, a theatre, an observatory and visitor amenities such as a science store and cafe.  The Science Center is a private non-profit organization with 501c(3) status. 
+Orlando Science Center is one of America’s top hands-on science centers where learning is always fun.  A beautiful, 207,000 sq. ft. facility that is architecturally distinctive and built for the future with spacious exhibit halls, nature habitats, classrooms, a theatre, an observatory and visitor amenities such as a science store and cafe.  The Science Center is a private non-profit organization with 501c(3) status.
 
 **Programs**<br/>
 CS Principles<br/>
@@ -335,7 +338,7 @@ ________________
 ### [Georgia Tech Center for Education Integrating Science, Mathematics, and Computing](https://www.ceismc.gatech.edu/)<br/>
 Georgia<br/>
 
-Georgia Tech Center for Education Integrating Science, Mathematics, and Computing is a STEM+C Outreach and Research Center based in Atlanta, GA. 
+Georgia Tech Center for Education Integrating Science, Mathematics, and Computing is a STEM+C Outreach and Research Center based in Atlanta, GA.
 
 **Programs**<br/>
 CS Principles<br/>
@@ -376,7 +379,7 @@ CS in Algebra<br/>
 
 **Contact Information**<br/>
 Jennifer Caprile	<br/>
-jennifer.caprile@idla.k12.id.us 
+jennifer.caprile@idla.k12.id.us
 
 Sherawn Reberry, Director of Education Programs<br/>
 sherawn.reberry@idla.k12.id.us
@@ -398,7 +401,7 @@ Chicago, Illinois<br/>
 **Programs**<br/>
 Exploring Computer Science<br/>
 
-		
+
 **Contact Information** <br/>
 Lucia Dettori	<br/>
 lucia@cdm.depaul.edu
@@ -416,7 +419,7 @@ CS in Algebra<br/>
 
 **Contact Information**<br/>
 Andi Grabmeyer<br/>
-agrabemeyer@lumity.org 
+agrabemeyer@lumity.org
 <br/>
 
 [**Back to the top**](#top)
@@ -426,7 +429,7 @@ ________________
 
 ## Indiana
 ### [Nextech](http://nextech.org/)<br/>
-Indiana	
+Indiana
 
 Nextech is a 501(c)(3) nonprofit organization dedicated to narrowing the gap between Indiana’s technology-related employment opportunities and the number of high school graduates pursuing them.  Our mission is to connect educators, innovative nonprofits, and entrepreneurs to deliver best-in-class education and work-based learning programs that inspireand enable young people from all backgrounds to pursue careers in technology.
 
@@ -453,7 +456,7 @@ ________________
 
 ## Iowa
 ### [NewBoCo](http://Newbo.co)<br/>
-Iowa	
+Iowa
 
 New Bohemian Innovation Collaborative (NewBoCo) is a nonprofit organization, focused on ensuring that Iowa is known, around the world, for making big things happen through startups, K-12 STEAM based education opportunities, corporate innovation, and coworking.
 
@@ -476,7 +479,7 @@ ________________
 
 ## Kentucky
 ### [AdvanceKentucky](http://www.advanceky.com)<br/>
-Kentucky	
+Kentucky
 
 AdvanceKentucky is a statewide math-science initiative of the Kentucky Science and Technology Corporation (KSTC) dedicated to helping Kentucky’s students reach new heights in rigorous academic achievement.
 
@@ -670,7 +673,7 @@ ________________
 
 ## North Carolina
 ### [The Friday Institute](http://www.fi.ncsu.edu/)	<Br/>
-Durham, North Carolina	
+Durham, North Carolina
 
 The Friday Institute is helping to create the next generation education system by advancing innovations in teaching, learning, and leadership. Bringing together educational professionals, researchers, policy-makers, and other community members, the Friday Institute is a center for fostering collaborations to improve education. We conduct research, develop educational resources, provide professional learning programs for educators and leaders, advocate to improve teaching and learning, and help inform local, state and national education policy.
 
@@ -719,7 +722,7 @@ ________________
 
 ## Oklahoma
 ### [The Div](http://thediv.org/)<br/>
-Oklahoma	
+Oklahoma
 
 The Div is a nonprofit dedicated helping the next generation thrive through access to technology education.  
 
@@ -756,7 +759,7 @@ lpoutasse@dciu.org <br/>
 Jon Regino<br/>
 jregino@dciu.org<br/>
 
-Rebecca Jervey<br/> 
+Rebecca Jervey<br/>
 rjervery@dciu.org<br/>
 
 [**Back to the top**](#top)
@@ -775,7 +778,7 @@ The Citadel, a master-level public institution in Charleston, SC, was founded in
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** 
+**Contact us for advice on:**
 AP CSP teacher PD, student summer camps
 
 **Contact Information**<br/>
@@ -815,13 +818,13 @@ ________________
 ### [Center for STEM Education, The University of Texas at Austin](http://stemcenter.utexas.edu/)<br/>
 Austin, Texas<Br/>
 
-The University of Texas at Austin’s Center for STEM Education WeTeach_CS project trains K-12 educators to improve access to high quality CS experiences for a broad and diverse range of students. WeTeach_CS is designed to increase the number of CS certified high school teachers, increase the number of high schools offering CS courses, increase the number and diversity of students enrolled in CS courses, and expand access to computational thinking, coding and programming experiences for all students in K-8. 
+The University of Texas at Austin’s Center for STEM Education WeTeach_CS project trains K-12 educators to improve access to high quality CS experiences for a broad and diverse range of students. WeTeach_CS is designed to increase the number of CS certified high school teachers, increase the number of high schools offering CS courses, increase the number and diversity of students enrolled in CS courses, and expand access to computational thinking, coding and programming experiences for all students in K-8.
 
 **Programs**<br/>
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** 
+**Contact us for advice on:**
 Statewide initiatives, MOOCs / online training courses
 
 **Contact Information** <br/>
@@ -834,7 +837,7 @@ johnbowen@utexas.edu<br/>
 ### [Rice University School Mathematics Project](http://rusmp.rice.edu)<br/>
 Houston, Texas<Br/>
 
-The Rice University School Mathematics Project (RUSMP) was established in 1987 in order to provide a bridge between the Rice University mathematics research community and Houston-area mathematics teachers. RUSMP's mission is to create a better understanding of the nature, beauty, and importance of mathematics and to promote effective teaching of mathematics; the mission has expanded to include supporting science, technology, engineering, and the arts as they relate to mathematics. RUSMP's approach is grounded in research that supports the belief that sustained instructional changes can best be cultivated through the development of professionalism among science, technology, engineering, and mathematics (STEM) teachers and the creation of a network of teachers who have extensive knowledge of both content and pedagogy.<br/> 
+The Rice University School Mathematics Project (RUSMP) was established in 1987 in order to provide a bridge between the Rice University mathematics research community and Houston-area mathematics teachers. RUSMP's mission is to create a better understanding of the nature, beauty, and importance of mathematics and to promote effective teaching of mathematics; the mission has expanded to include supporting science, technology, engineering, and the arts as they relate to mathematics. RUSMP's approach is grounded in research that supports the belief that sustained instructional changes can best be cultivated through the development of professionalism among science, technology, engineering, and mathematics (STEM) teachers and the creation of a network of teachers who have extensive knowledge of both content and pedagogy.<br/>
 
 **Programs**<br/>
 CS Principles<br/>
@@ -848,7 +851,7 @@ CS in Algebra<br/>
 This includes communications/social media, recruitment of teacher participants, application and registration of teacher participants, setting up workshops on the Code.org Dashboard, ordering supplies, and catering for workshops.
 
 
-**Contact Information** 
+**Contact Information**
 Main Contact:
 Alice Fisher<br/>
 afisher@rice.edu<br/>
@@ -866,7 +869,7 @@ rparr@rice.edu<br/>
 ### [The University of Texas at Dallas](http://www.instructionalexcellence.org/)<br/>
 Dallas, Texas<Br/>
 
-The Institute for Instructional Excellence (TIIE) at UT Dallas is part of the Department of Science and Mathematics Education housed within the School of Natural Sciences and Mathematics.  Our focus is to assist campuses and districts in building teacher capacity in designing, implementing, and supporting inquiry-based learning environments across all grade levels and content areas.  We accomplish this through a unique instructional model, coaching, and developing teachers as leaders of instruction. <br/> 
+The Institute for Instructional Excellence (TIIE) at UT Dallas is part of the Department of Science and Mathematics Education housed within the School of Natural Sciences and Mathematics.  Our focus is to assist campuses and districts in building teacher capacity in designing, implementing, and supporting inquiry-based learning environments across all grade levels and content areas.  We accomplish this through a unique instructional model, coaching, and developing teachers as leaders of instruction. <br/>
 
 **Programs**<br/>
 CS Principles<br/>
@@ -941,8 +944,8 @@ ________________
 <a id="wa"></a>
 
 ## Washington
-###[ NorthEast Washington Education Service District 101](http://www.esd101.net/) <br/>	
-Spokane, Washington	
+###[ NorthEast Washington Education Service District 101](http://www.esd101.net/) <br/>
+Spokane, Washington
 
 At NEWESD 101 we are most fortunate and very proud to serve and support 59 public school districts and 46 state-approved private schools in seven counties in northeastern Washington. We promote and support educational excellence by delivering essential, cooperative services to schools and other learning communities. Our commitments include:
 
@@ -983,7 +986,7 @@ Educational Service Districts improve the quality, equity, and efficiency of edu
 CS Principles<br/>
 CS Discoveries<br/>
 
-**Contact us for advice on:** Professional development facilitation, what to do when you're just getting started. 
+**Contact us for advice on:** Professional development facilitation, what to do when you're just getting started.
 
 **Contact Information**<br/>
 Cheryl Lydon<br/>
@@ -1009,26 +1012,3 @@ brylow@pd.code.org<br/>
 
 [**Back to the top**](#top)
 <br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

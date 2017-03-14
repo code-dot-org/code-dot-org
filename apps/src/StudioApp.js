@@ -200,16 +200,6 @@ function StudioApp() {
    */
   this.share = false;
 
-  /**
-   * By default, we center our embedded levels. Can be overriden by apps.
-   */
-  this.centerEmbedded = true;
-
-  /**
-   * If set to true, we use our wireframe share (or chromeless share on mobile)
-   */
-  this.wireframeShare = false;
-
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -363,6 +353,8 @@ StudioApp.prototype.init = function (config) {
       app: config.app,
       noHowItWorks: config.noHowItWorks,
       isLegacyShare: config.isLegacyShare,
+      isResponsive: this.reduxStore.getState().pageConstants.isResponsive,
+      wireframeShare: config.wireframeShare,
     });
   }
 
@@ -436,34 +428,6 @@ StudioApp.prototype.init = function (config) {
 
   if (config.showInstructionsWrapper) {
     config.showInstructionsWrapper(() => {});
-  }
-
-  // In embed mode, the display scales down when the width of the
-  // visualizationColumn goes below the min width
-  if (config.embed && config.centerEmbedded) {
-    var resized = false;
-    var resize = function () {
-      var vizCol = document.getElementById('visualizationColumn');
-      var width = vizCol.offsetWidth;
-      var height = vizCol.offsetHeight;
-      var displayWidth = DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
-      var scale = Math.min(width / displayWidth, height / displayWidth);
-      var viz = document.getElementById('visualization');
-      viz.style['transform-origin'] = 'left top';
-      viz.style['-webkit-transform'] = 'scale(' + scale + ')';
-      viz.style['max-height'] = (displayWidth * scale) + 'px';
-      viz.style.display = 'block';
-      vizCol.style.width = '';
-      vizCol.style.maxWidth = displayWidth + 'px';
-      // Needs to run twice on initialization
-      if (!resized) {
-        resized = true;
-        resize();
-      }
-    };
-    // Depends on ResizeSensor.js
-    var ResizeSensor = require("./third-party/ResizeSensor");
-    ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
   var orientationHandler = function () {
@@ -1733,8 +1697,15 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
  */
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
-  this.centerEmbedded = utils.valueOr(config.centerEmbedded, this.centerEmbedded);
-  this.wireframeShare = utils.valueOr(config.wireframeShare, this.wireframeShare);
+
+  // By default, we center our embedded levels. Can be overridden by apps.
+  config.centerEmbedded = utils.valueOr(config.centerEmbedded, true);
+
+  // By default, embedded levels are not responsive.
+  config.responsiveEmbedded = utils.valueOr(config.responsiveEmbedded, false);
+
+  // If set to true, we use our wireframe share (or chromeless share on mobile).
+  config.wireframeShare = utils.valueOr(config.wireframeShare, false);
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
@@ -1875,7 +1846,7 @@ StudioApp.prototype.configureDom = function (config) {
 
   // NOTE: Can end up with embed true and hideSource false in level builder
   // scenarios. See https://github.com/code-dot-org/code-dot-org/pull/1744
-  if (config.embed && config.hideSource && this.centerEmbedded) {
+  if (config.embed && config.hideSource && config.centerEmbedded) {
     container.className = container.className + " centered_embed";
     visualizationColumn.className = visualizationColumn.className + " centered_embed";
   }
@@ -1887,7 +1858,7 @@ StudioApp.prototype.configureDom = function (config) {
       // of a larger page.
       smallFooter.style.boxSizing = "border-box";
     }
-    if (!config.embed && !config.hideSource) {
+    if (this.reduxStore.getState().pageConstants.isResponsive) {
       smallFooter.className += " responsive";
     }
   }
@@ -1904,11 +1875,14 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
-  document.getElementById('visualizationResizeBar').style.display = 'none';
+
+  if (!options.isResponsive) {
+    document.getElementById('visualizationResizeBar').style.display = 'none';
+  }
 
   // Chrome-less share page.
   if (this.share) {
-    if (options.isLegacyShare || this.wireframeShare) {
+    if (options.isLegacyShare || options.wireframeShare) {
       document.body.style.backgroundColor = '#202B34';
       if (options.level.iframeEmbed) {
         // so help me god.
@@ -2861,6 +2835,18 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 };
 
 /**
+ * Returns whether this view should be responsive based on level options.
+ * Responsive means that the visualizationColumn should resize as the
+ * window width changes, and that a grippy is available to manually resize
+ * the visualizationColumn.
+ */
+StudioApp.prototype.isResponsiveFromConfig = function (config) {
+  const isResponsiveEmbedView = !!(config.embed && config.responsiveEmbedded);
+  const isWorkspaceView = !config.hideSource;
+  return isResponsiveEmbedView || isWorkspaceView;
+};
+
+/**
  * Sets a bunch of common page constants used by all of our apps in our redux
  * store based on our app options config.
  * @param {AppOptionsConfig} config
@@ -2882,6 +2868,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
     isEmbedView: !!config.embed,
+    isResponsive: this.isResponsiveFromConfig(config),
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,

@@ -63,7 +63,7 @@ module Pd::Payment
     end
 
     def plp
-      workshop.professional_learning_partner
+      workshop.regional_partner
     end
 
     # @return [Integer] Total adjusted days attended by all qualified teachers (one per teacher per day).

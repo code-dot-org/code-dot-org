@@ -53,26 +53,23 @@ class FollowersController < ApplicationController
   # POST /join/XXXXXX
   # join a section as a new student
   def student_register
-    user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-
-    student_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
-    if user_type == User::TYPE_TEACHER
-      student_params.merge(params[:user].permit([:school, :full_address]))
-    end
-
-    @user = User.new(student_params)
-
     if current_user
       @user.errors.add(:username, "Please signout before proceeding")
-    else
-      @user.user_type = user_type == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-        if @user.save
-          @section.add_student(@user)
-          sign_in(:user, @user)
-          redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
-          return
-        end
+      render 'student_user_new', formats: [:html]
+      return
+    end
+
+    user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
+
+    @user = User.new(followers_params(user_type))
+
+    @user.user_type = user_type
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      if @user.save
+        @section.add_student(@user)
+        sign_in(:user, @user)
+        redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
+        return
       end
     end
 
@@ -80,6 +77,14 @@ class FollowersController < ApplicationController
   end
 
   private
+
+  def followers_params(user_type)
+    allowed_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
+    if user_type == User::TYPE_TEACHER
+      allowed_params.merge(params[:user].permit([:school, :full_address]))
+    end
+    allowed_params
+  end
 
   def redirect_url
     params[:redirect] || root_path
