@@ -7,9 +7,6 @@ import Observer from '@cdo/apps/Observer';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
 import experiments from '@cdo/apps/util/experiments';
 
-window.acorn = require('../../../../../lib/jsinterpreter/acorn');
-require('../../../../../lib/jsinterpreter/interpreter');
-
 describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;
   beforeEach(() => {

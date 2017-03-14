@@ -246,12 +246,6 @@ testsContext.keys().forEach(testsContext);
           src: ['*.js'],
           dest: 'build/package/js/fileupload/',
         },
-        {
-          expand: true,
-          cwd: 'lib/jsinterpreter',
-          src: ['*.js'],
-          dest: 'build/package/js/jsinterpreter/'
-        }
       ]
     }
   };
