@@ -250,6 +250,7 @@ export const ProgressDot = Radium(React.createClass({
     const isPeerReview = level.kind === LevelKind.peer_review;
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = status === LevelStatus.locked;
+    const tooltipId = _.uniqueId();
 
     return (
       <a
@@ -263,7 +264,7 @@ export const ProgressDot = Radium(React.createClass({
          ]}
       >
         {(iconClassFromIconType[level.icon] && !isPeerReview) ?
-          <span data-tip data-for={level.activeId} >
+          <span data-tip data-for={tooltipId} aria-describedby={tooltipId}>
             <i
               className={this.iconClassName()}
               style={[
@@ -276,7 +277,12 @@ export const ProgressDot = Radium(React.createClass({
                 outlineCurrent && {textShadow: createOutline(color.level_current)}
               ]}
             />
-            <ReactTooltip id={level.activeId} aria-haspopup="true" role="example" delayShow={1000} wrapper="span">
+            <ReactTooltip
+              id={tooltipId}
+              role="tooltip"
+              delayShow={500}
+              wrapper="span"
+            >
               {this.tooltipContent()}
             </ReactTooltip>
           </span> :
@@ -295,13 +301,13 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           >
 
-          <div data-tip data-for={level.activeId}>
+          <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
             <BubbleInterior
               showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
               title={level.title || undefined}
             />
-            <ReactTooltip id={level.activeId} aria-haspopup="true" role="example" delayShow={1000}>
+          <ReactTooltip id={tooltipId} role="tooltip" delayShow={500}>
               {this.tooltipContent()}
             </ReactTooltip>
           </div>
