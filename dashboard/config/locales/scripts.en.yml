@@ -2705,6 +2705,8 @@ en:
           stage:
             Introduction: Introduction
             Sprites: Sprites
+            Input: Input
+            'Project: Interactive Card': 'Project: Interactive Card'
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
           description_short: Level progression to accompany an in-person Game Lab Workshop
