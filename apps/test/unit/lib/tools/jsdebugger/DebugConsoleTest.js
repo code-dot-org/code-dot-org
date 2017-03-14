@@ -8,8 +8,6 @@ import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
-window.acorn = require('../../../../../lib/jsinterpreter/acorn');
-require('../../../../../lib/jsinterpreter/interpreter');
 
 describe('The DebugConsole component', () => {
   let root;
