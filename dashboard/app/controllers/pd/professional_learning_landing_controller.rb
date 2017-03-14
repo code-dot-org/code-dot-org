@@ -9,9 +9,10 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     courses_teaching = workshops.pluck(:course).uniq
     courses_completed = ended_workshops.pluck(:course).uniq
 
-    enrollments = Pd::Enrollment.where(email: current_user.email)
-    surveys_pending_enrollment = Pd::Enrollment.filter_for_survey_completion(enrollments, false)
-    last_pending_enrollment = surveys_pending_enrollment && surveys_pending_enrollment.max_by(&:survey_sent_at)
+    last_enrollment_with_pending_survey = Pd::Enrollment.filter_for_survey_completion(
+      Pd::Enrollment.where(email: current_user.email).where.not(survey_sent_at: nil),
+      false
+    ).try(:max_by, &:survey_sent_at)
 
     summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize)
 
@@ -26,8 +27,8 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
     @landing_page_data = {
       courses_teaching: courses_teaching,
       courses_completed: courses_completed,
-      last_workshop_survey_url: last_pending_enrollment && CDO.code_org_url("/pd-workshop-survey/#{last_pending_enrollment.code}"),
-      last_workshop_survey_course: last_pending_enrollment.try(:workshop).try(:course),
+      last_workshop_survey_url: last_enrollment_with_pending_survey && CDO.code_org_url("/pd-workshop-survey/#{last_enrollment_with_pending_survey.code}"),
+      last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
       print_csf_certificate_url: print_csf_certificate_url,
       summarized_plc_enrollments: summarized_plc_enrollments
     }.compact

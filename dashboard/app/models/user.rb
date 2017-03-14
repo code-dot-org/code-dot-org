@@ -610,10 +610,36 @@ class User < ActiveRecord::Base
     user_level.nil? || user_level.locked?(script_level.stage)
   end
 
+  # Returns the next script_level for the next progression level in the given
+  # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
-    script.script_levels.detect do |script_level|
+    # Find the user level that we've most recently had progress on
+    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
+
+    script_level_index = 0
+    if user_level
+      last_script_level = user_level.level.script_levels.where(script_id: script.id).first
+      script_level_index = last_script_level.chapter - 1 if last_script_level
+    end
+
+    next_unpassed = script.script_levels[script_level_index..-1].detect do |script_level|
+      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      unpassed_progression_level?(script_level, user_levels)
+    end
+
+    # if we don't have any unpassed levels proceeding the one we've most recently
+    # submitted, just go to the one we've most recently submitted
+    next_unpassed || last_script_level
+  end
+
+  # Returns true if all progression levels in the provided script have a passing
+  # result
+  def completed_progression_levels?(script)
+    user_levels_by_level = user_levels_by_level(script)
+
+    script.script_levels.none? do |script_level|
       user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
@@ -842,7 +868,7 @@ class User < ActiveRecord::Base
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     return false unless user_script
-    user_script.completed_at || next_unpassed_progression_level(script).nil?
+    user_script.completed_at || completed_progression_levels?(script)
   end
 
   def not_started?(script)
