@@ -148,7 +148,7 @@ const UpcomingWorkshopsTable = React.createClass({
           </Modal.Footer>
         </Modal>
         <h2>
-          Upcoming workshops
+          My Upcoming Workshops
         </h2>
         {this.renderWorkshopsTable()}
       </div>

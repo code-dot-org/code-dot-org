@@ -15,20 +15,20 @@ class Api::V1::Pd::WorkshopOrganizerSurveyReportControllerTest < ::ActionControl
     sign_in admin
 
     get :index, params: {course: Pd::Workshop::COURSES.first}
-    assert :success
+    assert_response :success
   end
 
   test 'organizers can view surveys' do
     sign_in @organizer
     get :index, params: {course: Pd::Workshop::COURSES.first}
-    assert :success
+    assert_response :success
   end
 
-  test 'teachers who aren\'t organizers can\'t view surveys' do
+  test "teachers who are not organizers cannot view surveys" do
     teacher = create :teacher
     sign_in teacher
 
     get :index, params: {course: Pd::Workshop::COURSES.first}
-    assert :forbidden
+    assert_response :forbidden
   end
 end
