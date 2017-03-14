@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom';
 import DialogButtons from './templates/DialogButtons';
 
 // Parameters provided by the calling app.
-var submitParams;
+let studioApp, onPuzzleComplete, unsubmitUrl;
 
 /**
  * Set up the handlers for the submit and unsubmit buttons.
@@ -22,8 +22,10 @@ var submitParams;
  * @param {function} params.onPuzzleComplete - Function to call when submitting.
  * @param {string} params.unsubmitUrl - URL to post to when unsubmitting.
  */
-export function setupSubmitButtons(params) {
-  submitParams = params;
+export function initializeSubmitHelper(params) {
+  studioApp = params.studioApp;
+  onPuzzleComplete = params.onPuzzleComplete;
+  unsubmitUrl = params.unsubmitUrl;
 
   const submitButton = document.getElementById('submitButton');
   if (submitButton) {
@@ -53,7 +55,7 @@ function onPuzzleSubmit() {
   showConfirmationDialog({
     title: commonMsg.submitYourProject(),
     text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: () => submitParams.onPuzzleComplete(true)
+    onConfirm: () => onPuzzleComplete(true)
   });
 }
 
@@ -73,7 +75,7 @@ function onPuzzleUnsubmit() {
  */
 function unsubmit() {
   $.post(
-    submitParams.unsubmitUrl,
+    unsubmitUrl,
     {"_method": 'PUT', user_level: {submitted: false}},
     function () {
       location.reload();
@@ -103,7 +105,7 @@ function showConfirmationDialog(config) {
     />, buttons);
   contentDiv.appendChild(buttons);
 
-  const dialog = submitParams.studioApp.createModalDialog({
+  const dialog = studioApp.createModalDialog({
     contentDiv: contentDiv,
     defaultBtnSelector: '#confirm-button'
   });

@@ -25,7 +25,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
 import {
-  setupSubmitButtons,
+  initializeSubmitHelper,
   onSubmitComplete
 } from '../submitHelper';
 var dom = require('../dom');
@@ -259,7 +259,7 @@ GameLab.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
     }
 
-    setupSubmitButtons({
+    initializeSubmitHelper({
       studioApp: this.studioApp_,
       onPuzzleComplete: this.onPuzzleComplete.bind(this),
       unsubmitUrl: this.level.unsubmitUrl
