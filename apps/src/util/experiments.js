@@ -73,14 +73,8 @@ experiments.setEnabled = function (key, shouldEnable) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-  let enabled = false;
-
-  const storedExperiments = this.getStoredExperiments_();
-  const experimentIndex = storedExperiments
-    .findIndex(experiment => experiment.key === key);
-  if (experimentIndex >= 0) {
-    enabled = true;
-  }
+  let enabled = this.getStoredExperiments_()
+    .some(experiment => experiment.key === key);
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];
