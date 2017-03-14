@@ -64,9 +64,9 @@ const ProgressBubble = React.createClass({
 
     let bubble = (
 
-      <div style={style} data-tip data-for={levelName}>
+      <div style={style} data-tip data-for={url}>
         {number}
-        <ReactTooltip id={levelName} aria-haspopup="true" role="example" delayShow={1000}>
+        <ReactTooltip id={url} aria-haspopup="true" role="example" delayShow={1000}>
           <FontAwesome icon={levelIcon} style={{ paddingRight: '.5em', paddingLeft: '.5em'}}/>
           {levelName}
         </ReactTooltip>
