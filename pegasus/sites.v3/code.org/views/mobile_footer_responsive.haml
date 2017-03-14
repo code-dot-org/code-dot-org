@@ -9,17 +9,17 @@
       %li
         %a{:href=>'/about'} About
       %li
-        %a{href:resolve_url('/partners')} Partners
+        %a{:href =>'/partners'} Partners
       %li
-        %a{:href=>'http://codeorg.tumblr.com', :target=>'_blank'}  Blog
+        %a{:href=>'http://blog.code.org', :target=>'_blank'} Blog
       %li
-        %a{:href=>resolve_url('/donate')} Donate
+        %a{:href=>'/donate'} Donate
       %li
-        %a{:href=>resolve_url('/shop')} Store
+        %a{:href=>'/shop'} Store
       %li
-        %a{:href=>'http://support.code.org/'} Support
+        %a{:href=>'https://support.code.org/'} Support
       %li
-        %a{:href=>resolve_url('/tos')} Terms
+        %a{:href=>'/tos'} Terms
 
     #footer-toggle
       Code.org
@@ -30,16 +30,16 @@
       =view :language
 
     .social-media
-      %a.social-icon{:href=>'https://www.facebook.com/Code.org/', :target=>'_blank'}
+      %a.social-icon{:href=>'https://www.facebook.com/Code.org', :target=>'_blank'}
         %i.fa.fa-facebook.fa-lg
         &nbsp; &nbsp;
       %a.social-icon{:href=>'https://twitter.com/codeorg', :target=>'_blank'}
         %i.fa.fa-twitter.fa-lg
         &nbsp; &nbsp;
-      %a.social-icon{:href=>'https://www.instagram.com/codeorg/', :target=>'_blank'}
+      %a.social-icon{:href=>'https://www.instagram.com/codeorg', :target=>'_blank'}
         %i.fa.fa-instagram.fa-lg
         &nbsp; &nbsp;
-      %a.social-icon{:href=>'http://codeorg.tumblr.com', :target=>'_blank'}
+      %a.social-icon{:href=>'http://blog.code.org', :target=>'_blank'}
         %i.fa.fa-tumblr.fa-lg
 
   #copyright
