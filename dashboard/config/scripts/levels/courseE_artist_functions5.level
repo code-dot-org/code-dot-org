@@ -83,6 +83,10 @@
             </block>
           </next>
         </block>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
