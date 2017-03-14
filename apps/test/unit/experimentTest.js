@@ -102,15 +102,25 @@ describe('experiments', function () {
     assert.isFalse(experiments.isEnabled('better-feature'));
   });
 
-  it('still registers the experiment as enabled 11 hours later', function () {
+  it('still registers an experiment as enabled 11 hours after enabling it', function () {
     experiments.setEnabled('best-feature', true);
     clock.tick(11 * 60 * 60 * 1000);
     assert.isTrue(experiments.isEnabled('best-feature'));
   });
 
-  it('no longer registers the experiment as enabled 13 hours later', function () {
+  it('no longer registers an experiment as enabled 13 hours after enabling it', function () {
     experiments.setEnabled('best-feature', true);
     clock.tick(13 * 60 * 60 * 1000);
+    assert.isFalse(experiments.isEnabled('best-feature'));
+  });
+
+  it('resets the expiration if setEnabled is called again', function () {
+    experiments.setEnabled('best-feature', true);
+    clock.tick(9 * 60 * 60 * 1000);
+    experiments.setEnabled('best-feature', true);
+    clock.tick(9 * 60 * 60 * 1000);
+    assert.isTrue(experiments.isEnabled('best-feature'));
+    clock.tick(4 * 60 * 60 * 1000);
     assert.isFalse(experiments.isEnabled('best-feature'));
   });
 
