@@ -137,9 +137,9 @@
     z-index: 99;
   }
 
-  #nav ul:after {   /* This is the arrow in the responsive menu */
+  #nav ul:after {   /*  This is the arrow in the responsive menu.  */
     bottom: 100%;
-    left: 16em;
+    left: 15.7em;
     border: solid transparent;
     content: " ";
     height: 0;
