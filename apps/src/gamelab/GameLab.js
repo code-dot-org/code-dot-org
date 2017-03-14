@@ -24,7 +24,7 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
-var Submit = require('../submit');
+var Submit = require('../submitHelper');
 var dom = require('../dom');
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 

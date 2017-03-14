@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import DialogButtons from './templates/DialogButtons';
 
-var Submit = module.exports = function (options) {
+const Submit = module.exports = function (options) {
   this.studioApp = options.studioApp;
   this.onPuzzleComplete = options.onPuzzleComplete.bind(this);
   this.unsubmitUrl = options.unsubmitUrl;
@@ -12,12 +12,12 @@ var Submit = module.exports = function (options) {
 
 // The DOM should have submitButton and unsubmitButton.  Set up handlers for them.
 Submit.prototype.setupButtons = function () {
-  var submitButton = document.getElementById('submitButton');
+  const submitButton = document.getElementById('submitButton');
   if (submitButton) {
     dom.addClickTouchEvent(submitButton, this.onPuzzleSubmit.bind(this));
   }
 
-  var unsubmitButton = document.getElementById('unsubmitButton');
+  const unsubmitButton = document.getElementById('unsubmitButton');
   if (unsubmitButton) {
     dom.addClickTouchEvent(unsubmitButton, this.onPuzzleUnsubmit.bind(this));
   }
@@ -28,23 +28,13 @@ Submit.prototype.onSubmitComplete = function (response) {
   window.location.href = response.redirect;
 };
 
-// Called when the user confirms they want to submit this solution.
-Submit.prototype.onPuzzleSubmitConfirm = function () {
-  this.onPuzzleComplete(true);
-};
-
 // When submit button is pressed, confirm, and then do it.
 Submit.prototype.onPuzzleSubmit = function () {
   this.showConfirmationDialog({
     title: commonMsg.submitYourProject(),
     text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: this.onPuzzleSubmitConfirm.bind(this)
+    onConfirm: () => this.onPuzzleComplete(true)
   });
-};
-
-// Called when the user confirms they want to unsubmit their solution.
-Submit.prototype.onPuzzleUnsubmitConfirm = function () {
-  this.unsubmit();
 };
 
 // When unsubmit button is pressed, confirm, and then do it.
@@ -52,7 +42,7 @@ Submit.prototype.onPuzzleUnsubmit = function () {
   this.showConfirmationDialog({
     title: commonMsg.unsubmitYourProject(),
     text: commonMsg.unsubmitYourProjectConfirm(),
-    onConfirm: this.onPuzzleUnsubmitConfirm.bind(this)
+    onConfirm: () => this.unsubmit()
   });
 };
 
@@ -77,30 +67,31 @@ Submit.prototype.showConfirmationDialog = function (config) {
   config.text = config.text || "";
   config.title = config.title || "";
 
-  var contentDiv = document.createElement('div');
+  const contentDiv = document.createElement('div');
   contentDiv.innerHTML = '<p class="dialog-title">' + config.title + '</p>' +
       '<p>' + config.text + '</p>';
 
-  var buttons = document.createElement('div');
-  ReactDOM.render(React.createElement(DialogButtons, {
-    confirmText: commonMsg.dialogOK(),
-    cancelText: commonMsg.dialogCancel()
-  }), buttons);
+  const buttons = document.createElement('div');
+  ReactDOM.render(
+    <DialogButtons
+      confirmText={commonMsg.dialogOK()}
+      cancelText={commonMsg.dialogCancel()}
+    />, buttons);
   contentDiv.appendChild(buttons);
 
-  var dialog = this.studioApp.createModalDialog({
+  const dialog = this.studioApp.createModalDialog({
     contentDiv: contentDiv,
     defaultBtnSelector: '#confirm-button'
   });
 
-  var cancelButton = buttons.querySelector('#again-button');
+  const cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function () {
       dialog.hide();
     });
   }
 
-  var confirmButton = buttons.querySelector('#confirm-button');
+  const confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function () {
       if (config.onConfirm) {
