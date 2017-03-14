@@ -132,24 +132,11 @@
 
   #nav ul {
     position: absolute;
-    top: 4em;
+    top: 3em;
     background-color: rgba(0, 178, 192, .9);
     z-index: 99;
-    /*overflow: auto;*/
-  }
-
-  #nav ul:after {   /*  This is the arrow in the responsive menu.  */
-    bottom: 100%;
-    left: 15.7em;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(0, 178, 192, 0);
-    border-bottom-color: rgba(0, 178, 192, .9);
-    border-width: 8px;
+    max-height: 70vh;
+    overflow-y: auto;
   }
 
   #nav ul li {
