@@ -2530,7 +2530,6 @@ $width: 400px;
   }
 }
 
-
 #environment_tag {
   position: fixed;
   top: 0;
@@ -2545,4 +2544,14 @@ $width: 400px;
 
 #level-body {
   height: 100%;
+}
+
+code {
+  color: $purple;
+}
+
+.instructions-markdown ul li, .instructions-markdown ol li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 1.2em;
 }
