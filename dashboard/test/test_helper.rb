@@ -286,6 +286,28 @@ class ActionController::TestCase
   #     as the default generated names may be ambiguous and may conflict.
   # @yield runs an optional block of additional test logic after asserting the response
   #   Note: name is required when providing a block.
+  #
+  # @example simple: 'user calling get index should receive success'
+  #   test_user_gets_response_for :index, user: :user
+  #
+  # @example more complex: 'supplied user calling post destroy should receive not_found'
+  #   test_user_gets_response_for(
+  #     :destroy,
+  #     method: :post,
+  #     user: -> {@existing_user},
+  #     params: {id: 1},
+  #     response: :not_found
+  #   )
+  #
+  # @example with title and block
+  #   test_user_gets_response_for(
+  #     :show,
+  #     name: 'user calling show with id gets expected result and admin permission'
+  #     user: :admin
+  #     :params: {id: 1},
+  #   ) do
+  #     assert_equal :admin, assigns(:permission)
+  #   end
   def self.test_user_gets_response_for(action, method: :get, response: :success,
     user: nil, params: {}, name: nil, &block)
 
