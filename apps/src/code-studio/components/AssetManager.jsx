@@ -22,6 +22,14 @@ function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
 
+const styles = {
+  emptyText: {
+    margin: '1em 0',
+    fontSize: '16px',
+    lineHeight: '20px'
+  }
+};
+
 /**
  * A component for managing hosted assets.
  */
@@ -136,7 +144,7 @@ var AssetManager = React.createClass({
         : ('Your assets will appear here. Click "Upload File" to add a new asset for this project.');
       assetList = (
         <div>
-          <div style={{margin: '1em 0', fontSize: '16px', lineHeight: '20px'}}>
+          <div style={styles.emptyText}>
             {emptyText}
           </div>
           {uploadButton}
