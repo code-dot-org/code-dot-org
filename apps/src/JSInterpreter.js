@@ -2,6 +2,8 @@ var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
 var Interpreter = require('@code-dot-org/js-interpreter');
+var acorn = require('@code-dot-org/js-interpreter/acorn');
+
 import { setIsDebuggerPaused } from './redux/runState';
 
 /**
@@ -1158,7 +1160,7 @@ JSInterpreter.prototype.getValueFromMemberExpression_ = function (expression) {
 JSInterpreter.prototype.evaluateWatchExpression = function (watchExpression) {
   var value;
   try {
-    var ast = window.acorn.parse(watchExpression);
+    var ast = acorn.parse(watchExpression);
     if (ast.type === 'Program' &&
         ast.body[0].type === 'ExpressionStatement') {
       value = this.getWatchValueFromNode_(ast.body[0].expression);
