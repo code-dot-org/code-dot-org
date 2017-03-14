@@ -5,7 +5,6 @@ module OPS
   DASHBOARDAPI = 'dashboardapi' unless defined? DASHBOARDAPI
 end
 
-# rubocop:disable Metrics/BlockLength
 Dashboard::Application.routes.draw do
   resources :survey_results, only: [:create], defaults: { format: 'json' }
 

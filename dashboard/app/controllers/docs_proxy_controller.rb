@@ -14,12 +14,12 @@ class DocsProxyController < ApplicationController
   EXPIRY_TIME = 30.minutes
 
   def get
-    # request.original_url will look something like http://studio.code.org/docs/csd/maker_leds/index.html
+    # request.original_url will look something like https://studio.code.org/docs/csd/maker_leds/index.html
     # We want to redirect them to https://docs.code.org/csd/maker_leds/index.html
-    docs_route = request.original_url.split('docs')[1..-1].join
+    docs_route = URI.parse(request.original_url).path
 
     render_proxied_url(
-      "https://docs.code.org#{docs_route}",
+      docs_route.sub(/^\/docs/, 'https://docs.code.org'),
       allowed_content_types: nil,
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
