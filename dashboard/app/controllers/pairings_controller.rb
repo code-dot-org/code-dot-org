@@ -23,7 +23,7 @@ class PairingsController < ApplicationController
   end
 
   def sections_summary
-    current_user.sections_as_student.map do |section|
+    current_user.active_sections_as_student.map do |section|
       {
         id: section.id,
         name: section.name,
