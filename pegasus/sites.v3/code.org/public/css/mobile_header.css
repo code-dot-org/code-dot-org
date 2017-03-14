@@ -102,7 +102,7 @@
 }
 
 #nav ul li a:hover, #about-more:hover {
-  border-bottom: solid 2px rgb(255, 138, 0);
+  border-bottom: solid 2px #ff8a00;
 }
 
 #nav-hamburger {
