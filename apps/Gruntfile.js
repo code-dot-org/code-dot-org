@@ -562,8 +562,6 @@ testsContext.keys().forEach(testsContext);
   config.uglify = {
     lib: {
       files: _.fromPairs([
-        'jsinterpreter/interpreter.js',
-        'jsinterpreter/acorn.js',
         'p5play/p5.play.js',
         'p5play/p5.js'
       ].map(function (src) {
