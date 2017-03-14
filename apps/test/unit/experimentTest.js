@@ -124,6 +124,19 @@ describe('experiments', function () {
     assert.isFalse(experiments.isEnabled('best-feature'));
   });
 
+  it('quietly returns false if localstorage throws an exception', function () {
+    const originalGetItem = localStorage.getItem;
+    localStorage.getItem = () => {
+      throw new Error('some error');
+    };
+
+    localStorage.setItem('experimentsList',
+        JSON.stringify(['awesome-feature']));
+    assert.isFalse(experiments.isEnabled('awesome-feature'));
+
+    localStorage.getItem = originalGetItem;
+  });
+
   it('expires old-style experiments in localstorage', function () {
     localStorage.setItem('experimentsList',
         JSON.stringify(['awesome-feature']));
