@@ -35,6 +35,10 @@ const styles = {
       color: color.white,
       backgroundColor: color.level_current
     }
+  },
+  tooltipIcon: {
+    paddingRight: 5,
+    paddingLeft: 5
   }
 };
 
@@ -71,7 +75,7 @@ const ProgressBubble = React.createClass({
           role="tooltip"
           delayShow={500}
         >
-          <FontAwesome icon={levelIcon} style={{ paddingRight: '.5em', paddingLeft: '.5em'}}/>
+          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
           {levelName}
         </ReactTooltip>
       </div>

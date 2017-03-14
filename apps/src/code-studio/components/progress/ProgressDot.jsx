@@ -307,7 +307,11 @@ export const ProgressDot = Radium(React.createClass({
               showingLevelName={showLevelName}
               title={level.title || undefined}
             />
-          <ReactTooltip id={tooltipId} role="tooltip" delayShow={500}>
+            <ReactTooltip
+              id={tooltipId}
+              role="tooltip"
+              delayShow={500}
+            >
               {this.tooltipContent()}
             </ReactTooltip>
           </div>
