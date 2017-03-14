@@ -39,7 +39,7 @@ Given(/^I am an organizer with completed courses$/) do
 end
 
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
-  require_rails_env
+  require_rails_models
 
   user = User.find_by(name: name)
   user.permission = UserPermission::FACILITATOR
@@ -47,7 +47,7 @@ And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) d
 end
 
 And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
-  require_rails_env
+  require_rails_models
 
   user = User.find_by(name: name)
   user.permission = UserPermission::WORKSHOP_ORGANIZER
