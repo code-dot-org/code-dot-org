@@ -273,7 +273,7 @@ draw() - USEFUL?
   {func: 'noFill', category: 'Drawing' },
   {func: 'stroke', category: 'Drawing', paletteParams: ['color'], params: ['"blue"'], dropdown: { 0: ['"blue"', 'rgb(255, 0, 0)', 'rgb(255, 0, 0, 0.5)'] } },
   {func: 'strokeWeight', category: 'Drawing', paletteParams: ['size'], params: ["3"] },
-  {func: 'rgb', category: 'Drawing', paramButtons: { minArgs: 1, maxArgs: 4}, paletteParams: ['r','g','b'], params: ["255", "255", "255"], type: 'value' },
+  {func: 'rgb', category: 'Drawing', paramButtons: { minArgs: 3, maxArgs: 4}, paletteParams: ['r','g','b'], params: ["255", "255", "255"], type: 'value' },
   {func: 'noStroke', category: 'Drawing' },
   {func: 'arc', category: 'Drawing', paletteParams: ['x','y','w','h','start','stop'], params: ["0", "0", "800", "800", "0", "90"] },
   {func: 'ellipse', category: 'Drawing', paletteParams: ['x','y','w','h'], params: ["200", "200", "400", "400"] },
