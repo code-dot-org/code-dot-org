@@ -44,14 +44,18 @@ class ContactRollups
   COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'".freeze
 
   # Values of forms.kind field with form data we care about
-  FORM_KINDS_WITH_DATA = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey).freeze
+  FORM_KINDS_WITH_DATA =
+    %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013
+       Petition K5OnlineProfessionalDevelopmentPostSurvey).freeze
 
   # Kinds of forms that indicate this contact is a teacher
-  FORM_LIST_TEACHER = "'BringToSchool2013','ClassSubmission','DistrictPartnerSubmission',
-      'PLP interest form','Teacher interest form','School interest form','HelpUs2013',
-      'K5OnlineProfessionalDevelopmentPostSurvey','K5ProfessionalDevelopmentSurvey',
-      'ProfessionalDevelopmentWorkshop','ProfessionalDevelopmentWorkshopSignup',
-      'StudentNomination','TeacherNomination'"
+  FORM_KINDS_TEACHER = "'BringToSchool2013','ClassSubmission',
+    'DistrictPartnerSubmission', 'PLP interest form','Teacher interest form',
+    'School interest form','HelpUs2013',
+    'K5OnlineProfessionalDevelopmentPostSurvey',
+    'K5ProfessionalDevelopmentSurvey',
+    'ProfessionalDevelopmentWorkshop','ProfessionalDevelopmentWorkshopSignup',
+    'StudentNomination','TeacherNomination'"
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
@@ -264,7 +268,7 @@ class ContactRollups
       WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.roles, ','), ''),'#{ROLE_TEACHER}'),255)
       ELSE #{DEST_TABLE_NAME}.roles
     END
-    WHERE forms.kind in (#{FORM_LIST_TEACHER})
+    WHERE forms.kind in (#{FORM_KINDS_TEACHER})
     OR #{DEST_TABLE_NAME}.form_roles like '%educator%'"
 
     log_completion(start)
