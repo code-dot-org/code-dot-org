@@ -27,10 +27,9 @@
     "disable_examples": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"\",\"hint_id\":\"\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d41d8cd98f00b204e9800998ecf8427e/courseB_maze_seq1.mp3\"}]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This should be an angry birds style \"freeplay\"",

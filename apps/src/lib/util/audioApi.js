@@ -119,7 +119,7 @@ export const dropletConfig = {
     parent: executors,
     paramButtons: { minArgs: 1, maxArgs: 2 },
     paletteParams: ['url', 'loop'],
-    params: ['"https://studio.code.org/blockly/media/example.mp3"', 'false'],
+    params: ['"sound://default.mp3"', 'false'],
     dropdown: {
       0: () => getAssetDropdown('audio'),
       1: ["true", "false"]
@@ -131,7 +131,7 @@ export const dropletConfig = {
     parent: executors,
     paramButtons: { minArgs: 0, maxArgs: 1 },
     paletteParams: ['url'],
-    params: ['"https://studio.code.org/blockly/media/example.mp3"'],
+    params: ['"sound://default.mp3"'],
     dropdown: {
       0: () => getAssetDropdown('audio')
     },

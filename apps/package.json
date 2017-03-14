@@ -45,9 +45,11 @@
     "@kadira/storybook": "^2.33.0",
     "Base64": "0.3.0",
     "babel-core": "6.9.0",
+    "babel-eslint": "^7.1.1",
     "babel-istanbul-loader": "^0.1.0",
     "babel-loader": "6.2.4",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-plugin-transform-es2015-classes": "^6.9.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
@@ -191,6 +193,7 @@
     "which": "1.1.1"
   },
   "dependencies": {
+    "@code-dot-org/js-interpreter": "^1.0.0",
     "crypto-js": "^3.1.9-1",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",

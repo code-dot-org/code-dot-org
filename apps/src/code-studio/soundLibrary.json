@@ -1,8 +1,8 @@
 {
   "//": [
-    "sound Library Manifest",
+    "Sound Library Manifest",
     "GENERATED FILE: DO NOT MODIFY DIRECTLY",
-    "See tools/scripts/rebuildsoundLibraryManifest.rb for more information."
+    "See tools/scripts/rebuildSoundLibraryManifest.rb for more information."
   ],
   "metadata": {
     "category_digital/highDown": {
@@ -11,7 +11,7 @@
       "jsonLastModified": "2017-02-27 20:52:42 UTC",
       "mp3LastModified": "2017-02-27 20:52:43 UTC",
       "version": "ElN5KW7u_Xze5X7AYhg.09nAco_90FLX",
-      "sourceUrl": "/api/v1/sound-library/ElN5KW7u_Xze5X7AYhg.09nAco_90FLX/category_digital/highDown.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/highDown.mp3"
     },
     "category_digital/highUp": {
       "name": "highUp",
@@ -19,7 +19,7 @@
       "jsonLastModified": "2017-02-27 20:52:43 UTC",
       "mp3LastModified": "2017-02-27 20:52:44 UTC",
       "version": "66ll6i_t0NnTKttKxfrzG3wT_kpg0jQK",
-      "sourceUrl": "/api/v1/sound-library/66ll6i_t0NnTKttKxfrzG3wT_kpg0jQK/category_digital/highUp.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/highUp.mp3"
     },
     "category_digital/laser1": {
       "name": "laser1",
@@ -27,7 +27,7 @@
       "jsonLastModified": "2017-02-27 20:52:44 UTC",
       "mp3LastModified": "2017-02-27 20:52:45 UTC",
       "version": "2PdqF0bnLlH_NdxAepZHB7.i5Q3jclEa",
-      "sourceUrl": "/api/v1/sound-library/2PdqF0bnLlH_NdxAepZHB7.i5Q3jclEa/category_digital/laser1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser1.mp3"
     },
     "category_digital/laser2": {
       "name": "laser2",
@@ -35,7 +35,7 @@
       "jsonLastModified": "2017-02-27 20:52:45 UTC",
       "mp3LastModified": "2017-02-27 20:52:46 UTC",
       "version": "V3RO318sQkgpKeAIh.WY.2qn7_z5BSTG",
-      "sourceUrl": "/api/v1/sound-library/V3RO318sQkgpKeAIh.WY.2qn7_z5BSTG/category_digital/laser2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser2.mp3"
     },
     "category_digital/laser3": {
       "name": "laser3",
@@ -43,7 +43,7 @@
       "jsonLastModified": "2017-02-27 20:52:46 UTC",
       "mp3LastModified": "2017-02-27 20:52:47 UTC",
       "version": "py7X2cItuwtx3MraLufQi0GTGyWIv_Zv",
-      "sourceUrl": "/api/v1/sound-library/py7X2cItuwtx3MraLufQi0GTGyWIv_Zv/category_digital/laser3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser3.mp3"
     },
     "category_digital/laser4": {
       "name": "laser4",
@@ -51,7 +51,7 @@
       "jsonLastModified": "2017-02-27 20:52:48 UTC",
       "mp3LastModified": "2017-02-27 20:52:48 UTC",
       "version": "iqcOTfGVl1Tv.Rr45ZloSOlqg7bMDlkk",
-      "sourceUrl": "/api/v1/sound-library/iqcOTfGVl1Tv.Rr45ZloSOlqg7bMDlkk/category_digital/laser4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser4.mp3"
     },
     "category_digital/laser5": {
       "name": "laser5",
@@ -59,7 +59,7 @@
       "jsonLastModified": "2017-02-27 20:52:49 UTC",
       "mp3LastModified": "2017-02-27 20:52:49 UTC",
       "version": "SHSWLQ1JCrnk9Ct5fEEaMj6xZOD8iS0_",
-      "sourceUrl": "/api/v1/sound-library/SHSWLQ1JCrnk9Ct5fEEaMj6xZOD8iS0_/category_digital/laser5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser5.mp3"
     },
     "category_digital/laser6": {
       "name": "laser6",
@@ -67,7 +67,7 @@
       "jsonLastModified": "2017-02-27 20:52:50 UTC",
       "mp3LastModified": "2017-02-27 20:52:51 UTC",
       "version": "oAZnZfTraync0mpiKmNr8EAHvsNf5gjL",
-      "sourceUrl": "/api/v1/sound-library/oAZnZfTraync0mpiKmNr8EAHvsNf5gjL/category_digital/laser6.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser6.mp3"
     },
     "category_digital/laser7": {
       "name": "laser7",
@@ -75,7 +75,7 @@
       "jsonLastModified": "2017-02-27 20:52:52 UTC",
       "mp3LastModified": "2017-02-27 20:52:52 UTC",
       "version": "g1ccULtxjnTuDWNMb6M4Ye2MZK53OvP9",
-      "sourceUrl": "/api/v1/sound-library/g1ccULtxjnTuDWNMb6M4Ye2MZK53OvP9/category_digital/laser7.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser7.mp3"
     },
     "category_digital/laser8": {
       "name": "laser8",
@@ -83,7 +83,7 @@
       "jsonLastModified": "2017-02-27 20:52:53 UTC",
       "mp3LastModified": "2017-02-27 20:52:54 UTC",
       "version": "XWDLX6nZLgrzt4MKEegHjwhtW96ZKNuI",
-      "sourceUrl": "/api/v1/sound-library/XWDLX6nZLgrzt4MKEegHjwhtW96ZKNuI/category_digital/laser8.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser8.mp3"
     },
     "category_digital/laser9": {
       "name": "laser9",
@@ -91,7 +91,7 @@
       "jsonLastModified": "2017-02-27 20:52:54 UTC",
       "mp3LastModified": "2017-02-27 20:52:55 UTC",
       "version": "MIRUUHmxETtQiT1mdbvWagLfv0nToQtE",
-      "sourceUrl": "/api/v1/sound-library/MIRUUHmxETtQiT1mdbvWagLfv0nToQtE/category_digital/laser9.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/laser9.mp3"
     },
     "category_digital/lowDown": {
       "name": "lowDown",
@@ -99,7 +99,7 @@
       "jsonLastModified": "2017-02-27 20:52:55 UTC",
       "mp3LastModified": "2017-02-27 20:52:56 UTC",
       "version": "nr4KL18bjvPpHzgGTXk88zldI1ZoHosu",
-      "sourceUrl": "/api/v1/sound-library/nr4KL18bjvPpHzgGTXk88zldI1ZoHosu/category_digital/lowDown.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/lowDown.mp3"
     },
     "category_digital/lowRandom": {
       "name": "lowRandom",
@@ -107,7 +107,7 @@
       "jsonLastModified": "2017-02-27 20:52:57 UTC",
       "mp3LastModified": "2017-02-27 20:52:57 UTC",
       "version": "GToxGCSvTJXQ_oFyEhO2gFFA.vyfBjMX",
-      "sourceUrl": "/api/v1/sound-library/GToxGCSvTJXQ_oFyEhO2gFFA.vyfBjMX/category_digital/lowRandom.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/lowRandom.mp3"
     },
     "category_digital/lowThreeTone": {
       "name": "lowThreeTone",
@@ -115,7 +115,7 @@
       "jsonLastModified": "2017-02-27 20:52:58 UTC",
       "mp3LastModified": "2017-02-27 20:52:58 UTC",
       "version": "mriszT.xFiaCbjgGhRB1OYvZ8pdYRCu7",
-      "sourceUrl": "/api/v1/sound-library/mriszT.xFiaCbjgGhRB1OYvZ8pdYRCu7/category_digital/lowThreeTone.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/lowThreeTone.mp3"
     },
     "category_digital/pepSound1": {
       "name": "pepSound1",
@@ -123,7 +123,7 @@
       "jsonLastModified": "2017-02-27 20:52:59 UTC",
       "mp3LastModified": "2017-02-27 20:53:01 UTC",
       "version": "XeYjXCvtw77z6FITjveAZc23VW3iz.NB",
-      "sourceUrl": "/api/v1/sound-library/XeYjXCvtw77z6FITjveAZc23VW3iz.NB/category_digital/pepSound1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/pepSound1.mp3"
     },
     "category_digital/pepSound2": {
       "name": "pepSound2",
@@ -131,7 +131,7 @@
       "jsonLastModified": "2017-02-27 20:53:01 UTC",
       "mp3LastModified": "2017-02-27 20:53:02 UTC",
       "version": "qjcdFQHQ6lz0IxikjW.7hgOV_sR_Jgrv",
-      "sourceUrl": "/api/v1/sound-library/qjcdFQHQ6lz0IxikjW.7hgOV_sR_Jgrv/category_digital/pepSound2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/pepSound2.mp3"
     },
     "category_digital/pepSound3": {
       "name": "pepSound3",
@@ -139,7 +139,7 @@
       "jsonLastModified": "2017-02-27 20:53:03 UTC",
       "mp3LastModified": "2017-02-27 20:53:04 UTC",
       "version": "fdYOBJS2eOrJTBDRe3tyGbYUQBCiXPb9",
-      "sourceUrl": "/api/v1/sound-library/fdYOBJS2eOrJTBDRe3tyGbYUQBCiXPb9/category_digital/pepSound3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/pepSound3.mp3"
     },
     "category_digital/pepSound4": {
       "name": "pepSound4",
@@ -147,7 +147,7 @@
       "jsonLastModified": "2017-02-27 20:53:05 UTC",
       "mp3LastModified": "2017-02-27 20:53:06 UTC",
       "version": "OVLNUJDTrBdSq5Zzmh82Bx7UP8mvNz1O",
-      "sourceUrl": "/api/v1/sound-library/OVLNUJDTrBdSq5Zzmh82Bx7UP8mvNz1O/category_digital/pepSound4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/pepSound4.mp3"
     },
     "category_digital/pepSound5": {
       "name": "pepSound5",
@@ -155,7 +155,7 @@
       "jsonLastModified": "2017-02-27 20:53:06 UTC",
       "mp3LastModified": "2017-02-27 20:53:07 UTC",
       "version": "whG2cFHMPWWgZPNOIxiDnD3u5fOVuvFD",
-      "sourceUrl": "/api/v1/sound-library/whG2cFHMPWWgZPNOIxiDnD3u5fOVuvFD/category_digital/pepSound5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/pepSound5.mp3"
     },
     "category_digital/phaseJump1": {
       "name": "phaseJump1",
@@ -163,7 +163,7 @@
       "jsonLastModified": "2017-02-27 20:53:07 UTC",
       "mp3LastModified": "2017-02-27 20:53:08 UTC",
       "version": "sgZBR4fcjIeMgAheC1UsAoGXmIY5_1lq",
-      "sourceUrl": "/api/v1/sound-library/sgZBR4fcjIeMgAheC1UsAoGXmIY5_1lq/category_digital/phaseJump1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaseJump1.mp3"
     },
     "category_digital/phaseJump2": {
       "name": "phaseJump2",
@@ -171,7 +171,7 @@
       "jsonLastModified": "2017-02-27 20:53:08 UTC",
       "mp3LastModified": "2017-02-27 20:53:09 UTC",
       "version": "uz3tlZlHV_SSjODra.iK7DwTDwkF9E5Q",
-      "sourceUrl": "/api/v1/sound-library/uz3tlZlHV_SSjODra.iK7DwTDwkF9E5Q/category_digital/phaseJump2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaseJump2.mp3"
     },
     "category_digital/phaseJump3": {
       "name": "phaseJump3",
@@ -179,7 +179,7 @@
       "jsonLastModified": "2017-02-27 20:53:09 UTC",
       "mp3LastModified": "2017-02-27 20:53:10 UTC",
       "version": "6QX1RcCIzhjpZYidWX7UeE701gwMBjAn",
-      "sourceUrl": "/api/v1/sound-library/6QX1RcCIzhjpZYidWX7UeE701gwMBjAn/category_digital/phaseJump3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaseJump3.mp3"
     },
     "category_digital/phaseJump4": {
       "name": "phaseJump4",
@@ -187,7 +187,7 @@
       "jsonLastModified": "2017-02-27 20:53:10 UTC",
       "mp3LastModified": "2017-02-27 20:53:11 UTC",
       "version": "COo1bDQGldsKRmLGjhmxTGQjiKpCTJNu",
-      "sourceUrl": "/api/v1/sound-library/COo1bDQGldsKRmLGjhmxTGQjiKpCTJNu/category_digital/phaseJump4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaseJump4.mp3"
     },
     "category_digital/phaseJump5": {
       "name": "phaseJump5",
@@ -195,7 +195,7 @@
       "jsonLastModified": "2017-02-27 20:53:11 UTC",
       "mp3LastModified": "2017-02-27 20:53:12 UTC",
       "version": "ZI.OnEGBm.DFnPnzozDv800Br4SUUbMO",
-      "sourceUrl": "/api/v1/sound-library/ZI.OnEGBm.DFnPnzozDv800Br4SUUbMO/category_digital/phaseJump5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaseJump5.mp3"
     },
     "category_digital/phaserDown1": {
       "name": "phaserDown1",
@@ -203,7 +203,7 @@
       "jsonLastModified": "2017-02-27 20:53:12 UTC",
       "mp3LastModified": "2017-02-27 20:53:13 UTC",
       "version": "vcs5Q6QD50b0lBo0QsFZAF01pI0QXJtU",
-      "sourceUrl": "/api/v1/sound-library/vcs5Q6QD50b0lBo0QsFZAF01pI0QXJtU/category_digital/phaserDown1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserDown1.mp3"
     },
     "category_digital/phaserDown2": {
       "name": "phaserDown2",
@@ -211,7 +211,7 @@
       "jsonLastModified": "2017-02-27 20:53:14 UTC",
       "mp3LastModified": "2017-02-27 20:53:15 UTC",
       "version": "KvDYsp2K8l7.0rgOVPQvPFaBf1odwwZS",
-      "sourceUrl": "/api/v1/sound-library/KvDYsp2K8l7.0rgOVPQvPFaBf1odwwZS/category_digital/phaserDown2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserDown2.mp3"
     },
     "category_digital/phaserDown3": {
       "name": "phaserDown3",
@@ -219,7 +219,7 @@
       "jsonLastModified": "2017-02-27 20:53:15 UTC",
       "mp3LastModified": "2017-02-27 20:53:16 UTC",
       "version": "QAQHxzRXVoS3nbzDxsqBeFVwTjYs6JSE",
-      "sourceUrl": "/api/v1/sound-library/QAQHxzRXVoS3nbzDxsqBeFVwTjYs6JSE/category_digital/phaserDown3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserDown3.mp3"
     },
     "category_digital/phaserUp1": {
       "name": "phaserUp1",
@@ -227,7 +227,7 @@
       "jsonLastModified": "2017-02-27 20:53:16 UTC",
       "mp3LastModified": "2017-02-27 20:53:17 UTC",
       "version": "0c.vxZrPvarRkbN16KOyUApzo.EPhoSl",
-      "sourceUrl": "/api/v1/sound-library/0c.vxZrPvarRkbN16KOyUApzo.EPhoSl/category_digital/phaserUp1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserUp1.mp3"
     },
     "category_digital/phaserUp2": {
       "name": "phaserUp2",
@@ -235,7 +235,7 @@
       "jsonLastModified": "2017-02-27 20:53:17 UTC",
       "mp3LastModified": "2017-02-27 20:53:18 UTC",
       "version": "tJx9efTIKvh1SJ27kcHxoPCWq_SMhg8Y",
-      "sourceUrl": "/api/v1/sound-library/tJx9efTIKvh1SJ27kcHxoPCWq_SMhg8Y/category_digital/phaserUp2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserUp2.mp3"
     },
     "category_digital/phaserUp3": {
       "name": "phaserUp3",
@@ -243,7 +243,7 @@
       "jsonLastModified": "2017-02-27 20:53:18 UTC",
       "mp3LastModified": "2017-02-27 20:53:18 UTC",
       "version": "48odPO0ehwSjiZhxZd0Xb9MjBypX_EJK",
-      "sourceUrl": "/api/v1/sound-library/48odPO0ehwSjiZhxZd0Xb9MjBypX_EJK/category_digital/phaserUp3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserUp3.mp3"
     },
     "category_digital/phaserUp4": {
       "name": "phaserUp4",
@@ -251,7 +251,7 @@
       "jsonLastModified": "2017-02-27 20:53:18 UTC",
       "mp3LastModified": "2017-02-27 20:53:19 UTC",
       "version": "BPQo40K5SlepO3CO1BgTfS0XjhPhcLEW",
-      "sourceUrl": "/api/v1/sound-library/BPQo40K5SlepO3CO1BgTfS0XjhPhcLEW/category_digital/phaserUp4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserUp4.mp3"
     },
     "category_digital/phaserUp5": {
       "name": "phaserUp5",
@@ -259,7 +259,7 @@
       "jsonLastModified": "2017-02-27 20:53:19 UTC",
       "mp3LastModified": "2017-02-27 20:53:20 UTC",
       "version": "NgQ.0qkNJs7Dyf_3BbS0_iqOuYpNREnd",
-      "sourceUrl": "/api/v1/sound-library/NgQ.0qkNJs7Dyf_3BbS0_iqOuYpNREnd/category_digital/phaserUp5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserUp5.mp3"
     },
     "category_digital/phaserUp6": {
       "name": "phaserUp6",
@@ -267,7 +267,7 @@
       "jsonLastModified": "2017-02-27 20:53:21 UTC",
       "mp3LastModified": "2017-02-27 20:53:21 UTC",
       "version": "PDRmlhR1pwyTBXuHcBm0v.0KUnxC53OQ",
-      "sourceUrl": "/api/v1/sound-library/PDRmlhR1pwyTBXuHcBm0v.0KUnxC53OQ/category_digital/phaserUp6.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserUp6.mp3"
     },
     "category_digital/phaserUp7": {
       "name": "phaserUp7",
@@ -275,7 +275,7 @@
       "jsonLastModified": "2017-02-27 20:53:22 UTC",
       "mp3LastModified": "2017-02-27 20:53:23 UTC",
       "version": "KLx9ysIzUGYJBUl7f8hTUNMj2XUM7Vgz",
-      "sourceUrl": "/api/v1/sound-library/KLx9ysIzUGYJBUl7f8hTUNMj2XUM7Vgz/category_digital/phaserUp7.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/phaserUp7.mp3"
     },
     "category_digital/powerUp1": {
       "name": "powerUp1",
@@ -283,7 +283,7 @@
       "jsonLastModified": "2017-02-27 20:53:23 UTC",
       "mp3LastModified": "2017-02-27 20:53:24 UTC",
       "version": ".iCye3HfUELa02ypu8e7Tk5w2pZOcXlQ",
-      "sourceUrl": "/api/v1/sound-library/.iCye3HfUELa02ypu8e7Tk5w2pZOcXlQ/category_digital/powerUp1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp1.mp3"
     },
     "category_digital/powerUp10": {
       "name": "powerUp10",
@@ -291,7 +291,7 @@
       "jsonLastModified": "2017-02-27 20:53:34 UTC",
       "mp3LastModified": "2017-02-27 20:53:34 UTC",
       "version": "Pf_rISm6U.rV9SPSYSlaMPa0tGhbUUcs",
-      "sourceUrl": "/api/v1/sound-library/Pf_rISm6U.rV9SPSYSlaMPa0tGhbUUcs/category_digital/powerUp10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp10.mp3"
     },
     "category_digital/powerUp11": {
       "name": "powerUp11",
@@ -299,7 +299,7 @@
       "jsonLastModified": "2017-02-27 20:53:35 UTC",
       "mp3LastModified": "2017-02-27 20:53:36 UTC",
       "version": "vmMPxfujqOW25wU2uSqGz89Rzfbk5g1J",
-      "sourceUrl": "/api/v1/sound-library/vmMPxfujqOW25wU2uSqGz89Rzfbk5g1J/category_digital/powerUp11.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp11.mp3"
     },
     "category_digital/powerUp12": {
       "name": "powerUp12",
@@ -307,7 +307,7 @@
       "jsonLastModified": "2017-02-27 20:53:36 UTC",
       "mp3LastModified": "2017-02-27 20:53:37 UTC",
       "version": "V9oTZzmk2dPuIPHn0x1sxqlmrmIRmU7Q",
-      "sourceUrl": "/api/v1/sound-library/V9oTZzmk2dPuIPHn0x1sxqlmrmIRmU7Q/category_digital/powerUp12.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp12.mp3"
     },
     "category_digital/powerUp2": {
       "name": "powerUp2",
@@ -315,7 +315,7 @@
       "jsonLastModified": "2017-02-27 20:53:24 UTC",
       "mp3LastModified": "2017-02-27 20:53:25 UTC",
       "version": "qnMv5BZiIZ3orGSSW546oeZQ.2F9hM4X",
-      "sourceUrl": "/api/v1/sound-library/qnMv5BZiIZ3orGSSW546oeZQ.2F9hM4X/category_digital/powerUp2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp2.mp3"
     },
     "category_digital/powerUp3": {
       "name": "powerUp3",
@@ -323,7 +323,7 @@
       "jsonLastModified": "2017-02-27 20:53:25 UTC",
       "mp3LastModified": "2017-02-27 20:53:26 UTC",
       "version": "vVkyFRdN7VnGgv25IBirry5klacO6ts0",
-      "sourceUrl": "/api/v1/sound-library/vVkyFRdN7VnGgv25IBirry5klacO6ts0/category_digital/powerUp3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp3.mp3"
     },
     "category_digital/powerUp4": {
       "name": "powerUp4",
@@ -331,7 +331,7 @@
       "jsonLastModified": "2017-02-27 20:53:26 UTC",
       "mp3LastModified": "2017-02-27 20:53:27 UTC",
       "version": "FsEmNy8EXEf3Btjvy19ZchH.12XUEFRX",
-      "sourceUrl": "/api/v1/sound-library/FsEmNy8EXEf3Btjvy19ZchH.12XUEFRX/category_digital/powerUp4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp4.mp3"
     },
     "category_digital/powerUp5": {
       "name": "powerUp5",
@@ -339,7 +339,7 @@
       "jsonLastModified": "2017-02-27 20:53:27 UTC",
       "mp3LastModified": "2017-02-27 20:53:28 UTC",
       "version": "zJqBV6r62DkJC_FvktFhoJq4FFsxXQHJ",
-      "sourceUrl": "/api/v1/sound-library/zJqBV6r62DkJC_FvktFhoJq4FFsxXQHJ/category_digital/powerUp5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp5.mp3"
     },
     "category_digital/powerUp6": {
       "name": "powerUp6",
@@ -347,7 +347,7 @@
       "jsonLastModified": "2017-02-27 20:53:28 UTC",
       "mp3LastModified": "2017-02-27 20:53:29 UTC",
       "version": "17isvBewqb6jb6ys_iEbdmzNGdyJE4Uf",
-      "sourceUrl": "/api/v1/sound-library/17isvBewqb6jb6ys_iEbdmzNGdyJE4Uf/category_digital/powerUp6.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp6.mp3"
     },
     "category_digital/powerUp7": {
       "name": "powerUp7",
@@ -355,7 +355,7 @@
       "jsonLastModified": "2017-02-27 20:53:29 UTC",
       "mp3LastModified": "2017-02-27 20:53:30 UTC",
       "version": "VVfeQNbrUfIgAozEkyMAEnNcVApUfqwV",
-      "sourceUrl": "/api/v1/sound-library/VVfeQNbrUfIgAozEkyMAEnNcVApUfqwV/category_digital/powerUp7.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp7.mp3"
     },
     "category_digital/powerUp8": {
       "name": "powerUp8",
@@ -363,7 +363,7 @@
       "jsonLastModified": "2017-02-27 20:53:30 UTC",
       "mp3LastModified": "2017-02-27 20:53:31 UTC",
       "version": "KO8hxBMX6fAS3WFQ9lvakNtJh.y9BJ5J",
-      "sourceUrl": "/api/v1/sound-library/KO8hxBMX6fAS3WFQ9lvakNtJh.y9BJ5J/category_digital/powerUp8.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp8.mp3"
     },
     "category_digital/powerUp9": {
       "name": "powerUp9",
@@ -371,7 +371,7 @@
       "jsonLastModified": "2017-02-27 20:53:31 UTC",
       "mp3LastModified": "2017-02-27 20:53:32 UTC",
       "version": "QoSXTb57vOROULbKCdtltI6JMshFDMi8",
-      "sourceUrl": "/api/v1/sound-library/QoSXTb57vOROULbKCdtltI6JMshFDMi8/category_digital/powerUp9.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_digital/powerUp9.mp3"
     },
     "category_female_voiceover/female_voice_1": {
       "name": "female_voice_1",
@@ -379,7 +379,7 @@
       "jsonLastModified": "2017-02-27 20:55:06 UTC",
       "mp3LastModified": "2017-02-27 20:55:07 UTC",
       "version": "leddcam2tPE33_1ucN6rs_BvSrQyXw0s",
-      "sourceUrl": "/api/v1/sound-library/leddcam2tPE33_1ucN6rs_BvSrQyXw0s/category_female_voiceover/female_voice_1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_1.mp3"
     },
     "category_female_voiceover/female_voice_10": {
       "name": "female_voice_10",
@@ -387,7 +387,7 @@
       "jsonLastModified": "2017-02-27 20:55:23 UTC",
       "mp3LastModified": "2017-02-27 20:55:23 UTC",
       "version": "oGLEbMWTkfnvdNa2epCgp4CnM93gsULf",
-      "sourceUrl": "/api/v1/sound-library/oGLEbMWTkfnvdNa2epCgp4CnM93gsULf/category_female_voiceover/female_voice_10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_10.mp3"
     },
     "category_female_voiceover/female_voice_2": {
       "name": "female_voice_2",
@@ -395,7 +395,7 @@
       "jsonLastModified": "2017-02-27 20:55:08 UTC",
       "mp3LastModified": "2017-02-27 20:56:37 UTC",
       "version": "xAZx7EPBs_Y03C2gnZBhXjfwbdNDKYe6",
-      "sourceUrl": "/api/v1/sound-library/xAZx7EPBs_Y03C2gnZBhXjfwbdNDKYe6/category_female_voiceover/female_voice_2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_2.mp3"
     },
     "category_female_voiceover/female_voice_3": {
       "name": "female_voice_3",
@@ -403,7 +403,7 @@
       "jsonLastModified": "2017-02-27 20:55:14 UTC",
       "mp3LastModified": "2017-02-27 20:55:15 UTC",
       "version": "k9Gz_R.kWU3ZUcoxntqxoW1akZUVHR64",
-      "sourceUrl": "/api/v1/sound-library/k9Gz_R.kWU3ZUcoxntqxoW1akZUVHR64/category_female_voiceover/female_voice_3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_3.mp3"
     },
     "category_female_voiceover/female_voice_4": {
       "name": "female_voice_4",
@@ -411,7 +411,7 @@
       "jsonLastModified": "2017-02-27 20:55:15 UTC",
       "mp3LastModified": "2017-02-27 20:55:16 UTC",
       "version": "pfuGru1WXiv4.mxmq9q45dEbNXPmrHWL",
-      "sourceUrl": "/api/v1/sound-library/pfuGru1WXiv4.mxmq9q45dEbNXPmrHWL/category_female_voiceover/female_voice_4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_4.mp3"
     },
     "category_female_voiceover/female_voice_5": {
       "name": "female_voice_5",
@@ -419,7 +419,7 @@
       "jsonLastModified": "2017-02-27 20:55:16 UTC",
       "mp3LastModified": "2017-02-27 20:55:17 UTC",
       "version": "jBd6AleNd4tPkQkCwA.RGtNsBnHWohHm",
-      "sourceUrl": "/api/v1/sound-library/jBd6AleNd4tPkQkCwA.RGtNsBnHWohHm/category_female_voiceover/female_voice_5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_5.mp3"
     },
     "category_female_voiceover/female_voice_6": {
       "name": "female_voice_6",
@@ -427,7 +427,7 @@
       "jsonLastModified": "2017-02-27 20:55:18 UTC",
       "mp3LastModified": "2017-02-27 20:55:18 UTC",
       "version": "rWXUHuuCBvwBpczZQRNYsL4Usj04nTAU",
-      "sourceUrl": "/api/v1/sound-library/rWXUHuuCBvwBpczZQRNYsL4Usj04nTAU/category_female_voiceover/female_voice_6.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_6.mp3"
     },
     "category_female_voiceover/female_voice_7": {
       "name": "female_voice_7",
@@ -435,7 +435,7 @@
       "jsonLastModified": "2017-02-27 20:55:19 UTC",
       "mp3LastModified": "2017-02-27 20:55:19 UTC",
       "version": "IUijUYVzA6VhzQS_O1moujsFjfpMMKkE",
-      "sourceUrl": "/api/v1/sound-library/IUijUYVzA6VhzQS_O1moujsFjfpMMKkE/category_female_voiceover/female_voice_7.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_7.mp3"
     },
     "category_female_voiceover/female_voice_8": {
       "name": "female_voice_8",
@@ -443,7 +443,7 @@
       "jsonLastModified": "2017-02-27 20:55:20 UTC",
       "mp3LastModified": "2017-02-27 20:55:21 UTC",
       "version": "AJm9ev82k4trQuif4QlCYQhSb.E.oOfG",
-      "sourceUrl": "/api/v1/sound-library/AJm9ev82k4trQuif4QlCYQhSb.E.oOfG/category_female_voiceover/female_voice_8.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_8.mp3"
     },
     "category_female_voiceover/female_voice_9": {
       "name": "female_voice_9",
@@ -451,7 +451,7 @@
       "jsonLastModified": "2017-02-27 20:55:21 UTC",
       "mp3LastModified": "2017-02-27 20:55:22 UTC",
       "version": "GpNOSh1RUyMiOs11wsdaPpDCol1boru8",
-      "sourceUrl": "/api/v1/sound-library/GpNOSh1RUyMiOs11wsdaPpDCol1boru8/category_female_voiceover/female_voice_9.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_9.mp3"
     },
     "category_female_voiceover/female_voice_congratulations": {
       "name": "female_voice_congratulations",
@@ -459,7 +459,7 @@
       "jsonLastModified": "2017-02-27 20:55:24 UTC",
       "mp3LastModified": "2017-02-27 20:55:24 UTC",
       "version": "Sykdrvp9lm7MYjhL8NU1s3osJrY0yMm1",
-      "sourceUrl": "/api/v1/sound-library/Sykdrvp9lm7MYjhL8NU1s3osJrY0yMm1/category_female_voiceover/female_voice_congratulations.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_congratulations.mp3"
     },
     "category_female_voiceover/female_voice_correct": {
       "name": "female_voice_correct",
@@ -467,7 +467,7 @@
       "jsonLastModified": "2017-02-27 20:55:25 UTC",
       "mp3LastModified": "2017-02-27 20:55:26 UTC",
       "version": "WtYAFsVnvbAzKNQ8vS2PnLcTw7zykBDV",
-      "sourceUrl": "/api/v1/sound-library/WtYAFsVnvbAzKNQ8vS2PnLcTw7zykBDV/category_female_voiceover/female_voice_correct.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_correct.mp3"
     },
     "category_female_voiceover/female_voice_final_round": {
       "name": "female_voice_final_round",
@@ -475,7 +475,7 @@
       "jsonLastModified": "2017-02-27 20:55:26 UTC",
       "mp3LastModified": "2017-02-27 20:55:27 UTC",
       "version": "8J_7_YM9HV2iSxWzWHd6YbX8ocFjlV0v",
-      "sourceUrl": "/api/v1/sound-library/8J_7_YM9HV2iSxWzWHd6YbX8ocFjlV0v/category_female_voiceover/female_voice_final_round.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_final_round.mp3"
     },
     "category_female_voiceover/female_voice_game_over": {
       "name": "female_voice_game_over",
@@ -483,7 +483,7 @@
       "jsonLastModified": "2017-02-27 20:55:28 UTC",
       "mp3LastModified": "2017-02-27 20:55:28 UTC",
       "version": "3HcJ_owYOl9ypbF6rSlA8CXCRo.iSsly",
-      "sourceUrl": "/api/v1/sound-library/3HcJ_owYOl9ypbF6rSlA8CXCRo.iSsly/category_female_voiceover/female_voice_game_over.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_game_over.mp3"
     },
     "category_female_voiceover/female_voice_go": {
       "name": "female_voice_go",
@@ -491,7 +491,7 @@
       "jsonLastModified": "2017-02-27 20:55:29 UTC",
       "mp3LastModified": "2017-02-27 20:55:29 UTC",
       "version": "tynqfM_UPoq7ekOQ2hVhsFVWkVPOLlxS",
-      "sourceUrl": "/api/v1/sound-library/tynqfM_UPoq7ekOQ2hVhsFVWkVPOLlxS/category_female_voiceover/female_voice_go.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_go.mp3"
     },
     "category_female_voiceover/female_voice_hurry_up": {
       "name": "female_voice_hurry_up",
@@ -499,7 +499,7 @@
       "jsonLastModified": "2017-02-27 20:55:30 UTC",
       "mp3LastModified": "2017-02-27 20:55:31 UTC",
       "version": "EKW9iWptth4hHDaXGl1GXhNr7h5JST2H",
-      "sourceUrl": "/api/v1/sound-library/EKW9iWptth4hHDaXGl1GXhNr7h5JST2H/category_female_voiceover/female_voice_hurry_up.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_hurry_up.mp3"
     },
     "category_female_voiceover/female_voice_its_a_tie": {
       "name": "female_voice_its_a_tie",
@@ -507,7 +507,7 @@
       "jsonLastModified": "2017-02-27 20:55:33 UTC",
       "mp3LastModified": "2017-02-27 20:55:34 UTC",
       "version": "EHWefyi_TwnoTacH8SRVZ8IvSCdbcalI",
-      "sourceUrl": "/api/v1/sound-library/EHWefyi_TwnoTacH8SRVZ8IvSCdbcalI/category_female_voiceover/female_voice_its_a_tie.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_its_a_tie.mp3"
     },
     "category_female_voiceover/female_voice_level": {
       "name": "female_voice_level",
@@ -515,7 +515,7 @@
       "jsonLastModified": "2017-02-27 20:55:36 UTC",
       "mp3LastModified": "2017-02-27 20:55:37 UTC",
       "version": "nxN8V1MYfWw6Awaywwj6cafrC6uswy3t",
-      "sourceUrl": "/api/v1/sound-library/nxN8V1MYfWw6Awaywwj6cafrC6uswy3t/category_female_voiceover/female_voice_level.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_level.mp3"
     },
     "category_female_voiceover/female_voice_level_up": {
       "name": "female_voice_level_up",
@@ -523,7 +523,7 @@
       "jsonLastModified": "2017-02-27 20:55:34 UTC",
       "mp3LastModified": "2017-02-27 20:55:35 UTC",
       "version": "iLQCc6JPYkLtG1CB9j9FZ4vgESdu0Wd2",
-      "sourceUrl": "/api/v1/sound-library/iLQCc6JPYkLtG1CB9j9FZ4vgESdu0Wd2/category_female_voiceover/female_voice_level_up.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_level_up.mp3"
     },
     "category_female_voiceover/female_voice_mission_completed": {
       "name": "female_voice_mission_completed",
@@ -531,7 +531,7 @@
       "jsonLastModified": "2017-02-27 20:55:38 UTC",
       "mp3LastModified": "2017-02-27 20:55:39 UTC",
       "version": "srFFSUR1rQohIkymigzWlW40Skq2bbnO",
-      "sourceUrl": "/api/v1/sound-library/srFFSUR1rQohIkymigzWlW40Skq2bbnO/category_female_voiceover/female_voice_mission_completed.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_mission_completed.mp3"
     },
     "category_female_voiceover/female_voice_mission_failed": {
       "name": "female_voice_mission_failed",
@@ -539,7 +539,7 @@
       "jsonLastModified": "2017-02-27 20:55:39 UTC",
       "mp3LastModified": "2017-02-27 20:55:40 UTC",
       "version": "WbF0sNJVTVWxFpHGDA8ND41PxhFjSsWW",
-      "sourceUrl": "/api/v1/sound-library/WbF0sNJVTVWxFpHGDA8ND41PxhFjSsWW/category_female_voiceover/female_voice_mission_failed.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_mission_failed.mp3"
     },
     "category_female_voiceover/female_voice_new_highscore": {
       "name": "female_voice_new_highscore",
@@ -547,7 +547,7 @@
       "jsonLastModified": "2017-02-27 20:55:40 UTC",
       "mp3LastModified": "2017-02-27 20:55:41 UTC",
       "version": "rOlGahknVar6I4mE5FzTUfUJyRs8sjY1",
-      "sourceUrl": "/api/v1/sound-library/rOlGahknVar6I4mE5FzTUfUJyRs8sjY1/category_female_voiceover/female_voice_new_highscore.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_new_highscore.mp3"
     },
     "category_female_voiceover/female_voice_objective_achieved": {
       "name": "female_voice_objective_achieved",
@@ -555,7 +555,7 @@
       "jsonLastModified": "2017-02-27 20:55:42 UTC",
       "mp3LastModified": "2017-02-27 20:55:42 UTC",
       "version": "xJEMoJDvWkSk4wk34eZsVyF0yeScRS1a",
-      "sourceUrl": "/api/v1/sound-library/xJEMoJDvWkSk4wk34eZsVyF0yeScRS1a/category_female_voiceover/female_voice_objective_achieved.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_objective_achieved.mp3"
     },
     "category_female_voiceover/female_voice_power_up": {
       "name": "female_voice_power_up",
@@ -563,7 +563,7 @@
       "jsonLastModified": "2017-02-27 20:55:43 UTC",
       "mp3LastModified": "2017-02-27 20:55:44 UTC",
       "version": "dnCCbtBsFhWaqU8qFLRPk.WVdzP2mnJv",
-      "sourceUrl": "/api/v1/sound-library/dnCCbtBsFhWaqU8qFLRPk.WVdzP2mnJv/category_female_voiceover/female_voice_power_up.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_power_up.mp3"
     },
     "category_female_voiceover/female_voice_ready": {
       "name": "female_voice_ready",
@@ -571,7 +571,7 @@
       "jsonLastModified": "2017-02-27 20:55:45 UTC",
       "mp3LastModified": "2017-02-27 20:55:45 UTC",
       "version": "TTsiuK3lUr1JKbiWP8uzBYjPdz5vZHuO",
-      "sourceUrl": "/api/v1/sound-library/TTsiuK3lUr1JKbiWP8uzBYjPdz5vZHuO/category_female_voiceover/female_voice_ready.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_ready.mp3"
     },
     "category_female_voiceover/female_voice_round": {
       "name": "female_voice_round",
@@ -579,7 +579,7 @@
       "jsonLastModified": "2017-02-27 20:55:45 UTC",
       "mp3LastModified": "2017-02-27 20:55:46 UTC",
       "version": "vL6AB473xT7_EymtCOicQJU3iuoG6bkE",
-      "sourceUrl": "/api/v1/sound-library/vL6AB473xT7_EymtCOicQJU3iuoG6bkE/category_female_voiceover/female_voice_round.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_round.mp3"
     },
     "category_female_voiceover/female_voice_set": {
       "name": "female_voice_set",
@@ -587,7 +587,7 @@
       "jsonLastModified": "2017-02-27 20:55:47 UTC",
       "mp3LastModified": "2017-02-27 20:55:47 UTC",
       "version": "W8NVodYfCUpK4OW90D3T26M1.11.LQri",
-      "sourceUrl": "/api/v1/sound-library/W8NVodYfCUpK4OW90D3T26M1.11.LQri/category_female_voiceover/female_voice_set.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_set.mp3"
     },
     "category_female_voiceover/female_voice_time_over": {
       "name": "female_voice_time_over",
@@ -595,7 +595,7 @@
       "jsonLastModified": "2017-02-27 20:55:48 UTC",
       "mp3LastModified": "2017-02-27 20:55:49 UTC",
       "version": "YwR.bO6ZmdDYkP6nyM8SVLIAkyoVyFRd",
-      "sourceUrl": "/api/v1/sound-library/YwR.bO6ZmdDYkP6nyM8SVLIAkyoVyFRd/category_female_voiceover/female_voice_time_over.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_time_over.mp3"
     },
     "category_female_voiceover/female_voice_wrong": {
       "name": "female_voice_wrong",
@@ -603,7 +603,7 @@
       "jsonLastModified": "2017-02-27 20:55:50 UTC",
       "mp3LastModified": "2017-02-27 20:55:50 UTC",
       "version": "IurYo50MLvrUPVwDGrqhKKly_mrGt4QA",
-      "sourceUrl": "/api/v1/sound-library/IurYo50MLvrUPVwDGrqhKKly_mrGt4QA/category_female_voiceover/female_voice_wrong.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_wrong.mp3"
     },
     "category_female_voiceover/female_voice_you_lose": {
       "name": "female_voice_you_lose",
@@ -611,7 +611,7 @@
       "jsonLastModified": "2017-02-27 20:55:51 UTC",
       "mp3LastModified": "2017-02-27 20:55:53 UTC",
       "version": ".fXlQFe7sQVcaqcmenz124oh_sesbhGl",
-      "sourceUrl": "/api/v1/sound-library/.fXlQFe7sQVcaqcmenz124oh_sesbhGl/category_female_voiceover/female_voice_you_lose.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_you_lose.mp3"
     },
     "category_female_voiceover/female_voice_you_win": {
       "name": "female_voice_you_win",
@@ -619,7 +619,7 @@
       "jsonLastModified": "2017-02-27 20:55:53 UTC",
       "mp3LastModified": "2017-02-27 20:55:54 UTC",
       "version": "d7QB6MYt1rOUbh07NUAJZH7zDh8P8.bf",
-      "sourceUrl": "/api/v1/sound-library/d7QB6MYt1rOUbh07NUAJZH7zDh8P8.bf/category_female_voiceover/female_voice_you_win.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_female_voiceover/female_voice_you_win.mp3"
     },
     "category_gameplay/cardFan1": {
       "name": "cardFan1",
@@ -627,7 +627,7 @@
       "jsonLastModified": "2017-02-27 20:59:19 UTC",
       "mp3LastModified": "2017-02-27 20:59:20 UTC",
       "version": "KyZOBksdJiQSlvoiOzFGpryJiMexdfks",
-      "sourceUrl": "/api/v1/sound-library/KyZOBksdJiQSlvoiOzFGpryJiMexdfks/category_gameplay/cardFan1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardFan1.mp3"
     },
     "category_gameplay/cardFan2": {
       "name": "cardFan2",
@@ -635,7 +635,7 @@
       "jsonLastModified": "2017-02-27 20:59:20 UTC",
       "mp3LastModified": "2017-02-27 20:59:22 UTC",
       "version": "NjEdROiKmA8V7f8DDdB0ZiET0TjRDCIU",
-      "sourceUrl": "/api/v1/sound-library/NjEdROiKmA8V7f8DDdB0ZiET0TjRDCIU/category_gameplay/cardFan2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardFan2.mp3"
     },
     "category_gameplay/cardOpenPackage1": {
       "name": "cardOpenPackage1",
@@ -643,7 +643,7 @@
       "jsonLastModified": "2017-02-27 20:59:22 UTC",
       "mp3LastModified": "2017-02-27 20:59:23 UTC",
       "version": "LoNBYGv5f9io7Gh3aV62_WkHhaaWRr1J",
-      "sourceUrl": "/api/v1/sound-library/LoNBYGv5f9io7Gh3aV62_WkHhaaWRr1J/category_gameplay/cardOpenPackage1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardOpenPackage1.mp3"
     },
     "category_gameplay/cardOpenPackage2": {
       "name": "cardOpenPackage2",
@@ -651,7 +651,7 @@
       "jsonLastModified": "2017-02-27 20:59:23 UTC",
       "mp3LastModified": "2017-02-27 20:59:24 UTC",
       "version": "eDAaJV.VCg9zfi1t1SVFYNEuoRj3Weou",
-      "sourceUrl": "/api/v1/sound-library/eDAaJV.VCg9zfi1t1SVFYNEuoRj3Weou/category_gameplay/cardOpenPackage2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardOpenPackage2.mp3"
     },
     "category_gameplay/cardPlace1": {
       "name": "cardPlace1",
@@ -659,7 +659,7 @@
       "jsonLastModified": "2017-02-27 20:59:25 UTC",
       "mp3LastModified": "2017-02-27 20:59:25 UTC",
       "version": "DPgdrEb0Zj1bJejejVqY.OwsYVRQzm3v",
-      "sourceUrl": "/api/v1/sound-library/DPgdrEb0Zj1bJejejVqY.OwsYVRQzm3v/category_gameplay/cardPlace1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardPlace1.mp3"
     },
     "category_gameplay/cardPlace2": {
       "name": "cardPlace2",
@@ -667,7 +667,7 @@
       "jsonLastModified": "2017-02-27 20:59:25 UTC",
       "mp3LastModified": "2017-02-27 20:59:26 UTC",
       "version": "f_UXd1gWejb5bSPdUe34tHgFiQTKho.S",
-      "sourceUrl": "/api/v1/sound-library/f_UXd1gWejb5bSPdUe34tHgFiQTKho.S/category_gameplay/cardPlace2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardPlace2.mp3"
     },
     "category_gameplay/cardShove1": {
       "name": "cardShove1",
@@ -675,7 +675,7 @@
       "jsonLastModified": "2017-02-27 20:59:26 UTC",
       "mp3LastModified": "2017-02-27 20:59:27 UTC",
       "version": "yYMSB9UixZ4bFBP4bg8EuKeoGV2YA4W_",
-      "sourceUrl": "/api/v1/sound-library/yYMSB9UixZ4bFBP4bg8EuKeoGV2YA4W_/category_gameplay/cardShove1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardShove1.mp3"
     },
     "category_gameplay/cardShove2": {
       "name": "cardShove2",
@@ -683,7 +683,7 @@
       "jsonLastModified": "2017-02-27 20:59:27 UTC",
       "mp3LastModified": "2017-02-27 20:59:28 UTC",
       "version": "pR_2lsFPABDPGcpk.4jTvn2ZlBvlJfCh",
-      "sourceUrl": "/api/v1/sound-library/pR_2lsFPABDPGcpk.4jTvn2ZlBvlJfCh/category_gameplay/cardShove2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardShove2.mp3"
     },
     "category_gameplay/cardShuffle": {
       "name": "cardShuffle",
@@ -691,7 +691,7 @@
       "jsonLastModified": "2017-02-27 20:59:29 UTC",
       "mp3LastModified": "2017-02-27 20:59:29 UTC",
       "version": "qNDT0gk1XjTid3_eqCjf_71ziDcanCIj",
-      "sourceUrl": "/api/v1/sound-library/qNDT0gk1XjTid3_eqCjf_71ziDcanCIj/category_gameplay/cardShuffle.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardShuffle.mp3"
     },
     "category_gameplay/cardSlide1": {
       "name": "cardSlide1",
@@ -699,7 +699,7 @@
       "jsonLastModified": "2017-02-27 20:59:30 UTC",
       "mp3LastModified": "2017-02-27 20:59:30 UTC",
       "version": "jnlmmVxeteZMD2sTKliFjicjf50k416e",
-      "sourceUrl": "/api/v1/sound-library/jnlmmVxeteZMD2sTKliFjicjf50k416e/category_gameplay/cardSlide1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardSlide1.mp3"
     },
     "category_gameplay/cardSlide2": {
       "name": "cardSlide2",
@@ -707,7 +707,7 @@
       "jsonLastModified": "2017-02-27 20:59:30 UTC",
       "mp3LastModified": "2017-02-27 20:59:31 UTC",
       "version": "5IVDo2.Ov5Moz6mwl7OfwB.vfZJyvng2",
-      "sourceUrl": "/api/v1/sound-library/5IVDo2.Ov5Moz6mwl7OfwB.vfZJyvng2/category_gameplay/cardSlide2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardSlide2.mp3"
     },
     "category_gameplay/cardTakeOutPackage1": {
       "name": "cardTakeOutPackage1",
@@ -715,7 +715,7 @@
       "jsonLastModified": "2017-02-27 20:59:31 UTC",
       "mp3LastModified": "2017-02-27 20:59:33 UTC",
       "version": "9A65Ai46CYqlNU2AOfCKpmT5LyWUjaWM",
-      "sourceUrl": "/api/v1/sound-library/9A65Ai46CYqlNU2AOfCKpmT5LyWUjaWM/category_gameplay/cardTakeOutPackage1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardTakeOutPackage1.mp3"
     },
     "category_gameplay/cardTakeOutPackage2": {
       "name": "cardTakeOutPackage2",
@@ -723,7 +723,7 @@
       "jsonLastModified": "2017-02-27 20:59:33 UTC",
       "mp3LastModified": "2017-02-27 20:59:34 UTC",
       "version": "Y08yhb4v7pxR8thiooRxEHFX9ei_O2IK",
-      "sourceUrl": "/api/v1/sound-library/Y08yhb4v7pxR8thiooRxEHFX9ei_O2IK/category_gameplay/cardTakeOutPackage2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/cardTakeOutPackage2.mp3"
     },
     "category_gameplay/diceThrow1": {
       "name": "diceThrow1",
@@ -731,7 +731,7 @@
       "jsonLastModified": "2017-02-27 20:59:34 UTC",
       "mp3LastModified": "2017-02-27 20:59:35 UTC",
       "version": ".fFQhunfhrjQXngYVRhT_TMNFw1ajkwY",
-      "sourceUrl": "/api/v1/sound-library/.fFQhunfhrjQXngYVRhT_TMNFw1ajkwY/category_gameplay/diceThrow1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/diceThrow1.mp3"
     },
     "category_gameplay/diceThrow2": {
       "name": "diceThrow2",
@@ -739,7 +739,7 @@
       "jsonLastModified": "2017-02-27 20:59:36 UTC",
       "mp3LastModified": "2017-02-27 20:59:36 UTC",
       "version": "iokA3gDY6mJAMhxKeRxSD.MWu8aJUCVX",
-      "sourceUrl": "/api/v1/sound-library/iokA3gDY6mJAMhxKeRxSD.MWu8aJUCVX/category_gameplay/diceThrow2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/diceThrow2.mp3"
     },
     "category_gameplay/dieGrab1": {
       "name": "dieGrab1",
@@ -747,7 +747,7 @@
       "jsonLastModified": "2017-02-27 20:59:37 UTC",
       "mp3LastModified": "2017-02-27 20:59:37 UTC",
       "version": "adPH_yXhk8hE.02FkmA6edLuSGYhjQ6J",
-      "sourceUrl": "/api/v1/sound-library/adPH_yXhk8hE.02FkmA6edLuSGYhjQ6J/category_gameplay/dieGrab1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/dieGrab1.mp3"
     },
     "category_gameplay/dieGrab2": {
       "name": "dieGrab2",
@@ -755,7 +755,7 @@
       "jsonLastModified": "2017-02-27 20:59:38 UTC",
       "mp3LastModified": "2017-02-27 20:59:38 UTC",
       "version": "XXQfdjeBXo5GmesNEZ97ZjOTn9Paq3rm",
-      "sourceUrl": "/api/v1/sound-library/XXQfdjeBXo5GmesNEZ97ZjOTn9Paq3rm/category_gameplay/dieGrab2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/dieGrab2.mp3"
     },
     "category_gameplay/dieShuffle1": {
       "name": "dieShuffle1",
@@ -763,7 +763,7 @@
       "jsonLastModified": "2017-02-27 20:59:39 UTC",
       "mp3LastModified": "2017-02-27 20:59:39 UTC",
       "version": "fE7aPE9QuMuTeePkqB9Dus6LnHLq9mXL",
-      "sourceUrl": "/api/v1/sound-library/fE7aPE9QuMuTeePkqB9Dus6LnHLq9mXL/category_gameplay/dieShuffle1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/dieShuffle1.mp3"
     },
     "category_gameplay/dieShuffle2": {
       "name": "dieShuffle2",
@@ -771,7 +771,7 @@
       "jsonLastModified": "2017-02-27 20:59:40 UTC",
       "mp3LastModified": "2017-02-27 20:59:40 UTC",
       "version": "fpTt_dSk3onwJwW403UBsThAUY66VchG",
-      "sourceUrl": "/api/v1/sound-library/fpTt_dSk3onwJwW403UBsThAUY66VchG/category_gameplay/dieShuffle2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/dieShuffle2.mp3"
     },
     "category_gameplay/dieThrow1": {
       "name": "dieThrow1",
@@ -779,7 +779,7 @@
       "jsonLastModified": "2017-02-27 20:59:40 UTC",
       "mp3LastModified": "2017-02-27 20:59:41 UTC",
       "version": "TGdQmDB.G5ZOwaeYEThCObdNTKtRvzPi",
-      "sourceUrl": "/api/v1/sound-library/TGdQmDB.G5ZOwaeYEThCObdNTKtRvzPi/category_gameplay/dieThrow1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/dieThrow1.mp3"
     },
     "category_gameplay/dieThrow2": {
       "name": "dieThrow2",
@@ -787,7 +787,7 @@
       "jsonLastModified": "2017-02-27 20:59:42 UTC",
       "mp3LastModified": "2017-02-27 20:59:42 UTC",
       "version": "IjOZ8anZ5HptCmmf9QMblddBrXwpMMSl",
-      "sourceUrl": "/api/v1/sound-library/IjOZ8anZ5HptCmmf9QMblddBrXwpMMSl/category_gameplay/dieThrow2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_gameplay/dieThrow2.mp3"
     },
     "category_jingles/jingles_HIT00": {
       "name": "jingles_HIT00",
@@ -795,7 +795,7 @@
       "jsonLastModified": "2017-02-27 21:00:18 UTC",
       "mp3LastModified": "2017-02-27 21:00:19 UTC",
       "version": "Kpuc2DjvRQ0LiDF7Inbbqk.Rhk0ZVpF0",
-      "sourceUrl": "/api/v1/sound-library/Kpuc2DjvRQ0LiDF7Inbbqk.Rhk0ZVpF0/category_jingles/jingles_HIT00.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT00.mp3"
     },
     "category_jingles/jingles_HIT01": {
       "name": "jingles_HIT01",
@@ -803,7 +803,7 @@
       "jsonLastModified": "2017-02-27 21:00:19 UTC",
       "mp3LastModified": "2017-02-27 21:00:20 UTC",
       "version": "fIoEceAEFSoCpZAwsdc6kmhSR5wey28X",
-      "sourceUrl": "/api/v1/sound-library/fIoEceAEFSoCpZAwsdc6kmhSR5wey28X/category_jingles/jingles_HIT01.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT01.mp3"
     },
     "category_jingles/jingles_HIT02": {
       "name": "jingles_HIT02",
@@ -811,7 +811,7 @@
       "jsonLastModified": "2017-02-27 21:00:21 UTC",
       "mp3LastModified": "2017-02-27 21:00:23 UTC",
       "version": "rFvzfdq.XtjXfCMvq_OJrDMXILAXgMHW",
-      "sourceUrl": "/api/v1/sound-library/rFvzfdq.XtjXfCMvq_OJrDMXILAXgMHW/category_jingles/jingles_HIT02.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT02.mp3"
     },
     "category_jingles/jingles_HIT03": {
       "name": "jingles_HIT03",
@@ -819,7 +819,7 @@
       "jsonLastModified": "2017-02-27 21:00:23 UTC",
       "mp3LastModified": "2017-02-27 21:00:24 UTC",
       "version": "qOCnk11C8csWUORcL4RCYZzB6gAsEpUY",
-      "sourceUrl": "/api/v1/sound-library/qOCnk11C8csWUORcL4RCYZzB6gAsEpUY/category_jingles/jingles_HIT03.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT03.mp3"
     },
     "category_jingles/jingles_HIT04": {
       "name": "jingles_HIT04",
@@ -827,7 +827,7 @@
       "jsonLastModified": "2017-02-27 21:00:25 UTC",
       "mp3LastModified": "2017-02-27 21:00:26 UTC",
       "version": "pC8VCXRcl8v9HnHsWHyYy7nMLrh6mkf3",
-      "sourceUrl": "/api/v1/sound-library/pC8VCXRcl8v9HnHsWHyYy7nMLrh6mkf3/category_jingles/jingles_HIT04.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT04.mp3"
     },
     "category_jingles/jingles_HIT05": {
       "name": "jingles_HIT05",
@@ -835,7 +835,7 @@
       "jsonLastModified": "2017-02-27 21:00:26 UTC",
       "mp3LastModified": "2017-02-27 21:00:27 UTC",
       "version": "fLInrGQ4GaUdVZu0.oSK841.YvzzA6aU",
-      "sourceUrl": "/api/v1/sound-library/fLInrGQ4GaUdVZu0.oSK841.YvzzA6aU/category_jingles/jingles_HIT05.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT05.mp3"
     },
     "category_jingles/jingles_HIT06": {
       "name": "jingles_HIT06",
@@ -843,7 +843,7 @@
       "jsonLastModified": "2017-02-27 21:00:27 UTC",
       "mp3LastModified": "2017-02-27 21:00:28 UTC",
       "version": "88Ek1fxwtH5fQmxvBhzLhrbkJ6xE2GTg",
-      "sourceUrl": "/api/v1/sound-library/88Ek1fxwtH5fQmxvBhzLhrbkJ6xE2GTg/category_jingles/jingles_HIT06.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT06.mp3"
     },
     "category_jingles/jingles_HIT07": {
       "name": "jingles_HIT07",
@@ -851,7 +851,7 @@
       "jsonLastModified": "2017-02-27 21:00:28 UTC",
       "mp3LastModified": "2017-02-27 21:00:29 UTC",
       "version": "2GLM8JUjDfj_XVWSmUiyeaukjFd2pXFT",
-      "sourceUrl": "/api/v1/sound-library/2GLM8JUjDfj_XVWSmUiyeaukjFd2pXFT/category_jingles/jingles_HIT07.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT07.mp3"
     },
     "category_jingles/jingles_HIT08": {
       "name": "jingles_HIT08",
@@ -859,7 +859,7 @@
       "jsonLastModified": "2017-02-27 21:00:29 UTC",
       "mp3LastModified": "2017-02-27 21:00:30 UTC",
       "version": "l26ZcH9T4Jq_z24WjDukAKQX5gehNI7q",
-      "sourceUrl": "/api/v1/sound-library/l26ZcH9T4Jq_z24WjDukAKQX5gehNI7q/category_jingles/jingles_HIT08.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT08.mp3"
     },
     "category_jingles/jingles_HIT09": {
       "name": "jingles_HIT09",
@@ -867,7 +867,7 @@
       "jsonLastModified": "2017-02-27 21:00:31 UTC",
       "mp3LastModified": "2017-02-27 21:00:32 UTC",
       "version": "Wd3dbCqnecPaoMlXuC68lSIJdzEawcFr",
-      "sourceUrl": "/api/v1/sound-library/Wd3dbCqnecPaoMlXuC68lSIJdzEawcFr/category_jingles/jingles_HIT09.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT09.mp3"
     },
     "category_jingles/jingles_HIT10": {
       "name": "jingles_HIT10",
@@ -875,7 +875,7 @@
       "jsonLastModified": "2017-02-27 21:00:33 UTC",
       "mp3LastModified": "2017-02-27 21:00:34 UTC",
       "version": "UBTtMxzvtYZSOYkoY5165Z0MWEomkO5g",
-      "sourceUrl": "/api/v1/sound-library/UBTtMxzvtYZSOYkoY5165Z0MWEomkO5g/category_jingles/jingles_HIT10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT10.mp3"
     },
     "category_jingles/jingles_HIT11": {
       "name": "jingles_HIT11",
@@ -883,7 +883,7 @@
       "jsonLastModified": "2017-02-27 21:00:34 UTC",
       "mp3LastModified": "2017-02-27 21:00:35 UTC",
       "version": "SUO_B2b.ztRd1vbdUNlOGnD3L1Wf0en.",
-      "sourceUrl": "/api/v1/sound-library/SUO_B2b.ztRd1vbdUNlOGnD3L1Wf0en./category_jingles/jingles_HIT11.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT11.mp3"
     },
     "category_jingles/jingles_HIT12": {
       "name": "jingles_HIT12",
@@ -891,7 +891,7 @@
       "jsonLastModified": "2017-02-27 21:00:35 UTC",
       "mp3LastModified": "2017-02-27 21:00:36 UTC",
       "version": "nVyVO532_p4awQOH0tgI0YSENU_gNuNA",
-      "sourceUrl": "/api/v1/sound-library/nVyVO532_p4awQOH0tgI0YSENU_gNuNA/category_jingles/jingles_HIT12.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT12.mp3"
     },
     "category_jingles/jingles_HIT13": {
       "name": "jingles_HIT13",
@@ -899,7 +899,7 @@
       "jsonLastModified": "2017-02-27 21:00:37 UTC",
       "mp3LastModified": "2017-02-27 21:00:37 UTC",
       "version": "RTxpZiBaBz8ebP9kVHgEmwR77s_kXTih",
-      "sourceUrl": "/api/v1/sound-library/RTxpZiBaBz8ebP9kVHgEmwR77s_kXTih/category_jingles/jingles_HIT13.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT13.mp3"
     },
     "category_jingles/jingles_HIT14": {
       "name": "jingles_HIT14",
@@ -907,7 +907,7 @@
       "jsonLastModified": "2017-02-27 21:00:38 UTC",
       "mp3LastModified": "2017-02-27 21:00:38 UTC",
       "version": "nZryTOqg90SvV2YgRR2MEIicXeP7_mj_",
-      "sourceUrl": "/api/v1/sound-library/nZryTOqg90SvV2YgRR2MEIicXeP7_mj_/category_jingles/jingles_HIT14.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT14.mp3"
     },
     "category_jingles/jingles_HIT15": {
       "name": "jingles_HIT15",
@@ -915,7 +915,7 @@
       "jsonLastModified": "2017-02-27 21:00:39 UTC",
       "mp3LastModified": "2017-02-27 21:00:39 UTC",
       "version": "rvx4.6shYYXtfnIUHVQR8zfXhQtYS7ym",
-      "sourceUrl": "/api/v1/sound-library/rvx4.6shYYXtfnIUHVQR8zfXhQtYS7ym/category_jingles/jingles_HIT15.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT15.mp3"
     },
     "category_jingles/jingles_HIT16": {
       "name": "jingles_HIT16",
@@ -923,7 +923,7 @@
       "jsonLastModified": "2017-02-27 21:00:40 UTC",
       "mp3LastModified": "2017-02-27 21:00:40 UTC",
       "version": "ArAPu7Kv5fOmZcDCxjWlwArjSrA0PCUd",
-      "sourceUrl": "/api/v1/sound-library/ArAPu7Kv5fOmZcDCxjWlwArjSrA0PCUd/category_jingles/jingles_HIT16.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_HIT16.mp3"
     },
     "category_jingles/jingles_NES00": {
       "name": "jingles_NES00",
@@ -931,7 +931,7 @@
       "jsonLastModified": "2017-02-27 21:00:41 UTC",
       "mp3LastModified": "2017-02-27 21:00:42 UTC",
       "version": "jWp7MkRy6CPTD4j4VngPMetG.REAjSoO",
-      "sourceUrl": "/api/v1/sound-library/jWp7MkRy6CPTD4j4VngPMetG.REAjSoO/category_jingles/jingles_NES00.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES00.mp3"
     },
     "category_jingles/jingles_NES01": {
       "name": "jingles_NES01",
@@ -939,7 +939,7 @@
       "jsonLastModified": "2017-02-27 21:00:42 UTC",
       "mp3LastModified": "2017-02-27 21:00:43 UTC",
       "version": "MCq75q1PQIdIHAsGSH0HYFO1ZheuNKr6",
-      "sourceUrl": "/api/v1/sound-library/MCq75q1PQIdIHAsGSH0HYFO1ZheuNKr6/category_jingles/jingles_NES01.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES01.mp3"
     },
     "category_jingles/jingles_NES02": {
       "name": "jingles_NES02",
@@ -947,7 +947,7 @@
       "jsonLastModified": "2017-02-27 21:00:44 UTC",
       "mp3LastModified": "2017-02-27 21:00:45 UTC",
       "version": "CdgKgb6D.YqcuXNM9NDu8GBWZ0fQwQqT",
-      "sourceUrl": "/api/v1/sound-library/CdgKgb6D.YqcuXNM9NDu8GBWZ0fQwQqT/category_jingles/jingles_NES02.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES02.mp3"
     },
     "category_jingles/jingles_NES03": {
       "name": "jingles_NES03",
@@ -955,7 +955,7 @@
       "jsonLastModified": "2017-02-27 21:00:46 UTC",
       "mp3LastModified": "2017-02-27 21:00:46 UTC",
       "version": "oznrcapaqu9o65Q7tMfLg28fXalo9AnX",
-      "sourceUrl": "/api/v1/sound-library/oznrcapaqu9o65Q7tMfLg28fXalo9AnX/category_jingles/jingles_NES03.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES03.mp3"
     },
     "category_jingles/jingles_NES04": {
       "name": "jingles_NES04",
@@ -963,7 +963,7 @@
       "jsonLastModified": "2017-02-27 21:00:47 UTC",
       "mp3LastModified": "2017-02-27 21:00:48 UTC",
       "version": "0gQgb9D96iYaq2nzr85gHpMBSayiQvVv",
-      "sourceUrl": "/api/v1/sound-library/0gQgb9D96iYaq2nzr85gHpMBSayiQvVv/category_jingles/jingles_NES04.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES04.mp3"
     },
     "category_jingles/jingles_NES05": {
       "name": "jingles_NES05",
@@ -971,7 +971,7 @@
       "jsonLastModified": "2017-02-27 21:00:48 UTC",
       "mp3LastModified": "2017-02-27 21:00:49 UTC",
       "version": "kEsKMiCv2N1.pfHxMVsj07p_ZHFq1Cvg",
-      "sourceUrl": "/api/v1/sound-library/kEsKMiCv2N1.pfHxMVsj07p_ZHFq1Cvg/category_jingles/jingles_NES05.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES05.mp3"
     },
     "category_jingles/jingles_NES06": {
       "name": "jingles_NES06",
@@ -979,7 +979,7 @@
       "jsonLastModified": "2017-02-27 21:00:49 UTC",
       "mp3LastModified": "2017-02-27 21:00:51 UTC",
       "version": "z2AXwJ8RDD99WnWxJ3y8KpptGCweWMmS",
-      "sourceUrl": "/api/v1/sound-library/z2AXwJ8RDD99WnWxJ3y8KpptGCweWMmS/category_jingles/jingles_NES06.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES06.mp3"
     },
     "category_jingles/jingles_NES07": {
       "name": "jingles_NES07",
@@ -987,7 +987,7 @@
       "jsonLastModified": "2017-02-27 21:00:51 UTC",
       "mp3LastModified": "2017-02-27 21:00:52 UTC",
       "version": "PfveZ1R8J1WBBJl8F9pYjiUiJeNc6uLr",
-      "sourceUrl": "/api/v1/sound-library/PfveZ1R8J1WBBJl8F9pYjiUiJeNc6uLr/category_jingles/jingles_NES07.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES07.mp3"
     },
     "category_jingles/jingles_NES08": {
       "name": "jingles_NES08",
@@ -995,7 +995,7 @@
       "jsonLastModified": "2017-02-27 21:00:52 UTC",
       "mp3LastModified": "2017-02-27 21:00:53 UTC",
       "version": "74hTQRS7Imghkg6L8OGke7Bap_rkGhDo",
-      "sourceUrl": "/api/v1/sound-library/74hTQRS7Imghkg6L8OGke7Bap_rkGhDo/category_jingles/jingles_NES08.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES08.mp3"
     },
     "category_jingles/jingles_NES09": {
       "name": "jingles_NES09",
@@ -1003,7 +1003,7 @@
       "jsonLastModified": "2017-02-27 21:00:53 UTC",
       "mp3LastModified": "2017-02-27 21:00:53 UTC",
       "version": "0oPHxd5y5Er7Vse9t_rMpF.l34D4pS5_",
-      "sourceUrl": "/api/v1/sound-library/0oPHxd5y5Er7Vse9t_rMpF.l34D4pS5_/category_jingles/jingles_NES09.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES09.mp3"
     },
     "category_jingles/jingles_NES10": {
       "name": "jingles_NES10",
@@ -1011,7 +1011,7 @@
       "jsonLastModified": "2017-02-27 21:00:54 UTC",
       "mp3LastModified": "2017-02-27 21:00:55 UTC",
       "version": "jta7AmfH9.AVNXiBx9Q023_mtZWsQPE9",
-      "sourceUrl": "/api/v1/sound-library/jta7AmfH9.AVNXiBx9Q023_mtZWsQPE9/category_jingles/jingles_NES10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES10.mp3"
     },
     "category_jingles/jingles_NES11": {
       "name": "jingles_NES11",
@@ -1019,7 +1019,7 @@
       "jsonLastModified": "2017-02-27 21:00:56 UTC",
       "mp3LastModified": "2017-02-27 21:00:58 UTC",
       "version": "aNJ_pwXBaZJa3j45v75qwGts21yW7Qcq",
-      "sourceUrl": "/api/v1/sound-library/aNJ_pwXBaZJa3j45v75qwGts21yW7Qcq/category_jingles/jingles_NES11.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES11.mp3"
     },
     "category_jingles/jingles_NES12": {
       "name": "jingles_NES12",
@@ -1027,7 +1027,7 @@
       "jsonLastModified": "2017-02-27 21:00:58 UTC",
       "mp3LastModified": "2017-02-27 21:00:59 UTC",
       "version": ".d64N5NJLgxD6iorIYaQ8_sHtARXXap8",
-      "sourceUrl": "/api/v1/sound-library/.d64N5NJLgxD6iorIYaQ8_sHtARXXap8/category_jingles/jingles_NES12.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES12.mp3"
     },
     "category_jingles/jingles_NES13": {
       "name": "jingles_NES13",
@@ -1035,7 +1035,7 @@
       "jsonLastModified": "2017-02-27 21:00:59 UTC",
       "mp3LastModified": "2017-02-27 21:01:00 UTC",
       "version": "fx5edc0ADRA6byrQ2vZR0nxJVqL16Fdu",
-      "sourceUrl": "/api/v1/sound-library/fx5edc0ADRA6byrQ2vZR0nxJVqL16Fdu/category_jingles/jingles_NES13.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES13.mp3"
     },
     "category_jingles/jingles_NES14": {
       "name": "jingles_NES14",
@@ -1043,7 +1043,7 @@
       "jsonLastModified": "2017-02-27 21:01:01 UTC",
       "mp3LastModified": "2017-02-27 21:01:02 UTC",
       "version": "1dZOGEk5a_XA5xcHyp_ijAh7I2RKBOuG",
-      "sourceUrl": "/api/v1/sound-library/1dZOGEk5a_XA5xcHyp_ijAh7I2RKBOuG/category_jingles/jingles_NES14.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES14.mp3"
     },
     "category_jingles/jingles_NES15": {
       "name": "jingles_NES15",
@@ -1051,7 +1051,7 @@
       "jsonLastModified": "2017-02-27 21:01:03 UTC",
       "mp3LastModified": "2017-02-27 21:01:03 UTC",
       "version": "gpEJS.H8h.ummC6LStQTWqn7xslE7pFO",
-      "sourceUrl": "/api/v1/sound-library/gpEJS.H8h.ummC6LStQTWqn7xslE7pFO/category_jingles/jingles_NES15.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES15.mp3"
     },
     "category_jingles/jingles_NES16": {
       "name": "jingles_NES16",
@@ -1059,7 +1059,7 @@
       "jsonLastModified": "2017-02-27 21:01:04 UTC",
       "mp3LastModified": "2017-02-27 21:01:05 UTC",
       "version": "yuQQGOFtGK76.Zfhu3bvXnwk2BRRyDud",
-      "sourceUrl": "/api/v1/sound-library/yuQQGOFtGK76.Zfhu3bvXnwk2BRRyDud/category_jingles/jingles_NES16.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_NES16.mp3"
     },
     "category_jingles/jingles_PIZZA00": {
       "name": "jingles_PIZZA00",
@@ -1067,7 +1067,7 @@
       "jsonLastModified": "2017-02-27 21:01:05 UTC",
       "mp3LastModified": "2017-02-27 21:01:06 UTC",
       "version": "zmOxJfeUpl1OW5qyjbQRp9_7bu3.wxbe",
-      "sourceUrl": "/api/v1/sound-library/zmOxJfeUpl1OW5qyjbQRp9_7bu3.wxbe/category_jingles/jingles_PIZZA00.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA00.mp3"
     },
     "category_jingles/jingles_PIZZA01": {
       "name": "jingles_PIZZA01",
@@ -1075,7 +1075,7 @@
       "jsonLastModified": "2017-02-27 21:01:06 UTC",
       "mp3LastModified": "2017-02-27 21:01:07 UTC",
       "version": "_YS0YPNiEkR5W1Av901ZlyjLjlu1naJV",
-      "sourceUrl": "/api/v1/sound-library/_YS0YPNiEkR5W1Av901ZlyjLjlu1naJV/category_jingles/jingles_PIZZA01.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA01.mp3"
     },
     "category_jingles/jingles_PIZZA02": {
       "name": "jingles_PIZZA02",
@@ -1083,7 +1083,7 @@
       "jsonLastModified": "2017-02-27 21:01:07 UTC",
       "mp3LastModified": "2017-02-27 21:01:08 UTC",
       "version": "dKVHG_orZbpZSIDSp3c7_S.VkjB.fKSF",
-      "sourceUrl": "/api/v1/sound-library/dKVHG_orZbpZSIDSp3c7_S.VkjB.fKSF/category_jingles/jingles_PIZZA02.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA02.mp3"
     },
     "category_jingles/jingles_PIZZA03": {
       "name": "jingles_PIZZA03",
@@ -1091,7 +1091,7 @@
       "jsonLastModified": "2017-02-27 21:01:20 UTC",
       "mp3LastModified": "2017-02-27 21:01:20 UTC",
       "version": "ceuX0zz9ZVgnNar9K2TzqwspHkHngniy",
-      "sourceUrl": "/api/v1/sound-library/ceuX0zz9ZVgnNar9K2TzqwspHkHngniy/category_jingles/jingles_PIZZA03.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA03.mp3"
     },
     "category_jingles/jingles_PIZZA04": {
       "name": "jingles_PIZZA04",
@@ -1099,7 +1099,7 @@
       "jsonLastModified": "2017-02-27 21:01:20 UTC",
       "mp3LastModified": "2017-02-27 21:01:21 UTC",
       "version": "jsBOQLxMf7ZHsmjvpFbMH.MkG9SWblyt",
-      "sourceUrl": "/api/v1/sound-library/jsBOQLxMf7ZHsmjvpFbMH.MkG9SWblyt/category_jingles/jingles_PIZZA04.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA04.mp3"
     },
     "category_jingles/jingles_PIZZA05": {
       "name": "jingles_PIZZA05",
@@ -1107,7 +1107,7 @@
       "jsonLastModified": "2017-02-27 21:01:22 UTC",
       "mp3LastModified": "2017-02-27 21:01:22 UTC",
       "version": "UZpNPPxBJNgP4048OV.iaW3wi1YviMye",
-      "sourceUrl": "/api/v1/sound-library/UZpNPPxBJNgP4048OV.iaW3wi1YviMye/category_jingles/jingles_PIZZA05.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA05.mp3"
     },
     "category_jingles/jingles_PIZZA06": {
       "name": "jingles_PIZZA06",
@@ -1115,7 +1115,7 @@
       "jsonLastModified": "2017-02-27 21:01:22 UTC",
       "mp3LastModified": "2017-02-27 21:01:23 UTC",
       "version": "ds3PqBzP9JOMmI5uXVdb7_yV2qYmIZxs",
-      "sourceUrl": "/api/v1/sound-library/ds3PqBzP9JOMmI5uXVdb7_yV2qYmIZxs/category_jingles/jingles_PIZZA06.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA06.mp3"
     },
     "category_jingles/jingles_PIZZA07": {
       "name": "jingles_PIZZA07",
@@ -1123,7 +1123,7 @@
       "jsonLastModified": "2017-02-27 21:01:23 UTC",
       "mp3LastModified": "2017-02-27 21:01:24 UTC",
       "version": "Jy2yY.7.3xT3cKjbWCAEN2phnhy4X7II",
-      "sourceUrl": "/api/v1/sound-library/Jy2yY.7.3xT3cKjbWCAEN2phnhy4X7II/category_jingles/jingles_PIZZA07.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA07.mp3"
     },
     "category_jingles/jingles_PIZZA08": {
       "name": "jingles_PIZZA08",
@@ -1131,7 +1131,7 @@
       "jsonLastModified": "2017-02-27 21:01:25 UTC",
       "mp3LastModified": "2017-02-27 21:01:25 UTC",
       "version": "2QppgyOgdroCFOswqbY5hCdpz90Md5Gp",
-      "sourceUrl": "/api/v1/sound-library/2QppgyOgdroCFOswqbY5hCdpz90Md5Gp/category_jingles/jingles_PIZZA08.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA08.mp3"
     },
     "category_jingles/jingles_PIZZA09": {
       "name": "jingles_PIZZA09",
@@ -1139,7 +1139,7 @@
       "jsonLastModified": "2017-02-27 21:01:26 UTC",
       "mp3LastModified": "2017-02-27 21:01:26 UTC",
       "version": "_qMm5GIPdfExEpXZ0T4QSJLAVMqGOX.9",
-      "sourceUrl": "/api/v1/sound-library/_qMm5GIPdfExEpXZ0T4QSJLAVMqGOX.9/category_jingles/jingles_PIZZA09.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA09.mp3"
     },
     "category_jingles/jingles_PIZZA10": {
       "name": "jingles_PIZZA10",
@@ -1147,7 +1147,7 @@
       "jsonLastModified": "2017-02-27 21:01:27 UTC",
       "mp3LastModified": "2017-02-27 21:01:27 UTC",
       "version": "UT5lVTH5XSjoqP.Zn5sdhnKxBIk9E6Ac",
-      "sourceUrl": "/api/v1/sound-library/UT5lVTH5XSjoqP.Zn5sdhnKxBIk9E6Ac/category_jingles/jingles_PIZZA10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA10.mp3"
     },
     "category_jingles/jingles_PIZZA11": {
       "name": "jingles_PIZZA11",
@@ -1155,7 +1155,7 @@
       "jsonLastModified": "2017-02-27 21:01:28 UTC",
       "mp3LastModified": "2017-02-27 21:01:28 UTC",
       "version": "hEYWcYlU_ZeF4bLczf_e4k3LJPOFYnpG",
-      "sourceUrl": "/api/v1/sound-library/hEYWcYlU_ZeF4bLczf_e4k3LJPOFYnpG/category_jingles/jingles_PIZZA11.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA11.mp3"
     },
     "category_jingles/jingles_PIZZA12": {
       "name": "jingles_PIZZA12",
@@ -1163,7 +1163,7 @@
       "jsonLastModified": "2017-02-27 21:01:29 UTC",
       "mp3LastModified": "2017-02-27 21:01:30 UTC",
       "version": "RM8.CE3PSzOt1VjJsSsmcuuuXFcr8r6d",
-      "sourceUrl": "/api/v1/sound-library/RM8.CE3PSzOt1VjJsSsmcuuuXFcr8r6d/category_jingles/jingles_PIZZA12.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA12.mp3"
     },
     "category_jingles/jingles_PIZZA13": {
       "name": "jingles_PIZZA13",
@@ -1171,7 +1171,7 @@
       "jsonLastModified": "2017-02-27 21:01:31 UTC",
       "mp3LastModified": "2017-02-27 21:01:32 UTC",
       "version": "d8i1rL15wv15jfit3jutxn3CV9Sn1ILs",
-      "sourceUrl": "/api/v1/sound-library/d8i1rL15wv15jfit3jutxn3CV9Sn1ILs/category_jingles/jingles_PIZZA13.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA13.mp3"
     },
     "category_jingles/jingles_PIZZA14": {
       "name": "jingles_PIZZA14",
@@ -1179,7 +1179,7 @@
       "jsonLastModified": "2017-02-27 21:01:33 UTC",
       "mp3LastModified": "2017-02-27 21:01:33 UTC",
       "version": "9VV3dLk9LjZkSmowPLfD8MlnKYV2MOKR",
-      "sourceUrl": "/api/v1/sound-library/9VV3dLk9LjZkSmowPLfD8MlnKYV2MOKR/category_jingles/jingles_PIZZA14.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA14.mp3"
     },
     "category_jingles/jingles_PIZZA15": {
       "name": "jingles_PIZZA15",
@@ -1187,7 +1187,7 @@
       "jsonLastModified": "2017-02-27 21:01:34 UTC",
       "mp3LastModified": "2017-02-27 21:01:34 UTC",
       "version": "NqWoS3r74eI29SKzK7RJ.fhMASHDpDx5",
-      "sourceUrl": "/api/v1/sound-library/NqWoS3r74eI29SKzK7RJ.fhMASHDpDx5/category_jingles/jingles_PIZZA15.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA15.mp3"
     },
     "category_jingles/jingles_PIZZA16": {
       "name": "jingles_PIZZA16",
@@ -1195,7 +1195,7 @@
       "jsonLastModified": "2017-02-27 21:01:35 UTC",
       "mp3LastModified": "2017-02-27 21:01:35 UTC",
       "version": "51Wj_4XyP2XH7YDO3SpS6EZuWI9MGYqu",
-      "sourceUrl": "/api/v1/sound-library/51Wj_4XyP2XH7YDO3SpS6EZuWI9MGYqu/category_jingles/jingles_PIZZA16.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_PIZZA16.mp3"
     },
     "category_jingles/jingles_SAX00": {
       "name": "jingles_SAX00",
@@ -1203,7 +1203,7 @@
       "jsonLastModified": "2017-02-27 21:01:36 UTC",
       "mp3LastModified": "2017-02-27 21:01:36 UTC",
       "version": "MfQxaVXrgk8xrKGAPfuSsO31XgbuSoTD",
-      "sourceUrl": "/api/v1/sound-library/MfQxaVXrgk8xrKGAPfuSsO31XgbuSoTD/category_jingles/jingles_SAX00.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX00.mp3"
     },
     "category_jingles/jingles_SAX01": {
       "name": "jingles_SAX01",
@@ -1211,7 +1211,7 @@
       "jsonLastModified": "2017-02-27 21:01:37 UTC",
       "mp3LastModified": "2017-02-27 21:01:38 UTC",
       "version": "Yf5XDUyIMup1ErN6uu618HhxeC.dULwv",
-      "sourceUrl": "/api/v1/sound-library/Yf5XDUyIMup1ErN6uu618HhxeC.dULwv/category_jingles/jingles_SAX01.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX01.mp3"
     },
     "category_jingles/jingles_SAX02": {
       "name": "jingles_SAX02",
@@ -1219,7 +1219,7 @@
       "jsonLastModified": "2017-02-27 21:01:38 UTC",
       "mp3LastModified": "2017-02-27 21:01:39 UTC",
       "version": "GXpO5baUSoXO5xTNe9ClGJ7mKZRVBaX1",
-      "sourceUrl": "/api/v1/sound-library/GXpO5baUSoXO5xTNe9ClGJ7mKZRVBaX1/category_jingles/jingles_SAX02.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX02.mp3"
     },
     "category_jingles/jingles_SAX03": {
       "name": "jingles_SAX03",
@@ -1227,7 +1227,7 @@
       "jsonLastModified": "2017-02-27 21:01:39 UTC",
       "mp3LastModified": "2017-02-27 21:01:40 UTC",
       "version": "qt4hn07jwLesljXZADWjmbhO5GeyzgYe",
-      "sourceUrl": "/api/v1/sound-library/qt4hn07jwLesljXZADWjmbhO5GeyzgYe/category_jingles/jingles_SAX03.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX03.mp3"
     },
     "category_jingles/jingles_SAX04": {
       "name": "jingles_SAX04",
@@ -1235,7 +1235,7 @@
       "jsonLastModified": "2017-02-27 21:01:40 UTC",
       "mp3LastModified": "2017-02-27 21:01:40 UTC",
       "version": "PeGVVolsF8sBRBUSk42mIcIIwys2_eP5",
-      "sourceUrl": "/api/v1/sound-library/PeGVVolsF8sBRBUSk42mIcIIwys2_eP5/category_jingles/jingles_SAX04.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX04.mp3"
     },
     "category_jingles/jingles_SAX05": {
       "name": "jingles_SAX05",
@@ -1243,7 +1243,7 @@
       "jsonLastModified": "2017-02-27 21:01:41 UTC",
       "mp3LastModified": "2017-02-27 21:01:42 UTC",
       "version": "T1jZGAaST4aErDvKlslafvGuO68VxmP2",
-      "sourceUrl": "/api/v1/sound-library/T1jZGAaST4aErDvKlslafvGuO68VxmP2/category_jingles/jingles_SAX05.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX05.mp3"
     },
     "category_jingles/jingles_SAX06": {
       "name": "jingles_SAX06",
@@ -1251,7 +1251,7 @@
       "jsonLastModified": "2017-02-27 21:01:42 UTC",
       "mp3LastModified": "2017-02-27 21:01:43 UTC",
       "version": "Sqk5hvjQ.2IqfWlOdb69E4vHNjy7iKTb",
-      "sourceUrl": "/api/v1/sound-library/Sqk5hvjQ.2IqfWlOdb69E4vHNjy7iKTb/category_jingles/jingles_SAX06.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX06.mp3"
     },
     "category_jingles/jingles_SAX07": {
       "name": "jingles_SAX07",
@@ -1259,7 +1259,7 @@
       "jsonLastModified": "2017-02-27 21:01:44 UTC",
       "mp3LastModified": "2017-02-27 21:01:44 UTC",
       "version": "Xiaoju2TVBe2XeiDjKWkT4vl_8kSYBay",
-      "sourceUrl": "/api/v1/sound-library/Xiaoju2TVBe2XeiDjKWkT4vl_8kSYBay/category_jingles/jingles_SAX07.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX07.mp3"
     },
     "category_jingles/jingles_SAX08": {
       "name": "jingles_SAX08",
@@ -1267,7 +1267,7 @@
       "jsonLastModified": "2017-02-27 21:01:45 UTC",
       "mp3LastModified": "2017-02-27 21:01:45 UTC",
       "version": "YwhFGAEjBkcDNK52DnIgdvtvhBaMd7m3",
-      "sourceUrl": "/api/v1/sound-library/YwhFGAEjBkcDNK52DnIgdvtvhBaMd7m3/category_jingles/jingles_SAX08.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX08.mp3"
     },
     "category_jingles/jingles_SAX09": {
       "name": "jingles_SAX09",
@@ -1275,7 +1275,7 @@
       "jsonLastModified": "2017-02-27 21:01:46 UTC",
       "mp3LastModified": "2017-02-27 21:01:46 UTC",
       "version": "1oEc5vnNB1AY40jXTxdr1kjte0g4lYne",
-      "sourceUrl": "/api/v1/sound-library/1oEc5vnNB1AY40jXTxdr1kjte0g4lYne/category_jingles/jingles_SAX09.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX09.mp3"
     },
     "category_jingles/jingles_SAX10": {
       "name": "jingles_SAX10",
@@ -1283,7 +1283,7 @@
       "jsonLastModified": "2017-02-27 21:01:47 UTC",
       "mp3LastModified": "2017-02-27 21:01:48 UTC",
       "version": "d71e0AQUf42fRp0cIvtMDTAVXz1mPv8p",
-      "sourceUrl": "/api/v1/sound-library/d71e0AQUf42fRp0cIvtMDTAVXz1mPv8p/category_jingles/jingles_SAX10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX10.mp3"
     },
     "category_jingles/jingles_SAX11": {
       "name": "jingles_SAX11",
@@ -1291,7 +1291,7 @@
       "jsonLastModified": "2017-02-27 21:01:48 UTC",
       "mp3LastModified": "2017-02-27 21:01:49 UTC",
       "version": "v9Y8FtA6AKdN4_M.dlCBhtAInwN4JAt7",
-      "sourceUrl": "/api/v1/sound-library/v9Y8FtA6AKdN4_M.dlCBhtAInwN4JAt7/category_jingles/jingles_SAX11.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX11.mp3"
     },
     "category_jingles/jingles_SAX12": {
       "name": "jingles_SAX12",
@@ -1299,7 +1299,7 @@
       "jsonLastModified": "2017-02-27 21:01:49 UTC",
       "mp3LastModified": "2017-02-27 21:01:50 UTC",
       "version": "3eu9MB5eLcHGwG.povVPAUZOHsgGF55d",
-      "sourceUrl": "/api/v1/sound-library/3eu9MB5eLcHGwG.povVPAUZOHsgGF55d/category_jingles/jingles_SAX12.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX12.mp3"
     },
     "category_jingles/jingles_SAX13": {
       "name": "jingles_SAX13",
@@ -1307,7 +1307,7 @@
       "jsonLastModified": "2017-02-27 21:01:50 UTC",
       "mp3LastModified": "2017-02-27 21:01:51 UTC",
       "version": "9mW.9v5hmqpKzoRXCF0fyPGJnNogZIwS",
-      "sourceUrl": "/api/v1/sound-library/9mW.9v5hmqpKzoRXCF0fyPGJnNogZIwS/category_jingles/jingles_SAX13.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX13.mp3"
     },
     "category_jingles/jingles_SAX14": {
       "name": "jingles_SAX14",
@@ -1315,7 +1315,7 @@
       "jsonLastModified": "2017-02-27 21:01:51 UTC",
       "mp3LastModified": "2017-02-27 21:01:52 UTC",
       "version": "UvC5XPQNEQ1dULaTOSCzTtDHN0xNncac",
-      "sourceUrl": "/api/v1/sound-library/UvC5XPQNEQ1dULaTOSCzTtDHN0xNncac/category_jingles/jingles_SAX14.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX14.mp3"
     },
     "category_jingles/jingles_SAX15": {
       "name": "jingles_SAX15",
@@ -1323,7 +1323,7 @@
       "jsonLastModified": "2017-02-27 21:01:53 UTC",
       "mp3LastModified": "2017-02-27 21:01:53 UTC",
       "version": "uggQu4VJrOffOT1O5EcZJVPUhHEcQ3Un",
-      "sourceUrl": "/api/v1/sound-library/uggQu4VJrOffOT1O5EcZJVPUhHEcQ3Un/category_jingles/jingles_SAX15.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX15.mp3"
     },
     "category_jingles/jingles_SAX16": {
       "name": "jingles_SAX16",
@@ -1331,7 +1331,7 @@
       "jsonLastModified": "2017-02-27 21:01:54 UTC",
       "mp3LastModified": "2017-02-27 21:01:54 UTC",
       "version": "8i9yFbTTL8E7G0PhFir8D9gG9YMd59vA",
-      "sourceUrl": "/api/v1/sound-library/8i9yFbTTL8E7G0PhFir8D9gG9YMd59vA/category_jingles/jingles_SAX16.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_SAX16.mp3"
     },
     "category_jingles/jingles_STEEL00": {
       "name": "jingles_STEEL00",
@@ -1339,7 +1339,7 @@
       "jsonLastModified": "2017-02-27 21:01:55 UTC",
       "mp3LastModified": "2017-02-27 21:01:55 UTC",
       "version": "4qIuRQ8RC5IlT9b6zdyyGhbKmYGhbn7W",
-      "sourceUrl": "/api/v1/sound-library/4qIuRQ8RC5IlT9b6zdyyGhbKmYGhbn7W/category_jingles/jingles_STEEL00.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL00.mp3"
     },
     "category_jingles/jingles_STEEL01": {
       "name": "jingles_STEEL01",
@@ -1347,7 +1347,7 @@
       "jsonLastModified": "2017-02-27 21:01:56 UTC",
       "mp3LastModified": "2017-02-27 21:01:57 UTC",
       "version": "zsaZLhsj2ZgpcQPPXYirgUhtRTvb3T.O",
-      "sourceUrl": "/api/v1/sound-library/zsaZLhsj2ZgpcQPPXYirgUhtRTvb3T.O/category_jingles/jingles_STEEL01.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL01.mp3"
     },
     "category_jingles/jingles_STEEL02": {
       "name": "jingles_STEEL02",
@@ -1355,7 +1355,7 @@
       "jsonLastModified": "2017-02-27 21:01:57 UTC",
       "mp3LastModified": "2017-02-27 21:01:58 UTC",
       "version": "Qc7D8WR1OWGVo6ShDU8K_wZVe7uTUCVa",
-      "sourceUrl": "/api/v1/sound-library/Qc7D8WR1OWGVo6ShDU8K_wZVe7uTUCVa/category_jingles/jingles_STEEL02.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL02.mp3"
     },
     "category_jingles/jingles_STEEL03": {
       "name": "jingles_STEEL03",
@@ -1363,7 +1363,7 @@
       "jsonLastModified": "2017-02-27 21:01:58 UTC",
       "mp3LastModified": "2017-02-27 21:01:59 UTC",
       "version": "1ik8bn1HAkZiXJmdm5AUqzce.OpV7PiP",
-      "sourceUrl": "/api/v1/sound-library/1ik8bn1HAkZiXJmdm5AUqzce.OpV7PiP/category_jingles/jingles_STEEL03.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL03.mp3"
     },
     "category_jingles/jingles_STEEL04": {
       "name": "jingles_STEEL04",
@@ -1371,7 +1371,7 @@
       "jsonLastModified": "2017-02-27 21:02:00 UTC",
       "mp3LastModified": "2017-02-27 21:02:01 UTC",
       "version": "R5eYLt0nQerZtNV_ypVSbfTBkVPdWSvV",
-      "sourceUrl": "/api/v1/sound-library/R5eYLt0nQerZtNV_ypVSbfTBkVPdWSvV/category_jingles/jingles_STEEL04.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL04.mp3"
     },
     "category_jingles/jingles_STEEL05": {
       "name": "jingles_STEEL05",
@@ -1379,7 +1379,7 @@
       "jsonLastModified": "2017-02-27 21:02:02 UTC",
       "mp3LastModified": "2017-02-27 21:02:02 UTC",
       "version": "vKnGvbDUOoWcjx4uHmYHMTE6ceChqBLo",
-      "sourceUrl": "/api/v1/sound-library/vKnGvbDUOoWcjx4uHmYHMTE6ceChqBLo/category_jingles/jingles_STEEL05.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL05.mp3"
     },
     "category_jingles/jingles_STEEL06": {
       "name": "jingles_STEEL06",
@@ -1387,7 +1387,7 @@
       "jsonLastModified": "2017-02-27 21:02:04 UTC",
       "mp3LastModified": "2017-02-27 21:02:04 UTC",
       "version": "C.dLeOG2KVPcGW8TGJ09UsVoiVVqFQSu",
-      "sourceUrl": "/api/v1/sound-library/C.dLeOG2KVPcGW8TGJ09UsVoiVVqFQSu/category_jingles/jingles_STEEL06.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL06.mp3"
     },
     "category_jingles/jingles_STEEL07": {
       "name": "jingles_STEEL07",
@@ -1395,7 +1395,7 @@
       "jsonLastModified": "2017-02-27 21:02:05 UTC",
       "mp3LastModified": "2017-02-27 21:02:06 UTC",
       "version": "cNNMU6Fj4fDanrMNzPtMdYextU27vzp9",
-      "sourceUrl": "/api/v1/sound-library/cNNMU6Fj4fDanrMNzPtMdYextU27vzp9/category_jingles/jingles_STEEL07.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL07.mp3"
     },
     "category_jingles/jingles_STEEL08": {
       "name": "jingles_STEEL08",
@@ -1403,7 +1403,7 @@
       "jsonLastModified": "2017-02-27 21:02:06 UTC",
       "mp3LastModified": "2017-02-27 21:02:07 UTC",
       "version": "qDvQXCZ63ZC.w4RWZ7zDJVX5Gcuu5i5W",
-      "sourceUrl": "/api/v1/sound-library/qDvQXCZ63ZC.w4RWZ7zDJVX5Gcuu5i5W/category_jingles/jingles_STEEL08.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL08.mp3"
     },
     "category_jingles/jingles_STEEL09": {
       "name": "jingles_STEEL09",
@@ -1411,7 +1411,7 @@
       "jsonLastModified": "2017-02-27 21:02:07 UTC",
       "mp3LastModified": "2017-02-27 21:02:08 UTC",
       "version": "2cp6L6GXzuhoY4_WL73_Nihu.Z8UICci",
-      "sourceUrl": "/api/v1/sound-library/2cp6L6GXzuhoY4_WL73_Nihu.Z8UICci/category_jingles/jingles_STEEL09.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL09.mp3"
     },
     "category_jingles/jingles_STEEL10": {
       "name": "jingles_STEEL10",
@@ -1419,7 +1419,7 @@
       "jsonLastModified": "2017-02-27 21:02:09 UTC",
       "mp3LastModified": "2017-02-27 21:02:09 UTC",
       "version": "ixughz1Wjq7r5fS8wLOk7UQEd1aa4gcC",
-      "sourceUrl": "/api/v1/sound-library/ixughz1Wjq7r5fS8wLOk7UQEd1aa4gcC/category_jingles/jingles_STEEL10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL10.mp3"
     },
     "category_jingles/jingles_STEEL11": {
       "name": "jingles_STEEL11",
@@ -1427,7 +1427,7 @@
       "jsonLastModified": "2017-02-27 21:02:11 UTC",
       "mp3LastModified": "2017-02-27 21:02:11 UTC",
       "version": "AEOSurnzMjvDZx.em63n6TqI8DDo3ABU",
-      "sourceUrl": "/api/v1/sound-library/AEOSurnzMjvDZx.em63n6TqI8DDo3ABU/category_jingles/jingles_STEEL11.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL11.mp3"
     },
     "category_jingles/jingles_STEEL12": {
       "name": "jingles_STEEL12",
@@ -1435,7 +1435,7 @@
       "jsonLastModified": "2017-02-27 21:02:12 UTC",
       "mp3LastModified": "2017-02-27 21:02:13 UTC",
       "version": "wmBurOixOr9kjXPSRQOT28i3m3juEwoc",
-      "sourceUrl": "/api/v1/sound-library/wmBurOixOr9kjXPSRQOT28i3m3juEwoc/category_jingles/jingles_STEEL12.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL12.mp3"
     },
     "category_jingles/jingles_STEEL13": {
       "name": "jingles_STEEL13",
@@ -1443,7 +1443,7 @@
       "jsonLastModified": "2017-02-27 21:02:13 UTC",
       "mp3LastModified": "2017-02-27 21:02:14 UTC",
       "version": "Dky2C0pXiGgWiPDTsM4v.uizssECz.4p",
-      "sourceUrl": "/api/v1/sound-library/Dky2C0pXiGgWiPDTsM4v.uizssECz.4p/category_jingles/jingles_STEEL13.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL13.mp3"
     },
     "category_jingles/jingles_STEEL14": {
       "name": "jingles_STEEL14",
@@ -1451,7 +1451,7 @@
       "jsonLastModified": "2017-02-27 21:02:14 UTC",
       "mp3LastModified": "2017-02-27 21:02:15 UTC",
       "version": "jKdHBbSFNpYgUgqLIUubPuPu8QC3j1wV",
-      "sourceUrl": "/api/v1/sound-library/jKdHBbSFNpYgUgqLIUubPuPu8QC3j1wV/category_jingles/jingles_STEEL14.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL14.mp3"
     },
     "category_jingles/jingles_STEEL15": {
       "name": "jingles_STEEL15",
@@ -1459,7 +1459,7 @@
       "jsonLastModified": "2017-02-27 21:02:16 UTC",
       "mp3LastModified": "2017-02-27 21:02:18 UTC",
       "version": "VT8RX2C1Au1kZXlTZcf0lwYoVptoH6gz",
-      "sourceUrl": "/api/v1/sound-library/VT8RX2C1Au1kZXlTZcf0lwYoVptoH6gz/category_jingles/jingles_STEEL15.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL15.mp3"
     },
     "category_jingles/jingles_STEEL16": {
       "name": "jingles_STEEL16",
@@ -1467,7 +1467,7 @@
       "jsonLastModified": "2017-02-27 21:02:18 UTC",
       "mp3LastModified": "2017-02-27 21:02:19 UTC",
       "version": "4hnWvey5KvHYuJmH8n9IagP39hdTccvc",
-      "sourceUrl": "/api/v1/sound-library/4hnWvey5KvHYuJmH8n9IagP39hdTccvc/category_jingles/jingles_STEEL16.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_jingles/jingles_STEEL16.mp3"
     },
     "category_male_voiceover/male_voice_1": {
       "name": "male_voice_1",
@@ -1475,7 +1475,7 @@
       "jsonLastModified": "2017-02-27 21:02:49 UTC",
       "mp3LastModified": "2017-02-27 21:02:49 UTC",
       "version": "uH5u34d7pQTfHOpDMzF9wivd1tmQSGZ5",
-      "sourceUrl": "/api/v1/sound-library/uH5u34d7pQTfHOpDMzF9wivd1tmQSGZ5/category_male_voiceover/male_voice_1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_1.mp3"
     },
     "category_male_voiceover/male_voice_10": {
       "name": "male_voice_10",
@@ -1483,7 +1483,7 @@
       "jsonLastModified": "2017-02-27 21:03:00 UTC",
       "mp3LastModified": "2017-02-27 21:03:01 UTC",
       "version": "VD.wMHoob24PO0OXw3VwjLnMxqBYkzbK",
-      "sourceUrl": "/api/v1/sound-library/VD.wMHoob24PO0OXw3VwjLnMxqBYkzbK/category_male_voiceover/male_voice_10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_10.mp3"
     },
     "category_male_voiceover/male_voice_2": {
       "name": "male_voice_2",
@@ -1491,7 +1491,7 @@
       "jsonLastModified": "2017-02-27 21:02:50 UTC",
       "mp3LastModified": "2017-02-27 21:02:51 UTC",
       "version": "a8N8Dw7Kmu_6W8jetrVz0OkoAW55OpYi",
-      "sourceUrl": "/api/v1/sound-library/a8N8Dw7Kmu_6W8jetrVz0OkoAW55OpYi/category_male_voiceover/male_voice_2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_2.mp3"
     },
     "category_male_voiceover/male_voice_3": {
       "name": "male_voice_3",
@@ -1499,7 +1499,7 @@
       "jsonLastModified": "2017-02-27 21:02:51 UTC",
       "mp3LastModified": "2017-02-27 21:02:52 UTC",
       "version": "Fulf1UzEKjDLKMpVES5MI_MmMGOpZuzf",
-      "sourceUrl": "/api/v1/sound-library/Fulf1UzEKjDLKMpVES5MI_MmMGOpZuzf/category_male_voiceover/male_voice_3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_3.mp3"
     },
     "category_male_voiceover/male_voice_4": {
       "name": "male_voice_4",
@@ -1507,7 +1507,7 @@
       "jsonLastModified": "2017-02-27 21:02:52 UTC",
       "mp3LastModified": "2017-02-27 21:02:53 UTC",
       "version": "ha2zLbgf5agt1fYUj33vOfD83TOL4nXx",
-      "sourceUrl": "/api/v1/sound-library/ha2zLbgf5agt1fYUj33vOfD83TOL4nXx/category_male_voiceover/male_voice_4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_4.mp3"
     },
     "category_male_voiceover/male_voice_5": {
       "name": "male_voice_5",
@@ -1515,7 +1515,7 @@
       "jsonLastModified": "2017-02-27 21:02:53 UTC",
       "mp3LastModified": "2017-02-27 21:02:54 UTC",
       "version": "jxp_XFROrWcxBg37DIg_f_3iNcjwIxng",
-      "sourceUrl": "/api/v1/sound-library/jxp_XFROrWcxBg37DIg_f_3iNcjwIxng/category_male_voiceover/male_voice_5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_5.mp3"
     },
     "category_male_voiceover/male_voice_6": {
       "name": "male_voice_6",
@@ -1523,7 +1523,7 @@
       "jsonLastModified": "2017-02-27 21:02:55 UTC",
       "mp3LastModified": "2017-02-27 21:02:55 UTC",
       "version": "mCA6A6PNC9mL0RTUhwQ.36sIjDGqzG33",
-      "sourceUrl": "/api/v1/sound-library/mCA6A6PNC9mL0RTUhwQ.36sIjDGqzG33/category_male_voiceover/male_voice_6.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_6.mp3"
     },
     "category_male_voiceover/male_voice_7": {
       "name": "male_voice_7",
@@ -1531,7 +1531,7 @@
       "jsonLastModified": "2017-02-27 21:02:57 UTC",
       "mp3LastModified": "2017-02-27 21:02:58 UTC",
       "version": "0MUKwPjVYxRNPH_wlXSYrjfgxyNFNju5",
-      "sourceUrl": "/api/v1/sound-library/0MUKwPjVYxRNPH_wlXSYrjfgxyNFNju5/category_male_voiceover/male_voice_7.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_7.mp3"
     },
     "category_male_voiceover/male_voice_8": {
       "name": "male_voice_8",
@@ -1539,7 +1539,7 @@
       "jsonLastModified": "2017-02-27 21:02:58 UTC",
       "mp3LastModified": "2017-02-27 21:02:59 UTC",
       "version": "NEFVR3w6Lg0YjOLDz2mNXKuOMNX1Nzhe",
-      "sourceUrl": "/api/v1/sound-library/NEFVR3w6Lg0YjOLDz2mNXKuOMNX1Nzhe/category_male_voiceover/male_voice_8.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_8.mp3"
     },
     "category_male_voiceover/male_voice_9": {
       "name": "male_voice_9",
@@ -1547,7 +1547,7 @@
       "jsonLastModified": "2017-02-27 21:03:00 UTC",
       "mp3LastModified": "2017-02-27 21:03:00 UTC",
       "version": "vAtjWTK8nrXQX6.NP8zsqSMTy83BrE7R",
-      "sourceUrl": "/api/v1/sound-library/vAtjWTK8nrXQX6.NP8zsqSMTy83BrE7R/category_male_voiceover/male_voice_9.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_9.mp3"
     },
     "category_male_voiceover/male_voice_congratulations": {
       "name": "male_voice_congratulations",
@@ -1555,7 +1555,7 @@
       "jsonLastModified": "2017-02-27 21:03:02 UTC",
       "mp3LastModified": "2017-02-27 21:03:02 UTC",
       "version": "30KbstcwKa6kTXbQIiGrkDyTfZVt.e4M",
-      "sourceUrl": "/api/v1/sound-library/30KbstcwKa6kTXbQIiGrkDyTfZVt.e4M/category_male_voiceover/male_voice_congratulations.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_congratulations.mp3"
     },
     "category_male_voiceover/male_voice_correct": {
       "name": "male_voice_correct",
@@ -1563,7 +1563,7 @@
       "jsonLastModified": "2017-02-27 21:03:03 UTC",
       "mp3LastModified": "2017-02-27 21:03:03 UTC",
       "version": "eQ5Ri5lAYdJwuhLAmNm7Oc4_p_h4JqRe",
-      "sourceUrl": "/api/v1/sound-library/eQ5Ri5lAYdJwuhLAmNm7Oc4_p_h4JqRe/category_male_voiceover/male_voice_correct.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_correct.mp3"
     },
     "category_male_voiceover/male_voice_final_round": {
       "name": "male_voice_final_round",
@@ -1571,7 +1571,7 @@
       "jsonLastModified": "2017-02-27 21:03:04 UTC",
       "mp3LastModified": "2017-02-27 21:03:05 UTC",
       "version": "3wMdpS7tgkl9FRtaJ4DEIZeJU0MMow3L",
-      "sourceUrl": "/api/v1/sound-library/3wMdpS7tgkl9FRtaJ4DEIZeJU0MMow3L/category_male_voiceover/male_voice_final_round.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_final_round.mp3"
     },
     "category_male_voiceover/male_voice_game_over": {
       "name": "male_voice_game_over",
@@ -1579,7 +1579,7 @@
       "jsonLastModified": "2017-02-27 21:03:06 UTC",
       "mp3LastModified": "2017-02-27 21:03:07 UTC",
       "version": "M478kO6ZkuIO6hD9ggmoYrWgn0y58_Av",
-      "sourceUrl": "/api/v1/sound-library/M478kO6ZkuIO6hD9ggmoYrWgn0y58_Av/category_male_voiceover/male_voice_game_over.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_game_over.mp3"
     },
     "category_male_voiceover/male_voice_go": {
       "name": "male_voice_go",
@@ -1587,7 +1587,7 @@
       "jsonLastModified": "2017-02-27 21:03:08 UTC",
       "mp3LastModified": "2017-02-27 21:03:09 UTC",
       "version": "Aw1iCRh6MzwvqmpaK9kl7NJZpzT1ZUTC",
-      "sourceUrl": "/api/v1/sound-library/Aw1iCRh6MzwvqmpaK9kl7NJZpzT1ZUTC/category_male_voiceover/male_voice_go.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_go.mp3"
     },
     "category_male_voiceover/male_voice_hold": {
       "name": "male_voice_hold",
@@ -1595,7 +1595,7 @@
       "jsonLastModified": "2017-02-27 21:03:09 UTC",
       "mp3LastModified": "2017-02-27 21:03:10 UTC",
       "version": "n3RRBHhF4hHzSqraEW4TqdufOtpoBxly",
-      "sourceUrl": "/api/v1/sound-library/n3RRBHhF4hHzSqraEW4TqdufOtpoBxly/category_male_voiceover/male_voice_hold.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_hold.mp3"
     },
     "category_male_voiceover/male_voice_hurry_up": {
       "name": "male_voice_hurry_up",
@@ -1603,7 +1603,7 @@
       "jsonLastModified": "2017-02-27 21:03:10 UTC",
       "mp3LastModified": "2017-02-27 21:03:11 UTC",
       "version": "CA_oh8PRaXkZwqdGNnAv_EL1cKAzDDSx",
-      "sourceUrl": "/api/v1/sound-library/CA_oh8PRaXkZwqdGNnAv_EL1cKAzDDSx/category_male_voiceover/male_voice_hurry_up.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_hurry_up.mp3"
     },
     "category_male_voiceover/male_voice_its_a_tie": {
       "name": "male_voice_its_a_tie",
@@ -1611,7 +1611,7 @@
       "jsonLastModified": "2017-02-27 21:03:11 UTC",
       "mp3LastModified": "2017-02-27 21:03:13 UTC",
       "version": "7TKba_047PHE_b.hgK3nMz4VlM6k6Lxz",
-      "sourceUrl": "/api/v1/sound-library/7TKba_047PHE_b.hgK3nMz4VlM6k6Lxz/category_male_voiceover/male_voice_its_a_tie.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_its_a_tie.mp3"
     },
     "category_male_voiceover/male_voice_level": {
       "name": "male_voice_level",
@@ -1619,7 +1619,7 @@
       "jsonLastModified": "2017-02-27 21:03:14 UTC",
       "mp3LastModified": "2017-02-27 21:03:15 UTC",
       "version": "6jx5LDZ1F2z5zUlUge8kh_qv6uHlu6vP",
-      "sourceUrl": "/api/v1/sound-library/6jx5LDZ1F2z5zUlUge8kh_qv6uHlu6vP/category_male_voiceover/male_voice_level.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_level.mp3"
     },
     "category_male_voiceover/male_voice_level_up": {
       "name": "male_voice_level_up",
@@ -1627,7 +1627,7 @@
       "jsonLastModified": "2017-02-27 21:03:13 UTC",
       "mp3LastModified": "2017-02-27 21:03:14 UTC",
       "version": "RvPC99DCYADOsrOTfkhi9xRQzTBrYlIP",
-      "sourceUrl": "/api/v1/sound-library/RvPC99DCYADOsrOTfkhi9xRQzTBrYlIP/category_male_voiceover/male_voice_level_up.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_level_up.mp3"
     },
     "category_male_voiceover/male_voice_mission_completed": {
       "name": "male_voice_mission_completed",
@@ -1635,7 +1635,7 @@
       "jsonLastModified": "2017-02-27 21:03:15 UTC",
       "mp3LastModified": "2017-02-27 21:03:16 UTC",
       "version": "VHh3NrXN6F.vW6nuQ7yZJoGrGfQ70rKl",
-      "sourceUrl": "/api/v1/sound-library/VHh3NrXN6F.vW6nuQ7yZJoGrGfQ70rKl/category_male_voiceover/male_voice_mission_completed.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_mission_completed.mp3"
     },
     "category_male_voiceover/male_voice_mission_failed": {
       "name": "male_voice_mission_failed",
@@ -1643,7 +1643,7 @@
       "jsonLastModified": "2017-02-27 21:03:16 UTC",
       "mp3LastModified": "2017-02-27 21:03:17 UTC",
       "version": "L96XV823BeV90bBpNqHrm4ogIva1ap3B",
-      "sourceUrl": "/api/v1/sound-library/L96XV823BeV90bBpNqHrm4ogIva1ap3B/category_male_voiceover/male_voice_mission_failed.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_mission_failed.mp3"
     },
     "category_male_voiceover/male_voice_new_highscore": {
       "name": "male_voice_new_highscore",
@@ -1651,7 +1651,7 @@
       "jsonLastModified": "2017-02-27 21:03:18 UTC",
       "mp3LastModified": "2017-02-27 21:03:18 UTC",
       "version": "oYFJ.aLdtdiOueXkaGFFPnjfILbM8onS",
-      "sourceUrl": "/api/v1/sound-library/oYFJ.aLdtdiOueXkaGFFPnjfILbM8onS/category_male_voiceover/male_voice_new_highscore.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_new_highscore.mp3"
     },
     "category_male_voiceover/male_voice_objective_achieved": {
       "name": "male_voice_objective_achieved",
@@ -1659,7 +1659,7 @@
       "jsonLastModified": "2017-02-27 21:03:19 UTC",
       "mp3LastModified": "2017-02-27 21:03:20 UTC",
       "version": "_hH7TU_xBzGaGtVzoB2J3gSr7B9ObKw2",
-      "sourceUrl": "/api/v1/sound-library/_hH7TU_xBzGaGtVzoB2J3gSr7B9ObKw2/category_male_voiceover/male_voice_objective_achieved.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_objective_achieved.mp3"
     },
     "category_male_voiceover/male_voice_power_up": {
       "name": "male_voice_power_up",
@@ -1667,7 +1667,7 @@
       "jsonLastModified": "2017-02-27 21:03:20 UTC",
       "mp3LastModified": "2017-02-27 21:03:21 UTC",
       "version": "w7rTSM__n76kn7Hj1JhVhXc8Ntsxldaw",
-      "sourceUrl": "/api/v1/sound-library/w7rTSM__n76kn7Hj1JhVhXc8Ntsxldaw/category_male_voiceover/male_voice_power_up.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_power_up.mp3"
     },
     "category_male_voiceover/male_voice_ready": {
       "name": "male_voice_ready",
@@ -1675,7 +1675,7 @@
       "jsonLastModified": "2017-02-27 21:03:21 UTC",
       "mp3LastModified": "2017-02-27 21:03:22 UTC",
       "version": "PTS5atiLgY_moVsj0lzCkP9bnqetsmwY",
-      "sourceUrl": "/api/v1/sound-library/PTS5atiLgY_moVsj0lzCkP9bnqetsmwY/category_male_voiceover/male_voice_ready.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_ready.mp3"
     },
     "category_male_voiceover/male_voice_round": {
       "name": "male_voice_round",
@@ -1683,7 +1683,7 @@
       "jsonLastModified": "2017-02-27 21:03:22 UTC",
       "mp3LastModified": "2017-02-27 21:03:23 UTC",
       "version": "_jkyzop.AIXzSzV5STgqBr8ABtmbSQOu",
-      "sourceUrl": "/api/v1/sound-library/_jkyzop.AIXzSzV5STgqBr8ABtmbSQOu/category_male_voiceover/male_voice_round.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_round.mp3"
     },
     "category_male_voiceover/male_voice_set": {
       "name": "male_voice_set",
@@ -1691,7 +1691,7 @@
       "jsonLastModified": "2017-02-27 21:03:24 UTC",
       "mp3LastModified": "2017-02-27 21:03:24 UTC",
       "version": "SCqYq6SHeASC1qOq6w_Pp0YvxsacYVBK",
-      "sourceUrl": "/api/v1/sound-library/SCqYq6SHeASC1qOq6w_Pp0YvxsacYVBK/category_male_voiceover/male_voice_set.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_set.mp3"
     },
     "category_male_voiceover/male_voice_time_over": {
       "name": "male_voice_time_over",
@@ -1699,7 +1699,7 @@
       "jsonLastModified": "2017-02-27 21:03:25 UTC",
       "mp3LastModified": "2017-02-27 21:03:25 UTC",
       "version": "yfNJbxDoC8ZRrT.be0IpkmAbJbHarbIX",
-      "sourceUrl": "/api/v1/sound-library/yfNJbxDoC8ZRrT.be0IpkmAbJbHarbIX/category_male_voiceover/male_voice_time_over.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_time_over.mp3"
     },
     "category_male_voiceover/male_voice_wrong": {
       "name": "male_voice_wrong",
@@ -1707,7 +1707,7 @@
       "jsonLastModified": "2017-02-27 21:03:26 UTC",
       "mp3LastModified": "2017-02-27 21:03:27 UTC",
       "version": "1gPK0xo6ZN9NukihZaLU05Idnq8og66y",
-      "sourceUrl": "/api/v1/sound-library/1gPK0xo6ZN9NukihZaLU05Idnq8og66y/category_male_voiceover/male_voice_wrong.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_wrong.mp3"
     },
     "category_male_voiceover/male_voice_you_lose": {
       "name": "male_voice_you_lose",
@@ -1715,7 +1715,7 @@
       "jsonLastModified": "2017-02-27 21:03:27 UTC",
       "mp3LastModified": "2017-02-27 21:03:28 UTC",
       "version": "mMMy5HoXTQMoC55kno3YyJ0x9PgilTac",
-      "sourceUrl": "/api/v1/sound-library/mMMy5HoXTQMoC55kno3YyJ0x9PgilTac/category_male_voiceover/male_voice_you_lose.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_you_lose.mp3"
     },
     "category_male_voiceover/male_voice_you_win": {
       "name": "male_voice_you_win",
@@ -1723,7 +1723,7 @@
       "jsonLastModified": "2017-02-27 21:03:29 UTC",
       "mp3LastModified": "2017-02-27 21:03:29 UTC",
       "version": "qwJsiFOuUe2j_ybS8EiXsErKRdD6Cpff",
-      "sourceUrl": "/api/v1/sound-library/qwJsiFOuUe2j_ybS8EiXsErKRdD6Cpff/category_male_voiceover/male_voice_you_win.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_male_voiceover/male_voice_you_win.mp3"
     },
     "category_objects/bookClose": {
       "name": "bookClose",
@@ -1731,7 +1731,7 @@
       "jsonLastModified": "2017-02-27 21:04:07 UTC",
       "mp3LastModified": "2017-02-27 21:04:08 UTC",
       "version": "yWobxoxYsXSneK1a700Xomi_HUdYyOzY",
-      "sourceUrl": "/api/v1/sound-library/yWobxoxYsXSneK1a700Xomi_HUdYyOzY/category_objects/bookClose.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/bookClose.mp3"
     },
     "category_objects/bookFlip1": {
       "name": "bookFlip1",
@@ -1739,7 +1739,7 @@
       "jsonLastModified": "2017-02-27 21:04:08 UTC",
       "mp3LastModified": "2017-02-27 21:04:09 UTC",
       "version": "WCG3Lr1p.uQz8Ma_DweJAy8vGw._fcoN",
-      "sourceUrl": "/api/v1/sound-library/WCG3Lr1p.uQz8Ma_DweJAy8vGw._fcoN/category_objects/bookFlip1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/bookFlip1.mp3"
     },
     "category_objects/bookFlip2": {
       "name": "bookFlip2",
@@ -1747,7 +1747,7 @@
       "jsonLastModified": "2017-02-27 21:04:09 UTC",
       "mp3LastModified": "2017-02-27 21:04:10 UTC",
       "version": "UXxo15nkPWvkJd04c5UOdEkEkAXkv3Ak",
-      "sourceUrl": "/api/v1/sound-library/UXxo15nkPWvkJd04c5UOdEkEkAXkv3Ak/category_objects/bookFlip2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/bookFlip2.mp3"
     },
     "category_objects/bookOpen": {
       "name": "bookOpen",
@@ -1755,7 +1755,7 @@
       "jsonLastModified": "2017-02-27 21:04:10 UTC",
       "mp3LastModified": "2017-02-27 21:04:11 UTC",
       "version": "t9ubyQk8e75QUQU_2Np58n_yLv17yK5u",
-      "sourceUrl": "/api/v1/sound-library/t9ubyQk8e75QUQU_2Np58n_yLv17yK5u/category_objects/bookOpen.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/bookOpen.mp3"
     },
     "category_objects/bookPlace1": {
       "name": "bookPlace1",
@@ -1763,7 +1763,7 @@
       "jsonLastModified": "2017-02-27 21:04:11 UTC",
       "mp3LastModified": "2017-02-27 21:04:12 UTC",
       "version": "WRTTer80q7slVy8jRw8eUeqb0hpF9_0d",
-      "sourceUrl": "/api/v1/sound-library/WRTTer80q7slVy8jRw8eUeqb0hpF9_0d/category_objects/bookPlace1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/bookPlace1.mp3"
     },
     "category_objects/bookPlace2": {
       "name": "bookPlace2",
@@ -1771,7 +1771,7 @@
       "jsonLastModified": "2017-02-27 21:04:12 UTC",
       "mp3LastModified": "2017-02-27 21:04:13 UTC",
       "version": "xAxCMwPr_1Eqwr3t7JciK9OC.pJXZboU",
-      "sourceUrl": "/api/v1/sound-library/xAxCMwPr_1Eqwr3t7JciK9OC.pJXZboU/category_objects/bookPlace2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/bookPlace2.mp3"
     },
     "category_objects/cloth1": {
       "name": "cloth1",
@@ -1779,7 +1779,7 @@
       "jsonLastModified": "2017-02-27 21:04:14 UTC",
       "mp3LastModified": "2017-02-27 21:04:15 UTC",
       "version": "eqWjN9N9DGj9n_5WiEKl0eZ_iSILVKWB",
-      "sourceUrl": "/api/v1/sound-library/eqWjN9N9DGj9n_5WiEKl0eZ_iSILVKWB/category_objects/cloth1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/cloth1.mp3"
     },
     "category_objects/cloth2": {
       "name": "cloth2",
@@ -1787,7 +1787,7 @@
       "jsonLastModified": "2017-02-27 21:04:15 UTC",
       "mp3LastModified": "2017-02-27 21:04:16 UTC",
       "version": "Cv3pVDt.xpyz0hmxjdoTzFbMh8DmDx9T",
-      "sourceUrl": "/api/v1/sound-library/Cv3pVDt.xpyz0hmxjdoTzFbMh8DmDx9T/category_objects/cloth2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/cloth2.mp3"
     },
     "category_objects/creak1": {
       "name": "creak1",
@@ -1795,7 +1795,7 @@
       "jsonLastModified": "2017-02-27 21:04:16 UTC",
       "mp3LastModified": "2017-02-27 21:04:18 UTC",
       "version": "LQ9eI14WyfbhMLzmmumRHCfpxs2.qRFd",
-      "sourceUrl": "/api/v1/sound-library/LQ9eI14WyfbhMLzmmumRHCfpxs2.qRFd/category_objects/creak1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/creak1.mp3"
     },
     "category_objects/creak2": {
       "name": "creak2",
@@ -1803,7 +1803,7 @@
       "jsonLastModified": "2017-02-27 21:04:18 UTC",
       "mp3LastModified": "2017-02-27 21:04:19 UTC",
       "version": "l1LW1Q1xLGwUBvziqqK4oD2pTYfpouUF",
-      "sourceUrl": "/api/v1/sound-library/l1LW1Q1xLGwUBvziqqK4oD2pTYfpouUF/category_objects/creak2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/creak2.mp3"
     },
     "category_objects/doorClose_1": {
       "name": "doorClose_1",
@@ -1811,7 +1811,7 @@
       "jsonLastModified": "2017-02-27 21:04:19 UTC",
       "mp3LastModified": "2017-02-27 21:04:19 UTC",
       "version": "FxX9pskXJ4W..s1CJfv3gSEGiOyKXad0",
-      "sourceUrl": "/api/v1/sound-library/FxX9pskXJ4W..s1CJfv3gSEGiOyKXad0/category_objects/doorClose_1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/doorClose_1.mp3"
     },
     "category_objects/doorClose_2": {
       "name": "doorClose_2",
@@ -1819,7 +1819,7 @@
       "jsonLastModified": "2017-02-27 21:04:20 UTC",
       "mp3LastModified": "2017-02-27 21:04:21 UTC",
       "version": "kEug20rWfo7b_jBB4W5GgERCe5DvWYOj",
-      "sourceUrl": "/api/v1/sound-library/kEug20rWfo7b_jBB4W5GgERCe5DvWYOj/category_objects/doorClose_2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/doorClose_2.mp3"
     },
     "category_objects/footstep00": {
       "name": "footstep00",
@@ -1827,7 +1827,7 @@
       "jsonLastModified": "2017-02-27 21:04:22 UTC",
       "mp3LastModified": "2017-02-27 21:04:23 UTC",
       "version": "IuO2xhgciePUTdJzXYzeaux3ybili7EG",
-      "sourceUrl": "/api/v1/sound-library/IuO2xhgciePUTdJzXYzeaux3ybili7EG/category_objects/footstep00.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/footstep00.mp3"
     },
     "category_objects/footstep01": {
       "name": "footstep01",
@@ -1835,7 +1835,7 @@
       "jsonLastModified": "2017-02-27 21:04:23 UTC",
       "mp3LastModified": "2017-02-27 21:04:24 UTC",
       "version": "StiFOGlmgoYbuke3gADMNNCwq9uGRUbU",
-      "sourceUrl": "/api/v1/sound-library/StiFOGlmgoYbuke3gADMNNCwq9uGRUbU/category_objects/footstep01.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/footstep01.mp3"
     },
     "category_objects/footstep03": {
       "name": "footstep03",
@@ -1843,7 +1843,7 @@
       "jsonLastModified": "2017-02-27 21:04:24 UTC",
       "mp3LastModified": "2017-02-27 21:04:25 UTC",
       "version": "S2b2iZJSPYlWRHBwB50EaR9bjsVz5DiR",
-      "sourceUrl": "/api/v1/sound-library/S2b2iZJSPYlWRHBwB50EaR9bjsVz5DiR/category_objects/footstep03.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/footstep03.mp3"
     },
     "category_objects/handleCoins": {
       "name": "handleCoins",
@@ -1851,7 +1851,7 @@
       "jsonLastModified": "2017-02-27 21:04:26 UTC",
       "mp3LastModified": "2017-02-27 21:04:27 UTC",
       "version": "CZdzT8OWwVbVtsQeYJpzarbU1arX.Ds9",
-      "sourceUrl": "/api/v1/sound-library/CZdzT8OWwVbVtsQeYJpzarbU1arX.Ds9/category_objects/handleCoins.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/handleCoins.mp3"
     },
     "category_objects/metalClick": {
       "name": "metalClick",
@@ -1859,7 +1859,7 @@
       "jsonLastModified": "2017-02-27 21:04:27 UTC",
       "mp3LastModified": "2017-02-27 21:04:29 UTC",
       "version": "2dIVtcHHzljG8nddRhTLaDS9hnfZMAtt",
-      "sourceUrl": "/api/v1/sound-library/2dIVtcHHzljG8nddRhTLaDS9hnfZMAtt/category_objects/metalClick.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/metalClick.mp3"
     },
     "category_objects/metalPot1": {
       "name": "metalPot1",
@@ -1867,7 +1867,7 @@
       "jsonLastModified": "2017-02-27 21:04:30 UTC",
       "mp3LastModified": "2017-02-27 21:04:30 UTC",
       "version": "yeVffGUDRIhDZsq3LzT4ovwUSPmDFeds",
-      "sourceUrl": "/api/v1/sound-library/yeVffGUDRIhDZsq3LzT4ovwUSPmDFeds/category_objects/metalPot1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/metalPot1.mp3"
     },
     "category_objects/metalPot2": {
       "name": "metalPot2",
@@ -1875,7 +1875,7 @@
       "jsonLastModified": "2017-02-27 21:04:31 UTC",
       "mp3LastModified": "2017-02-27 21:04:33 UTC",
       "version": "gL6X6flyWFV5x0uaZpX2zEGPnFVUALmA",
-      "sourceUrl": "/api/v1/sound-library/gL6X6flyWFV5x0uaZpX2zEGPnFVUALmA/category_objects/metalPot2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_objects/metalPot2.mp3"
     },
     "category_ui/click1": {
       "name": "click1",
@@ -1883,7 +1883,7 @@
       "jsonLastModified": "2017-02-27 21:05:31 UTC",
       "mp3LastModified": "2017-02-27 21:05:32 UTC",
       "version": "CYvBw3rkgym_Ad4W6t34lBfBORckt9UA",
-      "sourceUrl": "/api/v1/sound-library/CYvBw3rkgym_Ad4W6t34lBfBORckt9UA/category_ui/click1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/click1.mp3"
     },
     "category_ui/click2": {
       "name": "click2",
@@ -1891,7 +1891,7 @@
       "jsonLastModified": "2017-02-27 21:05:33 UTC",
       "mp3LastModified": "2017-02-27 21:05:33 UTC",
       "version": "d5zR9i4rPEWjbFQETi9lNkR35zb8oLzH",
-      "sourceUrl": "/api/v1/sound-library/d5zR9i4rPEWjbFQETi9lNkR35zb8oLzH/category_ui/click2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/click2.mp3"
     },
     "category_ui/click3": {
       "name": "click3",
@@ -1899,7 +1899,7 @@
       "jsonLastModified": "2017-02-27 21:05:33 UTC",
       "mp3LastModified": "2017-02-27 21:05:34 UTC",
       "version": "y1gIUjurF_KiGwns7GvSvDs_M4dscoBU",
-      "sourceUrl": "/api/v1/sound-library/y1gIUjurF_KiGwns7GvSvDs_M4dscoBU/category_ui/click3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/click3.mp3"
     },
     "category_ui/click4": {
       "name": "click4",
@@ -1907,7 +1907,7 @@
       "jsonLastModified": "2017-02-27 21:05:34 UTC",
       "mp3LastModified": "2017-02-27 21:05:35 UTC",
       "version": "vwraeCq01FOMrcyCkAJ7hj79sVfeRa2o",
-      "sourceUrl": "/api/v1/sound-library/vwraeCq01FOMrcyCkAJ7hj79sVfeRa2o/category_ui/click4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/click4.mp3"
     },
     "category_ui/click5": {
       "name": "click5",
@@ -1915,7 +1915,7 @@
       "jsonLastModified": "2017-02-27 21:05:35 UTC",
       "mp3LastModified": "2017-02-27 21:05:35 UTC",
       "version": "FL7GC9661I17ss7JoEme_7mDds4Lzcbm",
-      "sourceUrl": "/api/v1/sound-library/FL7GC9661I17ss7JoEme_7mDds4Lzcbm/category_ui/click5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/click5.mp3"
     },
     "category_ui/mouseclick1": {
       "name": "mouseclick1",
@@ -1923,7 +1923,7 @@
       "jsonLastModified": "2017-02-27 21:05:36 UTC",
       "mp3LastModified": "2017-02-27 21:05:37 UTC",
       "version": "htB2zfMnCbQm9bUVVxgLrNIverVNvLxM",
-      "sourceUrl": "/api/v1/sound-library/htB2zfMnCbQm9bUVVxgLrNIverVNvLxM/category_ui/mouseclick1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/mouseclick1.mp3"
     },
     "category_ui/mouserelease1": {
       "name": "mouserelease1",
@@ -1931,7 +1931,7 @@
       "jsonLastModified": "2017-02-27 21:05:37 UTC",
       "mp3LastModified": "2017-02-27 21:05:38 UTC",
       "version": "GpnbV8KuIDqKZy7apWPAJEbosT38.KsU",
-      "sourceUrl": "/api/v1/sound-library/GpnbV8KuIDqKZy7apWPAJEbosT38.KsU/category_ui/mouserelease1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/mouserelease1.mp3"
     },
     "category_ui/rollover1": {
       "name": "rollover1",
@@ -1939,7 +1939,7 @@
       "jsonLastModified": "2017-02-27 21:05:38 UTC",
       "mp3LastModified": "2017-02-27 21:05:39 UTC",
       "version": "lI8Zb2BHqaS3M2gMsgIddN3C8yOTZDiR",
-      "sourceUrl": "/api/v1/sound-library/lI8Zb2BHqaS3M2gMsgIddN3C8yOTZDiR/category_ui/rollover1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/rollover1.mp3"
     },
     "category_ui/rollover2": {
       "name": "rollover2",
@@ -1947,7 +1947,7 @@
       "jsonLastModified": "2017-02-27 21:05:39 UTC",
       "mp3LastModified": "2017-02-27 21:05:39 UTC",
       "version": "9wSgeftX1kahrTr3y.CXoJ1HhN19uuQI",
-      "sourceUrl": "/api/v1/sound-library/9wSgeftX1kahrTr3y.CXoJ1HhN19uuQI/category_ui/rollover2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/rollover2.mp3"
     },
     "category_ui/rollover3": {
       "name": "rollover3",
@@ -1955,7 +1955,7 @@
       "jsonLastModified": "2017-02-27 21:05:39 UTC",
       "mp3LastModified": "2017-02-27 21:05:39 UTC",
       "version": "lydV8uZkE24P1CI1CLrOwq6RG17Ss2Gp",
-      "sourceUrl": "/api/v1/sound-library/lydV8uZkE24P1CI1CLrOwq6RG17Ss2Gp/category_ui/rollover3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/rollover3.mp3"
     },
     "category_ui/rollover4": {
       "name": "rollover4",
@@ -1963,7 +1963,7 @@
       "jsonLastModified": "2017-02-27 21:05:40 UTC",
       "mp3LastModified": "2017-02-27 21:05:40 UTC",
       "version": "PXZr_SRzlpd_sHeJ7bX90ANKkgJc9wsL",
-      "sourceUrl": "/api/v1/sound-library/PXZr_SRzlpd_sHeJ7bX90ANKkgJc9wsL/category_ui/rollover4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/rollover4.mp3"
     },
     "category_ui/rollover5": {
       "name": "rollover5",
@@ -1971,7 +1971,7 @@
       "jsonLastModified": "2017-02-27 21:05:41 UTC",
       "mp3LastModified": "2017-02-27 21:05:41 UTC",
       "version": "b2vA6o7w.fcone5sbJRuoOSarv8f.yEb",
-      "sourceUrl": "/api/v1/sound-library/b2vA6o7w.fcone5sbJRuoOSarv8f.yEb/category_ui/rollover5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/rollover5.mp3"
     },
     "category_ui/rollover6": {
       "name": "rollover6",
@@ -1979,7 +1979,7 @@
       "jsonLastModified": "2017-02-27 21:05:42 UTC",
       "mp3LastModified": "2017-02-27 21:05:42 UTC",
       "version": "RynvRe4c6tfeSvBWMpQOprC_85jBGN1v",
-      "sourceUrl": "/api/v1/sound-library/RynvRe4c6tfeSvBWMpQOprC_85jBGN1v/category_ui/rollover6.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/rollover6.mp3"
     },
     "category_ui/switch1": {
       "name": "switch1",
@@ -1987,7 +1987,7 @@
       "jsonLastModified": "2017-02-27 21:05:43 UTC",
       "mp3LastModified": "2017-02-27 21:05:44 UTC",
       "version": "Gf.TEeg2xxn1FPJp_MDzXqYWtBdBJIoI",
-      "sourceUrl": "/api/v1/sound-library/Gf.TEeg2xxn1FPJp_MDzXqYWtBdBJIoI/category_ui/switch1.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch1.mp3"
     },
     "category_ui/switch10": {
       "name": "switch10",
@@ -1995,7 +1995,7 @@
       "jsonLastModified": "2017-02-27 21:05:55 UTC",
       "mp3LastModified": "2017-02-27 21:05:59 UTC",
       "version": "IvLCpKG1iLFBSOdr7547L6v.xwUwxskp",
-      "sourceUrl": "/api/v1/sound-library/IvLCpKG1iLFBSOdr7547L6v.xwUwxskp/category_ui/switch10.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch10.mp3"
     },
     "category_ui/switch11": {
       "name": "switch11",
@@ -2003,7 +2003,7 @@
       "jsonLastModified": "2017-02-27 21:06:01 UTC",
       "mp3LastModified": "2017-02-27 21:06:03 UTC",
       "version": "dOfczlr1t0DYEBomBTay6fX.nyaapyaz",
-      "sourceUrl": "/api/v1/sound-library/dOfczlr1t0DYEBomBTay6fX.nyaapyaz/category_ui/switch11.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch11.mp3"
     },
     "category_ui/switch12": {
       "name": "switch12",
@@ -2011,7 +2011,7 @@
       "jsonLastModified": "2017-02-27 21:06:05 UTC",
       "mp3LastModified": "2017-02-27 21:06:07 UTC",
       "version": "TrY6TIRjvITf7LLe1vLS5mscg9wToRPs",
-      "sourceUrl": "/api/v1/sound-library/TrY6TIRjvITf7LLe1vLS5mscg9wToRPs/category_ui/switch12.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch12.mp3"
     },
     "category_ui/switch13": {
       "name": "switch13",
@@ -2019,7 +2019,7 @@
       "jsonLastModified": "2017-02-27 21:06:09 UTC",
       "mp3LastModified": "2017-02-27 21:06:13 UTC",
       "version": "zxFtaE2JYKSCl0lmnNANXTcSiwLqLttF",
-      "sourceUrl": "/api/v1/sound-library/zxFtaE2JYKSCl0lmnNANXTcSiwLqLttF/category_ui/switch13.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch13.mp3"
     },
     "category_ui/switch14": {
       "name": "switch14",
@@ -2027,7 +2027,7 @@
       "jsonLastModified": "2017-02-27 21:06:15 UTC",
       "mp3LastModified": "2017-02-27 21:06:17 UTC",
       "version": "zeZbFJ1bYdoaB8J0ICx_5OVztG_2cjIN",
-      "sourceUrl": "/api/v1/sound-library/zeZbFJ1bYdoaB8J0ICx_5OVztG_2cjIN/category_ui/switch14.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch14.mp3"
     },
     "category_ui/switch15": {
       "name": "switch15",
@@ -2035,7 +2035,7 @@
       "jsonLastModified": "2017-02-27 21:06:18 UTC",
       "mp3LastModified": "2017-02-27 21:06:21 UTC",
       "version": "Fz.hoTXJJo6QaBn0de1hP6U10jfHZr9u",
-      "sourceUrl": "/api/v1/sound-library/Fz.hoTXJJo6QaBn0de1hP6U10jfHZr9u/category_ui/switch15.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch15.mp3"
     },
     "category_ui/switch16": {
       "name": "switch16",
@@ -2043,7 +2043,7 @@
       "jsonLastModified": "2017-02-27 21:06:23 UTC",
       "mp3LastModified": "2017-02-27 21:06:26 UTC",
       "version": "YU7pzBcy1S3lebzrHENiE9sCamJQa0sG",
-      "sourceUrl": "/api/v1/sound-library/YU7pzBcy1S3lebzrHENiE9sCamJQa0sG/category_ui/switch16.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch16.mp3"
     },
     "category_ui/switch17": {
       "name": "switch17",
@@ -2051,7 +2051,7 @@
       "jsonLastModified": "2017-02-27 21:06:28 UTC",
       "mp3LastModified": "2017-02-27 21:06:31 UTC",
       "version": "zf7oVyGQGsBiEnXYYFgS_SKipCZKONFe",
-      "sourceUrl": "/api/v1/sound-library/zf7oVyGQGsBiEnXYYFgS_SKipCZKONFe/category_ui/switch17.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch17.mp3"
     },
     "category_ui/switch18": {
       "name": "switch18",
@@ -2059,7 +2059,7 @@
       "jsonLastModified": "2017-02-27 21:06:32 UTC",
       "mp3LastModified": "2017-02-27 21:06:35 UTC",
       "version": "ETzF4KJLzCDii3Ez4Gk0lbd3h0QQxd5c",
-      "sourceUrl": "/api/v1/sound-library/ETzF4KJLzCDii3Ez4Gk0lbd3h0QQxd5c/category_ui/switch18.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch18.mp3"
     },
     "category_ui/switch19": {
       "name": "switch19",
@@ -2067,7 +2067,7 @@
       "jsonLastModified": "2017-02-27 21:06:37 UTC",
       "mp3LastModified": "2017-02-27 21:06:39 UTC",
       "version": "Cp3V4dubdhkdEADIdhB4Jhl0rTWbGjU6",
-      "sourceUrl": "/api/v1/sound-library/Cp3V4dubdhkdEADIdhB4Jhl0rTWbGjU6/category_ui/switch19.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch19.mp3"
     },
     "category_ui/switch2": {
       "name": "switch2",
@@ -2075,7 +2075,7 @@
       "jsonLastModified": "2017-02-27 21:05:44 UTC",
       "mp3LastModified": "2017-02-27 21:05:45 UTC",
       "version": "4KFKRnskOkF9NiE.2kdg5erHZ6PIxIli",
-      "sourceUrl": "/api/v1/sound-library/4KFKRnskOkF9NiE.2kdg5erHZ6PIxIli/category_ui/switch2.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch2.mp3"
     },
     "category_ui/switch20": {
       "name": "switch20",
@@ -2083,7 +2083,7 @@
       "jsonLastModified": "2017-02-27 21:06:40 UTC",
       "mp3LastModified": "2017-02-27 21:06:43 UTC",
       "version": "Nm4Q4idam.SUXwpF1etxjx.SFwfFqrGr",
-      "sourceUrl": "/api/v1/sound-library/Nm4Q4idam.SUXwpF1etxjx.SFwfFqrGr/category_ui/switch20.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch20.mp3"
     },
     "category_ui/switch21": {
       "name": "switch21",
@@ -2091,7 +2091,7 @@
       "jsonLastModified": "2017-02-27 21:06:45 UTC",
       "mp3LastModified": "2017-02-27 21:06:47 UTC",
       "version": "t1wImf6t4J_vJxkyj99leRvJcvLxrJXK",
-      "sourceUrl": "/api/v1/sound-library/t1wImf6t4J_vJxkyj99leRvJcvLxrJXK/category_ui/switch21.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch21.mp3"
     },
     "category_ui/switch22": {
       "name": "switch22",
@@ -2099,7 +2099,7 @@
       "jsonLastModified": "2017-02-27 21:06:49 UTC",
       "mp3LastModified": "2017-02-27 21:06:51 UTC",
       "version": "AfDiX7eY8bzix6ygD33AbNbxsw6mE_8x",
-      "sourceUrl": "/api/v1/sound-library/AfDiX7eY8bzix6ygD33AbNbxsw6mE_8x/category_ui/switch22.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch22.mp3"
     },
     "category_ui/switch23": {
       "name": "switch23",
@@ -2107,7 +2107,7 @@
       "jsonLastModified": "2017-02-27 21:06:53 UTC",
       "mp3LastModified": "2017-02-27 21:06:56 UTC",
       "version": "ApxiKtFhO7Ms_Vj3LNejEkl8ci8YLOhv",
-      "sourceUrl": "/api/v1/sound-library/ApxiKtFhO7Ms_Vj3LNejEkl8ci8YLOhv/category_ui/switch23.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch23.mp3"
     },
     "category_ui/switch24": {
       "name": "switch24",
@@ -2115,7 +2115,7 @@
       "jsonLastModified": "2017-02-27 21:06:57 UTC",
       "mp3LastModified": "2017-02-27 21:07:00 UTC",
       "version": "v8FCxcTkot4nFzmpTDb_CPe.tH.uOT45",
-      "sourceUrl": "/api/v1/sound-library/v8FCxcTkot4nFzmpTDb_CPe.tH.uOT45/category_ui/switch24.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch24.mp3"
     },
     "category_ui/switch25": {
       "name": "switch25",
@@ -2123,7 +2123,7 @@
       "jsonLastModified": "2017-02-27 21:07:02 UTC",
       "mp3LastModified": "2017-02-27 21:07:03 UTC",
       "version": "BdQmaZgi.3YT4Ac4I6CaJK74mR2MgwNK",
-      "sourceUrl": "/api/v1/sound-library/BdQmaZgi.3YT4Ac4I6CaJK74mR2MgwNK/category_ui/switch25.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch25.mp3"
     },
     "category_ui/switch26": {
       "name": "switch26",
@@ -2131,7 +2131,7 @@
       "jsonLastModified": "2017-02-27 21:07:03 UTC",
       "mp3LastModified": "2017-02-27 21:07:04 UTC",
       "version": "AMjYOkm9nnfNhdfA0QBRNYH.Bjq.W6Mw",
-      "sourceUrl": "/api/v1/sound-library/AMjYOkm9nnfNhdfA0QBRNYH.Bjq.W6Mw/category_ui/switch26.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch26.mp3"
     },
     "category_ui/switch27": {
       "name": "switch27",
@@ -2139,7 +2139,7 @@
       "jsonLastModified": "2017-02-27 21:07:04 UTC",
       "mp3LastModified": "2017-02-27 21:07:05 UTC",
       "version": "gNQGXV7UgVAnawnHXKQ.fq7utd.SPfXa",
-      "sourceUrl": "/api/v1/sound-library/gNQGXV7UgVAnawnHXKQ.fq7utd.SPfXa/category_ui/switch27.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch27.mp3"
     },
     "category_ui/switch28": {
       "name": "switch28",
@@ -2147,7 +2147,7 @@
       "jsonLastModified": "2017-02-27 21:07:05 UTC",
       "mp3LastModified": "2017-02-27 21:07:07 UTC",
       "version": "60PvIDtOm_iT2wiZ77M5fkAdvlviGgzE",
-      "sourceUrl": "/api/v1/sound-library/60PvIDtOm_iT2wiZ77M5fkAdvlviGgzE/category_ui/switch28.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch28.mp3"
     },
     "category_ui/switch29": {
       "name": "switch29",
@@ -2155,7 +2155,7 @@
       "jsonLastModified": "2017-02-27 21:07:07 UTC",
       "mp3LastModified": "2017-02-27 21:07:08 UTC",
       "version": "efDqjnt5fDKCt.8MVRsP0WM2gx3stEm2",
-      "sourceUrl": "/api/v1/sound-library/efDqjnt5fDKCt.8MVRsP0WM2gx3stEm2/category_ui/switch29.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch29.mp3"
     },
     "category_ui/switch3": {
       "name": "switch3",
@@ -2163,7 +2163,7 @@
       "jsonLastModified": "2017-02-27 21:05:46 UTC",
       "mp3LastModified": "2017-02-27 21:05:47 UTC",
       "version": "_WhsYkbWJj1HjHuYkksM_BJwACFHp9pu",
-      "sourceUrl": "/api/v1/sound-library/_WhsYkbWJj1HjHuYkksM_BJwACFHp9pu/category_ui/switch3.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch3.mp3"
     },
     "category_ui/switch30": {
       "name": "switch30",
@@ -2171,7 +2171,7 @@
       "jsonLastModified": "2017-02-27 21:07:08 UTC",
       "mp3LastModified": "2017-02-27 21:07:09 UTC",
       "version": "Qfy6sk1XFC2iSPiusJEZFEVaLXg0vd82",
-      "sourceUrl": "/api/v1/sound-library/Qfy6sk1XFC2iSPiusJEZFEVaLXg0vd82/category_ui/switch30.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch30.mp3"
     },
     "category_ui/switch31": {
       "name": "switch31",
@@ -2179,7 +2179,7 @@
       "jsonLastModified": "2017-02-27 21:07:09 UTC",
       "mp3LastModified": "2017-02-27 21:07:10 UTC",
       "version": "ihOG2dLKtRniHlDvp5UNaC4jSyWSYD7w",
-      "sourceUrl": "/api/v1/sound-library/ihOG2dLKtRniHlDvp5UNaC4jSyWSYD7w/category_ui/switch31.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch31.mp3"
     },
     "category_ui/switch32": {
       "name": "switch32",
@@ -2187,7 +2187,7 @@
       "jsonLastModified": "2017-02-27 21:07:10 UTC",
       "mp3LastModified": "2017-02-27 21:07:11 UTC",
       "version": "K6zoebIELm5xBAhVJfZ4e30EprPXQoHt",
-      "sourceUrl": "/api/v1/sound-library/K6zoebIELm5xBAhVJfZ4e30EprPXQoHt/category_ui/switch32.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch32.mp3"
     },
     "category_ui/switch33": {
       "name": "switch33",
@@ -2195,7 +2195,7 @@
       "jsonLastModified": "2017-02-27 21:07:12 UTC",
       "mp3LastModified": "2017-02-27 21:07:12 UTC",
       "version": "vcTbb_9FtqJYbHL72y12tDMAEtyvbC1r",
-      "sourceUrl": "/api/v1/sound-library/vcTbb_9FtqJYbHL72y12tDMAEtyvbC1r/category_ui/switch33.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch33.mp3"
     },
     "category_ui/switch34": {
       "name": "switch34",
@@ -2203,7 +2203,7 @@
       "jsonLastModified": "2017-02-27 21:07:13 UTC",
       "mp3LastModified": "2017-02-27 21:07:14 UTC",
       "version": "GWm6T05IMJnnhNmRWnEFxuSlqDDP1Zo2",
-      "sourceUrl": "/api/v1/sound-library/GWm6T05IMJnnhNmRWnEFxuSlqDDP1Zo2/category_ui/switch34.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch34.mp3"
     },
     "category_ui/switch35": {
       "name": "switch35",
@@ -2211,7 +2211,7 @@
       "jsonLastModified": "2017-02-27 21:07:14 UTC",
       "mp3LastModified": "2017-02-27 21:07:15 UTC",
       "version": "M1rlZ7otkkRXev5G2bR1WLfIcjy00Wvl",
-      "sourceUrl": "/api/v1/sound-library/M1rlZ7otkkRXev5G2bR1WLfIcjy00Wvl/category_ui/switch35.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch35.mp3"
     },
     "category_ui/switch36": {
       "name": "switch36",
@@ -2219,7 +2219,7 @@
       "jsonLastModified": "2017-02-27 21:07:15 UTC",
       "mp3LastModified": "2017-02-27 21:07:16 UTC",
       "version": "ptj4ML.GBixpdZmMTBSsY1i1scqgwoZq",
-      "sourceUrl": "/api/v1/sound-library/ptj4ML.GBixpdZmMTBSsY1i1scqgwoZq/category_ui/switch36.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch36.mp3"
     },
     "category_ui/switch37": {
       "name": "switch37",
@@ -2227,7 +2227,7 @@
       "jsonLastModified": "2017-02-27 21:07:17 UTC",
       "mp3LastModified": "2017-02-27 21:07:18 UTC",
       "version": "TIE4v1lpEPsM20ZJHCwtaKaVR8nkzUvL",
-      "sourceUrl": "/api/v1/sound-library/TIE4v1lpEPsM20ZJHCwtaKaVR8nkzUvL/category_ui/switch37.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch37.mp3"
     },
     "category_ui/switch38": {
       "name": "switch38",
@@ -2235,7 +2235,7 @@
       "jsonLastModified": "2017-02-27 21:07:18 UTC",
       "mp3LastModified": "2017-02-27 21:07:18 UTC",
       "version": "4QIlNyGcJEFKXqClQlQMX7W9lPvFzMcO",
-      "sourceUrl": "/api/v1/sound-library/4QIlNyGcJEFKXqClQlQMX7W9lPvFzMcO/category_ui/switch38.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch38.mp3"
     },
     "category_ui/switch4": {
       "name": "switch4",
@@ -2243,7 +2243,7 @@
       "jsonLastModified": "2017-02-27 21:05:48 UTC",
       "mp3LastModified": "2017-02-27 21:05:49 UTC",
       "version": "ewM4gNAceGbzwXJiw9Jf07NZq46EQrL3",
-      "sourceUrl": "/api/v1/sound-library/ewM4gNAceGbzwXJiw9Jf07NZq46EQrL3/category_ui/switch4.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch4.mp3"
     },
     "category_ui/switch5": {
       "name": "switch5",
@@ -2251,7 +2251,7 @@
       "jsonLastModified": "2017-02-27 21:05:49 UTC",
       "mp3LastModified": "2017-02-27 21:05:50 UTC",
       "version": "GlNAskQ7EavvRTliWVvJ8T4dIVCVdeiG",
-      "sourceUrl": "/api/v1/sound-library/GlNAskQ7EavvRTliWVvJ8T4dIVCVdeiG/category_ui/switch5.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch5.mp3"
     },
     "category_ui/switch6": {
       "name": "switch6",
@@ -2259,7 +2259,7 @@
       "jsonLastModified": "2017-02-27 21:05:50 UTC",
       "mp3LastModified": "2017-02-27 21:05:51 UTC",
       "version": "E85PfGVDbbtZ4UpDwPDifceWfNyeORIi",
-      "sourceUrl": "/api/v1/sound-library/E85PfGVDbbtZ4UpDwPDifceWfNyeORIi/category_ui/switch6.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch6.mp3"
     },
     "category_ui/switch7": {
       "name": "switch7",
@@ -2267,7 +2267,7 @@
       "jsonLastModified": "2017-02-27 21:05:52 UTC",
       "mp3LastModified": "2017-02-27 21:05:52 UTC",
       "version": "CYzgOBzXqDieMLckx6lvZZLjEl9q21w7",
-      "sourceUrl": "/api/v1/sound-library/CYzgOBzXqDieMLckx6lvZZLjEl9q21w7/category_ui/switch7.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch7.mp3"
     },
     "category_ui/switch8": {
       "name": "switch8",
@@ -2275,7 +2275,7 @@
       "jsonLastModified": "2017-02-27 21:05:52 UTC",
       "mp3LastModified": "2017-02-27 21:05:54 UTC",
       "version": "iYwbtr80bR5aoJQ3oGxo897ikzGmuzp4",
-      "sourceUrl": "/api/v1/sound-library/iYwbtr80bR5aoJQ3oGxo897ikzGmuzp4/category_ui/switch8.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch8.mp3"
     },
     "category_ui/switch9": {
       "name": "switch9",
@@ -2283,7 +2283,15 @@
       "jsonLastModified": "2017-02-27 21:05:54 UTC",
       "mp3LastModified": "2017-02-27 21:05:55 UTC",
       "version": "_DjeckdpZqbQgrCWWc1_Ys0MnKy90wQu",
-      "sourceUrl": "/api/v1/sound-library/_DjeckdpZqbQgrCWWc1_Ys0MnKy90wQu/category_ui/switch9.mp3"
+      "sourceUrl": "/api/v1/sound-library/category_ui/switch9.mp3"
+    },
+    "default": {
+      "name": "default",
+      "time": 0,
+      "jsonLastModified": "2017-03-13 22:10:46 UTC",
+      "mp3LastModified": "2017-03-13 22:10:47 UTC",
+      "version": "5GMj5TnvwoIG4VFX8J9KrZJMbN4IGz3J",
+      "sourceUrl": "/api/v1/sound-library/default.mp3"
     }
   },
   "aliases": {
@@ -2390,7 +2398,8 @@
       "category_digital/powerUp6",
       "category_digital/powerUp7",
       "category_digital/powerUp8",
-      "category_digital/powerUp9"
+      "category_digital/powerUp9",
+      "default"
     ],
     "category_female_voiceover": [
       "category_female_voiceover/female_voice_1",
@@ -2669,6 +2678,9 @@
     ],
     "creak2": [
       "category_objects/creak2"
+    ],
+    "default": [
+      "default"
     ],
     "dicethrow1": [
       "category_gameplay/diceThrow1"

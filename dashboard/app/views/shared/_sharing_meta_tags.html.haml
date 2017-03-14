@@ -24,7 +24,10 @@
       = tag 'meta', attr => "#{namespace}:description", content: t('share_code.og_description')
       = tag 'meta', attr => "#{namespace}:url", content: request.original_url
 
-      = tag 'meta', attr => "#{namespace}:image", content: meta_image_url(level_source: @level_source, level: @level)
+      - if @project_image
+        = tag 'meta', attr => "#{namespace}:image", content: @project_image
+      - else
+        = tag 'meta', attr => "#{namespace}:image", content: meta_image_url(level_source: @level_source, level: @level)
       = tag 'meta', attr => "#{namespace}:image:width", content: meta_image_width
       = tag 'meta', attr => "#{namespace}:image:height", content: meta_image_height
 

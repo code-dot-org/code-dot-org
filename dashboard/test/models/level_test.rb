@@ -509,7 +509,6 @@ EOS
 
     assert_equal callouts[0].callout_text, "first test markdown"
     assert_equal callouts[1].callout_text, "second test markdown"
-    I18n.locale = I18n.default_locale
   end
 
   test 'handles bad callout localization data' do
@@ -556,6 +555,5 @@ EOS
 
     assert_equal callouts[0].callout_text, "first english markdown"
     assert_equal callouts[1].callout_text, "second english markdown"
-    I18n.locale = I18n.default_locale
   end
 end

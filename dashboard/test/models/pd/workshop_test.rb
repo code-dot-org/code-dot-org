@@ -377,16 +377,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 12, workshop_no_constraint.effective_num_hours
   end
 
-  test 'plp' do
-    assert_nil @workshop.professional_learning_partner
-
-    # Now create a plp associated with the organizer
-    plp = create :professional_learning_partner, contact: @organizer
-
-    assert @workshop.professional_learning_partner
-    assert_equal plp, @workshop.professional_learning_partner
-  end
-
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil)

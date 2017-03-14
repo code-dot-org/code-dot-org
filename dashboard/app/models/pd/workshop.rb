@@ -2,27 +2,29 @@
 #
 # Table name: pd_workshops
 #
-#  id                 :integer          not null, primary key
-#  workshop_type      :string(255)      not null
-#  organizer_id       :integer          not null
-#  location_name      :string(255)
-#  location_address   :string(255)
-#  processed_location :text(65535)
-#  course             :string(255)      not null
-#  subject            :string(255)
-#  capacity           :integer          not null
-#  notes              :text(65535)
-#  section_id         :integer
-#  started_at         :datetime
-#  ended_at           :datetime
-#  created_at         :datetime
-#  updated_at         :datetime
-#  processed_at       :datetime
-#  deleted_at         :datetime
+#  id                  :integer          not null, primary key
+#  workshop_type       :string(255)      not null
+#  organizer_id        :integer          not null
+#  location_name       :string(255)
+#  location_address    :string(255)
+#  processed_location  :text(65535)
+#  course              :string(255)      not null
+#  subject             :string(255)
+#  capacity            :integer          not null
+#  notes               :text(65535)
+#  section_id          :integer
+#  started_at          :datetime
+#  ended_at            :datetime
+#  created_at          :datetime
+#  updated_at          :datetime
+#  processed_at        :datetime
+#  deleted_at          :datetime
+#  regional_partner_id :integer
 #
 # Indexes
 #
-#  index_pd_workshops_on_organizer_id  (organizer_id)
+#  index_pd_workshops_on_organizer_id         (organizer_id)
+#  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
 #
 
 class Pd::Workshop < ActiveRecord::Base
@@ -142,6 +144,8 @@ class Pd::Workshop < ActiveRecord::Base
 
   has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
   belongs_to :section
+
+  belongs_to :regional_partner
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
@@ -379,11 +383,6 @@ class Pd::Workshop < ActiveRecord::Base
     actual_hours = sessions.map(&:hours).reduce(&:+)
     max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_hours]}
     [actual_hours, max_hours].compact.min
-  end
-
-  # @return [ProfessionalLearningPartner] plp associated with the workshop organizer, if any.
-  def professional_learning_partner
-    ProfessionalLearningPartner.find_by_contact_id organizer.id
   end
 
   # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.

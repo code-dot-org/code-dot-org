@@ -4,7 +4,7 @@ maintainer_email 'will@code.org'
 license          'All rights reserved'
 description      'Installs/Configures cdo-apps'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.194'
+version          '0.2.198'
 
 depends 'apt'
 depends 'build-essential'

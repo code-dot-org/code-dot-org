@@ -49,7 +49,7 @@ table {width: 100%;}
 | March 21, 2017 | Regional Partner Cycle #5 application reviews due |
 | March 24th-26th 2017 | <span style="color:green">CSP Local Leads Facilitator Training (arrive Friday night)<br/>Location: Chicago, IL</span>|
 | March 27, 2017 | Code.org notifies Cycle #5 applicants of decisions |
-
+| March 30, 2017 | Regional Partner Cycle #6 application reviews due (CSP only)|
 
 ## April Areas of Focus
 
@@ -60,7 +60,10 @@ table {width: 100%;}
 | **April** ||
 |-----------------|--------------------------------------------------|
 | April 3, 2017 | Remaining pending and waitlisted teacher applicants receive status update|
-| April 21, 2017 | Claim Your Seat responses due from all accepted applicants |
+| April 7, 2017 | Code.org notifies Cycle #6 applicants of decisions| 
+| April 14, 2017 | Regional Partner Cycle #7 application reviews due (CSP only)|
+| April 21, 2017 | Code.org notifies Cycle #7 applicants of decisions| 
+| April 21, 2017 | Claim Your Seat responses due from all applicants accepted during cycles 1-6 |
 | April 22nd - 23rd, 2017 | <span style="color:green">CS Discoveries TeacherCon Leads Facilitator Training (arrive Friday night)<br/br/>Location: Chicago, IL</span>|
 | April 24, 2017 | (Group 1 Regional Partners only) Minimum number of CS Principles applicants must be selected in order to move forward with local summer workshop |
 | April 24, 2017 | Unclaimed seats for TeacherCon 1 released to waitlisted applicants |

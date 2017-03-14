@@ -96,9 +96,20 @@
     "slider_speed": "1.0",
     "lock_zero_param_functions": "false",
     "encrypted_examples": "DebtxaKrC/hG8gBSawW+8moiiXVQlLTu/qShg32qbWE71x/YzaeYSBjA00Xb\nUw4orbIqMh8yr7pdepEf4SGPvQ==\n",
+    "instructions_important": "false",
+    "display_name": "Make Your Own Clicker Game",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
