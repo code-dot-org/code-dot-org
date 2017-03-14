@@ -19,12 +19,14 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
   test 'facilitators can view their survey' do
     sign_in @facilitator
     get :workshop_survey_report, params: {workshop_id: @workshop.id}
-    assert :success
+    assert_response :success
+
+    @controller = ::Api::V1::Pd::WorkshopSurveyReportController.new
 
     other_facilitator = create :facilitator
     other_workshop = create(:pd_workshop, organizer: @organizer, facilitators: [other_facilitator])
     get :workshop_survey_report, params: {workshop_id: other_workshop.id}
-    assert :forbidden
+    assert_response :forbidden
   end
 
   test_user_gets_response_for(

@@ -1,6 +1,7 @@
 /* global trackEvent */
 
 import $ from 'jquery';
+import { getStore } from './redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ClientState from '@cdo/apps/code-studio/clientState';
@@ -39,6 +40,7 @@ var authoredHintUtils = require('./authoredHintUtils');
 
 import experiments from './util/experiments';
 import AchievementDialog from './templates/AchievementDialog';
+import StageAchievementDialog from './templates/StageAchievementDialog';
 
 /**
  * @typedef {Object} TestableBlock
@@ -199,13 +201,34 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
     const actualBlocks = this.getNumCountableBlocks();
 
+    // TODO: this is not always true
+    const lastInStage = FeedbackUtils.isLastLevel();
+    const stageName = `Stage ${window.appOptions.stagePosition}`;
+
     const progress = experiments.isEnabled('g.stageprogress') ?
-      this.calculateStageProgress(
+      FeedbackUtils.calculateStageProgress(
         actualBlocks <= idealBlocks,
         hintsUsed,
         options.response.level_id,
         isFinite(idealBlocks)) :
       {};
+
+    let onContinue = options.onContinue;
+    if (experiments.isEnabled('g.endstage') && lastInStage) {
+      onContinue = () => {
+        ReactDOM.render(
+          <StageAchievementDialog
+            stageName={stageName}
+            assetUrl={this.studioApp_.assetUrl}
+            onContinue={options.onContinue}
+            showStageProgress={experiments.isEnabled('g.stageprogress')}
+            newStageProgress={progress.newStageProgress}
+            numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
+          />,
+          container
+        );
+      };
+    }
 
     document.body.appendChild(container);
     ReactDOM.render(
@@ -215,7 +238,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         actualBlocks={actualBlocks}
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
-        onContinue={options.onContinue}
+        onContinue={onContinue}
         showStageProgress={experiments.isEnabled('g.stageprogress')}
         oldStageProgress={progress.oldStageProgress}
         newPassedProgress={progress.newPassedProgress}
@@ -386,9 +409,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 };
 
 // TODO(ram): split this up into something more modular
-FeedbackUtils.prototype.calculateStageProgress = function (
+FeedbackUtils.calculateStageProgress = function (
     isPerfect, hintsUsed, currentLevelId, finiteIdealBlocks) {
-  const stage = this.studioApp_.reduxStore.getState().progress.stages[0];
+  const stage = getStore().getState().progress.stages[0];
   const scriptName = stage.script_name;
   const levels = stage.levels;
   const progress = ClientState.allLevelsProgress();
@@ -442,12 +465,24 @@ FeedbackUtils.prototype.calculateStageProgress = function (
   const newPerfectProgress = newPerfectLevels * perfectWeight / levels.length;
   const newHintUsageProgress = newHintUsageLevels * 0.3 / levels.length;
 
+  const newStageProgress = oldStageProgress +
+    newPassedProgress +
+    newPerfectProgress +
+    newHintUsageProgress;
+
   return {
     oldStageProgress,
     newPassedProgress,
     newPerfectProgress,
     newHintUsageProgress,
+    newStageProgress,
   };
+};
+
+FeedbackUtils.isLastLevel = function () {
+  const stage = getStore().getState().progress.stages[0];
+  return stage.levels[stage.levels.length - 1].ids.indexOf(
+    window.appOptions.serverLevelId) !== -1;
 };
 
 /**

@@ -1,36 +1,115 @@
 #!/usr/bin/env ruby
 
+# This script attempts to automate and guide the Developer Of The Day through
+# our deploy processes. In particular, it includes the AM DTT, the PM DTT with
+# content scoops from staging and levelbuilder, the DTP, and the DTL.
+
 require 'cgi'
 require 'logger'
 require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
+require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/github'
 include CdoCli
 
-LOG_FILE = "#{Dir.tmpdir}/dotd.log"
+LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
+# TODO(asher): This is not a constant, so should not be NAMED as one.
 LOGGER = Logger.new(LOG_FILE, 'daily')
 
 LOGGER.formatter = proc do |_serverity, time, _progname, msg|
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
-# Prompts the user for their name.
-# @return [String] The user's name.
-def ask_for_name
-  name = ''
-  until name != ''
-    print "Who are you? "
-    name = gets.chomp
-  end
-  puts "Hi #{name}!"
-  LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{name} is DotD")
-  name
+# Global to prevent it from being passed around everywhere.
+@dotd_name = ''
+
+# Prints the script intro to the console.
+def puts_script_intro
+  puts <<-EOS.unindent
+
+    #{bold 'Welcome to Robo-Dev-of-the-Day!'}
+
+      d[ o_0 ]b
+
+    #{bold 'Documentation'}
+
+      Dev-of-the-Day Checklist
+      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
+
+      Known Issues
+      #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
+
+  EOS
 end
 
+# Prints task list after the DTP to the console.
+def puts_after_dtp_tasks
+  # TODO(asher): Automate the Slack#infra-production update.
+  puts <<-EOS.unindent
+
+    * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
+    * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
+    * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
+    * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
+    * Ensure that no frontends were skipped in the Production room on Slack.
+    * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
+
+  EOS
+end
+
+# Prints the script conclusion to the console.
+def puts_script_conclusion
+  puts <<-EOS.unindent
+    * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
+  EOS
+  press_enter_to_continue
+
+  puts <<-EOS.unindent
+
+  #{bold "You're done!"}
+
+      d[ o_0 ]b
+  EOS
+end
+
+def puts_quit_message
+  puts <<-EOS.unindent
+
+    #{bold 'Something weird going on? Take a look at: '\
+      'http://wiki.code.org/display/PROD/Daily+Deployment'}
+
+    You can find a log of your day at #{LOG_FILE}
+
+  EOS
+end
+
+# Prompts the user for their name, setting the global variable @dotd_name and
+# warns them of changing options.
+def ask_for_name
+  until @dotd_name != ''
+    print 'Who are you? '
+    @dotd_name = gets.chomp
+  end
+
+  puts <<-EOS.unindent_with_indent(2)
+
+    Hi #{@dotd_name}!
+
+  EOS
+
+  LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{@dotd_name} is DotD")
+end
+
+# Prompts the user whether block should be executed by asking question,
+# executing the block, doing nothing, or exiting the program depending on user
+# response.
+# @param question [String] The question to prompt the user with.
+# @block The block to run if the user responsds affirmatively.
 def should_i(question)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
     response = gets.strip.downcase
+    puts ''
     if 'yes'.start_with?(response) # also catches blank/return ;)
       LOGGER.info(question)
       yield
@@ -38,7 +117,7 @@ def should_i(question)
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
       return
     elsif 'quit'.start_with?(response)
-      puts "Something weird going on? Take a look at: http://wiki.code.org/display/PROD/Daily+Deployment"
+      puts_quit_message
       exit(-1)
     else
       puts "Sorry, I didn't understand that.\n\n"
@@ -46,45 +125,42 @@ def should_i(question)
   end
 end
 
+# Prompts the user to press enter, waiting until this is done.
 def press_enter_to_continue
   puts dim 'Press enter to continue...'
   gets
 end
 
+# Prompts the user to wait for thing, pausing until any key is pressed.
+# @param thing [String] The thing to wait for.
 def wait_for(thing)
   puts "\nWait for #{thing}"
   press_enter_to_continue
 end
 
-def open_url(url)
-  open_in_default_browser(url)
-  puts dim "Browser didn't open? go to:"
-  puts dim url
-end
-
-def open_in_default_browser(url)
-  # Based on http://stackoverflow.com/a/14053693/5000129
-  if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
-    system "sensible-browser \"#{url}\""
-  else
-    system "open \"#{url}\""
-  end
-end
-
+# Runs command on server_name.
+# @param server_name [String] The server to run the command on.
+# @param command [String] The command to be run.
 def run_on(server_name, command)
-  # double-escape the command string, once for each remote shell we're
-  # passing through
+  # Double-escape the command string, once for each remote shell we're passing
+  # through.
   system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
 end
 
-def content_push(server_name, environment_name, user_name)
+# Performs a guided content push.
+# @param server_name [String] The name of the server on which to perform the
+#   content push, e.g., 'staging' or 'levelbuilder-staging'.
+# @param environment_name [String] The environment name for the server, e.g.,
+#   'staging' or 'levelbuilder'.
+def content_push(server_name, environment_name)
   puts <<-EOS.unindent
     Follow the prompts given by the content-push script.
       If you need to do something fancier (or if the changed files do not
       "look ok" when it asks you), log in to staging and hand-craft the commit.
   EOS
-  success = run_on(server_name, "#{environment_name}/bin/content-push --name=\"#{user_name}\"")
+  success = run_on(server_name, "#{environment_name}/bin/content-push --name=\"#{@dotd_name}\"")
 
+  puts ''
   # Notice if the content push fails, and be helpful about fixing the problem.
   unless success
     puts "#{bold 'Uh-oh!'}  It looks like the #{server_name} content push failed!"
@@ -109,118 +185,137 @@ def content_push(server_name, environment_name, user_name)
   end
 end
 
-def open_pull_request(base, compare, title)
-  open_url "https://github.com/code-dot-org/code-dot-org/compare/#{base}...#{compare}?expand=1&title=#{CGI.escape title}"
-end
-
 # Prints the commit messages of commits present in branch head but not branch
-# base.
+# base. Truncates all such messages to the first line.
 # @param base [String] The base branch to compare.
 # @param head [String] The head branch to compare against.
 # @example For a DTT: view_commits(base: 'test', head: 'staging')
 def view_commits(base:, head:)
-  GitHub.compare(base: base, head: head).each do |commit_message|
-    # Empirically, commit messages often contain blank lines. For console
-    # readability, we attempt to remove them.
-    puts commit_message.gsub("\n\n", "\n")
+  commit_list = GitHub.
+      compare(base: base, head: head).
+      map{|msg| dim msg.lines.first}.
+      join("\n    ")
+  puts <<-EOS.unindent_with_indent(2)
+    Commits in #{head} to be merged into #{base}
+
+      #{commit_list}
+
+  EOS
+end
+
+# Prints the DTT message, formatted based on its contents.
+def print_dtt_message
+  message = "Slack#developers says DTT: #{DevelopersTopic.dtt}"
+  if DevelopersTopic.dtt?
+    puts dim message
+  else
+    puts red message
   end
 end
 
-puts <<-EOS.unindent
-
-  #{bold 'Welcome to Robo-Dev-of-the-Day!'}
-
-    d[ o_0 ]b
-
-  #{bold 'Documentation'}
-
-    Dev-of-the-Day Checklist
-    #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
-
-    Known Issues
-    #{dim 'http://wiki.code.org/display/PROD/Known+Issues'}
-
-EOS
-
-user_name = ask_for_name
-
-should_i "morning DTT" do
-  view_commits base: 'test', head: 'staging'
-  should_i "merge from staging to test" do
-    pr_number = GitHub.create_and_merge_pull_request(
-      base: 'test',
-      head: 'staging',
-      title: 'DTT (Staging > Test)'
-    )
-    new_sha = GitHub.sha 'test'
-    url = GitHub.html_url(pr_number)
-    wait_for "DTT (#{url}) to complete, re-run / investigate failures, and update infra#test topic to commit #{new_sha}"
+# Prints the DTP message, formatted based on its contents.
+def print_dtp_message
+  message = "Slack#developers says DTP: #{DevelopersTopic.dtp}"
+  if DevelopersTopic.dtp?
+    puts dim message
+  else
+    puts red message
   end
 end
 
-should_i "commit content changes from staging" do
-  content_push 'staging', 'staging', user_name
-end
+# Asks if the DTT subroutine should be performed, doing so if requested.
+def do_dtt_subroutine
+  print_dtt_message
+  should_i 'DTT' do
+    view_commits base: 'test', head: 'staging'
+    should_i 'merge from staging to test' do
+      should_i 'reset DTT message to in progress' do
+        DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
+      end
+      pr_number = GitHub.create_and_merge_pull_request(
+        base: 'test',
+        head: 'staging',
+        title: 'DTT (Staging > Test)'
+      )
+      new_sha_abbr = GitHub.sha('test')[0, 7]
+      url = GitHub.url(pr_number)
+      wait_for "DTT (#{url}) to complete, re-run / investigate failures, and "\
+        "update infra#test topic to commit #{new_sha_abbr}"
+      # TODO(asher): Prompt for whether the DTT was green, update
+      # Slack#infra-test topic appropriately.
 
-should_i "commit content changes from levelbuilder" do
-  content_push 'levelbuilder-staging', 'levelbuilder', user_name
-
-  view_commits base: 'staging', head: 'levelbuilder'
-  should_i "merge from levelbuilder to staging" do
-    GitHub.create_and_merge_pull_request(
-      base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
-    )
-    new_sha = GitHub.sha 'staging'
-    wait_for "staging to finish building with sha #{new_sha}. If a staging build was already running, wait for a build which includes the levelbuilder content."
-    should_i "commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD" do
-      content_push 'staging', 'staging', user_name
+      should_i 'reset DTT message to yes' do
+        DevelopersTopic.set_dtt 'yes'
+      end
     end
   end
 end
 
-should_i "DTT" do
-  puts <<-EOS.unindent
-    Update Developer room status with "DTT: NO (@yourname DTP candidate)"
-  EOS
-  open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
-  wait_for "a green test run"
-  puts <<-EOS.unindent
-    Restore Developer room status to "DTT: yes"
-  EOS
-end
+def main
+  puts_script_intro
+  ask_for_name
 
-wait_for "between 1:30PM and 3:30PM (Pacific) to DTP"
-should_i "DTP" do
-  open_pull_request 'production', 'test', 'DTP (Test > Production)'
+  do_dtt_subroutine
 
-  should_i "deploy Levelbuilder while the deploy to production is happening" do
-    puts <<-EOS.unindent
-      Go to the Levelbuilder room on Slack and ask everyone @here if they are ready for a deploy (They need to save their changes, otherwise they may lose some work when you complete the next step).
-    EOS
-    open_pull_request 'levelbuilder', 'test', 'Test > Levelbuilder'
+  should_i 'commit content changes from staging' do
+    content_push 'staging', 'staging'
   end
 
-  wait_for "DTP to finish"
+  should_i 'commit content changes from levelbuilder' do
+    content_push 'levelbuilder-staging', 'levelbuilder'
 
-  puts <<-EOS.unindent
+    view_commits base: 'staging', head: 'levelbuilder'
+    should_i 'merge from levelbuilder to staging' do
+      GitHub.create_and_merge_pull_request(
+        base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
+      )
+      new_sha_abbr = GitHub.sha('staging')[0, 7]
+      wait_for "staging to finish building with sha #{new_sha_abbr}."
+      should_i 'commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD' do
+        content_push 'staging', 'staging'
+      end
+    end
+  end
 
-    * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
-    * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
-    * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
-    * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
-    * Ensure that no frontends were skipped in the Production room on Slack.
-    * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
-  EOS
+  do_dtt_subroutine
+
+  wait_for 'between 1:30PM and 3:30PM (Pacific) to DTP'
+
+  print_dtp_message
+  should_i 'DTP' do
+    should_i 'set DTP message to in progress' do
+      DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
+    end
+    GitHub.open_pull_request_in_browser(
+      base: 'production',
+      head: 'test',
+      title: 'DTP (Test > Production)'
+    )
+
+    should_i 'DTL' do
+      # TODO(asher): Remove this wait step if it is truly unnecessary now.
+      wait_for 'Slack#levelbuilder to indicate they are ready for a deploy'
+      view_commits base: 'levelbuilder', head: 'test'
+      should_i 'merge from test to levelbuilder' do
+        pr_number = GitHub.create_and_merge_pull_request(
+          base: 'levelbuilder', head: 'test', title: 'DTL (Test > Levelbuilder)'
+        )
+        puts dim "  DTL PR: #{GitHub.url(pr_number)}"
+      end
+    end
+
+    wait_for 'DTP to finish'
+    should_i 'reset DTP message to yes' do
+      DevelopersTopic.set_dtp 'yes'
+    end
+
+    puts_after_dtp_tasks
+  end
+
+  puts_script_conclusion
+rescue
+  puts_quit_message
+  raise
 end
 
-puts <<-EOS.unindent
-  * Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}
-EOS
-press_enter_to_continue
-
-puts <<-EOS.unindent
-
-#{bold "You're done!"}
-
-    d[ o_0 ]b
-EOS
+main

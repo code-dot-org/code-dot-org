@@ -311,12 +311,11 @@ class Script < ActiveRecord::Base
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        unless level.contained_levels.empty?
-          text_response_levels << {
-            script_level: script_level,
-            levels: [level.contained_levels.first]
-          }
-        end
+        next if level.contained_levels.empty?
+        text_response_levels << {
+          script_level: script_level,
+          levels: [level.contained_levels.first]
+        }
       end
     end
 

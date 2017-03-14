@@ -28,10 +28,11 @@
     "disable_examples": "false",
     "step_speed": "5",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": [
+      "courseC_multi_maze_loops10_predict2"
+    ]
   },
   "published": true,
   "notes": "",
@@ -44,22 +45,22 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">3</title>
+              <title name="TIMES">1</title>
               <statement name="DO">
                 <block type="maze_moveForward"/>
               </statement>
               <next>
                 <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
+                  <title name="DIR">turnLeft</title>
                   <next>
                     <block type="controls_repeat">
-                      <title name="TIMES">3</title>
+                      <title name="TIMES">4</title>
                       <statement name="DO">
                         <block type="maze_moveForward"/>
                       </statement>
                       <next>
                         <block type="maze_turn">
-                          <title name="DIR">turnLeft</title>
+                          <title name="DIR">turnRight</title>
                           <next>
                             <block type="controls_repeat">
                               <title name="TIMES">3</title>

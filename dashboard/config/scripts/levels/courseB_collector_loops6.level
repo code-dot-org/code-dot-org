@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Figure out the code to help Laurel get all of the gold!",
+    "instructions": "Figure out the code to help Laurel get all of the treasure!",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where things start going wrong? Use the \\\"Step\\\" button to run through your program one block at a time.\",\"hint_id\":\"courseB_collector_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/577a4455b7dcc7809a7be633e3639999/courseB_collector_loops6.mp3\"}]",
     "ideal": "10",
     "instructions_important": "false",

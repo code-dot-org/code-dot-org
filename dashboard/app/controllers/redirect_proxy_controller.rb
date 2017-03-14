@@ -10,7 +10,7 @@ class RedirectProxyController < ApplicationController
     tinyurl.com
     tr.im
     goo.gl
-  )
+  ).freeze
 
   # Returns a (potentially) redirected url of the given url
   def get
