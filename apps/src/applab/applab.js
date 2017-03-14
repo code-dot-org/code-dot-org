@@ -448,8 +448,13 @@ function handleExecutionError(err, lineNumber) {
   outputError(String(err), lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
-  // complete puzzle, which will prevent further execution
-  Applab.onPuzzleComplete();
+  // prevent further execution
+  Applab.clearEventHandlersKillTickLoop();
+
+  // Used by level tests
+  if (Applab.onExecutionError) {
+    Applab.onExecutionError();
+  }
 }
 
 Applab.getCode = function () {
@@ -571,6 +576,8 @@ Applab.init = function (config) {
     isSignedIn: config.isSignedIn
   };
   Applab.isReadOnlyView = config.readonlyWorkspace;
+
+  Applab.onExecutionError = config.onExecutionError;
 
   loadLevel();
 
@@ -709,6 +716,7 @@ Applab.init = function (config) {
   // just without the editor
   config.centerEmbedded = false;
   config.wireframeShare = true;
+  config.responsiveEmbedded = true;
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.

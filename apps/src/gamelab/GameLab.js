@@ -205,6 +205,7 @@ GameLab.prototype.init = function (config) {
 
   config.centerEmbedded = false;
   config.wireframeShare = true;
+  config.responsiveEmbedded = true;
   config.noHowItWorks = true;
 
   config.shareWarningInfo = {
@@ -1075,7 +1076,6 @@ GameLab.prototype.handleExecutionError = function (err, lineNumber) {
   outputError(String(err), lineNumber);
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
-  // TODO: Call onPuzzleComplete?
 };
 
 /**

@@ -3,7 +3,7 @@
 # The list of tutorials. Note that relative order matters, e.g., it is important
 # that "starwarsblocks" proceeds "starwars" as the latter will match the regex
 # for the former.
-tutorials = %w(
+TUTORIALS = %w(
   russia_mc
   static_mc
   mc
@@ -74,16 +74,16 @@ tutorials = %w(
   baymaxes
   pixies
   finchrobot
-)
+).freeze
 
-LONG_VALUE_SUM = "LongValueSum:"
+LONG_VALUE_SUM = "LongValueSum:".freeze
 
 ARGF.each do |line|
   # The line starts with a timestamp of the form YYYY-MM-DDTHH:MM:SS.XXXXXXZ,
   # from which we extract only the date for aggregation.
   date = line[0..9]
 
-  tutorials.each do |t|
+  TUTORIALS.each do |t|
     # Using LONG_VALUE_SUM instructs hadoop's streaming aggregate class how to
     # aggregate. Using the date, type (begin, beginpng, 443), and tutorial as
     # the key gives breakdowns by day, type, and tutorial.

@@ -1,4 +1,3 @@
-# rubocop:disable Metrics/BlockLength
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :section_hidden_stage do
@@ -771,4 +770,3 @@ FactoryGirl.define do
     association :regional_partner
   end
 end
-# rubocop:enable Metrics/BlockLength

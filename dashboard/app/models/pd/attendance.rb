@@ -32,9 +32,15 @@ class Pd::Attendance < ActiveRecord::Base
     end
   end
 
-  before_save :find_matching_enrollment
-  def find_matching_enrollment
-    self.enrollment = workshop.enrollments.find_by(user_id: teacher_id) unless enrollment
+  before_save :save_matching_enrollment_association
+  def save_matching_enrollment_association
+    self.enrollment = resolve_enrollment
+  end
+
+  def resolve_enrollment
+    enrollment ||
+      workshop.enrollments.find_by(user_id: teacher_id) ||
+      workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email))
   end
 
   def self.for_teacher(teacher)
