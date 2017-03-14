@@ -27,6 +27,8 @@ require 'full-name-splitter'
 require 'rambling-trie'
 
 class Section < ActiveRecord::Base
+  acts_as_paranoid # use deleted_at column instead of deleting rows
+
   belongs_to :user
 
   has_many :followers, dependent: :restrict_with_error
@@ -168,7 +170,7 @@ class Section < ActiveRecord::Base
   def unused_random_code
     loop do
       code = SectionHelpers.random_code
-      return code unless Section.exists?(code: code)
+      return code unless Section.with_deleted.exists?(code: code)
     end
   end
 end

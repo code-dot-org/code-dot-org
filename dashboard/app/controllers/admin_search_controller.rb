@@ -55,7 +55,7 @@ class AdminSearchController < ApplicationController
   end
 
   def undelete_section
-    section = Section.find_by_code params[:section_code]
+    section = Section.with_deleted.find_by_code params[:section_code]
     if section && section.deleted_at
       section.update!(deleted_at: nil)
       flash[:alert] = "Section (CODE: #{params[:section_code]}) undeleted!"
