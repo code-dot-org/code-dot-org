@@ -22,29 +22,29 @@ class ContactRollupsValidation
       name: "Teacher count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%Teacher%'",
-      min: 520000,
-      max: 750000
+      min: 520_000,
+      max: 750_000
     },
     {
       name: "Facilitator count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%Facilitator%'",
       min: 400,
-      max: 4000
+      max: 4_000
     },
     {
       name: "Workshop Organizer count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%Workshop Organizer%'",
       min: 250,
-      max: 2500
+      max: 2_500
     },
     {
       name: "District Contact count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%District Contact%'",
       min: 250,
-      max: 2500
+      max: 2_500
     },
     {
       name: "Regional Partner count",
@@ -117,7 +117,7 @@ class ContactRollupsValidation
       query: "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE name IS NULL OR LENGTH(name)=0",
       min: 0,
-      max: 100000
+      max: 100_000
     },
     {
       name: "Count of contacts with non-NULL country",
@@ -151,8 +151,8 @@ class ContactRollupsValidation
       name: "Distinct district name count",
       query: "SELECT COUNT(distinct district_name)
               FROM contact_rollups_daily",
-      min: 2000,
-      max: 5000
+      min: 2_000,
+      max: 5_000
     },
     {
       name: "Distinct district state count",
@@ -173,7 +173,7 @@ class ContactRollupsValidation
       query: "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE courses_facilitated IS NOT NULL",
       min: 400,
-      max: 40000
+      max: 40_000
     },
     {
       name: "Check that all contacts with courses facilitated are "\
@@ -182,35 +182,35 @@ class ContactRollupsValidation
               WHERE courses_facilitated IS NOT NULL
               AND Roles NOT LIKE '%Facilitator%'",
       min: 400,
-      max: 40000
+      max: 40_000
     },
     {
       name: "Count of contacts with professional learning enrollment",
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE professional_learning_enrolled IS NOT NULL",
-      min: 13000,
-      max: 100000
+      min: 13_000,
+      max: 100_000
     },
     {
       name: "Count of contacts with professional learning attended",
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE professional_learning_attended IS NOT NULL",
-      min: 13000,
-      max: 100000
+      min: 13_000,
+      max: 100_000
     },
     {
       name: "Count of contacts with HOC organizer years",
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE hoc_organizer_years IS NOT NULL",
-      min: 375000,
-      max: 750000
+      min: 375_000,
+      max: 750_000
     },
     {
       name: "Count of contacts with grades taught",
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE grades_taught IS NOT NULL",
-      min: 200000,
-      max: 400000
+      min: 200_000,
+      max: 400_000
     },
     {
       name: "Check that all contacts with grades taught are "\
@@ -225,8 +225,8 @@ class ContactRollupsValidation
       name: "Count of contacts with ages taught",
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE ages_taught IS NOT NULL",
-      min: 190000,
-      max: 400000
+      min: 190_000,
+      max: 400_000
     },
     {
       name: "Check that all contacts with ages taught are "\
@@ -274,7 +274,7 @@ class ContactRollupsValidation
   def self.validate_contact_rollups
     overall_pass = true
 
-    output = ""
+    output = []
     # run each validation check
     DATA_CHECKS.each do |check|
       # run the validation query and get the returned count
@@ -286,21 +286,26 @@ class ContactRollupsValidation
                     "max #{check[:max]}. Actual: #{count} -> #{pass_fail_string(pass)}"
       log output_line
 
-      output += output_line + '\n'
+      output << output_line
 
       # keep track of if we have an overall pass
-      overall_pass = false unless pass
+      overall_pass &&= pass
     end
 
-    output += "Overall result: #{pass_fail_string(overall_pass)}"
+    output << "Overall result: #{pass_fail_string(overall_pass)}"
 
-    return overall_pass, output
+    [overall_pass, output.join('\n')]
   end
 
+  # Returns "PASS" or "FAIL" based on Boolean value
+  # @param pass [Boolean] input value
+  # @return [String] "PASS" if input value true, otherwise "FAIL"
   def self.pass_fail_string(pass)
     pass ? "PASS" : "FAIL"
   end
 
+  # Logs to CDO.log.info
+  # @param s [String] string to log
   def self.log(s)
     puts s unless Rails.env.test?
     CDO.log.info s
