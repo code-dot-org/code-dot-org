@@ -74,10 +74,10 @@ const TwoPartBanner = React.createClass({
         &nbsp;
       </div>
     );
-    const textElement = React.cloneElement((this.props.textElement), {key: 'text', style: {padding: '20px'}});
+    const textElement = React.cloneElement((this.props.textElement), {style: {padding: '20px'}});
 
     const wrappedTextElement = (
-      <div style={appliedTextStyle}>
+      <div key="textElement" style={appliedTextStyle}>
         {textElement}
       </div>
     );

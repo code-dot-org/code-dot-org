@@ -26,7 +26,7 @@ const LandingPage = React.createClass({
       <div
         style={{
           width: '100%',
-          height: '400px',
+          height: '300px',
           background: `url(https://code.org/images/homepage/sheryl.jpg) no-repeat`,
           backgroundSize: 'cover',
           display: 'flex',
