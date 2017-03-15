@@ -41,6 +41,7 @@ The Code.org Advocacy Coalition supports the implementation of the following pol
 * [9 steps to make computer science fundamental](http://code.org/files/Making_CS_Fundamental.pdf)
 * [Professional development models](https://www.dropbox.com/s/2y0i360pt6pap1o/ModelStatePracticetoExpandCS.pdf?dl=0)
 * [Professional development funding calculator](https://docs.google.com/spreadsheets/d/1jAqB1Q0IiY4XRvpnfUdDwkfL2OEgvBT2HYg07yQAOSc/pubhtml)
+* [AP CS A data by state over the past 10 years](https://code.org/promote/ap)
 
 For more information, please contact advocacy@code.org. 
 
