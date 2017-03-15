@@ -43,6 +43,7 @@ class XhrProxyController < ApplicationController
     isenseproject.org
     lakeside-cs.org
     query.yahooapis.com
+    rejseplanen.dk
     noaa.gov
     rhcloud.com
     swapi.co

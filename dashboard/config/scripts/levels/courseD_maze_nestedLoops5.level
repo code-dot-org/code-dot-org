@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Get the zombe to the sunflower using the fewest number of blocks possible!",
+    "instructions": "Get the zombie to the sunflower using the fewest number of blocks possible!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
@@ -29,7 +29,10 @@
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Look for a stair-step pattern in this maze to find where a nested loop can be used.\",\"hint_id\":\"courseD_maze_nestedLoops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c535ba90030522858e57e315b3fe6a33/courseD_maze_nestedLoops5.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
