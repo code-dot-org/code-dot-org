@@ -50,7 +50,7 @@
               <title name="DIR">moveForward</title>
               <next>
                 <block type="controls_repeat">
-                  <title name="TIMES">3</title>
+                  <title name="TIMES">4</title>
                   <statement name="DO">
                     <block type="harvester_pumpkin"/>
                   </statement>
@@ -59,7 +59,7 @@
                       <title name="DIR">moveForward</title>
                       <next>
                         <block type="controls_repeat">
-                          <title name="TIMES">3</title>
+                          <title name="TIMES">4</title>
                           <statement name="DO">
                             <block type="harvester_pumpkin"/>
                           </statement>
@@ -71,7 +71,7 @@
                                   <title name="DIR">moveForward</title>
                                   <next>
                                     <block type="controls_repeat">
-                                      <title name="TIMES">3</title>
+                                      <title name="TIMES">4</title>
                                       <statement name="DO">
                                         <block type="harvester_pumpkin"/>
                                       </statement>
