@@ -292,10 +292,18 @@ class User < ActiveRecord::Base
   has_many :students, through: :followers, source: :student_user
   has_many :sections
 
+  def active_sections
+    sections.where(deleted_at: nil)
+  end
+
   # student/teacher relationships where I am the student
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
   has_many :teachers, through: :followeds, source: :user
   has_many :sections_as_student, through: :followeds, source: :section
+
+  def active_sections_as_student
+    sections_as_student.where(deleted_at: nil)
+  end
 
   has_one :prize
   has_one :teacher_prize
@@ -679,7 +687,7 @@ class User < ActiveRecord::Base
   def hidden_stage?(script_level)
     return false if self.try(:teacher?)
 
-    sections = self.sections_as_student.select{|s| s.deleted_at.nil?}
+    sections = self.active_sections_as_student.select{|s| s.deleted_at.nil?}
     return false if sections.empty?
 
     script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
@@ -1148,7 +1156,7 @@ class User < ActiveRecord::Base
   end
 
   def can_pair_with?(other_user)
-    self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
+    self != other_user && sections_as_student.any?{ |section| other_user.active_sections_as_student.include? section }
   end
 
   def self.csv_attributes
