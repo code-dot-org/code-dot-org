@@ -40,11 +40,11 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   test 'courses are sorted as expected' do
     sign_in(@teacher)
 
-    some_other_course = create :plc_course, name: 'Bills Fandom 101'
-    ecs_support = create :plc_course, name: 'ECS Support'
-    csp_support = create :plc_course, name: 'CSP Support'
-
-    [some_other_course, ecs_support, csp_support].each do |course|
+    [
+      create(:plc_course, name: 'Bills Fandom 101'),
+      create(:plc_course, name: 'ECS Support'),
+      create(:plc_course, name: 'CSP Support')
+    ].each do |course|
       create :plc_user_course_enrollment, user: @teacher, plc_course: course
     end
 
