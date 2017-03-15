@@ -339,7 +339,7 @@ const WorkshopFilter = React.createClass({
         <Row>
           <ServerSortWorkshopTable
             queryUrl={QUERY_API_URL}
-            params={filters}
+            queryParams={filters}
             canDelete
             showStatus
             showOrganizer={isAdmin}
