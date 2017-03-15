@@ -4,8 +4,7 @@
  */
 import React from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap';
-import WorkshopTable from './components/workshop_table';
-import WorkshopTableLoader from './components/workshop_table_loader';
+import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 
 const FILTER_API_URL = "/api/v1/pd/workshops/filter";
 const defaultFilters = {
@@ -84,42 +83,32 @@ const WorkshopIndex = React.createClass({
           </Button>
         </ButtonToolbar>
         <h2>In Progress</h2>
-        <WorkshopTableLoader
+        <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           params={filterParams.inProgress}
           canDelete
-        >
-          <WorkshopTable
-            tableId="inProgressWorkshopsTable"
-            showOrganizer={showOrganizer}
-            moreUrl={this.generateFilterUrl('In Progress')}
-          />
-        </WorkshopTableLoader>
+          tableId="inProgressWorkshopsTable"
+          showOrganizer={showOrganizer}
+          moreUrl={this.generateFilterUrl('In Progress')}
+        />
         <h2>Upcoming</h2>
-        <WorkshopTableLoader
+        <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           params={filterParams.notStarted}
           canDelete
-        >
-          <WorkshopTable
-            tableId="notStartedWorkshopsTable"
-            canEdit
-            showSignupUrl
-            showOrganizer={showOrganizer}
-            moreUrl={this.generateFilterUrl('Not Started')}
-          />
-        </WorkshopTableLoader>
+          tableId="notStartedWorkshopsTable"
+          showSignupUrl
+          showOrganizer={showOrganizer}
+          moreUrl={this.generateFilterUrl('Not Started')}
+        />
         <h2>Past</h2>
-        <WorkshopTableLoader
+        <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
           params={filterParams.ended}
-        >
-          <WorkshopTable
-            tableId="endedWorkshopsTable"
-            showOrganizer={showOrganizer}
-            moreUrl={this.generateFilterUrl('Ended')}
-          />
-        </WorkshopTableLoader>
+          tableId="endedWorkshopsTable"
+          showOrganizer={showOrganizer}
+          moreUrl={this.generateFilterUrl('Ended')}
+        />
       </div>
     );
   }
