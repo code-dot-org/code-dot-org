@@ -269,6 +269,28 @@ class ContactRollupsValidation
       min: 0,
       max: 0
     },
+    {
+      # Double-check consistency of the complex (but necessary) query
+      # to mark contacts in the Teacher role
+      name: "Check that all contacts that match 'Teacher Query' "\
+            "are in Teacher role",
+      query: "SELECT COUNT(*) from contact_rollups_daily
+              WHERE (dashboard_user_id is not null
+              OR forms_submitted LIKE '%BringToSchool2013%'
+              OR forms_submitted LIKE '%ClassSubmission%'
+              OR forms_submitted LIKE '%DistrictPartnerSubmission%'
+              OR forms_submitted LIKE '%HelpUs2013%'
+              OR forms_submitted LIKE '%K5OnlineProfessionalDevelopmentPostSurvey%'
+              OR forms_submitted LIKE '%K5ProfessionalDevelopmentSurvey%'
+              OR forms_submitted LIKE '%ProfessionalDevelopmentWorkshop%'
+              OR forms_submitted LIKE '%ProfessionalDevelopmentWorkshopSignup%'
+              OR forms_submitted LIKE '%StudentNomination%'
+              OR forms_submitted LIKE '%TeacherNomination%'
+              OR form_roles LIKE '%educator%')
+              AND roles NOT LIKE '%Teacher%'",
+      min: 0,
+      max: 0
+    },
   ].freeze
 
   def self.validate_contact_rollups
