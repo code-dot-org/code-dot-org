@@ -1,8 +1,12 @@
 %h1
   Thank you for registering.
 
-%p
-  You will receive a confirmation email.
+- if params.has_key?(:details)
+  = render partial: 'workshop_details'
+- else
+  %p
+    You will receive a confirmation email.
+
 %p
   If you need to cancel, click
   %a{href: @cancel_url}
