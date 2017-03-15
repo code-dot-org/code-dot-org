@@ -256,8 +256,8 @@ class ScriptLevelsController < ApplicationController
       if section.user == current_user
         @section = section
       end
-    elsif current_user.try(:sections) && current_user.sections.count == 1
-      @section = current_user.sections.first
+    elsif current_user.try(:non_deleted_sections) && current_user.non_deleted_sections.count == 1
+      @section = current_user.non_deleted_sections.first
     end
   end
 
