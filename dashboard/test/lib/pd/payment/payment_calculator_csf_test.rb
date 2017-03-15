@@ -12,6 +12,7 @@ module Pd::Payment
         create :user_level, user: @qualified_teacher, best_result: ::ActivityConstants::MINIMUM_PASS_RESULT
       end
       @workshop.section.add_student @qualified_teacher
+      create :pd_enrollment, workshop: @workshop, user: @qualified_teacher
 
       # < 10 passing levels: unqualified
       @unqualified_teacher = create :teacher
@@ -19,6 +20,7 @@ module Pd::Payment
         create :user_level, user: @unqualified_teacher, best_result: ::ActivityConstants::MINIMUM_PASS_RESULT
       end
       @workshop.section.add_student @unqualified_teacher
+      create :pd_enrollment, workshop: @workshop, user: @unqualified_teacher
     end
 
     test 'payment_type' do
