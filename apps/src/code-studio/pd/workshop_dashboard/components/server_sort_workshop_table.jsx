@@ -12,7 +12,7 @@ import WorkshopTable from './workshop_table';
 const ServerSortWorkshopTable = React.createClass({
   propTypes: {
     queryUrl: React.PropTypes.string,
-    params: React.PropTypes.object,
+    queryParams: React.PropTypes.object,
     tableId: React.PropTypes.string,
     canDelete: React.PropTypes.bool,
     showStatus: React.PropTypes.bool,
@@ -42,7 +42,7 @@ const ServerSortWorkshopTable = React.createClass({
     const limit = this.workshops.limit;
     const workshopCount = this.workshops.total_count;
 
-    // As an optimization, only re-query with an oderBy when fewer than all workshops are loaded.
+    // As an optimization, only re-query with an orderBy when fewer than all workshops are loaded.
     // In the case where all workshops are loaded, they can be sorted in the client.
     if (limit && workshopCount > limit) {
       this.setState({orderBy: `${sort.property} ${sort.direction}`});
@@ -50,15 +50,15 @@ const ServerSortWorkshopTable = React.createClass({
   },
 
   render() {
-    const params = {
-      ...this.props.params,
+    const queryParams = {
+      ...this.props.queryParams,
       order_by: this.state.orderBy
     };
 
     return (
       <WorkshopTableLoader
         queryUrl={this.props.queryUrl}
-        params={params}
+        queryParams={queryParams}
         canDelete={this.props.canDelete}
       >
         <WorkshopTable
