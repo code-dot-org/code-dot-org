@@ -33,7 +33,7 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
             Thank you
           </h3>
           <p>
-            Thank you for completing a Code.org professional workshop! If you have any other feedback or comments,
+            Thank you for completing a Code.org Professional Learning workshop! If you have any other feedback or comments,
             please email teacher@code.org
           </p>
         </div>
