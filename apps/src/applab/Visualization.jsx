@@ -85,7 +85,7 @@ var Visualization = React.createClass({
           <AppLabCrosshairOverlay/>
           <AppLabTooltipOverlay/>
         </VisualizationOverlay>
-        <MakerStatusOverlay vizWidth={appWidth} vizHeight={appHeight}/>
+        <MakerStatusOverlay width={appWidth} height={appHeight}/>
         <div
           style={[
             styles.screenBlock,
