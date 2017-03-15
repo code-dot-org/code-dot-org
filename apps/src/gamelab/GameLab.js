@@ -553,7 +553,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
         level: this.level.id,
         result: levelComplete,
         testResult: this.testResults,
-        submitted: !!submit,
+        submitted: submit ? "true" : false,
         program: program,
         image: this.encodedFeedbackImage,
         onComplete
