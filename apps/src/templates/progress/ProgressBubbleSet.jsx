@@ -49,7 +49,7 @@ const ProgressBubbleSet = React.createClass({
   },
 
   getIcon(level) {
-    if (level.icon) {
+    if (!level.icon) {
       return "desktop";
     }
     return level.icon.substring(3);

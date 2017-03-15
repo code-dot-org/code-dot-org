@@ -115,16 +115,17 @@ const SummaryProgressRow = React.createClass({
                 }}
               />
             }
-            <div data-tip data-for={lessonTitle} aria-describedby={lessonTitle}>
+            <span data-tip data-for={lessonTitle} aria-describedby={lessonTitle}>
               {lessonTitle}
               <ReactTooltip
                 id={lessonTitle}
                 role="tooltip"
                 delayShow={500}
+                wrapper="span"
               >
                 {lesson.name}
               </ReactTooltip>
-            </div>
+            </span>
           </div>
         </td>
         <td style={styles.col2}>
