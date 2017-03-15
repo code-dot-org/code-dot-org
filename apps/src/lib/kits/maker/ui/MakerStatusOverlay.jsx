@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {isConnecting, hasConnectionError} from '../redux';
+import {singleton as studioApp} from '../../../../StudioApp';
 
 /**
  * Overlay for the play space that displays maker status updates
@@ -72,7 +73,10 @@ class BoardNotFound extends Component {
         icon="exclamation-triangle"
         text="Make sure your board is plugged in."
         backgroundColor={color.red}
-        onClick={() => {}}
+        onClick={() => {
+          studioApp.resetButtonClick();
+          studioApp.runButtonClick();
+        }}
         buttonText="Try Again"
       />
     );
@@ -171,7 +175,7 @@ class OverlayButton_ extends Component {
       overflow: 'hidden'
     };
     return (
-      <button style={style}>
+      <button style={style} onClick={this.props.onClick}>
         {this.props.text}
       </button>
     );
@@ -179,5 +183,6 @@ class OverlayButton_ extends Component {
 }
 OverlayButton_.propTypes = {
   text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 const OverlayButton = Radium(OverlayButton_);

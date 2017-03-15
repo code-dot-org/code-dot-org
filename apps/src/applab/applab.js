@@ -1207,8 +1207,8 @@ Applab.execute = function () {
           makerBoard = board;
           getStore().dispatch(reportMakerConnected());
         })
-        .catch(error => getStore().dispatch(reportMakerConnectionError()))
-        .then(Applab.beginVisualizationRun);
+        .then(Applab.beginVisualizationRun)
+        .catch(error => getStore().dispatch(reportMakerConnectionError()));
   } else {
     Applab.beginVisualizationRun();
   }
