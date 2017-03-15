@@ -1,0 +1,161 @@
+#pageheader-wrapper {
+  z-index: 99;
+}
+
+#nav-hamburger {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  height: 20px;
+}
+
+#nav-hamburger span, #nav-hamburger span:before, #nav-hamburger span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#nav-hamburger span:before {
+  top: -10px;
+}
+
+#nav-hamburger span:after {
+  bottom: -10px;
+}
+
+#nav-hamburger span, #nav-hamburger span:before, #nav-hamburger span:after {
+  transition: all 500ms ease-in-out;
+}
+
+#nav-hamburger.active span {
+  background-color: transparent;
+}
+
+#nav-hamburger.active span:before, #nav-hamburger.active span:after {
+  top: 0;
+}
+
+#nav-hamburger.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-hamburger.active span:after {
+  transform: rotate(-45deg);
+}
+
+#nav {
+  display: inline-block;
+  text-align: left;
+  float: right;
+  width: 50%;
+}
+
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  right: 0;
+}
+
+#nav ul li {
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+  float: left;
+  padding: 0.25em 0em;
+  margin-right: 1em;
+  text-indent: 0;
+  list-style-type: none;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#nav ul li:before {
+  content: none;
+}
+
+#nav ul li:last-child {
+  margin-right: 0;
+}
+
+#nav ul li a, #about-more {
+  font-family: 'Gotham 4r', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#about-more {
+  width: 90px;
+  cursor: pointer;
+}
+
+#nav ul li a:hover, #about-more:hover {
+  border-bottom: solid 2px #ff8a00;
+}
+
+#nav-hamburger {
+  vertical-align: middle;
+  text-decoration: none;
+  display: none;
+  float: right;
+  margin-top: 8px;
+}
+
+.about-nav li a {
+  margin-left: 20px;
+}
+
+#more, #less {
+  font-size: 25px;
+}
+
+#less {
+  display: none; 
+}
+
+@media (max-width: 992px) {
+  #pageheader-wrapper {
+    padding-top: 5px;
+  }
+
+  #nav{
+    position: relative;
+  }
+
+  #nav ul.hide-responsive-menu, .hide-about {
+    display: none;
+  }
+
+  #nav ul {
+    position: absolute;
+    top: 3em;
+    background-color: rgba(0, 178, 192, .9);
+    z-index: 99;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  #nav ul li {
+    display: block;
+    float: none;
+    margin: 1em 2em 1em 1em;
+    white-space: normal;
+    overflow: visible;
+  }
+
+  #nav-hamburger {
+    display: inline-block;
+  }
+}
