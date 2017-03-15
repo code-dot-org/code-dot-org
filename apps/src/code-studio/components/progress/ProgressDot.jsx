@@ -227,14 +227,29 @@ export const ProgressDot = Radium(React.createClass({
   },
 
   tooltipContent() {
+    const { level } = this.props;
+    if (level.name === undefined) {
+      return level.title;
+    }
+    return level.title +". "+ level.name;
+  },
+
+  renderTooltip() {
     const { level, courseOverviewPage } = this.props;
     if (!courseOverviewPage) {
-      if (level.name === undefined) {
-        return level.title;
-      }
-      return level.title +". "+ level.name;
+      return (
+        <ReactTooltip
+          id={level.title}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {this.tooltipContent()}
+        </ReactTooltip>
+      );
     }
   },
+
 
   render() {
 
@@ -252,7 +267,6 @@ export const ProgressDot = Radium(React.createClass({
     const isPeerReview = level.kind === LevelKind.peer_review;
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = status === LevelStatus.locked;
-    const tooltipId = _.uniqueId();
 
     return (
       <a
@@ -266,7 +280,7 @@ export const ProgressDot = Radium(React.createClass({
          ]}
       >
         {(iconClassFromIconType[level.icon] && !isPeerReview) ?
-          <span data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+          <span data-tip data-for={level.title} aria-describedby={level.title}>
             <i
               className={this.iconClassName()}
               style={[
@@ -279,14 +293,7 @@ export const ProgressDot = Radium(React.createClass({
                 outlineCurrent && {textShadow: createOutline(color.level_current)}
               ]}
             />
-            <ReactTooltip
-              id={tooltipId}
-              role="tooltip"
-              wrapper="span"
-              effect="solid"
-            >
-              {this.tooltipContent()}
-            </ReactTooltip>
+          {this.renderTooltip()}
           </span> :
 
           <div
@@ -303,20 +310,13 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           >
 
-          <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+          <div data-tip data-for={level.title} aria-describedby={level.title}>
             <BubbleInterior
               showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
               title={level.title || undefined}
             />
-            <ReactTooltip
-              id={tooltipId}
-              role="tooltip"
-              wrapper="span"
-              effect="solid"
-            >
-              {this.tooltipContent()}
-            </ReactTooltip>
+            {this.renderTooltip()}
           </div>
 
         </div>
