@@ -85,7 +85,7 @@ const WorkshopIndex = React.createClass({
         <h2>In Progress</h2>
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
-          params={filterParams.inProgress}
+          queryParams={filterParams.inProgress}
           canDelete
           tableId="inProgressWorkshopsTable"
           showOrganizer={showOrganizer}
@@ -94,7 +94,7 @@ const WorkshopIndex = React.createClass({
         <h2>Upcoming</h2>
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
-          params={filterParams.notStarted}
+          queryParams={filterParams.notStarted}
           canDelete
           tableId="notStartedWorkshopsTable"
           showSignupUrl
@@ -104,7 +104,7 @@ const WorkshopIndex = React.createClass({
         <h2>Past</h2>
         <ServerSortWorkshopTable
           queryUrl={FILTER_API_URL}
-          params={filterParams.ended}
+          queryParams={filterParams.ended}
           tableId="endedWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('Ended')}
