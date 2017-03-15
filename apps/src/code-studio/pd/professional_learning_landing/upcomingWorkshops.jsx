@@ -117,7 +117,7 @@ const UpcomingWorkshopsTable = React.createClass({
                 <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
                   Cancel enrollment
                 </Button>
-                <Button onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}?details`, '_blank')}>
+                <Button onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}>
                   Workshop Details
                 </Button>
               </div>
