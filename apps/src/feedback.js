@@ -2,6 +2,7 @@
 
 import $ from 'jquery';
 import { getStore } from './redux';
+import { trySetLocalStorage } from './utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ClientState from '@cdo/apps/code-studio/clientState';
@@ -41,6 +42,8 @@ var authoredHintUtils = require('./authoredHintUtils');
 import experiments from './util/experiments';
 import AchievementDialog from './templates/AchievementDialog';
 import StageAchievementDialog from './templates/StageAchievementDialog';
+
+const POINTS_KEY = 'tempPoints';
 
 /**
  * @typedef {Object} TestableBlock
@@ -229,6 +232,17 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       };
     }
 
+    let totalPoints = 0;
+    if (experiments.isEnabled('g.bannermode')) {
+      const newPoints = 1 +
+        (isFinite(idealBlocks) && actualBlocks <= idealBlocks ? 1 : 0) +
+        (hintsUsed < 2 ? 1 : 0);
+
+      totalPoints = parseInt(localStorage.getItem(POINTS_KEY) || '0');
+      totalPoints += newPoints;
+      trySetLocalStorage(POINTS_KEY, totalPoints);
+    }
+
     document.body.appendChild(container);
     ReactDOM.render(
       <AchievementDialog
@@ -239,6 +253,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         assetUrl={this.studioApp_.assetUrl}
         onContinue={onContinue}
         bannerMode={experiments.isEnabled('g.bannermode')}
+        totalPoints={totalPoints}
         showStageProgress={experiments.isEnabled('g.stageprogress')}
         oldStageProgress={progress.oldStageProgress}
         newPassedProgress={progress.newPassedProgress}
