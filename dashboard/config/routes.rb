@@ -307,6 +307,9 @@ Dashboard::Application.routes.draw do
   concern :api_v1_pd_routes do
     namespace :pd do
       resources :workshops do
+        collection do
+          get :filter
+        end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
           post :end
