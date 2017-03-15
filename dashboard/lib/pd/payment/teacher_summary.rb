@@ -51,10 +51,10 @@ module Pd::Payment
 
     def generate_teacher_progress_report_line_item(with_payment = false)
       line_item = {
-        teacher_first_name: enrollment.try(&:first_name),
-        teacher_last_name: enrollment.try(&:last_name),
-        teacher_id: teacher.id,
-        teacher_email: teacher.email,
+        teacher_first_name: enrollment.first_name,
+        teacher_last_name: enrollment.last_name,
+        teacher_id: teacher.try(&:id),
+        teacher_email: enrollment.email,
         plp_name: workshop_summary.plp.try(&:name),
         state: state,
         district_name: school_district.try(&:name),

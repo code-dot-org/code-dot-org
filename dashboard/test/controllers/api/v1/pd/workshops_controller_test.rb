@@ -11,11 +11,10 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     @workshop = create(:pd_workshop, organizer: @organizer, facilitators: [@facilitator])
     @standalone_workshop = create(:pd_workshop)
-
-    # Don't actually call the geocoder.
   end
 
   setup do
+    # Don't actually call the geocoder.
     Pd::Workshop.stubs(:process_location)
   end
 
@@ -119,24 +118,30 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
 
-  test 'workshop organizers cannot view a workshop they are not organizing' do
-    sign_in @organizer
-    get :show, params: {id: @standalone_workshop.id}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :show,
+    name: 'workshop organizers cannot view a workshop they are not organizing',
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  test 'facilitators can view a workshop they are facilitating' do
-    sign_in @facilitator
-    get :show, params: {id: @workshop}
-    assert_response :success
+  test_user_gets_response_for(
+    :show,
+    name: 'facilitators can view a workshop they are facilitating',
+    user: -> {@facilitator},
+    params: -> {{id: @workshop}}
+  ) do
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
 
-  test 'facilitators cannot view a workshop they are not facilitating' do
-    sign_in @facilitator
-    get :show, params: {id: @standalone_workshop}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :show,
+    name: 'facilitators cannot view a workshop they are not organizing',
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
   # Action: Create
 
@@ -164,11 +169,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     end
   end
 
-  test 'facilitators cannot create workshops' do
-    sign_in @facilitator
-    post :create, params: {pd_workshop: workshop_params}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :create,
+    name: 'facilitators cannot create workshops',
+    method: :post,
+    response: :forbidden,
+    user: :facilitator,
+    params: -> {{pd_workshop: workshop_params}}
+  )
 
   # Action: Destroy
 
@@ -188,17 +196,23 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  test 'organizers cannot delete workshops they do not own' do
-    sign_in @organizer
-    delete :destroy, params: {id: @standalone_workshop.id}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :destroy,
+    name: 'organizers cannot delete workshops they do not own',
+    method: :delete,
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  test 'facilitators cannot delete workshops' do
-    sign_in @facilitator
-    delete :destroy, params: {id: @workshop.id}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :destroy,
+    name: 'facilitators cannot delete workshops',
+    method: :delete,
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id}}
+  )
 
   # Action: Update
 
@@ -225,11 +239,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'facilitators cannot update workshops' do
-    sign_in @facilitator
-    put :update, params: {id: @workshop.id, pd_workshop: workshop_params}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :update,
+    name: 'facilitators cannot update workshops',
+    method: :put,
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
+  )
 
   test 'updating with the same location_address does not re-process location' do
     sign_in @organizer
@@ -400,14 +417,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # No access
 
-  test 'teachers cannot access workshops' do
-    sign_in create(:teacher)
-    all_forbidden
-  end
-
-  test 'normal users cannot access workshops' do
-    sign_in create(:user)
-    all_forbidden
+  [:teacher, :user].each do |user_type|
+    test_user_gets_response_for :index, response: :forbidden, user: user_type
+    test_user_gets_response_for :show, response: :forbidden, user: user_type, params: -> {{id: @workshop.id}}
   end
 
   test 'anyone can see the K5 public map index' do
@@ -415,29 +427,35 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  test 'facilitators can get summary for their workshops' do
-    sign_in @facilitator
-    get :summary, params: {id: @workshop.id}
-    assert_response :success
-  end
+  test_user_gets_response_for(
+    :summary,
+    name: 'facilitators can get summary for their workshops',
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id}}
+  )
 
-  test 'facilitators cannot get summary for other workshops' do
-    sign_in @facilitator
-    get :summary, params: {id: @standalone_workshop.id}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :summary,
+    name: 'facilitators cannot get summary for other workshops',
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  test 'organizers can get summary for their workshops' do
-    sign_in @organizer
-    get :summary, params: {id: @workshop.id}
-    assert_response :success
-  end
+  test_user_gets_response_for(
+    :summary,
+    name: 'organizers can get summary for their workshops',
+    user: -> {@organizer},
+    params: -> {{id: @workshop.id}}
+  )
 
-  test 'organizers cannot get summary for other workshops' do
-    sign_in @organizer
-    get :summary, params: {id: @standalone_workshop.id}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :summary,
+    name: 'organizers cannot get summary for other workshops',
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
   test 'summary' do
     sign_in @admin
@@ -454,13 +472,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   private
-
-  def all_forbidden
-    get :index
-    assert_response :forbidden
-    get :show, params: {id: @workshop.id}
-    assert_response :forbidden
-  end
 
   def tomorrow_at(hour, minute = nil)
     tomorrow = Time.zone.now + 1.day

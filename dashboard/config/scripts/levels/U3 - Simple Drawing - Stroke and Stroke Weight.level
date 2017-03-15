@@ -55,10 +55,10 @@
     "all_animations_single_frame": "false",
     "encrypted_examples": "Gk5H+rpVOeCo8ELM3R6lYjLLRhzV1CJ6j5p3qxzdOo4nYjCzsXdrjGYRzGBt\nK86M\n",
     "show_debug_watch": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
