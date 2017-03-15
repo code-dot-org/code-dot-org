@@ -144,6 +144,7 @@ const AchievementDialog = Radium(React.createClass({
     assetUrl: React.PropTypes.func,
     onContinue: React.PropTypes.func,
     bannerMode: React.PropTypes.bool,
+    totalPoints: React.PropTypes.number,
     showStageProgress: React.PropTypes.bool,
     oldStageProgress: React.PropTypes.number,
     newPassedProgress: React.PropTypes.number,
@@ -228,8 +229,14 @@ const AchievementDialog = Radium(React.createClass({
     const params = {
       puzzleNumber: this.props.puzzleNumber,
       numBlocks: this.props.idealBlocks,
+      numPoints: this.props.totalPoints,
     };
-    const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+    let feedbackMessage;
+    if (this.props.bannerMode) {
+      feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevelStars'](params);
+    } else {
+      feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+    }
     const numPoints = 1 +
       (showNumBlocksRow && !tooManyBlocks ? 1 : 0) +
       (!tooManyHints ? 1 : 0);
@@ -299,7 +306,7 @@ const AchievementDialog = Radium(React.createClass({
                     }}
                   >
                     <div style={styles.bannerAchievement.bannerText}>
-                      AWARD BONUS
+                      CONGRATULATIONS
                     </div>
                   </div>
                 }
