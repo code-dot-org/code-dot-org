@@ -218,6 +218,18 @@ class FollowersControllerTest < ActionController::TestCase
     end
   end
 
+  test "student_register gives error if already signed in" do
+    sign_in @student
+    assert_does_not_create(User, Follower) do
+      post :student_register, params: {
+        section_code: @chris_section.code,
+        user: @student.attributes
+      }
+    end
+    assert_response :success
+    assert response.body.include? 'You are currently signed in.'
+  end
+
   test "create with section code" do
     sign_in @student
 

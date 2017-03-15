@@ -53,17 +53,16 @@ class FollowersController < ApplicationController
   # POST /join/XXXXXX
   # join a section as a new student
   def student_register
+    user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
+    @user = User.new(followers_params(user_type))
+    @user.user_type = user_type
+
     if current_user
       @user.errors.add(:username, "Please signout before proceeding")
       render 'student_user_new', formats: [:html]
       return
     end
 
-    user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-
-    @user = User.new(followers_params(user_type))
-
-    @user.user_type = user_type
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       if @user.save
         @section.add_student(@user)
