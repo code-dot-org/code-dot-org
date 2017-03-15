@@ -91,7 +91,7 @@ class Ability
         can :manage, Workshop do |workshop|
           workshop.facilitators.include? user
         end
-        can [:read, :start, :end, :workshop_survey_report, :summary], Pd::Workshop, facilitators: {id: user.id}
+        can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
       end
 
@@ -110,7 +110,7 @@ class Ability
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
-        can [:read, :start, :end, :update, :destroy, :summary], Pd::Workshop, organizer_id: user.id
+        can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
         can :read, Pd::CourseFacilitator
         can :index, :workshop_organizer_survey_report

@@ -8,11 +8,8 @@ require 'cdo/slack'
 class ChatClient
   @@name = CDO.name[0..14]
 
-  # Posts message to the infra-environment Slack room.
-  # @param message [String] The message to post. Can also be anything that
-  #   responds to the method to_s.
   def self.log(message, options={})
-    message("infra-#{ENV['RACK_ENV']}", message, options)
+    message(CDO.hip_chat_log_room, message, options)
   end
 
   # @param room [String] The room to post to which message should be posted.

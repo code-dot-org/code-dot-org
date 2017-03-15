@@ -5,6 +5,7 @@ require 'httparty'
 require_relative '../../../../deployment'
 require 'active_support/core_ext/object/blank'
 require_relative '../utils/selenium_browser'
+require 'retryable'
 
 $browser_configs = JSON.load(open("browsers.json"))
 

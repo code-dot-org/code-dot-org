@@ -1,5 +1,17 @@
 ---
-title: Dig Deeper into AP
+title: Dig Deeper into AP Computer Science
+social: 
+  "og:title": "Dig Deeper into AP Computer Science"
+  "og:description": "View data about the AP Computer Science exam by state"
+  "og:image": "<%= 'https://' + request.host + '/images/middleschool.png' %>"
+  "og:image:width": '1920'
+  "og:image:height": '1080'
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://code.org/promote/ap"
+  "twitter:title": "Dig Deeper into AP Computer Science"
+  "twitter:description": "View data about the AP Computer Science exam by state"
+  "twitter:image:src": "<%= 'https://' + request.host + '/images/middleschool.png' %>"
 ---
 
 # Dig Deeper into AP Computer Science

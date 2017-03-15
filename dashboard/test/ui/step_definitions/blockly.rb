@@ -187,6 +187,14 @@ Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
   expect(classes.include?(class_name)).to eq(true)
 end
 
+When /^I wait until block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
+  wait_until do
+    item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
+    classes = item.attribute("class")
+    classes.include?(class_name)
+  end
+end
+
 Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, class_name|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")

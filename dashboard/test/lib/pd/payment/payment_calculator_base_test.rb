@@ -148,6 +148,7 @@ module Pd::Payment
 
       teacher_unqualified = create :pd_workshop_participant,
         workshop: workshop, enrolled: true, in_section: true, attended: true
+      enrollment_unqualified = Pd::Enrollment.last
 
       teacher_no_pay = create :pd_workshop_participant,
         workshop: workshop, enrolled: true, in_section: true, attended: true
@@ -166,7 +167,7 @@ module Pd::Payment
 
       calculator = PaymentCalculatorBase.instance
       calculator.stubs(:teacher_qualified?).returns true
-      calculator.expects(:teacher_qualified?).with(teacher_unqualified).returns false
+      calculator.expects(:teacher_qualified?).with(enrollment_unqualified).returns false
 
       workshop_summary = calculator.calculate(workshop)
       teacher_summaries = workshop_summary.teacher_summaries
@@ -220,7 +221,7 @@ module Pd::Payment
     test 'teacher summaries with deleted teacher account' do
       workshop = create :pd_ended_workshop, num_sessions: 1
 
-      teacher_unqualified = create :pd_workshop_participant,
+      create :pd_workshop_participant,
         workshop: workshop,
         enrolled: true,
         in_section: true,
@@ -228,22 +229,20 @@ module Pd::Payment
         deleted_at: DateTime.now
 
       calculator = PaymentCalculatorBase.instance
-      calculator.expects(:teacher_qualified?).with(teacher_unqualified).returns false
 
       workshop_summary = calculator.calculate(workshop)
       teacher_summaries = workshop_summary.teacher_summaries
       assert teacher_summaries
       assert_equal 1, teacher_summaries.count
 
-      # Unqualified
-      teacher_summaries.find{|p| p.teacher == teacher_unqualified}.tap do |teacher_summary|
-        refute teacher_summary.qualified?
+      teacher_summaries.first.tap do |teacher_summary|
+        assert teacher_summary.qualified?
         assert_equal 1, teacher_summary.days
         assert_equal 6, teacher_summary.hours
-        assert_nil teacher_summary.payment
+        assert_not_nil teacher_summary.payment
       end
 
-      assert_equal 0, workshop_summary.total_teacher_attendance_days
+      assert_equal 1, workshop_summary.total_teacher_attendance_days
     end
 
     test 'unexpected payment term' do

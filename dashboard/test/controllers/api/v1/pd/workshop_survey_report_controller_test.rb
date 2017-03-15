@@ -10,14 +10,11 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
 
   API = '/api/v1/pd/workshops'
 
-  test 'admins can view surveys' do
-    admin = create :admin
-
-    sign_in admin
-
-    get :workshop_survey_report, params: {workshop_id: @workshop.id}
-    assert_response :success
-  end
+  test_user_gets_response_for(
+    :workshop_survey_report,
+    user: :admin,
+    params: -> {{workshop_id: @workshop.id}}
+  )
 
   test 'facilitators can view their survey' do
     sign_in @facilitator
@@ -32,11 +29,10 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     assert_response :forbidden
   end
 
-  test "non-facilitator teachers cannot view surveys" do
-    teacher = create :teacher
-    sign_in teacher
-
-    get :workshop_survey_report, params: {workshop_id: @workshop.id}
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :workshop_survey_report,
+    response: :forbidden,
+    user: :teacher,
+    params: -> {{workshop_id: @workshop.id}}
+  )
 end
