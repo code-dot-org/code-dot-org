@@ -227,11 +227,13 @@ export const ProgressDot = Radium(React.createClass({
   },
 
   tooltipContent() {
-    const { level } = this.props;
-    if (level.name === undefined) {
-      return level.title;
+    const { level, courseOverviewPage } = this.props;
+    if (!courseOverviewPage) {
+      if (level.name === undefined) {
+        return level.title;
+      }
+      return level.title +". "+ level.name;
     }
-    return level.title +". "+ level.name;
   },
 
   render() {
@@ -310,7 +312,8 @@ export const ProgressDot = Radium(React.createClass({
             <ReactTooltip
               id={tooltipId}
               role="tooltip"
-              delayShow={500}
+              wrapper="span"
+              effect="solid"
             >
               {this.tooltipContent()}
             </ReactTooltip>
