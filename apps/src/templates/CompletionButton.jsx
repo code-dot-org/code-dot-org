@@ -6,6 +6,16 @@ import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 const styles = {
   main: {
     display: 'inline'
+  },
+  // The way that this works in the non-phone frame world is use media queries to
+  // set runButton's min-width to be 111px at >1051, and 45px otherwise. When
+  // min-width was 45px, we would actually render at 105px.
+  // In phone frame, there's no reason to resize based on screen width since we
+  // don't need to make room for more buttons on the same row. I've decided the
+  // 105px looks better than 11px so I'm going with that.
+  phoneFrameButton: {
+    minWidth: 105,
+    textAlign: 'center'
   }
 };
 
@@ -18,7 +28,8 @@ var CompletionButton = React.createClass({
   propTypes: {
     isProjectLevel: React.PropTypes.bool.isRequired,
     isSubmittable: React.PropTypes.bool.isRequired,
-    isSubmitted: React.PropTypes.bool.isRequired
+    isSubmitted: React.PropTypes.bool.isRequired,
+    playspacePhoneFrame: React.PropTypes.bool
   },
 
   render: function () {
@@ -50,7 +61,7 @@ var CompletionButton = React.createClass({
           <button
             id={id}
             className="share"
-            style={{minWidth: 105, textAlign: 'center'}}
+            style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
           >
             <img src="/blockly/media/1x1.gif"/>
             {contents}
