@@ -27,20 +27,14 @@ Join the conversation with other teachers using Code Studio on our forum.
 
 ## Connect to your local community
 
-Celebrate the teachers and students in your school by nominating them for a Code.org award:
- 
-- [Teacher of the month](/totm)
-<br/>
-- [Student of the month](/sotm)
-
 **Computer Science Teacher's Association:** The [CSTA](http://www.csteachers.org/) is an engaged community of educators across the nation that is committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.
 
-**Advocating for computer science**: We have a (small) team that focuses on advocating through state governments to bring computer science into K-12 classrooms. We have [fact sheets](/promote) telling the state of computer science in each of these states — and you can access and download your state’s information. 
+**Advocating for computer science**: We have a (small) team that focuses on advocating through state governments to bring computer science into K-12 classrooms. We have [fact sheets](/promote) telling the state of computer science in each of these states — and you can access and download your state’s information.
 
 
 ## Leadership Opportunities
 ### Become a Code.org Professional Learning Partner
-Code.org [Professional Learning Partners](http://code.org/educate/professional-learning-partner) help increase the sustainability of our Computer Science programs at the local level. Code.org is partnering with organizations who can host local workshops for teachers new to computer science and build and sustain a community of computer science educators. 
+Code.org [Professional Learning Partners](http://code.org/educate/professional-learning-partner) help increase the sustainability of our Computer Science programs at the local level. Code.org is partnering with organizations who can host local workshops for teachers new to computer science and build and sustain a community of computer science educators.
 
 ### Become a Code.org Facilitator
 Code.org is interested in partnering with experienced [computer science educators](/educate/facilitator) to host local workshops for teachers enrolled in our Professional Learning Program.

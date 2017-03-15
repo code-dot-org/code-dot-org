@@ -3,7 +3,7 @@
 Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
 require_relative '../../dashboard/config/environment'
 require 'aws-sdk'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 
 # Wait for an RDS snapshot to be in the 'available' state
 # @param snapshot [DBSnapshot] the snapshot to wait for
@@ -12,7 +12,11 @@ def wait_for_snapshot_copy(snapshot)
     snap.status == 'available'
   end
 rescue Aws::Waiters::Errors::WaiterFailed
-  HipChat.developers "Timed out waiting for RDS snapshot #{snapshot.snapshot_id} to be available, aborting snapshot backup"
+  ChatClient.message(
+    'server operations',
+    "Timed out waiting for RDS snapshot #{snapshot.snapshot_id} to be "\
+      "available, aborting snapshot backup"
+  )
   exit(1)
 end
 
@@ -85,7 +89,7 @@ end
 # Credential sets must be set up with the names 'default' and 'backup' in the aws config directory,
 # which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
 def main
-  HipChat.developers 'Beginning cross-account RDS backup'
+  ChatClient.message 'server operations', 'Beginning cross-account RDS backup'
   rds_primary = Aws::RDS::Resource.new
   credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
   rds_backup = Aws::RDS::Resource.new(credentials: credentials_backup)
@@ -111,9 +115,15 @@ def main
         }
       )
       wait_for_snapshot_copy(backed_up_snapshot)
-      HipChat.developers "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
+      ChatClient.message(
+        'server operations',
+        "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
+      )
     rescue Aws::RDS::Errors::DBSnapshotAlreadyExists
-      HipChat.developers "RDS snapshot backup error: #{latest_snapshot.snapshot_id} already backed up"
+      ChatClient.message(
+        'server operations',
+        "RDS snapshot backup error: #{latest_snapshot.snapshot_id} already backed up"
+      )
     end
   ensure
     # Clean up the temporary snapshot

@@ -6,9 +6,12 @@ class ProjectsControllerTest < ActionController::TestCase
   setup do
     # Workaround for 'undefined method `user_id` in ActionDispatch::TestRequest'
     ActionDispatch::TestRequest.any_instance.stubs(:user_id).returns(nil)
-
     sign_in create(:user)
+  end
 
+  self.use_transactional_test_case = true
+
+  setup_all do
     @driver = create :user
     @navigator = create :user
     section = create :section

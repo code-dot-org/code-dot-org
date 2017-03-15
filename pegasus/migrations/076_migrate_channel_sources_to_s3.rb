@@ -1,10 +1,10 @@
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'files_api'
 
 # Migration for moving JSON.parse(row[:value])['levelSource'] and ['levelHtml'] to S3 (/v3/sources API).
 Sequel.migration do
   up do
-    HipChat.log 'Moving <b>channel</b> sources to S3...'
+    ChatClient.log 'Moving <b>channel</b> sources to S3...'
     FILE_NAME = 'main.json'
     source_bucket = SourceBucket.new
 
@@ -31,7 +31,7 @@ Sequel.migration do
 
   # Leave the created objects in S3, but clear the `migratedToS3` flag so project.js no longer attempts to load them.
   down do
-    HipChat.log 'Clearing the `migratedToS3` flag on <b>channels</b>...'
+    ChatClient.log 'Clearing the `migratedToS3` flag on <b>channels</b>...'
 
     batch_update do |row|
       begin
@@ -55,7 +55,7 @@ def batch_update
     batch.each do |row|
       yield row
     end
-    HipChat.log "#{offset + batch.count} <b>channels</b> processed."
+    ChatClient.log "#{offset + batch.count} <b>channels</b> processed."
     offset += batch_size
   end
 end

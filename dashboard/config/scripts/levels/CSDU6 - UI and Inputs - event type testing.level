@@ -77,6 +77,9 @@
     "markdown_instructions": "# Event Testing: \r\n\r\nSo far you have only used the 'click' event type. However there are lots of other event types. You are going to test out a couple different event types for 4 different UI elements (Button, Dropdown, Slider, Text Input).\r\n\r\n**Starter Code:** The starting code is set up to react to the *click* event for the *button*. When that event fires a message will be logged to the console.\r\n\r\nOne at a time, **change either the ID or event type**. Run the program and write down you observations of when this event fires. Keep going until you have tried all the combinations of events in the table.",
     "start_blocks": "onEvent(\"button\", \"click\", function(event) {\r\n  console.log(\"The event fired!\");\r\n});",
     "hide_share_and_remix": "false",
+    "display_name": "Event Testing",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

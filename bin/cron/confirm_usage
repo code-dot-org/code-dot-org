@@ -8,8 +8,8 @@
 # queries need to be sufficiently performant.
 
 require_relative('../../deployment')
+require 'cdo/chat_client'
 require 'cdo/db'
-require 'cdo/hip_chat'
 require 'cdo/only_one'
 
 ALERT_FILENAME = 'confirm_usage_alert'.freeze
@@ -34,7 +34,7 @@ KEY_VALUE_CHECKS = [
 # @param message [String] the (base) error message to log.
 def alert(message)
   message += " Delete production-daemon:production/#{ALERT_FILENAME} to close."
-  HipChat.log(message, color: 'red', notify: 1)
+  ChatClient.log(message, color: 'red', notify: 1)
   Dir.chdir(deploy_dir) do
     system "touch #{ALERT_FILENAME}"
   end

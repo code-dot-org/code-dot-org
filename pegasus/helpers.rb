@@ -89,4 +89,4 @@ def csrf_tag
   Rack::Csrf.csrf_tag(env)
 end
 
-Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| load path}
+Dir.glob(pegasus_dir('helpers/*.rb')).sort.each{|path| require path}

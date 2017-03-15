@@ -1,27 +1,5 @@
 name 'Circuit Playground Map: Buzzer'
 display_name 'Circuit Playground: Buzzer'
 markdown <<MARKDOWN
-# Producing Output
-
-<img src="//curriculum.code.org/images/circuitplayground/cp_buzzer.png" style="float: right; width: 300px; margin-left: 10px">
-
-The LED is probably the simplest form of output available, and thought there are many useful things a simple light can communicate, sometimes we need a different form of output. We've used light as an output, but what about sound?
-
-### The Buzzer
-
-Don't expect the buzzer to make beautiful music - it's a simple tool for simple output!
-
-<span style="float: left; clear: left;font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
-<p style="margin-left: 25px">
-This cube contains a simple buzzer (also known as a _piezo_ or _piezoelectric_ buzzer). When electricity is sent to the buzzer, it vibrates and makes noise.</p>
-
-<div style="clear:both"></div>
-
-### Making Different Sounds
-
-<img src="//curriculum.code.org/images/circuitplayground/cp_buzzer_pwm.png" style="float: left; width: 200px; margin-right: 10px">
-
-When using the LED our choice of output was pretty simple; it's either on or off. The buzzer can actually play a range of different sounds. We're able to do that by sending pulses of electricity to the buzzer at different speeds. This is like turning on and off a light repeatedly - the faster we flip the switch, the higher the sound it will produce.
-
-<div style="clear: both"></div>
+<object data="https://docs.code.org/csd/maker_buzzer/" type="text/html"  style="width: 100%; height: 700px;"></object>
 MARKDOWN

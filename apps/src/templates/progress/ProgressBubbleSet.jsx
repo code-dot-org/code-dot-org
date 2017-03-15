@@ -44,11 +44,12 @@ const ProgressBubbleSet = React.createClass({
         level: PropTypes.string,
         url: PropTypes.string
       })
-    ).isRequired
+    ).isRequired,
+    disabled: PropTypes.bool.isRequired
   },
 
   render() {
-    const { start, levels } = this.props;
+    const { start, levels, disabled } = this.props;
 
     return (
       <div style={styles.main}>
@@ -69,6 +70,7 @@ const ProgressBubbleSet = React.createClass({
                 number={start + index}
                 status={level.status}
                 url={level.url}
+                disabled={disabled}
               />
             </div>
           </div>

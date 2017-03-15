@@ -1,6 +1,7 @@
 apt_repository 'nginx' do
   uri          'ppa:nginx/development'
   distribution 'trusty'
+  retries 3
 end
 
 apt_package 'nginx'

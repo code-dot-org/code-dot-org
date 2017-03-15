@@ -34,7 +34,8 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     payment_amount
   ).freeze
 
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @admin = create :admin
     @organizer = create :workshop_organizer
 

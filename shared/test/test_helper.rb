@@ -11,6 +11,7 @@ require 'vcr'
 require_relative '../../deployment'
 require 'cdo/db'
 require 'cdo/aws/s3'
+require 'mocha/mini_test'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
@@ -23,6 +24,7 @@ VCR.configure do |c|
   # Filter unnecessary headers from the http interactions.
   c.before_record do |i|
     %w(
+      X-Amz-Security-Token
       X-Amz-Content-Sha256
       Authorization
       X-Amz-Date
@@ -48,14 +50,18 @@ end
 module SetupTest
   def around(&block)
     random = Random.new(0)
-    ENV['AWS_ACCESS_KEY_ID'] ||= 'test_aws_key'
-    ENV['AWS_SECRET_ACCESS_KEY'] ||= 'test_aws_secret'
-
-    # 3 test wrappers:
+    # 4 test wrappers:
     # VCR (record/replay HTTP interactions)
+    # Stub fake AWS credentials
     # Transaction rollback (leave behind no database side-effects)
     # Stub AWS::S3#random
     VCR.use_cassette("#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_', '')}") do
+      unless VCR.current_cassette.recording?
+        Aws::CredentialProviderChain.
+          any_instance.
+          stubs(:static_credentials).
+          returns(Aws::Credentials.new('test_aws_key', 'test_aws_secret'))
+      end
       PEGASUS_DB.transaction(rollback: :always) do
         AWS::S3.stub(:random, proc{random.bytes(16).unpack('H*')[0]}, &block)
       end

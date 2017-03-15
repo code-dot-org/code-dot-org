@@ -24,9 +24,6 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
 
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = true
-
   # test environment should use precompiled, minified, digested assets like production,
   # unless it's being used for unit tests.
   ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
@@ -45,9 +42,6 @@ Dashboard::Application.configure do
 
     # Version of your assets, change this if you want to expire all your assets.
     config.assets.version = '1.0'
-
-    # Whether or not to display pretty shared js assets
-    config.pretty_sharedjs = false
   end
 
   config.assets.quiet = true

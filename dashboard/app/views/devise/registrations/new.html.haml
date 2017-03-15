@@ -69,6 +69,12 @@
           = f.text_area :full_address, class: 'input-xxlarge fieldblock', placeholder: t('signup_form.address_placeholder'), rows: 4, maxlength: 1024
           .error_in_field
 
+        #schooldropdown-block.itemblock{style: "display: none;"}
+          = render partial: 'shared/school_info_registration', locals: {form_name: "user[school_info_attributes]", existing_school_info: nil, suppress_scrolling: true}
+          .error_in_field
+
+        #schooldropdown-ab-test-marker{style: "display: block; position: absolute; left: 1000px; visibility: hidden;"}
+
         #age-block.itemblock
           .labelblock= t('signup_form.age')
           %select#user_user_age.fieldblock{name: "user[age]", type: "select"}

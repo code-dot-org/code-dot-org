@@ -525,5 +525,44 @@ EOS
       end
       assert_response :success
     end
+
+    test 'users without email are moved to deleted' do
+      sign_in @admin
+
+      teachers_params = []
+      2.times do
+        teacher = create(:teacher, district_id: @district.id)
+        @cohort.teachers << teacher
+        teachers_params << {
+          id: teacher.id,
+          ops_first_name: teacher.name.split(' ')[0],
+          ops_last_name: teacher.name.split(' ')[1],
+          email: teacher.email,
+          district: @district.name,
+          district_id: @district.id,
+          ops_school: 'a school',
+          ops_gender: 'Male'
+        }
+      end
+
+      # Blank out first email, as if this teacher turned into a student account.
+      # This teacher should be removed.
+      teachers_params.first[:email] = ''
+
+      assert_difference('@cohort.reload.teachers.count', -1) do
+        assert_difference('@cohort.reload.deleted_teachers.count', 1) do
+          put :update, params: {
+            id: @cohort.id,
+            cohort: {
+              name: @cohort.name,
+              teachers: teachers_params
+            }
+          }
+          assert_response :success
+        end
+      end
+
+      assert_equal teachers_params.first[:id], @cohort.deleted_teachers.last.id
+    end
   end
 end

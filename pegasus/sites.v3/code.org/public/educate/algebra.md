@@ -94,13 +94,12 @@ Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](http://w
     </tr>
     <tr>
       <td><strong>Professional Development</strong></td>
-      <td>In person <a href="/educate/professional-learning/cs-in-algebra">workshops with supplemental online professional development</a> covering Course A only</td>
       <td>In person <a href="http://www.bootstrapworld.org/workshops/">workshops</a> covering the entire course</td>
     </tr>
     <tr>
       <td><strong>Curriculum Progression</strong></td>
       <td>
-        <strong>Course A</strong> 
+        <strong>Course A</strong>
         <br>Order of Operations and Circles of Evaluation
         <br>Data types (Numbers, Strings, and Images)
         <br>Variables
@@ -195,5 +194,5 @@ The Computer Science in Algebra course was inspired by and developed in partners
 <br/>
 <br/>
 
-![Code logo](algebra/img/codelogo.png) &nbsp;&nbsp; ![Bootstrap logo](algebra/img/bootstrapIconAndLogoSm.png) 
+![Code logo](algebra/img/codelogo.png) &nbsp;&nbsp; ![Bootstrap logo](algebra/img/bootstrapIconAndLogoSm.png)
 

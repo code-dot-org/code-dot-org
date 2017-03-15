@@ -1,5 +1,14 @@
 import React from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { fakeLevels } from './progressTestHelpers';
+
+const multipleLevels = [
+  {
+    status: LevelStatus.perfect,
+    url: '/foo/level1',
+  }
+].concat(fakeLevels(4));
 
 export default storybook => {
   storybook
@@ -17,6 +26,7 @@ export default storybook => {
                 url: '/foo/level1',
               }
             ]}
+            disabled={false}
           />
         )
       },
@@ -26,28 +36,8 @@ export default storybook => {
           <ProgressLevelSet
             start={1}
             name="Writing Exercises"
-            levels={[
-              {
-                status: 'perfect',
-                url: '/foo/level1',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/level2',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/level3',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/level4',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/level5',
-              },
-            ]}
+            levels={multipleLevels}
+            disabled={false}
           />
         )
       },
@@ -57,28 +47,19 @@ export default storybook => {
           <ProgressLevelSet
             start={4}
             name="Writing Exercises"
-            levels={[
-              {
-                status: 'perfect',
-                url: '/foo/level1',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/level2',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/level3',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/level4',
-              },
-              {
-                status: 'not_tried',
-                url: '/foo/level5',
-              },
-            ]}
+            levels={multipleLevels}
+            disabled={false}
+          />
+        )
+      },
+      {
+        name:'disabled',
+        story: () => (
+          <ProgressLevelSet
+            start={1}
+            name="Assessment"
+            levels={multipleLevels}
+            disabled={true}
           />
         )
       }

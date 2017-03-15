@@ -1,26 +1,15 @@
 import React from 'react';
-import Immutable from 'immutable';
-import { UnconnectedDetailProgressTable as DetailProgressTable } from './DetailProgressTable';
+import { Provider } from 'react-redux';
+import DetailProgressTable from './DetailProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { fakeLesson, fakeLevels, createStoreWithHiddenLesson } from './progressTestHelpers';
 
 const lessons = [
-  {
-    name: 'Jigsaw',
-    id: 1
-  },
-  {
-    name: 'Maze',
-    id: 2
-  },
-  {
-    name: 'Artist',
-    id: 3
-  },
-  {
-    name: 'Something',
-    id: 4
-  },
+  fakeLesson('Jigsaw', 1),
+  fakeLesson('Maze', 2),
+  fakeLesson('Artist', 3),
+  fakeLesson('Something', 4)
 ];
 const levelsByLesson = [
   [
@@ -29,62 +18,16 @@ const levelsByLesson = [
       url: '/step1/level1',
       name: 'First progression'
     },
-    {
-      status: LevelStatus.perfect,
-      url: '/step2/level1',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step2/level2',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step2/level3',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step2/level4',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step2/level5',
-    },
+    ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
     {
       status: LevelStatus.not_tried,
       url: '/step3/level1',
       name: 'Last progression'
     },
   ],
-  [
-    {
-      status: LevelStatus.not_tried,
-      url: '/step1/level1',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step3/level1',
-    },
-  ],
-  [
-    {
-      status: LevelStatus.not_tried,
-      url: '/step1/level1',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step3/level1',
-    },
-  ],
-  [
-    {
-      status: LevelStatus.not_tried,
-      url: '/step4/level1',
-    },
-    {
-      status: LevelStatus.not_tried,
-      url: '/step4/level1',
-    },
-  ]
+  fakeLevels(2),
+  fakeLevels(2),
+  fakeLevels(2)
 ];
 
 export default storybook => {
@@ -94,31 +37,36 @@ export default storybook => {
       {
         name:'simple DetailProgressTable',
         story: () => (
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
-            sectionId={'11'}
-            hiddenStageMap={Immutable.fromJS({
-              '11': {}
-            })}
-          />
+          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+            <DetailProgressTable
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+            />
+          </Provider>
         )
       },
       {
-        name:'with hidden lesson',
+        name:'with hidden lesson as teacher',
+        description: 'lesson 2 should be white with dashed outline',
         story: () => (
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-            viewAs={ViewType.Teacher}
-            sectionId={'11'}
-            hiddenStageMap={Immutable.fromJS({
-              '11': {
-                '2': true
-              }
-            })}
-          />
+          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
+            <DetailProgressTable
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+            />
+          </Provider>
+        )
+      },
+      {
+        name:'with hidden lesson as student',
+        description: 'lesson 2 should be invisible',
+        story: () => (
+          <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
+            <DetailProgressTable
+              lessons={lessons}
+              levelsByLesson={levelsByLesson}
+            />
+          </Provider>
         )
       }
     ]);

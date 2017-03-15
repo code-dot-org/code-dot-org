@@ -124,6 +124,8 @@ WebLab.prototype.init = function (config) {
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
 
+  config.prepareForRemix = this.prepareForRemix.bind(this);
+
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
   config.noInstructionsWhenCollapsed = true;
@@ -319,6 +321,12 @@ WebLab.prototype.getCodeAsync = function () {
       // Bramble not installed yet - we have no code to return
       resolve("");
     }
+  });
+};
+
+WebLab.prototype.prepareForRemix = function () {
+  return new Promise((resolve, reject) => {
+    filesApi.prepareForRemix(resolve);
   });
 };
 

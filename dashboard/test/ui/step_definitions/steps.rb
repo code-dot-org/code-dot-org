@@ -707,7 +707,16 @@ Then(/^I reload the page$/) do
 end
 
 def wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
+  wait_with_timeout.until do
+    begin
+      @browser.execute_script("return (typeof jQuery !== 'undefined');")
+    rescue Selenium::WebDriver::Error::ScriptTimeOutError
+      puts "execute_script timed out after 30 seconds, likely because this is \
+Safari and the browser was still on about:blank when wait_for_jquery \
+was called. Ignoring this error and continuing to wait..."
+      false
+    end
+  end
 end
 
 Then /^I wait for jquery to load$/ do

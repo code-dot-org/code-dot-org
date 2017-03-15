@@ -56,9 +56,6 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
 
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = true
-
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time
   config.skip_script_preload = true

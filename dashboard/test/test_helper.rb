@@ -14,7 +14,9 @@ elsif ENV['CI'] # this is set by circle
 end
 
 require 'minitest/reporters'
-MiniTest::Reporters.use!($stdout.tty? ? Minitest::Reporters::ProgressReporter.new : Minitest::Reporters::DefaultReporter.new)
+Minitest::Reporters.use! [
+  Minitest::Reporters::SpecReporter.new
+]
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
@@ -44,6 +46,11 @@ Dashboard::Application.config.action_dispatch.show_exceptions = false
 
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
+require 'testing/setup_all_and_teardown_all'
+require 'testing/lock_thread'
+require 'testing/transactional_test_case'
+
+require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -72,6 +79,7 @@ class ActiveSupport::TestCase
 
   teardown do
     Dashboard::Application.config.action_controller.perform_caching = false
+    I18n.locale = I18n.default_locale
     set_env :test
   end
 
@@ -102,14 +110,10 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  #
-  # Note: You'll currently still have to declare fixtures explicitly in integration tests
-  # -- they do not yet inherit this setting
-  fixtures :all
-
   # Add more helper methods to be used by all tests here...
   include FactoryGirl::Syntax::Methods
+  include ActiveSupport::Testing::SetupAllAndTeardownAll
+  include ActiveSupport::Testing::TransactionalTestCase
 
   def assert_creates(*args)
     assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
@@ -208,6 +212,13 @@ class ActiveSupport::TestCase
     teardown do
       Timecop.return
     end
+  end
+
+  def no_database
+    Rails.logger.info '--------------'
+    Rails.logger.info 'DISCONNECTING DATABASE'
+    Rails.logger.info '--------------'
+    ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
 end
 

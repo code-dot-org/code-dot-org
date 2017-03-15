@@ -4,6 +4,9 @@ markdown <<MARKDOWN
 
 # Project Breakdown: Color Sleuth
 
+<img src="https://images.code.org/4665b874ad12992a11097444c1c62b68-image-1487093017512.gif" style= "width: 300px; float: right; margin-left:20px">
+
+
 Color Sleuth is a unique project in which students vicariously participate in a conversation between two programmers: Alexis and Michael.  Students do not have to build a game from scratch, rather they “listen” to a conversation between these programmers and then create the code based on their conversation.  It is important to know correct syntax when programming in any language - writing the program is often fun and it is gratifying to see it run!  In reality, however, most programmers don’t start by writing code.  There is careful planning that has to happen prior to starting an app, and continual iteration that occurs as they develop the final product.  The purpose here is for students to see how “experts” would approach writing an app from scratch when all you have to start out with is a sketch on paper of some idea. Research has shown that what novices often need is an expert walk-through to explain the rationale behind certain decisions and to see the kinds of problems they anticipate and solve. There are a few key things that happen in this lesson that we hope students see and take to heart:
 
 - There is no one “correct” way to approach writing a program

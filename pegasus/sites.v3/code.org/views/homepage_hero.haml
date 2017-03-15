@@ -29,9 +29,6 @@
       - heroes_celeba.shuffle!
       - heroes_arranged.unshift(heroes_celeba.first)
 
-  -# Temporary for Athletes Push, always show first
-  - heroes_arranged.insert(0, {:id=>6,:id_s=>"hero_athletes",:type_s=>"widehero",:text1_s=>"",:param1_s=>"25% 22%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/athletes.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
-
   - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
   - if newsbanner
     #newsbanner

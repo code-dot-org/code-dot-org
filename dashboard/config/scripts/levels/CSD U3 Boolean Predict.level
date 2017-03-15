@@ -43,7 +43,10 @@
     "contained_level_names": [
       "CSD U3 Boolean MC"
     ],
-    "show_debug_watch": "true"
+    "show_debug_watch": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "true"
   },
   "published": true,
   "notes": "",

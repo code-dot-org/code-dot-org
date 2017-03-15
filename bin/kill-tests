@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
 
-# kill an entire test run on the test machine, regardless of what step it is currently running.
+# Kill an entire test run on the test machine, regardless of what step it is
+# currently running.
 
 require_relative '../deployment'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 
-HipChat.log "killing tests via #{$0}"
+ChatClient.log "killing tests via #{$0}"
 
 def kill_tests
   # kill dashboard unit tests
@@ -27,12 +28,12 @@ kill_tests
 sleep 2
 
 unless tests_running?
-  HipChat.log SUCCESS_MSG
+  ChatClient.log SUCCESS_MSG
   exit 0
 end
 
-HipChat.log "trying again"
+ChatClient.log "trying again"
 kill_tests
 sleep 5
 msg = tests_running? ? FAIL_MSG : SUCCESS_MSG
-HipChat.log msg
+ChatClient.log msg

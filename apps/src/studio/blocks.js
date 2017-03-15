@@ -141,6 +141,22 @@ exports.install = function (blockly, blockInstallOptions) {
   var isK1 = blockInstallOptions.isK1;
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
+
+  // Add some defaults; specifically for those values we expect to be
+  // arrays, so that we can blindly .filter, .map, and .slice them, else
+  // we will fail horribly for any environment that doesn't define a
+  // fully-featured skin
+  skin.activityChoices = valueOr(skin.activityChoices, []);
+  skin.avatarList = valueOr(skin.avatarList, []);
+  skin.backgroundChoices = valueOr(skin.backgroundChoices, []);
+  skin.itemChoices = valueOr(skin.itemChoices, []);
+  skin.mapChoices = valueOr(skin.mapChoices, []);
+  skin.projectileChoices = valueOr(skin.projectileChoices, []);
+  skin.sounds = valueOr(skin.sounds, []);
+  skin.soundChoices = valueOr(skin.soundChoices, []);
+  skin.soundChoicesK1 = valueOr(skin.soundChoicesK1, []);
+  skin.spriteChoices = valueOr(skin.spriteChoices, []);
+
   startAvatars = skin.avatarList.slice(0); // copy avatar list
 
   generator.studio_eventHandlerPrologue = function () {
@@ -325,15 +341,31 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(140, 1.00, 0.74);
-      if (isK1) {
-        this.appendDummyInput()
-          .appendTitle(commonMsg.when())
-          .appendTitle(new blockly.FieldImage(skin.clickIcon))
-          .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+      if (spriteCount > 1) {
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
+                         'SPRITE');
+        }
       } else {
-        this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.whenSpriteClickedN),
-                        'SPRITE');
+        if (isK1) {
+          this.appendDummyInput()
+            .appendTitle(commonMsg.when())
+            .appendTitle(new blockly.FieldImage(skin.clickIcon))
+            .appendTitle(new blockly.FieldImage(
+                skin[startAvatars[0]].dropdownThumbnail,
+                skin.dropdownThumbnailWidth,
+                skin.dropdownThumbnailHeight
+            ));
+        } else {
+          this.appendDummyInput()
+            .appendTitle(msg.whenSpriteClicked());
+        }
       }
       this.setPreviousStatement(false);
       this.setInputsInline(true);
@@ -492,8 +524,10 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput().appendTitle(dropdown1, 'SPRITE1');
         this.appendDummyInput().appendTitle(dropdown2, 'SPRITE2');
       }
-      // default second dropdown to actor 2
-      dropdown2.setValue('1');
+      if (spriteCount > 1) {
+        // default second dropdown to actor 2
+        dropdown2.setValue('1');
+      }
 
       this.setPreviousStatement(false);
       this.setInputsInline(true);
@@ -523,8 +557,13 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-        .appendTitle(spriteNumberTextDropdown(msg.stopSpriteN), 'SPRITE');
+      if (spriteCount > 1) {
+        this.appendDummyInput()
+          .appendTitle(spriteNumberTextDropdown(msg.stopSpriteN), 'SPRITE');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.stopSprite());
+      }
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
@@ -667,8 +706,13 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-        .appendTitle(spriteNumberTextDropdown(msg.throwSpriteN), 'SPRITE');
+      if (spriteCount > 1) {
+        this.appendDummyInput()
+          .appendTitle(spriteNumberTextDropdown(msg.throwSpriteN), 'SPRITE');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.throwSprite());
+      }
       this.appendDummyInput()
         .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
       this.appendDummyInput()
@@ -759,8 +803,13 @@ exports.install = function (blockly, blockInstallOptions) {
         dropdown.setValue(this.VALUES[1][1]); // default to top-left
       }
       this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-        .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+      if (spriteCount > 1) {
+        this.appendDummyInput()
+          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
       this.appendDummyInput()
         .appendTitle(dropdown, 'VALUE');
       this.setPreviousStatement(true);
@@ -819,9 +868,14 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
+      if (spriteCount > 1) {
+        this.appendValueInput('SPRITE')
+          .setCheck(blockly.BlockValueType.NUMBER)
+          .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
       this.appendDummyInput()
         .appendTitle(msg.toXY());
       this.appendValueInput('XPOS')
@@ -992,7 +1046,9 @@ exports.install = function (blockly, blockInstallOptions) {
             .appendTitle(new blockly.FieldImage(directionConfig.image)) // arrow
             .appendTitle(directionConfig.letter); // NESW
 
-          this.appendDummyInput().appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+          if (spriteCount > 1) {
+            this.appendDummyInput().appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+          }
 
           if (hasLengthInput) {
             this.appendDummyInput().appendTitle(new blockly.FieldImageDropdown(SimpleMove.DISTANCES), 'DISTANCE');
@@ -1036,15 +1092,20 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      if (isK1) {
-        this.appendDummyInput().appendTitle(msg.moveSprite())
-          .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+      if (spriteCount > 1) {
+        if (isK1) {
+          this.appendDummyInput().appendTitle(msg.moveSprite())
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.moveSpriteN), 'SPRITE');
+        }
+        this.appendDummyInput()
+          .appendTitle('\t');
       } else {
         this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.moveSpriteN), 'SPRITE');
+          .appendTitle(msg.moveSprite());
       }
-      this.appendDummyInput()
-        .appendTitle('\t');
 
       if (isK1) {
         this.appendDummyInput()
@@ -1089,7 +1150,7 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendValueInput('SPRITE')
             .setCheck(blockly.BlockValueType.NUMBER)
             .appendTitle(msg.moveSpriteN({spriteIndex: ''}));
-      } else {
+      } else if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput().appendTitle(msg.moveSprite())
             .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
@@ -1099,6 +1160,9 @@ exports.install = function (blockly, blockInstallOptions) {
         }
         this.appendDummyInput()
           .appendTitle('\t');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.moveSprite());
       }
 
       if (isK1) {
@@ -1522,12 +1586,17 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(184, 1.00, 0.74);
 
-      if (isK1) {
-        this.appendDummyInput().appendTitle(msg.setSprite())
-          .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+      if (spriteCount > 1) {
+        if (isK1) {
+          this.appendDummyInput().appendTitle(msg.setSprite())
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+        }
       } else {
         this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+          .appendTitle(msg.setSprite());
       }
 
       if (isK1) {
@@ -1600,8 +1669,13 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(184, 1.00, 0.74);
 
-      this.appendDummyInput()
-        .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+      if (spriteCount > 1) {
+        this.appendDummyInput()
+          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
 
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
@@ -2100,9 +2174,10 @@ exports.install = function (blockly, blockInstallOptions) {
         var visibilityTextDropdown = new blockly.FieldDropdown(this.VALUES);
         visibilityTextDropdown.setValue(VISIBLE_VALUE);  // default to visible
         this.appendDummyInput().appendTitle(visibilityTextDropdown, 'VALUE');
-        this.appendDummyInput()
-          .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
-
+        if (spriteCount > 1) {
+            this.appendDummyInput()
+              .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        }
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -2123,8 +2198,20 @@ exports.install = function (blockly, blockInstallOptions) {
         // shallow copy array:
         this.VALUES = [].concat(skin.spriteChoices);
         this.setHSV(312, 0.32, 0.62);
-        this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+        if (spriteCount > 1) {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+        } else {
+          // Modify the dropdownValues array to contain combined text
+          // (blockly renders this better than two adjacent text blocks)
+          var prefix = skin.setSpritePrefix + ' ';
+          for (var i = 0; i < this.VALUES.length; i++) {
+            // shallow copy this array within the larger array, then modify
+            // the string to be displayed to include the prefix:
+            this.VALUES[i] = [].concat(skin.spriteChoices[i]);
+            this.VALUES[i][0] = prefix + this.VALUES[i][0];
+          }
+        }
         var dropdown = new blockly.FieldDropdown(this.VALUES);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);
@@ -2163,9 +2250,13 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(312, 0.32, 0.62);
-      this.appendDummyInput()
-        .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
-
+      if (spriteCount > 1) {
+        this.appendDummyInput()
+          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.setSprite());
+      }
       this.appendValueInput('VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -2206,12 +2297,17 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      if (isK1) {
-        this.appendDummyInput().appendTitle(msg.setSprite())
-          .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+      if (spriteCount > 1) {
+        if (isK1) {
+          this.appendDummyInput().appendTitle(msg.setSprite())
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          this.appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+        }
       } else {
         this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.setSpriteN), 'SPRITE');
+          .appendTitle(msg.setSprite());
       }
 
       if (isK1) {
@@ -2291,7 +2387,7 @@ exports.install = function (blockly, blockInstallOptions) {
             .appendTitle(msg.actor());
         this.appendDummyInput()
             .appendTitle(msg.saySprite());
-      } else {
+      } else if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput().appendTitle(msg.saySprite())
             .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
@@ -2299,6 +2395,9 @@ exports.install = function (blockly, blockInstallOptions) {
           this.appendDummyInput()
             .appendTitle(spriteNumberTextDropdown(msg.saySpriteN), 'SPRITE');
         }
+      } else {
+        this.appendDummyInput()
+          .appendTitle(msg.saySprite());
       }
       if (options.restrictedDialog) {
         var functionArray = [];
@@ -2852,14 +2951,18 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
    */
   function appendActorSelect(block, dropdown = true) {
     if (dropdown) {
-      if (blockInstallOptions.isK1) {
-        block
-          .appendDummyInput()
-          .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+      if (spriteCount > 1) {
+        if (blockInstallOptions.isK1) {
+          block
+            .appendDummyInput()
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          block
+            .appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.ifSpriteN), 'SPRITE');
+        }
       } else {
-        block
-          .appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.ifSpriteN), 'SPRITE');
+        block.appendDummyInput();
       }
     } else {
       block

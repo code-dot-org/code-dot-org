@@ -81,6 +81,7 @@
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">3</title>
         </block>
+        <block type="collector_collect"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-
+import _ from 'lodash';
 import { levelProgressShape } from './types';
 import { saveAnswersAndNavigate } from '../../levels/saveAnswers';
-import color from "../../../util/color";
+import color from '@cdo/apps/util/color';
 import progressStyles, { createOutline } from './progressStyles';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
@@ -15,40 +15,44 @@ const dotSize = 24;
  * Styles to color bubbles
  */
 export const BUBBLE_COLORS = {
-  submitted: {
+  [LevelStatus.submitted]: {
     color: color.white,
     backgroundColor: color.level_submitted
   },
-  perfect: {
+  [LevelStatus.perfect]: {
     color: color.white,
     backgroundColor: color.level_perfect
   },
-  passed: {
+  [LevelStatus.passed]: {
     color: color.white,
     backgroundColor: color.level_passed
   },
-  attempted: {
+  [LevelStatus.attempted]: {
     color: color.charcoal,
     backgroundColor: color.level_attempted
   },
-  not_tried: {
+  [LevelStatus.not_tried]: {
     color: color.charcoal,
     backgroundColor: color.level_not_tried
   },
-  review_rejected: {
+  [LevelStatus.review_rejected]: {
     color: color.white,
     backgroundColor: color.level_review_rejected
   },
-  review_accepted: {
+  [LevelStatus.review_accepted]: {
     color: color.white,
     backgroundColor: color.level_perfect
   },
-  dots_disabled: {
+  [LevelStatus.dots_disabled]: {
     color: color.charcoal,
     backgroundColor: color.lightest_gray
   },
   multi_level: {
     color: color.charcoal
+  },
+  [LevelStatus.locked]: {
+    color: color.charcoal,
+    backgroundColor: color.white
   }
 };
 
@@ -130,7 +134,10 @@ const styles = {
       }
     }
   },
-  status: BUBBLE_COLORS
+  // In our redesign we want locked levels to have a white background, but we
+  // don't want this in non-redesigned dots. Accomplish this not having a
+  // bubble color for locked.
+  status: _.omit(BUBBLE_COLORS, LevelStatus.locked)
 };
 
 // Longer term, I'd like the server to provide us an icon type, instead of a

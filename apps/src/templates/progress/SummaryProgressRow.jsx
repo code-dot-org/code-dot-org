@@ -3,6 +3,8 @@ import color from "@cdo/apps/util/color";
 import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { levelType, lessonType } from './progressTypes';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 export const styles = {
   lightRow: {
@@ -13,7 +15,6 @@ export const styles = {
   },
   hiddenRow: {
     borderStyle: 'dashed',
-    borderWidth: 2,
     borderColor: color.border_gray,
     opacity: 0.6,
     backgroundColor: color.table_light_row
@@ -48,26 +49,52 @@ export const styles = {
     marginRight: 5,
     fontSize: 12,
     color: color.cyan
+  },
+  locked: {
+    borderStyle: 'dashed',
+    borderWidth: 2,
+    opacity: 0.6
+  },
+  unlockedIcon: {
+    color: color.orange
   }
 };
 
-const SummaryRow = React.createClass({
+const SummaryProgressRow = React.createClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
-    lessonNumber: PropTypes.number.isRequired,
+    lessonNumber: PropTypes.number,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    hiddenForStudents: PropTypes.bool.isRequired,
+    lockedForSection: PropTypes.bool.isRequired,
+    lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels, hiddenForStudents } = this.props;
+    const { dark, lesson, lessonNumber, levels, lockedForSection, lessonIsVisible } = this.props;
+
+    // Is this lesson hidden for whomever we're currently viewing as
+    if (!lessonIsVisible(lesson)) {
+      return null;
+    }
+
+    // Would this stage be hidden if we were a student?
+    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
+    let lessonTitle = lesson.name;
+    if (lessonNumber) {
+      lessonTitle = lessonNumber + ". " + lessonTitle;
+    }
+
+    const locked = lockedForSection ||
+      levels.every(level => level.status === LevelStatus.locked);
+
     return (
       <tr
         style={{
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),
-          ...(hiddenForStudents && styles.hiddenRow)
+          ...(hiddenForStudents && styles.hiddenRow),
+          ...(locked && styles.locked)
         }}
       >
         <td style={styles.col1}>
@@ -78,17 +105,28 @@ const SummaryRow = React.createClass({
                 style={styles.icon}
               />
             }
-            {`${lessonNumber}. ${lesson.name}`}
+            {lesson.lockable &&
+              <FontAwesome
+                icon={locked ? 'lock' : 'unlock'}
+                style={{
+                  ...styles.icon,
+                  ...(!locked && styles.unlockedIcon)
+                }}
+              />
+            }
+            {lessonTitle}
           </div>
         </td>
         <td style={styles.col2}>
           <ProgressBubbleSet
             start={1}
             levels={levels}
+            disabled={locked}
           />
         </td>
       </tr>
     );
   }
 });
-export default SummaryRow;
+
+export default SummaryProgressRow;

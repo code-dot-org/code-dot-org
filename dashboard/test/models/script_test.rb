@@ -15,9 +15,14 @@ class ScriptTest < ActiveSupport::TestCase
 
   def populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
-    Script.script_cache_to_cache
+    # Only need to populate cache once per test-suite run
+    @@script_cached ||= Script.script_cache_to_cache
     Script.script_cache_from_cache
-    ActiveRecord::Base.connection.disconnect!
+
+    # NOTE: ActiveRecord collection association still references an active DB connection,
+    # even when the data is already eager loaded.
+    # Best we can do is ensure that no queries are executed on the active connection.
+    ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
   end
 
   test 'login required setting in script file' do

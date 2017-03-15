@@ -1,7 +1,8 @@
 import React from 'react';
+import $ from 'jquery';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
-import {Table} from 'react-bootstrap';
+import {Table, Button, Modal} from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshop_dashboard/workshopConstants';
 
@@ -9,7 +10,7 @@ const UpcomingWorkshops = React.createClass({
   render() {
     return (
       <WorkshopTableLoader
-        queryUrl="/api/v1/pd/workshops/?state=Not%20Started"
+        queryUrl="/api/v1/pd/workshops_user_enrolled_in"
         hideNoWorkshopsMessage={true}
       >
         <UpcomingWorkshopsTable/>
@@ -21,6 +22,38 @@ const UpcomingWorkshops = React.createClass({
 const UpcomingWorkshopsTable = React.createClass({
   propTypes: {
     workshops: React.PropTypes.arrayOf(workshopShape)
+  },
+
+  getInitialState() {
+    return {
+      showCancelModal: false,
+      enrollmentCodeToCancel: undefined
+    };
+  },
+
+  cancelEnrollment(event) {
+    $.ajax({
+      method: "GET",
+      url: `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`
+    }).done(() => {
+      window.location.reload(true);
+    }).fail(data => {
+      alert(`Could not cancel enrollment for enrollment code ${this.state.enrollmentCodeToCancel}`);
+    });
+  },
+
+  dismissCancelModal(event) {
+    this.setState({
+      showCancelModal: false,
+      enrollmentCodeToCancel: undefined
+    });
+  },
+
+  showCancelModal(enrollmentCode) {
+    this.setState({
+      showCancelModal: true,
+      enrollmentCodeToCancel: enrollmentCode
+    });
   },
 
   renderWorkshopsTable() {
@@ -36,6 +69,7 @@ const UpcomingWorkshopsTable = React.createClass({
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
+            <th/>
           </tr>
         </thead>
         <tbody>
@@ -84,6 +118,15 @@ const UpcomingWorkshopsTable = React.createClass({
             <p>{workshop.location_address}</p>
           </div>
         </td>
+        <td>
+          {workshop.enrollment_code &&
+            (
+              <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
+                Cancel enrollment
+              </Button>
+            )
+          }
+        </td>
       </tr>
     );
   },
@@ -91,6 +134,19 @@ const UpcomingWorkshopsTable = React.createClass({
   render() {
     return (
       <div>
+        <Modal show={this.state.showCancelModal} onHide={this.dismissCancelModal} style={{width: 560}}>
+          <Modal.Body>
+            Are you sure you want to cancel your enrollment in this course?
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.cancelEnrollment} bsStyle="primary">
+              Yes - cancel my enrollment
+            </Button>
+            <Button onClick={this.dismissCancelModal}>
+              No - stay enrolled in this class
+            </Button>
+          </Modal.Footer>
+        </Modal>
         <h2>
           Upcoming workshops
         </h2>
@@ -100,4 +156,4 @@ const UpcomingWorkshopsTable = React.createClass({
   }
 });
 
-export default UpcomingWorkshops;
+export {UpcomingWorkshops, UpcomingWorkshopsTable};

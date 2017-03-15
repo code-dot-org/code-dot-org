@@ -29,8 +29,8 @@ class GalleryActivitiesController < ApplicationController
     @days = (Date.today - gallery_feature_ship_date).to_i
   end
 
-  # POST /gallery_activities
-  # POST /gallery_activities.json
+  # POST /gallery
+  # POST /gallery.json
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       @gallery_activity = GalleryActivity.where(gallery_activity_params).
@@ -39,7 +39,7 @@ class GalleryActivitiesController < ApplicationController
       authorize! :save_to_gallery, @gallery_activity.user_level
 
       if @gallery_activity.save
-        render action: 'show', status: :created, location: @gallery_activity
+        return head :created
       else
         # Right now this never happens because we end up raising an exception in
         # one of the authorization checks.
@@ -48,8 +48,8 @@ class GalleryActivitiesController < ApplicationController
     end
   end
 
-  # DELETE /gallery_activities/1
-  # DELETE /gallery_activities/1.json
+  # DELETE /gallery/1
+  # DELETE /gallery/1.json
   def destroy
     @gallery_activity.destroy
     head :no_content
@@ -69,7 +69,8 @@ class GalleryActivitiesController < ApplicationController
       params[:gallery_activity][:user_id] ||= current_user.id
     end
     params.require(:gallery_activity).
-      permit(:level_source_id, :user_id, :user_level_id)
+      permit(:level_source_id, :user_id, :user_level_id).
+      tap{|param| param.require(:user_level_id)}
   end
 
   def gallery_activities_for_app(app)

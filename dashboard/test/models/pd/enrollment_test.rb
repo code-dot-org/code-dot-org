@@ -10,6 +10,15 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute_equal enrollment1.code, enrollment2.code
   end
 
+  test 'enrollment.for_user' do
+    user = create :teacher
+    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email
+    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com'
+
+    enrollments = Pd::Enrollment.for_user(user).to_a
+    assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
+  end
+
   test 'find by code' do
     enrollment = create :pd_enrollment
 

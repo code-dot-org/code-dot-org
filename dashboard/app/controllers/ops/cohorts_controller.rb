@@ -55,7 +55,13 @@ module Ops
 
     # PATCH/PUT /ops/cohorts/1
     def update
-      update_teachers
+      begin
+        update_teachers
+      rescue ArgumentError => e
+        # Teacher params contain a validation error. Fail and pass the error message to the client.
+        render status: :bad_request, text: e.message
+        return
+      end
 
       @cohort.update!(cohort_params)
       respond_with @cohort
@@ -122,7 +128,7 @@ module Ops
           teacher_params[:district_id] = district_params[:id]
         end
         User.find_or_create_teacher(teacher_params.permit(Ops::TEACHER_PERMITTED_ATTRIBUTES), current_user)
-      end
+      end.compact
 
       if teachers
         @added_teachers = teachers - @cohort.teachers
@@ -134,8 +140,6 @@ module Ops
           # replace only those in the district
           teachers_in_district = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
           @cohort.teachers = @cohort.teachers - teachers_in_district + teachers
-
-          # cannoy modify districts
         end
       end
     end

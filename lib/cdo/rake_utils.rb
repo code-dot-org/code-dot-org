@@ -2,8 +2,9 @@ require 'os'
 require 'open-uri'
 require 'pathname'
 require 'cdo/aws/s3'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'digest'
+require 'parallel'
 
 module RakeUtils
   def self.system__(command)
@@ -48,19 +49,19 @@ module RakeUtils
         begin
           if sudo('service', id.to_s, 'stop-with-status')
             success = true
-            HipChat.log "Successfully stopped service #{id}"
+            ChatClient.log "Successfully stopped service #{id}"
             break
           end
         rescue RuntimeError # sudo call raises a RuntimeError if it fails
-          HipChat.log "Service #{id} failed to stop, retrying (attempt #{i})"
+          ChatClient.log "Service #{id} failed to stop, retrying (attempt #{i})"
           next
         end
       end
       unless success
         # Alert the relevant room that the service may be hung...
-        HipChat.log "Could not stop #{id} after #{retry_count + 1} attempts"
+        ChatClient.log "Could not stop #{id} after #{retry_count + 1} attempts"
         # ...but we're trying one last time and going into a wait loop, so it can be stopped manually
-        HipChat.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
+        ChatClient.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
           "log into the server and manually stop the process. The build will resume automatically "\
           "once the #{id} has stopped."
         stop_service(id)
@@ -77,9 +78,9 @@ module RakeUtils
     status
   end
 
-  def self.system_with_hipchat_logging(*args)
+  def self.system_with_chat_logging(*args)
     command = command_(*args)
-    HipChat.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
+    ChatClient.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
     system_ command
   end
 
@@ -139,8 +140,10 @@ module RakeUtils
   end
 
   def self.nproc
-    # TODO: Replace with system processor count.
-    1
+    count = ENV['PARALLEL_TEST_PROCESSORS'] ||
+      (File.executable?('/usr/bin/nproc') && `/usr/bin/nproc`) ||
+      Parallel.processor_count
+    count.to_i
   end
 
   def self.bundle_install(*args)

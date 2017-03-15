@@ -4,6 +4,8 @@ markdown <<MARKDOWN
 
 # Project Breakdown: Building an Image Scroller
 
+<img src="https://images.code.org/4db9acaf41436546676ea67fef5a2239-image-1487093024285.gif" style="width: 300px; float: right; margin-left:20px">
+
 At surface level, this project looks to be a simple upgrade to a game that students have already created. They will learn about how to add key events to their Image Scroller, and then will elaborate on the design of the app to add any unique features they would like. In doing so, they will practice the key skill of refactoring their code - and this should be the true focus of the project.  Most applications you use are not based on static pieces of code. Instead the software will be continuously updated both to correct errors and introduce new pieces of functionality. If later improvements are anticipated it is generally possible to develop programs in a way that easily incorporates new functionality. At other times it is necessary to make larger changes to the way a program operates in order to incorporate new features while maintaining existing functionality. Refactoring code in this way can be a tedious and challenging endeavor, but it helps ensure that the final product is consistent and easy to maintain. If software is not kept in a logical, consistent, and succinct form, then it will only get harder to keep introducing new features, increasing the likelihood of errors.  This project will hopefully be a learning experience for students: if the work of refactoring their code is tedious now, they will be more likely to consider the structure of their code in the future and apply best practices to reduce work for their future selves.
 
 ## Vocabulary:

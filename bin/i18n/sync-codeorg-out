@@ -14,9 +14,10 @@ def push_out_translated_files
   rename_from_crowdin_name_to_locale
   run_bash_script "bin/i18n-codeorg/out.sh"
   copy_untranslated_apps
-  cleanup_chinese_and_portuguese_codes
   rebuild_blockly_js_files
   check_for_mismatching_links_or_images
+  puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
+  run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
 end
 
 # Files downloaded from Crowdin are organized by language name,
@@ -40,39 +41,6 @@ def copy_untranslated_apps
         app_locale = prop[:locale_s].tr('-', '_').downcase!
         FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
       end
-    end
-  end
-end
-
-# Dashboard currently has a bug; it uses 2 letter language codes instead of 4 letter locales.
-# When two languages share the same language code, Dashboard doesn't know which language
-# to use so we've overrided the user's selected language to always show Simplified Chinese
-# (zh-CN) even if they've selected Traditional Chinese (zh-TW). Likewise for Brazilian
-# Portuguese (pt-BR) and Portugal Portuguese (pt-PT).
-# TODO (Tanya): Fix Dashboard to use 4 letter locales instead of 2 letter language codes
-# and remove this hacky override.
-def cleanup_chinese_and_portuguese_codes
-  dashboard_categories = %w(authored_hints callouts data devise dsls failure_message_overrides instructions markdown_instructions scripts slides unplugged)
-
-  locales_with_same_language = {
-    'zh' => ['zh-CN', 'zh-TW'],
-    'pt' => ['pt-BR', 'pt-PT']
-  }
-
-  locales_with_same_language.each do |language, locales|
-    # Fix codes in base file
-    file = "dashboard/config/locales/#{locales[0]}.yml"
-    File.write(file, File.read(file).gsub(/"#{locales[0]}":/, "\"#{language}\":"))
-    file = "dashboard/config/locales/#{locales[1]}.yml"
-    File.write(file, File.read(file).gsub(/"#{language}":/, "\"#{locales[1]}\":"))
-
-    # Fix codes in each dashboard locale file
-    dashboard_categories.each do |dashboard|
-      file = "dashboard/config/locales/#{dashboard}.#{locales[0]}.yml"
-      File.write(file, File.read(file).gsub(/"#{locales[0]}":/, "\"#{language}\":"))
-
-      file = "dashboard/config/locales/#{dashboard}.#{locales[1]}.yml"
-      File.write(file, File.read(file).gsub(/"#{language}":/, "\"#{locales[1]}\":"))
     end
   end
 end

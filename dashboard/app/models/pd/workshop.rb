@@ -374,9 +374,9 @@ class Pd::Workshop < ActiveRecord::Base
     [actual_hours, max_hours].compact.min
   end
 
-  # @return [ProfessionalLearningPartner] plp associated with the workshop organizer, if any.
-  def professional_learning_partner
-    ProfessionalLearningPartner.find_by_contact_id organizer.id
+  # @return [RegionalPartner] partner associated with the workshop organizer, if any.
+  def regional_partner
+    RegionalPartner.find_by_contact_id organizer.id
   end
 
   # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.

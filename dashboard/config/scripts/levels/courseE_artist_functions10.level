@@ -160,14 +160,14 @@
               <title name="TIMES">2</title>
               <statement name="DO">
                 <block type="procedures_callnoreturn">
-                  <mutation name="draw line of triangles"/>
+                  <mutation name="draw line of hexagons"/>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
                       <title name="VALUE">60</title>
                       <next>
                         <block type="procedures_callnoreturn">
-                          <mutation name="draw line of triangles"/>
+                          <mutation name="draw line of hexagons"/>
                           <next>
                             <block type="draw_turn_by_constant">
                               <title name="DIR">turnRight</title>
@@ -185,7 +185,7 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">draw triangle</title>
+          <title name="NAME">draw hexagon</title>
           <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">6</title>
@@ -206,13 +206,13 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">draw line of triangles</title>
+          <title name="NAME">draw line of hexagons</title>
           <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">8</title>
               <statement name="DO">
                 <block type="procedures_callnoreturn">
-                  <mutation name="draw triangle"/>
+                  <mutation name="draw hexagon"/>
                   <next>
                     <block type="jump_by_constant">
                       <title name="DIR">jumpForward</title>

@@ -84,9 +84,10 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Turning It Off\r\n\r\nWhen you start this app your lights are off, but as soon as choose a pattern, there's no way to turn the lights back off!\r\n\r\n# Do This\r\n\r\nAdd a \"Off\" button to your app and make it turn off all of the color LEDs.",
+    "markdown_instructions": "# Turning It Off\r\n\r\nWhen you start this app your lights are off, but as soon as choose a pattern, there's no way to turn the lights back off!\r\n\r\n# Do This\r\n\r\nCreate a function that turns all of the LEDs off, and then add a \"Off\" button to your app and make it turn off all of the color LEDs.",
     "project_template_level_name": "CSDU6 - L06 - Light Display Template",
     "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

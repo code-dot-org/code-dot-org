@@ -1,6 +1,5 @@
 require 'phantomjs'
 require 'cdo/tempfile'
-require 'cdo/hip_chat'
 require 'cdo/yaml'
 require 'shellwords'
 

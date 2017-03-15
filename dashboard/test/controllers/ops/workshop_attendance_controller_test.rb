@@ -6,12 +6,12 @@ module Ops
 
     setup do
       @admin = create :admin
-      sign_in @admin
 
       @attendance = create(:attendance)
       @cohort = @attendance.segment.workshop.cohorts.first
       @cohort_district = create :cohorts_district, cohort: @cohort
       @cohort = @cohort.reload
+      sign_in @admin
     end
 
     test 'District Contact can view attendance for all workshops in a cohort' do

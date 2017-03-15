@@ -52,7 +52,10 @@
       "CSD U3 Random FreeResponse"
     ],
     "encrypted_examples": "1bYEYYGa5AXccXMUxfNp6UE43u7zicO3cBEF/FI5krVvlhc0m3Z6AYfVHJGw\nkDHx\n",
-    "show_debug_watch": "false"
+    "show_debug_watch": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "true"
   },
   "published": true,
   "notes": "",

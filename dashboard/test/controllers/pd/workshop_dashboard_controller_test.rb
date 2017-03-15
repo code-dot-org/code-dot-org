@@ -35,7 +35,7 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
   test 'plps have plp permissions' do
     # PLPs are also organizers
     user = create(:workshop_organizer)
-    create :professional_learning_partner, contact: user
+    create :regional_partner, contact: user
 
     sign_in user
     get :index

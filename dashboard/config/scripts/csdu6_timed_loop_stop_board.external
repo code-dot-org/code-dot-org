@@ -3,7 +3,9 @@ display_name 'Check for Understanding'
 markdown <<MARKDOWN
 # Stop
 
-If you've made it this far, you're ready for your board! Show the teacher your solution to the previous level to get your board and then move along.
+If you've made it this far, you're _probably_ ready for your board!
+
+**Show the teacher your solution to the previous level** to get your board and then move along.
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

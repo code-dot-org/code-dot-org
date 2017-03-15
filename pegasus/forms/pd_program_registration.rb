@@ -7,7 +7,7 @@ class PdProgramRegistration
 
     result[:user_id_i] = required integer data[:user_id_i]
     result[:pd_teacher_application_id_i] = required integer data[:pd_teacher_application_id_i]
-    [:first_name_s, :last_name_s, :phone_number_s, :school_district_s, :selected_course_s, :accepted_workshop_s].each do |key|
+    [:first_name_s, :last_name_s, :phone_number_s, :selected_course_s, :accepted_workshop_s].each do |key|
       result[key] = required data[key]
     end
 

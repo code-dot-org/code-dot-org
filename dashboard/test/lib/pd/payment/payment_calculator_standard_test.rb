@@ -2,7 +2,9 @@ require 'test_helper'
 
 module Pd::Payment
   class PaymentCalculatorStandardTest < ActiveSupport::TestCase
-    setup do
+    self.use_transactional_test_case = true
+
+    setup_all do
       # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
       @workshop = create :pd_ended_workshop,
         workshop_type: Pd::Workshop::TYPE_PUBLIC,
@@ -52,7 +54,7 @@ module Pd::Payment
     end
 
     test 'large venue plp non-urban' do
-      plp = create :professional_learning_partner, contact: @workshop.organizer, urban: false
+      plp = create :regional_partner, contact: @workshop.organizer, urban: false
 
       # Add an extra qualified teacher to go over the large venue threshold.
       create :pd_workshop_participant, workshop: @workshop,
@@ -79,7 +81,7 @@ module Pd::Payment
     end
 
     test 'small venue plp urban' do
-      plp = create :professional_learning_partner, contact: @workshop.organizer, urban: true
+      plp = create :regional_partner, contact: @workshop.organizer, urban: true
 
       workshop_summary = PaymentCalculatorStandard.instance.calculate(@workshop)
 

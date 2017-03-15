@@ -1,4 +1,5 @@
 require_relative '../../deployment'
+require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/circle_utils'
 require 'cdo/git_utils'
@@ -47,7 +48,7 @@ namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   task :run_tests do
     if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
-      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     else
       RakeUtils.rake_stream_output 'test:changed'
@@ -57,7 +58,7 @@ namespace :circle do
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   task :run_ui_tests do
     if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
-      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
     end
 

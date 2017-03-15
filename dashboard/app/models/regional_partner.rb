@@ -2,12 +2,19 @@
 #
 # Table name: regional_partners
 #
-#  id    :integer          not null, primary key
-#  name  :string(255)      not null
-#  group :integer          not null
+#  id         :integer          not null, primary key
+#  name       :string(255)      not null
+#  group      :integer
+#  contact_id :integer
+#  urban      :boolean
+#
+# Indexes
+#
+#  index_regional_partners_on_name_and_contact_id  (name,contact_id) UNIQUE
 #
 
 class RegionalPartner < ActiveRecord::Base
+  belongs_to :contact, class_name: 'User'
   CSV_IMPORT_OPTIONS = { col_sep: "\t", headers: true }
 
   def self.find_or_create_all_from_tsv(filename)

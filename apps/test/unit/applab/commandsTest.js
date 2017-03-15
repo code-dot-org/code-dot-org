@@ -1,5 +1,6 @@
+import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
-import {rgb} from '@cdo/apps/applab/commands';
+import {rgb, timedLoop, stopTimedLoop} from '@cdo/apps/applab/commands';
 
 describe("rgb command", () => {
   it('returns an rgba string with no alpha', function () {
@@ -10,5 +11,30 @@ describe("rgb command", () => {
   it('returns an rgba string with alpha', function () {
     const alphaOpts = {r: 255, g: 0, b: 75, a: 0.5};
     expect(rgb(alphaOpts)).to.equal("rgba(255, 0, 75, 0.5)");
+  });
+});
+
+describe('timedLoop({ms, callback})', () => {
+  it('runs code on an interval', () => {
+    const clock = sinon.useFakeTimers();
+
+    const spy = sinon.spy();
+    timedLoop({ ms: 50, callback: spy });
+    expect(spy).not.to.have.been.called;
+
+    clock.tick(49);
+    expect(spy).not.to.have.been.called;
+
+    clock.tick(1);
+    expect(spy).to.have.been.calledOnce;
+
+    clock.tick(50);
+    expect(spy).to.have.been.calledTwice;
+
+    stopTimedLoop({});
+    clock.tick(50);
+    expect(spy).to.have.been.calledTwice;
+
+    clock.restore();
   });
 });

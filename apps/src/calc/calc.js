@@ -21,7 +21,7 @@ var Calc = module.exports;
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var jsnums = require('./js-numbers/js-numbers.js');
+var jsnums = require('@code-dot-org/js-numbers');
 var commonMsg = require('@cdo/locale');
 var calcMsg = require('./locale');
 var Provider = require('react-redux').Provider;
@@ -31,7 +31,7 @@ var dom = require('../dom');
 var blockUtils = require('../block_utils');
 var utils = require('../utils');
 var _ = require('lodash');
-var timeoutList = require('../timeoutList');
+import * as timeoutList from '../lib/util/timeoutList';
 
 var ExpressionNode = require('./expressionNode');
 var EquationSet = require('./equationSet');

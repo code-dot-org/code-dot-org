@@ -32,11 +32,11 @@ module Pd::Payment
       create :pd_workshop_participant, workshop: workshop_no_plp, enrolled: true, in_section: true, attended: true
 
       workshop_plp_urban = create :pd_ended_workshop
-      plp_urban = create :professional_learning_partner, contact: workshop_plp_urban.organizer, urban: true
+      plp_urban = create :regional_partner, contact: workshop_plp_urban.organizer, urban: true
       create :pd_workshop_participant, workshop: workshop_plp_urban, enrolled: true, in_section: true, attended: true
 
       workshop_plp_non_urban = create :pd_ended_workshop
-      plp_non_urban = create :professional_learning_partner, contact: workshop_plp_non_urban.organizer, urban: false
+      plp_non_urban = create :regional_partner, contact: workshop_plp_non_urban.organizer, urban: false
       create :pd_workshop_participant, workshop: workshop_plp_non_urban, enrolled: true, in_section: true, attended: true
 
       summary_no_plp = PaymentCalculatorBase.instance.calculate workshop_no_plp

@@ -38,7 +38,7 @@ The College Board has proposed a new AP® course called AP® Computer Science Pr
 {img: '/images/testimonials/fit-150/students-2.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
 <br />
-Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, and assessments that cover learning objectives from the [CS Principles Curriculum Framework](http://media.collegeboard.com/digitalServices/pdf/ap/comp-sci-principles-draft-cf-final.pdf). Course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
+Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, and assessments that cover learning objectives from the [CS Principles Curriculum Framework](https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-computer-science-principles-course-and-exam-description.pdf). Course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
 
 <br />
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)

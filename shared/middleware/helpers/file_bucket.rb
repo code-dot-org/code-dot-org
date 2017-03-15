@@ -9,8 +9,8 @@ class FileBucket < BucketHelper
   end
 
   def allowed_file_type?(extension)
-    # Allow all files types
-    true
+    # Allow all file types recognized by Sinatra
+    Sinatra::Base.mime_type(extension)
   end
 
   def copy_files(src_channel, dest_channel, options={})

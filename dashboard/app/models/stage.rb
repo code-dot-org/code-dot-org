@@ -43,7 +43,13 @@ class Stage < ActiveRecord::Base
   def unplugged?
     script_levels = script.script_levels.select{|sl| sl.stage_id == id}
     return false unless script_levels.first
-    script_levels.first.level.unplugged?
+    script_levels.first.oldest_active_level.unplugged?
+  end
+
+  def spelling_bee?
+    script_levels = script.script_levels.select{|sl| sl.stage_id == id}
+    return false unless script_levels.first
+    script_levels.first.oldest_active_level.spelling_bee?
   end
 
   def localized_title

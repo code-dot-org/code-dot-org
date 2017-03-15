@@ -8,16 +8,15 @@ import {
   digitalWrite,
   injectBoardController,
   onBoardEvent,
-  pinMode,
-  timedLoop
+  pinMode
 } from '@cdo/apps/lib/kits/maker/commands';
-import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
+import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 
 describe('maker commands', () => {
   let stubBoardController;
 
   beforeEach(() => {
-    stubBoardController = sinon.createStubInstance(BoardController);
+    stubBoardController = sinon.createStubInstance(CircuitPlaygroundBoard);
     injectBoardController(stubBoardController);
   });
 
@@ -97,39 +96,6 @@ describe('maker commands', () => {
       });
       expect(stubBoardController.onBoardEvent).to.have.been
         .calledWith(fakeComponent, eventName, fakeCallback);
-    });
-  });
-
-  describe('timedLoop(ms, callback)', () => {
-    it('runs code on an interval', () => {
-      const clock = sinon.useFakeTimers();
-
-      const spy = sinon.spy();
-      let stopLoop;
-      timedLoop({
-        ms: 50,
-        callback: exit => {
-          stopLoop = exit;
-          spy();
-        }
-      });
-
-      expect(spy).not.to.have.been.called;
-
-      clock.tick(49);
-      expect(spy).not.to.have.been.called;
-
-      clock.tick(1);
-      expect(spy).to.have.been.calledOnce;
-
-      clock.tick(50);
-      expect(spy).to.have.been.calledTwice;
-
-      stopLoop();
-      clock.tick(50);
-      expect(spy).to.have.been.calledTwice;
-
-      clock.restore();
     });
   });
 });
