@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {Table, Button, Modal} from 'react-bootstrap';
@@ -32,14 +31,7 @@ const UpcomingWorkshopsTable = React.createClass({
   },
 
   cancelEnrollment(event) {
-    $.ajax({
-      method: "GET",
-      url: `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`
-    }).done(() => {
-      window.location.reload(true);
-    }).fail(data => {
-      alert(`Could not cancel enrollment for enrollment code ${this.state.enrollmentCodeToCancel}`);
-    });
+    window.location = `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`;
   },
 
   dismissCancelModal(event) {
