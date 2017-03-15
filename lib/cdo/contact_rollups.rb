@@ -44,18 +44,28 @@ class ContactRollups
   COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'".freeze
 
   # Values of forms.kind field with form data we care about
-  FORM_KINDS_WITH_DATA =
-    %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013
-       Petition K5OnlineProfessionalDevelopmentPostSurvey).freeze
+  FORM_KINDS_WITH_DATA = %w(
+    BringToSchool2013
+    CSEdWeekEvent2013
+    DistrictPartnerSubmission
+    HelpUs2013
+    Petition
+    K5OnlineProfessionalDevelopmentPostSurvey
+  ).freeze
 
   # Kinds of forms that indicate this contact is a teacher
-  FORM_KINDS_TEACHER = "'BringToSchool2013','ClassSubmission',
-    'DistrictPartnerSubmission', 'PLP interest form','Teacher interest form',
-    'School interest form','HelpUs2013',
-    'K5OnlineProfessionalDevelopmentPostSurvey',
-    'K5ProfessionalDevelopmentSurvey',
-    'ProfessionalDevelopmentWorkshop','ProfessionalDevelopmentWorkshopSignup',
-    'StudentNomination','TeacherNomination'"
+  FORM_KINDS_TEACHER = %w(
+    BringToSchool2013
+    ClassSubmission
+    DistrictPartnerSubmission
+    HelpUs2013
+    K5OnlineProfessionalDevelopmentPostSurvey
+    K5ProfessionalDevelopmentSurvey
+    ProfessionalDevelopmentWorkshop
+    ProfessionalDevelopmentWorkshopSignup
+    StudentNomination
+    TeacherNomination
+  ).map{|s| "'#{s}'"}.join(',').freeze
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
@@ -83,7 +93,6 @@ class ContactRollups
     insert_from_pegasus_forms
     insert_from_dashboard_contacts
     insert_from_dashboard_pd_enrollments
-    update_teachers_from_forms
     update_unsubscribe_info
     update_roles
     update_grades_taught
@@ -103,6 +112,9 @@ class ContactRollups
     FORM_KINDS_WITH_DATA.each do |kind|
       update_data_from_forms(kind)
     end
+
+    # Add contacts to the Teacher role based on form responses
+    update_teachers_from_forms
 
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
