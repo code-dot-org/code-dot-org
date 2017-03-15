@@ -9,6 +9,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Spinner from '../components/spinner';
 
 const WorkshopTableLoader = React.createClass({
@@ -29,6 +30,13 @@ const WorkshopTableLoader = React.createClass({
 
   componentDidMount() {
     this.load();
+  },
+
+  componentDidUpdate() {
+    if (this.childElement) {
+      // Save child element rendered height, to preserve during reload for a smoother transition.
+      this.childHeight = ReactDOM.findDOMNode(this.childElement).offsetHeight;
+    }
   },
 
   load(props = this.props) {
@@ -81,7 +89,12 @@ const WorkshopTableLoader = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return (
+        // While reloading, preserve the height of the previous child component so the refresh is smoother.
+        <div style={{height: this.childHeight}}>
+          <Spinner/>
+        </div>
+      );
     }
 
     if (!this.state.workshops.length && !this.state.workshops.total_count) {
@@ -95,7 +108,8 @@ const WorkshopTableLoader = React.createClass({
     return (
       React.cloneElement(this.props.children, {
         workshops: this.state.workshops,
-        onDelete: this.props.canDelete ? this.handleDelete : null
+        onDelete: this.props.canDelete ? this.handleDelete : null,
+        ref: ref => {this.childElement = ref;}
       })
     );
   }

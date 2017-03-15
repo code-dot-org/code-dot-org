@@ -1,5 +1,5 @@
 /**
- * Table displaying workshop summaries based on a supplied query.
+ * Table displaying workshop summaries based on a supplied workshop query result.
  */
 
 import _, {orderBy} from 'lodash';
@@ -27,6 +27,7 @@ const WorkshopTable = React.createClass({
     showStatus: React.PropTypes.bool,
     tableId: React.PropTypes.string,
     moreUrl: React.PropTypes.string,
+    onWorkshopsReceived: React.PropTypes.func,
     generateCaption: React.PropTypes.func,
     onSort: React.PropTypes.func
   },
@@ -37,11 +38,24 @@ const WorkshopTable = React.createClass({
 
   getDefaultProps() {
     return {
-      canEdit: false,
+      workshops: undefined,
       onDelete: null,
       showSignupUrl: false,
-      showOrganizer: false
+      showOrganizer: false,
+      showStatus: false
     };
+  },
+
+  componentWillMount() {
+    if (this.props.onWorkshopsReceived) {
+      this.props.onWorkshopsReceived(this.props.workshops);
+    }
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (!_.isEqual(this.props.workshops, nextProps.workshops) && this.props.onWorkshopsReceived) {
+      this.props.onWorkshopsReceived(nextProps.workshops);
+    }
   },
 
   getInitialState() {
@@ -271,7 +285,7 @@ const WorkshopTable = React.createClass({
         className="table table-striped table-condensed"
         columns={this.columns}
       >
-        {this.props.generateCaption && <caption>{this.props.generateCaption(this.props.workshops)}</caption>}
+        {this.props.generateCaption && <caption>{this.props.generateCaption()}</caption>}
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id"/>
         {

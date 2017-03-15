@@ -7,8 +7,7 @@ import $ from "jquery";
 import _ from "lodash";
 import Select from "react-select";
 import "react-select/dist/react-select.css";
-import WorkshopTable from "./components/workshop_table";
-import WorkshopTableLoader from "./components/workshop_table_loader";
+import ServerSortWorkshopTable from "./components/server_sort_workshop_table";
 import DatePicker from "./components/date_picker";
 import {DATE_FORMAT} from "./workshopConstants";
 import moment from "moment";
@@ -68,8 +67,7 @@ const WorkshopFilter = React.createClass({
     return {
       organizersLoading: true,
       organizers: undefined,
-      limit: limitOptions[0],
-      orderBy: undefined
+      limit: limitOptions[0]
     };
   },
 
@@ -140,21 +138,12 @@ const WorkshopFilter = React.createClass({
     this.setState({limit});
   },
 
-  handleTableSort(sort) {
-    // As an optimization, only re-query with an oderBy when fewer than all workshops are loaded.
-    // In the case where all workshops are loaded, they can be sorted in the client.
-    if (this.state.limit.value && this.workshopCount > this.state.limit.value) {
-      this.setState({orderBy: `${sort.property} ${sort.direction}`});
-    }
-  },
-
   handleDownloadCSVClick() {
     const downloadUrl=`${QUERY_API_URL}.csv?${$.param(this.getFiltersFromUrlParams())}`;
     window.open(downloadUrl);
   },
 
-  generateTableCaption(workshops) {
-    this.workshopCount = workshops.total_count;
+  generateCaptionFromWorkshops(workshops) {
     return (
       <div>
         {"Show "}
@@ -247,11 +236,10 @@ const WorkshopFilter = React.createClass({
   },
 
   render() {
-    // limit and orderBy are intentionally stored in state and not reflected in the URL
+    // limit is intentionally stored in state and not reflected in the URL
     const filters = {
       ...this.getFiltersFromUrlParams(),
-      limit: this.state.limit.value,
-      order_by: this.state.orderBy
+      limit: this.state.limit.value
     };
 
     const permission = window.dashboard.workshop.permission;
@@ -348,18 +336,14 @@ const WorkshopFilter = React.createClass({
           }
         </Row>
         <Row>
-          <WorkshopTableLoader
+          <ServerSortWorkshopTable
             queryUrl={QUERY_API_URL}
             params={filters}
             canDelete
-          >
-            <WorkshopTable
-              showStatus
-              showOrganizer={isAdmin}
-              generateCaption={this.generateTableCaption}
-              onSort={this.handleTableSort}
-            />
-          </WorkshopTableLoader>
+            showStatus
+            showOrganizer={isAdmin}
+            generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
+          />
         </Row>
       </Grid>
     );
