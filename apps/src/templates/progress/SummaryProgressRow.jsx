@@ -120,8 +120,8 @@ const SummaryProgressRow = React.createClass({
               <ReactTooltip
                 id={lessonTitle}
                 role="tooltip"
-                delayShow={500}
                 wrapper="span"
+                effect="solid"
               >
                 {lesson.name}
               </ReactTooltip>

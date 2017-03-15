@@ -73,7 +73,7 @@ const ProgressBubble = React.createClass({
         <ReactTooltip
           id={url}
           role="tooltip"
-          delayShow={500}
+          effect="solid"
         >
           <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
           {levelName}

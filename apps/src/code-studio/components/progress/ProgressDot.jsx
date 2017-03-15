@@ -280,8 +280,8 @@ export const ProgressDot = Radium(React.createClass({
             <ReactTooltip
               id={tooltipId}
               role="tooltip"
-              delayShow={500}
               wrapper="span"
+              effect="solid"
             >
               {this.tooltipContent()}
             </ReactTooltip>
