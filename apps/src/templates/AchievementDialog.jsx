@@ -25,10 +25,10 @@ const styles = {
   pointRows: {
     position: 'absolute',
     top: 50,
-    right: 120,
-    left: 120,
+    right: 90,
+    left: 90,
     height: 230,
-    padding: '50px 30px 20px 140px',
+    padding: '50px 30px 20px 221px',
     boxSizing: 'border-box',
     background: '#fff',
     borderRadius: 8,
@@ -54,9 +54,34 @@ const styles = {
     }
   },
   bannerAchievement: {
-    row: {
-      fontSize: 16,
-      marginBottom: 25,
+    badge: {
+      width: 175,
+      height: 175,
+      position: 'absolute',
+      backgroundRepeat: 'no-repeat',
+      top: 23,
+      left: 114,
+    },
+    banner: {
+      backgroundColor: '#392E52',
+      boxShadow: '0 2px 6px 0 rgba(0,0,0,0.29)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPositionX: 9,
+      backgroundPositionY: 7,
+      borderRadius: 3,
+      position: 'absolute',
+      top: 212,
+      left: 48,
+      width: 603,
+      height: 83,
+    },
+    bannerText: {
+      fontFamily: '"Gotham 5r", sans-serif',
+      fontSize: 30,
+      color: 'white',
+      letterSpacing: 4.55,
+      marginTop: 33,
+      textAlign: 'center',
     },
     point: {
       background: '#8676AB',
@@ -65,8 +90,12 @@ const styles = {
       fontFamily: '"Gotham 7r", sans-serif',
       padding: '3px 10px',
     },
+    row: {
+      fontSize: 16,
+      marginBottom: 25,
+    },
     text: {
-      fontFamily: '"Gotham 5r", sans-serif',
+      fontFamily: '"Gotham 7r", sans-serif',
       color: '#544A6D',
       fontSize: 16,
       marginLeft: 10,
@@ -201,6 +230,11 @@ const AchievementDialog = Radium(React.createClass({
       numBlocks: this.props.idealBlocks,
     };
     const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+    const numPoints = 1 +
+      (showNumBlocksRow && !tooManyBlocks ? 1 : 0) +
+      !tooManyBlocks ? 1 : 0;
+    const badgeUrl = `url(${this.props.assetUrl(`media/dialog/badges/${numPoints}-points.png`)})`;
+    const dotsUrl = `url(${this.props.assetUrl('media/dialog/dots.png')})`;
 
     return (
       <BaseDialog
@@ -238,6 +272,14 @@ const AchievementDialog = Radium(React.createClass({
                       this.hintsMessage(tooManyHints),
                       interpolatingStyles[showNumBlocksRow ? 3 : 2])}
                 </div>
+                {this.props.bannerMode &&
+                  <div
+                    style={{
+                      ...styles.bannerAchievement.badge,
+                      backgroundImage: badgeUrl,
+                    }}
+                  />
+                }
                 {this.props.showStageProgress &&
                   <StageProgressBar
                     stageProgress={
@@ -248,6 +290,18 @@ const AchievementDialog = Radium(React.createClass({
                           this.props.newHintUsageProgress)
                     }
                   />
+                }
+                {this.props.bannerMode &&
+                  <div
+                    style={{
+                      ...styles.bannerAchievement.banner,
+                      backgroundImage: dotsUrl,
+                    }}
+                  >
+                    <div style={styles.bannerAchievement.bannerText}>
+                      AWARD BONUS
+                    </div>
+                  </div>
                 }
               </div>);
             }
