@@ -242,7 +242,6 @@ export const ProgressDot = Radium(React.createClass({
           id={level.title}
           role="tooltip"
           wrapper="span"
-          effect="solid"
         >
           {this.tooltipContent()}
         </ReactTooltip>
@@ -280,7 +279,7 @@ export const ProgressDot = Radium(React.createClass({
          ]}
       >
         {(iconClassFromIconType[level.icon] && !isPeerReview) ?
-          <span data-tip data-for={level.title} aria-describedby={level.title}>
+          <span data-tip data-for={level.title} aria-describedby={level.title} style={{borderColor: "#ff0000", borderWidth: 2}}>
             <i
               className={this.iconClassName()}
               style={[
@@ -293,7 +292,7 @@ export const ProgressDot = Radium(React.createClass({
                 outlineCurrent && {textShadow: createOutline(color.level_current)}
               ]}
             />
-          {this.renderTooltip()}
+            {this.renderTooltip()}
           </span> :
 
           <div
