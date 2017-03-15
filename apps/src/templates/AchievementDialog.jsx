@@ -232,7 +232,7 @@ const AchievementDialog = Radium(React.createClass({
     const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
     const numPoints = 1 +
       (showNumBlocksRow && !tooManyBlocks ? 1 : 0) +
-      !tooManyBlocks ? 1 : 0;
+      (!tooManyHints ? 1 : 0);
     const badgeUrl = `url(${this.props.assetUrl(`media/dialog/badges/${numPoints}-points.png`)})`;
     const dotsUrl = `url(${this.props.assetUrl('media/dialog/dots.png')})`;
 
