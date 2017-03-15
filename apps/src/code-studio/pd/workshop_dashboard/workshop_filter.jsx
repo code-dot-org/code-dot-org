@@ -91,6 +91,7 @@ const WorkshopFilter = React.createClass({
     })
     .fail((data) => {
       if (data.statusText !== "abort") {
+        console.log(`Failed to load available workshop organizers: ${data.statusText}`);
         alert("We're sorry, we were unable to load available workshop organizers. Please refresh this page to try again");
       }
     });

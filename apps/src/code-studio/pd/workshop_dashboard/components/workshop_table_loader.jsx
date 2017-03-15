@@ -15,10 +15,10 @@ import Spinner from '../components/spinner';
 const WorkshopTableLoader = React.createClass({
   propTypes: {
     queryUrl: React.PropTypes.string.isRequired,
+    queryParams: React.PropTypes.object,
     canDelete: React.PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
     children: React.PropTypes.element.isRequired, // Require exactly 1 child component.
-    hideNoWorkshopsMessage: React.PropTypes.bool, // Should we show "no workshops found" if no workshops are found?
-    params: React.PropTypes.object
+    hideNoWorkshopsMessage: React.PropTypes.bool // Should we show "no workshops found" if no workshops are found?
   },
 
   getInitialState() {
@@ -41,8 +41,8 @@ const WorkshopTableLoader = React.createClass({
 
   load(props = this.props) {
     this.setState({loading: true});
-    const effectiveParams = _.omitBy(props.params, value => value === null || value === undefined);
-    const url = props.params ? `${props.queryUrl}?${$.param(effectiveParams)}` : props.queryUrl;
+    const effectiveParams = _.omitBy(props.queryParams, value => value === null || value === undefined);
+    const url = props.queryParams ? `${props.queryUrl}?${$.param(effectiveParams)}` : props.queryUrl;
 
     this.loadRequest = $.ajax({
       method: 'GET',
