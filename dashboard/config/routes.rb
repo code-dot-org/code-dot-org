@@ -352,6 +352,7 @@ Dashboard::Application.routes.draw do
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
