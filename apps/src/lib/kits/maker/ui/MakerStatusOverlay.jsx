@@ -1,11 +1,11 @@
 /** @file Maker connection status visualization overlay */
 import React, {Component, PropTypes} from 'react';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {isConnecting, hasConnectionError} from '../redux';
 import {singleton as studioApp} from '../../../../StudioApp';
+import OverlayButton from './OverlayButton';
 
 /**
  * Overlay for the play space that displays maker status updates
@@ -13,28 +13,19 @@ import {singleton as studioApp} from '../../../../StudioApp';
  */
 class MakerStatusOverlay extends Component {
   render() {
-    let CurrentOverlay;
-    if (this.props.isConnecting) {
-      CurrentOverlay = WaitingToConnect;
-    } else if (this.props.hasConnectionError) {
-      CurrentOverlay = BoardNotFound;
+    const {width, height, isConnecting, hasConnectionError} = this.props;
+    const dimensions = {width, height};
+    if (isConnecting) {
+      return <WaitingToConnect {...dimensions}/>;
+    } else if (hasConnectionError) {
+      return <BoardNotFound {...dimensions}/>;
     }
-
-    if (!CurrentOverlay) {
-      return null;
-    }
-
-    return (
-      <CurrentOverlay
-        width={this.props.vizWidth}
-        height={this.props.vizHeight}
-      />
-    );
+    return null;
   }
 }
 MakerStatusOverlay.propTypes = {
-  vizWidth: PropTypes.number.isRequired,
-  vizHeight: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
   isConnecting: PropTypes.bool.isRequired,
   hasConnectionError: PropTypes.bool.isRequired,
 };
@@ -45,93 +36,80 @@ export default connect(
   })
 )(MakerStatusOverlay);
 
-class WaitingToConnect extends Component {
-  render() {
-    return (
-      <Overlay
-        width={this.props.width}
-        height={this.props.height}
-        icon="cog"
-        iconModifiers="fa-spin"
-        text="Waiting for board to connect..."
-        backgroundColor={color.light_gray}
-      />
-    );
-  }
-}
-WaitingToConnect.propTypes = {
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
-};
-
-class BoardNotFound extends Component {
-  render() {
-    return (
-      <Overlay
-        width={this.props.width}
-        height={this.props.height}
-        icon="exclamation-triangle"
-        text="Make sure your board is plugged in."
-        backgroundColor={color.red}
-        onClick={() => {
-          studioApp.resetButtonClick();
-          studioApp.runButtonClick();
-        }}
-        buttonText="Try Again"
-      />
-    );
-  }
-}
-BoardNotFound.propTypes = {
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+const style = {
+  root: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: 4,
+    overflow: 'hidden',
+    outline: 'none',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    color: color.white,
+  },
+  padding: {
+    flex: '1 0 0',
+  },
+  content: {
+    flex: '0 0 0',
+    padding: '2em',
+    textAlign: 'center',
+  },
+  icon: {
+    display: 'block',
+  },
+  text: {
+    margin: '1em',
+  },
 };
 
 class Overlay extends Component {
+  icon() {
+    const classNames = [this.props.iconModifiers || '', "fa-3x"].join(' ');
+    return (
+      <FontAwesome
+        icon={this.props.icon}
+        className={classNames}
+        style={style.icon}
+      />
+    );
+  }
+
+  text() {
+    return (
+      <div style={style.text}>
+        {this.props.text}
+      </div>
+    );
+  }
+
+  button() {
+    return (
+      <OverlayButton
+        text={this.props.buttonText}
+        onClick={this.props.onClick}
+      />
+    );
+  }
+
   render() {
-    const style = {
-      position: 'absolute',
-      top: 0,
-      left: 0,
+    const rootStyle = {
+      ...style.root,
       width: this.props.width,
       height: this.props.height,
-      zIndex: 4,
-      overflow: 'hidden',
-      outline: 'none',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
       backgroundColor: this.props.backgroundColor,
-      color: color.white,
-    };
-    const padStyle = {
-      flex: '1 0 0',
-    };
-    const bodyStyle = {
-      flex: '0 0 0',
-      padding: '2em',
-      textAlign: 'center',
     };
     return (
-      <div style={style}>
-        <div style={padStyle}></div>
-        <div style={bodyStyle}>
-          <FontAwesome
-            icon={this.props.icon}
-            className={[this.props.iconModifiers || '', "fa-3x"].join(' ')}
-            style={{display: 'block'}}
-          />
-          <div style={{margin: '1em'}}>
-            {this.props.text}
-          </div>
-          {this.props.buttonText &&
-            <OverlayButton
-              text={this.props.buttonText}
-              onClick={this.props.onClick}
-            />
-          }
+      <div style={rootStyle}>
+        <div style={style.padding}/>
+        <div style={style.content}>
+          {this.icon()}
+          {this.text()}
+          {this.props.buttonText && this.button()}
         </div>
-        <div style={padStyle}></div>
+        <div style={style.padding}/>
       </div>
     );
   }
@@ -147,42 +125,41 @@ Overlay.propTypes = {
   buttonText: PropTypes.string,
 };
 
-
-class OverlayButton_ extends Component {
+class WaitingToConnect extends Component {
   render() {
-    const style = {
-      fontSize: 12,
-      fontFamily: '"Gotham 4r", sans-serif',
-      fontWeight: 'bold',
-      borderStyle: 'solid',
-      borderWidth: 1,
-      borderRadius: 3,
-      textDecoration: 'none',
-      color: color.white,
-      borderColor: color.white,
-      backgroundColor: 'transparent',
-      outline: 'none',
-      ':hover': {
-        color: color.black,
-        backgroundColor: color.white,
-        cursor: 'pointer',
-        boxShadow: 'none',
-      },
-      height: 40,
-      paddingLeft: 30,
-      paddingRight: 30,
-      boxSizing: 'border-box',
-      overflow: 'hidden'
-    };
     return (
-      <button style={style} onClick={this.props.onClick}>
-        {this.props.text}
-      </button>
+        <Overlay
+            width={this.props.width}
+            height={this.props.height}
+            icon="cog"
+            iconModifiers="fa-spin"
+            text="Waiting for board to connect..."
+            backgroundColor={color.light_gray}
+        />
     );
   }
 }
-OverlayButton_.propTypes = {
-  text: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+WaitingToConnect.propTypes = {
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
 };
-const OverlayButton = Radium(OverlayButton_);
+
+class BoardNotFound extends Component {
+  render() {
+    return (
+        <Overlay
+            width={this.props.width}
+            height={this.props.height}
+            icon="exclamation-triangle"
+            text="Make sure your board is plugged in."
+            backgroundColor={color.red}
+            onClick={() => {
+              studioApp.resetButtonClick();
+              studioApp.runButtonClick();
+            }}
+            buttonText="Try Again"
+        />
+    );
+  }
+}
+BoardNotFound.propTypes = WaitingToConnect.propTypes;
