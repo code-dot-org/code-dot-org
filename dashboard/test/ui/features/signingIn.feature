@@ -9,6 +9,8 @@ Scenario:
   And I set the language cookie
   And I create a student named "Bob"
   And I sign out
+  Given I am on "http://code.org/"
+  And I reload the page
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
@@ -27,6 +29,8 @@ Scenario:
   And I set the language cookie
   And I create a student named "Alice"
   And I sign out
+  Given I am on "http://studio.code.org/"
+  And I reload the page
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
@@ -45,6 +49,8 @@ Scenario:
   And I set the language cookie
   And I create a teacher named "Casey"
   And I sign out
+  Given I am on "http://code.org/"
+  And I reload the page
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
