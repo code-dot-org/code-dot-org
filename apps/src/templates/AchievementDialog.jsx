@@ -28,7 +28,7 @@ const styles = {
     right: 90,
     left: 90,
     height: 230,
-    padding: '50px 30px 20px 221px',
+    padding: '32px 30px 20px 221px',
     boxSizing: 'border-box',
     background: '#fff',
     borderRadius: 8,
