@@ -64,6 +64,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render_404
     else
       @cancel_url = url_for action: :cancel, code: @enrollment.code
+      @workshop = @enrollment.workshop
     end
   end
 
