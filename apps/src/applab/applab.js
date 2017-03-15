@@ -63,9 +63,6 @@ import * as makerCommands from '../lib/kits/maker/commands';
 import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
 import {
   enable as enableMaker,
-  startConnecting as startConnectingMaker,
-  reportConnected as reportMakerConnected,
-  reportConnectionError as reportMakerConnectionError,
   disconnect as disconnectMaker,
   isEnabled as isMakerEnabled
 } from '../lib/kits/maker/redux';
@@ -1202,17 +1199,15 @@ Applab.execute = function () {
   }
 
   if (isMakerEnabled(getStore().getState())) {
-    getStore().dispatch(startConnectingMaker());
     connectToMakerBoard()
         .then(board => {
           board.installOnInterpreter(codegen, Applab.JSInterpreter);
           makerCommands.injectBoardController(board);
           board.once('disconnect', () => studioApp.resetButtonClick());
           makerBoard = board;
-          getStore().dispatch(reportMakerConnected());
         })
         .then(Applab.beginVisualizationRun)
-        .catch(error => getStore().dispatch(reportMakerConnectionError()));
+        .catch(error => console.log(error));
   } else {
     Applab.beginVisualizationRun();
   }
