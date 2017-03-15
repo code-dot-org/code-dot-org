@@ -11,7 +11,7 @@ import OverlayButton from './OverlayButton';
  * Overlay for the play space that displays maker status updates
  * when there are connection issues.
  */
-class MakerStatusOverlay extends Component {
+export class UnconnectedMakerStatusOverlay extends Component {
   render() {
     const {width, height, isConnecting, hasConnectionError} = this.props;
     const dimensions = {width, height};
@@ -23,7 +23,7 @@ class MakerStatusOverlay extends Component {
     return null;
   }
 }
-MakerStatusOverlay.propTypes = {
+UnconnectedMakerStatusOverlay.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   isConnecting: PropTypes.bool.isRequired,
@@ -34,7 +34,7 @@ export default connect(
     isConnecting: isConnecting(state),
     hasConnectionError: hasConnectionError(state),
   })
-)(MakerStatusOverlay);
+)(UnconnectedMakerStatusOverlay);
 
 const style = {
   root: {
@@ -129,12 +129,12 @@ class WaitingToConnect extends Component {
   render() {
     return (
         <Overlay
-            width={this.props.width}
-            height={this.props.height}
-            icon="cog"
-            iconModifiers="fa-spin"
-            text="Waiting for board to connect..."
-            backgroundColor={color.light_gray}
+          width={this.props.width}
+          height={this.props.height}
+          icon="cog"
+          iconModifiers="fa-spin"
+          text="Waiting for board to connect..."
+          backgroundColor={color.light_gray}
         />
     );
   }
@@ -148,16 +148,16 @@ class BoardNotFound extends Component {
   render() {
     return (
         <Overlay
-            width={this.props.width}
-            height={this.props.height}
-            icon="exclamation-triangle"
-            text="Make sure your board is plugged in."
-            backgroundColor={color.red}
-            onClick={() => {
+          width={this.props.width}
+          height={this.props.height}
+          icon="exclamation-triangle"
+          text="Make sure your board is plugged in."
+          backgroundColor={color.red}
+          onClick={() => {
               studioApp.resetButtonClick();
               studioApp.runButtonClick();
             }}
-            buttonText="Try Again"
+          buttonText="Try Again"
         />
     );
   }
