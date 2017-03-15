@@ -16,6 +16,7 @@ const queryString = require('query-string');
 const experiments = module.exports;
 const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
+const EXPERIMENT_LIFESPAN = 12;
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
@@ -50,7 +51,7 @@ experiments.setEnabled = function (key, shouldEnable) {
     allEnabled.findIndex(experiment => experiment.key === key);
   if (shouldEnable) {
     const expirationDate = new Date();
-    expirationDate.setHours(expirationDate.getHours() + 12);
+    expirationDate.setHours(expirationDate.getHours() + EXPERIMENT_LIFESPAN);
     const expiration = expirationDate.getTime();
     if (experimentIndex < 0) {
       allEnabled.push({ key, expiration });
