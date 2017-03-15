@@ -975,8 +975,8 @@ end
 
 When(/^I sign out$/) do
   steps %Q{
-    And I click selector ".user_menu" once I see it
-    And I click selector ".user_menu a:last" to load a new page
+    And I am on "http://studio.code.org/users/sign_out"
+    And I wait until current URL contains "http://code.org/"
   }
 end
 
