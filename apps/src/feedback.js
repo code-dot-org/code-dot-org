@@ -238,9 +238,16 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         (isFinite(idealBlocks) && actualBlocks <= idealBlocks ? 1 : 0) +
         (hintsUsed < 2 ? 1 : 0);
 
-      totalPoints = parseInt(localStorage.getItem(POINTS_KEY) || '0');
-      totalPoints += newPoints;
-      trySetLocalStorage(POINTS_KEY, totalPoints);
+      let pointsData = JSON.parse(localStorage.getItem(POINTS_KEY) || '{}');
+      if (typeof pointsData !== 'object') {
+        pointsData = {};
+      }
+      pointsData[window.appOptions.serverLevelId] = newPoints;
+      trySetLocalStorage(POINTS_KEY, JSON.stringify(pointsData));
+
+      for (let id in pointsData) {
+        totalPoints += pointsData[id];
+      }
     }
 
     document.body.appendChild(container);
