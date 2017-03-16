@@ -299,7 +299,7 @@ const AchievementDialog = Radium(React.createClass({
                     }}
                   >
                     <div style={styles.bannerAchievement.badgePoints}>{numPoints}</div>
-                    <div style={styles.bannerAchievement.badgePointsLabel}>{locale.pointsAllCaps()}</div>
+                    <div style={styles.bannerAchievement.badgePointsLabel}>{locale.pointsAllCaps({numPoints})}</div>
                   </div>
                 }
                 {this.props.showStageProgress &&
