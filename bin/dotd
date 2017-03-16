@@ -250,7 +250,7 @@ def do_dtt_subroutine
       end
 
       should_i 'update test room status with green commit and timestamp' do
-        InfraTestTopic.set_green_commit pr_number
+        InfraTestTopic.set_green_commit new_sha_abbr
       end
     end
   end
