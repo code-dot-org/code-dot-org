@@ -1,9 +1,9 @@
 module PagerDuty
-  PAGERDUTY_TOKEN = CDO.pagerduty_token
+  PAGERDUTY_TOKEN = CDO.pagerduty_token.freeze
 
   POLICIES = [
     LIVE_SITE = 'Live Site Issues'.freeze
-  ]
+  ].freeze
 
   # @param escalation_policy_name [String] The name of the escalation policy.
   # @raise [ArgumentError] If the escalation policy cannot be found.

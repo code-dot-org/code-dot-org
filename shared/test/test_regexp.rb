@@ -2,18 +2,18 @@ require_relative 'test_helper'
 
 require 'cdo/regexp'
 class RegexpUtilsTest < Minitest::Test
-  EXPECTED_DIGITS = '1234567890'
+  EXPECTED_DIGITS = '1234567890'.freeze
   VALID_US_PHONE_NUMBERS = %w[
     123-456-7890
     (123)-456-7890
     (123)456-7890
     1234567890
-  ]
+  ].freeze
   INVALID_US_PHONE_NUMBERS = [
     ' 1234567890',
     '1234567890 ',
     'abc'
-  ]
+  ].freeze
 
   def test_valid_us_phone_numbers
     VALID_US_PHONE_NUMBERS.each do |number|
