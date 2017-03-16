@@ -152,7 +152,6 @@ module Pd::Payment
       # Generate a teacher summary for all teachers in raw attendance.
       raw_teacher_attendance.map do |enrollment_id, raw_attendance|
         enrollment = enrollments_by_id[enrollment_id]
-        raise "Unable to find enrollment #{enrollment_id}" unless enrollment
         teacher = enrollment.user_id ? User.with_deleted.find(enrollment.user_id) : nil
 
         days, hours = calculate_adjusted_teacher_attendance raw_attendance, workshop_summary.min_attendance_days,
