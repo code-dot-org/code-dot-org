@@ -10,7 +10,6 @@ import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
-import codegen from '../codegen';
 import AppLabView from './AppLabView';
 import dom from '../dom';
 import * as utils from '../utils';
@@ -58,14 +57,8 @@ import {
   actions as jsDebugger,
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import connectToMakerBoard from '../lib/kits/maker/connectToMakerBoard';
-import * as makerCommands from '../lib/kits/maker/commands';
 import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
-import {
-  enable as enableMaker,
-  disconnect as disconnectMaker,
-  isEnabled as isMakerEnabled
-} from '../lib/kits/maker/redux';
+import * as makerToolkit from '../lib/kits/maker/toolkit';
 var project = require('@cdo/apps/code-studio/initApp/project');
 
 var ResultType = studioApp.ResultType;
@@ -82,14 +75,6 @@ export default Applab;
  * @type {JsInterpreterLogger} observes the interpreter and logs to console
  */
 var jsInterpreterLogger = null;
-
-/**
- * Maker Toolkit Board Controller for a currently-connected board, simulator,
- * or stub implementation.
- * In Maker Toolkit levels, should be initialized on run and cleared on reset.
- * @private {CircuitPlaygroundBoard}
- */
-let makerBoard = null;
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -801,7 +786,7 @@ Applab.init = function (config) {
   });
 
   if (config.level.makerlabEnabled) {
-    getStore().dispatch(enableMaker());
+    makerToolkit.enable();
   }
 
   getStore().dispatch(actions.changeInterfaceMode(
@@ -1013,11 +998,7 @@ Applab.reset = function () {
     designMode.resetPropertyTab();
   }
 
-  getStore().dispatch(disconnectMaker());
-  if (makerBoard) {
-    makerBoard.destroy();
-    makerBoard = null;
-  }
+  makerToolkit.reset();
 
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
@@ -1198,19 +1179,12 @@ Applab.execute = function () {
     }
   }
 
-  if (isMakerEnabled(getStore().getState())) {
-    connectToMakerBoard()
-        .then(board => {
-          board.installOnInterpreter(codegen, Applab.JSInterpreter);
-          makerCommands.injectBoardController(board);
-          board.once('disconnect', () => studioApp.resetButtonClick());
-          makerBoard = board;
-        })
+    makerToolkit.connect({
+      interpreter: Applab.JSInterpreter,
+      onDisconnect: () => studioApp.resetButtonClick(),
+    })
         .then(Applab.beginVisualizationRun)
         .catch(error => console.log(error));
-  } else {
-    Applab.beginVisualizationRun();
-  }
 };
 
 Applab.beginVisualizationRun = function () {
