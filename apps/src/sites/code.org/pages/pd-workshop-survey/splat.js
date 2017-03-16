@@ -1,3 +1,8 @@
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import VariableFormGroup from '@cdo/apps/code-studio/pd/workshop_survey/VariableFormGroup';
+
 $(document).ready(function () {
   $('#pd-workshop-survey-form').find("select").selectize({
     plugins: ['fast_click']
@@ -56,6 +61,11 @@ $(document).ready(function () {
   });
 
   $(".agree-scale").tooltip();
+
+  ReactDOM.render(
+    <VariableFormGroup {...window.pdWorkshopSurvey.facilitatorSpecificQuestions} />,
+    $("#facilitator-specific-questions").get(0)
+  );
 });
 
 function processResponse() {
@@ -81,9 +91,9 @@ function processError(data) {
   var errors_count = error_field_names.length;
 
   for (var i = 0; i < errors_count; ++i) {
-    var error_field_name = error_field_names[i].replace(/_ss$/,'_ss[]');
+    var error_field_name = error_field_names[i].replace(/_ss$/, '_ss[]');
     var query = ".control-label[for='" + error_field_name + "']";
-    $(query).parents('.form-group').addClass('has-error');
+    $(query).parents('.form-group').first().addClass('has-error');
   }
 
   $('#error-message').text('An error occurred. Please check to make sure all required fields have been filled out.').show();
@@ -94,7 +104,7 @@ function processError(data) {
 }
 
 function PdWorkshopSurveyFormSubmit(event) {
-  $("#btn-submit").attr('disabled','disabled');
+  $("#btn-submit").attr('disabled', 'disabled');
   $("#btn-submit").removeClass("button_enabled").addClass("button_disabled");
 
   $.ajax({
