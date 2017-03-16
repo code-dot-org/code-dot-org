@@ -65,8 +65,6 @@ class DSLDefined < Level
       level_params.delete(:type) if data[:properties][:type]
       data[:properties].merge! level_params
 
-      # TODO: ensure name is unique?
-
       if old_name && data[:name] != old_name
         raise 'Renaming of DSLDefined levels is not allowed'
       end
@@ -139,6 +137,11 @@ class DSLDefined < Level
 
   def encrypted=(value)
     properties['encrypted'] = value
+  end
+
+  # don't allow markdown in DSL levels unless child class overrides this
+  def supports_markdown?
+    false
   end
 
   private
