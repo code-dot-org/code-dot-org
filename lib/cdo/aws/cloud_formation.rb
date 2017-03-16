@@ -20,7 +20,7 @@ module AWS
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
     # Lookup ACM certificate for ELB and CloudFront SSL.
-    ACM_REGION = 'us-east-1'
+    ACM_REGION = 'us-east-1'.freeze
     CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
       list_certificates(certificate_statuses: ['ISSUED']).
       certificate_summary_list.
@@ -31,15 +31,15 @@ module AWS
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
 
-    SSH_KEY_NAME = 'server_access_key'
+    SSH_KEY_NAME = 'server_access_key'.freeze
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
-    SSH_IP = '0.0.0.0/0'
-    S3_BUCKET = 'cdo-dist'
+    SSH_IP = '0.0.0.0/0'.freeze
+    S3_BUCKET = 'cdo-dist'.freeze
     AVAILABILITY_ZONES = ('b'..'e').map{|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
-    LOG_NAME = '/var/log/bootstrap.log'
+    LOG_NAME = '/var/log/bootstrap.log'.freeze
 
     class << self
       def branch

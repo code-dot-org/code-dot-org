@@ -3,13 +3,13 @@ require 'json'
 require 'fileutils'
 
 module EyesUtils
-  EYES_ACCESS_KEY_ENV_NAME = 'EYES_ACCESS_KEY'
-  TMP_UTIL_DIR = File.expand_path('../../../.tmputils', __FILE__)
+  EYES_ACCESS_KEY_ENV_NAME = 'EYES_ACCESS_KEY'.freeze
+  TMP_UTIL_DIR = File.expand_path('../../../.tmputils', __FILE__).freeze
 
-  MERGE_UTIL_PATH = "#{TMP_UTIL_DIR}/applitools-merge.jar"
-  REMOTE_JAR_SOURCE = 'https://s3.amazonaws.com/cdo-circle-utils/applitools-merge.jar'
-  EYES_API_URL = "https://eyes.applitools.com/api/baselines/copybranch?accesskey=$#{EYES_ACCESS_KEY_ENV_NAME}"
-  BASE_MERGE_UTIL_CALL = "java -jar #{MERGE_UTIL_PATH} -url #{EYES_API_URL}"
+  MERGE_UTIL_PATH = "#{TMP_UTIL_DIR}/applitools-merge.jar".freeze
+  REMOTE_JAR_SOURCE = 'https://s3.amazonaws.com/cdo-circle-utils/applitools-merge.jar'.freeze
+  EYES_API_URL = "https://eyes.applitools.com/api/baselines/copybranch?accesskey=$#{EYES_ACCESS_KEY_ENV_NAME}".freeez
+  BASE_MERGE_UTIL_CALL = "java -jar #{MERGE_UTIL_PATH} -url #{EYES_API_URL}".freeze
 
   def self.check_eyes_set
     raise "Must export env var $#{EYES_ACCESS_KEY_ENV_NAME} to run eyes commands." unless ENV[EYES_ACCESS_KEY_ENV_NAME]
