@@ -272,8 +272,6 @@ class LevelsHelperTest < ActionView::TestCase
     user = create(:follower).student_user
     sign_in user
 
-    app_options = self.app_options # ha
-
     assert_equal true, app_options[:level]['submittable']
   end
 
@@ -283,14 +281,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable level is not submittable for non-logged in user' do
     @level = create(:applab, submittable: true)
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
@@ -299,8 +295,6 @@ class LevelsHelperTest < ActionView::TestCase
 
     user = create(:follower).student_user
     sign_in user
-
-    app_options = self.app_options # ha ha
 
     assert_equal true, app_options[:level]['submittable']
   end
@@ -311,14 +305,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable multi level is not submittable for non-logged in user' do
     @level = create(:multi, submittable: true)
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
