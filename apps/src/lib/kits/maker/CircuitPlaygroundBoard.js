@@ -126,6 +126,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     // Deregister Firmata sysex response handler for circuit playground commands,
     // or playground-io will fail to register a new one next time we construct it
     // and the old playground-io instance will get events.
+    // TODO (bbuchanan): Improve Firmata+Playground-io so this isn't needed
     if (Firmata.SYSEX_RESPONSE) {
       delete Firmata.SYSEX_RESPONSE[CP_COMMAND];
     }
