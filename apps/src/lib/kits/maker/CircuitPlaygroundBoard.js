@@ -9,7 +9,11 @@ import {
   destroyCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
-import {BOARD_EVENT_ALIASES, SONG_CHARGE} from './PlaygroundConstants';
+import {
+  BOARD_EVENT_ALIASES,
+  SONG_CHARGE,
+  CP_COMMAND
+} from './PlaygroundConstants';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -122,7 +126,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     // Deregister Firmata sysex response handler for circuit playground commands,
     // or playground-io will fail to register a new one next time we construct it
     // and the old playground-io instance will get events.
-    const CP_COMMAND = 0x40;
     if (Firmata.SYSEX_RESPONSE) {
       delete Firmata.SYSEX_RESPONSE[CP_COMMAND];
     }
