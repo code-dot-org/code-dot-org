@@ -7,18 +7,12 @@ module Pd::Payment
       @workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, workshop_type: Pd::Workshop::TYPE_PUBLIC
 
       # >= 10 passing levels: qualified
-      @qualified_teacher = create :teacher
-      10.times do
-        create :user_level, user: @qualified_teacher, best_result: ::ActivityConstants::MINIMUM_PASS_RESULT
-      end
+      @qualified_teacher = create :teacher, :with_puzzles, num_puzzles: 10
       @workshop.section.add_student @qualified_teacher
       create :pd_enrollment, workshop: @workshop, user: @qualified_teacher
 
       # < 10 passing levels: unqualified
-      @unqualified_teacher = create :teacher
-      9.times do
-        create :user_level, user: @unqualified_teacher, best_result: ::ActivityConstants::MINIMUM_PASS_RESULT
-      end
+      @unqualified_teacher = create :teacher, :with_puzzles, num_puzzles: 9
       @workshop.section.add_student @unqualified_teacher
       create :pd_enrollment, workshop: @workshop, user: @unqualified_teacher
     end
@@ -66,6 +60,20 @@ module Pd::Payment
       )
 
       assert_equal 50, payment.total
+    end
+
+    # Any CSF teacher in the workshop section with a valid enrollment counts as attended.
+    # We had an issue where teachers with enrollments from another workshop were in this workshop's
+    # section for some reason, and it caused errors. Verify now they are excluded and cause no errors.
+    test 'teachers in section with enrollments in another workshop are not counted' do
+      external_teacher = create :teacher, :with_puzzles, num_puzzles: 10
+      create :pd_enrollment, user: external_teacher
+      @workshop.section.add_student external_teacher
+
+      summary = PaymentCalculatorCSF.instance.calculate(@workshop)
+      assert_equal 2, summary.num_teachers
+      assert_equal 1, summary.num_qualified_teachers
+      assert_equal @qualified_teacher, summary.teacher_summaries.first.teacher
     end
   end
 end
