@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {singleton as studioApp} from '../StudioApp';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
@@ -553,7 +552,7 @@ GameLab.prototype.onPuzzleComplete = function (submit ) {
         level: this.level.id,
         result: levelComplete,
         testResult: this.testResults,
-        submitted: submit ? "true" : false,
+        submitted: submit,
         program: program,
         image: this.encodedFeedbackImage,
         onComplete
@@ -610,7 +609,7 @@ GameLab.prototype.runButtonClick = function () {
     shareCell.className = 'share-cell-enabled';
 
     // Adding completion button changes layout.  Force a resize.
-    studioApp.onResize();
+    this.studioApp_.onResize();
   }
 
   postContainedLevelAttempt(this.studioApp_);

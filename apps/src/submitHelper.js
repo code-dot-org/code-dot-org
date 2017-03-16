@@ -66,7 +66,7 @@ function onPuzzleUnsubmit() {
   showConfirmationDialog({
     title: commonMsg.unsubmitYourProject(),
     text: commonMsg.unsubmitYourProjectConfirm(),
-    onConfirm: () => unsubmit()
+    onConfirm: unsubmit
   });
 }
 

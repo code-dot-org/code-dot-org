@@ -2,10 +2,10 @@ var React = require('react');
 var connect = require('react-redux').connect;
 
 var GameButtons = require('../templates/GameButtons').default;
-var CompletionButton = require('../templates/CompletionButton').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var gameLabConstants = require('./constants');
+import CompletionButton from '../templates/CompletionButton';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
