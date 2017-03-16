@@ -12,8 +12,8 @@ REQUIREMENTS = {
 }
 
 def get_modified_files
-  prev_head = ARGV[0]
-  new_head = ARGV[1]
+  prev_head = ARGV[1]
+  new_head = ARGV[2]
   Dir.chdir REPO_DIR
   return `git diff --name-only #{prev_head} #{new_head}`.split("\n").map(&:chomp)
 end
@@ -22,11 +22,11 @@ end
 # checkout is changing branches, 0 if the checkout is checking out a
 # particular file. We don't want to do anything in file checkout mode
 def file_checkout?
-  return ARGV.fetch(2, "1") == "0"
+  return ARGV.fetch(3, "1") == "0"
 end
 
 def optionally_run(cmd)
-  if ARGV[3] == "checkout" || !ENV['MERGE_RUN_PROMPT']
+  if ARGV[0] == "checkout" || !ENV['MERGE_RUN_PROMPT']
     return
   end
   puts "Shall I run #{cmd[:cmd]}? [Y/n]"
