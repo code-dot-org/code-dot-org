@@ -1,3 +1,5 @@
+require "#{CDO.dir('lib/cdo')}/activity_constants"
+
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :section_hidden_stage do
