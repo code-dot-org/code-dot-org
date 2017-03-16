@@ -3,6 +3,7 @@ import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
 import five from 'johnny-five';
 import Playground from 'playground-io';
+import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
   destroyCircuitPlaygroundComponents,
@@ -117,6 +118,15 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.fiveBoard_.io.reset();
     }
     this.fiveBoard_ = null;
+
+    // Deregister Firmata sysex response handler for circuit playground commands,
+    // or playground-io will fail to register a new one next time we construct it
+    // and the old playground-io instance will get events.
+    const CP_COMMAND = 0x40;
+    if (Firmata.SYSEX_RESPONSE) {
+      delete Firmata.SYSEX_RESPONSE[CP_COMMAND];
+    }
+    delete Playground.hasRegisteredSysexResponse;
   }
 
   /**
