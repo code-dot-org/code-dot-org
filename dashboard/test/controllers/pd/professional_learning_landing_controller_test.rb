@@ -36,4 +36,22 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test_user_gets_response_for :index, name: 'admins only', user: :teacher, response: :forbidden
+
+  test 'courses are sorted as expected' do
+    sign_in(@teacher)
+
+    [
+      create(:plc_course, name: 'Bills Fandom 101'),
+      create(:plc_course, name: 'ECS Support'),
+      create(:plc_course, name: 'CSP Support')
+    ].each do |course|
+      create :plc_user_course_enrollment, user: @teacher, plc_course: course
+    end
+
+    get :index
+    assert_response :success
+    response = assigns(:landing_page_data)
+
+    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map { |enrollment| enrollment[:courseName]}
+  end
 end
