@@ -81,7 +81,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_no_reply,
-      subject: 'Code.org workshop needs closing',
+      subject: "Your #{@workshop.course} workshop is still open, please close it",
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
