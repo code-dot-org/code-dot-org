@@ -3,12 +3,12 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 # Hash of several common requirements file patterns. Note that not all
 # of these are currently used, but are included for future-proofing.
 REQUIREMENTS = {
-  "requirements.txt" => "pip install -r requirements.txt",
-  "package.json" => "yarn",
-  "bower.json" => "bower install",
-  "Gemfile" => "bundle install",
-  "Berksfile" => "berks install",
-  "schema.rb" => "rake db:migrate"
+  "requirements.txt" => { cmd: "pip install -r requirements.txt", dir: "./" },
+  "package.json" => { cmd: "yarn", dir: "./apps" },
+  "bower.json" => { cmd: "bower install", dir: "./" },
+  "Gemfile" => { cmd: "bundle install", dir: "./" },
+  "Berksfile" => { cmd: "berks install", dir: "./" },
+  "schema.rb" => { cmd: "rake db:migrate", dir: "./dashboard" },
 }
 
 def get_modified_files
@@ -25,13 +25,25 @@ def file_checkout?
   return ARGV.fetch(2, "1") == "0"
 end
 
+def optionally_run(cmd)
+  if ARGV[3] == "checkout"
+    return
+  end
+  puts "Shall I run #{cmd[:cmd]}? [y/N]"
+  if $stdin.readline.downcase.start_with? 'y'
+    Dir.chdir File.expand_path(cmd[:dir], REPO_DIR)
+    system cmd[:cmd]
+  end
+end
+
 unless file_checkout?
   modified_files = get_modified_files
 
   modified_files.each do |file|
     basename = File.basename(file)
     if REQUIREMENTS.key?(basename)
-      puts "#{file} changed; you probably want to run #{REQUIREMENTS[basename]} or rake build"
+      puts "#{file} changed; you probably want to run #{REQUIREMENTS[basename][:cmd]} or rake build"
+      optionally_run REQUIREMENTS[basename]
     end
   end
 end

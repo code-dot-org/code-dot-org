@@ -1,2 +1,2 @@
 #!/bin/sh
-ruby tools/hooks/requirements_changed.rb "$@"
+ruby tools/hooks/requirements_changed.rb "$@" checkout

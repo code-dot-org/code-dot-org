@@ -1,2 +1,3 @@
 #!/bin/sh
-ruby tools/hooks/requirements_changed.rb ORIG_HEAD HEAD
+exec < /dev/tty
+exec ruby tools/hooks/requirements_changed.rb ORIG_HEAD HEAD ignoreme merge
