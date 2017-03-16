@@ -270,7 +270,7 @@ class Pd::Workshop < ActiveRecord::Base
   # Filters those those workshops that have not yet ended, but whose
   # final session was scheduled to end more than two days ago
   def self.should_have_ended
-    self.in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(Time.zone.now - 2.days)
+    in_state(STATE_IN_PROGRESS).scheduled_end_on_or_before(Time.zone.now - 2.days)
   end
 
   def course_name
