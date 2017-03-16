@@ -22,6 +22,19 @@ const styles = {
     boxShadow: '0 2px 7px 2px rgba(0, 0, 0, 0.3)',
     color: color.purple,
   },
+  pointRows: {
+    position: 'absolute',
+    top: 50,
+    right: 90,
+    left: 90,
+    height: 230,
+    padding: '32px 30px 20px 221px',
+    boxSizing: 'border-box',
+    background: '#fff',
+    borderRadius: 8,
+    boxShadow: '0 2px 7px 2px rgba(0, 0, 0, 0.3)',
+    color: color.purple,
+  },
   achievement: {
     row: {
       marginBottom: 25,
@@ -39,6 +52,67 @@ const styles = {
     inactive: {
       color: '#aaa',
     }
+  },
+  bannerAchievement: {
+    badge: {
+      width: 175,
+      height: 175,
+      position: 'absolute',
+      backgroundRepeat: 'no-repeat',
+      top: 23,
+      left: 114,
+      color: 'white',
+      textAlign: 'center',
+      textShadow: '-2px 3px 2px rgba(0, 0, 0, 0.29)',
+      transform: 'rotate(-15deg)',
+      fontWeight: 'bold',
+    },
+    badgePoints: {
+      fontSize: 61,
+      marginTop: 63,
+    },
+    badgePointsLabel: {
+      fontSize: 20,
+      marginTop: 24,
+    },
+    banner: {
+      backgroundColor: '#392E52',
+      boxShadow: '0 2px 6px 0 rgba(0,0,0,0.29)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPositionX: 9,
+      backgroundPositionY: 7,
+      borderRadius: 3,
+      position: 'absolute',
+      top: 212,
+      left: 48,
+      width: 603,
+      height: 83,
+    },
+    bannerText: {
+      fontFamily: '"Gotham 5r", sans-serif',
+      fontSize: 30,
+      color: 'white',
+      letterSpacing: 4.55,
+      marginTop: 33,
+      textAlign: 'center',
+    },
+    point: {
+      background: '#8676AB',
+      borderRadius: 100,
+      color: 'white',
+      fontFamily: '"Gotham 7r", sans-serif',
+      padding: '3px 10px',
+    },
+    row: {
+      fontSize: 16,
+      marginBottom: 25,
+    },
+    text: {
+      fontFamily: '"Gotham 7r", sans-serif',
+      color: '#544A6D',
+      fontSize: 16,
+      marginLeft: 10,
+    },
   },
   absolute: {
     position: 'absolute'
@@ -82,6 +156,8 @@ const AchievementDialog = Radium(React.createClass({
     hintsUsed: React.PropTypes.number,
     assetUrl: React.PropTypes.func,
     onContinue: React.PropTypes.func,
+    bannerMode: React.PropTypes.bool,
+    totalPoints: React.PropTypes.number,
     showStageProgress: React.PropTypes.bool,
     oldStageProgress: React.PropTypes.number,
     newPassedProgress: React.PropTypes.number,
@@ -126,12 +202,21 @@ const AchievementDialog = Radium(React.createClass({
   },
 
   achievementRow(flag, message, style) {
-    return (
-      <p style={{...styles.achievement.row, ...style}}>
-        {this.icon(flag)}
-        <span style={styles.achievement.text}>{message}</span>
-      </p>
-    );
+    if (this.props.bannerMode) {
+      return (
+        <p style={{...styles.bannerAchievement.row, ...style}}>
+          <span style={styles.bannerAchievement.point}>+1</span>
+          <span style={styles.bannerAchievement.text}>{message}</span>
+        </p>
+      );
+    } else {
+      return (
+        <p style={{...styles.achievement.row, ...style}}>
+          {this.icon(flag)}
+          <span style={styles.achievement.text}>{message}</span>
+        </p>
+      );
+    }
   },
 
   blocksUsedMessage(blockDelta, params) {
@@ -157,8 +242,18 @@ const AchievementDialog = Radium(React.createClass({
     const params = {
       puzzleNumber: this.props.puzzleNumber,
       numBlocks: this.props.idealBlocks,
+      numPoints: this.props.totalPoints,
     };
-    const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+    let feedbackMessage;
+    if (this.props.bannerMode) {
+      feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevelStars'](params);
+    } else {
+      feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+    }
+    const numPoints = 1 +
+      (showNumBlocksRow && !tooManyBlocks ? 1 : 0) +
+      (!tooManyHints ? 1 : 0);
+    const dotsUrl = `url(${this.props.assetUrl('media/dialog/dots.png')})`;
 
     return (
       <BaseDialog
@@ -182,7 +277,7 @@ const AchievementDialog = Radium(React.createClass({
               const interpolatingStyles =
                 interpolatingValues.map(val => ({ opacity: val.progress }));
               return (<div>
-                <div style={styles.checkmarks}>
+                <div style={this.props.bannerMode ? styles.pointRows : styles.checkmarks}>
                   {this.achievementRow(
                       true,
                       locale.puzzleCompleted(),
@@ -196,6 +291,17 @@ const AchievementDialog = Radium(React.createClass({
                       this.hintsMessage(tooManyHints),
                       interpolatingStyles[showNumBlocksRow ? 3 : 2])}
                 </div>
+                {this.props.bannerMode &&
+                  <div
+                    style={{
+                      ...styles.bannerAchievement.badge,
+                      backgroundImage: `url(${this.props.assetUrl('media/dialog/badges/badge.png')})`,
+                    }}
+                  >
+                    <div style={styles.bannerAchievement.badgePoints}>{numPoints}</div>
+                    <div style={styles.bannerAchievement.badgePointsLabel}>{locale.pointsAllCaps({numPoints})}</div>
+                  </div>
+                }
                 {this.props.showStageProgress &&
                   <StageProgressBar
                     stageProgress={
@@ -206,6 +312,18 @@ const AchievementDialog = Radium(React.createClass({
                           this.props.newHintUsageProgress)
                     }
                   />
+                }
+                {this.props.bannerMode &&
+                  <div
+                    style={{
+                      ...styles.bannerAchievement.banner,
+                      backgroundImage: dotsUrl,
+                    }}
+                  >
+                    <div style={styles.bannerAchievement.bannerText}>
+                      {locale.congratsAllCaps()}
+                    </div>
+                  </div>
                 }
               </div>);
             }

@@ -8,16 +8,16 @@ require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
   class CloudFront
-    ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH)
-    CACHED_METHODS = %w(HEAD GET OPTIONS)
+    ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH).freeze
+    CACHED_METHODS = %w(HEAD GET OPTIONS).freeze
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
-    ERROR_CODES = [400, 403, 404, 405, 414, 500, 501, 502, 503, 504]
+    ERROR_CODES = [400, 403, 404, 405, 414, 500, 501, 502, 503, 504].freeze
     # Configure CloudFront to forward these headers for S3 origins.
     S3_FORWARD_HEADERS = %w(
       Access-Control-Request-Headers
       Access-Control-Request-Method
       Origin
-    )
+    ).freeze
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
 
