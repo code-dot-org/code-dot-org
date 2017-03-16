@@ -29,6 +29,10 @@ class External < DSLDefined
     properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
   end
 
+  def supports_markdown?
+    true
+  end
+
   def dsl_default
     <<-TEXT.strip_heredoc.chomp
     name '#{name || 'unique level name here'}'
@@ -42,9 +46,6 @@ class External < DSLDefined
   end
 
   def update(params)
-    # TODO: can we catch duplicate names?
-    # if params[:name] && Level.find(
-
     super(params)
   end
 end
