@@ -45,6 +45,20 @@ export default storybook => {
         )
       },
       {
+        name:'SummaryProgressTable with focus area',
+        story: () => (
+          <SummaryProgressTable
+            lessons={lessons.map((lesson, index) => ({
+              ...lesson,
+              isFocusArea: index === 1
+            }))}
+            levelsByLesson={levelsByLesson}
+            lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
+          />
+        )
+      },
+      {
         name:'second lesson is a hidden stage, viewing as teacher',
         story: () => (
           <SummaryProgressTable

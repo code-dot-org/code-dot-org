@@ -6,6 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import FocusAreaIndicator from './FocusAreaIndicator';
 
 export const styles = {
   lightRow: {
@@ -35,6 +36,7 @@ export const styles = {
     borderRightStyle: 'solid',
   },
   col2: {
+    position: 'relative',
     width: '100%',
     paddingLeft: 20,
     paddingRight: 20
@@ -95,7 +97,8 @@ const SummaryProgressRow = React.createClass({
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),
           ...(hiddenForStudents && styles.hiddenRow),
-          ...(locked && styles.locked)
+          ...(locked && styles.locked),
+
         }}
       >
         <td style={styles.col1}>
@@ -134,6 +137,7 @@ const SummaryProgressRow = React.createClass({
             levels={levels}
             disabled={locked}
           />
+          {lesson.isFocusArea && <FocusAreaIndicator/>}
         </td>
       </tr>
     );
