@@ -104,6 +104,18 @@ FactoryGirl.define do
         create(:follower, section: section, student_user: user)
       end
     end
+
+    trait :with_puzzles do
+      transient do
+        num_puzzles 1
+        puzzle_result ActivityConstants::MINIMUM_PASS_RESULT
+      end
+      after(:create) do |user, evaluator|
+        evaluator.num_puzzles.times do
+          create :user_level, user: user, best_result: evaluator.puzzle_result
+        end
+      end
+    end
   end
 
   factory :districts_users do
