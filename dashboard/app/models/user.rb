@@ -287,10 +287,10 @@ class User < ActiveRecord::Base
 
   has_many :gallery_activities, -> {order 'id desc'}
 
-  # student/teacher relationships where I am the teacher
-  has_many :followers
-  has_many :students, through: :followers, source: :student_user
+  # Relationships (sections/followers/students) from being a teacher.
   has_many :sections
+  has_many :followers, through: :sections
+  has_many :students, through: :followers, source: :student_user
 
   # sections will include those that have been deleted until/unless we do the work
   # to enable the paranoia gem. This method will return only sections that have
@@ -299,10 +299,11 @@ class User < ActiveRecord::Base
     sections.where(deleted_at: nil)
   end
 
-  # student/teacher relationships where I am the student
+  # Relationships (sections_as_students/followeds/teachers) from being a
+  # student.
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
-  has_many :teachers, through: :followeds, source: :user
   has_many :sections_as_student, through: :followeds, source: :section
+  has_many :teachers, through: :sections_as_student, source: :user
 
   has_one :prize
   has_one :teacher_prize
