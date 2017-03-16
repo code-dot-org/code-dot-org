@@ -684,9 +684,9 @@ class User < ActiveRecord::Base
 
   # Is the stage containing the provided script_level hidden for this user?
   def hidden_stage?(script_level)
-    return false if self.try(:teacher?)
+    return false if try(:teacher?)
 
-    sections = self.sections_as_student.select{|s| s.deleted_at.nil?}
+    sections = sections_as_student.select{|s| s.deleted_at.nil?}
     return false if sections.empty?
 
     script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
