@@ -30,10 +30,10 @@ class RackAttackTest < Minitest::Test
   include Rack::Test::Methods
   include SetupTest
 
-  TABLE_NAME = 'stub_rack_attack_table'
-  OTHER_TABLE = 'other_table'
-  PROPERTY_KEY = 'key'
-  OTHER_KEY = 'other_key'
+  TABLE_NAME = 'stub_rack_attack_table'.freeze
+  OTHER_TABLE = 'other_table'.freeze
+  PROPERTY_KEY = 'key'.freeze
+  OTHER_KEY = 'other_key'.freeze
 
   @@cache_store = Rack::Attack::StoreProxy::RedisStoreProxy.new(Redis.new(url: 'redis://localhost:6379'))
   @@updater = RackAttackConfigUpdater.new.start(@@cache_store)
