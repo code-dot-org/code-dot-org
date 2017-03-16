@@ -855,7 +855,7 @@ def generate_teacher_student(name, teacher_authorized)
 
   individual_steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
-    And I wait to see ".jumbotron"
+    And I wait until element ".jumbotron" is visible
     And I dismiss the language selector
     And I click selector ".btn-white:contains('New section')" once I see it
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
@@ -934,7 +934,7 @@ end
 And(/^I save the section url$/) do
   wait_short_until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
   steps %Q{
-    And I wait to see ".jumbotron"
+    And I wait until element ".jumbotron" is visible
   }
   wait_short_until { "" != @browser.execute_script("return $('.jumbotron a').text().trim()") }
   @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
