@@ -56,7 +56,7 @@ export default function reducer(state = initialState, action) {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: processedStages(stages),
+      stages: processedStages(stages, action.professionalLearningCourse),
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId
@@ -174,14 +174,14 @@ function bestResultLevelId(levelIds, progressData) {
 /**
  * Does some processing of our passed in stages, namely
  * - Removes 'hidden' field
- * - Adds 'stageNumber' field for non-lockable stages
+ * - Adds 'stageNumber' field for non-lockable, non-PLC stages
  */
-export function processedStages(stages) {
+export function processedStages(stages, isPlc) {
   let numberOfNonLockableStages = 0;
 
   return stages.map(stage => {
     let stageNumber;
-    if (!stage.lockable) {
+    if (!isPlc && !stage.lockable) {
       numberOfNonLockableStages++;
       stageNumber = numberOfNonLockableStages;
     }
@@ -238,10 +238,15 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
 /**
  * Extract the relevant portions of a particular lesson/stage from the store.
  * Note, that this does not include levels
+ * @param {object} state - The progress state in our redux store
+ * @param {number} stageIndex - The index into our stages we care about
  * @returns {Lesson}
  */
-const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']);
-export const lessons = state => state.stages.map(lessonFromStage);
+const lessonFromStage = (state, stageIndex) => ({
+  ..._.pick(state.stages[stageIndex], ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']),
+  isFocusArea: state.focusAreaPositions.includes(state.stages[stageIndex].position)
+});
+export const lessons = state => state.stages.map((_, index) => lessonFromStage(state, index));
 
 /**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
@@ -309,7 +314,7 @@ export const categorizedLessons = state => {
 
   state.stages.forEach((stage, index) => {
     const category = stage.flex_category;
-    const lesson = lessonFromStage(stage);
+    const lesson = lessonFromStage(state, index);
     const stageLevels = allLevels[index];
 
     byCategory[category] = byCategory[category] || {

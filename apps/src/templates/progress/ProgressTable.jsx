@@ -70,7 +70,9 @@ const ProgressTable = React.createClass({
               lessons={[
                 {
                   name: "Not yet implemented",
-                  id: -1
+                  id: -1,
+                  lockable: false,
+                  isFocusArea: false
                 }
               ]}
               levelsByLesson={[[{
