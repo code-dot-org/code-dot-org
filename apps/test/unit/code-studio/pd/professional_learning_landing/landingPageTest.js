@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage';
 import {expect} from 'chai';
+import _ from 'lodash';
 
 describe("Tests for Professional Learning Landing Page", () => {
   const generateLandingPage = (landingPageProps = []) => {
@@ -10,6 +11,10 @@ describe("Tests for Professional Learning Landing Page", () => {
         {...landingPageProps}
       />
     );
+  };
+
+  const getImmediateChildren = (landingPage) => {
+    return _.compact(landingPage.children().nodes.map( (node) => {return node.key;}));
   };
 
   describe("Tests related to the initial state of the landing page for given teacher", () => {
@@ -24,6 +29,7 @@ describe("Tests for Professional Learning Landing Page", () => {
       expect(csFundamentalsSection.prop('printCsfCertificateUrl')).to.equal(undefined);
       expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(0);
       expect(csFundamentalsSection.prop('csfCompleted')).to.be.false;
+      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'csFundamentalsSection']);
     });
 
     it("page is as expected for a CSF completed teacher", () => {
@@ -37,6 +43,7 @@ describe("Tests for Professional Learning Landing Page", () => {
       expect(csFundamentalsSection.prop('printCsfCertificateUrl')).to.equal('certificateUrl');
       expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(0);
       expect(csFundamentalsSection.prop('csfCompleted')).to.be.true;
+      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'csFundamentalsSection']);
     });
 
     it("page is as expected for a CSD/CSP teacher", () => {
@@ -50,6 +57,7 @@ describe("Tests for Professional Learning Landing Page", () => {
         const csPrinciplesAndDiscoveriesSection = landingPage.find('CsPrinciplesAndDiscoveriesSection');
         expect(csPrinciplesAndDiscoveriesSection).to.have.length(1);
         expect(csPrinciplesAndDiscoveriesSection.prop('lastWorkshopSurveyUrl')).to.equal(null);
+        expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'csPrinciplesAndDiscoveriesSection']);
       });
 
       const landingPage = generateLandingPage({
@@ -63,6 +71,7 @@ describe("Tests for Professional Learning Landing Page", () => {
       const csPrinciplesAndDiscoveriesSection = landingPage.find('CsPrinciplesAndDiscoveriesSection');
       expect(csPrinciplesAndDiscoveriesSection).to.have.length(1);
       expect(csPrinciplesAndDiscoveriesSection.prop('lastWorkshopSurveyUrl')).to.equal('url');
+      expect(getImmediateChildren(landingPage)).to.deep.equal(['csPrinciplesAndDiscoveriesSection', 'upcomingWorkshops']);
     });
 
     it("page is as expected for a teacher in both CSF and CSD/CSP", () => {
@@ -73,6 +82,7 @@ describe("Tests for Professional Learning Landing Page", () => {
 
       expect(landingPage.find('CsFundamentalsSection')).to.have.length(1);
       expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(1);
+      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'csFundamentalsSection', 'csPrinciplesAndDiscoveriesSection']);
     });
 
     it("page is as expected for a teacher who teaches neither CSF, CSD, nor CSP", () => {
@@ -82,6 +92,7 @@ describe("Tests for Professional Learning Landing Page", () => {
       expect(landingPage.find('CsPrinciplesAndDiscoveriesSection')).to.have.length(0);
       expect(landingPage.find('UpcomingWorkshops')).to.have.length(1);
       expect(landingPage.find('ProfessionalLearningCourseProgress')).to.have.length(0);
+      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops']);
     });
 
     it("page has section for professional learning if user is enrolled in professional learning courses", () => {
@@ -91,6 +102,7 @@ describe("Tests for Professional Learning Landing Page", () => {
         professionalLearningCourseData: [{data: 'woohoo'}]
       });
       expect(landingPage.find('ProfessionalLearningCourseProgress')).to.have.length(1);
+      expect(getImmediateChildren(landingPage)).to.deep.equal(['upcomingWorkshops', 'plcData']);
     });
   });
 });
