@@ -8,7 +8,7 @@ module EyesUtils
 
   MERGE_UTIL_PATH = "#{TMP_UTIL_DIR}/applitools-merge.jar".freeze
   REMOTE_JAR_SOURCE = 'https://s3.amazonaws.com/cdo-circle-utils/applitools-merge.jar'.freeze
-  EYES_API_URL = "https://eyes.applitools.com/api/baselines/copybranch?accesskey=$#{EYES_ACCESS_KEY_ENV_NAME}".freeez
+  EYES_API_URL = "https://eyes.applitools.com/api/baselines/copybranch?accesskey=$#{EYES_ACCESS_KEY_ENV_NAME}".freeze
   BASE_MERGE_UTIL_CALL = "java -jar #{MERGE_UTIL_PATH} -url #{EYES_API_URL}".freeze
 
   def self.check_eyes_set
