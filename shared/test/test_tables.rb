@@ -284,7 +284,7 @@ class TablesTest < Minitest::Test
   end
 
   # channel id suffix, used by firebase in development and circleci environments
-  TEST_SUFFIX = '-test-suffix'
+  TEST_SUFFIX = '-test-suffix'.freeze
 
   def test_firebase_export
     create_channel

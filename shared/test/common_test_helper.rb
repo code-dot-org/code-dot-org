@@ -37,10 +37,10 @@ VCR.configure do |c|
 end
 
 # Truncate database tables to ensure repeatable tests.
-TEST_TABLES = %w(storage_apps user_storage_ids)
+TEST_TABLES = %w(storage_apps user_storage_ids).freeze
 TEST_TABLES.each do |table|
   PEGASUS_DB[table.to_sym].truncate
-end
+end.freeze
 
 module SetupTest
   def around(&block)
