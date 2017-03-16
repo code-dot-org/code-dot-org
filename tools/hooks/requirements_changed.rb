@@ -25,11 +25,19 @@ def file_checkout?
   return ARGV.fetch(3, "1") == "0"
 end
 
-def optionally_run(cmd)
-  if ARGV[0] == "checkout" || !ENV['MERGE_RUN_PROMPT']
+def merge?
+  return ARGV[0] == "merge"
+end
+
+def prompt_enabled?
+  return ENV['MERGE_RUN_PROMPT']
+end
+
+def optionally_run(cmd, file)
+  unless merge? && prompt_enabled?
     return
   end
-  puts "Shall I run #{cmd[:cmd]}? [Y/n]"
+  puts "#{file} changed! Shall I run #{cmd[:cmd]}? [Y/n]"
   unless $stdin.readline.downcase.start_with? 'n'
     Dir.chdir File.expand_path(cmd[:dir], REPO_DIR)
     system cmd[:cmd]
@@ -38,12 +46,20 @@ end
 
 unless file_checkout?
   modified_files = get_modified_files
+  printed_suggestion = false
 
   modified_files.each do |file|
     basename = File.basename(file)
-    if REQUIREMENTS.key?(basename)
+    next unless REQUIREMENTS.key?(basename)
+
+    if merge? && prompt_enabled?
+      optionally_run(REQUIREMENTS[basename], file)
+    else
+      if merge? && !printed_suggestion
+        puts "\nHey you! Set the environment variable MERGE_RUN_PROMPT to easily run the following command(s)"
+        printed_suggestion = true
+      end
       puts "#{file} changed; you probably want to run #{REQUIREMENTS[basename][:cmd]} or rake build"
-      optionally_run REQUIREMENTS[basename]
     end
   end
 end
