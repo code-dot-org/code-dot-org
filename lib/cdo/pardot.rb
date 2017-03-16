@@ -122,7 +122,11 @@ class Pardot
     # Set up config params to insert new contacts into Pardot
     config = {
       operation_name: "insert",
-      where_clause: "pardot_sync_at is NULL AND pardot_id IS NULL AND Roles IS NOT NULL",
+      # Temporarily limit the accounts synced into Pardot to just those in
+      # Teacher role, which is about 25% of total contacts. We will need to
+      # purchase additional Pardot capacity to be able import all contacts.
+      where_clause: "pardot_sync_at is NULL AND pardot_id IS NULL AND "\
+                    "Roles like '%Teacher%'",
       pardot_url: PARDOT_BATCH_CREATE_URL
     }
     # Call helper function
@@ -151,7 +155,7 @@ class Pardot
 
     # query the contact rollups
 
-    PEGASUS_DB[:contact_rollups].where(config[:where_clause]).order(:id).limit(9000).each do |contact_rollup|
+    PEGASUS_DB[:contact_rollups].where(config[:where_clause]).order(:id).each do |contact_rollup|
       # Skip if the email has been previously rejected by Pardot as malformed. Since there are just a handful of these,
       # it is more performant to let this small number of records get returned in the results and skip them rather
       # than try to exclude them in the SQL query on a large dataset.
@@ -165,7 +169,7 @@ class Pardot
         if pardot_info[:multi]
           # For multi data fields (multiselect,etc.), we set value names as [fieldname]_0, [fieldname]_1, etc
           values = db_value.split(",")
-          values.each do |value, index|
+          values.each_with_index do |value, index|
             prospect["#{pardot_info[:field]}_#{index}"] = value
           end
         else
