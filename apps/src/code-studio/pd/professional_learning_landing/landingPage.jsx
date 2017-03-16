@@ -61,34 +61,48 @@ const LandingPage = React.createClass({
   },
 
   render() {
+    const csFundamentalsSection = this.shouldRenderCSFSection() && (
+      <CsFundamentalsSection
+        key="csFundamentalsSection"
+        csfCompleted={this.props.coursesCompleted.includes('CS Fundamentals')}
+        lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyCourse === 'CS Fundamentals' ? this.props.lastWorkshopSurveyUrl : null}
+        printCsfCertificateUrl={this.props.printCsfCertificateUrl}
+      />
+    );
+
+    const csPrinciplesAndDiscoveriesSection = this.shouldRenderCSPCSDSection() && (
+      <CsPrinciplesAndDiscoveriesSection
+        key="csPrinciplesAndDiscoveriesSection"
+        lastWorkshopSurveyUrl={['CS Principles', 'CS Discoveries'].includes(this.props.lastWorkshopSurveyCourse) ? this.props.lastWorkshopSurveyUrl : null}
+        coursesCompleted={this.props.coursesCompleted}
+      />
+    );
+
+    const upcomingWorkshops = (
+      <UpcomingWorkshops
+        key="upcomingWorkshops"
+      />
+    );
+
+    const plcData = !_.isEmpty(this.props.professionalLearningCourseData) && (
+      <ProfessionalLearningCourseProgress
+        professionalLearningCourseData={this.props.professionalLearningCourseData}
+        key="plcData"
+      />
+    );
+
+    let order = [];
+
+    if (this.props.lastWorkshopSurveyUrl) {
+      order = _.compact([csFundamentalsSection, csPrinciplesAndDiscoveriesSection, upcomingWorkshops, plcData]);
+    } else {
+      order = _.compact([upcomingWorkshops, csFundamentalsSection, csPrinciplesAndDiscoveriesSection, plcData]);
+    }
+
     return (
       <div>
         {this.renderHeaderImage()}
-        {this.shouldRenderCSFSection() && (
-            <CsFundamentalsSection
-              csfCompleted={this.props.coursesCompleted.includes('CS Fundamentals')}
-              lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyCourse === 'CS Fundamentals' ? this.props.lastWorkshopSurveyUrl : null}
-              printCsfCertificateUrl={this.props.printCsfCertificateUrl}
-            />
-          )
-        }
-        {
-          this.shouldRenderCSPCSDSection() && (
-          <CsPrinciplesAndDiscoveriesSection
-            lastWorkshopSurveyUrl={['CS Principles', 'CS Discoveries'].includes(this.props.lastWorkshopSurveyCourse) ? this.props.lastWorkshopSurveyUrl : null}
-            coursesCompleted={this.props.coursesCompleted}
-          />
-        )
-        }
-        {
-          <UpcomingWorkshops/>
-        }
-        {
-          !_.isEmpty(this.props.professionalLearningCourseData) &&
-          <ProfessionalLearningCourseProgress
-            professionalLearningCourseData={this.props.professionalLearningCourseData}
-          />
-        }
+        {order}
       </div>
     );
   }
