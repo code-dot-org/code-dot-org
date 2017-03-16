@@ -13,7 +13,7 @@ module Rack
     HTTPS_DOMAINS = {
       /\Ahttp:\/\/.+\.jotformpro\.com/ => '//secure.jotformpro.com',
       /\Ahttp:\/\// => '//'
-    }
+    }.freeze
 
     def initialize(app)
       super(

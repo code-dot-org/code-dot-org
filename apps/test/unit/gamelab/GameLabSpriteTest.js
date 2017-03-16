@@ -309,6 +309,21 @@ describe('GameLabSprite', function () {
         sprite1.width = 100;
         expect(sprite1.getScaledWidth()).to.equal(50);
       });
+
+      it('gets scaled values regardless of colliders', function () {
+        var sprite2 = createSprite(0, 0);
+        sprite2.addAnimation('label', createTestAnimation());
+
+        sprite1.width = 200;
+        sprite1.height = 400;
+        sprite1.scale = 2;
+
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(800);
+        sprite1.collide(sprite2);
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(800);
+      });
     });
   });
 
