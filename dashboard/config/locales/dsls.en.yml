@@ -77,8 +77,6 @@ en:
         : A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.
         Contract for rocket-height: Contract for rocket-height
         rocket-height|Number|Number: rocket-height|Number|Number
-    curriculum_reference:
-      curriculum level: {}
     evaluation_multi:
       CSP PD Example Question 1:
         The encoding numbers unit: The encoding numbers unit
@@ -3255,8 +3253,6 @@ en:
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
-    map:
-      Brent Map: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
