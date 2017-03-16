@@ -10,7 +10,11 @@ import {
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
-import {TOUCH_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {
+  CP_ACCEL_STREAM_ON,
+  CP_COMMAND,
+  TOUCH_PINS
+} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -308,7 +312,17 @@ describe('Circuit Playground Components', () => {
 
       // No pin?  Doesn't report one.
 
-      it('with a getOrientation method', () => {
+      it('with a start() method', () => {
+        accelerometer.io.sysexCommand.reset(); // Reset spy
+        expect(accelerometer).to.haveOwnProperty('start');
+        expect(accelerometer.io.sysexCommand).not.to.have.been.called;
+
+        accelerometer.start();
+        expect(accelerometer.io.sysexCommand).to.have.been.calledOnce
+            .and.calledWith([CP_COMMAND, CP_ACCEL_STREAM_ON]);
+      });
+
+      it('and a getOrientation method', () => {
         expect(accelerometer).to.haveOwnProperty('getOrientation');
         expect(accelerometer.getOrientation('x')).to.equal(0);
         expect(accelerometer.getOrientation('y')).to.equal(0);
