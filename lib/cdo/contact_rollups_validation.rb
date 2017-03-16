@@ -8,7 +8,7 @@ class ContactRollupsValidation
     {
       name: "Rollup total record count",
       query: "SELECT COUNT(*) FROM contact_rollups_daily",
-      min: 3_130_000,
+      min: 3_000_000,
       max: 4_000_000
     },
     {
@@ -43,15 +43,15 @@ class ContactRollupsValidation
       name: "District Contact count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%District Contact%'",
-      min: 250,
-      max: 2_500
+      min: 50,
+      max: 500
     },
     {
       name: "Regional Partner count",
       query: "SELECT COUNT(*) from contact_rollups_daily where roles
               LIKE '%Regional Partner%'",
-      min: 50,
-      max: 500
+      min: 25,
+      max: 250
     },
     {
       name: "Petition Signer count",
@@ -66,14 +66,6 @@ class ContactRollupsValidation
               LIKE '%Form Submitter%'",
       min: 2_500_000,
       max: 3_250_000
-    },
-    {
-      # expected # of distinct state values is 50 states + DC + null = 52
-      name: "Distinct US state count",
-      query: "SELECT COUNT(distinct state) FROM contact_rollups_daily
-              WHERE country = 'united states'",
-      min: 52,
-      max: 52
     },
     {
       # Check that rollup's 'opt_out' data matches pegasus.contact's
@@ -123,7 +115,7 @@ class ContactRollupsValidation
       name: "Count of contacts with non-NULL country",
       query: "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE country IS NOT NULL",
-      min: 3_000_000,
+      min: 1_900_000,
       max: 10_000_000
     },
     {
@@ -137,14 +129,7 @@ class ContactRollupsValidation
       name: "Count of contacts with non-NULL city",
       query: "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE city IS NOT NULL",
-      min: 1_700_000,
-      max: 10_000_000
-    },
-    {
-      name: "Count of contacts with non-NULL city",
-      query: "SELECT COUNT(*) FROM contact_rollups_daily
-              WHERE city IS NOT NULL",
-      min: 1_700_000,
+      min: 1_000_000,
       max: 10_000_000
     },
     {
@@ -165,8 +150,8 @@ class ContactRollupsValidation
       name: "Distinct school name count",
       query: "SELECT COUNT(distinct school_name)
               FROM contact_rollups_daily",
-      min: 48,
-      max: 54
+      min: 3000,
+      max: 30_000
     },
     {
       name: "Count of contacts with courses facilitated",
@@ -181,8 +166,8 @@ class ContactRollupsValidation
       query: "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE courses_facilitated IS NOT NULL
               AND Roles NOT LIKE '%Facilitator%'",
-      min: 400,
-      max: 40_000
+      min: 0,
+      max: 0
     },
     {
       name: "Count of contacts with professional learning enrollment",
