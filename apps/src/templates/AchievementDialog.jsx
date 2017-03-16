@@ -61,6 +61,19 @@ const styles = {
       backgroundRepeat: 'no-repeat',
       top: 23,
       left: 114,
+      color: 'white',
+      textAlign: 'center',
+      textShadow: '-2px 3px 2px rgba(0, 0, 0, 0.29)',
+      transform: 'rotate(-15deg)',
+      fontWeight: 'bold',
+    },
+    badgePoints: {
+      fontSize: 61,
+      marginTop: 63,
+    },
+    badgePointsLabel: {
+      fontSize: 20,
+      marginTop: 24,
     },
     banner: {
       backgroundColor: '#392E52',
@@ -240,7 +253,6 @@ const AchievementDialog = Radium(React.createClass({
     const numPoints = 1 +
       (showNumBlocksRow && !tooManyBlocks ? 1 : 0) +
       (!tooManyHints ? 1 : 0);
-    const badgeUrl = `url(${this.props.assetUrl(`media/dialog/badges/${numPoints}-points.png`)})`;
     const dotsUrl = `url(${this.props.assetUrl('media/dialog/dots.png')})`;
 
     return (
@@ -283,9 +295,12 @@ const AchievementDialog = Radium(React.createClass({
                   <div
                     style={{
                       ...styles.bannerAchievement.badge,
-                      backgroundImage: badgeUrl,
+                      backgroundImage: `url(${this.props.assetUrl('media/dialog/badges/badge.png')})`,
                     }}
-                  />
+                  >
+                    <div style={styles.bannerAchievement.badgePoints}>{numPoints}</div>
+                    <div style={styles.bannerAchievement.badgePointsLabel}>{locale.pointsAllCaps()}</div>
+                  </div>
                 }
                 {this.props.showStageProgress &&
                   <StageProgressBar
@@ -306,7 +321,7 @@ const AchievementDialog = Radium(React.createClass({
                     }}
                   >
                     <div style={styles.bannerAchievement.bannerText}>
-                      CONGRATULATIONS
+                      {locale.congratsAllCaps()}
                     </div>
                   </div>
                 }
