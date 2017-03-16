@@ -26,11 +26,11 @@ def file_checkout?
 end
 
 def optionally_run(cmd)
-  if ARGV[3] == "checkout"
+  if ARGV[3] == "checkout" || !ENV['MERGE_RUN_PROMPT']
     return
   end
-  puts "Shall I run #{cmd[:cmd]}? [y/N]"
-  if $stdin.readline.downcase.start_with? 'y'
+  puts "Shall I run #{cmd[:cmd]}? [Y/n]"
+  unless $stdin.readline.downcase.start_with? 'n'
     Dir.chdir File.expand_path(cmd[:dir], REPO_DIR)
     system cmd[:cmd]
   end
