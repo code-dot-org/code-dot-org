@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-03-15T18:09:52.000Z",
+  "created_at": "2017-03-15T18:46:08.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -9,20 +9,7 @@
     "code_functions": {
       "randomNumber_min_max": null,
       "declareAssign_x": null,
-      "setText": null,
-      "onEvent": null,
-      "setPosition": {
-        "params": [
-          "id",
-          "0",
-          "0"
-        ],
-        "paletteParams": [
-          "id",
-          "x",
-          "y"
-        ]
-      }
+      "setText": null
     },
     "edit_code": true,
     "embed": "false",
@@ -63,7 +50,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Hide the Code\r\n\r\n<img src=\"https://images.code.org/11fc50efd77b7245198dddc2f11c2e6f-image-1489606362106.32.21 PM.png\" style=\"width:200px;float:right\">\r\n\r\n<img src=\"https://images.code.org/b957534ed691290bdba5f2e1b9dd4e23-image-1489606362105.32.02 PM.png\" style=\"width:200px;float:right\">\r\n\r\nIts too easy to find the secret code right now. Put the picture in front of the secret code to hide it. Then only show it if the user clicks on the image.\r\n\r\n# Do This\r\n\r\n* Move the picture in Design Mode to cover the secret code\r\n* Pull out an `onEvent` block\r\n* Change the id spot in the `onEvent` block to picture (which is the ID of the picture element)\r\n* Inside the `onEvent` block add the `setPosition` block with the following inputs\r\n\t* ID: picture\r\n    * The next two inputs are x and y values - test out some numbers to try to get the picture to move like in the pictures on the right",
+    "markdown_instructions": "# Random Code\r\n\r\n<img src=\"https://images.code.org/dfa3a28d30b7a1d2879e3fc95b8f42dc-image-1489603534640.44.51 PM.png\" style=\"width:200px;float:right\">\r\n\r\nOur secret room has a safe with a combination lock. That combination will be hidden behind a picture where it says \"CODE\" right now in Room 1. To make this more fun we will generate a random 4 digit number to be the code.\r\n\r\n# Do This\r\n\r\n* Add a variable that will hold the secret code.\r\n\t* Drag out the variable block\r\n    * In the space next to var pick a name for your variable such as safeCode\r\n* On the right side of the variable set your secret code to be a random number\r\n\t* Add the random number block on the right side of the variable\r\n    * Random number takes two inputs which set the range of numbers it can randomly generate\r\n    * You want it to generate numbers between 1000 and 9999\r\n* Set the text in the secret code element in room 1\r\n\t* Use the setText block to set the text of the secretCode element",
     "contained_level_names": null
   },
   "published": true,
