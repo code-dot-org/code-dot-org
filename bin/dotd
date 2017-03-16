@@ -51,7 +51,6 @@ def puts_after_dtp_tasks
     * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
     * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
     * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
-    * Ensure that no frontends were skipped in the Production room on Slack.
     * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
 
   EOS
