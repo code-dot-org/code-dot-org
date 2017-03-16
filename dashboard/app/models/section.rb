@@ -81,12 +81,12 @@ class Section < ActiveRecord::Base
     # trie. Because FullNameSplitter implicitly performs whitespace
     # normalization, this is necessary to ensure that we can recognize
     # the name on the other side
-    self.students.each do |student|
+    students.each do |student|
       student.name = student.name.strip.split(/\s+/).join(' ')
       trie.add student.name
     end
 
-    self.students.map do |student|
+    students.map do |student|
       first, _last = FullNameSplitter.split(student.name)
       if first.nil?
         # if fullnamesplitter can't identify the first name, default to
