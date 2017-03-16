@@ -1,6 +1,8 @@
 class Pd::ProfessionalLearningLandingController < ApplicationController
   before_action :require_admin
 
+  PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
+
   def index
     # Get the courses that this user teaches
     workshops = Pd::Workshop.enrolled_in_by(current_user)
@@ -14,7 +16,9 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       false
     ).try(:max_by, &:survey_sent_at)
 
-    summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize)
+    summarized_plc_enrollments = Plc::UserCourseEnrollment.where(user: current_user).map(&:summarize).sort_by do |enrollment|
+      PLC_COURSE_ORDERING.index(enrollment[:courseName]) || PLC_COURSE_ORDERING.size
+    end
 
     if courses_completed.include?(Pd::Workshop::COURSE_CSF)
       enrollment = Pd::Enrollment.where(pd_workshop_id: ended_workshops.where(course: Pd::Workshop::COURSE_CSF)).
