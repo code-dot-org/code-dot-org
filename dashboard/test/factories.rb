@@ -1,3 +1,5 @@
+require 'cdo/activity_constants'
+
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :section_hidden_stage do
@@ -102,6 +104,18 @@ FactoryGirl.define do
       after(:create) do |user|
         section = create(:section, user: create(:terms_of_service_teacher))
         create(:follower, section: section, student_user: user)
+      end
+    end
+
+    trait :with_puzzles do
+      transient do
+        num_puzzles 1
+        puzzle_result ActivityConstants::MINIMUM_PASS_RESULT
+      end
+      after(:create) do |user, evaluator|
+        evaluator.num_puzzles.times do
+          create :user_level, user: user, best_result: evaluator.puzzle_result
+        end
       end
     end
   end
