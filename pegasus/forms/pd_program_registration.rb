@@ -174,4 +174,8 @@ class PdProgramRegistration
       OTHER
     ]
   }
+
+  def self.receipt
+    'pd_program_registration_receipt'
+  end
 end
