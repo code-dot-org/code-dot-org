@@ -1,4 +1,4 @@
-require "#{CDO.dir('lib/cdo')}/activity_constants"
+require 'cdo/activity_constants'
 
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
