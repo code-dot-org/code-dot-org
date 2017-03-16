@@ -327,12 +327,12 @@ class ActionController::TestCase
 
     test name do
       # params can be a hash, or a proc that returns a hash at runtime
-      params = self.instance_exec(&params) if params.is_a? Proc
+      params = instance_exec(&params) if params.is_a? Proc
 
       if user
         # user can be a symbol or string for FactoryGirl creation,
         # or a proc that returns a user object at runtime
-        actual_user = user.is_a?(Proc) ? self.instance_exec(&user) : create(user)
+        actual_user = user.is_a?(Proc) ? instance_exec(&user) : create(user)
         sign_in actual_user
       else
         sign_out :user
@@ -342,7 +342,7 @@ class ActionController::TestCase
       assert_response response
 
       # Run additional test logic, if supplied
-      self.instance_exec(&block) if block
+      instance_exec(&block) if block
     end
   end
 
