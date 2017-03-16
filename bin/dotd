@@ -240,10 +240,7 @@ def do_dtt_subroutine
       )
       new_sha_abbr = GitHub.sha('test')[0, 7]
       url = GitHub.url(pr_number)
-      wait_for "DTT (#{url}) to complete, re-run / investigate failures, and "\
-        "update infra#test topic to commit #{new_sha_abbr}"
-      # TODO(asher): Prompt for whether the DTT was green, update
-      # Slack#infra-test topic appropriately.
+      wait_for "DTT (#{url}) to complete, re-run / investigate failures"
 
       should_i 'reset DTT message to yes' do
         DevelopersTopic.set_dtt 'yes'
