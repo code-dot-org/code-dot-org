@@ -705,7 +705,7 @@ module LevelsHelper
   end
 
   def can_view_solution?
-    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions?
+    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions? && @level.contained_levels.empty?
       Ability.new(current_user).can? :view_level_solutions, @script
     end
   end
