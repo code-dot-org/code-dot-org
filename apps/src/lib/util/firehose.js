@@ -17,7 +17,7 @@ const FIREHOSE = new AWS.Firehose({apiVersion: '2015-08-04'});
  *   FirehoseClient.putRecord(
  *     'analysis-events',
  *     {
- *       created_at: DateTime.now,           // REQUIRED
+ *       created_at: new Date(),             // REQUIRED
  *       environment: 'production',          // REQUIRED
  *       study: 'underwater basket weaving', // REQUIRED
  *       study_group: 'control',             // OPTIONAL
@@ -37,7 +37,7 @@ const FIREHOSE = new AWS.Firehose({apiVersion: '2015-08-04'});
  *     'analysis-events',
  *     [
  *       {
- *         created_at: DateTime.now,           // REQUIRED
+ *         created_at: new Date(),             // REQUIRED
  *         environment: 'production',          // REQUIRED
  *         study: 'underwater basket weaving', // REQUIRED
  *         study_group: 'control',             // OPTIONAL
@@ -52,7 +52,7 @@ const FIREHOSE = new AWS.Firehose({apiVersion: '2015-08-04'});
  *         data_json: JSON.stringify(x)        // OPTIONAL
  *       },
  *       {
- *         created_at: DateTime.now,           // REQUIRED
+ *         created_at: new Date(),             // REQUIRED
  *         environment: 'production',          // REQUIRED
  *         study: 'underwater basket weaving', // REQUIRED
  *         study_group: 'control',             // OPTIONAL
