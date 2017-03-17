@@ -43,15 +43,15 @@ export function isEnabled() {
  * @return {Promise}
  *   Resolves (with no value) when connection is successful and the board
  *   controller is ready to use.
- *   Resolves immediately if maker toolkit is disabled.
  *   Rejects with a MakerError when the connection process is cancelled or
  *   fails in an expected way that we handle gracefully (for example, no board
  *   plugged in).
- *   Rejects with a plain Error if something more unexpected happens.
+ *   Rejects with another error type if something unexpected happens.
  */
 export function connect({interpreter, onDisconnect}) {
   if (!isEnabled()) {
-    return Promise.resolve();
+    return Promise.reject(new Error('Attempted to connect to a maker board, ' +
+        'but Maker Toolkit is not enabled.'));
   }
 
   if (currentBoard) {

@@ -1178,20 +1178,31 @@ Applab.execute = function () {
     }
   }
 
-    makerToolkit.connect({
+  prepareMakerIfEnabled()
+      .then(Applab.beginVisualizationRun)
+      .catch(error => {
+        // Don't just throw any error away, but squelch errors that we already
+        // handle gracefully (like early disconnect or a missing board).
+        if (!(error instanceof makerToolkit.MakerError)) {
+          Applab.log(error);
+          return Promise.reject(error);
+        }
+      });
+};
+
+/**
+ * @return {Promise} resolved when Maker is prepared (if Maker is enabled) or
+ * immediately if Maker is not enabled.
+ */
+function prepareMakerIfEnabled() {
+  if (makerToolkit.isEnabled()) {
+    return makerToolkit.connect({
       interpreter: Applab.JSInterpreter,
       onDisconnect: () => studioApp.resetButtonClick(),
-    })
-        .then(Applab.beginVisualizationRun)
-        .catch(error => {
-          // Don't just throw any error away, but squelch errors that we already
-          // handle gracefully (like early disconnect or a missing board).
-          if (!(error instanceof makerToolkit.MakerError)) {
-            Applab.log(error);
-            return Promise.reject(error);
-          }
-        });
-};
+    });
+  }
+  return Promise.resolve();
+}
 
 Applab.beginVisualizationRun = function () {
   // Call change screen on the default screen to ensure it has focus
