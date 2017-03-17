@@ -79,7 +79,7 @@ module LocaleHelper
   end
 
   def i18n_dropdown
-    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
+    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
       (hidden_field_tag :return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
     end
   end
