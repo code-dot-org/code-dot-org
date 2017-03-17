@@ -131,6 +131,10 @@ class Game < ActiveRecord::Base
     @@game_external_link ||= find_by_name('ExternalLink')
   end
 
+  def self.curriculum_reference
+    @@game_curriculum_reference ||= find_by_name('CurriculumReference')
+  end
+
   def unplugged?
     app == UNPLUG
   end

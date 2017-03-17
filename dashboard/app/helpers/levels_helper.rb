@@ -190,7 +190,7 @@ module LevelsHelper
       @app_options = blockly_options
     elsif @level.is_a? Weblab
       @app_options = weblab_options
-    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
+    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
