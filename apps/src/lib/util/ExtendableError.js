@@ -8,7 +8,7 @@
  * http://stackoverflow.com/a/32749533/5000129
  */
 export default function ExtendableError(message) {
-  Error.call(this, message);
+  this.message = message;
   this.name = this.constructor.name;
   if (typeof Error.captureStackTrace === 'function') {
     Error.captureStackTrace(this, this.constructor);
