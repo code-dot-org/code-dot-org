@@ -1,6 +1,6 @@
 ---
 title: Help Translate
-nav: translate_nav
+nav: translate_nav 
 ---
 
 # Help Translate
