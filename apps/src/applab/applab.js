@@ -1188,6 +1188,7 @@ Applab.execute = function () {
           // handle gracefully (like early disconnect or a missing board).
           if (!(error instanceof makerToolkit.MakerError)) {
             Applab.log(error);
+            return Promise.reject(error);
           }
         });
 };
