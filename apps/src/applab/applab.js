@@ -57,7 +57,6 @@ import {
   actions as jsDebugger,
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 var project = require('@cdo/apps/code-studio/initApp/project');
 
@@ -681,7 +680,7 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
+  config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerToolkit.dropletConfig);
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
@@ -1184,7 +1183,13 @@ Applab.execute = function () {
       onDisconnect: () => studioApp.resetButtonClick(),
     })
         .then(Applab.beginVisualizationRun)
-        .catch(error => console.log(error));
+        .catch(error => {
+          // Don't just throw any error away, but squelch errors that we already
+          // handle gracefully (like early disconnect or a missing board).
+          if (!(error instanceof makerToolkit.MakerError)) {
+            Applab.log(error);
+          }
+        });
 };
 
 Applab.beginVisualizationRun = function () {
