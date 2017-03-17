@@ -377,9 +377,29 @@ FactoryGirl.define do
   end
 
   factory :follower do
-    section
-    user { section.user }
-    student_user { create :student }
+    association :student_user, factory: :student
+
+    transient do
+      section nil
+      user nil
+    end
+
+    after(:build) do |follower, evaluator|
+      if evaluator.section
+        follower.section = evaluator.section
+        follower.user = evaluator.section.user unless evaluator.user
+      end
+      if evaluator.user
+        follower.user = evaluator.user
+        unless evaluator.section
+          follower.section = build(:section, user: evaluator.user)
+        end
+      end
+      if evaluator.user.nil? && evaluator.section.nil?
+        follower.user = build :teacher
+        follower.section = build(:section, user: follower.user)
+      end
+    end
   end
 
   factory :user_level do
