@@ -1,27 +1,12 @@
 - level ||= @level
-- last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
-- in_level_group ||= false
 
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/external.js'), data: {external: { in_level_group: in_level_group }.to_json}}
   %script{src: minifiable_asset_path('js/levels/_curriculum_reference.js')}
-  :javascript
-    var options = #{level.properties['options'].to_json};
 
-.external
+.curriculum-reference
   - postcontent = capture_haml do
     #iframe-loading.loading
     %iframe{id: 'curriculum-reference', width: '100%', frameborder: 0, src: level.href, onload: 'window.curriculumReference.onload()', style: "display: none;" }
-    - unless in_level_group
-      - if @script.try(:professional_learning_course?) && @script_level
-        = link_to @script_level.end_of_stage? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large pull-right btn-primary submitButton'
-      - elsif !@level.has_submit_button?
-        %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
+    %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
 
   = render partial: 'levels/content', locals: {app: 'external', data: level.properties, content_class: level.properties['options'].try(:[], 'css'), postcontent: postcontent}
-  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
-
-- if in_level_group
-  -# This partial will take care of milestone posts in the contexts of levelgroups,
-  -# otherwise it's handled by external.js
-  = render partial: 'levels/dialog', locals: {app: 'external', data: level.properties}
