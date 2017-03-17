@@ -9,7 +9,8 @@ var data = {
   created_at: "2017-03-16T15:24:25.796+00:00",
   environment: "eric",
   study: "eric-setup",
-  data_int: 31415
+  data_int: 31415,
+  event: "Eric's test event"
 };
 window.analysis.log(data);
 
