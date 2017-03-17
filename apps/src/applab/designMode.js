@@ -194,6 +194,11 @@ designMode.onPropertyChange = function (element, name, value) {
  * @param value
  */
 designMode.updateProperty = function (element, name, value) {
+  // For labels, we need to remember before we change the value if the element was "fitted" around the text or if it was
+  // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
+  // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
+  // ignored.
+  var preChangeData = elementLibrary.getPreChangeData(element);
   var handled = true;
   switch (name) {
     case 'id':
@@ -453,7 +458,7 @@ designMode.updateProperty = function (element, name, value) {
   // For labels, this is what snaps to fit. We need to not snap to fit if the element has previously been resized,
   // which we approximate by determining if it fit perfectly before the property change. Also needs to work on first
   // time creation.
-  if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
+  if (elementLibrary.typeSpecificPropertyChange(element, name, value, preChangeData)) {
     handled = true;
   }
 
