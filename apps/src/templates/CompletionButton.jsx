@@ -33,9 +33,9 @@ var CompletionButton = React.createClass({
   },
 
   render: function () {
-    var id;
-    var contents;
-    var divClass = 'share-cell-none';
+    let id;
+    let contents;
+    let divClass = 'share-cell-none';
 
     if (this.props.isProjectLevel) {
       return <div/>;
