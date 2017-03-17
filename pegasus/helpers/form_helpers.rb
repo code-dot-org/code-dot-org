@@ -99,13 +99,28 @@ def us_phone_number(value)
   RegexpUtils.extract_us_phone_number_digits(value)
 end
 
+def data_to_errors(data)
+  errors = {}
+
+  data.each_pair do |key, value|
+    if value.class == FieldError
+      errors[key] = [value.message]
+    elsif value.class == Hash
+      suberrors = data_to_errors(value)
+      suberrors.each_pair do |subkey, subvalue|
+        newkey = "#{key}[#{subkey}]".to_sym
+        errors[newkey] = subvalue
+      end
+    end
+  end
+
+  errors
+end
+
 def validate_form(kind, data)
   data = Object.const_get(kind).normalize(data)
 
-  errors = {}
-  data.each_pair do |key, value|
-    errors[key] = [value.message] if value.class == FieldError
-  end
+  errors = data_to_errors(data)
   raise FormError.new(kind, errors) unless errors.empty?
 
   data
