@@ -35,9 +35,8 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   test 'load_filtered_ended_workshops query by start' do
     start_date = mock
     end_date = mock
-    expects(:start_on_or_after).with(start_date)
-    expects(:start_on_or_before).with(end_date)
-
+    expects(:scheduled_start_on_or_after).with(start_date)
+    expects(:scheduled_start_on_or_before).with(end_date)
     params start: start_date, end: end_date, query_by: 'schedule'
     load_filtered_ended_workshops
   end
@@ -231,8 +230,8 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
 
   # Defaults to 1 week ending today by scheduled start date
   def set_default_date_expectations
-    expects(:start_on_or_before).with(Date.today)
-    expects(:start_on_or_after).with(Date.today - 1.week)
+    expects(:scheduled_start_on_or_before).with(Date.today)
+    expects(:scheduled_start_on_or_after).with(Date.today - 1.week)
   end
 
   def expects(method_name)

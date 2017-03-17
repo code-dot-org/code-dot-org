@@ -11,6 +11,10 @@ import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
 import AppLabView from './AppLabView';
+import {
+  initializeSubmitHelper,
+  onSubmitComplete
+} from '../submitHelper';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
@@ -731,15 +735,11 @@ Applab.init = function (config) {
       dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
     }
 
-    var submitButton = document.getElementById('submitButton');
-    if (submitButton) {
-      dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
-    }
-
-    var unsubmitButton = document.getElementById('unsubmitButton');
-    if (unsubmitButton) {
-      dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
-    }
+    initializeSubmitHelper({
+      studioApp: studioApp,
+      onPuzzleComplete: this.onPuzzleComplete.bind(this),
+      unsubmitUrl: level.unsubmitUrl
+    });
 
     setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
@@ -1113,10 +1113,6 @@ var displayFeedback = function () {
   }
 };
 
-Applab.onSubmitComplete = function (response) {
-  window.location.href = response.redirect;
-};
-
 /**
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
@@ -1332,34 +1328,6 @@ Applab.showConfirmationDialog = function (config) {
   dialog.show();
 };
 
-Applab.onPuzzleSubmit = function () {
-  Applab.showConfirmationDialog({
-    title: commonMsg.submitYourProject(),
-    text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: function () {
-      Applab.onPuzzleComplete(true);
-    }
-  });
-};
-
-Applab.unsubmit = function () {
-  $.post(level.unsubmitUrl,
-         {"_method": 'PUT', user_level: {submitted: false}},
-         function () {
-           location.reload();
-         });
-};
-
-Applab.onPuzzleUnsubmit = function () {
-  Applab.showConfirmationDialog({
-    title: commonMsg.unsubmitYourProject(),
-    text: commonMsg.unsubmitYourProjectConfirm(),
-    onConfirm: function () {
-      Applab.unsubmit();
-    }
-  });
-};
-
 Applab.onPuzzleFinish = function () {
   Applab.onPuzzleComplete(false); // complete without submitting
 };
@@ -1425,7 +1393,7 @@ Applab.onPuzzleComplete = function (submit) {
   Applab.waitingForReport = true;
 
   const sendReport = function () {
-    const onComplete = (submit ? Applab.onSubmitComplete : Applab.onReportComplete);
+    const onComplete = (submit ? onSubmitComplete : Applab.onReportComplete);
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
@@ -1437,7 +1405,7 @@ Applab.onPuzzleComplete = function (submit) {
         level: level.id,
         result: levelComplete,
         testResult: Applab.testResults,
-        submitted: !!submit,
+        submitted: submit,
         program: encodeURIComponent(program),
         image: Applab.encodedFeedbackImage,
         containedLevelResultsInfo: containedLevelResultsInfo,

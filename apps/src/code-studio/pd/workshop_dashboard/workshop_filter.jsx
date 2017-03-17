@@ -54,7 +54,7 @@ const WorkshopFilter = React.createClass({
         state: React.PropTypes.string,
         course: React.PropTypes.string,
         subject: React.PropTypes.string,
-        organizer: React.PropTypes.string
+        organizer_id: React.PropTypes.string
       })
     })
   },
@@ -131,8 +131,8 @@ const WorkshopFilter = React.createClass({
   },
 
   handleOrganizerChange(selected) {
-    const organizer = selected ? selected.value : null;
-    this.updateLocationAndSetFilters({organizer});
+    const organizer_id = selected ? selected.value : null;
+    this.updateLocationAndSetFilters({organizer_id});
   },
 
   handleLimitChange(limit) {
@@ -203,7 +203,7 @@ const WorkshopFilter = React.createClass({
       state: urlParams.state,
       course: urlParams.course,
       subject: urlParams.subject,
-      organizer: urlParams.organizer
+      organizer_id: urlParams.organizer_id
     });
   },
 
@@ -324,7 +324,7 @@ const WorkshopFilter = React.createClass({
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
                 <Select
-                  value={parseInt(filters.organizer, 10)}
+                  value={parseInt(filters.organizer_id, 10)}
                   options={this.getOrganizerOptions()}
                   onChange={this.handleOrganizerChange}
                   isLoading={this.state.organizersLoading}

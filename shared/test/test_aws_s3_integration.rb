@@ -5,7 +5,7 @@ class AwsS3IntegrationTest < Minitest::Test
   include SetupTest
 
   # A test bucket, only used for these tests.
-  TEST_BUCKET = 'cdo-temp'
+  TEST_BUCKET = 'cdo-temp'.freeze
 
   # An integration test of the AWS S3 wrapper that runs against the actual AWS service.
   def test_aws_s3
