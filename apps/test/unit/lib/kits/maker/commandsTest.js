@@ -10,13 +10,13 @@ import {
   onBoardEvent,
   pinMode
 } from '@cdo/apps/lib/kits/maker/commands';
-import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
+import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 
 describe('maker commands', () => {
   let stubBoardController;
 
   beforeEach(() => {
-    stubBoardController = sinon.createStubInstance(BoardController);
+    stubBoardController = sinon.createStubInstance(CircuitPlaygroundBoard);
     injectBoardController(stubBoardController);
   });
 

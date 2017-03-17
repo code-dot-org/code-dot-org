@@ -64,14 +64,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'query by state' do
     workshop_not_started = @workshop
-    workshop_in_progress = create :pd_workshop
-    workshop_in_progress.started_at = Time.now
-    workshop_in_progress.save!
-
-    workshop_ended = create :pd_workshop
-    workshop_ended.started_at = Time.now
-    workshop_ended.ended_at = Time.now + 1.hour
-    workshop_ended.save!
+    workshop_in_progress = create :pd_workshop, started_at: Time.now
+    workshop_ended = create :pd_ended_workshop
 
     not_started = Pd::Workshop.in_state(Pd::Workshop::STATE_NOT_STARTED)
     assert_equal 1, not_started.count
@@ -84,6 +78,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     ended = Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED)
     assert_equal 1, ended.count
     assert_equal workshop_ended.id, ended[0][:id]
+  end
+
+  test 'query by state with invalid state' do
+    e = assert_raises RuntimeError do
+      Pd::Workshop.in_state 'invalid'
+    end
+    assert_equal 'Unrecognized state: invalid', e.message
+
+    assert_empty Pd::Workshop.in_state 'invalid', error_on_bad_state: false
   end
 
   test 'wont start without a session' do
@@ -340,6 +343,64 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       Pd::Workshop.end_on_or_after(pivot_date).end_on_or_before(pivot_date).pluck(:id)
   end
 
+  test 'order_by_start' do
+    # 5 workshops in date order, each with 1-5 sessions (only the first matters)
+    workshops = 5.times.map do |i|
+      build :pd_workshop, num_sessions: rand(1..5), sessions_from: Date.today + i.days
+    end
+    # save out of order
+    workshops.shuffle.each(&:save!)
+
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_scheduled_start.pluck(:id)
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_scheduled_start(desc: false).pluck(:id)
+    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_scheduled_start(desc: true).pluck(:id)
+  end
+
+  test 'order_by_enrollment_count' do
+    # Deleted enrollment should not be counted
+    create :pd_enrollment, workshop: @workshop, deleted_at: Time.now
+
+    # Workshops with 0 (not counting deleted), 1 and 2 enrollments
+    workshops = [
+      @workshop,
+      build(:pd_workshop, num_enrollments: 1),
+      build(:pd_workshop, num_enrollments: 2)
+    ]
+    # save out of order
+    workshops.shuffle.each(&:save!)
+
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_enrollment_count.pluck(:id)
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_enrollment_count(desc: false).pluck(:id)
+    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_enrollment_count(desc: true).pluck(:id)
+  end
+
+  test 'order_by_enrollment_count with duplicates' do
+    workshops = [
+      @workshop,
+      build(:pd_workshop),
+      build(:pd_workshop, num_enrollments: 1),
+    ]
+    # save out of order
+    workshops.shuffle.each(&:save!)
+
+    assert_equal [0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map{|w| w.enrollments.count}
+    assert_equal [1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map{|w| w.enrollments.count}
+  end
+
+  test 'order_by_state' do
+    workshops = [
+      build(:pd_ended_workshop), # Ended
+      build(:pd_workshop, started_at: Time.now), # In Progress
+      @workshop, # Not Started
+    ]
+    # save out of order
+    workshops.shuffle.each(&:save!)
+
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_state.pluck(:id)
+    assert_equal workshops.map(&:id), Pd::Workshop.order_by_state(desc: false).pluck(:id)
+    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
+  end
+
   test 'time constraints' do
     # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
     workshop_2_3_18 = create :pd_workshop,
@@ -360,16 +421,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 1, workshop_no_constraint.min_attendance_days
     assert_equal 2, workshop_no_constraint.effective_num_days
     assert_equal 12, workshop_no_constraint.effective_num_hours
-  end
-
-  test 'plp' do
-    assert_nil @workshop.professional_learning_partner
-
-    # Now create a plp associated with the organizer
-    plp = create :professional_learning_partner, contact: @organizer
-
-    assert @workshop.professional_learning_partner
-    assert_equal plp, @workshop.professional_learning_partner
   end
 
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do

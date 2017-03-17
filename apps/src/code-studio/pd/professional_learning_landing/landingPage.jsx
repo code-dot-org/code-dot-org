@@ -6,15 +6,15 @@ import React from 'react';
 import CsFundamentalsSection from './csFundamentalsSection';
 import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSection';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
-import UpcomingWorkshops from './upcomingWorkshops';
+import {UpcomingWorkshops} from './upcomingWorkshops';
 import _ from 'lodash';
 
 const CSPCSDcourses = ['CS Principles', 'CS Discoveries'];
 
 const LandingPage = React.createClass({
   propTypes: {
-    coursesCompleted: React.PropTypes.arrayOf(React.PropTypes.string),
-    coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string),
+    coursesCompleted: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     lastWorkshopSurveyUrl: React.PropTypes.string,
     lastWorkshopSurveyCourse: React.PropTypes.string,
     printCsfCertificateUrl: React.PropTypes.string,
@@ -26,7 +26,7 @@ const LandingPage = React.createClass({
       <div
         style={{
           width: '100%',
-          height: '400px',
+          height: '300px',
           background: `url(https://code.org/images/homepage/sheryl.jpg) no-repeat`,
           backgroundSize: 'cover',
           display: 'flex',
@@ -52,7 +52,7 @@ const LandingPage = React.createClass({
   },
 
   shouldRenderCSFSection() {
-    return !!(this.props.coursesTaught && this.props.coursesTaught.includes('CS Fundamentals'));
+    return this.props.coursesTaught.includes('CS Fundamentals');
   },
 
   shouldRenderCSPCSDSection() {
@@ -61,33 +61,48 @@ const LandingPage = React.createClass({
   },
 
   render() {
+    const csFundamentalsSection = this.shouldRenderCSFSection() && (
+      <CsFundamentalsSection
+        key="csFundamentalsSection"
+        csfCompleted={this.props.coursesCompleted.includes('CS Fundamentals')}
+        lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyCourse === 'CS Fundamentals' ? this.props.lastWorkshopSurveyUrl : null}
+        printCsfCertificateUrl={this.props.printCsfCertificateUrl}
+      />
+    );
+
+    const csPrinciplesAndDiscoveriesSection = this.shouldRenderCSPCSDSection() && (
+      <CsPrinciplesAndDiscoveriesSection
+        key="csPrinciplesAndDiscoveriesSection"
+        lastWorkshopSurveyUrl={['CS Principles', 'CS Discoveries'].includes(this.props.lastWorkshopSurveyCourse) ? this.props.lastWorkshopSurveyUrl : null}
+        coursesCompleted={this.props.coursesCompleted}
+      />
+    );
+
+    const upcomingWorkshops = (
+      <UpcomingWorkshops
+        key="upcomingWorkshops"
+      />
+    );
+
+    const plcData = !_.isEmpty(this.props.professionalLearningCourseData) && (
+      <ProfessionalLearningCourseProgress
+        professionalLearningCourseData={this.props.professionalLearningCourseData}
+        key="plcData"
+      />
+    );
+
+    let order = [];
+
+    if (this.props.lastWorkshopSurveyUrl) {
+      order = _.compact([csFundamentalsSection, csPrinciplesAndDiscoveriesSection, upcomingWorkshops, plcData]);
+    } else {
+      order = _.compact([upcomingWorkshops, csFundamentalsSection, csPrinciplesAndDiscoveriesSection, plcData]);
+    }
+
     return (
       <div>
         {this.renderHeaderImage()}
-        {this.shouldRenderCSFSection() && (
-            <CsFundamentalsSection
-              lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyCourse === 'CS Fundamentals' ? this.props.lastWorkshopSurveyUrl : null}
-              printCsfCertificateUrl={this.props.printCsfCertificateUrl}
-            />
-          )
-        }
-        {
-          this.shouldRenderCSPCSDSection() && (
-          <CsPrinciplesAndDiscoveriesSection
-            lastWorkshopSurveyUrl={['CS Principles', 'CS Discoveries'].includes(this.props.lastWorkshopSurveyCourse) ? this.props.lastWorkshopSurveyUrl : null}
-            coursesCompleted={this.props.coursesCompleted}
-          />
-        )
-        }
-        {
-          <UpcomingWorkshops/>
-        }
-        {
-          !_.isEmpty(this.props.professionalLearningCourseData) &&
-          <ProfessionalLearningCourseProgress
-            professionalLearningCourseData={this.props.professionalLearningCourseData}
-          />
-        }
+        {order}
       </div>
     );
   }

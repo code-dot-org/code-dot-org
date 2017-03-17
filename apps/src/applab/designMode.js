@@ -14,7 +14,7 @@ import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
 import * as gridUtils from './gridUtils';
 import logToCloud from '../logToCloud';
-import * as actions from './actions';
+import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 
 var designMode = {};

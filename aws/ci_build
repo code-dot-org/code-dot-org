@@ -27,10 +27,10 @@ require 'cdo/honeybadger'
 require 'cdo/rake_utils'
 require 'cdo/only_one'
 
-STARTED = 'build-started'
+STARTED = 'build-started'.freeze
 CHAT_LOG_TAIL_LENGTH = 40
-S3_LOGS_BUCKET = 'cdo-build-logs'
-S3_LOGS_PREFIX = CDO.name
+S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
+S3_LOGS_PREFIX = CDO.name.freeze
 
 # Upload the given log to the logs s3 bucket.
 # @param [String] key where uploaded log should be located

@@ -15,7 +15,7 @@
     "instructions": "This time, use lines of 8 hexagons with 25 pixel sides.",
     "ideal": "14",
     "embed": "false",
-    "markdown_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.\r\n\r\n- To make each hexagon, repeat the 6 times, turning 60 degrees.\r\n- To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
+    "markdown_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.\r\n\r\n- To make each hexagon, repeat the side 6 times, turning 60 degrees.\r\n- To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -35,6 +35,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This drawing is a lot like the last one, except the function draws a different kind of line.\",\"hint_id\":\"courseD_artist_functions10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d4e6bb67e3a582bf6e1a5a1aa3bf01c6/courseD_artist_functions10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.\",\"hint_id\":\"courseD_artist_functions10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fe26bc24785bd33e6ab8b75fe9f18325/courseD_artist_functions10.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -46,53 +48,26 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="draw_move" inline="true" limit="1">
+          <block type="draw_move_by_constant" limit="1">
             <title name="DIR">moveForward</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">100</title>
           </block>
-          <block type="jump" inline="true">
+          <block type="jump_by_constant">
             <title name="DIR">jumpForward</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">100</title>
           </block>
-          <block type="draw_turn" inline="true">
+          <block type="draw_turn_by_constant">
             <title name="DIR">turnRight</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">90</title>
           </block>
-          <block type="draw_turn" inline="true">
+          <block type="draw_turn_by_constant">
             <title name="DIR">turnLeft</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">90</title>
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
+          <block type="draw_width_inline">
+            <title name="WIDTH">1</title>
           </block>
           <block type="draw_colour" inline="true">
             <value name="COLOUR">
@@ -106,42 +81,10 @@
               <block type="colour_random"/>
             </value>
           </block>
-          <block type="alpha" inline="true" id="alpha">
-            <value name="VALUE">
-              <block type="math_number_dropdown">
-                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_colour" inline="true" id="draw-color">
-            <value name="COLOUR">
-              <block type="colour_rgb" inline="false">
-                <value name="RED">
-                  <block type="math_number">
-                    <title name="NUM">255</title>
-                  </block>
-                </value>
-                <value name="GREEN">
-                  <block type="math_number">
-                    <title name="NUM">255</title>
-                  </block>
-                </value>
-                <value name="BLUE">
-                  <block type="math_number">
-                    <title name="NUM">255</title>
-                  </block>
-                </value>
-              </block>
-            </value>
-          </block>
         </category>
         <category name="Loops">
-          <block type="controls_repeat_ext" inline="true">
-            <value name="TIMES">
-              <block type="math_number">
-                <title name="NUM">3</title>
-              </block>
-            </value>
+          <block type="controls_repeat">
+            <title name="TIMES">4</title>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">

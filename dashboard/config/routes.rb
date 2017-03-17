@@ -48,6 +48,8 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
+  get 'docs/*docs_route', to: 'docs_proxy#get'
+
   resources :sections, only: [:show] do
     member do
       post 'log_in'
@@ -232,6 +234,8 @@ Dashboard::Application.routes.draw do
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
+  get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
+  post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -303,6 +307,9 @@ Dashboard::Application.routes.draw do
   concern :api_v1_pd_routes do
     namespace :pd do
       resources :workshops do
+        collection do
+          get :filter
+        end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
           post :end
@@ -323,6 +330,7 @@ Dashboard::Application.routes.draw do
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
+      resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
 
       get :teacher_applications, to: 'teacher_applications#index'
@@ -330,12 +338,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'my_professional_learning', to: 'pd/professional_learning_landing#index'
+
   namespace :pd do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-    get 'professional_learning_landing', to: 'professional_learning_landing#index'
 
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
@@ -344,6 +352,7 @@ Dashboard::Application.routes.draw do
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
@@ -374,6 +383,7 @@ Dashboard::Application.routes.draw do
     end
   end
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
+  get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'

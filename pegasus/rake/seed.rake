@@ -270,10 +270,12 @@ namespace :seed do
     end
   end
 
+  desc 'import any modified seeds'
   task migrate: imports.keys.map{|i| stub_path(i)} do
     Dir.glob(pegasus_dir('data/*.csv')){|i| CsvToSqlTable.new(i).import}
   end
 
+  desc 'drop and import all seeds'
   task reset: imports.keys do
     Dir.glob(pegasus_dir('data/*.csv')){|i| CsvToSqlTable.new(i).import!}
   end
@@ -282,13 +284,7 @@ namespace :seed do
     Dir.glob(pegasus_dir('data/*.gsheet')){|i| GSheetToCsv.new(i).import}
   end
 
+  desc 'update remote seeds and import any modified'
   task sync: [:sync_v3, sync_tasks, :migrate].flatten do
-  end
-
-  task :help do
-    puts "seed:help - display this message"
-    puts "seed:migrate - import any modified seeds"
-    puts "seed:reset - drop and import all seeds"
-    puts "seed:sync - update remote seeds and import any modified"
   end
 end

@@ -70,11 +70,24 @@ namespace :ci do
     end
   end
 
-  task all: [
-    'firebase:ci',
-    :build_with_cloudfront,
-    :deploy_multi
-  ]
+  desc 'Publish a new tag and release to GitHub'
+  task :publish_github_release do
+    begin
+      RakeUtils.system "bin/create-release --force"
+      ChatClient.log '<a href="https://github.com/code-dot-org/code-dot-org/releases/latest">New release created</a>'
+    rescue RuntimeError => e
+      ChatClient.log 'Failed to create a new release.', color: 'red'
+      ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text', color: 'red'
+    end
+  end
+
+  all_tasks = []
+  all_tasks << 'firebase:ci'
+  all_tasks << :build_with_cloudfront
+  all_tasks << :deploy_multi
+  all_tasks << :publish_github_release if rack_env?(:production)
+  task all: all_tasks
+
   task test: [
     :all,
     'test:ci'

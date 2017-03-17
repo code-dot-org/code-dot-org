@@ -9,20 +9,28 @@ var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 export const ICON_PREFIX = 'icon://';
 export const ICON_PREFIX_REGEX = new RegExp('^icon://');
 
+export const SOUND_PREFIX = 'sound://';
+export const SOUND_PREFIX_REGEX = new RegExp('^sound://');
+
 const DEFAULT_ASSET_PATH_PREFIX = '/v3/assets/';
+export const DEFAULT_SOUND_PATH_PREFIX = '/api/v1/sound-library/';
 const DEFAULT_CHANNEL_ID = undefined;
 
 let assetPathPrefix = DEFAULT_ASSET_PATH_PREFIX;
+let soundPathPrefix = DEFAULT_SOUND_PATH_PREFIX;
 let channelId = DEFAULT_CHANNEL_ID;
 
 export function init(config) {
   assetPathPrefix = config.assetPathPrefix || DEFAULT_ASSET_PATH_PREFIX;
+  soundPathPrefix = config.soundPathPrefix || DEFAULT_SOUND_PATH_PREFIX;
   channelId = config.channel || DEFAULT_CHANNEL_ID;
 }
 
 /**
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
+ *
+ * If the sound filename starts with 'sound://', replace it with the api path.
  *
  * If the filename URL is absolute, route it through the MEDIA_PROXY.
  * @param {string} filename
@@ -47,13 +55,16 @@ export function fixPath(filename) {
     return '/blockly/media/1x1.gif';
   }
 
+  if (SOUND_PREFIX_REGEX.test(filename)) {
+    return filename.replace(SOUND_PREFIX, soundPathPrefix);
+  }
+
   if (filename.indexOf('/') !== -1 || !channelId) {
     return filename;
   }
 
   return assetPathPrefix + channelId + '/' + filename;
 }
-
 
 /**
  * Create a data-URI with the image data of the given icon glyph.
