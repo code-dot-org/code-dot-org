@@ -23,7 +23,11 @@
 #  index_peer_reviews_on_submitter_id     (submitter_id)
 #
 
+require 'cdo/shared_constants'
+
 class PeerReview < ActiveRecord::Base
+  include SharedConstants
+
   belongs_to :submitter, class_name: 'User'
   belongs_to :reviewer, class_name: 'User'
   belongs_to :script
@@ -175,7 +179,7 @@ class PeerReview < ActiveRecord::Base
             reviews.size < script.peer_reviews_to_complete &&
             PeerReview.get_potential_reviews(script, user).any?
           reviews << {
-            status: 'not_started',
+            status: LEVEL_STATUS.not_tried,
             name: I18n.t('peer_review.review_new_submission'),
             result: ActivityConstants::UNSUBMITTED_RESULT,
             icon: '',
@@ -189,7 +193,7 @@ class PeerReview < ActiveRecord::Base
   def summarize
     return {
       id: id,
-      status: status.nil? ? 'not_started' : 'perfect',
+      status: status.nil? ? LEVEL_STATUS.not_tried : LEVEL_STATUS.perfect,
       name: status.nil? ? I18n.t('peer_review.review_in_progress') : I18n.t('peer_review.link_to_submitted_review'),
       result: status.nil? ? ActivityConstants::UNSUBMITTED_RESULT : ActivityConstants::BEST_PASS_RESULT,
       locked: false

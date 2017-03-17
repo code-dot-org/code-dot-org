@@ -43,7 +43,7 @@ class ReportAbuseController < ApplicationController
         'REQUEST_PATH' => channels_path,
         'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
         'rack.input' => StringIO.new
-        )
+      )
 
       abuse_score = JSON.parse(body[0])["abuse_score"]
 

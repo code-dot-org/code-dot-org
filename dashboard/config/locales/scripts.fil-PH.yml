@@ -759,6 +759,7 @@
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
+            Standalone video: Standalone video
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -2890,3 +2891,61 @@
           description_audience: ''
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage: []
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: 'COMING SOON: In mid-February, this page will host the CSP
+            Unit 5 Professional Learning Course. '
+        csp6-support:
+          stage: []
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of
+            resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+        unit6-csd-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+            Foo: Foo
+            Lists: Mga listahan
+            Lights: Lights
+          title: Draft Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''

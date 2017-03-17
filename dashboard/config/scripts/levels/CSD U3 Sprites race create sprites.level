@@ -8,20 +8,11 @@
     "skin": "gamelab",
     "code_functions": {
       "drawSprites": null,
-      "var sprite = createSprite": {
-        "params": [
-          "200",
-          "200"
-        ],
-        "paletteParams": [
-          "x",
-          "y"
-        ]
-      },
+      "var sprite = createSprite": null,
       "x": null,
       "y": null,
-      "sprite.width": null,
-      "sprite.height": null,
+      "width": null,
+      "height": null,
       "shapeColor": null,
       "background": null,
       "comment": null,
@@ -31,11 +22,13 @@
       "color": null,
       "stroke": null,
       "noStroke": null,
+      "strokeWeight": null,
       "noFill": null,
       "ellipse": null,
       "text": null,
       "textSize": null,
       "textAlign": null,
+      "randomNumber_min_max": null,
       "addOperator": null,
       "subtractOperator": null
     },
@@ -74,6 +67,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "encrypted_examples": "NZVSO1rMuSB05OU+4HfKwXlyrCAPWgDFf3+vfFyYdt3AO9fGKBWhpiOCcNLO\nbChR\n",
+    "hide_share_and_remix": "false",
     "contained_level_names": null
   },
   "published": true,

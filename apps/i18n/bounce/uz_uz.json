@@ -1,9 +1,9 @@
 {
   "basketballLaunchBall": "yangi koptokni oting",
   "basketballLaunchBallTooltip": "O'yinga koptok oting.",
-  "basketballSetPaddle": "set hand",
-  "basketballSetPaddleSpeedFast": "set fast hand speed",
-  "basketballSetPaddleSpeedNormal": "set normal hand speed",
+  "basketballSetPaddle": "qo‘lni belgilang",
+  "basketballSetPaddleSpeedFast": "tez qo‘l tezligi",
+  "basketballSetPaddleSpeedNormal": "o‘rtacha qo‘l tezligi",
   "basketballSetPaddleSpeedRandom": "set random hand speed",
   "basketballSetPaddleSpeedSlow": "set slow hand speed",
   "basketballSetPaddleSpeedTooltip": "Sets the speed of the hand",

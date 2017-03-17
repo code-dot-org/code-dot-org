@@ -52,7 +52,7 @@ class SqlTable
       }
     )
   rescue Sequel::UniqueConstraintViolation
-      # catch and ignore
+    # catch and ignore
   end
 
   def ensure_metadata

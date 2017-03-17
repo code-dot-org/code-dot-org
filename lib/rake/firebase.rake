@@ -1,5 +1,5 @@
 require_relative '../../deployment'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'cdo/rake_utils'
 
 namespace :firebase do
@@ -15,7 +15,7 @@ namespace :firebase do
   desc 'Uploads compiled security rules to firebase from the apps package.'
   task :upload_rules do
     if CDO.firebase_name
-      HipChat.log 'Uploading security rules to firebase...'
+      ChatClient.log 'Uploading security rules to firebase...'
       Dir.chdir(dashboard_dir) do
         if rack_env?(:development) && !`readlink public/blockly`.include?('apps/build/package')
           STDERR.puts "\nWARNING: you are uploading firebase rules from the precompiled apps package.\n"\
@@ -36,7 +36,7 @@ namespace :firebase do
   desc 'Sets config in the firebase database from CDO config params.'
   task :set_config do
     if CDO.firebase_name
-      HipChat.log 'Setting firebase configuration parameters...'
+      ChatClient.log 'Setting firebase configuration parameters...'
       Dir.chdir(apps_dir) do
         url = "https://#{CDO.firebase_name}.firebaseio.com/v3/config.json?auth=#{CDO.firebase_secret}"
         config = {
@@ -59,7 +59,7 @@ namespace :firebase do
   desc 'Clear all channels data, but only on the test machine'
   task :clear_test_channels do
     if rack_env?(:test) && CDO.firebase_name == 'cdo-v3-test'
-      HipChat.log 'Clearing firebase channels data...'
+      ChatClient.log 'Clearing firebase channels data...'
       url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels.json?auth=#{CDO.firebase_secret}"
       RakeUtils.system("curl -X PUT -d 'null' '#{url}'")
     end

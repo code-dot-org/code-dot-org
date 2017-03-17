@@ -2,7 +2,6 @@
 
 require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/db'
-require 'cdo/hip_chat'
 require 'net/http'
 require 'parallel'
 require 'time'
@@ -57,14 +56,13 @@ def set_firebase_properties(encrypted_channel_id, properties_data)
 
   original_keys = properties_data.keys
   original_keys.each do |key|
-    if ILLEGAL_CHAR_REGEX.match(key)
-      # TODO(dave): remove this line and reenable this block once data blocks / data browser handle illegal characters
-      raise "skipping key name containing illegal characters: #{key}"
-      # legal_key = key.gsub(ILLEGAL_CHAR_REGEX, '-')
-      # puts "renaming key #{key} to #{legal_key} in channel #{encrypted_channel_id}"
-      # properties_data[legal_key] = properties_data[key]
-      # properties_data.delete(key)
-    end
+    next unless ILLEGAL_CHAR_REGEX.match(key)
+    # TODO(dave): remove this line and reenable this block once data blocks / data browser handle illegal characters
+    raise "skipping key name containing illegal characters: #{key}"
+    # legal_key = key.gsub(ILLEGAL_CHAR_REGEX, '-')
+    # puts "renaming key #{key} to #{legal_key} in channel #{encrypted_channel_id}"
+    # properties_data[legal_key] = properties_data[key]
+    # properties_data.delete(key)
   end
   put_with_auth(properties_url, properties_data.to_json)
 end

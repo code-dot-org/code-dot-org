@@ -173,7 +173,7 @@
     "edit_code": true,
     "embed": "true",
     "instructions_important": "false",
-    "start_blocks": "onEvent(\"colorDropdown\", \"change\", function(event) {\r\n  if (getText(\"colorDropdown\") == \"Red\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"red\");\r\n  } else if (getText(\"colorDropdown\") == \"Orange\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"orange\");\r\n  } else if (getText(\"colorDropdown\") == \"Yellow\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"yellow\");\r\n  } else if (getText(\"colorDropdown\") == \"Green\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"green\");\r\n  } else if (getText(\"colorDropdown\") == \"Blue\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"blue\");\r\n  } else if (getText(\"colorDropdown\") == \"Purple\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"purple\");\r\n  }\r\n});\r\nonEvent(\"ageSlider\", \"change\", function(event) {\r\n  setText(\"ageDisplay\", getNumber(\"ageSlider\"));\r\n});\r\nonEvent(\"nameInput\", \"change\", function(event) {\r\n  setText(\"nameDisplay\", getText(\"nameInput\"));\r\n});",
+    "start_blocks": "onEvent(\"colorDropdown\", \"change\", function(event) {\r\n  if (getText(\"colorDropdown\") == \"Red\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"red\");\r\n  } else if (getText(\"colorDropdown\") == \"Orange\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"orange\");\r\n  } else if (getText(\"colorDropdown\") == \"Yellow\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"yellow\");\r\n  } else if (getText(\"colorDropdown\") == \"Green\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"green\");\r\n  } else if (getText(\"colorDropdown\") == \"Blue\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"blue\");\r\n  } else if (getText(\"colorDropdown\") == \"Purple\") {\r\n    setProperty(\"profileBackground\", \"background-color\", \"purple\");\r\n  }\r\n});\r\nonEvent(\"ageSlider\", \"change\", function(event) {\r\n  setText(\"ageDisplay\", getNumber(\"ageSlider\"));\r\n});\r\nonEvent(\"nameInput\", \"input\", function(event) {\r\n  setText(\"nameDisplay\", getText(\"nameInput\"));\r\n});",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -207,6 +207,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Stop\r\n\r\nYou have reached the end of the lesson. Check in with your teacher to see if you should work on the challenge level before you start. This is an extra challenge to practice your skills if you have time. If you don't have time for it no big deal!\r\n\r\n# Challenge\r\n\r\nGo to <a href=\"studio.code.org/p/gamelab\" target=\"_blank\"> Full Game Lab </a> and try to make your own profile creator like the example program on this level.",
+    "hide_share_and_remix": "false",
     "contained_level_names": null
   },
   "published": true,

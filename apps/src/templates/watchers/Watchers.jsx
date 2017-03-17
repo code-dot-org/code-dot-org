@@ -88,6 +88,7 @@ export const Watchers = React.createClass({
     add: React.PropTypes.func.isRequired,
     update: React.PropTypes.func.isRequired,
     remove: React.PropTypes.func.isRequired,
+    style: React.PropTypes.object,
   },
 
   getInitialState: function () {
@@ -150,7 +151,7 @@ export const Watchers = React.createClass({
   },
 
   scrollToBottom() {
-    this.refs.scrollableContainer.scrollTop = this.refs.scrollableContainer.scrollHeight;
+    this.scrollableContainer.scrollTop = this.scrollableContainer.scrollHeight;
   },
 
   addButtonClick() {
@@ -332,7 +333,12 @@ export const Watchers = React.createClass({
         id="debugger-watch-container"
         style={styles.watchContainer}
       >
-        <div id="debug-watch" ref="scrollableContainer" className="debug-watch">
+        <div
+          id="debug-watch"
+          ref={scrollableContainer => this.scrollableContainer = scrollableContainer}
+          className="debug-watch"
+          style={this.props.style}
+        >
           {
             this.props.watchedExpressions.map(wv => {
               const varName = wv.get('expression');
@@ -399,21 +405,12 @@ export const Watchers = React.createClass({
   }
 });
 
-export const ConnectedWatchers = connect(state => {
-  return {
+export const ConnectedWatchers = connect(
+  state => ({
     watchedExpressions: state.watchedExpressions,
     isRunning: state.runState.isRunning
-  };
-}, dispatch => {
-  return {
-    add(expression) {
-      dispatch(add(expression));
-    },
-    update(expression, value) {
-      dispatch(update(expression, value));
-    },
-    remove(expression) {
-      dispatch(remove(expression));
-    },
-  };
-})(Watchers);
+  }),
+  {add, update, remove},
+  null,
+  {withRef: true}
+)(Watchers);

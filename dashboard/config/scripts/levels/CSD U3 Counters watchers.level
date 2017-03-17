@@ -72,6 +72,9 @@
     "instructions_important": "false",
     "show_debug_watch": "true",
     "encrypted_examples": "hoYAnDRk8I5Le4YGAxvozPVa+oTKalJO/aDFjLV3+6IqeEG8HdkV6G868pLt\n8hn7\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

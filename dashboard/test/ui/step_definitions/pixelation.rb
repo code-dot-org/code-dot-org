@@ -6,7 +6,7 @@ end
 When /^I save pixelation data and reload$/ do
   steps %{
     And I press "save_image"
-    And I wait for 5 seconds
+    And I wait until jQuery Ajax requests are finished
     And I reload the page
     And I wait to see "#x-close"
     And element ".modal-body .dialog-title" is visible
@@ -18,8 +18,7 @@ end
 When /^I finish pixelation level and reload$/ do
   pathname = @browser.execute_script("return location.pathname")
   steps %{
-    And I press "finished"
-    And I get redirected away from "#{pathname}"
+    And I press "finished" to load a new page
     And I am on "http://studio.code.org#{pathname}?noautoplay=true"
     And I wait to see "#x-close"
     And element ".modal-body .dialog-title" is visible

@@ -146,7 +146,7 @@ var initWallMap = function () {
 /**
  * PIDs of animation tasks currently executing.
  */
-var timeoutList = require('../timeoutList');
+import * as timeoutList from '../lib/util/timeoutList';
 
 function drawMap() {
   var svg = document.getElementById('svgMaze');
@@ -330,7 +330,7 @@ function drawMap() {
       idStr: 'move',
       pegmanImage: skin.movePegmanAnimation,
       numColPegman: 4,
-      numRowPegman: 9
+      numRowPegman: (skin.movePegmanAnimationFrameNumber || 9)
     });
   }
 }

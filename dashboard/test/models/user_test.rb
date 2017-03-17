@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
@@ -11,6 +10,56 @@ class UserTest < ActiveSupport::TestCase
   test 'make_teachers_21' do
     teacher = create :teacher, birthday: Time.now - 18.years
     assert_equal '21+', teacher.age
+  end
+
+  # Disable this test if and when we do require teachers to complete school data
+  test 'school info should not be validated' do
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: nil
+    }
+    assert_creates(User) do
+      create :teacher, school_info_attributes: school_attributes
+    end
+  end
+
+  test 'ensure school info values are saved correctly when state and zip are passed in different ways' do
+    # state and zip fields are usually passed as school_state and school_zip, but should
+    # be accepted both ways when preprocessed
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      school_state: 'CA',
+      school_zip: '94107'
+    }
+    teacher = create :teacher, school_info_attributes: school_attributes
+    assert teacher.school_info.state == 'CA', teacher.school_info.state
+    assert teacher.school_info.zip == 94107, teacher.school_info.zip
+
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: 'CA',
+      zip: '94107'
+    }
+    teacher = create :teacher, school_info_attributes: school_attributes
+    assert teacher.school_info.state == 'CA', teacher.school_info.state
+    assert teacher.school_info.zip == 94107, teacher.school_info.zip
+  end
+
+  test 'identical school info should not be duplicated in the database' do
+    school_attributes = {
+      country: 'US',
+      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+      state: 'CA'
+    }
+    teachers = create_list(:teacher, 2, school_info_attributes: school_attributes)
+    attr = teachers[0].process_school_info_attributes(school_attributes)
+    school_info = SchoolInfo.where(attr).first
+    assert teachers[0].school_info == school_info, "Teacher info: #{teachers[0].school_info.inspect} not equal to #{school_info.inspect}"
+    assert teachers[1].school_info == school_info, "Teacher info: #{teachers[1].school_info.inspect} not equal to #{school_info.inspect}"
+    assert SchoolInfo.where(attr).count == 1
   end
 
   test 'normalize_email' do
@@ -269,18 +318,32 @@ class UserTest < ActiveSupport::TestCase
     user = create(:user)
     assert_equal [], user.gallery_activities
 
-    create(:activity, user: user) # not saved to gallery
-    assert_equal [], user.gallery_activities
+    assert_does_not_create(GalleryActivity) do
+      create(:user_level, user: user)
+    end
 
-    activity2 = create(:activity, user: user)
-    ga2 = GalleryActivity.create!(activity: activity2, user: user)
-    assert_equal [ga2], user.reload.gallery_activities
+    ga2 = nil
+    assert_creates(GalleryActivity) do
+      user_level2 = create(:user_level, user: user)
+      ga2 = GalleryActivity.create!(
+        user: user,
+        user_level: user_level2
+      )
+    end
 
-    create(:activity, user: user) # not saved to gallery
-    assert_equal [ga2], user.reload.gallery_activities
+    assert_does_not_create(GalleryActivity) do
+      create(:user_level, user: user)
+    end
 
-    activity4 = create(:activity, user: user)
-    ga4 = GalleryActivity.create!(activity: activity4, user: user)
+    ga4 = nil
+    assert_creates(GalleryActivity) do
+      user_level4 = create(:user_level, user: user)
+      ga4 = GalleryActivity.create!(
+        user: user,
+        user_level: user_level4
+      )
+    end
+
     assert_equal [ga4, ga2], user.reload.gallery_activities
   end
 
@@ -326,7 +389,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'tester', user.username
   end
 
-  test 'can get next unfinished level if not completed any unplugged levels' do
+  test 'can get next_unpassed_progression_level if not completed any unplugged levels' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
@@ -343,13 +406,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(35, user.next_unpassed_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next unfinished level, not tainted by other user progress' do
+  test 'can get next_unpassed_progression_level, not tainted by other user progress' do
     user = create :user
+    other_user = create :user
     twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
       UserLevel.create(
-        user: create(:user),
+        user: other_user,
         level: script_level.level,
         script: twenty_hour,
         attempts: 1,
@@ -357,6 +421,107 @@ class UserTest < ActiveSupport::TestCase
       )
     end
     assert_equal(2, user.next_unpassed_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when most recent level is not passed' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+
+    twenty_hour.script_levels.each do |script_level|
+      next if script_level.chapter != 3
+      UserLevel.create(
+        user: user,
+        level: script_level.level,
+        script: twenty_hour,
+        attempts: 1,
+        best_result: Activity::MINIMUM_FINISHED_RESULT
+      )
+    end
+
+    # The level we most recently had progress on we did not pass, so that's
+    # where we should go
+    assert_equal(3, user.next_unpassed_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when most recent level is last level' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+
+    script_level = twenty_hour.script_levels.last
+    UserLevel.create(
+      user: user,
+      level: script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    # User's most recent progress is on last level in script. There's nothing
+    # following it, so just return to the last level
+    assert_equal(script_level.chapter, user.next_unpassed_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when most recent level is only followed by unplugged levels' do
+    user = create :user
+    script = create :script
+
+    script_levels = [
+      create(:script_level, script: script, levels: [create(:maze)]),
+      create(:script_level, script: script, levels: [create(:maze)]),
+      create(:script_level, script: script, levels: [create(:unplugged)]),
+    ]
+    create :user_script, user: user, script: script
+
+    UserLevel.create(
+      user: user,
+      level: script_levels[1].level,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    # User's most recent progress is on second last level of script, but none of
+    # the levels after it are "progression" levels. Just return to the last level
+    # we made progress on.
+    assert_equal(2, user.next_unpassed_progression_level(script).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when most recent level not a progression level' do
+    user = create :user
+    script = create :script
+
+    script_levels = [
+      create(:script_level, script: script, levels: [create(:maze)]),
+      create(:script_level, script: script, levels: [create(:unplugged)]),
+      create(:script_level, script: script, levels: [create(:unplugged)]),
+      create(:script_level, script: script, levels: [create(:maze)]),
+    ]
+    create :user_script, user: user, script: script
+
+    UserLevel.create(
+      user: user,
+      level: script_levels[1].level,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    # User's most recent progress is on unplugged level, that is followed by another
+    # unplugged level. We should end up at the first non unplugged level
+    assert_equal(4, user.next_unpassed_progression_level(script).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when we have no progress' do
+    user = create :user
+    script = create :script
+
+    create(:script_level, script: script, levels: [create(:maze)])
+    create(:script_level, script: script, levels: [create(:maze)])
+    create :user_script, user: user, script: script
+
+    # User's most recent progress is on unplugged level, that is followed by another
+    # unplugged level. We should end up at the first non unplugged level
+    assert_equal(1, user.next_unpassed_progression_level(script).chapter)
   end
 
   test 'script with inactive level completed is completed' do
@@ -726,7 +891,7 @@ class UserTest < ActiveSupport::TestCase
       )
     end
 
-    user.backfill_user_scripts
+    user.backfill_user_scripts([twenty_hour, hoc])
     assert_equal [twenty_hour, hoc], user.working_on_scripts
   end
 
@@ -758,7 +923,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       assert_creates(UserScript) do
-        user.backfill_user_scripts
+        user.backfill_user_scripts([script])
       end
 
       user_script = UserScript.last
@@ -808,7 +973,7 @@ class UserTest < ActiveSupport::TestCase
       complete_script_for_user(student, script, completed_date)
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts
+        student.backfill_user_scripts([script])
       end
 
       user_script = UserScript.last
@@ -841,7 +1006,7 @@ class UserTest < ActiveSupport::TestCase
       ul.save!
 
       assert_creates(UserScript) do
-        student.backfill_user_scripts
+        student.backfill_user_scripts [script]
       end
 
       user_script = UserScript.last
@@ -866,7 +1031,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.needs_to_backfill_user_scripts?
 
     assert_creates(UserScript) do
-      user.backfill_user_scripts
+      user.backfill_user_scripts [script]
     end
 
     # now is backfilled (has a user script)
@@ -919,7 +1084,7 @@ class UserTest < ActiveSupport::TestCase
       password: "[FILTERED]",
       password_confirmation: "[FILTERED]",
       current_password: "",
-      locale: "en-us",
+      locale: "en-US",
       gender: "",
       age: "10"
     )
@@ -1096,6 +1261,20 @@ class UserTest < ActiveSupport::TestCase
 
     User.expects(:track_proficiency).never
     track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
+  end
+
+  test 'track_level_progress_sync does call track_profiency when manual_pass to perfect' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    UserLevel.create!(
+      user: user,
+      level: csf_script_level.level,
+      script: Script.get_from_cache('20-hour'),
+      best_result: ActivityConstants::MANUAL_PASS_RESULT
+    )
+
+    User.expects(:track_proficiency).once
+    track_progress(user.id, csf_script_level, 100)
   end
 
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
@@ -1492,7 +1671,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.permission?(UserPermission::LEVELBUILDER)
 
-    ActiveRecord::Base.connection.disconnect!
+    no_database
 
     assert user.permission?(UserPermission::FACILITATOR)
     refute user.permission?(UserPermission::LEVELBUILDER)
@@ -1619,5 +1798,49 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.update(email: 'valid@example.net')
     refute user.update(email: 'invalid@incomplete')
+  end
+
+  test 'find_or_create_teacher creates new teacher' do
+    admin = create :admin
+
+    params = {
+      email: 'email@example.net',
+      name: 'test user'
+    }
+
+    user = assert_creates(User) do
+      User.find_or_create_teacher params, admin
+    end
+    assert user.teacher?
+    assert_equal admin, user.invited_by
+  end
+
+  test 'find_or_create_teacher finds existing teacher' do
+    admin = create :admin
+    teacher = create :teacher
+
+    params = {
+      email: teacher.email,
+      name: teacher.name
+    }
+
+    found = assert_does_not_create(User) do
+      User.find_or_create_teacher params, admin
+    end
+    assert_equal teacher, found
+  end
+
+  test 'find_or_create_teacher with an invalid email raises ArgumentError' do
+    admin = create :admin
+
+    params = {
+      email: 'invalid',
+      name: 'test user'
+    }
+
+    e = assert_raises ArgumentError do
+      User.find_or_create_teacher params, admin
+    end
+    assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
   end
 end

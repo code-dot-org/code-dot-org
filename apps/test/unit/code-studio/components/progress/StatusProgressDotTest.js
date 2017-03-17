@@ -6,8 +6,9 @@ import sinon from 'sinon';
 import { StatusProgressDot } from
   '@cdo/apps/code-studio/components/progress/StatusProgressDot';
 import * as stageLockRedux from '@cdo/apps/code-studio/stageLockRedux';
-import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { SignInState } from '@cdo/apps/code-studio/progressRedux';
+import { TestResults } from '@cdo/apps/constants';
 
 const ViewType = stageLockRedux.ViewType;
 
@@ -27,7 +28,7 @@ describe('StatusProgressDot', () => {
     level: {
       icon: null,
       ids: [5275],
-      kind: 'assessment',
+      kind: LevelKind.assessment,
       next: [2, 1],
       position: 1,
       previous: false,
@@ -36,29 +37,24 @@ describe('StatusProgressDot', () => {
       uid: '5275_0',
       url: '/test-url'
     },
+    levelProgress: {
+      // teacher has perfect status
+      '5275_0': TestResults.ALL_PASS,
+    },
     courseOverviewPage: true,
     postMilestoneDisabled: false,
     signInState: SignInState.SignedIn,
-    saveAnswersBeforeNavigation: false
+    saveAnswersBeforeNavigation: false,
+    lessonIsLockedForAllStudents: () => false
   };
-  const level = baseProps.level; // TODO - get rid of
-
-  before(() => {
-    sinon.stub(stageLockRedux, 'fullyLockedStageMapping', () => ({
-      [fullyLockedStageId]: true,
-      [partiallyLockedStageId]: false
-    }));
-  });
-  after(() => {
-    stageLockRedux.fullyLockedStageMapping.restore();
-  });
 
   describe('handling lockable assessments', () => {
     it('overrides status to be locked when viewing fully locked section as student', () => {
       const props = {
         ...baseProps,
         stageId: fullyLockedStageId,
-        viewAs: ViewType.Student
+        viewAs: ViewType.Student,
+        lessonIsLockedForAllStudents: () => true
       };
 
       const wrapper = shallow(<StatusProgressDot {...props}/>);
@@ -69,7 +65,8 @@ describe('StatusProgressDot', () => {
       const props = {
         ...baseProps,
         stageId: fullyLockedStageId,
-        viewAs: ViewType.Teacher
+        viewAs: ViewType.Teacher,
+        lessonIsLockedForAllStudents: () => true
       };
       const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.perfect);
@@ -79,7 +76,8 @@ describe('StatusProgressDot', () => {
       const props = {
         ...baseProps,
         stageId: partiallyLockedStageId,
-        viewAs: ViewType.Student
+        viewAs: ViewType.Student,
+        lessonIsLockedForAllStudents: () => false
       };
       const wrapper = shallow(<StatusProgressDot {...props}/>);
       assert.equal(statusFromWrapper(wrapper), LevelStatus.perfect);
@@ -129,8 +127,10 @@ describe('StatusProgressDot', () => {
       const props = {
         ...baseProps,
         level: {
-          ...baseProps.level,
-          status: LevelStatus.locked
+          ...baseProps.level
+        },
+        levelProgress: {
+          5275: TestResults.LOCKED_RESULT
         },
         stageId: partiallyLockedStageId,
         viewAs: ViewType.Student,

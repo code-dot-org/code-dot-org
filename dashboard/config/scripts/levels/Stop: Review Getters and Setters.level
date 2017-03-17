@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Stop\r\n\r\n## Reflection\r\n\r\nQuestions:\r\n\r\n* What is the difference between getters and setters?\r\n* Why would you want to save the information from a getter in a variable?\r\n\r\nOnce you have answered the questions above check with your teacher.\r\n\r\n## Extension\r\n\r\nCheck with your teacher if they want you to keep going on do the extension below:\r\n\r\n* Return to level ?? and try to make your alarm app play a sound when the alarm is triggered. Make the sound stop playing when the alarm is stopped. For this you will need some blocks that are not available in the toolbox on the level. Click \"Remix\" at the top of the level to get the full toolbox.\r\n\r\n* Return to level ?? and add an image UI element to the picker level with the dropdown. Figure out how to make the choice from the dropdown determine what image that shows.  For this you will need some blocks that are not available in the toolbox on the level. Click \"Remix\" at the top of the level to get the full toolbox.\r\n",
+    "markdown_instructions": "# Reflection\r\n\r\nQuestions:\r\n\r\n* What is the difference between getters and setters?\r\n* Why would you want to save the information from a getter in a variable?",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",

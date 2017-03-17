@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 
-  TEMPLATES = %w(projects)
+  TEMPLATES = %w(projects).freeze
 
   STANDALONE_PROJECTS = {
     artist: {
@@ -40,7 +40,7 @@ class ProjectsController < ApplicationController
     eval: {
       name: 'Eval Free Play'
     }
-  }.with_indifferent_access
+  }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
 
@@ -131,6 +131,9 @@ class ProjectsController < ApplicationController
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
     )
+    if params[:key] == 'artist'
+      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+    end
     render 'levels/show'
   end
 
@@ -157,18 +160,6 @@ class ProjectsController < ApplicationController
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
-  end
-
-  # GET /projects/section/:section_id
-  #
-  # displays a UI component showing the list of projects belonging to students
-  # in the specified section. This is designed to be embedded in another page
-  # as an iframe.
-  def section_projects
-    view_options(
-      no_footer: true,
-      no_header: true,
-    )
   end
 
   private

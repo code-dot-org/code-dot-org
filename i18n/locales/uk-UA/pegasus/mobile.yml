@@ -196,7 +196,7 @@
   just_did_course4: "Щойно завершено Курс 4 - подивіться! @codeorg"
   just_did_accelerated: "Щойно завершено Прискорений курс - подивіться! @codeorg"
   twitter_teach_cs: "9 з 10 людей погоджуються із тим, інформатику потрібно викладати у школах. http://youtu.be/nKIu9yen5nc. Відвідайте https://code.org/."
-  twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
+  twitter_cs_foundational: "Інформатика є основою, яку має вивчати кожен учень.\nhttps://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Вивчати Годину Коду"
   beyond_hoc: "Поза Годиною коду"
   what_gender: "Якої ви статі?"
@@ -416,8 +416,8 @@
   sports_select_theme: "Обери тему підручника"
   sports_basketball_title: "Зроби гру в баскетбол"
   sports_all_sports_title: "Закодуй власний спорт"
-  sports_featured_athletes: "See featured athletes"
-  sports_athletes_title: "Featured athletes"
+  sports_featured_athletes: "Переглянути прославлених спортсменів"
+  sports_athletes_title: "Прославлені спортсмени"
   sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
   sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
   sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
@@ -765,7 +765,10 @@
   dashboard_announce_mc_launch: "Один із наших найпопулярніших підручників отримав продовження! Зовсім нова Година коду від Майнкрафт - Розробник дозволяє створити власні правила світу Майнкрафт. Можна створити абсолютно унікальний досвід Майнкрафт, а тоді поділитись ним із друзями, або пограти на своєму телефоні. Зробіть це зі своїм класом на Годині коду."
   dashboard_announce_hoc_scaling_progress: "Будь ласка, зверніть увагу, що ми не зберігаємо прогрес учнів у цьому курсі з 3 по 11 грудня через високий рівень трафіку на нашому сайті протягом Години коду. Ви можете переглядати прогрес учнів до 3 грудня. Ми повернемось до звичного збереження прогресу за тиждень."
   dashboard_announce_how_code_studio: "Для того, щоб почати використовувати інформатику на своїх уроках, не потрібен попередній досвід. Code.org пропонує навчальні програми, плани уроків, високоякісні програми підвищення кваліфікації та море чудових інструментів для всіх класів &mdash; все, що потрібно, і безкоштовно. Думаєте звідки починати? Завантажте <a href='%{video_download_url}'>цей ролик</a>!"
-  dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+  dashboard_announce_go_beyond: "Підіть далі Години коду, і щотижня пізнавайте поняття інформатики разом зі своїми учнями. Code.org пропонує курс навчання, плани уроків, високоякісні професійні навчальні програми, та безліч чудових інструментів для всіх рівнів навчання — і все це безкоштовно. :) Вам не потрібно мати жодного досвіду, щоби почати вчити інформатики в своєму класі. <b>Підберіть наступний крок, який найбільше підходить вашому класові.</b>"
+  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "Година коду вже тут - 8-14 грудня!"
   code_sign_up: "Зареєструватися для участі протягом тижня інформатики"
   host_an_hour: "Проведіть Годину коду"
@@ -877,6 +880,12 @@
   course2_name: "Курс 2"
   course3_name: "Курс 3"
   course4_name: "Курс 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "Прискорений курс"
   cspunit1_name: 'Розділ 1: Цифрова інформація'
   cspunit2_name: 'Розділ 2: Інтернет'
@@ -894,6 +903,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Повний тест - 50 запитань"
   cspexam1-mWU7ilDYM9_name: Тест, частина 1 - 25 запитань
   cspexam2-AKwgAh1ac5_name: Тест, частина 2 - 25 запитань
@@ -915,6 +925,7 @@
   math_category_name: "Математика"
   hoc_category_name: "Година коду"
   csf_category_name: "Основи інформатики"
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 принципи інформатики"
   csp17_category_name: "'16-'17 принципи інформатики"

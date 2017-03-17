@@ -39,11 +39,10 @@ class AdminReportsController < ApplicationController
           # Determine whether the level is a multi question, replacing the
           # numerical answer with its corresponding text if so.
           level_info = Level.where(id: level_id).pluck(:type, :properties).first
-          if level_info && level_info[0] == 'Multi' && !level_info[1].empty?
-            level_answers = level_info[1]["answers"]
-            @responses[level_id].each do |response|
-              response[2] = level_answers[response[2].to_i]["text"]
-            end
+          next unless level_info && level_info[0] == 'Multi' && !level_info[1].empty?
+          level_answers = level_info[1]["answers"]
+          @responses[level_id].each do |response|
+            response[2] = level_answers[response[2].to_i]["text"]
           end
         end
       end
@@ -57,7 +56,7 @@ class AdminReportsController < ApplicationController
 
   def level_completions
     require 'date'
-# noinspection RubyResolve
+    # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
     @is_sampled = false

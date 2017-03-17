@@ -1151,8 +1151,8 @@
         image: notes/C2_bee_debugging_2.png
         text: Hai a tua disposizione una serie di blocchi già pronti nell'area di
           lavoro. Clicca su "Fai un passo" (step) per eseguire questi blocchi passo
-          dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario
-          risolvere un problema.
+          dopo passo e verificare se la soluzione è giusta, oppure se è necessario
+          correggere un errore.
       3:
         image: notes/C2_bee_debugging_3.png
         text: Sembra proprio che ci sia un problema! Devi aggiungere un altro blocco
@@ -1500,8 +1500,8 @@
         image: notes/C3_debugging_bee_2.png
         text: Hai a tua disposizione una serie di blocchi già pronti nell'area di
           lavoro. Clicca su "Fai un passo" (step) per eseguire questi blocchi passo
-          dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario
-          risolvere un problema.
+          dopo passo e verificare se la soluzione è giusta, oppure se è necessario
+          correggere un errore.
       3:
         image: notes/C3_debugging_bee_3.png
         text: Sembra proprio che ci sia un problema! Devi aggiungere un altro blocco
@@ -1900,12 +1900,12 @@
         text: Per esempio, un blocco "ripeti 3 volte" conta da 1 a 3 con un incremento
           di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il "ciclo
           con contatore" sa quante volte è stato eseguito grazie alla variabile "contatore"
-          (counter) che viene impostata al valore iniziale all'inizio del ciclo e
-          a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito.
+          (<i>counter</i>) che viene impostata al valore iniziale all'inizio del ciclo
+          e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito.
           Non appena la variabile "contatore" diventa più grande del valore finale,
           il ciclo si arresta. Il vantaggio di usare un "ciclo con contatore" al posto
           di un blocco "ripeti … volte" sta nel fatto che si può vedere la variabile
-          "contatore" (counter) e usarla nel ciclo.
+          "contatore" (<i>counter</i>) e usarla nel ciclo.
       3:
         image: notes/C4_for_loops_3.png
         text: Il vantaggio di usare un vero "ciclo con contatore" (repeat counter
@@ -1934,12 +1934,12 @@
         text: Per esempio, un blocco "ripeti 3 volte" conta da 1 a 3 con un incremento
           di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il "ciclo
           con contatore" sa quante volte è stato eseguito grazie alla variabile "contatore"
-          (counter) che viene impostata al valore iniziale all'inizio del ciclo e
-          a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito.
+          (<i>counter</i>) che viene impostata al valore iniziale all'inizio del ciclo
+          e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito.
           Non appena la variabile "contatore" diventa più grande del valore finale,
           il ciclo si arresta. Il vantaggio di usare un "ciclo con contatore" al posto
           di un blocco "ripeti … volte" sta nel fatto che si può vedere la variabile
-          "contatore" (counter) e usarla nel ciclo.
+          "contatore" (<i>counter</i>) e usarla nel ciclo.
       3:
         image: notes/C4_for_loops_bee_3.png
         text: Il vantaggio di usare un vero "ciclo con contatore" (repeat counter

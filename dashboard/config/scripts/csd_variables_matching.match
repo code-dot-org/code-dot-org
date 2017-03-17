@@ -1,0 +1,59 @@
+name 'CSD: Variables Matching'
+question 'Program 3'
+answer '<img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">'
+question 'Program 2'
+answer '![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)'
+question 'Program 4'
+answer '![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)'
+question 'Program 1'
+answer '![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)'
+
+markdown <<MARKDOWN
+# Stop and Discuss
+
+This lesson was all about how to use **expressions** to be able to **use a variable like a counter**. To get more comfortable with how this works, try matching these 4 programs to their output. **Be prepared to justify your choices for each one**.
+
+**Program 1:**
+
+	var position = 0;
+    
+    function draw(){
+    	position = position + 1;
+    	background("white");
+        fill("red");
+        rect(position, 20, 50, 50);
+    }
+
+**Program 2:**
+
+	var position = 400;
+    
+    function draw(){
+    	position = position - 1;
+        background("white");
+        fill("red");
+        rect(20, position, 50, 50);
+    }
+
+**Program 3:**
+
+	var position = 0;
+    
+    function draw(){
+    	position = position + 0.5;
+        background("white");
+        fill("red");
+        rect(position, 20, 50, 50);
+    }
+
+**Program 4:**
+
+	var position = 400;
+    
+    function draw(){
+    	position = position - 1;
+        background("white");
+        fill("red");
+        rect(position, position, 50, 50);
+    }
+MARKDOWN

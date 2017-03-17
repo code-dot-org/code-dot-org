@@ -1002,6 +1002,7 @@
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
       AllTheThings Applab - Turtle move with button_instruction: |-
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
@@ -1015,6 +1016,11 @@
         levels (By design, applab levels only work if signed in. Normally, we make
         people sign in, but this is only enforceable for a whole script and would
         be annoying to do for the allthethings script).
+      allthethings level dataTables_instruction: |-
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
       allthethings_moviebot_instruction: |-
         This level cloned from "U3 Digital Assistant
         Target"
@@ -1661,9 +1667,9 @@
       Course 4 Artist Binary Free Play_instruction: 'Tempo di giocare: disegna qualunque
         cosa ti piaccia usando le stringhe binarie!'
       Course 4 Artist Binary pre1_instruction: |-
-        La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori.  In questa lezione usiamo i valori "spento" (rappresentato dal numero 0) e "acceso" (rappresentato dal numero 1).<br><br>
-        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br><br>
-        Riesci a far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101"?
+        La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori. In questa lezione usiamo i valori "spento" (rappresentato dal numero 0 e visualizzato in nero) e "acceso" (rappresentato dal numero 1 e visualizzato in verde scuro).<br>
+        Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br>
+        Riesci a far produrre all'artista il disegno mostrato nella prima riga, la cui codifica binaria è "01010101"?
       Course 4 Artist Binary ryan_instruction: |-
         La codifica binaria è una modalità di rappresentazione delle informazioni usando solo due valori.  In questa lezione usiamo i valori "spento" (rappresentato dal numero 0) e "acceso" (rappresentato dal numero 1).<br><br>
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.<br><br>
@@ -1689,8 +1695,8 @@
         girare per disegnarlo: usa un blocco matematico per calcolarlo.'
       Course 4 Artist For Loops 11a_instruction: |-
         Cerchiamo di mettere tutto insieme!  Usando le conoscenze che hai acquisito sui "cicli con contatore" e sulla variabile "contatore" (<i>counter</i>), prova a creare questo disegno in cui ogni figura ha due lati in più della precedente. Accertati che ogni lato sia 10 volte più lungo del numero di lati del poligono.<br><br>
-        Trovi già pronta solo una piccola parte del codice che ti serve.<br><br>Se vuoi altri suggerimenti leggi più sotto.<br><br>
-        <b>1) </b>360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo.<br><br>
+        <b>Suggerimenti</b>:<br>
+        <b>1) </b>360 diviso il numero di lati del poligono ti restituisce il numero di gradi di cui devi girare per disegnarlo.<br>
         <b>2) </b>in ogni poligono devi avanzare di quantità pari a 10 volte il numero di lati del poligono stesso.
       Course 4 Artist For Loops 12_instruction: Andava piuttosto bene, ma adesso vorrei
         disegnare ogni forma vicino alla precedente. Questa volta ogni lato è di 20
@@ -1706,17 +1712,22 @@
         questa spirale quadrata avvitata, prova ad usare il codice del precedente
         esercizio ruotando di 89 gradi, invece di 90 gradi.
       Course 4 Artist For Loops 15_instruction: |-
-        Tempo di giocare: scatena la tua fantasia e prova a disegnare qualunque cosa tu voglia usando i "cicli con contatore". Abbiamo aggiunto anche alcune variabili generiche che puoi utilizzare.<b>Nota</b>: se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca sul triangolino con la punta verso il basso accanto al nome della variabile.<br><br>
-        Nota che ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esplorare tutto ciò che è a tua disposizione.
+        Tempo di giocare: scatena la tua fantasia e prova a disegnare qualunque cosa tu voglia usando i "cicli con contatore". Abbiamo aggiunto anche alcune variabili generiche che puoi utilizzare.<br>
+        <b>Nota</b>: se vuoi, puoi cambiare nome alle variabili esistenti o introdurne di nuove. Clicca sul triangolino con la punta verso il basso accanto al nome della variabile.<br>
+        Nota che nella cassetta degli attrezzi abbiamo aggiunto la categoria delle "variabili" e nella categoria "pennelli" (<i>brushes</i>) ci sono dei nuovi blocchi. Prenditi un po' di tempo per esplorare tutto ciò che è a tua disposizione!
       Course 4 Artist For Loops 2_instruction: |-
         In questo esercizio il codice per disegnare un triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100 con "passo" di 10.<br>
-        Attenzione: assicurati di aver guardato bene il codice prima di cliccare su "Esegui".
+        <b>Attenzione</b>: assicurati di aver guardato bene il codice prima di cliccare su "Esegui".
       Course 4 Artist For Loops 3_instruction: |
-        Per disegnare questa figura usa come riferimento il codice del precedente esercizio. Il triangolo più piccolo ha i lati di 20 pixel, il triangolo più grande ha i lati di 200 pixel ed ogni triangolo è di 20 pixel più grande del precedente.
-      Course 4 Artist For Loops 4_instruction: 'Come puoi modificare quello che hai
-        imparato sui triangoli per disegnare questi quadrati? Il quadrato più piccolo
-        ha i lati di 15 pixel, il quadrato più grande ha i lati di 300 pixel ed ogni
-        quadrato è di 15 pixel più grande del precedente. '
+        Per disegnare questa figura usa come riferimento il codice del precedente esercizio. Il triangolo più piccolo ha i lati di 20 pixel, il triangolo più grande ha i lati di 200 pixel ed ogni triangolo, rispetto al precedente, ha il lato di 20 pixel più grande.
+      Course 4 Artist For Loops 4_instruction: |-
+        Come puoi modificare quello che hai imparato sui triangoli per disegnare questi quadrati? Il quadrato più piccolo ha i lati di 15 pixel, il quadrato più grande ha i lati di 300 pixel ed ogni quadrato, rispetto al precedente, ha il lato di 15 pixel più grande.<br><br>
+        <b>Suggerimento:</b>
+        Ecco le domande cui rispondere per trovare i valori da inserire al posto dei "???":<br>
+        Qual è il valore più piccolo che serve?<br>
+        Qual è il più grande?<br>
+        Qual è l'incremento necessario ad ogni ripetizione?<br>
+        <b>Nota</b>: ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esplorarle.
       Course 4 Artist For Loops 5_instruction: 'Ottimo lavoro sull''ultimo puzzle!,
         Usiamo di nuovo il blocco con la variabile COUNTER per disegnare questa immagine. '
       Course 4 Artist For Loops 6_instruction: Spazio Libero! Prova ad usare un ciclo
@@ -1728,7 +1739,7 @@
         In questo triangolo a spirale ogni lato è 20 pixels più lungo del precedente.
       Course 4 Artist For Loops 8_instruction: |-
         Per disegnare questa figura devi fare solo un piccolo cambiamento al codice del precedente esercizio. Riesci a capire di quale cambiamento si tratta?<br>
-        Suggerimento: devi eliminare qualcosa!
+        <b>Suggerimento</b>: devi eliminare qualcosa!
       Course 4 Artist For Loops 8a_instruction: Per disegnare questa figura devi fare
         solo un piccolo cambiamento al codice del precedente esercizio. Riesci a capire
         di quale cambiamento si tratta?
@@ -1736,8 +1747,8 @@
         in avanti da 1 a 75 pixels incrementando di 1 pixel ogni volta.
       Course 4 Artist For Loops Challenge_instruction: |-
         Riesci a capire come utilizzare tutte le cose che hai imparato finora per disegnare questa immagine composta di poligoni, tutti con lato di 40 pixel?<br><br>
-        Se vuoi dei suggerimenti leggi più sotto.<br><br>
-        <b>1)</b> Il poligono più grande ha 19 lati.<br><br>
+        Se vuoi dei suggerimenti leggi più sotto.<br>
+        <b>1)</b> Il poligono più grande ha 19 lati.<br>
         <b>2)</b> Tutti i poligoni sono incompleti, ossia ogni poligono viene disegnato con un lato di meno rispetto a quelli che dovrebbe avere ("<i>counter</i> - 1").
       Course 4 Artist For Loops Challenge_a_instruction: |-
         Can you figure out how
@@ -1747,10 +1758,10 @@
         a hint? Click here.
       Course 4 Artist For Loops inspire_instruction: |-
         <a href="https://studio.code.org/c/109045588" target="_blank">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
-        Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        <b>1)</b> La soluzione di questo esercizio è quasi uguale a quella dell'esercizio precedente... con un paio di cambiamenti.<br><br>
-        <b>2)</b> Prova ad usare un ciclo con contatore che va da 3 a 10 con passo di 1.<br><br>
-        <b>3)</b> All'interno del ciclo con contatore ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta del primo.<br><br>
+        Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br>
+        <b>1)</b> La soluzione di questo esercizio è quasi uguale a quella dell'esercizio precedente... con un paio di cambiamenti.<br>
+        <b>2)</b> Prova ad usare un ciclo con contatore che va da 3 a 10 con passo di 1.<br>
+        <b>3)</b> All'interno del ciclo con contatore ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta del primo.<br>
         Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/109045588" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Functions 1_instruction: Riesci a disegnare un quadrato con
         lato di 100 pixels, usando un CICLO?
@@ -1813,23 +1824,22 @@
         del codice ncessario per creare una funzione. Tuttavia ci sembra ci sia qualcosa
         che manca. Riouscite a fare in modo che questa funzione sia completa?
       Course 4 Artist Functions challenge_instruction: |-
-        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come i seguenti: clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> o poi clicca su "Esegui". Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
-        Vuoi realizzare una delle figure che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        <b>1)</b> Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.<br><br>
-        <b>2)</b> Per la figura 1, usa un "ciclo con contatore" all'esterno e al suo interno un ciclo "ripeti" che riutilizza la variabile "contatore" (counter).<br><br>
-        <b>3)</b> Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br><br>
-        <b>4)</b> Devi girare di 90 gradi dopo ogni ciclo "ripeti", ma sempre all'interno del "ciclo con contatore".<br><br>
-        <b>5)</b> Per la figura 2 usa il codice del precedente esercizio ed aggiungi un blocco "gira a ..." di 1 grado e mezzo all'interno del ciclo interno.<br><br>
-        Se vuoi sapere come sono state realizzate le figure che ti abbiamo mostrato, clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> e poi su "Come funziona" per scoprirlo.
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come i seguenti: clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> e poi clicca su "Esegui". Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
+        Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br>
+        <b>1)</b> Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.<br>
+        <b>2)</b> Usa un "ciclo con contatore" all'esterno e al suo interno un ciclo "ripeti" che riutilizza la variabile "contatore" (counter).<br>
+        <b>3)</b> Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br>
+        <b>4)</b> Devi girare di 90 gradi dopo ogni ciclo "ripeti", ma sempre all'interno del "ciclo con contatore".<br>
+        <b>5)</b> Usa il codice del precedente esercizio ed aggiungi un blocco "gira a ..." di 1 grado e mezzo all'interno del ciclo interno.<br>
+        Se vuoi sapere com'è stata realizzata la figura che ti abbiamo mostrato, clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Functions Inspiration_instruction: |-
-        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come i seguenti: clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> o poi clicca su "Esegui". Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
-        Vuoi realizzare una delle figure che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        <b>1)</b> Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.<br><br>
-        <b>2)</b> Per la figura 1, usa un "ciclo con contatore" all'esterno e al suo interno un ciclo "ripeti" che riutilizza la variabile "contatore" (counter).<br><br>
-        <b>3)</b> Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br><br>
-        <b>4)</b> Devi girare di 90 gradi dopo ogni ciclo "ripeti", ma sempre all'interno del "ciclo con contatore".<br><br>
-        <b>5)</b> Per la figura 2 usa il codice del precedente esercizio ed aggiungi un blocco "gira a ..." di 1 grado e mezzo all'interno del ciclo interno.<br><br>
-        Se vuoi sapere come sono state realizzate le figure che ti abbiamo mostrato, clicca su <a href="https://studio.code.org/c/159080658" target="_blank">figura 1</a> oppure su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> e poi su "Come funziona" per scoprirlo.
+        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo: clicca su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> e poi clicca su "Esegui". Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
+        Vuoi realizza la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br>
+        <b>1)</b> Un parte importante nel realizzare le funzioni è capire quali blocchi ti servono e quali no.<br>
+        <b>2)</b> Ad ogni ripetizione, disegna un quadratino e fai un salto in avanti.<br>
+        <b>3)</b> Devi girare di 90 gradi dopo ogni ciclo "ripeti", ma sempre all'interno del "ciclo con contatore".<br>
+        <b>4)</b> Usa il codice del precedente esercizio ed aggiungi un blocco "gira a ..." di 1 grado e mezzo all'interno del ciclo interno.<br>
+        Se vuoi sapere com'è stata realizzata la figura che ti abbiamo mostrato, clicca su <a href="https://studio.code.org/c/158991930" target="_blank">figura 2</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Functions inspire_instruction: "Tempo di giocare: guarda la
         figura che trovi al link https://studio.code.org/c/110671172. Ora hai imparato
         tutto quello che devi sapere per realizzare un disegno come questo! Se questa
@@ -1849,7 +1859,7 @@
         Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
         <b>1)</b> Dopo aver completato un quadrato, prova a saltare in avanti di metà della sua lunghezza, prima di girarti e cominciarne un altro.<br><br>
         <b>2)</b> Per disegnare una singola girandola, devi ripetere per 4 volte (con una svolta a sinistra nel mezzo) ogni quadrato e ogni salto in avanti.<br><br>
-        <b>3)</b> Per completare la figura, ogni girandola viene ripetuta per 4 volte, con una svolta a destra di 360/"lati" (<i>sides</b>) gradi tra l'una e l'altra.<br><br>
+        <b>3)</b> Per completare la figura, ogni girandola viene ripetuta per 4 volte, inserendo un salto in avanti pari alla lunghezza del quadrato ed una svolta a destra di 360/"lati" (<i>sides</i>) gradi tra l'una e l'altra.<br><br>
         Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/105765376" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       Course 4 Artist Params 1_instruction: Modifichiamo ora una funzione che disegna
         un quadrato con lati di 50 pixel
@@ -1911,9 +1921,9 @@
         che vedete il numero 3, sostituitelo con la variabile "lati". Ricordatevi
         di utilizzare il blocco che imposta i lati.
       Course 4 Artist Vars 11_instruction: Quello che vedi è un codice che utilizza,
-        in maniera più complessa, gli stessi concetti del precedente esercizio - quale
-        valore devi assegnare alla variabile "lati" (sides) per disegnare questa immagine
-        composta da quadrati?
+        in maniera più complessa, gli stessi concetti del precedente esercizio. Quale
+        valore devi assegnare alla variabile "lati" (<i>sides</i>) per disegnare questa
+        immagine composta da quadrati?
       Course 4 Artist Vars 12_instruction: Per disegnare la figura che vedi la variabile
         "lati" (<i>sides</i>) va impostata a 5. Se usi valori più grandi disegni poligoni
         con più lati ed ottieni una figura più grande! Nota che, oltre alla variabile
@@ -1944,14 +1954,14 @@
       Course 4 Artist Vars 5_instruction: Utilizzare la variabile "lati" per controllare
         quante volte questo ciclo debba essere eseguito.
       Course 4 Artist Vars 6_instruction: |-
-        Ecco del codice che ti consente di disegnare un qualsiasi poligono regolare. C'è una nuova variabile denominata "lati" (<i>sides/i>) che è impostata a 4. Riesci ad usare la variabile "lati" (insieme al blocco matematico) per girare del giusto numero di gradi a prescindere da quanti lati ci sono nel poligono?<br><br>
-        Suggerimento: il numero di gradi di cui girare ogni volta è dato da 360 diviso il numero di lati.
+        Ecco del codice che ti consente di disegnare un qualsiasi poligono regolare. C'è una nuova variabile denominata "lati" (<i>sides</i>) che è impostata a 4. Riesci ad usare la variabile "lati" (insieme al blocco matematico) per girare del giusto numero di gradi a prescindere da quanti lati ci sono nel poligono?<br><br>
+        <b>Suggerimento</b>: il numero di gradi di cui girare ogni volta è dato da 360 diviso il numero di lati.
       Course 4 Artist Vars 7_instruction: |-
         Utilizza ciò che hai imparato nel precedente esercizio per disegnare questo esagono usando la variabile "lati" (sides).<br><br>
         Hai notato che è possibile modificare un solo valore per disegnare un triangolo, un quadrato, un pentagono o un ottagono?
       Course 4 Artist Vars 8_instruction: |-
-        Tempo di giocare: facciamo un esperimento con il numero di "lati" (sides) delle figure. Riesci a modificare l'algoritmo affinché la dimensione complessiva della figura disegnata rimanga la stessa, indipendentemente dal numero dei suoi lati?<br><br>
-        Suggerimento: se dividi il valore di base della lunghezza del lato per il numero dei lati, la lunghezza del lato del poligono disegnato si accorcia man mano che il numero dei lati cresce.
+        Tempo di giocare: facciamo un esperimento con il numero di "lati" (<i>sides</i>) delle figure. Riesci a modificare l'algoritmo affinché la dimensione complessiva della figura disegnata rimanga la stessa, indipendentemente dal numero dei suoi lati?<br><br>
+        <b>Suggerimento</b>: se dividi il valore di base della lunghezza del lato per il numero dei lati, la lunghezza del lato del poligono disegnato si accorcia man mano che il numero dei lati cresce.
       Course 4 Artist Vars 9_instruction: Modificare questo algoritmo in modo che
         utilizzi la variabile "lati" invece di un numero fisso per disegnare un triangolo.
         Sostituisci il numero 3 con la variabile "lati" e utilizzare il blocco "imposta
@@ -2258,8 +2268,9 @@
         i numeri da 1 a 100. Utilizza un "ciclo con contatore" e il blocco "contatore"
         (<i>counter</i>) per far dire al cane il valore della variabile contatore
         ogni volta che il ciclo viene ripetuto.
-      Course 4 Play Labs For Loops 2_instruction: Questa volta, aiutate Olive il gatto
-        a conteggiare solo i numeri dispari da 1 a 101.
+      Course 4 Play Labs For Loops 2_instruction: |-
+        Adesso prova a far dire al gatto solo i numeri dispari da 1 a 101.<br><br>
+        <b>Suggerimento</b>: quale deve essere l'incremento ad ogni passo della variabile "contatore" (<i>counter</i>) per saltare i numeri pari?
       Course 4 Play Labs For Loops 3_instruction: Se contiamo con un passo più grande,
         nella stessa quantità di tempo possiamo contare fino ad un numero più grande.
         Prova a far contare il pirata da 10 a 1000, a passi di 10.
@@ -2316,10 +2327,10 @@
         quello che hai imparato finora per creare un gioco che includa un "ciclo con
         contatore"!'
       Course 4 Playlab For Loops 4b_instruction: |-
-        Questi due personaggi faranno una gara!<br><br>
-        Ognuno di essi si sposta ad ogni ripetizione di una distanza pari al valore del "contatore" (<i>counter</i>) nel loro "ciclo con contatore" (<i>Actor_1_counter</i> = "contatore del personaggio 1"). Nei loro cicli i contatori cambiano con un passo differente.<br><br>
-        Puoi modificare il passo di incremento di uno dei "cicli con contatore" in modo che la corsa finisca in parità?<br><br>Suggerimenti:<br><br>
-        <b>1: </b>I personaggi sono distanti 330 pixel dalle bandierine.<br><br>
+        Questi due personaggi devono fare una gara!<br>
+        Ognuno di essi si sposta ad ogni ripetizione di una distanza pari al valore del "contatore" (<i>counter</i>) nel loro "ciclo con contatore" (<i>Actor_1_counter</i> = "contatore del personaggio 1"). Nei loro cicli i contatori cambiano con un passo differente.<br>
+        Puoi modificare il passo di incremento di uno dei "cicli con contatore" in modo che la corsa finisca in parità?<br><b>Suggerimenti:</b><br>
+        <b>1: </b>I personaggi sono distanti 330 pixel dalle bandierine.<br>
         <b>2: </b>Come puoi far sì che alla fine del "ciclo con contatore" ogni personaggio abbia percorso la stessa distanza totale, nonostante i valori iniziali e finali del ciclo siano diversi?
       Course 4 Playlab For Loops 5b_instruction: |-
         Modifica il passo di questi due "cicli con contatore" in modo che i due personaggi si fermino nello stesso punto.<br><br>Suggerimenti:<br><br>
@@ -2592,10 +2603,205 @@
       course_playlab_variables3_instruction: |
         Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r
+      courseA_artist_loops1_instruction: |-
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      courseA_artist_loops10_instruction: |-
+        Help me put down stones so I don't fall
+        in!
+      courseA_artist_loops11_instruction: |-
+        Help me build steps to watch the ship
+        sail away.
+      courseA_artist_loops12_instruction: |-
+        The artist saw something funny in the
+        distance.  Draw what you think he saw.
+      courseA_artist_loops2_instruction: |-
+        Help the artist draw this line two times
+        forward.
+      courseA_artist_loops3_instruction: Draw a line forward five times.
+      courseA_artist_loops4_instruction: |-
+        Now, use a `repeat` loop to draw this line
+        five times!
+      courseA_artist_loops5_instruction: |-
+        Draw a line seven steps long. This will
+        become our horizon.
+      courseA_artist_loops6_instruction: Let's put a nice hill in the back.
+      courseA_artist_loops7_instruction: |-
+        Use the `repeat` loop to add waves to the
+        water.
+      courseA_artist_loops8_instruction: We need a ladder up to the boat.
+      courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
+      courseA_collector_loops1_instruction: |-
+        Move Laurel around and get as much gold
+        as you can!
+      courseA_collector_loops10_instruction: |-
+        Help me get all of the gold from this
+        deep valley.
+      courseA_collector_loops11_instruction: |-
+        Help me get all of the gold from this
+        cave.
+      courseA_collector_loops12_instruction: |-
+        Eureka!  Collect as much gold as you
+        can!
+      courseA_collector_loops2_instruction: |-
+        Here are three piles of gold!  Collect
+        all three.
+      courseA_collector_loops3_instruction: |-
+        How can Laurel collect all five piles
+        of gold using only one `[E-->]` block?
+      courseA_collector_loops4_instruction: |-
+        Fix Laurel's path to get all of this
+        gold.
+      courseA_collector_loops5_instruction: |-
+        Use what you learned to get all of the
+        coins.
+      courseA_collector_loops6_instruction: |-
+        Add blocks to this code to collect all
+        of the coins.
+      courseA_collector_loops7_instruction: |-
+        What should you add to this code to
+        get all of the gold?
+      courseA_collector_loops8_instruction: Write the code to get all of this gold.
+      courseA_collector_loops9_instruction: |-
+        **Challenge:** The gold goes all the
+        way up these stairs!  Write the code to help me get it all.
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
+      courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird\nto
+        the pig! "
+      courseA_maze_seq11_instruction: |-
+        Move one way, then another to get the bird
+        to the pig.
+      courseA_maze_seq12_instruction: 'Get that pig! '
+      courseA_maze_seq13_instruction: Get the pig any way you can!
       courseA_maze_seq2_instruction: Modifica il codice per farmi arrivare al maialino!
+      courseA_maze_seq3_instruction: Fix the code to get the bird to the pig!
+      courseA_maze_seq4_instruction: REMOVE a block to get the bird to the pig!
+      courseA_maze_seq5_instruction: Try this one yourself from the beginning.
+      courseA_maze_seq6_instruction: |-
+        Move one way, then another to get the bird
+        to the pig!
+      courseA_maze_seq7_instruction: |-
+        Figure out what is missing and then add blocks
+        to get the bird to the pig!
+      courseA_maze_seq8_instruction: Solve this level and get the bird to the pig!
+      courseA_maze_seq9_instruction: |-
+        Debug this level by adding blocks to get the
+        bird to the pig!
+      courseA_playLab_events1_instruction: |-
+        This is a Play Lab level.  Move blocks
+        to the workspace and see what happens!
+      courseA_playLab_events2_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
+      courseA_playLab_events3_instruction: |-
+        Connect the `move left` block to the
+        `when left` event block that is already in the workspace.
+      courseA_playLab_events4_instruction: |-
+        Now, get Jorge to move right when the
+        `right` button is clicked.
+      courseA_playLab_events5_instruction: |-
+        Add events to have Jorge move up and
+        down when the `up` and `down` buttons are pressed.
+      courseA_playLab_events6_instruction: |-
+        Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked.
+      courseA_playLab_events7_instruction: |-
+        Add anything you want to this game.  Can
+        you make the dinosaur disappear when Jorge runs into him?
+      courseA_video_events_instruction: Need a better playlab/events combo
+      courseB_artist_loops1_instruction: |-
+        This is a new type of puzzle called "Artist".
+        Play with the level and draw something fun.
+      courseB_artist_loops10_instruction: |-
+        Use what you have learned to draw a picture
+        of what you think the artist saw when he got home.
+      courseB_artist_loops2_instruction: |-
+        The Artist is trying to draw a line six
+        times, but can't get it right.  Can you help?
+      courseB_artist_loops3_instruction: |-
+        Help the artist draw a line 7 times to
+        make a garden wall.
+      courseB_artist_loops4_instruction: "Now we need to get the soil ready to plant.\nFind
+        the bugs in the code and help the artist prepare the ground. "
+      courseB_artist_loops5_instruction: |-
+        Time to fix the stairs!  Repeat this pattern
+        five times so the artist can reach the top of the bushes.
+      courseB_artist_loops6_instruction: Climb the vine and see where it goes?
+      courseB_artist_loops7_instruction: |-
+        **Challenge:**  It's a hidden garden!
+        Let's walk around.
+      courseB_artist_loops8_instruction: |-
+        Time to head home. Can you fix this ladder
+        to help the artist get down?
+      courseB_artist_loops9_instruction: |-
+        Let's take the short way home, over the
+        pond. Can you help the artist stay on the stones?
+      courseB_collector_loops1_instruction: |-
+        This is Laurel the Adventurer!  Can
+        you move her around and get gold?
+      courseB_collector_loops10_instruction: |-
+        Help Laurel get all of the gold from
+        this cave.
+      courseB_collector_loops11_instruction: |-
+        Eureka!  Collect as much gold as you
+        can!
+      courseB_collector_loops2_instruction: Four piles of gold!  Collect all four.
+      courseB_collector_loops3_instruction: |-
+        How can Laurel collect all five piles
+        of gold using only one `E -->` block?
+      courseB_collector_loops4_instruction: |-
+        Fix Laurel's path to get all of this
+        gold!
+      courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
+        get all of the gold. "
+      courseB_collector_loops6_instruction: |-
+        What should you add to this code to
+        get all of the gold?
+      courseB_collector_loops7_instruction: Write the code to get all of this gold.
+      courseB_collector_loops8_instruction: |-
+        **Challenge: ** The gold goes all the
+        way down these stairs!  Write the code to help Laurel get it all.
+      courseB_collector_loops9_instruction: |-
+        *"Help me get the gold from this deep
+        valley."*
+      courseB_collector_prog1_instruction: |-
+        This is Laurel the Adventurer!  Can you
+        move her around and get gold?
+      courseB_collector_prog2_instruction: Four piles of gold!  Collect all four.
+      courseB_collector_prog3_instruction: |-
+        How can Laurel collect all five piles
+        of gold using only one `E -->` block?
+      courseB_maze_seq1_instruction: |-
+        Play with these blocks to see what they make
+        the bird do!
+      courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
+      courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
+      courseB_maze_seq12_instruction: Now get that pig any way you can!
+      courseB_maze_seq2_instruction: '*"A bug! Fix the code to get me to the pig."*'
+      courseB_maze_seq3_instruction: '*"Fix the code to get me to the pig!"*'
+      courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
+      courseB_maze_seq5_instruction: Now try this puzzle from the start!
+      courseB_maze_seq6_instruction: |-
+        Move one way, then another to get the bird
+        to the pig!
+      courseB_maze_seq7_instruction: |-
+        Figure out what is missing and then add blocks
+        to get the bird to the pig!
+      courseB_maze_seq8_instruction: |-
+        Your turn!  What do you need to do to get the
+        bird to the pig?
+      courseB_maze_seq9_instruction: |-
+        Challenge: Move around the TNT to get the bird
+        to the pig.
+      courseB_maze_seqCold_instruction: |-
+        Challenge: Debug this level by adding blocks
+        to get the bird to the pig!
+      courseB_maze_seqOld_instruction: "Go around the TNT to get the bird to the\npig! "
+      courseB_playLab_events1_instruction: |-
+        See if you can figure out what each block
+        does.
       courseB_playlab_events2_instruction: |-
         Have Daisy the Dragon say something when
         you click "Run".
@@ -3387,6 +3593,32 @@
       courseF_artist_for9_instruction: |-
         Use the counter inside the `set alpha` block
         to get this faded center.
+      courseF_artist_fwp1_instruction: |-
+        Edit the function 'draw a square' to find
+        bugs.
+      courseF_artist_fwp2_instruction: |-
+        Edit the function to accept a parameter called
+        `length`.
+      courseF_artist_fwp3_instruction: |-
+        Create a function called 'draw a square'
+        and use it to outline these four boxes using parameters.
+      courseF_artist_fwp4_instruction: |-
+        Edit this function to add a parameter for
+        the number of sides in your polygon.
+      courseF_artist_fwp5_instruction: "Use the function from the last puzzle to\ndraw
+        this series of shapes.  "
+      courseF_artist_fwp6_instruction: |-
+        Challenge: Edit `draw a spiral edge` to use
+        `length` and `sides` parameters, then recreate these shapes.
+      courseF_artist_fwp7_instruction: |-
+        Finish off the `draw a spiral edge` function
+        to also ask for a minimum length for the center of the spiral.
+      courseF_artist_fwp8_instruction: |-
+        Can you figure out how to make this drawing
+        using the function that you just created?
+      courseF_artist_fwp9_instruction: |-
+        Freeplay: Draw something awesome! Play with
+        the pen width to see how different your drawings look!
       courseF_artist_variables1_instruction: |-
         Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side.
@@ -3482,6 +3714,22 @@
       courseF_bee_for9_instruction: |-
         Use the `counter` variable to navigate this
         garden with the fewest number of blocks possible.
+      courseF_bee_fwp2_instruction: |-
+        Pull this code into a function, then call the
+        function to check this row for nectar.
+      courseF_bee_fwp3_instruction: |-
+        Let's see if the function makes collecting
+        these three rows of nectar any easier.
+      courseF_bee_fwp4_instruction: |-
+        Add a `length` parameter to the function so
+        that it will still work when the row is a different length.
+      courseF_bee_fwp5_instruction: Use this function to collect the nectar.
+      courseF_bee_fwp6_instruction: Build a short and sweet solution to this puzzle.
+      courseF_bee_fwp7_instruction: |-
+        **Challenge:** Modify your function to make
+        honey as well.
+      courseF_bee_fwp8_instruction: Use your new function to solve this spiral.
+      courseF_bee_fwp9_instruction: Use your new function to solve this puzzle.
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of choose your own adventure story in play lab.
@@ -3800,6 +4048,18 @@
       CSDU4 nameAgeTemplate_instruction: |-
         Add an Text Input box for the name and
         age. (Click to see full instructions)
+      CSDU6 - Arrays - expressionsAsIndexes_instruction: |-
+        Write a program that displays
+        a randomly chosen color from the array. (Click to see full instructions)
+      CSDU6 - Arrays - indexPractice_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - Arrays - length_instruction: |-
+        Use list.length to determine the length
+        of each array. (Click to see full instructions)
+      CSDU6 - Arrays - lengthMinus1_instruction: |-
+        Use list.length - 1 to log the
+        last item in the array to the console. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -4945,6 +5205,7 @@
         Abbiamo aggiunto al gioco ancora un'altra funzione che puoi usare.<br><br>
         Programma il tuo gioco in modo tale da chiamare la funzione "sali di un livello" (<i>level_up</i>) se la variabile "punteggio" (<i>player_score</i>) diventa maggiore di un certo valore (per esempio: <i>player_score</i> > 6).<br><br>
         Clicca su "Esegui" per giocare e arriva al livello 3 per passare al prossimo esercizio.
+      FoodFight_instruction: This is an example of a game you can make in play lab.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Ora disegniamo 20 cerchi sovrapposti,
         girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?
@@ -6332,10 +6593,10 @@
         of the code has been provided for you.
       grade5_artist_for_loopsfreeplay11_instruction: |-
         <a href="https://studio.code.org/c/109045588" target="_blank">Clicca qui</a> e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
-        Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
-        <b>1)</b> La soluzione di questo esercizio è quasi uguale a quella dell'esercizio precedente... con un paio di cambiamenti.<br><br>
-        <b>2)</b> Prova ad usare un ciclo con contatore che va da 3 a 10 con passo di 1.<br><br>
-        <b>3)</b> All'interno del ciclo con contatore ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta del primo.<br><br>
+        Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br>
+        <b>1)</b> La soluzione di questo esercizio è quasi uguale a quella dell'esercizio precedente... con un paio di cambiamenti.<br>
+        <b>2)</b> Prova ad usare un ciclo con contatore che va da 3 a 10 con passo di 1.<br>
+        <b>3)</b> All'interno del ciclo con contatore ci sono due cicli uguali, ma il secondo ciclo gira nella direzione opposta del primo.<br>
         Vuoi sapere come è stata realizzata la figura che ti abbiamo mostrato? <a href="https://studio.code.org/c/109045588" target="_blank">Clicca qui</a> e poi su "Come funziona" per scoprirlo.
       grade5_artist_for_loopsfreeplay12_instruction: |-
         Free Play: Try using the `counter`
@@ -6814,6 +7075,9 @@
         Uh oh, I lost my map and can't remember what I planted.
         Every sprout could grow up to be corn, beans, or pumpkins. Can you write some
         code to pick all the crops, no matter what they are?
+      harvey_pixelation_instruction: |-
+        Encode an image of anything you like using
+        binary. The binary language will be represented with '0' and '1' only.
       Infinity_catch_instruction: Riesci a fare in modo che Elsa (il "personaggio
         2") raggiunga Anna usando i tasti freccia?
       Infinity_finale_instruction: Crea il tuo gioco con i personaggi di Disney Infinity
@@ -6845,6 +7109,9 @@
       Inspirational Artwork_instruction: |-
         <a href="https://studio.code.org/c/" target="_blank">Clicca qui</a> (LINK DA AGGIORNARE) e poi su "Esegui". Ora hai imparato tutto quello che devi sapere per realizzare un disegno come quello mostrato al precedente link! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.<br><br>
         Vuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:<br><br>
+      InspirationalArtwork_instruction: |-
+        If this picture inspires you, try to make
+        something similar. Otherwise, create something all your own.
       'Internet Simulator: Broadcast Mode_instruction': |
         Now use the Internet Simulator
         to send the battleship moves. For setup, join a Room with your group, and
@@ -7533,9 +7800,9 @@
         Clicca su "Chiudi" per salvare le modifiche.'
       NEW Course 4 Artist Functions 9_instruction: |-
         Riesci a risolvere questo esercizio aggiungendo un solo blocco?<br><br>
-        Se vuoi aiuto, ecco alcuni suggerimenti:<br><br>
-        <b>1: </b>Prova ad eseguire il codice prima di aggiungere qualunque blocco. Riesci a capire cos'è che fa disegnare il quadrato nel posto sbagliato?<br><br>
-        <b>2: </b>Se non riesci a capire in che punto il codice è sbagliato, prova a rallentare il movimento dell'artista spostando il regolatore di velocità verso il simbolo della tartaruga.<br><br>
+        Se vuoi aiuto, ecco alcuni suggerimenti:<br>
+        <b>1: </b>Prova ad eseguire il codice prima di aggiungere qualunque blocco. Riesci a capire cos'è che fa disegnare il quadrato nel posto sbagliato?<br>
+        <b>2: </b>Se non riesci a capire in che punto il codice è sbagliato, prova a rallentare il movimento dell'artista spostando il regolatore di velocità verso il simbolo della tartaruga.<br>
         <b>3: </b>Prova ad usare un blocco "gira a ... di ... gradi".
       NEW Course 4 Artist Functions inspire_instruction: "Tempo di giocare: guarda
         la figura che trovi al link https://studio.code.org/c/110671172. Ora hai imparato
@@ -7684,9 +7951,8 @@
         la variabile "contatore" (counter) cambia del valore indicato dal "passo".
         Prova a raccogliere il nettare da questi fiori usando un passo di 2.
       NEW Course 4 Bee For Loops 7_instruction: |-
-        Adesso, combiniamo la variabile "contatore" (counter) e un blocco matematico! Com'è possibile usare la variabile "contatore" per spostarsi usando il minor numero possibile di blocchi? Cosa bisogna fare questa volta per raccogliere 3, 6, 9, 12, 15 dosi di nettare? Il segreto è nella variabile "contatore"!<br><br>Ricordati che se il ciclo deve contare "a crescere" il valore del passo deve corrispondere ad un incremento.<br><br>Se vuoi altri suggerimenti leggi più sotto.<br><br>
-        1. Prova ad usare un blocco "ripeti ... volte" con la variabile "contatore".<br><br>
-        2. Prova ad usare nel "ciclo con contatore" un valore della variabile "counter" modificato con un blocco matematico.
+        Cosa devi fare in questo esercizio per raccogliere 3, 6, 9, 12, 15 dosi di nettare mentre ti sposti nel giardino? Il segreto è nella variabile "contatore" (<i>counter</i>)! Combina la variabile "contatore" e un blocco matematico per spostarti e contemporaneamente raccogliere la giusta quantità di miele.<br>Ricordati che se il ciclo deve contare "a crescere" il valore del passo deve corrispondere ad un incremento.<br><br>
+        <b>Suggerimento</b>: prova ad usare nel "ciclo con contatore" un valore della variabile "contatore" che viene modificato con un blocco matematico man mano che ti sposti e raccogli il nettare.
       NEW Course 4 Bee For Loops 8_instruction: |-
         Questo codice è da completare! Quale deve essere il "passo" in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?<br><br>
         <b>Suggerimento</b>: Se il ciclo deve contare "a crescere" il valore del passo deve corrispondere ad un incremento. Quanto bisogna aggiungere in questo caso ad ogni valore per ottenere il valore successivo nella sequenza?

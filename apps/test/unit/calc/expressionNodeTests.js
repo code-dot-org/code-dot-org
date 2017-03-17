@@ -2,7 +2,7 @@ import {assert} from '../../util/configuredChai';
 
 var ExpressionNode = require('@cdo/apps/calc/expressionNode');
 var Token = require('@cdo/apps/calc/token');
-var jsnums = require('@cdo/apps/calc/js-numbers/js-numbers');
+var jsnums = require('@code-dot-org/js-numbers');
 
 function isJsNumber(val) {
   return (val instanceof jsnums.Rational ||

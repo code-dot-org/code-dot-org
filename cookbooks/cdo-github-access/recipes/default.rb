@@ -6,6 +6,7 @@
 apt_repository 'git-core' do
   uri          'ppa:git-core/ppa'
   distribution 'trusty'
+  retries 3
 end
 
 apt_package 'git'

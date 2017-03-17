@@ -9,6 +9,10 @@ import { hide, pickNewAnimation, pickLibraryAnimation, beginUpload,
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 const HiddenUploader = window.dashboard.HiddenUploader;
 
+// Some operating systems round their file sizes, so max size is 101KB even
+// though our error message says 100KB, to help users avoid confusion.
+const MAX_UPLOAD_SIZE = 101000;
+
 /**
  * Dialog used for finding/selecting/uploading one or more assets to add to a
  * GameLab project.
@@ -108,7 +112,9 @@ export default connect(state => ({
     dispatch(pickLibraryAnimation(animation));
   },
   onUploadStart(data) {
-    if (data.files[0].type === 'image/png' || data.files[0].type === 'image/jpeg') {
+    if (data.files[0].size >= MAX_UPLOAD_SIZE) {
+      dispatch(handleUploadError(gamelabMsg.animationPicker_unsupportedSize()));
+    } else if (data.files[0].type === 'image/png' || data.files[0].type === 'image/jpeg') {
       dispatch(beginUpload(data.files[0].name));
       data.submit();
     } else {

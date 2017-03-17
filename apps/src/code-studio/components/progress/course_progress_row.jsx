@@ -6,7 +6,7 @@ import { stageShape } from './types';
 import StageProgress from './stage_progress';
 import TeacherStageInfo from './TeacherStageInfo';
 import { ViewType } from '../../stageLockRedux';
-import { isHiddenFromState } from '../../hiddenStageRedux';
+import { isHiddenForSection } from '../../hiddenStageRedux';
 import color from "../../../util/color";
 
 const styles = {
@@ -99,7 +99,7 @@ const CourseProgressRow = React.createClass({
 
     // redux provided
     sectionId: React.PropTypes.string,
-    hiddenStageMap: React.PropTypes.object.isRequired,
+    hiddenStageState: React.PropTypes.object.isRequired,
     showTeacherInfo: React.PropTypes.bool,
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lockableAuthorized: React.PropTypes.bool.isRequired,
@@ -107,12 +107,12 @@ const CourseProgressRow = React.createClass({
   },
 
   render() {
-    const { stage, sectionId, hiddenStageMap, lockableAuthorized } = this.props;
+    const { stage, sectionId, hiddenStageState, lockableAuthorized } = this.props;
     if (stage.lockable && !lockableAuthorized) {
       return null;
     }
 
-    const isHidden = isHiddenFromState(hiddenStageMap, sectionId, stage.id);
+    const isHidden = isHiddenForSection(hiddenStageState, sectionId, stage.id);
 
     return (
       <div
@@ -162,7 +162,7 @@ const CourseProgressRow = React.createClass({
 export default connect(state => {
   return {
     sectionId: state.sections.selectedSectionId,
-    hiddenStageMap: state.hiddenStage.get('bySection'),
+    hiddenStageState: state.hiddenStage,
     showTeacherInfo: state.progress.showTeacherInfo,
     viewAs: state.stageLock.viewAs,
     lockableAuthorized: state.stageLock.lockableAuthorized,

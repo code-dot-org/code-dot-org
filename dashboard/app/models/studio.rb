@@ -154,6 +154,12 @@ class Studio < Grid
   <block type="studio_setMap">
     <title name="VALUE">random</title>
   </block>
+  <block type="studio_setMapAndColor">
+    <title name="VALUE">random</title>
+    <value name="COLOR">
+      <block type="colour_picker"></block>
+    </value>
+  </block>
   <block type="studio_showTitleScreenParams">
     <value name="TITLE">
       <block type="text" />

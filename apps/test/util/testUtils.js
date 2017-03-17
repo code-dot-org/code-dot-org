@@ -21,7 +21,8 @@ export function setExternalGlobals() {
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; },
       useFirebase: function () { return false; },
-      useMakerAPIs: function () { return false; }
+      useMakerAPIs: function () { return false; },
+      isOwner: () => true,
     },
     assets: {
       showAssetManager: function () {},
@@ -290,4 +291,21 @@ export function throwOnConsoleWarnings() {
     console.warn.restore();
     firstError = null;
   });
+}
+
+const originalWindowValues = {};
+export function replaceOnWindow(key, newValue) {
+  if (originalWindowValues.hasOwnProperty(key)) {
+    throw new Error(`Can't replace 'window.${key}' - it's already been replaced.`);
+  }
+  originalWindowValues[key] = window[key];
+  window[key] = newValue;
+}
+
+export function restoreOnWindow(key) {
+  if (!originalWindowValues.hasOwnProperty(key)) {
+    throw new Error(`Can't restore 'window.${key}' - it wasn't replaced.`);
+  }
+  window[key] = originalWindowValues[key];
+  delete originalWindowValues[key];
 }

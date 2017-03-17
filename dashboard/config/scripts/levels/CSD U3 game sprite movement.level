@@ -38,6 +38,8 @@
     "pause_animations_by_default": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",
+    "encrypted_examples": "SDewzDkoYvxsl9CsyGPZb8lwQCpgRH0+ywhgqmajxmR/xpj1gGdVscvDt4Vu\nOG2U\n",
+    "hide_share_and_remix": "false",
     "contained_level_names": null
   },
   "published": true,

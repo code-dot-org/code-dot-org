@@ -111,7 +111,12 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "encrypted_examples": "ZbFUA5+52mAiu96wr5rVIWSm7X39+nqLO4qYujuv1SGXkLFR5km6nfBwodbC\nWBdq\n",
-    "contained_level_names": null
+    "contained_level_names": [
+      "CSD U3 Keypress Watchers Predict"
+    ],
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",

@@ -1,4 +1,4 @@
-"zh":
+"zh-CN":
   data:
     game:
       name:
@@ -116,7 +116,7 @@
         turtle_2_5: 试试画大小为50，60，70，80，和90的正方形。你可以使用五次"画一个正方形"的函数。
         turtle_2_6: "好的，在这个程序中将要使用计数器，来画一个和上次一样的正方形。你要画的正方形大小和计数器当前数字的大小相同。试试看怎么用“计数器”块。提示：
           它是在『变量』分类中。"
-        turtle_2_7: 这个程序可以画一个螺旋，但我们已经禁用了这些块，所以它们不能运行。你能不能试试看用 (在循环目录下的）"计数"块 和(在变量类别）"计数器"块
+        turtle_2_7: 这个程序可以画一个螺旋，但这些模块被禁用了，所以它们不能运行。你能不能试试看用 (在循环类别下的）"计数"块 和(在变量类别下的）"计数器"块
           画一个相同的螺旋。
         turtle_2_7_5: (在函数目录中）有一个新的函数："画一个雪人"。画两个雪人，一个高为250像素，一个高为100像素。
         turtle_2_8: 这个题目有点儿难。试试使用"画一个雪人"的函数和（在动作目录中）新的"向前跳"块。画3个颜色不同的雪人，每两个之间相隔 100
@@ -415,11 +415,13 @@
         infinity_playlab_intro: "游戏实验室 -- 简介"
         infinity_playlab_events: "游戏实验室 - 事件"
         infinity_playlab_repeat_forever: "游戏实验室 - 一直重复"
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_velocity: Velocity
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

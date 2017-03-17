@@ -95,18 +95,18 @@
       та проекти.
     hoc_already_signed_up_heading: "Розпочати роботу без входу"
     hoc_already_signed_up_content: Ви зареєструвались для проведення Години коду!
-      Вам і Вашим учням не потрібно реєструватись у Студії коду, щоб провести цей
-      захід. Щоб розпочати, <a href="https://code.org/learn">оберіть підручник</a>
-      для свого класу та поділіться посиланням на нього.<br/><br/>Якщо вам сподобається
-      Година коду, і захочете продовжити навчання, можна створити пароль та обліковий
-      запис для Студії коду, щоб зареєструвати своїх учнів на наші <a href="https://code.org/educate">триваліші
-      курси</a>.
-    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
-      To sign in to Code Studio, you’ll need to set up a password for your account.
-      This will let you save your progress and manage your classroom. You’ll be able
-      to assign courses to students and track their progress. <a href="%{studio_url}">You
-      can also continue to browse the various stages and puzzles</a> without creating
-      an account.
+      Вам і вашим учням не потрібно реєструватись у Студії коду, щоби взяти участь
+      у цьому заході. Щоб розпочати, <a href="%{learn_url}">оберіть підручник</a>
+      для свого класу, та поділіться з ними посиланням.<br/><br/>Якщо вам сподобається
+      Година коду, і ви захочете піти далі, то можна налаштувати пароль та створити
+      обліковий запис Студії коду, щоби реєструвати своїх учнів на будь-які з наших
+      <a href="%{educate_url}">триваліших курсів</a>.
+    hoc_already_signed_up_content_post_hoc: Дякуємо за проведення Години коду. Щоби
+      зареєструватися в Студії коду, вам знадобиться налаштувати пароль для свого
+      облікового запису. Це дасть вам можливість зберігати ваші досягнення та керувати
+      своїм класом. Ви зможете призначати курси учням, та відстежувати їхні досягнення.
+      <a href="%{studio_url}">Ви також можете продовжити перегляд різних етапів та
+      головоломок</a> без створення облікового запису.
     teacher_educator_guide: "Переглянути посібник для вчителя"
     title: "Реєстрація на Code.org"
     school_name: "Назва навчального закладу (необов'язково)"
@@ -158,6 +158,8 @@
     login: "Вхід"
     invalid_login: "Помилковий логін, будь ласка, спробуйте знову"
     pair_programming: "Я працюю з партнером за одним комп'ютером"
+    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
+      target='_blank'>here</a>.
   password:
     reset_form:
       title: "Забули пароль?"
@@ -366,9 +368,10 @@
       не видалить облікових записів ваших учнів."
     delete_confirm: "Ви впевнені, що бажаєте видалити обліковий запис?"
     deleted_user: "видалений користувач"
-    no_password_because_oauth: No password because you sign in with a third-party
-      provider.
-    no_password_because_sponsored: See your teacher to manage your password.
+    no_password_because_oauth: "Паролю немає, оскільки ви входите за допомогою стороннього
+      постачальника."
+    no_password_because_sponsored: "Для керування своїм паролем зверніться до свого
+      вчителя."
   user_level:
     completed: "Завершено"
     tried: "Спробував"
@@ -468,12 +471,29 @@
       програми, плани уроків, високоякісні програми підвищення кваліфікації та море
       чудових інструментів для всіх класів &mdash; все, що потрібно, і безкоштовно.
       Думаєте звідки починати? Завантажте <a href='%{video_download_url}'>цей ролик</a>!"
-    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
-      concepts with your students every week. Code.org offers curriculum, lesson plans,
-      high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;and it's all free. :) You don't need any experience to start
-      teaching computer science in your classroom. <b>Find the next step that's right
-      for your classroom.</b>
+    announcement_go_beyond: "Підіть далі Години коду, і щотижня пізнавайте поняття
+      інформатики разом зі своїми учнями. Code.org пропонує курс навчання, плани уроків,
+      високоякісні професійні навчальні програми, та безліч чудових інструментів для
+      всіх рівнів навчання — і все це безкоштовно. :) Вам не потрібно мати жодного
+      досвіду, щоби почати вчити інформатики в своєму класі. <b>Підберіть наступний
+      крок, який найбільше підходить вашому класові.</b>"
+    announcement_teacher_recruitment: Teachers like you are leading the computer science
+      education movement. You can participate in high-quality K-12th grade professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Take the lead on computer science in your school, and apply for professional
+      learning.
+    announcement_student_privacy: At Code.org, we take student privacy very seriously.
+      To protect your students’ privacy, we have made a change to your section’s login
+      page to avoid displaying full names. Even though this update should reduce privacy
+      concerns for the login page, we still encourage users to <i>not use full names
+      for students</i>.
+    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+      Your students could be featured in Code.org''s next viral video encouraging
+      students to take the AP CS Principles exam this year. We''re inviting all CS
+      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
+      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
+      will be featured in our video and the winning students will receive Code.org
+      swag!'
   move_students:
     new_section_dne: "Вибачте, але групи %{new_section_code} не існує. Вкажіть інший
       код групи."
@@ -679,6 +699,9 @@
     support: "Отримати допомогу"
     support_url: "//support.code.org"
     help_resources: "Довідки та ресурси"
+    help_support: Help and Support
+    documentation: Documentation
+    tutorials: Tutorials
   multi:
     wrong_title: "Неправильна відповідь"
     wrong_body: "Подана відповідь не є правильною.  Будь ласка, спробуйте ще раз!"
@@ -930,6 +953,8 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
+    main_course: Main Course
+    extra_course_content: Extra Course Content
   external_links:
     disclaimer: "Відмова від відповідальності"
     leaving_domain: "Ви покидаєте цей домен на сайт, який не керується Code.org."

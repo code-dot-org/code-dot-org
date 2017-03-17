@@ -1,23 +1,32 @@
-exports.pinMode = function (pin, mode) {
-  return Applab.executeCmd(null, 'pinMode', {pin, mode});
-};
+/**
+ * Inject an executeCmd method so this mini-library can be used in both
+ * App Lab and Game Lab
+ */
+let executeCmd;
+export function injectExecuteCmd(fn) {
+  executeCmd = fn;
+}
 
-exports.digitalWrite = function (pin, value) {
-  return Applab.executeCmd(null, 'digitalWrite', {pin, value});
-};
+export function pinMode(pin, mode) {
+  return executeCmd(null, 'pinMode', {pin, mode});
+}
 
-exports.digitalRead = function (pin, callback) {
-  return Applab.executeCmd(null, 'digitalRead', {pin, callback});
-};
+export function digitalWrite(pin, value) {
+  return executeCmd(null, 'digitalWrite', {pin, value});
+}
 
-exports.analogWrite = function (pin, value) {
-  return Applab.executeCmd(null, 'analogWrite', {pin, value});
-};
+export function digitalRead(pin, callback) {
+  return executeCmd(null, 'digitalRead', {pin, callback});
+}
 
-exports.analogRead = function (pin, callback) {
-  return Applab.executeCmd(null, 'analogRead', {pin, callback});
-};
+export function analogWrite(pin, value) {
+  return executeCmd(null, 'analogWrite', {pin, value});
+}
 
-exports.onBoardEvent = function (component, event, callback) {
-  return Applab.executeCmd(null, 'onBoardEvent', {component, event, callback});
-};
+export function analogRead(pin, callback) {
+  return executeCmd(null, 'analogRead', {pin, callback});
+}
+
+export function onBoardEvent(component, event, callback) {
+  return executeCmd(null, 'onBoardEvent', {component, event, callback});
+}

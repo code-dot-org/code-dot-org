@@ -21,7 +21,6 @@ import PaneHeader, { PaneButton } from '../../templates/PaneHeader';
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
-const VIZ_TO_INSTRUCTIONS_MARGIN = 20;
 
 var MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
@@ -59,7 +58,7 @@ var styles = {
   },
   title: {
     textAlign: 'center',
-    height: HEADER_HEIGHT + 'px',
+    height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
   }
 };
@@ -67,7 +66,6 @@ var styles = {
 var TopInstructions = React.createClass({
   propTypes: {
     isEmbedView: React.PropTypes.bool.isRequired,
-    embedViewLeftOffset: React.PropTypes.number.isRequired,
     hasContainedLevels: React.PropTypes.bool,
     puzzleNumber: React.PropTypes.number.isRequired,
     stageTotal: React.PropTypes.number.isRequired,
@@ -162,7 +160,7 @@ var TopInstructions = React.createClass({
    * Handle a click on the Documentation PaneButton.
    */
   handleDocumentationClick() {
-    var win = window.open(this.props.documentationUrl, '_blank');
+    const win = window.open(this.props.documentationUrl, '_blank');
     win.focus();
   },
 
@@ -173,9 +171,7 @@ var TopInstructions = React.createClass({
         height: this.props.height - RESIZER_HEIGHT
       },
       this.props.noVisualization && styles.noViz,
-      this.props.isEmbedView && Object.assign({}, styles.embedView, {
-        left: this.props.embedViewLeftOffset
-      })
+      this.props.isEmbedView && styles.embedView,
     ];
 
     return (
@@ -232,7 +228,6 @@ var TopInstructions = React.createClass({
 module.exports = connect(function propsFromStore(state) {
   return {
     isEmbedView: state.pageConstants.isEmbedView,
-    embedViewLeftOffset: state.pageConstants.nonResponsiveVisualizationColumnWidth + VIZ_TO_INSTRUCTIONS_MARGIN,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     puzzleNumber: state.pageConstants.puzzleNumber,
     stageTotal: state.pageConstants.stageTotal,

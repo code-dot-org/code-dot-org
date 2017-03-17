@@ -52,10 +52,6 @@ namespace :pegasus do
   end
 end
 
-task :help do
-  puts 'build:help'
-  puts 'db:help'
-  puts 'i18n:help'
-  puts 'seed:help'
-  puts 'test'
+task :default do
+  puts 'Use `rake --tasks` for a full list of pegasus rake tasks.'
 end

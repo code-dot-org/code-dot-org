@@ -6,7 +6,7 @@
 # (https://console.aws.amazon.com/dms/home?region=us-east-1#tasks:)
 
 require File.expand_path('../../../deployment', __FILE__)
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'cdo/only_one'
 require 'cdo/slack'
 
@@ -34,19 +34,21 @@ end
 # replication tasks, and starting the replication tasks.
 def main
   # Update the data room topic in Slack.
-  new_topic = 'Tableau data is automatically reloading (details in #infra-dms)...'
+  new_topic = 'Tableau data is automatically reloading (details in channel infra-dms)...'
   Slack.update_topic('data', new_topic)
 
   # Create a DMS client and use it to start task replication.
   dms_client = Aws::DatabaseMigrationService::Client.new
   dms_client.describe_replication_tasks.replication_tasks.each do |replication_task|
     task_name = replication_task.replication_task_identifier
+    next if task_name.start_with? 'test'
+
     task_arn = replication_task.replication_task_arn
     # TODO(asher): Gracefully handle the case when the DMS task has never been run.
     task_execution_time = replication_task.replication_task_stats.elapsed_time_millis / 1000
     task_delay = get_delay(task_execution_time)
 
-    HipChat.message 'infra-dms',
+    ChatClient.message 'infra-dms',
       "Starting DMS task #{task_name} (sleep duration: #{task_delay})...",
       color: 'green'
 
@@ -58,7 +60,7 @@ def main
     )
     sleep(task_delay)
 
-    HipChat.message 'infra-dms', "Finished DMS task #{task_name}.", color: 'green'
+    ChatClient.message 'infra-dms', "Finished DMS task #{task_name}.", color: 'green'
   end
 
   # Update the "data" room summary in Slack.
@@ -66,7 +68,7 @@ def main
   Slack.update_topic('data', new_topic)
 rescue Aws::DatabaseMigrationService::Errors::ServiceError => e
   # Log the exception to "infra-dms" and "data" rooms in Slack.
-  HipChat.message 'infra-dms',
+  ChatClient.message 'infra-dms',
     "EXCEPTION: #{e.message}",
     color: 'red'
   new_topic = 'Tableau data is bad. :('

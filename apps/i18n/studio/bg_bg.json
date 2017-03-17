@@ -574,6 +574,8 @@
   "setScoreText": "задава резултат",
   "setScoreTextTooltip": "Задава текста да се показва в областта на резултата.",
   "setScoreTooltip": "Задава определена стойност на резултата на играча",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "Мани",
   "setSpriteSid": "Сид",
   "setSpriteGranny": "Грани",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "много бърза скорост",
   "setSpriteSpeedTooltip": "Задава скоростта на актьор",
   "setSpriteZombie": "зомби",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Кара всички избрани актьори да гонят друг актьор",
   "setSpritesFleeTooltip": "Кара всички избрани актьори да бягат от друг актьор",
   "setSpritesStopTooltip": "Кара всички избрани участници да спрат да скитат, преследват, или бягат",
@@ -671,6 +674,7 @@
   "showTSDefText": "Въведете текст тук",
   "showTitleScreenTooltip": "Покажи заглавието на екрана.",
   "size": "размер",
+  "setActor": "set actor",
   "setDroid": "задай дроид",
   "setDroidHidden": "скрит",
   "setDroidRandom": "случаен",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Поздравления, добавихте код, за да направите мишка дроид. Можете да отидете на следващия пъзел или да се върнете на този и да заловите още 20 мишки дроиди. Направете го лесно като поставите още от тях. (Натиснете и задръжте стрелките на вашата клавиатура или екран, за да се движите по-бързо.)",
   "failedChangeSettingTimeout": "Стигни до трима Бунтовник пилоти, за да продължиш.",
   "failedChangeSettingSettings": "Направете своя собствена игра. За да завършите пъзела, трябва да промените дроида и посочите скоростта му.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

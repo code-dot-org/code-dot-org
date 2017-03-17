@@ -64,7 +64,7 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if stage_hidden_for_user?(@script_level, current_user)
+    if current_user && current_user.hidden_stage?(@script_level)
       view_options(full_width: true)
       render 'levels/_hidden_stage'
       return
@@ -294,6 +294,7 @@ class ScriptLevelsController < ApplicationController
     if @level.try(:pages)
       puzzle_page = params[:puzzle_page] || 1
       @pages = [@level.pages[puzzle_page.to_i - 1]]
+      raise ActiveRecord::RecordNotFound if @pages.first.nil?
       @total_page_count = @level.pages.count
       @total_level_count = @level.levels.length
     end
@@ -329,33 +330,6 @@ class ScriptLevelsController < ApplicationController
     }
     render 'levels/show', formats: [:html]
   end
-
-  def stage_hidden_for_user?(script_level, user)
-    return false if !user || user.try(:teacher?)
-
-    sections = user.sections_as_student.select{|s| s.deleted_at.nil?}
-    return false if sections.empty?
-
-    script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
-
-    if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
-      # hides the stage
-      script_sections.all?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
-    else
-      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
-      # hide it
-      sections.any?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
-    end
-  end
-
-  # TODO(asher): Remove the need for the rubocop disable.
-  # rubocop:disable Lint/IneffectiveAccessModifier
-  def self.stage_hidden_for_section?(script_level, section_id)
-    return false if script_level.nil? || section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: section_id).nil?
-  end
-  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def get_hidden_stage_ids(script_name)
     return [] unless current_user

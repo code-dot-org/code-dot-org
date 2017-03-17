@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class ScriptTest < ActiveSupport::TestCase
+  include SharedConstants
+
   def setup
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
@@ -12,9 +15,14 @@ class ScriptTest < ActiveSupport::TestCase
 
   def populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
-    Script.script_cache_to_cache
+    # Only need to populate cache once per test-suite run
+    @@script_cached ||= Script.script_cache_to_cache
     Script.script_cache_from_cache
-    ActiveRecord::Base.connection.disconnect!
+
+    # NOTE: ActiveRecord collection association still references an active DB connection,
+    # even when the data is already eager loaded.
+    # Best we can do is ensure that no queries are executed on the active connection.
+    ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
   end
 
   test 'login required setting in script file' do
@@ -332,10 +340,11 @@ class ScriptTest < ActiveSupport::TestCase
   test 'level_concept_difficulty uses preloading' do
     level = Script.find_by_name('course4').script_levels.second.level
     expected = level.level_concept_difficulty
+    assert_not_nil expected
 
     populate_cache_and_disconnect_db
 
-    assert_equal expected, level.level_concept_difficulty
+    assert_equal expected, Script.get_from_cache('course4').script_levels.second.level.level_concept_difficulty
   end
 
   test 'get_without_cache raises exception for bad id' do
@@ -414,7 +423,7 @@ class ScriptTest < ActiveSupport::TestCase
       flex_category: "Peer Review",
       levels: [{
         ids: [0],
-        kind: "peer_review",
+        kind: LEVEL_KIND.peer_review,
         title: "",
         url: "",
         name: "Reviews unavailable at this time",

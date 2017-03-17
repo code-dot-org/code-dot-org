@@ -574,6 +574,8 @@
   "setScoreText": "得点を設定",
   "setScoreTextTooltip": "得点欄に表示される文章を設定します。",
   "setScoreTooltip": "一定のポイントをプレイヤーのスコアにセットします",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "マニーのイメージに",
   "setSpriteSid": "シドのイメージに",
   "setSpriteGranny": "おばあちゃんのイメージに",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "とてもはやいスピードに",
   "setSpriteSpeedTooltip": "キャラのはやさをセット",
   "setSpriteZombie": "ゾンビの画像に",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "選択されたすべてのキャラが別のキャラを追跡します",
   "setSpritesFleeTooltip": "選択されたすべてのキャラが別のキャラから逃げます",
   "setSpritesStopTooltip": "選択したすべてのキャラをランダムに歩き回る、追いかける、または逃げるから止まります",
@@ -671,6 +674,7 @@
   "showTSDefText": "ここにテキストを入力",
   "showTitleScreenTooltip": "だいめいとせつめいのあるひょうしをひょうじします。",
   "size": "おおきさ",
+  "setActor": "set actor",
   "setDroid": "ドロイドをセットします",
   "setDroidHidden": "非表示にする",
   "setDroidRandom": "ランダムにする",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "おめでとうございます。マウスドロイドをつくるコードが追加されました。次のパズルへすすむか、または20匹のマウスドロイドをつかまえるパズルに再ちょうせんしてください。より多くのマウスドロイドを追加すると、ゲームが簡単になります。はやく動くには、キーボード (またはスクリーン) のやじるしを押しつづけてください。",
   "failedChangeSettingTimeout": "３人の反乱軍パイロットを捕まえてください。",
   "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

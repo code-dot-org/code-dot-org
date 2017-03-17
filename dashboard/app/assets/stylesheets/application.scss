@@ -1447,6 +1447,27 @@ a.download-video {
   #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
     width: 234px;
   }
+  $schooldropdown-background: #f7f7f7;
+  $schooldropdown-border: #e5e5e5;
+  #schooldropdown-block {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: $schooldropdown-background;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $schooldropdown-border;
+  }
+  #schooldropdown-block hr {
+    border-color: $schooldropdown-border;
+  }
+  #schooldropdown-block select, #schooldropdown-block .selectize-control {
+    width: 100%;
+  }
+  #schooldropdown-block .itemblock, #schooldropdown-block .fieldblock {
+    width: 100%;
+  }
   #usernamemessage, #password_message, #password_message_confirmation {
     display: inline-block;
     max-width: 180px;
@@ -1768,6 +1789,10 @@ a.download-video {
 .free-response .response {
   width: 100%;
   box-sizing: border-box;
+}
+
+.contained-level .free-response .response {
+  resize: vertical;
 }
 
 .standalone-video {
@@ -2505,7 +2530,6 @@ $width: 400px;
   }
 }
 
-
 #environment_tag {
   position: fixed;
   top: 0;
@@ -2520,4 +2544,14 @@ $width: 400px;
 
 #level-body {
   height: 100%;
+}
+
+code {
+  color: $purple;
+}
+
+.instructions-markdown ul li, .instructions-markdown ol li {
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: 1.2em;
 }

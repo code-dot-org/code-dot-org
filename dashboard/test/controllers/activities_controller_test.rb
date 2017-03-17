@@ -75,7 +75,13 @@ class ActivitiesControllerTest < ActionController::TestCase
   # without having to update all existing test contracts.
   def assert_equal_expected_keys(expected, actual)
     expected.each do |key, value|
-      assert_equal value, actual.with_indifferent_access[key], "for key #{key}"
+      # As we receive a warning that this will fail in MT6, though ugly, we gate
+      # the assertion on whether the expected value is nil.
+      if value.nil?
+        assert_nil actual.with_indifferent_access[key], "for key #{key}"
+      else
+        assert_equal value, actual.with_indifferent_access[key], "for key #{key}"
+      end
     end
   end
 
@@ -151,7 +157,7 @@ class ActivitiesControllerTest < ActionController::TestCase
         script_level_id: @script_level.id,
         level_id: @script_level.level.id,
         user_agent: 'Rails Testing',
-        locale: :'en-us'
+        locale: :'en-US'
       }],
       slogger.records
     )
@@ -256,14 +262,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with panda does not crash" do
-    # the column that we store the program is 20000 bytes, don't crash if we fail to save because the field is too large
-
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    assert_creates(Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity, LevelSource) do
+    assert_creates(Activity, UserLevel, UserScript, LevelSource) do
+      assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
         end
@@ -425,7 +429,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
-    assert_equal Activity.last, GalleryActivity.last.activity
     assert_equal UserLevel.last.id, GalleryActivity.last.user_level_id
     assert_equal LevelSource.last.id,  GalleryActivity.last.level_source_id
   end
@@ -456,7 +459,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
-    assert_equal Activity.last, GalleryActivity.last.activity
   end
 
   test "logged in milestone should not save to gallery when passing a level with undefined impressiveness" do
@@ -548,7 +550,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-#    assert_equal @good_image.size, LevelSourceImage.last.image.size
+    # assert_equal @good_image.size, LevelSourceImage.last.image.size
 
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
@@ -565,7 +567,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   def _test_logged_in_milestone_with_image(async_activity_writes:)
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
-      # do all the logging
+    # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
 
@@ -610,7 +612,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -650,7 +654,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -683,7 +689,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -718,7 +726,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -753,7 +763,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"
+      save_to_gallery_url: "/gallery"\
+        "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
+        "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -1157,7 +1169,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     stage = create :stage, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{'maze 1': {active: false}}"
+    script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: "{\"maze 1\": {\"active\": false}}"
 
     post :milestone,
       params: @milestone_params.merge(
@@ -1342,5 +1354,16 @@ class ActivitiesControllerTest < ActionController::TestCase
     create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
     post :milestone, params: milestone_params
     assert_response 403
+  end
+
+  test "milestone strips emoji from program and saves it" do
+    params = @milestone_params
+    params[:program] = panda_panda
+
+    post :milestone, params: params
+
+    user_level = UserLevel.last
+    # panda_panda contains a panda emoji, ensure that it's gone
+    assert_equal user_level.level_source.data, 'Panda'
   end
 end

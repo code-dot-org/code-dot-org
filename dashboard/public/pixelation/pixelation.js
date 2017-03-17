@@ -104,6 +104,15 @@ function initProjects() {
             }
           }
         }
+      },
+      prepareForRemix: function () {
+        return {
+          // this method is expected to return a Promise. Since this file does not go through our
+          // pipeline and can't be ES6, return a "then" method with a Promise-like interface
+          then: function(callback) {
+            callback();
+          }
+        }
       }
     };
     dashboard.project.load().then(function() {

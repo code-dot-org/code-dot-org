@@ -4,12 +4,35 @@ SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
 
-def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
-  Selenium::WebDriver::Wait.new(timeout: timeout)
+def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
+  Selenium::WebDriver::Wait.new(timeout: timeout).until do
+    begin
+      yield
+    rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+      false
+    end
+  end
 end
 
-def wait_with_short_timeout
-  wait_with_timeout(SHORT_WAIT_TIMEOUT)
+def wait_short_until(&block)
+  wait_until(SHORT_WAIT_TIMEOUT, &block)
+end
+
+def element_stale?(element)
+  element.enabled?
+  false
+rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+  true
+end
+
+def page_load(wait_until_unload)
+  if wait_until_unload
+    html = @browser.find_element(tag_name: 'html')
+    yield
+    wait_until { element_stale?(html) }
+  else
+    yield
+  end
 end
 
 def replace_hostname(url)
@@ -44,18 +67,29 @@ def color_for_status(status)
   }[status.to_sym]
 end
 
+# When an individual step fails in a call to steps, one gets no feedback about
+# which step failed. This splits a set of steps into individual steps, and calls
+# each separately, so that when one fails we're told which.
+def individual_steps(steps)
+  steps.split("\n").map(&:strip).each do |separate_step|
+    steps separate_step
+  end
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   url = replace_hostname(url)
-  @browser.navigate.to url
-  refute_bad_gateway
-  refute_site_unreachable
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
+    @browser.navigate.to url
+    refute_bad_gateway
+    refute_site_unreachable
+  end
   install_js_error_recorder
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_with_timeout.until { @browser.find_element(selection_criteria) }
+  wait_until { @browser.find_element(selection_criteria) }
 end
 
 When /^I go to the newly opened tab$/ do
@@ -88,7 +122,7 @@ When /^I close the React alert$/ do
 end
 
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
-  wait_with_timeout.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
+  wait_until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
 end
 
 When /^I reset the puzzle to the starting version$/ do
@@ -115,7 +149,7 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
-  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
+  wait_until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
 end
 
 def jquery_is_element_visible(selector)
@@ -124,7 +158,15 @@ end
 
 When /^I wait until element "([^"]*)" is (not )?visible$/ do |selector, negation|
   wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script(jquery_is_element_visible(selector)) == negation.nil? }
+  wait_until { @browser.execute_script(jquery_is_element_visible(selector)) == negation.nil? }
+end
+
+When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
+  wait_until do
+    element = @browser.find_element(selection_criteria)
+    element.enabled? == negation.nil?
+  end
 end
 
 Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to be visible$/ do |seconds, selector|
@@ -136,17 +178,21 @@ end
 
 When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
   wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
+  wait_until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
 end
 
 Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
+  wait_until { @browser.find_elements(selection_criteria).empty? }
 end
 
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
-  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
+  wait_until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
+end
+
+When /^I wait until jQuery Ajax requests are finished$/ do
+  wait_short_until { @browser.execute_script("return $.active == 0") }
 end
 
 Then /^I make all links open in the current tab$/ do
@@ -164,12 +210,12 @@ end
 
 Then /^I wait until current URL contains "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  wait_with_timeout.until { @browser.current_url.include? url }
+  wait_until { @browser.current_url.include? url }
 end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-  wait_with_timeout.until { @browser.current_url == url }
+  wait_until { @browser.current_url == url }
 end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
@@ -202,35 +248,39 @@ When /^I inject simulation$/ do
   @browser.execute_script("var fileref=document.createElement('script');  fileref.setAttribute('type','text/javascript'); fileref.setAttribute('src', '/assets/jquery.simulate.js'); document.getElementsByTagName('head')[0].appendChild(fileref)")
 end
 
-When /^I press "([^"]*)"$/ do |button|
-  wait_with_short_timeout.until do
+When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
+  wait_short_until do
     @button = @browser.find_element(id: button)
   end
-  @button.click
+  page_load(load) { @button.click }
 end
 
-When /^I press the first "([^"]*)" element$/ do |selector|
-  wait_with_short_timeout.until do
+When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector, load|
+  wait_short_until do
     @element = @browser.find_element(:css, selector)
   end
-  begin
-    @element.click
-  rescue
-    # Single retry to compensate for element changing between find and click
-    @element = @browser.find_element(:css, selector)
-    @element.click
+  page_load(load) do
+    begin
+      @element.click
+    rescue
+      # Single retry to compensate for element changing between find and click
+      @element = @browser.find_element(:css, selector)
+      @element.click
+    end
   end
 end
 
-When /^I press the "([^"]*)" button$/ do |button_text|
-  wait_with_short_timeout.until do
+When /^I press the "([^"]*)" button( to load a new page)?$/ do |button_text, load|
+  wait_short_until do
     @button = @browser.find_element(:css, "input[value='#{button_text}']")
   end
-  @button.click
+  page_load(load) { @button.click }
 end
 
-When /^I press "([^"]*)" using jQuery$/ do |selector|
-  @browser.execute_script("$(#{selector.dump}).click()")
+When /^I press "([^"]*)" using jQuery( to load a new page)?$/ do |selector, load|
+  page_load(load) do
+    @browser.execute_script("$(#{selector.dump}).click()")
+  end
 end
 
 When /^I press SVG selector "([^"]*)"$/ do |selector|
@@ -308,15 +358,17 @@ When /^I press dropdown item "([^"]*)"$/ do |index|
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
-  wait_with_timeout.until do
+  wait_until do
     @button = @browser.find_element(:xpath, xpath)
   end
   @button.click
 end
 
-When /^I click selector "([^"]*)"$/ do |jquery_selector|
+When /^I click selector "([^"]*)"( to load a new page)?$/ do |jquery_selector, load|
   # normal a href links can only be clicked this way
-  @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+  page_load(load) do
+    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+  end
 end
 
 When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
@@ -326,7 +378,7 @@ When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" once I see it$/ do |selector|
-  wait_with_timeout.until do
+  wait_until do
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
   @browser.execute_script("$(\"#{selector}\")[0].click();")
@@ -334,7 +386,7 @@ end
 
 When /^I click selector "([^"]*)" if I see it$/ do |selector|
   begin
-    wait_with_timeout(5).until do
+    wait_until(5) do
       @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
     end
     @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
@@ -523,7 +575,7 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
 end
 
 Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
-  wait_with_timeout(15).until { element_contains_text?(selector, expected_text) }
+  wait_until(15) { element_contains_text?(selector, expected_text) }
 end
 
 Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
@@ -625,7 +677,7 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
-  wait_with_timeout.until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
+  wait_until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
 end
 
 Then /^I click an image "([^"]*)"$/ do |path|
@@ -642,7 +694,7 @@ Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
 end
 
 Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
-  wait_with_timeout.until do
+  wait_until do
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == negation.nil?
   end
 end
@@ -689,16 +741,23 @@ Then(/^check that level (\d+) on this stage is not done$/) do |level|
 end
 
 Then(/^I reload the page$/) do
-  # Make sure the old page is gone before this step completes, since selenium's navigate.refresh
-  # does not reliably do this for us.
-  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
-  @browser.navigate.refresh
-  wait_with_short_timeout.until { @browser.execute_script('return !(window && window.seleniumNavigationPending);') }
+  page_load(true) do
+    @browser.navigate.refresh
+  end
   wait_for_jquery
 end
 
 def wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
+  wait_until do
+    begin
+      @browser.execute_script("return (typeof jQuery !== 'undefined');")
+    rescue Selenium::WebDriver::Error::ScriptTimeOutError
+      puts "execute_script timed out after 30 seconds, likely because this is \
+Safari and the browser was still on about:blank when wait_for_jquery \
+was called. Ignoring this error and continuing to wait..."
+      false
+    end
+  end
 end
 
 Then /^I wait for jquery to load$/ do
@@ -706,7 +765,7 @@ Then /^I wait for jquery to load$/ do
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_id|
-  wait_with_short_timeout.until do
+  wait_short_until do
     @child_item = @browser.find_element(:id, child_id)
   end
   actual_parent_item = @child_item.find_element(:xpath, "..")
@@ -794,7 +853,7 @@ def generate_teacher_student(name, teacher_authorized)
   # enroll in a plc course as a way of becoming an authorized teacher
   enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
-  steps %Q{
+  individual_steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
     And I dismiss the language selector
@@ -861,7 +920,7 @@ And(/^I create a teacher named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I click selector "#user_terms_of_service_version"
-    And I click selector "#signup-button"
+    And I click selector "#signup-button" to load a new page
     And I wait until current URL contains "http://code.org/teacher-dashboard"
   }
 end
@@ -873,11 +932,11 @@ And(/^I give user "([^"]*)" hidden script access$/) do |name|
 end
 
 And(/^I save the section url$/) do
-  wait_with_short_timeout.until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
+  wait_short_until { /\/manage$/.match(@browser.execute_script("return location.hash")) }
   steps %Q{
     And I wait to see ".jumbotron"
   }
-  wait_with_short_timeout.until { "" != @browser.execute_script("return $('.jumbotron a').text().trim()") }
+  wait_short_until { "" != @browser.execute_script("return $('.jumbotron a').text().trim()") }
   @section_url = @browser.execute_script("return $('.jumbotron a').text().trim()")
 end
 
@@ -885,7 +944,7 @@ And(/^I navigate to the section url$/) do
   steps %Q{
     Given I am on "#{@section_url}"
   }
-  wait_with_short_timeout.until { /^\/join/.match(@browser.execute_script("return location.pathname")) }
+  wait_short_until { /^\/join/.match(@browser.execute_script("return location.pathname")) }
 end
 
 # TODO: As of PR#9262, this method is not used. Evaluate its usage or lack
@@ -988,19 +1047,19 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
-  wait_with_short_timeout.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_short_until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
 end
 
 Then /^my query params match "(.*)"$/ do |matcher|
-  wait_with_short_timeout.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
+  wait_short_until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
 end
 
 Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
-  wait_with_short_timeout.until { @browser.find_element(id: element_id_to_seek) }
+  wait_short_until { @browser.find_element(id: element_id_to_seek) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait_with_short_timeout.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_short_until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
 
   if redirect_source == 'pushState'
     state = { "modified" => true }
@@ -1012,7 +1071,7 @@ end
 
 last_shared_url = nil
 Then /^I navigate to the share URL$/ do
-  wait_with_short_timeout.until { @button = @browser.find_element(id: 'sharing-input') }
+  wait_short_until { @button = @browser.find_element(id: 'sharing-input') }
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
   wait_for_jquery
@@ -1071,12 +1130,12 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 end
 
 Then /^I scroll our lockable stage into view$/ do
-  wait_with_short_timeout.until { @browser.execute_script('return $(".uitest-locked").length') > 0 }
+  wait_short_until { @browser.execute_script('return $(".uitest-locked").length') > 0 }
   @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do
-  wait_with_short_timeout.until { @browser.execute_script("return $('.uitest-locksettings').length") > 0 }
+  wait_short_until { @browser.execute_script("return $('.uitest-locksettings').length") > 0 }
   @browser.execute_script("$('.uitest-locksettings').click()")
 end
 

@@ -4,47 +4,20 @@ require 'open-uri'
 require 'json'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require_relative '../../deployment'
+require 'cdo/only_one'
+require 'cdo/pager_duty'
 require 'cdo/slack'
-
-SLACK_TOKEN = CDO.slack_token.freeze
-PAGERDUTY_TOKEN = CDO.pagerduty_token.freeze
-
-ESCALATION_POLICY_NAME = 'Live Site Issues'.freeze
-
-# @param user [Hash] PagerDuty information for a user.
-# @param level [Integer] the oncall level to query.
-# @return [Boolean] whether the user is the current DOTD oncall at the specified
-#   level.
-def dotd?(user, level)
-  return false unless user['on_call']
-  user['on_call'].each do |on_call|
-    if on_call['level'] == level &&
-      on_call['escalation_policy']['name'] == ESCALATION_POLICY_NAME
-      return true
-    end
-  end
-  return false
-end
 
 def main
   # Get the current developers room topic.
   current_topic = Slack.get_topic('developers')
 
-  # Get the primary and secondary site on-calls from PagerDuty.
-  on_call = `curl --silent -H "Content-type: application/json" -H "Authorization: Token token=#{PAGERDUTY_TOKEN}" -X GET -G "https://codeorg.pagerduty.com/api/v1/users/on_call"`
-  on_call_parsed = JSON.parse(on_call)
-  primary_dotd_email = nil
-  on_call_parsed['users'].each do |user|
-    # Level 1 is the primary level, with level 2, level 3, and level 4 being
-    # waterfall levels for pages that fail to be ACK'ed by higher levels.
-    primary_dotd_email = user['email'] if dotd?(user, 1)
-  end
+  # Get the primary oncall from Pagerand secondary site on-calls from PagerDuty.
+  primary_dotd_email = PagerDuty.on_call
 
-  # Match PagerDuty email to Slack mention name.
+  primary_dotd_user = nil
   if primary_dotd_email
-    users_list = open("https://slack.com/api/users.list?token=#{SLACK_TOKEN}").read
-    primary_dotd_user = JSON.parse(users_list)['members'].
-      find { |member| primary_dotd_email == member['profile']['email'] }['name']
+    primary_dotd_user = Slack.user_name(primary_dotd_email)
   end
   primary_dotd_user = '(ERROR: check schedule)' unless primary_dotd_user
 

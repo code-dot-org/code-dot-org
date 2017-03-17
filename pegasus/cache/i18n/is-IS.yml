@@ -266,7 +266,7 @@
   just_did_accelerated: "Ég var að ljúka Hraðnámskeiðinu - kíktu á það! @codeorg"
   twitter_teach_cs: 9 af hverjum 10 eru sammála því að skólar eigi að kenna tölvunarfræði.
     http://youtu.be/nKIu9yen5nc. Heimsæktu https://code.org/.
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
+  twitter_cs_foundational: Tölvunarfræði er grunnfag sem allir nemendur ættu að læra.
     https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Umfram Klukkustund
@@ -504,34 +504,31 @@
   sports_select_theme: Veldu þema kennsluefnis
   sports_basketball_title: Búa til körfuboltaleik
   sports_all_sports_title: Blandaðu saman íþróttum
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+  sports_featured_athletes: Sjá íþróttamenn sem koma fram
+  sports_athletes_title: Fram koma þessir íþróttamenn
+  sports_athlete_Draymond: Draymond Green, gull á Olympíuleikum og NBA meistari, Golden
+    State Warriors
+  sports_athlete_Serena: Serena Williams, gull á Olympíuleikum og tennisdrottning
+  sports_athlete_Russell: Russell Okung, Super Bowl-meistari og NFL leikmaður, Denver
     Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+  sports_athlete_Sergio: Sergio Ramos, heimsmeistari og leikmaður Real Madrid
+  sports_athlete_Sue: Sue Bird, gull á Olympíuleikum og WNBA meistari, Seattle Storm
+  sports_athlete_Alana: Alana Beard, gull á Olympíuleikum og í úrvalsliði WNBA, Los
+    Angeles Sparks
+  sports_athlete_Angelo: Angelo Matthews, fyrirliði krikketlandsliðs Sri Lanka
+  sports_athlete_Nneka: Nneka Ogwumike, gull á Olympíuleikum, WNBA meistari og leikmaður
+    ársins 2016, Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, gull á Olympíuleikum og í úrvalsliði NBA,
     New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+  sports_athlete_Marco: Marco Belinelli, NBA meistari, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., gull á Olympíuleikum og leikmaður Barcelona og
+    brasilíska landsliðsins
+  sports_athlete_Sarah: Sarah Quita Offringa, seglbrettameistari
+  sports_athlete_Marcelo: Marcelo, leikmaður Real Madrid og brasilíska landsliðsins
+  sports_athlete_Erika: Erika Olivera, maraþonmeistari
+  sports_athlete_John: John Wall, í úrvalsliði NBA, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, gull á Olympíuleikum og NBA meistari, Miami Heat
+  sports_athlete_Harrison: Harrison Barnes, gull á Olympíuleikum og NBA meistari,
     Dallas Mavericks
   watch_inspirational_videos: Horfðu á eitt af þessum hvatningarmyndböndum áður en
     þú byrjar
@@ -998,7 +995,7 @@
     28 fylkisstjórar og forstjórar stærstu fyrirtækja í Bandaríkjunum ritað opið bréf
     sem fer þess á leit við Bandaríkjaþing að fjármagna kennslu tölvunarfræði í grunnskólum.
   dashboard_announce_petition_button: Bættu nafni þínu við
-  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond_button: Halda lengra
   dashboard_announce_all: Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir
     kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
   dashboard_announce_hoc_launch: "Þúsundir kennara í meira en 180 löndum munu byrja
@@ -1021,12 +1018,27 @@
     hágæða fræðslu fyrir kennara og fjöldann allan af góðum verkfærum fyrir alla aldurhópa
     &mdash;allt sem þú munt þarfnast, og allt frítt. Hvar er best að byrja? Sæktu
     \ <a href='%{video_download_url}'>þetta myndband</a>!"
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
+  dashboard_announce_go_beyond: Haltu áfram eftir Klukkustund kóðunar og kannaðu hugtök
+    tölvunarfræði með nemendum þínum í hverri viku. Code.org er með námsefni, kennsluáætlanir,
+    hágæða þjálfun fyrir kennara og fullt af fínum verkfærum fyrir alla árganga&mdash;og
+    allt ókeypis. :) Þú þarft ekki að hafa neina fyrri reynslu til að geta byrjað
+    að kenna nemendum þínum tölvunarfræði. <b>Finndu næsta áfanga sem hentar bekknum
+    þínum.</b>
+  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
+    science education movement. You can participate in high-quality K-12th grade professional
+    learning programs <strong>at absolutely no cost to you or your school</strong>.
+    Take the lead on computer science in your school, and apply for professional learning.
+  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
+    To protect your students’ privacy, we have made a change to your section’s login
+    page to avoid displaying full names. Even though this update should reduce privacy
+    concerns for the login page, we still encourage users to <i>not use full names
+    for students</i>.
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+    Your students could be featured in Code.org''s next viral video encouraging students
+    to take the AP CS Principles exam this year. We''re inviting all CS Principles
+    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
+    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
+    in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   host_an_hour: Sjá um klukkustund
@@ -1157,6 +1169,12 @@
   course2_name: Námskeið 2
   course3_name: Námskeið 3
   course4_name: Námskeið 4
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: Hraðnámskeið
   cspunit1_name: Kafli 1 - Stafrænar upplýsingar
   cspunit2_name: 'Kafli 2: Internetið'
@@ -1174,6 +1192,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Fullt próf - 50 spurningar
   cspexam1-mWU7ilDYM9_name: Prófhluti 1 - 25 spurningar
   cspexam2-AKwgAh1ac5_name: Prófhluti 2 - 25 spurningar
@@ -1199,6 +1218,7 @@
   math_category_name: Reikningur
   hoc_category_name: Klukkustund kóðunar
   csf_category_name: TF Grunnur
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 TF Grundvöllur"
   csp17_category_name: "'16-'17 TF Grundvöllur"
@@ -1897,20 +1917,9 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
-  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
-    science education movement. You can participate in high-quality K-12th grade professional
-    learning programs <strong>at absolutely no cost to you or your school</strong>.
-    Take the lead on computer science in your school, and apply for professional learning.
-  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
-    To protect your students’ privacy, we have made a change to your section’s login
-    page to avoid displaying full names. Even though this update should reduce privacy
-    concerns for the login page, we still encourage users to <i>not use full names
-    for students</i>.
-  coursea-draft_name: Course A
-  courseb-draft_name: Course B
-  coursec-draft_name: Course C
-  coursed-draft_name: Course D
-  coursee-draft_name: Course E
-  coursef-draft_name: Course F
-  csppostap_name: 'Post AP: Databases in Apps'
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
+    to break records. Student participation in the exam could dramatically shift diversity
+    in AP Computer Science, but we need your help. Encourage every CS Principles student
+    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
+    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
+    target='_blank'>#APCSP video challenge</a>.

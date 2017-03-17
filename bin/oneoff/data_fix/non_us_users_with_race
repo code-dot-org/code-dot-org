@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+# Based off of data_fix_for_missing_emails
+#
+# This script reads a file of user ids (one per line). For each,
+# it clears out the user's 'races' field. This script does NOT
+# verify that the user is not in the US, that is assumed to have been
+# checked when creating the list of ids to wipe.
+#
+# The CSV file is created by dumping the output of a SQL query against the dashboard DB to a file:
+#
+# SELECT users.id
+# FROM users
+#   INNER JOIN user_geos
+#     ON user_geos.user_id = users.id
+# WHERE user_geos.country <> "United States"
+#   AND users.properties LIKE '%races%'
+# ORDER BY users.id;
+#
+
+require_relative '../../../dashboard/config/environment'
+
+File.foreach('/tmp/non_us_ids_with_races.csv').with_index do |line, line_num|
+  if line_num % 1000 == 0
+    puts "PROCESSING: line #{line_num}..."
+  end
+
+  id = line.strip
+  next if id.nil?
+
+  # As we don't want to hammer production (too badly) with queries, we sleep for
+  # a (arbitrary) fraction of a second.
+  sleep(0.05)
+  begin
+    user = User.with_deleted.find(id) # throws RecordNotFound
+    next if user.nil? || user.races.nil_or_empty?
+    begin
+      puts "UPDATING: #{user.id} (deleting races: #{user.races})..."
+      user.update!(races: nil) # this will delete the races property altogether in the JSON, not just clear it
+    rescue Exception => e
+      puts "EXCEPTION:"
+      puts "  USER: #{user}"
+      puts "  MESSAGE: #{e.message}"
+      sleep(10)
+    end
+  rescue ActiveRecord::RecordNotFound
+    puts "USER ID NOT FOUND: #{id}"
+    next
+  end
+end

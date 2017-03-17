@@ -574,6 +574,8 @@
   "setScoreText": "anger poäng",
   "setScoreTextTooltip": "Anger texten som ska visas i området poäng.",
   "setScoreTooltip": "Sets the player's score to the specified amount",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "till en Manny bild",
   "setSpriteSid": "till en Sid-bild",
   "setSpriteGranny": "till en farmor bild",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "till en mycket snabb hastighet",
   "setSpriteSpeedTooltip": "Anger hastigheten på en figur",
   "setSpriteZombie": "till en zombie-bild",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Makes all the selected actors chase another actor",
   "setSpritesFleeTooltip": "Makes all the selected actors flee from another actor",
   "setSpritesStopTooltip": "Makes all the selected actors stop wandering, chasing, or fleeing",
@@ -671,6 +674,7 @@
   "showTSDefText": "Skriv text här",
   "showTitleScreenTooltip": "Visa en titelskärm med tillhörande rubrik och text.",
   "size": "storlek",
+  "setActor": "set actor",
   "setDroid": "ställ in droid",
   "setDroidHidden": "till dolda",
   "setDroidRandom": "till slumpmässig",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Grattis, du har lagt till kod för att skapa mus-droider. Du kan gå till nästa pussel eller försöka igen för att fånga 20 mus-droider. Försök att göra det lättare genom att lägga till fler av dem! (Tryck och håll ner tangenterna på tangentbordet (eller skärmen) för att gå snabbare.)",
   "failedChangeSettingTimeout": "Få tre rebellpiloter att flytta på sig.",
   "failedChangeSettingSettings": "Gör spelet till ditt eget. För att klara detta pussel, måste du ändra din droid och ange dess hastighet.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

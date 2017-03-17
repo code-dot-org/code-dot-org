@@ -60,6 +60,7 @@
   "disabledProgress1":"Qualquer progresso que faças esta semana no curso não será salvo devido ao nível de tráfego que o nosso site recebe na semana da hora do código.",
   "disabledProgress2":"É por isso que todas as bolhas são exibidas em cinzento (não se preocupe, o seu progresso antes desta semana ainda está seguro).",
   "disabledProgress3":"Encorajamo-lo a tentar os tutoriais da Hour of Code (Hora do Código) esta semana.",
+  "documentation":"Documentation",
   "dontForget":"Não se esqueça",
   "dropletBlock_addOperator_description":"Add two numbers",
   "dropletBlock_addOperator_signatureOverride":"Add operator",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"Pares chave/valor",
   "learnMore":"Saber mais",
   "less":"Menos",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"Continua a tentar! Ainda falta alguma coisa.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"lista",
   "loading":"A carregar...",
   "locked":"Fechado",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"para a posição superior direita externa",
   "positionTopRight":"para a posição superior direita",
   "predictionInstructions":"Faça uma previsão antes de executar o programa.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"Laboratório de aplicações",
   "projectTypeArtist":"Artista",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"quando",
   "whenRun":"quando executar",
   "workspaceHeaderShort":"Espaço de trabalho: ",
-  "yes":"Sim"
+  "yes":"Sim",
+  "yourProgress":"Your Progress"
 }

@@ -1,4 +1,4 @@
-import apiTimeoutList from '../timeoutList';
+import * as apiTimeoutList from '../lib/util/timeoutList';
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
@@ -14,11 +14,13 @@ import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
   apiValidateType,
+  apiValidateTypeAndRange,
   getAsyncOutputWarning,
   outputError,
   outputWarning,
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -42,25 +44,6 @@ var toBeCached = {};
  * @type {EventSandboxer}
  */
 var eventSandboxer = new EventSandboxer();
-
-function apiValidateTypeAndRange(opts, funcName, varName, varValue,
-                                 expectedType, minValue, maxValue, opt) {
-  var validatedTypeKey = 'validated_type_' + varName;
-  var validatedRangeKey = 'validated_range_' + varName;
-  apiValidateType(opts, funcName, varName, varValue, expectedType, opt);
-  if (opts[validatedTypeKey] && typeof opts[validatedRangeKey] === 'undefined') {
-    var inRange = (typeof minValue === 'undefined') || (varValue >= minValue);
-    if (inRange) {
-      inRange = (typeof maxValue === 'undefined') || (varValue <= maxValue);
-    }
-    inRange = inRange || (opt === OPTIONAL && (typeof varValue === 'undefined'));
-    if (!inRange) {
-      outputWarning(funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not in the expected range.");
-    }
-    opts[validatedRangeKey] = inRange;
-  }
-}
 
 function apiValidateActiveCanvas(opts, funcName) {
   var validatedActiveCanvasKey = 'validated_active_canvas';
@@ -1371,6 +1354,32 @@ applabCommands.clearInterval = function (opts) {
   apiTimeoutList.clearInterval(opts.intervalId);
 };
 
+/**
+ * Execute some code every X milliseconds.  This is effectively setInterval()
+ * with a cleaner interface.
+ * @param {number} opts.ms How often to invoke the code in the loop,
+ *   in milliseconds.
+ * @param {function(function)} opts.callback Code to invoke in each loop
+ *   iteration.
+ * @return {number} a timeout key
+ */
+applabCommands.timedLoop = function timedLoop(opts) {
+  apiValidateType(opts, 'timedLoop', 'ms', opts.ms, 'number');
+  apiValidateType(opts, 'timedLoop', 'callback', opts.callback, 'function');
+  return apiTimeoutList.timedLoop(opts.ms, applabCommands.onTimerFired.bind(this, {
+    func: opts.callback
+  }));
+};
+
+/**
+ * Stop all running intervals that were started with `timedLoop()`.
+ * @param {number} [opts.key] - if omitted, stop _all_ timedLoops.
+ */
+applabCommands.stopTimedLoop = function stopTimedLoop(opts) {
+  apiValidateType(opts, 'stopTimedLoop', 'key', opts.key, 'number', OPTIONAL);
+  apiTimeoutList.stopTimedLoop(opts.key);
+};
+
 applabCommands.createRecord = function (opts) {
   // PARAMNAME: createRecord: table vs. tableName
   // PARAMNAME: createRecord: callback vs. callbackFunction
@@ -1697,51 +1706,6 @@ applabCommands.drawChartFromRecords = function (opts) {
   ).then(onSuccess, onError);
 };
 
-applabCommands.pinMode = function (opts) {
-  apiValidateType(opts, 'pinMode', 'pin', opts.pin, 'pinid');
-  apiValidateType(opts, 'pinMode', 'mode', opts.mode, 'string');
-
-  const modeStringToConstant = {
-    input: 0,
-    output: 1,
-    analog: 2,
-    pwm: 3,
-    servo: 4
-  };
-
-  Applab.makerController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
-};
-
-applabCommands.digitalWrite = function (opts) {
-  apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
-  apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
-
-  Applab.makerController.digitalWrite(opts.pin, opts.value);
-};
-
-applabCommands.digitalRead = function (opts) {
-  apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
-
-  return Applab.makerController.digitalRead(opts.pin, opts.callback);
-};
-
-applabCommands.analogWrite = function (opts) {
-  apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
-  apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
-
-  Applab.makerController.analogWrite(opts.pin, opts.value);
-};
-
-applabCommands.analogRead = function (opts) {
-  apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
-
-  return Applab.makerController.analogRead(opts.pin, opts.callback);
-};
-
-applabCommands.onBoardEvent = function (opts) {
-  return Applab.makerController.onBoardEvent(opts.component, opts.event, opts.callback);
-};
-
 /**
  * If the element is found, add the 'loading' class to it so that it
  * displays the loading spinner.
@@ -1776,3 +1740,4 @@ function stopLoadingSpinnerFor(elementId) {
 
 // Include playSound, stopSound, etc.
 Object.assign(applabCommands, audioCommands);
+Object.assign(applabCommands, makerCommands);

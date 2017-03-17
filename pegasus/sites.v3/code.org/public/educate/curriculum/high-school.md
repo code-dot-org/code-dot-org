@@ -1,6 +1,7 @@
 ---
 title: CS Curriculum for grades 9-12
 nav: educate_nav
+video_player: true
 ---
 
 [solid-block-header]
@@ -20,8 +21,14 @@ Computer Science Principles
 
 [/solid-block-header]
 
-<iframe width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
-<br />
+<% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
+<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>'Computer Science Principles @codeorg'} %>
+
+<div style="float:left; padding:10px; width:49%">
+
+  <%=view :display_video_thumbnail, id: "CSPrinciples", video_code: "DMr1iFYacGQ", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+
+</div>
 
 The College Board has proposed a new AP® course called AP® Computer Science Principles.*  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment.
 
@@ -31,7 +38,7 @@ The College Board has proposed a new AP® course called AP® Computer Science Pr
 {img: '/images/testimonials/fit-150/students-2.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
 
 <br />
-Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, and assessments that cover learning objectives from the [CS Principles Curriculum Framework](http://media.collegeboard.com/digitalServices/pdf/ap/comp-sci-principles-draft-cf-final.pdf). Course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
+Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, and assessments that cover learning objectives from the [CS Principles Curriculum Framework](https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-computer-science-principles-course-and-exam-description.pdf). Course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
 
 <br />
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
@@ -66,6 +73,18 @@ Computer Science Fundamentals - Accelerated
 Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a high school school after-school program or as a unit in a technology or programming class.
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
+
+[solid-block-header]
+
+AP Computer Science A in Java
+
+[/solid-block-header]
+
+There are two AP computer science offerings, and students can take either course in any order. The AP Computer Science A course and exam focuses on computing skills related to programming in Java. The new AP Computer Science Principles course complements AP Computer Science A as it aims to broaden participation in the study of computer science.
+
+While Code.org does not have an AP Computer Science A curriculum, there already exists a number of great curricula and programs available to teacher and students.
+
+[<button>Learn more about AP CS A resources</button>](/educate/curriculum/3rd-party/apcsa)
 
 [solid-block-header]
 

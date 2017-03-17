@@ -19,6 +19,7 @@ Regional partners who are interested in advocacy can use the following resources
 - [State Policy Landscape](https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing): Provides a summary of state accomplishments in computer science policy
 - [Advocacy Slide Deck](https://code.org/files/computer_science_advocacy.pptx): Generic presentation to convince someone that computer science is important to teach in grades K-12
 - [Model Legislation](http://media.wix.com/ugd/be22fe_f50c481364f44ca4807a3efee8c11ad1.pdf): Sample language that can be used for legislation related to three computer science education policies
+- [How should Computer Science "count"?](http://blog.code.org/post/154518222573/computer-science-really-is-computer-science) A Code.org blog post about making computer science count towards graduation, with a link to an issue paper on computer science as a flex credit
 
 ## Other Links
 Visit the websites below to find out more. 

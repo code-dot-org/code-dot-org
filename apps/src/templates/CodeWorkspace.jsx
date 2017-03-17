@@ -1,14 +1,16 @@
+import $ from 'jquery';
 var React = require('react');
 var Radium = require('radium');
 var connect = require('react-redux').connect;
 var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
-import JsDebugger from './JsDebugger';
+import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 var PaneHeader = require('./PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
 var msg = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var color = require("../util/color");
+var utils = require('@cdo/apps/utils');
 
 var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
 var BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
@@ -70,6 +72,13 @@ var CodeWorkspace = React.createClass({
     }.bind(this));
 
     return true;
+  },
+
+  onDebuggerSlide(debuggerHeight) {
+    $(this.codeTextbox.getRoot()).animate(
+      {bottom: debuggerHeight},
+      {step: utils.fireResizeEvent}
+    );
   },
 
   render: function () {
@@ -160,12 +169,18 @@ var CodeWorkspace = React.createClass({
           </div>
         </PaneHeader>
         {props.editCode &&
-          <ProtectedStatefulDiv
-            id="codeTextbox"
-            className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
-          />
+         <ProtectedStatefulDiv
+           ref={codeTextbox => this.codeTextbox = codeTextbox}
+           id="codeTextbox"
+           className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
+         />
         }
-        {props.showDebugger && <JsDebugger/>}
+        {props.showDebugger && (
+          <JsDebugger
+            onSlideShut={this.onDebuggerSlide}
+            onSlideOpen={this.onDebuggerSlide}
+          />
+        )}
       </span>
     );
   }

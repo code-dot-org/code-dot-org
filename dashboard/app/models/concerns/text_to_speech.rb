@@ -5,31 +5,46 @@ require 'uri'
 require 'redcarpet'
 require 'redcarpet/render_strip'
 
-TTS_BUCKET = 'cdo-tts'
+TTS_BUCKET = 'cdo-tts'.freeze
 
 VOICES = {
-  # british child candidate
-  rosie: {
-    VOICE: 'rosie22k',
-    SPEED: 180,
-    SHAPE: 100
-  },
-  # american child candidate
-  ella: {
-    VOICE: 'ella22k',
-    SPEED: 140,
-    SHAPE: 98
-  },
-  # american adult candidate
-  sharon: {
+  'en-US': {
     VOICE: 'sharon22k',
     SPEED: 180,
     SHAPE: 100
+  },
+  'es-ES': {
+    VOICE: 'ines22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'es-MX': {
+    VOICE: 'rosa22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'it-IT': {
+    VOICE: 'vittorio22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'pt-BR': {
+    VOICE: 'marcia22k',
+    SPEED: 180,
+    SHAPE: 100,
   }
-}
+}.freeze
 
 class TTSSafe < Redcarpet::Render::StripDown
   def block_code(code, language)
+    ''
+  end
+
+  def block_html(raw_html)
+    ''
+  end
+
+  def raw_html(raw_html)
     ''
   end
 
@@ -59,12 +74,24 @@ module TextToSpeech
     )
   end
 
-  def self.tts_upload_to_s3(text, filename, voice=:sharon)
+  def self.locale_supported?(locale)
+    VOICES.key?(locale)
+  end
+
+  def self.localized_voice
+    # Use localized voice if we have a setting for the current locale;
+    # default to English otherwise.
+    loc = TextToSpeech.locale_supported?(I18n.locale) ? I18n.locale : :'en-US'
+    VOICES[loc]
+  end
+
+  def self.tts_upload_to_s3(text, filename)
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
     return if AWS::S3.exists_in_bucket(TTS_BUCKET, filename)
 
-    url = acapela_text_to_audio_url(text, VOICES[voice][:VOICE], VOICES[voice][:SPEED], VOICES[voice][:SHAPE])
+    loc_voice = TextToSpeech.localized_voice
+    url = acapela_text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE])
     return if url.nil?
     uri = URI.parse(url)
     Net::HTTP.start(uri.host) do |http|
@@ -73,18 +100,19 @@ module TextToSpeech
     end
   end
 
-  def tts_upload_to_s3(text, voice=:sharon)
+  def tts_upload_to_s3(text)
     filename = tts_path(text)
-    TextToSpeech.tts_upload_to_s3(text, filename, voice)
+    TextToSpeech.tts_upload_to_s3(text, filename)
   end
 
-  def tts_url(text, voice=:sharon)
-    "https://tts.code.org/#{tts_path(text, voice)}"
+  def tts_url(text)
+    "https://tts.code.org/#{tts_path(text)}"
   end
 
-  def tts_path(text, voice=:sharon)
+  def tts_path(text)
     content_hash = Digest::MD5.hexdigest(text)
-    "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{name}.mp3"
+    loc_voice = TextToSpeech.localized_voice
+    "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{name}.mp3"
   end
 
   def tts_should_update(property)
@@ -93,7 +121,13 @@ module TextToSpeech
   end
 
   def tts_instructions_text
-    tts_instructions_override || instructions || try(:localized_instructions) || ""
+    if I18n.locale == I18n.default_locale
+      # We still have to try localized instructions here for the
+      # levels.js-defined levels
+      tts_instructions_override || instructions || try(:localized_instructions) || ""
+    else
+      TTSSafeRenderer.render(try(:localized_instructions) || "")
+    end
   end
 
   def tts_should_update_instructions?

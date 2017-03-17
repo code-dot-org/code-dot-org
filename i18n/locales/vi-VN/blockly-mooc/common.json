@@ -60,6 +60,7 @@
   "disabledProgress1":"Bất kì tiến trình nào bạn đã hoàn thành trong khóa học sẽ không được lưu trữ từ ngày 3 -11 tháng 12 do mức độ truy cập trang web chúng tôi nhận được suốt quá trình Hour of Code.",
   "disabledProgress2":"Đây là lý do tại sao tất cả các bong bóng của bạn được hiển thị như màu xám (Đừng lo lắng, tiến bộ của bạn từ trước tuần này là vẫn còn an toàn).",
   "disabledProgress3":"Chúng tôi khuyến khích bạn tập thử hướng dẫn của Hour of Code trong tuần này.",
+  "documentation":"Documentation",
   "dontForget":"Đừng quên",
   "dropletBlock_addOperator_description":"Cộng hai số",
   "dropletBlock_addOperator_signatureOverride":"Thêm người điều hành",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"Khóa/Giá trị đôi",
   "learnMore":"Tìm hiểu thêm",
   "less":"Ít hơn",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"Bạn đã dùng tất cả các khối cần thiết, nhưng không đúng cách.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"danh sách",
   "loading":"Đang tải...",
   "locked":"Bị khóa",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"đến vị trí ở bên ngoài phía trên trái",
   "positionTopRight":"đến vị trí ở trên phía bên phải",
   "predictionInstructions":"Dự đoán trước khi bạn chạy chương trình.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"Phòng thí nghiệm ứng dụng",
   "projectTypeArtist":"Họa sĩ",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"Khi nào",
   "whenRun":"Khi chạy",
   "workspaceHeaderShort":"Không gian làm việc:",
-  "yes":"Đồng ý"
+  "yes":"Đồng ý",
+  "yourProgress":"Your Progress"
 }

@@ -757,6 +757,9 @@
   dashboard_announce_hoc_scaling_progress: "Należy pamiętać, że nie będziemy w stanie zapisywać postępów uczniów w tym kursie w dniach 3-11 grudnia 2016 ze względu na olbrzymi ruchu na naszej stronie w związku z Godziną Kodowania. Nadal możesz oglądać postępy uczniów sprzed 3 grudnia.  Będziesz mógł wrócić do zapisywania postępów po tym tygodniu."
   dashboard_announce_how_code_studio: "Nie potrzebujesz żadnego doświadczenia, aby zacząć uczyć informatyki w swojej klasie. Code.org oferuje curriculum, plany lekcji, wysokiej jakości programy nauczania i tony wspaniałych narzędzi dla wszystkich poziomów nauczania&mdash;wszystko, czego potrzebujesz, za darmo. Ciekaw jesteś, gdzie zacząć? Pobierz <a href='%{video_download_url}'>to wideo</a>!"
   dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "Godzina Kodowania jest tutaj - 8-14 grudnia!"
   code_sign_up: "Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej (CS Education Week)"
   host_an_hour: "Przeprowadź Godzinę Kodowania"
@@ -868,6 +871,12 @@
   course2_name: "Kurs 2"
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "Przyspieszony Kurs"
   cspunit1_name: '(stary) Unit 1: Informacje cyfrowe'
   cspunit2_name: '(stary) Unit 2: Internet'
@@ -885,6 +894,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Pełen test - 50 pytań"
   cspexam1-mWU7ilDYM9_name: Test Część 1 - 25 pytań
   cspexam2-AKwgAh1ac5_name: Test Część 2 - 25 pytań
@@ -906,6 +916,7 @@
   math_category_name: "Matematyka"
   hoc_category_name: "Godzina Kodowania"
   csf_category_name: "Podstawy Informatyki"
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "Podstawy Informatyki '15-'16"
   csp17_category_name: "Podstawy Informatyki '16-'17"

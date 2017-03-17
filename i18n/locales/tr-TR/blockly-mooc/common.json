@@ -60,6 +60,7 @@
   "disabledProgress1":"Kursdaki yaptığınız ilerlemeler 3 - 11 Aralık 'ta Kodlama Saatinden dolayı oluşacak trafik nedeniyle bu dönemde kaydedilmeyecektir.",
   "disabledProgress2":"Bu yüzden bütün köpükler gri olarak görüntülenmekte (merak etme bu haftadan önceki ilerlemen kayıt altında).",
   "disabledProgress3":"Bunun yerine bu hafta Kodlama Saati eğitimlerini denemeni tavsiye ediyoruz.",
+  "documentation":"Documentation",
   "dontForget":"Unutma",
   "dropletBlock_addOperator_description":"iki sayı ekle",
   "dropletBlock_addOperator_signatureOverride":"Operatör ekle",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"Anahtar/değer çiftleri",
   "learnMore":"Daha fazlasını öğren",
   "less":"Daha az",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"Tüm gerekli türdeki blokları kullanıyorsunuz ama doğru şekilde değil.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"liste",
   "loading":"Yükleniyor...",
   "locked":"Kilitli",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"sağ üst dış konuma",
   "positionTopRight":"sağ üst konuma",
   "predictionInstructions":"Programı çalıştırmadan önce bir tahmin yap.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"Uygulama Laboratuvarı",
   "projectTypeArtist":"Aktör",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"Ne zaman",
   "whenRun":"Çalıştığı zaman",
   "workspaceHeaderShort":"Çalışma alanı: ",
-  "yes":"Evet"
+  "yes":"Evet",
+  "yourProgress":"Your Progress"
 }

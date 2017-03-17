@@ -574,6 +574,8 @@
   "setScoreText": "задать счет",
   "setScoreTextTooltip": "Задает текст, отображаемый в области счета.",
   "setScoreTooltip": "Устанавливает счёт игрока",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "к изображению Мэнни",
   "setSpriteSid": "к изображению Сида",
   "setSpriteGranny": "к изображению Грэнни",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "для очень быстрой скорости",
   "setSpriteSpeedTooltip": "Задает скорость исполнителя",
   "setSpriteZombie": "к изображению зомби",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Дает всем выбранным исполнителям задачу преследовать другого исполнителя",
   "setSpritesFleeTooltip": "Дает всем выбранным исполнителям задачу убегать от другого исполнителя",
   "setSpritesStopTooltip": "Дает всем выбранным исполнителям задачу перестать бродить, преследовать или убегать",
@@ -671,6 +674,7 @@
   "showTSDefText": "введите текст здесь",
   "showTitleScreenTooltip": "Показать начальный экран с указанным названием и текстом.",
   "size": "размер",
+  "setActor": "set actor",
   "setDroid": "выбрать дроид",
   "setDroidHidden": "невидимка",
   "setDroidRandom": "случайный",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Поздравляем, ты добавил программу для создания Мышей-дроидов. Переходи к следующей головоломке или попробуй еще раз пройти эту, поймав 20 Мышей-дроидов. Попробуй упростить задачу, добавив больше Мышей-дроидов! (Нажимай и удерживай клавиши на клавиатуре (или экране), чтобы перемещаться быстрее.)",
   "failedChangeSettingTimeout": "Поймай три Пилота-повстанца для продолжения.",
   "failedChangeSettingSettings": "Создай свою собственную игру. Чтобы решить эту головоломку, тебе нужно изменить свой дроид и задать скорость его передвижения.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

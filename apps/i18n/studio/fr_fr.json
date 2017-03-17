@@ -574,6 +574,8 @@
   "setScoreText": "mettre le score à",
   "setScoreTextTooltip": "Définit le texte à afficher dans la zone de score.",
   "setScoreTooltip": "Mettre le score du joueur à la valeur spécifiée",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "l'image de Manny",
   "setSpriteSid": "à une image de Sid",
   "setSpriteGranny": "l'image de Mémé",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "une vitesse très rapide",
   "setSpriteSpeedTooltip": "Définit la vitesse d'un acteur",
   "setSpriteZombie": "l'image de zombie",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Fait en sorte que tous les acteurs sélectionnés poursuivent un autre acteur",
   "setSpritesFleeTooltip": "Fait en sorte que tous les acteurs sélectionnés fuient un autre acteur",
   "setSpritesStopTooltip": "Fait en sorte que tous les acteurs sélectionnés arrêtent d'errer, de poursuivre ou de fuir",
@@ -671,6 +674,7 @@
   "showTSDefText": "écrire le texte ici",
   "showTitleScreenTooltip": "Afficher un écran de titre avec le titre et le texte correspondants.",
   "size": "taille",
+  "setActor": "set actor",
   "setDroid": "définir le droïde",
   "setDroidHidden": "à caché",
   "setDroidRandom": "au hasard",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Félicitations, tu as ajouté le code pour créer des Droïdes Souris. Tu peux passer au prochain puzzle ou réessayer pour en obtenir 20 d'entre eux. Essaie de rendre la tâche plus facile en en ajoutant plus ! (Presse et maintiens les touches de direction sur ton clavier (ou à l'écran) pour aller plus vite.)",
   "failedChangeSettingTimeout": "Obtiens trois Pilotes Rebelles pour continuer.",
   "failedChangeSettingSettings": "Approprie-toi le jeu. Pour réussir ce puzzle, tu devras modifier ton droïde et régler sa vitesse.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

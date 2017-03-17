@@ -2,12 +2,12 @@ import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { StatusProgressDot } from './StatusProgressDot';
-import { LevelStatus } from '../../activityUtils';
+import { TestResults } from '@cdo/apps/constants';
 import { SignInState } from '../../progressRedux';
 import { ViewType } from '../../stageLockRedux';
 
 export default storybook => {
-  // progress_dot grabs a couple items from redux. Create a bogus store with
+  // ProgressDot grabs a couple items from redux. Create a bogus store with
   // these items hardcoded so we don't get warnings.
   const store = createStore(state => state, {
     progress: {
@@ -39,8 +39,8 @@ export default storybook => {
                 previous: [7,15],
                 title: 1,
                 url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
-                status: LevelStatus.perfect
               }}
+              levelProgress={{ 5275: TestResults.ALL_PASS }}
             />
           </Provider>
         )
@@ -66,8 +66,8 @@ export default storybook => {
                 previous: [7,15],
                 title: 1,
                 url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
-                status: LevelStatus.perfect
               }}
+              levelProgress={{ 5275: TestResults.ALL_PASS }}
             />
           </Provider>
         )
@@ -93,8 +93,8 @@ export default storybook => {
                 previous: [7,15],
                 title: 1,
                 url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
-                status: LevelStatus.perfect
               }}
+              levelProgress={{ 5275: TestResults.ALL_PASS }}
             />
           </Provider>
         )
@@ -120,8 +120,8 @@ export default storybook => {
                 previous: [7,15],
                 title: 1,
                 url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1',
-                status: LevelStatus.perfect
               }}
+              levelProgress={{ 5275: TestResults.ALL_PASS }}
             />
           </Provider>
         )

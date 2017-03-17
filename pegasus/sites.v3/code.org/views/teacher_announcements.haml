@@ -1,55 +1,23 @@
-- teacher_blog_url = 'http://teacherblog.code.org/'
-- code_studio_video_url = 'https://www.youtube.com/watch?v=ZRNRVu4DFcs'
-- beyond_url = 'https://code.org/educate'
-- student_privacy_url = 'http://teacherblog.code.org/post/156768797364/privacy-concern-with-using-student-full-names'
-
-.teacher-announce
-  .announce-heading
-    = I18n.t(:dashboard_announcements)
-  .announce-content
-    %a{href: student_privacy_url, target: '_blank'}
-      .content-img-container
-        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/privacy-policy.png'), width: '200px'}
-    .content-text
-      = I18n.t(:dashboard_announce_student_privacy)
-    .announce-learn-more
-      %a{href: student_privacy_url, target: '_blank'}
-        %button.primary= I18n.t(:dashboard_announce_learn_more_button)
-  #us-announcement{style: 'display: none;'}
-    .announce-content
-      %a{href: beyond_url, target: '_blank'}
-        .content-img-container
-          %img.content-img{src: CDO.shared_image_url('/teacher-announcement/teacher-recruitment.jpg'), width: '200px'}
-      .content-text
-        = I18n.t(:dashboard_announce_teacher_recruitment)
-      .announce-learn-more
-        %a{href: beyond_url, target: '_blank'}
-          %button.primary= I18n.t(:dashboard_announce_learn_more_button)
-  #non-us-announcement{style: 'display: none;'}
-    .announce-content
-      %a{href: code_studio_video_url, target: '_blank'}
-        .content-img-container
-          %img.content-img{src: CDO.shared_image_url('/teacher-announcement/how-code-studio.png'), width: '200px'}
-      .content-text
-        = I18n.t(:dashboard_announce_go_beyond)
-      .announce-learn-more
-        %a{href: beyond_url, target: '_blank'}
-          %button.primary= I18n.t(:dashboard_announce_go_beyond_button)
-  .mini-announcement
-    .content-text
-      %i.fa.fa-hand-o-right
-      = I18n.t(:dashboard_announce_all, teacher_blog_url: teacher_blog_url)
+.teacher-announce-container
 
 :javascript
   $(document).ready(function () {
-    $.getJSON( "/v2/client-location", function (data) {
-      country_code = data['country_code'];
-      if (country_code === 'US') {
-        $('#us-announcement').show();
-      }
-      else {
-        $('#non-us-announcement').show();
-      }
+    // Load the teacher announcement from dashboard.
+    $(".teacher-announce-container").load( "/dashboardapi/teacher_announcement/", function() {
+      // Retrieve our current location.
+      $.getJSON( "/v2/client-location", function (data) {
+        // Show US or non-US announcement accordingly.
+        country_code = data['country_code'];
+        if (country_code === 'US' || country_code === 'RD') {
+          $('#us-announcement').show();
+        } else {
+          $('#non-us-announcement').show();
+        }
+      });
+      $(".track-link").each(function () {
+        $(this).click(function () {
+          trackEvent('teacher_announcement','click', $(this).data('id'));
+        });
+      });
     });
   });
-

@@ -128,6 +128,7 @@ ko:
     login: '로그인'
     invalid_login: '잘못된 로그인입니다. 다시 시도하세요.'
     pair_programming: '나는 컴퓨터 안에 파트너가 있습니다.'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: '비밀번호를 잊으셨나요?'
@@ -304,7 +305,7 @@ ko:
     delete_text_teacher_note: '반드시 참고: 당신의 계정을 삭제하는 것은 당신의 학생들의 계정을 삭제하진 않을 것입니다.'
     delete_confirm: '정말로 당신의 계정을 삭제하시겠습니까?'
     deleted_user: '삭제된 사용자'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_oauth: '타사 공급자부터 로그인 했기 때문에 비밀번호 없습니다.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: '완료'
@@ -367,6 +368,9 @@ ko:
     announcement_mc_launch: "현재 가장 인기있는 튜토리얼의 속편! 신규 마인크래프트 Hour of Code 디자이너로 학생들은 새로운 마인크래프트 월드를 만들 수 있습니다. 세상에 하나뿐인 마인크래프트를 경험할 수 있고, 친구와 공유하거나 스마트폰에서 재생할 수 있습니다. Hour of Code를 반친구들과 함께하세요."
     announcement_how_code_studio: "강의에서 컴퓨터공학을 가르치기 위해 다른 경험이 필요하지 않습니다. Code.org는 커리큘럼, 강의계획, 고품질의 전문 학습 프로그램 그리고 모든 학년&mdash;필요한 모든 것을 관리할 수 있는 다양한 도구가 무료로 제공되고 있습니다. 어디에서 시작해야 될지 궁금하세요? <a href='%{video_download_url}'>이 비디오</a>를 다운로드 하세요!"
     announcement_go_beyond: "Hour of Code를 뛰어넘어 매주 학생들과 컴퓨터과학 개념을 탐구하세요. Code.org는 모든 학년에 적합한 커리큘럼, 강의계획, 고품질 전문 학습 프로그램 및 다양한도구를 제공하고&mdash;모두 무료로 사용할 수 있습니다. :) 강의에서 컴퓨터공학을 가르치기 위해 다른 경험이 필요하지 않습니다. <b>강의에 적합한 다음 단계를 찾아보세요.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
     section_code_not_entered: "Current_section_code를 입력 하십시오."
@@ -524,6 +528,9 @@ ko:
     support: "도움 받기"
     support_url: "//support.code.org"
     help_resources: "도움말 및 리소스"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "오답"
     wrong_body: "정답이 아닙니다. 다시 시도해 보세요."
@@ -736,6 +743,8 @@ ko:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: 경고
     leaving_domain: 여러분은 이제 이 도메인을 떠나 Code.org가 운영하지 않는 다른 사이트로 이동합니다.

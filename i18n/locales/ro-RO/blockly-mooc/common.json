@@ -60,6 +60,7 @@
   "disabledProgress1":"Progresul pe care il faci saptamana aceasta la cursuri nu va fi salvat din cauza nivelului foarte mare de trafic de pe site-ul Hour of Code din aceasta saptamana.",
   "disabledProgress2":"De-asta toate bulele sunt afisate gri (nu iti face griji, progresul de dinaintea acestei saptamani inca e salvat).",
   "disabledProgress3":"Va incurajam sa incercati tutorialele Hour of code in aceasta saptamana.",
+  "documentation":"Documentation",
   "dontForget":"Nu uita",
   "dropletBlock_addOperator_description":"Adaugă două numere",
   "dropletBlock_addOperator_signatureOverride":"Adaugă operatorul",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"Perechi Cheie/valoare",
   "learnMore":"Află mai mult",
   "less":"Mai puțin",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"Utilizezi toate tipurile de blocuri necesare, dar nu așa cum trebuie.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"listă",
   "loading":"Se încarcă...",
   "locked":"Blocat",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"în poziţia din dreapta sus din afară",
   "positionTopRight":"în dreapta sus",
   "predictionInstructions":"Fă o predicție înainte să rulezi programul.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"Laboratului Aplicației",
   "projectTypeArtist":"Artist",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"când",
   "whenRun":"când rulezi",
   "workspaceHeaderShort":"Spaţiu de lucru: ",
-  "yes":"Da"
+  "yes":"Da",
+  "yourProgress":"Your Progress"
 }

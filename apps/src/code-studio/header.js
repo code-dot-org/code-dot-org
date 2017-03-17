@@ -176,8 +176,7 @@ function shareProject() {
           appType={appType}
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
-          onClickExport={window.Applab && window.Applab.canExportApp() ?
-                         window.Applab.exportApp : null}
+          onClickExport={window.Applab ? window.Applab.exportApp : null}
           canShareSocial={canShareSocial}
         />
       </Provider>,

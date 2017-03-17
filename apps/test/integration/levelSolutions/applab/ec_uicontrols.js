@@ -153,23 +153,43 @@ module.exports = {
       },
     },
     {
-      description: "testIllegalNameError",
+      description: "testIllegalNameError runButton",
       editCode: true,
       xml: "" +
-        "button('runButton', 'Bad name for a run button');" +
-        "button('submitButton', 'Bad name for a submit button');",
-      runBeforeClick: function (assert) {
-        tickWrapper.runOnAppTick(Applab, 2, function () {
-          var debugOutput = document.getElementById('debug-output');
-          assert.equal(debugOutput.textContent,
-              "ERROR: Line: 1: Error: button() id parameter refers to an id " +
-              "(runButton) which is already in use outside of Applab. Choose a different id." +
-              "ERROR: Line: 2: Error: button() id parameter refers to an id " +
-              "(submitButton) which is already in use outside of Applab. Choose a different id.");
-          assert(!$('#divApplab #runButton')[0], 'No button named runButton should appear in applab');
-          assert(!$('#divApplab #runButton')[0], 'No button named submitButton should appear in applab');
-          Applab.onPuzzleComplete();
-        });
+        "button('runButton', 'Bad name for a run button');",
+      onExecutionError: function () {
+        // Trigger the custom validator and done callback
+        Applab.onPuzzleComplete();
+      },
+      customValidator: function (assert) {
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent,
+            "ERROR: Line: 1: Error: button() id parameter refers to an id " +
+            "(runButton) which is already in use outside of Applab. Choose a different id.");
+        assert(!$('#divApplab #runButton')[0], 'No button named runButton should appear in applab');
+        return true;
+      },
+      expected: {
+        result: false,
+        testResult: TestResults.RUNTIME_ERROR_FAIL
+      },
+    },
+    {
+      description: "testIllegalNameError submitButton",
+      editCode: true,
+      xml: "" +
+      "button('submitButton', 'Bad name for a submit button');",
+      onExecutionError: function () {
+        // Trigger the custom validator and done callback
+        Applab.onPuzzleComplete();
+      },
+      customValidator: function (assert) {
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent,
+          "ERROR: Line: 1: Error: button() id parameter refers to an id " +
+          "(submitButton) which is already in use outside of Applab. Choose a different id.");
+        assert(!$('#divApplab #submitButton')[0], 'No button named submitButton should appear in applab');
+        return true;
       },
       expected: {
         result: false,

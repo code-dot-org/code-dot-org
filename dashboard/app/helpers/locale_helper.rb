@@ -2,10 +2,10 @@ module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
     current = request.env['cdo.locale']
-    #if(current_user && current_user.locale != current)
-      # TODO: Set language cookie and reload the page.
-    #end
-    current.downcase.to_sym
+    # if(current_user && current_user.locale != current)
+    #   TODO: Set language cookie and reload the page.
+    # end
+    current.to_sym
   end
 
   def locale_dir
@@ -26,11 +26,10 @@ module LocaleHelper
   def options_for_locale_select
     options = []
     Dashboard::Application::LOCALES.each do |locale, data|
-      if I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-        name = data[:native]
-        name = (data[:debug] ? "#{name} DBG" : name)
-        options << [name, locale]
-      end
+      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
+      name = data[:native]
+      name = (data[:debug] ? "#{name} DBG" : name)
+      options << [name, locale]
     end
     options
   end

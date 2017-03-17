@@ -574,6 +574,8 @@
   "setScoreText": "όρισε σκορ",
   "setScoreTextTooltip": "Ορίζει το κείμενο που θα εμφανίζεται στην περιοχή της βαθμολογίας.",
   "setScoreTooltip": "Sets the player's score to the specified amount",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "σε εικόνα Manny",
   "setSpriteSid": "σε εικόνα Sid",
   "setSpriteGranny": "σε εικόνα Granny",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "σε πολύ γρήγορη ταχύτητα",
   "setSpriteSpeedTooltip": "Ορίζει την ταχύτητα του ηθοποιού",
   "setSpriteZombie": "σε εικόνα ζόμπι",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Makes all the selected actors chase another actor",
   "setSpritesFleeTooltip": "Makes all the selected actors flee from another actor",
   "setSpritesStopTooltip": "Makes all the selected actors stop wandering, chasing, or fleeing",
@@ -671,6 +674,7 @@
   "showTSDefText": "γράψε κείμενο εδώ",
   "showTitleScreenTooltip": "Εμφάνισε την οθόνη τίτλων με το σχετικό τίτλο και κείμενο.",
   "size": "μέγεθος",
+  "setActor": "set actor",
   "setDroid": "ορισμός ανδροειδούς",
   "setDroidHidden": "σε κρυμμένο",
   "setDroidRandom": "σε τυχαίο",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Συγχαρητήρια, έβαλες κώδικα για να κάνεις Ανδροειδή Ποντίκια. Μπορείς να πας στο επόμενο παζλ ή να δοκιμάσεις να πάρεις 20 Ανδροειδή Ποντίκια. Δοκίμασε να το κάνεις πιο εύκολο βάζοντας περισσότερα από αυτά (Πάτησε και κράτα πατημένα τα πλήκτρα στο πληκτρολόγιό σου (ή την οθόνη σου) για να κινηθείς ταχύτερα.)",
   "failedChangeSettingTimeout": "Πάρε τρεις Αντάρτες Πιλότους για να προχωρήσεις.",
   "failedChangeSettingSettings": "Κάνε το παιχνίδι δικό σου. Για να περάσεις αυτό το παζλ πρέπει να αλλάξεις το ανδροειδές σου και να ορίσεις την ταχύτητά του.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

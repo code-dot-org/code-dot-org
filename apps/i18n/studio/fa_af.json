@@ -574,6 +574,8 @@
   "setScoreText": "قرار دادن امتیاز",
   "setScoreTextTooltip": "نوشته را تنظیم می کند تا در ناحیه ی امتیاز نمایش داده شود.",
   "setScoreTooltip": "Sets the player's score to the specified amount",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "to a Manny image",
   "setSpriteSid": "to a Sid image",
   "setSpriteGranny": "to a Granny image",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "به سرعت خیلی سریع",
   "setSpriteSpeedTooltip": "تعیین سرعت یک بازیگر",
   "setSpriteZombie": "به تصویر زامبی",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "Makes all the selected actors chase another actor",
   "setSpritesFleeTooltip": "Makes all the selected actors flee from another actor",
   "setSpritesStopTooltip": "Makes all the selected actors stop wandering, chasing, or fleeing",
@@ -671,6 +674,7 @@
   "showTSDefText": "متن را اینجا بنویس",
   "showTitleScreenTooltip": "یک صفحه ی عنوان با عنوان و نوشته ی مرتبط نشان دهید.",
   "size": "اندازه",
+  "setActor": "set actor",
   "setDroid": "set droid",
   "setDroidHidden": "به صورت پنهان",
   "setDroidRandom": "به صورت تصادفی",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "Congratulations, you added code to make Mouse Droids. You can go to the next puzzle or try again to get 20 Mouse Droids. Try making it easier by adding more of them! (Press and hold the keys on your keyboard (or screen) to move faster.)",
   "failedChangeSettingTimeout": "Get three Rebel Pilots to move on.",
   "failedChangeSettingSettings": "Make the game your own. To pass this puzzle, you need to change your droid and set its speed.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

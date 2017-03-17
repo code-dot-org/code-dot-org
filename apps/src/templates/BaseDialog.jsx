@@ -14,8 +14,10 @@ var BaseDialog = React.createClass({
     handleKeyDown: React.PropTypes.func,
     hideBackdrop: React.PropTypes.bool,
     fullWidth: React.PropTypes.bool,
+    useUpdatedStyles: React.PropTypes.bool,
     useDeprecatedGlobalStyles: React.PropTypes.bool,
     children: React.PropTypes.node,
+    assetUrl: React.PropTypes.func,
   },
 
   componentDidMount: function () {
@@ -59,7 +61,7 @@ var BaseDialog = React.createClass({
       return <div></div>;
     }
 
-    var bodyStyle;
+    let bodyStyle, modalBodyStyle, xCloseStyle;
     if (this.props.hideBackdrop) {
       bodyStyle = {
         position: 'initial',
@@ -77,12 +79,33 @@ var BaseDialog = React.createClass({
     let modalBodyClassNames = "modal-body";
     let modalBackdropClassNames = "modal-backdrop";
 
-    if (this.props.useDeprecatedGlobalStyles) {
+    if (this.props.useUpdatedStyles) {
+      modalBodyClassNames = "";
+      modalBodyStyle = {
+        background: `#fff top center url(${this.props.assetUrl('media/dialog/achievement_background.png')}) no-repeat`,
+        height: 480,
+        overflow: 'hidden',
+        borderRadius: 4,
+      };
+      bodyStyle = Object.assign({}, bodyStyle, {
+        width: 700,
+        marginLeft: -350,
+      });
+      xCloseStyle = {
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        padding: 10,
+        color: '#ddd',
+        cursor: 'pointer',
+        fontSize: 24,
+      };
+    } else if (this.props.useDeprecatedGlobalStyles) {
       modalClassNames = "modal dash_modal in";
       modalBodyClassNames = "modal-body dash_modal_body";
       modalBackdropClassNames = "modal-backdrop in";
     }
-    var body = (
+    let body = (
       <div
         style={bodyStyle}
         tabIndex="-1"
@@ -90,9 +113,11 @@ var BaseDialog = React.createClass({
         ref="dialog"
         onKeyDown={this.handleKeyDown}
       >
-        <div className={modalBodyClassNames}>
-          {!this.props.uncloseable &&
-           <div id="x-close" className="x-close" onClick={this.closeDialog}></div>}
+        <div style={modalBodyStyle} className={modalBodyClassNames}>
+          {!this.props.uncloseable && (this.props.useUpdatedStyles ?
+            <i className="fa fa-times" style={xCloseStyle} onClick={this.closeDialog}/> :
+            <div id="x-close" className="x-close" onClick={this.closeDialog}></div>
+          )}
           {this.props.children}
         </div>
       </div>

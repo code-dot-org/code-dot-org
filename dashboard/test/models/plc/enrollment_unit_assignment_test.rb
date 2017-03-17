@@ -48,20 +48,24 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     assert_equal [
       {
-        category: Plc::LearningModule::REQUIRED_MODULE,
-        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+        category: "Overview",
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
+        link: "/s/#{@script.name}#overview"
       },
       {
-        category: Plc::LearningModule::CONTENT_MODULE,
-        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+        category: "Content",
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
+        link: "/s/#{@script.name}#content"
       },
       {
-        category: Plc::LearningModule::PRACTICE_MODULE,
-        status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+        category: "Teaching Practices",
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
+        link: "/s/#{@script.name}#teaching-practices"
       },
       {
-        category: 'peer_review',
-          status: Plc::EnrollmentModuleAssignment::NOT_STARTED
+        category: "Peer Review",
+        status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
+        link: "/s/#{@script.name}#peer-review"
       }
     ], @unit_enrollment.summarize_progress
   end
@@ -71,16 +75,19 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     assert_equal [
       {
-        category: Plc::LearningModule::PRACTICE_MODULE,
-        status: Plc::EnrollmentModuleAssignment::COMPLETED
+        category: "Teaching Practices",
+        status: Plc::EnrollmentModuleAssignment::COMPLETED,
+        link: "/s/#{@script.name}"
       },
       {
-        category: Plc::LearningModule::CONTENT_MODULE,
-        status: Plc::EnrollmentModuleAssignment::COMPLETED
+        category: "Content",
+        status: Plc::EnrollmentModuleAssignment::COMPLETED,
+        link: "/s/#{@script.name}"
       },
       {
-        category: Plc::LearningModule::REQUIRED_MODULE,
-        status: Plc::EnrollmentModuleAssignment::COMPLETED
+        category: "Overview",
+        status: Plc::EnrollmentModuleAssignment::COMPLETED,
+        link: "/s/#{@script.name}"
       }
     ], @unit_enrollment.summarize_progress
   end

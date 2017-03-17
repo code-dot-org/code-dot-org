@@ -748,6 +748,9 @@
   dashboard_announce_hoc_scaling_progress: "მიაქციეთ ყურადღება, რომ 3-11 დეკემბრის განმავლობაში ჩვენ ვერ ვინახავთ კურსის მიმდინარე პროგრესს, რადგანაც ჩვენი საიტი გადატვირთულია კოდის ერთი საათის ფარგლებში. თქვენ კვლავ შეგიძლიათ ნახოთ მოსწავლის პროგრესი, რომელსაც მან 3 დეკემბრამდე მიაღწია, ასევე პროგრესი ძველებურად შეინახება ამ კვირის დასრულებისთანავე."
   dashboard_announce_how_code_studio: "იმისთვის, რომ კომპიუტერული მეცნიერების სწავლება დაიწყოთ არ გჭირდებათ არანაირი გამოცდილება. Code.org–ზე გვაქვს კურიკულუმები, გაკვეთილის გეგმები, უმაღლესი ხარისხის სასწავლო პროგრამები და უამრავი საინტერესო რამ ნებისმიესმიერი კლასისთვის&mdash; ყველაფერი უფასოა. ფიქრობთ, საიდან დაიწყოთ? გადმოიწერეთ <a href='%{video_download_url}'>ეს ვიდეო</a>!"
   dashboard_announce_go_beyond: "გააგრძელეთ სწავლა კოდის ერთი საათის შემდეგ და ისწავლეთ რაღაც ახალი თქვენს მოსწავლეებთან ერთად ყოველკვირეულად. Code.org–ზე გვაქვს კურიკულუმები, გაკვეთილის გეგმები, უმაღლესი ხარისხის სასწავლო პროგრამები და უამრავი საინტერესო რამ ნებისმიესმიერი კლასისთვის&mdash;და ეს ყველაფერი უფასოა. :) იმისთვის, რომ კომპიუტერული მეცნიერების სწავლება დაიწყოთ, არანაირი გამოცდილება არ გჭირდებათ. <b>გაიგეთ, რა უნდა გააკეთოს თქვენმა კლასმა ახლა.</b>"
+  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!"
   code_sign_up: "დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში"
   host_an_hour: "ჩაატარეთ ერთი საათი"
@@ -859,6 +862,12 @@
   course2_name: "კურსი 2"
   course3_name: "კურსი 3"
   course4_name: "კურსი 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "დაჩქარებული კურსი"
   cspunit1_name: '(ძველი) სექცია 1: ციფრული ინფორმაცია'
   cspunit2_name: '(ძველი) სექცია 2: ინტერნეტი'
@@ -876,6 +885,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "სრული ტესტი – 50 კითხვა"
   cspexam1-mWU7ilDYM9_name: ტესტის ნაწილი 1 – 25 კითხვა
   cspexam2-AKwgAh1ac5_name: ტესტის ნაწილი 2 – 25 კითხვა
@@ -897,6 +907,7 @@
   math_category_name: "მათემატიკა"
   hoc_category_name: "კოდის ერთი საათი"
   csf_category_name: "CS საფუძვლები"
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 CS საფუძვლები"
   csp17_category_name: "'16-'17 CS საფუძვლები"

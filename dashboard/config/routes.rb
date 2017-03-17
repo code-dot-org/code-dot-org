@@ -16,6 +16,7 @@ Dashboard::Application.routes.draw do
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
+  get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -46,6 +47,8 @@ Dashboard::Application.routes.draw do
   get 'xhr', to: 'xhr_proxy#get', format: false
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
+
+  get 'docs/*docs_route', to: 'docs_proxy#get'
 
   resources :sections, only: [:show] do
     member do
@@ -113,7 +116,6 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
       end
-      get 'section/:section_id', action: 'section_projects'
       get '/angular', to: 'projects#angular'
     end
   end
@@ -232,6 +234,8 @@ Dashboard::Application.routes.draw do
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
+  get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
+  post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
@@ -323,6 +327,7 @@ Dashboard::Application.routes.draw do
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
+      resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
 
       get :teacher_applications, to: 'teacher_applications#index'
@@ -330,12 +335,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'my_professional_learning', to: 'pd/professional_learning_landing#index'
+
   namespace :pd do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-    get 'professional_learning_landing', to: 'professional_learning_landing#index'
 
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
@@ -348,6 +353,11 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+
+    get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
+    get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
+
+    get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -369,6 +379,7 @@ Dashboard::Application.routes.draw do
     end
   end
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
+  get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'
@@ -396,14 +407,11 @@ Dashboard::Application.routes.draw do
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
       get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
-
-      namespace :projects do
-        get 'section/:section_id', to: 'section_projects#index', defaults: { format: 'json' }
-      end
     end
   end
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: { format: 'json' }
 end

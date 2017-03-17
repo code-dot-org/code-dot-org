@@ -6,7 +6,7 @@
   "user_id": 285,
   "properties": {
     "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -26,13 +26,15 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "*\"Let's get all of the coins!\"*",
-    "markdown_instructions": "*\"Let's get all of the coins!\"*",
+    "instructions": "*\"Let's get all of the treasure!\"*",
+    "markdown_instructions": "*\"Let's get all of the treasure!\"*",
     "callout_json": "[]",
-    "ideal": "9",
+    "ideal": "12",
     "instructions_important": "false",
     "min_collected": "3",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having a hard time, try saying the steps you need to take outloud first.\",\"hint_id\":\"courseC_collector_prog9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba21b9fbe7adbab189a6a1dcedf9f06b/courseC_collector_prog9.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -70,23 +72,38 @@
             <block type="maze_move">
               <title name="DIR">moveForward</title>
               <next>
-                <block type="collector_collect">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
                   <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
+                    <block type="collector_collect">
                       <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
                           <next>
-                            <block type="collector_collect">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
                               <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
+                                <block type="maze_move">
+                                  <title name="DIR">moveForward</title>
                                   <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
+                                    <block type="collector_collect">
                                       <next>
-                                        <block type="collector_collect"/>
+                                        <block type="maze_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <next>
+                                            <block type="maze_move">
+                                              <title name="DIR">moveForward</title>
+                                              <next>
+                                                <block type="maze_move">
+                                                  <title name="DIR">moveForward</title>
+                                                  <next>
+                                                    <block type="collector_collect"/>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
                                       </next>
                                     </block>
                                   </next>

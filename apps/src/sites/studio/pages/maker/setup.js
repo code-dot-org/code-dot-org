@@ -1,4 +1,5 @@
-import BoardController from '@cdo/apps/lib/kits/maker/BoardController';
+import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
+import {ensureAppInstalled, findPortWithViableDevice} from '@cdo/apps/lib/kits/maker/portScanning';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -10,15 +11,23 @@ const FAILED = 'FAILED';
 const CELEBRATING = 'CELEBRATING';
 const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
 
+const STATUS_IS_CHROME = 'statusIsChrome';
+const STATUS_APP_INSTALLED = 'statusAppInstalled';
+const STATUS_WINDOWS_DRIVERS = 'statusWindowsDrivers';
+const STATUS_BOARD_PLUG = 'statusBoardPlug';
+const STATUS_BOARD_CONNECT = 'statusBoardConnect';
+const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
+
 const BoardSetupStatus = React.createClass({
   getInitialState() {
     return {
-      'status-is-chrome': WAITING,
-      'status-app-installed': WAITING,
-      'status-windows-drivers': WAITING,
-      'status-board-plug': WAITING,
-      'status-board-connect': WAITING,
-      'status-board-components': WAITING
+      isDetecting: false,
+      [STATUS_IS_CHROME]: WAITING,
+      [STATUS_APP_INSTALLED]: WAITING,
+      [STATUS_WINDOWS_DRIVERS]: WAITING,
+      [STATUS_BOARD_PLUG]: WAITING,
+      [STATUS_BOARD_CONNECT]: WAITING,
+      [STATUS_BOARD_COMPONENTS]: WAITING
     };
   },
 
@@ -30,38 +39,120 @@ const BoardSetupStatus = React.createClass({
     return `${baseFormURL}?${userAgentFieldFill}&${setupStatesFieldFill}`;
   },
 
+  detect() {
+    this.setState({...this.getInitialState(), isDetecting: true});
+
+    if (!isChrome()) {
+      this.fail(STATUS_IS_CHROME);
+      return;
+    }
+
+    if (!isWindows()) {
+      this.hide(STATUS_WINDOWS_DRIVERS);
+    }
+
+    if (gtChrome33()) {
+      this.succeed(STATUS_IS_CHROME);
+    } else {
+      this.fail(STATUS_IS_CHROME);
+    }
+
+    let portName = null;
+    let boardController = null;
+
+    Promise.resolve()
+
+        // Is Chrome App Installed?
+        .then(() => this.spin(STATUS_APP_INSTALLED))
+        .then(() => promiseWaitFor(200)) // Artificial delay feels better
+        .then(() =>
+            ensureAppInstalled()
+                .then(() => this.succeed(STATUS_APP_INSTALLED))
+                .catch(error => this.fail(STATUS_APP_INSTALLED))
+        )
+
+        // Is board plugged in?
+        .then(() => this.spin(STATUS_BOARD_PLUG))
+        .then(() => promiseWaitFor(200)) // Artificial delay feels better
+        .then(() =>
+            findPortWithViableDevice()
+                .then(usablePort => {
+                  portName = usablePort;
+                  this.succeed(STATUS_BOARD_PLUG);
+                })
+                .catch(error => this.fail(STATUS_BOARD_PLUG))
+        )
+
+        // Can we talk to the firmware?
+        .then(() => this.spin(STATUS_BOARD_CONNECT))
+        .then(() => {
+              boardController = new CircuitPlaygroundBoard(portName);
+              return boardController.connectToFirmware()
+                  .then(() => this.succeed(STATUS_BOARD_CONNECT))
+                  .catch(error => this.fail(STATUS_BOARD_CONNECT));
+            }
+        )
+
+        // Can we initialize components successfully?
+        .then(() => this.spin(STATUS_BOARD_COMPONENTS))
+        .then(() => promiseWaitFor(200)) // Artificial delay feels better
+        .then(() => boardController.initializeComponents())
+        .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
+        .then(() => boardController.celebrateSuccessfulConnection())
+        .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
+        .catch(error => {
+          console.log(error);
+          this.fail(STATUS_BOARD_COMPONENTS);
+        })
+
+        // Put the board back in its original state, if possible
+        .then(() => boardController.destroy())
+        .then(() => this.setState({isDetecting: false}));
+  },
+
+  componentDidMount() {
+    this.detect();
+  },
+
   render() {
     return (
         <div>
           <h2>
             Setup Status
-            <input style={{marginLeft: 9, marginTop: -4}} className="btn" type="button" value="re-detect" onClick={() => window.location.reload()}/>
+            <input
+              style={{marginLeft: 9, marginTop: -4}}
+              className="btn"
+              type="button"
+              value="re-detect"
+              onClick={this.detect}
+              disabled={this.state.isDetecting}
+            />
           </h2>
           <div className="setup-status" style={{'fontSize': '26px'}}>
             <SetupStep
-              stepStatus={this.state['status-is-chrome']}
+              stepStatus={this.state[STATUS_IS_CHROME]}
               stepName="Chrome version 33+"
             >
-              {isChrome() && " - Your Chrome version is " + getChromeVersion() + ", please upgrade to at least version 33"}
+              {isChrome() && ` - Your Chrome version is ${getChromeVersion()}, please upgrade to at least version 33`}
             </SetupStep>
             <SetupStep
-              stepStatus={this.state['status-app-installed']}
+              stepStatus={this.state[STATUS_APP_INSTALLED]}
               stepName="Chrome App installed"
             />
             <SetupStep
-              stepStatus={this.state['status-windows-drivers']}
+              stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
               stepName="Windows drivers installed? (cannot auto-check)"
             />
             <SetupStep
-              stepStatus={this.state['status-board-plug']}
+              stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
             />
             <SetupStep
-              stepStatus={this.state['status-board-connect']}
+              stepStatus={this.state[STATUS_BOARD_CONNECT]}
               stepName="Board connectable"
             />
             <SetupStep
-              stepStatus={this.state['status-board-components']}
+              stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
               stepName="Board components usable"
             />
           </div>
@@ -83,76 +174,24 @@ const BoardSetupStatus = React.createClass({
   },
 
   hide(selector) {
-    this.setState({[`status-${selector}`]: HIDDEN});
+    this.setState({[selector]: HIDDEN});
   },
 
   fail(selector) {
-    this.setState({[`status-${selector}`]: FAILED});
+    this.setState({[selector]: FAILED});
   },
 
   spin(selector) {
-    this.setState({[`status-${selector}`]: ATTEMPTING});
+    this.setState({[selector]: ATTEMPTING});
   },
 
   succeed(selector) {
-    this.setState({[`status-${selector}`]: SUCCEEDED});
+    this.setState({[selector]: SUCCEEDED});
   },
 
   thumb(selector) {
-    this.setState({[`status-${selector}`]: CELEBRATING});
+    this.setState({[selector]: CELEBRATING});
   },
-
-  componentDidMount() {
-    if (!isChrome()) {
-      this.fail('is-chrome');
-      return;
-    }
-
-    if (!isWindows()) {
-      this.hide('windows-drivers');
-    }
-
-    if (gtChrome33()) {
-      this.succeed('is-chrome');
-    } else {
-      this.fail('is-chrome');
-    }
-
-    const bc = new BoardController();
-    Promise.resolve().then(() => {
-      this.spin('app-installed');
-      return bc.ensureAppInstalled()
-          .then(() => this.succeed('app-installed'))
-          .catch((error) => this.fail('app-installed'));
-    }).then(() => {
-      this.spin('board-plug');
-      return BoardController.getDevicePort()
-          .then(() => this.succeed('board-plug'))
-          .catch((error) => this.fail('board-plug'));
-    }).then(() => {
-      this.spin('board-connect');
-      return bc.ensureBoardConnected()
-          .then(() => this.succeed('board-connect'))
-          .catch((error) => this.fail('board-connect'));
-    }).then(() => {
-      this.spin('board-components');
-      return bc.connectWithComponents()
-          .then(() => this.thumb('board-components'))
-          .then(() => {
-            bc.prewiredComponents.buzzer.play({
-              song: [
-                ["G3", 100], ["C4", 100], ["E4", 100], ["G4", 50],
-                [null, 150], ["E4", 75], ["G4", 400]
-              ], tempo: 41500
-            });
-            bc.prewiredComponents.colorLeds.forEach(l => l.color('green'));
-          })
-          .then(() => promiseWaitFor(1600))
-          .then(() => bc.prewiredComponents.colorLeds.forEach(l => l.off()))
-          .then(() => this.succeed('board-components'))
-          .catch((error) => this.fail('board-components'));
-    });
-  }
 });
 
 const SetupStep = React.createClass({

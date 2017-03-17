@@ -1,7 +1,7 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levelbuilder.js')}
 
-#validation-error.validation-error{style: 'background-color: yellow'}
+%pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
   .field
@@ -48,7 +48,7 @@
       - @level.script_levels.each do |script_level|
         %li
           = f.submit build_script_level_path(script_level), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
-#validation-error.validation-error{style: 'background-color: yellow'}
+%pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 :javascript
   window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
   var saving = false;
@@ -66,6 +66,9 @@
 
   var inputs = $('.edit_level *[id]:visible');
   var form_values = {};
+  var FORM_VALUES_TO_SKIP = [
+    'level_tts_voice',
+  ];
   for (var i = 0; i < inputs.length; i++) {
     form_values[inputs[i].id] = inputs[i].value;
   }
@@ -75,7 +78,8 @@
       return;
     }
     for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].value !== form_values[inputs[i].id]) {
+      if (FORM_VALUES_TO_SKIP.indexOf(inputs[i].id) === -1 &&
+          inputs[i].value !== form_values[inputs[i].id]) {
         // prompt before navigating away
         return "You have unsaved changes, are you sure you want to leave?";
       }

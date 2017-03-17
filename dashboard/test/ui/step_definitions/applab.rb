@@ -132,6 +132,7 @@ When /^I navigate to the embedded version of my project$/ do
     When I click selector ".project_share"
     And I wait to see a dialog titled "Share your project"
     And I click selector "#project-share a:contains('Show advanced options')"
+    And I click selector "#project-share li:contains('Embed')"
     And I copy the embed code into a new document
   STEPS
 end
@@ -141,6 +142,7 @@ When /^I navigate to the embedded version of my project with source hidden$/ do
     When I click selector ".project_share"
     And I wait to see a dialog titled "Share your project"
     And I click selector "#project-share a:contains('Show advanced options')"
+    And I click selector "#project-share li:contains('Embed')"
     And I click selector "#project-share label:contains('Hide ability to view code')"
     And I copy the embed code into a new document
   STEPS
@@ -370,4 +372,10 @@ end
 
 And /^Firebase is disabled$/ do
   expect(@browser.execute_script("return dashboard.project.useFirebase()")).to be(false)
+end
+
+And /^I wait for initial applab save to complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
+  end
 end

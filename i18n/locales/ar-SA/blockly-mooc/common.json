@@ -60,6 +60,7 @@
   "disabledProgress1":"أي تقدم تقوم به على مسارك الخاص لن يتم حفظه منذ 3 -11 ديسمبر بسبب مستوى الازدحام اللذي يستقبله موقع ساعة من البرمجة خلال هذا الوقت.",
   "disabledProgress2":"هذا السبب اللذي يجعل عرض فقاعتك بالرمادي (لا تقلق, التقدم الذي أحرزته قبل هذا الاسبوع ما زالت محفوظة).",
   "disabledProgress3":"نحن نشجعك لتجرب تدريس ساعة من البرمجة بدلاً من هذا الاسبوع.",
+  "documentation":"Documentation",
   "dontForget":"لا تنسى",
   "dropletBlock_addOperator_description":"جمع رقمين",
   "dropletBlock_addOperator_signatureOverride":"علامة الجمع",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"أزواج المفاتيح / القيم",
   "learnMore":"اعرف المزيد",
   "less":"أقل",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"أنت استخدمت كل أنواع المربعات البرمجية الضرورية ولكن ليس في الطريقة الصحيحة.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"قائمة",
   "loading":"جاري التحميل...",
   "locked":"مقفل",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"إلى الموضع الأعلى الأيمن الخارجي",
   "positionTopRight":"إلى الموضع الأيمن الأعلى",
   "predictionInstructions":"أصنع نبؤة قبل تشغيل البرنامج.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"مختبر التطبيق",
   "projectTypeArtist":"الرسام",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"عندما",
   "whenRun":"عند التشغيل",
   "workspaceHeaderShort":"مساحة العمل: ",
-  "yes":"نعم"
+  "yes":"نعم",
+  "yourProgress":"Your Progress"
 }

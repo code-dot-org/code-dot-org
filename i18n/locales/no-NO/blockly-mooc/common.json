@@ -60,6 +60,7 @@
   "disabledProgress1":"Fremdriften din på oppgavene vil ikke bli lagret på grunn av høy trafikk på nettsidene våre under Kodetimen i uke 49.",
   "disabledProgress2":"Dette er forklaringen på at alle boblene dine er grå (all fremdrift du hadde før denne uka er trygt lagret).",
   "disabledProgress3":"I stedet oppfordrer vi deg til å prøve Kodetimen-oppgaver i denne uka.",
+  "documentation":"Documentation",
   "dontForget":"Ikke glem",
   "dropletBlock_addOperator_description":"Legg til to tall",
   "dropletBlock_addOperator_signatureOverride":"Legg til operatør",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"Nøkkel/verdi-par",
   "learnMore":"Lær mer",
   "less":"Mindre",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"Fortsett kodingen! Men det er noe som fortsatt ikke stemmer.",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"liste",
   "loading":"Laster...",
   "locked":"Låst",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"til øverste høyre posisjon utenfor",
   "positionTopRight":"til øverste høyre posisjon",
   "predictionInstructions":"Prøv å forutse hva som skjer, før du kjører programmet.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"App Lab",
   "projectTypeArtist":"Kunstner",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"når",
   "whenRun":"når den kjører",
   "workspaceHeaderShort":"Arbeidsområde: ",
-  "yes":"Ja"
+  "yes":"Ja",
+  "yourProgress":"Your Progress"
 }

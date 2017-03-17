@@ -74,7 +74,9 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
@@ -144,7 +146,9 @@
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="maze_moveForward"/>
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                        </block>
                       </statement>
                       <next>
                         <block type="controls_repeat_ext" inline="true">

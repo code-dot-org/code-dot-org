@@ -76,7 +76,7 @@ level 'CSPU5_U3L14 - moving memory challenge4'
 level 'CSPU5_U3L14 - moving memory challenge5'
 level 'CSPU5_U3L14 - moving memory challenge6'
 level 'CSPU5_U3L19 - variable reassignment challenge pt2'
-level 'CSPU5_U3L14 - MC variable reassignment'
+assessment 'CSPU5_U3L14 - MC variable reassignment'
 
 stage 'Building an App: Clicker Game'
 named_level 'Unit 5 Lesson 5 Introduction'

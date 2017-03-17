@@ -28,11 +28,11 @@ The materials below are from the '15-'16 Computer Science Principles pilot that 
 We have forums for educators to discuss and trade ideas about CS Principles  and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CS Principles  there are two forums that are most useful:
 
 * [General CS Principles  forum](http://forum.code.org/c/csp)
-* [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp-unit1)
-* [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp-unit2)
-* [Unit 3 Lesson-Specific Forums](http://forum.code.org/c/csp-unit3)
-* [Unit 4 Lesson-Specific Forums](http://forum.code.org/c/csp-unit4)
-* [Unit 5 Lesson-Specific Forums](http://forum.code.org/c/csp-unit5)
+* [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp1)
+* [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp2)
+* [Unit 3 Lesson-Specific Forums](http://forum.code.org/c/csp3)
+* [Unit 4 Lesson-Specific Forums](http://forum.code.org/c/csp4)
+* [Unit 5 Lesson-Specific Forums](http://forum.code.org/c/csp5)
 * [Post-AP Stage-Specific Forums](http://forum.code.org/c/csp-post-ap)
 
 AP® is a registered trademark of the College Board.

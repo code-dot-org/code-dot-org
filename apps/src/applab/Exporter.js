@@ -161,7 +161,7 @@ function extractCSSFromHTML(el) {
 
   // We need to prefix all of our selectors with divApplab to overcome the
   // precendence of css defined in applab.css
-  var selectorPrefix = '#divApplab ';
+  var selectorPrefix = '#divApplab.appModern ';
 
   var baseEls = {};
   for (var elementType in elementLibrary.ElementType) {
@@ -174,6 +174,7 @@ function extractCSSFromHTML(el) {
     if (baseEl.tagName.toLowerCase() === 'input') {
       selector += '[type=' + (baseEl.getAttribute('type') || 'text') + ']';
     }
+    selector += ',\n' + selector + ':hover';
     css.push(selector + ' {');
     for (var k = 0; k < baseEl.style.length; k++) {
       var key = baseEl.style[k];
@@ -230,7 +231,7 @@ export default {
     var html = exportProjectEjs({htmlBody: appElement.outerHTML});
     var readme = exportProjectReadmeEjs({appName: appName});
     var cacheBust = '?__cb__='+''+new String(Math.random()).slice(2);
-    var assetsToDownload = [
+    const staticAssets = [
       {
         url: '/blockly/js/en_us/common_locale.js' + cacheBust,
         zipPath: appName + '/common_locale.js'
@@ -243,19 +244,22 @@ export default {
       }, {
         url: '/blockly/css/applab.css' + cacheBust,
         zipPath: appName + '/applab/applab.css'
+      }, {
+        url: '/blockly/css/common.css' + cacheBust,
+        zipPath: appName + '/applab/common.css'
       },
-    ].concat(dashboard.assets.listStore.list().map(function (asset) {
-      return {
-        url: assetPrefix.fixPath(asset.filename),
-        rootRelativePath: 'assets/' + asset.filename,
-        zipPath: appName + '/assets/' + asset.filename,
-        dataType: 'binary',
-        filename: asset.filename,
-      };
+    ];
+
+    const appAssets = dashboard.assets.listStore.list().map(asset => ({
+      url: assetPrefix.fixPath(asset.filename),
+      rootRelativePath: 'assets/' + asset.filename,
+      zipPath: appName + '/assets/' + asset.filename,
+      dataType: 'binary',
+      filename: asset.filename,
     }));
 
     function rewriteAssetUrls(data) {
-      return assetsToDownload.slice(4).reduce(function (data, assetToDownload) {
+      return appAssets.reduce(function (data, assetToDownload) {
         if (data.indexOf(assetToDownload.url) >= 0) {
           return data.split(assetToDownload.url).join(assetToDownload.rootRelativePath);
         }
@@ -264,23 +268,24 @@ export default {
     }
 
     var zip = new JSZip();
-    zip.file(appName + "/README.md", readme);
+    zip.file(appName + "/README.txt", readme);
     zip.file(appName + "/index.html", rewriteAssetUrls(html));
     zip.file(appName + "/style.css", rewriteAssetUrls(css));
     zip.file(appName + "/code.js", rewriteAssetUrls(code));
 
     return new Promise((resolve, reject) => {
-      $.when(...assetsToDownload.map(
+      $.when(...[...staticAssets, ...appAssets].map(
         (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
       )).then(
-        ([commonLocale], [applabLocale], [applabApi], [applabCSS], ...rest) => {
+        ([commonLocale], [applabLocale], [applabApi], [applabCSS], [commonCSS], ...rest) => {
           zip.file(appName + "/applab/applab-api.js",
                    [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
           rest.forEach(([data], index) => {
-            zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});
+            zip.file(appAssets[index].zipPath, data, {binary: true});
           });
 
           // Extract urls from applab.css that point to other assets we need to download
+          applabCSS = commonCSS + applabCSS;
           const cssAssetsToDownload = (applabCSS.match(/url\(['"]?\/[^)]+['"]?\)/ig) || [])
             .map(
               urlRef => {
@@ -290,7 +295,7 @@ export default {
                   while (applabCSS.indexOf(cssURLRule) >= 0) {
                     applabCSS = applabCSS.replace(
                       cssURLRule,
-                      `url("applab/assets${url}")`
+                      `url("assets${url}")`
                     );
                   }
                   return url;

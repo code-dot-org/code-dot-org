@@ -705,6 +705,7 @@ uk:
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
+            Standalone video: Standalone video
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -2189,9 +2190,9 @@ uk:
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 1.
           stage:
             Unit 1 Overview: Unit 1 Overview
             'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
@@ -2275,10 +2276,10 @@ uk:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 2. '
         csd4:
           stage:
             Analysis of Design: Analysis of Design
@@ -2535,10 +2536,10 @@ uk:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
         csdgraveyard:
           stage:
             new stage: new stage
@@ -2561,10 +2562,10 @@ uk:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             Unit 4 Overview: Unit 4 Overview
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
         sciencepd4:
           stage:
             Welcome!: Ласкаво просимо!
@@ -2615,3 +2616,56 @@ uk:
           description_audience: ''
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage: [ ]
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+        csp6-support:
+          stage: [ ]
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+        unit6-csd-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+            Foo: Foo
+            Lists: Списки
+            Lights: Lights
+          title: Draft Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''

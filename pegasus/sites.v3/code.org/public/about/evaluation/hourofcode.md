@@ -13,18 +13,18 @@ social:
 
 ---
 
-# What’s the impact of the Hour of Code?
+# What's the impact of the Hour of Code?
 
 ![image](/images/fit-375/hoc-certificates.jpg)&nbsp;&nbsp;&nbsp;
 ![image](/images/fit-375/hoc-girls.jpg)
 
-**January, 2016**
+**February, 2017**
 
-At Code.org, we’re big believers in metrics. As you can see on our [About page](/about) or our [2015 Annual Report](/about/2015), we publish many of the metrics we use to track progress across all our programs, and there are hundreds of other smaller ways we make sure our work is moving the needle. 
-
-Headline metrics such as “200 million [hours served](/loc)” or “11 billion [lines of code](/loc)” sound impressive, but, there's a lot more to measuring impact.
+At Code.org, we’re big believers in metrics. As you can see on our [About page](/about) or our [2016 Annual Report](/about/2016), we publish many of the metrics we use to track progress across all our programs, and there are hundreds of other smaller ways we make sure our work is moving the needle. 
 
 Given the hundreds of global partners and 198,000 organizers who support the Hour of Code campaign for CS Education Week, we want to celebrate *your* efforts by sharing some ways this grassroots campaign is changing the world.
+
+*Looking for international stats on this year's Hour of Code? Check out [our blog](https://medium.com/anybody-can-learn/the-hour-of-code-an-international-movement-66702e388d35) about how countries around the world participated in 2016!*
 
 <%= view :three_circles, circles: [
 {img: '/images/2015AR/fit-150/circles1.jpg', text: '"Our students asked to have an hour every week." &mdash; Corinthia Azaniah Carter, Brooklyn, NY'},
@@ -38,19 +38,24 @@ The Hour of Code is at its core not about learning a brand new skill in just one
 **The Hour of Code is not limited to one hour of coding.** Thousands of the events during Computer Science Education Week go beyond one hour, and involve activities other than coding, all under the umbrella celebration of Hour of Code.  
 
 
-## The most important measures of impact
-After the Hour of Code, we asked participating organizers how it went and got some fantastic news for our field. 
+## The Hour of Code Impact Study
+In early 2017 we released the results of a new study, conducted by our own evaluation team, that sought to measure the student impact of an Hour of Code. We surveyed students on their attitudes and confidence towards computer science, both before they did an Hour of Code and directly after.
 
-* **98%** had a good or great experience.
-* **85%** of those new to computer science said the Hour of Code increased their interest in teaching computer science. 
-* **49%** said they plan to continue teaching computer science beyond one hour.
-* **18%** said they began teaching computer science after a previous Hour of Code campaign!
-* **87%** said their students did more than just one hour of coding.
+At a high level, after just one Hour of Code:
 
-When we consider the diversity of these students, and the global participation in this campaign, stretching from urban schools in Los Angeles, Chicago, Brooklyn, to refugee camps in Syria and Palestine, it is inspiring to read this feedback.
+- More students reported liking computer science
+- More students reported feeling they are able to learn computer science, and
+- More students reported feeling they are better at computer science than their peers
 
-More in-depth survey results are detailed below.
+These findings were especially true for female students, which is particularly important, given Code.org’s mission to broaden participation in computer science among girls and underrepresented minorities.
 
+For example, look at the change in attitudes among female high school students with no prior experience in computer science:
+
+<p align="center"><img src="/images/high-school-girls-like-CS.jpg" width="60%"/></p>
+
+It’s too early to tell whether this shift in perception will lead to more girls majoring in computer science in college or pursuing a career in it. But these results show how just one positive experience can dramatically transform one’s attitude toward an academic subject. It is often assumed that it’s more difficult to change the minds of students as they get older; this suggests that students should be exposed to computer science at all grade levels.
+
+Read the entire [Hour of Code impact study here](https://code.org/files/HourOfCodeImpactStudy_Jan2017.pdf). 
 
 <br/>
 
@@ -64,125 +69,102 @@ More in-depth survey results are detailed below.
 
 [/breakoutquote]
 
-
-
-## Harder to measure - the changing landscape of CS education
-
-In our 2015 annual report, we recently reported on the [changing landscape of CS education](/about/2015). The data clearly shows that Americans widely support our vision that every student in every school should have the opportunity to learn computer science:
-
-* **90%** of parents want their child’s school to teach computer science
-* **75%** of Americans believe computer science is cool in a way it wasn’t 10 years ago
-* **67%** of parents and **56%** of teachers believe students should be *required* to learn computer science. This demand is highest among parents or teachers of low-income students.
-* **50%** of Americans rank CS as one of the two most important subjects of study after reading and writing (70% also chose math), ahead of other sciences, history, arts, or foreign languages.
-<center><font size="1">Sources: surveys [by Gallup (sponsored by Google)](https://www.google.com/edu/resources/computerscience/research/) and [by Horizon media](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html), 2015.</font></center>
-
-While it’s impossible to measure how much of the above is due to the Hour of Code campaign, with one out of every 3 U.S. schools participating and tens of millions of students engaged, this campaign has certainly played a role.
-
-Also, in the 2 years since the first Hour of Code campaign, the largest cities in the U.S. have embraced computer science, and so have many states, and even entire countries have announced national curriculum plans. One cannot measure exactly how much the Hour of Code campaign has impacted these things, but the anecdotes show that the impact is real.  We have heard from countless educators - in cities like Chicago, states like Utah, or countries like Italy - that grassroots participation in the Hour of Code helped build support for top-down efforts to embrace computer science curriculum.  
-
-As one clear example, the 2013 Hour of Code campaign played a pivotal role in Arkansas’ education: [after Asa Hutchinson saw his granddaughter using the Hour of Code tutorials](http://www.arkansasonline.com/news/2015/feb/24/hutchinson-signs-measure-expanding-computer-scienc/), he made computer science education part of his gubernatorial campaign platform, and followed it up with [legislation to require computer science to be taught in every high school](http://www.wired.com/2015/03/arkansas-computer-science/). 
-
-Here's an international example, which we discovered almost by accident:
-
-<br/>
-<img width="100%" src="/images/2015AR/africa.png" />
-<br/>
-
-We can’t know what the K-12 CS landscape would look like without a grassroots campaign mobilizing hundreds of partners, hundreds of thousands of educators, and tens of millions of students. But what’s clear is that the education landscape has shifted significantly, globally, and we are thankful for *everybody* who has played a supporting role.
-
 <hr/>
 
-## Survey of 198,000 participating educators
+## Survey of participating educators
 
-Over 40,000 organizers who participated in Hour of Code 2015 completed our survey and shared their experiences. Note: (1) The survey was in English only and does not measure the experience of non-English-speaking organizers. (2) The survey was sent to event organizers and classroom teachers. Many students or adults engage with the Hour of Code on their own, and their experience is not measured by this survey. 
+We conduct a survey every year after the Hour of Code to discover rough participation demographics, how event organizers experienced the campaign, and more. The results for 2016 are in, and we’ve shared some interesting stats below. 
 
-For information about international participation in the 2015 Hour of Code, [see these stats](http://blog.code.org/post/135648100403/you-mightve-heard-about-the-hour-of-code-in-the). 
+Over 15,000 organizers who participated in Hour of Code 2016 completed our survey and shared their experiences. The survey was in English only and does not measure the experience of non-English-speaking organizers. The survey was also only sent to event organizers and classroom teachers who registered on the Hour of Code website. Many students or adults engage with the Hour of Code on their own, and their experience is not measured by this survey.
 
-**Q: What were the demographics of the participating students?**
+### Q: What were the demographics of the participating students?
 
-**A: Internationally: 49% female. Among U.S. participants: 38.5% students of color**
+#### A: Internationally: 48% female. Among U.S. participants: 38% underrepresented students of color
 
-<img src="/images/2015AR/survey2.png" />
+*Why is this important?* We’re trying to break stereotypes that limit participation in computer science by girls and underrepresented minorities. The first step in that process is just getting them to try an Hour of Code to see if they like it.
 
-Note: Percentages are calculated based on the participating educators’ reports of total student participation by demographic. Students of color are only reported among U.S. participants and include African American, Hispanic/Latino/Latina, Pacific Islander, or Native American/Alaskan Native students.
+<img src="/images/hourofcodesurvey/female-male-URMs.png" width="90%">
 
-<br/><br/>
-**Q: Overall, how would you rate your Hour of Code experience?** 
+*Note: Percentages are calculated based on the participating educators’ reports of total student participation by demographic. Underrepresented minorities are only reported among U.S. participants and include African American, Hispanic/Latino/Latina, Pacific Islander, or Native American/Alaskan Native students.*
 
-**A: 97.5% rated their experience as Good or Great.**
+### Q: Overall, how would you rate your Hour of Code experience?
 
-<img src="/images/2015AR/survey1.png" />
-<br/><br/>
+#### A: 98.1% rated their experience as Good or Great.
 
-**Q: Where was your Hour of Code event?**
+*Why is this important?* We want to know that teachers enjoy their Hour of Code experience. We respect teachers’ time, and know how hard it is to try something new in the classroom.
 
-**A: Events were mostly held in public schools**
+<img src="/images/hourofcodesurvey/howwouldyourate.png" width="50%">
 
-<img src="/images/2015AR/survey3.png" />
+### Q: Where was your Hour of Code event?
 
-<br/><br/>
-**Q: Does your school already teach/offer a Computer Science class that includes programming or coding?**
+#### A: Events were mostly held in public schools
 
-**A: 60% reported that their school doesn’t offer such a course.**
+*Why is this important?* Public schools in particular reach disadvantaged and underrepresented students who might not otherwise ever try computer science. While anyone can do an Hour of Code anywhere, at any time, we’re pleased to see such widespread adoption within public education—not only in the US, but around the world.
 
-<img src="/images/2015AR/survey4.png" />
+<img src="/images/hourofcodesurvey/wherewasyourevent.png" width="70%">
 
-<br/><br/>
-**Q: How has your experience with the Hour of Code affected your interest in teaching computer science?**
+### Q: How satisfied were you with your volunteer experience?
 
-**A: 83% said they were"more interested" in teaching CS.**
+#### A: 97% were satisfied
 
-<img src="/images/2015AR/survey5.png" />
+*Why is this important?* 17,000 volunteers signed up to help classrooms with their Hour of Code. These volunteers were a mix of software engineers, university students, or interested parents. We’re happy that our teachers had a positive experience inviting these professionals into their classrooms.
+
+<img src="/images/hourofcodesurvey/satisfiedchart.png" width="40%"><img src="/images/hourofcodesurvey/satisfiedkey.png" width="40%">
 
 
+### Q: Does your school already teach/offer a computer science class that includes programming or coding?
 
-This is a particularly relevant question at schools that don’t already have a CS course, because the participating organizer might one day begin teaching one. At these schools, **85%** responded "More interested."
+#### A: 50.6% reported that their school doesn’t offer such a course.
 
-<br/><br/>
-**Q: If given the opportunity, would you continue teaching coding or computer science beyond just one hour?**
+*Why is this important?* While the number of schools that offer computer science has increased in the last few years, the Hour of Code remains a great introduction for those schools who haven’t been able to support an entire course yet. Roughly half of the teachers who took our survey don’t get any other opportunities to expose their students to computer science.
 
-* 26%: Yes, I already taught computer science before Hour of Code
-* 18%: Yes, I started teach coding after a previous Hour of Code campaign
-* 49%: Yes, I hope to teach coding or computer science beyond one hour
-* 6%: No
-
-<br/><br/>
-
-**Q: Did any of your students do coding for longer than one hour?**
-
-**A: 87% of organizers said their students coded for more than one hour**
-
-<img src="/images/2015AR/survey6.png" />
+<img src="/images/hourofcodesurvey/alreadyteach.png" width="70%">
 
 
+### Q: How has your experience with the Hour of Code affected your interest in teaching computer science?
 
-<br/><br/>
-**Q: Should we keep the Hour of Code as the centerpiece activity of Computer Science Education Week, and keep “Hour of Code” as the unifying brand for all the other activities that educators organize throughout the week?**
+#### A: 88.1% said they were"more interested" in teaching CS. 
 
-* 98.4%: Yes - stay the course, as long as there are new tutorials and community activities under the Hour of Code umbrella each year. 
-* 1.6%: No - I’d prefer something completely different as the centerpiece activity for CS Education Week.
+*Why is this important?* The Hour of Code isn’t just about breaking stereotypes for students—we want to make computer science approachable to teachers, too! Anybody can learn code, and any educator can learn how to teach it. 
 
-<br/>
-**Q: Did a volunteer participate in the Hour of Code through the map we provided?**
+<img src="/images/hourofcodesurvey/affectedyourinterest.png" width="65%">
 
-* 16%: Yes, someone visited my classroom in person
-* 2%: Yes, someone did a video conference with my classroom
 
-## Thousands of volunteers participated
+### Q: If given the opportunity, would you continue teaching coding or computer science beyond just one hour?
 
-10,000 volunteers signed up to help classrooms with their Hour of Code, mostly in person. These were a mix of software engineers or university students or interested parents.
+#### A: 60% said they would teach computer science if given the opportunity (and 21.7% already started teaching it after a previous Hour of Code).
 
-**Q: How satisfied were you with your volunteer experience?**
+*Why is this important?* Most of the Hour of Code organizers are not computer science teachers. In fact, only 15% this year had taught it before the Hour of Code. We’re seeing many teachers from all sorts of backgrounds beginning to teach computer science.
 
-**A: 92% were satisfied**
+<img src="/images/hourofcodesurvey/wouldyoucontinueteaching.png" width="80%">
 
-<img src="/images/2015AR/survey7.png" />
 
-### Example volunteer testimonials
+### Q: Did any of your students do coding for longer than one hour?
 
-* “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry.”
-* “I especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-* “I LOVED seeing how excited the kids were . One amazing thing was that the teachers noticed that some of the students who didn't do as well academically were excelling at thinking like a developer and helping others around them - giving them a place to feel confident."
+#### A: 87% of organizers said their students coded for more than one hour
+
+*Why is this important?* One Hour of Code isn’t enough for a student to really learn any computer science. We just want students to do enough to learn if they like it. And it looks like they do! 87% of teachers said their students went beyond an Hour of Code!
+
+<img src="/images/hourofcodesurvey/longerthanonehour.png" width="55%">
+
+
+## Selected Teacher and Volunteer Testimonials
+
+- “My class loved it - they wanted more!”<br><br>
+- “This is my third year doing it with my students, and watching their growth is phenomenal. I love what you are doing and I love being able to inspire and support my female students and my students of color. I love the role models that you provide in the inspirational and instructional videos. Students see themselves in your resources, and that is perfect. Thank you.”<br><br>
+- “I saw second graders practically jumping out of their chair because they got to do the Hour of Code and 6th graders asking each other if they wanted to code together later! Code.org is leading a movement to get girls and boys from all backgrounds coding and it's exciting to play a small role through volunteering!”
+
+<p align="center"><img src="/images/hourofcodesurvey/students2.jpg" width="80%"/></p>
+
+- “I believe that this Hour of Code concept is truly amazing. I teach a class with some students with special needs and they flourish in this type of learning. I am impressed with their ability to stay focused and control their behavior while completing the Hour of Code.”<br><br>
+- “Make it a month instead of an Hour of Code :)”<br><br>
+- “This year was the best year ever. We went to our Statehouse and had legislators and community partners involved. The website that was created with multiple activities gave students many more options than in the past and was fantastic. It was SO INCREDIBLY helpful to have a clearinghouse page of multiple activities, every student was able to find something they liked.”
+
+<p align="center"><img src="/images/hourofcodesurvey/students1.jpg" width="80%"/></p>
+
+- “I LOVE getting students excited about the possibilities with computer science, especially the younger ones and the girls. It's like opening up a whole new magic world to them.”<br><br>
+- “It was fun to watch the kids succeed. Even those who didn't think they were good at math or logic were able to work through the exercise because they're presented as fun puzzles, not tedious work.”<br><br>
+- “I don't know enough about computer science, but it was so amazing it brought tears to my eyes. It was amazing to hear parents telling me stories about their students going home and coding MORE. I LOVE this movement. I will never be a computer oriented person, I joke that I should've been born in the 1800's but I understand and appreciate the need and demand for computer science. Thank you!!!”
 
 
 

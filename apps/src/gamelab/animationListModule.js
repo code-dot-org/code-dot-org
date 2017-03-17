@@ -458,7 +458,7 @@ export function cloneAnimation(key) {
  * Set the display name of the specified animation.
  * @param {string} key
  * @param {string} name
- * @returns {{type: ActionType, key: string, name: string}}
+ * @returns {{type: string, key: string, name: string}}
  */
 export function setAnimationName(key, name) {
   return dispatch => {
@@ -475,7 +475,7 @@ export function setAnimationName(key, name) {
  * Set the frameDelay of the specified animation.
  * @param {string} key
  * @param {number} frameDelay
- * @returns {{type: ActionType, key: string, frameDelay: number}}
+ * @returns {{type: string, key: string, frameDelay: number}}
  */
 export function setAnimationFrameDelay(key, frameDelay) {
   return dispatch => {
@@ -492,7 +492,7 @@ export function setAnimationFrameDelay(key, frameDelay) {
  * Set the looping value of the specified animation.
  * @param {string} key
  * @param {bool} looping
- * @returns {{type: ActionType, key: string, looping: bool}}
+ * @returns {{type: string, key: string, looping: bool}}
  */
 export function setAnimationLooping(key, looping) {
   return dispatch => {
@@ -588,7 +588,7 @@ function loadAnimationFromSource(key, callback) {
  * Action creator for adding an animation.
  * @param {!AnimationKey} key
  * @param {SerializedAnimation} props
- * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ * @returns {{type: string, key: AnimationKey, props: SerializedAnimation}}
  */
 export function addAnimationAction(key, props) {
   return {
@@ -603,7 +603,7 @@ export function addAnimationAction(key, props) {
  * Set these as pending before loading them into Piskel.
  * @param {!AnimationKey} key
  * @param {SerializedAnimation} props
- * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ * @returns {{type: string, key: AnimationKey, props: SerializedAnimation}}
  */
 function setPendingFramesAction(key, props) {
   return {
@@ -615,7 +615,7 @@ function setPendingFramesAction(key, props) {
 
 /**
  * Action creator for removing pending frames.
- * @returns {{type: ActionType}}
+ * @returns {{type: string}}
  */
 export function removePendingFramesAction() {
   return {
@@ -625,7 +625,7 @@ export function removePendingFramesAction() {
 
 /**
  * Action creator for when pending frames are done loading from the source url.
- * @returns {{type: ActionType, key: AnimationKey, props: SerializedAnimation}}
+ * @returns {{type: string, key: AnimationKey, props: SerializedAnimation}}
  */
 function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
   return {
@@ -637,7 +637,7 @@ function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
 
 /**
  * Action creator for when pending frames will start loading from the source url.
- * @returns {{type: ActionType}}
+ * @returns {{type: string}}
  */
 function startLoadingPendingFramesFromSourceAction() {
   return {
@@ -756,7 +756,7 @@ export function saveAnimations(onComplete) {
  * @param {AnimationProps} animationProps
  * @return {Promise} which resolves to a redux action object
  */
-function saveAnimation(animationKey, animationProps) {
+export function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
 
@@ -785,6 +785,7 @@ function saveAnimation(animationKey, animationProps) {
     xhr.addEventListener('load', onSuccess);
     xhr.addEventListener('error', onError);
     xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
+    xhr.setRequestHeader("Content-type", "image/png");
     xhr.send(animationProps.blob);
   });
 }

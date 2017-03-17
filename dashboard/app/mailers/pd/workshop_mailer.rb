@@ -1,5 +1,5 @@
 class Pd::WorkshopMailer < ActionMailer::Base
-  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'
+  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
   # Name of partial view for workshop details organized by course, then subject.
   # (views/pd/workshop_mailer/workshop_details/_<name>.html.haml)
@@ -25,9 +25,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   # Online URL used in the details partials, organized by course.
   ONLINE_URL = {
-    Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/s/sciencepd1',
-    Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/s/algebrapd1',
-    Pd::Workshop::COURSE_ECS => 'https://studio.code.org/s/ecspd1'
+    Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/course/cs-in-science-support',
+    Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/course/cs-in-algebra-support',
+    Pd::Workshop::COURSE_ECS => 'https://studio.code.org/course/ecs-support'
   }
 
   after_action :save_timestamp
@@ -49,7 +49,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def organizer_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
-    @teacher_dashboard_url = CDO.code_org_url "/teacher-dashboard#/sections/#{@workshop.section_id}/manage"
 
     mail content_type: 'text/html',
       from: from_no_reply,
@@ -153,12 +152,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
     @teacher = enrollment.user
     @enrollment = enrollment
-
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? @workshop.course
-      @survey_url = CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{enrollment.code}", 'https:'
-    else
-      @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
-    end
+    @survey_url = enrollment.exit_survey_url
 
     @dash_code = CDO.pd_workshop_exit_survey_dash_code
 

@@ -22,6 +22,13 @@ exports.setMap = function (id, value) {
   Studio.queueCmd(id, 'setMap', {'value': value});
 };
 
+exports.setMapAndColor = function (id, color, value) {
+  Studio.queueCmd(id, 'setMapAndColor', {
+    'value': value,
+    'color': color,
+  });
+};
+
 exports.setSprite = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSprite', {
     'spriteIndex': spriteIndex,

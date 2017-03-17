@@ -574,6 +574,8 @@
   "setScoreText": "ქულის განსაზღვრა",
   "setScoreTextTooltip": "აყენებს ტექსტს ქულების ადგილზე გამოსაჩენად.",
   "setScoreTooltip": "მოთამაშის ქულას უტოლებს მითითებულ ოდენობას",
+  "setSpriteChase": "to chase actor",
+  "setSpriteFlee": "to flee actor",
   "setSpriteManny": "მენის სურათზე",
   "setSpriteSid": "სიდის სურათზე",
   "setSpriteGranny": "გრენის სურათზე",
@@ -647,6 +649,7 @@
   "setSpriteSpeedVeryFast": "ძალიან მაღალ სიჩქარეზე",
   "setSpriteSpeedTooltip": "აყენებს მსახიობის სიჩქარეს",
   "setSpriteZombie": "ზომბის ფოტოზე",
+  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
   "setSpritesChaseTooltip": "ყველა არჩეული მსახიობი დასაჭერად გაეკიდება სხვა მსახიობს",
   "setSpritesFleeTooltip": "ყველა არჩეული მსახიობი გაექცევა სხვა მსახიობს",
   "setSpritesStopTooltip": "ყველა არჩეული მსახიობი შეწყვეტს ხეტიალს, დაჭერას ან გაქცევას",
@@ -671,6 +674,7 @@
   "showTSDefText": "ტექსტი შეიყვანეთ აქ",
   "showTitleScreenTooltip": "ასოცირებული დასახელებებისა და ტექსტის ჩვენება.",
   "size": "ზომა",
+  "setActor": "set actor",
   "setDroid": "დროიდის დაყენება",
   "setDroidHidden": "დამალულზე",
   "setDroidRandom": "შემთხვევითზე",
@@ -855,8 +859,5 @@
   "failedMultiplyCharactersTimeoutGotSome": "გილოცავთ, თქვენ დაამათეთ კოდი და დააგროვეთ რამდენიმე თაგვი დროიდი. შეგიძლიათ ახალ თავსატეხზე გადასვლა ან თავიდან ცდა და 20 თაგვი დროიდის დაგროვება. გაიმარტივეთ საქმე - დაამატეთ მეტი! (გინდათ უფრო სწრაფად იმოძრაოთ? დააჭირეთ ღილაკებს და არ აუშვათ.)",
   "failedChangeSettingTimeout": "გასაგრძელებლად დაიჭირეთ სამი მეამბოხე პილოტი.",
   "failedChangeSettingSettings": "მოარგეთ თამაში თქვენს საჭიროებებს. ამ თავსატეხის დასასრულებლად უნდა შეცვალოთ თქვენი დროიდი და განსაზღვროთ მისი სიჩქარე.",
-  "setSpriteChase": "to chase actor",
-  "setSpriteFlee": "to flee actor",
-  "setSpriteBehaviorTooltip": "Set the behavior of the selected actor",
-  "setActor": "set actor"
+  "withColor": "with color"
 }

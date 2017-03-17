@@ -52,4 +52,10 @@ export default class Walls {
   getWallOverlayURI() {
     return null;
   }
+
+  /**
+   * Overriden in subclasses
+   * @param {string} color new wall color as a hex triplet
+   */
+  setColor(color) {}
 }

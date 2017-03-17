@@ -14,7 +14,7 @@ import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
 import * as gridUtils from './gridUtils';
 import logToCloud from '../logToCloud';
-import * as actions from './actions';
+import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 
 var designMode = {};
@@ -248,9 +248,21 @@ designMode.updateProperty = function (element, name, value) {
     case 'textAlign':
       element.style.textAlign = value;
       break;
-    case 'icon-color':
+    case 'icon-color': {
+      // This case is block-wrapped to allow scoped lexical declaration.
+      // See http://eslint.org/docs/rules/no-case-declarations
       element.setAttribute('data-icon-color', value);
+      const imageUrl = element.getAttribute('data-canonical-image-url');
+      if (ICON_PREFIX_REGEX.test(imageUrl)) {
+        const url = assetPrefix.renderIconToString(imageUrl, element);
+        if (element.nodeName === "IMG") {
+          element.src = url;
+        } else {
+          element.style.backgroundImage = 'url(' + url + ')';
+        }
+      }
       break;
+    }
     case 'image':
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
@@ -475,6 +487,8 @@ designMode.readProperty = function (element, name) {
       return parseFloat(element.style.fontSize);
     case 'textAlign':
       return element.style.textAlign;
+    case 'icon-color':
+      return element.getAttribute('data-icon-color');
     case 'image':
       return element.getAttribute('data-canonical-image-url');
     case 'screen-image':
@@ -789,8 +803,8 @@ function makeDraggable(jqueryElements) {
         var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
         // Update the position of wrapper (.ui-resizable) div
-        ui.size.width = dimensions.width;
-        ui.size.height = dimensions.height;
+        ui.element.outerWidth(dimensions.width);
+        ui.element.outerHeight(dimensions.height);
 
         // Set original element properties to update values in Property tab
         if (elm.is("canvas")) {

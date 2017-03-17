@@ -2,6 +2,8 @@ const ENQUEUE_HINTS = 'authoredHints/ENQUEUE_HINTS';
 const SHOW_NEXT_HINT = 'authoredHints/SHOW_NEXT_HINT';
 const DISPLAY_MISSING_BLOCK_HINTS = 'authoredHints/DISPLAY_MISSING_BLOCK_HINTS';
 
+import { bisect } from '../utils';
+
 /**
  * @typedef {Object} AuthoredHint
  * @property {string} content
@@ -25,8 +27,10 @@ const authoredHintsInitialState = {
 
 export default function reducer(state = authoredHintsInitialState, action) {
   if (action.type === ENQUEUE_HINTS) {
+    const [seen, unseen] = bisect(action.hints, hint => action.hintsUsedIds.indexOf(hint.hintId) !== -1);
     return Object.assign({}, state, {
-      unseenHints: state.unseenHints.concat(action.hints)
+      unseenHints: state.unseenHints.concat(unseen),
+      seenHints: state.seenHints.concat(seen)
     });
   }
 
@@ -78,9 +82,10 @@ export default function reducer(state = authoredHintsInitialState, action) {
   return state;
 }
 
-export const enqueueHints = (hints) => ({
+export const enqueueHints = (hints, hintsUsedIds) => ({
   type: ENQUEUE_HINTS,
-  hints
+  hints,
+  hintsUsedIds
 });
 
 export const showNextHint = () => ({

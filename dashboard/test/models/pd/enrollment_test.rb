@@ -10,6 +10,15 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute_equal enrollment1.code, enrollment2.code
   end
 
+  test 'enrollment.for_user' do
+    user = create :teacher
+    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email
+    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com'
+
+    enrollments = Pd::Enrollment.for_user(user).to_a
+    assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
+  end
+
   test 'find by code' do
     enrollment = create :pd_enrollment
 
@@ -114,6 +123,22 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_district)
   end
 
+  test 'exit_survey_url' do
+    normal_workshop = create :pd_ended_workshop
+    normal_enrollment = create :pd_enrollment, workshop: normal_workshop
+
+    counselor_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
+    counselor_enrollment = create :pd_enrollment, workshop: counselor_workshop
+
+    admin_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ADMIN
+    admin_enrollment = create :pd_enrollment, workshop: admin_workshop
+
+    base_url = "https://#{CDO.pegasus_hostname}"
+    assert_equal "#{base_url}/pd-workshop-survey/#{normal_enrollment.code}", normal_enrollment.exit_survey_url
+    assert_equal "#{base_url}/pd-workshop-survey/counselor-admin/#{counselor_enrollment.code}", counselor_enrollment.exit_survey_url
+    assert_equal "#{base_url}/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}", admin_enrollment.exit_survey_url
+  end
+
   test 'send_exit_survey does not send mail when the survey was already sent' do
     enrollment = create :pd_enrollment, user: create(:teacher), survey_sent_at: Time.now
     Pd::WorkshopMailer.expects(:exit_survey).never
@@ -202,5 +227,54 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
 
     assert create :pd_enrollment, email: 'valid@example.net'
+  end
+
+  test 'completed_survey?' do
+    # no survey
+    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: false)))
+    enrollment = create :pd_enrollment
+    refute enrollment.completed_survey?
+
+    # survey just completed, not yet processed
+    PEGASUS_DB.expects('[]').with(:forms).returns(mock(where: mock(any?: true)))
+    assert enrollment.completed_survey?
+
+    # survey processed, model up to date. Pegasus should not be contacted.
+    PEGASUS_DB.expects('[]').with(:forms).never
+    enrollment.update!(completed_survey_id: 1234)
+    assert enrollment.completed_survey?
+  end
+
+  test 'filter_for_survey_completion argument check' do
+    e = assert_raises do
+      # not an enumerable
+      Pd::Enrollment.filter_for_survey_completion('invalid type')
+    end
+    assert_equal 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects', e.message
+
+    e = assert_raises do
+      # enumerable contains non-enrollments
+      Pd::Enrollment.filter_for_survey_completion([create(:pd_enrollment), 'invalid type'])
+    end
+    assert_equal 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects', e.message
+
+    # valid
+    assert Pd::Enrollment.filter_for_survey_completion([create(:pd_enrollment)])
+  end
+
+  test 'filter_for_survey_completion' do
+    enrollments = [
+      enrollment_no_survey = create(:pd_enrollment),
+      enrollment_with_unprocessed_survey = create(:pd_enrollment),
+      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234)
+    ]
+
+    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey]
+    without_surveys = [enrollment_no_survey]
+    PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where: stub(map: with_surveys.map(&:id))))
+
+    assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
+    assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
+    assert_equal without_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, false)
   end
 end

@@ -1,20 +1,17 @@
 import {assert} from '../util/configuredChai';
+import {getStore} from '@cdo/apps/redux';
 
 describe("JSInterpreter", function () {
   var Observer = require('@cdo/apps/Observer');
   var JSInterpreter = require('@cdo/apps/JSInterpreter');
   var jsInterpreter;
 
-  // Setup up window.Interpreter.
-  window.acorn = require('../../lib/jsinterpreter/acorn');
-  require('../../lib/jsinterpreter/interpreter');
-
   function initWithCode(code) {
     // Setup a jsInterpreter instance with `hideSource: true` so an editor isn't
     // needed.
     jsInterpreter = new JSInterpreter({
       shouldRunAtMaxSpeed: function () { return false; },
-      studioApp: {hideSource: true}
+      studioApp: {hideSource: true, reduxStore: getStore()}
     });
 
     // Initialize a test program

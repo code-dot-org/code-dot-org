@@ -1,8 +1,10 @@
 /* global trackEvent */
 
 import $ from 'jquery';
+import { getStore } from './redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ClientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -23,7 +25,6 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var utils = require('./utils');
 var codegen = require('./codegen');
 var msg = require('@cdo/locale');
 var dom = require('./dom');
@@ -35,6 +36,11 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var DialogButtons = require('./templates/DialogButtons');
 var CodeWritten = require('./templates/feedback/CodeWritten');
 var GeneratedCode = require('./templates/feedback/GeneratedCode');
+var authoredHintUtils = require('./authoredHintUtils');
+
+import experiments from './util/experiments';
+import AchievementDialog from './templates/AchievementDialog';
+import StageAchievementDialog from './templates/StageAchievementDialog';
 
 /**
  * @typedef {Object} TestableBlock
@@ -187,6 +193,60 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
+
+  if (experiments.isEnabled('gamification')) {
+    const container = document.createElement('div');
+    const hintsUsed = options.response.hints_used +
+      authoredHintUtils.currentOpenedHintCount(options.response.level_id);
+    const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
+    const actualBlocks = this.getNumCountableBlocks();
+
+    // TODO: this is not always true
+    const lastInStage = FeedbackUtils.isLastLevel();
+    const stageName = `Stage ${window.appOptions.stagePosition}`;
+
+    const progress = experiments.isEnabled('g.stageprogress') ?
+      FeedbackUtils.calculateStageProgress(
+        actualBlocks <= idealBlocks,
+        hintsUsed,
+        options.response.level_id,
+        isFinite(idealBlocks)) :
+      {};
+
+    let onContinue = options.onContinue;
+    if (experiments.isEnabled('g.endstage') && lastInStage) {
+      onContinue = () => {
+        ReactDOM.render(
+          <StageAchievementDialog
+            stageName={stageName}
+            assetUrl={this.studioApp_.assetUrl}
+            onContinue={options.onContinue}
+            showStageProgress={experiments.isEnabled('g.stageprogress')}
+            newStageProgress={progress.newStageProgress}
+            numStars={Math.min(3, Math.round((progress.newStageProgress * 3) + 0.5))}
+          />,
+          container
+        );
+      };
+    }
+
+    document.body.appendChild(container);
+    ReactDOM.render(
+      <AchievementDialog
+        puzzleNumber={options.level.puzzle_number || 0}
+        idealBlocks={idealBlocks}
+        actualBlocks={actualBlocks}
+        hintsUsed={hintsUsed}
+        assetUrl={this.studioApp_.assetUrl}
+        onContinue={onContinue}
+        showStageProgress={experiments.isEnabled('g.stageprogress')}
+        oldStageProgress={progress.oldStageProgress}
+        newPassedProgress={progress.newPassedProgress}
+        newPerfectProgress={progress.newPerfectProgress}
+        newHintUsageProgress={progress.newHintUsageProgress}
+      />, container);
+    return;
+  }
 
   var feedbackDialog = this.createModalDialog({
     Dialog: options.Dialog,
@@ -348,6 +408,83 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
 };
 
+// TODO(ram): split this up into something more modular
+FeedbackUtils.calculateStageProgress = function (
+    isPerfect, hintsUsed, currentLevelId, finiteIdealBlocks) {
+  const stage = getStore().getState().progress.stages[0];
+  const scriptName = stage.script_name;
+  const levels = stage.levels;
+  const progress = ClientState.allLevelsProgress();
+  const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
+
+  let numPassed = 0,
+    numPerfect = 0,
+    numZeroHints = 0,
+    numOneHint = 0;
+  for (let i = 0; i < levels.length; i++) {
+    if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
+      continue;
+    }
+    const levelProgress = ClientState.bestProgress(levels[i].ids, scriptName, progress);
+    if (levelProgress > TestResults.MINIMUM_PASS_RESULT) {
+      numPassed++;
+      if (levelProgress > TestResults.MINIMUM_OPTIMAL_RESULT) {
+        numPerfect++;
+      }
+      const numHintsUsed = oldFinishedHints.filter(hint => levels[i].ids.indexOf(hint.levelId) !== -1).length;
+      if (numHintsUsed === 0) {
+        numZeroHints++;
+      } else if (numHintsUsed === 1) {
+        numOneHint++;
+      }
+    }
+  }
+
+  const passedScore = numPassed / levels.length;
+  const perfectScore = numPerfect / levels.length;
+  const hintScore = numZeroHints / levels.length +
+    0.5 * numOneHint / levels.length;
+  const oldStageProgress = 0.3 * passedScore +
+    0.4 * perfectScore +
+    0.3 * hintScore;
+
+  const newPassedLevels = 1;
+  const newPerfectLevels = isPerfect ? 1 : 0;
+
+  let newHintUsageLevels = 0;
+  if (hintsUsed === 0) {
+    newHintUsageLevels = 1;
+  } else if (hintsUsed === 1) {
+    newHintUsageLevels = 0.5;
+  }
+
+  const passedWeight = finiteIdealBlocks ? 0.3 : 0.7;
+  const perfectWeight = finiteIdealBlocks ? 0.4 : 0;
+
+  const newPassedProgress = newPassedLevels * passedWeight / levels.length;
+  const newPerfectProgress = newPerfectLevels * perfectWeight / levels.length;
+  const newHintUsageProgress = newHintUsageLevels * 0.3 / levels.length;
+
+  const newStageProgress = oldStageProgress +
+    newPassedProgress +
+    newPerfectProgress +
+    newHintUsageProgress;
+
+  return {
+    oldStageProgress,
+    newPassedProgress,
+    newPerfectProgress,
+    newHintUsageProgress,
+    newStageProgress,
+  };
+};
+
+FeedbackUtils.isLastLevel = function () {
+  const stage = getStore().getState().progress.stages[0];
+  return stage.levels[stage.levels.length - 1].ids.indexOf(
+    window.appOptions.serverLevelId) !== -1;
+};
+
 /**
  * Counts the number of blocks used.  Blocks are only counted if they are
  * not disabled, are deletable.
@@ -399,12 +536,15 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
 
-  var tryAgainText = '';
-  if (options.feedbackType !== TestResults.ALL_PASS) {
-    tryAgainText = utils.valueOr(options.tryAgainText, msg.tryAgain());
-  }
-  if (options.keepPlayingText) {
-    tryAgainText = options.keepPlayingText;
+  let tryAgainText = '';
+  if (options.tryAgainText) {
+    tryAgainText = options.tryAgainText;
+  } else if (options.feedbackType === TestResults.FREE_PLAY) {
+    tryAgainText = msg.keepPlaying();
+  } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
+    tryAgainText = msg.tryAgain();
+  } else {
+    tryAgainText = msg.replayButton();
   }
 
   ReactDOM.render(React.createElement(DialogButtons, {

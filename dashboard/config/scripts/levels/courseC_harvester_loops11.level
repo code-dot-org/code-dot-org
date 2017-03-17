@@ -30,8 +30,9 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "ideal": "10",
+    "ideal": "8",
     "step_speed": "2",
+    "hide_share_and_remix": "false",
     "contained_level_names": null
   },
   "published": true,

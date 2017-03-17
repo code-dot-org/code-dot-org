@@ -1,7 +1,9 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class UsersHelperTest < ActionView::TestCase
   include UsersHelper
+  include SharedConstants
 
   def test_summarize_user_progress
     script = Script.twenty_hour_script
@@ -38,8 +40,8 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
         levels: {
-          ul1.level_id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
-          ul3.level_id => {status: 'passed', result: 20}
+          ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
+          ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         }
       },
       summarize_user_progress(script, user)
@@ -64,8 +66,8 @@ class UsersHelperTest < ActionView::TestCase
         scripts: {
           script.name => {
             levels: {
-              ul1.level_id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
-              ul3.level_id => {status: 'passed', result: 20}
+              ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
+              ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
             }
           }
         }
@@ -87,13 +89,13 @@ class UsersHelperTest < ActionView::TestCase
         scripts: {
           script.name => {
             levels: {
-              ul1.level_id => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
-              ul3.level_id => {status: 'passed', result: 20}
+              ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
+              ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
             }
           },
           course1.name => {
             levels: {
-              ul1b.level_id => {status: 'attempted', result: 10},
+              ul1b.level_id => {status: LEVEL_STATUS.attempted, result: 10},
             }
           }
         }
@@ -143,7 +145,7 @@ class UsersHelperTest < ActionView::TestCase
         lockableAuthorized: false,
         levels: {
           ul.level_id => {
-            status: 'perfect',
+            status: LEVEL_STATUS.perfect,
             result: ActivityConstants::BEST_PASS_RESULT,
             pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]
           },
@@ -174,7 +176,7 @@ class UsersHelperTest < ActionView::TestCase
     # No user level exists, show locked progress
     assert UserLevel.find_by(user: user, level: level).nil?
     assert_equal(
-      {level.id => { status: 'locked' }},
+      {level.id => { status: LEVEL_STATUS.locked }},
       summarize_user_progress(script, user)[:levels]
     )
 
@@ -187,7 +189,7 @@ class UsersHelperTest < ActionView::TestCase
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: Time.now, readonly_answers: true, submitted: true
     assert_equal(
       {
-        level.id => { status: 'submitted', submitted: true, readonly_answers: true, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil] },
+        level.id => { status: LEVEL_STATUS.submitted, submitted: true, readonly_answers: true, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil] },
         "#{level.id}_0" => { submitted: true, readonly_answers: true },
         "#{level.id}_1" => { submitted: true, readonly_answers: true }
       },
@@ -198,7 +200,7 @@ class UsersHelperTest < ActionView::TestCase
     user_level.delete
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: true
     assert_equal(
-      {level.id => { status: 'locked' }},
+      {level.id => { status: LEVEL_STATUS.locked }},
       summarize_user_progress(script, user)[:levels],
       'level shows as locked again'
     )
@@ -209,7 +211,7 @@ class UsersHelperTest < ActionView::TestCase
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: Time.now, readonly_answers: false, submitted: false, level_source: level_source
     assert_equal(
       {
-        level.id => { status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil] },
+        level.id => { status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil] },
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
@@ -222,7 +224,7 @@ class UsersHelperTest < ActionView::TestCase
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: false
     assert_equal(
       {
-        level.id => { status: 'attempted', result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil] },
+        level.id => { status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil] },
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
@@ -234,7 +236,7 @@ class UsersHelperTest < ActionView::TestCase
     user_level.delete
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: 2.days.ago, readonly_answers: true, submitted: true
     assert_equal(
-      {level.id => { status: 'locked' }},
+      {level.id => { status: LEVEL_STATUS.locked }},
       summarize_user_progress(script, user)[:levels],
       'level shows as locked'
     )
@@ -266,7 +268,7 @@ class UsersHelperTest < ActionView::TestCase
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: nil, submitted: false
     assert_equal(
       {
-        level.id => { status: 'attempted', result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil] },
+        level.id => { status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil] },
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
@@ -278,7 +280,7 @@ class UsersHelperTest < ActionView::TestCase
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: nil, submitted: true
     assert_equal(
       {
-        level.id => { status: 'submitted', submitted: true, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil] },
+        level.id => { status: LEVEL_STATUS.submitted, submitted: true, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil] },
         "#{level.id}_0" => { submitted: true },
         "#{level.id}_1" => { submitted: true}
       },
@@ -293,7 +295,7 @@ class UsersHelperTest < ActionView::TestCase
   def test_level_with_best_progress_submitted
     level_progress = {
       101 => {
-        status: 'submitted',
+        status: LEVEL_STATUS.submitted,
         submitted: true,
         result: ActivityConstants::BEST_PASS_RESULT,
         pages_completed: [nil, nil]
@@ -309,7 +311,7 @@ class UsersHelperTest < ActionView::TestCase
   def test_level_with_best_progress_pages
     level_progress = {
       101 => {
-        status: 'perfect',
+        status: LEVEL_STATUS.perfect,
         result: ActivityConstants::BEST_PASS_RESULT,
         pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]
       },
@@ -323,7 +325,7 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_level_with_best_progress_one_attempt
     level_progress = {
-      101 => {status: 'passed', result: 20}
+      101 => {status: LEVEL_STATUS.passed, result: 20}
     }
 
     assert_equal(101, level_with_best_progress([101, 102], level_progress))
@@ -332,8 +334,8 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_level_with_best_progress_multiple_attempts
     level_progress = {
-      101 => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
-      102 => {status: 'passed', result: 20}
+      101 => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
+      102 => {status: LEVEL_STATUS.passed, result: 20}
     }
 
     assert_equal(101, level_with_best_progress([101, 102], level_progress))

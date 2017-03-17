@@ -60,6 +60,7 @@
   "disabledProgress1":"আপনার এই সপ্তাহ আপনার কোর্স চালু করতে কোন অগ্রগতি কোড ঘন্টা সপ্তাহের জন্য গ্রহণ করে আমাদের সাইট ট্রাফিক স্তর কারণে সংরক্ষিত হবে না।.",
   "disabledProgress2":"কেন আপনার বুদ্ বুদ্ ধূসর রূপে প্রদর্শিত হয়। (না চিন্তা, আপনার অগ্রগতি আগে এই সপ্তাহে এখনও নিরাপদ নয়)।.",
   "disabledProgress3":"আমরা এই সপ্তাহে টিউটোরিয়াল কোড ঘন্টার পরিবর্তে চেষ্টা করতে বলুন।.",
+  "documentation":"Documentation",
   "dontForget":"ভুলবেন না",
   "dropletBlock_addOperator_description":"দুটো সংখ্যা যুক্ত কর",
   "dropletBlock_addOperator_signatureOverride":"চালনাকারী যুক্ত কর",
@@ -198,7 +199,10 @@
   "keyValuePairLink":"নাম ও মানের জুটি",
   "learnMore":"আরও জানুন",
   "less":"কম",
+  "lessonName":"Lesson Name",
+  "lessonNumbered":"Lesson {lessonNumber}: {lessonName}",
   "levelIncompleteError":"আপনি প্রয়োজনীয় সব ধরনের ব্লক ব্যবহার করছেন কিন্তু সঠিক ভাবে নয়।",
+  "levelN":"LEVEL {levelNumber}",
   "listVariable":"তালিকা",
   "loading":"লোড হচ্ছে...",
   "locked":"তালাবন্ধ",
@@ -246,6 +250,7 @@
   "positionTopOutRight":"শীর্ষ পদ ডান দিক ছেড়ে অবস্থান",
   "positionTopRight":"উপরে ডানে অবস্থান",
   "predictionInstructions":"Make a prediction before you run the program.",
+  "projectTypeAlgebra":"Algebra",
   "projectTypeApplab":"অ্যাপ ল্যাব",
   "projectTypeArtist":"শিল্পী",
   "projectTypeGamelab":"Game Lab",
@@ -332,5 +337,6 @@
   "when":"যখন",
   "whenRun":"চালানোর সময়",
   "workspaceHeaderShort":"কর্মপরিসর:",
-  "yes":"\"হ্যাঁ\""
+  "yes":"\"হ্যাঁ\"",
+  "yourProgress":"Your Progress"
 }

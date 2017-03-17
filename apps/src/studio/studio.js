@@ -46,7 +46,7 @@ import { singleton as studioApp } from '../StudioApp';
 import {
   outputError,
   injectErrorHandler
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
@@ -3871,6 +3871,11 @@ Studio.callCmd = function (cmd) {
       Studio.setMap(cmd.opts);
       Studio.trackedBehavior.hasSetMap = true;
       break;
+    case 'setMapAndColor':
+      studioApp.highlight(cmd.id);
+      Studio.setMap(cmd.opts);
+      Studio.trackedBehavior.hasSetMap = true;
+      break;
     case 'setSprite':
       studioApp.highlight(cmd.id);
       Studio.setSprite(cmd.opts);
@@ -4632,6 +4637,7 @@ Studio.setBackground = function (opts) {
  * Set the wall map.
  * @param {string} opts.value - The name of the wall map.
  * @param {boolean} opts.forceRedraw - Force drawing map, even if it's already set.
+ * @param {string} opts.color - The color to draw the wall, for collisionMaskWalls
  */
 Studio.setMap = function (opts) {
 
@@ -4670,7 +4676,8 @@ Studio.setMap = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
-  if (!opts.forceRedraw && useMap === Studio.wallMap) {
+  if (!opts.forceRedraw && useMap === Studio.wallMap &&
+      (!opts.color || opts.color === Studio.wallColor)) {
     return;
   }
 
@@ -4681,6 +4688,12 @@ Studio.setMap = function (opts) {
   // background is changed.
   Studio.wallMapRequested = opts.value;
   Studio.walls.setWallMapRequested(opts.value);
+
+  if (opts.color && Studio.wallColor !== opts.color) {
+    Studio.wallColor = opts.color;
+    Studio.walls.setColor(opts.color);
+  }
+
 
   // Draw the tiles (again) now that we know which background we're using.
   $(".tileClip").remove();

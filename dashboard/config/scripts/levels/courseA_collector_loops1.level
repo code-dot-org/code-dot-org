@@ -26,9 +26,12 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Move Laurel around and get as much gold as you can!",
+    "instructions": "Move Laurel around and get as much treasure as you can!",
     "instructions_important": "true",
-    "markdown_instructions": "This is Laurel the Adventurer!\r\n\r\nMove her around and get as much gold as you can.",
+    "markdown_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_collector_loops1_1\",\r\n  \"callout_text\": \"Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -44,7 +47,7 @@
         <block type="maze_moveNorth"/>
         <block type="maze_moveSouth"/>
         <block type="collector_collect"/>
-        <block type="controls_repeat_simplified_dropdown">
+        <block type="controls_repeat_simplified_dropdown" id="callMe">
           <title name="TIMES" config="3-10">5</title>
         </block>
       </xml>

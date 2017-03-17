@@ -27,6 +27,7 @@
 #  user_type                  :string(16)
 #  school                     :string(255)
 #  full_address               :string(1024)
+#  school_info_id             :integer
 #  total_lines                :integer          default(0), not null
 #  prize_earned               :boolean          default(FALSE)
 #  prize_id                   :integer
@@ -67,6 +68,7 @@
 #  index_users_on_prize_id_and_deleted_at                (prize_id,deleted_at) UNIQUE
 #  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
 #  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_school_info_id                         (school_info_id)
 #  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
@@ -79,7 +81,7 @@ require 'cdo/user_helpers'
 require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
-  include SerializedProperties
+  include SerializedProperties, SchoolInfoDeduplicator
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
@@ -148,8 +150,34 @@ class User < ActiveRecord::Base
     class_name: 'District',
     foreign_key: 'contact_id'
 
+  has_many :regional_partner_program_managers,
+    foreign_key: :program_manager_id
+  has_many :regional_partners,
+    through: :regional_partner_program_managers
+
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
+
+  belongs_to :school_info
+  accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
+  validates_presence_of :school_info, unless: :school_info_optional?
+
+  # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
+  # based on the passed attributes.
+  # @param school_info_attr the attributes to set and check
+  # @return [Boolean] true if we should reject (ignore and skip writing) the record,
+  # false if we should accept and write it
+  def preprocess_school_info(school_info_attr)
+    # Suppress validation - all parts of this form are optional when accesssed through the registration form
+    school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
+    # students are never asked to fill out this data, so silently reject it for them
+    student? || deduplicate_school_info(school_info_attr, self)
+  end
+
+  # Not deployed to everyone, so we don't require this for anybody, yet
+  def school_info_optional?
+    true # update if/when A/B test is done and accepted
+  end
 
   belongs_to :invited_by, polymorphic: true
 
@@ -211,6 +239,11 @@ class User < ActiveRecord::Base
       end
       params[:school] ||= params[:ops_school]
 
+      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
+      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
+      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
+        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
+      end
       user = User.invite!(
         email: params[:email],
         user_type: TYPE_TEACHER,
@@ -577,10 +610,36 @@ class User < ActiveRecord::Base
     user_level.nil? || user_level.locked?(script_level.stage)
   end
 
+  # Returns the next script_level for the next progression level in the given
+  # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
-    script.script_levels.detect do |script_level|
+    # Find the user level that we've most recently had progress on
+    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
+
+    script_level_index = 0
+    if user_level
+      last_script_level = user_level.level.script_levels.where(script_id: script.id).first
+      script_level_index = last_script_level.chapter - 1 if last_script_level
+    end
+
+    next_unpassed = script.script_levels[script_level_index..-1].detect do |script_level|
+      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      unpassed_progression_level?(script_level, user_levels)
+    end
+
+    # if we don't have any unpassed levels proceeding the one we've most recently
+    # submitted, just go to the one we've most recently submitted
+    next_unpassed || last_script_level
+  end
+
+  # Returns true if all progression levels in the provided script have a passing
+  # result
+  def completed_progression_levels?(script)
+    user_levels_by_level = user_levels_by_level(script)
+
+    script.script_levels.none? do |script_level|
       user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
@@ -614,6 +673,26 @@ class User < ActiveRecord::Base
     UserLevel.where(conditions).
       order('updated_at DESC').
       first
+  end
+
+  # Is the stage containing the provided script_level hidden for this user?
+  def hidden_stage?(script_level)
+    return false if self.try(:teacher?)
+
+    sections = self.sections_as_student.select{|s| s.deleted_at.nil?}
+    return false if sections.empty?
+
+    script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
+
+    if !script_sections.empty?
+      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
+      # hides the stage
+      script_sections.all?{|s| script_level.stage_hidden_for_section?(s.id) }
+    else
+      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # hide it
+      sections.any?{|s| script_level.stage_hidden_for_section?(s.id) }
+    end
   end
 
   def student?
@@ -789,7 +868,7 @@ class User < ActiveRecord::Base
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     return false unless user_script
-    user_script.completed_at || next_unpassed_progression_level(script).nil?
+    user_script.completed_at || completed_progression_levels?(script)
   end
 
   def not_started?(script)
@@ -851,9 +930,9 @@ class User < ActiveRecord::Base
   # Provides backwards compatibility with users created before the UserScript model
   # was introduced (cf. code-dot-org/website-ci#194).
   # TODO apply this migration to all users in database, then remove.
-  def backfill_user_scripts
+  def backfill_user_scripts(scripts = Script.all)
     # backfill progress in scripts
-    Script.all.each do |script|
+    scripts.each do |script|
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
         ul_map = user_levels_by_level(script)
@@ -913,7 +992,7 @@ class User < ActiveRecord::Base
       end
 
       if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.basic_proficiency?
+          user_proficiency.proficient?
         user_proficiency.basic_proficiency_at = time_now
       end
 
@@ -950,7 +1029,7 @@ class User < ActiveRecord::Base
     end
 
     old_result = old_user_level.try(:best_result)
-    !Activity.passing?(old_result) && Activity.passing?(new_result)
+    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
   end
 
   # The synchronous handler for the track_level_progress helper.
@@ -964,10 +1043,10 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
-      if !user_level.passing? && Activity.passing?(new_result)
+      if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
       end
-      if !user_level.perfect? &&
+      if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result == 100 &&
         ([
           ScriptConstants::TWENTY_HOUR_NAME,
@@ -975,12 +1054,8 @@ class User < ActiveRecord::Base
           ScriptConstants::COURSE3_NAME,
           ScriptConstants::COURSE4_NAME
         ].include? Script.get_from_cache(script_id).name) &&
-        HintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty? &&
-        AuthoredHintViewRequest.
-          where(user_id: user_id, script_id: script_id, level_id: level_id).
-          empty?
+        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
@@ -1021,7 +1096,7 @@ class User < ActiveRecord::Base
     if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
       learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
 
-      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user: self, plc_learning_module: learning_module)
+      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
         PeerReview.create_for_submission(user_level, level_source_id)
       end
     end

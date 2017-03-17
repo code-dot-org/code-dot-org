@@ -766,6 +766,9 @@
   dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
   dashboard_announce_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "The Hour of Code is here - December 8-14!"
   code_sign_up: "Sign up to participate during CS Education Week"
   host_an_hour: "Host an hour"
@@ -877,6 +880,12 @@
   course2_name: "Course 2"
   course3_name: "Course 3"
   course4_name: "Course 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "Accelerated Course"
   cspunit1_name: '(old) Unit 1: Digital Information'
   cspunit2_name: '(old) Unit 2: The Internet'
@@ -894,6 +903,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Full Test - 50 questions"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -915,6 +925,7 @@
   math_category_name: "Математика"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"

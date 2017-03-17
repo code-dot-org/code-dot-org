@@ -26,11 +26,13 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "What should you add to this code to get all of the gold?",
+    "instructions": "Figure out the code to help Laurel get all of the treasure!",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where things start going wrong? Use the \\\"Step\\\" button to run through your program one block at a time.\",\"hint_id\":\"courseB_collector_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/577a4455b7dcc7809a7be633e3639999/courseB_collector_loops6.mp3\"}]",
     "ideal": "10",
     "instructions_important": "false",
     "min_collected": "12",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -39,36 +41,6 @@
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_repeat_simplified_dropdown" deletable="false">
-              <title name="TIMES" config="3-10">4</title>
-              <statement name="DO">
-                <block type="maze_moveEast" deletable="false">
-                  <next>
-                    <block type="collector_collect" deletable="false"/>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">3</title>
-                  <statement name="DO">
-                    <block type="maze_moveSouth" deletable="false">
-                      <next>
-                        <block type="collector_collect" deletable="false"/>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_moveEast" limit="1"/>

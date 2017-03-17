@@ -159,6 +159,8 @@
     login: Iniciar Sesión
     invalid_login: Inicio de sesión no válido, por favor intente de nuevo
     pair_programming: Tengo a mi pareja en mi ordenador
+    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
+      target='_blank'>here</a>.
   password:
     reset_form:
       title: "¿Olvidaste tu contraseña?"
@@ -479,6 +481,23 @@
       herramientas para todos los niveles&mdash;y es todo gratis. :) No necesitas
       ninguna experiencia para empezar a enseñar ciencias de la computación en tu
       clase.<b>Encuentra el proximo paso que es correcto para tu clase.</b>
+    announcement_teacher_recruitment: Teachers like you are leading the computer science
+      education movement. You can participate in high-quality K-12th grade professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Take the lead on computer science in your school, and apply for professional
+      learning.
+    announcement_student_privacy: At Code.org, we take student privacy very seriously.
+      To protect your students’ privacy, we have made a change to your section’s login
+      page to avoid displaying full names. Even though this update should reduce privacy
+      concerns for the login page, we still encourage users to <i>not use full names
+      for students</i>.
+    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+      Your students could be featured in Code.org''s next viral video encouraging
+      students to take the AP CS Principles exam this year. We''re inviting all CS
+      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
+      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
+      will be featured in our video and the winning students will receive Code.org
+      swag!'
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Introduce
       un código de sección diferente.
@@ -691,6 +710,9 @@
     support: Obtener ayuda
     support_url: "//support.code.org"
     help_resources: Ayuda y Recursos
+    help_support: Help and Support
+    documentation: Documentation
+    tutorials: Tutorials
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. ¡Inténtalo de nuevo!
@@ -948,6 +970,8 @@
     ramp_up: Ramp-Up
     end_of_course_project: End of Course Project
     optional_stages: Optional Stages
+    main_course: Main Course
+    extra_course_content: Extra Course Content
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia un sitio que no es operado

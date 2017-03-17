@@ -39,4 +39,13 @@ export default class CollectorDrawer extends Drawer {
     const cell = this.map_.getCell(row, col);
     return cell && cell.getOriginalValue();
   }
+
+  /**
+   * @override
+   */
+  updateOrCreateText_(prefix, row, col, text) {
+    let textElement = super.updateOrCreateText_(prefix, row, col, text);
+    textElement.setAttribute('class', 'karel-counter-text');
+    return textElement;
+  }
 }

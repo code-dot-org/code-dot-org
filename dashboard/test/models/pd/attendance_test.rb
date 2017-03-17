@@ -3,7 +3,8 @@ require 'test_helper'
 class Pd::AttendanceTest < ActiveSupport::TestCase
   freeze_time
 
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @workshop = create :pd_workshop
     2.times {@workshop.sessions << create(:pd_session)}
 
@@ -88,5 +89,26 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     assert attendance.save
     assert_not_nil attendance.reload.enrollment
     assert_equal enrollment.id, attendance.enrollment.id
+  end
+
+  test 'resolve_enrollment' do
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email
+    attendance = build :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
+
+    # by user id
+    assert_equal enrollment, attendance.resolve_enrollment
+
+    # by email
+    enrollment.update!(user_id: nil)
+    assert_equal enrollment, attendance.resolve_enrollment
+
+    # by email with deleted user
+    teacher.destroy!
+    assert_equal enrollment, attendance.resolve_enrollment
+
+    # no match
+    enrollment.destroy!
+    assert_nil attendance.resolve_enrollment
   end
 end

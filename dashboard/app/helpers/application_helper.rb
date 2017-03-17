@@ -4,12 +4,14 @@ require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
+require 'cdo/shared_constants'
 
 module ApplicationHelper
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper
   include SurveyResultsHelper
+  include SharedConstants
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
@@ -63,21 +65,21 @@ module ApplicationHelper
     result = user_level.try(:best_result)
 
     if result == Activity::REVIEW_REJECTED_RESULT
-      'review_rejected'
+      LEVEL_STATUS.review_rejected
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
-      'review_accepted'
+      LEVEL_STATUS.review_accepted
     elsif user_level.try(:locked)
-      'locked'
+      LEVEL_STATUS.locked
     elsif user_level.try(:submitted)
-      'submitted'
+      LEVEL_STATUS.submitted
     elsif result.nil? || result == 0
-      'not_tried'
+      LEVEL_STATUS.not_tried
     elsif result >= Activity::FREE_PLAY_RESULT
-      'perfect'
+      LEVEL_STATUS.perfect
     elsif result >= Activity::MINIMUM_PASS_RESULT
-      'passed'
+      LEVEL_STATUS.passed
     else
-      'attempted'
+      LEVEL_STATUS.attempted
     end
   end
 

@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import ProgressDot from './progress_dot';
+import ProgressDot from './ProgressDot';
 import { levelProgressShape } from './types';
-import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
-import { LevelStatus } from '../../activityUtils';
-import { SignInState } from '../../progressRedux';
+import { ViewType } from '../../stageLockRedux';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { SignInState, statusForLevel } from '../../progressRedux';
+import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
 
 /**
  * Wrapper around ProgressDot that owns determining the correct status for the
@@ -18,20 +19,11 @@ export const StatusProgressDot = React.createClass({
     stageId: PropTypes.number,
 
     // redux provided
-    currentSection: PropTypes.objectOf(
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          locked: PropTypes.bool.isRequired,
-          name: PropTypes.string.isRequired,
-          readonly_answers: PropTypes.bool.isRequired,
-          user_level_data: PropTypes.object.isRequired
-        })
-      )
-    ),
-    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     postMilestoneDisabled: PropTypes.bool.isRequired,
-    signInState: PropTypes.oneOf(Object.values(SignInState)).isRequired
+    signInState: PropTypes.oneOf(Object.values(SignInState)).isRequired,
+    levelProgress: PropTypes.object.isRequired,
+    lessonIsLockedForAllStudents: PropTypes.func.isRequired
   },
 
   render() {
@@ -39,19 +31,19 @@ export const StatusProgressDot = React.createClass({
       level,
       courseOverviewPage,
       stageId,
-      currentSection,
       viewAs,
       postMilestoneDisabled,
-      signInState
+      signInState,
+      levelProgress,
+      lessonIsLockedForAllStudents
     } = this.props;
 
-    let status = level.status;
+    let status = statusForLevel(level, levelProgress);
 
     // If we're a teacher viewing as a student, we want to render lockable stages
     // to have a lockable item only if the stage is fully locked.
     if (stageId !== undefined && viewAs === ViewType.Student) {
-      const fullyLocked = fullyLockedStageMapping(currentSection);
-      if (!!fullyLocked[stageId]) {
+      if (lessonIsLockedForAllStudents(stageId)) {
         status = LevelStatus.locked;
       }
     }
@@ -86,6 +78,7 @@ export default connect(state => ({
   // white) until we know whether we're signed in or not.
   postMilestoneDisabled: state.progress.postMilestoneDisabled,
   signInState: state.progress.signInState,
-  currentSection: state.stageLock.stagesBySectionId[state.sections.selectedSectionId],
-  viewAs: state.stageLock.viewAs
+  viewAs: state.stageLock.viewAs,
+  levelProgress: state.progress.levelProgress,
+  lessonIsLockedForAllStudents: lessonId => lessonIsLockedForAllStudents(lessonId, state)
 }))(StatusProgressDot);

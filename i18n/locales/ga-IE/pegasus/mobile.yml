@@ -766,6 +766,9 @@
   dashboard_announce_hoc_scaling_progress: "Tabhair faoi deara nach sábhálfaimid aon dul chun cinn a dhéanann na daltaí ar an gcúrsa seo idir an 3ú lá agus an 11ú lá de mhí na Nollag, mar gheall ar an ualach tráchta ar an suíomh agus an Uair Chódála faoi lán seoil. Mar sin féin, is féidir leat dul chun cinn go dtí 3 Nollag a fheiceáil fós. Sábhálfaimid dul chun cinn mar is gnách tar éis na seachtaine seo."
   dashboard_announce_how_code_studio: "Is féidir leat an ríomheolaíocht a mhúineadh i do sheomra ranga fiú mura bhfuil aon taithí agat. Gheobhaidh tú curaclam iomlán, pleananna ceachta, cláracha foghlamtha den chéad scoth, agus neart uirlisí iontacha le haghaidh gach leibhéil &mdash; gach a dteastaíonn uait, saor in aisce. Níl tú cinnte cá dtosóidh tú? Íoslódáil <a href='%{video_download_url}'>an físeán seo</a>!"
   dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "Tá an Uair Chódála anseo - 8-14 Nollaig!"
   code_sign_up: "Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta"
   host_an_hour: "Bí i d'óstach"
@@ -877,6 +880,12 @@
   course2_name: "Cúrsa 2"
   course3_name: "Cúrsa 3"
   course4_name: "Cúrsa 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "Cúrsa Luathaithe"
   cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
   cspunit2_name: 'Aonad 2: An tIdirlíon'
@@ -894,6 +903,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "An Scrúdú Iomlán - 50 ceist"
   cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
   cspexam2-AKwgAh1ac5_name: Cuid 2 den Scrúdú - 25 ceist
@@ -915,6 +925,7 @@
   math_category_name: "Matamaitic"
   hoc_category_name: "An Uair Chódála"
   csf_category_name: "Buntús na Ríomheolaíochta"
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
   csp17_category_name: "'16-'17 Foras Feasa ar an Ríomheolaíocht"

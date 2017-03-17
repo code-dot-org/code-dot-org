@@ -8,8 +8,8 @@
 # queries need to be sufficiently performant.
 
 require_relative('../../deployment')
+require 'cdo/chat_client'
 require 'cdo/db'
-require 'cdo/hip_chat'
 require 'cdo/only_one'
 
 ALERT_FILENAME = 'confirm_usage_alert'.freeze
@@ -34,7 +34,7 @@ KEY_VALUE_CHECKS = [
 # @param message [String] the (base) error message to log.
 def alert(message)
   message += " Delete production-daemon:production/#{ALERT_FILENAME} to close."
-  HipChat.log(message, color: 'red', notify: 1)
+  ChatClient.log(message, color: 'red', notify: 1)
   Dir.chdir(deploy_dir) do
     system "touch #{ALERT_FILENAME}"
   end
@@ -62,11 +62,10 @@ def main
   KEY_VALUE_CHECKS.each do |table, duration_min, db, column, column_value|
     delta_sec = Time.now - db[table].where(column => column_value).order(:id).limit(1).last[:created_at]
     threshold_sec = duration_min * SECONDS_PER_MINUTE
-    if delta_sec > threshold_sec
-      alert "#{table.to_s.upcase} KEY-VALUE CREATION: "\
-        "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since "\
-        "last #{table} creation with column #{column} having value #{column_value}."
-    end
+    next unless delta_sec > threshold_sec
+    alert "#{table.to_s.upcase} KEY-VALUE CREATION: "\
+      "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since "\
+      "last #{table} creation with column #{column} having value #{column_value}."
   end
 
   # Verify emails are being sent. Alert if (a) an email has not been sent for
