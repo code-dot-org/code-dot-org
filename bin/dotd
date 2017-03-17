@@ -309,6 +309,10 @@ def main
     should_i 'reset DTP message to yes' do
       DevelopersTopic.set_dtp 'yes'
     end
+    should_i 'update Slack#infra-production topic' do
+      sha = GitHub.sha('production')[0, 7]
+      Slack.set_dtp_commit(sha)
+    end
 
     puts_after_dtp_tasks
   end
