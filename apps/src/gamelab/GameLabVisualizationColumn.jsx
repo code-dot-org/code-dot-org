@@ -1,11 +1,11 @@
 var React = require('react');
-var msg = require('@cdo/locale');
 var connect = require('react-redux').connect;
 
 var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
 var BelowVisualization = require('../templates/BelowVisualization');
 var gameLabConstants = require('./constants');
+import CompletionButton from '../templates/CompletionButton';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
@@ -62,7 +62,6 @@ var GameLabVisualizationColumn = React.createClass({
   },
 
   render() {
-    const props = this.props;
     var divGameLabStyle = {
       width: GAME_WIDTH,
       height: GAME_HEIGHT
@@ -82,6 +81,7 @@ var GameLabVisualizationColumn = React.createClass({
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
         <GameButtons>
+
           <div id="studio-dpad" className="studio-dpad-none">
             <button id="studio-dpad-button" className="arrow">
               <img src="/blockly/media/1x1.gif" className="dpad-btn icon21"/>
@@ -90,12 +90,7 @@ var GameLabVisualizationColumn = React.createClass({
 
           <ArrowButtons/>
 
-          {props.finishButton && <div id="share-cell" className="share-cell-none">
-            <button id="finishButton" className="share">
-              <img src="/blockly/media/1x1.gif"/>
-              {msg.finish()}
-            </button>
-          </div>}
+          <CompletionButton />
         </GameButtons>
         {this.renderAppSpaceCoordinates()}
         {this.props.awaitingContainedResponse && (

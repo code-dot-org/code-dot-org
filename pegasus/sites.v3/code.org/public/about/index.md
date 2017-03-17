@@ -91,7 +91,18 @@ All curriculum resources and tutorials we author will forever be free to use and
 
 <hr/>
 
-## Donors
+## Code.org Advocacy Coalition
+The [Code.org Advocacy Coalition](/advocacy) is a bipartisan coalition of corporations and nonprofits that work together to help establish federal and state policies to expand and sustain access to K-12 computer science, and to broaden participation and diversity in the field.
+
+<hr/>
+
+
+## K-12 Computer Science Framework
+Code.org is a member of the steering committee that helped establish the [K-12 Computer Science Framework](http://k12cs.org) - a high-level guide for states, districts, and organizations implementing computer science education. The Framework has won the support of hundreds of academics, K-12 educators, software companies, nonprofits, and states.
+
+<hr/>
+
+## Code.org Donors
 Code.org&reg; is a registered public 501c3 nonprofit, with support from the general public. We are grateful for the generous support we’ve received from [individuals and organizations](/about/donors) who support our vision.
 
 Code’s accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes.  But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today’s digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision.
