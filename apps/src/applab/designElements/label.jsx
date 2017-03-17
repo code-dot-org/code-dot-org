@@ -154,7 +154,7 @@ export default {
     element.style.margin = '0px';
     element.style.padding = '2px';
     element.style.lineHeight = '1';
-    element.style.fontSize = '14px';
+    element.style.fontSize = '28px';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
@@ -166,11 +166,22 @@ export default {
     return element;
   },
 
-  resizeToFitText: function (element) {
-    var oldWidth = parseInt(element.style.width, 10);
-    var oldHeight = parseInt(element.style.height, 10);
+  getCurrentSize: function (element) {
+    return {
+      width: parseInt(element.style.width, 10),
+      height: parseInt(element.style.height, 10)
+    };
+  },
 
-    // Resize the label to fit the text, unless there is no text in which case make it 15 x 15 so the user has something to drag around
+  /**
+   * @returns {{width: number, height: number}} Size that this element should be if it were fitted exactly. If there is
+   * no text, then the best size is 15 x 15 so that the user has something to drag around.
+   */
+  getBestSize: function (element) {
+    // Start by assuming best fit is current size
+    var size = this.getCurrentSize(element);
+
+    // Change the size to fit the text.
     if (element.textContent) {
       var clone = $(element).clone().css({
         position: 'absolute',
@@ -184,38 +195,45 @@ export default {
 
       if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
         // Truncate the width before it runs off the edge of the screen
-        var newWidth = Math.min(clone.width() + 1 + 2 * padding, applabConstants.APP_WIDTH - clone.position().left);
-        // Don't reduce size
-        if (newWidth > oldWidth) {
-          element.style.width = newWidth + 'px';
-        }
+        size.width = Math.min(clone.width() + 1 + 2 * padding, applabConstants.APP_WIDTH - clone.position().left);
       }
       if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
-        var newHeight = clone.height() + 1 + 2 * padding + 'px';
-        // Don't reduce size
-        if (newHeight > oldHeight) {
-          element.style.height = newWidth + 'px';
-        }
+        size.height = clone.height() + 1 + 2 * padding + 'px';
       }
 
       clone.remove();
     } else {
-      if (oldWidth <)
-      element.style.width = '15px';
-      element.style.height = '15px';
+      size.width = size.height = 15;
     }
+    return size;
+  },
+
+  resizeToFitText: function (element) {
+    var size = this.getBestSize(element);
+    element.style.width = size.width + 'px';
+    element.style.height = size.height + 'px';
+  },
+
+  /**
+   * @returns {boolean} Whether this element perfectly fits its bounding size.
+   */
+  beforePropertyChange: function (element) {
+    var currentSize = this.getCurrentSize(element);
+    var bestSize = this.getBestSize(element);
+    return currentSize.width === bestSize.width && currentSize.height == bestSize.height;
   },
 
   /**
    * @returns {boolean} True if it modified the backing element
    */
-  onPropertyChange: function (element, name, value) {
+  onPropertyChange: function (element, name, value, previouslyFitExactly) {
+    console.log('Changing ' + name + ' to ' + value + '(' + previouslyFitExactly + ')');
     switch (name) {
       case 'text':
       case 'fontSize':
-        // If it has already been resized (i.e, doesn't fit exactly now), then don't resize to fit.
-        var size =
-        this.resizeToFitText(element);
+        if (previouslyFitExactly) {
+          this.resizeToFitText(element);
+        }
         break;
       case 'lock-width':
         $(element).data('lock-width', value);
