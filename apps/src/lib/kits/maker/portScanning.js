@@ -31,7 +31,7 @@ export function findPortWithViableDevice() {
       .then(list => {
         const bestOption = getPreferredPort(list);
         if (bestOption) {
-          return Promise.resolve(bestOption.comName);
+          return bestOption.comName;
         } else {
           return Promise.reject(new ConnectionFailedError(
               'Did not find a usable device on a serial port.'));
