@@ -36,9 +36,9 @@
     "instructions_important": "true",
     "markdown_instructions": "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your function will only need to collect nectar... but this time, you will need to use a `while` loop instead of a `repeat` loop.\",\"hint_id\":\"courseE_bee_functions8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a38d48e752cd24dfcdf51af36e524eef/courseE_bee_functions8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use `while nectar > 0` to make sure you get all of the nectar.\",\"hint_id\":\"courseE_bee_functions8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e199cb5c1b9142108ca0b252e6c569dd/courseE_bee_functions8.mp3\"}]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

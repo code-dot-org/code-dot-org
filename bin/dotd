@@ -9,6 +9,7 @@ require 'logger'
 require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
 require_relative '../lib/cdo/developers_topic'
+require_relative '../lib/cdo/infra_test_topic'
 require_relative '../lib/cdo/github'
 include CdoCli
 
@@ -51,7 +52,6 @@ def puts_after_dtp_tasks
     * Update the #infra-production room status: e.g. "DTP status: successful DTP 6a4f800ae2616cd5da88cf520c595d7ed36b0611 at 2:06 PM PST on 2016/02/16"
     * Check https://code.org/ and http://studio.code.org/ after the deploy reaches all the frontends.
     * Verify that you're able to completely load a puzzle progression page (e.g. https://studio.code.org/hoc/1).
-    * Ensure that no frontends were skipped in the Production room on Slack.
     * Watch HoneyBadger and New Relic for new errors popping up after the deploy.
 
   EOS
@@ -239,13 +239,14 @@ def do_dtt_subroutine
       )
       new_sha_abbr = GitHub.sha('test')[0, 7]
       url = GitHub.url(pr_number)
-      wait_for "DTT (#{url}) to complete, re-run / investigate failures, and "\
-        "update infra#test topic to commit #{new_sha_abbr}"
-      # TODO(asher): Prompt for whether the DTT was green, update
-      # Slack#infra-test topic appropriately.
+      wait_for "DTT (#{url}) to complete, re-run / investigate failures"
 
       should_i 'reset DTT message to yes' do
         DevelopersTopic.set_dtt 'yes'
+      end
+
+      should_i 'update test room status with green commit and timestamp' do
+        InfraTestTopic.set_green_commit new_sha_abbr
       end
     end
   end
