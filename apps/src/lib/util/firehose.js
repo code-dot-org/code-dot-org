@@ -84,9 +84,11 @@ export default class FirehoseClient {
         Record: JSON.stringify(data),
       },
       function (err, data) {
-        // TODO(asher): This is here to assist debugging and should be removed
-        // when it is no longer useful.
-        console.error("Error pushing event data" + err);
+        if (err) {
+          // TODO(asher): This is here to assist debugging and should be removed
+          // when it is no longer useful.
+          console.error("Error pushing event data" + err);
+        }
       }
     );
   }
