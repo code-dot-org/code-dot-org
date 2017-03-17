@@ -21,22 +21,11 @@ end
 # git's post-checkout hook will pass in a third argument: 1 if the
 # checkout is changing branches, 0 if the checkout is checking out a
 # particular file. We don't want to do anything in file checkout mode
-def file_checkout?
-  return ARGV.fetch(3, "1") == "0"
-end
-
-def merge?
-  return ARGV[0] == "merge"
-end
-
-def prompt_enabled?
-  return ENV['MERGE_RUN_PROMPT']
-end
+FILE_CHECKOUT = ARGV.fetch(3, "1") == "0"
+MERGE = ARGV[0] == "merge"
+PROMPT_ENABLED = ENV['MERGE_RUN_PROMPT']
 
 def optionally_run(cmd, file)
-  unless merge? && prompt_enabled?
-    return
-  end
   puts "#{file} changed! Shall I run #{cmd[:cmd]}? [Y/n]"
   unless $stdin.readline.downcase.start_with? 'n'
     Dir.chdir File.expand_path(cmd[:dir], REPO_DIR)
@@ -44,7 +33,7 @@ def optionally_run(cmd, file)
   end
 end
 
-unless file_checkout?
+unless FILE_CHECKOUT
   modified_files = get_modified_files
   printed_suggestion = false
 
@@ -52,10 +41,10 @@ unless file_checkout?
     basename = File.basename(file)
     next unless REQUIREMENTS.key?(basename)
 
-    if merge? && prompt_enabled?
+    if MERGE && PROMPT_ENABLED
       optionally_run(REQUIREMENTS[basename], file)
     else
-      if merge? && !printed_suggestion
+      if MERGE && !printed_suggestion
         puts "\nHey you! Set the environment variable MERGE_RUN_PROMPT to easily run the following command(s)"
         printed_suggestion = true
       end
