@@ -400,7 +400,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   run_environment['TEST_LOCAL'] = $options.local ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
-  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
+  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
 
   # disable some stuff to make require_rails_env run faster within cucumber.
