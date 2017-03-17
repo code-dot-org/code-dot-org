@@ -23,3 +23,9 @@ export const BOARD_EVENT_ALIASES = {
   singleTap: 'tap:single',
   doubleTap: 'tap:double'
 };
+
+// For use with Piezo.play()
+export const SONG_CHARGE = [
+  ['G3', 1/4], ['C4', 1/4], ['E4', 1/4], ['G4', 1/8],
+  [null, 3/8], ['E4', 3/16], ['G4', 1]
+];

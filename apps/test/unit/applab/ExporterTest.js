@@ -10,6 +10,10 @@ testUtils.setExternalGlobals();
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
 const APPLAB_LOCALE_JS_CONTENT = 'applab_locale.js content';
 const APPLAB_API_JS_CONTENT = 'applab-api.js content';
+const COMMON_CSS_CONTENT = `
+body {
+  font-family: sans-serif;
+}`;
 const APPLAB_CSS_CONTENT = `
 .some-css-rule {
   background-image: url("/blockly/media/foo.png");
@@ -23,14 +27,17 @@ a.third-rule {
 `;
 
 const NEW_APPLAB_CSS_CONTENT = `
+body {
+  font-family: sans-serif;
+}
 .some-css-rule {
-  background-image: url("applab/assets/blockly/media/foo.png");
+  background-image: url("assets/blockly/media/foo.png");
 }
 #some-other-rule {
-  background-image: url("applab/assets/blockly/media/bar.jpg");
+  background-image: url("assets/blockly/media/bar.jpg");
 }
 a.third-rule {
-  background-image: url("applab/assets/blockly/media/third.jpg");
+  background-image: url("assets/blockly/media/third.jpg");
 }
 `;
 
@@ -50,6 +57,10 @@ describe('The Exporter,', function () {
     server.respondWith(
       /\/blockly\/js\/applab-api\.js\?__cb__=\d+/,
       APPLAB_API_JS_CONTENT
+    );
+    server.respondWith(
+      /\/blockly\/css\/common\.css\?__cb__=\d+/,
+      COMMON_CSS_CONTENT
     );
     server.respondWith(
       /\/blockly\/css\/applab\.css\?__cb__=\d+/,
@@ -252,7 +263,7 @@ describe('The Exporter,', function () {
         files.sort();
         assert.deepEqual(files, [
           'my-app/',
-          'my-app/README.md',
+          'my-app/README.txt',
           'my-app/applab/',
           'my-app/applab/applab-api.js',
           'my-app/applab/applab.css',
@@ -321,7 +332,7 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/style.css');
         assert.include(
           zipFiles['my-app/style.css'],
-          '#divApplab #clickMeButton {\n' +
+          '#divApplab.appModern #clickMeButton {\n' +
           '  background-color: red;\n' +
           '}'
         );
@@ -331,8 +342,8 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/code.js');
       });
 
-      it("should contain a README.md file", function () {
-        assert.property(zipFiles, 'my-app/README.md');
+      it("should contain a README.txt file", function () {
+        assert.property(zipFiles, 'my-app/README.txt');
       });
 
       it("should contain the assets files used by the project", function () {

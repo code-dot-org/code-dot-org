@@ -67,6 +67,9 @@
     "all_animations_single_frame": "false",
     "show_debug_watch": "true",
     "encrypted_examples": "7/FDOHrSJoGwc8Ctil+l/te3sbl2xKL7sDn2a9mBq86y3GB5V26fDTM/QB3e\nHLu5\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

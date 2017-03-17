@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class ApplicationHelperTest < ActionView::TestCase
+  include SharedConstants
+
   # Stub current_user
   def current_user
   end
@@ -225,37 +228,37 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test 'best_activity_css_class returns "not started" for no activity' do
     user_level = create :user_level, best_result: 0
-    assert_equal 'not_tried',  best_activity_css_class([user_level])
+    assert_equal LEVEL_STATUS.not_tried,  best_activity_css_class([user_level])
   end
 
   test 'best_activity_css_class returns "not started" for multiple user_levels with no activity' do
     user_level1 = create :user_level, best_result: 0
     user_level2 = create :user_level, best_result: 0
-    assert_equal 'not_tried',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.not_tried,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "attempted" for one attempted' do
     user_level1 = create :user_level, best_result: 1
     user_level2 = create :user_level, best_result: 0
-    assert_equal 'attempted',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "passed" for one passed' do
     user_level1 = create :user_level
     user_level2 = create :user_level, best_result: 20
-    assert_equal 'passed',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.passed,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "perfect" for one passed and one perfect' do
     user_level1 = create :user_level, best_result: 100
     user_level2 = create :user_level, best_result: 20
-    assert_equal 'perfect',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.perfect,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "attempted" for one unsubmitted' do
     user_level1 = create :user_level, best_result: 0
     user_level2 = create :user_level, best_result: -50
-    assert_equal 'attempted',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
   private

@@ -3,7 +3,6 @@
 # Table name: script_levels
 #
 #  id          :integer          not null, primary key
-#  level_id    :integer
 #  script_id   :integer          not null
 #  chapter     :integer
 #  created_at  :datetime
@@ -16,15 +15,17 @@
 #
 # Indexes
 #
-#  index_script_levels_on_level_id   (level_id)
 #  index_script_levels_on_script_id  (script_id)
 #  index_script_levels_on_stage_id   (stage_id)
 #
+
+require 'cdo/shared_constants'
 
 # Joins a Script to a Level
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
   include LevelsHelper
+  include SharedConstants
   include Rails.application.routes.url_helpers
 
   has_and_belongs_to_many :levels
@@ -58,15 +59,26 @@ class ScriptLevel < ActiveRecord::Base
   def oldest_active_level
     return levels[0] if levels.length == 1
     return levels.min_by(&:created_at) unless properties
+
     properties_hash = JSON.parse(properties)
+    variants = properties_hash['variants']
+    return levels.min_by(&:created_at) unless variants
+
     levels.sort_by(&:created_at).find do |level|
-      !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+      !variants[level.name] || variants[level.name]['active'] != false
     end
   end
 
   def active?(level)
     properties_hash = JSON.parse(properties)
-    !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+    variants = properties_hash['variants']
+    !variants || !variants[level.name] || variants[level.name]['active'] != false
+  end
+
+  def progression
+    return nil unless properties
+    properties_hash = JSON.parse(properties)
+    properties_hash['progression']
   end
 
   def has_another_level_to_go_to?
@@ -82,11 +94,17 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def next_level_or_redirect_path_for_user(user)
-    # if we're coming from an unplugged level, it's ok to continue
-    # to unplugged level (example: if you start a sequence of
-    # assessments associated with an unplugged level you should
-    # continue on that sequence instead of skipping to next stage)
-    level_to_follow = (level.unplugged? || stage.unplugged?) ? next_level : next_progression_level
+    # if we're coming from an unplugged level, it's ok to continue to unplugged
+    # level (example: if you start a sequence of assessments associated with an
+    # unplugged level you should continue on that sequence instead of skipping to
+    # next stage)
+    if valid_progression_level?(user)
+      level_to_follow = next_progression_level(user)
+    else
+      # don't ever continue continue to a locked/hidden level
+      level_to_follow = next_level
+      level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
+    end
 
     if script.professional_learning_course?
       if level.try(:plc_evaluation?)
@@ -107,24 +125,38 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  # Return the next script level after this one in the script, or nil if this is last
   def next_level
     i = script.script_levels.find_index(self)
     return nil if i.nil? || i == script.script_levels.length
     script.script_levels[i + 1]
   end
 
-  def next_progression_level
-    next_level ? next_level.or_next_progression_level : nil
+  # Returns the next valid progression level, or nil if no such level exists
+  def next_progression_level(user=nil)
+    next_level ? next_level.or_next_progression_level(user) : nil
   end
 
-  def or_next_progression_level
-    valid_progression_level? ? self : next_progression_level
+  # Returns the first level in the sequence starting with this one that is a
+  # valid progress level
+  def or_next_progression_level(user=nil)
+    valid_progression_level?(user) ? self : next_progression_level(user)
   end
 
-  def valid_progression_level?
+  def valid_progression_level?(user=nil)
     return false if level.unplugged?
     return false if stage && stage.unplugged?
+    return false if I18n.locale != I18n.default_locale && level.spelling_bee?
+    return false if I18n.locale != I18n.default_locale && stage && stage.spelling_bee?
+    return false if locked_or_hidden?(user)
     true
+  end
+
+  def locked_or_hidden?(user)
+    return false unless user
+    return true if user.hidden_stage?(self)
+    return true if user.user_level_locked?(self, level)
+    false
   end
 
   def previous_level
@@ -177,15 +209,25 @@ class ScriptLevel < ActiveRecord::Base
     build_script_level_path(self)
   end
 
+  def icon
+    # Assessment levels can be of many different level types (i.e. multiple choice,
+    # blockly, etc.). Regardless of the underlying level type, we want them to
+    # have their own icon. If not an assessment, let the underlying level type
+    # continue to own which icon we use.
+    if assessment
+      'fa-list-ol'
+    else
+      level.icon
+    end
+  end
+
   def summarize
     if level.unplugged?
-      kind = 'unplugged'
-    elsif named_level
-      kind = 'named_level'
+      kind = LEVEL_KIND.unplugged
     elsif assessment
-      kind = 'assessment'
+      kind = LEVEL_KIND.assessment
     else
-      kind = 'puzzle'
+      kind = LEVEL_KIND.puzzle
     end
 
     ids = level_ids
@@ -199,12 +241,14 @@ class ScriptLevel < ActiveRecord::Base
       activeId: oldest_active_level.id,
       position: position,
       kind: kind,
-      icon: level.icon,
+      icon: icon,
       title: level_display_text,
-      url: build_script_level_url(self)
+      url: build_script_level_url(self),
     }
 
-    if kind == 'named_level'
+    summary[:progression] = progression if progression
+
+    if named_level
       summary[:name] = level.display_name || level.name
     end
 
@@ -278,5 +322,11 @@ class ScriptLevel < ActiveRecord::Base
 
     # Everything else is okay.
     return true
+  end
+
+  # Is the stage containing this script_level hidden for the provided section
+  def stage_hidden_for_section?(section_id)
+    return false if section_id.nil?
+    !SectionHiddenStage.find_by(stage_id: self.stage.id, section_id: section_id).nil?
   end
 end

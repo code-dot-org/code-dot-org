@@ -1,10 +1,14 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class PeerReviewsControllerTest < ActionController::TestCase
-  setup do
+  include SharedConstants
+
+  self.use_transactional_test_case = true
+
+  setup_all do
     @user = create :teacher
     @other_user = create :teacher
-    sign_in(@user)
 
     level = create :free_response
     level.update(submittable: true, peer_reviewable: true)
@@ -13,9 +17,13 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     @script_level = create :script_level, levels: [level], stage: learning_module.stage
     @script = @script_level.script
-    level_source = create :level_source, data: 'My submitted answer'
+    @level_source = create :level_source, data: 'My submitted answer'
+  end
+
+  setup do
+    sign_in(@user)
     Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
-    User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: level_source.id)
+    User.track_level_progress_sync(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id)
     @peer_review = PeerReview.first
   end
 
@@ -73,7 +81,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @peer_review.update(reviewer_id: plc_reviewer.id)
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: 'accepted', data: 'This is great'}
+      peer_review: {status: LEVEL_STATUS.accepted, data: 'This is great'}
     }
     @peer_review.reload
     assert @peer_review.from_instructor
@@ -84,7 +92,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @peer_review.update(reviewer_id: @user.id)
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: 'accepted', data: 'This is great'}
+      peer_review: {status: LEVEL_STATUS.accepted, data: 'This is great'}
     }
     assert_redirected_to script_path(@script)
   end
@@ -93,7 +101,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
     @peer_review.update(reviewer_id: @user.id)
     post :update, params: {
       id: @peer_review.id,
-      peer_review: {status: 'accepted', data: panda_panda}
+      peer_review: {status: LEVEL_STATUS.accepted, data: panda_panda}
     }
     @peer_review.reload
     assert_equal 'Panda', @peer_review.data

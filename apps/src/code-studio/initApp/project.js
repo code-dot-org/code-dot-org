@@ -63,6 +63,7 @@ var currentSourceVersionId;
 var currentAbuseScore = 0;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
+let initialSaveComplete = false;
 
 /**
  * Current state of our sources API data
@@ -241,8 +242,7 @@ var projects = module.exports = {
   },
 
   /**
-   * @returns {boolean} true if project has been reported enough times to
-   *   exceed our threshold
+   * @returns {boolean} true if project has a profanity or privacy violation
    */
   hasPrivacyProfanityViolation() {
     return currentHasPrivacyProfanityViolation;
@@ -304,6 +304,13 @@ var projects = module.exports = {
 
   useFirebaseForNewProject() {
     return current.level === '/projects/applab';
+  },
+
+  __TestInterface: {
+    // Used by UI tests
+    isInitialSaveComplete() {
+      return initialSaveComplete;
+    },
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -464,6 +471,9 @@ var projects = module.exports = {
   projectChanged() {
     hasProjectChanged = true;
   },
+  hasOwnerChangedProject() {
+    return this.isOwner() && hasProjectChanged;
+  },
   /**
    * @returns {string} The name of the standalone app capable of running
    * this project as a standalone project, or null if none exists.
@@ -519,8 +529,9 @@ var projects = module.exports = {
    *   call to `sourceHandler.getLevelSource`.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
    */
-  save(sourceAndHtml, callback, forceNewVersion) {
+  save(sourceAndHtml, callback, forceNewVersion, preparingRemix) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -534,14 +545,24 @@ var projects = module.exports = {
       var args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
-      this.sourceHandler.getAnimationList(animations => {
-        this.sourceHandler.getLevelSource().then(response => {
-          const source = response;
-          const html = this.sourceHandler.getLevelHtml();
-          const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-          this.save({source, html, animations, makerAPIsEnabled}, callback, forceNewVersion);
+      preparingRemix = args[2];
+
+      let completeAsyncSave = function () {
+        this.sourceHandler.getAnimationList(animations => {
+          this.sourceHandler.getLevelSource().then(response => {
+            const source = response;
+            const html = this.sourceHandler.getLevelHtml();
+            const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+            this.save({source, html, animations, makerAPIsEnabled}, callback, forceNewVersion);
+          });
         });
-      });
+      }.bind(this);
+
+      if (preparingRemix) {
+        this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+      } else {
+        completeAsyncSave();
+      }
       return;
     }
 
@@ -567,6 +588,7 @@ var projects = module.exports = {
       current.migratedToS3 = true;
 
       channels.update(channelId, current, function (err, data) {
+        initialSaveComplete = true;
         this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));
@@ -715,7 +737,7 @@ var projects = module.exports = {
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
-      projects.save(redirectToRemix);
+      projects.save(redirectToRemix, false, true);
     } else {
       redirectToRemix();
     }

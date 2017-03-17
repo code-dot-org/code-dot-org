@@ -1,9 +1,13 @@
 class PdProgramRegistration
   def self.normalize(data)
     result = {}
+
+    result[:email_s] = required data[:email_s]
+    result[:name_s] = "#{required(data[:first_name_s])} #{required(data[:last_name_s])}"
+
     result[:user_id_i] = required integer data[:user_id_i]
     result[:pd_teacher_application_id_i] = required integer data[:pd_teacher_application_id_i]
-    [:first_name_s, :last_name_s, :phone_number_s, :school_district_s, :selected_course_s, :accepted_workshop_s].each do |key|
+    [:first_name_s, :last_name_s, :phone_number_s, :selected_course_s, :accepted_workshop_s].each do |key|
       result[key] = required data[key]
     end
 
@@ -54,6 +58,12 @@ class PdProgramRegistration
     end
 
     result
+  end
+
+  # The forms table has a unique constraint on kind & source_id,
+  # so setting this to the application id will prevent duplicate entries
+  def self.get_source_id(data)
+    data[:pd_teacher_application_id_i]
   end
 
   def self.required_enum(data, field_name)

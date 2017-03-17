@@ -226,7 +226,7 @@ module AWS
           items: cloudfront[:aliases].empty? ? nil : cloudfront[:aliases],
         },
         default_root_object: '',
-        origins: {# required
+        origins: { # required
           quantity: 2, # required
           items: [
             {
@@ -295,7 +295,7 @@ module AWS
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         },
         restrictions: {
-          geo_restriction: {# required
+          geo_restriction: { # required
             restriction_type: 'none', # required, accepts blacklist, whitelist, none
             quantity: 0 # required
           },
@@ -382,7 +382,7 @@ module AWS
     def self.cache_behavior(behavior_config, path=nil)
       s3 = behavior_config[:proxy] == 'cdo-assets'
       cookie_config = if behavior_config[:cookies].is_a?(Array)
-                        {# required
+                        { # required
                           forward: 'whitelist', # required, accepts none, whitelist, all
                           whitelisted_names: {
                             quantity: behavior_config[:cookies].length, # required
@@ -398,9 +398,9 @@ module AWS
       # Include S3 forward headers for s3 origins.
       headers = behavior_config[:headers] +
         (s3 ? S3_FORWARD_HEADERS : ['Host'])
-      behavior = {# required
+      behavior = { # required
         target_origin_id: (s3 ? behavior_config[:proxy] : 'cdo'), # required
-        forwarded_values: {# required
+        forwarded_values: { # required
           query_string: true, # required
           cookies: cookie_config,
           headers: {
@@ -411,7 +411,7 @@ module AWS
             quantity: 0
           },
         },
-        trusted_signers: {# required
+        trusted_signers: { # required
           enabled: false, # required
           quantity: 0
         },

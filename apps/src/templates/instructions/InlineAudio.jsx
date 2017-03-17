@@ -1,11 +1,41 @@
-/* global CryptoJS, trackEvent */
-
+/* global trackEvent */
+import MD5 from 'crypto-js/md5';
 import Radium from 'radium';
 import React from 'react';
 
 import { connect } from 'react-redux';
 
-const TTS_URL = "https://tts.code.org/sharon22k/180/100";
+// TODO (elijah): have these constants shared w/dashboard
+const VOICES = {
+  'en_us': {
+    VOICE: 'sharon22k',
+    SPEED: 180,
+    SHAPE: 100
+  },
+  'es_es': {
+    VOICE: 'ines22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'es_mx': {
+    VOICE: 'rosa22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'it_it': {
+    VOICE: 'vittorio22k',
+    SPEED: 180,
+    SHAPE: 100,
+  },
+  'pt_br': {
+    VOICE: 'marcia22k',
+    SPEED: 180,
+    SHAPE: 100,
+  }
+};
+
+
+const TTS_URL = "https://tts.code.org";
 
 const styles = {
   error: {
@@ -45,6 +75,7 @@ const styles = {
 const InlineAudio = React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func.isRequired,
+    locale: React.PropTypes.string,
     isK1: React.PropTypes.bool,
     src: React.PropTypes.string,
     message: React.PropTypes.string
@@ -100,14 +131,23 @@ const InlineAudio = React.createClass({
     return audio;
   },
 
+  isLocaleSupported: function () {
+    return VOICES.hasOwnProperty(this.props.locale);
+  },
+
   getAudioSrc: function () {
     if (this.props.src) {
       return this.props.src;
     }
 
-    let hash = CryptoJS.MD5(this.props.message).toString(CryptoJS.enc.Base64);
-    let ttsUrl = `${TTS_URL}/${hash}/${encodeURIComponent(this.props.message)}.mp3`;
-    return ttsUrl;
+    const voice = VOICES[this.props.locale];
+    const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
+
+    const message = this.props.message.replace('"???"', 'the question marks');
+    const hash = MD5(message).toString();
+    const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
+
+    return `${TTS_URL}/${voicePath}/${contentPath}`;
   },
 
   toggleAudio: function () {
@@ -125,7 +165,7 @@ const InlineAudio = React.createClass({
   },
 
   render: function () {
-    if (this.props.isK1 && !this.state.error && this.getAudioSrc()) {
+    if (this.props.isK1 && !this.state.error && this.isLocaleSupported() && this.getAudioSrc()) {
       return (
         <div className="inline-audio">
           <div style={[styles.button, styles.volumeButton]}>
@@ -147,9 +187,11 @@ const InlineAudio = React.createClass({
   }
 });
 
+export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
     isK1: state.pageConstants.isK1,
+    locale: state.pageConstants.locale,
   };
 })(Radium(InlineAudio));

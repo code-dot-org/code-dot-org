@@ -26,11 +26,13 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Add to the code from the last puzzle to get all of the gold. ",
+    "instructions": "Add to the code from the last puzzle to get all of the treasure. ",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using more than one loop to get the job done.\",\"hint_id\":\"courseB_collector_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/457a77084c55ddd5818a30cf48e5ab7e/courseB_collector_loops5.mp3\"}]",
     "ideal": "9",
     "instructions_important": "false",
     "min_collected": "8",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -81,6 +83,7 @@
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="3-10">3</title>
         </block>
+        <block type="collector_collect"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

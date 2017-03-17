@@ -30,16 +30,16 @@
           .level
             - p = level_progress[level_id]
             - if p.try(:[], :submitted)
-              - status = "submitted"
+              - status = SharedConstants::LEVEL_STATUS.submitted
             - elsif p.try(:[], :pages_completed)
               - pages_completed = p[:pages_completed]
               - status = activity_css_class(pages_completed[level_repeat])
             - else
-              - status = p.try(:[], :status) || 'not_tried'
+              - status = p.try(:[], :status) || SharedConstants::LEVEL_STATUS.not_tried
               - result = p.try(:[], :result) || 0
             - if current_level_id == "#{level_id}"
               - puzzle_outer_class = 'puzzle_outer_current'
-            - elsif script_level[:kind] == 'assessment'
+            - elsif script_level[:kind] == SharedConstants::LEVEL_KIND.assessment
               - puzzle_outer_class = 'puzzle_outer_assessment'
             - else
               - puzzle_outer_class = 'puzzle_outer_level'
@@ -49,11 +49,11 @@
                 - link += "?user_id=#{user.id}"
               - if @section
                 - link += "&section_id=#{@section.id}"
-              %a.level_link{href: link, class: [status, "level-#{level_id}"], data: {result: result}}
-                - if script_level[:kind] == 'unplugged'
+              %a.level_link{href: link, class: status, data: {result: result}}
+                - if script_level[:kind] == SharedConstants::LEVEL_KIND.unplugged
                   %span.puzzle-named
                     = script_level[:title]
-                - elsif status == 'passed' || status == 'perfect'
+                - elsif status == SharedConstants::LEVEL_STATUS.passed || status == SharedConstants::LEVEL_STATUS.perfect
                   = check_mark_html
                 - else
                   %span.puzzle-number

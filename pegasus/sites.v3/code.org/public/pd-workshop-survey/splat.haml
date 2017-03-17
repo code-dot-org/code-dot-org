@@ -8,14 +8,14 @@ title: "Professional Development Workshop Survey"
   pass unless enrollment
 
   workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
-  pass unless workshop
+  pass unless workshop && workshop[:ended_at]
 
   teacher_id = enrollment[:user_id]
   teacher = DASHBOARD_DB[:users].where(id: teacher_id).first
-  name = teacher.nil? ? enrollment[:name] : teacher[:name]
+  name = teacher.nil? ? "#{enrollment[:first_name]} #{enrollment[:last_name]}" : teacher[:name]
   email = teacher.nil? ? enrollment[:email] : teacher[:email]
 
-  plp = DASHBOARD_DB[:professional_learning_partners].where(contact_id: workshop[:organizer_id]).first
+  plp = DASHBOARD_DB[:regional_partners].where(contact_id: workshop[:organizer_id]).first
   # Have they ever taken any pd-workshop-survey?
   is_first_survey = teacher_id.nil? || DB[:forms].where(kind: 'PdWorkshopSurvey', user_id: teacher_id).count == 0
 
@@ -25,10 +25,20 @@ title: "Professional Development Workshop Survey"
   course = workshop[:course]
   subject = workshop[:subject]
 
+  mimeo_url = nil
+  if course == 'CS Fundamentals'
+    mimeo_url = CDO.studio_url "pd/mimeo/#{enrollment_code}"
+  end
+
   def local_view(name, options = {})
     options[:form] = PdWorkshopSurvey
     view "pd_survey_controls/#{name.to_s}", options
   end
+
+  # Temporarily, don't use Mimeo SSO redirect.
+  # TODO: Once we're satisfied with the Mimeo SSO feature, remove the below line and the following javascript,
+  #       and address the related TODO in pd-workshop-survey.js
+  mimeo_url = nil
 
 :javascript
   window.pdWorkshopSurvey = {
@@ -304,4 +314,17 @@ title: "Professional Development Workshop Survey"
 
   #thanks{style: 'display: none;'}
     %h1 Thank you for your submission
+    %h3 We appreciate your feedback.
 
+- if mimeo_url
+  #materials-order{style: 'display: none;'}
+    %h1 Order Supplies
+    %p
+      Click below if you'd like to be connected with our partner Mimeo to order free materials for the unplugged
+      lessons in CS Fundamentals, or to check on an existing order (US attendees only).
+    %p
+      %a{href: mimeo_url}
+        %button#btn.btn-primary Order Supplies
+
+- if previous_response && mimeo_url
+  %script{type: 'text/javascript'}$('#materials-order').show();

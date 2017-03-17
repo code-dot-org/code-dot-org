@@ -10,7 +10,6 @@
 #  code         :string(255)
 #  script_id    :integer
 #  grade        :string(255)
-#  admin_code   :string(255)
 #  login_type   :string(255)      default("email"), not null
 #  deleted_at   :datetime
 #  stage_extras :boolean          default(FALSE), not null
@@ -54,14 +53,20 @@ class Section < ActiveRecord::Base
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
+  validates_presence_of :user
   def user_must_be_teacher
-    errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
+    return unless user
+    errors.add(:user_id, 'must be a teacher') unless user.teacher?
   end
   validate :user_must_be_teacher
 
   before_create :assign_code
   def assign_code
     self.code = unused_random_code
+  end
+
+  def teacher_dashboard_url
+    CDO.code_org_url "/teacher-dashboard#/sections/#{id}/manage", 'https:'
   end
 
   # return a version of self.students in which all students' names are
@@ -71,7 +76,13 @@ class Section < ActiveRecord::Base
   def name_safe_students
     # Create a prefix tree of student names
     trie = Rambling::Trie.create
+
+    # Add whitespace-normalized versions of the student names to the
+    # trie. Because FullNameSplitter implicitly performs whitespace
+    # normalization, this is necessary to ensure that we can recognize
+    # the name on the other side
     self.students.each do |student|
+      student.name = student.name.strip.split(/\s+/).join(' ')
       trie.add student.name
     end
 

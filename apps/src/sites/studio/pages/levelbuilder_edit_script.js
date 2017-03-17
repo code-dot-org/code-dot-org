@@ -24,7 +24,8 @@ export default function initPage(scriptEditorData) {
       skin: level.skin,
       videoKey: level.videoKey,
       concepts: level.concepts,
-      conceptDifficulty: level.conceptDifficulty
+      conceptDifficulty: level.conceptDifficulty,
+      progression: level.progression
     }))
   }));
 

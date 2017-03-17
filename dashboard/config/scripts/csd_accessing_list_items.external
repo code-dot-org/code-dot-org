@@ -1,5 +1,5 @@
 name 'CSD: Accessing List Items'
-href 'path/to/html/in/asset/folder'
+display_name 'Accessing List Items'
 markdown <<MARKDOWN
 # Lists
 
@@ -7,13 +7,25 @@ markdown <<MARKDOWN
 
 A list is comprised of many locations. You can individually set or reference the information at each location of your list just like a variable. To tell your locations apart each has a separate number, or **index**, that identifies it.
 
-Lists in JavaScript are **zero-indexed** which means the first index is 0. This is similar to binary number systems which begin counting at 0. For example a list of 10 items would have indexes 0-9. As a result **the last index is always one less than the length of the list**.
+Lists in JavaScript are **zero-indexed** which means the first index is 0. This is similar to binary number systems which begin counting at 0. For example a list of 10 items would have indexes 0-9. As a result **the last index is always one less than the length of the list**. 
 
 **Accessing List Items by Index:** If you know the index of the item you wish to access you can reference it using square brackets `list[index]` . The example below prints the value of the 4th element in the list.  
 
 ![](https://images.code.org/8b2da597fccaeeafb30b04991074cd8b-image-1447365422277.56.45 PM.png)
 
-## Expressions as Indexes: Using Variables
+## Accessing Index that Don't Exist
+If you try to access an index that does not exist the program does not know what information you were trying to get.  For example if I had the following list of 3 items:
+
+` var myList = ["dog", "cat", "pig"] `
+
+If I tried to access an index less than zero or greater than 3 the program would evaluate that to be undefined since it has not been defined in my code. All of these would print 'undefined' in the console.
+
+`console.log(myList[-1]);` <br>
+`console.log(myList[3]);` <br>
+`console.log(myList[20]);` <br>
+
+
+## Expressions as Indexes
 
 We can use **any expression that evaluates to a number** as an index in an array. Here are some examples:
 

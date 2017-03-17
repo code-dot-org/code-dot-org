@@ -91,7 +91,11 @@ get '/v2/hoc/certificate/:filename' do |filename|
   only_for ['code.org']
   extname = File.extname(filename)
   encoded = File.basename(filename, extname)
-  data = JSON.parse(Base64.urlsafe_decode64(encoded))
+  begin
+    data = JSON.parse(Base64.urlsafe_decode64(encoded))
+  rescue ArgumentError, OpenSSL::Cipher::CipherError, JSON::ParserError
+    bad_request
+  end
 
   extnames = ['.jpg', '.jpeg', '.png']
   pass unless extnames.include?(extname)
@@ -113,7 +117,11 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   extname = File.extname(filename)
   encoded = File.basename(filename, extname)
-  label = Base64.urlsafe_decode64(encoded)
+  begin
+    label = Base64.urlsafe_decode64(encoded)
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    bad_request
+  end
 
   extnames = ['.jpg', '.jpeg', '.png']
   pass unless extnames.include?(extname)

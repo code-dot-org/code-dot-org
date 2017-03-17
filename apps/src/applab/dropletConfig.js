@@ -4,6 +4,7 @@ import * as api from './api';
 import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
@@ -27,10 +28,13 @@ var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
 
-// Configure the audio API for App Lab
-audioApi.injectExecuteCmd(function () {
-  Applab.executeCmd.apply(Applab, arguments);
-});
+// Configure shared APIs for App Lab
+// We wrap this because it runs before window.Applab exists
+function applabExecuteCmd(...args) {
+  Applab.executeCmd.call(Applab, ...args);
+}
+audioApi.injectExecuteCmd(applabExecuteCmd);
+makerApi.injectExecuteCmd(applabExecuteCmd);
 
 /**
  * Generate a list of screen ids for our setScreen dropdown
@@ -92,6 +96,7 @@ export var blocks = [
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'setScreen', parent: api, category: 'UI controls', paletteParams: ['screenId'], params: ['"screen1"'], dropdown: { 0: getScreenIds }},
+  {func: 'rgb', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r', 'g', 'b', 'a'], params: ["250", "0", "75", "0.5"], type: 'value' },
 
   {func: 'createCanvas', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 3 }, paletteParams: ['id','width','height'], params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT] },
   {func: 'setActiveCanvas', parent: api, category: 'Canvas', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("canvas") } },
@@ -99,7 +104,6 @@ export var blocks = [
   {func: 'circle', parent: api, category: 'Canvas', paletteParams: ['x','y','radius'], params: ["160", "240", "100"] },
   {func: 'rect', parent: api, category: 'Canvas', paletteParams: ['x','y','width','height'], params: ["80", "120", "160", "240"] },
   {func: 'setStrokeWidth', parent: api, category: 'Canvas', paletteParams: ['width'], params: ["3"] },
-  {func: 'rgb', parent: api, category: 'Canvas', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r', 'g', 'b', 'a'], params: ["250", "0", "75", "0.5"]},
   {func: 'setStrokeColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'] } },
   {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', 'rgb(255,255,0)', 'rgb(255,255,0,0.5)', '"#FFFF00"'] } },
   // drawImage has been deprecated in favor of drawImageURL
@@ -158,6 +162,8 @@ export var blocks = [
   {func: 'clearTimeout', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
   {func: 'setInterval', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"] },
   {func: 'clearInterval', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
+  {func: 'timedLoop', parent: api, category: 'Control', paletteParams: ['ms', 'callback'], params: ['1000', 'function() {\n  \n}']},
+  {func: 'stopTimedLoop', parent: api, category: 'Control', paramButtons: { minArgs: 0, maxArgs: 1 }},
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },

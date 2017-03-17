@@ -16,7 +16,14 @@ Applications for the 2017-18 CS Discoveries Professional Learning Program are no
 
 CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
 
-<img src="/images/fit-500/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
+<div style="float:right; margin:20px 0px 20px 20px;">
+
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center' %>
+
+<i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
+
+</div>
+
 
 ### <a name="equity"></a>A CS course for everyone, designed with equity in mind
 CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
@@ -198,6 +205,10 @@ The CS Discoveries course is deeply inspired by the philosophy of ECS, based on 
 
 We will pilot the new course materials during the spring of 2016-17 with a group of 45 teachers across the US. The course will roll out formally in Summer 2017. Check back to
 this website frequently as we release drafted lesson plans!
+
+### <a name="standards"></a>Will CS Discoveries be mapped to standards?
+
+We are developing the course using the K-12 CS Framework and the interim CSTA standards as guidance. Once the course is complete, and the revised CSTA standards have been released, we will provide a mapping to those standards.
 
 <!--
 #### Can I pilot the new course?

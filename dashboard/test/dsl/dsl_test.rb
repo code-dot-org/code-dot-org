@@ -69,8 +69,12 @@ level 'Level 3'
           stage: "Stage1",
           scriptlevels: [
             {stage: "Stage1", levels: [{name: "Level 1"}]},
-            {stage: "Stage1", levels: [{name: "Level 2a"}, {name: "Level 2b"}],
-             properties: {"Level 2b" => {active: false}}
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+              properties: {
+                variants: {"Level 2b" => {active: false}}
+              }
             },
             {stage: "Stage1", levels: [{name: "Level 3"}]}
           ]
@@ -100,8 +104,8 @@ right 'r1'
 wrong 'w3'
 "
     output, i18n = MultiDSL.parse(input_dsl, 'test')
-    expected =
-      {name: 'name1', properties: {
+    expected = {
+      name: 'name1', properties: {
         options: {},
         questions: [{text: 'q1'}],
         answers: [
@@ -111,10 +115,26 @@ wrong 'w3'
           {text: 'w3', correct: false}
         ],
         title: 'title1',
-        content1: 'desc1'}}
-    i18n_expected = {'en' => {'data' => {'multi' => {'name1' =>
-      {'title1' => 'title1', 'desc1' => 'desc1', 'q1' => 'q1', 'w1' => 'w1', 'w2' => 'w2', 'r1' => 'r1', 'w3' => 'w3'}
-    }}}}
+        content1: 'desc1'
+      }
+    }
+    i18n_expected = {
+      'en' => {
+        'data' => {
+          'multi' => {
+            'name1' => {
+              'title1' => 'title1',
+              'desc1' => 'desc1',
+              'q1' => 'q1',
+              'w1' => 'w1',
+              'w2' => 'w2',
+              'r1' => 'r1',
+              'w3' => 'w3'
+            }
+          }
+        }
+      }
+    }
     assert_equal expected, output
     assert_equal i18n_expected.to_yaml, i18n.to_yaml
   end
@@ -253,5 +273,92 @@ level 'Level 2'
 DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:hideable_stages]
+  end
+
+  test 'Script DSL with level progressions' do
+    input_dsl = <<DSL
+stage 'Stage1'
+level 'Level 1'
+level 'Level 2', progression: 'Foo'
+level 'Level 3', progression: 'Foo'
+DSL
+    expected = {
+      id: nil,
+      stages: [
+        {
+          stage: "Stage1",
+          scriptlevels: [
+            {stage: "Stage1", levels: [{name: "Level 1"}]},
+            {stage: "Stage1", levels: [{name: "Level 2"}], properties: { progression: 'Foo' }},
+            {stage: "Stage1", levels: [{name: "Level 3"}], properties: { progression: 'Foo' }},
+          ]
+        }
+      ],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      hideable_stages: false,
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
+    }
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'test Script DSL with level variants and progressions' do
+    input_dsl = "
+stage 'Stage1'
+level 'Level 1'
+variants
+level 'Level 2a', progression: 'Foo'
+level 'Level 2b', active: false, progression: 'Foo'
+endvariants
+level 'Level 3'
+"
+    expected = {
+      id: nil,
+      stages: [
+        {
+          stage: "Stage1",
+          scriptlevels: [
+            {stage: "Stage1", levels: [{name: "Level 1"}]},
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+              properties: {
+                variants: {"Level 2b" => {active: false}},
+                progression: 'Foo'
+              }
+            },
+            {stage: "Stage1", levels: [{name: "Level 3"}]}
+          ]
+        }
+      ],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      hideable_stages: false,
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
+    }
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'raises exception if two variants have different progressions' do
+    input_dsl = "
+stage 'Stage1'
+level 'Level 1'
+variants
+level 'Level 2a', progression: 'Foo1'
+level 'Level 2b', active: false, progression: 'Foo2'
+endvariants
+level 'Level 3'
+"
+    assert_raises do
+      ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    end
   end
 end

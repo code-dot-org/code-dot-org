@@ -174,6 +174,9 @@ module LevelsHelper
 
     if AuthoredHintViewRequest.enabled?
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
+      if current_user && @script
+        view_options(authored_hints_used_ids: Set.new(AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).map(&:hint_id)))
+      end
     end
 
     if @user
@@ -349,8 +352,9 @@ module LevelsHelper
     app_options[:level] = level_options
 
     # Locale-depdendant option
-    loc_instructions = l.localized_instructions
-    level_options['instructions'] = loc_instructions unless loc_instructions.nil?
+    level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
+    level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
+    level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
 
     # Script-dependent option
     script = @script
@@ -387,21 +391,25 @@ module LevelsHelper
       )
 
       # stage-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {
-          script_name: script.name,
-          stage: script_level.stage.absolute_position,
-        },
-        default: nil
-      ) if enabled.nil?
+      if enabled.nil?
+        enabled = Gatekeeper.allows(
+          'showUnusedBlocks',
+          where: {
+            script_name: script.name,
+            stage: script_level.stage.absolute_position,
+          },
+          default: nil
+        )
+      end
 
       # script-specific
-      enabled = Gatekeeper.allows(
-        'showUnusedBlocks',
-        where: {script_name: script.name},
-        default: nil
-      ) if enabled.nil?
+      if enabled.nil?
+        enabled = Gatekeeper.allows(
+          'showUnusedBlocks',
+          where: {script_name: script.name},
+          default: nil
+        )
+      end
 
       # global
       enabled = Gatekeeper.allows('showUnusedBlocks', default: true) if enabled.nil?
@@ -493,8 +501,10 @@ module LevelsHelper
     end
 
     # Request-dependent option
-    app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
-        (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
+    if request
+      app_options[:sendToPhone] = request.location.try(:country_code) == 'US' ||
+          (!Rails.env.production? && request.location.try(:country_code) == 'RD')
+    end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share

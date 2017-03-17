@@ -1,7 +1,7 @@
 require "csv"
 require "naturally"
 
-EMPTY_XML = '<xml></xml>'
+EMPTY_XML = '<xml></xml>'.freeze
 
 class LevelsController < ApplicationController
   include LevelsHelper
@@ -79,10 +79,12 @@ class LevelsController < ApplicationController
     @callback = level_update_blocks_path @level, type
 
     # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
-    level_view_options(
-      @level.id,
-      success_condition: 'function () { return true; }'
-    ) if @level.is_a? Studio
+    if @level.is_a? Studio
+      level_view_options(
+        @level.id,
+        success_condition: 'function () { return true; }'
+      )
+    end
 
     show
     render :show

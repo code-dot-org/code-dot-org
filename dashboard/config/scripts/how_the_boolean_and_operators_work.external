@@ -96,7 +96,7 @@ The entire expression: `age >= 13 && age < 21` will end up as a single true/fals
 
 Here is an example for `OR` showing how the expression is evaluated step-by-step for two different scenarios.
 
-![](https://images.code.org/cfdec941f93facb2cb7d99495c9ae980-image-1480365509674.png)
+![](https://images.code.org/4bf3bda9b77f8baf79d34869f5ea6248-image-1487254065480.png)
 
 ## Misconceptions
 

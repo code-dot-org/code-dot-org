@@ -7,9 +7,10 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-#  commenting this stuff out because even if we don't have a reader configured it will set stuff in the session
-# include SeamlessDatabasePool::ControllerFilter
-#  use_database_pool :all => :master
+  # Commenting this stuff out because even if we don't have a reader configured
+  # it will set stuff in the session.
+  # include SeamlessDatabasePool::ControllerFilter
+  # use_database_pool :all => :master
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -98,10 +99,38 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  PERMITTED_USER_FIELDS = [:name, :username, :email, :password, :password_confirmation,
-                           :locale, :gender, :login,
-                           :remember_me, :age, :school, :full_address, :user_type,
-                           :hashed_email, :terms_of_service_version]
+  # These are sometimes updated from the registration form
+  SCHOOL_INFO_ATTRIBUTES = [
+    :country,
+    :school_type,
+    :school_state,
+    :school_district_id,
+    :school_district_name,
+    :school_id,
+    :school_name,
+    :school_zip,
+    :full_address,
+    :school_district_other,
+    :school_name_other
+  ].freeze
+
+  PERMITTED_USER_FIELDS = [
+    :name,
+    :username,
+    :email,
+    :password,
+    :password_confirmation,
+    :locale,
+    :gender,
+    :login,
+    :remember_me,
+    :age, :school,
+    :full_address,
+    :user_type,
+    :hashed_email,
+    :terms_of_service_version,
+    school_info_attributes: SCHOOL_INFO_ATTRIBUTES
+  ].freeze
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit PERMITTED_USER_FIELDS }
@@ -174,7 +203,18 @@ class ApplicationController < ActionController::Base
           options[:solved?] &&
           options[:activity] &&
           options[:level_source_image]
-        response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {level_source_id: options[:level_source].try(:id), activity_id: options[:activity].id})
+        response[:save_to_gallery_url] = gallery_activities_path(
+          gallery_activity: {
+            level_source_id: options[:level_source].try(:id),
+            user_level_id: options[:user_level] && options[:user_level].id
+          }
+        )
+      end
+
+      if options[:get_hint_usage]
+        response[:hints_used] =
+          HintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count +
+          AuthoredHintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count
       end
     end
 

@@ -41,6 +41,8 @@
     $crontab.join("\n")
   end
 
+  # CRONJOB TIME SYNTAX: https://help.ubuntu.com/community/CronHowto
+
   # for multi-instance envs (ie production) there should be one daemon,
   # so cronjobs that run once per environment go here (standalone env
   # instances are all their own daemon)
@@ -72,6 +74,7 @@
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'5 16 * * *', do:deploy_dir('bin', 'cron', 'calculate_workshop_survey_results')
       cronjob at:'20 6 * * 6', do:deploy_dir('bin', 'cron', 'dms_tasks')
+      cronjob at:'30 15 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')

@@ -1,4 +1,5 @@
 require 'addressable'
+require 'active_support/core_ext/object/try'
 
 #
 # BucketHelper
@@ -78,7 +79,11 @@ class BucketHelper
   end
 
   def get(encrypted_channel_id, filename, if_modified_since = nil, version = nil)
-    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    begin
+      owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return {status: 'NOT_FOUND'}
+    end
     key = s3_path owner_id, channel_id, filename
     begin
       s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
@@ -110,16 +115,15 @@ class BucketHelper
     src_prefix = s3_path src_owner_id, src_channel_id
     result = @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
-      if (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
-        mime_type = Sinatra::Base.mime_type(File.extname(filename))
-        category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
+      mime_type = Sinatra::Base.mime_type(File.extname(filename))
+      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
-        src = "#{@bucket}/#{src_prefix}#{filename}"
-        dest = s3_path dest_owner_id, dest_channel_id, filename
-        response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+      src = "#{@bucket}/#{src_prefix}#{filename}"
+      dest = s3_path dest_owner_id, dest_channel_id, filename
+      response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
-        {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
-      end
+      {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
     end
     result.compact
   end

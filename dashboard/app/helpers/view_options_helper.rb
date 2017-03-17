@@ -18,6 +18,7 @@ module ViewOptionsHelper
     :post_final_milestone,
     :puzzle_ratings_url,
     :authored_hint_view_requests_url,
+    :authored_hints_used_ids,
     :server_level_id,
     :game_display_name,
     :script_name,

@@ -1,16 +1,5 @@
 name 'CSD: colorLed list'
 display_name 'Circuit Playground: Color LEDs'
 markdown <<MARKDOWN
-<img src="//curriculum.code.org/images/circuitplayground/cp_colorleds.png" style="float: right; width: 400px; margin-left: 10px">
-
-# Add a Splash of Color
-
-Around the the edge of your board, you notice that there are ten additional LEDs. These LEDs are a bit different than those we've seen before; these are multi-color LEDs.
-
-### RGB LEDs
-
-The color LEDs are actually each made up of three smaller LED - a Red, a Green, and a Blue. Because of this, we often call these RGB LEDs.
-
-Because there are so many of these LEDs, we've stored them in a list called `colorLeds`. The first RGB LED in the list (position 0) is located next to the green Power LED, and the rest follow in order counter-clockwise around the board, ending at the 10th RGB LED (position 9) next to the red LED.
-
+<object data="https://docs.code.org/csd/maker_rgbleds/" type="text/html"  style="width: 100%; height: 700px;"></object>
 MARKDOWN

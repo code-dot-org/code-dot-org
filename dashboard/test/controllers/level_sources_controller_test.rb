@@ -66,9 +66,14 @@ class LevelSourcesControllerTest < ActionController::TestCase
   test "update deletes gallery activities" do
     sign_in @admin
 
-    create :gallery_activity, activity: create(:activity, level: @level_source.level, level_source_id: @level_source.id)
-    create :gallery_activity, activity: create(:activity, level: @level_source.level, level_source_id: @level_source.id)
-    create :gallery_activity, activity: create(:activity, level: @level_source.level)
+    create :gallery_activity,
+      user_level: create(:user_level, level: @level_source.level),
+      level_source: @level_source
+    create :gallery_activity,
+      user_level: create(:user_level, level: @level_source.level),
+      level_source: @level_source
+    create :gallery_activity,
+      user_level: create(:user_level, level: @level_source.level)
 
     assert_difference('GalleryActivity.count', -2) do # delete two matching above
       patch :update, params: {level_source: {hidden: true}, id: @level_source}

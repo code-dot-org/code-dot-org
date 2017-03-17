@@ -4,6 +4,12 @@
   %script{src: minifiable_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
 
+- content_for :body_scripts do
+  - video_infos = {}
+  - Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
+  - script_data = { editorall: { video_infos: video_infos }.to_json }
+  %script{src: minifiable_asset_path('js/levels/editors/_all.js'), data: script_data}
+
 - unless @level.is_a? DSLDefined
   .field
     = f.label :display_name
@@ -51,9 +57,6 @@
   %p Ask an engineer to add new videos to the videos.csv and data.en.yml files.
   = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
   .video-preview{style: 'display: block'}
-
-- video_infos = {}
-- Video.all.each { |video| video_infos[video.key] = video.summarize(false) }
 
 #callout_editor.field
   .json_editor
@@ -133,60 +136,3 @@
     = f.label :callout_json
     %div{style: '-webkit-user-select: text'}
     = f.text_area :callout_json, rows: 4
-
-- content_for :body_scripts do
-  :javascript
-    $(document).ready(function() {
-      levelbuilder.jsonEditor("#callout_editor", {
-        json_textarea: '#level_callout_json',
-        add_button: '#add_callout',
-        remove_button: ".remove_callout",
-        value_space: ".callout_space",
-        template: ".json_template",
-        form_container: "#all_callouts_editor",
-        wrapper: ".json_editor",
-        model: {
-          localization_key: "",
-          callout_text: "",
-          element_id: "",
-          on: "",
-          qtip_config: {
-            codeStudio: {
-              canReappear: false,
-              dropletPaletteCategory: ""
-            },
-            style: {classes: ""},
-            position: {
-              my: "",
-              at: "",
-              adjust: {x: 0, y: 0}
-            }
-          }
-        }
-      });
-
-      function make_selection_handler(flag) {
-        return function (e) {
-          e.preventDefault();
-          $(this).parent().siblings('select').children('option')[flag ? 'attr' : 'removeAttr']('selected', true);
-        }
-      }
-
-      $('.select_all').click(make_selection_handler(true));
-      $('.select_none').click(make_selection_handler(false));
-
-      var videoInfos = #{video_infos.to_json};
-
-      function updateVideoPreview() {
-        var selectionValue = $('.video-dropdown')[0].value;
-        if (selectionValue) {
-          var videoInfo = videoInfos[selectionValue];
-          $('.video-preview').html(window.dashboard.videos.createVideoWithFallback(null, videoInfo, 400, 400));
-          $('.video-preview').show();
-        } else {
-          $('.video-preview').hide();
-        }
-      }
-      $('.video-dropdown').change(updateVideoPreview);
-      updateVideoPreview();
-    });

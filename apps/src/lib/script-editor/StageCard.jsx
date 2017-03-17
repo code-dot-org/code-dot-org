@@ -39,6 +39,7 @@ const StageCard = React.createClass({
   propTypes: {
     reorderLevel: React.PropTypes.func.isRequired,
     addLevel: React.PropTypes.func.isRequired,
+    setStageLockable: React.PropTypes.func.isRequired,
     stagesCount: React.PropTypes.number.isRequired,
     stage: React.PropTypes.object.isRequired
   },

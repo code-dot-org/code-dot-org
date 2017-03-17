@@ -31,6 +31,8 @@ module.exports = {
         console.log("font-size: " + getProperty("my_button", "font-size"));
         setProperty("my_button", "image", "${facebookImage}");
         console.log("image: " + getProperty("my_button", "image"));
+        setProperty("my_button", "icon-color", "blue");
+        console.log("icon-color: " + getProperty("my_button", "icon-color"));
 `,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
@@ -43,6 +45,7 @@ module.exports = {
           assert.equal(button.style.fontSize, '21px');
 
           assert(/facebook_purple.png$/.test(button.getAttribute('data-canonical-image-url')));
+          assert(/blue/.test(button.getAttribute('data-icon-color')));
 
           Applab.onPuzzleComplete();
         });
@@ -54,7 +57,8 @@ module.exports = {
         expect(debugOutput.textContent).to.contain('text-color: red\n');
         expect(debugOutput.textContent).to.contain('background-color: green\n');
         expect(debugOutput.textContent).to.contain('font-size: 21\n');
-        expect(debugOutput.textContent).to.match(/image: .*facebook_purple.png$/);
+        expect(debugOutput.textContent).to.match(/image: .*facebook_purple.png\n/);
+        expect(debugOutput.textContent).to.contain('icon-color: blue');
 
         return true;
       },
@@ -78,7 +82,10 @@ module.exports = {
         setProperty("my_button", "font-size", 21);
         console.log("font-size: " + getProperty("my_button", "font-size"));
         setProperty("my_button", "image", "${facebookImage}");
-        console.log("image: " + getProperty("my_button", "image"));`,
+        console.log("image: " + getProperty("my_button", "image"));
+        setProperty("my_button", "icon-color", "blue");
+        console.log("icon-color: " + getProperty("my_button", "icon-color"));
+`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -90,6 +97,7 @@ module.exports = {
           assert.equal(button.style.fontSize, '21px');
 
           assert(/facebook_purple.png$/.test(button.getAttribute('data-canonical-image-url')));
+          assert(/blue/.test(button.getAttribute('data-icon-color')));
 
           Applab.onPuzzleComplete();
         });
@@ -101,7 +109,8 @@ module.exports = {
         expect(debugOutput.textContent).to.contain('text-color: red\n');
         expect(debugOutput.textContent).to.contain('background-color: green\n');
         expect(debugOutput.textContent).to.contain('font-size: 21\n');
-        expect(debugOutput.textContent).to.match(/image: .*facebook_purple.png$/);
+        expect(debugOutput.textContent).to.match(/image: .*facebook_purple.png\n/);
+        expect(debugOutput.textContent).to.contain('icon-color: blue');
 
         return true;
       },
@@ -194,7 +203,9 @@ step: 3`);
         setProperty("my_image", "picture", "${facebookImage}");
         console.log("picture: " + getProperty("my_image", "picture"));
         setProperty("my_image", "hidden", true);
-        console.log("hidden: " + getProperty("my_image", "hidden"));`,
+        console.log("hidden: " + getProperty("my_image", "hidden"));
+        setProperty("my_image", "icon-color", "blue");
+        console.log("icon-color: " + getProperty("my_image", "icon-color"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -210,6 +221,7 @@ step: 3`);
           assert.equal(image.style.top, '14px');
 
           assert(/facebook_purple.png$/.test(image.src));
+          assert(/blue/.test(image.getAttribute('data-icon-color')));
 
           // visibility is set via a class, so use getComputedStyle
           assert(window.getComputedStyle(image).visibility, 'hidden');
@@ -227,6 +239,7 @@ step: 3`);
         expect(debugOutput.textContent).to.contain('y: 14\n');
         expect(debugOutput.textContent).to.match(/picture: .*facebook_purple.png\n/);
         expect(debugOutput.textContent).to.contain('hidden: true');
+        expect(debugOutput.textContent).to.contain('icon-color: blue');
 
         return true;
       },
@@ -253,7 +266,9 @@ step: 3`);
         setProperty("my_image", "picture", "${facebookImage}");
         console.log("picture: " + getProperty("my_image", "picture"));
         setProperty("my_image", "hidden", true);
-        console.log("hidden: " + getProperty("my_image", "hidden"));`,
+        console.log("hidden: " + getProperty("my_image", "hidden"));
+        setProperty("my_image", "icon-color", "blue");
+        console.log("icon-color: " + getProperty("my_image", "icon-color"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -269,6 +284,7 @@ step: 3`);
           assert.equal(image.style.top, '14px');
 
           assert(/facebook_purple.png$/.test(image.src));
+          assert(/blue/.test(image.getAttribute('data-icon-color')));
 
           // visibility is set via a class, so use getComputedStyle
           assert(window.getComputedStyle(image).visibility, 'hidden');
@@ -286,6 +302,7 @@ step: 3`);
         expect(debugOutput.textContent).to.contain('y: 14\n');
         expect(debugOutput.textContent).to.match(/picture: .*facebook_purple.png\n/);
         expect(debugOutput.textContent).to.contain('hidden: true');
+        expect(debugOutput.textContent).to.contain('icon-color: blue');
 
         return true;
       },
@@ -400,7 +417,9 @@ step: 3`);
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="display: none; width: 320px; height: 450px;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"></div></div>',
       xml:
         `setProperty("screen1", "image", "${flappyImage}");
-        console.log("image: " + getProperty("screen1", "image"));`,
+        console.log("image: " + getProperty("screen1", "image"));
+        setProperty("screen1", "icon-color", "blue");
+        console.log("icon-color: " + getProperty("screen1", "icon-color"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -410,12 +429,14 @@ step: 3`);
           console.log(screen.style.backgroundImage);
           assert(/url\(.*flappy_promo.png['"]?\)$/.test(screen.style.backgroundImage),
                  'screen background image should be flappy_promo.png. Instead: '+screen.style.backgroundImage);
+          assert(/blue/.test(screen.getAttribute('data-icon-color')));
           Applab.onPuzzleComplete();
         });
       },
       customValidator: function (assert) {
         var debugOutput = document.getElementById('debug-output');
-        expect(debugOutput.textContent).to.match(/image: .*flappy_promo.png$/);
+        expect(debugOutput.textContent).to.match(/image: .*flappy_promo.png\n/);
+        expect(debugOutput.textContent).to.contain('icon-color: blue');
         return true;
       },
       expected: {

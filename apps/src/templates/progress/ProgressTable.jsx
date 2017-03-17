@@ -4,7 +4,7 @@ import { categorizedLessons } from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
-import { levelType } from './progressTypes';
+import { levelType, lessonType } from './progressTypes';
 
 const ProgressTable = React.createClass({
   propTypes: {
@@ -12,7 +12,7 @@ const ProgressTable = React.createClass({
     categorizedLessons: PropTypes.arrayOf(
       PropTypes.shape({
         category: PropTypes.string.isRequired,
-        lessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+        lessons: PropTypes.arrayOf(lessonType).isRequired,
         levels: PropTypes.arrayOf(
           PropTypes.arrayOf(levelType)
         ).isRequired
@@ -43,7 +43,7 @@ const ProgressTable = React.createClass({
     if (categorizedLessons.length === 1) {
       return (
         <TableType
-          lessonNames={categorizedLessons[0].lessonNames}
+          lessons={categorizedLessons[0].lessons}
           levelsByLesson={categorizedLessons[0].levels}
         />
       );
@@ -55,7 +55,7 @@ const ProgressTable = React.createClass({
               key={category.category}
               groupName={category.category}
               isSummaryView={isSummaryView}
-              lessonNames={category.lessonNames}
+              lessons={category.lessons}
               levelsByLesson={category.levels}
             />
           ))}
@@ -67,7 +67,12 @@ const ProgressTable = React.createClass({
               key="peer_review"
               groupName={"Peer Review: Not Yet Implemented with progressRedesign"}
               isSummaryView={isSummaryView}
-              lessonNames={["Not yet implemented"]}
+              lessons={[
+                {
+                  name: "Not yet implemented",
+                  id: -1
+                }
+              ]}
               levelsByLesson={[[{
                 status: 'not_tried',
                 url: '',

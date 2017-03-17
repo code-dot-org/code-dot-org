@@ -50,7 +50,7 @@ export default function reducer(state = initialState, action) {
 }
 
 // action creators
-function updateHiddenStage(sectionId, stageId, hidden) {
+export function updateHiddenStage(sectionId, stageId, hidden) {
   return {
     type: UPDATE_HIDDEN_STAGE,
     sectionId,
@@ -80,7 +80,7 @@ export function toggleHidden(scriptName, sectionId, stageId, hidden) {
   };
 }
 
-function setInitialized(hideableAllowed) {
+export function setInitialized(hideableAllowed) {
   return {
     type: SET_INITIALIZED,
     hideableAllowed
@@ -128,7 +128,7 @@ export function getHiddenStages(scriptName, canHideStages) {
  * Helper to determine whether a stage is hidden for a given section. If no
  * section is given, we assume this is a student and use STUDENT_SECTION_ID
  */
-export function isHiddenFromState(bySection, sectionId, stageId) {
+export function isHiddenForSection(state, sectionId, stageId) {
   if (!stageId) {
     return false;
   }
@@ -136,5 +136,6 @@ export function isHiddenFromState(bySection, sectionId, stageId) {
   if (!sectionId){
     sectionId = STUDENT_SECTION_ID;
   }
+  const bySection = state.get('bySection');
   return !!bySection.getIn([sectionId, stageId.toString()]);
 }

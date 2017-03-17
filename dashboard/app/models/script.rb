@@ -19,10 +19,12 @@
 #
 
 require 'cdo/script_constants'
+require 'cdo/shared_constants'
 
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include ScriptConstants
+  include SharedConstants
 
   include Seeded
   has_many :levels, through: :script_levels
@@ -309,12 +311,11 @@ class Script < ActiveRecord::Base
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        unless level.contained_levels.empty?
-          text_response_levels << {
-            script_level: script_level,
-            levels: [level.contained_levels.first]
-          }
-        end
+        next if level.contained_levels.empty?
+        text_response_levels << {
+          script_level: script_level,
+          levels: [level.contained_levels.first]
+        }
       end
     end
 
@@ -697,7 +698,7 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete.times do |x|
         levels << {
           ids: [x],
-          kind: 'peer_review',
+          kind: LEVEL_KIND.peer_review,
           title: '',
           url: '',
           name: I18n.t('peer_review.reviews_unavailable'),

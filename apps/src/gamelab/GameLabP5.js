@@ -339,6 +339,16 @@ GameLabP5.prototype.init = function (options) {
     return this;
   };
 
+  window.p5.prototype.rgb = function (r, g, b, a) {
+    // convert a from 0 to 255 to 0 to 1
+    if (!a) {
+      a = 1;
+    }
+    a = a * 255;
+
+    return this.color(r, g, b, a);
+  };
+
   window.p5.prototype.createGroup = function () {
     return new this.Group();
   };

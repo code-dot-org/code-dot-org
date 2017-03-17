@@ -79,7 +79,6 @@ var validateSimplePuzzle = function (types, options) {
 module.exports = {
   '1': {
     instructionsIcon: 'apple',
-    aniGifURL: '/script_assets/k_1_images/instruction_gifs/click-block.gif',
     isK1: true,
     image: {
       name: 'apple',
@@ -101,7 +100,6 @@ module.exports = {
   },
   '2': {
     instructionsIcon: 'smiley',
-    aniGifURL: '/script_assets/k_1_images/instruction_gifs/drag-drop.gif',
     isK1: true,
     instructionsImportant: true,
     image: {
@@ -136,7 +134,6 @@ module.exports = {
   },
   '3': {
     instructionsIcon: 'snail',
-    aniGifURL: '/script_assets/k_1_images/instruction_gifs/drag-connect.gif',
     isK1: true,
     image: {
       name: 'snail',
@@ -307,7 +304,6 @@ module.exports = {
 
   '9': {
     instructionsIcon: 'house',
-    aniGifURL: '/script_assets/k_1_images/instruction_gifs/drag-disordered.gif',
     isK1: true,
     image: {
       name: 'house',

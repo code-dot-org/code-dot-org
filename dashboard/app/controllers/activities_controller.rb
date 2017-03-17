@@ -1,3 +1,4 @@
+require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 
 class ActivitiesController < ApplicationController
@@ -54,13 +55,26 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure
-        @level_source = LevelSource.find_identical_or_create(@level, params[:program])
-        slog(tag: 'share_checking_error', error: "#{share_checking_error.class.name}: #{share_checking_error}", level_source_id: @level_source.id) if share_checking_error
+        @level_source = LevelSource.find_identical_or_create(
+          @level,
+          params[:program].strip_utf8mb4
+        )
+        if share_checking_error
+          slog(
+            tag: 'share_checking_error',
+            error: "#{share_checking_error.class.name}: #{share_checking_error}",
+            level_source_id: @level_source.id
+          )
+        end
       end
     end
 
     if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable?
-      user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
+      user_level = UserLevel.find_by(
+        user_id: current_user.id,
+        level_id: @script_level.level.id,
+        script_id: @script_level.script.id
+      )
       # we have a lockable stage, and user_level is locked. disallow milestone requests
       if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
         return head 403
@@ -97,6 +111,11 @@ class ActivitiesController < ApplicationController
                     client_state.lines
                   end
 
+    milestone_response_user_level = nil
+    if @new_level_completed.is_a? UserLevel
+      milestone_response_user_level = @new_level_completed
+    end
+
     render json: milestone_response(
       script_level: @script_level,
       level: @level,
@@ -106,7 +125,9 @@ class ActivitiesController < ApplicationController
       level_source_image: @level_source_image,
       activity: @activity,
       new_level_completed: @new_level_completed,
-      share_failure: share_failure
+      get_hint_usage: params[:gamification_enabled],
+      share_failure: share_failure,
+      user_level: milestone_response_user_level
     )
 
     if solved
@@ -187,7 +208,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    passed = Activity.passing?(test_result)
+    passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
       # bypass validations/transactions/etc
@@ -199,7 +220,6 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(
         user: current_user,
-        activity: @activity,
         user_level_id: @new_level_completed.try(:id),
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
@@ -213,7 +233,9 @@ class ActivitiesController < ApplicationController
       test_result = params[:testResult].to_i
       old_result = client_state.level_progress(@script_level)
 
-      @new_level_completed = true if !Activity.passing?(old_result) && Activity.passing?(test_result)
+      if !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
+        @new_level_completed = true
+      end
 
       client_state.add_script(@script_level.script_id)
     end

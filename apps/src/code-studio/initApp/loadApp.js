@@ -3,12 +3,12 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { getStore } from '../redux';
-import { setUserSignedIn, SignInState } from '../progressRedux';
+import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
 var clientState = require('../clientState');
-var color = require("../../util/color");
 import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
 var timing = require('@cdo/apps/code-studio/initApp/timing');
@@ -23,38 +23,37 @@ import {
   getContainedLevelId,
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
-
-import { activityCssClass, mergeActivityResult, LevelStatus } from '../activityUtils';
+import { dataURIToFramedBlob } from '@cdo/apps/imageUtils';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
 
+const SHARE_IMAGE_NAME = '_share_image.png';
+
+/**
+ * When we have a publicly cacheable script, the server does not send down the
+ * user's levelProgress, and instead we get it asynchronously. This method adds
+ * that progress to our redux store, and then also updates the clientState (i.e.
+ * sessionStorage)
+ * Note: A better approach to backing up progress in sessionStorage would likely
+ * be to attach a listener to our redux store, and then update clientState whenever
+ * levelProgress changes in the store.
+ * @param {string} scriptName
+ * @param {Object<number, number>} Mapping from levelId to TestResult
+ */
 function mergeProgressData(scriptName, serverProgress) {
-  const clientProgress = clientState.allLevelsProgress()[scriptName] || {};
+  const store = getStore();
+  store.dispatch(mergeProgress(serverProgress));
+
   Object.keys(serverProgress).forEach(levelId => {
-    if (serverProgress[levelId] !== clientProgress[levelId]) {
-      var mergedResult = mergeActivityResult(
-        clientProgress[levelId],
-        serverProgress[levelId]
-      );
-      var status = activityCssClass(mergedResult);
-
-      // Set the progress color
-      var css = {backgroundColor: color[`level_${status}`] || color.level_not_tried};
-      if (status && status !== LevelStatus.not_tried && status !== LevelStatus.attempted) {
-        Object.assign(css, {color: color.white});
-      }
-      $('.level-' + levelId).css(css);
-
-      // Write down new progress in sessionStorage
-      clientState.trackProgress(
-        null,
-        null,
-        serverProgress[levelId],
-        scriptName,
-        levelId
-      );
-    }
+    // Write down new progress in sessionStorage
+    clientState.trackProgress(
+      null,
+      null,
+      serverProgress[levelId],
+      scriptName,
+      levelId
+    );
   });
 }
 
@@ -103,6 +102,11 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
+        const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;
+        // Add the frame to the drawing.
+        dataURIToFramedBlob(dataURI, blob => {
+          files.putFile(SHARE_IMAGE_NAME, blob);
+        });
         return;
       }
       if (appOptions.channel && !appOptions.level.edit_blocks &&
@@ -121,15 +125,15 @@ export function setupApp(appOptions) {
 
         // If the program is the result for a contained level, store it with
         // the contained level id
-        const levelId = appOptions.hasContainedLevels ?
+        const levelId = (appOptions.hasContainedLevels && !appOptions.level.edit_blocks) ?
           getContainedLevelId() :
           appOptions.serverLevelId;
         clientState.writeSourceForLevel(appOptions.scriptName, levelId,
             +new Date(), lastSavedProgram);
       }
       // report.callback will already have the correct milestone post URL in
-      // the contained level case
-      if (!appOptions.hasContainedLevels) {
+      // the contained level case, unless we're editing blocks
+      if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         report.callback = appOptions.report.callback;
       }
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
@@ -330,10 +334,6 @@ function loadAppAsync(appOptions) {
           }
         }
 
-        if (progress.refreshStageProgress) {
-          progress.refreshStageProgress();
-        }
-
         const store = getStore();
         const signInState = store.getState().progress.signInState;
         if (signInState === SignInState.Unknown) {
@@ -434,6 +434,13 @@ window.apps = {
       } else {
         callback({});
       }
+    },
+    prepareForRemix: function () {
+      const {prepareForRemix} = getAppOptions();
+      if (prepareForRemix) {
+        return prepareForRemix();
+      }
+      return Promise.resolve(); // Return an insta-resolved promise.
     }
   },
 };

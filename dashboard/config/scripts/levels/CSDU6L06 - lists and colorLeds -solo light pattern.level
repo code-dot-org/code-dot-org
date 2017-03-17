@@ -84,8 +84,10 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Light Pattern\r\n\r\nCreate your own light pattern using blink, toggle, and color",
+    "markdown_instructions": "# Light Patterns\r\n\r\nThis app already has one light pattern program, which can be activated by clicking a button. Notice that we put this pattern into a function to make the code cleaner and clearer.\r\n\r\n# Do This\r\n\r\nCreate a light pattern function of your own - maybe the colors of your favorite holiday, college, sports team, or try to create an image with the lights.\r\n\r\nAfter you've created your new function, add a button and event handler so that you can switch between the two light patterns.",
     "project_template_level_name": "CSDU6 - L06 - Light Display Template",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

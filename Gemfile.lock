@@ -1,27 +1,27 @@
 GIT
-  remote: git://github.com/Clever/omniauth-clever.git
+  remote: https://github.com/Clever/omniauth-clever.git
   revision: b15a87fde9dec2658e9c131c95c6890b145f8060
   specs:
     omniauth-clever (1.2.1)
       omniauth-oauth2 (~> 1.1)
 
 GIT
-  remote: git://github.com/islemaster/redis-slave-read.git
-  revision: 8be4014cf7c9d2ea09ac479979cb5396e74835dc
-  ref: start-with-random-node
+  remote: https://github.com/cheald/redis-slave-read.git
+  revision: 370d5da2b71f795d8145fcf89c0648f866a125a6
+  ref: 370d5da2b71f795d8145fcf89c0648f866a125a6
   specs:
     redis-slave-read (0.2.1)
       connection_pool
       redis
 
 GIT
-  remote: git://github.com/pahanix/full-name-splitter.git
+  remote: https://github.com/pahanix/full-name-splitter.git
   revision: 316b4f3f4b1e5902dedc2a369d1d9052f042dd50
   specs:
     full-name-splitter (0.1.2)
 
 GIT
-  remote: git://github.com/rails-api/active_model_serializers.git
+  remote: https://github.com/rails-api/active_model_serializers.git
   revision: 2962f3f64e7c672bfb5a13a8f739b5db073e5473
   ref: 2962f3f64e7c672bfb5a13a8f739b5db073e5473
   specs:
@@ -29,23 +29,23 @@ GIT
       activemodel (>= 4.0)
 
 GIT
-  remote: git://github.com/wjordan/geocoder.git
+  remote: https://github.com/wjordan/geocoder.git
   revision: 2da20897188b57f777df89f90e45cf331c5b014f
   ref: rack-request-fix
   specs:
     geocoder (1.3.7)
 
 GIT
-  remote: git://github.com/wjordan/ims-lti.git
-  revision: 53e45b3f5ca7cf2b7d3654572b02628c508ceef0
+  remote: https://github.com/wjordan/ims-lti.git
+  revision: 39203db48428ab943547363b13da56b02a19d905
   ref: oauth_051
   specs:
     ims-lti (1.1.12)
       builder
-      oauth (>= 0.4.5)
+      oauth (>= 0.4.5, < 0.6)
 
 GIT
-  remote: git://github.com/wjordan/omniauth-windowslive.git
+  remote: https://github.com/wjordan/omniauth-windowslive.git
   revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
   ref: cdo
   specs:
@@ -54,7 +54,7 @@ GIT
       omniauth-oauth2 (~> 1.4)
 
 GIT
-  remote: git://github.com/wjordan/sass-rails.git
+  remote: https://github.com/wjordan/sass-rails.git
   revision: 06e833d92d083fbcb137364ffebc597b2577db23
   ref: frozen-array-fix
   specs:
@@ -66,12 +66,12 @@ GIT
       tilt (>= 1.1, < 3)
 
 GIT
-  remote: git://github.com/wjordan/seamless_database_pool.git
-  revision: 7c7db3d4672c50c46d02e04db68d09758bbca62e
+  remote: https://github.com/wjordan/seamless_database_pool.git
+  revision: c9a5c2bc92efc1f87a2aa065283e15283dbb9425
   ref: cdo
   specs:
-    seamless_database_pool (1.0.18)
-      activerecord (>= 3.0.20)
+    seamless_database_pool (1.0.19)
+      activerecord (>= 3.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -169,6 +169,10 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
+    codecov (0.1.9)
+      json
+      simplecov
+      url
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
     coderay (1.1.1)
@@ -176,7 +180,7 @@ GEM
     composite_primary_keys (9.0.5)
       activerecord (~> 5.0.0)
     concurrent-ruby (1.0.4)
-    connection_pool (2.2.0)
+    connection_pool (2.2.1)
     coveralls (0.8.14)
       json (>= 1.8, < 3)
       simplecov (~> 0.12.0)
@@ -414,6 +418,8 @@ GEM
     orm_adapter (0.5.0)
     os (0.9.6)
     parallel (1.9.0)
+    parallel_tests (2.13.0)
+      parallel
     paranoia (2.2.0.pre)
       activerecord (>= 4.0, < 5.1)
     parser (2.3.3.1)
@@ -605,6 +611,7 @@ GEM
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    url (0.3.2)
     url_safe_base64 (0.2.2)
     user_agent_parser (2.3.0)
     validates_email_format_of (1.6.3)
@@ -646,6 +653,7 @@ DEPENDENCIES
   cancancan (~> 1.15.0)
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
+  codecov
   codemirror-rails
   colorize
   composite_primary_keys
@@ -684,7 +692,6 @@ DEPENDENCIES
   le (~> 2.2)
   lograge
   marked-rails
-  memoist
   mini_magick
   minitest (~> 5.5)
   minitest-around
@@ -706,6 +713,7 @@ DEPENDENCIES
   open_uri_redirections
   os
   parallel
+  parallel_tests
   paranoia (~> 2.2.0.pre)
   pdf-reader
   phantomjs (~> 1.9.7.1)

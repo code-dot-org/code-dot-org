@@ -6,7 +6,7 @@ Aws.config.update(region: 'us-east-1', access_key_id: 'fake id', secret_access_k
 $fake_sqs_service = FakeSQS::TestIntegration.new(
   database: ':memory:',
   sqs_endpoint: 'localhost',
-  sqs_port: 4568
+  sqs_port: 4569
 )
 
 class Pd::AsyncWorkshopHandlerTest < ActiveSupport::TestCase

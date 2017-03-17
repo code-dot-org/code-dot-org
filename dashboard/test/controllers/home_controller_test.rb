@@ -225,14 +225,13 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#age-modal', false
   end
 
-# this exception is actually annoying to handle because it never gets
-# to ActionController (so we can't use the rescue in
-# ApplicationController)
-#  test "bad http methods are rejected" do
-#    process :index, 'APOST' # use an APOST instead of get/post/etc
-#
-#    assert_response 400
-#  end
+  # This exception is actually annoying to handle because it never gets to
+  # ActionController (so we can't use the rescue in ApplicationController).
+  # test "bad http methods are rejected" do
+  #   process :index, 'APOST' # use an APOST instead of get/post/etc
+  #
+  #   assert_response 400
+  # end
 
   test 'health_check sets no cookies' do
     get :health_check

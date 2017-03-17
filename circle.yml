@@ -2,6 +2,7 @@ general:
   artifacts:
     - apps/yarn-error.log
     - apps/coverage
+    - dashboard/coverage
     - dashboard/test/ui
     - dashboard/log
     - pegasus/log
@@ -19,20 +20,23 @@ machine:
     DISABLE_SPRING: 1
   services:
     - docker
+    - redis
 checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
+        parallel: true
+    - ./bin/circle/merge-base:
         parallel: true
 dependencies:
   pre:
     - ./bin/circle/install-circle-predependencies.sh
     - google-chrome --version
     - yarn --version
+    - node --version
+    - npm --version
   cache_directories:
     - "apps/node_modules"
-    - "apps/.babel-cache"
     - "dashboard/tmp/cache"
-    - "~/.rvm/gems/ruby-2.2.3"
     - ".tmputils"
     - "~/.yarn-cache"
   override:
@@ -40,9 +44,10 @@ dependencies:
     # When installing moreutils, make sure it does not overwrite GNU parallel,
     # which CircleCI uses to capture artifacts.
     - sudo mv /usr/bin/parallel /usr/bin/gnu_parallel
-    - sudo apt-get install libicu-dev enscript moreutils
+    - sudo apt-get install libicu-dev enscript moreutils pdftk
     - sudo mv /usr/bin/gnu_parallel /usr/bin/parallel
-    - bundle install --without ''
+    # Use vendor/bundle path so gems will be cached correctly
+    - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3 --without ''
     - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "npm_use_sudo: false" >> locals.yml'
     - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
@@ -63,6 +68,9 @@ dependencies:
     - 'echo "localize_apps: true" >> locals.yml'
     - 'echo "sync_assets: false" >> locals.yml'
     - 'echo "dashboard_enable_pegasus: true" >> locals.yml'
+    - 'echo "dashboard_workers: 7" >> locals.yml'
+    # Avoid double-seeding. `rake install` runs a dashboard seed, this stops
+    # `rake build` from doing the same.
     - 'echo "skip_seed_all: true" >> locals.yml'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "use_dynamo_tables: false" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "use_dynamo_properties: false" >> locals.yml ;; esac'
@@ -86,7 +94,7 @@ dependencies:
         timeout: 840
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
-    - rake firebase:ci
+    - bundle exec rake firebase:ci
     # Make sure building did not introduce unexpected changes.  If it did, fail
     # here before we start running any test steps.
     - bundle exec rake circle:check_for_unexpected_apps_changes

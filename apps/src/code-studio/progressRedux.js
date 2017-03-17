@@ -3,11 +3,8 @@
  */
 import _ from 'lodash';
 import { makeEnum } from '../utils';
-import {
-  LevelStatus,
-  mergeActivityResult,
-  activityCssClass
-} from './activityUtils';
+import { mergeActivityResult, activityCssClass } from './activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import { TestResults } from '@cdo/apps/constants';
 
 // Action types
@@ -29,12 +26,12 @@ const initialState = {
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
+  stages: null,
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
   levelProgress: {},
   focusAreaPositions: [],
-  stages: null,
   peerReviewStage: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
@@ -59,7 +56,7 @@ export default function reducer(state = initialState, action) {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: stages.map(stage => _.omit(stage, 'hidden')),
+      stages: processedStages(stages),
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId
@@ -73,25 +70,13 @@ export default function reducer(state = initialState, action) {
       ...action.levelProgress
     });
     combinedLevels.forEach(key => {
-      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
+      newLevelProgress[key] = mergeActivityResult(state.levelProgress[key],
+        action.levelProgress[key]);
     });
 
     return {
       ...state,
       levelProgress: newLevelProgress,
-      stages: state.stages.map(stage => ({
-        ...stage,
-        levels: stage.levels.map((level, index) => {
-          const lockedStage = stage.lockable &&
-            level.ids.every(id => newLevelProgress[id] === TestResults.LOCKED_RESULT);
-
-          const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
-          return {
-            ...level,
-            status: lockedStage ? LevelStatus.locked : activityCssClass(newLevelProgress[id])
-          };
-        })
-      }))
     };
   }
 
@@ -186,6 +171,27 @@ function bestResultLevelId(levelIds, progressData) {
   return bestId;
 }
 
+/**
+ * Does some processing of our passed in stages, namely
+ * - Removes 'hidden' field
+ * - Adds 'stageNumber' field for non-lockable stages
+ */
+export function processedStages(stages) {
+  let numberOfNonLockableStages = 0;
+
+  return stages.map(stage => {
+    let stageNumber;
+    if (!stage.lockable) {
+      numberOfNonLockableStages++;
+      stageNumber = numberOfNonLockableStages;
+    }
+    return {
+      ..._.omit(stage, 'hidden'),
+      stageNumber
+    };
+  });
+}
+
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
@@ -227,19 +233,67 @@ export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, i
 // Do we have one or more lockable stages
 export const hasLockableStages = state => state.stages.some(stage => stage.lockable);
 
-export const lessonNames = state => state.stages.map(stage => stage.name);
 export const hasGroups = state => Object.keys(categorizedLessons(state)).length > 1;
 
-// TODO - account for locked levels
+/**
+ * Extract the relevant portions of a particular lesson/stage from the store.
+ * Note, that this does not include levels
+ * @returns {Lesson}
+ */
+const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']);
+export const lessons = state => state.stages.map(lessonFromStage);
+
+/**
+ * The level object passed down to use via the server (and stored in stage.stages.levels)
+ * contains more data than we need. This (a) filters to the parts our views care
+ * about and (b) determines current status based on the current state of
+ * state.levelProgress
+ */
 export const levelsByLesson = state => (
   state.stages.map(stage => (
     stage.levels.map(level => ({
-      status: level.status,
+      status: statusForLevel(level, state.levelProgress),
       url: level.url,
-      name: level.name
+      name: level.name,
+      progression: level.progression,
+      icon: level.icon,
     }))
   ))
 );
+
+/**
+ * Given a level and levelProgress (both from our redux store state), determine
+ * the status for that level.
+ * @param {object} level - Level object from state.stages.levels
+ * @param {object<number, TestResult>} levelProgress - Mapping from levelId to
+ *   TestResult
+ */
+export function statusForLevel(level, levelProgress) {
+  // Peer Reviews use a level object to track their state, but have some subtle
+  // differences from regular levels (such as a separate id namespace). Unlike
+  // levels, Peer Reviews store status on the level object (for the time being)
+  if (level.kind === LevelKind.peer_review) {
+    if (level.locked) {
+      return LevelStatus.locked;
+    }
+    return level.status;
+  }
+
+  // Assessment levels will have a uid for each page (and a test-result
+  // for each uid). When locked, they will end up not having a per-uid
+  // test result, but will have a LOCKED_RESULT for the LevelGroup (which
+  // is tracked by ids)
+  // Worth noting that in the majority of cases, ids will be a single
+  // id here
+  const id = level.uid || bestResultLevelId(level.ids, levelProgress);
+  let status = activityCssClass(levelProgress[id]);
+  if (level.uid &&
+      level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)) {
+    status = LevelStatus.locked;
+  }
+  return status;
+}
+
 
 /**
  * Groups lessons (aka stages) according to category.
@@ -255,16 +309,16 @@ export const categorizedLessons = state => {
 
   state.stages.forEach((stage, index) => {
     const category = stage.flex_category;
-    const lessonName = stage.name;
+    const lesson = lessonFromStage(stage);
     const stageLevels = allLevels[index];
 
     byCategory[category] = byCategory[category] || {
       category,
-      lessonNames: [],
+      lessons: [],
       levels: []
     };
 
-    byCategory[category].lessonNames.push(lessonName);
+    byCategory[category].lessons.push(lesson);
     byCategory[category].levels.push(stageLevels);
   });
 
@@ -274,8 +328,10 @@ export const categorizedLessons = state => {
 
 /**
  * Given a set of levels, groups them in sets of progressions, where each
- * progression is a set of adjacent levels sharing the same name (where that
- * "same" name might also just be undefined)
+ * progression is a set of adjacent levels sharing the same progression name
+ * Any given level's progression name is determined by first looking to see if
+ * the server provided us one as level.progression, otherwise we fall back to
+ * just level.name
  * @param {Level[]} levels
  * @returns {object[]} An array of progressions, where each consists of a name,
  *   the position of the progression in the input array, and the set of levels
@@ -285,18 +341,19 @@ export const progressionsFromLevels = levels => {
   const progressions = [];
   let currentProgression = {
     start: 0,
-    name: levels[0].name,
+    name: levels[0].progression || levels[0].name,
     levels: [levels[0]]
   };
   levels.slice(1).forEach((level, index) => {
-    if (level.name === currentProgression.name) {
+    const progressionName = level.progression || level.name;
+    if (progressionName === currentProgression.name) {
       currentProgression.levels.push(level);
     } else {
       progressions.push(currentProgression);
       currentProgression = {
         // + 1 because we sliced off the first element
         start: index + 1,
-        name: level.name,
+        name: level.progression || level.name,
         levels: [level]
       };
     }

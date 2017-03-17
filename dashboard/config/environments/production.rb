@@ -85,9 +85,6 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
 
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = false
-
   config.lograge.enabled = true
 
   # don't act like a levelbuilder by default

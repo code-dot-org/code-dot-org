@@ -50,7 +50,8 @@ class SchoolDistrict < ActiveRecord::Base
       name: row_data[CSV_HEADERS[:name]],
       city: row_data[CSV_HEADERS[:city]],
       state: row_data[CSV_HEADERS[:state]],
-      zip: row_data[CSV_HEADERS[:zip]]}
+      zip: row_data[CSV_HEADERS[:zip]]
+    }
     SchoolDistrict.where(params).first_or_create!
   end
 end

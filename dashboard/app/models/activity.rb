@@ -30,45 +30,20 @@ class Activity < ActiveRecord::Base
   belongs_to :user
   belongs_to :level_source
 
-  def self.best?(result)
-    return false if result.nil?
-    (result == BEST_PASS_RESULT)
-  end
-
-  def self.perfect?(result)
-    return false if result.nil?
-    (result > MAXIMUM_NONOPTIMAL_RESULT)
-  end
-
-  def self.passing?(result)
-    return false if result.nil?
-    (result >= MINIMUM_PASS_RESULT)
-  end
-
-  def self.finished?(result)
-    return false if result.nil?
-    (result >= MINIMUM_FINISHED_RESULT)
-  end
-
   def best?
-    Activity.best? test_result
+    ActivityConstants.best? test_result
   end
 
   def perfect?
-    Activity.perfect? test_result
+    ActivityConstants.perfect? test_result
   end
 
   def passing?
-    Activity.passing? test_result
+    ActivityConstants.passing? test_result
   end
 
   def finished?
-    Activity.finished? test_result
-  end
-
-  def self.recent(limit)
-    # yeah, this is a lot like .last -- but I want a dataset not an array
-    Activity.order('id desc').limit(limit)
+    ActivityConstants.finished? test_result
   end
 
   # Creates a new Activity which will be written eventually to the database. (Note that the id is

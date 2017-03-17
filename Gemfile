@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+# Force HTTPS for github-source gems.
+# This is a temporary workaround - remove when bundler version is >=2.0
+# @see https://github.com/bundler/bundler/issues/4978
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
@@ -14,9 +22,8 @@ gem 'responders', '~> 2.0'
 gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
 
 gem 'mysql2', '~> 0.3.13'
-# Ref: https://github.com/bdurand/seamless_database_pool/issues/28
-# Ref: https://github.com/bdurand/seamless_database_pool/issues/31
-# Ref: https://github.com/bdurand/seamless_database_pool/pull/33
+# Ref: https://github.com/bdurand/seamless_database_pool/issues/38
+# Ref: https://github.com/bdurand/seamless_database_pool/pull/39
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
 
 gem 'dalli' # memcached
@@ -25,9 +32,9 @@ gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
 gem 'redis', '~> 3.3.1'
-# Using own fork until upstream publishes new version with multi return value fix
-# See https://github.com/cheald/redis-slave-read/pull/2
-gem 'redis-slave-read', require: false, github: 'islemaster/redis-slave-read', ref: 'start-with-random-node'
+# Using commit ref until maintainer publishes a new version
+# Ref: https://github.com/cheald/redis-slave-read/pull/2
+gem 'redis-slave-read', require: false, github: 'cheald/redis-slave-read', ref: '370d5da2b71f795d8145fcf89c0648f866a125a6'
 
 gem 'google-api-client'
 
@@ -38,7 +45,6 @@ gem 'rack_csrf'
 
 group :development do
   gem 'annotate'
-  gem 'memoist'
   gem 'rack-mini-profiler'
   gem 'ruby-progressbar', require: false
   gem 'thin'
@@ -61,6 +67,7 @@ group :development, :test do
   # For unit testing.
   gem 'webmock', require: false
 
+  gem 'codecov', require: false
   gem 'coveralls', require: false # test coverage; https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
   gem 'fake_sqs'
   gem 'fakeredis', require: false
@@ -84,6 +91,7 @@ group :development, :test do
   gem 'spring-commands-testunit'
 
   # For pegasus PDF generation / merging testing.
+  gem 'parallel_tests'
   gem 'pdf-reader', require: false
 end
 

@@ -171,7 +171,7 @@ The animation has been skipped.
         #{dim 'd[ o_0 ]b'}
     EOS
 
-      # Report any issues while talking to S3 and suggest most likely steps for fixing it.
+  # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => service_error
     warn service_error.inspect
     warn <<-EOS.unindent

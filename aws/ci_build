@@ -21,15 +21,16 @@
 #
 require_relative '../deployment'
 require 'cdo/aws/s3'
+require 'cdo/chat_client'
 require 'cdo/git_utils'
+require 'cdo/honeybadger'
 require 'cdo/rake_utils'
-require 'cdo/hip_chat'
 require 'cdo/only_one'
 
-STARTED = 'build-started'
+STARTED = 'build-started'.freeze
 CHAT_LOG_TAIL_LENGTH = 40
-S3_LOGS_BUCKET = 'cdo-build-logs'
-S3_LOGS_PREFIX = CDO.name
+S3_LOGS_BUCKET = 'cdo-build-logs'.freeze
+S3_LOGS_PREFIX = CDO.name.freeze
 
 # Upload the given log to the logs s3 bucket.
 # @param [String] key where uploaded log should be located
@@ -46,7 +47,7 @@ def upload_log_and_get_link(key, body, metadata)
       )
   " <a href='#{log_url}'>☁ Log on S3</a>"
 rescue Exception => msg
-  HipChat.log "Uploading log to S3 failed: #{msg}"
+  ChatClient.log "Uploading log to S3 failed: #{msg}"
   return ''
 end
 
@@ -63,7 +64,9 @@ def build
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
     IO.write(deploy_dir('rebuild'), log)
 
-    HipChat.log "https://github.com/code-dot-org/code-dot-org/commit/#{`git rev-parse HEAD`}", message_format: 'text', color: 'purple'
+    git_revision = `git rev-parse HEAD`
+    ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
+    Honeybadger.notify_new_release(rack_env, git_revision)
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
@@ -119,26 +122,26 @@ def main
       }
     )
 
-    # Notify the HipChat channels about what happened.
+    # Notify the ChatClient channels about what happened.
     if status == 0
       message = "<b>#{projects}</b> built." + time_message + log_link
 
-      HipChat.log message, color: 'green'
+      ChatClient.log message, color: 'green'
 
-      HipChat.developers message, color: 'green'
-      HipChat.developers commit_url, color: 'gray', message_format: 'text'
+      ChatClient.message 'server operations', message, color: 'green'
+      ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
       truncated_log = <<-LOG
 Showing last #{CHAT_LOG_TAIL_LENGTH} lines of build log:
 #{log.lines.last(CHAT_LOG_TAIL_LENGTH).join('\n')}
       LOG
-      HipChat.log message, color: 'red'
-      HipChat.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
-      HipChat.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
+      ChatClient.log message, color: 'red'
+      ChatClient.log "/quote #{truncated_log}", color: 'gray', message_format: 'text' unless log.empty?
+      ChatClient.log "/quote #{status}", color: 'gray', message_format: 'text' unless status.is_a?(String) && status.empty?
 
-      HipChat.developers message, color: 'red', notify: 1
-      HipChat.developers commit_url, color: 'gray', message_format: 'text'
+      ChatClient.message 'server operations', message, color: 'red', notify: 1
+      ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
     end
   end
 

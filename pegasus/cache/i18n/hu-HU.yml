@@ -1021,6 +1021,21 @@
     levels&mdash;and it's all free. :) You don't need any experience to start teaching
     computer science in your classroom. <b>Find the next step that's right for your
     classroom.</b>
+  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
+    science education movement. You can participate in high-quality K-12th grade professional
+    learning programs <strong>at absolutely no cost to you or your school</strong>.
+    Take the lead on computer science in your school, and apply for professional learning.
+  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
+    To protect your students’ privacy, we have made a change to your section’s login
+    page to avoid displaying full names. Even though this update should reduce privacy
+    concerns for the login page, we still encourage users to <i>not use full names
+    for students</i>.
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+    Your students could be featured in Code.org''s next viral video encouraging students
+    to take the AP CS Principles exam this year. We''re inviting all CS Principles
+    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
+    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
+    in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: Megkezdődött a Kódolás Órája - December 8-14.
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás
     hete keretében
@@ -1153,6 +1168,12 @@
   course2_name: 2. tanfolyam
   course3_name: 3. tanfolyam
   course4_name: 4. tanfolyam
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: Gyorsított tanfolyam
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1170,6 +1191,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1195,6 +1217,7 @@
   math_category_name: Matematika
   hoc_category_name: A kódolás órája
   csf_category_name: CS Fundamentals
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
@@ -1925,20 +1948,9 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
-  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
-    science education movement. You can participate in high-quality K-12th grade professional
-    learning programs <strong>at absolutely no cost to you or your school</strong>.
-    Take the lead on computer science in your school, and apply for professional learning.
-  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
-    To protect your students’ privacy, we have made a change to your section’s login
-    page to avoid displaying full names. Even though this update should reduce privacy
-    concerns for the login page, we still encourage users to <i>not use full names
-    for students</i>.
-  coursea-draft_name: Course A
-  courseb-draft_name: Course B
-  coursec-draft_name: Course C
-  coursed-draft_name: Course D
-  coursee-draft_name: Course E
-  coursef-draft_name: Course F
-  csppostap_name: 'Post AP: Databases in Apps'
-  csf2_draft_category_name: 'Under Development: Courses A - F'
+  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
+    to break records. Student participation in the exam could dramatically shift diversity
+    in AP Computer Science, but we need your help. Encourage every CS Principles student
+    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
+    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
+    target='_blank'>#APCSP video challenge</a>.

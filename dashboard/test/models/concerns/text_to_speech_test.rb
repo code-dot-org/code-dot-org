@@ -23,6 +23,11 @@ class TextToSpeechTest < ActiveSupport::TestCase
         tts_markdown_instructions_override: 'markdown override'
       }
     )
+    @level_with_raw_html = Level.create(
+      {
+        markdown_instructions: 'This should have <br/> no <strong>excess</strong> formatting <xml><block type="move_forward" /></xml>'
+      }
+    )
   end
 
   test 'tts_instructions_text' do
@@ -47,5 +52,9 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal @level_without_instructions.tts_path(@level_without_instructions.tts_markdown_instructions_text), 'sharon22k/180/100/d41d8cd98f00b204e9800998ecf8427e/.mp3'
     assert_equal @level_with_markdown_instructions.tts_path(@level_with_markdown_instructions.tts_markdown_instructions_text), 'sharon22k/180/100/30a2253e7b14efb1e925743d4afcf405/.mp3'
     assert_equal @level_with_markdown_instructions_override.tts_path(@level_with_markdown_instructions_override.tts_markdown_instructions_text), 'sharon22k/180/100/25352162fcc2d1e5c4ea3f91b9b39c3f/.mp3'
+  end
+
+  test 'sanitize html' do
+    assert_equal @level_with_raw_html.tts_markdown_instructions_text, "This should have  no excess formatting \n"
   end
 end

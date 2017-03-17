@@ -9,7 +9,7 @@ class FeatureModeController < ApplicationController
   MAX_UPDATE_TIME = 30
 
   PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for " \
-      'changes to take effect, then send a CloudFront cache invalidation.'
+      'changes to take effect, then send a CloudFront cache invalidation.'.freeze
 
   # Shows the current or pending feature mode.
   def show
@@ -19,7 +19,7 @@ class FeatureModeController < ApplicationController
     @script_names = Gatekeeper.script_names.sort
     @feature_names = Gatekeeper.feature_names.sort
 
-      # If a mode update is still pending, display a notice.
+    # If a mode update is still pending, display a notice.
     if @pending_mode && @current_mode != @pending_mode
       @mode = @pending_mode
       flash[:notice] = PLEASE_WAIT_MESSAGE

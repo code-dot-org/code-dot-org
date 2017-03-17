@@ -135,6 +135,11 @@ The Code Studio teacher home page makes it easy for teachers to view lesson plan
 ### <strong>Tech support & teacher forums</strong>
 Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
 
+### <strong>Pilot the '17-'18 version of the curriculum!</strong>
+We are revising Courses 1 - 4 based on the great feedback we've gotten in the last couple of years. In particular, the biggest change we are making
+is to break the content up into 6 courses aligned to each K-5 grade level. We're collecting feedback in Spring 2017 in preparation for making these courses broadly
+available for the '17 - '18 school year. [Learn more and sign up for the pilot](/educate/curriculum/cs-fundamentals-pilot).
+
 [solid-block-header]
 
 <a name="other"></a>Other Resources
@@ -149,7 +154,6 @@ Get online assistance while using our curriculum through product FAQs, technical
 |--------------|------------|---------------|---------------|
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
 | [Code Red Education](www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
-| [Kodable](https://www.kodable.com) | 38 lesson plans that blend online independent practice with "unplugged" activities. 8 Lessons, FREE, Full curriculum, $15/student, $1950/site | Online or in-person PD included for paying schools |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |

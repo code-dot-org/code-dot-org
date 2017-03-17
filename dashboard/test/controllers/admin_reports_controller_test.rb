@@ -6,23 +6,7 @@ class AdminReportsControllerTest < ActionController::TestCase
   setup do
     # Stub used by :admin_stats.
     Properties.stubs(:get).returns(nil)
-
-    @admin = create(:admin)
-    sign_in(@admin)
-
-    @not_admin = create(:user, username: 'notadmin')
-
-    @script = create(:script, name: 'report-script')
-    @stage = create(:stage, script: @script, name: 'Report Stage 1')
-    @stage2 = create(:stage, script: @script, name: 'Report Stage 2')
-    @script_level = create(:script_level, script: @script, stage: @stage, position: 1)
-    @script_level2 = create(:script_level, script: @script, stage: @stage2, position: 2)
-
-    @teacher = create(:teacher)
-    @teacher_section = create(:section, user: @teacher)
-
-    @student = create(:user)
-    @follower = Follower.create(section: @teacher_section, user: @teacher, student_user: @student)
+    sign_in create(:admin)
   end
 
   generate_admin_only_tests_for :admin_progress

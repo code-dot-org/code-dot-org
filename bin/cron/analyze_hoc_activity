@@ -14,7 +14,7 @@
 #
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require 'cdo/hip_chat'
+require 'cdo/only_one'
 require 'cdo/properties'
 
 # Provides helper methods (analyze_day_fast and add_hashes) as well as the
@@ -87,11 +87,10 @@ def main
     data['hoc_company_s'] = 'Other' if data['hoc_company_s'].nil_or_empty?
     hoc_company_totals[data['hoc_company_s']] += 1
 
-    unless row[:processed_data].nil?
-      processed_data = JSON.parse(row[:processed_data])
-      processed_data['location_country_code_s'] = 'Other' if processed_data['location_country_code_s'].nil_or_empty?
-      hoc_country_totals[processed_data['location_country_code_s']] += 1
-    end
+    next if row[:processed_data].nil?
+    processed_data = JSON.parse(row[:processed_data])
+    processed_data['location_country_code_s'] = 'Other' if processed_data['location_country_code_s'].nil_or_empty?
+    hoc_country_totals[processed_data['location_country_code_s']] += 1
   end
 
   Properties.set :hoc_metrics, {

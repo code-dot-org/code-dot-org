@@ -1,25 +1,25 @@
 name 'CSD - Getters and Setters'
-href 'path/to/html/in/asset/folder'
+display_name 'Getters and Setters'
 markdown <<MARKDOWN
 # Getters and Setters
 
 # Setters
 
-Used setScreen before.  setScreen takes one piece of information - the screen to set to.
+Setters are commands which **set** or change information. Setters all require at least one thing as input : what it wants to change the information to.
 
-In addition to getting information sometimes we want to change the information to. We use setters to set the information.
+You have used `setScreen()` before.  `setScreen()` changes the screen that the user is viewing. The one input `setScreen()` takes is the new screen to change to.
 
-example setText
+Another example of a setter that you will be using is `setText()`.
 
-important thing is setText takes one input - what the UI element you want to set the text of
+<img src="//curriculum.code.org/images/applab/setText.png" style="margin: 20px auto">
 
 # Getters
 
-setting different parts of a program is a common part of a program that is often called to a getter
+Getters are commands which **get** or retrieve information. Getters often require at least one input: the place you want to retrieve information from.
 
-example getText
+`getText()` is a common getter you will use. It can be used to get the text from something like a text input. 
 
-important thing is getText takes one input - what the UI element you want to get the text of
+<img src="//curriculum.code.org/images/applab/getText.png" style="margin: 20px auto">
 
-whenever you use a getter it is good practice to save it with a variable since you will probably want to use that information later.
+Often when you use a getter it is a good idea to save the result in a variable so that you can use it throughout your program.
 MARKDOWN

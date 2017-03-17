@@ -21,7 +21,9 @@
       "comment_Variables": null,
       "comment_Control": null,
       "comment_Drawing": null,
-      "console.log": null
+      "console.log": null,
+      "addOperator": null,
+      "subtractOperator": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -59,6 +61,8 @@
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
     "encrypted_examples": "EQSPoJUz7baZOoq6rm1a/BZG8h8lQCQ9oDMc6jC0mZzcinlIQP3b9m4wuKW3\njMBc\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

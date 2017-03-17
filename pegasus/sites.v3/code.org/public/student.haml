@@ -19,18 +19,20 @@
   .side-image {
     width: 485px;
     height: 244px;
+  }
+  .left, .right {
+    height: 100%;
     float: left;
   }
-  .side-image.right, .side-description-area.right {
+  .right .side-image, .right .side-description-area {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-  .side-image.left, .side-description-area.left {
+  .left .side-image, .left .side-description-area {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
   .side-description-area {
-    float: left;
     width: 485px;
     height: 100%;
     background-color: #00adbc;
@@ -47,18 +49,22 @@
     background-color: #ffa400;
   }
 
-.full-resource-block{style: "margin-top: 20px;"}
-  %img.side-image.left{src: "/images/fit-485/student/hour_of_code.jpg"}
-  .side-description-area.right
+.space{style: "height: 20px"}
+
+- hoc_picture = capture_haml do
+  %img.side-image{src: "/images/fit-485/student/hour_of_code.jpg"}
+
+- hoc_text = capture_haml do
+  .side-description-area
     .description
       %h2.resource-title{style: "padding-bottom: 10px;"} Hour of Code
       Get started by choosing a tutorial from over 100 one hour computer science activities from Code.org and partners. Join 10% of the world's students; it's your turn to try!
     %a{href: "/learn"}
       %button.orange-button Start
 
-.full-resource-block
-  .side-description-area.left
-    .description 
+- studio_text = capture_haml do
+  .side-description-area
+    .description
       %h2.resource-title Courses on Code Studio
       Code Studio is the most popular coding platform in K-12 education. We offer fun introductory courses you can learn alone or in a classroom, all the way through full year computer science curriculum for middle or high school.
     %a{href: CDO.studio_url}
@@ -66,11 +72,15 @@
     &nbsp;&nbsp;
     %a{href: "/educate"}
       %button.gray-button I'm a teacher
-  %img.side-image.right{src: "/images/fit-485/student/courses.jpg"}
 
-.full-resource-block
-  %img.side-image.left{src: "/images/fit-485/student/highschool.jpg"}
-  .side-description-area.right
+- studio_picture = capture_haml do
+  %img.side-image{src: "/images/fit-485/student/courses.jpg"}
+
+- other_picture = capture_haml do
+  %img.side-image{src: "/images/fit-485/student/highschool.jpg"}
+
+- other_text = capture_haml do
+  .side-description-area
     .description
       %h2.resource-title{style: "padding-bottom: 10px;"} Courses from 3rd parties
       Check out some of the 3rd party online courses we recommend, or find a local workshop, school, or summer camp to learn in a classroom.
@@ -79,3 +89,25 @@
     &nbsp;&nbsp;
     %a{href: "/learn/local"}
       %button.gray-button Local classes
+
+-# Show Hour of Code first when soon or actually Hour of Code time.  Otherwise, show Code Studio first.
+- if ["soon-hoc", "actual-hoc"].include?(DCDO.get("hoc_mode", false))
+  .full-resource-block
+    .left= hoc_picture
+    .right= hoc_text
+  .full-resource-block
+    .left= studio_text
+    .right= studio_picture
+- else
+  .full-resource-block
+    .left= studio_picture
+    .right= studio_text
+  .full-resource-block
+    .left= hoc_text
+    .right= hoc_picture
+
+.full-resource-block
+  .left= other_picture
+  .right= other_text
+
+

@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
-import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import _ from 'lodash';
 
 import reducer, {
@@ -14,7 +14,9 @@ import reducer, {
   SignInState,
   levelsByLesson,
   progressionsFromLevels,
-  categorizedLessons
+  categorizedLessons,
+  statusForLevel,
+  processedStages
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -37,7 +39,7 @@ const stageData = [
         ids: [2106],
         activeId: 2106,
         position: 1,
-        kind: "unplugged",
+        kind: LevelKind.unplugged,
         icon: null,
         title: "Unplugged Activity",
         url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
@@ -47,7 +49,7 @@ const stageData = [
           ids: [323],
           activeId: 323,
           position: 2,
-          kind: "assessment",
+          kind: LevelKind.assessment,
           icon: null,
           title: 1,
           url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2"
@@ -56,7 +58,7 @@ const stageData = [
           ids: [322],
           activeId: 322,
           position: 3,
-          kind: "assessment",
+          kind: LevelKind.assessment,
           icon: null,
           title: 2,
           url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
@@ -83,7 +85,7 @@ const stageData = [
         ids: [330],
         activeId: 330,
         position: 1,
-        kind: "puzzle",
+        kind: LevelKind.puzzle,
         icon: null,
         title: 1,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
@@ -92,7 +94,7 @@ const stageData = [
         ids: [339],
         activeId: 339,
         position: 2,
-        kind: "puzzle",
+        kind: LevelKind.puzzle,
         icon: null,
         title: 2,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
@@ -100,7 +102,7 @@ const stageData = [
         ids: [341],
         activeId: 341,
         position: 3,
-        kind: "puzzle",
+        kind: LevelKind.puzzle,
         icon: null,
         title: 3,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
@@ -143,7 +145,8 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, undefined);
       assert.equal(nextState.professionalLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, initialScriptOverviewProgress.stages);
+
+      assert.deepEqual(nextState.stages, processedStages(initialScriptOverviewProgress.stages));
       assert.equal(nextState.scriptName, 'course3');
       assert.equal(nextState.currentStageId, undefined);
     });
@@ -155,7 +158,7 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, "341");
       assert.equal(nextState.professionalLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, initialPuzzlePageProgress.stages);
+      assert.deepEqual(nextState.stages, processedStages(initialPuzzlePageProgress.stages));
       assert.equal(nextState.scriptName, 'course3');
       assert.equal(nextState.currentStageId, 265);
     });
@@ -177,32 +180,8 @@ describe('progressReduxTest', () => {
         341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
       });
 
-      // Stage 1 is unchanged, but each level is given a not_tried status
-      nextState.stages[0].levels.forEach((level, index) => {
-        const originalLevel = stageData[0].levels[index];
-        assert.deepEqual(level, {
-          ...originalLevel,
-          status: LevelStatus.not_tried
-        });
-      });
-
-      // Stage 2: Level 1 just gets a not tried
-      assert.deepEqual(nextState.stages[1].levels[0], {
-        ...stageData[1].levels[0],
-        status: LevelStatus.not_tried
-      });
-
-      // Stage 2: Level 2 was perfect
-      assert.deepEqual(nextState.stages[1].levels[1], {
-        ...stageData[1].levels[1],
-        status: LevelStatus.perfect
-      });
-
-      // Stage 2: Level 3 was not perfect, but was attempted
-      assert.deepEqual(nextState.stages[1].levels[2], {
-        ...stageData[1].levels[2],
-        status: LevelStatus.attempted
-      });
+      // stages are unchanged
+      assert.strictEqual(nextState.stages, initializedState.stages);
     });
 
     it('can update progress', () => {
@@ -229,7 +208,6 @@ describe('progressReduxTest', () => {
       // update progress to perfect
       const action = mergeProgress({ 341: TestResults.ALL_PASS });
       const nextState = reducer(state, action);
-      assert.equal(nextState.stages[0].levels[0].status, LevelStatus.perfect);
       assert.equal(nextState.levelProgress[341], TestResults.ALL_PASS);
     });
 
@@ -257,10 +235,6 @@ describe('progressReduxTest', () => {
       // try to update progress to a worse result
       const action = mergeProgress({ 341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED });
       const nextState = reducer(state, action);
-      // TODO - I'm writing tests for current behavior, but this seems like non-
-      // desirable behavior (we wont downgrade value in level.status, but we will
-      // in levelProgress)
-      assert.equal(nextState.stages[0].levels[0].status, LevelStatus.attempted);
       assert.equal(nextState.levelProgress[339], TestResults.ALL_PASS);
     });
 
@@ -304,6 +278,77 @@ describe('progressReduxTest', () => {
       const stateDetail = reducer(initialState, setIsSummaryView(false));
       assert.strictEqual(stateDetail.isSummaryView, false);
     });
+
+    describe('statusForLevel', () => {
+      it('returns LevelStatus.locked for locked assessment level', () => {
+        const level = {
+          ids: [5275],
+          uid: "5275_0"
+        };
+        const levelProgress = {
+          5275: TestResults.LOCKED_RESULT
+        };
+        const status = statusForLevel(level, levelProgress);
+        assert.strictEqual(status, LevelStatus.locked);
+      });
+    });
+
+    it('returns LevelStatus.attempted for unlocked assessment level', () => {
+      const level = {
+        ids: [5275],
+        uid: "5275_0"
+      };
+      const levelProgress = {
+        "5275": TestResults.UNSUBMITTED_ATTEMPT,
+        "5275_0": TestResults.UNSUBMITTED_ATTEMPT,
+        "5275_1": TestResults.GENERIC_FAIL
+      };
+      const status = statusForLevel(level, levelProgress);
+      assert.strictEqual(status, LevelStatus.attempted);
+    });
+
+    it('returns LevelStatus.perfect for completed level', () => {
+      const level = {
+        ids: [123]
+      };
+      const levelProgress = {
+        123: TestResults.ALL_PASS
+      };
+      const status = statusForLevel(level, levelProgress);
+      assert.strictEqual(status, LevelStatus.perfect);
+    });
+
+    it('returns LevelStatus.not_tried for level with no progress', () => {
+      const level = {
+        ids: [123]
+      };
+      const levelProgress = {
+        999: TestResults.ALL_PASS
+      };
+      const status = statusForLevel(level, levelProgress);
+      assert.strictEqual(status, LevelStatus.not_tried);
+    });
+
+    it('returns LevelStatus.locked for a locked peer_review stage', () => {
+      const level = {
+        kind: LevelKind.peer_review,
+        locked: true
+      };
+      const levelProgress = {};
+      const status = statusForLevel(level, levelProgress);
+      assert.strictEqual(status, LevelStatus.locked);
+    });
+
+    it('returns LevelStatus.perfect for a completed peer_review stage', () => {
+      const level = {
+        kind: LevelKind.peer_review,
+        locked: false,
+        status: LevelStatus.perfect
+      };
+      const levelProgress = {};
+      const status = statusForLevel(level, levelProgress);
+      assert.strictEqual(status, LevelStatus.perfect);
+    });
   });
 
   describe('with peer reviews', () => {
@@ -314,7 +359,7 @@ describe('progressReduxTest', () => {
       levels: [
         {
           ids: [0],
-          kind: "peer_review",
+          kind: LevelKind.peer_review,
           title: "",
           url: "",
           name: "Reviews unavailable at this time",
@@ -323,7 +368,7 @@ describe('progressReduxTest', () => {
         },
         {
           ids: [1],
-          kind: "peer_review",
+          kind: LevelKind.peer_review,
           title: "",
           url: "",
           name: "Reviews unavailable at this time",
@@ -350,7 +395,7 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, undefined);
       assert.equal(nextState.professionalLearningCourse, true);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, intialOverviewProgressWithPeerReview.stages);
+      assert.deepEqual(nextState.stages, processedStages(intialOverviewProgressWithPeerReview.stages));
       assert.deepEqual(nextState.peerReviewStage, peerReviewStage);
       assert.equal(nextState.scriptName, 'alltheplcthings');
       assert.equal(nextState.currentStageId, undefined);
@@ -371,7 +416,7 @@ describe('progressReduxTest', () => {
 
       assert.deepEqual(peerReviewStage.levels[0], {
         ids: [0],
-        kind: "peer_review",
+        kind: LevelKind.peer_review,
         title: "",
         url: "",
         name: "Reviews unavailable at this time",
@@ -399,7 +444,7 @@ describe('progressReduxTest', () => {
       // First assert about previous state, to make sure that we didn't mutate it
       assert.deepEqual(state.peerReviewStage.levels[0], {
         ids: [0],
-        kind: "peer_review",
+        kind: LevelKind.peer_review,
         title: "",
         url: "",
         name: "Reviews unavailable at this time",
@@ -415,7 +460,7 @@ describe('progressReduxTest', () => {
         // TODO: Seems strange to have an fa-lock icon even tho we're not locked.
         icon: 'fa-lock',
         locked: false,
-        kind: "peer_review",
+        kind: LevelKind.peer_review,
         result: TestResults.UNSUBMITTED_ATTEMPT,
         title: "",
         url: '/peer_reviews/13',
@@ -426,7 +471,7 @@ describe('progressReduxTest', () => {
   });
 
   describe('levelsByLesson', () => {
-    it('extracts status/url on a per level basis', () => {
+    it('extracts relevant properties on a per level basis', () => {
       const initializedState = reducer(undefined, initProgress(initialScriptOverviewProgress));
 
       // merge some progress so that we have statuses
@@ -443,38 +488,53 @@ describe('progressReduxTest', () => {
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
-            name: undefined
+            name: undefined,
+            progression: undefined,
+            icon: null
           },
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
-            name: undefined
+            name: undefined,
+            progression: undefined,
+            icon: null
           },
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
-            name: undefined
+            name: undefined,
+            progression: undefined,
+            icon: null
           }
         ],
         [
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
-            name: undefined
+            name: undefined,
+            progression: undefined,
+            icon: null
           },
           {
             status: 'perfect',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
-            name: undefined
+            name: undefined,
+            progression: undefined,
+            icon: null
           },
           {
             status: 'attempted',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
-            name: undefined
+            name: undefined,
+            progression: undefined,
+            icon: null
           }
         ]
       ];
-      assert.deepEqual(expected, levelsByLesson(state));
+      const results = levelsByLesson(state);
+      assert.equal(expected.length, results.length);
+      assert.deepEqual(expected[0], results[0]);
+      assert.deepEqual(expected[1], results[1]);
     });
   });
 
@@ -556,22 +616,105 @@ describe('progressReduxTest', () => {
       assert.equal(progressions[2].levels.length, 1);
     });
 
+    it('puts adjacent levels with the same progression name in the same progression', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          progression: 'Progression 1'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          progression: 'Progression 1'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          progression: 'Progression 2'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 2);
+      assert.deepEqual(progressions[0], {
+        name: 'Progression 1',
+        start: 0,
+        levels: levels.slice(0, 2)
+      });
+    });
+
+    it('puts non-adjacent levels with the same progression name in different progressions', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          progression: 'One'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          progression: 'Two'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          progression: 'One'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 3);
+      assert.equal(progressions[0].levels.length, 1);
+      assert.equal(progressions[1].levels.length, 1);
+      assert.equal(progressions[2].levels.length, 1);
+    });
+
+    it('takes progression name over level name if both are provided', () => {
+      const levels = [
+        {
+          status: 'not_tried',
+          url: '/step1/level1',
+          name: 'Level 1',
+          progression: 'ProgressionOne'
+        },
+        {
+          status: 'perfect',
+          url: '/step2/level1',
+          name: 'Level 2',
+          progression: 'ProgressionOne'
+        },
+        {
+          status: 'not_tried',
+          url: '/step2/level2',
+          name: 'Level 3',
+          progression: 'ProgressionTwo'
+        }
+      ];
+
+      const progressions = progressionsFromLevels(levels);
+      assert.equal(progressions.length, 2);
+      assert.equal(progressions[0].levels.length, 2);
+      assert.equal(progressions[0].name, 'ProgressionOne');
+      assert.equal(progressions[1].name, 'ProgressionTwo');
+    });
+
     it('sets the right start value for progressions that arent the first one', () => {
       const levels = [
         {
           status: 'not_tried',
           url: '/step1/level1',
-          name: 'Progression 1'
+          progression: 'Progression 1'
         },
         {
           status: 'perfect',
           url: '/step2/level1',
-          name: 'Progression 1'
+          progression: 'Progression 1'
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
-          name: 'Progression 2'
+          progression: 'Progression 2'
         }
       ];
 
@@ -583,23 +726,25 @@ describe('progressReduxTest', () => {
 
   describe('categorizedLessons', () => {
     // helper method that creates a fake stage
-    const fakeStage = (categoryName, stageName) => ({
+    const fakeStage = (categoryName, stageName, stageId) => ({
       flex_category: categoryName,
       name: stageName,
+      id: stageId,
       levels: [{
-        status: 'not_tried',
         url: '',
-        name: 'fake level'
+        name: 'fake level',
+        ids: [1]
       }]
     });
 
     it('returns a single category if all lessons have the same category', () => {
       const state = {
         stages: [
-          fakeStage('Content', 'stage1'),
-          fakeStage('Content', 'stage2'),
-          fakeStage('Content', 'stage3')
-        ]
+          fakeStage('Content', 'stage1', 1),
+          fakeStage('Content', 'stage2', 2),
+          fakeStage('Content', 'stage3', 3)
+        ],
+        levelProgress: {}
       };
 
       const categories = categorizedLessons(state);
@@ -610,10 +755,11 @@ describe('progressReduxTest', () => {
     it('groups non-adjacent stages by category', () => {
       const state = {
         stages: [
-          fakeStage('cat1', 'stage1'),
-          fakeStage('cat2', 'stage2'),
-          fakeStage('cat1', 'stage3')
-        ]
+          fakeStage('cat1', 'stage1', 1),
+          fakeStage('cat2', 'stage2', 2),
+          fakeStage('cat1', 'stage3', 3)
+        ],
+        levelProgress: {}
       };
 
       const categories = categorizedLessons(state);
@@ -622,8 +768,63 @@ describe('progressReduxTest', () => {
       assert.equal(categories[1].category, 'cat2');
       assert.equal(categories[0].levels.length, 2);
       assert.equal(categories[1].levels.length, 1);
-      assert.deepEqual(categories[0].lessonNames, ['stage1', 'stage3']);
-      assert.deepEqual(categories[1].lessonNames, ['stage2']);
+      assert.deepEqual(categories[0].lessons, [
+        {
+          name: 'stage1',
+          id: 1
+        }, {
+          name: 'stage3',
+          id: 3
+        }
+      ]);
+      assert.deepEqual(categories[1].lessons, [{
+        name: 'stage2',
+        id: 2
+      }]);
+    });
+  });
+
+  describe('processedStages', () => {
+    it('strips "hidden" field from stages', () => {
+      const stages = [{
+        name: 'stage1',
+        id: 123,
+        hidden: false
+      }, {
+        name: 'stage2',
+        id: 124,
+        hidden: true
+      }];
+
+      const processed = processedStages(stages);
+      assert.strictEqual(processed[0].hidden, undefined);
+      assert.strictEqual(processed[1].hidden, undefined);
+    });
+
+    it('adds stageNumber to non-lockable stages, not to lockable stages', () => {
+      const stages = [{
+        name: 'locked1',
+        id: 123,
+        lockable: true
+      }, {
+        name: 'non-locked1',
+        id: 124,
+        lockable: false,
+      }, {
+        name: 'locked2',
+        id: 125,
+        lockable: true
+      }, {
+        name: 'non-locked2',
+        id: 126,
+        lockable: false,
+      }];
+
+      const processed = processedStages(stages);
+      assert.strictEqual(processed[0].stageNumber, undefined);
+      assert.strictEqual(processed[1].stageNumber, 1);
+      assert.strictEqual(processed[2].stageNumber, undefined);
+      assert.strictEqual(processed[3].stageNumber, 2);
     });
   });
 });

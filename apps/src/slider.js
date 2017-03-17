@@ -23,6 +23,9 @@
  */
 var SVG_NS = require('./constants').SVG_NS;
 var dom = require('./dom');
+var trySetSessionStorage = require('./utils').trySetSessionStorage;
+
+var OVERRIDE_STORAGE_KEY = 'slider_value_override';
 
 /**
  * Object representing a horizontal slider widget.
@@ -152,6 +155,7 @@ Slider.prototype.snapToPosition_ = function (xPosition) {
 
   this.value_ = (x - this.KNOB_MIN_X_) /
       (this.KNOB_MAX_X_ - this.KNOB_MIN_X_);
+  this.setValueOverride_(this.defaultValue_, this.value_);
   if (this.changeFunc_) {
     this.changeFunc_(this.value_);
   }
@@ -212,11 +216,37 @@ Slider.prototype.getValue = function () {
  * @param {number} value New value.
  */
 Slider.prototype.setValue = function (value) {
-  this.value_ = Math.min(Math.max(value, 0), 1);
+  value = Math.min(Math.max(value, 0), 1);
+  this.defaultValue_ = value;
+
+  var override = this.getValueOverride_();
+  if (override && value === override.from) {
+    value = override.to;
+  }
+  this.value_ = value;
+
   var x = this.KNOB_MIN_X_ +
       (this.KNOB_MAX_X_ - this.KNOB_MIN_X_) * this.value_;
   this.knob_.setAttribute('transform',
       'translate(' + x + ',' + this.KNOB_Y_ + ')');
+};
+
+/**
+ * Read the value override from sessionStorage.
+ * @return {Object} containing the value to override and the new value
+ */
+Slider.prototype.getValueOverride_ = function () {
+  var override = sessionStorage.getItem(OVERRIDE_STORAGE_KEY);
+  if (override) {
+    return JSON.parse(override);
+  }
+};
+
+/**
+ * Store a new override in sessionStorage.
+ */
+Slider.prototype.setValueOverride_  = function (from, to) {
+  trySetSessionStorage(OVERRIDE_STORAGE_KEY, JSON.stringify({ from, to }));
 };
 
 /**

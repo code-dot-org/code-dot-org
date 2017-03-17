@@ -362,16 +362,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 12, workshop_no_constraint.effective_num_hours
   end
 
-  test 'plp' do
-    assert_nil @workshop.professional_learning_partner
-
-    # Now create a plp associated with the organizer
-    plp = create :professional_learning_partner, contact: @organizer
-
-    assert @workshop.professional_learning_partner
-    assert_equal plp, @workshop.professional_learning_partner
-  end
-
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil)
@@ -441,6 +431,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert e.message.include? 'Failed to send 1 day workshop reminders:'
     assert e.message.include? 'facilitator'
     assert e.message.include? 'bad email'
+  end
+
+  test 'workshop starting date picks the day of the first session' do
+    session = create :pd_session, start: Date.today + 15.days
+    session2 = create :pd_session, start: Date.today + 20.days
+    @workshop.sessions << session
+    @workshop.sessions << session2
+    assert_equal session.start, @workshop.workshop_starting_date
+  end
+
+  test 'workshop_dashboard_url' do
+    expected_url = "http://#{CDO.dashboard_hostname}/pd/workshop_dashboard/workshops/#{@workshop.id}"
+    assert_equal expected_url, @workshop.workshop_dashboard_url
   end
 
   private

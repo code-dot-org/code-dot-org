@@ -25,7 +25,7 @@ const Thermometer = {
     }
   },
   toCelsius: {
-    value: function(raw) {
+    value: function (raw) {
       thermometerRawValue = raw;
       return Playground.Thermometer.toCelsius.value(raw);
     }

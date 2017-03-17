@@ -1,4 +1,5 @@
 name 'CSD-U3-SFLP Draw Loop'
+display_name 'U3L02 Overview'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN

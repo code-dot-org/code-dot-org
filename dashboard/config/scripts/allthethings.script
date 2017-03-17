@@ -119,6 +119,7 @@ level 'allthethings_moviebot'
 level 'Applab allthethings onRecordEvent'
 level 'allthethings_embed_video'
 level 'Test Applab Predictive'
+level 'allthethings level dataTables'
 
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'

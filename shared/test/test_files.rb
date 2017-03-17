@@ -29,7 +29,7 @@ class FilesTest < FilesApiTestBase
     # Make sure we have a clean starting point
     delete_all_file_versions(dog_image_filename)
     delete_all_file_versions(cat_image_filename)
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
 
     # Upload dog.png and check the response
     response = post_file_data(@api, dog_image_filename, dog_image_body, 'image/png')
@@ -72,13 +72,13 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(cat_image_filename)
     assert successful?
 
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
   end
 
   def test_allow_mismatched_mime_type
     mismatched_filename = @api.randomize_filename('mismatchedmimetype.png')
     delete_all_file_versions(mismatched_filename)
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
 
     post_file_data(@api, mismatched_filename, 'stub-contents', 'application/gif')
     assert successful?
@@ -86,7 +86,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(mismatched_filename)
     assert successful?
 
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
   end
 
   def test_case_insensitivity
@@ -94,7 +94,7 @@ class FilesTest < FilesApiTestBase
     different_case_filename = filename.gsub(/PNG$/, 'png')
     delete_all_file_versions(filename)
     delete_all_file_versions(different_case_filename)
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
 
     post_file_data(@api, filename, 'stub-contents', 'application/png')
     assert successful?
@@ -108,7 +108,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(different_case_filename)
     assert successful?
 
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
   end
 
   def test_nonexistent_file
@@ -116,7 +116,7 @@ class FilesTest < FilesApiTestBase
     dog_image_filename = @api.randomize_filename('dog.png')
     delete_all_file_versions(filename)
     delete_all_file_versions(dog_image_filename)
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
 
     # Check for file when no manifest is present:
     @api.get_object(filename)
@@ -133,13 +133,13 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(dog_image_filename)
     assert successful?
 
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
   end
 
   def test_file_versions
     filename = @api.randomize_filename('test.png')
     delete_all_file_versions(filename)
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
 
     # Create an animation file
     v1_file_data = 'stub-v1-body'
@@ -184,7 +184,20 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(filename)
     assert successful?
 
-    delete_all_mainfest_versions
+    delete_all_manifest_versions
+  end
+
+  def test_invalid_file_extension
+    @api.get_object('bad_extension.css%22')
+    assert unsupported_media_type?
+  end
+
+  def test_bad_channel_id
+    bad_channel_id = 'undefined'
+    api = FilesApiTestHelper.new(current_session, 'files', bad_channel_id)
+    file_infos = api.list_objects
+    assert_equal '', file_infos['filesVersionId']
+    assert_equal [], file_infos['files']
   end
 
   private
@@ -204,7 +217,7 @@ class FilesTest < FilesApiTestBase
     delete_all_versions(CDO.files_s3_bucket, "files_test/1/1/#{filename}")
   end
 
-  def delete_all_mainfest_versions
+  def delete_all_manifest_versions
     delete_all_file_versions 'manifest.json'
   end
 end

@@ -52,4 +52,27 @@ describe("collisionMaskWalls", function () {
     expect(walls.willRectTouchWall(200, 305, 10, 10)).to.be.false;
   });
 
+  describe("hexToRgb", function () {
+    const hexToRgb = CollisionMaskWalls.hexToRgb;
+
+    it("parses normal colors", function () {
+      expect(hexToRgb('#7F7F7F')).to.deep.equal({ R: 127, G: 127, B: 127 });
+      expect(hexToRgb('#000000')).to.deep.equal({ R: 0, G: 0, B: 0 });
+      expect(hexToRgb('#FFFFFF')).to.deep.equal({ R: 255, G: 255, B: 255 });
+      expect(hexToRgb('#00adbc')).to.deep.equal({ R: 0, G: 0xad, B: 0xbc });
+    });
+
+    it("parses short forms", function () {
+      expect(hexToRgb('#000')).to.deep.equal({ R: 0, G: 0, B: 0 });
+      expect(hexToRgb('#fff')).to.deep.equal({ R: 255, G: 255, B: 255 });
+      expect(hexToRgb('#777')).to.deep.equal({ R: 0x77, G: 0x77, B: 0x77 });
+    });
+
+    it("parses primary colors", function () {
+      expect(hexToRgb('#FF0000')).to.deep.equal({ R: 255, G: 0, B: 0 });
+      expect(hexToRgb('#00FF00')).to.deep.equal({ R: 0, G: 255, B: 0 });
+      expect(hexToRgb('#00F')).to.deep.equal({ R: 0, G: 0, B: 255 });
+    });
+
+  });
 });

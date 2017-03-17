@@ -47,6 +47,7 @@ def query_contacts(params)
   [].tap do |results|
     SOLR.query(params.merge(rows: 10000)).each do |i|
       i = yield(i) if block_given?
+      next unless i
       results << {
         id: i['id'],
         email: i['email_s'].downcase.strip,
@@ -55,7 +56,7 @@ def query_contacts(params)
         state: i['location_state_code_s'] || i['state_code_s'],
         country: 'united_states',
         address: i['school_address_s'],
-      }.merge(i.slice(*fields)) if i
+      }.merge(i.slice(*fields))
     end
   end
 end

@@ -36,6 +36,7 @@ module AWS
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
+    AVAILABILITY_ZONES = ('b'..'e').map{|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
     LOG_NAME = '/var/log/bootstrap.log'
@@ -72,7 +73,8 @@ module AWS
         template = render_template(dry_run: true)
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
-        CDO.log.info "Parameters: #{parameters(template).join("\n")}"
+        params = parameters(template)
+        CDO.log.info "Parameters: #{params.join("\n")}" unless params.empty?
 
         if stack_exists?
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
@@ -209,11 +211,7 @@ module AWS
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
-              client = Aws::S3::Client.new(
-                region: CDO.aws_region,
-                credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key)
-              )
-              client.put_object(
+              Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
                 key: "chef/#{branch}.tar.gz",
                 body: tmp.read
@@ -289,8 +287,7 @@ module AWS
       def render_template(dry_run: false)
         filename = aws_dir('cloudformation', TEMPLATE)
         template_string = File.read(filename)
-        availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
-        azs = availability_zones.map { |zone| zone[-1].upcase }
+        azs = AVAILABILITY_ZONES.map { |zone| zone[-1].upcase }
         @@local_variables = OpenStruct.new(
           dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
@@ -308,16 +305,15 @@ module AWS
           subdomain: fqdn,
           studio_subdomain: studio_fqdn,
           cname: cname,
-          availability_zone: availability_zones.first,
-          availability_zones: availability_zones,
+          availability_zone: AVAILABILITY_ZONES.first,
+          availability_zones: AVAILABILITY_ZONES,
           azs: azs,
           s3_bucket: S3_BUCKET,
           file: method(:file),
           js: method(:js),
-          js_zip: method(:js_zip),
           erb: method(:erb),
-          subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
-          public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
+          subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}},
+          public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}},
           lambda_fn: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
@@ -369,12 +365,25 @@ module AWS
       end
 
       def js_zip
+        hash = nil
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
+          RakeUtils.npm_install '--production'
+          # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
+          hash = Digest::MD5.hexdigest(
+            Dir['*.js', 'node_modules/**/*'].
+              select(&File.method(:file?)).
+              sort.
+              map(&Digest::MD5.method(:file)).
+              join
+          )
           `zip -qr - *.js node_modules`
         end
-        key = "lambdajs-#{Digest::MD5.hexdigest(code_zip)}.zip"
+        key = "lambdajs-#{hash}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
-        AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true) unless object_exists
+        unless object_exists
+          CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
+          AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true)
+        end
         {
           S3Bucket: S3_BUCKET,
           S3Key: key
@@ -404,7 +413,11 @@ module AWS
 
       def erb_eval(str, filename=nil, local_vars=nil)
         local_vars ||= @@local_variables
-        ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_vars.instance_eval{binding})
+        local_binding = binding
+        local_vars.each_pair do |key, value|
+          local_binding.local_variable_set(key, value)
+        end
+        ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_binding)
       end
     end
   end

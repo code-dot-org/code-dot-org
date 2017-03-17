@@ -57,19 +57,20 @@ def localize_level_content
   level_authored_hints = Hash.new
   level_callouts = Hash.new
 
+  instruction_pattern = /^\s*"instructions": (".*?"),?\n$/
+  markdown_instruction_pattern = /^\s*"markdown_instructions": (".*?"),?\n$/
+  failure_message_override_pattern = /^\s*"failure_message_override": (".*?"),?\n$/
+  authored_hint_pattern = /^\s*"authored_hints": "(.*?)",?\n$/
+  callout_pattern = /^\s*"callout_json": "(.*?)",?\n$/
+
   Dir.glob("dashboard/config/scripts/levels/*.level").each do |file|
     level = File.basename(file, ".*") + "_instruction"
     markdown_level = File.basename(file, ".*") + "_markdown_instruction"
+    failure_message_override_level = File.basename(file, ".*") + "_failure_message_override"
     authored_hint_level = File.basename(file, ".*") + "_authored_hint"
     callout_level = File.basename(file, ".*") + "_callout"
 
     File.open(file) do |f|
-      instruction_pattern = /^\s*"instructions": (".*?"),?\n$/
-      markdown_instruction_pattern = /^\s*"markdown_instructions": (".*?"),?\n$/
-      failure_message_override_pattern = /^\s*"failure_message_override": (".*?"),?\n$/
-      authored_hint_pattern = /^\s*"authored_hints": "(.*?)",?\n$/
-      callout_pattern = /^\s*"callout_json": "(.*?)",?\n$/
-
       f.each_line do |line|
         # Instructions
         instruction_match = line.match instruction_pattern
@@ -86,7 +87,7 @@ def localize_level_content
         # Failure message overrides
         failure_message_override_match = line.match failure_message_override_pattern
         if failure_message_override_match
-          level_failure_message_overrides[level] = failure_message_override_match.captures.first
+          level_failure_message_overrides[failure_message_override_level] = failure_message_override_match.captures.first
         end
 
         # Authored Hints
@@ -101,12 +102,11 @@ def localize_level_content
 
         # Callouts
         callout_match = line.match callout_pattern
-        if callout_match
-          callout_json = JSON.load(%Q("#{callout_match.captures.first}"))
-          level_callouts[callout_level] = JSON.parse(callout_json).reduce({}) do |memo, callout|
-            memo[callout['localization_key']] = callout['callout_text'] unless callout['localization_key'].empty?
-            memo
-          end
+        next unless callout_match
+        callout_json = JSON.load(%Q("#{callout_match.captures.first}"))
+        level_callouts[callout_level] = JSON.parse(callout_json).reduce({}) do |memo, callout|
+          memo[callout['localization_key']] = callout['callout_text'] unless callout['localization_key'].empty?
+          memo
         end
       end
     end

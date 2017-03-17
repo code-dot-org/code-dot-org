@@ -59,7 +59,7 @@ In this lesson, students will pretend to flow through the Internet, all the whil
 - This Teacher Lesson Guide
 - Print enough [IP Address Cards and Delivery Type Cards](Activity18-Internet.pdf) for each group to draw
 - Print one [Internet Assessment](Assessment18-Internet.pdf) for each student
-- Access to the Internet (such as getip.com) or 6+ pre-determined URL/IP address combinations
+- Access to the Internet (such as http://get-site-ip.com) or 6+ pre-determined URL/IP address combinations
 
 [/together]
 
@@ -205,7 +205,7 @@ Pull out a piece of paper and draw a grid similar to that in the Internet activi
 First, we need to fill in this table.
 
 - Survey the class for their favorite websites and write the URLs in the left column
-- Use a site like getip.com to find the IP addresses for those sites and write them in the corresponding rows of the right column.
+- Use a site like http://get-site-ip.com to find the IP addresses for those sites and write them in the corresponding rows of the right column.
 
 Now let's take this DNS Table and pretend to send messages through the Internet!
 
@@ -221,7 +221,7 @@ Now let's take this DNS Table and pretend to send messages through the Internet!
 
 > 1) Create your own DNS table, similar to what is shown above.
 
-> 2)  Have the class help you fill in the blank spots in the table.  Pick your favorite URLs and find their IP addresses using a site like www.getip.com.
+> 2)  Have the class help you fill in the blank spots in the table.  Pick your favorite URLs and find their IP addresses using a site like http://get-site-ip.com.
 
 > 3)  Divide into groups of 3 to 5.
 

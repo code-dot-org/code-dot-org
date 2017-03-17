@@ -22,14 +22,14 @@ LevelSourceImage.where(['id > ?', START_ID]).find_each do |lsi|
 
   if AWS::S3::S3Object.exists? lsi.old_s3_filename, BUCKET
     puts "moving #{lsi.old_s3_filename} to #{lsi.s3_filename}"
-#    AWS::S3::S3Object.rename lsi.old_s3_filename, lsi.s3_filename, BUCKET
+    # AWS::S3::S3Object.rename lsi.old_s3_filename, lsi.s3_filename, BUCKET
   else
     puts '.'
   end
 
   if AWS::S3::S3Object.exists? lsi.old_s3_framed_filename, BUCKET
     puts "moving #{lsi.old_s3_framed_filename} to #{lsi.s3_framed_filename}"
-#    AWS::S3::S3Object.rename lsi.old_s3_framed_filename, lsi.s3_framed_filename, BUCKET
+    # AWS::S3::S3Object.rename lsi.old_s3_framed_filename, lsi.s3_framed_filename, BUCKET
   else
     puts '.'
   end

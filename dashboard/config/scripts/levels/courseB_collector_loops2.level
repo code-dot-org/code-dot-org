@@ -26,9 +26,12 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Four piles of gold!  Collect all four.",
+    "instructions": "Collect all four piles to pass this level.",
     "instructions_important": "false",
     "min_collected": "4",
+    "markdown_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.\r\n\r\nCollect all four piles to pass this level.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,

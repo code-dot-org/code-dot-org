@@ -1,29 +1,41 @@
-
 require 'test_helper'
 
 class GalleryActivitiesControllerTest < ActionController::TestCase
   setup do
     @user = create(:user)
-    @level_source = create(:level_source, level_source_image: create(:level_source_image))
-    @activity = create(
-      :activity,
-      user: @user,
-      level: create(:level, game: Game.find_by_app(Game::ARTIST)),
-      level_source: @level_source
-    )
-    @gallery_activity = create(:gallery_activity, user: @user, level_source: @level_source, activity: @activity, autosaved: false)
+    sign_in @user
 
-    @playlab_level_source = create(:level_source, level_source_image: create(:level_source_image))
-    @playlab_activity = create(
-      :activity, user: @user,
-      level: create(:level, game: Game.find_by_app(Game::PLAYLAB)),
-      level_source: @playlab_level_source
+    @artist_level = create(:level, game: Game.find_by_app(Game::ARTIST))
+    @artist_user_level = create(:user_level, user: @user, level: @artist_level)
+    @artist_level_source = create(
+      :level_source,
+      :with_image,
+      level: @artist_level
     )
-    @playlab_gallery_activity = create(:gallery_activity, user: @user, level_source: @playlab_level_source, activity: @playlab_activity, autosaved: false)
+    @gallery_activity = create(
+      :gallery_activity,
+      user: @user,
+      level_source: @artist_level_source,
+      autosaved: false,
+      user_level: @artist_user_level
+    )
+
+    @playlab_level = create(:level, game: Game.find_by_app(Game::PLAYLAB))
+    @playlab_user_level = create(:user_level, user: @user, level: @playlab_level)
+    @playlab_level_source = create(
+      :level_source,
+      :with_image,
+      level: @playlab_level
+    )
+    @playlab_gallery_activity = create(
+      :gallery_activity,
+      user: @user,
+      level_source: @playlab_level_source,
+      autosaved: false,
+      user_level: @playlab_user_level
+    )
 
     @new_level = create(:level, game: Game.find_by_app(Game::PLAYLAB))
-    @new_activity = create(:activity, user: @user, level: @new_level)
-
     @autosaved_gallery_activity = create(:gallery_activity, user: @user, autosaved: true)
   end
 
@@ -34,42 +46,46 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should show index" do
+  test "should show index to non-signed-in user" do
+    sign_out @user
+
     get :index
 
     assert_response :success
-
-    # does not include the autosaved one
+    # Does not include the autosaved one.
     assert_equal [@gallery_activity], assigns(:artist_gallery_activities)
-
     assert_equal [@playlab_gallery_activity], assigns(:playlab_gallery_activities)
   end
 
-  test "should show index with only art" do
+  test "should show index with only art to non-signed-in user" do
+    sign_out @user
+
     get :index, params: {app: Game::ARTIST, page: 1}
 
     assert_response :success
-
-    # does not include the autosaved one
+    # Does not include the autosaved one.
     assert_equal [@gallery_activity], assigns(:gallery_activities)
   end
 
-  test "should show index with only apps" do
+  test "should show index with only apps to non-signed-in user" do
+    sign_out @user
+
     get :index, params: {app: Game::PLAYLAB, page: 1}
 
     assert_response :success
-
-    # does not include the autosaved one
     assert_equal [@playlab_gallery_activity], assigns(:gallery_activities)
   end
 
-  test "annoying page number redirects to first page" do
+  test "annoying page number redirects to first page for non-signed-in user" do
+    sign_out @user
+
     get :index, params: {app: Game::PLAYLAB, page: 100000}
 
     assert_redirected_to '/gallery'
   end
 
-  test "should show index if gallery activity belongs to deleted user" do
+  test "should show index if gallery activity belongs to hard-deleted user" do
+    sign_out @user
     u = @playlab_gallery_activity.user
     u.destroy
     @playlab_gallery_activity.reload
@@ -77,47 +93,44 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     get :index, params: {page: 1}
 
     assert_response :success
-
     assert_equal [@gallery_activity], assigns(:artist_gallery_activities)
-
     assert_equal [@playlab_gallery_activity], assigns(:playlab_gallery_activities)
   end
 
   test "should show index with thousands of pictures with a delimiter in the count" do
-    GalleryActivity.stubs(:pseudocount).returns(14320) # mock because actually creating takes forever
+    # Mock because actually creating takes forever.
+    GalleryActivity.stubs(:pseudocount).returns(14320)
 
-    # index is public
     get :index
 
     assert_response :success
-
     assert_select 'b', '14,320'
   end
 
   test "should show index to user" do
-    sign_in @user
     get :index
 
     assert_response :success
   end
 
   test "user should create gallery_activity" do
-    sign_in @user
+    level_source = create :level_source, level: @new_level
+    user_level = create :user_level, user: @user, level: @new_level
 
     assert_difference('GalleryActivity.count') do
-      level_source = create(:level_source, level: @new_level)
       post :create,
         params: {
           gallery_activity: {
             level_source_id: level_source.id,
-            activity_id: @new_activity.id
+            user_level_id: user_level.id
           }
         },
         format: :json
     end
 
     assert_equal @user, assigns(:gallery_activity).user
-    assert_equal @new_activity, assigns(:gallery_activity).activity
+    assert_equal user_level, assigns(:gallery_activity).user_level
+    assert_equal level_source, assigns(:gallery_activity).level_source
     assert_equal false, assigns(:gallery_activity).autosaved
     assert_equal 'studio', assigns(:gallery_activity).app
 
@@ -125,27 +138,25 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "should return existing gallery_activity if exists" do
-    sign_in @user
-
-    gallery_activity = GalleryActivity.create!(activity_id: @new_activity.id, user_id: @user.id)
-
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
         params: {
-          gallery_activity: { activity_id: @new_activity.id }
+          gallery_activity: {
+            level_source_id: @artist_level_source.id,
+            user_id: @user.id,
+            user_level_id: @artist_user_level.id
+          }
         },
         format: :json
     end
 
-    assert_equal gallery_activity, assigns(:gallery_activity)
-    assert_equal false, assigns(:gallery_activity).autosaved
-
     assert_response :created
+
+    assert_equal @gallery_activity, assigns(:gallery_activity)
+    assert_equal false, assigns(:gallery_activity).autosaved
   end
 
   test "should destroy gallery_activity" do
-    sign_in @user
-
     assert_difference('GalleryActivity.count', -1) do
       delete :destroy, params: {id: @gallery_activity}, format: :json
     end
@@ -156,21 +167,48 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   test "cannot destroy someone else's gallery activity" do
     sign_in create(:user)
 
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       delete :destroy, params: {id: @gallery_activity}, format: :json
     end
 
     assert_response :forbidden
   end
 
-  test "cannot create gallery activity for someone else" do
-    sign_in another_user = create(:user)
-    create :activity, user: another_user
+  test "cannot create gallery activity for someone else's user_level" do
+    other_user_level = create(
+      :user_level,
+      user: (create :user),
+      level: @artist_level
+    )
 
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
         params: {
-          gallery_activity: {activity_id: @new_activity.id, user_id: @user.id}
+          gallery_activity: {
+            level_source_id: @artist_level_source.id,
+            user_id: @user.id,
+            user_level_id: other_user_level.id
+          }
+        },
+        format: :json
+    end
+
+    assert_response :forbidden
+  end
+
+  test "cannot create gallery activity for someone else" do
+    sign_in create(:user)
+    level_source = create :level_source, level: @new_level
+    user_level = create :user_level, user: @user, level: @new_level
+
+    assert_does_not_create(GalleryActivity) do
+      post :create,
+        params: {
+          gallery_activity: {
+            level_source_id: level_source.id,
+            user_level_id: user_level.id,
+            user_id: @user.id
+          }
         },
         format: :json
     end
@@ -180,22 +218,27 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
 
   test "cannot create gallery activity for someone else's gallery activity" do
     sign_in create(:user)
+    level_source = create :level_source, level: @new_level
+    user_level = create :user_level, user: @user, level: @new_level
 
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
-        params: {gallery_activity: { activity_id: @new_activity.id }},
+        params: {
+          gallery_activity: {
+            level_source_id: level_source.id,
+            user_level_id: user_level.id
+          }
+        },
         format: :json
     end
 
     assert_response :forbidden
   end
 
-  test "cannot create gallery activity for invalid activity id" do
-    sign_in create(:user)
-
-    assert_no_difference('GalleryActivity.count') do
+  test "cannot create gallery activity for invalid user_level id" do
+    assert_does_not_create(GalleryActivity) do
       post :create,
-        params: {gallery_activity: { activity_id: 222222 }},
+        params: {gallery_activity: { user_level_id: UserLevel.last.id + 1 }},
         format: :json
     end
 
@@ -203,53 +246,45 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
   end
 
   test "cannot create gallery activity for invalid user id" do
-    sign_in another_user = create(:user)
-    activity = create :activity, user: another_user
+    level_source = create :level_source, level: @new_level
+    user_level = create :user_level, user: @user, level: @new_level
 
-    assert_no_difference('GalleryActivity.count') do
-      post :create,
-        params: {gallery_activity: {activity_id: activity.id, user_id: 22222}},
-        format: :json
-    end
-
-    assert_response :forbidden
-  end
-
-  test "cannot create gallery activity with no user" do
-    another_user = create(:user)
-    activity = create :activity, user: another_user
-
-    assert_no_difference('GalleryActivity.count') do
-      post :create,
-        params: {gallery_activity: { activity_id: activity.id }},
-        format: :json
-    end
-
-    assert_response 401
-  end
-
-  test "cannot create gallery activity with no activity id" do
-    sign_in create(:user)
-
-    assert_no_difference('GalleryActivity.count') do
-      post :create, params: {gallery_activity: { stub: nil }}, format: :json
-    end
-
-    assert_response :forbidden
-  end
-
-  test "does not create duplicate gallery activity" do
-    sign_in @user
-
-    assert_no_difference('GalleryActivity.count') do
+    assert_does_not_create(GalleryActivity) do
       post :create,
         params: {
-          gallery_activity: {activity_id: @gallery_activity.activity_id}
+          gallery_activity: {
+            level_source_id: level_source.id,
+            user_level_id: user_level.id,
+            user_id: User.last.id + 1
+          }
         },
         format: :json
     end
 
-    # pretend to succeed
+    assert_response :forbidden
+  end
+
+  test "cannot create gallery activity with no user_level id" do
+    assert_does_not_create(GalleryActivity) do
+      assert_raises(ActionController::ParameterMissing) do
+        post :create, params: {gallery_activity: {stub: nil}}, format: :json
+      end
+    end
+  end
+
+  test "does not create duplicate gallery activity" do
+    assert_does_not_create(GalleryActivity) do
+      post :create,
+        params: {
+          gallery_activity: {
+            level_source_id: @artist_level_source.id,
+            user_level_id: @artist_user_level.id
+          }
+        },
+        format: :json
+    end
+
+    # Despite no GalleryActivity being created, the response should be success.
     assert_response :created
   end
 end
