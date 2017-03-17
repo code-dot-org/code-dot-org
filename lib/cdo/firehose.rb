@@ -18,7 +18,7 @@ require 'singleton'
 #       data_float:                         # OPTIONAL
 #       data_string:                        # OPTIONAL
 #       data_json:                          # OPTIONAL
-#     }.to_json
+#     }
 #   )
 class FirehoseClient
   include Singleton
@@ -32,7 +32,7 @@ class FirehoseClient
 
   # Posts a record to the indicated stream.
   # @param stream_name [String] The steam to put the data in.
-  # @param data [JSON] The data to insert into the stream.
+  # @param data [hash] The data to insert into the stream.
   def put_record(stream_name, data)
     # TODO(asher): Determine whether these should be cached and batched via
     # put_record_batch. See
@@ -41,7 +41,7 @@ class FirehoseClient
     @firehose.put_record(
       {
         delivery_stream_name: stream_name,
-        record: {data: data}
+        record: {data: data.to_json}
       }
     )
   rescue Aws::Firehose::Errors::ServiceError
