@@ -200,6 +200,45 @@ class FilesTest < FilesApiTestBase
     assert_equal [], file_infos['files']
   end
 
+  def test_thumbnail
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-dog-contents'
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+  end
+
+  def test_bogus_metadata
+    bogus_metadata_filename = '.metadata/bogus.png'
+    bogus_metadata_body = 'stub-bogus-metadata-contents'
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+
+    @api.put_object(bogus_metadata_filename, bogus_metadata_body)
+    assert bad_request?
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+
+    @api.delete_object(bogus_metadata_filename)
+    assert bad_request?
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+  end
+
   private
 
   def post_file(api, uploaded_file)
