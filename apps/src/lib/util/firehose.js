@@ -2,8 +2,8 @@
 
 import AWS from 'aws-sdk';
 
-const IDENTITY_POOL_ID = 'us-east-1:fbfec393-0afb-4682-84d4-59ad04a302f4'
-const AWS_REGION = 'us-east-1'
+const IDENTITY_POOL_ID = 'us-east-1:fbfec393-0afb-4682-84d4-59ad04a302f4';
+const AWS_REGION = 'us-east-1';
 
 AWS.config.region = AWS_REGION;
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
