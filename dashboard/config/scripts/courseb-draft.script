@@ -124,6 +124,7 @@ level 'courseB_artist_loops6'
 level 'courseB_artist_loops7'
 level 'courseB_artist_loops8'
 level 'courseB_artist_loops9'
+assessment 'courseB_artist_loops8_predict1'
 level 'courseB_artist_loops10'
 
 stage 'Events: The Big Event'

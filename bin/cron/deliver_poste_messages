@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'retryable'
+require 'cdo/only_one'
 require 'cdo/poste'
 require 'base64'
 require 'nokogiri'
@@ -33,7 +34,7 @@ SMTP_OPTIONS = {
   password: CDO.poste_smtp_password,
   authentication: 'plain',
   enable_starttls_auto: true,
-}
+}.freeze
 #SMTP_OPTIONS = {
 #  address:'localhost',
 #  port:1025,

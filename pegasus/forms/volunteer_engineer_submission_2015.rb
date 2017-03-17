@@ -27,6 +27,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     result[:description_s] = required data[:description_s]
     result[:email_s] = required email_address data[:email_s]
     result[:allow_contact_b] = required data[:allow_contact_b]
+    result[:age_18_plus_b] = required data[:age_18_plus_b]
     result[:unsubscribed_s] = nil_if_empty data[:unsubscribed_s]
 
     result

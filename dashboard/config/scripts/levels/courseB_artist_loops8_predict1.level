@@ -35,7 +35,9 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": [
+      "courseB_multi_artist_loops8_predict1"
+    ]
   },
   "published": true,
   "notes": "",

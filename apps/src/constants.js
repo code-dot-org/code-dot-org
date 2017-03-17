@@ -79,6 +79,7 @@ exports.TestResults = {
   FREE_PLAY: 30,   // The user is in free-play mode.
   PASS_WITH_EXTRA_TOP_BLOCKS: 31, // There was more than one top-level block.
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
+  MANUAL_PASS: 90, // The level was manually set as perfected internally.
 
   // The level was solved in the ideal manner.
   ALL_PASS: 100,

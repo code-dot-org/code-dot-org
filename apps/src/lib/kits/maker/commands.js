@@ -4,9 +4,15 @@ import {
   apiValidateTypeAndRange
 } from '../../util/javascriptMode';
 
-let globalBoardController;
-export function injectBoardController(bc) {
-  globalBoardController = bc;
+/** @private {CircuitPlaygroundBoard} */
+let board;
+
+/**
+ * Change which board controller handles Maker Toolkit commands.
+ * @param {CircuitPlaygroundBoard} boardController
+ */
+export function injectBoardController(boardController) {
+  board = boardController;
 }
 
 /**
@@ -25,7 +31,7 @@ export function pinMode(opts) {
     servo: 4
   };
 
-  globalBoardController.pinMode(opts.pin, modeStringToConstant[opts.mode]);
+  board.pinMode(opts.pin, modeStringToConstant[opts.mode]);
 }
 
 /**
@@ -36,7 +42,7 @@ export function digitalWrite(opts) {
   apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
 
-  globalBoardController.digitalWrite(opts.pin, opts.value);
+  board.digitalWrite(opts.pin, opts.value);
 }
 
 /**
@@ -45,7 +51,7 @@ export function digitalWrite(opts) {
 export function digitalRead(opts) {
   apiValidateType(opts, 'digitalRead', 'pin', opts.pin, 'pinid');
 
-  return globalBoardController.digitalRead(opts.pin, opts.callback);
+  return board.digitalRead(opts.pin, opts.callback);
 }
 
 /**
@@ -56,7 +62,7 @@ export function analogWrite(opts) {
   apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
   apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
 
-  globalBoardController.analogWrite(opts.pin, opts.value);
+  board.analogWrite(opts.pin, opts.value);
 }
 
 /**
@@ -65,7 +71,7 @@ export function analogWrite(opts) {
 export function analogRead(opts) {
   apiValidateType(opts, 'analogRead', 'pin', opts.pin, 'pinid');
 
-  return globalBoardController.analogRead(opts.pin, opts.callback);
+  return board.analogRead(opts.pin, opts.callback);
 }
 
 /**
@@ -76,5 +82,5 @@ export function analogRead(opts) {
  */
 export function onBoardEvent(opts) {
   // TODO (bbuchanan): Validate arguments?
-  return globalBoardController.onBoardEvent(opts.component, opts.event, opts.callback);
+  return board.onBoardEvent(opts.component, opts.event, opts.callback);
 }

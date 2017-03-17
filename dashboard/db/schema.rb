@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224150102) do
+ActiveRecord::Schema.define(version: 20170308012502) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -384,15 +384,15 @@ ActiveRecord::Schema.define(version: 20170224150102) do
   end
 
   create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "workshop_type",                    null: false
-    t.integer  "organizer_id",                     null: false
+    t.string   "workshop_type",                     null: false
+    t.integer  "organizer_id",                      null: false
     t.string   "location_name"
     t.string   "location_address"
-    t.text     "processed_location", limit: 65535
-    t.string   "course",                           null: false
+    t.text     "processed_location",  limit: 65535
+    t.string   "course",                            null: false
     t.string   "subject"
-    t.integer  "capacity",                         null: false
-    t.text     "notes",              limit: 65535
+    t.integer  "capacity",                          null: false
+    t.text     "notes",               limit: 65535
     t.integer  "section_id"
     t.datetime "started_at"
     t.datetime "ended_at"
@@ -400,7 +400,9 @@ ActiveRecord::Schema.define(version: 20170224150102) do
     t.datetime "updated_at"
     t.datetime "processed_at"
     t.datetime "deleted_at"
+    t.integer  "regional_partner_id"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
+    t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id", using: :btree
   end
 
   create_table "pd_workshops_facilitators", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -546,13 +548,6 @@ ActiveRecord::Schema.define(version: 20170224150102) do
     t.index ["user_id"], name: "index_prizes_on_user_id", using: :btree
   end
 
-  create_table "professional_learning_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string  "name",       null: false
-    t.integer "contact_id", null: false
-    t.boolean "urban"
-    t.index ["name", "contact_id"], name: "index_professional_learning_partners_on_name_and_contact_id", unique: true, using: :btree
-  end
-
   create_table "puzzle_ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.integer  "script_id"
@@ -564,9 +559,19 @@ ActiveRecord::Schema.define(version: 20170224150102) do
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
+  create_table "regional_partner_program_managers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "program_manager_id",  null: false
+    t.integer "regional_partner_id", null: false
+    t.index ["program_manager_id"], name: "index_regional_partner_program_managers_on_program_manager_id", using: :btree
+    t.index ["regional_partner_id"], name: "index_regional_partner_program_managers_on_regional_partner_id", using: :btree
+  end
+
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string  "name",  null: false
-    t.integer "group", null: false
+    t.string  "name",       null: false
+    t.integer "group"
+    t.integer "contact_id"
+    t.boolean "urban"
+    t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
   create_table "regional_partners_school_districts", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -679,7 +684,6 @@ ActiveRecord::Schema.define(version: 20170224150102) do
     t.string   "code"
     t.integer  "script_id"
     t.string   "grade"
-    t.string   "admin_code"
     t.string   "login_type",   default: "email", null: false
     t.datetime "deleted_at"
     t.boolean  "stage_extras", default: false,   null: false
@@ -1009,6 +1013,7 @@ ActiveRecord::Schema.define(version: 20170224150102) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "pd_workshops", "regional_partners"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"

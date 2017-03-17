@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "C1_zuck_repeat_loop",
+    "video_key": "loop_times",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true

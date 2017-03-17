@@ -389,7 +389,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'tester', user.username
   end
 
-  test 'can get next unfinished level if not completed any unplugged levels' do
+  test 'can get next_unpassed_progression_level if not completed any unplugged levels' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
@@ -406,13 +406,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(35, user.next_unpassed_progression_level(twenty_hour).chapter)
   end
 
-  test 'can get next unfinished level, not tainted by other user progress' do
+  test 'can get next_unpassed_progression_level, not tainted by other user progress' do
     user = create :user
+    other_user = create :user
     twenty_hour = Script.twenty_hour_script
     twenty_hour.script_levels.each do |script_level|
       next if script_level.chapter > 33
       UserLevel.create(
-        user: create(:user),
+        user: other_user,
         level: script_level.level,
         script: twenty_hour,
         attempts: 1,
@@ -420,6 +421,107 @@ class UserTest < ActiveSupport::TestCase
       )
     end
     assert_equal(2, user.next_unpassed_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when most recent level is not passed' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+
+    twenty_hour.script_levels.each do |script_level|
+      next if script_level.chapter != 3
+      UserLevel.create(
+        user: user,
+        level: script_level.level,
+        script: twenty_hour,
+        attempts: 1,
+        best_result: Activity::MINIMUM_FINISHED_RESULT
+      )
+    end
+
+    # The level we most recently had progress on we did not pass, so that's
+    # where we should go
+    assert_equal(3, user.next_unpassed_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when most recent level is last level' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+
+    script_level = twenty_hour.script_levels.last
+    UserLevel.create(
+      user: user,
+      level: script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    # User's most recent progress is on last level in script. There's nothing
+    # following it, so just return to the last level
+    assert_equal(script_level.chapter, user.next_unpassed_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when most recent level is only followed by unplugged levels' do
+    user = create :user
+    script = create :script
+
+    script_levels = [
+      create(:script_level, script: script, levels: [create(:maze)]),
+      create(:script_level, script: script, levels: [create(:maze)]),
+      create(:script_level, script: script, levels: [create(:unplugged)]),
+    ]
+    create :user_script, user: user, script: script
+
+    UserLevel.create(
+      user: user,
+      level: script_levels[1].level,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    # User's most recent progress is on second last level of script, but none of
+    # the levels after it are "progression" levels. Just return to the last level
+    # we made progress on.
+    assert_equal(2, user.next_unpassed_progression_level(script).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when most recent level not a progression level' do
+    user = create :user
+    script = create :script
+
+    script_levels = [
+      create(:script_level, script: script, levels: [create(:maze)]),
+      create(:script_level, script: script, levels: [create(:unplugged)]),
+      create(:script_level, script: script, levels: [create(:unplugged)]),
+      create(:script_level, script: script, levels: [create(:maze)]),
+    ]
+    create :user_script, user: user, script: script
+
+    UserLevel.create(
+      user: user,
+      level: script_levels[1].level,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    # User's most recent progress is on unplugged level, that is followed by another
+    # unplugged level. We should end up at the first non unplugged level
+    assert_equal(4, user.next_unpassed_progression_level(script).chapter)
+  end
+
+  test 'can get next_unpassed_progression_level when we have no progress' do
+    user = create :user
+    script = create :script
+
+    create(:script_level, script: script, levels: [create(:maze)])
+    create(:script_level, script: script, levels: [create(:maze)])
+    create :user_script, user: user, script: script
+
+    # User's most recent progress is on unplugged level, that is followed by another
+    # unplugged level. We should end up at the first non unplugged level
+    assert_equal(1, user.next_unpassed_progression_level(script).chapter)
   end
 
   test 'script with inactive level completed is completed' do
@@ -1161,6 +1263,20 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
   end
 
+  test 'track_level_progress_sync does call track_profiency when manual_pass to perfect' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    UserLevel.create!(
+      user: user,
+      level: csf_script_level.level,
+      script: Script.get_from_cache('20-hour'),
+      best_result: ActivityConstants::MANUAL_PASS_RESULT
+    )
+
+    User.expects(:track_proficiency).once
+    track_progress(user.id, csf_script_level, 100)
+  end
+
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
     script_level = create :script_level
     student = create :student
@@ -1726,5 +1842,20 @@ class UserTest < ActiveSupport::TestCase
       User.find_or_create_teacher params, admin
     end
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
+  end
+
+  test 'non_deleted_sections doesnt return deleted sections' do
+    teacher = create :teacher
+    section1 = create :section, user_id: teacher.id
+    section2 = create :section, user_id: teacher.id
+
+    assert_equal [section1, section2], teacher.sections
+    assert_equal [section1, section2], teacher.non_deleted_sections
+
+    section1.update!(deleted_at: Time.now)
+
+    # sections still incldues our deleted section, but non_deleted_sections does not
+    assert_equal [section1, section2], teacher.sections
+    assert_equal [section2], teacher.non_deleted_sections
   end
 end

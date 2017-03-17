@@ -6,20 +6,11 @@ video_player: true
 social:
   "og:title": "<%= I18n.t(:og_title) %>"
   "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
-  "og:image:width": '1920'
-  "og:image:height": '1080'
-  "og:video:url": "<%= 'http://youtube.com/v/ip051U7Rvds' %>"
-  "og:video:secure_url": "<%= 'https://youtube.com/v/ip051U7Rvds' %>"
-  "og:video:type": "video/mp4"
-  "og:video:width": "640"
-  "og:video:height": "360"
   "twitter:card": player
   "twitter:site": "@codeorg"
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
 ---
 
 %link{:href=>"/css/homepage.css", :rel=>"stylesheet"}

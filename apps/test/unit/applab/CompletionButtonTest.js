@@ -1,7 +1,7 @@
 import {assert} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();
-var CompletionButton = require('@cdo/apps/applab/CompletionButton').__TestInterface__.UnconnectedCompletionButton;
+var CompletionButton = require('@cdo/apps/templates/CompletionButton').__TestInterface__.UnconnectedCompletionButton;
 import React from 'react';
 var ReactTestUtils = require('react-addons-test-utils');
 

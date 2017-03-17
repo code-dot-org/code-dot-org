@@ -1,18 +1,18 @@
 module OverrideUpdateTrackedFields
   def update_tracked_fields(request)
     super(request)
-    if self.persisted? && self.id
+    if persisted? && id
       SignIn.create(
-        user_id: self.id,
+        user_id: id,
         sign_in_at: DateTime.now,
-        sign_in_count: self.sign_in_count
+        sign_in_count: sign_in_count
       )
     end
-    if self.persisted? && self.id && self.current_sign_in_ip
-      if UserGeo.find_by_user_id(self.id).nil?
+    if persisted? && id && current_sign_in_ip
+      if UserGeo.find_by_user_id(id).nil?
         UserGeo.create!(
-          user_id: self.id,
-          ip_address: self.current_sign_in_ip
+          user_id: id,
+          ip_address: current_sign_in_ip
         )
       end
     end

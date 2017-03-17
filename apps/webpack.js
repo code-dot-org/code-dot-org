@@ -44,6 +44,8 @@ var baseConfig = {
         include: [
           path.resolve(__dirname, 'static'),
           path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'test'),
+          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
         ],
         loader: "url-loader?limit=1024",
       },
@@ -143,7 +145,8 @@ var karmaConfig = _.extend({}, baseConfig, {
       '@cdo/weblab/locale': path.resolve(__dirname, 'test', 'util', 'weblab', 'locale-do-not-import.js'),
       'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
       // Use mock-firmata to unit test playground-io maker components
-      'firmata': 'mock-firmata/mock-firmata'
+      'firmata': 'mock-firmata/mock-firmata',
+      'chrome-serialport': path.resolve(__dirname, 'test', 'unit', 'lib', 'kits', 'maker', 'StubChromeSerialPort.js'),
     }),
   }),
   externals: {

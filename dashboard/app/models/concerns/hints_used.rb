@@ -7,7 +7,7 @@ module HintsUsed
 
   class_methods do
     def no_hints_used?(user_id, script_id, level_id)
-      self.hints_used(user_id, script_id, level_id).empty?
+      hints_used(user_id, script_id, level_id).empty?
     end
   end
 end

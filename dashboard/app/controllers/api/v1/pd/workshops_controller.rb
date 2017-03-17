@@ -1,5 +1,8 @@
 class Api::V1::Pd::WorkshopsController < ::ApplicationController
-  load_and_authorize_resource class: 'Pd::Workshop', except: :k5_public_map_index
+  include Pd::WorkshopFilters
+  include Api::CsvDownload
+
+  load_and_authorize_resource class: 'Pd::Workshop', except: [:k5_public_map_index, :workshops_user_enrolled_in]
 
   # GET /api/v1/pd/workshops
   def index
@@ -15,16 +18,40 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       @workshops = @workshops.organized_by(current_user)
     end
 
-    if params[:include_enrollments]
-      return_val = @workshops.map do |workshop|
-        enrollment = workshop.enrollments.where('email = ? OR user_id = ?', current_user.email, current_user.id).first
-        Api::V1::Pd::WorkshopSerializer.new(workshop, scope: {enrollment_id: enrollment.try(&:id)}).attributes
-      end
+    render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+  end
 
-      render json: return_val
-    else
-      render json: @workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
+  def workshops_user_enrolled_in
+    workshops = ::Pd::Enrollment.for_user(current_user).map do |enrollment|
+      Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
+
+    render json: workshops
+  end
+
+  # GET /api/v1/pd/workshops/filter
+  def filter
+    limit = params[:limit].try(:to_i)
+    workshops = filter_workshops(@workshops)
+    limited_workshops = workshops.limit(limit)
+
+    respond_to do |format|
+      limited_workshops = workshops.limit(limit)
+      format.json do
+        render json: {
+          limit: limit,
+          total_count: workshops.length,
+          filters: filter_params,
+          workshops: limited_workshops.map{|w| Api::V1::Pd::WorkshopSerializer.new(w).attributes}
+        }
+      end
+      format.csv do
+        # don't apply limit to csv download
+        send_as_csv_attachment workshops.map{|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}, 'workshops.csv'
+      end
+    end
+  rescue ArgumentError => e
+    render json: {error: e.message}, status: :bad_request
   end
 
   # Upcoming (not started) public CSF workshops.

@@ -94,10 +94,10 @@
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
     "encrypted_examples": "OwUE26OndvyCU8tCTlmO85yKiphvyEBbuorOiP6fznqY8d3JdJogGAZwMlWi\nfY5q\n",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

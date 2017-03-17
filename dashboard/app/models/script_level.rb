@@ -94,11 +94,17 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def next_level_or_redirect_path_for_user(user)
-    # if we're coming from an unplugged level, it's ok to continue
-    # to unplugged level (example: if you start a sequence of
-    # assessments associated with an unplugged level you should
-    # continue on that sequence instead of skipping to next stage)
-    level_to_follow = valid_progression_level? ? next_progression_level : next_level
+    # if we're coming from an unplugged level, it's ok to continue to unplugged
+    # level (example: if you start a sequence of assessments associated with an
+    # unplugged level you should continue on that sequence instead of skipping to
+    # next stage)
+    if valid_progression_level?(user)
+      level_to_follow = next_progression_level(user)
+    else
+      # don't ever continue continue to a locked/hidden level
+      level_to_follow = next_level
+      level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
+    end
 
     if script.professional_learning_course?
       if level.try(:plc_evaluation?)
@@ -119,26 +125,38 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  # Return the next script level after this one in the script, or nil if this is last
   def next_level
     i = script.script_levels.find_index(self)
     return nil if i.nil? || i == script.script_levels.length
     script.script_levels[i + 1]
   end
 
-  def next_progression_level
-    next_level ? next_level.or_next_progression_level : nil
+  # Returns the next valid progression level, or nil if no such level exists
+  def next_progression_level(user=nil)
+    next_level ? next_level.or_next_progression_level(user) : nil
   end
 
-  def or_next_progression_level
-    valid_progression_level? ? self : next_progression_level
+  # Returns the first level in the sequence starting with this one that is a
+  # valid progress level
+  def or_next_progression_level(user=nil)
+    valid_progression_level?(user) ? self : next_progression_level(user)
   end
 
-  def valid_progression_level?
+  def valid_progression_level?(user=nil)
     return false if level.unplugged?
     return false if stage && stage.unplugged?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && stage && stage.spelling_bee?
+    return false if locked_or_hidden?(user)
     true
+  end
+
+  def locked_or_hidden?(user)
+    return false unless user
+    return true if user.hidden_stage?(self)
+    return true if user.user_level_locked?(self, level)
+    false
   end
 
   def previous_level
@@ -304,5 +322,11 @@ class ScriptLevel < ActiveRecord::Base
 
     # Everything else is okay.
     return true
+  end
+
+  # Is the stage containing this script_level hidden for the provided section
+  def stage_hidden_for_section?(section_id)
+    return false if section_id.nil?
+    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil?
   end
 end

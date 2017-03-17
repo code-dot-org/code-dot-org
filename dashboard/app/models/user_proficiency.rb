@@ -330,16 +330,19 @@ class UserProficiency < ActiveRecord::Base
     end
   end
 
-  # As of April 2015, we define a user as having basic proficiency if they have
-  # shown proficiency in three meta-concepts amongst sequencing, loops
-  # (encompassing repeat_loops, repeat_until_while, and for_loops), events,
-  # variables, functions (encompassing functions and functions_with_params), and
-  # conditionals. A user demonstrates proficiency in a concept by having three
-  # or more total D3, D4, or D5 levels.
+  # As of April 2015, we define a user as being proficient (at some difficulty)
+  # if they have shown proficiency in three meta-concepts amongst sequencing,
+  # loops (encompassing repeat_loops, repeat_until_while, and for_loops),
+  # events, variables, functions (encompassing functions and functions_with_params),
+  # and conditionals. A user demonstrates proficiency in a concept by having
+  # solved three (or more) appropriate difficulty puzzles with optimal block
+  # counts.
   # WARNING (April 2015): This definition is expected to change, possibly with
   # an age-related bent.
-  # @return [Boolean] if the user has achieved basic proficiency.
-  def basic_proficiency?
+  # @param difficulty [Integer] the difficulty level at which to assess
+  #   proficiency. Default is 3.
+  # @return [Boolean] whether the user has achieved proficiency.
+  def proficient?(difficulty: 3)
     concept_proficiency_count = 0
     # Meta-concepts with one sub-concept.
     [
@@ -348,22 +351,22 @@ class UserProficiency < ActiveRecord::Base
       ConceptDifficulties::VARIABLES,
       ConceptDifficulties::CONDITIONALS
     ].each do |concept|
-      if get_level_count(concept, 3) >= 3
+      if get_level_count(concept, difficulty) >= 3
         concept_proficiency_count += 1
       end
     end
     # The loops meta-concept.
-    if get_level_count(ConceptDifficulties::REPEAT_LOOPS, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::REPEAT_UNTIL_WHILE, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::FOR_LOOPS, 3) >= 3
+    if get_level_count(ConceptDifficulties::REPEAT_LOOPS, difficulty) >= 3 ||
+       get_level_count(ConceptDifficulties::REPEAT_UNTIL_WHILE, difficulty) >= 3 ||
+       get_level_count(ConceptDifficulties::FOR_LOOPS, difficulty) >= 3
       concept_proficiency_count += 1
     end
     # The functions meta-concept.
-    if get_level_count(ConceptDifficulties::FUNCTIONS, 3) >= 3 ||
-       get_level_count(ConceptDifficulties::FUNCTIONS_WITH_PARAMS, 3) >= 3
+    if get_level_count(ConceptDifficulties::FUNCTIONS, difficulty) >= 3 ||
+       get_level_count(ConceptDifficulties::FUNCTIONS_WITH_PARAMS, difficulty) >= 3
       concept_proficiency_count += 1
     end
 
-    return concept_proficiency_count >= 3
+    concept_proficiency_count >= 3
   end
 end

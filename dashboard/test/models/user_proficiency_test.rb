@@ -74,14 +74,20 @@ class UserProficiencyTest < ActiveSupport::TestCase
 
   test 'basic_proficiency' do
     # Proficiency in two concepts is insufficient for basic proficiency.
-    refute @proficiency.basic_proficiency?
+    refute @proficiency.proficient?
 
     # Adding a repeat sub-concept (within loops) does not help.
     @proficiency.repeat_until_while_d3_count = 3
-    refute @proficiency.basic_proficiency?
+    refute @proficiency.proficient?
 
     # Adding a third meta-concept gives basic proficiency.
     @proficiency.events_d3_count = 3
-    assert @proficiency.basic_proficiency?
+    assert @proficiency.proficient?
+  end
+
+  test 'basic_proficiency with difficulty' do
+    @proficiency.sequencing_d1_count = 3
+    assert @proficiency.proficient?(difficulty: 1)
+    refute @proficiency.proficient?(difficulty: 5)
   end
 end

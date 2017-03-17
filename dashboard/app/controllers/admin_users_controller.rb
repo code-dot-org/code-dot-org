@@ -1,5 +1,7 @@
 require 'digest/md5'
 
+require 'cdo/activity_constants'
+
 class AdminUsersController < ApplicationController
   before_action :authenticate_user!
   before_action :require_admin
@@ -69,5 +71,46 @@ class AdminUsersController < ApplicationController
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
     end
     redirect_to :find_students
+  end
+
+  def manual_pass_form
+  end
+
+  def manual_pass
+    user = User.find_by_id(params[:user_id])
+    unless user
+      flash[:alert] = "User (ID: #{params[:user_id]}) not found"
+    end
+    script = Script.find_by_id(params[:script_id])
+    unless script
+      flash[:alert] = "Script (ID: #{params[:script_id]}) not found"
+    end
+    level = Level.find_by_id(params[:level_id])
+    unless level
+      flash[:alert] = "Level (ID: #{params[:level_id]}) not found"
+    end
+
+    unless user && script && level
+      redirect_to :manual_pass_form
+      return
+    end
+
+    user_level = UserLevel.find_or_initialize_by(
+      user: user,
+      script: script,
+      level: level
+    )
+    if user_level.persisted? &&
+      user_level.best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
+      flash[:alert] = "UserLevel (ID: #{user_level.id}) already green"
+      redirect_to :manual_pass_form
+      return
+    end
+
+    user_level.best_result = ActivityConstants::MANUAL_PASS_RESULT
+    user_level.save!
+
+    flash[:alert] = "UserLevel (ID: #{user_level.id}) updated"
+    redirect_to :manual_pass_form
   end
 end

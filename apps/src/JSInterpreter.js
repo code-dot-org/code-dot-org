@@ -1,8 +1,9 @@
-// TODO: import apps/lib/jsinterpreter/interpreter.js directly
-// instead of referencing window.
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
+var Interpreter = require('@code-dot-org/js-interpreter');
+var acorn = require('@code-dot-org/js-interpreter/acorn');
+
 import { setIsDebuggerPaused } from './redux/runState';
 
 /**
@@ -66,9 +67,9 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
   if (!JSInterpreter.baseHasProperty &&
       !JSInterpreter.baseGetProperty &&
       !JSInterpreter.baseSetProperty) {
-    JSInterpreter.baseHasProperty = window.Interpreter.prototype.hasProperty;
-    JSInterpreter.baseGetProperty = window.Interpreter.prototype.getProperty;
-    JSInterpreter.baseSetProperty = window.Interpreter.prototype.setProperty;
+    JSInterpreter.baseHasProperty = Interpreter.prototype.hasProperty;
+    JSInterpreter.baseGetProperty = Interpreter.prototype.getProperty;
+    JSInterpreter.baseSetProperty = Interpreter.prototype.setProperty;
   }
 
   // These methods need to be patched in order to support custom marshaling.
@@ -82,7 +83,7 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
   * @param {!Object} name Name of variable.
   * @return {!Object} The value.
   */
-  window.Interpreter.prototype.getValueFromScope = function (name) {
+  Interpreter.prototype.getValueFromScope = function (name) {
     var scope = this.getScope();
     var nameStr = name.toString();
     while (scope) {
@@ -101,7 +102,7 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
   * @param {!Object} value Value.
   * @param {boolean} declarator true if called from variable declarator.
   */
-  window.Interpreter.prototype.setValueToScope = function (name, value, declarator) {
+  Interpreter.prototype.setValueToScope = function (name, value, declarator) {
     var scope = this.getScope();
     var strict = scope.strict;
     var nameStr = name.toString();
@@ -126,7 +127,7 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
    * @param {!Object} value Value.
    * @param {boolean} declarator true if called from variable declarator.
    */
-  window.Interpreter.prototype.setValue = function (left, value, declarator) {
+  Interpreter.prototype.setValue = function (left, value, declarator) {
     if (left.length) {
       var obj = left[0];
       var prop = left[1];
@@ -140,7 +141,7 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
   // Also removed erroneous? call to hasProperty when there is node.init
   // Changed to call setValue with this.UNDEFINED when there is no node.init
   // and JSInterpreter.baseHasProperty returns false for current scope.
-  window.Interpreter.prototype['stepVariableDeclarator'] = function () {
+  Interpreter.prototype['stepVariableDeclarator'] = function () {
     var state = this.stateStack[0];
     var node = state.node;
     if (node.init && !state.done) {
@@ -276,7 +277,7 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
-    new window.Interpreter('', initFunc);
+    new Interpreter('', initFunc);
     // We initialize with an empty program so that all of our global functions
     // can be injected before the user code is processed (thus allowing user
     // code to override globals of the same names)
@@ -1159,7 +1160,7 @@ JSInterpreter.prototype.getValueFromMemberExpression_ = function (expression) {
 JSInterpreter.prototype.evaluateWatchExpression = function (watchExpression) {
   var value;
   try {
-    var ast = window.acorn.parse(watchExpression);
+    var ast = acorn.parse(watchExpression);
     if (ast.type === 'Program' &&
         ast.body[0].type === 'ExpressionStatement') {
       value = this.getWatchValueFromNode_(ast.body[0].expression);
@@ -1245,7 +1246,7 @@ JSInterpreter.prototype.getCurrentState = function () {
  */
 JSInterpreter.prototype.evalInCurrentScope = function (expression) {
   var currentScope = this.interpreter.getScope();
-  var evalInterpreter = new window.Interpreter(expression);
+  var evalInterpreter = new Interpreter(expression);
   // Set scope to the current scope of the running program
   // NOTE: we are being a little tricky here (we are re-running
   // part of the Interpreter constructor with a different interpreter's

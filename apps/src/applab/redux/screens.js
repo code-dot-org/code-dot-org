@@ -96,7 +96,7 @@ export default function (state = initialState, action) {
  * Note: Runtime screen changes are a separate operation, currently handled
  * in applab.js
  * @param {!string} screenId
- * @returns {{type: ActionType, screenId: string}}
+ * @returns {{type: string, screenId: string}}
  */
 export const changeScreen = screenId => ({
   type: CHANGE_SCREEN,
@@ -106,7 +106,7 @@ export const changeScreen = screenId => ({
 /**
  * Change the state of whether we are importing a screen or not.
  * @param {!bool} importing
- * @returns {{type: ActionType, importing: bool}}
+ * @returns {{type: string, importing: bool}}
  */
 export const toggleImportScreen = (importing) => ({
   type: TOGGLE_IMPORT_SCREEN,

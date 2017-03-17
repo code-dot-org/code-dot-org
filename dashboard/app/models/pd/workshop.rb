@@ -2,27 +2,29 @@
 #
 # Table name: pd_workshops
 #
-#  id                 :integer          not null, primary key
-#  workshop_type      :string(255)      not null
-#  organizer_id       :integer          not null
-#  location_name      :string(255)
-#  location_address   :string(255)
-#  processed_location :text(65535)
-#  course             :string(255)      not null
-#  subject            :string(255)
-#  capacity           :integer          not null
-#  notes              :text(65535)
-#  section_id         :integer
-#  started_at         :datetime
-#  ended_at           :datetime
-#  created_at         :datetime
-#  updated_at         :datetime
-#  processed_at       :datetime
-#  deleted_at         :datetime
+#  id                  :integer          not null, primary key
+#  workshop_type       :string(255)      not null
+#  organizer_id        :integer          not null
+#  location_name       :string(255)
+#  location_address    :string(255)
+#  processed_location  :text(65535)
+#  course              :string(255)      not null
+#  subject             :string(255)
+#  capacity            :integer          not null
+#  notes               :text(65535)
+#  section_id          :integer
+#  started_at          :datetime
+#  ended_at            :datetime
+#  created_at          :datetime
+#  updated_at          :datetime
+#  processed_at        :datetime
+#  deleted_at          :datetime
+#  regional_partner_id :integer
 #
 # Indexes
 #
-#  index_pd_workshops_on_organizer_id  (organizer_id)
+#  index_pd_workshops_on_organizer_id         (organizer_id)
+#  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
 #
 
 class Pd::Workshop < ActiveRecord::Base
@@ -143,6 +145,8 @@ class Pd::Workshop < ActiveRecord::Base
   has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
   belongs_to :section
 
+  belongs_to :regional_partner
+
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
       unless sessions.map{|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
@@ -183,7 +187,7 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:section).find_by(sections: {code: section_code})
   end
 
-  def self.in_state(state)
+  def self.in_state(state, error_on_bad_state: true)
     case state
       when STATE_NOT_STARTED
         where(started_at: nil)
@@ -192,7 +196,8 @@ class Pd::Workshop < ActiveRecord::Base
       when STATE_ENDED
         where.not(started_at: nil).where.not(ended_at: nil)
       else
-        raise "Unrecognized state: #{state}"
+        raise "Unrecognized state: #{state}" if error_on_bad_state
+        none
     end
   end
 
@@ -204,6 +209,34 @@ class Pd::Workshop < ActiveRecord::Base
   # Filters by scheduled start date (date of first session)
   def self.start_on_or_after(date)
     joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
+  end
+
+  # Orders by the scheduled start date (date of the first session),
+  # @param :desc [Boolean] optional - when true, sort descending
+  def self.order_by_scheduled_start(desc: false)
+    joins(:sessions).
+    group('pd_workshops.id').
+    order('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : ''))
+  end
+
+  # Orders by the number of active enrollments
+  # @param :desc [Boolean] optional - when true, sort descending
+  def self.order_by_enrollment_count(desc: false)
+    left_outer_joins(:enrollments).
+    group('pd_workshops.id').
+    order('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : ''))
+  end
+
+  # Orders by the workshop state, in order: Not Started, In Progress, Ended
+  # @param :desc [Boolean] optional - when true, sort descending
+  def self.order_by_state(desc: false)
+    order(%Q(
+      CASE
+        WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"
+        WHEN ended_at IS NULL THEN "#{STATE_IN_PROGRESS}"
+        ELSE "#{STATE_ENDED}"
+      END #{desc ? ' DESC' : ''})
+    )
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.
@@ -372,11 +405,6 @@ class Pd::Workshop < ActiveRecord::Base
     actual_hours = sessions.map(&:hours).reduce(&:+)
     max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_hours]}
     [actual_hours, max_hours].compact.min
-  end
-
-  # @return [ProfessionalLearningPartner] plp associated with the workshop organizer, if any.
-  def professional_learning_partner
-    ProfessionalLearningPartner.find_by_contact_id organizer.id
   end
 
   # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.
