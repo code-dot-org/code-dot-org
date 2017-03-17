@@ -5,7 +5,7 @@ import * as applabConstants from './constants';
 import React from 'react';
 import Radium from 'radium';
 import Visualization from './Visualization';
-import CompletionButton from './CompletionButton';
+import CompletionButton from '../templates/CompletionButton';
 import PlaySpaceHeader from './PlaySpaceHeader';
 import PhoneFrame from './PhoneFrame';
 import BelowVisualization from '../templates/BelowVisualization';

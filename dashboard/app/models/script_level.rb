@@ -327,6 +327,6 @@ class ScriptLevel < ActiveRecord::Base
   # Is the stage containing this script_level hidden for the provided section
   def stage_hidden_for_section?(section_id)
     return false if section_id.nil?
-    !SectionHiddenStage.find_by(stage_id: self.stage.id, section_id: section_id).nil?
+    !SectionHiddenStage.find_by(stage_id: stage.id, section_id: section_id).nil?
   end
 end

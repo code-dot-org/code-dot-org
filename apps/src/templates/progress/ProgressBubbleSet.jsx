@@ -48,6 +48,13 @@ const ProgressBubbleSet = React.createClass({
     disabled: PropTypes.bool.isRequired
   },
 
+  getIcon(level) {
+    if (!level.icon) {
+      return "desktop";
+    }
+    return level.icon.substring(3);
+  },
+
   render() {
     const { start, levels, disabled } = this.props;
 
@@ -71,6 +78,8 @@ const ProgressBubbleSet = React.createClass({
                 status={level.status}
                 url={level.url}
                 disabled={disabled}
+                levelName={level.name}
+                levelIcon={this.getIcon(level)}
               />
             </div>
           </div>

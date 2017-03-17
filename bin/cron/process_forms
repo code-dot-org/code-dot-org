@@ -146,7 +146,7 @@ def main
   receipt_count = send_batch_of_receipts(limit)
   index_batch_of_forms(limit)
 
-  system "#{deploy_dir('bin', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
+  system "#{deploy_dir('bin/cron', 'deliver_poste_messages').shellescape} 2>&1" unless receipt_count == 0
 end
 
 main if only_one_running?(__FILE__)
