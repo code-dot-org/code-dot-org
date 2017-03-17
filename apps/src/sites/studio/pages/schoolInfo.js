@@ -165,7 +165,7 @@ window.SchoolInfoManager = function (existingOptions) {
 
   function clearAndHideDistrict() {
     enableDistrictDropdown(false);
-    $("#school-district-other").val(false);
+    $("#school-district-other").prop('checked', false);
     $("#school-district-name").val("");
     closestFormGroupOrItemBlock('#school-district').hide();
     closestFormGroupOrItemBlock('#school-district-name').hide();
@@ -293,7 +293,6 @@ window.SchoolInfoManager = function (existingOptions) {
   });
 
   $('#school-district-other').change(function () {
-    $(this).val($(this).prop('checked')); // Form data is sent from value, not 'checked' property
     if ($(this).prop('checked')) {
       // Disable districts.
       enableDistrictDropdown(false);
