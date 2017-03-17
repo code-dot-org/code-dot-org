@@ -27,7 +27,7 @@ export default class AnalysisEvents {
           created_at: data.created_at || "2017-03-16T15:24:25.796+00:00",
           environment: data.environment || "eric",
           study: data.study || "eric-javascript",
-          action: data.action || "put_method",
+          event: data.event || "put_method",
           data_int: data.data_int
         }
       )
