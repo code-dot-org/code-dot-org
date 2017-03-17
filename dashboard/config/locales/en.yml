@@ -136,7 +136,7 @@ en:
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
-    select_school_type: 'Select School Type'
+    select_school_type: 'School Type'
     charter: 'Charter'
     private: 'Private'
     public: 'Public'
@@ -150,8 +150,10 @@ en:
     school: 'School'
     other_school_not_listed: 'Other school not listed above'
     school_name: 'School Name'
-    school_zip: "School Zip Code"
+    school_zip: 'School Zip Code'
     school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: 'Have an account already? Sign in'
     login: 'Email'
