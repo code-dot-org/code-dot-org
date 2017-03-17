@@ -30,7 +30,12 @@ export const fakeLevels = numLevels => _.range(numLevels).map(index => ({
  */
 export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
   return createStore(state => state, {
-    stageLock: { viewAs },
+    stageLock: {
+      stagesBySectionId: {
+        '11': {}
+      },
+      viewAs
+    },
     sections: {
       selectedSectionId: '11'
     },
@@ -38,6 +43,9 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       bySection: {
         '11': { [lessonId]: true }
       }
-    })
+    }),
+    progress: {
+      showTeacherInfo: false
+    }
   });
 };
