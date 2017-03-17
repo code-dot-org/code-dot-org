@@ -653,4 +653,74 @@ class FilesApi < Sinatra::Base
 
     {"filesVersionId": result[:version_id], "files": manifest}.to_json
   end
+
+  #
+  # Metadata Files
+  #
+  # Metadata files store information about a project which should not be exposed
+  # in the user's file list.
+  #
+  # Metadata files are stored in the files API under the .metadata/ top-level directory.
+  # Currently, the files API does not allow subdirectories, so there is no possible
+  # conflict between metadata files and user files. Once subdirectories are supported,
+  # the .metadata/ directory name must be reserved to prevent conflicts.
+  #
+  # Initially, metadata files are not stored in the manifest and are therefore not tied
+  # to any version of the manifest file. In the future, if versions are needed (e.g. to
+  # show thumbnail images in the Version History dialog), metadata files can be added to
+  # a new "metadata" section of the manifest.
+  #
+
+  METADATA_PATH = '.metadata'.freeze
+  METADATA_FILENAMES = %w(
+    thumbnail.png
+  )
+
+  #
+  # PUT /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
+  #
+  # Create or replace a metadata file. Optionally overwrite a specific version.
+  #
+  put %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+    dont_cache
+    content_type :json
+
+    # read the entire request before considering rejecting it, otherwise varnish
+    # may return a 503 instead of whatever status code we specify. Unfortunately
+    # this prevents us from rejecting large files based on the Content-Length
+    # header.
+    body = request.body.read
+
+    bad_request unless METADATA_FILENAMES.include?(filename)
+    filename = "#{METADATA_PATH}/#{filename}"
+
+    put_file('files', encrypted_channel_id, filename, body)
+  end
+
+  #
+  # GET /v3/files/<channel-id>/.metadata/<filename>?version=<version-id>
+  #
+  # Read a metadata file. Optionally get a specific version instead of the most recent.
+  #
+  get %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+    get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
+  end
+
+  #
+  # DELETE /v3/files/<channel-id>/.metadata/<filename>?files-version=<project-version-id>
+  #
+  # Delete a metadata file.
+  #
+  delete %r{/v3/files/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
+    dont_cache
+
+    bad_request unless METADATA_FILENAMES.include? filename
+    filename = "#{METADATA_PATH}/#{filename}"
+
+    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    not_authorized unless owner_id == storage_id('user')
+
+    FileBucket.new.delete(encrypted_channel_id, filename)
+    no_content
+  end
 end
