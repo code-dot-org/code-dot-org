@@ -10,7 +10,6 @@
 
 #nav-hamburger span, #nav-hamburger span:before, #nav-hamburger span:after {
   cursor: pointer;
-  border-radius: 1px;
   height: 3px;
   width: 25px;
   border-radius: 2px;
@@ -52,32 +51,33 @@
 
 #nav {
   display: inline-block;
-  text-align: left;
   float: right;
-  width: 50%;
 }
 
 #nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 250px;
+  width: 300px;
   right: 0;
 }
 
 #nav ul li {
   font-size: 18px;
   color: white;
+  line-height: 30px;
   display: inline-block;
   float: left;
-  padding: 0.25em 0em;
-  margin-right: 1em;
+  padding: 0.25em;
   text-indent: 0;
   list-style-type: none;
-  max-width: 150px;
+  max-width: 250px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  border-bottom: solid 2px rgba(3,147,158, 0.8);
+  border-radius: 2px;
+  padding-bottom: 10px;
 }
 
 #nav ul li:before {
@@ -88,7 +88,7 @@
   margin-right: 0;
 }
 
-#nav ul li a, #about-more {
+#nav ul li a, #about-more, #educate-more {
   font-family: 'Gotham 4r', sans-serif;
   font-size: 18px;
   color: white;
@@ -96,13 +96,13 @@
   text-decoration: none;
 }
 
-#about-more {
-  width: 90px;
+#about-more, #educate-more {
+  /*width: 100px;*/
   cursor: pointer;
 }
 
-#nav ul li a:hover, #about-more:hover {
-  border-bottom: solid 2px #ff8a00;
+#nav ul li a:hover, #about-more:hover, #educate-more:hover {
+  opacity: .8;
 }
 
 #nav-hamburger {
@@ -113,16 +113,17 @@
   margin-top: 8px;
 }
 
-.about-nav li a {
+.about-nav li a, .educate-nav li a {
   margin-left: 20px;
 }
 
-#more, #less {
-  font-size: 25px;
+#about-down, #about-up, #educate-up, #educate-down {
+  font-size: 30px;
+  float: right;
 }
 
-#less {
-  display: none; 
+#about-up, #educate-up {
+  display: none;
 }
 
 @media (max-width: 992px) {
@@ -134,23 +135,27 @@
     position: relative;
   }
 
-  #nav ul.hide-responsive-menu, .hide-about {
+  #nav ul.hide-responsive-menu, .hide-about, .hide-educate {
     display: none;
   }
 
   #nav ul {
     position: absolute;
     top: 3em;
-    background-color: rgba(0, 178, 192, .9);
+    background-color: #00b2c0;
     z-index: 99;
     max-height: 70vh;
     overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   #nav ul li {
     display: block;
     float: none;
-    margin: 1em 2em 1em 1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 25px;
     white-space: normal;
     overflow: visible;
   }

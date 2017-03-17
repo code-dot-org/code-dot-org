@@ -14,7 +14,31 @@
           %li
             %a{href: '/student'} Learn
           %li
-            %a{href: '/educate'} Teach
+            #educate-more
+              Teach
+              %i#educate-down{class: "fa fa-caret-down"}
+              %i#educate-up{class: "fa fa-caret-up"}
+          %span.educate-nav.hide-educate
+            %li
+              %a{:href => '/educate'} Educator Overview
+            %li
+              %a{:href => '/educate/curriculum/elementary-school'} Elementary School
+            %li
+              %a{:href => '/educate/curriculum/middle-school'} Middle School
+            %li
+              %a{:href => 'educate/curriculum/high-school'} High School
+            %li
+              %a{:href => 'https://hourofcode.com'} Hour of Code
+            %li
+              %a{:href => '/educate/partner'} Partner with Us
+            %li
+              %a{:href => '/educate/curriculum/3rd-party'} Beyond Code.org
+            %li
+              %a{:href => '/educate/resources/inspire'} Inspire a Student
+            %li
+              %a{:href => '/educate/community'} Online Community
+            %li
+              %a{:href => '/educate/resources/videos'} Tools and Videos
           %li
             %a{href: '/promote'} Stats
           %li
@@ -22,8 +46,8 @@
           %li
             #about-more
               About
-              %i#more{class: "fa fa-caret-down"}
-              %i#less{class: "fa fa-caret-up"}
+              %i#about-down{class: "fa fa-caret-down"}
+              %i#about-up{class: "fa fa-caret-up"}
           %span.about-nav.hide-about
             %li
               %a{:href => '/about'} About Us

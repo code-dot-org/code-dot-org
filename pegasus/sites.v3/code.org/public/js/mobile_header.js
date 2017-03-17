@@ -5,9 +5,16 @@ $(function () {
   });
 
   $('#about-more').click(function (e){
-    $('#nav ul span').slideToggle();
-    $('#more').toggle();
-    $('#less').toggle();
+    $('#nav ul .about-nav').slideToggle();
+    $('#about-down').toggle();
+    $('#about-up').toggle();
+    e.preventDefault();
+  });
+
+  $('#educate-more').click(function (e){
+    $('#nav ul .educate-nav').slideToggle();
+    $('#educate-down').toggle();
+    $('#educate-up').toggle();
     e.preventDefault();
   });
 
