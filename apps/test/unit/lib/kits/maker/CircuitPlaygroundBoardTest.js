@@ -43,6 +43,8 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   afterEach(() => {
+    playground = undefined;
+    board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
   });
 
@@ -123,6 +125,30 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         board.destroy();
         expect(playground.reset).to.have.been.calledOnce;
+      });
+    });
+
+    it('lets playground-io register its sysex response handler each time', () => {
+      // This test covers a fix for a known accelerometer issue, where the
+      // handler for accelerometer data is from the first Playground object
+      // created on the page.
+      // This is a fragile approach to testing this fix, but reproducing the
+      // real problem in tests is going to be near-impossible since we stub
+      // Firmata at the webpack layer in our tests.
+      expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
+      return board.connect().then(() => {
+        expect(playground.sysexResponse).to.have.been.calledTwice;
+        expect(Playground.hasRegisteredSysexResponse).to.be.true;
+        board.destroy();
+        expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
+
+        const newBoard = new CircuitPlaygroundBoard();
+        expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
+        return newBoard.connect().then(() => {
+          // Connecting creates new a new playground transport, and a new spy
+          expect(playground.sysexResponse).to.have.been.calledTwice;
+          expect(Playground.hasRegisteredSysexResponse).to.be.true;
+        });
       });
     });
   });

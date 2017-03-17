@@ -4,7 +4,7 @@ require 'chronic'
 # Utility functions to generate cron expressions.
 module Cdo
   class Cron
-    DEFAULT_TIME_ZONE = 'Pacific Time (US & Canada)'
+    DEFAULT_TIME_ZONE = 'Pacific Time (US & Canada)'.freeze
 
     # Convert 'weekdays at [time_str]' (Pacific Time) to UTC cron syntax.
     def self.weekdays_at(time_str, time_zone: DEFAULT_TIME_ZONE)

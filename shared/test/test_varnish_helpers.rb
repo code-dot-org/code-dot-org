@@ -70,7 +70,7 @@ if (a == true) {
 }
 STR
   end
-  HEADERS = REMOVED_HEADERS.map{|x| x.split(':')[0]}
+  HEADERS = REMOVED_HEADERS.map{|x| x.split(':')[0]}.freeze
   BEHAVIOR = {
     dashboard: {
       behaviors: [],
@@ -91,7 +91,7 @@ STR
       ],
       default: {cookies: 'none', headers: HEADERS}
     }
-  }
+  }.freeze
 
   def test_setup_behavior
     output = setup_behavior(BEHAVIOR, 'req', &method(:process_request))
