@@ -6,8 +6,13 @@ import codegen from '../../../codegen';
 import {getStore} from '../../../redux';
 import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
 import * as commands from './commands';
+import * as dropletConfig from './dropletConfig';
+import MakerError, {ConnectionCanceledError} from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
+
+// Re-export some modules so consumers only need this 'toolkit' module
+export {dropletConfig, MakerError};
 
 /**
  * @type {CircuitPlaygroundBoard} The current board controller, populated when
@@ -39,8 +44,10 @@ export function isEnabled() {
  *   Resolves (with no value) when connection is successful and the board
  *   controller is ready to use.
  *   Resolves immediately if maker toolkit is disabled.
- *   Rejects...
- * TODO Describe this better
+ *   Rejects with a MakerError when the connection process is cancelled or
+ *   fails in an expected way that we handle gracefully (for example, no board
+ *   plugged in).
+ *   Rejects with a plain Error if something more unexpected happens.
  */
 export function connect({interpreter, onDisconnect}) {
   if (!isEnabled()) {
@@ -58,12 +65,18 @@ export function connect({interpreter, onDisconnect}) {
 
   return findPortWithViableDevice()
       .then(port => {
-        // TODO: Reject if trying to cancel.
+        if (!isConnecting()) {
+          // Must've called reset() - exit the promise chain.
+          return Promise.reject(new ConnectionCanceledError());
+        }
         currentBoard = new CircuitPlaygroundBoard(port);
         return currentBoard.connect();
       })
       .then(() => {
-        // TODO: Reject if trying to cancel.
+        if (!isConnecting()) {
+          // Must've called reset() - exit the promise chain.
+          return Promise.reject(new ConnectionCanceledError());
+        }
         commands.injectBoardController(currentBoard);
         currentBoard.installOnInterpreter(codegen, interpreter);
         if (typeof onDisconnect === 'function') {
@@ -71,13 +84,20 @@ export function connect({interpreter, onDisconnect}) {
         }
         dispatch(redux.reportConnected());
       })
-      .catch(() => {
-        // TODO: Handle cancellation differently from other errors.
-        // Still reject in both cases though, so the resulting code
-        // doesn't continue to the next step (running the interpreter)
-        dispatch(redux.reportConnectionError());
-        return Promise.reject(new Error('Maker Toolkit was unable to connect to a board.'));
+      .catch(error => {
+        if (error instanceof ConnectionCanceledError) {
+          // This was intentional, and we don't need an error screen.
+          return Promise.reject(error);
+        } else {
+          // Something went wrong, so show the error screen.
+          dispatch(redux.reportConnectionError());
+          return Promise.reject(error);
+        }
       });
+}
+
+function isConnecting() {
+  return redux.isConnecting(getStore().getState());
 }
 
 /**
