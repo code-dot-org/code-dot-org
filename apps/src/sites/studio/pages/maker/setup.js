@@ -42,19 +42,8 @@ const BoardSetupStatus = React.createClass({
   detect() {
     this.setState({...this.getInitialState(), isDetecting: true});
 
-    if (!isChrome()) {
-      this.fail(STATUS_IS_CHROME);
-      return;
-    }
-
     if (!isWindows()) {
       this.hide(STATUS_WINDOWS_DRIVERS);
-    }
-
-    if (gtChrome33()) {
-      this.succeed(STATUS_IS_CHROME);
-    } else {
-      this.fail(STATUS_IS_CHROME);
     }
 
     let portName = null;
@@ -62,52 +51,133 @@ const BoardSetupStatus = React.createClass({
 
     Promise.resolve()
 
+        // Are we using a compatible browser?
+        .then(() => this.detectChromeVersion())
+
         // Is Chrome App Installed?
-        .then(() => this.spin(STATUS_APP_INSTALLED))
-        .then(() => promiseWaitFor(200)) // Artificial delay feels better
-        .then(() =>
-            ensureAppInstalled()
-                .then(() => this.succeed(STATUS_APP_INSTALLED))
-                .catch(error => this.fail(STATUS_APP_INSTALLED))
-        )
+        .then(() => this.detectChromeAppInstalled())
 
         // Is board plugged in?
-        .then(() => this.spin(STATUS_BOARD_PLUG))
-        .then(() => promiseWaitFor(200)) // Artificial delay feels better
-        .then(() =>
-            findPortWithViableDevice()
-                .then(usablePort => {
-                  portName = usablePort;
-                  this.succeed(STATUS_BOARD_PLUG);
-                })
-                .catch(error => this.fail(STATUS_BOARD_PLUG))
-        )
+        .then(() => this.detectBoardPluggedIn())
+        .then(usablePort => portName = usablePort)
 
         // Can we talk to the firmware?
-        .then(() => this.spin(STATUS_BOARD_CONNECT))
-        .then(() => {
-              boardController = new CircuitPlaygroundBoard(portName);
-              return boardController.connectToFirmware()
-                  .then(() => this.succeed(STATUS_BOARD_CONNECT))
-                  .catch(error => this.fail(STATUS_BOARD_CONNECT));
-            }
-        )
+        .then(() => this.detectCorrectFirmware(portName))
+        .then(board => boardController = board)
 
         // Can we initialize components successfully?
-        .then(() => this.spin(STATUS_BOARD_COMPONENTS))
-        .then(() => promiseWaitFor(200)) // Artificial delay feels better
-        .then(() => boardController.initializeComponents())
-        .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
-        .then(() => boardController.celebrateSuccessfulConnection())
-        .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
+        .then(() => this.detectComponentsInitialize(boardController))
+
+        // Everything looks good, let's par-tay!
+        .then(() => this.celebrate(boardController))
+
+        // If anything goes wrong along the way, we'll end up in this
+        // catch clause - make sure to report the error out.
         .catch(error => {
           console.log(error);
-          this.fail(STATUS_BOARD_COMPONENTS);
+          // TODO (bbuchanan): Report error with survey, and maybe to analytics too.
         })
 
-        // Put the board back in its original state, if possible
-        .then(() => boardController.destroy())
-        .then(() => this.setState({isDetecting: false}));
+        // Finally...
+        .then(() => {
+          if (boardController) {
+            boardController.destory();
+            boardController = null;
+          }
+          portName = null;
+          this.setState({isDetecting: false});
+        });
+  },
+
+  detectChromeVersion() {
+    this.spin(STATUS_IS_CHROME);
+    return promiseWaitFor(200)
+        .then(() => {
+          if (!isChrome()) {
+            return Promise.reject(new Error('Not using Chrome'));
+          }
+
+          if (!gtChrome33()) {
+            return Promise.reject(new Error('Not using Chrome > v33'));
+          }
+
+          this.succeed(STATUS_IS_CHROME);
+        })
+        .catch(error => {
+          this.fail(STATUS_IS_CHROME);
+          return Promise.reject(error);
+        });
+  },
+
+  /**
+   * @return {Promise}
+   */
+  detectChromeAppInstalled() {
+    this.spin(STATUS_APP_INSTALLED);
+    return promiseWaitFor(200)
+        .then(ensureAppInstalled)
+        .then(() => this.succeed(STATUS_APP_INSTALLED))
+        .catch(error => {
+          this.fail(STATUS_APP_INSTALLED);
+          return Promise.reject(error);
+        });
+  },
+
+  /**
+   * @return {Promise.<string>} Resolves to usable port name
+   */
+  detectBoardPluggedIn() {
+    this.spin(STATUS_BOARD_PLUG);
+    return promiseWaitFor(200)
+        .then(findPortWithViableDevice)
+        .then(portName => {
+          this.succeed(STATUS_BOARD_PLUG);
+          return portName;
+        })
+        .catch(error => {
+          this.fail(STATUS_BOARD_PLUG);
+          return Promise.reject(error);
+        });
+  },
+
+  /**
+   * @return {Promise.<CircuitPlaygroundBoard>}
+   */
+  detectCorrectFirmware(portName) {
+    this.spin(STATUS_BOARD_CONNECT);
+    const boardController = new CircuitPlaygroundBoard(portName);
+    return boardController.connectToFirmware()
+        .then(() => {
+          this.succeed(STATUS_BOARD_CONNECT);
+          return boardController;
+        })
+        .catch(error => {
+          this.fail(STATUS_BOARD_CONNECT);
+          return Promise.reject(error);
+        });
+  },
+
+  /**
+   * @return {Promise}
+   */
+  detectComponentsInitialize(boardController) {
+    this.spin(STATUS_BOARD_COMPONENTS);
+    return promiseWaitFor(200)
+        .then(() => boardController.initializeComponents())
+        .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
+        .catch(error => {
+          this.fail(STATUS_BOARD_COMPONENTS);
+          return Promise.reject(error);
+        });
+  },
+
+  /**
+   * @return {Promise}
+   */
+  celebrate(boardController) {
+    this.thumb(STATUS_BOARD_COMPONENTS);
+    return boardController.celebrateSuccessfulConnection()
+        .then(() => this.succeed(STATUS_BOARD_COMPONENTS));
   },
 
   /**
