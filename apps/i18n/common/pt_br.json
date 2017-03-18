@@ -357,6 +357,7 @@
   "studentName": "Student Name",
   "usingHints": "Using hints",
   "usingTooManyBlocks": "Using too many blocks",
+  "usingOneHint": "Using just one hint!",
   "viewLessonPlan": "View Lesson Plan",
   "withoutHints": "Without using any hints!"
 }

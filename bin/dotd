@@ -237,7 +237,6 @@ def do_dtt_subroutine
         head: 'staging',
         title: 'DTT (Staging > Test)'
       )
-      new_sha_abbr = GitHub.sha('test')[0, 7]
       url = GitHub.url(pr_number)
       wait_for "DTT (#{url}) to complete, re-run / investigate failures"
 
@@ -246,7 +245,8 @@ def do_dtt_subroutine
       end
 
       should_i 'update test room status with green commit and timestamp' do
-        InfraTestTopic.set_green_commit new_sha_abbr
+        new_sha = GitHub.sha 'test'
+        InfraTestTopic.set_green_commit new_sha
       end
     end
   end
@@ -270,8 +270,8 @@ def main
       GitHub.create_and_merge_pull_request(
         base: 'staging', head: 'levelbuilder', title: 'DTS (Levelbuilder > Staging)'
       )
-      new_sha_abbr = GitHub.sha('staging')[0, 7]
-      wait_for "staging to finish building with sha #{new_sha_abbr}."
+      new_sha = GitHub.sha 'staging'
+      wait_for "staging to finish building with sha #{new_sha}."
       should_i 'commit content changes from staging again, to prevent dsls.en.yml issues for the next DotD' do
         content_push 'staging', 'staging'
       end
@@ -308,6 +308,10 @@ def main
     wait_for 'DTP to finish'
     should_i 'reset DTP message to yes' do
       DevelopersTopic.set_dtp 'yes'
+    end
+    should_i 'update Slack#infra-production topic' do
+      sha = GitHub.sha 'production'
+      Slack.set_dtp_commit(sha)
     end
 
     puts_after_dtp_tasks
