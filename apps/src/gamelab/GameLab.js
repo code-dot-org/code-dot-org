@@ -23,6 +23,10 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
+import {
+  initializeSubmitHelper,
+  onSubmitComplete
+} from '../submitHelper';
 var dom = require('../dom');
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 
@@ -254,6 +258,12 @@ GameLab.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
     }
 
+    initializeSubmitHelper({
+      studioApp: this.studioApp_,
+      onPuzzleComplete: this.onPuzzleComplete.bind(this),
+      unsubmitUrl: this.level.unsubmitUrl
+    });
+
     this.setCrosshairCursorForPlaySpace();
   }.bind(this);
 
@@ -285,6 +295,9 @@ GameLab.prototype.init = function (config) {
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
     isIframeEmbed: !!config.level.iframeEmbed,
+    isProjectLevel: !!config.level.isProjectLevel,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted,
   });
 
   if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
@@ -477,7 +490,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function () {
+GameLab.prototype.onPuzzleComplete = function (submit ) {
   if (this.executionError) {
     this.result = this.studioApp_.ResultType.ERROR;
   } else {
@@ -527,7 +540,7 @@ GameLab.prototype.onPuzzleComplete = function () {
   this.waitingForReport = true;
 
   const sendReport = () => {
-    const onComplete = this.onReportComplete.bind(this);
+    const onComplete = submit ? onSubmitComplete : this.onReportComplete.bind(this);
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
@@ -539,9 +552,9 @@ GameLab.prototype.onPuzzleComplete = function () {
         level: this.level.id,
         result: levelComplete,
         testResult: this.testResults,
+        submitted: submit,
         program: program,
         image: this.encodedFeedbackImage,
-        submitted: false,
         onComplete
       });
     }
@@ -565,10 +578,6 @@ GameLab.prototype.onPuzzleComplete = function () {
       }.bind(this)
     });
   }
-};
-
-GameLab.prototype.onSubmitComplete = function (response) {
-  window.location.href = response.redirect;
 };
 
 /**
@@ -598,6 +607,9 @@ GameLab.prototype.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+
+    // Adding completion button changes layout.  Force a resize.
+    this.studioApp_.onResize();
   }
 
   postContainedLevelAttempt(this.studioApp_);

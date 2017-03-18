@@ -296,9 +296,9 @@ class Script < ActiveRecord::Base
   def self.get_from_cache(id)
     return get_without_cache(id) unless should_cache?
 
-    self.script_cache.fetch(id.to_s) do
+    script_cache.fetch(id.to_s) do
       # Populate cache on miss.
-      self.script_cache[id.to_s] = get_without_cache(id)
+      script_cache[id.to_s] = get_without_cache(id)
     end
   end
 
@@ -311,12 +311,11 @@ class Script < ActiveRecord::Base
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        unless level.contained_levels.empty?
-          text_response_levels << {
-            script_level: script_level,
-            levels: [level.contained_levels.first]
-          }
-        end
+        next if level.contained_levels.empty?
+        text_response_levels << {
+          script_level: script_level,
+          levels: [level.contained_levels.first]
+        }
       end
     end
 

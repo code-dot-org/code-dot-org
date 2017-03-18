@@ -50,7 +50,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       if @enrollment.update enrollment_params
         Pd::WorkshopMailer.teacher_enrollment_receipt(@enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(@enrollment).deliver_now
-        redirect_to action: :show, code: @enrollment.code, controller: 'pd/workshop_enrollment'
+        redirect_to action: :thanks, code: @enrollment.code, controller: 'pd/workshop_enrollment'
       else
         render :new
       end
@@ -59,6 +59,16 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   # GET /pd/workshop_enrollment/:code
   def show
+    @enrollment = ::Pd::Enrollment.find_by_code params[:code]
+    if @enrollment.nil?
+      render_404
+    else
+      @cancel_url = url_for action: :cancel, code: @enrollment.code
+      @workshop = @enrollment.workshop
+    end
+  end
+
+  def thanks
     @enrollment = ::Pd::Enrollment.find_by_code params[:code]
     if @enrollment.nil?
       render_404

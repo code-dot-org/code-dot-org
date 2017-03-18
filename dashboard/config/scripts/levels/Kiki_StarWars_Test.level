@@ -1,0 +1,99 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2017-03-11T02:40:55.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "hoc2015",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "false",
+    "maze": "[[16,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "display_name": "Star Wars Project Prototype",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+        <block type="studio_setBackground">
+          <title name="VALUE">"endor"</title>
+        </block>
+        <block type="studio_whenGetCharacter">
+          <title name="VALUE">any_item</title>
+        </block>
+        <block type="studio_setMap">
+          <title name="VALUE">"circle"</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"r2-d2"</title>
+        </block>
+        <block type="studio_whenGetAllCharacters"/>
+        <block type="studio_setDroidSpeed">
+          <title name="VALUE">normal</title>
+        </block>
+        <block type="studio_whenGetAllCharacterClass">
+          <title name="VALUE">pufferpig</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">R2-D2random</title>
+        </block>
+        <block type="studio_whenUp" deletable="false"/>
+        <block type="studio_whenTouchObstacle"/>
+        <block type="studio_whenDown" deletable="false"/>
+        <block type="studio_setMap">
+          <title name="VALUE">blank</title>
+        </block>
+        <block type="studio_addCharacter">
+          <title name="VALUE">"stormtrooper"</title>
+        </block>
+        <block type="studio_whenLeft" deletable="false"/>
+        <block type="studio_setItemSpeed">
+          <title name="CLASS">"stormtrooper"</title>
+          <title name="VALUE">"slow"</title>
+        </block>
+        <block type="studio_whenRight" deletable="false"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

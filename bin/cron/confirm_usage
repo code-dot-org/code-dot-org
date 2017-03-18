@@ -62,11 +62,10 @@ def main
   KEY_VALUE_CHECKS.each do |table, duration_min, db, column, column_value|
     delta_sec = Time.now - db[table].where(column => column_value).order(:id).limit(1).last[:created_at]
     threshold_sec = duration_min * SECONDS_PER_MINUTE
-    if delta_sec > threshold_sec
-      alert "#{table.to_s.upcase} KEY-VALUE CREATION: "\
-        "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since "\
-        "last #{table} creation with column #{column} having value #{column_value}."
-    end
+    next unless delta_sec > threshold_sec
+    alert "#{table.to_s.upcase} KEY-VALUE CREATION: "\
+      "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since "\
+      "last #{table} creation with column #{column} having value #{column_value}."
   end
 
   # Verify emails are being sent. Alert if (a) an email has not been sent for

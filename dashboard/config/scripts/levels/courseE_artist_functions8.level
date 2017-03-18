@@ -13,7 +13,6 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "instructions": "Challenge: Create as many functions as you think you need to make this drawing of 50 pixel squares.",
-    "ideal": "0",
     "embed": "false",
     "markdown_instructions": "**Challenge:** Did you know that you can call functions from *inside* other functions?!\r\n\r\nCreate as many functions as you think you need to make this drawing of 50 pixel squares.",
     "disable_param_editing": "true",
@@ -36,6 +35,8 @@
     "discard_background": "false",
     "instructions_important": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_artist_functions8_1\",\r\n  \"callout_text\": \"Your blocks to create functions have been moved under this label in the toolbox.\",\r\n  \"element_id\": \"[id=':4.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -47,53 +48,26 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="draw_move" inline="true" limit="1">
+          <block type="draw_move_by_constant" limit="1">
             <title name="DIR">moveForward</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">100</title>
           </block>
-          <block type="jump" inline="true">
+          <block type="jump_by_constant">
             <title name="DIR">jumpForward</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">100</title>
           </block>
-          <block type="draw_turn" inline="true">
+          <block type="draw_turn_by_constant">
             <title name="DIR">turnRight</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">90</title>
           </block>
-          <block type="draw_turn" inline="true">
+          <block type="draw_turn_by_constant">
             <title name="DIR">turnLeft</title>
-            <value name="VALUE">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
+            <title name="VALUE">90</title>
           </block>
         </category>
         <category name="Brushes">
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">???</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_width" inline="false">
-            <value name="WIDTH">
-              <block type="math_number">
-                <title name="NUM">1</title>
-              </block>
-            </value>
+          <block type="draw_width_inline">
+            <title name="WIDTH">1</title>
           </block>
           <block type="draw_colour" inline="true">
             <value name="COLOUR">
@@ -107,42 +81,10 @@
               <block type="colour_random"/>
             </value>
           </block>
-          <block type="alpha" inline="true" id="alpha">
-            <value name="VALUE">
-              <block type="math_number_dropdown">
-                <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
-              </block>
-            </value>
-          </block>
-          <block type="draw_colour" inline="true" id="draw-color">
-            <value name="COLOUR">
-              <block type="colour_rgb" inline="false">
-                <value name="RED">
-                  <block type="math_number">
-                    <title name="NUM">255</title>
-                  </block>
-                </value>
-                <value name="GREEN">
-                  <block type="math_number">
-                    <title name="NUM">255</title>
-                  </block>
-                </value>
-                <value name="BLUE">
-                  <block type="math_number">
-                    <title name="NUM">255</title>
-                  </block>
-                </value>
-              </block>
-            </value>
-          </block>
         </category>
         <category name="Loops">
-          <block type="controls_repeat_ext" inline="true">
-            <value name="TIMES">
-              <block type="math_number">
-                <title name="NUM">3</title>
-              </block>
-            </value>
+          <block type="controls_repeat">
+            <title name="TIMES">4</title>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
@@ -157,82 +99,46 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
-                <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
               <statement name="DO">
                 <block type="procedures_callnoreturn">
                   <mutation name="draw a line of squares"/>
                   <next>
-                    <block type="draw_turn" inline="true">
+                    <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">90</title>
-                        </block>
-                      </value>
+                      <title name="VALUE">90</title>
                       <next>
-                        <block type="jump" inline="true">
+                        <block type="jump_by_constant">
                           <title name="DIR">jumpForward</title>
-                          <value name="VALUE">
-                            <block type="math_number">
-                              <title name="NUM">50</title>
-                            </block>
-                          </value>
+                          <title name="VALUE">50</title>
                           <next>
-                            <block type="draw_turn" inline="true">
+                            <block type="draw_turn_by_constant">
                               <title name="DIR">turnLeft</title>
-                              <value name="VALUE">
-                                <block type="math_number">
-                                  <title name="NUM">90</title>
-                                </block>
-                              </value>
+                              <title name="VALUE">90</title>
                               <next>
-                                <block type="jump" inline="true">
+                                <block type="jump_by_constant">
                                   <title name="DIR">jumpBackward</title>
-                                  <value name="VALUE">
-                                    <block type="math_number">
-                                      <title name="NUM">250</title>
-                                    </block>
-                                  </value>
+                                  <title name="VALUE">250</title>
                                   <next>
                                     <block type="procedures_callnoreturn">
                                       <mutation name="draw a line of squares"/>
                                       <next>
-                                        <block type="draw_turn" inline="true">
+                                        <block type="draw_turn_by_constant">
                                           <title name="DIR">turnRight</title>
-                                          <value name="VALUE">
-                                            <block type="math_number">
-                                              <title name="NUM">90</title>
-                                            </block>
-                                          </value>
+                                          <title name="VALUE">90</title>
                                           <next>
-                                            <block type="jump" inline="true">
+                                            <block type="jump_by_constant">
                                               <title name="DIR">jumpForward</title>
-                                              <value name="VALUE">
-                                                <block type="math_number">
-                                                  <title name="NUM">50</title>
-                                                </block>
-                                              </value>
+                                              <title name="VALUE">50</title>
                                               <next>
-                                                <block type="draw_turn" inline="true">
+                                                <block type="draw_turn_by_constant">
                                                   <title name="DIR">turnLeft</title>
-                                                  <value name="VALUE">
-                                                    <block type="math_number">
-                                                      <title name="NUM">90</title>
-                                                    </block>
-                                                  </value>
+                                                  <title name="VALUE">90</title>
                                                   <next>
-                                                    <block type="jump" inline="true">
+                                                    <block type="jump_by_constant">
                                                       <title name="DIR">jumpBackward</title>
-                                                      <value name="VALUE">
-                                                        <block type="math_number">
-                                                          <title name="NUM">350</title>
-                                                        </block>
-                                                      </value>
+                                                      <title name="VALUE">350</title>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -260,23 +166,15 @@
           <mutation/>
           <title name="NAME">draw a line of squares</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
-                <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
               <statement name="DO">
                 <block type="procedures_callnoreturn">
                   <mutation name="draw square"/>
                   <next>
-                    <block type="jump" inline="true">
+                    <block type="jump_by_constant">
                       <title name="DIR">jumpForward</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">100</title>
-                        </block>
-                      </value>
+                      <title name="VALUE">100</title>
                     </block>
                   </next>
                 </block>
@@ -288,28 +186,16 @@
           <mutation/>
           <title name="NAME">draw square</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
-                <block type="math_number">
-                  <title name="NUM">4</title>
-                </block>
-              </value>
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
               <statement name="DO">
-                <block type="draw_move" inline="true">
+                <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">50</title>
-                    </block>
-                  </value>
+                  <title name="VALUE">50</title>
                   <next>
-                    <block type="draw_turn" inline="true">
+                    <block type="draw_turn_by_constant">
                       <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_number">
-                          <title name="NUM">90</title>
-                        </block>
-                      </value>
+                      <title name="VALUE">90</title>
                     </block>
                   </next>
                 </block>

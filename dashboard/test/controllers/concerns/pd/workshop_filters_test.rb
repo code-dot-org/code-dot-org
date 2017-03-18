@@ -8,67 +8,211 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   setup do
-    @params = {}
+    @params = ActionController::Parameters.new
     FakeController.any_instance.stubs(params: @params)
 
     @user = mock
-    @user.expects(admin?: true)
+    @user.stubs(admin?: true)
     FakeController.any_instance.stubs(current_user: @user)
 
     @workshop_query = mock
-    Pd::Workshop.stubs(:in_state).with('Ended').returns(@workshop_query)
-
     @controller = FakeController.new
   end
 
-  test 'defaults' do
+  test 'load_filtered_ended_workshops defaults' do
     set_default_date_expectations
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
-  test 'organizer view' do
+  test 'load_filtered_ended_workshops organizer view' do
     set_default_date_expectations
     @user.unstub :admin?
     @user.expects admin?: false
     expects(:organized_by).with(@user)
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
-  test 'query by start' do
+  test 'load_filtered_ended_workshops query by start' do
     start_date = mock
     end_date = mock
-    expects(:start_on_or_after).with(start_date)
-    expects(:start_on_or_before).with(end_date)
+    expects(:scheduled_start_on_or_after).with(start_date)
+    expects(:scheduled_start_on_or_before).with(end_date)
     params start: start_date, end: end_date, query_by: 'schedule'
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
-  test 'query by end' do
+  test 'load_filtered_ended_workshops query by end' do
     start_date = mock
     end_date = mock
-
     expects(:end_on_or_after).with(start_date)
     expects(:end_on_or_before).with(end_date)
 
     params start: start_date, end: end_date, query_by: 'end'
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
-  test 'include course' do
+  test 'load_filtered_ended_workshops include course' do
     set_default_date_expectations
     expects(:where).with(course: Pd::Workshop::COURSE_CSF)
 
     params course: 'csf'
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
   end
 
-  test 'exclude course' do
+  test 'load_filtered_ended_workshops exclude course' do
     set_default_date_expectations
     expects :where
     expects(:not).with(course: Pd::Workshop::COURSE_CSF)
 
     params course: '-csf'
-    @controller.load_filtered_ended_workshops
+    load_filtered_ended_workshops
+  end
+
+  test 'filter_workshops default' do
+    # Since @workshop_query is a mock with no expectations, this verifies that no filters are applied.
+    # It will fail with "Minitest::Assertion: unexpected invocation" if any calls are made to @workshop_query.
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with state' do
+    expects(:in_state).with('Not Started', error_on_bad_state: false)
+    params state: 'Not Started'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with start and end' do
+    start_date = Date.today.to_s
+    end_date = (Date.today + 1.day).to_s
+    expects(:start_on_or_after).with(start_date)
+    expects(:start_on_or_before).with(end_date)
+
+    params start: start_date, end: end_date
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with invalid start date raises error' do
+    params start: 'invalid'
+    assert_raises ArgumentError do
+      @controller.filter_workshops @workshop_query
+    end
+  end
+
+  test 'filter_workshops with invalid end date raises error' do
+    params end: 'invalid'
+    assert_raises ArgumentError do
+      @controller.filter_workshops @workshop_query
+    end
+  end
+
+  test 'filter_workshops with unparseable order_by raises error' do
+    params order_by: 'this is too many words'
+    e = assert_raises ArgumentError do
+      @controller.filter_workshops @workshop_query
+    end
+    assert e.message.start_with? 'Unable to parse order_by param:'
+  end
+
+  test 'filter_workshops with invalid order_by raises error' do
+    params order_by: 'invalid'
+    e = assert_raises ArgumentError do
+      @controller.filter_workshops @workshop_query
+    end
+    assert e.message.start_with? 'Invalid order_by field:'
+  end
+
+  test 'filter_workshops with course' do
+    expects(:where).with(course: Pd::Workshop::COURSE_CSF)
+    params course: Pd::Workshop::COURSE_CSF
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with subject' do
+    expects(:where).with(subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)
+    params subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with organizer id' do
+    expects(:where).with(organizer_id: 123)
+    params organizer_id: 123
+    @controller.filter_workshops @workshop_query
+  end
+
+  # Normal sort fields
+  %w(location_name workshop_type course subject).each do |sort_field|
+    test "filter_workshops with order_by #{sort_field}" do
+      expects(:order).with(sort_field)
+      params order_by: sort_field
+      @controller.filter_workshops @workshop_query
+    end
+
+    test "filter_workshops with order_by #{sort_field} desc" do
+      expects(:order).with(sort_field + ' desc')
+      params order_by: sort_field + ' desc'
+      @controller.filter_workshops @workshop_query
+    end
+  end
+
+  # Specialty sort fields
+  test 'filter_workshops with order_by date' do
+    expects(:order_by_scheduled_start).with(desc: false)
+    params order_by: 'date'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with order_by date desc' do
+    expects(:order_by_scheduled_start).with(desc: true)
+    params order_by: 'date desc'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with order_by enrollments' do
+    expects(:order_by_enrollment_count).with(desc: false)
+    params order_by: 'enrollments'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with order_by enrollments desc' do
+    expects(:order_by_enrollment_count).with(desc: true)
+    params order_by: 'enrollments desc'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with order_by state' do
+    expects(:order_by_state).with(desc: false)
+    params order_by: 'state'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_workshops with order_by state desc' do
+    expects(:order_by_state).with(desc: true)
+    params order_by: 'state desc'
+    @controller.filter_workshops @workshop_query
+  end
+
+  test 'filter_params contains only supplied params' do
+    params state: Pd::Workshop::STATE_IN_PROGRESS, course: Pd::Workshop::COURSE_CSF
+    assert_equal %w[state course], @controller.filter_params.keys
+  end
+
+  test 'filter_params does not contain unexpected params' do
+    params unexpected: 'irrelevant'
+    assert_empty @controller.filter_params.keys
+  end
+
+  test 'filter_params accepts all filters' do
+    expected_keys = [
+      :state,
+      :start,
+      :end,
+      :course,
+      :subject,
+      :organizer_id,
+      :order_by
+    ]
+
+    params expected_keys.map{|k| [k, 'some value']}.to_h
+    assert_equal expected_keys.map(&:to_s), @controller.filter_params.keys
   end
 
   private
@@ -77,10 +221,17 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
     @params.merge!(additional_params)
   end
 
+  # Sets up expectation for Pd::Workshop.in_state('Ended') to return the mocked @workshop_query and calls
+  # @controller.load_filtered_ended_workshops
+  def load_filtered_ended_workshops
+    Pd::Workshop.expects(:in_state).with('Ended').returns(@workshop_query)
+    @controller.load_filtered_ended_workshops
+  end
+
   # Defaults to 1 week ending today by scheduled start date
   def set_default_date_expectations
-    expects(:start_on_or_before).with(Date.today)
-    expects(:start_on_or_after).with(Date.today - 1.week)
+    expects(:scheduled_start_on_or_before).with(Date.today)
+    expects(:scheduled_start_on_or_after).with(Date.today - 1.week)
   end
 
   def expects(method_name)

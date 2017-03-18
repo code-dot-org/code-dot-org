@@ -108,6 +108,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - sensors love tester template",
+    "markdown_instructions": "# \"Love\" Tester: Finishing it Up\r\n\r\nDoes your app meet the minimum requirements of its objective?\r\n\r\n# Do This\r\n\r\nAdd the finishing touches to your app. Return to your planning guide to make sure that the app meets your initial goals.",
     "contained_level_names": null
   },
   "published": true,

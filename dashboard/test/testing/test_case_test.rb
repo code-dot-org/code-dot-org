@@ -41,7 +41,7 @@ class TransactionTest < ActiveSupport::TestCase
   # Run three internal TestCases in a fixed secuence.
   class TransactionalTestCasePreTest < ActiveSupport::TestCase
     # Remove this TestCase from the global test runner.
-    self.runnables.delete self
+    runnables.delete self
 
     include ActiveSupport::Testing::SetupAllAndTeardownAll
     fixtures :callout
@@ -52,7 +52,7 @@ class TransactionTest < ActiveSupport::TestCase
   end
 
   class TransactionalTestCaseTest < ActiveSupport::TestCase
-    self.runnables.delete self
+    runnables.delete self
 
     include ActiveSupport::Testing::SetupAllAndTeardownAll
     include ActiveSupport::Testing::TransactionalTestCase
@@ -68,7 +68,7 @@ class TransactionTest < ActiveSupport::TestCase
   end
 
   class TransactionalTestCasePostTest < ActiveSupport::TestCase
-    self.runnables.delete self
+    runnables.delete self
 
     def test_fixture_rolled_back
       assert_equal TransactionTest.count, Callout.count

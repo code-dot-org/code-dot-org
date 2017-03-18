@@ -13,13 +13,12 @@ module MarkdownHandler
       doc = ::Nokogiri::HTML(html)
       nodes = doc.xpath(%w(youtube youtubeeducation).map{|x| "//iframe[@src[contains(.,'#{x}.com/embed')]]"}.join(' | '))
       nodes.each do |node|
-        if node['src']
-          id = node['src'].match(Video::EMBED_URL_REGEX)[:id]
-          node['src'] = node['src'].sub(
-            Video::EMBED_URL_REGEX,
-            Video.embed_url(id)
-          )
-        end
+        next unless node['src']
+        id = node['src'].match(Video::EMBED_URL_REGEX)[:id]
+        node['src'] = node['src'].sub(
+          Video::EMBED_URL_REGEX,
+          Video.embed_url(id)
+        )
       end
       doc.css('body').children.to_html
     end

@@ -165,7 +165,7 @@ window.SchoolInfoManager = function (existingOptions) {
 
   function clearAndHideDistrict() {
     enableDistrictDropdown(false);
-    $("#school-district-other").val(false);
+    $("#school-district-other").prop('checked', false);
     $("#school-district-name").val("");
     closestFormGroupOrItemBlock('#school-district').hide();
     closestFormGroupOrItemBlock('#school-district-name').hide();
@@ -282,6 +282,17 @@ window.SchoolInfoManager = function (existingOptions) {
         show('#school-name');
         show('#school-address');
       }
+    }
+    if (isAfterSchool()) {
+      $("#school-name-title").hide();
+      $("#school-organization-name-title").show();
+      $("#school-zip-title").hide();
+      $("#school-organization-zip-title").show();
+    } else {
+      $("#school-name-title").show();
+      $("#school-organization-name-title").hide();
+      $("#school-zip-title").show();
+      $("#school-organization-zip-title").hide();
     }
   });
 
