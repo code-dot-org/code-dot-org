@@ -169,8 +169,6 @@ function isDraggableContainer(element) {
   return $(element).hasClass('ui-draggable');
 }
 
-var debug = true;
-
 /**
  * Handle a change from our properties table.
  * @param element {Element}
@@ -179,9 +177,6 @@ var debug = true;
  */
 designMode.onPropertyChange = function (element, name, value) {
   console.log("onPropertyChange: " + name + " = " + value);
-  if (debug) {
-    debugger;
-  }
   designMode.updateProperty(element, name, value);
   designMode.editElementProperties(element);
 };
@@ -194,6 +189,7 @@ designMode.onPropertyChange = function (element, name, value) {
  * @param value
  */
 designMode.updateProperty = function (element, name, value) {
+  console.log('updateProperty: ' + name + ' = ' + value);
   // For labels, we need to remember before we change the value if the element was "fitted" around the text or if it was
   // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
   // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
