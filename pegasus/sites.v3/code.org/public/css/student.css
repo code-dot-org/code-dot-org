@@ -101,18 +101,18 @@
 
 @media screen and (min-width: 0px) and (max-width: 512px)
 {
-  .right.col-50-student { margin-bottom: -70px; }
+  .left.col-50-student { height: auto; }
 
-  .col-50-student { width: 500px; float:left; }
+  .col-50-student { width: 100%; float:left; }
 
-  .col-50-student img { width: 380px; margin-bottom: 0px; }
+  .col-50-student img { width: 94vw; margin-bottom: 0px; }
 
-  .side-description-area { margin-top: -85px; width: 380px; height: 245px;}
+  .side-description-area { width: 94vw; margin-top: -30px; }
 
   .description h2 { margin-top: -15px;}
 
   .orange-button, .gray-button {
-    margin-bottom: 105px;
+    margin-bottom: 40px;
   }
 
   .right .side-image, .right .side-description-area {
