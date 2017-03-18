@@ -6,18 +6,13 @@ module Pd::Payment
       # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
       @workshop = create :pd_ended_workshop,
         workshop_type: Pd::Workshop::TYPE_PUBLIC,
-        course: Pd::Workshop::COURSE_ECS,
-        subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
+        course: Pd::Workshop::COURSE_COUNSELOR,
         num_sessions: 3
 
       # 2 facilitators
       2.times do
         @workshop.facilitators << create(:facilitator)
       end
-
-      # One unqualified teacher, below min attendance
-      create :pd_workshop_participant, workshop: @workshop,
-        enrolled: true, in_section: true, attended: [@workshop.sessions.first]
 
       # 10 qualified teachers: 1 at partial (2 days) attendance, and 9 more at full (3 days) attendance
       create :pd_workshop_participant, workshop: @workshop,
@@ -29,11 +24,11 @@ module Pd::Payment
       end
     end
 
-    test 'non-plp' do
+    test 'non-regional partner' do
       workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(@workshop)
 
-      assert_nil workshop_summary.plp
-      assert_equal 11, workshop_summary.num_teachers
+      assert_nil workshop_summary.workshop.regional_partner
+      assert_equal 10, workshop_summary.num_teachers
       assert_equal 10, workshop_summary.num_qualified_teachers
       assert_equal 29, workshop_summary.total_teacher_attendance_days
 
@@ -49,13 +44,15 @@ module Pd::Payment
       assert_equal 2530, payment.total
     end
 
-    test 'plp non-urban' do
-      plp = create :regional_partner, contact: @workshop.organizer, urban: false
+    test 'regional partner non-urban' do
+      rp = create :regional_partner, urban: false
+
+      @workshop.regional_partner = rp
 
       workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(@workshop)
 
-      assert_equal plp, workshop_summary.plp
-      assert_equal 11, workshop_summary.num_teachers
+      assert_equal rp, workshop_summary.workshop.regional_partner
+      assert_equal 10, workshop_summary.num_teachers
       assert_equal 10, workshop_summary.num_qualified_teachers
       assert_equal 29, workshop_summary.total_teacher_attendance_days
 
@@ -71,13 +68,15 @@ module Pd::Payment
       assert_equal 2530, payment.total
     end
 
-    test 'plp urban' do
-      plp = create :regional_partner, contact: @workshop.organizer, urban: true
+    test 'regional partner urban' do
+      rp = create :regional_partner, urban: true
+
+      @workshop.regional_partner = rp
 
       workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(@workshop)
 
-      assert_equal plp, workshop_summary.plp
-      assert_equal 11, workshop_summary.num_teachers
+      assert_equal rp, workshop_summary.workshop.regional_partner
+      assert_equal 10, workshop_summary.num_teachers
       assert_equal 10, workshop_summary.num_qualified_teachers
       assert_equal 29, workshop_summary.total_teacher_attendance_days
 
@@ -91,6 +90,24 @@ module Pd::Payment
       }
       assert_equal expected_payment_amounts, payment.amounts
       assert_equal 3162.5, payment.total
+    end
+
+    test 'no user account' do
+      workshop = create :pd_ended_workshop,
+        workshop_type: Pd::Workshop::TYPE_PUBLIC,
+        course: Pd::Workshop::COURSE_COUNSELOR,
+        num_sessions: 1
+
+      5.times do
+        enrollment = create :pd_enrollment, workshop: workshop
+        create :pd_attendance, session: workshop.sessions.first, enrollment: enrollment
+      end
+
+      workshop_summary = PaymentCalculatorCounselorAdmin.instance.calculate(workshop)
+
+      assert_equal 5, workshop_summary.num_teachers
+      assert_equal 5, workshop_summary.num_qualified_teachers
+      assert_equal 5, workshop_summary.total_teacher_attendance_days
     end
   end
 end

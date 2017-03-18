@@ -12,11 +12,11 @@ const CsFundamentalsSection = React.createClass({
   },
 
   onStartSurveyClick() {
-    window.location = this.props.lastWorkshopSurveyUrl;
+    window.open(this.props.lastWorkshopSurveyUrl, '_blank');
   },
 
   onPrintCertificateClick() {
-    window.location = this.props.printCsfCertificateUrl;
+    window.open(this.props.printCsfCertificateUrl, '_blank');
   },
 
   onOnlineLearningClick() {
@@ -78,15 +78,19 @@ const CsFundamentalsSection = React.createClass({
   render() {
     return (
       <div>
+        {this.props.csfCompleted &&
+          (
+            <div>
+              <br/>
+              <TwoPartBanner
+                textElement={this.renderCompletedCourseBox()}
+                imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
+                imagePosition="imageLeft"
+              />
+            </div>
+          )
+        }
         <br/>
-        <TwoPartBanner
-          textElement={this.renderCompletedCourseBox()}
-          imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
-          imagePosition="imageLeft"
-        />
-
-        <br/>
-
         <TwoPartBanner
           textElement={this.renderOnlineProfessionalLearningBox()}
           imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"

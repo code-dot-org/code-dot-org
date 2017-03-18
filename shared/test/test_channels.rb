@@ -173,4 +173,12 @@ class ChannelsTest < Minitest::Test
   ensure
     Timecop.return
   end
+
+  def test_update_channel_with_bad_json
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels/#{channel_id}", '{', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert_equal 400, last_response.status
+  end
 end

@@ -31,9 +31,9 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use four `move forward` blocks or use the `repeat 4 times` block to make your program shorter.\",\"hint_id\":\"courseC_collector_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/437c3020277ea2170538d80653b478fe/courseC_collector_prog2.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "1",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Not enough blocks in workspace puzzle",

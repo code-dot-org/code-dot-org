@@ -145,10 +145,14 @@ function validateReport(report) {
         validateType('testResult', value, 'number');
         break;
       case 'submitted':
-        // In sendResultsCompletion this becomes either "true" the string  or false the boolean
-        // Would probably be better long term if it was always a string or always a boolean
-        if (value !== "true" && value !== false) {
-          console.error('Expected submitted to be either string "true" or value false');
+        if (report.app === 'applab' || report.app === 'gamelab') {
+          validateType('submitted', value, 'boolean');
+        } else {
+          // In sendResultsCompletion this becomes either "true" (the string) or false (the boolean).
+          // Would probably be better long term if it was always a string or always a boolean.
+          if (value !== "true" && value !== false) {
+            console.error('Expected submitted to be either string "true" or value false');
+          }
         }
         break;
       case 'onComplete':

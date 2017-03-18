@@ -124,7 +124,15 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null,
+      "setProperty": null,
+      "getProperty": null,
+      "rgb": null,
+      "getNumber": null,
+      "setNumber": null,
+      "timedLoop": null,
+      "stopTimedLoop": null
     },
     "edit_code": true,
     "embed": "false",
@@ -164,7 +172,10 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",

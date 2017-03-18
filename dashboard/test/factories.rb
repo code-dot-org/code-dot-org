@@ -1,4 +1,5 @@
-# rubocop:disable Metrics/BlockLength
+require 'cdo/activity_constants'
+
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :section_hidden_stage do
@@ -103,6 +104,18 @@ FactoryGirl.define do
       after(:create) do |user|
         section = create(:section, user: create(:terms_of_service_teacher))
         create(:follower, section: section, student_user: user)
+      end
+    end
+
+    trait :with_puzzles do
+      transient do
+        num_puzzles 1
+        puzzle_result ActivityConstants::MINIMUM_PASS_RESULT
+      end
+      after(:create) do |user, evaluator|
+        evaluator.num_puzzles.times do
+          create :user_level, user: user, best_result: evaluator.puzzle_result
+        end
       end
     end
   end
@@ -364,9 +377,19 @@ FactoryGirl.define do
   end
 
   factory :follower do
-    section
-    user { section.user }
-    student_user { create :student }
+    association :student_user, factory: :student
+
+    transient do
+      section nil
+      user nil
+    end
+
+    after(:build) do |follower, evaluator|
+      follower.user = evaluator.user ||
+        evaluator.section.try(:user) ||
+        build(:teacher)
+      follower.section = evaluator.section || build(:section, user: follower.user)
+    end
   end
 
   factory :user_level do
@@ -528,11 +551,15 @@ FactoryGirl.define do
     transient do
       num_sessions 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
+      num_enrollments 0
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
         workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
+      end
+      evaluator.num_enrollments.times do
+        workshop.enrollments << build(:pd_enrollment, workshop: workshop)
       end
     end
   end
@@ -771,4 +798,3 @@ FactoryGirl.define do
     association :regional_partner
   end
 end
-# rubocop:enable Metrics/BlockLength
