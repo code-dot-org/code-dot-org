@@ -110,6 +110,20 @@ const BoardSetupStatus = React.createClass({
         .then(() => this.setState({isDetecting: false}));
   },
 
+  /**
+   * Helper to be used on second/subsequent attempts at detecing board usability.
+   */
+  redetect() {
+    if (this.state[STATUS_APP_INSTALLED] !== SUCCEEDED) {
+      // If the Chrome app was not installed last time we checked, but has been
+      // installed since, we'll probably need a full page reload to pick it up.
+      window.location.reload();
+    } else {
+      // Otherwise we should be able to redetect without a page reload.
+      this.detect();
+    }
+  },
+
   componentDidMount() {
     this.detect();
   },
@@ -124,7 +138,7 @@ const BoardSetupStatus = React.createClass({
               className="btn"
               type="button"
               value="re-detect"
-              onClick={this.detect}
+              onClick={this.redetect}
               disabled={this.state.isDetecting}
             />
           </h2>
