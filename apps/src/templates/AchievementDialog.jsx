@@ -201,7 +201,7 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
-  achievementRow(show, successful, message) {
+  achievementRow(show, successful, points, message) {
     if (!show || (this.props.bannerMode && !successful)) {
       return null;
     }
@@ -210,7 +210,7 @@ const AchievementDialog = Radium(React.createClass({
       if (this.props.bannerMode) {
         return (
           <p style={{...styles.bannerAchievement.row, ...style}}>
-            <span style={styles.bannerAchievement.point}>+1</span>
+            <span style={styles.bannerAchievement.point}>+{points}</span>
             <span style={styles.bannerAchievement.text}>{message}</span>
           </p>
         );
@@ -235,15 +235,21 @@ const AchievementDialog = Radium(React.createClass({
     }
   },
 
-  hintsMessage(tooManyHints) {
-    return tooManyHints ? locale.usingHints() : locale.withoutHints();
+  hintsMessage(numHints) {
+    if (numHints === 0) {
+      return locale.withoutHints();
+    } else if (numHints === 1) {
+      return locale.usingOneHint();
+    } else {
+      return locale.usingHints();
+    }
   },
 
   render() {
     const showNumBlocksRow = isFinite(this.props.idealBlocks);
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
-    const tooManyHints = this.props.hintsUsed > 0;
+    const tooManyHints = this.props.hintsUsed > 1;
 
     const params = {
       puzzleNumber: this.props.puzzleNumber,
@@ -256,18 +262,20 @@ const AchievementDialog = Radium(React.createClass({
     } else {
       feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
     }
-    const numPoints = 1 +
-      (showNumBlocksRow && !tooManyBlocks ? 1 : 0) +
-      (!tooManyHints ? 1 : 0);
+    const completionPoints = 1;
+    const numBlocksPoints = showNumBlocksRow && !tooManyBlocks ? 3 : 0;
+    const hintsPoints = this.props.hintsUsed === 0 ? 2 : this.props.hintsUsed === 1 ? 1 : 0;
+    const numPoints = completionPoints + numBlocksPoints + hintsPoints;
+
     const dotsUrl = `url(${this.props.assetUrl('media/dialog/dots.png')})`;
 
     const achievementRows = [
-      this.achievementRow(true /* show */, true /* success */,
+      this.achievementRow(true /* show */, true /* success */, completionPoints,
           locale.puzzleCompleted()),
-      this.achievementRow(showNumBlocksRow, !tooManyBlocks,
+      this.achievementRow(showNumBlocksRow, !tooManyBlocks, numBlocksPoints,
           this.blocksUsedMessage(blockDelta, params)),
-      this.achievementRow(true /* show */, !tooManyHints,
-          this.hintsMessage(tooManyHints)),
+      this.achievementRow(true /* show */, !tooManyHints, hintsPoints,
+          this.hintsMessage(this.props.hintsUsed)),
     ].filter(row => row);
 
     return (
