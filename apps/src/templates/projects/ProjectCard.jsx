@@ -5,7 +5,8 @@ import FontAwesome from '../FontAwesome';
 const styles = {
   card: {
     border: '2px solid gray',
-    borderRadius: 2
+    borderRadius: 2,
+    width: 250
   },
   title: {
     padding: 10,
@@ -36,7 +37,8 @@ const styles = {
 
 const ProjectCard = React.createClass({
   propTypes: {
-    projectData: React.PropTypes
+    projectData: React.PropTypes,
+    currentGallery: React.PropTypes.string,
   },
 
   dateFormatter(dateString) {
@@ -50,12 +52,23 @@ const ProjectCard = React.createClass({
   },
 
   renderStudentName() {
-    //this should only render the student's name if the card is being displayed on a classroom view for a section the student is enrolled in
-    return (
-      <div style={styles.studentName}>
-        {this.props.projectData.studentName}
-      </div>
-    );
+    //the student's name should only be visible in the classroom gallery
+    if (this.props.currentGallery === 'classroom'){
+      return (
+        <div style={styles.studentName}>
+          {this.props.projectData.studentName}
+        </div>
+      );
+    }
+  },
+
+  renderDownIcon() {
+    //Only the student can access the menu options when viewing their personal projects
+   if (this.props.currentGallery === 'personal'){
+     return (
+       <FontAwesome icon=" fa-chevron-down" style={styles.downIcon}/>
+      );
+    }
   },
 
   render() {
@@ -69,9 +82,10 @@ const ProjectCard = React.createClass({
          {this.renderStudentName()}
 
          <div style={styles.lastEdit}>
-           <FontAwesome icon=" fa-chevron-down" style={styles.downIcon}/>
+           {this.renderDownIcon()}
            Last edited: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
          </div>
+
       </div>
 
 
