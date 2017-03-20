@@ -713,6 +713,11 @@ testsContext.keys().forEach(testsContext);
     child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
   });
 
+  grunt.registerTask('ruby-block-tests', function () {
+    child_process.execSync('cd ../dashboard; rails test test/models/gamelab_test.rb');
+    child_process.execSync('cd ../dashboard; rails test test/models/applab_test.rb');
+  });
+
   grunt.registerTask('postbuild', [
     'newer:copy:static',
     'newer:concat',
@@ -761,6 +766,7 @@ testsContext.keys().forEach(testsContext);
 
   // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
   grunt.registerTask('test', [
+    'ruby-block-tests',
     'preconcat',
     'concat',
     'karma:all'
