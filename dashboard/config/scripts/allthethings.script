@@ -217,3 +217,7 @@ assessment 'Test longassessment levelgroup new'
 
 stage 'Standalone video'
 level 'AllTheThings_StandaloneVideo'
+
+stage 'Curriculum Reference'
+level 'allthethings_curriculum_reference'
+level 'allthethings_map'
