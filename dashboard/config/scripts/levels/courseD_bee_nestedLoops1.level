@@ -28,12 +28,14 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "2",
-    "step_mode": "0",
+    "step_mode": "1",
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Not working?  Try using the \\\"Step\\\" button to see what happens line by line.\",\"hint_id\":\"courseD_bee_nestedLoops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd4b05e196784186c0fdf9d471dd2f2a/courseD_bee_nestedLoops1.mp3\"}]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
