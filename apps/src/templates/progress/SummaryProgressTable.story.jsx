@@ -52,7 +52,7 @@ export default storybook => {
               ...lesson,
               isFocusArea: index === 1
             }))}
-            levelsByLesson={levelsByLesson}
+            levelsByLesson={levelsByLesson.map((levels, index) => index === 1 ? fakeLevels(8) : levels)}
             lessonIsVisible={() => true}
             lessonLockedForSection={() => false}
           />
