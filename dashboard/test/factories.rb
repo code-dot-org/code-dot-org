@@ -255,6 +255,10 @@ FactoryGirl.define do
     link_title 'title'
   end
 
+  factory :curriculum_reference, parent: :level, class: CurriculumReference do
+    game {Game.curriculum_reference}
+  end
+
   factory :level_source do
     level
     data '<xml/>'
