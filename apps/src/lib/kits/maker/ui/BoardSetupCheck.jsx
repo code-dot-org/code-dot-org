@@ -1,5 +1,5 @@
 /** @file Maker Board setup checker */
-import React from 'react';
+import React, {Component} from 'react';
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
 import SetupStep, {
@@ -18,18 +18,41 @@ const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 
-const BoardSetupCheck = React.createClass({
-  getInitialState() {
-    return {
-      isDetecting: false,
-      [STATUS_IS_CHROME]: WAITING,
-      [STATUS_APP_INSTALLED]: WAITING,
-      [STATUS_WINDOWS_DRIVERS]: WAITING,
-      [STATUS_BOARD_PLUG]: WAITING,
-      [STATUS_BOARD_CONNECT]: WAITING,
-      [STATUS_BOARD_COMPONENTS]: WAITING
-    };
-  },
+const initialState = {
+  isDetecting: false,
+  [STATUS_IS_CHROME]: WAITING,
+  [STATUS_APP_INSTALLED]: WAITING,
+  [STATUS_WINDOWS_DRIVERS]: WAITING,
+  [STATUS_BOARD_PLUG]: WAITING,
+  [STATUS_BOARD_CONNECT]: WAITING,
+  [STATUS_BOARD_COMPONENTS]: WAITING
+};
+
+export default class BoardSetupCheck extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {...initialState};
+  }
+
+  hide(selector) {
+    this.setState({[selector]: HIDDEN});
+  }
+
+  fail(selector) {
+    this.setState({[selector]: FAILED});
+  }
+
+  spin(selector) {
+    this.setState({[selector]: ATTEMPTING});
+  }
+
+  succeed(selector) {
+    this.setState({[selector]: SUCCEEDED});
+  }
+
+  thumb(selector) {
+    this.setState({[selector]: CELEBRATING});
+  }
 
   getSurveyURL() {
     const baseFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSe4NB7weq20sydf4kKn3QzIIn1O91hfPNU0U6b2xc1W6w44eQ/viewform';
@@ -37,10 +60,10 @@ const BoardSetupCheck = React.createClass({
     const prettifiedCurrentStates = JSON.stringify(this.state, null, 2);
     const setupStatesFieldFill = `entry.804069894=${encodeURIComponent(prettifiedCurrentStates)}`;
     return `${baseFormURL}?${userAgentFieldFill}&${setupStatesFieldFill}`;
-  },
+  }
 
   detect() {
-    this.setState({...this.getInitialState(), isDetecting: true});
+    this.setState({...initialState, isDetecting: true});
 
     if (!isWindows()) {
       this.hide(STATUS_WINDOWS_DRIVERS);
@@ -87,7 +110,7 @@ const BoardSetupCheck = React.createClass({
           portName = null;
           this.setState({isDetecting: false});
         });
-  },
+  }
 
   detectChromeVersion() {
     this.spin(STATUS_IS_CHROME);
@@ -107,7 +130,7 @@ const BoardSetupCheck = React.createClass({
           this.fail(STATUS_IS_CHROME);
           return Promise.reject(error);
         });
-  },
+  }
 
   /**
    * @return {Promise}
@@ -121,7 +144,7 @@ const BoardSetupCheck = React.createClass({
           this.fail(STATUS_APP_INSTALLED);
           return Promise.reject(error);
         });
-  },
+  }
 
   /**
    * @return {Promise.<string>} Resolves to usable port name
@@ -138,7 +161,7 @@ const BoardSetupCheck = React.createClass({
           this.fail(STATUS_BOARD_PLUG);
           return Promise.reject(error);
         });
-  },
+  }
 
   /**
    * @return {Promise.<CircuitPlaygroundBoard>}
@@ -155,7 +178,7 @@ const BoardSetupCheck = React.createClass({
           this.fail(STATUS_BOARD_CONNECT);
           return Promise.reject(error);
         });
-  },
+  }
 
   /**
    * @return {Promise}
@@ -169,7 +192,7 @@ const BoardSetupCheck = React.createClass({
           this.fail(STATUS_BOARD_COMPONENTS);
           return Promise.reject(error);
         });
-  },
+  }
 
   /**
    * @return {Promise}
@@ -178,14 +201,14 @@ const BoardSetupCheck = React.createClass({
     this.thumb(STATUS_BOARD_COMPONENTS);
     return boardController.celebrateSuccessfulConnection()
         .then(() => this.succeed(STATUS_BOARD_COMPONENTS));
-  },
+  }
 
   /**
    * Navigate to the survey with pre-populated setup information.
    */
   submitSurvey() {
     document.location = this.getSurveyURL();
-  },
+  }
 
   /**
    * Helper to be used on second/subsequent attempts at detecing board usability.
@@ -199,16 +222,16 @@ const BoardSetupCheck = React.createClass({
       // Otherwise we should be able to redetect without a page reload.
       this.detect();
     }
-  },
+  }
 
   componentDidMount() {
     this.detect();
-  },
+  }
 
   render() {
     const surveyLink = (
-        <span>
-        <br/>Still having trouble?  Please <a href="#" onClick={this.submitSurvey}>submit our quick survey</a> about your setup issues.
+      <span>
+        <br/>Still having trouble?  Please <a href="#" onClick={this.submitSurvey.bind(this)}>submit our quick survey</a> about your setup issues.
       </span>
     );
     return (
@@ -220,7 +243,7 @@ const BoardSetupCheck = React.createClass({
               className="btn"
               type="button"
               value="re-detect"
-              onClick={this.redetect}
+              onClick={this.redetect.bind(this)}
               disabled={this.state.isDetecting}
             />
           </h2>
@@ -252,7 +275,7 @@ const BoardSetupCheck = React.createClass({
               stepName="Board plugged in"
             >
               We couldn't detect a Circuit Playground board.
-              Make sure your board is plugged in, and click <a href="#" onClick={this.redetect}>re-detect</a>.
+              Make sure your board is plugged in, and click <a href="#" onClick={this.redetect.bind(this)}>re-detect</a>.
               {surveyLink}
             </SetupStep>
             <SetupStep
@@ -289,29 +312,8 @@ const BoardSetupCheck = React.createClass({
           </div>
         </div>
     );
-  },
-
-  hide(selector) {
-    this.setState({[selector]: HIDDEN});
-  },
-
-  fail(selector) {
-    this.setState({[selector]: FAILED});
-  },
-
-  spin(selector) {
-    this.setState({[selector]: ATTEMPTING});
-  },
-
-  succeed(selector) {
-    this.setState({[selector]: SUCCEEDED});
-  },
-
-  thumb(selector) {
-    this.setState({[selector]: CELEBRATING});
-  },
-});
-export default BoardSetupCheck;
+  }
+}
 
 function promiseWaitFor(ms) {
   return new Promise(resolve => {
