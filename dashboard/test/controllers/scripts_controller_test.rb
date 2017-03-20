@@ -21,6 +21,15 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal Script.all, assigns(:scripts)
   end
 
+  test "should redirect when script has a redirect_to property" do
+    script = create :script
+    new_script = create :script
+    script.update(redirect_to: new_script.name)
+
+    get :show, params: {id: script.name}
+    assert_redirected_to :show, params: {id: new_script.name}
+  end
+
   test "should not get index if not signed in" do
     get :index
 

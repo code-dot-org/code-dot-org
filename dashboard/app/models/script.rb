@@ -94,6 +94,7 @@ class Script < ActiveRecord::Base
     hideable_stages
     peer_reviews_to_complete
     professional_learning_course
+    redirect_to
   )
 
   def self.twenty_hour_script
