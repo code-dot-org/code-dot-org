@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
+import color from '../../../../util/color';
 
 export const HIDDEN = 'HIDDEN';
 export const WAITING = 'WAITING';
@@ -8,13 +9,7 @@ export const FAILED = 'FAILED';
 export const CELEBRATING = 'CELEBRATING';
 const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
 
-const SetupStep = React.createClass({
-  propTypes: {
-    children: React.PropTypes.node,
-    stepName: React.PropTypes.string.isRequired,
-    stepStatus: React.PropTypes.oneOf(STEP_STATUSES).isRequired
-  },
-
+export default class SetupStep extends Component {
   iconFor(stepStatus) {
     switch (stepStatus) {
       case WAITING:
@@ -30,22 +25,25 @@ const SetupStep = React.createClass({
       default:
         throw new Error('Unknown step status.');
     }
-  },
+  }
 
   styleFor(stepStatus) {
     switch (stepStatus) {
       case ATTEMPTING:
       case WAITING:
-        return {color: '#949ca2'};
+        return {color: color.light_gray};
       case SUCCEEDED:
       case CELEBRATING:
-        return {color: 'green'};
+        return {color: color.realgreen};
       case HIDDEN:
         return {display: 'none'};
       default:
-        return {color: 'red', fontWeight: 'bold'};
+        return {
+          color: color.red,
+          fontWeight: 'bold'
+        };
     }
-  },
+  }
 
   render() {
     if (this.props.stepStatus === HIDDEN) {
@@ -78,5 +76,9 @@ const SetupStep = React.createClass({
         </div>
     );
   }
-});
-export default SetupStep;
+}
+SetupStep.propTypes = {
+  children: PropTypes.node,
+  stepName: PropTypes.string.isRequired,
+  stepStatus: PropTypes.oneOf(STEP_STATUSES).isRequired
+};
