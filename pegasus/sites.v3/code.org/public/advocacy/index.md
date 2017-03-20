@@ -56,6 +56,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
 * <a href="http://www.ccboe.com/">Charles County Pulic Schools</a>
 * <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a> 
+* <a href="http://www.coloradosucceeds.org/">Colorado Succeeds</a> 
 * <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>
 * <a href="http://cra.org/">Computing Research Association</a>
 * <a href="http://www.cccoe.k12.ca.us/index.html">Contra Costa County Office of Education</a>

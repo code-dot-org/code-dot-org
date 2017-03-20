@@ -8,9 +8,11 @@ video_player: true
 
 ## <a name="what"></a>Apply for Professional Learning
 
-Applications for the 2017-18 CS Discoveries Professional Learning Program are now open! We are accepting applications until March 17, 2017, so apply now if you're ready to get started. 
+Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.  
 
-[<button>Apply now!</button>](/educate/professional-learning/cs-discoveries)
+If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+
+[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## <a name="what"></a>What is CS Discoveries?
 
