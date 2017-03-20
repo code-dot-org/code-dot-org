@@ -9,6 +9,7 @@ import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/Protecte
 import * as applabConstants from './constants';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
+import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
 
 var styles = {
   nonResponsive: {
@@ -84,6 +85,7 @@ var Visualization = React.createClass({
           <AppLabCrosshairOverlay/>
           <AppLabTooltipOverlay/>
         </VisualizationOverlay>
+        <MakerStatusOverlay width={appWidth} height={appHeight}/>
         <div
           style={[
             styles.screenBlock,
