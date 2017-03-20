@@ -7,6 +7,10 @@ $node_name = 'default'
 # Keep these hostname helper methods in sync with deployment.rb.
 # TODO Find a better way to reuse existing application configuration in Chef config helpers.
 def canonical_hostname(domain)
+  # Allow hostname overrides
+  return $override_dashboard if $override_dashboard && domain == 'studio.code.org'
+  return $override_pegasus if $override_pegasus && domain == 'code.org'
+
   return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?($node_name)
   return domain if $node_env == 'production'
 
@@ -154,12 +158,11 @@ def process_request(behavior, _)
   )
   REMOVED_HEADERS.each do |remove_header|
     name, value = remove_header.split ':'
-    unless behavior[:headers].include? name
-      if value.nil?
-        out << "\nunset req.http.#{name};"
-      else
-        out << "\nset req.http.#{name} = \"#{value}\";"
-      end
+    next if behavior[:headers].include? name
+    if value.nil?
+      out << "\nunset req.http.#{name};"
+    else
+      out << "\nset req.http.#{name} = \"#{value}\";"
     end
   end
   out
