@@ -1015,10 +1015,10 @@
     target="_blank">mantener código sin usar</a> en su espacio de trabajo para fomentar
     la experimentación! Consulta todas las nuevas características y déjanos saber
     que piensas de ellas.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your
+    class how the Internet works, how cryptography keeps data secure, and other concepts?
+    We’ve taken the best interactive tools from our Computer Science Principles curriculum
+    and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Aprende más
   dashboard_announce_try_now_button: Probar ahora
   dashboard_announce_host_an_hour_button: Anfitrión una hora
@@ -1997,9 +1997,7 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.
+  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
+    program here</a>.
+  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
+    18 years old.
