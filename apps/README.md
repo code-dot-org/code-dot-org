@@ -37,7 +37,7 @@ npm run build
 ```
 and look for something like:
 ```
-lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps/build/package
+lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps-package
 ```
 If the symlink is in place, then as you rebuild apps, your results should show up in Dashboard.  If not, run through step 1 again.
 
