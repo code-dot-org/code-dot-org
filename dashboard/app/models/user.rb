@@ -1146,10 +1146,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def recent_activities(limit = 10)
-    activities.order('id desc').limit(limit)
-  end
-
   def can_pair?
     !sections_as_student.empty?
   end
