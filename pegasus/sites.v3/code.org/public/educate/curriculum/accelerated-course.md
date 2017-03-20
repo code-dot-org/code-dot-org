@@ -23,7 +23,7 @@ The content of this course is appropriate for kindergartners through 8th graders
 
 This course was developed in accordance with our [educational philosophy](/educate/curriculum#philosophy).
 
-[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](http://studio.code.org)
+[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](https://studio.code.org/s/20-hour)
 
 ## How to get started
 
@@ -161,7 +161,7 @@ If Intro to computer science was a success, plan to teach our next courses that 
 ## Price: 100% FREE
 Code.org is a 501c3 public non-profit, so we produce all our tutorials as free services for the greater good of spreading computer science education. Are you ready to try? Give it a whirl, it's free.
 
-[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](http://studio.code.org)
+[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](https://studio.code.org/s/20-hour)
 
 ## Questions?
 [Ask on our Forums](http://forum.code.org/?forum=322774).

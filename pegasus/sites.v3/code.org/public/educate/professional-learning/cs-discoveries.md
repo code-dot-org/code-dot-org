@@ -6,9 +6,11 @@ nav: plc_csd_nav
 
 [col-50]
 
-The Code.org Computer Science Discoveries Professional Learning Program is an intensive professional learning program for middle school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program is designed to prepare educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms. **We are now accepting applications for the 2017-18 Professional Learning Program! Please read below for more information.** 
+The Code.org Computer Science Discoveries Professional Learning Program is an intensive professional learning program for middle school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program is designed to prepare educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms. 
 
-<a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
+**Applications for the 2017-18 Professional Learning Program have closed.** If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+
+[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 [/col-50]
 
@@ -44,11 +46,11 @@ The program has two components:
 
 ## <a name="commitments"></a>What are the program commitments?
 
-Code.org TeacherCon: (Summer 2017)
+Code.org TeacherCon: (Summer)
 
 - 5 days in-person. Dates and locations vary by district.
 
-Continuing Professional Development: (September 2017 - June 2018)
+Continuing Professional Development: (September - June of following academic year)
 
 - 4 days (24 hours) in-person, hosted locally around the nation
 - 20 hours online, self-paced
@@ -59,7 +61,7 @@ Continuing Professional Development: (September 2017 - June 2018)
 The CS Discoveries Professional Learning Program is open to teachers who are interested in teaching the Code.org CS Discoveries course. We prioritize educators who plan to teach the course to grades 7, 8 and/or 9. In order to participate, we ask that educators:
 
 * Commit to participating in the full, year-long professional development program
-* Work with their school administration to ensure that this course will be offered on the school's 2017-18 master schedule
+* Work with their school administration to ensure that this course will be offered on the school's master schedule
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
 * Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our [Regional Partner Map](https://code.org/educate/regional-partner/partners).
 
@@ -70,10 +72,6 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 ## <a name="apply"></a>How to apply?
 
-Applications for the 2017-18 CS Discoveries Professional Learning Program are now open! We are accepting applications until March 17, 2017, so apply now if you're ready to get started. 
+**Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.** If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
 
-<a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
-
-Not ready to apply, but interested in joining in 2018-19? Sign up to be added to our contact list. 
-
-[<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
