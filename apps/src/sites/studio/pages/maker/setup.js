@@ -81,7 +81,7 @@ const BoardSetupStatus = React.createClass({
         // Finally...
         .then(() => {
           if (boardController) {
-            boardController.destory();
+            boardController.destroy();
             boardController = null;
           }
           portName = null;
@@ -181,6 +181,13 @@ const BoardSetupStatus = React.createClass({
   },
 
   /**
+   * Navigate to the survey with pre-populated setup information.
+   */
+  submitSurvey() {
+    document.location = this.getSurveyURL();
+  },
+
+  /**
    * Helper to be used on second/subsequent attempts at detecing board usability.
    */
   redetect() {
@@ -199,10 +206,15 @@ const BoardSetupStatus = React.createClass({
   },
 
   render() {
+    const surveyLink = (
+      <span>
+        <br/>Still having trouble?  Please <a href="#" onClick={this.submitSurvey}>submit our quick survey</a> about your setup issues.
+      </span>
+    );
     return (
         <div>
           <h2>
-            Setup Status
+            Setup Check
             <input
               style={{marginLeft: 9, marginTop: -4}}
               className="btn"
@@ -212,17 +224,25 @@ const BoardSetupStatus = React.createClass({
               disabled={this.state.isDetecting}
             />
           </h2>
-          <div className="setup-status" style={{'fontSize': '26px'}}>
+          <div className="setup-status">
             <SetupStep
               stepStatus={this.state[STATUS_IS_CHROME]}
               stepName="Chrome version 33+"
             >
-              {isChrome() && ` - Your Chrome version is ${getChromeVersion()}, please upgrade to at least version 33`}
+              {isChrome() && `It looks like your Chrome version is ${getChromeVersion()}.`}
+              Your current browser is not supported at this time.
+              Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
+              <br/><em>Note: We plan to support other browsers including Internet Explorer in Fall 2017.</em>
             </SetupStep>
             <SetupStep
               stepStatus={this.state[STATUS_APP_INSTALLED]}
               stepName="Chrome App installed"
-            />
+            >
+              Please install the <a href="https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg">Code.org Serial Connector Chrome App extension</a>.
+              <br/>Once it is installed, come back to this page and click the "re-detect" button, above.
+              <br/>If a dialog asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.
+              {surveyLink}
+            </SetupStep>
             <SetupStep
               stepStatus={this.state[STATUS_WINDOWS_DRIVERS]}
               stepName="Windows drivers installed? (cannot auto-check)"
@@ -230,15 +250,29 @@ const BoardSetupStatus = React.createClass({
             <SetupStep
               stepStatus={this.state[STATUS_BOARD_PLUG]}
               stepName="Board plugged in"
-            />
+            >
+              We couldn't detect a Circuit Playground board.
+              Make sure your board is plugged in, and click <a href="#" onClick={this.redetect}>re-detect</a>.
+              {surveyLink}
+            </SetupStep>
             <SetupStep
               stepStatus={this.state[STATUS_BOARD_CONNECT]}
               stepName="Board connectable"
-            />
+            >
+              We found a board but it didn't respond properly when we tried to connect to it.
+              <br/>You should make sure it has the right firmware sketch installed.
+              You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
+              {surveyLink}
+            </SetupStep>
             <SetupStep
               stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
               stepName="Board components usable"
-            />
+            >
+              Oh no! Something unexpected went wrong while verifying the board components.
+              <br/>You should make sure your board has the right firmware sketch installed.
+              You can <a href="https://learn.adafruit.com/circuit-playground-firmata/overview">install the Circuit Playground Firmata sketch with these instructions</a>.
+              {surveyLink}
+            </SetupStep>
           </div>
           <h2>Survey / Support</h2>
           <div>
@@ -321,12 +355,31 @@ const SetupStep = React.createClass({
     if (this.props.stepStatus === HIDDEN) {
       return null;
     }
+    const rootStyle = {
+      margin: '15px 0',
+    };
+    const headerStyle = Object.assign(
+        {'fontSize': '26px'},
+        this.styleFor(this.props.stepStatus));
+    const iconStyle = {
+      marginRight: 6,
+    };
+    const bodyStyle = {
+      margin: '15px 0 15px 40px',
+      fontSize: '14px',
+    };
     return (
-        <div style={Object.assign({margin: '15px 0'}, this.styleFor(this.props.stepStatus))}>
-          <i style={{'marginRight': '6px'}} className={this.iconFor(this.props.stepStatus)}/>
+      <div style={rootStyle}>
+        <div style={headerStyle}>
+          <i style={iconStyle} className={this.iconFor(this.props.stepStatus)}/>
           <span>{this.props.stepName}</span>
-          {this.props.stepStatus === FAILED && this.props.children}
         </div>
+        {this.props.stepStatus === FAILED &&
+          <div style={bodyStyle}>
+            {this.props.children}
+          </div>
+        }
+      </div>
     );
   }
 });
