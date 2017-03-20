@@ -81,7 +81,9 @@ export default class FirehoseClient {
     FIREHOSE.putRecord(
       {
         DeliveryStreamName: deliveryStreamName,
-        Record: JSON.stringify(data),
+        Record: {
+          Data: JSON.stringify(data),
+        },
       },
       function (err, data) {
         if (err) {
@@ -102,7 +104,9 @@ export default class FirehoseClient {
     FIREHOSE.putRecordBatch(
       {
         DeliveryStreamName: deliveryStreamName,
-        Records: data.map(JSON.stringify),
+        Records: {
+          Data: data.map(JSON.stringify),
+        },
       },
       function (err, data) {
         if (err) {
