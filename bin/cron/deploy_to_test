@@ -19,12 +19,14 @@ def main
     )
     return
   end
-  if GitHub.sha('staging') == GitHub.sha('test')
+
+  if GitHub.compare(base: 'test', head: 'staging').empty?
     ChatClient.message(
       'infra-test',
       "robo-DTT skipped, nothing to DTT",
       color: 'green'
     )
+    return
   end
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
@@ -46,15 +48,6 @@ def main
     color: 'green'
   )
 rescue Exception => e
-  if e.message.include? 'No commits between test and staging'
-    ChatClient.message(
-      'infra-test',
-      'robo-DTT skipped (nothing to DTT)',
-      color: 'green'
-    )
-    DevelopersTopic.set_dtt 'yes'
-    return
-  end
   ChatClient.message(
     'infra-test',
     "EXCEPTION: #{e.message}",
