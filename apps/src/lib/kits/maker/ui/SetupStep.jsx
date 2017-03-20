@@ -8,7 +8,7 @@ export const ATTEMPTING = 'ATTEMPTING';
 export const SUCCEEDED = 'SUCCEEDED';
 export const FAILED = 'FAILED';
 export const CELEBRATING = 'CELEBRATING';
-const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
+export const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
 
 const style = {
   root: {
@@ -74,7 +74,7 @@ function styleFor(stepStatus) {
 
 /**
  * @param {string} stepStatus
- * @returns {FontAwesome}
+ * @returns {Component}
  */
 function iconFor(stepStatus) {
   const iconStyle = {
