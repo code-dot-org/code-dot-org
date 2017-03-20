@@ -4,9 +4,6 @@
   %script{src: minifiable_asset_path('js/levels/_curriculum_reference.js')}
 
 .curriculum-reference
-  - postcontent = capture_haml do
-    #iframe-loading.loading
-    %iframe{id: 'curriculum-reference', width: '100%', frameborder: 0, src: level.href, onload: 'window.curriculumReference.onload()', style: "display: none;" }
-    %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
-
-  = render partial: 'levels/content', locals: {app: 'external', data: level.properties, content_class: level.properties['options'].try(:[], 'css'), postcontent: postcontent}
+  #iframe-loading.loading
+  %iframe{id: 'curriculum-reference', width: '100%', frameborder: 0, src: level.href, onload: 'window.curriculumReference.onload()', style: "display: none;" }
+  %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
