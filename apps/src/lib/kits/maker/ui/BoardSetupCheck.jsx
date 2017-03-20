@@ -20,12 +20,13 @@ const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 
 const initialState = {
   isDetecting: false,
+  caughtError: null,
   [STATUS_IS_CHROME]: WAITING,
   [STATUS_APP_INSTALLED]: WAITING,
   [STATUS_WINDOWS_DRIVERS]: WAITING,
   [STATUS_BOARD_PLUG]: WAITING,
   [STATUS_BOARD_CONNECT]: WAITING,
-  [STATUS_BOARD_COMPONENTS]: WAITING
+  [STATUS_BOARD_COMPONENTS]: WAITING,
 };
 
 export default class BoardSetupCheck extends Component {
@@ -97,8 +98,10 @@ export default class BoardSetupCheck extends Component {
         // If anything goes wrong along the way, we'll end up in this
         // catch clause - make sure to report the error out.
         .catch(error => {
-          console.log(error);
-          // TODO (bbuchanan): Report error with survey, and maybe to analytics too.
+          this.setState({caughtError: error});
+          if (console && typeof console.error === 'function') {
+            console.error(error);
+          }
         })
 
         // Finally...
@@ -204,13 +207,6 @@ export default class BoardSetupCheck extends Component {
   }
 
   /**
-   * Navigate to the survey with pre-populated setup information.
-   */
-  submitSurvey() {
-    document.location = this.getSurveyURL();
-  }
-
-  /**
    * Helper to be used on second/subsequent attempts at detecing board usability.
    */
   redetect() {
@@ -231,7 +227,7 @@ export default class BoardSetupCheck extends Component {
   render() {
     const surveyLink = (
       <span>
-        <br/>Still having trouble?  Please <a href="#" onClick={this.submitSurvey.bind(this)}>submit our quick survey</a> about your setup issues.
+        <br/>Still having trouble?  Please <a href={this.getSurveyURL()}>submit our quick survey</a> about your setup issues.
       </span>
     );
     return (
