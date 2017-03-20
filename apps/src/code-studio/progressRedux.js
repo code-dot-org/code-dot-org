@@ -250,7 +250,11 @@ const lessonFromStageAtIndex = (state, stageIndex) => ({
 const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']);
 export const lessons = state => state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
-export const peerReviewLesson = state => !state.peerReviewStage ? null : ({
+/**
+ * Extract lesson from our peerReviewStage if we have one. We want this to end up
+ * having the same fields as our non-peer review stages.
+ */
+const peerReviewLesson = state => ({
   ...lessonFromStage(state.peerReviewStage),
   // add some fields that are missing for this stage but required for lessonType
   id: PEER_REVIEW_ID,
@@ -259,21 +263,19 @@ export const peerReviewLesson = state => !state.peerReviewStage ? null : ({
 });
 
 /**
- * TODO - add a comment here. write tests. make storybooks
+ * Extract levels from our peerReviewStage, making sure the levels have the same
+ * set of fields as our non-peer review levels.
+ * TODO - write tests. make storybooks
  */
-export const peerReviewLevels = state => {
-  if (!state.peerReviewStage) {
-    return null;
-  }
-
-  return state.peerReviewStage.levels.map((level, index) => ({
-    id: PEER_REVIEW_ID,
-    status: (level.locked === true ? LevelStatus.locked : level.status) || LevelStatus.not_tried,
-    url: level.url,
-    name: level.name,
-    icon: (level.locked ? 'fa-lock' : undefined),
-  }));
-};
+const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index) => ({
+  // These aren't true levels (i.e. we won't have an entry in levelProgress),
+  // so always use a specific id that won't collide with real levels
+  id: PEER_REVIEW_ID,
+  status: (level.locked === true ? LevelStatus.locked : level.status) || LevelStatus.not_tried,
+  url: level.url,
+  name: level.name,
+  icon: (level.locked ? level.icon : undefined),
+}));
 
 /**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
@@ -353,6 +355,17 @@ export const categorizedLessons = state => {
     byCategory[category].lessons.push(lesson);
     byCategory[category].levels.push(stageLevels);
   });
+
+  // Peer reviews get their own category, but these levels/lessson are stored
+  // separately from our other levels/lessons in redux (since they're slightly
+  // different)
+  if (state.peerReviewStage) {
+    byCategory['Peer Review'] = {
+      category: 'Peer Review',
+      lessons: [peerReviewLesson(state)],
+      levels: [peerReviewLevels(state)]
+    };
+  }
 
   // We want to return an array of categories
   return _.values(byCategory);

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { categorizedLessons, peerReviewLesson, peerReviewLevels } from '@cdo/apps/code-studio/progressRedux';
+import { categorizedLessons } from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
@@ -18,9 +18,6 @@ const ProgressTable = React.createClass({
         ).isRequired
       })
     ).isRequired,
-    // TODO - can i ultimate just give these their own category?
-    peerReviewLesson: lessonType,
-    peerReviewLevels: PropTypes.arrayOf(levelType)
   },
 
   componentDidMount() {
@@ -38,7 +35,7 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { isSummaryView, categorizedLessons, peerReviewLesson, peerReviewLevels } = this.props;
+    const { isSummaryView, categorizedLessons } = this.props;
 
     const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
 
@@ -61,18 +58,6 @@ const ProgressTable = React.createClass({
               levelsByLesson={category.levels}
             />
           ))}
-          {/* Peer reviews are a bit of a special beast and will take some time to
-            * get right. For now, stick in a placeholder that makes it clear that
-            * this work hasnt been done yet*/}
-          {!!peerReviewLesson &&
-            <ProgressGroup
-              key="peer_review"
-              groupName={"Peer Review"}
-              isSummaryView={isSummaryView}
-              lessons={[peerReviewLesson]}
-              levelsByLesson={[peerReviewLevels]}
-            />
-          }
         </div>
       );
     }
@@ -81,7 +66,5 @@ const ProgressTable = React.createClass({
 
 export default connect(state => ({
   isSummaryView: state.progress.isSummaryView,
-  categorizedLessons: categorizedLessons(state.progress),
-  peerReviewLesson: peerReviewLesson(state.progress),
-  peerReviewLevels: peerReviewLevels(state.progress)
+  categorizedLessons: categorizedLessons(state.progress)
 }))(ProgressTable);

@@ -253,7 +253,6 @@ export const ProgressDot = Radium(React.createClass({
     }
   },
 
-
   render() {
 
     const { level, status, courseOverviewPage, currentLevelId } = this.props;
