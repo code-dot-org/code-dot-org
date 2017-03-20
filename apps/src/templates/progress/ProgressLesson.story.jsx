@@ -39,6 +39,18 @@ export default storybook => {
         )
       },
       {
+        name:'progress lesson with focus area',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={{
+              ...defaultProps.lesson,
+              isFocusArea: true
+            }}
+          />
+        )
+      },
+      {
         name:'hidden progress lesson as teacher',
         description: 'should be white with some opacity',
         story: () => (

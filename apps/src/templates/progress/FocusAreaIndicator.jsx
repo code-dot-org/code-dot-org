@@ -1,4 +1,11 @@
+/**
+ * A component that adds a sort of ribbon looking focus indicator to the side
+ * of your row. Note: This is English only.
+ */
+
 import React from 'react';
+import Radium from 'radium';
+import ReactTooltip from 'react-tooltip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from "@cdo/apps/util/color";
 
@@ -7,7 +14,8 @@ const styles = {
     display: 'inline-block',
     position: 'absolute',
     right: 0,
-    top: 0
+    top: 0,
+    whiteSpace: 'nowrap'
   },
   arrowContainer: {
     display: 'inline-block',
@@ -29,18 +37,25 @@ const styles = {
     height: 34,
     lineHeight: '34px',
     position: 'relative',
-    top: -3
+    top: -3,
   },
   text: {
     display: 'inline-block'
   },
   focusAreaIcon: {
-    marginLeft: 10,
-    marginRight: 10
+    display: 'inline-block',
+    color: color.white,
+    lineHeight: '13px',
+    padding: 5,
+    marginLeft: 5,
+    marginRight: 5,
+    borderRadius: 4,
+    ':hover': {
+      backgroundColor: color.default_blue,
+    }
   }
 };
 
-// TODO - i18n
 const FocusAreaIndicator = () => (
   <div style={styles.main}>
     <div style={styles.arrowContainer}>
@@ -48,9 +63,20 @@ const FocusAreaIndicator = () => (
     </div>
     <div style={styles.focusArea}>
       <div style={styles.text}>Focus Area</div>
-      <FontAwesome icon="pencil" style={styles.focusAreaIcon}/>
+      <a href={window.location.pathname + "/preview-assignments"} >
+        <div style={styles.focusAreaIcon} data-tip data-for="focus-area">
+          <FontAwesome icon="pencil"/>
+        </div>
+      </a>
     </div>
+    <ReactTooltip
+      id="focus-area"
+      role="tooltip"
+      effect="solid"
+    >
+      Click to change your focus area.
+    </ReactTooltip>
   </div>
 );
 
-export default FocusAreaIndicator;
+export default Radium(FocusAreaIndicator);

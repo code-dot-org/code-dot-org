@@ -60,6 +60,11 @@ export const styles = {
   },
   unlockedIcon: {
     color: color.orange
+  },
+  focusAreaMargin: {
+    // Our focus area indicator is absolutely positioned. Add a margin when it's
+    // there so that it wont overlap dots.
+    marginRight: 130
   }
 };
 
@@ -136,6 +141,7 @@ const SummaryProgressRow = React.createClass({
             start={1}
             levels={levels}
             disabled={locked}
+            style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
           />
           {lesson.isFocusArea && <FocusAreaIndicator/>}
         </td>
