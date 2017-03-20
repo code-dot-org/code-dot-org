@@ -18,7 +18,7 @@ const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
 
-const BoardSetupStatus = React.createClass({
+const BoardSetupCheck = React.createClass({
   getInitialState() {
     return {
       isDetecting: false,
@@ -313,7 +313,7 @@ const BoardSetupStatus = React.createClass({
 });
 
 $(function () {
-  ReactDOM.render(<BoardSetupStatus/>, document.getElementById('setup-status-mount'));
+  ReactDOM.render(<BoardSetupCheck/>, document.getElementById('setup-status-mount'));
   $('.maker-setup a').attr('target', '_blank');
 });
 
