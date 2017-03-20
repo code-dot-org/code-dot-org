@@ -420,11 +420,23 @@ class ContactRollups
             FROM #{DASHBOARD_DB_NAME}.workshop_attendance AS workshop_attendance
               INNER JOIN #{DASHBOARD_DB_NAME}.segments AS segments ON segments.id = workshop_attendance.segment_id
               INNER JOIN #{DASHBOARD_DB_NAME}.workshops AS workshops ON workshops.id = segments.workshop_id
-            ) q1
-          ORDER BY 1,2
-          ) q2
-        GROUP BY teacher_id
-      ) src
+            UNION
+            SELECT users.id,
+              CASE section_type
+                WHEN 'csins_workshop' THEN 'CS in Science'
+                WHEN 'csina_workshop' THEN  'CS in Algebra'
+                WHEN 'ecs_workshop' THEN 'Exploring Computer Science'
+                WHEN 'csp_workshop' THEN 'CS Principles'
+                WHEN 'csf_workshop' THEN 'CS Fundamentals'
+              END AS course
+            FROM #{DASHBOARD_DB_NAME}.sections
+	            INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
+              INNER JOIN #{DASHBOARD_DB_NAME}.users ON users.id = followers.student_user_id
+        ) q1
+        ORDER BY 1,2
+        ) q2
+      GROUP BY teacher_id
+    ) src
     SET #{DEST_TABLE_NAME}.professional_learning_attended = src.courses
     WHERE #{DEST_TABLE_NAME}.dashboard_user_id = src.teacher_id"
     log_completion(start)
