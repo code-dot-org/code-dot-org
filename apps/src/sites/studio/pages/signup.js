@@ -1,6 +1,19 @@
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
 
+// TEMPORARY TESTING CODE
+import AnalysisEvents from '@cdo/apps/lib/util/analysisEvents';
+
+window.analysis = new AnalysisEvents('analysis-events', 1000);
+var data = {
+  created_at: "2017-03-16T15:24:25.796+00:00",
+  environment: "eric",
+  study: "eric-setup",
+  data_int: 31415,
+  event: "Eric's test event"
+};
+window.analysis.log(data);
+
 window.SignupManager = function (options) {
   this.options = options;
   var self = this;
