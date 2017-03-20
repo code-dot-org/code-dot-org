@@ -1,14 +1,5 @@
 module SurveyResultsHelper
   def show_diversity_survey?
-    true
-  end
-
-  def show_nps_survey?
-    # Disable NPS survey
-    false
-  end
-
-  def show_survey?
     false unless current_user
     false unless language == "en"
     false if current_user.under_13?
@@ -21,6 +12,11 @@ module SurveyResultsHelper
 
     # There is no reason not to show the survey, so show the survey.
     return true
+  end
+
+  def show_nps_survey?
+    # Disable NPS survey
+    false
   end
 
   def account_existed_14_days?
@@ -44,10 +40,10 @@ module SurveyResultsHelper
   end
 
   def has_any_students?
-    !current_user.students.length.empty?
+    !current_user.students.empty?
   end
 
   def has_any_student_under_13?
-    current_user.students.any(&:under_13?)
+    current_user.students.any?(&:under_13?)
   end
 end
