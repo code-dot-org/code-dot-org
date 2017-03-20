@@ -19,10 +19,10 @@ puts "#{results.count} from petition"
 # "","",13570557,No Perk,2015-09-30 10:30:57 -0700,,Visible,Code.org Major Donors ,majordonors@code.org,$80,"","","","","","","",""
 # 2375305,1128,13570533,Order Placed,2015-09-30 10:29:27 -0700,FirstGiving,Visible,Olivier Greoli,olivier@greoli.be,$80,Code.org Hat + Laptop Sticker,Olivier Greoli,Rue des ChÃ¢lets 4,,GrivegnÃ©e,,"=""4030""",Belgium
 
-EMAIL = 'Email'
-NAME = 'Name'
-COUNTRY_CODE = 'Shipping Country'
-COUNTRY_CODE_US = 'United States'
+EMAIL = 'Email'.freeze
+NAME = 'Name'.freeze
+COUNTRY_CODE = 'Shipping Country'.freeze
+COUNTRY_CODE_US = 'United States'.freeze
 
 CSV.foreach("indiegogo.csv", headers: true) do |row|
   email = row[EMAIL]

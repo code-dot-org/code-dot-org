@@ -13,9 +13,14 @@ class AdminUsersControllerTest < ActionController::TestCase
     @malformed = create :teacher, email: 'malformed@example.com'
     @malformed.update_column(:email, '')  # Bypasses validation!
 
-    @script = create :script
-    @level = create :level
     @user = create :user
+    @script = Script.first
+    @level = @script.script_levels.first.level
+    @manual_pass_params = {
+      user_id: @user.id,
+      script_id_or_name: @script.id,
+      level_id: @level.id
+    }
   end
 
   generate_admin_only_tests_for :account_repair_form
@@ -181,8 +186,20 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
 
     assert_creates(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
+  end
+
+  test 'manual_pass adds user_level with manual pass by script name' do
+    sign_in @admin
+
+    assert_creates(UserLevel) do
       post :manual_pass,
-        params: {user_id: @user.id, script_id: @script.id, level_id: @level.id}
+        params: @manual_pass_params.merge(script_id_or_name: @script.name)
     end
     user_level = UserLevel.find_by_user_id(@user.id)
     assert_equal @script.id, user_level.script_id
@@ -197,8 +214,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     )
 
     assert_does_not_create(UserLevel) do
-      post :manual_pass,
-        params: {user_id: @user.id, script_id: @script.id, level_id: @level.id}
+      post :manual_pass, params: @manual_pass_params
     end
     user_level = UserLevel.find_by_user_id(@user.id)
     assert_equal @script.id, user_level.script_id
@@ -213,8 +229,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     )
 
     assert_does_not_create(UserLevel) do
-      post :manual_pass,
-        params: {user_id: @user.id, script_id: @script.id, level_id: @level.id}
+      post :manual_pass, params: @manual_pass_params
     end
     user_level = UserLevel.find_by_user_id(@user.id)
     assert_equal @script.id, user_level.script_id
@@ -226,8 +241,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @not_admin
 
     assert_does_not_create(UserLevel) do
-      post :manual_pass,
-        params: {user_id: @user.id, script_id: @script.id, level_id: @level.id}
+      post :manual_pass, params: @manual_pass_params
     end
     assert_response :forbidden
   end
