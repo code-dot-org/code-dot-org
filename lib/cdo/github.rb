@@ -95,10 +95,11 @@ module GitHub
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Repositories.html#branch-instance_method
   # @param branch [String] The name of the branch.
   # @raise [Octokit::NotFound] If the specified branch does not exist.
-  # @return [String] The sha hash of the most recent commit to branch.
+  # @return [String] The sha hash (abbreviated to eight characters) of the most
+  #   recent commit to branch.
   def self.sha(branch)
     response = Octokit.branch(REPO, branch)
-    response.commit.sha
+    response.commit.sha[0, 7]
   end
 
   # Opens a browser URL with a candidate pull request merging head into base.
