@@ -30,10 +30,10 @@ NUM_VOLUNTEERS_BY_STATE = {
   'Utah' => 9,
   'Pennsylvania' => 8,
   'District of Columbia' => 5
-}
+}.freeze
 
 previously_contacted = Set.new
-OLD_TEMPLATE = '2016-05-05-teals-volunteers'
+OLD_TEMPLATE = '2016-05-05-teals-volunteers'.freeze
 old_email_recipients_query = %Q(
   SELECT DISTINCT contact_email
   FROM poste_deliveries
