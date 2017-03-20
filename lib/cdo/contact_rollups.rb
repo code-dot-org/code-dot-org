@@ -430,8 +430,9 @@ class ContactRollups
                 WHEN 'csf_workshop' THEN 'CS Fundamentals'
               END AS course
             FROM #{DASHBOARD_DB_NAME}.sections
-	            INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
+              INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
               INNER JOIN #{DASHBOARD_DB_NAME}.users ON users.id = followers.student_user_id
+            WHERE section_type IN ('csins_workshop','csina_workshop','ecs_workshop','csp_workshop','csf_workshop')
         ) q1
         ORDER BY 1,2
         ) q2
