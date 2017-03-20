@@ -52,6 +52,7 @@ social:
 | New Jersey | Math, Science |
 | New York | Math |
 | North Carolina | Math |
+| North Dakota | Math |
 | Ohio | Math |
 | Oklahoma | Math |
 | Oregon | Math |

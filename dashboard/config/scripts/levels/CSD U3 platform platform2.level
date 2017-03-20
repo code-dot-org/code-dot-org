@@ -41,9 +41,9 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null,
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

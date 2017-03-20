@@ -1,15 +1,25 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-03-15T18:10:05.000Z",
+  "created_at": "2017-03-20T17:36:23.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
       "onEvent": null,
-      "declareAssign_x_promptNum": null,
-      "setPosition": null
+      "setPosition": {
+        "params": [
+          "id",
+          "0",
+          "0"
+        ],
+        "paletteParams": [
+          "id",
+          "x",
+          "y"
+        ]
+      }
     },
     "edit_code": true,
     "embed": "false",
@@ -50,7 +60,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Setting Up the Safe\r\n\r\nYou have generated a secret code and made it so users can navigate to the second room. Lets give the user the ability to enter the secret code when they click on the sage\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for the safe image\r\n* Inside the `onEvent` block add a `prompt` block\r\n\t* On the left set the name of the variable to something like guess \r\n    * On the right change the prompt to ask the user to enter the code",
+    "markdown_instructions": "# Hide the Code\r\n\r\n<img src=\"https://images.code.org/11fc50efd77b7245198dddc2f11c2e6f-image-1489606362106.32.21 PM.png\" style=\"width:200px;float:right\">\r\n\r\n<img src=\"https://images.code.org/b957534ed691290bdba5f2e1b9dd4e23-image-1489606362105.32.02 PM.png\" style=\"width:200px;float:right\">\r\n\r\nNow make it so the user can find the secret code by clicking the picture. When they click the picture it should move up and out of the way.\r\n\r\n# Do This\r\n\r\n* Pull out an `onEvent` block\r\n* Change the id spot in the `onEvent` block to picture (which is the ID of the picture element)\r\n* Inside the `onEvent` block add the `setPosition` block with the following inputs\r\n\t* ID: picture\r\n    * The next two inputs are x and y values - test out some numbers to try to get the picture to move like in the pictures on the right",
     "contained_level_names": null,
     "encrypted_examples": [
 
