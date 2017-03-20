@@ -1,7 +1,7 @@
 - survey_url = "https://docs.google.com/a/code.org/forms/d/e/1FAIpQLSd7MppqXJi4FpURELDH3RyMG6PgevBVPaH373K0h-FSI_3FUg/viewform"
 
-.survey{style: "background-color: #a69bc1; color: white"}
-  #surveythanks{style: "display: none; font-size: 14px; padding: 20px"}
+#diversity_survey
+  #surveythanks{style: "display: none; "}
     Thank you for telling us about your students!
     %br/
     %br/
@@ -13,35 +13,32 @@
         Go to survey
 
   #surveybody
-    #headingarea{style: "margin-top:0px; background-color: #7665a0; padding: 20px"}
-      %h1{style: "color: white; xfont-size: 20px"} Optional: Help us track our progress toward improving diversity in computer science
-      %div{style: "margin-left: 0px; font-size: 12px"}
+    #headingarea
+      %h1 Optional: Help us track our progress toward improving diversity in computer science
+      .subtext
         To protect your students’ privacy, we will not ask students younger than 13 for this information. Therefore, this information will not be linked to their specific accounts.
-        %br/
         (See our
         = succeed '.)' do
-          %a{href: CDO.code_org_url('/privacy'), target: "_blank", style: "color: white; text-decoration: underline"} privacy policy
+          %a#privacylink{href: CDO.code_org_url('/privacy'), target: "_blank"} privacy policy
 
-    = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom: 0px; padding: 20px"}) do |f|
-      .survey_left{style: "width: 50%; float: left"}
-        %p{style: "padding-top: 10px; font-size:16px"}
-          %ol
-            %li{style: "font-size: 14px"}
-              Of your students using Code.org's courses, how many are
-        .dots{style: "padding-top: 10px; padding-left: 20px; padding-bottom: 20px"}
+    = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)"}) do |f|
+      .survey_left
+        %ol
+          %li
+            Of your students using Code.org's courses, how many are
+        .dots
           - SurveyResult::ETHNICITIES.each do |key, value|
-            %input.ethnicity_input{maxlength: "3", style: "width:40px; height: 24px; font-size: 14px; text-align: right; margin: 6px; margin-left: 10px", name: "survey[survey2017_ethnicity_#{key}]", placeholder: "0"}
+            %input#ethnicity_input{maxlength: "3", name: "survey[survey2017_ethnicity_#{key}]", placeholder: "0"}
             = value
             %br/
-      .survey_right{style: "width: 45%; float: left; border-left: 1px solid #ccc; padding-left:20px"}
+      .survey_right
 
-        %p{style: "padding-top: 7px; font-size:16px;;"}
-          %ol{start: 2}
-            %li{style: "font-size: 14px"}
-              What is the percentage of students with free and reduced meals (FARMs) at your school?
-              %div{style: "font-size: 12px; margin-top:7px"}
-                Only answer this if you're using Code Studio during school hours.
-        .dots{style: "padding-top: 0px; padding-bottom: 0px; margin-left: 30px; font-size: 14px"}
+        %ol{start: 2}
+          %li
+            What is the percentage of students with free and reduced meals (FARMs) at your school?
+            .subtext
+              Only answer this if you're using Code Studio during school hours.
+        .dots
           - (0..9).each do |index|
             - if index.between?(0,7)
               - value = index * 10
@@ -51,15 +48,15 @@
               - text = "My school has a Title I designation, but I’m not sure what our rate of Free and Reduced lunch is."
             - else
               - text = "Other"
-            .dot{style: "margin-top:10px"}
-              %input{style: "margin-right:3px; vertical-align:top; margin-top: 2px", id: "radio_#{index}", type: "radio", name: "survey[survey2017_foodstamps]", value: index}
-              %label{style: "display: inline; margin-top:2px; font-size: 13px; padding-right:20px", for: "radio_#{index}"}= text
+            .dot
+              %input{id: "radio_#{index}", type: "radio", name: "survey[survey2017_foodstamps]", value: index}
+              %label{for: "radio_#{index}"}= text
 
       %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2017}
 
-      #submit{style: "text-align: right"}
+      #submit
         %button.btn-primary#submitSurvey{type: "submit"} Submit
-        %span{onclick: "return submitSurvey(false)", style: "cursor: pointer"} Prefer not to answer
+        %span#noanswer{onclick: "return submitSurvey(false)"} Prefer not to answer
   %br/
 
 :javascript
@@ -67,7 +64,7 @@
   function submitSurvey(submittedValue)
   {
     // make sure each ethnicity is a positive integer
-    $(".ethnicity_input").each(function(index) {
+    $("#ethnicity_input").each(function(index) {
       $(this).val($(this).val().replace(/[^0-9]/g, ''));
     });
 
@@ -79,7 +76,7 @@
     else
     {
       $("#survey")[0].reset();
-      $(".survey").hide();
+      $("#diversity-survey").hide();
     }
 
     $.ajax({
