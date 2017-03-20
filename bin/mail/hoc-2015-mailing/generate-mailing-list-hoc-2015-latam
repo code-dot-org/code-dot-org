@@ -48,24 +48,26 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-HOC_SIGNUP_COUNTRIES = ["Guatemala",
-                        "El Salvador",
-                        "Costa Rica",
-                        "Nicaragua",
-                        "Belize",
-                        "Panama",
-                        "Cuba",
-                        "Dominican Republic",
-                        "Venezuela",
-                        "Colombia",
-                        "Ecuador",
-                        "Peru",
-                        "Bolivia",
-                        "Paraguay",
-                        "Uruguay",
-                        "Chile",
-                        "Argentina",
-                        "Puerto Rico"]
+HOC_SIGNUP_COUNTRIES = [
+  "Guatemala",
+  "El Salvador",
+  "Costa Rica",
+  "Nicaragua",
+  "Belize",
+  "Panama",
+  "Cuba",
+  "Dominican Republic",
+  "Venezuela",
+  "Colombia",
+  "Ecuador",
+  "Peru",
+  "Bolivia",
+  "Paraguay",
+  "Uruguay",
+  "Chile",
+  "Argentina",
+  "Puerto Rico"
+].freeze
 
 CSEDWEEK_COUNTRIES = %w(
   gt
@@ -86,7 +88,7 @@ CSEDWEEK_COUNTRIES = %w(
   cl
   ar
   pr
-)
+).freeze
 
 HOC_SIGNUP_QUERY = HOC_SIGNUP_COUNTRIES.
   map {|country| %Q|(kind_s:"HocSignup2014" && location_country_s:"#{country}")| }.
