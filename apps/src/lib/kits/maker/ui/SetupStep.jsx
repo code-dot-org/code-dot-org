@@ -10,41 +10,6 @@ export const CELEBRATING = 'CELEBRATING';
 const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
 
 export default class SetupStep extends Component {
-  iconFor(stepStatus) {
-    switch (stepStatus) {
-      case WAITING:
-        return "fa fa-fw fa-clock-o";
-      case ATTEMPTING:
-        return "fa fa-fw fa-spinner fa-spin";
-      case SUCCEEDED:
-        return "fa fa-fw fa-check-circle";
-      case CELEBRATING:
-        return "fa fa-fw fa-thumbs-o-up";
-      case FAILED:
-        return "fa fa-fw fa-times-circle";
-      default:
-        throw new Error('Unknown step status.');
-    }
-  }
-
-  styleFor(stepStatus) {
-    switch (stepStatus) {
-      case ATTEMPTING:
-      case WAITING:
-        return {color: color.light_gray};
-      case SUCCEEDED:
-      case CELEBRATING:
-        return {color: color.realgreen};
-      case HIDDEN:
-        return {display: 'none'};
-      default:
-        return {
-          color: color.red,
-          fontWeight: 'bold'
-        };
-    }
-  }
-
   render() {
     if (this.props.stepStatus === HIDDEN) {
       return null;
@@ -54,7 +19,7 @@ export default class SetupStep extends Component {
     };
     const headerStyle = Object.assign(
         {'fontSize': '26px'},
-        this.styleFor(this.props.stepStatus));
+        styleFor(this.props.stepStatus));
     const iconStyle = {
       marginRight: 6,
     };
@@ -63,17 +28,17 @@ export default class SetupStep extends Component {
       fontSize: '14px',
     };
     return (
-        <div style={rootStyle}>
-          <div style={headerStyle}>
-            <i style={iconStyle} className={this.iconFor(this.props.stepStatus)}/>
-            <span>{this.props.stepName}</span>
-          </div>
-          {this.props.stepStatus === FAILED &&
-          <div style={bodyStyle}>
-            {this.props.children}
-          </div>
-          }
+      <div style={rootStyle}>
+        <div style={headerStyle}>
+          <i style={iconStyle} className={iconFor(this.props.stepStatus)}/>
+          <span>{this.props.stepName}</span>
         </div>
+        {this.props.stepStatus === FAILED &&
+        <div style={bodyStyle}>
+          {this.props.children}
+        </div>
+        }
+      </div>
     );
   }
 }
@@ -82,3 +47,38 @@ SetupStep.propTypes = {
   stepName: PropTypes.string.isRequired,
   stepStatus: PropTypes.oneOf(STEP_STATUSES).isRequired
 };
+
+function styleFor(stepStatus) {
+  switch (stepStatus) {
+    case ATTEMPTING:
+    case WAITING:
+      return {color: color.light_gray};
+    case SUCCEEDED:
+    case CELEBRATING:
+      return {color: color.realgreen};
+    case HIDDEN:
+      return {display: 'none'};
+    default:
+      return {
+        color: color.red,
+        fontWeight: 'bold'
+      };
+  }
+}
+
+function iconFor(stepStatus) {
+  switch (stepStatus) {
+    case WAITING:
+      return "fa fa-fw fa-clock-o";
+    case ATTEMPTING:
+      return "fa fa-fw fa-spinner fa-spin";
+    case SUCCEEDED:
+      return "fa fa-fw fa-check-circle";
+    case CELEBRATING:
+      return "fa fa-fw fa-thumbs-o-up";
+    case FAILED:
+      return "fa fa-fw fa-times-circle";
+    default:
+      throw new Error('Unknown step status.');
+  }
+}
