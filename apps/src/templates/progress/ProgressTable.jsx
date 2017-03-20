@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { categorizedLessons } from '@cdo/apps/code-studio/progressRedux';
+import { categorizedLessons, peerReviewLesson, peerReviewLevels } from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import ProgressGroup from './ProgressGroup';
@@ -18,7 +18,9 @@ const ProgressTable = React.createClass({
         ).isRequired
       })
     ).isRequired,
-    hasPeerReviews: PropTypes.bool.isRequired
+    // TODO - can i ultimate just give these their own category?
+    peerReviewLesson: lessonType,
+    peerReviewLevels: PropTypes.arrayOf(levelType)
   },
 
   componentDidMount() {
@@ -36,7 +38,7 @@ const ProgressTable = React.createClass({
   },
 
   render() {
-    const { isSummaryView, categorizedLessons, hasPeerReviews } = this.props;
+    const { isSummaryView, categorizedLessons, peerReviewLesson, peerReviewLevels } = this.props;
 
     const TableType = isSummaryView ? SummaryProgressTable : DetailProgressTable;
 
@@ -62,24 +64,13 @@ const ProgressTable = React.createClass({
           {/* Peer reviews are a bit of a special beast and will take some time to
             * get right. For now, stick in a placeholder that makes it clear that
             * this work hasnt been done yet*/}
-          {hasPeerReviews &&
+          {!!peerReviewLesson &&
             <ProgressGroup
               key="peer_review"
-              groupName={"Peer Review: Not Yet Implemented with progressRedesign"}
+              groupName={"Peer Review"}
               isSummaryView={isSummaryView}
-              lessons={[
-                {
-                  name: "Not yet implemented",
-                  id: -1,
-                  lockable: false,
-                  isFocusArea: false
-                }
-              ]}
-              levelsByLesson={[[{
-                status: 'not_tried',
-                url: '',
-                name: 'Not Implemented'
-              }]]}
+              lessons={[peerReviewLesson]}
+              levelsByLesson={[peerReviewLevels]}
             />
           }
         </div>
@@ -91,5 +82,6 @@ const ProgressTable = React.createClass({
 export default connect(state => ({
   isSummaryView: state.progress.isSummaryView,
   categorizedLessons: categorizedLessons(state.progress),
-  hasPeerReviews: !!state.progress.peerReviewStage,
+  peerReviewLesson: peerReviewLesson(state.progress),
+  peerReviewLevels: peerReviewLevels(state.progress)
 }))(ProgressTable);

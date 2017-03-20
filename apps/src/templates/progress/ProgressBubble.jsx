@@ -53,7 +53,9 @@ const ProgressBubble = React.createClass({
   },
 
   render() {
-    const { number, status, url, disabled, levelName, levelIcon } = this.props;
+    const { number, status, url, levelName, levelIcon } = this.props;
+
+    let disabled = this.props.disabled || levelIcon === 'lock';
 
     const style = {
       ...styles.main,
@@ -66,10 +68,11 @@ const ProgressBubble = React.createClass({
       href = url + location.search;
     }
 
-    let bubble = (
+    const interior = levelIcon === 'lock' ? <FontAwesome icon="lock"/> : number;
 
+    let bubble = (
       <div style={style} data-tip data-for={url} aria-describedby={url}>
-        {number}
+        {interior}
         <ReactTooltip
           id={url}
           role="tooltip"
@@ -79,10 +82,7 @@ const ProgressBubble = React.createClass({
           {levelName}
         </ReactTooltip>
       </div>
-
     );
-
-
 
     // If we have an href, wrap in an achor tag
     if (href) {

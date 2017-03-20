@@ -3,7 +3,7 @@ import { PropTypes } from 'react';
 export const levelType = (
   PropTypes.shape({
     status: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    url: PropTypes.string,
     name: PropTypes.string,
     icon: PropTypes.string,
   })

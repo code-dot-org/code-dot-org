@@ -19,6 +19,7 @@ const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
+const PEER_REVIEW_ID = -1;
 
 const initialState = {
   // These first fields never change after initialization
@@ -242,11 +243,37 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
  * @param {number} stageIndex - The index into our stages we care about
  * @returns {Lesson}
  */
-const lessonFromStage = (state, stageIndex) => ({
-  ..._.pick(state.stages[stageIndex], ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']),
+const lessonFromStageAtIndex = (state, stageIndex) => ({
+  ...lessonFromStage(state.stages[stageIndex]),
   isFocusArea: state.focusAreaPositions.includes(state.stages[stageIndex].position)
 });
-export const lessons = state => state.stages.map((_, index) => lessonFromStage(state, index));
+const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']);
+export const lessons = state => state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
+
+export const peerReviewLesson = state => !state.peerReviewStage ? null : ({
+  ...lessonFromStage(state.peerReviewStage),
+  // add some fields that are missing for this stage but required for lessonType
+  id: PEER_REVIEW_ID,
+  lockable: false,
+  isFocusArea: false
+});
+
+/**
+ * TODO - add a comment here. write tests. make storybooks
+ */
+export const peerReviewLevels = state => {
+  if (!state.peerReviewStage) {
+    return null;
+  }
+
+  return state.peerReviewStage.levels.map((level, index) => ({
+    id: PEER_REVIEW_ID,
+    status: (level.locked === true ? LevelStatus.locked : level.status) || LevelStatus.not_tried,
+    url: level.url,
+    name: level.name,
+    icon: (level.locked ? 'fa-lock' : undefined),
+  }));
+};
 
 /**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
@@ -314,7 +341,7 @@ export const categorizedLessons = state => {
 
   state.stages.forEach((stage, index) => {
     const category = stage.flex_category;
-    const lesson = lessonFromStage(state, index);
+    const lesson = lessonFromStageAtIndex(state, index);
     const stageLevels = allLevels[index];
 
     byCategory[category] = byCategory[category] || {

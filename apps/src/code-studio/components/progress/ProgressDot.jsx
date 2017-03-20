@@ -226,6 +226,10 @@ export const ProgressDot = Radium(React.createClass({
     return '';
   },
 
+  tooltipId() {
+    return this.props.level.title.toString();
+  },
+
   tooltipContent() {
     const { level } = this.props;
     if (level.name === undefined) {
@@ -235,11 +239,11 @@ export const ProgressDot = Radium(React.createClass({
   },
 
   renderTooltip() {
-    const { level, courseOverviewPage } = this.props;
+    const { courseOverviewPage } = this.props;
     if (!courseOverviewPage) {
       return (
         <ReactTooltip
-          id={level.title}
+          id={this.tooltipId()}
           role="tooltip"
           wrapper="span"
         >
@@ -279,7 +283,7 @@ export const ProgressDot = Radium(React.createClass({
          ]}
       >
         {(iconClassFromIconType[level.icon] && !isPeerReview) ?
-          <span data-tip data-for={level.title} aria-describedby={level.title} style={{borderColor: "#ff0000", borderWidth: 2}}>
+          <span data-tip data-for={this.tooltipId()} aria-describedby={this.tooltipId()} style={{borderColor: "#ff0000", borderWidth: 2}}>
             <i
               className={this.iconClassName()}
               style={[
@@ -309,11 +313,11 @@ export const ProgressDot = Radium(React.createClass({
             ]}
           >
 
-          <div data-tip data-for={level.title} aria-describedby={level.title}>
+          <div data-tip data-for={this.tooltipId()} aria-describedby={this.tooltipId()}>
             <BubbleInterior
               showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
-              title={level.title || undefined}
+              title={this.tooltipId() || undefined}
             />
             {this.renderTooltip()}
           </div>
