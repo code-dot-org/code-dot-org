@@ -53,8 +53,8 @@ class PdWorkshopSurvey
           result[:help_quality_s][facilitator] = required_enum(data, :help_quality_s, facilitator)
           result[:how_comfortable_asking_questions_s][facilitator] = required_enum(data, :how_comfortable_asking_questions_s, facilitator)
           result[:how_often_taught_new_things_s][facilitator] = required_enum(data, :how_often_taught_new_things_s, facilitator)
-          result[:things_facilitator_did_well_s][facilitator] = stripped(data[:things_facilitator_did_well_s][facilitator])
-          result[:things_facilitator_could_improve_s][facilitator] = stripped(data[:things_facilitator_could_improve_s][facilitator])
+          result[:things_facilitator_did_well_s][facilitator] = stripped(data[:things_facilitator_did_well_s].try(:[], facilitator))
+          result[:things_facilitator_could_improve_s][facilitator] = stripped(data[:things_facilitator_could_improve_s].try(:[], facilitator))
         end
       end
 
