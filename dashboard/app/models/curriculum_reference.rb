@@ -23,18 +23,25 @@
 #  index_levels_on_name     (name)
 #
 
-# Contract Match type.
-class ContractMatch < DSLDefined
-  def dsl_default
-    <<ruby
-name 'Enter name here'
-title 'Enter title here'
-content1 'Enter prompt here'
-answer 'Contract Name|Number|Domain1:Number|Domain2:String'
-ruby
+class CurriculumReference < Level
+  serialized_attrs %w(
+    reference
+  )
+
+  def self.create_from_level_builder(params, level_params)
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.curriculum_reference,
+        level_num: 'custom',
+      )
+    )
   end
 
-  def supports_markdown?
-    true
+  # Get the URL of the studio.code.org/docs routes (that serves as a proxy to
+  # our docs.code.org route)
+  def href
+    return nil unless properties['reference']
+    "/docs#{properties['reference']}"
   end
 end

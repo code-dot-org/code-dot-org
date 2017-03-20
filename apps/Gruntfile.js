@@ -386,6 +386,7 @@ testsContext.keys().forEach(testsContext);
     'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
     'levels/_standalone_video':     './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/external':              './src/sites/studio/pages/levels/external.js',
