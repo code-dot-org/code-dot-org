@@ -1,0 +1,118 @@
+/*
+ * @file Static interface to Maker Toolkit, to simplify App Lab code interfacing
+ * with maker and provide clean setup/cancel/reset patterns.
+ */
+import codegen from '../../../codegen';
+import {getStore} from '../../../redux';
+import CircuitPlaygroundBoard from './CircuitPlaygroundBoard';
+import * as commands from './commands';
+import * as dropletConfig from './dropletConfig';
+import MakerError, {ConnectionCanceledError} from './MakerError';
+import {findPortWithViableDevice} from './portScanning';
+import * as redux from './redux';
+
+// Re-export some modules so consumers only need this 'toolkit' module
+export {dropletConfig, MakerError};
+
+/**
+ * @type {CircuitPlaygroundBoard} The current board controller, populated when
+ * connected, null when not connected.  There can be only one at any time.
+ */
+let currentBoard = null;
+
+/**
+ * Enable Maker Toolkit for the current level.
+ */
+export function enable() {
+  getStore().dispatch(redux.enable());
+}
+
+/**
+ * @returns {boolean} whether Maker Toolkit is enabled for the current level
+ */
+export function isEnabled() {
+  return redux.isEnabled(getStore().getState());
+}
+
+/**
+ * Called when starting execution of the student app.
+ * Looks for a connected board, sets up an appropriate board controller,
+ * and injects needed references into the interpreter and its commands.
+ * @param {JSInterpreter} interpreter
+ * @param {function} onDisconnect
+ * @return {Promise}
+ *   Resolves (with no value) when connection is successful and the board
+ *   controller is ready to use.
+ *   Rejects with a MakerError when the connection process is cancelled or
+ *   fails in an expected way that we handle gracefully (for example, no board
+ *   plugged in).
+ *   Rejects with another error type if something unexpected happens.
+ */
+export function connect({interpreter, onDisconnect}) {
+  if (!isEnabled()) {
+    return Promise.reject(new Error('Attempted to connect to a maker board, ' +
+        'but Maker Toolkit is not enabled.'));
+  }
+
+  if (currentBoard) {
+    return Promise.reject(new Error('Attempted to connect Maker Toolkit when ' +
+        'an existing board is already connected.'));
+  }
+
+  const store = getStore();
+  const dispatch = store.dispatch.bind(store);
+  dispatch(redux.startConnecting());
+
+  return findPortWithViableDevice()
+      .then(port => {
+        if (!isConnecting()) {
+          // Must've called reset() - exit the promise chain.
+          return Promise.reject(new ConnectionCanceledError());
+        }
+        currentBoard = new CircuitPlaygroundBoard(port);
+        return currentBoard.connect();
+      })
+      .then(() => {
+        if (!isConnecting()) {
+          // Must've called reset() - exit the promise chain.
+          return Promise.reject(new ConnectionCanceledError());
+        }
+        commands.injectBoardController(currentBoard);
+        currentBoard.installOnInterpreter(codegen, interpreter);
+        if (typeof onDisconnect === 'function') {
+          currentBoard.once('disconnect', onDisconnect);
+        }
+        dispatch(redux.reportConnected());
+      })
+      .catch(error => {
+        if (error instanceof ConnectionCanceledError) {
+          // This was intentional, and we don't need an error screen.
+          return Promise.reject(error);
+        } else {
+          // Something went wrong, so show the error screen.
+          dispatch(redux.reportConnectionError());
+          return Promise.reject(error);
+        }
+      });
+}
+
+function isConnecting() {
+  return redux.isConnecting(getStore().getState());
+}
+
+/**
+ * Called when execution of the student app ends.
+ * Resets the board state, disconnects and destroys the current board controller,
+ * and puts maker UI back in a default state.
+ */
+export function reset() {
+  if (!isEnabled()) {
+    return;
+  }
+
+  if (currentBoard) {
+    currentBoard.destroy();
+    currentBoard = null;
+  }
+  getStore().dispatch(redux.disconnect());
+}

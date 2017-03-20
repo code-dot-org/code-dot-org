@@ -105,11 +105,16 @@ For 2016 College Board data, we consider the following ethnic group categories t
 * 11 states saw a decrease in the proportion of AP Computer Science A exam-takers who are underrepresented minorities, with an average decline of 4.3%. The largest decreases came in Kansas (-9.7%), Kentucky (-9.3%), and Louisiana (-7.7%).
 * Eight states more than doubled the number of underrepresented minority students who took the AP Computer Science A exam, including Alaska, Connecticut, Washington DC, Hawaii, Iowa, Nebraska, New Hampshire, and South Dakota.
 
+### Deep Historical Analysis of State Data by Barb Ericson
 
+* Barb Ericson at Georgia Tech has been doing much deeper analyses of these AP Computer Science A Exam data for many years. If you're interested in the *really* deep dive, check out her [AP Data Page](http://home.cc.gatech.edu/ice-gt/595)
 
 ## Downloads
 
 * [State-by-state](/files/APCollegeBoardDataSummaries.xlsx) data over time
 * [Comparison](/files/AP2016.xlsx) between STEM subjects and all subject areas for 2015-2016
+
+
+
 
 Code.org performed calculations and analysis on the data as provided on the public [College Board AP data reports](https://research.collegeboard.org/programs/ap/data).
