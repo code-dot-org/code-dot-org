@@ -114,7 +114,7 @@ describe('Level tests', function () {
 
     tickInterval = window.setInterval(function () {
       if (clock) {
-        clock.tick(100); // fake 1000 ms for every real 1ms
+        clock.tick(100); // fake 100 ms for every real 1ms
       }
     }, 1);
     clock = sinon.useFakeTimers(Date.now());
