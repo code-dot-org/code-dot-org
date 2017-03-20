@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import color from '../../../../util/color';
+import FontAwesome from '../../../../templates/FontAwesome';
 
 export const HIDDEN = 'HIDDEN';
 export const WAITING = 'WAITING';
@@ -9,33 +10,34 @@ export const FAILED = 'FAILED';
 export const CELEBRATING = 'CELEBRATING';
 const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CELEBRATING];
 
+const style = {
+  root: {
+    margin: '15px 0',
+  },
+  header: {
+    'fontSize': '26px',
+  },
+  body: {
+    margin: '15px 0 15px 40px',
+    fontSize: '14px',
+  }
+};
+
 export default class SetupStep extends Component {
   render() {
-    if (this.props.stepStatus === HIDDEN) {
+    const {stepName, stepStatus, children} = this.props;
+    if (stepStatus === HIDDEN) {
       return null;
     }
-    const rootStyle = {
-      margin: '15px 0',
-    };
-    const headerStyle = Object.assign(
-        {'fontSize': '26px'},
-        styleFor(this.props.stepStatus));
-    const iconStyle = {
-      marginRight: 6,
-    };
-    const bodyStyle = {
-      margin: '15px 0 15px 40px',
-      fontSize: '14px',
-    };
     return (
-      <div style={rootStyle}>
-        <div style={headerStyle}>
-          <i style={iconStyle} className={iconFor(this.props.stepStatus)}/>
-          <span>{this.props.stepName}</span>
+      <div style={style.root}>
+        <div style={{...style.header, ...styleFor(stepStatus)}}>
+          {iconFor(stepStatus)}
+          <span>{stepName}</span>
         </div>
-        {this.props.stepStatus === FAILED &&
-        <div style={bodyStyle}>
-          {this.props.children}
+        {stepStatus === FAILED &&
+        <div style={style.body}>
+          {children}
         </div>
         }
       </div>
@@ -48,6 +50,10 @@ SetupStep.propTypes = {
   stepStatus: PropTypes.oneOf(STEP_STATUSES).isRequired
 };
 
+/**
+ * @param {string} stepStatus
+ * @returns {object}
+ */
 function styleFor(stepStatus) {
   switch (stepStatus) {
     case ATTEMPTING:
@@ -66,18 +72,25 @@ function styleFor(stepStatus) {
   }
 }
 
+/**
+ * @param {string} stepStatus
+ * @returns {FontAwesome}
+ */
 function iconFor(stepStatus) {
+  const iconStyle = {
+    marginRight: 6,
+  };
   switch (stepStatus) {
     case WAITING:
-      return "fa fa-fw fa-clock-o";
+      return <FontAwesome icon="clock-o" className="fa-fw" style={iconStyle}/>;
     case ATTEMPTING:
-      return "fa fa-fw fa-spinner fa-spin";
+      return <FontAwesome icon="spinner" className="fa-fw fa-spin" style={iconStyle}/>;
     case SUCCEEDED:
-      return "fa fa-fw fa-check-circle";
+      return <FontAwesome icon="check-circle" className="fa-fw" style={iconStyle}/>;
     case CELEBRATING:
-      return "fa fa-fw fa-thumbs-o-up";
+      return <FontAwesome icon="thumbs-o-up" className="fa-fw" style={iconStyle}/>;
     case FAILED:
-      return "fa fa-fw fa-times-circle";
+      return <FontAwesome icon="times-circle" className="fa-fw" style={iconStyle}/>;
     default:
       throw new Error('Unknown step status.');
   }
