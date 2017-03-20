@@ -44,7 +44,7 @@ module Pd::WorkshopFilters
     if query_by == QUERY_BY_END
       workshops = workshops.end_on_or_after(start_date).end_on_or_before(end_date)
     else # assume by schedule
-      workshops = workshops.start_on_or_after(start_date).start_on_or_before(end_date)
+      workshops = workshops.scheduled_start_on_or_after(start_date).scheduled_start_on_or_before(end_date)
     end
 
     workshops

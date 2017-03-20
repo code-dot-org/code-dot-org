@@ -13,6 +13,12 @@ import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
 
+const styles = {
+  container: {
+    overflowX: 'auto'
+  }
+};
+
 const WorkshopTable = React.createClass({
   propTypes: {
     workshops: React.PropTypes.shape({
@@ -280,17 +286,18 @@ const WorkshopTable = React.createClass({
     })(rows);
 
     return (
-      <Table.Provider
-        id={this.props.tableId}
-        className="table table-striped table-condensed"
-        columns={this.columns}
-      >
-        {this.props.generateCaption && <caption>{this.props.generateCaption()}</caption>}
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id"/>
-        {
-          this.props.moreUrl && this.props.workshops.total_count > this.props.workshops.workshops.length &&
-          <tfoot>
+      <div style={styles.container}>
+        <Table.Provider
+          id={this.props.tableId}
+          className="table table-striped table-condensed"
+          columns={this.columns}
+        >
+          {this.props.generateCaption && <caption>{this.props.generateCaption()}</caption>}
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id"/>
+          {
+            this.props.moreUrl && this.props.workshops.total_count > this.props.workshops.workshops.length &&
+            <tfoot>
             <tr>
               <td>
                 <Button
@@ -302,9 +309,10 @@ const WorkshopTable = React.createClass({
                 </Button>
               </td>
             </tr>
-          </tfoot>
-        }
-      </Table.Provider>
+            </tfoot>
+          }
+        </Table.Provider>
+      </div>
     );
   }
 });
