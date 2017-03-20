@@ -48,24 +48,26 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-COUNTRIES = ["Guatemala",
-             "El Salvador",
-             "Costa Rica",
-             "Nicaragua",
-             "Belize",
-             "Panama",
-             "Cuba",
-             "Dominican Republic",
-             "Venezuela",
-             "Colombia",
-             "Ecuador",
-             "Peru",
-             "Bolivia",
-             "Paraguay",
-             "Uruguay",
-             "Chile",
-             "Argentina",
-             "Puerto Rico"]
+COUNTRIES = [
+  "Guatemala",
+  "El Salvador",
+  "Costa Rica",
+  "Nicaragua",
+  "Belize",
+  "Panama",
+  "Cuba",
+  "Dominican Republic",
+  "Venezuela",
+  "Colombia",
+  "Ecuador",
+  "Peru",
+  "Bolivia",
+  "Paraguay",
+  "Uruguay",
+  "Chile",
+  "Argentina",
+  "Puerto Rico"
+].freeze
 
 QUERY = COUNTRIES.
   map {|country| %Q|(kind_s:"HocSignup2015" && location_country_s:"#{country}")| }.
