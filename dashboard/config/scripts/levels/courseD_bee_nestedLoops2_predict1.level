@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "start_direction": "2",
-    "step_mode": "0",
+    "step_mode": "1",
     "nectar_goal": "9",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
