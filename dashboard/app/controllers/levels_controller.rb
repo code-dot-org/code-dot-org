@@ -129,7 +129,7 @@ class LevelsController < ApplicationController
     if type_class <= Grid
       default_tile = type_class == Karel ? {"tileType": 0} : 0
       start_tile = type_class == Karel ? {"tileType": 2} : 2
-      params[:level][:maze_data] = Array.new(8){Array.new(8){default_tile}}
+      params[:level][:maze_data] = Array.new(8) {Array.new(8) {default_tile}}
       params[:level][:maze_data][0][0] = start_tile
     end
     if type_class <= Studio

@@ -28,7 +28,7 @@ def export_contacts_to_csv(contacts, path)
         columns = contact.keys
         results << columns
       end
-      results << columns.map{|column| contact[column]}
+      results << columns.map {|column| contact[column]}
     end
   end
 end
@@ -197,7 +197,7 @@ def query_from_list(queries)
     # query_subscribed_contacts dedupes by rejecting duplicate emails.
     queries.each do |category, query|
       new_contacts = query_subscribed_contacts(q: query)
-      new_contacts.each_value{|contact| contact[:category] = category}
+      new_contacts.each_value {|contact| contact[:category] = category}
       puts "#{category}: #{new_contacts.count} contacts"
       contacts.merge! new_contacts
     end

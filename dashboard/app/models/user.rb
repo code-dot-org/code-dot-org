@@ -686,19 +686,19 @@ class User < ActiveRecord::Base
   def hidden_stage?(script_level)
     return false if try(:teacher?)
 
-    sections = sections_as_student.select{|s| s.deleted_at.nil?}
+    sections = sections_as_student.select {|s| s.deleted_at.nil?}
     return false if sections.empty?
 
-    script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
+    script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
     if !script_sections.empty?
       # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
       # hides the stage
-      script_sections.all?{|s| script_level.stage_hidden_for_section?(s.id) }
+      script_sections.all? {|s| script_level.stage_hidden_for_section?(s.id) }
     else
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
-      sections.any?{|s| script_level.stage_hidden_for_section?(s.id) }
+      sections.any? {|s| script_level.stage_hidden_for_section?(s.id) }
     end
   end
 
@@ -1151,7 +1151,7 @@ class User < ActiveRecord::Base
   end
 
   def can_pair_with?(other_user)
-    self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
+    self != other_user && sections_as_student.any? { |section| other_user.sections_as_student.include? section }
   end
 
   def self.csv_attributes
@@ -1160,7 +1160,7 @@ class User < ActiveRecord::Base
   end
 
   def to_csv
-    User.csv_attributes.map{ |attr| send(attr) }
+    User.csv_attributes.map { |attr| send(attr) }
   end
 
   def self.progress_queue
@@ -1215,7 +1215,7 @@ class User < ActiveRecord::Base
     # ignore any terms of service versions associated with deleted teacher
     # accounts.
     followeds.
-      collect{|followed| followed.user.try(:terms_of_service_version)}.
+      collect {|followed| followed.user.try(:terms_of_service_version)}.
       compact.
       max
   end

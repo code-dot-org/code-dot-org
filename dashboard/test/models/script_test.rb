@@ -62,7 +62,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map{|stage| stage[:scriptlevels]}.flatten
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages].map {|stage| stage[:scriptlevels]}.flatten
 
     # Set different level name in tested script
     parsed_script[4][:levels][0]['name'] = "Level 1"
@@ -193,7 +193,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     script = Script.add_script(
       {name: 'test script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
@@ -243,7 +243,7 @@ class ScriptTest < ActiveSupport::TestCase
       20-hour flappy playlab infinity artist course1 course2 course3 course4
       frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
       cspunit6 starwarsblocks
-    }.map{|s| Script.find_by_name(s)}
+    }.map {|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
       refute s.hidden?, "#{s.name} is hidden when it should not be"
@@ -537,7 +537,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     # Everything has Stage <number> when nothing is lockable
@@ -556,7 +556,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     # When first stage is lockable, it has no stage number, and the next stage starts at 1
@@ -575,7 +575,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     # When only second stage is lockable, we count non-lockable stages appropriately
@@ -595,7 +595,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
     assert_raises do
-      Script.add_script({name: 'test_script'}, script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+      Script.add_script({name: 'test_script'}, script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten)
     end
   end
 end
