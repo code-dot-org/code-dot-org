@@ -75,10 +75,23 @@ var CodeWorkspace = React.createClass({
   },
 
   onDebuggerSlide(debuggerHeight) {
-    $(this.codeTextbox.getRoot()).animate(
-      {bottom: debuggerHeight},
-      {step: utils.fireResizeEvent}
-    );
+    const textbox = this.codeTextbox.getRoot();
+    if (textbox.style.bottom) {
+      $(textbox).animate(
+        {bottom: debuggerHeight},
+        {step: utils.fireResizeEvent}
+      );
+    } else {
+      // if we haven't initialized the height of the code textbox,
+      // then don't bother animating it as we need it to be the
+      // right height immediately during initialization.
+
+      // TODO: find a way to do this better from StudioApp
+      // where the editor gets initialized. We seem to have
+      // an order of operations problem with regards to emitting
+      // and listening to the resize events.
+      textbox.style.bottom = debuggerHeight + 'px';
+    }
   },
 
   render: function () {
