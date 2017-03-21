@@ -59,6 +59,44 @@ export default storybook => {
         )
       },
       {
+        name:'SummaryProgressTable for peer reviews',
+        story: () => (
+          <SummaryProgressTable
+            lessons={[{
+              id: -1,
+              isFocusArea: false,
+              lockable: false,
+              name: "You must complete 3 reviews for this unit"
+            }]}
+            levelsByLesson={[
+              [
+                {
+                  id: -1,
+                  name: "Link to submitted review",
+                  status: LevelStatus.perfect,
+                  url: "/peer_reviews/1"
+                },
+                {
+                  id: -1,
+                  name: "Review a new submission",
+                  status: LevelStatus.not_tried,
+                  url: "/pull-review"
+                },
+                {
+                  id: -1,
+                  icon: 'fa-lock',
+                  name: "Reviews unavailable at this time",
+                  status: LevelStatus.locked,
+                  url: ""
+                },
+              ]
+            ]}
+            lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
+          />
+        )
+      },
+      {
         name:'second lesson is a hidden stage, viewing as teacher',
         story: () => (
           <SummaryProgressTable
