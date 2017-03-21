@@ -5,8 +5,8 @@ Feature: Workshop Survey Eyes test
 
 Scenario: Basic Workshop Survey Form
   Given I am a teacher who has just followed a survey link
-  And I open my eyes to test "workshop survey"
   And I wait to see element with ID "pd-workshop-survey-form"
+  And I open my eyes to test "workshop survey"
   Then I see no difference for "viewing workshop survey"
 
   When I press "btn-submit"
@@ -37,3 +37,4 @@ Scenario: Workshop Survey Facilitator-specific questions
   When I press "btn-submit"
   And I wait to see element with ID "error-message"
   Then I see no difference for "viewing workshop survey multiple facilitators with errors"
+  And I close my eyes
