@@ -477,14 +477,14 @@ class NetSimApiTest < Minitest::Test
 
   def test_many_node_delete_cascading_generates_minimum_invalidations_via_delete
     many_node_delete_cascading_generates_minimum_invalidations do |node_ids|
-      query_string = node_ids.map{|id| "id[]=#{id}"}.join('&')
+      query_string = node_ids.map {|id| "id[]=#{id}"}.join('&')
       @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?#{query_string}"
     end
   end
 
   def test_many_node_delete_cascading_generates_minimum_invalidations_via_post
     many_node_delete_cascading_generates_minimum_invalidations do |node_ids|
-      query_string = node_ids.map{|id| "id[]=#{id}"}.join('&')
+      query_string = node_ids.map {|id| "id[]=#{id}"}.join('&')
       @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?#{query_string}"
     end
   end

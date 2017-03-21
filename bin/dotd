@@ -193,7 +193,7 @@ end
 def view_commits(base:, head:)
   commit_list = GitHub.
       compare(base: base, head: head).
-      map{|msg| dim msg.lines.first}.
+      map {|msg| dim msg.lines.first}.
       join("\n    ")
   puts <<-EOS.unindent_with_indent(2)
     Commits in #{head} to be merged into #{base}
