@@ -39,9 +39,19 @@ class ContactRollups
   # Table name of destination working table
   DEST_TABLE_NAME = "contact_rollups_daily".freeze
 
-  # List of valid PD courses. If more courses get added, need to update this list and also schema in Pardot. We
+  # Set of valid PD courses. If more courses get added, need to update this list and also schema in Pardot. We
   # need to filter here to known courses in the Pardot schema - we can't blindly pass values through
-  COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'".freeze
+  COURSE_ARRAY = [
+    "CS Fundamentals",
+    "CS in Algebra",
+    "CS in Science",
+    "CS Principles",
+    "Exploring Computer Science",
+    "CS Discoveries"
+  ].freeze
+
+  # PD courses in quoted, comma-separated form for inclusion in SQL IN clauses
+  COURSE_LIST = COURSE_ARRAY.map{ |x| "'#{x}'"}.join(',')
 
   # Values of forms.kind field with form data we care about
   FORM_KINDS_WITH_DATA = %w(
@@ -380,67 +390,138 @@ class ContactRollups
 
   def self.update_professional_learning_enrollment
     start = Time.now
-    log "Updating professional learning enrollment"
+
+    COURSE_ARRAY.each do |course|
+      # Update enrollments linked by user id
+      update_professional_learning_enrollment_for_course_from_userid course
+      # Update enrollments linked by email
+      update_professional_learning_enrollment_for_course_from_email course
+    end
+
+    log_completion(start)
+  end
+
+  # Updates user id-based professional learning enrollment for specified course
+  # @param course [String] name of course to update for
+  def self.update_professional_learning_enrollment_for_course_from_userid(course)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT user_id, GROUP_CONCAT(course) AS courses FROM
-         (SELECT DISTINCT pd_enrollments.user_id, pd_workshops.course FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
-            INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_enrollments.pd_workshop_id
-            WHERE course IN (#{COURSE_LIST})
-            ORDER BY 1,2
-         ) q
-      GROUP by user_id
+      (SELECT user_id FROM
+        (SELECT DISTINCT pd_enrollments.user_id FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
+          INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_enrollments.pd_workshop_id
+          WHERE course = '#{course}'
+        ) q
       ) src
-    SET #{DEST_TABLE_NAME}.professional_learning_enrolled = src.courses
+    SET #{DEST_TABLE_NAME}.professional_learning_enrolled =
+      -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+      CASE LOCATE('#{course}', COALESCE(#{DEST_TABLE_NAME}.professional_learning_enrolled,''))
+        WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_enrolled, ','), ''), '#{course}'),4096)
+        ELSE #{DEST_TABLE_NAME}.professional_learning_enrolled
+      END
     WHERE #{DEST_TABLE_NAME}.dashboard_user_id = src.user_id"
-    log_completion(start)
+  end
+
+  # Updates email-based professional learning enrollment for specified course
+  # @param course [String] name of course to update for
+  def self.update_professional_learning_enrollment_for_course_from_email(course)
+    PEGASUS_REPORTING_DB_WRITER.run "
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
+      (SELECT email FROM
+        (SELECT DISTINCT pd_enrollments.email FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
+          INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_enrollments.pd_workshop_id
+          WHERE course = '#{course}'
+        ) q
+      ) src
+    SET #{DEST_TABLE_NAME}.professional_learning_enrolled =
+      -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+      CASE LOCATE('#{course}', COALESCE(#{DEST_TABLE_NAME}.professional_learning_enrolled,''))
+        WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_enrolled, ','), ''), '#{course}'),4096)
+        ELSE #{DEST_TABLE_NAME}.professional_learning_enrolled
+      END
+    WHERE #{DEST_TABLE_NAME}.email = src.email"
   end
 
   def self.update_professional_learning_attendance
     start = Time.now
-    log "Updating professional learning attendance"
+    COURSE_ARRAY.each do |course|
+      update_professional_learning_attendance_for_course_from_pd_attendances course
+      update_professional_learning_attendance_for_course_from_workshop_attendance course
+      update_professional_learning_attendance_for_course_from_sections course
+    end
+    log_completion(start)
+  end
+
+  # Updates professional learning attendance based on pd_attendances table
+  # @param course [String] name of course to update for
+  def self.update_professional_learning_attendance_for_course_from_pd_attendances(course)
+    PEGASUS_REPORTING_DB_WRITER.run "
+      UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
+        (SELECT DISTINCT teacher_id
+          FROM #{DASHBOARD_DB_NAME}.pd_attendances AS pd_attendances
+          INNER JOIN #{DASHBOARD_DB_NAME}.pd_sessions AS pd_sessions ON pd_sessions.id = pd_attendances.pd_session_id
+          INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_sessions.pd_workshop_id
+          WHERE course = '#{course}'
+        ) src
+      SET #{DEST_TABLE_NAME}.professional_learning_attended =
+      -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+      CASE LOCATE('#{course}', COALESCE(#{DEST_TABLE_NAME}.professional_learning_attended,''))
+        WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
+        ELSE #{DEST_TABLE_NAME}.professional_learning_attended
+      END
+    WHERE #{DEST_TABLE_NAME}.dashboard_user_id = src.teacher_id"
+  end
+
+  # Updates professional learning attendance based on workshop_attendance table
+  # @param course [String] name of course to update for
+  def self.update_professional_learning_attendance_for_course_from_workshop_attendance(course)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT teacher_id, GROUP_CONCAT(course) as courses FROM
-        (SELECT DISTINCT teacher_id, course FROM
-          (SELECT pd_attendances.teacher_id, pd_workshops.course
-            FROM #{DASHBOARD_DB_NAME}.pd_attendances AS pd_attendances
-              INNER JOIN #{DASHBOARD_DB_NAME}.pd_sessions AS pd_sessions ON pd_sessions.id = pd_attendances.pd_session_id
-              INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_sessions.pd_workshop_id
-            WHERE course IN (#{COURSE_LIST})
-            UNION
-            SELECT teacher_id,
-              CASE program_type
-                WHEN 1 THEN 'CS in Science'
-                WHEN 2 THEN 'CS in Algebra'
-                WHEN 3 THEN 'Exploring Computer Science'
-                WHEN 4 THEN 'CS Principles'
-                WHEN 5 THEN 'CS Fundamentals'
-              END AS course
-            FROM #{DASHBOARD_DB_NAME}.workshop_attendance AS workshop_attendance
-              INNER JOIN #{DASHBOARD_DB_NAME}.segments AS segments ON segments.id = workshop_attendance.segment_id
-              INNER JOIN #{DASHBOARD_DB_NAME}.workshops AS workshops ON workshops.id = segments.workshop_id
-            UNION
-            SELECT users.id,
-              CASE section_type
-                WHEN 'csins_workshop' THEN 'CS in Science'
-                WHEN 'csina_workshop' THEN  'CS in Algebra'
-                WHEN 'ecs_workshop' THEN 'Exploring Computer Science'
-                WHEN 'csp_workshop' THEN 'CS Principles'
-                WHEN 'csf_workshop' THEN 'CS Fundamentals'
-              END AS course
-            FROM #{DASHBOARD_DB_NAME}.sections
-              INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
-              INNER JOIN #{DASHBOARD_DB_NAME}.users ON users.id = followers.student_user_id
-            WHERE section_type IN ('csins_workshop','csina_workshop','ecs_workshop','csp_workshop','csf_workshop')
-        ) q1
-        ORDER BY 1,2
-        ) q2
-      GROUP BY teacher_id
-    ) src
-    SET #{DEST_TABLE_NAME}.professional_learning_attended = src.courses
+      (SELECT DISTINCT teacher_id
+        FROM #{DASHBOARD_DB_NAME}.workshop_attendance AS workshop_attendance
+          INNER JOIN #{DASHBOARD_DB_NAME}.segments AS segments ON segments.id = workshop_attendance.segment_id
+          INNER JOIN #{DASHBOARD_DB_NAME}.workshops AS workshops ON workshops.id = segments.workshop_id
+        WHERE program_type =
+        CASE '#{course}'
+          WHEN 'CS in Science' THEN 1
+          WHEN 'CS in Algebra' THEN 2
+          WHEN 'Exploring Computer Science' THEN 3
+          WHEN 'CS Principles' THEN 4
+          WHEN 'CS Fundamentals' THEN 5
+        END
+      ) src
+    SET #{DEST_TABLE_NAME}.professional_learning_attended =
+    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+    CASE LOCATE('#{course}', COALESCE(#{DEST_TABLE_NAME}.professional_learning_attended,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
+      ELSE #{DEST_TABLE_NAME}.professional_learning_attended
+    END
     WHERE #{DEST_TABLE_NAME}.dashboard_user_id = src.teacher_id"
-    log_completion(start)
+  end
+
+  # Updates professional learning attendance based on sections table
+  # @param course [String] name of course to update for
+  def self.update_professional_learning_attendance_for_course_from_sections(course)
+    PEGASUS_REPORTING_DB_WRITER.run "
+    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
+      (SELECT DISTINCT student_user_id AS teacher_id
+      FROM #{DASHBOARD_DB_NAME}.sections
+        INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
+        INNER JOIN #{DASHBOARD_DB_NAME}.users ON users.id = followers.student_user_id
+      WHERE section_type =
+      CASE '#{course}'
+        WHEN 'CS in Science' THEN 'csins_workshop'
+        WHEN 'CS in Algebra' THEN 'csina_workshop'
+        WHEN 'Exploring Computer Science' THEN 'ecs_workshop'
+        WHEN 'CS Principles' THEN 'csp_workshop'
+        WHEN 'CS Fundamentals' THEN 'csf_workshop'
+      END) src
+    SET #{DEST_TABLE_NAME}.professional_learning_attended =
+    -- Use LOCATE to determine if this role is already present and CONCAT+COALESCE to add it if it is not.
+    CASE LOCATE('#{course}', COALESCE(#{DEST_TABLE_NAME}.professional_learning_attended,''))
+      WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
+      ELSE #{DEST_TABLE_NAME}.professional_learning_attended
+    END
+    WHERE #{DEST_TABLE_NAME}.dashboard_user_id = src.teacher_id"
   end
 
   def self.mysql_multi_connection
