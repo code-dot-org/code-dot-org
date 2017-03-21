@@ -113,7 +113,7 @@ module Poste2
 
   # Returns true if address is a valid email address.
   def self.email_address?(address)
-    EmailValidator.email_address?(address)
+    Cdo::EmailValidator.email_address?(address)
   end
 
   def self.find_or_create_url(href)
