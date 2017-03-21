@@ -10,6 +10,7 @@ require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
 require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
+require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
 include CdoCli
 
@@ -311,7 +312,7 @@ def main
     end
     should_i 'update Slack#infra-production topic' do
       sha = GitHub.sha 'production'
-      Slack.set_dtp_commit(sha)
+      InfraProductionTopic.set_dtp_commit(sha)
     end
 
     puts_after_dtp_tasks
