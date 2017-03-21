@@ -27,14 +27,14 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     backgroundColor: color.lightest_gray
   },
-  downIcon: {
+  arrowIcon: {
     paddingRight: 8
   },
   thumbnail: {
     width: 250
   },
   actionBox: {
-    width: 190,
+    width: 200,
     padding: 10,
     fontSize: 12,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -83,12 +83,16 @@ const ProjectCard = React.createClass({
     }
   },
 
-  renderDownIcon() {
+  renderArrowIcon() {
     // Only the student can access the menu options when viewing their personal projects.
-   if (this.props.currentGallery === 'personal'){
+   if (this.props.currentGallery === 'personal' && !this.state.actionsOpen){
      return (
-       <FontAwesome icon=" fa-chevron-down" style={styles.downIcon} onClick={this.toggleActionBox}/>
+       <FontAwesome icon=" fa-chevron-down" style={styles.arrowIcon} onClick={this.toggleActionBox}/>
       );
+    } else {
+      return (
+        <FontAwesome icon=" fa-chevron-up" style={styles.arrowIcon} onClick={this.toggleActionBox}/>
+       );
     }
   },
 
@@ -118,7 +122,7 @@ const ProjectCard = React.createClass({
       );
     }
     return (
-      <h5> Publish to Classroom Gallery</h5>
+      <h5> Publish to Class Gallery</h5>
     );
   },
 
@@ -145,7 +149,7 @@ const ProjectCard = React.createClass({
            {this.renderStudentName()}
 
            <div style={styles.lastEdit}>
-             {this.renderDownIcon()}
+             {this.renderArrowIcon()}
              Last edited: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
            </div>
          </div>
