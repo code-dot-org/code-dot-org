@@ -58,12 +58,21 @@ export const styles = {
   },
   unlockedIcon: {
     color: color.orange
+  },
+  currentStageText: {
+    color: color.cyan
+  },
+  currentStageCell: {
+    borderLeftColor: color.cyan,
+    borderLeftStyle: 'solid',
+    borderLeftWidth: 5
   }
 };
 
 const SummaryProgressRow = React.createClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
+    isCurrentStage: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
     lessonNumber: PropTypes.number,
     levels: PropTypes.arrayOf(levelType).isRequired,
@@ -72,7 +81,15 @@ const SummaryProgressRow = React.createClass({
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels, lockedForSection, lessonIsVisible } = this.props;
+    const {
+      dark,
+      lesson,
+      lessonNumber,
+      levels,
+      lockedForSection,
+      lessonIsVisible,
+      isCurrentStage
+    } = this.props;
 
     // Is this lesson hidden for whomever we're currently viewing as
     if (!lessonIsVisible(lesson)) {
@@ -98,8 +115,18 @@ const SummaryProgressRow = React.createClass({
           ...(locked && styles.locked)
         }}
       >
-        <td style={styles.col1}>
-          <div style={styles.colText}>
+        <td
+          style={{
+            ...styles.col1,
+            ...(isCurrentStage && styles.currentStageCell)
+          }}
+        >
+          <div
+            style={{
+              ...styles.colText,
+              ...(isCurrentStage && styles.currentStageText)
+            }}
+          >
             {hiddenForStudents &&
               <FontAwesome
                 icon="eye-slash"

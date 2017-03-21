@@ -21,7 +21,8 @@ import {
   showTeacherInfo,
   disablePostMilestone,
   setUserSignedIn,
-  setIsHocScript
+  setIsHocScript,
+  setCurrentStageId,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
@@ -183,6 +184,9 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
       store.dispatch(mergeProgress(levelProgress));
       if (data.peerReviewsPerformed) {
         store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+      if (data.current_stage) {
+        store.dispatch(setCurrentStageId(data.current_stage));
       }
     }
   });
