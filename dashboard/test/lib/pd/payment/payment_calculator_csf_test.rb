@@ -30,7 +30,7 @@ module Pd::Payment
       assert_equal [2], summary.attendance_count_per_session
 
       # Qualified
-      summary.teacher_summaries.find{|t| t.teacher == @qualified_teacher}.tap do |teacher_summary|
+      summary.teacher_summaries.find {|t| t.teacher == @qualified_teacher}.tap do |teacher_summary|
         assert teacher_summary
         assert teacher_summary.qualified?
         assert_equal 1, teacher_summary.raw_days
@@ -40,7 +40,7 @@ module Pd::Payment
       end
 
       # Unqualified
-      summary.teacher_summaries.find{|t| t.teacher == @unqualified_teacher}.tap do |teacher_summary|
+      summary.teacher_summaries.find {|t| t.teacher == @unqualified_teacher}.tap do |teacher_summary|
         assert teacher_summary
         refute teacher_summary.qualified?
         assert_equal 1, teacher_summary.raw_days

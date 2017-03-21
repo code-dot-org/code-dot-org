@@ -28,7 +28,7 @@ class SurveyResult < ActiveRecord::Base
   ETHNICITIES["other"] = "Other"
   ETHNICITIES.freeze
 
-  DIVERSITY_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
+  DIVERSITY_ATTRS = ETHNICITIES.keys.map {|key| "survey2016_ethnicity_#{key}"}
   DIVERSITY_ATTRS << "survey2016_foodstamps"
   DIVERSITY_ATTRS.freeze
 
