@@ -91,7 +91,12 @@ end
 
 def create_facilitator(course)
   facilitator = User.find_or_create_teacher(
-    {name: 'Facilitator', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'facilitator'
+    {
+      name: "Facilitator#{SecureRandom.hex[0..5]}",
+      email: "organizer#{SecureRandom.hex[0..5]}@code.org"
+    },
+    nil,
+    'facilitator'
   )
   Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: course)
 
