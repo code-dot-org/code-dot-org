@@ -75,7 +75,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
     # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
     if plc_course_unit.has_evaluation?
-      Plc::LearningModule::MODULE_TYPES.keep_if { |type| categories_for_stage.include?(type)}.each do |flex_category|
+      Plc::LearningModule::MODULE_TYPES.select { |type| categories_for_stage.include?(type)}.each do |flex_category|
         module_category = flex_category || Plc::LearningModule::CONTENT_MODULE
         category_name = I18n.t("flex_category.#{module_category}")
         summary << {
