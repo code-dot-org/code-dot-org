@@ -65,7 +65,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   end
 
   def focus_area_positions
-    plc_module_assignments.map{ |a| a.plc_learning_module.stage.absolute_position unless a.plc_learning_module.required? }.compact
+    plc_module_assignments.map { |a| a.plc_learning_module.stage.absolute_position unless a.plc_learning_module.required? }.compact
   end
 
   def summarize_progress

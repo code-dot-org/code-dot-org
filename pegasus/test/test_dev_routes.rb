@@ -1,10 +1,12 @@
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
+require_relative '../../lib/cdo/github'
+require_relative '../../lib/cdo/infra_test_topic'
 require_relative 'fixtures/mock_pegasus'
 
 BUILD_STARTED_PATH = deploy_dir('build-started')
-FAKE_START_BUILD_TOKEN = 'fake-start-build-token'
+FAKE_SLACK_SLASH_TOKEN = 'fake-start-build-token'
 
 class DevRoutesTest < Minitest::Test
   describe '/api/dev/start-build' do
@@ -12,7 +14,7 @@ class DevRoutesTest < Minitest::Test
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
 
       # Fake slack token for tests
-      CDO.slack_start_build_token = FAKE_START_BUILD_TOKEN
+      CDO.slack_start_build_token = FAKE_SLACK_SLASH_TOKEN
 
       # Should have no build-started file at the beginning of tests
       system "rm -f #{BUILD_STARTED_PATH}"
@@ -34,7 +36,7 @@ class DevRoutesTest < Minitest::Test
         pegasus.post(
           '/api/dev/start-build',
           {
-            token: FAKE_START_BUILD_TOKEN,
+            token: FAKE_SLACK_SLASH_TOKEN,
             user_name: 'Dave'
           }
         )
@@ -66,7 +68,7 @@ class DevRoutesTest < Minitest::Test
           pegasus.post(
             '/api/dev/start-build',
             {
-              token: FAKE_START_BUILD_TOKEN,
+              token: FAKE_SLACK_SLASH_TOKEN,
               user_name: 'Dave'
             }
           )
@@ -110,7 +112,7 @@ class DevRoutesTest < Minitest::Test
           pegasus.post(
             '/api/dev/start-build',
             {
-              token: FAKE_START_BUILD_TOKEN,
+              token: FAKE_SLACK_SLASH_TOKEN,
               user_name: 'Dave'
             }
           )
@@ -138,7 +140,7 @@ class DevRoutesTest < Minitest::Test
           pegasus.post(
             '/api/dev/start-build',
             {
-              token: FAKE_START_BUILD_TOKEN,
+              token: FAKE_SLACK_SLASH_TOKEN,
               user_name: 'Dave'
             }
           )
@@ -165,6 +167,52 @@ class DevRoutesTest < Minitest::Test
       yield
     ensure
       CDO.rack_env = original_rack_env
+    end
+  end
+
+  describe 'api/dev/set-last-dtt-green' do
+    before do
+      $log.level = Logger::ERROR
+
+      CDO.slack_start_build_token = FAKE_SLACK_SLASH_TOKEN
+
+      @default_param = {
+        token: FAKE_SLACK_SLASH_TOKEN,
+        user_name: 'turing'
+      }
+    end
+
+    def in_rack_env(env)
+      original_rack_env = CDO.rack_env
+      CDO.rack_env = env
+      yield
+    ensure
+      CDO.rack_env = original_rack_env
+    end
+
+    def make_test_pegasus
+      mock_session = Rack::MockSession.new(MockPegasus.new, 'studio.code.org')
+      Rack::Test::Session.new(mock_session)
+    end
+
+    it 'is forbidden on non-test environments' do
+      [:development, :staging, :adhoc, :levelbuilder, :production].each do |env|
+        in_rack_env(env) do
+          pegasus = make_test_pegasus
+          pegasus.post '/api/dev/set-last-dtt-green', @default_params
+          assert_equal 403, pegasus.last_response.status
+        end
+      end
+    end
+
+    it 'succeeds on test environment' do
+      in_rack_env(:test) do
+        GitHub.expects(:sha).returns('abcdef')
+        InfraTestTopic.expects(:set_green_commit).returns(true)
+        pegasus = make_test_pegasus
+        pegasus.post '/api/dev/set-last-dtt-green', @default_params
+        assert_equal 200, pegasus.last_response.status
+      end
     end
   end
 end
