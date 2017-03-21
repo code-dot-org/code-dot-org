@@ -3,7 +3,7 @@ Encoding.default_external = Encoding::UTF_8
 
 source "https://supermarket.chef.io"
 
-#metadata
+# metadata
 
 cookbook 'apt', '~> 2.6.0'
 cookbook 'build-essential', '~> 2.1.3'

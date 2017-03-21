@@ -191,7 +191,7 @@ class Blockly < Level
       block = Nokogiri::XML(category_xml, &:noblanks).child
       xml << block
       xml << category.children
-      #block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
+      # block.xpath('statement')[0] << wrap_blocks(category.xpath('block').to_a) unless category.xpath('block').empty?
     end
     xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end

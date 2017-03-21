@@ -41,7 +41,7 @@ apt_package %w(
   ncurses-dev
 )
 
-#multipackage
+# multipackage
 
 include_recipe 'cdo-mysql::client'
 # Install local mysql server unless an external db url is provided.

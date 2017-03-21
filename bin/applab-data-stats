@@ -125,7 +125,7 @@ hash_map.keys.each_with_index do |hash, table_id|
   next if channel_id == '42'
 
   channel = get_channel(channel_id)
-  #puts "channel info #{channel}"
+  # puts "channel info #{channel}"
   user = get_user_from_storage_id(channel[:owner_storage_id])
   table_rows = 0
   table_size = 0

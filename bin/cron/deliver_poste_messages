@@ -35,11 +35,11 @@ SMTP_OPTIONS = {
   authentication: 'plain',
   enable_starttls_auto: true,
 }.freeze
-#SMTP_OPTIONS = {
+# SMTP_OPTIONS = {
 #  address:'localhost',
 #  port:1025,
 #  domain:'code.org',
-#}
+# }
 
 MESSAGE_TEMPLATES = {}.tap do |results|
   POSTE_DB[:poste_messages].all.each do |message|

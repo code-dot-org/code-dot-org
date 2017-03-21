@@ -51,7 +51,7 @@ module Ops
     end
 
     test 'Ops team can create Districts' do
-      #87053952
+      # 87053952
       assert_routing({ path: "#{API}/districts", method: :post }, { controller: 'ops/districts', action: 'create' })
 
       assert_difference 'District.count' do
@@ -61,7 +61,7 @@ module Ops
     end
 
     test 'Ops team can create District with district contact' do
-      #87053952
+      # 87053952
       assert_routing({ path: "#{API}/districts", method: :post }, { controller: 'ops/districts', action: 'create' })
 
       assert_creates(District, User) do

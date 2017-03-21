@@ -15,7 +15,7 @@ module Ops
     end
 
     test 'District Contact can view attendance for all workshops in a cohort' do
-      #87054994 part 1
+      # 87054994 part 1
       assert_routing({ path: "#{API}/attendance/cohort/1", method: :get}, { controller: 'ops/workshop_attendance', action: 'cohort', cohort_id: '1'})
 
       sign_out @admin
@@ -30,7 +30,7 @@ module Ops
     end
 
     test 'District Contact can view attendance per teacher in their district' do
-      #87054994 part 2
+      # 87054994 part 2
       # Get ALL attendance for a single teacher, grouped by workshop
       assert_routing({ path: "#{API}/attendance/teacher/1", method: :get}, { controller: 'ops/workshop_attendance', action: 'teacher', teacher_id: '1'})
 
@@ -48,7 +48,7 @@ module Ops
     end
 
     test 'Facilitators can view attendance for all segments in their workshop' do
-      #87055150 (part)
+      # 87055150 (part)
       sign_out @admin
       workshop = @attendance.segment.workshop
       facilitator = workshop.facilitators.first
@@ -58,7 +58,7 @@ module Ops
     end
 
     test 'Facilitators can view attendance by teacher for all segments in their workshop' do
-      #87055150 (part)
+      # 87055150 (part)
       sign_out @admin
       workshop = @attendance.segment.workshop
       facilitator = workshop.facilitators.first
@@ -68,7 +68,7 @@ module Ops
     end
 
     test 'Facilitators can mark attendance for each segment' do
-      #87055176
+      # 87055176
 
       # Facilitator gets a list of all teachers in the workshop (e.g., GET /ops/workshops/1/teachers)
       # Facilitator POSTs an object to the segment path: {attendance => [[id, status], [id, status], ..]}

@@ -26,6 +26,6 @@ Sequel.migration do
   end
 
   down do
-    #drop_table? :forms
+    # drop_table? :forms
   end
 end

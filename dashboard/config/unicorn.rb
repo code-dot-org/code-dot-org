@@ -10,7 +10,7 @@ preload_app true
 stderr_path dashboard_dir('log', 'unicorn_stderr.log')
 stdout_path dashboard_dir('log', 'unicorn_stdout.log')
 working_directory deploy_dir('dashboard')
-#logger $log
+# logger $log
 
 after_fork do |_server, _worker|
   require 'dynamic_config/gatekeeper'

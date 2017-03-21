@@ -25,8 +25,8 @@ module Ops
       assert_equal 2, @cohort.districts.count
 
       sign_in new_district.contact
-      #87054720 (part 1)
-      #can click "Add Teacher" button to add a teacher
+      # 87054720 (part 1)
+      # can click "Add Teacher" button to add a teacher
       assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
 
       teacher_params = [
@@ -63,8 +63,8 @@ module Ops
 
     test 'adding existing under 13 user to a cohort makes them adult and teacher' do
       sign_in @district.contact
-      #87054720 (part 1)
-      #can click "Add Teacher" button to add a teacher
+      # 87054720 (part 1)
+      # can click "Add Teacher" button to add a teacher
       assert_routing({ path: "#{API}/cohorts/1", method: :patch }, { controller: 'ops/cohorts', action: 'update', id: '1' })
 
       existing_email = "existing@email.xx"
@@ -156,7 +156,7 @@ module Ops
 
     test 'district contact cannot add/drop teachers in other districts' do
       sign_in @district.contact
-      #87054720 (part 3)
+      # 87054720 (part 3)
       # todo
     end
 
@@ -279,7 +279,7 @@ module Ops
 
     test 'Ops team can create Cohorts' do
       sign_in @admin
-      #87054348
+      # 87054348
       assert_routing({ path: "#{API}/cohorts", method: :post }, { controller: 'ops/cohorts', action: 'create' })
 
       assert_difference 'Cohort.count' do
@@ -296,7 +296,7 @@ module Ops
 
     test 'Ops team can create a Cohort from a list of teacher information' do
       sign_in @admin
-      #87054348 (part 2)
+      # 87054348 (part 2)
       assert_difference 'User.count', 5 do
         assert_creates(Cohort, CohortsDistrict) do
           post :create, params: {
