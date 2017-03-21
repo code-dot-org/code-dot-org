@@ -61,7 +61,6 @@ const ProgressLesson = React.createClass({
   propTypes: {
     description: PropTypes.string,
     lesson: lessonType.isRequired,
-    lessonNumber: PropTypes.number.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
@@ -87,7 +86,6 @@ const ProgressLesson = React.createClass({
     const {
       description,
       lesson,
-      lessonNumber,
       levels,
       showTeacherInfo,
       viewAs,
@@ -101,7 +99,9 @@ const ProgressLesson = React.createClass({
 
     // Is this a hidden stage that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
-    const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
+    const title = lesson.stageNumber ?
+      i18n.lessonNumbered({lessonNumber: lesson.stageNumber, lessonName: lesson.name}) :
+      lesson.name;
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
 
     const locked = lessonLockedForSection(lesson.id) ||
