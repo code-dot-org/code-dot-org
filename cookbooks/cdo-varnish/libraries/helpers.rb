@@ -7,6 +7,10 @@ $node_name = 'default'
 # Keep these hostname helper methods in sync with deployment.rb.
 # TODO Find a better way to reuse existing application configuration in Chef config helpers.
 def canonical_hostname(domain)
+  # Allow hostname overrides
+  return $override_dashboard if $override_dashboard && domain == 'studio.code.org'
+  return $override_pegasus if $override_pegasus && domain == 'code.org'
+
   return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?($node_name)
   return domain if $node_env == 'production'
 
