@@ -65,7 +65,7 @@ class ContactRollups
     ProfessionalDevelopmentWorkshopSignup
     StudentNomination
     TeacherNomination
-  ).map{|s| "'#{s}'"}.join(',').freeze
+  ).map {|s| "'#{s}'"}.join(',').freeze
 
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value

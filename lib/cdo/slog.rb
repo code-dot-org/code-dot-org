@@ -34,9 +34,9 @@ module Slog
     end
 
     def get(params=nil)
-      logs = @hosts.map{|host| parse(http_get(uri_for(host, params)))}
+      logs = @hosts.map {|host| parse(http_get(uri_for(host, params)))}
       logs.flatten!
-      logs.sort!{|a, b| a[:timestamp] <=> b[:timestamp]}
+      logs.sort! {|a, b| a[:timestamp] <=> b[:timestamp]}
       logs
     end
 

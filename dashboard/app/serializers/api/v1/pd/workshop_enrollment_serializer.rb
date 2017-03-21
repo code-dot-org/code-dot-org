@@ -7,7 +7,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   end
 
   def school
-    object.try(:school_info).try{|si| si.school.try(:name) || si.school_name} || object.school
+    object.try(:school_info).try {|si| si.school.try(:name) || si.school_name} || object.school
   end
 
   def district_name

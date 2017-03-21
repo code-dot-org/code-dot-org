@@ -83,7 +83,7 @@ def main
   end
 
   LevelSource.
-    where(level_id: contained_levels.map{|row| row[:contained_level_id]}).
+    where(level_id: contained_levels.map {|row| row[:contained_level_id]}).
     find_each do |level_source|
     level_sources_multi_types << {
       level_source_id: level_source.id,

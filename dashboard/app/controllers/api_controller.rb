@@ -15,7 +15,7 @@ class ApiController < ApplicationController
     updates = params.require(:updates)
     updates.to_a.each do |item|
       # Convert string-boolean parameters to boolean
-      %i(locked readonly_answers).each{|val| item[val] = JSONValue.value(item[val])}
+      %i(locked readonly_answers).each {|val| item[val] = JSONValue.value(item[val])}
 
       user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
@@ -302,7 +302,7 @@ class ApiController < ApplicationController
               student_result = level_response["result"].split(",").sort.join(",")
 
               # Convert "0,1,3" to "A, B, D" for teacher-friendly viewing
-              level_result[:student_result] = student_result.split(',').map{ |k| Multi.value_to_letter(k.to_i) }.join(', ')
+              level_result[:student_result] = student_result.split(',').map { |k| Multi.value_to_letter(k.to_i) }.join(', ')
 
               if student_result == "-1"
                 level_result[:student_result] = ""
