@@ -51,7 +51,7 @@ class ContactRollups
   ].freeze
 
   # PD courses in quoted, comma-separated form for inclusion in SQL IN clauses
-  COURSE_LIST = COURSE_ARRAY.map{ |x| "'#{x}'"}.join(',')
+  COURSE_LIST = COURSE_ARRAY.map {|x| "'#{x}'"}.join(',')
 
   # Values of forms.kind field with form data we care about
   FORM_KINDS_WITH_DATA = %w(
