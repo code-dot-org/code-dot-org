@@ -1,27 +1,17 @@
 require 'test_helper'
 
 class Api::V1::Pd::CourseFacilitatorsControllerTest < ::ActionController::TestCase
-  test 'admins can see course facilitators' do
-    sign_in create(:admin)
-    get :index, params: {course: Pd::Workshop::COURSES.first}
-    assert_response :success
-  end
-
-  test 'workshop organizers can see course facilitators' do
-    sign_in create(:workshop_organizer)
-    get :index, params: {course: Pd::Workshop::COURSES.first}
-    assert_response :success
-  end
-
-  test 'facilitators cannot see course facilitators' do
-    sign_in create(:facilitator)
-    get :index, params: {course: Pd::Workshop::COURSES.first}
-    assert_response :forbidden
-  end
-
-  test 'teachers cannot see course facilitators' do
-    sign_in create(:teacher)
-    get :index, params: {course: Pd::Workshop::COURSES.first}
-    assert_response :forbidden
+  {
+    admin: :success,
+    workshop_organizer: :success,
+    facilitator: :forbidden,
+    teacher: :forbidden
+  }.each do |user_type, response|
+    test_user_gets_response_for(
+      :index,
+      user: user_type,
+      response: response,
+      params: {course: Pd::Workshop::COURSES.first}
+    )
   end
 end

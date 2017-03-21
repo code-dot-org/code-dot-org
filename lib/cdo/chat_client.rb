@@ -9,7 +9,7 @@ class ChatClient
   @@name = CDO.name[0..14]
 
   def self.log(message, options={})
-    message(CDO.hip_chat_log_room, message, options)
+    message(CDO.slack_log_room, message, options)
   end
 
   # @param room [String] The room to post to which message should be posted.

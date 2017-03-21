@@ -4,7 +4,7 @@ import color from "../util/color";
 import * as applabConstants from './constants';
 import ScreenSelector, {styles as ScreenSelectorStyles} from './ScreenSelector';
 import { RunButton, ResetButton } from '../templates/GameButtons';
-import {styles as CompletionButtonStyles} from './CompletionButton';
+import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
 import FontAwesome from '../templates/FontAwesome';
 
 const RADIUS = 30;

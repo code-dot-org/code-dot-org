@@ -18,10 +18,10 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
             Share your feedback
           </h3>
           <p>
-            Thank you for completing a Code.org professional learning owrkshop! Please complete this survey so that we
+            Thank you for completing a Code.org professional learning workshop! Please complete this survey so that we
             may improve your experience.
           </p>
-          <Button bsStyle="primary" onClick={() => {window.location = this.props.lastWorkshopSurveyUrl;}}>
+          <Button bsStyle="primary" onClick={() => {window.open(this.props.lastWorkshopSurveyUrl, '_blank');}}>
             Start Survey
           </Button>
         </div>
@@ -33,7 +33,7 @@ const CsPrinciplesAndDiscoveriesSection = React.createClass({
             Thank you
           </h3>
           <p>
-            Thank you for completing a Code.org professional workshop! If you have any other feedback or comments,
+            Thank you for completing a Code.org Professional Learning workshop! If you have any other feedback or comments,
             please email teacher@code.org
           </p>
         </div>

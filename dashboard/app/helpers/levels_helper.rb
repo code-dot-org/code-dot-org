@@ -190,7 +190,7 @@ module LevelsHelper
       @app_options = blockly_options
     elsif @level.is_a? Weblab
       @app_options = weblab_options
-    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
+    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
@@ -705,7 +705,7 @@ module LevelsHelper
   end
 
   def can_view_solution?
-    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions?
+    if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions? && @level.contained_levels.empty?
       Ability.new(current_user).can? :view_level_solutions, @script
     end
   end

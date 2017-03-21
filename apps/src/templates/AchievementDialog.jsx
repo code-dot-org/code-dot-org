@@ -1,13 +1,17 @@
-import { Motion, StaggeredMotion, spring } from 'react-motion';
+import { StaggeredMotion, spring } from 'react-motion';
 import React from 'react';
 import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
 import locale from '@cdo/locale';
+import StageProgressBar from './StageProgressBar';
 
-const ANIMATION_OVERLAP = 0.2;
-const MIN_PROGRESS_WIDTH = 22;
-const MAX_PROGRESS_WIDTH = 400;
+const ANIMATION_OVERLAP = 0.05;
+
+const COMPLETION_POINTS = 1;
+const PERFECT_SOLUTION_POINTS = 3;
+const NO_HINTS_POINTS = 2;
+const ONE_HINT_POINTS = 1;
 
 const styles = {
   checkmarks: {
@@ -17,6 +21,19 @@ const styles = {
     left: 120,
     height: 230,
     padding: '50px 30px 50px 80px',
+    boxSizing: 'border-box',
+    background: '#fff',
+    borderRadius: 8,
+    boxShadow: '0 2px 7px 2px rgba(0, 0, 0, 0.3)',
+    color: color.purple,
+  },
+  pointRows: {
+    position: 'absolute',
+    top: 50,
+    right: 90,
+    left: 90,
+    height: 230,
+    padding: '32px 30px 20px 221px',
     boxSizing: 'border-box',
     background: '#fff',
     borderRadius: 8,
@@ -40,6 +57,67 @@ const styles = {
     inactive: {
       color: '#aaa',
     }
+  },
+  bannerAchievement: {
+    badge: {
+      width: 175,
+      height: 175,
+      position: 'absolute',
+      backgroundRepeat: 'no-repeat',
+      top: 23,
+      left: 114,
+      color: 'white',
+      textAlign: 'center',
+      textShadow: '-2px 3px 2px rgba(0, 0, 0, 0.29)',
+      transform: 'rotate(-15deg)',
+      fontWeight: 'bold',
+    },
+    badgePoints: {
+      fontSize: 61,
+      marginTop: 63,
+    },
+    badgePointsLabel: {
+      fontSize: 20,
+      marginTop: 24,
+    },
+    banner: {
+      backgroundColor: '#392E52',
+      boxShadow: '0 2px 6px 0 rgba(0,0,0,0.29)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPositionX: 9,
+      backgroundPositionY: 7,
+      borderRadius: 3,
+      position: 'absolute',
+      top: 212,
+      left: 48,
+      width: 603,
+      height: 83,
+    },
+    bannerText: {
+      fontFamily: '"Gotham 5r", sans-serif',
+      fontSize: 30,
+      color: 'white',
+      letterSpacing: 4.55,
+      marginTop: 33,
+      textAlign: 'center',
+    },
+    point: {
+      background: '#8676AB',
+      borderRadius: 100,
+      color: 'white',
+      fontFamily: '"Gotham 7r", sans-serif',
+      padding: '3px 10px',
+    },
+    row: {
+      fontSize: 16,
+      marginBottom: 25,
+    },
+    text: {
+      fontFamily: '"Gotham 7r", sans-serif',
+      color: '#544A6D',
+      fontSize: 16,
+      marginLeft: 10,
+    },
   },
   absolute: {
     position: 'absolute'
@@ -73,40 +151,6 @@ const styles = {
     color: '#5b6770',
     border: '1px solid #c5c5c5',
   },
-  stageRewards: {
-    position: 'absolute',
-    background: '#f3eeff',
-    top: 240,
-    left: 100,
-    width: '500px',
-    height: '75px',
-    border: '1px solid #d2cae6',
-    borderRadius: 3,
-  },
-  stageRewardsTitle: {
-    textAlign: 'center',
-    color: '#655689',
-    fontSize: 14,
-    fontWeight: 'bold',
-    padding: 10,
-  },
-  progressBackground: {
-    position: 'absolute',
-    background: '#fff',
-    borderRadius: 10,
-    border: '1px solid #d2cae6',
-    height: 20,
-    width: MAX_PROGRESS_WIDTH,
-    left: 50,
-  },
-  progressForeground: {
-    position: 'absolute',
-    background: '#eaa721',
-    borderRadius: 11,
-    height: 22,
-    top: -1,
-    left: -1,
-  },
 };
 
 const AchievementDialog = Radium(React.createClass({
@@ -117,6 +161,8 @@ const AchievementDialog = Radium(React.createClass({
     hintsUsed: React.PropTypes.number,
     assetUrl: React.PropTypes.func,
     onContinue: React.PropTypes.func,
+    bannerMode: React.PropTypes.bool,
+    totalPoints: React.PropTypes.number,
     showStageProgress: React.PropTypes.bool,
     oldStageProgress: React.PropTypes.number,
     newPassedProgress: React.PropTypes.number,
@@ -160,13 +206,28 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
-  achievementRow(flag, message, style) {
-    return (
-      <p style={{...styles.achievement.row, ...style}}>
-        {this.icon(flag)}
-        <span style={styles.achievement.text}>{message}</span>
-      </p>
-    );
+  achievementRowGenerator(show, successful, points, message) {
+    if (!show || (this.props.bannerMode && !successful)) {
+      return null;
+    }
+
+    return style => {
+      if (this.props.bannerMode) {
+        return (
+          <p style={{...styles.bannerAchievement.row, ...style}}>
+            <span style={styles.bannerAchievement.point}>+{points}</span>
+            <span style={styles.bannerAchievement.text}>{message}</span>
+          </p>
+        );
+      } else {
+        return (
+          <p style={{...styles.achievement.row, ...style}}>
+            {this.icon(successful)}
+            <span style={styles.achievement.text}>{message}</span>
+          </p>
+        );
+      }
+    };
   },
 
   blocksUsedMessage(blockDelta, params) {
@@ -179,26 +240,48 @@ const AchievementDialog = Radium(React.createClass({
     }
   },
 
-  hintsMessage(tooManyHints) {
-    return tooManyHints ? locale.usingHints() : locale.withoutHints();
-  },
-
-  progressToBarWidth(progress) {
-    return MIN_PROGRESS_WIDTH +
-      progress * (MAX_PROGRESS_WIDTH - MIN_PROGRESS_WIDTH);
+  hintsMessage(numHints) {
+    if (numHints === 0) {
+      return locale.withoutHints();
+    } else if (numHints === 1) {
+      return locale.usingOneHint();
+    } else {
+      return locale.usingHints();
+    }
   },
 
   render() {
     const showNumBlocksRow = isFinite(this.props.idealBlocks);
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
-    const tooManyHints = this.props.hintsUsed > 0;
+    const tooManyHints = this.props.hintsUsed > 1;
 
     const params = {
       puzzleNumber: this.props.puzzleNumber,
       numBlocks: this.props.idealBlocks,
+      numPoints: this.props.totalPoints,
     };
-    const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+    let feedbackMessage;
+    if (this.props.bannerMode) {
+      feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevelStars'](params);
+    } else {
+      feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
+    }
+    const completionPoints = COMPLETION_POINTS;
+    const numBlocksPoints = showNumBlocksRow && !tooManyBlocks ? PERFECT_SOLUTION_POINTS : 0;
+    const hintsPoints = this.props.hintsUsed === 0 ? NO_HINTS_POINTS : this.props.hintsUsed === 1 ? ONE_HINT_POINTS : 0;
+    const numPoints = completionPoints + numBlocksPoints + hintsPoints;
+
+    const dotsUrl = `url(${this.props.assetUrl('media/dialog/dots.png')})`;
+
+    const achievementRowsGenerators = [
+      this.achievementRowGenerator(true /* show */, true /* success */, completionPoints,
+          locale.puzzleCompleted()),
+      this.achievementRowGenerator(showNumBlocksRow, !tooManyBlocks, numBlocksPoints,
+          this.blocksUsedMessage(blockDelta, params)),
+      this.achievementRowGenerator(true /* show */, !tooManyHints, hintsPoints,
+          this.hintsMessage(this.props.hintsUsed)),
+    ].filter(row => row);
 
     return (
       <BaseDialog
@@ -208,13 +291,13 @@ const AchievementDialog = Radium(React.createClass({
         assetUrl={this.props.assetUrl}
       >
         <StaggeredMotion
-          defaultStyles={Array(4).fill({ progress: 0 })}
+          defaultStyles={Array(achievementRowsGenerators.length + 1).fill({ progress: 0 })}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
             return i === 0 ?
-              { progress: spring(1, { stiffness: 50, damping: 25 }) } :
+              { progress: spring(1, { stiffness: 100, damping: 25 }) } :
               { progress: spring(
                   prevInterpolatedStyles[i - 1].progress > (1 - ANIMATION_OVERLAP) ? 1 : 0,
-                  { stiffness: 30, damping: 25 }),
+                  { stiffness: 60, damping: 25 }),
               };
           })}
         >
@@ -222,48 +305,40 @@ const AchievementDialog = Radium(React.createClass({
               const interpolatingStyles =
                 interpolatingValues.map(val => ({ opacity: val.progress }));
               return (<div>
-                <div style={styles.checkmarks}>
-                  {this.achievementRow(
-                      true,
-                      locale.puzzleCompleted(),
-                      interpolatingStyles[1])}
-                  {showNumBlocksRow && this.achievementRow(
-                      !tooManyBlocks,
-                      this.blocksUsedMessage(blockDelta, params),
-                      interpolatingStyles[2])}
-                  {this.achievementRow(
-                      !tooManyHints,
-                      this.hintsMessage(tooManyHints),
-                      interpolatingStyles[showNumBlocksRow ? 3 : 2])}
+                <div style={this.props.bannerMode ? styles.pointRows : styles.checkmarks}>
+                  {achievementRowsGenerators.map((generator, index) => generator(interpolatingStyles[index + 1]))}
                 </div>
+                {this.props.bannerMode &&
+                  <div
+                    style={{
+                      ...styles.bannerAchievement.badge,
+                      backgroundImage: `url(${this.props.assetUrl('media/dialog/badge.png')})`,
+                    }}
+                  >
+                    <div style={styles.bannerAchievement.badgePoints}>{numPoints}</div>
+                    <div style={styles.bannerAchievement.badgePointsLabel}>{locale.pointsAllCaps({numPoints})}</div>
+                  </div>
+                }
                 {this.props.showStageProgress &&
-                  <div style={styles.stageRewards}>
-                    <div style={styles.stageRewardsTitle}>
-                      {locale.stageRewards()}
-                    </div>
-                    <div style={styles.progressBackground}>
-                      <Motion
-                        defaultStyle={{
-                          width: this.progressToBarWidth(this.props.oldStageProgress)
-                        }}
-                        style={{
-                          width: spring(this.progressToBarWidth(
-                              this.props.oldStageProgress +
-                              (interpolatingValues[1].progress > 0 ? this.props.newPassedProgress : 0) +
-                              (interpolatingValues[2].progress > 0 ? this.props.newPerfectProgress : 0) +
-                              (interpolatingValues[showNumBlocksRow ? 3 : 2].progress > 0 ?
-                                this.props.newHintUsageProgress : 0)),
-                            { stiffness: 70, damping: 25 })
-                        }}
-                      >
-                        {interpolatingStyle =>
-                          <div
-                            style={{
-                              ...styles.progressForeground,
-                              ...interpolatingStyle,
-                            }}
-                          />}
-                      </Motion>
+                  <StageProgressBar
+                    stageProgress={
+                        this.props.oldStageProgress +
+                        (interpolatingValues[1].progress * this.props.newPassedProgress) +
+                        (interpolatingValues[2].progress * this.props.newPerfectProgress) +
+                        (interpolatingValues[showNumBlocksRow ? 3 : 2].progress *
+                          this.props.newHintUsageProgress)
+                    }
+                  />
+                }
+                {this.props.bannerMode &&
+                  <div
+                    style={{
+                      ...styles.bannerAchievement.banner,
+                      backgroundImage: dotsUrl,
+                    }}
+                  >
+                    <div style={styles.bannerAchievement.bannerText}>
+                      {locale.congratsAllCaps()}
                     </div>
                   </div>
                 }

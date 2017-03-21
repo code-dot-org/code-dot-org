@@ -60,7 +60,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "custom level displays english instruction" do
     default_locale = 'en-US'
-    @level.name = 'frozen line'
+    @level = Level.find_by_name 'frozen line'
 
     I18n.locale = default_locale
     options = blockly_options
@@ -71,7 +71,7 @@ class LevelsHelperTest < ActionView::TestCase
     new_locale = 'es-ES'
 
     I18n.locale = new_locale
-    @level.name = 'frozen line'
+    @level = Level.find_by_name 'frozen line'
     options = blockly_options
     assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
 
@@ -272,8 +272,6 @@ class LevelsHelperTest < ActionView::TestCase
     user = create(:follower).student_user
     sign_in user
 
-    app_options = self.app_options # ha
-
     assert_equal true, app_options[:level]['submittable']
   end
 
@@ -283,14 +281,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable level is not submittable for non-logged in user' do
     @level = create(:applab, submittable: true)
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
@@ -299,8 +295,6 @@ class LevelsHelperTest < ActionView::TestCase
 
     user = create(:follower).student_user
     sign_in user
-
-    app_options = self.app_options # ha ha
 
     assert_equal true, app_options[:level]['submittable']
   end
@@ -311,14 +305,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable multi level is not submittable for non-logged in user' do
     @level = create(:multi, submittable: true)
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 

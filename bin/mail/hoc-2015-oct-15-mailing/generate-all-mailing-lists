@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-ALL_FILES = []
+@all_files = []
 
 # naming convention:
 # script to generate the csv:
@@ -22,17 +22,17 @@ def generate(name)
 
   puts "deduping"
   deduped_csv = name + '-deduped.csv'
-  if ALL_FILES.empty?
+  if @all_files.empty?
     puts `cp #{csv} #{deduped_csv}`
   else
-    puts `./subtract #{csv} #{ALL_FILES.join(' ')} #{deduped_csv}`
+    puts `./subtract #{csv} #{@all_files.join(' ')} #{deduped_csv}`
   end
   puts `wc #{deduped_csv}`
 
   puts 'international:'
   puts `grep true #{deduped_csv} | wc`
 
-  ALL_FILES << deduped_csv # list of csvs for deduping future csvs
+  @all_files << deduped_csv # list of csvs for deduping future csvs
 
   deduped_csv
 end

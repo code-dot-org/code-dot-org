@@ -57,9 +57,9 @@ describe("Tests for the upcoming workshops page", () => {
       />
     );
 
-    // We expect there to be a table with 3 rows in the body, two of which have buttons
+    // We expect there to be a table with 3 rows in the body, two of which have two buttons
     expect(upcomingWorkshopsTable.find('tbody tr')).to.have.length(3);
-    expect(upcomingWorkshopsTable.find('tbody tr Button')).to.have.length(2);
+    expect(upcomingWorkshopsTable.find('tbody tr Button')).to.have.length(4);
     expect(upcomingWorkshopsTable.state('showCancelModal')).to.be.false;
     expect(upcomingWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
 

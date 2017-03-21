@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/activity_constants'
 
 class AdminUsersControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -11,6 +12,15 @@ class AdminUsersControllerTest < ActionController::TestCase
     @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx', deleted_at: '2016-01-01 12:00:00')
     @malformed = create :teacher, email: 'malformed@example.com'
     @malformed.update_column(:email, '')  # Bypasses validation!
+
+    @user = create :user
+    @script = Script.first
+    @level = @script.script_levels.first.level
+    @manual_pass_params = {
+      user_id: @user.id,
+      script_id_or_name: @script.id,
+      level_id: @level.id
+    }
   end
 
   generate_admin_only_tests_for :account_repair_form
@@ -168,5 +178,71 @@ class AdminUsersControllerTest < ActionController::TestCase
     end
     assert_response :forbidden
     assert @deleted_student.deleted_at.present?
+  end
+
+  generate_admin_only_tests_for :manual_pass_form
+
+  test 'manual_pass adds user_level with manual pass' do
+    sign_in @admin
+
+    assert_creates(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
+  end
+
+  test 'manual_pass adds user_level with manual pass by script name' do
+    sign_in @admin
+
+    assert_creates(UserLevel) do
+      post :manual_pass,
+        params: @manual_pass_params.merge(script_id_or_name: @script.name)
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
+  end
+
+  test 'manual_pass modifies with user_level with manual pass' do
+    sign_in @admin
+    UserLevel.create!(
+      user: @user, level: @level, script: @script, best_result: 20
+    )
+
+    assert_does_not_create(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal ActivityConstants::MANUAL_PASS_RESULT, user_level.best_result
+  end
+
+  test 'manual_pass does not overwrite previous perfect' do
+    sign_in @admin
+    UserLevel.create!(
+      user: @user, level: @level, script: @script, best_result: 100
+    )
+
+    assert_does_not_create(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    user_level = UserLevel.find_by_user_id(@user.id)
+    assert_equal @script.id, user_level.script_id
+    assert_equal @level.id, user_level.level_id
+    assert_equal 100, user_level.best_result
+  end
+
+  test 'manual_pass responds forbidden if not admin' do
+    sign_in @not_admin
+
+    assert_does_not_create(UserLevel) do
+      post :manual_pass, params: @manual_pass_params
+    end
+    assert_response :forbidden
   end
 end

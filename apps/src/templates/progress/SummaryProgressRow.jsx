@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
+import ReactTooltip from 'react-tooltip';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { levelType, lessonType } from './progressTypes';
@@ -114,7 +115,17 @@ const SummaryProgressRow = React.createClass({
                 }}
               />
             }
-            {lessonTitle}
+            <span data-tip data-for={lessonTitle} aria-describedby={lessonTitle}>
+              {lessonTitle}
+              <ReactTooltip
+                id={lessonTitle}
+                role="tooltip"
+                wrapper="span"
+                effect="solid"
+              >
+                {lesson.name}
+              </ReactTooltip>
+            </span>
           </div>
         </td>
         <td style={styles.col2}>

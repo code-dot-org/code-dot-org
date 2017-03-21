@@ -1,7 +1,7 @@
 require "csv"
 require "naturally"
 
-EMPTY_XML = '<xml></xml>'
+EMPTY_XML = '<xml></xml>'.freeze
 
 class LevelsController < ApplicationController
   include LevelsHelper
@@ -186,6 +186,8 @@ class LevelsController < ApplicationController
         @game = Game.craft
       elsif @type_class == Weblab
         @game = Game.weblab
+      elsif @type_class == CurriculumReference
+        @game = Game.curriculum_reference
       end
       @level = @type_class.new
       render :edit
