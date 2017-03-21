@@ -11,6 +11,7 @@ var msg = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var color = require("../util/color");
 var utils = require('@cdo/apps/utils');
+import SettingsCog from '../lib/ui/SettingsCog';
 
 var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
 var BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
@@ -136,7 +137,8 @@ var CodeWorkspace = React.createClass({
           <div id="codeModeHeaders">
             <PaneSection id="toolbox-header">
               <i id="hide-toolbox-icon" style={[commonStyles.hidden, chevronStyle]} className="fa fa-chevron-circle-right"/>
-              <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
+              <span style={{paddingLeft: '2em'}}>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
+              <SettingsCog/>
             </PaneSection>
             <PaneSection id="show-toolbox-header" style={commonStyles.hidden}>
               <i id="show-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
