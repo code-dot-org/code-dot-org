@@ -277,6 +277,20 @@ When /^I press the "([^"]*)" button( to load a new page)?$/ do |button_text, loa
   page_load(load) { @button.click }
 end
 
+When /^I select value "([^"]*)" for input name "([^"]*)"$/ do |value, name|
+  wait_short_until do
+    @input = @browser.find_element(:css, "input[value='#{value}'][name='#{name}']")
+  end
+  @input.click
+end
+
+When /^I select the (\d+)(?:st|nd|rd|th)? value for input name "([^"]*)"$/ do |value_index, name|
+  wait_short_until do
+    @input = @browser.find_elements(:css, "input[name='#{name}']")[value_index.to_i]
+  end
+  @input.click
+end
+
 When /^I press "([^"]*)" using jQuery( to load a new page)?$/ do |selector, load|
   page_load(load) do
     @browser.execute_script("$(#{selector.dump}).click()")
