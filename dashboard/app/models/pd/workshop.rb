@@ -31,21 +31,21 @@ class Pd::Workshop < ActiveRecord::Base
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   TYPES = [
-    TYPE_PUBLIC = 'Public',
-    TYPE_PRIVATE = 'Private',
-    TYPE_DISTRICT = 'District'
-  ]
+    TYPE_PUBLIC = 'Public'.freeze,
+    TYPE_PRIVATE = 'Private'.freeze,
+    TYPE_DISTRICT = 'District'.freeze
+  ].freeze
 
   COURSES = [
-    COURSE_CSF = 'CS Fundamentals',
-    COURSE_CSP = 'CS Principles',
-    COURSE_ECS = 'Exploring Computer Science',
-    COURSE_CS_IN_A = 'CS in Algebra',
-    COURSE_CS_IN_S = 'CS in Science',
-    COURSE_CSD = 'CS Discoveries',
-    COURSE_COUNSELOR = 'Counselor',
-    COURSE_ADMIN = 'Admin'
-  ]
+    COURSE_CSF = 'CS Fundamentals'.freeze,
+    COURSE_CSP = 'CS Principles'.freeze,
+    COURSE_ECS = 'Exploring Computer Science'.freeze,
+    COURSE_CS_IN_A = 'CS in Algebra'.freeze,
+    COURSE_CS_IN_S = 'CS in Science'.freeze,
+    COURSE_CSD = 'CS Discoveries'.freeze,
+    COURSE_COUNSELOR = 'Counselor'.freeze,
+    COURSE_ADMIN = 'Admin'.freeze
+  ].freeze
 
   COURSE_NAMES_MAP = {
     COURSE_CSF => 'CS Fundamentals',
@@ -56,40 +56,40 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CSD => 'CS Discoveries',
     COURSE_COUNSELOR => 'Counselor',
     COURSE_ADMIN => 'Administrator'
-  }
+  }.freeze
 
   STATES = [
-    STATE_NOT_STARTED = 'Not Started',
-    STATE_IN_PROGRESS = 'In Progress',
-    STATE_ENDED = 'Ended'
-  ]
+    STATE_NOT_STARTED = 'Not Started'.freeze,
+    STATE_IN_PROGRESS = 'In Progress'.freeze,
+    STATE_ENDED = 'Ended'.freeze
+  ].freeze
 
   SUBJECTS = {
     COURSE_ECS => [
-      SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person',
-      SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML',
-      SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch',
-      SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data',
-      SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics',
-      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'
+      SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
+      SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML'.freeze,
+      SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
+      SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
+      SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
+      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'.freeze
     ],
     COURSE_CS_IN_A => [
-      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person',
-      SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'
+      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
+      SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'.freeze
     ],
     COURSE_CS_IN_S => [
-      SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study',
-      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1',
-      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
+      SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study'.freeze,
+      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1'.freeze,
+      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = 'Summer Workshop',
-      SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1',
-      SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2',
-      SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3',
-      SUBJECT_CSP_WORKSHOP_4 = 'Workshop 4'
+      SUBJECT_CSP_SUMMER_WORKSHOP = 'Summer Workshop'.freeze,
+      SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1'.freeze,
+      SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2'.freeze,
+      SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3'.freeze,
+      SUBJECT_CSP_WORKSHOP_4 = 'Workshop 4'.freeze
     ]
-  }
+  }.freeze
 
   # Section types by course
   SECTION_TYPE_MAP = {
@@ -126,7 +126,7 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
-  }
+  }.freeze
 
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES

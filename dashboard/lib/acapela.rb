@@ -4,13 +4,13 @@ require 'cgi'
 require 'open-uri'
 require 'logger'
 
-VAAS_URL = "http://vaas.acapela-group.com/Services/Synthesizer"
+VAAS_URL = "http://vaas.acapela-group.com/Services/Synthesizer".freeze
 VAAS_HASH = {
   prot_vers: "2",
   cl_login: CDO.acapela_login,
   cl_app: CDO.acapela_storage_app,
   cl_pwd: CDO.acapela_storage_password
-}
+}.freeze
 
 def acapela_text_to_audio_url(text, voice="rosie22k", speed=180, shape=100)
   params = {

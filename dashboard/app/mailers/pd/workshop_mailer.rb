@@ -21,14 +21,14 @@ class Pd::WorkshopMailer < ActionMailer::Base
       Pd::Workshop::SUBJECT_ECS_UNIT_6 => 'ecs_unit_6',
       Pd::Workshop::SUBJECT_ECS_PHASE_4 => 'ecs_phase_4'
     }
-  }
+  }.freeze
 
   # Online URL used in the details partials, organized by course.
   ONLINE_URL = {
     Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/course/cs-in-science-support',
     Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/course/cs-in-algebra-support',
     Pd::Workshop::COURSE_ECS => 'https://studio.code.org/course/ecs-support'
-  }
+  }.freeze
 
   after_action :save_timestamp
 

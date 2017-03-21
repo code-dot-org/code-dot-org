@@ -15,8 +15,8 @@ namespace :seed do
     Game.setup
   end
 
-  SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten
-  SEEDED = 'config/scripts/.seeded'
+  SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
+  SEEDED = 'config/scripts/.seeded'.freeze
 
   file SEEDED => [SCRIPTS_GLOB, :environment].flatten do
     update_scripts
@@ -38,7 +38,7 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls]
+  SCRIPTS_DEPENDENCIES = [:environment, :games, :custom_levels, :dsls].freeze
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -49,8 +49,16 @@ namespace :seed do
 
   # detect changes to dsldefined level files
   # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
-  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti LevelGroup)
-  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten
+  DSL_TYPES = %w(
+    TextMatch
+    ContractMatch
+    External
+    Match
+    Multi
+    EvaluationMulti
+    LevelGroup
+  ).freeze
+  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
     touch t.name

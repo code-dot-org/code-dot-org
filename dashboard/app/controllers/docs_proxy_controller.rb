@@ -9,7 +9,7 @@ class DocsProxyController < ApplicationController
 
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     docs.code.org
-  )
+  ).freeze
 
   EXPIRY_TIME = 30.minutes
 
