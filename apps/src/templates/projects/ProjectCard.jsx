@@ -32,7 +32,24 @@ const styles = {
   },
   thumbnail: {
     width: 250
-  }
+  },
+  actionBox: {
+    width: 190,
+    padding: 10,
+    fontSize: 12,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.light_gray,
+    border: '1px solid gray',
+    borderRadius: 2,
+    backgroundColor: color.white,
+    boxShadow: "3px 3px 3px lightGray",
+    marginTop: 5
+  },
+  delete: {
+    color: color.red,
+    borderTop: '2px solid lightGray',
+    paddingTop: 10,
+  },
 };
 
 const ProjectCard = React.createClass({
@@ -56,7 +73,7 @@ const ProjectCard = React.createClass({
   },
 
   renderStudentName() {
-    // The student's name should only be visible in the classroom gallery
+    // The student's name should only be visible in the classroom gallery.
     if (this.props.currentGallery === 'classroom'){
       return (
         <div style={styles.studentName}>
@@ -76,43 +93,64 @@ const ProjectCard = React.createClass({
   },
 
   toggleActionBox() {
-    if (this.state.actionsOpen === true) {
-      this.setState({actionsOpen: false});
-      return;
-    }
-    if (this.state.actionsOpen === false) {
-      this.setState({actionsOpen: true});
-      return;
-    }
+    this.setState({actionsOpen: !this.state.actionsOpen});
   },
 
   renderActionBox() {
     if (this.state.actionsOpen) {
       return (
-        <div>
-          This is where the options go.
+        <div style={styles.actionBox}>
+          <h5>Rename</h5>
+          <h5>Remix</h5>
+          <h5>Share</h5>
+          {this.classPublishAction()}
+          {this.publicPublishAction()}
+          <h5 style={styles.delete}><FontAwesome icon=" fa-times-circle"/> Delete Project</h5>
         </div>
       );
     }
   },
 
+  classPublishAction() {
+    if (this.props.projectData.publishedToClass) {
+      return (
+        <h5> Remove from Class Gallery</h5>
+      );
+    }
+    return (
+      <h5> Publish to Classroom Gallery</h5>
+    );
+  },
+
+  publicPublishAction() {
+    if (this.props.projectData.publishedToPublic) {
+      return (
+        <h5> Remove from Public Gallery</h5>
+      );
+    }
+    return (
+      <h5> Publish to Public Gallery</h5>
+    );
+  },
 
   render() {
     return (
-      <div style={styles.card}>
-        <img src={require('./placeholder.png')} style={styles.thumbnail} />
-         <div style={styles.title}>
-           {this.props.projectData.projectName}
+      <div>
+        <div style={styles.card}>
+          <img src={require('./placeholder.png')} style={styles.thumbnail} />
+           <div style={styles.title}>
+             {this.props.projectData.projectName}
+           </div>
+
+           {this.renderStudentName()}
+
+           <div style={styles.lastEdit}>
+             {this.renderDownIcon()}
+             Last edited: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
+           </div>
          </div>
 
-         {this.renderStudentName()}
-
-         <div style={styles.lastEdit}>
-           {this.renderDownIcon()}
-           Last edited: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
-         </div>
-
-         {this.renderActionBox()}
+          {this.renderActionBox()}
 
       </div>
 
