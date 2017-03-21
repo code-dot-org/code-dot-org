@@ -15,10 +15,9 @@ require_relative '../lib/cdo/github'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
-# TODO(asher): This is not a constant, so should not be NAMED as one.
-LOGGER = Logger.new(LOG_FILE, 'daily')
+@logger = Logger.new(LOG_FILE, 'daily')
 
-LOGGER.formatter = proc do |_serverity, time, _progname, msg|
+@logger.formatter = proc do |_serverity, time, _progname, msg|
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
@@ -97,7 +96,7 @@ def ask_for_name
 
   EOS
 
-  LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{@dotd_name} is DotD")
+  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{@dotd_name} is DotD")
 end
 
 # Prompts the user whether block should be executed by asking question,
@@ -111,7 +110,7 @@ def should_i(question)
     response = gets.strip.downcase
     puts ''
     if 'yes'.start_with?(response) # also catches blank/return ;)
-      LOGGER.info(question)
+      @logger.info(question)
       yield
       return
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
