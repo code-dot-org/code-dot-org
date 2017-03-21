@@ -12,5 +12,5 @@ def run_standalone_script(location)
 end
 
 def run_bash_script(location)
-  run_standalone_script("sh #{location}")
+  run_standalone_script("bash #{location}")
 end
