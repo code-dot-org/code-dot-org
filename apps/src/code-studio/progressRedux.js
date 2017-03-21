@@ -265,13 +265,12 @@ const peerReviewLesson = state => ({
 /**
  * Extract levels from our peerReviewStage, making sure the levels have the same
  * set of fields as our non-peer review levels.
- * TODO - write tests. make storybooks
  */
 const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index) => ({
   // These aren't true levels (i.e. we won't have an entry in levelProgress),
   // so always use a specific id that won't collide with real levels
   id: PEER_REVIEW_ID,
-  status: (level.locked === true ? LevelStatus.locked : level.status) || LevelStatus.not_tried,
+  status: (level.locked ? LevelStatus.locked : level.status),
   url: level.url,
   name: level.name,
   icon: (level.locked ? level.icon : undefined),
@@ -410,6 +409,9 @@ export const progressionsFromLevels = levels => {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 export const __testonly__ = {
-  bestResultLevelId
+  bestResultLevelId,
+  peerReviewLesson,
+  peerReviewLevels,
+  PEER_REVIEW_ID
 };
 /* end-test-block */
