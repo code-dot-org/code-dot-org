@@ -42,12 +42,12 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
           limit: limit,
           total_count: workshops.length,
           filters: filter_params,
-          workshops: limited_workshops.map{|w| Api::V1::Pd::WorkshopSerializer.new(w).attributes}
+          workshops: limited_workshops.map {|w| Api::V1::Pd::WorkshopSerializer.new(w).attributes}
         }
       end
       format.csv do
         # don't apply limit to csv download
-        send_as_csv_attachment workshops.map{|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}, 'workshops.csv'
+        send_as_csv_attachment workshops.map {|w| Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes}, 'workshops.csv'
       end
     end
   rescue ArgumentError => e

@@ -85,7 +85,7 @@ class LevelsHelperTest < ActionView::TestCase
   test "get video choices" do
     choices_cached = video_key_choices
     assert_equal(choices_cached.count, Video.count)
-    Video.all.each{|video| assert_includes(choices_cached, video.key)}
+    Video.all.each {|video| assert_includes(choices_cached, video.key)}
   end
 
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
@@ -141,7 +141,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
+    assert callouts.any? { |c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
 
   test 'app_options returns camelCased view option on Blockly level' do
@@ -401,7 +401,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     script = Script.add_script(
       {name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
     )
 
     stage = script.stages[0]

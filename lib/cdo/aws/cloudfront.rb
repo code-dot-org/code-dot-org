@@ -30,7 +30,7 @@ module AWS
     #   If not provided, the default *.cloudfront.net SSL certificate is used.
     CONFIG = {
       pegasus: {
-        aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map{|x| CDO.canonical_hostname("#{x}.code.org")},
+        aliases: [CDO.pegasus_hostname] + (['i18n'] + CDO.partners).map {|x| CDO.canonical_hostname("#{x}.code.org")},
         origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
         # IAM server certificate name
         ssl_cert: 'code.org',
@@ -71,15 +71,15 @@ module AWS
     # Manually sorts the array-types in the distribution config object,
     # so we can compare against the existing config to detect whether an update is needed.
     def self.sort_config!(config)
-      config[:cache_behaviors][:items].sort_by!{|item| item[:path_pattern]}
+      config[:cache_behaviors][:items].sort_by! {|item| item[:path_pattern]}
       config[:cache_behaviors][:items].each do |item|
         item[:forwarded_values][:headers][:items].sort!
         name = item[:forwarded_values][:cookies][:whitelisted_names]
         name[:items].sort! if name
       end
       config[:aliases][:items].sort!
-      config[:origins][:items].sort_by!{|o| o[:id]}
-      config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
+      config[:origins][:items].sort_by! {|o| o[:id]}
+      config[:custom_error_responses][:items].sort_by! {|e| e[:error_code]}
     end
 
     # File path for caching mappings from CloudFront Distribution id to alias CNAMEs.
@@ -207,7 +207,7 @@ module AWS
           IO.write(alias_cache, JSON.pretty_generate(out))
         end
       end
-      mapping.select{ |_, v| v.include? hostname }.keys.first
+      mapping.select { |_, v| v.include? hostname }.keys.first
     end
 
     # Returns a CloudFront DistributionConfig Hash compatible with the AWS SDK for Ruby v2.

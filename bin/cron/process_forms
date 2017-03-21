@@ -22,7 +22,7 @@ def send_receipts(kind, form)
       receipts << kind.receipt(JSON.load(form[:data]))
     end
   end
-  receipts = receipts.flatten.select{|i| i}
+  receipts = receipts.flatten.select {|i| i}
   return 0 if receipts.empty?
   return 0 if form[:email] == 'anonymous@code.org'
 
