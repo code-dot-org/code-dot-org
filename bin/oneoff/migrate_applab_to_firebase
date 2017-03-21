@@ -50,7 +50,7 @@ end
 # @param encrypted_channel_id [String]
 # @param properties_data [Hash] Map from property name to JSON-encoded value
 def set_firebase_properties(encrypted_channel_id, properties_data)
-  #puts "set_firebase_properties #{encrypted_channel_id} #{properties_data.keys}"
+  # puts "set_firebase_properties #{encrypted_channel_id} #{properties_data.keys}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
   properties_url = "#{channel_url}/storage/keys.json"
 
@@ -74,7 +74,7 @@ end
 # @param table_records [Hash] Map from record id to json-encoded record
 # @params table_columns [Array] Array of column names
 def set_firebase_table(encrypted_channel_id, table_name, table_records, table_columns)
-  #puts "set_firebase_table #{encrypted_channel_id} #{table_name} #{table_records.size} #{table_columns}"
+  # puts "set_firebase_table #{encrypted_channel_id} #{table_name} #{table_records.size} #{table_columns}"
   channel_url = "https://#{CDO.firebase_name}.firebaseio.com/v3/channels/#{encrypted_channel_id}"
 
   if ILLEGAL_CHAR_REGEX.match(table_name)

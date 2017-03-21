@@ -7,7 +7,7 @@ preload_app true
 stderr_path pegasus_dir('log/unicorn_stderr.log')
 stdout_path pegasus_dir('log/unicorn_stdout.log')
 working_directory pegasus_dir
-#logger $log
+# logger $log
 
 after_fork do |_server, _worker|
   require 'dynamic_config/gatekeeper'

@@ -32,7 +32,7 @@ class V2SectionRoutesTest < Minitest::Test
       # the `.distinct(:student_user_id)` syntax used in the `students()` method
       # within `DashboardSection`.
       # TODO(asher): Fix and reenable these tests.
-      #it 'returns sections when teacher' do
+      # it 'returns sections when teacher' do
       #  with_role FakeDashboard::TEACHER
       #  @pegasus.get '/v2/sections'
       #  assert_equal 200, @pegasus.last_response.status
@@ -60,9 +60,9 @@ class V2SectionRoutesTest < Minitest::Test
       #      "students"=>[]
       #    }],
       #    JSON.parse(@pegasus.last_response.body)
-      #end
+      # end
 
-      #it 'ignores deleted sections' do
+      # it 'ignores deleted sections' do
       #  with_role FakeDashboard::TEACHER_WITH_DELETED
       #  @pegasus.get '/v2/sections'
       #  assert_equal 200, @pegasus.last_response.status
@@ -79,7 +79,7 @@ class V2SectionRoutesTest < Minitest::Test
       #     "students"=>[{"student_user_id"=>5, "location"=>"/v2/users/", "age"=>nil, "completed_levels_count"=>0}]
       #    }],
       #    JSON.parse(@pegasus.last_response.body)
-      #end
+      # end
     end
 
     describe 'POST /v2/sections' do
@@ -130,7 +130,7 @@ class V2SectionRoutesTest < Minitest::Test
       # the `.distinct(:student_user_id)` syntax used in the `students()` method
       # within `DashboardSection`.
       # TODO(asher): Fix and reenable these tests.
-      #it 'returns section for teacher' do
+      # it 'returns section for teacher' do
       #  with_role FakeDashboard::TEACHER
       #  @pegasus.get "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}"
       #  assert_equal 200, @pegasus.last_response.status
@@ -146,9 +146,9 @@ class V2SectionRoutesTest < Minitest::Test
       #      "students"=>[{"student_user_id"=>1, "location"=>"/v2/users/", "age"=>nil, "completed_levels_count"=>0}]
       #    }),
       #    JSON.parse(@pegasus.last_response.body)
-      #end
+      # end
 
-      #it 'returns section for admin' do
+      # it 'returns section for admin' do
       #  with_role FakeDashboard::ADMIN
       #  @pegasus.get "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}"
       #  assert_equal 200, @pegasus.last_response.status
@@ -164,7 +164,7 @@ class V2SectionRoutesTest < Minitest::Test
       #      "students"=>[{"student_user_id"=>1, "location"=>"/v2/users/", "age"=>nil, "completed_levels_count"=>0}]
       #    }),
       #    JSON.parse(@pegasus.last_response.body)
-      #end
+      # end
 
       it 'returns 403 "Forbidden" when not signed in' do
         with_role nil
@@ -263,7 +263,7 @@ class V2SectionRoutesTest < Minitest::Test
       # the `.distinct(:student_user_id)` syntax used in the `students()` method
       # within `DashboardSection`.
       # TODO(asher): Fix and reenable these tests.
-      #it 'updates' do
+      # it 'updates' do
       #  with_role FakeDashboard::TEACHER
       #  Dashboard.db.transaction(rollback: :always) do
       #    @pegasus.post "/v2/sections/#{FakeDashboard::SECTION_NORMAL[:id]}/update",
@@ -283,7 +283,7 @@ class V2SectionRoutesTest < Minitest::Test
       #      }),
       #      JSON.parse(@pegasus.last_response.body)
       #  end
-      #end
+      # end
 
       it 'returns 403 "Forbidden" when updating deleted section' do
         with_role FakeDashboard::TEACHER_WITH_DELETED

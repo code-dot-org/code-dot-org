@@ -21,7 +21,7 @@ module Ops
     end
 
     test 'Ops team can create segments' do
-      #87054134
+      # 87054134
       assert_routing({ path: "#{API}/workshops/1/segments", method: :post }, { controller: 'ops/segments', action: 'create', workshop_id: '1' })
 
       assert_difference 'Segment.count' do

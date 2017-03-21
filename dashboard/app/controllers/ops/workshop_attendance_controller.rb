@@ -91,7 +91,7 @@ module Ops
 
       respond_with (@workshop.teachers) do |format|
         format.csv do
-          #Specify filename
+          # Specify filename
           response.headers['Content-Disposition'] = 'attachment; filename="' + @workshop.name + '-Attendance.csv"'
 
           # Generate csv column headers dynamically

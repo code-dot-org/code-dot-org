@@ -56,7 +56,7 @@ group :development, :test do
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   # Use debugger
-  #gem 'debugger' unless ENV['RM_INFO']
+  # gem 'debugger' unless ENV['RM_INFO']
 
   gem 'active_record_query_trace'
   gem 'better_errors'

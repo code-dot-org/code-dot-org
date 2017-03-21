@@ -22,7 +22,7 @@ module Ops
 
     test 'Facilitators can view all workshops they are facilitating' do
       # GET /ops/workshops
-      #87055150 (part 1)
+      # 87055150 (part 1)
       sign_in @workshop.facilitators.first
       get :index
       assert_response :success
@@ -30,7 +30,7 @@ module Ops
     end
 
     test "Facilitators can list all teachers in their workshop's cohorts" do
-      #87055150 (part 2)
+      # 87055150 (part 2)
       # first name, last name, email, district, gender and any workshop details that are available for teachers
       assert_routing({ path: "#{API}/workshops/1/teachers", method: :get }, { controller: 'ops/workshops', action: 'teachers', id: '1' })
 
@@ -77,7 +77,7 @@ module Ops
     end
 
     test 'District contacts can view all workshops in all cohorts in their district' do
-      #87054994 (part 1)
+      # 87054994 (part 1)
       sign_in @district.contact
       get :index
       assert_response :success
@@ -99,7 +99,7 @@ module Ops
 
     test 'Ops team can create workshops' do
       sign_in @admin
-      #87054134
+      # 87054134
       assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
 
       facilitator_params = [

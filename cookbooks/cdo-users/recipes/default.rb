@@ -44,7 +44,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
     template File.join(home_directory, dotfile) do
       action :create_if_missing
       source "#{dotfile[1..-1]}.erb"
-      #variables( )
+      # variables( )
       owner user_name
       group user_name
     end
@@ -88,7 +88,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
   end
 
   template File.join(ssh_directory, 'config') do
-    #action :create_if_missing
+    # action :create_if_missing
     source 'ssh_config.erb'
     variables(hosts: search(:node, "*:*"))
     owner user_name

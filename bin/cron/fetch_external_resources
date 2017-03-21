@@ -7,7 +7,7 @@ require 'open-uri'
 require 'sequel'
 
 DASHBOARD_DB = Sequel.connect(CDO.dashboard_db_reader.sub('mysql:', 'mysql2:'))
-#DASHBOARD_DB.loggers << Logger.new(STDOUT) if rack_env?(:development)
+# DASHBOARD_DB.loggers << Logger.new(STDOUT) if rack_env?(:development)
 
 def youtube_thumbnails
   {}.tap do |results|

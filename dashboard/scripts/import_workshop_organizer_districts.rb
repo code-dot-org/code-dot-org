@@ -53,7 +53,7 @@ district_list.each do |district|
   user.permission = UserPermission::WORKSHOP_ORGANIZER
   user.save!
 
-  #TODO: Create the district with this user as the contact (after facilitator summit)
+  # TODO: Create the district with this user as the contact (after facilitator summit)
 end
 
 puts "#{district_list.length} Districts Imported."

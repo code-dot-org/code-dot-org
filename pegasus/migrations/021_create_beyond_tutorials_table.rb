@@ -9,7 +9,7 @@ Sequel.migration do
       Integer :displayweight, null: false
       String :name, null: false
       String :orgname, null: false
-      #String :contact
+      # String :contact
       String :url, size: 2000, null: false
       String :shortdescription, null: false
       Text :longdescription, null: false

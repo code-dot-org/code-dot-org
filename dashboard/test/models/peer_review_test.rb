@@ -181,10 +181,10 @@ class PeerReviewTest < ActiveSupport::TestCase
     first_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
     PeerReview.pull_review_from_pool(@script_level.script, reviewer_2)
 
-    #Let's say reviewer 1 doesn't finish their review - AKA the created date was more than a day ago
+    # Let's say reviewer 1 doesn't finish their review - AKA the created date was more than a day ago
     first_review.update(created_at: 2.days.ago)
 
-    #Now when reviewer 3 pulls a review, they should get the first review but updated with them as the reviewer now
+    # Now when reviewer 3 pulls a review, they should get the first review but updated with them as the reviewer now
     new_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_3)
     assert_equal first_review.id, new_review.id
     assert_equal reviewer_3, new_review.reviewer
@@ -272,7 +272,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     first_review.update!(status: 'accepted')
     second_review = PeerReview.pull_review_from_pool(@script, @user)
 
-    #Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
+    # Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
     expected_reviews = [
       {
         id: first_review.id,

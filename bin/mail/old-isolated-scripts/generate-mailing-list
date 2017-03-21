@@ -49,13 +49,13 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-#DONORS = {}.tap do |results|
+# DONORS = {}.tap do |results|
 #  csv_contacts('donors.csv').each do |i|
 #    email = i[:email].downcase.strip
 #    results[email] = i unless UNSUBSCRIBERS[email]
 #  end
-#end
-#puts "#{DONORS.count} donors loaded."
+# end
+# puts "#{DONORS.count} donors loaded."
 
 ORGANIZERS = {}.tap do |results|
   query_contacts(q: 'kind_s:"HocSignup2014"', fields: ['hoc_country_s']).each do |i|

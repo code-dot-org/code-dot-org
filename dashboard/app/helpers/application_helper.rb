@@ -48,7 +48,7 @@ module ApplicationHelper
   end
 
   def check_mark_html
-    #raw "&#x2714;"
+    # raw "&#x2714;"
     image_tag(image_url('white-checkmark.png'))
   end
 

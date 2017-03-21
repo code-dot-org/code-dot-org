@@ -244,7 +244,7 @@ When /^I rotate to portrait$/ do
 end
 
 When /^I inject simulation$/ do
-  #@browser.execute_script('$("body").css( "background-color", "black")')
+  # @browser.execute_script('$("body").css( "background-color", "black")')
   @browser.execute_script("var fileref=document.createElement('script');  fileref.setAttribute('type','text/javascript'); fileref.setAttribute('src', '/assets/jquery.simulate.js'); document.getElementsByTagName('head')[0].appendChild(fileref)")
 end
 
