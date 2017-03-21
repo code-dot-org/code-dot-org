@@ -31,10 +31,10 @@ post '/api/dev/start-build' do
   )
 end
 
-post 'api/dev/set-green-dtt' do
+post '/api/dev/set-last-dtt-green' do
   forbidden! unless rack_env == :test
-
   dont_cache
+  forbidden! unless params[:token] == CDO.slack_set_last_dtt_green_token
 
   sha = GitHub.sha('test')
   InfraTestTopic.set_green_commit(sha)
