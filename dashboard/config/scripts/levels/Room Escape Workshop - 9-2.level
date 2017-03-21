@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2017-03-15T20:11:57.000Z",
+  "created_at": "2017-03-20T17:50:18.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -11,12 +11,10 @@
       "ifBlock": null,
       "equalityOperator": null,
       "randomNumber_min_max": null,
-      "declareAssign_x": null,
       "declareAssign_x_promptNum": null,
       "hideElement": null,
       "showElement": null,
-      "assign_x": null,
-      "setScreen": null
+      "setPosition": null
     },
     "edit_code": true,
     "embed": "false",
@@ -57,7 +55,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# You've done it!\r\n\r\nYou made a room escape! Now its time to customize it. \r\n\r\nConsider:\r\n\r\n* Adding more rooms\r\n* Adding more things users can interact with in the rooms\r\n* Add more style to the rooms",
+    "markdown_instructions": "# Click Key\r\n\r\n<img src=\"https://images.code.org/da714cccb8271f4a38c584255db7a3a1-image-1489632782603.52.18 PM.png\" style=\"width:200px;float:right\">\r\n\r\nOnce a user clicks the key you will want to show they are holding it. You can do this by adding a key at the bottom corner of the room. \r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for when the user clicks the key in the safe. \r\n* Inside the `onEvent` block:\r\n\t* Use `hideElement` to hide the key in the safe\r\n    * Use `showElement` to show the keys in each room.",
     "contained_level_names": null
   },
   "published": true,

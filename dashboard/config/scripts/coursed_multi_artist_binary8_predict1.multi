@@ -1,9 +1,9 @@
 name 'courseD_multi_artist_binary8_predict1'
 question 'Take a close look at the code below.  Which image will it create after you click "Run"?'
 wrong 'A', feedback: 'Incorrect.'
-right 'B', feedback: 'Correct!'
+right 'B', feedback: 'Incorrect.'
 wrong 'C', feedback: 'Incorrect.'
-wrong 'D.', feedback: 'Incorrect.'
+wrong 'D', feedback: 'Correct!'
 markdown <<MARKDOWN
 <table>
 <tr>
