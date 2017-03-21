@@ -25,7 +25,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     refute teacher_application.valid?
     # Three fields are validated outside the list of validated fields
     assert_equal Pd::TeacherApplication::REQUIRED_APPLICATION_FIELDS.count, teacher_application.errors.count
-    assert teacher_application.errors.full_messages.all?{|m| m.include? 'Application must contain'}
+    assert teacher_application.errors.full_messages.all? {|m| m.include? 'Application must contain'}
 
     teacher_application.application = build(:pd_teacher_application_hash).to_json
     assert teacher_application.valid?

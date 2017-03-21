@@ -1133,7 +1133,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone changes to next stage in default script' do
-    last_level_in_stage = @script_level.script.script_levels.reverse.find{|x| x.level.game.name == 'Artist'}
+    last_level_in_stage = @script_level.script.script_levels.reverse.find {|x| x.level.game.name == 'Artist'}
     post :milestone,
       params: @milestone_params.merge(script_level_id: last_level_in_stage.id)
     assert_response :success
@@ -1149,7 +1149,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map{|stage| stage[:scriptlevels]}.flatten)
+    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages].map {|stage| stage[:scriptlevels]}.flatten)
 
     last_level_in_first_stage = script.stages.first.script_levels.last
     post :milestone,

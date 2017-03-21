@@ -97,7 +97,7 @@ class Level < ActiveRecord::Base
   end
 
   def self.key_list
-    @@all_level_keys ||= Level.all.map{ |l| [l.id, l.key] }.to_h
+    @@all_level_keys ||= Level.all.map { |l| [l.id, l.key] }.to_h
     @@all_level_keys
   end
 
@@ -107,7 +107,7 @@ class Level < ActiveRecord::Base
   end
 
   def summarize_concepts
-    concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')
+    concepts.pluck(:name).map { |c| "'#{c}'" }.join(', ')
   end
 
   def summarize_concept_difficulty
@@ -250,7 +250,7 @@ class Level < ActiveRecord::Base
 
   def filter_level_attributes(level_hash)
     %w(name id updated_at type ideal_level_source_id md5).each {|field| level_hash.delete field}
-    level_hash.reject!{|_, v| v.nil?}
+    level_hash.reject! {|_, v| v.nil?}
     level_hash
   end
 
