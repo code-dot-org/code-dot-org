@@ -41,6 +41,10 @@ const ProjectCard = React.createClass({
     currentGallery: React.PropTypes.string,
   },
 
+  getInitialState() {
+   return {actionsOpen: false};
+  },
+
   dateFormatter(dateString) {
     const date = new Date(dateString);
     return date.toLocaleDateString();
@@ -52,7 +56,7 @@ const ProjectCard = React.createClass({
   },
 
   renderStudentName() {
-    //the student's name should only be visible in the classroom gallery
+    // The student's name should only be visible in the classroom gallery
     if (this.props.currentGallery === 'classroom'){
       return (
         <div style={styles.studentName}>
@@ -63,13 +67,35 @@ const ProjectCard = React.createClass({
   },
 
   renderDownIcon() {
-    //Only the student can access the menu options when viewing their personal projects
+    // Only the student can access the menu options when viewing their personal projects.
    if (this.props.currentGallery === 'personal'){
      return (
-       <FontAwesome icon=" fa-chevron-down" style={styles.downIcon}/>
+       <FontAwesome icon=" fa-chevron-down" style={styles.downIcon} onClick={this.toggleActionBox}/>
       );
     }
   },
+
+  toggleActionBox() {
+    if (this.state.actionsOpen === true) {
+      this.setState({actionsOpen: false});
+      return;
+    }
+    if (this.state.actionsOpen === false) {
+      this.setState({actionsOpen: true});
+      return;
+    }
+  },
+
+  renderActionBox() {
+    if (this.state.actionsOpen) {
+      return (
+        <div>
+          This is where the options go.
+        </div>
+      );
+    }
+  },
+
 
   render() {
     return (
@@ -85,6 +111,8 @@ const ProjectCard = React.createClass({
            {this.renderDownIcon()}
            Last edited: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
          </div>
+
+         {this.renderActionBox()}
 
       </div>
 
