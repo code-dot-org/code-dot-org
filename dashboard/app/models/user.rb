@@ -121,7 +121,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
+  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   TYPE_STUDENT = 'student'
@@ -478,6 +478,14 @@ class User < ActiveRecord::Base
       user.name = name_from_omniauth auth.info.name
       user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
+
+      if auth.provider == :the_school_project
+
+        user.username = auth.extra.raw_info.nickname
+        user.user_type = auth.extra.raw_info.role
+        user.locale = auth.extra.raw_info.locale
+        user.school = auth.extra.raw_info.school.name
+      end
 
       # treat clever admin types as teachers
       if CLEVER_ADMIN_USER_TYPES.include? user.user_type
