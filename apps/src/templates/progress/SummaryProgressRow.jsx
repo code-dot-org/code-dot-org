@@ -28,8 +28,6 @@ export const styles = {
     color: color.charcoal,
     letterSpacing: -0.11,
     whiteSpace: 'nowrap',
-    paddingLeft: 20,
-    paddingRight: 20,
     borderRightWidth: 1,
     borderRightColor: color.border_light_gray,
     borderRightStyle: 'solid',
@@ -41,6 +39,10 @@ export const styles = {
   },
   colText: {
     color: color.charcoal,
+    // so that our current stage indicator is flush with the td border
+    margin: -1,
+    paddingLeft: 20,
+    paddingRight: 20,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
     overflow: 'hidden',
@@ -59,13 +61,13 @@ export const styles = {
   unlockedIcon: {
     color: color.orange
   },
-  currentStageText: {
-    color: color.cyan
-  },
-  currentStageCell: {
+  currentStageIndicator: {
+    color: color.cyan,
     borderLeftColor: color.cyan,
     borderLeftStyle: 'solid',
-    borderLeftWidth: 5
+    borderLeftWidth: 4,
+    // colText padding minus borderLeftWidth
+    paddingLeft: 16
   }
 };
 
@@ -117,14 +119,13 @@ const SummaryProgressRow = React.createClass({
       >
         <td
           style={{
-            ...styles.col1,
-            ...(isCurrentStage && styles.currentStageCell)
+            ...styles.col1
           }}
         >
           <div
             style={{
               ...styles.colText,
-              ...(isCurrentStage && styles.currentStageText)
+              ...(isCurrentStage && styles.currentStageIndicator),
             }}
           >
             {hiddenForStudents &&

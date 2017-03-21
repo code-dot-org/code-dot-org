@@ -22,6 +22,7 @@ const defaultProps = {
   ],
   showTeacherInfo: false,
   viewAs: ViewType.Teacher,
+  currentStageId: null,
   lessonIsVisible: () => true,
   lessonLockedForSection: () => false
 };
@@ -35,6 +36,15 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
+          />
+        )
+      },
+      {
+        name:'progress lesson for current stage',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            currentStageId={defaultProps.lesson.id}
           />
         )
       },
