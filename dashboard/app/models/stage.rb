@@ -41,13 +41,13 @@ class Stage < ActiveRecord::Base
   end
 
   def unplugged?
-    script_levels = script.script_levels.select{|sl| sl.stage_id == id}
+    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
     script_levels.first.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
-    script_levels = script.script_levels.select{|sl| sl.stage_id == id}
+    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
     script_levels.first.oldest_active_level.spelling_bee?
   end
@@ -199,6 +199,6 @@ class Stage < ActiveRecord::Base
 
   # Ensures we get the cached ScriptLevels, vs hitting the db.
   def cached_script_levels
-    script_levels.map{|sl| Script.cache_find_script_level(sl.id)}
+    script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
   end
 end

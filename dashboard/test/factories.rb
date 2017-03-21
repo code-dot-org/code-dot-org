@@ -194,12 +194,12 @@ FactoryGirl.define do
 
   factory :match, parent: :level, class: Match do
     game {create(:game, app: "match")}
-    properties{{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
+    properties {{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
   factory :text_match, parent: :level, class: TextMatch do
     game {create(:game, app: "textmatch")}
-    properties{{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
+    properties {{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
   factory :artist, parent: :level, class: Artist do
@@ -253,6 +253,10 @@ FactoryGirl.define do
     game {Game.external_link}
     url nil
     link_title 'title'
+  end
+
+  factory :curriculum_reference, parent: :level, class: CurriculumReference do
+    game {Game.curriculum_reference}
   end
 
   factory :level_source do

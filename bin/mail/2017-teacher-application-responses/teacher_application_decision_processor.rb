@@ -113,7 +113,7 @@ class TeacherApplicationDecisionProcessor
       CSV.open(out_filename, 'wb') do |csv|
         csv << columns
         results.each do |result|
-          csv << columns.map{|column| result[column]}
+          csv << columns.map {|column| result[column]}
         end
       end
     end
@@ -158,7 +158,7 @@ class TeacherApplicationDecisionProcessor
   end
 
   def teachercon?(workshop_string)
-    TEACHER_CONS.any?{|tc| workshop_string.include? tc}
+    TEACHER_CONS.any? {|tc| workshop_string.include? tc}
   end
 
   def process_accept(teacher_application, program, accepted_workshop, regional_partner_override)

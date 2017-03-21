@@ -183,7 +183,7 @@ class Documents < Sinatra::Base
   end
 
   # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path), nil, path, 1)}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
   # rubocop:enable Lint/Eval
 
   # Manipulated images
@@ -241,7 +241,7 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document(path).tap{dont_cache}
+    document(path).tap {dont_cache}
   end
 
   helpers(Dashboard) do

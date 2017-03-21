@@ -63,12 +63,14 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "getProperty": null,
+      "rgb": null
     },
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "var color = \"rgb(230, 155, 0)\";\r\nsetProperty(\"button1\", \"background-color\", color);",
+    "start_blocks": "var color = rgb(230, 155, 0);\r\nsetProperty(\"button1\", \"background-color\", color);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -102,7 +104,13 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "callout_json": "[]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
