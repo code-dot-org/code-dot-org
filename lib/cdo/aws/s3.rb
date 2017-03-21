@@ -92,7 +92,6 @@ module AWS
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
       def upload_log(name, body, options={})
         key = "#{@prefix}/#{name}"
-        puts "The key is #{key}"
 
         options[:acl] = 'public-read' if @make_public
         result = AWS::S3.create_client.put_object(
