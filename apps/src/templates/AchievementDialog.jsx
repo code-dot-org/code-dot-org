@@ -211,17 +211,17 @@ const AchievementDialog = Radium(React.createClass({
       return null;
     }
 
-    return style => {
+    return (style, index) => {
       if (this.props.bannerMode) {
         return (
-          <p style={{...styles.bannerAchievement.row, ...style}}>
+          <p style={{...styles.bannerAchievement.row, ...style}} key={index}>
             <span style={styles.bannerAchievement.point}>+{points}</span>
             <span style={styles.bannerAchievement.text}>{message}</span>
           </p>
         );
       } else {
         return (
-          <p style={{...styles.achievement.row, ...style}}>
+          <p style={{...styles.achievement.row, ...style}} key={index}>
             {this.icon(successful)}
             <span style={styles.achievement.text}>{message}</span>
           </p>
@@ -306,7 +306,8 @@ const AchievementDialog = Radium(React.createClass({
                 interpolatingValues.map(val => ({ opacity: val.progress }));
               return (<div>
                 <div style={this.props.bannerMode ? styles.pointRows : styles.checkmarks}>
-                  {achievementRowsGenerators.map((generator, index) => generator(interpolatingStyles[index + 1]))}
+                  {achievementRowsGenerators.map((generator, index) =>
+                          generator(interpolatingStyles[index + 1], index))}
                 </div>
                 {this.props.bannerMode &&
                   <div
