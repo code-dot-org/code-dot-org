@@ -112,11 +112,6 @@ Style/GlobalVars:
 Style/Lambda:
   Enabled: false
 
-# Offense count: 97
-# Cop supports --auto-correct.
-Style/LeadingCommentSpace:
-  Enabled: false
-
 # Offense count: 3
 Style/MethodMissing:
   Enabled: false
