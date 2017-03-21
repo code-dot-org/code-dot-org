@@ -588,6 +588,20 @@ aws-sdk@^2.2.9:
     xml2js "0.4.15"
     xmlbuilder "2.6.2"
 
+aws-sdk@2.28.0:
+  version "2.28.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.28.0.tgz#0b7628c5d48820187332c5a30835945c41f84f46"
+  dependencies:
+    buffer "4.9.1"
+    crypto-browserify "1.0.9"
+    jmespath "0.15.0"
+    querystring "0.2.0"
+    sax "1.1.5"
+    url "0.10.3"
+    uuid "3.0.0"
+    xml2js "0.4.15"
+    xmlbuilder "2.6.2"
+
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -10915,7 +10929,7 @@ uuid@^2.0.1, uuid@^2.0.2, uuid@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
-uuid@^3.0.0:
+uuid@^3.0.0, uuid@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.0.tgz#6728fc0459c450d796a99c31837569bdf672d728"
 
