@@ -2,7 +2,7 @@ module CoreExtensions
   module Hash
     module Camelizing
       def camelize_keys
-        ::Hash[map{|key, value| [key.to_s.camelize(:lower), value]}]
+        ::Hash[map {|key, value| [key.to_s.camelize(:lower), value]}]
       end
     end
   end

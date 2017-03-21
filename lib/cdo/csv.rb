@@ -12,7 +12,7 @@ class CSV
           columns ||= row.keys
           results << CSV.generate_line(columns)
         end
-        results << CSV.generate_line(columns.map{|i| row[i]})
+        results << CSV.generate_line(columns.map {|i| row[i]})
       end
     end.join
   end

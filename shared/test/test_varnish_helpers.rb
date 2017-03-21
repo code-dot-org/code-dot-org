@@ -59,7 +59,7 @@ class VarnishHelperTest < Minitest::Test
       return nil if x == 'd'
       "#{x} == true"
     end
-    output = if_else(items, condition){|x| x}
+    output = if_else(items, condition) {|x| x}
     assert_equal <<STR.strip, output
 if (a == true) {
   a
@@ -70,7 +70,7 @@ if (a == true) {
 }
 STR
   end
-  HEADERS = REMOVED_HEADERS.map{|x| x.split(':')[0]}.freeze
+  HEADERS = REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   BEHAVIOR = {
     dashboard: {
       behaviors: [],

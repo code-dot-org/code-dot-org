@@ -612,7 +612,7 @@ module LevelsHelper
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
   def instruction_gif_choices
-    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)){ Dir.glob(File.join("**", "*")) }
+    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)) { Dir.glob(File.join("**", "*")) }
     all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
   end
 
