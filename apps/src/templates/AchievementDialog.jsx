@@ -274,7 +274,7 @@ const AchievementDialog = Radium(React.createClass({
 
     const dotsUrl = `url(${this.props.assetUrl('media/dialog/dots.png')})`;
 
-    const achievementRowsGenerators = [
+    const achievementRowGenerators = [
       this.achievementRowGenerator(true /* show */, true /* success */, completionPoints,
           locale.puzzleCompleted()),
       this.achievementRowGenerator(showNumBlocksRow, !tooManyBlocks, numBlocksPoints,
@@ -291,7 +291,7 @@ const AchievementDialog = Radium(React.createClass({
         assetUrl={this.props.assetUrl}
       >
         <StaggeredMotion
-          defaultStyles={Array(achievementRowsGenerators.length + 1).fill({ progress: 0 })}
+          defaultStyles={Array(achievementRowGenerators.length + 1).fill({ progress: 0 })}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
             return i === 0 ?
               { progress: spring(1, { stiffness: 100, damping: 25 }) } :
@@ -306,7 +306,7 @@ const AchievementDialog = Radium(React.createClass({
                 interpolatingValues.map(val => ({ opacity: val.progress }));
               return (<div>
                 <div style={this.props.bannerMode ? styles.pointRows : styles.checkmarks}>
-                  {achievementRowsGenerators.map((generator, index) =>
+                  {achievementRowGenerators.map((generator, index) =>
                           generator(interpolatingStyles[index + 1], index))}
                 </div>
                 {this.props.bannerMode &&
