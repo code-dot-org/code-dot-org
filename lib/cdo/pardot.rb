@@ -294,6 +294,15 @@ class Pardot
       raise e
     end
 
+    # This batch of inserts or updates may or may not have succeeded - we don't
+    # know. For inserts, it's important that we NOT retry. If the
+    # inserts did succeed on the Pardot side and we just didn't receive a
+    # response, if we were to insert again that would create duplicate contacts.
+    # (In practice when we get timeouts on response from an insert batch, the
+    # inserts did in fact succeed.) The next time this process runs, we will
+    # ask Pardot about Pardot IDs we have not recorded yet. Based on that
+    # information we will retry any failed inserts as part of the normal
+    # process.
     log "Continuing process. Prospects from batch with timed out response "\
         "are in an indeterminate state and will be reconciled on the next "\
         "process run."
