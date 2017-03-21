@@ -395,7 +395,8 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, undefined);
       assert.equal(nextState.professionalLearningCourse, true);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, processedStages(intialOverviewProgressWithPeerReview.stages));
+
+      assert.deepEqual(nextState.stages, processedStages(intialOverviewProgressWithPeerReview.stages, true));
       assert.deepEqual(nextState.peerReviewStage, peerReviewStage);
       assert.equal(nextState.scriptName, 'alltheplcthings');
       assert.equal(nextState.currentStageId, undefined);
@@ -744,7 +745,8 @@ describe('progressReduxTest', () => {
           fakeStage('Content', 'stage2', 2),
           fakeStage('Content', 'stage3', 3)
         ],
-        levelProgress: {}
+        levelProgress: {},
+        focusAreaPositions: []
       };
 
       const categories = categorizedLessons(state);
@@ -759,7 +761,8 @@ describe('progressReduxTest', () => {
           fakeStage('cat2', 'stage2', 2),
           fakeStage('cat1', 'stage3', 3)
         ],
-        levelProgress: {}
+        levelProgress: {},
+        focusAreaPositions: []
       };
 
       const categories = categorizedLessons(state);
@@ -771,15 +774,18 @@ describe('progressReduxTest', () => {
       assert.deepEqual(categories[0].lessons, [
         {
           name: 'stage1',
-          id: 1
+          id: 1,
+          isFocusArea: false
         }, {
           name: 'stage3',
-          id: 3
+          id: 3,
+          isFocusArea: false
         }
       ]);
       assert.deepEqual(categories[1].lessons, [{
         name: 'stage2',
-        id: 2
+        id: 2,
+        isFocusArea: false
       }]);
     });
   });

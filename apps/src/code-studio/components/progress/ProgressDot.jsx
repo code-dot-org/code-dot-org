@@ -227,7 +227,7 @@ export const ProgressDot = Radium(React.createClass({
   },
 
   tooltipId() {
-    return this.props.level.title.toString();
+    return (this.props.level.title || "").toString();
   },
 
   tooltipContent() {
