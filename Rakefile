@@ -2,7 +2,7 @@
 require_relative 'deployment'
 
 Rake::TaskManager.record_task_metadata = true
-Dir.glob(File.join(__dir__, 'lib/rake/*.rake')).sort.each{|rake| import rake}
+Dir.glob(File.join(__dir__, 'lib/rake/*.rake')).sort.each {|rake| import rake}
 
 task :default do
   # Output a list of tasks without performance hit shelling out to `rake -T`.

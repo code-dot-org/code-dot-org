@@ -33,4 +33,8 @@ content1 'Enter prompt here'
 answer 'Enter answer here'
 ruby
   end
+
+  def supports_markdown?
+    true
+  end
 end

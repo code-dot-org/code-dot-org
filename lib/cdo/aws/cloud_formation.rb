@@ -36,7 +36,7 @@ module AWS
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
-    AVAILABILITY_ZONES = ('b'..'e').map{|i| "us-east-1#{i}"}
+    AVAILABILITY_ZONES = ('b'..'e').map {|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
     LOG_NAME = '/var/log/bootstrap.log'.freeze
@@ -95,7 +95,7 @@ module AWS
               c = change.resource_change
               str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
               str += " Replacement: #{c.replacement}" if %w(True Conditional).include?(c.replacement)
-              str += " (#{c.details.map{|d| d.target.name}.join(', ')})" if c.details.any?
+              str += " (#{c.details.map {|d| d.target.name}.join(', ')})" if c.details.any?
               CDO.log.info str
             end
             CDO.log.info 'No changes' if change_set.changes.empty?
@@ -247,7 +247,7 @@ module AWS
       # Prints the latest CloudFormation stack events.
       def tail_events(stack_id)
         stack_events = cfn.describe_stack_events(stack_name: stack_id).stack_events
-        stack_events.reject{|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
+        stack_events.reject {|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
           CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
         end
         @@event_timestamp = stack_events.map(&:timestamp).max
@@ -312,8 +312,8 @@ module AWS
           file: method(:file),
           js: method(:js),
           erb: method(:erb),
-          subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}},
-          public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}},
+          subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}},
+          public_subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}},
           lambda_fn: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
@@ -417,7 +417,7 @@ module AWS
         local_vars.each_pair do |key, value|
           local_binding.local_variable_set(key, value)
         end
-        ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_binding)
+        ERB.new(str, nil, '-').tap {|erb| erb.filename = filename}.result(local_binding)
       end
     end
   end
