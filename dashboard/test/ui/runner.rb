@@ -609,7 +609,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     end
   puts prefix_string("UI tests for #{test_run_string} #{result_string} (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})", log_prefix)
 
-  if scenario_count == 0
+  if scenario_count == 0 && !ENV['CI']
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
     skip_warning += <<EOS
 Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
