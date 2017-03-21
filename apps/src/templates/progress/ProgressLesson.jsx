@@ -37,15 +37,15 @@ const styles = {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
   },
-  headingText: {
-    marginLeft: 10
-  },
   hiddenOrLocked: {
     background: color.white,
     borderStyle: 'dashed',
   },
   translucent: {
     opacity: 0.6
+  },
+  caret: {
+    marginRight: 10
   },
   icon: {
     marginRight: 5,
@@ -102,7 +102,7 @@ const ProgressLesson = React.createClass({
     const title = lesson.stageNumber ?
       i18n.lessonNumbered({lessonNumber: lesson.stageNumber, lessonName: lesson.name}) :
       lesson.name;
-    const icon = this.state.collapsed ? "caret-right" : "caret-down";
+    const caret = this.state.collapsed ? "caret-right" : "caret-down";
 
     const locked = lessonLockedForSection(lesson.id) ||
       levels.every(level => level.status === LevelStatus.locked);
@@ -125,6 +125,7 @@ const ProgressLesson = React.createClass({
             style={styles.heading}
             onClick={this.toggleCollapsed}
           >
+            <FontAwesome icon={caret} style={styles.caret}/>
             {hiddenForStudents &&
               <FontAwesome
                 icon="eye-slash"
@@ -140,8 +141,7 @@ const ProgressLesson = React.createClass({
                 }}
               />
             }
-            <FontAwesome icon={icon}/>
-            <span style={styles.headingText}>{title}</span>
+            <span>{title}</span>
           </div>
           {!this.state.collapsed &&
             <ProgressLessonContent
