@@ -46,7 +46,6 @@ end
 
 # Prints task list after the DTP to the console.
 def puts_after_dtp_tasks
-  # TODO(asher): Automate the Slack#infra-production update.
   puts <<-EOS.unindent
 
     * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
