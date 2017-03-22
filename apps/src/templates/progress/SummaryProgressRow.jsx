@@ -106,11 +106,7 @@ const SummaryProgressRow = React.createClass({
           ...(dark && styles.darkRow),
           ...(hiddenForStudents && styles.hiddenRow),
           ...(locked && styles.locked),
-<<<<<<< HEAD
-
-=======
           ...(viewAs === ViewType.Teacher && styles.opaque)
->>>>>>> full opacity when viewing hidden/locked as teacher
         }}
       >
         <td style={styles.col1}>
@@ -147,7 +143,7 @@ const SummaryProgressRow = React.createClass({
           <ProgressBubbleSet
             start={1}
             levels={levels}
-            disabled={locked}
+            disabled={locked && viewAs !== ViewType.Teacher}
             style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
           />
           {lesson.isFocusArea && <FocusAreaIndicator/>}
