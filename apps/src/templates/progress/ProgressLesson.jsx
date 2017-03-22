@@ -93,7 +93,7 @@ const ProgressLesson = React.createClass({
       lessonLockedForSection
     } = this.props;
 
-    if (!lessonIsVisible(lesson)) {
+    if (!lessonIsVisible(lesson, viewAs)) {
       return null;
     }
 
