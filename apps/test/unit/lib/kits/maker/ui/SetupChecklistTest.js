@@ -1,12 +1,12 @@
-/** @file Test BoardSetupCheck component */
+/** @file Test SetupChecklist component */
 import React from 'react';
 import sinon from 'sinon';
 import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
-import BoardSetupCheck from '@cdo/apps/lib/kits/maker/ui/BoardSetupCheck';
+import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
 import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
 
-describe('BoardSetupCheck', () => {
+describe('SetupChecklist', () => {
   const STEP_DELAY = 15;
   let checker;
 
@@ -23,7 +23,7 @@ describe('BoardSetupCheck', () => {
 
   it('renders success', done => {
     const wrapper = mount(
-      <BoardSetupCheck
+      <SetupChecklist
         setupChecker={checker}
         stepDelay={STEP_DELAY}
       />
@@ -40,7 +40,7 @@ describe('BoardSetupCheck', () => {
     const error = new Error('test error');
     checker.detectChromeVersion.rejects(error);
     const wrapper = mount(
-      <BoardSetupCheck
+      <SetupChecklist
         setupChecker={checker}
         stepDelay={STEP_DELAY}
       />
@@ -57,7 +57,7 @@ describe('BoardSetupCheck', () => {
 
   it('does not reload the page on re-detect if successful', done => {
     const wrapper = mount(
-      <BoardSetupCheck
+      <SetupChecklist
         setupChecker={checker}
         stepDelay={STEP_DELAY}
       />
@@ -77,7 +77,7 @@ describe('BoardSetupCheck', () => {
   it('reloads the page on re-detect if plugin not installed', done => {
     checker.detectChromeAppInstalled.rejects(new Error('not installed'));
     const wrapper = mount(
-      <BoardSetupCheck
+      <SetupChecklist
         setupChecker={checker}
         stepDelay={STEP_DELAY}
       />
