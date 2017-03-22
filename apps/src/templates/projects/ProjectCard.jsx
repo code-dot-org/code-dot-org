@@ -4,37 +4,46 @@ import FontAwesome from '../FontAwesome';
 
 const styles = {
   card: {
-    border: '2px solid gray',
+    border: '1px solid lightGray',
     borderRadius: 2,
-    width: 250
+    width: 215
   },
   title: {
-    padding: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 5,
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
-    backgroundColor: color.teal,
-    color: color.white
+    backgroundColor: color.white,
+    color: color.gray
   },
   lastEdit: {
-    padding: 10,
-    fontSize: 12,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 5,
+    fontSize: 10,
     fontFamily: '"Gotham", sans-serif',
-    backgroundColor: color.lightest_gray
+    backgroundColor: color.white,
+    color: color.gray
   },
   studentName: {
-    padding: 10,
-    fontSize: 14,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 5,
+    fontSize: 12,
     fontFamily: '"Gotham 5r", sans-serif',
-    backgroundColor: color.lightest_gray
+    backgroundColor: color.white,
+    color: color.gray
   },
   arrowIcon: {
     paddingRight: 8
   },
   thumbnail: {
-    width: 250
+    width: 215,
+    height: 150
   },
   actionBox: {
-    width: 200,
+    width: 180,
     padding: 10,
     fontSize: 12,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -43,7 +52,8 @@ const styles = {
     borderRadius: 2,
     backgroundColor: color.white,
     boxShadow: "3px 3px 3px lightGray",
-    marginTop: 5
+    marginTop: 5,
+    position: "absolute"
   },
   delete: {
     color: color.red,
@@ -74,10 +84,10 @@ const ProjectCard = React.createClass({
 
   renderStudentName() {
     // The student's name should only be visible in the classroom gallery.
-    if (this.props.currentGallery === 'classroom'){
+    if (this.props.currentGallery === 'class'){
       return (
         <div style={styles.studentName}>
-          {this.props.projectData.studentName}
+          By {this.props.projectData.studentName}
         </div>
       );
     }
@@ -89,7 +99,8 @@ const ProjectCard = React.createClass({
      return (
        <FontAwesome icon=" fa-chevron-down" style={styles.arrowIcon} onClick={this.toggleActionBox}/>
       );
-    } else {
+    }
+    if (this.props.currentGallery === 'personal' && this.state.actionsOpen){
       return (
         <FontAwesome icon=" fa-chevron-up" style={styles.arrowIcon} onClick={this.toggleActionBox}/>
        );
@@ -141,7 +152,7 @@ const ProjectCard = React.createClass({
     return (
       <div>
         <div style={styles.card}>
-          <img src={require('./placeholder.png')} style={styles.thumbnail} />
+          <img src={require('./placeholder.jpg')} style={styles.thumbnail} />
            <div style={styles.title}>
              {this.props.projectData.projectName}
            </div>

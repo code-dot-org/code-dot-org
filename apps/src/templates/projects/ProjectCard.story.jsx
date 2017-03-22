@@ -91,7 +91,7 @@ export default storybook => {
         story: () => (
           <ProjectCard
             projectData={PROJECTCARD_BOTH_PUBLISHED}
-            currentGallery="classroom"
+            currentGallery="class"
           />
         )
       },
