@@ -171,15 +171,17 @@ class DevRoutesTest < Minitest::Test
   end
 
   describe 'api/dev/set-last-dtt-green' do
+    # TODO(asher): Replace the hard-coded instances below of this with this
+    # variable.
+    @default_param = {
+      token: FAKE_SLACK_SLASH_TOKEN,
+      user_name: 'turing'
+    }
+
     before do
       $log.level = Logger::ERROR
 
       CDO.slack_set_last_dtt_green_token = FAKE_SLACK_SLASH_TOKEN
-
-      @default_param = {
-        token: FAKE_SLACK_SLASH_TOKEN,
-        user_name: 'turing'
-      }
     end
 
     def in_rack_env(env)
@@ -199,7 +201,10 @@ class DevRoutesTest < Minitest::Test
       [:development, :staging, :adhoc, :levelbuilder, :production].each do |env|
         in_rack_env(env) do
           pegasus = make_test_pegasus
-          pegasus.post '/api/dev/set-last-dtt-green', @default_params
+          pegasus.post '/api/dev/set-last-dtt-green', {
+            token: FAKE_SLACK_SLASH_TOKEN,
+            user_name: 'turing'
+          }
           assert_equal 403, pegasus.last_response.status
         end
       end
@@ -210,7 +215,10 @@ class DevRoutesTest < Minitest::Test
         GitHub.expects(:sha).returns('abcdef')
         InfraTestTopic.expects(:set_green_commit).returns(true)
         pegasus = make_test_pegasus
-        pegasus.post '/api/dev/set-last-dtt-green', @default_params
+        pegasus.post '/api/dev/set-last-dtt-green', {
+          token: FAKE_SLACK_SLASH_TOKEN,
+          user_name: 'turing'
+        }
         assert_equal 200, pegasus.last_response.status
       end
     end
