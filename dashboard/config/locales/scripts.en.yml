@@ -2711,12 +2711,13 @@ en:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
           description_short: Level progression to accompany an in-person Game Lab Workshop
-          description: 'This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach '
+          description: This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of Game Lab.
         csd5-draft:
           stage:
             new stage: new stage
             Interpreting Data: Interpreting Data
             Data in the Real World: Data in the Real World
+            Combining Representations: Combining Representations
           title: ''
           description_audience: ''
           description_short: ''
@@ -2747,3 +2748,20 @@ en:
           description_audience: Middle and High School Students
           description_short: ''
           description: This workshop is designed to give students a basic introduction to app lab in 2 hours. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        coursed-ramp:
+          stage:
+            Introduction: Introduction
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-maker:
+          stage:
+            App Lab Basics: App Lab Basics
+            The Circuit Playground: The Circuit Playground
+            Physical Input: Physical Input
+            Analog Input: Analog Input
+          title: Maker Toolkit Workshop
+          description_audience: Teachers attending an in-person Maker Toolkit Workshop
+          description_short: Level progression to accompany an in-person Maker Toolkit Workshop
+          description: This level progression is intended to accompany an in-person Maker Toolkit Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of App Lab and the Maker Toolkit.

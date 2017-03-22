@@ -1,0 +1,51 @@
+name 'CSD U5 student record'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Student record
+
+<div style="float: right; height:209px; width: 416px; background-color: black;">
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+  <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
+</div>
+
+## The student record holds information according to the following rules:
+
+#### * The first eight bits store the student's grade as a binary number.
+#### * The second eight store the student's age as a binary number.
+#### * The next eight store the student's first initial in ASCII.
+#### * The last eight store the student's last initial in ASCII.
+MARKDOWN
