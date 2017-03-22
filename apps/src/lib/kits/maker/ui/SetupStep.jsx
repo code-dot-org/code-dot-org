@@ -30,6 +30,12 @@ const style = {
 };
 
 export default class SetupStep extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    stepName: PropTypes.string.isRequired,
+    stepStatus: PropTypes.oneOf(STEP_STATUSES).isRequired
+  };
+
   render() {
     const {stepName, stepStatus, children} = this.props;
     if (stepStatus === HIDDEN) {
@@ -50,11 +56,6 @@ export default class SetupStep extends Component {
     );
   }
 }
-SetupStep.propTypes = {
-  children: PropTypes.node,
-  stepName: PropTypes.string.isRequired,
-  stepStatus: PropTypes.oneOf(STEP_STATUSES).isRequired
-};
 
 /**
  * @param {string} stepStatus
