@@ -1,3 +1,4 @@
+require 'cdo/developers_topic'
 require 'cdo/github'
 require 'cdo/infra_test_topic'
 
@@ -38,4 +39,7 @@ post '/api/dev/set-last-dtt-green' do
 
   sha = GitHub.sha('test')
   InfraTestTopic.set_green_commit(sha)
+  if params[:text] == 'yes'
+    DevelopersTopic.set_dtt('yes')
+  end
 end
