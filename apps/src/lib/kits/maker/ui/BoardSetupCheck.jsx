@@ -30,10 +30,7 @@ const initialState = {
 };
 
 export default class BoardSetupCheck extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {...initialState};
-  }
+  state = {...initialState};
 
   hide(selector) {
     this.setState({[selector]: HIDDEN});
