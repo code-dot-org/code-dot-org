@@ -118,7 +118,7 @@ const ProgressLesson = React.createClass({
         <div
           style={{
             ...styles.main,
-            ...(hiddenOrLocked && styles.translucent)
+            ...(hiddenOrLocked && viewAs !== ViewType.Teacher && styles.translucent)
           }}
         >
           <div
@@ -147,7 +147,7 @@ const ProgressLesson = React.createClass({
             <ProgressLessonContent
               description={description}
               levels={levels}
-              disabled={locked}
+              disabled={locked && viewAs !== ViewType.Teacher}
             />
           }
         </div>
