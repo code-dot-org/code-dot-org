@@ -1,7 +1,6 @@
 /** @file Maker Board setup checker */
 import React, {Component, PropTypes} from 'react';
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
-import {findPortWithViableDevice} from '../portScanning';
 import SetupChecker from '../util/SetupChecker';
 import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
 import SetupStep, {
@@ -73,7 +72,6 @@ export default class BoardSetupCheck extends Component {
       this.hide(STATUS_WINDOWS_DRIVERS);
     }
 
-    let portName = null;
     let boardController = null;
 
     Promise.resolve()
@@ -86,10 +84,9 @@ export default class BoardSetupCheck extends Component {
 
         // Is board plugged in?
         .then(() => this.detectBoardPluggedIn())
-        .then(usablePort => portName = usablePort)
 
         // Can we talk to the firmware?
-        .then(() => this.detectCorrectFirmware(portName))
+        .then(() => this.detectCorrectFirmware())
         .then(board => boardController = board)
 
         // Can we initialize components successfully?
@@ -113,7 +110,6 @@ export default class BoardSetupCheck extends Component {
             boardController.destroy();
             boardController = null;
           }
-          portName = null;
           this.setState({isDetecting: false});
         });
   }
@@ -156,25 +152,19 @@ export default class BoardSetupCheck extends Component {
    * @return {Promise.<string>} Resolves to usable port name
    */
   detectBoardPluggedIn() {
-    this.spin(STATUS_BOARD_PLUG);
-    return promiseWaitFor(200)
-        .then(findPortWithViableDevice)
-        .then(portName => {
-          this.succeed(STATUS_BOARD_PLUG);
-          return portName;
-        })
-        .catch(error => {
-          this.fail(STATUS_BOARD_PLUG);
-          return Promise.reject(error);
-        });
+    const {setupChecker} = this.props;
+    return this.detectStep(
+        STATUS_BOARD_PLUG,
+        () => setupChecker.detectBoardPluggedIn());
   }
 
   /**
    * @return {Promise.<CircuitPlaygroundBoard>}
    */
-  detectCorrectFirmware(portName) {
+  detectCorrectFirmware() {
+    const {setupChecker} = this.props;
     this.spin(STATUS_BOARD_CONNECT);
-    const boardController = new CircuitPlaygroundBoard(portName);
+    const boardController = new CircuitPlaygroundBoard(setupChecker.port);
     return boardController.connectToFirmware()
         .then(() => {
           this.succeed(STATUS_BOARD_CONNECT);
