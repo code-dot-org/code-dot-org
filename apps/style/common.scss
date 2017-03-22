@@ -1709,4 +1709,8 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   }
 }
 
+.react-tooltip {
+  transition: opacity 0s!important;
+}
+
 @import "RotateContainer";

@@ -18,6 +18,7 @@ export const styles = {
   hiddenRow: {
     borderStyle: 'dashed',
     borderColor: color.border_gray,
+    borderWidth: 2,
     opacity: 0.6,
     backgroundColor: color.table_light_row
   },
@@ -130,6 +131,7 @@ const SummaryProgressRow = React.createClass({
                 role="tooltip"
                 wrapper="span"
                 effect="solid"
+                className="react-tooltip"
               >
                 {lesson.name}
               </ReactTooltip>
