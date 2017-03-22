@@ -120,7 +120,7 @@ end
 def include_indiegogo_donors(results)
   # read the indiegogo donors csv
   # headers
-  #Perk ID,Order No.,Pledge ID,Fulfillment Status,Funding Date,Payment Method,Appearance,Name,Email,Amount,Perk,Shipping Name,Shipping Address,Shipping Address 2,Shipping City,Shipping State/Province,Shipping Zip/Postal Code,Shipping Country
+  # Perk ID,Order No.,Pledge ID,Fulfillment Status,Funding Date,Payment Method,Appearance,Name,Email,Amount,Perk,Shipping Name,Shipping Address,Shipping Address 2,Shipping City,Shipping State/Province,Shipping Zip/Postal Code,Shipping Country
 
   # example rows:
   # "","",13620908,No Perk,2015-10-05 01:02:55 -0700,,Visible,Code.org Major Donors ,majordonors@code.org,$30,"","","","","","","",""

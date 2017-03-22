@@ -1,0 +1,13 @@
+hideable_stages true
+
+stage 'Introduction'
+level 'courseD_video_ramp1'
+level 'courseD_maze_ramp1'
+level 'courseD_maze_ramp2'
+level 'courseD_maze_ramp3'
+level 'courseD_maze_ramp4'
+level 'courseD_maze_ramp5'
+level 'courseD_maze_ramp6'
+level 'courseD_maze_ramp7'
+level 'courseD_collector_ramp8'
+level 'courseD_collector_ramp9'

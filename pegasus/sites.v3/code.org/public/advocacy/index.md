@@ -73,7 +73,6 @@ For more information, please contact advocacy@code.org.
 * <a href="https://www.sas.com">SAS</a>
 * <a href="http://www.sfaz.org/">Science Foundation Arizona</a>
 * <a href="http://stand.org/">Stand for Children</a> 
-* <a href="https://www.studentsfirst.org/">Students First</a> 
 * <a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative/">Teach for America</a> 
 * <a href="http://www.technet.org/">TechNet</a> 
 * <a href="https://stem.utah.gov/">Utah STEM Action Center</a>
