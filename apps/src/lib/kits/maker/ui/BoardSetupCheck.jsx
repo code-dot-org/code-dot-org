@@ -3,6 +3,7 @@ import React, {Component, PropTypes} from 'react';
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import {findPortWithViableDevice} from '../portScanning';
 import SetupChecker from '../util/SetupChecker';
+import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
 import SetupStep, {
   HIDDEN,
   WAITING,
@@ -310,17 +311,4 @@ function promiseWaitFor(ms) {
   return new Promise(resolve => {
     setTimeout(resolve, ms);
   });
-}
-
-function isChrome() {
-  return !!window.chrome;
-}
-
-function getChromeVersion() {
-  const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
-  return raw ? parseInt(raw[2], 10) : false;
-}
-
-function isWindows() {
-  return navigator.platform.indexOf('Win') > -1;
 }
