@@ -150,6 +150,8 @@ window.SignupManager = function (options) {
 
     let dataJson = {
       user_agent: window.navigator.userAgent,
+      window_width: window.innerWidth,
+      window_height: window.innerHeight,
     };
     Object.assign(dataJson, extraData);
     if (!!window.optimizely) {
