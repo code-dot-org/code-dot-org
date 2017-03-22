@@ -235,7 +235,10 @@ class Pardot
     num_submitted = prospects.length
 
     # Post the data to create or update a batch of prospects
+    time_start = Time.now
     doc = post_with_auth_retry(url)
+    time_elapsed = Time.now - time_start
+
     status = doc.xpath('/rsp/@stat').text
 
     # Look for errors within the batch and handle them individually.
@@ -265,12 +268,44 @@ class Pardot
       end
     end
 
-    log "Completed Pardot prospect #{config[:operation_name]} batch call. #{num_submitted} submitted, #{prospect_emails.length} succeeded, #{malformed_emails.length} rejected as malformed"
+    prospects_per_second = num_submitted / time_elapsed
+    log "Completed Pardot prospect #{config[:operation_name]} batch call. "\
+        "#{num_submitted} submitted, #{prospect_emails.length} succeeded, "\
+        "#{malformed_emails.length} rejected as malformed. "\
+        "#{time_elapsed.round(1)} secs, #{prospects_per_second.round(1)} "\
+        "prospects/sec"
 
     # Mark Pardot sync time of contacts in our database
     PEGASUS_DB[:contact_rollups].where("email in ?", prospect_emails).update(pardot_sync_at: DateTime.now) unless prospect_emails.empty?
     # Mark any email addresses rejected by Pardot as malformed so we don't keep trying to fruitlessly create them forever
     PEGASUS_DB[:contact_rollups].where("email in ?", malformed_emails).update(email_malformed: true) unless malformed_emails.empty?
+
+    @consecutive_timeout_errors = 0
+
+    # Pardot POST requests sometimes fail with a timeout. This happens
+    # frequently enough that we can't let this be fatal for the entire process.
+    # As long as we don't get too many timeouts in a row, keep going.
+  rescue Net::ReadTimeout => e
+    @consecutive_timeout_errors =  (@consecutive_timeout_errors || 0) + 1
+    log "Pardot API request failed with Net::ReadTimeout "\
+      "(#{@consecutive_timeout_errors} errors)."
+    if @consecutive_timeout_errors >= 3
+      log "Too many consecutive errors, halting the process."
+      raise e
+    end
+
+    # This batch of inserts or updates may or may not have succeeded - we don't
+    # know. For inserts, it's important that we NOT retry. If the
+    # inserts did succeed on the Pardot side and we just didn't receive a
+    # response, if we were to insert again that would create duplicate contacts.
+    # (In practice when we get timeouts on response from an insert batch, the
+    # inserts did in fact succeed.) The next time this process runs, we will
+    # ask Pardot about Pardot IDs we have not recorded yet. Based on that
+    # information we will retry any failed inserts as part of the normal
+    # process.
+    log "Continuing process. Prospects from batch with timed out response "\
+        "are in an indeterminate state and will be reconciled on the next "\
+        "process run."
   end
 
   # Login to Pardot and request an API key. The API key is valid for (up to) one hour, after which
