@@ -1,5 +1,6 @@
 /** @file Serialport scanning logic for Maker Toolkit */
 import ChromeSerialPort from 'chrome-serialport';
+import {ConnectionFailedError} from './MakerError';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -32,7 +33,8 @@ export function findPortWithViableDevice() {
         if (bestOption) {
           return bestOption.comName;
         } else {
-          throw new Error('Did not find a usable device on a serial port.');
+          return Promise.reject(new ConnectionFailedError(
+              'Did not find a usable device on a serial port.'));
         }
       });
 }

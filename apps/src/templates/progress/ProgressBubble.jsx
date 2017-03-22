@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
+import ReactTooltip from 'react-tooltip';
+import FontAwesome from '../FontAwesome';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
@@ -33,6 +35,10 @@ const styles = {
       color: color.white,
       backgroundColor: color.level_current
     }
+  },
+  tooltipIcon: {
+    paddingRight: 5,
+    paddingLeft: 5
   }
 };
 
@@ -41,11 +47,13 @@ const ProgressBubble = React.createClass({
     number: PropTypes.number.isRequired,
     status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
     url: PropTypes.string,
-    disabled: PropTypes.bool.isRequired
+    disabled: PropTypes.bool.isRequired,
+    levelName: PropTypes.string,
+    levelIcon: PropTypes.string
   },
 
   render() {
-    const { number, status, url, disabled } = this.props;
+    const { number, status, url, disabled, levelName, levelIcon } = this.props;
 
     const style = {
       ...styles.main,
@@ -59,10 +67,22 @@ const ProgressBubble = React.createClass({
     }
 
     let bubble = (
-      <div style={style}>
+
+      <div style={style} data-tip data-for={url} aria-describedby={url}>
         {number}
+        <ReactTooltip
+          id={url}
+          role="tooltip"
+          effect="solid"
+        >
+          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
+          {levelName}
+        </ReactTooltip>
       </div>
+
     );
+
+
 
     // If we have an href, wrap in an achor tag
     if (href) {

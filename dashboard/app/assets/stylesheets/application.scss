@@ -1402,16 +1402,18 @@ a.download-video {
   .labelblock {
     display: table-cell;
     width: 140px;
+    vertical-align: middle;
+  }
+  .school-info-labelblock {
+    display: table-cell;
+    width: 210px;
+    vertical-align: middle;
   }
   .fieldblock {
     width: 220px;
     vertical-align: top;
     margin-bottom: 5px;
     margin-top: 5px;
-  }
-  .labelblock {
-    display: table-cell;
-    vertical-align: middle;
   }
   .terms-checkbox, .race-checkbox {
     margin: 0 5px 2px 0;
@@ -1777,7 +1779,7 @@ a.download-video {
   border: 1px solid $lighter_gray;
 }
 
-.external, .free-response {
+.external, .free-response, .curriculum-reference {
   max-width: 970px;
   margin: auto;
 

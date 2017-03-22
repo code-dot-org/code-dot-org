@@ -41,6 +41,7 @@ The Code.org Advocacy Coalition supports the implementation of the following pol
 * [9 steps to make computer science fundamental](http://code.org/files/Making_CS_Fundamental.pdf)
 * [Professional development models](https://www.dropbox.com/s/2y0i360pt6pap1o/ModelStatePracticetoExpandCS.pdf?dl=0)
 * [Professional development funding calculator](https://docs.google.com/spreadsheets/d/1jAqB1Q0IiY4XRvpnfUdDwkfL2OEgvBT2HYg07yQAOSc/pubhtml)
+* [AP CS A data by state over the past 10 years](https://code.org/promote/ap)
 
 For more information, please contact advocacy@code.org. 
 
@@ -55,6 +56,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
 * <a href="http://www.ccboe.com/">Charles County Pulic Schools</a>
 * <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a> 
+* <a href="http://www.coloradosucceeds.org/">Colorado Succeeds</a> 
 * <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>
 * <a href="http://cra.org/">Computing Research Association</a>
 * <a href="http://www.cccoe.k12.ca.us/index.html">Contra Costa County Office of Education</a>

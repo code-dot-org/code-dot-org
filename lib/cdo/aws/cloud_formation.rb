@@ -20,7 +20,7 @@ module AWS
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
     # Lookup ACM certificate for ELB and CloudFront SSL.
-    ACM_REGION = 'us-east-1'
+    ACM_REGION = 'us-east-1'.freeze
     CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
       list_certificates(certificate_statuses: ['ISSUED']).
       certificate_summary_list.
@@ -31,15 +31,15 @@ module AWS
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
 
-    SSH_KEY_NAME = 'server_access_key'
+    SSH_KEY_NAME = 'server_access_key'.freeze
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
-    SSH_IP = '0.0.0.0/0'
-    S3_BUCKET = 'cdo-dist'
-    AVAILABILITY_ZONES = ('b'..'e').map{|i| "us-east-1#{i}"}
+    SSH_IP = '0.0.0.0/0'.freeze
+    S3_BUCKET = 'cdo-dist'.freeze
+    AVAILABILITY_ZONES = ('b'..'e').map {|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
-    LOG_NAME = '/var/log/bootstrap.log'
+    LOG_NAME = '/var/log/bootstrap.log'.freeze
 
     class << self
       def branch
@@ -95,7 +95,7 @@ module AWS
               c = change.resource_change
               str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
               str += " Replacement: #{c.replacement}" if %w(True Conditional).include?(c.replacement)
-              str += " (#{c.details.map{|d| d.target.name}.join(', ')})" if c.details.any?
+              str += " (#{c.details.map {|d| d.target.name}.join(', ')})" if c.details.any?
               CDO.log.info str
             end
             CDO.log.info 'No changes' if change_set.changes.empty?
@@ -247,7 +247,7 @@ module AWS
       # Prints the latest CloudFormation stack events.
       def tail_events(stack_id)
         stack_events = cfn.describe_stack_events(stack_name: stack_id).stack_events
-        stack_events.reject{|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
+        stack_events.reject {|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
           CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
         end
         @@event_timestamp = stack_events.map(&:timestamp).max
@@ -312,8 +312,8 @@ module AWS
           file: method(:file),
           js: method(:js),
           erb: method(:erb),
-          subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}},
-          public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}},
+          subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}},
+          public_subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}},
           lambda_fn: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
@@ -417,7 +417,7 @@ module AWS
         local_vars.each_pair do |key, value|
           local_binding.local_variable_set(key, value)
         end
-        ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_binding)
+        ERB.new(str, nil, '-').tap {|erb| erb.filename = filename}.result(local_binding)
       end
     end
   end

@@ -10,8 +10,11 @@ import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
-import codegen from '../codegen';
 import AppLabView from './AppLabView';
+import {
+  initializeSubmitHelper,
+  onSubmitComplete
+} from '../submitHelper';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
@@ -58,13 +61,7 @@ import {
   actions as jsDebugger,
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import connectToMakerBoard from '../lib/kits/maker/connectToMakerBoard';
-import * as makerCommands from '../lib/kits/maker/commands';
-import * as makerDropletConfig from '../lib/kits/maker/dropletConfig';
-import {
-  enable as enableMaker,
-  isEnabled as isMakerEnabled
-} from '../lib/kits/maker/redux';
+import * as makerToolkit from '../lib/kits/maker/toolkit';
 var project = require('@cdo/apps/code-studio/initApp/project');
 
 var ResultType = studioApp.ResultType;
@@ -81,14 +78,6 @@ export default Applab;
  * @type {JsInterpreterLogger} observes the interpreter and logs to console
  */
 var jsInterpreterLogger = null;
-
-/**
- * Maker Toolkit Board Controller for a currently-connected board, simulator,
- * or stub implementation.
- * In Maker Toolkit levels, should be initialized on run and cleared on reset.
- * @private {CircuitPlaygroundBoard}
- */
-let makerBoard = null;
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -695,7 +684,7 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
+  config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerToolkit.dropletConfig);
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
@@ -746,15 +735,11 @@ Applab.init = function (config) {
       dom.addClickTouchEvent(finishButton, Applab.onPuzzleFinish);
     }
 
-    var submitButton = document.getElementById('submitButton');
-    if (submitButton) {
-      dom.addClickTouchEvent(submitButton, Applab.onPuzzleSubmit);
-    }
-
-    var unsubmitButton = document.getElementById('unsubmitButton');
-    if (unsubmitButton) {
-      dom.addClickTouchEvent(unsubmitButton, Applab.onPuzzleUnsubmit);
-    }
+    initializeSubmitHelper({
+      studioApp: studioApp,
+      onPuzzleComplete: this.onPuzzleComplete.bind(this),
+      unsubmitUrl: level.unsubmitUrl
+    });
 
     setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
@@ -800,7 +785,7 @@ Applab.init = function (config) {
   });
 
   if (config.level.makerlabEnabled) {
-    getStore().dispatch(enableMaker());
+    makerToolkit.enable();
   }
 
   getStore().dispatch(actions.changeInterfaceMode(
@@ -1012,10 +997,7 @@ Applab.reset = function () {
     designMode.resetPropertyTab();
   }
 
-  if (makerBoard) {
-    makerBoard.destroy();
-    makerBoard = null;
-  }
+  makerToolkit.reset();
 
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
@@ -1131,10 +1113,6 @@ var displayFeedback = function () {
   }
 };
 
-Applab.onSubmitComplete = function (response) {
-  window.location.href = response.redirect;
-};
-
 /**
  * Function to be called when the service report call is complete
  * @param {object} JSON response (if available)
@@ -1196,17 +1174,20 @@ Applab.execute = function () {
     }
   }
 
-  if (isMakerEnabled(getStore().getState())) {
-    connectToMakerBoard()
-        .then(board => {
-          board.installOnInterpreter(codegen, Applab.JSInterpreter);
-          makerCommands.injectBoardController(board);
-          board.once('disconnect', () => studioApp.resetButtonClick());
-          makerBoard = board;
-        })
-        .catch(error => studioApp.displayPlayspaceAlert('error',
-            <div>{`Board connection error: ${error}`}</div>))
-        .then(Applab.beginVisualizationRun);
+  if (makerToolkit.isEnabled()) {
+    makerToolkit.connect({
+      interpreter: Applab.JSInterpreter,
+      onDisconnect: () => studioApp.resetButtonClick(),
+    })
+        .then(Applab.beginVisualizationRun)
+        .catch(error => {
+          // Don't just throw any error away, but squelch errors that we already
+          // handle gracefully (like early disconnect or a missing board).
+          if (!(error instanceof makerToolkit.MakerError)) {
+            Applab.log(error);
+            return Promise.reject(error);
+          }
+        });
   } else {
     Applab.beginVisualizationRun();
   }
@@ -1340,34 +1321,6 @@ Applab.showConfirmationDialog = function (config) {
   dialog.show();
 };
 
-Applab.onPuzzleSubmit = function () {
-  Applab.showConfirmationDialog({
-    title: commonMsg.submitYourProject(),
-    text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: function () {
-      Applab.onPuzzleComplete(true);
-    }
-  });
-};
-
-Applab.unsubmit = function () {
-  $.post(level.unsubmitUrl,
-         {"_method": 'PUT', user_level: {submitted: false}},
-         function () {
-           location.reload();
-         });
-};
-
-Applab.onPuzzleUnsubmit = function () {
-  Applab.showConfirmationDialog({
-    title: commonMsg.unsubmitYourProject(),
-    text: commonMsg.unsubmitYourProjectConfirm(),
-    onConfirm: function () {
-      Applab.unsubmit();
-    }
-  });
-};
-
 Applab.onPuzzleFinish = function () {
   Applab.onPuzzleComplete(false); // complete without submitting
 };
@@ -1433,7 +1386,7 @@ Applab.onPuzzleComplete = function (submit) {
   Applab.waitingForReport = true;
 
   const sendReport = function () {
-    const onComplete = (submit ? Applab.onSubmitComplete : Applab.onReportComplete);
+    const onComplete = (submit ? onSubmitComplete : Applab.onReportComplete);
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
@@ -1445,7 +1398,7 @@ Applab.onPuzzleComplete = function (submit) {
         level: level.id,
         result: levelComplete,
         testResult: Applab.testResults,
-        submitted: !!submit,
+        submitted: submit,
         program: encodeURIComponent(program),
         image: Applab.encodedFeedbackImage,
         containedLevelResultsInfo: containedLevelResultsInfo,

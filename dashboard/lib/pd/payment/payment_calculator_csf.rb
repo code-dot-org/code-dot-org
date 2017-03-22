@@ -28,8 +28,10 @@ module Pd::Payment
     def get_session_attendance_summaries(workshop)
       # Anyone in the section with an enrollment counts as attended for CSF
       teacher_ids = workshop.section.students.pluck :id
+
+      workshop_enrollments = workshop.enrollments.all
       enrollment_ids = teacher_ids.map do |teacher_id|
-        Pd::Enrollment.find_by(user_id: teacher_id)
+        workshop_enrollments.find {|enrollment| enrollment.user_id == teacher_id}
       end.compact.map(&:id)
 
       # Return exactly one session (day), with the raw hours from the session.

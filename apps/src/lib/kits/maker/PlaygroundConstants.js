@@ -29,3 +29,8 @@ export const SONG_CHARGE = [
   ['G3', 1/4], ['C4', 1/4], ['E4', 1/4], ['G4', 1/8],
   [null, 3/8], ['E4', 3/16], ['G4', 1]
 ];
+
+// Circuit playground command codes for certain needed overrides
+// See playground-io/lib/index.js
+export const CP_COMMAND = 0x40;
+export const CP_ACCEL_STREAM_ON = 0x3A;
