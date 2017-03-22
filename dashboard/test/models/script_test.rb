@@ -500,7 +500,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'Cannot setup script where some of the stages are missing flex categories' do
+  test 'Cannot setup script where some of the stages are not properly sorted' do
     script_file = File.join(self.class.fixture_path, 'test-bad-plc-unsorted-categories.script')
     assert_raises RuntimeError do
       Script.setup([script_file])
