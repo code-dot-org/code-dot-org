@@ -410,6 +410,10 @@ class Script < ActiveRecord::Base
     %w(course1 course2 course3 course4).include? name
   end
 
+  def k5_draft_course?
+    %w(coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include? name
+  end
+
   def csf?
     k5_course? || twenty_hour?
   end
@@ -419,7 +423,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
