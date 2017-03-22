@@ -174,7 +174,7 @@ class DevRoutesTest < Minitest::Test
     before do
       $log.level = Logger::ERROR
 
-      CDO.slack_start_build_token = FAKE_SLACK_SLASH_TOKEN
+      CDO.slack_set_last_dtt_green_token = FAKE_SLACK_SLASH_TOKEN
 
       @default_param = {
         token: FAKE_SLACK_SLASH_TOKEN,
