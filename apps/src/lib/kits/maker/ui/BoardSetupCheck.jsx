@@ -1,7 +1,8 @@
 /** @file Maker Board setup checker */
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
+import SetupChecker from '../util/SetupChecker';
 import SetupStep, {
   HIDDEN,
   WAITING,
@@ -31,6 +32,10 @@ const initialState = {
 
 export default class BoardSetupCheck extends Component {
   state = {...initialState};
+
+  static propTypes = {
+    setupChecker: PropTypes.instanceOf(SetupChecker)
+  };
 
   hide(selector) {
     this.setState({[selector]: HIDDEN});
@@ -113,19 +118,11 @@ export default class BoardSetupCheck extends Component {
   }
 
   detectChromeVersion() {
+    const {setupChecker} = this.props;
     this.spin(STATUS_IS_CHROME);
     return promiseWaitFor(200)
-        .then(() => {
-          if (!isChrome()) {
-            return Promise.reject(new Error('Not using Chrome'));
-          }
-
-          if (!gtChrome33()) {
-            return Promise.reject(new Error('Not using Chrome > v33'));
-          }
-
-          this.succeed(STATUS_IS_CHROME);
-        })
+        .then(() => setupChecker.detectChromeVersion())
+        .then(() => this.succeed(STATUS_IS_CHROME))
         .catch(error => {
           this.fail(STATUS_IS_CHROME);
           return Promise.reject(error);
@@ -321,10 +318,6 @@ function isChrome() {
 function getChromeVersion() {
   const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
   return raw ? parseInt(raw[2], 10) : false;
-}
-
-function gtChrome33() {
-  return getChromeVersion() >= 33;
 }
 
 function isWindows() {
