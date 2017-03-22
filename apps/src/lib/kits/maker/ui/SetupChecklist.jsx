@@ -29,7 +29,7 @@ const initialState = {
   [STATUS_BOARD_COMPONENTS]: WAITING,
 };
 
-export default class BoardSetupCheck extends Component {
+export default class SetupChecklist extends Component {
   state = {...initialState};
 
   static propTypes = {
