@@ -8,6 +8,7 @@ import {
   OTHER_BAD_SERIALPORTS
 } from './sampleSerialPorts';
 import ChromeSerialPort from 'chrome-serialport'; // Actually StubChromeSerialPort
+import {ConnectionFailedError} from '@cdo/apps/lib/kits/maker/MakerError';
 import {
   findPortWithViableDevice,
   getPreferredPort
@@ -35,7 +36,9 @@ describe("Maker Toolkit", function () {
             done(new Error('Expected promise to reject, but it resolved to ' + port));
           })
           .catch(err => {
-            expect(err.message).to.equal('Did not find a usable device on a serial port.');
+            expect(err).to.be.an.instanceOf(ConnectionFailedError);
+            expect(err.message).to.equal('Failed to establish a board connection.');
+            expect(err.reason).to.equal('Did not find a usable device on a serial port.');
             done();
           })
           .catch(done);

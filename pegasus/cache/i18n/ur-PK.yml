@@ -966,23 +966,23 @@
     href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
     to encourage experimentation! Check out all our new features and let us know what
     you think.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your
+    class how the Internet works, how cryptography keeps data secure, and other concepts?
+    We’ve taken the best interactive tools from our Computer Science Principles curriculum
+    and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: "مزید سیکھے"
-  dashboard_announce_try_now_button: Try it now
+  dashboard_announce_try_now_button: Try now
   dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_watch_video_button: Watch video
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+    in an open letter asking the U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Add your name
   dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+    blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
   dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
     will start teaching computer science during the Hour of Code this December 5-11.
     We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
@@ -1897,9 +1897,7 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  dashboard_announce_apcsp_recruitment2: This year's AP CS Principles exam is poised
-    to break records. Student participation in the exam could dramatically shift diversity
-    in AP Computer Science, but we need your help. Encourage every CS Principles student
-    to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you
-    a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}'
-    target='_blank'>#APCSP video challenge</a>.
+  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
+    program here</a>.
+  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
+    18 years old.

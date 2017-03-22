@@ -102,6 +102,71 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_in_progress.id, response[0]['id']
   end
 
+  # Action: filter
+  test 'admins can filter' do
+    sign_in @admin
+    get :filter
+    assert_response :success
+  end
+
+  test 'organizers can filter' do
+    sign_in @organizer
+    get :filter
+    assert_response :success
+  end
+
+  test 'facilitators can filter' do
+    sign_in @facilitator
+    get :filter
+    assert_response :success
+  end
+
+  test 'filter defaults' do
+    sign_in @admin
+    get :filter
+    response = JSON.parse(@response.body)
+    assert_nil response['limit']
+    assert_equal 2, response['total_count']
+    assert_empty response['filters']
+    assert_equal 2, response['workshops'].count
+  end
+
+  test 'filter limit' do
+    # 10 more workshops, bringing the total to 12
+    10.times do
+      create :pd_workshop
+    end
+
+    sign_in @admin
+    get :filter, params: {limit: 5}
+    response = JSON.parse(@response.body)
+    assert_equal 5, response['limit']
+    assert_equal 12, response['total_count']
+    assert_empty response['filters']
+    assert_equal 5, response['workshops'].count
+  end
+
+  test 'filters' do
+    # 10 workshops from different organizers that will be filtered out
+    10.times do
+      create :pd_workshop, num_sessions: 1
+    end
+
+    # Same organizer
+    organizer = create :workshop_organizer
+    earlier_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now
+    later_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now + 1.week
+
+    sign_in @admin
+    filters = {organizer_id: organizer.id.to_s, order_by: 'date desc'}
+    get :filter, params: filters
+    response = JSON.parse(@response.body)
+
+    assert_equal 2, response['workshops'].count
+    assert_equal [later_workshop.id, earlier_workshop.id], response['workshops'].map {|w| w['id']}
+    assert_equal filters.stringify_keys, response['filters']
+  end
+
   # Action: Show
 
   test 'admins can view workshops' do

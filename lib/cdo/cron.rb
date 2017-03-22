@@ -4,7 +4,7 @@ require 'chronic'
 # Utility functions to generate cron expressions.
 module Cdo
   class Cron
-    DEFAULT_TIME_ZONE = 'Pacific Time (US & Canada)'
+    DEFAULT_TIME_ZONE = 'Pacific Time (US & Canada)'.freeze
 
     # Convert 'weekdays at [time_str]' (Pacific Time) to UTC cron syntax.
     def self.weekdays_at(time_str, time_zone: DEFAULT_TIME_ZONE)
@@ -12,9 +12,9 @@ module Cdo
         times = DateTime.now.
           all_week.
           select(&:on_weekday?).
-          map{|day| Chronic.parse(time_str, now: day)}.
+          map {|day| Chronic.parse(time_str, now: day)}.
           map(&:utc)
-        day_names = times.map{|day| Time::RFC2822_DAY_NAME[day.wday].upcase}
+        day_names = times.map {|day| Time::RFC2822_DAY_NAME[day.wday].upcase}
         "0 #{times.first.hour} * * #{day_names.first}-#{day_names.last}"
       end
     end

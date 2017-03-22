@@ -3,7 +3,7 @@
 # Table name: followers
 #
 #  id              :integer          not null, primary key
-#  user_id         :integer          not null
+#  user_id         :integer
 #  student_user_id :integer          not null
 #  created_at      :datetime
 #  updated_at      :datetime
@@ -35,11 +35,11 @@ class Follower < ActiveRecord::Base
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
 
-  def section_must_belong_to_teacher
-    errors.add(:section_id, "must belong to teacher") unless user_id == user.id
+  def user_must_be_section_user
+    errors.add(:user_id, "must be section user") unless user_id == section.user_id
   end
 
-  validate :cannot_follow_yourself, :teacher_must_be_teacher, :section_must_belong_to_teacher
+  validate :cannot_follow_yourself, :teacher_must_be_teacher, :user_must_be_section_user
 
   validates_presence_of :user, :student_user, :section
 

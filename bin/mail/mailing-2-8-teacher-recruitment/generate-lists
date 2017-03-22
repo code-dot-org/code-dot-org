@@ -3,12 +3,12 @@ require_relative '../mailing-common/mailing-list-utils'
 require 'set'
 
 # Exported from https://docs.google.com/spreadsheets/d/1T_cd7CDlOuuLe_hObSzNX7BbN7PwU_EzEpjuIHuwoNM
-REGION_LIST_FILE = 'Code.org Partners with Regions - Sheet1.csv'
+REGION_LIST_FILE = 'Code.org Partners with Regions - Sheet1.csv'.freeze
 
 # https://www.dropbox.com/s/upxdp1yam0jd9lf/1.2.2016.csv?dl=0
-CURRENT_TEACHERS_FILE = 'current-teachers.csv'
+CURRENT_TEACHERS_FILE = 'current-teachers.csv'.freeze
 EXCLUDED_EMAILS = Set.new
-REGIONS = {}
+@regions = {}
 
 def query_with_location(base_query, city, state)
   query = "(#{base_query}) && ((location_state_s:\"#{state}\" && location_city_s:\"#{city}\") || (create_ip_state_s:\"#{state}\" && create_ip_city_s:\"#{city}\"))"
@@ -53,13 +53,13 @@ end
 #   SENT - skip the region if this is anything but empty
 CSV.foreach(REGION_LIST_FILE, headers: true) do |row|
   region_name = row['Region']
-  region = REGIONS[region_name]
+  region = @regions[region_name]
   unless region
     next unless row['SENT'].to_s.empty?
     template_name = row['email file in markdown']
     next if template_name.to_s.empty? || template_name == 'no email' || template_name.start_with?('pending')
 
-    region = REGIONS[region_name] = {
+    region = @regions[region_name] = {
       locations: [],
       template_name: template_name
     }
@@ -78,8 +78,8 @@ CSV.foreach(REGION_LIST_FILE, headers: true) do |row|
   location[:districts] << district
 end
 
-puts "Processing #{REGIONS.length} regions:"
-REGIONS.each do |region_name, region|
+puts "Processing #{@regions.length} regions:"
+@regions.each do |region_name, region|
   region_results = {}
   puts "#{region_name} (#{region[:template_name]})"
   region[:locations].each do |entry|
@@ -96,11 +96,11 @@ REGIONS.each do |region_name, region|
 end
 
 # Report
-puts "#{REGIONS.count} regions:"
+puts "#{@regions.count} regions:"
 total_count = 0
 excluded_count = 0
 File.open('send-commands.txt', 'w') do |command_file|
-  REGIONS.each do |region_name, region|
+  @regions.each do |region_name, region|
     total_count += region[:counts][:final]
     excluded_count += region[:counts][:excluded]
     puts "  #{region_name}: #{region[:counts][:final]}, after excluding #{region[:counts][:excluded]}"

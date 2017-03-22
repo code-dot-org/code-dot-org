@@ -55,9 +55,9 @@ class UserPermission < ActiveRecord::Base
     ChatClient.message 'infra-security',
       'Updating UserPermission: '\
         "environment: #{rack_env}, "\
-        "user ID: #{self.user.id}, "\
-        "email: #{self.user.email}, "\
-        "permission: #{self.permission}",
+        "user ID: #{user.id}, "\
+        "email: #{user.email}, "\
+        "permission: #{permission}",
       color: 'yellow'
   end
 
@@ -68,9 +68,9 @@ class UserPermission < ActiveRecord::Base
     ChatClient.message 'infra-security',
       'Deleting UserPermission: '\
         "environment: #{rack_env}, "\
-        "user ID: #{self.user.id}, "\
-        "email: #{self.user.email}, "\
-        "permission: #{self.permission}",
+        "user ID: #{user.id}, "\
+        "email: #{user.email}, "\
+        "permission: #{permission}",
       color: 'yellow'
   end
 end

@@ -280,7 +280,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-video-camera');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-video-camera');
       });
 
       it('shows no icon on course overview when none is provided', () => {
@@ -316,7 +316,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-video-camera');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-video-camera');
       });
     });
 
@@ -373,7 +373,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-file-text');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-file-text');
       });
 
       it('has a file icon on external levels in header', () => {
@@ -390,7 +390,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-file-text');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-file-text');
       });
 
       it('has a link icon on external link levels in course overview', () => {
@@ -407,7 +407,7 @@ describe('ProgressDot component tests', () => {
         );
 
         const result = renderer.getRenderOutput();
-        expect(result.props.children[0].props.className).to.equal('fa fa-external-link-square');
+        expect(result.props.children[0].props.children[0].props.className).to.equal('fa fa-external-link-square');
       });
 
       it('shows a locked icon on course overivew when locked', () => {

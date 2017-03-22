@@ -147,11 +147,12 @@ module Pd::Payment
     #   Map of enrollment id to raw attendance totals for that teacher.
     # @return [Array<TeacherSummary>] summary for each teacher.
     def construct_teacher_summaries(workshop_summary, raw_teacher_attendance)
-      enrollments_by_id = workshop_summary.workshop.enrollments.map{|e| [e.id, e]}.to_h
+      enrollments_by_id = workshop_summary.workshop.enrollments.map {|e| [e.id, e]}.to_h
 
       # Generate a teacher summary for all teachers in raw attendance.
       raw_teacher_attendance.map do |enrollment_id, raw_attendance|
         enrollment = enrollments_by_id[enrollment_id]
+        raise "Unable to find enrollment #{enrollment_id}" unless enrollment
         teacher = enrollment.user_id ? User.with_deleted.find(enrollment.user_id) : nil
 
         days, hours = calculate_adjusted_teacher_attendance raw_attendance, workshop_summary.min_attendance_days,
