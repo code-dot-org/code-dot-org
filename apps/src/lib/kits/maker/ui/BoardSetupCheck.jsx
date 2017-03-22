@@ -166,14 +166,9 @@ export default class BoardSetupCheck extends Component {
    */
   detectComponentsInitialize() {
     const {setupChecker} = this.props;
-    this.spin(STATUS_BOARD_COMPONENTS);
-    return promiseWaitFor(200)
-        .then(() => setupChecker.boardController.initializeComponents())
-        .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
-        .catch(error => {
-          this.fail(STATUS_BOARD_COMPONENTS);
-          return Promise.reject(error);
-        });
+    return this.detectStep(
+        STATUS_BOARD_COMPONENTS,
+        () => setupChecker.detectComponentsInitialize());
   }
 
   /**

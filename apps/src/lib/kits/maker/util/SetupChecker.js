@@ -47,6 +47,16 @@ export default class SetupChecker {
     return this.boardController.connectToFirmware();
   }
 
+  /**
+   * @return {Promise}
+   */
+  detectComponentsInitialize() {
+    return new Promise(resolve => {
+      this.boardController.initializeComponents();
+      resolve();
+    });
+  }
+
   teardown() {
     if (this.boardController) {
       this.boardController.destroy();
