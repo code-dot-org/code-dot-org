@@ -103,7 +103,8 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => false}
       />
     );
-    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'unlock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
+    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'unlock');
   });
 
   it('has a locked icon when section is lockable and locked', () => {
@@ -114,7 +115,8 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => true}
       />
     );
-    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
+    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'lock');
   });
 
   it('has both a hidden and a locked icon when section is lockable and locked and hidden', () => {
@@ -126,7 +128,8 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => true}
       />
     );
-    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'eye-slash');
-    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'lock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'caret-down');
+    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'eye-slash');
+    assert.equal(wrapper.find('FontAwesome').at(2).props().icon, 'lock');
   });
 });
