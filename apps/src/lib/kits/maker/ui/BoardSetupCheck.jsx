@@ -118,16 +118,28 @@ export default class BoardSetupCheck extends Component {
         });
   }
 
-  detectChromeVersion() {
-    const {setupChecker} = this.props;
-    this.spin(STATUS_IS_CHROME);
+  /**
+   * Perform the work to check a step, wrapped in appropriate status changes.
+   * @param {string} stepKey
+   * @param {function:Promise} stepWork
+   * @return {Promise}
+   */
+  detectStep(stepKey, stepWork) {
+    this.spin(stepKey);
     return promiseWaitFor(200)
-        .then(() => setupChecker.detectChromeVersion())
-        .then(() => this.succeed(STATUS_IS_CHROME))
+        .then(stepWork)
+        .then(() => this.succeed(stepKey))
         .catch(error => {
-          this.fail(STATUS_IS_CHROME);
+          this.fail(stepKey);
           return Promise.reject(error);
         });
+  }
+
+  detectChromeVersion() {
+    const {setupChecker} = this.props;
+    return this.detectStep(
+        STATUS_IS_CHROME,
+        () => setupChecker.detectChromeVersion());
   }
 
   /**
@@ -135,14 +147,9 @@ export default class BoardSetupCheck extends Component {
    */
   detectChromeAppInstalled() {
     const {setupChecker} = this.props;
-    this.spin(STATUS_APP_INSTALLED);
-    return promiseWaitFor(200)
-        .then(() => setupChecker.detectChromeAppInstalled())
-        .then(() => this.succeed(STATUS_APP_INSTALLED))
-        .catch(error => {
-          this.fail(STATUS_APP_INSTALLED);
-          return Promise.reject(error);
-        });
+    return this.detectStep(
+        STATUS_APP_INSTALLED,
+        () => setupChecker.detectChromeAppInstalled());
   }
 
   /**
