@@ -55,7 +55,7 @@ const ProgressBubble = React.createClass({
   render() {
     const { number, status, url, levelName, levelIcon } = this.props;
 
-    let disabled = this.props.disabled || levelIcon === 'lock';
+    const disabled = this.props.disabled || levelIcon === 'lock';
 
     const style = {
       ...styles.main,
