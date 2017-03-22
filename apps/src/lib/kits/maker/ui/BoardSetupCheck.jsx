@@ -65,6 +65,7 @@ export default class BoardSetupCheck extends Component {
   }
 
   detect() {
+    const {setupChecker} = this.props;
     this.setState({...initialState, isDetecting: true});
 
     if (!isWindows()) {
@@ -74,22 +75,29 @@ export default class BoardSetupCheck extends Component {
     Promise.resolve()
 
         // Are we using a compatible browser?
-        .then(() => this.detectChromeVersion())
+        .then(() => this.detectStep(STATUS_IS_CHROME,
+            () => setupChecker.detectChromeVersion()))
 
         // Is Chrome App Installed?
-        .then(() => this.detectChromeAppInstalled())
+        .then(() => this.detectStep(STATUS_APP_INSTALLED,
+            () => setupChecker.detectChromeAppInstalled()))
 
         // Is board plugged in?
-        .then(() => this.detectBoardPluggedIn())
+        .then(() => this.detectStep(STATUS_BOARD_PLUG,
+            () => setupChecker.detectBoardPluggedIn()))
 
         // Can we talk to the firmware?
-        .then(() => this.detectCorrectFirmware())
+        .then(() => this.detectStep(STATUS_BOARD_CONNECT,
+            () => setupChecker.detectCorrectFirmware()))
 
         // Can we initialize components successfully?
-        .then(() => this.detectComponentsInitialize())
+        .then(() => this.detectStep(STATUS_BOARD_COMPONENTS,
+            () => setupChecker.detectComponentsInitialize()))
 
         // Everything looks good, let's par-tay!
-        .then(() => this.celebrate())
+        .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
+        .then(() => setupChecker.celebrate())
+        .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
 
         // If anything goes wrong along the way, we'll end up in this
         // catch clause - make sure to report the error out.
@@ -102,7 +110,7 @@ export default class BoardSetupCheck extends Component {
 
         // Finally...
         .then(() => {
-          this.props.setupChecker.teardown();
+          setupChecker.teardown();
           this.setState({isDetecting: false});
         });
   }
@@ -122,63 +130,6 @@ export default class BoardSetupCheck extends Component {
           this.fail(stepKey);
           return Promise.reject(error);
         });
-  }
-
-  detectChromeVersion() {
-    const {setupChecker} = this.props;
-    return this.detectStep(
-        STATUS_IS_CHROME,
-        () => setupChecker.detectChromeVersion());
-  }
-
-  /**
-   * @return {Promise}
-   */
-  detectChromeAppInstalled() {
-    const {setupChecker} = this.props;
-    return this.detectStep(
-        STATUS_APP_INSTALLED,
-        () => setupChecker.detectChromeAppInstalled());
-  }
-
-  /**
-   * @return {Promise.<string>} Resolves to usable port name
-   */
-  detectBoardPluggedIn() {
-    const {setupChecker} = this.props;
-    return this.detectStep(
-        STATUS_BOARD_PLUG,
-        () => setupChecker.detectBoardPluggedIn());
-  }
-
-  /**
-   * @return {Promise.<CircuitPlaygroundBoard>}
-   */
-  detectCorrectFirmware() {
-    const {setupChecker} = this.props;
-    return this.detectStep(
-        STATUS_BOARD_CONNECT,
-        () => setupChecker.detectCorrectFirmware());
-  }
-
-  /**
-   * @return {Promise}
-   */
-  detectComponentsInitialize() {
-    const {setupChecker} = this.props;
-    return this.detectStep(
-        STATUS_BOARD_COMPONENTS,
-        () => setupChecker.detectComponentsInitialize());
-  }
-
-  /**
-   * @return {Promise}
-   */
-  celebrate() {
-    const {setupChecker} = this.props;
-    this.thumb(STATUS_BOARD_COMPONENTS);
-    return setupChecker.boardController.celebrateSuccessfulConnection()
-        .then(() => this.succeed(STATUS_BOARD_COMPONENTS));
   }
 
   /**
