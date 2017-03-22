@@ -57,6 +57,13 @@ export default class SetupChecker {
     });
   }
 
+  /**
+   * @return {Promise}
+   */
+  celebrate() {
+    return this.boardController.celebrateSuccessfulConnection();
+  }
+
   teardown() {
     if (this.boardController) {
       this.boardController.destroy();
