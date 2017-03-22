@@ -1,9 +1,9 @@
 module SurveyResultsHelper
-  def show_diversity_survey?
+  def show_diversity_survey?(kind)
     return false unless current_user
     return false unless language == "en"
     return false if current_user.under_13?
-    return false if existing_diversity_survey_2017_result?
+    return false if existing_survey_result?(kind)
     return false unless account_existed_14_days?
     return false unless current_user.teacher?
     return false unless has_any_students?
@@ -14,7 +14,7 @@ module SurveyResultsHelper
     return true
   end
 
-  def show_nps_survey?
+  def show_nps_survey?(kind)
     # Disable NPS survey
     false
   end
@@ -23,8 +23,8 @@ module SurveyResultsHelper
     DateTime.now - current_user.created_at.to_datetime >= 14
   end
 
-  def existing_diversity_survey_2017_result?
-    SurveyResult.where(user_id: current_user.id, kind: SurveyResult::DIVERSITY_2017).exists?
+  def existing_survey_result?(kind)
+    SurveyResult.where(user_id: current_user.id, kind: kind).exists?
   end
 
   def country_us?
