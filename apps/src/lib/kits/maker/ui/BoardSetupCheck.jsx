@@ -33,7 +33,8 @@ export default class BoardSetupCheck extends Component {
   state = {...initialState};
 
   static propTypes = {
-    setupChecker: PropTypes.instanceOf(SetupChecker)
+    setupChecker: PropTypes.instanceOf(SetupChecker).isRequired,
+    stepDelay: PropTypes.number,
   };
 
   hide(selector) {
@@ -123,7 +124,7 @@ export default class BoardSetupCheck extends Component {
    */
   detectStep(stepKey, stepWork) {
     this.spin(stepKey);
-    return promiseWaitFor(200)
+    return promiseWaitFor(this.props.stepDelay || 200)
         .then(stepWork)
         .then(() => this.succeed(stepKey))
         .catch(error => {
