@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {createUuid, trySetLocalStorage} from '@cdo/apps/utils';
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -130,6 +131,15 @@ window.SignupManager = function (options) {
    * @param extraData optional hash object for supplemental data (will show up in the data_json field)
    */
   function logAnalyticsEvent(eventName, extraData = {}) {
+    if (!self.uuid) {
+      if (!!window.localStorage && !!window.localStorage.getItem("analyticsID")) {
+        self.uuid = window.localStorage.getItem("analyticsID");
+      } else {
+        self.uuid = createUuid();
+        trySetLocalStorage("analyticsID", self.uuid);
+      }
+    }
+
     const streamName = "analysis-events";
     const environment = "eric-dev"; // TODO(eric): switch this to production before merge
     const study = "signup_school_dropdown";
@@ -154,7 +164,7 @@ window.SignupManager = function (options) {
         study: study,
         study_group: studyGroup,
         event: eventName,
-        // data_string: UID // TODO now that we're not using Cognito
+        data_string: self.uuid,
         // data_string: AWS.config.credentials.identityId, // Cognito UID
         data_json: JSON.stringify(dataJson),
       }
