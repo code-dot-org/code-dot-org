@@ -1,5 +1,6 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import {ensureAppInstalled} from '../portScanning';
+import {isChrome, gtChrome33} from './browserChecks';
 
 export default class SetupChecker {
   /**
@@ -24,18 +25,4 @@ export default class SetupChecker {
   detectChromeAppInstalled() {
     return ensureAppInstalled();
   }
-}
-
-// TODO deduplicate these helpers into yet another util file
-function gtChrome33() {
-  return getChromeVersion() >= 33;
-}
-
-function isChrome() {
-  return !!window.chrome;
-}
-
-function getChromeVersion() {
-  const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
-  return raw ? parseInt(raw[2], 10) : false;
 }
