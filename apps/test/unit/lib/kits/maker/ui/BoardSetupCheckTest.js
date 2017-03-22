@@ -7,36 +7,66 @@ import BoardSetupCheck from '@cdo/apps/lib/kits/maker/ui/BoardSetupCheck';
 import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
 
 describe('BoardSetupCheck', () => {
+  let checker;
+
   beforeEach(() => {
     sinon.stub(window.console, 'error');
+    sinon.stub(window.location, 'reload');
+    checker = new StubSetupChecker();
   });
 
   afterEach(() => {
+    window.location.reload.restore();
     window.console.error.restore();
   });
 
-  it('renders', done => {
-    const checker = new StubSetupChecker();
-    const spy = sinon.spy();
+  it('renders success', done => {
     const wrapper = mount(<BoardSetupCheck setupChecker={checker}/>);
-    expect(wrapper).not.to.be.null;
+    expect(wrapper.find('.fa-clock-o')).to.have.length(5);
     setTimeout(() => {
-      expect(wrapper).not.to.be.null;
-      expect(spy).not.to.have.been.called;
+      expect(wrapper.find('.fa-check-circle')).to.have.length(5);
       expect(window.console.error).not.to.have.been.called;
       done();
     }, 1500);
   });
 
   it('fails if chrome version is wrong', done => {
-    const checker = new StubSetupChecker();
-    checker.detectChromeVersion.rejects(new Error('test error'));
+    const error = new Error('test error');
+    checker.detectChromeVersion.rejects(error);
     const wrapper = mount(<BoardSetupCheck setupChecker={checker}/>);
-    expect(wrapper).not.to.be.null;
+    expect(wrapper.find('.fa-clock-o')).to.have.length(5);
     setTimeout(() => {
       expect(wrapper.find('.fa-times-circle')).to.have.length(1);
       expect(wrapper.find('.fa-clock-o')).to.have.length(4);
       expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
+      expect(window.console.error).to.have.been.calledWith(error);
+      done();
+    }, 1500);
+  });
+
+  it('does not reload the page on re-detect if successful', done => {
+    const wrapper = mount(<BoardSetupCheck setupChecker={checker}/>);
+    setTimeout(() => {
+      expect(wrapper.find('.fa-check-circle')).to.have.length(5);
+      wrapper.find('input[value="re-detect"]').simulate('click');
+      expect(wrapper.find('.fa-clock-o')).to.have.length(5);
+      setTimeout(() => {
+        expect(wrapper.find('.fa-check-circle')).to.have.length(5);
+        expect(window.location.reload).not.to.have.been.called;
+        done();
+      }, 1500);
+    }, 1500);
+  });
+
+  it('reloads the page on re-detect if plugin not installed', done => {
+    checker.detectChromeAppInstalled.rejects(new Error('not installed'));
+    const wrapper = mount(<BoardSetupCheck setupChecker={checker}/>);
+    setTimeout(() => {
+      expect(wrapper.find('.fa-check-circle')).to.have.length(1);
+      expect(wrapper.find('.fa-times-circle')).to.have.length(1);
+      expect(wrapper.find('.fa-clock-o')).to.have.length(3);
+      wrapper.find('input[value="re-detect"]').simulate('click');
+      expect(window.location.reload).to.have.been.called;
       done();
     }, 1500);
   });
