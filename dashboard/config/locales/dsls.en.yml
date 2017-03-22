@@ -594,6 +594,9 @@ en:
       CSD U3 collisions STOP isTouching:
         STOP: STOP
         description here: description here
+      CSD U3 combining rep:
+        description here: description here
+        title: title
       CSD U3 complex sprite movement SFLP: {}
       CSD U3 game intro:
         Create Your Own Game: Create Your Own Game
@@ -642,6 +645,9 @@ en:
         description here: description here
         title: title
       CSD U5 data visualization sheet:
+        description here: description here
+        title: title
+      CSD U5 student record:
         description here: description here
         title: title
       CSD U5 video2:
