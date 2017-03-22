@@ -32,6 +32,14 @@ def main
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
   unless GitHub.compare(base: 'staging', head: 'test').empty?
+    unless DevelopersTopic.dts?
+      ChatClient.message(
+        'infra-test',
+        'robo-DTT skipped (DTS was not yes, with DTS required)',
+        color: 'yellow'
+      )
+      return
+    end
     ChatClient.message(
       'infra-test',
       'robo-DTT is merging Test > Staging',
