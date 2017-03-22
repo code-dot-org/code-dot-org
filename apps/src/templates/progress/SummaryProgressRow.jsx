@@ -28,8 +28,6 @@ export const styles = {
     color: color.charcoal,
     letterSpacing: -0.11,
     whiteSpace: 'nowrap',
-    paddingLeft: 20,
-    paddingRight: 20,
     borderRightWidth: 1,
     borderRightColor: color.border_light_gray,
     borderRightStyle: 'solid',
@@ -41,6 +39,10 @@ export const styles = {
   },
   colText: {
     color: color.charcoal,
+    // so that our current stage indicator is flush with the td border
+    margin: -1,
+    paddingLeft: 20,
+    paddingRight: 20,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 12,
     overflow: 'hidden',
@@ -58,12 +60,21 @@ export const styles = {
   },
   unlockedIcon: {
     color: color.orange
+  },
+  currentStageIndicator: {
+    color: color.cyan,
+    borderLeftColor: color.cyan,
+    borderLeftStyle: 'solid',
+    borderLeftWidth: 4,
+    // colText padding minus borderLeftWidth
+    paddingLeft: 16
   }
 };
 
 const SummaryProgressRow = React.createClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
+    isCurrentStage: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
     lessonNumber: PropTypes.number,
     levels: PropTypes.arrayOf(levelType).isRequired,
@@ -72,7 +83,15 @@ const SummaryProgressRow = React.createClass({
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels, lockedForSection, lessonIsVisible } = this.props;
+    const {
+      dark,
+      lesson,
+      lessonNumber,
+      levels,
+      lockedForSection,
+      lessonIsVisible,
+      isCurrentStage
+    } = this.props;
 
     // Is this lesson hidden for whomever we're currently viewing as
     if (!lessonIsVisible(lesson)) {
@@ -98,8 +117,17 @@ const SummaryProgressRow = React.createClass({
           ...(locked && styles.locked)
         }}
       >
-        <td style={styles.col1}>
-          <div style={styles.colText}>
+        <td
+          style={{
+            ...styles.col1
+          }}
+        >
+          <div
+            style={{
+              ...styles.colText,
+              ...(isCurrentStage && styles.currentStageIndicator),
+            }}
+          >
             {hiddenForStudents &&
               <FontAwesome
                 icon="eye-slash"

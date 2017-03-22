@@ -45,7 +45,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       }
     }),
     progress: {
-      showTeacherInfo: false
+      showTeacherInfo: false,
+      currentStageId: 2
     }
   });
 };

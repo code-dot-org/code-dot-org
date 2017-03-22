@@ -45,6 +45,18 @@ export default storybook => {
         )
       },
       {
+        name:'SummaryProgressTable with current stage',
+        story: () => (
+          <SummaryProgressTable
+            lessons={lessons}
+            levelsByLesson={levelsByLesson}
+            currentStageId={lessons[1].id}
+            lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
+          />
+        )
+      },
+      {
         name:'second lesson is a hidden stage, viewing as teacher',
         story: () => (
           <SummaryProgressTable

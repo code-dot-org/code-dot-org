@@ -35,6 +35,9 @@ const styles = {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
   },
+  currentStageHeading: {
+    color: color.cyan,
+  },
   headingText: {
     marginLeft: 10
   },
@@ -65,6 +68,7 @@ const ProgressLesson = React.createClass({
     // redux provided
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    currentStageId: PropTypes.number,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired
   },
@@ -89,6 +93,7 @@ const ProgressLesson = React.createClass({
       levels,
       showTeacherInfo,
       viewAs,
+      currentStageId,
       lessonIsVisible,
       lessonLockedForSection
     } = this.props;
@@ -101,6 +106,7 @@ const ProgressLesson = React.createClass({
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
     const icon = this.state.collapsed ? "caret-right" : "caret-down";
+    const isCurrentStage = currentStageId === lesson.id;
 
     const locked = lessonLockedForSection(lesson.id) ||
       levels.every(level => level.status === LevelStatus.locked);
@@ -120,7 +126,10 @@ const ProgressLesson = React.createClass({
           }}
         >
           <div
-            style={styles.heading}
+            style={{
+              ...styles.heading,
+              ...(isCurrentStage && styles.currentStageHeading)
+            }}
             onClick={this.toggleCollapsed}
           >
             {hiddenForStudents &&
@@ -164,6 +173,7 @@ export const UnconnectedProgressLesson = ProgressLesson;
 export default connect(state => ({
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.stageLock.viewAs,
+  currentStageId: state.progress.currentStageId,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

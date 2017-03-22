@@ -26,6 +26,7 @@ const SummaryProgressTable = React.createClass({
     levelsByLesson: PropTypes.arrayOf(
       PropTypes.arrayOf(levelType)
     ).isRequired,
+    currentStageId: PropTypes.number,
 
     // redux provided
     lessonLockedForSection: PropTypes.func.isRequired,
@@ -33,7 +34,7 @@ const SummaryProgressTable = React.createClass({
   },
 
   render() {
-    const { lessons, levelsByLesson } = this.props;
+    const { lessons, levelsByLesson, currentStageId } = this.props;
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
     }
@@ -62,6 +63,7 @@ const SummaryProgressTable = React.createClass({
             .map((item, filteredIndex) => (
               <SummaryProgressRow
                 key={item.unfilteredIndex}
+                isCurrentStage={item.lesson.id === currentStageId}
                 lessonNumber={item.lesson.stageNumber}
                 levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
@@ -81,6 +83,7 @@ const SummaryProgressTable = React.createClass({
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 
 export default connect(state => ({
+  currentStageId: state.progress.currentStageId,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(SummaryProgressTable);
