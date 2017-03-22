@@ -6,6 +6,7 @@ import {createUuid, trySetLocalStorage} from '@cdo/apps/utils';
 window.SignupManager = function (options) {
   this.options = options;
   var self = this;
+  var lastUserType = "";
 
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
   if (self.options.isTeacher === "true") {
@@ -105,6 +106,7 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', true);
 
     logTeacherToggle(false);
+    lastUserType = "student";
   }
 
   function showTeacher() {
@@ -123,6 +125,7 @@ window.SignupManager = function (options) {
     $("#user_terms_of_service_version").prop('checked', false);
 
     logTeacherToggle(true);
+    lastUserType = "teacher";
   }
 
   /**
@@ -175,7 +178,7 @@ window.SignupManager = function (options) {
   function logTeacherToggle(isTeacher) {
     let event;
     // We track change events separately depending on whether they're initial selections or changes
-    if (!isStudentSelected() && !isTeacherSelected()) {
+    if (lastUserType === "") {
       event = isTeacher ? "select_teacher" : "select_student";
     } else {
       event = isTeacher ? "select_teacher_from_student" : "select_student_from_teacher";
@@ -198,21 +201,13 @@ window.SignupManager = function (options) {
     logAnalyticsEvent(event);
   }
 
-  function isUserType(type) {
+  function isTeacherSelected() {
     const formData = $('#new_user').serializeArray();
     const userType = $.grep(formData, e => e.name === "user[user_type]");
-    if (userType.length === 1 && userType[0].value === type) {
+    if (userType.length === 1 && userType[0].value === "teacher") {
       return true;
     }
     return false;
-  }
-
-  function isTeacherSelected() {
-    return isUserType("teacher");
-  }
-
-  function isStudentSelected() {
-    return isUserType("student");
   }
 
   $(".signupform").submit(function () {
