@@ -65,6 +65,9 @@ export const styles = {
     // Our focus area indicator is absolutely positioned. Add a margin when it's
     // there so that it wont overlap dots.
     marginRight: 130
+  },
+  opaque: {
+    opacity: 1
   }
 };
 
@@ -74,14 +77,15 @@ const SummaryProgressRow = React.createClass({
     lesson: lessonType.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
     lockedForSection: PropTypes.bool.isRequired,
+    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
-    const { dark, lesson, levels, lockedForSection, lessonIsVisible } = this.props;
+    const { dark, lesson, levels, lockedForSection, lessonIsVisible, viewAs } = this.props;
 
     // Is this lesson hidden for whomever we're currently viewing as
-    if (!lessonIsVisible(lesson)) {
+    if (!lessonIsVisible(lesson, viewAs)) {
       return null;
     }
 
@@ -102,7 +106,11 @@ const SummaryProgressRow = React.createClass({
           ...(dark && styles.darkRow),
           ...(hiddenForStudents && styles.hiddenRow),
           ...(locked && styles.locked),
+<<<<<<< HEAD
 
+=======
+          ...(viewAs === ViewType.Teacher && styles.opaque)
+>>>>>>> full opacity when viewing hidden/locked as teacher
         }}
       >
         <td style={styles.col1}>
