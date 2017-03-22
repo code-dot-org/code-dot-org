@@ -65,6 +65,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
+        viewAs={ViewType.Student}
         lesson={fakeLesson('lesson1', 1, true)}
         lessonLockedForSection={() => true}
       />

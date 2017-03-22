@@ -4,6 +4,7 @@ import color from "@cdo/apps/util/color";
 import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../FontAwesome';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import _ from 'lodash';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
@@ -68,13 +69,14 @@ const ProgressBubble = React.createClass({
       href = url + location.search;
     }
 
+    const tooltipId = _.uniqueId();
     const interior = levelIcon === 'lock' ? <FontAwesome icon="lock"/> : number;
 
     let bubble = (
-      <div style={style} data-tip data-for={url} aria-describedby={url}>
+      <div style={style} data-tip data-for={tooltipId} aria-describedby={tooltipId}>
         {interior}
         <ReactTooltip
-          id={url}
+          id={tooltipId}
           role="tooltip"
           effect="solid"
         >
