@@ -1,5 +1,5 @@
 /** @file Stubbable core setup check behavior for the setup page. */
-import {ensureAppInstalled} from '../portScanning';
+import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
 import {isChrome, gtChrome33} from './browserChecks';
 
 export default class SetupChecker {
@@ -24,5 +24,10 @@ export default class SetupChecker {
    */
   detectChromeAppInstalled() {
     return ensureAppInstalled();
+  }
+
+  detectBoardPluggedIn() {
+    return findPortWithViableDevice()
+        .then(port => this.port = port);
   }
 }
