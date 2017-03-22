@@ -182,6 +182,29 @@ class DevRoutesTest < Minitest::Test
           assert_equal 200, pegasus.last_response.status
         end
       end
+
+      it 'does not update developers topic if not requested' do
+        in_rack_env(:test) do
+          GitHub.expects(:sha).returns('abcdef')
+          DevelopersTopic.expects(:set_dtt).never
+          InfraTestTopic.expects(:set_green_commit).returns(true)
+          pegasus = make_test_pegasus
+          pegasus.post '/api/dev/set-last-dtt-green', DEFAULT_PARAMS
+          assert_equal 200, pegasus.last_response.status
+        end
+      end
+
+      it 'updates developers topic if requested' do
+        in_rack_env(:test) do
+          GitHub.expects(:sha).returns('abcdef')
+          DevelopersTopic.expects(:set_dtt).returns(true)
+          InfraTestTopic.expects(:set_green_commit).returns(true)
+          pegasus = make_test_pegasus
+          pegasus.post '/api/dev/set-last-dtt-green',
+            DEFAULT_PARAMS.merge(text: 'yes')
+          assert_equal 200, pegasus.last_response.status
+        end
+      end
     end
   end
 end
