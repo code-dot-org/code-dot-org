@@ -7,25 +7,38 @@ import BoardSetupCheck from '@cdo/apps/lib/kits/maker/ui/BoardSetupCheck';
 import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
 
 describe('BoardSetupCheck', () => {
+  beforeEach(() => {
+    sinon.stub(window.console, 'error');
+  });
+
+  afterEach(() => {
+    window.console.error.restore();
+  });
+
   it('renders', done => {
     const checker = new StubSetupChecker();
+    const spy = sinon.spy();
     const wrapper = mount(<BoardSetupCheck setupChecker={checker}/>);
     expect(wrapper).not.to.be.null;
     setTimeout(() => {
       expect(wrapper).not.to.be.null;
+      expect(spy).not.to.have.been.called;
+      expect(window.console.error).not.to.have.been.called;
       done();
-    }, 3000);
+    }, 1500);
   });
 
   it('fails if chrome version is wrong', done => {
     const checker = new StubSetupChecker();
-    checker.detectChromeVersion.returns(Promise.reject(new Error('test error')));
+    checker.detectChromeVersion.rejects(new Error('test error'));
     const wrapper = mount(<BoardSetupCheck setupChecker={checker}/>);
     expect(wrapper).not.to.be.null;
     setTimeout(() => {
-      expect(wrapper).not.to.be.null;
+      expect(wrapper.find('.fa-times-circle')).to.have.length(1);
+      expect(wrapper.find('.fa-clock-o')).to.have.length(4);
+      expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
       done();
-    }, 3000);
+    }, 1500);
   });
 });
 
@@ -38,12 +51,12 @@ describe('BoardSetupCheck', () => {
 class StubSetupChecker extends SetupChecker {
   constructor() {
     super();
-    sinon.stub(this, 'detectChromeVersion').returns(Promise.resolve());
-    sinon.stub(this, 'detectChromeAppInstalled').returns(Promise.resolve());
-    sinon.stub(this, 'detectBoardPluggedIn').returns(Promise.resolve());
-    sinon.stub(this, 'detectCorrectFirmware').returns(Promise.resolve());
-    sinon.stub(this, 'detectComponentsInitialize').returns(Promise.resolve());
-    sinon.stub(this, 'celebrate').returns(Promise.resolve());
+    sinon.stub(this, 'detectChromeVersion').resolves();
+    sinon.stub(this, 'detectChromeAppInstalled').resolves();
+    sinon.stub(this, 'detectBoardPluggedIn').resolves();
+    sinon.stub(this, 'detectCorrectFirmware').resolves();
+    sinon.stub(this, 'detectComponentsInitialize').resolves();
+    sinon.stub(this, 'celebrate').resolves();
     sinon.stub(this, 'teardown');
   }
 }
