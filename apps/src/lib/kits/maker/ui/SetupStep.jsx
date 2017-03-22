@@ -12,14 +12,20 @@ export const STEP_STATUSES = [HIDDEN, WAITING, ATTEMPTING, SUCCEEDED, FAILED, CE
 
 const style = {
   root: {
-    margin: '15px 0',
+    marginBottom: 15,
+    marginTop: 15,
+    marginLeft: 0,
+    marginRight: 0,
   },
   header: {
-    'fontSize': '26px',
+    fontSize: 26,
   },
   body: {
-    margin: '15px 0 15px 40px',
-    fontSize: '14px',
+    marginBottom: 15,
+    marginTop: 15,
+    marginLeft: 40,
+    marginRight: 0,
+    fontSize: 14,
   }
 };
 
