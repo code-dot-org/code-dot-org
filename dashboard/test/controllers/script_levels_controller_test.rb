@@ -1136,6 +1136,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select 'button', I18n.t('teacher.panel.example')
   end
 
+  test "can view CSF teacher markdown as non-authorized teacher" do
+    refute can_view_teacher_markdown?
+
+    stubs(:current_user).returns(@teacher)
+    @script.stubs(:k5_course?).returns(true)
+    assert can_view_teacher_markdown?
+
+    stubs(:current_user).returns(@student)
+    refute can_view_teacher_markdown?
+  end
+
   test "should present single available level for single-level scriptlevels" do
     level = create :maze
     get_show_script_level_page(create(:script_level, levels: [level]))
