@@ -168,11 +168,9 @@ window.SignupManager = function (options) {
         study_group: studyGroup,
         event: eventName,
         data_string: self.uuid,
-        // data_string: AWS.config.credentials.identityId, // Cognito UID
         data_json: JSON.stringify(dataJson),
       }
     );
-
   }
 
   function logTeacherToggle(isTeacher) {
