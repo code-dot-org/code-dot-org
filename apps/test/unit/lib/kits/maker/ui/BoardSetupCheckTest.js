@@ -16,6 +16,17 @@ describe('BoardSetupCheck', () => {
       done();
     }, 3000);
   });
+
+  it('fails if chrome version is wrong', done => {
+    const checker = new StubSetupChecker();
+    checker.detectChromeVersion.returns(Promise.reject(new Error('test error')));
+    const wrapper = mount(<BoardSetupCheck setupChecker={checker}/>);
+    expect(wrapper).not.to.be.null;
+    setTimeout(() => {
+      expect(wrapper).not.to.be.null;
+      done();
+    }, 3000);
+  });
 });
 
 /**
