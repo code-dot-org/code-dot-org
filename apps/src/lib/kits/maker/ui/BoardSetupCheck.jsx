@@ -1,6 +1,5 @@
 /** @file Maker Board setup checker */
 import React, {Component, PropTypes} from 'react';
-import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import SetupChecker from '../util/SetupChecker';
 import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
 import SetupStep, {
@@ -72,8 +71,6 @@ export default class BoardSetupCheck extends Component {
       this.hide(STATUS_WINDOWS_DRIVERS);
     }
 
-    let boardController = null;
-
     Promise.resolve()
 
         // Are we using a compatible browser?
@@ -87,13 +84,12 @@ export default class BoardSetupCheck extends Component {
 
         // Can we talk to the firmware?
         .then(() => this.detectCorrectFirmware())
-        .then(board => boardController = board)
 
         // Can we initialize components successfully?
-        .then(() => this.detectComponentsInitialize(boardController))
+        .then(() => this.detectComponentsInitialize())
 
         // Everything looks good, let's par-tay!
-        .then(() => this.celebrate(boardController))
+        .then(() => this.celebrate())
 
         // If anything goes wrong along the way, we'll end up in this
         // catch clause - make sure to report the error out.
@@ -106,10 +102,7 @@ export default class BoardSetupCheck extends Component {
 
         // Finally...
         .then(() => {
-          if (boardController) {
-            boardController.destroy();
-            boardController = null;
-          }
+          this.props.setupChecker.teardown();
           this.setState({isDetecting: false});
         });
   }
@@ -163,26 +156,19 @@ export default class BoardSetupCheck extends Component {
    */
   detectCorrectFirmware() {
     const {setupChecker} = this.props;
-    this.spin(STATUS_BOARD_CONNECT);
-    const boardController = new CircuitPlaygroundBoard(setupChecker.port);
-    return boardController.connectToFirmware()
-        .then(() => {
-          this.succeed(STATUS_BOARD_CONNECT);
-          return boardController;
-        })
-        .catch(error => {
-          this.fail(STATUS_BOARD_CONNECT);
-          return Promise.reject(error);
-        });
+    return this.detectStep(
+        STATUS_BOARD_CONNECT,
+        () => setupChecker.detectCorrectFirmware());
   }
 
   /**
    * @return {Promise}
    */
-  detectComponentsInitialize(boardController) {
+  detectComponentsInitialize() {
+    const {setupChecker} = this.props;
     this.spin(STATUS_BOARD_COMPONENTS);
     return promiseWaitFor(200)
-        .then(() => boardController.initializeComponents())
+        .then(() => setupChecker.boardController.initializeComponents())
         .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
         .catch(error => {
           this.fail(STATUS_BOARD_COMPONENTS);
@@ -193,9 +179,10 @@ export default class BoardSetupCheck extends Component {
   /**
    * @return {Promise}
    */
-  celebrate(boardController) {
+  celebrate() {
+    const {setupChecker} = this.props;
     this.thumb(STATUS_BOARD_COMPONENTS);
-    return boardController.celebrateSuccessfulConnection()
+    return setupChecker.boardController.celebrateSuccessfulConnection()
         .then(() => this.succeed(STATUS_BOARD_COMPONENTS));
   }
 
