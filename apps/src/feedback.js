@@ -199,7 +199,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
-    const hintsUsed = options.response.hints_used +
+    const hintsUsed = (options.response.hints_used || 0) +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
     const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
     const actualBlocks = this.getNumCountableBlocks();
