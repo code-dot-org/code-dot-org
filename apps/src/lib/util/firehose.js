@@ -2,17 +2,6 @@
 
 import $ from 'jquery';
 
-// Commented out: Cognito configuration
-// TODO(eric): delete if/when we are sure we will not use Cognito
-// const IDENTITY_POOL_ID = 'us-east-1:fbfec393-0afb-4682-84d4-59ad04a302f4';
-// const AWS_REGION = 'us-east-1';
-//
-// AWS.config.region = AWS_REGION;
-// AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-//   IdentityPoolId: IDENTITY_POOL_ID,
-// });
-// const FIREHOSE = new AWS.Firehose({apiVersion: '2015-08-04'});
-
 const FIREHOSE_URLS = {
   "analysis-events" : "https://vqaozk0x32.execute-api.us-east-1.amazonaws.com/prod/FirehoseMicroservice"
 };
@@ -94,29 +83,7 @@ class FirehoseClient {
     $.post({
       url: FIREHOSE_URLS[deliveryStreamName],
       data: dataToSend
-    }).done(function (response) {
-      // need to do anything here?
-    }).fail(function (xhr) {
-      // console.error("Failure sending Firehose data: " + JSON.stringify(xhr));
     });
-
-    // Commented out - this required AWS Cognito
-    // TODO(eric): delete if/when we are sure we will not use Cognito
-    // FIREHOSE.putRecord(
-    //   {
-    //     DeliveryStreamName: deliveryStreamName,
-    //     Record: {
-    //       Data: JSON.stringify(data),
-    //     },
-    //   },
-    //   function (err, data) {
-    //     if (err) {
-    //       // TODO(asher): This is here to assist debugging and should be removed
-    //       // when it is no longer useful.
-    //       console.error("Error pushing event data" + err);
-    //     }
-    //   }
-    // );
   }
 
   /**
@@ -138,27 +105,9 @@ class FirehoseClient {
     $.post({
       url: FIREHOSE_URLS[deliveryStreamName],
       data: dataToSend
-    }).done(function (response) {
-    }).fail(function (xhr) {
     });
-    // FIREHOSE.putRecordBatch(
-    //   {
-    //     DeliveryStreamName: deliveryStreamName,
-    //     Records: {
-    //       Data: data.map(JSON.stringify),
-    //     },
-    //   },
-    //   function (err, data) {
-    //     if (err) {
-    //       // TODO(asher): This is here to assist debugging and should be removed
-    //       // when it is no longer useful.
-    //       console.error("Error pushing event data" + err);
-    //     }
-    //   }
-    // );
   }
 }
 
 const firehoseClient = new FirehoseClient();
-
 export default firehoseClient;
