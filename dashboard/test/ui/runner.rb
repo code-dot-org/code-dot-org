@@ -25,6 +25,7 @@ require 'open3'
 require 'parallel'
 require 'securerandom'
 require 'socket'
+require 'parallel_tests/cucumber/scenarios'
 
 require_relative './utils/selenium_browser'
 
@@ -234,10 +235,16 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(env, arguments, log_prefix)
+def run_tests(env, feature, arguments, log_prefix)
   start_time = Time.now
-  puts "#{log_prefix}cucumber #{arguments}"
-  Open3.popen3(env, "cucumber #{arguments}") do |stdin, stdout, stderr, wait_thr|
+  scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
+  if scenario_count.zero?
+    return true, '0 scenarios', '', Time.now - start_time
+  end
+
+  cmd = "cucumber #{feature} #{arguments}"
+  puts "#{log_prefix}#{cmd}"
+  Open3.popen3(env, cmd) do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
@@ -430,8 +437,6 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   end
 
   arguments = ''
-  # arguments += "#{$options.feature}" if $options.feature
-  arguments += feature
   arguments += " -t #{$options.run_eyes_tests && !browser['mobile'] ? '' : '~'}@eyes"
   arguments += " -t #{$options.run_eyes_tests && browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += " -t ~@local_only" unless $options.local
@@ -527,7 +532,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   FileUtils.rm rerun_filename, force: true
 
   reruns = 0
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments, log_prefix)
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
   log_link = upload_log_and_get_public_link(
     html_output_filename,
     {
@@ -548,7 +553,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, arguments + rerun_arguments, log_prefix)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments + rerun_arguments, log_prefix)
     log_link = upload_log_and_get_public_link(
       html_output_filename,
       {
