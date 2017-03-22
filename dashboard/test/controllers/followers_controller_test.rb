@@ -253,12 +253,10 @@ class FollowersControllerTest < ActionController::TestCase
   test "create when already followed by a teacher switches sections" do
     sign_in @laurel_student_1.student_user
 
-    assert_does_not_create(Follower) do
-      post :create, params: {
-        section_code: @laurel_section_2.code,
-        redirect: '/'
-      }
-    end
+    post :create, params: {
+      section_code: @laurel_section_2.code,
+      redirect: '/'
+    }
 
     assert_redirected_to '/'
     assert_equal "#{@laurel.name} added as your teacher", flash[:notice]
