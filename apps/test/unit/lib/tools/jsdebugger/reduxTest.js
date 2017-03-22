@@ -27,7 +27,7 @@ describe('The JSDebugger redux duck', () => {
 
     // override evalInCurrentScope so we don't have to set up the full interpreter.
     // eslint-disable-next-line no-eval
-    sinon.stub(interpreter, 'evalInCurrentScope', input => eval(input));
+    sinon.stub(interpreter, 'evalInCurrentScope').callsFake(input => eval(input));
   });
   afterEach(() => {
     restoreRedux();
