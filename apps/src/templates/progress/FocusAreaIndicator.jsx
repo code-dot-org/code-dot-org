@@ -1,6 +1,6 @@
 /**
- * A component that adds a sort of ribbon looking focus indicator to the side
- * of your row. Note: This is English only.
+ * A component that adds a ribbon to the side of your row to indicate that it is
+ * a focus area. Note: This is English only.
  */
 
 import React from 'react';
