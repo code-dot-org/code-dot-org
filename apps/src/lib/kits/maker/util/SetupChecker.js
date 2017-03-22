@@ -1,11 +1,15 @@
 /** @file Stubbable core setup check behavior for the setup page. */
+import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
 import {isChrome, gtChrome33} from './browserChecks';
 
 export default class SetupChecker {
+  port = null;
+  boardController = null;
+
   /**
    * Resolve if using Chrome > 33
-   * @returns {Promise}
+   * @return {Promise}
    */
   detectChromeVersion() {
     return new Promise((resolve, reject) => {
@@ -21,13 +25,33 @@ export default class SetupChecker {
 
   /**
    * Resolve if the Chrome Connector App is installed.
+   * @return {Promise}
    */
   detectChromeAppInstalled() {
     return ensureAppInstalled();
   }
 
+  /**
+   * @return {Promise}
+   */
   detectBoardPluggedIn() {
     return findPortWithViableDevice()
         .then(port => this.port = port);
+  }
+
+  /**
+   * @return {Promise}
+   */
+  detectCorrectFirmware() {
+    this.boardController = new CircuitPlaygroundBoard(this.port);
+    return this.boardController.connectToFirmware();
+  }
+
+  teardown() {
+    if (this.boardController) {
+      this.boardController.destroy();
+    }
+    this.boardController = null;
+    this.port = null;
   }
 }
