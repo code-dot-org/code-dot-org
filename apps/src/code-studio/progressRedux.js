@@ -19,6 +19,7 @@ const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
+const PEER_REVIEW_ID = -1;
 
 const initialState = {
   // These first fields never change after initialization
@@ -56,7 +57,7 @@ export default function reducer(state = initialState, action) {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: processedStages(stages),
+      stages: processedStages(stages, action.professionalLearningCourse),
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId
@@ -174,14 +175,14 @@ function bestResultLevelId(levelIds, progressData) {
 /**
  * Does some processing of our passed in stages, namely
  * - Removes 'hidden' field
- * - Adds 'stageNumber' field for non-lockable stages
+ * - Adds 'stageNumber' field for non-lockable, non-PLC stages
  */
-export function processedStages(stages) {
+export function processedStages(stages, isPlc) {
   let numberOfNonLockableStages = 0;
 
   return stages.map(stage => {
     let stageNumber;
-    if (!stage.lockable) {
+    if (!isPlc && !stage.lockable) {
       numberOfNonLockableStages++;
       stageNumber = numberOfNonLockableStages;
     }
@@ -238,10 +239,42 @@ export const hasGroups = state => Object.keys(categorizedLessons(state)).length 
 /**
  * Extract the relevant portions of a particular lesson/stage from the store.
  * Note, that this does not include levels
+ * @param {object} state - The progress state in our redux store
+ * @param {number} stageIndex - The index into our stages we care about
  * @returns {Lesson}
  */
+const lessonFromStageAtIndex = (state, stageIndex) => ({
+  ...lessonFromStage(state.stages[stageIndex]),
+  isFocusArea: state.focusAreaPositions.includes(state.stages[stageIndex].position)
+});
 const lessonFromStage = stage => _.pick(stage, ['name', 'id', 'lockable', 'stageNumber', 'lesson_plan_html_url']);
-export const lessons = state => state.stages.map(lessonFromStage);
+export const lessons = state => state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
+
+/**
+ * Extract lesson from our peerReviewStage if we have one. We want this to end up
+ * having the same fields as our non-peer review stages.
+ */
+const peerReviewLesson = state => ({
+  ...lessonFromStage(state.peerReviewStage),
+  // add some fields that are missing for this stage but required for lessonType
+  id: PEER_REVIEW_ID,
+  lockable: false,
+  isFocusArea: false
+});
+
+/**
+ * Extract levels from our peerReviewStage, making sure the levels have the same
+ * set of fields as our non-peer review levels.
+ */
+const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index) => ({
+  // These aren't true levels (i.e. we won't have an entry in levelProgress),
+  // so always use a specific id that won't collide with real levels
+  id: PEER_REVIEW_ID,
+  status: (level.locked ? LevelStatus.locked : level.status),
+  url: level.url,
+  name: level.name,
+  icon: (level.locked ? level.icon : undefined),
+}));
 
 /**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
@@ -309,7 +342,7 @@ export const categorizedLessons = state => {
 
   state.stages.forEach((stage, index) => {
     const category = stage.flex_category;
-    const lesson = lessonFromStage(stage);
+    const lesson = lessonFromStageAtIndex(state, index);
     const stageLevels = allLevels[index];
 
     byCategory[category] = byCategory[category] || {
@@ -321,6 +354,17 @@ export const categorizedLessons = state => {
     byCategory[category].lessons.push(lesson);
     byCategory[category].levels.push(stageLevels);
   });
+
+  // Peer reviews get their own category, but these levels/lessson are stored
+  // separately from our other levels/lessons in redux (since they're slightly
+  // different)
+  if (state.peerReviewStage) {
+    byCategory['Peer Review'] = {
+      category: 'Peer Review',
+      lessons: [peerReviewLesson(state)],
+      levels: [peerReviewLevels(state)]
+    };
+  }
 
   // We want to return an array of categories
   return _.values(byCategory);
@@ -365,6 +409,9 @@ export const progressionsFromLevels = levels => {
 /* start-test-block */
 // export private function(s) to expose to unit testing
 export const __testonly__ = {
-  bestResultLevelId
+  bestResultLevelId,
+  peerReviewLesson,
+  peerReviewLevels,
+  PEER_REVIEW_ID
 };
 /* end-test-block */
