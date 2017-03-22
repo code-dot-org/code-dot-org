@@ -105,7 +105,7 @@ export default storybook => {
             {...defaultProps}
             viewAs={ViewType.Teacher}
             lessonIsVisible={(lesson, viewAs) =>
-              (lesson.id !== 2 || viewAs !== ViewType.Student)}
+              (lesson.id !== 2 || viewAs === ViewType.Teacher)}
           />
         )
       },
@@ -116,7 +116,7 @@ export default storybook => {
             {...defaultProps}
             viewAs={ViewType.Teacher}
             lessonIsVisible={(lesson, viewAs) =>
-              (lesson.id !== 3 || viewAs !== ViewType.Student)}
+              (lesson.id !== 3 || viewAs === ViewType.Teacher)}
           />
         )
       },
@@ -219,7 +219,7 @@ export default storybook => {
             ]}
             viewAs={ViewType.Teacher}
             lessonIsVisible={(lesson, viewAs) =>
-              (lesson.id !== 2 || viewAs !== ViewType.Student)}
+              (lesson.id !== 2 || viewAs === ViewType.Teacher)}
             lessonLockedForSection={(lessonId) => lessonId === 2}
           />
         )

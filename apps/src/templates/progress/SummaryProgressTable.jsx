@@ -60,7 +60,7 @@ const SummaryProgressTable = React.createClass({
           {/*Filter our lessons to those that will be rendered, and then make
             every other (remaining) one dark */
             lessons.map((lesson, index) => ({unfilteredIndex: index, lesson }))
-            .filter(item => this.props.lessonIsVisible(item.lesson))
+            .filter(item => this.props.lessonIsVisible(item.lesson, viewAs))
             .map((item, filteredIndex) => (
               <SummaryProgressRow
                 key={item.unfilteredIndex}

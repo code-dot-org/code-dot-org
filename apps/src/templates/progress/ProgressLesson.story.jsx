@@ -93,11 +93,11 @@ export default storybook => {
       },
       {
         name:'hidden progress lesson as teacher',
-        description: 'should be white with some opacity',
+        description: 'should be white with full opacity',
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
           />
         )
       },
