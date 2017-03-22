@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -22,6 +23,7 @@ window.SignupManager = function (options) {
     } else {
       url = "/";
     }
+    logFormSuccess();
     window.location.href = url;
   }
 
@@ -45,6 +47,7 @@ window.SignupManager = function (options) {
         errorField.fadeTo("normal", 1);
       }
     }
+    logFormError(err);
   }
 
   $("#user_user_type").change(function () {
@@ -99,6 +102,8 @@ window.SignupManager = function (options) {
 
     // Implicitly accept terms of service for students.
     $("#user_terms_of_service_version").prop('checked', true);
+
+    logTeacherToggle(false);
   }
 
   function showTeacher() {
@@ -115,18 +120,94 @@ window.SignupManager = function (options) {
 
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
+
+    logTeacherToggle(true);
   }
 
-  function isTeacherSelected() {
-    var formData = $('#new_user').serializeArray();
-    var userType = $.grep(formData, e => e.name === "user[user_type]");
-    if (userType.length === 1 && userType[0].value === "teacher") {
+  /**
+   * Log signup-related analytics events to Firehose
+   * @param eventName name of the event to log
+   * @param extraData optional hash object for supplemental data (will show up in the data_json field)
+   */
+  function logAnalyticsEvent(eventName, extraData = {}) {
+    const streamName = "analysis-events";
+    const environment = "eric-dev"; // TODO(eric): switch this to production before merge
+    const study = "signup_school_dropdown";
+    const studyGroup = shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
+
+    let dataJson = {
+      user_agent: window.navigator.userAgent,
+    };
+    Object.assign(dataJson, extraData);
+    if (!!window.optimizely) {
+      const optimizelyData = {
+        optimizely_data: window.optimizely.data.state
+      };
+      Object.assign(dataJson, optimizelyData);
+    }
+
+    firehoseClient.putRecord(
+      streamName,
+      {
+        created_at: new Date().toISOString(),
+        environment: environment,
+        study: study,
+        study_group: studyGroup,
+        event: eventName,
+        // data_string: UID // TODO now that we're not using Cognito
+        // data_string: AWS.config.credentials.identityId, // Cognito UID
+        data_json: JSON.stringify(dataJson),
+      }
+    );
+
+  }
+
+  function logTeacherToggle(isTeacher) {
+    let event;
+    // We track change events separately depending on whether they're initial selections or changes
+    if (!isStudentSelected() && !isTeacherSelected()) {
+      event = isTeacher ? "select_teacher" : "select_student";
+    } else {
+      event = isTeacher ? "select_teacher_from_student" : "select_student_from_teacher";
+    }
+    logAnalyticsEvent(event);
+  }
+
+  function logFormSubmitted() {
+    const event = isTeacherSelected() ? "submit_teacher" : "submit_student";
+    logAnalyticsEvent(event);
+  }
+
+  function logFormError(err) {
+    const event = isTeacherSelected() ? "submit_error_teacher" : "submit_error_student";
+    logAnalyticsEvent(event, {error_info: err});
+  }
+
+  function logFormSuccess() {
+    const event = isTeacherSelected() ? "submit_success_teacher" : "submit_success_student";
+    logAnalyticsEvent(event);
+  }
+
+  function isUserType(type) {
+    const formData = $('#new_user').serializeArray();
+    const userType = $.grep(formData, e => e.name === "user[user_type]");
+    if (userType.length === 1 && userType[0].value === type) {
       return true;
     }
     return false;
   }
 
+  function isTeacherSelected() {
+    return isUserType("teacher");
+  }
+
+  function isStudentSelected() {
+    return isUserType("student");
+  }
+
   $(".signupform").submit(function () {
+    logFormSubmitted();
+
     // Clear the prior hashed email.
     $('#user_hashed_email').val('');
 
