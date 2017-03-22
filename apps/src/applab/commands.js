@@ -545,9 +545,9 @@ applabCommands.rgb = function (opts) {
   apiValidateTypeAndRange(opts, 'rgb', 'number', opts.a, 'number', 0, 1, OPTIONAL);
 
   // Convert any decimal values into integers between 0 and 255
-  opts.r = Math.min(255, Math.max(0, parseInt(opts.r)));
-  opts.g = Math.min(255, Math.max(0, parseInt(opts.g)));
-  opts.b = Math.min(255, Math.max(0, parseInt(opts.b)));
+  opts.r = Math.min(255, Math.max(0, Math.round(opts.r)));
+  opts.g = Math.min(255, Math.max(0, Math.round(opts.g)));
+  opts.b = Math.min(255, Math.max(0, Math.round(opts.b)));
   const alpha = (typeof opts.a === 'undefined') ? 1 : opts.a;
   return `rgba(${opts.r}, ${opts.g}, ${opts.b}, ${alpha})`;
 };
