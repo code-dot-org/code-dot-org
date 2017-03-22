@@ -1,7 +1,7 @@
 /** @file Maker Board setup checker */
 import React, {Component, PropTypes} from 'react';
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
-import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
+import {findPortWithViableDevice} from '../portScanning';
 import SetupChecker from '../util/SetupChecker';
 import SetupStep, {
   HIDDEN,
@@ -133,9 +133,10 @@ export default class BoardSetupCheck extends Component {
    * @return {Promise}
    */
   detectChromeAppInstalled() {
+    const {setupChecker} = this.props;
     this.spin(STATUS_APP_INSTALLED);
     return promiseWaitFor(200)
-        .then(ensureAppInstalled)
+        .then(() => setupChecker.detectChromeAppInstalled())
         .then(() => this.succeed(STATUS_APP_INSTALLED))
         .catch(error => {
           this.fail(STATUS_APP_INSTALLED);

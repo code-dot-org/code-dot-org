@@ -1,4 +1,5 @@
 /** @file Stubbable core setup check behavior for the setup page. */
+import {ensureAppInstalled} from '../portScanning';
 
 export default class SetupChecker {
   /**
@@ -15,6 +16,13 @@ export default class SetupChecker {
         resolve();
       }
     });
+  }
+
+  /**
+   * Resolve if the Chrome Connector App is installed.
+   */
+  detectChromeAppInstalled() {
+    return ensureAppInstalled();
   }
 }
 
