@@ -62,7 +62,6 @@ const SummaryProgressTable = React.createClass({
             .map((item, filteredIndex) => (
               <SummaryProgressRow
                 key={item.unfilteredIndex}
-                lessonNumber={item.lesson.stageNumber}
                 levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
                 dark={filteredIndex % 2 === 1}
