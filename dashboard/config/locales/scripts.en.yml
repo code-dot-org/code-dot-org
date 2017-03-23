@@ -2765,3 +2765,10 @@ en:
           description_audience: Teachers attending an in-person Maker Toolkit Workshop
           description_short: Level progression to accompany an in-person Maker Toolkit Workshop
           description: This level progression is intended to accompany an in-person Maker Toolkit Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of App Lab and the Maker Toolkit.
+        coursee-ramp:
+          stage:
+            Introduction: Introduction
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

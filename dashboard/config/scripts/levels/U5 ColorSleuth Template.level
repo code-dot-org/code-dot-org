@@ -65,7 +65,8 @@
       "return": null,
       "comment": null,
       "getProperty": null,
-      "rgb": null
+      "rgb": null,
+      "stopSound": null
     },
     "edit_code": true,
     "embed": "false",
