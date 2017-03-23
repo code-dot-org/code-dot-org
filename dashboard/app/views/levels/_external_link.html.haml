@@ -12,6 +12,8 @@
     %strong= t('external_links.leaving_domain')
     %p!= t('external_links.disclaimer_text', support_url: 'https://support.code.org')
 
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.teacher_markdown}}
+
   - if @script_level
     -# Temporary hack - explicitly include the submissions helper so this submit button will post milestone
     -# Long term plan is to have a footer section that will include these buttons

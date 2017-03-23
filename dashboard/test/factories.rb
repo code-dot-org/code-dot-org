@@ -107,6 +107,11 @@ FactoryGirl.define do
       end
     end
 
+    factory :old_student do
+      user_type User::TYPE_STUDENT
+      birthday Time.zone.today - 30.years
+    end
+
     trait :with_puzzles do
       transient do
         num_puzzles 1
@@ -393,6 +398,7 @@ FactoryGirl.define do
         evaluator.section.try(:user) ||
         build(:teacher)
       follower.section = evaluator.section || build(:section, user: follower.user)
+      follower.user_id = follower.section.user_id
     end
   end
 
