@@ -24,6 +24,21 @@ end
 # Global to prevent it from being passed around everywhere.
 @dotd_name = ''
 
+# Checks that CDO.github_access_token and CDO.slack_token are defined. If not,
+# exits the program.
+def check_for_cdo_keys
+  unless CDO.github_access_token && CDO.slack_token
+    puts <<-EOS.unindent
+
+      This script requires CDO.github_access_token and CDO.slack_token.
+
+      Please add them to your locals.yml and rerun the script.
+
+    EOS
+    exit
+  end
+end
+
 # Prints the script intro to the console.
 def puts_script_intro
   puts <<-EOS.unindent
@@ -252,6 +267,8 @@ def do_dtt_subroutine
 end
 
 def main
+  check_for_cdo_keys
+
   puts_script_intro
   ask_for_name
 
