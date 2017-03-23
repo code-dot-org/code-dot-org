@@ -149,7 +149,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
-      unless sessions.map{|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
+      unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
         errors.add(:sessions, 'must start on separate days.')
       end
     else
@@ -425,7 +425,7 @@ class Pd::Workshop < ActiveRecord::Base
   # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
   # @return [Integer] number of payment days, after applying constraints
   def effective_num_days
-    max_days = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_days]}
+    max_days = TIME_CONSTRAINTS_BY_SUBJECT[subject].try {|constraints| constraints[:max_days]}
     [sessions.count, max_days].compact.min
   end
 
@@ -433,7 +433,7 @@ class Pd::Workshop < ActiveRecord::Base
   # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.map(&:hours).reduce(&:+)
-    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_hours]}
+    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try {|constraints| constraints[:max_hours]}
     [actual_hours, max_hours].compact.min
   end
 

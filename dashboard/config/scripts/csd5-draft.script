@@ -1,5 +1,9 @@
 hideable_stages true
 
+stage 'Combining Representations'
+level 'CSD U3 combining rep'
+level 'CSD U5 student record'
+
 stage 'Interpreting Data'
 level 'CSD U5 data visualization'
 level 'CSD U5 data visualization sheet'

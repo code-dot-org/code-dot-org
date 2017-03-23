@@ -70,7 +70,7 @@ class GalleryActivitiesController < ApplicationController
     end
     params.require(:gallery_activity).
       permit(:level_source_id, :user_id, :user_level_id).
-      tap{|param| param.require(:user_level_id)}
+      tap {|param| param.require(:user_level_id)}
   end
 
   def gallery_activities_for_app(app)

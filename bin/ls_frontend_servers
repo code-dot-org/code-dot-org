@@ -27,6 +27,6 @@ if __FILE__ == $0
   if json_format
     puts output.to_json
   else
-    output.each{|k, v| puts "#{k}\t#{v}" }
+    output.each {|k, v| puts "#{k}\t#{v}" }
   end
 end

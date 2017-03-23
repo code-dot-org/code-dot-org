@@ -8,17 +8,14 @@
     "skin": "applab",
     "code_functions": {
       "onEvent": null,
-      "getText": null,
-      "setText": null,
-      "setScreen": null,
       "ifBlock": null,
       "equalityOperator": null,
       "randomNumber_min_max": null,
       "declareAssign_x": null,
       "declareAssign_x_promptNum": null,
-      "console.log": null,
       "hideElement": null,
-      "showElement": null
+      "showElement": null,
+      "assign_x": null
     },
     "edit_code": true,
     "embed": "false",

@@ -10,7 +10,7 @@ const ignoreList = require('./brokenLinkChecker.json').ignore;
 
 const slackUrl =
   "https://hooks.slack.com/services/" +
-  YAML.load(path.join(__dirname, '..', '..', '..', 'globals.yml'))['slack_endpoint'];
+  YAML.load(path.join(__dirname, '..', '..', '..', 'globals.yml'))['slack_endpoint_broken_links'];
 
 let totalLinkCount = 0;
 let totalPageCount = 0;

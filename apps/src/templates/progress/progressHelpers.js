@@ -7,13 +7,13 @@ import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
  * particular lesson is visible, or hidden entirely.
  * @param {number} lesson - the lesson we're querying
  * @param {object} state - State of our entire redux store
- * @param {ViewType?} viewAs - Optional param to determine whether the lesson
- *   would be visible if viewing as someone else
+ * @param {ViewType} viewAs - Are we interested in whether the lesson is viewable
+ *   for students or teachers
  * @returns {boolean} True if the provided lesson is visible
  */
 export function lessonIsVisible(lesson, state, viewAs) {
   if (!viewAs) {
-    viewAs = state.stageLock.viewAs;
+    throw new Error('missing param viewAs in lessonIsVisible');
   }
 
   // Don't show stage if not authorized to see lockable
