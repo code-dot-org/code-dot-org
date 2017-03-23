@@ -132,7 +132,8 @@
       "console.log": null,
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "show_debug_watch": "false",
     "encrypted_examples": "CBpciqd2dbdD/BFlGpeYS4dVpNxhrKf+enJ2tnRIASxDrNBzSPid6/aI/My+\nKRze\n",

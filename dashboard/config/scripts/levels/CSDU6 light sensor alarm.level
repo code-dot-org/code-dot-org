@@ -106,13 +106,10 @@
     "makerlab_enabled": "true",
     "project_template_level_name": "CSD Alarm Template",
     "markdown_instructions": "# Auto Alarm\r\n\r\nLet's revisit the alarm app one last time. When we last updated this app we made it turn on or off the buzzer in addition to the LED, but it still needs to be manually triggered. Now that we know how to use sensor events, you can make the alarm trigger automatically!\r\n\r\n# Do This\r\n\r\nUsing the an event handler for the light sensor, make the alarm turn on when it sees light. You can test the alarm by placing an object like a piece of paper over the board - if someone tries to take the piece of paper your alarm should start buzzing.\r\n\r\n_Challenge: Can you make both the buttons and the sensor play nicely together?_",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

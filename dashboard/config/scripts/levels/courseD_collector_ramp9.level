@@ -34,6 +34,7 @@
     "step_speed": "2",
     "callout_json": "[]",
     "ideal": "16",
+    "min_collected": "19",
     "contained_level_names": null
   },
   "published": true,
