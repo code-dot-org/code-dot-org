@@ -100,10 +100,7 @@ module GitHub
   # @return [Boolean] Whether compare is ahead of base, i.e., whether compare
   #   has commits not in base.
   def self.ahead?(base:, compare:)
-    base_sha = sha(base)
-    compare_sha = sha(compare)
-
-    response = Octokit.compare(REPO, base_sha, compare_sha)
+    response = Octokit.compare(REPO, base, compare)
     response.ahead_by > 0
   end
 
@@ -114,10 +111,7 @@ module GitHub
   # @return [Boolean] Whether compare is behind base, i.e., whether compare is missing
   #   commits in base.
   def self.behind?(base:, compare:)
-    base_sha = sha(base)
-    compare_sha = sha(compare)
-
-    response = Octokit.compare(REPO, base_sha, compare_sha)
+    response = Octokit.compare(REPO, base, compare)
     response.behind_by > 0
   end
 
