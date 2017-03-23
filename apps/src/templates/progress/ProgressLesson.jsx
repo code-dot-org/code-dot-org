@@ -10,6 +10,8 @@ import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import FocusAreaIndicator from './FocusAreaIndicator';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 
 const styles = {
   outer: {
@@ -108,6 +110,7 @@ const ProgressLesson = React.createClass({
       levels.every(level => level.status === LevelStatus.locked);
 
     const hiddenOrLocked = hiddenForStudents || locked;
+    const tooltipId = _.uniqueId();
     return (
       <div
         style={{
@@ -133,13 +136,25 @@ const ProgressLesson = React.createClass({
               />
             }
             {lesson.lockable &&
-              <FontAwesome
-                icon={locked ? 'lock' : 'unlock'}
-                style={{
-                  ...styles.icon,
-                  ...(!locked && styles.unlockedIcon)
-                }}
-              />
+              <span data-tip data-for={tooltipId}>
+                <FontAwesome
+                  icon={locked ? 'lock' : 'unlock'}
+                  style={{
+                    ...styles.icon,
+                    ...(!locked && styles.unlockedIcon)
+                  }}
+                />
+                {!locked &&
+                  <ReactTooltip
+                    id={tooltipId}
+                    role="tooltip"
+                    wrapper="span"
+                    effect="solid"
+                  >
+                    {i18n.lockAssessmentLong()}
+                  </ReactTooltip>
+                }
+            </span>
             }
             <span>{title}</span>
           </div>
