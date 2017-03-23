@@ -133,19 +133,23 @@ window.SignupManager = function (options) {
     if (hostname.includes("adhoc")) {
       // check first for adhoc, since hostnames might include other keywords
       return "adhoc";
-    } else if (hostname.includes("test")) {
-      return "test";
-    } else if (hostname.includes("staging")) {
-      return "staging";
-    } else if (hostname.includes("levelbuilder")) {
-      return "levelbuilder";
-    } else if (hostname.includes("localhost")) {
-      return "localhost";
-    } else if (hostname.includes("code.org")) {
-      return "production";
-    } else {
-      return "unknown";
     }
+    if (hostname.includes("test")) {
+      return "test";
+    }
+    if (hostname.includes("staging")) {
+      return "staging";
+    }
+    if (hostname.includes("levelbuilder")) {
+      return "levelbuilder";
+    }
+    if (hostname.includes("localhost")) {
+      return "development";
+    }
+    if (hostname.includes("code.org")) {
+      return "production";
+    }
+    return "unknown";
   }
 
   /**
