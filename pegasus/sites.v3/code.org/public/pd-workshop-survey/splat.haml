@@ -90,6 +90,7 @@ title: "Professional Development Workshop Survey"
 
   facilitator_specific_questions[:columnVariableQuestions].each do |question|
      question[:values] = PdWorkshopSurvey.options_for(question[:name])
+     question[:required] = true
   end
 
 :javascript
