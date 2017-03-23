@@ -6,17 +6,14 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
-  lessonNumber: 3,
   levels: [
     {
-      status: LevelStatus.not_tried,
-      url: '/step1/level1',
+      ...fakeLevels(1)[0],
       name: 'First progression'
     },
     ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
     {
-      status: LevelStatus.not_tried,
-      url: '/step3/level1',
+      ...fakeLevels(1)[0],
       name: 'Last progression'
     },
   ],
@@ -39,12 +36,68 @@ export default storybook => {
         )
       },
       {
-        name:'hidden progress lesson as teacher',
-        description: 'should be white with some opacity',
+        name:'progress lesson with focus area',
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+            lesson={{
+              ...defaultProps.lesson,
+              isFocusArea: true
+            }}
+          />
+        )
+      },
+      {
+        name:'progress lesson for peer reviews',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={{
+              id: -1,
+              isFocusArea: false,
+              lockable: false,
+              name: "You must complete 4 reviews for this unit"
+            }}
+            levels={
+              [
+                {
+                  id: -1,
+                  name: "Link to submitted review",
+                  status: LevelStatus.perfect,
+                  url: "/peer_reviews/1"
+                },
+                {
+                  id: -1,
+                  name: "Review a new submission",
+                  status: LevelStatus.not_tried,
+                  url: "/pull-review"
+                },
+                {
+                  id: -1,
+                  icon: 'fa-lock',
+                  name: "Reviews unavailable at this time",
+                  status: LevelStatus.locked,
+                  url: ""
+                },
+                {
+                  id: -1,
+                  icon: 'fa-lock',
+                  name: "Reviews unavailable at this time",
+                  status: LevelStatus.locked,
+                  url: ""
+                },
+              ]
+            }
+          />
+        )
+      },
+      {
+        name:'hidden progress lesson as teacher',
+        description: 'should be white with full opacity',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
           />
         )
       },

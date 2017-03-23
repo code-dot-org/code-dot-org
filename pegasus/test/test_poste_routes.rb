@@ -8,7 +8,7 @@ require_relative 'fixtures/mock_pegasus'
 # Adapted from http://sequel.jeremyevans.net/rdoc/files/doc/testing_rdoc.html#label-without+minitest-hooks
 class Minitest::Spec
   def run(*args, &block)
-    Sequel::Model.db.transaction(rollback: :always, auto_savepoint: true){super}
+    Sequel::Model.db.transaction(rollback: :always, auto_savepoint: true) {super}
     self
   end
 end

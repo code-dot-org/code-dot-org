@@ -403,8 +403,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map{|w| w.enrollments.count}
-    assert_equal [1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map{|w| w.enrollments.count}
+    assert_equal [0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
+    assert_equal [1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
   end
 
   test 'order_by_state' do
@@ -455,7 +455,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times{create :pd_enrollment, workshop: workshop}
+    3.times {create :pd_enrollment, workshop: workshop}
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -479,7 +479,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times{create :pd_enrollment, workshop: workshop}
+    3.times {create :pd_enrollment, workshop: workshop}
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -503,7 +503,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times{create :pd_enrollment, workshop: workshop}
+    3.times {create :pd_enrollment, workshop: workshop}
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do

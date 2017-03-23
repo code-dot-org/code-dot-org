@@ -18,7 +18,7 @@ end
 def downcased(value)
   return value if value.class == FieldError
   if value.is_a?(Enumerable)
-    value.map{|i| i.to_s.downcase}
+    value.map {|i| i.to_s.downcase}
   else
     value.to_s.downcase
   end
@@ -57,7 +57,7 @@ end
 def stripped(value)
   return value if value.class == FieldError
   if value.is_a?(Enumerable)
-    value.map{|i| i.to_s.strip}
+    value.map {|i| i.to_s.strip}
   else
     value.to_s.strip
   end
@@ -184,7 +184,7 @@ def update_form(kind, secret, data)
   end
 
   prev_data = JSON.parse(form[:data], symbolize_names: true)
-  symbolized_data = Hash[data.map{|k, v| [k.to_sym, v]}]
+  symbolized_data = Hash[data.map {|k, v| [k.to_sym, v]}]
   data = validate_form(kind, prev_data.merge(symbolized_data))
 
   normalized_email = data[:email_s].to_s.strip.downcase if data.key?(:email_s)

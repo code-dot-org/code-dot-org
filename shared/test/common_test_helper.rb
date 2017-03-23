@@ -58,7 +58,7 @@ module SetupTest
             returns(Aws::Credentials.new('test_aws_key', 'test_aws_secret'))
       end
       PEGASUS_DB.transaction(rollback: :always) do
-        AWS::S3.stub(:random, proc{random.bytes(16).unpack('H*')[0]}, &block)
+        AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
       end
     end
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.

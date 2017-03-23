@@ -51,7 +51,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [solid-block-header]
 
-Computer Science Principles
+AP Computer Science Principles
 
 [/solid-block-header]
 

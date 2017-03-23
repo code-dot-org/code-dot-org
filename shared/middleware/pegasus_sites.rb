@@ -11,7 +11,7 @@ class PegasusSites
       'codeprojects.org',
       'csedweek.org',
       'hourofcode.com',
-    ].map{|i| canonical_hostname(i)}
+    ].map {|i| canonical_hostname(i)}
   end
 
   def call(env)

@@ -261,11 +261,11 @@ class DashboardSection
     disabled_courses = valid_courses(user_id).select do |course|
       !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
     end
-    disabled_courses.map{|course| course[:id]}
+    disabled_courses.map {|course| course[:id]}
   end
 
   def self.valid_course_id?(course_id)
-    valid_courses.find{|course| course[:id] == course_id.to_i}
+    valid_courses.find {|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)
@@ -362,7 +362,7 @@ class DashboardSection
       join(:users, id: :user_id).
       select(*fields).
       where(sections__user_id: user_id, sections__deleted_at: nil).
-      map{|row| new(row).to_owner_hash}
+      map {|row| new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
@@ -374,7 +374,7 @@ class DashboardSection
       join(:users, id: :student_user_id).
       where(student_user_id: student_id).
       where(sections__deleted_at: nil, followers__deleted_at: nil).
-      map{|row| new(row).to_member_hash}
+      map {|row| new(row).to_member_hash}
   end
 
   def add_student(student)
@@ -394,7 +394,7 @@ class DashboardSection
   end
 
   def add_students(students)
-    student_ids = students.map{|i| add_student(i)}.compact
+    student_ids = students.map {|i| add_student(i)}.compact
     DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
     return student_ids
   end
@@ -411,7 +411,7 @@ class DashboardSection
   end
 
   def student?(user_id)
-    !!students.index{|i| i[:id] == user_id}
+    !!students.index {|i| i[:id] == user_id}
   end
 
   def students
@@ -439,7 +439,7 @@ class DashboardSection
   end
 
   def teacher?(user_id)
-    !!teachers.index{|i| i[:id] == user_id}
+    !!teachers.index {|i| i[:id] == user_id}
   end
 
   def teachers
