@@ -26,7 +26,8 @@ class SettingsCog extends Component {
   }
 
   toggleMakerToolkit() {
-
+    this.setState({open: false});
+    window.dashboard.project.toggleMakerEnabled();
   }
 
   render() {

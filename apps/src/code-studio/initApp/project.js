@@ -542,21 +542,14 @@ var projects = module.exports = {
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
-      var args = Array.prototype.slice.apply(arguments);
+      const args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
       preparingRemix = args[2];
 
-      let completeAsyncSave = function () {
-        this.sourceHandler.getAnimationList(animations => {
-          this.sourceHandler.getLevelSource().then(response => {
-            const source = response;
-            const html = this.sourceHandler.getLevelHtml();
-            const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-            this.save({source, html, animations, makerAPIsEnabled}, callback, forceNewVersion);
-          });
-        });
-      }.bind(this);
+      let completeAsyncSave = () =>
+        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
+          this.save(sourceAndHtml, callback, forceNewVersion));
 
       if (preparingRemix) {
         this.sourceHandler.prepareForRemix().then(completeAsyncSave);
@@ -593,6 +586,26 @@ var projects = module.exports = {
         executeCallback(callback, data);
       }.bind(this));
     }.bind(this));
+  },
+  getUpdatedSourceAndHtml_(callback) {
+    this.sourceHandler.getAnimationList(animations =>
+      this.sourceHandler.getLevelSource().then(response => {
+        const source = response;
+        const html = this.sourceHandler.getLevelHtml();
+        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+        callback({source, html, animations, makerAPIsEnabled});
+      }));
+  },
+  toggleMakerEnabled() {
+    this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+      this.save(
+        {
+          ...sourceAndHtml,
+          makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled,
+        },
+        () => window.location.reload()
+      );
+    });
   },
   updateCurrentData_(err, data, isNewChannel) {
     if (err) {
