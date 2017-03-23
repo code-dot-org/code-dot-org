@@ -1,6 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
-import {Radio, Checkbox, ControlLabel, FormGroup, HelpBlock} from 'react-bootstrap';
+import {
+  Radio,
+  Checkbox,
+  ControlLabel,
+  FormGroup,
+  HelpBlock
+} from 'react-bootstrap';
 
 const otherString = 'Other: ';
 
@@ -20,7 +26,6 @@ const ButtonList = React.createClass({
 
   handleChange(event) {
     let value;
-    console.log(event);
     if (this.props.type === 'radio') {
       value = event.target.value;
     } else if (this.props.type === 'check') {
@@ -32,13 +37,18 @@ const ButtonList = React.createClass({
       }
       value = Array.from(currentSelection);
     }
-    this.props.onChange({[this.props.groupName]: value});
+    this.props.onChange({
+      [this.props.groupName]: value
+    });
   },
 
   renderInputComponents() {
-    const InputComponent = {radio: Radio, check: Checkbox}[this.props.type];
-    let otherDiv;
+    const InputComponent = {
+      radio: Radio,
+      check: Checkbox
+    }[this.props.type];
 
+    let otherDiv;
     let answers = this.props.answers;
 
     if (this.props.includeOther) {
@@ -53,18 +63,19 @@ const ButtonList = React.createClass({
       );
     }
 
-    const options = answers.map ( (answer, i) => {
+    const options = answers.map((answer, i) => {
       const checked = this.props.type === 'radio' ?
-                      (this.props.selectedItems === answer) :
-                      !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
+          (this.props.selectedItems === answer) :
+          !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
+
       return (
         <InputComponent
           value={answer}
           label={answer}
           key={i}
           name={this.props.groupName}
-          onChange={this.handleChange}
-          checked={checked}
+          onChange={this.props.onChange ? this.handleChange : undefined}
+          checked={this.props.selectedItems ? checked : undefined}
         >
           {answer === otherString ? otherDiv : answer}
         </InputComponent>
@@ -95,4 +106,7 @@ const ButtonList = React.createClass({
   }
 });
 
-export {ButtonList, otherString};
+export {
+  ButtonList,
+  otherString
+};
