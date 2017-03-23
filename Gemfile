@@ -244,4 +244,4 @@ gem 'octokit'
 gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie'
 
-gem 'omniauth-openid-connect'
+gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'

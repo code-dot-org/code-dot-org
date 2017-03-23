@@ -10,12 +10,15 @@ PREFIX_TO_REMOVE = 'survey2016_'.freeze
 SurveyResult.
   where(kind: SurveyResult::DIVERSITY_2016).
   find_each do |survey_result|
-  # The keys to transform are in the properties column, so extract them from the
-  # JSON.
+  # The keys to transform are stored in the properties hash.
+  properties = survey_result.properties
   transformed_properties = {}
-  survey_result.properties.each do |key, value|
-    raise unless key.start_with? PREFIX_TO_REMOVE
+  properties.each do |key, value|
+    unless key.start_with? PREFIX_TO_REMOVE
+      raise "Found unexpected key: (#{key}, #{value}) in #{survey_result.id}."
+    end
     transformed_properties[key.gsub(PREFIX_TO_REMOVE, '')] = value
   end
-  survey_result.update!(properties: transformed_properties)
+  survey_result.properties = transformed_properties
+  survey_result.save!
 end
