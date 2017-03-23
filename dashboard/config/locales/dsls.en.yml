@@ -7295,6 +7295,28 @@ en:
         The farmer will collect all of the produce, except the pumpkin.: The farmer will collect all of the produce, except the pumpkin.
         The farmer will collect all of the produce.: The farmer will collect all of the produce.
         The farmer will not collect any of the produce with the path she is taking.: The farmer will not collect any of the produce with the path she is taking.
+      courseD_multi_farmer_ramp13:
+        " ": " "
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        : Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.: The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.: The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.
+        The farmer will walk four spaces, then try to pick one pumpkin.: The farmer will walk four spaces, then try to pick one pumpkin.
+        The farmer will walk to the end of the path and harvest the pumpkin.: The farmer will walk to the end of the path and harvest the pumpkin.
+      courseD_multi_farmer_ramp14:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer doesn't try to pick a pumpkin after each move up. Only each move to the right.: Incorrect. The farmer doesn't try to pick a pumpkin after each move up. Only each move to the right.
+        ? Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        : Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?: Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?
+        ? The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        : The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        The farmer will collect 4 pumpkins.: The farmer will collect 4 pumpkins.
+        The farmer will collect 5 pumpkins.: The farmer will collect 5 pumpkins.
+        The farmer will collect all 8 pumpkins.: The farmer will collect all 8 pumpkins.
       courseD_multi_farmer_while10_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7699,9 +7721,9 @@ en:
         'false': 'false'
         'true': 'true'
       cspu5_assess2_pseudoCode:
-        " “Time to start studying again!” ": " “Time to start studying again!” "
-        " “You passed!” ": " “You passed!” "
-        " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
+        "<code>Time to start studying again!</code>": "<code>Time to start studying again!</code>"
+        "<code>You passed!</code>": "<code>You passed!</code>"
+        "<code>You passed!</code> and <code>Time to start studying again! </code>": "<code>You passed!</code> and <code>Time to start studying again! </code>"
         An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:

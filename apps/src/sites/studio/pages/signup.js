@@ -1,9 +1,12 @@
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {createUuid, trySetLocalStorage} from '@cdo/apps/utils';
 
 window.SignupManager = function (options) {
   this.options = options;
   var self = this;
+  var lastUserType = "";
 
   // Check for URL having: /users/sign_up?user%5Buser_type%5D=teacher
   if (self.options.isTeacher === "true") {
@@ -22,6 +25,7 @@ window.SignupManager = function (options) {
     } else {
       url = "/";
     }
+    logFormSuccess();
     window.location.href = url;
   }
 
@@ -45,6 +49,7 @@ window.SignupManager = function (options) {
         errorField.fadeTo("normal", 1);
       }
     }
+    logFormError(err);
   }
 
   $("#user_user_type").change(function () {
@@ -99,6 +104,9 @@ window.SignupManager = function (options) {
 
     // Implicitly accept terms of service for students.
     $("#user_terms_of_service_version").prop('checked', true);
+
+    logTeacherToggle(false);
+    lastUserType = "student";
   }
 
   function showTeacher() {
@@ -115,11 +123,113 @@ window.SignupManager = function (options) {
 
     // Force teachers to explicitly accept terms of service.
     $("#user_terms_of_service_version").prop('checked', false);
+
+    logTeacherToggle(true);
+    lastUserType = "teacher";
+  }
+
+  function getEnvironment() {
+    const hostname = window.location.hostname;
+    if (hostname.includes("adhoc")) {
+      // check first for adhoc, since hostnames might include other keywords
+      return "adhoc";
+    }
+    if (hostname.includes("test")) {
+      return "test";
+    }
+    if (hostname.includes("staging")) {
+      return "staging";
+    }
+    if (hostname.includes("levelbuilder")) {
+      return "levelbuilder";
+    }
+    if (hostname.includes("localhost")) {
+      return "development";
+    }
+    if (hostname.includes("code.org")) {
+      return "production";
+    }
+    return "unknown";
+  }
+
+  /**
+   * Log signup-related analytics events to Firehose
+   * @param eventName name of the event to log
+   * @param extraData optional hash object for supplemental data (will show up in the data_json field)
+   */
+  function logAnalyticsEvent(eventName, extraData = {}) {
+    if (!self.uuid) {
+      if (!!window.localStorage && !!window.localStorage.getItem("analyticsID")) {
+        self.uuid = window.localStorage.getItem("analyticsID");
+      } else {
+        self.uuid = createUuid();
+        trySetLocalStorage("analyticsID", self.uuid);
+      }
+    }
+
+    const streamName = "analysis-events";
+    const environment = getEnvironment();
+    const study = "signup_school_dropdown";
+    const studyGroup = shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
+
+    let dataJson = {
+      user_agent: window.navigator.userAgent,
+      window_width: window.innerWidth,
+      window_height: window.innerHeight,
+      hostname: window.location.hostname,
+      full_path: window.location.href
+    };
+    Object.assign(dataJson, extraData);
+    if (!!window.optimizely) {
+      const optimizelyData = {
+        optimizely_data: window.optimizely.data.state
+      };
+      Object.assign(dataJson, optimizelyData);
+    }
+
+    firehoseClient.putRecord(
+      streamName,
+      {
+        created_at: new Date().toISOString(),
+        environment: environment,
+        study: study,
+        study_group: studyGroup,
+        event: eventName,
+        uuid: self.uuid,
+        data_json: JSON.stringify(dataJson),
+      }
+    );
+  }
+
+  function logTeacherToggle(isTeacher) {
+    let event;
+    // We track change events separately depending on whether they're initial selections or changes
+    if (lastUserType === "") {
+      event = isTeacher ? "select_teacher" : "select_student";
+    } else {
+      event = isTeacher ? "select_teacher_from_student" : "select_student_from_teacher";
+    }
+    logAnalyticsEvent(event);
+  }
+
+  function logFormSubmitted() {
+    const event = isTeacherSelected() ? "submit_teacher" : "submit_student";
+    logAnalyticsEvent(event);
+  }
+
+  function logFormError(err) {
+    const event = isTeacherSelected() ? "submit_error_teacher" : "submit_error_student";
+    logAnalyticsEvent(event, {error_info: err});
+  }
+
+  function logFormSuccess() {
+    const event = isTeacherSelected() ? "submit_success_teacher" : "submit_success_student";
+    logAnalyticsEvent(event);
   }
 
   function isTeacherSelected() {
-    var formData = $('#new_user').serializeArray();
-    var userType = $.grep(formData, e => e.name === "user[user_type]");
+    const formData = $('#new_user').serializeArray();
+    const userType = $.grep(formData, e => e.name === "user[user_type]");
     if (userType.length === 1 && userType[0].value === "teacher") {
       return true;
     }
@@ -127,6 +237,8 @@ window.SignupManager = function (options) {
   }
 
   $(".signupform").submit(function () {
+    logFormSubmitted();
+
     // Clear the prior hashed email.
     $('#user_hashed_email').val('');
 
@@ -195,4 +307,6 @@ window.SignupManager = function (options) {
   $("#user_name").placeholder();
   $("#user_email").placeholder();
   $("#user_school").placeholder();
+
+  logAnalyticsEvent("page_load");
 };

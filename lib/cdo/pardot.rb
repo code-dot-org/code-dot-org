@@ -10,25 +10,25 @@ $pardot_api_key = nil
 
 class Pardot
   # URL for Pardot login
-  PARDOT_AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4"
+  PARDOT_AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4".freeze
 
-  PARDOT_API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4"
+  PARDOT_API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
   # URL for prospect batch creation
-  PARDOT_BATCH_CREATE_URL = "#{PARDOT_API_V4_BASE}/do/batchCreate"
+  PARDOT_BATCH_CREATE_URL = "#{PARDOT_API_V4_BASE}/do/batchCreate".freeze
   # URL for prospect batch update
-  PARDOT_BATCH_UPDATE_URL = "#{PARDOT_API_V4_BASE}/do/batchUpdate"
+  PARDOT_BATCH_UPDATE_URL = "#{PARDOT_API_V4_BASE}/do/batchUpdate".freeze
   # URL for prospect query
-  PARDOT_PROSPECT_QUERY_URL = "#{PARDOT_API_V4_BASE}/do/query"
+  PARDOT_PROSPECT_QUERY_URL = "#{PARDOT_API_V4_BASE}/do/query".freeze
 
-  PARDOT_SUCCESS_HTTP_CODES = %w(200 201)
+  PARDOT_SUCCESS_HTTP_CODES = %w(200 201).freeze
 
   # Max # of prospects allowed in one batch
   MAX_PROSPECT_BATCH_SIZE = 50
   # Empirically determined safe max URL length for batch operations
   URL_LENGTH_SEND_THRESHOLD = 6200
 
-  # Map of database fields to Pardot field names. "multi" refers to if the field is a multi-valued
-  # type (such as checkbox list)
+  # Map of database fields to Pardot field names. "multi" refers to if the field
+  # is a multi-valued type (such as checkbox list)
   MYSQL_TO_PARDOT_MAP = {
     email: {  field: 'email', multi: false },
     pardot_id: { field: 'id', multi: false },
@@ -44,8 +44,14 @@ class Pardot
     school_name: { field: 'db_School', multi: false },
     roles: { field: 'db_Roles', multi: true },
     courses_facilitated: { field: 'db_Facilitator_Type', multi: true },
-    professional_learning_enrolled: { field: 'db_Professional_Learning_Enrolled', multi: true },
-    professional_learning_attended: { field: 'db_Professional_Learning_Attended', multi: true },
+    professional_learning_enrolled: {
+      field: 'db_Professional_Learning_Enrolled',
+      multi: true
+    },
+    professional_learning_attended: {
+      field: 'db_Professional_Learning_Attended',
+      multi: true
+    },
     hoc_organizer_years: { field: 'db_Hour_of_Code_Organizer', multi: true },
     grades_taught: { field: 'db_Grades_Taught', multi: true },
     ages_taught: { field: 'db_Ages_Taught', multi: true },
@@ -53,73 +59,86 @@ class Pardot
     form_roles: { field: 'db_Form_Roles', multi: false }
   }.freeze
 
-  # Exception to throw to ourselves if Pardot API key is invalid (which probably means it needs to be re-authed)
+  # Exception to throw to ourselves if Pardot API key is invalid (which probably
+  # means it needs to be re-authed)
   class InvalidApiKeyException < Exception
   end
 
   def self.sync_contact_rollups_to_pardot
-    # In case previous process was interrupted, first look in Pardot to see if it has any Pardot IDs that we
-    # have not yet recorded on our side. This will keep us from erroneously creating a new prospect when it should
-    # be an update.
+    # In case previous process was interrupted, first look in Pardot to see if
+    # it has any Pardot IDs that we have not yet recorded on our side. This will
+    # keep us from erroneously creating a new prospect when it should be an
+    # update.
     update_pardot_ids_of_new_contacts
 
-    # Handle any new contacts and create corresponding prospects in Pardot
+    # Handle any new contacts and create corresponding prospects in Pardot.
     sync_new_contacts_with_pardot
-    # Retrieve Pardot IDs for newly created contacts and store them in our DB. We do this as a separate pass for
-    # efficient batching of API calls to help ensure we don't hit our 25K/day limit
+
+    # Retrieve Pardot IDs for newly created contacts and store them in our DB.
+    # We do this as a separate pass for efficient batching of API calls to help
+    # ensure we don't hit our 25K/day limit.
     update_pardot_ids_of_new_contacts
 
-    # Handle any contact changes that should update existing prospects in Pardot
+    # Handle any contact changes that should update existing prospects in
+    # Pardot.
     sync_updated_contacts_with_pardot
   end
 
-  # Query Pardot for recently created contacts and retrieve the Pardot-side ID for that contact and store in our DB.
-  # We need Pardot's ID to be able to update the contact.
+  # Query Pardot for recently created contacts and retrieve the Pardot-side ID
+  # for that contact and store in our DB. We need Pardot's ID to be able to
+  # update the contact.
   def self.update_pardot_ids_of_new_contacts
-    # Find the highest Pardot ID of contacts stored in our database. Any newer contacts are guaranteed to have a
-    # higher ID. (Not stated in docs, but confirmed by Pardot support who said this was the best way to do this.)
+    # Find the highest Pardot ID of contacts stored in our database. Any newer
+    # contacts are guaranteed to have a higher ID. (Not stated in docs, but
+    # confirmed by Pardot support who said this was the best way to do this.)
     id_max = PEGASUS_DB[:contact_rollups].max(:pardot_id) || 0
 
-    # Run repeated requests querying for prospects above our highest known Pardot ID. Up to 200 prospects will be
-    # returned at a time by Pardot, so query repeatedly if there are more than 200 to retrieve.
+    # Run repeated requests querying for prospects above our highest known
+    # Pardot ID. Up to 200 prospects will be returned at a time by Pardot, so
+    # query repeatedly if there are more than 200 to retrieve.
     loop do
-      # Pardot request to return all prospects with ID greater than id_max
+      # Pardot request to return all prospects with ID greater than id_max.
       url = "#{PARDOT_PROSPECT_QUERY_URL}?id_greater_than=#{id_max}&fields=email,id&sort_by=id"
 
       doc = post_with_auth_retry(url)
       raise_if_response_error(doc)
 
-      # Pardot returns the count total available prospects (not capped to 200), although the data for a max of 200
-      # are contained in the response
+      # Pardot returns the count total available prospects (not capped to 200),
+      # although the data for a max of 200 are contained in the response.
       total_results = doc.xpath('/rsp/result/total_results').text.to_i
       results_in_response = 0
 
-      # process every prospect in the response
+      # Process every prospect in the response.
+      id_max = email_to_pardot_id.values.max
       doc.xpath('/rsp/result/prospect').each do |node|
         id = node.xpath("id").text.to_i
         email = node.xpath("email").text
         results_in_response += 1
         id_max = id
-        # update the Pardot ID for this contact in our database
         PEGASUS_DB[:contact_rollups].where(email: email).update(pardot_id: id)
       end
 
-      log "Updated Pardot Id's in our database for #{results_in_response} contacts."
+      log "Updated Pardot IDs in our database for #{results_in_response} contacts."
 
       # Stop if all the remaining results were in this response - we're done. Otherwise, keep repeating.
       break if results_in_response == total_results
     end
 
-    # Sync robustness: handle the case where a contact has been successfully created in Pardot, but we died
-    # before we were able register that fact (via pardot_sync_at) in our DB. In that case, we will in a subsequent run
-    # discover the pardot_id by asking for new ids via the code above. But we will be missing the pardot_sync_at time
-    # so we don't know how old the data is. In this corner case, set the pardot_sync_at time to the start of the epoch
-    # which will force a sync of this contact from our DB.
-    PEGASUS_DB[:contact_rollups].where(pardot_sync_at: nil).exclude(pardot_id: nil).update(pardot_sync_at: Time.utc(1970, 1, 1, 0, 0))
+    # Sync robustness: handle the case where a contact has been successfully
+    # created in Pardot, but we died before we were able register that fact
+    # (via pardot_sync_at) in our DB. In that case, we will in a subsequent run
+    # discover the pardot_id by asking for new ids via the code above. But we
+    # will be missing the pardot_sync_at time so we don't know how old the data
+    # is. In this corner case, set the pardot_sync_at time to the start of the
+    # epoch which will force a sync of this contact from our DB.
+    PEGASUS_DB[:contact_rollups].
+      where(pardot_sync_at: nil).
+      exclude(pardot_id: nil).
+      update(pardot_sync_at: Time.utc(1970, 1, 1, 0, 0))
   end
 
   def self.sync_new_contacts_with_pardot
-    # Set up config params to insert new contacts into Pardot
+    # Set up config params to insert new contacts into Pardot.
     config = {
       operation_name: "insert",
       # Temporarily limit the accounts synced into Pardot to just those in
@@ -129,18 +148,16 @@ class Pardot
                     "Roles like '%Teacher%'",
       pardot_url: PARDOT_BATCH_CREATE_URL
     }
-    # Call helper function
     sync_contacts_with_pardot(config)
   end
 
   def self.sync_updated_contacts_with_pardot
-    # Set up config params to update existing contacts in Pardot
+    # Set up config params to update existing contacts in Pardot.
     config = {
       operation_name: "update",
       where_clause: "pardot_id IS NOT NULL AND pardot_sync_at < updated_at",
       pardot_url: PARDOT_BATCH_UPDATE_URL
     }
-    # Call helper function
     sync_contacts_with_pardot(config)
   end
 
@@ -153,13 +170,13 @@ class Pardot
     num_operations = 0
     num_operations_last_print = 0
 
-    # query the contact rollups
-
+    # Query the contact rollups.
     PEGASUS_DB[:contact_rollups].where(config[:where_clause]).order(:id).each do |contact_rollup|
-      # Skip if the email has been previously rejected by Pardot as malformed. Since there are just a handful of these,
-      # it is more performant to let this small number of records get returned in the results and skip them rather
-      # than try to exclude them in the SQL query on a large dataset.
-      next if contact_rollup[:email_malformed] == true
+      # Skip if the email has been previously rejected by Pardot as malformed.
+      # Since there are just a handful of these, it is more performant to let
+      # this small number of records get returned in the results and skip them
+      # rather than try to exclude them in the SQL query on a large dataset.
+      next if contact_rollup[:email_malformed]
 
       # Map database field names and data to Pardot fields
       prospect = {}
@@ -167,43 +184,48 @@ class Pardot
         db_value = contact_rollup[mysql_key]
         next unless db_value.present?
         if pardot_info[:multi]
-          # For multi data fields (multiselect,etc.), we set value names as [fieldname]_0, [fieldname]_1, etc
+          # For multi data fields (multiselect,etc.), we set value names as
+          # [fieldname]_0, [fieldname]_1, etc.
           values = db_value.split(",")
           values.each_with_index do |value, index|
             prospect["#{pardot_info[:field]}_#{index}"] = value
           end
         else
-          # For single data fields, just set [fieldname] = value
+          # For single data fields, just set [fieldname] = value.
           prospect[pardot_info[:field]] = db_value
         end
       end
-      # special case: if contact has opted out, set the two different Pardot flavors of opted out
-      # to true. Also, only ever set this to true, otherwise set no value; never set it back
-      # to false. Pardot is the authority on opt-out data, so never reset any opt-out setting it has stored.
+      # Special case: if contact has opted out, set the two different Pardot
+      # flavors of opted out. Also, only ever set this to true, otherwise set no
+      # value; never set it back to false. Pardot is the authority on opt-out
+      # data, so never reset any opt-out setting it has stored.
       if contact_rollup[:opted_out]
         prospect[:opted_out] = true
         prospect[:is_do_not_email] = true
       end
 
-      # If this contact has a dashboard user ID (which means it is a teacher account),
-      # mark that in a Pardot field so we can segment on that.
+      # If this contact has a dashboard user ID (which means it is a teacher
+      # account), mark that in a Pardot field so we can segment on that.
       if contact_rollup[:dashboard_user_id].present?
         prospect[:db_Has_Teacher_Account] = "true"
       end
 
-      # set a custom field to mark in Pardot that this contact was imported from Code Studio
+      # Set a custom field to mark in Pardot that this contact was imported from
+      # Code Studio.
       prospect[:db_Imported] = "true"
-      # add this prosect to the batch
+      # Add this prosect to the batch.
       prospects << prospect
 
-      # As a sniff test, build the URL that would result from our current prospect list
-      # so we can see how long it is
+      # As a sniff test, build the URL that would result from our current
+      # prospect list so we can see how long it is.
       url = build_batch_prospects_url(prospects, config)
 
-      # If the URL is longer than an empirically determined maximum safe length, or if
-      # we have hit our max # of prospects allowed by Pardot in one batch API call, go ahead
-      # and submit the batch
-      next unless url.length > URL_LENGTH_SEND_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE
+      # If the URL is longer than an empirically determined maximum safe length,
+      # or if we have hit our max number of prospects allowed by Pardot in one
+      # batch API call, submit the batch.
+      next unless url.length > URL_LENGTH_SEND_THRESHOLD ||
+        prospects.size == MAX_PROSPECT_BATCH_SIZE
+
       submit_prospect_batch(prospects, config)
       num_operations += prospects.length
       if num_operations > num_operations_last_print + 1000
@@ -213,7 +235,7 @@ class Pardot
       prospects = []
     end
 
-    # Submit any batch remainder
+    # Submit any batch remainder.
     submit_prospect_batch(prospects, config) unless prospects.empty?
     num_operations += prospects.length
     log "Contact #{config[:operation_name]} pass completed. #{num_operations} total operations."
@@ -224,17 +246,17 @@ class Pardot
   # @param config [Hash] hash of config params to use to control create vs update behavior
   # @return [Nokogiri::XML] XML response from Pardot
   def self.submit_prospect_batch(prospects, config)
-    # Build the URL containing prospect data. (Prospect data is sent as a JSON blob in a
-    # query parameter)
+    # Build the URL containing prospect data. Prospect data is sent as a JSON
+    # blob in a query parameter.
     url = build_batch_prospects_url(prospects, config)
 
-    # Build array of the emails to create in Pardot
+    # Build array of the emails to create in Pardot.
     prospect_emails = prospects.collect { |x| x["email"] }
     malformed_emails = []
 
     num_submitted = prospects.length
 
-    # Post the data to create or update a batch of prospects
+    # Post the data to create or update a batch of prospects.
     time_start = Time.now
     doc = post_with_auth_retry(url)
     time_elapsed = Time.now - time_start
@@ -276,9 +298,17 @@ class Pardot
         "prospects/sec"
 
     # Mark Pardot sync time of contacts in our database
-    PEGASUS_DB[:contact_rollups].where("email in ?", prospect_emails).update(pardot_sync_at: DateTime.now) unless prospect_emails.empty?
+    unless prospect_emails.empty?
+      PEGASUS_DB[:contact_rollups].
+        where("email in ?", prospect_emails).
+        update(pardot_sync_at: DateTime.now)
+    end
     # Mark any email addresses rejected by Pardot as malformed so we don't keep trying to fruitlessly create them forever
-    PEGASUS_DB[:contact_rollups].where("email in ?", malformed_emails).update(email_malformed: true) unless malformed_emails.empty?
+    unless malformed_emails.empty?
+      PEGASUS_DB[:contact_rollups].
+        where("email in ?", malformed_emails).
+        update(email_malformed: true)
+    end
 
     @consecutive_timeout_errors = 0
 
@@ -308,17 +338,25 @@ class Pardot
         "process run."
   end
 
-  # Login to Pardot and request an API key. The API key is valid for (up to) one hour, after which
-  # it will become invalid and we will need to request a new one.
+  # Login to Pardot and request an API key. The API key is valid for (up to) one
+  # hour, after which it will become invalid and we will need to request a new
+  # one.
   # @return [String] API key to use for subsequent requests
   def self.request_pardot_api_key
     log "Requesting new API key"
-    doc = post_request(PARDOT_AUTHENTICATION_URL,
-      {email: CDO.pardot_username, password: CDO.pardot_password, user_key: CDO.pardot_user_key}
+    doc = post_request(
+      PARDOT_AUTHENTICATION_URL,
+      {
+        email: CDO.pardot_username,
+        password: CDO.pardot_password,
+        user_key: CDO.pardot_user_key
+      }
     )
 
     status = doc.xpath('/rsp/@stat').text
-    raise "Pardot authentication response failed with status #{status}  #{doc}" if status != "ok"
+    if status != "ok"
+      raise "Pardot authentication response failed with status #{status}  #{doc}"
+    end
 
     api_key = doc.xpath('/rsp/api_key').text
     raise "Pardot authentication response did not include api_key" if api_key.nil?
@@ -326,38 +364,43 @@ class Pardot
     $pardot_api_key = api_key
   end
 
-  # Build the URL for a batch prospect operation in Pardot. The prospect data becomes a JSON blob in the
-  # query param.
+  # Build the URL for a batch prospect operation in Pardot. The prospect data
+  # becomes a JSON blob in the query param.
   # @param prospects [Array<Hash>] array of hashes of prospect data
-  # @param config [Hash] hash of config params to use to control create vs update behavior
-  # @return [String] Pardot URL for API request including encoded JSON prospect data in query string
+  # @param config [Hash] hash of config params to use to control create vs
+  #   update behavior
+  # @return [String] Pardot URL for API request including encoded JSON prospect
+  #   data in query string
   def self.build_batch_prospects_url(prospects, config)
     prospects_payload_json_encoded = URI.encode({ prospects: prospects }.to_json)
-    # We also need to encode plus signs in email addresses, otherwise Pardot rejects them as invalid.
-    # URI.encode does not encode plus signs, as they are valid characters in the base of a URL.
-    # (Although they are NOT valid in the query string, which is where this data is going.)
-    prospects_payload_json_encoded = prospects_payload_json_encoded.gsub("+", "%2B")
+    # We also need to encode plus signs in email addresses, otherwise Pardot
+    # rejects them as invalid. URI.encode does not encode plus signs, as they
+    # are valid characters in the base of a URL. Although they are NOT valid in
+    # the query string, which is where this data is going.
+    prospects_payload_json_encoded = prospects_payload_json_encoded.
+      gsub("+", "%2B")
 
     "#{config[:pardot_url]}?prospects=#{prospects_payload_json_encoded}"
   end
 
-  # Make an API request with Pardot authentication, including appending auth params and refreshing Pardot API key and
-  # retrying if necessary
+  # Make an API request with Pardot authentication, including appending auth
+  # params and refreshing Pardot API key and retrying if necessary.
   # @param url [String] URL to post to
   # @return [Nokogiri::XML] XML response from Pardot
   def self.post_with_auth_retry(url)
     # do the post to Pardot
     post_request_with_auth(url)
   rescue InvalidApiKeyException
-    # If we fail with an invalid key, that probably means our API key (which is good for one hour) has expired. Try one
-    # time to request a new API key and try the post again. If that fails, that is a fatal error.
+    # If we fail with an invalid key, that probably means our API key (which is
+    # good for one hour) has expired. Try one time to request a new API key and
+    # try the post again. If that fails, that is a fatal error.
     request_pardot_api_key
     post_request_with_auth(url)
   end
 
   # Make an API request with Pardot authentication
-  # @param url [String] URL to post to. The URL passed in should not contain auth params, as
-  #   auth params will get appended in this method
+  # @param url [String] URL to post to. The URL passed in should not contain
+  #   auth params, as auth params will get appended in this method.
   # @return [Nokogiri::XML] XML response from Pardot
   def self.post_request_with_auth(url)
     request_pardot_api_key if $pardot_api_key.nil?
@@ -367,7 +410,8 @@ class Pardot
   end
 
   # Make an API request. This method may raise exceptions.
-  # @param url [String] URL to post to - must already include Pardot auth params in query string
+  # @param url [String] URL to post to - must already include Pardot auth params
+  #   in query string
   # @param params [Hash] hash of POST params (may be empty hash)
   # @return [Nokogiri::XML] XML response from Pardot
   def self.post_request(url, params)
@@ -375,8 +419,10 @@ class Pardot
 
     response = Net::HTTP.post_form(uri, params)
 
-    # do common error handling for Pardot response
-    raise "Pardot request failed with HTTP #{response.code} " unless PARDOT_SUCCESS_HTTP_CODES.include?(response.code)
+    # Do common error handling for Pardot response.
+    unless PARDOT_SUCCESS_HTTP_CODES.include?(response.code)
+      raise "Pardot request failed with HTTP #{response.code}"
+    end
 
     doc = Nokogiri::XML(response.body, &:noblanks)
     raise "Pardot response did not return parsable XML" if doc.nil?
@@ -390,8 +436,8 @@ class Pardot
     doc
   end
 
-  # Append standard Pardot auth parameters (per-session API key and fixed user key) to a
-  # Pardot API request
+  # Append standard Pardot auth parameters (per-session API key and fixed user
+  # key) to a Pardot API request
   # @param url [String] URL to post to
   # @return [String] URL with auth parameters appended
   def self.append_auth_params_to_url(url)
@@ -413,7 +459,7 @@ class Pardot
   end
 
   def self.log(s)
-    puts s           # emit to stdout
-    CDO.log.info s   # emit to log file
+    puts s
+    CDO.log.info s
   end
 end
