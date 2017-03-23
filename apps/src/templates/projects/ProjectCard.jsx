@@ -184,12 +184,21 @@ const ProjectCard = React.createClass({
     if (this.state.actionsOpen) {
       return (
         <div style={styles.actionBox}>
-          <h5 style={styles.actionText}>Rename</h5>
-          <h5 style={styles.actionText}>Remix</h5>
-          <h5 style={styles.actionText}>Share</h5>
+          <h5 style={styles.actionText}>
+            Rename
+          </h5>
+          <h5 style={styles.actionText}>
+            Remix
+          </h5>
+          <h5 style={styles.actionText}>
+            Share
+          </h5>
           {this.classPublishAction()}
           {this.publicPublishAction()}
-          <h5 style={styles.delete}><FontAwesome icon=" fa-times-circle" style={styles.xIcon}/> Delete Project</h5>
+          <h5 style={styles.delete}>
+            <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
+            Delete Project
+          </h5>
         </div>
       );
     }

@@ -1,6 +1,16 @@
 import React from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 
+// function generateFakeProject(overrideData) {
+//   return {
+//     ...defaultProject,
+//     ...overrideData
+//   };
+// }
+//
+// // elsewhere
+// generateFakeProject({publishedToClass: true});
+
 const CLASS_PROJECTS = [
   {
     projectData: {

@@ -37,41 +37,16 @@ const ProjectCardGrid = React.createClass({
   },
 
   sortByType(projects) {
-    let applabProjects = [];
-    let gamelabProjects = [];
-    let artistProjects = [];
-    let playlabProjects = [];
-    let weblabProjects = [];
+    let projectLists = {};
 
-    projects.forEach(function (project) {
-      if (project.projectData.type === 'applab') {
-        applabProjects.push(project);
-      }
-      if (project.projectData.type === 'gamelab') {
-        gamelabProjects.push(project);
-      }
-      if (project.projectData.type === 'artist') {
-        artistProjects.push(project);
-      }
-      if (project.projectData.type === 'playlab') {
-        playlabProjects.push(project);
-      }
-      if (project.projectData.type === 'weblab') {
-        weblabProjects.push(project);
-      }
+    projects.forEach(project => {
+      const type = project.projectData.type;
+      projectLists[type] = projectLists[type] || [];
+      projectLists[type].push(project);
     });
 
-    let projectsSortedByType = {
-      applabProjects,
-      gamelabProjects,
-      artistProjects,
-      playlabProjects,
-      weblabProjects
-    };
-    return projectsSortedByType;
+    return projectLists;
   },
-
-//write a render helper function that renders the correct projects based on gallery type
 
   renderSpecificGallery() {
     const { projects, galleryType } = this.props;
@@ -81,7 +56,7 @@ const ProjectCardGrid = React.createClass({
       return (
         <div style={styles.grid}>
           <h2 style={styles.labHeading}> App Lab </h2>
-          {this.sortByType(projects).applabProjects.slice(0,4).map((project, index) => (
+          {this.sortByType(projects).applab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
@@ -90,7 +65,7 @@ const ProjectCardGrid = React.createClass({
             </div>
           ))}
           <h2 style={styles.labHeading}> Game Lab </h2>
-          {this.sortByType(projects).gamelabProjects.slice(0,4).map((project, index) => (
+          {this.sortByType(projects).gamelab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
@@ -99,7 +74,7 @@ const ProjectCardGrid = React.createClass({
             </div>
           ))}
           <h2 style={styles.labHeading}> Artist </h2>
-          {this.sortByType(projects).artistProjects.slice(0,4).map((project, index) => (
+          {this.sortByType(projects).artist.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
@@ -108,7 +83,7 @@ const ProjectCardGrid = React.createClass({
             </div>
           ))}
           <h2 style={styles.labHeading}> Play Lab </h2>
-          {this.sortByType(projects).playlabProjects.slice(0,4).map((project, index) => (
+          {this.sortByType(projects).playlab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
@@ -117,7 +92,7 @@ const ProjectCardGrid = React.createClass({
             </div>
           ))}
           <h2 style={styles.labHeading}> Web Lab </h2>
-          {this.sortByType(projects).weblabProjects.slice(0,4).map((project, index) => (
+          {this.sortByType(projects).weblab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
