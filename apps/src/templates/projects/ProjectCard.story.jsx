@@ -1,49 +1,33 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-const PROJECTCARD_NOT_PUBLISHED = {
-    channel: 'ABCDEFGHIJKLM01234',
-    projectName: 'Puppy Playdate',
-    studentName: 'Penelope',
-    studentAge: 8,
-    type: 'applab',
-    updatedAt: '2016-12-31T23:59:59.999-08:00',
-    publishedToPublic: false,
-    publishedToClass: false
-  };
+const defaultData = {
+  channel: 'abcdef',
+  projectName: 'Puppy Playdate',
+  studentName: 'Penelope',
+  studentAge: 8,
+  type: 'applab',
+  updatedAt: '2016-12-31T23:59:59.999-08:00',
+  publishedToPublic: false,
+  publishedToClass: false
+};
 
-  const PROJECTCARD_CLASS_PUBLISHED = {
-    channel: 'ABCDEFGHIJKLM01234',
-    projectName: 'Puppy Playdate',
-    studentName: 'Penelope',
-    studentAge: 8,
-    type: 'applab',
-    updatedAt: '2016-12-31T23:59:59.999-08:00',
-    publishedToPublic: false,
-    publishedToClass: true
-  };
+const PUBLISHED_PUBLIC = {
+  ...defaultData,
+  publishedToPublic: true
+};
 
-  const PROJECTCARD_PUBLIC_PUBLISHED = {
-    channel: 'ABCDEFGHIJKLM01234',
-    projectName: 'Puppy Playdate',
-    studentName: 'Penelope',
-    studentAge: 8,
-    type: 'applab',
-    updatedAt: '2016-12-31T23:59:59.999-08:00',
-    publishedToPublic: true,
-    publishedToClass: false
-  };
+const PUBLISHED_CLASS = {
+  ...defaultData,
+  publishedToClass: true
+};
 
-  const PROJECTCARD_BOTH_PUBLISHED = {
-    channel: 'ABCDEFGHIJKLM01234',
-    projectName: 'Puppy Playdate',
-    studentName: 'Penelope',
-    studentAge: 8,
-    type: 'applab',
-    updatedAt: '2016-12-31T23:59:59.999-08:00',
-    publishedToPublic: true,
-    publishedToClass: true
-  };
+const PUBLISHED_BOTH = {
+  ...defaultData,
+  publishedToPublic: true,
+  publishedToClass: true,
+};
+
 
 export default storybook => {
   storybook
@@ -54,7 +38,7 @@ export default storybook => {
         description: 'Personal gallery should NOT show student display name and should show chevron, which on-click shows a box with publishing options. Publishing options should include Publish to Class Gallery and Publish to Public Gallery',
         story: () => (
           <ProjectCard
-            projectData={PROJECTCARD_NOT_PUBLISHED}
+            projectData={defaultData}
             currentGallery="personal"
           />
         )
@@ -64,7 +48,7 @@ export default storybook => {
         description: 'Personal gallery should NOT show student display name and should show chevron, which on-click shows a box with publishing options. Publishing options should include Remove from Class Gallery and Publish to Public Gallery',
         story: () => (
           <ProjectCard
-            projectData={PROJECTCARD_CLASS_PUBLISHED}
+            projectData={PUBLISHED_CLASS}
             currentGallery="personal"
           />
         )
@@ -74,7 +58,7 @@ export default storybook => {
         description: 'Personal gallery should NOT show student display name and should show chevron, which on-click shows a box with publishing options. Publishing options should include Publish to Class Gallery and Remove from Public Gallery',
         story: () => (
           <ProjectCard
-            projectData={PROJECTCARD_PUBLIC_PUBLISHED}
+            projectData={PUBLISHED_PUBLIC}
             currentGallery="personal"
           />
         )
@@ -84,7 +68,7 @@ export default storybook => {
         description: 'Personal gallery should NOT show student display name and should show chevron, which on-click shows a box with publishing options. Publishing options should include Remove from Class Gallery and Remove from Public Gallery',
         story: () => (
           <ProjectCard
-            projectData={PROJECTCARD_BOTH_PUBLISHED}
+            projectData={PUBLISHED_BOTH}
             currentGallery="personal"
           />
         )
@@ -94,7 +78,7 @@ export default storybook => {
         description: 'Classroom gallery should show student display name and should NOT show chevron',
         story: () => (
           <ProjectCard
-            projectData={PROJECTCARD_BOTH_PUBLISHED}
+            projectData={PUBLISHED_BOTH}
             currentGallery="class"
           />
         )
@@ -104,7 +88,7 @@ export default storybook => {
         description: 'Public gallery should NOT show student display name and should NOT show chevron',
         story: () => (
           <ProjectCard
-            projectData={PROJECTCARD_BOTH_PUBLISHED}
+            projectData={PUBLISHED_BOTH}
             currentGallery="public"
           />
         )
