@@ -128,6 +128,26 @@ window.SignupManager = function (options) {
     lastUserType = "teacher";
   }
 
+  function getEnvironment() {
+    const hostname = window.location.hostname;
+    if (hostname.includes("adhoc")) {
+      // check first for adhoc, since hostnames might include other keywords
+      return "adhoc";
+    } else if (hostname.includes("test")) {
+      return "test";
+    } else if (hostname.includes("staging")) {
+      return "staging";
+    } else if (hostname.includes("levelbuilder")) {
+      return "levelbuilder";
+    } else if (hostname.includes("localhost")) {
+      return "localhost";
+    } else if (hostname.includes("code.org")) {
+      return "production";
+    } else {
+      return "unknown";
+    }
+  }
+
   /**
    * Log signup-related analytics events to Firehose
    * @param eventName name of the event to log
@@ -144,7 +164,7 @@ window.SignupManager = function (options) {
     }
 
     const streamName = "analysis-events";
-    const environment = "eric-dev"; // TODO(eric): switch this to production before merge
+    const environment = getEnvironment();
     const study = "signup_school_dropdown";
     const studyGroup = shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
 
