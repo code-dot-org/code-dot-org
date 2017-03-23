@@ -63,17 +63,6 @@ class Script < ActiveRecord::Base
 
   def generate_plc_objects
     if professional_learning_course?
-      # Verify that either no stages have flex categories or they all have categories we recognize
-      learning_module_types = stages.map(&:flex_category)
-
-      unless learning_module_types.uniq == [nil] || Set.new(learning_module_types) <= Set.new(Plc::LearningModule::MODULE_TYPES)
-        raise "#{name}, either all stages must have flex categories that correspond to learning module types, or none of them should have categories"
-      end
-
-      unless learning_module_types.compact.empty? || learning_module_types.chunk { |x| x }.map(&:first) == learning_module_types.uniq
-        raise "#{name} all stages need to be grouped together in order"
-      end
-
       course = Plc::Course.find_or_create_by! name: professional_learning_course
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
