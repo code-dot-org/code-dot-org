@@ -28,8 +28,8 @@
     "fast_get_nectar_animation": "false",
     "instructions": "Collect all four piles to pass this level.",
     "instructions_important": "true",
-    "min_collected": "4",
-    "markdown_instructions": "Move Laurel to the gold, then use `collect` to pick it up.\r\n\r\nCollect one pile of gold to pass this level.",
+    "min_collected": "1",
+    "markdown_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.\r\n\r\nCollect one pile of treasure to pass this level.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "contained_level_names": null
