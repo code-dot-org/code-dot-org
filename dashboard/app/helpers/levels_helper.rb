@@ -713,7 +713,7 @@ module LevelsHelper
   def can_view_teacher_markdown?
     if current_user.try(:authorized_teacher?)
       true
-    elsif current_user.try(:teacher?)
+    elsif current_user.try(:teacher?) && @script
       @script.k5_course? || @script.k5_draft_course?
     else
       false
