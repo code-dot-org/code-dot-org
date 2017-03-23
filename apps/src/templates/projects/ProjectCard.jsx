@@ -4,34 +4,52 @@ import FontAwesome from '../FontAwesome';
 
 const styles = {
   card: {
-    border: '1px solid lightGray',
+    border: '1px solid #bbbbbb',
     borderRadius: 2,
-    width: 215
+    width: 215,
+    backgroundColor: color.white
   },
   title: {
-    paddingLeft: 10,
+    paddingLeft: 15,
     paddingRight: 10,
-    paddingTop: 5,
+    paddingTop: 10,
+    paddingBottom: 5,
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
     backgroundColor: color.white,
     color: color.gray
   },
   lastEdit: {
-    paddingLeft: 10,
+    paddingLeft: 15,
     paddingRight: 10,
-    paddingTop: 5,
-    fontSize: 10,
+    paddingBottom: 10,
+    fontSize: 12,
     fontFamily: '"Gotham", sans-serif',
     backgroundColor: color.white,
     color: color.gray
   },
   studentName: {
-    paddingLeft: 10,
+    paddingLeft: 15,
     paddingRight: 10,
     paddingTop: 5,
     fontSize: 12,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham", sans-serif',
+    backgroundColor: color.white,
+    color: color.gray
+  },
+  ageRange: {
+    paddingLeft: 10,
+    paddingTop: 5,
+    fontSize: 12,
+    fontFamily: '"Gotham", sans-serif',
+    backgroundColor: color.white,
+    color: color.gray
+  },
+  firstInitial: {
+    paddingTop: 5,
+    fontSize: 12,
+    paddingLeft: 15,
+    fontFamily: '"Gotham", sans-serif',
     backgroundColor: color.white,
     color: color.gray
   },
@@ -43,22 +61,29 @@ const styles = {
     height: 150
   },
   actionBox: {
-    width: 180,
-    padding: 10,
-    fontSize: 12,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.light_gray,
-    border: '1px solid gray',
+    width: 160,
+    paddingLeft: 15,
+    paddingRight: 15,
+    border: '1px solid #bbbbbb',
     borderRadius: 2,
     backgroundColor: color.white,
-    boxShadow: "3px 3px 3px lightGray",
+    boxShadow: "3px 3px 3px gray",
     marginTop: 5,
     position: "absolute"
   },
+  actionText: {
+    fontSize: 12,
+    fontFamily: '"Gotham", sans-serif',
+    color: color.gray
+  },
   delete: {
     color: color.red,
-    borderTop: '2px solid lightGray',
+    borderTop: '1px solid lightGray',
     paddingTop: 10,
+    fontSize: 12
+  },
+  xIcon: {
+    paddingRight: 5
   },
 };
 
@@ -87,9 +112,53 @@ const ProjectCard = React.createClass({
     if (this.props.currentGallery === 'class'){
       return (
         <div style={styles.studentName}>
-          By {this.props.projectData.studentName}
+          By: {this.props.projectData.studentName}
         </div>
       );
+    }
+  },
+
+  renderFirstInitial() {
+    if (this.props.currentGallery === 'public'){
+      return (
+        <span style={styles.firstInitial}>
+          By: {this.props.projectData.studentName[0]}
+        </span>
+      );
+    }
+  },
+
+  renderStudentAgeRange() {
+    // The student's age range should only be visible in the public gallery.
+    if (this.props.currentGallery === 'public'){
+      if (this.props.projectData.studentAge >= 18){
+        return (
+          <span style={styles.ageRange}>
+            Age: 18+
+          </span>
+        );
+      }
+      if (this.props.projectData.studentAge >= 13){
+        return (
+          <span style={styles.ageRange}>
+            Age: 13+
+          </span>
+        );
+      }
+      if (this.props.projectData.studentAge >= 8){
+        return (
+          <span style={styles.ageRange}>
+            Age: 8+
+          </span>
+        );
+      }
+      if (this.props.projectData.studentAge >= 4){
+        return (
+          <span style={styles.ageRange}>
+            Age: 4+
+          </span>
+        );
+      }
     }
   },
 
@@ -115,12 +184,12 @@ const ProjectCard = React.createClass({
     if (this.state.actionsOpen) {
       return (
         <div style={styles.actionBox}>
-          <h5>Rename</h5>
-          <h5>Remix</h5>
-          <h5>Share</h5>
+          <h5 style={styles.actionText}>Rename</h5>
+          <h5 style={styles.actionText}>Remix</h5>
+          <h5 style={styles.actionText}>Share</h5>
           {this.classPublishAction()}
           {this.publicPublishAction()}
-          <h5 style={styles.delete}><FontAwesome icon=" fa-times-circle"/> Delete Project</h5>
+          <h5 style={styles.delete}><FontAwesome icon=" fa-times-circle" style={styles.xIcon}/> Delete Project</h5>
         </div>
       );
     }
@@ -129,22 +198,22 @@ const ProjectCard = React.createClass({
   classPublishAction() {
     if (this.props.projectData.publishedToClass) {
       return (
-        <h5> Remove from Class Gallery</h5>
+        <h5 style={styles.actionText}> Remove from Class Gallery</h5>
       );
     }
     return (
-      <h5> Publish to Class Gallery</h5>
+      <h5 style={styles.actionText}> Publish to Class Gallery</h5>
     );
   },
 
   publicPublishAction() {
     if (this.props.projectData.publishedToPublic) {
       return (
-        <h5> Remove from Public Gallery</h5>
+        <h5 style={styles.actionText}> Remove from Public Gallery</h5>
       );
     }
     return (
-      <h5> Publish to Public Gallery</h5>
+      <h5 style={styles.actionText}> Publish to Public Gallery</h5>
     );
   },
 
@@ -153,23 +222,27 @@ const ProjectCard = React.createClass({
       <div>
         <div style={styles.card}>
           <img src={require('./placeholder.jpg')} style={styles.thumbnail} />
-           <div style={styles.title}>
-             {this.props.projectData.projectName}
-           </div>
 
-           {this.renderStudentName()}
+          <div style={styles.title}>
+            {this.props.projectData.projectName}
+          </div>
 
-           <div style={styles.lastEdit}>
-             {this.renderArrowIcon()}
-             Last edited: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
-           </div>
-         </div>
+          {this.renderStudentName()}
 
-          {this.renderActionBox()}
+          <span>
+            {this.renderFirstInitial()}
+            {this.renderStudentAgeRange()}
+          </span>
+
+          <div style={styles.lastEdit}>
+            {this.renderArrowIcon()}
+             Last edited: 4 hours ago
+          </div>
+        </div>
+
+        {this.renderActionBox()}
 
       </div>
-
-
     );
   }
 });

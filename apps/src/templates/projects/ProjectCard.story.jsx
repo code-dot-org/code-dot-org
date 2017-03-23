@@ -4,7 +4,8 @@ import ProjectCard from './ProjectCard';
 const PROJECTCARD_NOT_PUBLISHED = {
     channel: 'ABCDEFGHIJKLM01234',
     projectName: 'Puppy Playdate',
-    studentName: 'Ella',
+    studentName: 'Penelope',
+    studentAge: 8,
     type: 'applab',
     updatedAt: '2016-12-31T23:59:59.999-08:00',
     publishedToPublic: false,
@@ -14,7 +15,8 @@ const PROJECTCARD_NOT_PUBLISHED = {
   const PROJECTCARD_CLASS_PUBLISHED = {
     channel: 'ABCDEFGHIJKLM01234',
     projectName: 'Puppy Playdate',
-    studentName: 'Ella',
+    studentName: 'Penelope',
+    studentAge: 8,
     type: 'applab',
     updatedAt: '2016-12-31T23:59:59.999-08:00',
     publishedToPublic: false,
@@ -24,7 +26,8 @@ const PROJECTCARD_NOT_PUBLISHED = {
   const PROJECTCARD_PUBLIC_PUBLISHED = {
     channel: 'ABCDEFGHIJKLM01234',
     projectName: 'Puppy Playdate',
-    studentName: 'Ella',
+    studentName: 'Penelope',
+    studentAge: 8,
     type: 'applab',
     updatedAt: '2016-12-31T23:59:59.999-08:00',
     publishedToPublic: true,
@@ -34,7 +37,8 @@ const PROJECTCARD_NOT_PUBLISHED = {
   const PROJECTCARD_BOTH_PUBLISHED = {
     channel: 'ABCDEFGHIJKLM01234',
     projectName: 'Puppy Playdate',
-    studentName: 'Ella',
+    studentName: 'Penelope',
+    studentAge: 8,
     type: 'applab',
     updatedAt: '2016-12-31T23:59:59.999-08:00',
     publishedToPublic: true,
