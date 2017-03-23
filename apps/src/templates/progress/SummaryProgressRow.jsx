@@ -7,6 +7,8 @@ import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import FocusAreaIndicator from './FocusAreaIndicator';
+import _ from 'lodash';
+import i18n from '@cdo/locale';
 
 export const styles = {
   lightRow: {
@@ -99,6 +101,7 @@ const SummaryProgressRow = React.createClass({
     const locked = lockedForSection ||
       levels.every(level => level.status === LevelStatus.locked);
 
+    const lockedTooltipId = _.uniqueId();
     return (
       <tr
         style={{
@@ -118,13 +121,25 @@ const SummaryProgressRow = React.createClass({
               />
             }
             {lesson.lockable &&
-              <FontAwesome
-                icon={locked ? 'lock' : 'unlock'}
-                style={{
-                  ...styles.icon,
-                  ...(!locked && styles.unlockedIcon)
-                }}
-              />
+              <span data-tip data-for={lockedTooltipId}>
+                <FontAwesome
+                  icon={locked ? 'lock' : 'unlock'}
+                  style={{
+                    ...styles.icon,
+                    ...(!locked && styles.unlockedIcon)
+                  }}
+                />
+                {!locked && viewAs === ViewType.Teacher &&
+                  <ReactTooltip
+                    id={lockedTooltipId}
+                    role="tooltip"
+                    wrapper="span"
+                    effect="solid"
+                  >
+                    {i18n.lockAssessmentLong()}
+                  </ReactTooltip>
+                }
+              </span>
             }
             <span data-tip data-for={lessonTitle} aria-describedby={lessonTitle}>
               {lessonTitle}
