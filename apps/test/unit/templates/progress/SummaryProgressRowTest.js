@@ -94,7 +94,7 @@ describe('SummaryProgressRow', () => {
         lockedForSection={true}
       />
     );
-    assert.equal(wrapper.find('td div').children().at(0).props().icon, 'lock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
   });
 
   it('has an unlock icon when lockable and unlocked', () => {
@@ -105,7 +105,7 @@ describe('SummaryProgressRow', () => {
         lockedForSection={false}
       />
     );
-    assert.equal(wrapper.find('td div').children().at(0).props().icon, 'unlock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'unlock');
   });
 
   it('has two icons when locked and hidden', () => {
@@ -117,7 +117,7 @@ describe('SummaryProgressRow', () => {
         lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
       />
     );
-    assert.equal(wrapper.find('td div').children().at(0).props().icon, 'eye-slash');
-    assert.equal(wrapper.find('td div').children().at(1).props().icon, 'lock');
+    assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'eye-slash');
+    assert.equal(wrapper.find('FontAwesome').at(1).props().icon, 'lock');
   });
 });
