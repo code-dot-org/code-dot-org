@@ -109,7 +109,7 @@ module Api::V1::Pd::WorkshopScoreSummarizer
 
         survey_response.symbolize_keys.each do |question, answer|
           if answer.is_a? Hash
-            # Then "answer" is actually a hash af answers for each
+            # Then "answer" is actually a hash of answers for each
             # facilitator name
             answer.each do |facilitator_name, actual_answer|
               process_response(workshop, report_rows, facilitator_scores, include_free_responses, free_responses, question, actual_answer, facilitator_name)
