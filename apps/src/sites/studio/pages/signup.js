@@ -152,6 +152,8 @@ window.SignupManager = function (options) {
       user_agent: window.navigator.userAgent,
       window_width: window.innerWidth,
       window_height: window.innerHeight,
+      hostname: window.location.hostname,
+      full_path: window.location.href
     };
     Object.assign(dataJson, extraData);
     if (!!window.optimizely) {
