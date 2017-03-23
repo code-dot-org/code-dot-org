@@ -105,12 +105,12 @@ class PdWorkshopSurveyTest < Minitest::Test
         {
           consent_b: '1',
           who_facilitated_ss: facilitators,
-          how_clearly_presented_s: {"Tom" => 'Extremely clearly', "Dick" => 'Extremely clearly'},
-          how_interesting_s: {"Tom" => 'Extremely interesting', "Dick" => 'Extremely interesting'},
-          how_often_given_feedback_s: {"Tom" => 'All the time', "Dick" => 'All the time'},
-          help_quality_s: {"Tom" => 'Extremely good', "Dick" => 'Extremely good'},
-          how_comfortable_asking_questions_s: {"Tom" => 'Extremely comfortable', "Dick" => 'Extremely comfortable'},
-          how_often_taught_new_things_s: {"Tom" => 'All the time', "Dick" => 'All the time'}
+          how_clearly_presented_s: {"Tom" => 'Extremely clearly', "Dick" => 'Not at all clearly'},
+          how_interesting_s: {"Tom" => 'Extremely interesting', "Dick" => 'Not at all interesting'},
+          how_often_given_feedback_s: {"Tom" => 'All the time', "Dick" => 'Almost never'},
+          help_quality_s: {"Tom" => 'Extremely good', "Dick" => 'Not at all good'},
+          how_comfortable_asking_questions_s: {"Tom" => 'Extremely comfortable', "Dick" => 'Not at all comfortable'},
+          how_often_taught_new_things_s: {"Tom" => 'All the time', "Dick" => 'Almost never'}
         }
       )
 
