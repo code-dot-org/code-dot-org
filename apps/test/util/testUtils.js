@@ -254,7 +254,7 @@ function zeroPadLeft(string, desiredWidth) {
 export function throwOnConsoleErrors() {
   let firstError = null;
   beforeEach(function () {
-    sinon.stub(console, 'error', msg => {
+    sinon.stub(console, 'error').callsFake(msg => {
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
       if (!firstError) {
@@ -275,7 +275,7 @@ export function throwOnConsoleErrors() {
 export function throwOnConsoleWarnings() {
   let firstError = null;
   beforeEach(function () {
-    sinon.stub(console, 'warn', msg => {
+    sinon.stub(console, 'warn').callsFake(msg => {
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
       if (!firstError) {

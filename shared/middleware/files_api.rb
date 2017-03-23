@@ -185,7 +185,19 @@ class FilesApi < Sinatra::Base
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
+
+    if code_projects_domain_root_route && html?(response.headers)
+      return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
+    end
+
     result[:body]
+  end
+
+  CONTENT_TYPE = 'Content-Type'.freeze
+  TEXT_HTML = 'text/html'.freeze
+
+  def html?(headers)
+    headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
   end
 
   #

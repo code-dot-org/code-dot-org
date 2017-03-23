@@ -9,9 +9,7 @@ describe('project.getProjectUrl', function () {
   let url;
 
   beforeEach(function () {
-    stubUrl = sinon.stub(project, 'getUrl', function () {
-      return url;
-    });
+    stubUrl = sinon.stub(project, 'getUrl').callsFake(() => url);
   });
 
   afterEach(function () {
