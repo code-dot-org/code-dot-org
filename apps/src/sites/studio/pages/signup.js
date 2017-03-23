@@ -303,4 +303,6 @@ window.SignupManager = function (options) {
   $("#user_name").placeholder();
   $("#user_email").placeholder();
   $("#user_school").placeholder();
+
+  logAnalyticsEvent("page_load");
 };
