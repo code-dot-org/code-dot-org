@@ -109,22 +109,13 @@ class Pardot
       results_in_response = 0
 
       # Process every prospect in the response.
-      email_to_pardot_id = {}
+      id_max = email_to_pardot_id.values.max
       doc.xpath('/rsp/result/prospect').each do |node|
-        pardot_id = node.xpath("id").text.to_i
+        id = node.xpath("id").text.to_i
         email = node.xpath("email").text
         results_in_response += 1
-        email_to_pardot_id[email] = pardot_id
-      end
-      id_max = email_to_pardot_id.values.max
-
-      # Update the Pardot ID in our DB for these contacts.
-      PEGASUS_DB.transaction do
-        email_to_pardot_id.each do |email, pardot_id|
-          PEGASUS_DB[:contact_rollups].
-            where(email: email).
-            update(pardot_id: pardot_id)
-        end
+        id_max = id
+        PEGASUS_DB[:contact_rollups].where(email: email).update(pardot_id: id)
       end
 
       log "Updated Pardot IDs in our database for #{results_in_response} contacts."
