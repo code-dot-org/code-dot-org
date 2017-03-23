@@ -19,7 +19,7 @@ def filter_rubocop(modified_files)
     RUBY_EXTENSIONS.any? {|ext| f.end_with? ext }
   end
   modified_ruby_scripts = modified_files.select do |f|
-    first_line = File.exist?(f) ? File.open(f).first : nil
+    first_line = File.file?(f) ? File.open(f).first : nil
     first_line && first_line.ascii_only? && first_line.match(/#!.*ruby/)
   end
   modified_ruby_scripts + modified_rb_rake_files
