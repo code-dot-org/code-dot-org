@@ -36,6 +36,7 @@ var ALLOWED_KEYS = new Set([
   'isMinecraft',
   'visualizationHasPadding',
   'visualizationInWorkspace',
+  'hideCoordinateOverlay',
   'hideSource',
   'hideRunButton',
   'playspacePhoneFrame',
