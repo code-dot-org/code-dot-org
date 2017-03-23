@@ -45,7 +45,8 @@ const ProgressBubbleSet = React.createClass({
         url: PropTypes.string
       })
     ).isRequired,
-    disabled: PropTypes.bool.isRequired
+    disabled: PropTypes.bool.isRequired,
+    style: PropTypes.object,
   },
 
   getIcon(level) {
@@ -56,10 +57,10 @@ const ProgressBubbleSet = React.createClass({
   },
 
   render() {
-    const { start, levels, disabled } = this.props;
+    const { start, levels, disabled, style } = this.props;
 
     return (
-      <div style={styles.main}>
+      <div style={{...styles.main, ...style}}>
         {levels.map((level, index) => (
           <div
             style={styles.withBackground}

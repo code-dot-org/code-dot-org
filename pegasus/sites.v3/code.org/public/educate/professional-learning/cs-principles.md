@@ -7,7 +7,7 @@ nav: plc_csp_nav
 <iframe width="600" height="337" src="https://www.youtube.com/embed/DMr1iFYacGQ" frameborder="0" allowfullscreen></iframe>
 <br />
 
-The Code.org Computer Science Principles Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CS Principles course. This program is designed to prepare educators to provide high quality instruction based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms. **We are now accepting applications for the 2017-18 Professional Learning Program! Please read below for more information.** 
+The Code.org Computer Science Principles Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CS Principles course. This program is designed to prepare educators to provide high quality instruction based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms. **We are now accepting applications for the 2017-18 CS Principles Professional Learning Program! Please read below for more information.** 
 
 [<button>Apply now!</button>](/educate/professional-learning/cs-principles-apply)
 
@@ -56,7 +56,7 @@ The CS Principles Professional Learning Program is available in regions served b
 
 ## <a name="apply"></a>How to apply?
 
-Applications for the 2017-18 CS Principles Learning Program are now open! We are accepting applications until April 14, 2017, so apply now if you're ready to get started. 
+Applications for the 2017-18 CS Principles Professional Learning Program are open until April 14, 2017. Apply now if you're ready to get started! 
 
 [<button>Apply now!</button>](/educate/professional-learning/cs-principles-apply)
 

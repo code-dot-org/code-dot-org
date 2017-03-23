@@ -16,7 +16,7 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 describe("GameLab", () => {
   before(setExternalGlobals);
 
-  before(() => sinon.stub(ReactDOM, 'render', () => undefined));
+  before(() => sinon.stub(ReactDOM, 'render'));
   after(() => ReactDOM.render.restore());
 
   before(() => experiments.setEnabled('collapse-debugger', true));

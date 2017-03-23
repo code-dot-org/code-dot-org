@@ -187,7 +187,7 @@ describe('The DebugConsole component', () => {
       selection = '';
       inputEl = debugInput().get(0);
       sinon.spy(inputEl, 'focus');
-      sinon.stub(window, 'getSelection', () => selection);
+      sinon.stub(window, 'getSelection').callsFake(() => selection);
     });
 
     afterEach(() => {

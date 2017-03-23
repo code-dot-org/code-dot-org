@@ -9,9 +9,11 @@ import i18n from '@cdo/locale';
 import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
+import FocusAreaIndicator from './FocusAreaIndicator';
 
 const styles = {
   outer: {
+    position: 'relative',
     display: 'table',
     width: '100%',
     marginBottom: 12,
@@ -154,6 +156,7 @@ const ProgressLesson = React.createClass({
             <ProgressLessonTeacherInfo lesson={lesson}/>
           </div>
         }
+        {lesson.isFocusArea && <FocusAreaIndicator/>}
       </div>
     );
   }

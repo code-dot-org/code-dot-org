@@ -14,7 +14,7 @@ describe('CircuitPlaygroundBoard', () => {
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
-    sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport', () => {
+    sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport').callsFake(() => {
       playground = new Playground({});
       playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
 
