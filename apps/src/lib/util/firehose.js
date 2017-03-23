@@ -73,13 +73,31 @@ class FirehoseClient {
     return false;
   }
 
+  isDevelopmentEnvironment() {
+    if (window && window.location) {
+      const hostname = window.location.hostname;
+      if (hostname.includes("localhost")) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  shouldSendAnalytics() {
+    return !(this.isTestEnvironment() || this.isDevelopmentEnvironment());
+  }
+
   /**
    * Pushes one data record into the delivery stream.
    * @param {string} deliveryStreamName The name of the delivery stream.
    * @param {hash} data The data to push.
+   * @param {boolean} alwaysSendAnalytics Force analytics to be sent even in development/test (default false)
    */
-  putRecord(deliveryStreamName, data) {
-    if (this.isTestEnvironment()) {
+  putRecord(deliveryStreamName, data, alwaysSendAnalytics = false) {
+    if (!alwaysSendAnalytics && !this.shouldSendAnalytics()) {
+      console.groupCollapsed("Skipped sending analytics event to " + deliveryStreamName+ " in development/test: " + data.event);
+      console.log(data);
+      console.groupEnd();
       return;
     }
 
@@ -104,9 +122,15 @@ class FirehoseClient {
    * Pushes an array of data records into the delivery stream.
    * @param {string} deliveryStreamName The name of the delivery stream.
    * @param {array[hash]} data The data to push.
+   * @param {boolean} alwaysSendAnalytics Force analytics to be sent even in development/test (default false)
    */
-  putRecordBatch(deliveryStreamName, data) {
-    if (this.isTestEnvironment()) {
+  putRecordBatch(deliveryStreamName, data, alwaysSendAnalytics = false) {
+    if (!alwaysSendAnalytics && !this.shouldSendAnalytics()) {
+      console.groupCollapsed("Skipped sending analytics event batch to " + deliveryStreamName + " in development/test");
+      data.map(function (record) {
+        console.log(record);
+      });
+      console.groupEnd();
       return;
     }
 
