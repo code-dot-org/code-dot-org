@@ -5,6 +5,7 @@ import msg from '@cdo/locale';
 import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
 import {showAssetManager} from '../../code-studio/assets';
+import * as maker from '../kits/maker/toolkit';
 
 const SETTINGS_MENU_WIDTH = 250;
 
@@ -87,13 +88,15 @@ class SettingsCog extends Component {
         <div style={styles.menu}>
           <div>
             <MenuItem
-              text="Manage Assets"
+              text={msg.manageAssets()}
               onClick={() => this.manageAssets()}
             />
-            <MenuItem
-              text="Enable Maker Toolkit"
-              onClick={() => this.toggleMakerToolkit()}
-            />
+            {maker.isAvailable() &&
+              <MenuItem
+                text={maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
+                onClick={() => this.toggleMakerToolkit()}
+              />
+            }
           </div>
           <span style={styles.arrow}/>
         </div>

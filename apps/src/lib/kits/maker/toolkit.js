@@ -35,6 +35,13 @@ export function isEnabled() {
 }
 
 /**
+ * @returns {boolean} whether Maker Toolkit is usable with the current app at all
+ */
+export function isAvailable() {
+  return !!redux.getRoot(getStore().getState());
+}
+
+/**
  * Called when starting execution of the student app.
  * Looks for a connected board, sets up an appropriate board controller,
  * and injects needed references into the interpreter and its commands.
