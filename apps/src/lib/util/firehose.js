@@ -63,12 +63,26 @@ import AWS from 'aws-sdk';
 // TODO(asher): Add the ability to queue records individually, to be submitted
 // as a batch.
 class FirehoseClient {
+  isTestEnvironment() {
+    if (window && window.location) {
+      const hostname = window.location.hostname;
+      if ("test.code.org" === hostname || "test-studio.code.org" === hostname) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   /**
    * Pushes one data record into the delivery stream.
    * @param {string} deliveryStreamName The name of the delivery stream.
    * @param {hash} data The data to push.
    */
   putRecord(deliveryStreamName, data) {
+    if (this.isTestEnvironment()) {
+      return;
+    }
+
     FIREHOSE.putRecord(
       {
         DeliveryStreamName: deliveryStreamName,
@@ -92,6 +106,10 @@ class FirehoseClient {
    * @param {array[hash]} data The data to push.
    */
   putRecordBatch(deliveryStreamName, data) {
+    if (this.isTestEnvironment()) {
+      return;
+    }
+
     const batch = data.map(function (record) {
       return {
         Data: JSON.stringify(record)
