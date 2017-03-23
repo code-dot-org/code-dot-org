@@ -50,11 +50,12 @@ export default storybook => {
         name:'SummaryProgressTable with focus area',
         story: () => (
           <SummaryProgressTable
-            lessons={lessons.map((lesson, index) => ({
+            {...defaultProps}
+            lessons={defaultProps.lessons.map((lesson, index) => ({
               ...lesson,
               isFocusArea: index === 1
             }))}
-            levelsByLesson={levelsByLesson.map((levels, index) => index === 1 ? fakeLevels(8) : levels)}
+            levelsByLesson={defaultProps.levelsByLesson.map((levels, index) => index === 1 ? fakeLevels(8) : levels)}
             lessonIsVisible={() => true}
             lessonLockedForSection={() => false}
           />
