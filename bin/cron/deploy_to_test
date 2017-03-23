@@ -20,7 +20,7 @@ def main
     return
   end
 
-  if GitHub.compare(base: 'test', head: 'staging').empty?
+  unless GitHub.behind?(base: 'staging', compare: 'test')
     ChatClient.message(
       'infra-test',
       "robo-DTT skipped, nothing to DTT",
@@ -31,7 +31,7 @@ def main
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
-  unless GitHub.compare(base: 'staging', head: 'test').empty?
+  if GitHub.ahead?(base: 'staging', compare: 'test')
     unless DevelopersTopic.dts?
       ChatClient.message(
         'infra-test',
@@ -47,7 +47,7 @@ def main
     )
     pr_number = GitHub.create_and_merge_pull_request(
       base: 'staging',
-      head: 'head',
+      head: 'test',
       title: 'DTS (Test > Staging) [robo-dtt]'
     )
     if pr_number.nil?

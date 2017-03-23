@@ -93,6 +93,34 @@ module GitHub
     response.commits.map(&:commit).map(&:message)
   end
 
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
+  # @param base [String] The base branch to compare against.
+  # @param compare [String] The comparison branch to compare.
+  # @raise [Exception] From calling Octokit.compare.
+  # @return [Boolean] Whether compare is ahead of base, i.e., whether compare
+  #   has commits not in base.
+  def self.ahead?(base:, compare:)
+    base_sha = sha(base)
+    compare_sha = sha(compare)
+
+    response = Octokit.compare(REPO, base_sha, compare_sha)
+    response.ahead_by > 0
+  end
+
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
+  # @param base [String] The base branch to compare against.
+  # @param compare [String] The comparison brnach to compare.
+  # @raise [Exception] From calling Octokit.compare.
+  # @return [Boolean] Whether compare is behind base, i.e., whether compare is missing
+  #   commits in base.
+  def self.behind?(base:, compare:)
+    base_sha = sha(base)
+    compare_sha = sha(compare)
+
+    response = Octokit.compare(REPO, base_sha, compare_sha)
+    response.behind_by > 0
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Repositories.html#branch-instance_method
   # @param branch [String] The name of the branch.
   # @raise [Octokit::NotFound] If the specified branch does not exist.
