@@ -1,7 +1,6 @@
 import React from 'react';
 
-import RadioFormGroup from './RadioFormGroup';
-import CheckboxFormGroup from './CheckboxFormGroup';
+import {ButtonList} from '../form_components/button_list';
 
 const SINGLE_SELECT = 'single_select';
 const MULTI_SELECT = 'multi_select';
@@ -24,12 +23,21 @@ const ColumnVariableQuestion = React.createClass({
   buildColumn(selectedValue) {
     const key = `${this.props.question.name}[${selectedValue}]`;
 
-    let formGroup;
+    let type;
     if (this.props.question.type === SINGLE_SELECT) {
-      formGroup = <RadioFormGroup name={key} values={this.props.question.values} />;
+      type = 'radio';
     } else if (this.props.question.type === MULTI_SELECT) {
-      formGroup = <CheckboxFormGroup name={key} values={this.props.question.values} />;
+      type = 'check';
     }
+
+    const formGroup = (
+      <ButtonList
+        answers={this.props.question.values}
+        groupName={key}
+        label={""}
+        type={type}
+      />
+    );
 
     return (<td key={key}>{formGroup}</td>);
   },
@@ -40,7 +48,7 @@ const ColumnVariableQuestion = React.createClass({
         <td>
           <label>
             {this.props.question.label}
-            {this.props.question.required && <span className="form-required-field">*</span>}
+            {this.props.question.required && <span className="form-required-field"> *</span>}
           </label>
         </td>
         {this.props.selectedValues.map(this.buildColumn)}
@@ -95,7 +103,7 @@ const VariableFormGroup = React.createClass({
 
   setSelected(values) {
     this.setState({
-      selected: values
+      selected: values[this.props.sourceName]
     });
   },
 
@@ -122,11 +130,13 @@ const VariableFormGroup = React.createClass({
 
     return (
       <div className="form-group">
-        <CheckboxFormGroup
-          onChange={this.setSelected}
+        <ButtonList
+          answers={this.props.sourceValues}
+          groupName={this.props.sourceName}
           label={this.props.sourceLabel}
-          name={this.props.sourceName}
-          values={this.props.sourceValues}
+          onChange={this.setSelected}
+          selectedItems={this.state.selected}
+          type={'check'}
         />
         <table>
           <thead>
