@@ -6,6 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import FocusAreaIndicator from './FocusAreaIndicator';
 
 export const styles = {
   lightRow: {
@@ -35,6 +36,7 @@ export const styles = {
     borderRightStyle: 'solid',
   },
   col2: {
+    position: 'relative',
     width: '100%',
     paddingLeft: 20,
     paddingRight: 20
@@ -58,6 +60,11 @@ export const styles = {
   },
   unlockedIcon: {
     color: color.orange
+  },
+  focusAreaMargin: {
+    // Our focus area indicator is absolutely positioned. Add a margin when it's
+    // there so that it wont overlap dots.
+    marginRight: 130
   }
 };
 
@@ -95,7 +102,8 @@ const SummaryProgressRow = React.createClass({
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),
           ...(hiddenForStudents && styles.hiddenRow),
-          ...(locked && styles.locked)
+          ...(locked && styles.locked),
+
         }}
       >
         <td style={styles.col1}>
@@ -133,7 +141,9 @@ const SummaryProgressRow = React.createClass({
             start={1}
             levels={levels}
             disabled={locked}
+            style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
           />
+          {lesson.isFocusArea && <FocusAreaIndicator/>}
         </td>
       </tr>
     );

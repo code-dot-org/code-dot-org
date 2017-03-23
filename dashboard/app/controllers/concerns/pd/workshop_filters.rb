@@ -74,8 +74,8 @@ module Pd::WorkshopFilters
   def filter_workshops(workshops)
     filter_params.tap do |params|
       workshops = workshops.in_state(params[:state], error_on_bad_state: false) if params[:state]
-      workshops = workshops.start_on_or_after(ensure_date(params[:start])) if params[:start]
-      workshops = workshops.start_on_or_before(ensure_date(params[:end])) if params[:end]
+      workshops = workshops.scheduled_start_on_or_after(ensure_date(params[:start])) if params[:start]
+      workshops = workshops.scheduled_start_on_or_before(ensure_date(params[:end])) if params[:end]
       workshops = workshops.where(course: params[:course]) if params[:course]
       workshops = workshops.where(subject: params[:subject]) if params[:subject]
       workshops = workshops.where(organizer_id: params[:organizer_id]) if params[:organizer_id]

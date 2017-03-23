@@ -3,9 +3,9 @@ import { PropTypes } from 'react';
 export const levelType = (
   PropTypes.shape({
     status: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    url: PropTypes.string,
     name: PropTypes.string,
-    icon: PropTypes.string
+    icon: PropTypes.string,
   })
 );
 
@@ -24,5 +24,6 @@ export const lessonType = (
     lockable: PropTypes.bool.isRequired,
     stageNumber: PropTypes.number,
     lesson_plan_html_url: PropTypes.string,
+    isFocusArea: PropTypes.bool.isRequired
   })
 );
