@@ -17,8 +17,8 @@ export const styles = {
   },
   hiddenRow: {
     borderStyle: 'dashed',
+    borderWidth: 2,
     borderColor: color.border_gray,
-    opacity: 0.6,
     backgroundColor: color.table_light_row
   },
   col1: {
@@ -41,6 +41,12 @@ export const styles = {
     paddingLeft: 20,
     paddingRight: 20
   },
+  // When we set our opacity on the row element instead of on individual tds,
+  // there are weird interactions with our tooltips in Chrome, and borders end
+  // up disappearing.
+  fadedCol: {
+    opacity: 0.6,
+  },
   colText: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -56,7 +62,6 @@ export const styles = {
   locked: {
     borderStyle: 'dashed',
     borderWidth: 2,
-    opacity: 0.6
   },
   unlockedIcon: {
     color: color.orange
@@ -109,7 +114,12 @@ const SummaryProgressRow = React.createClass({
           ...(viewAs === ViewType.Teacher && styles.opaque)
         }}
       >
-        <td style={styles.col1}>
+        <td
+          style={{
+          ...styles.col1,
+          ...((hiddenForStudents || locked)  && styles.fadedCol),
+          }}
+        >
           <div style={styles.colText}>
             {hiddenForStudents &&
               <FontAwesome
@@ -139,7 +149,12 @@ const SummaryProgressRow = React.createClass({
             </span>
           </div>
         </td>
-        <td style={styles.col2}>
+        <td
+          style={{
+          ...styles.col2,
+          ...((hiddenForStudents || locked)  && styles.fadedCol),
+          }}
+        >
           <ProgressBubbleSet
             start={1}
             levels={levels}
