@@ -75,7 +75,7 @@ const ButtonList = React.createClass({
           key={i}
           name={this.props.groupName}
           onChange={this.props.onChange ? this.handleChange : undefined}
-          checked={this.props.selectedItems ? checked : undefined}
+          checked={this.props.onChange ? checked : undefined}
         >
           {answer === otherString ? otherDiv : answer}
         </InputComponent>
