@@ -191,7 +191,7 @@ window.SignupManager = function (options) {
         study: study,
         study_group: studyGroup,
         event: eventName,
-        data_string: self.uuid,
+        uuid: self.uuid,
         data_json: JSON.stringify(dataJson),
       }
     );
