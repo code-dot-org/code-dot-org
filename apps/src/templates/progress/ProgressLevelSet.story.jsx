@@ -3,12 +3,10 @@ import ProgressLevelSet from './ProgressLevelSet';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { fakeLevels } from './progressTestHelpers';
 
-const multipleLevels = [
-  {
-    status: LevelStatus.perfect,
-    url: '/foo/level1',
-  }
-].concat(fakeLevels(4));
+const levels = fakeLevels(5).map((level, index) => ({
+  ...level,
+  status: index === 0 ? LevelStatus.perfect : level.status
+}));
 
 export default storybook => {
   storybook
@@ -20,12 +18,7 @@ export default storybook => {
           <ProgressLevelSet
             start={1}
             name="Images, Pixels, and RGB"
-            levels={[
-              {
-                status: 'perfect',
-                url: '/foo/level1',
-              }
-            ]}
+            levels={levels.slice(0, 1)}
             disabled={false}
           />
         )
@@ -36,7 +29,7 @@ export default storybook => {
           <ProgressLevelSet
             start={1}
             name="Writing Exercises"
-            levels={multipleLevels}
+            levels={levels}
             disabled={false}
           />
         )
@@ -47,7 +40,7 @@ export default storybook => {
           <ProgressLevelSet
             start={4}
             name="Writing Exercises"
-            levels={multipleLevels}
+            levels={levels}
             disabled={false}
           />
         )
@@ -58,7 +51,7 @@ export default storybook => {
           <ProgressLevelSet
             start={1}
             name="Assessment"
-            levels={multipleLevels}
+            levels={levels}
             disabled={true}
           />
         )

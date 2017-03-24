@@ -6,6 +6,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from "@cdo/apps/util/color";
+import { getIconForLevel } from './progressHelpers';
 
 const styles = {
   main: {
@@ -49,13 +50,6 @@ const ProgressBubbleSet = React.createClass({
     style: PropTypes.object,
   },
 
-  getIcon(level) {
-    if (!level.icon) {
-      return "desktop";
-    }
-    return level.icon.substring(3);
-  },
-
   render() {
     const { start, levels, disabled, style } = this.props;
 
@@ -80,7 +74,7 @@ const ProgressBubbleSet = React.createClass({
                 url={level.url}
                 disabled={disabled}
                 levelName={level.name}
-                levelIcon={this.getIcon(level)}
+                levelIcon={getIconForLevel(level)}
               />
             </div>
           </div>
