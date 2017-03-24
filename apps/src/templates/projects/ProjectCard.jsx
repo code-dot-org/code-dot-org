@@ -104,7 +104,7 @@ const ProjectCard = React.createClass({
 
   timeFormatter(dateString) {
     const date = new Date(dateString);
-    return date.toLocaleTimeString();
+    return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
   },
 
   renderStudentName() {
