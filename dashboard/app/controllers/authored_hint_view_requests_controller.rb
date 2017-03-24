@@ -44,7 +44,7 @@ class AuthoredHintViewRequestsController < ApplicationController
     pairing_user_ids.each do |paired_user_id|
       # Ignore errors here.
       AuthoredHintViewRequest.create(
-        hints.map { |hint| hint.merge(user_id: paired_user_id) }
+        hints.map {|hint| hint.merge(user_id: paired_user_id)}
       )
     end
 

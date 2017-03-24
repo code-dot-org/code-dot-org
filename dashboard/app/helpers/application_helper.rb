@@ -180,7 +180,7 @@ module ApplicationHelper
     # See also https://github.com/plataformatec/devise/blob/master/app/helpers/devise_helper.rb
     return "" if resource.errors.empty?
 
-    messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
+    messages = resource.errors.full_messages.map {|msg| content_tag(:li, msg)}.join
     sentence = resource.oauth? ?
       I18n.t("signup_form.additional_information") :
       I18n.t(
