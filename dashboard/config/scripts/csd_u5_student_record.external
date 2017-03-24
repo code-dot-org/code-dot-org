@@ -4,7 +4,8 @@ description 'description here'
 markdown <<MARKDOWN
 # Student record
 
-<div style="float: right; height:209px; width: 416px; background-color: black;">
+<div style="float: right; height:209px; width: 456px; background-color: black;">
+  <div style="float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;">0</div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
@@ -14,6 +15,7 @@ markdown <<MARKDOWN
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
   
+  <div style="float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;">1</div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
@@ -23,6 +25,7 @@ markdown <<MARKDOWN
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
   
+  <div style="float:left; height:52px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;">2</div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
@@ -32,6 +35,7 @@ markdown <<MARKDOWN
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
   
+  <div style="float:left; height:53px; width: 40px; background-color: white; margin:0px; line-height: 50px; text-align: center;font-size: 20px;">3</div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: white; margin:1px;"></div>
   <div style="float:left; height:50px; width: 50px; height: 50px; background-color: gray; margin:1px;"></div>
@@ -48,4 +52,7 @@ markdown <<MARKDOWN
 #### * The second eight store the student's age as a binary number.
 #### * The next eight store the student's first initial in ASCII.
 #### * The last eight store the student's last initial in ASCII.
+
+<br />
+<br />
 MARKDOWN
