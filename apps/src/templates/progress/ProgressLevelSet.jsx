@@ -5,6 +5,7 @@ import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import { levelType } from './progressTypes';
+import { getIconForLevel } from './progressHelpers';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
@@ -94,26 +95,6 @@ const ProgressLevelSet = React.createClass({
     disabled: PropTypes.bool.isRequired,
   },
 
-  getIcon() {
-    const { levels } = this.props;
-    const level = levels[0];
-
-    // TODO - Once we know what peer reviews are going to look like in the
-    // redesign, we'll need add logic for those here.
-
-    if (level.icon) {
-      // Eventually I'd like to have dashboard return an icon type. For now, I'm just
-      // going to treat the css class it sends as a type, and map it to an icon name.
-      const match = /fa-(.*)/.exec(level.icon);
-      if (!match || !match[1]) {
-        throw new Error('Unknown iconType: ' + level.icon);
-      }
-      return match[1];
-    }
-
-    return 'desktop';
-  },
-
   render() {
     const { name, levels, start, disabled } = this.props;
 
@@ -141,7 +122,7 @@ const ProgressLevelSet = React.createClass({
                     ...(multiLevelStep ? undefined : styles.hoverStyle)
                   }}
                 >
-                  <FontAwesome icon={this.getIcon()}/>
+                  <FontAwesome icon={getIconForLevel(levels[0])}/>
                   <div style={{...styles.buttonText, ...styles.text}}>
                     {i18n.levelN({levelNumber})}
                   </div>
