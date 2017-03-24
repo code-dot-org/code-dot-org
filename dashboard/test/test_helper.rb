@@ -144,7 +144,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
-      e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
+      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
       # rubocop:enable Lint/Eval
     end
     before = exps.map(&:call)
@@ -165,7 +165,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Lint/Eval
-      e.respond_to?(:call) ? e : lambda { eval(e, block.binding) }
+      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
       # rubocop:enable Lint/Eval
     end
     before = exps.map(&:call)

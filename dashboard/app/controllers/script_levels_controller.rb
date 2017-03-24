@@ -137,9 +137,9 @@ class ScriptLevelsController < ApplicationController
     script = Script.get_from_cache(params[:script_id])
 
     if params[:stage_position]
-      stage = script.stages.select {|s| !s.lockable? && s.relative_position == params[:stage_position].to_i }.first
+      stage = script.stages.select {|s| !s.lockable? && s.relative_position == params[:stage_position].to_i}.first
     else
-      stage = script.stages.select {|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
+      stage = script.stages.select {|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i}.first
     end
 
     render json: stage.summary_for_lesson_plans

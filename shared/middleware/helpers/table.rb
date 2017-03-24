@@ -29,7 +29,7 @@ class TableMetadata
     raise 'Column doesnt exist' unless column_list.include? old_name
     raise 'Column already exists' if column_list.include? new_name
 
-    column_list.map { |x| x == old_name ? new_name : x }
+    column_list.map {|x| x == old_name ? new_name : x}
   end
 end
 
@@ -56,7 +56,7 @@ def table_to_csv(table_array, column_order: nil)
   csv_string = CSV.generate do |csv|
     csv << unique_columns
     table_array.each do |table_row|
-      csv << unique_columns.collect { |x| table_row[x] }
+      csv << unique_columns.collect {|x| table_row[x]}
     end
   end
   return csv_string

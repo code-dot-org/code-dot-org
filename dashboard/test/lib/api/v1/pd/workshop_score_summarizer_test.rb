@@ -67,7 +67,7 @@ module Api::V1::Pd
       }
 
       expected_facilitator_results = Hash.new
-      expected_facilitator_results[@workshop.facilitators.first.name] = expected_results.reject { |k, _| FREE_RESPONSE_QUESTIONS.include?(k)}
+      expected_facilitator_results[@workshop.facilitators.first.name] = expected_results.reject {|k, _| FREE_RESPONSE_QUESTIONS.include?(k)}
 
       actual_results, actual_facilitator_results = get_score_for_workshops(@workshops, facilitator_breakdown: true, include_free_responses: true)
       assert_equal expected_results, actual_results

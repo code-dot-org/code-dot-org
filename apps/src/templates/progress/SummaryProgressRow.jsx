@@ -7,6 +7,8 @@ import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import FocusAreaIndicator from './FocusAreaIndicator';
+import _ from 'lodash';
+import i18n from '@cdo/locale';
 
 export const styles = {
   lightRow: {
@@ -17,8 +19,8 @@ export const styles = {
   },
   hiddenRow: {
     borderStyle: 'dashed',
+    borderWidth: 2,
     borderColor: color.border_gray,
-    opacity: 0.6,
     backgroundColor: color.table_light_row
   },
   col1: {
@@ -41,6 +43,12 @@ export const styles = {
     paddingLeft: 20,
     paddingRight: 20
   },
+  // When we set our opacity on the row element instead of on individual tds,
+  // there are weird interactions with our tooltips in Chrome, and borders end
+  // up disappearing.
+  fadedCol: {
+    opacity: 0.6,
+  },
   colText: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -56,7 +64,6 @@ export const styles = {
   locked: {
     borderStyle: 'dashed',
     borderWidth: 2,
-    opacity: 0.6
   },
   unlockedIcon: {
     color: color.orange
@@ -65,6 +72,9 @@ export const styles = {
     // Our focus area indicator is absolutely positioned. Add a margin when it's
     // there so that it wont overlap dots.
     marginRight: 130
+  },
+  opaque: {
+    opacity: 1
   }
 };
 
@@ -72,30 +82,31 @@ const SummaryProgressRow = React.createClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
-    lessonNumber: PropTypes.number,
     levels: PropTypes.arrayOf(levelType).isRequired,
     lockedForSection: PropTypes.bool.isRequired,
+    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     lessonIsVisible: PropTypes.func.isRequired
   },
 
   render() {
-    const { dark, lesson, lessonNumber, levels, lockedForSection, lessonIsVisible } = this.props;
+    const { dark, lesson, levels, lockedForSection, lessonIsVisible, viewAs } = this.props;
 
     // Is this lesson hidden for whomever we're currently viewing as
-    if (!lessonIsVisible(lesson)) {
+    if (!lessonIsVisible(lesson, viewAs)) {
       return null;
     }
 
     // Would this stage be hidden if we were a student?
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     let lessonTitle = lesson.name;
-    if (lessonNumber) {
-      lessonTitle = lessonNumber + ". " + lessonTitle;
+    if (lesson.stageNumber) {
+      lessonTitle = lesson.stageNumber + ". " + lessonTitle;
     }
 
     const locked = lockedForSection ||
       levels.every(level => level.status === LevelStatus.locked);
 
+    const lockedTooltipId = _.uniqueId();
     return (
       <tr
         style={{
@@ -103,10 +114,15 @@ const SummaryProgressRow = React.createClass({
           ...(dark && styles.darkRow),
           ...(hiddenForStudents && styles.hiddenRow),
           ...(locked && styles.locked),
-
+          ...(viewAs === ViewType.Teacher && styles.opaque)
         }}
       >
-        <td style={styles.col1}>
+        <td
+          style={{
+          ...styles.col1,
+          ...((hiddenForStudents || locked)  && styles.fadedCol),
+          }}
+        >
           <div style={styles.colText}>
             {hiddenForStudents &&
               <FontAwesome
@@ -115,13 +131,25 @@ const SummaryProgressRow = React.createClass({
               />
             }
             {lesson.lockable &&
-              <FontAwesome
-                icon={locked ? 'lock' : 'unlock'}
-                style={{
-                  ...styles.icon,
-                  ...(!locked && styles.unlockedIcon)
-                }}
-              />
+              <span data-tip data-for={lockedTooltipId}>
+                <FontAwesome
+                  icon={locked ? 'lock' : 'unlock'}
+                  style={{
+                    ...styles.icon,
+                    ...(!locked && styles.unlockedIcon)
+                  }}
+                />
+                {!locked && viewAs === ViewType.Teacher &&
+                  <ReactTooltip
+                    id={lockedTooltipId}
+                    role="tooltip"
+                    wrapper="span"
+                    effect="solid"
+                  >
+                    {i18n.lockAssessmentLong()}
+                  </ReactTooltip>
+                }
+              </span>
             }
             <span data-tip data-for={lessonTitle} aria-describedby={lessonTitle}>
               {lessonTitle}
@@ -136,11 +164,16 @@ const SummaryProgressRow = React.createClass({
             </span>
           </div>
         </td>
-        <td style={styles.col2}>
+        <td
+          style={{
+          ...styles.col2,
+          ...((hiddenForStudents || locked)  && styles.fadedCol),
+          }}
+        >
           <ProgressBubbleSet
             start={1}
             levels={levels}
-            disabled={locked}
+            disabled={locked && viewAs !== ViewType.Teacher}
             style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
           />
           {lesson.isFocusArea && <FocusAreaIndicator/>}

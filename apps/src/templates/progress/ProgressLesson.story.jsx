@@ -6,17 +6,14 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
-  lessonNumber: 3,
   levels: [
     {
-      status: LevelStatus.not_tried,
-      url: '/step1/level1',
+      ...fakeLevels(1)[0],
       name: 'First progression'
     },
     ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
     {
-      status: LevelStatus.not_tried,
-      url: '/step3/level1',
+      ...fakeLevels(1)[0],
       name: 'Last progression'
     },
   ],
@@ -96,11 +93,11 @@ export default storybook => {
       },
       {
         name:'hidden progress lesson as teacher',
-        description: 'should be white with some opacity',
+        description: 'should be white with full opacity',
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
           />
         )
       },
