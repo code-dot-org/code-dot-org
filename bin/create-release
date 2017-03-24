@@ -34,7 +34,12 @@ def git_generate_changelog
 
   items = relevant_matches.map do |match|
     # finally, create a changelog entry linking the description to the PR
-    "- [#{match['description']}](https://github.com/#{REPO}/pull/#{match['pr']})"
+    description = match['description']
+    if description.strip.empty?
+      description = "PR #{match['pr']}"
+    end
+    link = "https://github.com/#{REPO}/pull/#{match['pr']}"
+    "- [#{description}](#{link})"
   end
 
   items.join("\n")
