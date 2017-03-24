@@ -1,6 +1,7 @@
 /** @file Settings menu cog icon */
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
+import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
@@ -12,26 +13,49 @@ const SETTINGS_MENU_WIDTH = 250;
 class SettingsCog extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      open: false,
-    };
+    this.open = this.open.bind(this);
+    this.beforeClose = this.beforeClose.bind(this);
+    this.close = this.close.bind(this);
+    this.manageAssets = this.manageAssets.bind(this);
+    this.toggleMakerToolkit = this.toggleMakerToolkit.bind(this);
   }
 
-  onClick() {
-    this.setState({open: !this.state.open});
+  state = {
+    open: false,
+    canOpen: true,
+  };
+
+  open() {
+    this.setState({open: true, canOpen: false});
+  }
+
+  beforeClose(_, resetPortalState) {
+    resetPortalState();
+    // Possibly circular?
+    this.setState({open: false});
+    window.setTimeout(() => this.setState({canOpen: true}), 0);
+  }
+
+  close() {
+    this.setState({open: false});
   }
 
   manageAssets() {
-    this.setState({open: false});
+    this.close();
     showAssetManager();
   }
 
   toggleMakerToolkit() {
-    this.setState({open: false});
+    this.close();
     window.dashboard.project.toggleMakerEnabled();
   }
 
   render() {
+    const iconRect = this.icon ? this.icon.getBoundingClientRect() : {
+      bottom: 0,
+      left: 0,
+      width: 0,
+    };
     const styles = {
       iconContainer: {
         float: 'right',
@@ -49,10 +73,9 @@ class SettingsCog extends Component {
         verticalAlign: 'middle',
       },
       menu: {
-        display: this.state.open ? 'block' : 'none',
         position: 'absolute',
-        top: this.icon ? this.icon.offsetTop + this.icon.offsetHeight + 5 : 0,
-        left: this.icon ? this.icon.offsetLeft + (this.icon.offsetWidth / 2) - (SETTINGS_MENU_WIDTH / 2) : 0,
+        top: iconRect.bottom + 5,
+        left: iconRect.left + (iconRect.width / 2) - (SETTINGS_MENU_WIDTH / 2),
         zIndex: 20,
         width: SETTINGS_MENU_WIDTH,
         borderStyle: 'solid',
@@ -74,32 +97,37 @@ class SettingsCog extends Component {
     return (
       <span
         style={styles.iconContainer}
-        ref={icon => {
-          this.icon = icon;
-        }}
+        ref={icon => this.icon = icon}
       >
         <FontAwesome
           id="settings-cog"
           icon="cog"
           style={styles.assetsIcon}
-          onClick={this.onClick.bind(this)}
           title={msg.settings()}
+          onClick={this.state.canOpen ? this.open : undefined}
         />
-        <div style={styles.menu}>
-          <div>
-            <MenuItem
-              text={msg.manageAssets()}
-              onClick={() => this.manageAssets()}
-            />
-            {maker.isAvailable() &&
+        <Portal
+          closeOnEsc
+          closeOnOutsideClick
+          isOpened={this.state.open}
+          beforeClose={this.beforeClose}
+        >
+          <div style={styles.menu}>
+            <div>
               <MenuItem
-                text={maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
-                onClick={() => this.toggleMakerToolkit()}
+                text={msg.manageAssets()}
+                onClick={this.manageAssets}
               />
-            }
+              {maker.isAvailable() &&
+                <MenuItem
+                  text={maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
+                  onClick={this.toggleMakerToolkit}
+                />
+              }
+            </div>
+            <span style={styles.arrow}/>
           </div>
-          <span style={styles.arrow}/>
-        </div>
+        </Portal>
       </span>
     );
   }
