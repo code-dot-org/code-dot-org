@@ -215,9 +215,12 @@ export default {
   },
 
   /**
-   * @returns {boolean} Whether this element perfectly fits its bounding size.
+   * Returns whether this element perfectly fits its bounding size, if that is needed in onPropertyChange.
    */
-  beforePropertyChange: function (element) {
+  beforePropertyChange: function (element, name) {
+    if (name != 'text' && name != 'fontSize') {
+      return null;
+    }
     var currentSize = this.getCurrentSize(element);
     var bestSize = this.getBestSize(element);
     return currentSize.width === bestSize.width && currentSize.height == bestSize.height;
