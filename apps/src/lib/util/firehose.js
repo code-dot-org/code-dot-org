@@ -111,7 +111,7 @@ class FirehoseClient {
   /**
    * Returns a unique user ID that is persisted across sessions through local
    * storage.
-   * WARNING: Mutates local storage if an analytisID has not already been set.
+   * WARNING: Mutates local storage if an analyticsID has not already been set.
    * @return {string | null} A unique user ID.
    */
   getAnalyticsUuid() {
