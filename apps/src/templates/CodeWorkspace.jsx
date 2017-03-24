@@ -53,7 +53,8 @@ var CodeWorkspace = React.createClass({
     style: React.PropTypes.bool,
     isRunning: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-    isMinecraft: React.PropTypes.bool.isRequired
+    isMinecraft: React.PropTypes.bool.isRequired,
+    withSettingsCog: React.PropTypes.bool,
   },
 
   shouldComponentUpdate: function (nextProps) {
@@ -95,21 +96,56 @@ var CodeWorkspace = React.createClass({
     }
   },
 
+  runModeIndicators() {
+    // ignore runModeIndicators in MC
+    return !this.props.isMinecraft;
+  },
+
+  renderToolboxHeaders() {
+    const {
+      editCode,
+      isRunning,
+      readonlyWorkspace,
+      withSettingsCog,
+    } = this.props;
+    const showSettingsCog = withSettingsCog && !readonlyWorkspace;
+    const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
+    const chevronStyle = [
+      styles.chevron,
+      this.runModeIndicators() && isRunning && styles.runningChevron
+    ];
+    return [
+      <PaneSection id="toolbox-header">
+        <i
+          id="hide-toolbox-icon"
+          style={[commonStyles.hidden, chevronStyle]}
+          className="fa fa-chevron-circle-right"
+        />
+        <span style={textStyle}>
+          {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
+        </span>
+        {showSettingsCog && <SettingsCog/>}
+      </PaneSection>,
+      <PaneSection id="show-toolbox-header" style={commonStyles.hidden}>
+        <i
+          id="show-toolbox-icon"
+          style={chevronStyle}
+          className="fa fa-chevron-circle-right"
+        />
+        <span>
+          {msg.showToolbox()}
+        </span>
+      </PaneSection>
+    ];
+  },
+
   render: function () {
     var props = this.props;
-
-    // ignore runModeIndicators in MC
-    var runModeIndicators = !props.isMinecraft;
-
-    var chevronStyle = [
-      styles.chevron,
-      runModeIndicators && props.isRunning && styles.runningChevron
-    ];
 
     // By default, continue to show header as focused. When runModeIndicators
     // is enabled, remove focus while running.
     var hasFocus = true;
-    if (runModeIndicators && props.isRunning) {
+    if (this.runModeIndicators() && props.isRunning) {
       hasFocus = false;
     }
 
@@ -135,15 +171,7 @@ var CodeWorkspace = React.createClass({
           className={props.isRunning ? 'is-running' : ''}
         >
           <div id="codeModeHeaders">
-            <PaneSection id="toolbox-header">
-              <i id="hide-toolbox-icon" style={[commonStyles.hidden, chevronStyle]} className="fa fa-chevron-circle-right"/>
-              <span style={{paddingLeft: '2em'}}>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
-              <SettingsCog/>
-            </PaneSection>
-            <PaneSection id="show-toolbox-header" style={commonStyles.hidden}>
-              <i id="show-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
-              <span>{msg.showToolbox()}</span>
-            </PaneSection>
+            {this.renderToolboxHeaders()}
             <PaneButton
               id="show-code-header"
               hiddenImage={blocksGlyphImage}
