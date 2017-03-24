@@ -3,21 +3,16 @@
  */
 
 import React from 'react';
-import CsFundamentalsSection from './csFundamentalsSection';
-import CsPrinciplesAndDiscoveriesSection from './csPrinciplesAndDiscoveriesSection';
+import {Button} from 'react-bootstrap';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
+import {TwoPartBanner} from './twoPartBanner';
 import {UpcomingWorkshops} from './upcomingWorkshops';
 import _ from 'lodash';
 
-const CSPCSDcourses = ['CS Principles', 'CS Discoveries'];
-
 const LandingPage = React.createClass({
   propTypes: {
-    coursesCompleted: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    coursesTaught: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     lastWorkshopSurveyUrl: React.PropTypes.string,
     lastWorkshopSurveyCourse: React.PropTypes.string,
-    printCsfCertificateUrl: React.PropTypes.string,
     professionalLearningCourseData: React.PropTypes.array
   },
 
@@ -51,30 +46,46 @@ const LandingPage = React.createClass({
     );
   },
 
-  shouldRenderCSFSection() {
-    return this.props.coursesTaught.includes('CS Fundamentals');
-  },
-
-  shouldRenderCSPCSDSection() {
-    return !!(_.intersection(CSPCSDcourses, this.props.coursesCompleted).length ||
-      (_.intersection(CSPCSDcourses, this.props.coursesTaught).length && this.props.lastWorkshopSurveyUrl));
+  renderWorkshopSurveyInterior() {
+    if (this.props.lastWorkshopSurveyCourse === 'CS Fundamentals') {
+      return (
+        <div>
+          <h3>
+            Order Supplies
+          </h3>
+          <p>
+            Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
+            will be able to order supplies for your classroom.
+          </p>
+          <Button bsStyle="primary" onClick={() => {window.open(this.props.lastWorkshopSurveyUrl, '_blank');}}>
+            Start survey
+          </Button>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h3>
+            Thank you
+          </h3>
+          <p>
+            Thank you for completing a Code.org professional learning workshop! Please complete this survey so that we
+            may improve your experience.
+          </p>
+          <Button bsStyle="primary" onClick={() => {window.open(this.props.lastWorkshopSurveyUrl, '_blank');}}>
+            Start survey
+          </Button>
+        </div>
+      );
+    }
   },
 
   render() {
-    const csFundamentalsSection = this.shouldRenderCSFSection() && (
-      <CsFundamentalsSection
-        key="csFundamentalsSection"
-        csfCompleted={this.props.coursesCompleted.includes('CS Fundamentals')}
-        lastWorkshopSurveyUrl={this.props.lastWorkshopSurveyCourse === 'CS Fundamentals' ? this.props.lastWorkshopSurveyUrl : null}
-        printCsfCertificateUrl={this.props.printCsfCertificateUrl}
-      />
-    );
-
-    const csPrinciplesAndDiscoveriesSection = this.shouldRenderCSPCSDSection() && (
-      <CsPrinciplesAndDiscoveriesSection
-        key="csPrinciplesAndDiscoveriesSection"
-        lastWorkshopSurveyUrl={['CS Principles', 'CS Discoveries'].includes(this.props.lastWorkshopSurveyCourse) ? this.props.lastWorkshopSurveyUrl : null}
-        coursesCompleted={this.props.coursesCompleted}
+    const lastWorkshopSurveyBanner = this.props.lastWorkshopSurveyUrl && (
+      <TwoPartBanner
+        textElement={this.renderWorkshopSurveyInterior()}
+        imageUrl="url('https://code.org/images/email/BJC4NYC.jpg')"
+        imagePosition="imageLeft"
       />
     );
 
@@ -91,18 +102,13 @@ const LandingPage = React.createClass({
       />
     );
 
-    let order = [];
-
-    if (this.props.lastWorkshopSurveyUrl) {
-      order = _.compact([csFundamentalsSection, csPrinciplesAndDiscoveriesSection, upcomingWorkshops, plcData]);
-    } else {
-      order = _.compact([upcomingWorkshops, csFundamentalsSection, csPrinciplesAndDiscoveriesSection, plcData]);
-    }
-
     return (
       <div>
         {this.renderHeaderImage()}
-        {order}
+        <br/>
+        {this.props.lastWorkshopSurveyUrl && lastWorkshopSurveyBanner}
+        {upcomingWorkshops}
+        {plcData}
       </div>
     );
   }

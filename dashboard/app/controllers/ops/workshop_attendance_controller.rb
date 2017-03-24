@@ -43,7 +43,7 @@ module Ops
         # ?by_teacher=1 to index the results by teacher_id
         by_teacher = workshop.segments.inject({}) do |hash, s|
           attendance = s.attendances.as_json(include: :segment).group_by { |a| a['teacher_id'] }
-          hash.merge(attendance){|_, a, b| a + b}
+          hash.merge(attendance) {|_, a, b| a + b}
         end
         respond_with by_teacher
       else
@@ -91,7 +91,7 @@ module Ops
 
       respond_with (@workshop.teachers) do |format|
         format.csv do
-          #Specify filename
+          # Specify filename
           response.headers['Content-Disposition'] = 'attachment; filename="' + @workshop.name + '-Attendance.csv"'
 
           # Generate csv column headers dynamically

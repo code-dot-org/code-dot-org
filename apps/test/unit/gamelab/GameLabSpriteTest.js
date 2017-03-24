@@ -516,7 +516,21 @@ describe('GameLabSprite', function () {
 
       sprite.play();
       expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      // No more frames to play for a non-looping animation
+      sprite.update();
+      expect(sprite.animation.playing).to.be.false;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      // Restart the animation
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
       expect(sprite.animation.getFrame()).to.equal(0);
+
+      sprite.update();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(1);
     });
 
     it('resumes a stopped, looping animation at the current frame', function () {

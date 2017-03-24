@@ -9,6 +9,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ## Code.org blog posts
 ### Miscellaneous
 
+* Computer science counts as a core requirement in [95% of BS degrees](https://medium.com/@codeorg/uc-data-confirms-computer-science-is-foundational-e8eb44038e48#.o0jvaeesg) in the University of California system.
 * AP Computer Science A is the [fastest-growing](http://blog.code.org/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
 * Code.org [updated our position](http://blog.code.org/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 * [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.

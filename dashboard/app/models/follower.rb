@@ -3,7 +3,7 @@
 # Table name: followers
 #
 #  id              :integer          not null, primary key
-#  user_id         :integer          not null
+#  user_id         :integer
 #  student_user_id :integer          not null
 #  created_at      :datetime
 #  updated_at      :datetime
@@ -20,9 +20,9 @@
 # Join table defining student-teacher relationships for Users
 # (student_user is the student, user is the teacher)
 class Follower < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :student_user, foreign_key: "student_user_id", class_name: User
   belongs_to :section
+  has_one :user, through: :section
+  belongs_to :student_user, foreign_key: "student_user_id", class_name: User
 
   accepts_nested_attributes_for :student_user
 

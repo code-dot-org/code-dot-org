@@ -132,7 +132,8 @@
       "console.log": null,
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "show_debug_watch": "false",
     "hide_share_and_remix": "false",

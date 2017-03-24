@@ -14,7 +14,8 @@ export const fakeLesson = (name, id, lockable=false, stageNumber=undefined) => (
   name,
   id,
   lockable,
-  stageNumber
+  stageNumber,
+  isFocusArea: false
 });
 
 export const fakeLevels = numLevels => _.range(numLevels).map(index => ({
