@@ -3,7 +3,7 @@ Then /^I resize top instructions to "(\d*)" pixels tall$/ do |height|
 end
 
 Then /^I wait until element "([^"]*)" is an img with src "([^"]*)"$/ do |selector, src|
-  wait_until { @browser.execute_script("return $(\"#{selector}\").attr('src') === \"#{src}\";") == true }
+  wait_until {@browser.execute_script("return $(\"#{selector}\").attr('src') === \"#{src}\";") == true}
 end
 
 # The best way to verify that an audio element can play is to listen to

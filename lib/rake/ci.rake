@@ -53,15 +53,15 @@ namespace :ci do
   # Additionally run the lint task if specified for the environment.
   task build: [:chef_update] do
     Dir.chdir(deploy_dir) do
-      ChatClient.wrap('rake lint') { Rake::Task['lint'].invoke } if CDO.lint
-      ChatClient.wrap('rake build') { Rake::Task['build'].invoke }
+      ChatClient.wrap('rake lint') {Rake::Task['lint'].invoke} if CDO.lint
+      ChatClient.wrap('rake build') {Rake::Task['build'].invoke}
     end
   end
 
   multitask deploy_multi: [:deploy_console, :deploy_stack]
 
   task :deploy_stack do
-    ChatClient.wrap('CloudFormation stack update') { RakeUtils.rake_stream_output 'stack:start' }
+    ChatClient.wrap('CloudFormation stack update') {RakeUtils.rake_stream_output 'stack:start'}
   end
 
   task :deploy_console do
@@ -96,7 +96,7 @@ end
 
 desc 'Update the server as part of continuous integration.'
 task :ci do
-  ChatClient.wrap('CI build') { Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke }
+  ChatClient.wrap('CI build') {Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke}
 end
 
 # Returns true if upgrade succeeded, false if failed.

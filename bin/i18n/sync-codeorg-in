@@ -36,7 +36,7 @@ def reformat_quotes
   filenames.each do |filename|
     temp_file = Tempfile.new("temp#{filename}.yml")
     File.open("dashboard/config/locales/#{filename}.en.yml", "r") do |f|
-      f.each_line { |line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
+      f.each_line {|line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
     end
     temp_file.close
     FileUtils.mv(temp_file.path, "dashboard/config/locales/#{filename}.en.yml")
