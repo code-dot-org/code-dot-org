@@ -86,7 +86,7 @@ SETS = {
 }.freeze
 
 def city_query
-  queries = SETS[$key][:cities].map { |city| %(create_ip_city_s:"#{city}")}
+  queries = SETS[$key][:cities].map {|city| %(create_ip_city_s:"#{city}")}
   "(#{queries.join(' || ')})"
 end
 

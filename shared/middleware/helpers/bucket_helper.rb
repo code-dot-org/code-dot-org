@@ -59,7 +59,7 @@ class BucketHelper
     target_object_prefix = s3_path owner_id, channel_id, target_object
 
     objects = @s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
-    target_object = objects.find { |x| x.key == target_object_prefix }
+    target_object = objects.find {|x| x.key == target_object_prefix}
 
     app_size = objects.map(&:size).reduce(:+).to_i
     object_size = target_object.nil? ? nil : target_object.size.to_i
@@ -188,7 +188,7 @@ class BucketHelper
 
   def delete_multiple(encrypted_channel_id, filenames)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-    objects = filenames.map { |filename| { key: s3_path(owner_id, channel_id, filename) } }
+    objects = filenames.map {|filename| { key: s3_path(owner_id, channel_id, filename) }}
 
     @s3.delete_objects(bucket: @bucket, delete: { objects: objects, quiet: true})
   end

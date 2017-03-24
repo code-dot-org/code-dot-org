@@ -251,7 +251,7 @@ class Pardot
     url = build_batch_prospects_url(prospects, config)
 
     # Build array of the emails to create in Pardot.
-    prospect_emails = prospects.collect { |x| x["email"] }
+    prospect_emails = prospects.collect {|x| x["email"]}
     malformed_emails = []
 
     num_submitted = prospects.length
