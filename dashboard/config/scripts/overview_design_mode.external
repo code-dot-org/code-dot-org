@@ -4,14 +4,10 @@ markdown <<MARKDOWN
 In App Lab "Design Mode" lets you drag and drop User Interface elements into the app.
 
 ### Vocabulary
-**User Interface (UI)** - The "User Interface" or **UI** of an app refers to how a person (user) interacts with the computer or app.  There are common patterns to user interfaces that you probably know about just from experience:
-
+* **User Interface (UI)** - How a person (user) interacts with the computer or app.
 * **UI Elements** or objects, like buttons, images, text boxes, pull down menus, screens and so on.
-* **UI Events** or controls, like *click*, *scroll*, *move mouse*, *type keyboard key*, etc.
 
-App Lab let's you easily add UI Elements to your app, and then add code to respond when a user interacts with those elements.  It's kind of two-step process, but we'll learn all about it in this lesson.
-
-To start let's just look at Design Mode and add a single UI element (a button) to our app.  We'll add code later on.
+## Example
 
 <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 
