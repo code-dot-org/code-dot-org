@@ -238,7 +238,7 @@ module.exports.createSprite = function (x, y, width, height) {
    // frame, which will cause the animation to continue on the next update().
    // If the animation is non-looping and is stopped at the last frame
    // we also rewind the animation to the beginning.
-    if (!s.animation.looping && s.animation.getFrame() === s.animation.images.length - 1) {
+    if (!s.animation.looping && !s.animation.playing && s.animation.getFrame() === s.animation.images.length - 1) {
       s.animation.rewind();
     }
     s.animation.play();

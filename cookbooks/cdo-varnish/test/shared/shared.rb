@@ -75,7 +75,7 @@ module Cdo
           request: {
             method: method,
             url: url,
-            headers: Hash[*request_headers.map{|k, v| [k, {equalTo: v}]}.flatten]
+            headers: Hash[*request_headers.map {|k, v| [k, {equalTo: v}]}.flatten]
           },
           response: {
             status: 200,
@@ -96,8 +96,8 @@ module Cdo
 
       def _request(url, headers={}, cookies={}, method='GET')
         header_string = headers.map { |key, value| "-H \"#{key}: #{value}\"" }.join(' ')
-        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map{|k, v| "#{escape(k)}=#{escape(v)}"}.join('; ')}\""
-        `curl -X #{method} -s #{cookie_string} #{header_string} -i #{url}`.tap{assert_equal 0, $?.exitstatus, "bad url:#{url}"}
+        cookie_string = cookies.empty? ? '' : "--cookie \"#{cookies.map {|k, v| "#{escape(k)}=#{escape(v)}"}.join('; ')}\""
+        `curl -X #{method} -s #{cookie_string} #{header_string} -i #{url}`.tap {assert_equal 0, $?.exitstatus, "bad url:#{url}"}
       end
 
       # Send an HTTP request to the local mock server directly.
@@ -109,7 +109,7 @@ module Cdo
       # The proxy-cache configuration is CloudFront+Varnish or Varnish-only.
       def proxy_request(url, headers={}, cookies={}, method='GET')
         headers[:host] = @proxy_host
-        headers.merge!('X-Forwarded-Proto' => 'https'){|_, v1, _| v1}
+        headers.merge!('X-Forwarded-Proto' => 'https') {|_, v1, _| v1}
         _request("#{@proxy_address}#{url}", headers, cookies, method)
       end
 

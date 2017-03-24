@@ -87,8 +87,8 @@ describe Cdo::GoogleCredentials do
       config[:client].stub_responses(
         :assume_role_with_web_identity,
         [
-          {credentials: credentials.dup.tap{|c| c[:expiration] = 1.hour.from_now}},
-          {credentials: credentials.dup.tap{|c| c[:expiration] = 2.hours.from_now}}
+          {credentials: credentials.dup.tap {|c| c[:expiration] = 1.hour.from_now}},
+          {credentials: credentials.dup.tap {|c| c[:expiration] = 2.hours.from_now}}
         ]
       )
       service = Aws::STS::Client.new

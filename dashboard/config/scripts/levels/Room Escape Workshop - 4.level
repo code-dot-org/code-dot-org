@@ -8,10 +8,6 @@
     "skin": "applab",
     "code_functions": {
       "onEvent": null,
-      "setText": null,
-      "setScreen": null,
-      "randomNumber_min_max": null,
-      "declareAssign_x": null,
       "declareAssign_x_promptNum": null,
       "setPosition": null
     },
