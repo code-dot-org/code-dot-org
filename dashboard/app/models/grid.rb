@@ -74,7 +74,7 @@ class Grid < Blockly
   # Throws ArgumentError if there is a non integer value in the array.
   def self.parse_maze(maze_json)
     maze_json = maze_json.to_json if maze_json.is_a? Array
-    { 'maze' => JSON.parse(maze_json).map { |row| row.map { |cell| Integer(cell) } }.to_json}
+    { 'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell)}}.to_json}
   end
 
   def filter_level_attributes(level_hash)

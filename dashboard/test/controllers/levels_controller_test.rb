@@ -470,7 +470,7 @@ class LevelsControllerTest < ActionController::TestCase
     skins = level.class.skins
     get :edit, params: {id: level, game_id: level.game}
     skin_select = css_select "#level_skin option"
-    values = skin_select.map { |option| option.attributes["value"].to_s }
+    values = skin_select.map {|option| option.attributes["value"].to_s}
     assert_equal skins, values
   end
 

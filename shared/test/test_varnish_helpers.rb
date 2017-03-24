@@ -36,7 +36,7 @@ class VarnishHelperTest < Minitest::Test
       '/[]/*',
       '/()/*',
     ].map do |path|
-      assert_raises(ArgumentError, "Path did not raise error: #{path}") { paths_to_regex path }
+      assert_raises(ArgumentError, "Path did not raise error: #{path}") {paths_to_regex path}
     end
   end
 
