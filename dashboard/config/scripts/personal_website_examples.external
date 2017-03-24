@@ -25,11 +25,11 @@ teacher_markdown <<MARKDOWN
 
 **Setup:**   Students should have out their Quality Website Features list (in [r web-development-practices]). 
 
-!!!say
+**Say**
 
     In this Unit you are going to make websites to share information and projects you create in this class. This is called a personal website. Today you’re going to be web designers and start thinking about designing your website.  You’re going to be sketching a design on paper for the home page of your personal website first we will be looking at some pre-existing personal websites. 
 
-&fa-desktop; **Transition:** Move students to Code Studio Bubble 2 of Lesson 2.
+**Transition:** Move students to Code Studio Bubble 2 of Lesson 2.
 
 Students will answer the following prompt in their journal:
 
@@ -41,10 +41,6 @@ Students will answer the following prompt in their journal:
 **Discuss:** Have students share the features they noticed especially any new observations. Have students add any newly found features to their list in [r web-development-practices]. 
 
 **Display:** Display a copy of the Quality Website Features list that was created in Lesson 1 and update it.
-
-discussion!!!discussion-0
-
-!!!discussion <discussion-0>
 
     The list of common elements should include things such as:
 

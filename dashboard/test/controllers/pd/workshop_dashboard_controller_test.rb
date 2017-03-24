@@ -1,25 +1,22 @@
 require 'test_helper'
 
 class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
-  test 'admins can access the dashboard' do
-    sign_in create(:admin)
-    get :index
-    assert_response :success
+  test_user_gets_response_for(
+    :index,
+    name: 'admins can access the dashboard and get correct permission value',
+    user: :admin
+  ) do
     assert_equal :admin, assigns(:permission)
   end
 
-  test 'workshop organizers can access the dashboard' do
-    sign_in create(:workshop_organizer)
-    get :index
-    assert_response :success
-    assert_equal [:workshop_organizer], assigns(:permission)
-  end
-
-  test 'facilitators can access the dashboard' do
-    sign_in create(:facilitator)
-    get :index
-    assert_response :success
-    assert_equal [:facilitator], assigns(:permission)
+  [:facilitator, :workshop_organizer].each do |user_type|
+    test_user_gets_response_for(
+      :index,
+      name: "#{user_type.to_s.pluralize} can access the dashboard and get correct permission value",
+      user: user_type
+    ) do
+      assert_equal [user_type], assigns(:permission)
+    end
   end
 
   test 'a user who is both a facilitator and an organizer has their permission reflected' do
@@ -43,9 +40,5 @@ class Pd::WorkshopDashboardControllerTest < ::ActionController::TestCase
     assert_equal [:workshop_organizer, :plp], assigns(:permission)
   end
 
-  test 'normal teachers cannot see the dashboard' do
-    sign_in create(:teacher)
-    get :index
-    assert_response :not_found
-  end
+  test_user_gets_response_for :index, user: :teacher, response: :not_found
 end

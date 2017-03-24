@@ -1,6 +1,25 @@
 require 'singleton'
 
 # A wrapper client to the AWS Firehose service.
+# @example
+#   FirehoseClient.instance.put_record(
+#     'analysis-events',
+#     {
+#       created_at: DateTime.now,           # REQUIRED
+#       environment: 'production',          # REQUIRED
+#       study: 'underwater basket weaving', # REQUIRED
+#       study_group: 'control',             # OPTIONAL
+#       user_id: current_user.id,           # OPTIONAL
+#       script_id: script.id,               # OPTIONAL
+#       level_id: level.id,                 # OPTIONAL
+#       project_id: project.id              # OPTIONAL
+#       event: 'drowning',                  # REQUIRED
+#       data_int:                           # OPTIONAL
+#       data_float:                         # OPTIONAL
+#       data_string:                        # OPTIONAL
+#       data_json:                          # OPTIONAL
+#     }
+#   )
 class FirehoseClient
   include Singleton
 
@@ -13,7 +32,7 @@ class FirehoseClient
 
   # Posts a record to the indicated stream.
   # @param stream_name [String] The steam to put the data in.
-  # @param data [String] The data to insert into the stream.
+  # @param data [hash] The data to insert into the stream.
   def put_record(stream_name, data)
     # TODO(asher): Determine whether these should be cached and batched via
     # put_record_batch. See
@@ -22,7 +41,7 @@ class FirehoseClient
     @firehose.put_record(
       {
         delivery_stream_name: stream_name,
-        record: {data: data}
+        record: {data: data.to_json}
       }
     )
   rescue Aws::Firehose::Errors::ServiceError

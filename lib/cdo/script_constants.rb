@@ -98,7 +98,7 @@ module ScriptConstants
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME
     ]
-  }
+  }.freeze
 
   # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
   # This can be used to override that, with lower numbers ordered sooner, and higher numbers
@@ -106,7 +106,7 @@ module ScriptConstants
   CATEGORY_ORDERING_PRIORITY = {
     research_studies: 1,
     csp: 2,
-  }
+  }.freeze
 
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script

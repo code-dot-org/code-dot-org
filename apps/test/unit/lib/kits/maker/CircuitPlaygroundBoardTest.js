@@ -14,7 +14,7 @@ describe('CircuitPlaygroundBoard', () => {
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
-    sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport', () => {
+    sinon.stub(CircuitPlaygroundBoard, 'makePlaygroundTransport').callsFake(() => {
       playground = new Playground({});
       playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
 
@@ -43,6 +43,8 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   afterEach(() => {
+    playground = undefined;
+    board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
   });
 
@@ -53,7 +55,8 @@ describe('CircuitPlaygroundBoard', () => {
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
+        // TODO (captouch): Add eight more when we re-enable
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.colorLeds).to.be.a('array');
         expect(board.prewiredComponents_.led).to.be.a('object');
@@ -65,14 +68,15 @@ describe('CircuitPlaygroundBoard', () => {
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
         expect(board.prewiredComponents_.buttonL).to.be.a('object');
         expect(board.prewiredComponents_.buttonR).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad0).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad1).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad2).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad3).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad6).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad9).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad10).to.be.a('object');
-        expect(board.prewiredComponents_.touchPad12).to.be.a('object');
+        // TODO (captouch): Uncomment when we re-enable
+        // expect(board.prewiredComponents_.touchPad0).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad1).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad2).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad3).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad6).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad9).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad10).to.be.a('object');
+        // expect(board.prewiredComponents_.touchPad12).to.be.a('object');
         expect(board.prewiredComponents_.INPUT).to.be.a('number');
         expect(board.prewiredComponents_.OUTPUT).to.be.a('number');
         expect(board.prewiredComponents_.ANALOG).to.be.a('number');
@@ -113,7 +117,8 @@ describe('CircuitPlaygroundBoard', () => {
     it('initializes a set of components', () => {
       return board.connectToFirmware().then(() => {
         board.initializeComponents();
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
+        // TODO (captouch): Add 8 when we re-enable
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
       });
     });
   });
@@ -123,6 +128,30 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         board.destroy();
         expect(playground.reset).to.have.been.calledOnce;
+      });
+    });
+
+    it('lets playground-io register its sysex response handler each time', () => {
+      // This test covers a fix for a known accelerometer issue, where the
+      // handler for accelerometer data is from the first Playground object
+      // created on the page.
+      // This is a fragile approach to testing this fix, but reproducing the
+      // real problem in tests is going to be near-impossible since we stub
+      // Firmata at the webpack layer in our tests.
+      expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
+      return board.connect().then(() => {
+        expect(playground.sysexResponse).to.have.been.calledTwice;
+        expect(Playground.hasRegisteredSysexResponse).to.be.true;
+        board.destroy();
+        expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
+
+        const newBoard = new CircuitPlaygroundBoard();
+        expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
+        return newBoard.connect().then(() => {
+          // Connecting creates new a new playground transport, and a new spy
+          expect(playground.sysexResponse).to.have.been.calledTwice;
+          expect(Playground.hasRegisteredSysexResponse).to.be.true;
+        });
       });
     });
   });

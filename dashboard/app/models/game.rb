@@ -31,25 +31,25 @@ class Game < ActiveRecord::Base
     @@game_custom_maze ||= find_by_name("CustomMaze")
   end
 
-  UNPLUG = 'unplug'
-  MULTI = 'multi'
-  MATCH = 'match'
-  ARTIST = TURTLE = 'turtle' # heh
-  FLAPPY = 'flappy'
-  BOUNCE = 'bounce'
-  PLAYLAB = STUDIO = 'studio'
-  STUDIO_EC = 'StudioEC'
-  APPLAB = WEBAPP = 'applab'
-  GAMELAB = 'gamelab'
-  WEBLAB = 'weblab'
-  NETSIM = 'netsim'
-  CRAFT = 'craft'
-  MAZE = 'maze'
-  CALC = 'calc'
-  EVAL = 'eval'
-  TEXT_COMPRESSION = 'text_compression'
-  LEVEL_GROUP = 'level_group'
-  PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'
+  UNPLUG = 'unplug'.freeze
+  MULTI = 'multi'.freeze
+  MATCH = 'match'.freeze
+  ARTIST = TURTLE = 'turtle'.freeze # heh
+  FLAPPY = 'flappy'.freeze
+  BOUNCE = 'bounce'.freeze
+  PLAYLAB = STUDIO = 'studio'.freeze
+  STUDIO_EC = 'StudioEC'.freeze
+  APPLAB = WEBAPP = 'applab'.freeze
+  GAMELAB = 'gamelab'.freeze
+  WEBLAB = 'weblab'.freeze
+  NETSIM = 'netsim'.freeze
+  CRAFT = 'craft'.freeze
+  MAZE = 'maze'.freeze
+  CALC = 'calc'.freeze
+  EVAL = 'eval'.freeze
+  TEXT_COMPRESSION = 'text_compression'.freeze
+  LEVEL_GROUP = 'level_group'.freeze
+  PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -129,6 +129,10 @@ class Game < ActiveRecord::Base
 
   def self.external_link
     @@game_external_link ||= find_by_name('ExternalLink')
+  end
+
+  def self.curriculum_reference
+    @@game_curriculum_reference ||= find_by_name('CurriculumReference')
   end
 
   def unplugged?
@@ -248,6 +252,8 @@ class Game < ActiveRecord::Base
         EvaluationMulti:evaluation_multi
         PublicKeyCryptography:public_key_cryptography
         Weblab:weblab
+        CurriculumReference:curriculum_reference
+        Map:map
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

@@ -3,7 +3,12 @@
  * conforming to Maker API droplet blocks.
  */
 
-import {N_COLOR_LEDS , TOUCH_PINS} from './PlaygroundConstants';
+import {
+  N_COLOR_LEDS,
+  TOUCH_PINS,
+  CP_COMMAND,
+  CP_ACCEL_STREAM_ON
+} from './PlaygroundConstants';
 import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from 'johnny-five';
@@ -49,7 +54,8 @@ export function createCircuitPlaygroundComponents(board) {
 
     buttonR: initializeButton(board, '19'),
 
-    ...initializeTouchPads(board)
+    // TODO (captouch): Re-enable when we can lazy-enable streaming
+    // ...initializeTouchPads(board)
   };
 }
 
@@ -105,10 +111,11 @@ export function destroyCircuitPlaygroundComponents(components) {
   delete components.buttonL;
   delete components.buttonR;
 
+  // TODO (captouch): Restore when we re-enable
   // Remove listeners from each TouchSensor
-  TOUCH_PINS.forEach(pin => {
-    delete components[`touchPad${pin}`];
-  });
+  // TOUCH_PINS.forEach(pin => {
+  //   delete components[`touchPad${pin}`];
+  // });
 }
 
 /**
@@ -226,6 +233,10 @@ function initializeAccelerometer(board) {
     board,
     controller: PlaygroundIO.Accelerometer
   });
+  // TODO (bbuchanan): Push these helpers down into playground-io
+  accelerometer.start = function () {
+    accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
+  };
   accelerometer.getOrientation = function (orientationType) {
     return accelerometer[orientationType];
   };
@@ -238,6 +249,8 @@ function initializeAccelerometer(board) {
   return accelerometer;
 }
 
+// TODO (captouch)
+/* eslint-disable no-unused-vars */
 function initializeTouchPads(board) {
   // We make one playground-io Touchpad component for all captouch sensors,
   // then wrap it in our own separate objects to get the API we want to
@@ -253,3 +266,4 @@ function initializeTouchPads(board) {
   });
   return touchPads;
 }
+/* eslint-enable no-unused-vars */

@@ -1,3 +1,7 @@
+require 'cdo/developers_topic'
+require 'cdo/github'
+require 'cdo/infra_test_topic'
+
 BUILD_STARTED_PATH = deploy_dir('build-started')
 
 # Used to restart builds on staging/test via Slack slash commands.
@@ -26,4 +30,16 @@ post '/api/dev/start-build' do
       response_type: 'in_channel'
     }
   )
+end
+
+post '/api/dev/set-last-dtt-green' do
+  forbidden! unless rack_env == :test
+  dont_cache
+  forbidden! unless params[:token] == CDO.slack_set_last_dtt_green_token
+
+  sha = GitHub.sha('test')
+  InfraTestTopic.set_green_commit(sha)
+  if params[:text] == 'yes'
+    DevelopersTopic.set_dtt('yes')
+  end
 end

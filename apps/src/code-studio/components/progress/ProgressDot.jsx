@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import ReactTooltip from 'react-tooltip';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { levelProgressShape } from './types';
@@ -225,7 +226,35 @@ export const ProgressDot = Radium(React.createClass({
     return '';
   },
 
+  tooltipId() {
+    return (this.props.level.title || "").toString();
+  },
+
+  tooltipContent() {
+    const { level } = this.props;
+    if (level.name === undefined) {
+      return level.title;
+    }
+    return level.title +". "+ level.name;
+  },
+
+  renderTooltip() {
+    const { courseOverviewPage } = this.props;
+    if (!courseOverviewPage) {
+      return (
+        <ReactTooltip
+          id={this.tooltipId()}
+          role="tooltip"
+          wrapper="span"
+        >
+          {this.tooltipContent()}
+        </ReactTooltip>
+      );
+    }
+  },
+
   render() {
+
     const { level, status, courseOverviewPage, currentLevelId } = this.props;
 
     const onCurrent = currentLevelId &&
@@ -253,18 +282,22 @@ export const ProgressDot = Radium(React.createClass({
          ]}
       >
         {(iconClassFromIconType[level.icon] && !isPeerReview) ?
-          <i
-            className={this.iconClassName()}
-            style={[
-              styles.dot.common,
-              styles.dot.puzzle,
-              courseOverviewPage && styles.dot.overview,
-              styles.dot.icon,
-              smallDot && styles.dot.icon_small,
-              status && status !== LevelStatus.not_tried && styles.dot.icon_complete,
-              outlineCurrent && {textShadow: createOutline(color.level_current)}
-            ]}
-          /> :
+          <span data-tip data-for={this.tooltipId()} aria-describedby={this.tooltipId()} style={{borderColor: "#ff0000", borderWidth: 2}}>
+            <i
+              className={this.iconClassName()}
+              style={[
+                styles.dot.common,
+                styles.dot.puzzle,
+                courseOverviewPage && styles.dot.overview,
+                styles.dot.icon,
+                smallDot && styles.dot.icon_small,
+                status && status !== LevelStatus.not_tried && styles.dot.icon_complete,
+                outlineCurrent && {textShadow: createOutline(color.level_current)}
+              ]}
+            />
+            {this.renderTooltip()}
+          </span> :
+
           <div
             className={this.iconClassName()}
             style={[
@@ -278,12 +311,17 @@ export const ProgressDot = Radium(React.createClass({
               styles.status[status || LevelStatus.not_tried],
             ]}
           >
+
+          <div data-tip data-for={this.tooltipId()} aria-describedby={this.tooltipId()}>
             <BubbleInterior
               showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
-              title={level.title || undefined}
+              title={this.tooltipId() || undefined}
             />
+            {this.renderTooltip()}
           </div>
+
+        </div>
         }
         {
           showLevelName &&

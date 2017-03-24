@@ -9,11 +9,13 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Spinner from '../components/spinner';
 
 const WorkshopTableLoader = React.createClass({
   propTypes: {
     queryUrl: React.PropTypes.string.isRequired,
+    queryParams: React.PropTypes.object,
     canDelete: React.PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
     children: React.PropTypes.element.isRequired, // Require exactly 1 child component.
     hideNoWorkshopsMessage: React.PropTypes.bool // Should we show "no workshops found" if no workshops are found?
@@ -27,9 +29,24 @@ const WorkshopTableLoader = React.createClass({
   },
 
   componentDidMount() {
+    this.load();
+  },
+
+  componentDidUpdate() {
+    if (this.childElement) {
+      // Save child element rendered height, to preserve during reload for a smoother transition.
+      this.childHeight = ReactDOM.findDOMNode(this.childElement).offsetHeight;
+    }
+  },
+
+  load(props = this.props) {
+    this.setState({loading: true});
+    const effectiveParams = _.omitBy(props.queryParams, value => value === null || value === undefined);
+    const url = props.queryParams ? `${props.queryUrl}?${$.param(effectiveParams)}` : props.queryUrl;
+
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: this.props.queryUrl,
+      url: url,
       dataType: 'json'
     })
     .done(data => {
@@ -40,7 +57,18 @@ const WorkshopTableLoader = React.createClass({
     });
   },
 
+  componentWillReceiveProps(nextProps) {
+    if (!_.isEqual(this.props, nextProps)) {
+      this.abortPendingRequests();
+      this.load(nextProps);
+    }
+  },
+
   componentWillUnmount() {
+    this.abortPendingRequests();
+  },
+
+  abortPendingRequests() {
     if (this.loadRequest) {
       this.loadRequest.abort();
     }
@@ -55,17 +83,21 @@ const WorkshopTableLoader = React.createClass({
       url: '/api/v1/pd/workshops/' + workshopId
     })
     .done(() => {
-      const workshops = _.reject(_.cloneDeep(this.state.workshops), w => w.id === workshopId);
-      this.setState({workshops: workshops});
+      this.load();
     });
   },
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return (
+        // While reloading, preserve the height of the previous child component so the refresh is smoother.
+        <div style={{height: this.childHeight}}>
+          <Spinner/>
+        </div>
+      );
     }
 
-    if (this.state.workshops.length === 0 ) {
+    if (!this.state.workshops.length && !this.state.workshops.total_count) {
       if (this.props.hideNoWorkshopsMessage) {
         return null;
       } else {
@@ -76,7 +108,8 @@ const WorkshopTableLoader = React.createClass({
     return (
       React.cloneElement(this.props.children, {
         workshops: this.state.workshops,
-        onDelete: this.props.canDelete ? this.handleDelete : null
+        onDelete: this.props.canDelete ? this.handleDelete : null,
+        ref: ref => {this.childElement = ref;}
       })
     );
   }

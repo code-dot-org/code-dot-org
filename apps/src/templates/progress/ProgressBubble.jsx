@@ -1,7 +1,10 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
+import ReactTooltip from 'react-tooltip';
+import FontAwesome from '../FontAwesome';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import _ from 'lodash';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
@@ -33,6 +36,10 @@ const styles = {
       color: color.white,
       backgroundColor: color.level_current
     }
+  },
+  tooltipIcon: {
+    paddingRight: 5,
+    paddingLeft: 5
   }
 };
 
@@ -41,11 +48,15 @@ const ProgressBubble = React.createClass({
     number: PropTypes.number.isRequired,
     status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
     url: PropTypes.string,
-    disabled: PropTypes.bool.isRequired
+    disabled: PropTypes.bool.isRequired,
+    levelName: PropTypes.string,
+    levelIcon: PropTypes.string
   },
 
   render() {
-    const { number, status, url, disabled } = this.props;
+    const { number, status, url, levelName, levelIcon } = this.props;
+
+    const disabled = this.props.disabled || levelIcon === 'lock';
 
     const style = {
       ...styles.main,
@@ -58,9 +69,20 @@ const ProgressBubble = React.createClass({
       href = url + location.search;
     }
 
+    const tooltipId = _.uniqueId();
+    const interior = levelIcon === 'lock' ? <FontAwesome icon="lock"/> : number;
+
     let bubble = (
-      <div style={style}>
-        {number}
+      <div style={style} data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+        {interior}
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          effect="solid"
+        >
+          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
+          {levelName}
+        </ReactTooltip>
       </div>
     );
 

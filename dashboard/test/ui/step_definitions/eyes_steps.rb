@@ -34,6 +34,8 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
     config[:viewport_size] = {width: 1024, height: 690}
   end
   @browser.capabilities[:takes_screenshot] = true
+  @eyes.force_fullpage_screenshot = true
+  @eyes.use_css_transition = true
   @browser = @eyes.open(config)
 end
 

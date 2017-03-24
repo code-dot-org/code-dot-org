@@ -55,6 +55,10 @@
     "makerlab_enabled": "false",
     "markdown_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\nTry another one! -- This one is trickier, but very common.\r\n\r\n1. **Run the program** and inspect the messages in the Debug Console for clues.\r\n2. **Investigate** - track down what the root of the problem might be.\r\n3. **Fix it** the program and correct the errors so that it works as intended.\r\n4. **Run the program** and verify that both buttons have the intended functionality.\r\n5. **Repeat as necessary** until the program works as intended\r\n\r\n<details><summary>Hint? [click here]</summary>\r\n\r\n<li>Remember: IDs are **case-sensitive**!!!</li>\r\n<li>The error is with the id: **left**[**B/b**]**tn**</li>\r\n</details>\r\n",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "true",
     "contained_level_names": null
   },
   "published": true,

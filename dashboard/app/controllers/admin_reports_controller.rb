@@ -39,11 +39,10 @@ class AdminReportsController < ApplicationController
           # Determine whether the level is a multi question, replacing the
           # numerical answer with its corresponding text if so.
           level_info = Level.where(id: level_id).pluck(:type, :properties).first
-          if level_info && level_info[0] == 'Multi' && !level_info[1].empty?
-            level_answers = level_info[1]["answers"]
-            @responses[level_id].each do |response|
-              response[2] = level_answers[response[2].to_i]["text"]
-            end
+          next unless level_info && level_info[0] == 'Multi' && !level_info[1].empty?
+          level_answers = level_info[1]["answers"]
+          @responses[level_id].each do |response|
+            response[2] = level_answers[response[2].to_i]["text"]
           end
         end
       end
@@ -106,7 +105,7 @@ class AdminReportsController < ApplicationController
       {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
     end
     require 'naturally'
-    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    data_array = data_array.select {|x| x['TotalAttempt'].to_i > 10}.sort_by {|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
     headers = [
       "Puzzle",
       "Total\nAttempts",

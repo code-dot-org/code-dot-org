@@ -60,10 +60,10 @@ class Craft < Blockly
     :ground_plane,
     :ground_decoration_plane,
     :action_plane
-  ]
+  ].freeze
 
-  EMPTY_STRING = ''
-  DEFAULT_MAP_VALUE = EMPTY_STRING # no item
+  EMPTY_STRING = ''.freeze
+  DEFAULT_MAP_VALUE = EMPTY_STRING.freeze # no item
 
   ALL_BLOCKS = {
     EMPTY_STRING => true,
@@ -111,7 +111,7 @@ class Craft < Blockly
     tnt: true,
     water: true,
     wool: true
-  }
+  }.freeze
 
   ALL_MINIBLOCKS = {
     dirt: true,
@@ -148,7 +148,7 @@ class Craft < Blockly
     milk: true,
     egg: true,
     poppy: true
-  }
+  }.freeze
 
   ALL_SOUNDS = {
     dirt: true,
@@ -200,11 +200,11 @@ class Craft < Blockly
     zombieGroan: true,
     zombieHurt: true,
     zombieHurt2: true,
-  }
+  }.freeze
 
-  ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]"
-  ALL_MINIBLOCKS_ARRAY = "[\"#{ALL_MINIBLOCKS.keys[1..-1].join('", "')}\"]"
-  ALL_SOUNDS_ARRAY = "[\"#{ALL_SOUNDS.keys[1..-1].join('", "')}\"]"
+  ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]".freeze
+  ALL_MINIBLOCKS_ARRAY = "[\"#{ALL_MINIBLOCKS.keys[1..-1].join('", "')}\"]".freeze
+  ALL_SOUNDS_ARRAY = "[\"#{ALL_SOUNDS.keys[1..-1].join('", "')}\"]".freeze
 
   KNOWN_TILE_TYPES = {
     ground_plane: ALL_BLOCKS,
@@ -241,7 +241,7 @@ class Craft < Blockly
         # rails_redstoneTorch: true
       }
     )
-  }
+  }.freeze
 
   TILES_TO_PREVIEW_IMAGES = {
     grass: '/blockly/media/skins/craft/images/Block_0000_Grass.png',
@@ -251,7 +251,7 @@ class Craft < Blockly
     tallGrass: '/blockly/media/skins/craft/images/TallGrass.png',
     sheep: '/blockly/media/skins/craft/images/Sheep.png',
     treeOak: '/blockly/media/skins/craft/images/Leaves_Oak_Decay.png',
-  }
+  }.freeze
 
   SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS = {
     fail:
@@ -269,7 +269,7 @@ class Craft < Blockly
   return true;
 },',
 
-  }
+  }.freeze
 
   SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
     neverFailEarly:
@@ -287,7 +287,7 @@ class Craft < Blockly
   // Fail instantly when they turn once.
   return verificationAPI.getTurnRandomCount() >= 1;
 },',
-  }
+  }.freeze
 
   SAMPLE_VERIFICATION_FUNCTIONS = {
     mapMatches:
@@ -367,7 +367,7 @@ class Craft < Blockly
 }
 '
 
-  }
+  }.freeze
 
   def self.player_start_directions
     [['Up', 0], ['Right', 1], ['Down', 2], ['Left', 3]]
@@ -436,7 +436,7 @@ class Craft < Blockly
       place_block_options
       drop_dropdown_options
       play_sound_options
-    ).map{ |x| x.camelize(:lower) }
+    ).map { |x| x.camelize(:lower) }
   end
 
   def self.skins

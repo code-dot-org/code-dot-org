@@ -1,5 +1,5 @@
 class Pd::WorkshopMailer < ActionMailer::Base
-  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'
+  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
   # Name of partial view for workshop details organized by course, then subject.
   # (views/pd/workshop_mailer/workshop_details/_<name>.html.haml)
@@ -73,6 +73,15 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_no_reply,
       subject: 'Code.org workshop cancellation',
+      to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def organizer_should_close_reminder(workshop)
+    @workshop = workshop
+
+    mail content_type: 'text/html',
+      from: from_no_reply,
+      subject: "Your #{@workshop.course} workshop is still open, please close it",
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 

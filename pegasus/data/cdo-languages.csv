@@ -5,6 +5,7 @@ bg,bg,bg,bg-BG,български,Bulgarian,TRUE,TRUE,bg,Bulgarian
 bn,bn,bn,bn-BD,বাংলা,Bengali,FALSE,FALSE,bn,Bengali
 bs,bs,bs,bs-BA,Bosanski,Bosnian,TRUE,FALSE,bs,Bosnian
 ca,ca,ca,ca-ES,Català,Catalan,TRUE,TRUE,ca,Catalan
+co,co,co,co-CO,Corsu,Corsican,FALSE,FALSE,co,Corsican
 cs,cs,cs,cs-CZ,Čeština,Czech,TRUE,TRUE,cs,Czech
 da,da,da,da-DK,Dansk,Danish,TRUE,TRUE,da,Danish
 de,de,de,de-DE,Deutsch,German,TRUE,TRUE,de,German

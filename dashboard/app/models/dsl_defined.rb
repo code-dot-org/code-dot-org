@@ -139,6 +139,11 @@ class DSLDefined < Level
     properties['encrypted'] = value
   end
 
+  # don't allow markdown in DSL levels unless child class overrides this
+  def supports_markdown?
+    false
+  end
+
   private
 
   def delete_level_file

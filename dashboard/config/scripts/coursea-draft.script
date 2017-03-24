@@ -2,6 +2,7 @@ hidden false
 login_required true
 
 stage 'Debugging: Unspotted Bugs'
+level 'courseB_video_Unspotted'
 level 'courseB_story_unspottedBugs1'
 level 'courseB_story_unspottedBugs2'
 level 'courseB_story_unspottedBugs3'
@@ -22,6 +23,7 @@ level 'courseB_story_unspottedBugs17'
 level 'courseB_story_unspottedBugs18'
 
 stage 'Persistence & Frustration: Stevie and the Marbles'
+level 'courseA_video_Stevie'
 level 'courseA_external_stevie1'
 level 'courseA_external_stevie2'
 level 'courseA_external_stevie3'

@@ -213,10 +213,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "markdown_instructions": "# VU Meter\r\n\r\nMany stereo systems feature a row of LEDs that light up as the music plays. This display is called a Volume Unit (VU) Meter, and it allows the user to see how loud the music is as it plays.\r\n\r\nTest out this VU Meter by speaking or otherwise making noise near the Circuit Playground. How do the lights and display change as the volume of ambient noise changes?",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "teacher_markdown": "### Exemplar\r\n\r\nThis project is a bit more sophisticated than the last. Students first need to set the scale of the sound sensor to 0-9 so that it maps nicely to the color LEDs, and then use a for loop to turn on or off the appropriate LEDs.\r\n\r\n<a href=\"https://studio.code.org/projects/applab/LYYQfAAFnOzsmTSj_b0ZwA/view\">View Exemplar Code</a>",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -70,8 +70,9 @@ title: "Workshop Survey for Counselors and Administrators"
           name: 'how_heard_ss[]',
           label: 'How did you hear about this workshop? (select all that apply)'
       .form-group{id: 'how-heard-other-wrapper', style: 'display: none;'}
-        %label.control-label{for: 'how-heard-other'}<
+        %label.control-label{for: 'how_heard_other_s'}<
           %em{style: 'font-weight: normal;'} Other source?
+          %span.form-required-field *
         %div
           %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
 
