@@ -1487,4 +1487,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal 1, SectionHiddenStage.where(section_id: section.id).length
   end
+
+  test "should redirect when script has a redirect_to property" do
+    script = create :script
+    new_script = create :script
+    create(:script_level, script: new_script)
+
+    get :show, params: {script_id: script.name, stage_position: '1', id: '1'}
+    assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/1"
+  end
 end
