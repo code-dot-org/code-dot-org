@@ -197,7 +197,7 @@ export default storybook => {
               fakeLevels(4),
               fakeLevels(2)
             ]}
-            viewType={ViewType.Teacher}
+            viewAs={ViewType.Teacher}
             lessonIsVisible={() => true}
             lessonLockedForSection={() => false}
           />
