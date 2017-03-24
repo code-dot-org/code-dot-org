@@ -4,6 +4,10 @@ Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
 require_relative '../../dashboard/config/environment'
 require 'aws-sdk'
 require 'cdo/chat_client'
+require 'cdo/cron_helper'
+require 'cdo/only_one'
+
+TASK_NAME = 'Backup RDS Snapshot To Secondary Account'
 
 # Wait for an RDS snapshot to be in the 'available' state
 # @param snapshot [DBSnapshot] the snapshot to wait for
@@ -90,6 +94,12 @@ end
 # which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
 def main
   ChatClient.message 'server operations', 'Beginning cross-account RDS backup'
+
+  unless only_one_running?(__FILE__)
+    CronHelper.report_cron_daily_result TASK_NAME, false
+    ChatClient.log 'Cross-account RDS backup failed, previous task is still running!', color: 'red', notify: 1
+    return
+  end
   rds_primary = Aws::RDS::Resource.new
   credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
   rds_backup = Aws::RDS::Resource.new(credentials: credentials_backup)
@@ -119,17 +129,21 @@ def main
         'server operations',
         "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
       )
+      CronHelper.report_cron_daily_result TASK_NAME, true
     rescue Aws::RDS::Errors::DBSnapshotAlreadyExists
       ChatClient.message(
         'server operations',
         "RDS snapshot backup error: #{latest_snapshot.snapshot_id} already backed up"
       )
+      CronHelper.report_cron_daily_result TASK_NAME, false
     end
   ensure
     # Clean up the temporary snapshot
     puts "Deleting temporary backup snapshot #{copied_snapshot.snapshot_id}"
     copied_snapshot.delete
   end
+rescue # catch-all to report any failure
+  CronHelper.report_cron_daily_result TASK_NAME, false
 end
 
 main
