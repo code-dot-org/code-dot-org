@@ -1,7 +1,7 @@
 require 'cdo/chat_client'
 
 class CronHelper
-  CRON_REPORT_ROOM = 'cron-daily'
+  CRON_REPORT_ROOM = 'cron-daily'.freeze
   def self.report_cron_daily_result(task_name, success)
     status = success ? 'success' : 'failure'
     result_string = "#{task_name} : #{status}"
