@@ -194,7 +194,7 @@ designMode.updateProperty = function (element, name, value) {
   // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
   // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
   // ignored.
-  var preChangeData = elementLibrary.getPreChangeData(element);
+  var preChangeData = elementLibrary.getPreChangeData(element, name);
   var handled = true;
   switch (name) {
     case 'id':
