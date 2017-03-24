@@ -1024,7 +1024,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
       params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && !params[:level_source_id].nil?
     end
-    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
+    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish'}
 
     assert_creates(LevelSource) do
       post :milestone,
@@ -1044,7 +1044,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
       params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && !params[:level_source_id].nil?
     end
-    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
+    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish'}
 
     assert_creates(LevelSource) do
       post :milestone,
@@ -1144,7 +1144,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone changes to next stage in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
-    (1..3).each { |n| create(:level, name: "Level #{n}", game: game) }
+    (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"

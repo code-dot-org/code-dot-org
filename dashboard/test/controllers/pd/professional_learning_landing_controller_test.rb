@@ -49,6 +49,6 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_response :success
     response = assigns(:landing_page_data)
 
-    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map { |enrollment| enrollment[:courseName]}
+    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]}
   end
 end

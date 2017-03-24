@@ -7,9 +7,9 @@ class SurveyResultsController < ApplicationController
 
     respond_to do |format|
       if @survey_result.save
-        format.json { head :ok }
+        format.json {head :ok}
       else
-        format.json { render json: @survey_result.errors, status: :unprocessable_entity }
+        format.json {render json: @survey_result.errors, status: :unprocessable_entity}
       end
     end
   end
