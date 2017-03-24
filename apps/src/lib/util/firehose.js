@@ -1,6 +1,7 @@
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
 
 import AWS from 'aws-sdk';
+import {createUuid, trySetLocalStorage} from '@cdo/apps/utils';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.
@@ -8,14 +9,8 @@ import AWS from 'aws-sdk';
  *   firehoseClient.putRecord(
  *     'analysis-events',
  *     {
- *       created_at: new Date().toISOString(),             // REQUIRED
- *       environment: 'production',          // REQUIRED
  *       study: 'underwater basket weaving', // REQUIRED
  *       study_group: 'control',             // OPTIONAL
- *       user_id: current_user.id,           // OPTIONAL
- *       script_id: script.id,               // OPTIONAL
- *       level_id: level.id,                 // OPTIONAL
- *       project_id: project.id              // OPTIONAL
  *       event: 'drowning',                  // REQUIRED
  *       data_int: 2                         // OPTIONAL
  *       data_float: 0.31                    // OPTIONAL
@@ -28,14 +23,8 @@ import AWS from 'aws-sdk';
  *     'analysis-events',
  *     [
  *       {
- *         created_at: new Date().toISOString(),             // REQUIRED
- *         environment: 'production',          // REQUIRED
  *         study: 'underwater basket weaving', // REQUIRED
  *         study_group: 'control',             // OPTIONAL
- *         user_id: current_user.id,           // OPTIONAL
- *         script_id: script.id,               // OPTIONAL
- *         level_id: level.id,                 // OPTIONAL
- *         project_id: project.id              // OPTIONAL
  *         event: 'drowning',                  // REQUIRED
  *         data_int: 2                         // OPTIONAL
  *         data_float: 0.31                    // OPTIONAL
@@ -43,14 +32,8 @@ import AWS from 'aws-sdk';
  *         data_json: JSON.stringify(x)        // OPTIONAL
  *       },
  *       {
- *         created_at: new Date().toISOString(),             // REQUIRED
- *         environment: 'production',          // REQUIRED
  *         study: 'underwater basket weaving', // REQUIRED
  *         study_group: 'control',             // OPTIONAL
- *         user_id: current_user.id,           // OPTIONAL
- *         script_id: script.id,               // OPTIONAL
- *         level_id: level.id,                 // OPTIONAL
- *         project_id: project.id              // OPTIONAL
  *         event: 'drowning',                  // REQUIRED
  *         data_int: 2                         // OPTIONAL
  *         data_float: 0.31                    // OPTIONAL
@@ -62,20 +45,43 @@ import AWS from 'aws-sdk';
  */
 // TODO(asher): Add the ability to queue records individually, to be submitted
 // as a batch.
+// TODO(asher): Determine whether any of the utility functions herein should be
+// moved elsewhere, e.g., to apps/src/util.js.
 class FirehoseClient {
   /**
+   * Returns the current environment.
+   * @return {string} The current environment, e.g., "staging" or "production".
+   */
+  getEnvironment() {
+    const hostname = window.location.hostname;
+    if (hostname.includes("adhoc")) {
+      // As adhoc hostnames may include other keywords, check it first.
+      return "adhoc";
+    }
+    if (hostname.includes("test")) {
+      return "test";
+    }
+    if (hostname.includes("levelbuilder")) {
+      return "levelbuilder";
+    }
+    if (hostname.includes("staging")) {
+      return "staging";
+    }
+    if (hostname.includes("localhost")) {
+      return "development";
+    }
+    if (hostname.includes("code.org")) {
+      return "production";
+    }
+    return "unknown";
+  }
+
+  /**
    * Returns whether the environment appears to be the test environment.
-   * @return {boolean} Whether the hostname is "test.code.org" or
-   *   "test-studio.code.org".
+   * @return {boolean} Whether the hostname includes "test".
    */
   isTestEnvironment() {
-    if (window && window.location) {
-      const hostname = window.location.hostname;
-      if ("test.code.org" === hostname || "test-studio.code.org" === hostname) {
-        return true;
-      }
-    }
-    return false;
+    return this.getEnvironment() === "test";
   }
 
   /**
@@ -83,13 +89,7 @@ class FirehoseClient {
    * @return {boolean} Whether the hostname includes "localhost".
    */
   isDevelopmentEnvironment() {
-    if (window && window.location) {
-      const hostname = window.location.hostname;
-      if (hostname.includes("localhost")) {
-        return true;
-      }
-    }
-    return false;
+    return this.getEnvironment() === "development";
   }
 
   /**
@@ -109,14 +109,63 @@ class FirehoseClient {
   }
 
   /**
+   * Returns a unique user ID that is persisted across sessions through local
+   * storage.
+   * WARNING: Mutates local storage if an analytisID has not already been set.
+   * @return {string | null} A unique user ID.
+   */
+  getAnalyticsUuid() {
+    if (!!window.localStorage && !!window.localStorage.getItem("analyticsID")) {
+      return window.localStorage.getItem("analyticsID");
+    }
+    let analytics_uuid = createUuid();
+    if (trySetLocalStorage("analyticsID", analytics_uuid)) {
+      return analytics_uuid;
+    }
+    return null;
+  }
+
+  /**
+   * Returns a hash containing user device information.
+   * storage.
+   * @return {hash} Hash of user device information.
+   */
+  getDeviceInfo() {
+    let device_info = {
+      user_agent: window.navigator.userAgent,
+      window_width: window.innerWidth,
+      window_height: window.innerHeight,
+      hostname: window.location.hostname,
+      full_path: window.location.href
+    };
+    return device_info;
+  }
+
+  /**
+   * Merge various key-value pairs into data.
+   * @param {hash} data The data to add the key-value pairs to.
+   * @return {hash} The data, including the newly added key-value pairs.
+   */
+  addCommonValues(data) {
+    data['created_at'] = new Date().toISOString();
+    data['environment'] = this.getEnvironment();
+    data['uuid'] = this.getAnalyticsUuid();
+    data['device'] = JSON.stringify(this.getDeviceInfo());
+
+    return data;
+  }
+
+  /**
    * Pushes one data record into the delivery stream.
    * @param {string} deliveryStreamName The name of the delivery stream.
    * @param {hash} data The data to push.
-   * @param {boolean} alwaysPut Force the record to be sent.
-   *   (default false)
+   * @param {hash} options Additional (optional) options.
+   *   (default {alwaysPut: false})
+   * @option options [String] alwaysPut Forces the record to be sent.
    */
-  putRecord(deliveryStreamName, data, alwaysPut = false) {
-    if (!this.shouldPutRecord(alwaysPut)) {
+  putRecord(deliveryStreamName, data, options = {alwaysPut: false}) {
+    data = this.addCommonValues(data);
+    if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed("Skipped sending record to " + deliveryStreamName);
       console.log(data);
       console.groupEnd();
@@ -130,13 +179,7 @@ class FirehoseClient {
           Data: JSON.stringify(data),
         },
       },
-      function (err, data) {
-        if (err) {
-          // TODO(asher): This is here to assist debugging and should be removed
-          // when it is no longer useful.
-          console.error("Error pushing event data" + err);
-        }
-      }
+      function (err, data) {}
     );
   }
 
@@ -144,10 +187,14 @@ class FirehoseClient {
    * Pushes an array of data records into the delivery stream.
    * @param {string} deliveryStreamName The name of the delivery stream.
    * @param {array[hash]} data The data to push.
-   * @param {boolean} alwaysPut Force the record to be sent.
+   * @param {hash} options Additional (optional) options.
+   *   (default {alwaysPut: false})
+   * @option options [String] alwaysPut Forces the record to be sent.
    */
-  putRecordBatch(deliveryStreamName, data, alwaysPut = false) {
-    if (!this.shouldPutRecord(alwaysPut)) {
+  putRecordBatch(deliveryStreamName, data, options = {alwaysPut: false}) {
+    data.map(function (record) { return this.AddCommonValues(record); });
+
+    if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed("Skipped sending record batch to " + deliveryStreamName);
       data.map(function (record) {
         console.log(record);
@@ -167,13 +214,7 @@ class FirehoseClient {
         DeliveryStreamName: deliveryStreamName,
         Records: batch
       },
-      function (err, data) {
-        if (err) {
-          // TODO(asher): This is here to assist debugging and should be removed
-          // when it is no longer useful.
-          console.error("Error pushing event data" + err);
-        }
-      }
+      function (err, data) {}
     );
   }
 }
