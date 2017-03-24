@@ -16,7 +16,7 @@ describe('ProgressLevelSet', function () {
       />
     );
 
-    assert.equal(wrapper.find('a').length, 2, "One anchor for pill, one for description");
+    assert.equal(wrapper.find('ProgressPill').length, 1);
     assert.equal(wrapper.find('ProgressBubbleSet').length, 0);
   });
 
@@ -30,7 +30,7 @@ describe('ProgressLevelSet', function () {
       />
     );
 
-    assert.equal(wrapper.find('a').length, 2, "One anchor for pill, one for description");
+    assert.equal(wrapper.find('ProgressPill').length, 1);
     assert.equal(wrapper.find('ProgressBubbleSet').length, 1);
   });
 

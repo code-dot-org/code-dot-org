@@ -1,13 +1,11 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
-import FontAwesome from '../FontAwesome';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import { levelType } from './progressTypes';
 import { getIconForLevel } from './progressHelpers';
-
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
+import ProgressPill from './ProgressPill';
 
 const styles = {
   table: {
@@ -114,20 +112,18 @@ const ProgressLevelSet = React.createClass({
         <tbody>
           <tr>
             <td>
-              <a href={multiLevelStep ? undefined : url}>
-                <div
-                  style={{
-                    ...styles.levelPill,
-                    ...BUBBLE_COLORS[status],
-                    ...(multiLevelStep ? undefined : styles.hoverStyle)
-                  }}
-                >
-                  <FontAwesome icon={getIconForLevel(levels[0])}/>
-                  <div style={{...styles.buttonText, ...styles.text}}>
-                    {i18n.levelN({levelNumber})}
-                  </div>
-                </div>
-              </a>
+              {/*
+                TODO - fixed width isn't great for i18n. likely want to come up with some
+                way of having this be dynamic, but the same size across all instances
+                width: 110,
+              */}
+              <ProgressPill
+                url={multiLevelStep ? undefined : url}
+                status={status}
+                icon={getIconForLevel(levels[0])}
+                text={i18n.levelN({levelNumber})}
+                width={130}
+              />
             </td>
             <td style={styles.col2}>
               <a href={url}>
