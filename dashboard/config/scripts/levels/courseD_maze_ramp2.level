@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,0,0,0,0,0],[0,2,1,1,3,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Drag an extra `move forward` block out of the toolbox to finish your code.",
+    "instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -28,12 +28,13 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.\",\"hint_id\":\"courseC_maze_programming2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/05df2a28a83595398cf3c2a1c2a2ec9f/courseC_maze_programming2.mp3\"}]",
-    "markdown_instructions": "Drag an extra `move forward` block out of the toolbox to finish your code.",
+    "markdown_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming2_1\",\r\n  \"callout_text\": \"This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null
   },
   "published": true,
   "notes": "",
