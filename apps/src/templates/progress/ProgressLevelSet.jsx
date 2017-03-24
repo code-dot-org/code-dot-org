@@ -11,32 +11,6 @@ const styles = {
   table: {
     marginTop: 12
   },
-  levelPill: {
-    // TODO - fixed width isn't great for i18n. likely want to come up with some
-    // way of having this be dynamic, but the same size across all instances
-    width: 110,
-    textAlign: 'center',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
-    borderRadius: 20,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-  hoverStyle: {
-    ':hover': {
-      textDecoration: 'none',
-      color: color.white,
-      backgroundColor: color.level_current
-    }
-  },
-  buttonText: {
-    marginLeft: 10
-  },
   nameText: {
     color: color.charcoal
   },

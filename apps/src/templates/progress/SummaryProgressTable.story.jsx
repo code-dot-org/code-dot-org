@@ -224,6 +224,21 @@ export default storybook => {
             lessonLockedForSection={(lessonId) => lessonId === 2}
           />
         )
+      },
+      {
+        name:'unplugged lesson',
+        story: () => (
+          <SummaryProgressTable
+            {...defaultProps}
+            lessons={[fakeLesson('Stage with Unplugged', 1, false, 1)]}
+            levelsByLesson={[
+              fakeLevels(3).map((level, index) => ({
+                ...level,
+                isUnplugged: index === 0
+              }))
+            ]}
+          />
+        )
       }
     ]);
 };
