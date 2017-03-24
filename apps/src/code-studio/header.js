@@ -139,7 +139,11 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
   function lazyLoadPopup() {
     if (!popupLoaded) {
       popupLoaded = true;
-      $.getJSON(`/api/script_structure/${scriptName}`, data => progress.renderCourseProgress(data, currentLevelId));
+      $.getJSON(`/api/script_structure/${scriptName}`, data => {
+        // Hide our loading spinner and replace it with course progress
+        $(".header_popup_body .loading").hide();
+        progress.renderCourseProgress(data, currentLevelId);
+      });
     }
   }
 };

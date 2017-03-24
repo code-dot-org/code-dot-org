@@ -119,7 +119,7 @@ namespace :test do
           ENV.delete 'TEST_ENV_NUMBER'
           # Store new DB contents
           `mysqldump -u#{writer.user} dashboard_test1 --skip-comments | sed '#{auto_inc}' > #{seed_file.path}`
-          gzip_data = Zlib::GzipWriter.wrap(StringIO.new) { |gz| IO.copy_stream(seed_file.path, gz); gz.finish }.tap(&:rewind)
+          gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
           s3_client.put_object(
             bucket: bucket_name,
@@ -143,7 +143,7 @@ namespace :test do
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          pipes = Array.new(procs) { |i| ">(mysql -u#{writer.user} dashboard_test#{i + 1})" }.join(' ')
+          pipes = Array.new(procs) {|i| ">(mysql -u#{writer.user} dashboard_test#{i + 1})"}.join(' ')
           RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
         end
 

@@ -39,6 +39,10 @@ Style/NumericLiterals:
 Style/Semicolon:
   AllowAsExpressionSeparator: true
 
+Style/SpaceInsideBlockBraces:
+  EnforcedStyle: no_space
+  SpaceBeforeBlockParameters: false
+
 Style/WordArray:
   MinSize: 5
 

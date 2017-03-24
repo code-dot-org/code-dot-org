@@ -481,7 +481,7 @@ class FilesApi < Sinatra::Base
     new_entry_hash['filename'] = filename
     manifest_is_unchanged = false
 
-    existing_entry = manifest.detect { |e| e['filename'].downcase == filename.downcase }
+    existing_entry = manifest.detect {|e| e['filename'].downcase == filename.downcase}
     if existing_entry.nil?
       manifest << new_entry_hash
     else
@@ -494,7 +494,7 @@ class FilesApi < Sinatra::Base
 
     # if we're also deleting a file (on rename), remove it from the manifest
     if params['delete']
-      reject_result = manifest.reject! { |e| e['filename'].downcase == params['delete'].downcase }
+      reject_result = manifest.reject! {|e| e['filename'].downcase == params['delete'].downcase}
       manifest_is_unchanged = false unless reject_result.nil?
     end
 
@@ -572,7 +572,7 @@ class FilesApi < Sinatra::Base
     response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'])
 
     # delete the files
-    bucket.delete_multiple(encrypted_channel_id, manifest.map { |e| e['filename'].downcase }) unless manifest.empty?
+    bucket.delete_multiple(encrypted_channel_id, manifest.map {|e| e['filename'].downcase}) unless manifest.empty?
 
     { filesVersionId: response.version_id }.to_json
   end
@@ -598,7 +598,7 @@ class FilesApi < Sinatra::Base
     manifest = JSON.load manifest_result[:body]
 
     # remove the file from the manifest
-    reject_result = manifest.reject! { |e| e['filename'].downcase == filename.downcase }
+    reject_result = manifest.reject! {|e| e['filename'].downcase == filename.downcase}
     not_found if reject_result.nil?
 
     # write the manifest
