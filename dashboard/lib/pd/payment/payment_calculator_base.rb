@@ -1,5 +1,5 @@
 module Pd::Payment
-  SessionAttendanceSummary = Struct.new :hours, :teacher_ids
+  SessionAttendanceSummary = Struct.new :hours, :enrollment_ids
   TeacherAttendanceTotal = Struct.new :days, :hours do
     def add_session(hours)
       self.days += 1
@@ -34,7 +34,7 @@ module Pd::Payment
         num_hours: workshop.effective_num_hours,
         min_attendance_days: workshop.min_attendance_days,
         calculator_class: self.class,
-        attendance_count_per_session: session_attendance_summaries.map(&:teacher_ids).map(&:count)
+        attendance_count_per_session: session_attendance_summaries.map(&:enrollment_ids).map(&:count)
       ).tap do |workshop_summary|
         workshop_summary.teacher_summaries = construct_teacher_summaries workshop_summary, raw_teacher_attendance
         workshop_summary.payment = construct_workshop_payment workshop_summary
@@ -81,10 +81,10 @@ module Pd::Payment
     end
 
     # Override in derived classes to apply teacher qualification rules.
-    # Return true/false for a given teacher, whether the teacher is qualified.
-    # @param teacher [User]
-    # @return [Boolean] whether or not the teacher is qualified for payment.
-    def teacher_qualified?(teacher)
+    # Return true/false for a given enrollment, based on whether the enrolled teacher is qualified.
+    # @param enrollment [Pd::Enrollment]
+    # @return [Boolean] whether or not the enrolled teacher is qualified for payment.
+    def teacher_qualified?(enrollment)
       true
     end
 
@@ -100,8 +100,9 @@ module Pd::Payment
     # @return [Array<SessionAttendanceSummary>] summary of attendance for each session.
     def get_session_attendance_summaries(workshop)
       workshop.sessions.map do |session|
-        teacher_ids = Pd::Attendance.where(pd_session_id: session.id).pluck(:teacher_id)
-        SessionAttendanceSummary.new session.hours, teacher_ids
+        session_attendances = Pd::Attendance.where(pd_session_id: session.id)
+        enrollment_ids = session_attendances.all.map(&:resolve_enrollment).map(&:id)
+        SessionAttendanceSummary.new session.hours, enrollment_ids
       end
     end
 
@@ -111,16 +112,16 @@ module Pd::Payment
     # @param session_attendance_summaries [Array<SessionAttendanceSummary>]
     #   Summary of teacher attendance for each session
     # @return [Hash{Integer => TeacherAttendanceTotal}]
-    #   Map of teacher id to raw attendance totals for that teacher.
+    #   Map of enrollment id to raw attendance totals for that enrollment.
     def calculate_raw_teacher_attendance(session_attendance_summaries)
       {}.tap do |raw_attendance_per_teacher|
         session_attendance_summaries.each do |session_attendance_summary|
           hours = session_attendance_summary.hours
-          session_attendance_summary.teacher_ids.each do |teacher_id|
-            if raw_attendance_per_teacher[teacher_id]
-              raw_attendance_per_teacher[teacher_id].add_session hours
+          session_attendance_summary.enrollment_ids.each do |enrollment_id|
+            if raw_attendance_per_teacher[enrollment_id]
+              raw_attendance_per_teacher[enrollment_id].add_session hours
             else
-              raw_attendance_per_teacher[teacher_id] = TeacherAttendanceTotal.new 1, hours
+              raw_attendance_per_teacher[enrollment_id] = TeacherAttendanceTotal.new 1, hours
             end
           end
         end
@@ -143,25 +144,16 @@ module Pd::Payment
     # Constructs teacher summaries (including payment) for each teacher in the workshop.
     # @param workshop_summary [WorkshopSummary]
     # @param raw_teacher_attendance [Hash{Integer => TeacherAttendanceTotal}]
-    #   Map of teacher id to raw attendance totals for that teacher.
+    #   Map of enrollment id to raw attendance totals for that teacher.
     # @return [Array<TeacherSummary>] summary for each teacher.
     def construct_teacher_summaries(workshop_summary, raw_teacher_attendance)
-      enrollments_by_teacher_id = {}
-      enrolled_teachers_by_id = {}
-      workshop_summary.workshop.enrollments.each do |enrollment|
-        teacher = enrollment.user
-        if teacher
-          enrollments_by_teacher_id[teacher.id] = enrollment
-          enrolled_teachers_by_id[teacher.id] = teacher
-        end
-      end
+      enrollments_by_id = workshop_summary.workshop.enrollments.map {|e| [e.id, e]}.to_h
 
       # Generate a teacher summary for all teachers in raw attendance.
-      raw_teacher_attendance.keys.map do |teacher_id|
-        enrollment = enrollments_by_teacher_id[teacher_id]
-        teacher = enrolled_teachers_by_id[teacher_id] ||
-          User.with_deleted.find(teacher_id)
-        raw_attendance = raw_teacher_attendance[teacher_id]
+      raw_teacher_attendance.map do |enrollment_id, raw_attendance|
+        enrollment = enrollments_by_id[enrollment_id]
+        raise "Unable to find enrollment #{enrollment_id}" unless enrollment
+        teacher = enrollment.user_id ? User.with_deleted.find(enrollment.user_id) : nil
 
         days, hours = calculate_adjusted_teacher_attendance raw_attendance, workshop_summary.min_attendance_days,
           workshop_summary.num_days, workshop_summary.num_hours
@@ -175,7 +167,7 @@ module Pd::Payment
           days: days,
           hours: hours,
         ).tap do |teacher_summary|
-          if teacher_summary.days > 0 && teacher_qualified?(teacher)
+          if teacher_summary.days > 0 && teacher_qualified?(enrollment)
             teacher_summary.payment = construct_teacher_payment(teacher_summary)
           end
         end

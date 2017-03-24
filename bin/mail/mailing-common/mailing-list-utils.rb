@@ -17,7 +17,7 @@ UNSUBSCRIBERS = {}.tap do |results|
 end
 puts "#{UNSUBSCRIBERS.count} unsubscribers loaded."
 
-ALL = {}
+@all = {}
 
 def export_contacts_to_csv(contacts, path)
   columns = nil
@@ -28,19 +28,18 @@ def export_contacts_to_csv(contacts, path)
         columns = contact.keys
         results << columns
       end
-      results << columns.map{|column| contact[column]}
+      results << columns.map {|column| contact[column]}
     end
   end
 end
 
-COUNTRY_FIELDS_TO_US_VALUES =
-  {
-    'location_country_s' => ['united states'],
-    'location_country_code_s' => ["us"],
-    'hoc_country_s' => ['us'],
-    'country_s' => ['united states'],
-    'create_ip_country_s' => ['united states', 'reserved']
-  }
+COUNTRY_FIELDS_TO_US_VALUES = {
+  'location_country_s' => ['united states'],
+  'location_country_code_s' => ["us"],
+  'hoc_country_s' => ['us'],
+  'country_s' => ['united states'],
+  'create_ip_country_s' => ['united states', 'reserved']
+}.freeze
 
 def international?(solr_record)
   COUNTRY_FIELDS_TO_US_VALUES.each do |field, us_values|
@@ -72,10 +71,10 @@ def query_subscribed_contacts(params)
   {}.tap do |results|
     query_contacts(params).each do |processed|
       email = processed[:email].downcase.strip
-      results[email] = processed unless UNSUBSCRIBERS[email] || ALL[email] # don't override duplicates
+      results[email] = processed unless UNSUBSCRIBERS[email] || @all[email] # don't override duplicates
     end
 
-    ALL.merge! results
+    @all.merge! results
   end
 end
 
@@ -93,10 +92,10 @@ def include_csv(results, params)
     international = !(row[params[:country_code]] && row[params[:country_code]] != '' && row[params[:country_code]] == params[:country_code_us])
     processed = {email: row[params[:email]], name: row[params[:name]], international: international.to_s}
 
-    results[email] ||= processed unless UNSUBSCRIBERS[email] || ALL[email] # don't override duplicates
+    results[email] ||= processed unless UNSUBSCRIBERS[email] || @all[email] # don't override duplicates
   end
 
-  ALL.merge! results
+  @all.merge! results
 end
 
 def include_mailchimp_engineers(results)
@@ -121,7 +120,7 @@ end
 def include_indiegogo_donors(results)
   # read the indiegogo donors csv
   # headers
-  #Perk ID,Order No.,Pledge ID,Fulfillment Status,Funding Date,Payment Method,Appearance,Name,Email,Amount,Perk,Shipping Name,Shipping Address,Shipping Address 2,Shipping City,Shipping State/Province,Shipping Zip/Postal Code,Shipping Country
+  # Perk ID,Order No.,Pledge ID,Fulfillment Status,Funding Date,Payment Method,Appearance,Name,Email,Amount,Perk,Shipping Name,Shipping Address,Shipping Address 2,Shipping City,Shipping State/Province,Shipping Zip/Postal Code,Shipping Country
 
   # example rows:
   # "","",13620908,No Perk,2015-10-05 01:02:55 -0700,,Visible,Code.org Major Donors ,majordonors@code.org,$30,"","","","","","","",""
@@ -139,7 +138,7 @@ def include_indiegogo_donors(results)
   )
 end
 
-ALL_FILES = []
+@all_files = []
 
 # naming convention:
 # script to generate the csv:
@@ -161,17 +160,17 @@ def generate(name)
 
   puts "deduping"
   deduped_csv = name + '-deduped.csv'
-  if ALL_FILES.empty?
+  if @all_files.empty?
     puts `cp #{csv} #{deduped_csv}`
   else
-    puts `#{common_script_path('subtract')} #{csv} #{ALL_FILES.join(' ')} #{deduped_csv}`
+    puts `#{common_script_path('subtract')} #{csv} #{@all_files.join(' ')} #{deduped_csv}`
   end
   puts `wc #{deduped_csv}`
 
   puts 'international:'
   puts `grep true #{deduped_csv} | wc`
 
-  ALL_FILES << deduped_csv # list of csvs for deduping future csvs
+  @all_files << deduped_csv # list of csvs for deduping future csvs
 
   deduped_csv
 end
@@ -183,10 +182,10 @@ def query_all_emails_at_domain(domain)
     DB[:contacts].where(Sequel.ilike(:email, "%@#{domain}")).distinct.select(:name, :email).each do |contact|
       contact[:international] = false
       email = contact[:email]
-      results[email] = contact unless UNSUBSCRIBERS[email] || ALL[email] # don't override duplicates
+      results[email] = contact unless UNSUBSCRIBERS[email] || @all[email] # don't override duplicates
     end
 
-    ALL.merge! results
+    @all.merge! results
   end
 end
 
@@ -198,7 +197,7 @@ def query_from_list(queries)
     # query_subscribed_contacts dedupes by rejecting duplicate emails.
     queries.each do |category, query|
       new_contacts = query_subscribed_contacts(q: query)
-      new_contacts.each_value{|contact| contact[:category] = category}
+      new_contacts.each_value {|contact| contact[:category] = category}
       puts "#{category}: #{new_contacts.count} contacts"
       contacts.merge! new_contacts
     end

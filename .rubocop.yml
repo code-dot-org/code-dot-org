@@ -47,6 +47,8 @@ Style/WordArray:
 # BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
 # future. Rules we plan to fix (but are currently failing) belong in
 # .rubocop_todo.yml.
+Metrics/BlockLength:
+  Enabled: false
 
 Metrics/AbcSize:
   Enabled: false
@@ -76,6 +78,9 @@ Style/IdenticalConditionalBranches:
   Enabled: false
 
 Style/IfInsideElse:
+  Enabled: false
+
+Style/LeadingCommentSpace:
   Enabled: false
 
 Style/NumericPredicate:

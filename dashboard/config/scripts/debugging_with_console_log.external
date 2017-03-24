@@ -57,7 +57,18 @@ This doesn't mean you can be lazy! You still have to think about where and how t
 
 Over the next few levels we'll practice with `console.log` and use it to investigate bugs and and other mysteries of the system.
 
+## Note: Debug Console automatically expands when necessary
 
+You may notice that the Debug Console area is usually collapsed by default in order to save screen space.  However, it will automatically pop up whenever:
+
+* You print something to the console
+* An error message is displayed
+
+So you don't need to worry about missing anything, it will open when necessary.  This animation shows the action.
+
+![](https://images.code.org/df0ec58089a056ccadf1cb2d599c2110-image-1489696821090.gif)
+
+You can expand and collapse the Debug Console yourself by clicking on the little arrow in purple header.
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Display Boards\r\n\r\nNow that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Stage 17 Puzzle 7](/s/csd3/stage/17/puzzle/7) for an example of how to make a scoreboard.\r\n\r\nFor each display board:\r\n* Create a function to display the information\r\n* Call the function in the draw loop\r\n\r\nBe sure to test your boards by changing the starting value of your variables and making sure the board also changes when you run the code.\r\n",
+    "markdown_instructions": "# Display Boards\r\n\r\nNow that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Stage 12 Puzzle 9](/s/csd3/stage/12/puzzle/9) for an example of how to make a scoreboard.\r\n\r\nFor each display board:\r\n* Create a function to display the information\r\n* Call the function in the draw loop\r\n\r\nBe sure to test your boards by changing the starting value of your variables and making sure the board also changes when you run the code.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -40,6 +40,8 @@
     "show_debug_watch": "true",
     "encrypted_examples": "Zm+n74Pk9QL3qc7i3fyCjhor720ROQL0cGr1DP4ChnN6UfVSUf60rWsonMDH\nRGIf\n",
     "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

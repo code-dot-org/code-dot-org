@@ -2284,6 +2284,14 @@
       "mp3LastModified": "2017-02-27 21:05:55 UTC",
       "version": "_DjeckdpZqbQgrCWWc1_Ys0MnKy90wQu",
       "sourceUrl": "/api/v1/sound-library/category_ui/switch9.mp3"
+    },
+    "default": {
+      "name": "default",
+      "time": 0,
+      "jsonLastModified": "2017-03-13 22:10:46 UTC",
+      "mp3LastModified": "2017-03-13 22:10:47 UTC",
+      "version": "5GMj5TnvwoIG4VFX8J9KrZJMbN4IGz3J",
+      "sourceUrl": "/api/v1/sound-library/default.mp3"
     }
   },
   "aliases": {
@@ -2390,7 +2398,8 @@
       "category_digital/powerUp6",
       "category_digital/powerUp7",
       "category_digital/powerUp8",
-      "category_digital/powerUp9"
+      "category_digital/powerUp9",
+      "default"
     ],
     "category_female_voiceover": [
       "category_female_voiceover/female_voice_1",
@@ -2669,6 +2678,9 @@
     ],
     "creak2": [
       "category_objects/creak2"
+    ],
+    "default": [
+      "default"
     ],
     "dicethrow1": [
       "category_gameplay/diceThrow1"

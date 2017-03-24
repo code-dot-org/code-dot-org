@@ -1,0 +1,12 @@
+name 'courseD_multi_farmer_ramp13'
+question ' '
+wrong 'The farmer will walk to the end of the path and harvest the pumpkin.', feedback: 'Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
+right 'The farmer will try to pick pumpkins at each square, but won\'t ever make it to the pumpkin.', feedback: 'Correct!'
+wrong 'The farmer will walk four spaces, then try to pick one pumpkin.', feedback: 'Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
+wrong 'I don\'t know.', feedback: 'The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.'
+
+markdown <<MARKDOWN
+Here is a new puzzle type that uses blocks similar to what you have already seen. Can you make a prediction about what will happen when you run the code below?
+
+
+MARKDOWN

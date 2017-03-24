@@ -15,6 +15,14 @@
 
 class RegionalPartner < ActiveRecord::Base
   belongs_to :contact, class_name: 'User'
+
+  has_many :regional_partner_program_managers
+  has_many :program_managers,
+    class_name: 'User',
+    through: :regional_partner_program_managers
+
+  has_many :pd_workshops
+
   CSV_IMPORT_OPTIONS = { col_sep: "\t", headers: true }
 
   def self.find_or_create_all_from_tsv(filename)

@@ -26,7 +26,6 @@ const DetailProgressTable = React.createClass({
           <ProgressLesson
             key={index}
             lesson={lesson}
-            lessonNumber={index + 1}
             levels={levelsByLesson[index]}
           />
         ))}

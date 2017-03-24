@@ -55,23 +55,11 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
       subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
   end
 
-  test 'admins can view the report' do
-    sign_in @admin
-    get :index
-    assert_response :success
+  [:admin, :workshop_organizer].each do |user_type|
+    test_user_gets_response_for :index, user: user_type
   end
 
-  test 'workshop organizers can view the report' do
-    sign_in @organizer
-    get :index
-    assert_response :success
-  end
-
-  test 'other users cannot view report' do
-    sign_in create(:teacher)
-    get :index
-    assert_response :forbidden
-  end
+  test_user_gets_response_for :index, response: :forbidden, user: :teacher
 
   test 'admins get payment info' do
     sign_in @admin
@@ -125,7 +113,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal 2, response.count
-    assert_equal [@workshop.id, @other_workshop.id].sort, response.map{|line| line['workshop_id']}.sort
+    assert_equal [@workshop.id, @other_workshop.id].sort, response.map {|line| line['workshop_id']}.sort
   end
 
   test 'filter by schedule' do
@@ -202,7 +190,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal 3, response.count
-    unpaid_report = response.find{|row| row['workshop_id'] == unpaid_workshop.id}
+    unpaid_report = response.find {|row| row['workshop_id'] == unpaid_workshop.id}
     assert_not_nil unpaid_report
     refute unpaid_report['qualified']
     assert_nil unpaid_report['payment_total']

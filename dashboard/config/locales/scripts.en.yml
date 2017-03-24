@@ -708,6 +708,7 @@ en:
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
             Standalone video: Standalone video
+            Curriculum Reference: Curriculum Reference
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -2705,15 +2706,68 @@ en:
           stage:
             Introduction: Introduction
             Sprites: Sprites
+            Input: Input
+            'Project: Interactive Card': 'Project: Interactive Card'
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
           description_short: Level progression to accompany an in-person Game Lab Workshop
-          description: 'This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach '
+          description: This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of Game Lab.
         csd5-draft:
           stage:
             new stage: new stage
             Interpreting Data: Interpreting Data
             Data in the Real World: Data in the Real World
+            Combining Representations: Combining Representations
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-1hour:
+          stage:
+            App Lab Workshop: App Lab Workshop
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Room Escape: Room Escape
+            Extra: Extra
+          title: App Lab 1 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction to app lab in 1 hour. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        applab-2hour:
+          stage:
+            new stage: new stage
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+          title: App Lab 2 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction to app lab in 2 hours. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        coursed-ramp:
+          stage:
+            Introduction: Introduction
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-maker:
+          stage:
+            App Lab Basics: App Lab Basics
+            The Circuit Playground: The Circuit Playground
+            Physical Input: Physical Input
+            Analog Input: Analog Input
+          title: Maker Toolkit Workshop
+          description_audience: Teachers attending an in-person Maker Toolkit Workshop
+          description_short: Level progression to accompany an in-person Maker Toolkit Workshop
+          description: This level progression is intended to accompany an in-person Maker Toolkit Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of App Lab and the Maker Toolkit.
+        coursee-ramp:
+          stage:
+            Introduction: Introduction
           title: ''
           description_audience: ''
           description_short: ''

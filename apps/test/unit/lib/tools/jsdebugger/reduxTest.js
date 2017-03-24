@@ -7,9 +7,6 @@ import Observer from '@cdo/apps/Observer';
 import JSInterpreter from '@cdo/apps/JSInterpreter';
 import experiments from '@cdo/apps/util/experiments';
 
-window.acorn = require('../../../../../lib/jsinterpreter/acorn');
-require('../../../../../lib/jsinterpreter/interpreter');
-
 describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;
   beforeEach(() => {
@@ -30,7 +27,7 @@ describe('The JSDebugger redux duck', () => {
 
     // override evalInCurrentScope so we don't have to set up the full interpreter.
     // eslint-disable-next-line no-eval
-    sinon.stub(interpreter, 'evalInCurrentScope', input => eval(input));
+    sinon.stub(interpreter, 'evalInCurrentScope').callsFake(input => eval(input));
   });
   afterEach(() => {
     restoreRedux();

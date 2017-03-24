@@ -2,6 +2,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # GET /users/auth/:provider/callback
   def all
     @user = User.from_omniauth(request.env["omniauth.auth"], request.env['omniauth.params'])
+
+    # Set user-account locale only if no cookie is already set.
+    if @user.locale &&
+      @user.locale != request.env['cdo.locale'] &&
+      cookies[:language_].nil?
+
+      set_locale_cookie(@user.locale)
+    end
+
     if @user.persisted?
       flash.notice = I18n.t('auth.signed_in')
       sign_in_and_redirect @user
@@ -11,8 +20,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  alias_method :facebook, :all
-  alias_method :google_oauth2, :all
-  alias_method :windowslive, :all
-  alias_method :clever, :all
+  User::OAUTH_PROVIDERS.each do |provider|
+    alias_method provider.to_sym, :all
+  end
 end

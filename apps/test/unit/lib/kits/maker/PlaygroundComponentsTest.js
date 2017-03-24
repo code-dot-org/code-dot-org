@@ -10,7 +10,11 @@ import {
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
-import {TOUCH_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {
+  CP_ACCEL_STREAM_ON,
+  CP_COMMAND,
+  TOUCH_PINS
+} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -44,14 +48,15 @@ describe('Circuit Playground Components', () => {
           'accelerometer',
           'buttonL',
           'buttonR',
-          'touchPad0',
-          'touchPad1',
-          'touchPad2',
-          'touchPad3',
-          'touchPad6',
-          'touchPad9',
-          'touchPad10',
-          'touchPad12',
+          // TODO (captouch): Restore when we re-enable
+          // 'touchPad0',
+          // 'touchPad1',
+          // 'touchPad2',
+          // 'touchPad3',
+          // 'touchPad6',
+          // 'touchPad9',
+          // 'touchPad10',
+          // 'touchPad12',
       ]);
     });
 
@@ -308,7 +313,17 @@ describe('Circuit Playground Components', () => {
 
       // No pin?  Doesn't report one.
 
-      it('with a getOrientation method', () => {
+      it('with a start() method', () => {
+        accelerometer.io.sysexCommand.reset(); // Reset spy
+        expect(accelerometer).to.haveOwnProperty('start');
+        expect(accelerometer.io.sysexCommand).not.to.have.been.called;
+
+        accelerometer.start();
+        expect(accelerometer.io.sysexCommand).to.have.been.calledOnce
+            .and.calledWith([CP_COMMAND, CP_ACCEL_STREAM_ON]);
+      });
+
+      it('and a getOrientation method', () => {
         expect(accelerometer).to.haveOwnProperty('getOrientation');
         expect(accelerometer.getOrientation('x')).to.equal(0);
         expect(accelerometer.getOrientation('y')).to.equal(0);
@@ -324,7 +339,8 @@ describe('Circuit Playground Components', () => {
       });
     });
 
-    describe('touchPads', () => {
+    // TODO (captouch): Un-skip when we re-enable
+    describe.skip('touchPads', () => {
       it('only creates one five.Touchpad for all the TouchSensors', () => {
         const components = createCircuitPlaygroundComponents(board);
         const theOnlyTouchpadController = components.touchPad0.touchpadsController_;
@@ -370,14 +386,16 @@ describe('Circuit Playground Components', () => {
     });
 
     it('destroys everything that createCircuitPlaygroundComponents creates', () => {
-      expect(Object.keys(components)).to.have.length(18);
+      // TODO (captouch): Add 8 when re-enabled
+      expect(Object.keys(components)).to.have.length(10);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(0);
     });
 
     it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
       components.someOtherComponent = {};
-      expect(Object.keys(components)).to.have.length(19);
+      // TODO (captouch): Add 8 when re-enabled
+      expect(Object.keys(components)).to.have.length(11);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');

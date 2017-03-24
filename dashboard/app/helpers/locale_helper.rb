@@ -26,11 +26,10 @@ module LocaleHelper
   def options_for_locale_select
     options = []
     Dashboard::Application::LOCALES.each do |locale, data|
-      if I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-        name = data[:native]
-        name = (data[:debug] ? "#{name} DBG" : name)
-        options << [name, locale]
-      end
+      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
+      name = data[:native]
+      name = (data[:debug] ? "#{name} DBG" : name)
+      options << [name, locale]
     end
     options
   end
@@ -80,7 +79,9 @@ module LocaleHelper
   end
 
   def i18n_dropdown
-    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
+    # NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
+    # user input or to persist data without also updating it to enforce UTF-8
+    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
       (hidden_field_tag :return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
     end
   end
