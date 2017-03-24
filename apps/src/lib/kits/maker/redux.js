@@ -16,7 +16,7 @@ const MakerState = Immutable.Record({
 // Selectors
 function getRoot(state) {
   // Global knowledge eww
-  return state.maker;
+  return state.maker || new MakerState();
 }
 
 export function isEnabled(state) {
