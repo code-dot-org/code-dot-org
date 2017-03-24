@@ -291,7 +291,7 @@ module RakeUtils
 
     destination_local_pathname = Pathname(destination_local_path)
     FileUtils.mkdir_p(File.dirname(destination_local_pathname))
-    File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url) }
+    File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url)}
     new_fetchable_url
   end
 

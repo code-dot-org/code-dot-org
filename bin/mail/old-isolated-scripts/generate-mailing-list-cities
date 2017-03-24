@@ -82,7 +82,7 @@ SETS = {
 $key = ARGV[0].to_sym || raise("Usage: #{$0} #{SETS.keys.join('|')}")
 
 def city_query
-  queries = SETS[$key][:cities].map { |city| %(create_ip_city_s:"#{city}")}
+  queries = SETS[$key][:cities].map {|city| %(create_ip_city_s:"#{city}")}
   "(#{queries.join(' || ')})"
 end
 

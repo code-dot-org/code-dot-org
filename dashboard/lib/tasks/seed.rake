@@ -28,7 +28,7 @@ namespace :seed do
       File.mtime(SEEDED) : Time.at(0)
     touch SEEDED # touch seeded "early" to reduce race conditions
     begin
-      custom_scripts = SCRIPTS_GLOB.select { |script| File.mtime(script) > scripts_seeded_mtime }
+      custom_scripts = SCRIPTS_GLOB.select {|script| File.mtime(script) > scripts_seeded_mtime}
       LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
       _, custom_i18n = Script.setup(custom_scripts)
       Script.update_i18n(custom_i18n)
@@ -50,7 +50,7 @@ namespace :seed do
   # detect changes to dsldefined level files
   # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
   DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti LevelGroup)
-  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort }.flatten
+  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
     touch t.name
@@ -62,7 +62,7 @@ namespace :seed do
       i18n_strings = {}
       # Parse each .[dsl] file and setup its model.
       DSLS_GLOB.each do |filename|
-        dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}") }.try(:constantize)
+        dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
           data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
@@ -196,7 +196,7 @@ namespace :seed do
       if level_sources_count > MAX_LEVEL_SOURCES
         puts "...skipped, too many possible solutions"
       else
-        times = Benchmark.measure { level.calculate_ideal_level_source_id }
+        times = Benchmark.measure {level.calculate_ideal_level_source_id}
         puts "... analyzed #{level_sources_count} in #{times.real.round(2)}s"
       end
     end

@@ -3,7 +3,7 @@
 
 if (CDO.skip_locales || Rails.env.development?) && (!CDO.load_locales)
   dev_locales = ["es-ES", "en"]
-  suffixes = dev_locales.map { |x| "#{x}.yml" }
+  suffixes = dev_locales.map {|x| "#{x}.yml"}
   paths = Dashboard::Application.paths
   locales_paths = paths['config/locales'].to_a.select {|x| x.end_with?(*suffixes)}.map do |p|
     Rails::Paths::Path.new(paths, 'config/locales', [p])

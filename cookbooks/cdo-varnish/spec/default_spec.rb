@@ -8,7 +8,7 @@ describe 'cdo-varnish' do
     end.converge(described_recipe)
   end
   let(:varnish_suffix) {'G'}
-  let(:node) { chef_run.node }
+  let(:node) {chef_run.node}
 
   context '64gb' do
     let(:memory) {64}

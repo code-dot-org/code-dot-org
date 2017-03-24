@@ -33,7 +33,7 @@ class Course
 
     units = []
     course_info = get_course_info
-    unit_dirs = Dir.entries(@dir).select {|entry| valid_lesson_directory?(entry) }
+    unit_dirs = Dir.entries(@dir).select {|entry| valid_lesson_directory?(entry)}
     unit_dirs.map! {|unit| unit.match(/^[\d]*/).to_s.to_i}
     unit_dirs.sort!
     unit_dirs.uniq!
@@ -63,8 +63,8 @@ class Course
   def get_lessons_for_unit(unit_number_filter = nil)
     lessons = []
     lesson_dirs = Dir.entries(@dir)
-    lesson_dirs.select! {|lesson_id| valid_lesson_directory?(lesson_id) }
-    lesson_dirs.select! {|lesson_id| lesson_in_unit?(lesson_id, unit_number_filter) } unless unit_number_filter.nil?
+    lesson_dirs.select! {|lesson_id| valid_lesson_directory?(lesson_id)}
+    lesson_dirs.select! {|lesson_id| lesson_in_unit?(lesson_id, unit_number_filter)} unless unit_number_filter.nil?
     lesson_dirs.each do |lesson_id|
       yaml_path = File.join(@dir, lesson_id, 'info.yml')
       next unless File.file?(yaml_path)
