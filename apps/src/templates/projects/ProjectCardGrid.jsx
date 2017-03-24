@@ -31,7 +31,8 @@ const ProjectCardGrid = React.createClass({
 // Most recently edited projects should display 1st. This might not be needed dependent on whether the projects returned from the query are already sorted by recency or not. ****ASK DAVE****
   sortByDate(projects) {
 
-    let sortedProjects = projects.sort((project1, project2) => new Date(project2.projectData.updatedAt) - new Date(project1.projectData.updatedAt));
+    let sortedProjects = projects.sort((project1, project2) =>
+    new Date(project2.projectData.updatedAt) - new Date(project1.projectData.updatedAt));
 
     return sortedProjects;
   },
@@ -48,7 +49,7 @@ const ProjectCardGrid = React.createClass({
     return projectLists;
   },
 
-  renderSpecificGallery() {
+  render() {
     const { projects, galleryType } = this.props;
 
     if (galleryType === 'public'){
@@ -116,15 +117,6 @@ const ProjectCardGrid = React.createClass({
       </div>
     );
   },
-
-  render() {
-
-    return  (
-      <div>
-        {this.renderSpecificGallery()}
-      </div>
-    );
-  }
 });
 
 export default ProjectCardGrid;
