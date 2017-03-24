@@ -46,11 +46,11 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @video, notice: I18n.t('crud.created', Video.model_name.human) }
-        format.json { render action: 'show', status: :created, location: @video }
+        format.html {redirect_to @video, notice: I18n.t('crud.created', Video.model_name.human)}
+        format.json {render action: 'show', status: :created, location: @video}
       else
-        format.html { render action: 'new' }
-        format.json { render json: @video.errors, status: :unprocessable_entity }
+        format.html {render action: 'new'}
+        format.json {render json: @video.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -60,11 +60,11 @@ class VideosController < ApplicationController
   def update
     respond_to do |format|
       if @video.update(video_params)
-        format.html { redirect_to @video, notice: I18n.t('crud.updated', model: Video.model_name.human) }
-        format.json { head :no_content }
+        format.html {redirect_to @video, notice: I18n.t('crud.updated', model: Video.model_name.human)}
+        format.json {head :no_content}
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @video.errors, status: :unprocessable_entity }
+        format.html {render action: 'edit'}
+        format.json {render json: @video.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -74,8 +74,8 @@ class VideosController < ApplicationController
   def destroy
     @video.destroy
     respond_to do |format|
-      format.html { redirect_to videos_url }
-      format.json { head :no_content }
+      format.html {redirect_to videos_url}
+      format.json {head :no_content}
     end
   end
 

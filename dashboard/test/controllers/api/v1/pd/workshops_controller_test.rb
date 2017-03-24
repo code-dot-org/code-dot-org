@@ -62,8 +62,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     response = JSON.parse(@response.body)
     assert_equal 2, response.length
-    assert_equal enrollment_1.code, response.find { |workshop| @workshop.id == workshop['id']}['enrollment_code']
-    assert_equal enrollment_2.code, response.find { |workshop| workshop_2.id == workshop['id']}['enrollment_code']
+    assert_equal enrollment_1.code, response.find {|workshop| @workshop.id == workshop['id']}['enrollment_code']
+    assert_equal enrollment_2.code, response.find {|workshop| workshop_2.id == workshop['id']}['enrollment_code']
   end
 
   test 'workshop organizers cannot list workshops they are not organizing' do

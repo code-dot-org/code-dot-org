@@ -20,7 +20,7 @@ class FirebaseHelper
     records = records.values if records.is_a? Hash
     records.compact!
 
-    records.map! { |record| JSON.parse(record) }
+    records.map! {|record| JSON.parse(record)}
     table_to_csv(records, column_order: ['id'])
   end
 end

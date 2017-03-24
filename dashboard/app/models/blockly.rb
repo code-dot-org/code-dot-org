@@ -90,7 +90,7 @@ class Blockly < Level
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
         xml_blocks.each do |attr|
-          xml.send(attr) { |x| x << send(attr)} if send(attr).present?
+          xml.send(attr) {|x| x << send(attr)} if send(attr).present?
         end
       end
     end

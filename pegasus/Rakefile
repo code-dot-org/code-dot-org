@@ -32,8 +32,8 @@ end
 
 def there_can_be_only_one(pidfile)
   check_pidfile(pidfile, TIMES_TO_TRY)
-  File.open(pidfile, "w") { |f| f.puts $$ }
-  at_exit { File.unlink(pidfile) if File.exist?(pidfile) }
+  File.open(pidfile, "w") {|f| f.puts $$}
+  at_exit {File.unlink(pidfile) if File.exist?(pidfile)}
 end
 
 there_can_be_only_one("#{File.basename(__FILE__)}.pid") unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.downcase == 'true'

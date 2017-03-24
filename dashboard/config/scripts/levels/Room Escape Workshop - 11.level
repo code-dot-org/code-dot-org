@@ -56,8 +56,11 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Got Key\r\n\r\nIn order to make sure the user got the key before trying to open the door we will need a variable to keep track of if they got the key.\r\n\r\n# Do This\r\n\r\n* Add a variable at the top of the program called gotKey\r\n* Set the right side of the gotKey variable to the word false\r\n* Inside the `onEvent` command for the key in the safe set gotKey to true to indicate they got the key.\r\n* You will use this to set up the door on the next level",
-    "contained_level_names": null
+    "markdown_instructions": "# Got Key\r\n\r\nIn order to make sure the user got the key before trying to open the door we will need a variable to keep track of if they got the key.\r\n\r\n# Do This\r\n\r\n* Add a variable at the top of the program called gotKey and set the right side of the gotKey variable to the word false\r\n<img src=\"https://images.code.org/58e88b028ee9190b0288c7fcbabe389f-image-1490371419468.02.50 PM.png\" style=\"width:300px\">\r\n\r\n* Inside the `onEvent` command for the key in the safe set gotKey to true to indicate they got the key.\r\n\r\n<img src=\"https://images.code.org/def02108cabc85383129c5bb29b3af4f-image-1490371463514.04.10 PM.png\" style=\"width:400px\">\r\n\r\n* You will use this to set up the door on the next level",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

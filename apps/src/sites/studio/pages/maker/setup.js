@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BoardSetupCheck from '@cdo/apps/lib/kits/maker/ui/BoardSetupCheck';
+import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
+import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
 
 $(function () {
-  ReactDOM.render(<BoardSetupCheck/>, document.getElementById('setup-status-mount'));
+  const setupChecker = new SetupChecker();
+  ReactDOM.render(
+      <SetupChecklist setupChecker={setupChecker}/>,
+      document.getElementById('setup-status-mount')
+  );
   $('.maker-setup a').attr('target', '_blank');
 });

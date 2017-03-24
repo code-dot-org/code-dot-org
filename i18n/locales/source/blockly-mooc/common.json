@@ -215,6 +215,7 @@
   "locked": "Locked",
   "lockFollowing": "Lock the following stages that are currently unlocked:",
   "lockAssessment": "Lock assessment",
+  "lockAssessmentLong": "Lock assessment when students finish using the \"Lock Settings\" button.",
   "lockSettings": "Lock Settings",
   "lockStage": "Lock stage",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",

@@ -137,7 +137,7 @@ def migrate_channel(owner_storage_id, channel_id)
   sql_row_value = JSON.parse(sql_row[:value])
   return if sql_row[:state] == 'deleted' || sql_row_value['useFirebase']
 
-  properties = Hash[DynamoPropertyBag.new(channel_id, nil).to_hash.map { |k, v| [k, v.to_json] }]
+  properties = Hash[DynamoPropertyBag.new(channel_id, nil).to_hash.map {|k, v| [k, v.to_json]}]
   ensure_no_collisions(properties.keys, "property key collision")  unless properties.empty?
   set_firebase_properties(encrypted_channel_id, properties) unless properties.empty?
 
@@ -146,7 +146,7 @@ def migrate_channel(owner_storage_id, channel_id)
   table_names.each do |table_name|
     dynamo_table = DynamoTable.new(encrypted_channel_id, nil, table_name)
     # A hash from record id to json-encoded records
-    table_records = Hash[dynamo_table.to_a.map { |row| [row['id'].to_s, row.to_json] }]
+    table_records = Hash[dynamo_table.to_a.map {|row| [row['id'].to_s, row.to_json]}]
     table_columns = dynamo_table.metadata
     table_columns = JSON.parse(table_columns['column_list']) if table_columns
     set_firebase_table(encrypted_channel_id, table_name, table_records, table_columns)

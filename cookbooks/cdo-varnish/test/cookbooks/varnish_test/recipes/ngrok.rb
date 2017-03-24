@@ -9,7 +9,7 @@ require 'etc'
 user = Etc.getlogin
 home = Etc.getpwnam(user).dir
 
-directory("#{home}/.ngrok2") { user user }
+directory("#{home}/.ngrok2") {user user}
 
 template "#{home}/.ngrok2/ngrok.yml" do
   source 'ngrok.yml.erb'
