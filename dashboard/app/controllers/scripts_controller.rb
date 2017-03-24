@@ -7,7 +7,10 @@ class ScriptsController < ApplicationController
   before_action :set_script_file, only: [:edit, :update]
 
   def show
-    redirect_to script_path(@script.redirect_to) if @script.redirect_to?
+    if @script.redirect_to?
+      redirect_to script_path(@script.redirect_to)
+      return
+    end
 
     if request.path != (canonical_path = script_path(@script))
       redirect_to canonical_path, status: :moved_permanently
