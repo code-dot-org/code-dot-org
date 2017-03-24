@@ -101,10 +101,6 @@
   cursor: pointer;
 }
 
-#nav ul li a:hover, #about-more:hover, #educate-more:hover {
-  opacity: .8;
-}
-
 #nav-hamburger {
   vertical-align: middle;
   text-decoration: none;
