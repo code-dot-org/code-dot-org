@@ -8,6 +8,11 @@ import StageProgressBar from './StageProgressBar';
 
 const ANIMATION_OVERLAP = 0.05;
 
+const COMPLETION_POINTS = 1;
+const PERFECT_SOLUTION_POINTS = 3;
+const NO_HINTS_POINTS = 2;
+const ONE_HINT_POINTS = 1;
+
 const styles = {
   checkmarks: {
     position: 'absolute',
@@ -201,22 +206,28 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
-  achievementRow(flag, message, style) {
-    if (this.props.bannerMode) {
-      return (
-        <p style={{...styles.bannerAchievement.row, ...style}}>
-          <span style={styles.bannerAchievement.point}>+1</span>
-          <span style={styles.bannerAchievement.text}>{message}</span>
-        </p>
-      );
-    } else {
-      return (
-        <p style={{...styles.achievement.row, ...style}}>
-          {this.icon(flag)}
-          <span style={styles.achievement.text}>{message}</span>
-        </p>
-      );
+  achievementRowGenerator(show, successful, points, message) {
+    if (!show || (this.props.bannerMode && !successful)) {
+      return null;
     }
+
+    return (style, index) => {
+      if (this.props.bannerMode) {
+        return (
+          <p style={{...styles.bannerAchievement.row, ...style}} key={index}>
+            <span style={styles.bannerAchievement.point}>+{points}</span>
+            <span style={styles.bannerAchievement.text}>{message}</span>
+          </p>
+        );
+      } else {
+        return (
+          <p style={{...styles.achievement.row, ...style}} key={index}>
+            {this.icon(successful)}
+            <span style={styles.achievement.text}>{message}</span>
+          </p>
+        );
+      }
+    };
   },
 
   blocksUsedMessage(blockDelta, params) {
@@ -229,15 +240,21 @@ const AchievementDialog = Radium(React.createClass({
     }
   },
 
-  hintsMessage(tooManyHints) {
-    return tooManyHints ? locale.usingHints() : locale.withoutHints();
+  hintsMessage(numHints) {
+    if (numHints === 0) {
+      return locale.withoutHints();
+    } else if (numHints === 1) {
+      return locale.usingOneHint();
+    } else {
+      return locale.usingHints();
+    }
   },
 
   render() {
     const showNumBlocksRow = isFinite(this.props.idealBlocks);
     const blockDelta = this.props.actualBlocks - this.props.idealBlocks;
     const tooManyBlocks = blockDelta > 0;
-    const tooManyHints = this.props.hintsUsed > 0;
+    const tooManyHints = this.props.hintsUsed > 1;
 
     const params = {
       puzzleNumber: this.props.puzzleNumber,
@@ -250,10 +267,21 @@ const AchievementDialog = Radium(React.createClass({
     } else {
       feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
     }
-    const numPoints = 1 +
-      (showNumBlocksRow && !tooManyBlocks ? 1 : 0) +
-      (!tooManyHints ? 1 : 0);
+    const completionPoints = COMPLETION_POINTS;
+    const numBlocksPoints = showNumBlocksRow && !tooManyBlocks ? PERFECT_SOLUTION_POINTS : 0;
+    const hintsPoints = this.props.hintsUsed === 0 ? NO_HINTS_POINTS : this.props.hintsUsed === 1 ? ONE_HINT_POINTS : 0;
+    const numPoints = completionPoints + numBlocksPoints + hintsPoints;
+
     const dotsUrl = `url(${this.props.assetUrl('media/dialog/dots.png')})`;
+
+    const achievementRowGenerators = [
+      this.achievementRowGenerator(true /* show */, true /* success */, completionPoints,
+          locale.puzzleCompleted()),
+      this.achievementRowGenerator(showNumBlocksRow, !tooManyBlocks, numBlocksPoints,
+          this.blocksUsedMessage(blockDelta, params)),
+      this.achievementRowGenerator(true /* show */, !tooManyHints, hintsPoints,
+          this.hintsMessage(this.props.hintsUsed)),
+    ].filter(row => row);
 
     return (
       <BaseDialog
@@ -263,7 +291,7 @@ const AchievementDialog = Radium(React.createClass({
         assetUrl={this.props.assetUrl}
       >
         <StaggeredMotion
-          defaultStyles={Array(4).fill({ progress: 0 })}
+          defaultStyles={Array(achievementRowGenerators.length + 1).fill({ progress: 0 })}
           styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => {
             return i === 0 ?
               { progress: spring(1, { stiffness: 100, damping: 25 }) } :
@@ -278,24 +306,14 @@ const AchievementDialog = Radium(React.createClass({
                 interpolatingValues.map(val => ({ opacity: val.progress }));
               return (<div>
                 <div style={this.props.bannerMode ? styles.pointRows : styles.checkmarks}>
-                  {this.achievementRow(
-                      true,
-                      locale.puzzleCompleted(),
-                      interpolatingStyles[1])}
-                  {showNumBlocksRow && this.achievementRow(
-                      !tooManyBlocks,
-                      this.blocksUsedMessage(blockDelta, params),
-                      interpolatingStyles[2])}
-                  {this.achievementRow(
-                      !tooManyHints,
-                      this.hintsMessage(tooManyHints),
-                      interpolatingStyles[showNumBlocksRow ? 3 : 2])}
+                  {achievementRowGenerators.map((generator, index) =>
+                          generator(interpolatingStyles[index + 1], index))}
                 </div>
                 {this.props.bannerMode &&
                   <div
                     style={{
                       ...styles.bannerAchievement.badge,
-                      backgroundImage: `url(${this.props.assetUrl('media/dialog/badges/badge.png')})`,
+                      backgroundImage: `url(${this.props.assetUrl('media/dialog/badge.png')})`,
                     }}
                   >
                     <div style={styles.bannerAchievement.badgePoints}>{numPoints}</div>

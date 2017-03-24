@@ -1729,6 +1729,7 @@ a.download-video {
   }
 }
 
+.container,
 .external,
 .text-match,
 .free-response,
@@ -1779,7 +1780,7 @@ a.download-video {
   border: 1px solid $lighter_gray;
 }
 
-.external, .free-response {
+.external, .free-response, .curriculum-reference {
   max-width: 970px;
   margin: auto;
 
@@ -2556,4 +2557,115 @@ code {
   font-size: 16px;
   margin-bottom: 5px;
   line-height: 1.2em;
+}
+
+#diversity_survey {
+  background-color: $lighter_purple;
+  color: $dark_charcoal;
+  border-radius: 5px;
+  overflow: hidden;
+
+  #surveythanks {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  #surveybody {
+    #headingarea {
+      margin-top: 0;
+      background-color: $purple;
+      padding: 20px;
+      color: $white;
+
+      h1 {
+        color: $white;
+      }
+
+      .subtext {
+        margin-left: 0;
+        font-size: 12px;
+
+        #privacylink {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    #survey {
+      margin-bottom: 0;
+      padding: 20px;
+
+      .survey_left {
+        width: 50%;
+        float: left;
+
+        li {
+          font-size: 14px;
+        }
+
+        .dots {
+          padding-top: 10px;
+          padding-left: 20px;
+          padding-bottom: 20px;
+
+          #ethnicity_input {
+            width: 40px;
+            height: 24px;
+            font-size: 14px;
+            text-align: right;
+            margin: 6px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .survey_right {
+      width: 45%;
+      float: left;
+      border-left: 1px solid $purple;
+      padding-left: 20px;
+
+      li {
+        font-size: 14px;
+      }
+      .subtext {
+        font-size: 12px;
+        margin-top: 7px;
+      }
+
+      .dots {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 30px;
+        font-size: 14px;
+
+        .dot {
+          margin-top: 10px;
+
+          input {
+            margin-right: 3px;
+            vertical-align: top;
+            margin-top: 2px;
+          }
+
+          label {
+            display: inline;
+            margin-top: 2px;
+            font-size: 13px;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+
+    #submit {
+      text-align: right;
+    }
+
+    #noanswer {
+      cursor: pointer;
+    }
+  }
 }

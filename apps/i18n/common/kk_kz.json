@@ -348,6 +348,7 @@
   "lastEdited": "Last Edited",
   "lockSettings": "Lock Settings",
   "nextLevelStars": "You completed Puzzle {puzzleNumber}! You have earned a total of {numPoints, plural, one {1 point} other {# points}}.",
+  "nPoints": "{numPoints, plural, one {1 point} other {# points}}",
   "pointsAllCaps": "{numPoints, plural, one {POINT} other {POINTS}}",
   "projectName": "Project Name",
   "projectType": "Type",
@@ -357,6 +358,7 @@
   "studentName": "Student Name",
   "usingHints": "Using hints",
   "usingTooManyBlocks": "Using too many blocks",
+  "usingOneHint": "Using just one hint!",
   "viewLessonPlan": "View Lesson Plan",
   "withoutHints": "Without using any hints!"
 }

@@ -10,6 +10,6 @@ def page_translated?
 end
 
 def partner_site?
-  partner_sites = CDO.partners.map{|x| x + '.code.org'}
+  partner_sites = CDO.partners.map {|x| x + '.code.org'}
   return partner_sites.include?(request.site)
 end

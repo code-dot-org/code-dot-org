@@ -24,11 +24,13 @@
 #
 
 class External < DSLDefined
-  serialized_attrs :icon_type
-
   # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
   def has_submit_button?
     properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
+  end
+
+  def supports_markdown?
+    true
   end
 
   def dsl_default
@@ -40,12 +42,10 @@ class External < DSLDefined
   end
 
   def icon
-    if icon_type == "Stop"
-      'fa-stop-circle'
-    elsif icon_type == "Map"
-      'fa-map'
-    else
-      'fa-file-text'
-    end
+    'fa-file-text'
+  end
+
+  def update(params)
+    super(params)
   end
 end

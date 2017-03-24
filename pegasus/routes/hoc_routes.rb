@@ -1,4 +1,4 @@
-partner_sites = CDO.partners.map{|x| x + '.code.org'}
+partner_sites = CDO.partners.map {|x| x + '.code.org'}
 
 get '/:short_code' do |short_code|
   short_code = 'mchoc' if short_code == 'MC'

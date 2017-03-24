@@ -9,9 +9,11 @@ import i18n from '@cdo/locale';
 import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
+import FocusAreaIndicator from './FocusAreaIndicator';
 
 const styles = {
   outer: {
+    position: 'relative',
     display: 'table',
     width: '100%',
     marginBottom: 12,
@@ -35,15 +37,15 @@ const styles = {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
   },
-  headingText: {
-    marginLeft: 10
-  },
   hiddenOrLocked: {
     background: color.white,
     borderStyle: 'dashed',
   },
   translucent: {
     opacity: 0.6
+  },
+  caret: {
+    marginRight: 10
   },
   icon: {
     marginRight: 5,
@@ -59,7 +61,6 @@ const ProgressLesson = React.createClass({
   propTypes: {
     description: PropTypes.string,
     lesson: lessonType.isRequired,
-    lessonNumber: PropTypes.number.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
 
     // redux provided
@@ -85,7 +86,6 @@ const ProgressLesson = React.createClass({
     const {
       description,
       lesson,
-      lessonNumber,
       levels,
       showTeacherInfo,
       viewAs,
@@ -93,14 +93,16 @@ const ProgressLesson = React.createClass({
       lessonLockedForSection
     } = this.props;
 
-    if (!lessonIsVisible(lesson)) {
+    if (!lessonIsVisible(lesson, viewAs)) {
       return null;
     }
 
     // Is this a hidden stage that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
-    const title = i18n.lessonNumbered({lessonNumber, lessonName: lesson.name});
-    const icon = this.state.collapsed ? "caret-right" : "caret-down";
+    const title = lesson.stageNumber ?
+      i18n.lessonNumbered({lessonNumber: lesson.stageNumber, lessonName: lesson.name}) :
+      lesson.name;
+    const caret = this.state.collapsed ? "caret-right" : "caret-down";
 
     const locked = lessonLockedForSection(lesson.id) ||
       levels.every(level => level.status === LevelStatus.locked);
@@ -116,13 +118,14 @@ const ProgressLesson = React.createClass({
         <div
           style={{
             ...styles.main,
-            ...(hiddenOrLocked && styles.translucent)
+            ...(hiddenOrLocked && viewAs !== ViewType.Teacher && styles.translucent)
           }}
         >
           <div
             style={styles.heading}
             onClick={this.toggleCollapsed}
           >
+            <FontAwesome icon={caret} style={styles.caret}/>
             {hiddenForStudents &&
               <FontAwesome
                 icon="eye-slash"
@@ -138,14 +141,13 @@ const ProgressLesson = React.createClass({
                 }}
               />
             }
-            <FontAwesome icon={icon}/>
-            <span style={styles.headingText}>{title}</span>
+            <span>{title}</span>
           </div>
           {!this.state.collapsed &&
             <ProgressLessonContent
               description={description}
               levels={levels}
-              disabled={locked}
+              disabled={locked && viewAs !== ViewType.Teacher}
             />
           }
         </div>
@@ -154,6 +156,7 @@ const ProgressLesson = React.createClass({
             <ProgressLessonTeacherInfo lesson={lesson}/>
           </div>
         }
+        {lesson.isFocusArea && <FocusAreaIndicator/>}
       </div>
     );
   }

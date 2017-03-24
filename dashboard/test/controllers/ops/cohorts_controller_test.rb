@@ -438,7 +438,7 @@ module Ops
       extra_teacher_params = [{ops_first_name: 'Hey', ops_last_name: 'Blah', email: teacher.email, district: teacher.district.name}]
 
       # Only 5 new teachers created, not 6
-      assert_difference ->{User.count}, 5 do
+      assert_difference -> {User.count}, 5 do
         assert_creates(Cohort, CohortsDistrict) do
           post :create, params: {
             cohort: {
@@ -456,8 +456,8 @@ module Ops
       assert_equal teacher.name, teacher.reload.name
 
       # Existing teacher added to cohort along with new teachers
-      assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_first_name]}.sort, teachers.map(&:ops_first_name).sort
-      assert_equal (teacher_params + extra_teacher_params).map{|x| x[:ops_last_name]}.sort, teachers.map(&:ops_last_name).sort
+      assert_equal (teacher_params + extra_teacher_params).map {|x| x[:ops_first_name]}.sort, teachers.map(&:ops_first_name).sort
+      assert_equal (teacher_params + extra_teacher_params).map {|x| x[:ops_last_name]}.sort, teachers.map(&:ops_last_name).sort
       cd = CohortsDistrict.last
       assert_equal @district, cd.district
       assert_equal Cohort.last, cd.cohort
@@ -474,7 +474,7 @@ module Ops
       response = JSON.parse(@response.body)
       assert_equal response['id'], @cohort.id
       # Ensure extra association info is provided in the right format
-      assert_equal response['districts'].map{|d| d['id']}, @cohort.district_ids
+      assert_equal response['districts'].map {|d| d['id']}, @cohort.district_ids
     end
 
     test 'ops team can list teachers in a cohort as a csv' do
