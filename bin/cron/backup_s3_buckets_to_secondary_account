@@ -9,10 +9,12 @@ TASK_NAME = 'Backup S3 To Secondary Account'.freeze
 DEBUG_OUTPUT = false
 
 BACKUP_BUCKET_ROOT = 'cdo-secondary-backup'.freeze
-S3S3MIRROR_DIR = "/home/ubuntu/#{Rails.env}/tools/s3s3mirror/".freeze
+S3S3MIRROR_DIR = "/home/ubuntu/s3s3mirror/".freeze
 S3S3MIRROR_COMMAND = 's3s3mirror.sh'.freeze
+S3S3MIRROR_INSTALL_COMMAND = "git clone https://github.com/cobbzilla/s3s3mirror.git #{S3S3MIRROR_DIR}".freeze
 
 BUCKETS_TO_SKIP = [
+  'cdo-analysis-firehose',
   'cdo-art', # 120M elements, 7.1tb, seems to be safe to skip
   'cdo-dist', # 170k, 31gb, unnecessary
   'cdo-dynamo-backup', # 81k, 15gb
@@ -28,6 +30,8 @@ BUCKETS_TO_BACKUP = [
   'cdo-ami',
   'cdo-j5-test',
   'cdo-mc-test',
+  'cdo-rubygems-mirror',
+  'cdo-sound-library',
   'codedotorg',
   'computinginthecore.com',
   'computinginthecore.net',
@@ -68,6 +72,7 @@ BUCKETS_TO_BACKUP = [
   'deprecated-data',
   'dms-cwnluin4utwebpwk33pew5qnem',
   'downloads.code.org',
+  'firehose-analysis-events',
   'hoc-static-all',
   'hoc-static',
   'images.code.org',
@@ -101,6 +106,11 @@ def verify_bucket_list
   end
 end
 
+def ensure_s3s3mirror_installed
+  file_exists = File.file? "#{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND}"
+  `#{S3S3MIRROR_INSTALL_COMMAND}` unless file_exists
+end
+
 def debug_puts(text)
   puts text if DEBUG_OUTPUT
 end
@@ -111,6 +121,8 @@ def main
     HipChat.log 'S3 backup task failed, previous task is still running!', color: 'red', notify: 1
     return
   end
+
+  ensure_s3s3mirror_installed
 
   verify_bucket_list
 
