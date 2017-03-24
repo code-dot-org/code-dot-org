@@ -7095,9 +7095,9 @@ en:
         I don't know.: I don't know.
         ? Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
         : Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
-        Laurel collect all of the treasure.: Laurel collect all of the treasure.
-        Laurel will collect all of the treasure along the top and side, but not along the bottom.: Laurel will collect all of the treasure along the top and side, but not along the bottom.
-        Laurel will not collect any treasure at all.: Laurel will not collect any treasure at all.
+        Laurel will get all of the treasure along the top and side, but not along the bottom.: Laurel will get all of the treasure along the top and side, but not along the bottom.
+        Laurel will get all of the treasure.: Laurel will get all of the treasure.
+        Laurel will not get any treasure at all.: Laurel will not get any treasure at all.
         ? The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
         : The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
         The code below uses loops.  What will happen when you click "Run"?: The code below uses loops.  What will happen when you click "Run"?
@@ -7105,8 +7105,8 @@ en:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.
-        Laurel will move forward and collect treasure five times in a row.: Laurel will move forward and collect treasure five times in a row.
-        Laurel will move forward and collect treasure one time.: Laurel will move forward and collect treasure one time.
+        Laurel will move forward and get treasure five times in a row.: Laurel will move forward and get treasure five times in a row.
+        Laurel will move forward and get treasure one time.: Laurel will move forward and get treasure one time.
         Laurel won't move at all.: Laurel won't move at all.
         Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
         The program uses a `repeat` loop to get Laurel to move forward five times.: The program uses a `repeat` loop to get Laurel to move forward five times.
@@ -7139,10 +7139,10 @@ en:
       courseB_multi_collector_loops3_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect. The `repeat` loop only instructs Laurel to move forward and collect treasure three times.: Incorrect. The `repeat` loop only instructs Laurel to move forward and collect treasure three times.
+        Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.: Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.
         Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.
-        Laurel will move forward and collect all of the treasure.: Laurel will move forward and collect all of the treasure.
-        Laurel will move forward and collect treasure three times in a row.: Laurel will move forward and collect treasure three times in a row.
+        Laurel will move forward and get all of the treasure.: Laurel will move forward and get all of the treasure.
+        Laurel will move forward and get treasure three times in a row.: Laurel will move forward and get treasure three times in a row.
         Laurel won't move at all.: Laurel won't move at all.
         Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
         The program uses a `repeat` loop to get Laurel to move forward three times.: The program uses a `repeat` loop to get Laurel to move forward three times.
@@ -7379,6 +7379,10 @@ en:
         The farmer will harvest the corn.: The farmer will harvest the corn.
         The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
         The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
+      courseE_multi_farmer_ramp12:
+        " ": " "
+        right answer: right answer
+        wrong answer: wrong answer
       courseE_prediction_artistFunction1:
         Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
         Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.

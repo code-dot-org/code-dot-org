@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
@@ -11,7 +12,7 @@ const styles = {
   table: {
     marginTop: 12
   },
-  stepButton: {
+  levelPill: {
     // TODO - fixed width isn't great for i18n. likely want to come up with some
     // way of having this be dynamic, but the same size across all instances
     width: 110,
@@ -26,6 +27,13 @@ const styles = {
     paddingRight: 20,
     paddingTop: 5,
     paddingBottom: 5
+  },
+  hoverStyle: {
+    ':hover': {
+      textDecoration: 'none',
+      color: color.white,
+      backgroundColor: color.level_current
+    }
   },
   buttonText: {
     marginLeft: 10
@@ -126,7 +134,13 @@ const ProgressLevelSet = React.createClass({
           <tr>
             <td>
               <a href={multiLevelStep ? undefined : url}>
-                <div style={{...styles.stepButton, ...BUBBLE_COLORS[status]}}>
+                <div
+                  style={{
+                    ...styles.levelPill,
+                    ...BUBBLE_COLORS[status],
+                    ...(multiLevelStep ? undefined : styles.hoverStyle)
+                  }}
+                >
                   <FontAwesome icon={this.getIcon()}/>
                   <div style={{...styles.buttonText, ...styles.text}}>
                     {i18n.levelN({levelNumber})}
@@ -166,4 +180,4 @@ const ProgressLevelSet = React.createClass({
   }
 });
 
-export default ProgressLevelSet;
+export default Radium(ProgressLevelSet);

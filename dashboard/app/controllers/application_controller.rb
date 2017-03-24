@@ -79,15 +79,15 @@ class ApplicationController < ActionController::Base
 
   def render_404
     respond_to do |format|
-      format.html { render file: 'public/404.html', layout: 'layouts/application', status: :not_found }
-      format.all { head :not_found }
+      format.html {render file: 'public/404.html', layout: 'layouts/application', status: :not_found}
+      format.all {head :not_found}
     end
   end
 
   def render_500
     respond_to do |format|
-      format.html { render file: 'public/500.html', layout: 'layouts/application', status: :internal_server_error }
-      format.all { head :internal_server_error}
+      format.html {render file: 'public/500.html', layout: 'layouts/application', status: :internal_server_error}
+      format.all {head :internal_server_error}
     end
   end
 
@@ -133,9 +133,9 @@ class ApplicationController < ActionController::Base
   ].freeze
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit PERMITTED_USER_FIELDS }
-    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit PERMITTED_USER_FIELDS }
-    devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit PERMITTED_USER_FIELDS }
+    devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}
+    devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit PERMITTED_USER_FIELDS}
+    devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit PERMITTED_USER_FIELDS}
   end
 
   def with_locale
