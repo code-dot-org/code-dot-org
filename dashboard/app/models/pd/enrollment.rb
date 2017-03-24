@@ -97,10 +97,10 @@ class Pd::Enrollment < ActiveRecord::Base
   # @return [Enumerable<Pd::Enrollment>]
   def self.filter_for_survey_completion(enrollments, select_completed = true)
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
-      enrollments.is_a?(Enumerable) && enrollments.all?{|e| e.is_a?(Pd::Enrollment)}
+      enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
 
     ids_with_processed_surveys, ids_without_processed_surveys =
-      enrollments.partition{|e| e.completed_survey_id.present?}.map{|list| list.map(&:id)}
+      enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
 
     ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: ids_without_processed_surveys).map(:id)
 
@@ -108,7 +108,7 @@ class Pd::Enrollment < ActiveRecord::Base
       ids_with_processed_surveys + ids_with_unprocessed_surveys :
       ids_without_processed_surveys - ids_with_unprocessed_surveys
 
-    enrollments.select{|e| filtered_ids.include? e.id}
+    enrollments.select {|e| filtered_ids.include? e.id}
   end
 
   before_create :assign_code

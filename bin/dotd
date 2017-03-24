@@ -10,19 +10,34 @@ require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
 require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
+require_relative '../lib/cdo/infra_production_topic'
 require_relative '../lib/cdo/github'
 include CdoCli
 
 LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
-# TODO(asher): This is not a constant, so should not be NAMED as one.
-LOGGER = Logger.new(LOG_FILE, 'daily')
+@logger = Logger.new(LOG_FILE, 'daily')
 
-LOGGER.formatter = proc do |_serverity, time, _progname, msg|
+@logger.formatter = proc do |_serverity, time, _progname, msg|
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
 # Global to prevent it from being passed around everywhere.
 @dotd_name = ''
+
+# Checks that CDO.github_access_token and CDO.slack_token are defined. If not,
+# exits the program.
+def check_for_cdo_keys
+  unless CDO.github_access_token && CDO.slack_token
+    puts <<-EOS.unindent
+
+      This script requires CDO.github_access_token and CDO.slack_token.
+
+      Please add them to your locals.yml and rerun the script.
+
+    EOS
+    exit
+  end
+end
 
 # Prints the script intro to the console.
 def puts_script_intro
@@ -45,7 +60,6 @@ end
 
 # Prints task list after the DTP to the console.
 def puts_after_dtp_tasks
-  # TODO(asher): Automate the Slack#infra-production update.
   puts <<-EOS.unindent
 
     * Verify that the release at https://github.com/code-dot-org/code-dot-org/releases/latest looks correct
@@ -97,7 +111,7 @@ def ask_for_name
 
   EOS
 
-  LOGGER.info("#{Time.new.strftime('%A, %B %d %Y')}: #{@dotd_name} is DotD")
+  @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{@dotd_name} is DotD")
 end
 
 # Prompts the user whether block should be executed by asking question,
@@ -111,7 +125,7 @@ def should_i(question)
     response = gets.strip.downcase
     puts ''
     if 'yes'.start_with?(response) # also catches blank/return ;)
-      LOGGER.info(question)
+      @logger.info(question)
       yield
       return
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
@@ -193,7 +207,7 @@ end
 def view_commits(base:, head:)
   commit_list = GitHub.
       compare(base: base, head: head).
-      map{|msg| dim msg.lines.first}.
+      map {|msg| dim msg.lines.first}.
       join("\n    ")
   puts <<-EOS.unindent_with_indent(2)
     Commits in #{head} to be merged into #{base}
@@ -253,6 +267,8 @@ def do_dtt_subroutine
 end
 
 def main
+  check_for_cdo_keys
+
   puts_script_intro
   ask_for_name
 
@@ -311,7 +327,7 @@ def main
     end
     should_i 'update Slack#infra-production topic' do
       sha = GitHub.sha 'production'
-      Slack.set_dtp_commit(sha)
+      InfraProductionTopic.set_dtp_commit(sha)
     end
 
     puts_after_dtp_tasks

@@ -5,7 +5,7 @@ require 'cdo/rake_utils'
 require 'cdo/aws/cloudfront'
 
 require 'sshkit'
-SSHKit::Backend::Netssh.configure{|ssh| ssh.ssh_options = {paranoid: false}}
+SSHKit::Backend::Netssh.configure {|ssh| ssh.ssh_options = {paranoid: false}}
 
 varnish_ban_cmd = "sudo varnishadm -T localhost:6082 -S /etc/varnish/secret 'ban obj.status ~ .'"
 CDO.log.info 'Flushing Varnish cache on daemon...'

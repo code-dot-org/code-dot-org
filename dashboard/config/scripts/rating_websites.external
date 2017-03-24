@@ -32,7 +32,7 @@ teacher_markdown <<MARKDOWN
 
 **Goal:** Students identify features that they believe make some websites better than others.
 
-!!!say
+**Say:**
 
 	 We just shared the last websites we visited. More importantly you shared why you went to those websites. All websites are created to serve a certain purpose. Some of the websites you go to meet your needs better than others. When websites don't meet your needs it may be because they were designed for a different purpose or maybe they don't do a good job of achieving their intended purpose. You are going look at a set of websites to see how well they meet their intended purpose. All of the websites you will be looking at were designed for the same purpose, to share information about a restaurant.
 
@@ -46,7 +46,7 @@ teacher_markdown <<MARKDOWN
 
 **Distribute:** Give one copy of [r rating-the-quality-of-websites] to each student.
 
-&fa-desktop; **Transition:** Have students go to the “Rating Websites” level on Code Studio to begin looking at the websites. Links to all of the websites can be found in Code Studio. Using the worksheet as a guide, students will:
+**Transition:** Have students go to the “Rating Websites” level on Code Studio to begin looking at the websites. Links to all of the websites can be found in Code Studio. Using the worksheet as a guide, students will:
 
 * Open each website one at a time.
 * Decide with your partner if and how well the website achieves its purpose. 
@@ -55,11 +55,7 @@ teacher_markdown <<MARKDOWN
 
 If students do not agree with their partner that is okay but they should discuss the differences in opinion.
 
-!!!content <content-0>
-
     This activity is NOT about students giving “accurate ratings”.  Rather, it is about having students identify reasons for their ratings in order to identify qualities of website's that meet their purpose. In addition personal preference plays a role in everyone’s ratings.
-
-content!!!content-0
 
 **Circulate:**  As students are working to get a sense of the ratings they are giving in order to pull out key insights from students.
 MARKDOWN

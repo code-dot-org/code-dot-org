@@ -1994,7 +1994,9 @@ Studio.init = function (config) {
     }
   };
 
-  studioApp.setPageConstants(config);
+  studioApp.setPageConstants(config, {
+    hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/)
+  });
 
   var visualizationColumn = (
     <StudioVisualizationColumn

@@ -190,7 +190,7 @@ module LevelsHelper
       @app_options = blockly_options
     elsif @level.is_a? Weblab
       @app_options = weblab_options
-    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse)
+    elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
@@ -612,7 +612,7 @@ module LevelsHelper
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
   def instruction_gif_choices
-    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)){ Dir.glob(File.join("**", "*")) }
+    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)) { Dir.glob(File.join("**", "*")) }
     all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
   end
 
@@ -707,6 +707,16 @@ module LevelsHelper
   def can_view_solution?
     if current_user && @level.try(:ideal_level_source_id) && @script_level && !@script.hide_solutions? && @level.contained_levels.empty?
       Ability.new(current_user).can? :view_level_solutions, @script
+    end
+  end
+
+  def can_view_teacher_markdown?
+    if current_user.try(:authorized_teacher?)
+      true
+    elsif current_user.try(:teacher?) && @script
+      @script.k5_course? || @script.k5_draft_course?
+    else
+      false
     end
   end
 

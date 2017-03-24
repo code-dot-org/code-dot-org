@@ -112,11 +112,6 @@ Style/GlobalVars:
 Style/Lambda:
   Enabled: false
 
-# Offense count: 97
-# Cop supports --auto-correct.
-Style/LeadingCommentSpace:
-  Enabled: false
-
 # Offense count: 3
 Style/MethodMissing:
   Enabled: false
@@ -166,13 +161,6 @@ Style/RescueModifier:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: space, no_space
 Style/SpaceAroundEqualsInParameterDefault:
-  Enabled: false
-
-# Offense count: 317
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: space, no_space
-Style/SpaceBeforeBlockBraces:
   Enabled: false
 
 # Offense count: 1011
