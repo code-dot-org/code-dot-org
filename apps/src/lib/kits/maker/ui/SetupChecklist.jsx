@@ -1,7 +1,7 @@
 /** @file Maker Board setup checker */
-import React, {Component} from 'react';
-import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
-import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
+import React, {Component, PropTypes} from 'react';
+import SetupChecker from '../util/SetupChecker';
+import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
 import SetupStep, {
   HIDDEN,
   WAITING,
@@ -29,8 +29,13 @@ const initialState = {
   [STATUS_BOARD_COMPONENTS]: WAITING,
 };
 
-export default class BoardSetupCheck extends Component {
+export default class SetupChecklist extends Component {
   state = {...initialState};
+
+  static propTypes = {
+    setupChecker: PropTypes.instanceOf(SetupChecker).isRequired,
+    stepDelay: PropTypes.number,
+  };
 
   hide(selector) {
     this.setState({[selector]: HIDDEN});
@@ -61,36 +66,39 @@ export default class BoardSetupCheck extends Component {
   }
 
   detect() {
+    const {setupChecker} = this.props;
     this.setState({...initialState, isDetecting: true});
 
     if (!isWindows()) {
       this.hide(STATUS_WINDOWS_DRIVERS);
     }
 
-    let portName = null;
-    let boardController = null;
-
     Promise.resolve()
 
         // Are we using a compatible browser?
-        .then(() => this.detectChromeVersion())
+        .then(() => this.detectStep(STATUS_IS_CHROME,
+            () => setupChecker.detectChromeVersion()))
 
         // Is Chrome App Installed?
-        .then(() => this.detectChromeAppInstalled())
+        .then(() => this.detectStep(STATUS_APP_INSTALLED,
+            () => setupChecker.detectChromeAppInstalled()))
 
         // Is board plugged in?
-        .then(() => this.detectBoardPluggedIn())
-        .then(usablePort => portName = usablePort)
+        .then(() => this.detectStep(STATUS_BOARD_PLUG,
+            () => setupChecker.detectBoardPluggedIn()))
 
         // Can we talk to the firmware?
-        .then(() => this.detectCorrectFirmware(portName))
-        .then(board => boardController = board)
+        .then(() => this.detectStep(STATUS_BOARD_CONNECT,
+            () => setupChecker.detectCorrectFirmware()))
 
         // Can we initialize components successfully?
-        .then(() => this.detectComponentsInitialize(boardController))
+        .then(() => this.detectStep(STATUS_BOARD_COMPONENTS,
+            () => setupChecker.detectComponentsInitialize()))
 
         // Everything looks good, let's par-tay!
-        .then(() => this.celebrate(boardController))
+        .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
+        .then(() => setupChecker.celebrate())
+        .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
 
         // If anything goes wrong along the way, we'll end up in this
         // catch clause - make sure to report the error out.
@@ -103,104 +111,26 @@ export default class BoardSetupCheck extends Component {
 
         // Finally...
         .then(() => {
-          if (boardController) {
-            boardController.destroy();
-            boardController = null;
-          }
-          portName = null;
+          setupChecker.teardown();
           this.setState({isDetecting: false});
         });
   }
 
-  detectChromeVersion() {
-    this.spin(STATUS_IS_CHROME);
-    return promiseWaitFor(200)
-        .then(() => {
-          if (!isChrome()) {
-            return Promise.reject(new Error('Not using Chrome'));
-          }
-
-          if (!gtChrome33()) {
-            return Promise.reject(new Error('Not using Chrome > v33'));
-          }
-
-          this.succeed(STATUS_IS_CHROME);
-        })
-        .catch(error => {
-          this.fail(STATUS_IS_CHROME);
-          return Promise.reject(error);
-        });
-  }
-
   /**
+   * Perform the work to check a step, wrapped in appropriate status changes.
+   * @param {string} stepKey
+   * @param {function:Promise} stepWork
    * @return {Promise}
    */
-  detectChromeAppInstalled() {
-    this.spin(STATUS_APP_INSTALLED);
-    return promiseWaitFor(200)
-        .then(ensureAppInstalled)
-        .then(() => this.succeed(STATUS_APP_INSTALLED))
+  detectStep(stepKey, stepWork) {
+    this.spin(stepKey);
+    return promiseWaitFor(this.props.stepDelay || 200)
+        .then(stepWork)
+        .then(() => this.succeed(stepKey))
         .catch(error => {
-          this.fail(STATUS_APP_INSTALLED);
+          this.fail(stepKey);
           return Promise.reject(error);
         });
-  }
-
-  /**
-   * @return {Promise.<string>} Resolves to usable port name
-   */
-  detectBoardPluggedIn() {
-    this.spin(STATUS_BOARD_PLUG);
-    return promiseWaitFor(200)
-        .then(findPortWithViableDevice)
-        .then(portName => {
-          this.succeed(STATUS_BOARD_PLUG);
-          return portName;
-        })
-        .catch(error => {
-          this.fail(STATUS_BOARD_PLUG);
-          return Promise.reject(error);
-        });
-  }
-
-  /**
-   * @return {Promise.<CircuitPlaygroundBoard>}
-   */
-  detectCorrectFirmware(portName) {
-    this.spin(STATUS_BOARD_CONNECT);
-    const boardController = new CircuitPlaygroundBoard(portName);
-    return boardController.connectToFirmware()
-        .then(() => {
-          this.succeed(STATUS_BOARD_CONNECT);
-          return boardController;
-        })
-        .catch(error => {
-          this.fail(STATUS_BOARD_CONNECT);
-          return Promise.reject(error);
-        });
-  }
-
-  /**
-   * @return {Promise}
-   */
-  detectComponentsInitialize(boardController) {
-    this.spin(STATUS_BOARD_COMPONENTS);
-    return promiseWaitFor(200)
-        .then(() => boardController.initializeComponents())
-        .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
-        .catch(error => {
-          this.fail(STATUS_BOARD_COMPONENTS);
-          return Promise.reject(error);
-        });
-  }
-
-  /**
-   * @return {Promise}
-   */
-  celebrate(boardController) {
-    this.thumb(STATUS_BOARD_COMPONENTS);
-    return boardController.celebrateSuccessfulConnection()
-        .then(() => this.succeed(STATUS_BOARD_COMPONENTS));
   }
 
   /**
@@ -312,21 +242,4 @@ function promiseWaitFor(ms) {
   return new Promise(resolve => {
     setTimeout(resolve, ms);
   });
-}
-
-function isChrome() {
-  return !!window.chrome;
-}
-
-function getChromeVersion() {
-  const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
-  return raw ? parseInt(raw[2], 10) : false;
-}
-
-function gtChrome33() {
-  return getChromeVersion() >= 33;
-}
-
-function isWindows() {
-  return navigator.platform.indexOf('Win') > -1;
 }
