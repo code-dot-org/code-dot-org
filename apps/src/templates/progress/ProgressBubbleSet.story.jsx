@@ -1,29 +1,19 @@
 import React from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import { fakeLevels } from './progressTestHelpers';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
-const levels = [
-  {
-    status: 'perfect',
-    url: '/foo/bar',
-  },
-  {
-    status: 'not_tried',
-    url: '/foo/bar',
-  },
-  {
-    status: 'attempted',
-    url: '/foo/bar',
-  },
-  {
-    status: 'passed',
-    url: '/foo/bar',
-  },
-  {
-    status: 'submitted',
-    url: '/foo/bar',
-  },
+const statusForLevel = [
+  LevelStatus.perfect,
+  LevelStatus.not_tried,
+  LevelStatus.attempted,
+  LevelStatus.passed,
+  LevelStatus.submitted
 ];
+const levels = fakeLevels(5).map((level, index) => ({
+  ...level,
+  status: statusForLevel[index]
+}));
 
 export default storybook => {
   storybook
@@ -35,6 +25,7 @@ export default storybook => {
           <ProgressBubbleSet
             start={3}
             levels={levels}
+            disabled={false}
           />
         )
       },
@@ -44,6 +35,7 @@ export default storybook => {
           <ProgressBubbleSet
             start={1}
             levels={fakeLevels(20)}
+            disabled={false}
           />
         )
       },
@@ -55,6 +47,20 @@ export default storybook => {
             start={1}
             levels={levels}
             disabled={true}
+          />
+        )
+      },
+      {
+        name:'first level is unplugged',
+        description: 'Should still get a bubble (not a pill) for unplugged',
+        story: () => (
+          <ProgressBubbleSet
+            start={1}
+            levels={fakeLevels(5).map((level, index) => ({
+              ...level,
+              isUnplugged: index === 0
+            }))}
+            disabled={false}
           />
         )
       },

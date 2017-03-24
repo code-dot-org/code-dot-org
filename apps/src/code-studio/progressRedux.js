@@ -290,6 +290,7 @@ export const levelsByLesson = state => (
       name: level.name,
       progression: level.progression,
       icon: level.icon,
+      isUnplugged: level.kind === LevelKind.unplugged
     }))
   ))
 );

@@ -19,6 +19,20 @@ export default storybook => {
             }))}
           />
         )
+      },
+      {
+        name:'with unplugged lesson',
+        story: () => (
+          <ProgressLessonContent
+            disabled={false}
+            levels={fakeLevels(5).map((level, index) => ({
+              ...level,
+              status: index === 1 ? LevelStatus.perfect : LevelStatus.not_tried,
+              name: undefined,
+              isUnplugged: index === 0
+            }))}
+          />
+        )
       }
     ]);
 };
