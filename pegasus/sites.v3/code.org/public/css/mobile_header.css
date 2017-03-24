@@ -80,6 +80,14 @@
   padding-bottom: 10px;
 }
 
+#nav ul li:last-of-type {
+  border-bottom: none;
+}
+
+#nav .educate-nav ul li:last-of-type {
+  border-bottom: solid 2px rgba(3,147,158, 0.8);
+}
+
 #nav ul li:before {
   content: none;
 }
