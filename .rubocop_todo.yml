@@ -163,13 +163,6 @@ Style/RescueModifier:
 Style/SpaceAroundEqualsInParameterDefault:
   Enabled: false
 
-# Offense count: 1011
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
-# SupportedStyles: space, no_space
-Style/SpaceInsideBlockBraces:
-  Enabled: false
-
 # Offense count: 3700
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
