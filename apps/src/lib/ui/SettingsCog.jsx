@@ -25,15 +25,6 @@ const style = {
   },
 };
 
-const ZERO_CLIENT_RECT = {
-  top: 0,
-  bottom: 0,
-  left: 0,
-  right: 0,
-  width: 0,
-  height: 0,
-};
-
 class SettingsCog extends Component {
   constructor(props) {
     super(props);
@@ -44,7 +35,7 @@ class SettingsCog extends Component {
     this.close = this.close.bind(this);
 
     // Default icon bounding rect for first render
-    this.iconRect = ZERO_CLIENT_RECT;
+    this.targetPoint = {top: 0, left: 0};
   }
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -71,11 +62,23 @@ class SettingsCog extends Component {
     this.setState({open: false});
   }
 
+  setTargetPoint(icon) {
+    if (!icon) {
+      return;
+    }
+
+    const rect = icon.getBoundingClientRect();
+    this.targetPoint = {
+      top: rect.bottom - 6,
+      left: rect.left + (rect.width / 2) - 1,
+    };
+  }
+
   render() {
     return (
       <span
         style={style.iconContainer}
-        ref={icon => this.iconRect = icon ? icon.getBoundingClientRect() : ZERO_CLIENT_RECT}
+        ref={icon => this.setTargetPoint(icon)}
       >
         <FontAwesome
           id="settings-cog"
@@ -91,7 +94,7 @@ class SettingsCog extends Component {
           beforeClose={this.beforeClose}
         >
           <SettingsMenu
-            targetRect={this.iconRect}
+            targetPoint={this.targetPoint}
             handleClose={this.close}
           />
         </Portal>

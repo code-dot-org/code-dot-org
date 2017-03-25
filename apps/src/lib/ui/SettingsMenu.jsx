@@ -14,8 +14,10 @@ export default class SettingsMenu extends Component {
   }
 
   static propTypes = {
-    // TODO: Specific shape for DOMRect here?
-    targetRect: PropTypes.object.isRequired,
+    targetPoint: PropTypes.shape({
+      top: PropTypes.number.isRequired,
+      left: PropTypes.number.isRequired,
+    }).isRequired,
     handleClose: PropTypes.func.isRequired,
   };
 
@@ -30,12 +32,7 @@ export default class SettingsMenu extends Component {
   }
 
   render() {
-    const {targetRect} = this.props;
-    const targetPoint = {
-      top: targetRect.bottom - 6,
-      left: targetRect.left + (targetRect.width / 2) - 1,
-    };
-
+    const {targetPoint} = this.props;
     return (
       <PopUpMenu targetPoint={targetPoint}>
         <PopUpMenu.Item onClick={this.manageAssets}>
