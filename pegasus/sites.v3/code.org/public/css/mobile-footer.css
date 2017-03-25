@@ -152,4 +152,9 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+
+   #privacy a {
+    color: #ffa400;
+    font-family: 'Gotham 5r', sans-serif;
+  }
 }
