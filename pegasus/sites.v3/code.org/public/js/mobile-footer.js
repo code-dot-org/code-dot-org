@@ -2,6 +2,8 @@ $(function () {
 
   $('#footer-toggle').click(function (e){
     $('#footer-links ul').slideToggle();
+    $('#up').toggle();
+    $('#down').toggle();
   });
 
   document.querySelector( '#footer-toggle' )

@@ -157,4 +157,8 @@
     color: #ffa400;
     font-family: 'Gotham 5r', sans-serif;
   }
+
+  #down {
+    display: none;
+  }
 }
