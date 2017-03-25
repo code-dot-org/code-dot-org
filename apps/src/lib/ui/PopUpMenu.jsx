@@ -44,7 +44,7 @@ class PopUpMenu_ extends Component {
       left: PropTypes.number.isRequired,
     }).isRequired,
     width: PropTypes.number,
-    children: PropTypes.arrayOf(PropTypes.instanceOf(Item)),
+    children: PropTypes.any,
   };
 
   static defaultProps = {

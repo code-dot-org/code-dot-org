@@ -115,7 +115,10 @@ var CodeWorkspace = React.createClass({
       this.runModeIndicators() && isRunning && styles.runningChevron
     ];
     return [
-      <PaneSection id="toolbox-header">
+      <PaneSection
+        id="toolbox-header"
+        key="toolbox-header"
+      >
         <i
           id="hide-toolbox-icon"
           style={[commonStyles.hidden, chevronStyle]}
@@ -126,7 +129,11 @@ var CodeWorkspace = React.createClass({
         </span>
         {showSettingsCog && <SettingsCog/>}
       </PaneSection>,
-      <PaneSection id="show-toolbox-header" style={commonStyles.hidden}>
+      <PaneSection
+        id="show-toolbox-header"
+        key="show-toolbox-header"
+        style={commonStyles.hidden}
+      >
         <i
           id="show-toolbox-icon"
           style={chevronStyle}
