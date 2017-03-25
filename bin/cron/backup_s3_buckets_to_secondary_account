@@ -12,9 +12,38 @@ BACKUP_BUCKET_ROOT = 'cdo-secondary-backup'.freeze
 S3S3MIRROR_DIR = "/home/ubuntu/s3s3mirror/".freeze
 S3S3MIRROR_COMMAND = 's3s3mirror.sh'.freeze
 S3S3MIRROR_INSTALL_COMMAND = "git clone https://github.com/cobbzilla/s3s3mirror.git #{S3S3MIRROR_DIR}".freeze
+S3S3MIRROR_LOG4J_CONFIG_FILE = "#{S3S3MIRROR_DIR}target/conf/log4j.xml"
+S3S3MIRROR_LOG4J_CONFIG = <<-LOG4J
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//LOGGER" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  <appender name="console" class="org.apache.log4j.ConsoleAppender">
+  <param name="Target" value="System.err" />
+  <layout class="org.apache.log4j.PatternLayout">
+    <param name="ConversionPattern" value="%t %-5p: %c - %m%n" />
+  </layout>
+  </appender>
+  <appender name="file" class="org.apache.log4j.RollingFileAppender">
+    <param name="File" value="/home/ubuntu/s3s3mirror.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="100KB" />
+    <param name="MaxBackupIndex" value="10"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%t %-5p %c{2} - %m%n"/>
+    </layout>
+  </appender>
+  <logger name="org.cobbzilla">
+    <level value="info" />
+  </logger>
+  <root>
+    <priority value="INFO" />
+    <appender-ref ref="file" />
+  </root>
+</log4j:configuration>
+LOG4J
 
 BUCKETS_TO_SKIP = [
-  'cdo-analysis-firehose',
+  'cdo-analysis-firehose', # unused
   'cdo-art', # 120M elements, 7.1tb, seems to be safe to skip
   'cdo-dist', # 170k, 31gb, unnecessary
   'cdo-dynamo-backup', # 81k, 15gb
@@ -95,20 +124,24 @@ def verify_bucket_list
     mentioned_not_found.each do |bucket|
       message += bucket + "\n"
     end
-    HipChat.log message, color: 'red'
+    ChatClient.log message, color: 'red'
   end
   unless found_not_mentioned.empty?
     message = "S3 buckets were found in account that are not listed in backup_buckets_to_secondary_account:\n"
     found_not_mentioned.each do |bucket|
       message += bucket + "\n"
     end
-    HipChat.log message, color: 'red'
+    ChatClient.log message, color: 'red'
   end
 end
 
 def ensure_s3s3mirror_installed
   file_exists = File.file? "#{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND}"
   `#{S3S3MIRROR_INSTALL_COMMAND}` unless file_exists
+  # Always update the logging config to match the codebase
+  File.open(S3S3MIRROR_LOG4J_CONFIG_FILE, 'w') do |f|
+    f.write(S3S3MIRROR_LOG4J_CONFIG)
+  end
 end
 
 def debug_puts(text)
@@ -118,7 +151,7 @@ end
 def main
   unless only_one_running?(__FILE__)
     CronHelper.report_cron_daily_result TASK_NAME, false
-    HipChat.log 'S3 backup task failed, previous task is still running!', color: 'red', notify: 1
+    ChatClient.log 'S3 backup task failed, previous task is still running!', color: 'red', notify: 1
     return
   end
 
@@ -128,7 +161,7 @@ def main
 
   start_time = Time.now
   debug_puts "Beginning S3 backup sync at #{Time.now}"
-  HipChat.log("Beginning S3 backup sync at #{Time.now}")
+  ChatClient.log("Beginning S3 backup sync at #{Time.now}")
 
   # s3s3mirror does not function properly if you're not in its root directory
   Dir.chdir(S3S3MIRROR_DIR)
@@ -144,7 +177,7 @@ def main
   debug_puts 'S3 backup sync complete'
   end_time = Time.now
   debug_puts "Time elapsed: #{end_time - start_time}"
-  HipChat.log("S3 backup sync complete at #{Time.now}")
+  ChatClient.log("S3 backup sync complete at #{Time.now}")
   CronHelper.report_cron_daily_result TASK_NAME, true
 end
 
