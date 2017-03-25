@@ -75,18 +75,20 @@
   }
 
   .language-dropdown {
-    padding-right: 5%;
+    padding-bottom: 10px;
+    padding-right: 10px;
   }
 
   .social-language-box {
     text-align: center;
   }
 
-  .language-dropdown, .social-media {
+ .social-media, .language-dropdown{
     text-align: center;
-    width: 40%;
     display: inline;
+    width: 40%;
     padding-bottom: 3px;
+    margin-top: 10px;
   }
 
   #footer-links {
@@ -110,7 +112,7 @@
   #pagefooter {
     overflow: visible;
     padding: 0;
-    height: 180px;
+    height: 200px;
   }
 
   #footer-links {
@@ -161,4 +163,10 @@
   #down {
     display: none;
   }
+
+  .social-media, .language-dropdown {
+     width: 100%;
+     display: block;
+     padding-right: 0px;
+   }
 }
