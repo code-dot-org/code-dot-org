@@ -12,9 +12,8 @@ nav: educate_nav
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
 | [Code Studio](/educate/k5)  (Code.org)| 4 20-hour courses blend online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
-| [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD | 
-| [Code Red Education](www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee | 
-| [Kodable](https://www.kodable.com) | 38 lesson plans that blend online independent practice with "unplugged" activities. 8 Lessons, FREE, Full curriculum, $15/student, $1950/site | Online or in-person PD included for paying schools | 
+| [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD |
+| [Code Red Education](www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee |
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
@@ -44,6 +43,8 @@ nav: educate_nav
 
 
 ## High School
+
+Looking for resources specifically for AP Computer Science Principles A in Java? See the [AP Computer Science A Resource Page](3rd-party/apcsa)
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
@@ -77,15 +78,15 @@ U.S. Federal law recently recognized [computer science as part of the "well roun
 
 Your school or district may be able to use Title I or Title II funds, and other department grant programs to apply towards offering CS courses. [More info](http://innovation.ed.gov/2015/12/07/a-new-chapter-for-computer-science-education/).
 
-The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057). 
+The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057).
 
-## More resources &mdash; for classrooms, afterschool clubs or learning online 
+## More resources &mdash; for classrooms, afterschool clubs or learning online
 
 ### [Khan Academy](http://khanacademy.org/cs/programming)
 Online curriculum that teaches JavaScript programming, HTML/CSS, and SQL, in an interactive online environment, plus courses on Algorithms and Cryptography. Includes teaching tools to track student progress.
 
 ### [Kodu](http://www.kodugamelab.com/)
-Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming. 
+Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming.
 
 ### [Alice](http://www.alice.org/)
 3D programming environment that makes it easy to create an animation for telling a story, playing an interactive game, or a video to share on the web.
@@ -94,7 +95,7 @@ Create games on the PC and XBox via a simple visual programming language. Can be
 Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
 
 ### [Codecademy](https://www.codecademy.com/learn)
-Codecademy is an online interactive platform that offers free coding classes in 12 different programming languages 
+Codecademy is an online interactive platform that offers free coding classes in 12 different programming languages
 
 ### [CS Unplugged](http://csunplugged.org/)
 Fun classroom exercises to teach computer science principles, no computers needed!
@@ -109,7 +110,6 @@ Build the next generation of creators using free, open-source Java courseware.
 Check out one-hour, teacher-led lesson and activity plans designed for different subject areas to teach the basics of computer science.
 
 ## Other lists of resources for curriculum or PD
-- CSForAll's [Member List](http://www.csforall.org/members/)
 - AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
 - [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
 
@@ -122,6 +122,6 @@ To decide which resources to list here, we used a rubric that looked for:
  * Proven scale + support (in use in at least 100 schools)
  * Professional development & support for teachers included
  * Affordable
- 
+
 There was a degree of subjective editorial choices involved, because what's most important to us is to showcase a short list of resources that we believe will provide the best experience
 for educators visiting our site. We've closed new submissions to this page for now, until after we try out using an external review board for Hour of Code 2016 activities. We may re-open submissions to this page based on that experience.

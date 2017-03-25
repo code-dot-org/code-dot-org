@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Can you fix Laurel's path to get all of this gold?",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Is something not right? Try using the step button to figure out where things go wrong.\",\r\n  \"hint_id\": \"grade1_adventurer_loops3_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Is something not right? Try using the step button to figure out where things go wrong.\",\"hint_id\":\"grade1_adventurer_loops3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6af379aa2bdd1eda224e49b62f1152eb/grade1_adventurer_loops3.mp3\"}]",
     "ideal": "8",
     "instructions_important": "false",
     "video_key": "C1_zuck_repeat_loop",

@@ -5,7 +5,7 @@
 # and reduces our costs (reducing media storage costs).
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require 'cdo/hip_chat'
+require 'honeybadger'
 require 'cdo/only_one'
 require 'date'
 require 'twilio-ruby'
@@ -44,10 +44,10 @@ def main
 
         message.delete
       rescue Twilio::REST::RequestError => e
-        # TODO(asher): Consider whether we should log the exception and continue to
-        # attempt to delete further messages rather than stopping deletion.
-        sanitized_error_message = e.message.sub CDO.twilio_sid, 'CDO.twilio_sid'
-        raise "Twilio::REST::RequestError (#{message.status}): #{sanitized_error_message}"
+        # Sanitize the exception message so that we don't expose secrets.
+        e.message.gsub! CDO.twilio_sid, 'CDO.twilio_sid'
+        Honeybadger.notify(e)
+        next
       end
     end
 

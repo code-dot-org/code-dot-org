@@ -9,19 +9,19 @@ class HoneybadgerTest < Minitest::Test
     ENV.unstub(:with_sensitive_values_redacted)
   end
 
-  COMMAND = '/home/ubuntu/staging/bin/deliver_poste_messages'
+  COMMAND = '/home/ubuntu/staging/bin/deliver_poste_messages'.freeze
 
   ERROR =
     "/home/ubuntu/staging/bin/deliver_poste_messages:126:in `send': undefined method `[]' for nil:NilClass (NoMethodError)\n" \
     "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:274:in `block in main'\n" \
-    "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:250:in `block (3 levels) in create_threads'"
+    "\tfrom /home/ubuntu/staging/bin/deliver_poste_messages:250:in `block (3 levels) in create_threads'".freeze
 
-  EXPECTED_MESSAGE = "undefined method `[]' for nil:NilClass (NoMethodError)"
+  EXPECTED_MESSAGE = "undefined method `[]' for nil:NilClass (NoMethodError)".freeze
   EXPECTED_BACKTRACE = [
-      "/home/ubuntu/staging/bin/deliver_poste_messages:126:in `send'",
-      "from /home/ubuntu/staging/bin/deliver_poste_messages:274:in `block in main'",
-      "from /home/ubuntu/staging/bin/deliver_poste_messages:250:in `block (3 levels) in create_threads'"
-  ]
+    "/home/ubuntu/staging/bin/deliver_poste_messages:126:in `send'",
+    "from /home/ubuntu/staging/bin/deliver_poste_messages:274:in `block in main'",
+    "from /home/ubuntu/staging/bin/deliver_poste_messages:250:in `block (3 levels) in create_threads'"
+  ].freeze
 
   def test_parse_exception_dump
     error_message, backtrace = Honeybadger.parse_exception_dump ERROR
@@ -32,14 +32,14 @@ class HoneybadgerTest < Minitest::Test
 
   def test_notify_command_error
     expected_opts = {
-        error_class: "/home/ubuntu/staging/bin/deliver_poste_messages returned 1",
-        error_message: EXPECTED_MESSAGE,
-        backtrace: EXPECTED_BACKTRACE,
-        context: {
-            stdout: 'captured stdout',
-            stderr: ERROR,
-            environment_variables: {}
-        }
+      error_class: "/home/ubuntu/staging/bin/deliver_poste_messages returned 1",
+      error_message: EXPECTED_MESSAGE,
+      backtrace: EXPECTED_BACKTRACE,
+      context: {
+        stdout: 'captured stdout',
+        stderr: ERROR,
+        environment_variables: {}
+      }
     }
 
     ENV.expects(:with_sensitive_values_redacted).returns({})
@@ -58,14 +58,14 @@ class HoneybadgerTest < Minitest::Test
     error = 'ls: foo: No such file or directory'
 
     expected_opts = {
-        error_class: "ls returned 1",
-        error_message: error,
-        backtrace: [error],
-        context: {
-            stdout: '',
-            stderr: error,
-            environment_variables: {}
-        }
+      error_class: "ls returned 1",
+      error_message: error,
+      backtrace: [error],
+      context: {
+        stdout: '',
+        stderr: error,
+        environment_variables: {}
+      }
     }
 
     ENV.expects(:with_sensitive_values_redacted).returns({})

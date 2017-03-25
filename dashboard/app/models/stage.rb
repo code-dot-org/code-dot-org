@@ -20,7 +20,7 @@
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
 class Stage < ActiveRecord::Base
-  has_many :script_levels, -> { order('position ASC') }, inverse_of: :stage
+  has_many :script_levels, -> {order('position ASC')}, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
 
@@ -41,9 +41,15 @@ class Stage < ActiveRecord::Base
   end
 
   def unplugged?
-    script_levels = script.script_levels.select{|sl| sl.stage_id == id}
+    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
-    script_levels.first.level.unplugged?
+    script_levels.first.oldest_active_level.unplugged?
+  end
+
+  def spelling_bee?
+    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+    return false unless script_levels.first
+    script_levels.first.oldest_active_level.spelling_bee?
   end
 
   def localized_title
@@ -67,7 +73,11 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_category
-    I18n.t "flex_category.#{flex_category}" if flex_category
+    if flex_category
+      I18n.t "flex_category.#{flex_category}"
+    else
+      I18n.t "flex_category.content"
+    end
   end
 
   def lesson_plan_html_url
@@ -85,34 +95,32 @@ class Stage < ActiveRecord::Base
   def summarize
     stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
       stage_data = {
-          script_id: script.id,
-          script_name: script.name,
-          script_stages: script.stages.to_a.size,
-          freeplay_links: script.freeplay_links,
-          id: id,
-          position: absolute_position,
-          name: localized_name,
-          title: localized_title,
-          flex_category: localized_category,
-          lockable: !!lockable,
-          # Ensures we get the cached ScriptLevels, vs hitting the db
-          levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
+        script_id: script.id,
+        script_name: script.name,
+        script_stages: script.stages.to_a.size,
+        freeplay_links: script.freeplay_links,
+        id: id,
+        position: absolute_position,
+        name: localized_name,
+        title: localized_title,
+        flex_category: localized_category,
+        lockable: !!lockable,
+        levels: cached_script_levels.map(&:summarize),
       }
 
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
 
-      # The last level in a stage might be a multi-page assessment, in which
-      # case we'll receive extra puzzle pages to be added to the existing summary.
+      # The last level in a stage might be a long assessment, so add extra information
+      # related to that.  This might include information for additional pages if it
+      # happens to be a multi-page long assessment.
       if last_script_level.long_assessment?
         last_level_summary = stage_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-        unless extra_levels.empty?
-          stage_data[:levels] += extra_levels
-          last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
-          last_level_summary[:url] << "/page/1"
-        end
+        stage_data[:levels] += extra_levels
+        last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
+        last_level_summary[:url] << "/page/1"
       end
 
       # Don't want lesson plans for lockable levels
@@ -187,5 +195,10 @@ class Stage < ActiveRecord::Base
         readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
       }
     end
+  end
+
+  # Ensures we get the cached ScriptLevels, vs hitting the db.
+  def cached_script_levels
+    script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
   end
 end

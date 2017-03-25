@@ -1,7 +1,9 @@
 require 'cdo/activity_constants'
+require 'cdo/shared_constants'
 
 module UsersHelper
   include ApplicationHelper
+  include SharedConstants
 
   # Summarize a user and his or her progress progress within a certain script.
   # Example return value:
@@ -115,22 +117,22 @@ module UsersHelper
           completion_status = activity_css_class(ul)
           # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
           submitted = !!ul.try(:submitted) &&
-              !(ul.level.try(:peer_reviewable) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
+              !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
           readonly_answers = !!ul.try(:readonly_answers)
           locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
 
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
             user_data[:levels][level_id] = {
-              status: 'locked'
+              status: LEVEL_STATUS.locked
             }
-          elsif completion_status != 'not_tried'
+          elsif completion_status != LEVEL_STATUS.not_tried
             user_data[:levels][level_id] = {
-                status: completion_status,
-                result: ul.try(:best_result) || 0,
-                submitted: submitted ? true : nil,
-                readonly_answers: readonly_answers ? true : nil,
-                paired: (paired_uls.include? ul.try(:id)) ? true : nil
+              status: completion_status,
+              result: ul.try(:best_result) || 0,
+              submitted: submitted ? true : nil,
+              readonly_answers: readonly_answers ? true : nil,
+              paired: (paired_uls.include? ul.try(:id)) ? true : nil
             }.compact
 
             # Just in case this level has multiple pages, in which case we add an additional

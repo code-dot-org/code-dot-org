@@ -22,10 +22,12 @@ class TestFlakiness
       url =  "https://saucelabs.com/rest/v1/#{TEST_ACCOUNT_USERNAME}/jobs"
       url += "?" + URI.encode_www_form(limit: PER_REQUEST, full: 'true', skip: jobs.count)
 
-      response = RestClient::Request.execute(method: :get,
-                                             url: url,
-                                             user: sauce_username,
-                                             password: sauce_key)
+      response = RestClient::Request.execute(
+        method: :get,
+        url: url,
+        user: sauce_username,
+        password: sauce_key
+      )
       jobs += JSON.parse(response.body)
     end
 
@@ -55,7 +57,7 @@ class TestFlakiness
 
     @@test_flakiness = calculate_test_flakiness
 
-    File.open(CACHE_FILENAME, 'w') {|f| f.write(JSON.dump(@@test_flakiness)) }
+    File.open(CACHE_FILENAME, 'w') {|f| f.write(JSON.dump(@@test_flakiness))}
 
     @@test_flakiness
   end

@@ -27,6 +27,10 @@ var ProtectedStatefulDiv = React.createClass({
     }
   },
 
+  getRoot() {
+    return this.refs.root;
+  },
+
   componentWillUnmount: function () {
     // when using the storybook styleguide, we don't really need to protect
     // anything, and actually we want to unmount/remount stuff all the time

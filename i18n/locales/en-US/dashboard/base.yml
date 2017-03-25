@@ -298,6 +298,8 @@ en:
     delete_text_teacher_note: 'crwdns27775:0crwdne27775:0'
     delete_confirm: 'crwdns27776:0crwdne27776:0'
     deleted_user: 'crwdns71750:0crwdne71750:0'
+    no_password_because_oauth: 'crwdns72035:0crwdne72035:0'
+    no_password_because_sponsored: 'crwdns72036:0crwdne72036:0'
   user_level:
     completed: 'crwdns3079:0crwdne3079:0'
     tried: 'crwdns3080:0crwdne3080:0'
@@ -725,6 +727,9 @@ en:
     content: 'crwdns56539:0crwdne56539:0'
     practice: 'crwdns56540:0crwdne56540:0'
     peer_review: 'crwdns57913:0crwdne57913:0'
+    ramp_up: 'crwdns72037:0crwdne72037:0'
+    end_of_course_project: 'crwdns72038:0crwdne72038:0'
+    optional_stages: 'crwdns72039:0crwdne72039:0'
   external_links:
     disclaimer: 'crwdns57418:0crwdne57418:0'
     leaving_domain: 'crwdns57419:0crwdne57419:0'

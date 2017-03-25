@@ -9,7 +9,6 @@ var reporters = ['mocha'];
 if (envConstants.CIRCLECI) {
   reporters.push('junit');
   reporters.push('coverage');
-  reporters.push('coveralls');
 }
 if (envConstants.COVERAGE) {
   reporters.push('coverage');
@@ -68,7 +67,7 @@ module.exports = function (config) {
     reporters: reporters,
 
     junitReporter: {
-      outputDir: envConstants.CIRCLECI ? envConstants.CIRCLE_TEST_REPORTS : '',
+      outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
     },
     coverageReporter: {
       dir: 'coverage',

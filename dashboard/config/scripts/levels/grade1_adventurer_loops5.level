@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "What should you add to this code to get all of the gold?",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out where things start going wrong? Use the \\\"Step\\\" button to run through your program one block at a time.\",\r\n  \"hint_id\": \"grade1_adventurer_loops5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where things start going wrong? Use the \\\"Step\\\" button to run through your program one block at a time.\",\"hint_id\":\"grade1_adventurer_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/577a4455b7dcc7809a7be633e3639999/grade1_adventurer_loops5.mp3\"}]",
     "ideal": "10",
     "instructions_important": "false",
     "min_collected": "12",

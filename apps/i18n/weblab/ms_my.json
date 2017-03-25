@@ -2,7 +2,8 @@
   "addCSSButton": "Add CSS",
   "addImageButton": "Add Image",
   "addHTMLButton": "Add HTML",
-  "refreshPreview": "Refresh",
+  "confirmExitWithUnsavedChanges": "Do you want to exit with unsaved changes?",
+  "refreshPreview": "Refresh and Save",
   "toggleInspectorOn": "Inspector: Off",
   "toggleInspectorOff": "Inspector: On"
 }

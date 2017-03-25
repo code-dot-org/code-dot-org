@@ -851,13 +851,12 @@
           resimlerle programlama gibi!"
       5:
         image: notes/C1_planting_seed_5.png
-        text: When we want to make chocolate, there are many big steps to that process
-          and each of those big steps has a set of smaller steps and there are different
-          recipes or algorithms depending on how we want the chocolate to taste. Each
-          step is important, even the small ones, so that without one step, the rest
-          of them cannot be completed. Creating algorithms that others can understand
-          is really important. That's why each step has to be written down so that
-          no matter who does it, the result is the same.
+        text: "Çikolata yapmak istediğimizde bu süreçte birçok büyük adımlar vardır
+          ve her büyük adımın daha küçük adımlar kümesi vardır ve çikolatayı nasıl
+          tatmak istediğimize bağlı olarak farklı tarifler ya da algoritmalar vardır.Her
+          \ adım önemlidir, küçük olanları bile öyle ki bir adım olmadan diğerleri
+          tamamlanamıyor.Başkalarının anlayabileceği algoritmalar oluşturmak çok önemlidir.
+          Bu yüzden her adım yazılmalıdır ki kim yapacak olursa olsun sonuç aynı olmalı."
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
@@ -1044,12 +1043,12 @@
           online!
       3:
         image: notes/C2_digital_footprint_3.png
-        text: Use your arms to hug your pet, to keep your clothes from getting wet,
-          and to wear your favorite sleeves and to help you fly and make believe.
-          Use your arms when you're online, to take break and balance time and leave
-          your tech behind and to find yourself a tree to climb. From your head down
-          to your toes, pause, think about it. From your feet up to your nose, pause
-          and think online!
+        text: Evcil hayvanını kucaklamak, kıyafetlerinin ıslanmasını önlemek için
+          ve sana uçmaya yardımcı olacak ve buna inandıracak en sevdiğin kolluları
+          giymek için kollarını kullan. Çevrimiçi iken kollarını kullan, bir mola
+          almak ve denge zamanı için ve tekniklerini geride bırak, kendine tırmanmak
+          için bir ağaç bul.Tepeden tırnağa durakla ve düşün. Ayaklarından burnuna
+          kadar durakla ve çevrimiçi düşün!
       4:
         image: notes/C2_digital_footprint_4.png
         text: Use your gut to store your food, and to listen to its growling mood,
@@ -2035,42 +2034,42 @@
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: So what grade are you in? Second. Tenth grade. First grade. I was in
-          eighth grade when I learned to program. I got my first computer when I was
-          in sixth grade. What gets me excited is being able to fix people's problems.
-          You can express yourself, you can build things from an idea.
+        text: Yani kaçıncı sınıfa gidiyorsun? İkinci. Onuncu sınıfta. Birinci sınıf.
+          Programı öğrendiğimde sekizinci sınıftaydım. İlk bilgisayarımı altıncı sınıftayken
+          aldım. Beni heyecanlandıran insanların problemlerini çözmenin mümkün olması.
+          Sen kendini ifade edebilir, bir fikirden bir şeyler inşa edebilirsin.
       2:
         image: notes/infinity_playlab_intro_2.png
-        text: Computer science is the basis for a lot of the things that college students
-          and professionals will do for the next twenty or thirty years. I like programming
-          because I like helping people. I get the opportunity to build something
-          that's gonna make people's lives easier. I think it's the closest thing
-          we have to a superpower. Getting started is the most important part. I'm
-          a beginner myself and I want you to learn with me.
+        text: Bilgisayar bilimleri, üniversite öğrencileri ve profesyonellerin sonraki
+          yirmi ve otuz yıl için yapacakları bir çok şeyin temelidir. Ben programlamayı
+          seviyorum çünkü insanlara yardımcı olmayı seviyorum. İnsanların hayatını
+          kolaylaştıracak bir şeyler inşa etme fırsatı buluyorum. Bence bu süper güce
+          sahip olmaya en yakın şey. Başlamak en önemli kısmı. Ben yeni başlayanlardanım
+          ve kendimle öğrenmek istiyorum.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: I'm John Vechey, I'm one of the co-founders of PopCap Games. We make
-          games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games
-          isn't how perfect your code is, it's not how perfect your art is, it's about
-          how does it feel and how much fun it is. You can only get that sense by
-          trying it, by doing it, by learning and adapting and iterating your own
-          skills of making games.
+        text: Ben John Vechey. PopCap Games kurucularından biriyim. Plants vs. Zombies,
+          Bejeweled ve Peggle gibi oyunlar yapıyoruz. Oyunlar hakkında birçok şey
+          kodun ya da sanatınızın ne kadar mükemmel olduğu değil, nasıl hissettirdiği
+          ve ne kadar eğlenceli olduğudur. Bunu sadece oyun yapmada kendi yeteneklerinizi
+          deneyerek, yaparak, öğrenerek, uyarlayarak ve tekrarlayarak öğrenebilirsiniz.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: Do you have a favorite video game? Well, we're going to take one step
-          towards creating games just like that using Play Lab. Good games have a
-          story and every story has actors. Actors do things like speak, move, and
-          interact with each other. Maybe even score points based on the rules of
-          the game. Today we'll be learning how to do all these things, one by one,
-          with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll
-          build a game from scratch that can be shared and played on a phone.
+        text: Favori bir video oyununuz var mı? Peki Play Lab'ı kullandığımız gibi
+          oyunlar yaratmaya yönelik bir adım atacağız. İyi oyunların bir hikayesi
+          ve her hikayede de oyuncular vardır. Oyuncular konuşmak, hareket etmek ve
+          başkalarıyla etkileşim kurmak gibi şeyler yaparlar. Belki skor puanları
+          bile oyunun kurallarına dayalıdır. Bugün tüm bunları nasıl yapacağımızı
+          Anna, Elsa, Hiro, Baymax ve Rapunzel Disney karakterleri ile teker teker
+          öğreneceğiz. Bir çizikten, telefonda oynanan ve paylaşılan bir oyun inşa
+          edeceğiz.
       5:
         image: notes/infinity_playlab_intro_5.png
-        text: Your screen is split into three main parts. On the left is the gamespace,
-          where your program will run. The instructions for each level are written
-          below. This middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace, and this
-          is where we'll build our program.
+        text: Ekranınız üç ana bölüme ayrılmıştır. Sol taraftaki programımızın çalışacağı
+          oyun boşluğudur. Her seviye için talimatlar aşağıda yazılmıştır.Orta alan
+          ise araç kutusudur ve her bloklar kodun bir parçasıdır. Sağ taraftaki beyaz
+          boşluğa ise çalışma alanı diyoruz ve burası programımızı inşa edeceğimiz
+          yer.
       6:
         image: notes/infinity_playlab_intro_6.png
         text: To start off, you'll need to link your blocks to the orange "when run"

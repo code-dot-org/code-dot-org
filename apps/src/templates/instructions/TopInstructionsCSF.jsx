@@ -13,6 +13,7 @@ import { openDialog } from '../../redux/instructionsDialog';
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
+import ContainedLevel from '../ContainedLevel';
 
 
 var Instructions = require('./Instructions');
@@ -44,6 +45,8 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+const CONTAINED_LEVEL_PADDING = 10;
+const MIN_CONTAINED_LEVEL_HEIGHT = 50;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -60,6 +63,21 @@ const craftStyles = {
   },
   scrollButtonsRtl: {
     right: 38
+  },
+};
+
+const containedLevelStyles = {
+  background: {
+    backgroundColor: color.background_gray,
+    overflowY: 'scroll',
+  },
+  level: {
+    paddingTop: CONTAINED_LEVEL_PADDING,
+    paddingLeft: CONTAINED_LEVEL_PADDING,
+    paddingRight: CONTAINED_LEVEL_PADDING,
+  },
+  heightResizer: {
+    backgroundColor: color.background_gray,
   },
 };
 
@@ -159,6 +177,7 @@ var TopInstructions = React.createClass({
     })).isRequired,
     hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
+    hasContainedLevels: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
@@ -166,7 +185,7 @@ var TopInstructions = React.createClass({
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
     collapsed: React.PropTypes.bool.isRequired,
-    shortInstructions: React.PropTypes.string.isRequired,
+    shortInstructions: React.PropTypes.string,
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
     clearFeedback: React.PropTypes.func.isRequired,
@@ -324,6 +343,9 @@ var TopInstructions = React.createClass({
    * collapsed
    */
   getMinHeight(collapsed=this.props.collapsed) {
+    if (this.refs.containedLevel) {
+      return MIN_CONTAINED_LEVEL_HEIGHT;
+    }
     const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
     const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
         this.refs.scrollButtons.getWrappedInstance().getMinHeight() : 0;
@@ -358,7 +380,15 @@ var TopInstructions = React.createClass({
     const currentHeight = this.props.height;
 
     let newHeight = Math.max(minHeight, currentHeight + delta);
-    newHeight = Math.min(newHeight, this.props.maxHeight);
+    if (this.refs.containedLevel) {
+      const maxContainedLevelHeight =
+        getOuterHeight(this.refs.containedLevel, true) +
+        RESIZER_HEIGHT +
+        CONTAINED_LEVEL_PADDING;
+      newHeight = Math.min(newHeight, maxContainedLevelHeight);
+    } else {
+      newHeight = Math.min(newHeight, this.props.maxHeight);
+    }
 
     this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
@@ -372,7 +402,9 @@ var TopInstructions = React.createClass({
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
     const instructionsContent = this.refs.instructions;
-    const maxNeededHeight = getOuterHeight(instructionsContent, true) +
+    const maxNeededHeight = (this.props.hasContainedLevels ?
+        getOuterHeight(this.refs.containedLevel, true) + CONTAINED_LEVEL_PADDING :
+        getOuterHeight(instructionsContent, true)) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
@@ -412,6 +444,10 @@ var TopInstructions = React.createClass({
    */
   scrollInstructionsToBottom() {
     const instructions = this.refs.instructions;
+    if (!instructions) {
+      // If we have a contained level instead of instructions, do nothing
+      return;
+    }
     const contentContainer = instructions.parentElement;
     if (instructions.children.length > 1) {
       const lastChild = instructions.children[instructions.children.length - 1];
@@ -493,16 +529,41 @@ var TopInstructions = React.createClass({
 
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
+    const topInstructionsHeight = this.props.height - resizerHeight;
 
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
       {
-        height: this.props.height - resizerHeight
+        height: topInstructionsHeight,
       },
       this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
-      this.props.overlayVisible && styles.withOverlay
+      this.props.overlayVisible && styles.withOverlay,
     ];
+
+
+    if (this.props.hasContainedLevels) {
+      return (
+        <div style={mainStyle} className="editor-column">
+          <div
+            style={{
+              ...containedLevelStyles.background,
+              height: topInstructionsHeight,
+            }}
+          >
+            <div style={containedLevelStyles.level} className="contained-level">
+              <ContainedLevel ref="containedLevel" />
+            </div>
+          </div>
+          {!this.props.collapsed && !this.props.isEmbedView &&
+            <HeightResizer
+              position={this.props.height}
+              onResize={this.handleHeightResize}
+              style={containedLevelStyles.heightResizer}
+            />}
+        </div>
+      );
+    }
 
     const markdown = this.shouldDisplayShortInstructions() ?
       this.props.shortInstructions : this.props.longInstructions;
@@ -638,6 +699,7 @@ module.exports = connect(function propsFromStore(state) {
     overlayVisible: state.instructions.overlayVisible,
     ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
     ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+    hasContainedLevels: state.pageConstants.hasContainedLevels,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,

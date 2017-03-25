@@ -40,7 +40,7 @@ class LevelSourceImage < ActiveRecord::Base
     save
   end
 
-  S3_BUCKET = 'cdo-art'
+  S3_BUCKET = 'cdo-art'.freeze
 
   def upload_image(filename, image)
     AWS::S3.upload_to_bucket(S3_BUCKET, filename, image, no_random: true)
@@ -61,8 +61,8 @@ class LevelSourceImage < ActiveRecord::Base
 
     begin
       framed_image = ImageLib.overlay_image(
-        :background_url => Rails.root.join(frame_image_filename),
-        :foreground_blob => image
+        background_url: Rails.root.join(frame_image_filename),
+        foreground_blob: image
       ).to_blob
     rescue MiniMagick::Invalid, MiniMagick::Error # something wrong with the image or runtime error.
       return false

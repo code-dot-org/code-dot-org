@@ -19,18 +19,17 @@ class SurveyResult < ActiveRecord::Base
   include SerializedProperties
 
   ETHNICITIES = {}
-  ETHNICITIES["american_indian"] =  "American Indian or Alaska Native"
-  ETHNICITIES["asian"] = "Asian"
+  ETHNICITIES["white"] = "White"
   ETHNICITIES["black"] = "Black or African American"
   ETHNICITIES["hispanic"] = "Hispanic or Latino"
+  ETHNICITIES["asian"] = "Asian"
   ETHNICITIES["native"] = "Native Hawaiian or Other Pacific Islander"
-  ETHNICITIES["white"] = "White"
-  ETHNICITIES["other"] = "Other"
+  ETHNICITIES["american_indian"] =  "American Indian or Alaska Native"
+  ETHNICITIES["other"] = "Other/Unknown"
   ETHNICITIES.freeze
 
-  DIVERSITY_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
-  DIVERSITY_ATTRS << "survey2016_foodstamps"
-  DIVERSITY_ATTRS.freeze
+  DIVERSITY_ATTRS = ETHNICITIES.keys.map {|key| "survey_ethnicity_#{key}"}
+  DIVERSITY_ATTRS << "survey_foodstamps"
 
   NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment)
   NET_PROMOTER_SCORE_ATTRS.freeze
@@ -39,4 +38,12 @@ class SurveyResult < ActiveRecord::Base
 
   serialized_attrs ALL_ATTRS
   belongs_to :user
+
+  KINDS = [
+    DIVERSITY_2016 = 'Diversity2016'.freeze,
+    DIVERSITY_2017 = 'Diversity2017'.freeze,
+    NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
+    NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze
+  ].freeze
+  validates :kind, inclusion: {in: KINDS}, allow_nil: false
 end

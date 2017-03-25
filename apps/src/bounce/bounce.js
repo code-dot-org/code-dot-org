@@ -24,6 +24,8 @@ var SquareType = tiles.SquareType;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
+import '../util/svgelement-polyfill';
+
 /**
  * Create a namespace for the application.
  */
@@ -121,7 +123,7 @@ var initWallMap = function () {
 /**
  * PIDs of async tasks currently executing.
  */
-var timeoutList = require('../timeoutList');
+import * as timeoutList from '../lib/util/timeoutList';
 
 // Map each possible shape to a sprite.
 // Input: Binary string representing Centre/North/East/South/West squares.
@@ -541,14 +543,12 @@ Bounce.onTick = function () {
       var nowYAboveBottom = Bounce.ballY[i] <= Bounce.ROWS - 1;
 
       if (wasYOK && wasXOK && !nowXOK) {
-        //console.log("calling whenWallCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
       }
 
       if (wasXOK && wasYOK && !nowYOK) {
         if (Bounce.map[0][Math.round(Bounce.ballX[i])] & SquareType.GOAL) {
-          //console.log("calling whenBallInGoal for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
           Bounce.callUserGeneratedCode(Bounce.whenBallInGoal);
           Bounce.ballFlags[i] |= Bounce.BallFlags.IN_GOAL;
@@ -559,7 +559,6 @@ Bounce.onTick = function () {
             Bounce.launchBall(i);
           }
         } else {
-          //console.log("calling whenWallCollided for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
           Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
         }
@@ -571,12 +570,10 @@ Bounce.onTick = function () {
 
       if (distPaddleBall < tiles.PADDLE_BALL_COLLIDE_DISTANCE) {
         // paddle ball collision
-        //console.log("calling whenPaddleCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenPaddleCollided);
       } else if (wasYAboveBottom && !nowYAboveBottom) {
         // ball missed paddle
-        //console.log("calling whenBallMissesPaddle for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenBallMissesPaddle);
         Bounce.ballFlags[i] |= Bounce.BallFlags.MISSED_PADDLE;
@@ -811,7 +808,6 @@ Bounce.moveBallOffscreen = function (i) {
  * @param {int} i Index of ball to be reset.
  */
 Bounce.playSoundAndResetBall = function (i) {
-  //console.log("playSoundAndResetBall called for ball " + i);
   Bounce.resetBall(i, { randomPosition: true } );
   studioApp.playAudio('ballstart');
 };
@@ -831,7 +827,6 @@ Bounce.launchBall = function (i) {
  * @param {options} randomPosition: random start
  */
 Bounce.resetBall = function (i, options) {
-  //console.log("resetBall called for ball " + i);
   var randStart = options.randomPosition ||
                   typeof Bounce.ballStart_[i] === 'undefined';
   Bounce.ballX[i] =  randStart ? Math.floor(Math.random() * Bounce.COLS) :
@@ -1011,6 +1006,7 @@ var displayFeedback = function () {
       response: Bounce.response,
       level: level,
       showingSharing: level.freePlay,
+      feedbackImage: Bounce.feedbackImage,
       twitter: twitterOptions,
       appStrings: {
         reinfFeedbackMsg: bounceMsg.reinfFeedbackMsg(),
@@ -1102,15 +1098,31 @@ Bounce.onPuzzleComplete = function () {
 
   Bounce.waitingForReport = true;
 
-  // Report result to server.
-  studioApp.report({
-                     app: 'bounce',
-                     level: level.id,
-                     result: Bounce.result === ResultType.SUCCESS,
-                     testResult: Bounce.testResults,
-                     program: encodeURIComponent(textBlocks),
-                     onComplete: Bounce.onReportComplete
-                     });
+  const sendReport = function () {
+    // Report result to server.
+    studioApp.report({
+      app: 'bounce',
+      level: level.id,
+      result: Bounce.result === ResultType.SUCCESS,
+      testResult: Bounce.testResults,
+      program: encodeURIComponent(textBlocks),
+      image: Bounce.encodedFeedbackImage,
+      onComplete: Bounce.onReportComplete
+    });
+  };
+
+  if (typeof document.getElementById('svgBounce').toDataURL === 'undefined') {
+    sendReport();
+  } else {
+    document.getElementById('svgBounce').toDataURL("image/jpeg", {
+      callback: function (imageDataUrl) {
+        Bounce.feedbackImage = imageDataUrl;
+        Bounce.encodedFeedbackImage = encodeURIComponent(Bounce.feedbackImage.split(',')[1]);
+
+        sendReport();
+      }
+    });
+  }
 };
 
 /**

@@ -1,0 +1,30 @@
+name 'CSDU6 - sensor projects challenge'
+display_name 'Challenge: Project Iteration'
+markdown <<MARKDOWN
+# Challenge
+
+_Check with your teacher before embarking on an extension challenge._
+
+Choose one (or more!) of the three projects in the lesson to work on expanding. Some extension ideas:
+
+## Light Theremin
+
+* Change the range of tones
+* Swap the direction (more light = lower tones)
+* Play a scale of notes instead of just frequencies
+* Use the buttons to change playing modes
+
+## VU Meter
+
+* Add colors to the meter LEDs
+* Adjust the range so that reasonable quiet shows no LEDs
+* Change the brightness of LEDs as volume changes
+* Use the buttons to change display modes
+
+## "Love" Tester
+
+* Use the color LEDs to display results
+* Add a screen to calibrate the ranges for different boards
+* Incorporate input from other sensors
+* Use the buttons to change input modes
+MARKDOWN

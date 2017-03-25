@@ -47,6 +47,14 @@ module ScriptConstants
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
     ],
+    csf2_draft: [
+      COURSEA_DRAFT_NAME = 'coursea-draft'.freeze,
+      COURSEB_DRAFT_NAME = 'courseb-draft'.freeze,
+      COURSEC_DRAFT_NAME = 'coursec-draft'.freeze,
+      COURSED_DRAFT_NAME = 'coursed-draft'.freeze,
+      COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
+      COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
+    ],
     csd: [
       CSD1_NAME = 'csd1'.freeze,
       CSD2_NAME = 'csd2'.freeze,
@@ -67,6 +75,8 @@ module ScriptConstants
       CSP17_UNIT3_NAME = 'csp3'.freeze,
       CSP17_UNIT4_NAME = 'csp4'.freeze,
       CSP17_UNIT5_NAME = 'csp5'.freeze,
+      CSP17_UNIT6_NAME = 'csp6'.freeze,
+      CSP17_POSTAP_NAME = 'csppostap'.freeze,
     ],
     cspexams: [
       CSP_ASSESSMENT_NAME = 'cspassessment'.freeze,
@@ -88,7 +98,7 @@ module ScriptConstants
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME
     ]
-  }
+  }.freeze
 
   # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
   # This can be used to override that, with lower numbers ordered sooner, and higher numbers
@@ -96,7 +106,7 @@ module ScriptConstants
   CATEGORY_ORDERING_PRIORITY = {
     research_studies: 1,
     csp: 2,
-  }
+  }.freeze
 
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script

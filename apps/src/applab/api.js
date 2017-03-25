@@ -149,6 +149,15 @@ export function setStrokeWidth(width) {
                           {'width': width });
 }
 
+export function rgb(r, g, b, a) {
+  return Applab.executeCmd(null,
+                          'rgb',
+                          {'r' : r,
+                           'g' : g,
+                           'b' : b,
+                           'a' : a});
+}
+
 export function setStrokeColor(color) {
   return Applab.executeCmd(null,
                           'setStrokeColor',
@@ -377,6 +386,14 @@ export function clearInterval(intervalId) {
   return Applab.executeCmd(null,
                            'clearInterval',
                            {'intervalId': intervalId });
+}
+
+export function timedLoop(ms, callback) {
+  return Applab.executeCmd(null, 'timedLoop', {ms, callback});
+}
+
+export function stopTimedLoop(key) {
+  return Applab.executeCmd(null, 'stopTimedLoop', {key});
 }
 
 export function getKeyValue(key, onSuccess, onError) {

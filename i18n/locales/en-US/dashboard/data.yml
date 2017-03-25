@@ -37,6 +37,7 @@ en:
         'NetSim': 'crwdns28006:0crwdne28006:0'
         'Custom': 'crwdns55147:0crwdne55147:0'
         'CustomStudio': 'crwdns55148:0crwdne55148:0'
+        'Gamelab': 'crwdns72040:0crwdne72040:0'
     trophy:
       name:
         'Bronze': 'crwdns2640:0crwdne2640:0'

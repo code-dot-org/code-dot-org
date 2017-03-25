@@ -170,7 +170,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "show_d_pad": "true",
     "edit_code": true,

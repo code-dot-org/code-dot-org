@@ -6,6 +6,16 @@ var envConstants = require('./envConstants');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
+// Certain packages ship in ES6 and need to be transpiled for our purposes -
+// especially for tests, which run on PhantomJS with _zero_ ES6 support.
+var toTranspileWithinNodeModules = [
+  // All of our @cdo-aliased files should get transpiled as they are our own
+  // source files.
+  path.resolve(__dirname, 'node_modules', '@cdo'),
+  // playground-io ships in ES6 as of 0.3.0
+  path.resolve(__dirname, 'node_modules', 'playground-io'),
+];
+
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
@@ -30,12 +40,15 @@ var baseConfig = {
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
       {
-        test:/.png|.jpg|.jpeg|.gif|.svg/,
+        test:/\.(png|jpg|jpeg|gif|svg)$/,
         include: [
           path.resolve(__dirname, 'static'),
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'test'),
+          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
         ],
         loader: "url-loader?limit=1024",
-      }
+      },
     ],
     preLoaders: [
       {
@@ -43,8 +56,7 @@ var baseConfig = {
         include: [
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
-          path.resolve(__dirname, 'node_modules', '@cdo')
-        ],
+        ].concat(toTranspileWithinNodeModules),
         exclude: [
           path.resolve(__dirname, 'src', 'lodash.js'),
         ],
@@ -58,6 +70,14 @@ var baseConfig = {
   },
 };
 
+if (envConstants.HOT) {
+  baseConfig.module.loaders.push({
+    test: /\.jsx?$/,
+    loader: 'react-hot',
+    include: [path.resolve(__dirname, 'src')]
+  });
+}
+
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
   baseConfig.module.preLoaders = [
@@ -65,11 +85,11 @@ if (envConstants.COVERAGE) {
       test: /\.jsx?$/,
       include: [
         path.resolve(__dirname, 'test'),
-        path.resolve(__dirname, 'node_modules', '@cdo'),
-      ],
+      ].concat(toTranspileWithinNodeModules),
       loader: "babel",
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     }, {
       test: /\.jsx?$/,
@@ -77,26 +97,34 @@ if (envConstants.COVERAGE) {
       include: path.resolve(__dirname, 'src'),
       exclude: [
         path.resolve(__dirname, 'src', 'lodash.js'),
+
+        // we need to turn off coverage for this file
+        // because we have tests that actually make assertions
+        // about the contents of the compiled version of this file :(
+        path.resolve(__dirname, 'src', 'flappy', 'levels.js'),
       ],
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     },
   ];
 }
 
+var devtool = process.env.CHEAP ?
+    'cheap-inline-source-map' :
+    'inline-source-map';
+
 var storybookConfig = _.extend({}, baseConfig, {
-  devtool: 'inline-source-map',
+  devtool: devtool,
   externals: {
-    "johnny-five": "var JohnnyFive",
-    "playground-io": "var PlaygroundIO",
-    "chrome-serialport": "var ChromeSerialport",
     "blockly": "this Blockly",
   },
   plugins: [
     new webpack.ProvidePlugin({React: 'react'}),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(false),
+      IN_STORYBOOK: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
       BUILD_STYLEGUIDE: JSON.stringify(true),
@@ -107,7 +135,7 @@ var storybookConfig = _.extend({}, baseConfig, {
 
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
-  devtool: 'inline-source-map',
+  devtool: devtool,
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
@@ -116,12 +144,12 @@ var karmaConfig = _.extend({}, baseConfig, {
       '@cdo/gamelab/locale': path.resolve(__dirname, 'test', 'util', 'gamelab', 'locale-do-not-import.js'),
       '@cdo/weblab/locale': path.resolve(__dirname, 'test', 'util', 'weblab', 'locale-do-not-import.js'),
       'firebase': path.resolve(__dirname, 'test', 'util', 'MockFirebase.js'),
+      // Use mock-firmata to unit test playground-io maker components
+      'firmata': 'mock-firmata/mock-firmata',
+      'chrome-serialport': path.resolve(__dirname, 'test', 'unit', 'lib', 'kits', 'maker', 'StubChromeSerialPort.js'),
     }),
   }),
   externals: {
-    "johnny-five": "var JohnnyFive",
-    "playground-io": "var PlaygroundIO",
-    "chrome-serialport": "var ChromeSerialport",
     "blockly": "this Blockly",
 
     // The below are necessary for enzyme to work.
@@ -129,12 +157,18 @@ var karmaConfig = _.extend({}, baseConfig, {
     "cheerio": "window",
     "react/addons": true,
     "react/lib/ExecutionEnvironment": true,
-    "react/lib/ReactContext": true
+    "react/lib/ReactContext": true,
+
+    // The below are necessary for serialport import to not choke during webpack-ing.
+    fs: '{}',
+    child_process: true,
+    bindings: true
   },
   plugins: [
     new webpack.ProvidePlugin({React: 'react'}),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(true),
+      IN_STORYBOOK: JSON.stringify(false),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
       BUILD_STYLEGUIDE: JSON.stringify(false),
@@ -169,15 +203,16 @@ function create(options) {
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
-      publicPath: '/blockly/js/',
+      publicPath: '/assets/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
-    devtool: !process.env.CI && options.minify ? 'source-map' : 'inline-source-map',
+    devtool: !process.env.CI && options.minify ?  'source-map' : devtool,
     entry: entries,
     externals: externals,
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
+        IN_STORYBOOK: JSON.stringify(false),
         'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
         BUILD_STYLEGUIDE: JSON.stringify(false),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),

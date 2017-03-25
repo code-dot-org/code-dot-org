@@ -37,6 +37,7 @@
         NetSim: Simulador de internet
         Custom: Artista
         CustomStudio: Laboratório
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronze
@@ -749,11 +750,13 @@
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_velocity: Velocity
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -835,11 +838,11 @@
         iceage_intro: Hora do Código com A Era do Gelo - Introdução
         iceage_events: Hora do Código com A Era do Gelo - Eventos
         iceage_repeat: Hora do Código com A Era do Gelo - Instruções de repetição
-        mc_2016_intro: Minecraft Hour of Code - Introduction
-        mc_2016_loops: Minecraft Hour of Code - Loops
-        mc_2016_events: Minecraft Hour of Code - Events
-        mc_2016_spawn: Minecraft Hour of Code - Spawn
-        mc_2016_congrats: Minecraft Hour of Code - Congratulations
+        mc_2016_intro: Hora de Código Minecraft - Introdução
+        mc_2016_loops: Minecraft Hora de Código - Loops (Ciclos)
+        mc_2016_events: Minecraft Hora de Código - Eventos
+        mc_2016_spawn: Minecraft Hora de Código - Spawn (Gerar)
+        mc_2016_congrats: Minecraft Hora de Código - Parabéns
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco

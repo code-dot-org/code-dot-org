@@ -1,0 +1,31 @@
+name 'Overview: onEvent'
+
+markdown <<MARKDOWN
+# Responding to User Input
+
+You will need to dive into Code Mode to make it actually respond to users. App Lab waits to respond to certain **events** that occur in a program. The `onEvent` block specifies which UI element to wait for a event on.
+
+## OnEvent
+
+<br><br>
+
+<div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Switch into Code Mode</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Drag an <code>onEvent</code> block from the toolbox into the workspace.</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+Use the pulldown menu to select the <em>ID</em> of the UI element you want to setup to respond to some event. The IDs of all UI elements added in design mode will be listed here.</p>
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+Use the pulldown menu to select the <em>type</em> of event you want to respond to. (Just use "click" for now).</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+Add code inside the function that you want to run <em>when</em> the user triggers the event.  The function will run once every time the user triggers the specific event.</p>
+
+</div>
+
+![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+MARKDOWN

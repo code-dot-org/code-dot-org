@@ -76,7 +76,7 @@ level 'CSPU5_U3L14 - moving memory challenge4'
 level 'CSPU5_U3L14 - moving memory challenge5'
 level 'CSPU5_U3L14 - moving memory challenge6'
 level 'CSPU5_U3L19 - variable reassignment challenge pt2'
-level 'CSPU5_U3L14 - MC variable reassignment'
+assessment 'CSPU5_U3L14 - MC variable reassignment'
 
 stage 'Building an App: Clicker Game'
 named_level 'Unit 5 Lesson 5 Introduction'
@@ -99,7 +99,7 @@ level 'CSPU5_U3L15 - Add reset button to UpDown app'
 level 'CSPU5_U3L15 - Debugging Simple If-statements =v=='
 level 'CSPU5_U3L15 - Debug forget to update var on reset in UpDown app'
 level 'CSPU5_U3L15 - Debug if never triggers in UpDown app'
-level 'CSPU5_U3L15 full clicker app'
+named_level 'CSPU5_U3L15 full clicker app'
 
 stage 'Unit 5 Assessment 1', lockable: true
 assessment 'CSP Unit 5 Cumulative Assessment 1 MC'
@@ -333,3 +333,6 @@ assessment 'CSP Unit 5 Cumulative Assessment 4 MC'
 stage 'Practice PT: Create'
 named_level 'Unit 5 Lesson 18 Introduction'
 named_level 'Practice Create Performance Task'
+
+stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true
+assessment 'CSP Cumulative Assess A'

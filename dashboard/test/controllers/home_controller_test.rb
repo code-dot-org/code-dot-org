@@ -23,28 +23,35 @@ class HomeControllerTest < ActionController::TestCase
 
     request.host = "studio.code.org"
 
-    get :set_locale, :return_to => "http://blahblah", :locale => "es-ES"
+    get :set_locale, params: {return_to: "/blahblah", locale: "es-ES"}
 
     assert_equal "es-ES", cookies[:language_]
-
     assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-15], @response.headers["Set-Cookie"]
-
-    assert_redirected_to 'http://blahblah'
+    assert_redirected_to 'http://studio.code.org/blahblah'
   end
 
-  test "handle nonsense in return_to" do
+  test "handle nonsense in return_to by returning to home" do
     sign_in User.new # devise uses an empty user instead of nil? Hm
 
     request.host = "studio.code.org"
 
-    get :set_locale, :return_to => ["blah"], :locale => "es-ES"
+    get :set_locale, params: {return_to: ["blah"], locale: "es-ES"}
 
-    assert_redirected_to '["blah"]'
+    assert_redirected_to 'http://studio.code.org/'
+  end
+
+  test "return_to should not redirect off-site" do
+    request.host = "studio.code.org"
+    get :set_locale, params: {
+      return_to: "http://blah.com/blerg",
+      locale: "es-ES"
+    }
+    assert_redirected_to 'http://studio.code.org/blerg'
   end
 
   test "if return_to in set_locale is nil redirects to homepage" do
     request.host = "studio.code.org"
-    get :set_locale, :return_to => nil, :locale => "es-ES"
+    get :set_locale, params: {return_to: nil, locale: "es-ES"}
     assert_redirected_to ''
   end
 
@@ -66,6 +73,7 @@ class HomeControllerTest < ActionController::TestCase
     @user = create(:user)
     5.times do
       create :gallery_activity,
+        level_source: create(:level_source, level_source_image: create(:level_source_image)),
         user: @user,
         autosaved: true
     end
@@ -192,7 +200,7 @@ class HomeControllerTest < ActionController::TestCase
     user = create(:user)
     user.update_attribute(:birthday, nil) # bypasses validations
     user = user.reload
-    assert !user.age, "user should not have age, but value was #{user.age}"
+    refute user.age, "user should not have age, but value was #{user.age}"
 
     sign_in user
     get :index
@@ -217,14 +225,13 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#age-modal', false
   end
 
-# this exception is actually annoying to handle because it never gets
-# to ActionController (so we can't use the rescue in
-# ApplicationController)
-#  test "bad http methods are rejected" do
-#    process :index, 'APOST' # use an APOST instead of get/post/etc
-#
-#    assert_response 400
-#  end
+  # This exception is actually annoying to handle because it never gets to
+  # ActionController (so we can't use the rescue in ApplicationController).
+  # test "bad http methods are rejected" do
+  #   process :index, 'APOST' # use an APOST instead of get/post/etc
+  #
+  #   assert_response 400
+  # end
 
   test 'health_check sets no cookies' do
     get :health_check

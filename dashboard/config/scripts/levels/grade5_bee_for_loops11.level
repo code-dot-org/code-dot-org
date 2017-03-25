@@ -31,7 +31,7 @@
     "disable_examples": "false",
     "step_speed": "1",
     "markdown_instructions": "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. \r\n\r\nRemember: You may have to run through solutions multiple times before you figure out all of the steps.\r\n",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can you find a pattern between the number of steps you need to take and the number of nectars to gather?\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_10a_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You'll need to have 2 repeats, one will use a math block.\",\r\n  \"hint_id\": \"NEW_Course_4_Bee_For_Loops_10a_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you find a pattern between the number of steps you need to take and the number of nectars to gather?\",\"hint_id\":\"NEW_Course_4_Bee_For_Loops_10a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2daba0767cda0014c6bb04ced801e864/grade5_bee_for_loops11.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You'll need to have 2 repeats, one will use a math block.\",\"hint_id\":\"NEW_Course_4_Bee_For_Loops_10a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/08b57dcd84e1657648c96bd7457c1f40/grade5_bee_for_loops11.mp3\"}]",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",

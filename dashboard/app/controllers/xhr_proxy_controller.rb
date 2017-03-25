@@ -14,12 +14,14 @@ require 'set'
 class XhrProxyController < ApplicationController
   include ProxyHelper
 
-  ALLOWED_CONTENT_TYPES = Set.new(%w(
-    application/json
-    text/javascript
-    text/json
-    text/plain
-  ))
+  ALLOWED_CONTENT_TYPES = Set.new(
+    %w(
+      application/json
+      text/javascript
+      text/json
+      text/plain
+    )
+  ).freeze
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
@@ -41,14 +43,15 @@ class XhrProxyController < ApplicationController
     isenseproject.org
     lakeside-cs.org
     query.yahooapis.com
+    rejseplanen.dk
     noaa.gov
     rhcloud.com
     swapi.co
     wikipedia.org
-  )
+  ).freeze
 
   # How long the content is allowed to be cached
-  EXPIRY_TIME = 1.minute
+  EXPIRY_TIME = 1.minute.freeze
 
   # Return the proxied api at the URL specified in the 'u' parameter. The 'c' parameter
   # is an unforgeable token which identifies the app lab app which is generating the request,
@@ -65,9 +68,9 @@ class XhrProxyController < ApplicationController
     end
 
     event_details = {
-        channel_id: channel_id,
-        owner_storage_id: owner_storage_id,
-        url: url
+      channel_id: channel_id,
+      owner_storage_id: owner_storage_id,
+      url: url
     }
     NewRelic::Agent.record_custom_event("XhrProxyControllerRequest", event_details) if CDO.newrelic_logging
     Rails.logger.info "XhrProxyControllerRequest #{event_details}"
@@ -77,6 +80,7 @@ class XhrProxyController < ApplicationController
       allowed_content_types: ALLOWED_CONTENT_TYPES,
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
-      infer_content_type: false)
+      infer_content_type: false
+    )
   end
 end

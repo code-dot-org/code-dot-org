@@ -61,7 +61,7 @@ def process_image(path, ext_names, language=nil, site=nil)
   retina_in = retina_out = basename[-3..-1] == '_2x'
 
   path = nil
-  if %w(hourofcode.com translate.hourofcode.com).include?(site)
+  if site == 'hourofcode.com'
     path = resolve_image File.join(language, dirname, basename)
   end
   path ||= resolve_image File.join(dirname, basename)

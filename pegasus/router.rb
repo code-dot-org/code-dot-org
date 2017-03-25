@@ -72,7 +72,7 @@ class Documents < Sinatra::Base
   def self.set_max_age(type, default)
     default = 60 if rack_env? :staging
     default = 0 if rack_env? :development
-    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", default) }
+    set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
   ONE_HOUR = 3600
@@ -101,6 +101,8 @@ class Documents < Sinatra::Base
   before do
     $log.debug request.url
 
+    Honeybadger.context({url: request.url, locale: request.locale})
+
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
 
@@ -116,7 +118,7 @@ class Documents < Sinatra::Base
 
     @dirs = []
 
-    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+    if request.site == 'hourofcode.com'
       @dirs << [File.join(request.site, 'i18n')]
     end
 
@@ -181,7 +183,7 @@ class Documents < Sinatra::Base
   end
 
   # rubocop:disable Lint/Eval
-  Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path), nil, path, 1)}
+  Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
   # rubocop:enable Lint/Eval
 
   # Manipulated images
@@ -239,7 +241,7 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document(path).tap{dont_cache}
+    document(path).tap {dont_cache}
   end
 
   helpers(Dashboard) do

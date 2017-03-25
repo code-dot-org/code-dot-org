@@ -37,7 +37,7 @@ class DynamoTable
     ).item
 
     # only return the parts we care about
-    @metadata_item.select{|k, _| k == "column_list"} if @metadata_item
+    @metadata_item.select {|k, _| k == "column_list"} if @metadata_item
   end
 
   def set_column_list_metadata(column_list)
@@ -85,9 +85,11 @@ class DynamoTable
 
       # batch_write_items can only handle 25 items at a time, so split into groups of 25
       (0..ids.length).step(MAX_BATCH_SIZE).each do |start_index|
-        db.batch_write_item(request_items: {
-          CDO.dynamo_tables_table => items.slice(start_index, MAX_BATCH_SIZE)
-        })
+        db.batch_write_item(
+          request_items: {
+            CDO.dynamo_tables_table => items.slice(start_index, MAX_BATCH_SIZE)
+          }
+        )
       end
     end
     db.delete_item(
@@ -293,7 +295,7 @@ class DynamoTable
   end
 
   def to_a
-    return items.map { |i| value_from_row(i) }
+    return items.map {|i| value_from_row(i)}
   end
 
   def to_csv

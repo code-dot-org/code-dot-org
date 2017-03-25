@@ -1,7 +1,7 @@
 require "csv"
 require "naturally"
 
-EMPTY_XML = '<xml></xml>'
+EMPTY_XML = '<xml></xml>'.freeze
 
 class LevelsController < ApplicationController
   include LevelsHelper
@@ -79,10 +79,12 @@ class LevelsController < ApplicationController
     @callback = level_update_blocks_path @level, type
 
     # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
-    level_view_options(
-      @level.id,
-      success_condition: 'function () { return true; }'
-    ) if @level.is_a? Studio
+    if @level.is_a? Studio
+      level_view_options(
+        @level.id,
+        success_condition: 'function () { return true; }'
+      )
+    end
 
     show
     render :show
@@ -109,7 +111,8 @@ class LevelsController < ApplicationController
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
       render json: @level.errors, status: :unprocessable_entity
     elsif @level.update(level_params)
-      render json: { redirect: level_url(@level, show_callouts: 1) }
+      redirect = params["redirect"] || level_url(@level, show_callouts: 1)
+      render json: { redirect: redirect }
     else
       render json: @level.errors, status: :unprocessable_entity
     end
@@ -126,7 +129,7 @@ class LevelsController < ApplicationController
     if type_class <= Grid
       default_tile = type_class == Karel ? {"tileType": 0} : 0
       start_tile = type_class == Karel ? {"tileType": 2} : 2
-      params[:level][:maze_data] = Array.new(8){Array.new(8){default_tile}}
+      params[:level][:maze_data] = Array.new(8) {Array.new(8) {default_tile}}
       params[:level][:maze_data][0][0] = start_tile
     end
     if type_class <= Studio
@@ -183,6 +186,8 @@ class LevelsController < ApplicationController
         @game = Game.craft
       elsif @type_class == Weblab
         @game = Game.weblab
+      elsif @type_class == CurriculumReference
+        @game = Game.curriculum_reference
       end
       @level = @type_class.new
       render :edit
@@ -215,11 +220,11 @@ class LevelsController < ApplicationController
     level = Level.find(params[:level_id])
     block_type = params[:block_type]
     options = {
-        app: level.game.app,
-        readonly: true,
-        locale: js_locale,
-        baseUrl: Blockly.base_url,
-        blocks: level.blocks_to_embed(level.properties[block_type])
+      app: level.game.app,
+      readonly: true,
+      locale: js_locale,
+      baseUrl: Blockly.base_url,
+      blocks: level.blocks_to_embed(level.properties[block_type])
     }
     render :embed_blocks, layout: false, locals: options
   end

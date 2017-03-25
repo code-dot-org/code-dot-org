@@ -23,6 +23,8 @@
 #  index_levels_on_name     (name)
 #
 
+require 'cdo/shared_constants'
+
 class Applab < Blockly
   before_save :update_json_fields
 
@@ -42,6 +44,7 @@ class Applab < Blockly
     data_properties
     hide_view_data_button
     show_debug_watch
+    expand_debugger
     watchers_prepopulated
     fail_on_lint_errors
     debugger_disabled
@@ -60,15 +63,17 @@ class Applab < Blockly
   end
 
   def self.create_from_level_builder(params, level_params)
-    create!(level_params.merge(
-      user: params[:user],
-      game: Game.applab,
-      level_num: 'custom',
-      properties: {
-        code_functions: JSON.parse(palette),
-        edit_code: true
-      }
-    ))
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.applab,
+        level_num: 'custom',
+        properties: {
+          code_functions: JSON.parse(palette),
+          edit_code: true
+        }
+      )
+    )
   end
 
   def xml_blocks
@@ -105,158 +110,6 @@ class Applab < Blockly
   end
 
   def self.palette
-    <<-JSON.strip_heredoc.chomp
-      {
-        // UI Controls
-        "onEvent": null,
-        "button": null,
-        "textInput": null,
-        "textLabel": null,
-        "dropdown": null,
-        "getText": null,
-        "setText": null,
-        "getNumber": null,
-        "setNumber": null,
-        "checkbox": null,
-        "radioButton": null,
-        "getChecked": null,
-        "setChecked": null,
-        "image": null,
-        "getImageURL": null,
-        "setImageURL": null,
-        "playSound": null,
-        "stopSound": null,
-        "showElement": null,
-        "hideElement": null,
-        "deleteElement": null,
-        "setPosition": null,
-        "setSize": null,
-        "setProperty": null,
-        "getProperty": null,
-        "write": null,
-        "getXPosition": null,
-        "getYPosition": null,
-        "setScreen": null,
-
-        // Canvas
-        "createCanvas": null,
-        "setActiveCanvas": null,
-        "line": null,
-        "circle": null,
-        "rect": null,
-        "setStrokeWidth": null,
-        "setStrokeColor": null,
-        "setFillColor": null,
-        "drawImageURL": null,
-        "getImageData": null,
-        "putImageData": null,
-        "clearCanvas": null,
-        "getRed": null,
-        "getGreen": null,
-        "getBlue": null,
-        "getAlpha": null,
-        "setRed": null,
-        "setGreen": null,
-        "setBlue": null,
-        "setAlpha": null,
-        "setRGB": null,
-
-        // Data
-        "startWebRequest": null,
-        "setKeyValue": null,
-        "getKeyValue": null,
-        "createRecord": null,
-        "readRecords": null,
-        "updateRecord": null,
-        "deleteRecord": null,
-        "onRecordEvent": null,
-        "getUserId": null,
-        "drawChart": null,
-        "drawChartFromRecords": null,
-
-        // Turtle
-        "moveForward": null,
-        "moveBackward": null,
-        "move": null,
-        "moveTo": null,
-        "dot": null,
-        "turnRight": null,
-        "turnLeft": null,
-        "turnTo": null,
-        "arcRight": null,
-        "arcLeft": null,
-        "getX": null,
-        "getY": null,
-        "getDirection": null,
-        "penUp": null,
-        "penDown": null,
-        "penWidth": null,
-        "penColor": null,
-        "penRGB": null,
-        "show": null,
-        "hide": null,
-        "speed": null,
-
-        // Control
-        "forLoop_i_0_4": null,
-        "ifBlock": null,
-        "ifElseBlock": null,
-        "whileBlock": null,
-        "setTimeout": null,
-        "clearTimeout": null,
-        "setInterval": null,
-        "clearInterval": null,
-        "getTime": null,
-
-        // Math
-        "addOperator": null,
-        "subtractOperator": null,
-        "multiplyOperator": null,
-        "divideOperator": null,
-        "equalityOperator": null,
-        "inequalityOperator": null,
-        "greaterThanOperator": null,
-        "greaterThanOrEqualOperator": null,
-        "lessThanOperator": null,
-        "lessThanOrEqualOperator": null,
-        "andOperator": null,
-        "orOperator": null,
-        "notOperator": null,
-        "randomNumber_min_max": null,
-        "mathRound": null,
-        "mathAbs": null,
-        "mathMax": null,
-        "mathMin": null,
-        "mathRandom": null,
-
-        // Variables
-        "declareAssign_x": null,
-        "declareNoAssign_x": null,
-        "assign_x": null,
-        "declareAssign_x_prompt": null,
-        "declareAssign_x_promptNum": null,
-        "console.log": null,
-        "declareAssign_str_hello_world": null,
-        "substring": null,
-        "indexOf": null,
-        "includes": null,
-        "length": null,
-        "toUpperCase": null,
-        "toLowerCase": null,
-        "declareAssign_list_abd": null,
-        "listLength": null,
-        "insertItem": null,
-        "appendItem": null,
-        "removeItem": null,
-
-        // Functions
-        "functionParams_none": null,
-        "functionParams_n": null,
-        "callMyFunction": null,
-        "callMyFunction_n": null,
-        "return": null,
-        "comment": null
-      }
-    JSON
+    SharedConstants::APPLAB_BLOCKS
   end
 end

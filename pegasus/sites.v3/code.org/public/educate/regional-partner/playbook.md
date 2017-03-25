@@ -40,3 +40,5 @@ title: Regional Partner Virtual Playbook
 <%= view :educate_box, item: {title_s: 'Workshop Dashboard', description_t: "Access to the Dashboard and guidance on setting up workshops, day of event troubleshooting and more", url_s: CDO.code_org_url("/educate/regional-partner/playbook/workshop-dashboard"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Workshop Planning', description_t: "Workshop Planning 101: Everything you need to know all wrapped up and tied with a bow", url_s: CDO.code_org_url('/educate/regional-partner/playbook/workshop-planning'), button_s: "Learn more"} %>
+
+<%= view :educate_box, item: {title_s: 'Advocacy', description_t: "Links to resources and websites to help you advocate for K-12 computer science policy in your state", url_s: CDO.code_org_url('/educate/regional-partner/playbook/advocacy'), button_s: "Learn more"} %>

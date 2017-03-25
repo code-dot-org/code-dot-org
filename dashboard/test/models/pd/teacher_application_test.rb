@@ -25,7 +25,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     refute teacher_application.valid?
     # Three fields are validated outside the list of validated fields
     assert_equal Pd::TeacherApplication::REQUIRED_APPLICATION_FIELDS.count, teacher_application.errors.count
-    assert teacher_application.errors.full_messages.all?{|m| m.include? 'Application must contain'}
+    assert teacher_application.errors.full_messages.all? {|m| m.include? 'Application must contain'}
 
     teacher_application.application = build(:pd_teacher_application_hash).to_json
     assert teacher_application.valid?
@@ -163,5 +163,56 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     teacher_application.update_application_hash 'selectedCourse' => 'csp'
     expected_url = "https://docs.google.com/forms/d/e/1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ/viewform?#{expected_params}"
     assert_equal expected_url, teacher_application.approval_form_url
+  end
+
+  test 'regional partner no course' do
+    regional_partner = create :regional_partner
+    school_district = create :school_district
+    create :regional_partners_school_district, school_district: school_district, regional_partner: regional_partner
+
+    # noise: extra partners that should not match below because they're not first
+    3.times do
+      create :regional_partners_school_district, school_district: school_district, regional_partner: create(:regional_partner)
+    end
+
+    teacher_application = build :pd_teacher_application, application: {'school-district': school_district.id}.to_json
+
+    assert_equal regional_partner, teacher_application.regional_partner
+    assert_equal regional_partner.name, teacher_application.regional_partner_name
+  end
+
+  test 'regional partner with course' do
+    regional_partner = create :regional_partner
+    school_district = create :school_district
+
+    # noise: extra partners with no course that should not match below
+    3.times do
+      create :regional_partners_school_district, school_district: school_district, regional_partner: regional_partner
+    end
+
+    create :regional_partners_school_district, school_district: school_district, regional_partner: regional_partner, course: 'csd'
+
+    teacher_application = build :pd_teacher_application, application: {'school-district': school_district.id}.to_json
+
+    assert_equal regional_partner, teacher_application.regional_partner
+    assert_equal regional_partner.name, teacher_application.regional_partner_name
+  end
+
+  test 'regional partner override' do
+    teacher_application = build :pd_teacher_application
+    old_partner_name = 'old partner'
+    new_partner_name = 'new partner'
+
+    teacher_application.expects(:regional_partner).at_least_once.returns(stub(name: old_partner_name))
+    assert_equal old_partner_name, teacher_application.regional_partner_name
+
+    # Setting the override to the existing district-matched partner name is a no-op
+    teacher_application.regional_partner_override = old_partner_name
+    assert_nil teacher_application.regional_partner_override
+
+    teacher_application.regional_partner_override = new_partner_name
+    teacher_application.unstub(:regional_partner)
+    teacher_application.expects(:regional_partner).never
+    assert_equal new_partner_name, teacher_application.regional_partner_name
   end
 end

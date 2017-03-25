@@ -40,6 +40,12 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def get_root_object(filename, body = '', headers = {})
+    # Intended for calling files exposed at the root from codeprojects.org
+    get "/#{@channel_id}/#{filename}", body, headers
+    last_response.body
+  end
+
   def put_object(filename, body = '', headers = {})
     put "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body
@@ -146,16 +152,16 @@ class FilesApiTestHelper
     credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
       Aws::Errors::MissingCredentialsError: if you are running these tests locally,
       follow these instructions to configure your AWS credentials and try again:
-      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
+      http://docs.aws.amazon.com/sdkforruby/api/#Configuration
     TEXT
   rescue Aws::S3::Errors::InvalidAccessKeyId
     credentials_missing = true
     credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
-      Aws::S3::Errors::InvalidAccessKeyId: Make sure your AWS credentials are set in your locals.yml.
+      Aws::S3::Errors::InvalidAccessKeyId: Make sure your AWS credentials are set.
       If you don't have AWS credentials, follow these instructions to configure your AWS credentials and try again:
-      http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/set-up-ec2-cli-linux.html
+      http://docs.aws.amazon.com/sdkforruby/api/#Configuration
     TEXT
   ensure
-    flunk credentials_msg if credentials_missing
+    raise credentials_msg if credentials_missing
   end
 end

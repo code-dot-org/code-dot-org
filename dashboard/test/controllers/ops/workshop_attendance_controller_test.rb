@@ -6,12 +6,12 @@ module Ops
 
     setup do
       @admin = create :admin
-      sign_in @admin
 
       @attendance = create(:attendance)
       @cohort = @attendance.segment.workshop.cohorts.first
       @cohort_district = create :cohorts_district, cohort: @cohort
       @cohort = @cohort.reload
+      sign_in @admin
     end
 
     test 'District Contact can view attendance for all workshops in a cohort' do
@@ -96,7 +96,7 @@ module Ops
 
       teacher2_attendance = WorkshopAttendance.find_by_teacher_id(teacher2.id)
       assert_equal 'present', teacher2_attendance.status
-      assert_equal nil, teacher2_attendance.notes
+      assert_nil teacher2_attendance.notes
     end
 
     # Test index + CRUD controller actions

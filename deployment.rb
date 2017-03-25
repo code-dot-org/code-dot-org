@@ -10,6 +10,7 @@ require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
+require 'cdo/aws/cdo_google_credentials'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -48,6 +49,7 @@ def load_configuration
     'build_code_studio'           => false,
     'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
+    'dashboard_assets_dir'        => "#{root_dir}/dashboard/public/assets",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
@@ -62,7 +64,7 @@ def load_configuration
     'reporting_db_reader'         => 'mysql://root@localhost/',
     'reporting_db_writer'         => 'mysql://root@localhost/',
     'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
-    'hip_chat_log_room'           => rack_env.to_s,
+    'slack_log_room'              => rack_env.to_s,
     'hip_chat_logging'            => false,
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
@@ -81,6 +83,7 @@ def load_configuration
     'pegasus_unicorn_name'        => 'pegasus',
     'pegasus_workers'             => 8,
     'poste_host'                  => 'localhost.code.org:3000',
+    'pegasus_skip_asset_map'      => rack_env == :development,
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
@@ -88,6 +91,7 @@ def load_configuration
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
+    'section_projects'            => [:staging, :adhoc, :development].include?(rack_env),
     'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
     'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
@@ -130,6 +134,12 @@ def load_configuration
     #raise "RACK_ENV ('#{ENV['RACK_ENV']}') does not match configuration ('#{rack_env}')" unless ENV['RACK_ENV'] == rack_env.to_s
 
     config['bundler_use_sudo'] = config['ruby_installer'] == 'system'
+
+    # test environment should use precompiled, minified, digested assets like production,
+    # unless it's being used for unit tests. This logic should be kept in sync with
+    # the logic for setting config.assets.* under dashboard/config/.
+    ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
+    config['pretty_js'] = [:development, :staging].include?(rack_env) || (rack_env == :test && ci_test)
 
     config.merge! global_config
     config.merge! local_config
@@ -238,7 +248,7 @@ class CDOImpl < OpenStruct
   end
 
   def hostnames_by_env(env)
-    hosts_by_env(env).map{|i| i['name']}
+    hosts_by_env(env).map {|i| i['name']}
   end
 
   def rack_env?(env)
@@ -276,7 +286,7 @@ class CDOImpl < OpenStruct
   end
 
   # Simple backtrace filter
-  FILTER_GEMS = %w(rake)
+  FILTER_GEMS = %w(rake).freeze
 
   def backtrace(exception)
     filter_backtrace exception.backtrace
@@ -284,13 +294,14 @@ class CDOImpl < OpenStruct
 
   def filter_backtrace(backtrace)
     FILTER_GEMS.map do |gem|
-      backtrace.reject!{|b| b =~ /gems\/#{gem}/}
+      backtrace.reject! {|b| b =~ /gems\/#{gem}/}
     end
     backtrace.each do |b|
       b.gsub!(CDO.dir, '[CDO]')
       Gem.path.each do |gem|
         b.gsub!(gem, '[GEM]')
       end
+      b.gsub! Bundler.system_bindir, '[BIN]'
     end
     backtrace.join("\n")
   end
@@ -318,11 +329,13 @@ class CDOImpl < OpenStruct
   def app_servers
     return super unless CDO.chef_managed
     require 'aws-sdk'
-    servers = Aws::EC2::Client.new.describe_instances(filters: [
+    servers = Aws::EC2::Client.new.describe_instances(
+      filters: [
         { name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name]},
         { name: 'tag:aws:cloudformation:logical-id', values: ['Frontends'] },
         { name: 'instance-state-name', values: ['running']}
-    ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
+      ]
+    ).reservations.map(&:instances).flatten.map {|i| ["fe-#{i.instance_id}", i.private_dns_name]}.to_h
     servers.merge(super)
   end
 end
@@ -354,6 +367,10 @@ end
 
 def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
+end
+
+def tools_dir(*dirs)
+  deploy_dir('tools', *dirs)
 end
 
 def cookbooks_dir(*dirs)

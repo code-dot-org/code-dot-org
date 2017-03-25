@@ -289,12 +289,14 @@ en:
             Calc: 'crwdns65990:0crwdne65990:0'
             Eval: 'crwdns65991:0crwdne65991:0'
             Studio: 'crwdns65992:0crwdne65992:0'
+          description_audience: 'crwdns72028:0crwdne72028:0'
         flappy:
           title: 'crwdns35348:0crwdne35348:0'
           description: 'crwdns35349:0crwdne35349:0'
           description_short: 'crwdns43234:0crwdne43234:0'
           stage:
             Flappy Code: 'crwdns65993:0crwdne65993:0'
+          description_audience: 'crwdns72029:0crwdne72029:0'
         jigsaw:
           title: 'crwdns35351:0crwdne35351:0'
           description: 'crwdns35352:0crwdne35352:0'
@@ -1474,6 +1476,8 @@ en:
             'Building an App: Clicker Game': 'crwdns71883:0crwdne71883:0'
             'Building an App: Image Scroller': 'crwdns71884:0crwdne71884:0'
             'Building an App: Canvas Painter': 'crwdns71885:0crwdne71885:0'
+            Unit 5 Assessment 5 - Practice AP questions: 'crwdns72145:0crwdne72145:0'
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: 'crwdns72146:0crwdne72146:0'
           description_audience: 'crwdns68412:0crwdne68412:0'
         csp6:
           title: 'crwdns56424:0crwdne56424:0'
@@ -1484,6 +1488,13 @@ en:
             Create PT Prep: 'crwdns66962:0crwdne66962:0'
             Explore PT: 'crwdns66963:0crwdne66963:0'
             Explore PT Prep: 'crwdns66964:0crwdne66964:0'
+            Create PT Prep - Reviewing the Task: 'crwdns72147:0crwdne72147:0'
+            Create PT Prep - Making a Plan: 'crwdns72148:0crwdne72148:0'
+            Create PT - Complete the Task: 'crwdns72149:0crwdne72149:0'
+            Explore PT Prep - Reviewing the Task: 'crwdns72150:0crwdne72150:0'
+            Explore PT - Making a Plan: 'crwdns72151:0crwdne72151:0'
+            Explore PT - Complete the Task: 'crwdns72152:0crwdne72152:0'
+            Tech Setup - Your AP Digital Portfolio and Other Tools: 'crwdns72153:0crwdne72153:0'
           description_audience: 'crwdns68413:0crwdne68413:0'
         CSDU3-Draft:
           title: "crwdns56431:0crwdne56431:0"
@@ -2581,3 +2592,14 @@ en:
           description_audience: 'crwdns71950:0crwdne71950:0'
           description_short: 'crwdns71951:0crwdne71951:0'
           description: 'crwdns71952:0crwdne71952:0'
+        sciencepd5:
+          stage:
+            Welcome!: 'crwdns72154:0crwdne72154:0'
+            Earth Science Challenges: 'crwdns72155:0crwdne72155:0'
+            Life Science Challenges: 'crwdns72156:0crwdne72156:0'
+            Physical Science Challenges: 'crwdns72157:0crwdne72157:0'
+            Wrap-Up: 'crwdns72158:0crwdne72158:0'
+          title: 'crwdns72159:0crwdne72159:0'
+          description_audience: 'crwdns72160:0crwdne72160:0'
+          description_short: 'crwdns72161:0crwdne72161:0'
+          description: 'crwdns72162:0crwdne72162:0'

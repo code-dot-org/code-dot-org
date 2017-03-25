@@ -47,14 +47,14 @@ class Video < ActiveRecord::Base
 
   def youtube_url(args={})
     defaults = {
-        v: youtube_code,
-        modestbranding: 1,
-        rel: 0,
-        showinfo: 1,
-        autoplay: 1,
-        wmode: 'transparent',
-        iv_load_policy: 3,
-        enablejsapi: 1
+      v: youtube_code,
+      modestbranding: 1,
+      rel: 0,
+      showinfo: 1,
+      autoplay: 1,
+      wmode: 'transparent',
+      iv_load_policy: 3,
+      enablejsapi: 1
     }
 
     language = I18n.locale.to_s.downcase.split('-').first
@@ -97,7 +97,7 @@ class Video < ActiveRecord::Base
   def summarize(autoplay = true)
     # Note: similar video info is also set in javascript at levels/_blockly.html.haml
     {
-        src: youtube_url(autoplay: autoplay ? 1 : 0),
+      src: youtube_url(autoplay: autoplay ? 1 : 0),
         key: key,
         name: localized_name,
         download: download,

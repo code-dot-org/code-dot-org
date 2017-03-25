@@ -41,7 +41,7 @@ ru:
             'Bee: Loops': 'Пчела: Циклы'
             Binary Bracelets: Двоичные браслеты
             Conditionals: Условные операторы
-            Flappy: Лётная
+            Flappy: Порхающий код
             Getting Loopy: Зацикливание
             Graph Paper Programming: Программирование на бумаге в клеточку
             'Maze: Loops': 'Лабиринт: Циклы'
@@ -53,7 +53,7 @@ ru:
             Your Digital Footprint: Твой цифровой след
         course3:
           title: Курс 3
-          description: Курс 3 разработан для учеников, освоивших Курс 2. Ученики будут глубже вникать в темы, с которыми познакомились в предыдущем курсе, осваивая решение более сложных задач. К концу курса ученики создают интерактивные истории и игры, которыми они могут поделиться с другими. Рекомендовано для 4-5 классов.
+          description: Курс 3 разработан для учеников, прошедших Курс 2. Ученики будут решать более сложные задачи и глубже изучать темы предыдущего курса. В конце занятий, ученики могут создать интерактивные истории и игры, и поделиться ими с другими. Рекомендовано для 4-5 классов.
           description_short: Курс 3 является продолжением курса 2.
           description_audience: Возраст 8-18 лет
           stage:
@@ -132,8 +132,8 @@ ru:
             'Unplugged: Tangrams': 'Урок без компьютера: Танграмы'
         Course4pre:
           title: Знания, необходимые для курса 4
-          description: Краткое обобщение понятий для учеников, которые не проходили курсы 2 и 3.
-          description_short: Краткое обобщение понятий для учеников, которые не проходили курсы 2 и 3.
+          description: Краткое введение для учеников, которые не проходили курсы 2 и 3.
+          description_short: Краткое введение для учеников, которые не проходили курсы 2 и 3.
           stage:
             'Artist: Functions': 'Художник: Функции'
             'Artist: Loops': 'Художник: Циклы'
@@ -289,12 +289,14 @@ ru:
             Calc: Калькулятор
             Eval: Вычисление
             Studio: Студия
+          description_audience: ''
         flappy:
           title: Порхающий код
           description: Хочешь написать свою игру меньше чем за 10 минут? Пройди наш урок «Порхающий код»!
           description_short: Напиши собственную игру Flappy меньше чем за 10 минут!
           stage:
             Flappy Code: Порхающий код
+          description_audience: ''
         jigsaw:
           title: Головоломки
           description: Попробуйте наш учебник по пазл
@@ -321,14 +323,14 @@ ru:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Задачи
+            Puzzles: Головоломки
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Задачи
+            Puzzles: Головоломки
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -676,7 +678,7 @@ ru:
             Bounce: Прыжок
             CSinA: CSinA
             Farmer: Farmer
-            Flappy: Лётная
+            Flappy: Порхающий код
             Free Response: Free Response
             Gamelab: Gamelab
             Jigsaw: Головоломки
@@ -703,6 +705,7 @@ ru:
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
+            Standalone video: Standalone video
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -1165,11 +1168,11 @@ ru:
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
-          title: Лаборатория игр Gumball
-          description: Создай сказку или игру с лабораторией игр Gumball!
-          description_short: Создай сказку или игру с лабораторией игр Gumball!
+          title: Лаборатория игр Гамбола
+          description: Создай сказку или игру с лабораторией игр Гамбола!
+          description_short: Создай сказку или игру с лабораторией игр Гамбола!
           stage:
-            Gumball Play Lab: Лаборатория игр Gumball
+            Gumball Play Lab: Лаборатория игр Гамбола
         starwars:
           title: 'Звёздные войны: Создайте галактику, используя код'
           description: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
@@ -1484,9 +1487,11 @@ ru:
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1494,6 +1499,13 @@ ru:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2059,7 +2071,7 @@ ru:
             At The Dog Park: At The Dog Park
             Caring for My New Pet: Caring for My New Pet
             Exploring the Neighborhood: Exploring the Neighborhood
-            Flappy: Лётная
+            Flappy: Порхающий код
             Getting Loopy with Puppy: Getting Loopy with Puppy
             Make a Dog Tag: Make a Dog Tag
             More CS with Run Marco: More CS with Run Marco
@@ -2178,9 +2190,9 @@ ru:
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 1.
           stage:
             Unit 1 Overview: Unit 1 Overview
             'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
@@ -2198,10 +2210,10 @@ ru:
         basketball:
           stage:
             Bounce: Прыжок
-          title: Выбери свою команду и сделай баскетбол игру
+          title: Выбери свою команду и создай игру в баскетбол
           description_audience: ''
-          description_short: Сделать баскетбол игру
-          description: Сделать баскетбол игру
+          description_short: Выбери свою команду и создай игру в баскетбол
+          description: Выбери свою команду и создай игру в баскетбол
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2264,10 +2276,10 @@ ru:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 2. '
         csd4:
           stage:
             Analysis of Design: Analysis of Design
@@ -2302,7 +2314,7 @@ ru:
             Minecraft Hour of Code Designer: Редактор для «Часа Кода» Minecraft
           title: Редактор для «Часа Кода» Minecraft
           description_audience: ''
-          description_short: 'Создай свой мир Minecraft. Запрограммируй поведение животных и существ своего мира: куриц, овец, криперов, зомби и других.'
+          description_short: Запрограммируй поведение животных и существ своего мира Minecraft.
           description: Создайте игру Minecraft. Придумайте собственные варианты курицы, овцы, криперов, зомби и других существ.
         flappy-impact-study:
           stage:
@@ -2524,10 +2536,10 @@ ru:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
         csdgraveyard:
           stage:
             new stage: new stage
@@ -2550,10 +2562,10 @@ ru:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             Unit 4 Overview: Unit 4 Overview
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
         sciencepd4:
           stage:
             Welcome!: Добро пожаловать!
@@ -2593,3 +2605,67 @@ ru:
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Добро пожаловать!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Итоги
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage: [ ]
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+        csp6-support:
+          stage: [ ]
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+        unit6-csd-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+            Foo: Foo
+            Lists: Списки
+            Lights: Lights
+          title: Draft Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''

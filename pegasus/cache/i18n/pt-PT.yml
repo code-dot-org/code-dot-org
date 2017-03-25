@@ -271,7 +271,7 @@
   learn_next_level: Experimentar outro curso do Code Studio
   learn_online: Experimentar outros cursos online
   learn_classes: Encontrar aulas perto de ti
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: Continua a aprender com o Minecraft
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
   just_did_course1: Vejam! Acabei de concluir o curso 1! @codeorg
@@ -374,7 +374,7 @@
   homepage_hero_text_stat_served: 'Hora de Código: #served de alunos já experimentaram'
   homepage_slot_text_hoc: A Hora de Código
   homepage_slot_text_frozen: Frozen com Anna e Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Painel do Professor
   homepage_slot_text_studio: Todos os nossos tutoriais
   homepage_slot_text_course4: Curso 4
   homepage_slot_text_shop: Loja
@@ -404,12 +404,12 @@
   homepage_banner_20k_teachers: 20 000 professores formados para dar aulas de ciência
     da computação na sala de aula.
   homepage_banner_20k_teachers_link: Saber mais
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
+  homepage_banner_congress: Líderes Americanos estão a apelar ao congresso que financie
+    a ciência da computação (k-12).
   homepage_banner_congress_link: Adicione o seu suporte
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: Estamos a fazer uma importante mudança na maneira
+    como damos suporte à privacidade dos estudantes.
+  homepage_banner_emailprivacy_link: Leia mais
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Saber mais
   homepage_slot_text_title_hoc: Hora de Código
@@ -513,7 +513,7 @@
   mc_gradelevel: Idades 6 +
   mc_platformtext: Navegadores modernos, smartphones e tablets
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
-  minecraft_designer: Minecraft Designer
+  minecraft_designer: Designer de Minecraft
   minecraft_adventurer: Minecraft Adventurer
   minecraft_tutorials: Minecraft Hour of Code Tutorials
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
@@ -1023,10 +1023,10 @@
     href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
     to encourage experimentation! Check out all our new features and let us know what
     you think.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your
+    class how the Internet works, how cryptography keeps data secure, and other concepts?
+    We’ve taken the best interactive tools from our Computer Science Principles curriculum
+    and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: Saber mais
   dashboard_announce_try_now_button: Experimentar agora
   dashboard_announce_host_an_hour_button: Hospedar uma hora
@@ -1069,6 +1069,21 @@
     levels&mdash;and it's all free. :) You don't need any experience to start teaching
     computer science in your classroom. <b>Find the next step that's right for your
     classroom.</b>
+  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
+    science education movement. You can participate in high-quality K-12th grade professional
+    learning programs <strong>at absolutely no cost to you or your school</strong>.
+    Take the lead on computer science in your school, and apply for professional learning.
+  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
+    To protect your students’ privacy, we have made a change to your section’s login
+    page to avoid displaying full names. Even though this update should reduce privacy
+    concerns for the login page, we still encourage users to <i>not use full names
+    for students</i>.
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+    Your students could be featured in Code.org''s next viral video encouraging students
+    to take the AP CS Principles exam this year. We''re inviting all CS Principles
+    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
+    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
+    in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: 'A Hora de Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1200,6 +1215,12 @@
   course2_name: Curso 2
   course3_name: Curso 3
   course4_name: Curso 4
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: Curso acelerado
   cspunit1_name: 'Unidade 1: Informação Digital'
   cspunit2_name: 'Unidade 2: A Internet'
@@ -1216,6 +1237,8 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Teste Completo - 50 questões
   cspexam1-mWU7ilDYM9_name: Teste Parte 1 - 25 perguntas
   cspexam2-AKwgAh1ac5_name: Teste Parte 2 - 25 perguntas
@@ -1241,6 +1264,7 @@
   math_category_name: Matemática
   hoc_category_name: Hora de Código
   csf_category_name: CS Fundamentals
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
@@ -1989,3 +2013,7 @@
   infinity_shortcode: inf
   playlab_shortcode: jogar
   artist_shortcode: art
+  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
+    program here</a>.
+  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
+    18 years old.

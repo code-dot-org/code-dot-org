@@ -85,9 +85,6 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
 
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = false
-
   config.lograge.enabled = true
 
   # don't act like a levelbuilder by default
@@ -96,4 +93,8 @@ Dashboard::Application.configure do
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time
   config.skip_script_preload = false
+
+  # The activities_old table should not be part of the schema
+  # DELETE_ME when the activities old table gets removed
+  ActiveRecord::SchemaDumper.ignore_tables = ["activities_old"]
 end

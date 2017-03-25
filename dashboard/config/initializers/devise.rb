@@ -279,12 +279,28 @@ Devise.setup do |config|
     client_options: {site: 'https://graph.facebook.com/v2.6',
                      authorize_url: "https://www.facebook.com/v2.6/dialog/oauth"}
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret
-  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, :scope => 'wl.basic wl.emails'
+  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, scope: 'wl.basic wl.emails'
 
   # for clever (and only clever) we ignore state because clever
   # initiates the oauth flow (instead of us as we do with facebook
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
+
+  config.omniauth :openid_connect, {
+    name: :the_school_project,
+    scope: [:profile, :email, :school],
+    response_type: :code,
+    issuer: 'https://www.kleio.fr/openid',
+    discovery: true,
+    client_options: {
+      port: 443,
+      scheme: 'https',
+      host: CDO.dashboard_hostname,
+      identifier: CDO.dashboard_schoolproject_key,
+      secret: CDO.dashboard_schoolproject_secret,
+      redirect_uri: CDO.studio_url('/users/auth/the_school_project/callback', 'https:')
+    }
+  }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

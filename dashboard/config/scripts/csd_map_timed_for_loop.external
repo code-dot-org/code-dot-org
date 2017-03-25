@@ -1,0 +1,13 @@
+name 'CSD Map: Timed For Loop'
+display_name 'Timed For Loops'
+markdown <<MARKDOWN
+<object data="https://docs.code.org/csd/timedLoopFor/" type="text/html"  style="width: 100%; height: 1400px;"></object>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Why Not Use a For Loop?
+
+When you compare the syntax of a _for loop_ with that of a _timed loop_, it's natural to ask why bother using the _timed loop_. The problem with a _for loop_ is that it prevents other code (like event handlers) from running until it has finished looping.
+
+That's fine if you are just trying to loop quickly (like turning on all of the color LEDs at once), but no so great if you wanted to turn those LEDs on one at a time. This is a great opportunity to show students how we sometimes need to peel away a layer of abstraction in order to have greater control over our programs.
+MARKDOWN

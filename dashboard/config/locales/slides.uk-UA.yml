@@ -2776,153 +2776,157 @@
           подобається Майнкрафт."
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: "Протягом наступної години ви навчитеся основам інформатики, програмуючи
+          Алекс або Стіва рухатися імітацією частини світу Майнкрафту."
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: "Традиційне програмування зазвичай є текстовим, але сьогодні ми будемо
+          використовувати Блоклі: систему, що використовує блоки, які ви можете перетягувати
+          й кидати, щоби писати програми. Під капотом ви створюєте код JavaScript."
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: "Поняття, що ви будете вивчати, програмісти використовують щодня, і
+          вони є основою інформатики. Тут у Mojang ми використовуємо ці самі поняття,
+          щоби змусити Майнкрафт працювати."
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: "Перш ніж ви почнете, ви оберете свого персонажа. Я оберу Алекс. Побудуймо
+          код для програми, яка допоможе їй рухатися екраном."
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: "Ваш екран поділено на три основні частини. Ліворуч знаходиться простір
+          гри Майнкрафт, де виконуватиметься ваша програма. Вказівки для кожного рівня
+          написано внизу."
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: "Ця середня область є інструментарієм, і кожен із цих блоків є командою,
+          яка спрямовує дії Алекс."
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: "Чистий простір праворуч називається робочим простором, і саме тут ми
+          будуватимемо нашу програму."
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: "Якщо ми перетягнемо блок «рухатись вперед» до нашого робочого простору,
+          і потім натиснемо «Запустити», що станеться? Алекс переміститься вперед
+          на одне поле сітки."
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: "А що як ми хотіли зробити щось після того, як вона перемістилася вперед
+          на одне поле? Ми можемо додати до нашої програми ще один блок. Я хочу обрати
+          блок «повернути праворуч», і перетягну його під мій блок «рухатись вперед»,
+          поки не з'явиться ця помаранчева лінія. Тоді я відпущу його, і ці два блоки
+          зліпляться. Коли ми знову натиснемо «Запустити», Алекс виконає команди,
+          які складено в нашому робочому просторі, згори донизу."
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: "А якщо вам захочеться видалити блок, то просто відтягніть його зі стопки
+          назад до інструментарію."
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: "Щоби скасувати свої зміни, і повернутися до початку рівня, скористайтеся
+          кнопкою «Почати знову» в правому верхньому куті робочого простору. Ще одна
+          річ, ви бачите маленький трикутник у блоках повороту? Де б ви не бачили
+          ці трикутники, це означає, що можна обрати інший варіант. Почнімо кодувати!"
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: "Мене звуть Лідія Уінтерс, я — бренд-директор Mojang. Ми зробили невеличку
+          гру, яка називається Майнкрафт."
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: "Що мені подобається робити в Майнкрафті найбільше, то це досліджувати.
+          Я люблю пригоди в печерах, і дивитися, що я можу знайти. Як не програмістку,
+          мене дуже зворушує проходження уроків Майнкрафту, і те, що я справді сама
+          навчаюся якогось кодування."
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: "Попередній рівень потребував багато блоків «рухатись вперед». Було
+          би простіше, якби ми могли просто сказати комп'ютерові виконати команду
+          «рухатись вперед» чотири або п'ять разів. На щастя для нас, комп'ютери дуже
+          добре повторюють команди за допомогою циклів повторювання."
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: "При побудові Майнкрафту ми застосовуємо цикли повторювання для розміщення
+          всіх початкових матеріалів для створення нового світу. Це тисячі й тисячі
+          блоків. Ми також застосовуємо цикли помаленьку, наприклад, щоби ноги Алекс
+          рухалися вперед і назад, коли вона йде. Цикли повторювання є потужною частиною
+          програмування."
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: "Наближається ніч, тож протягом наступної пари рівнів ми збираємося
+          побудувати будинок, щоби бути в безпеці. Ми збираємося застосовувати блоки
+          повторювання, щоби робити це дуже просто."
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: "Щоби збудувати стіну будинку, ми можемо або сказати Алекс «рухатись
+          вперед» та ставити дошки чотири рази, або сказати їй «рухатись вперед» та
+          поставити одну дошку, а потім взяти цю команду, і скористатися блоком «повторити»,
+          щоби вона виконала цю дію декілька разів. А тепер ми клацнемо на блоку «повторити»,
+          і скажемо їй, скільки разів ми би хотіли, щоби вона виконала цю дію. Тепер
+          збудуймо наш дім, поки не настала ніч. Насолоджуйтесь!"
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: "Тепер ми дізнаємося про вирази «якщо». Вирази «якщо» є фундаментальною
+          частиною навчання програмуванню. Вони допомагають комп'ютерові ухвалювати
+          рішення."
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: "Вирази «якщо» використовують всі комп'ютери, включно з моїм телефоном.
+          Наприклад, коли я розблоковую свій телефон, він виконує певний код, який
+          каже: якщо я ввела пароль правильно, то розблокувати телефон. Інакше він
+          показує повідомлення про помилку."
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: "Ви можете використовувати вирази «якщо» у своєму коді, щоби Стів та
+          Алекс реагували на те, що вони бачать у світі. Наприклад, якщо перед ними
+          скеля, вони можуть повернути ліворуч. Або повернути праворуч, якщо вони
+          наштовхнулися на дерево."
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: "В цьому випадку ми не хочемо впасти до лави. Скласти для лави план
+          не складно. Ми бачимо її на екрані. Але що стосовно лави, яку ми не бачимо
+          під каменем?"
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: "Після того, як ми добудемо камінь, нам треба буде перевірити, чи є
+          на цьому місці лава, перш ніж ми рушимо вперед. Якщо там є лава, то ми хочемо
+          поставити бруківку перед нашим персонажем, перш ніж ми зможемо рухатися
+          вперед. Таким чином ми можемо рухатися безпечно. Час добувати ще! І не забувайте
+          використовувати вираз «якщо», щоби дивитися, куди стаєте."
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
         text: "Вітаємо! Ви тільки що вивчили основні блоки компьютерної науки."
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: "Тепер ви можете використовувати ці блоки для побудови свого власного
+          творіння. Більше немає інструкцій та головоломок для розгадування. Ви можете
+          будувати, що захочете. Обирати вам."
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of
-          torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!"
+        text: "[розмовляють учні] Зараз вийде. Стригти. Я зробив «L» з факелів. Я
+          зробила «A» з березових дощок. Ми збудували дім з вовни. Спрацювало, спрацювало.
+          Ми збудували дім з вовни!"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: "Коли ви завершили побудову свого творіння, оберіть «Поділитись», щоби
+          отримати посилання, і поділитися ним зі своїми друзями. Насолоджуйтесь!"
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
         text: "Вітаємо! Ви тільки що вивчили основні блоки компьютерної науки."
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: "Тепер ви можете використовувати ці блоки для побудови свого власного
+          творіння. Більше немає інструкцій та головоломок для розгадування. Ви можете
+          будувати, що захочете. Обирати вам."
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of
-          torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!"
+        text: "[розмовляють учні] Зараз вийде. Стригти. Я зробив «L» з факелів. Я
+          зробила «A» з березових дощок. Ми збудували дім з вовни. Спрацювало, спрацювало.
+          Ми збудували дім з вовни!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: "Тепер ви можете побудувати все, що хочете. Розважайтеся!"
@@ -2956,8 +2960,8 @@
           of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: "Чистий простір праворуч називається робочим простором, і саме тут ми
+          будуватимемо нашу програму."
       7:
         image: notes/gumball_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
@@ -3040,8 +3044,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: "Чистий простір праворуч називається робочим простором, і саме тут ми
+          будуватимемо нашу програму."
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run
@@ -3097,90 +3101,92 @@
     mc_2016_intro:
       1:
         image: notes/mc_2016_intro_1.jpg
-        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
-          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
-          but the world has stopped. The sheep aren't moving, the chickens aren't
-          laying eggs, and zombies are just standing still. It's up to you to add
-          the code to make the Minecraft world work.
+        text: "Привіт, мене звуть Єнс, я — провідний творчий розробник Майнкрафту.
+          Протягом наступної години ви зробите свою власну гру Майнкрафт. Вона виглядає
+          як Майнкрафт, але цей світ зупинено. Вівця не рухається, курка не несе яйця,
+          а зомбі просто стоять. Це ваша задача додати код, щоби світ Майнкрафту запрацював."
       2:
         image: notes/mc_2016_intro_2.jpg
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
-          really interested in is how people think and interact with technology and
-          so this job is the perfect job for me to put together the computer engineering
-          with the psychology: how people think and behave.'
+        text: "Мене звуть Меліса, я — дослідниця користувачів Майнкрафту. Мене дуже
+          цікавить, як люди думають і взаємодіють із технологією, і тому ця праця
+          є ідеальною для мене для поєднання комп'ютерної розробки та психології:
+          як люди думають та поводяться."
       3:
         image: notes/mc_2016_intro_3.jpg
-        text: You'll see your screen is split into three main parts. 1) On the left
-          is the Minecraft game. Right now the world is frozen but we're going to
-          fix that with code.
+        text: "Ви побачите, що ваш екран розділено на три основні частини. 1) Ліворуч
+          знаходиться гра Майнкрафт. Зараз цей світ заморожено, але ми збираємося
+          виправити це за допомогою коду."
       4:
         image: notes/mc_2016_intro_4.jpg
-        text: 2) This middle area is the toolbox. Each of these blocks is a command
-          that chickens, sheep, and other Minecraft creatures can understand.
+        text: 2) Ця середня область є набором інструментів. Кожен із цих блоків є
+          командою, яку можуть розуміти курка, вівця та інші істоти Майнкрафту.
       5:
         image: notes/mc_2016_intro_5.jpg
-        text: 3) The space on the right is called the workspace and this is where
-          we'll build our program.
+        text: 3) Простір праворуч називається робочим простором, і саме тут ми будуватимемо
+          нашу програму.
       6:
         image: notes/mc_2016_intro_6.jpg
-        text: If you forget what to do, the instructions for each level are at the
-          top.
+        text: "Якщо ви забудете, що робити, то вказівки для кожного рівня знаходяться
+          вгорі."
       7:
         image: notes/mc_2016_intro_7.jpg
-        text: To start off, we're going to program a chicken. Let's drag the "move
-          forward" command to the workspace. When I hit "Run" the chicken moves forward
-          one step. To go further, I'll drag another "move forward" block underneath
-          the first "move forward" block until the highlight appears. Then I'll drop
-          it and the two blocks snap together. If I hit "Run" again, the chicken walks
-          two steps.
+        text: "Для початку ми запрограмуємо курку. Перетягнімо команду «рухатись вперед»
+          до робочого простору. Коли я натискаю «Запустити», курка рухається вперед
+          на один крок. Для продовження я перетягну ще один блок «рухатись вперед»
+          під перший блок «рухатись вперед», поки не з'явиться підсвітлення. Потім
+          я відпущу його, і ці два блоки зліпляться. Якщо я натисну «Запустити» знову,
+          курка пройде на два кроки."
       8:
         image: notes/mc_2016_intro_8.jpg
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back to the toolbox.
+        text: "Якщо вам захочеться видалити блок, то просто вилучіть його зі стопки
+          та відтягніть назад до набору інструментів."
       9:
         image: notes/mc_2016_intro_9.jpg
-        text: After you've hit "Run" you can always hit the "Reset" button to reset
-          the game and start over. Now, it's your turn to make your very own version
-          of Minecraft. Have fun!
+        text: "Після того, як ви натиснули «Запустити», ви завжди можете натиснути
+          «Скидання», щоби скинути гру й почати знову. Тепер ваш хід, зробити свою
+          особисту версію Майнкрафту. Насолоджуйтесь!"
     mc_2016_loops:
       1:
         image: notes/mc_2016_loops_1.jpg
-        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
-          of the animals and enemies in the game. One of the animals that I worked
-          on is the ocelot. I worked on the part where you can feed an ocelot a fish
-          to tame it into your own cat.
+        text: "Привіт, мене звуть Ліза. Я — програмістка Майнкрафту, я працюю над
+          деякими з тварин та ворогів у цій грі. Однією з тварин, над якими я працювала,
+          є оцелот, я працювала над тією частиною, в якій коли ви тримаєте рибу, оцелот
+          підкрадатиметься до вас. І якщо ви нагодуєте його рибою, ви приручите його,
+          й оцелот стане вашим власним котом."
       2:
         image: notes/mc_2016_loops_2.jpg
-        text: As humans, we get really bored if we have to do the same thing over
-          and over and over again. But the cool thing about computers is that they
-          can do the same thing millions or even billions of times in a row without
-          getting bored. This repetition is called a loop and every creature in Minecraft
-          uses loops.
+        text: "Як людям, нам дуже набридає, якщо нам доводиться робити одне й те саме
+          знову й знову. Але що круто з комп'ютерами, що вони можуть робити одне й
+          те саме мільйони, або навіть мільярди разів підряд, і їм це не набридає.
+          Це повторювання називається циклом. Кожна істота в Майнкрафті використовує
+          цикли."
       3:
         image: notes/mc_2016_loops_3.jpg
-        text: Earlier, we got a chicken to move across the screen but then she stopped.
-          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
-          do" loop from our toolbox to keep our chickens moving around forever too.
-          The power of loops will save you tons of time and open up all kinds of neat
-          options as you build your own version of Minecraft.
+        text: "Раніше ми зробили, щоби курка рухалася екраном, але потім вона зупинилася.
+          У Майнкрафті кури бродять постійно. Скористаймося циклом «постійно робити»
+          з нашого набору інструментів, щоби наші кури також рухалися постійно. Сила
+          циклів заощадить вам купу часу і відкриє всі види витончених варіантів при
+          побудові вашої власної версії Майнкрафту."
     mc_2016_events:
       1:
         image: notes/mc_2016_events_1.jpg
-        text: On this next level, you can pick to be either Steve or Alex. Press the
-          arrow buttons on your keyboard to move up, down, left, and right. Now you
-          can move around a level wherever you want. To use a creature, just walk
-          towards it, turn to face it, and press the spacebar.
+        text: "На цьому наступному рівні ви можете обрати, бути Стівом, чи Алекс.
+          Натискайте клавіші зі стрілками на своїй клавіатурі, щоби рухатися догори,
+          донизу, ліворуч та праворуч. Тепер ви можете рухатися рівнем, де вам заманеться.
+          Щоби використати істоту, просто підійдіть до неї, поверніться до неї обличчям,
+          і натисніть пропуск."
       2:
         image: notes/mc_2016_events_2.jpg
-        text: If you're using a touch screen, swipe up, down, left, and right to move
-          around. Then tap the game to use the item in front of you.
+        text: "Якщо ви використовуєте дотикочутливий екран, то проводьте пальцем вгору,
+          вниз, ліворуч та праворуч, щоби рухатися. Потім торкніться гри, щоби використати
+          предмет перед собою."
       3:
         image: notes/mc_2016_events_3.jpg
-        text: But what happens when you use it? In Minecraft, sheep drop wool when
-          you shear them, cows run away when you hit them, and creepers explode when
-          you get near them. These reactions happen thanks to something called events.
-          Events tell your program to listen or wait for when something happens. And
-          when it does, perform an action.
+        text: "Але що відбувається, коли ви використовуєте його? У Майнкрафті вівці
+          скидають вовну, коли ви стрижете їх, корови тікають, коли ви б'єте їх, а
+          кріпери вибухають, коли ви опиняєтеся біля них. Ці реакції відбуваються
+          завдяки дечому, що називається подіями. Події кажуть вашій програмі слухати,
+          або чекати, коли щось станеться. І коли це станеться, виконати дію."
       4:
         image: notes/mc_2016_events_4.jpg
         text: Наразі ми використали одну подію. Код, розміщений у розділі "коли створено",
@@ -3204,11 +3210,11 @@
     mc_2016_congrats:
       1:
         image: notes/mc_2016_congrats_1.jpg
-        text: Congratulations! You've learned to use computer science commands to
-          bring the Minecraft world to life. You are the developer now. You've unlocked
-          all the commands and all the creatures. You choose what happens.
+        text: "Вітаємо! Ви вивчили, як застосовувати команди інформатики, щоби оживити
+          світ Майнкрафту. Ви тепер — розробник. Ви розкрили всі ці команди, та всі
+          істоти. Ви вибираєте, що відбувається."
       2:
         image: notes/mc_2016_congrats_2.jpg
-        text: When you're done making your game, choose share to get a link that you
-          can share with your friends or to play your game on your phone. Have fun!
-          I'm looking forward to playing your version of Minecraft.
+        text: "Коли ви завершили створення своєї гри, можете поділитися посиланням
+          на свою гру з друзями, або грати у свою гру на своєму телефоні. Насолоджуйтесь!
+          Я з нетерпінням чекаю можливості пограти у вашу версію Майнкрафту."

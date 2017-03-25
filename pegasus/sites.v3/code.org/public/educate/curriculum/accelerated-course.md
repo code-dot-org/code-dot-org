@@ -23,7 +23,7 @@ The content of this course is appropriate for kindergartners through 8th graders
 
 This course was developed in accordance with our [educational philosophy](/educate/curriculum#philosophy).
 
-[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](http://studio.code.org)
+[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](https://studio.code.org/s/20-hour)
 
 ## How to get started
 
@@ -123,7 +123,7 @@ Lesson time is flexible. Running out of time? Students can finish online lessons
 	- Watch instructional videos to test that they play correctly.
 		- If a video doesn't work for you, you can use the "Show Notes" tab to read instructions instead of watching the video.  Or download the videos [here](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). You can also download each video directly by clicking on the green "download" button in the video pop-up windows at [studio.code.org](http://studio.code.org).
 - Create accounts for students using one of these options:
-	- Option A: Create a section for your classroom on the [“Add Section” page](http://studio.code.org/sections/new), and once you click "Create Section" you'll be able to see the section-code. Tell all students in that section to visit the [“Join” page](http://studio.code.org/join) and enter the section-code. Then each student will sign up by creating a username and password. **Students do NOT need an email address for this sign-up option.**
+	- Option A: Create a section for your classroom on the “Add Section” page, and once you click "Create Section" you'll be able to see the section-code. Tell all students in that section to visit the [“Join” page](http://studio.code.org/join) and enter the section-code. Then each student will sign up by creating a username and password. **Students do NOT need an email address for this sign-up option.**
 	- Option B: Students can create their own account at the [“Student sign up” page](http://studio.code.org/users/sign_up). Once students are signed in, they can enter a teacher’s email address or section-code (see instructions above on creating a section-code). **Students MUST have an email address for this sign-up option.**
 - Provide headphones for your class, or ask students to bring their own. This way, students can watch videos and hear the sound effects from their own games
 	- Note: online activities may be completed without sound on computers
@@ -161,7 +161,7 @@ If Intro to computer science was a success, plan to teach our next courses that 
 ## Price: 100% FREE
 Code.org is a 501c3 public non-profit, so we produce all our tutorials as free services for the greater good of spreading computer science education. Are you ready to try? Give it a whirl, it's free.
 
-[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](http://studio.code.org)
+[<button>Teacher Sign Up</button>](http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher) [<button>Try it first</button>](https://studio.code.org/s/20-hour)
 
 ## Questions?
 [Ask on our Forums](http://forum.code.org/?forum=322774).

@@ -19,7 +19,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `gem install bundler -v 1.10.6`
 1. `rbenv rehash`
 1. `cd code-dot-org`
-1. `bundle install`
+1. `bundle install` (Problems with rmagick? See [tips](#tips) below.)
 1. `rake install`
 1. (Optional) [Enable JavaScript builds](#enabling-javascript-builds)
 1. `rake build`
@@ -31,7 +31,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install Redis: `brew install redis`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
-  1. If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb seems to not have serious side effects.
+  1. If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
   1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
   1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
@@ -147,3 +147,11 @@ Please also see our other documentation, including our:
 * [License](./LICENSE)
 
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) for more information on helping us out.
+
+---
+###Tips 
+If rmagick doesn't install, check your version of imagemagick, and downgrade if >= 7
+- `convert --version`
+- `gem install imagemagick@6`
+- `brew unlink imagemagick`
+- `brew link imagemagick@6 --force`

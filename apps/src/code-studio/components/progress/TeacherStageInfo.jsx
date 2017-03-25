@@ -9,7 +9,7 @@ import HiddenStageToggle from './HiddenStageToggle';
 import color from "../../../util/color";
 import progressStyles from './progressStyles';
 import { stageShape } from './types';
-import { toggleHidden, isHiddenFromState } from '../../hiddenStageRedux';
+import { toggleHidden, isHiddenForSection } from '../../hiddenStageRedux';
 
 /**
  * A component that renders information in our StageProgress view that is only
@@ -45,8 +45,8 @@ const TeacherStageInfo = Radium(React.createClass({
 
     // redux provided
     sectionId: React.PropTypes.string,
-    hiddenStagesInitialized: React.PropTypes.bool.isRequired,
-    hiddenStageMap: React.PropTypes.object.isRequired,
+    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
+    hiddenStageState: React.PropTypes.object.isRequired,
     scriptName: React.PropTypes.string.isRequired,
     hasNoSections: React.PropTypes.bool.isRequired,
     toggleHidden: React.PropTypes.func.isRequired
@@ -62,9 +62,9 @@ const TeacherStageInfo = Radium(React.createClass({
   },
 
   render() {
-    const { stage, sectionId, hiddenStageMap, hasNoSections, hiddenStagesInitialized } = this.props;
-    const isHidden = hiddenStagesInitialized &&
-      isHiddenFromState(hiddenStageMap, sectionId, stage.id);
+    const { stage, sectionId, hiddenStageState, hasNoSections, scriptAllowsHiddenStages } = this.props;
+    const isHidden = scriptAllowsHiddenStages &&
+      isHiddenForSection(hiddenStageState, sectionId, stage.id);
     const lessonPlanUrl = stage.lesson_plan_html_url;
 
     const lockable = stage.lockable && !hasNoSections;
@@ -89,7 +89,7 @@ const TeacherStageInfo = Radium(React.createClass({
       children.push(<StageLock key="stageLock" stage={stage}/>);
     }
 
-    if (sectionId && hiddenStagesInitialized && !hasNoSections) {
+    if (sectionId && scriptAllowsHiddenStages && !hasNoSections) {
       children.push(
         <div key="hiddenStageToggle">
           <HiddenStageToggle
@@ -117,8 +117,8 @@ const TeacherStageInfo = Radium(React.createClass({
 export default connect(state => {
   return {
     sectionId: state.sections.selectedSectionId,
-    hiddenStagesInitialized: state.hiddenStage.get('initialized'),
-    hiddenStageMap: state.hiddenStage.get('bySection'),
+    scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+    hiddenStageState: state.hiddenStage,
     scriptName: state.progress.scriptName,
     hasNoSections: state.sections.sectionsAreLoaded &&
       state.sections.sectionIds.length === 0

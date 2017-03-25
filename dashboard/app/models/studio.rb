@@ -73,7 +73,7 @@ class Studio < Grid
   # nothing but integers. If it raises a TypeError, attempt to parse the
   # maze using the new parse, which expects hashes and insists each has
   # a tileType.
-  def self.parse_maze(maze_json)
+  def self.parse_maze(maze_json, _ = nil)
     super
   rescue TypeError
     maze_json = maze_json.to_json if maze_json.is_a? Array
@@ -153,6 +153,12 @@ class Studio < Grid
   </block>
   <block type="studio_setMap">
     <title name="VALUE">random</title>
+  </block>
+  <block type="studio_setMapAndColor">
+    <title name="VALUE">random</title>
+    <value name="COLOR">
+      <block type="colour_picker"></block>
+    </value>
   </block>
   <block type="studio_showTitleScreenParams">
     <value name="TITLE">
@@ -340,6 +346,18 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_setSpriteBehavior">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="TARGETSPRITE">
+      <block type="math_number">
+        <title name="NUM">2</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_endGame" />
 </category>
 <category name="Loops">
@@ -405,6 +423,38 @@ class Studio < Grid
   </block>
   <block type="studio_ifActorIsSprite" />
   <block type="studio_ifActorIsSpriteParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorHasEmotionElse" />
+  <block type="studio_ifActorHasEmotionElseParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorPositionElse" />
+  <block type="studio_ifActorPositionElseParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorIsVisibleElse" />
+  <block type="studio_ifActorIsVisibleElseParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorIsSpriteElse" />
+  <block type="studio_ifActorIsSpriteElseParams" >
     <value name="SPRITE">
       <block type="math_number">
         <title name="NUM">1</title>

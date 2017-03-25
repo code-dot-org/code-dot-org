@@ -7,7 +7,7 @@ import AnimationPicker from '../AnimationPicker/AnimationPicker';
 import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
 import { setColumnSizes } from './animationTabModule';
 import AnimationList from './AnimationList';
-import ResizablePanes from './ResizablePanes';
+import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
 import * as PropTypes from '../PropTypes';
 

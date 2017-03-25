@@ -87,9 +87,6 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
 
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = true
-
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 

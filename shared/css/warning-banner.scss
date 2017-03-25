@@ -2,13 +2,22 @@
 @import 'font';
 
 #warning-banner {
-  padding: 10px 20px 5px 20px;
+  position: absolute;
+  z-index: 100;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
   font-size: 13px;
   line-height: 16px;
   background-color: $purple;
   text-align: center;
   color: white;
-  height: 40px;
+
+  .banner-text, .banner-icon {
+    display: inline;
+  }
+
   a, a:visited {
     font-family: $gotham-extra-bold;
     color: white;
@@ -36,24 +45,4 @@
 .warning-sign {
   font-size: 16px;
   color: $mustardyellow;
-}
-
-@media screen and (min-width: 500px) and (max-width: 940px) {
-  #warning-banner {
-    min-height: 60px;
-
-    #hide-warning {
-      margin-top: 10px;
-    }
-  }
-}
-
-@media screen and (max-width: 499px) {
-  #warning-banner {
-    min-height: 75px;
-
-    #hide-warning {
-      margin-top: 15px;
-    }
-  }
 }

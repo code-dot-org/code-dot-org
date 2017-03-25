@@ -7,7 +7,8 @@
   "properties": {
     "link_title": "Run Marco",
     "url": "https://www.allcancode.com/runmarco",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "markdown_instructions": "<a href=\"https://www.allcancode.com/runmarco\"></a><img src=\"https://images.code.org/c754e82a395ab69e5c1e3b2dfe8bf9ff-image-1486603338831.22.10.png\" width=\"400px\"/></a>"
   },
   "published": true,
   "notes": "",

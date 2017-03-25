@@ -42,13 +42,15 @@ class FilesApiTestBase < Minitest::Test
     objects = s3.list_objects(bucket: bucket, prefix: prefix).contents.map do |object|
       { key: object.key }
     end
-    s3.delete_objects(
-      bucket: bucket,
-      delete: {
-        objects: objects,
-        quiet: true
-      }
-    ) if objects.any?
+    if objects.any?
+      s3.delete_objects(
+        bucket: bucket,
+        delete: {
+          objects: objects,
+          quiet: true
+        }
+      )
+    end
   end
 
   # Delete all versions of the specified file from S3, including all delete markers
@@ -57,17 +59,19 @@ class FilesApiTestBase < Minitest::Test
     response = s3.list_object_versions(bucket: bucket, prefix: key)
     objects = response.versions.concat(response.delete_markers).map do |version|
       {
-          key: key,
-          version_id: version.version_id
+        key: key,
+        version_id: version.version_id
       }
     end
-    s3.delete_objects(
-      bucket: bucket,
-      delete: {
-        objects: objects,
-        quiet: true
-      }
-    ) if objects.any?
+    if objects.any?
+      s3.delete_objects(
+        bucket: bucket,
+        delete: {
+          objects: objects,
+          quiet: true
+        }
+      )
+    end
   end
 
   def assert_fileinfo_equal(expected, actual)

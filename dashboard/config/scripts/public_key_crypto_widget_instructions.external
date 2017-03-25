@@ -1,0 +1,77 @@
+name 'Public Key Crypto Widget Instructions'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Public Key Crypto Widget Instructions
+
+In this activity you will **simulate public key cryptography** by:
+
+* Acting as Alice, Bob or Eve
+* Using a widget on your computer that will do computations for you
+* Speaking out loud to exchange information
+
+### To do the activity...
+
+* Form a group of 3 people.  
+<img src="https://images.code.org/add9a646598698d2a91f0f6a61bc2a1e-image-1485720751532.png" style="width: 300px; float: right">
+* **Choose your character:** Alice, Bob, or Eve
+* **Follow the instructions on the screen**, each are individual to the character.
+* **NOTE:** Alice acts first - announcing two numbers publicly.
+* Notice that Bob's first instruction (shown at right), for example, is to *wait* until he hears Alice announce something.
+
+* This diagram shows the basic setup of computers and who says what.
+
+<img src="https://images.code.org/cebab663f00482bf9600186c3daf01b5-image-1485719895961.png" style="display: block; margin: auto; width: 400px">
+
+### Background
+
+On the next page is the public key crypto widget. This widget will use numbers and math to do public key encryption, but it's important to understand that the mechanics of what you're doing are **basically the same as the cups and beans activity**
+
+**The Goal** just as before, is for Bob to send Alice a secret number.  But for that to happen **Alice actually has to act first** to create a public key for Bob to use.  So, using the widget the process is still:
+
+* Alice creates a private and public key
+* Bob uses the public key to encrypt a secret number
+* Eve can intercept all public information and tries to crack it.
+
+The differences between the public key crypto widget and the cups and beans activity:
+
+* **All data are numbers** - the secret messages are numbers that get encrypted by transforming them into *other* numbers. (This replaces secret numbers of beans "encrypted" by putting them in a cup).
+* **Use your voice** to broadcast encrypted information publicly (this replaces beans in a cup getting passed around)
+* **The "public key" is actually a combination of two numbers** - Alice will produce a "public key" number, but there is also a "public clock size" that is used to produce that number.  Both are publicly known.  Since the clock size could actually be declared by anyone, including Eve, we refer to Alice's public number as her "public key."
+* **The Math: Multiplication and Modulo** - rather than simple addition and subtraction of beans, we'll multiply numbers together as input to modulo.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+# Public Key Crypto Widget Instructions
+
+You may want to put these student instructions up on the screen at the front of the room.
+
+You may also want to demonstrate with 3 students how it works to show that it is **similar to the Cups and Beans** activity.
+
+### Common Misconceptions to look out for:
+
+**Alice picks numbers essentially at random**
+
+* Alice should pick a public modulus essentially at random - we provide a list to choose from.  (That list happens to be all of the prime numbers less than 10,000)
+* Alice should pick her private key at random as well - this can be ANY number less than the public modulus.
+
+**The widget is NOT networked in any way** - the widget does not actually send messages to your partners.  It is a standalone app that guides you through public key encryption process based on the character you chose.
+
+**Where are these numbers coming from?**
+* The widget does expose the math but every calculation is basically some version of `( x * y ) MOD z`  where:
+
+  * `(x * y)` is always public number *times* a private number
+  * `z` is the public modulus
+
+* Since the result of the multiplication is MODed, it makes it hard to figure out the private value, even if you know the public one. For example if the equation is:
+
+    ```( 65 * ___ ) MOD 257 = 30```
+
+What should you plug into the blank space to make it work out?  There is no way to figure it out besides trial and error. (It might take a little while to convince yourself this is true).
+
+* For a more thorough explanation see: [How the public key crypto widget really works](https://docs.google.com/document/d/1c7UGv3Bc0GD0C1EhgSsXzKvzPRj41DcYpUjH8nK0O2c)
+
+MARKDOWN

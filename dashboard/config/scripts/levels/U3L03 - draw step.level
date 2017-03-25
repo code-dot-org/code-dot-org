@@ -66,9 +66,6 @@
     "encrypted_examples": "zkDI0HDKHo5c8J74y03IKljJJN88FpvWCVjolNR18sIy18c5dx0tu25snUyX\nRtR7\n",
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true",
-    "contained_level_names": [
-      "Draw Diamond"
-    ],
     "log_conditions": [
       {
         "entries": [
@@ -142,7 +139,8 @@
     ],
     "fail_on_lint_errors": "false",
     "instructions_important": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

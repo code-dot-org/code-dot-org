@@ -46,13 +46,14 @@ module ProxyHelper
         allowed_hostname_suffixes: allowed_hostname_suffixes,
         expiry_time: expiry_time,
         infer_content_type: infer_content_type,
-        redirect_limit: redirect_limit - 1)
+        redirect_limit: redirect_limit - 1
+      )
 
     elsif !media.is_a? Net::HTTPSuccess
       # Pass through failure codes.
       render_error_response media.code, "Failed request #{media.code}"
 
-    elsif !allowed_content_types.include?(media.content_type)
+    elsif allowed_content_types.try(:exclude?, media.content_type)
       # Reject disallowed content types.
       render_error_response 400, "Illegal content type #{media.content_type}"
 

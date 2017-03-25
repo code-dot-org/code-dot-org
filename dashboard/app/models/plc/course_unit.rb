@@ -27,7 +27,7 @@ class Plc::CourseUnit < ActiveRecord::Base
   validates :plc_course, presence: true
 
   def has_evaluation?
-    script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? { |level| level.class == EvaluationMulti }
+    script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? {|level| level.class == EvaluationMulti}
   end
 
   def determine_preferred_learning_modules(user)
@@ -55,13 +55,13 @@ class Plc::CourseUnit < ActiveRecord::Base
       learning_module_weights[learning_module] += selected_answer['weight']
     end
 
-    learning_module_weights = learning_module_weights.sort_by{|_, weight| weight}
+    learning_module_weights = learning_module_weights.sort_by {|_, weight| weight}
     sorted_learning_modules = learning_module_weights.map(&:first)
 
     default_module_assignments = []
 
     Plc::LearningModule::NONREQUIRED_MODULE_TYPES.each do |module_type|
-      module_to_assign = sorted_learning_modules.find{|learning_module| learning_module.module_type == module_type}
+      module_to_assign = sorted_learning_modules.find {|learning_module| learning_module.module_type == module_type}
       next if module_to_assign.nil?
       default_module_assignments << module_to_assign
     end
@@ -73,7 +73,8 @@ class Plc::CourseUnit < ActiveRecord::Base
   def launch
     update(started: true)
 
-    #All users who are enrolled in the course for this course unit need to be enrolled in it
+    # All users who are enrolled in the course for this course unit need to be
+    # enrolled in it.
     plc_course.plc_enrollments.each do |enrollment|
       assignment = Plc::EnrollmentUnitAssignment.find_or_create_by(user: enrollment.user, plc_user_course_enrollment: enrollment, plc_course_unit: self)
       assignment.update(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)

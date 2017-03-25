@@ -29,7 +29,7 @@ Resources:
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId: {Ref: InternetGateway}
 <%
-  availability_zones.each_with_index do |zone, i|
+  AVAILABILITY_ZONES.each_with_index do |zone, i|
     az = zone[-1].upcase
 -%>
 # Create a private subnet in each availability zone.
@@ -240,7 +240,7 @@ Outputs:
     Description: Security group for EFS
     Value: {'Fn::GetAtt': [EFSSecurityGroup, GroupId]}
 <%
-  availability_zones.each_with_index do |zone, i|
+  AVAILABILITY_ZONES.each_with_index do |zone, i|
     az = zone[-1].upcase
 -%>
   Subnet<%=az%>:

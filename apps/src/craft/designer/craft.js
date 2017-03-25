@@ -6,7 +6,6 @@ import _ from 'lodash';
 import Hammer from "hammerjs";
 
 import {singleton as studioApp} from '../../StudioApp';
-import commonMsg from '@cdo/locale';
 import craftMsg from './locale';
 import codegen from '../../codegen';
 import GameController from './game/GameController';
@@ -832,8 +831,6 @@ Craft.reportResult = function (success) {
   var studioTestResults = studioApp.getTestResults(success);
   var testResultType = Craft.getTestResultFrom(success, studioTestResults);
 
-  var keepPlayingText = Craft.replayTextForResult(testResultType);
-
   const image = Craft.initialConfig.level.freePlay ?
       Craft.gameController.getScreenshot() : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
@@ -853,7 +850,6 @@ Craft.reportResult = function (success) {
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
       studioApp.displayFeedback({
-        keepPlayingText: keepPlayingText,
         app: 'craft',
         skin: Craft.initialConfig.skin.id,
         feedbackType: testResultType,
@@ -885,14 +881,4 @@ Craft.shouldDefaultToContinue = function (testResultType) {
   var isFreePlay = testResultType === TestResults.FREE_PLAY;
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
   return isSuccess && !isFreePlay;
-};
-
-Craft.replayTextForResult = function (testResultType) {
-  if (testResultType === TestResults.FREE_PLAY) {
-    return craftMsg.keepPlayingButton();
-  } else if (testResultType <= TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL) {
-    return commonMsg.tryAgain();
-  } else {
-    return craftMsg.replayButton();
-  }
 };

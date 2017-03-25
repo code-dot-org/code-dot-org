@@ -118,7 +118,7 @@
   "setPlayerSpeedTooltip": "Sets the speed of the player",
   "setPlayerSpeedVeryFast": "set very fast player speed",
   "setPlayerSpeedVerySlow": "set very slow player speed",
-  "setTeamTooltip": "Sets the logo and color scheme",
+  "setTeamTooltip": "Sets the logo and colour scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "Check out the Bounce game I made. I wrote it myself with @codeorg",

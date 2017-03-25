@@ -65,7 +65,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   end
 
   def focus_area_positions
-    plc_module_assignments.map{ |a| a.plc_learning_module.stage.absolute_position unless a.plc_learning_module.required? }.compact
+    plc_module_assignments.map {|a| a.plc_learning_module.stage.absolute_position unless a.plc_learning_module.required?}.compact
   end
 
   def summarize_progress
@@ -75,22 +75,26 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
 
     # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
     if plc_course_unit.has_evaluation?
-      Plc::LearningModule::MODULE_TYPES.keep_if { |type| categories_for_stage.include?(type)}.each do |flex_category|
+      Plc::LearningModule::MODULE_TYPES.select {|type| categories_for_stage.include?(type)}.each do |flex_category|
+        module_category = flex_category || Plc::LearningModule::CONTENT_MODULE
+        category_name = I18n.t("flex_category.#{module_category}")
         summary << {
-            category: flex_category || Plc::LearningModule::CONTENT_MODULE,
-            status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED
+          category: category_name,
+          status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED,
+          link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: category_name.downcase.tr(' ', '-'))
         }
       end
     else
       # Otherwise, status is determined by the completion of stages
       categories_for_stage.each do |category|
         summary << {
-            category: category || 'content',
-            status: Plc::EnrollmentModuleAssignment.stages_based_status(
-              plc_course_unit.script.stages.select { |stage| stage.flex_category == category },
-              user,
-              plc_course_unit.script
-            )
+          category: I18n.t("flex_category.#{category || 'content'}"),
+          status: Plc::EnrollmentModuleAssignment.stages_based_status(
+            plc_course_unit.script.stages.select {|stage| stage.flex_category == category},
+            user,
+            plc_course_unit.script
+          ),
+          link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script)
         }
       end
     end
@@ -98,8 +102,9 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     # If there are peer reviews, summarize that progress as well
     if plc_course_unit.script.has_peer_reviews?
       summary << {
-          category: 'peer_review',
-          status: PeerReview.get_review_completion_status(user, plc_course_unit.script)
+        category: I18n.t('flex_category.peer_review'),
+        status: PeerReview.get_review_completion_status(user, plc_course_unit.script),
+        link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: 'peer-review')
       }
     end
 
@@ -111,8 +116,10 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   def enroll_in_module(learning_module)
     return unless learning_module.plc_course_unit == plc_course_unit
 
-    Plc::EnrollmentModuleAssignment.find_or_create_by(plc_enrollment_unit_assignment: self,
-                                                      plc_learning_module: learning_module,
-                                                      user: user)
+    Plc::EnrollmentModuleAssignment.find_or_create_by(
+      plc_enrollment_unit_assignment: self,
+      plc_learning_module: learning_module,
+      user: user
+    )
   end
 end

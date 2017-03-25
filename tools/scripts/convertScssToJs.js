@@ -5,6 +5,7 @@
  * generates the equivalent set in JS.
  */
 var fs = require('fs');
+var path = require('path');
 var readline = require('readline');
 
 // Regular expression to capture a variable definition from SCSS
@@ -25,11 +26,16 @@ function resolveVariable(value) {
 
 function convertScssToJs(scssPath, jsPath) {
   // Generate <foo>.js while reading <foo>.scss line-by-line
+  var root = path.resolve(__dirname + '/../../');
+  // Put a relative path in our comment, so that it is consistent across environments
+  var relativeScss = path.relative(root, scssPath);
+  var relativeJS = path.relative(root, jsPath);
+
   var out = fs.createWriteStream(jsPath);
   out.write([
-    '// ' + jsPath,
+    '// ' + relativeJS,
     '// GENERATED FILE: DO NOT MODIFY DIRECTLY',
-    '// This generated file exports all variables defined in ' + scssPath,
+    '// This generated file exports all variables defined in ' + relativeScss,
     '// for use in JavaScript. The generator script is convert-scss-variables.js',
     'module.exports = {\n'
   ].join('\n'));

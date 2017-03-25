@@ -4,7 +4,7 @@ css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 3: Lesson 6 - User Input and Strings
+# Unit 5: Lesson 6 - User Input and Strings
 
 ## Background
 

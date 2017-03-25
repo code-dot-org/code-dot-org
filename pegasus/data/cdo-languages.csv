@@ -5,6 +5,7 @@ bg,bg,bg,bg-BG,български,Bulgarian,TRUE,TRUE,bg,Bulgarian
 bn,bn,bn,bn-BD,বাংলা,Bengali,FALSE,FALSE,bn,Bengali
 bs,bs,bs,bs-BA,Bosanski,Bosnian,TRUE,FALSE,bs,Bosnian
 ca,ca,ca,ca-ES,Català,Catalan,TRUE,TRUE,ca,Catalan
+co,co,co,co-CO,Corsu,Corsican,FALSE,FALSE,co,Corsican
 cs,cs,cs,cs-CZ,Čeština,Czech,TRUE,TRUE,cs,Czech
 da,da,da,da-DK,Dansk,Danish,TRUE,TRUE,da,Danish
 de,de,de,de-DE,Deutsch,German,TRUE,TRUE,de,German
@@ -63,7 +64,7 @@ sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic)
 sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,TRUE,sv-SE,Swedish
 ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,FALSE,ta,Tamil
 tg,tg,tg,tg-TJ,тоҷикӣ,Tajik,FALSE,FALSE,tg,Tajik
-th,th,th,th-TH,ไทย,Thai,FALSE,FALSE,th,Thai
+th,th,th,th-TH,ภาษาไทย,Thai,TRUE,FALSE,th,Thai
 tr,tr,tr,tr-TR,Türkçe,Turkish,TRUE,TRUE,tr,Turkish
 uk,uk,uk,uk-UA,Українська,Ukrainian,TRUE,TRUE,uk,Ukrainian
 ur,ur,ur,ur-PK,اردو,Urdu (Pakistan),FALSE,TRUE,ur-PK,Urdu (Pakistan)

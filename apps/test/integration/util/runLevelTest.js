@@ -135,6 +135,12 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     return Boolean(testData.useFirebase);
   };
 
+  window.dashboard.project.isOwner = function () {
+    return true;
+  };
+  const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
+    'Define onExecutionError() in your level test case to handle this.';
+
   loadApp({
     skinId: skinId,
     level: level,
@@ -147,8 +153,11 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     // Fail fast if firebase is used without testData.useFirebase being specified.
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
     firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
+    isSignedIn: true,
     isAdmin: true,
     onFeedback: finished.bind(this),
+    onExecutionError: testData.onExecutionError ? testData.onExecutionError :
+      () => { throw unexpectedExecutionErrorMsg; },
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already

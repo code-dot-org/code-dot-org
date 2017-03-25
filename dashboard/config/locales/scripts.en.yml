@@ -707,6 +707,8 @@ en:
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
+            Standalone video: Standalone video
+            Curriculum Reference: Curriculum Reference
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -1488,9 +1490,11 @@ en:
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1498,6 +1502,13 @@ en:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2180,11 +2191,17 @@ en:
             'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Unit 5 Overview: Unit 5 Overview
           description_audience: ''
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 1.
           stage:
             Unit 1 Overview: Unit 1 Overview
             'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
@@ -2268,10 +2285,10 @@ en:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 2. '
         csd4:
           stage:
             Analysis of Design: Analysis of Design
@@ -2528,10 +2545,10 @@ en:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
         csdgraveyard:
           stage:
             new stage: new stage
@@ -2554,10 +2571,10 @@ en:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             Unit 4 Overview: Unit 4 Overview
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
         sciencepd4:
           stage:
             Welcome!: Welcome!
@@ -2608,3 +2625,152 @@ en:
           description_audience: ''
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage:
+            Unit 5 Overview: Unit 5 Overview
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 5
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
+        csp6-support:
+          stage: {}
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+        unit6-csd-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+            Foo: Foo
+            Lists: Lists
+            Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: For Loops
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
+            For Loops with UI and Board: For Loops with UI and Board
+            Lists and For Loops: Lists and For Loops
+            Analog Input: Analog Input
+            Polling Events: Polling Events
+            Sensor Applications: Sensor Applications
+            'Project: Prototype an Innovation': 'Project: Prototype an Innovation'
+          title: Draft Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-gamelab:
+          stage:
+            Introduction: Introduction
+            Sprites: Sprites
+            Input: Input
+            'Project: Interactive Card': 'Project: Interactive Card'
+          title: Game Lab Workshop
+          description_audience: Teachers attending an in-person Game Lab Workshop
+          description_short: Level progression to accompany an in-person Game Lab Workshop
+          description: This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of Game Lab.
+        csd5-draft:
+          stage:
+            new stage: new stage
+            Interpreting Data: Interpreting Data
+            Data in the Real World: Data in the Real World
+            Combining Representations: Combining Representations
+            Representing Images: Representing Images
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-1hour:
+          stage:
+            App Lab Workshop: App Lab Workshop
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Room Escape: Room Escape
+            Extra: Extra
+          title: App Lab 1 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction to app lab in 1 hour. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        applab-2hour:
+          stage:
+            new stage: new stage
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+          title: App Lab 2 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction to app lab in 2 hours. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        coursed-ramp:
+          stage:
+            Introduction: Introduction
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-maker:
+          stage:
+            App Lab Basics: App Lab Basics
+            The Circuit Playground: The Circuit Playground
+            Physical Input: Physical Input
+            Analog Input: Analog Input
+          title: Maker Toolkit Workshop
+          description_audience: Teachers attending an in-person Maker Toolkit Workshop
+          description_short: Level progression to accompany an in-person Maker Toolkit Workshop
+          description: This level progression is intended to accompany an in-person Maker Toolkit Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of App Lab and the Maker Toolkit.
+        coursee-ramp:
+          stage:
+            Introduction: Introduction
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

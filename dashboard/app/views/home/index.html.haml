@@ -8,7 +8,9 @@
 - if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
-= render partial: 'home/survey'
+= render partial: 'home/survey_nps' if show_nps_survey? SurveyResult::NET_PROMOTER_SCORE_2017
+= render partial: 'home/survey_diversity' if show_diversity_survey? SurveyResult::DIVERSITY_2017
+
 = render partial: 'devise/confirmations/alert'
 
 #landingpage
@@ -93,7 +95,7 @@
 :javascript
   $(document).ready(function() {
 
-    // set up gallery pagination
+    // Set up gallery pagination.
     $('#gallery').on('click', '.pagination a', function() {
         $.ajax({url: $(this).attr('href'),
                 data: { },
@@ -106,6 +108,21 @@
                 }
         });
         return false;
+    });
+
+    // Show teacher announcements for US or non-US depending on location.
+    $.getJSON( "/v2/client-location", function (data) {
+      country_code = data['country_code'];
+      if (country_code === 'US' || country_code === 'RD') {
+        $('#us-announcement').show();
+      } else {
+        $('#non-us-announcement').show();
+      }
+    });
+    $(".track-link").each(function () {
+      $(this).click(function () {
+        trackEvent('teacher_announcement','click', $(this).data('id'));
+      });
     });
 
   });

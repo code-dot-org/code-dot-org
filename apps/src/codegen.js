@@ -1,5 +1,6 @@
-/* global Interpreter, CanvasPixelArray, Uint8ClampedArray */
+/* global CanvasPixelArray, Uint8ClampedArray */
 
+var Interpreter = require('@code-dot-org/js-interpreter');
 var dropletUtils = require('./dropletUtils');
 var utils = require('./utils');
 

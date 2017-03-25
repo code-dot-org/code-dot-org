@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class ApplicationHelperTest < ActionView::TestCase
+  include SharedConstants
+
   # Stub current_user
   def current_user
   end
@@ -60,22 +63,30 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test "!is_k1? by default" do
     @level = Maze.create(@maze_data)
-    assert !is_k1?
+    refute is_k1?
   end
 
   test "windows phone 8.1 supported" do
     def request
-      OpenStruct.new(headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ' \
-      'ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 930) like iPhone OS 7_0_3 Mac OS X ' \
-      'AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'))
+      OpenStruct.new(
+        headers: OpenStruct.new(
+          'User-Agent' => 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ' \
+            'ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 930) like iPhone OS 7_0_3 Mac OS X ' \
+            'AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'
+        )
+      )
     end
     assert(!browser.cdo_unsupported?)
   end
 
   test "chrome 34 detected" do
     def request
-      OpenStruct.new(headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) ' \
-      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'))
+      OpenStruct.new(
+        headers: OpenStruct.new(
+          'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) ' \
+            'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'
+        )
+      )
     end
     assert(browser.chrome?)
     assert(browser.version.to_s.to_i == 34)
@@ -217,37 +228,37 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test 'best_activity_css_class returns "not started" for no activity' do
     user_level = create :user_level, best_result: 0
-    assert_equal 'not_tried',  best_activity_css_class([user_level])
+    assert_equal LEVEL_STATUS.not_tried,  best_activity_css_class([user_level])
   end
 
   test 'best_activity_css_class returns "not started" for multiple user_levels with no activity' do
     user_level1 = create :user_level, best_result: 0
     user_level2 = create :user_level, best_result: 0
-    assert_equal 'not_tried',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.not_tried,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "attempted" for one attempted' do
     user_level1 = create :user_level, best_result: 1
     user_level2 = create :user_level, best_result: 0
-    assert_equal 'attempted',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "passed" for one passed' do
     user_level1 = create :user_level
     user_level2 = create :user_level, best_result: 20
-    assert_equal 'passed',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.passed,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "perfect" for one passed and one perfect' do
     user_level1 = create :user_level, best_result: 100
     user_level2 = create :user_level, best_result: 20
-    assert_equal 'perfect',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.perfect,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "attempted" for one unsubmitted' do
     user_level1 = create :user_level, best_result: 0
     user_level2 = create :user_level, best_result: -50
-    assert_equal 'attempted',  best_activity_css_class([user_level1, user_level2])
+    assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
   private

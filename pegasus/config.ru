@@ -12,7 +12,7 @@ use Rack::SslEnforcer,
   # The only exception is in :development, where no HTTP-cache layer is present.
   only_environments: 'development',
   # Only HTTPS-redirect in development when `https_development` is true.
-  ignore: lambda {|request| !request.ssl? && !CDO.https_development }
+  ignore: lambda {|request| !request.ssl? && !CDO.https_development}
 
 require 'varnish_environment'
 use VarnishEnvironment

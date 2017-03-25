@@ -1,7 +1,7 @@
 {
-  "basketballLaunchBall": "throw new ball",
-  "basketballLaunchBallTooltip": "Throw a ball into play.",
-  "basketballSetPaddle": "set hand",
+  "basketballLaunchBall": "գցել նոր գնդակ",
+  "basketballLaunchBallTooltip": "Գցել գնդակը խաղի մեջ:",
+  "basketballSetPaddle": "ուժի հավաքում",
   "basketballSetPaddleSpeedFast": "set fast hand speed",
   "basketballSetPaddleSpeedNormal": "set normal hand speed",
   "basketballSetPaddleSpeedRandom": "set random hand speed",

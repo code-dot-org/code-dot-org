@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+
+# This script changes the value of the allow_contact_b key in data from 'on'
+# to '1'.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/db'
+require 'cdo/geocoder'
+require src_dir 'forms'
+
+KIND = 'VolunteerEngineerSubmission2015'.freeze
+
+def dashboard_user
+  nil
+end
+
+load pegasus_dir('helpers.rb')
+
+# update_form from form_helpers does a bunch of stuff we don't want
+def update_form_with_allow_contact(kind, secret)
+  return nil unless form = DB[:forms].where(kind: kind, secret: secret).first
+
+  prev_data = JSON.parse(form[:data], symbolize_names: true)
+  data = validate_form(kind, prev_data.merge(allow_contact_b: '1'))
+
+  form[:data] = data.to_json
+  form[:updated_at] = DateTime.now
+  form[:processed_at] = nil
+  form[:indexed_at] = nil
+  form[:review] = nil
+  form[:reviewed_at] = nil
+  form[:reviewed_by] = nil
+  form[:reviewed_ip] = nil
+  DB[:forms].where(id: form[:id]).update(form)
+
+  form
+end
+
+secrets = PEGASUS_DB[:forms].
+          select(:secret).
+          where(kind: KIND).
+          where(Sequel.like(:data, '%"allow_contact_b":"on"%'))
+
+puts secrets.sql
+puts ''
+
+secrets.each do |secret|
+  secret = secret[:secret]
+  update_form_with_allow_contact(KIND, secret)
+  puts secret
+  puts PEGASUS_DB[:forms].where(secret: secret).first.inspect
+  puts ''
+end

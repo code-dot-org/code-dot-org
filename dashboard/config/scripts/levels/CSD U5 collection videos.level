@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-03-02T22:02:53.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "<img src=\"https://images.code.org/dbefd53cc9aaa2ee1c54f25afc88d860-image-1488492606296.jpg\" style=\"float:right;height:300px\">\r\n\r\n### Make a Recommendation\r\n\r\nMeScreen is a website where users can watch videos uploaded from all over the world. It has millions of videos and users and new ones every day.\r\n\r\nMeScreen recommends a Top Video to each of its users every day. You job is to collect information about your users and your videos to make the best recommendation you can.\r\n\r\n**What kinds of information should you collect AND how could you get it?**"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

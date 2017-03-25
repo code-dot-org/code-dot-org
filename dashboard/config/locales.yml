@@ -387,8 +387,7 @@
 "th": "th-TH"
 "th-TH":
   english: "Thai"
-  native: "ไทย"
-  debug: true
+  native: "ภาษาไทย"
   webfonts: false
 
 "tr": "tr-TR"

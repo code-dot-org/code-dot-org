@@ -15,6 +15,8 @@ Dashboard::Application.routes.draw do
   get '/download/:product', to: 'hoc_download#index'
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
+  get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
+  get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
 
   resources :gallery_activities, path: '/gallery' do
     collection do
@@ -46,6 +48,8 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
+  get 'docs/*docs_route', to: 'docs_proxy#get'
+
   resources :sections, only: [:show] do
     member do
       post 'log_in'
@@ -71,6 +75,7 @@ Dashboard::Application.routes.draw do
 
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
+    patch '/dashboardapi/users', to: 'registrations#update'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -82,7 +87,7 @@ Dashboard::Application.routes.draw do
   get 'discourse/sso' => 'discourse_sso#sso'
   post '/auth/lti', to: 'lti_provider#sso'
 
-  root :to => "home#index"
+  root to: "home#index"
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   namespace :home do
@@ -193,14 +198,11 @@ Dashboard::Application.routes.draw do
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
-  post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
-  post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
-  post '/milestone/:user_id/:script_level_id/:level_id', :to => 'activities#milestone', :as => 'milestone_script_level'
+  post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
+  post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
+  post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
-
-  # one-off internal reports
-  get '/admin/temp/diversity_survey', to: 'admin_reports#diversity_survey', as: 'diversity_survey'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -212,20 +214,18 @@ Dashboard::Application.routes.draw do
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
-  get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
 
   # internal search tools
   get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
-  get '/admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
 
   # internal engineering dashboards
-  get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
-  get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
-  post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
+  get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
+  get '/admin/feature_mode', to: 'feature_mode#show', as: 'feature_mode'
+  post '/admin/feature_mode', to: 'feature_mode#update', as: 'feature_mode_update'
 
   get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
   post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
@@ -234,12 +234,14 @@ Dashboard::Application.routes.draw do
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
+  get '/admin/manual_pass', to: 'admin_users#manual_pass_form', as: 'manual_pass_form'
+  post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
 
-  get '/admin/styleguide', :to => redirect('/styleguide/')
+  get '/admin/styleguide', to: redirect('/styleguide/')
 
-  get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
-  post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
-  post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+  get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
+  post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
+  post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
@@ -247,10 +249,10 @@ Dashboard::Application.routes.draw do
 
   resources :zendesk_session, only: [:index]
 
-  post '/report_abuse', :to => 'report_abuse#report_abuse'
-  get '/report_abuse', :to => 'report_abuse#report_abuse_form'
+  post '/report_abuse', to: 'report_abuse#report_abuse'
+  get '/report_abuse', to: 'report_abuse#report_abuse_form'
 
-  get '/too_young', :to => redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
+  get '/too_young', to: redirect {|_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/'}
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
@@ -305,6 +307,9 @@ Dashboard::Application.routes.draw do
   concern :api_v1_pd_routes do
     namespace :pd do
       resources :workshops do
+        collection do
+          get :filter
+        end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
           post :end
@@ -316,6 +321,8 @@ Dashboard::Application.routes.draw do
         get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
         put 'attendance/:session_id/user/:user_id', action: 'create', controller: 'workshop_attendance'
         delete 'attendance/:session_id/user/:user_id', action: 'destroy', controller: 'workshop_attendance'
+        put 'attendance/:session_id/enrollment/:enrollment_id', action: 'create_by_enrollment', controller: 'workshop_attendance'
+        delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
@@ -323,6 +330,7 @@ Dashboard::Application.routes.draw do
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
+      resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
 
       get :teacher_applications, to: 'teacher_applications#index'
@@ -330,11 +338,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  namespace :api do
-    namespace :v1 do
-      concerns :api_v1_pd_routes
-    end
-  end
+  get 'my_professional_learning', to: 'pd/professional_learning_landing#index'
 
   namespace :pd do
     # React-router will handle sub-routes on the client.
@@ -348,10 +352,16 @@ Dashboard::Application.routes.draw do
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
+
+    get 'mimeo/:enrollment_code', controller: 'mimeo_sso', action: 'authenticate_and_redirect'
+    get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
+
+    get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -373,6 +383,7 @@ Dashboard::Application.routes.draw do
     end
   end
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
+  get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'
@@ -391,6 +402,8 @@ Dashboard::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      concerns :api_v1_pd_routes
+
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
       get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: { format: 'json' }
@@ -404,4 +417,5 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: { format: 'json' }
 end

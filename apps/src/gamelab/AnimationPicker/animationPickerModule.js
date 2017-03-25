@@ -1,6 +1,13 @@
 /** @file Redux reducer and actions for the Animation Picker */
 import _ from 'lodash';
-import {addBlankAnimation, addAnimation, addLibraryAnimation} from '../animationListModule';
+import {
+  addBlankAnimation,
+  addAnimation,
+  addLibraryAnimation,
+  appendBlankFrame,
+  appendCustomFrames,
+  appendLibraryFrames
+} from '../animationListModule';
 import { makeEnum } from '../../utils';
 import { animations as animationsApi } from '../../clientApi';
 import gamelabMsg from '@cdo/gamelab/locale';
@@ -119,7 +126,7 @@ export function handleUploadComplete(result) {
       if (goal === Goal.NEW_ANIMATION) {
         dispatch(addAnimation(key, animation));
       } else if (goal === Goal.NEW_FRAME) {
-        // TODO (bbuchanan): Implement after integrating Piskel
+        dispatch(appendCustomFrames(animation));
       }
       dispatch(hide());
     }, () => {
@@ -172,7 +179,7 @@ export function pickNewAnimation() {
     if (goal === Goal.NEW_ANIMATION) {
       dispatch(addBlankAnimation());
     } else if (goal === Goal.NEW_FRAME) {
-      // TODO (bbuchanan): Implement after integrating Piskel
+      dispatch(appendBlankFrame());
     }
     dispatch(hide());
   };
@@ -191,7 +198,7 @@ export function pickLibraryAnimation(animation) {
     if (goal === Goal.NEW_ANIMATION) {
       dispatch(addLibraryAnimation(animation));
     } else if (goal === Goal.NEW_FRAME) {
-      // TODO (bbuchanan): Implement after integrating Piskel
+      dispatch(appendLibraryFrames(animation));
     }
     dispatch(hide());
   };

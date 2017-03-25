@@ -61,9 +61,9 @@ Then /^block "([^"]*)" is((?:n't| not)?) at ((?:blockly )?)location "([^"]*)"$/ 
   actual_y = is_blockly ? get_block_workspace_top(block_id) : get_block_absolute_top(block_id)
   location = @locations[location_identifier]
   if negation == ''
-    "#{actual_x},#{actual_y}".should eq "#{location.x},#{location.y}"
+    expect("#{actual_x},#{actual_y}").to eq("#{location.x},#{location.y}")
   else
-    "#{actual_x},#{actual_y}".should_not eq "#{location.x},#{location.y}"
+    expect("#{actual_x},#{actual_y}").not_to eq("#{location.x},#{location.y}")
   end
 end
 
@@ -101,10 +101,10 @@ Then /^block "([^"]*)" is visible in the workspace$/ do |block|
 
   # Minimum part of block (in pixels) that must be within workspace to be 'visible'
   block_margin = 10
-  block_bottom.should be > block_space_top + block_margin
-  block_top.should be < block_space_bottom - block_margin
-  block_left.should be < block_space_right - block_margin
-  block_right.should be > block_space_left + block_margin + toolbox_width
+  expect(block_bottom).to be > block_space_top + block_margin
+  expect(block_top).to be < block_space_bottom - block_margin
+  expect(block_left).to be < block_space_right - block_margin
+  expect(block_right).to be > block_space_left + block_margin + toolbox_width
 end
 
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
@@ -112,7 +112,7 @@ Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   # check for block id without relying on selenium element equality.
   actual_parent_id = @actual_parent_item.attribute('block-id')
-  actual_parent_id.should eql get_block_id(parent)
+  expect(actual_parent_id).to eq(get_block_id(parent))
 end
 
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
@@ -120,7 +120,7 @@ Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   # check for block id without relying on selenium element equality.
   actual_parent_id = @actual_parent_item.attribute('block-id')
-  actual_parent_id.should_not eql get_block_id(parent)
+  expect(actual_parent_id).not_to eq(get_block_id(parent))
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle$/ do
@@ -162,43 +162,51 @@ Then(/^block "([^"]*)" is in front of block "([^"]*)"$/) do |block_front, block_
   raise('Cannot evaluate blocks with different parents') unless blocks_have_same_parent
   block_front_index = @browser.execute_script("return $(\"[block-id='#{block_front_id}']\").index()")
   block_back_index = @browser.execute_script("return $(\"[block-id='#{block_back_id}']\").index()")
-  block_front_index.should be > block_back_index
+  expect(block_front_index).to be > block_back_index
 end
 
 Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
   code = "return Blockly.mainBlockSpace.getAllBlocks().reduce(function (a, b) { return a + (b.type === '" + type + "' ? 1 : 0) }, 0)"
   result = @browser.execute_script(code)
-  result.should eq n.to_i
+  expect(result).to eq(n.to_i)
 end
 
 Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
   code = "return Blockly.mainBlockSpace.getAllBlocks().some(function (block) { return block.id == '" + get_block_id(block_id) + "'; })"
   result = @browser.execute_script(code)
   if negation.nil?
-    result.should eq false
+    expect(result).to eq(false)
   else
-    result.should eq true
+    expect(result).to eq(true)
   end
 end
 
 Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
-  classes.include?(class_name).should eq true
+  expect(classes.include?(class_name)).to eq(true)
+end
+
+When /^I wait until block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
+  wait_until do
+    item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
+    classes = item.attribute("class")
+    classes.include?(class_name)
+  end
 end
 
 Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, class_name|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
-  classes.include?(class_name).should eq false
+  expect(classes.include?(class_name)).to eq(false)
 end
 
 Then /^the modal function editor is closed$/ do
-  modal_dialog_visible.should eq false
+  expect(modal_dialog_visible).to eq(false)
 end
 
 Then /^the modal function editor is open$/ do
-  modal_dialog_visible.should eq true
+  expect(modal_dialog_visible).to eq(true)
 end
 
 When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|

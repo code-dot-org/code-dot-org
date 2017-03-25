@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-# This script monitors level completion rates and issues HipChat complaints if a significant
+# This script monitors level completion rates and issues Slack complaints if a significant
 # number of browsers has attempted a level without anybody finishing it successfully.
 #
 # Currently data is sent to LogEntries for collection and collation via TCP-based log. This
@@ -14,7 +14,7 @@
 Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
 require_relative '../../dashboard/config/environment'
 require 'cdo/only_one'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'cdo/user_agent_parser'
 
 SECONDS_PER_MSEC = 1000
@@ -196,17 +196,12 @@ def main
 
     min_attempts_per_hour = HARD_LEVEL_ATTEMPTS_PER_HOUR[i[:level]] || MINIMUM_ATTEMPTS_PER_HOUR
 
-    if finishes == 0 && starts > min_attempts_per_hour * HOURS_TO_TEST
-      level_url = "https://studio.code.org/levels/#{i[:level]}"
+    next unless finishes == 0 && starts > min_attempts_per_hour * HOURS_TO_TEST
+    level_url = "https://studio.code.org/levels/#{i[:level]}"
 
-      log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{HOURS_TO_TEST} hour(s)]
-      sl = Script.cache_find_level(i[:level]).script_levels.first
-      if sl
-        level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
-      end
-      log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
-      HipChat.message 'ActivityMonitor', log_string, color: 'yellow', notify: 1
-    end
+    log_string = %[<b>#{i[:browser]}</b> hasn't passed <b><a href="#{level_url}">level #{i[:level]}</a></b> despite <b>#{i[:starts]}</b> attempts in the last #{HOURS_TO_TEST} hour(s)]
+    log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
+    ChatClient.message 'ActivityMonitor', log_string, color: 'yellow', notify: 1
   end
 end
 

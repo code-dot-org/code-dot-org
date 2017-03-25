@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Pd::Payment
   class PaymentCalculatorStandardTest < ActiveSupport::TestCase
+    self.use_transactional_test_case = true
+
     setup do
       # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
       @workshop = create :pd_ended_workshop,
@@ -30,10 +32,10 @@ module Pd::Payment
       end
     end
 
-    test 'small venue non-plp' do
+    test 'small venue non-regional-partner' do
       workshop_summary = PaymentCalculatorStandard.instance.calculate(@workshop)
 
-      assert_nil workshop_summary.plp
+      assert_nil workshop_summary.workshop.regional_partner
       assert_equal 11, workshop_summary.num_teachers
       assert_equal 10, workshop_summary.num_qualified_teachers
       assert_equal 29, workshop_summary.total_teacher_attendance_days
@@ -51,16 +53,18 @@ module Pd::Payment
       assert_equal 6110, payment.total
     end
 
-    test 'large venue plp non-urban' do
-      plp = create :professional_learning_partner, contact: @workshop.organizer, urban: false
+    test 'large venue regional partner non-urban' do
+      rp = create :regional_partner, urban: false
 
       # Add an extra qualified teacher to go over the large venue threshold.
       create :pd_workshop_participant, workshop: @workshop,
         enrolled: true, in_section: true, attended: @workshop.sessions
 
+      @workshop.regional_partner = rp
+
       workshop_summary = PaymentCalculatorStandard.instance.calculate(@workshop)
 
-      assert_equal plp, workshop_summary.plp
+      assert_equal rp, workshop_summary.workshop.regional_partner
       assert_equal 12, workshop_summary.num_teachers
       assert_equal 11, workshop_summary.num_qualified_teachers
       assert_equal 32, workshop_summary.total_teacher_attendance_days
@@ -78,12 +82,14 @@ module Pd::Payment
       assert_equal 6380, payment.total
     end
 
-    test 'small venue plp urban' do
-      plp = create :professional_learning_partner, contact: @workshop.organizer, urban: true
+    test 'small venue regional partner urban' do
+      rp = create :regional_partner, urban: true
+
+      @workshop.regional_partner = rp
 
       workshop_summary = PaymentCalculatorStandard.instance.calculate(@workshop)
 
-      assert_equal plp, workshop_summary.plp
+      assert_equal rp, workshop_summary.workshop.regional_partner
       assert_equal 11, workshop_summary.num_teachers
       assert_equal 10, workshop_summary.num_qualified_teachers
       assert_equal 29, workshop_summary.total_teacher_attendance_days

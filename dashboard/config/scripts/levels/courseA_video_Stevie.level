@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2017-03-23T00:58:33.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSF_stevie_big_project",
+    "instructions_important": "false",
+    "display_name": "Stevie and the Big Project",
+    "encrypted_teacher_markdown": "oeSJ8+QwFWq68KkqwqNu+nXCa6nLlqvAetSh0K7HGbYvsIaqIIYmhr5FZJA+\n2kKNgfTLrR5VzaggM6pQGazG03gWL6yT81j0+gAMh1VsbjxvqPGeiwEYEAOZ\nyyaNPncPbd/5iz7hpV/xmJILzgubyJ+gBeNoQkaThHaY4dknULTcZimphdMQ\nkAHsXO14gV5NyjRHp1xCnwaxJYEC/KDl0MuzB4DeKIJg6ZdCtV3ae0864zDu\nEyqfI6heD839nfT9gN18vepgs081PjtL4fY69Zq7MWuf6G/xPlMEL/jRVH28\nnAHiWovMDm9ZbI4ojhgQuOYxSzUq1puIYQvqSoHUvXBI844FvBr62V1Tb8+o\n88hVE+uPwV800wCdOu2A7YaUtjZ5Wxfq0TphRd6VyTZOnnQ80zXzoiyy5Wup\nzFJbsSTjNyyd+uk0nQlTD+nK8Qkw1v98bvIjZSyr9kR7la5DoBO/l0rjlOpP\nlRPsmj0shLhLC6f0/MqZ0N1NTKSf1hiX3Fks+wubodqQYRtzDCr0DXVggXVk\nYUY5LS11eEIa/E0xN6IJUAXKd5f522asEU3n7Vl8jjoan8b4+/2wScVoZ233\nXOF+cBysJiKiezJY+ZR9kU66k04a2r/wFnFgRx5t25M+Pi5HrE/HnPX9NCes\nX298bQMGGRrb/ETeO7a70LY=\n",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

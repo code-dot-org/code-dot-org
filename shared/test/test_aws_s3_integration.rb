@@ -5,7 +5,7 @@ class AwsS3IntegrationTest < Minitest::Test
   include SetupTest
 
   # A test bucket, only used for these tests.
-  TEST_BUCKET = 'cdo-temp'
+  TEST_BUCKET = 'cdo-temp'.freeze
 
   # An integration test of the AWS S3 wrapper that runs against the actual AWS service.
   def test_aws_s3
@@ -13,14 +13,14 @@ class AwsS3IntegrationTest < Minitest::Test
     random = Random.new(0)
     test_key = random.rand.to_s
     test_value = 'hello\x00\x01\xFF'
-    upload_key = AWS::S3.upload_to_bucket(TEST_BUCKET, test_key, test_value, :no_random => true)
+    upload_key = AWS::S3.upload_to_bucket(TEST_BUCKET, test_key, test_value, no_random: true)
     assert_equal test_value, AWS::S3.download_from_bucket(TEST_BUCKET, test_key)
     assert_equal test_key, upload_key
 
     # Make sure a string all of possible bytes and make sure it round trips correctly.
     video_key = 'video_key'
     all_bytes = (0..255).to_a.pack('C*')
-    AWS::S3.upload_to_bucket(TEST_BUCKET, video_key, all_bytes, :no_random => true, :content_type => 'video/mp4')
+    AWS::S3.upload_to_bucket(TEST_BUCKET, video_key, all_bytes, no_random: true, content_type: 'video/mp4')
     value = AWS::S3.download_from_bucket(TEST_BUCKET, video_key)
     assert_equal all_bytes, value
     assert_equal Encoding::BINARY, value.encoding
@@ -75,7 +75,7 @@ class AwsS3IntegrationTest < Minitest::Test
     allows_public_reads = private_grants.detect do |grant|
       grant.grantee.uri == all_users_uri && grant.permission == 'READ'
     end
-    assert !allows_public_reads, 'default acl should not allow public reads'
+    refute allows_public_reads, 'default acl should not allow public reads'
   end
 
   def test_public_url

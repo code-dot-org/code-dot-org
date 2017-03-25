@@ -2,14 +2,14 @@ require 'test_helper'
 
 class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   setup do
-    #Questions/Answers taken from Monty Python and the Holy Grail in case it wasn't obvious. Figured it would be easier
-    #then a bunch of strings with names like 'Answer 1'
+    # Questions/Answers taken from Monty Python and the Holy Grail in case it wasn't obvious. Figured it would be easier
+    # then a bunch of strings with names like 'Answer 1'.
 
-    #Rather then break up testing into each of the modules, I figure its easier to test the evaluation end-to-end
-    #experience in this one file
+    # Rather then break up testing into each of the modules, I figure its easier to test the evaluation end-to-end
+    # experience in this one file.
 
-    #I used the dialogue from Monty Python because it's actually a decent example of an evaluation quiz that isn't
-    #the same for everyone. Not all users taking an examination will answer the exact same questions.
+    # I used the dialogue from Monty Python because it's actually a decent example of an evaluation quiz that isn't
+    # the same for everyone. Not all users taking an examination will answer the exact same questions.
     @course = create(:plc_course)
     @course_unit = create(:plc_course_unit, plc_course: @course)
 
@@ -36,7 +36,11 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   end
 
   test "submit evaluation enrolls user in appropriate modules" do
-    post :confirm_assignments, script_id: @course_unit.script.name, content_module: @module_content_1, practice_module: @module_practice_1
+    post :confirm_assignments, params: {
+      script_id: @course_unit.script.name,
+      content_module: @module_content_1,
+      practice_module: @module_practice_1
+    }
     assert_redirected_to script_path(@course_unit.script)
     assert_equal (Set.new [@module_required, @module_content_1, @module_practice_1]), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set
   end
@@ -60,7 +64,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     Plc::CourseUnit.any_instance.stubs(:determine_preferred_learning_modules).returns([@module_content_2, @module_practice_2])
 
     @unit_assignment.enroll_user_in_unit_with_learning_modules([@module_content_1, @module_practice_1])
-    get :preview_assignments, script_id: @course_unit.script.name
+    get :preview_assignments, params: {script_id: @course_unit.script.name}
 
     #In spite of the fact that the user answered stuff for content1 and practice1, their enrollment should still be 1, 1
     assert_equal (Set.new([@module_required, @module_content_1, @module_practice_1])), @unit_assignment.plc_module_assignments.map(&:plc_learning_module).to_set

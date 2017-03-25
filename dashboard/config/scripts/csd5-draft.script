@@ -1,0 +1,20 @@
+hideable_stages true
+
+stage 'Representing Images'
+level 'CSD U5 black white images pixelation'
+level 'CSD U5 black white images pixelation 2'
+level 'CSD U5 black white images pixelation 3'
+level 'CSD U5 black white images pixelation 4'
+
+stage 'Combining Representations'
+level 'CSD U3 combining rep'
+level 'CSD U5 student record'
+
+stage 'Interpreting Data'
+level 'CSD U5 data visualization'
+level 'CSD U5 data visualization sheet'
+
+stage 'Data in the Real World'
+level 'CSD U5 video2'
+level 'CSD U5 collection UPS2'
+level 'CSD U5 collection ads2'

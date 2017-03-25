@@ -2,13 +2,15 @@
 #
 # Table name: pd_teacher_applications
 #
-#  id              :integer          not null, primary key
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  user_id         :integer          not null
-#  primary_email   :string(255)      not null
-#  secondary_email :string(255)      not null
-#  application     :text(65535)      not null
+#  id                        :integer          not null, primary key
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  user_id                   :integer          not null
+#  primary_email             :string(255)      not null
+#  secondary_email           :string(255)      not null
+#  application               :text(65535)      not null
+#  accepted_workshop         :string(255)
+#  regional_partner_override :string(255)
 #
 # Indexes
 #
@@ -191,18 +193,31 @@ class Pd::TeacherApplication < ActiveRecord::Base
     school_district.try(:name) || application_hash['school-district-name']
   end
 
+  def regional_partner
+    school_district.try do |d|
+      d.regional_partners_school_districts.find_by(course: selected_course).try(:regional_partner) ||
+      d.regional_partners.first
+    end
+  end
+
+  def regional_partner_override=(value)
+    write_attribute :regional_partner_override, value if value.present? && value != regional_partner_name
+  end
+
   def regional_partner_name
-    school_district.try(:regional_partner).try(:name)
+    regional_partner_override || regional_partner.try(:name)
   end
 
   def to_expanded_json
-    application_hash.merge({
-      id: id,
-      userId: user_id,
-      timestamp: created_at,
-      schoolName: school_name,
-      schoolDistrictName: school_district_name,
-      regionalPartner: regional_partner_name
-    }).stringify_keys
+    application_hash.merge(
+      {
+        id: id,
+        userId: user_id,
+        timestamp: created_at,
+        schoolName: school_name,
+        schoolDistrictName: school_district_name,
+        regionalPartner: regional_partner_name
+      }
+    ).stringify_keys
   end
 end

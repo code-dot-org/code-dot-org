@@ -17,9 +17,22 @@ Computer Science Discoveries
 
 [/solid-block-header]
 
-<img src="/images/csdiscoveries-montage.jpg" width="500px">
+<% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
+<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>'Computer Science Discoveries @codeorg'} %>
 
-Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
+<div style="float:left; padding:10px; width:49%">
+
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+
+</div>
+
+Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school (grades 7-9). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.  This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
+
+<div style="float:right; padding:10px; width:49%">
+
+<img src="/images/fit-400/csdiscoveries-montage.jpg">
+
+</div>
 
 ## Units of Study
 
@@ -27,8 +40,8 @@ Computer Science Discoveries is a full-year introductory computer science survey
 * **Unit 2:** The Internet: Web Development
 * **Unit 3:** Programming: Interactive Games & Animations
 * **Unit 4:** Problem Solving: The Design Process
-* **Unit 2:** The Internet: Data and Society
-* **Unit 3:** Programming: The Internet of Things
+* **Unit 5:** The Internet: Data and Society
+* **Unit 6:** Programming: The Internet of Things
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
@@ -40,7 +53,9 @@ Computer Science Fundamentals - Accelerated
 
 <img src="/images/code20hr.jpg">
 
-Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a middle school after-school program or as a unit in a technology or programming class.
+For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, 
+Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the 
+[Computer Science Fundamentals](https://studio.code.org) progression for elementary school students, but at an accelerated pace designed for students ages 10-18.
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 
@@ -57,7 +72,7 @@ Computer Science in Science
 
 <i>Note: Starting in the 2017-2018 school year, Code.org will not be offering professional development for this course.</i>
 
- </div>
+</div>
 
 [col-50]
 
@@ -75,7 +90,7 @@ For Algebra Classrooms
 
 [/solid-block-header]
 
-Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. [Computer Science in Algebra Course A](/educate/algebra) is a ~10 hour, block based course available from Code.org. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, these courses demonstrate how algebra applies in the real world, using an exciting, hands-on approach to create something cool. 
+Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. [Computer Science in Algebra Course A](/educate/algebra) is a ~10 hour, block based course available from Code.org. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, these courses demonstrate how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 <br>
 
 [solid-block-header]
@@ -103,6 +118,8 @@ Other Resources
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
+
+<%= view :course_explorer_blurb %>
 
 ## Inspire students
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.

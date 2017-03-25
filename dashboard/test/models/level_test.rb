@@ -4,10 +4,10 @@ class LevelTest < ActiveSupport::TestCase
   include ActionDispatch::TestProcess
 
   setup do
-    @turtle_data = {:game_id => 23, :name => "__bob4", :level_num => "custom", :skin => "artist", :instructions => "sdfdfs", :type => 'Artist'}
-    @custom_turtle_data = {:solution_level_source_id => 4, :user_id => 1}
-    @maze_data = {:game_id => 25, :name => "__bob4", :level_num => "custom", :skin => "birds", :instructions => "sdfdfs", :type => 'Maze'}
-    @custom_maze_data = @maze_data.merge(:user_id => 1)
+    @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
+    @custom_turtle_data = {solution_level_source_id: 4, user_id: 1}
+    @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
+    @custom_maze_data = @maze_data.merge(user_id: 1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
@@ -15,7 +15,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'create level' do
-    Level.create(:game_id => 25, :name => "__bob4", :level_num => "custom", :skin => "birds", :instructions => "sdfdfs", :type => 'Maze')
+    Level.create(game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze')
   end
 
   test "throws argument error on bad data" do
@@ -26,15 +26,31 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "reads and converts data" do
-    csv = stub(:read => [['0', '1'], ['1', '2']])
+    csv = stub(read: [['0', '1'], ['1', '2']])
     maze = Maze.load_maze(csv, 2)
     assert_equal [[0, 1], [1, 2]], maze
   end
 
   test "parses maze data" do
-    csv = stub(:read => [['0', '1'], ['1', '2']])
+    csv = stub(read: [['0', '1'], ['1', '2']])
     maze = Maze.parse_maze(Maze.load_maze(csv, 2).to_json)
     assert_equal({'maze' => [[0, 1], [1, 2]].to_json}, maze)
+  end
+
+  test "karel checks total value" do
+    json = [[
+      {tileType: 1, value: 1},
+      {tileType: 1, value: 2},
+      {tileType: 1, value: 3},
+    ]].to_json
+
+    assert_nothing_raised do
+      Karel.parse_maze(json, 6)
+    end
+
+    assert_raises ArgumentError do
+      Karel.parse_maze(json, 7)
+    end
   end
 
   test "cannot create two custom levels with same name" do
@@ -189,7 +205,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'update_ideal_level_source does nothing for maze levels' do
     level = Maze.first
     level.update_ideal_level_source
-    assert_equal nil, level.ideal_level_source
+    assert_nil level.ideal_level_source
   end
 
   test 'artist levels are seeded with solutions' do
@@ -258,7 +274,7 @@ EOS
   end
 
   def create_maze
-    maze = create(:maze, :published => true)
+    maze = create(:maze, published: true)
     assert maze
   end
 
@@ -354,7 +370,7 @@ EOS
 
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)
-    assert_equal nil, level.examples
+    assert_nil level.examples
   end
 
   test 'gamelab examples' do
@@ -384,7 +400,37 @@ EOS
 
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)
-    assert_equal nil, level.examples
+    assert_nil level.examples
+  end
+
+  test 'weblab examples' do
+    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+
+    level = Weblab.create(name: 'weblab_with_example')
+    level.examples = ['xxxxxx', 'yyyyyy']
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # this property is encrypted, not plaintext
+    assert_nil level.properties['examples']
+    assert level.properties['encrypted_examples']
+
+    # take out nils and empty strings
+    level.examples = ['xxxxxx', nil, "", 'yyyyyy', ""]
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # does not crash if decryption is busted
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    assert_nil level.examples
   end
 
   test 'cached_find' do
@@ -409,23 +455,23 @@ EOS
 
     levels = Level.where_we_want_to_calculate_ideal_level_source
 
-    assert !levels.include?(match_level)
-    assert !levels.include?(level_with_ideal_level_source_already)
-    assert !levels.include?(freeplay_artist)
+    refute levels.include?(match_level)
+    refute levels.include?(level_with_ideal_level_source_already)
+    refute levels.include?(freeplay_artist)
     assert levels.include?(regular_artist)
   end
 
   test 'calculate_ideal_level_source_id does nothing if no level sources' do
     level = Maze.create(name: 'maze level with no level sources')
-    assert_equal nil, level.ideal_level_source_id
+    assert_nil level.ideal_level_source_id
 
     level.calculate_ideal_level_source_id
-    assert_equal nil, level.ideal_level_source_id
+    assert_nil level.ideal_level_source_id
   end
 
   test 'calculate_ideal_level_source_id sets ideal_level_source_id to best solution' do
     level = Maze.create(name: 'maze level with level sources')
-    assert_equal nil, level.ideal_level_source_id
+    assert_nil level.ideal_level_source_id
 
     right = create(:level_source, level: level, data: "<xml><right/></xml>")
     6.times do
@@ -444,5 +490,86 @@ EOS
 
     level.calculate_ideal_level_source_id
     assert_equal right, level.ideal_level_source
+  end
+
+  test 'localizes callouts' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+          "#{level_name}_callout" => {
+            "first": "first test markdown",
+            "second": "second test markdown",
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      user: create(:user),
+      callout_json: JSON.generate(
+        [
+          {"callout_text": "first english markdown", "localization_key": "first"},
+          {"callout_text": "second english markdown", "localization_key": "second"},
+        ]
+      )
+    )
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first test markdown"
+    assert_equal callouts[1].callout_text, "second test markdown"
+  end
+
+  test 'handles bad callout localization data' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_callouts'
+    I18n.locale = test_locale
+
+    level = Level.create(
+      name: level_name,
+      user: create(:user),
+      callout_json: JSON.generate(
+        [
+          {"callout_text": "first english markdown", "localization_key": "first"},
+          {"callout_text": "second english markdown", "localization_key": "second"},
+        ]
+      )
+    )
+
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+          "#{level_name}_callout" => []
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first english markdown"
+    assert_equal callouts[1].callout_text, "second english markdown"
+
+    custom_i18n = {
+      'data' => {
+        'callouts' => {
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    callouts = level.available_callouts nil
+
+    assert_equal callouts[0].callout_text, "first english markdown"
+    assert_equal callouts[1].callout_text, "second english markdown"
   end
 end

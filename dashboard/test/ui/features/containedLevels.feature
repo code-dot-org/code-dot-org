@@ -24,7 +24,7 @@ Scenario: Applab with free response contained level
   And I see no difference for "finished level with contained level"
   And I press "continue-button"
   # Make sure continue takes us to next level
-  And I wait until current URL contains "/stage/19/"
+  And I wait until current URL contains "/stage/18/puzzle/16"
   Then I close my eyes
 
 Scenario: Gamelab with multiple choice contained level

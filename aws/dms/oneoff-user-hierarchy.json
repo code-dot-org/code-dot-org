@@ -411,6 +411,16 @@
         "table-name": "studio_people",
         "column-name": "emails"
       }
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "36",
+      "rule-name": "36",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "sign_ins"
+      },
+      "rule-action": "include"
     }
   ]
 }

@@ -170,7 +170,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -195,7 +196,7 @@
     "lock_zero_param_functions": "false",
     "free_play": "false",
     "text_mode_at_start": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "start_animations": "{\n    \"orderedKeys\": [\n        \"asterisk_circle\",\n        \"blocks\",\n        \"cat_in_a_bottle\"\n    ],\n    \"propsByKey\": {\n        \"asterisk_circle\": {\n            \"name\": \"asterisk_circle\",\n            \"sourceUrl\": \"/blockly/media/gamelab/library/asterisk_circle.png\",\n            \"sourceSize\": {\n                \"x\": 396,\n                \"y\": 378\n            },\n            \"frameSize\": {\n                \"x\": 132,\n                \"y\": 126\n            },\n            \"frameCount\": 9,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"blocks\": {\n            \"name\": \"blocks\",\n            \"sourceUrl\": \"https://images.code.org/0aca9e3ba0945f31ddd56438a45ed69c-image-1436286498758.png\",\n            \"sourceSize\": {\n                \"x\": 137,\n                \"y\": 132\n            },\n            \"frameSize\": {\n                \"x\": 137,\n                \"y\": 132\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        },\n        \"cat_in_a_bottle\": {\n            \"name\": \"cat in a bottle\",\n            \"sourceUrl\": \"http://duplo.jovan.com.ua/i/2011fake/02/banka/cat-in-bottle2.jpg\",\n            \"sourceSize\": {\n                \"x\": 388,\n                \"y\": 379\n            },\n            \"frameSize\": {\n                \"x\": 388,\n                \"y\": 379\n            },\n            \"frameCount\": 1,\n            \"frameDelay\": 2,\n            \"looping\": true\n        }\n    }\n}",

@@ -12,6 +12,7 @@ var ALLOWED_KEYS = new Set([
   'hasDataMode',
   'hasDesignMode',
   'isEmbedView',
+  'isResponsive',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
   'isShareView',
@@ -27,12 +28,15 @@ var ALLOWED_KEYS = new Set([
   'showDebugConsole',
   'showDebugWatch',
   'showDebugSlider',
+  'locale',
   'localeDirection',
   'hasContainedLevels',
   'isDroplet',
+  'isBlockly',
   'isMinecraft',
   'visualizationHasPadding',
   'visualizationInWorkspace',
+  'hideCoordinateOverlay',
   'hideSource',
   'hideRunButton',
   'playspacePhoneFrame',
@@ -49,6 +53,7 @@ var ALLOWED_KEYS = new Set([
   'is13Plus',
   'isSignedIn',
   'isK1',
+  'documentationUrl',
 ]);
 
 const initialState = {
@@ -92,7 +97,7 @@ export default function reducer(state = initialState, action) {
  * @param {boolean} [props.isViewDataButtonHidden] - Whether to hide the view
  *        data button from the playspace header.
  * ...
- * @returns {{type: ActionType, props: Object}}
+ * @returns {{type: string, props: Object}}
  */
 export function setPageConstants(props) {
   return {

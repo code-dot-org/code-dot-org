@@ -11,7 +11,6 @@ Scenario:
   And I sign out
   Given I am on "http://code.org/"
   And I reload the page
-  Then I wait for 2 seconds
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
@@ -21,8 +20,7 @@ Scenario:
   Then check that I am on "http://studio.code.org/"
   Then element ".user_menu span:first" has text "Hi Bob"
   Then I click selector ".user_menu span:first"
-  Then I click selector ".user_menu a:last"
-  Then I wait for 2 seconds
+  Then I click selector ".user_menu a:last" to load a new page
   Then I wait to see ".header_user"
 
 # student signin from studio.code.org
@@ -33,7 +31,6 @@ Scenario:
   And I sign out
   Given I am on "http://studio.code.org/"
   And I reload the page
-  Then I wait for 2 seconds
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
@@ -43,8 +40,7 @@ Scenario:
   Then check that I am on "http://studio.code.org/"
   Then element ".user_menu span:first" has text "Hi Alice"
   Then I click selector ".user_menu span:first"
-  Then I click selector ".user_menu a:last"
-  Then I wait for 2 seconds
+  Then I click selector ".user_menu a:last" to load a new page
   Then I wait to see ".header_user"
 
 # teacher sign in
@@ -52,22 +48,17 @@ Scenario:
   Given I am on "http://studio.code.org/"
   And I set the language cookie
   And I create a teacher named "Casey"
-  And I wait for 2 seconds
   And I sign out
   Given I am on "http://code.org/"
   And I reload the page
-  Then I wait for 2 seconds
   Then I wait to see ".header_user"
   Then I click selector "#signin_button"
   And I wait to see ".new_user"
   And I fill in username and password for "Casey"
-  And I click selector "#signin-button"
-  Then I wait for 2 seconds
+  And I click selector "#signin-button" to load a new page
   And I wait to see ".header_user"
-  Then I wait for 2 seconds
   Then check that the url contains "teacher-dashboard"
   Then element ".user_menu span:first" has text "Hi Casey"
   Then I click selector ".user_menu span:first"
-  Then I click selector ".user_menu a:last"
-  Then I wait for 2 seconds
+  Then I click selector ".user_menu a:last" to load a new page
   Then I wait to see ".header_user"

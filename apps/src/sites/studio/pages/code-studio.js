@@ -29,7 +29,9 @@ require('@cdo/apps/code-studio/components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
-$.fn.modal.Constructor.prototype.enforceFocus = function () {};
+if ($.fn.modal) {
+  $.fn.modal.Constructor.prototype.enforceFocus = function () {};
+}
 
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
@@ -37,7 +39,6 @@ window.dashboard.createCallouts = require('@cdo/apps/code-studio/callouts');
 window.dashboard.hashEmail = require('@cdo/apps/code-studio/hashEmail');
 window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
 window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
-window.dashboard.progress = require('@cdo/apps/code-studio/progress');
 window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');
 window.dashboard.header = require('@cdo/apps/code-studio/header');
 window.dashboard.videos = require('@cdo/apps/code-studio/videos');
@@ -58,8 +59,9 @@ window.Dialog = require('@cdo/apps/code-studio/dialog');
 // would get preloaded. In webpack, they're only loaded as needed. We were
 // depending on these two modules being loaded when code-studio-common was
 // included, so force that load here.
-require('@cdo/apps/code-studio/levels/multi');
-require('@cdo/apps/code-studio/levels/textMatch');
+window.FreeResponse = require('@cdo/apps/code-studio/levels/freeResponse');
+window.Multi = require('@cdo/apps/code-studio/levels/multi');
+window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in New Relic.

@@ -4,7 +4,8 @@ module Ops
     include Devise::Test::ControllerHelpers
     API = ::OPS::API
 
-    setup do
+    self.use_transactional_test_case = true
+    setup_all do
       @admin = create(:admin)
       @workshop = create(:workshop)
       @cohort = @workshop.cohorts.first
@@ -34,7 +35,7 @@ module Ops
       assert_routing({ path: "#{API}/workshops/1/teachers", method: :get }, { controller: 'ops/workshops', action: 'teachers', id: '1' })
 
       sign_in @workshop.facilitators.first
-      get :teachers, id: @workshop.id
+      get :teachers, params: {id: @workshop.id}
       assert_response :success
       assert_equal @cohort.teachers.count, assigns(:workshop).teachers.count
     end
@@ -44,14 +45,15 @@ module Ops
       unexpected_teacher_1 = create(:teacher, district_id: @district.id, ops_first_name: 'Laurel', ops_last_name: 'X', email: 'laurel_x@example.xx', ops_school: 'Washington Elementary', ops_gender: 'Female')
       unexpected_teacher_2 = create(:teacher, district_id: @district.id, ops_first_name: 'Laurel', ops_last_name: 'Y', email: 'laurel_y@example.yy', ops_school: 'Washington Elementary', ops_gender: 'Female')
       unexpected_teacher_params = [
-          {email: unexpected_teacher_1.email},
-          {email: unexpected_teacher_2.email}]
+        {email: unexpected_teacher_1.email},
+        {email: unexpected_teacher_2.email}
+      ]
       workshop_params = {"unexpected_teachers" => unexpected_teacher_params}
-      put :update, id: @workshop.id, workshop: workshop_params
+      put :update, params: {id: @workshop.id, workshop: workshop_params}
       @workshop.reload
       assert_equal [unexpected_teacher_1, unexpected_teacher_2], @workshop.unexpected_teachers
 
-      assert !ActionMailer::Base.deliveries.empty?
+      refute ActionMailer::Base.deliveries.empty?
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
       assert_equal ['ops@code.org'], mail.to
@@ -68,7 +70,7 @@ module Ops
         "location" => @workshop.location,
         "cohorts" => [{"id" => @cohort.id}, {"id" => another_cohort.id}]
       }
-      patch :update, id: @workshop.id, workshop: workshop_params
+      patch :update, params: {id: @workshop.id, workshop: workshop_params}
       assert_response :success
       @workshop.reload
       assert_equal [@cohort, another_cohort], @workshop.cohorts
@@ -101,10 +103,18 @@ module Ops
       assert_routing({ path: "#{API}/workshops", method: :post }, { controller: 'ops/workshops', action: 'create' })
 
       facilitator_params = [
-                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
+        {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}
+      ]
 
       assert_creates(Workshop, User) do
-        post :create, workshop: {name: 'test workshop', program_type: '1', cohorts: [{id: @cohort.id}], facilitators: facilitator_params}
+        post :create, params: {
+          workshop: {
+            name: 'test workshop',
+            program_type: '1',
+            cohorts: [{id: @cohort.id}],
+            facilitators: facilitator_params
+          }
+        }
       end
       assert_response :success
 
@@ -123,11 +133,15 @@ module Ops
 
       facilitator_params = @workshop.facilitators.map {|facilitator| {ops_first_name: facilitator.name, email: facilitator.email, id: facilitator.id}}
       facilitator_params += [
-                         {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}]
+        {ops_first_name: 'Laurel', ops_last_name: 'X', email: 'fac@email.xx'}
+      ]
 
       assert_creates(User) do
         assert_difference('@workshop.reload.facilitators.count') do
-          patch :update, id: @workshop.id, workshop: {facilitators: facilitator_params}
+          patch :update, params: {
+            id: @workshop.id,
+            workshop: {facilitators: facilitator_params}
+          }
         end
       end
 
@@ -142,7 +156,7 @@ module Ops
       sign_in @admin
       assert_routing({ path: "#{API}/workshops/1", method: :get }, { controller: 'ops/workshops', action: 'show', id: '1' })
 
-      get :show, id: @workshop.id
+      get :show, params: {id: @workshop.id}
       assert_response :success
     end
 
@@ -151,9 +165,9 @@ module Ops
       assert_routing({ path: "#{API}/workshops/1", method: :patch }, { controller: 'ops/workshops', action: 'update', id: '1' })
 
       new_name = 'New workshop name'
-      patch :update, id: @workshop.id, workshop: {name: new_name}
+      patch :update, params: {id: @workshop.id, workshop: {name: new_name}}
 
-      get :show, id: @workshop.id
+      get :show, params: {id: @workshop.id}
       assert_equal new_name, JSON.parse(@response.body)['name']
       assert_response :success
     end
@@ -163,7 +177,7 @@ module Ops
       assert_routing({ path: "#{API}/workshops/1", method: :delete }, { controller: 'ops/workshops', action: 'destroy', id: '1' })
 
       assert_difference 'Workshop.count', -1 do
-        get :destroy, id: @workshop.id
+        get :destroy, params: {id: @workshop.id}
       end
       assert_response :success
     end
@@ -181,7 +195,7 @@ module Ops
     def all_forbidden
       get :index
       assert_response :forbidden
-      get :show, id: @workshop.id
+      get :show, params: {id: @workshop.id}
       assert_response :forbidden
     end
   end

@@ -12,7 +12,7 @@ social:
 ---
 -state = File.basename(request.path_info)
 -facebook = {:u=>'https://code.org/promote' + (state != "thanks" ? "/" + state : "")}
--twitter = {:url=>"https://code.org", :related=>'codeorg', :hashtags=>'CSforAll', :text=>'9 out of 10 parents agree, every student should have the opportunity to learn computer science.'}
+-twitter = {:url=>"https://code.org", :related=>'codeorg', :text=>'9 out of 10 parents agree, every student should have the opportunity to learn computer science.'}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
@@ -53,9 +53,6 @@ social:
     #youtube-section.section.clear
       %h2 Tell the world! Share the Code.org video.
       = view :youtube_videos
-
-      #stateaction{:style=>'padding-left:30px'}
-        %a{:href=>"/action"} See where computer science counts towards high school graduation
 
     #quotes-section.section.clear
       %h2 Leaders and trendsetters agree more students should learn computer science
@@ -99,4 +96,3 @@ social:
       $("#petition-section").hide();
     }
   });
-

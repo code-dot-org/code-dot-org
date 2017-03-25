@@ -3,7 +3,6 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import _ from 'lodash';
 import {
@@ -15,7 +14,7 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
-import {getDistrictDropdownValues, validateDistrictData} from './district_dropdown_helper.js';
+import {validateDistrictData} from './district_dropdown_helper.js';
 import SummerProgramContent from './SummerProgramContent';
 import {getWorkshopForState} from './applicationConstants.js';
 
@@ -71,6 +70,7 @@ const isEmail = (value) => {
     return 'Please enter a valid email address, like name@example.com';
   }
 };
+
 const isPhoneNumber = (value) => {
   if (value.replace(/[^0-9]/g, '').length < 10) {
     return 'Phone numbers must have at least 10 digits, like (123) 456-7890';
@@ -96,7 +96,10 @@ const TeacherApplication = React.createClass({
 
   propTypes: {
     regionalPartnerGroup: React.PropTypes.number,
-    regionalPartnerName: React.PropTypes.string
+    regionalPartnerName: React.PropTypes.string,
+    workshopDays: React.PropTypes.string,
+    schoolDistrictData: React.PropTypes.object.isRequired,
+    districtErrorMessageHandler: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -111,13 +114,12 @@ const TeacherApplication = React.createClass({
     this.setState({[event.target.id]: event.target.value});
   },
 
-  handleRadioButtonListChange(event) {
+  handleRadioListChange(event) {
     this.setState({[event.target.name]: event.target.value});
   },
 
-  handleCheckboxChange(event) {
-    const selectedButtons = $(`[name=${event.target.name}]:checked`).map( (index, element) => element.value).toArray();
-    this.setState({[event.target.name]: selectedButtons});
+  handleButtonListChange(changedData) {
+    this.setState(changedData);
   },
 
   getRequiredValidationErrorMessage(key) {
@@ -160,14 +162,14 @@ const TeacherApplication = React.createClass({
   },
 
   shouldShowRegionalPartnersOnlyWarning() {
-    return ['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase());
+    return ['private', 'other'].includes(this.props.schoolDistrictData['school-type'].toLowerCase());
   },
 
   shouldShowWorkingToIdentifyRegionalPartnerWarning() {
     return !!(
-      ['public', 'charter'].includes(document.getElementById('school-type').value.toLowerCase()) &&
+      ['public', 'charter'].includes(this.props.schoolDistrictData['school-type'].toLowerCase()) &&
       !(this.props.regionalPartnerGroup) &&
-      (document.querySelector('#school-district input').value || document.getElementById('school-district-other').checked)
+      (this.props.schoolDistrictData['school-district'] || this.props.schoolDistrictData['school-district-other'])
     );
   },
 
@@ -176,7 +178,7 @@ const TeacherApplication = React.createClass({
       <div>
         {
           this.shouldShowRegionalPartnersOnlyWarning() && (
-          <label style={{color: 'red'}}>
+          <label id="regionalPartnersOnlyWarning" style={{color: 'red'}}>
             Thank you for your interest in Code.org’s Professional Learning Program! Due to high demand for our
             program, most spots are reserved for public school teachers in regions where we have a Regional Partner.
             You are a private school teacher and/or your area does not yet have a Code.org Regional Partner. If you
@@ -186,7 +188,7 @@ const TeacherApplication = React.createClass({
         )}
         {
           this.shouldShowWorkingToIdentifyRegionalPartnerWarning() && (
-            <label style={{color: 'red'}}>
+            <label id="identifyingRegionalPartnerWarning" style={{color: 'red'}}>
               Thank you for your interest in Code.org’s Professional Learning Program! We are working to identify the
               Regional Partner that will serve your school, and the dates of your five-day summer workshop. We will
               update you with more details on your assigned partner and the date of your summer workshop soon.
@@ -198,7 +200,7 @@ const TeacherApplication = React.createClass({
           label="Grades served at your school"
           groupName="gradesAtSchool"
           answers={grades}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.gradesAtSchool}
           required={true}
           validationState={this.getRequiredValidationState('gradesAtSchool')}
@@ -257,7 +259,7 @@ const TeacherApplication = React.createClass({
           label="Gender Identity"
           groupName="genderIdentity"
           answers={["Female", "Male", "Other", "Prefer not to answer"]}
-          onChange={this.handleRadioButtonListChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.genderIdentity}
           required={true}
           validationState={this.getRequiredValidationState('genderIdentity')}
@@ -268,7 +270,7 @@ const TeacherApplication = React.createClass({
           groupName="grades2016"
           answers={grades}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.grades2016}
           required={true}
           validationState={this.getRequiredValidationState('grades2016')}
@@ -279,7 +281,7 @@ const TeacherApplication = React.createClass({
           groupName="subjects2016"
           answers={subjects}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.subjects2016}
           required={true}
           validationState={this.getRequiredValidationState('subjects2016')}
@@ -290,7 +292,7 @@ const TeacherApplication = React.createClass({
           groupName="grades2017"
           answers={grades.concat("I don't know")}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.grades2017}
           required={true}
           validationState={this.getRequiredValidationState('grades2017')}
@@ -301,7 +303,7 @@ const TeacherApplication = React.createClass({
           groupName="subjects2017"
           answers={subjects.concat("I don't know")}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.subjects2017}
           required={true}
           validationState={this.getRequiredValidationState('subjects2017')}
@@ -368,24 +370,20 @@ const TeacherApplication = React.createClass({
         </ControlLabel>
         <Radio
           value="csd"
-          name="courseSelection"
-          onChange={this.handleCourseChange}
+          name="selectedCourse"
+          onChange={this.handleRadioListChange}
         >
           Computer Science Discoveries (designed for 7th - 9th grade)
         </Radio>
         <Radio
           value="csp"
-          name="courseSelection"
-          onChange={this.handleCourseChange}
+          name="selectedCourse"
+          onChange={this.handleRadioListChange}
         >
           Computer Science Principles (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
         </Radio>
       </FormGroup>
     );
-  },
-
-  handleCourseChange(event) {
-    this.setState({selectedCourse: event.target.value});
   },
 
   renderCSDSpecificContent() {
@@ -397,7 +395,7 @@ const TeacherApplication = React.createClass({
             label="To which grades do you plan to teach CS Discoveries? Please note that the CS Discoveries Professional Learning Program is not available for grades K-5. (select all that apply)"
             groupName="gradesPlanningToTeach"
             answers={grades.slice(grades.indexOf('6'))}
-            onChange={this.handleCheckboxChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.gradesPlanningToTeach}
             required={true}
             validationState={this.getRequiredValidationState('gradesPlanningToTeach')}
@@ -421,7 +419,7 @@ const TeacherApplication = React.createClass({
             ]}
             includeOther={true}
             groupName="cspDuration"
-            onChange={this.handleRadioButtonListChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.cspDuration}
             required={true}
             validationState={this.getRequiredValidationState('cspDuration')}
@@ -436,7 +434,7 @@ const TeacherApplication = React.createClass({
               "I don't know yet"
             ]}
             groupName="cspApCourse"
-            onChange={this.handleRadioButtonListChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.cspApCourse}
             required={true}
             validationState={this.getRequiredValidationState('cspApCourse')}
@@ -447,7 +445,7 @@ const TeacherApplication = React.createClass({
             Learning Program is not available for grades K-8. (select all that apply)"
             answers={grades.slice(grades.indexOf('9'))}
             groupName="gradesPlanningToTeach"
-            onChange={this.handleCheckboxChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.gradesPlanningToTeach}
             required={true}
             validationState={this.getRequiredValidationState('gradesPlanningToTeach')}
@@ -459,7 +457,7 @@ const TeacherApplication = React.createClass({
             (select one)"
             groupName="cspApExamIntent"
             answers={yesNoResponses}
-            onChange={this.handleRadioButtonListChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.cspApExamIntent}
             required={true}
             validationState={this.getRequiredValidationState('cspApExamIntent')}
@@ -517,7 +515,7 @@ const TeacherApplication = React.createClass({
                               name={question}
                               value={j + 1}
                               checked={parseInt(this.state[question], 10) === j + 1}
-                              onChange={this.handleRadioButtonListChange}
+                              onChange={this.handleRadioListChange}
                             />
                           </td>
                         );
@@ -548,7 +546,7 @@ const TeacherApplication = React.createClass({
           answers={['Courses for credit', 'After school clubs', 'Lunch clubs', 'Hour of Code',
             'No computer science opportunities are currently available at my school']}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.currentCsOpportunities}
           required={true}
           validationState={this.getRequiredValidationState('currentCsOpportunities')}
@@ -581,11 +579,7 @@ const TeacherApplication = React.createClass({
   onSubmitButtonClick() {
     this.setState({submitting: true});
 
-    const districtValues = getDistrictDropdownValues();
-
     const formData = _.omit(_.cloneDeep(this.state), ['submitting']);
-
-    _.assign(formData, districtValues);
 
     let topInvalidElementId = undefined;
 
@@ -611,11 +605,13 @@ const TeacherApplication = React.createClass({
       }
     });
 
+    Object.assign(formData, this.props.schoolDistrictData);
+
     formData['assignedWorkshop'] = getWorkshopForState(
       this.props.regionalPartnerGroup,
       this.props.regionalPartnerName,
       this.state.selectedCourse,
-      document.getElementById('school-state').value
+      this.props.schoolDistrictData['school-state']
     );
 
     if (!this.shouldShowRegionalPartnersOnlyWarning() && !this.shouldShowWorkingToIdentifyRegionalPartnerWarning()) {
@@ -639,26 +635,23 @@ const TeacherApplication = React.createClass({
       }
     });
 
-    if (validateDistrictData(districtValues)) {
-      document.getElementById('district-error-placeholder').innerHTML = '';
+    if (validateDistrictData(this.props.schoolDistrictData)) {
+      this.props.districtErrorMessageHandler('');
     } else {
       topInvalidElementId = 'district-error-placeholder';
-      ReactDOM.render(
-        <label style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
-          Please complete this section with your school's information
-        </label>,
-        document.getElementById(topInvalidElementId)
-      );
+      this.props.districtErrorMessageHandler("Please complete this section with your school's information");
     }
 
     if (topInvalidElementId) {
       this.setState({submitting: false});
       let topInvalidElement = document.getElementById(topInvalidElementId);
 
-      if (topInvalidElement.className.indexOf('form-group') >= 0) {
-        topInvalidElement.scrollIntoView();
-      } else {
-        topInvalidElement.parentElement.scrollIntoView();
+      if (topInvalidElement) {
+        if (topInvalidElement.className.indexOf('form-group') >= 0) {
+          topInvalidElement.scrollIntoView();
+        } else {
+          topInvalidElement.parentElement.scrollIntoView();
+        }
       }
     } else {
       this.save(formData);
@@ -673,9 +666,7 @@ const TeacherApplication = React.createClass({
       dataType: "json",
       data: JSON.stringify({application: formData})
     }).done(() => {
-      // TODO: modify state, render submitted on client side.
       window.location.reload(true);
-
     }).fail(data => {
       // TODO: render error message(s) nicely on client.
       alert(`error: ${data.responseJSON}`);
@@ -710,11 +701,11 @@ const TeacherApplication = React.createClass({
           onChange={this.handleSubformDataChange}
           formData={this.state}
           errorData={this.errorData}
-          selectedWorkshop={getWorkshopForState(
+          selectedWorkshop={this.props.workshopDays || getWorkshopForState(
             this.props.regionalPartnerGroup,
             this.props.regionalPartnerName,
             this.state.selectedCourse,
-            document.getElementById('school-state').value
+            this.props.schoolDistrictData['school-state']
           )}
         />
         <hr/>
@@ -738,4 +729,4 @@ const TeacherApplication = React.createClass({
   }
 });
 
-export default TeacherApplication;
+export {TeacherApplication, likertAnswers};

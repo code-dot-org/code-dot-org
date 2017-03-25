@@ -24,6 +24,9 @@ npm-debug.log
 /apps/node_modules/
 /apps/npm-debug.log
 /apps/src/util/color.js
+/apps/src/util/sharedConstants.js
+/apps/src/applab/sharedApplabBlocks.js
+/apps/src/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
 /apps/test/entry-tests.js
 /apps/yarn-error.log
@@ -53,3 +56,5 @@ npm-debug.log
 /rebuild-shared
 /rebuild-code-studio
 /shared/js/node_modules/
+/tools/scripts/brokenLinkChecker/node_modules/
+

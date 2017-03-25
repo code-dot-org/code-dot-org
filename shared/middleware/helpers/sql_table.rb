@@ -28,7 +28,7 @@ class SqlTable
     dataset = metadata_dataset
     if dataset && dataset.first
       # dynamo gives us stringified keys rather than symbols, so convert to the same
-      Hash[dataset.first.map{ |k, v| [k.to_s, v] }]
+      Hash[dataset.first.map {|k, v| [k.to_s, v]}]
     end
   end
 
@@ -42,15 +42,17 @@ class SqlTable
 
   # create a new metadata row, based on the contents of any existing records
   def create_metadata
-    @metadata_table.insert({
-      app_id: @channel_id,
-      table_type: @table_type,
-      table_name: @table_name,
-      column_list: TableMetadata.generate_column_list(to_a).to_json,
-      updated_at: DateTime.now
-    })
+    @metadata_table.insert(
+      {
+        app_id: @channel_id,
+        table_type: @table_type,
+        table_name: @table_name,
+        column_list: TableMetadata.generate_column_list(to_a).to_json,
+        updated_at: DateTime.now
+      }
+    )
   rescue Sequel::UniqueConstraintViolation
-      # catch and ignore
+    # catch and ignore
   end
 
   def ensure_metadata

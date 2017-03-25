@@ -1,0 +1,80 @@
+#!/usr/bin/env ruby
+
+# This script creates a UserScript for every row in the input CSV file.
+#
+# This script will be run with a CSV containing the user IDs, script IDs, and
+# associated timestamp for the approximately 489K production UserScripts that
+# remain to be backfilled by the initial part of User#backfill_user_scripts.
+#
+# This CSV will be created via MySQL.
+#
+#   SELECT
+#     users.id,
+#     sections.script_id,
+#     followers.created_at
+#   FROM users
+#   INNER JOIN followers
+#     ON followers.student_user_id = users.id
+#   INNER JOIN sections
+#     ON sections.id = followers.section_id
+#   LEFT OUTER JOIN user_scripts
+#     ON user_scripts.user_id = users.id
+#       AND user_scripts.script_id = sections.script_id
+#   WHERE users.created_at < '2014-09-15'
+#     AND sections.script_id IS NOT NULL
+#     AND (
+#       user_scripts.id IS NULL OR
+#       user_scripts.assigned_at IS NULL OR
+#       user_scripts.assigned_at < followers.created_at
+#     );
+#
+# After this script is run, that portion of User#backfill_user_scripts will be
+# removed.
+
+require 'csv'
+require_relative '../../../dashboard/config/environment'
+
+TRANSACTION_SIZE = 5_000
+TIME_NOW = Time.now.freeze
+
+# A variable to shadow a loop variable, used for its larger scope.
+user_id_script_id = nil
+# An array of (user_id, script_id, assigned_at) triples.
+data = []
+# The CSV filename.
+filename = ARGV[0]
+
+# Process the CSV, reading the CSV line by line and writing the rows in
+# transaction batches.
+CSV.foreach(filename) do |line|
+  # Append the CSV row to our list of rows to create.
+  user_id = line[0].to_i
+  script_id = line[1].to_i
+  assigned_at = line[2]
+  data << [user_id, script_id, assigned_at]
+end
+
+begin
+  data.each_slice(TRANSACTION_SIZE) do |data_slice|
+    ActiveRecord::Base.transaction do
+      data_slice.each do |user_id, script_id, assigned_at|
+        user_id_script_id = "#{user_id} , #{script_id}"
+        user_script = UserScript.find_by(
+          user_id: user_id,
+          script_id: script_id
+        )
+        next if user_script
+        UserScript.create!(
+          user_id: user_id,
+          script_id: script_id,
+          assigned_at: assigned_at,
+          created_at: TIME_NOW,
+          updated_at: TIME_NOW
+        )
+      end
+    end
+  end
+rescue Exception => e
+  puts "EXCEPTION: #{user_id_script_id}..."
+  raise e
+end
