@@ -1,7 +1,17 @@
 $(function () {
+
   $('#nav-hamburger').click(function (e){
     $('#nav ul').slideToggle();
     e.preventDefault();
+  });
+
+  $(document).on('click',function (e) {
+    let nav = $('#nav');
+    if (!nav.is(e.target)
+        && nav.has(e.target).length === 0){
+      nav.children('ul').hide();
+      $('#nav-hamburger').removeClass('active');
+    }
   });
 
   $('#about-more').click(function (e){
@@ -22,4 +32,5 @@ $(function () {
     .addEventListener( 'click', function () {
     this.classList.toggle( 'active' );
   });
+
 });
