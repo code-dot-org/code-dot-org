@@ -28,8 +28,17 @@ export const fakeLevel = overrides => {
   };
 };
 
-export const fakeLevels = (numLevels, startLevel = 1) =>
-  _.range(numLevels).map(index => fakeLevel({levelNumber: index + startLevel}));
+export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
+  _.range(numLevels).map(index => {
+    let overrideData = {
+      levelNumber: index + startLevel
+    };
+    if (!named) {
+      overrideData['name'] = undefined;
+    }
+    return fakeLevel(overrideData);
+  });
+
 
 /**
  * Creates the shell of a redux store with the provided lessonId being hidden

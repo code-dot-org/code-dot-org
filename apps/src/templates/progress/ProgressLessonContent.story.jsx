@@ -15,7 +15,7 @@ export default storybook => {
             levels={fakeLevels(5).map((level, index) => ({
               ...level,
               status: index === 1 ? LevelStatus.perfect : LevelStatus.not_tried,
-              name: undefined
+              name: 'Progression'
             }))}
           />
         )
@@ -29,7 +29,7 @@ export default storybook => {
             levels={[
               fakeLevel({isUnplugged: true}),
                 ...fakeLevels(5)
-              ].map(level => ({...level, name: undefined }))
+              ].map(level => ({...level, name: 'Progression' }))
             }
           />
         )
@@ -42,14 +42,25 @@ export default storybook => {
             disabled={false}
             levels={[
               {
-                ...fakeLevel({isUnplugged: true, name: undefined}),
+                ...fakeLevel({isUnplugged: true}),
                 name: 'Fun unplugged/named level'
               },
-              ...fakeLevels(5).map((level, index) => ({
-                ...level,
-                status: index === 1 ? LevelStatus.perfect : LevelStatus.not_tried,
-                name: undefined
-              }))
+              ...fakeLevels(5, {named: false})
+            ]}
+          />
+        )
+      },
+      {
+        name:'with no named levels',
+        description: 'no pills',
+        story: () => (
+          <ProgressLessonContent
+            disabled={false}
+            levels={[
+              {
+                ...fakeLevel({isUnplugged: true, name: undefined}),
+              },
+              ...fakeLevels(5, {named: false})
             ]}
           />
         )
