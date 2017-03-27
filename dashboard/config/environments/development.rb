@@ -18,7 +18,7 @@ Dashboard::Application.configure do
   config.eager_load = false
 
   # Always reload static js and css.
-  config.public_file_server.headers = { 'Cache-Control' => 'must-revalidate, max-age=0' }
+  config.public_file_server.headers = {'Cache-Control' => 'must-revalidate, max-age=0'}
 
   # Show full error reports
   config.consider_all_requests_local = true

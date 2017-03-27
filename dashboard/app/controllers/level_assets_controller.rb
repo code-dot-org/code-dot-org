@@ -14,6 +14,6 @@ class LevelAssetsController < ApplicationController
     end
 
     filename = AWS::S3.upload_to_bucket('images.code.org', params[:file].original_filename, open(params[:file]), acl: 'public-read')
-    render json: { newAssetUrl: "https://images.code.org/#{filename}" }
+    render json: {newAssetUrl: "https://images.code.org/#{filename}"}
   end
 end
