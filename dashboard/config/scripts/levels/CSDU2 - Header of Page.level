@@ -7,7 +7,9 @@
   "properties": {
     "markdown_instructions": "# Header Area\r\n\r\nWebsites usually have the same navigation bar across all of their pages so you can get back and forth between things on the site. To do this you need to add the navigation links to all the pages on your website.\r\n\r\n# Do This\r\n\r\n* Copy the navigation links section onto all the web pages.\r\n* Copy any styles you need into the style sheets for those pages.",
     "project_template_level_name": "CSDU2 - Odd Stuff Site Template",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "encrypted_examples": "HXC0ch+dxecfoJADBm/ezVIJEbOr6pY8a+eu85jbzIkZOTTbh575nEvcs8Op\nRNCdgUqS9Rzx2ZSIfUPnhfGPzg==\n",
+    "hide_share_and_remix": "false"
   },
   "published": true,
   "notes": "",
