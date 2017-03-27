@@ -14,7 +14,7 @@ import {
   getPreferredPort
 } from '@cdo/apps/lib/kits/maker/portScanning';
 
-describe("Maker Toolkit", function () {
+describe("maker/portScanning.js", function () {
   describe(`findPortWithViableDevice()`, () => {
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
