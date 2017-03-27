@@ -74,7 +74,6 @@ const ProgressLevelSet = React.createClass({
 
     const url = levels[0].url;
 
-    // TOOD - unplugged levels should get the right icon type
     let pillText;
     if (levels[0].isUnplugged || levels[levels.length - 1].isUnplugged) {
       pillText = i18n.unplugged();
