@@ -403,6 +403,11 @@
   padding-right: .5em;
 }
 
+button {
+  margin-top: 10px;
+}
+
+
 /* Promote page */
 #promote-page h1 {
   float: left;
