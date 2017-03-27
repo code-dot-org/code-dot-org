@@ -177,6 +177,7 @@ sk:
       Course 4 Playlab For Loop Freeplay_callout: [ ]
       Course 4 Playlab For Loops 4b_callout:
         Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a different name for each character?  That's so each `for` loop can control its own counter.
+        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change the "increment" of the `for` loops.
       Course 4 Playlab For Loops 5b_callout: [ ]
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
@@ -189,8 +190,11 @@ sk:
         courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
+      courseA_collector_loops1_callout:
+        courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
+      courseA_collector_loops3_predict1_callout: [ ]
       courseA_playLab_events2_callout: [ ]
       courseA_playLab_events3_callout: [ ]
       courseA_playLab_events4_callout: [ ]
@@ -199,10 +203,14 @@ sk:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+      courseB_collector_loops1_callout:
+        courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseB_maze_seq7_callout:
         courseB_maze_seq7_1: These grey blocks are made of stone!  That means that they can't be trashed.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog2_callout: [ ]
+      courseC_collector_prog1_callout:
+        courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
         courseC_collector_prog7_1: You can take more blocks from the toolbox if you need them!
       courseC_collector_prog8_callout: [ ]
@@ -211,6 +219,7 @@ sk:
       courseC_collector_progB_callout: [ ]
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
+      courseC_maze_loops2_predict1_callout: [ ]
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseC_maze_programming2_callout:
@@ -226,8 +235,29 @@ sk:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+      courseD_artist_ramp11_callout:
+        courseD_artist_ramp11_1: You can change this number.
+        courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
+      courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.
+      courseD_collector_ramp10_callout: [ ]
+      courseD_collector_ramp8_callout:
+        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
+      courseD_collector_ramp9_callout: [ ]
+      courseD_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseD_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseD_maze_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+      courseD_maze_ramp4_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseD_maze_ramp5_callout: [ ]
+      courseD_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+      courseD_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseE_artist_functions1_callout:
@@ -236,7 +266,17 @@ sk:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+      courseE_artist_functions_predict1_callout: [ ]
+      courseE_artist_ramp11_callout:
+        courseD_artist_ramp11_1: You can change this number.
+        courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
+      courseE_artist_ramp12_callout: [ ]
+      courseE_collector_ramp10_callout: [ ]
+      courseE_collector_ramp8_callout:
+        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
+      courseE_collector_ramp9_callout: [ ]
       courseE_farmer_functions10b_callout: [ ]
+      courseE_farmer_functions11_predict_callout: [ ]
       courseE_farmer_functions1a_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions2a_callout:
@@ -256,6 +296,19 @@ sk:
       courseE_farmer_functions7b_callout: [ ]
       courseE_farmer_functions8b_callout: [ ]
       courseE_farmer_functions9b_callout: [ ]
+      courseE_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseE_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseE_maze_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+      courseE_maze_ramp4_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseE_maze_ramp5_callout: [ ]
+      courseE_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+      courseE_maze_ramp7_callout:
+        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: [ ]
@@ -271,6 +324,7 @@ sk:
       courseF_artist_variables2_callout: [ ]
       courseF_artist_variables3_callout:
         courseF_artist_variables3_a: Use this to set the value of the variable `length`
+      courseF_artist_variables3a_predict1_callout: [ ]
       courseF_artist_variables4_callout: [ ]
       courseF_artist_variables5_callout: [ ]
       courseF_artist_variables6_callout:
@@ -297,6 +351,7 @@ sk:
       courseF_artist_variablesFP_callout: [ ]
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
+      courseF_bee_for3_predict1_callout: [ ]
       courseF_bee_for4_callout: [ ]
       courseF_bee_for6_callout: [ ]
       courseF_bee_for9_callout:
@@ -549,6 +604,7 @@ sk:
       grade2_collector_9_callout: [ ]
       grade2_collector_9a_callout: [ ]
       grade2_collector_A_callout: [ ]
+      grade2_collector_A_predict1_callout: [ ]
       grade2_MakeDogTag_1_callout: [ ]
       grade2_MakeDogTag_BFP_callout: [ ]
       grade2_maze_intro10_callout: [ ]
@@ -792,6 +848,7 @@ sk:
       Play Lab Rocket 3_callout:
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
       Play Lab Rocket Free Play_callout: [ ]
+      playLabDebugVideo1_callout: [ ]
       Poorva copy U3L2 Using Simple Commands_callout: [ ]
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't know until you run the code!
