@@ -17,7 +17,7 @@ describe('ProgressLevelSet', function () {
 
     assert.equal(wrapper.find('ProgressPill').length, 1);
     assert.equal(wrapper.find('ProgressBubbleSet').length, 0);
-    assert.equal(wrapper.find('ProgressPill').props().text, 'Level 1');
+    assert.equal(wrapper.find('ProgressPill').props().text, 'LEVEL 1');
   });
 
   it('has a pill and bubbles when we have multiple levels', () => {
@@ -31,7 +31,7 @@ describe('ProgressLevelSet', function () {
 
     assert.equal(wrapper.find('ProgressPill').length, 1);
     assert.equal(wrapper.find('ProgressBubbleSet').length, 1);
-    assert.equal(wrapper.find('ProgressPill').props().text, 'Levels 1-3');
+    assert.equal(wrapper.find('ProgressPill').props().text, 'LEVEL 1-3');
   });
 
   it('renders a pill that says UNPLUGGED when first level is unplugged', () => {

@@ -11,7 +11,7 @@ const defaultProps = {
       ...fakeLevels(1)[0],
       name: 'First progression'
     },
-    ...fakeLevels(5, 2).map(level => ({...level, progression: 'Second Progression'})),
+    ...fakeLevels(5, {startLevel: 2}).map(level => ({...level, progression: 'Second Progression'})),
     {
       ...fakeLevels(1)[0],
       name: 'Last progression'
@@ -121,10 +121,9 @@ export default storybook => {
           <ProgressLesson
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
-            levels={fakeLevels(5).map(level => ({
+            levels={fakeLevels(5, {named: false}).map(level => ({
               ...level,
-              status: LevelStatus.locked,
-              name: undefined
+              status: LevelStatus.locked
             }))}
             lessonLockedForSection={() => true}
           />
@@ -136,10 +135,9 @@ export default storybook => {
           <ProgressLesson
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
-            levels={fakeLevels(5).map(level => ({
+            levels={fakeLevels(5, {named: false}).map(level => ({
               ...level,
-              status: LevelStatus.attempted,
-              name: undefined
+              status: LevelStatus.attempted
             }))}
           />
         )
