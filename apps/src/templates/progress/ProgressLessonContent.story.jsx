@@ -22,15 +22,33 @@ export default storybook => {
       },
       {
         name:'with unplugged lesson',
+        description: 'pill should say unplugged, because of first level',
         story: () => (
           <ProgressLessonContent
             disabled={false}
             levels={[
-              fakeLevel({isUnplugged: true, name: undefined}),
+              fakeLevel({isUnplugged: true}),
+                ...fakeLevels(5)
+              ].map(level => ({...level, name: undefined }))
+            }
+          />
+        )
+      },
+      {
+        name:'with named unplugged lesson',
+        description: 'First pill should say unplugged. second should say level 1-5',
+        story: () => (
+          <ProgressLessonContent
+            disabled={false}
+            levels={[
+              {
+                ...fakeLevel({isUnplugged: true, name: undefined}),
+                name: 'Fun unplugged/named level'
+              },
               ...fakeLevels(5).map((level, index) => ({
                 ...level,
                 status: index === 1 ? LevelStatus.perfect : LevelStatus.not_tried,
-                name: undefined,
+                name: undefined
               }))
             ]}
           />

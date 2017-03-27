@@ -30,7 +30,6 @@ const ProgressLessonContent = React.createClass({
         {progressions.map((progression, index) => (
           <ProgressLevelSet
             key={index}
-            start={progression.start + 1}
             name={progression.name}
             levels={progression.levels}
             disabled={disabled}

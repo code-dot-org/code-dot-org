@@ -61,25 +61,29 @@ const styles = {
  */
 const ProgressLevelSet = React.createClass({
   propTypes: {
-    // TODO - can most likely get rid of start here
-    start: PropTypes.number.isRequired,
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
   },
 
   render() {
-    const { name, levels, start, disabled } = this.props;
+    const { name, levels, disabled } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const status = multiLevelStep ? 'multi_level' : levels[0].status;
 
     const url = levels[0].url;
 
-    const lastStep = start + levels.length - 1;
-    let levelNumber = start;
-    if (multiLevelStep) {
-      levelNumber += `-${lastStep}`;
+    // TOOD - unplugged levels should get the right icon type
+    let pillText;
+    if (levels[0].isUnplugged || levels[levels.length - 1].isUnplugged) {
+      pillText = i18n.unplugged();
+    } else {
+      let levelNumber = levels[0].levelNumber;
+      if (multiLevelStep) {
+        levelNumber += `-${levels[levels.length - 1].levelNumber}`;
+      }
+      pillText = i18n.levelN({levelNumber});
     }
 
     return (
@@ -96,7 +100,7 @@ const ProgressLevelSet = React.createClass({
                 url={multiLevelStep ? undefined : url}
                 status={status}
                 icon={getIconForLevel(levels[0])}
-                text={i18n.levelN({levelNumber})}
+                text={pillText}
                 width={130}
               />
             </td>
