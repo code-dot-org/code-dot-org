@@ -11,7 +11,7 @@ const defaultProps = {
       ...fakeLevels(1)[0],
       name: 'First progression'
     },
-    ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
+    ...fakeLevels(5, 2).map(level => ({...level, progression: 'Second Progression'})),
     {
       ...fakeLevels(1)[0],
       name: 'Last progression'

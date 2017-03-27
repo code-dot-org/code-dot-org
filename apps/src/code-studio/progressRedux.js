@@ -274,6 +274,7 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
   url: level.url,
   name: level.name,
   icon: (level.locked ? level.icon : undefined),
+  levelNumber: index + 1
 }));
 
 /**
@@ -284,14 +285,22 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
  */
 export const levelsByLesson = state => (
   state.stages.map(stage => (
-    stage.levels.map(level => ({
-      status: statusForLevel(level, state.levelProgress),
-      url: level.url,
-      name: level.name,
-      progression: level.progression,
-      icon: level.icon,
-      isUnplugged: level.kind === LevelKind.unplugged
-    }))
+    stage.levels.map(level => {
+      if (level.kind !== LevelKind.unplugged) {
+        if (!level.title || typeof(level.title) !== 'number') {
+          throw new Error('Expect all non-unplugged levels to have a numerical title');
+        }
+      }
+      return {
+        status: statusForLevel(level, state.levelProgress),
+        url: level.url,
+        name: level.name,
+        progression: level.progression,
+        icon: level.icon,
+        isUnplugged: level.kind === LevelKind.unplugged,
+        levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title
+      };
+    })
   ))
 );
 
