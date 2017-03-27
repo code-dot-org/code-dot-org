@@ -100,3 +100,10 @@
     min-height: 220px;
   }
 }
+
+@media screen and (min-width: 0px) and (max-width: 600px)
+{
+  .educate-box {
+    padding-top: 0px;
+  }
+}
