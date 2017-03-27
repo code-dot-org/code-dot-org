@@ -168,28 +168,43 @@ window.SignupManager = function (options) {
     logAnalyticsEvent(event);
   }
 
+  function logEventWithInferredUserType(event, extraData = {}) {
+    if (isTeacherSelected()) {
+      logAnalyticsEvent(event + "_teacher", extraData);
+    } else if (isStudentSelected()) {
+      logAnalyticsEvent(event + "_student", extraData);
+    } else {
+      logAnalyticsEvent(event + "_no_user_type", extraData);
+    }
+  }
+
   function logFormSubmitted() {
-    const event = isTeacherSelected() ? "submit_teacher" : "submit_student";
-    logAnalyticsEvent(event);
+    logEventWithInferredUserType("submit");
   }
 
   function logFormError(err) {
-    const event = isTeacherSelected() ? "submit_error_teacher" : "submit_error_student";
-    logAnalyticsEvent(event, {error_info: err});
+    logEventWithInferredUserType("submit_error", {error_info: err});
   }
 
   function logFormSuccess() {
-    const event = isTeacherSelected() ? "submit_success_teacher" : "submit_success_student";
-    logAnalyticsEvent(event);
+    logEventWithInferredUserType("submit_success");
   }
 
-  function isTeacherSelected() {
+  function isUserTypeSelected(user_type) {
     const formData = $('#new_user').serializeArray();
     const userType = $.grep(formData, e => e.name === "user[user_type]");
-    if (userType.length === 1 && userType[0].value === "teacher") {
+    if (userType.length === 1 && userType[0].value === user_type) {
       return true;
     }
     return false;
+  }
+
+  function isTeacherSelected() {
+    return isUserTypeSelected("teacher");
+  }
+
+  function isStudentSelected() {
+    return isUserTypeSelected("student");
   }
 
   $(".signupform").submit(function () {
