@@ -27,7 +27,7 @@ class ScriptsControllerTest < ActionController::TestCase
     script.update(redirect_to: new_script.name)
 
     get :show, params: {id: script.name}
-    assert_redirected_to :show, params: {id: new_script.name}
+    assert_redirected_to "/s/#{new_script.name}"
   end
 
   test "should not get index if not signed in" do
