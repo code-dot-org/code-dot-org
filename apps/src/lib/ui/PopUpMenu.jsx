@@ -69,12 +69,12 @@ class PopUpMenu_ extends Component {
     };
 
     return (
-        <div style={menuStyle}>
-          {this.renderMenuItems()}
-          {/* These elements are used to draw the 'tail' with CSS */}
-          <span style={tailBorderStyle}/>
-          <span style={tailFillStyle}/>
-        </div>
+      <div style={menuStyle}>
+        {this.renderMenuItems()}
+        {/* These elements are used to draw the 'tail' with CSS */}
+        <span style={tailBorderStyle}/>
+        <span style={tailFillStyle}/>
+      </div>
     );
   }
 }
