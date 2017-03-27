@@ -82,6 +82,16 @@ a.whitefooterlink {
 
 @media screen and (min-width: 0px) and (max-width: 512px)
 {
-  .col-18-promote-tools { width: 48%; float:left; }
+   .col-18-promote-tools {
+    width: 48%;
+    float:left;
+   }
 
+   #tools-section .col-18-promote-tools {
+     height: 285px;
+   }
+
+   #resources-section .col-18-promote-tools {
+     height: 225px;
+   }
 }
