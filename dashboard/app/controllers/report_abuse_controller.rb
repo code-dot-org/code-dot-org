@@ -24,11 +24,11 @@ class ReportAbuseController < ApplicationController
                 params[:abuse_detail]
               ].join("\n")
             },
-            custom_fields: [{ id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
+            custom_fields: [{id: AGE_CUSTOM_FIELD_ID, value: params[:age]}],
             tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
           }
         }.to_json,
-        basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
+        basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
       )
       raise 'Zendesk failed' unless response.success?
     end

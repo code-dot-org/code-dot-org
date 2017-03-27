@@ -56,10 +56,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Click Key\r\n\r\n<img src=\"https://images.code.org/349cff555af4337118791d84acf1a5b2-image-1490371172781.59.08 AM.png\" style=\"width:200px;float:right\">\r\n\r\nOnce a user clicks the key you will want to show they are holding it. You can do this by adding a key at the bottom corner of the room. \r\n\r\n# Do This\r\n\r\n* Add a key image at the bottom right corner of the room\r\n* Set the key to hidden in Design Mode",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

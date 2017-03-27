@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.6.9",
+    "@code-dot-org/blockly": "1.6.10",
     "@code-dot-org/bramble": "0.1.11",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
     "@code-dot-org/p5.play": "1.1.6-cdo",

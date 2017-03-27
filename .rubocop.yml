@@ -43,6 +43,9 @@ Style/SpaceInsideBlockBraces:
   EnforcedStyle: no_space
   SpaceBeforeBlockParameters: false
 
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
 Style/WordArray:
   MinSize: 5
 
@@ -70,6 +73,9 @@ Style/AsciiComments:
   Enabled: false
 
 Style/BarePercentLiterals:
+  Enabled: false
+
+Style/BracesAroundHashParameters:
   Enabled: false
 
 Style/ClosingParenthesisIndentation:

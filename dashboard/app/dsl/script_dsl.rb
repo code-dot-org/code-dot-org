@@ -113,7 +113,7 @@ class ScriptDSL < BaseDSL
         levels: [level]
       }
       if progression
-        script_level[:properties] = { progression: progression }
+        script_level[:properties] = {progression: progression}
       end
 
       @scriptlevels << script_level
@@ -121,7 +121,7 @@ class ScriptDSL < BaseDSL
   end
 
   def variants
-    @current_scriptlevel = { levels: [], properties: {}, stage: @stage}
+    @current_scriptlevel = {levels: [], properties: {}, stage: @stage}
   end
 
   def endvariants
