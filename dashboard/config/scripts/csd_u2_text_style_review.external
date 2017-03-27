@@ -14,8 +14,6 @@ teacher_markdown <<MARKDOWN
 
 **Transition:** Students should transition off their computers.
 
-!!!discussion <discussion-0>
-
     Things students might share:
     
     * CSS is the language used to style web pages
@@ -32,10 +30,7 @@ teacher_markdown <<MARKDOWN
 
 **Goal:** Give time for students to share learning from the levels as they have just processed a lot of new information.
 
-discussion!!!discussion-0
         
-[guide]
-
 #### Stand Up, Sit Down Review
 
 1. Have all students in the class stand up. 
@@ -43,11 +38,10 @@ discussion!!!discussion-0
 3. Record the information they shared in a location all students can see.
 4. Tell them they can sit down once they have shared something.
 
-[/guide]
 
 
 
 ## Web Lab: Style About Me Page
 
-&fa-desktop; **Transition:** Students should resume work on Code Studio.
+**Transition:** Students should resume work on Code Studio.
 MARKDOWN

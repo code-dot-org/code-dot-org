@@ -68,14 +68,14 @@
     "debugger_disabled": "false",
     "start_blocks": "console.log(\"The maximum of 2 and 3 is \" + maxVal(2,3));\r\nconsole.log(\"The maximum of 5 and 1 is \" + maxVal(5,1));\r\nconsole.log(\"The maximum of 8 and 8 is \" + maxVal(8,8));\r\n\r\nfunction maxVal(num1, num2){\r\n  if (num1 > num2) {\r\n    return num1;\r\n  }\r\n  else if (num1 < num2) {\r\n    return num2;\r\n  }\r\n}",
     "encrypted_examples": "LI5cWH5JzxxIpV7R9ZrAET+Q9yAI1hTI0Tmp84Ct6grKTvEet2iNAfR+y6gM\nMWn3\n",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

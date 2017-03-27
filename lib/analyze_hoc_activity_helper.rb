@@ -140,7 +140,7 @@ def analyze_day_fast(date)
     'countries' => countries,
     'tutorials' => tutorials,
     'codedotorg_tutorial_count' => codedotorg_tutorial_count,
-    'votes' => { 'boys' => '0', 'girls' => '0' },
+    'votes' => {'boys' => '0', 'girls' => '0'},
   }
 end
 

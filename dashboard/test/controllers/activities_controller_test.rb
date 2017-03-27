@@ -1013,7 +1013,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
     assert_response :success
-    expected_response = {'level_source' => nil }
+    expected_response = {'level_source' => nil}
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -1073,7 +1073,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
     assert_response :success
-    expected_response = {'level_source' => nil }
+    expected_response = {'level_source' => nil}
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 

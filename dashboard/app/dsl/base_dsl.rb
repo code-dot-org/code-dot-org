@@ -49,7 +49,7 @@ class BaseDSL
   def i18n_hash
     # Filter out any entries with nil key or value
     hash = i18n_strings.select {|key, value| key && value}
-    {"en" => { "data" => { prefix => hash}}}
+    {"en" => {"data" => {prefix => hash}}}
   end
 
   # Implement in subclass

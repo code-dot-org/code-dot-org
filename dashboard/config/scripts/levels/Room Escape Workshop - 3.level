@@ -46,10 +46,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Hide the Code\r\n\r\n<img src=\"https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png\" style=\"width:400px;float:right\">\r\n\r\n1. In Design Mode Click on the white square where it says \"CODE\". Change it to show a secret code of your choice\r\n2. Drag the picture down to cover the secret code\r\n\r\n![]()",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
