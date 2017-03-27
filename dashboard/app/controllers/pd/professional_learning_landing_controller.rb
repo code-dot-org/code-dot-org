@@ -1,7 +1,12 @@
 class Pd::ProfessionalLearningLandingController < ApplicationController
   before_action :require_admin
 
-  PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
+  PLC_COURSE_ORDERING = [
+    'CSP Support',
+    'ECS Support',
+    'CS in Algebra Support',
+    'CS in Science Support'
+  ].freeze
 
   def index
     last_enrollment_with_pending_survey = Pd::Enrollment.filter_for_survey_completion(

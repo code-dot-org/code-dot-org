@@ -6,8 +6,8 @@ class HttpCache
   STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}
 
   # Language header and cookie are needed to separately cache language-specific pages.
-  LANGUAGE_HEADER = %w(Accept-Language)
-  LANGUAGE_COOKIES = %w(language_ pm)
+  LANGUAGE_HEADER = %w(Accept-Language).freeze
+  LANGUAGE_COOKIES = %w(language_ pm).freeze
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = %w(

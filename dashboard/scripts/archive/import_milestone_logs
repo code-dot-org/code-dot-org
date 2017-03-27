@@ -3,10 +3,10 @@
 require 'dbi'
 require 'mysql'
 
-DB_HOST = ''
-DB_NAME = ''
-DB_USER = ''
-DB_PASSWORD = ''
+DB_HOST = ''.freeze
+DB_NAME = ''.freeze
+DB_USER = ''.freeze
+DB_PASSWORD = ''.freeze
 
 DIR = '/mnt/backups/'
 
