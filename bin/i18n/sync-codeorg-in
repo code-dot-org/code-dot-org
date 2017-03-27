@@ -21,7 +21,7 @@ end
 def copy_to_yml(label, data, allow_full_length=false)
   args = allow_full_length ? {line_width: -1} : {}
   File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    data = ({ "en" => { "data" => { label => data }}}).to_yaml(**args)
+    data = ({"en" => {"data" => {label => data}}}).to_yaml(**args)
     f.write(data)
   end
 end

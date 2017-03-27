@@ -367,8 +367,8 @@ class AssetsTest < FilesApiTestBase
   private
 
   def post_asset(api, uploaded_file)
-    body = { files: [uploaded_file] }
-    headers = { 'CONTENT_TYPE' => 'multipart/form-data' }
+    body = {files: [uploaded_file]}
+    headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 
