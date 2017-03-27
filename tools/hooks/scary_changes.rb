@@ -62,12 +62,28 @@ class ScaryChangeDetector
     end
   end
 
+  def detect_special_files
+    changes = @all.grep(/locals.yml/)
+    unless changes.empty?
+      puts red <<-EOS
+
+        Looks like you are changing locals.yml. This is probably a mistake.
+        If this change is intentional, you can bypass this message with the
+          --no-verify
+        flag.
+
+      EOS
+      raise "Commit blocked."
+    end
+  end
+
   public
 
   def detect_scary_changes
     detect_db_changes
     detect_new_models
     detect_missing_yarn_lock
+    detect_special_files
   end
 end
 

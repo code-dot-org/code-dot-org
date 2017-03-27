@@ -80,7 +80,7 @@ class DynamoTable
     ids = ids_to_a
     unless ids.empty?
       items = ids.map do |id|
-        { delete_request: { key: {'hash' => @hash, 'row_id' => id} } }
+        {delete_request: {key: {'hash' => @hash, 'row_id' => id}}}
       end
 
       # batch_write_items can only handle 25 items at a time, so split into groups of 25
@@ -192,11 +192,11 @@ class DynamoTable
   end
 
   def row_id_exists(id)
-    { "row_id" => { value: id, comparison_operator: 'EQ', } }
+    {"row_id" => {value: id, comparison_operator: 'EQ',}}
   end
 
   def row_id_doesnt_exist(id)
-    { "row_id" => { value: id, comparison_operator: 'NE', } }
+    {"row_id" => {value: id, comparison_operator: 'NE',}}
   end
 
   def rename_column(old_name, new_name, ip_address)

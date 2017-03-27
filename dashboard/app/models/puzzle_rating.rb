@@ -24,13 +24,13 @@ class PuzzleRating < ActiveRecord::Base
 
   validates :script, presence: true
   validates :level, presence: true
-  validates :rating, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 1 }
+  validates :rating, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 1}
 
   validates_uniqueness_of :user_id, scope: [:script_id, :level_id], allow_nil: true
 
   def self.enabled?(script = nil)
     if script
-      Gatekeeper.allows('puzzle_rating', where: { script_name: script.name }, default: true)
+      Gatekeeper.allows('puzzle_rating', where: {script_name: script.name}, default: true)
     else
       Gatekeeper.allows('puzzle_rating', default: true)
     end

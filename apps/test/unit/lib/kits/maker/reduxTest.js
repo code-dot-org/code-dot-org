@@ -21,6 +21,15 @@ describe('Maker Toolkit redux module', () => {
     store = createStore(combineReducers({maker: reducer}));
   });
 
+  describe('without maker state', () => {
+    it('can safely call selectors', () => {
+      expect(isEnabled({})).to.be.false;
+      expect(isConnecting({})).to.be.false;
+      expect(isConnected({})).to.be.false;
+      expect(hasConnectionError({})).to.be.false;
+    });
+  });
+
   describe('the initial state', () => {
     it('is disabled', () => {
       expect(isEnabled(store.getState())).to.be.false;
