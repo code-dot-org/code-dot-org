@@ -28,6 +28,7 @@ require 'rambling-trie'
 
 class Section < ActiveRecord::Base
   belongs_to :user
+  alias_attribute :teacher, :user
 
   has_many :followers, dependent: :restrict_with_error
   accepts_nested_attributes_for :followers
@@ -157,10 +158,6 @@ class Section < ActiveRecord::Base
       follower = Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
     end
     follower
-  end
-
-  def teacher
-    user
   end
 
   private
