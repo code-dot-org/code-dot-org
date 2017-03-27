@@ -53,6 +53,15 @@ export default storybook => {
         )
       },
       {
+        name:'Unnamed progression',
+        story: () => (
+          <ProgressLevelSet
+            levels={levels}
+            disabled={false}
+          />
+        )
+      },
+      {
         name: 'with unplugged level',
         story: () => (
           <ProgressLevelSet

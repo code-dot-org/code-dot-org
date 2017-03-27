@@ -59,6 +59,10 @@ export function getIconForLevel(level) {
     return match[1];
   }
 
+  if (level.isUnplugged) {
+    return 'scissors';
+  }
+
   // default to desktop
   return 'desktop';
 }
