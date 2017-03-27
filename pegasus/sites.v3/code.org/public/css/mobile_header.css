@@ -118,7 +118,7 @@
 }
 
 .about-nav li a, .educate-nav li a {
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 #about-down, #about-up, #educate-up, #educate-down {
@@ -148,7 +148,7 @@
     top: 3em;
     background-color: #00b2c0;
     z-index: 99;
-    max-height: 70vh;
+    max-height: 100vh;
     overflow-y: auto;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -166,5 +166,22 @@
 
   #nav-hamburger {
     display: inline-block;
+  }
+}
+
+@media (max-width: 400px) {
+  #nav ul {
+    max-width: 245px;
+  }
+
+  #nav ul li {
+    max-width: 200px;
+  }
+
+  #nav .educate-nav li {
+    max-width: 180px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
