@@ -68,7 +68,11 @@ class BucketHelper
   end
 
   def list(encrypted_channel_id)
-    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    begin
+      owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      return []
+    end
     prefix = s3_path owner_id, channel_id
     @s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
