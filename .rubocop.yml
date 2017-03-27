@@ -72,6 +72,9 @@ Style/AsciiComments:
 Style/BarePercentLiterals:
   Enabled: false
 
+Style/BracesAroundHashParameters:
+  Enabled: false
+
 Style/ClosingParenthesisIndentation:
   Enabled: false
 

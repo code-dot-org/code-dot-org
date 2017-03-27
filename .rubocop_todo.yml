@@ -59,13 +59,6 @@ Security/JSONLoad:
 Style/AlignHash:
   Enabled: false
 
-# Offense count: 405
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: braces, no_braces, context_dependent
-Style/BracesAroundHashParameters:
-  Enabled: false
-
 # Offense count: 8
 Style/CaseEquality:
   Enabled: false
