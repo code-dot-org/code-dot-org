@@ -561,7 +561,7 @@ class User < ActiveRecord::Base
       where(
         [
           'username = :value OR email = :value OR hashed_email = :hashed_value',
-          { value: login.downcase, hashed_value: hash_email(login.downcase) }
+          {value: login.downcase, hashed_value: hash_email(login.downcase)}
         ]
       ).first
     elsif hashed_email = conditions.delete(:hashed_email)

@@ -63,7 +63,7 @@ class Karel < Maze
       raise ArgumentError.new("Minimum to Collect is set to #{min_total_value} but there are only #{total_value} items on the map")
     end
 
-    { 'serialized_maze' => maze_json }
+    {'serialized_maze' => maze_json}
   end
 
   def toolbox(type)
