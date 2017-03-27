@@ -58,6 +58,9 @@ module GitHub
   #   or nil if unsuccessful.
   def self.create_and_merge_pull_request(base:, head:, title:)
     pr_number = create_pull_request(base: base, head: head, title: title)
+    # By sleeping, we allow GitHub time to determine that a merge conflict is
+    # not present. Otherwise, empirically, we receive a 405 response error.
+    sleep 3
     success = merge_pull_request(pr_number, commit_message: title)
     success ? pr_number : nil
   end
