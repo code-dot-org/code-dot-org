@@ -251,6 +251,6 @@ class RedisTableTest < Minitest::Test
   private
 
   def make_pubsub_event(channel, event, data)
-    { channel: channel, event: event, data: data }
+    {channel: channel, event: event, data: data}
   end
 end
