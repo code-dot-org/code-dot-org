@@ -28,6 +28,32 @@ def create_certificate_image2(image_path, name, params={})
   background
 end
 
+def create_workshop_certificate_image(image_path, fields)
+  background = Magick::Image.read(image_path).first
+  draw = Magick::Draw.new
+
+  fields.each do |field|
+    string = field[:string].to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
+    next if string.empty?
+
+    y = field[:y] || 0
+    x = field[:x] || 0
+    width = field[:width] || background.columns
+    height = field[:height] || background.rows
+
+    draw.annotate(background, width, height, x, y, string) do
+      draw.gravity = Magick::CenterGravity
+      self.pointsize = field[:pointsize] || 90
+      self.font_family = 'Times'
+      self.font_weight = Magick::BoldWeight
+      self.stroke = 'none'
+      self.fill = 'rgb(87,87,87)'
+    end
+  end
+
+  background
+end
+
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
