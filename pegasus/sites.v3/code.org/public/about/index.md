@@ -69,15 +69,10 @@ See all past [news and announcements](/about/news).
 | Set up policies to support CS | Policy changed in [20 states](/action) including CA, NY, FL, IL, OH.|
 | Go global | Our courses are available in 45+ languages, used in all 180+ countries. |
 <center><font size="1">Source: Code Studio Activity and <a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">surveys of participating educators</a></font></center>
-<br/>
-<br/>
 
 <!-- Teachers Trained: 2679 + K-5 -->
 
 <%= view :testimonials %>
-
-<br/>
-<br/>
 
 ## More information, history, and philosophy
 In 2013, Code.org was launched by twin brothers [Hadi](/about/leadership/hadi_partovi) and [Ali Partovi](https://www.crunchbase.com/person/ali-partovi#/entity) with a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
