@@ -4,6 +4,8 @@
 require 'rmagick'
 require_relative '../script_constants'
 
+# This method returns a newly-allocated Magick::Image object.
+# NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_certificate_image2(image_path, name, params={})
   name = name.to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
   name = ' ' if name.empty?
@@ -28,6 +30,8 @@ def create_certificate_image2(image_path, name, params={})
   background
 end
 
+# This method returns a newly-allocated Magick::Image object.
+# NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_workshop_certificate_image(image_path, fields)
   background = Magick::Image.read(image_path).first
   draw = Magick::Draw.new
