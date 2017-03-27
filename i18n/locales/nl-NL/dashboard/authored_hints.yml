@@ -97,10 +97,10 @@ nl:
           Hulp nodig bij het vinden van de juiste hoek? ** 360 / 12 = 30 **
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Vind je het lastig om te bedenken hoe je de blokken beneden kunt krijgen? Probeer de rode bloem op precies dezelfde manier te behandelen als de paarse bloem!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
+        2-3_Bee_Conditionals_14_b: Als de rode bloem paars zou zijn, kun je dan uitzoeken hoe je een extra 'herhaal-lus' kunt gebruiken om de code korter te maken?
+        2-3_Bee_Conditionals_14_c: "Probeer dit  eens in twee aparte stukken op te delen.\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Haal 3 keer nectar op\n- Beweeg 5 keer vooruit\n- Controleer of het nectar is, als dat zo is, haal het op\n- Draai naar links\n\n2) Maak honing\n- Beweeg één keer vooruit\n- Maak twee honing"
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'Denk er aan: Paarse bloemen hebben 0 of 1 nectar en ze kunnen veranderen, iedere keer dat je het programma uitvoert.'
       2-3 Bee Conditionals 3_authored_hint:
         2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each time you move forward, another loop to gather nectar, and another one to make honey.
       2-3 Bee Conditionals 6_authored_hint:
@@ -1947,10 +1947,10 @@ nl:
         4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: Vind je het lastig om te bedenken hoe je de blokken beneden kunt krijgen? Probeer de rode bloem op precies dezelfde manier te behandelen als de paarse bloem!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_b: Als de rode bloem paars zou zijn, kun je dan uitzoeken hoe je een extra 'herhaal-lus' kunt gebruiken om de code korter te maken?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'Denk er aan: Paarse bloemen hebben 0 of 1 nectar en ze kunnen veranderen, iedere keer dat je het programma uitvoert.'
       grade3_Conditionals_2_authored_hint:
         2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each time you move forward, another loop to gather nectar, and another one to make honey.
       grade3_Conditionals_4_authored_hint:

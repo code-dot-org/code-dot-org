@@ -24,11 +24,11 @@ fr:
       2-3 Artist 8_authored_hint:
         2-3_Artist_8_a: Si vous coupez 200 en deux, combien de pixels de large devront faire chaque carrés ?
       2-3 Artist 9 NEW_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square on its side
+        2-3_Artist_9_a: Ce diamant est vraiment juste un carré sur le côté
       2-3 Artist 9 REPLACEMENT_authored_hint:
         step_size: Chaque marches fait 100 pixels de haut et 100 pixels de large.
       2-3 Artist 9_authored_hint:
-        2-3_Artist_9_a: This diamond is really just a square turned 45 degrees.
+        2-3_Artist_9_a: Ce diamant n'est vraiment juste qu'un carré tourné à 45 degrés.
         2-3_Artist_9_b: |-
           N'oubliez pas de faire pivoter votre artiste de 45° dans le sens anti-horaire avant de commencer à dessiner le carré!
           
@@ -37,62 +37,59 @@ fr:
         2-3_Artist_Debugging_10_a: Souvenez-vous, si vous souhaitez que le panneau de contrôle soit 10 pixels *plus large*...alors soyez sûr **d'ajouter** 10 à chaque nombres que vous modifiez.
         2-3_Artist_Debugging_10_b: "**Trial and error is perfectly fine here!**  \n\nStart by changing one number at a time.   \n\nWhich numbers do what?  \n\nIf you get too lost, just click \"Start over\" and your code will be reset."
       2-3 Artist Debugging 2_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Indice: Chaque cheveux mesure 75 pixels.'
       2-3 Artist Debugging 3_authored_hint:
-        2-3_Artist_Debugging_3_a: One of the turns is 15 degrees too small.
-        2-3_Artist_Debugging_3_b: If the program runs too fast to see what's happening, try slowing it down with the slider.
+        2-3_Artist_Debugging_3_a: Un des tournants est trop petit de 15 degrés.
+        2-3_Artist_Debugging_3_b: Si le programme s'exécute trop rapidement pour voir ce qui se passe, essayez de le ralentir avec le curseur.
       2-3 Artist Debugging 7_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Que se passe-t-il si l’artiste recule ou saute en arrière après qu’il dessine la première ligne ?
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-          
-          How many times *should* the shape repeat?
-          
-          Where can you change that in the program?
+          Combien de fois est-ce que ma forme se répète?
+          Combien de fois est-ce que ma forme *devrait* se répéter?
+          Où pouvez-vous changer cela dans le programme?
       2-3 Artist Debugging 9_authored_hint:
-        2-3_Artist_Debugging_9_a: The artist needs to turn 60 degrees farther left before starting to draw!
-        2-3_Artist_Debugging_9_b: You don't need to add another block to get the full turn, just add 60 degrees to the `turn left` block that's already there!
+        2-3_Artist_Debugging_9_a: L'artiste doit tourner à 60 degrés plus loin à gauche avant de commencer à dessiner!
+        2-3_Artist_Debugging_9_b: Vous n’avez pas besoin d’ajouter un autre bloc pour faire le tour complet, il suffit d’ajouter 60 degrés vers le bloc « tournez à gauche » qui est déjà là !
       2-3 Artist Functions 1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
+        2-3_Artist_Functions_1_a: Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre deuxième carré.
         2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
+        2-3_Artist_Functions_11_a: Vous devrez modifier non seulement le nombre et la longueur des côtés au sein de la fonction, mais aussi l’angle que l’artiste tourne entre chaque côté.
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: Essayez d'exécuter le code tout d'abord pour voir ce qu'il faut ajouter.
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: The artist needs to turn 120 degrees between each square to complete this design.
+        2-3_Artist_Functions_4_a: L'artiste doit tourner de 120 degrés entre chaque carré pour compléer ce design.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
-          Remember that the code from the last puzzle was:
-          
+          N’oubliez pas que le code du dernier puzzle était : 
           ![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: Votre nouveau tournant devrait aller à la **fin** du code dans la boucle.
       2-3 Artist Loops New 12_authored_hint:
-        2-3_Artist Loops_New_12_a: Before starting the diamond, the artist needs to turn left by 60 degrees to get on the right path.
-        2-3_Artist Loops_New_12_b: After the artist goes forward 100 pixels, he will need to turn right 120 degrees to make the sharp corner.
-        2-3_Artist Loops_New_12_c: The artist will need to turn right only 60 degrees to create a wide corner.
+        2-3_Artist Loops_New_12_a: Avant de commencer le diamant, l’artiste doit tourner à gauche de 60 degrés pour se retrouver sur la bonne voie.
+        2-3_Artist Loops_New_12_b: Après que l’artiste avance 100 pixels, il devra tourner à droite à 120 degrés pour faire un coin pointu.
+        2-3_Artist Loops_New_12_c: L'artiste devra tourner à droite de seulement 60 degrés pour créer un coin large.
       2-3 Artist Loops New 13_authored_hint:
-        2-3_Artist_Loops_New_13_a: "At the end of each diamond, the artist is already facing the right direction to start the next one.  \n\nBecause of this, we don't need to add an extra `turn left by` block before we start again."
-        2-3_Artist_Loops_New_13_b: "To make each diamond, the artist needs to:   \n- move\n- turn right 120 degrees\n- move\n- turn right 60 degrees  \n\nThen do it all again!"
+        2-3_Artist_Loops_New_13_a: "À la fin de chaque diamant, l’artiste est déjà dans la bonne direction pour commencer celui qui suit.\nPour cette raison, nous n’avons pas besoin d’ajouter un bloc supplémentaire « tourner à gauche de » avant de recommencer."
+        2-3_Artist_Loops_New_13_b: "Pour faire chaque diamant, l'artiste doit:   \n- avancer\n- tourner à droite de 120 degrés\n- avancer\n- tourner à droite de 60 degrés  \n\nPuis, recommencer!"
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: The artist needs to turn 45 degrees to the right before he starts drawing.
         2-3_Artist_Loops_New_9_b: This V is really just half of a square.  What would the code be to draw half of a square?
       2-3 Artist Nested Loops 1_authored_hint:
         2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "Besoin d’aide avec les angles?   **360/12 = 30**"
         2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: "Besoin d’aide avec les angles?   **360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?"
       2-3 Artist Nested Loops 7_authored_hint:
@@ -104,24 +101,24 @@ fr:
           **360 / 12 = 30**
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_b: Si la fleur rouge était mauve, pourriez-vous trouver un moyen d'utiliser une boucle de répétition supplémentaire pour réduire le code?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
       2-3 Bee Conditionals 15_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'N''oubliez pas: Les fleurs mauves n''ont seulement que 0 ou 1 nectar et ils peuvent changer à chaque fois que vous exécutez le programme.'
       2-3 Bee Conditionals 3_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each time you move forward, another loop to gather nectar, and another one to make honey.
+        2-3_Bee_Conditionals_3_a: Le code sera plus court si vous utilisez une boucle à chaque fois que vous aller de l’avant, une autre boucle pour recueillir le nectar et l’autre pour faire le miel.
       2-3 Bee Conditionals 6_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'N''oubliez pas: Les fleurs mauves changent entre 0 et 1 nectar lorsque vous exécutez votre programme!'
       2-3 Bee Debugging 1_authored_hint:
         2-3_Bee_Debugging_1_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
       2-3 Bee Debugging 2_authored_hint:
         2-3_Bee_Debugging_2_a: Once you find and fix the incorrect block, do you see any patterns that could be made more simple using a `repeat` loop?
       2-3 Bee Debugging 4_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: Y a-t-il un endroit où l’abeille fait quelque chose qui n’a aucun sens ? Que se passe-t-il lorsque vous modifiez ce bloc ?
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: Vous n’avez pas à utiliser une boucle avec une fonction. Essayez de bouger, à l’aide de la fonction, puis en déplaçant et en utilisant la fonction à nouveau.
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: Vous n’avez pas à utiliser une boucle avec une fonction. Essayez de bouger, à l’aide de la fonction, puis en déplaçant et en utilisant la fonction à nouveau.
       2-3 Bee Functions 8_authored_hint:
         2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
@@ -131,15 +128,15 @@ fr:
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
       2-3 Bee Loops 3_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
       2-3 Bee Loops 3B_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       2-3 Bee Loops 4_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Vous devriez retrouver cinq blocs à l’intérieur de la boucle.
       2-3 Bee Loops 4A_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: La première action sera un tournant, plutôt que d’un mouvement.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       2-3 Bee Loops 5_authored_hint:
@@ -148,7 +145,7 @@ fr:
         2-3_Bee_Loops_6_a: If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.
         2-3_Bee_Loops_6_b: There should be 6 blocks inside your `repeat` loop when you're done.
       2-3 Bee Loops 7_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: La première action sera un tournant, plutôt que d’un mouvement.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       2-3 Maze 1_authored_hint:
         2-3_Maze_1_a: To use a `move forward` block, drag it from the toolbar area out into the workspace and connect it to the `when run` block.
@@ -191,7 +188,7 @@ fr:
           
           **90 / 3 = _____**
       4-5 Artist 7_authored_hint:
-        4-5_Artist_7_a: 'Which angle is the smallest?  At which angle is the artist standing? '
+        4-5_Artist_7_a: 'Quel angle est le plus petit?  À quel angle l’artiste est-il debout? '
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "The long sides are 240 pixels each.  That means that the 2 short sides must total:\n\n**800 - 240 - 240 = 320**\n\nWhat is **320/2** ? "
         4-5_Artist_8_b: "This image can be done 2 ways!  \n- Draw two rectangles that are **120** long and **160** tall, with an overlapping side\n\n- Draw one rectangle that is **240** long and **160** tall, then add a line in the middle."
@@ -255,7 +252,7 @@ fr:
           
           **360 / 6 = ?**
       4-5 While Loops 8_authored_hint:
-        4-5_While_Loops_8_a: Each item will need its own `while` loop.
+        4-5_While_Loops_8_a: Chaque élément devra sa propre boucle « while ».
       aE1_authored_hint: [ ]
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.
@@ -287,7 +284,7 @@ fr:
           **180 ÷ 3 = ?**
       aE7_authored_hint:
         aE7_a: Draw the bottom half of a circle and then the top half of a circle to make one segment.
-        aE7_b: You will need 4 segments to complete this puzzle.
+        aE7_b: Vous aurez besoin de 4 segments pour compléter ce puzzle.
       aE8_authored_hint:
         aE8_a: "To make a square from your line, you will need to: \n-  draw the line \n-  use the curvy corner\n\nRepeat these steps 4 times."
       Artist Inspiration_authored_hint:
@@ -310,7 +307,7 @@ fr:
       artistLoopsK3_authored_hint:
         artistLoopsK3_a: Try using what you've learned about repeat blocks to complete this puzzle!
       artistLoopsK4_authored_hint:
-        artistLoopsK4_a: Stuck? Try running the code to see which block is incorrect.
+        artistLoopsK4_a: Coincé ? Essayez d’exécuter le code pour afficher le bloc qui est incorrect.
       artistLoopsK5_authored_hint:
         artistLoopsK5_a: All 4 of the starting blocks should go inside of your repeat block to solve this puzzle.
       artistLoopsK6_authored_hint:
@@ -1008,10 +1005,10 @@ fr:
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
       courseD_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -1429,17 +1426,17 @@ fr:
         courseE_artist_concept4_a: There are several ways to solve this puzzle. Can you make a plan?
         courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What comes next?
       courseE_artist_functions1_authored_hint:
-        courseE_artist_functions1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
+        courseE_artist_functions1_a: Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre deuxième carré.
         courseE_artist_functions1_b: It is okay to draw overlapping lines to make your glasses.
       courseE_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
       courseE_artist_functions3_authored_hint:
         courseD_artist_functions3_a: |-
           To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.
@@ -1870,7 +1867,7 @@ fr:
           Remember that the code from the last puzzle was:
           
           ![](https://images.code.org/e5c7492f509dd41efe2888c7e7895c28-image-1461177002636.29.02.png)
-        2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code inside the loop.
+        2-3_Artist_Loops_New_11_b: Votre nouveau tournant devrait aller à la **fin** du code dans la boucle.
       grade2_MakeDogTag_BFP_authored_hint: [ ]
       grade2_maze_debuggingFP_authored_hint: [ ]
       grade2_maze_intro4_authored_hint:
@@ -1913,11 +1910,9 @@ fr:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
-          How many times did my shape repeat?
-          
-          How many times *should* the shape repeat?
-          
-          Where can you change that in the program?
+          Combien de fois est-ce que ma forme se répète?
+          Combien de fois est-ce que ma forme *devrait* se répéter?
+          Où pouvez-vous changer cela dans le programme?
       grade2_PuppyLoops_3_authored_hint:
         hint1: This puzzle is very similar to the last one.
         hint2: Use a `repeat 5 times` block to create the loop.
@@ -1931,9 +1926,9 @@ fr:
         2-3_Maze_Loops_17_a: If the pattern is hard to see, try coding it all out first and see what things repeat over and over before you put the loops in.
         2-3_Maze_Loops_17_b: Did the starting code get deleted?  Click `start over` to get it back!
       grade2_PuppyLoops_8_authored_hint:
-        2-3_Artist_Debugging_2_a: 'Hint: Each whisker is 75 pixels long.'
+        2-3_Artist_Debugging_2_a: 'Indice: Chaque cheveux mesure 75 pixels.'
       grade2_PuppyLoops_9_authored_hint:
-        2-3_Artist_Debugging_7_a: What happens if you have the artist move or jump backward after he draws the first line?
+        2-3_Artist_Debugging_7_a: Que se passe-t-il si l’artiste recule ou saute en arrière après qu’il dessine la première ligne ?
       grade3_bee_conditionals_new1a_authored_hint:
         grade3_bee_conditionals_new1a_a: Be sure to use an `if` statement to check each space to see if it has a flower or nothing.
       grade3_bee_conditionals_new2a_authored_hint:
@@ -1958,16 +1953,16 @@ fr:
         4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
-        2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
+        2-3_Bee_Conditionals_14_b: Si la fleur rouge était mauve, pourriez-vous trouver un moyen d'utiliser une boucle de répétition supplémentaire pour réduire le code?
         2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n![](https://images.code.org/670ac0889a8f523865ff4099b4c54844-image-1463445460440.36.42.png)\n\n1) Gather nectar 3 times\n  - Move forward 5 times\n  - Check to see if nectar, if so: get it\n  - Turn left\n  \n2) Make honey \n  - Move forward one time\n  - Make two honey"
       grade3_Conditionals_12_authored_hint:
-        2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
+        2-3_Bee_Conditionals_15_a: 'N''oubliez pas: Les fleurs mauves n''ont seulement que 0 ou 1 nectar et ils peuvent changer à chaque fois que vous exécutez le programme.'
       grade3_Conditionals_2_authored_hint:
-        2-3_Bee_Conditionals_3_a: The code will be shortest if you use a loop each time you move forward, another loop to gather nectar, and another one to make honey.
+        2-3_Bee_Conditionals_3_a: Le code sera plus court si vous utilisez une boucle à chaque fois que vous aller de l’avant, une autre boucle pour recueillir le nectar et l’autre pour faire le miel.
       grade3_Conditionals_4_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'N''oubliez pas: Les fleurs mauves changent entre 0 et 1 nectar lorsque vous exécutez votre programme!'
       grade3_Conditionals_TeacherIDo_authored_hint:
-        2-3_Bee_Conditionals_6_a: 'Remember: Purple flowers change between 0 and 1 nectar when you run your program!'
+        2-3_Bee_Conditionals_6_a: 'N''oubliez pas: Les fleurs mauves changent entre 0 et 1 nectar lorsque vous exécutez votre programme!'
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
       grade3_ConditionalsElse_5_authored_hint:
@@ -2021,9 +2016,9 @@ fr:
         grade3_Debugging_8_a: "Try using the debugging process a couple of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed, what goes wrong?"
         grade3_Debugging_8_b: "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
       grade3_Debugging_TeacherIDo_authored_hint:
-        2-3_Bee_Debugging_4_a: Is there any place where the bee does something that doesn't make sense? What happens when you change that block?
+        2-3_Bee_Debugging_4_a: Y a-t-il un endroit où l’abeille fait quelque chose qui n’a aucun sens ? Que se passe-t-il lorsque vous modifiez ce bloc ?
       grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Vous devriez retrouver cinq blocs à l’intérieur de la boucle.
       grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
       grade3_Loops_12_authored_hint:
@@ -2032,16 +2027,16 @@ fr:
       grade3_Loops_4_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: La première action sera un tournant, plutôt que d’un mouvement.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: La première action sera un tournant, plutôt que d’un mouvement.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
       grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
       grade3_maze_loops1_authored_hint:
         grade3_maze_loops1_a: Try using the "Step" button to find errors.
       grade3_maze_loops2_authored_hint:
@@ -2128,14 +2123,14 @@ fr:
       grade4_arist_nested_loop_triangles6_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       grade4_artist_functions1_authored_hint:
-        2-3_Artist_Functions_1_a: The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.
+        2-3_Artist_Functions_1_a: Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que vous devrez avancer de 175 pixels avant de dessiner votre deuxième carré.
         2-3_Artist_Functions_1_b: It is okay to draw overlapping lines to make your glasses.
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
-          Your program should:
-          - Use function
-          - Move forward 100 + 75 pixels
-          - Use function
+          Votre programme devrait:
+          - Utiliser une fonction
+          - Avancer de 100 + 75 pixels
+          - Utiliser une fonction
       grade4_artist_functions2a_authored_hint:
         grade4_artist_functions2a_a: To get around using multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
       grade4_artist_functions3a_authored_hint:
@@ -2278,9 +2273,9 @@ fr:
       grade4_review_bee1_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       grade4_review_bee2_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
       grade4_review_bee3_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Vous devriez retrouver cinq blocs à l’intérieur de la boucle.
       grade5_artist_binary10_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: This code uses two `for loops`. One counts up from 1 to 8, the other counts down from 8 to 1.
         Course_4_Artist_Binary_Free_Play_2b_b: Each `for loop` has three repeats.  The first draws the leftmost set of 1s, the second draws the 0s in the middle and the third draws the 1s on the right.
@@ -2559,7 +2554,7 @@ fr:
       K2.0 sequence pre_authored_hint:
         K2.0_sequence_pre_a: If you are having trouble getting the bird to move, make sure blocks are connected under `when run`.
       level 'grade3_Loops_10_authored_hint:
-        2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
+        2-3_Bee_Loops_4_a: Vous devriez retrouver cinq blocs à l’intérieur de la boucle.
       level 'grade3_Loops_11_authored_hint:
         2-3_Bee_Loops_5_a: If you can't spot the blocks to put inside `repeat` right away, start by coding out each move and look for a pattern.
       level 'grade3_Loops_12_authored_hint:
@@ -2568,16 +2563,16 @@ fr:
       level 'grade3_Loops_4_authored_hint:
         2-3_Bee_Loops_3B_a: You will need two different `repeat` loops, one after the other.
       level 'grade3_Loops_5_authored_hint:
-        2-3_Bee_Loops_7_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_7_a: La première action sera un tournant, plutôt que d’un mouvement.
         2-3_Bee_Loops_7_b: 'If you can''t quite picture the loop from the beginning, try coding it out the long way, then look for a pattern.  '
       level 'grade3_Loops_6_authored_hint:
-        2-3_Bee_Loops_4A_a: The first action will be a turn, rather than a move.
+        2-3_Bee_Loops_4A_a: La première action sera un tournant, plutôt que d’un mouvement.
         2-3_Bee_Loops_4A_b: The last piece of the program can be finished by writing code at the end of your program outside of your loop.
         2-3_Bee_Loops_4A_c: If you can't spot the loops yet, try coding it out the long way first, then see what you can combine into a `repeat` loop at the end.
       level 'grade3_Loops_8_authored_hint:
-        2-3_Bee_Loops_2_a: You should end up with four blocks inside your loop.
+        2-3_Bee_Loops_2_a: Vous devriez avoir quatre blocs à l’intérieur de la boucle.
       level 'grade3_Loops_9_authored_hint:
-        2-3_Bee_Loops_3_a: You should have 6 blocks inside your loop.
+        2-3_Bee_Loops_3_a: Vous devriez avoir 6 blocs à l’intérieur de la boucle.
       MikeStar_authored_hint:
         hint1: Don't give up!
       MikeStarHard_authored_hint:

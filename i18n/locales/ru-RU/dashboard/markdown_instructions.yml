@@ -107,7 +107,7 @@ ru:
       4-5 Artist 11_markdown_instruction: "Complete the green lines.  \\r\n\\r\nThe\nlines are 300 pixels long and 15 pixels apart."
       4-5 Artist 2_markdown_instruction: "Loop this code using the `repeat` block\nto complete the square."
       4-5 Artist 3.5_markdown_instruction: "Try to figure out what happens if you\nrun this code (or just press \"Run\" and try it). \\r\n\\r\nNext, repeat the\ncode enough times to complete the drawing!"
-      4-5 Artist 3_markdown_instruction: "This rectangular flower bed has a perimeter\nof 600.  \\r\nThe long side has a length of 200. \\r\n\\r\nDraw the rectangle\nusing as few blocks as possible."
+      4-5 Artist 3_markdown_instruction: "Периметр прямоугольной клумбы - 600.  \\r\nПротяженность более длинной стороны - 200. \\r\n\\r\nНарисуй прямоугольник,\nиспользуя как можно меньше блоков."
       4-5 Artist 4_markdown_instruction: "How many degrees are in a circle?  \\r\n\\r\nLoop\nthe blocks to create a circle of colors."
       4-5 Artist 5_markdown_instruction: "What can we replace \"???\" with to make\nsure that the zombie completes this drawing using the loop provided?"
       4-5 Artist 6_markdown_instruction: "This equilateral triangle has angles of\n60, 60, and 60 degrees. Each side is 200 pixels. Complete the drawing."

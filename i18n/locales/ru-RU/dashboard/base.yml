@@ -130,8 +130,8 @@ ru:
     school_name: 'Название школы'
     school_zip: 'Почтовый индекс школы'
     school_address: 'Адрес школы'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    school_organization_name: 'Название школы/организации'
+    school_organization_zip: 'Почтовый индекс школы/организации'
   signin_form:
     title: 'Уже зарегистрированы? Вход'
     login: 'Электронная почта'
@@ -561,7 +561,7 @@ ru:
     help_resources: "Помощь и ресурсы"
     help_support: "Help and Support"
     documentation: "Документация"
-    tutorials: "Tutorials"
+    tutorials: "Обучающие материалы"
   multi:
     wrong_title: "Неправильный ответ"
     wrong_body: "Вы ввели неправильный ответ.  Попробуйте еще раз!"

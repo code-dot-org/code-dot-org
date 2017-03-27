@@ -444,7 +444,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 名教師需要志工。<br>%{num_volunteers} 人已自願參加，加入他們。"
   volunteer_engineer_submission_intro_background: "一小時玩程式（Hour of Code）是一個介紹計算機科學的全球性活動，在超過 180 個國家，有數以千萬計的學生響應。歡迎你在計算機科學教育週（CsedWeek，12/7-12/13）一同參與活動。"
   volunteer_engineer_submission_intro_recruit: '這些老師希望有<span style="font-family: ''Gotham 7r'', sans-serif;">熱衷於計算機科學教育的人士</span>能夠在課堂上提供幫助，或是藉由談論計算機科學的可能性有多大（不一定要面對面，或許也能透過視訊）來<span style="font-family: ''Gotham 7r'', sans-serif;">啟發</span>學生的人。'
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide: "進一步了解我們的<a href=\"%{volunteer_guide}\">志工專案</a>。"
   volunteer_engineer_submission_intro_signup: "如果你是學習計算機科學的學生，或是軟體專業人士，請填寫下列資訊。<span class=\"form-required-field\">*</span>為必填。"
   volunteer_engineer_submission_intro_links: "需要些志工嗎？在我們的<a href=\"%{volunteer_local}\">志工地圖</a>上尋找本地有哪些志願者。"
   volunteer_engineer_submission_update_information: "更新你的個人資訊"
@@ -473,7 +473,7 @@
   volunteer_engineer_submission_field_email_placeholder: "電子郵件地址"
   volunteer_engineer_submission_final_paragraph: "你會被標示在地圖上，這樣當地的老師就能在辦理一小時玩程式活動時有機會與你或其他志工聯絡。我們絕對不會洩漏你的電子信箱和聯絡地址，但其他資訊（包括你的大略位置）會公開讓當地老師看到。"
   volunteer_engineer_submission_checkbox_contact: 我同意老師可以在需要志工時聯繫我（註：你的信箱不會被洩漏）
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
+  volunteer_engineer_submission_checkbox_age_18_plus: "我很確定我滿 18 歲。"
   volunteer_engineer_submission_submit: "送出"
   volunteer_engineer_submission_thankyou: "感謝你！你的志工請願表已提交。請允許我們將你的資料公開在地圖上 48 小時，這樣一來教師才可以從<a href=\"%{url}\">地圖</a>中搜尋或聯絡到像你一樣的志工。"
   volunteer_engineer_submission_commitment_uncertain: "不確定"

@@ -2,7 +2,7 @@ ku:
   data:
     instructions:
       2-3 Artist 1 new_instruction: "Silav! Ez Hunermend im. Ji ber Kod ya te ez dê hema hemî bo Rism kim. Hinek Blok bi kar bine, da ku ez bi Xet yet cûn ve biçim. (Her Xet 100 Piksel dirêj e.)"
-      2-3 Artist 11_instruction: "Give the stop sign a border by making an octagon\nwith 100 pixels sides. \\r\n\\r\n"
+      2-3 Artist 11_instruction: "چوارچێوەیەک بۆ هێمای وەستان بکێشە بە دروستکردنی هەشتپاڵویەک بە درێژی ١٠٠ پیکسڵ بۆ هەر لایەک\\r\n\\r\n"
       2-3 Artist 12_instruction: "Create a circle to finish the eyeball!\\r\n\\r\nIf\nthe artist turns 1 degree with each loop, how many times do you need to repeat\nthe code to draw a circle? 180? 360? 500?"
       2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side\nis 100, but the half-finished wall is only 50. Complete the wall. "
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100, but the half-finished wall is only 50. Complete the wall. "

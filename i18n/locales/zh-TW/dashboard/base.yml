@@ -130,8 +130,8 @@ zh-TW:
     school_name: '學校名稱'
     school_zip: '學校郵遞區號'
     school_address: '學校地址'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    school_organization_name: '學校 / 組織名稱'
+    school_organization_zip: '學校 / 組織郵遞區號'
   signin_form:
     title: '已經有帳戶了？登入'
     login: '電子信箱'
@@ -393,7 +393,7 @@ zh-TW:
     announcement_go_beyond: "超越一小時玩程式，每週和你的學生探索計算機科學概念。Code.org 提供了課程、教學計畫、高品質的專業學習用程式，和一堆超棒的工具給不同年級的人使用&mdash;全部免費 :)。您不需要有任何經驗在課堂教授計算機科學的經驗，</b>接下來只要找尋適合你的學生的課程。</b>"
     announcement_teacher_recruitment: "和你一樣的老師們正主導著計算機科學教育運動，你可以將高品質且專業的 K-12 年級程式學習<strong>免費的帶到你的學校</strong>。成為你的學校裡的計算機科學的領頭羊，並申請專業學習。"
     announcement_teacher_recruitment2: "像你這樣的老師正領先電腦科學教育運動。你可以參加高品質 K-12th 級專業程式學習計畫 <strong>您與您的學校機構完全無需付費</strong> 在電腦科學領域上取得領先，並申請專業學習。國中和高中老師們請3月17日前申請。"
-    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
+    announcement_csf_pilot: "<strong>小學教師：</strong> 加入我們的 CS 基礎課程！我們在冬季和春季正在尋找老師來試用更新的 CS 基礎課程。我們非常期盼在 2017 年 8 月的這些更新活動之前收到您的反饋。"
     announcement_student_privacy: "在 Code.org 上，我們非常注重學生安全，為了保護你的學生的隱私，我們已經在你設定的學習小組登入頁面上做了些修改，以避免顯示全名。雖然這個更新可以降低登入頁面的隱私問題，我們還是希望用戶<strong>不要使用全名作為學生的用戶名稱</strong>。"
     announcement_apcsp_recruitment: "<strong>CSP 的教師：</strong>你的學生可以在 Code.org 的下一個病毒介紹視頻中被鼓勵參加這個年度的 AP CS Principles 考試。我們將邀請所有 CS Principles 的學生在 Twitter、Instagram或是 Facebook ，上提交一個 10-20 秒的片段，影片內容說明為何要參加 APCSP 考式。最棒的提交內容會被放入我們的推薦影片中，並可以獲得 Code.org 提供的禮物！"
     announcement_apcsp_recruitment2: "今年的 AP CS Principles 考試有望打破記錄。學生在考試中的參與可能急劇轉變多樣性在 AP 電腦科學中，但我們需要你的説明。鼓勵每個 CS Principles 學生選修 AP CSP 考試，我們會 <a href='%{gift_url}' target='_blank'> 送你一個禮物</a>。學生也可以到我們的 <a href='%{challenge_url}' target='_blank'> #APCSP 視頻的挑戰</a>，鼓勵在全國各地的同好。"

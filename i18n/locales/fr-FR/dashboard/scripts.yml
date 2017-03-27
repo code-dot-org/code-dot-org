@@ -2693,7 +2693,7 @@ fr:
             'Project: Board Output': 'Project: Board Output'
             For Loops with UI and Board: For Loops with UI and Board
             Lists and For Loops: Lists and For Loops
-            Analog Input: Analog Input
+            Analog Input: Entrée analogique
             Polling Events: Polling Events
             Sensor Applications: Sensor Applications
           title: Draft Unit 6
@@ -2704,7 +2704,7 @@ fr:
           stage:
             Introduction: Introduction
             Sprites: Sprites
-            Input: Input
+            Input: Entrée
             'Project: Interactive Card': 'Project: Interactive Card'
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -2758,7 +2758,7 @@ fr:
             App Lab Basics: App Lab Basics
             The Circuit Playground: The Circuit Playground
             Physical Input: Physical Input
-            Analog Input: Analog Input
+            Analog Input: Entrée analogique
           title: Maker Toolkit Workshop
           description_audience: Teachers attending an in-person Maker Toolkit Workshop
           description_short: Level progression to accompany an in-person Maker Toolkit Workshop

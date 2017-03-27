@@ -444,7 +444,7 @@
   volunteer_engineer_submission_subtitle_specific: "Количество учителей, которым нужны волонтеры: %{num_teachers}.<br>Количество зарегистрированных волонтеров: %{num_volunteers}. Присоединиться к ним."
   volunteer_engineer_submission_intro_background: "Час кода — это глобальное движение, представляющее собой вводный урок в информатику продолжительностью 1 час и охватывающее десятки миллионов учеников в более чем 180 странах. Присоединяйтесь во время проведения недели информатики с 7 по 13 декабря."
   volunteer_engineer_submission_intro_recruit: 'Учителям очень хотелось бы, чтобы кто-то, <span style="font-family: ''Gotham 7r'', sans-serif;">заинтересованный в обучении информатике,</span> мог бы помочь в классе или <span style="font-family: ''Gotham 7r'', sans-serif;">мотивировать</span> учеников рассказом о безграничных возможностях, которые открываются при изучении информатики (к примеру, через видеочат).'
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide: "Узнайте больше о <a href=\"%{volunteer_guide}\">волонтёрской программе здесь</a>."
   volunteer_engineer_submission_intro_signup: "Укажите следующую информацию, если вы ученик, занимающийся информатикой, или специалист по программному обеспечению. Поля, отмеченные <span class=\"form-required-field\">*</span>, являются обязательными."
   volunteer_engineer_submission_intro_links: "Хотите найти волонтеров? Найдите волонтера в своем регионе на нашей <a href=\"%{volunteer_local}\">карте волонтеров</a>."
   volunteer_engineer_submission_update_information: "Обновление вашей информации"
@@ -473,7 +473,7 @@
   volunteer_engineer_submission_field_email_placeholder: "Адрес электронной почты"
   volunteer_engineer_submission_final_paragraph: "Вы будете указаны на карте, чтобы учителя из вашего региона могли связаться с вами для проведения часа кода или для другой волонтерской деятельности. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ мы не раскроем вашу электронную почту и точный адрес. Но остальная информация (включая примерное местоположение) будет размещена в открытом доступе для учителей вашего региона."
   volunteer_engineer_submission_checkbox_contact: 'Я согласен(на) с тем, что преподаватели могут связаться со мной для волонтерских задач (примечание: ваш адрес электронной почты не будет передан)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
+  volunteer_engineer_submission_checkbox_age_18_plus: "Я подтверждаю, что мне не меньше 18 лет."
   volunteer_engineer_submission_submit: "Отправить"
   volunteer_engineer_submission_thankyou: "Благодарим вас за регистрацию в качестве волонтера. Учителя будут пользоваться <a href=\"%{url}\">данной картой</a> для поиска таких волонтеров как вы и связи с ними."
   volunteer_engineer_submission_commitment_uncertain: "Не могу сказать точно"

@@ -23,7 +23,7 @@ zh-TW:
       courseE_playLab_scaffold3_failure_message_override: "你必須添加 2 個以上的新角色到遊戲，然後編程讓他們產生動作。"
       Eval Strings Images .2_failure_message_override: "請檢查你是不是在後面加上了「Universe」字串，這樣程式才會創建出「Hello, Universe」"
       grade4_scaffolded_project3_failure_message_override: "你必須添加 2 個以上的新角色到你的遊戲中。"
-      Kiki_StarWars_Test_5_failure_message_override: "Game over!"
+      Kiki_StarWars_Test_5_failure_message_override: "遊戲結束！"
       kikiTesta_failure_message_override: "恭喜！你收集了 X 枚硬幣！"
       MC HOC 2016 Level 1_failure_message_override: "接下來，你必須收集羊毛。若要收集羊毛，請使用方向鍵走到羊那裡，接著按下空白鍵或是在屏幕上點一下以修剪羊毛。還有，別忘了添加「掉落羊毛」積木到程式裡。"
       MC HOC 2016 Level 2-2_failure_message_override: "使用`移動-向前`和`轉向`指令來讓你的雞產生動作。"

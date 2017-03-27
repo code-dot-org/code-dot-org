@@ -1101,13 +1101,11 @@ zh-TW:
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
       courseD_artist_nestedLoopsPre1_authored_hint: [ ]
       courseD_artist_ramp11_authored_hint:
-        courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
+        courseD_artist_ramp11a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
         courseD_artist_ramp11b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
-          
-          Don't forget to turn afterward!
+          若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
       courseD_artist_ramp12_authored_hint:
-        courseD_artist_ramp12_a: You can either draw the square first, then the triangle, or do it the other way around!
+        courseD_artist_ramp12_a: 你也可以先畫出正方形，然後再畫三角形。調換畫的順序也可以！
       courseD_bee_conditionals1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals1_predict1_authored_hint:
@@ -1223,14 +1221,14 @@ zh-TW:
       courseD_bee_nestedLoops9_predict2_authored_hint: [ ]
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
-          Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
+          替換掉使用四個`移動-向前`積木的方式，改成把`移動-向前`積木放進`重複`迴圈，像這樣：
           <xml><block type="controls_repeat">
           <title name="TIMES">4</title>
           <statement name="DO">
           <block type="maze_moveForward"/>
           </statement>
           </block></xml>
-        courseD_artist_ramp10_b: Don't forget to collect one piece of treasure, then turn after each set of steps!
+        courseD_artist_ramp10_b: 別忘了要收集寶藏後，再後在每步之後轉向！
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -1372,7 +1370,7 @@ zh-TW:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
       courseD_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
-        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+        courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
       courseD_maze_until10_authored_hint: [ ]
       courseD_maze_until10_predict2_authored_hint: [ ]
       courseD_maze_until2_authored_hint:
@@ -1469,13 +1467,11 @@ zh-TW:
       courseE_artist_functions_predict1_authored_hint: [ ]
       courseE_artist_functions_predict2_authored_hint: [ ]
       courseE_artist_ramp11_authored_hint:
-        courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
+        courseD_artist_ramp11a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
         courseD_artist_ramp11b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
-          
-          Don't forget to turn afterward!
+          若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
       courseE_artist_ramp12_authored_hint:
-        courseD_artist_ramp12_a: You can either draw the square first, then the triangle, or do it the other way around!
+        courseD_artist_ramp12_a: 你也可以先畫出正方形，然後再畫三角形。調換畫的順序也可以！
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_a: If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.
       courseE_bee_concept2_authored_hint:
@@ -1514,14 +1510,14 @@ zh-TW:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
       courseE_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
-          Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
+          替換掉使用四個`移動-向前`積木的方式，改成把`移動-向前`積木放進`重複`迴圈，像這樣：
           <xml><block type="controls_repeat">
           <title name="TIMES">4</title>
           <statement name="DO">
           <block type="maze_moveForward"/>
           </statement>
           </block></xml>
-        courseD_artist_ramp10_b: Don't forget to collect one piece of treasure, then turn after each set of steps!
+        courseD_artist_ramp10_b: 別忘了要收集寶藏後，再後在每步之後轉向！
       courseE_farmer_concept1_authored_hint:
         courseE_farmer_concept1_a: A `while there is a hole` block will help you fill any hole until it's flat.
       courseE_farmer_concept2_authored_hint:
@@ -1587,7 +1583,7 @@ zh-TW:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
       courseE_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
-        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
+        courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
       courseE_playLab_scaffold2_authored_hint:
         courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.
       courseE_playLab_scaffold3_authored_hint:

@@ -177,7 +177,7 @@ zh-TW:
       Course 4 Playlab For Loop Freeplay_callout: [ ]
       Course 4 Playlab For Loops 4b_callout:
         Course_4_Playlab_For_Loops_4b_1: 注意 `counter`（計數器）變數在每個角色上是不是用了不同的名稱？這樣子每個計數迴圈才可以控制自己的計數器。
-        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change the "increment" of the `for` loops.
+        Course_4_Playlab_For_Loops_4b_2: 這個關卡你只能修改`計數迴圈`中的「增量」。
       Course 4 Playlab For Loops 5b_callout: [ ]
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
@@ -236,14 +236,14 @@ zh-TW:
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
-        courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
+        courseD_artist_ramp11_1: 你可以修改這個數字。
+        courseD_artist_ramp11_2: 點擊此處輸入程式要重複的次數。
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: 記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
+        courseD_collector_ramp8_1: '使用這個積木來收集寶藏。'
       courseD_collector_ramp9_callout: [ ]
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
@@ -255,7 +255,7 @@ zh-TW:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseD_maze_ramp5_callout: [ ]
       courseD_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseD_maze_ramp7_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseD_playLab_condFP_callout:
@@ -268,12 +268,12 @@ zh-TW:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: You can change this number.
-        courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
+        courseD_artist_ramp11_1: 你可以修改這個數字。
+        courseD_artist_ramp11_2: 點擊此處輸入程式要重複的次數。
       courseE_artist_ramp12_callout: [ ]
       courseE_collector_ramp10_callout: [ ]
       courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
+        courseD_collector_ramp8_1: '使用這個積木來收集寶藏。'
       courseE_collector_ramp9_callout: [ ]
       courseE_farmer_functions10b_callout: [ ]
       courseE_farmer_functions11_predict_callout: [ ]
@@ -306,7 +306,7 @@ zh-TW:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseE_maze_ramp5_callout: [ ]
       courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+        courseD_maze_ramp6_1: 不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。
       courseE_maze_ramp7_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_artist_for1_callout:
