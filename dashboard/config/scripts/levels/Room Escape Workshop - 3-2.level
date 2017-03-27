@@ -61,10 +61,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Move Picture\r\n\r\nNow make it so the user can find the secret code by clicking the picture. When they click the picture it should move up and out of the way.\r\n\r\n# Do This\r\n\r\n* Pull out an `onEvent` block\r\n* Change the id spot in the `onEvent` block to picture (which is the ID of the picture element)\r\n* Inside the `onEvent` block add the `setPosition` block with the following inputs\r\n\t* ID: picture\r\n    * The next two inputs are x and y values - test out some numbers to try to get the picture to move like in the pictures on the right",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
