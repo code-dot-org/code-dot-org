@@ -597,14 +597,19 @@ var projects = module.exports = {
       }));
   },
   toggleMakerEnabled() {
-    this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-      this.save(
-        {
-          ...sourceAndHtml,
-          makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled,
-        },
-        () => window.location.reload()
-      );
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.save(
+          {
+            ...sourceAndHtml,
+            makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled,
+          },
+          () => {
+            resolve();
+            window.location.reload();
+          }
+        );
+      });
     });
   },
   updateCurrentData_(err, data, isNewChannel) {
