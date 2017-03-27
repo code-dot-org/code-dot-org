@@ -1062,7 +1062,7 @@ Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
   wait_short_until {/#{new_path}/.match(@browser.execute_script("return location.pathname"))}
 
   if redirect_source == 'pushState'
-    state = { "modified" => true }
+    state = {"modified" => true}
   elsif redirect_source == 'dashboard' || redirect_source == 'none'
     state = nil
   end

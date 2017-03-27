@@ -223,7 +223,7 @@ namespace :seed do
   end
 
   task :import_users, [:file] => :environment do |_t, args|
-    CSV.read(args[:file], { col_sep: "\t", headers: true }).each do |row|
+    CSV.read(args[:file], {col_sep: "\t", headers: true}).each do |row|
       User.create!(
         provider: User::PROVIDER_MANUAL,
         name: row['Name'],
@@ -237,7 +237,7 @@ namespace :seed do
 
   def import_prize_from_text(file, provider_id, col_sep)
     Rails.logger.info "Importing prize codes from: " + file + " for provider id " + provider_id.to_s
-    CSV.read(file, { col_sep: col_sep, headers: false }).each do |row|
+    CSV.read(file, {col_sep: col_sep, headers: false}).each do |row|
       if row[0].present?
         Prize.create!(prize_provider_id: provider_id, code: row[0])
       end
@@ -278,7 +278,7 @@ namespace :seed do
 
   task :import_donorschoose_750, [:file] => :environment do |_t, args|
     Rails.logger.info "Importing teacher prize codes from: " + args[:file] + " for provider id 8"
-    CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
+    CSV.read(args[:file], {col_sep: ",", headers: true}).each do |row|
       if row['Gift Code'].present?
         TeacherPrize.create!(prize_provider_id: 8, code: row['Gift Code'])
       end
@@ -287,7 +287,7 @@ namespace :seed do
 
   task :import_donorschoose_250, [:file] => :environment do |_t, args|
     Rails.logger.info "Importing teacher bonus prize codes from: " + args[:file] + " for provider id 9"
-    CSV.read(args[:file], { col_sep: ",", headers: true }).each do |row|
+    CSV.read(args[:file], {col_sep: ",", headers: true}).each do |row|
       if row['Gift Code'].present?
         TeacherBonusPrize.create!(prize_provider_id: 9, code: row['Gift Code'])
       end

@@ -6,7 +6,7 @@ class ModifyScriptLevelProperties < ActiveRecord::Migration[5.0]
   def up
     ScriptLevel.where.not(properties: nil).each do |script_level|
       obj = JSON.parse script_level.properties
-      script_level.update!(properties: { variants: obj }.to_json)
+      script_level.update!(properties: {variants: obj}.to_json)
     end
   end
 

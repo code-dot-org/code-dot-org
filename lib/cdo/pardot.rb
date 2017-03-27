@@ -30,20 +30,20 @@ class Pardot
   # Map of database fields to Pardot field names. "multi" refers to if the field
   # is a multi-valued type (such as checkbox list)
   MYSQL_TO_PARDOT_MAP = {
-    email: {  field: 'email', multi: false },
-    pardot_id: { field: 'id', multi: false },
-    name: { field: 'db_Name', multi: false },
-    street_address: { field: 'db_Street_Address', multi: false },
-    city: { field: 'db_City', multi: false },
-    state: { field: 'db_State', multi: false },
-    postal_code: { field: 'db_Postal_Code', multi: false },
-    country: { field: 'db_Country', multi: false },
-    district_name: { field: 'db_District', multi: false },
-    district_city: { field: 'db_District_City', multi: false },
-    district_state: { field: 'db_District_State', multi: false },
-    school_name: { field: 'db_School', multi: false },
-    roles: { field: 'db_Roles', multi: true },
-    courses_facilitated: { field: 'db_Facilitator_Type', multi: true },
+    email: {field: 'email', multi: false},
+    pardot_id: {field: 'id', multi: false},
+    name: {field: 'db_Name', multi: false},
+    street_address: {field: 'db_Street_Address', multi: false},
+    city: {field: 'db_City', multi: false},
+    state: {field: 'db_State', multi: false},
+    postal_code: {field: 'db_Postal_Code', multi: false},
+    country: {field: 'db_Country', multi: false},
+    district_name: {field: 'db_District', multi: false},
+    district_city: {field: 'db_District_City', multi: false},
+    district_state: {field: 'db_District_State', multi: false},
+    school_name: {field: 'db_School', multi: false},
+    roles: {field: 'db_Roles', multi: true},
+    courses_facilitated: {field: 'db_Facilitator_Type', multi: true},
     professional_learning_enrolled: {
       field: 'db_Professional_Learning_Enrolled',
       multi: true
@@ -52,11 +52,11 @@ class Pardot
       field: 'db_Professional_Learning_Attended',
       multi: true
     },
-    hoc_organizer_years: { field: 'db_Hour_of_Code_Organizer', multi: true },
-    grades_taught: { field: 'db_Grades_Taught', multi: true },
-    ages_taught: { field: 'db_Ages_Taught', multi: true },
-    forms_submitted: { field: 'db_Forms_Submitted', multi: false },
-    form_roles: { field: 'db_Form_Roles', multi: false }
+    hoc_organizer_years: {field: 'db_Hour_of_Code_Organizer', multi: true},
+    grades_taught: {field: 'db_Grades_Taught', multi: true},
+    ages_taught: {field: 'db_Ages_Taught', multi: true},
+    forms_submitted: {field: 'db_Forms_Submitted', multi: false},
+    form_roles: {field: 'db_Form_Roles', multi: false}
   }.freeze
 
   # Exception to throw to ourselves if Pardot API key is invalid (which probably
@@ -372,7 +372,7 @@ class Pardot
   # @return [String] Pardot URL for API request including encoded JSON prospect
   #   data in query string
   def self.build_batch_prospects_url(prospects, config)
-    prospects_payload_json_encoded = URI.encode({ prospects: prospects }.to_json)
+    prospects_payload_json_encoded = URI.encode({prospects: prospects}.to_json)
     # We also need to encode plus signs in email addresses, otherwise Pardot
     # rejects them as invalid. URI.encode does not encode plus signs, as they
     # are valid characters in the base of a URL. Although they are NOT valid in
