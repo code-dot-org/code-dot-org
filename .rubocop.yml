@@ -43,6 +43,9 @@ Style/SpaceInsideBlockBraces:
   EnforcedStyle: no_space
   SpaceBeforeBlockParameters: false
 
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
 Style/WordArray:
   MinSize: 5
 
