@@ -110,9 +110,12 @@ body.modal-open .supreme-container{
   text-align: center
 }
 
-@media screen and (max-width: 970px)  {
+@media screen and (max-width: 971px)  {
   #homepage #actions {
     margin-top: 300px;
+  }
+  #homepage #hero {
+    overflow: visible;
   }
 }
 
