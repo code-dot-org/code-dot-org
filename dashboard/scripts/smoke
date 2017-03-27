@@ -21,12 +21,12 @@ MILESTONE_DATA = {
 }
 
 TESTS = [
-  { url: '/' },
+  {url: '/'},
 ]
 
 20.times do |i|
-  TESTS << { url: "/hoc/#{i + 1}" }
-  TESTS << { url: "/milestone/0/#{i + 1}", method: :post, form_data: MILESTONE_DATA }
+  TESTS << {url: "/hoc/#{i + 1}"}
+  TESTS << {url: "/milestone/0/#{i + 1}", method: :post, form_data: MILESTONE_DATA}
 end
 #
 # parse arguments
@@ -90,7 +90,7 @@ end
 
 smoke_start = Time.now
 
-options = { quiet: quiet }
+options = {quiet: quiet}
 threads = []
 thread_count.times {threads << Thread.new {repeat_count.times {run_tests(options)}}}
 threads.each(&:join)

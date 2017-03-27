@@ -55,10 +55,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Showing inside the safe\r\n\r\nNow set up the code to show the key and the gray square when the user inputs the correct code.\r\n\r\n# Do This\r\n\r\n* Inside the `if` statement you created in the `onEvent` command for the safe add:\r\n    * The `showElement` block to show the gray square\r\n    * The `showElement` block to show the key",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

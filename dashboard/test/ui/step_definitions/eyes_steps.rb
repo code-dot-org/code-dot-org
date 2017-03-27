@@ -29,7 +29,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   end
 
   @original_browser = @browser
-  config = { app_name: 'Code.org', test_name: test_name, driver: @browser }
+  config = {app_name: 'Code.org', test_name: test_name, driver: @browser}
   if @original_browser.capabilities.browser_name == 'chrome'
     config[:viewport_size] = {width: 1024, height: 690}
   end

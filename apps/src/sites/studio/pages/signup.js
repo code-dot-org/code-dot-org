@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {createUuid, trySetLocalStorage} from '@cdo/apps/utils';
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -128,59 +127,19 @@ window.SignupManager = function (options) {
     lastUserType = "teacher";
   }
 
-  function getEnvironment() {
-    const hostname = window.location.hostname;
-    if (hostname.includes("adhoc")) {
-      // check first for adhoc, since hostnames might include other keywords
-      return "adhoc";
-    }
-    if (hostname.includes("test")) {
-      return "test";
-    }
-    if (hostname.includes("staging")) {
-      return "staging";
-    }
-    if (hostname.includes("levelbuilder")) {
-      return "levelbuilder";
-    }
-    if (hostname.includes("localhost")) {
-      return "development";
-    }
-    if (hostname.includes("code.org")) {
-      return "production";
-    }
-    return "unknown";
-  }
-
   /**
-   * Log signup-related analytics events to Firehose
+   * Log signup-related analytics events to Firehose.
    * @param eventName name of the event to log
-   * @param extraData optional hash object for supplemental data (will show up in the data_json field)
+   * @param extraData optional hash object for supplemental data to be injected
+   *   in the data_json field. (default {})
    */
   function logAnalyticsEvent(eventName, extraData = {}) {
-    if (!self.uuid) {
-      if (!!window.localStorage && !!window.localStorage.getItem("analyticsID")) {
-        self.uuid = window.localStorage.getItem("analyticsID");
-      } else {
-        self.uuid = createUuid();
-        trySetLocalStorage("analyticsID", self.uuid);
-      }
-    }
-
     const streamName = "analysis-events";
-    const environment = getEnvironment();
     const study = "signup_school_dropdown";
     const studyGroup = shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
 
-    let dataJson = {
-      user_agent: window.navigator.userAgent,
-      window_width: window.innerWidth,
-      window_height: window.innerHeight,
-      hostname: window.location.hostname,
-      full_path: window.location.href
-    };
-    Object.assign(dataJson, extraData);
-    if (!!window.optimizely) {
+    let dataJson = extraData;
+    if (!!window.optimizely && !!window.optimizely.data) {
       const optimizelyData = {
         optimizely_data: window.optimizely.data.state
       };
@@ -190,12 +149,9 @@ window.SignupManager = function (options) {
     firehoseClient.putRecord(
       streamName,
       {
-        created_at: new Date().toISOString(),
-        environment: environment,
         study: study,
         study_group: studyGroup,
         event: eventName,
-        uuid: self.uuid,
         data_json: JSON.stringify(dataJson),
       }
     );
