@@ -38,7 +38,8 @@ The Code.org Advocacy Coalition supports the implementation of the following pol
 
 * [State policy tracking document](https://docs.google.com/document/d/1vaTFV641qBhvOXpchMK5igs8kSAxk8cLCv9Ra-I5DL8/edit?usp=sharing)
 * [Federal policy tracking document](https://docs.google.com/spreadsheets/d/1WEQXeDfEp-UiD_YTrgD4fzhEId1fNoiU-6uMhHq8F0U/edit?usp=sharing)
-* [9 steps to make computer science fundamental](http://code.org/files/Making_CS_Fundamental.pdf)
+* [9 policies to make computer science fundamental](http://code.org/files/Making_CS_Fundamental.pdf)
+* [State-by-state tracking of the 9 policies](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml)
 * [Professional development models](https://www.dropbox.com/s/2y0i360pt6pap1o/ModelStatePracticetoExpandCS.pdf?dl=0)
 * [Professional development funding calculator](https://docs.google.com/spreadsheets/d/1jAqB1Q0IiY4XRvpnfUdDwkfL2OEgvBT2HYg07yQAOSc/pubhtml)
 * [AP CS A data by state over the past 10 years](https://code.org/promote/ap)
@@ -54,7 +55,7 @@ For more information, please contact advocacy@code.org.
 * <a href="http://anitaborg.org/">Anita Borg Institute</a> 
 * <a href="https://www.ncwit.org/">Association for Computing Machinery</a> 
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
-* <a href="http://www.ccboe.com/">Charles County Pulic Schools</a>
+* <a href="http://www.ccboe.com/">Charles County Public Schools</a>
 * <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a> 
 * <a href="http://www.coloradosucceeds.org/">Colorado Succeeds</a> 
 * <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>

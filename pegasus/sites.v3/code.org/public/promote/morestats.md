@@ -35,6 +35,8 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * [Progress](http://blog.code.org/post/155208947459/happy-new-year-from-codeorg) made in computer science education (2016)
 
 
+## Other Code.org Resources
+* See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
 
 
 ## International K-12 computer science
