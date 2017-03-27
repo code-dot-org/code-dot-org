@@ -156,7 +156,6 @@ const SummaryProgressRow = React.createClass({
         </td>
         <td style={styles.col2}>
           <ProgressBubbleSet
-            start={1}
             levels={levels}
             disabled={locked && viewAs !== ViewType.Teacher}
             style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}

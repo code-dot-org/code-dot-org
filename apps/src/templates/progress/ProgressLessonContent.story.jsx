@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressLessonContent from './ProgressLessonContent';
-import { fakeLevels } from './progressTestHelpers';
+import { fakeLevels, fakeLevel } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 export default storybook => {
@@ -25,12 +25,14 @@ export default storybook => {
         story: () => (
           <ProgressLessonContent
             disabled={false}
-            levels={fakeLevels(5).map((level, index) => ({
-              ...level,
-              status: index === 1 ? LevelStatus.perfect : LevelStatus.not_tried,
-              name: undefined,
-              isUnplugged: index === 0
-            }))}
+            levels={[
+              fakeLevel({isUnplugged: true, name: undefined}),
+              ...fakeLevels(5).map((level, index) => ({
+                ...level,
+                status: index === 1 ? LevelStatus.perfect : LevelStatus.not_tried,
+                name: undefined,
+              }))
+            ]}
           />
         )
       }

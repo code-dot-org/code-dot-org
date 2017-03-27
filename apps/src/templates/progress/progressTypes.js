@@ -7,6 +7,8 @@ export const levelType = (
     name: PropTypes.string,
     icon: PropTypes.string,
     isUnplugged: PropTypes.bool,
+    // TODO - get rid of isunplugged?
+    levelNumber: PropTypes.number
   })
 );
 

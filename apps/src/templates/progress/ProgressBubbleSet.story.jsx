@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
-import { fakeLevels } from './progressTestHelpers';
+import { fakeLevels, fakeLevel } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 const statusForLevel = [
@@ -23,7 +23,6 @@ export default storybook => {
         name:'starting at 3',
         story: () => (
           <ProgressBubbleSet
-            start={3}
             levels={levels}
             disabled={false}
           />
@@ -33,7 +32,6 @@ export default storybook => {
         name:'multiple lines',
         story: () => (
           <ProgressBubbleSet
-            start={1}
             levels={fakeLevels(20)}
             disabled={false}
           />
@@ -44,7 +42,6 @@ export default storybook => {
         description: 'should be white and not clickable',
         story: () => (
           <ProgressBubbleSet
-            start={1}
             levels={levels}
             disabled={true}
           />
@@ -55,11 +52,10 @@ export default storybook => {
         description: 'Should still get a bubble (not a pill) for unplugged',
         story: () => (
           <ProgressBubbleSet
-            start={1}
-            levels={fakeLevels(5).map((level, index) => ({
-              ...level,
-              isUnplugged: index === 0
-            }))}
+            levels={[
+              fakeLevel({ isUnplugged: true }),
+              ...fakeLevels(5)
+            ]}
             disabled={false}
           />
         )

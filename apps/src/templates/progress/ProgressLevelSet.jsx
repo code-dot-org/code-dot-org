@@ -61,6 +61,7 @@ const styles = {
  */
 const ProgressLevelSet = React.createClass({
   propTypes: {
+    // TODO - can most likely get rid of start here
     start: PropTypes.number.isRequired,
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
@@ -118,7 +119,6 @@ const ProgressLevelSet = React.createClass({
               </td>
               <td style={styles.col2}>
                 <ProgressBubbleSet
-                  start={start}
                   levels={levels}
                   disabled={disabled}
                 />
