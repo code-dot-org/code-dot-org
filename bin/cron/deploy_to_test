@@ -31,31 +31,6 @@ def main
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
-  if GitHub.ahead?(base: 'staging', compare: 'test')
-    unless DevelopersTopic.dts?
-      ChatClient.message(
-        'infra-test',
-        'robo-DTT skipped (DTS was not yes, with DTS required)',
-        color: 'yellow'
-      )
-      return
-    end
-    ChatClient.message(
-      'infra-test',
-      'robo-DTT is merging Test > Staging',
-      color: 'green'
-    )
-    pr_number = GitHub.create_and_merge_pull_request(
-      base: 'staging',
-      head: 'test',
-      title: 'DTS (Test > Staging) [robo-dtt]'
-    )
-    if pr_number.nil?
-      raise Exception.new('GitHub.create_and_merge_pull_request failed.')
-    end
-    sleep 15
-  end
-
   # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
   # (particularly deploy).
   pr_number = GitHub.create_and_merge_pull_request(
