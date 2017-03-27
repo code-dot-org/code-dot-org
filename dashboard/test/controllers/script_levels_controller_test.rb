@@ -1491,7 +1491,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should redirect when script has a redirect_to property" do
     script = create :script
     new_script = create :script
+    create(:script_level, script: script)
     create(:script_level, script: new_script)
+    script.update(redirect_to: new_script.name)
 
     get :show, params: {script_id: script.name, stage_position: '1', id: '1'}
     assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/1"
