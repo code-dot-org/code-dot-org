@@ -32,9 +32,13 @@ theme: responsive
       #interactive-map.section.clear
         = view :interactive_map, use_url: true
 
-    #stats-section.section.clear
+    #stats-section.section.clear.desktop-feature
       %h2 What’s wrong with this picture? Share these stats.
       = view :stats_carousel
+
+    #stats-section-mobile.section.clear.mobile-feature
+      %h2 Computer Science Education Stats
+      = view :stats_mobile
 
     #petition-section.section.clear
       = view :petition

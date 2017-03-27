@@ -52,6 +52,7 @@
 #nav {
   display: inline-block;
   float: right;
+  z-index: 99;
 }
 
 #nav ul {
