@@ -17,8 +17,6 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 ## Stop: Review Classes
 
-[guide]
-
 #### Matching
 
 **Group:** Partner students up.
@@ -33,7 +31,6 @@ Show each slide one by one and for each web page have students work with their p
 
 Once students have looked at all the web page results and written down their answers, they can test out their guesses using the next level on Code Studio!
 
-[/guide]
 
-&fa-desktop; **Transition:** Have students return to Code Studio.
+**Transition:** Have students return to Code Studio.
 MARKDOWN
