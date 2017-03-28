@@ -8,7 +8,7 @@ class ScriptsController < ApplicationController
 
   def show
     if @script.redirect_to?
-      redirect_to :show, Script.get_from_cache(params[@script.redirect_to])
+      redirect_to Script.get_from_cache(@script.redirect_to)
       return
     end
 
