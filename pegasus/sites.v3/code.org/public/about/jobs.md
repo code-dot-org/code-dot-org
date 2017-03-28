@@ -6,20 +6,20 @@ video_player: true
 
 # Job Openings at Code.org
 
-[col-50]
+<div style="float: left; width: 280px;">
 
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
 <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>'Meet the team at @codeorg and see how much they’ve done in just a few years!'} %>
 
 <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
 
-[col-50]
+</div>
 
-[col-50]
+<div style="margin-left: 300px;">
 
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
 
-[col-50]
+</div>
 
 <br/>
 **[Working at Code.org](#info)**
