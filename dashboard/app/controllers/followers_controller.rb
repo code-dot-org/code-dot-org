@@ -64,7 +64,7 @@ class FollowersController < ApplicationController
 
       # if this is a picture or word section, redirect to the section login page so that the student
       # does not have to type in the full URL
-      if @section && (@section.login_type == Section::LOGIN_TYPE_PICTURE || @section.login_type == Section::LOGIN_TYPE_WORD)
+      if @section && [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD].include?(@section.login_type)
         redirect_to controller: 'sections', action: 'show', id: @section.code
       end
 
