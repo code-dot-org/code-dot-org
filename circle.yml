@@ -23,8 +23,6 @@ machine:
     - redis
 checkout:
   post:
-    - git submodule sync
-    - git submodule update --init
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
         parallel: true
     - ./bin/circle/merge-base:
