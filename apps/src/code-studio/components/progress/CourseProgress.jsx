@@ -2,42 +2,21 @@ import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-
+import experiments from '@cdo/apps/util/experiments';
 import { stageShape } from './types';
-import CourseProgressRow from './CourseProgressRow.jsx';
-import HrefButton from '@cdo/apps/templates/HrefButton';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import SectionSelector from './SectionSelector';
+import CourseProgressRow from './CourseProgressRow';
+import CourseOverviewTopRow from './CourseOverviewTopRow';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import color from "@cdo/apps/util/color";
-import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
-import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 
 const styles = {
-  buttonRow: {
-    // ensure we have height when we only have our toggle (which is floated)
-    minHeight: 50
-  },
   flexHeader: {
     padding: '8px 11px',
     margin: '20px 0 0 0',
     borderRadius: 5,
     background: color.cyan,
     color: color.white
-  },
-  right: {
-    position: 'absolute',
-    right: 0,
-    top: 0
-  },
-  sectionSelector: {
-    // offset selector's margin so that we're aligned flush right
-    position: 'relative',
-    right: experiments.isEnabled('progressRedesign') ? 0 : -10,
-    // vertically center
-    bottom: 4
   }
 };
 
@@ -80,92 +59,49 @@ const CourseProgress = React.createClass({
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
     const progressRedesign = experiments.isEnabled('progressRedesign');
-    let headerButtons;
-    if (progressRedesign) {
-      headerButtons = (
-        <div>
-          <ProgressButton
-            href={`/s/${scriptName}/next.next`}
-            text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
-            size={ProgressButton.ButtonSize.large}
-          />
-          <ProgressButton
-            href="//support.code.org"
-            text={i18n.getHelp()}
-            color={ProgressButton.ButtonColor.white}
-            size={ProgressButton.ButtonSize.large}
-            style={{marginLeft: 10}}
-          />
-        </div>
-      );
-    } else {
-      headerButtons = (
-        <div>
-          <HrefButton
-            href={`/s/${scriptName}/next.next`}
-            text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
-            type="primary"
-            style={{marginBottom: 10}}
-          />
-          <HrefButton
-            href="//support.code.org"
-            text={i18n.getHelp()}
-            type="default"
-            style={{marginLeft: 10, marginBottom: 10}}
-          />
-        </div>
-      );
-    }
 
     return (
       <div>
         {this.props.onOverviewPage && (
-          <div style={styles.buttonRow}>
-            {!this.props.professionalLearningCourse && headerButtons}
-            <div style={styles.right}>
-              {viewAs === ViewType.Teacher &&
-                <span style={styles.sectionSelector}>
-                  <SectionSelector/>
-                </span>
-              }
-              {progressRedesign && (
-                <span>
-                  <ProgressDetailToggle/>
-                </span>
-              )}
-            </div>
-          </div>
+          <CourseOverviewTopRow
+            professionalLearningCourse={professionalLearningCourse}
+            hasLevelProgress={hasLevelProgress}
+            scriptName={scriptName}
+            viewAs={viewAs}
+          />
         )}
 
         {progressRedesign && <ProgressTable/>}
 
-        {!progressRedesign && <div className="user-stats-block">
-          {_.map(groups, (stages, group) =>
-            <div key={group}>
-              {showGroupHeaders &&
-                <h4
-                  id={group.toLowerCase().replace(' ', '-')}
-                  style={[
-                    styles.flexHeader,
-                    !professionalLearningCourse && {background: color.purple},
-                    count === 1 && {margin: '2px 0 0 0'}
-                  ]}
-                >
-                  {group}
-                </h4>
-              }
-              {stages.map(stage =>
-                <CourseProgressRow
-                  stage={stage}
-                  key={stage.name}
-                  isFocusArea={focusAreaPositions.indexOf(count++) > -1}
-                  professionalLearningCourse={professionalLearningCourse}
-                />
-              )}
-            </div>
-          )}
+        {!progressRedesign && (
+          <div className="user-stats-block">
+            {_.map(groups, (stages, group) =>
+              <div key={group}>
+                {showGroupHeaders &&
+                  <h4
+                    id={group.toLowerCase().replace(' ', '-')}
+                    style={[
+                      styles.flexHeader,
+                      !professionalLearningCourse && {background: color.purple},
+                      count === 1 && {margin: '2px 0 0 0'}
+                    ]}
+                  >
+                    {group}
+                  </h4>
+                }
+                {stages.map(stage =>
+                  <CourseProgressRow
+                    stage={stage}
+                    key={stage.name}
+                    isFocusArea={focusAreaPositions.indexOf(count++) > -1}
+                    professionalLearningCourse={professionalLearningCourse}
+                  />
+                )}
+              </div>
+            )
+          }
         </div>
-        }
+        )}
       </div>
     );
   }
