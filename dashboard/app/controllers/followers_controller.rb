@@ -14,21 +14,37 @@ class FollowersController < ApplicationController
     redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: @section.teacher.name)
   end
 
-  # remove a section/teacher as a logged in student
+  # Remove enrollment in a section (as a student in the section).
   def remove
-    @teacher = User.find(params[:teacher_user_id])
+    @section = Section.find_by_code params[:section_code]
+    if @section
+      f = Follower.where(section: @section.id, student_user_id: current_user.id).first
+    end
 
-    f = Follower.where(user_id: @teacher.id, student_user_id: current_user.id).first
-
-    unless f.present?
-      redirect_to root_path, alert: t('teacher.user_not_found')
+    unless @section && f
+      # TODO(asher): Change the alert message to section.
+      redirect_to root_path, alert: t(
+        'follower.error.section_not_found',
+        section_code: params[:section_code]
+      )
       return
     end
 
+    @teacher = @section.user
+
     authorize! :destroy, f
     f.delete
-    FollowerMailer.student_disassociated_notify_teacher(@teacher, current_user).deliver_now if @teacher.email.present?
-    redirect_to root_path, notice: t('teacher.student_teacher_disassociated', teacher_name: @teacher.name, student_name: current_user.name)
+    if @teacher.email.present?
+      FollowerMailer.student_disassociated_notify_teacher(@teacher, current_user).deliver_now
+    end
+    redirect_to(
+      root_path,
+      notice: t(
+        'teacher.student_teacher_disassociated',
+        teacher_name: @teacher.name,
+        section_code: params[:section_code]
+      )
+    )
   end
 
   # GET /join/XXXXXX
