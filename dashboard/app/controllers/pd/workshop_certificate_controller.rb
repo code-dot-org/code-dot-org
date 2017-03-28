@@ -5,7 +5,7 @@ class Pd::WorkshopCertificateController < ApplicationController
   def generate_certificate
     workshop = @enrollment.workshop
 
-    facilitator_names = workshop.facilitators.map {|f| f.name.strip}
+    facilitator_names = workshop.facilitators.map {|f| f.name.strip}.sort
     facilitator_fields = facilitator_names.each_with_index.map do |name, i|
       {
         string: name,
