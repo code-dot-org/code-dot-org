@@ -63,7 +63,7 @@ class ScriptLevelsController < ApplicationController
     @script = Script.get_from_cache(params[:script_id])
 
     if @script.redirect_to?
-      redirect_to build_script_level_path(Script.find_by_name(@script.redirect_to).starting_level)
+      redirect_to build_script_level_path(Script.get_from_cache(@script.redirect_to).starting_level)
       return
     end
 
