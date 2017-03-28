@@ -456,10 +456,11 @@ class ContactRollups
   def self.update_professional_learning_attendance_for_course_from_pd_attendances(course)
     PEGASUS_REPORTING_DB_WRITER.run "
       UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-        (SELECT DISTINCT teacher_id
+        (SELECT DISTINCT users.email
           FROM #{DASHBOARD_DB_NAME}.pd_attendances AS pd_attendances
           INNER JOIN #{DASHBOARD_DB_NAME}.pd_sessions AS pd_sessions ON pd_sessions.id = pd_attendances.pd_session_id
           INNER JOIN #{DASHBOARD_DB_NAME}.pd_workshops AS pd_workshops ON pd_workshops.id = pd_sessions.pd_workshop_id
+          INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = pd_attendances.teacher_id
           WHERE course = '#{course}'
         ) src
       SET #{DEST_TABLE_NAME}.professional_learning_attended =
@@ -468,7 +469,7 @@ class ContactRollups
         WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
         ELSE #{DEST_TABLE_NAME}.professional_learning_attended
       END
-    WHERE #{DEST_TABLE_NAME}.dashboard_user_id = src.teacher_id"
+    WHERE #{DEST_TABLE_NAME}.email = src.email"
   end
 
   # Updates professional learning attendance based on workshop_attendance table
@@ -476,10 +477,11 @@ class ContactRollups
   def self.update_professional_learning_attendance_for_course_from_workshop_attendance(course)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT DISTINCT teacher_id
+      (SELECT DISTINCT users.email
         FROM #{DASHBOARD_DB_NAME}.workshop_attendance AS workshop_attendance
           INNER JOIN #{DASHBOARD_DB_NAME}.segments AS segments ON segments.id = workshop_attendance.segment_id
           INNER JOIN #{DASHBOARD_DB_NAME}.workshops AS workshops ON workshops.id = segments.workshop_id
+          INNER JOIN #{DASHBOARD_DB_NAME}.users AS users ON users.id = workshop_attendance.teacher_id
         WHERE program_type =
         CASE '#{course}'
           WHEN 'CS in Science' THEN 1
@@ -495,7 +497,7 @@ class ContactRollups
       WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
       ELSE #{DEST_TABLE_NAME}.professional_learning_attended
     END
-    WHERE #{DEST_TABLE_NAME}.dashboard_user_id = src.teacher_id"
+    WHERE #{DEST_TABLE_NAME}.email = src.email"
   end
 
   # Updates professional learning attendance based on sections table
@@ -503,7 +505,7 @@ class ContactRollups
   def self.update_professional_learning_attendance_for_course_from_sections(course)
     PEGASUS_REPORTING_DB_WRITER.run "
     UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME},
-      (SELECT DISTINCT student_user_id AS teacher_id
+      (SELECT DISTINCT users.email
       FROM #{DASHBOARD_DB_NAME}.sections
         INNER JOIN #{DASHBOARD_DB_NAME}.followers ON followers.section_id = sections.id
         INNER JOIN #{DASHBOARD_DB_NAME}.users ON users.id = followers.student_user_id
@@ -521,7 +523,7 @@ class ContactRollups
       WHEN 0 THEN LEFT(CONCAT(COALESCE(CONCAT(#{DEST_TABLE_NAME}.professional_learning_attended, ','), ''), '#{course}'),4096)
       ELSE #{DEST_TABLE_NAME}.professional_learning_attended
     END
-    WHERE #{DEST_TABLE_NAME}.dashboard_user_id = src.teacher_id"
+    WHERE #{DEST_TABLE_NAME}.email = src.email"
   end
 
   def self.mysql_multi_connection
