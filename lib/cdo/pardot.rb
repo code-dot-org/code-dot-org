@@ -109,7 +109,6 @@ class Pardot
       results_in_response = 0
 
       # Process every prospect in the response.
-      id_max = email_to_pardot_id.values.max
       doc.xpath('/rsp/result/prospect').each do |node|
         id = node.xpath("id").text.to_i
         email = node.xpath("email").text
@@ -195,24 +194,9 @@ class Pardot
           prospect[pardot_info[:field]] = db_value
         end
       end
-      # Special case: if contact has opted out, set the two different Pardot
-      # flavors of opted out. Also, only ever set this to true, otherwise set no
-      # value; never set it back to false. Pardot is the authority on opt-out
-      # data, so never reset any opt-out setting it has stored.
-      if contact_rollup[:opted_out]
-        prospect[:opted_out] = true
-        prospect[:is_do_not_email] = true
-      end
+      # Do special handling of a few fields
+      apply_special_fields(contact_rollup, prospect)
 
-      # If this contact has a dashboard user ID (which means it is a teacher
-      # account), mark that in a Pardot field so we can segment on that.
-      if contact_rollup[:dashboard_user_id].present?
-        prospect[:db_Has_Teacher_Account] = "true"
-      end
-
-      # Set a custom field to mark in Pardot that this contact was imported from
-      # Code Studio.
-      prospect[:db_Imported] = "true"
       # Add this prosect to the batch.
       prospects << prospect
 
@@ -239,6 +223,30 @@ class Pardot
     submit_prospect_batch(prospects, config) unless prospects.empty?
     num_operations += prospects.length
     log "Contact #{config[:operation_name]} pass completed. #{num_operations} total operations."
+  end
+
+  # Do special transformation of some fields from database to Pardot
+  # @param src [Hash] Hash of database fields we are reading from
+  # @param dst [Hash] Hash of Pardot fields we are writing to
+  def self.apply_special_fields(src, dest)
+    # special case: if contact has opted out, set the two different Pardot
+    # flavors of opted out to true. Also, only ever set this to true, otherwise
+    # set no value; never set it back to false. Pardot is the authority on
+    # opt-out data, so never reset any opt-out setting it has stored.
+    if src[:opted_out]
+      dest[:opted_out] = true
+      dest[:is_do_not_email] = true
+    end
+
+    # If this contact has a dashboard user ID (which means it is a teacher
+    # account), mark that in a Pardot field so we can segment on that.
+    if src[:dashboard_user_id].present?
+      dest[:db_Has_Teacher_Account] = "true"
+    end
+
+    # set a custom field to mark in Pardot that this contact was imported from
+    # Code Studio
+    dest[:db_Imported] = "true"
   end
 
   # Create or update a batch of prospects. This method may raise an exception.

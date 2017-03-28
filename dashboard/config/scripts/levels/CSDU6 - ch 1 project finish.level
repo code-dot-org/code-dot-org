@@ -211,7 +211,10 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "expand_debugger": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

@@ -40,6 +40,8 @@
     "protaganist_sprite_index": "1",
     "authored_hints": "[]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -50,20 +52,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenSpriteCollided" deletable="false" movable="false" uservisible="false">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">1</title>
-          <next>
-            <block type="studio_wait" deletable="false" movable="false" uservisible="false">
-              <title name="VALUE">1000</title>
-              <next>
-                <block type="studio_endGame" deletable="false" movable="false" uservisible="false">
-                  <title name="VALUE">lose</title>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false"/>
       </xml>
     </start_blocks>
   </blocks>

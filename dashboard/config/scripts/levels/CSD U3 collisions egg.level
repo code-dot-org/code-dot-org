@@ -52,7 +52,6 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"egg\",\r\n        \"fried_egg\",\r\n        \"pan\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"egg\": {\r\n            \"name\": \"egg\",\r\n            \"sourceUrl\": \"https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png\",\r\n            \"frameSize\": {\r\n                \"x\": 80,\r\n                \"y\": 52\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"pan\": {\r\n            \"name\": \"pan\",\r\n            \"sourceUrl\": \"https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png\",\r\n            \"frameSize\": {\r\n                \"x\": 250,\r\n                \"y\": 94\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"fried_egg\": {\r\n            \"name\": \"fried_egg\",\r\n            \"sourceUrl\": \"https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png\",\r\n            \"frameSize\": {\r\n                \"x\": 100,\r\n                \"y\": 40\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
     "start_blocks": "var pan = createSprite(230, 350);\r\npan.setAnimation(\"pan\");\r\n\r\nvar egg = createSprite(200, -50);\r\negg.setAnimation(\"egg\");\r\negg.velocityY = 5;\r\n\r\nvar friedEgg = createSprite(185, 355);\r\nfriedEgg.setAnimation(\"fried_egg\");\r\nfriedEgg.visible = false;\r\n\r\nfunction draw() {\r\n  if (__) {\r\n    friedEgg.visible = true;\r\n  }\r\n\r\n\r\n  background(\"skyblue\");\r\n  strokeWeight(0);\r\n  fill(\"sienna\");\r\n  rect(0, 340, 400, 60);\r\n  \r\n  drawSprites();\r\n}\r\n",
     "palette_category_at_start": "sprites",
     "project_template_level_name": "CSD U3 collisions egg template",
@@ -61,6 +60,9 @@
     "show_debug_watch": "false",
     "start_in_animation_tab": "false",
     "encrypted_examples": "+cggenfkhjbxSXLNCHvVMA2tmo4BSCw45cqPJySBjlsYTzGQj9hZphao7di2\nUHqudx8iANYlCCJLItL5vqLejw==\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
