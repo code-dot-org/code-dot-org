@@ -34,15 +34,16 @@ module GitHub
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#merge_pull_request-instance_method
   # @param pr_number [Integer] The PR number to be merged.
+  # @param commit_message [String] The message to add to the commit
   # @raise [ArgumentError] If the PR has already been merged.
   # @raise [Exception] From calling Octokit.merge_pull_request.
   # @return [Boolean] Whether the PR was merged.
-  def self.merge_pull_request(pr_number)
+  def self.merge_pull_request(pr_number, commit_message='')
     if pull_merged?(pr_number)
       raise ArgumentError.new("PR\##{pr_number} is already merged")
     end
     configure_octokit
-    response = Octokit.merge_pull_request(REPO, pr_number)
+    response = Octokit.merge_pull_request(REPO, pr_number, commit_message)
     response['merged']
   end
 
@@ -60,7 +61,7 @@ module GitHub
     # By sleeping, we allow GitHub time to determine that a merge conflict is
     # not present. Otherwise, empirically, we receive a 405 response error.
     sleep 3
-    success = merge_pull_request(pr_number)
+    success = merge_pull_request(pr_number, title)
     success ? pr_number : nil
   end
 
