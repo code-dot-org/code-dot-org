@@ -85,7 +85,7 @@ JSInterpreter.prototype.patchInterpreterMethods_ = function () {
  *        interpreter global scope.
  * @param {Object} [options.blockFilter] - an object with block-name keys that
  *        should be used to filter which blocks are populated.
- * @param {Array} [options.globalFunctions] - objects containing functions to
+ * @param {Object} [options.globalFunctions] - objects containing functions to
  *        place in the interpreter global scope.
  * @param {boolean} [options.enableEvents] - allow the interpreter to define
  *        event handlers that can be invoked by native code. (default false)
