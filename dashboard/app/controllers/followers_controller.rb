@@ -24,7 +24,8 @@ class FollowersController < ApplicationController
     unless @section && f
       # TODO(asher): Change the alert message to section.
       redirect_to root_path, alert: t(
-        'follower.error.section_not_found(section_code: params[:section_code])'
+        'follower.error.section_not_found',
+        section_code: params[:section_code]
       )
       return
     end

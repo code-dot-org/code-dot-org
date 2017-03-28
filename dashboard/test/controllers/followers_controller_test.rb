@@ -307,7 +307,7 @@ class FollowersControllerTest < ActionController::TestCase
       post :remove, params: {section_code: @chris_section.code}
     end
     assert_redirected_to '/'
-    assert_equal "The section could not be found.", flash[:alert]
+    assert_equal "Could not find a section with code '#{@chris_section.code}'.", flash[:alert]
   end
 
   test "student can remove teacher" do
