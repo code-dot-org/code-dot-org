@@ -12,6 +12,6 @@ class Pd::CsfCertificateController < ApplicationController
 
     send_data image.to_blob, type: 'image/png', disposition: 'inline'
   ensure
-    image && image.destroy!
+    image.try(:destroy!)
   end
 end
