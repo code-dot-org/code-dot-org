@@ -19,7 +19,7 @@ Dashboard::Application.configure do
 
   # Configure static asset server for tests with Cache-Control for performance.
   config.public_file_server.enabled = true
-  config.public_file_server.headers = { 'Cache-Control' => "public, max-age=3600, s-maxage=1800" }
+  config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
@@ -51,7 +51,7 @@ Dashboard::Application.configure do
   config.action_controller.perform_caching = false
 
   # Disable Rails.cache when running unit tests.
-  config.cache_store = :memory_store, { size: 64.megabytes } if ci_test
+  config.cache_store = :memory_store, {size: 64.megabytes} if ci_test
 
   # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.delivery_method = :smtp

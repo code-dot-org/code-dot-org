@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":8},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":17},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
-    "instructions": "Make this game fun by setting the knight to vanish when he runs into the dragon!  Play a sound when they collide to make it feel more real.",
+    "instructions": "Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -41,7 +41,7 @@
     "protaganist_sprite_index": "1",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the event block that you will need:\\n\\n![](https://images.code.org/2ed42b3a3108c6affdfc866de57f2eec-image-1475624565390.42.18.png)\",\r\n  \"hint_id\": \"courseB_playlab_events7_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block you need to play a sound.\\n\\n![](https://images.code.org/58e9b9a146a4ca3a8eee25845110b805-image-1475624550269.42.00.png)\",\r\n  \"hint_id\": \"courseB_playlab_events7_b\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block you need to make the knight vanish:\\n\\n![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)\",\r\n  \"hint_id\": \"courseB_playlab_events7_c\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
-    "markdown_instructions": "Make this game fun by setting the knight to vanish when he runs into the dragon!  \r\n\r\nPlay a sound when they collide to make it feel more real.",
+    "markdown_instructions": "Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags! \r\n\r\nPlay a sound when they collide to make it feel more real.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -49,6 +49,8 @@
       "upButton"
     ],
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -58,30 +60,35 @@
 }]]></config>
   <blocks>
     <initialization_blocks>
-      <block type="controls_repeat_ext" inline="true" uservisible="false">
-        <value name="TIMES">
-          <block type="math_number" uservisible="false">
-            <title name="NUM">200</title>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="studio_setSpritePosition" uservisible="false">
-            <title name="SPRITE">0</title>
-            <title name="VALUE">random</title>
-            <next>
-              <block type="studio_setSpritesWander" uservisible="false">
-                <title name="VALUE">"dragon"</title>
-                <next>
-                  <block type="studio_wait" uservisible="false">
-                    <title name="VALUE">1000</title>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
+      <xml>
+        <block type="controls_repeat_ext" inline="true" uservisible="false">
+          <value name="TIMES">
+            <block type="math_number" uservisible="false">
+              <title name="NUM">200</title>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="studio_setSpritePosition" uservisible="false">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">random</title>
+              <next>
+                <block type="studio_setSpritesWander" uservisible="false">
+                  <title name="VALUE">"dragon"</title>
+                  <next>
+                    <block type="studio_wait" uservisible="false">
+                      <title name="VALUE">1000</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
     </initialization_blocks>
+    <start_blocks>
+      <xml/>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="studio_whenArrow">
@@ -131,11 +138,11 @@
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
         </block>
-        <block type="studio_playSound">
-          <title name="SOUND">???</title>
-        </block>
         <block type="studio_vanish">
           <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">???</title>
         </block>
       </xml>
     </recommended_blocks>

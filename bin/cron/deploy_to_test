@@ -20,7 +20,7 @@ def main
     return
   end
 
-  if GitHub.compare(base: 'test', head: 'staging').empty?
+  unless GitHub.behind?(base: 'staging', compare: 'test')
     ChatClient.message(
       'infra-test',
       "robo-DTT skipped, nothing to DTT",

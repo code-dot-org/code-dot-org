@@ -73,7 +73,7 @@ class Studio < Grid
   # nothing but integers. If it raises a TypeError, attempt to parse the
   # maze using the new parse, which expects hashes and insists each has
   # a tileType.
-  def self.parse_maze(maze_json)
+  def self.parse_maze(maze_json, _ = nil)
     super
   rescue TypeError
     maze_json = maze_json.to_json if maze_json.is_a? Array
@@ -86,7 +86,7 @@ class Studio < Grid
       end
     end
 
-    { 'maze' => maze_json }
+    {'maze' => maze_json}
   end
 
   # List of possible skins, the first is used as a default.

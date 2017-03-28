@@ -30,8 +30,8 @@ class RedisTableTest < Minitest::Test
     table3 = RedisTable.new(@redis, @pubsub, 'shard2', 'table2')
 
     assert_equal [], table.to_a
-    assert_raises(RedisTable::NotFound) { table.fetch(1) }
-    assert_raises(RedisTable::NotFound) { table.update(1, {}) }
+    assert_raises(RedisTable::NotFound) {table.fetch(1)}
+    assert_raises(RedisTable::NotFound) {table.update(1, {})}
 
     value = {'name' => 'alice', 'age' => 7, 'male' => false}
     row1 = table.insert(value)
@@ -120,7 +120,7 @@ class RedisTableTest < Minitest::Test
     RedisTable.reset_shard('shard1', @redis, @pubsub)
     assert_equal([], table.to_a)
     assert_equal([], table2.to_a)
-    assert_raises(RedisTable::NotFound) { table.fetch(1) }
+    assert_raises(RedisTable::NotFound) {table.fetch(1)}
     expected_event = make_pubsub_event('shard1', 'all_tables', {action: 'reset_shard'})
     assert_equal expected_event, @pubsub.publish_history[7]
     assert_equal [table3_row1], table3.to_a
@@ -251,6 +251,6 @@ class RedisTableTest < Minitest::Test
   private
 
   def make_pubsub_event(channel, event, data)
-    { channel: channel, event: event, data: data }
+    {channel: channel, event: event, data: data}
   end
 end

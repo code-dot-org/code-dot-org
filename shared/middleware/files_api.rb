@@ -128,7 +128,7 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   # Only from codeprojects.org domain
   #
-  get %r{/([^/]+)/([^/]+)$}, { code_projects_domain: true } do |encrypted_channel_id, filename|
+  get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     get_file('files', encrypted_channel_id, filename, true)
@@ -140,7 +140,7 @@ class FilesApi < Sinatra::Base
   # Redirect to /<channel-id>/
   # Only from codeprojects.org domain
   #
-  get %r{/([^/]+)$}, { code_projects_domain: true } do |encrypted_channel_id|
+  get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     redirect "#{request.path_info}/"
@@ -152,7 +152,7 @@ class FilesApi < Sinatra::Base
   # Serve index.html for this project.
   # Only from codeprojects.org domain
   #
-  get %r{/([^/]+)/$}, { code_projects_domain: true } do |encrypted_channel_id|
+  get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_channel_id|
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
 
     get_file('files', encrypted_channel_id, 'index.html', true)
@@ -441,7 +441,7 @@ class FilesApi < Sinatra::Base
     last_modified result[:last_modified]
 
     if result[:status] == 'NOT_FOUND'
-      { "filesVersionId": "", "files": [] }.to_json
+      {"filesVersionId": "", "files": []}.to_json
     else
       # {
       #   "filesVersionId": "sadfhkjahfsdj",
@@ -454,7 +454,7 @@ class FilesApi < Sinatra::Base
       #     }
       #   ]
       # }
-      { "filesVersionId": result[:version_id], "files": JSON.load(result[:body]) }.to_json
+      {"filesVersionId": result[:version_id], "files": JSON.load(result[:body])}.to_json
     end
   end
 
@@ -481,7 +481,7 @@ class FilesApi < Sinatra::Base
     new_entry_hash['filename'] = filename
     manifest_is_unchanged = false
 
-    existing_entry = manifest.detect { |e| e['filename'].downcase == filename.downcase }
+    existing_entry = manifest.detect {|e| e['filename'].downcase == filename.downcase}
     if existing_entry.nil?
       manifest << new_entry_hash
     else
@@ -494,7 +494,7 @@ class FilesApi < Sinatra::Base
 
     # if we're also deleting a file (on rename), remove it from the manifest
     if params['delete']
-      reject_result = manifest.reject! { |e| e['filename'].downcase == params['delete'].downcase }
+      reject_result = manifest.reject! {|e| e['filename'].downcase == params['delete'].downcase}
       manifest_is_unchanged = false unless reject_result.nil?
     end
 
@@ -565,16 +565,16 @@ class FilesApi < Sinatra::Base
     # read the manifest
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
-    return { filesVersionId: "" }.to_json if manifest_result[:status] == 'NOT_FOUND'
+    return {filesVersionId: ""}.to_json if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
     # overwrite the manifest file with an empty list
     response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'])
 
     # delete the files
-    bucket.delete_multiple(encrypted_channel_id, manifest.map { |e| e['filename'].downcase }) unless manifest.empty?
+    bucket.delete_multiple(encrypted_channel_id, manifest.map {|e| e['filename'].downcase}) unless manifest.empty?
 
-    { filesVersionId: response.version_id }.to_json
+    {filesVersionId: response.version_id}.to_json
   end
 
   #
@@ -598,7 +598,7 @@ class FilesApi < Sinatra::Base
     manifest = JSON.load manifest_result[:body]
 
     # remove the file from the manifest
-    reject_result = manifest.reject! { |e| e['filename'].downcase == filename.downcase }
+    reject_result = manifest.reject! {|e| e['filename'].downcase == filename.downcase}
     not_found if reject_result.nil?
 
     # write the manifest
@@ -607,7 +607,7 @@ class FilesApi < Sinatra::Base
     # delete the file
     bucket.delete(encrypted_channel_id, filename.downcase)
 
-    { filesVersionId: response.version_id }.to_json
+    {filesVersionId: response.version_id}.to_json
   end
 
   #
@@ -651,6 +651,6 @@ class FilesApi < Sinatra::Base
     manifest_json = manifest.to_json
     result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json)
 
-    { "filesVersionId": result[:version_id], "files": manifest }.to_json
+    {"filesVersionId": result[:version_id], "files": manifest}.to_json
   end
 end

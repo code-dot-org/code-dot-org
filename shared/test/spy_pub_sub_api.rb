@@ -13,6 +13,6 @@ class SpyPubSubApi
   # @param [String] event - the name of the event to be triggered
   # @param [Hash] data - the data to be sent with the event
   def publish(channel, event, data)
-    @publish_history.push({ channel: channel, event: event, data: data })
+    @publish_history.push({channel: channel, event: event, data: data})
   end
 end

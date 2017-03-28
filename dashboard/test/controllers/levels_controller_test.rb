@@ -232,7 +232,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("Custom")
     assert_difference('Level.count') do
       post :create, params: {
-        level: { name: "NewCustomLevel", type: 'Artist' },
+        level: {name: "NewCustomLevel", type: 'Artist'},
         game_id: game.id,
         program: @program
       }
@@ -245,7 +245,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("CustomStudio")
     assert_difference('Level.count') do
       post :create, params: {
-        level: { name: "NewCustomLevel", type: 'Studio' },
+        level: {name: "NewCustomLevel", type: 'Studio'},
         game_id: game.id,
         program: @program
       }
@@ -261,7 +261,7 @@ class LevelsControllerTest < ActionController::TestCase
     level_name = 'TestCustomLevel'
     begin
       post :create, params: {
-        level: { name: level_name, type: 'Artist', published: true },
+        level: {name: level_name, type: 'Artist', published: true},
         game_id: Game.find_by_name("Custom").id,
         program: @program
       }
@@ -280,7 +280,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("Custom")
     assert_no_difference('Level.count') do
       post :create, params: {
-        level: { name: '', type: 'Artist' },
+        level: {name: '', type: 'Artist'},
         game_id: game.id,
         program: @program
       }
@@ -470,7 +470,7 @@ class LevelsControllerTest < ActionController::TestCase
     skins = level.class.skins
     get :edit, params: {id: level, game_id: level.game}
     skin_select = css_select "#level_skin option"
-    values = skin_select.map { |option| option.attributes["value"].to_s }
+    values = skin_select.map {|option| option.attributes["value"].to_s}
     assert_equal skins, values
   end
 

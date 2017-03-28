@@ -28,8 +28,8 @@ class Script < ActiveRecord::Base
 
   include Seeded
   has_many :levels, through: :script_levels
-  has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
-  has_many :stages, -> { order('absolute_position ASC') }, dependent: :destroy, inverse_of: :script
+  has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
+  has_many :stages, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -359,7 +359,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    script_levels.find { |sl| sl.id == script_level_id.to_i }
+    script_levels.find {|sl| sl.id == script_level_id.to_i}
   end
 
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
@@ -410,6 +410,10 @@ class Script < ActiveRecord::Base
     %w(course1 course2 course3 course4).include? name
   end
 
+  def k5_draft_course?
+    %w(coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include? name
+  end
+
   def csf?
     k5_course? || twenty_hour?
   end
@@ -419,7 +423,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
@@ -464,7 +468,7 @@ class Script < ActiveRecord::Base
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      added_scripts = scripts_to_add.sort_by.with_index { |args, idx| [args[0][:id] || Float::INFINITY, idx] }.map do |args|
+      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |args|
         add_script(*args)
       end
       [added_scripts, custom_i18n]
@@ -550,7 +554,7 @@ class Script < ActiveRecord::Base
       }
       script_level_attributes[:properties] = properties.to_json if properties
       script_level = script.script_levels.detect do |sl|
-        script_level_attributes.all? { |k, v| sl.send(k) == v } &&
+        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
       end || ScriptLevel.create(script_level_attributes) do |sl|
         sl.levels = levels
@@ -640,7 +644,7 @@ class Script < ActiveRecord::Base
             wrapup_video: general_params[:wrapup_video],
             properties: Script.build_property_hash(general_params)
           },
-          script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten
+          script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
         )
         Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end

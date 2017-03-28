@@ -21,8 +21,8 @@ end
 def copy_to_yml(label, data, allow_full_length=false)
   args = allow_full_length ? {line_width: -1} : {}
   File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    f.write(({ "en" => { "data" => { label => data }}}).to_yaml(**args))
-    File.write(f, File.read(f))
+    data = ({"en" => {"data" => {label => data}}}).to_yaml(**args)
+    f.write(data)
   end
 end
 
@@ -36,7 +36,7 @@ def reformat_quotes
   filenames.each do |filename|
     temp_file = Tempfile.new("temp#{filename}.yml")
     File.open("dashboard/config/locales/#{filename}.en.yml", "r") do |f|
-      f.each_line { |line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
+      f.each_line {|line| temp_file.puts line.gsub("'\"", '"').gsub("\"'", '"').gsub("''", "'")}
     end
     temp_file.close
     FileUtils.mv(temp_file.path, "dashboard/config/locales/#{filename}.en.yml")
@@ -63,7 +63,7 @@ def localize_level_content
   authored_hint_pattern = /^\s*"authored_hints": "(.*?)",?\n$/
   callout_pattern = /^\s*"callout_json": "(.*?)",?\n$/
 
-  Dir.glob("dashboard/config/scripts/levels/*.level").each do |file|
+  Dir.glob("dashboard/config/scripts/levels/*.level").sort.each do |file|
     level = File.basename(file, ".*") + "_instruction"
     markdown_level = File.basename(file, ".*") + "_markdown_instruction"
     failure_message_override_level = File.basename(file, ".*") + "_failure_message_override"

@@ -48,14 +48,15 @@ describe('Circuit Playground Components', () => {
           'accelerometer',
           'buttonL',
           'buttonR',
-          'touchPad0',
-          'touchPad1',
-          'touchPad2',
-          'touchPad3',
-          'touchPad6',
-          'touchPad9',
-          'touchPad10',
-          'touchPad12',
+          // TODO (captouch): Restore when we re-enable
+          // 'touchPad0',
+          // 'touchPad1',
+          // 'touchPad2',
+          // 'touchPad3',
+          // 'touchPad6',
+          // 'touchPad9',
+          // 'touchPad10',
+          // 'touchPad12',
       ]);
     });
 
@@ -338,7 +339,8 @@ describe('Circuit Playground Components', () => {
       });
     });
 
-    describe('touchPads', () => {
+    // TODO (captouch): Un-skip when we re-enable
+    describe.skip('touchPads', () => {
       it('only creates one five.Touchpad for all the TouchSensors', () => {
         const components = createCircuitPlaygroundComponents(board);
         const theOnlyTouchpadController = components.touchPad0.touchpadsController_;
@@ -384,14 +386,16 @@ describe('Circuit Playground Components', () => {
     });
 
     it('destroys everything that createCircuitPlaygroundComponents creates', () => {
-      expect(Object.keys(components)).to.have.length(18);
+      // TODO (captouch): Add 8 when re-enabled
+      expect(Object.keys(components)).to.have.length(10);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(0);
     });
 
     it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
       components.someOtherComponent = {};
-      expect(Object.keys(components)).to.have.length(19);
+      // TODO (captouch): Add 8 when re-enabled
+      expect(Object.keys(components)).to.have.length(11);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');
