@@ -164,15 +164,11 @@ const ProjectCard = React.createClass({
 
   renderArrowIcon() {
     // Only the student can access the menu options when viewing their personal projects.
-   if (this.props.currentGallery === 'personal' && !this.state.actionsOpen){
+   if (this.props.currentGallery === 'personal') {
+     let icon = this.state.actionsOpen ? 'chevron-up' : 'chevron-down';
      return (
-       <FontAwesome icon=" fa-chevron-down" style={styles.arrowIcon} onClick={this.toggleActionBox}/>
+       <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleActionBox}/>
       );
-    }
-    if (this.props.currentGallery === 'personal' && this.state.actionsOpen){
-      return (
-        <FontAwesome icon=" fa-chevron-up" style={styles.arrowIcon} onClick={this.toggleActionBox}/>
-       );
     }
   },
 

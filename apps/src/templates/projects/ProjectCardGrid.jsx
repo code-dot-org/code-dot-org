@@ -52,8 +52,7 @@ const ProjectCardGrid = React.createClass({
   render() {
     const { projects, galleryType } = this.props;
 
-    if (galleryType === 'public'){
-
+    if (galleryType === 'public') {
       return (
         <div style={styles.grid}>
           <h2 style={styles.labHeading}> App Lab </h2>
@@ -116,7 +115,7 @@ const ProjectCardGrid = React.createClass({
         ))}
       </div>
     );
-  },
+  }
 });
 
 export default ProjectCardGrid;
