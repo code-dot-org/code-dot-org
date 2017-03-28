@@ -16,6 +16,19 @@ class FollowersControllerTest < ActionController::TestCase
 
     # student without section or teacher
     @student = create(:user)
+
+    @picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+  end
+
+  test "student in picture section should be redirected to picture login when joining section" do
+    get :student_user_new, params: {section_code: @picture_section.code}
+    assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
+  end
+
+  test "student in word section should be redirected to word login when joining section" do
+    get :student_user_new, params: {section_code: @word_section.code}
+    assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code
   end
 
   test "student_user_new when not signed in" do

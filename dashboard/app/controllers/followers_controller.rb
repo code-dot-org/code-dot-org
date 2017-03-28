@@ -63,6 +63,10 @@ class FollowersController < ApplicationController
       @user = User.new
       # if there is no logged in user or no section, render the default student_user_new view which
       # includes the section code form or sign up form
+
+      if @section && (@section.login_type == Section::LOGIN_TYPE_PICTURE || @section.login_type == Section::LOGIN_TYPE_WORD)
+        redirect_to controller: 'sections', action: 'show', id: @section.code
+      end
     end
   end
 
