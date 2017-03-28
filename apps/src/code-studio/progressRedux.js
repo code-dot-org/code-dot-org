@@ -39,7 +39,8 @@ const initialState = {
   signInState: SignInState.Unknown,
   postMilestoneDisabled: false,
   isHocScript: null,
-  isSummaryView: true
+  isSummaryView: true,
+  hasFullProgress: false
 };
 
 /**
@@ -60,7 +61,8 @@ export default function reducer(state = initialState, action) {
       stages: processedStages(stages, action.professionalLearningCourse),
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
-      currentStageId
+      currentStageId,
+      hasFullProgress: action.isFullProgress
     };
   }
 
@@ -196,14 +198,16 @@ export function processedStages(stages, isPlc) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName}) => ({
+    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName,
+    isFullProgress}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
   peerReviewStage,
-  scriptName
+  scriptName,
+  isFullProgress
 });
 
 export const mergeProgress = levelProgress => ({
