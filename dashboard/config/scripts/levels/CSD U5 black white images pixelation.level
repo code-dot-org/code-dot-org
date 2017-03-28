@@ -5,14 +5,15 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "markdown_instructions": "# Do This\r\n\r\nUse the pixelation widget to draw something a smiley face",
+    "markdown_instructions": "# Do This\r\n\r\nComplete the \"X\" shape by typing 0s and 1s",
     "instructions_important": "false",
     "display_name": "Black and White Pixelation Widget",
     "version": "1",
     "hex": "false",
     "skip_dialog": true,
     "href": "pixelation/pixelation.html",
-    "data": "1100"
+    "data": "01110101011101110101",
+    "instructions": "Complete the X shape by typing 0s and 1s"
   },
   "published": true,
   "notes": "",

@@ -38,7 +38,7 @@ class RateLimiterTest < ActiveSupport::TestCase
   end
 
   def test_rate_limiter_with_dcdo_updates
-    max_rate_proc = proc { DCDO.get(DCDO_MAX_RATE_KEY, 1) }
+    max_rate_proc = proc {DCDO.get(DCDO_MAX_RATE_KEY, 1)}
     limiter = SQS::RateLimiter.new(create_config(max_rate: 10, max_rate_proc: max_rate_proc))
 
     # Change the DCDO rate limit and make sure the rate limiter uses the updated values.

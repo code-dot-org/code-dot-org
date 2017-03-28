@@ -128,8 +128,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should not log an activity monitor start for netsim' do
     allthethings_script = Script.find_by_name('allthethings')
-    netsim_level = allthethings_script.levels.find { |level| level.game == Game.netsim }
-    netsim_script_level = allthethings_script.script_levels.find { |script_level| script_level.level_id == netsim_level.id }
+    netsim_level = allthethings_script.levels.find {|level| level.game == Game.netsim}
+    netsim_script_level = allthethings_script.script_levels.find {|script_level| script_level.level_id == netsim_level.id}
     get :show, params: {
       script_id: allthethings_script,
       stage_position: netsim_script_level.stage.relative_position,
@@ -1134,6 +1134,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get_show_script_level_page(create(:script_level, levels: [level]))
 
     assert_select 'button', I18n.t('teacher.panel.example')
+  end
+
+  test "logged out can not view teacher markdown" do
+    refute can_view_teacher_markdown?
+  end
+
+  test "can view CSF teacher markdown as non-authorized teacher" do
+    stubs(:current_user).returns(@teacher)
+    @script.stubs(:k5_course?).returns(true)
+    assert can_view_teacher_markdown?
+  end
+
+  test "students can not view CSF teacher markdown" do
+    stubs(:current_user).returns(@student)
+    @script.stubs(:k5_course?).returns(true)
+    refute can_view_teacher_markdown?
   end
 
   test "should present single available level for single-level scriptlevels" do

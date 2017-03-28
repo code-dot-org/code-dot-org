@@ -55,7 +55,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Click Key\r\n\r\n<img src=\"https://images.code.org/da714cccb8271f4a38c584255db7a3a1-image-1489632782603.52.18 PM.png\" style=\"width:200px;float:right\">\r\n\r\nOnce a user clicks the key you will want to show they are holding it. You can do this by adding a key at the bottom corner of the room. \r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for when the user clicks the key in the safe. \r\n* Inside the `onEvent` block:\r\n\t* Use `hideElement` to hide the key in the safe\r\n    * Use `showElement` to show the keys in each room.",
+    "markdown_instructions": "# Click Key\r\n\r\n<img src=\"https://images.code.org/da714cccb8271f4a38c584255db7a3a1-image-1489632782603.52.18 PM.png\" style=\"width:200px;float:right\">\r\n\r\nOnce a user clicks the key you will want to show they are holding it. You can do this by adding a key at the bottom corner of the room. \r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for when the user clicks the key in the safe. \r\n* Inside the `onEvent` block:\r\n\t* Use `hideElement` to hide the key in the safe\r\n    * Use `showElement` to show the key at the bottom of the room",
     "contained_level_names": null
   },
   "published": true,

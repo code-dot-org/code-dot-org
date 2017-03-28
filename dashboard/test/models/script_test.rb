@@ -8,7 +8,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..5).map { |n| create(:level, name: "Level #{n}", game: @game) }
+    @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end

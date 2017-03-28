@@ -28,11 +28,11 @@ VCR.configure do |c|
       User-Agent
       Host
       Content-Type
-    ).each { |h| i.request.headers.delete h }
+    ).each {|h| i.request.headers.delete h}
     %w(
       X-Amz-Request-Id
       X-Amz-Id-2
-    ).each { |h| i.response.headers.delete h }
+    ).each {|h| i.response.headers.delete h}
   end
 end
 

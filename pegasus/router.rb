@@ -72,7 +72,7 @@ class Documents < Sinatra::Base
   def self.set_max_age(type, default)
     default = 60 if rack_env? :staging
     default = 0 if rack_env? :development
-    set "#{type}_max_age", proc { DCDO.get("pegasus_#{type}_max_age", default) }
+    set "#{type}_max_age", proc {DCDO.get("pegasus_#{type}_max_age", default)}
   end
 
   ONE_HOUR = 3600

@@ -33,6 +33,8 @@
 
 require 'dynamic_config/gatekeeper'
 
+MAX_INT_VALUE = 2**31 - 1
+
 class AuthoredHintViewRequest < ActiveRecord::Base
   belongs_to :user
   belongs_to :script
@@ -41,11 +43,26 @@ class AuthoredHintViewRequest < ActiveRecord::Base
   validates :script, presence: true
   validates :level, presence: true
 
+  # manually validate all integer values; otherwise extra-large values
+  # will throw errors rather than simply invalidating.
+  validates :prev_time, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :prev_attempt, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :prev_test_result, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :prev_level_source_id, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :next_time, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :next_attempt, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :next_test_result, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :next_level_source_id, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :final_time, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :final_attempt, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :final_test_result, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+  validates :final_level_source_id, numericality: {less_than_or_equal_to: MAX_INT_VALUE, allow_nil: true}
+
   include HintsUsed
 
   def self.enabled?(script = nil)
     if script
-      Gatekeeper.allows('authored_hint_view_request', where: { script_name: script.name }, default: true)
+      Gatekeeper.allows('authored_hint_view_request', where: {script_name: script.name}, default: true)
     else
       Gatekeeper.allows('authored_hint_view_request', default: true)
     end

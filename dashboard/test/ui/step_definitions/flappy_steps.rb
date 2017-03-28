@@ -1,5 +1,5 @@
 Then /^ensure Flappy gameState is ([^\s]*)$/ do |value|
-  states = { 'WAITING' => 0, 'ACTIVE' => 1, 'ENDING' => 2, 'OVER' => 3 }
+  states = {'WAITING' => 0, 'ACTIVE' => 1, 'ENDING' => 2, 'OVER' => 3}
 
   game_state = @browser.execute_script("return Flappy.gameState;")
   expect(game_state).to eq(states[value])
