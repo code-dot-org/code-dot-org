@@ -82,7 +82,7 @@ describe("JSInterpreter", function () {
           expect(jsInterpreter.interpreter).to.be.an.instanceOf(Interpreter);
         });
 
-        it("Initializes the isBreakpointRow function to alwasy return false", () => {
+        it("Initializes the isBreakpointRow function to always return false", () => {
           expect(jsInterpreter.isBreakpointRow()).to.be.false;
         });
 
