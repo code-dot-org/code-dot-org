@@ -129,10 +129,10 @@ class Pd::Workshop < ActiveRecord::Base
   }
 
   WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
-    Pd::Workshop::COURSE_CSP => 'CSP Support',
-    Pd::Workshop::COURSE_ECS => 'ECS Support',
-    Pd::Workshop::COURSE_CS_IN_A => 'CS in Algebra Support',
-    Pd::Workshop::COURSE_CS_IN_S => 'CS in Science Support'
+    COURSE_CSP => 'CSP Support',
+    COURSE_ECS => 'ECS Support',
+    COURSE_CS_IN_A => 'CS in Algebra Support',
+    COURSE_CS_IN_S => 'CS in Science Support'
   }.freeze
 
   validates_inclusion_of :workshop_type, in: TYPES
