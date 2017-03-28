@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import msg from '@cdo/locale';
-import {showAssetManager} from '../../code-studio/assets';
+import * as assets from '../../code-studio/assets';
 import * as maker from '../kits/maker/toolkit';
 import PopUpMenu from './PopUpMenu';
 
@@ -23,7 +23,7 @@ export default class SettingsMenu extends Component {
 
   manageAssets() {
     this.props.handleClose();
-    showAssetManager();
+    assets.showAssetManager();
   }
 
   toggleMakerToolkit() {
