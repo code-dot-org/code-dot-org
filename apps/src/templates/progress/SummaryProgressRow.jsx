@@ -106,6 +106,7 @@ const SummaryProgressRow = React.createClass({
     const locked = lockedForSection ||
       levels.every(level => level.status === LevelStatus.locked);
 
+    const titleTooltipId = _.uniqueId();
     const lockedTooltipId = _.uniqueId();
     return (
       <tr
@@ -151,10 +152,10 @@ const SummaryProgressRow = React.createClass({
                 }
               </span>
             }
-            <span data-tip data-for={lessonTitle} aria-describedby={lessonTitle}>
+            <span data-tip data-for={titleTooltipId} aria-describedby={titleTooltipId}>
               {lessonTitle}
               <ReactTooltip
-                id={lessonTitle}
+                id={titleTooltipId}
                 role="tooltip"
                 wrapper="span"
                 effect="solid"
