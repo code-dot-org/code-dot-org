@@ -57,7 +57,7 @@ Code.org's online platform [Code Studio](https://studio.code.org) enables studen
 
 [col-33]
 
-<img src="/images/fit-300/teals/quincy.jpg" style="border-radius: 5px;">
+<img src="/images/fit-300/teals/quincy.jpg" style="border-radius: 5px; margin-left: 0px;">
 
 [/col-33]
 
