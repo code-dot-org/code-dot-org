@@ -14,6 +14,7 @@
     "test:unit": "grunt unitTest",
     "test:integration": "grunt integrationTest",
     "test:entry": "grunt karma:entry",
+    "test:interpreter": "./node_modules/@code-dot-org/js-interpreter-tyrant/bin/run.js --run --diff --root ./test/interpreter --interpreter ./test/interpreter/patched-interpreter.js --progress",
     "clean": "grunt clean",
     "build": "DEV=1 grunt build && grunt logBuildTimes",
     "build:blockly": "DEV=1 grunt preconcat && grunt concat",
@@ -34,10 +35,15 @@
   "browser": {
     "blockly": "./build/package/js/blockly.js"
   },
+  "resolutions": {
+    "eshost": "github:pcardune/eshost#f3fa7fa",
+    "test262-compiler": "github:pcardune/test262-compiler#ffa0dff"
+  },
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@code-dot-org/blockly": "1.6.9",
     "@code-dot-org/bramble": "0.1.11",
+    "@code-dot-org/js-interpreter-tyrant": "^0.0.1",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
     "@code-dot-org/p5.play": "1.1.6-cdo",
     "@code-dot-org/piskel": "0.10.0-cdo.0",
@@ -195,7 +201,8 @@
     "which": "1.1.1"
   },
   "dependencies": {
-    "@code-dot-org/js-interpreter": "^1.0.0",
+    "@code-dot-org/js-interpreter": "^1.1.1",
+    "@code-dot-org/js-interpreter-tyrant": "^0.1.1",
     "crypto-js": "^3.1.9-1",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
