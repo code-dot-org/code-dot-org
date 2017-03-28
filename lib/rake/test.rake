@@ -1,3 +1,4 @@
+# coding: utf-8
 # Run 'rake' or 'rake -P' to get a list of valid Rake commands.
 
 require 'cdo/chat_client'
@@ -219,7 +220,13 @@ namespace :test do
       end
     end
 
-    task all: [:apps, :interpreter, :dashboard, :pegasus, :shared, :lib]
+    task all: [:apps,
+               # currently disabled because these tests take too long to run on circle
+               # :interpreter,
+               :dashboard,
+               :pegasus,
+               :shared,
+               :lib]
   end
 
   task changed: ['changed:all']
