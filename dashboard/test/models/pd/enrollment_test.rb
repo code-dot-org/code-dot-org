@@ -287,5 +287,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
       assert_equal 1, Plc::UserCourseEnrollment.where(user: teacher, plc_course: plc_course).size
     end
+
+    workshop = create :pd_workshop, course: 'Counselor'
+    teacher = create :teacher
+    assert_no_difference('Plc::UserCourseEnrollment.count') do
+      create :pd_enrollment, user: teacher, workshop: workshop
+    end
   end
 end
