@@ -110,7 +110,11 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    get_bucket_impl(endpoint).new.list(encrypted_channel_id).to_json
+    begin
+      get_bucket_impl(endpoint).new.list(encrypted_channel_id).to_json
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
   end
 
   #
@@ -372,7 +376,12 @@ class FilesApi < Sinatra::Base
 
     buckets = get_bucket_impl(endpoint).new
 
-    buckets.list(encrypted_channel_id).each do |file|
+    begin
+      files = buckets.list(encrypted_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    files.each do |file|
       not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
       buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
     end
