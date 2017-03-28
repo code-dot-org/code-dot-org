@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 
 import { stageShape } from './types';
-import CourseProgressRow from './course_progress_row.jsx';
+import CourseProgressRow from './CourseProgressRow.jsx';
 import HrefButton from '@cdo/apps/templates/HrefButton';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import SectionSelector from './SectionSelector';

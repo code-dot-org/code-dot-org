@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import _ from 'lodash';
 import clientState from './clientState';
 import StageProgress from './components/progress/stage_progress.jsx';
-import CourseProgress from './components/progress/course_progress.jsx';
+import CourseProgress from './components/progress/CourseProgress.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
