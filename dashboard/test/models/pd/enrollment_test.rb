@@ -279,7 +279,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'enrolling in class automatically enrolls in online learning' do
-    Pd::Enrollment::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
+    Pd::Workshop::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
       workshop = create :pd_workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first
       plc_course = create :plc_course, name: plc_course_name
       teacher = create :teacher

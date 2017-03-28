@@ -51,13 +51,6 @@ class Pd::Enrollment < ActiveRecord::Base
 
   after_create :enroll_in_corresponding_online_learning
 
-  WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = Hash[
-    Pd::Workshop::COURSE_CSP, 'CSP Support',
-    Pd::Workshop::COURSE_ECS, 'ECS Support',
-    Pd::Workshop::COURSE_CS_IN_A, 'CS in Algebra Support',
-    Pd::Workshop::COURSE_CS_IN_S, 'CS in Science Support'
-  ]
-
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
   end
@@ -193,12 +186,8 @@ class Pd::Enrollment < ActiveRecord::Base
   protected
 
   def enroll_in_corresponding_online_learning
-    plc_course = Plc::Course.find_by(
-      name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[workshop.course]
-    )
-
-    unless user.nil? || plc_course.nil?
-      Plc::UserCourseEnrollment.find_or_create_by(user: user, plc_course: plc_course)
+    if user && workshop.associated_online_course
+      Plc::UserCourseEnrollment.find_or_create_by(user: user, plc_course: workshop.associated_online_course)
     end
   end
 
