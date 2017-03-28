@@ -3,7 +3,7 @@ title 'Find the Numbers'
 description 'description here'
 markdown <<MARKDOWN
 # Decode the Ages
-#### Three students encoded their cousins' ages in binary below.
+#### Three students encoded the ages of two of their cousins in binary below.
 ## Student 1
 <table>
 <tr>
