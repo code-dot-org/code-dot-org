@@ -94,6 +94,7 @@ class Script < ActiveRecord::Base
     hideable_stages
     peer_reviews_to_complete
     professional_learning_course
+    student_detail_progress_view
   )
 
   def self.twenty_hour_script
@@ -730,7 +731,8 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       stages: stages.map(&:summarize),
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewStage: peer_review_stage
+      peerReviewStage: peer_review_stage,
+      student_detail_progress_view: student_detail_progress_view?
     }
 
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
@@ -762,7 +764,8 @@ class Script < ActiveRecord::Base
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
+      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
+      student_detail_progress_view: script_data[:student_summary_progress_view] || false
     }.compact
   end
 end
