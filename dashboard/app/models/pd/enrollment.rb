@@ -49,6 +49,8 @@ class Pd::Enrollment < ActiveRecord::Base
   validate :validate_school_name, unless: :created_before_school_info?
   validates_presence_of :school_info, unless: :created_before_school_info?
 
+  after_create :enroll_in_corresponding_online_learning
+
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
   end
@@ -182,6 +184,12 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   protected
+
+  def enroll_in_corresponding_online_learning
+    if user && workshop.associated_online_course
+      Plc::UserCourseEnrollment.find_or_create_by(user: user, plc_course: workshop.associated_online_course)
+    end
+  end
 
   def check_school_info(school_info_attr)
     deduplicate_school_info(school_info_attr, self)
