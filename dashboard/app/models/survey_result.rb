@@ -28,8 +28,8 @@ class SurveyResult < ActiveRecord::Base
   ETHNICITIES["other"] = "Other/Unknown"
   ETHNICITIES.freeze
 
-  DIVERSITY_ATTRS = ETHNICITIES.keys.map {|key| "ethnicity_#{key}"}
-  DIVERSITY_ATTRS << "survey_foodstamps"
+  DIVERSITY_ATTRS = ETHNICITIES.keys.map {|key| "diversity_#{key}"}
+  DIVERSITY_ATTRS << "diversity_foodstamps"
 
   NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment)
   NET_PROMOTER_SCORE_ATTRS.freeze

@@ -28,7 +28,7 @@
             Of your students using Code.org's courses, how many are
         .dots
           - SurveyResult::ETHNICITIES.each do |key, value|
-            %input#ethnicity_input{maxlength: "3", name: "survey[ethnicity_#{key}]", placeholder: "0"}
+            %input#ethnicity_input{maxlength: "3", name: "survey[diversity_#{key}]", placeholder: "0"}
             = value
             %br/
       .survey_right
@@ -49,7 +49,7 @@
             - else
               - text = "Other"
             .dot
-              %input{id: "radio_#{index}", type: "radio", name: "survey[foodstamps]", value: index}
+              %input{id: "radio_#{index}", type: "radio", name: "survey[diversity_foodstamps]", value: index}
               %label{for: "radio_#{index}"}= text
 
       %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2017}
