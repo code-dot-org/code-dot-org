@@ -131,7 +131,7 @@
   display: none;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 970px) {
   #pageheader-wrapper {
     padding-top: 5px;
   }
