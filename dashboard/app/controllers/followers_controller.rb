@@ -61,12 +61,15 @@ class FollowersController < ApplicationController
       redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
     else
       @user = User.new
-      # if there is no logged in user or no section, render the default student_user_new view which
-      # includes the section code form or sign up form
 
+      # if this is a picture or word section, redirect to the section login page so that the student
+      # does not have to type in the full URL
       if @section && (@section.login_type == Section::LOGIN_TYPE_PICTURE || @section.login_type == Section::LOGIN_TYPE_WORD)
         redirect_to controller: 'sections', action: 'show', id: @section.code
       end
+
+      # if there is no logged in user and no section or an e-mail section, render the default student_user_new view which
+      # includes the section code form or sign up form
     end
   end
 
