@@ -2,7 +2,7 @@ import React from 'react';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from './SummaryProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import { fakeLesson, fakeLevels } from './progressTestHelpers';
+import { fakeLesson, fakeLevels, fakeLevel } from './progressTestHelpers';
 
 const defaultProps = {
   lessons: [
@@ -14,14 +14,12 @@ const defaultProps = {
   levelsByLesson: [
     [
       {
-        status: LevelStatus.not_tried,
-        url: '/step1/level1',
+        ...fakeLevels(1)[0],
         name: 'First progression'
       },
-      ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
+      ...fakeLevels(5, 2).map(level => ({...level, progression: 'Second Progression'})),
       {
-        status: LevelStatus.not_tried,
-        url: '/step3/level1',
+        ...fakeLevels(1)[0],
         name: 'Last progression'
       },
     ],
@@ -30,6 +28,7 @@ const defaultProps = {
     fakeLevels(2)
   ],
   viewAs: ViewType.Student,
+
   lessonIsVisible: () => true,
   lessonLockedForSection: () => false
 };
@@ -77,20 +76,23 @@ export default storybook => {
                   id: -1,
                   name: "Link to submitted review",
                   status: LevelStatus.perfect,
-                  url: "/peer_reviews/1"
+                  url: "/peer_reviews/1",
+                  levelNumber: 1
                 },
                 {
                   id: -1,
                   name: "Review a new submission",
                   status: LevelStatus.not_tried,
-                  url: "/pull-review"
+                  url: "/pull-review",
+                  levelNumber: 2,
                 },
                 {
                   id: -1,
                   icon: 'fa-lock',
                   name: "Reviews unavailable at this time",
                   status: LevelStatus.locked,
-                  url: ""
+                  url: "",
+                  levelNumber: 3,
                 },
               ]
             ]}
@@ -222,6 +224,19 @@ export default storybook => {
             lessonIsVisible={(lesson, viewAs) =>
               (lesson.id !== 2 || viewAs === ViewType.Teacher)}
             lessonLockedForSection={(lessonId) => lessonId === 2}
+          />
+        )
+      },
+      {
+        name:'unplugged lesson',
+        story: () => (
+          <SummaryProgressTable
+            {...defaultProps}
+            lessons={[fakeLesson('Stage with Unplugged', 1, false, 1)]}
+            levelsByLesson={[[
+              fakeLevel({isUnplugged: true}),
+              ...fakeLevels(3)
+            ]]}
           />
         )
       }

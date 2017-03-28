@@ -492,21 +492,27 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
             name: undefined,
             progression: undefined,
-            icon: null
+            icon: null,
+            isUnplugged: true,
+            levelNumber: undefined
           },
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
             name: undefined,
             progression: undefined,
-            icon: null
+            icon: null,
+            isUnplugged: false,
+            levelNumber: 1
           },
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
             name: undefined,
             progression: undefined,
-            icon: null
+            icon: null,
+            isUnplugged: false,
+            levelNumber: 2
           }
         ],
         [
@@ -515,28 +521,62 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
             name: undefined,
             progression: undefined,
-            icon: null
+            icon: null,
+            isUnplugged: false,
+            levelNumber: 1
           },
           {
             status: 'perfect',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
             name: undefined,
             progression: undefined,
-            icon: null
+            icon: null,
+            isUnplugged: false,
+            levelNumber: 2
           },
           {
             status: 'attempted',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
             name: undefined,
             progression: undefined,
-            icon: null
+            icon: null,
+            isUnplugged: false,
+            levelNumber: 3
           }
         ]
       ];
       const results = levelsByLesson(state);
       assert.equal(expected.length, results.length);
-      assert.deepEqual(expected[0], results[0]);
-      assert.deepEqual(expected[1], results[1]);
+      for (let i = 0; i < expected.length; i++) {
+        assert.equal(expected[i].length, results[i].length);
+        for (let j = 0; j < expected[i].length; j++) {
+          assert.deepEqual(expected[i][j], results[i][j], `Mismatch for stage at index ${i}, level at index ${j}`);
+        }
+      }
+    });
+
+    it('Only numbers non-unplugged lesson', () => {
+      const results = levelsByLesson({
+        stages: [{
+          levels: [
+            {
+              kind: LevelKind.unplugged,
+              title: 'Unplugged Activity',
+              ids: [123]
+            },
+            {
+              kind: LevelKind.puzzle,
+              title: 1,
+              ids: [124]
+            }
+          ]
+        }],
+        levelProgress: {}
+      });
+      assert.equal(results[0][0].isUnplugged, true);
+      assert.equal(results[0][0].levelNumber, null);
+      assert.equal(results[0][1].isUnplugged, false);
+      assert.equal(results[0][1].levelNumber, 1);
     });
   });
 
@@ -735,7 +775,8 @@ describe('progressReduxTest', () => {
       levels: [{
         url: '',
         name: 'fake level',
-        ids: [1]
+        ids: [1],
+        title: 1
       }]
     });
 
