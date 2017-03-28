@@ -35,6 +35,7 @@ var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore, registerReducers } from './redux';
@@ -394,6 +395,11 @@ StudioApp.prototype.init = function (config) {
         var nonDropletError = false;
         // are we trying to toggle from blocks to text (or the opposite)
         var fromBlocks = this.editor.currentlyUsingBlocks;
+        var event = fromBlocks ? "block-to-text" : "text-to-block";
+        firehoseClient.putRecord(
+          'analysis-events',
+          {study: 'block-and-text-transitions', event: event}
+        );
         try {
           result = this.editor.toggleBlocks();
         } catch (err) {
