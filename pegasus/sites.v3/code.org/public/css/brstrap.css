@@ -12,6 +12,7 @@
   .container_responsive h2 { font-size: 18px; }
   .container_responsive h3 { font-size: 12px; }
   .container_responsive h4 { font-size: 12px; }
+  .container_responsive .solid-block-header * { font-size: 20px;}
 }
 
 /* 601px-970px: capped to 600px */
