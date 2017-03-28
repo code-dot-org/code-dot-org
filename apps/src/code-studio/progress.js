@@ -21,7 +21,8 @@ import {
   showTeacherInfo,
   disablePostMilestone,
   setUserSignedIn,
-  setIsHocScript
+  setIsHocScript,
+  setIsSummaryView
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
@@ -131,6 +132,12 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     store.dispatch(getHiddenStages(scriptData.name, true));
   }
 
+  if (onOverviewPage && scriptData.student_detail_progress_view) {
+    // If everyone has detail progress view, set that view immediately. Otherwise
+    // it might happen async when we determine you're a teacher.
+    store.dispatch(setIsSummaryView(false));
+  }
+
   $.ajax(
     '/api/user_progress/' + scriptData.name,
     {
@@ -157,6 +164,8 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
       store.dispatch(showTeacherInfo());
       store.dispatch(setViewType(ViewType.Teacher));
       renderTeacherPanel(store, scriptData.id);
+
+      store.dispatch(setIsSummaryView(false));
     }
 
     if (data.focusAreaPositions) {
