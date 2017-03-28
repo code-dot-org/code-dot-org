@@ -68,8 +68,8 @@ class FollowersController < ApplicationController
         redirect_to controller: 'sections', action: 'show', id: @section.code
       end
 
-      # if there is no logged in user and no section or an e-mail section, render the default student_user_new view which
-      # includes the section code form or sign up form
+      # if there is no logged in user and no section or an e-mail section, render the default
+      # student_user_new view which includes the section code form or sign up form
     end
   end
 
