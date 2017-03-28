@@ -108,7 +108,7 @@ const ProjectCard = React.createClass({
   },
 
   renderStudentName() {
-    // The student's name should only be visible in the classroom gallery.
+  // The student's name should only be visible in the classroom gallery.
     if (this.props.currentGallery === 'class'){
       return (
         <div style={styles.studentName}>
@@ -128,43 +128,32 @@ const ProjectCard = React.createClass({
     }
   },
 
-  renderStudentAgeRange() {
-    // The student's age range should only be visible in the public gallery.
-    if (this.props.currentGallery === 'public'){
-      if (this.props.projectData.studentAge >= 18){
-        return (
-          <span style={styles.ageRange}>
-            Age: 18+
-          </span>
-        );
+  checkStudentAge(studentAge) {
+    const ageCutoffs = [4, 8, 13, 18]; //<--- ask Poorva, these might change
+    let ageCutoff = 0;
+
+    for (let i = 0; i < ageCutoffs.length; i++) {
+      if (studentAge >= ageCutoffs[i]) {
+        ageCutoff = ageCutoffs[i];
       }
-      if (this.props.projectData.studentAge >= 13){
-        return (
-          <span style={styles.ageRange}>
-            Age: 13+
-          </span>
-        );
-      }
-      if (this.props.projectData.studentAge >= 8){
-        return (
-          <span style={styles.ageRange}>
-            Age: 8+
-          </span>
-        );
-      }
-      if (this.props.projectData.studentAge >= 4){
-        return (
-          <span style={styles.ageRange}>
-            Age: 4+
-          </span>
-        );
-      }
+    }
+    return ageCutoff;
+  },
+
+  renderStudentAgeRange(studentAge) {
+  // The student's age range should only be visible in the public gallery.
+    if (this.props.currentGallery === 'public') {
+      return (
+        <span style={styles.ageRange}>
+          Age: {this.checkStudentAge(studentAge)}+
+        </span>
+      );
     }
   },
 
   renderArrowIcon() {
-    // Only the student can access the menu options when viewing their personal projects.
-   if (this.props.currentGallery === 'personal') {
+  // Only the student can access the menu options when viewing their personal projects.
+    if (this.props.currentGallery === 'personal') {
      let icon = this.state.actionsOpen ? 'chevron-up' : 'chevron-down';
      return (
        <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleActionBox}/>
@@ -236,7 +225,7 @@ const ProjectCard = React.createClass({
 
           <span>
             {this.renderFirstInitial()}
-            {this.renderStudentAgeRange()}
+            {this.renderStudentAgeRange(this.props.projectData.studentAge)}
           </span>
 
           <div style={styles.lastEdit}>
