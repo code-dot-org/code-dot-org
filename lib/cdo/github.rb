@@ -61,7 +61,7 @@ module GitHub
     # By sleeping, we allow GitHub time to determine that a merge conflict is
     # not present. Otherwise, empirically, we receive a 405 response error.
     sleep 3
-    success = merge_pull_request(pr_number, commit_message: title)
+    success = merge_pull_request(pr_number, title)
     success ? pr_number : nil
   end
 
