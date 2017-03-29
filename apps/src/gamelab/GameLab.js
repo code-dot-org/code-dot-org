@@ -48,7 +48,7 @@ import {
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
-import project from '@cdo/apps/code-studio/initApp/project';
+import project from '../code-studio/initApp/project';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -1080,7 +1080,7 @@ GameLab.prototype.captureInitialImage = function () {
   if (!project.isOwner() || this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
     return;
   }
-  this.captureImage(THUMBNAIL_SIZE);
+  captureImage(THUMBNAIL_SIZE);
   this.initialCaptureComplete = true;
 };
 
@@ -1088,7 +1088,7 @@ GameLab.prototype.captureInitialImage = function () {
  * Capture a thumbnail image of the play space.
  * @param {number} thumbnailSize The width and height in pixels of the captured image.
  */
-GameLab.prototype.captureImage = function (thumbnailSize) {
+function captureImage(thumbnailSize) {
   const p5Canvas = document.getElementById('defaultCanvas0');
   if (!p5Canvas) {
     console.warn(`Thumbnail capture failed: p5 canvas not found.`);
@@ -1110,7 +1110,7 @@ GameLab.prototype.captureImage = function (thumbnailSize) {
   thumbnailCanvas.toBlob(blob => {
     project.saveThumbnail(blob);
   });
-};
+}
 
 GameLab.prototype.completeRedrawIfDrawComplete = function () {
   if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
