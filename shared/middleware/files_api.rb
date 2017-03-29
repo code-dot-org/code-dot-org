@@ -398,8 +398,7 @@ class FilesApi < Sinatra::Base
   delete %r{/v3/(animations|assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     get_bucket_impl(endpoint).new.delete(encrypted_channel_id, filename)
     no_content
@@ -429,8 +428,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     get_bucket_impl(endpoint).new.restore_previous_version(encrypted_channel_id, filename, request.GET['version']).to_json
   end
@@ -568,8 +566,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     # read the manifest
     bucket = FileBucket.new
@@ -597,8 +594,7 @@ class FilesApi < Sinatra::Base
 
     bad_request if filename.downcase == FileBucket::MANIFEST_FILENAME
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     # read the manifest
     bucket = FileBucket.new
@@ -640,8 +636,7 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     # read the manifest using the version-id specified
     bucket = FileBucket.new
