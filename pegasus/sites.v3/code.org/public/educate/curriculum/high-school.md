@@ -10,7 +10,7 @@ High School
 
 [/solid-block-header]
 
-For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9, and will be rolling out Summer 2017. The second, Computer Science Principles, is broadly available and can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
+For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9, and will be rolling out Summer 2017. The second, Computer Science Principles, is broadly available and can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy). 
 
 
 <!--<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">-->
