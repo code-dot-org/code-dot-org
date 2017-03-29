@@ -9,7 +9,7 @@ Middle School
 
 [/solid-block-header]
 
-Our current middle school curriculum focuses on a broad introduction to computer science topics. CS Discoveries, our newest course (to be released in Summer 2017), will be a year-long or semester computer science course designed for grades 7-9. In addition, the CS Fundamentals Accelerated course may be used at all grade levels. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
+Our current middle school curriculum focuses on a broad introduction to computer science topics. CS Discoveries, our newest course (to be released in Summer 2017), will be a year-long or semester computer science course designed for grades 7-9. In addition, the CS Fundamentals Accelerated course may be used at all grade levels. Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy). 
 
 [solid-block-header]
 
