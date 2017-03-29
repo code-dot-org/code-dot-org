@@ -155,21 +155,18 @@ class Section < ActiveRecord::Base
   # TODO(asher): Change the default value of move_for_same_teacher to false. Determine whether it
   #   is possible to eliminate this option.
   def add_student(student, move_for_same_teacher: true)
-    unless move_for_same_teacher
-      return Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
-    end
-
-    sections_with_same_teacher = student.sections_as_student.
-      select {|section| section.user_id == user_id}
-    unless sections_with_same_teacher.empty?
-      # If this student is already in another section owned by the
-      # same teacher, move them to this section instead of creating a
-      # new one.
-      # TODO(asher): Presently, this only unenrolls the student from one of the existing sections.
-      #   Change this to unenroll the student from all sections.
-      follower = sections_with_same_teacher.first.followers.
-        select {|f| f.student_user == student}.first
-      return follower.update_attributes!(section: self)
+    if move_for_same_teacher
+      sections_with_same_teacher = student.sections_as_student.where(user_id: user_id)
+      unless sections_with_same_teacher.empty?
+        # If this student is already in another section owned by the
+        # same teacher, move them to this section instead of creating a
+        # new one.
+        # TODO(asher): Presently, this only unenrolls the student from one of the existing sections.
+        # Change this to unenroll the student from all sections.
+        follower = sections_with_same_teacher.first.
+          followers.where(student_user_id: student.id).first
+        return follower.update_attributes!(section: self)
+      end
     end
 
     Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
