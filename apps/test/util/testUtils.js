@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
 import {assert} from './configuredChai';
+import {shallow} from 'enzyme';
 
 export function setExternalGlobals() {
   // Temporary: Provide React on window while we still have a direct dependency
@@ -308,4 +309,17 @@ export function restoreOnWindow(key) {
   }
   window[key] = originalWindowValues[key];
   delete originalWindowValues[key];
+}
+
+// Add tests for a set of stories exported from a storybook. These tests will
+// fail if propType validation fails, or any exceptions are thrown.
+export function testStories(stories) {
+  describe('stories', () => {
+    throwOnConsoleErrors();
+    stories.forEach(story => {
+      it(story.name, () => {
+        shallow(story.story());
+      });
+    });
+  });
 }

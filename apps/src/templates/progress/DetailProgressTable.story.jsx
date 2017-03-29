@@ -30,44 +30,47 @@ const levelsByLesson = [
   fakeLevels(2)
 ];
 
+// Export our stories so we can test them if we like
+export const stories = [
+  {
+    name:'simple DetailProgressTable',
+    story: () => (
+      <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <DetailProgressTable
+          lessons={lessons}
+          levelsByLesson={levelsByLesson}
+        />
+      </Provider>
+    )
+  },
+  {
+    name:'with hidden lesson as teacher',
+    description: 'lesson 2 should be white with dashed outline',
+    story: () => (
+      <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
+        <DetailProgressTable
+          lessons={lessons}
+          levelsByLesson={levelsByLesson}
+        />
+      </Provider>
+    )
+  },
+  {
+    name:'with hidden lesson as student',
+    description: 'lesson 2 should be invisible',
+    story: () => (
+      <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
+        <DetailProgressTable
+          lessons={lessons}
+          levelsByLesson={levelsByLesson}
+        />
+      </Provider>
+    )
+  }
+];
+
 export default storybook => {
   storybook
     .storiesOf('DetailProgressTable', module)
-    .addStoryTable([
-      {
-        name:'simple DetailProgressTable',
-        story: () => (
-          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
-            <DetailProgressTable
-              lessons={lessons}
-              levelsByLesson={levelsByLesson}
-            />
-          </Provider>
-        )
-      },
-      {
-        name:'with hidden lesson as teacher',
-        description: 'lesson 2 should be white with dashed outline',
-        story: () => (
-          <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
-            <DetailProgressTable
-              lessons={lessons}
-              levelsByLesson={levelsByLesson}
-            />
-          </Provider>
-        )
-      },
-      {
-        name:'with hidden lesson as student',
-        description: 'lesson 2 should be invisible',
-        story: () => (
-          <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
-            <DetailProgressTable
-              lessons={lessons}
-              levelsByLesson={levelsByLesson}
-            />
-          </Provider>
-        )
-      }
-    ]);
+    .addStoryTable(stories);
 };
