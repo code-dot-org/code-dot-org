@@ -1,3 +1,5 @@
+require 'cdo/firehose'
+
 module UserHelpers
   # Generate a unique* username based on a name. queryable is
   # interface that responds to 'where' (ie. an ActiveRecord::Base
@@ -23,11 +25,21 @@ module UserHelpers
     (0..2).each do |exponent|
       min_index = 10**exponent
       max_index = 10**(exponent + 1) - 1
-      3.times do |_i|
+      3.times do |i|
         suffix = Random.rand(min_index..max_index)
-        if queryable.where(username: "#{prefix}#{suffix}").limit(1).empty?
-          return "#{prefix}#{suffix}"
-        end
+        next unless queryable.where(username: "#{prefix}#{suffix}").limit(1).empty?
+
+        FirehoseClient.put_record(
+          'analysis-events',
+          {
+            study: 'username-generation',
+            event: 'dart-hit',
+            data_int: exponent,
+            data_string: prefix,
+            data_json: i.to_json
+          }
+        )
+        return "#{prefix}#{suffix}"
       end
     end
 
@@ -41,6 +53,10 @@ module UserHelpers
     # Increment the current maximum integer suffix. Though it may leave holes,
     # it is guaranteed to be (currently) unique.
     suffix = similar_usernames.map {|n| n[prefix.length..-1]}.map(&:to_i).max + 1
+    FirehoseClient.put_record(
+      'analysis-events',
+      {study: 'username-generation', event: 'dart-miss', data_int: suffix, data_string: prefix}
+    )
     return "#{prefix}#{suffix}"
   end
 
