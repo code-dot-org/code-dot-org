@@ -829,11 +829,16 @@ var projects = module.exports = {
     return pathName;
   },
 
-  saveThumbnail(blob) {
+  /**
+   * Uploads a thumbnail image to the thumbnail path in the files API, and
+   * stores a URL to access the thumbnail in current.thumbnailUrl.
+   * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   */
+  saveThumbnail(pngBlob) {
     if (current && current.isOwner) {
       const thumbnailPath = '.metadata/thumbnail.png';
-      filesApi.putFile(thumbnailPath, blob, () => {
-        current.thumbnailUrl = `/v3/files/${current.id}/.metadata/thumbnail.png`;
+      filesApi.putFile(thumbnailPath, pngBlob, () => {
+        current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
       }, error => {
         console.warn(`error saving thumbnail image: ${error}`);
       });
