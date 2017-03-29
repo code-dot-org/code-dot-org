@@ -1,6 +1,7 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
 import {CIPHER, ALPHABET} from '../../constants';
+import {files as filesApi} from '../../clientApi';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -826,7 +827,18 @@ var projects = module.exports = {
       pathName += '/' + action;
     }
     return pathName;
-  }
+  },
+
+  saveThumbnail(blob) {
+    if (current && current.isOwner) {
+      const thumbnailPath = '.metadata/thumbnail.png';
+      filesApi.putFile(thumbnailPath, blob, () => {
+        current.thumbnailUrl = `/v3/files/${current.id}/.metadata/thumbnail.png`;
+      }, error => {
+        console.warn(`error saving thumbnail image: ${error}`);
+      });
+    }
+  },
 };
 
 /**
