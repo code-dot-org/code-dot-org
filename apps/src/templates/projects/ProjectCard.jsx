@@ -166,21 +166,27 @@ const ProjectCard = React.createClass({
     this.setState({actionsOpen: !this.state.actionsOpen});
   },
 
-  renderActionBox() {
+  checkIfPublished() {
+    let actions = [i18n.rename(), i18n.remix(), i18n.share()];
+
+    this.props.projectData.publishedToClass ?
+    actions.push(i18n.removeFromClassGallery()) :
+    actions.push(i18n.publishToClassGallery());
+
+    this.props.projectData.publishedToPublic ?
+    actions.push(i18n.removeFromPublicGallery()) : actions.push(i18n.publishToPublicGallery());
+    return actions;
+  },
+
+  renderActionBox(actions) {
     if (this.state.actionsOpen) {
       return (
         <div style={styles.actionBox}>
-          <h5 style={styles.actionText}>
-            {i18n.rename()}
-          </h5>
-          <h5 style={styles.actionText}>
-            {i18n.remix()}
-          </h5>
-          <h5 style={styles.actionText}>
-            {i18n.share()}
-          </h5>
-          {this.classPublishAction()}
-          {this.publicPublishAction()}
+          {actions.map((action, index) => (
+            <h5 style={styles.actionText}>
+              {action}
+            </h5>
+          ))}
           <h5 style={styles.delete}>
             <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
             {i18n.deleteProject()}
@@ -188,28 +194,6 @@ const ProjectCard = React.createClass({
         </div>
       );
     }
-  },
-
-  classPublishAction() {
-    if (this.props.projectData.publishedToClass) {
-      return (
-        <h5 style={styles.actionText}> {i18n.removeFrom()} {i18n.classGallery()} </h5>
-      );
-    }
-    return (
-      <h5 style={styles.actionText}> {i18n.publishTo()} {i18n.classGallery()} </h5>
-    );
-  },
-
-  publicPublishAction() {
-    if (this.props.projectData.publishedToPublic) {
-      return (
-        <h5 style={styles.actionText}> {i18n.removeFrom()} {i18n.publicGallery()}</h5>
-      );
-    }
-    return (
-      <h5 style={styles.actionText}> {i18n.publishTo()} {i18n.publicGallery()} </h5>
-    );
   },
 
   render() {
@@ -235,7 +219,7 @@ const ProjectCard = React.createClass({
           </div>
         </div>
 
-        {this.renderActionBox()}
+        {this.renderActionBox(this.checkIfPublished())}
 
       </div>
     );
