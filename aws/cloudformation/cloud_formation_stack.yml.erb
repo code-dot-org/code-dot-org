@@ -115,7 +115,8 @@ Resources:
         MaxBatchSize: 20
         MinInstancesInService: !GetAtt [ASGCount, DesiredCapacity]
         MinSuccessfulInstancesPercent: 80
-        PauseTime: PT50M
+        PauseTime: PT30M
+        # Ref: https://aws.amazon.com/premiumsupport/knowledge-center/auto-scaling-group-rolling-updates/
         SuspendProcesses: [HealthCheck, ReplaceUnhealthy, AZRebalance, AlarmNotification, ScheduledActions]
         WaitOnResourceSignals: true
       AutoScalingScheduledAction:
