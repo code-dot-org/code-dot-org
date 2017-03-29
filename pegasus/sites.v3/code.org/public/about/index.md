@@ -2,6 +2,7 @@
 title: About Us
 nav: about_nav
 video_player: true
+theme: responsive
 ---
 
 <%

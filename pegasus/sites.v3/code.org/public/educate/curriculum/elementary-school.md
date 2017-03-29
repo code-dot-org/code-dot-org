@@ -2,6 +2,7 @@
 title: CS Fundamentals for grades K-5
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 [solid-block-header]

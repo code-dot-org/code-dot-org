@@ -2,6 +2,7 @@
 title: CS Curriculum for grades 9-12
 nav: educate_nav
 video_player: true
+theme: responsive 
 ---
 
 [solid-block-header]
@@ -84,8 +85,8 @@ Computer Science Fundamentals - Accelerated
 
 [/solid-block-header]
 
-For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a high school after-school program, 
-Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the 
+For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a high school after-school program,
+Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the
 [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students, but at an accelerated pace designed for students ages 10-18.
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
