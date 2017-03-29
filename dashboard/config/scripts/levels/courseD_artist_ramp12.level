@@ -47,7 +47,7 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant" limit="1" id="callMe">
+        <block type="draw_move_by_constant" limit="2" id="callMe">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
