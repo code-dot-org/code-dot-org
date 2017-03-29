@@ -1,5 +1,6 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
+import msg from '@cdo/locale';
 import {CIPHER, ALPHABET} from '../../constants';
 
 // Attempt to save projects every 30 seconds
@@ -538,7 +539,7 @@ var projects = module.exports = {
       return;
     }
 
-    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
+    $('.project_updated_at').text(msg.saving());
 
     if (typeof args[0] === 'function' || !sourceAndHtml) {
       // If no save data is provided, shift the arguments and ask for the
