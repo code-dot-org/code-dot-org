@@ -641,6 +641,7 @@ button {
   line-height: 20px;
   box-sizing: border-box;
   cursor: pointer;
+  margin-top: -6px;
   a:hover {
     text-decoration: none;
     background-color: #ffa400;

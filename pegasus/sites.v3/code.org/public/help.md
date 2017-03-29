@@ -1,6 +1,5 @@
 ---
 title: How to help
-theme: responsive
 ---
 
 # How to Help

@@ -157,7 +157,12 @@
 
    #privacy a {
     color: #ffa400;
+    opacity: 1;
     font-family: 'Gotham 5r', sans-serif;
+  }
+
+  #privacy a:hover {
+    opacity: 0.5;
   }
 
   #down {
