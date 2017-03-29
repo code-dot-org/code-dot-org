@@ -20,36 +20,6 @@ Given(/^I am an organizer with started and completed courses$/) do
   }
 end
 
-Given(/^I am a teacher who has just followed a survey link$/) do
-  random_teacher_name = "TestTeacher" + SecureRandom.hex[0..9]
-  require_rails_env
-
-  steps %Q{
-    And I create a teacher named "#{random_teacher_name}"
-    And I create a workshop for course "CS Fundamentals" attended by "#{random_teacher_name}" with 3 facilitators and end it
-  }
-
-  enrollment = Pd::Enrollment.find_by(first_name: random_teacher_name)
-  steps %Q{
-    And I am on "http://code.org/pd-workshop-survey/#{enrollment.code}"
-  }
-end
-
-Given(/^I am a teacher who has just followed a workshop certificate link$/) do
-  random_teacher_name = "TestTeacher" + SecureRandom.hex[0..9]
-  require_rails_env
-
-  steps %Q{
-    And I create a teacher named "#{random_teacher_name}"
-    And I create a workshop for course "CS Principles" attended by "#{random_teacher_name}" with 3 facilitators and end it
-  }
-
-  enrollment = Pd::Enrollment.find_by(first_name: random_teacher_name)
-  steps %Q{
-    And I am on "http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}"
-  }
-end
-
 Given(/^I am a facilitator with completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps %Q{
@@ -83,44 +53,18 @@ And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
   user.permission = UserPermission::WORKSHOP_ORGANIZER
 end
 
-def create_enrollment(workshop, name=nil)
-  first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
-  last_name = "Last - #{SecureRandom.hex}"
-  enrollment = Pd::Enrollment.create!(
-    first_name: first_name,
-    last_name: last_name,
-    email: "user@example.com",
-    school_info: SchoolInfo.find_or_create_by(
-      {
-        country: 'US',
-        school_type: 'other',
-        state: 'WA',
-        zip: '98101',
-        school_name: 'Code.org'
-      }
-    ),
-    pd_workshop_id: workshop.id
-  )
-  PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete
-end
-
-def create_facilitator(course)
-  facilitator = User.find_or_create_teacher(
-    {name: 'Facilitator', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'facilitator'
-  )
-  Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: course)
-
-  facilitator
-end
-
-And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) (people|facilitators)(.*)$/) do |course, role, name, number, number_type, post_create_actions|
-  # Organizer
+And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) people(.*)$/) do |course, role, name, number, post_create_actions|
   if role == 'organized'
     organizer = User.find_by(name: name)
+    facilitator = User.find_or_create_teacher(
+      {name: 'Facilitator', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'facilitator'
+    )
+    Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: course)
   else
     organizer = User.find_or_create_teacher(
       {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
     )
+    facilitator = User.find_by(name: name)
   end
 
   workshop = Pd::Workshop.create(
@@ -131,36 +75,31 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     location_name: 'Buffalo'
   )
 
+  workshop.facilitators << facilitator
+
   Pd::Session.create!(
     pd_workshop_id: workshop.id,
     start: DateTime.new(2016, 3, 15) + 3.hours,
     end: DateTime.new(2016, 3, 15) + 9.hours
   )
 
-  # Facilitators
-  if number_type == 'facilitators'
-    number.to_i.times do
-      workshop.facilitators << create_facilitator(course)
-    end
-  else
-    if role == 'facilitated'
-      facilitator = User.find_by(name: name)
-    else
-      facilitator = create_facilitator(course)
-    end
-
-    workshop.facilitators << facilitator
-  end
-
-  # Attendees
-  if number_type == 'people'
-    number.to_i.times do
-      create_enrollment(workshop)
-    end
-  else
-    if role == 'attended'
-      create_enrollment(workshop, name)
-    end
+  number.to_i.times do |x|
+    enrollment = Pd::Enrollment.create(
+      first_name: "First name - #{SecureRandom.hex}",
+      last_name: "Last name - #{SecureRandom.hex}",
+      email: "enrolled_teacher#{x}@foo.com",
+      school_info: SchoolInfo.find_or_create_by(
+        {
+          country: 'US',
+          school_type: 'other',
+          state: 'WA',
+          zip: '98101',
+          school_name: 'Code.org'
+        }
+      ),
+      pd_workshop_id: workshop.id
+    )
+    PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete
   end
 
   if post_create_actions.include?('and end it')
