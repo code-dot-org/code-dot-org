@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import _ from 'lodash';
 import clientState from './clientState';
-import StageProgress from './components/progress/stage_progress.jsx';
+import StageProgress from './components/progress/StageProgress.jsx';
 import CourseProgress from './components/progress/CourseProgress.jsx';
 import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
