@@ -8,23 +8,22 @@ const TAIL_WIDTH = 14;
 const TAIL_HEIGHT = 12;
 const BACKGROUND_COLOR = color.white;
 const BORDER_COLOR = color.light_gray;
+const STANDARD_PADDING = 20;
 
-const style = {
-  menu: {
-    position: 'absolute',
-    zIndex: 20,
-    border: `1px solid ${BORDER_COLOR}`,
-    backgroundColor: BACKGROUND_COLOR,
-    borderRadius: 2,
-    boxShadow: "3px 3px 3px gray",
-    marginTop: TAIL_HEIGHT,
-    textAlign: 'left',
-  },
+const menuStyle = {
+  position: 'absolute',
+  zIndex: 20,
+  border: `1px solid ${BORDER_COLOR}`,
+  backgroundColor: BACKGROUND_COLOR,
+  borderRadius: 2,
+  boxShadow: "3px 3px 3px gray",
+  marginTop: TAIL_HEIGHT,
+  textAlign: 'left',
 };
 const tailBorderStyle = {
   position: 'absolute',
   bottom: '100%',
-  left: '50%',
+  left: STANDARD_PADDING,
   marginLeft: -TAIL_WIDTH / 2,
   borderTopWidth: 0,
   borderBottomWidth: TAIL_HEIGHT,
@@ -45,12 +44,7 @@ class PopUpMenu extends Component {
       top: PropTypes.number.isRequired,
       left: PropTypes.number.isRequired,
     }).isRequired,
-    width: PropTypes.number,
     children: PropTypes.any,
-  };
-
-  static defaultProps = {
-    width: 220,
   };
 
   renderMenuItems() {
@@ -76,16 +70,15 @@ class PopUpMenu extends Component {
   }
 
   render() {
-    const {width, targetPoint} = this.props;
-    const menuStyle = {
-      ...style.menu,
+    const {targetPoint} = this.props;
+    const style = {
+      ...menuStyle,
       ...targetPoint,
-      width,
-      marginLeft: -width / 2,
+      marginLeft: -STANDARD_PADDING,
     };
 
     return (
-      <div style={menuStyle}>
+      <div style={style}>
         {this.renderMenuItems()}
         {/* These elements are used to draw the 'tail' with CSS */}
         <span style={tailBorderStyle}/>
@@ -106,8 +99,8 @@ class Item extends Component {
 
   static style = {
     color: color.dark_charcoal,
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: STANDARD_PADDING,
+    paddingRight: STANDARD_PADDING,
     cursor: 'pointer',
     ':hover': {
       backgroundColor: color.lightest_gray,
@@ -118,8 +111,8 @@ class Item extends Component {
     const {first, last, onClick, children} = this.props;
     const style = {
       ...Item.style,
-      paddingTop: first ? 20 : 10,
-      paddingBottom: last ? 20 : 10,
+      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 2,
+      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 2,
     };
     return (
       <div style={style} onClick={onClick}>
