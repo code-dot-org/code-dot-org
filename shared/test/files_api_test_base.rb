@@ -85,6 +85,10 @@ class FilesApiTestBase < Minitest::Test
     last_response.successful?
   end
 
+  def bad_request?
+    last_response.bad_request?
+  end
+
   def not_found?
     last_response.not_found?
   end

@@ -1,0 +1,257 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Mar 2017 22:20:48 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>D241EEFE082DC30F</RequestId><HostId>P295pItCtDfqhlD0vwTOUDoGac139Zy2CM41wJ0eYe7F79HwndxSWKBRNJBVhbFMPHKSCIOFhN0=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 17 Mar 2017 22:20:49 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Amz-Delete-Marker:
+      - 'true'
+      X-Amz-Version-Id:
+      - b57t71aa3tNT2bWNGNQZE9K1OnlqEasX
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Mar 2017 22:20:49 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/thumbnail.png</Key><RequestId>129F79E8281EB37B</RequestId><HostId>gVU+qzkkwd5uAVOR1i43GI4i2LgR5JfUrkzsCQmagvKmuR/Fl7g1k0/86vyg3gQiAhUYIjSPdWI=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 17 Mar 2017 22:20:49 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/?encoding-type=url&prefix=files_test/1/1/
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Mar 2017 22:20:50 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-files</Name><Prefix>files_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Fri, 17 Mar 2017 22:20:49 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: ASCII-8BIT
+      string: stub-dog-contents
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - kWDrpsI1o2X4dTenQrEVhg==
+      Content-Length:
+      - '17'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Mar 2017 22:20:51 GMT
+      X-Amz-Version-Id:
+      - E18hRE2dkVdRWVz72Wnz.sB7uNYc1TsR
+      Etag:
+      - '"9160eba6c235a365f87537a742b11586"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 17 Mar 2017 22:20:50 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Mar 2017 22:20:52 GMT
+      Last-Modified:
+      - Fri, 17 Mar 2017 22:20:51 GMT
+      Etag:
+      - '"9160eba6c235a365f87537a742b11586"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - E18hRE2dkVdRWVz72Wnz.sB7uNYc1TsR
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '17'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: stub-dog-contents
+    http_version: 
+  recorded_at: Fri, 17 Mar 2017 22:20:51 GMT
+- request:
+    method: delete
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 17 Mar 2017 22:20:52 GMT
+      X-Amz-Version-Id:
+      - j0UhtfJJ7PuFafzbIVKVcwMVHN7jCk7Q
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 17 Mar 2017 22:20:51 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/.metadata/thumbnail.png
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Amz-Delete-Marker:
+      - 'true'
+      X-Amz-Version-Id:
+      - j0UhtfJJ7PuFafzbIVKVcwMVHN7jCk7Q
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Mar 2017 22:20:51 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/.metadata/thumbnail.png</Key><RequestId>1C9488A58F950A53</RequestId><HostId>q+4kPkipR322QteJdWzSTbvwoydjpDXOo0HiAZldLbaMPonW2bXWdAbQVMnCf1gNpFpUHPZlEm0=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 17 Mar 2017 22:20:51 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Mar 2017 22:20:51 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>29C9390DCF56FB8E</RequestId><HostId>MLc3ewmZRBHCvw3itpc2weXYMQFiQ9iSQKyiSUzc0JbAkMkNaOljXM2aJD/L5vG57bZnuGmjsjk=</HostId></Error>
+    http_version: 
+  recorded_at: Fri, 17 Mar 2017 22:20:52 GMT
+recorded_with: VCR 3.0.3
