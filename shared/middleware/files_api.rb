@@ -717,8 +717,7 @@ class FilesApi < Sinatra::Base
     bad_request unless METADATA_FILENAMES.include? filename
     filename = "#{METADATA_PATH}/#{filename}"
 
-    owner_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    not_authorized unless owner_id == storage_id('user')
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     FileBucket.new.delete(encrypted_channel_id, filename)
     no_content
