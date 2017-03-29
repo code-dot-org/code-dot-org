@@ -530,8 +530,7 @@ FactoryGirl.define do
   factory :survey_result do
     user {create :teacher}
     kind 'Diversity2016'
-    properties {{survey2016_ethnicity_asian: "1"}}
-    properties {{survey2016_foodstamps: "3"}}
+    properties {{diversity_asian: "1", diversity_farm: "3"}}
   end
 
   factory :hint_view_request do
