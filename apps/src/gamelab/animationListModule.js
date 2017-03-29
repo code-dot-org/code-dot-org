@@ -231,11 +231,11 @@ function generateAnimationName(baseName, animationList) {
   // Match names with the form baseName_#
   for (let animation in animationList) {
     let animationName = animationList[animation].name;
-    if (animationName.startsWith(baseName)) {
+    if (animationName.lastIndexOf(baseName, 0) === 0) {
       animationName = animationName.replace(baseName, '');
       if (animationName[0] === '_') {
-        const breakUpString = animationName.split('_');
-        const number = parseInt(breakUpString.pop());
+        const brokenUpString = animationName.split('_');
+        const number = parseInt(brokenUpString.pop());
         unavailableNumbers.push(number);
       }
     }
