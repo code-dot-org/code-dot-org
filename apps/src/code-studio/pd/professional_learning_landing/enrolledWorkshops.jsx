@@ -5,20 +5,20 @@ import {Table, Button, Modal} from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshop_dashboard/workshopConstants';
 
-const WorkshopList = React.createClass({
+const EnrolledWorkshops = React.createClass({
   render() {
     return (
       <WorkshopTableLoader
         queryUrl="/api/v1/pd/workshops_user_enrolled_in"
         hideNoWorkshopsMessage={true}
       >
-        <UpcomingWorkshopsTable/>
+        <EnrolledWorkshopsTable/>
       </WorkshopTableLoader>
     );
   }
 });
 
-const UpcomingWorkshopsTable = React.createClass({
+const EnrolledWorkshopsTable = React.createClass({
   propTypes: {
     workshops: React.PropTypes.arrayOf(workshopShape)
   },
@@ -49,7 +49,11 @@ const UpcomingWorkshopsTable = React.createClass({
   },
 
   openCertificate(workshop) {
-
+    if (workshop.course === 'CS Fundamentals') {
+      window.open(`/pd/generate_csf_certificate/${workshop.enrollment_code}`);
+    } else {
+      console.log('normally would open other controller');
+    }
   },
 
   renderWorkshopActionButtons(workshop) {
@@ -57,7 +61,7 @@ const UpcomingWorkshopsTable = React.createClass({
       <div>
         {
           workshop.state === 'Not Started' && (
-            <Button>
+            <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
               Cancel enrollment
             </Button>
           )
@@ -73,25 +77,7 @@ const UpcomingWorkshopsTable = React.createClass({
           Workshop Details
         </Button>
       </div>
-    )
-    if (workshop.state === 'Not Started') {
-      return (
-        <div>
-          <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
-            Cancel enrollment
-          </Button>
-
-        </div>
-      );
-    } else if (workshop.state === 'Ended') {
-      return (
-        <div>
-          <Button>
-            Print Certificate
-          </Button>
-        </div>
-      )
-    }
+    );
   },
 
   renderWorkshopsTable() {
@@ -188,4 +174,4 @@ const UpcomingWorkshopsTable = React.createClass({
   }
 });
 
-export {WorkshopList, UpcomingWorkshopsTable};
+export {EnrolledWorkshops, EnrolledWorkshopsTable};
