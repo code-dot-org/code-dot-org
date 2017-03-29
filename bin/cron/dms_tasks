@@ -5,13 +5,25 @@
 # AWS DMS tasks in the us-east-1 region.
 # (https://console.aws.amazon.com/dms/home?region=us-east-1#tasks:)
 
+require 'pg'
+
 require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/chat_client'
 require 'cdo/only_one'
+require 'cdo/redshift'
 require 'cdo/slack'
 
 REPLICATION_TASK_TYPE = 'reload-target'.freeze
 SECONDS_PER_MINUTE = 60
+
+# A hash of AWS Redshift DB schemas to the groups allowed to access it.
+SCHEMA_PERMISSIONS = {
+  analysis: ['admin', 'reader', 'reader_pii'],
+  dashboard_production: ['admin', 'reader', 'reader_pii'],
+  dashboard_production_pii: ['admin', 'reader_pii'],
+  pegasus: ['admin', 'reader', 'reader_pii'],
+  pegasus_pii: ['admin', 'reader_pii']
+}.freeze
 
 # @param task_execution_time_sec [Integer] The number of seconds the task's
 #   previous execution took.
@@ -61,6 +73,13 @@ def main
     sleep(task_delay)
 
     ChatClient.message 'infra-dms', "Finished DMS task #{task_name}.", color: 'green'
+  end
+
+  SCHEMA_PERMISSIONS.each do |schema, groups|
+    sql = "GRANT SELECT ON ALL TABLES IN SCHEMA #{schema} TO " +
+      groups.map {|group| "GROUP #{group}"}.join(', ')
+    RedshiftClient.instance.exec(sql)
+    ChatClient.message 'infra-dms', "Reset permissions on schema #{schema}.", color: 'green'
   end
 
   # Update the "data" room summary in Slack.
