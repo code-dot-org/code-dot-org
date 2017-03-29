@@ -1,6 +1,7 @@
 import React from 'react';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
+import i18n from "@cdo/locale";
 
 const styles = {
   card: {
@@ -112,7 +113,7 @@ const ProjectCard = React.createClass({
     if (this.props.currentGallery === 'class'){
       return (
         <div style={styles.studentName}>
-          By: {this.props.projectData.studentName}
+          {i18n.by()}: {this.props.projectData.studentName}
         </div>
       );
     }
@@ -122,7 +123,7 @@ const ProjectCard = React.createClass({
     if (this.props.currentGallery === 'public'){
       return (
         <span style={styles.firstInitial}>
-          By: {this.props.projectData.studentName[0]}
+          {i18n.by()}: {this.props.projectData.studentName[0]}
         </span>
       );
     }
@@ -145,7 +146,7 @@ const ProjectCard = React.createClass({
     if (this.props.currentGallery === 'public') {
       return (
         <span style={styles.ageRange}>
-          Age: {this.checkStudentAge(studentAge)}+
+          {i18n.age()}: {this.checkStudentAge(studentAge)}+
         </span>
       );
     }
@@ -170,19 +171,19 @@ const ProjectCard = React.createClass({
       return (
         <div style={styles.actionBox}>
           <h5 style={styles.actionText}>
-            Rename
+            {i18n.rename()}
           </h5>
           <h5 style={styles.actionText}>
-            Remix
+            {i18n.remix()}
           </h5>
           <h5 style={styles.actionText}>
-            Share
+            {i18n.share()}
           </h5>
           {this.classPublishAction()}
           {this.publicPublishAction()}
           <h5 style={styles.delete}>
             <FontAwesome icon=" fa-times-circle" style={styles.xIcon}/>
-            Delete Project
+            {i18n.deleteProject()}
           </h5>
         </div>
       );
@@ -192,22 +193,22 @@ const ProjectCard = React.createClass({
   classPublishAction() {
     if (this.props.projectData.publishedToClass) {
       return (
-        <h5 style={styles.actionText}> Remove from Class Gallery</h5>
+        <h5 style={styles.actionText}> {i18n.removeFrom()} {i18n.classGallery()} </h5>
       );
     }
     return (
-      <h5 style={styles.actionText}> Publish to Class Gallery</h5>
+      <h5 style={styles.actionText}> {i18n.publishTo()} {i18n.classGallery()} </h5>
     );
   },
 
   publicPublishAction() {
     if (this.props.projectData.publishedToPublic) {
       return (
-        <h5 style={styles.actionText}> Remove from Public Gallery</h5>
+        <h5 style={styles.actionText}> {i18n.removeFrom()} {i18n.publicGallery()}</h5>
       );
     }
     return (
-      <h5 style={styles.actionText}> Publish to Public Gallery</h5>
+      <h5 style={styles.actionText}> {i18n.publishTo()} {i18n.publicGallery()} </h5>
     );
   },
 
@@ -230,7 +231,7 @@ const ProjectCard = React.createClass({
 
           <div style={styles.lastEdit}>
             {this.renderArrowIcon()}
-            Last edited: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
+            {i18n.lastEdited()}: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
           </div>
         </div>
 

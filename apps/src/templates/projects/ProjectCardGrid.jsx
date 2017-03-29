@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import i18n from "@cdo/locale";
 
 const styles = {
   grid: {
@@ -55,7 +56,7 @@ const ProjectCardGrid = React.createClass({
     if (galleryType === 'public') {
       return (
         <div style={styles.grid}>
-          <h2 style={styles.labHeading}> App Lab </h2>
+          <h2 style={styles.labHeading}> {i18n.projectTypeApplab()} </h2>
           {this.sortByType(projects).applab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
@@ -64,7 +65,7 @@ const ProjectCardGrid = React.createClass({
               />
             </div>
           ))}
-          <h2 style={styles.labHeading}> Game Lab </h2>
+          <h2 style={styles.labHeading}> {i18n.projectTypeGamelab()} </h2>
           {this.sortByType(projects).gamelab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
@@ -73,7 +74,7 @@ const ProjectCardGrid = React.createClass({
               />
             </div>
           ))}
-          <h2 style={styles.labHeading}> Artist </h2>
+          <h2 style={styles.labHeading}> {i18n.projectTypeArtist()} </h2>
           {this.sortByType(projects).artist.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
@@ -82,7 +83,7 @@ const ProjectCardGrid = React.createClass({
               />
             </div>
           ))}
-          <h2 style={styles.labHeading}> Play Lab </h2>
+          <h2 style={styles.labHeading}> {i18n.projectTypePlaylab()} </h2>
           {this.sortByType(projects).playlab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
@@ -91,7 +92,7 @@ const ProjectCardGrid = React.createClass({
               />
             </div>
           ))}
-          <h2 style={styles.labHeading}> Web Lab </h2>
+          <h2 style={styles.labHeading}> {i18n.projectTypeWeblab()} </h2>
           {this.sortByType(projects).weblab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
