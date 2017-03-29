@@ -63,6 +63,10 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
 var project = require('@cdo/apps/code-studio/initApp/project');
+import html2canvas from 'html2canvas';
+
+// Needed by html2canvas in SVGContainer.hasFabric to work on IE 11.
+window.html2canvas = html2canvas;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -291,6 +295,12 @@ Applab.setLevelHtml = function (html) {
   designMode.serializeToLevelHtml();
 };
 
+// Number of ticks after which to capture a thumbnail image of the play space.
+// 300 ticks equates to approximately 1-1.5 seconds in apps that become idle
+// after the first few ticks, or 10-15 seconds in apps that are drawing
+// constantly.
+const CAPTURE_TICK_COUNT = 300;
+
 Applab.onTick = function () {
   if (!Applab.running) {
     return;
@@ -301,11 +311,91 @@ Applab.onTick = function () {
 
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
+
+    if (Applab.tickCount === CAPTURE_TICK_COUNT) {
+      Applab.captureScreenshot();
+    }
   }
 
   if (checkFinished()) {
     Applab.onPuzzleFinish();
   }
+};
+
+// The width and height in pixels of the thumbnail image to capture.
+const THUMBNAIL_SIZE = 180;
+
+Applab.captureScreenshot = function () {
+  const visualization = document.getElementById('visualization');
+  if (!visualization) {
+    console.warn(`visualization not found. skipping screenshot.`);
+    return;
+  }
+
+  let didPinVizSize = false;
+
+  if (!visualization.style.maxWidth) {
+    // The user has not manually resized the visualization column with the
+    // grippy. In order for the screenshot to take correctly, we need to set the
+    // column size, and then remember to clear it later so that the layout
+    // becomes responsive again.
+    Applab.pinVisualizationSize();
+    didPinVizSize = true;
+  }
+
+  // Record a square image showing the top two thirds of the app window.
+  //
+  // Note that without the height and width constraints we will get somewhere
+  // between the full app window and just the top two thirds, depending on the
+  // current scale factor. In the future, if we want to capture the whole app
+  // window or a center-crop, tweaking or removing the width/height options will
+  // be insufficient. However the whole app window can be captured by
+  // capturing #visualizationColumn and then cropping appropriately.
+
+  const captureSize = $('#visualization').width();
+  const options = {
+    background: '#eee',
+    width: captureSize,
+    height: captureSize,
+  };
+
+  // html2canvas can take up to 2 seconds to capture the visualization contents
+  // onto the canvas.
+  html2canvas(visualization, options).then(canvas => {
+    if (didPinVizSize) {
+      Applab.clearVisualizationSize();
+    }
+
+    // Scale the image down so we don't send so much data over the network.
+    const thumbnailCanvas = document.createElement('canvas');
+    thumbnailCanvas.width = THUMBNAIL_SIZE;
+    thumbnailCanvas.height = THUMBNAIL_SIZE;
+
+    // Make sure any empty areas appear white.
+    const thumbnailContext = thumbnailCanvas.getContext('2d');
+    thumbnailContext.fillStyle = 'white';
+    thumbnailContext.fillRect(0, 0, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
+
+    thumbnailContext.drawImage(canvas, 0, 0, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
+
+    thumbnailCanvas.toBlob(pngBlob => {
+      project.saveThumbnail(pngBlob);
+    });
+  }).catch(e => {
+    console.warn(`html2canvas error: ${e}`);
+
+    if (didPinVizSize) {
+      Applab.clearVisualizationSize();
+    }
+  });
+};
+
+Applab.clearVisualizationSize = function () {
+  studioApp.clearVisualizationSize();
+};
+
+Applab.pinVisualizationSize = function () {
+  studioApp.resizeVisualization($('#visualization').width());
 };
 
 /**
