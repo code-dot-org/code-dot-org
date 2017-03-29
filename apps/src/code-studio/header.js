@@ -63,9 +63,9 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
       $('.' + item + '_free_play').show();
     });
   }
-  if (progressData.linesOfCodeText) {
-    $('.header_popup .header_text').text(progressData.linesOfCodeText);
-  }
+  // if (progressData.linesOfCodeText) {
+  //   $('.header_popup .header_text').text(progressData.linesOfCodeText);
+  // }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
   progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation, signedIn);
