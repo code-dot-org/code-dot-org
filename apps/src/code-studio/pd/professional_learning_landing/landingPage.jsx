@@ -6,7 +6,7 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
 import {TwoPartBanner} from './twoPartBanner';
-import {UpcomingWorkshops} from './upcomingWorkshops';
+import {WorkshopList} from './workshopList';
 import _ from 'lodash';
 
 const LandingPage = React.createClass({
@@ -90,7 +90,7 @@ const LandingPage = React.createClass({
     );
 
     const upcomingWorkshops = (
-      <UpcomingWorkshops
+      <WorkshopList
         key="upcomingWorkshops"
       />
     );
