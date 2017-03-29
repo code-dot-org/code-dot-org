@@ -183,7 +183,7 @@ const ProjectCard = React.createClass({
       return (
         <div style={styles.actionBox}>
           {actions.map((action, index) => (
-            <h5 style={styles.actionText}>
+            <h5 key={index} style={styles.actionText}>
               {action}
             </h5>
           ))}
@@ -197,25 +197,27 @@ const ProjectCard = React.createClass({
   },
 
   render() {
+    const { projectData } = this.props;
+
     return (
       <div>
         <div style={styles.card}>
           <img src={require('./placeholder.jpg')} style={styles.thumbnail} />
 
           <div style={styles.title}>
-            {this.props.projectData.projectName}
+            {projectData.projectName}
           </div>
 
           {this.renderStudentName()}
 
           <span>
             {this.renderFirstInitial()}
-            {this.renderStudentAgeRange(this.props.projectData.studentAge)}
+            {this.renderStudentAgeRange(projectData.studentAge)}
           </span>
 
           <div style={styles.lastEdit}>
             {this.renderArrowIcon()}
-            {i18n.lastEdited()}: {this.dateFormatter(this.props.projectData.updatedAt)} at {this.timeFormatter(this.props.projectData.updatedAt)}
+            {i18n.lastEdited()}: {this.dateFormatter(projectData.updatedAt)} at {this.timeFormatter(projectData.updatedAt)}
           </div>
         </div>
 
