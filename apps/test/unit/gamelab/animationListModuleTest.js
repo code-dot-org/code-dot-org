@@ -195,7 +195,7 @@ describe('animationListModule', function () {
       expect(store.getState().animationTab.selectedAnimation).to.equal('');
     });
 
-    it('should not initial with multiple animations of the same name', function () {
+    it('should not initialize with multiple animations of the same name', function () {
       let animationList = createAnimationList(3);
       animationList.propsByKey["animation_1"].name = 'cat';
       animationList.propsByKey["animation_3"].name = 'cat';
@@ -206,7 +206,7 @@ describe('animationListModule', function () {
       expect(store.getState().animationList.propsByKey["animation_3"].name).to.equal('cat_1');
     });
 
-    it('should not initial with multiple animations of the same name with non alpha characters', function () {
+    it('should not initialize with multiple animations of the same name with non alpha characters', function () {
       let animationList = createAnimationList(3);
       animationList.propsByKey["animation_1"].name = 'images (1).jpg_1';
       animationList.propsByKey["animation_2"].name = 'images (1).jpg_1';
