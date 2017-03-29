@@ -61,12 +61,16 @@ class PopUpMenu extends Component {
   }
     return (
       <div>
-        {Children.map(children, (child, index) =>
-          React.cloneElement(child, {
+        {Children.map(children, (child, index) => {
+          if (!child) {
+            return child;
+          }
+
+          return React.cloneElement(child, {
             first: index === 0,
             last: index === childCount - 1,
-          }))
-        }
+          });
+        })}
       </div>
     );
   }
