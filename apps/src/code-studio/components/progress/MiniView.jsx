@@ -26,6 +26,8 @@ const MiniView = React.createClass({
   }
 });
 
+export const UnconnectedMiniView = MiniView;
+
 export default connect(state => ({
   hasFullProgress: state.progress.hasFullProgress,
 }))(MiniView);
