@@ -33,6 +33,12 @@ class FirehoseClient
   def put_record(stream_name, data)
     data_with_common_values = add_common_values(data)
 
+    if [:development, :test].include? rack_env
+      CDO.log.info "Skipped sending record to #{stream_name}: "
+      CDO.log.info data
+      return
+    end
+
     # TODO(asher): Determine whether these should be cached and batched via
     # put_record_batch. See
     #   http://docs.aws.amazon.com/sdkforruby/api/Aws/Firehose/Client.html#put_record_batch-instance_method
