@@ -231,7 +231,7 @@ function generateAnimationName(baseName, animationList) {
   // Match names with the form baseName_#
   for (let animation in animationList) {
     let animationName = animationList[animation].name;
-    if (animationName.lastIndexOf(baseName, 0) === 0) {
+    if (animationName.substring(0, baseName.length) === baseName) {
       animationName = animationName.replace(baseName, '');
       if (animationName[0] === '_') {
         const brokenUpString = animationName.split('_');
