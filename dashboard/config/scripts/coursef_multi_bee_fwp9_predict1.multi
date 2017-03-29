@@ -1,0 +1,12 @@
+name 'courseF_multi_bee_fwp9_predict1'
+question 'What will happen when you click "Run"?'
+wrong 'The bee will not collect any nectar or honey.', feedback: 'Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.'
+right 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ' , feedback: 'Correct! The function is set to collect as many nectar or honey as is passed through a parameter.'
+wrong 'The bee will collect only one nectar or honey in each iteration of the loop. ', feedback: 'Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.'
+wrong 'I don\'t know.', feedback: 'Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
+
+markdown <<MARKDOWN
+Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue "edit" button on the function to see what is inside before answering the question below.
+
+
+MARKDOWN

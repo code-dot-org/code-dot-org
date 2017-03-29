@@ -4,7 +4,7 @@ title: Terms of Service
 
 # Terms of Service
 
-Date of Last Revision: November 17, 2016
+Date of Last Revision: March 1, 2017
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the web sites located at [http://code.org](http://code.org), [http://csedweek.org](http://csedweek.org), [http://computinginthecore.org](http://computinginthecore.org), [http://hourofcode.com](http://hourofcode.com), other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”), including the tutorial platform at [http://studio.code.org](http://studio.code.org) (“**Code Studio**”).
 
@@ -37,7 +37,7 @@ Code.org may permit you to register an account for the Services through certain 
 
 Your privacy is important to us. Code.org’s [Privacy Policy](http://code.org/privacy) explains how we treat your personal data and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information.
 
-If you are a student that uses an account registered for you by a Educator or otherwise connected to an Educator, you agree that Code.org may disclose your information to the Educators associated with your account. If you are a Educator, you agree not to share student information you receive from Code.org with anybody other than authorized agents of the classroom, school district, or other educational establishment you represent.  Code.org does not use student data for any targeted or behavioral advertising, profiling, or onward disclosure. 
+If you are a student that uses an account registered for you by a Educator or otherwise connected to an Educator, you agree that Code.org may disclose your information to the Educators associated with your account. If you are a Educator, you agree not to share student information you receive from Code.org with anybody other than authorized agents of the classroom, school district, or other educational establishment you represent.  Code.org does not use student data for any targeted or behavioral advertising, profiling, or onward disclosure.
 
 ### User Generated Content - Management; License Grant; Representations and Warranties
 
@@ -45,7 +45,7 @@ Code.org may now or in the future permit you and other users to post computer co
 
 Code.org has no obligation to monitor User Content or other materials. You are responsible for evaluating all User Content including for accuracy, completeness and reliability, and you bear all risk of using such User Content. Code.org will not be responsible for any damages that you may incur as a result of the submission or use of any User Content.
 
-Code.org may, but is not obligated to, monitor or review any Services where users communicate solely with each other, including but not limited to chat rooms, live chats, bulletin boards or other user forums, and the content of any such communications. You assume the risk of such communications, and Code.org has no liability related to the content or use of any such communications.
+Code.org may, but is not obligated to, monitor or review any Services where Educators communicate solely with each other, including but not limited to chat rooms, live chats, bulletin boards or other user forums, and the content of any such communications. You assume the risk of such communications, and Code.org has no liability related to the content or use of any such communications.
 
 Users may include links to third party websites in User Content as long as the content of such websites does not violate these Terms. Clicking on such links is at your sole risk. Code.org is not responsible for the availability or the content of linked websites, including the advertising, products or other materials thereon.
 
@@ -65,7 +65,7 @@ You may not do any of the following while accessing or using the Services: (i) a
 
 ### Your License to Use Code.org Videos, Tutorials, Data, and APIs
 
-Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org, (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
+Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS in their entirety, using the embedded video player provided, or by downloading the original video file IF a download link is provided, and with clear attribution to Code.org, (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
 
 The celebrities and video “cast“ members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
 
@@ -109,7 +109,7 @@ The Code.org store and Code.org support forums are operated by third parties. Pl
 
 ### Volunteer mentors
 
-Code.org encourages software engineers to volunteer as mentors in the classroom to assist teachers in computer science education. 
+Code.org encourages software engineers to volunteer as mentors in the classroom to assist teachers in computer science education.
 
 Code.org’s platform does not connect students directly to volunteers or mentors. Instead, Code.org provides Educators information about potential volunteers without any warranty, references, or background checks. If you are an Educator who chooses to ask for the assistance of a volunteer sourced via Code.org’s database, it is entirely your responsibility to thoroughly check references or perform the necessary background checks. Code.org provides no warranty or information other than the ability to contact a potential volunteer, and all liability in any use of volunteers rests only with you. Code.org does not guarantee the accuracy or completeness of any information provided by volunteers and we neither adopt nor endorse, nor are we responsible for, the accuracy or reliability of any opinion, advice, or statement made by any party other than Code.org. Under no circumstances is Code.org responsible for any loss or damage resulting from any person's reliance on information or other content posted on the Service or transmitted by others.
 

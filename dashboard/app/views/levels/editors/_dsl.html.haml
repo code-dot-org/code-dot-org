@@ -25,8 +25,7 @@
 .script_text
   = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 
-- if [ContractMatch, Match, Multi, TextMatch, External].include? @level.class
-
+- if @level.supports_markdown?
   - content_for(:head) do
     %script{src: minifiable_asset_path('js/levelbuilder_markdown.js')}
 

@@ -3,10 +3,13 @@ import $ from 'jquery';
 import * as api from './api';
 import * as dontMarshalApi from './dontMarshalApi';
 import consoleApi from '../consoleApi';
+import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import * as makerApi from '@cdo/apps/lib/kits/maker/api';
+import color from '../util/color';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import ChartApi from './ChartApi';
 import * as elementUtils from './designElements/elementUtils';
-import {setPropertyDropdown} from './setPropertyDropdown';
+import {setPropertyDropdown, setImageSelector} from './setPropertyDropdown';
 import {singleton as studioApp} from '../StudioApp';
 import * as applabConstants from './constants';
 
@@ -20,16 +23,18 @@ function chooseAsset(typeFilter, callback) {
   });
 }
 
-var COLOR_LIGHT_GREEN = '#D3E965';
-var COLOR_BLUE = '#19C3E1';
-var COLOR_RED = '#F78183';
-var COLOR_CYAN = '#4DD0E1';
-var COLOR_YELLOW = '#FFF176';
-
 var stringMethodPrefix = '[string].';
 var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
+
+// Configure shared APIs for App Lab
+// We wrap this because it runs before window.Applab exists
+function applabExecuteCmd(...args) {
+  Applab.executeCmd.call(Applab, ...args);
+}
+audioApi.injectExecuteCmd(applabExecuteCmd);
+makerApi.injectExecuteCmd(applabExecuteCmd);
 
 /**
  * Generate a list of screen ids for our setScreen dropdown
@@ -78,17 +83,20 @@ export var blocks = [
   {func: 'image', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
   {func: 'getImageURL', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("img") }, type: 'value' },
   {func: 'setImageURL', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 0: idDropdownWithSelector("img"), 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
-  {func: 'playSound', parent: api, category: 'UI controls', paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
+  {...audioApi.dropletConfig.playSound, category: 'UI controls'},
+  {...audioApi.dropletConfig.stopSound, category: 'UI controls'},
   {func: 'showElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'hideElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setPosition', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
-  {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
+  {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown(), 2: setImageSelector() } },
+  {func: 'getProperty', parent: api, category: 'UI controls', paletteParams: ['id','property'], params: ['"id"', '"width"'], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() }, type: 'value' },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'setScreen', parent: api, category: 'UI controls', paletteParams: ['screenId'], params: ['"screen1"'], dropdown: { 0: getScreenIds }},
+  {func: 'rgb', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r', 'g', 'b', 'a'], params: ["250", "0", "75", "0.5"], type: 'value' },
 
   {func: 'createCanvas', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 3 }, paletteParams: ['id','width','height'], params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT] },
   {func: 'setActiveCanvas', parent: api, category: 'Canvas', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("canvas") } },
@@ -96,8 +104,8 @@ export var blocks = [
   {func: 'circle', parent: api, category: 'Canvas', paletteParams: ['x','y','radius'], params: ["160", "240", "100"] },
   {func: 'rect', parent: api, category: 'Canvas', paletteParams: ['x','y','width','height'], params: ["80", "120", "160", "240"] },
   {func: 'setStrokeWidth', parent: api, category: 'Canvas', paletteParams: ['width'], params: ["3"] },
-  {func: 'setStrokeColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"'] } },
-  {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', '"rgb(255,255,0)"', '"rgba(255,255,0,0.5)"', '"#FFFF00"'] } },
+  {func: 'setStrokeColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'] } },
+  {func: 'setFillColor', parent: api, category: 'Canvas', paletteParams: ['color'], params: ['"yellow"'], dropdown: { 0: ['"yellow"', 'rgb(255,255,0)', 'rgb(255,255,0,0.5)', '"#FFFF00"'] } },
   // drawImage has been deprecated in favor of drawImageURL
   {func: 'drawImage', parent: api, category: 'Canvas', paletteParams: ['id','x','y'], params: ['"id"', "0", "0"], dropdown: { 0: idDropdownWithSelector("img") }, noAutocomplete: true },
   {func: 'drawImageURL', parent: api, category: 'Canvas', paramButtons: { minArgs: 1, maxArgs: 6 }, paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'] },
@@ -144,7 +152,7 @@ export var blocks = [
   {func: 'penUp', parent: api, category: 'Turtle' },
   {func: 'penDown', parent: api, category: 'Turtle' },
   {func: 'penWidth', parent: api, category: 'Turtle', paletteParams: ['width'], params: ["3"], dropdown: { 0: ["1", "3", "5"] } },
-  {func: 'penColor', parent: api, category: 'Turtle', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', '"rgb(255,0,0)"', '"rgba(255,0,0,0.5)"', '"#FF0000"'] } },
+  {func: 'penColor', parent: api, category: 'Turtle', paletteParams: ['color'], params: ['"red"'], dropdown: { 0: ['"red"', 'rgb(255,0,0)', 'rgb(255,0,0,0.5)', '"#FF0000"'] } },
   {func: 'penRGB', parent: api, category: 'Turtle', paramButtons: { minArgs: 3, maxArgs: 4 }, paletteParams: ['r','g','b'], params: ["120", "180", "200"] },
   {func: 'show', parent: api, category: 'Turtle' },
   {func: 'hide', parent: api, category: 'Turtle' },
@@ -154,6 +162,8 @@ export var blocks = [
   {func: 'clearTimeout', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
   {func: 'setInterval', parent: api, category: 'Control', type: 'either', paletteParams: ['callback','ms'], params: ["function() {\n  \n}", "1000"] },
   {func: 'clearInterval', parent: api, category: 'Control', paletteParams: ['__'], params: ["__"] },
+  {func: 'timedLoop', parent: api, category: 'Control', paletteParams: ['ms', 'callback'], params: ['1000', 'function() {\n  \n}']},
+  {func: 'stopTimedLoop', parent: api, category: 'Control', paramButtons: { minArgs: 0, maxArgs: 1 }},
 
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'declareAssign_str_hello_world', block: 'var str = "Hello World";', category: 'Variables', noAutocomplete: true },
@@ -174,39 +184,39 @@ export var blocks = [
   {func: 'innerHTML', parent: api, category: 'Advanced', params: ['"id"', '"html"'] },
   {func: 'setParent', parent: api, category: 'Advanced', params: ['"id"', '"parentId"'] },
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
-  {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value' },
-  {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"]},
+  {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
+  {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
 ];
 
-export var categories = {
+export const categories = {
   'UI controls': {
     id: 'uicontrols',
     color: 'yellow',
-    rgb: COLOR_YELLOW,
+    rgb: color.droplet_yellow,
     blocks: []
   },
   Canvas: {
     id: 'canvas',
     color: 'red',
-    rgb: COLOR_RED,
+    rgb: color.droplet_red,
     blocks: []
   },
   Data: {
     id: 'data',
     color: 'lightgreen',
-    rgb: COLOR_LIGHT_GREEN,
+    rgb: color.droplet_light_green,
     blocks: []
   },
   Turtle: {
     id: 'turtle',
     color: 'cyan',
-    rgb: COLOR_CYAN,
+    rgb: color.droplet_cyan,
     blocks: []
   },
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: COLOR_BLUE,
+    rgb: color.droplet_bright_blue,
     blocks: []
   },
 };

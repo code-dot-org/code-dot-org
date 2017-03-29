@@ -45,6 +45,11 @@ import Scrat from './scrat';
 import Farmer from './farmer';
 import Harvester from './harvester';
 import Planter from './planter';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -141,7 +146,7 @@ var initWallMap = function () {
 /**
  * PIDs of animation tasks currently executing.
  */
-var timeoutList = require('../timeoutList');
+import * as timeoutList from '../lib/util/timeoutList';
 
 function drawMap() {
   var svg = document.getElementById('svgMaze');
@@ -325,7 +330,7 @@ function drawMap() {
       idStr: 'move',
       pegmanImage: skin.movePegmanAnimation,
       numColPegman: 4,
-      numRowPegman: 9
+      numRowPegman: (skin.movePegmanAnimationFrameNumber || 9)
     });
   }
 }
@@ -772,10 +777,13 @@ var displayFeedback = function () {
     response: Maze.response,
     level: level
   };
-  // If there was an app-specific error
-  // add it to the options passed to studioApp.displayFeedback().
+
   let message;
-  if (Maze.subtype.hasMessage(Maze.testResults)) {
+  if (studioApp.hasContainedLevels) {
+    message = getContainedLevelResultInfo().feedback;
+  } else if (Maze.subtype.hasMessage(Maze.testResults)) {
+    // If there was an app-specific error
+    // add it to the options passed to studioApp.displayFeedback().
     message = Maze.subtype.getMessage(Maze.executionInfo.terminationValue());
   }
 
@@ -810,6 +818,15 @@ Maze.prepareForExecution = function () {
   Maze.waitingForReport = false;
   Maze.animating_ = false;
   Maze.response = null;
+};
+
+Maze.isPreAnimationFailure = function (testResult) {
+  return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+    testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
+    testResult === TestResults.EXAMPLE_FAILED ||
+    testResult === TestResults.EMPTY_BLOCK_FAIL ||
+    testResult === TestResults.EMPTY_FUNCTION_NAME;
 };
 
 /**
@@ -849,7 +866,8 @@ Maze.execute = function (stepMode) {
   try {
     // don't bother running code if we're just editting required blocks. all
     // we care about is the contents of report.
-    var runCode = !level.edit_blocks;
+    var initialTestResults = studioApp.getTestResults(false);
+    var runCode = !Maze.isPreAnimationFailure(initialTestResults) && !level.edit_blocks;
 
     if (runCode) {
       if (Maze.map.hasMultiplePossibleGrids()) {
@@ -970,15 +988,22 @@ Maze.execute = function (stepMode) {
 
   Maze.waitingForReport = true;
 
-  // Report result to server.
-  studioApp.report({
-    app: 'maze',
-    level: level.id,
-    result: Maze.result === ResultType.SUCCESS,
-    testResult: Maze.testResults,
-    program: encodeURIComponent(program),
-    onComplete: Maze.onReportComplete
-  });
+  if (studioApp.hasContainedLevels && !level.edit_blocks) {
+    // Contained levels post progress in a special way, and always pass
+    postContainedLevelAttempt(studioApp);
+    Maze.testResults = TestResults.ALL_PASS;
+    runAfterPostContainedLevel(Maze.onReportComplete);
+  } else {
+    // Report result to server.
+    studioApp.report({
+      app: 'maze',
+      level: level.id,
+      result: Maze.result === ResultType.SUCCESS,
+      testResult: Maze.testResults,
+      program: encodeURIComponent(program),
+      onComplete: Maze.onReportComplete
+    });
+  }
 
   // Maze. now contains a transcript of all the user's actions.
   // Reset the maze and animate the transcript.

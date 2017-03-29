@@ -19,10 +19,9 @@ Want to submit your own self-guided game, teacher-led lesson, or activity that e
 
 After reading the guidelines below, feel free to submit your activity, lesson plan, tutorial, or video here: 
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki).**
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2017 will not be listed for 2017's Hour of Code.)**
 
-
-**NEW for 2016:**
+A few tips:
 
 1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we will now list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually.
 

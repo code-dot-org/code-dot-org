@@ -37,6 +37,7 @@
         NetSim: Internett Simulator
         Custom: Kunstner
         CustomStudio: Spill-lab
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronse
@@ -195,8 +196,8 @@
           så bruk "teller"-blokken. Tips: den finnes i kategorien Variabler.'
         turtle_2_7: Her er et program som tegner en spiral, men blokkene er deaktivert
           slik at de ikke kan kjøre. Lag et nytt program som bruker en "tell med"
-          blokk (i kategorien løkker) og en "gjenta med teller" blokk (i kategorien
-          variabler) for å tegne den samme spiralen.
+          blokk (i kategorien løkker) og en "teller" blokk (i kategorien variabler)
+          for å tegne den samme spiralen.
         turtle_2_7_5: Det finnes en ny funksjon for "tegn en snømann" (i kategorien
           funksjoner). Tegn to snømenn, med høyde 250 og 100.
         turtle_2_8: Denne er litt vanskelig. Bruk "tegn en snømann"-funksjonen og
@@ -383,8 +384,8 @@
         flappy_6: Se om du fortsatt kan få poeng hvis Flappy flakser mer eller mindre.
         flappy_7: Prøv å endre scenen ved å feste en annen blokk til "når den kjører"-blokken.
         flappy_8: Du kan angi visuelle effekter når som helst, ikke bare når spillet
-          starter. Prøv å angi en tilfeldig scene når andre hendelser skjer, for eksempel
-          når du passerer en hindring.
+          starter. Prøv å sette en tilfeldig scene når andre hendelser skjer, for
+          eksempel når du passerer en hindring.
         flappy_9: For å blande ting, når du treffer et hinder, i stedet for å avslutte
           spillet Prøv innstillingen score tilbake til 0.
         flappy_11: Lag ditt eget Flappy-spill! Du kan endre alle bilder og alle regler,
@@ -562,9 +563,9 @@
           legge blokker til hendelsen "når figur berører" å gjøre det slik at du både
           spiller av en lyd og scorer poeng når Banana Joe og Anton kolliderer?  Trykk
           Kjør spillet.
-        studio_gumball_warn_food_fight: Darwin rømte nettopp fra en mat kamp! Endre
-          bakgrunnen til "karakterer" og angi hastigheten til Darwin til rask. Trykk
-          Kjør og flytte ham til Penny for å advare henne.
+        studio_gumball_warn_food_fight: Darwin rømte nettopp fra en mat-kamp! Endre
+          bakgrunnen til "figur" og sett hastigheten til Darwin til rask. Trykk Kjør
+          og flytt ham bort til Penny for å advare henne.
         studio_gumball_join_food_fight: Delta i mat kampen! Bruk kommandoen "figur
           kast element høyre" for at Banana Joe (figur 1) skal kaste mat på Anton
           (figur 2)! Angi humøret til Anton til sint når han blir truffet.
@@ -708,11 +709,13 @@
         infinity_playlab_intro: Spill-Lab – introduksjon
         infinity_playlab_events: Spill-Lab – hendelser
         infinity_playlab_repeat_forever: Spill-Lab Gjenta for alltid
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_velocity: Velocity
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -723,6 +726,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -861,10 +867,10 @@
         playlab_add_move: Legg til "flytt"-blokker i denne gjenta-blokken
         playlab_add_score: Legg til poeng-blokker her
         playlab_add_blocks: Legg til dine blokker her
-        set_variable: Dra en nummer-blokk hit for å angi variabelen
+        set_variable: Dra en tall-blokk hit for å angi variabelverdien
         place_variable: Dra variabelen din inn i denne blokken
-        bee_for_loop: Dra det største nummeret av nektar som du ønsker at bien skal
-          samle hit
+        bee_for_loop: Dra det største antallet nektar som du ønsker at bien skal samle
+          hit
         place_counter_variable: Dra teller-variabelen din inn i denne blokken
         function_editor_draw_square: Dette er din funksjonsdefinisjon. Disse blokkene
           kjører hver gang du bruker "tegn en firkant"-blokken

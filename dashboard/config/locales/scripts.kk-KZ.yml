@@ -21,7 +21,7 @@
             Getting Loopy: "Ілмектерді үйрену"
             Going Places Safely: "Қауіпсіз Жерді Табу"
             Happy Maps: "Көңілді Карталар"
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             'Maze: Debugging': "Лабиринт: Бағдарламаны ретке келтіру"
             'Maze: Loops': "Лабиринт: Ілмектер"
             'Maze: Sequence': "Лабиринт: Тізбектер"
@@ -38,7 +38,7 @@
             ойындар немесе оқиға жасауды үйренеді. 2-5 сынып оқушыларына пайдалануға
             кеңес береміз."
           description_short: "Жазу танитын оқушылар Курс 2 - ден бастаңыздар."
-          description_audience: 6-18 жастағылар үшін
+          description_audience: "Жас 6-дан бастап (оқу міндетті)"
           stage:
             'Artist: Debugging': "Кейіпкер: Бағдарламаны ретке келтіру"
             'Artist: Loops': "Кейіпкер: Ілмектер"
@@ -122,11 +122,12 @@
             Artist: "Кейіпкер"
         course4:
           title: "Курс 4"
-          description: "Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған. Оқушылар
-            алдыңғы сабақтарда қаралған бағдарламалау тақырыптарын тереңдетіп оқып,
-            аса күрделі мәселерді икемді тәсілдермен шешуді үйренеді. Курс соңында
-            оқушылар достарымен бөлісе алатын интерактивті оқиғалар мен ойындар жасайды.
-            4-8 сынып оқушыларына пайдалануға кеңес береміз."
+          description: "Курс 4 Курс 2-ні және 3-ті бітірген оқушыларға арналған. \nОқушылар
+            әр проблеманы шешу үшін бірнеше ұғымдар біріктіріп, жоғары қиындық басқатырғыштарды
+            шешуді үйренеді.\nОсы курс оқушылар, олардың параметрлері бар ілмектер
+            мен функцияларын, соның ішінде кейбір дағдыларын, көрсетуге мүмкіндік
+            бағдарламаларды жасайды, аяқталды.\n4-8 сынып оқушыларына пайдалануға
+            кеңес береміз."
           description_short: "Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған."
           description_audience: 10-18 жастағылар үшін
           stage:
@@ -322,9 +323,10 @@
           description_short: "Шаралар"
           stage:
             Bounce: "Секіру"
-            Calc: Calc
+            Calc: "Қақ"
             Eval: Eval
-            Studio: Studio
+            Studio: "Студия"
+          description_audience: ''
         flappy:
           title: "Қанат Қағу Коды"
           description: "Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің
@@ -332,6 +334,7 @@
           description_short: Flappy ойынын 10 минут ішінде жазыңыз!
           stage:
             Flappy Code: "Қанат Қағу Коды"
+          description_audience: ''
         jigsaw:
           title: "Бас қатырғыш"
           description: "Біздің Jigsaw сабағымызды байқап көріңіз"
@@ -360,14 +363,14 @@
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: "Басқатырғыштар"
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: "Басқатырғыштар"
           description_audience: ''
         cspunit1:
           title: CSP Unit 1 - Digital Information
@@ -759,11 +762,14 @@
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: "Студия"
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
+            Standalone video: Standalone video
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -1181,6 +1187,7 @@
             Thinking About Implementation: Thinking About Implementation
             Welcome!: "Қош келдіңіз!"
             Wrap-Up: "Аяқтау"
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1336,6 +1343,7 @@
             Assessing Computer Models: Assessing Computer Models
             Welcome!: "Қош келдіңіз!"
             Wrap-Up: "Аяқтау"
+          description_audience: ''
         cspunit5:
           title: CSP Unit 5 - Performance Tasks
           description: This unit covers the preparation and completion of the Explore
@@ -1651,6 +1659,22 @@
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If"
+              Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice
+              AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment
+              5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
@@ -1662,6 +1686,15 @@
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the
+              Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your
+              AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2027,7 +2060,7 @@
             Events: "Шаралар"
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             Loops: "Ілмек"
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -2071,7 +2104,7 @@
             Debugging: Debugging
             Events: "Шаралар"
             Events Unplugged: Events Unplugged
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             Loops: "Ілмек"
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -2432,14 +2465,15 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: "Секіру"
-          title: Basketball
+          title: "Баскетбол ойынды жасау"
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: "Баскетбол ойынды жасау"
+          description: "Баскетбол ойынды жасау"
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2485,6 +2519,8 @@
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2505,6 +2541,7 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2531,6 +2568,10 @@
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2540,10 +2581,10 @@
             Minecraft Hour of Code Designer: Minecraft кодтау сағатының дизайнеры
           title: Minecraft кодтау сағатының дизайнеры
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version
-            of Minecraft.
+          description_short: "Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
+            сенің өз Minecraft ойынының нұсқасында."
+          description: "Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
+            сенің өз Minecraft ойынының нұсқасында."
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2628,6 +2669,8 @@
             Your Digital Footprint: "Сіздің сандық іздеріңіз"
             Building a Foundation: "Ғимарат Салу"
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2654,6 +2697,8 @@
             Digital Citizenship: "Сандық Азаматтық"
             'Unplugged: Binary': 'Kомпьютерсіз: Екілік жүйе'
             Artist Binary: "Кейіпкер Екілік жүйе"
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: "Кіріккен Циклдер"
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2678,6 +2723,7 @@
             Private and Personal Information: Private and Personal Information
             Internet: "Ғаламтор"
             Crowdsourcing: "Кроудсорсинг"
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2739,11 +2785,11 @@
             to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: "Спорттар"
+          title: "Спорттар"
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: "Өзіңнің жеке спорт ойынын жаз"
+          description: "Өзіңнің жеке спорт ойынын жаз"
         2016_sciencePD-phase2b:
           stage:
             Welcome!: "Қош келдіңіз!"
@@ -2791,7 +2837,146 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 3 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS
+              (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real
+              World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real
+              World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons
+              5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: "Қош келдіңіз!"
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: "Аяқтау"
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: "Қош келдіңіз!"
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: "Аяқтау"
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: "Қош келдіңіз!"
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: "Аяқтау"
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage: []
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: 'COMING SOON: In mid-February, this page will host the CSP
+            Unit 5 Professional Learning Course. '
+        csp6-support:
+          stage: []
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of
+            resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and
+            use data in your apps. The following material provides an overview of
+            how these tools work, a sampling of example projects that can be built
+            using these tools, and a space in which to build and submit a final project.
+        unit6-csd-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+            Foo: Foo
+            Lists: "Тізімдер"
+            Lights: Lights
+          title: Draft Unit 6
           description_audience: ''
           description_short: ''
           description: ''

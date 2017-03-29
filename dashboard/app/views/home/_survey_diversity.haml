@@ -1,0 +1,95 @@
+- survey_url = "https://docs.google.com/forms/d/e/1FAIpQLSd7MppqXJi4FpURELDH3RyMG6PgevBVPaH373K0h-FSI_3FUg/viewform?usp=pp_url&entry.796977513&entry.999252886&entry.692842963=__other_option__&entry.692842963.other_option_response=#{current_user.id}"
+
+#diversity_survey
+  #surveythanks{style: "display: none; "}
+    Thank you for telling us about your students!
+    %br/
+    %br/
+    We're making changes to improve Code Studio. We'd love your feedback on how we can make it work best for your classroom.
+    %br/
+    %br/
+    %a{href: survey_url, target: "_blank"}
+      %button.btn-primary
+        Go to survey
+
+  #surveybody
+    #headingarea
+      %h1 Optional: Help us track our progress toward improving diversity in computer science
+      .subtext
+        To protect your students’ privacy, we will not ask students younger than 13 for this information. Therefore, this information will not be linked to their specific accounts.
+        (See our
+        = succeed '.)' do
+          %a#privacylink{href: CDO.code_org_url('/privacy'), target: "_blank"} privacy policy
+
+    = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)"}) do |f|
+      .survey_left
+        %ol
+          %li
+            Of your students using Code.org's courses, how many are
+        .dots
+          - SurveyResult::ETHNICITIES.each do |key, value|
+            %input#ethnicity_input{maxlength: "3", name: "survey[diversity_#{key}]", placeholder: "0"}
+            = value
+            %br/
+      .survey_right
+
+        %ol{start: 2}
+          %li
+            What is the percentage of students with free and reduced meals (FARMs) at your school?
+            .subtext
+              Only answer this if you're using Code Studio during school hours.
+        .dots
+          - (0..9).each do |index|
+            - if index.between?(0,7)
+              - value = index * 10
+              - max_value = value == 70 ? 100 : (value+9)
+              - text = "#{value}-#{max_value}%"
+            - elsif index == 8
+              - text = "My school has a Title I designation, but I’m not sure what our rate of Free and Reduced lunch is."
+            - else
+              - text = "Other"
+            .dot
+              %input{id: "radio_#{index}", type: "radio", name: "survey[diversity_farm]", value: index}
+              %label{for: "radio_#{index}"}= text
+
+      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2017}
+
+      #submit
+        %button.btn-primary#submitSurvey{type: "submit"} Submit
+        %span#noanswer{onclick: "return submitSurvey(false)"} Prefer not to answer
+%br/
+
+:javascript
+
+  function submitSurvey(submittedValue)
+  {
+    // make sure each ethnicity is a positive integer
+    $("#ethnicity_input").each(function(index) {
+      $(this).val($(this).val().replace(/[^0-9]/g, ''));
+    });
+
+    if (submittedValue)
+    {
+      $("#surveybody").hide();
+      $("#surveythanks").fadeIn();
+    }
+    else
+    {
+      $("#survey")[0].reset();
+      $("#diversity_survey").hide();
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: $("#survey").attr('action'),
+      data: $("#survey").serialize(),
+      dataType: 'json'
+    });
+
+    // scroll to top of page so that user sees "thank you" even if they had scrolled down
+    // to fill out survey.
+
+    $('html,body').animate({scrollTop:0}, 100);
+
+    return false;
+  }

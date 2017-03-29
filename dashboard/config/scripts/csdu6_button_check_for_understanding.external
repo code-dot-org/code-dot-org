@@ -1,0 +1,22 @@
+name 'CSDU6 - button check for understanding'
+display_name 'Check for Understanding'
+markdown <<MARKDOWN
+# Stop
+
+Demonstrate your understanding of `onBoardEvent()` to your teacher before moving on
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+# Check for Understanding
+
+Ask the student to demonstrate how to set up a new board event handler. Specific questions to ask:
+
+* Why doesn't the first parameter have quotation marks around it?
+	* Unlike `onEvent()`, we aren't using an ID String to identify which design element to watch, we are specifying which object on the board (represented by a variable) to watch
+* What do the different events mean?
+	* "press" means the button has been pressed down and then released back up
+    * "down" means the button has been pressed down
+    * "up" means the button has been released back up
+* Which button is `buttonL` and which is `buttonR`
+	* With the USB cable at the top, `buttonL` is on the left and `buttonR` is on the right
+MARKDOWN

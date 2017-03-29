@@ -15,6 +15,18 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 * Pegasus directory
   * Ruby tests - Test server side logic, caching, graphics, etc.
 
+### When tests are run
+
+<!---- Can use http://markdowntable.com/ for reformatting help --->
+
+|                        | ruby lint                 | scss lint                         | haml lint          | JavaScript eslint (everywhere) | apps mochaTest     | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared unit tests  |
+|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
+| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `*.js`                 |                    |                      |                    |                         |                    |                    |                    |
+| circle CI (via github) |                           |                                   |                    | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
+| hound CI (via github)  | :white_check_mark:        | :white_check_mark:                | :white_check_mark: |                                |                    |                      |                    |                         |                    |                    |                    |
+| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
+| test build             |                           |                                   |                    |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
 ## Running tests
 
 ### Using CircleCI
@@ -63,12 +75,18 @@ To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 See [the apps readme](./apps/README.md) for more details.
 
 ### Dashboard Tests
-`cd dashboard && rake test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
+`cd dashboard && bundle exec rails test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
 
-If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, you can try running `RAILS_ENV=test rake db:reset db:migrate seed:all` to recreate the db.
+If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
+
+1. `rake seed:secret_pictures seed:secret_words` to seed the missing data, or
+
+2. `RAILS_ENV=test rake db:reset db:setup_or_migrate seed:secret_pictures seed:secret_words` to recreate your local dashboard test db and reseed the data.
 
 If you just want to run a single file of tests, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb`
+or
+`bundle exec rails test ./path/to/your/test.rb`
 
 To run a specific unit test, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb --name your_amazing_test_name`
@@ -80,9 +98,11 @@ Or you can just use this shortcut (after you've installed chromedriver):
 `rake test:ui feature=dashboard/test/ui/features/sometest.feature`
 
 ### Pegasus Tests
-`cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~10 seconds to run.
+`cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
 
-If you get a database complaint like missing pegasus_test table, try running `RAILS_ENV=test bundle exec rake install:pegasus`
+Pegasus tests depend on the `pegasus_test` database.  If you have database-related errors, you can recreate and reseed the test database with `RAILS_ENV=test rake test:reset_dependencies`.  This will take about four minutes.
+
+Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `pdftk` and `enscript` installed.
 
 ###Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.

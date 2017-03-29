@@ -102,6 +102,12 @@
       plăcut Hour of Code și vreți să mergeți mai departe, puteți alege o parolă pentru
       a crea un cont Code Studio și pentru a vă înrola elevii pentru studiu folosind
       <a href="https://code.org/educate">cursuri mai lungi</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Consultă ghidul educatorului
     title: "Înregistrați-vă pentru Code.org"
     school_name: Numele şcolii (opţional)
@@ -154,6 +160,8 @@
     login: Loghează-te
     invalid_login: Logare invalidă, vă rugam să reîncercați
     pair_programming: Am un partener la calculatorul meu
+    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
+      target='_blank'>here</a>.
   password:
     reset_form:
       title: Ai uitat parola?
@@ -365,6 +373,10 @@
     delete_text_teacher_note: 'Atenție: ștergerea contului tău nu implică ștergerea
       conturilor elevilor tăi.'
     delete_confirm: Ești sigur ca vrei să-ți ștergi contul?
+    deleted_user: utilizator şters
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
   user_level:
     completed: Finalizat
     tried: "Încercat"
@@ -440,6 +452,7 @@
     announcement_learn_more_button: Află mai mult
     announcement_try_now_button: "Încearcă acum"
     announcement_host_an_hour_button: Organizeaza o ora
+    announcement_watch_video_button: Urmăriţi videoclipul
     announcement_petition: Ca profesor, sunteți liderul miscarii pentru a oferi fiecarui
       student din fiecare şcoală oportunitatea de a învăţa informatică. Acum, este
       timpul să lăsaţi reprezentanţii dumneavoastră sa auda de la dumneavoastra. În
@@ -447,6 +460,7 @@
       mari companii din America s-au alăturat într-o scrisoare deschisă catre Congresul
       SUA pentru a finanta calculatorul de stiinta si educaţie k-12.
     announcement_petition_button: Adaugă-ți numele
+    announcement_go_beyond_button: Go beyond
     announcement_all: Fii la curent cu noutățile si actualizarile de pe blogul cadrelor
       noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea
       anunturile vechi.</a>
@@ -455,19 +469,40 @@
       decembrie. Noi ne bzam pe tine pentru a ne ajuta sa ajungem la mai multi elevi
       decat pana acum. <a href='%{signup_url}' target='_blank'> Inregistreaza-ti evenimentul
       Hour of Code</a> si indeamna si alti profesori sa realizeze o Ora de Programare.
-    announcement_hoc_scaling: 'ALERTA pentru cursul 1-4 şi accelerator curs profesori:
-      datorită traficului de milioane de studenţi ce fac o oră de programare, <b>code
-      Studio nu va salva sau raporta progresele înregistrate pe aceste cursuri din
-      3-11 decembrie</b>. Vă recomandăm să faceti o activitate oră de cprogramare
-      cu clasa dvs. pentru a sărbători ora de programare in săptămâna educaţiei Computer
-      Science. În timp ce propriile noastre tutoriale ora de programare, de asemenea,
-      nu va salva progresul acelei săptămâni, studenţii pot face tutoriale complete
-      şi câştiga un certificat.'
     announcement_mc_launch: Unul din tutorialele noastre cele mai populare acum are
       o continuare! Minecraft Designer permite studenţilor sa faca regulile din lumea
       Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o împărtăşească
       cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest tutorial cu
       clasa ta la Hour of Code.
+    announcement_how_code_studio: Nu aveţi nevoie de nici o experienţă pentru a începe
+      predarea informaticii în clasa dvs. Code.org oferă curriculum, planuri de lecţie,
+      programe de învățare profesionale de înaltă calitate şi tone de instrumente
+      excelente pentru toate nivelurile de clasă&mdash;toate cele necesare, toate
+      gratuit.Vă întrebați de unde să începeți? Descărcați <a href='%{video_download_url}'>acest
+      video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
+    announcement_teacher_recruitment: Teachers like you are leading the computer science
+      education movement. You can participate in high-quality K-12th grade professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Take the lead on computer science in your school, and apply for professional
+      learning.
+    announcement_student_privacy: At Code.org, we take student privacy very seriously.
+      To protect your students’ privacy, we have made a change to your section’s login
+      page to avoid displaying full names. Even though this update should reduce privacy
+      concerns for the login page, we still encourage users to <i>not use full names
+      for students</i>.
+    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+      Your students could be featured in Code.org''s next viral video encouraging
+      students to take the AP CS Principles exam this year. We''re inviting all CS
+      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
+      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
+      will be featured in our video and the winning students will receive Code.org
+      swag!'
   move_students:
     new_section_dne: Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă
       rugăm să introduceţi un cod aferent unei secţiuni diferite.
@@ -683,6 +718,9 @@
     support: Obţine ajutor
     support_url: "//support.code.org"
     help_resources: Ajutor şi resurse
+    help_support: Help and Support
+    documentation: Documentation
+    tutorials: Tutorials
   multi:
     wrong_title: Răspuns incorect
     wrong_body: Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!
@@ -940,6 +978,11 @@
     content: Conţinut
     practice: Practicile de predare
     peer_review: "Împerecheaţi dispozitivele"
+    ramp_up: Ramp-Up
+    end_of_course_project: End of Course Project
+    optional_stages: Optional Stages
+    main_course: Main Course
+    extra_course_content: Extra Course Content
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de
@@ -966,8 +1009,48 @@
     starwars_blocks_name: 'Star Wars: Programarea unei galaxii cu blocuri de cod'
     starwars_javascript_name: 'Star Wars: Programarea unei galaxii - JavaScript'
     download_message: Download %{app_name} pentru utilizare offline (136MB)
-    download_in_english: 'Descărcaţi în limba engleză:'
-    download_in_spanish: 'Descărcaţi în limba spaniolă:'
+    download_in_Albanian: 'Descărcaţi în albaneză:'
+    download_in_Arabic: 'Descărcaţi în arabă:'
+    download_in_Azerbaijani: 'Descărcaţi în azeră:'
+    download_in_Basque: 'Descărcaţi în bască:'
+    download_in_Bosnian: 'Descărcaţi în bosniacă:'
+    download_in_Bulgarian: 'Descărcați în bulgară:'
+    download_in_Catalan: 'Descărcaţi în catalană:'
+    download_in_Chinese-Taiwan: 'Descărcaţi în chineză-taiwaneză:'
+    download_in_Chinese: 'Descărcaţi în chineză:'
+    download_in_Croatian: 'Descărcaţi în croată:'
+    download_in_Czech: 'Descărcaţi în cehă:'
+    download_in_Danish: 'Descărcaţi în daneză:'
+    download_in_Dutch: 'Descărcaţi în olandeză:'
+    download_in_English: 'Descărcaţi în engleză:'
+    download_in_Finnish: 'Descărcaţi în finlandeză:'
+    download_in_French: 'Descărcaţi în franceză:'
+    download_in_German: 'Descărcaţi în germană:'
+    download_in_Greek: 'Descărcaţi în greacă:'
+    download_in_Hebrew: 'Descărcaţi în ebraică:'
+    download_in_Hungarian: 'Descărcaţi în limba maghiară:'
+    download_in_Icelandic: 'Descărcaţi în islandeză:'
+    download_in_Indonesian: 'Descărcaţi în indoneziană:'
+    download_in_Irish: 'Descărcaţi în irlandeză:'
+    download_in_Italian: 'Descărcaţi în italiană:'
+    download_in_Japanese: 'Descărcaţi în japoneză:'
+    download_in_Korean: 'Descărcaţi în coreeană:'
+    download_in_Latvian: 'Descărcaţi în letonă:'
+    download_in_Lithuanian: 'Descărcaţi în lituaniană:'
+    download_in_Norwegian: 'Descărcaţi în norvegiană:'
+    download_in_Norwegian-Nynorsk: 'Descărcaţi în poloneză-norvegiană (Nynorsk):'
+    download_in_Polish: 'Descărcaţi în poloneză:'
+    download_in_Portuguese-Brazil: 'Descărcaţi în portugheză-braziliană:'
+    download_in_Portuguese: 'Descărcaţi în portugheză:'
+    download_in_Romanian: 'Descărcați în română:'
+    download_in_Russian: 'Descărcaţi în rusă:'
+    download_in_Serbian: 'Descărcaţi în sârbă:'
+    download_in_Slovenian: 'Descărcaţi în slovenă:'
+    download_in_Spanish: 'Descărcaţi în spaniolă:'
+    download_in_Swedish: 'Descărcaţi în suedeză:'
+    download_in_Turkish: 'Descărcaţi în turcă:'
+    download_in_Ukrainian: 'Descărcaţi în ucraineană:'
+    download_in_Vietnamese: 'Descărcaţi în vietnameză:'
     windows: Windows
     mac: Mac OS X
   plc:

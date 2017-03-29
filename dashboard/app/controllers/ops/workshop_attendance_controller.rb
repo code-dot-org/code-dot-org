@@ -30,7 +30,7 @@ module Ops
     def cohort
       cohort = Cohort.includes(workshops: {segments: :attendances}).find(params.require(:cohort_id))
       respond_with cohort do |format|
-        format.json { render json: cohort.as_json(include: {workshops: {include: {segments: {include: :attendances}}}}) }
+        format.json {render json: cohort.as_json(include: {workshops: {include: {segments: {include: :attendances}}}})}
       end
     end
 
@@ -42,13 +42,13 @@ module Ops
       if params[:by_teacher]
         # ?by_teacher=1 to index the results by teacher_id
         by_teacher = workshop.segments.inject({}) do |hash, s|
-          attendance = s.attendances.as_json(include: :segment).group_by { |a| a['teacher_id'] }
-          hash.merge(attendance){|_, a, b| a + b}
+          attendance = s.attendances.as_json(include: :segment).group_by {|a| a['teacher_id']}
+          hash.merge(attendance) {|_, a, b| a + b}
         end
         respond_with by_teacher
       else
         respond_with workshop do |format|
-          format.json { render json: workshop.as_json(include: {segments: {include: :attendances}}) }
+          format.json {render json: workshop.as_json(include: {segments: {include: :attendances}})}
         end
       end
     end
@@ -91,7 +91,7 @@ module Ops
 
       respond_with (@workshop.teachers) do |format|
         format.csv do
-          #Specify filename
+          # Specify filename
           response.headers['Content-Disposition'] = 'attachment; filename="' + @workshop.name + '-Attendance.csv"'
 
           # Generate csv column headers dynamically
@@ -114,7 +114,7 @@ module Ops
           format_teachers_for_csv(@workshop.teachers, teacher_info)
           format_teachers_for_csv(@workshop.unexpected_teachers, teacher_info)
 
-          render plain: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher| csv << teacher }}
+          render plain: CSV.generate(write_headers: true, headers: header) {|csv| teacher_info.each {|teacher| csv << teacher}}
         end
       end
     end

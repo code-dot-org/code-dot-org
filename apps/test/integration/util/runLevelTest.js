@@ -44,8 +44,14 @@ module.exports = function (testCollection, testData, dataItem, done) {
     level.scale.stepSpeed = 33;
   }
 
+  if (testData.lastAttempt) {
+    level.lastAttempt = testData.lastAttempt;
+  }
+
   // Override start blocks to load the solution;
   level.startBlocks = testData.xml;
+
+  level.startHtml = testData.startHtml;
   level.levelHtml = testData.levelHtml;
 
   level.hideViewDataButton = testData.hideViewDataButton;
@@ -129,6 +135,12 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     return Boolean(testData.useFirebase);
   };
 
+  window.dashboard.project.isOwner = function () {
+    return true;
+  };
+  const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
+    'Define onExecutionError() in your level test case to handle this.';
+
   loadApp({
     skinId: skinId,
     level: level,
@@ -137,11 +149,15 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     Dialog: StubDialog,
+    embed: testData.embed,
     // Fail fast if firebase is used without testData.useFirebase being specified.
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
     firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
+    isSignedIn: true,
     isAdmin: true,
     onFeedback: finished.bind(this),
+    onExecutionError: testData.onExecutionError ? testData.onExecutionError :
+      () => { throw unexpectedExecutionErrorMsg; },
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already

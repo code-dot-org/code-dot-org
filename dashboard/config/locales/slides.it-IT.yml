@@ -1151,8 +1151,8 @@
         image: notes/C2_bee_debugging_2.png
         text: Hai a tua disposizione una serie di blocchi già pronti nell'area di
           lavoro. Clicca su "Fai un passo" (step) per eseguire questi blocchi passo
-          dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario
-          risolvere un problema.
+          dopo passo e verificare se la soluzione è giusta, oppure se è necessario
+          correggere un errore.
       3:
         image: notes/C2_bee_debugging_3.png
         text: Sembra proprio che ci sia un problema! Devi aggiungere un altro blocco
@@ -1300,9 +1300,9 @@
       5:
         image: notes/C2_maze_intro_5.png
         text: Se desideri eliminare un blocco, basta rimuoverlo dalla sequenza di
-          blocchi e trascinarlo nel cestino. Dopo che hai premuto "Esegui", puoi sempre
-          cliccare su "Ricomincia" per far tornare l'uccellino al punto di partenza.
-          Ora andiamo a prendere quei maialini!
+          blocchi e trascinarlo nel cestino. Dopo che hai cliccato su "Esegui", puoi
+          sempre cliccare su "Ricomincia" per far tornare l'uccellino al punto di
+          partenza. Ora andiamo a prendere quei maialini!
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
@@ -1500,8 +1500,8 @@
         image: notes/C3_debugging_bee_2.png
         text: Hai a tua disposizione una serie di blocchi già pronti nell'area di
           lavoro. Clicca su "Fai un passo" (step) per eseguire questi blocchi passo
-          dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario
-          risolvere un problema.
+          dopo passo e verificare se la soluzione è giusta, oppure se è necessario
+          correggere un errore.
       3:
         image: notes/C3_debugging_bee_3.png
         text: Sembra proprio che ci sia un problema! Devi aggiungere un altro blocco
@@ -1900,12 +1900,12 @@
         text: Per esempio, un blocco "ripeti 3 volte" conta da 1 a 3 con un incremento
           di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il "ciclo
           con contatore" sa quante volte è stato eseguito grazie alla variabile "contatore"
-          (counter) che viene impostata al valore iniziale all'inizio del ciclo e
-          a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito.
+          (<i>counter</i>) che viene impostata al valore iniziale all'inizio del ciclo
+          e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito.
           Non appena la variabile "contatore" diventa più grande del valore finale,
           il ciclo si arresta. Il vantaggio di usare un "ciclo con contatore" al posto
           di un blocco "ripeti … volte" sta nel fatto che si può vedere la variabile
-          "contatore" (counter) e usarla nel ciclo.
+          "contatore" (<i>counter</i>) e usarla nel ciclo.
       3:
         image: notes/C4_for_loops_3.png
         text: Il vantaggio di usare un vero "ciclo con contatore" (repeat counter
@@ -1934,12 +1934,12 @@
         text: Per esempio, un blocco "ripeti 3 volte" conta da 1 a 3 con un incremento
           di 1. Ogni volta che conta, esegue il codice all'interno del ciclo. Il "ciclo
           con contatore" sa quante volte è stato eseguito grazie alla variabile "contatore"
-          (counter) che viene impostata al valore iniziale all'inizio del ciclo e
-          a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito.
+          (<i>counter</i>) che viene impostata al valore iniziale all'inizio del ciclo
+          e a cui viene aggiunto l'incremento ogni volta che il ciclo viene eseguito.
           Non appena la variabile "contatore" diventa più grande del valore finale,
           il ciclo si arresta. Il vantaggio di usare un "ciclo con contatore" al posto
           di un blocco "ripeti … volte" sta nel fatto che si può vedere la variabile
-          "contatore" (counter) e usarla nel ciclo.
+          "contatore" (<i>counter</i>) e usarla nel ciclo.
       3:
         image: notes/C4_for_loops_bee_3.png
         text: Il vantaggio di usare un vero "ciclo con contatore" (repeat counter
@@ -2101,9 +2101,9 @@
       5:
         image: notes/C4_intro_5.png
         text: Se desideri eliminare un blocco, basta rimuoverlo dalla sequenza di
-          blocchi e trascinarlo nel cestino. Dopo che hai premuto "Esegui", puoi sempre
-          cliccare su "Ricomincia" per far tornare l'uccellino al punto di partenza.
-          Ora andiamo a prendere quei maialini!
+          blocchi e trascinarlo nel cestino. Dopo che hai cliccato su "Esegui", puoi
+          sempre cliccare su "Ricomincia" per far tornare l'uccellino al punto di
+          partenza. Ora andiamo a prendere quei maialini!
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
@@ -3410,116 +3410,121 @@
       1:
         image: notes/mc_2016_intro_1.jpg
         text: Ciao, mi chiamo Jens e sono il capo progettista creativo di Minecraft.
-          Nella prossima ora svilupperai un gioco con Minecraft. In questo mondo di
-          Minecraft il tempo sembra essersi fermato. Le pecore non si muovono, le
-          galline non depongono uova e gli zombi sono immobili. Sarai tu a scrivere
-          il codice che metterà in moto il mondo di Minecraft.
+          Nella prossima ora svilupperai la tua versione di Minecraft. All'inizio
+          il tempo sembra essersi fermato in Minecraft. Le pecore non si muovono,
+          le galline non depongono uova e gli zombie sono immobili. Devi scrivere
+          tu il codice che mette in moto il mondo di Minecraft.
       2:
         image: notes/mc_2016_intro_2.jpg
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
-          really interested in is how people think and interact with technology and
-          so this job is the perfect job for me to put together the computer engineering
-          with the psychology: come le persone pensano e agiscono.'
+        text: 'Mi chiamo Melissa e sono una studiosa dell''interazione con l''utente
+          a Minecraft. Quello che mi interessa davvero è come la gente pensa e interagisce
+          con la tecnologia e quindi questo lavoro è il lavoro perfetto per me perché
+          unisce l''informatica e la psicologia: come pensano e si comportano le persone.'
       3:
         image: notes/mc_2016_intro_3.jpg
         text: La schermata è suddivisa in tre aree principali. 1) Sulla sinistra abbiamo
-          il gioco di Minecraft. Ora il mondo è immobile, ma lo animeremo con il codice.
+          lo scenario di gioco di Minecraft. All'inizio è tutto immobile, ma presto
+          lo animeremo con il codice.
       4:
         image: notes/mc_2016_intro_4.jpg
-        text: 2) La zona centrale contiene i tuoi strumenti. Ciascun blocco corrisponde
+        text: 2) La zona centrale è la "cassetta degli attrezzi". Ciascun blocco corrisponde
           a un comando che i polli, le pecore e le altre creature di Minecraft possono
           comprendere.
       5:
         image: notes/mc_2016_intro_5.jpg
-        text: 3) Il riquadro sulla destra è lo spazio di lavoro ed è qui che compileremo
-          il nostro programma.
+        text: 3) Lo spazio sulla destra è la tua area di lavoro ("workspace") ed è
+          il posto in cui costruisci il tuo programma.
       6:
         image: notes/mc_2016_intro_6.jpg
-        text: Se non ricordi cosa fare, le istruzioni per ogni livello sono mostrate
+        text: Se non ricordi cosa fare, le istruzioni per ogni esercizio sono mostrate
           in alto.
       7:
         image: notes/mc_2016_intro_7.jpg
-        text: Per iniziare, programmeremo un pollo. Trascina il comando "muovi avanti"
-          nello spazio di lavoro. Quando premi "Esegui", il pollo avanza di un passo.
-          Per farlo procedere, trascina un altro blocco "muovi avanti" sotto il primo
-          finché non viene evidenziato. Se lo rilasci, i due blocchi si uniscono.
-          Premendo di nuovo "Esegui", il pollo avanza di due passi.
+        text: Per iniziare, programmiamo il comportamento di un pollo. Trascina il
+          blocco "vai avanti" nell'area di lavoro. Quando clicchi su "Esegui", il
+          pollo avanza di un passo. Per fargli fare un altro passo, trascina un altro
+          blocco "vai avanti" sotto il primo finché il suo bordo non viene evidenziato.
+          Se adesso lo rilasci, i due blocchi si uniscono. Cliccando di nuovo "Esegui",
+          il pollo avanza di due passi.
       8:
         image: notes/mc_2016_intro_8.jpg
-        text: Per eliminare un blocco, rimuovilo dalla colonna e riponilo tra gli
-          strumenti.
+        text: Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro
+          e rimetterlo nella cassetta degli attrezzi.
       9:
         image: notes/mc_2016_intro_9.jpg
-        text: Dopo aver premuto "Esegui" puoi sempre selezionare il pulsante "Ripristina"
-          per azzerare il gioco e ripartire da capo. Ora tocca a te creare la tua
-          versione di Minecraft. Buon divertimento!
+        text: Dopo aver cliccato su "Esegui" puoi sempre cliccare su "Ricomincia"
+          per interrompere il gioco e ripartire da capo. Ora tocca a te creare la
+          tua versione di Minecraft. Buon divertimento!
     mc_2016_loops:
       1:
         image: notes/mc_2016_loops_1.jpg
-        text: Ciao, sono Lisa. Sono una programmatrice di Minecraft e mi occupo di
-          alcuni animali e nemici del gioco. Uno degli animali su cui ho lavorato
-          è il gattopardo. Ho realizzato la scena in cui offri un pesce al gattopardo
-          per addomesticarlo.
+        text: Ciao, sono Lisa. Sono una programmatrice di Minecraft e nel gioco mi
+          occupo del comportamento di alcuni animali e nemici. Uno degli animali su
+          cui ho lavorato è il gattopardo. Ho realizzato la scena in cui offri un
+          pesce al gattopardo per addomesticarlo.
       2:
         image: notes/mc_2016_loops_2.jpg
         text: Noi umani ci annoiamo a ripetere le stesse azioni più e più volte. Ma
           il bello dei computer è che possono ripetere le stesse operazioni milioni
           o persino miliardi di volte senza mai stancarsi. Queste ripetizioni si chiamano
-          cicli e ogni creatura di Minecraft ne fa uso.
+          "cicli" e ogni creatura di Minecraft ne fa uso.
       3:
         image: notes/mc_2016_loops_3.jpg
         text: Prima abbiamo fatto muovere un pollo sullo schermo, ma dopo un po’ si
-          è fermato. In Minecraft i polli si spostano continuamente. Creiamo un ciclo
-          "esegui per sempre" con gli strumenti affinché anche i nostri polli non
-          si fermino mai. I cicli ti faranno risparmiare parecchio tempo e si riveleranno
-          un alleato prezioso nella creazione della tua versione di Minecraft.
+          è fermato. In Minecraft i polli si spostano continuamente. Usiamo il ciclo
+          "ripeti per sempre" in modo che anche i nostri polli non si fermino mai.
+          I cicli ti fanno risparmiare parecchio tempo e sono un alleato prezioso
+          per creare la tua versione di Minecraft.
     mc_2016_events:
       1:
         image: notes/mc_2016_events_1.jpg
-        text: Nel prossimo livello potrai scegliere se controllare Steve o Alex. Premi
-          i tasti di direzione sulla tastiera per muoverti su, giù, a sinistra e a
-          destra. Ora puoi spostarti dove vuoi all’interno del livello. Per usare
-          una creatura, avvicinati, voltati verso di essa e premi la barra spaziatrice.
+        text: Nel prossimo esercizio puoi scegliere se controllare Steve o Alex. Premi
+          i tasti di direzione sulla tastiera per muoverti in su, in giù, a sinistra
+          e a destra. Ora puoi spostarti dove vuoi all’interno dello scenario di gioco.
+          Per usare una creatura, avvicinati, girati verso di essa e premi la barra
+          spaziatrice.
       2:
         image: notes/mc_2016_events_2.jpg
-        text: Se utilizzi un touchscreen, puoi muoverti scorrendo verso l’alto, il
-          basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto
-          che hai di fronte.
+        text: Se utilizzi un <i>touchscreen</i>, puoi muoverti scorrendo verso l’alto,
+          il basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare
+          l’oggetto che hai di fronte.
       3:
         image: notes/mc_2016_events_3.jpg
-        text: Cosa succede quando lo usi? In Minecraft, le pecore producono lana quando
-          le tosi, le mucche scappano se le colpisci e i Creeper esplodono quando
-          ti avvicini. Queste reazioni sono rese possibili dai cosiddetti eventi.
-          Gli eventi istruiscono il programma ad attendere e riconoscere determinate
-          circostanze. Se si verificano, attivano un’azione.
+        text: Cosa succede quando usi una creatura? In Minecraft, le pecore producono
+          lana quando le tosi, le mucche scappano se le colpisci e i Creeper esplodono
+          quando ti avvicini. Queste reazioni sono rese possibili dai cosiddetti "gestori
+          di eventi". I gestori di eventi sono blocchi che permettono al programma
+          di attendere e riconoscere determinate circostanze, "gli eventi". Se gli
+          eventi si verificano, i gestori di evento attivano delle azioni.
       4:
         image: notes/mc_2016_events_4.jpg
-        text: Per ora abbiamo utilizzato un solo evento. Il codice che hai inserito
-          nello slot "quando generato" si attiva quando la tua creatura viene generata
-          o all’avvio del gioco. Nei prossimi livelli disporrai di altri slot per
-          eventi. Per esempio "quando toccato", che si attiva se tocchi la creatura,
-          o "quando utilizzato", che richiede di usarla. Se invece vuoi che il tuo
-          zombi scompaia al sorgere del sole, inseriscilo nello slot "di giorno".
+        text: Per ora abbiamo utilizzato un solo gestore di evento. Il codice che
+          inserisci nel gestore di evento "quando viene creato" viene eseguito quando
+          la tua creatura viene creata oppure all’avvio del gioco. Nei prossimi livelli
+          disporrai di altri blocchi per gestire eventi. Per esempio "quando viene
+          toccato", il cui codice viene eseguito quando tocchi la creatura, o "quando
+          viene usato", che viene eseguito quando la usi. Se invece vuoi che il tuo
+          zombie scompaia al sorgere del sole, inseriscilo nel blocco "di giorno"
     mc_2016_spawn:
       1:
         image: notes/mc_2016_spawn_1.jpg
-        text: Nei giochi, generare significa creare qualcosa. In questo livello genereremo
-          degli zombi al calare del sole. A questo scopo ci servirà il blocco "di
-          notte".
+        text: Nei giochi, "creare" significa inserire qualcosa nello scenario del
+          gioco. In questo livello creeremo degli zombi al calare del sole. A questo
+          scopo ci servirà il blocco "di notte".
       2:
         image: notes/mc_2016_spawn_2.jpg
-        text: Visto che gli zombi devono comparire di notte, inseriamo il blocco "genera
-          zombi" sotto il blocco "di notte". Appena viene generato, ciascuno zombi
-          eseguirà il codice che hai inserito nello slot evento "quando generato".
-          Buon divertimento con gli zombi!
+        text: Visto che gli zombie devono comparire di notte, inseriamo il blocco
+          "crea zombie" nel blocco "di notte". Appena viene creato, ciascuno zombie
+          eseguirà il codice che hai inserito nel gestore di evento "quando viene
+          creato". Buon divertimento con gli zombie!
     mc_2016_congrats:
       1:
         image: notes/mc_2016_congrats_1.jpg
         text: Congratulazioni! Hai imparato a utilizzare la programmazione per dare
-          vita a mondi di Minecraft. Ora sei tu lo sviluppatore. Hai sbloccato tutti
-          i comandi e le creature. Sarai tu a stabilire cosa accadrà.
+          vita a nuovi mondi di Minecraft. Ora sei tu lo sviluppatore. Hai a disposizione
+          tutti i comandi e le creature. Ora sei tu a stabilire cosa accadrà.
       2:
         image: notes/mc_2016_congrats_2.jpg
-        text: Quando avrai completato il tuo gioco, seleziona il collegamento per
-          condividerlo con gli amici o provare il tuo gioco su smartphone. Buon divertimento!
-          Non vedo l’ora di giocare la tua versione di Minecraft.
+        text: Quando hai completato il tuo gioco, clicca su "Termina" per ottenere
+          un link per condividerlo con gli amici o provare il tuo gioco su smartphone.
+          Buon divertimento! Non vedo l’ora di giocare la tua versione di Minecraft.

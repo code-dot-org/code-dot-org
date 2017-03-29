@@ -96,13 +96,18 @@
       <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi
       ve projelerinizi saklamak için giriş yapmak gerekecektir.
     hoc_already_signed_up_heading: Giriş yaparak başla
-    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
-      and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
-      courses</a>.
+    hoc_already_signed_up_content: Kodlama Saatinde öğretmek için kaydoldunuz! Siz
+      ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak
+      için <a href="https://code.org/learn">bir eğitim seçin </a> ve bu linki onlarla
+      paylaşın.<br/><br/>. Eğer Kodlama Saatinden memnun kaldıysanız bir şifre oluşturup
+      Code Studio hesabı yaratarak öğrencilerinizi aşağıdaki <a href="https://code.org/educate">daha
+      uzun </a> kurslara kaydedebilirsiniz.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Eğitim rehberine bakın
     title: Code.org için kayıt ol
     school_name: Okul Adı (isteğe bağlı)
@@ -155,6 +160,8 @@
     login: Giriş Yap
     invalid_login: Geçersiz oturum açma adı, lütfen yeniden deneyin
     pair_programming: Bilgisayarı başka biriyle kullanıyorum.
+    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
+      target='_blank'>here</a>.
   password:
     reset_form:
       title: "Şifrenizi mi unuttunuz?"
@@ -186,7 +193,7 @@
         Lütfen şurayı imzalayın isteyin ve sonra onları yeniden eklemeyi deneyin
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
       blank_code: Lütfen bir bölge kodu girin
-      cant_join_own_section: Malesef, kendi bölgenizde katılamazsınız.
+      cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
     mail:
       invite_student:
         subject: Code.org'ta %{teacher_name} ile bir sınıfa katıl!
@@ -355,6 +362,10 @@
     delete_text_teacher_note: 'Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin
       hesaplarını silmez.'
     delete_confirm: Hesabınızı silmek istediğinize emin misiniz?
+    deleted_user: deleted user
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
@@ -428,12 +439,14 @@
     announcement_learn_more_button: Daha fazlasını öğren
     announcement_try_now_button: "Şimdi dene"
     announcement_host_an_hour_button: Kodlama Saatine ev sahipliği yap
+    announcement_watch_video_button: Videoyu izle
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
       bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
       izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
       gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
       için bir açık mektup verdi."
     announcement_petition_button: Adınızı Ekleyin
+    announcement_go_beyond_button: Go beyond
     announcement_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
       takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
     announcement_hoc_launch: 180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde,
@@ -442,18 +455,39 @@
       href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine
       başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini
       öğretmeye başlayabileceğini söyleyin.
-    announcement_hoc_scaling: 'DİKKAT, Ders 1-4 ve hızlandırılmış kurs için öğretmenlere
-      uyarı: milyonlarca öğrenci Kod Saati  etkinliğinde çalıştığından aşırı trafik
-      oluşmaktadır, bu nedenle <b>3-11 aralık tarihlerinde öğrenci çalışmaları kayıt
-      edilmeyecektir.</b>  Sınıfınızda Kod Saati etkinlikleri yaparak Bilgisayar Bilimleri
-      Eğitimi Haftası'' nı kutlamanızı öneririz. Kod Saati etkinlikleri bu hafta kayıt
-      yapmamasına rağmen, öğrenciler etkinlikler yapabilir ve sertifika kazanmaya
-      devam edebilirler.'
     announcement_mc_launch: En popüler eğitimlerimizden birinin şimdi devamı var!
       Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar
       oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla
       paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde
       sınıfınla birlikte yap.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
+    announcement_teacher_recruitment: Teachers like you are leading the computer science
+      education movement. You can participate in high-quality K-12th grade professional
+      learning programs <strong>at absolutely no cost to you or your school</strong>.
+      Take the lead on computer science in your school, and apply for professional
+      learning.
+    announcement_student_privacy: At Code.org, we take student privacy very seriously.
+      To protect your students’ privacy, we have made a change to your section’s login
+      page to avoid displaying full names. Even though this update should reduce privacy
+      concerns for the login page, we still encourage users to <i>not use full names
+      for students</i>.
+    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+      Your students could be featured in Code.org''s next viral video encouraging
+      students to take the AP CS Principles exam this year. We''re inviting all CS
+      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
+      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
+      will be featured in our video and the winning students will receive Code.org
+      swag!'
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin."
@@ -653,6 +687,9 @@
     support: Yardım Al
     support_url: "//support.code.org"
     help_resources: Yardım ve kaynaklar
+    help_support: Help and Support
+    documentation: Documentation
+    tutorials: Tutorials
   multi:
     wrong_title: Yanlış cevap
     wrong_body: Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!
@@ -897,6 +934,11 @@
     content: "İçerik"
     practice: "Öğretmen Uygulamaları"
     peer_review: Eş gözden geçirme
+    ramp_up: Ramp-Up
+    end_of_course_project: End of Course Project
+    optional_stages: Optional Stages
+    main_course: Main Course
+    extra_course_content: Extra Course Content
   external_links:
     disclaimer: Yasal uyarı
     leaving_domain: Code.org tarafından işletilen site değil.
@@ -920,8 +962,48 @@
     starwars_javascript_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
       (Blocks)'
     download_message: "Çevrimdışı kullanım  için %{app_name} (136 MB) indir"
-    download_in_english: "İngilizce olarak indir:"
-    download_in_spanish: "İspanyolca olarak indir:"
+    download_in_Albanian: 'Arnavutça indir:'
+    download_in_Arabic: 'Arapça indir:'
+    download_in_Azerbaijani: 'Azerice indir:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Boşnakça indir:'
+    download_in_Bulgarian: 'Bulgaristanca indir:'
+    download_in_Catalan: 'Katalanca indir:'
+    download_in_Chinese-Taiwan: 'Tayvan Çincesi indir:'
+    download_in_Chinese: "Çince indir:"
+    download_in_Croatian: 'Hırvatça indir:'
+    download_in_Czech: "Çekce indir:"
+    download_in_Danish: 'Danimarkaca indir:'
+    download_in_Dutch: 'Almanca indir:'
+    download_in_English: "İngilizce indir:"
+    download_in_Finnish: 'Fince indir:'
+    download_in_French: Fransızca indir
+    download_in_German: 'Almanca indir:'
+    download_in_Greek: 'Yunanca indir:'
+    download_in_Hebrew: "İbranice indir:"
+    download_in_Hungarian: 'Macarca indir:'
+    download_in_Icelandic: "İzlandaca indir:"
+    download_in_Indonesian: 'Endonezyaca indir:'
+    download_in_Irish: "İrlandaca indir:"
+    download_in_Italian: "İtalyanca indir:"
+    download_in_Japanese: 'Japonca indir:'
+    download_in_Korean: 'Korece indir:'
+    download_in_Latvian: 'Litvanyaca indir:'
+    download_in_Lithuanian: 'Litvanyaca indir:'
+    download_in_Norwegian: 'Norveççe indir:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Rusça indir:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: "İspanyolca indir:"
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Türkçe indir:'
+    download_in_Ukrainian: 'Ukraynaca indir:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
     mac: Mac OS X
   plc:

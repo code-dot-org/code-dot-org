@@ -5,14 +5,14 @@ tr:
         course1:
           title: Ders 1
           description: Ders 1, küçük okuyucuların bilgisayar programı oluşturmalarında yardımcı olması, problem çözmedeki becerilerini geliştirmeleri, zor görevleri yapabilmeleri ve başkaları ile birlikte çalışabilmeleri için tasarlanmıştır. Dersin sonunda, öğrenciler, paylaşabilecekleri kendi farklı hikayelerini veya oyunlarını oluşturabilecekler. K-1 sınıfları için önerilir.
-          description_short: Ders 1 çocuklar için tasarlanmıştır.
+          description_short: Okumaya yeni başlayanlar Ders 1'den başlayın.
           description_audience: 4 yaş üstü (çocuk okuyucular)
           stage:
             'Artist: Loops': 'Aktör: Döngüler'
             'Artist: Sequence': 'Aktör: Sıra'
             'Artist: Shapes': 'Sanatçı: Şekiller'
             'Bee: Loops': 'Arı: Döngüler'
-            'Bee: Sequence': 'Arı: Sıra'
+            'Bee: Sequence': 'Arı: Sıralama'
             Building a Foundation: Bir Temel Oluşturma
             Getting Loopy: Döngüselleşme
             Going Places Safely: Biryerlere Güvenle Gitmek
@@ -32,7 +32,7 @@ tr:
           description_short: Ders 2, okuma bilen öğrenciler için tasarlanmıştır.
           description_audience: 6 yaş ve üstü (okuma becerisi gerektirir)
           stage:
-            'Artist: Debugging': 'Aktör: Hata Ayıklama'
+            'Artist: Debugging': 'Sanatçı: Hata Ayıklama'
             'Artist: Loops': 'Aktör: Döngüler'
             'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
             'Artist: Sequence': 'Aktör: Sıra'
@@ -54,7 +54,7 @@ tr:
         course3:
           title: Ders 3
           description: Ders 3, Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler, daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin sonunda, öğrenciler, herhangi birisiyle paylaşabilecekleri interaktif hikaye ve oyun oluşturabilecekler. 4 ve 5. sınıflar için önerilir.
-          description_short: 3 ders 2 takip derstir.
+          description_short: Ders 3, Ders 2'nin devamıdır.
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
           stage:
             Artist: Aktör
@@ -76,14 +76,14 @@ tr:
             Maze: Labirent
             'Maze: Conditionals': 'Labirent: Koşullar'
             Songwriting: Parametrelerle Şarkı Yazmak
-            'Studio: Create a Game': 'Oyun Laboratuvarı: Bir Oyun Oluşturmak'
+            'Studio: Create a Game': 'Oyun Laboratuvarı: Bir Oyun Oluşturun'
             'Studio: Create a Story': 'Oyun Laboratuvarı: Bir Hikaye Oluşturun'
         playlab:
-          title: Play Lab
+          title: Oyun Laboratuvarı
           description: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
           description_short: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
           stage:
-            Play Lab: Play Lab
+            Play Lab: Oyun Laboratuvarı
         artist:
           title: Aktör
           description: Sanatçı ile harika resimler ve tasarımlar yap!
@@ -121,13 +121,13 @@ tr:
             'Play Lab: For Loops': 'Oyun Laboratuvarı: For Döngüleri'
             'Play Lab: Functions with Parameters': 'Oyun Laboratuvarı: Fonksiyonlar ve Parametreler'
             'Play Lab: Variables': 'Oyun Laboratuvarı: Değişkenler'
-            Super Challenge - For Loops: Süper Yarış - Döngüler İçin
+            Super Challenge - For Loops: Süper Yarış - For Döngüleri
             Super Challenge - Functions and Parameters: Süper Yarış - Fonksiyonlar ve Parametreler
             Super Challenge - Variables: Süper Yarış - Değişkenler
             'Unplugged: Binary': 'Unplugged: İkili Taban'
             'Unplugged: Envelope Variables': 'Bağımsız: Zarf Değişkenler'
-            'Unplugged: For Loop Fun': 'Bağımsız: Döngü Eğlencesi İçin'
-            'Unplugged: Madlibs': 'Bağımsız: Madlibs'
+            'Unplugged: For Loop Fun': 'Bağımsız Etkinlik: Eğlenceli For Döngüsü'
+            'Unplugged: Madlibs': 'Bağımsız Etkinlik: Madlibs'
             'Unplugged: Songwriting with Parameters': 'Unplugged: Parametrelerle şarkı yazarlığı'
             'Unplugged: Tangrams': 'Unplugged: Tangramlar'
         Course4pre:
@@ -276,7 +276,7 @@ tr:
           stage:
             Applab: Applab
             Hoc2015 Blockly: Hoc2015 Blockly
-            Play Lab: Play Lab
+            Play Lab: Oyun Laboratuvarı
             The Artist: Sanatçı
             The Maze: Labirent
           description_audience: ''
@@ -289,12 +289,14 @@ tr:
             Calc: Kireç
             Eval: Değerlendir
             Studio: Stüdyo
+          description_audience: ''
         flappy:
           title: Flappy Kod
           description: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!
           description_short: 10 dakikadan daha kısa sürede kendi Flappy oyununuzu yazın!
           stage:
             Flappy Code: Flappy Kod
+          description_audience: ''
         jigsaw:
           title: Yapboz
           description: Yapboz eğitimini dene
@@ -460,7 +462,7 @@ tr:
             Canvas and Arrays in Apps: Canvas and Arrays in Apps
             Compound Conditional Logic: Compound Conditional Logic
             Controlling Memory with Variables: Controlling Memory with Variables
-            Creating Functions: Oluşturma Fonksiyonları
+            Creating Functions: Fonksiyonları Oluşturma
             Creating functions with Parameters: Creating Functions with Parameters
             Digital Assistant Project: Digital Assistant Project
             Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
@@ -701,6 +703,9 @@ tr:
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
+            Standalone video: Standalone video
           description_audience: ''
         algebraPD2b:
           title: Algebra PD'de Bilgisayar Bilimi
@@ -759,8 +764,12 @@ tr:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -852,8 +861,12 @@ tr:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -868,8 +881,12 @@ tr:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -1053,6 +1070,7 @@ tr:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Hoşgeldiniz!
             Wrap-Up: paketlemek
+          description_audience: ''
         algebraPD3b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1192,6 +1210,7 @@ tr:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Hoşgeldiniz!
             Wrap-Up: paketlemek
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1387,7 +1406,7 @@ tr:
           description_short: Programlama
           stage:
             APIs and Function Parameters: APIs and Function Parameters
-            Creating Functions: Oluşturma Fonksiyonları
+            Creating Functions: Fonksiyonları Oluşturma
             Creating functions with Parameters: Creating functions with Parameters
             Creativity in Algorithms: Creativity in Algorithms
             Functions and Top-Down Design: Functions and Top-Down Design
@@ -1421,7 +1440,7 @@ tr:
           description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
-          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           stage:
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -1457,9 +1476,22 @@ tr:
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If" Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1467,6 +1499,13 @@ tr:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -1873,7 +1912,7 @@ tr:
             'Play Lab: Variables': 'Oyun Laboratuvarı: Değişkenler'
             Try programming with Khan Academy: Try programming with Khan Academy
             'Unplugged: Envelope Variables': 'Bağımsız: Zarf Değişkenler'
-            'Unplugged: For Loop Fun': 'Bağımsız: Döngü Eğlencesi İçin'
+            'Unplugged: For Loop Fun': 'Bağımsız Etkinlik: Eğlenceli For Döngüsü'
             'Unplugged: Songwriting with Parameters': 'Unplugged: Parametrelerle şarkı yazarlığı'
         ecs-unit1:
           title: ECS Unit 1
@@ -1884,8 +1923,12 @@ tr:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -2147,9 +2190,9 @@ tr:
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 1.
           stage:
             Unit 1 Overview: Unit 1 Overview
             'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
@@ -2162,14 +2205,15 @@ tr:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: Sıçrama
-          title: Basketball
+          title: Takımınızı seçin ve bir basketbol oyunu oynayın
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Besketbol oynayın
+          description: Takımınızı seçin ve bir basketbol oyunu oynayın
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2213,6 +2257,8 @@ tr:
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2229,10 +2275,11 @@ tr:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
-          title: CSP Unit 2 Online Support
+            AP Preparation and Support: AP Preparation and Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 2. '
         csd4:
           stage:
             Analysis of Design: Analysis of Design
@@ -2254,6 +2301,10 @@ tr:
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2335,6 +2386,8 @@ tr:
             Your Digital Footprint: Dijital İziniz
             Building a Foundation: Bir Temel Oluşturma
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2359,6 +2412,8 @@ tr:
             Digital Citizenship: Sayısal Vatandaşlık
             'Unplugged: Binary': 'Unplugged: İkili Taban'
             Artist Binary: Sanaçtı İkili Taban
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: İç İçe Döngüler
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2381,6 +2436,7 @@ tr:
             Private and Personal Information: Private and Personal Information
             Internet: İnternet
             Crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2433,7 +2489,7 @@ tr:
           title: Spor
           description_audience: ''
           description_short: Kendi sporunu kodla
-          description: ''
+          description: Kendi sporunu kodla
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Hoşgeldiniz!
@@ -2479,7 +2535,137 @@ tr:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
-          title: CSP Unit 3 Online Support
+            AP Preparation and Support: AP Preparation and Support
+          title: Unit 3 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: Unit 4 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
+        sciencepd4:
+          stage:
+            Welcome!: Hoşgeldiniz!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: paketlemek
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: Hoşgeldiniz!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: paketlemek
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Hoşgeldiniz!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: paketlemek
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage: [ ]
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+        csp6-support:
+          stage: [ ]
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+        unit6-csd-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+            Foo: Foo
+            Lists: Listeler
+            Lights: Lights
+          title: Draft Unit 6
           description_audience: ''
           description_short: ''
           description: ''

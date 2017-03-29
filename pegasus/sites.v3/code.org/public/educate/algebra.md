@@ -22,13 +22,9 @@ For classes that wish to go further, the second 10 hour course builds on the ski
 Both CS in Algebra courses are aligned to Common Core Standards for Mathematics, making it possible to integrate our curriculum into the classroom smoothly. CS in Algebra is also a model implementation of Common Core Standards for Mathematical Practice, offering explicit pedagogical recommendation across all eight practice standards. Our curriculum also satisfies several of the CSTA (Computer Science Teacher's Association) standards across levels 1 (grades K-6) and 2 (grades 6-9). For more information, you can view our [complete standards alignment](<%= CDO.code_org_url('/curriculum/docs/algebra/standards') %>).
 
 <a name="start"><a/>
-## How do I start teaching CS in Algebra?
-
-We provide a Professional Learning Program that prepares teachers to implement Course A. Read more about the program [here](/educate/professional-learning/cs-in-algebra).
-
 ## What's the difference between CS in Algebra and Bootstrap?
 
-Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://www.bootstrapworld.org). The primary goal of our modification was to merge Bootstrap’s content and pedagogy with our block-based language, online learning system, and scaffolding teaching paradigm. Additionally we have divided the original content from Bootstrap into two separate courses to simplify implementation for teachers who are concerned that they don’t have enough time for the full 20 hours. And, starting in 2016-2017, Code.org's in person professional development will focus on Course A. For schools that want to invest more in CS, Bootstrap offers a deeper curriculum that gives classrooms the flexibility of going beyond 20 hours and a longer in person professional development workshop covering 20 hours of material.  Depending on the needs of your school or classroom, each curriculum offers a different mix of pedagogy, content and curricular design:
+Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](http://www.bootstrapworld.org). The primary goal of our modification was to merge Bootstrap’s content and pedagogy with our block-based language, online learning system, and scaffolding teaching paradigm. Additionally we have divided the original content from Bootstrap into two separate courses to simplify implementation for teachers who are concerned that they don’t have enough time for the full 20 hours. And, starting in 2016-2017, Code.org's in person professional development will focus on Course A. For schools that want to invest more in CS, Bootstrap offers a deeper curriculum that gives classrooms the flexibility of going beyond 20 hours and a longer in person professional development workshop covering 20 hours of material.  Depending on the needs of your school or classroom, each curriculum offers a different mix of pedagogy, content and curricular design:
 
 <table>
   <thead>
@@ -98,13 +94,12 @@ Code.org’s CS in Algebra is an adaption of [Bootstrap’s curriculum](https://
     </tr>
     <tr>
       <td><strong>Professional Development</strong></td>
-      <td>In person <a href="/educate/professional-learning/cs-in-algebra">workshops with supplemental online professional development</a> covering Course A only</td>
       <td>In person <a href="http://www.bootstrapworld.org/workshops/">workshops</a> covering the entire course</td>
     </tr>
     <tr>
       <td><strong>Curriculum Progression</strong></td>
       <td>
-        <strong>Course A</strong> 
+        <strong>Course A</strong>
         <br>Order of Operations and Circles of Evaluation
         <br>Data types (Numbers, Strings, and Images)
         <br>Variables
@@ -199,5 +194,5 @@ The Computer Science in Algebra course was inspired by and developed in partners
 <br/>
 <br/>
 
-![Code logo](algebra/img/codelogo.png) &nbsp;&nbsp; ![Bootstrap logo](algebra/img/bootstrapIconAndLogoSm.png) 
+![Code logo](algebra/img/codelogo.png) &nbsp;&nbsp; ![Bootstrap logo](algebra/img/bootstrapIconAndLogoSm.png)
 

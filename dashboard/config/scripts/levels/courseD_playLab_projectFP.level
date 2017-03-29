@@ -121,19 +121,24 @@
         </block>
         <block type="when_run">
           <next>
-            <block type="studio_setBackground">
-              <title name="VALUE">"black"</title>
+            <block type="studio_setMap">
+              <title name="VALUE">random</title>
               <next>
-                <block type="studio_setSpritesSpeed" inline="true">
-                  <title name="VALUE">"ninja"</title>
-                  <value name="SPEED">
-                    <block type="math_number">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
+                <block type="studio_setBackground">
+                  <title name="VALUE">"black"</title>
                   <next>
-                    <block type="studio_setSpritesWander">
+                    <block type="studio_setSpritesSpeed" inline="true">
                       <title name="VALUE">"ninja"</title>
+                      <value name="SPEED">
+                        <block type="math_number">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="studio_setSpritesWander">
+                          <title name="VALUE">"ninja"</title>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
@@ -259,5 +264,17 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_ifActorHasEmotion"/>
+        <block type="studio_ifActorHasEmotionParams"/>
+        <block type="studio_ifActorPosition"/>
+        <block type="studio_ifActorPositionParams"/>
+        <block type="studio_ifActorIsVisible"/>
+        <block type="studio_ifActorIsVisibleParams"/>
+        <block type="studio_ifActorIsSprite"/>
+        <block type="studio_ifActorIsSpriteParams"/>
+      </xml>
+    </toolbox_blocks>
   </blocks>
 </Studio>

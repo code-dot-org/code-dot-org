@@ -19,7 +19,7 @@ class TestCloudFront < Minitest::Test
         # Allow #wait_until methods to finish
         get_distribution: Aws::CloudFront::Client.new.
           get_distribution(id: 'string').data.
-          tap { |x| x[:distribution][:status] = 'Deployed' }
+          tap {|x| x[:distribution][:status] = 'Deployed'}
       }
     }
   end
@@ -43,7 +43,7 @@ class TestCloudFront < Minitest::Test
   def test_cloudfront_create
     Aws.config[:cloudfront][:stub_responses][:get_distribution_config] = ['NoSuchDistribution']
     Aws.config[:cloudfront][:stub_responses][:list_distributions] = distribution_list
-    assert_output (<<STR) { AWS::CloudFront.create_or_update }
+    assert_output (<<STR) {AWS::CloudFront.create_or_update}
 pegasus distribution created!
 dashboard distribution created!
 hourofcode distribution created!
@@ -64,7 +64,8 @@ STR
     ).merge(distribution[:distribution_config].except(
       :caller_reference,
       :default_root_object,
-      :logging)
+      :logging
+    )
     ).merge(
       aliases: {
         quantity: 3,
@@ -73,7 +74,7 @@ STR
     )
     Aws.config[:cloudfront][:stub_responses][:list_distributions] =
       distribution_list [distribution_summary]
-    assert_output (<<STR) { AWS::CloudFront.create_or_update }
+    assert_output (<<STR) {AWS::CloudFront.create_or_update}
 pegasus distribution updated!
 dashboard distribution updated!
 hourofcode distribution updated!

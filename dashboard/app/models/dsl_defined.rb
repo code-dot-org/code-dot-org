@@ -34,7 +34,7 @@ class DSLDefined < Level
   end
 
   def self.setup(data)
-    level = find_or_create_by({ name: data[:name] })
+    level = find_or_create_by({name: data[:name]})
     level.send(:write_attribute, 'properties', {})
 
     level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties])
@@ -62,6 +62,7 @@ class DSLDefined < Level
       # Parse data, save updated level data to database
       data, i18n = dsl_class.parse(text, '')
       level_params.delete(:name)
+      level_params.delete(:type) if data[:properties][:type]
       data[:properties].merge! level_params
 
       if old_name && data[:name] != old_name
@@ -136,6 +137,11 @@ class DSLDefined < Level
 
   def encrypted=(value)
     properties['encrypted'] = value
+  end
+
+  # don't allow markdown in DSL levels unless child class overrides this
+  def supports_markdown?
+    false
   end
 
   private

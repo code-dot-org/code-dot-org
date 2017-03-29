@@ -26,7 +26,7 @@ Dashboard::Application.configure do
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
   config.public_file_server.enabled = true
-  config.public_file_server.headers = { 'Cache-Control' => "public, max-age=86400, s-maxage=43200" }
+  config.public_file_server.headers = {'Cache-Control' => "public, max-age=86400, s-maxage=43200"}
 
   # Compress JavaScripts and CSS.
   # webpack handles js compression for us
@@ -85,9 +85,6 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
 
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = false
-
   config.lograge.enabled = true
 
   # don't act like a levelbuilder by default
@@ -96,4 +93,8 @@ Dashboard::Application.configure do
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time
   config.skip_script_preload = false
+
+  # The activities_old table should not be part of the schema
+  # DELETE_ME when the activities old table gets removed
+  ActiveRecord::SchemaDumper.ignore_tables = ["activities_old"]
 end

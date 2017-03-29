@@ -10,18 +10,38 @@ const style = {
     // see https://facebook.github.io/react/tips/style-props-value-px.html
     lineHeight: `${LINE_HEIGHT}px`,
     paddingBottom: 8
+  },
+  subStep: {
+    fontWeight: 'normal'
+  },
+  heading: {
+    fontSize: 'larger',
+    fontWeight: 'bold',
+    marginTop: 10
+  },
+  subheading: {
+    fontStyle: 'italic',
+    marignBottom: 10
   }
 };
 
-export default function NumberedSteps(props) {
+/**
+ * Custom 'ordered list' implementation with layout for the crypto widget.
+ * @param {number} [start] - if provided, starts numbering at this value.
+ *        Defaults to "1."
+ * @param children - List item contents.
+ */
+export default function NumberedSteps({start = 1, children}) {
   return (
     <table>
       <tbody>
-        {React.Children.map(props.children, (child, index) => React.cloneElement(child, {index}))}
+        {React.Children.map(children, (child, index) =>
+          React.cloneElement(child, {index: index + (start - 1)}))}
       </tbody>
     </table>);
 }
 NumberedSteps.propTypes = {
+  start: React.PropTypes.number,
   children: AnyChildren
 };
 
@@ -51,86 +71,36 @@ Step.defaultProps = {
   index: 0
 };
 
-if (BUILD_STYLEGUIDE) {
-  NumberedSteps.styleGuideExamples = storybook => {
-    return storybook
-      .storiesOf('NumberedSteps', module)
-      .addStoryTable([
-        {
-          name: 'Steps with prerequisites',
-          description: `You can pass requirements to each step.  Steps with
-          unmet requirements (null or undefined) will be displayed at 20%
-          opacity.`,
-          story: () => (
-            <NumberedSteps>
-              <Step requires={['something', 'something else'].every(s => typeof s === 'string')}>
-                Step with all requirements met.
-              </Step>
-              <Step requires={[true, true, false].every(x => x)}>
-                Step with an unmet requirement
-              </Step>
-            </NumberedSteps>)
-        },
-        {
-          name: 'Fade effect',
-          description: `Steps fade in and out as their requirements are met/unmet`,
-          story: () => {
-            const FadeEffectExample = React.createClass({
-              getInitialState() {
-                return {};
-              },
-
-              onToggleStep1() {
-                this.setState({step1Done: !this.state.step1Done});
-              },
-
-              onToggleStep2() {
-                this.setState({step2Done: !this.state.step2Done});
-              },
-
-              onToggleStep3() {
-                this.setState({step3Done: !this.state.step3Done});
-              },
-
-              render() {
-                const {step1Done, step2Done, step3Done} = this.state;
-                return (
-                  <NumberedSteps>
-                    <Step>
-                      Click to complete this step: <a href="#" onClick={this.onToggleStep1}>{step1Done ? '' : 'Not'} Done</a>
-                    </Step>
-                    <Step requires={step1Done}>
-                      This step depends only on step one.
-                      <br/>Click to complete this step: <a href="#" onClick={this.onToggleStep2}>{step2Done ? '' : 'Not'} Done</a>
-                    </Step>
-                    <Step requires={step2Done}>
-                      This step depends only on step two.
-                      <br/>Click to complete this step: <a href="#" onClick={this.onToggleStep3}>{step3Done ? '' : 'Not'} Done</a>
-                    </Step>
-                    <Step requires={step1Done && step2Done && step3Done}>
-                      This step depends on all preceding steps.
-                    </Step>
-                  </NumberedSteps>);
-              }
-            });
-            return <FadeEffectExample/>;
-          }
-        },
-        {
-          name: 'Holds any content',
-          description: `By default, NumberedSteps just works like an <ol> element
-          with particular spacing and styling.`,
-          story: () => (
-            <NumberedSteps>
-              <Step>
-                Arbitrary content here.
-                <p>With multiple lines.</p>
-              </Step>
-              <Step>
-                More arbitrary content here.
-              </Step>
-            </NumberedSteps>)
-        }
-      ]);
-  };
+/**
+ * A styled list item for use within a step.
+ */
+export function SubStep({text}) {
+  return (
+    <li style={style.subStep}>
+      {text}
+    </li>
+  );
 }
+SubStep.propTypes = {
+  text: React.PropTypes.string.isRequired
+};
+
+export function Heading({text}) {
+  return (
+    <div style={style.heading}>
+      {text}
+    </div>
+  );
+}
+Heading.propTypes = {
+  text: React.PropTypes.string.isRequired
+};
+
+export function Subheading({text}) {
+  return (
+    <div style={style.subheading}>
+      {text}
+    </div>
+  );
+}
+Subheading.propTypes = {...Heading.propTypes};

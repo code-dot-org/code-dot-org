@@ -5,12 +5,14 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
+import weblabMsg from '@cdo/weblab/locale';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import reducers from './reducers';
 import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
+import project from '@cdo/apps/code-studio/initApp/project';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
@@ -96,6 +98,7 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
+  config.baseShareUrl = 'https://codeprojects.org';
 
   config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {
@@ -121,6 +124,8 @@ WebLab.prototype.init = function (config) {
   };
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
+
+  config.prepareForRemix = this.prepareForRemix.bind(this);
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
@@ -163,8 +168,11 @@ WebLab.prototype.init = function (config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
+    documentationUrl: 'https://docs.code.org/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
   });
+
+  this.readOnly = config.readonlyWorkspace;
 
   function onAddFileHTML() {
     this.brambleHost.addFileHTML();
@@ -175,9 +183,11 @@ WebLab.prototype.init = function (config) {
   }
 
   function onAddFileImage() {
-    dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
-      showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
-      useFilesApi: config.useFilesApi
+    project.autosave(() => {
+      dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
+        showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
+        useFilesApi: config.useFilesApi
+      });
     });
   }
 
@@ -190,7 +200,9 @@ WebLab.prototype.init = function (config) {
   }
 
   function onRefreshPreview() {
-    this.brambleHost.refreshPreview();
+    project.autosave(() => {
+      this.brambleHost.refreshPreview();
+    });
   }
 
   let inspectorOn = false;
@@ -205,7 +217,7 @@ WebLab.prototype.init = function (config) {
   }
 
   function onFinish() {
-    window.dashboard.project.autosave(() => {
+    project.autosave(() => {
       this.studioApp_.report({
         app: 'weblab',
         level: this.level.id,
@@ -234,20 +246,13 @@ WebLab.prototype.init = function (config) {
       />
     </Provider>
   ), document.getElementById(config.containerId));
-};
 
-const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
-/**
- * @returns the absolute url to the root of this project without a trailing slash.
- *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
- */
-function getProjectUrl() {
-  const match = location.href.match(PROJECT_URL_PATTERN);
-  if (match) {
-    return match[1];
-  }
-  return location.href; // i give up. Let's try this?
-}
+  window.onbeforeunload = evt => {
+    if (project.hasOwnerChangedProject()) {
+      return weblabMsg.confirmExitWithUnsavedChanges();
+    }
+  };
+};
 
 WebLab.prototype.renderFooterInSharedMode = function (container, copyrightStrings) {
   var footerDiv = document.createElement('div');
@@ -267,7 +272,7 @@ WebLab.prototype.renderFooterInSharedMode = function (container, copyrightString
 */
     {
       text: commonMsg.openWorkspace(),
-      link: getProjectUrl() + '/view',
+      link: project.getProjectUrl('/view'),
     },
     {
       text: commonMsg.copyright(),
@@ -320,6 +325,12 @@ WebLab.prototype.getCodeAsync = function () {
   });
 };
 
+WebLab.prototype.prepareForRemix = function () {
+  return new Promise((resolve, reject) => {
+    filesApi.prepareForRemix(resolve);
+  });
+};
+
 // Called by Bramble to get source files to initialize with
 WebLab.prototype.getStartSources = function () {
   return this.startSources;
@@ -331,7 +342,7 @@ WebLab.prototype.getCurrentFileEntries = function () {
 };
 
 WebLab.prototype.getCurrentFilesVersionId = function () {
-  return dashboard.project.filesVersionId || this.initialFilesVersionId;
+  return project.filesVersionId || this.initialFilesVersionId;
 };
 
 // Called by Bramble when a file has been deleted
@@ -339,7 +350,7 @@ WebLab.prototype.deleteProjectFile = function (filename, callback) {
   filesApi.deleteFile(
     filename,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not deleted`);
@@ -354,7 +365,7 @@ WebLab.prototype.renameProjectFile = function (filename, newFilename, callback) 
     filename,
     newFilename,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
@@ -369,7 +380,7 @@ WebLab.prototype.changeProjectFile = function (filename, fileData, callback) {
     filename,
     fileData,
     xhr => {
-      callback(null, dashboard.project.filesVersionId);
+      callback(null, project.filesVersionId);
     },
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
@@ -389,11 +400,17 @@ WebLab.prototype.registerBeforeFirstWriteHook = function (hook) {
 
 // Called by Bramble when project has changed
 WebLab.prototype.onProjectChanged = function () {
-  // let dashboard project object know project has changed, which will trigger autosave
-  dashboard.project.projectChanged();
+  if (!this.readOnly) {
+    // let dashboard project object know project has changed, which will trigger autosave
+    project.projectChanged();
+  }
 };
 
-// Called by Bramble host to set our reference to its interfaces
+/*
+ * Called by Bramble host to set our reference to its interfaces
+ * @param {!Object} bramble host interfaces
+ * @return {String} current project id
+ */
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
   this.brambleHost.onBrambleReady(() => {
@@ -402,6 +419,12 @@ WebLab.prototype.setBrambleHost = function (obj) {
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
+  return project.getCurrentId();
+};
+
+// Called by Bramble host to get page constants
+WebLab.prototype.getPageConstants = function () {
+  return this.studioApp_.reduxStore.getState().pageConstants;
 };
 
 /**
@@ -440,7 +463,7 @@ WebLab.prototype.loadFileEntries = function () {
       // After we've detected the first change to the version, we store this
       // version id so that subsequent writes will continue to replace the
       // current version (until the browser page reloads)
-      dashboard.project.filesVersionId = result.filesVersionId;
+      project.filesVersionId = result.filesVersionId;
     }
     if (this.brambleHost) {
       this.brambleHost.syncFiles(() => {});

@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire community.
+# Kod saatini topluluğunuzun tamamına nasıl getirirsiniz.
 
 [col-33]
 
@@ -20,9 +20,9 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
 
 ## Tüm okulların katılmasını sağlayın, her öğrenci öğrensin!
 
-  1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
+  1. Bilgisayar bilimleri eğitiminin neden önemli olduğunu gösteren bir çağrı cihazımızı okuyun, ve Hour of Code'u destekelemek için nasıl yardım edebilirsin. [Bir çağrı cihazı burada olsun.](/files/hoc-one-pager-public-officials-2016.pdf)
 
-  2. **Recruit local schools and districts.** Use [this email](%= resolve_url('/promote/resources#sample-emails') %) or [this blurb](%= resolve_url('/promote/stats') %) as a starting point, and take a look at this [how-to](%= resolve_url('/how-to') %) for schools and districts.
+  2. **İşe yerel okul ve ilçe.** [Bu e-posta](%= resolve_url('/promote/resources#sample-emails') %) veya [Bu cümle](%= resolve_url('/promote/stats') %) bir başlangıç noktası olarak kullanın ve bu [nasıl yapılır](%= resolve_url('/how-to') %) okul ve ilçe için bir göz atın.
 
   3. **Host an Hour of Code event.** See our [event how-to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
 

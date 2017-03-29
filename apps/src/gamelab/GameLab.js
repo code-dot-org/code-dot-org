@@ -8,7 +8,7 @@ import experiments from '../util/experiments';
 import {
   outputError,
   injectErrorHandler
-} from '../javascriptMode';
+} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');
@@ -17,13 +17,16 @@ var consoleApi = require('../consoleApi');
 var utils = require('../utils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
-var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
+import {
+  initializeSubmitHelper,
+  onSubmitComplete
+} from '../submitHelper';
 var dom = require('../dom');
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 
@@ -43,6 +46,8 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
+import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -77,9 +82,6 @@ var GameLab = function () {
 
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
-
-  /** @type {JsDebuggerUi} */
-  this.debugger_ = null;
 
   this.eventHandlers = {};
   this.Globals = {};
@@ -122,9 +124,7 @@ module.exports = GameLab;
  */
 GameLab.prototype.log = function (object) {
   this.consoleLogger_.log(object);
-  if (this.debugger_) {
-    this.debugger_.log(object);
-  }
+  this.studioApp_.reduxStore.dispatch(jsDebugger.appendLog(object));
 };
 
 /**
@@ -204,6 +204,7 @@ GameLab.prototype.init = function (config) {
 
   config.centerEmbedded = false;
   config.wireframeShare = true;
+  config.responsiveEmbedded = true;
   config.noHowItWorks = true;
 
   config.shareWarningInfo = {
@@ -211,7 +212,9 @@ GameLab.prototype.init = function (config) {
       return this.hasDataStoreAPIs(this.studioApp_.getCode());
     }.bind(this),
     onWarningsComplete: function () {
-      window.setTimeout(this.studioApp_.runButtonClick, 0);
+      if (config.share) {
+        window.setTimeout(this.studioApp_.runButtonClick, 0);
+      }
     }.bind(this)
   };
 
@@ -244,6 +247,10 @@ GameLab.prototype.init = function (config) {
     // about these functions not being called:
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
 
+    // Ignore user's code on embedded levels, so that changes made
+    // to starting code by levelbuilders will be shown.
+    config.ignoreLastAttempt = config.embed;
+
     this.studioApp_.init(config);
 
     var finishButton = document.getElementById('finishButton');
@@ -251,11 +258,11 @@ GameLab.prototype.init = function (config) {
       dom.addClickTouchEvent(finishButton, this.onPuzzleComplete.bind(this, false));
     }
 
-    if (this.debugger_) {
-      this.debugger_.initializeAfterDomCreated({
-        defaultStepSpeed: 1
-      });
-    }
+    initializeSubmitHelper({
+      studioApp: this.studioApp_,
+      onPuzzleComplete: this.onPuzzleComplete.bind(this),
+      unsubmitUrl: this.level.unsubmitUrl
+    });
 
     this.setCrosshairCursorForPlaySpace();
   }.bind(this);
@@ -269,7 +276,12 @@ GameLab.prototype.init = function (config) {
   var showDebugConsole = !config.hideSource;
 
   if (showDebugButtons || showDebugConsole) {
-    this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this), this.studioApp_.reduxStore);
+    this.studioApp_.reduxStore.dispatch(jsDebugger.initialize({
+      runApp: this.runButtonClick,
+    }));
+    if (config.level.expandDebugger) {
+      this.studioApp_.reduxStore.dispatch(jsDebugger.open());
+    }
   }
 
   this.studioApp_.setPageConstants(config, {
@@ -283,6 +295,9 @@ GameLab.prototype.init = function (config) {
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
     isIframeEmbed: !!config.level.iframeEmbed,
+    isProjectLevel: !!config.level.isProjectLevel,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted,
   });
 
   if (startInAnimationTab(this.studioApp_.reduxStore.getState())) {
@@ -312,6 +327,15 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
   store.subscribe(() => {
     var lastState = state;
     state = store.getState();
+
+    const awaitingContainedLevel = this.studioApp_.hasContainedLevels &&
+      !hasValidContainedLevelResult();
+
+    if (state.interfaceMode !== lastState.interfaceMode &&
+        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+        !awaitingContainedLevel) {
+      this.studioApp_.resetButtonClick();
+    }
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);
@@ -439,9 +463,7 @@ GameLab.prototype.reset = function (ignore) {
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
-  if (this.debugger_) {
-    this.debugger_.detach();
-  }
+  this.studioApp_.reduxStore.dispatch(jsDebugger.detach());
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -468,7 +490,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 };
 
-GameLab.prototype.onPuzzleComplete = function () {
+GameLab.prototype.onPuzzleComplete = function (submit ) {
   if (this.executionError) {
     this.result = this.studioApp_.ResultType.ERROR;
   } else {
@@ -518,7 +540,7 @@ GameLab.prototype.onPuzzleComplete = function () {
   this.waitingForReport = true;
 
   const sendReport = () => {
-    const onComplete = this.onReportComplete.bind(this);
+    const onComplete = submit ? onSubmitComplete : this.onReportComplete.bind(this);
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
@@ -530,9 +552,9 @@ GameLab.prototype.onPuzzleComplete = function () {
         level: this.level.id,
         result: levelComplete,
         testResult: this.testResults,
+        submitted: submit,
         program: program,
         image: this.encodedFeedbackImage,
-        submitted: false,
         onComplete
       });
     }
@@ -556,10 +578,6 @@ GameLab.prototype.onPuzzleComplete = function () {
       }.bind(this)
     });
   }
-};
-
-GameLab.prototype.onSubmitComplete = function (response) {
-  window.location.href = response.redirect;
 };
 
 /**
@@ -589,6 +607,9 @@ GameLab.prototype.runButtonClick = function () {
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
     shareCell.className = 'share-cell-enabled';
+
+    // Adding completion button changes layout.  Force a resize.
+    this.studioApp_.onResize();
   }
 
   postContainedLevelAttempt(this.studioApp_);
@@ -792,9 +813,7 @@ GameLab.prototype.initInterpreter = function () {
   window.tempJSInterpreter = this.JSInterpreter;
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
-  if (this.debugger_) {
-    this.debugger_.attachTo(this.JSInterpreter);
-  }
+  this.studioApp_.reduxStore.dispatch(jsDebugger.attach(this.JSInterpreter));
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
@@ -1056,7 +1075,6 @@ GameLab.prototype.handleExecutionError = function (err, lineNumber) {
   outputError(String(err), lineNumber);
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
-  // TODO: Call onPuzzleComplete?
 };
 
 /**

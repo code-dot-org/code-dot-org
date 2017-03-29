@@ -1,4 +1,6 @@
 /* global $ appOptions dashboard options */
+// This file does not pass eslint.
+/* eslint-disable */
 
 /**
  * Pixelation widget for visualizing image encoding.
@@ -72,6 +74,10 @@ function initProjects() {
   if (appOptions.channel) {
     window.apps.setupProjectsExternal();
     var sourceHandler = {
+      setMakerAPIsEnabled: function (_) {},
+      getMakerAPIsEnabled: function () {
+        return false;
+      },
       setInitialLevelHtml: function (levelHtml) {},
       getLevelHtml: function () {
         return '';
@@ -96,6 +102,15 @@ function initProjects() {
               var binCode = pixel_data.value.replace(/[^01]/gi, "");
               callback(isHexLevel() ? binToHexPvt(binCode) : binCode);
             }
+          }
+        }
+      },
+      prepareForRemix: function () {
+        return {
+          // this method is expected to return a Promise. Since this file does not go through our
+          // pipeline and can't be ES6, return a "then" method with a Promise-like interface
+          then: function(callback) {
+            callback();
           }
         }
       }
@@ -560,12 +575,12 @@ function onFinishedButtonClick() {
   if (!appOptions.readonlyWorkspace && options.saveProject) {
     options.saveProject(onSaveProjectComplete);
   } else {
-    dashboard.dialog.processResults(onComplete);
+    dashboard.widget.processResults(onComplete);
   }
 }
 
 function onSaveProjectComplete() {
-  dashboard.dialog.processResults(onComplete);
+  dashboard.widget.processResults(onComplete);
 }
 
 /**
@@ -584,7 +599,7 @@ function onComplete(willRedirect) {
  * level to its initial state, losing any of their own work on that level.
  */
 function startOverClicked() {
-  dashboard.dialog.showStartOverDialog(startOverConfirmed);
+  dashboard.widget.showStartOverDialog(startOverConfirmed);
 }
 
 function startOverConfirmed() {

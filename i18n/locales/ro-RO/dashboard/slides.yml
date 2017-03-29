@@ -1704,7 +1704,7 @@ ro:
         text: "Buna, numele meu este Jane si sunt designerul creativ al Minecraft. In urmatoarea ora, iti vei face propriul joc Minecraft. Acesta arata ca un Minecraft insa lumea s-a oprit. Oile nu se misca, gainile nu fac oua iar zombi doar stau nemiscati. Ramane ca tu sa adaugi codul pentru a realiza lumea Minecraft."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'Numele meu este Melissa si sunt cercetator la Minecraft. Sunt foarte interesata dece gandesc oamenii si cum interactioneaza acestia cu tehnologia asa ca acesta este job-ul perfect pentru mine de a pune laolalta ingineria computerului si psihologia: cum oamenii gandesc si cum se comporta.'
+        text: 'Numele meu este Melissa si sunt cercetator la Minecraft. Sunt foarte interesata de ce gandesc oamenii si cum interactioneaza acestia cu tehnologia asa ca acesta este job-ul perfect pentru mine de a pune laolalta ingineria computerului si psihologia: cum oamenii gandesc si cum se comporta.'
       3:
         image: 'notes/mc_2016_intro_3.jpg'
         text: "Veţi vedea ca ecranul este împărţit în trei părţi principale. 1) Pe partea stângă este jocul Minecraft. Acum lumea este îngheţata, dar vom repara asta cu blocurile de cod."
@@ -1729,7 +1729,7 @@ ro:
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'
-        text: "Buna, eu sunt Lisa. Sunt programator software pentru Minecraft si lucrez cu unele dintre enimalele si inamicii din joc. Unul dintre animalele la care am lucrat este ocelotul. Am lucrat la partea in care poti da ocelotului un peste pentru a-l imblanzi si a-l transforma in pisica ta."
+        text: "Buna, eu sunt Lisa. Sunt programator software pentru Minecraft si lucrez cu unele dintre animalele si inamicii din joc. Unul dintre animalele la care am lucrat este ocelotul. Am lucrat la partea in care poti da ocelotului un peste pentru a-l imblanzi si a-l transforma in pisica ta."
       2:
         image: 'notes/mc_2016_loops_2.jpg'
         text: "Ca oameni, devenim plictisiti cand avem de facut acelasi lucru din nou si din nou. Dar lucrul cool despre computere este ca pot face acelasi lucru de milioane de ori fara a se plictisi. Aceasta repetitie se numeste bucla si fiecare creatura din Minecraft foloseste bucle."
@@ -1748,14 +1748,14 @@ ro:
         text: "Dar ce se întâmplă când îl folosiţi? În Minecraft, oile lasa lână atunci când le tundeti, vacile fug când le lovesti şi lianele explodeaza atunci când ajungi langa ele. Aceste reacţii se întâmplă datorită a ceva numit evenimente. Evenimente spun programului tău să asculte sau să aştepte pentru atunci când ceva se întâmplă. Şi când se intampla, se efectueaza o acţiune."
       4:
         image: 'notes/mc_2016_events_4.jpg'
-        text: "Până în prezent, ai folosit un singur eveniment. Codul pus în slotul \"atunci când apare\" se execută atunci când creatura ta este creata sau atunci când începe jocul. Peste următoarele câteva niveluri veţi avea sloturi noi pentru evenimente cum ar fi \"atunci când atins\" care se execută atunci când vă atingeţi creatura sau \"cand e folosit\" pentru atunci când utilizaţi creatura. Sau, dacă doriţi ca zombieul să dispară când soarele apare, puneti comanda in blocul \"atunci cand zi\""
+        text: "Până în prezent, ai folosit un singur eveniment. Codul pus în slotul \"cand generat\" se execută atunci când creatura ta este creata sau atunci când începe jocul. Peste următoarele câteva niveluri veţi avea sloturi noi pentru evenimente cum ar fi \"atunci când atins\" care se execută atunci când vă atingeţi creatura sau \"cand e folosit\" pentru atunci când utilizaţi creatura. Sau, dacă doriţi ca zombieul să dispară când soarele apare, puneti comanda in blocul \"atunci cand zi\""
     mc_2016_spawn:
       1:
         image: 'notes/mc_2016_spawn_1.jpg'
-        text: "În jocuri, \"a aparea\" înseamnă acelaşi lucru ca a crea. La acest nivel, facem Zombieul sa apara atunci cand apune soarele. Pentru aceasta, vom folosi blocul \"atunci când noapte\"."
+        text: "În jocuri, \"a genera\" înseamnă acelaşi lucru ca a crea. La acest nivel, facem Zombieul sa apara atunci cand apune soarele. Pentru aceasta, vom folosi blocul \"atunci când noapte\"."
       2:
         image: 'notes/mc_2016_spawn_2.jpg'
-        text: "Deoarece vrem ca zombiul sa apara noaptea, vom adauga blocul \"cand apare\" sub cel \"cand noapte\". De îndată ce acestia apar, fiecare zombie va rula codul pe care l-aţi pus în blocul \"atunci când apare\". Distreaza-te dand nastere la zombi!"
+        text: "Deoarece vrem ca zombiul sa apara noaptea, vom adauga blocul \"cand generat\" sub cel \"cand noapte\". De îndată ce acestia apar, fiecare zombie va rula codul pe care l-aţi pus în blocul \"atunci când generat\". Distreaza-te dand nastere la zombi!"
     mc_2016_congrats:
       1:
         image: 'notes/mc_2016_congrats_1.jpg'

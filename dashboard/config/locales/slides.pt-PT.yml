@@ -729,8 +729,8 @@
         text: To get it there you circle the direction that it has to go.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: Create your algorithm by gluing arrows next to the map that you're trying
-          to solve. The second one it's the same but it's going down.
+        text: Crie o seu algoritmo colando setas no mapa que está a tentar resolver.
+          O segundo é o mesmo, mas vai para baixo.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
         text: It's like programming with paper. And that's it!

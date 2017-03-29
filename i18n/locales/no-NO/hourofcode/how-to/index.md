@@ -13,19 +13,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Se denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-I samarbeid med våre partnere har vi laget flere [morsomme entimes oppgaver](%= resolve_url('https://code.org/learn') %) tilpasset alderstrinn.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Elevstyrte kodetimeoppgaver:](%= resolve_url("https://code.org/learn") %)**
+**[Elevstyrte kodetimeoppgaver:](%= resolve_url('/learn') %)**
 
   * Krever minimalt med tid til forberedelser fra læreren
   * Er tilrettelagt for at studentene skal arbeide på egen hånd i eget tempo og tilpasset deres ferdighetsnivå
 
-**[Lærerstyrte kodetimeoppgaver:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Lærerstyrte kodetimeoppgaver:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Er oppgaver som krever at læreren gjør noen forberedelser
   * Er kategorisert etter klassetrinn *og*fag (f. eks. matte, engelsk etc.)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Spre ordet om Kodetimen
 
@@ -71,7 +71,7 @@ Den beste Kodetimen opplevelsen inkluderer Internett-tilkoblede datamaskiner. Me
 
 **Sett i gang elevene med aktiviteten**
 
-  * Skriv oppgavelenken på en tavle. Finn lenken under [informasjon for den valgte oppgaven](%= resolve_url('https://code.org/learn') %) under antall deltakere.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ Den beste Kodetimen opplevelsen inkluderer Internett-tilkoblede datamaskiner. Me
 
 **Hva kan jeg gjøre hvis en elev blir tidlig ferdig?**
 
-  * Elevene kan gå finne flere aktiviteter her: <%= resolve_url('code.org/learn') %>[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Eller du kan be de elevene som blir fort ferdige om å hjelpe de som sliter med å få det til.
 
 [col-33]

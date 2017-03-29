@@ -38,8 +38,8 @@
           da zgradiš tvoj program. Da zbrišeš blok, ga povleci do smetnjaka v kotu.
       10:
         image: notes/hoc1_10.jpg
-        text: Vsak blok je eno navodilo. Če povlečete blok "korak naprej" v delovno
-          mesto in pritisnete "Zaženi program", se ptič premakne za en prostor v labirintu.
+        text: Vsak blok je eno navodilo. Če povlečeš blok "korak naprej" na delovni
+          površini in pritisneš "Zaženi", se ptič premakne za en prostor v labirintu.
       11:
         image: notes/hoc1_11.jpg
         text: "Če želite narediti več kot eno dejanje, lahko povlečete več blokov
@@ -351,10 +351,9 @@
           if statements, and if else statements.
       3:
         image: notes/hoc6_3.jpg
-        text: If you liked your first hour of code, visit code.org to continue your
-          education into computer science! Once you complete our 20 hour course, you'll
-          have mastered the basics of programming, and can start learning how to write
-          phone apps, robot instructions, games, you name it.
+        text: |-
+          Če ti je prva Ura kode bili všeč, obišči code.org in nadaljuj učenje o računalništvu!
+          Ko boš končal 20 urni tečaj, boš znal osnove programiranja in se boš lahko začel učiti pisati mobilne aplikacije, navodila za robote, igre ali karkoli si želiš.
       4:
         image: notes/hoc6_4.jpg
         text: 'Technology is changing everything we do and it doesn''t matter if you''re
@@ -412,8 +411,8 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Spomni se, da lahko spreminjaš število pikslov in stopinj s klikom na
+          puščice zraven njih.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -440,8 +439,8 @@
           Right" block inside a "Repeat" block.
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Spomni se, da lahko spreminjaš številko znotraj bloka "ponovi" na karkoli
+          in to, kar je znotraj bloka, se bo tolikokrat ponovilo.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
@@ -538,12 +537,12 @@
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
+          igro ponavljalo ves čas.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Če želimo, da lik dela nekaj ponavljajoče, brez da mora igralec storiti
+          karkoli, bomo te bloke postavili znotraj "ponavljaj neskončno" bloka.
       3:
         image: notes/playlab_repeat_forever_3.png
         text: In this next puzzle, our goal is to help the wizard patrol the boundaries
@@ -561,10 +560,10 @@
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: Aren't bees super cool? In this next set of puzzles, your goal is to
-          help the bee get to the flowers and get nectar from the flowers and fly
-          over to the honeycomb to make honey. You'll need to use the "get nectar"
-          and the "make honey" blocks for this exercise.
+        text: Niso čebelice super? V naslednji zbirki ugank je tvoja naloga pomagati
+          čebelici, da pride do rože in pridobi med iz cveta, nato pa odleti naprej
+          do satovja in naredi med. Uporabiti moraš bloka "dobi nektar" in "naredi
+          med".
       2:
         image: notes/C1_bee_level_intro_2.png
         text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We
@@ -580,15 +579,14 @@
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: A loop is a repetition of activity. So going into a hive to inspect,
-          I look at a frame and then I put it back, so I repeat that same activity
-          multiple times. It's looping around, doing the same activity multiple times.
+        text: Zanka je ponavljanje dejavnosti. Ko grem pregledat panj, pogledam vsak
+          okvir in ga nato postavim nazaj, torej to aktivnost večkrat ponovim. To
+          je zankanje, ponavljanje iste dejavnosti večkrat.
       2:
         image: notes/C1_bee_loops_2.png
-        text: In this level, we want the bee to collect three nectars from the flower.
-          Instead of using three "get nectar" blocks, you're going to use the repeat
-          block to get nectar three times. Hit "Run" and see if you got it right.
-          Nice!
+        text: Na tej ravni želimo, da čebelica dobi tri nektarje iz rože. Namesto
+          uporabe treh "dobi nektar" blokov boš uporabil blok "ponavljaj", da dobiš
+          tri nektarje. Pritisni "zaženi" in poglej, če si naredil pravilno. Lepo!
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
@@ -711,58 +709,57 @@
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Debugging is finding and fixing problems. There are lots of ways to
-          debug problems. One of the easiest is to move step by step until where you
-          find where something goes wrong. Here I'm trying to do a back handspring
-          on the beam but I keep falling off.
+        text: Razhroščevanje je iskanje in reševanje težav. Obstaja veliko različnih
+          načinov za razhroščevanje. Eden najlažjih je, da se premikaš korak za korakom,
+          dokler ne prideš do mesta, kjer gre nekaj narobe. Tukaj poskušam narediti
+          premet na gredi, ampak konstatno padam dol.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: "Šla sem skozi vsak del korak po koraku in ugotovila, kje je moja napaka.
+          Svojih rok nisem pravilno položila na gredo. Poskusila sem narediti še en
+          premet z novo pozicijo rok in mi je uspelo. Bila sem zelo zadovoljna, da
+          sem razhroščila svoj premet."
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: Da bi se naučili razhroščevanja, bomo začeli z množico blokov, ki je
+          že na delovni površini. Opaziš lahko, da te ti bloki ne bodo popeljali do
+          cilja. Potrebno bo razhroščiti kodo in jo popraviti. Kaj je šlo narobe?
+          Opaziš lahko, da bi moral/a iti še za en blok proti zahodu.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: Let's fix this by adding another west block and hitting run to see if
-          you got it right. Yay, you got it!
+        text: Popravi to z dodajanjem še enega bloka W in pritiskom na zagon, da vidiš,
+          če je pravilno. Super, uspelo ti je!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: Tukaj moraš pripeljati ptiča do prašička. Poglej to uganko in ugotovi,
+          v katero smer se mora premakniti.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: You need to drag the blocks over from the toolbox to the workspace.
-          Make sure it's under the "when run" block and when you think you've got
-          the right solution, then you can click "Run" and watch the bird go to the
-          pig.
+        text: Bloke moraš potegniti iz prostora za bloke na delovno površino. Prepričaj
+          se, da je tvoj blok pod blokom "ob zagonu". Ko misliš, da imaš pravo rešitev,
+          klikni "zaženi" in glej, kako se ptič premakne do prašička.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Ena stvar, pri kateri so računalniki res dobri, je ponavljanje ukazov.
+          Človeku bi postalo res dolgčas, če bi moral neko stvar zaporedoma spet in
+          spet ponavljati. Računalnik pa lahko naredi eno in isto stvar milijonkrat
+          ali celo milijardo krat in se ne dolgočasi ter je sposoben izvesti to res
+          dobro.
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Na primer, če želim vsem na Facebooku-u zaželeti vse najboljše za rojstni
+          dan tako, da mu pošljemo sporočilo, bi trajalo celo stoletje, da bi dejansko
+          napisal vsa ta sporočila. A z le nekaj vrsticami kode lahko naredim, da
+          bo sistem poslal sporočilo s čestitko vsaki osebi na Facebook-u.
       3:
         image: notes/C1_maze_loops_3.png
-        text: To get the bird to the pig in this level... rather than drag three North
-          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
-          block on to the workspace and enter the number 3. Then drag the "move North"
-          block into the "repeat" block and hit "Run" to see if you got it right.
-          Congratulations, you got it!
+        text: Da bi pripeljali ptiča do prašička na tej stopnji... raje kot da premakneš
+          tri N bloke na delovno površino, uporabi blok "ponovi". Povleci blok "ponovi"
+          na delovno površino in vnesi številko 3. Potem povleci blok "premakni N"
+          v blok "ponovi" in pritisni "zaženi", da vidiš, če je pravilno. Čestitam,
+          obvladaš!
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
@@ -813,11 +810,11 @@
           to websites that are just right for me. Wow, dinosaurs!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The internet is a super fun place. But just like when you cross a street
-          in your neighborhood, you also have to be careful when you go online. Here
-          are three rules to remember. Rule number 1: Always ask your parents first.
-          Rule number 2: Only talk to people you know. Rule number 3: Stick to places
-          that are just right for you.'
+        text: 'Internet je zelo zabavno mesto. A prav tako kot pri prečkanju ceste,
+          moraš biti tudi na internetu previden, ko si na spletu. Zapomniti si moraš
+          tri pravila. Pravilo številka 1: Vedno najprej vprašaj starše za dovoljenje.
+          Pravilo številka 2: Govori le z ljudmi, ki jih poznaš. Pravilo številka
+          3: Drži se mest, ki so primerna zate.'
       7:
         image: notes/C1_going_places_safely_7.png
         text: Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to
@@ -825,30 +822,29 @@
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: Today we're going to learn about Pair Programming. In pair programming
-          you work as a team. Why should two people use one computer? Because two
-          heads are better than one. In pair programming you and your partner are
-          going to sit down together at one computer and you are both going to work
-          on the same project.
+        text: Danes se bomo učili o programiranju v paru. V programiranju v paru programerja
+          delujeta kot ekipa. Zakaj bi dva programerja uporabljala en računalnik?
+          Zato, ker dve glavi več vesta. V programiranju v paru ti in tvoj partner
+          sedita skupaj zraven enega računalnika in oba delata na istem projektu.
       2:
         image: notes/C1_pair_programming_2.png
-        text: In pair programming, one person is the driver and the other person is
-          the navigator, just like driving a car. The driver sits at the computer
-          and is the one using the keyboard and mouse or touchscreen and controlling
-          the main actions of the computer. The other person is the navigator. The
-          navigator helps the driver by answering the driver's questions and pointing
-          out potential problems or mistakes.
+        text: V programiranju v paru je ena oseba voznik, druga pa navigator, tako
+          kot pri vožnji avtomobila. Voznik sedi pri računalniku in uporablja tipkovnico
+          in miško ali zaslon na dotik ter kontrolira glavne dejavnosti računalnika.
+          Druga oseba je navigator. Navigator pomaga vozniku tako, da odgovarja na
+          njegova vprašanja in izpostavlja težave ali napake.
       3:
         image: notes/C1_pair_programming_3.png
-        text: Communication is key to successful pair programming. No insults, be
-          respectful, don't be a bossy navigator, because nobody likes a backseat
-          driver. You and your partner should always be talking. The driver can explain
-          what she or he is doing. And the navigator can help suggest what to do next.
+        text: Komunikacija je ključ uspešnega programiranja v paru. Brez zmerljivk,
+          spoštljivost, brez ukazovalnosti navigatorja, ker nihče ne mara voznika
+          na zadnjem sedežu. S partnerjem se morata vedn pogovarjati. Voznik lahko
+          razloži, kaj dela, navigator pa lahko pomaga s predlogi, kaj narediti v
+          naslednjem koraku.
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver
-          focuses on the details. Both roles are important. Pair programming is all
-          about working together as a team.
+        text: Navigator naj bi razmišljal o širši sliki, voznik pa naj bi se koncentriral
+          na podrobnosti. Oba sta pomembna. Programiranje v paru je delovanje kot
+          ekipa.
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
@@ -887,109 +883,108 @@
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your
-          story will have actors and you will be able to make these actors talk and
-          interact with each other. Start thinking of what kind of story you want
-          to tell.
+        text: "Čas je, da si kreativen/a in uporabiš svoje svoje programerske sposobnosti
+          za pripovedovanje zgodbe. Tvoja zgodba bo imela igralce, ti pa boš lahko
+          pripravil/a te igralce, da bodo govorili in komunicirali med sabo. Začni
+          razmišljati, kakšno zgodbo želiš povedati."
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: The cat's always been afraid of the dog and what if the cat figures
-          out that the dog is trying to be nice? The "when run" block starts everything.
-          The "move" block will move your character and the "say" block will make
-          your character say whatever you type.
+        text: Mačka se je vedno bala psa. Kaj se zgodi, če mačka ugotovi, da želi
+          biti pes prijazen? Blok "ob zagonu" začne vse. Blok "premakni" bo premaknil
+          igralca, blok "reci (napiši)" pa bo posrbel, da bo tvoj igralec rekel to,
+          kar boš napisal/a.
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: This is the "when actors collide" block which you can link up to the
-          other blocks.
+        text: To je blok "ko se igralec dotakne drugega igralca", ki ga lahko povežeš
+          z drugimi bloki.
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: I was making the dog come over and say "Hi" but then the cat got scared
-          so it ran away. "Ahh" If there was more time, it would have been a happy
-          ending. The end!
+        text: Hotel sem narediti, da bi pes prišel in rekel "Zdravo", a se je mačka
+          prestrašila in zbežala. "Ahh" Če bi imel več časa, bi se srečno končalo.
+          Konec!
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee.
-          As it moves, it will collect letters to spell words.
+        text: To je raven črkovanja besed. Uporabi kose sestavljanke, da prestaviš
+          čebelico. Ko se premakne, bo pobrala črke in črkovala besede.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: See if you can spell the word they give you in the box below the stage.
-          But bee careful! Moving the wrong direction will add letters you don't want.
+        text: Poglej, če lahko črkuješ besedo, ki je napisana v okvirju pod poljem
+          s črkami. A bodi pozoren! Premik v napačno smer bo dodal črko, ki je ne
+          želiš.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Ena stvar, pri kateri so računalniki res dobri, je ponavljanje ukazov.
+          Človeku bi postalo res dolgčas, če bi moral neko stvar zaporedoma spet in
+          spet ponavljati. Računalnik pa lahko naredi eno in isto stvar milijonkrat
+          ali celo milijardo krat in se ne dolgočasi ter je sposoben izvesti to res
+          dobro.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday
-          by sending them an email, it might take me more than century to actually
-          write out all those emails to everyone. But with just a few lines of code,
-          I can have a system send an email to everyone on Facebook wishing them a
-          happy birthday.
+        text: Na primer, če želim vsem na Facebooku-u zaželeti vse najboljše za rojstni
+          dan tako, da mu pošljemo sporočilo, bi trajalo celo stoletje, da bi dejansko
+          napisal vsa ta sporočila. A z le nekaj vrsticami kode lahko naredim, da
+          bo sistem poslal sporočilo s čestitko vsaki osebi na Facebook-u.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: In this example, your goal is going to be to move the bird to get the
-          pig. Now, we're going to be able to use the repeat block in order to be
-          able to do this very easily. You can either do this by giving the computer
-          a move forward command five times in order to advance the bird one step
-          each time to the pig or you can just tell the computer to move forward once,
-          and then tell it to repeat that five times and it'll do the same thing.
+        text: V tem primeru je tvoj cilj premakniti ptico k prašičku. Da bi to čim
+          lažje naredili, bomo uporabili blok "ponovi". To lahko narediš tako, da
+          računalniku petkrat ukažeš "premakni se naprej", da premakneš ptico za pet
+          korakov naprej proti prašičku, ali pa mu enkrat rečeš "premakni se naprej"
+          in mu rečeš, naj to naredi petkrat. Rezultat bo enak.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: In order to do this, you drag your move forward command and then you
-          put it inside the repeat block. And you can click on it and tell it how
-          many times you  to repeat the block to tell it how many steps you want it
-          to take forward.
+        text: Da to narediš, vlečeš ukaz "premakni se naprej" in ga postaviš znotraj
+          bloka "ponovi". Nato klikneš nanj in mu poveš, kolikokrat naj ponovi blok,
+          s čimer poveš, koliko korakov naprej naj naredi.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: One more thing is you can put as many commands as you want inside the
-          repeat block. So in this example, you're telling it to move forward and
-          turn left, which it'll do five times. Have fun!
+        text: "Še ena stvar je, da lahko postaviš toliko ukazov, kolikor želiš znotraj
+          bloka ponovi. V tem primeru rečeš, naj se premakne naprej in zavije levo,
+          kar bo naredilo petkrat. Zabavaj se!"
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: Sploh ne bi mogli sodelovati na dirki, če ne bi imeli ljudi, ki so usposobljeni
+          na področju računalništva, zaradi količine podatkov, ki jih avtomobili zberejo
+          in zaradi potrebe po ljudeh, ki znajo pisati programe, s katerimi ugotavljajo,
+          kako izboljšati zmogljivost.
       2:
         image: notes/C2_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: V teh ugankah boš umetnik, ki uporablja svinčnik, da nariše različne
+          oblike. Kamorkoli tvoj umetnik gre, za sabo nariše črto.
       3:
         image: notes/C2_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: Za premikanje po platnu boš uporabljal blok "premakni se naprej". Tukaj
+          blok "premakni se naprej" pravi, da se premakneš za 100 pikslov. Kaj se
+          zgodi, ko pritisnemo "zaženi"? Umetnik se premakne naprej za določeno vrednost
+          in ta vrednost je 100 pikslov. Piskli so v resnici majhni kvadratki na zaslonu.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: Drugi blok, ki ga imamo v tej uganki, pravi "obrni se desno za 90 stopinj".
+          Ko ga uporabimo, to pomeni, da se bo umetnik obrnil za določeno vrednost.
+          Lahko se igraš s spreminjanjem vrednosti, da vidiš, kam se bo umetnik obrnil.
+          To je obrat za 90 stopinj.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: To je obrat za 120 stopinj. Zapomni si, da lahko spreminjaš te vrednosti
+          s klikom na puščice poleg številk za piksle ali stopinje. Uživaj pri risanju
+          s svojim umetnikom!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: To je pogojni blok. Piše, da ČE nektar ali med je manjše, enako ali
+          večje od števila, POTEM naredi nekaj.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: To je uporabno, če ne veš, koliko nektarja ali medu je potrebno dobiti
+          oziroma narediti, kot lahko vidimo tu z vprašanjem.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: 'V tem primeru bomo povedali: ČE ima vijolični cvet nektar, ki je večji
+          od 0, dobi nektar. To bo naši čebeli povedalo, da naj pridobiva nektar tako
+          dolgo, dokler ga je še kaj. Ta-da!'
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
@@ -1239,15 +1234,16 @@
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: Do sedaj si ustvarjal/a animacijo ali zgodbo, ki vsakič, ko jo zaženeš,
+          naredi točno isto stvar. Zdaj pa lahko narediš interaktivno igro, ki jo
+          lahko dejansko igraš.
       2:
         image: notes/C2_playlab_createastory_2.png
-        text: There are some new blocks to try out. There's the "when arrow" block
-          and the "move actor" block. You can put these blocks together to move the
-          actors around with the arrow keys. And there are some blocks that do stuff
-          when actors collide or are clicked. Check them out and have fun!
+        text: Tukaj je nekaj novih blokov, ki jih lahko preizkusiš. Tukaj sta bloka
+          "ko je pritisnjena puščica" in "premakni igralca". Te bloke lahko postaviš
+          skupaj, da premikaš igralce s pomočjo tipk s puščicami. Tu so tudi bloki,
+          ki naredijo nekaj, ko se igralci srečajo ali ko jih kliknemo. Preveri jih
+          in se zabavaj!
     C2_relay_programming:
       1:
         image: notes/C2_relay_programming_1.png
@@ -1312,70 +1308,69 @@
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Ena od super stvari pri računalniškem programiranju je, da ko računalnik
+          naučiš, kako izvesti neko dejanje, lahko to funkcijo znova pokličeš. Daš
+          ji ime in po tem imenu funkcijo pokličeš. To je res kot razširitev jezika.
       2:
         image: notes/C3_artist_functions_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square, so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code. It will get done
-          for us. We've added that concept to our programming language.
+        text: V programu, ki smo ga zgradili, smo se naučili, kako narisati kvadrat
+          s premikanjem in štirikratnim obračanjem. Tej funkciji lahko damo ime, nariši
+          kvadrat, tako da vsakič, ko bomo želeli to narediti, preprosto rečemo nariši
+          kvadrat in bo šlo nazaj ter bo sprožilo to funkcijo, to kodo. Izvršilo se
+          bo za nas. Ta koncept smo dodali v naš programski jezik.
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
-        text: You wouldn't even qualify for the race if you don't have people who
-          are proficient in computer science because of how much data the cars collect
-          and the necessity to be able to have people that can write programs to figure
-          out how you continue to figure out how to build performance.
+        text: Sploh ne bi mogli sodelovati na dirki, če ne bi imeli ljudi, ki so usposobljeni
+          na področju računalništva, zaradi količine podatkov, ki jih avtomobili zberejo
+          in zaradi potrebe po ljudeh, ki znajo pisati programe, s katerimi ugotavljajo,
+          kako izboljšati zmogljivost.
       2:
         image: notes/C3_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: V teh ugankah boš umetnik, ki uporablja svinčnik, da nariše različne
+          oblike. Kamorkoli tvoj umetnik gre, za sabo nariše črto.
       3:
         image: notes/C3_artist_intro_3.png
-        text: To move around the canvas, you'll use the move forward block. Here the
-          move forward block says move forward by 100 pixels. When we hit run, what
-          happens? The artist moves forward a certain amount and that amount is 100
-          pixels. Pixels are basically very tiny squares on your computer screen.
+        text: Za premikanje po platnu boš uporabljal blok "premakni se naprej". Tukaj
+          blok "premakni se naprej" pravi, da se premakneš za 100 pikslov. Kaj se
+          zgodi, ko pritisnemo "zaženi"? Umetnik se premakne naprej za določeno vrednost
+          in ta vrednost je 100 pikslov. Piskli so v resnici majhni kvadratki na zaslonu.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees.
-          And when we drag that out that makes our artist turn a certain amount. So
-          you can play around with how far you want the artist to turn. This is a
-          90 degree turn.
+        text: Drugi blok, ki ga imamo v tej uganki, pravi "obrni se desno za 90 stopinj".
+          Ko ga uporabimo, to pomeni, da se bo umetnik obrnil za določeno vrednost.
+          Lahko se igraš s spreminjanjem vrednosti, da vidiš, kam se bo umetnik obrnil.
+          To je obrat za 90 stopinj.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: To je obrat za 120 stopinj. Zapomni si, da lahko spreminjaš te vrednosti
+          s klikom na puščice poleg številk za piksle ali stopinje. Uživaj pri risanju
+          s svojim umetnikom!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: When you put a loop inside of another loop, we call that a nested loop.
-          For example, here we're given the code already to draw one triangle with
-          sides of length 100 pixels using the repeat times block set to three, once
-          for each side of a triangle.
+        text: Kadar vstavimo zanko znotraj druge zanke, to imenujmo ugnezdena zanka.
+          Tukaj imamo primer, kjer že imamo podano kodo, ki nariše trikotnik s stranicami
+          dolžine 100 pikslov z uporabo bloka "ponovi", nastavljenega na tri, enkrat
+          za vsako stranico trikotnika.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: But we want to draw six triangles. In order to do that, we're going
-          to take that loop and place it inside of another repeat times block. Pretty
-          cool!
+        text: Ampak mi želimo narisati šest trikotnikov. Da bi to lahko narisali,
+          bomo vzeli to zanko in jo postavili znotraj bloka "ponavljaj". Zelo zanimivo!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: This is the conditional block. It says IF there is nectar or honey that
-          is less than, equal to or greater than a number, THEN do something.
+        text: To je pogojni blok. Piše, da ČE nektar ali med je manjše, enako ali
+          večje od števila, POTEM naredi nekaj.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: To je uporabno, če ne veš, koliko nektarja ali medu je potrebno dobiti
+          oziroma narediti, kot lahko vidimo tu z vprašanjem.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: In this example, we're going to say IF the purple flower has nectar
-          greater than 0, get nectar. That will tell our bee to keep getting nectar
-          as long as it's there. Ta-dah!
+        text: 'V tem primeru bomo povedali: ČE ima vijolični cvet nektar, ki je večji
+          od 0, dobi nektar. To bo naši čebeli povedalo, da naj pridobiva nektar tako
+          dolgo, dokler ga je še kaj. Ta-da!'
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
@@ -1394,53 +1389,51 @@
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: One of the most important concepts in computer science is how to define
-          new commands, how to add your own words to a computer language. Most computer
-          languages have only about one hundred words or commands. The art and magic
-          is in defining your own new words out of these building blocks.
+        text: Eden od najbolj pomembnih konceptov v računalništvu je, kako definirati
+          nove ukaze, kako dodati svoje besede v računalniški jezik. Večina računalniški
+          jezikov ima samo približno sto besed ali ukazov. Umetnost in čarovnija je
+          pri definiranju svojih novih besed iz teh gradnikov.
       2:
         image: notes/C3_bee_functions_2.png
-        text: We do this all the time in sports. For example, in basketball, you start
-          by learning how to dribble, how to do a lay-up, how to rebound. Once you've
-          learned these really basic moves, you learn new moves and put together these
-          building blocks, like a pick and roll or give and go. You can then go from
-          there to do more complex plays. Once you learn that play and give it a name,
-          everybody on the team knows how to do it.
+        text: V športu to delamo ves čas. V košarki, na primer začneš z učenjem vodenja
+          žoge, kako polagati, kako skočiti za odbito žogo. Ko se enkrat naučiš teh
+          osnovnih gibov, se učiš novih gibov s pomočjo sestavljanja teh blokov skupaj,
+          na primer "pick and roll" in dvojna podaja. Od tu lahko greš še naprej in
+          se naučiš še bolj kompleksne igre. Ko se naučiš te igre in jo poimenuješ,
+          vsak v ekipi ve, kako to narediti.
       3:
         image: notes/C3_bee_functions_3.png
-        text: Similarly once you've taught a computer how to do an action once using
-          these sequences of commands, you can make up your own name for that action
-          so it's easy to repeat it later. When you define your own command and give
-          it a name, that's called a function. Now we're going to use functions to
-          help the bee.
+        text: Podobno je, ko enkrat naučiš računalnik kako naj naredi eno dejanje
+          z uporabo zaporedij ukazov, si lahko izmisliš svoje ime za to dejanje, da
+          ga je pozneje enostavno ponoviti. Ko definiraš svoj ukaz in ga poimenuješ,
+          to imenujemo funkcija. Zdaj bomo uporabljali funkcije, da bi pomagali čebeli.
       4:
         image: notes/C3_bee_functions_4.png
-        text: In this example, our function is called get 2 nectar, this green block
-          right here. We know what get 2 nectar does by looking at this grey box which
-          is the function definition. If we look inside there, the get 2 nectar is
-          going to get nectar and then get nectar again. Always look at what's inside
-          the grey box so that you know what these green function blocks can do.
+        text: V tem primeru našo funkcijo imenujemo "dobi 2 nektarja", to je zeleni
+          blok. Kaj "dobi 2 nektarja" naredi, izvemo tako, da pogledamo to sivo škatlo,
+          ki predstavlja definicijo funkcije. Če pogledamo vanjo, vidimo, da bo "dobi
+          2 nektarja" dobila nektar in nato dobila še en nektar. Vedno poglej, kaj
+          je znotraj sive škatle, tako da veš, kaj zelena funkcija naredi.
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Now we're going to use nested loops with the bee. We're given some starter
-          code which tells the bee to move forward and get nectar three times and
-          then turn right. Let's take that whole piece of code and nest it inside
-          another repeat block and set to repeat three times. Done!
+        text: Zdaj bomo uporabili ugnezdene zanke s čebelico. Dobimo začetno kodo,
+          ki pove čebelici, naj se premakne naprej in trikrat dobi nektar, nato pa
+          se obrne na desno. Vzemimo celotni kos kode in ga ugnezdimo znotraj bloka
+          "ponavljaj" ter ga trikrat ponovimo. Končano!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: You're going to be creating your very own bounce game that you'll be
-          able to share with your friends! How cool!
+        text: Kreiral boš svojo lastno igro s skokico, ki jo boš lahko delil s svojimi
+          prijatelji! Kako zanimivo!
       2:
         image: notes/C3_bounce_2.png
-        text: To get started, we have to link up the paddle controls to the arrow
-          keys on our keyboard.
+        text: Da bi lahko začeli, moramo povezati nadzor loparja s puščicami na tipkovnici.
       3:
         image: notes/C3_bounce_3.png
-        text: We can do this by linking the when left arrow block to the move left
-          block and the when right arrow block to the move right block. Give it a
-          go and you'll be programming your own bounce game in no time!
+        text: To lahko naredimo s povezavo bloka "ko leva puščica" z blokom "premakni
+          se levo" in bloka "ko desna puščica" z blokom "premakni se desno". Poskusi
+          in takoj boš sprogramiral svojo igrico s skokico!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -1476,35 +1469,34 @@
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: This lesson is called crowdsourcing. In this lesson we'll use a deck
-          of cards to learn about how much easier some things can be to do in groups
-          instead of trying to do them all alone. So grab some friends and make something
-          awesome. Crowdsourcing is getting help from a large group of people to finish
-          something faster.
+        text: Ta lekcija se imenuje crowdsourcing. V tej lekciji bomo uporabili kupček
+          kart za učenje o tem, koliko lažje je nekatere stvari narediti v skupinah
+          namesto poskušanja narediti vse sam. Zato zgrabi nekaj prijateljev in naredite
+          super stvar. "Crowdsourcing" pomeni pridobivanje pomoči velike skupine ljudi,
+          da bi nekaj hitreje dokončali.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: In computer science, we use crowdsourcing all the time. Thousands of
-          amateurs and professionals link their computers together to search through
-          billions and billions of pieces of information. Looking for things like
-          the next Marsenne prime number, or even possible alien communications.
+        text: V računalništu "crowdsourcing" uporabljamo ves čas. Tisoče amaterjev
+          in profesionalcev poveže svoje računalnike skupaj, da bi preiskali milijarde
+          in milijarde informacij. Iskanje stvari kot je naslednje Mersennovo število
+          ali celo komunikacijo z nezemljani.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: When you see a movie, each second of the movie is 24 individual pictures,
-          we call those frames. So every one of those pictures needs to be created
-          and rendered and put all together. My team and I, we're all software developers.
-          We all work together to create a piece of software that actually creates
-          an image, creates the final image that you see on screen. That's a tool
-          that artists and other developers can use as part of their teamwork and
-          their process to be able to create the images that they want on screen.
+        text: Ko vidiš film, je vsaka sekunda filma sestavljena iz 24 slik, ki jih
+          imenujemo okvirji. Vsaka od teh slik mora biti ustvarjena, izrisana, nato
+          pa je treba vse zložiti skupaj. Moja ekipa in jaz smo vsi razvijalci programske
+          opreme. Vsi delamo skupaj, da ustvarimo program, ki ustvari končno sliko,
+          ki jo vidite na zaslonu. To je orodje, ki ga umetniki in ostali razvijalci
+          lahko uporabijo kot del njihove ekipe in procesa, da ustvarijo slike, ki
+          jih želijo videti na zaslonu.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: For example, in Finding Nemo, when Crush and Squirt and all their friends
-          are flying through the East Australian Current. You're seeing images of
-          water flowing by, you're seeing the colors on the back of the turtle, you're
-          seeing the sides of the fish. All of those things are generated through
-          math and computer programs that we write, that we then give to the artist
-          and they take that to create that final image and tweak it and make it look
-          beautiful and look fun.
+        text: Na primer v filmu Reševanje malega Nema, ko Crush, Squirt in vsi njuni
+          prijatelji plavajo skozi Vzhodno-avstralski morski tok, vidiš sliko vode,
+          ki teče skozi, vidiš barve na želvinem hrbtu, vidiš ribe s strani. Vse te
+          stvari so generirane s pomočjo matematike in računalniških programov, ki
+          jih mi pišemo, nato pa damo umetnikom, da jih uporabijo za ustvarjanje končnih
+          slik, jih popravijo, naredijo čudovite in zabavne.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
@@ -1543,16 +1535,16 @@
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: While loops are pretty similar to what you do in everyday life. Imagine
-          you are washing your car, you'll keep scrubbing until it's clean. While
-          it's not clean, continue to scrub. You're evaluating these things all the
-          time.
+        text: Zanke dokler velja so precej podobne temu, kar počnemo v vsakdanjem
+          življenju. Predstavljaj si, da pereš avtomobil. Drgnil ga boš tako dolgo,
+          dokler ne bo čist. Dokler ni čist, še naprej drgneš. Ves čas ocenjuješ take
+          stvari.
       2:
         image: notes/C3_farmer_while_2.png
-        text: We've got a new look to help your farmer out. It's called a while-block.
-          It's pretty simple actually. While a statement at the top is true, do something.
-          For example, while there's a pile move one hayful. Go ahead and give it
-          a try with your farmer.
+        text: Imamo novo zanko, ki bo pomagala tvoji kmetici. To imenujemo "dokler
+          velja" zanka. V resnici je precej enostavno. Dokler je stavek na vrhu resničen,
+          nekaj izvajaj. Na primer, dokler je tukaj kup, odstrani eno lopato zemlje.
+          Nadaljuj in poskusi s svojo kmetico.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
@@ -1621,64 +1613,64 @@
           phone respond to us and ask for the next 100.
       6:
         image: notes/C3_internet_6.png
-        text: The most exciting thing about software is the fact that it can impact
-          the entire world. I first learned to program when I was about nineteen.
-          I think I was already a sophomore or a junior in college. The first program
-          I remember writing is something that converted Celsius to Fahrenheit. I
-          like programming because I like helping people. I can write programs at
-          Google that help people all over the world and that's really mind-boggling
-          and exciting.
+        text: Najbolj vznemirljiva stvar o programski opremi je, da lahko vpliva na
+          cel svet. Prvič sem se naučil programirati pri devetnajstih letih. Mislim,
+          da sem bil že na fakulteti. Prvi program, ki sem ga napisal, je preračunal
+          stopinje celzija v stopinje fahrenheita. Programiranje imam rad, ker rad
+          pomagam ljudem. Pri Googlu lahko napišem programe, ki pomagajo ljudem po
+          celem svetu, kar je res neverjetno in vznemirljivo.
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
-        text: People make decisions everyday. For example, before you go outside,
-          you have an if statement that says if it's raining, then I need to get my
-          jacket. Computers are amazing once you decide those kinds of statements
-          that they can reliably execute those things and unbelievable speed. A computer
-          program really is a little bit of math and some if statements where the
-          decision gets made.
+        text: Ljudje vsak dan sprejemamo odločitve. Na primer, preden greš ven, imaš
+          "če" stavek, ki pravi, da če dežuje, potem moraš vzeti suknjič. Računalniki
+          so neverjetni; ko določite takšne stavke, ki jih lahko zanesljivo izvajajo,
+          to delajo z neverjetno hitrostjo. Računalniški program je v resnici sestavljen
+          iz malo matematike in nekaj "če" izjav, kjer se sprejemajo odločitve.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: The if block helps the zombie make a decision. It checks something.
-          For example, let's use the block that says if there's a path to the left,
-          and put a turn left command inside it. We're telling the zombie to check
-          its surroundings, see if there's a path on the left and if so, make that
-          turn.
+        text: '"Če" blok zombiju pomaga sprejemati odločitve. Blok nekaj preveri.
+          Za primer uporabimo blok, ki pravi "če pot v levo", znotraj pa postavimo
+          ukaz "zavij levo". S tem zombiju povemo, da naj pregleda okolico in če obstaja
+          pot na levo, zavije levo.'
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: Then we use the move forward block inside this repeat to get it to keep
-          moving forward as long as it just wants to go straight. Then when there's
-          a turn, the if block will tell it to make that turn to the left. You can
-          see that if we do that, if we take the turn to the left and otherwise moving
-          forward, we'll achieve our goal.
+        text: Nato uporabimo blok "premakni se naprej" znotraj zanke "ponavljaj dokler",
+          da se zombi premika naprej, dokler želi iti naravnost. Ko pride do zavoja,
+          mu bo blok povedal, da mora zaviti levo. Vidiš lahko, da če to naredimo,
+          če res zavijemo levo pri zavoju, sicer pa se premikamo naravnost, bomo dosegli
+          naš cilj.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: It's an example of using an if statement which is really a fundamental
-          concept in computer programming. One of the first things I learned was how
-          to write a program that played tic-tac-toe. I had if statements to say,
-          ok, if the other person is about to win, go ahead and block that spot. Have
-          fun learning how to use if statements, it's a key concept.
+        text: To je primer uporabe "če" stavka, ki je temeljni koncept v računalniškem
+          programiranju. Ena prvih stvari, ki sem se jih naučil, je bilo kako napisati
+          program, ki je igral igro križcev in krožcev. Imel sem "če" stavke, s katerimi
+          sem povedal, da če je ena oseba blizu zmage, naj program zablokira tisto
+          mesto. Zabavajte se pri učenju uporabe "če" stavkov, saj je to ključni koncept.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: In this example, your goal is to get zombie to the sunflower. We could
-          use five move forward blocks or we could tell the computer to move forward
-          and repeat five times using the one repeat block.
+        text: V tem primeru je tvoj cilj, da zombija pripelješ do sončnice. Lahko
+          uporabimo pet "premakni se naprej" blokov, ali pa rečemo računalniku, naj
+          se premakne naprej in to petkrat ponovi s pomočjo bloka "ponavljaj".
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move
-          forward block inside the repeat block. Hit run and the zombie will move
-          forward five times to the yummy sunflower.
+        text: To prihrani čas in nam olajša delo. To uporabiš tako, da "premakni se
+          naprej" blok postaviš znotraj bloka "ponovi". Pritisni zaženi in zombi se
+          bo petkrat premaknil naprej proti okusni sončnici.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: Do sedaj si ustvarjal/a animacijo ali zgodbo, ki vsakič, ko jo zaženeš,
+          naredi točno isto stvar. Zdaj pa lahko narediš interaktivno igro, ki jo
+          lahko dejansko igraš.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: Tukaj je nekaj novih blokov, ki jih lahko preizkusiš. Tukaj sta bloka
+          "ko je pritisnjena puščica" in "premakni igralca". Te bloke lahko postaviš
+          skupaj, da premikaš igralce s pomočjo tipk s puščicami. Tu so tudi bloki,
+          ki naredijo nekaj, ko se igralci srečajo ali ko jih kliknemo. Preveri jih
+          in se zabavaj!
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
@@ -1826,9 +1818,9 @@
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: One of the great things in computer programming is once you've taught
-          a computer how to do an action, you can call that function again. You give
-          it a name and then you can call it. That's really like extending the language.
+        text: Ena od super stvari pri računalniškem programiranju je, da ko računalnik
+          naučiš, kako izvesti neko dejanje, lahko to funkcijo znova pokličeš. Daš
+          ji ime in po tem imenu funkcijo pokličeš. To je res kot razširitev jezika.
       2:
         image: notes/C4_function_edit_2.png
         text: In the program we built, we learned how to draw a square by moving and
@@ -2046,50 +2038,50 @@
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: This lesson is called songwriting with parameters. We're going to be
-          writing some songs here. Sometimes the chorus is just a little bit different
-          each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus
-          is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o.
-          The small change in each chorus can be shown using something we call parameters.
+        text: Ta lekcija se imenuje pisanje pesmi s parametri. Tukaj bomo pisali pesmi.
+          Včasih je refren malo drugačen vsakič, ko ga poješ poješ. Se spomniš pesmi
+          "Old Macdonald had a farm"? Refren je za vsako žival nekoliko drugačen.
+          Majhne spremembe v vsakem refrenu so lahko prikazane z nečim, kar imenujemo
+          parametri.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece
-          of information you can pass to a function to customize it for a special
-          need. When you make ice cream sundaes with your friends, you are using a
-          process similar to parameters in a computer program.
+        text: Včasih funkcija potrebuje parameter. Parameter je dodaten del informacije,
+          ki jih lahko prenesemo na funkcijo z namenom prilagoditve za posebne potrebe.
+          Ko delaš sladoledno sadno kupo s prijatelji, uporabiš proces, podoben parametrom
+          v računalniškem programu.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: The disk of vanilla ice cream might be the same for every sundae but
-          when you ask your friends which two toppings they'd like, you could get
-          lots of different combinations. Topping is the function name but each type
-          of topping is a parameter. Functions and parameters work together to make
-          great computer programs and great sundaes too.
+        text: Osnova iz vanilijevega sladoleda je lahko enaka za vsako sadno kupo,
+          ampak ko vprašaš prijatelje, katera dva preliva bi želeli, lahko dobiš veliko
+          različnih kombinacij. Preliv je ime funkcije, vsak tip preliva pa je parameter.
+          Funkcije in parametri delujejo skupaj, da naredijo dobre računalniške programe,
+          prav tako pa tudi dobre sadne kupe.
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: This lesson is called variables in envelopes. We're going to learn how
-          we can build sentences when we're still missing pieces of information. Most
-          of us are already familiar with the idea of filling in a blank. We do it
-          when we're putting our name on our homework. Sometimes there's more than
-          one word that needs to be filled out and in that case, we give that blank
-          a label so that we know which piece of information goes where.
+        text: Ta lekcija se imenuje spremenljivke v ovojnicah. Izvedeli bomo, kako
+          lahko gradimo stavke, ko nam deli informacij še manjkajo. Večina od nas
+          je že seznanjena z idejo o zapolnjevanju praznega prostora. To naredimo,
+          ko napišemo ime na svojo domačo nalogo. Včasih je potrebno vstaviti več
+          kot eno besedo in v tem primeru damo praznemu prostoru oznako, da vemo,
+          kateri podatek gre kam.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change.
-          By using a variable for the missing information, we can continue working
-          on whatever we were doing and let someone else fill in the missing information
-          later. In software, we use variables a lot. We use variables as placeholders
-          for name, email address, and even username. That way we can let the program
-          know where those details will appear after the user fills them in. We use
-          variables all the time in our work.
+        text: 'Spremenljivke rezervirajo prostor za dele informacij, ki se lahko spreminjajo.
+          Z uporabo spremenljivke za manjkajočo informacijo lahko nadaljujemo z delom,
+          ki smo ga opravljali, in pustimo, da nekdo drug pozneje vnese manjkajočo
+          informacijo. V programiranju se spremenljivke pogosto uporablja. Spremenljivke
+          uporabljamo kot prostor za ime, naslov in celo uporabniško ime. Na ta način
+          omogočimo programu, da ve, kje se bodo ti podatki pojavili, ko jih bo uporabnik
+          vnesel. Spremenljivke pri svojem delu uporabljamo ves čas. '
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: Any time you need to store a piece of information for later, we use
-          a variable. Let's say we need to count the number of times the user has
-          tweeted. Every time that user tweets, we'll add one to that number and every
-          time the user deletes a tweet, we'll decrease that number by one. Anytime
-          we need to know how many times that user has tweeted, we'll just look at
-          that variable.
+        text: Vsakič ko želimo shraniti delček informacije za kasneje, uporabimo spremenljivko.
+          Recimo, da moramo prešteti, kolikokrat je uporabnik tvitnil (objavil nekaj
+          na Twitter-ju). Vsakič, ko ta uporabnik tvitne, bomo številki prišteli ena
+          in vsakič, ko bo izbrisal svoj tvit, bomo številko zmanjšali za ena. Vsakič,
+          ko bomo želeli vedeti, kolikokrat je uporabnik tvitnil, bomo pogledali vrednost
+          spremenljivke.
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
@@ -3022,10 +3014,10 @@
           you never have to because computers are really good at repeating things.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
+        text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
+          igro ponavljalo ves čas. Če želimo, da lik dela nekaj ponavljajoče, brez
+          da mora igralec storiti karkoli, bomo te bloke postavili znotraj "ponavljaj
+          neskončno" bloka.
       3:
         image: notes/gumball_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously.
@@ -3106,10 +3098,10 @@
           you never have to because computers are really good at repeating things.
       2:
         image: notes/iceage_repeat_2.JPG
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
+        text: To je "ponovi neskončno" blok. Karkoli znotraj tega bloka se bo med
+          igro ponavljalo ves čas. Če želimo, da lik dela nekaj ponavljajoče, brez
+          da mora igralec storiti karkoli, bomo te bloke postavili znotraj "ponavljaj
+          neskončno" bloka.
       3:
         image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously.
@@ -3213,9 +3205,9 @@
     mc_2016_spawn:
       1:
         image: notes/mc_2016_spawn_1.jpg
-        text: In games, spawn means the same thing as create. In this level, let's
-          make zombies spawn when the sun goes down. To do this, we'll use the "when
-          night" block.
+        text: V igrah "kreirati"(angleško spawn) pomeni enako kot ustvariti ali dodati.
+          V tem nivoju bomo zombije kreirali, ko sonce zaide. To bomo naredili tako,
+          da bomo uporabili `ko je noč` blok.
       2:
         image: notes/mc_2016_spawn_2.jpg
         text: Since we want the zombies to spawn at night we'll add the "spawn zombie"

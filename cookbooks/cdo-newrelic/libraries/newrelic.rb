@@ -109,7 +109,7 @@ class NewRelicClient
     http = Net::HTTP.new(uri.hostname, uri.port)
     http.use_ssl = true
 
-    response = http.start { http.request(req) }
+    response = http.start {http.request(req)}
 
     if response.code == "200"
       JSON.parse(response.body)
@@ -137,6 +137,6 @@ class NewRelicClient
   # https://rpm.newrelic.com/api/explore/servers/list
   def get_server_id(server_name)
     rest = call_newrelic_rest("servers.json?#{URI.encode_www_form('filter[name]' => server_name)}")
-    rest['servers'].first{|server| server['name'] == server_name}['id']
+    rest['servers'].first {|server| server['name'] == server_name}['id']
   end
 end

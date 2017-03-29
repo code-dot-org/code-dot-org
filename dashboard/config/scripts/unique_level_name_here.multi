@@ -1,7 +1,0 @@
-name 'unique level name here'
-title 'title'
-description ''
-question 'Press the _space_ bar  '
-answer 'red_sprite moves up and blue_sprite moves down '
-question ' Press the _w_ key '
-answer 'red_sprite gets bigger and blue_sprite gets smaller '

@@ -1,0 +1,22 @@
+name 'While Loops Overview'
+css 'unplugged'
+markdown <<MARKDOWN
+
+# While Loops Overview and How To Guide
+
+
+<img src="https://images.code.org/bfb82e4caecc3ad1338177e05064ef72-image-1446669721477.41.28 PM.png" style="width: 100px; float: right">
+
+ **The `while` loop uses a boolean condition to repeatedly run a block of code.**  Like the for loop that students saw in Unit 3 a while loop repeats steps in order, but it is usually used when the block should run for an **unknown** number of repetitions.  It is loop is a more general looping structure that runs as long as some supplied condition is `true`. For example, while it's raining outside, you will wear a raincoat. Or "while I haven't rolled a 2 or 12, keep rolling the dice". While loops are useful when you encounter situations when you want to repeat a block of code but you're not sure how long or how many times you need to repeat - instead you simply want to keep going as long as something is true.
+
+ The loop runs by checking the expression, and if it is true the computer runs the block of code contained within the loop. This process of checking the condition and running the block of code is repeated as long as the boolean condition remains true. **Once the boolean expression becomes false it will stop.**  In the case in which the program never* becomes false, the program enters what is called an **infinite loop** over the commands in the `while` loop, and it never reaches the rest of the program.  
+
+**Note**: One thing that's tricky for the first timer is that while loops require you state the looping condition in the positive, but many times you intuitively think about loops in the opposite way: I want to loop until some condition is true. JavaScript does not have a a "repeat until" structure so you have to use a while loop. This means that sometimes you need to state things in ways that would be awkward in English. It we look back at the blue pen example from before. In English you might say: "dig through the drawer until you find a blue pen." But when you write a while loop, you need to invert the condition: "while I have not found a blue pen, keep digging." This distinction is subtle but important.
+
+
+The following links provide additional links and information about booleans.  Many of these links are also found in the curriculum, but are consolidated here for convenience.
+
+- <a href = “http://www.cs.utah.edu/~germain/PPS/Topics/while_loops.html” target=_blank> The “while” loop - University of Utah <i class="fa fa-external-link-square"/></a>
+- <a href = “https://www.youtube.com/watch?v=F8H-41bpJ6E&feature=youtu.be” target=_blank> Video - While Loop (Code Studio video from other courses) <i class="fa fa-external-link-square"/></a> **Note** that this video references the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describes the basic concept of a loop, which is shared across all programming languages.
+
+MARKDOWN

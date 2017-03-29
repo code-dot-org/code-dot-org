@@ -39,7 +39,7 @@ class Workshop < ActiveRecord::Base
   has_many :workshop_cohorts, inverse_of: :workshop, dependent: :destroy
   has_many :cohorts, through: :workshop_cohorts
   has_many :districts, through: :cohorts
-  has_many :district_contacts, through: :districts, :source => :contact
+  has_many :district_contacts, through: :districts, source: :contact
   accepts_nested_attributes_for :workshop_cohorts, allow_destroy: true
 
   # A Workshop has at least one Facilitator(s)
@@ -102,7 +102,7 @@ class Workshop < ActiveRecord::Base
 
   def send_reminders
     automated_email_recipients.each do |recipient|
-      next unless EmailValidator.email_address?(recipient.email)
+      next unless Cdo::EmailValidator.email_address?(recipient.email)
       logger.debug("Sending email reminder to #{recipient.email}")
       OpsMailer.workshop_reminder(self, recipient).deliver_now
     end
@@ -118,7 +118,7 @@ class Workshop < ActiveRecord::Base
 
   def send_exit_surveys
     automated_email_recipients.each do |recipient|
-      next unless EmailValidator.email_address?(recipient.email)
+      next unless Cdo::EmailValidator.email_address?(recipient.email)
       logger.debug("Sending exit survey info to #{recipient.email}")
       OpsMailer.exit_survey_information(self, recipient).deliver_now
     end

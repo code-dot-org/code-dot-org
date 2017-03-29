@@ -1,8 +1,9 @@
 import Walls from './walls';
-import {imageDataFromURI} from '../imageUtils';
+import {imageDataFromURI, URIFromImageData} from '../imageUtils';
 
 const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
+const WALL_COLOR = '#7F7F7F';
 
 export default class CollisionMaskWalls extends Walls {
   constructor(level, skin, drawDebugRect, drawDebugOverlay, width, height, onload) {
@@ -15,8 +16,12 @@ export default class CollisionMaskWalls extends Walls {
     this.wallMaps = {};
     Promise.all(Object.keys(skin.wallMaps).map(mapName => {
       return imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(imageData => {
+        const wallMap = this.wallMapFromImageData(imageData.data);
         this.wallMaps[mapName] = {
-          wallMap: this.wallMapFromImageData(imageData),
+          srcData: imageData,
+          wallColor: WALL_COLOR,
+          wallMap: wallMap,
+          overlayURI: this.wallOverlayURI(imageData, wallMap),
           srcUrl: skin.wallMaps[mapName].srcUrl
         };
       });
@@ -100,4 +105,64 @@ export default class CollisionMaskWalls extends Walls {
     return arr;
   }
 
+  /**
+   * Construct an image data URI from the wallData that shows the walls in a
+   * solid color.
+   */
+  wallOverlayURI(imageData, wallMap, hexColor = WALL_COLOR) {
+    const data = imageData.data;
+    const color = CollisionMaskWalls.hexToRgb(hexColor);
+    for (let y = 0; y < this.height; y++) {
+      for (let x = 0; x < this.width; x += BITS_PER_BYTE) {
+        const currentByte = wallMap[(y * this.bytesPerRow) + (x / BITS_PER_BYTE)];
+        for (let k = 0; k < BITS_PER_BYTE; k++) {
+          const map = 1 << k;
+          const imageDataIndex = ((y * this.width) + x + k) * BYTES_PER_PIXEL;
+          if (currentByte & map) {
+            // Wall pixel, set color
+            data[imageDataIndex + 0] = color.R;
+            data[imageDataIndex + 1] = color.G;
+            data[imageDataIndex + 2] = color.B;
+            data[imageDataIndex + 3] = 255;
+          } else {
+            // Background pixel, set transparent
+            data[imageDataIndex + 3] = 0;
+          }
+        }
+      }
+    }
+    return URIFromImageData(imageData);
+  }
+
+  getWallOverlayURI() {
+    const wallData = this.wallMaps[this.wallMapRequested];
+    return wallData ? wallData.overlayURI : null;
+  }
+
+  setColor(color) {
+    Object.keys(this.wallMaps).map(mapName => {
+      const wallMapData = this.wallMaps[mapName];
+      if (wallMapData.wallColor === color) {
+        return;
+      }
+      wallMapData.overlayURI = this.wallOverlayURI(
+          wallMapData.srcData, wallMapData.wallMap, color);
+      wallMapData.wallColor = color;
+    });
+  }
+
+  static hexToRgb(hexColor) {
+    if (hexColor.length === 4) {
+      // short form
+      const R = parseInt(hexColor.substr(1, 1), 16) * 0x11;
+      const G = parseInt(hexColor.substr(2, 1), 16) * 0x11;
+      const B = parseInt(hexColor.substr(3, 1), 16) * 0x11;
+      return { R, G, B };
+    }
+
+    const R = parseInt(hexColor.substr(1, 2), 16);
+    const G = parseInt(hexColor.substr(3, 2), 16);
+    const B = parseInt(hexColor.substr(5, 2), 16);
+    return { R, G, B };
+  }
 }

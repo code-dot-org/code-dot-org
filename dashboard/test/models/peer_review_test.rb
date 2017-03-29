@@ -1,25 +1,33 @@
 require 'test_helper'
+require 'cdo/shared_constants'
 
 class PeerReviewTest < ActiveSupport::TestCase
+  include SharedConstants
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    @learning_module = create :plc_learning_module
 
-    level = FreeResponse.find_or_create_by!(
+    @level = FreeResponse.find_or_create_by!(
       game: Game.free_response,
       name: 'FreeResponseTest',
       level_num: 'custom',
       user_id: 0
     )
-    level.submittable = true
-    level.peer_reviewable = true
-    level.save!
+    @level.submittable = true
+    @level.peer_reviewable = 'true'
+    @level.save!
 
-    @script_level = create :script_level, levels: [level]
+    @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
     @script = @script_level.script
+
     @user = create :user
+
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
   end
 
   def track_progress(level_source_id, user = @user)
+    # this is what creates the peer review objects
     User.track_level_progress_sync(
       user_id: user.id,
       level_id: @script_level.level_id,
@@ -39,6 +47,26 @@ class PeerReviewTest < ActiveSupport::TestCase
     end
   end
 
+  test 'submitting a peer reviewed level when I am not enrolled in the module should not create PeerReview objects' do
+    level_source = create :level_source, data: 'My submitted answer'
+    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(false)
+
+    assert_no_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
+      track_progress level_source.id
+    end
+  end
+
+  test 'submitting a non peer reviewable level should not create Peer Review objects' do
+    @level.peer_reviewable = 'false'
+    @level.save
+
+    level_source = create :level_source, data: 'My submitted answer'
+
+    assert_no_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
+      track_progress level_source.id
+    end
+  end
+
   test 'resubmitting for review should remove unassigned PeerReview objects' do
     level_source = create :level_source, data: 'My submitted answer'
 
@@ -54,6 +82,24 @@ class PeerReviewTest < ActiveSupport::TestCase
     initial = PeerReview.count
     track_progress updated_level_source.id
     assert_equal PeerReview::REVIEWS_PER_SUBMISSION - 1, PeerReview.count - initial
+  end
+
+  test 'instructor review should mark as accepted and delete outstanding unfilled reviews' do
+    level_source = create :level_source, data: 'My submitted answer'
+
+    Activity.create! user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source
+    track_progress level_source.id
+    review1 = PeerReview.offset(1).last
+    review2 = PeerReview.last
+
+    user_level = UserLevel.find_by(user: review1.submitter, level: review1.level, script: review1.script)
+    assert_equal Activity::UNREVIEWED_SUBMISSION_RESULT, user_level.best_result
+
+    review1.update! reviewer: create(:user), status: 'accepted', from_instructor: true
+    refute PeerReview.where(id: review2.id).any?
+
+    user_level.reload
+    assert_equal Activity::REVIEW_ACCEPTED_RESULT, user_level.best_result
   end
 
   test 'approving both reviews should mark the corresponding UserLevel as accepted' do
@@ -124,7 +170,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'pull review from pool handles stale reviews' do
     reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
-      3.times { teachers << create(:teacher) }
+      3.times {teachers << create(:teacher)}
     end
 
     level_source = create(:level_source, data: 'Some answer')
@@ -135,10 +181,10 @@ class PeerReviewTest < ActiveSupport::TestCase
     first_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_1)
     PeerReview.pull_review_from_pool(@script_level.script, reviewer_2)
 
-    #Let's say reviewer 1 doesn't finish their review - AKA the created date was more than a day ago
+    # Let's say reviewer 1 doesn't finish their review - AKA the created date was more than a day ago
     first_review.update(created_at: 2.days.ago)
 
-    #Now when reviewer 3 pulls a review, they should get the first review but updated with them as the reviewer now
+    # Now when reviewer 3 pulls a review, they should get the first review but updated with them as the reviewer now
     new_review = PeerReview.pull_review_from_pool(@script_level.script, reviewer_3)
     assert_equal first_review.id, new_review.id
     assert_equal reviewer_3, new_review.reviewer
@@ -149,7 +195,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     @script.update(peer_reviews_to_complete: 2)
     Plc::EnrollmentUnitAssignment.stubs(:exists?).returns(true)
     reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
-      3.times { teachers << create(:teacher) }
+      3.times {teachers << create(:teacher)}
     end
 
     level_source = create(:level_source, data: 'Some answer')
@@ -168,7 +214,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     # When the third reviewer goes to the page, they should get a link
     review_summary = PeerReview.get_peer_review_summaries(reviewer_3, @script_level.script)
     expected_review = {
-      status: 'not_started',
+      status: LEVEL_STATUS.not_tried,
       name: I18n.t('peer_review.review_new_submission'),
       result: ActivityConstants::UNSUBMITTED_RESULT,
       icon: '',
@@ -209,6 +255,10 @@ class PeerReviewTest < ActiveSupport::TestCase
     submitter_2 = create :teacher
     submitter_3 = create :teacher
 
+    [submitter_1, submitter_2, submitter_3].each do |submitter|
+      Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: submitter.id, plc_learning_module: @learning_module).returns(true)
+    end
+
     level_source_1 = create(:level_source, data: 'Some answer')
     level_source_2 = create(:level_source, data: 'Other answer')
     level_source_3 = create(:level_source, data: 'Unreviewed answer')
@@ -222,29 +272,29 @@ class PeerReviewTest < ActiveSupport::TestCase
     first_review.update!(status: 'accepted')
     second_review = PeerReview.pull_review_from_pool(@script, @user)
 
-    #Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
+    # Expect three things, one complete peer review, one incomplete peer review, and one link to new reviews
     expected_reviews = [
-        {
-            id: first_review.id,
-            status: 'perfect',
-            name: I18n.t('peer_review.link_to_submitted_review'),
-            result: ActivityConstants::BEST_PASS_RESULT,
-            locked: false
-        },
-        {
-            id: second_review.id,
-            status: 'not_started',
-            name: I18n.t('peer_review.review_in_progress'),
-            result: ActivityConstants::UNSUBMITTED_RESULT,
-            locked: false
-        },
-        {
-            status: 'not_started',
-            name: 'Review a new submission',
-            result: ActivityConstants::UNSUBMITTED_RESULT,
-            icon: '',
-            locked: false
-        }
+      {
+        id: first_review.id,
+        status: LEVEL_STATUS.perfect,
+        name: I18n.t('peer_review.link_to_submitted_review'),
+        result: ActivityConstants::BEST_PASS_RESULT,
+        locked: false
+      },
+      {
+        id: second_review.id,
+        status: LEVEL_STATUS.not_tried,
+        name: I18n.t('peer_review.review_in_progress'),
+        result: ActivityConstants::UNSUBMITTED_RESULT,
+        locked: false
+      },
+      {
+        status: LEVEL_STATUS.not_tried,
+        name: 'Review a new submission',
+        result: ActivityConstants::UNSUBMITTED_RESULT,
+        icon: '',
+        locked: false
+      }
     ]
 
     assert_equal expected_reviews, PeerReview.get_peer_review_summaries(@user, @script)

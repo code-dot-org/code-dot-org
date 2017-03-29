@@ -1,0 +1,12 @@
+name 'courseA_external_stevie4'
+
+markdown <<MARKDOWN
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+Just then, Laurel came over to see what was going on.<br/><br/>
+“Stevie, what’s the matter?”<br/><br/>
+
+“I don't like this project, and I don't like this class!” </div>
+
+<div style="font-size: 1.75em; line-height:1.5em; max-width:800px; margin:0 auto;">
+<img src="https://images.code.org/3aa545086812ead9fd8aa8bf1a8a33ea-image-1485385734009.png" style="margin:0 auto;"/></div>
+MARKDOWN

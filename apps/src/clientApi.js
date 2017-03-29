@@ -212,6 +212,14 @@ class FilesApi extends CollectionsApi {
     });
   }
 
+  /*
+   * Prepare for remix (ensures we have always completed first write before remix)
+   * @param completion {Function} callback when done
+   */
+  prepareForRemix(callback) {
+    this._withBeforeFirstWriteHook(callback);
+  }
+
   basePathWithFilesVersion(filename) {
     var path = this.basePath(filename);
     if (project().filesVersionId) {

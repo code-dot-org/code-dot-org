@@ -38,9 +38,9 @@ class UserLevel < ActiveRecord::Base
 
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
-  scope :attempted, -> { where.not(best_result: nil) }
-  scope :passing, -> { where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT) }
-  scope :perfect, -> { where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT) }
+  scope :attempted, -> {where.not(best_result: nil)}
+  scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
+  scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
   def readonly_requires_submitted
     if readonly_answers? && !submitted?
@@ -49,19 +49,19 @@ class UserLevel < ActiveRecord::Base
   end
 
   def best?
-    Activity.best? best_result
+    ActivityConstants.best?(best_result)
   end
 
   def perfect?
-    Activity.perfect? best_result
+    ActivityConstants.perfect?(best_result)
   end
 
   def finished?
-    Activity.finished? best_result
+    ActivityConstants.finished?(best_result)
   end
 
   def passing?
-    Activity.passing? best_result
+    ActivityConstants.passing?(best_result)
   end
 
   # user levels can be linked through pair programming. The 'driver'
@@ -84,7 +84,12 @@ class UserLevel < ActiveRecord::Base
 
   def self.most_recent_driver(script, level, user)
     most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
-    most_recent ? most_recent.user.name : nil
+    return nil unless most_recent
+
+    most_recent_user = most_recent.user
+    return I18n.t('user.deleted_user') unless most_recent_user
+
+    return most_recent_user.name
   end
 
   def paired?

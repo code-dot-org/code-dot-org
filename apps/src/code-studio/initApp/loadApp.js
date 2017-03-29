@@ -1,14 +1,15 @@
-/* global dashboard addToHome CDOSounds trackEvent Applab Blockly */
+/* global addToHome CDOSounds trackEvent Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { getStore } from '../redux';
-import { setUserSignedIn, SignInState } from '../progressRedux';
+import { setUserSignedIn, SignInState, mergeProgress } from '../progressRedux';
+import { files } from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
 var clientState = require('../clientState');
-var color = require("../../util/color");
+import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
 var timing = require('@cdo/apps/code-studio/initApp/timing');
 var chrome34Fix = require('@cdo/apps/code-studio/initApp/chrome34Fix');
@@ -17,40 +18,45 @@ var createCallouts = require('@cdo/apps/code-studio/callouts');
 var reporting = require('@cdo/apps/code-studio/reporting');
 var Dialog = require('@cdo/apps/code-studio/dialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
-import { lockContainedLevelAnswers } from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {
+  lockContainedLevelAnswers,
+  getContainedLevelId,
+} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
-
-import { activityCssClass, mergeActivityResult, LevelStatus } from '../activityUtils';
+import { dataURIToFramedBlob } from '@cdo/apps/imageUtils';
+import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
 
+const SHARE_IMAGE_NAME = '_share_image.png';
+const POINTS_KEY = 'tempPoints';
+
+/**
+ * When we have a publicly cacheable script, the server does not send down the
+ * user's levelProgress, and instead we get it asynchronously. This method adds
+ * that progress to our redux store, and then also updates the clientState (i.e.
+ * sessionStorage)
+ * Note: A better approach to backing up progress in sessionStorage would likely
+ * be to attach a listener to our redux store, and then update clientState whenever
+ * levelProgress changes in the store.
+ * @param {string} scriptName
+ * @param {Object<number, number>} Mapping from levelId to TestResult
+ */
 function mergeProgressData(scriptName, serverProgress) {
-  const clientProgress = clientState.allLevelsProgress()[scriptName] || {};
+  const store = getStore();
+  store.dispatch(mergeProgress(serverProgress));
+
   Object.keys(serverProgress).forEach(levelId => {
-    if (serverProgress[levelId] !== clientProgress[levelId]) {
-      var mergedResult = mergeActivityResult(
-        clientProgress[levelId],
-        serverProgress[levelId]
-      );
-      var status = activityCssClass(mergedResult);
-
-      // Set the progress color
-      var css = {backgroundColor: color[`level_${status}`] || color.level_not_tried};
-      if (status && status !== LevelStatus.not_tried && status !== LevelStatus.attempted) {
-        Object.assign(css, {color: color.white});
-      }
-      $('.level-' + levelId).css(css);
-
-      // Write down new progress in sessionStorage
-      clientState.trackProgress(
-        null,
-        null,
-        serverProgress[levelId],
-        scriptName,
-        levelId
-      );
-    }
+    // Write down new progress in sessionStorage
+    clientState.trackProgress(
+      null,
+      null,
+      serverProgress[levelId],
+      scriptName,
+      levelId
+    );
   });
 }
 
@@ -70,8 +76,31 @@ export function setupApp(appOptions) {
       // Lock the contained levels if this is a teacher viewing student work:
       lockContainedLevelAnswers();
     }
-    // Always mark the workspace as readonly when we have contained levels:
-    appOptions.readonlyWorkspace = true;
+    if (!appOptions.level.edit_blocks) {
+      // Always mark the workspace as readonly when we have contained levels,
+      // unless editing:
+      appOptions.readonlyWorkspace = true;
+    }
+  }
+
+  if (experiments.isEnabled('g.bannermode')) {
+    var pointsData = JSON.parse(localStorage.getItem(POINTS_KEY) || '{}');
+    var totalPoints = 0;
+    for (var id in pointsData) {
+      totalPoints += pointsData[id];
+    }
+    var setPoints = function () {
+      var menuItem = $('.points_menu_item');
+      if (menuItem.length === 0) {
+        // TODO(ram): This is a hack, remove this code when points are removed
+        // or moved to the server, by 5/1/2017 at the lastest
+        setTimeout(setPoints, 200);
+        return;
+      }
+      menuItem.text(i18n.nPoints({numPoints: totalPoints}));
+      menuItem.css('display', 'block');
+    };
+    setPoints();
   }
 
   // Sets up default options and initializes blockly
@@ -96,27 +125,42 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
+        const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;
+        // Add the frame to the drawing.
+        dataURIToFramedBlob(dataURI, blob => {
+          files.putFile(SHARE_IMAGE_NAME, blob);
+        });
         return;
       }
-      // or unless the program is actually the result for a contained level
-      if (!appOptions.hasContainedLevels) {
-        if (appOptions.channel && !appOptions.level.edit_blocks) {
-          // Don't send the levelSource or image to Dashboard for channel-backed levels,
-          // unless we are actually editing blocks and not really completing a level
-          // (The levelSource is already stored in the channels API.)
-          delete report.program;
-          delete report.image;
-        } else {
-          // Only locally cache non-channel-backed levels. Use a client-generated
-          // timestamp initially (it will be updated with a timestamp from the server
-          // if we get a response.
-          lastSavedProgram = decodeURIComponent(report.program);
-          clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
-        }
-        report.callback = appOptions.report.callback;
-        trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
+      if (appOptions.channel && !appOptions.level.edit_blocks &&
+          !appOptions.hasContainedLevels) {
+        // Unless we are actually editing blocks and not really completing a
+        // level, or if this is a contained level, don't send the levelSource or
+        // image to Dashboard for channel-backed levels (The levelSource is
+        // already stored in the channels API.)
+        delete report.program;
+        delete report.image;
+      } else {
+        // Only locally cache non-channel-backed levels. Use a client-generated
+        // timestamp initially (it will be updated with a timestamp from the server
+        // if we get a response.
+        lastSavedProgram = decodeURIComponent(report.program);
+
+        // If the program is the result for a contained level, store it with
+        // the contained level id
+        const levelId = (appOptions.hasContainedLevels && !appOptions.level.edit_blocks) ?
+          getContainedLevelId() :
+          appOptions.serverLevelId;
+        clientState.writeSourceForLevel(appOptions.scriptName, levelId,
+            +new Date(), lastSavedProgram);
       }
-      report.scriptName = appOptions.scriptName;
+      // report.callback will already have the correct milestone post URL in
+      // the contained level case, unless we're editing blocks
+      if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
+        report.callback = appOptions.report.callback;
+      }
+      trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
+
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
       trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
@@ -129,7 +173,8 @@ export function setupApp(appOptions) {
     onComplete: function (response) {
       if (!appOptions.channel && !appOptions.hasContainedLevels) {
         // Update the cache timestamp with the (more accurate) value from the server.
-        clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        clientState.writeSourceForLevel(appOptions.scriptName,
+            appOptions.serverLevelId, response.timestamp, lastSavedProgram);
       }
     },
     onResetPressed: function () {
@@ -312,10 +357,6 @@ function loadAppAsync(appOptions) {
           }
         }
 
-        if (progress.refreshStageProgress) {
-          progress.refreshStageProgress();
-        }
-
         const store = getStore();
         const signInState = store.getState().progress.signInState;
         if (signInState === SignInState.Unknown) {
@@ -336,13 +377,13 @@ function loadAppAsync(appOptions) {
       // the header progress data even if the last attempt data takes too long.
       // The progress dots can fade in at any time without impacting the user.
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
-    } else if (window.dashboard && dashboard.project) {
-      dashboard.project.load().then(function () {
-        if (dashboard.project.hideBecauseAbusive()) {
+    } else if (window.dashboard && project) {
+      project.load().then(function () {
+        if (project.hideBecauseAbusive()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
           return $.Deferred().reject();
         }
-        if (dashboard.project.hideBecausePrivacyViolationOrProfane()) {
+        if (project.hideBecausePrivacyViolationOrProfane()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
           return $.Deferred().reject();
         }
@@ -354,7 +395,6 @@ function loadAppAsync(appOptions) {
 }
 
 window.dashboard = window.dashboard || {};
-window.dashboard.project = project;
 
 window.apps = {
 
@@ -369,6 +409,16 @@ window.apps = {
   // Define blockly/droplet-specific callbacks for projects to access
   // level source, HTML and headers.
   sourceHandler: {
+    /**
+     * NOTE: when adding a new method here, ensure that all other sourceHandlers
+     * (e.g. in pixelation.js) have that same method defined.
+     */
+    setMakerAPIsEnabled: function (enableMakerAPIs) {
+      getAppOptions().level.makerlabEnabled = enableMakerAPIs;
+    },
+    getMakerAPIsEnabled: function () {
+      return getAppOptions().level.makerlabEnabled;
+    },
     setInitialLevelHtml: function (levelHtml) {
       getAppOptions().level.levelHtml = levelHtml;
     },
@@ -407,12 +457,19 @@ window.apps = {
       } else {
         callback({});
       }
+    },
+    prepareForRemix: function () {
+      const {prepareForRemix} = getAppOptions();
+      if (prepareForRemix) {
+        return prepareForRemix();
+      }
+      return Promise.resolve(); // Return an insta-resolved promise.
     }
   },
 };
 
 let APP_OPTIONS;
-function setAppOptions(appOptions) {
+export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
   window.appOptions = appOptions;
@@ -438,11 +495,9 @@ export function getAppOptions() {
  */
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {
-    const script = document.querySelector(`script[data-appoptions]`);
     try {
-      setAppOptions(JSON.parse(script.dataset.appoptions));
+      setAppOptions(getScriptData('appoptions'));
     } catch (e) {
-      console.error("failed to parse appoptions from script tag", e);
       reject(e);
       return;
     }

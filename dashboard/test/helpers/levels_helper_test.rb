@@ -41,8 +41,8 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "non-custom level displays localized instruction after locale switch" do
-    default_locale = 'en-us'
-    new_locale = 'es-es'
+    default_locale = 'en-US'
+    new_locale = 'es-ES'
     @level.instructions = nil
     @level.user_id = nil
     @level.level_num = '2_2'
@@ -56,12 +56,11 @@ class LevelsHelperTest < ActionView::TestCase
     I18n.locale = new_locale
     options = blockly_options
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['instructions']
-    I18n.locale = default_locale
   end
 
   test "custom level displays english instruction" do
-    default_locale = 'en-us'
-    @level.name = 'frozen line'
+    default_locale = 'en-US'
+    @level = Level.find_by_name 'frozen line'
 
     I18n.locale = default_locale
     options = blockly_options
@@ -69,11 +68,10 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "custom level displays localized instruction if exists" do
-    default_locale = 'en-us'
-    new_locale = 'es-es'
+    new_locale = 'es-ES'
 
     I18n.locale = new_locale
-    @level.name = 'frozen line'
+    @level = Level.find_by_name 'frozen line'
     options = blockly_options
     assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
 
@@ -82,13 +80,12 @@ class LevelsHelperTest < ActionView::TestCase
     @level.name = 'this_level_doesnt_exist'
     options = blockly_options
     assert_equal @level.instructions, options[:level]['instructions']
-    I18n.locale = default_locale
   end
 
   test "get video choices" do
     choices_cached = video_key_choices
     assert_equal(choices_cached.count, Video.count)
-    Video.all.each{|video| assert_includes(choices_cached, video.key)}
+    Video.all.each {|video| assert_includes(choices_cached, video.key)}
   end
 
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
@@ -129,9 +126,9 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? { |callout| callout['id'] == callout1.id }
-    assert callouts.any? { |callout| callout['id'] == callout2.id }
-    assert callouts.none? { |callout| callout['id'] == irrelevant_callout.id }
+    assert callouts.any? {|callout| callout['id'] == callout1.id}
+    assert callouts.any? {|callout| callout['id'] == callout2.id}
+    assert callouts.none? {|callout| callout['id'] == irrelevant_callout.id}
   end
 
   test "should localize callouts" do
@@ -144,7 +141,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any?{ |c| c['localized_text'] == 'Hit "Run" to try your program'}
+    assert callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'}
   end
 
   test 'app_options returns camelCased view option on Blockly level' do
@@ -156,8 +153,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "embedded-freeplay level doesn't remove header and footer" do
     @level.embed = true
     app_options
-    assert_equal nil, view_options[:no_header]
-    assert_equal nil, view_options[:no_footer]
+    assert_nil view_options[:no_header]
+    assert_nil view_options[:no_footer]
   end
 
   test 'Blockly#blockly_app_options and Blockly#blockly_level_options not modified by levels helper' do
@@ -246,7 +243,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is submittable for teacher enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(true)
 
     user = create(:teacher)
@@ -258,7 +255,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is not submittable for a teacher not enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(false)
 
     user = create(:teacher)
@@ -275,8 +272,6 @@ class LevelsHelperTest < ActionView::TestCase
     user = create(:follower).student_user
     sign_in user
 
-    app_options = self.app_options # ha
-
     assert_equal true, app_options[:level]['submittable']
   end
 
@@ -286,14 +281,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable level is not submittable for non-logged in user' do
     @level = create(:applab, submittable: true)
 
-    app_options = self.app_options # ha
     assert_equal false, app_options[:level]['submittable']
   end
 
@@ -302,8 +295,6 @@ class LevelsHelperTest < ActionView::TestCase
 
     user = create(:follower).student_user
     sign_in user
-
-    app_options = self.app_options # ha ha
 
     assert_equal true, app_options[:level]['submittable']
   end
@@ -314,14 +305,12 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :student
     sign_in user
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable multi level is not submittable for non-logged in user' do
     @level = create(:multi, submittable: true)
 
-    app_options = self.app_options # ha ha
     assert_equal false, app_options[:level]['submittable']
   end
 
@@ -410,8 +399,10 @@ class LevelsHelperTest < ActionView::TestCase
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
-    script = Script.add_script({name: 'test_script'},
-      script_data[:stages].map{|stage| stage[:scriptlevels]}.flatten)
+    script = Script.add_script(
+      {name: 'test_script'},
+      script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+    )
 
     stage = script.stages[0]
     assert_equal 1, stage.absolute_position

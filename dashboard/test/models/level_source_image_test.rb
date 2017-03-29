@@ -53,13 +53,13 @@ class LevelSourceTest < ActiveSupport::TestCase
     artist_level = Artist.first
     level_source = create :level_source, level: artist_level
     level_source_image = LevelSourceImage.new(level_source_id: level_source.id)
-    assert !level_source_image.save_to_s3(@bad_image)
+    refute level_source_image.save_to_s3(@bad_image)
   end
 
   test "no save to s3 for empty string image" do
     expect_no_s3_upload
 
     level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
-    assert !level_source_image.save_to_s3('')
+    refute level_source_image.save_to_s3('')
   end
 end

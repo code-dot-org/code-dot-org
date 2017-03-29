@@ -40,7 +40,8 @@ class TestMilestoneParser < Minitest::Test
 
     @s3_client = Aws::S3::Client.new(stub_responses: true)
     @s3_client.stub_responses(:list_objects_v2,
-      {common_prefixes: [{prefix: 'hosts/adhoc-12345/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]})
+      {common_prefixes: [{prefix: 'hosts/adhoc-12345/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]}
+    )
     @s3_client.stub_responses(:list_objects,
       {contents: [
         {key: 'hosts/folder_1/dashboard/milestone.log', size: LOG_SIZE, etag: 'x'},
@@ -91,10 +92,10 @@ class TestMilestoneParser < Minitest::Test
   def test_zero_length_append
     cache = @cache.dup.tap do |x|
       x[x.keys[0]] = {
-          'count' => 5,
-          'length' => 0,
-          'md5' => Digest::MD5.hexdigest(''),
-          'etag' => 'z'
+        'count' => 5,
+        'length' => 0,
+        'md5' => Digest::MD5.hexdigest(''),
+        'etag' => 'z'
       }
     end
     count = MilestoneParser.new(cache, @s3_client).count
@@ -106,10 +107,10 @@ class TestMilestoneParser < Minitest::Test
   def test_log_rollover
     cache = @cache.dup.tap do |x|
       x[x.keys[0]] = {
-          'count' => 50,
-          'length' => 5000,
-          'md5' => 'z',
-          'etag' => 'z'
+        'count' => 50,
+        'length' => 5000,
+        'md5' => 'z',
+        'etag' => 'z'
       }
     end
     count = MilestoneParser.new(cache, @s3_client).count
@@ -119,8 +120,10 @@ class TestMilestoneParser < Minitest::Test
   end
 
   def test_error_handling
-    @s3_client.stub_responses(:list_objects_v2,
-      {common_prefixes: [{prefix: 'hosts/folder_1/'}]})
+    @s3_client.stub_responses(
+      :list_objects_v2,
+      {common_prefixes: [{prefix: 'hosts/folder_1/'}]}
+    )
     @s3_client.stub_responses(:list_objects,
       {contents: [
         {key: 'hosts/folder_1/dashboard/milestone.log.12345', size: LOG_SIZE, etag: 'x'}

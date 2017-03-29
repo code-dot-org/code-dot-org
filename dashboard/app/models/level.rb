@@ -27,8 +27,8 @@ class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO: Do we even use this?
-  belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
+  belongs_to :solution_level_source, class_name: "LevelSource" # TODO: Do we even use this?
+  belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
@@ -38,7 +38,7 @@ class Level < ActiveRecord::Base
   before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
+  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
 
   after_save :write_custom_level_file
   after_save :update_key_list
@@ -58,6 +58,7 @@ class Level < ActiveRecord::Base
     markdown_instructions
     authored_hints
     instructions_important
+    display_name
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -77,8 +78,12 @@ class Level < ActiveRecord::Base
   def assign_attributes(new_attributes)
     attributes = new_attributes.stringify_keys
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
-    assign_nested_attributes_for_one_to_one_association(:level_concept_difficulty,
-      concept_difficulty_attributes) if concept_difficulty_attributes
+    if concept_difficulty_attributes
+      assign_nested_attributes_for_one_to_one_association(
+        :level_concept_difficulty,
+        concept_difficulty_attributes
+      )
+    end
     super(attributes)
   end
 
@@ -92,7 +97,7 @@ class Level < ActiveRecord::Base
   end
 
   def self.key_list
-    @@all_level_keys ||= Level.all.map{ |l| [l.id, l.key] }.to_h
+    @@all_level_keys ||= Level.all.map {|l| [l.id, l.key]}.to_h
     @@all_level_keys
   end
 
@@ -102,7 +107,7 @@ class Level < ActiveRecord::Base
   end
 
   def summarize_concepts
-    concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')
+    concepts.pluck(:name).map {|c| "'#{c}'"}.join(', ')
   end
 
   def summarize_concept_difficulty
@@ -119,6 +124,10 @@ class Level < ActiveRecord::Base
 
   # Overriden by different level types.
   def toolbox(type)
+  end
+
+  def spelling_bee?
+    try(:skin) == 'letters'
   end
 
   def unplugged?
@@ -163,14 +172,25 @@ class Level < ActiveRecord::Base
     user_id.present? || is_a?(DSLDefined)
   end
 
+  def should_localize?
+    custom? && !I18n.en?
+  end
+
   def available_callouts(script_level)
     if custom?
       unless callout_json.blank?
+        translations = I18n.t("data.callouts").
+          try(:[], "#{name}_callout".to_sym)
+
         return JSON.parse(callout_json).map do |callout_definition|
+          callout_text = (should_localize? && translations.instance_of?(Hash)) ?
+              translations.try(:[], callout_definition['localization_key'].to_sym) :
+              callout_definition['callout_text']
+
           Callout.new(
             element_id: callout_definition['element_id'],
             localization_key: callout_definition['localization_key'],
-            callout_text: callout_definition['callout_text'],
+            callout_text: callout_text,
             qtip_config: callout_definition['qtip_config'].try(:to_json),
             on: callout_definition['on']
           )
@@ -192,7 +212,7 @@ class Level < ActiveRecord::Base
   def self.write_custom_levels
     level_paths = Dir.glob(Rails.root.join('config/scripts/**/*.level'))
     written_level_paths = Level.custom_levels.map(&:write_custom_level_file)
-    (level_paths - written_level_paths).each { |path| File.delete path }
+    (level_paths - written_level_paths).each {|path| File.delete path}
   end
 
   def should_write_custom_level_file?
@@ -212,7 +232,7 @@ class Level < ActiveRecord::Base
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.send(type) do
         xml.config do
-          hash = serializable_hash(:include => :level_concept_difficulty).deep_dup
+          hash = serializable_hash(include: :level_concept_difficulty).deep_dup
           config_attributes = filter_level_attributes(hash)
           xml.cdata(JSON.pretty_generate(config_attributes.as_json))
         end
@@ -230,7 +250,7 @@ class Level < ActiveRecord::Base
 
   def filter_level_attributes(level_hash)
     %w(name id updated_at type ideal_level_source_id md5).each {|field| level_hash.delete field}
-    level_hash.reject!{|_, v| v.nil?}
+    level_hash.reject! {|_, v| v.nil?}
     level_hash
   end
 
@@ -246,14 +266,25 @@ class Level < ActiveRecord::Base
     end
   end
 
-  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE =
-    ['Unplugged', # no solutions
-     'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', 'LevelGroup', # dsl defined, covered in dsl
-     'Applab', 'Gamelab', # all applab and gamelab are freeplay
-     'EvaluationQuestion', # plc evaluation
-     'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation',
-     'PublicKeyCryptography'
-    ] # widgets
+  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Unplugged', # no solutions
+    'TextMatch', # dsl defined, covered in dsl
+    'Multi', # dsl defined, covered in dsl
+    'External', # dsl defined, covered in dsl
+    'Match', # dsl defined, covered in dsl
+    'ContractMatch', # dsl defined, covered in dsl
+    'LevelGroup', # dsl defined, covered in dsl
+    'Applab', # freeplay
+    'Gamelab', # freeplay
+    'EvaluationQuestion', # plc evaluation
+    'NetSim', # widget
+    'Odometer', # widget
+    'Vigenere', # widget
+    'FrequencyAnalysis', # widget
+    'TextCompression', # widget
+    'Pixelation', # widget
+    'PublicKeyCryptography' # widget
+  ].freeze
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 
   def self.where_we_want_to_calculate_ideal_level_source
@@ -338,7 +369,9 @@ class Level < ActiveRecord::Base
   def contained_levels
     names = properties["contained_level_names"]
     return [] unless names.present?
-    Level.where(name: properties["contained_level_names"])
+    properties["contained_level_names"].map do |contained_level_name|
+      Script.cache_find_level(contained_level_name)
+    end
   end
 
   private

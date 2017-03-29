@@ -37,6 +37,7 @@ zu:
         'NetSim': 'Internet Simulator'
         'Custom': 'Artist'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronze'
@@ -113,10 +114,10 @@ zu:
         'turtle_2_4': "Now we're going to get fancy. Change the code to draw 36 squares, 100 pixels wide, and each 10 degrees apart. Hint: you may want to use the slider to make me go faster."
         'turtle_2_5': "Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll need to use the \"draw a square\" function five times."
         'turtle_2_6': "Ok, this program will use a counter, to draw the same squares as last time. You want the square to be the same size as the counter, so use the \"counter\" block. Hint: It's in the Variables category."
-        'turtle_2_7': "Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a \"count with\" block (in the Loops category) and \"counter\" block (in the Variables category) to draw the same spiral."
+        'turtle_2_7': "Here's a program to draw a spiral, but the blocks are disabled so they won't run. Make a new program using a \"for\" block (in the Loops category) and \"counter\" block (in the Variables category) to draw the same spiral."
         'turtle_2_7_5': "There's a new \"draw a snowman\" function (in the Functions category). Draw two snowmen, of height 250 and 100."
         'turtle_2_8': "This one's a bit tricky. Use the \"draw a snowman\" function and the new \"jump forward\" block (in the Actions category). Draw 3 snowmen in different colors, 100 pixels apart."
-        'turtle_2_9': "Use a \"count with\" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart."
+        'turtle_2_9': "Use a \"for\" loop to draw a family of snowmen with heights of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart."
         'turtle_2_10': "Here's some code to try experimenting with different spirals.  What happens if you change the turn amount? Or set a random color in the loop?  Draw anything you like."
         'maze_karel_2_1': "Try using the blocks to help me remove all the piles and fill in all the holes on the ground. Try to use loops instead of using too many blocks. Hint: you can put a loop inside another loop."
         'maze_karel_2_2': "We've defined our own block called \"fill 5\", which is now in the Functions category. Use it to help me fill in this hole."
@@ -405,11 +406,13 @@ zu:
         'infinity_playlab_intro': 'Play Lab - Introduction'
         'infinity_playlab_events': 'Play Lab - Events'
         'infinity_playlab_repeat_forever': 'Play Lab - Repeat Forever'
+        'csd_gamelab_animation_tab': 'The Animation Tab'
         'csd_gamelab_draw_1': 'Drawing in Game Lab - Part 1'
         'csd_gamelab_draw_2': 'Drawing in Game Lab - Part 2'
         'csd_gamelab_drawloop': 'Introduction to the Draw Loop'
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
+        'csd_gamelab_velocity': 'Velocity'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -420,6 +423,9 @@ zu:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'

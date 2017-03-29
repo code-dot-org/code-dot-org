@@ -16,18 +16,7 @@
       "ellipse": null,
       "rect": null,
       "regularPolygon": null,
-      "text": {
-        "params": [
-          "text",
-          "200",
-          "200"
-        ],
-        "paletteParams": [
-          "text",
-          "x",
-          "y"
-        ]
-      },
+      "text": null,
       "comment": {
         "category": "Drawing"
       }

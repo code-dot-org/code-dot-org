@@ -1,6 +1,10 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: 'Lambda layer for functions used in CloudFormation Custom Resources.'
+Parameters:
+  SlackEndpoint:
+    Type: String
+    NoEcho: true
 Resources:
   LookupStackOutputs:
     Type: AWS::Lambda::Function
@@ -8,11 +12,11 @@ Resources:
       Description: 'Implements the "Refer to Resources in Another Stack" layered-architecture pattern. Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-custom-resources-lambda-cross-stack-ref.html'
       FunctionName: LookupStackOutputs
       Code:
-        ZipFile: <%=js.call('stack-xref.js')%>
+        ZipFile: <%=js 'stack-xref.js' %>
       Handler: index.handler
       Runtime: nodejs
       Timeout: 30
-      Role: {'Fn::GetAtt': [LookupStackExecutionRole, Arn]}
+      Role: !GetAtt LookupStackExecutionRole.Arn
   LookupStackExecutionRole:
     Type: AWS::IAM::Role
     Properties:
@@ -38,11 +42,11 @@ Resources:
       Description: 'Takes an AWS CloudFormation stack name and instance id and returns the AMI ID. Ref: https://blogs.aws.amazon.com/application-management/post/Tx38Z5CAM5WWRXW'
       FunctionName: AMIManager
       Code:
-        ZipFile: <%=js.call('ami-manager.js')%>
+        ZipFile: <%=js 'ami-manager.js' %>
       Handler: index.handler
       Runtime: nodejs
       Timeout: 300
-      Role: {'Fn::GetAtt': [AMIManagerRole, Arn]}
+      Role: !GetAtt AMIManagerRole.Arn
   AMIManagerRole:
     Type: AWS::IAM::Role
     Properties:
@@ -79,11 +83,11 @@ Resources:
       Description: 'Enables a VPC for ClassicLink through the EnableVpcClassicLink API.'
       FunctionName: VpcClassicLink
       Code:
-        ZipFile: <%=js.call('vpcClassicLink.js')%>
+        ZipFile: <%=js 'vpcClassicLink.js' %>
       Handler: index.handler
       Runtime: nodejs
       Timeout: 300
-      Role: {'Fn::GetAtt': [VpcClassicLinkRole, Arn]}
+      Role: !GetAtt VpcClassicLinkRole.Arn
   VpcClassicLinkRole:
     Type: AWS::IAM::Role
     Properties:
@@ -113,11 +117,11 @@ Resources:
       Description: 'Returns the current number of InService instances in an Auto Scaling Group.'
       FunctionName: CountASG
       Code:
-        ZipFile: <%=js.call('count_asg.js')%>
+        ZipFile: <%=js 'count_asg.js' %>
       Handler: index.handler
       Runtime: nodejs
       Timeout: 30
-      Role: {'Fn::GetAtt': [CountASGRole, Arn]}
+      Role: !GetAtt CountASGRole.Arn
   CountASGRole:
     Type: AWS::IAM::Role
     Properties:
@@ -137,13 +141,41 @@ Resources:
               - Effect: Allow
                 Action: ["autoscaling:DescribeAutoScalingGroups"]
                 Resource: "*"
+  SlackEvent:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Publish a CloudWatch Event to a Slack channel.'
+      FunctionName: SlackEvent
+      Code: <%=js_zip%>
+      Environment:
+        Variables:
+          SLACK_ENDPOINT: !Ref SlackEndpoint
+      Handler: slackCloudWatchEvent.handler
+      Runtime: nodejs4.3
+      Timeout: 30
+      Role: !GetAtt BasicLambdaRole.Arn
+  BasicLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [lambda.amazonaws.com]}
+      Path: /
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 Outputs:
   LookupStackOutputs:
-    Value: {'Fn::GetAtt': [LookupStackOutputs, Arn]}
+    Value: !GetAtt LookupStackOutputs.Arn
     Description: ServiceToken for LookupStackOutputs Lambda function
   AMIManager:
-    Value: {'Fn::GetAtt': [AMIManager, Arn]}
+    Value: !GetAtt AMIManager.Arn
     Description: ServiceToken for AMIManager Lambda function
+    Export: {Name: AMIManager}
   VpcClassicLink:
-    Value: {'Fn::GetAtt': [VpcClassicLink, Arn]}
+    Value: !GetAtt VpcClassicLink.Arn
     Description: ServiceToken for VpcClassicLink Lambda function
+  SlackEvent:
+    Value: !GetAtt SlackEvent.Arn
+    Export: {Name: SlackEvent}

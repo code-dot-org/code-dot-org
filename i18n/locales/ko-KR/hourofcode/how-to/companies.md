@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 ## Hour of Code 기간 동안에 학생들과 자원봉사자들을 격려해주세요.
 
-**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+**Code.org 는 회사의 직원들이 Hour of Code 기간 중, 학교 교실 수업에 함께 참여하여 컴퓨터과학을 학생들에게 가르치면서, 전문적인 경험을 학생들과 나눌 수 있도록 [연결시켜 ](%= resolve_url('https://code.org/volunteer') %) 드립니다.**
 
   * 자원봉사 [등록하기](%= resolve_url('https://code.org/volunteer') %)
   * 교실 수업과 여러분들의 직원들을 연결시켜려면, 다음 링크를 사용해 보세요. [기업 파트너들을 위한 가이드](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
@@ -19,7 +19,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
   * 우리의 [마케팅 툴킷](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %)을 이용해 커뮤니케이션 타임라인을 만들고 장려하는 컨텐츠들을 공유해 보세요.
   * 컴퓨터과학(정보과학) 의 중요성을 강조하고 직원들에게 전달하기위해 격려하는 회사 전체 메일을 보낼 수 있도록 여러분의 CEO에게 요청해보세요. [이 이메일을 살펴보세요](%= resolve_url('/promote/resources#sample-emails') %).
-  * 회사 동료들과 [튜토리얼들을](%= resolve_url('https://code.org/learn') %) 해보면서 Hour of Code 행사를 운영해 보세요..
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
   * 여러분의 회사에서 지역 학생들이나 비영리 단체를 위한 Hour of Code 행사를 운영해주세요. 이벤트 how-to 가이드를 살펴보시면 됩니다.
 
 ## Hour of Code 행사를 운영하기 위한 방법
@@ -32,18 +32,18 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) how-to 동영상 보기 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) 튜토리얼 선택하기:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **모든 Hour of Code 튜토리얼들은:**
 
   * 준비하는데 필요한 시간은 최소화 되어있습니다.
   * 학생들이 자신의 진도와 수준에 맞추어 자기주도 학습이 가능합니다.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 4) 컴퓨터과학기술/기기 필요사항 계획하기 - 컴퓨터는 선택 사항입니다.
 
-Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 하지만 모든 참가자가 개별의 컴퓨터를 가질 필요가 **없습니다**. 또한 Hour of Code를 컴퓨터 없이도 즐길 수 있습니다.
 
 **계획을 먼저 하세요!** 여러분의 이벤트를 시작하기 전에 다음 순서를 따르세요.
 
@@ -56,7 +56,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 5) 여러분에게 영감을 주는 비디오를 보며 여러분의 Hour of code를 시작하세요.
 
-참가자들을 격려하는 것으로부터 여러분의 Hour of Code를 시작하세요. 그리고 컴퓨터 과학이 우리의 삶의 모든 부분에 어떻게 영향을 주는지 토론해보세요. Share more about what inspired you to pursue computer science and your role at your company.
+참가자들을 격려하는 것으로부터 여러분의 Hour of Code를 시작하세요. 그리고 컴퓨터 과학이 우리의 삶의 모든 부분에 어떻게 영향을 주는지 토론해보세요. 여러분들이 컴퓨터과학분야를 계속하게된 이유들과, 회사에서 여러분들의 역할에 대해서 이야기를 나누어 보세요.
 
 **영감을 주는 동영상을 보여주세요:**
 
@@ -65,7 +65,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
   * [오바마 대통령은 모든 학생들이 컴퓨터과학(정보과학)을 배울 수 있도록 도와달라고 요청하고 있습니다.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * 더 많은 영감을 주는 동영상들은 [여기에서](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) 찾아보세요..
 
-**Ideas to introduce your Hour of Code activity:**
+**당신의 Hour of Code 활동 소개 아이디어들:**
 
   * 여자아이들과 남자아이들이 생각할만한 예시(생명을 구하고, 사람을 돕고, 사람들과 대화하는 기술에 대해 얘기하세요) 와 함께 기술이 우리삶에 미치는 방법에 대해서 설명하세요. 
   * 기술 회사라면, 회사에서 공들이고 있는 재밌고 혁신적인 산물을 시연해 보세요.
@@ -77,10 +77,10 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **참가자들이 활동하도록 이끌어 주세요.**
 
-  * 튜토리얼 링크를 게시판에 적어주세요. [여러분이 선택한 튜토리얼에 대한 정보](%= resolve_url('https://code.org/learn') %) 목록 중에서 링크를 찾을 수 있습니다.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
   * 더 어린 학생들을 위해, 튜토리얼 페이지를 먼저 하거나 즐겨찾기에 추가하세요.
 
-**When participants come across difficulties it's okay to respond:**
+**여러분의 학생들이 어려운 상황을 만났을 때 이렇게 응답해 주면 좋습니다:**
 
   * "나도 잘 모른단다. 우리 함께 생각해 보자."
   * "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."
@@ -88,7 +88,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **누군가 일찍 완료 했을 때는 어떻게 할까요?**
 
-  * 그들은 code.org/learn에 다른 Hour of Code 활동들을 할 수 있습니다.
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * 또는 그들에게 활동에 어려움이 있는 친구들을 도와주라고 해보세요.
 
 [col-33]
@@ -138,6 +138,6 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## Hour of Code 이후에는 어떤 것들이 있나요?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+Hour of Code는 어떻게 컴퓨터과학기술이 작동하는지, 또 어떻게 앱들을 만드는지 배우는 첫 걸음입니다. 이 여행을 계속 하기 위해 [여러분의 학생들이 온라인 학습을 하도록 격려해 주세요.](%= resolve_url('https://code.org/learn/beyond') %).
 
 <%= view :signup_button %>

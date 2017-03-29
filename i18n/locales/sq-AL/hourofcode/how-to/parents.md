@@ -6,74 +6,74 @@ title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Si të përfundoni një orë kodimi me fëmijën tuaj
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Mbaroni një orë kodimi në shtëpi, ose sillni një vullnetar në klasën e fëmijës tuaj! Ja se si:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Ndiqni këtë video udhëzuese <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Zgjidh një tutorial:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('https://code.org/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**Të gjitha tutorialet janë vetë-udhëzuese - duke i lejuar fëmijës tënd të punojnë konform ritmit të punës dhe nivelit të shkathtësive që kanë**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Plan your technology needs
+## 3) Planifikoni nevojat tuaja teknologjike
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+Përvoja më e mirë e Orës së Kodimit përfshin kompjutera të lidhur me internet. Por ju **nuk** keni nevojë për një kompjuter. Ka disa aktivitete që mund të realizohen pa asnjë lloj teknologjie.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Testoni tutorialet në kompjuterin ose pajisjen tuaj. Sigurohu që ato punojnë në shfletues me tingull dhe video.
+- **Dëshironi të mësoni së bashku me fëmijën tuaj?** Provoni[ programimit në çift.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Shkencat kompjuterike janë sociale dhe bashkëpunuese.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 4) Filloni Orën tuaj të Kodimit me një video frymëzuese
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+Planifiko Orën tënde të Kodimit duke inspiruar fëmijën tënd dhe diskutoni se si shkenca kompjuterike ka impakt në çdo pjesë të jetës.
 
-**Trego një video inspiruese:**
+**Trego një video frymëzuese:**
 
 - Video origjinale e lancimit të Code.org, ku paraqiten Bill Gates, Mark Zuckerberg, dhe ylli i NBA Chris Bosh (Ka versione [1 minutëshe](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutëshe](https://www.youtube.com/watch?v=nKIu9yen5nc), dhe [9 minutëshe](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-- [Presidenti i SHBA-së Obama duke i bërë thirrje të gjithë studentëve të mësojnë shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- [Videoja e lançimit të Orës së Kodimit 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), apo <% if @country == 'uk' %>[Video e Orës së Kodimit 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %>[ Videoja e Orës së Kodimit 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [Presidenti i Shba-së Obama u bën thirrje të gjithë studentëve të mësojnë shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- Gjej më shumë [burime](%= resolve_url('https://code.org/inspire') %) dhe[ video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) frymëzuese.
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Nuk ka problem në qoftë se jeni të rinj në fushën e shkencave kompjuterike. Këtu janë disa ide se si mund të prezantoni aktivitetin tuaj të Orës së Kodimit:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Listo gjërat që përdorin kod në jetën e përditëshme.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- Shpjego mënyrat se si teknologjia ndikon në jetët tona, me shembuj në të cilët interesohen vajzat dhe djemtë (Fol rreth aplikacioneve dhe teknologjisë që është përdorur të shpëtuar jetë, ndihmuar njerëz, lidhur njerëz etj).
+- Listo gjërat që përdorin kodim në jetën e përditëshme.
+- Shiko këshillat për të shtuar interesimin e vajzave në Shkenca Kompjuterike [këtu](%= resolve_url('https://code.org/girls') %).
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Dëshiron më shumë ide për të shpjeguar? Shiko [praktikat më të mira](/files/AfterschoolEducatorLessonPlanOutline.docx) nga mësues me eksperiencë.
 
-## 5) Code!
+## 5) Kod!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Pasi të zgjidhni tutorialin që doni të bëni, ruajeni atë si një bookmark.
 
-**When your child come across difficulties**
+**Kur fëmijët hasin vështirësi**
 
-It’s okay to respond:
+Është normale të përgjigjesh:
 
 - "Nuk e di. Le ta zgjidhim së bashku."
 - "Teknologjia nuk punon gjithmon ashtu siç duam ne."
 - "Të mësuarit se si të programosh është si të mësosh një gjuhë të re; nuk do të jesh i rrjedhshëm menjëherë"
 
-## 6) Celebrate
+## 6) Festo
 
-[Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
+[Printo certifikatat](%= resolve_url('https://code.org/certificates') %) për fëmijët e tu (dhe për vete!).
 
-Shpërnda fotot dhe videot e Orës tuaj të Kodit në mediat sociale. Përdorimi #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
+Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
-**Other Hour of Code resources:**
+**Burime të tjera të Orës së Kodimit:**
 
-- Shiko [PTSH të Orës së Kodimit](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Shiko [FAQ e Orës së Kodimit](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 **Çfarë vjen pas Orës së Kodimit?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Ora e Kodimit është thjesht hapi i parë i një udhëtimi për të mësuar më shumë se si teknologjia funksionon dhe se si të krijojmë një aplikacion software-ik. Për të vazhduar këtë udhëtim:
 
-- Encourage your child to continue [to learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Inkurajo fëmijët të vazhdojnë të [mësojnë online](%= resolve_url('https://code.org/learn/beyond') %).
+- Ndihmo [ në promovimin](%= resolve_url('/promote') %) e edukimit të shkencave kompjuterike në shkollën e fëmjës tënd.
 
 <%= view :signup_button %>

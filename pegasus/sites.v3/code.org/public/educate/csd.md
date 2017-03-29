@@ -6,10 +6,26 @@ video_player: true
 
 # Our newest course: CS Discoveries #
 
+## <a name="what"></a>Apply for Professional Learning
+
+Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.  
+
+If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+
+[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+
 ## <a name="what"></a>What is CS Discoveries?
+
 CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
 
-<img src="/images/fit-500/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
+<div style="float:right; margin:20px 0px 20px 20px;">
+
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center' %>
+
+<i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
+
+</div>
+
 
 ### <a name="equity"></a>A CS course for everyone, designed with equity in mind
 CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
@@ -100,7 +116,7 @@ Where the first semester centers on the immediately observable and personally ap
 
 <h4> Unit 4 - Problem Solving: The Design Process </h4>
 
-By following the design process and working with structured group roles, student groups will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, students will then develop and interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
+With the Problem Solving Process as a basis, students will start to look at how user-centered design places _others_ first in approaching the solution to a problem, whether through design of a physical object or a software application. Through several small projects, students will experience an iterative design and testing process that will then be applied to a multi-week group project. In this final project, student teams will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, teams will then develop an interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
 
 </div>
 
@@ -137,13 +153,13 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 <div style="float:left; padding:25px; width:33%">
 
-<h4>Get on the interest list for professional learning</h4>
+<h4>Apply now for professional learning!</h4>
 
-Are you interested in teaching CS Discoveries and want to take part in our professional learning program? While applications for our CS Discoveries professional learning program are not open yet, you can learn more about program commitments and get on the interest list.
+We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries! This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
 
 <br><br>
 
-<a href="/educate/professional-learning/cs-discoveries"> <button>Learn more</button> </a>
+<a href="/educate/professional-learning/cs-discoveries"><button>Apply now!</button></a>
 
 </div>
 
@@ -166,10 +182,12 @@ Want to know when we've posted new lesson drafts and have tools that are ready t
 We are releasing drafts of CS Discoveries units as they are finished, and would love for teachers and others in the CS education community to try them out and provide feedback. On the first page of every lesson plan, there is a Give Us Feedback! button that will open up a quick survey you can fill out with your thoughts and feedback. We really appreciate it!
 
 
-| Unit | Lesson Plans | Code Studio |
-| :------------------:|-----------|------|
-|**Unit 1 - Problem Solving: Computers and Logic**| [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1)|
-|**Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3)|
+|                   Unit                   | Lesson Plans                             | Code Studio                              |
+| :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |
+| **Unit 1 - Problem Solving: Computers and Logic** | [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1) |
+| **Unit 2 - The Internet: Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
+| **Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
+| **Unit 4 - Problem Solving: The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
 
 
 
@@ -190,6 +208,10 @@ The CS Discoveries course is deeply inspired by the philosophy of ECS, based on 
 We will pilot the new course materials during the spring of 2016-17 with a group of 45 teachers across the US. The course will roll out formally in Summer 2017. Check back to
 this website frequently as we release drafted lesson plans!
 
+### <a name="standards"></a>Will CS Discoveries be mapped to standards?
+
+We are developing the course using the K-12 CS Framework and the interim CSTA standards as guidance. Once the course is complete, and the revised CSTA standards have been released, we will provide a mapping to those standards.
+
 <!--
 #### Can I pilot the new course?
 
@@ -199,6 +221,8 @@ As lessons are completed we will also be publishing them on the website we invit
 
 #### How/Where can I get professional development for this course?
 
-In-person professional development for the Code.org CSE course will be available for partner districts starting in Summer 2017.
+We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries!
+
+<a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
 
 -->

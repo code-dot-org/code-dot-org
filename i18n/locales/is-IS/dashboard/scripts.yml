@@ -30,7 +30,7 @@ is:
           title: Námskeið 2
           description: Byrja með Námskeið 2 fyrir nemendur sem geta lesið og hafa enga reynslu af forritun. Á þessu námskeiði munu nemendur búa til forrit til að leysa verkefni og þróa gagnvirka leiki eða sögur sem þeir geta deilt. Mælt með fyrir 2. - 5. bekk.
           description_short: Byrja með Námskeið 2 fyrir læsa nemendur.
-          description_audience: Fyrir 6+ ára (sem eru læs)
+          description_audience: Fyrir 6+ ára (læsi áskilið)
           stage:
             'Artist: Debugging': 'Listamaður: Villuleit'
             'Artist: Loops': 'Listamaður: Lykkjur'
@@ -75,7 +75,7 @@ is:
             Internet: Internet
             Maze: Völundarhús
             'Maze: Conditionals': 'Völundarhús: Skilyrði'
-            Songwriting: Lagasmíð með stikum
+            Songwriting: Lagasmíð
             'Studio: Create a Game': 'Leikjasmiðja: Búa til leik'
             'Studio: Create a Story': 'Leikjasmiðja: Búa til sögu'
         playlab:
@@ -223,7 +223,7 @@ is:
           stage:
             Automatic DNS node: Sjálfvirk DNS stöð
             Broadcasting messages: Sending boða
-            Internet Simulator Freeplay: Internet-hermir frjáls not
+            Internet Simulator Freeplay: Internet-hermir frjáls æfing
             Manual DNS: Handvirkt DNS
             Overview and Setup Instructions: Yfirlit og uppsetningarleiðbeiningar
             Packets and Reliability: Pakkar og áreiðanleiki
@@ -237,10 +237,10 @@ is:
           description: Búa til myndir með bitum og bætum.
           description_short: Búa til myndir með bitum og bætum.
           stage:
-            Black & White Pixelation Freeplay: Svart-hvít dílamynstur - frístund
+            Black & White Pixelation Freeplay: Svart-hvít dílamynstur - frjáls æfing
             Black & White Pixelation Tutorial: Svart-hvít dílamynstur - kennslustund
             Color Pixelation Examples: Lituð dílamynstur - dæmi
-            Color Pixelation Freeplay: Lituð dílamynstur - frístund
+            Color Pixelation Freeplay: Lituð dílamynstur - frjáls æfing
             Color Pixelation Tutorial: Lituð dílamynstur - kennslustund
           description_audience: ''
         20-hour:
@@ -289,12 +289,14 @@ is:
             Calc: Reikningur
             Eval: Mat
             Studio: Stúdíó
+          description_audience: ''
         flappy:
           title: Flappy kóði
           description: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!
           description_short: Skrifaðu þinn eigin Flappy leik á innan við 10 mínútum!
           stage:
             Flappy Code: Flappy kóði
+          description_audience: ''
         jigsaw:
           title: Púsl
           description: Prófaðu Jigsaw kennsluefnið okkar
@@ -331,9 +333,9 @@ is:
             Puzzles: Þrautir
           description_audience: ''
         cspunit1:
-          title: "CSP Kafli1 - Stafrænar upplýsingar"
+          title: "(gamalt) CSP Kafli1 - Stafrænar upplýsingar"
           description: Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem koma upp út frá þörfinni fyrir að setja stafrænar upplýsingar fram í tölvum og flytja þær milli manna og tölvutækja.
-          description_short: Kanna hvernig stafrænar upplýsingar eru settar fram og fluttar
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
           stage:
             Binary Numbers: Tvíundartölur
             Bytes and File Sizes: Bytes and File Sizes
@@ -453,7 +455,7 @@ is:
         cspunit3:
           title: "(old) CS Principles Unit 3 - Programming"
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
-          description_short: Kanna hvernig stafrænar upplýsingar eru settar fram og fluttar
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
           stage:
             APIs and Function Parameters: APIs and Function Parameters
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -621,7 +623,7 @@ is:
             the reliability of network communication, the security of data, and personal privacy. Topics
             include the Internet Protocol (IP), DNS, TCP/IP, cryptography and other security and hacking
             concerns.
-          description_short: Kanna hvernig stafrænar upplýsingar eru settar fram og fluttar
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
           stage:
             Algorithms Detour - Hard Problems TSP: Hard Problems - The Traveling Salesperson Problem
             Algorithms Detour - How Routers Learn: How Routers Learn
@@ -665,8 +667,8 @@ is:
           description_audience: ''
         allthethings:
           title: All þetta!
-          description: Öll stig fyrir prófun á notendaviðmóti (UI)
-          description_short: Öll stig fyrir prófun á notendaviðmóti (UI)
+          description: Allar gerðir borða fyrir prófun á notendaviðmóti (UI). Vinsamlegast skráðu þig inn til að prófa borð í applab (applab borð virka aðeins eftir innskráningu. Venjulega látum við fólk skrá sig inn, en það er aðeins hægt að framfylgja því fyrir heila skriftu og væri hvimleitt að þurfa að gera fyrir þessa skriftu).
+          description_short: Allar gerðir borða fyrir prófun á notendaviðmóti (UI)
           stage:
             Anonymous student survey: Anonymous student survey
             Anonymous student survey 2: Anonymous student survey 2
@@ -701,6 +703,9 @@ is:
             Text Compression: Þjöppun texta
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
+            Standalone video: Standalone video
           description_audience: ''
         algebraPD2b:
           title: Tölvunarfræði í algebru - fagmenntun
@@ -759,8 +764,12 @@ is:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -852,8 +861,12 @@ is:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -868,8 +881,12 @@ is:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -908,7 +925,7 @@ is:
             Happy Maps: Krúttleg kort
             Move it, Move it: Hreyfa, hreyfa
             'Real-life Algorithms: Plant a Seed': 'Algrím úr raunheimi: Sá fræi'
-            Songwriting: Lagasmíð með stikum
+            Songwriting: Lagasmíð
             The Big Event: Stórviðburður
         afterschool1:
           title: Afterschool 1
@@ -1053,6 +1070,7 @@ is:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Velkomin!
             Wrap-Up: Samantekt
+          description_audience: ''
         algebraPD3b:
           title: Tölvunarfræði í algebru - fagmenntun
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1126,7 +1144,7 @@ is:
         cspunit3temp:
           title: "(old) CS Principles Unit 3 - Programming"
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
-          description_short: Forritun
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið n´´yju einingarnar á code.org/educate/csp.
           stage:
             Canvas and Arrays in Apps: Canvas and Arrays in Apps
             Functions with Return Values: Functions with Return Values
@@ -1192,10 +1210,11 @@ is:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Velkomin!
             Wrap-Up: Samantekt
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
-          description_short: Kanna hvernig stafrænar upplýsingar eru settar fram og fluttar
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
           stage:
             Create PT: Create PT
             Create PT Prep: Create PT Prep
@@ -1204,7 +1223,7 @@ is:
         cspunit4:
           title: "(old) CS Principles Unit 4 - Data"
           description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
-          description_short: Kanna hvernig stafrænar upplýsingar eru settar fram og fluttar
+          description_short: Þessi eining er tilraunaútgáfa og er ekki lengur studd eða uppfærð. Þú getur fundið nýju einingarnar á code.org/educate/csp.
           stage:
             Check Your Assumptions: Check Your Assumptions
             Cleaning Data: Cleaning Data
@@ -1384,7 +1403,7 @@ is:
         csp3:
           title: CSP Unit 3 - Intro to Programming
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
-          description_short: Forritun
+          description_short: Lærðu undirstöðu í JavaScript forritun með nálgun sem beitir ofan-frá hönnun og notar klassíska "turtle" teiknun.
           stage:
             APIs and Function Parameters: APIs and Function Parameters
             Creating Functions: Gerð falla
@@ -1421,7 +1440,7 @@ is:
           description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
-          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           stage:
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -1457,9 +1476,22 @@ is:
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If" Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1467,6 +1499,13 @@ is:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -1829,7 +1868,7 @@ is:
             More Programming with Scratch: More Programming with Scratch
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Lagasmíð með stikum
+            Songwriting: Lagasmíð
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -1884,8 +1923,12 @@ is:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -2147,9 +2190,9 @@ is:
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 1.
           stage:
             Unit 1 Overview: Unit 1 Overview
             'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
@@ -2162,14 +2205,15 @@ is:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: Skopp
-          title: Basketball
+          title: Veldu þér lið og búðu til körfuboltaleik
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Búa til körfuboltaleik
+          description: Búa til körfuboltaleik
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2213,6 +2257,8 @@ is:
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2229,10 +2275,11 @@ is:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
-          title: CSP Unit 2 Online Support
+            AP Preparation and Support: AP Preparation and Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 2. '
         csd4:
           stage:
             Analysis of Design: Analysis of Design
@@ -2254,6 +2301,10 @@ is:
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2335,6 +2386,8 @@ is:
             Your Digital Footprint: Stafræna fótsporið þitt
             Building a Foundation: Að byggja grunn
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2359,6 +2412,8 @@ is:
             Digital Citizenship: Stafrænn borgari
             'Unplugged: Binary': 'Verkefni án tölvu: Tvíundir'
             Artist Binary: 'Listamaður: Tvíundir'
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: Innri lykkjur
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2381,6 +2436,7 @@ is:
             Private and Personal Information: Private and Personal Information
             Internet: Internet
             Crowdsourcing: Hópvistun
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2430,10 +2486,10 @@ is:
         sports:
           stage:
             Sports: Íþróttir
-          title: Íþróttir
+          title: Kóðaðu íþróttaleik eftir þínu höfði
           description_audience: ''
-          description_short: Kóðaðu þína eigin íþrótt
-          description: ''
+          description_short: Blandaðu saman íþróttum
+          description: Blandaðu saman íþróttum
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Velkomin!
@@ -2479,7 +2535,137 @@ is:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
-          title: CSP Unit 3 Online Support
+            AP Preparation and Support: AP Preparation and Support
+          title: Unit 3 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: Unit 4 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
+        sciencepd4:
+          stage:
+            Welcome!: Velkomin!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: Samantekt
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: Velkomin!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Samantekt
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Velkomin!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Samantekt
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage: [ ]
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+        csp6-support:
+          stage: [ ]
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+        csppostap:
+          stage:
+            Creating Javascript Objects: Creating Javascript Objects
+            Permanent Data Storage: Permanent Data Storage
+            Reading Records: Reading Records
+            Deleting Records: Deleting Records
+            Updating Records: Updating Records
+            Importing and Exporting Data: Importing and Exporting Data
+            Visualizing Data: Visualizing Data
+            Sample Apps: Sample Apps
+            Final Project: Final Project
+          title: CSP Post-AP - Databases and Using Data in Your Apps
+          description_audience: ''
+          description_short: ''
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
+        unit6-csd-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Unplugged: Input Unplugged
+            '': ''
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        gamelab-demo:
+          stage:
+            Simple Sprite Movement: Simple Sprite Movement
+        csd6-draft:
+          stage:
+            UI and Input: UI and Input
+            Computing Innovations: Computing Innovations
+            Input Uplugged: Input Uplugged
+            The Circuit Playground: The Circuit Playground
+            Foo: Foo
+            Lists: Listar
+            Lights: Lights
+          title: Draft Unit 6
           description_audience: ''
           description_short: ''
           description: ''

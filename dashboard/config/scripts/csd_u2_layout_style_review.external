@@ -1,0 +1,37 @@
+name 'CSD U2 layout style review'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# STOP
+
+Stop and wait for your teacher.  In the meantime, you can go back to previous levels and try some new ways to use styles.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Review: Properties Posters
+
+#### Properties Posters
+
+**Group:** Divide the class into 8 groups.
+
+**Set up:** Assign each group 1 of the properties they learned about today.
+
+* Background Color
+* Border Width
+* Border Color
+* Border Style
+* Width
+* Height
+* Float
+* Margin
+
+Have each group make a diagram which explains how their properties works. It should include:
+
+* Explain the possible values that can be used
+* Example CSS code
+* Example output from code
+* Short explanation of what happens when you use this property
+
+This can be done on a poster sized paper or normal sized paper depending on how you want to display them and what you have available.
+MARKDOWN

@@ -6,7 +6,8 @@ class ReportAbuseController < ApplicationController
 
   def report_abuse
     unless Rails.env.development?
-      HTTParty.post('https://codeorg.zendesk.com/api/v2/tickets.json',
+      response = HTTParty.post(
+        'https://codeorg.zendesk.com/api/v2/tickets.json',
         headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
         body: {
           ticket: {
@@ -23,11 +24,13 @@ class ReportAbuseController < ApplicationController
                 params[:abuse_detail]
               ].join("\n")
             },
-            custom_fields: [{ id: AGE_CUSTOM_FIELD_ID, value: params[:age] }],
+            custom_fields: [{id: AGE_CUSTOM_FIELD_ID, value: params[:age]}],
             tags: (params[:abuse_type] == 'infringement' ? ['report_abuse', 'infringement'] : ['report_abuse'])
           }
         }.to_json,
-        basic_auth: { username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token})
+        basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
+      )
+      raise 'Zendesk failed' unless response.success?
     end
 
     unless params[:channel_id].blank?
@@ -40,7 +43,7 @@ class ReportAbuseController < ApplicationController
         'REQUEST_PATH' => channels_path,
         'HTTP_COOKIE' => request.env['HTTP_COOKIE'],
         'rack.input' => StringIO.new
-        )
+      )
 
       abuse_score = JSON.parse(body[0])["abuse_score"]
 

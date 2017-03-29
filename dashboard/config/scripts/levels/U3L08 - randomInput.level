@@ -124,7 +124,8 @@
       "callMyFunction": null,
       "callMyFunction_n": null,
       "return": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "edit_code": true,
     "encrypted_examples": "b10lBKdKe7XgOJJEHks4NxhajfBMJ1fVKObXlXg2Prkuw6aA7ZrxNyegsbjd\nr38f\n",
@@ -176,11 +177,11 @@
       {
         "entries": [
           "randomNumber:2",
-          "drawSeaGrass:1"
+          "drawSeagrass:1"
         ],
         "matchType": "exact",
         "minTimes": 1,
-        "message": "The task asks you to use a call to randomNumber(min,max) as the parameter to drawSeaGrass. It should look something like drawSeaGrass(randomNumber(5,20))"
+        "message": "The task asks you to use a call to randomNumber(min,max) as the parameter to drawSeagrass. It should look something like drawSeagrass(randomNumber(5,20))"
       },
       {
         "entries": [

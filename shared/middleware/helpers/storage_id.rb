@@ -4,12 +4,15 @@ require 'base64'
 def create_storage_id_cookie
   storage_id = user_storage_ids_table.insert(user_id: nil)
 
-  response.set_cookie(storage_id_cookie_name, {
-    value: CGI.escape(storage_encrypt_id(storage_id)),
-    domain: ".#{request.shared_cookie_domain}",
-    path: '/',
-    expires: Time.now + (365 * 24 * 3600)
-  })
+  response.set_cookie(
+    storage_id_cookie_name,
+    {
+      value: CGI.escape(storage_encrypt_id(storage_id)),
+      domain: ".#{request.shared_cookie_domain}",
+      path: '/',
+      expires: Time.now + (365 * 24 * 3600)
+    }
+  )
 
   storage_id
 end
@@ -43,6 +46,15 @@ def storage_decrypt_channel_id(encrypted)
   channel_id = channel_id.to_i
   raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
   [storage_id, channel_id]
+end
+
+def valid_encrypted_channel_id(encrypted)
+  begin
+    storage_decrypt_channel_id(encrypted)
+  rescue ArgumentError, OpenSSL::Cipher::CipherError
+    return false
+  end
+  true
 end
 
 def storage_encrypt(plain)

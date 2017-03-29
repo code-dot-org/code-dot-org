@@ -1,0 +1,30 @@
+name 'Project Breakdown: Clicker Game'
+css 'unplugged'
+markdown <<MARKDOWN
+# Project Breakdown: Clicker Game
+
+<img src= "https://images.code.org/e75cc9aa0f9ce4f40fbc9f2036f1340b-image-1487093010262.gif" style="width: 300px; float: right; margin-left:20px">
+
+
+In this level, students work on another version of their clicker game, adding the concept of variables to keep score.  In order to do so, they will learn about the concept of **scope** and the differences, benefits, and drawbacks, of using global versus local variables. This lesson focuses more on using global variables, since in event-driven apps that’s what you need to keep track of data across multiple events. After completing the level, students should be able to give a high level explanation of what “variable scope” means.  The very basics of a simple if statement are also presented in this lesson, mostly to highlight the difference between the = and == operators.  This concept will be expanded upon in lessons 7-9.
+
+## Vocabulary:
+- **==** - The equality operator (sometimes read: "equal equal") is used to compare two values, and returns a Boolean (true/false). Avoid confusion with the assignment operator "=",
+- **Global Variable** - A variable whose scope is "global" to the program, it can be used and updated by any part of the code. Its global scope is typically derived from the variable being declared (created) outside of any function, object, or method.
+- **If-Statement** - The common programming structure that implements "conditional statements".
+- **Local Variable** - A variable with local scope is one that can only be seen, used and updated by code within the same scope. Typically this means the variable was declared (created) inside a function -- includes function parameter variables.
+- **Variable Scope** - dictates what portions of the code can "see" or use a variable, typically derived from where the variable was first created. (See Global v. Local)
+
+## The requirements for the app are:
+- The **game must end** - there must be a way to “win” and a way to “lose.”
+- The game **must use at least one variable** (but you may use as many as you like) to keep track of some data during game play (such as a score, or a number of attempts remaining, number of times a certain element was clicked, etc.).
+- The app will have at least **4 screens**:
+	1. **A welcome screen** that explains what your game is and how to play, and lets the user start
+	2. **A screen for game pla**y that displays some data on the screen that updates during play (such as the running score, number of attempts remaining, etc.)
+	3. **A “win” screen** to show a congratulatory message if the player “wins” the game
+	4. **A “loss” screen** to show when the player “loses” the game
+- From the the win/loss screens, it **must** be possible to start the game over without simply re-running the app from scratch; this means resetting all variables and displays back to initial values.
+- The program code should follow good style, particularly by making sure to **create global variables in the first few lines of code** and giving UI elements and variables **descriptive and meaningful IDs**.
+- The user interface should be **intuitive to use**.
+
+MARKDOWN

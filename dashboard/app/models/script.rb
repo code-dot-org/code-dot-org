@@ -19,15 +19,17 @@
 #
 
 require 'cdo/script_constants'
+require 'cdo/shared_constants'
 
 # A sequence of Levels
 class Script < ActiveRecord::Base
   include ScriptConstants
+  include SharedConstants
 
   include Seeded
   has_many :levels, through: :script_levels
-  has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
-  has_many :stages, -> { order('absolute_position ASC') }, dependent: :destroy, inverse_of: :script
+  has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
+  has_many :stages, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -44,6 +46,15 @@ class Script < ActiveRecord::Base
       unless: :skip_name_format_validation,
       with: /\A[a-z0-9\-]+\z/,
       message: 'can only contain lowercase letters, numbers and dashes'
+    }
+  # As we read and write to files with the script name, to prevent directory
+  # traversal (for security reasons), we do not allow the name to start with a
+  # tilde or dot or contain a slash.
+  validates :name,
+    presence: true,
+    format: {
+      without: /\A~|\A\.|\//,
+      message: 'cannot start with a tilde or dot or contain slashes'
     }
 
   include SerializedProperties
@@ -177,18 +188,20 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes([
-          {
-            script_levels: [
-              {levels: [:game, :concepts, :level_concept_difficulty]},
-              :stage,
-              :callouts
-            ]
-          },
-          {
-            stages: [{script_levels: [:levels]}]
-          }
-        ]).find(script_id)
+        script = Script.includes(
+          [
+            {
+              script_levels: [
+                {levels: [:game, :concepts, :level_concept_difficulty]},
+                :stage,
+                :callouts
+              ]
+            },
+            {
+              stages: [{script_levels: [:levels]}]
+            }
+          ]
+        ).find(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -283,7 +296,41 @@ class Script < ActiveRecord::Base
   def self.get_from_cache(id)
     return get_without_cache(id) unless should_cache?
 
-    script_cache[id.to_s] || get_without_cache(id)
+    script_cache.fetch(id.to_s) do
+      # Populate cache on miss.
+      script_cache[id.to_s] = get_without_cache(id)
+    end
+  end
+
+  def text_response_levels
+    return @text_response_levels if Script.should_cache? && @text_response_levels
+    @text_response_levels = text_response_levels_without_cache
+  end
+
+  def text_response_levels_without_cache
+    text_response_levels = []
+    script_levels.map do |script_level|
+      script_level.levels.map do |level|
+        next if level.contained_levels.empty?
+        text_response_levels << {
+          script_level: script_level,
+          levels: [level.contained_levels.first]
+        }
+      end
+    end
+
+    text_response_levels.concat(
+      script_levels.includes(:levels).
+        where('levels.type' => [TextMatch, FreeResponse]).
+        map do |script_level|
+          {
+            script_level: script_level,
+            levels: script_level.levels
+          }
+        end
+    )
+
+    text_response_levels
   end
 
   def to_param
@@ -312,7 +359,7 @@ class Script < ActiveRecord::Base
   end
 
   def get_script_level_by_id(script_level_id)
-    script_levels.find { |sl| sl.id == script_level_id.to_i }
+    script_levels.find {|sl| sl.id == script_level_id.to_i}
   end
 
   def get_script_level_by_relative_position_and_puzzle_position(relative_position, puzzle_position, lockable)
@@ -338,7 +385,11 @@ class Script < ActiveRecord::Base
 
   # TODO(asher): Rename this method to k1?, removing the need to disable lint.
   def is_k1?  # rubocop:disable PredicateName
-    name == 'course1'
+    [
+      Script::COURSEA_DRAFT_NAME,
+      Script::COURSEB_DRAFT_NAME,
+      Script::COURSE1_NAME
+    ].include?(name)
   end
 
   def hide_solutions?
@@ -359,6 +410,10 @@ class Script < ActiveRecord::Base
     %w(course1 course2 course3 course4).include? name
   end
 
+  def k5_draft_course?
+    %w(coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include? name
+  end
+
   def csf?
     k5_course? || twenty_hour?
   end
@@ -368,7 +423,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
@@ -409,11 +464,11 @@ class Script < ActiveRecord::Base
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: Script.build_property_hash(script_data)
-        }, stages.map{|stage| stage[:scriptlevels]}.flatten]
+        }, stages.map {|stage| stage[:scriptlevels]}.flatten]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      added_scripts = scripts_to_add.sort_by.with_index{ |args, idx| [args[0][:id] || Float::INFINITY, idx] }.map do |args|
+      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |args|
         add_script(*args)
       end
       [added_scripts, custom_i18n]
@@ -498,15 +553,15 @@ class Script < ActiveRecord::Base
         assessment: assessment
       }
       script_level_attributes[:properties] = properties.to_json if properties
-      script_level = script.script_levels.detect{|sl|
-        script_level_attributes.all?{ |k, v| sl.send(k) == v } &&
+      script_level = script.script_levels.detect do |sl|
+        script_level_attributes.all? {|k, v| sl.send(k) == v} &&
           sl.levels == levels
-      } || ScriptLevel.create(script_level_attributes) {|sl|
+      end || ScriptLevel.create(script_level_attributes) do |sl|
         sl.levels = levels
-      }
+      end
       # Set/create Stage containing custom ScriptLevel
       if stage_name
-        stage = script.stages.detect{|s| s.name == stage_name} ||
+        stage = script.stages.detect {|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
             script: script,
@@ -581,13 +636,16 @@ class Script < ActiveRecord::Base
     begin
       transaction do
         script_data, i18n = ScriptDSL.parse(script_text, 'input', script_name)
-        Script.add_script({
-          name: script_name,
-          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
-          login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
-          wrapup_video: general_params[:wrapup_video],
-          properties: Script.build_property_hash(general_params)
-        }, script_data[:stages].map { |stage| stage[:scriptlevels] }.flatten)
+        Script.add_script(
+          {
+            name: script_name,
+            hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
+            login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
+            wrapup_video: general_params[:wrapup_video],
+            properties: Script.build_property_hash(general_params)
+          },
+          script_data[:stages].map {|stage| stage[:scriptlevels]}.flatten
+        )
         Script.update_i18n(i18n, {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n}}}}})
       end
     rescue StandardError => e
@@ -616,7 +674,7 @@ class Script < ActiveRecord::Base
   def self.update_i18n(stages_i18n, metadata_i18n = {})
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
-    i18n.deep_merge!(stages_i18n){|_, old, _| old}
+    i18n.deep_merge!(stages_i18n) {|_, old, _| old}
     i18n.deep_merge!(metadata_i18n)
     File.write(scripts_yml, "# Autogenerated scripts locale file.\n" + i18n.to_yaml(line_width: -1))
   end
@@ -639,30 +697,26 @@ class Script < ActiveRecord::Base
   end
 
   def summarize
-    summarized_stages = stages.map(&:summarize)
-
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {
-            ids: [x],
-            kind: 'peer_review',
-            title: '',
-            url: '',
-            name: I18n.t('peer_review.reviews_unavailable'),
-            icon: 'fa-lock',
-            locked: true
+          ids: [x],
+          kind: LEVEL_KIND.peer_review,
+          title: '',
+          url: '',
+          name: I18n.t('peer_review.reviews_unavailable'),
+          icon: 'fa-lock',
+          locked: true
         }
       end
 
-      peer_review_section = {
-          name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
-          flex_category: 'Peer Review',
-          levels: levels,
-          lockable: false
+      peer_review_stage = {
+        name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
+        flex_category: 'Peer Review',
+        levels: levels,
+        lockable: false
       }
-
-      summarized_stages << peer_review_section
     end
 
     summary = {
@@ -674,8 +728,9 @@ class Script < ActiveRecord::Base
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      stages: summarized_stages,
-      peerReviewsRequired: peer_reviews_to_complete || 0
+      stages: stages.map(&:summarize),
+      peerReviewsRequired: peer_reviews_to_complete || 0,
+      peerReviewStage: peer_review_stage
     }
 
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?

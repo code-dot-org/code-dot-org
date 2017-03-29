@@ -22,8 +22,14 @@ module Poste
     plain << decrypter.final
   end
 
+  # Attempts to decrypt an encrypted Id
+  # @param encrypted [String] encrypted id
+  # @return [Integer, nil] decrypted id, or nil if it could not be decrypted.
   def self.decrypt_id(encrypted)
-    return decrypt(encrypted).to_i
+    decrypt(encrypted).to_i
+  rescue OpenSSL::Cipher::CipherError, ArgumentError => e
+    CDO.log.warn "Unable to decrypt poste id: #{encrypted}. Error: #{e.message}"
+    nil
   end
 
   def self.encrypt(plain)
@@ -107,7 +113,7 @@ module Poste2
 
   # Returns true if address is a valid email address.
   def self.email_address?(address)
-    EmailValidator.email_address?(address)
+    Cdo::EmailValidator.email_address?(address)
   end
 
   def self.find_or_create_url(href)
@@ -208,7 +214,7 @@ module Poste2
     {}.tap do |saved|
       attachments.each do |name, content|
         filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
-        File.open(filename, 'w+b'){|f| f.write content}
+        File.open(filename, 'w+b') {|f| f.write content}
         saved[name] = filename
       end
     end
@@ -240,15 +246,17 @@ module Poste2
       message_id = @@message_id_cache[message_name] = message[:id]
     end
 
-    POSTE_DB[:poste_deliveries].insert({
-      created_at: DateTime.now,
-      created_ip: recipient[:ip_address],
-      contact_id: recipient[:id],
-      contact_email: recipient[:email],
-      hashed_email: Digest::MD5.hexdigest(recipient[:email]),
-      message_id: message_id,
-      params: (params).to_json,
-    })
+    POSTE_DB[:poste_deliveries].insert(
+      {
+        created_at: DateTime.now,
+        created_ip: recipient[:ip_address],
+        contact_id: recipient[:id],
+        contact_email: recipient[:email],
+        hashed_email: Digest::MD5.hexdigest(recipient[:email]),
+        message_id: message_id,
+        params: (params).to_json,
+      }
+    )
   end
 
   class DeliveryMethod
@@ -257,6 +265,7 @@ module Poste2
       noreply@code.org
       teacher@code.org
       hadi_partovi@code.org
+      survey@code.org
     ]
 
     def initialize(settings = nil)

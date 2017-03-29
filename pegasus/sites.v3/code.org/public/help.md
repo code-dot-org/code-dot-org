@@ -19,12 +19,12 @@ Encourage local elementary schools to teach our [elementary curriculum](/k5) or 
 ## Host an Hour of Code - at work, in your community, or local school
 Millions of people of all ages have learned an [Hour of Code](https://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
 
-[<button>Host an Hour of Code</button>](https://hourofcode.com/how-to)&nbsp;&nbsp; [<button>Volunteer in a classroom</button>](/volunteer)
+[<button>Host an Hour of Code</button>](https://hourofcode.com/how-to)
 
 ## Want to inspire students? Offer help to local teachers
-Volunteer to teach our [Code Studio courses](http://studio.code.org) to local students with [this guide](/volunteer/guide). And sign up to hear about volunteer opportunities near you.
+Volunteer to teach the Hour of Code or our [Code Studio courses](http://studio.code.org) to local students. Sign up to hear about volunteer opportunities near you.
 
-[<button>Learn more</button>](/volunteer)
+[<button>Volunteer in a classroom</button>](/volunteer)
 
 ## Buy a CODE hat or t-shirt
 Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
@@ -64,7 +64,7 @@ Code.org's online platform [Code Studio](https://studio.code.org) enables studen
 
 - [TEALS](http://c.tealsk12.org/l/667) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
 - [CoderDojo](http://www.coderdojo.com) - Start a Dojo in your neighborhood, mentor children to learn to code.
-- [Citizen Schools](http://www.citizenschools.org/curriculum-category/science-technology/) - Volunteer to teach computer programming in extended-day programs at schools.
+- [Citizen Schools](https://www.citizenschools.org/volunteer) - Volunteer to teach computer programming in extended-day programs at schools.
 
 [/col-66]
 

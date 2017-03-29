@@ -1,0 +1,71 @@
+name 'How to pick a random button'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How to pick a random button
+
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Okay, great. <code>setProperty</code> works.  What's next?</p>
+
+</div>
+
+<img src="https://images.code.org/cfa13bbc3d8e09f4ed6ccd38d46558be-image-1481036468174.png" style="float: right">
+
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> MICHAEL </p>
+
+
+<p>Well, I wanted to pick one of the squares at random to make the different colored one. Also, I want the color to be random, not just orange, every time.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Okay, well I'm not sure about the colors yet, but I do have an idea for how to choose one of the buttons randomly.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>I'm all ears.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Okay, notice how all the buttons have IDs that are pretty much the same? <em>"button1", "button2", "button3", "button4"</em>.  There's a pattern.  It's always: <em>"button" + some number</em></p>
+
+<p>So I think we can use a trick we learned a while ago to build a string...</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Ah, I think I see where you're going...</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>We can use <code>randomNumber</code> as the number, and then just tack it on to the string "button" and Presto!, we'd have generated one of the button IDs.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Right.  We can do something like this: <code>var randButtonId = "button"+randomNumber(1,4);</code></p>
+
+<p>Then we can add that into our existing code like this:</p>
+</div>
+
+	    var diffColor = rgb(250, 175, 20);					  // make different color
+	--> var randButtonId = "button"+randomNumber(1,4);  		  // make a random button ID
+	    setProperty(randButtonId, "background-color", diffColor); // set bgcolor of randomButtonId to diffColor
+
+<br><br>
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Cool.  Let's try it.</p>
+</div>
+
+## Click continue to try it
+
+
+
+MARKDOWN

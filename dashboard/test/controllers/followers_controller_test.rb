@@ -16,15 +16,28 @@ class FollowersControllerTest < ActionController::TestCase
 
     # student without section or teacher
     @student = create(:user)
+
+    @picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+  end
+
+  test "student in picture section should be redirected to picture login when joining section" do
+    get :student_user_new, params: {section_code: @picture_section.code}
+    assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
+  end
+
+  test "student in word section should be redirected to word login when joining section" do
+    get :student_user_new, params: {section_code: @word_section.code}
+    assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code
   end
 
   test "student_user_new when not signed in" do
-    get :student_user_new, section_code: @chris_section.code
+    get :student_user_new, params: {section_code: @chris_section.code}
 
     assert_response :success
     assert assigns(:user)
 
-    assert !assigns(:user).persisted?
+    refute assigns(:user).persisted?
   end
 
   test "student_user_new without section code" do
@@ -39,7 +52,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @student
 
     assert_creates(Follower) do
-      get :student_user_new, section_code: @chris_section.code
+      get :student_user_new, params: {section_code: @chris_section.code}
     end
 
     assert_redirected_to '/'
@@ -65,7 +78,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @laurel_student_1.student_user
 
     assert_does_not_create(Follower) do
-      get :student_user_new, section_code: @laurel_section_2.code
+      get :student_user_new, params: {section_code: @laurel_section_2.code}
     end
 
     assert_redirected_to '/'
@@ -82,7 +95,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     sign_in @student
     assert_creates(Follower) do
-      get :student_user_new, section_code: @chris_section.code
+      get :student_user_new, params: {section_code: @chris_section.code}
     end
 
     assert_redirected_to '/'
@@ -94,26 +107,47 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal @chris_section, follower.section
   end
 
-  test "student_user_new errors when joining a section with deleted teacher" do
-    @laurel.update(deleted_at: Time.now)
+  test 'student_user_new errors when joining a section with deleted teacher' do
+    @laurel.update!(deleted_at: Time.now)
     sign_in @laurel_student_1.student_user
 
     assert_does_not_create(Follower) do
-      get :student_user_new, section_code: @laurel_section_1.code
+      get :student_user_new, params: {section_code: @laurel_section_1.code}
     end
 
     assert_redirected_to '/'
-    assert_equal I18n.t(
-      'follower.error.section_not_found',
-      section_code: @laurel_section_1.code
-    ), flash[:alert]
+    assert_equal(
+      I18n.t(
+        'follower.error.section_not_found',
+        section_code: @laurel_section_1.code
+      ),
+      flash[:alert]
+    )
+  end
+
+  test 'student_user_new errors when joining a section with a student owner' do
+    @laurel.update!(user_type: User::TYPE_STUDENT)
+    sign_in @laurel_student_1.student_user
+
+    assert_does_not_create(Follower) do
+      get :student_user_new, params: {section_code: @laurel_section_1.code}
+    end
+
+    assert_redirected_to '/'
+    assert_equal(
+      I18n.t(
+        'follower.error.section_not_found',
+        section_code: @laurel_section_1.code
+      ),
+      flash[:alert]
+    )
   end
 
   test "student_user_new does not allow joining your own section" do
     sign_in @chris
 
     assert_does_not_create(Follower) do
-      get :student_user_new, section_code: @chris_section.code
+      get :student_user_new, params: {section_code: @chris_section.code}
     end
 
     assert_redirected_to '/'
@@ -130,7 +164,10 @@ class FollowersControllerTest < ActionController::TestCase
                       age: '13'}
 
     assert_creates(User, Follower) do
-      post :student_register, section_code: @chris_section.code, user: student_params
+      post :student_register, params: {
+        section_code: @chris_section.code,
+        user: student_params
+      }
     end
 
     assert_redirected_to '/'
@@ -138,7 +175,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal 'A name', assigns(:user).name
     assert_equal 'F', assigns(:user).gender
     assert_equal Time.zone.now.to_date - 13.years, assigns(:user).birthday
-    assert_equal nil, assigns(:user).provider
+    assert_nil assigns(:user).provider
     assert_equal User::TYPE_STUDENT, assigns(:user).user_type
   end
 
@@ -151,7 +188,10 @@ class FollowersControllerTest < ActionController::TestCase
                         age: '13'}
 
       assert_creates(User, Follower) do
-        post :student_register, section_code: @chris_section.code, user: student_params
+        post :student_register, params: {
+          section_code: @chris_section.code,
+          user: student_params
+        }
       end
 
       assert_redirected_to '/'
@@ -159,7 +199,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_equal nil, assigns(:user).provider
+      assert_nil assigns(:user).provider
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
     end
   end
@@ -173,7 +213,10 @@ class FollowersControllerTest < ActionController::TestCase
                         age: '11'}
 
       assert_creates(User, Follower) do
-        post :student_register, section_code: @chris_section.code, user: student_params
+        post :student_register, params: {
+          section_code: @chris_section.code,
+          user: student_params
+        }
       end
 
       assert_redirected_to '/'
@@ -181,18 +224,33 @@ class FollowersControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 11.years, assigns(:user).birthday
-      assert_equal nil, assigns(:user).provider
+      assert_nil assigns(:user).provider
       assert_equal '', assigns(:user).email
       assert_equal Digest::MD5.hexdigest('studentx@school.edu'), assigns(:user).hashed_email
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
     end
   end
 
+  test "student_register gives error if already signed in" do
+    sign_in @student
+    assert_does_not_create(User, Follower) do
+      post :student_register, params: {
+        section_code: @chris_section.code,
+        user: @student.attributes
+      }
+    end
+    assert_response :success
+    assert response.body.include? 'You are currently signed in.'
+  end
+
   test "create with section code" do
     sign_in @student
 
     assert_creates(Follower) do
-      post :create, section_code: @laurel_section_1.code, redirect: '/'
+      post :create, params: {
+        section_code: @laurel_section_1.code,
+        redirect: '/'
+      }
     end
 
     follower = Follower.last
@@ -209,7 +267,10 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @laurel_student_1.student_user
 
     assert_does_not_create(Follower) do
-      post :create, section_code: @laurel_section_2.code, redirect: '/'
+      post :create, params: {
+        section_code: @laurel_section_2.code,
+        redirect: '/'
+      }
     end
 
     assert_redirected_to '/'
@@ -223,7 +284,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @chris
 
     assert_does_not_create(Follower) do
-      post :create, section_code: @chris_section.code, redirect: '/'
+      post :create, params: {section_code: @chris_section.code, redirect: '/'}
     end
 
     assert_redirected_to '/'
@@ -234,7 +295,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @student
 
     assert_does_not_create(Follower) do
-      post :create, section_code: '2323232', redirect: '/'
+      post :create, params: {section_code: '2323232', redirect: '/'}
     end
 
     assert_redirected_to '/'
@@ -245,7 +306,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @student
 
     assert_does_not_create(Follower) do
-      post :create, redirect: '/'
+      post :create, params: {redirect: '/'}
     end
 
     assert_response :redirect
@@ -256,10 +317,10 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @laurel
 
     assert_no_difference('Follower.count') do
-      post :remove, teacher_user_id: @chris.id
+      post :remove, params: {section_code: @chris_section.code}
     end
     assert_redirected_to '/'
-    assert_equal "The teacher could not be found.", flash[:alert]
+    assert_equal "Could not find a section with code '#{@chris_section.code}'.", flash[:alert]
   end
 
   test "student can remove teacher" do
@@ -268,10 +329,10 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in follower.student_user
 
     assert_difference('Follower.count', -1) do
-      post :remove, teacher_user_id: follower.user_id
+      post :remove, params: {section_code: follower.section.code}
     end
 
-    assert !Follower.exists?(follower.id)
+    refute Follower.exists?(follower.id)
   end
 
   test "student can remove teacher if teacher does not have email" do
@@ -281,17 +342,17 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in follower.student_user
 
     assert_difference('Follower.count', -1) do
-      post :remove, teacher_user_id: follower.user_id
+      post :remove, params: {section_code: follower.section.code}
     end
 
-    assert !Follower.exists?(follower.id)
+    refute Follower.exists?(follower.id)
   end
 
   test "student_user_new when signed in in section with script" do
     sign_in @student
 
     assert_creates(Follower, UserScript) do
-      get :student_user_new, section_code: @laurel_section_script.code
+      get :student_user_new, params: {section_code: @laurel_section_script.code}
     end
 
     user_script = UserScript.where(user: @student, script: @laurel_section_script.script).first
@@ -308,7 +369,10 @@ class FollowersControllerTest < ActionController::TestCase
                       age: '13'}
 
     assert_creates(User, Follower, UserScript) do
-      post :student_register, section_code: @laurel_section_script.code, user: student_params
+      post :student_register, params: {
+        section_code: @laurel_section_script.code,
+        user: student_params
+      }
     end
 
     user_script = UserScript.where(user: assigns(:user), script: @laurel_section_script.script).first
@@ -321,7 +385,10 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @student
 
     assert_creates(Follower, UserScript) do
-      post :create, section_code: @laurel_section_script.code, redirect: '/'
+      post :create, params: {
+        section_code: @laurel_section_script.code,
+        redirect: '/'
+      }
     end
 
     user_script = UserScript.where(user: @student, script: @laurel_section_script.script).first
@@ -334,11 +401,11 @@ class FollowersControllerTest < ActionController::TestCase
     section = create :section, section_type: Pd::Workshop::SECTION_TYPE_MAP[Pd::Workshop::COURSE_CSF]
 
     # with and without sign-in
-    get :student_user_new, section_code: section.code
+    get :student_user_new, params: {section_code: section.code}
     assert_redirected_to controller: 'pd/workshop_enrollment', action: 'join_section', section_code: section.code
 
     sign_in create(:teacher)
-    get :student_user_new, section_code: section.code
+    get :student_user_new, params: {section_code: section.code}
     assert_redirected_to controller: 'pd/workshop_enrollment', action: 'join_section', section_code: section.code
   end
 end

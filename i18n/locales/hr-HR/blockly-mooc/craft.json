@@ -1,5 +1,5 @@
 {
-  "blockActionAdd":"add",
+  "blockActionAdd":"dodati",
   "blockActionAttack":"attack",
   "blockActionDestroyEntity":"nestati",
   "blockActionDrop":"drop",

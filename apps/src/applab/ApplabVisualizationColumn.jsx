@@ -5,7 +5,7 @@ import * as applabConstants from './constants';
 import React from 'react';
 import Radium from 'radium';
 import Visualization from './Visualization';
-import CompletionButton from './CompletionButton';
+import CompletionButton from '../templates/CompletionButton';
 import PlaySpaceHeader from './PlaySpaceHeader';
 import PhoneFrame from './PhoneFrame';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -13,6 +13,7 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
+import * as dom from '../dom';
 
 var styles = {
   completion: {
@@ -33,20 +34,12 @@ var styles = {
   },
   resetButton: {
     display: 'inline-block',
-    width: 42,
-    minWidth: 0,
     backgroundColor: color.dark_charcoal,
     borderColor: color.dark_charcoal,
-    padding: 7,
-    height: 42,
     marginLeft: 5,
     position: 'relative',
     left: 2,
     bottom: 2,
-  },
-  resetButtonImage: {
-    marginLeft: 2,
-    marginTop: -2,
   },
   containedInstructions: {
     marginTop: 10
@@ -57,7 +50,7 @@ var styles = {
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
  * portions used by App Lab
  */
-var ApplabVisualizationColumn = React.createClass({
+const ApplabVisualizationColumn = React.createClass({
   propTypes: {
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     visualizationHasPadding: React.PropTypes.bool.isRequired,
@@ -66,7 +59,6 @@ var ApplabVisualizationColumn = React.createClass({
     nonResponsiveWidth: React.PropTypes.number.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     isIframeEmbed: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
@@ -107,10 +99,18 @@ var ApplabVisualizationColumn = React.createClass({
         </PhoneFrame>
       );
     }
+    const chromelessShare = dom.isMobile() && !dom.isIPad();
     const visualizationColumnClassNames = classNames({
       with_padding: this.props.visualizationHasPadding,
       responsive: this.props.isResponsive,
-      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
+
+      // the below replicates some logic in StudioApp.handleHideSource_ which
+      // imperatively changes the css classes depending on various share
+      // parameters. This logic really shouldn't live in StudioApp, so I don't
+      // feel too bad about copying it here, where it should really live...
+      chromelessShare: chromelessShare && this.props.isShareView,
+      wireframeShare: !chromelessShare && this.props.isShareView,
     });
 
     return (
@@ -130,9 +130,8 @@ var ApplabVisualizationColumn = React.createClass({
         {this.props.isIframeEmbed &&
           <div style={styles.resetButtonWrapper}>
             <ResetButton
-              hideText={true}
+              hideText
               style={styles.resetButton}
-              imageStyle={styles.resetButtonImage}
             />
           </div>
         }
@@ -170,7 +169,6 @@ export default connect(function propsFromStore(state) {
     isRunning: state.runState.isRunning,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isPaused: state.runState.isDebuggerPaused,
-    interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
     pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };

@@ -59,7 +59,8 @@ const FilterHeader = React.createClass({
     showingModalFilters: React.PropTypes.bool.isRequired,
     showModalFilters: React.PropTypes.func.isRequired,
     hideModalFilters: React.PropTypes.func.isRequired,
-    showSortBy: React.PropTypes.bool.isRequired
+    showSortDropdown: React.PropTypes.bool.isRequired,
+    defaultSortBy: React.PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
   },
 
   shouldShowOpenFiltersButton() {
@@ -68,6 +69,11 @@ const FilterHeader = React.createClass({
 
   shouldShowCloseFiltersButton() {
     return this.props.mobileLayout && this.props.showingModalFilters;
+  },
+
+  shouldShowSortDropdown() {
+    return this.props.showSortDropdown &&
+      !(this.props.mobileLayout && this.props.showingModalFilters);
   },
 
   handleChangeSort(event) {
@@ -81,6 +87,23 @@ const FilterHeader = React.createClass({
     const tutorialCountString = tutorialCount === 1 ?
       i18n.filterHeaderTutorialCountSingle() :
       i18n.filterHeaderTutorialCountPlural({tutorial_count: tutorialCount});
+
+    // Show the default sort criteria first.  That way, when the dropdown that
+    // shows "Sort" is opened to show the two possible options, the default
+    // will be first and will get the checkmark that seems to be always shown
+    // next to the first option.
+    let sortOptions;
+    if (this.props.defaultSortBy === TutorialsSortBy.popularityrank) {
+      sortOptions = [
+        {value: "popularityrank", text: i18n.filterHeaderPopularityRank()},
+        {value: "displayweight", text: i18n.filterHeaderDisplayWeight()}
+      ];
+    } else {
+      sortOptions = [
+        {value: "displayweight", text: i18n.filterHeaderDisplayWeight()},
+        {value: "popularityrank", text: i18n.filterHeaderPopularityRank()}
+      ];
+    }
 
     return (
       <div style={styles.header}>
@@ -112,7 +135,7 @@ const FilterHeader = React.createClass({
               &nbsp;
               &nbsp;
 
-              {this.props.showSortBy && (
+              {this.shouldShowSortDropdown() && (
                 <select
                   value={this.props.sortBy}
                   onChange={this.handleChangeSort}
@@ -120,8 +143,8 @@ const FilterHeader = React.createClass({
                   className="noFocusButton"
                 >
                   <option disabled hidden value="default">{i18n.filterHeaderDefault()}</option>
-                  <option value="displayweight">{i18n.filterHeaderDisplayWeight()}</option>
-                  <option value="popularityrank">{i18n.filterHeaderPopularityRank()}</option>
+                  <option value={sortOptions[0].value}>{sortOptions[0].text}</option>
+                  <option value={sortOptions[1].value}>{sortOptions[1].text}</option>
                 </select>
               )}
 

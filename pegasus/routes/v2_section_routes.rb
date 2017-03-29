@@ -13,7 +13,7 @@ post '/v2/sections' do
   dont_cache
   unsupported_media_type! unless payload = request.json_body
   forbidden! unless section_id = DashboardSection.create(payload.merge(user: dashboard_user))
-  redirect "/v2/sections/#{section_id}"#, 201 #BUGBUG: JQuery is barfing on the 201
+  redirect "/v2/sections/#{section_id}" #, 201 #BUG: JQuery is barfing on the 201
 end
 
 # Get the set of sections that the current user is enrolled in.

@@ -5,6 +5,8 @@
  *   disable: http://foo.com/?disableExperiments=experimentOne,experimentTwo
  * Experiment state is persisted across page loads using local storage.
  */
+import { trySetLocalStorage } from '../utils';
+
 // trackEvent is provided by _analytics.html.haml in most cases. In those where
 // it isn't, we still want experiments to work.
 const trackEvent = window.trackEvent || (() => {});
@@ -14,6 +16,7 @@ const queryString = require('query-string');
 const experiments = module.exports;
 const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
+const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
@@ -22,24 +25,48 @@ experiments.getQueryString_ = function () {
   return window.location.search;
 };
 
+experiments.getStoredExperiments_ = function () {
+  try {
+    const jsonList = localStorage.getItem(STORAGE_KEY);
+    const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
+    const now = Date.now();
+    const enabledExperiments = storedExperiments.filter(
+        experiment => experiment.expiration > now);
+    if (enabledExperiments.length < storedExperiments.length) {
+      trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
+    }
+    return enabledExperiments;
+  } catch (e) {
+    return [];
+  }
+};
+
 experiments.getEnabledExperiments = function () {
-  const jsonList = localStorage.getItem(STORAGE_KEY);
-  const enabled = jsonList ? JSON.parse(jsonList) : [];
-  return enabled;
+  return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
 experiments.setEnabled = function (key, shouldEnable) {
-  const allEnabled = this.getEnabledExperiments();
-  if (allEnabled.indexOf(key) < 0 && shouldEnable) {
-    allEnabled.push(key);
-    trackEvent(GA_EVENT, 'enable', key);
-  } else if (allEnabled.indexOf(key) >= 0 && !shouldEnable) {
-    allEnabled.splice(allEnabled.indexOf(key), 1);
+  const allEnabled = this.getStoredExperiments_();
+  const experimentIndex =
+    allEnabled.findIndex(experiment => experiment.key === key);
+  if (shouldEnable) {
+    const expirationDate = new Date();
+    expirationDate.setHours(
+        expirationDate.getHours() + EXPERIMENT_LIFESPAN_HOURS);
+    const expiration = expirationDate.getTime();
+    if (experimentIndex < 0) {
+      allEnabled.push({ key, expiration });
+      trackEvent(GA_EVENT, 'enable', key);
+    } else {
+      allEnabled[experimentIndex].expiration = expiration;
+    }
+  } else if (experimentIndex >= 0) {
+    allEnabled.splice(experimentIndex, 1);
     trackEvent(GA_EVENT, 'disable', key);
   } else {
     return;
   }
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(allEnabled));
+  trySetLocalStorage(STORAGE_KEY, JSON.stringify(allEnabled));
 };
 
 /**
@@ -48,9 +75,10 @@ experiments.setEnabled = function (key, shouldEnable) {
  * @returns {bool}
  */
 experiments.isEnabled = function (key) {
-  let enabled = this.getEnabledExperiments().indexOf(key) >= 0;
-  const query = queryString.parse(this.getQueryString_());
+  let enabled = this.getStoredExperiments_()
+    .some(experiment => experiment.key === key);
 
+  const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];
   const disableQuery = query['disableExperiments'];
 

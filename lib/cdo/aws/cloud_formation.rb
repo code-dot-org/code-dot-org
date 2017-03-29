@@ -20,25 +20,26 @@ module AWS
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
     # Lookup ACM certificate for ELB and CloudFront SSL.
-    ACM_REGION = 'us-east-1'
+    ACM_REGION = 'us-east-1'.freeze
     CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
       list_certificates(certificate_statuses: ['ISSUED']).
       certificate_summary_list.
-      find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
+      find {|cert| cert.domain_name == "*.#{DOMAIN}"}.
       certificate_arn
 
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
 
-    SSH_KEY_NAME = 'server_access_key'
+    SSH_KEY_NAME = 'server_access_key'.freeze
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
-    SSH_IP = '0.0.0.0/0'
-    S3_BUCKET = 'cdo-dist'
+    SSH_IP = '0.0.0.0/0'.freeze
+    S3_BUCKET = 'cdo-dist'.freeze
+    AVAILABILITY_ZONES = ('b'..'e').map {|i| "us-east-1#{i}"}
 
     STACK_ERROR_LINES = 250
-    LOG_NAME = '/var/log/bootstrap.log'
+    LOG_NAME = '/var/log/bootstrap.log'.freeze
 
     class << self
       def branch
@@ -69,17 +70,19 @@ module AWS
       # First prints the JSON-formatted template, then either raises an error (if invalid)
       # or prints the template description (if valid).
       def validate
-        template = json_template(dry_run: true)
-        CDO.log.info JSON.pretty_generate(JSON.parse(template))
+        template = render_template(dry_run: true)
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
-        CDO.log.info "Parameters: #{parameters(template).join("\n")}"
+        params = parameters(template)
+        CDO.log.info "Parameters: #{params.join("\n")}" unless params.empty?
 
         if stack_exists?
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
-          change_set_id = cfn.create_change_set(stack_options(template).merge(
-            change_set_name: "#{stack_name}-#{Digest::MD5.hexdigest(template)}"
-          )).id
+          change_set_id = cfn.create_change_set(
+            stack_options(template).merge(
+              change_set_name: "#{stack_name}-#{Digest::MD5.hexdigest(template)}"
+            )
+          ).id
 
           begin
             change_set = {changes: []}
@@ -92,7 +95,7 @@ module AWS
               c = change.resource_change
               str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
               str += " Replacement: #{c.replacement}" if %w(True Conditional).include?(c.replacement)
-              str += " (#{c.details.map{|d| d.target.name}.join(', ')})" if c.details.any?
+              str += " (#{c.details.map {|d| d.target.name}.join(', ')})" if c.details.any?
               CDO.log.info str
             end
             CDO.log.info 'No changes' if change_set.changes.empty?
@@ -118,7 +121,7 @@ module AWS
       end
 
       def parameters(template)
-        params = JSON.parse(template)['Parameters']
+        params = YAML.load(template)['Parameters']
         return [] unless params
         params.keys.map do |key|
           value = CDO[key.underscore]
@@ -145,7 +148,7 @@ module AWS
       end
 
       def create_or_update
-        template = json_template
+        template = render_template
         action = stack_exists? ? :update : :create
         CDO.log.info "#{action} stack: #{stack_name}..."
         start_time = Time.now
@@ -208,9 +211,7 @@ module AWS
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
-              client = Aws::S3::Client.new(region: CDO.aws_region,
-                                           credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
-              client.put_object(
+              Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
                 key: "chef/#{branch}.tar.gz",
                 body: tmp.read
@@ -246,7 +247,7 @@ module AWS
       # Prints the latest CloudFormation stack events.
       def tail_events(stack_id)
         stack_events = cfn.describe_stack_events(stack_name: stack_id).stack_events
-        stack_events.reject{|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
+        stack_events.reject {|event| event.timestamp <= @@event_timestamp}.sort_by(&:timestamp).each do |event|
           CDO.log.info "#{event.timestamp}- #{event.logical_resource_id} [#{event.resource_status}]: #{event.resource_status_reason}"
         end
         @@event_timestamp = stack_events.map(&:timestamp).max
@@ -283,11 +284,10 @@ module AWS
         CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
       end
 
-      def json_template(dry_run: false)
+      def render_template(dry_run: false)
         filename = aws_dir('cloudformation', TEMPLATE)
         template_string = File.read(filename)
-        availability_zones = Aws::EC2::Client.new.describe_availability_zones.availability_zones.map(&:zone_name)
-        azs = availability_zones.map { |zone| zone[-1].upcase }
+        azs = AVAILABILITY_ZONES.map {|zone| zone[-1].upcase}
         @@local_variables = OpenStruct.new(
           dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
@@ -305,30 +305,28 @@ module AWS
           subdomain: fqdn,
           studio_subdomain: studio_fqdn,
           cname: cname,
-          availability_zone: availability_zones.first,
-          availability_zones: availability_zones,
+          availability_zone: AVAILABILITY_ZONES.first,
+          availability_zones: AVAILABILITY_ZONES,
           azs: azs,
           s3_bucket: S3_BUCKET,
           file: method(:file),
           js: method(:js),
-          js_zip: method(:js_zip),
           erb: method(:erb),
-          subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}}.to_json,
-          public_subnets: azs.map{|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}}.to_json,
+          subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "Subnet#{az}"]}},
+          public_subnets: azs.map {|az| {'Fn::GetAtt' => ['VPC', "PublicSubnet#{az}"]}},
           lambda_fn: method(:lambda),
           update_certs: method(:update_certs),
           update_cookbooks: method(:update_cookbooks),
           update_bootstrap_script: method(:update_bootstrap_script),
           log_name: LOG_NAME
         )
-        erb_output = erb_eval(template_string, filename)
-        YAML.load(erb_output).to_json
+        erb_eval(template_string, filename)
       end
 
       # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
       def source(str, filename, vars={})
         local_vars = @@local_variables.dup
-        vars.each { |k, v| local_vars[k] = v }
+        vars.each {|k, v| local_vars[k] = v}
         lines = erb_eval(str, filename, local_vars).each_line.map do |line|
           # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
           line.split(/(%{.*})/).map do |x|
@@ -346,7 +344,7 @@ module AWS
 
       def erb(filename, vars={})
         local_vars = @@local_variables.dup
-        vars.each { |k, v| local_vars[k] = v }
+        vars.each {|k, v| local_vars[k] = v}
         str = File.read(filename.start_with?('/') ? filename : aws_dir('cloudformation', filename))
         erb_eval(str, filename, vars)
       end
@@ -367,12 +365,25 @@ module AWS
       end
 
       def js_zip
+        hash = nil
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
+          RakeUtils.npm_install '--production'
+          # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
+          hash = Digest::MD5.hexdigest(
+            Dir['*.js', 'node_modules/**/*'].
+              select(&File.method(:file?)).
+              sort.
+              map(&Digest::MD5.method(:file)).
+              join
+          )
           `zip -qr - *.js node_modules`
         end
-        key = "lambdajs-#{Digest::MD5.hexdigest(code_zip)}.zip"
+        key = "lambdajs-#{hash}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
-        AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true) unless object_exists
+        unless object_exists
+          CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
+          AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true)
+        end
         {
           S3Bucket: S3_BUCKET,
           S3Key: key
@@ -402,7 +413,11 @@ module AWS
 
       def erb_eval(str, filename=nil, local_vars=nil)
         local_vars ||= @@local_variables
-        ERB.new(str, nil, '-').tap{|erb| erb.filename = filename}.result(local_vars.instance_eval{binding})
+        local_binding = binding
+        local_vars.each_pair do |key, value|
+          local_binding.local_variable_set(key, value)
+        end
+        ERB.new(str, nil, '-').tap {|erb| erb.filename = filename}.result(local_binding)
       end
     end
   end

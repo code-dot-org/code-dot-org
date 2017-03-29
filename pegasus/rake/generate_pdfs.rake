@@ -1,5 +1,5 @@
 require_relative '../../deployment'
-require 'cdo/hip_chat'
+require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/db'
 
@@ -35,8 +35,8 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
   begin
     PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
   rescue Exception => e
-    HipChat.log "PDF generation failure for #{url}"
-    HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+    ChatClient.log "PDF generation failure for #{url}"
+    ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
     raise
   end
 
@@ -45,7 +45,7 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
   # The next time the cronjob runs, all the necessary pdfs will still be generated.
   if File.exist?(pdf_conversion_info.output_pdf_path)
     fetchable_url = RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_conversion_info.output_pdf_path, fetchfile_for_pdf, bucket: 'cdo-fetch')
-    HipChat.log "Created <b>#{pdf_conversion_info.output_pdf_path}</b> and moved to <a href='#{fetchable_url}'>#{fetchable_url}</a></b>."
+    ChatClient.log "Created <b>#{pdf_conversion_info.output_pdf_path}</b> and moved to <a href='#{fetchable_url}'>#{fetchable_url}</a></b>."
   end
 end
 

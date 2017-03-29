@@ -84,6 +84,7 @@ bg:
     overview: 'Регистрирайте се, за да следите напредъка си или да управлявате вашата класна стая. <a href="/"> Можете да разглеждате различните етапи и пъзели</a> и без регистрация, но няма да запазите вашия напредък и проекти.'
     hoc_already_signed_up_heading: 'Започнете без логване'
     hoc_already_signed_up_content: 'Вие сте се регистрирали да учите с Hour of Code! Вие и вашите ученици не е нужно да влезете в Code Studio, за да участвате в това събитие. За да започнете, <a href="https://code.org/learn"> изберете ръководство</a> за класната стая и споделете връзката с тях. <br/> <br/> Ако ви хареса Hour of Code и искате да отидете по-далеч, можете да зададете парола и да създадете акаунт в Code Studio и да запишете учениците си в някой от нашите <a href="https://code.org/educate"> други курсове</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Виж ръководството за възпитатели'
     title: "Регистрирайте се в Code.org"
     school_name: 'Име на училище (по желание)'
@@ -127,6 +128,7 @@ bg:
     login: 'Вход'
     invalid_login: 'Невалидно влизане, моля опитайте отново'
     pair_programming: 'Имам партньор на моя компютър'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Забравена парола?'
@@ -300,6 +302,9 @@ bg:
     delete_text: "Щракнете върху бутона по-долу, за да изтриете вашия акаунт."
     delete_text_teacher_note: 'Моля, обърнете внимание: изтриването на вашия акаунт няма да изтрие акаунтите на вашите ученици.'
     delete_confirm: 'Наистина ли искате да изтриете профила си?'
+    deleted_user: 'deleted user'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'
@@ -352,12 +357,18 @@ bg:
     announcement_learn_more_button: "Научете повече"
     announcement_try_now_button: "Опитайте сега"
     announcement_host_an_hour_button: "Стани домакин на Hour of Code"
+    announcement_watch_video_button: "Гледай видео"
     announcement_petition: "Като учител, Вие трябва да намерите подход, така че да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки. Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица, образователни лидери, 28 управители и директори на компании в Америка се обединяват зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно образование."
     announcement_petition_button: "Добавете името си"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Получавайте информация за нови функции и актуализации на нашия учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните съобщения.</a>"
     announcement_hoc_launch: "Хиляди преподаватели в над 180 страни ще преподават компютърни науки по време на часът на кода този декември 5-11. Ние разчитаме на вас да ни помогнете да достигнем до повече ученици от преди. <a href='%{signup_url}' target='_blank'> Регистрирайте Вашето \"час на кода\" събитие</a> и помогнете и на друг учител да научи, че всеки може да започне обучение по компютърни науки."
-    announcement_hoc_scaling: 'ПРЕДУПРЕЖДЕНИЕ за учители: курсове 1-4 и ускореният курс, поради голям трафик от милиони ученици, правещи Hour of Code, <b>Code Studio няма да записват или докладват ученическия напредък през декември 3-11</b>. Ние препоръчваме по време на Hour of Code дейността с вашия клас да празнувате CS edu Week. Учениците няма да отбележат напредък тази седмица, но ще спечелят сертификат.'
     announcement_mc_launch: "Един от нашите най-популярни уроци сега има продължение! Новият Minecraft дизайнер позволява да създадете свои правила в Minecraft света. Можете да създаде напълно уникален Minecraft опит, а след това да го споделите с приятели или да играете на телефоните си. Направете го с класа си за Hour of Code."
+    announcement_how_code_studio: "Не е нужен опит, за да започнете да изучавате компютърни науки в класната стая. Code.org предлага учебни програми, учебни планове, висококачествени професионални обучителни програми и тонове страхотни инструменти за всички класове&mdash; всичко необходимо, безплатно. Чудите се откъде да започнете? Изтеглете <a href='%{video_download_url}'> това видео</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля, въведете код за друг раздел."
     section_code_not_entered: "Моля, представете current_section_code."
@@ -515,6 +526,9 @@ bg:
     support: "Получаване на помощ"
     support_url: "//support.code.org"
     help_resources: "Помощ и ресурси"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Неправилен отговор"
     wrong_body: "Отговорът, който сте въвели не е правилен.  Моля опитайте отново!"
@@ -724,6 +738,11 @@ bg:
     content: 'Съдържание'
     practice: 'Учителски практики'
     peer_review: 'Вашаят отзив'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Отказ от отговорност
     leaving_domain: Сега напускате този домейн, преминавайки към сайт, който не се управлява от Code.org.
@@ -738,8 +757,48 @@ bg:
     starwars_blocks_name: 'Междузвездни войни: Изграждане на галактика с код (блокове)'
     starwars_javascript_name: 'Междузвездни войни: Изграждане на галактика с код (JavaScript)'
     download_message: 'Изтегли %{app_name} за офлайн употреба (136MB)'
-    download_in_english: 'Изтегляне на английски език:'
-    download_in_spanish: 'Изтегляне на испански език:'
+    download_in_Albanian: 'Изтегляне на албански:'
+    download_in_Arabic: 'Изтегляне на арабски език:'
+    download_in_Azerbaijani: 'Изтегляне на азербайджански:'
+    download_in_Basque: 'Изтегляне на баски език:'
+    download_in_Bosnian: 'Изтегляне на босненски:'
+    download_in_Bulgarian: 'Изтегляне на български език:'
+    download_in_Catalan: 'Изтегляне на каталонски:'
+    download_in_Chinese-Taiwan: 'Изтегляне в китайски-Тайван:'
+    download_in_Chinese: 'Изтегляне на китайски:'
+    download_in_Croatian: 'Изтегляне на хърватски:'
+    download_in_Czech: 'Изтегляне на чешки:'
+    download_in_Danish: 'Изтегляне на датски:'
+    download_in_Dutch: 'Изтегляне на холандски:'
+    download_in_English: 'Изтегляне на английски език:'
+    download_in_Finnish: 'Изтегляне на финландски:'
+    download_in_French: 'Изтегляне на френски език:'
+    download_in_German: 'Изтегляне на немски език:'
+    download_in_Greek: 'Изтегляне на гръцки език:'
+    download_in_Hebrew: 'Изтегляне на иврит:'
+    download_in_Hungarian: 'Изтегляне на унгарски:'
+    download_in_Icelandic: 'Изтегляне на исландски:'
+    download_in_Indonesian: 'Изтегляне на индонезийски:'
+    download_in_Irish: 'Изтегляне на ирландски:'
+    download_in_Italian: 'Изтегляне на италиански език:'
+    download_in_Japanese: 'Изтегляне на японски:'
+    download_in_Korean: 'Изтегляне на корейски:'
+    download_in_Latvian: 'Изтегляне на латвийски:'
+    download_in_Lithuanian: 'Изтегляне на литовски:'
+    download_in_Norwegian: 'Изтегляне на норвежки:'
+    download_in_Norwegian-Nynorsk: 'Изтегляне в норвежки Nynorsk:'
+    download_in_Polish: 'Изтегляне на полски език:'
+    download_in_Portuguese-Brazil: 'Изтегляне на португалски-Бразилия:'
+    download_in_Portuguese: 'Изтегляне на португалски език:'
+    download_in_Romanian: 'Изтегляне на румънски език:'
+    download_in_Russian: 'Изтегляне на руски:'
+    download_in_Serbian: 'Изтегляне на сръбски:'
+    download_in_Slovenian: 'Изтегляне на словенски:'
+    download_in_Spanish: 'Изтегляне на испански език:'
+    download_in_Swedish: 'Изтегляне на шведски език:'
+    download_in_Turkish: 'Изтегляне на турски:'
+    download_in_Ukrainian: 'Изтегляне на украински:'
+    download_in_Vietnamese: 'Изтегляне на виетнамски:'
     windows: 'Windows'
     mac: 'Mac OS X'
   plc:

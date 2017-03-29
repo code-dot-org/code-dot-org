@@ -7,6 +7,7 @@
 import $ from 'jquery';
 import React from 'react';
 import SessionTime from '../components/session_time';
+import Spinner from '../components/spinner';
 import SessionAttendance from './session_attendance';
 import color from '@cdo/apps/util/color';
 import {
@@ -56,7 +57,8 @@ const WorkshopAttendance = React.createClass({
       sessions: undefined,
       adminOverride: false,
       numPendingSaves: 0,
-      lastSaveFailed: false
+      lastSaveFailed: false,
+      accountRequiredForAttendance: true
     };
   },
 
@@ -86,7 +88,8 @@ const WorkshopAttendance = React.createClass({
         loadingSummary: false,
         workshopState: data.state,
         sectionCode: data.section_code,
-        sessions: data.sessions
+        sessions: data.sessions,
+        accountRequiredForAttendance: data['account_required_for_attendance?']
       });
     });
   },
@@ -145,7 +148,7 @@ const WorkshopAttendance = React.createClass({
   },
 
   renderAdminControls() {
-    if (!this.isAdmin()) {
+    if (!this.state.accountRequiredForAttendance || !this.isAdmin()) {
       return null;
     }
     const toggleClass = this.state.adminOverride ? "fa fa-toggle-on fa-lg" : "fa fa-toggle-off fa-lg";
@@ -168,7 +171,7 @@ const WorkshopAttendance = React.createClass({
 
   render() {
     if (this.state.loadingSummary) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
+      return <Spinner/>;
     }
 
     const isReadOnly = this.hasWorkshopEnded() && !this.isAdmin();
@@ -188,7 +191,9 @@ const WorkshopAttendance = React.createClass({
         </p>
       );
     } else if (this.state.sectionCode) {
-      const joinUrl = location.origin + "/join/" + this.state.sectionCode;
+      const joinUrl = this.state.accountRequiredForAttendance ?
+        `${location.origin}/join/${this.state.sectionCode}` :
+        `${location.origin}/pd/workshops/${this.workshopId()}/enroll`;
       intro = (
         <p>
           Remember to have your participants go to this address before taking attendance:
@@ -234,6 +239,7 @@ const WorkshopAttendance = React.createClass({
           isReadOnly={isReadOnly}
           onSaving={this.handleSaving}
           onSaved={this.handleSaved}
+          accountRequiredForAttendance={this.state.accountRequiredForAttendance}
         />
         <Row>
           <Col sm={10}>

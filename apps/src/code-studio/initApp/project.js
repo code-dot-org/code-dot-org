@@ -17,7 +17,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
-var queryParams = require('../utils').queryParams;
+import {queryParams, hasQueryParam} from '../utils';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -63,6 +63,7 @@ var currentSourceVersionId;
 var currentAbuseScore = 0;
 var currentHasPrivacyProfanityViolation = false;
 var isEditing = false;
+let initialSaveComplete = false;
 
 /**
  * Current state of our sources API data
@@ -70,6 +71,7 @@ var isEditing = false;
 var currentSources = {
   source: null,
   html: null,
+  makerAPIsEnabled: false,
   animations: null
 };
 
@@ -84,14 +86,22 @@ function packSources() {
  * Populate our current sources API object based off of given data
  * @param {string} data.source
  * @param {string} data.html
+ * @param {SerializedAnimationList} data.animations
+ * @param {boolean} data.makerAPIsEnabled
  */
 function unpackSources(data) {
   currentSources = {
     source: data.source,
     html: data.html,
-    animations: data.animations
+    animations: data.animations,
+    makerAPIsEnabled: data.makerAPIsEnabled
   };
 }
+
+/**
+ * Used by getProjectUrl() to extract the project URL.
+ */
+const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
 
 var projects = module.exports = {
   /**
@@ -116,6 +126,46 @@ var projects = module.exports = {
     return current.name;
   },
 
+  /**
+   * This method is used so that it can be mocked for unit tests.
+   */
+  getUrl() {
+    return location.href;
+  },
+
+  /**
+   * @param [fragment] optional url fragment to append to the end of the project URL.
+   * @returns the absolute url to the root of this project without a trailing slash.
+   *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK. Hash strings
+   *     are removed, but query strings are retained. If provided, fragment will be
+   *     added to the end of the URL, before the query string.
+   */
+  getProjectUrl(fragment = '') {
+    const match = this.getUrl().match(PROJECT_URL_PATTERN);
+    let url;
+    if (match) {
+      url = match[1];
+    } else {
+      url = this.getUrl(); // i give up. Let's try this?
+    }
+    var hashIndex = url.indexOf('#');
+    if (hashIndex !== -1) {
+      url = url.substring(0, hashIndex);
+    }
+    var queryString = '';
+    var queryIndex = url.indexOf('?');
+    if (queryIndex !== -1) {
+      queryString = url.substring(queryIndex);
+      url = url.substring(0, queryIndex);
+    }
+    if (fragment.startsWith('/')) {
+      while (url.endsWith('/')) {
+        url = url.substring(0, url.length - 1);
+      }
+    }
+    return url + fragment + queryString;
+  },
+
   getCurrentTimestamp() {
     if (!current) {
       return;
@@ -138,6 +188,14 @@ var projects = module.exports = {
       return;
     }
     return current.useFirebase;
+  },
+
+  /**
+   * Whether this project's source has Maker APIs enabled.
+   * @returns {boolean}
+   */
+  useMakerAPIs() {
+    return currentSources.makerAPIsEnabled;
   },
 
   /**
@@ -184,8 +242,7 @@ var projects = module.exports = {
   },
 
   /**
-   * @returns {boolean} true if project has been reported enough times to
-   *   exceed our threshold
+   * @returns {boolean} true if project has a profanity or privacy violation
    */
   hasPrivacyProfanityViolation() {
     return currentHasPrivacyProfanityViolation;
@@ -249,6 +306,13 @@ var projects = module.exports = {
     return current.level === '/projects/applab';
   },
 
+  __TestInterface: {
+    // Used by UI tests
+    isInitialSaveComplete() {
+      return initialSaveComplete;
+    },
+  },
+
   //////////////////////////////////////////////////////////////////////
   // Properties and callbacks. These are all candidates for being extracted
   // as configuration parameters which are passed in by the caller.
@@ -288,8 +352,15 @@ var projects = module.exports = {
     }
   },
 
+  // Students should not be able to easily see source for embedded applab or
+  // gamelab levels.
+  shouldHideShareAndRemix() {
+    return (appOptions.level && appOptions.level.hideShareAndRemix) ||
+      (appOptions.embed && (appOptions.app === 'applab' || appOptions.app === 'gamelab'));
+  },
+
   showHeaderForProjectBacked() {
-    if (this.shouldUpdateHeaders()) {
+    if (this.shouldUpdateHeaders() && !this.shouldHideShareAndRemix()) {
       header.showHeaderForProjectBacked();
     }
   },
@@ -319,6 +390,8 @@ var projects = module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
+   * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
+   * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -329,6 +402,12 @@ var projects = module.exports = {
     if (this.isProjectLevel() || current) {
       if (currentSources.html) {
         sourceHandler.setInitialLevelHtml(currentSources.html);
+      }
+
+      setMakerAPIsStatusFromLevel();
+      setMakerAPIsStatusFromQueryParams();
+      if (currentSources.makerAPIsEnabled) {
+        sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
       if (currentSources.animations) {
@@ -392,6 +471,9 @@ var projects = module.exports = {
   projectChanged() {
     hasProjectChanged = true;
   },
+  hasOwnerChangedProject() {
+    return this.isOwner() && hasProjectChanged;
+  },
   /**
    * @returns {string} The name of the standalone app capable of running
    * this project as a standalone project, or null if none exists.
@@ -399,7 +481,7 @@ var projects = module.exports = {
   getStandaloneApp() {
     switch (appOptions.app) {
       case 'applab':
-        return appOptions.level.makerlabEnabled ? 'makerlab' : 'applab';
+        return 'applab';
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
@@ -447,8 +529,9 @@ var projects = module.exports = {
    *   call to `sourceHandler.getLevelSource`.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
    */
-  save(sourceAndHtml, callback, forceNewVersion) {
+  save(sourceAndHtml, callback, forceNewVersion, preparingRemix) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -462,13 +545,24 @@ var projects = module.exports = {
       var args = Array.prototype.slice.apply(arguments);
       callback = args[0];
       forceNewVersion = args[1];
-      this.sourceHandler.getAnimationList(animations => {
-        this.sourceHandler.getLevelSource().then(response => {
-          const source = response;
-          const html = this.sourceHandler.getLevelHtml();
-          this.save({source, html, animations}, callback, forceNewVersion);
+      preparingRemix = args[2];
+
+      let completeAsyncSave = function () {
+        this.sourceHandler.getAnimationList(animations => {
+          this.sourceHandler.getLevelSource().then(response => {
+            const source = response;
+            const html = this.sourceHandler.getLevelHtml();
+            const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+            this.save({source, html, animations, makerAPIsEnabled}, callback, forceNewVersion);
+          });
         });
-      });
+      }.bind(this);
+
+      if (preparingRemix) {
+        this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+      } else {
+        completeAsyncSave();
+      }
       return;
     }
 
@@ -494,6 +588,7 @@ var projects = module.exports = {
       current.migratedToS3 = true;
 
       channels.update(channelId, current, function (err, data) {
+        initialSaveComplete = true;
         this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));
@@ -553,7 +648,8 @@ var projects = module.exports = {
       this.sourceHandler.getLevelSource().then(response => {
         const source = response;
         const html = this.sourceHandler.getLevelHtml();
-        const newSources = {source, html, animations};
+        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+        const newSources = {source, html, animations, makerAPIsEnabled};
         if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
           hasProjectChanged = false;
           callCallback();
@@ -641,7 +737,7 @@ var projects = module.exports = {
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
-      projects.save(redirectToRemix);
+      projects.save(redirectToRemix, false, true);
     } else {
       redirectToRemix();
     }
@@ -809,6 +905,31 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
   Promise.all(deferredCallsToMake).then(function () {
     callback();
   });
+}
+
+/**
+ * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ */
+function setMakerAPIsStatusFromQueryParams() {
+  if (hasQueryParam('enableMaker')) {
+    currentSources.makerAPIsEnabled = true;
+  }
+
+  if (hasQueryParam('disableMaker')) {
+    currentSources.makerAPIsEnabled = false;
+  }
+}
+
+/**
+ * If a level itself has makerlabEnabled, set that for this project's source.
+ * This is the case with New Maker Lab Project.level, and projects created
+ * based off of that template (/p/makerlab), done prior to maker API support
+ * within applab.
+ */
+function setMakerAPIsStatusFromLevel() {
+  if (appOptions.level.makerlabEnabled) {
+    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
+  }
 }
 
 /**

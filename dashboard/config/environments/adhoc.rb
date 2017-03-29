@@ -21,7 +21,7 @@ Dashboard::Application.configure do
 
   config.action_controller.perform_caching = true
   config.public_file_server.enabled = true
-  config.public_file_server.headers = { 'Cache-Control' => "public, max-age=86400, s-maxage=43200" }
+  config.public_file_server.headers = {'Cache-Control' => "public, max-age=86400, s-maxage=43200"}
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
@@ -39,17 +39,11 @@ Dashboard::Application.configure do
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
 
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = true
-
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = false
-
-  # Whether or not to display pretty shared js assets
-  config.pretty_sharedjs = false
 
   config.lograge.enabled = true
 

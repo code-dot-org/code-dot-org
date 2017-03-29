@@ -117,7 +117,6 @@ exports.launchBall = function (id) {
     if (Bounce.isBallOutOfBounds(i) &&
         (0 === (Bounce.ballFlags[i] & Bounce.BallFlags.LAUNCHING))) {
       // found an out-of-bounds ball that is not already launching...
-      //console.log("LB: relaunching ball " + i);
       Bounce.launchBall(i);
       return;
     }
@@ -127,7 +126,6 @@ exports.launchBall = function (id) {
   i = Bounce.ballCount;
   Bounce.ballCount++;
   Bounce.createBallElements(i);
-  //console.log("LB: created new ball " + i + " calling playSoundAndResetBall");
   Bounce.playSoundAndResetBall(i);
 };
 
@@ -141,17 +139,14 @@ exports.bounceBall = function (id) {
       if (Bounce.ballX[i] < 0) {
         Bounce.ballX[i] = 0;
         Bounce.ballDir[i] = 2 * Math.PI - Bounce.ballDir[i];
-        //console.log("Bounced off left, ball " + i);
       } else if (Bounce.ballX[i] > (Bounce.COLS - 1)) {
         Bounce.ballX[i] = Bounce.COLS - 1;
         Bounce.ballDir[i] = 2 * Math.PI - Bounce.ballDir[i];
-        //console.log("Bounced off right, ball " + i);
       }
 
       if (Bounce.ballY[i] < tiles.Y_TOP_BOUNDARY) {
         Bounce.ballY[i] = tiles.Y_TOP_BOUNDARY;
         Bounce.ballDir[i] = Math.PI - Bounce.ballDir[i];
-        //console.log("Bounced off top, ball " + i);
       }
 
       var xPaddleBall = Bounce.ballX[i] - Bounce.paddleX;
@@ -175,7 +170,6 @@ exports.bounceBall = function (id) {
           Bounce.ballDir[i] = (Bounce.ballDir[i] < Math.PI) ?
               Math.min((Math.PI / 2) - 0.2, Bounce.ballDir[i]) :
               Math.max((3 * Math.PI / 2) + 0.2, Bounce.ballDir[i]);
-          //console.log("Bounced off paddle, ball " + i);
         }
       }
     }

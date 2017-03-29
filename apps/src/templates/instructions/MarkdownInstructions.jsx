@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import { connect } from 'react-redux';
+import { convertXmlToBlockly } from './utils';
 
 var styles = {
   standard: {
@@ -30,7 +31,8 @@ const MarkdownInstructions = React.createClass({
     noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
     hasInlineImages: React.PropTypes.bool,
     onResize: React.PropTypes.func,
-    inTopPane: React.PropTypes.bool
+    inTopPane: React.PropTypes.bool,
+    isBlockly: React.PropTypes.bool
   },
 
   /**
@@ -50,6 +52,17 @@ const MarkdownInstructions = React.createClass({
         'toggle.details.TopInstructions': () => {
           this.props.onResize();
         }
+      });
+    }
+
+    if (this.props.isBlockly) {
+      // Convert any inline XML into blockly blocks. Note that we want to
+      // make sure we don't initialize any blockspace before the main
+      // block space has been created, lest we violate some assumptions
+      // blockly has.
+      Blockly.BlockSpace.onMainBlockSpaceCreated(() => {
+        convertXmlToBlockly(ReactDOM.findDOMNode(this));
+        this.props.onResize();
       });
     }
 
@@ -103,6 +116,7 @@ const MarkdownInstructions = React.createClass({
 
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
 export default connect(state => ({
+  hasInlineImages: state.instructions.hasInlineImages,
+  isBlockly: state.pageConstants.isBlockly,
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
-  hasInlineImages: state.instructions.hasInlineImages
 }))(Radium(MarkdownInstructions));

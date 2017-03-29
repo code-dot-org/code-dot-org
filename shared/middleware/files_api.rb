@@ -82,9 +82,9 @@ class FilesApi < Sinatra::Base
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
     event_details = {
-        quota_type: quota_type,
-        encrypted_channel_id: encrypted_channel_id,
-        owner_user_id: owner_user_id
+      quota_type: quota_type,
+      encrypted_channel_id: encrypted_channel_id,
+      owner_user_id: owner_user_id
     }
     NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
   end
@@ -92,6 +92,12 @@ class FilesApi < Sinatra::Base
   helpers do
     %w(core.rb bucket_helper.rb animation_bucket.rb file_bucket.rb asset_bucket.rb source_bucket.rb storage_id.rb auth_helpers.rb profanity_privacy_helper.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
+    end
+  end
+
+  set(:code_projects_domain) do |val|
+    condition do
+      (request.host == CDO.canonical_hostname('codeprojects.org')) == val
     end
   end
 
@@ -104,7 +110,11 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    get_bucket_impl(endpoint).new.list(encrypted_channel_id).to_json
+    begin
+      get_bucket_impl(endpoint).new.list(encrypted_channel_id).to_json
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
   end
 
   #
@@ -113,8 +123,53 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources|files)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    get_file(endpoint, encrypted_channel_id, filename)
+  end
+
+  #
+  # GET /<channel-id>/<filename>?version=<version-id>
+  #
+  # Read a file. Optionally get a specific version instead of the most recent.
+  # Only from codeprojects.org domain
+  #
+  get %r{/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id, filename|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, filename, true)
+  end
+
+  #
+  # GET /<channel-id>
+  #
+  # Redirect to /<channel-id>/
+  # Only from codeprojects.org domain
+  #
+  get %r{/([^/]+)$}, {code_projects_domain: true} do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    redirect "#{request.path_info}/"
+  end
+
+  #
+  # GET /<channel-id>/
+  #
+  # Serve index.html for this project.
+  # Only from codeprojects.org domain
+  #
+  get %r{/([^/]+)/$}, {code_projects_domain: true} do |encrypted_channel_id|
+    pass unless valid_encrypted_channel_id(encrypted_channel_id)
+
+    get_file('files', encrypted_channel_id, 'index.html', true)
+  end
+
+  def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
+
+    # Unless this is hosted by codeprojects.org,
+    # serve all files with Content-Disposition set to attachment so browsers will not render potential HTML content inline
+    # User-generated content can contain script that we don't want to host as authentic web content from our domain
+    response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\"" unless code_projects_domain_root_route
 
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds
@@ -134,7 +189,19 @@ class FilesApi < Sinatra::Base
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
+
+    if code_projects_domain_root_route && html?(response.headers)
+      return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/scripts/hosted.js'></script>\n<link rel='stylesheet' href='/style.css'></head>\n" << result[:body].string
+    end
+
     result[:body]
+  end
+
+  CONTENT_TYPE = 'Content-Type'.freeze
+  TEXT_HTML = 'text/html'.freeze
+
+  def html?(headers)
+    headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
   end
 
   #
@@ -309,7 +376,12 @@ class FilesApi < Sinatra::Base
 
     buckets = get_bucket_impl(endpoint).new
 
-    buckets.list(encrypted_channel_id).each do |file|
+    begin
+      files = buckets.list(encrypted_channel_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    files.each do |file|
       not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
       buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
     end
@@ -378,7 +450,7 @@ class FilesApi < Sinatra::Base
     last_modified result[:last_modified]
 
     if result[:status] == 'NOT_FOUND'
-      { "filesVersionId": "", "files": [] }.to_json
+      {"filesVersionId": "", "files": []}.to_json
     else
       # {
       #   "filesVersionId": "sadfhkjahfsdj",
@@ -391,7 +463,7 @@ class FilesApi < Sinatra::Base
       #     }
       #   ]
       # }
-      { "filesVersionId": result[:version_id], "files": JSON.load(result[:body]) }.to_json
+      {"filesVersionId": result[:version_id], "files": JSON.load(result[:body])}.to_json
     end
   end
 
@@ -418,7 +490,7 @@ class FilesApi < Sinatra::Base
     new_entry_hash['filename'] = filename
     manifest_is_unchanged = false
 
-    existing_entry = manifest.detect { |e| e['filename'].downcase == filename.downcase }
+    existing_entry = manifest.detect {|e| e['filename'].downcase == filename.downcase}
     if existing_entry.nil?
       manifest << new_entry_hash
     else
@@ -431,7 +503,7 @@ class FilesApi < Sinatra::Base
 
     # if we're also deleting a file (on rename), remove it from the manifest
     if params['delete']
-      reject_result = manifest.reject! { |e| e['filename'].downcase == params['delete'].downcase }
+      reject_result = manifest.reject! {|e| e['filename'].downcase == params['delete'].downcase}
       manifest_is_unchanged = false unless reject_result.nil?
     end
 
@@ -502,16 +574,16 @@ class FilesApi < Sinatra::Base
     # read the manifest
     bucket = FileBucket.new
     manifest_result = bucket.get(encrypted_channel_id, FileBucket::MANIFEST_FILENAME)
-    return { filesVersionId: "" }.to_json if manifest_result[:status] == 'NOT_FOUND'
+    return {filesVersionId: ""}.to_json if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
     # overwrite the manifest file with an empty list
     response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'])
 
     # delete the files
-    bucket.delete_multiple(encrypted_channel_id, manifest.map { |e| e['filename'].downcase }) unless manifest.empty?
+    bucket.delete_multiple(encrypted_channel_id, manifest.map {|e| e['filename'].downcase}) unless manifest.empty?
 
-    { filesVersionId: response.version_id }.to_json
+    {filesVersionId: response.version_id}.to_json
   end
 
   #
@@ -535,7 +607,7 @@ class FilesApi < Sinatra::Base
     manifest = JSON.load manifest_result[:body]
 
     # remove the file from the manifest
-    reject_result = manifest.reject! { |e| e['filename'].downcase == filename.downcase }
+    reject_result = manifest.reject! {|e| e['filename'].downcase == filename.downcase}
     not_found if reject_result.nil?
 
     # write the manifest
@@ -544,7 +616,7 @@ class FilesApi < Sinatra::Base
     # delete the file
     bucket.delete(encrypted_channel_id, filename.downcase)
 
-    { filesVersionId: response.version_id }.to_json
+    {filesVersionId: response.version_id}.to_json
   end
 
   #
@@ -588,6 +660,6 @@ class FilesApi < Sinatra::Base
     manifest_json = manifest.to_json
     result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json)
 
-    { "filesVersionId": result[:version_id], "files": manifest }.to_json
+    {"filesVersionId": result[:version_id], "files": manifest}.to_json
   end
 end

@@ -25,12 +25,13 @@ module ProxyHelper
     path = (url.path.empty?) ? '/' : url.path
     query = url.query || ''
 
-    # Limit how long we're willing to wait.
+    # Limit how long in seconds we're willing to wait.
     http.open_timeout = 3
     http.read_timeout = 3
 
     # Get the media.
-    media = http.request_get(path + '?' + query)
+    query_string = query.empty? ? '' : "?#{query}" # don't include the ? if the query is empty
+    media = http.request_get(path + query_string)
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?
@@ -45,13 +46,14 @@ module ProxyHelper
         allowed_hostname_suffixes: allowed_hostname_suffixes,
         expiry_time: expiry_time,
         infer_content_type: infer_content_type,
-        redirect_limit: redirect_limit - 1)
+        redirect_limit: redirect_limit - 1
+      )
 
     elsif !media.is_a? Net::HTTPSuccess
       # Pass through failure codes.
       render_error_response media.code, "Failed request #{media.code}"
 
-    elsif !allowed_content_types.include?(media.content_type)
+    elsif allowed_content_types.try(:exclude?, media.content_type)
       # Reject disallowed content types.
       render_error_response 400, "Illegal content type #{media.content_type}"
 
@@ -64,6 +66,51 @@ module ProxyHelper
     render_error_response 400, "Invalid URI #{location}"
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e
     render_error_response 400, "Network error #{e.class} #{e.message}"
+  end
+
+  # Unlike render_proxied_url, this does not attempt to render the URL, but instead
+  # just follows it to figure out what the redirected URL is. It's also the case
+  # that we'll stop as soon as we've been redirected to a URL on this site.
+  def resolve_redirect_url(location, allowed_hostname_suffixes:, redirect_limit: 5)
+    if redirect_limit == 0
+      return 500, 'Redirect loop'
+    end
+
+    url = URI.parse(location)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+
+    # If we've resolved to a path on this host/port, stop trying to redirect
+    if url.host === request.host && url.port === request.port
+      return 200, location
+    end
+
+    # If hostname isn't in our white list, don't attempt a redirect
+    unless allowed_hostname?(url, allowed_hostname_suffixes)
+      return 200, location
+    end
+
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = url.scheme == 'https'
+    path = (url.path.empty?) ? '/' : url.path
+    query = url.query || ''
+
+    # Limit how long in seconds we're willing to wait.
+    http.open_timeout = 3
+    http.read_timeout = 3
+
+    # Get the response.
+    response = http.request_head(path + '?' + query)
+
+    if response.is_a? Net::HTTPRedirection
+      resolve_redirect_url(response['location'], allowed_hostname_suffixes: allowed_hostname_suffixes, redirect_limit: redirect_limit - 1)
+    else
+      return response.code, response['location']
+    end
+
+  rescue URI::InvalidURIError
+    return 400, "Invalid URI #{location}"
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e
+    return 400, "Network error #{e.class} #{e.message}"
   end
 
   private

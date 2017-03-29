@@ -2,9 +2,9 @@ fi:
   errors:
     messages:
       not_saved: 'Ole hyvä ja korjaa seuraavat virheet:'
-      too_young: 'This content has age restrictions in place and is not available for younger students.'
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
-      pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
+      too_young: 'Tähän sisältöön on asetettu ikäraja, joten se ei ole nuorempien opiskelijoiden käytettävissä.'
+      teacher_must_accept_terms: 'Tähän sisältöön on asetettu ikäraja, joten se ei ole nuorempien opiskelijoiden käytettävissä. Kysy opettajaasi hyväksymään päivitetyt käyttöehdot antaakseen sinulle oikeudet tähän sisältöön. Opettajasi voi tehdä tämän kirjautumalla Code Studioon ja klikkaamalla "Review updated terms" nappulaa lähellä yläreunaa Code Studion etusivulla.'
+      pair_programmer: 'Olet tällä hetkellä pari ohjelmoinnissa oppilaan kanssa jolla ei ole käyttöoikeuksia tähän sisältöön. Päästäksesi tähän sisältöön, lopeta pariohjelmointi ja yritä uudelleen.'
   activerecord:
     errors:
       messages:
@@ -81,11 +81,12 @@ fi:
   signup_form:
     student_count: '%{count} oppilasta on jo rekisteröitynyt.'
     teacher_count: '%{count} opettajaa on jo rekisteröitynyt.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    overview: 'Rekisteröi tili seurataksesi omaa edistymistäsi tai hallitaksesi omaa luokkaasi<a href="/">Voit selata lukuisia tasoja ja tehtäviä </a>ilman tiliä, mutta sinun täytyy rekisteröityä, jotta voit tallentaa edistymisesi.'
+    hoc_already_signed_up_heading: 'Aloita ilman sisäänkirjautumista'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Katso opettajan opas'
-    title: "Sign up for Code.org"
+    title: "Rekisteröidy Code.org:n"
     school_name: 'Koulun nimi (vapaaehtoinen)'
     school_address: 'Koulun osoite (vapaaehtoinen)'
     address_placeholder: 'osoite, postinumero, postitoimipaikka'
@@ -101,14 +102,14 @@ fi:
     valid_password: "Salasana kelpaa!"
     invalid_password: "Salasanan tulee olla vähintään 6 merkkiä pitkä"
     mismatch_password: "Antamasi salasanat eivät täsmää"
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
+    student_terms: "Hyväksyn Code.org <a href='http://code.org/tos'> käyttöehdot</a>. Jos olen alle 13-vuotiaat, vahvistan lähettämällä tämän lomakkeen, että minulla on minun vanhemman tai laillisen huoltajan lupaa käyttää Code.org. <br/> <br/> Sähköpostiosoitteita ei tallenneta millään tavalla, jonka avulla voimme ottaa yhteyttä opiskelijoiden. Opiskelijat eivät tule saamaan ikinä sähköpostia Code.org:ilta paitsi unohtuneen salasanan takaisin saamisessa. Katso meidän <a href='http://code.org/privacy'> yksityisyydensuoja</a> lisätietoja."
+    teacher_terms: "Hyväksyn Code.org käyttöehdot sitovat. Saat lisätietoja meidän tietosuojasta <a href='http://code.org/privacy'> yksityisyydensuoja</a>."
     additional_information: "Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista."
     user_type_label: "Tilin tyyppi"
     user_type_teacher: "Opettaja"
     user_type_student: "Oppilas"
     field_is_required: "vaaditaan"
-    accept_terms: "You must agree to create an account"
+    accept_terms: "Sinun on hyväksyttävä luodaksesi tili"
   signin_form:
     title: 'Oletko jo rekisteröitynyt? Kirjaudu sisään'
     login: 'Sähköposti'
@@ -126,7 +127,8 @@ fi:
     words: 'Nyt anna salaiset sanasi'
     login: 'Kirjaudu sisään'
     invalid_login: 'Virheellinen kirjautuminen, yritä uudelleen'
-    pair_programming: 'I have a partner at my computer'
+    pair_programming: 'Minulla on kumppani minun tietokoneellani'
+    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
   password:
     reset_form:
       title: 'Unohditko salasanasi?'
@@ -248,12 +250,12 @@ fi:
       prizes: 'Palkinnot'
       logout: 'Kirjaudu ulos'
       signin: 'Kirjaudu sisään'
-      signup: 'Create an account'
+      signup: 'Luo käyttäjätili'
       already_registered: 'Jo rekisteröitynyt?'
       pair_programming: 'Pariohjelmointi'
-      team: 'Team'
-      driver: 'Driver'
-      navigator: 'Navigator'
+      team: 'Tiimi'
+      driver: 'Johtaja'
+      navigator: 'Neuvonantaja'
     popup:
       progress_for_user: "Käyttäjän %{name} edistyminen"
       progress: 'Sinun edistymisesi'
@@ -277,9 +279,9 @@ fi:
     students:
       dashboard: 'Siirry opettajan päänäytölle'
     user_not_found: 'Opettajaa ei löytynyt.'
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    student_teacher_disassociated: 'Olet poistanut %{teacher_name} opettajanasi.'
     panel:
-      answer_viewer: 'Teacher Panel'
+      answer_viewer: 'Opettajapaneeli'
       student: 'Oppilas'
       viewing_solution: 'Vastauksen katselu'
       try_it_yourself: 'Kokeile itse'
@@ -288,8 +290,8 @@ fi:
       example_with_number: 'Malliratkaisu %{solution_number}'
       submitted_on: 'Lähetetty:'
       unsubmit: 'Peruuta lähetys'
-      worked_with: 'Worked With'
-      update_lock_settings: 'Update lock settings here.'
+      worked_with: 'teki parinaan'
+      update_lock_settings: 'Päivitä lukitusasetukset täällä.'
       clear_response: 'Clear response'
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
@@ -302,6 +304,9 @@ fi:
     delete_text: "Klikkaamalla alla olevaa painiketta poistat tilisi."
     delete_text_teacher_note: 'Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi käyttäjätilejä.'
     delete_confirm: 'Oletko varma, että haluat poistaa käyttäjätilisi?'
+    deleted_user: 'deleted user'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Valmis'
     tried: 'Kokeili'
@@ -354,27 +359,33 @@ fi:
     announcement_learn_more_button: "Lue lisää"
     announcement_try_now_button: "Kokeile nyt"
     announcement_host_an_hour_button: "Host an Hour"
+    announcement_watch_video_button: "Katso video"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: "Add your name"
+    announcement_petition_button: "Lisää sinun nimesi"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
-    section_code_not_entered: "Please provide current_section_code."
+    section_code_not_entered: "Olkaa hyvä ja antakaa current_section_code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
-    current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
-    students_not_yours: "You cannot move students from a section that does not belong to you."
-    stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
-    student_ids_not_entered: "Please provide student_ids."
-    student_not_found: "One or more students could not be found."
-    all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
-    already_enrolled_in_new_section: "You cannot move these students because this teacher already has them in another section."
+    current_section_dne: "Anteeksi, mutta ryhmää %{current_section_code} ei ole olemassa. Anna eri ryhmä koodi."
+    students_not_yours: "Et voi liikuttaa opiskelijaa ryhmästä, joka ei kuulu sinulle."
+    stay_enrolled_not_entered: "Ole hyvä ja anna stay_enrolled_in_current_section."
+    student_ids_not_entered: "Olkaa hyvä ja antakaa student_ids."
+    student_not_found: "Yhtä tai enempää oppilasta ei löytynyt."
+    all_students_must_be_in_current_section: "Kaikki opiskelijat pitää olla tällä hetkellä kirjoilla ryhmässäsi."
+    already_enrolled_in_new_section: "Et voit liikuttaa näitä oppilaita koska tämä opettaja on liikuttanu heidät jo eri ryhmään."
   share:
     title: "Opiskele Code Studio:ssa"
     description: "Kuka tahansa voi oppia tietojenkäsittelyä. Rakenna koodaamalla pelejä, sovelluksia ja taidetta."
-    try_hour_of_code: 'Try an Hour of Code!'
+    try_hour_of_code: 'Kokeile koodaustuntia!'
   gender:
     male: 'Mies'
     female: 'Nainen'
@@ -405,7 +416,7 @@ fi:
     built_on_code_studio: 'Rakennettu Koodistudiossa'
     make_my_own_app: 'Tee oma sovellukseni'
     how_it_works: 'Miten se toimii'
-    try_hour_of_code: 'Try an Hour of Code!'
+    try_hour_of_code: 'Kokeile koodaustuntia!'
   reference_area:
     title: 'Tarvitsetko apua?'
     subtitle: 'Katso nämä videot ja vihjeet'
@@ -461,7 +472,7 @@ fi:
       body: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
       body_short: "Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
       audience: 'Ikäryhmille 13+'
-      cta: 'Learn how'
+      cta: 'Lisätietoja'
     hoc:
       title: 'Klassinen sokkelo'
       body: 'Kokeile tietojenkäsittelytieteen perusteita. Jo miljoonat ovat kokeilleet.'
@@ -517,6 +528,9 @@ fi:
     support: "Katso ohjeet"
     support_url: "//support.code.org"
     help_resources: "Help and Resources"
+    help_support: "Help and Support"
+    documentation: "Documentation"
+    tutorials: "Tutorials"
   multi:
     wrong_title: "Väärä vastaus"
     wrong_body: "Antamasi vastaus ei ole oikein. Yritä uudelleen!"
@@ -726,6 +740,11 @@ fi:
     content: 'Content'
     practice: 'Teaching Practices'
     peer_review: 'Peer Review'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
+    main_course: 'Main Course'
+    extra_course_content: 'Extra Course Content'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -740,8 +759,48 @@ fi:
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
   plc:

@@ -41,10 +41,8 @@ class LevelSourcesController < ApplicationController
   def update
     if @level_source.update(level_source_params)
       if level_source_params[:hidden]
-        # delete all gallery activities
-        @level_source.gallery_activities.each do |gallery_activity|
-          GalleryActivity.destroy(gallery_activity.id) # the query with joins gives me read only records...
-        end
+        # Delete all gallery activities.
+        GalleryActivity.where(level_source_id: @level_source.id).each(&:destroy)
       end
 
       redirect_to @level_source, notice: I18n.t('crud.updated', model: LevelSource.model_name.human)
@@ -56,7 +54,7 @@ class LevelSourcesController < ApplicationController
   def generate_image
     authorize! :read, @level_source
 
-    expires_in 10.hours, :public => true # cache
+    expires_in 10.hours, public: true # cache
 
     if @game.app == Game::ARTIST
       redirect_to @level_source.level_source_image.s3_framed_url
@@ -68,7 +66,7 @@ class LevelSourcesController < ApplicationController
   def original_image
     authorize! :read, @level_source
 
-    expires_in 10.hours, :public => true # cache
+    expires_in 10.hours, public: true # cache
 
     redirect_to @level_source.level_source_image.s3_url
   end
@@ -81,7 +79,6 @@ class LevelSourcesController < ApplicationController
     else
       @level_source = LevelSource.where(hidden: false).find(params[:id])
     end
-    @level_source.replace_old_when_run_blocks
     @level = Level.cache_find(@level_source.level_id)
     @game = @level.game
     view_options(

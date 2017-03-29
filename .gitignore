@@ -11,6 +11,7 @@
 .tmputils
 .idea/
 crowdin.yaml
+npm-debug.log
 /.dropbox.cache
 /.gdrive_session
 /.ruby-version
@@ -23,8 +24,13 @@ crowdin.yaml
 /apps/node_modules/
 /apps/npm-debug.log
 /apps/src/util/color.js
+/apps/src/util/sharedConstants.js
+/apps/src/applab/sharedApplabBlocks.js
+/apps/src/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
 /apps/test/entry-tests.js
+/apps/test/interpreter/test-results-new*.json
+/apps/yarn-error.log
 /aws/.code-studio-built
 /aws/.code-studio-commit-built
 /aws/.shared-built
@@ -51,3 +57,4 @@ crowdin.yaml
 /rebuild-shared
 /rebuild-code-studio
 /shared/js/node_modules/
+/tools/scripts/brokenLinkChecker/node_modules/

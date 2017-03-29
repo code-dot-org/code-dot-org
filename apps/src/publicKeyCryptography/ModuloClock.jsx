@@ -5,14 +5,20 @@ import color from "../util/color";
 
 // Defines the coordinate scale for SVG elements
 const VIEWBOX_SIDE = 100;
+const HALF_VIEWBOX_SIDE = VIEWBOX_SIDE / 2;
 // Above this size, the slices of the clock will have less space between them
 const SMALL_GAPS_OVER_MODULUS = 200;
 // Above this size, the clock will not render individual slices
 const CONTINUOUS_METER_OVER_MODULUS = 400;
+// Thickness of border that flashes when animation completes
+const OUTER_BORDER_WIDTH = 1;
 // Radius of the outer edge of a wedge clock segment
 const WEDGE_OUTER_RADIUS = 48;
 // Radius of the inner edge of a wedge clock segment
 const WEDGE_INNER_RADIUS = 25;
+// How long to wait on the last value before ending the animation:
+// Switching to the larger number and in the case of a zero, fading to an empty pie.
+const FINALIZATION_DELAY = 200;
 
 const COLOR = {
   clockFace: color.lightest_cyan,
@@ -30,6 +36,9 @@ const style = {
   svg: {
     width: 300,
     height: 300
+  },
+  fadeFill: {
+    transition: 'fill 1.5s'
   }
 };
 
@@ -40,6 +49,7 @@ const ModuloClock = React.createClass({
 
   getInitialState() {
     return {
+      startTime: null,
       currentDividend: 0
     };
   },
@@ -53,35 +63,41 @@ const ModuloClock = React.createClass({
    * @param {function} onComplete - callback called at end of animation
    */
   animateTo(dividend, maximumDuration, onStep, onComplete) {
+    // Avoid very slow animations: If there are less than 10 segments, or we
+    // would spend more than a second per segment, we won't end up using the
+    // full animation time.
     const maximumTimePerSegment = Math.min(1000, maximumDuration / 10);
 
     this.targetDividend = dividend;
-    this.startTime = Date.now();
     this.interval = setInterval(this.tick, 33);
     this.onStep = onStep || function () {};
     this.onComplete = onComplete || function () {};
     this.duration = Math.min(maximumDuration, dividend * maximumTimePerSegment);
-    this.setState({currentDividend: 0});
+    this.setState({startTime: Date.now(), currentDividend: 0});
   },
 
   tick() {
-    const elapsedTime = Date.now() - this.startTime;
-    if (elapsedTime < this.duration) {
+    const elapsedTime = Date.now() - this.state.startTime;
+    if (elapsedTime < this.duration - FINALIZATION_DELAY) {
+      // What dividend should we render on this frame? Ask the easing function.
       const currentDividend = Math.floor(easeOutCircular(elapsedTime, 0, this.targetDividend, this.duration));
       this.onStep(currentDividend);
       this.setState({currentDividend});
-    } else {
+    } else if (this.state.currentDividend !== this.targetDividend) {
+      // Snap to final value, but there's one more step before the animation ends.
+      this.setState({currentDividend: this.targetDividend});
+    } else if (elapsedTime >= this.duration) {
+      // End the animation once the final value has been shown for a moment.
       clearInterval(this.interval);
       this.onComplete(this.targetDividend);
-      this.setState({currentDividend: this.targetDividend});
       this.interval = null;
-      this.startTime = null;
       this.onStep = null;
       this.onComplete = null;
+      this.setState({startTime: null});
     }
   },
 
-  renderSegments(dividend, modulus) {
+  renderSegments(dividend, modulus, isRunning) {
     const segmentGapInDegrees = modulus > SMALL_GAPS_OVER_MODULUS ? 0.5 : 1;
     const segmentGapRadians = segmentGapInDegrees * 2 * Math.PI / 360;
     const result = dividend % modulus;
@@ -105,35 +121,54 @@ const ModuloClock = React.createClass({
       ];
     } else {
       // Render distinct segments
-      const wedgePath = createWedgePath((2 * Math.PI / modulus) - segmentGapRadians);
-      return _.range(0, modulus).map(n => (
-        <path
-          key={n}
-          d={wedgePath}
-          transform={`rotate(${(n - 0.5) * 360 / modulus} 50 50)`}
-          fill={n <= result ? COLOR.fullWedge : COLOR.emptyWedge}
-        />
-      ));
+      const segmentCount = modulus;
+      const wedgePath = createWedgePath((2 * Math.PI / segmentCount) - segmentGapRadians);
+      return _.range(0, segmentCount).map(n => {
+        // When running we want R=0 to be a full pie, for a nice smooth
+        // animation (that doesn't skip a pie slice).
+        // When not running we want R=0 to be an empty pie, to accurately
+        // represent the final result.
+        // Also when not running we enable a fade effect.
+        // Together these create the special situation where you animate to a
+        // full pie (d%m=0), stop animating, and fade to an empty pie.
+        const isSegmentFull = n < result || (isRunning && 0 === result);
+        return (
+          <path
+            key={n}
+            d={wedgePath}
+            transform={`rotate(${n  * 360 / segmentCount} 50 50)`}
+            fill={isSegmentFull ? COLOR.fullWedge : COLOR.emptyWedge}
+            style={!isRunning ? style.fadeFill : {}}
+          />
+        );
+      });
     }
   },
 
   render() {
     const modulus = Math.max(1, this.props.modulus);
-    const {currentDividend} = this.state;
-    const isRunning = !!this.interval;
+    const {startTime, currentDividend} = this.state;
+    const isRunning = startTime !== null;
     return (
       <div style={style.root}>
         <svg viewBox={`0 0 ${VIEWBOX_SIDE} ${VIEWBOX_SIDE}`} style={style.svg}>
           <circle
-            cx={VIEWBOX_SIDE / 2}
-            cy={VIEWBOX_SIDE / 2}
-            r={VIEWBOX_SIDE / 2}
+            cx={HALF_VIEWBOX_SIDE}
+            cy={HALF_VIEWBOX_SIDE}
+            r={HALF_VIEWBOX_SIDE}
+            fill={isRunning && currentDividend === this.targetDividend ? COLOR.fullWedge : COLOR.clockFace}
+            style={!isRunning ? style.fadeFill : {}}
+          />
+          <circle
+            cx={HALF_VIEWBOX_SIDE}
+            cy={HALF_VIEWBOX_SIDE}
+            r={HALF_VIEWBOX_SIDE - OUTER_BORDER_WIDTH}
             fill={COLOR.clockFace}
           />
-          {this.renderSegments(currentDividend, modulus)}
+          {this.renderSegments(currentDividend, modulus, isRunning)}
           <text
-            x={VIEWBOX_SIDE / 2}
-            y={VIEWBOX_SIDE / 2 + (isRunning ? 3 : 5)}
+            x={HALF_VIEWBOX_SIDE}
+            y={HALF_VIEWBOX_SIDE + (isRunning ? 3 : 5)}
             textAnchor="middle"
             stroke={COLOR.valueText}
             fill={COLOR.valueText}
@@ -158,9 +193,9 @@ function createWedgePath(arcRadians) {
   const t = arcRadians;
   const r1 = WEDGE_OUTER_RADIUS;
   const r2 = WEDGE_INNER_RADIUS;
-  const x1 = VIEWBOX_SIDE / 2;
-  const y1 = (VIEWBOX_SIDE / 2) - r1;
-  const y2 = (VIEWBOX_SIDE / 2) - r2;
+  const x1 = HALF_VIEWBOX_SIDE;
+  const y1 = (HALF_VIEWBOX_SIDE) - r1;
+  const y2 = (HALF_VIEWBOX_SIDE) - r2;
   const largeArc = arcRadians > Math.PI ? 1 : 0;
   return `
       M ${x1} ${y1}

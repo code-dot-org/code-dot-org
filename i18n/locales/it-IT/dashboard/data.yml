@@ -37,6 +37,7 @@ it:
         'NetSim': 'Simulatore di Internet'
         'Custom': 'Artista'
         'CustomStudio': 'Laboratorio'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronzo'
@@ -405,11 +406,13 @@ it:
         'infinity_playlab_intro': 'Laboratorio - Introduzione'
         'infinity_playlab_events': 'Laboratorio - Eventi'
         'infinity_playlab_repeat_forever': 'Laboratorio - Ripeti per sempre'
+        'csd_gamelab_animation_tab': 'The Animation Tab'
         'csd_gamelab_draw_1': 'Drawing in Game Lab - Part 1'
         'csd_gamelab_draw_2': 'Drawing in Game Lab - Part 2'
         'csd_gamelab_drawloop': 'Introduction to the Draw Loop'
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
+        'csd_gamelab_velocity': 'Velocity'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -420,6 +423,9 @@ it:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'
@@ -486,11 +492,11 @@ it:
         'iceage_intro': 'L''Ora del Codice con L''Era Glaciale - Introduzione'
         'iceage_events': 'L''Ora del Codice con L''Era Glaciale - Eventi'
         'iceage_repeat': 'L''Ora del Codice con L''Era Glaciale - Ripetizione'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'L''Ora del Codice con Minecraft - Introduzione'
+        'mc_2016_loops': 'L''Ora del Codice con Minecraft - Cicli'
+        'mc_2016_events': 'L''Ora del Codice con Minecraft - Eventi'
+        'mc_2016_spawn': 'L''Ora del Codice con Minecraft - Creare'
+        'mc_2016_congrats': 'L''Ora del Codice con Minecraft - Complimenti'
     callout:
       text:
         drag_blocks: 'Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l''altro blocco qua sopra'
@@ -540,7 +546,7 @@ it:
         playlab_add_blocks: "Aggiungi qui i tuoi blocchi"
         set_variable: "Sposta qui un blocco col numero per impostare la variabile"
         place_variable: "Sposta la variabile all'interno di questo blocco"
-        bee_for_loop: "Sposta qui la massima quantità di nettare che desideri l'ape raccolga"
+        bee_for_loop: "Scrivi qui la massima quantità di nettare che desideri l'ape raccolga"
         place_counter_variable: "Sposta la variabile \"contatore\" all'interno di questo blocco"
         function_editor_draw_square: "Questa è la definizione della tua funzione. Questi blocchi verranno eseguiti ogni volta che si utilizza il blocco \"disegna un quadrato\""
         change_here: "Fai qui il tuo cambio"

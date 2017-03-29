@@ -1,5 +1,5 @@
 class Pd::WorkshopMailer < ActionMailer::Base
-  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'
+  SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
   # Name of partial view for workshop details organized by course, then subject.
   # (views/pd/workshop_mailer/workshop_details/_<name>.html.haml)
@@ -25,9 +25,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   # Online URL used in the details partials, organized by course.
   ONLINE_URL = {
-    Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/s/sciencepd1',
-    Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/s/algebrapd1',
-    Pd::Workshop::COURSE_ECS => 'https://studio.code.org/s/ecspd1'
+    Pd::Workshop::COURSE_CS_IN_S => 'https://studio.code.org/course/cs-in-science-support',
+    Pd::Workshop::COURSE_CS_IN_A => 'https://studio.code.org/course/cs-in-algebra-support',
+    Pd::Workshop::COURSE_ECS => 'https://studio.code.org/course/ecs-support'
   }
 
   after_action :save_timestamp
@@ -49,7 +49,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def organizer_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
-    @teacher_dashboard_url = CDO.code_org_url "/teacher-dashboard#/sections/#{@workshop.section_id}/manage"
 
     mail content_type: 'text/html',
       from: from_no_reply,
@@ -74,6 +73,15 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_no_reply,
       subject: 'Code.org workshop cancellation',
+      to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def organizer_should_close_reminder(workshop)
+    @workshop = workshop
+
+    mail content_type: 'text/html',
+      from: from_no_reply,
+      subject: "Your #{@workshop.course} workshop is still open, please close it",
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -149,19 +157,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   # Exit survey email
   # @param enrollment [Pd::Enrollment]
-  # @param is_first_workshop: [Boolean]
-  #   Optionally override whether this is treated as the teacher's first workshop.
-  def exit_survey(enrollment, is_first_workshop: nil)
+  def exit_survey(enrollment)
     @workshop = enrollment.workshop
     @teacher = enrollment.user
     @enrollment = enrollment
-    @is_first_workshop = is_first_workshop.nil? ? first_workshop_for_teacher?(@teacher) : is_first_workshop
-
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? @workshop.course
-      @survey_url = CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{enrollment.code}", 'https:'
-    else
-      @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
-    end
+    @survey_url = enrollment.exit_survey_url
 
     @dash_code = CDO.pd_workshop_exit_survey_dash_code
 
@@ -172,7 +172,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     end
 
     mail content_type: content_type,
-      from: from_hadi,
+      from: from_survey,
       subject: 'How was your Code.org workshop?',
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
@@ -182,10 +182,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def save_timestamp
     return unless @enrollment && @enrollment.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
-  end
-
-  def first_workshop_for_teacher?(teacher)
-    Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
   end
 
   def generate_csf_certificate
@@ -213,8 +209,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     email_address('Code.org', 'noreply@code.org')
   end
 
-  def from_hadi
-    email_address('Hadi Partovi', 'hadi_partovi@code.org')
+  def from_survey
+    email_address('Code.org', 'survey@code.org')
   end
 
   def get_details_partial(course, subject)

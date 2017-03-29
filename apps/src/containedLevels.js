@@ -1,6 +1,5 @@
 import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 import { TestResults } from './constants';
-import { valueOr } from './utils';
 
 const PostState = {
   None: 'None',
@@ -18,16 +17,16 @@ let callOnPostCompletion = null;
  */
 export function getContainedLevelResultInfo() {
   const containedResult = codeStudioLevels.getContainedLevelResult();
-  const levelResult = containedResult.result;
-  const testResult = valueOr(containedResult.testResult,
-    levelResult.result ? TestResults.ALL_PASS : TestResults.GENERIC_FAIL);
   return {
     app: containedResult.app,
     level: containedResult.id,
     callback: containedResult.callback,
-    result: levelResult.result,
-    testResult: testResult,
-    program: levelResult.response,
+    // We only care whether they've submitted or not, and in many cases don't even
+    // know as the client if the submission was correct or not, as we're often
+    // not provided correct answers (i.e. in multis).
+    result: true,
+    testResult: TestResults.CONTAINED_LEVEL_RESULT,
+    program: containedResult.result.response,
     feedback: containedResult.feedback,
     submitted: false
   };
@@ -74,7 +73,7 @@ export function runAfterPostContainedLevel(fn) {
   if (postState === PostState.None) {
     throw new Error('Shouldnt call runAfterPostContainedLevel before postContainedLevelAttempt');
   }
-  if (PostState.Finished) {
+  if (postState === PostState.Finished) {
     fn();
     return;
   }

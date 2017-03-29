@@ -84,6 +84,13 @@ export function setProperty(elementId, property, value) {
                            'value': value });
 }
 
+export function getProperty(elementId, property) {
+  return Applab.executeCmd(null,
+    'getProperty',
+    {'elementId': elementId,
+      'property': property });
+}
+
 export function getXPosition(elementId) {
   return Applab.executeCmd(null,
                           'getXPosition',
@@ -140,6 +147,15 @@ export function setStrokeWidth(width) {
   return Applab.executeCmd(null,
                           'setStrokeWidth',
                           {'width': width });
+}
+
+export function rgb(r, g, b, a) {
+  return Applab.executeCmd(null,
+                          'rgb',
+                          {'r' : r,
+                           'g' : g,
+                           'b' : b,
+                           'a' : a});
 }
 
 export function setStrokeColor(color) {
@@ -372,10 +388,12 @@ export function clearInterval(intervalId) {
                            {'intervalId': intervalId });
 }
 
-export function playSound(url) {
-  return Applab.executeCmd(null,
-                          'playSound',
-                          {'url': url});
+export function timedLoop(ms, callback) {
+  return Applab.executeCmd(null, 'timedLoop', {ms, callback});
+}
+
+export function stopTimedLoop(key) {
+  return Applab.executeCmd(null, 'stopTimedLoop', {key});
 }
 
 export function getKeyValue(key, onSuccess, onError) {

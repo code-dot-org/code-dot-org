@@ -1,9 +1,23 @@
 <%
 require 'cdo/aws/cloudfront'
-unless system("git ls-remote --exit-code 'https://github.com/code-dot-org/code-dot-org.git' #{branch} > /dev/null")
-  raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+
+local_branch = `git branch | grep \\* | cut -f 2 -d \\ `.strip
+if local_branch == branch
+  # In this first (default) case, the current branch is the one we're deploying to the adhoc server,
+  # so check whether it's up-to-date with the remote before we get any further.
+  unless `git remote show origin 2>&1 | grep \"(up to date)\" | grep \"#{branch}\" | wc -l`.strip.to_i > 0
+    raise 'Current branch needs to be up-to-date with GitHub branch of the same name, otherwise deploy will fail.
 To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
+  end
+else
+  # In this second case we're deploying a different branch than the current local one;
+  # simply check that the branch exists on GitHub before deploying.
+  unless system("git ls-remote --exit-code 'https://github.com/code-dot-org/code-dot-org.git' #{branch} > /dev/null")
+    raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
+  end
 end
+
 unless dry_run
   update_certs.call
   update_cookbooks.call

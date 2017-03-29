@@ -1,12 +1,15 @@
 require 'test_helper'
 
 class UserScriptTest < ActiveSupport::TestCase
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @script = create :script
     @script_levels = 1.upto(10).map do
       create :script_level, script: @script
     end
+  end
 
+  setup do
     @user = create :user
     @user_script = create :user_script, user: @user, script: @script
   end
@@ -22,7 +25,7 @@ class UserScriptTest < ActiveSupport::TestCase
   end
 
   test "check completed for script with no levels completed" do
-    assert !@user_script.check_completed?
+    refute @user_script.check_completed?
   end
 
   test "check completed for script with some levels completed" do
@@ -30,7 +33,7 @@ class UserScriptTest < ActiveSupport::TestCase
     create :user_level, user: @user, level: @script_levels.first.level, best_result: 100
     create :user_level, user: @user, level: @script_levels.second.level, best_result: 100
 
-    assert !@user_script.check_completed?
+    refute @user_script.check_completed?
   end
 
   test "check completed for script with all levels completed but some not passed" do
@@ -44,7 +47,7 @@ class UserScriptTest < ActiveSupport::TestCase
       complete_level(script_level, 10)
     end
 
-    assert !@user_script.check_completed?
+    refute @user_script.check_completed?
   end
 
   test "check completed for script with all levels completed" do
@@ -59,17 +62,17 @@ class UserScriptTest < ActiveSupport::TestCase
     assert UserScript.new(user_id: @user.id, script_id: 1).empty?
 
     # not when you start, complete, assign, or progress in it
-    assert !UserScript.new(user_id: @user.id, script_id: 1, started_at: Time.now).empty?
-    assert !UserScript.new(user_id: @user.id, script_id: 1, assigned_at: Time.now).empty?
+    refute UserScript.new(user_id: @user.id, script_id: 1, started_at: Time.now).empty?
+    refute UserScript.new(user_id: @user.id, script_id: 1, assigned_at: Time.now).empty?
 
     # the following should be impossible (since you can't complete or
     # progress in a script without starting it, but being impossible
     # doesn't always stop things from happening)
-    assert !UserScript.new(user_id: @user.id, script_id: 1, completed_at: Time.now).empty?
-    assert !UserScript.new(user_id: @user.id, script_id: 1, last_progress_at: Time.now).empty?
+    refute UserScript.new(user_id: @user.id, script_id: 1, completed_at: Time.now).empty?
+    refute UserScript.new(user_id: @user.id, script_id: 1, last_progress_at: Time.now).empty?
 
     # a more normal case:
-    assert !UserScript.new(
+    refute UserScript.new(
       user_id: @user.id,
       script_id: 1,
       started_at: Time.now - 5.days,

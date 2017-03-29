@@ -1,0 +1,21 @@
+name 'commute assess - comp 3 - block'
+
+wrong 'Displays "Hello" once'
+wrong 'Displays "Hello" exactly 60 times'
+right 'Displays "Hello" continuously for 60 seconds'
+wrong 'Displays "Hello" once after 60 seconds has elapsed'
+wrong 'This code will cause an error'
+
+markdown <<MARKDOWN
+Assume the programming language provides the following procedure for getting the time of day.
+
+| Procedure | Explanation |
+| --- |:--- |
+|![](https://images.code.org/48e26f7cbbf12861c364489742fc8160-image-1482340024937.png)| Returns an integer, the current time of day in whole *seconds*.  For example, if the actual time is 10.5 seconds, `GET_TIME` will return 10 until the number of whole seconds is 11.0 or greater.  A later time is always a bigger number.
+
+--- 
+
+What does this code do?
+
+<img src="https://images.code.org/592b918d9d44af4f0e81fe76916a15f5-image-1482419048814.png" style="width: 300px">
+MARKDOWN

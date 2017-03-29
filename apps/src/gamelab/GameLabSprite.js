@@ -238,7 +238,7 @@ module.exports.createSprite = function (x, y, width, height) {
    // frame, which will cause the animation to continue on the next update().
    // If the animation is non-looping and is stopped at the last frame
    // we also rewind the animation to the beginning.
-    if (!s.animation.looping && s.animation.getFrame() === s.animation.images.length - 1) {
+    if (!s.animation.looping && !s.animation.playing && s.animation.getFrame() === s.animation.images.length - 1) {
       s.animation.rewind();
     }
     s.animation.play();
@@ -334,8 +334,8 @@ var _collideWith = function (p5Inst, type, target, callback) {
  * @param {string} type - 'overlap', 'displace', 'collide' or 'bounce'
  *        +Code.org-specific modifictions:
  *        'bounceOff' is 'bounce' but with other treated as immovable.
- *        'collide' and 'displace' get treated like 'bounce' with a restitution
- *            coefficient of zero.
+ *        'collide' gets treated like 'bounce' when the other is immovable
+ *            and using a restitution coefficient of zero.
  * @param {Sprite} other
  * @param {function} callback - if collision occurred
  * @return {boolean} true if a collision occurred
@@ -398,10 +398,6 @@ function _collideWithOne(p5Inst, type, other, callback) {
   if (originalType === 'collide') {
     type = 'bounce';
     other.immovable = true;
-    other.restitution = 0;
-  } else if (originalType === 'displace') {
-    type = 'bounce';
-    this.immovable = true;
     other.restitution = 0;
   } else if (originalType === 'bounceOff') {
     type = 'bounce';

@@ -4,7 +4,7 @@ require 'cdo/yaml'
 require 'json'
 
 def http_content_type(type, params={})
-  params = params.map { |k, v| "#{k}=#{v}" }.join('; ')
+  params = params.map {|k, v| "#{k}=#{v}"}.join('; ')
   params.empty? ? type : [type, params].join('; ')
 end
 
@@ -121,12 +121,17 @@ class HttpDocument
     path = resolve_template(locals[:request].site, theme)
     raise Exception, "'#{theme}' theme not found." if path.nil?
 
-    @body = TextRender.haml_file(path, locals.merge({
-      :header => JSON.parse(headers['X-Pegasus-Header'] || '{}'),
-      :body => content,
-      :classes => classes,
-      :head => head,
-    }))
+    @body = TextRender.haml_file(
+      path,
+      locals.merge(
+        {
+          header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
+          body: content,
+          classes: classes,
+          head: head,
+        }
+      )
+    )
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
@@ -137,10 +142,15 @@ class HttpDocument
     path = resolve_template(locals[:request].site, view)
     raise Exception, "'#{view}' view not found." if path.nil?
 
-    @body = TextRender.haml_file(path, locals.merge({
-      header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
-      body:   @body,
-    }))
+    @body = TextRender.haml_file(
+      path,
+      locals.merge(
+        {
+          header: JSON.parse(headers['X-Pegasus-Header'] || '{}'),
+          body:   @body,
+        }
+      )
+    )
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
@@ -165,12 +175,13 @@ class HttpDocument
 
   def resolve_template(site, view)
     FileUtility.find_first_existing(
-      String.multiply_concat([
-        sites_dir("#{site}/views/#{view}"),
-        sites_dir("all/views/#{view}"),
-      ], [
-        '.haml',
-      ])
+      String.multiply_concat(
+        [
+          sites_dir("#{site}/views/#{view}"),
+          sites_dir("all/views/#{view}"),
+        ],
+        ['.haml']
+      )
     )
   end
 
@@ -226,7 +237,7 @@ module Pegasus
     end
 
     after do
-      response.headers.keys.each { |i| response.headers.delete(i) if i =~ /^X-Pegasus-/; }
+      response.headers.keys.each {|i| response.headers.delete(i) if i =~ /^X-Pegasus-/;}
 
       status = response.status.to_s.to_i
       message = "#{status} returned for #{request.site}#{request.path_info}"
@@ -264,7 +275,7 @@ module Pegasus
 
     def deliver_manipulated_image(path, format, mode, width, height=nil)
       content_type format.to_sym
-      cache_control :public, :must_revalidate, :max_age => settings.image_max_age
+      cache_control :public, :must_revalidate, max_age: settings.image_max_age
 
       begin
         img = load_manipulated_image(path, mode, width, height)
@@ -282,13 +293,17 @@ module Pegasus
     end
 
     def render(document, locals={})
-      document.to_html!(locals.merge({
-        settings: settings,
-        request: request,
-        response: response,
-        params: params,
-        session: session,
-      }))
+      document.to_html!(
+        locals.merge(
+          {
+            settings: settings,
+            request: request,
+            response: response,
+            params: params,
+            session: session,
+          }
+        )
+      )
       deliver(document)
     end
 
@@ -320,9 +335,14 @@ module Pegasus
 
         extnames.each do |extname|
           if File.file?(path = "#{parent}/_all#{extname}")
-            return HttpDocument.from_file(path, headers.merge({
-              'Cache-Control' => "max-age=#{settings.document_max_age}, private, must-revalidate"
-            }))
+            return HttpDocument.from_file(
+              path,
+              headers.merge(
+                {
+                  'Cache-Control' => "max-age=#{settings.document_max_age}, private, must-revalidate"
+                }
+              )
+            )
           end
         end
       end
@@ -341,7 +361,7 @@ module Pegasus
       halt 403 if settings.read_only
       begin
         content_type :json
-        cache_control :private, :must_revalidate, :max_age => 0
+        cache_control :private, :must_revalidate, max_age: 0
         kind.submit(request, params).to_json
       rescue FormError => e
         halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
@@ -388,7 +408,7 @@ class CurriculumRouter < Pegasus::Base
     pass if settings.template_extnames.include?(File.extname(path))
     pass unless File.file?(path)
 
-    cache_control :public, :must_revalidate, :max_age => settings.document_max_age
+    cache_control :public, :must_revalidate, max_age: settings.document_max_age
     return send_file(path)
   end
 
@@ -426,7 +446,7 @@ class CurriculumRouter < Pegasus::Base
 
     if File.file?(static_path = File.join(dir, parts))
       pass if settings.template_extnames.include?(File.extname(static_path))
-      cache_control :public, :must_revalidate, :max_age => settings.document_max_age
+      cache_control :public, :must_revalidate, max_age: settings.document_max_age
       return send_file(static_path)
     end
 

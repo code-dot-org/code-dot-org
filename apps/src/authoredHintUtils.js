@@ -1,7 +1,11 @@
 import $ from 'jquery';
+import experiments from './util/experiments';
 import processMarkdown from 'marked';
 import renderer from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
+
+import { trySetLocalStorage } from './utils';
+
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('@cdo/locale');
 
@@ -101,6 +105,18 @@ authoredHintUtils.getFinishedHints_ = function () {
 };
 
 /**
+ * This only retrieves the hints stored in localStorage, which likely won't
+ * include things from older sessions.
+ *
+ * TODO(ram): Grab *all* the old hint requests from the server, preferably on
+ *   level load
+ * @return {FinishedHint[]}
+ */
+authoredHintUtils.getOldFinishedHints = function () {
+  return authoredHintUtils.getFromLocalStorage_('old_finished_authored_hint_views', []);
+};
+
+/**
  * @return {AttemptRecord}
  */
 authoredHintUtils.getLastAttemptRecord_ = function () {
@@ -114,15 +130,20 @@ authoredHintUtils.getLastAttemptRecord_ = function () {
 authoredHintUtils.recordFinishedHints_ = function (hints) {
   var finishedHintViews = authoredHintUtils.getFinishedHints_();
   finishedHintViews = finishedHintViews.concat(hints);
-  localStorage.setItem('finished_authored_hint_views', JSON.stringify(finishedHintViews));
+  trySetLocalStorage('finished_authored_hint_views', JSON.stringify(finishedHintViews));
 };
 
 authoredHintUtils.clearUnfinishedHints = function () {
-  localStorage.setItem('unfinished_authored_hint_views', JSON.stringify([]));
+  trySetLocalStorage('unfinished_authored_hint_views', JSON.stringify([]));
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
-  localStorage.setItem('finished_authored_hint_views', JSON.stringify([]));
+  if (experiments.isEnabled('g.stageprogress')) {
+    const oldHints = authoredHintUtils.getOldFinishedHints();
+    trySetLocalStorage('old_finished_authored_hint_views',
+        JSON.stringify(oldHints.concat(authoredHintUtils.getFinishedHints_())));
+  }
+  trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
 /**
@@ -168,7 +189,7 @@ authoredHintUtils.recordUnfinishedHint = function (hint) {
   }
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   unfinishedHintViews.push(hint);
-  localStorage.setItem('unfinished_authored_hint_views', JSON.stringify(unfinishedHintViews));
+  trySetLocalStorage('unfinished_authored_hint_views', JSON.stringify(unfinishedHintViews));
 };
 
 /**
@@ -178,7 +199,7 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   if (!nextAttemptRecord) {
     return;
   }
-  localStorage.setItem('last_attempt_record', JSON.stringify(nextAttemptRecord));
+  trySetLocalStorage('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
   var finishedHintViews = unfinishedHintViews.map(function (hint){
@@ -277,4 +298,16 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       alreadySeen: false
     };
   });
+};
+
+/**
+ * Returns the number of hints that the user has opened on the given level, but
+ * haven't been reported to the server yet.
+ */
+authoredHintUtils.currentOpenedHintCount = function (levelId) {
+  const unfinished = authoredHintUtils.getUnfinishedHints_();
+  const finished = authoredHintUtils.getFinishedHints_();
+  return unfinished.concat(finished).filter((hint) => {
+    return hint.levelId === levelId;
+  }).length;
 };

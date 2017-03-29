@@ -20,7 +20,9 @@ export function setExternalGlobals() {
       hasPrivacyProfanityViolation: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; },
-      useFirebase: function () { return false; }
+      useFirebase: function () { return false; },
+      useMakerAPIs: function () { return false; },
+      isOwner: () => true,
     },
     assets: {
       showAssetManager: function () {},
@@ -250,39 +252,60 @@ function zeroPadLeft(string, desiredWidth) {
  *   });
  */
 export function throwOnConsoleErrors() {
-  before(function () {
-    sinon.stub(console, 'error', msg => {
-      // Generate a stack trace
-      try {
-        throw new Error();
-      } catch (e) {
-        console.log('Unexpected call to console.error: ' + msg);
-        console.log(e.stack);
+  let firstError = null;
+  beforeEach(function () {
+    sinon.stub(console, 'error').callsFake(msg => {
+      // Store error so we can throw in after. This will ensure we hit a failure
+      // even if message was originally thrown in async code
+      if (!firstError) {
+        firstError = new Error('Unexpected call to console.error: ' + msg);
       }
-      throw new Error(msg);
     });
   });
 
-  after(function () {
+  afterEach(function () {
+    if (firstError) {
+      throw firstError;
+    }
     console.error.restore();
+    firstError = null;
   });
 }
 
 export function throwOnConsoleWarnings() {
-  before(function () {
-    sinon.stub(console, 'warn', msg => {
-      // Generate a stack trace
-      try {
-        throw new Error();
-      } catch (e) {
-        console.log('Unexpected call to console.warn: ' + msg);
-        console.log(e.stack);
+  let firstError = null;
+  beforeEach(function () {
+    sinon.stub(console, 'warn').callsFake(msg => {
+      // Store error so we can throw in after. This will ensure we hit a failure
+      // even if message was originally thrown in async code
+      if (!firstError) {
+        firstError = new Error('Unexpected call to console.warn: ' + msg);
       }
-      throw new Error(msg);
     });
   });
 
-  after(function () {
+  afterEach(function () {
+    if (firstError) {
+      throw firstError;
+    }
     console.warn.restore();
+    firstError = null;
   });
+}
+
+const originalWindowValues = {};
+export function replaceOnWindow(key, newValue) {
+  if (originalWindowValues.hasOwnProperty(key)) {
+    throw new Error(`Can't replace 'window.${key}' - it's already been replaced.`);
+  }
+  originalWindowValues[key] = window[key];
+  window[key] = newValue;
+}
+
+export function restoreOnWindow(key) {
+  if (!originalWindowValues.hasOwnProperty(key)) {
+    throw new Error(`Can't restore 'window.${key}' - it wasn't replaced.`);
+  }
+  window[key] = originalWindowValues[key];
+  delete originalWindowValues[key];
 }

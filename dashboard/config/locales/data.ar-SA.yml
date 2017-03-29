@@ -37,6 +37,7 @@
         NetSim: "محاكاة الإنترنت"
         Custom: "الرسام"
         CustomStudio: "مختبر اللعب"
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: "برونزية"
@@ -679,11 +680,13 @@
         infinity_playlab_intro: "مختبر اللعب - المقدمة"
         infinity_playlab_events: "مختبر اللعب - الأحداث"
         infinity_playlab_repeat_forever: "مختبر الألعاب - تكرار إلى الأبد"
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_velocity: Velocity
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -694,6 +697,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -750,22 +756,22 @@
         starwars_blocks_intro: "حرب النجوم: بناء مجرة باستعمال  البرمجة --مقدمة"
         starwars_blocks_events: "حرب النجوم: بناء مجرة باستعمال البرمجة --الأحداث"
         starwars_blocks_congrats: "حرب النجوم: بناء مجرة باستعمال البرمجة --تهانينا"
-        mc_intro: Minecraft - مقدمة
-        mc_repeat: Minecraft - تكرار
-        mc_if_statements: Minecraft - عبارات شرطية
-        mc_congrats_share: Minecraft - تهانينا
-        mc_congrats_no_share: Minecraft - تهانينا
+        mc_intro: "ماينكرافت - مقدمة"
+        mc_repeat: "ماينكرافت - تكرار"
+        mc_if_statements: "ماينكرافت - عبارات if الشرطية"
+        mc_congrats_share: "ماينكرافت - مبروك"
+        mc_congrats_no_share: "ماينكرافت - مبروك"
         gumball_intro: "ساعة البرمجة غامبول - مقدّمة"
         gumball_events: "ساعة البرمجة غامبول - الأحداث"
         gumball_repeat: "ساعة البرمجة غامبول - تركيب التكرار"
         iceage_intro: '"العصر الجليدي" ساعة من التعليمات البرمجية - التقديم'
         iceage_events: '"العصر الجليدي" ساعة من التعليمات البرمجية - الأحداث'
         iceage_repeat: '"العصر الجليدي" ساعة من التعليمات البرمجية - تكرار البيانات'
-        mc_2016_intro: Minecraft Hour of Code - Introduction
-        mc_2016_loops: Minecraft Hour of Code - Loops
-        mc_2016_events: Minecraft Hour of Code - Events
-        mc_2016_spawn: Minecraft Hour of Code - Spawn
-        mc_2016_congrats: Minecraft Hour of Code - Congratulations
+        mc_2016_intro: "ساعة من البرمجة مع ماينكرافت - مقدمة"
+        mc_2016_loops: "ساعة من البرمجة مع ماينكرافت - الدورات Loops"
+        mc_2016_events: "ساعة من البرمجة مع ماينكرافت - الأحداث Events"
+        mc_2016_spawn: "ساعة من البرمجة مع ماينكرافت - اظهر"
+        mc_2016_congrats: "ساعة من البرمجة مع ماينكرافت - مبروك"
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

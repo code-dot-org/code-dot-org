@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix]
   include LevelsHelper
 
-  TEMPLATES = %w(projects)
+  TEMPLATES = %w(projects).freeze
 
   STANDALONE_PROJECTS = {
     artist: {
@@ -40,7 +40,7 @@ class ProjectsController < ApplicationController
     eval: {
       name: 'Eval Free Play'
     }
-  }.with_indifferent_access
+  }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
 
@@ -78,11 +78,12 @@ class ProjectsController < ApplicationController
         name: 'Untitled Project',
         useFirebase: use_firebase,
         level: polymorphic_url([params[:key], 'project_projects'])
-      })
+      }
+    )
   end
 
   def show
-    if params[:nosource]
+    if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
       # regular project page, we encode the channel id using a simple
@@ -130,6 +131,9 @@ class ProjectsController < ApplicationController
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name)
     )
+    if params[:key] == 'artist'
+      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+    end
     render 'levels/show'
   end
 
@@ -144,7 +148,8 @@ class ProjectsController < ApplicationController
       StorageApps.new(storage_id('user')),
       nil,
       src_channel_id,
-      use_firebase)
+      use_firebase
+    )
     AssetBucket.new.copy_files src_channel_id, new_channel_id
     AnimationBucket.new.copy_files src_channel_id, new_channel_id
     SourceBucket.new.copy_files src_channel_id, new_channel_id

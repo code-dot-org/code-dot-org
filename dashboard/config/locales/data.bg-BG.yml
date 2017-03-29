@@ -37,6 +37,7 @@
         NetSim: "Интернет симулатор"
         Custom: "Художник"
         CustomStudio: "Театрална лаборатория"
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: "Бронз"
@@ -199,7 +200,7 @@
           от последния път. Квадратите трябва да са с еднакъв размер, затова използвайте
           блокчето "Брояч". Подсказка: Намира се в категорията "Променливи".'
         turtle_2_7: Ето програма за рисуване на спирала, но блокчето е неактивно и
-          затова няма да работи. Направете нова програма, използвайки "Брой с" блокчето
+          затова няма да работи. Направете нова програма използвайки "Брой с" блокчето
           (в категорията "Цикли") и блокчето "Брояч" (в категорията "Променливи"),
           за да нарисувате същата спирала.
         turtle_2_7_5: Има нова "Нарисувай снежен човек" функция (в категорията "Функции").
@@ -208,8 +209,7 @@
           и новото "скок напред" блокче (в категорията "Действия"). Нарисувайте три
           снежни човека в различни цветове, като всеки да е на 100 пиксела от другия.
         turtle_2_9: Използвайте цикъла "Брой с" за да нарисувате снежни човеци с височина
-          110, 100, 90, 80 и 70. Те трябва да са отделени на 60 пиксела разстояние
-          един от друг.
+          110, 100, 90, 80 и 70. Те трябва да са отделени с 60 пиксела разстояние.
         turtle_2_10: "Ето малко код, за да експериментирате с различни спирали. Какво
           се случва, когато промените обръщанията? Или ако промените цвета на цикъла?
           Нарисувайте нещо по Ваше желание."
@@ -745,11 +745,13 @@
         infinity_playlab_intro: "Игрална лаборатория - Въведение"
         infinity_playlab_events: "Игрална лаборатория - Събития"
         infinity_playlab_repeat_forever: "Игрална Лаборатория - повторение завинаги"
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_velocity: Velocity
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -760,6 +762,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

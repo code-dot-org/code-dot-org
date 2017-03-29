@@ -28,6 +28,8 @@
     "fast_get_nectar_animation": "false",
     "instructions": "Sequence matters! The blocks you need are already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
     "markdown_instructions": "Sequence matters! The blocks you need are already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
+    "instructions_important": "false",
+    "min_collected": "1",
     "contained_level_names": null
   },
   "published": true,
@@ -46,6 +48,9 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="collector_collect" deletable="false" editable="false"/>
+        <block type="maze_move" deletable="false" editable="false">
+          <title name="DIR">moveForward</title>
+        </block>
         <block type="maze_move" deletable="false" editable="false">
           <title name="DIR">moveForward</title>
         </block>

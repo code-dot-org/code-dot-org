@@ -9,16 +9,18 @@ class WorkshopTest < ActiveSupport::TestCase
 
       workshop.segments = []
       segment_starts_and_ends.each do |segment_start_and_end|
-        workshop.segments.build(start: segment_start_and_end.first,
-                                end: segment_start_and_end.last)
+        workshop.segments.build(
+          start: segment_start_and_end.first,
+          end: segment_start_and_end.last
+        )
       end
       workshop.save!
     end
   end
 
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0)
-
     @old_workshop = create_workshop [[Time.now.utc - 10.days, Time.now.utc - 9.days]]
     @tomorrow_workshop = create_workshop [[Time.now.utc + 1.days, Time.now.utc + 1.days + 1.hour]]
 
@@ -37,6 +39,11 @@ class WorkshopTest < ActiveSupport::TestCase
     @workshop_in_2_weeks = create_workshop [[today_start + 2.weeks, today_end + 2.weeks]]
 
     @workshop_in_3_days = create_workshop [[today_start + 3.days, today_end + 3.days]]
+    Timecop.return
+  end
+
+  setup do
+    Timecop.travel Time.local(2013, 9, 1, 12, 0, 0)
   end
 
   teardown do
@@ -135,8 +142,8 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Phase 1: Online Introduction', create(:workshop, phase: 1).phase_long_name
     assert_equal 'Phase 2: Blended Summer Study', create(:workshop, phase: 2).phase_long_name
 
-    assert_equal nil, create(:workshop, phase: "????").phase_long_name
-    assert_equal nil, create(:workshop, phase: nil).phase_long_name
+    assert_nil create(:workshop, phase: "????").phase_long_name
+    assert_nil create(:workshop, phase: nil).phase_long_name
   end
 
   test "prerequisite phase" do
@@ -145,13 +152,13 @@ class WorkshopTest < ActiveSupport::TestCase
     #   1 => {id: 1, short_name: PHASE_1, long_name: 'Phase 1: Online Introduction'},
     #   2 => {id: 2, short_name: PHASE_2, long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
 
-    assert_equal nil, create(:workshop, phase: 1).prerequisite_phase
+    assert_nil create(:workshop, phase: 1).prerequisite_phase
     phase1 = {id: 1, short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'}
     assert_equal phase1, create(:workshop, phase: 2).prerequisite_phase
-    assert_equal nil, create(:workshop, phase: 3).prerequisite_phase
+    assert_nil create(:workshop, phase: 3).prerequisite_phase
 
-    assert_equal nil, create(:workshop, phase: "????").prerequisite_phase
-    assert_equal nil, create(:workshop, phase: nil).prerequisite_phase
+    assert_nil create(:workshop, phase: "????").prerequisite_phase
+    assert_nil create(:workshop, phase: nil).prerequisite_phase
   end
 
   test "program_type_short_name" do
@@ -179,8 +186,8 @@ class WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Phase 1', create(:workshop, phase: 1).phase_short_name
     assert_equal 'Phase 2', create(:workshop, phase: 2).phase_short_name
 
-    assert_equal nil, create(:workshop, phase: "????").phase_long_name
-    assert_equal nil, create(:workshop, phase: nil).phase_short_name
+    assert_nil create(:workshop, phase: "????").phase_long_name
+    assert_nil create(:workshop, phase: nil).phase_short_name
   end
 
   test "exit_survey_url" do

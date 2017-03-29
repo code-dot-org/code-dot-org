@@ -37,6 +37,7 @@
         NetSim: "インターネット シミュレータ"
         Custom: "アーティスト"
         CustomStudio: "プレイラボ"
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: "銅"
@@ -362,13 +363,12 @@
         maze_wordsearch_k_2: SOUTHになるように、私を動かしてください。
         maze_wordsearch_k_3: WESTになるように、私を動かしてください。
         maze_wordsearch_k_4: NORTHになるように、私を動かしてください。
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
+        maze_wordsearch_k_6: "わたしを東(ひがし) と南（みなみ) にうごかして、JUMPとかいてください。"
+        maze_wordsearch_k_9: "わたしをうごかして、CODEのスペリングをかいてください。"
+        maze_wordsearch_k_13: "わたしをうごかして、DEBUGとかいてください。"
+        maze_wordsearch_k_15: "わたしをうごかして、ABOVEとかいてください。"
+        maze_wordsearch_k_16: "わたしをうごかして、BELOWとかいてください。"
+        maze_wordsearch_k_20: "これはテストです。わたしをうごかして、STORYとかいてください。"
         applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColor" block.'
@@ -451,7 +451,7 @@
         C3_computational_thinking: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
         C3_dice_race: "言うレース"
         C3_internet: "インターネット"
-        C3_crowdsourcing: Crowdsourcing
+        C3_crowdsourcing: "クラウドソーシング"
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: "パラメーターで作詞作曲"
         C4_intro: "はじめに"
@@ -483,11 +483,13 @@
         infinity_playlab_intro: "プレイラボ：イントロダクション"
         infinity_playlab_events: "ゲームラボ - イベント"
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_velocity: Velocity
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -498,6 +500,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

@@ -61,6 +61,7 @@ class Blockly < Level
     definition_collapse
     disable_examples
     project_template_level_name
+    hide_share_and_remix
     is_project_level
     edit_code
     code_functions
@@ -70,13 +71,14 @@ class Blockly < Level
     lock_zero_param_functions
     contained_level_names
     encrypted_examples
+    disable_if_else_editing
   )
 
   before_save :update_ideal_level_source
 
-  before_validation {
+  before_validation do
     self.scrollbars = nil if scrollbars == 'nil'
-  }
+  end
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
@@ -88,7 +90,7 @@ class Blockly < Level
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
         xml_blocks.each do |attr|
-          xml.send(attr) { |x| x << send(attr)} if send(attr).present?
+          xml.send(attr) {|x| x << send(attr)} if send(attr).present?
         end
       end
     end
@@ -96,7 +98,7 @@ class Blockly < Level
   end
 
   def load_level_xml(xml_node)
-    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map{|x| '//' + x}.join(' | ')).map(&:remove) : []
+    block_nodes = xml_blocks.count > 0 ? xml_node.xpath(xml_blocks.map {|x| '//' + x}.join(' | ')).map(&:remove) : []
     level_properties = super(xml_node)
     block_nodes.each do |attr_node|
       level_properties[attr_node.name] = attr_node.child.serialize(save_with: XML_OPTIONS).strip
@@ -105,7 +107,7 @@ class Blockly < Level
   end
 
   def filter_level_attributes(level_hash)
-    super(level_hash.tap{|hash| hash['properties'].except!(*xml_blocks)})
+    super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
   end
 
   before_save :update_contained_levels
@@ -117,9 +119,9 @@ class Blockly < Level
     properties["contained_level_names"] = contained_level_names
   end
 
-  before_validation {
+  before_validation do
     xml_blocks.each {|attr| normalize_xml attr}
-  }
+  end
 
   XML_OPTIONS = Nokogiri::XML::Node::SaveOptions::NO_DECLARATION
 
@@ -213,12 +215,14 @@ class Blockly < Level
       app_options[:skinId] = skin_id if skin_id
 
       # Set some values that Blockly expects on the root of its options string
-      app_options.merge!({
-        baseUrl: Blockly.base_url,
-        app: game.try(:app),
-        droplet: game.try(:uses_droplet?),
-        pretty: Rails.configuration.pretty_apps ? '' : '.min',
-      })
+      app_options.merge!(
+        {
+          baseUrl: Blockly.base_url,
+          app: game.try(:app),
+          droplet: game.try(:uses_droplet?),
+          pretty: Rails.configuration.pretty_apps ? '' : '.min',
+        }
+      )
     end
     options.freeze
   end
@@ -300,9 +304,40 @@ class Blockly < Level
       level_prop['teacherMarkdown'] = nil
 
       # Set some values that Blockly expects on the root of its options string
-      level_prop.reject!{|_, value| value.nil?}
+      level_prop.reject! {|_, value| value.nil?}
     end
     options.freeze
+  end
+
+  def localized_failure_message_override
+    if should_localize? && failure_message_override
+      I18n.t("data.failure_message_overrides").
+        try(:[], "#{name}_failure_message_override".to_sym)
+    end
+  end
+
+  def localized_authored_hints
+    if should_localize? && authored_hints
+      translations = I18n.t("data.authored_hints").
+        try(:[], "#{name}_authored_hint".to_sym)
+
+      return unless translations.instance_of? Hash
+
+      localized_hints = JSON.parse(authored_hints).map do |hint|
+        next if hint['hint_markdown'].nil? || hint['hint_id'].nil?
+
+        translated_text = translations.try(:[], hint['hint_id'].to_sym)
+        original_text = hint['hint_markdown']
+
+        if translated_text != original_text
+          hint['hint_markdown'] = translated_text
+          hint["tts_url"] = tts_url(TTSSafeRenderer.render(translated_text))
+        end
+
+        hint
+      end
+      JSON.generate(localized_hints)
+    end
   end
 
   def localized_instructions
@@ -312,9 +347,9 @@ class Blockly < Level
         return loc_val
       end
     else
-      val = [game.app, game.name].map { |name|
+      val = [game.app, game.name].map do |name|
         I18n.t("data.level.instructions").try(:[], "#{name}_#{level_num}".to_sym)
-      }.compact.first
+      end.compact.first
       return val unless val.nil?
     end
   end

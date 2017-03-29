@@ -37,6 +37,7 @@ ro:
         'NetSim': 'Simulator Internet'
         'Custom': 'Artist'
         'CustomStudio': 'Laborator de Joacă'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronz'
@@ -157,21 +158,21 @@ ro:
         'maze_3_2': "Scrie-mi un program, ca să reușesc să ajung până la porcușor."
         'maze_3_3': "Cum să ajung la porcușor? Asigură-te că nu intru în cutia cu TNT!"
         'maze_3_4': "Argh! Scrie-mi un program care mă duce de jur împrejurul minelor de TNT şi până la porcușor."
-        'bounce_1_basketball': "Atașează un bloc la blocul \"când săgeată stânga\" şi apasă \"Rulează programul\". Mută paleta folosind săgeata stânga pentru a ajunge la ţinta finală."
-        'bounce_2_basketball': "Atașează un bloc la blocurile \"când săgeată dreapta\" și \"când săgeată stânga\". Mută paleta pentru a atinge ambele ținte finale."
-        'bounce_5_basketball': "Vom trimite o bilă sa zboare în jos spre palete. Ataşează un bloc la blocul \"când bila lovește paleta\" pentru a garanta ca bila atinge obiectivul țintă."
-        'bounce_6_basketball': "Acum obiectivul țintă se află în partea de sus. Ai nevoie să atașezi blocuri la ambele blocuri \"când bila lovește\" pentru a rezolva puzzle-ul."
-        'bounce_7_basketball': "Atașează blocuri la fiecare din blocurile \"când\". Fă bila să ricoșeze până ajunge la țintă."
-        'bounce_10_basketball': "Există un acum un gol în partea de sus. Atașează blocurile \"scor\" și \"scor oponent\" la blocurile \"când bila este in gaură\" și \"când bila ratează paleta\" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca oponentul tău să înscrie de două ori."
-        'bounce_11_basketball': "Acum poți atașa blocuri la blocul \"rulează\". Trebuie să atașezi noul bloc \"lansare minge nouă\" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza paletei și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori!"
-        'bounce_12_basketball': "Crează propriul tău joc Basketball. Poți modifica toate imaginile şi regulile. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor."
+        'bounce_1_basketball': "Atașează un bloc la blocul \"când săgeată stânga\" şi apasă \"Rulează\". Mută mana folosind săgeata stânga pentru a ajunge la ţinta finală."
+        'bounce_2_basketball': "Atașează un bloc la blocurile \"când săgeată dreapta\" și \"când săgeată stânga\". Mută mana pentru a atinge ambele ținte finale."
+        'bounce_5_basketball': "Vom trimite o minge sa zboare în jos spre mana. Ataşează un bloc la blocul \"când mingea lovește mana\" pentru a garanta ca mingea atinge obiectivul țintă."
+        'bounce_6_basketball': "Acum obiectivul țintă se află în partea de sus. Ai nevoie să atașezi blocuri la ambele blocuri \"când mingea lovește\" pentru a rezolva puzzle-ul."
+        'bounce_7_basketball': "Atașează blocuri la fiecare dintre blocurile \"când\". Fă bila să ricoșeze până ajunge la țintă."
+        'bounce_10_basketball': "Există acum un cos în partea de sus. Atașează blocurile \"scor\" și \"scor oponent\" la blocurile \"când mingea este in cos\" și \"când bila ratează cosul\" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca oponentul tău să înscrie de două ori."
+        'bounce_11_basketball': "Acum poți atașa blocuri la blocul \"rulează\". Trebuie să atașezi noul bloc \"lansare minge nouă\" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza mainii și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori!"
+        'bounce_12_basketball': "Crează propriul tău joc de baschet. Poți modifica toate regulile. Când ai terminat, apasă Finalizeaza pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor."
         'bounce_1_sports': "Trebuie sa ajungi la steag! Ataseaza un bloc \"cand sageata stanga\" si apasa \"Ruleaza\" pentru a misca jucatorul catre steag."
         'bounce_2_sports': "Există două steaguri acum! Ataşaţi un bloc la \"atunci când săgeată stanga\" şi \"săgeată dreapta când\" pentru a face personajul sa se deplaseze în două direcţii."
         'bounce_5_sports': "Pucul de hokey va zbura catre jucator! Ataseaza un bloc la blocul \"cand mingea loveste jucatorul\" pentru a lovi steagul."
-        'bounce_6_sports': "Acum obiectivul țintă se află în partea de sus. Ai nevoie să atașezi blocuri la ambele blocuri \"când bila lovește\" pentru a rezolva puzzle-ul."
-        'bounce_7_sports': "Atașează blocuri la fiecare din blocurile \"când\". Fă bila să ricoșeze până ajunge la țintă."
+        'bounce_6_sports': "Acum obiectivul țintă se află în partea de sus. Ai nevoie să atașezi blocuri la ambele blocuri \"când mingea lovește\" pentru a rezolva puzzle-ul."
+        'bounce_7_sports': "Atașează blocuri la fiecare dintre blocurile \"când\". Fă bila să ricoșeze până ajunge la țintă."
         'bounce_10_sports': "Există un acum un gol în partea de sus. Atașează blocurile \"scor\" și \"scor oponent\" la blocurile \"când bila este in gaură\" și \"când bila ratează paleta\" ca să faci un joc. Vezi câte puncte poți înscrie înainte ca oponentul tău să înscrie de două ori!"
-        'bounce_11_sports': "Acum poți atașa blocuri la blocul \"rulează\". Trebuie să atașezi noul bloc \"lansare minge nouă\" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza paletei și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori!"
+        'bounce_11_sports': "Acum poți atașa blocuri la blocul \"rulează\". Trebuie să atașezi noul bloc \"lansare minge nouă\" cel puțin într-un loc. De asemenea, încearcă să schimbi scena sau viteza mainii și a mingii şi vezi cât de multe puncte poți înscrie înainte ca adversarul să înscrie de două ori!"
         'bounce_12_sports': "Crează propriul tău joc. Poți modifica toate imaginile şi regulile, mixeaza sporturi, fii creativ. Când ai terminat, apasă Distribuie pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor."
         'bounce_1': "Atașează un bloc la blocul \"când săgeată stânga\" şi apasă \"Rulează programul\". Mută paleta folosind săgeata stânga pentru a ajunge la ţinta finală."
         'bounce_2': "Atașează un bloc la blocurile \"când săgeată dreapta\" și \"când săgeată stânga\". Mută paleta pentru a atinge ambele ținte finale."
@@ -405,11 +406,13 @@ ro:
         'infinity_playlab_intro': 'Atelier de Joacă - Introducere'
         'infinity_playlab_events': 'Atelier de Joacă - Evenimente'
         'infinity_playlab_repeat_forever': 'Atelier de Joacă - Repetare la nesfârșit'
+        'csd_gamelab_animation_tab': 'The Animation Tab'
         'csd_gamelab_draw_1': 'Drawing in Game Lab - Part 1'
         'csd_gamelab_draw_2': 'Drawing in Game Lab - Part 2'
         'csd_gamelab_drawloop': 'Introduction to the Draw Loop'
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
+        'csd_gamelab_velocity': 'Velocity'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'
@@ -420,6 +423,9 @@ ro:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'
@@ -489,7 +495,7 @@ ro:
         'mc_2016_intro': 'Ora de Programare Minecraft - Introducere'
         'mc_2016_loops': 'Ora de Programare Minecraft - Bucle'
         'mc_2016_events': 'Ora de Programare Minecraft - Evenimente'
-        'mc_2016_spawn': 'Ora de Programare Minecraft - Da nastere'
+        'mc_2016_spawn': 'Ora de Programare Minecraft - Generare'
         'mc_2016_congrats': 'Ora de Programare Minecraft - Felicitari'
     callout:
       text:
@@ -563,9 +569,9 @@ ro:
         Infinity_move_collide_callout: "Emite un sunet când se produce acest eveniment."
         Infinity_repeat_callout: "Plasează blocuri de mutare în interior aici"
         craft_run_button_callout: 'Apasă "Run" pentru a încerca programul tău'
-        craft_drag_block_callout: 'Trageţi un bloc "moveForward();" şi fixaţi-l sub alt bloc'
+        craft_drag_block_callout: 'Trageţi un bloc "muta inainte();" şi fixaţi-l sub alt bloc'
         craft_callout_preplaced: "Am pus cateva blocuri aici pentru a incepe"
         craft_inside_repeat: "Repetati actiunile prin plasarea blocurilor aici"
         craft_callout_preplaced_house: "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
         craft_what_is_iron: "Extrage acest fier!"
-        craft_callout_moveforward: "Acest cod va cauta dupa lava, poti adauga o comanda pentru a inainta?"
+        craft_callout_moveforward: "Acest cod va cauta lava, poti adauga o comanda pentru a inainta?"

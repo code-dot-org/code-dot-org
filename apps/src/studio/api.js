@@ -22,10 +22,31 @@ exports.setMap = function (id, value) {
   Studio.queueCmd(id, 'setMap', {'value': value});
 };
 
+exports.setMapAndColor = function (id, color, value) {
+  Studio.queueCmd(id, 'setMapAndColor', {
+    'value': value,
+    'color': color,
+  });
+};
+
 exports.setSprite = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSprite', {
     'spriteIndex': spriteIndex,
     'value': value
+  });
+};
+
+exports.getSpriteVisibility = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteVisibility', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
+  });
+};
+
+exports.getSpriteValue = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteValue', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
   });
 };
 
@@ -51,6 +72,13 @@ exports.setSpriteEmotion = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSpriteEmotion', {
     'spriteIndex': spriteIndex,
     'value': value
+  });
+};
+
+exports.getSpriteEmotion = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteEmotion', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
   });
 };
 
@@ -96,6 +124,21 @@ exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
     'spriteIndex': spriteIndex,
     'x': Number(xpos),
     'y': Number(ypos)
+  });
+};
+
+exports.getSpriteXY = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteXY', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
+  });
+};
+
+exports.setSpriteBehavior = function (id, spriteIndex, targetSpriteIndex, behavior) {
+  Studio.queueCmd(id, 'setSpriteBehavior', {
+    spriteIndex,
+    targetSpriteIndex,
+    behavior,
   });
 };
 

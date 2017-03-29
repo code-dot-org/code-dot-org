@@ -139,15 +139,24 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
   function lazyLoadPopup() {
     if (!popupLoaded) {
       popupLoaded = true;
-      $.getJSON(`/api/script_structure/${scriptName}`, data => progress.renderCourseProgress(data, currentLevelId));
+      $.getJSON(`/api/script_structure/${scriptName}`, data => {
+        // Hide our loading spinner and replace it with course progress
+        $(".header_popup_body .loading").hide();
+        progress.renderCourseProgress(data, currentLevelId);
+      });
     }
   }
 };
 
 function shareProject() {
   dashboard.project.save(function () {
-    var origin = location.protocol + '//' + location.host;
-    var shareUrl = origin + dashboard.project.getPathName();
+    var shareUrl;
+    if (appOptions.baseShareUrl) {
+      shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;
+    } else {
+      const origin = location.protocol + '//' + location.host;
+      shareUrl = origin + dashboard.project.getPathName();
+    }
 
     var i18n = window.dashboard.i18n;
 
@@ -176,8 +185,7 @@ function shareProject() {
           appType={appType}
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
-          onClickExport={window.Applab && window.Applab.canExportApp() ?
-                         window.Applab.exportApp : null}
+          onClickExport={window.Applab ? window.Applab.exportApp : null}
           canShareSocial={canShareSocial}
         />
       </Provider>,
@@ -208,7 +216,7 @@ header.showMinimalProjectHeader = function () {
 
   $('.project_info')
       .append(projectName)
-      .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
+      .append($('<div class="project_remix header_button">').text(dashboard.i18n.t('project.remix')));
   $('.project_remix').click(remixProject);
 };
 

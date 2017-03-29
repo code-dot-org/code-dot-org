@@ -11,8 +11,8 @@ class DashboardStudent
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
     Dashboard.db[:users].
-      join(:followers, :student_user_id => :users__id).
-      join(Sequel.as(:users, :users_students), :id => :followers__student_user_id).
+      join(:followers, student_user_id: :users__id).
+      join(Sequel.as(:users, :users_students), id: :followers__student_user_id).
       where(followers__user_id: user_id, followers__deleted_at: nil).
       where(users_students__deleted_at: nil).
       select(*fields).
@@ -27,16 +27,18 @@ class DashboardStudent
 
     created_at = DateTime.now
 
-    row = Dashboard.db[:users].insert({
-      name: name,
-      user_type: 'student',
-      provider: 'sponsored',
-      gender: gender,
-      birthday: birthday,
-      created_at: created_at,
-      updated_at: created_at,
-      username: UserHelpers.generate_username(Dashboard.db[:users], name)
-    }.merge(random_secrets))
+    row = Dashboard.db[:users].insert(
+      {
+        name: name,
+        user_type: 'student',
+        provider: 'sponsored',
+        gender: gender,
+        birthday: birthday,
+        created_at: created_at,
+        updated_at: created_at,
+        username: UserHelpers.generate_username(Dashboard.db[:users], name)
+      }.merge(random_secrets)
+    )
     return nil unless row
 
     row
@@ -167,8 +169,8 @@ class DashboardStudent
 
   def self.random_secrets
     {
-     secret_picture_id: random_secret_picture_id,
-     secret_words: random_secret_words
+      secret_picture_id: random_secret_picture_id,
+      secret_words: random_secret_words
     }
   end
 
@@ -259,11 +261,11 @@ class DashboardSection
     disabled_courses = valid_courses(user_id).select do |course|
       !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
     end
-    disabled_courses.map{|course| course[:id]}
+    disabled_courses.map {|course| course[:id]}
   end
 
   def self.valid_course_id?(course_id)
-    valid_courses.find{|course| course[:id] == course_id.to_i}
+    valid_courses.find {|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)
@@ -281,19 +283,21 @@ class DashboardSection
     row = nil
     tries = 0
     begin
-      row = Dashboard.db[:sections].insert({
-        user_id: params[:user][:id],
-        name: name,
-        login_type: login_type,
-        grade: grade,
-        script_id: script_id,
-        code: SectionHelpers.random_code,
-        created_at: created_at,
-        updated_at: created_at,
-      })
+      row = Dashboard.db[:sections].insert(
+        {
+          user_id: params[:user][:id],
+          name: name,
+          login_type: login_type,
+          grade: grade,
+          script_id: script_id,
+          code: SectionHelpers.random_code,
+          created_at: created_at,
+          updated_at: created_at,
+        }
+      )
     rescue Sequel::UniqueConstraintViolation
       tries += 1
-      retry if tries < 2
+      retry if tries < 3
       raise
     end
 
@@ -329,7 +333,7 @@ class DashboardSection
     # get all the students passwords when we get the list of sections).
 
     return nil unless row = Dashboard.db[:sections].
-      join(:users, :id => :user_id).
+      join(:users, id: :user_id).
       where(sections__id: id, sections__deleted_at: nil).
       select(*fields).
       first
@@ -341,7 +345,7 @@ class DashboardSection
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = Dashboard.db[:sections].
-      join(:users, :id => :user_id).
+      join(:users, id: :user_id).
       select(*fields).
       where(sections__id: id, sections__deleted_at: nil).
       first
@@ -355,10 +359,10 @@ class DashboardSection
     return if user_id.nil?
 
     Dashboard.db[:sections].
-      join(:users, :id => :user_id).
+      join(:users, id: :user_id).
       select(*fields).
       where(sections__user_id: user_id, sections__deleted_at: nil).
-      map{|row| new(row).to_owner_hash}
+      map {|row| new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
@@ -366,29 +370,31 @@ class DashboardSection
 
     Dashboard.db[:sections].
       select(*fields).
-      join(:followers, :section_id => :id).
-      join(:users, :id => :student_user_id).
+      join(:followers, section_id: :id).
+      join(:users, id: :student_user_id).
       where(student_user_id: student_id).
       where(sections__deleted_at: nil, followers__deleted_at: nil).
-      map{|row| new(row).to_member_hash}
+      map {|row| new(row).to_member_hash}
   end
 
   def add_student(student)
     return nil unless student_id = student[:id] || DashboardStudent.create(student)
 
     created_at = DateTime.now
-    Dashboard.db[:followers].insert({
-      user_id: @row[:teacher_id],
-      student_user_id: student_id,
-      section_id: @row[:id],
-      created_at: created_at,
-      updated_at: created_at,
-    })
+    Dashboard.db[:followers].insert(
+      {
+        user_id: @row[:teacher_id],
+        student_user_id: student_id,
+        section_id: @row[:id],
+        created_at: created_at,
+        updated_at: created_at,
+      }
+    )
     student_id
   end
 
   def add_students(students)
-    student_ids = students.map{|i| add_student(i)}.compact
+    student_ids = students.map {|i| add_student(i)}.compact
     DashboardUserScript.assign_script_to_users(@row[:script_id], student_ids) if @row[:script_id] && !student_ids.blank?
     return student_ids
   end
@@ -405,31 +411,35 @@ class DashboardSection
   end
 
   def student?(user_id)
-    !!students.index{|i| i[:id] == user_id}
+    !!students.index {|i| i[:id] == user_id}
   end
 
   def students
     @students ||= Dashboard.db[:followers].
       join(:users, id: :student_user_id).
       left_outer_join(:secret_pictures, id: :secret_picture_id).
-      select(Sequel.as(:student_user_id, :id),
+      select(
+        Sequel.as(:student_user_id, :id),
         *DashboardStudent.fields,
         :secret_pictures__name___secret_picture_name,
-        :secret_pictures__path___secret_picture_path).
+        :secret_pictures__path___secret_picture_path
+      ).
       distinct(:student_user_id).
       where(section_id: @row[:id]).
       where(users__deleted_at: nil).
       map do |row|
-        row.merge({
-          location: "/v2/users/#{row[:id]}",
-          age: DashboardStudent.birthday_to_age(row[:birthday]),
-          completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
-        })
+        row.merge(
+          {
+            location: "/v2/users/#{row[:id]}",
+            age: DashboardStudent.birthday_to_age(row[:birthday]),
+            completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
+          }
+        )
       end
   end
 
   def teacher?(user_id)
-    !!teachers.index{|i| i[:id] == user_id}
+    !!teachers.index {|i| i[:id] == user_id}
   end
 
   def teachers

@@ -1,11 +1,11 @@
-ka-GE:
+"ka-GE":
   hour_of_code: "კოდის ერთი საათი"
   hello: "ჰეი, სამყარო"
   'yes': 'დიახ'
   'no': 'არა'
   select_language: "შეარჩიეთ თქვენი ენა"
-  upgrade_ie_message: "Code.org მალე შეწყვეტს Internet Exploere 8, 9 და 10-ის მხარდაჭერას. გთხოვთ, განაახლოთ ბრაუზერი უფრო თანამედროვეთი."
-  upgrade_ie_message_csedweek: "CSEdWeek.org მალე შეწყვეტს Internet Exploere 8, 9 და 10-ის მხარდაჭერას. გთხოვთ, განაახლოთ ბრაუზერი უფრო თანამედროვეთი."
+  upgrade_ie_message: "Code.org მალე შეწყვეტს Internet Explorer 8, 9 და 10-ის მხარდაჭერას. გთხოვთ, განაახლოთ ბრაუზერი უფრო თანამედროვეთი."
+  upgrade_ie_message_csedweek: "CSEdWeek.org მალე შეწყვეტს Internet Explorer 8, 9 და 10-ის მხარდაჭერას. გთხოვთ, განაახლოთ ბრაუზერი უფრო თანამედროვეთი."
   upgrade_ie_link: "გაიგეთ მეტი"
   en: "ინფორმატიკა"
   computer_science_edweek: "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული"
@@ -25,10 +25,10 @@ ka-GE:
   submit: "გაგზავნა"
   twentyhours_heading: "სცადეთ ჩვენი პროგრამირების კურსი"
   twentyhours_text: "დაასრულეთ თქვენი პირველი კოდის ერთი საათი? გაიგეთ მეტი ინფორმატიკისა და პროგრამირების შესახებ მომდევნო კურსში."
-  og_title: ყოველი ბავშვი იმსახურებს შესაძლებლობას
+  og_title: 'Code.org: სწავლა შეუძლია ყველას'
   og_description: "ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა, ისწავლოს კომპიუტერული მეცნიერება. ის ყველაფერს ცვლის."
-  csedweek_og_title: "The Hour of Code is coming"
-  csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
+  csedweek_og_title: "კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული"
+  csedweek_og_description: "2017 წლის 4-10 დეკემბერი. კომპიუტერული მეცნიერებები ყოველმა მოსწავლემ უნდა ისწავლოს."
   hoc2014_heading: "შეუერთდით<a href=\"http://hourofcode.com\">კოდის ერთ საათს</a><br/> 2014 წლის დეკემბერში<br/>"
   hoc2014_students: "მოსწავლეები"
   hoc2014_try: "სცადეთ"
@@ -183,12 +183,12 @@ ka-GE:
   petition_thankyou: "მადლობა, რომ ხელი მოაწერეთ პეტიციას"
   continue_learning_header: "გააგრძელეთ სწავლა ერთი საათის შემდეგაც"
   continue_learning_body: "უამრავი შესაძლებლობა გაქვთ. შეგიძლიათ ისწავლო ონლაინ, სკოლაში ან საზაფხულო ბანაკში."
-  learn_code_studio: "Try Code Studio courses"
+  learn_code_studio: "სცადეთ კოდის სტუდიის კურსები"
   learn_next_level: "კოდის სტუდიის სხვა კურსზე გადასვლა"
   learn_online: "სცადეთ სხვა ონლაინ-კურსები"
   learn_classes: "იპოვეთ ადგილობრივი კლასები"
-  learn_back_to_minecraft: "Keep learning with Minecraft"
-  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
+  learn_back_to_minecraft: "გააგრძელე სწავლა მაინკრაფთთან ერთად"
+  hoc_is_here: '#კოდის ერთი საათი ისევ ბრუნდება 5-11 დეკემბერს: https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'ახლახან დავასრულე #HourOfCode - ნახე! @codeorg'
   just_did_course1: "ახლახან დავასრულე 1-ლი კურსი - ნახე! @codeorg"
   just_did_course2: "ახლახან დავასრულე მე–2 კურსი - ნახე! @codeorg"
@@ -196,6 +196,7 @@ ka-GE:
   just_did_course4: "ახლახან დავასრულე მე–4 კურსი - ნახე! @codeorg"
   just_did_accelerated: "ახლახან დავასრულე ინტენსიური კურსი - ნახე! @codeorg"
   twitter_teach_cs: "10–დან 9 ადამიანი გვეთანმება: კომპიუტერული მეცნიერება უნდა ისწავლებოდეს სკოლებში. http://youtu.be/nKIu9yen5nc. ეწვიეთ: https://code.org/."
+  twitter_cs_foundational: "კომპიუტერული მეცნიერებები ყოველმა მოსწავლემ უნდა ისწავლოს. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "ისწავლეთ კოდის ერთი საათის განმავლობაში"
   beyond_hoc: "ერთი საათის შემდეგ"
   what_gender: "თქვენი სქესი?"
@@ -269,6 +270,7 @@ ka-GE:
   homepage_action_text_volunteers: "გვჭირდებიან ტექ. მოხალისეები"
   homepage_action_text_codevideo: "უყურეთ ვიდეოს"
   homepage_action_text_teachervideo: "უყურეთ ვიდეოს"
+  homepage_action_text_watchvideo: "უყურეთ ვიდეოს"
   homepage_action_text_girlvideo: "შთააგონეთ გოგოს"
   homepage_action_text_learn: "დაიწყეთ სწავლა"
   homepage_action_text_signpetition: "მოაწერეთ ხელი პეტიციას"
@@ -355,8 +357,8 @@ ka-GE:
   class_submission_level_college: "კოლეჯი"
   class_submission_level_vocational: "პროფესიული"
   class_submission_languages_other: "სხვა ენები"
-  videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
-  careers_page_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
+  videos_more: "მეტი <a href='%{inspiring_videos_playlist}'>შთამაგონებელი ვიდეო</a> ცნობადი სახეების მონაწილეობით"
+  careers_page_more: "მეტი <a href='%{careers_url}' target='_blank'>შთამაგონებელი ვიდეო</a> პროფესიონალების მონაწილეობით"
   playlab_choose_theme: "აირჩიეთ თამაშების ლაბორატორიის თემა"
   playlab_classic_title: "კლასიკური"
   playlab_gumball_title: "გამბოლის საოცარი სამყარო"
@@ -376,28 +378,61 @@ ka-GE:
   mc_gradelevel: "ასაკი 6-106"
   mc_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6–106"
-  minecraft_designer: "Minecraft Designer"
-  minecraft_adventurer: "Minecraft Adventurer"
-  minecraft_tutorials: "Minecraft Hour of Code Tutorials"
-  minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
-  minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_designer: "მაინკრაფტის დიზაინერი"
+  minecraft_adventurer: "მაინკრაფტის თავაგადასავლები"
+  minecraft_tutorials: "მაინკრაფტის კოდის ერთი საათი: ტუტორიალები"
+  minecraft_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+ კლასი"
+  minecraft_designer_description: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის საკუთარ სამყაროში."
   minecraft_designer_button: "დაწყება"
-  minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
+  minecraft_adventurer_description: "გამოიყენეთ კოდი და შექმენით ალექსის ან სტივის თავგადასავალი."
   minecraft_adventurer_button: "დაწყება"
   minecraft_no_internet: "არ გაქვთ ინტერნეტი?"
-  minecraft_download_adventurer: "Download the offline version of Minecraft Adventurer."
-  minecraft_store_camps: "Microsoft Store Hour of Code Camps"
-  minecraft_host_event: "Host a Minecraft Hour of Code Event"
-  minecraft_youthspark_continue_learning: "Continue learning with Microsoft YouthSpark"
-  minecraft_signup_store_camps: "<a href=\"%{signup_store_camp}\">Sign up</a> for free Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the U.S. Learn how to combine your creativity with coding."
-  minecraft_teach_resources: "Teacher resources and lesson plan."
-  minecraft_leader_guide: "Download resources to help you plan and lead an event."
-  minecraft_facilitating_event: "Facilitating an event?"
-  minecraft_join_online_training: "Join Microsoft and Minecraft for an online training (in English only) on Nov 22 or Nov 29"
-  minecraft_youthspark_create_your_future: "Whatever you’re passionate about, you can use computer science to imagine, create, and make a future that’s yours."
-  minecraft_youthspark_tools: "<a href=\"%{youthspark_link}\">Microsoft YouthSpark</a> provides free tools and resources to pursue your passion."
+  minecraft_download_adventurer: "მაინკრაფთის ოფლაინ–ვერსიის გადმოწერა."
   minecraft_subtitle: "მაინკრაფტის კოდის ერთი საათი"
+  sports_page_title: "კოდის ერთი საათი: სპორტი"
+  sports_og_title: "აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია."
+  sports_og_description: "ჩემპიონები და ოქროს მედლების მფლობელები მოგიწოდებენ, სცადო კოდის ერთი საათი. შექმენი საკუთარი სპორტული თამაში."
+  sports_title: "შექმენით საკუთარი სპორტული თამაში"
+  sports_watch_video: "უყურეთ ვიდეოს"
+  sports_video_title: "აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია."
+  sports_select_theme: "შეარჩიეთ თქვენი ტუტორიალის თემა"
+  sports_basketball_title: "კალათბურთის თამაშის შექმნა"
+  sports_all_sports_title: "შეაერთეთ სხვადასხვა სპორტული თამაშები"
+  sports_featured_athletes: "ნახეთ, რომელი ათლეტები მონაწილეობენ"
+  sports_athletes_title: "რომელი ათლეტები მონაწილეობენ"
+  sports_athlete_Draymond: "დრეიმონდ გრინი, ოლიმპიური ოქროს მფლობელი, NBA ჩემპიონი, გუნდი Golden State Warriors"
+  sports_athlete_Serena: "სერენა უილიამსი, ოლიმპიური ოქროს მფლობელი და ტენისის ჩემპიონი"
+  sports_athlete_Russell: "რასელ ოკუნგი, სუპერ თასის ჩემპიონი და NFL მოთამაშე, გუნდი Denver Broncos"
+  sports_athlete_Sergio: "სერხიო რამოსი, მსოფლიო თასის ჩემპიონი და ფეხბურთის მოთამაშე, რეალ მადრიდი"
+  sports_athlete_Sue: "სიუ ბერდი, ოლიმპიური ოქროს მფლობელი, WNBA ჩემპიონი, გუნდი Seattle Storm"
+  sports_athlete_Alana: "ალანა ბერდი, ოქროს მედლის მფლობელი, WNBA ოლ–სტარი, გუნდი ლოს ანჯელეს სპარკსი"
+  sports_athlete_Angelo: "ანგელო მეთიუსი, შრი ლანკის კრიკეტის გუნდის კაპიტანი"
+  sports_athlete_Nneka: "ნნეკა ოგვუმიკე, ოქროს მედლის მფლობელი, WNBA ჩემპიონი და 2016 MVP, ლოს ანჯელეს სპარკსი"
+  sports_athlete_Carmelo: "კარმელო ენთონი, ოლიმპიური ოქროს მფლობელი და NBA ალ–სტრი, გუნდი New York Knicks"
+  sports_athlete_Marco: "მარკო ბელინელი, NBA ჩემპიონი, Charlotte Hornets"
+  sports_athlete_Neymar: "ნეიმარ უმცროსი, ოლიმპიური ოქროს მფლობელი და ფეხბურთის მოთამაშე, საფეხბურთო კლუბი Barcelona და ბრაზილიის ეროვნული ნაკრები"
+  sports_athlete_Sarah: "სარა ქუიტა ოფრინგა, სერფინგის ჩემპიონი"
+  sports_athlete_Marcelo: "მარსელო, ფეხბურთის ჩემპიონი, გუნდი რეალ მადრიდი და ბრაზილიის ეროვნული ნაკრები"
+  sports_athlete_Erika: "ერიკა ოლივერა, ჩემპიონი მარათონის სირბილში"
+  sports_athlete_John: "ჯონ უოლი, NBA ოლ–სტარი, გუნდი Washington Wizards"
+  sports_athlete_Chris: "ქრის ბოში, ოლიმპიური ოქროს მფლობელი, NBA ჩემპიონი, გუნდი მაიამი ჰითი"
+  sports_athlete_Harrison: "ჰარისონ ბარნსი, ოლიმპიური ოქროს მფლობელი და NBA ჩემპიონი, გუნდი Dallas Mavericks"
   watch_inspirational_videos: "სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს"
+  video_title_cs_is_everything: "Computer Science is Changing Everything"
+  video_title_inspire_girl: "შთააგონეთ გოგოს"
+  video_title_cs_intro: "კომპიუტერული მეცნიერება: შესავალი"
+  video_title_schools_dont_teach: "რას არ ასწავლიან სკოლების უმეტესობაში"
+  video_title_obama: "პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ"
+  video_title_hoc_is_here: "კოდის ერთი საათი დაიწყო - სწავლა შეუძლია ყველას"
+  video_title_anybody_can_learn: "სწავლა შეუძლია ყველას"
+  video_title_draymond_green: "კოდის ერთი საათი დრეიმონდ გრინთან ერთად"
+  video_title_russell_okung: "კოდის ერთი საათი რასელ ოკუნგთან ერთად"
+  video_title_real_madrid: "კოდის ერთი საათი რეალ მადრიდთან ერთად"
+  video_title_marco_belinelli: "კოდის ერთი საათი მარკო ბელინელთან ერთად"
+  video_title_chris_bosh: "კრის ბოში კომპიუტერული მეცნიერებების შესახებ"
+  video_1min: "1 წუთი"
+  video_2min: "2 წუთი"
+  video_5min: "5 წუთი"
   speak_another_language: "სხვა ენაზე ლაპარაკობთ?"
   help_translate: "დაგვეხმარეთ თარგმნაში."
   no_internet: "არ გაქვთ ინტერნეტი?"
@@ -494,7 +529,7 @@ ka-GE:
   dashboard_landing_inspire: "წაახალისეთ თქვენი მოსწავლეები პოსტერებით, ვიდეოებითა და მეტით."
   dashboard_landing_video_library: "გამოიყენეთ ვიდეო კომპიუტერული მეცნიერების საფუძვლების ვიდეო ბიბლიოთეკიდან."
   dashboard_landing_report_bug: "მოითხოვეთ ფუნქცია ან შეგვატყობინეთ ბაგის შესახებ."
-  dashboard_landing_teacher_forum: "შეუერთდით პროფესიონალ სწავლების საზოგადოებას."
+  dashboard_landing_teacher_forum: "შეუერთდით პროფესიონალთა საზოგადოებას."
   dashboard_hoc_courses: "კოდის ერთი საათი ნებისმიერი ასაკისთვის"
   dashboard_hoc_courses_desc: "სცადეთ ეს მოკლე, ერთსაათიანი გაკვეთილები თქვენს მოსწავლეებთან ერთად!"
   dashboard_hoc_courses_desc_and_cta: "სცადეთ ეს მოკლე, ერთსაათიანი ტუტორიალები თქვენს მოსწავლეებთან ერთად.<a href=\"https://hourofcode.com\">შეუერთდით კოდის ერთი საათის მოძრაობას</a> კომპიუტერული მეცნიერების საგანმანათლებლო კვირეულის ფარგლებში."
@@ -526,9 +561,9 @@ ka-GE:
   dashboard_action_done: "მზადაა"
   dashboard_action_required: "აუცილებელია"
   dashboard_action_print_certificates: "სერტიფიკატის ამობეჭდვა"
-  dashboard_assessments_view: 'ტესტების ნახვა:'
+  dashboard_assessments_view: 'დავალებების ნახვა:'
   dashboard_assessments_none: "მასწავლებლების უმეტესობა მათი მოსწავლეების პროსგრეს ამოწმებს განყოფილებაში \"პროგრესის ნახვა\". თუ გსურთ, მოსწავლეებს დამატებითი ტესტები მისცეთ, რეკომენდირებული კითხვებისა და საკითხების პოვნა შეგიძლიათ გაკვეთილის გეგმაში. ისინი კოდის სტუდიის გარეთ უნდა შესრულდეს."
-  dashboard_assessments_none_part2: "თუ საშუალო ან დამამთავრებელი კლასების კურსებს ასწავლით, ტექტის კითხვები ხელმისაწვდომია, როგორც Code Studio-ს ნაწილი და დაეხმარება თქვენს მოსწავლეებს APტესტისთვის მომზადებაში. ამ ტესტების გამოსაყენებლად, პირველ რიგში, მიაბით ეს კურსი თქვენს კლასისს და შემდეგ აარჩიეთ კურსი ჩამოსაშლელი მენიუდან. ამის შემდეგ აქ ნახავთ თქვენი მოსწავლეების პასუხებს."
+  dashboard_assessments_none_part2: "თუ საშუალო ან დამამთავრებელი კლასების კურსებს ასწავლით, კოდის სტუდიის ნაწილად გვაქვს სპეციალური ტესტური დავალებები, რომლებიც დაეხმარება თქვენს მოსწავლეებს AP ტესტისთვის მომზადებაში. ამ ტესტების გამოსაყენებლად, პირველ რიგში, მიაბით ეს კურსი თქვენს კლასს და შემდეგ აარჩიეთ კურსი ჩამოსაშლელი მენიუდან. ამის შემდეგ აქ ნახავთ თქვენი მოსწავლეების პასუხებს."
   dashboard_assessments_summaries: "ტესტის მიმოხილვა"
   dashboard_assessments_answers: "ყველა ტესტის პასუხი"
   dashboard_surveys_answers: "გამოკითხვები"
@@ -562,10 +597,10 @@ ka-GE:
   dashboard_progress_furthest_level_attempted: "ეს დონე ძალიან მაღალია"
   dashboard_progress_submitted: "ჩაბარებულია"
   dashboard_progress_view: 'პროგრესის ნახვა:'
-  dashboard_progress_student_in_script: "ინფორმაცია %{student_name} ს პროგრესის შესახებ %{script_name} ში"
+  dashboard_progress_student_in_script: "ინფორმაცია %{student_name}-ის პროგრესის შესახებ %{script_name}-ში"
   dashboard_progress_pair_programming: "პროგრამირება წყვილებში"
   dashboard_responses_view: 'ტექსტური პასუხების ნახვა:'
-  dashboard_responses_none: "ჩვენი კურსების უმეტესობა შექმნილია პატარა ასაკის მოსწავლეებისთვის და არ მოითხოვს მათგან პასუხების ტექსტის აკრეფას, ამიტომ, აქ ტექსტური პასუხი არ შეგხვდებათ. უფრო დიდი მოსწავლეებისთვის, ღია კითხვებზე მათი პასუხების ნახვა შეგიძლიათ შესაბამისი კურსის არჩევით ჩამოსაშლელ მენიუში."
+  dashboard_responses_none: "ჩვენი კურსების უმეტესობა შექმნილია პატარა ასაკის მოსწავლეებისთვის და არ მოითხოვს მათგან პასუხების ტექსტის აკრეფას, ამიტომ, აქ ტექსტური პასუხი არ შეგხვდებათ. უფრო დიდი მოსწავლეებისთვის ღია კითხვებზე მათი პასუხების ნახვა შეგიძლიათ შესაბამისი კურსის არჩევით ჩამოსაშლელ მენიუში."
   dashboard_sections_new_section: "ახალი განყოფილება"
   dashboard_sections_jumbotron_instruction: "შექმენით ახალი განყოფილება და დაამატეთ მასში სტუდენტები. განყოფილებები გეხმარებათ დაჰყოთ მოსწავლეები უფრო პატარა ჯგუფებად - ასე მათ პროგრესს უკეთ დააკვირდებით."
   dashboard_sections_table_section: "სექცია"
@@ -593,9 +628,9 @@ ka-GE:
   dashboard_sections_yes_both: "დიახ, მინდა დავაკოპირო მოსწავლე(ებ) ი, ისე, რომ ისინი იყვნენ ამ და ახალ სექციაშიც"
   dashboard_sections_no_move: "არა, მსურს, გადაადგილებული სტუდენტ(ებ)ი იყვნენ მხოლოდ ახალ სექციაში."
   dashboard_sections_move_students: "მოსწავლეების გადაყვანა"
-  dashboard_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
-  dashboard_sections_assign_hoc_script_msg: "Please note that we will not be able to save progress in this course from December 3 - 11 due to the amount of traffic our site will receive for the Hour of Code.  Everything else in this tutorial will continue to work as expected.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)  We will save and report student progress for every other week of the year."
-  dashboard_sections_assign_activity: "Assign Course"
+  dashboard_sections_assign_hoc_script_desc: "იღებთ მონაწილეობას კოდის ერთ საათში?"
+  dashboard_sections_assign_hoc_script_msg: "მიაქციეთ ყურადღება, რომ 3-11 დეკემბერს ამ კურსში მიღწეულ პროგრესს ვერ შევინახავთ, რადგანაც კოდის ერთ საათთან დაკავშირებით ჩვენი საიტი ძალიან დაიტვირთება. ყველაფერი დანარჩენი ამ ტუტორიალში ჩვეულებრივად იმუშავებს. თქვენ კვლავ შეგეძლებათ დაავალოთ მოსწავლეებს კურსი ან მისცეთ მონაწილეობის სერტიფიკატები. (მასწავლებელთა უმეტესობას შეუძლია <a href='%{certificate_url}'>ამ სერტიფიკატების წინასწარ ამობეჭდვა</a>.) წლის ყოველ სხვა კვირას ჩვენ შევძლებთ პროგრესის შენახვას და მის შესახებ ანგარიშის გამოგზავნას."
+  dashboard_sections_assign_activity: "კურსის დავალებად მიცემა"
   dashboard_error_none_selected: "თქვენ არ მოგინიშნავთ არც ერთი სტუდენტი გადასაადგილებლად. გთხოვთ, მონიშნოთ მინიმუმ ერთი სტუდენტი."
   dashboard_error_other_section: "თუ მოსწავლეებს საკუთარ სექციებს შორის გადააადგილებთ, მონიშნეთ თქვენი სექცია ჩამოსაშლელ მენიუში. მონიშნეთ \"სხვა სექცია\" მოსწავლეების სხვა მასწავლებლის სექციაში გადასაყვანად."
   dashboard_students_add_student: "მოსწავლის დამატება"
@@ -641,7 +676,7 @@ ka-GE:
   dashboard_course2: 'კურსი 2:'
   dashboard_course3: 'კურსი 3:'
   dashboard_course4: 'კურსი 4 (ბეტა): '
-  dashboard_unplugged: "თ არ გაქვს კომპიუტერები, <a href='%{unplugged_url}'>ჩაატარეთ ეს გაკვეთილები, რომლებსაც არ სჭირდებათ კომპიუტერი</a> თქვენს საკლასო ოთახში."
+  dashboard_unplugged: "თუ არ გაქვთ კომპიუტერები, <a href='%{unplugged_url}'>ჩაატარეთ ეს გაკვეთილები, რომლებსაც არ სჭირდებათ კომპიუტერი</a> თქვენს საკლასო ოთახში."
   dashboard_curriculum: "კურიკულუმი"
   dashboard_curriculum_overview: "K-5 კურიკულუმის მომიხილვა"
   dashboard_overview: "მიმოხილვა"
@@ -677,9 +712,9 @@ ka-GE:
   dashboard_submission_submitted: "გაგზავნილი"
   dashboard_submission_in_progress: "პროცესშია"
   dashboard_status: "სტატუსი"
-  dashboard_multi_correct: "# რამოდენიმე პასუხია სწორი"
+  dashboard_multi_correct: "# არის სწორი"
   dashboard_multi_count: "მრავალრიცხოვანი არჩევანი"
-  dashboard_multi_correct_percent: "% რამოდენიმე პასუხია სწორი"
+  dashboard_multi_correct_percent: "% არის სწორი"
   dashboard_submission_timestamp: "გადაცემის ჩაწერის დრო"
   stats_hoc_2013_heading: 'წარმოუდგენელი სტატისტიკა წინა წლის კოდის ერთი საათიდან. მხოლოდ ერთი კვირის განმავლობაში:'
   stats_hoc_2013_image_alt: "2013 წლის კოდის ერთი საათის სტატისტიკა"
@@ -698,23 +733,29 @@ ka-GE:
   dashboard_faq: "ხშირად დასმული კითხვები"
   dashboard_faq_k5: "K-5 ხშირად დასმული კითხვები"
   dashboard_announcements: "განცხადებები"
-  dashboard_announce_message_fall2016_features: "ზაფხულის განმავლობაში თქვენი უკუკავშირის საშუალებით ახალი ფუნქციები შევქმენით. ახლა შეგიძლიათ <a href=\"%{pp_url}\" target=\"_blank\">რამოდენიმე მოსწავლის პროგრესი შეამოწმოთ</a> იმ შემთხვევაშიც კი, თუ ისინი ერთი მოწყობილობით სარგებლობენ. შეგიძლიათ გამოიყენოთ <a href=\"%{csp_widgets_url}\" target=\"_blank\">ინტერაქტიული ინსტრუმენტები </a> კომპიუტერული მეცნიერების პრინციპების კურსიდან <i>ნებისმიერ</i> კლასში. თქვენს მოსწავლეებს შეუძლიათ <a href=\"%{unused_code_url}\" target=\"_blank\">შეინახონ გამოუყენებელი კოდი</a> თავიანთ სამუშაო სივრცეში სამომავლო ექსპერიმენტებისთვის! ნახეთ ყველა ახალი ფუნქცია და გაგვაგებინეთ თქვენი აზრი."
+  dashboard_announce_message_fall2016_features: "ზაფხულის განმავლობაში თქვენს უკუკავშირზე დაყრდნობით ახალი ფუნქციები შევქმენით. ახლა შეგიძლიათ <a href=\"%{pp_url}\" target=\"_blank\">რამოდენიმე მოსწავლის პროგრესი შეამოწმოთ</a> იმ შემთხვევაშიც კი, თუ ისინი ერთი მოწყობილობით სარგებლობენ. შეგიძლიათ გამოიყენოთ <a href=\"%{csp_widgets_url}\" target=\"_blank\">ინტერაქტიული ინსტრუმენტები </a> კომპიუტერული მეცნიერების პრინციპების კურსიდან <i>ნებისმიერ</i> კლასში. თქვენს მოსწავლეებს შეუძლიათ <a href=\"%{unused_code_url}\" target=\"_blank\">შეინახონ გამოუყენებელი კოდი</a> თავიანთ სამუშაო სივრცეში სამომავლო ექსპერიმენტებისთვის! ნახეთ ყველა ახალი ფუნქცია და გაგვაგებინეთ თქვენი აზრი."
   dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
   dashboard_announce_learn_more_button: "გაიგეთ მეტი"
   dashboard_announce_try_now_button: "სცადეთ ახლა"
-  dashboard_announce_host_an_hour_button: "Host an Hour"
-  dashboard_announce_petition: "როგორც მასწავლებელი, თქვენ მიუძღვებით მოძრაობას, რათა ყველა სკოლის ყველა მოსწავლეს მიეცეს კომპიუტერული მეცნიერების სწავლის საშუალება. ახლა დროა, თქვენს წარმომადგენლებს შეეხმიანოთ. ამ კვირაში, საგანმანათლებლო ლიდერები, 28 გუბერნატორი და ამერიკის უდიდესი კომპანიების აღმასრულებელი დირექტორები გაერთიანდნენ ღია წერილში, რომლითაც ა.შ.შ-ს კონგრესს მიმართეს, რომ დააფინანსოს K-12 კომპიუტერული მეცნიერების სწავლება."
+  dashboard_announce_host_an_hour_button: "ჩაატარეთ კოდის ერთი საათი"
+  dashboard_announce_watch_video_button: "უყურეთ ვიდეოს"
+  dashboard_announce_petition: "როგორც მასწავლებელი, თქვენ მიუძღვებით მოძრაობას, რომლის მიზანია ყოველი სკოლის ყოველ მოსწავლეს მიეცეს კომპიუტერული მეცნიერების სწავლის საშუალება. ახლა დროა, თქვენს წარმომადგენლებს შეეხმიანოთ. ამ კვირაში, საგანმანათლებლო ლიდერები, 28 გუბერნატორი და ამერიკის უდიდესი კომპანიების აღმასრულებელი დირექტორები გაერთიანდნენ ღია წერილში, რომლითაც ა.შ.შ-ს კონგრესს მიმართეს, რომ დააფინანსოს K-12 კომპიუტერული მეცნიერების სწავლება."
   dashboard_announce_petition_button: "დაამატეთ თქვენი სახელი"
-  dashboard_announce_all: "მიიღეთ უახლესი ინფორმაცია ახალი მახასიათებლებითა და მასწავლებლის განახლებადი ბლოგით. <a href='%{teacher_blog_url}' target='_blank'>იხილეთ წინა განცხადებები.</a>"
-  dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
-  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
+  dashboard_announce_go_beyond_button: "გააგრძელეთ"
+  dashboard_announce_all: "მიიღეთ ინფორმაცია ახალი ფუნქციონალის შესახებ და მასწავლებლის განახლებადი ბლოგი. <a href='%{teacher_blog_url}' target='_blank'>იხილეთ წინა განცხადებები.</a>"
+  dashboard_announce_hoc_launch: "5-11 დეკემბერს ათასობის პედაგოგი 180–ზე მეტი ქვეყნიდან დაიწყებს კოდის ერთი საათის ფარგლებში კომპიუტერული მეცნიერებოს გაკვეთილებს. თქვენი იმედი გვაქვს – დაგვეხმარეთ მაქსიმალურად ბევრ მოსწავლეს მივწვდეთ. <a href='%{signup_url}' target='_blank'>დაარეგისტრირეთ კოდის ერთი საათის თქვენი ღონისძიება</a> და აცნობეთ სხვა მასწავლებლებს, რომ კომპიუტერული მეცნიერების სწავლება ნებისმიერს შეუძლია."
+  dashboard_announce_mc_launch: "ჩვენს ერთ–ერთ ყველაზე პოპულარულ ტუტორიალს ახლა გაგრძელებაც აქვს! მაინკრაფტის დიზაინერი, რომელიც კოდის ერთი საათისთვის შეიქმნა, მოსწავლეებს მაინკრაფტის სამყაროს წესების შემუშავებაში ეხმარება. მათ შეუძლიათ შექმნან მაინკრაქფტის უნიკალური სამყარო, შემდეგ კი გაუზიარონ იგი მეგობრებს ან ითამაშონ მობილურიდან. სცადეთ ეს ტუტორიალი კოდის ერთი საათის ფარგლებში."
+  dashboard_announce_hoc_scaling_progress: "მიაქციეთ ყურადღება, რომ 3-11 დეკემბრის განმავლობაში ჩვენ ვერ ვინახავთ კურსის მიმდინარე პროგრესს, რადგანაც ჩვენი საიტი გადატვირთულია კოდის ერთი საათის ფარგლებში. თქვენ კვლავ შეგიძლიათ ნახოთ მოსწავლის პროგრესი, რომელსაც მან 3 დეკემბრამდე მიაღწია, ასევე პროგრესი ძველებურად შეინახება ამ კვირის დასრულებისთანავე."
+  dashboard_announce_how_code_studio: "იმისთვის, რომ კომპიუტერული მეცნიერების სწავლება დაიწყოთ არ გჭირდებათ არანაირი გამოცდილება. Code.org–ზე გვაქვს კურიკულუმები, გაკვეთილის გეგმები, უმაღლესი ხარისხის სასწავლო პროგრამები და უამრავი საინტერესო რამ ნებისმიესმიერი კლასისთვის&mdash; ყველაფერი უფასოა. ფიქრობთ, საიდან დაიწყოთ? გადმოიწერეთ <a href='%{video_download_url}'>ეს ვიდეო</a>!"
+  dashboard_announce_go_beyond: "გააგრძელეთ სწავლა კოდის ერთი საათის შემდეგ და ისწავლეთ რაღაც ახალი თქვენს მოსწავლეებთან ერთად ყოველკვირეულად. Code.org–ზე გვაქვს კურიკულუმები, გაკვეთილის გეგმები, უმაღლესი ხარისხის სასწავლო პროგრამები და უამრავი საინტერესო რამ ნებისმიესმიერი კლასისთვის&mdash;და ეს ყველაფერი უფასოა. :) იმისთვის, რომ კომპიუტერული მეცნიერების სწავლება დაიწყოთ, არანაირი გამოცდილება არ გჭირდებათ. <b>გაიგეთ, რა უნდა გააკეთოს თქვენმა კლასმა ახლა.</b>"
+  dashboard_announce_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+  dashboard_announce_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org''s next viral video encouraging students to take the AP CS Principles exam this year. We''re inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying "I''m taking the #APCSP exam because..." The best submissions will be featured in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!"
   code_sign_up: "დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში"
   host_an_hour: "ჩაატარეთ ერთი საათი"
-  learn_banner_title: "შემოგვიერთდით კოდის საათზე"
-  learn_banner_desc: "კოდის ერთი საათი გლობალური მოძრაობაა, რომელიც 100 მილიონს სტუდენტს ითხლის 180-ზე მეტ ქვეყანაში. ყველას, ყველგან შეუძლია მოაწყოს კოდის ერთი საათის ღონისძიება. დაგვეხმარეთ, მივცეთ ყველა მოსწავლეს კომპიუტერული მეცნიერების შესწავლის შესაძლებლობა! ორგანიზატორებს შეუძლიათ, მიყვნენ <a href='%{how_to_url}' target='_blank'>როგორ გავუძღვეთ</a> იმისთვის, რომ ასწავლონ კოდის ერთი საათი და შთააგონონ სტუდენტები <a href='%{videos_url}' target='_blank'>tამ ვიდეოებით</a>."
+  learn_banner_title: "შემოგვიერთდით კოდის ერთ საათზე"
+  learn_banner_desc: "კოდის ერთი საათი გლობალური მოძრაობაა, რომელიც 100 მილიონს სტუდენტს ითვლის 180-ზე მეტ ქვეყანაში. ყველას და ყველგან შეუძლია მოაწყოს კოდის ერთი საათის ღონისძიება. დაგვეხმარეთ, მივცეთ ყველა მოსწავლეს კომპიუტერული მეცნიერების შესწავლის შესაძლებლობა! ორგანიზატორებს შეუძლიათ, მიყვნენ <a href='%{how_to_url}' target='_blank'>ინსტრუქციებს</a> იმისთვის, რომ ასწავლონ კოდის ერთი საათი და შთააგონონ სტუდენტები <a href='%{videos_url}' target='_blank'>ამ ვიდეოებით</a>."
   learn_more: "სცადეთ ახლა"
   learn_sign_up_description: "დარეგისტრირდით და მიიღეთ მონაწილეობა კოდის ერთ საათიში CS საგანმანათლებლო კვირეულის ფარგლებში"
   learn_sign_up_button: "რეგისტრაცია"
@@ -821,13 +862,19 @@ ka-GE:
   course2_name: "კურსი 2"
   course3_name: "კურსი 3"
   course4_name: "კურსი 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "დაჩქარებული კურსი"
-  cspunit1_name: '(ძველი) თავი 1: ციფრული ინფორმაცია'
+  cspunit1_name: '(ძველი) სექცია 1: ციფრული ინფორმაცია'
   cspunit2_name: '(ძველი) სექცია 2: ინტერნეტი'
-  cspunit3_name: კომპიუტერული მეცნიერების პრინციპები ერთეული 3
+  cspunit3_name: '(ძველი) ნაწილი 3: პროგრამირება'
   cspunit4_name: '(ძველი) სექცია 4: მონაცემები'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
-  cspunit6_name: 'Post-AP: Databases in Apps'
+  cspunit5_name: '(ძველი) ნაწილი 5: შეისწავლეთ და შექმენით PT'
+  cspunit6_name: 'მომდევნო დონე: მონაცემთა ბაზები აპლიკაციებში'
   csd1_name: 'Unit 1: Computers and Logic'
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
@@ -836,6 +883,9 @@ ka-GE:
   csp2_name: 'სექცია 2: ციფრული ინფორმაცია'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "სრული ტესტი – 50 კითხვა"
   cspexam1-mWU7ilDYM9_name: ტესტის ნაწილი 1 – 25 კითხვა
   cspexam2-AKwgAh1ac5_name: ტესტის ნაწილი 2 – 25 კითხვა
@@ -857,12 +907,15 @@ ka-GE:
   math_category_name: "მათემატიკა"
   hoc_category_name: "კოდის ერთი საათი"
   csf_category_name: "CS საფუძვლები"
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 CS საფუძვლები"
   csp17_category_name: "'16-'17 CS საფუძვლები"
   cspexams_category_name: "CS საფუძვლების სავარჯიშო ტესტი"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  basketball_name: "კალათბურთის თამაშის შექმნა"
+  sports_name: "შექმენით საკუთარი სპორტული თამაში"
   applab_gradelevel: "ასაკი 13+"
   applab_shortdescription_congrats: "აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს"
   codeorg_gradelevel: "ასაკი 4-104"
@@ -1255,7 +1308,7 @@ ka-GE:
   alice_beyond_longdescription: "Alice Project იყენებს ინოვაციურ პროგრამულ გარემოს და 3D ანიმაციების შექმნით უზრუნველყოფს ინსტრუმენტებსა და მასალებს გამოთვლითი აზროვნების, ამოცანების გადაწყვეტის, პროგრამირების სასწავლად და სასწავლებლად: ნებისმიერი ასაკისა და კლასისთვის."
   sphero_beyond_longdescription: "არა აქვს მნიშვნელობა, მშობელი ხართ თუ მასწავლებელი: SPRK გაკვეთილებით თქვენი ბავშვები სწრაფად და ხალისიანად ისწავლიან რობოტების პროგრამირებას და განავითარებენ მათემატიკის უნარებს."
   compatibility_hide_this_warning: "გაფრთხილების გათიშვა"
-  compatibility_unsupported_browser: "თქცენს ბრაუზერს არ აქვს მხარდაჭერა. თხოვთ, განაახლეთ თქვენი ბრაუზერი <a href='%{supported_browsers_url}', target='_blank'>ჩვენ მიერ მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი ფუნქციონალურობა დარღვეული იქნება."
+  compatibility_unsupported_browser: "თქცენი ბრაუზერი არ არის მხარდაჭერილი. თხოვთ, განაახლეთ თქვენი ბრაუზერი <a href='%{supported_browsers_url}', target='_blank'>ჩვენ მიერ მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი ფუნქციონალურობა დარღვეული იქნება."
   starwars_shortcode: "star"
   mc_shortcode: "mc"
   frozen_shortcode: "frzn"

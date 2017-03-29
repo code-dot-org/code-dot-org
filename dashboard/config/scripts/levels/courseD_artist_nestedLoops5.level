@@ -11,7 +11,7 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": ".7",
+    "slider_speed": "1",
     "free_play": "false",
     "instructions": "What happens if you also turn 90 degrees between circles?",
     "embed": "false",

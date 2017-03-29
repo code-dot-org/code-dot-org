@@ -3,8 +3,7 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Vítej na své první hodině kódu! Pojďme se ponořit přímo do první ochutnávky
-          programování.
+        text: Vítej na své první hodině kódu! Pojďme se ponořit do prvních kroků programování.
       2:
         image: notes/hoc1_2.jpg
         text: Budeme používat Blockly, vizuální programovací jazyk, kde klikáš a přetahuješ
@@ -2986,118 +2985,110 @@
     mc_2016_intro:
       1:
         image: notes/mc_2016_intro_1.jpg
-        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
-          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
-          but the world has stopped. The sheep aren't moving, the chickens aren't
-          laying eggs, and zombies are just standing still. It's up to you to add
-          the code to make the Minecraft world work.
+        text: Ahoj, jmenuji se Jens a jsem hlavní kreativní designer Minecraftu. V
+          následující hodině si vytvoříš svou vlastní hru Minecraft. Tohle vypadá
+          jako Minecraft, ale svět se zastavil. Ovce se nehýbají, slepice přestaly
+          snášet vejce a zombie stojí stranou. Je to jen na tobě, přidej kódy a rozhýbej
+          svět Minecraftu.
       2:
         image: notes/mc_2016_intro_2.jpg
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
-          really interested in is how people think and interact with technology and
-          so this job is the perfect job for me to put together the computer engineering
-          with the psychology: how people think and behave.'
+        text: Jmenuji se Melissa a jsem výzkámný pracovník v Minecraftu. To, co mě
+          opravdu zajímá, je jak lidé přemýšlí a pracují s technologiemi. Proto je
+          pro mě tato práce ideální, propojuje výpočetní techniku a psychologii. Jak
+          lidé přemýšlí a jak se chovají.
       3:
         image: notes/mc_2016_intro_3.jpg
-        text: You'll see your screen is split into three main parts. 1) On the left
-          is the Minecraft game. Right now the world is frozen but we're going to
-          fix that with code.
+        text: Uvidíte obrazovku rozdělenou do tří hlavních částí. 1) Vlevo probíhá
+          vaše hra Minecraft. Právě teď je svět zastavený, ale my to napravíme pomocí
+          kódu.
       4:
         image: notes/mc_2016_intro_4.jpg
-        text: 2) This middle area is the toolbox. Each of these blocks is a command
-          that chickens, sheep, and other Minecraft creatures can understand.
+        text: 2) Uprostřed je prostor pro bloky kódů. Každý z těchto bloků je i příkaz,
+          kterému slepice, ovce a ostatní postavy Minecraftu rozumí.
       5:
         image: notes/mc_2016_intro_5.jpg
-        text: 3) The space on the right is called the workspace and this is where
-          we'll build our program.
+        text: 3) Vpravo je pracovní prostor a přesně tady budeme pracovat.
       6:
         image: notes/mc_2016_intro_6.jpg
-        text: If you forget what to do, the instructions for each level are at the
-          top.
+        text: Pokud zapomeneš jak hru hrát, instrukce ke každé úrovni jsou nahoře.
       7:
         image: notes/mc_2016_intro_7.jpg
-        text: To start off, we're going to program a chicken. Let's drag the "move
-          forward" command to the workspace. When I hit "Run" the chicken moves forward
-          one step. To go further, I'll drag another "move forward" block underneath
-          the first "move forward" block until the highlight appears. Then I'll drop
-          it and the two blocks snap together. If I hit "Run" again, the chicken walks
-          two steps.
+        text: Začneme programováním slepice. Přetáhni blok "Posun vpřed" do pracovního
+          prostoru. Když stiskneš "Spustit" slepice udělá jeden krok vpřed. Pokud
+          chceš, aby šla slepice ještě dál, přetáhni další blok "Posun vpřed" hned
+          pod ten první. Blok se označí žlutě a hned poté se bloky spojí dohromady.
+          Když znovu stiskneš "Spustit", slepice udělá dva kroky vpřed.
       8:
         image: notes/mc_2016_intro_8.jpg
-        text: If you ever want to delete a block, just remove it from the stack and
-          drag it back to the toolbox.
+        text: Pokud chceš blok smazat, přetáhni ho zpátky do prostřední části do prostoru
+          pro bloky.
       9:
         image: notes/mc_2016_intro_9.jpg
-        text: After you've hit "Run" you can always hit the "Reset" button to reset
-          the game and start over. Now, it's your turn to make your very own version
-          of Minecraft. Have fun!
+        text: Po stisknutí "Spustit" vždy můžeš stisknout stejné tlačítko, tentokrát
+          se jmenuje "Obnovit" a začneš znovu. A teď už je to jen na tobě, jak si
+          Minecraft poskládáš. Hezkou zábavu!
     mc_2016_loops:
       1:
         image: notes/mc_2016_loops_1.jpg
-        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
-          of the animals and enemies in the game. One of the animals that I worked
-          on is the ocelot. I worked on the part where you can feed an ocelot a fish
-          to tame it into your own cat.
+        text: Ahoj, já jsem Lisa. Jsem vývojářka softwaru pro Minecraft. A v této
+          hře pracuju na některých zvířatech a nepřátelích. Jedno ze zvířat, které
+          jsem vytvořila je ocelot. Pracovala jsem na části, kde si ocelota ochočíte,
+          když ho nakrmíte rybou a on se promění v kočku.
       2:
         image: notes/mc_2016_loops_2.jpg
-        text: As humans, we get really bored if we have to do the same thing over
-          and over and over again. But the cool thing about computers is that they
-          can do the same thing millions or even billions of times in a row without
-          getting bored. This repetition is called a loop and every creature in Minecraft
-          uses loops.
+        text: Lidé se nudí, když musí opakovat stejnou věc pořád dokola. Ale co je
+          skvělé na počítačích, že dokáží opakovat stejnou věc milionkrát i bilionkrát
+          za sebou a nenudí je to. Takovému opakování se říká cyklus a každá postava
+          v Minecraftu cykly používá.
       3:
         image: notes/mc_2016_loops_3.jpg
-        text: Earlier, we got a chicken to move across the screen but then she stopped.
-          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
-          do" loop from our toolbox to keep our chickens moving around forever too.
-          The power of loops will save you tons of time and open up all kinds of neat
-          options as you build your own version of Minecraft.
+        text: Před chvilí jsme poslali slepici přes obrazovku, ale pak se zastavila.
+          V Minecraftu se slepice procházejí bez přestání. Použitím tohoto bloku "Navždy
+          opakovat" z našeho prostoru pro bloky, rozhýbeme napořád všechny slepice.
+          Smyčky nám ušetří spoustu času a nabídnou nové možnosti jak vytvořit vlastní
+          verzi hry Minecraft.
     mc_2016_events:
       1:
         image: notes/mc_2016_events_1.jpg
-        text: On this next level, you can pick to be either Steve or Alex. Press the
-          arrow buttons on your keyboard to move up, down, left, and right. Now you
-          can move around a level wherever you want. To use a creature, just walk
-          towards it, turn to face it, and press the spacebar.
+        text: V této další úrovni si můžeš vybrat svého hráče Steva nebo Alexe. Stiskni
+          na svojí klávesnici šipky k pohybu nahoru, dolu, doleva a doprava. Teď už
+          se můžeš volně pohybovat kamkoli chceš. Pokud chceš využít předmět, dojdi
+          až k němu a stiskni mezerník.
       2:
         image: notes/mc_2016_events_2.jpg
-        text: If you're using a touch screen, swipe up, down, left, and right to move
-          around. Then tap the game to use the item in front of you.
+        text: "Pokud používáš dotykovou obrazovku, přejeď prstem nahoru, dolu, doleva
+          a doprava. \nKlikni kamkoli do hry pro použití předmětu před tvým hráčem."
       3:
         image: notes/mc_2016_events_3.jpg
-        text: But what happens when you use it? In Minecraft, sheep drop wool when
-          you shear them, cows run away when you hit them, and creepers explode when
-          you get near them. These reactions happen thanks to something called events.
-          Events tell your program to listen or wait for when something happens. And
-          when it does, perform an action.
+        text: Ale co se stane, když předmět použiješ? V Minecraftu můžeš získat z
+          ovcí vlnu, když je ostříháš. Krávy utečou, pokud je uhodíš a popínavé rostliny
+          explodují, když se k nim přiblíš. Tyto reakce se dějí na základě funkce
+          události. Události řeknou tvému programu dávat pozor a čekat na něco až
+          se stane. A když se to stane, provedou akci.
       4:
         image: notes/mc_2016_events_4.jpg
-        text: So far, you've used one event. Code you put in the "when spawned" slot
-          runs when your creature is created or when the game starts. Over the next
-          few levels you'll have new slots for events such as "when touched" that
-          runs when you touch the creature, or "when used" for when you use the creature.
-          Or, if you want your zombie to disappear when the sun comes up, put that
-          in the "when day" slot
+        text: |
+          A když se to stane, provedou akci. Zatím jsme použili jen jednu událost. Vložením kódu "Při stvoření" se spustila akce, když se objevila zvířata nebo když začala hra. Během příštích několika úrovní budeš mít nové možnosti událostí jako jsou "Při dotyku", které se spustí, když se dotkneš zvířete. Nebo "Při použití", když použiješ předmět. Nebo když chceš, aby zombík zmizel při východu slunce. Vložíš kód "Při východu slunce".
     mc_2016_spawn:
       1:
         image: notes/mc_2016_spawn_1.jpg
-        text: In games, spawn means the same thing as create. In this level, let's
-          make zombies spawn when the sun goes down. To do this, we'll use the "when
-          night" block.
+        text: |-
+          Ve hře znamená tvořit to stejné jako vyrobit. V této úrovni se při západu slunce stvoří zombíci.
+          K této akci použijeme blok "Při západu slunce".
       2:
         image: notes/mc_2016_spawn_2.jpg
-        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
-          block under the "when night" block. As soon as they're spawned, each zombie
-          will run the code that you put in their "when spawned" event slot. Have
-          fun spawning zombies!
+        text: Jelikož chceme, aby se zombíci stvořili v noci, přidáme blok "Stvořit
+          zombíky" hned pod blok "Při západu slunce". Jakmile budou stvořeni, každý
+          se bude řídit kódem, který jim přidáš za blok "Při stvoření". Bav se tvořením
+          zombíků!
     mc_2016_congrats:
       1:
         image: notes/mc_2016_congrats_1.jpg
-        text: Congratulations! You've learned to use computer science commands to
-          bring the Minecraft world to life. You are the developer now. You've unlocked
-          all the commands and all the creatures. You choose what happens.
+        text: |-
+          Gratuluji! Naučili jste se jak využít počítačovou vědu k rozhýbání světa Minecraft! Teď už jsi vývojář/ka!
+          Použil/a jsi všechny příkazy a všechna stvoření. To ty jsi rozhodl/a co se bude dít.
       2:
         image: notes/mc_2016_congrats_2.jpg
-        text: When you're done making your game, choose share to get a link that you
-          can share with your friends or to play your game on your phone. Have fun!
-          I'm looking forward to playing your version of Minecraft.
+        text: Až skončíš se svojí hrou, klikni na sdílet a dostaneš odkaz. Můžeš ho
+          sdílet se svými přáteli nebo si s ním zahraješ hru na mobilu. Užijte si
+          hru! Těším se až si zahraju právě tu tvojí verzi Minecraftu.

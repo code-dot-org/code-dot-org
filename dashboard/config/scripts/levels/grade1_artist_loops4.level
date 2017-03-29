@@ -31,7 +31,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?\",\r\n  \"hint_id\": \"grade1_artist_loops4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?\",\"hint_id\":\"grade1_artist_loops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9ee6082db2e96a621989659b24957aa0/grade1_artist_loops4.mp3\"}]",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/505d619f0e0dda1847614770164c345e-image-1478587486468.png\", \"position\": [0,0]}\r\n]",

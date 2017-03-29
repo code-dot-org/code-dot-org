@@ -5,6 +5,7 @@ require 'httparty'
 require_relative '../../../../deployment'
 require 'active_support/core_ext/object/blank'
 require_relative '../utils/selenium_browser'
+require 'retryable'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
@@ -27,7 +28,7 @@ def saucelabs_browser
   url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
-  browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG'] }
+  browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG']}
 
   browser_config.each do |key, value|
     capabilities[key] = value
@@ -45,10 +46,21 @@ def saucelabs_browser
   Time.now.to_i.tap do |start_time|
     retries = 0
     begin
+      http_client = Selenium::WebDriver::Remote::Http::Persistent.new
+
+      # Longer overall timeout, because iOS takes more time. This must be set before initializing Selenium::WebDriver.
+      http_client.timeout = 5.minutes
+
       browser = Selenium::WebDriver.for(:remote,
         url: url,
         desired_capabilities: capabilities,
-        http_client: Selenium::WebDriver::Remote::Http::Persistent.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
+        http_client: http_client
+      )
+
+      # Shorter idle_timeout to avoid "too many connection resets" error
+      # and generally increases stability, reduces re-runs.
+      # https://docs.omniref.com/ruby/gems/net-http-persistent/2.9.4/symbols/Net::HTTP::Persistent::Error#line=108
+      http_client.send(:http).idle_timeout = 3
     rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
       puts 'Failed to get browser, retrying...'
@@ -65,10 +77,6 @@ def saucelabs_browser
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
-
-  # let's allow much longer timeouts when searching for an element
-  browser.manage.timeouts.implicit_wait = 2 * 60
-  browser.send(:bridge).setScriptTimeout(1 * 60 * 1000)
 
   browser
 end
@@ -112,9 +120,11 @@ def log_result(result)
   return if ENV['TEST_LOCAL'] == 'true' || @sauce_session_id.nil?
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
-  HTTParty.put(url,
+  HTTParty.put(
+    url,
     body: {"passed" => result}.to_json,
-    headers: {'Content-Type' => 'application/json'})
+    headers: {'Content-Type' => 'application/json'}
+  )
 end
 
 all_passed = true
@@ -125,18 +135,8 @@ After do |scenario|
   log_result all_passed
 end
 
-def check_for_page_errors
-  js_errors = @browser.execute_script('return window.detectedJSErrors;')
-  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors
-
-  # TODO(bjordan): Test enabling "fail-on-JS error" for all browsers
-  # js_errors.should eq nil
-end
-
 After do |_s|
   unless @browser.nil?
-    check_for_page_errors
-
     # clear session state (or get a new browser)
     if slow_browser?
       unless @browser.current_url.include?('studio')

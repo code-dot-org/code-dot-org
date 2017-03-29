@@ -202,9 +202,9 @@ class AssetsTest < FilesApiTestBase
 
     copy_file_infos = JSON.parse(dest_api.copy_assets(@channel_id, [sound_filename]))
     dest_file_infos = dest_api.list_objects
-    assert_equal(nil, copy_file_infos[1])
+    assert_nil copy_file_infos[1]
     assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
-    assert_equal(nil, dest_file_infos[1])
+    assert_nil dest_file_infos[1]
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
 
     src_api.delete_object(URI.encode(image_filename))
@@ -363,12 +363,17 @@ class AssetsTest < FilesApiTestBase
     assert_equal 415, last_response.status # 415 = Unsupported media type
   end
 
+  def test_bad_channel_id
+    get "/v3/assets/undefined"
+    assert_equal 400, last_response.status
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
 
   def post_asset(api, uploaded_file)
-    body = { files: [uploaded_file] }
-    headers = { 'CONTENT_TYPE' => 'multipart/form-data' }
+    body = {files: [uploaded_file]}
+    headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 

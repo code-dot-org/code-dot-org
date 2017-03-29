@@ -52,9 +52,9 @@ class TwilioSmsTest < ActionDispatch::IntegrationTest
     @client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
     test_body = "Test: #{SecureRandom.urlsafe_base64}."
     @client.messages.create(
-      :messaging_service_sid => MESSAGING_SERVICE,
-      :to => SMS_TEST_TO,
-      :body => test_body
+      messaging_service_sid: MESSAGING_SERVICE,
+      to: SMS_TEST_TO,
+      body: test_body
     )
 
     # Wait for test_forward number to receive the auto-forwarded response
@@ -66,7 +66,7 @@ class TwilioSmsTest < ActionDispatch::IntegrationTest
       break if @client.messages.list(
         to: SMS_TEST_FORWARD,
         date_sent: DateTime.now.utc.strftime('%F')
-      ).detect { |message| message.body.include? test_body }
+      ).detect {|message| message.body.include? test_body}
       num_tries += 1
       if num_tries > TOTAL_TRIES
         raise "SMS test failed. To: #{SMS_TEST_TO}, forward: #{SMS_TEST_FORWARD}, message: #{test_body}"

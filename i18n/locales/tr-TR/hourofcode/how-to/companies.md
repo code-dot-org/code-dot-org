@@ -19,7 +19,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
   * Bir iletişim zaman tüneli oluşturmak için bizim [pazarlama araçlarımız](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %)ı kullanın veya promosyon içerik paylaşmak için kullanın.
   * Sirketinin CEOsundan bilgisayar bilimi önemini vurgulayan ve çalışanlarına bu epostaya yaymayi teşvik eden şirket çapında bir e-posta göndermesini rica et. [Bu e-postaya bakınız.](%= resolve_url('/promote/resources#sample-emails') %).
-  * Arkadaşlarınızla eğlenceli [eğitimler](%= resolve_url('https://code.org/learn') %) ile kodlama saati yapmak için ev sahipliği yapın.
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## Kodlama saati etkinliğine nasıl ev sahipliği yapılır
@@ -32,14 +32,14 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Nasıl Yapılır videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Bir öğretici seçin:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [Bunları deneyin!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Tüm Kodlama Zamanı öğreticileri:**
 
   * Hazırlık biraz zaman gerektirir
   * Are self-guided - allowing participants to work at their own pace and skill-level
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 4) Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanımı isteğe bağlı
 
@@ -77,7 +77,7 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 **Direct participants to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
   * Genç öğrenciler, eğitim sayfasını daha önceden yükleyin veya yer imi olarak kayıt edin.
 
 **When participants come across difficulties it's okay to respond:**
@@ -88,7 +88,7 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 **What to do if someone finishes early?**
 
-  * Onlar başka bir Kodlama Saati etkinliğini code.org/learn 'dan deneyebilir
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Veya, problemi olan arkadaşlarına yardımcı olabilir.
 
 [col-33]

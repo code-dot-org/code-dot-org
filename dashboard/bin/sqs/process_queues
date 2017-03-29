@@ -58,9 +58,9 @@ class QueueProcessorManager
   def stop_queue_processors
     threads = []
     @processors.each do |processor|
-      threads << Thread.new {
+      threads << Thread.new do
         processor.stop
-      }
+      end
     end
     threads.each(&:join)
   end
@@ -84,18 +84,18 @@ class QueueProcessorManager
 
     # Run until SIGINT is received.
     stopping = false
-    exit_proc = Proc.new {
+    exit_proc = proc do
       puts "Shutting down, please wait..."
       stop_queue_processors unless stopping
       stopping = true
       exit
-    }
-    Signal.trap('SIGINT') {
+    end
+    Signal.trap('SIGINT') do
       exit_proc.call
-    }
-    Signal.trap('SIGTERM') {
+    end
+    Signal.trap('SIGTERM') do
       exit_proc.call
-    }
+    end
 
     start_time = Time.now.to_i
 

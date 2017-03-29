@@ -18,14 +18,14 @@ end
 When /^I set the clock size to (\d+)$/ do |clock_size|
   clock_size_input = @browser.find_element(:css, '.modulus-textbox')
   clock_size_input.click
-  10.times { clock_size_input.send_key(:backspace) }
+  10.times {clock_size_input.send_key(:backspace)}
   clock_size_input.send_keys(clock_size.to_s)
 end
 
 When /^I set the dividend to (\d+)$/ do |dividend|
   clock_size_input = @browser.find_element(:css, '.dividend-textbox')
   clock_size_input.click
-  10.times { clock_size_input.send_key(:backspace) }
+  10.times {clock_size_input.send_key(:backspace)}
   clock_size_input.send_keys(dividend.to_s)
 end
 
@@ -33,9 +33,8 @@ When /^I run the modulo clock$/ do
   @browser.find_element(:css, '.go-button').click
 end
 
-When /^I (?:hide|show) Eve's panel$/ do
-  @browser.find_element(:xpath, "//div[text()='Eve']").click
-  sleep 0.5
+When /^I open view "(Alice|Eve|Bob|All)"$/ do |view|
+  @browser.find_element(:xpath, "//button[text()[contains(.,'#{view}')]]").click
 end
 
 When /^I click the start over button$/ do

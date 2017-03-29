@@ -37,6 +37,7 @@
         NetSim: Internet Simulator
         Custom: Kunstenaar
         CustomStudio: Speel Lab
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Brons
@@ -740,11 +741,13 @@
         infinity_playlab_intro: Play Lab - Inleiding
         infinity_playlab_events: Play Lab - Gebeurtenissen
         infinity_playlab_repeat_forever: Play Lab - Oneindig Herhalen
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_velocity: Velocity
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -755,6 +758,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -822,11 +828,11 @@
         iceage_intro: Ice Age Uur Code - Inleiding
         iceage_events: Ice Age Uur Code - Gebeurtenissen
         iceage_repeat: Ice Age Uur Code - Herhaalinstructies
-        mc_2016_intro: Minecraft Hour of Code - Introduction
-        mc_2016_loops: Minecraft Hour of Code - Loops
-        mc_2016_events: Minecraft Hour of Code - Events
-        mc_2016_spawn: Minecraft Hour of Code - Spawn
-        mc_2016_congrats: Minecraft Hour of Code - Congratulations
+        mc_2016_intro: Minecraft Code Uur - Introductie
+        mc_2016_loops: Minecraft Code Uur - Lussen
+        mc_2016_events: Minecraft Code Uur - Evenementen
+        mc_2016_spawn: Minecraft Code Uur - Neerzetten
+        mc_2016_congrats: Minecraft Code Uur - Gefeliciteerd
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

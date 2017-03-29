@@ -49,12 +49,12 @@ level 'Farmer for TTS testing'
 
 stage 'Flappy'
 skin 'flappy'
-level_concept_difficulty '{"sequencing":4,"events":2}'
+level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'blockly:Flappy:1'
 
 stage 'Bounce'
 skin 'bounce'
-level_concept_difficulty '{"sequencing":4,"events":2}'
+level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'blockly:Bounce:1'
 
 stage 'Multi'
@@ -119,6 +119,7 @@ level 'allthethings_moviebot'
 level 'Applab allthethings onRecordEvent'
 level 'allthethings_embed_video'
 level 'Test Applab Predictive'
+level 'allthethings level dataTables'
 
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'
@@ -135,8 +136,8 @@ level 'Test External Markdown'
 stage 'Studio'
 level 'Resizing Test'
 
-stage 'Long assessment'
-assessment 'Test longassessment levelgroup new'
+stage 'Multi page assessment'
+level 'K-1 Maze 11'
 assessment 'Test longassessment levelgroup split new'
 
 stage 'Star wars'
@@ -210,3 +211,13 @@ level 'AllTheThings Public Key Cryptography'
 
 stage 'Web Lab'
 level 'Web Lab 1'
+
+stage 'Single page assessment'
+assessment 'Test longassessment levelgroup new'
+
+stage 'Standalone video'
+level 'AllTheThings_StandaloneVideo'
+
+stage 'Curriculum Reference'
+level 'allthethings_curriculum_reference'
+level 'allthethings_map'

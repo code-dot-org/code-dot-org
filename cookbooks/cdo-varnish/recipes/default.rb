@@ -7,6 +7,7 @@
 apt_repository 'varnish-4.0-vmods' do
   uri          'ppa:wjordan/varnish-vmods'
   distribution 'trusty'
+  retries 3
 end
 
 apt_package 'varnish' do
@@ -31,6 +32,8 @@ end
 node.default['cdo-varnish']['config'] = HttpCache.config(node.chef_environment.to_s)
 $node_env = node.chef_environment.to_s
 $node_name = node.name
+$override_dashboard = node['cdo-secrets'] && node['cdo-secrets']['override_dashboard']
+$override_pegasus = node['cdo-secrets'] && node['cdo-secrets']['override_pegasus']
 
 ruby_block 'update_service' do
   block do

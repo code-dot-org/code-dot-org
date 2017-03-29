@@ -3,7 +3,7 @@
  */
 
 import $ from 'jquery';
-import {isMouseInBounds} from '../util/grid';
+import {isPointInBounds} from '../util/grid';
 
 const GRID_SIZE = 5;
 
@@ -42,6 +42,23 @@ export function scaledDropPoint(draggedElement) {
 }
 
 /**
+ * Tests whether the coordinates of the mouse event are inside the container,
+ * taking into account any scaling transforms that may be applied to the container.
+ * @param {jQuery.Event} mouseEvent
+ * @param {jQuery} container
+ * @returns {boolean}
+ */
+export function isMouseEventInBounds(mouseEvent, container) {
+  const {clientX, clientY} = mouseEvent;
+  const clientRect = container[0].getBoundingClientRect();
+
+  return (
+    clientX > clientRect.left && clientX < clientRect.right &&
+    clientY > clientRect.top && clientY < clientRect.bottom
+  );
+}
+
+/**
  * Get jQuery object for the element(s) currently being dragged. Will be empty
  * if no drag is currently underway.
  * @returns {jQuery}
@@ -74,4 +91,4 @@ export function snapToGridSize(coordinate) {
   return coordinate - ((coordinate + halfGrid) % GRID_SIZE - halfGrid);
 }
 
-export {isMouseInBounds};
+export {isPointInBounds};

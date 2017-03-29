@@ -1,8 +1,13 @@
 import $ from 'jquery';
-import {assert} from '../../util/configuredChai';
+import sinon from 'sinon';
+import {assert, expect} from '../../util/configuredChai';
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();
 
+import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {reducers} from '@cdo/apps/applab/redux/applab';
+import experiments from '@cdo/apps/util/experiments';
 var Applab = require('@cdo/apps/applab/applab');
 var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');
@@ -339,29 +344,43 @@ describe('startSharedAppAfterWarnings', function () {
     window.dashboard = originalState.dashboard;
   });
 
-  describe('is13plus', function () {
-    it('is true if user is signed in and the server says so', function () {
-      var component = shareWarnings.checkSharedAppWarnings({
+  describe('promptForAge', () => {
+    it('is false if user is signed in', () => {
+      const component = shareWarnings.checkSharedAppWarnings({
+        hasDataAPIs: () => true,
         channelId: 'current_channel',
         isSignedIn: true,
-        is13Plus: true,
       });
-      assert.equal(component.props.is13Plus, true);
+      // If we're signed in, we depend on the server routing you appropriately,
+      // i.e. if you're under 13, we'll only let you see shared apps if your
+      // teacher has accepted TOS
+      assert.equal(component.props.promptForAge, false);
     });
 
-    it('is true if user is not signed in but has local storage set', function () {
+    it('is false if user is not signed in but has local storage set', () => {
       localStorage.setItem('is13Plus', 'true');
-      var component = shareWarnings.checkSharedAppWarnings({
+      const component = shareWarnings.checkSharedAppWarnings({
+        hasDataAPIs: () => true,
         channelId: 'current_channel'
       });
-      assert.equal(component.props.is13Plus, true);
+      assert.equal(component.props.promptForAge, false);
     });
 
-    it('is false if user is not signed in and has no local storage set', function () {
-      var component = shareWarnings.checkSharedAppWarnings({
+    it('is true if user is not signed in and has no local storage set', () => {
+      const component = shareWarnings.checkSharedAppWarnings({
+        hasDataAPIs: () => true,
         channelId: 'current_channel'
       });
-      assert.equal(component.props.is13Plus, false);
+      assert.equal(component.props.promptForAge, true);
+    });
+
+    it('is false if we dont have data APIs', () => {
+      const component = shareWarnings.checkSharedAppWarnings({
+        hasDataAPIs: () => false,
+        channelId: 'current_channel',
+        isSignedIn: false,
+      });
+      assert.equal(component.props.promptForAge, false);
     });
   });
 
@@ -541,6 +560,47 @@ describe('RecordListener', function () {
 
       assert.equal(JSON.stringify(events), JSON.stringify(expectedEvents),
         'Create, update and delete events were reported');
+    });
+  });
+});
+
+describe("Applab.init()", () => {
+  before(() => sinon.stub(Applab, 'render'));
+  after(() => Applab.render.restore());
+  before(() => experiments.setEnabled('collapse-debugger', true));
+  after(() => experiments.setEnabled('collapse-debugger', false));
+
+  beforeEach(stubRedux);
+  afterEach(restoreRedux);
+
+  beforeEach(() => registerReducers(reducers));
+  describe("the expandDebugger level option", () => {
+    let config;
+    beforeEach(() => {
+      config = {
+        channel: 'bar',
+        baseUrl: 'foo',
+        skin: {},
+        level:{
+          editCode: "foo",
+        },
+      };
+    });
+    it("will leave the debugger closed when false", () => {
+      expect(config.level.expandDebugger).not.to.be.true;
+      Applab.init(config);
+      expect(isDebuggerOpen(getStore().getState())).to.be.false;
+    });
+    it("will open the debugger when true", () => {
+      expect(config.level.expandDebugger).not.to.be.true;
+      Applab.init({
+        ...config,
+        level: {
+          ...config.level,
+          expandDebugger: true
+        }
+      });
+      expect(isDebuggerOpen(getStore().getState())).to.be.true;
     });
   });
 });

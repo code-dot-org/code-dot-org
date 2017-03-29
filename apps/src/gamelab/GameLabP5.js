@@ -157,7 +157,7 @@ GameLabP5.prototype.init = function (options) {
   // positions before reporting mouse coordinates
   //
   // NOTE: _updateNextMouseCoords() is nearly identical, but calls a modified
-  // getMousePos() function below that scales the mouse postion with the play
+  // getMousePos() function below that scales the mouse position with the play
   // space and can return undefined.
   window.p5.prototype._updateNextMouseCoords = function (e) {
     var x = this.mouseX;
@@ -339,6 +339,16 @@ GameLabP5.prototype.init = function (options) {
     return this;
   };
 
+  window.p5.prototype.rgb = function (r, g, b, a) {
+    // convert a from 0 to 255 to 0 to 1
+    if (!a) {
+      a = 1;
+    }
+    a = a * 255;
+
+    return this.color(r, g, b, a);
+  };
+
   window.p5.prototype.createGroup = function () {
     return new this.Group();
   };
@@ -456,9 +466,9 @@ GameLabP5.prototype.startExecution = function () {
           }
 
           this._setProperty('frameCount', this.frameCount + 1);
+          this.redraw();
           this._updateMouseCoords();
           this._updateTouchCoords();
-          this.redraw();
         } else {
           this._drawEpilogue();
         }

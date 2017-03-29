@@ -1,0 +1,35 @@
+name 'Project Breakdown: Color Sleuth'
+css 'unplugged'
+markdown <<MARKDOWN
+
+# Project Breakdown: Color Sleuth
+
+<img src="https://images.code.org/4665b874ad12992a11097444c1c62b68-image-1487093017512.gif" style= "width: 300px; float: right; margin-left:20px">
+
+
+Color Sleuth is a unique project in which students vicariously participate in a conversation between two programmers: Alexis and Michael.  Students do not have to build a game from scratch, rather they “listen” to a conversation between these programmers and then create the code based on their conversation.  It is important to know correct syntax when programming in any language - writing the program is often fun and it is gratifying to see it run!  In reality, however, most programmers don’t start by writing code.  There is careful planning that has to happen prior to starting an app, and continual iteration that occurs as they develop the final product.  The purpose here is for students to see how “experts” would approach writing an app from scratch when all you have to start out with is a sketch on paper of some idea. Research has shown that what novices often need is an expert walk-through to explain the rationale behind certain decisions and to see the kinds of problems they anticipate and solve. There are a few key things that happen in this lesson that we hope students see and take to heart:
+
+- There is no one “correct” way to approach writing a program
+- You don’t write programs “in order” from top to bottom - you write in pieces and organize the code into sections and functions.
+- Start with a small problem to solve - solve it and move to the next one
+- Use a buddy or “thought partner” to talk things through
+- Sketch out pseudocode on paper to get your thoughts straight
+- If you get stuck, there is always something small you can do to make progress
+
+
+## Role of a Teacher in this Lesson:
+You can think about your pause points in this lesson, where you might gather everyone to check for understanding, or at least do a check-in with various groups.
+
+- There are a few unavoidably tricky steps in the latter half of the lesson - steps that require students to modify or add to the code in more than one place in order to see the next thing. It’s worth verifying that students have successfully completed these before moving on.
+
+You might also consider reading out loud some parts of the script - particularly some the tricker decision-making points - to make sure students understand what decision was made and why.
+
+- It’s also important to acknowledge along the way what’s recapped in the Epilogue - that what we’re walking students through here is NOT the one true correct way to make this app. Each decision, while well-reasoned, is relatively arbitrary.
+- The goal of the script is to provide a model for collaboration, thinking about problems in small pieces, and how a process of iterative development can lead to a robust project.
+
+## This is not a Practice PT, but…
+If they had gone through a similar process as Alexis and Michael that this project basically meets the requirements of a high-scoring Create task.  The trick would be provide written responses that properly highlight everything. Take a look at the <a href = “https://secure-media.collegeboard.org/digitalServices/pdf/ap/create-sample-tasks-sg.pdf” target=_blank> AP Create Task Scoring Guidelines<i class="fa fa-external-link-square"/></a>.
+
+
+## Below is a sample color sleuth game:
+MARKDOWN

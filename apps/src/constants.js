@@ -18,6 +18,9 @@ exports.ResultType = {
  * Enumeration of test results.
  * EMPTY_BLOCK_FAIL and EMPTY_FUNCTION_BLOCK_FAIL can only occur if
  * StudioApp.checkForEmptyBlocks_ is true.
+ * A number of these results are enumerated on the dashboard side in
+ * activity_constants.rb, and it's important that these two files are kept in
+ * sync.
  * NOTE: We store the results for user attempts in our db, so changing these
  * values would necessitate a migration
  */
@@ -58,18 +61,36 @@ exports.TestResults = {
   // Codes for unvalidated levels.
   UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.
 
+  // Numbers below 20 are generally considered some form of failure.
+  // Numbers >= 20 generally indicate some form of success (although again there
+  // are values like REVIEW_REJECTED_RESULT that don't seem to quite meet that restriction.
+  MINIMUM_PASS_RESULT: 20,
+
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.
   APP_SPECIFIC_ACCEPTABLE_FAIL: 21,       // Application-specific acceptable failure.
   MISSING_RECOMMENDED_BLOCK_FINISHED: 22, // The level was solved without a recommended block
 
+  // Numbers >= 30, are considered to be "perfectly" solved, i.e. those in the range
+  // of 20-30 have correct but not optimal solutions
+  MINIMUM_OPTIMAL_RESULT: 30,
+
   // The level was solved in an optimal way.
   FREE_PLAY: 30,   // The user is in free-play mode.
   PASS_WITH_EXTRA_TOP_BLOCKS: 31, // There was more than one top-level block.
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
+  MANUAL_PASS: 90, // The level was manually set as perfected internally.
 
   // The level was solved in the ideal manner.
-  ALL_PASS: 100
+  ALL_PASS: 100,
+
+  // Contained level result. Not validated, but should be treated as a success
+  CONTAINED_LEVEL_RESULT: 101,
+
+  SUBMITTED_RESULT: 1000,
+  LOCKED_RESULT: 1001,
+  REVIEW_REJECTED_RESULT: 1500,
+  REVIEW_ACCEPTED_RESULT: 2000,
 };
 
 exports.BeeTerminationValue = {

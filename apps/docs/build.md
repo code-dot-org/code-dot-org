@@ -198,9 +198,9 @@ under development configurations. Usually these bugs are related to the build
 system. To get them to repro, you need to configure your local environment to
 work more like production. Here are the steps to do that:
 
-1. Edit `dashboard/config/development.rb` by changing `config.assets.digest` to
-   `true`, `config.assets.compile` to `false`, and `config.pretty_sharedjs` to
-   `false`. This will make the rails app look for minified js files that have
+1. Edit `dashboard/config/environments/development.rb` by changing `config.assets.digest` to
+   `true` and `config.assets.compile` to `false`. Edit `locals.yml` by setting `pretty_js` to
+   `false` and `pegasus_skip_asset_map` to `false`. This will make the rails app and pegasus look for minified js files that have
    already been processed by the rails asset pipeline.
 
 2. Run `npm build:dist` inside the `apps` directory. This will generate all the
@@ -214,5 +214,5 @@ work more like production. Here are the steps to do that:
 If you make any changes to the build configuration or the javascript files, you
 will need to redo steps 2-4. Relying on watch mode won't work. If you are having
 a hard time wrapping your head around the minified bundles which get used with
-this configuration, you can try changing `config.pretty_sharedjs` back to `true`
+this configuration, you can try changing `pretty_js` back to `true`
 so that the unminified files get served instead.

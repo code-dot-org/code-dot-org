@@ -358,6 +358,89 @@ en:
         Answer it yourself: Answer it yourself
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U4 evaluation q1:
+        Have you ever investigated how digital security and encryption work?: Have you ever investigated how digital security and encryption work?
+        I know these terms and generally know why they exist, but I am not sure about how encryption work: I know these terms and generally know why they exist, but I am not sure about how encryption work
+        Nope--- I'm not familiar with encryption: Nope--- I'm not familiar with encryption
+        Yes! I am super familiar with security and encryption: Yes! I am super familiar with security and encryption
+      U4 evaluation q10:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U4 evaluation q11:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U4 evaluation q2:
+        Have you practiced or looked closely at the Explore Performance Task?: Have you practiced or looked closely at the Explore Performance Task?
+        I haven't really looked at the Explore Task yet: I haven't really looked at the Explore Task yet
+        I've looked at it once or twice, but haven't spent much time understanding it yet: I've looked at it once or twice, but haven't spent much time understanding it yet
+        Yes! I'm very familiar with the Explore Task: Yes! I'm very familiar with the Explore Task
+      U4 evaluation q3:
+        Do you have a sense of how companies use the data and information they collect about you and other app and website users?: Do you have a sense of how companies use the data and information they collect about you and other app and website users?
+        I don't know much about this and would really like to know more: I don't know much about this and would really like to know more
+        I have some sense, but could stand to learn more: I have some sense, but could stand to learn more
+        Yes! I read my privacy policies closely and understand what's being collected and how it could be used: Yes! I read my privacy policies closely and understand what's being collected and how it could be used
+      U4 evaluation q4:
+        Have you ever heard of modulo, or "clock" arithmetic?: Have you ever heard of modulo, or "clock" arithmetic?
+        Never heard of it: Never heard of it
+        Yes! I'm familiar with clock arithmetic: Yes! I'm familiar with clock arithmetic
+      U4 evaluation q5:
+        Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?: Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?
+        I checked out the old version, but haven't seen the updates: I checked out the old version, but haven't seen the updates
+        I haven't looked at any Explore Task Rubrics: I haven't looked at any Explore Task Rubrics
+        Yes! I'm very familiar with the new Explore Task Rubric/scoring guidelines: Yes! I'm very familiar with the new Explore Task Rubric/scoring guidelines
+      U4 evaluation q6:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U4 evaluation q7:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U4 evaluation q8:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U4 evaluation q9:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U5 evaluation q1:
+        Are you new to even-drive programming?: Are you new to even-drive programming?
+        'No': 'No'
+        'Yes': 'Yes'
+      U5 evaluation q2:
+        Conditionals and Boolean Logic: Conditionals and Boolean Logic
+        Creating Functions that Return Values: Creating Functions that Return Values
+        ? Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?
+        : Modules in this unit are organized based on lessons that build towards a common project. Once a programming concept is introduced, we will use that again concept in later lessons. Which concept are you least familiar with?
+        Processing Arrays: Processing Arrays
+        Simple Arrays: Simple Arrays
+        Variables and Strings: Variables and Strings
+        While Loops: While Loops
+      U5 evaluation q3:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U5 evaluation q4:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U5 evaluation q5:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U5 evaluation q6:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U5 evaluation q7:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
@@ -371,7 +454,14 @@ en:
       4.1 - 4.4 Lesson Connections: {}
       4.5 - 4.7 Lesson Connections: {}
       4.8 - 4.9 Lesson Connections: {}
+      5.1 - 5.3 Lesson Connections: {}
+      5.11 - 5.14 Lesson Connections: {}
+      5.15 - 5.17 Lesson Connections: {}
+      5.4 - 5.6 Lesson Connections: {}
+      5.7- 5.10 Lesson Connections: {}
+      A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
+      AP Test Prep Guidance: {}
       Adding Functionality to your App: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
@@ -390,12 +480,19 @@ en:
       AppLab Level U3L19 - variable re-assignment challenge pt1:
         AppLab Level U3L19 - variable re-assignment challenge pt1: AppLab Level U3L19 - variable re-assignment challenge pt1
         description here: description here
+      Arrays Overview: {}
       Assessing Student Learning in Unit 1: {}
       Assessing Student Learning in Unit 2: {}
+      Assessing Student Learning in Unit 4: {}
       Balancing Teacher and Tools in Unit 1: {}
+      Balancing Teacher and Tools in Unit 4: {}
+      Basic mechanics of variables:
+        description here: description here
+        title: title
       Begin planning your project:
         description here: description here
         title: title
+      Big Data in the CSP Framework: {}
       'Big Picture: If-statements':
         description here: description here
         title: title
@@ -404,14 +501,26 @@ en:
       Boolean Expressions and Comparison Operators:
         description here: description here
         title: title
+      Boolean Logic and Expression Overview: {}
       Building a UI with Design Mode: {}
+      CSD - Event Types: {}
+      CSD - Functions Review: {}
+      CSD - Getters and Setters: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
       CSD Creating Debugging Strat: {}
       CSD Design Instructions Site: {}
       CSD Hobbies Example: {}
       CSD L04 Wrap Up Debug Example: {}
+      'CSD Map: Board Buttons': {}
+      'CSD Map: Board Sensors': {}
+      'CSD Map: Polling Events': {}
+      'CSD Map: Set Scale': {}
+      'CSD Map: Timed For Loop': {}
+      'CSD Map: Timed Loop': {}
+      'CSD Map: onBoardEvent': {}
       CSD Recipe Stop: {}
+      'CSD Review: Design Mode, IDs, and Events': {}
       CSD U1 Input Output C1:
         Challenge 1: Challenge 1
         description here: description here
@@ -427,6 +536,24 @@ en:
       CSD U1 Input Output Intro:
         description here: description here
         title: title
+      CSD U2 CSS explain:
+        Introduction to CSS: Introduction to CSS
+        description here: description here
+      CSD U2 Classes Introduction:
+        Classes Introduction: Classes Introduction
+        description here: description here
+      CSD U2 RGB Colors:
+        'STOP: RGB Colors': 'STOP: RGB Colors'
+        description here: description here
+      CSD U2 layout style review:
+        description here: description here
+        title: title
+      CSD U2 more CSS:
+        description here: description here
+        title: title
+      CSD U2 text style review:
+        CSS: CSS
+        description here: description here
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 - complex conditionals - SFLP: {}
@@ -467,6 +594,9 @@ en:
       CSD U3 collisions STOP isTouching:
         STOP: STOP
         description here: description here
+      CSD U3 combining rep:
+        description here: description here
+        title: title
       CSD U3 complex sprite movement SFLP: {}
       CSD U3 game intro:
         Create Your Own Game: Create Your Own Game
@@ -501,6 +631,32 @@ en:
       CSD U4L22 SFLP: {}
       CSD U4L23 SFLP: {}
       CSD U4L24 SFLP: {}
+      CSD U5 Real World Data Waze: {}
+      CSD U5 Representing Information:
+        description here: description here
+        title: title
+      CSD U5 collection UPS2:
+        description here: description here
+        title: title
+      CSD U5 collection ads2:
+        description here: description here
+        title: title
+      CSD U5 data visualization:
+        description here: description here
+        title: title
+      CSD U5 data visualization sheet:
+        description here: description here
+        title: title
+      CSD U5 fixed-bits:
+        Find the Numbers: Find the Numbers
+        description here: description here
+      CSD U5 student record:
+        description here: description here
+        title: title
+      CSD U5 video2:
+        description here: description here
+        title: title
+      CSD U6L03 Overview: {}
       CSD Validator stop: {}
       CSD Variables STOP variables in draw loop: {}
       CSD-U1-SFLP Exploring Problem Solving: {}
@@ -516,6 +672,32 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
+      CSD-U5-SFLP ASCII and Binary Representation: {}
+      CSD-U5-SFLP Automating Data Decisions: {}
+      CSD-U5-SFLP Combining Representations: {}
+      CSD-U5-SFLP Create a Representation: {}
+      CSD-U5-SFLP Interpreting Data: {}
+      CSD-U5-SFLP Making Decisions with Data: {}
+      CSD-U5-SFLP Patterns and Representation: {}
+      CSD-U5-SFLP Problem Solving and Data: {}
+      CSD-U5-SFLP Problem Solving with Big Data: {}
+      CSD-U5-SFLP Representation Matters: {}
+      CSD-U5-SFLP Representing Images: {}
+      CSD-U5-SFLP Representing Numbers Part 1: {}
+      CSD-U5-SFLP Representing Numbers Part 2: {}
+      CSD-U5-SFLP Solve a Data Problem: {}
+      'CSD: Accessing List Items': {}
+      'CSD: Creating Variables In App Lab': {}
+      'CSD: Dropdown & Conditionals': {}
+      'CSD: For Loops': {}
+      'CSD: List Length': {}
+      'CSD: Lists': {}
+      'CSD: Lists with For Loops': {}
+      'CSD: Review Events': {}
+      'CSD: Stop': {}
+      'CSD: colorLed list': {}
+      'CSD: getText vs getNumber': {}
+      'CSD: setProperty': {}
       CSDU2 - Fundamentals Videos: {}
       CSDU2 - Pick Elements Styled: {}
       CSDU2 - Rating Quality Websites: {}
@@ -531,6 +713,12 @@ en:
         title: title
       CSDU2L02 SFLP: {}
       CSDU2L04 - Stop: {}
+      CSDU6 - button check for understanding: {}
+      CSDU6 - sensor projects challenge: {}
+      CSDU6 - timed loop stop board: {}
+      CSDU6 Innovation: {}
+      CSDU6 SFLP:
+        CSDU6 SFLP: CSDU6 SFLP
       CSP Journal Entry Placeholder:
         CSP Journal Entry Placeholder: CSP Journal Entry Placeholder
         Eventually replace this with a free-response journal entry level: Eventually replace this with a free-response journal entry level
@@ -817,17 +1005,44 @@ en:
       'Chirpr: @lillizard': {}
       'Chirpr: @solmoon': {}
       Choosing Good IDs: {}
+      'Circuit Playground Map: Buzzer': {}
+      'Circuit Playground Map: LEDS': {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Color Sleuth - Epilogue:
+        description here: description here
+        title: title
+      Color Sleuth - How does it end?:
+        description here: description here
+        title: title
+      Color Sleuth - How to switch player turns:
+        description here: description here
+        title: title
+      Color Sleuth - Keeping score:
+        description here: description here
+        title: title
+      Color Sleuth - Planning the App:
+        description here: description here
+        title: title
       Common Misconceptions about Functions: {}
+      Conditionals Overview: {}
       Conditions and Logic: {}
+      Controlling Memory - Other ways to assign values:
+        description here: description here
+        title: title
       Correlation vs Causation: {}
+      Cups and Beans Activity:
+        description here: description here
+        title: title
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
+      Debugging Variables: {}
       Debugging with Console.log:
         description here: description here
         title: title
+      Design Mode Overview: {}
+      Design Mode Practice: {}
       Design a Screen for your App: {}
       Digital Footprint Chirpr johnsnow:
         Chirpr - @johnsnow: Chirpr - @johnsnow
@@ -850,6 +1065,8 @@ en:
       Digital Footprint instantframe wiz_kid_liz:
         description here: description here
         title: title
+      DigitalCitizenship2:
+        Digital Citizenship: Digital Citizenship
       Discovery Learning in Unit 1: {}
       Documentation in App Lab: {}
       Downloading the Data Set: {}
@@ -1229,6 +1446,8 @@ en:
       Event-Driven Programming Patterns:
         description here: description here
         title: title
+      Events Overview: {}
+      Events Practice: {}
       Example App Types: {}
       Example Brand Book: {}
       Exploring Practices and Strategies during TeacherCon: {}
@@ -1250,6 +1469,10 @@ en:
       FrustrationSolutions:
         Frustration Solutions: Frustration Solutions
         Unplugged Drawing Assessment of Solutions to Frustration K: Unplugged Drawing Assessment of Solutions to Frustration K
+      Functions that Return Values: {}
+      'Game Lab Workshop: Draw Loop': {}
+      'Game Lab Workshop: Introduction': {}
+      'Game Lab Workshop: Variables to Sprites': {}
       Getting Better User Input: {}
       Getting to Know Your Data: {}
       GoodBadVisualizations_v1:
@@ -1263,6 +1486,9 @@ en:
       Hobbies Page Example: {}
       Hour of Code test content: {}
       How "if-else-if" Works:
+        description here: description here
+        title: title
+      How Compound Boolean Expressions Work:
         description here: description here
         title: title
       How Dropdown Menus Work:
@@ -1281,11 +1507,24 @@ en:
       How Secure Is Your Password?:
         description here: description here
         title: title
+      How Set Property Works:
+        description here: description here
+        title: title
+      'How To: Share Code with Teammates': {}
       How are Images Encoded?: {}
       How onEvent Works:
         description here: description here
         title: title
       How setPosition and screen dimensions work:
+        description here: description here
+        title: title
+      How the Boolean &&, || and ! Operators Work:
+        description here: description here
+        title: title
+      How to make a random color:
+        description here: description here
+        title: title
+      How to pick a random button:
         description here: description here
         title: title
       'How to: Make Charts from your Data': {}
@@ -1305,12 +1544,15 @@ en:
         description here: description here
         title: title
       Introduction to Functions with Parameters: {}
+      Introduction to HTML: {}
       Introduction to Loops: {}
       Introduction to Lossless Compression and the Text Compression Widget: {}
       Introduction to Lossy Compression: {}
       Introduction to Unit 1: {}
       Introduction to Unit 2: {}
       Introduction to Unit 3: {}
+      Introduction to Unit 4: {}
+      Introduction to Unit 5: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1326,7 +1568,9 @@ en:
       Lesson 1.7 Overview: {}
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
+      Looking at More Encryption Algorithms: {}
       Lossy vs. Lossless Compression: {}
+      Make a Hypothesis: {}
       Making Multiple Screens:
         description here: description here
         title: title
@@ -1407,8 +1651,15 @@ en:
       Overview of File Sizes and Metrics: {}
       'Overview: Balancing Teachers and Tools': {}
       'Overview: Capturing Student Learning': {}
+      'Overview: Design Mode': {}
       'Overview: Discovery Learning': {}
       'Overview: Group Work and Peer Learning': {}
+      'Overview: If Statements': {}
+      'Overview: Images': {}
+      'Overview: onEvent': {}
+      'Overview: setPosition': {}
+      'Overview: setScreen': {}
+      'Overview: setText and getText': {}
       PD check your progress: {}
       PDAlg 1-3 Circles: {}
       PDAlg 1-3 Circles Practice: {}
@@ -1612,13 +1863,24 @@ en:
       Pixelation - Video - Tips and Tricks:
         Pixelation - Video - Tips and Tricks: Pixelation - Video - Tips and Tricks
         description here: description here
+      Practice Performance Task in Unit 5: {}
       Practice Performance Tasks in Unit 1: {}
       Practice Performance Tasks in Unit 2: {}
       Practice Performance Tasks in Unit 3: {}
       Prepare for your presentation:
         description here: description here
         title: title
+      Processing Arrays: {}
+      'Project Breakdown: Building a Canvas Painter': {}
+      'Project Breakdown: Clicker Game': {}
+      'Project Breakdown: Color Sleuth': {}
+      'Project Breakdown: Image Scroller': {}
+      'Project Breakdown: Multi-Screen App': {}
+      Public Key Crypto Widget Instructions:
+        description here: description here
+        title: title
       Rating Websites: {}
+      Recipe Page Example: {}
       Responding to User Input: {}
       Rules About Choosing Good IDs:
         description here: description here
@@ -1635,18 +1897,26 @@ en:
         description here: description here
         title: title
       'Sending Numbers: The Big Picture': {}
+      Simple Decisions with if-statements:
+        description here: description here
+        title: title
+      Social Sleuth: {}
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
+      'Stop: Check with Teacher': {}
       'Stop: Classes': {}
       'Stop: Common Styles Warm Up': {}
       'Stop: External Style Sheets': {}
+      'Stop: Getters and Setters': {}
       'Stop: Hobbies Page': {}
       'Stop: Images': {}
       'Stop: Intro to CSS': {}
       'Stop: Personal Home Page Warm Up': {}
       'Stop: Validator': {}
       'Stop: Website Navigation': {}
+      Strings Overview: {}
+      Strings Practice: {}
       Summary Tables 101: {}
       TLO intro:
         Introduction to the TLO: Introduction to the TLO
@@ -1666,6 +1936,7 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+      The Mental Model for Variables: {}
       The Philosophy Behind the Four Primitive Programming Commands: {}
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
@@ -2120,10 +2391,22 @@ en:
       U5 - Create PT Prep - Student Introduction:
         description here: description here
         title: title
+      U5 - Create PT review - Student Introduction:
+        description here: description here
+        title: title
       U5 - Explore PT - Student Introduction:
         description here: description here
         title: title
       U5 - Explore PT Prep - Student Introduction:
+        description here: description here
+        title: title
+      U5 - Explore PT Review - Student Introduction:
+        description here: description here
+        title: title
+      U5 - PT Prep - Digital Portfolio and tech setup:
+        description here: description here
+        title: title
+      U5 color sleuth check correct:
         description here: description here
         title: title
       U5L08 - Student Intro If statements:
@@ -2147,6 +2430,25 @@ en:
       U6 - updateRecord - Student Introduction:
         description here: description here
         title: title
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT - Complete the Task - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT - Make a Plan - Student Links: {}
+      U6 Create PT Review - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT Review - Student Links:
+        description here: description here
+        title: title
       Understanding Communication Protocols: {}
       Understanding the Human Machine Language: {}
       Unit 1 Lesson 1 Overview: {}
@@ -2160,6 +2462,7 @@ en:
       Unit 1 Lesson 9 Overview: {}
       Unit 1 Overview: {}
       Unit 1 Teaching Philosophy and Commentary: {}
+      Unit 1 Vocab and Concept Review Activity: {}
       Unit 2 Lesson 1 Overview: {}
       Unit 2 Lesson 10 Overview: {}
       Unit 2 Lesson 11 Overview: {}
@@ -2178,8 +2481,10 @@ en:
       Unit 2 Lesson 8 Overview: {}
       Unit 2 Lesson 9 Overview: {}
       Unit 2 Tool Talk: {}
+      Unit 2 Vocab and Concept Review Activity: {}
       Unit 3 Survey 2: {}
       Unit 3 Tool Talk: {}
+      Unit 3 Vocab and Concept Review Activity: {}
       Unit 4 Lesson 1 Introduction:
         description here: description here
         title: title
@@ -2196,14 +2501,83 @@ en:
       Unit 4 Lesson 7 Introduction: {}
       Unit 4 Lesson 8 Introduction: {}
       Unit 4 Lesson 9 Introduction: {}
+      Unit 4 Tool Talk: {}
+      'Unit 4: Practice PT highlights': {}
+      Unit 5 Concepts and AP Assessments: {}
+      Unit 5 Lesson 1:
+        description here: description here
+        title: title
+      Unit 5 Lesson 1 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 10 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 11 Introduction:
+        While Loop Basics: While Loop Basics
+      Unit 5 Lesson 12 Introduction:
+        While Loops and Counting: While Loops and Counting
+      Unit 5 Lesson 13 Introduction:
+        An Introduction to Arrays: An Introduction to Arrays
+      Unit 5 Lesson 14 Introduction:
+        Arrays - Photo Album: Arrays - Photo Album
+      Unit 5 Lesson 15 Introduction:
+        Images are Arrays: Images are Arrays
+      Unit 5 Lesson 16 Introduction:
+        Digital Assistant Challenge: Digital Assistant Challenge
+      Unit 5 Lesson 17 Introduction:
+        'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
+      Unit 5 Lesson 18 Introduction:
+        'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      Unit 5 Lesson 2 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 3 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 4 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 5:
+        description here: description here
+        title: title
+      Unit 5 Lesson 5 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 6:
+        description here: description here
+        title: title
+      Unit 5 Lesson 6 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 7 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 8 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 9 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Teaching Philosophy and Commentary: {}
+      Update your Hypothesis - Part 1: {}
+      Update your Hypothesis - Part 2: {}
+      'Using Output from Functions: The return Command': {}
+      'Variable Scope: Local vs. Global':
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
+      Variables Overview: {}
+      Variables Practice: {}
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
       What Makes an Effective Visualization?: {}
       What is "Big" Data and Why Should we Protect or Data?: {}
+      What is "Big" Data?: {}
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
+      While Loops Overview: {}
       Why Teach Number Systems?: {}
       'Worked Example: If-statements and Robot':
         description here: description here
@@ -2211,6 +2585,7 @@ en:
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
+      boolean logic and expressions overview: {}
       broadcast lesson plan: {}
       challenges sample:
         Give these a try: Give these a try
@@ -2235,6 +2610,28 @@ en:
         Life Science Challenges: Life Science Challenges
       comingSoon:
         Coming Soon!: Coming Soon!
+      courseA_external_dojo:
+        Coder Dojo Video: Coder Dojo Video
+        Learn about persistence and frustration: Learn about persistence and frustration
+      courseA_external_stevie1:
+        Stevie and the Marbles Title Page: Stevie and the Marbles Title Page
+      courseA_external_stevie10: {}
+      courseA_external_stevie11: {}
+      courseA_external_stevie12: {}
+      courseA_external_stevie12a: {}
+      courseA_external_stevie13: {}
+      courseA_external_stevie14: {}
+      courseA_external_stevie15: {}
+      courseA_external_stevie16: {}
+      courseA_external_stevie2:
+        Page 1: Page 1
+      courseA_external_stevie3: {}
+      courseA_external_stevie4: {}
+      courseA_external_stevie5: {}
+      courseA_external_stevie6: {}
+      courseA_external_stevie7: {}
+      courseA_external_stevie8: {}
+      courseA_external_stevie9: {}
       courseB_external_MRF:
         description here: description here
         title: title
@@ -2302,14 +2699,17 @@ en:
       courseC_screenoutthemean:
         description here: description here
         title: title
+      courseD_external_binary1:
+        Binary Drawing: Binary Drawing
       courseF_external_variableConstant: {}
-      coursee-privateandpersonalinformation:
-        description here: description here
-        title: title
+      coursee-privateandpersonalinformation: {}
       coursef_powerofwords:
         description here: description here
         title: title
       csp_ap_intro: {}
+      csp_unit5_finalassessment_overview:
+        description here: description here
+        title: title
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -2641,6 +3041,9 @@ en:
         Details and Logistics: Details and Logistics
       sciPD3 mods:
         Reviewing the Modules: Reviewing the Modules
+      sciPD3 mods2:
+        description here: description here
+        title: title
       sciPD3 reflection:
         Reflection on Phase 3: Reflection on Phase 3
       sciPD3 resource module1:
@@ -2653,6 +3056,12 @@ en:
         Phase 3 Module 4: Phase 3 Module 4
       sciPD3 thanks:
         Great Job!: Great Job!
+      sciPD33 earth1:
+        description here: description here
+        title: title
+      sciPD33 earth2:
+        description here: description here
+        title: title
       sciPD33 end:
         Thank youl: Thank youl
       sciPD33 implement2:
@@ -2719,6 +3128,9 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
+      unique level name here:
+        description here: description here
+        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -2830,6 +3242,7 @@ en:
     level_group:
       name:
         CSP Culminating Assessment: {}
+        CSP Cumulative Assess A: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
@@ -2859,6 +3272,8 @@ en:
         Unit 1 Self-Assessment: {}
         Unit 2 Self-Assessment: {}
         Unit 3 Self-Assessment: {}
+        Unit 4 Self-Assessment: {}
+        Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
     match:
@@ -3017,6 +3432,12 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U2 RGB match:
+        "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
+        ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        : In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        RGB Colors: RGB Colors
+        rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U3 - conditionals - Matching:
         Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
         Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
@@ -3030,6 +3451,12 @@ en:
         dog.x &gt; cat.x: dog.x &gt; cat.x
         dog.x &lt; cat.x: dog.x &lt; cat.x
         dog.x == cat.x: dog.x == cat.x
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+        CSS: CSS
+        CSS Vocabulary Match: CSS Vocabulary Match
+        Stylesheet: Stylesheet
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
@@ -3059,6 +3486,22 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
+      'CSD: Variables Matching':
+        "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)": "![](https://images.code.org/7c46bbd6967456652171894454913042-image-1463067997744.gif)"
+        "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)": "![](https://images.code.org/7c66a6cadb0d0a136492bbedac65ebb0-image-1463067992351.gif)"
+        "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)": "![](https://images.code.org/f53831a3dd4f122ba9a873640da67825-image-1463067988435.gif)"
+        <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">: <img src="https://images.code.org/c999112a199aa2c9cf304a728ea6fda3-image-1463067995185.gif" style="width:150px">
+        Program 1: Program 1
+        Program 2: Program 2
+        Program 3: Program 3
+        Program 4: Program 4
+      CSDU2 Match RGB Colors:
+        Question: Question
+        'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
+        'red: 123, green: 104, blue: 238 - rgb(123,104,238)': 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
+        'red: 216, green: 191, blue: 216 - rgb(216,191,216)': 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
+        'red: 255, green: 140, blue: 105 - rgb(255,140,105)': 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
+        'red: 255, green: 239, blue: 213 - rgb(255,239,213)': 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
       CSDU4 Screens Predict Match:
         The "About" Button: The "About" Button
         The "About" Page: The "About" Page
@@ -3749,9 +4192,14 @@ en:
         blue: blue
         salt: salt
       unique level name here:
-        Answer 1: Answer 1
-        CSD U3 keyinput match: CSD U3 keyinput match
         Question: Question
+        description here: description here
+        'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
+        'red: 123, green: 104, blue: 238 - rgb(123,104,238)': 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
+        'red: 216, green: 191, blue: 216 - rgb(216,191,216)': 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
+        'red: 255, green: 140, blue: 105 - rgb(255,140,105)': 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
+        'red: 255, green: 239, blue: 213 - rgb(255,239,213)': 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
+        title: title
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -4201,12 +4649,10 @@ en:
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
       CSD Header Size Prediction:
-        ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
-        : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
-        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
-        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">
-        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
-        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">
       CSD Headers Prediction:
         ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
         : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
@@ -4253,6 +4699,27 @@ en:
         Contact Us: Contact Us
         Use It: Use It
         Which screen with the "Contact Us" button switch to?: Which screen with the "Contact Us" button switch to?
+      CSDU6 - timed loop predict counter multi:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        How many times with the word 'looped' be printed in the console?: How many times with the word 'looped' be printed in the console?
+        inifinite: inifinite
+      CSDU6 - timed loop question for:
+        The button background will be violet: The button background will be violet
+        The button background will change to each of the colors in the list: The button background will change to each of the colors in the list
+        The button background will not change: The button background will not change
+        The button will change background color each time it is clicked: The button will change background color each time it is clicked
+        When you run this code, what will you see?: When you run this code, what will you see?
+      CSDU6 LED predict multi:
+        Alternate between on and off each click: Alternate between on and off each click
+        Blink on and off randomly: Blink on and off randomly
+        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        Never turn on: Never turn on
+        Turn on and stay on: Turn on and stay on
       'CSP U4L04 Assessment 1 ':
         Question: Question
         right answer: right answer
@@ -4737,6 +5204,156 @@ en:
         "/script_assets/msm/Unit%202/exercise_1.png": "/script_assets/msm/Unit%202/exercise_1.png"
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+      Commute Assess - comp 1 - block:
+        This program causes an error: This program causes an error
+        a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
+        makes a and b equal to each other: makes a and b equal to each other
+        rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
+        swaps the values of a and b: swaps the values of a and b
+        this code doesn't do anything: this code doesn't do anything
+      Commute Assess - comp 2 - block:
+        Randomly returns on of the three numbers: Randomly returns on of the three numbers
+        'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
+        Returns the largest of the three numbers: Returns the largest of the three numbers
+        Set all three inputs to a temporary value: Set all three inputs to a temporary value
+        'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?': 'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?'
+        This code will cause an error: This code will cause an error
+      Commute Assess - comp 4 - block:
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+      Commute Assess - comp 5 - block:
+        It always sets x equal to 5: It always sets x equal to 5
+        Makes sure the value of  x is less than 5: Makes sure the value of  x is less than 5
+        Makes sure the value of x is between 10 and 5: Makes sure the value of x is between 10 and 5
+        Makes sure the value of x is not equal to 10: Makes sure the value of x is not equal to 10
+        This code will cause an error: This code will cause an error
+        What does this code do?: What does this code do?
+      Commute Assess - cond 3 - block:
+        "<pre>And contains a 3</pre>": "<pre>And contains a 3</pre>"
+        "<pre>And under 21</pre>": "<pre>And under 21</pre>"
+        "<pre>Under 40</pre>": "<pre>Under 40</pre>"
+        "<pre>Under 40<br>And contains a 3</pre>": "<pre>Under 40<br>And contains a 3</pre>"
+        "<pre>Under 40<br>And under 21<br>And contains a 3</pre>": "<pre>Under 40<br>And under 21<br>And contains a 3</pre>"
+        Nothing will be displayed: Nothing will be displayed
+        What will be displayed after running this code?: What will be displayed after running this code?
+      Commute Assess - func 1 - block:
+        "<pre>hi<br>and<br>and<br>bye<br>and</pre>": "<pre>hi<br>and<br>and<br>bye<br>and</pre>"
+        "<pre>hi<br>and<br>bye</pre>": "<pre>hi<br>and<br>bye</pre>"
+        "<pre>hi<br>and<br>bye<br>and</pre>": "<pre>hi<br>and<br>bye<br>and</pre>"
+        "<pre>hi<br>bye<br>and</pre>": "<pre>hi<br>bye<br>and</pre>"
+        Nothing will be printed: Nothing will be printed
+      Commute Assess - func 2a - block:
+        "<pre>10</pre>": "<pre>10</pre>"
+        "<pre>55</pre>": "<pre>55</pre>"
+        "<pre>5</pre>": "<pre>5</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
+      Commute Assess - func 2b - block:
+        "<pre>21</pre>": "<pre>21</pre>"
+        "<pre>81</pre>": "<pre>81</pre>"
+        "<pre>9</pre>": "<pre>9</pre>"
+        nothing is printed: nothing is printed
+        this script would cause an error: this script would cause an error
+      Commute Assess - func 3a - block:
+        "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>": "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>"
+        "<pre>func1<br>func2</pre>": "<pre>func1<br>func2</pre>"
+        "<pre>in func1<br>in func2</pre>": "<pre>in func1<br>in func2</pre>"
+        "<pre>in func1<br>in func2<br>in func1</pre>": "<pre>in func1<br>in func2<br>in func1</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
+      Commute Assess - func 3b - block:
+        "<pre>func3<br>func1</pre>": "<pre>func3<br>func1</pre>"
+        "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
+        "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
+        "<pre>in func3<br>in func3<br>in func1</pre>": "<pre>in func3<br>in func3<br>in func1</pre>"
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        Nothing is displayed: Nothing is displayed
+        What will be displayed when this code is run?: What will be displayed when this code is run?
+      CommuteAssess - Cond 1 - block:
+        "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
+        "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
+        "<pre>Inside second if</pre>": "<pre>Inside second if</pre>"
+        It will be different each time: It will be different each time
+        Nothing will be printed: Nothing will be printed
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 2 - block:
+        "<pre>All done.</pre>": "<pre>All done.</pre>"
+        "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
+        "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
+        "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
+        "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 4a - block:
+        "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
+        "<pre>The word is just right</pre>": "<pre>The word is just right</pre>"
+        "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
+        "<pre>The word is too short!</pre>": "<pre>The word is too short!</pre>"
+        "<pre>The word it too long!</pre>": "<pre>The word it too long!</pre>"
+        Nothing will be displayed: Nothing will be displayed
+        What will be displayed after this code has run?: What will be displayed after this code has run?
+      CommuteAssess - Cond 4b - block:
+        '"The word is just right the word is still too short!"': '"The word is just right the word is still too short!"'
+        '"The word is just right"': '"The word is just right"'
+        '"The word is still too short!"': '"The word is still too short!"'
+        '"The word is too short!"': '"The word is too short!"'
+        '"The word it too long!"': '"The word it too long!"'
+        If word was set to "Hi", what would be printed?: If word was set to "Hi", what would be printed?
+      CommuteAssess - Var 3 - block:
+        What are x, y, and z equal to after this program is run?: What are x, y, and z equal to after this program is run?
+        x is equal to "no"; y is equal to "maybe"; z is equal to "no": x is equal to "no"; y is equal to "maybe"; z is equal to "no"
+        x is equal to "no"; y is equal to "maybe"; z is equal to "x": x is equal to "no"; y is equal to "maybe"; z is equal to "x"
+        x is equal to "no"; y is equal to "maybe"; z is equal to "yes": x is equal to "no"; y is equal to "maybe"; z is equal to "yes"
+        x is equal to "yes"; y is equal to "maybe"; z is equal to "no": x is equal to "yes"; y is equal to "maybe"; z is equal to "no"
+        x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no": x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no"
+      CommuteAssess - Var 4 - block:
+        What are x, y and z equal to after this script is run?: What are x, y and z equal to after this script is run?
+        x is equal to 8; y is equal to 4, 8; z is equal to 12: x is equal to 8; y is equal to 4, 8; z is equal to 12
+        x is equal to 8; y is equal to 4; z is equal to 84: x is equal to 8; y is equal to 4; z is equal to 84
+        x is equal to 8; y is equal to 8; z is equal to "x + y": x is equal to 8; y is equal to 8; z is equal to "x + y"
+        x is equal to 8; y is equal to 8; z is equal to 12: x is equal to 8; y is equal to 8; z is equal to 12
+        x is equal to 8; y is equal to 8; z is equal to 16: x is equal to 8; y is equal to 8; z is equal to 16
+      CommuteAssess - Var 5 - block:
+        "<pre>11<br>11<br>11</pre>": "<pre>11<br>11<br>11</pre>"
+        "<pre>11<br>13<br>18</pre>": "<pre>11<br>13<br>18</pre>"
+        "<pre>18<br>18<br>18</pre>": "<pre>18<br>18<br>18</pre>"
+        "<pre>x<br>x<br>x + 5</pre>": "<pre>x<br>x<br>x + 5</pre>"
+        Nothing will be printed: Nothing will be printed
+        This code will cause on error: This code will cause on error
+        What is displayed when this code is run?: What is displayed when this code is run?
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+        How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
+        It will be different each time you run it: It will be different each time you run it
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        ? 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+        : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+        it will be different each time you run it: it will be different each time you run it
+      CommuteAssess - loops 5 - block:
+        "<pre>3</pre>": "<pre>3</pre>"
+        "<pre>3<br>1</pre>": "<pre>3<br>1</pre>"
+        "<pre>3<br>1<br>-1</pre>": "<pre>3<br>1<br>-1</pre>"
+        "<pre>5<br>3<br>1</pre>": "<pre>5<br>3<br>1</pre>"
+        "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>": "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>"
+        What will be displayed when this code is run?: What will be displayed when this code is run?
+        it will be different each time you run it: it will be different each time you run it
       Coordinates Multi 1:
         ? Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?
         : Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?
@@ -4746,6 +5363,21 @@ en:
         The unicorn's x value increases: The unicorn's x value increases
         The unicorn's y value changes: The unicorn's y value changes
         Video game Coordinates: Video game Coordinates
+      CumulAssess - Var 1 - block:
+        What are the values of x and y after this script runs?: What are the values of x and y after this script runs?
+        x is equal to "x + 5"; y is equal to "x": x is equal to "x + 5"; y is equal to "x"
+        x is equal to 10, 15; y is equal to 5, 10: x is equal to 10, 15; y is equal to 5, 10
+        x is equal to 10; y is equal to 5: x is equal to 10; y is equal to 5
+        x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
+        x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
+        x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
+      CumulAssess - Var 2 - block:
+        "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
+        "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
+        "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
+        "<pre>sentence</pre>": "<pre>sentence</pre>"
+        <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
+        What will be displayed after running this code?: What will be displayed after running this code?
       ECSPD Online U1D1-2 Assessment 2:
         A and B: A and B
         A, B, C, F, and G: A, B, C, F, and G
@@ -6421,6 +7053,22 @@ en:
         wrong1: wrong1
         wrong3: wrong3
         wrong4: wrong4
+      U5 assess compound boolean conditions:
+        "(temperature != 0) && (temperature < 32)": "(temperature != 0) && (temperature < 32)"
+        "(temperature < 0) || (temperature > 32)": "(temperature < 0) || (temperature > 32)"
+        "(temperature == 0) || (temperature < 32)": "(temperature == 0) || (temperature < 32)"
+        "(temperature == 0) || (temperature > 32)": "(temperature == 0) || (temperature > 32)"
+        "(temperature > 0) && (temperature < 32)": "(temperature > 0) && (temperature < 32)"
+      U5 assess_weight_v2:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
+      Unit 5 final assessment understand and continue:
+        I am NOT planning to take the AP exam this year: I am NOT planning to take the AP exam this year
+        I am planning to take the AP exam this year: I am planning to take the AP exam this year
+        I am still not sure if I am going to take the exam: I am still not sure if I am going to take the exam
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -6429,6 +7077,405 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      commute assess - comp 3 - block:
+        Displays "Hello" continuously for 60 seconds: Displays "Hello" continuously for 60 seconds
+        Displays "Hello" exactly 60 times: Displays "Hello" exactly 60 times
+        Displays "Hello" once: Displays "Hello" once
+        Displays "Hello" once after 60 seconds has elapsed: Displays "Hello" once after 60 seconds has elapsed
+        This code will cause an error: This code will cause an error
+      commute assess - loops 3 - block:
+        "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>": "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>"
+        "<pre>apple<br>orange </pre>": "<pre>apple<br>orange </pre>"
+        "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>": "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>"
+        It will be different each time you run it: It will be different each time you run it
+        Nothing with be printed: Nothing with be printed
+        What will be printed when this code is run?: What will be printed when this code is run?
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+        How many times will the comparison c > 5 be tested when this code is run?: How many times will the comparison c > 5 be tested when this code is run?
+        it will be different each time you run it: it will be different each time you run it
+      courseA_multi_artist_loops11_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist repeats `South` and `East` four times to make a staircase.: Incorrect.  The artist repeats `South` and `East` four times to make a staircase.
+        Take a good look at the code below.  What will happen when you click "Run"?: Take a good look at the code below.  What will happen when you click "Run"?
+        The artist repeats `South` and `East` four times to make a staircase.: The artist repeats `South` and `East` four times to make a staircase.
+        The artist will draw a square: The artist will draw a square
+        The artist will draw a stair pattern.: The artist will draw a stair pattern.
+        The artist won't move at all.: The artist won't move at all.
+      courseA_multi_collector_loops11_predict2:
+        Correct.: Correct.
+        I don't know.: I don't know.
+        ? Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        : Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        Laurel will get all of the treasure along the top and side, but not along the bottom.: Laurel will get all of the treasure along the top and side, but not along the bottom.
+        Laurel will get all of the treasure.: Laurel will get all of the treasure.
+        Laurel will not get any treasure at all.: Laurel will not get any treasure at all.
+        ? The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        : The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
+        The code below uses loops.  What will happen when you click "Run"?: The code below uses loops.  What will happen when you click "Run"?
+      courseA_multi_collector_loops3_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.
+        Laurel will move forward and get treasure five times in a row.: Laurel will move forward and get treasure five times in a row.
+        Laurel will move forward and get treasure one time.: Laurel will move forward and get treasure one time.
+        Laurel won't move at all.: Laurel won't move at all.
+        Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
+        The program uses a `repeat` loop to get Laurel to move forward five times.: The program uses a `repeat` loop to get Laurel to move forward five times.
+      courseA_multi_maze_seq12_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The bird turns the wrong way at the end.: Incorrect. The bird turns the wrong way at the end.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird should go North at the end, not South.: The bird should go North at the end, not South.
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will only go straight.: The bird will only go straight.
+        The bird will turn the wrong way at the end.: The bird will turn the wrong way at the end.
+      courseA_multi_maze_seq2_predict1:
+        Correct.: Correct.
+        I don't know.: I don't know.
+        Incorrect. The program needs one more block to get to the pig.: Incorrect. The program needs one more block to get to the pig.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will not reach the pig.: The bird will not reach the pig.
+        The program needs one more block to get to the pig.: The program needs one more block to get to the pig.
+      courseB_multi_artist_loops8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.: Incorrect.  The program uses a repeat loop to have the artist draws lines back and forth, then jump down, creating a ladder.
+        Run through the code below in your mind.  What will happen when you click "Run"?: Run through the code below in your mind.  What will happen when you click "Run"?
+        The artist draws lines back and forth, then jumps down, creating a ladder.: The artist draws lines back and forth, then jumps down, creating a ladder.
+        The artist will draw a ladder with 6 steps.: The artist will draw a ladder with 6 steps.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a square with 4 sides.: The artist will draw a square with 4 sides.
+      courseB_multi_collector_loops3_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.: Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.
+        Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.
+        Laurel will move forward and get all of the treasure.: Laurel will move forward and get all of the treasure.
+        Laurel will move forward and get treasure three times in a row.: Laurel will move forward and get treasure three times in a row.
+        Laurel won't move at all.: Laurel won't move at all.
+        Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
+        The program uses a `repeat` loop to get Laurel to move forward three times.: The program uses a `repeat` loop to get Laurel to move forward three times.
+      courseB_multi_maze_seq10_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The bird runs into the TNT with his first move.: Incorrect. The bird runs into the TNT with his first move.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird runs into the TNT with his first move.: The bird runs into the TNT with his first move.
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will not move at all.: The bird will not move at all.
+        The bird will run into the TNT right away.: The bird will run into the TNT right away.
+      courseB_multi_maze_seq1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The program has all of the blocks needed to get to the pig.: Incorrect. The program has all of the blocks needed to get to the pig.
+        Look at the program below. What will happen when you click "Run"?: Look at the program below. What will happen when you click "Run"?
+        The bird will get to the pig.: The bird will get to the pig.
+        The bird will not reach the pig.: The bird will not reach the pig.
+        The program has all of the blocks needed to get to the pig.: The program has all of the blocks needed to get to the pig.
+      courseC_multi_artist_prog6_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.: Incorrect.  The artist draws a shape with four equal sides tilted on its corner, making a diamond.
+        Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
+        The artist draws a shape with four equal sides tilted on its corner, making a diamond.: The artist draws a shape with four equal sides tilted on its corner, making a diamond.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+      courseC_multi_maze_debugging8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Skrat goes the wrong way after his final turn.: Incorrect. Skrat goes the wrong way after his final turn.
+        Incorrect. Taking one too few steps happens after Skrat turns the wrong way.: Incorrect. Taking one too few steps happens after Skrat turns the wrong way.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Look closely at the code below.  What is the first bug that will make this program fail? '
+        Skrat takes one too few steps and ends up short of the acorn.: Skrat takes one too few steps and ends up short of the acorn.
+        Skrat will go the wrong way after his final turn.: Skrat will go the wrong way after his final turn.
+        'The first error is that Skrat goes the wrong way after his final turn. ': 'The first error is that Skrat goes the wrong way after his final turn. '
+        The program won't fail. Skrat will get to the acorn.: The program won't fail. Skrat will get to the acorn.
+      courseC_multi_maze_loops10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.: Incorrect. The first loop only lets the bird move forward 1 space, when it needs to move forward 3.
+        Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
+        The bird will not travel far enough in the first loop.: The bird will not travel far enough in the first loop.
+        The bird will reach the pig with no problems.: The bird will reach the pig with no problems.
+        The bird will travel too far in the first loop.: The bird will travel too far in the first loop.
+        The first loop only lets the bird move forward 1 space, when it needs to move forward 3.: The first loop only lets the bird move forward 1 space, when it needs to move forward 3.
+      courseC_multi_maze_loops2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The repeat block will `move the bird forward` 5 times, taking him to the pig.: Incorrect. The repeat block will `move the bird forward` 5 times, taking him to the pig.
+        Take a close look at the code below. What do you think will happen when you click "Run"?: Take a close look at the code below. What do you think will happen when you click "Run"?
+        The bird will move forward only one space.: The bird will move forward only one space.
+        The bird will not move.: The bird will not move.
+        The bird will repeat `move forward` 5 times, taking him to the pig.: The bird will repeat `move forward` 5 times, taking him to the pig.
+        The repeat block will `move the bird forward` 5 times, taking him to the pig.: The repeat block will `move the bird forward` 5 times, taking him to the pig.
+      courseC_multi_maze_programming8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
+        The bird run into the TNT.: The bird run into the TNT.
+        The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
+        The bird will make it to the pig.: The bird will make it to the pig.
+        This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        D: D
+        Incorrect.: Incorrect.
+        Take a close look at the code below.  Which image will it create after you click "Run"?: Take a close look at the code below.  Which image will it create after you click "Run"?
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+      courseD_multi_bee_conditionals1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+      courseD_multi_bee_conditionals7_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
+      courseD_multi_bee_debugging9_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.: Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.
+        Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.: Incorrect. This was partially correct, but the loop also does not run long enough to get all three flowers.
+        Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?: Look closely at the code below.  Why won't the bee collect all of the nectar when you click "Run"?
+        The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.: The bee turns the wrong way *and* the loop doesn't run long enough to get all of the flowers.
+        The bee will turn the wrong way when making a square.: The bee will turn the wrong way when making a square.
+        'The loop does not run long enough for the bee to get to all flower bunches. ': 'The loop does not run long enough for the bee to get to all flower bunches. '
+      courseD_multi_bee_nestedLoops2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Look closely at the nested loops below.  What will happen when you click "Run"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        The bee will get 3 units of nectar.: The bee will get 3 units of nectar.
+        The bee will get all of the nectar.: The bee will get all of the nectar.
+        The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Look closely at the code below. How much honey will the bee make when you click "Run"?
+        ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+      courseD_multi_farmer_condLoops9_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : Incorrect. The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        Incorrect. There is no code here for collecting the pumpkin.: Incorrect. There is no code here for collecting the pumpkin.
+        Take a close look at the code below.  What will happen after you click "Run"?: Take a close look at the code below.  What will happen after you click "Run"?
+        ? The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : The code will have the farmer repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        The farmer will collect all of the produce, except the pumpkin.: The farmer will collect all of the produce, except the pumpkin.
+        The farmer will collect all of the produce.: The farmer will collect all of the produce.
+        The farmer will not collect any of the produce with the path she is taking.: The farmer will not collect any of the produce with the path she is taking.
+      courseD_multi_farmer_ramp13:
+        " ": " "
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        : Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.: The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.: The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.
+        The farmer will walk four spaces, then try to pick one pumpkin.: The farmer will walk four spaces, then try to pick one pumpkin.
+        The farmer will walk to the end of the path and harvest the pumpkin.: The farmer will walk to the end of the path and harvest the pumpkin.
+      courseD_multi_farmer_ramp14:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer doesn't try to pick a pumpkin after each move up. Only each move to the right.: Incorrect. The farmer doesn't try to pick a pumpkin after each move up. Only each move to the right.
+        ? Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        : Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?: Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?
+        ? The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        : The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
+        The farmer will collect 4 pumpkins.: The farmer will collect 4 pumpkins.
+        The farmer will collect 5 pumpkins.: The farmer will collect 5 pumpkins.
+        The farmer will collect all 8 pumpkins.: The farmer will collect all 8 pumpkins.
+      courseD_multi_farmer_while10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        Incorrect. There is no code to remove dirt from the pile.: Incorrect. There is no code to remove dirt from the pile.
+        Nothing.  This code will leave only level ground.: Nothing.  This code will leave only level ground.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Take a good look at the code below. What will be left at the end of this puzzle?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        This code will leave the holes completely untouched.: This code will leave the holes completely untouched.
+        This code will leave the pile completely untouched.: This code will leave the pile completely untouched.
+      courseD_multi_farmer_while4_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        Look closely at the code below.  What will happen after you click "Run"?: Look closely at the code below.  What will happen after you click "Run"?
+        Nothing will happen.: Nothing will happen.
+        The farmer will never stop removing dirt.: The farmer will never stop removing dirt.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
+      courseD_multi_maze_until10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        ? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        : Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        ? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        : Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
+        The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
+        The zombie will turn right immediately and get stuck.: The zombie will turn right immediately and get stuck.
+        The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
+      courseD_multi_maze_until2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        ? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Take a close look at the code below.  What do you think will happen when you click "Run"?
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
+        The bird will not move at all.: The bird will not move at all.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+      courseE_multi_bee_functions_predict1:
+        Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
+        ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        I don't know.: I don't know.
+        Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
+        The bee will try to collect too much honey from the flowers.: The bee will try to collect too much honey from the flowers.
+        The bee won't collect enough honey from the flowers.: The bee won't collect enough honey from the flowers.
+        The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
+        The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
+      courseE_multi_farmer_functions11_predict:
+        Correct!: Correct!
+        Incorrect.  The farmer does not call "check and pick" until she gets to the corn.: Incorrect.  The farmer does not call "check and pick" until she gets to the corn.
+        Incorrect. The farmer only makes one turn, and ends at the corn.: Incorrect. The farmer only makes one turn, and ends at the corn.
+        Look at the functions defined below.  What will the farmer harvest?: Look at the functions defined below.  What will the farmer harvest?
+        The farmer will harvest all of the pumpkins.: The farmer will harvest all of the pumpkins.
+        The farmer will harvest the corn.: The farmer will harvest the corn.
+        The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
+        The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
+      courseE_multi_farmer_ramp12:
+        " ": " "
+        right answer: right answer
+        wrong answer: wrong answer
+      courseE_prediction_artistFunction1:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseF_multi_artist_for10_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrect. The artist turns between iterations of the `for` loop.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_artist_fwp2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Using parameters lets you use a single function to create different outcomes.: Incorrect.  Using parameters lets you use a single function to create different outcomes.
+        The artist will use the same function to draw two different sized boxes.: The artist will use the same function to draw two different sized boxes.
+        The artist will use two different functions to draw the same sized box twice.: The artist will use two different functions to draw the same sized box twice.
+        The artist will use two different functions to draw two different sized boxes.: The artist will use two different functions to draw two different sized boxes.
+        The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
+        What will happen when you run this program?: What will happen when you run this program?
+      courseF_multi_artist_variables3a_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        ? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        : The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
+        The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
+        The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
+        We have set the variable `length` to 50.  What will happen when you click "Run"?: We have set the variable `length` to 50.  What will happen when you click "Run"?
+      courseF_multi_bee_for3_predict1:
+        Correct!: Correct!
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
+        'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
+        'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
+      courseF_multi_bee_fwp9_predict1:
+        ? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        : Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        Correct! The function is set to collect as many nectar or honey as is passed through a parameter.: Correct! The function is set to collect as many nectar or honey as is passed through a parameter.
+        I don't know.: I don't know.
+        Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.
+        Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.
+        'The bee will collect only one nectar or honey in each iteration of the loop. ': 'The bee will collect only one nectar or honey in each iteration of the loop. '
+        'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ': 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
+        The bee will not collect any nectar or honey.: The bee will not collect any nectar or honey.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_playlab_variables4c_predictive1:
+        'Correct. ': 'Correct. '
+        I don't know.: I don't know.
+        'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. ': 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. '
+        Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.: Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
+        The pirate would say, "Ali" and that is all.: The pirate would say, "Ali" and that is all.
+        The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.: The pirate would say, "It be a pleasure meetin' ya, Ali." and that is all.
+        The pirate would say, "It be a pleasure meetin' ya." and that is all.: The pirate would say, "It be a pleasure meetin' ya." and that is all.
+        What would happen if the user entered the name "Ali" at the prompt?: What would happen if the user entered the name "Ali" at the prompt?
+      coursee_prediction_artistfunction2:
+        Correct!: Correct!
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        Incorrect. The program does not call "draw line of polygons".: Incorrect. The program does not call "draw line of polygons".
+        The artist will draw four squares in a window pattern.: The artist will draw four squares in a window pattern.
+        The artist will draw four squares on top of one another.: The artist will draw four squares on top of one another.
+        The artist will draw only one line of squares.: The artist will draw only one line of squares.
+        The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
+        What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
       csp_ap_exam_signup:
         'No': 'No'
         'Yes': 'Yes'
@@ -6449,6 +7496,7 @@ en:
         Before I decide, I would like to have a better sense of how well I will do: Before I decide, I would like to have a better sense of how well I will do
         Before I decide, I would like to know more about the AP exam and what it involves: Before I decide, I would like to know more about the AP exam and what it involves
         I was unaware I had the option.: I was unaware I had the option.
+        I'd like to, but am concerned about the costs: I'd like to, but am concerned about the costs
         No. I'm definitely not going to take the AP Exam: No. I'm definitely not going to take the AP Exam
         Yes, definitely.: Yes, definitely.
       cspu3_assess1_callfunction:
@@ -6587,17 +7635,16 @@ en:
         <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
         <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
       cspu5_assess1_elementid:
-        ? All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
-        : All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
         An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
+        Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
         IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
         Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
         While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
       cspu5_assess1_eventprograms:
-        An event-driven program cannot implement an algorithm.: An event-driven program cannot implement an algorithm.
         ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
+        Event-driven programs do not implement algorithms.: Event-driven programs do not implement algorithms.
         Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
         The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
       cspu5_assess1_fivemore:
@@ -6610,7 +7657,7 @@ en:
         '10': '10'
         '5': '5'
         Nothing will be displayed: Nothing will be displayed
-        a: a
+        a is bigger: a is bigger
         b: b
       cspu5_assess1_increase:
         '10': '10'
@@ -6648,7 +7695,7 @@ en:
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
         result: result
       cspu5_assess2_appLabError:
-        Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
+        'Line 1 - time should be written in quotation marks like this: “time”': 'Line 1 - time should be written in quotation marks like this: “time”'
         Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
         Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
         Line 5 - It is after 10pm must be written in quotations.: Line 5 - It is after 10pm must be written in quotations.
@@ -6667,9 +7714,9 @@ en:
       cspu5_assess2_false:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
-        Strings cannot include numerical digits.: Strings cannot include numerical digits.
-        Strings consist of a sequence of concatenated ASCII characters.: Strings consist of a sequence of concatenated ASCII characters.
+        Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
         Strings sometimes include spaces.: Strings sometimes include spaces.
+        Strings with numerical digits in them are invalid.: Strings with numerical digits in them are invalid.
       cspu5_assess2_goodbye:
         Did you say something? That was so short.: Did you say something? That was so short.
         I have never heard that before.: I have never heard that before.
@@ -6683,7 +7730,7 @@ en:
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
       cspu5_assess2_numValues:
-        The code will always display the value stored in variable a: The code will always display the value stored in variable a
+        The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
         The code will display the largest of the three values: The code will display the largest of the three values
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
@@ -6695,10 +7742,10 @@ en:
         'false': 'false'
         'true': 'true'
       cspu5_assess2_pseudoCode:
-        " “Time to start studying again!” ": " “Time to start studying again!” "
-        " “You passed!” ": " “You passed!” "
-        " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
-        An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
+        "<code>Time to start studying again!</code>": "<code>Time to start studying again!</code>"
+        "<code>You passed!</code>": "<code>You passed!</code>"
+        "<code>You passed!</code> and <code>Time to start studying again! </code>": "<code>You passed!</code> and <code>Time to start studying again! </code>"
+        An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
@@ -6707,11 +7754,11 @@ en:
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
-        console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
-        console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
-        console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
-        console.log(“Hello! \nl How are you?”);: console.log(“Hello! \nl How are you?”);
-        console.log(“Hello! \t How are you?”);: console.log(“Hello! \t How are you?”);
+        console.log(“Hello! \bHow are you?”);: console.log(“Hello! \bHow are you?”);
+        console.log(“Hello! \nHow are you?”);: console.log(“Hello! \nHow are you?”);
+        console.log(“Hello! \newLineHow are you?”);: console.log(“Hello! \newLineHow are you?”);
+        console.log(“Hello! \nlHow are you?”);: console.log(“Hello! \nlHow are you?”);
+        console.log(“Hello! \tHow are you?”);: console.log(“Hello! \tHow are you?”);
       cspu5_assess2_weight:
         '125': '125'
         '200': '200'
@@ -6742,10 +7789,10 @@ en:
         '5': '5'
         '6': '6'
       cspu5_assess3_array3:
-        <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">: <img src="https://images.code.org/444ea8e6966f81b3a87170a84fa36a5b-image-1477186925218.png">
         <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">: <img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">
         <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">: <img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">
         <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">: <img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">
+        <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">: <img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">
         <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">: <img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">
       cspu5_assess3_array4:
         '0': '0'
@@ -6760,11 +7807,11 @@ en:
         <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">: <img src="https://images.code.org/bedbc9aa4e60e785c208cdc321084443-image-1477187462107.png">
         <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">: <img src="https://images.code.org/dedba683454c3e03a50e6ac13381de49-image-1477187494059.png">
       cspu5_assess3_bakeSale:
-        'Add after line 3:     numItems = numItems - 1;': 'Add after line 3:     numItems = numItems - 1;'
-        'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
-        'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
-        'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
-        'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
+        'Add after line 3:     <pre>numItems = numItems - 1;</pre>': 'Add after line 3:     <pre>numItems = numItems - 1;</pre>'
+        'Add after line 4:     <pre>numItems = 0;</pre>': 'Add after line 4:     <pre>numItems = 0;</pre>'
+        'Change Line 1 to:  <pre>var total = -1;</pre>': 'Change Line 1 to:  <pre>var total = -1;</pre>'
+        'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>': 'Change Line 2 to:  <pre>while (itemsInCart >= 0){</pre>'
+        'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>': 'Change Line 3 to:  <pre>total = promptNum(“Enter next item price”);</pre>'
       cspu5_assess3_counter:
         '0': '0'
         '1': '1'
@@ -6774,9 +7821,9 @@ en:
       cspu5_assess3_impossibleOutput:
         0, 0: 0, 0
         1, 1: 1, 1
+        2, 1: 2, 1
+        2, 2: 2, 2
         2, 4: 2, 4
-        3, 1: 3, 1
-        3, 3: 3, 3
       cspu5_assess3_listAppend:
         '1': '1'
         '2': '2'
@@ -6883,6 +7930,16 @@ en:
         <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">: <img src="https://images.code.org/c3d59f5678689fbbf4c521e3de6179b1-image-1477859562266.png">
         <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">: <img src="https://images.code.org/d2db31560f2ec73ce1eaa7814f8e421a-image-1477859578654.png">
         <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">: <img src="https://images.code.org/e40e844cdb4e24042e40a714c3830f4b-image-1477859513782.png">
+      grade2_multi_collector_A_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Incorrect.  Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
+        Incorrect.  Two of the spaces that Laurel tries to collect treasure from are empty!: Incorrect.  Two of the spaces that Laurel tries to collect treasure from are empty!
+        Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.: Laurel tries to collect treasure in 4 spaces, but 2 of them are empty, so she only collects 2 pieces of treasure.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
+        Laurel will not collect any treasure.: Laurel will not collect any treasure.
+        Laurel will only be able to collect 2 pieces of treasure using this code.: Laurel will only be able to collect 2 pieces of treasure using this code.
+        Look closely at the code below.  How many pieces of treasure will Laurel successfully collect after you click "Run"?: Look closely at the code below.  How many pieces of treasure will Laurel successfully collect after you click "Run"?
       image code from circle:
         (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid" "red")
         "(rectangle (+ 8 2) (- 7 5) solid red)": "(rectangle (+ 8 2) (- 7 5) solid red)"
@@ -6891,6 +7948,12 @@ en:
         "/script_assets/msm/Unit%202/exercise_5.png": "/script_assets/msm/Unit%202/exercise_5.png"
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+      kiki_multi_test:
+        The bird will crash immediately into a wall: The bird will crash immediately into a wall
+        The bird will not move at all: The bird will not move at all
+        The bird will reach the pig: The bird will reach the pig
+        The bird will stop one space short of the pig: The bird will stop one space short of the pig
+        What will happen when you run this code?: What will happen when you run this code?
       msm variables multi 1:
         '15': '15'
         What is the value of x?: What is the value of x?
@@ -7338,12 +8401,6 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
-      unique level name here:
-        " Press the _w_ key ": " Press the _w_ key "
-        'Press the _space_ bar  ': 'Press the _space_ bar  '
-        'red_sprite gets bigger and blue_sprite gets smaller ': 'red_sprite gets bigger and blue_sprite gets smaller '
-        'red_sprite moves up and blue_sprite moves down ': 'red_sprite moves up and blue_sprite moves down '
-        title: title
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
@@ -7497,6 +8554,7 @@ en:
         Convert Blocks to Math: Convert Blocks to Math
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
+      CSD U3 Counters explaining counters contained: {}
       'CSP U4L04 Assessment 2 ':
         Enter answer here: Enter answer here
         Enter prompt here: Enter prompt here

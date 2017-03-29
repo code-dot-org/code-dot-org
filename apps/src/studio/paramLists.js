@@ -16,22 +16,27 @@ exports.getPlaySoundValues = function (withRandom) {
   } else {
     names = [];
   }
-  names = names.concat(skin.sounds);
-  if (withRandom) {
-    // Insert a random value for each sound group before the first sound in the group:
-    for (var group in skin.soundGroups) {
-      var insertIndex = names.indexOf(group + skin.soundGroups[group].minSuffix);
-      if (insertIndex !== -1) {
-        names.splice(insertIndex, 0, skin.soundGroups[group].randomValue);
+
+  if (skin && skin.sounds) {
+    names = names.concat(skin.sounds);
+    if (withRandom) {
+      // Insert a random value for each sound group before the first sound in the group:
+      for (var group in skin.soundGroups) {
+        var insertIndex = names.indexOf(group + skin.soundGroups[group].minSuffix);
+        if (insertIndex !== -1) {
+          names.splice(insertIndex, 0, skin.soundGroups[group].randomValue);
+        }
       }
     }
   }
-  var restrictions = level.paramRestrictions && level.paramRestrictions.playSound;
-  if (restrictions) {
+
+  if (level && level.paramRestrictions && level.paramRestrictions.playSound) {
+    var restrictions = level.paramRestrictions.playSound;
     names = names.filter(function (name) {
       return restrictions[name];
     });
   }
+
   return names;
 };
 

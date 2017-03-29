@@ -33,6 +33,15 @@ class ScriptsController < ApplicationController
   end
 
   def destroy
+    # Though @script.name is prevented from starting with a dot or tilde or
+    # containing a slash, we do this (security) check anyways to prevent
+    # directory traversal as validation can be manually bypassed.
+    if (@script.name.start_with? '.') ||
+      (@script.name.start_with? '~') ||
+      (@script.name.include? '/')
+      raise ArgumentError, "evil script name (#{@script.name})"
+    end
+
     @script.destroy
     filename = "config/scripts/#{@script.name}.script"
     File.delete(filename) if File.exist?(filename)
@@ -57,7 +66,7 @@ class ScriptsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    render 'levels/instructions', locals: { stages: script.stages }
+    render 'levels/instructions', locals: {stages: script.stages}
   end
 
   private

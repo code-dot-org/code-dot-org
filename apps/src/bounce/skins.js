@@ -268,7 +268,7 @@ exports.load = function (assetUrl, id) {
   skin.retro = {
     background: skin.assetUrl('retro_background.png'),
     tiles: skin.assetUrl('retro_tiles_wall.png'),
-    goaltiles: skin.assetUrl('retro_tiles_goal.png'),
+    goalTiles: skin.assetUrl('retro_tiles_goal.png'),
     paddle: skin.assetUrl('retro_paddle.png'),
     ball: skin.assetUrl('retro_ball.png')
   };
@@ -358,5 +358,7 @@ exports.load = function (assetUrl, id) {
   skin.paddleYOffset = config.paddleYOffset || 0;
   skin.markerHeight = config.markerHeight || 50;
   skin.markerWidth = config.markerWidth || 50;
+  skin.flagHeight = 43;
+  skin.flagWidth = 50;
   return skin;
 };

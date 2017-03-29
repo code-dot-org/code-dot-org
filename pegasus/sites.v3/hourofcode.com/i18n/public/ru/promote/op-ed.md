@@ -8,7 +8,7 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Ниже приведен пример обзорных поддержку Недели Компьютерные науки, образования и ее цели, которые могут быть использованы государством, местные законодатели, лидеры бизнеса и т. д.
 
   
 

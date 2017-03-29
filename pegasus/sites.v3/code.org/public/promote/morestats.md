@@ -9,7 +9,10 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ## Code.org blog posts
 ### Miscellaneous
 
+* University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
+* Computer science counts as a core requirement in [95% of BS degrees](https://medium.com/@codeorg/uc-data-confirms-computer-science-is-foundational-e8eb44038e48#.o0jvaeesg) in the University of California system.
 * AP Computer Science A is the [fastest-growing](http://blog.code.org/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
+* Code.org [updated our position](http://blog.code.org/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 * [More high school students](http://blog.code.org/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
 * Computing occupations are the [#1 source of new wages](http://blog.code.org/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://blog.code.org/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968).
@@ -30,8 +33,11 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * Seeing our impact: A [record year](http://blog.code.org/post/91961669383/ap-computer-science) for computer science (2013-2014)
 * The Hour of Code [reached](http://blog.code.org/post/70175643054/stats) 15 million users in 7 days (2014)
 * [15,000](http://blog.code.org/post/128786388333/15000-new-computer-science-teachers) new computer science teachers (2015)
+* [Progress](http://blog.code.org/post/155208947459/happy-new-year-from-codeorg) made in computer science education (2016)
 
 
+## Other Code.org Resources
+* See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
 
 
 ## International K-12 computer science
@@ -40,6 +46,7 @@ We are interested in seeing what's happening in computer science education inter
 
 ## Outside resources
 
+- A [new report](http://www.sreb.org/sites/main/files/file-attachments/cs_commission_2016_0.pdf) by the SREB recommends 5 policy actions states can take to expand access to computer science education.
 - A [report](http://www.ecs.org/ec-content/uploads/09.13.2016_Computer-Science-in-High-School-Graduation-Requirements.pdf) by the Education Commission of the States provides details on computer science in high school graduation requirements.  
 - [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education."
 - Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 

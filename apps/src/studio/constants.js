@@ -369,6 +369,8 @@ export const HIDDEN_VALUE = '"hidden"';
 export const CLICK_VALUE = '"click"';
 export const VISIBLE_VALUE = '"visible"';
 
+export const EMPTY_QUOTES = '""';
+
 // Number of extra ticks between the last time the sprite moved and when we
 // reset them to face south.
 export const IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
@@ -402,3 +404,8 @@ export const SOUND_THROTTLE_TIME = 200;
 // How many milliseconds to throttle between whenTouchObstacle events when
 // blockMovingIntoWalls is enabled.
 export const TOUCH_OBSTACLE_THROTTLE_TIME = 330;
+
+export const BEHAVIOR_CHASE = 'chase';
+export const BEHAVIOR_FLEE = 'flee';
+export const BEHAVIOR_STOP = 'none';
+export const BEHAVIOR_WANDER = 'roam';

@@ -1,5 +1,5 @@
 {
-  "continue": "Continue",
+  "continue": "जारी राख्नुहोस्",
   "doCode": "do",
   "elseCode": "नत्र",
   "endGame": "end game",
@@ -17,7 +17,7 @@
   "incrementPlayerScore": "score a point",
   "incrementPlayerScoreTooltip": "हालको खेलाडीको स्कोरमा एक थप।",
   "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
+  "no": "होइन",
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
   "playSoundRandom": "play random sound",
   "playSoundBounce": "play bounce sound",
@@ -128,5 +128,5 @@
   "whenEnterObstacleTooltip": "Execute the actions below when Flappy enters an obstacle.",
   "whenRunButtonClick": "when game starts",
   "whenRunButtonClickTooltip": "Execute the actions below when the game starts.",
-  "yes": "Yes"
+  "yes": "हो"
 }

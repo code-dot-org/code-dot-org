@@ -143,6 +143,12 @@
   english: "Galician"
   native: "Galego"
 
+"haw": "haw-HI"
+"haw-HI":
+  english: "Hawaiian"
+  native: "ʻŌlelo Hawaiʻi"
+  debug: true
+
 "he": "he-IL"
 "he-IL":
   english: "Hebrew"
@@ -242,7 +248,6 @@
 "mi-NZ":
   english: "Maori"
   native: "Māori"
-  debug: true
 
 "mk": "mk-MK"
 "mk-MK":
@@ -365,6 +370,13 @@
   english: "Swedish"
   native: "Svenska"
 
+"tg": "tg-TJ"
+"tg-TJ":
+  english: "Tajik"
+  native: "тоҷикӣ"
+  debug: true
+  webfonts: false
+
 "ta": "ta-IN"
 "ta-IN":
   english: "Tamil"
@@ -375,8 +387,7 @@
 "th": "th-TH"
 "th-TH":
   english: "Thai"
-  native: "ไทย"
-  debug: true
+  native: "ภาษาไทย"
   webfonts: false
 
 "tr": "tr-TR"

@@ -45,7 +45,7 @@ if (IN_UNIT_TEST) {
 
   module.exports.stubRedux = function () {
     if (__oldReduxStore) {
-      throw new Error("Reduce store has already been stubbed. Did you forget to call restore?");
+      throw new Error("Redux store has already been stubbed. Did you forget to call restore?");
     }
     __oldReduxStore = reduxStore;
     __oldGlobalReducers = globalReducers;
@@ -61,15 +61,29 @@ if (IN_UNIT_TEST) {
   };
 }
 
+if (IN_STORYBOOK) {
+  // Storybooks need the ability to create multiple distinct stores instead of
+  // using a singleton
+  module.exports.createStoreWithReducers = createStoreWithReducers;
+}
+
 /**
  * Get a reference to our redux store. If it doesn't exist yet, create it.
  */
 export function getStore() {
   if (!reduxStore) {
-    reduxStore = createStore(redux.combineReducers(globalReducers));
+    reduxStore = createStoreWithReducers();
   }
 
   return reduxStore;
+}
+
+/**
+ * Create our store
+ */
+function createStoreWithReducers() {
+  return createStore(Object.keys(globalReducers).length > 0 ?
+    redux.combineReducers(globalReducers) : s => s);
 }
 
 /**
@@ -81,7 +95,8 @@ export function getStore() {
  */
 export function registerReducers(reducers) {
   for (let key in reducers) {
-    if (hasReducer(key)) {
+    const existingReducer = globalReducers[key];
+    if (existingReducer && existingReducer !== reducers[key]) {
       throw new Error(`reducer with key "${key}" already registered!`);
     }
   }

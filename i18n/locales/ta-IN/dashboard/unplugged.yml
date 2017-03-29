@@ -128,7 +128,7 @@ ta:
         desc: 'Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.'
         video: 'C3_functional_suncatchers'
       'SongwritingParameters':
-        title: 'Songwriting'
+        title: 'பாடல் எழுதுதல்'
         desc: 'Students use the concept of the chorus in a song to learn about defining and calling functions.'
         video: 'C3_songwriting_with_parameters'
       'DiceRace':

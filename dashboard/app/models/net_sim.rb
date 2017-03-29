@@ -76,7 +76,7 @@ class NetSim < Blockly
       show_tabs
       show_encoding_controls
       default_enabled_encodings
-    ).map{ |x| x.camelize(:lower) }
+    ).map {|x| x.camelize(:lower)}
   end
 
   # List of possible skins, the first is used as a default.

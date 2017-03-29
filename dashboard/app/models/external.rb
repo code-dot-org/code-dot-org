@@ -29,16 +29,23 @@ class External < DSLDefined
     properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
   end
 
+  def supports_markdown?
+    true
+  end
+
   def dsl_default
     <<-TEXT.strip_heredoc.chomp
     name '#{name || 'unique level name here'}'
     title 'title'
     description 'description here'
-    href 'path/to/html/in/asset/folder'
     TEXT
   end
 
   def icon
     'fa-file-text'
+  end
+
+  def update(params)
+    super(params)
   end
 end

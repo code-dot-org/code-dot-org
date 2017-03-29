@@ -35,16 +35,18 @@ class Eval < Blockly
   end
 
   def self.create_from_level_builder(params, level_params)
-    create!(level_params.merge(
-      user: params[:user],
-      game: Game.eval,
-      level_num: 'custom',
-      properties: {
-        solution_blocks: params[:program] || '',
-        toolbox_blocks: "<xml>#{toolbox}</xml>",
-        use_contract_editor: true
-      }
-    ))
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.eval,
+        level_num: 'custom',
+        properties: {
+          solution_blocks: params[:program] || '',
+          toolbox_blocks: "<xml>#{toolbox}</xml>",
+          use_contract_editor: true
+        }
+      )
+    )
   end
 
   def self.toolbox

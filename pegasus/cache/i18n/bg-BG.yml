@@ -271,6 +271,8 @@
   just_did_accelerated: "Току-що завърших ускореният курс - Проверете го! @codeorg"
   twitter_teach_cs: 9 от 10 човека са съгласни, че в училищата трябва да се учат компютърни
     науки. http://youtu.be/nKIu9yen5nc. Посетете https://code.org/.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Научете се да програмирате с "Часът на кодирането"
   beyond_hoc: "След Часа по Кодиране"
   what_gender: "Какъв пол сте?"
@@ -358,6 +360,7 @@
   homepage_action_text_volunteers: "Технически доброволци се търсят"
   homepage_action_text_codevideo: "Гледайте видеото"
   homepage_action_text_teachervideo: "Гледайте видеото"
+  homepage_action_text_watchvideo: "Гледайте видеото"
   homepage_action_text_girlvideo: "Вдъхновете момиче"
   homepage_action_text_learn: "Започнете обучение"
   homepage_action_text_signpetition: "Подпишете петицията"
@@ -492,26 +495,63 @@
   minecraft_adventurer_button: "Старт"
   minecraft_no_internet: "Нямате интернет?"
   minecraft_download_adventurer: "Изтегляне на офлайн версията на Minecraft авантюрист."
-  minecraft_store_camps: Microsoft Store Hour of Code лагери
-  minecraft_host_event: "Организирай Minecraft Hour of Code събитие"
-  minecraft_youthspark_continue_learning: "Продължи обучението с Microsoft YouthSpark"
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}"> Включете се</a> в
-    Hour of Code лагерите на Microsoft Store в Австралия, Канада, Пуерто Рико или
-    Сащ. Ще се научите как да се съчетавате вашата креативност с програмиране.
-  minecraft_teach_resources: "Ресурси за учители и урочни планове."
-  minecraft_leader_guide: "Изтеглете ресурси, които ще ви помогнат да планирате и
-    водите събитие."
-  minecraft_facilitating_event: "Подпомагате ли събитие?"
-  minecraft_join_online_training: "Присъединете се към Microsoft и Minecraft онлайн
-    обучение (само на английски) на 22 или 29 ноември"
-  minecraft_youthspark_create_your_future: "Каквото и да ви вълнува, можете да използвате
-    компютърните науки за да вдъхнете живот на въображението си, да създавате и да
-    направите бъдеще, което е само Ваше."
-  minecraft_youthspark_tools: <a href="%{youthspark_link}"> Microsoft YouthSpark</a>
-    предоставя безплатни инструменти и ресурси, за да преследвате страстта си.
   minecraft_subtitle: Minecraft Hour of Code
+  sports_page_title: "Спортен Hour of Code"
+  sports_og_title: "Уроци за спортен Hour of Code"
+  sports_og_description: "Изберете между NBA и WNBA или от всички спортни уроци за
+    кодиране."
+  sports_title: "Програмирай своя спортна игра"
+  sports_watch_video: "Гледайте видеото"
+  sports_video_title: "Опитай. Всеки може да се научи."
+  sports_select_theme: "Изберете вашата обучителна тема"
+  sports_basketball_title: "Направете баскетболна игра"
+  sports_all_sports_title: "Програмирай свой собствен спорт"
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
   watch_inspirational_videos: "Преди да започнете, гледайте едно от тези вдъхновяващи
     видеа"
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: "Вдъхновете момиче"
+  video_title_cs_intro: "Въведение в компютърните науки"
+  video_title_schools_dont_teach: "Това, което повечето училища не преподават"
+  video_title_obama: "Президентът Обама за компютърните науки"
+  video_title_hoc_is_here: Hour of Code е тук - всеки може да се научи
+  video_title_anybody_can_learn: "Всеки може да се научи"
+  video_title_draymond_green: Hour of Code с Draymond Green
+  video_title_russell_okung: Hour of Code с Russell Okung
+  video_title_real_madrid: Russell Okung с Real Madrid
+  video_title_marco_belinelli: Hour of Code с Marco Belinelli
+  video_title_chris_bosh: "Крис Бош за компютърните науки"
+  video_1min: 1 мин.
+  video_2min: 2 мин.
+  video_5min: 5 мин.
   speak_another_language: "Говорите друг език?"
   help_translate: "Помогнете ни с превода."
   no_internet: "Нямате интернет?"
@@ -734,7 +774,7 @@
   dashboard_navigation_section_student_progress: "Ученически акаунти и прогрес"
   dashboard_navigation_section_teacher_progress: "Прогреса Ви в курса"
   dashboard_navigation_section_lesson_plans: "Учебни планове и ресурси"
-  dashboard_navigation_section_community: "Помощ и Общност"
+  dashboard_navigation_section_community: "Помощ"
   dashboard_navigation_section_pd: "Професионално развитие"
   dashboard_navigation_section_speakers: "Компютърни науки <br/> гости говорители"
   dashboard_navigation_all_sections: "Ученически акаунти и прогрес"
@@ -769,7 +809,7 @@
   dashboard_sections_table_secret: "Тип парола за влизане"
   dashboard_sections_table_grade: "Клас"
   dashboard_sections_table_course: "Курс"
-  dashboard_sections_table_stage_extras: "Еекстри"
+  dashboard_sections_table_stage_extras: "Екстри"
   dashboard_sections_table_students: "Ученици"
   dashboard_sections_table_code: "Код за раздел"
   dashboard_sections_name: "Име на раздел"
@@ -794,7 +834,7 @@
   dashboard_sections_move_to_section: "Премести в раздел:"
   dashboard_sections_enter_code: "Въведете код на раздел:"
   dashboard_sections_code_placeholder: 6 знаков код (ABCDEF)
-  dashboard_sections_other_section: "Друг раздел"
+  dashboard_sections_other_section: "Друг учител"
   dashboard_sections_both_sections: "Желаете ли student(s) да бъдат в двата раздела?"
   dashboard_sections_yes_both: "Да, искам да копирате student(s) да бъде в този текущ
     раздел и новия раздел"
@@ -879,7 +919,7 @@
   dashboard_course1: "Курс 1:"
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
-  dashboard_course4: "Курс 4 (бета): "
+  dashboard_course4: "Курс 4: "
   dashboard_unplugged: "Ако не разполагате с компютри, <a href='%{unplugged_url}'>
     Опитайте тези уроци без компютър</a> в класната стая."
   dashboard_curriculum: "Учебна програма"
@@ -952,13 +992,14 @@
     target="_blank"> запазят неизползвания код</a> в работната област, така искаме
     да насърчим експериментирането! Вижте всички наши нови функции и нека разберем
     какво мислите.
-  dashboard_announce_csp_widgets_message: CS Principles is a high school course that
-    teaches several concepts including text compression, encoding images with bits
-    and bytes, cryptography, and Internet protocol. Now you can use the widgets used
-    to teach these concepts as standalone tools in any computer science course.
+  dashboard_announce_csp_widgets_message: Looking for some fun ways to teach your
+    class how the Internet works, how cryptography keeps data secure, and other concepts?
+    We’ve taken the best interactive tools from our Computer Science Principles curriculum
+    and released standalone widgets you can use at any time!
   dashboard_announce_learn_more_button: "Научете повече"
   dashboard_announce_try_now_button: "Опитайте сега"
   dashboard_announce_host_an_hour_button: "Стани домакин на Hour of Code"
+  dashboard_announce_watch_video_button: "Гледай видео"
   dashboard_announce_petition: "Като учител, Вие трябва да намерите подход, така че
     да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
     Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
@@ -966,6 +1007,7 @@
     зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно
     образование."
   dashboard_announce_petition_button: "Добавете името си"
+  dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_all: "Получавайте информация за нови функции и актуализации на
     нашия учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните
     съобщения.</a>"
@@ -974,21 +1016,42 @@
     вас да ни помогнете да достигнем до повече ученици от преди. <a href='%{signup_url}'
     target='_blank'> Регистрирайте Вашето "час на кода" събитие</a> и помогнете и
     на друг учител да научи, че всеки може да започне обучение по компютърни науки.
-  dashboard_announce_hoc_scaling: "ПРЕДУПРЕЖДЕНИЕ за учители: курсове 1-4 и ускореният
-    курс, поради голям трафик от милиони ученици, правещи Hour of Code, <b>Code Studio
-    няма да записват или докладват ученическия напредък през декември 3-11</b>. Ние
-    препоръчваме по време на Hour of Code дейността с вашия клас да празнувате CS
-    edu Week. Учениците няма да отбележат напредък тази седмица, но ще спечелят сертификат."
   dashboard_announce_mc_launch: "Един от нашите най-популярни уроци сега има продължение!
     Новият Minecraft дизайнер позволява да създадете свои правила в Minecraft света.
     Можете да създаде напълно уникален Minecraft опит, а след това да го споделите
     с приятели или да играете на телефоните си. Направете го с класа си за Hour of
     Code."
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
+  dashboard_announce_hoc_scaling_progress: "Моля, обърнете внимание, че ние няма да
+    записваме напредъка на учениците в този курс от 3-11 декември поради нивото на
+    трафик, който нашия сайт получава за Hour of Code през това време.  Ще можете
+    да виждате напредъка учениците от преди 3 декември.  Ние ще се върнем към предишния
+    режим след тази седмица."
+  dashboard_announce_how_code_studio: "Не е нужен опит, за да започнете да изучавате
+    компютърни науки в класната стая. Code.org предлага учебни програми, учебни планове,
+    висококачествени професионални обучителни програми и тонове страхотни инструменти
+    за всички класове&mdash; всичко необходимо, безплатно. Чудите се откъде да започнете?
+    Изтеглете <a href='%{video_download_url}'> това видео</a>!"
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
+  dashboard_announce_teacher_recruitment: Teachers like you are leading the computer
+    science education movement. You can participate in high-quality K-12th grade professional
+    learning programs <strong>at absolutely no cost to you or your school</strong>.
+    Take the lead on computer science in your school, and apply for professional learning.
+  dashboard_announce_student_privacy: At Code.org, we take student privacy very seriously.
+    To protect your students’ privacy, we have made a change to your section’s login
+    page to avoid displaying full names. Even though this update should reduce privacy
+    concerns for the login page, we still encourage users to <i>not use full names
+    for students</i>.
+  dashboard_announce_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
+    Your students could be featured in Code.org''s next viral video encouraging students
+    to take the AP CS Principles exam this year. We''re inviting all CS Principles
+    students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook
+    saying "I''m taking the #APCSP exam because..." The best submissions will be featured
+    in our video and the winning students will receive Code.org swag!'
   code_hoc_coming: "Часът на кода е тук - декември 8-14!"
   code_sign_up: "Регистрирайте се за участие по време на CS седмицата на образованието"
   host_an_hour: "Домакин на час"
@@ -1119,12 +1182,18 @@
   course2_name: "Курс 2"
   course3_name: "Курс 3"
   course4_name: "Курс 4"
+  coursea-draft_name: Course A
+  courseb-draft_name: Course B
+  coursec-draft_name: Course C
+  coursed-draft_name: Course D
+  coursee-draft_name: Course E
+  coursef-draft_name: Course F
   accelerated_name: "Ускорен курс"
-  cspunit1_name: "Урок 1: Цифрова информация"
-  cspunit2_name: "Раздел 2: Интернет"
-  cspunit3_name: "Раздел 3: програмиране"
-  cspunit4_name: "Раздел 4: данни"
-  cspunit5_name: "Раздел 5: Изследване и създаване на PT"
+  cspunit1_name: "(стар) Урок 1: Цифрова информация"
+  cspunit2_name: "(стар) Раздел 2: Интернет"
+  cspunit3_name: "(стар) Раздел 3: програмиране"
+  cspunit4_name: "(стар) Раздел 4: данни"
+  cspunit5_name: "(стар) Раздел 5: Изследване и създаване на PT"
   cspunit6_name: "Пост AP: Бази данни в приложения"
   csd1_name: 'Unit 1: Computers and Logic'
   csd2_name: 'Unit 2: Web Development'
@@ -1134,6 +1203,9 @@
   csp2_name: "Част 1 - Дигитална информация"
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
+  csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Пълен тест - 50 въпроса"
   cspexam1-mWU7ilDYM9_name: "Тест част 1-25 въпроси"
   cspexam2-AKwgAh1ac5_name: "Тест част 2 - 25 въпроси"
@@ -1159,12 +1231,15 @@
   math_category_name: "Математика"
   hoc_category_name: "Час на Кодирането"
   csf_category_name: CS основи
+  csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: '"15-" 16 CS принципи'
   csp17_category_name: '"15-" 16 CS принципи'
   cspexams_category_name: CS принципи практически тест
   research_studies_category_name: Research Studies
   applab_name: "Лаборатория за приложения"
+  basketball_name: "Направете баскетболна игра"
+  sports_name: "Спорт"
   applab_gradelevel: "Възраст 13 +"
   applab_shortdescription_congrats: App Lab е програмна среда, в която създавате прости
     приложения. Създайте дизайна на приложението си, програмирайте с блокове или JavaScript,
@@ -1869,28 +1944,7 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
-  sports_watch_video: Watch the video
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: Inspire a girl
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  dashboard_announce_watch_video_button: Watch video
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
+  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
+    program here</a>.
+  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
+    18 years old.

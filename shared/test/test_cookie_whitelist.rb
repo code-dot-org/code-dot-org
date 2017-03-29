@@ -4,9 +4,9 @@ require 'cdo/rack/whitelist'
 class CookieWhitelistTest < Minitest::Test
   include Rack::Test::Methods
 
-  ESCAPED_KEY = '1;2&3=4%'
-  ESCAPED_VALUE = '3;4&5=6%'
-  HEADERS = REMOVED_HEADERS.map{|x| x.split(':')[0]}
+  ESCAPED_KEY = '1;2&3=4%'.freeze
+  ESCAPED_VALUE = '3;4&5=6%'.freeze
+  HEADERS = REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   COOKIE_CONFIG = {
     behaviors: [
       {
@@ -26,7 +26,7 @@ class CookieWhitelistTest < Minitest::Test
       }
     ],
     default: {cookies: 'none', headers: HEADERS}
-  }
+  }.freeze
 
   def build_rack_mock_session
     @session ||= Rack::MockSession.new(app)

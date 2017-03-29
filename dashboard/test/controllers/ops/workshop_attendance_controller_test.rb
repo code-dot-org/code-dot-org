@@ -6,17 +6,17 @@ module Ops
 
     setup do
       @admin = create :admin
-      sign_in @admin
 
       @attendance = create(:attendance)
       @cohort = @attendance.segment.workshop.cohorts.first
       @cohort_district = create :cohorts_district, cohort: @cohort
       @cohort = @cohort.reload
+      sign_in @admin
     end
 
     test 'District Contact can view attendance for all workshops in a cohort' do
       #87054994 part 1
-      assert_routing({ path: "#{API}/attendance/cohort/1", method: :get}, { controller: 'ops/workshop_attendance', action: 'cohort', cohort_id: '1'})
+      assert_routing({path: "#{API}/attendance/cohort/1", method: :get}, {controller: 'ops/workshop_attendance', action: 'cohort', cohort_id: '1'})
 
       sign_out @admin
       cohort = @cohort
@@ -32,7 +32,7 @@ module Ops
     test 'District Contact can view attendance per teacher in their district' do
       #87054994 part 2
       # Get ALL attendance for a single teacher, grouped by workshop
-      assert_routing({ path: "#{API}/attendance/teacher/1", method: :get}, { controller: 'ops/workshop_attendance', action: 'teacher', teacher_id: '1'})
+      assert_routing({path: "#{API}/attendance/teacher/1", method: :get}, {controller: 'ops/workshop_attendance', action: 'teacher', teacher_id: '1'})
 
       sign_out @admin
       cohort = @cohort
@@ -72,7 +72,7 @@ module Ops
 
       # Facilitator gets a list of all teachers in the workshop (e.g., GET /ops/workshops/1/teachers)
       # Facilitator POSTs an object to the segment path: {attendance => [[id, status], [id, status], ..]}
-      assert_routing({ path: "#{API}/segments/1/attendance/batch", method: :post }, { controller: 'ops/workshop_attendance', action: 'batch', segment_id: '1'})
+      assert_routing({path: "#{API}/segments/1/attendance/batch", method: :post}, {controller: 'ops/workshop_attendance', action: 'batch', segment_id: '1'})
 
       segment = @attendance.segment
 
@@ -96,13 +96,13 @@ module Ops
 
       teacher2_attendance = WorkshopAttendance.find_by_teacher_id(teacher2.id)
       assert_equal 'present', teacher2_attendance.status
-      assert_equal nil, teacher2_attendance.notes
+      assert_nil teacher2_attendance.notes
     end
 
     # Test index + CRUD controller actions
 
     test 'Ops team can list all attendance' do
-      assert_routing({ path: "#{API}/segments/1/attendance", method: :get }, { controller: 'ops/workshop_attendance', action: 'index', segment_id: '1'})
+      assert_routing({path: "#{API}/segments/1/attendance", method: :get}, {controller: 'ops/workshop_attendance', action: 'index', segment_id: '1'})
 
       get "/#{API}/segments/#{@attendance.segment.id}/attendance"
       assert_response :success
@@ -133,7 +133,7 @@ module Ops
     end
 
     test 'Ops team can mark attendance' do
-      assert_routing({ path: "#{API}/segments/1/attendance", method: :post }, { controller: 'ops/workshop_attendance', segment_id: '1', action: 'create' })
+      assert_routing({path: "#{API}/segments/1/attendance", method: :post}, {controller: 'ops/workshop_attendance', segment_id: '1', action: 'create'})
 
       teacher = create(:teacher)
       cohort = @attendance.segment.workshop.cohorts.first
@@ -153,7 +153,7 @@ module Ops
     end
 
     test 'read attendance info' do
-      assert_routing({ path: "#{API}/attendance/1", method: :get }, { controller: 'ops/workshop_attendance', action: 'show', id: '1' })
+      assert_routing({path: "#{API}/attendance/1", method: :get}, {controller: 'ops/workshop_attendance', action: 'show', id: '1'})
 
       get "/#{API}/attendance/#{@attendance.id}"
       assert_response :success
@@ -173,7 +173,7 @@ module Ops
     end
 
     test 'delete attendance' do
-      assert_routing({ path: "#{API}/attendance/1", method: :delete }, { controller: 'ops/workshop_attendance', action: 'destroy', id: '1' })
+      assert_routing({path: "#{API}/attendance/1", method: :delete}, {controller: 'ops/workshop_attendance', action: 'destroy', id: '1'})
 
       assert_difference 'WorkshopAttendance.count', -1 do
         delete "/#{API}/attendance/#{@attendance.id}"

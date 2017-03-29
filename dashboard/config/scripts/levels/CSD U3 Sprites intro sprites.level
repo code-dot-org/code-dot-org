@@ -7,15 +7,8 @@
   "properties": {
     "skin": "gamelab",
     "code_functions": {
-      "drawSprites": {
-        "category": ""
-      },
-      "var sprite = createSprite": {
-        "params": [
-
-        ],
-        "category": ""
-      }
+      "drawSprites": null,
+      "var sprite = createSprite": null
     },
     "edit_code": true,
     "embed": "false",

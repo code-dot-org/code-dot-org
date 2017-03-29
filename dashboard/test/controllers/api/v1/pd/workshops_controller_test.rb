@@ -3,14 +3,17 @@ require 'test_helper'
 class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   freeze_time
 
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @admin = create(:admin)
     @organizer = create(:workshop_organizer)
     @facilitator = create(:facilitator)
 
     @workshop = create(:pd_workshop, organizer: @organizer, facilitators: [@facilitator])
     @standalone_workshop = create(:pd_workshop)
+  end
 
+  setup do
     # Don't actually call the geocoder.
     Pd::Workshop.stubs(:process_location)
   end
@@ -44,6 +47,25 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal workshop_2.id, response[0]['id']
   end
 
+  test 'workshops_user_enrolled_in returns workshops the user is enrolled in' do
+    teacher = create :teacher
+    sign_in(teacher)
+    other_teacher = create :teacher
+
+    workshop_2 = create :pd_workshop
+
+    enrollment_1 = create(:pd_enrollment, workshop: @workshop, email: teacher.email, user_id: nil)
+    enrollment_2 = create(:pd_enrollment, workshop: workshop_2, email: 'other@example.com', user_id: teacher.id)
+    create(:pd_enrollment, workshop: @workshop, email: other_teacher.email, user_id: other_teacher.id)
+
+    get :workshops_user_enrolled_in
+
+    response = JSON.parse(@response.body)
+    assert_equal 2, response.length
+    assert_equal enrollment_1.code, response.find {|workshop| @workshop.id == workshop['id']}['enrollment_code']
+    assert_equal enrollment_2.code, response.find {|workshop| workshop_2.id == workshop['id']}['enrollment_code']
+  end
+
   test 'workshop organizers cannot list workshops they are not organizing' do
     sign_in create(:workshop_organizer)
     get :index
@@ -73,47 +95,118 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     workshop_in_progress.start!
     assert_equal Pd::Workshop::STATE_IN_PROGRESS, workshop_in_progress.state
 
-    get :index, state: Pd::Workshop::STATE_IN_PROGRESS
+    get :index, params: {state: Pd::Workshop::STATE_IN_PROGRESS}
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal 1, response.length
     assert_equal workshop_in_progress.id, response[0]['id']
   end
 
+  # Action: filter
+  test 'admins can filter' do
+    sign_in @admin
+    get :filter
+    assert_response :success
+  end
+
+  test 'organizers can filter' do
+    sign_in @organizer
+    get :filter
+    assert_response :success
+  end
+
+  test 'facilitators can filter' do
+    sign_in @facilitator
+    get :filter
+    assert_response :success
+  end
+
+  test 'filter defaults' do
+    sign_in @admin
+    get :filter
+    response = JSON.parse(@response.body)
+    assert_nil response['limit']
+    assert_equal 2, response['total_count']
+    assert_empty response['filters']
+    assert_equal 2, response['workshops'].count
+  end
+
+  test 'filter limit' do
+    # 10 more workshops, bringing the total to 12
+    10.times do
+      create :pd_workshop
+    end
+
+    sign_in @admin
+    get :filter, params: {limit: 5}
+    response = JSON.parse(@response.body)
+    assert_equal 5, response['limit']
+    assert_equal 12, response['total_count']
+    assert_empty response['filters']
+    assert_equal 5, response['workshops'].count
+  end
+
+  test 'filters' do
+    # 10 workshops from different organizers that will be filtered out
+    10.times do
+      create :pd_workshop, num_sessions: 1
+    end
+
+    # Same organizer
+    organizer = create :workshop_organizer
+    earlier_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now
+    later_workshop = create :pd_workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now + 1.week
+
+    sign_in @admin
+    filters = {organizer_id: organizer.id.to_s, order_by: 'date desc'}
+    get :filter, params: filters
+    response = JSON.parse(@response.body)
+
+    assert_equal 2, response['workshops'].count
+    assert_equal [later_workshop.id, earlier_workshop.id], response['workshops'].map {|w| w['id']}
+    assert_equal filters.stringify_keys, response['filters']
+  end
+
   # Action: Show
 
   test 'admins can view workshops' do
     sign_in @admin
-    get :show, id: @workshop.id
+    get :show, params: {id: @workshop.id}
     assert_response :success
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
 
   test 'workshop organizers can view their workshops' do
     sign_in @organizer
-    get :show, id: @workshop.id
+    get :show, params: {id: @workshop.id}
     assert_response :success
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
 
-  test 'workshop organizers cannot view a workshop they are not organizing' do
-    sign_in @organizer
-    get :show, id: @standalone_workshop.id
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :show,
+    name: 'workshop organizers cannot view a workshop they are not organizing',
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  test 'facilitators can view a workshop they are facilitating' do
-    sign_in @facilitator
-    get :show, id: @workshop
-    assert_response :success
+  test_user_gets_response_for(
+    :show,
+    name: 'facilitators can view a workshop they are facilitating',
+    user: -> {@facilitator},
+    params: -> {{id: @workshop}}
+  ) do
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
 
-  test 'facilitators cannot view a workshop they are not facilitating' do
-    sign_in @facilitator
-    get :show, id: @standalone_workshop
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :show,
+    name: 'facilitators cannot view a workshop they are not organizing',
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
   # Action: Create
 
@@ -122,7 +215,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
-      post :create, pd_workshop: workshop_params
+      post :create, params: {pd_workshop: workshop_params}
       assert_response :success
     end
 
@@ -136,23 +229,26 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
-      post :create, pd_workshop: workshop_params
+      post :create, params: {pd_workshop: workshop_params}
       assert_response :success
     end
   end
 
-  test 'facilitators cannot create workshops' do
-    sign_in @facilitator
-    post :create, pd_workshop: workshop_params
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :create,
+    name: 'facilitators cannot create workshops',
+    method: :post,
+    response: :forbidden,
+    user: :facilitator,
+    params: -> {{pd_workshop: workshop_params}}
+  )
 
   # Action: Destroy
 
   test 'organizers can delete their workshops' do
     sign_in @organizer
     assert_difference 'Pd::Workshop.count', -1 do
-      delete :destroy, id: @workshop.id
+      delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success
   end
@@ -160,57 +256,69 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'admins can delete any workshop' do
     sign_in @admin
     assert_difference 'Pd::Workshop.count', -1 do
-      delete :destroy, id: @workshop.id
+      delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success
   end
 
-  test 'organizers cannot delete workshops they do not own' do
-    sign_in @organizer
-    delete :destroy, id: @standalone_workshop.id
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :destroy,
+    name: 'organizers cannot delete workshops they do not own',
+    method: :delete,
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  test 'facilitators cannot delete workshops' do
-    sign_in @facilitator
-    delete :destroy, id: @workshop.id
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :destroy,
+    name: 'facilitators cannot delete workshops',
+    method: :delete,
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id}}
+  )
 
   # Action: Update
 
   test 'admins can update any workshop' do
     sign_in @admin
     Pd::Workshop.expects(:process_location)
-    put :update, id: @workshop.id, pd_workshop: workshop_params
+    put :update, params: {id: @workshop.id, pd_workshop: workshop_params}
     assert_response :success
   end
 
   test 'organizers can update their workshops' do
     sign_in @organizer
     Pd::Workshop.expects(:process_location)
-    put :update, id: @workshop.id, pd_workshop: workshop_params
+    put :update, params: {id: @workshop.id, pd_workshop: workshop_params}
     assert_response :success
   end
 
   test 'organizers cannot update workshops they are not organizing' do
     sign_in @organizer
-    put :update, id: @standalone_workshop.id, pd_workshop: workshop_params
+    put :update, params: {
+      id: @standalone_workshop.id,
+      pd_workshop: workshop_params
+    }
     assert_response :forbidden
   end
 
-  test 'facilitators cannot update workshops' do
-    sign_in @facilitator
-    put :update, id: @workshop.id, pd_workshop: workshop_params
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :update,
+    name: 'facilitators cannot update workshops',
+    method: :put,
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
+  )
 
   test 'updating with the same location_address does not re-process location' do
     sign_in @organizer
     params = workshop_params
     params[:location_address] = @workshop.location_address
     Pd::Workshop.expects(:process_location).never
-    put :update, id: @workshop.id, pd_workshop: params
+    put :update, params: {id: @workshop.id, pd_workshop: params}
   end
 
   test 'updating with notify true sends detail change notification emails' do
@@ -225,7 +333,11 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     Pd::WorkshopMailer.any_instance.expects(:facilitator_detail_change_notification).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:organizer_detail_change_notification).returns(mock_mail)
 
-    put :update, id: @workshop.id, pd_workshop: workshop_params, notify: true
+    put :update, params: {
+      id: @workshop.id,
+      pd_workshop: workshop_params,
+      notify: true
+    }
   end
 
   test 'updating with notify false does not send detail change notification emails' do
@@ -237,7 +349,11 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     end
     Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).never
 
-    put :update, id: @workshop.id, pd_workshop: workshop_params, notify: false
+    put :update, params: {
+      id: @workshop.id,
+      pd_workshop: workshop_params,
+      notify: false
+    }
   end
 
   # Update sessions via embedded attributes
@@ -250,7 +366,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     session_end = tomorrow_at 17
     params = {sessions_attributes: [{start: session_start, end: session_end}]}
 
-    put :update, id: @workshop.id, pd_workshop: params
+    put :update, params: {id: @workshop.id, pd_workshop: params}
     assert_response :success
     @workshop.reload
     assert_equal 1, @workshop.sessions.count
@@ -273,7 +389,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       sessions_attributes: [{id: session.id, start: session_updated_start, end: session_updated_end}]
     }
 
-    put :update, id: @workshop.id, pd_workshop: params
+    put :update, params: {id: @workshop.id, pd_workshop: params}
     assert_response :success
     @workshop.reload
     assert_equal 1, @workshop.sessions.count
@@ -290,7 +406,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     params = {sessions_attributes: [{id: session.id, _destroy: true}]}
 
-    put :update, id: @workshop.id, pd_workshop: params
+    put :update, params: {id: @workshop.id, pd_workshop: params}
     assert_response :success
     @workshop.reload
     assert_equal 0, @workshop.sessions.count
@@ -302,10 +418,10 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal 1, @workshop.facilitators.length
     assert_equal @facilitator, @workshop.facilitators.first
 
-    params = workshop_params.merge({
-      facilitators: [new_facilitator.id]
-    })
-    put :update, id: @workshop.id, pd_workshop: params
+    params = workshop_params.merge(
+      {facilitators: [new_facilitator.id]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
     assert_response :success
     @workshop.reload
     assert_equal 1, @workshop.facilitators.length
@@ -321,12 +437,12 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
 
-    post :start, id: @workshop.id
+    post :start, params: {id: @workshop.id}
     assert_response :success
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
 
-    post :end, id: @workshop.id
+    post :end, params: {id: @workshop.id}
     assert_response :success
     @workshop.reload
     assert_equal 'Ended', @workshop.state
@@ -339,12 +455,12 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
 
-    post :start, id: @workshop.id
+    post :start, params: {id: @workshop.id}
     assert_response :success
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
 
-    post :end, id: @workshop.id
+    post :end, params: {id: @workshop.id}
     assert_response :success
     @workshop.reload
     assert_equal 'Ended', @workshop.state
@@ -355,10 +471,10 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
 
-    post :start, id: @workshop.id
+    post :start, params: {id: @workshop.id}
     assert_response :forbidden
 
-    post :end, id: @workshop.id
+    post :end, params: {id: @workshop.id}
     assert_response :forbidden
     @workshop.reload
     assert_equal 'Not Started', @workshop.state
@@ -366,14 +482,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # No access
 
-  test 'teachers cannot access workshops' do
-    sign_in create(:teacher)
-    all_forbidden
-  end
-
-  test 'normal users cannot access workshops' do
-    sign_in create(:user)
-    all_forbidden
+  [:teacher, :user].each do |user_type|
+    test_user_gets_response_for :index, response: :forbidden, user: user_type
+    test_user_gets_response_for :show, response: :forbidden, user: user_type, params: -> {{id: @workshop.id}}
   end
 
   test 'anyone can see the K5 public map index' do
@@ -381,39 +492,44 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  test 'facilitators can get summary for their workshops' do
-    sign_in @facilitator
-    get :summary, id: @workshop.id
-    assert_response :success
-  end
+  test_user_gets_response_for(
+    :summary,
+    name: 'facilitators can get summary for their workshops',
+    user: -> {@facilitator},
+    params: -> {{id: @workshop.id}}
+  )
 
-  test 'facilitators cannot get summary for other workshops' do
-    sign_in @facilitator
-    get :summary, id: @standalone_workshop.id
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :summary,
+    name: 'facilitators cannot get summary for other workshops',
+    response: :forbidden,
+    user: -> {@facilitator},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
-  test 'organizers can get summary for their workshops' do
-    sign_in @organizer
-    get :summary, id: @workshop.id
-    assert_response :success
-  end
+  test_user_gets_response_for(
+    :summary,
+    name: 'organizers can get summary for their workshops',
+    user: -> {@organizer},
+    params: -> {{id: @workshop.id}}
+  )
 
-  test 'organizers cannot get summary for other workshops' do
-    sign_in @organizer
-    get :summary, id: @standalone_workshop.id
-    assert_response :forbidden
-  end
+  test_user_gets_response_for(
+    :summary,
+    name: 'organizers cannot get summary for other workshops',
+    response: :forbidden,
+    user: -> {@organizer},
+    params: -> {{id: @standalone_workshop.id}}
+  )
 
   test 'summary' do
     sign_in @admin
     workshop = create :pd_workshop, num_sessions: 3
     workshop.start!
 
-    get :summary, id: workshop.id
+    get :summary, params: {id: workshop.id}
     assert_response :success
     response = JSON.parse(@response.body)
-    puts response
 
     assert_equal workshop.state, response['state']
     assert_equal workshop.section.code, response['section_code']
@@ -421,13 +537,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   private
-
-  def all_forbidden
-    get :index
-    assert_response :forbidden
-    get :show, id: @workshop.id
-    assert_response :forbidden
-  end
 
   def tomorrow_at(hour, minute = nil)
     tomorrow = Time.zone.now + 1.day

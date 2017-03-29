@@ -8,25 +8,25 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
-    get :edit, id: @level_source.id
+    get :edit, params: {id: @level_source.id}
     assert_response :success
     assert_equal([], assigns(:view_options)[:callouts])
   end
 
   test "should not get edit if hidden" do
     assert_raises(ActiveRecord::RecordNotFound) do
-      get :edit, id: @hidden_level_source.id
+      get :edit, params: {id: @hidden_level_source.id}
     end
   end
 
   test "should get show" do
-    get :show, id: @level_source.id
+    get :show, params: {id: @level_source.id}
     assert_response :success
     assert_equal([], assigns(:view_options)[:callouts])
   end
 
   test "should get show with embed" do
-    get :show, id: @level_source.id, embed: '1'
+    get :show, params: {id: @level_source.id, embed: '1'}
     assert_response :success
 
     app_options = assigns(:view_options)
@@ -43,19 +43,21 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
   test "should not get show if hidden" do
     assert_raises(ActiveRecord::RecordNotFound) do
-      get :show, id: @hidden_level_source.id
+      get :show, params: {id: @hidden_level_source.id}
     end
   end
 
   test "should get show if hidden and admin" do
     sign_in @admin
-    get :show, id: @hidden_level_source.id
+    get :show, params: {id: @hidden_level_source.id}
     assert_response :success
   end
 
-  test "should update if admin" do
-    sign_in @admin
-    patch :update, level_source: {hidden: true}, id: @level_source
+  test "should update if we have block share permission" do
+    user = create(:user)
+    user.permission = UserPermission::BLOCK_SHARE
+    sign_in user
+    patch :update, params: {level_source: {hidden: true}, id: @level_source}
 
     assert_redirected_to @level_source
     assert @level_source.reload.hidden?
@@ -64,21 +66,26 @@ class LevelSourcesControllerTest < ActionController::TestCase
   test "update deletes gallery activities" do
     sign_in @admin
 
-    create :gallery_activity, activity: create(:activity, level: @level_source.level, level_source_id: @level_source.id)
-    create :gallery_activity, activity: create(:activity, level: @level_source.level, level_source_id: @level_source.id)
-    create :gallery_activity, activity: create(:activity, level: @level_source.level)
+    create :gallery_activity,
+      user_level: create(:user_level, level: @level_source.level),
+      level_source: @level_source
+    create :gallery_activity,
+      user_level: create(:user_level, level: @level_source.level),
+      level_source: @level_source
+    create :gallery_activity,
+      user_level: create(:user_level, level: @level_source.level)
 
     assert_difference('GalleryActivity.count', -2) do # delete two matching above
-      patch :update, level_source: {hidden: true}, id: @level_source
+      patch :update, params: {level_source: {hidden: true}, id: @level_source}
     end
 
     assert_redirected_to @level_source
     assert @level_source.reload.hidden?
   end
 
-  test "should not update if not admin" do
+  test "should not update if we do not have block share permission" do
     sign_in create(:user)
-    patch :update, level_source: {hidden: true}, id: @level_source
+    patch :update, params: {level_source: {hidden: true}, id: @level_source}
 
     assert_response :forbidden
   end
@@ -112,7 +119,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
 
-    get :generate_image, id: level_source.id
+    get :generate_image, params: {id: level_source.id}
 
     assert_redirected_to level_source_image.s3_framed_url
   end
@@ -122,7 +129,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     level_source = create :level_source, level: artist_level
     level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
 
-    get :original_image, id: level_source.id
+    get :original_image, params: {id: level_source.id}
 
     assert_redirected_to level_source_image.s3_url
   end
@@ -132,7 +139,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     level_source = create :level_source, level: playlab_level
     level_source_image = create :level_source_image, level_source: level_source, image: 'S3'
 
-    get :generate_image, id: level_source.id
+    get :generate_image, params: {id: level_source.id}
 
     assert_redirected_to level_source_image.s3_url
   end
@@ -143,7 +150,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     create :level_source_image, level_source: level_source
 
     assert_raises(ActiveRecord::RecordNotFound) do
-      get :generate_image, id: level_source.id
+      get :generate_image, params: {id: level_source.id}
     end
   end
 
@@ -152,7 +159,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     level_source = create :level_source, level: level
     create :level_source_image, level_source: level_source
 
-    get :generate_image, id: level_source.id
+    get :generate_image, params: {id: level_source.id}
 
     assert_equal "max-age=36000, public", response.headers["Cache-Control"]
   end
@@ -162,14 +169,14 @@ class LevelSourcesControllerTest < ActionController::TestCase
     level_source = create :level_source, level: level
     create :level_source_image, level_source: level_source
 
-    get :original_image, id: level_source.id
+    get :original_image, params: {id: level_source.id}
 
     assert_equal "max-age=36000, public", response.headers["Cache-Control"]
   end
 
   test 'artist levelsource has sharing meta tags' do
     level_source = create(:level_source, level: Artist.first)
-    get :show, id: level_source.id
+    get :show, params: {id: level_source.id}
 
     assert_response :success
     assert_sharing_meta_tags(
@@ -182,7 +189,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
   test 'playlab levelsource has sharing meta tags' do
     level_source = create(:level_source, level: Studio.first)
-    get :show, id: level_source.id
+    get :show, params: {id: level_source.id}
 
     assert_response :success
 
@@ -193,42 +200,5 @@ class LevelSourcesControllerTest < ActionController::TestCase
       image_height: 400,
       apple_mobile_web_app: true
     )
-  end
-
-  test 'migrates old flappy levels' do
-    old_source = <<-XML
-      <xml>
-        <block type="flappy_whenRunButtonClick" deletable="false">
-          <next>
-            <block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title>
-              <next>
-                <block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    XML
-
-    new_source = <<-XML
-      <xml>
-        <block type="when_run" deletable="false">
-          <next>
-            <block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title>
-              <next>
-                <block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    XML
-
-    flappy_level = create :level, game: Game.find_by_name(Game::FLAPPY)
-    level_source = create :level_source, level: flappy_level, data: old_source
-
-    get :show, id: level_source.id
-
-    assert_equal LevelSource.find(level_source.id).data, new_source
   end
 end

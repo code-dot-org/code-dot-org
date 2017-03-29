@@ -1,5 +1,5 @@
 {
-  "filterGrades":"Grades",
+  "filterGrades":"I want a life partner",
   "filterGradesPre":"Pre-reader",
   "filterGrades25":"Grades 2-5",
   "filterGrades68":"Grades 6-8",
@@ -42,7 +42,7 @@
   "filterHeaderTutorialCountSingle":"1 result",
   "filterHeaderTutorialCountPlural":"{tutorial_count} results",
   "filterHeaderDefault":"Sort",
-  "filterHeaderDisplayWeight":"Top rated",
+  "filterHeaderDisplayWeight":"Recommended",
   "filterHeaderPopularityRank":"Most popular",
   "roboticsButtonText":"View robotics activities",
   "roboticsText":"Got robots? Use these activities and make a tangible Hour of Code for students of any age!",

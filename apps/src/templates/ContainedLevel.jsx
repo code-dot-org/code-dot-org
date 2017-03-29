@@ -7,8 +7,8 @@ import { setAwaitingContainedResponse } from '../redux/runState';
 
 const styles = {
   main: {
-    minHeight: 200,
-  }
+    marginBottom: '10px',
+  },
 };
 
 const ContainedLevel = React.createClass({

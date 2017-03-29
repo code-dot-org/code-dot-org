@@ -4,12 +4,14 @@ require 'nokogiri'
 require 'cdo/user_agent_parser'
 require 'cdo/graphics/certificate_image'
 require 'dynamic_config/gatekeeper'
+require 'cdo/shared_constants'
 
 module ApplicationHelper
   include LocaleHelper
   include ScriptLevelsHelper
   include ViewOptionsHelper
   include SurveyResultsHelper
+  include SharedConstants
 
   USER_AGENT_PARSER = UserAgentParser::Parser.new
 
@@ -63,21 +65,21 @@ module ApplicationHelper
     result = user_level.try(:best_result)
 
     if result == Activity::REVIEW_REJECTED_RESULT
-      'review_rejected'
+      LEVEL_STATUS.review_rejected
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
-      'review_accepted'
+      LEVEL_STATUS.review_accepted
     elsif user_level.try(:locked)
-      'locked'
+      LEVEL_STATUS.locked
     elsif user_level.try(:submitted)
-      'submitted'
+      LEVEL_STATUS.submitted
     elsif result.nil? || result == 0
-      'not_tried'
+      LEVEL_STATUS.not_tried
     elsif result >= Activity::FREE_PLAY_RESULT
-      'perfect'
+      LEVEL_STATUS.perfect
     elsif result >= Activity::MINIMUM_PASS_RESULT
-      'passed'
+      LEVEL_STATUS.passed
     else
-      'attempted'
+      LEVEL_STATUS.attempted
     end
   end
 
@@ -178,12 +180,14 @@ module ApplicationHelper
     # See also https://github.com/plataformatec/devise/blob/master/app/helpers/devise_helper.rb
     return "" if resource.errors.empty?
 
-    messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
+    messages = resource.errors.full_messages.map {|msg| content_tag(:li, msg)}.join
     sentence = resource.oauth? ?
       I18n.t("signup_form.additional_information") :
-      I18n.t("errors.messages.not_saved",
+      I18n.t(
+        "errors.messages.not_saved",
         count: resource.errors.count,
-        resource: resource.class.model_name.human.downcase)
+        resource: resource.class.model_name.human.downcase
+      )
 
     html = <<-HTML
     <div id="error_explanation">
@@ -206,7 +210,8 @@ module ApplicationHelper
     certificate_image_url(
       name: user.name,
       course: script.name,
-      course_title: data_t_suffix('script.name', script.name, 'title'))
+      course_title: data_t_suffix('script.name', script.name, 'title')
+    )
   end
 
   def minifiable_asset_path(path)
@@ -221,13 +226,13 @@ module ApplicationHelper
 
   # Check to see if we disabled signin from Gatekeeper
   def signin_button_enabled
-    Gatekeeper.allows('show_signin_button', where: { script_name: @script.try(:name) }, default: true)
+    Gatekeeper.allows('show_signin_button', where: {script_name: @script.try(:name)}, default: true)
   end
 
   # Check to see if the tracking pixel is enabled for this script
   def tracking_pixel_enabled
     return true if @script.nil?
-    Gatekeeper.allows('tracking_pixel_enabled', where: { script_name: @script.name }, default: true)
+    Gatekeeper.allows('tracking_pixel_enabled', where: {script_name: @script.name}, default: true)
   end
 
   def page_mode
@@ -241,6 +246,12 @@ module ApplicationHelper
       failure[:type] = share_failure.type
       failure[:contents] = share_failure.content unless share_failure.type == ShareFiltering::FailureType::PROFANITY
     end
+  end
+
+  # Wrapper function used to inhibit Brakeman (security static code analysis) warnings. To inhibit a false positive warning,
+  # wrap the code in question in this function.
+  def brakeman_no_warn(obj)
+    obj
   end
 
   private

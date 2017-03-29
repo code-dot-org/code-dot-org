@@ -4,23 +4,14 @@ class SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    session[:return_to] = params[:return_to]
+    session[:return_to] ||= params[:return_to]
     @already_hoc_registered = params[:already_hoc_registered]
     super
   end
 
   # POST /resource/sign_in
   def create
-    super do |user|
-      if user.persisted? && user.current_sign_in_ip
-        if UserGeo.find_by_user_id(user.id).nil?
-          UserGeo.create!(
-            user_id: user.id,
-            ip_address: user.current_sign_in_ip
-          )
-        end
-      end
-    end
+    super
   end
 
   # DELETE /resource/sign_out
@@ -34,8 +25,8 @@ class SessionsController < Devise::SessionsController
     # We actually need to hardcode this as Rails default responder doesn't
     # support returning empty response on GET request
     respond_to do |format|
-      format.all { head :no_content }
-      format.any(*navigational_formats) { redirect_to redirect_path }
+      format.all {head :no_content}
+      format.any(*navigational_formats) {redirect_to redirect_path}
     end
   end
 

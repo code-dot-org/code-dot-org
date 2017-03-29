@@ -39,7 +39,11 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        RakeUtils.rake 'dashboard:setup_db'
+        if ENV['CI'] && ENV['CIRCLE_NODE_INDEX'] != '1'
+          RakeUtils.rake_stream_output 'db:create db:test:prepare'
+        else
+          RakeUtils.rake 'dashboard:setup_db'
+        end
       end
     end
   end
@@ -60,7 +64,7 @@ namespace :install do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 end
 desc 'Install all OS dependencies.'
-task :install => ['install:all']
+task install: ['install:all']

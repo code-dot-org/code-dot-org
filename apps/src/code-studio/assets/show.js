@@ -3,6 +3,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ImagePicker = require('../components/ImagePicker');
+var SoundPicker = require('../components/SoundPicker');
 var Dialog = require('../dialog');
 
 /**
@@ -26,7 +27,9 @@ module.exports = function showAssetManager(assetChosen, typeFilter, onClose, opt
     onHidden: onClose
   });
 
-  ReactDOM.render(React.createElement(ImagePicker, {
+  let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
+
+  ReactDOM.render(React.createElement(pickerType, {
     typeFilter: typeFilter,
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
     useFilesApi: !!options.useFilesApi,
