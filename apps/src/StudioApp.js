@@ -398,8 +398,11 @@ StudioApp.prototype.init = function (config) {
         var event = fromBlocks ? "block-to-text" : "text-to-block";
         firehoseClient.putRecord(
           'analysis-events',
-          {study: 'block-and-text-transitions', event: event}
-        );
+          {
+            study: 'block-and-text-transitions',
+            event: event,
+            project_id: dashboard.project.getCurrentId()
+          });
         try {
           result = this.editor.toggleBlocks();
         } catch (err) {
