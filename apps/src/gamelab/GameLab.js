@@ -48,8 +48,15 @@ import {
 } from '../containedLevels';
 import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
+
+// The width and height in pixels of the thumbnail image to capture.
+const THUMBNAIL_SIZE = 180;
+
+// Number of ticks after which to capture a thumbnail image of the play space.
+const CAPTURE_TICK_COUNT = 250;
 
 var ButtonState = {
   UP: 0,
@@ -460,6 +467,7 @@ GameLab.prototype.reset = function (ignore) {
   // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
+  this.initialCaptureComplete = false;
   this.reportPreloadEventHandlerComplete_ = null;
   this.globalCodeRunsDuringPreload = false;
 
@@ -855,6 +863,7 @@ GameLab.prototype.onTick = function () {
 
     this.completePreloadIfPreloadComplete();
     this.completeSetupIfSetupComplete();
+    this.captureInitialImage();
     this.completeRedrawIfDrawComplete();
   }
 };
@@ -1061,6 +1070,46 @@ GameLab.prototype.onP5Draw = function () {
     this.eventHandlers.draw.apply(null);
   }
   this.completeRedrawIfDrawComplete();
+};
+
+/**
+ * Capture a thumbnail image of the play space if the app has been running
+ * for long enough and we have not done so already.
+ */
+GameLab.prototype.captureInitialImage = function () {
+  if (!project.isOwner() || this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
+    return;
+  }
+  this.captureImage(THUMBNAIL_SIZE);
+  this.initialCaptureComplete = true;
+};
+
+/**
+ * Capture a thumbnail image of the play space.
+ * @param {number} thumbnailSize The width and height in pixels of the captured image.
+ */
+GameLab.prototype.captureImage = function (thumbnailSize) {
+  const p5Canvas = document.getElementById('defaultCanvas0');
+  if (!p5Canvas) {
+    console.warn(`Thumbnail capture failed: p5 canvas not found.`);
+    return;
+  }
+
+  // Scale the image down so we don't send so much data over the network.
+  const thumbnailCanvas = document.createElement('canvas');
+  thumbnailCanvas.width = thumbnailSize;
+  thumbnailCanvas.height = thumbnailSize;
+
+  // Make sure any empty areas appear white.
+  const thumbnailContext = thumbnailCanvas.getContext('2d');
+  thumbnailContext.fillStyle = 'white';
+  thumbnailContext.fillRect(0, 0, thumbnailSize, thumbnailSize);
+
+  thumbnailContext.drawImage(p5Canvas, 0, 0, thumbnailSize, thumbnailSize);
+
+  thumbnailCanvas.toBlob(blob => {
+    project.saveThumbnail(blob);
+  });
 };
 
 GameLab.prototype.completeRedrawIfDrawComplete = function () {
