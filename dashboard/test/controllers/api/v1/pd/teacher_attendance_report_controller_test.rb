@@ -51,23 +51,9 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, in_section: true, attended: true
   end
 
-  test 'admins can view the report' do
-    sign_in @admin
-    get :index
-    assert_response :success
-  end
-
-  test 'workshop organizers can view the report' do
-    sign_in @organizer
-    get :index
-    assert_response :success
-  end
-
-  test 'other users cannot view report' do
-    sign_in create(:teacher)
-    get :index
-    assert_response :forbidden
-  end
+  test_user_gets_response_for :index, user: :admin
+  test_user_gets_response_for :index, user: :workshop_organizer
+  test_user_gets_response_for :index, response: :forbidden, user: :teacher
 
   test 'admins get payment info' do
     sign_in @admin
@@ -99,7 +85,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     response = JSON.parse(@response.body)
 
     assert_equal 11, response.count
-    assert_equal [@workshop.id, @other_workshop.id].sort, response.map{|r| r['workshop_id']}.uniq.sort
+    assert_equal [@workshop.id, @other_workshop.id].sort, response.map {|r| r['workshop_id']}.uniq.sort
   end
 
   test 'organizers only see their own workshops' do
@@ -109,7 +95,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal 10, response.count
-    assert_equal [@workshop.id], response.map{|r| r['workshop_id']}.uniq
+    assert_equal [@workshop.id], response.map {|r| r['workshop_id']}.uniq
   end
 
   test 'Returns only workshops that have ended and have teachers' do
@@ -128,7 +114,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal 11, response.count
-    assert_equal [@workshop.id, @other_workshop.id].sort, response.map{|r| r['workshop_id']}.uniq.sort
+    assert_equal [@workshop.id, @other_workshop.id].sort, response.map {|r| r['workshop_id']}.uniq.sort
   end
 
   test 'filter by schedule' do
@@ -191,7 +177,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
       assert_response :success
       response = JSON.parse(@response.body)
       assert_equal expected[:teacher_count], response.count
-      assert_equal [expected[:workshop_id]], response.map{|r| r['workshop_id']}.uniq.sort
+      assert_equal [expected[:workshop_id]], response.map {|r| r['workshop_id']}.uniq.sort
     end
   end
 

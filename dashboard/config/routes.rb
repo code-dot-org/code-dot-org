@@ -48,6 +48,8 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
+  get 'docs/*docs_route', to: 'docs_proxy#get'
+
   resources :sections, only: [:show] do
     member do
       post 'log_in'
@@ -305,6 +307,9 @@ Dashboard::Application.routes.draw do
   concern :api_v1_pd_routes do
     namespace :pd do
       resources :workshops do
+        collection do
+          get :filter
+        end
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
           post :end
@@ -333,12 +338,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'my_professional_learning', to: 'pd/professional_learning_landing#index'
+
   namespace :pd do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-    get 'professional_learning_landing', to: 'professional_learning_landing#index'
 
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
@@ -347,6 +352,7 @@ Dashboard::Application.routes.draw do
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
+    get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'

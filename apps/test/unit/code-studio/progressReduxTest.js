@@ -16,7 +16,8 @@ import reducer, {
   progressionsFromLevels,
   categorizedLessons,
   statusForLevel,
-  processedStages
+  processedStages,
+  __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
 // This is some sample stage data taken a course. I truncated to the first two
@@ -395,7 +396,8 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, undefined);
       assert.equal(nextState.professionalLearningCourse, true);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, processedStages(intialOverviewProgressWithPeerReview.stages));
+
+      assert.deepEqual(nextState.stages, processedStages(intialOverviewProgressWithPeerReview.stages, true));
       assert.deepEqual(nextState.peerReviewStage, peerReviewStage);
       assert.equal(nextState.scriptName, 'alltheplcthings');
       assert.equal(nextState.currentStageId, undefined);
@@ -744,7 +746,8 @@ describe('progressReduxTest', () => {
           fakeStage('Content', 'stage2', 2),
           fakeStage('Content', 'stage3', 3)
         ],
-        levelProgress: {}
+        levelProgress: {},
+        focusAreaPositions: []
       };
 
       const categories = categorizedLessons(state);
@@ -759,7 +762,8 @@ describe('progressReduxTest', () => {
           fakeStage('cat2', 'stage2', 2),
           fakeStage('cat1', 'stage3', 3)
         ],
-        levelProgress: {}
+        levelProgress: {},
+        focusAreaPositions: []
       };
 
       const categories = categorizedLessons(state);
@@ -771,15 +775,18 @@ describe('progressReduxTest', () => {
       assert.deepEqual(categories[0].lessons, [
         {
           name: 'stage1',
-          id: 1
+          id: 1,
+          isFocusArea: false
         }, {
           name: 'stage3',
-          id: 3
+          id: 3,
+          isFocusArea: false
         }
       ]);
       assert.deepEqual(categories[1].lessons, [{
         name: 'stage2',
-        id: 2
+        id: 2,
+        isFocusArea: false
       }]);
     });
   });
@@ -825,6 +832,80 @@ describe('progressReduxTest', () => {
       assert.strictEqual(processed[1].stageNumber, 1);
       assert.strictEqual(processed[2].stageNumber, undefined);
       assert.strictEqual(processed[3].stageNumber, 2);
+    });
+  });
+
+  describe('peerReviewLesson', () => {
+    const { peerReviewLesson, PEER_REVIEW_ID } = __testonly__;
+    it('extracts lesson data from our peerReviewStage', () => {
+      const state = {
+        peerReviewStage: {
+          flex_category: 'Peer Review',
+          levels: [
+
+          ],
+          lockable: false,
+          name: 'You must complete 5 reviews for this unit'
+        }
+      };
+
+      const lesson = peerReviewLesson(state);
+      assert.strictEqual(lesson.id, PEER_REVIEW_ID);
+      assert.strictEqual(lesson.lockable, false);
+      assert.strictEqual(lesson.isFocusArea, false);
+    });
+  });
+
+  describe('peerReviewLevels', () => {
+    const { peerReviewLevels, PEER_REVIEW_ID } = __testonly__;
+
+    it('sets status and icon to locked when locked', () => {
+      const state = {
+        peerReviewStage: {
+          levels: [{
+            icon: 'fa-lock',
+            ids: [0],
+            kind: LevelKind.peer_review,
+            locked: true,
+            name: 'Reviews Unavailable at this time',
+            title: '',
+            url: ''
+          }]
+        }
+      };
+      const levels = peerReviewLevels(state);
+      assert.equal(levels.length, 1);
+      assert.equal(levels[0].id, PEER_REVIEW_ID);
+      assert.equal(levels[0].status,  LevelStatus.locked);
+      assert.equal(levels[0].url, '');
+      assert.equal(levels[0].name, state.peerReviewStage.levels[0].name);
+      assert.equal(levels[0].icon, 'fa-lock');
+    });
+
+    it('uses given status, no icon when not locked', () => {
+      const state = {
+        peerReviewStage: {
+          levels: [{
+            icon: 'fa-lock',
+            id: 1,
+            ids: [0],
+            kind: LevelKind.peer_review,
+            locked: false,
+            name: 'Link to submitted review',
+            result: 100,
+            status: LevelStatus.perfect,
+            title: '',
+            url: '/peer_reviews/1'
+          }]
+        }
+      };
+      const levels = peerReviewLevels(state);
+      assert.equal(levels.length, 1);
+      assert.equal(levels[0].id, PEER_REVIEW_ID);
+      assert.equal(levels[0].status,  LevelStatus.perfect);
+      assert.equal(levels[0].url, '/peer_reviews/1');
+      assert.equal(levels[0].name, state.peerReviewStage.levels[0].name);
+      assert.equal(levels[0].icon, undefined);
     });
   });
 });

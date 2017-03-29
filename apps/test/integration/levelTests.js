@@ -95,9 +95,7 @@ describe('Level tests', function () {
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
-    loadSource('/base/lib/jsinterpreter/acorn.js')
-    .then(function () { return loadSource('/base/lib/jsinterpreter/interpreter.js'); })
-    .then(function () { return loadSource('/base/lib/ace/src-noconflict/ace.js'); })
+    loadSource('/base/lib/ace/src-noconflict/ace.js')
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js'); })
     .then(function () { return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js'); })
     .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
@@ -116,7 +114,7 @@ describe('Level tests', function () {
 
     tickInterval = window.setInterval(function () {
       if (clock) {
-        clock.tick(100); // fake 1000 ms for every real 1ms
+        clock.tick(100); // fake 100 ms for every real 1ms
       }
     }, 1);
     clock = sinon.useFakeTimers(Date.now());

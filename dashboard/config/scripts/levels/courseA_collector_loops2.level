@@ -31,7 +31,7 @@
     "min_collected": "3",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "markdown_instructions": "Move Laurel to the gold, then use `collect` to pick it up.\r\n\r\nCollect all three piles to pass this level.",
+    "markdown_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.\r\n\r\nCollect all three piles to pass this level.",
     "contained_level_names": null
   },
   "published": true,

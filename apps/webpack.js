@@ -44,6 +44,8 @@ var baseConfig = {
         include: [
           path.resolve(__dirname, 'static'),
           path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'test'),
+          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
         ],
         loader: "url-loader?limit=1024",
       },

@@ -1,24 +1,15 @@
 ---
 title: Volunteer in a Classroom
 require_https: true
+video_player: true
 ---
 
-# Volunteer in a Classroom
+# Employees Volunteer in a Classroom
 
-Every student should have the opportunity to learn computer science.
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-You can join Code.org to help introduce millions of students to computer science through the Hour of Code!
-
-## What is the Hour of Code? 
-The Hour of Code is a one-hour introduction to computer science designed to demystify “code”, to show that anybody can learn the basics, and to broaden participation in the field of computer science. Since 2013, the Hour of Code has been part of Computer Science Education Week, an annual celebration of the computing field and its heritage. Now a global movement, the Hour of Code has reached over 100 million students of diverse backgrounds in 180+ countries! 
-
-Computer science is the defining field of the 21st century, yet most schools don’t teach it. Help us bring computer science to more students in your community by getting your employees involved and volunteering in Hour of Code classrooms during Computer Science Education Week, December 10-16, 2017! 
+The Hour of Code volunteer in a classroom program gives your employees the opportunity to be a guest speaker and help students through online tutorials in their local classrooms or via video call. This opportunity is provided year-round, however, the demand for volunteers in our teachers' classrooms is much higher in December during Computer Science Education Week.
 
 Learn more about the Hour of Code [here](https://www.hourofcode.com).
-
-## Overview
-The Hour of Code volunteer in a classroom program gives your employees the opportunity to be a guest speaker and help students through online tutorials in their local classrooms or via video call. This opportunity is provided year-round, however, the demand for volunteers in our teachers' classrooms is much higher during Computer Science Education Week.
 
 The general timeline shown below covers what to expect when running this program for Computer Science Education Week:
 
@@ -136,19 +127,46 @@ Your employees are volunteering in their communities and spreading the word abou
 </ul>
 
 ### Share our Videos: 
-**Women in tech related videos:**
 
-<ul>
-<li>Change the world: Starring Sheryl Sandberg, Jasmine Lawrence, Karlie Kloss, May-Li Khoe, Mia Epner, Alice Steinglass, Jess Lee, Paola Mejía Minaya, Malala Yousafzai, and Susan Wojcicki.</li>
-<li>Malala challenges girls to do an Hour of Code: Starring Malala Yousafzai, activist for female education and Nobel Prize laureate.</li>
-</ul>
-**General Hour of Code videos:**
-<ul>
-<li>Hour of Code - WORLDWIDE</li>
-<li>Anybody Can Learn: (1 min) A short message from Bill Gates, Mark Zuckerberg, will.i.am, NBA all-star Chris Bosh, Gabe Newell of Valve, Drew Houston of Dropbox, Elena Silenok of Clothia, and other tech heroes, to inspire students to learn to code.</li>
-<li>What Most Schools Don't Teach: (6 min) Learn about a new "superpower" that isn't being taught in 90% of US schools. Starring Bill Gates, Mark Zuckerberg, will.i.am, Chris Bosh, Jack Dorsey, Tony Hsieh, Drew Houston, Gabe Newell, Ruchi Sanghvi, Elena Silenok, Vanessa Hurst, and Hadi Partovi.</li>
-<li>"Code Stars" - short film: (9 min) Learn about a new "superpower" that isn't being taught in 90% of US schools. Starring Bill Gates, Mark Zuckerberg, will.i.am, Chris Bosh, Jack Dorsey, Tony Hsieh, Drew Houston, Gabe Newell, Ruchi Sanghvi, Elena Silenok, Vanessa Hurst, and Hadi Partovi. </li>
-</ul>
+<div class="col-33" style="float:left; padding:10px">
+
+  <%= view :display_video_thumbnail, id: "uniqueid", video_code: "nKIu9yen5nc", letterbox: 'false' %>
+What most schools don't teach
+</div>
+
+<div class="col-33" style="float:left; padding:10px">
+
+  <%= view :display_video_thumbnail, id: "uniqueid2", video_code: "QvyTEx1wyOY", letterbox: 'false' %>
+Computer Science is Changing Everything
+</div>
+
+<div class="col-33" style="float:left; padding:10px">
+
+  <%= view :display_video_thumbnail, id: "uniqueid6", video_code: "qYZF6oIZtfc", letterbox: 'false' %>
+Anybody Can Learn
+</div>
+
+<div style="clear: both;"></div>
+
+<div class="col-33" style="float:left; padding:10px">
+
+  <%= view :display_video_thumbnail, id: "uniqueid4", video_code: "cFdncBMDtP8", letterbox: 'false' %>
+Malala Challenges Girls to do the Hour of Code
+</div>
+
+<div class="col-33" style="float:left; padding:10px">
+
+  <%= view :display_video_thumbnail, id: "uniqueid5", video_code: "KsOIlDT145A", download_path: '//videos.code.org/social/what-most-schools-dont-teach.mp4', letterbox: 'false' %>
+Hour of Code - WORLDWIDE
+</div>
+
+<div class="col-33" style="float:left; padding:10px">
+
+  <%= view :display_video_thumbnail, id: "uniqueid3", video_code: "FC5FbmsH4fw", letterbox: 'false' %>
+The Hour of Code is Here
+</div>
+
+<div style="clear: both;"></div>
 
 ### Other resources:
 Hour of Code promotional resources: Includes brochures, one-pagers, images, stats, posters, etc.

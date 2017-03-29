@@ -400,7 +400,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   run_environment['TEST_LOCAL'] = $options.local ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
-  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
+  run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : nil
   run_environment['TEST_RUN_NAME'] = test_run_string
 
   # disable some stuff to make require_rails_env run faster within cucumber.
@@ -515,6 +515,13 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   rerun_filename = test_run_string + ".rerun"
   if max_reruns > 0
     arguments += " --format rerun --out #{rerun_filename}"
+  end
+
+  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # provide pretty test reports with success/fail/timing data upon completion.
+  # See: https://circleci.com/docs/test-metadata/#cucumber
+  if ENV['CI']
+    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
 
   FileUtils.rm rerun_filename, force: true

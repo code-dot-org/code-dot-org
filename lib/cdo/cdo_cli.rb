@@ -22,23 +22,36 @@ module CdoCli
   def underline(text)
     stylize(text, 4)
   end
+
+  def red(text)
+    stylize(text, 31)
+  end
 end
 
 # Utility to strip consistent leading whitespace from heredoc strings, allowing
 # you to format your code more readably.
 #
-# Usage:
+# @example
 #   <<-DOC.unindent
 #     Some text or other that I want to start in column 1.
 #         An actually indented line.
 #     This line still unindented.
 #   DOC
 #
-# from http://stackoverflow.com/a/5638187/5000129
+# from http://stackoverflow.com/a/9654275
 class String
   # Strip leading whitespace from each line that is the same as the
   # amount of whitespace on the least-indented line of the string.
   def unindent
-    gsub /^#{scan(/^[ \t]+/).min_by(&:length)}/, ''
+    indent = scan(/^[ \t]*(?=\S)/).min.size || 0
+    gsub /^[ \t]{#{indent}}/, ''
+  end
+
+  # Strip leading whitespace from each line that is the same as the amount of
+  # whitespace on the least-indented line of the string. Then indent the
+  # resulting lines by num_start_spaces spaces.
+  def unindent_with_indent(num_start_spaces)
+    indent = scan(/^[ \t]*(?=\S)/).min.size || 0
+    gsub /^[ \t]{#{indent}}/, ' ' * num_start_spaces
   end
 end

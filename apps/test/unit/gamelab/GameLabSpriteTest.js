@@ -309,6 +309,21 @@ describe('GameLabSprite', function () {
         sprite1.width = 100;
         expect(sprite1.getScaledWidth()).to.equal(50);
       });
+
+      it('gets scaled values regardless of colliders', function () {
+        var sprite2 = createSprite(0, 0);
+        sprite2.addAnimation('label', createTestAnimation());
+
+        sprite1.width = 200;
+        sprite1.height = 400;
+        sprite1.scale = 2;
+
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(800);
+        sprite1.collide(sprite2);
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(800);
+      });
     });
   });
 
@@ -501,7 +516,21 @@ describe('GameLabSprite', function () {
 
       sprite.play();
       expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      // No more frames to play for a non-looping animation
+      sprite.update();
+      expect(sprite.animation.playing).to.be.false;
+      expect(sprite.animation.getFrame()).to.equal(2);
+
+      // Restart the animation
+      sprite.play();
+      expect(sprite.animation.playing).to.be.true;
       expect(sprite.animation.getFrame()).to.equal(0);
+
+      sprite.update();
+      expect(sprite.animation.playing).to.be.true;
+      expect(sprite.animation.getFrame()).to.equal(1);
     });
 
     it('resumes a stopped, looping animation at the current frame', function () {

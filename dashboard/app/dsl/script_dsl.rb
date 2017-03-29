@@ -85,7 +85,7 @@ class ScriptDSL < BaseDSL
       concepts: @concepts.join(','),
       level_concept_difficulty: @level_concept_difficulty || {},
       video_key: @video_key_for_next_level
-    }.merge(properties).select{|_, v| v.present? }
+    }.merge(properties).select {|_, v| v.present? }
     @video_key_for_next_level = nil
 
     # Having @current_scriptlevel implies we're a level inside of a variants block
@@ -185,7 +185,7 @@ class ScriptDSL < BaseDSL
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(serialize_level(level, type, sl.active?(level), sl.progression).map{ |l| l.indent(2) })
+            s.concat(serialize_level(level, type, sl.active?(level), sl.progression).map { |l| l.indent(2) })
           end
           s << 'endvariants'
         else
@@ -209,7 +209,7 @@ class ScriptDSL < BaseDSL
 
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
-    l = "#{type} '#{level.key.gsub("'"){ "\\'" }}'"
+    l = "#{type} '#{level.key.gsub("'") { "\\'" }}'"
     l += ', active: false' unless active.nil? || active
     l += ", progression: '#{progression}'" if progression
     s << l

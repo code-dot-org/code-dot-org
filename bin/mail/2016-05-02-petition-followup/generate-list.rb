@@ -18,8 +18,8 @@ teachers = query_subscribed_contacts(q: teacher_query, fl: fields)
 puts "#{teachers.length} total US teachers and past HOC organizers."
 
 # Next, filter for those who did not click through any of the previous petition emails (experiments or final).
-PREVIOUS_MESSAGE_NAME_PREFIX = '4-22-petition-congress%'
-CLICK_THROUGH_URL = 'http://bit.ly/computersciencepetition'
+PREVIOUS_MESSAGE_NAME_PREFIX = '4-22-petition-congress%'.freeze
+CLICK_THROUGH_URL = 'http://bit.ly/computersciencepetition'.freeze
 message_id_list = DB[:poste_messages].
   where(Sequel.like(:name, PREVIOUS_MESSAGE_NAME_PREFIX)).
   map(:id).
@@ -33,7 +33,7 @@ raise "Unable to find click through url (#{CLICK_THROUGH_URL})" unless url_id
 test_query_succeeded = false
 results = {}
 teachers.keys.each_slice(10000) do |teacher_emails|
-  email_list = teacher_emails.map{|email| "\"#{email}\""}.join(',')
+  email_list = teacher_emails.map {|email| "\"#{email}\""}.join(',')
 
   # Run a test query with inner join to make sure we have click-through results before filtering
   unless test_query_succeeded

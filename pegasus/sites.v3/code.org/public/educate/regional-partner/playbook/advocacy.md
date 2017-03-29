@@ -20,6 +20,7 @@ Regional partners who are interested in advocacy can use the following resources
 - [Advocacy Slide Deck](https://code.org/files/computer_science_advocacy.pptx): Generic presentation to convince someone that computer science is important to teach in grades K-12
 - [Model Legislation](http://media.wix.com/ugd/be22fe_f50c481364f44ca4807a3efee8c11ad1.pdf): Sample language that can be used for legislation related to three computer science education policies
 - [How should Computer Science "count"?](http://blog.code.org/post/154518222573/computer-science-really-is-computer-science) A Code.org blog post about making computer science count towards graduation, with a link to an issue paper on computer science as a flex credit
+- [Digging Deeper into AP Computer Science](http://code.org/promote/ap): Graphs and descriptions of AP CS A exam participation over the past decade, broken down by state, gender, and race/ethnicity.
 
 ## Other Links
 Visit the websites below to find out more. 

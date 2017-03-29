@@ -7,7 +7,7 @@ And(/^the Droplet ACE text is "([^"]*)"$/) do |expected_text|
   # Let us expect newlines in the editor
   expected_text.gsub! '\n', "\n"
   actual_text = @browser.execute_script("return __TestInterface.getDropletContents();")
-  actual_text.should eq expected_text
+  expect(actual_text).to eq(expected_text)
 end
 
 And(/^no Tooltipster tooltip is visible$/) do

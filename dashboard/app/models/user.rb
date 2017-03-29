@@ -121,7 +121,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual' # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored' # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever}
+  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   TYPE_STUDENT = 'student'
@@ -149,6 +149,11 @@ class User < ActiveRecord::Base
   has_one :district_as_contact,
     class_name: 'District',
     foreign_key: 'contact_id'
+
+  has_many :regional_partner_program_managers,
+    foreign_key: :program_manager_id
+  has_many :regional_partners,
+    through: :regional_partner_program_managers
 
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
@@ -282,15 +287,23 @@ class User < ActiveRecord::Base
 
   has_many :gallery_activities, -> {order 'id desc'}
 
-  # student/teacher relationships where I am the teacher
-  has_many :followers
-  has_many :students, through: :followers, source: :student_user
+  # Relationships (sections/followers/students) from being a teacher.
   has_many :sections
+  has_many :followers, through: :sections
+  has_many :students, through: :followers, source: :student_user
 
-  # student/teacher relationships where I am the student
+  # sections will include those that have been deleted until/unless we do the work
+  # to enable the paranoia gem. This method will return only sections that have
+  # not been deleted
+  def non_deleted_sections
+    sections.where(deleted_at: nil)
+  end
+
+  # Relationships (sections_as_students/followeds/teachers) from being a
+  # student.
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id'
-  has_many :teachers, through: :followeds, source: :user
   has_many :sections_as_student, through: :followeds, source: :section
+  has_many :teachers, through: :sections_as_student, source: :user
 
   has_one :prize
   has_one :teacher_prize
@@ -467,6 +480,14 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
 
+      if auth.provider == :the_school_project
+
+        user.username = auth.extra.raw_info.nickname
+        user.user_type = auth.extra.raw_info.role
+        user.locale = auth.extra.raw_info.locale
+        user.school = auth.extra.raw_info.school.name
+      end
+
       # treat clever admin types as teachers
       if CLEVER_ADMIN_USER_TYPES.include? user.user_type
         user.user_type = User::TYPE_TEACHER
@@ -605,10 +626,36 @@ class User < ActiveRecord::Base
     user_level.nil? || user_level.locked?(script_level.stage)
   end
 
+  # Returns the next script_level for the next progression level in the given
+  # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
     user_levels_by_level = user_levels_by_level(script)
 
-    script.script_levels.detect do |script_level|
+    # Find the user level that we've most recently had progress on
+    user_level = user_levels_by_level.values.flatten.sort_by!(&:updated_at).last
+
+    script_level_index = 0
+    if user_level
+      last_script_level = user_level.level.script_levels.where(script_id: script.id).first
+      script_level_index = last_script_level.chapter - 1 if last_script_level
+    end
+
+    next_unpassed = script.script_levels[script_level_index..-1].detect do |script_level|
+      user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
+      unpassed_progression_level?(script_level, user_levels)
+    end
+
+    # if we don't have any unpassed levels proceeding the one we've most recently
+    # submitted, just go to the one we've most recently submitted
+    next_unpassed || last_script_level
+  end
+
+  # Returns true if all progression levels in the provided script have a passing
+  # result
+  def completed_progression_levels?(script)
+    user_levels_by_level = user_levels_by_level(script)
+
+    script.script_levels.none? do |script_level|
       user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
       unpassed_progression_level?(script_level, user_levels)
     end
@@ -646,21 +693,21 @@ class User < ActiveRecord::Base
 
   # Is the stage containing the provided script_level hidden for this user?
   def hidden_stage?(script_level)
-    return false if self.try(:teacher?)
+    return false if try(:teacher?)
 
-    sections = self.sections_as_student.select{|s| s.deleted_at.nil?}
+    sections = sections_as_student.select {|s| s.deleted_at.nil?}
     return false if sections.empty?
 
-    script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
+    script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
     if !script_sections.empty?
       # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
       # hides the stage
-      script_sections.all?{|s| script_level.stage_hidden_for_section?(s.id) }
+      script_sections.all? {|s| script_level.stage_hidden_for_section?(s.id) }
     else
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
-      sections.any?{|s| script_level.stage_hidden_for_section?(s.id) }
+      sections.any? {|s| script_level.stage_hidden_for_section?(s.id) }
     end
   end
 
@@ -837,7 +884,7 @@ class User < ActiveRecord::Base
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     return false unless user_script
-    user_script.completed_at || next_unpassed_progression_level(script).nil?
+    user_script.completed_at || completed_progression_levels?(script)
   end
 
   def not_started?(script)
@@ -1108,16 +1155,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  def recent_activities(limit = 10)
-    activities.order('id desc').limit(limit)
-  end
-
   def can_pair?
     !sections_as_student.empty?
   end
 
   def can_pair_with?(other_user)
-    self != other_user && sections_as_student.any?{ |section| other_user.sections_as_student.include? section }
+    self != other_user && sections_as_student.any? { |section| other_user.sections_as_student.include? section }
   end
 
   def self.csv_attributes
@@ -1126,7 +1169,7 @@ class User < ActiveRecord::Base
   end
 
   def to_csv
-    User.csv_attributes.map{ |attr| send(attr) }
+    User.csv_attributes.map { |attr| send(attr) }
   end
 
   def self.progress_queue
@@ -1181,7 +1224,7 @@ class User < ActiveRecord::Base
     # ignore any terms of service versions associated with deleted teacher
     # accounts.
     followeds.
-      collect{|followed| followed.user.try(:terms_of_service_version)}.
+      collect {|followed| followed.user.try(:terms_of_service_version)}.
       compact.
       max
   end

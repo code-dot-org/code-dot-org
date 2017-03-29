@@ -81,9 +81,14 @@ class AdminUsersController < ApplicationController
     unless user
       flash[:alert] = "User (ID: #{params[:user_id]}) not found"
     end
-    script = Script.find_by_id(params[:script_id])
+    script = nil
+    if params[:script_id_or_name].to_i.to_s == params[:script_id_or_name]
+      script = Script.find_by_id(params[:script_id_or_name])
+    else
+      script = Script.find_by_name(params[:script_id_or_name])
+    end
     unless script
-      flash[:alert] = "Script (ID: #{params[:script_id]}) not found"
+      flash[:alert] = "Script (ID or Name: #{params[:script_id_or_name]}) not found"
     end
     level = Level.find_by_id(params[:level_id])
     unless level

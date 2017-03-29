@@ -81,7 +81,7 @@
                         <block type="studio_saySpriteParams" inline="true">
                           <title name="SPRITE">0</title>
                           <value name="TEXT">
-                            <block type="text_join_simple" inline="false" inputcount="3">
+                            <block type="text_join_simple" inline="false" deletable="false" movable="false" inputcount="3">
                               <value name="ADD0">
                                 <block type="text">
                                   <title name="TEXT">Wow! I'm </title>

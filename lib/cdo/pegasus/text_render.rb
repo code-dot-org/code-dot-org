@@ -48,7 +48,7 @@ module TextRender
   end
 
   def self.r(engine, template, locals={})
-    engine.new(template).result(Locals.new(locals).instance_eval{binding})
+    engine.new(template).result(Locals.new(locals).instance_eval {binding})
   end
 
   def self.f(engine, path, locals={})

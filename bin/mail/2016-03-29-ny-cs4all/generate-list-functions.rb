@@ -19,7 +19,7 @@ end
 
 def query_k5_pd_section_ids
   DB[:forms].where(kind: 'ProfessionalDevelopmentWorkshop').map(:data).
-    map{|form_data| JSON.parse(form_data)['section_id_s']}.reject(&:blank?).map(&:to_i)
+    map {|form_data| JSON.parse(form_data)['section_id_s']}.reject(&:blank?).map(&:to_i)
 end
 
 # A. Query Code Studio teachers who have already been through the K-5 PD.
@@ -55,7 +55,7 @@ def query_non_pd_teachers(k5_pd_teachers)
   SQL
   puts "#{ops_pd_teachers.length} @schools.nyc.gov ops-pd teachers."
 
-  all_pd_teachers_ids = k5_pd_teachers.merge(ops_pd_teachers).values.map{|teacher| teacher[:id]}
+  all_pd_teachers_ids = k5_pd_teachers.merge(ops_pd_teachers).values.map {|teacher| teacher[:id]}
   non_pd_teachers = query_dashboard_teachers <<-SQL
     SELECT DISTINCT users.email, users.name
     FROM users
@@ -76,7 +76,7 @@ def query_hoc_organizers_no_code_studio
 
   hoc_organizer_code_studio_users = query_dashboard_teachers %Q(
     SELECT email FROM users
-    WHERE email IN (#{hoc_organizers.keys.map{|email| "'#{email}'"}.join(',')})
+    WHERE email IN (#{hoc_organizers.keys.map {|email| "'#{email}'"}.join(',')})
   )
   puts "#{hoc_organizer_code_studio_users.length} of those are code studio users."
 

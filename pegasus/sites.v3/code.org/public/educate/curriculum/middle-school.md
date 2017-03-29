@@ -17,9 +17,22 @@ Computer Science Discoveries
 
 [/solid-block-header]
 
-<img src="/images/csdiscoveries-montage.jpg" width="500px">
+<% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
+<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>'Computer Science Discoveries @codeorg'} %>
 
-Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
+<div style="float:left; padding:10px; width:49%">
+
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+
+</div>
+
+Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school (grades 7-9). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.  This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
+
+<div style="float:right; padding:10px; width:49%">
+
+<img src="/images/fit-400/csdiscoveries-montage.jpg">
+
+</div>
 
 ## Units of Study
 
@@ -40,7 +53,9 @@ Computer Science Fundamentals - Accelerated
 
 <img src="/images/code20hr.jpg">
 
-Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a middle school after-school program or as a unit in a technology or programming class.
+For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, 
+Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the 
+[Computer Science Fundamentals](https://studio.code.org) progression for elementary school students, but at an accelerated pace designed for students ages 10-18.
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 

@@ -9,7 +9,7 @@
     "embed": "false",
     "markdown_instructions": "# Play and Pause\r\n\r\nYou can use the `sprite.play` and `sprite.pause` commands to play and pause a sprite's animation. If the animation is already playing or paused, using these commands twice in a row has no effect.  There's one important exception, however, which is that **play will restart a non-looping animation if it has finished**. We're going to look at some cool behavior this lets us create.\r\n\r\n# Do This\r\n\r\n* Use the `sprite.play` command after each of your `setAnimation` commands. This will restart the walk animations as long as the keys are pressed.",
     "submittable": "false",
-    "start_blocks": "// Variables\r\nvar score = 0;\r\n// Create Sprites\r\nvar cake = createSprite(350,200);\r\n\r\nvar player = createSprite(200,200);\r\n\r\nvar enemy1 = createSprite();\r\n\r\nvar enemy2 = createSprite();\r\n\r\nfunction draw() {\r\n  // draw the background\r\n  gameBackground();\r\n  // update the sprites\r\n  enemiesTouchCake();\r\n  movePlayer();\r\n  displaceEnemies();\r\n  enemiesTouchWater();\r\n  showScore();\r\n  drawSprites();\r\n}\r\n\r\n// Functions\r\nfunction gameBackground() {\r\n  noStroke();\r\n  background(color(0,100,255));\r\n  fill(color(100,100,100));\r\n  rect(0,150,400,100);\r\n  fill(color(80,80,80));\r\n  rect(0,140,400,10);\r\n  rect(0,250,400,10);\r\n}\r\n\r\nfunction enemiesTouchCake(){\r\n  \r\n}\r\n\r\nfunction movePlayer(){\r\n  \r\n}\r\n\r\nfunction displaceEnemies(){\r\n\r\n}\r\n\r\nfunction enemiesTouchWater(){\r\n  \r\n}\r\n\r\nfunction showScore() {\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"Score\",20,20,200,100);\r\n  text(score,20,40,200,100);\r\n}",
+    "start_blocks": "// Variables\r\nvar score = 0;\r\n// Create Sprites\r\nvar cake = createSprite(350,200);\r\n\r\nvar player = createSprite(200,200);\r\n\r\nvar enemy1 = createSprite();\r\n\r\nvar enemy2 = createSprite();\r\n\r\nfunction draw() {\r\n  // draw the background\r\n  gameBackground();\r\n  // update the sprites\r\n  enemiesTouchCake();\r\n  movePlayer();\r\n  displaceEnemies();\r\n  enemiesTouchWater();\r\n  showScore();\r\n  drawSprites();\r\n}\r\n\r\n// Functions\r\nfunction gameBackground() {\r\n  noStroke();\r\n  background(rgb(0,100,255));\r\n  fill(rgb(100,100,100));\r\n  rect(0,150,400,100);\r\n  fill(rgb(80,80,80));\r\n  rect(0,140,400,10);\r\n  rect(0,250,400,10);\r\n}\r\n\r\nfunction enemiesTouchCake(){\r\n  \r\n}\r\n\r\nfunction movePlayer(){\r\n  \r\n}\r\n\r\nfunction displaceEnemies(){\r\n\r\n}\r\n\r\nfunction enemiesTouchWater(){\r\n  \r\n}\r\n\r\nfunction showScore() {\r\n  fill(\"white\");\r\n  textSize(20);\r\n  text(\"Score\",20,20,200,100);\r\n  text(score,20,40,200,100);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -135,6 +135,9 @@
       "comment": null
     },
     "show_debug_watch": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

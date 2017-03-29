@@ -13,8 +13,9 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
       create :pd_enrollment, email: other_teacher.email, workshop: workshop
     end
 
-    @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop, survey_sent_at: Date.today + 5.days
-    other_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop, survey_sent_at: Date.today + 2.days
+    create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
+    @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop, survey_sent_at: Date.today - 1.days
+    other_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop, survey_sent_at: Date.today - 2.days
     create :pd_enrollment, email: @teacher.email, workshop: @csp_workshop
 
     Pd::Enrollment.stubs(:filter_for_survey_completion).returns([@ended_enrollment, other_enrollment])
@@ -34,11 +35,23 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_equal Pd::Workshop::COURSE_CSF, response[:last_workshop_survey_course]
   end
 
-  test 'admins only' do
-    other_teacher = create :teacher
-    sign_in other_teacher
+  test_user_gets_response_for :index, name: 'admins only', user: :teacher, response: :forbidden
+
+  test 'courses are sorted as expected' do
+    sign_in(@teacher)
+
+    [
+      create(:plc_course, name: 'Bills Fandom 101'),
+      create(:plc_course, name: 'ECS Support'),
+      create(:plc_course, name: 'CSP Support')
+    ].each do |course|
+      create :plc_user_course_enrollment, user: @teacher, plc_course: course
+    end
 
     get :index
-    assert_response :forbidden
+    assert_response :success
+    response = assigns(:landing_page_data)
+
+    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map { |enrollment| enrollment[:courseName]}
   end
 end

@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {Table, Button, Modal} from 'react-bootstrap';
@@ -32,14 +31,7 @@ const UpcomingWorkshopsTable = React.createClass({
   },
 
   cancelEnrollment(event) {
-    $.ajax({
-      method: "GET",
-      url: `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`
-    }).done(() => {
-      window.location.reload(true);
-    }).fail(data => {
-      alert(`Could not cancel enrollment for enrollment code ${this.state.enrollmentCodeToCancel}`);
-    });
+    window.location = `/pd/workshop_enrollment/${this.state.enrollmentCodeToCancel}/cancel`;
   },
 
   dismissCancelModal(event) {
@@ -121,11 +113,17 @@ const UpcomingWorkshopsTable = React.createClass({
         <td>
           {workshop.enrollment_code &&
             (
-              <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
-                Cancel enrollment
-              </Button>
+              <div>
+                <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
+                  Cancel enrollment
+                </Button>
+                <Button onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}>
+                  Workshop Details
+                </Button>
+              </div>
             )
           }
+
         </td>
       </tr>
     );
@@ -148,7 +146,7 @@ const UpcomingWorkshopsTable = React.createClass({
           </Modal.Footer>
         </Modal>
         <h2>
-          Upcoming workshops
+          My Upcoming Workshops
         </h2>
         {this.renderWorkshopsTable()}
       </div>

@@ -5,7 +5,7 @@ require 'uri'
 require 'redcarpet'
 require 'redcarpet/render_strip'
 
-TTS_BUCKET = 'cdo-tts'
+TTS_BUCKET = 'cdo-tts'.freeze
 
 VOICES = {
   'en-US': {
@@ -33,7 +33,7 @@ VOICES = {
     SPEED: 180,
     SHAPE: 100,
   }
-}
+}.freeze
 
 class TTSSafe < Redcarpet::Render::StripDown
   def block_code(code, language)

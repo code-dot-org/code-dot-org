@@ -1,4 +1,4 @@
-require_relative '../../../shared/test/test_helper'
+require_relative '../test_helper'
 require 'cdo/chat_client'
 
 class ChatClientTest < Minitest::Test
@@ -16,7 +16,7 @@ class ChatClientTest < Minitest::Test
 
   def test_log_calls_slack
     Slack.expects(:message).with do |_text, params|
-      params[:channel] == CDO.hip_chat_log_room
+      params[:channel] == CDO.slack_log_room
     end.returns(false)
     ChatClient.log(FAKE_MESSAGE)
   end
