@@ -1,3 +1,4 @@
+# coding: utf-8
 # Run 'rake' or 'rake -P' to get a list of valid Rake commands.
 
 require 'cdo/chat_client'
@@ -185,6 +186,12 @@ namespace :test do
       end
     end
 
+    task :interpreter do
+      run_tests_if_changed('interpreter', ['apps/src/lib/tools/jsinterpreter/patchInterpreter.js']) do
+        TestRunUtils.run_interpreter_tests
+      end
+    end
+
     desc 'Runs dashboard tests if dashboard might have changed from staging.'
     task :dashboard do
       run_tests_if_changed('dashboard', ['dashboard/**/*', 'lib/**/*', 'shared/**/*']) do
@@ -213,7 +220,13 @@ namespace :test do
       end
     end
 
-    task all: [:apps, :dashboard, :pegasus, :shared, :lib]
+    task all: [:apps,
+               # currently disabled because these tests take too long to run on circle
+               # :interpreter,
+               :dashboard,
+               :pegasus,
+               :shared,
+               :lib]
   end
 
   task changed: ['changed:all']
