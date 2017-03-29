@@ -294,10 +294,7 @@ export function setInitialAnimationList(serializedAnimationList) {
   for (let i = 0; i < numberAnimations; i++) {
     const key = serializedAnimationList.orderedKeys[i];
     const name = serializedAnimationList.propsByKey[key].name;
-    for (let j = 0; j < numberAnimations; j++) {
-      if (j === i) {
-        continue;
-      }
+    for (let j = i + 1; j < numberAnimations; j++) {
       const otherKey = serializedAnimationList.orderedKeys[j];
       if (name === serializedAnimationList.propsByKey[otherKey].name) {
         serializedAnimationList.propsByKey[otherKey].name = generateAnimationName(name, serializedAnimationList.propsByKey);
