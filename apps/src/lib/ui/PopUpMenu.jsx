@@ -18,7 +18,7 @@ const style = {
     borderRadius: 2,
     boxShadow: "3px 3px 3px gray",
     marginTop: TAIL_HEIGHT,
-    textAlign: 'center',
+    textAlign: 'left',
   },
 };
 const tailBorderStyle = {
@@ -55,10 +55,20 @@ class PopUpMenu extends Component {
 
   renderMenuItems() {
     const {children} = this.props;
-    if (Children.count(children) === 0) {
+    const childCount = Children.count(children);
+    if (childCount === 0) {
       return <div><em>{msg.noMenuItemsAvailable()}</em></div>;
-    }
-    return <div>{children}</div>;
+  }
+    return (
+      <div>
+        {Children.map(children, (child, index) =>
+          React.cloneElement(child, {
+            first: index === 0,
+            last: index === childCount - 1,
+          }))
+        }
+      </div>
+    );
   }
 
   render() {
@@ -86,11 +96,14 @@ class Item extends Component {
   static propTypes = {
     children: PropTypes.string.isRequired,
     onClick: PropTypes.func,
+    first: PropTypes.bool,
+    last: PropTypes.bool,
   };
 
   static style = {
     color: color.dark_charcoal,
-    padding: '0.25em 1em',
+    paddingLeft: 20,
+    paddingRight: 20,
     cursor: 'pointer',
     ':hover': {
       backgroundColor: color.lightest_gray,
@@ -98,9 +111,15 @@ class Item extends Component {
   };
 
   render() {
+    const {first, last, onClick, children} = this.props;
+    const style = {
+      ...Item.style,
+      paddingTop: first ? 20 : 10,
+      paddingBottom: last ? 20 : 10,
+    };
     return (
-      <div style={Item.style} onClick={this.props.onClick}>
-        {this.props.children}
+      <div style={style} onClick={onClick}>
+        {children}
       </div>
     );
   }
