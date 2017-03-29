@@ -146,7 +146,7 @@ var CodeWorkspace = React.createClass({
     ];
   },
 
-  render: function () {
+  render() {
     var props = this.props;
 
     // By default, continue to show header as focused. When runModeIndicators
