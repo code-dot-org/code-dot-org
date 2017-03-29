@@ -19,6 +19,16 @@ def main
     )
     return
   end
+
+  unless GitHub.behind?(base: 'staging', compare: 'test')
+    ChatClient.message(
+      'infra-test',
+      "robo-DTT skipped, nothing to DTT",
+      color: 'green'
+    )
+    return
+  end
+
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 
   # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags

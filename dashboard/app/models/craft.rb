@@ -436,7 +436,7 @@ class Craft < Blockly
       place_block_options
       drop_dropdown_options
       play_sound_options
-    ).map{ |x| x.camelize(:lower) }
+    ).map {|x| x.camelize(:lower)}
   end
 
   def self.skins

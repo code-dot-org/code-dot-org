@@ -6,7 +6,7 @@ class CookieWhitelistTest < Minitest::Test
 
   ESCAPED_KEY = '1;2&3=4%'.freeze
   ESCAPED_VALUE = '3;4&5=6%'.freeze
-  HEADERS = REMOVED_HEADERS.map{|x| x.split(':')[0]}.freeze
+  HEADERS = REMOVED_HEADERS.map {|x| x.split(':')[0]}.freeze
   COOKIE_CONFIG = {
     behaviors: [
       {

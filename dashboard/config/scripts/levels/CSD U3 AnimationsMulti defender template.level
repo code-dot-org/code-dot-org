@@ -132,16 +132,14 @@
       "console.log": null,
       "functionParams_none": null,
       "callMyFunction": null,
-      "comment": null
+      "comment": null,
+      "stopSound": null
     },
     "show_debug_watch": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Need to add gif of what it should look like.",

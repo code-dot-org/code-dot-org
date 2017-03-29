@@ -363,12 +363,17 @@ class AssetsTest < FilesApiTestBase
     assert_equal 415, last_response.status # 415 = Unsupported media type
   end
 
+  def test_bad_channel_id
+    get "/v3/assets/undefined"
+    assert_equal 400, last_response.status
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
 
   def post_asset(api, uploaded_file)
-    body = { files: [uploaded_file] }
-    headers = { 'CONTENT_TYPE' => 'multipart/form-data' }
+    body = {files: [uploaded_file]}
+    headers = {'CONTENT_TYPE' => 'multipart/form-data'}
     api.post_object '', body, headers
   end
 

@@ -49,7 +49,7 @@ class AdminReportsController < ApplicationController
 
       respond_to do |format|
         format.html
-        format.csv { return level_answers_csv }
+        format.csv {return level_answers_csv}
       end
     end
   end
@@ -105,7 +105,7 @@ class AdminReportsController < ApplicationController
       {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
     end
     require 'naturally'
-    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    data_array = data_array.select {|x| x['TotalAttempt'].to_i > 10}.sort_by {|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
     headers = [
       "Puzzle",
       "Total\nAttempts",

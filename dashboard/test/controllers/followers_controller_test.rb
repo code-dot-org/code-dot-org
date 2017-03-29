@@ -16,6 +16,19 @@ class FollowersControllerTest < ActionController::TestCase
 
     # student without section or teacher
     @student = create(:user)
+
+    @picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+  end
+
+  test "student in picture section should be redirected to picture login when joining section" do
+    get :student_user_new, params: {section_code: @picture_section.code}
+    assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
+  end
+
+  test "student in word section should be redirected to word login when joining section" do
+    get :student_user_new, params: {section_code: @word_section.code}
+    assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code
   end
 
   test "student_user_new when not signed in" do
@@ -304,10 +317,10 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @laurel
 
     assert_no_difference('Follower.count') do
-      post :remove, params: {teacher_user_id: @chris.id}
+      post :remove, params: {section_code: @chris_section.code}
     end
     assert_redirected_to '/'
-    assert_equal "The teacher could not be found.", flash[:alert]
+    assert_equal "Could not find a section with code '#{@chris_section.code}'.", flash[:alert]
   end
 
   test "student can remove teacher" do
@@ -316,7 +329,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in follower.student_user
 
     assert_difference('Follower.count', -1) do
-      post :remove, params: {teacher_user_id: follower.user_id}
+      post :remove, params: {section_code: follower.section.code}
     end
 
     refute Follower.exists?(follower.id)
@@ -329,7 +342,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in follower.student_user
 
     assert_difference('Follower.count', -1) do
-      post :remove, params: {teacher_user_id: follower.user_id}
+      post :remove, params: {section_code: follower.section.code}
     end
 
     refute Follower.exists?(follower.id)

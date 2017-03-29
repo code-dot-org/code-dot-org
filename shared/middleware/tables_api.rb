@@ -92,7 +92,7 @@ class TablesApi < Sinatra::Base
     column_list = request.GET['column_list']
     unless column_list.nil?
       # filter out existing columns, as some may have been created during our ensure_metadata step
-      new_columns = JSON.parse(column_list).reject{ |col| existing_columns.include?(col) }
+      new_columns = JSON.parse(column_list).reject {|col| existing_columns.include?(col)}
       table.add_columns(new_columns)
     end
 
@@ -177,7 +177,7 @@ class TablesApi < Sinatra::Base
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
     TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).delete_all
-    #TODO: Delete metadata.
+    # TODO: Delete metadata.
 
     # Zero out the approximate row count just in case the user creates a new table
     # with the same name.

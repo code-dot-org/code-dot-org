@@ -277,4 +277,21 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
     assert_equal without_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, false)
   end
+
+  test 'enrolling in class automatically enrolls in online learning' do
+    Pd::Workshop::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
+      workshop = create :pd_workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first
+      plc_course = create :plc_course, name: plc_course_name
+      teacher = create :teacher
+      create :pd_enrollment, user: teacher, workshop: workshop
+
+      assert_equal 1, Plc::UserCourseEnrollment.where(user: teacher, plc_course: plc_course).size
+    end
+
+    workshop = create :pd_workshop, course: 'Counselor'
+    teacher = create :teacher
+    assert_no_difference('Plc::UserCourseEnrollment.count') do
+      create :pd_enrollment, user: teacher, workshop: workshop
+    end
+  end
 end

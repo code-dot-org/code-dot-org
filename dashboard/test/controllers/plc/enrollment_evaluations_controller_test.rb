@@ -2,14 +2,14 @@ require 'test_helper'
 
 class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   setup do
-    #Questions/Answers taken from Monty Python and the Holy Grail in case it wasn't obvious. Figured it would be easier
-    #then a bunch of strings with names like 'Answer 1'
+    # Questions/Answers taken from Monty Python and the Holy Grail in case it wasn't obvious. Figured it would be easier
+    # then a bunch of strings with names like 'Answer 1'.
 
-    #Rather then break up testing into each of the modules, I figure its easier to test the evaluation end-to-end
-    #experience in this one file
+    # Rather then break up testing into each of the modules, I figure its easier to test the evaluation end-to-end
+    # experience in this one file.
 
-    #I used the dialogue from Monty Python because it's actually a decent example of an evaluation quiz that isn't
-    #the same for everyone. Not all users taking an examination will answer the exact same questions.
+    # I used the dialogue from Monty Python because it's actually a decent example of an evaluation quiz that isn't
+    # the same for everyone. Not all users taking an examination will answer the exact same questions.
     @course = create(:plc_course)
     @course_unit = create(:plc_course_unit, plc_course: @course)
 

@@ -39,6 +39,7 @@
     = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
     = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
+    = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
   .field
     = f.hidden_field :published
   .actions

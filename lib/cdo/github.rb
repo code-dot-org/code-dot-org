@@ -34,15 +34,16 @@ module GitHub
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#merge_pull_request-instance_method
   # @param pr_number [Integer] The PR number to be merged.
+  # @param commit_message [String] The message to add to the commit
   # @raise [ArgumentError] If the PR has already been merged.
   # @raise [Exception] From calling Octokit.merge_pull_request.
   # @return [Boolean] Whether the PR was merged.
-  def self.merge_pull_request(pr_number)
+  def self.merge_pull_request(pr_number, commit_message='')
     if pull_merged?(pr_number)
       raise ArgumentError.new("PR\##{pr_number} is already merged")
     end
     configure_octokit
-    response = Octokit.merge_pull_request(REPO, pr_number)
+    response = Octokit.merge_pull_request(REPO, pr_number, commit_message)
     response['merged']
   end
 
@@ -57,7 +58,10 @@ module GitHub
   #   or nil if unsuccessful.
   def self.create_and_merge_pull_request(base:, head:, title:)
     pr_number = create_pull_request(base: base, head: head, title: title)
-    success = merge_pull_request(pr_number)
+    # By sleeping, we allow GitHub time to determine that a merge conflict is
+    # not present. Otherwise, empirically, we receive a 405 response error.
+    sleep 3
+    success = merge_pull_request(pr_number, title)
     success ? pr_number : nil
   end
 
@@ -92,13 +96,25 @@ module GitHub
     response.commits.map(&:commit).map(&:message)
   end
 
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
+  # @param base [String] The base branch to compare against.
+  # @param compare [String] The comparison brnach to compare.
+  # @raise [Exception] From calling Octokit.compare.
+  # @return [Boolean] Whether compare is behind base, i.e., whether compare is missing
+  #   commits in base.
+  def self.behind?(base:, compare:)
+    response = Octokit.compare(REPO, base, compare)
+    response.behind_by > 0
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Repositories.html#branch-instance_method
   # @param branch [String] The name of the branch.
   # @raise [Octokit::NotFound] If the specified branch does not exist.
-  # @return [String] The sha hash of the most recent commit to branch.
+  # @return [String] The sha hash (abbreviated to eight characters) of the most
+  #   recent commit to branch.
   def self.sha(branch)
     response = Octokit.branch(REPO, branch)
-    response.commit.sha
+    response.commit.sha[0, 7]
   end
 
   # Opens a browser URL with a candidate pull request merging head into base.

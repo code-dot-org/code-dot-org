@@ -2,32 +2,36 @@ import React from 'react';
 import { UnconnectedSummaryProgressTable as SummaryProgressTable } from './SummaryProgressTable';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import { fakeLesson, fakeLevels } from './progressTestHelpers';
+import { fakeLesson, fakeLevels, fakeLevel } from './progressTestHelpers';
 
-const lessons = [
-  fakeLesson('Jigsaw', 1, false, 1),
-  fakeLesson('Maze', 2, false, 2),
-  fakeLesson('Artist', 3, false, 3),
-  fakeLesson('Something', 4, false, 4)
-];
-const levelsByLesson = [
-  [
-    {
-      status: LevelStatus.not_tried,
-      url: '/step1/level1',
-      name: 'First progression'
-    },
-    ...fakeLevels(5).map(level => ({...level, progression: 'Second Progression'})),
-    {
-      status: LevelStatus.not_tried,
-      url: '/step3/level1',
-      name: 'Last progression'
-    },
+const defaultProps = {
+  lessons: [
+    fakeLesson('Jigsaw', 1, false, 1),
+    fakeLesson('Maze', 2, false, 2),
+    fakeLesson('Artist', 3, false, 3),
+    fakeLesson('Something', 4, false, 4)
   ],
-  fakeLevels(2),
-  fakeLevels(2),
-  fakeLevels(2)
-];
+  levelsByLesson: [
+    [
+      {
+        ...fakeLevels(1)[0],
+        name: 'First progression'
+      },
+      ...fakeLevels(5, 2).map(level => ({...level, progression: 'Second Progression'})),
+      {
+        ...fakeLevels(1)[0],
+        name: 'Last progression'
+      },
+    ],
+    fakeLevels(2),
+    fakeLevels(2),
+    fakeLevels(2)
+  ],
+  viewAs: ViewType.Student,
+
+  lessonIsVisible: () => true,
+  lessonLockedForSection: () => false
+};
 
 export default storybook => {
   storybook
@@ -37,8 +41,61 @@ export default storybook => {
         name:'simple SummaryProgressTable',
         story: () => (
           <SummaryProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
+            {...defaultProps}
+          />
+        )
+      },
+      {
+        name:'SummaryProgressTable with focus area',
+        story: () => (
+          <SummaryProgressTable
+            {...defaultProps}
+            lessons={defaultProps.lessons.map((lesson, index) => ({
+              ...lesson,
+              isFocusArea: index === 1
+            }))}
+            levelsByLesson={defaultProps.levelsByLesson.map((levels, index) => index === 1 ? fakeLevels(8) : levels)}
+            lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
+          />
+        )
+      },
+      {
+        name:'SummaryProgressTable for peer reviews',
+        story: () => (
+          <SummaryProgressTable
+            lessons={[{
+              id: -1,
+              isFocusArea: false,
+              lockable: false,
+              name: "You must complete 3 reviews for this unit"
+            }]}
+            levelsByLesson={[
+              [
+                {
+                  id: -1,
+                  name: "Link to submitted review",
+                  status: LevelStatus.perfect,
+                  url: "/peer_reviews/1",
+                  levelNumber: 1
+                },
+                {
+                  id: -1,
+                  name: "Review a new submission",
+                  status: LevelStatus.not_tried,
+                  url: "/pull-review",
+                  levelNumber: 2,
+                },
+                {
+                  id: -1,
+                  icon: 'fa-lock',
+                  name: "Reviews unavailable at this time",
+                  status: LevelStatus.locked,
+                  url: "",
+                  levelNumber: 3,
+                },
+              ]
+            ]}
             lessonIsVisible={() => true}
             lessonLockedForSection={() => false}
           />
@@ -48,11 +105,10 @@ export default storybook => {
         name:'second lesson is a hidden stage, viewing as teacher',
         story: () => (
           <SummaryProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
+            {...defaultProps}
+            viewAs={ViewType.Teacher}
             lessonIsVisible={(lesson, viewAs) =>
-              (lesson.id !== 2 || viewAs !== ViewType.Student)}
-            lessonLockedForSection={() => false}
+              (lesson.id !== 2 || viewAs === ViewType.Teacher)}
           />
         )
       },
@@ -60,11 +116,10 @@ export default storybook => {
         name:'third lesson is a hidden stage, viewing as teacher',
         story: () => (
           <SummaryProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
+            {...defaultProps}
+            viewAs={ViewType.Teacher}
             lessonIsVisible={(lesson, viewAs) =>
-              (lesson.id !== 3 || viewAs !== ViewType.Student)}
-            lessonLockedForSection={() => false}
+              (lesson.id !== 3 || viewAs === ViewType.Teacher)}
           />
         )
       },
@@ -73,31 +128,28 @@ export default storybook => {
         description: 'Row 2 should not be visible',
         story: () => (
           <SummaryProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
+            {...defaultProps}
             lessonIsVisible={(lesson, viewAs) =>
               (lesson.id !== 2 || viewAs === ViewType.Teacher)}
-            lessonLockedForSection={() => false}
           />
         )
       },
       {
         name:'third row is a hidden stage, viewing as student',
-        description: 'Row 3 should not be visible',
+        description: 'Row 3 should not be visible, gray still every other row',
         story: () => (
           <SummaryProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
+            {...defaultProps}
             lessonIsVisible={(lesson, viewAs) =>
               (lesson.id !== 3 || viewAs === ViewType.Teacher)}
-            lessonLockedForSection={() => false}
           />
         )
       },
       {
-        name:'locked lesson in current section',
+        name:'locked lesson in current section as teacher',
         story: () => (
           <SummaryProgressTable
+            {...defaultProps}
             lessons={[
               fakeLesson('Jigsaw', 1, false, 1),
               fakeLesson('Assessment One', 2, true),
@@ -108,7 +160,7 @@ export default storybook => {
               fakeLevels(4),
               fakeLevels(2)
             ]}
-            lessonIsVisible={() => true}
+            viewAs={ViewType.Teacher}
             lessonLockedForSection={(lessonId) => lessonId === 2}
           />
         )
@@ -117,6 +169,7 @@ export default storybook => {
         name:'locked lesson as student',
         story: () => (
           <SummaryProgressTable
+            {...defaultProps}
             lessons={[
               fakeLesson('Jigsaw', 1, false, 1),
               fakeLesson('Assessment One', 2, true),
@@ -127,15 +180,15 @@ export default storybook => {
               fakeLevels(4).map(level => ({...level, status: LevelStatus.locked })),
               fakeLevels(2)
             ]}
-            lessonIsVisible={() => true}
             lessonLockedForSection={() => false}
           />
         )
       },
       {
-        name:'unlocked lesson in current section',
+        name:'unlocked lesson in current section as teacher',
         story: () => (
           <SummaryProgressTable
+            {...defaultProps}
             lessons={[
               fakeLesson('Jigsaw', 1, false, 1),
               fakeLesson('Assessment One', 2, true),
@@ -146,15 +199,17 @@ export default storybook => {
               fakeLevels(4),
               fakeLevels(2)
             ]}
+            viewAs={ViewType.Teacher}
             lessonIsVisible={() => true}
             lessonLockedForSection={() => false}
           />
         )
       },
       {
-        name:'locked, hidden lesson',
+        name:'locked, hidden lesson as teacher',
         story: () => (
           <SummaryProgressTable
+            {...defaultProps}
             lessons={[
               fakeLesson('Jigsaw', 1, false, 1),
               fakeLesson('Assessment One', 2, true),
@@ -165,9 +220,23 @@ export default storybook => {
               fakeLevels(4),
               fakeLevels(2)
             ]}
+            viewAs={ViewType.Teacher}
             lessonIsVisible={(lesson, viewAs) =>
-              (lesson.id !== 2 || viewAs !== ViewType.Student)}
+              (lesson.id !== 2 || viewAs === ViewType.Teacher)}
             lessonLockedForSection={(lessonId) => lessonId === 2}
+          />
+        )
+      },
+      {
+        name:'unplugged lesson',
+        story: () => (
+          <SummaryProgressTable
+            {...defaultProps}
+            lessons={[fakeLesson('Stage with Unplugged', 1, false, 1)]}
+            levelsByLesson={[[
+              fakeLevel({isUnplugged: true}),
+              ...fakeLevels(3)
+            ]]}
           />
         )
       }

@@ -15,7 +15,7 @@ end
 
 When /^I wait for the hint image to load$/ do
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('.csf-top-instructions img').prop('complete');") }
+  wait.until {@browser.execute_script("return $('.csf-top-instructions img').prop('complete');")}
 end
 
 When /^I view the next authored hint$/ do

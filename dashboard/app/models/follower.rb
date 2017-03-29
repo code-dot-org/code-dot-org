@@ -3,7 +3,7 @@
 # Table name: followers
 #
 #  id              :integer          not null, primary key
-#  user_id         :integer          not null
+#  user_id         :integer
 #  student_user_id :integer          not null
 #  created_at      :datetime
 #  updated_at      :datetime
@@ -12,17 +12,17 @@
 #
 # Indexes
 #
-#  index_followers_on_section_id                   (section_id)
-#  index_followers_on_student_user_id              (student_user_id)
-#  index_followers_on_user_id_and_student_user_id  (user_id,student_user_id)
+#  index_followers_on_section_id_and_student_user_id  (section_id,student_user_id)
+#  index_followers_on_student_user_id                 (student_user_id)
+#  index_followers_on_user_id_and_student_user_id     (user_id,student_user_id)
 #
 
 # Join table defining student-teacher relationships for Users
 # (student_user is the student, user is the teacher)
 class Follower < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :student_user, foreign_key: "student_user_id", class_name: User
   belongs_to :section
+  has_one :user, through: :section
+  belongs_to :student_user, foreign_key: "student_user_id", class_name: User
 
   accepts_nested_attributes_for :student_user
 

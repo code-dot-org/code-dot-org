@@ -26,7 +26,7 @@ class Api::V1::Pd::WorkshopOrganizersControllerTest < ::ActionController::TestCa
         name: organizer.name,
         email: organizer.email
       }.stringify_keys
-      assert_equal expected, response.find{|o| o['id'] == organizer.id}
+      assert_equal expected, response.find {|o| o['id'] == organizer.id}
     end
   end
 end

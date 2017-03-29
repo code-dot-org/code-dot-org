@@ -15,6 +15,7 @@ raise 'Test helper must only be used in `test` environment!' unless rack_env? :t
 
 VCR.configure do |c|
   c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__
+  c.allow_http_connections_when_no_cassette = true
   c.hook_into :webmock
   # Filter unnecessary headers from the http interactions.
   c.before_record do |i|
@@ -28,11 +29,11 @@ VCR.configure do |c|
       User-Agent
       Host
       Content-Type
-    ).each { |h| i.request.headers.delete h }
+    ).each {|h| i.request.headers.delete h}
     %w(
       X-Amz-Request-Id
       X-Amz-Id-2
-    ).each { |h| i.response.headers.delete h }
+    ).each {|h| i.response.headers.delete h}
   end
 end
 
@@ -47,18 +48,22 @@ module SetupTest
     random = Random.new(0)
     # 4 test wrappers:
     # VCR (record/replay HTTP interactions)
-    # Stub fake AWS credentials
+    # Stub AWS credentials
     # Transaction rollback (leave behind no database side-effects)
     # Stub AWS::S3#random
-    VCR.use_cassette("#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_', '')}") do
-      unless VCR.current_cassette.recording?
-        Aws::CredentialProviderChain.
-            any_instance.
-            stubs(:static_credentials).
-            returns(Aws::Credentials.new('test_aws_key', 'test_aws_secret'))
-      end
+    cassette_name = "#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_', '')}"
+    credentials = VCR::Cassette.new(cassette_name).recording? ?
+      # Load AWS credentials before VCR recording starts.
+      Aws::CredentialProviderChain.new.resolve :
+      # If not currently recording, stub fake/invalid AWS credentials.
+      Aws::Credentials.new('test_aws_key', 'test_aws_secret')
+    Aws::CredentialProviderChain.
+      any_instance.
+      stubs(:static_credentials).
+      returns(credentials)
+    VCR.use_cassette(cassette_name) do
       PEGASUS_DB.transaction(rollback: :always) do
-        AWS::S3.stub(:random, proc{random.bytes(16).unpack('H*')[0]}, &block)
+        AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
       end
     end
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.

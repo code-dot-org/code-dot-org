@@ -98,6 +98,7 @@ WebLab.prototype.init = function (config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
+  config.baseShareUrl = 'https://codeprojects.org';
 
   config.afterClearPuzzle = config => {
     return new Promise((resolve, reject) => {

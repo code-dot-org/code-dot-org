@@ -7,6 +7,10 @@ $node_name = 'default'
 # Keep these hostname helper methods in sync with deployment.rb.
 # TODO Find a better way to reuse existing application configuration in Chef config helpers.
 def canonical_hostname(domain)
+  # Allow hostname overrides
+  return $override_dashboard if $override_dashboard && domain == 'studio.code.org'
+  return $override_pegasus if $override_pegasus && domain == 'code.org'
+
   return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?($node_name)
   return domain if $node_env == 'production'
 
@@ -39,7 +43,7 @@ def normalize_paths(paths)
     # Strip leading slash from extension path
     path.gsub!(/^\/(?=\*.)/, '')
     # Escape some valid special characters
-    path.gsub!(/[.+$"]/){|s| '\\' + s}
+    path.gsub!(/[.+$"]/) {|s| '\\' + s}
     # Replace * wildcards with .* regex fragment
     path.gsub!(/\*/, '.*')
     "^#{path}#{END_URL_REGEX}"
@@ -77,7 +81,7 @@ end
 # In the 'proxy' section, ignore extension-based behaviors (e.g., *.png).
 def paths_to_regex(path_config, req='req')
   paths = normalize_paths(path_config)
-  paths.empty? ? 'false' : paths.map{|path| "#{req}.url ~ \"#{path}\""}.join(' || ')
+  paths.empty? ? 'false' : paths.map {|path| "#{req}.url ~ \"#{path}\""}.join(' || ')
 end
 
 # Evaluate the provided path against the provided config, returning the first matched behavior.
@@ -85,7 +89,7 @@ def behavior_for_path(behaviors, path)
   behaviors.detect do |behavior|
     paths = behavior[:path]
     next true unless paths
-    normalize_paths(paths).any?{|p| path.match p }
+    normalize_paths(paths).any? {|p| path.match p}
   end
 end
 
@@ -149,7 +153,7 @@ def process_request(behavior, _)
     when 'none'
       'cookie.filter_except("NO_CACHE");'
     else
-      cookies.map{ |c| extract_cookie(c)}.join + "cookie.filter_except(\"#{cookies.join(',')}\");"
+      cookies.map {|c| extract_cookie(c)}.join + "cookie.filter_except(\"#{cookies.join(',')}\");"
     end
   )
   REMOVED_HEADERS.each do |remove_header|
@@ -208,7 +212,7 @@ def if_else(items, conditional)
     condition = conditional.call(item)
     next if condition.to_s == 'false'
     buf << "#{i != 0 ? 'else ' : ''}#{condition && "if (#{condition}) "}{\n"
-    buf << yield(item).lines.map{|line| '  ' + line }.join << "\n} "
+    buf << yield(item).lines.map {|line| '  ' + line}.join << "\n} "
   end
   buf.slice!(-1)
   buf

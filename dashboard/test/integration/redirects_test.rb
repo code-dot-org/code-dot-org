@@ -57,7 +57,7 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   end
 
   test 'old script id paths redirect to named paths' do
-    %w(2:Hour%20of%20Code 4:events 7:jigsaw).map{ |s| s.split ':' }.each do |before, after|
+    %w(2:Hour%20of%20Code 4:events 7:jigsaw).map {|s| s.split ':'}.each do |before, after|
       get "/s/#{before}"
       assert_redirected_to "/s/#{after}"
     end
