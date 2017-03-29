@@ -5,7 +5,7 @@ import {Table, Button, Modal} from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshop_dashboard/workshopConstants';
 
-const UpcomingWorkshops = React.createClass({
+const WorkshopList = React.createClass({
   render() {
     return (
       <WorkshopTableLoader
@@ -46,6 +46,52 @@ const UpcomingWorkshopsTable = React.createClass({
       showCancelModal: true,
       enrollmentCodeToCancel: enrollmentCode
     });
+  },
+
+  openCertificate(workshop) {
+
+  },
+
+  renderWorkshopActionButtons(workshop) {
+    return (
+      <div>
+        {
+          workshop.state === 'Not Started' && (
+            <Button>
+              Cancel enrollment
+            </Button>
+          )
+        }
+        {
+          workshop.state === 'Ended' && (
+            <Button onClick={() => this.openCertificate(workshop)}>
+              Print Certificate
+            </Button>
+          )
+        }
+        <Button onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}>
+          Workshop Details
+        </Button>
+      </div>
+    )
+    if (workshop.state === 'Not Started') {
+      return (
+        <div>
+          <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
+            Cancel enrollment
+          </Button>
+
+        </div>
+      );
+    } else if (workshop.state === 'Ended') {
+      return (
+        <div>
+          <Button>
+            Print Certificate
+          </Button>
+        </div>
+      )
+    }
   },
 
   renderWorkshopsTable() {
@@ -111,19 +157,7 @@ const UpcomingWorkshopsTable = React.createClass({
           </div>
         </td>
         <td>
-          {workshop.enrollment_code &&
-            (
-              <div>
-                <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
-                  Cancel enrollment
-                </Button>
-                <Button onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}>
-                  Workshop Details
-                </Button>
-              </div>
-            )
-          }
-
+          {this.renderWorkshopActionButtons(workshop)}
         </td>
       </tr>
     );
@@ -154,4 +188,4 @@ const UpcomingWorkshopsTable = React.createClass({
   }
 });
 
-export {UpcomingWorkshops, UpcomingWorkshopsTable};
+export {WorkshopList, UpcomingWorkshopsTable};
