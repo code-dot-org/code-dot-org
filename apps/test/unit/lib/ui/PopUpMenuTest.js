@@ -1,6 +1,7 @@
 /** @file Test PopUpMenu component */
 import React from 'react';
 import sinon from 'sinon';
+import msg from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
 import {mount} from 'enzyme';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
@@ -12,7 +13,7 @@ describe('PopUpMenu', () => {
     const wrapper = mount(
       <PopUpMenu targetPoint={targetPoint}/>
     );
-    expect(wrapper.text()).to.include('No menu items available.');
+    expect(wrapper.text()).to.include(msg.noMenuItemsAvailable());
   });
 
   it('renders each menu item', () => {

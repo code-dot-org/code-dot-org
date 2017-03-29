@@ -1,5 +1,7 @@
+/** @file Pop-over menu component.  Combine with react-portal to use. */
 import React, {Component, PropTypes, Children} from 'react';
 import Radium from 'radium';
+import msg from '@cdo/locale';
 import color from '../../util/color';
 
 const TAIL_WIDTH = 14;
@@ -37,7 +39,7 @@ const tailFillStyle = {
   borderColor: `transparent transparent ${BACKGROUND_COLOR} transparent`,
 };
 
-class PopUpMenu_ extends Component {
+class PopUpMenu extends Component {
   static propTypes = {
     targetPoint: PropTypes.shape({
       top: PropTypes.number.isRequired,
@@ -54,7 +56,7 @@ class PopUpMenu_ extends Component {
   renderMenuItems() {
     const {children} = this.props;
     if (Children.count(children) === 0) {
-      return <div><em>No menu items available.</em></div>;
+      return <div><em>{msg.noMenuItemsAvailable()}</em></div>;
     }
     return <div>{children}</div>;
   }
@@ -78,10 +80,9 @@ class PopUpMenu_ extends Component {
     );
   }
 }
-const PopUpMenu = Radium(PopUpMenu_);
-export default PopUpMenu;
+export default Radium(PopUpMenu);
 
-class Item_ extends Component {
+class Item extends Component {
   static propTypes = {
     children: PropTypes.string.isRequired,
     onClick: PropTypes.func,
@@ -89,8 +90,7 @@ class Item_ extends Component {
 
   static style = {
     color: color.dark_charcoal,
-    paddingLeft: '1em',
-    paddingRight: '1em',
+    padding: '0.25em 1em',
     cursor: 'pointer',
     ':hover': {
       backgroundColor: color.lightest_gray,
@@ -99,11 +99,10 @@ class Item_ extends Component {
 
   render() {
     return (
-      <div style={Item_.style} onClick={this.props.onClick}>
+      <div style={Item.style} onClick={this.props.onClick}>
         {this.props.children}
       </div>
     );
   }
 }
-const Item = Radium(Item_);
-PopUpMenu.Item = Item;
+PopUpMenu.Item = Radium(Item);

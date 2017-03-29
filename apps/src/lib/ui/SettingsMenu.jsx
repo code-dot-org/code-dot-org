@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import msg from '@cdo/locale';
 import * as assets from '../../code-studio/assets';
+import project from '../../code-studio/initApp/project';
 import * as maker from '../kits/maker/toolkit';
 import PopUpMenu from './PopUpMenu';
 
@@ -8,7 +9,7 @@ export default class SettingsMenu extends Component {
   constructor(props) {
     super(props);
 
-    // Autobind
+    // Bind methods to instance
     this.manageAssets = this.manageAssets.bind(this);
     this.toggleMakerToolkit = this.toggleMakerToolkit.bind(this);
   }
@@ -28,7 +29,7 @@ export default class SettingsMenu extends Component {
 
   toggleMakerToolkit() {
     this.props.handleClose();
-    window.dashboard.project.toggleMakerEnabled();
+    project.toggleMakerEnabled();
   }
 
   render() {

@@ -531,7 +531,8 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
    */
-  save(sourceAndHtml, callback, forceNewVersion, preparingRemix) {
+  save(...args) {
+    let [sourceAndHtml, callback, forceNewVersion, preparingRemix] = args;
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -539,13 +540,10 @@ var projects = module.exports = {
 
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
 
-    if (typeof arguments[0] === 'function' || !sourceAndHtml) {
-      // If no source is provided, shift the arguments and ask for the source
-      // ourselves.
-      const args = Array.prototype.slice.apply(arguments);
-      callback = args[0];
-      forceNewVersion = args[1];
-      preparingRemix = args[2];
+    if (typeof args[0] === 'function' || !sourceAndHtml) {
+      // If no save data is provided, shift the arguments and ask for the
+      // latest save data ourselves.
+      [callback, forceNewVersion, preparingRemix] = args;
 
       let completeAsyncSave = () =>
         this.getUpdatedSourceAndHtml_(sourceAndHtml =>
@@ -587,6 +585,13 @@ var projects = module.exports = {
       }.bind(this));
     }.bind(this));
   },
+
+  /**
+   * Ask the configured sourceHandler for the latest project save data and
+   * pass it to the provided callback.
+   * @param {function} callback
+   * @private
+   */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
       this.sourceHandler.getLevelSource().then(response => {
@@ -596,6 +601,12 @@ var projects = module.exports = {
         callback({source, html, animations, makerAPIsEnabled});
       }));
   },
+
+  /**
+   * Save the project with the maker API state toggled, then reload the page
+   * so that the toolbox gets re-initialized.
+   * @returns {Promise} (mostly useful for tests)
+   */
   toggleMakerEnabled() {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {

@@ -29,7 +29,7 @@ class SettingsCog extends Component {
   constructor(props) {
     super(props);
 
-    // Autobind
+    // Bind methods to instance
     this.open = this.open.bind(this);
     this.beforeClose = this.beforeClose.bind(this);
     this.close = this.close.bind(this);
@@ -68,9 +68,10 @@ class SettingsCog extends Component {
     }
 
     const rect = icon.getBoundingClientRect();
+    const offsetSoItLooksRight = {top: -6, left: -1};
     this.targetPoint = {
-      top: rect.bottom - 6,
-      left: rect.left + (rect.width / 2) - 1,
+      top: rect.bottom + offsetSoItLooksRight.top,
+      left: rect.left + (rect.width / 2) + offsetSoItLooksRight.left,
     };
   }
 

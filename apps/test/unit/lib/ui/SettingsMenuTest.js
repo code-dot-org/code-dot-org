@@ -3,12 +3,12 @@ import React from 'react';
 import sinon from 'sinon';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import msg from '@cdo/locale';
 import SettingsMenu from '@cdo/apps/lib/ui/SettingsMenu';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
 import * as assets from '@cdo/apps/code-studio/assets';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 describe('SettingsMenu', () => {
   const targetPoint = {left: 0, top:0};
@@ -17,19 +17,15 @@ describe('SettingsMenu', () => {
   beforeEach(() => {
     handleClose = sinon.spy();
     sinon.stub(assets, 'showAssetManager');
+    sinon.stub(project, 'toggleMakerEnabled');
     sinon.stub(maker, 'isAvailable');
     sinon.stub(maker, 'isEnabled');
-    replaceOnWindow('dashboard', {
-      project: {
-        toggleMakerEnabled: sinon.spy(),
-      },
-    });
   });
 
   afterEach(() => {
-    restoreOnWindow('dashboard');
     maker.isEnabled.restore();
     maker.isAvailable.restore();
+    project.toggleMakerEnabled.restore();
     assets.showAssetManager.restore();
   });
 
@@ -106,10 +102,10 @@ describe('SettingsMenu', () => {
       expect(menuItem.text()).to.equal(msg.enableMaker());
 
       expect(handleClose).not.to.have.been.called;
-      expect(window.dashboard.project.toggleMakerEnabled).not.to.have.been.called;
+      expect(project.toggleMakerEnabled).not.to.have.been.called;
       menuItem.simulate('click');
       expect(handleClose).to.have.been.calledOnce;
-      expect(window.dashboard.project.toggleMakerEnabled).to.have.been.calledOnce;
+      expect(project.toggleMakerEnabled).to.have.been.calledOnce;
     });
   });
 });
