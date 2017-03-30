@@ -46,7 +46,7 @@ const ColumnVariableQuestion = React.createClass({
     return (
       <tr>
         <td>
-          <label>
+          <label className="control-label">
             {this.props.question.label}
             {this.props.question.required && <span className="form-required-field"> *</span>}
           </label>
@@ -95,10 +95,18 @@ const VariableFormGroup = React.createClass({
     rowVariableQuestions: React.PropTypes.arrayOf(questionPropType),
   },
 
+  hasSingleSourceValue() {
+    return this.props.sourceValues.length === 1;
+  },
+
   getInitialState() {
-    return {
-      selected: []
-    };
+    // If we have only a single sourceValue, select it by default
+    let selected = [];
+    if (this.hasSingleSourceValue()) {
+      selected = [this.props.sourceValues[0]];
+    }
+
+    return {selected};
   },
 
   setSelected(values) {
@@ -130,14 +138,18 @@ const VariableFormGroup = React.createClass({
 
     return (
       <div className="form-group">
-        <ButtonList
-          answers={this.props.sourceValues}
-          groupName={this.props.sourceName}
-          label={this.props.sourceLabel}
-          onChange={this.setSelected}
-          selectedItems={this.state.selected}
-          type={'check'}
-        />
+        {this.hasSingleSourceValue() ?
+          <input type="hidden" name={this.props.sourceName} value={this.props.sourceValues[0]} /> :
+          <ButtonList
+            answers={this.props.sourceValues}
+            groupName={this.props.sourceName}
+            label={this.props.sourceLabel}
+            onChange={this.setSelected}
+            selectedItems={this.state.selected}
+            required={true}
+            type={'check'}
+          />
+        }
         <table>
           <thead>
             <tr>
