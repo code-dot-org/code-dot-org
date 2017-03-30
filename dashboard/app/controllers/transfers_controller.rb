@@ -5,33 +5,30 @@ class TransfersController < ApplicationController
   # POST /sections/:id/transfers
   def create
     # TODO(asher): Much of the permissioning here should be done through CanCan.
+
     new_section_code = params[:new_section_code]
-
-    new_section = Section.find_by_code(new_section_code)
-    unless new_section
-      render json: {
-        error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
-      }, status: :not_found
+    current_section_code = params[:current_section_code]
+    unless new_section_code && current_section_code
+      render json: {error: 'Missing section code.'}, status: :bad_request
       return
     end
 
-    # This is needed when we eventually allow students to be in multiple sections
-    if params.key?(:current_section_code)
-      current_section_code = params[:current_section_code]
-    else
-      render json: {
-        error: I18n.t('move_students.section_code_not_entered')
-      }, status: :bad_request
-      return
-    end
-
+    # Rather than noop, we return a bad_request if the source and destination sections are the same.
     if new_section_code == current_section_code
       render json: {
         error: I18n.t('move_students.section_code_cant_be_current_section')
       }, status: :bad_request
       return
     end
-
+    # Verify the destination section and destination teacher exist (are not soft-deleted).
+    new_section = Section.find_by_code(new_section_code)
+    unless new_section && new_section.user
+      render json: {
+        error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
+      }, status: :not_found
+      return
+    end
+    # Verify the source section exists (is not soft-deleted).
     current_section = Section.find_by_code(current_section_code)
     unless current_section
       render json: {
@@ -86,15 +83,7 @@ class TransfersController < ApplicationController
     end
 
     if new_section.user != current_user
-      new_section_teacher = new_section.user
-      if new_section_teacher.nil?
-        # This occurs when the new section teacher is (soft)-deleted.
-        render json: {
-          error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
-        }, status: :not_found
-        return
-      end
-      if students.any? {|student| Follower.exists?(student_user: student, user_id: new_section_teacher.id)}
+      if students.any? {|student| Follower.exists?(student_user: student, user_id: new_section.user_id)}
         render json: {
           error: I18n.t('move_students.already_enrolled_in_new_section')
         }, status: :bad_request
