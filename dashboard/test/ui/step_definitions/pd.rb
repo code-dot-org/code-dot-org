@@ -36,15 +36,15 @@ Given(/^I am a teacher who has just followed a survey link$/) do
 end
 
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
-  random_teacher_name = "TestTeacher" + SecureRandom.hex[0..9]
+  test_teacher_name = "TestTeacher - Certificate Test"
   require_rails_env
 
   steps %Q{
-    And I create a teacher named "#{random_teacher_name}"
-    And I create a workshop for course "CS Principles" attended by "#{random_teacher_name}" with 3 facilitators and end it
+    And I create a teacher named "#{test_teacher_name}"
+    And I create a workshop for course "CS Principles" attended by "#{test_teacher_name}" with 3 facilitators and end it
   }
 
-  enrollment = Pd::Enrollment.find_by(first_name: random_teacher_name)
+  enrollment = Pd::Enrollment.find_by(first_name: test_teacher_name)
   steps %Q{
     And I am on "http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}"
   }
@@ -85,7 +85,7 @@ end
 
 def create_enrollment(workshop, name=nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
-  last_name = "Last - #{SecureRandom.hex}"
+  last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
   enrollment = Pd::Enrollment.create!(
     first_name: first_name,
     last_name: last_name,
@@ -106,7 +106,7 @@ end
 
 def create_facilitator(course)
   facilitator = User.find_or_create_teacher(
-    {name: 'Facilitator', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'facilitator'
+    {name: 'Facilitator', email: "facilitator#{SecureRandom.hex[0..5]}@code.org"}, nil, 'facilitator'
   )
   Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: course)
 
@@ -123,9 +123,10 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     )
   end
 
-  workshop = Pd::Workshop.create(
+  workshop = Pd::Workshop.create!(
     workshop_type: 'Public',
     course: course,
+    subject: Pd::Workshop::SUBJECTS[course].try(:first),
     organizer_id: organizer.id,
     capacity: number.to_i,
     location_name: 'Buffalo'
