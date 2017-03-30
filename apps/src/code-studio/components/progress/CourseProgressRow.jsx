@@ -3,7 +3,7 @@ import Radium from 'radium';
 import { connect } from 'react-redux';
 
 import { stageShape } from './types';
-import StageProgress from './stage_progress';
+import StageProgress from './StageProgress';
 import TeacherStageInfo from './TeacherStageInfo';
 import { ViewType } from '../../stageLockRedux';
 import { isHiddenForSection } from '../../hiddenStageRedux';

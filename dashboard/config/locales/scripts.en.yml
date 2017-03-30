@@ -2806,3 +2806,11 @@ en:
           description_audience: ''
           description_short: Programming with physical devices
           description: The sixth unit of CS Discoveries, in which students use App Lab and the Maker Toolkit to develop programs that communicate with a physical board.
+        csd3-draft:
+          stage:
+            Shapes and Randomess: Shapes and Randomess
+            Shapes and Randomness: Shapes and Randomness
+          title: 'CSD Unit 3 - Programming: Animations and Games'
+          description_audience: ''
+          description_short: Animations and Games
+          description: ''

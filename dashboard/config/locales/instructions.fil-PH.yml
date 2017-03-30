@@ -1390,6 +1390,10 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
+      artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
+      artistFunctionsVideo1_instruction: |-
+        Follow the instructions to make your own
+        function.
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -1435,6 +1439,7 @@
         or 0 nectar, but you don't know which one! Be careful not to collect nectar
         from a purple flower if it doesn't have any. Check if the nectar is equal
         to 1 by using the if block.
+      beeDebugVideo1_instruction: Use a `repeat` loop to collect all of the nectar.
       Bergeron Robot Maze1_instruction: |
         Can you help me catch the naughty pig? Stack
         a couple of `move forward` blocks below the `when run` block and press "Run".
@@ -1578,6 +1583,9 @@
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
+      birdsDebugVideo1_instruction: |-
+        Trace the path and lead me to the silly pig.
+        Avoid TNT or feathers will fly!
       Brad Spooky House Copy_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -1871,6 +1879,15 @@
       Collector Demo_instruction: |-
         Look at all this loot! Help me get as many coins
         as I can so I can improve my farm. I can only use 9 blocks though!
+      collector example_instruction: |-
+        Put these blocks in order to collect all of
+        the gold and solve the puzzle.
+      Collector Test_instruction: Collect all the gold!
+      collectorDebugVideo2_instruction: |-
+        Put these blocks in order to collect all
+        of the gold and solve the puzzle.
+      collectorSkinVideo1_instruction: Collect all four piles to pass this level.
+      collectorSkinVideo2_instruction: Collect one pile of gold to pass this level.
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? "
       Course 2 Bee Loops 13_instruction: |-
@@ -2744,14 +2761,8 @@
         Freeplay: Use everything you've
         learned so far to make a game that includes a `for` loop!
       Course 4 Playlab For Loops 4b_instruction: |-
-        Now, these two characters are going
-        to race!  \r
-        \r
-        Each of them will move `counter` steps at a time, but their
-        counters will have different values because of the `for` loops.  \r
-        \r
-        Can
-        you change the increment in one of the loops so that the race is a tie?
+        Can you change the **increment**
+        in one of the loops so that the race is a tie?
       Course 4 Playlab For Loops 5b_instruction: |-
         Adjust the interval on these `for`
         loops so that the two characters end in the exact same place.
@@ -2956,39 +2967,39 @@
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_collector_loops1_instruction: |-
-        Move Laurel around and get as much gold
+        Move Laurel around and get as much treasure
         as you can!
       courseA_collector_loops10_instruction: |-
-        Help me get all of the gold from this
-        deep valley.
+        Help Laurel get all of the treasure
+        from this deep valley.
       courseA_collector_loops11_instruction: |-
-        Help me get all of the gold from this
-        cave.
+        Help Laurel get all of the treasure
+        from this cave.
       courseA_collector_loops12_instruction: |-
-        Eureka!  Collect as much gold as you
-        can!
+        Eureka!  Collect as much treasure as
+        you can!
       courseA_collector_loops2_instruction: |-
-        Here are three piles of gold!  Collect
-        all three.
+        Collect all three piles to pass this
+        level.
       courseA_collector_loops3_instruction: |-
         How can Laurel collect all five piles
-        of gold using only one `[E-->]` block?
+        of treasure using only one `[E-->]` block?
       courseA_collector_loops4_instruction: |-
         Fix Laurel's path to get all of this
-        gold.
+        treasure.
       courseA_collector_loops5_instruction: |-
         Use what you learned to get all of the
-        coins.
+        treasure.
       courseA_collector_loops6_instruction: |-
         Add blocks to this code to collect all
-        of the coins.
+        of the treasure.
       courseA_collector_loops7_instruction: |-
         What should you add to this code to
-        get all of the gold?
+        get all of the treasure?
       courseA_collector_loops8_instruction: Write the code to get all of this gold.
       courseA_collector_loops9_instruction: |-
-        **Challenge:** The gold goes all the
-        way up these stairs!  Write the code to help me get it all.
+        **Challenge:** The treasure goes all
+        the way up these stairs!  Write the code to help Laurel get it all.
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
@@ -3064,32 +3075,37 @@
         pond. Can you help the artist stay on the stones?
       courseB_collector_loops1_instruction: |-
         This is Laurel the Adventurer!  Can
-        you move her around and get gold?
+        you move her around and get treasure?
       courseB_collector_loops10_instruction: |-
-        Help Laurel get all of the gold from
-        this cave.
+        Help Laurel get all of the treasure
+        from this cave.
       courseB_collector_loops11_instruction: |-
-        Eureka!  Collect as much gold as you
-        can!
-      courseB_collector_loops2_instruction: Four piles of gold!  Collect all four.
+        Eureka!  Collect as much treasure as
+        you can!
+      courseB_collector_loops2_instruction: |-
+        Collect all four piles to pass this
+        level.
       courseB_collector_loops3_instruction: |-
         How can Laurel collect all five piles
-        of gold using only one `E -->` block?
+        of treasure using only one `E -->` block?
+      courseB_collector_loops3_predict1_instruction: |-
+        How can Laurel collect all
+        five piles of gold using only one `E -->` block?
       courseB_collector_loops4_instruction: |-
         Fix Laurel's path to get all of this
-        gold!
+        treasure!
       courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
-        get all of the gold. "
+        get all of the treasure. "
       courseB_collector_loops6_instruction: |-
-        What should you add to this code to
-        get all of the gold?
+        Figure out the code to help Laurel get
+        all of the treasure!
       courseB_collector_loops7_instruction: Write the code to get all of this gold.
       courseB_collector_loops8_instruction: |-
-        **Challenge: ** The gold goes all the
-        way down these stairs!  Write the code to help Laurel get it all.
+        **Challenge: ** The treasure goes all
+        the way down these stairs!  Write the code to help Laurel get it all.
       courseB_collector_loops9_instruction: |-
-        *"Help me get the gold from this deep
-        valley."*
+        *"Help me get the treasure from this
+        deep valley."*
       courseB_collector_prog1_instruction: |-
         This is Laurel the Adventurer!  Can you
         move her around and get gold?
@@ -3180,16 +3196,16 @@
         side is 150 pixels)
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
-        you can help Laurel collect some gold.
+        you can help Laurel collect some treasure.
       courseC_collector_prog2_instruction: |-
-        Move Laurel to the gold, then use `collect`
-        to pick it up.
+        Move Laurel to the treasure, then use
+        `collect` to pick it up.
       courseC_collector_prog3_instruction: |-
-        Order these blocks to collect the coins
+        Order these blocks to collect the treasure
         and solve the puzzle.
       courseC_collector_prog4_instruction: |-
         Put these blocks in order to collect
-        all of the gold and solve the puzzle.
+        all of the treasure and solve the puzzle.
       courseC_collector_prog5_instruction: |-
         These blocks are in the wrong order.
         Can you fix them?
@@ -3201,7 +3217,7 @@
         all of the treasure.
       courseC_collector_prog8_instruction: |-
         *"Keep up the good work! Help me collect
-        all of the coins."*
+        all of the treasure."*
       courseC_collector_prog9_instruction: '*"Let''s get all of the coins!"*'
       courseC_collector_progA_instruction: Help Laurel collect all of the treasure.
       courseC_collector_progB_instruction: |-
@@ -3307,6 +3323,9 @@
       courseC_maze_programming8_instruction: |-
         *"Keep calm and help me find the bad
         pig."*
+      courseC_maze_programming8_predict1_instruction: |-
+        *"Keep calm and help me find
+        the bad pig."*
       courseC_maze_programming9_instruction: |-
         *"Now, help me sneak up on the pig
         any way you want to!"*
@@ -3388,6 +3407,9 @@
         What is the shortest binary string that
         you can repeat to draw this image?
       courseD_artist_binary8_instruction: Finish the code to create this drawing.
+      courseD_artist_binary8_predict1_instruction: |-
+        Finish the code to create this
+        drawing.
       courseD_artist_binaryFP_instruction: |-
         Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r
@@ -3427,8 +3449,8 @@
         (Each side is 100 pixels long and you'll need to turn 120 degrees
         for each exterior angle.)
       courseD_artist_nestedLoops10_instruction: |-
-        Take the triangles from before,
-        but this time only make 7 of them, and lay them out in a row.
+        Take the squares from before, but
+        this time only make 7 of them, and lay them out in a row.
       courseD_artist_nestedLoops1a_instruction: |-
         Now loop the triangle 6 times. \r
         After
@@ -3460,18 +3482,28 @@
       courseD_artist_nestedLoops9_instruction: |-
         **Challenge:** Can you figure out
         how to make a picture like this?
+      courseD_artist_nestedLoops9_predict1_instruction: |-
+        **Challenge:** Can you figure
+        out how to make a picture like this?
       courseD_artist_nestedLoopsFP_instruction: |-
         Now it's your turn.  Take the skills
         you have learned and make something that you love!
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
+      courseD_artist_ramp11_instruction: Now make a square using Artist!
+      courseD_artist_ramp12_instruction: |-
+        Use what you've learned to draw this triangle
+        inside of a square.
       courseD_bee_conditionals1_instruction: |-
         Check to see if there's a flower under
         the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals10_instruction: |-
         Collect all of the nectar and make
         all of the honey.
+      courseD_bee_conditionals1_predict1_instruction: |-
+        Check to see if there's a
+        flower under the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals2_instruction: |
         Check underneath every cloud to see
         if it is hiding a flower before you get nectar.  \r
@@ -3493,6 +3525,9 @@
       courseD_bee_conditionals7_instruction: |-
         Use the `if/else` block to collect
         nectar at flowers and make honey at honeycomb.
+      courseD_bee_conditionals7_predict2_instruction: |-
+        Use the `if/else` block to
+        collect nectar at flowers and make honey at honeycomb.
       courseD_bee_conditionals8_instruction: |-
         Collect nectar if there is a flower.\r
         Otherwise,
@@ -3524,6 +3559,9 @@
       courseD_bee_nestedLoops2_instruction: |-
         This time, help the bee collect all
         of the nectar using as few blocks as possible.
+      courseD_bee_nestedLoops2_predict1_instruction: |-
+        This time, help the bee collect
+        all of the nectar using as few blocks as possible.
       courseD_bee_nestedLoops3_instruction: |-
         Collect all of the nectar from each
         flower.
@@ -3536,6 +3574,10 @@
       courseD_bee_nestedLoops8_instruction: "Collect all of the nectar from each\nflower
         and make honey at the honeycomb. "
       courseD_bee_nestedLoops9_instruction: Make all of the honey.
+      courseD_bee_nestedLoops9_predict2_instruction: Make all of the honey.
+      courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
+      courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
+      courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
       courseD_debugging_1_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_2_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_3_instruction: |-
@@ -3603,11 +3645,16 @@
       courseD_farmer_condLoops9_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
+      courseD_farmer_condLoops9_predict1_instruction: |-
+        Collect all of the corn and
+        lettuce, then pick the pumpkin.
       courseD_farmer_while1_instruction: |-
         Move to the pile of dirt and use the `remove`
         block to remove it.
       courseD_farmer_while10_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
+      courseD_farmer_while10_predict2_instruction: "Flatten all of these piles using\nas
+        few blocks as possible. "
       courseD_farmer_while2_instruction: |-
         Move to the hole and fill it with six shovelfuls
         of dirt, using the `fill` block.
@@ -3617,6 +3664,9 @@
       courseD_farmer_while4_instruction: |-
         Help the farmer remove this entire pile
         using a `while` loop.
+      courseD_farmer_while4_predict1_instruction: |-
+        Help the farmer remove this entire
+        pile using a `while` loop.
       courseD_farmer_while5_instruction: 'Help me remove all of this dirt. '
       courseD_farmer_while6_instruction: |-
         Use the `while` loop to easily fill all
@@ -3634,13 +3684,29 @@
       courseD_maze_nestedLoops4_instruction: "Get the zombie to the sunflower using\nthe
         fewest blocks possible!  "
       courseD_maze_nestedLoops5_instruction: |-
-        Get the zombe to the sunflower using
+        Get the zombie to the sunflower using
         the fewest number of blocks possible!
       courseD_maze_nestedLoops6_instruction: |-
         Get the zombie to the sunflower using
         only the blocks available.
+      courseD_maze_ramp1_instruction: |-
+        For this puzzle, drag all of the blocks together
+        and click "Run" to watch it go!
+      courseD_maze_ramp2_instruction: |-
+        Drag an extra `move forward` block out of
+        the toolbox to finish your code.
+      courseD_maze_ramp3_instruction: |-
+        There is one extra block that is going to
+        cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseD_maze_ramp4_instruction: Avoid TNT or feathers will fly!
+      courseD_maze_ramp5_instruction: Avoid the TNT.
+      courseD_maze_ramp6_instruction: |-
+        "Keep calm and help me find the bad pig.
+        Otherwise I might get angry!"
+      courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
       courseD_maze_until2_instruction: |-
         Now, use the `repeat until` loop to do the
         same thing without specifying how many times to move forward and turn.
@@ -3725,6 +3791,10 @@
       courseE_artist_functions9_instruction: |-
         Create this image using only the blocks
         provided.
+      courseE_artist_ramp11_instruction: Now make a square using Artist!
+      courseE_artist_ramp12_instruction: |-
+        Use what you've learned to draw this triangle
+        inside of a square.
       courseE_bee_concept1_instruction: Collect all of the nectar from each flower.
       courseE_bee_concept2_instruction: |-
         Help the bee make all of the honey. You
@@ -3769,6 +3839,9 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
+      courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
+      courseE_collector_ramp8_instruction: Help Laurel collect all of the treasure.
+      courseE_collector_ramp9_instruction: Help Laurel collect all of the treasure.
       courseE_farmer_concept1_instruction: |-
         Can you write a program that fills these
         holes until the ground is even?
@@ -3864,6 +3937,21 @@
       courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
         and collect all of the lettuce and corn along the way. "
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
+      courseE_maze_ramp1_instruction: |-
+        For this puzzle, drag all of the blocks together
+        and click "Run" to watch it go!
+      courseE_maze_ramp2_instruction: |-
+        Drag an extra `move forward` block out of
+        the toolbox to finish your code.
+      courseE_maze_ramp3_instruction: |-
+        There is one extra block that is going to
+        cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseE_maze_ramp4_instruction: Avoid TNT or feathers will fly!
+      courseE_maze_ramp5_instruction: Avoid the TNT.
+      courseE_maze_ramp6_instruction: |-
+        "Keep calm and help me find the bad pig.
+        Otherwise I might get angry!"
+      courseE_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -3923,6 +4011,9 @@
       courseF_artist_fwp2_instruction: |-
         Edit the function to accept a parameter called
         `length`.
+      courseF_artist_fwp2_predict1_instruction: |-
+        Edit the function to accept a parameter
+        called `length`.
       courseF_artist_fwp3_instruction: |-
         Create a function called 'draw a square'
         and use it to outline these four boxes using parameters.
@@ -4054,6 +4145,9 @@
         honey as well.
       courseF_bee_fwp8_instruction: Use your new function to solve this spiral.
       courseF_bee_fwp9_instruction: Use your new function to solve this puzzle.
+      courseF_bee_fwp9_predict1_instruction: |-
+        Use your new function to solve this
+        puzzle.
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of choose your own adventure story in play lab.
@@ -4384,6 +4478,15 @@
       CSDU6 - Arrays - lengthMinus1_instruction: |-
         Use list.length - 1 to log the
         last item in the array to the console. (Click to see full instructions)
+      CSDU6 - for loop - color buttons with for_instruction: |-
+        Write the contents
+        of the array to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - color buttons_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - why for_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -5599,6 +5702,10 @@
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      'Game Lab Workshop: Random_instruction': |-
+        Pick a shape block and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
       Geometric Pattern_instruction: |-
         Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!
@@ -5793,8 +5900,8 @@
         Challenge: This code has a lot of bugs.
         You'll need to remove blocks and add blocks.
       grade2_collector_10_instruction: |-
-        You're almost done! Collect as many coins
-        as you can to finish the stage!
+        You're almost done! Collect as many pieces
+        of treasure as you can to finish the stage!
       grade2_collector_2_instruction: |-
         Move Laurel to the gold, then use `collect`
         to pick it up.
@@ -7804,6 +7911,9 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
+      Kiki_StarWars_Test_3_instruction: Text
+      Kiki_StarWars_Test_4_instruction: Text
+      Kiki_StarWars_Test_5_instruction: Text
       kikiTesta_instruction: |-
         Our adventurer wants to collect coins.  But she can
         only use 4 blocks to get them.\r
@@ -7824,6 +7934,9 @@
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
+      LaurelDebugging4Video1_instruction: |-
+        Move Laurel around and get as much gold
+        as you can!
       level 'grade3_Loops_10_instruction: |-
         Such a busy bee!\r
         \r
@@ -8711,6 +8824,9 @@
         Have Robin talk back to Jorge when you click on
         her.
       playEventsK7_instruction: What else can you do in this fun scene?
+      playLabDebugVideo1_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       Poorva copy U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -8895,6 +9011,7 @@
         Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!
+      skratDebugVideo1_instruction: Get Skrat to the Acorn.
       SpecialFrozenLevel_instruction: |-
         You've officially become a master artist!
         Create a winter wonderland.

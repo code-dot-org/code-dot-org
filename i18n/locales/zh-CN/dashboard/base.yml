@@ -12,6 +12,7 @@ zh-CN:
     attributes:
       user:
         name: '显示名称'
+        name_example: '显示的名字<br/>（例如酷码、晓明）'
         email: '电子邮件'
         username: '用户名'
         password: '密码'
@@ -110,9 +111,31 @@ zh-CN:
     user_type_student: "学生"
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: '其他'
+    state: '省/直辖市/自治区'
+    district: '区'
+    other_district_not_listed: '上面未列出的其他区'
+    district_name: '地区名称'
+    school: '就读学校'
+    other_school_not_listed: '上面未列出的其他学校'
+    school_name: '校名'
+    school_zip: '学校邮编代号'
+    school_address: '校址'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: '已经有账号了？登录'
     login: '电子邮件'
+    login_username: '邮箱/用户名'
     password: '密码:'
     remember: '记住我'
     submit: '登录'
@@ -366,8 +389,12 @@ zh-CN:
     announcement_how_code_studio: "你不需要任何经验来在你的课堂中教授计算机科学。Code.org 为所有年级提供教案、 课程计划、 高质量专业学习程序和很多的好工具&mdash; 一切你所需要的，都是免费的。想知道如何开始？下载 <a href='%{video_download_url}'> 这个视频</a> ！"
     announcement_go_beyond: "每周抽出一个小时的时间，与你的学生共同探索计算机科学概念。Code.org 为所有年级学生提供课程教案、 课程计划以及高质量的专业学习程序，还有很多有用的工具。&mdash;而且全部免费。:)你不需要任何计算机教学经验，<b>为你的课堂找到合适的内容。</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
-    announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
+    announcement_student_privacy: "Code.org对于保护学生的隐私有着非常认真的态度。为了保护您的学生的隐私，我们已经对您的部分登陆后的页面做了修改来避免显示全名。尽管这个修改应能减低登录页面所带来的隐私风险，我们仍鼓励用户<i>不使用学生的全名</i>。"
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_not_entered: "请提供 current_section_code。"
@@ -402,7 +429,7 @@ zh-CN:
     copyright: '版权'
     more: '更多'
     feedback: '提供反馈'
-    translate: '帮助我们翻译成你的语言'
+    translate: '志愿报名翻译内容'
     support: '支持'
     support_url: 'http://support.code.org/'
     tos_short: '条款'
@@ -431,6 +458,10 @@ zh-CN:
     upgrade:
       unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}', target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。"
       link: "了解详情"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: '请再多等一会儿...'
   try_reloading: '请重新刷新页面'
   next_stage: '完成 ！继续下一个阶段'

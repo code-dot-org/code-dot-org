@@ -117,6 +117,11 @@ var devtool = process.env.CHEAP ?
 
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: devtool,
+  resolve: _.extend({}, baseConfig.resolve, {
+    alias: _.extend({}, baseConfig.resolve.alias, {
+      '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
+    }),
+  }),
   externals: {
     "blockly": "this Blockly",
   },

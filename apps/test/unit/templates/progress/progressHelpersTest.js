@@ -4,7 +4,8 @@ import sinon from 'sinon';
 import { fakeLesson } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {
   lessonIsVisible,
-  lessonIsLockedForAllStudents
+  lessonIsLockedForAllStudents,
+  getIconForLevel
 } from '@cdo/apps/templates/progress/progressHelpers';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
@@ -106,6 +107,29 @@ describe('progressHelpers', () => {
     it('returns true when the selected section has no unlocked students', () => {
       const state = stateForSelectedSection(11);
       assert.strictEqual(lessonIsLockedForAllStudents(lockedStageId, state), true);
+    });
+  });
+
+  describe('getIconForLevel', () => {
+    it('strips fa- from level.icon if one is provided', () => {
+      const level = {
+        icon: 'fa-file-text'
+      };
+      assert.equal(getIconForLevel(level), 'file-text');
+    });
+
+    it('uses desktop icon if no icon on level', () => {
+      const level = {};
+      assert.equal(getIconForLevel(level), 'desktop');
+    });
+
+    it('throws if icon is invalid', () => {
+      assert.throws(function () {
+        const level = {
+          icon: 'asdf'
+        };
+        getIconForLevel(level);
+      }, /Unknown iconType: /);
     });
   });
 });

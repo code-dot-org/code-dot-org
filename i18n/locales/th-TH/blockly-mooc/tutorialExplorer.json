@@ -1,6 +1,6 @@
 {
-  "filterGrades":"Grades",
-  "filterGradesPre":"Pre-reader",
+  "filterGrades":"ระดับชั้น",
+  "filterGradesPre":"อ่านก่อน",
   "filterGrades25":"Grades 2-5",
   "filterGrades68":"Grades 6-8",
   "filterGrades9":"Grades 9+",
