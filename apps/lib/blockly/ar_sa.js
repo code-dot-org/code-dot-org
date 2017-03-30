@@ -376,7 +376,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "ازالة الفراغات من كلا �
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "ازالة الفراغات من الجانب الأيسر";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "ازالة الفراغات من الجانب الأيمن";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "إرجاع نسخة من النص مع الفراغات المحذوفة من أحد أو كلا أطرافه.";
-Blockly.Msg.UNUSED_CODE = "تعليمة برمجية غير مستخدمة";
+Blockly.Msg.UNUSED_CODE = "كود برمجي غير مستخدم";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "عنصر";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "إنشاء 'تعيين %1'";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";

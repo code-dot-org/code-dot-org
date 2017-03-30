@@ -22,15 +22,11 @@
     },
     "show_d_pad": "false",
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/637c9127e8f8f1f7a12d1e3b7ca1a78f-image-1490824263077.48.28 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nThis program uses the four parameter version of `rect()` and `ellipse()` to draw a simple scene.\r\n\r\n# Do This\r\n\r\n* Debug this program and correct the error so that the grass extends across the entire bottom.\r\n* Hint: You only have to change one number. Which parameter makes your rectangle (the grass) wider?",
+    "markdown_instructions": "<img src=\"https://images.code.org/83269268e1c4f8af8551253ff4573b43-image-1490825158453.03.45 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nThis program uses the four parameter version of `rect()` and `ellipse()` to draw a simple scene.\r\n\r\n# Do This\r\n\r\n* Debug this program and correct the error so that the grass extends across the entire bottom.\r\n* Hint: You only have to change one number. Which parameter makes your rectangle (the grass) wider?",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "start_blocks": "noStroke();\r\n\r\n// Draw sky\r\nbackground(\"skyblue\");\r\n\r\n// Draw sun\r\nfill(\"yellow\");\r\nellipse(300,50,50,50);\r\n\r\n// Draw grass\r\nfill(\"green\");\r\nrect(0,300,200,100);",
+    "start_blocks": "noStroke();\r\n\r\n// Draw sky\r\nbackground(\"skyblue\");\r\n\r\n// Draw sun\r\nfill(\"yellow\");\r\nellipse(350,50,50,50);\r\n\r\n// Draw grass\r\nfill(\"green\");\r\nrect(0,300,200,100);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -59,7 +55,8 @@
     "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "pause_animations_by_default": "false"
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

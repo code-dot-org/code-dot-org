@@ -1,7 +1,9 @@
 import {expect} from '../../../util/configuredChai';
 import React from 'react';
 import sinon from 'sinon';
-let project = require('@cdo/apps/code-studio/initApp/project');
+import project from '@cdo/apps/code-studio/initApp/project';
+import {files as filesApi} from '@cdo/apps/clientApi';
+import header from '@cdo/apps/code-studio/header';
 
 describe('project.getProjectUrl', function () {
 
@@ -39,5 +41,39 @@ describe('project.getProjectUrl', function () {
   it('with ending slashes, query, and hash', function () {
     url = 'http://url/?query#hash';
     expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
+  });
+});
+
+describe('project.saveThumbnail', () => {
+  const STUB_CHANNEL_ID = 'STUB-CHANNEL-ID';
+  let updateTimestamp;
+
+  beforeEach(() => {
+    sinon.stub(header, 'updateTimestamp');
+    sinon.stub(filesApi, 'putFile');
+
+    const projectData = {
+      id: STUB_CHANNEL_ID,
+      isOwner: true
+    };
+    project.updateCurrentData_(null, projectData);
+  });
+
+  afterEach(() => {
+    project.updateCurrentData_(null, undefined);
+
+    filesApi.putFile.restore();
+    header.updateTimestamp.restore();
+  });
+
+  it('calls filesApi.putFile with correct parameters', () => {
+    const blob = 'stub-binary-data';
+
+    project.saveThumbnail(blob);
+
+    expect(filesApi.putFile).to.have.been.calledOnce;
+    const call = filesApi.putFile.getCall(0);
+    expect(call.args[0]).to.equal('.metadata/thumbnail.png');
+    expect(call.args[1]).to.equal(blob);
   });
 });

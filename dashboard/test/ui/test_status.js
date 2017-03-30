@@ -296,7 +296,7 @@ function refresh() {
   // Fetches all logs for this branch and maps them to the tests in this run.
   // Passes last modification times to the test objects so they can decide
   // whether to update.
-  if(refreshButton.disabled) {
+  if (refreshButton.disabled) {
     return;
   }
   refreshButton.disabled = true;
