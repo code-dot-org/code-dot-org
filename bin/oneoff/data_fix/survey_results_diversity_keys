@@ -16,16 +16,17 @@ FOODSTAMPS = 'foodstamps'.freeze
 FARM = 'farm'.freeze
 
 SurveyResult.
-  where(kind: SurveyResult::DIVERSITY_2016).
+  where(kind: [SurveyResult::DIVERSITY_2016, SurveyResult::DIVERSITY_2016]).
   find_each do |survey_result|
   # The keys to transform are stored in the properties hash.
   properties = survey_result.properties
   transformed_properties = {}
   properties.each do |key, value|
-    if DIVERSITY_ATTRS.include? key
+    if SurveyResult::DIVERSITY_ATTRS.include? key
       transformed_properties[key] = value
     else
       new_key = NEW_PREFIX + '_' + key.gsub(OLD_PREFIXES.join('|'), '')
+      new_key.gsub!(NEW_PREFIX + ' ' + NEW_PREFIX, NEW_PREFIX)
       new_key.gsub!(FOODSTAMPS, FARM)
       transformed_properties[new_key] = value
     end
