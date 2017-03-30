@@ -433,7 +433,6 @@ en:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
     current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
-    students_not_yours: "You cannot move students from a section that does not belong to you."
     stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
     student_ids_not_entered: "Please provide student_ids."
     student_not_found: "One or more students could not be found."

@@ -4,8 +4,6 @@ class TransfersController < ApplicationController
 
   # POST /sections/:id/transfers
   def create
-    # TODO(asher): Much of the permissioning here should be done through CanCan.
-
     new_section_code = params[:new_section_code]
     current_section_code = params[:current_section_code]
     unless new_section_code && current_section_code
@@ -37,12 +35,8 @@ class TransfersController < ApplicationController
       return
     end
 
-    if current_section.user != current_user
-      render json: {
-        error: I18n.t('move_students.students_not_yours')
-      }, status: :forbidden
-      return
-    end
+    # TODO(asher): Determine if this should be :manage (currently not granted) instead of :read.
+    authorize! :read, current_section
 
     # As of right now, this only applies to transfers to another teacher
     # When students are allowed to be in multiple sections, this will also be needed
