@@ -59,9 +59,13 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
   }
   if (stageData.script_stages > 1) {
     $('.header_popup_link').show();
-    stageData.freeplay_links.forEach(function (item) {
-      $('.' + item + '_free_play').show();
-    });
+
+    // Don't show freeplay_links in CSD Units 2 or 3
+    if (scriptData.name !== 'csd3' && scriptData.name !== 'csd2'){
+      stageData.freeplay_links.forEach(function (item) {
+        $('.' + item + '_free_play').show();
+      });
+    }
   }
   if (progressData.linesOfCodeText) {
     $('.header_popup .header_text').text(progressData.linesOfCodeText);
