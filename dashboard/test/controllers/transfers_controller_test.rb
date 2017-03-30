@@ -215,9 +215,5 @@ class TransfersControllerTest < ActionController::TestCase
 
     post :create, params: @params
     assert_response :forbidden
-    assert_equal(
-      "You cannot move students from a section that does not belong to you.",
-      json_response["error"]
-    )
   end
 end
