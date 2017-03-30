@@ -63,9 +63,6 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
       $('.' + item + '_free_play').show();
     });
   }
-  // if (progressData.linesOfCodeText) {
-  //   $('.header_popup .header_text').text(progressData.linesOfCodeText);
-  // }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
   progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation, signedIn);
@@ -93,7 +90,8 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     $('.header_popup_link_glyph').html('&#x25B2;');
     $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
-    progress.renderMiniView($('.user-stats-block')[0], scriptName, currentLevelId);
+    progress.renderMiniView($('.user-stats-block')[0], scriptName, currentLevelId,
+      progressData.linesOfCodeText);
     isHeaderPopupVisible = true;
   }
   function hideHeaderPopup() {

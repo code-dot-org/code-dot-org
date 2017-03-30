@@ -19,11 +19,15 @@ const styles = {
  */
 const MiniView = React.createClass({
   propTypes: {
+    linesOfCodeText: PropTypes.string.isRequired,
+
+    // redux backed
+    scriptName: PropTypes.string.isRequired,
     hasFullProgress: PropTypes.bool.isRequired
   },
 
   render() {
-    const { hasFullProgress } = this.props;
+    const { linesOfCodeText, scriptName, hasFullProgress } = this.props;
 
     let body;
     if (!hasFullProgress) {
@@ -39,14 +43,11 @@ const MiniView = React.createClass({
       );
     }
 
-    // TODO
-    const linesOfCode = 118;
-    const scriptName = "course1";
     return (
       <div>
         <MiniViewTopRow
           scriptName={scriptName}
-          linesOfCode={linesOfCode}
+          linesOfCodeText={linesOfCodeText}
         />
         {body}
       </div>
@@ -57,5 +58,6 @@ const MiniView = React.createClass({
 export const UnconnectedMiniView = MiniView;
 
 export default connect(state => ({
+  scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
 }))(MiniView);

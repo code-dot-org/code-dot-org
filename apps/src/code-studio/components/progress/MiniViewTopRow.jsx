@@ -17,17 +17,16 @@ const styles = {
 
 const MiniViewTopRow = React.createClass({
   propTypes: {
-    linesOfCode: PropTypes.number.isRequired,
+    linesOfCodeText: PropTypes.string.isRequired,
   },
 
   render() {
-    // TODO - i18n
-    const { linesOfCode } = this.props;
+    const { linesOfCodeText } = this.props;
     return (
       <div style={styles.main}>
         <span>View Unit Overview</span>
         <span style={styles.linesOfCode}>
-          Total lines of code: {linesOfCode}
+          {linesOfCodeText}
         </span>
       </div>
     );
