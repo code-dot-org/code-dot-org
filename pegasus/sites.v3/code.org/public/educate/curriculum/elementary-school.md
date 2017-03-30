@@ -2,6 +2,7 @@
 title: CS Fundamentals for grades K-5
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 [solid-block-header]
@@ -174,6 +175,3 @@ Thousands of engineers and individuals passionate about computer science have si
 
 ## Spread the word!
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators.
-
-
-
