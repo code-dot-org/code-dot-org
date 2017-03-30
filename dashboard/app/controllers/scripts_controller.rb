@@ -71,7 +71,7 @@ class ScriptsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    render 'levels/instructions', locals: { stages: script.stages }
+    render 'levels/instructions', locals: {stages: script.stages}
   end
 
   private

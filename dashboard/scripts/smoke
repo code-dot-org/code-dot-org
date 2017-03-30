@@ -21,12 +21,12 @@ MILESTONE_DATA = {
 }
 
 TESTS = [
-  { url: '/' },
+  {url: '/'},
 ]
 
 20.times do |i|
-  TESTS << { url: "/hoc/#{i + 1}" }
-  TESTS << { url: "/milestone/0/#{i + 1}", method: :post, form_data: MILESTONE_DATA }
+  TESTS << {url: "/hoc/#{i + 1}"}
+  TESTS << {url: "/milestone/0/#{i + 1}", method: :post, form_data: MILESTONE_DATA}
 end
 #
 # parse arguments
@@ -62,7 +62,7 @@ def run_tests(options = {})
             end
       req['User-Agent'] = test[:user_agent] || USER_AGENT_WEB
 
-      response = Net::HTTP.start(url.hostname, url.port) {|http| http.request(req) }
+      response = Net::HTTP.start(url.hostname, url.port) {|http| http.request(req)}
       http_code = response.code.to_i
 
       raise "HTTP Status code error. Expecting #{http_status_code}, got #{http_code}" if http_code != http_status_code
@@ -90,9 +90,9 @@ end
 
 smoke_start = Time.now
 
-options = { quiet: quiet }
+options = {quiet: quiet}
 threads = []
-thread_count.times { threads << Thread.new { repeat_count.times { run_tests(options) } } }
+thread_count.times {threads << Thread.new {repeat_count.times {run_tests(options)}}}
 threads.each(&:join)
 
 printf("Total Time: %.3f\n", (Time.now - smoke_start)) unless options[:quiet]

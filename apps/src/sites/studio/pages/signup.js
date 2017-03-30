@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {createUuid, trySetLocalStorage} from '@cdo/apps/utils';
 
 window.SignupManager = function (options) {
   this.options = options;
@@ -128,59 +127,30 @@ window.SignupManager = function (options) {
     lastUserType = "teacher";
   }
 
-  function getEnvironment() {
-    const hostname = window.location.hostname;
-    if (hostname.includes("adhoc")) {
-      // check first for adhoc, since hostnames might include other keywords
-      return "adhoc";
+  function getSchoolDropdownStudyGroup() {
+    const variationID = 8256420202; // comes from Optimizely config
+    if (window.optimizely && window.optimizely.data && window.optimizely.data.state) {
+      const variantNumber = window.optimizely.data.state.variationMap[variationID];
+      if (variantNumber === 1) {
+        return "show_school_dropdown";
+      }
     }
-    if (hostname.includes("test")) {
-      return "test";
-    }
-    if (hostname.includes("staging")) {
-      return "staging";
-    }
-    if (hostname.includes("levelbuilder")) {
-      return "levelbuilder";
-    }
-    if (hostname.includes("localhost")) {
-      return "development";
-    }
-    if (hostname.includes("code.org")) {
-      return "production";
-    }
-    return "unknown";
+    return shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
   }
 
   /**
-   * Log signup-related analytics events to Firehose
+   * Log signup-related analytics events to Firehose.
    * @param eventName name of the event to log
-   * @param extraData optional hash object for supplemental data (will show up in the data_json field)
+   * @param extraData optional hash object for supplemental data to be injected
+   *   in the data_json field. (default {})
    */
   function logAnalyticsEvent(eventName, extraData = {}) {
-    if (!self.uuid) {
-      if (!!window.localStorage && !!window.localStorage.getItem("analyticsID")) {
-        self.uuid = window.localStorage.getItem("analyticsID");
-      } else {
-        self.uuid = createUuid();
-        trySetLocalStorage("analyticsID", self.uuid);
-      }
-    }
-
     const streamName = "analysis-events";
-    const environment = getEnvironment();
     const study = "signup_school_dropdown";
-    const studyGroup = shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
+    const studyGroup = getSchoolDropdownStudyGroup();
 
-    let dataJson = {
-      user_agent: window.navigator.userAgent,
-      window_width: window.innerWidth,
-      window_height: window.innerHeight,
-      hostname: window.location.hostname,
-      full_path: window.location.href
-    };
-    Object.assign(dataJson, extraData);
-    if (!!window.optimizely) {
+    let dataJson = extraData;
+    if (window.optimizely && window.optimizely.data) {
       const optimizelyData = {
         optimizely_data: window.optimizely.data.state
       };
@@ -190,12 +160,9 @@ window.SignupManager = function (options) {
     firehoseClient.putRecord(
       streamName,
       {
-        created_at: new Date().toISOString(),
-        environment: environment,
         study: study,
         study_group: studyGroup,
         event: eventName,
-        uuid: self.uuid,
         data_json: JSON.stringify(dataJson),
       }
     );
@@ -212,28 +179,33 @@ window.SignupManager = function (options) {
     logAnalyticsEvent(event);
   }
 
+  function logEventWithInferredUserType(event, extraData = {}) {
+    logAnalyticsEvent(event + "_" + getUserTypeSelected(), extraData);
+  }
+
   function logFormSubmitted() {
-    const event = isTeacherSelected() ? "submit_teacher" : "submit_student";
-    logAnalyticsEvent(event);
+    logEventWithInferredUserType("submit");
   }
 
   function logFormError(err) {
-    const event = isTeacherSelected() ? "submit_error_teacher" : "submit_error_student";
-    logAnalyticsEvent(event, {error_info: err});
+    logEventWithInferredUserType("submit_error", {error_info: err});
   }
 
   function logFormSuccess() {
-    const event = isTeacherSelected() ? "submit_success_teacher" : "submit_success_student";
-    logAnalyticsEvent(event);
+    logEventWithInferredUserType("submit_success");
+  }
+
+  function getUserTypeSelected() {
+    const formData = $('#new_user').serializeArray();
+    const userType = $.grep(formData, e => e.name === "user[user_type]");
+    if (userType.length === 1) {
+      return userType[0].value;
+    }
+    return "no_user_type";
   }
 
   function isTeacherSelected() {
-    const formData = $('#new_user').serializeArray();
-    const userType = $.grep(formData, e => e.name === "user[user_type]");
-    if (userType.length === 1 && userType[0].value === "teacher") {
-      return true;
-    }
-    return false;
+    return getUserTypeSelected() === "teacher";
   }
 
   $(".signupform").submit(function () {

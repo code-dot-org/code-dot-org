@@ -89,7 +89,7 @@ def behavior_for_path(behaviors, path)
   behaviors.detect do |behavior|
     paths = behavior[:path]
     next true unless paths
-    normalize_paths(paths).any? {|p| path.match p }
+    normalize_paths(paths).any? {|p| path.match p}
   end
 end
 
@@ -153,7 +153,7 @@ def process_request(behavior, _)
     when 'none'
       'cookie.filter_except("NO_CACHE");'
     else
-      cookies.map { |c| extract_cookie(c)}.join + "cookie.filter_except(\"#{cookies.join(',')}\");"
+      cookies.map {|c| extract_cookie(c)}.join + "cookie.filter_except(\"#{cookies.join(',')}\");"
     end
   )
   REMOVED_HEADERS.each do |remove_header|
@@ -212,7 +212,7 @@ def if_else(items, conditional)
     condition = conditional.call(item)
     next if condition.to_s == 'false'
     buf << "#{i != 0 ? 'else ' : ''}#{condition && "if (#{condition}) "}{\n"
-    buf << yield(item).lines.map {|line| '  ' + line }.join << "\n} "
+    buf << yield(item).lines.map {|line| '  ' + line}.join << "\n} "
   end
   buf.slice!(-1)
   buf

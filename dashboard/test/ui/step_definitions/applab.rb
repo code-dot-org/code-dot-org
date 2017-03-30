@@ -80,17 +80,17 @@ end
 
 And /^I wait to see Applab design mode$/ do
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
-  wait.until { @browser.execute_script("return $('#designWorkspace').css('display') == 'block';") }
+  wait.until {@browser.execute_script("return $('#designWorkspace').css('display') == 'block';")}
 end
 
 And /^I wait to see Applab data mode$/ do
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
-  wait.until { @browser.execute_script("return $('#dataWorkspaceWrapper').css('display') == 'block';") }
+  wait.until {@browser.execute_script("return $('#dataWorkspaceWrapper').css('display') == 'block';")}
 end
 
 And /^I wait to see Applab code mode$/ do
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
-  wait.until { @browser.execute_script("return $('#codeWorkspaceWrapper').css('display') == 'block';") }
+  wait.until {@browser.execute_script("return $('#codeWorkspaceWrapper').css('display') == 'block';")}
 end
 
 # Step for dragging an Applab design mode element into the applab visualization.

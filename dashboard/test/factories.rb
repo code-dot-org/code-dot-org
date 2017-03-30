@@ -16,10 +16,10 @@ FactoryGirl.define do
 
   factory :user do
     birthday Date.new(1991, 3, 14)
-    sequence(:email) { |n| "testuser#{n}@example.com.xx" }
+    sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     password "00secret"
     locale 'en-US'
-    sequence(:name) { |n| "User#{n} Codeberg" }
+    sequence(:name) {|n| "User#{n} Codeberg"}
     user_type User::TYPE_STUDENT
     confirmed_at Time.now
 
@@ -131,18 +131,18 @@ FactoryGirl.define do
   end
 
   factory :section do
-    sequence(:name) { |n| "Section #{n}"}
-    user { create :teacher }
+    sequence(:name) {|n| "Section #{n}"}
+    user {create :teacher}
   end
 
   factory :game do
-    sequence(:name) { |n| "game#{n}.com"}
+    sequence(:name) {|n| "game#{n}.com"}
     app "maze"
   end
 
   factory :level, class: Blockly do
-    sequence(:name) { |n| "Level_#{n}" }
-    sequence(:level_num) {|n| "1_2_#{n}" }
+    sequence(:name) {|n| "Level_#{n}"}
+    sequence(:level_num) {|n| "1_2_#{n}"}
 
     # User id must be non-nil for custom level
     user_id '1'
@@ -268,7 +268,7 @@ FactoryGirl.define do
     level
     data '<xml/>'
     trait :with_image do
-      level { create(:level, game: Game.find_by_app(Game::ARTIST))}
+      level {create(:level, game: Game.find_by_app(Game::ARTIST))}
       after :create do |level_source, _|
         create :level_source_image, level_source: level_source
       end
@@ -281,12 +281,12 @@ FactoryGirl.define do
 
   factory :gallery_activity do
     user
-    user_level { create(:user_level) }
-    level_source { create(:level_source, :with_image, level: user_level.level) }
+    user_level {create(:user_level)}
+    level_source {create(:level_source, :with_image, level: user_level.level)}
   end
 
   factory :script do
-    sequence(:name) { |n| "bogus-script-#{n}" }
+    sequence(:name) {|n| "bogus-script-#{n}"}
   end
 
   factory :script_level do
@@ -339,7 +339,7 @@ FactoryGirl.define do
   end
 
   factory :stage do
-    sequence(:name) { |n| "Bogus Stage #{n}" }
+    sequence(:name) {|n| "Bogus Stage #{n}"}
     script
 
     absolute_position do |stage|
@@ -354,7 +354,7 @@ FactoryGirl.define do
   end
 
   factory :callout do
-    sequence(:element_id) { |n| "#pageElement#{n}" }
+    sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
     script_level
   end
@@ -362,24 +362,24 @@ FactoryGirl.define do
   factory :activity do
     level
     user
-    level_source { create :level_source, level: level }
+    level_source {create :level_source, level: level}
   end
 
   factory :concept do
-    sequence(:name) { |n| "Algorithm #{n}" }
+    sequence(:name) {|n| "Algorithm #{n}"}
     trait :with_video do
       video
     end
   end
 
   factory :video do
-    sequence(:key) { |n| "concept_#{n}" }
+    sequence(:key) {|n| "concept_#{n}"}
     youtube_code 'Bogus text'
   end
 
   factory :prize do
     prize_provider
-    sequence(:code) { |n| "prize_code_#{n}" }
+    sequence(:code) {|n| "prize_code_#{n}"}
   end
 
   factory :prize_provider do
@@ -423,13 +423,13 @@ FactoryGirl.define do
   end
 
   factory :district do
-    sequence(:name) { |n| "District #{n}" }
+    sequence(:name) {|n| "District #{n}"}
     location 'Panem'
     contact {create(:district_contact)}
   end
 
   factory :workshop do
-    sequence(:name) { |n| "My Workshop #{n}" }
+    sequence(:name) {|n| "My Workshop #{n}"}
     program_type '1'
     location 'Somewhere, USA'
     instructions 'Test workshop instructions.'
@@ -528,25 +528,24 @@ FactoryGirl.define do
   end
 
   factory :survey_result do
-    user { create :teacher }
+    user {create :teacher}
     kind 'Diversity2016'
-    properties {{survey2016_ethnicity_asian: "1"}}
-    properties {{survey2016_foodstamps: "3"}}
+    properties {{diversity_asian: "1", diversity_farm: "3"}}
   end
 
   factory :hint_view_request do
-    user { create :student }
-    script { create :script }
-    level { create :level }
+    user {create :student}
+    script {create :script}
+    level {create :level}
   end
 
   factory :level_concept_difficulty do
-    level { create :level }
+    level {create :level}
     repeat_loops 2
   end
 
   factory :user_proficiency do
-    user { create :student }
+    user {create :student}
     sequencing_d1_count 1
     repeat_loops_d2_count 2
     repeat_loops_d4_count 3
@@ -738,9 +737,9 @@ FactoryGirl.define do
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
-    sequence(:first_name) { |n| "Participant#{n}" }
+    sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
-    sequence(:email) { |n| "participant#{n}@example.com.xx" }
+    sequence(:email) {|n| "participant#{n}@example.com.xx"}
     association :school_info, factory: :school_info_without_country
     school 'Example School'
     code {SecureRandom.hex(10)}
@@ -798,7 +797,7 @@ FactoryGirl.define do
   end
 
   factory :regional_partner do
-    sequence(:name) { |n| "Partner#{n}" }
+    sequence(:name) {|n| "Partner#{n}"}
     contact {create :teacher}
     group 1
   end

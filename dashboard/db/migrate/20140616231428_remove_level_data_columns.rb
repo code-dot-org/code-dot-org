@@ -20,8 +20,8 @@ class RemoveLevelDataColumns < ActiveRecord::Migration[4.2]
       end
       columns.each do |column, type|
         options = (column == 'maze') ? {limit: 20000} : {}
-        dir.up { remove_column :levels, column.to_sym, type.to_sym, options }
-        dir.down { add_column :levels, column.to_sym, type.to_sym, options }
+        dir.up {remove_column :levels, column.to_sym, type.to_sym, options}
+        dir.down {add_column :levels, column.to_sym, type.to_sym, options}
       end
 
       dir.down do
