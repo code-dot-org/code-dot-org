@@ -398,7 +398,6 @@ FactoryGirl.define do
         evaluator.section.try(:user) ||
         build(:teacher)
       follower.section = evaluator.section || build(:section, user: follower.user)
-      follower.user_id = follower.section.user_id
     end
   end
 
