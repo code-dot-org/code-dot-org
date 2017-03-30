@@ -121,4 +121,4 @@ deployment:
     branch: staging
     commands:
       - 'echo "sync_assets: false" >> locals.yml'
-      - 'cd apps && npm run storybook:deploy'
+      - 'case $CIRCLE_NODE_INDEX in 0) cd apps && npm run storybook:deploy ;; *) echo "Skipping" ;; esac'
