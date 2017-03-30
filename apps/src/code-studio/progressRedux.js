@@ -39,7 +39,8 @@ const initialState = {
   signInState: SignInState.Unknown,
   postMilestoneDisabled: false,
   isHocScript: null,
-  isSummaryView: true
+  isSummaryView: true,
+  hasFullProgress: false
 };
 
 /**
@@ -60,7 +61,8 @@ export default function reducer(state = initialState, action) {
       stages: processedStages(stages, action.professionalLearningCourse),
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
-      currentStageId
+      currentStageId,
+      hasFullProgress: action.isFullProgress
     };
   }
 
@@ -196,14 +198,16 @@ export function processedStages(stages, isPlc) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName}) => ({
+    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName,
+    isFullProgress}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
   peerReviewStage,
-  scriptName
+  scriptName,
+  isFullProgress
 });
 
 export const mergeProgress = levelProgress => ({
@@ -274,6 +278,7 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
   url: level.url,
   name: level.name,
   icon: (level.locked ? level.icon : undefined),
+  levelNumber: index + 1
 }));
 
 /**
@@ -284,13 +289,22 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
  */
 export const levelsByLesson = state => (
   state.stages.map(stage => (
-    stage.levels.map(level => ({
-      status: statusForLevel(level, state.levelProgress),
-      url: level.url,
-      name: level.name,
-      progression: level.progression,
-      icon: level.icon,
-    }))
+    stage.levels.map(level => {
+      if (level.kind !== LevelKind.unplugged) {
+        if (!level.title || typeof(level.title) !== 'number') {
+          throw new Error('Expect all non-unplugged levels to have a numerical title');
+        }
+      }
+      return {
+        status: statusForLevel(level, state.levelProgress),
+        url: level.url,
+        name: level.name,
+        progression: level.progression,
+        icon: level.icon,
+        isUnplugged: level.kind === LevelKind.unplugged,
+        levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title
+      };
+    })
   ))
 );
 

@@ -1,14 +1,12 @@
 import React from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
-import { fakeLevels } from './progressTestHelpers';
+import { fakeLevels, fakeLevel } from './progressTestHelpers';
 
-const multipleLevels = [
-  {
-    status: LevelStatus.perfect,
-    url: '/foo/level1',
-  }
-].concat(fakeLevels(4));
+const levels = fakeLevels(5).map((level, index) => ({
+  ...level,
+  status: index === 0 ? LevelStatus.perfect : level.status
+}));
 
 export default storybook => {
   storybook
@@ -18,14 +16,8 @@ export default storybook => {
         name:'single puzzle step',
         story: () => (
           <ProgressLevelSet
-            start={1}
             name="Images, Pixels, and RGB"
-            levels={[
-              {
-                status: 'perfect',
-                url: '/foo/level1',
-              }
-            ]}
+            levels={levels.slice(0, 1)}
             disabled={false}
           />
         )
@@ -34,9 +26,8 @@ export default storybook => {
         name:'multiple puzzle step',
         story: () => (
           <ProgressLevelSet
-            start={1}
             name="Writing Exercises"
-            levels={multipleLevels}
+            levels={levels}
             disabled={false}
           />
         )
@@ -45,9 +36,8 @@ export default storybook => {
         name:'non first step',
         story: () => (
           <ProgressLevelSet
-            start={4}
             name="Writing Exercises"
-            levels={multipleLevels}
+            levels={fakeLevels(5, 4)}
             disabled={false}
           />
         )
@@ -56,10 +46,31 @@ export default storybook => {
         name:'disabled',
         story: () => (
           <ProgressLevelSet
-            start={1}
             name="Assessment"
-            levels={multipleLevels}
+            levels={levels}
             disabled={true}
+          />
+        )
+      },
+      {
+        name:'Unnamed progression',
+        story: () => (
+          <ProgressLevelSet
+            levels={levels}
+            disabled={false}
+          />
+        )
+      },
+      {
+        name: 'with unplugged level',
+        story: () => (
+          <ProgressLevelSet
+            name={undefined}
+            levels={[
+              fakeLevel({isUnplugged: true}),
+              ...fakeLevels(5)
+            ].map(level => ({...level, name: undefined }))}
+            disabled={false}
           />
         )
       }

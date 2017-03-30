@@ -640,7 +640,7 @@ class User < ActiveRecord::Base
       script_level_index = last_script_level.chapter - 1 if last_script_level
     end
 
-    next_unpassed = script.script_levels[script_level_index..-1].detect do |script_level|
+    next_unpassed = script.script_levels[script_level_index..-1].try(:detect) do |script_level|
       user_levels = script_level.level_ids.map {|id| user_levels_by_level[id]}
       unpassed_progression_level?(script_level, user_levels)
     end

@@ -140,11 +140,8 @@ class Pardot
     # Set up config params to insert new contacts into Pardot.
     config = {
       operation_name: "insert",
-      # Temporarily limit the accounts synced into Pardot to just those in
-      # Teacher role, which is about 25% of total contacts. We will need to
-      # purchase additional Pardot capacity to be able import all contacts.
-      where_clause: "pardot_sync_at is NULL AND pardot_id IS NULL AND "\
-                    "Roles like '%Teacher%'",
+      where_clause: "pardot_sync_at IS NULL AND pardot_id IS NULL AND "\
+                    "opted_out IS NULL",
       pardot_url: PARDOT_BATCH_CREATE_URL
     }
     sync_contacts_with_pardot(config)
@@ -315,7 +312,7 @@ class Pardot
     unless malformed_emails.empty?
       PEGASUS_DB[:contact_rollups].
         where("email in ?", malformed_emails).
-        update(email_malformed: true)
+        update(email_malformed: true, pardot_sync_at: DateTime.now)
     end
 
     @consecutive_timeout_errors = 0
