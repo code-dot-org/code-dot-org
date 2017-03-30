@@ -183,6 +183,8 @@ function initializeThermometer(board) {
     pin: "A0",
     freq: 100
   });
+  // TODO (bbuchanan): This doesn't really work for the thermometer
+  // It doesn't have a scale function, doesn't update like the other sensors.
   addSensorFeatures(five.Board.fmap, sensor);
   return sensor;
 }
