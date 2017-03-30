@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import {CIPHER, ALPHABET} from '../../constants';
+import {files as filesApi} from '../../clientApi';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -856,7 +857,23 @@ var projects = module.exports = {
       pathName += '/' + action;
     }
     return pathName;
-  }
+  },
+
+  /**
+   * Uploads a thumbnail image to the thumbnail path in the files API, and
+   * stores a URL to access the thumbnail in current.thumbnailUrl.
+   * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
+   */
+  saveThumbnail(pngBlob) {
+    if (current && current.isOwner) {
+      const thumbnailPath = '.metadata/thumbnail.png';
+      filesApi.putFile(thumbnailPath, pngBlob, () => {
+        current.thumbnailUrl = `/v3/files/${current.id}/${thumbnailPath}`;
+      }, error => {
+        console.warn(`error saving thumbnail image: ${error}`);
+      });
+    }
+  },
 };
 
 /**

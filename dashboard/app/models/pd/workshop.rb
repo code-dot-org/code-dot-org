@@ -128,6 +128,13 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
   }
 
+  WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
+    COURSE_CSP => 'CSP Support',
+    COURSE_ECS => 'ECS Support',
+    COURSE_CS_IN_A => 'CS in Algebra Support',
+    COURSE_CS_IN_S => 'CS in Science Support'
+  }.freeze
+
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -450,5 +457,9 @@ class Pd::Workshop < ActiveRecord::Base
   # Note the latter part of the path is handled by React-Router on the client, and is not known by rails url helpers
   def workshop_dashboard_url
     Rails.application.routes.url_helpers.pd_workshop_dashboard_url + "/workshops/#{id}"
+  end
+
+  def associated_online_course
+    Plc::Course.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 end
