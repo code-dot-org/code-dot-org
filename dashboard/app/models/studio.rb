@@ -86,7 +86,7 @@ class Studio < Grid
       end
     end
 
-    { 'maze' => maze_json }
+    {'maze' => maze_json}
   end
 
   # List of possible skins, the first is used as a default.

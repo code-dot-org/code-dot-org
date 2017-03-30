@@ -79,7 +79,7 @@ module LevelsHelper
     is_legacy_level = @script_level && @script_level.script.legacy_curriculum?
 
     if is_legacy_level
-      autoplay_video = @level.related_videos.find { |video| !client_state.video_seen?(video.key) }
+      autoplay_video = @level.related_videos.find {|video| !client_state.video_seen?(video.key)}
     elsif @level.specified_autoplay_video
       unless client_state.video_seen?(@level.specified_autoplay_video.key)
         autoplay_video = @level.specified_autoplay_video
@@ -108,7 +108,7 @@ module LevelsHelper
       !always_show && callouts_seen[c.localization_key] && !can_reappear
     end
     # Mark the callouts as seen
-    callouts_to_show.each { |c| client_state.add_callout_seen(c.localization_key) }
+    callouts_to_show.each {|c| client_state.add_callout_seen(c.localization_key)}
     # Localize and propagate the seen property
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
@@ -612,8 +612,8 @@ module LevelsHelper
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
   def instruction_gif_choices
-    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)) { Dir.glob(File.join("**", "*")) }
-    all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)] }
+    all_filenames = Dir.chdir(Rails.root.join('config', 'scripts', instruction_gif_relative_path)) {Dir.glob(File.join("**", "*"))}
+    all_filenames.map {|filename| [filename, instruction_gif_asset_path(filename)]}
   end
 
   def instruction_gif_asset_path(filename)
@@ -690,13 +690,13 @@ module LevelsHelper
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
-      redirect_to '/', flash: { alert: error_message }
+      redirect_to '/', flash: {alert: error_message}
       return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', flash: { alert: I18n.t("errors.messages.pair_programmer") }
+        redirect_to '/', flash: {alert: I18n.t("errors.messages.pair_programmer")}
         return true
       end
     end

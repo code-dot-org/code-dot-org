@@ -6,7 +6,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     Script.clear_cache
     # turn on the cache (off by default in test env so tests don't confuse each other)
     Rails.application.config.action_controller.perform_caching = true
-    Rails.application.config.cache_store = :memory_store, { size: 64.megabytes }
+    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
 
     Rails.cache.clear
   end

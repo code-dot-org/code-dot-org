@@ -50,7 +50,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Setting Up the Safe\r\n\r\nYou have generated a secret code and made it so users can navigate to the second room. Lets give the user the ability to enter the secret code when they click on the sage\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for the safe image\r\n* Inside the `onEvent` block add a `prompt` block\r\n\t* On the left set the name of the variable to something like guess \r\n    * On the right change the prompt to ask the user to enter the code",
+    "markdown_instructions": "# Setting Up the Safe\r\n\r\nYou have generated a secret code and made it so users can navigate to the second room. Lets give the user the ability to enter the secret code when they click on the safe\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block\r\n\t* Pick the ID for the safe\r\n* Inside the `onEvent` block add a `prompt` block\r\n\t* On the left set the name of the variable to be *guess* \r\n    * On the right change the prompt to ask the user to *Enter the code*",
     "contained_level_names": null
   },
   "published": true,

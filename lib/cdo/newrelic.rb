@@ -95,7 +95,7 @@ class NewRelicClient
     http = Net::HTTP.new(uri.hostname, uri.port)
     http.use_ssl = true
 
-    response = http.start { http.request(req) }
+    response = http.start {http.request(req)}
 
     if response.code == "200"
       JSON.parse(response.body)

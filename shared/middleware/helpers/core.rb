@@ -28,7 +28,7 @@ end
 # Optionally adds additional details to a JSON response body
 def json_bad_request(details = nil)
   content_type :json
-  body = { error: 'Bad Request' }
+  body = {error: 'Bad Request'}
   body[:details] = details unless details.nil?
   halt(400, body.to_json)
 end

@@ -30,20 +30,20 @@ class Pardot
   # Map of database fields to Pardot field names. "multi" refers to if the field
   # is a multi-valued type (such as checkbox list)
   MYSQL_TO_PARDOT_MAP = {
-    email: {  field: 'email', multi: false },
-    pardot_id: { field: 'id', multi: false },
-    name: { field: 'db_Name', multi: false },
-    street_address: { field: 'db_Street_Address', multi: false },
-    city: { field: 'db_City', multi: false },
-    state: { field: 'db_State', multi: false },
-    postal_code: { field: 'db_Postal_Code', multi: false },
-    country: { field: 'db_Country', multi: false },
-    district_name: { field: 'db_District', multi: false },
-    district_city: { field: 'db_District_City', multi: false },
-    district_state: { field: 'db_District_State', multi: false },
-    school_name: { field: 'db_School', multi: false },
-    roles: { field: 'db_Roles', multi: true },
-    courses_facilitated: { field: 'db_Facilitator_Type', multi: true },
+    email: {field: 'email', multi: false},
+    pardot_id: {field: 'id', multi: false},
+    name: {field: 'db_Name', multi: false},
+    street_address: {field: 'db_Street_Address', multi: false},
+    city: {field: 'db_City', multi: false},
+    state: {field: 'db_State', multi: false},
+    postal_code: {field: 'db_Postal_Code', multi: false},
+    country: {field: 'db_Country', multi: false},
+    district_name: {field: 'db_District', multi: false},
+    district_city: {field: 'db_District_City', multi: false},
+    district_state: {field: 'db_District_State', multi: false},
+    school_name: {field: 'db_School', multi: false},
+    roles: {field: 'db_Roles', multi: true},
+    courses_facilitated: {field: 'db_Facilitator_Type', multi: true},
     professional_learning_enrolled: {
       field: 'db_Professional_Learning_Enrolled',
       multi: true
@@ -52,11 +52,11 @@ class Pardot
       field: 'db_Professional_Learning_Attended',
       multi: true
     },
-    hoc_organizer_years: { field: 'db_Hour_of_Code_Organizer', multi: true },
-    grades_taught: { field: 'db_Grades_Taught', multi: true },
-    ages_taught: { field: 'db_Ages_Taught', multi: true },
-    forms_submitted: { field: 'db_Forms_Submitted', multi: false },
-    form_roles: { field: 'db_Form_Roles', multi: false }
+    hoc_organizer_years: {field: 'db_Hour_of_Code_Organizer', multi: true},
+    grades_taught: {field: 'db_Grades_Taught', multi: true},
+    ages_taught: {field: 'db_Ages_Taught', multi: true},
+    forms_submitted: {field: 'db_Forms_Submitted', multi: false},
+    form_roles: {field: 'db_Form_Roles', multi: false}
   }.freeze
 
   # Exception to throw to ourselves if Pardot API key is invalid (which probably
@@ -109,7 +109,6 @@ class Pardot
       results_in_response = 0
 
       # Process every prospect in the response.
-      id_max = email_to_pardot_id.values.max
       doc.xpath('/rsp/result/prospect').each do |node|
         id = node.xpath("id").text.to_i
         email = node.xpath("email").text
@@ -195,24 +194,9 @@ class Pardot
           prospect[pardot_info[:field]] = db_value
         end
       end
-      # Special case: if contact has opted out, set the two different Pardot
-      # flavors of opted out. Also, only ever set this to true, otherwise set no
-      # value; never set it back to false. Pardot is the authority on opt-out
-      # data, so never reset any opt-out setting it has stored.
-      if contact_rollup[:opted_out]
-        prospect[:opted_out] = true
-        prospect[:is_do_not_email] = true
-      end
+      # Do special handling of a few fields
+      apply_special_fields(contact_rollup, prospect)
 
-      # If this contact has a dashboard user ID (which means it is a teacher
-      # account), mark that in a Pardot field so we can segment on that.
-      if contact_rollup[:dashboard_user_id].present?
-        prospect[:db_Has_Teacher_Account] = "true"
-      end
-
-      # Set a custom field to mark in Pardot that this contact was imported from
-      # Code Studio.
-      prospect[:db_Imported] = "true"
       # Add this prosect to the batch.
       prospects << prospect
 
@@ -241,6 +225,30 @@ class Pardot
     log "Contact #{config[:operation_name]} pass completed. #{num_operations} total operations."
   end
 
+  # Do special transformation of some fields from database to Pardot
+  # @param src [Hash] Hash of database fields we are reading from
+  # @param dst [Hash] Hash of Pardot fields we are writing to
+  def self.apply_special_fields(src, dest)
+    # special case: if contact has opted out, set the two different Pardot
+    # flavors of opted out to true. Also, only ever set this to true, otherwise
+    # set no value; never set it back to false. Pardot is the authority on
+    # opt-out data, so never reset any opt-out setting it has stored.
+    if src[:opted_out]
+      dest[:opted_out] = true
+      dest[:is_do_not_email] = true
+    end
+
+    # If this contact has a dashboard user ID (which means it is a teacher
+    # account), mark that in a Pardot field so we can segment on that.
+    if src[:dashboard_user_id].present?
+      dest[:db_Has_Teacher_Account] = "true"
+    end
+
+    # set a custom field to mark in Pardot that this contact was imported from
+    # Code Studio
+    dest[:db_Imported] = "true"
+  end
+
   # Create or update a batch of prospects. This method may raise an exception.
   # @param prospects [Array<Hash>] array of hashes of prospect data
   # @param config [Hash] hash of config params to use to control create vs update behavior
@@ -251,7 +259,7 @@ class Pardot
     url = build_batch_prospects_url(prospects, config)
 
     # Build array of the emails to create in Pardot.
-    prospect_emails = prospects.collect { |x| x["email"] }
+    prospect_emails = prospects.collect {|x| x["email"]}
     malformed_emails = []
 
     num_submitted = prospects.length
@@ -372,7 +380,7 @@ class Pardot
   # @return [String] Pardot URL for API request including encoded JSON prospect
   #   data in query string
   def self.build_batch_prospects_url(prospects, config)
-    prospects_payload_json_encoded = URI.encode({ prospects: prospects }.to_json)
+    prospects_payload_json_encoded = URI.encode({prospects: prospects}.to_json)
     # We also need to encode plus signs in email addresses, otherwise Pardot
     # rejects them as invalid. URI.encode does not encode plus signs, as they
     # are valid characters in the base of a URL. Although they are NOT valid in
