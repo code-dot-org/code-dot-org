@@ -93,7 +93,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     $('.header_popup_link_glyph').html('&#x25B2;');
     $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
-    lazyLoadPopup();
+    progress.renderMiniView($('.user-stats-block')[0], scriptName, currentLevelId);
     isHeaderPopupVisible = true;
   }
   function hideHeaderPopup() {
@@ -134,24 +134,17 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     headerPopup.find('.header_popup_scrollable').css('max-height',
         viewportHeight - (popupTop + popupBottom + footerHeight));
   }
-
-  var popupLoaded = false;
-  function lazyLoadPopup() {
-    if (!popupLoaded) {
-      popupLoaded = true;
-      $.getJSON(`/api/script_structure/${scriptName}`, data => {
-        // Hide our loading spinner and replace it with course progress
-        $(".header_popup_body .loading").hide();
-        progress.renderCourseProgress(data, currentLevelId);
-      });
-    }
-  }
 };
 
 function shareProject() {
   dashboard.project.save(function () {
-    var origin = location.protocol + '//' + location.host;
-    var shareUrl = origin + dashboard.project.getPathName();
+    var shareUrl;
+    if (appOptions.baseShareUrl) {
+      shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;
+    } else {
+      const origin = location.protocol + '//' + location.host;
+      shareUrl = origin + dashboard.project.getPathName();
+    }
 
     var i18n = window.dashboard.i18n;
 

@@ -111,6 +111,9 @@ body.modal-open .supreme-container{
 }
 
 @media screen and (max-width: 970px)  {
+  #homepage #hero {
+    overflow: visible;
+  }
   #homepage #actions {
     margin-top: 300px;
   }
