@@ -19,7 +19,7 @@ const EnrolledWorkshops = React.createClass({
 });
 
 const styles = {
-  buttonStyle: {
+  button: {
     width: '100%'
   }
 };
@@ -69,7 +69,7 @@ const EnrolledWorkshopsTable = React.createClass({
           workshop.state === 'Not Started' && (
             <Button
               onClick={() => this.showCancelModal(workshop.enrollment_code)}
-              style={styles.buttonStyle}
+              style={styles.button}
             >
               Cancel enrollment
             </Button>
@@ -79,7 +79,7 @@ const EnrolledWorkshopsTable = React.createClass({
           workshop.state === 'Ended' && (
             <Button
               onClick={() => this.openCertificate(workshop)}
-              style={styles.buttonStyle}
+              style={styles.button}
             >
               Print Certificate
             </Button>
@@ -87,7 +87,7 @@ const EnrolledWorkshopsTable = React.createClass({
         }
         <Button
           onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}
-          style={styles.buttonStyle}
+          style={styles.button}
         >
           Workshop Details
         </Button>
