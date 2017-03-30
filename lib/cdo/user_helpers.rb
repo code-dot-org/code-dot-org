@@ -29,7 +29,7 @@ module UserHelpers
         suffix = Random.rand(min_index..max_index)
         next unless queryable.where(username: "#{prefix}#{suffix}").limit(1).empty?
 
-        FirehoseClient.put_record(
+        FirehoseClient.instance.put_record(
           'analysis-events',
           {
             study: 'username-generation',
@@ -53,7 +53,7 @@ module UserHelpers
     # Increment the current maximum integer suffix. Though it may leave holes,
     # it is guaranteed to be (currently) unique.
     suffix = similar_usernames.map {|n| n[prefix.length..-1]}.map(&:to_i).max + 1
-    FirehoseClient.put_record(
+    FirehoseClient.instance.put_record(
       'analysis-events',
       {study: 'username-generation', event: 'dart-miss', data_int: suffix, data_string: prefix}
     )
