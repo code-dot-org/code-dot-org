@@ -5,8 +5,6 @@
 # AWS DMS tasks in the us-east-1 region.
 # (https://console.aws.amazon.com/dms/home?region=us-east-1#tasks:)
 
-require 'pg'
-
 require File.expand_path('../../../deployment', __FILE__)
 require 'cdo/chat_client'
 require 'cdo/only_one'

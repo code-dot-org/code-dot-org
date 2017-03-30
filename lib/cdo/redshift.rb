@@ -1,3 +1,6 @@
+# WARNING: This is explicitly not included in our Gemfile for the reasons discussed in the PR
+# https://github.com/code-dot-org/code-dot-org/pull/14056. The PG gem should be manually installed
+# on any machines making use of this client.
 require 'pg'
 
 # A thin wrapper around PG, providing a mechanism to execute SQL commands on our AWS Redshift
