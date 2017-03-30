@@ -818,6 +818,7 @@
   "whenUpTooltip": "Kryej veprimet më poshtë kur tasti i shigjetës lart shtypet.",
   "winMessage": "Ju fituar!",
   "witch": "shtrigë",
+  "withColor": "with color",
   "wizard": "magjistar",
   "yes": "Po",
   "zombie": "zombi",
@@ -858,6 +859,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Ju duhet të merrni 20 Mouse Droids. Përdorni komandën \"shto një Robot Mi\" brenda ngjarjes \"kur merrni Robotin Mi\" për të shtuar dy ose më shumë Robot Mi çdo herë që ju të merrni një të tillë.",
   "failedMultiplyCharactersTimeoutGotSome": "Urime, ju shtuat kodin për të bërë Robotët Mi. Ju mund të shkoni në puzzle-in tjetër ose të përpiqeni përsëri për të marrë 20 Robotët Mi. Provoni ta bëni atë më të lehtë duke shtuar më shumë prej tyre! (Shtypni dhe mbani çelësat në tastierën tuaj (ose ekran) për të lëvizur më shpejt.)",
   "failedChangeSettingTimeout": "Merrni tre Pilot Rebel për të lëvizur.",
-  "failedChangeSettingSettings": "Bëjeni lojën tuaj. Për të kaluar këtë puzzle ju keni nevojë për të ndryshuar robotin tuaj dhe të vendosni shpejtësinë e tij.",
-  "withColor": "with color"
+  "failedChangeSettingSettings": "Bëjeni lojën tuaj. Për të kaluar këtë puzzle ju keni nevojë për të ndryshuar robotin tuaj dhe të vendosni shpejtësinë e tij."
 }

@@ -19,6 +19,7 @@
     attributes:
       user:
         name: "Показвано име"
+        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: "Имейл"
         username: "Потребителско име"
         password: "Парола"
@@ -143,9 +144,31 @@
     user_type_student: "Ученик"
     field_is_required: "е задължително"
     accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
+  school_info:
+    title: School Information (optional)
+    school_country: School Country
+    select_school_type: School Type
+    charter: Charter
+    private: Private
+    public: Public
+    homeschool: Homeschool
+    after_school: After School
+    other: "Друго"
+    state: State
+    district: District
+    other_district_not_listed: Other district not listed above
+    district_name: District Name
+    school: School
+    other_school_not_listed: Other school not listed above
+    school_name: School Name
+    school_zip: School Zip Code
+    school_address: School Address
+    school_organization_name: School/Organization Name
+    school_organization_zip: School/Organization Zip Code
   signin_form:
     title: "Вече имате профил? Влизане"
     login: "Имейл"
+    login_username: Email or Username
     password: "Парола"
     remember: "Запомни ме"
     submit: "Вход"
@@ -482,6 +505,15 @@
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Take the lead on computer science in your school, and apply for professional
       learning.
+    announcement_teacher_recruitment2: Teachers like you are leading the computer
+      science education movement. You can participate in high-quality K-12th grade
+      professional learning programs <strong>at absolutely no cost to you or your
+      school</strong>. Take the lead on computer science in your school, and apply
+      for professional learning. Middle and high school teachers, apply by March 17th.
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
+      of updating our CS Fundamentals courses! We're looking for teachers to pilot
+      an updated CS Fundamentals curriculum during the winter and spring of 2017.
+      We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: At Code.org, we take student privacy very seriously.
       To protect your students’ privacy, we have made a change to your section’s login
       page to avoid displaying full names. Even though this update should reduce privacy
@@ -494,6 +526,19 @@
       or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
       will be featured in our video and the winning students will receive Code.org
       swag!'
+    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
+      you a gift</a>. Students can also encourage peers across the country in our
+      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
+    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
+      break records. Student participation in the exam could dramatically shift diversity
+      in AP Computer Science, but we need your help. Encourage every CS Principles
+      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
+      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
+      video</a> so your students can hear from their peers around the country who
+      are taking the exam.
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля,
       въведете код за друг раздел."
@@ -587,6 +632,18 @@
         поддържани браузъри</a>. Можете да опитате да разгледате страницата, но е
         възможно да не функционира както трябва."
       link: "Научете повече"
+      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
+        with a mouse and keyboard. You may experience issues using this tool on your
+        current device.
+      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
+        with loading Web Lab on this browser. You may want to use a different browser
+        until this is resolved. Sorry for the inconvenience.
+      weblab_unsupported_locale_storage: You may experience issues using Web Lab in
+        Private Browsing mode. Please reload your project in normal mode. Sorry for
+        the inconvenience.
   slow_loading: "Това отнема повече време от обичайното..."
   try_reloading: "Опитайте да презаредите страницата"
   next_stage: "Завършено! Продължете към следващия етап"

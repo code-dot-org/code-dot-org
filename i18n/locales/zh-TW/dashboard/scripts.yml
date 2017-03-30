@@ -11,9 +11,9 @@ zh-TW:
             'Artist: Loops': '小藝術家 - 迴圈（Loops）'
             'Artist: Sequence': '小藝術家 - 序列（Sequence）'
             'Artist: Shapes': '小藝術家 - 形狀（Shapes）'
-            'Bee: Loops': '蜜蜂：迴圈（Loops）'
-            'Bee: Sequence': '蜜蜂：序列（Sequence）'
-            Building a Foundation: 建立基礎
+            'Bee: Loops': '蜜蜂 - 迴圈（Loops）'
+            'Bee: Sequence': '蜜蜂 - 序列（Sequence）'
+            Building a Foundation: 打好基礎
             Getting Loopy: 學習迴圈
             Going Places Safely: 安全的到達地點
             Happy Maps: 快樂地圖
@@ -23,8 +23,8 @@ zh-TW:
             'Maze: Sequence': '迷宮 - 序列（Sequence）'
             Move it, Move it: 移動它，移動它
             'Real-life Algorithms: Plant a Seed': '生活中的演算法 - 植物種植'
-            Spelling Bee: 拼字比賽
-            'Studio: Create a Story': 'Play Lab：創作一個故事'
+            Spelling Bee: 拼字蜜蜂
+            'Studio: Create a Story': 'Play Lab - 創作一個故事'
             The Big Event: 大事件
         course2:
           title: 課程 2
@@ -36,32 +36,32 @@ zh-TW:
             'Artist: Loops': '小藝術家 - 迴圈（Loops）'
             'Artist: Nested Loops': '小藝術家 - 巢狀迴圈（Nested Loops）'
             'Artist: Sequence': '小藝術家 - 序列（Sequence）'
-            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditonals）'
+            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditionals）'
             'Bee: Debugging': '蜜蜂： 除錯（Debugging）'
-            'Bee: Loops': '蜜蜂：迴圈（Loops）'
+            'Bee: Loops': '蜜蜂 - 迴圈（Loops）'
             Binary Bracelets: 二進制手環
             Conditionals: 條件判斷（Conditionals）
             Flappy: 像素鳥
             Getting Loopy: 學習迴圈
-            Graph Paper Programming: 圖紙編程
+            Graph Paper Programming: 方格紙編程
             'Maze: Loops': '迷宮 - 迴圈（Loops）'
             'Maze: Sequence': '迷宮 - 序列（Sequence）'
             'Real-life Algorithms: Paper Planes': '生活中的演算法 - 紙飛機'
             Relay programming: 接力編程
-            'Studio: Create a Story': 'Play Lab：創作一個故事'
+            'Studio: Create a Story': 'Play Lab - 創作一個故事'
             The Big Event: 大事件
             Your Digital Footprint: 你的數位足跡
         course3:
           title: 課程 3
           description: 課程 3 是為已完成課程 2 的學生設計的。學生將更深入理解到前面所學的編程主題，進而能夠用更靈活的方式來解決更複雜的問題。此課程完成時，學生將會創造出互動式的故事或遊戲，且可和任何人分享。建議 4-5 年級的學生學習。
-          description_short: 課程 3 是課程 2 的延續課程
+          description_short: 課程 3 是課程 2 的延續課程。
           description_audience: 年齡 8-18
           stage:
             Artist: 藝術家
             'Artist: Functions': '小藝術家 - 函式（Functions）'
             'Artist: Nested Loops': '小藝術家 - 巢狀迴圈（Nested Loops）'
             'Artist: Patterns': '小藝術家 - 圖案（Patterns）'
-            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditonals）'
+            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditionals）'
             'Bee: Debugging': '蜜蜂： 除錯（Debugging）'
             'Bee: Functions': '蜜蜂：函式（Functions）'
             'Bee: Nested Loops': '蜜蜂：巢狀迴圈（Nested Loops）'
@@ -77,11 +77,11 @@ zh-TW:
             'Maze: Conditionals': '迷宮 - 條件判斷（Conditionals）'
             Songwriting: 歌曲創作
             'Studio: Create a Game': 'Play Lab - 設計一個遊戲'
-            'Studio: Create a Story': 'Play Lab：創作一個故事'
+            'Studio: Create a Story': 'Play Lab - 創作一個故事'
         playlab:
           title: Play Lab
-          description: 利用 Play Lab 來創作一個故事或是製作一個遊戲！
-          description_short: 創建一個故事或做遊戲玩實驗室！
+          description: 在 Play Lab 上創作故事或是遊戲！
+          description_short: 在 Play Lab 上創作故事或設計遊戲！
           stage:
             Play Lab: Play Lab
         artist:
@@ -104,7 +104,7 @@ zh-TW:
             Artist: 演出者
         course4:
           title: 課程 4
-          description: 課程 4 是設計給完成課程 2 和 3 的學生 。隨著難度增加，學生在解決關卡的問題時，也能夠學習結合多種概念。當完成本課程的時候，學生將創建能夠展示多種技能的程式，包括用於迴圈和帶參數的函式。建議 4-5 年級的學生學習。
+          description: 課程 4 是設計給完成課程 2 和 3 的學生 。隨著難度增加，學生在解決關卡的問題時，也能夠學習結合多種概念。當完成本課程的時候，學生將創建能夠展示多種技能的程式，包括用於迴圈和帶參數的函式。建議 4-8 年級的學生學習。
           description_short: 學生在完成課程 2 和課程 3 後，才可以進入課程 4。
           description_audience: 年齡 9-18
           stage:
@@ -139,7 +139,7 @@ zh-TW:
             'Artist: Loops': '小藝術家 - 迴圈（Loops）'
             'Artist: Nested Loops': '小藝術家 - 巢狀迴圈（Nested Loops）'
             'Artist: Sequence': '小藝術家 - 序列（Sequence）'
-            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditonals）'
+            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditionals）'
             'Bee: Debugging': '蜜蜂： 除錯（Debugging）'
             'Bee: Nested Loops': '蜜蜂：巢狀迴圈（Nested Loops）'
             'Farmer: While Loops': '農夫 - 條件迴圈（While Loops）'
@@ -157,7 +157,7 @@ zh-TW:
             Variables: 變數
           description_audience: ''
         algebra:
-          title: Computer Science in Algebra
+          title: 代數裡的計算機科學
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
           stage:
@@ -165,7 +165,7 @@ zh-TW:
             'Calc: Evaluation Blocks': Evaluation Blocks and Arithmetic Expressions
             'Eval: Boolean Operators': 布林運算子
             'Eval: Conditionals': 條件判斷（Conditionals）
-            'Eval: Defining Functions': Composite Functions
+            'Eval: Defining Functions': 複合函式
             'Eval: Functions': Solving Word Problems with the Design Recipe
             'Eval: Strings and Images': 字串和圖像
             'Eval: Writing Contracts': Writing Contracts
@@ -205,8 +205,8 @@ zh-TW:
           stage:
             Computer Science Pedagogy: 計算機科學教育學
             Introduction to PD: PD 簡介
-            K-5 Courses: K-5 Courses
-            Next Steps: Next Steps
+            K-5 Courses: K-5 課程
+            Next Steps: 下一步
             'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
             'Programming Concept: Events': 'Programming Concept: Events'
             'Programming Concept: Functions': 'Programming Concept: Functions'
@@ -218,11 +218,11 @@ zh-TW:
           description_audience: ''
         netsim:
           title: 網路模擬器
-          description: Learn about how the Internet works
-          description_short: Learn about how the Internet works
+          description: 學習有關網際網路的工作原理
+          description_short: 學習有關網際網路的工作原理
           stage:
             Automatic DNS node: Automatic DNS node
-            Broadcasting messages: Broadcasting messages
+            Broadcasting messages: 廣播訊息
             Internet Simulator Freeplay: Internet Simulator Freeplay
             Manual DNS: Manual DNS
             Overview and Setup Instructions: Overview and Setup Instructions
@@ -244,8 +244,8 @@ zh-TW:
             Color Pixelation Tutorial: Color Pixelation Tutorial
           description_audience: ''
         20-hour:
-          title: 計算機科學課程快速入門
-          description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
+          title: 計算機科學速成課程
+          description: 這個 20 小時課程將介紹核心的計算機科學和編程概念。本課程是設計給年級 K-8 的學生在課堂中使用，不過對於任何年紀的人也是有趣的學習。
           description_short: 這個 20 小時課程中，其中的課程 2-4 包含了核心的計算機科學和編程概念。
           description_audience: 年齡 10-18
           stage:
@@ -254,7 +254,7 @@ zh-TW:
             Computational Thinking: 計算機式思維
             Conditionals: 條件判斷（Conditionals）
             Functions: 函式
-            Graph Paper Programming: 圖紙編程
+            Graph Paper Programming: 方格紙編程
             Introduction to Computer Science: 計算機科學介紹
             Relay Programming: 接力編程
             Song Writing: 歌曲創作
@@ -359,7 +359,7 @@ zh-TW:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           stage:
-            Course Overview: Course Overview
+            Course Overview: 課程概覽
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
@@ -378,10 +378,10 @@ zh-TW:
             Rocket-Height: Rocket-Height
             Sam the Bat: Sam the Bat
             Strings and Images: 字串和圖像
-            Your Game - Animation: Your Game - Animation
+            Your Game - Animation: 你的遊戲 - 動畫
             Your Game - Booleans: 你的遊戲-布林值
             Your Game - Collision Detection: 你的遊戲-碰撞檢測
-            Your Game - Player Movement: Your Game - Player Movement
+            Your Game - Player Movement: 你的遊戲 - 角色移動
           description_audience: ''
         text-compression:
           title: Text Compression
@@ -407,8 +407,8 @@ zh-TW:
           description: Lesson samples for CSP
           description_short: Lesson samples for CSP
           stage:
-            Lesson 14: Lesson 14
-            Lesson 15: Lesson 15
+            Lesson 14: 第 14 課
+            Lesson 15: 第 15 課
           description_audience: ''
         ECSPD:
           title: Exploring Computer Science PD
@@ -493,9 +493,9 @@ zh-TW:
           description_short: Teach Algebra through block-based Functional Programming
           stage:
             Computer Science Pedagogy: 計算機科學教育學
-            Course Overview: Course Overview
+            Course Overview: 課程概覽
             Evaluation Blocks: Evaluation Blocks
-            Next Steps: Next Steps
+            Next Steps: 下一步
             Strings and Images: 字串和圖像
             Teacher Dashboard: 教師控制台
             The Big Game: The Big Game
@@ -531,7 +531,7 @@ zh-TW:
           description_short: 'Phase 1: Online Introduction'
           logo_image: nextech_logo.png
           stage:
-            Course Overview: Course Overview
+            Course Overview: 課程概覽
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
@@ -544,7 +544,7 @@ zh-TW:
           description_short: 'Phase 1: Online Introduction'
           logo_image: izone_logo.png
           stage:
-            Course Overview: Course Overview
+            Course Overview: 課程概覽
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
@@ -705,7 +705,8 @@ zh-TW:
             Web Lab: Web Lab
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
-            Standalone video: Standalone video
+            Standalone video: 獨立影片
+            Curriculum Reference: 課程參考
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -714,12 +715,12 @@ zh-TW:
           stage:
             Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
             Booleans: 布林值（Booleans）
-            Course Overview: Course Overview
+            Course Overview: 課程概覽
             Defining Functions: 定義函數
             Defining Variables: Defining Variables
             'Eval: Conditionals': 'Eval: Conditionals'
             Evaluation Blocks: Evaluation Blocks
-            Next Steps: Next Steps
+            Next Steps: 下一步
             Rocket-Height: Rocket-Height
             Strings and Images: 字串和圖像
             Teacher Dashboard: 教師控制台
@@ -752,7 +753,7 @@ zh-TW:
             'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
             'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
             'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
-            Next Steps: Next Steps
+            Next Steps: 下一步
             Planning: Planning
           description_audience: ''
         ECSPD2:
@@ -837,7 +838,7 @@ zh-TW:
             Creating Equitable Learning Environments: Creating Equitable Learning Environments
             Getting Started: Getting Started
             Introduction to Equity: Introduction to Equity
-            Next Steps: Next Steps
+            Next Steps: 下一步
           description_audience: ''
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
@@ -919,9 +920,9 @@ zh-TW:
           description_audience: 年齡 6-13
           stage:
             Binary Bracelets: 二進制手環
-            Building a Foundation: 建立基礎
+            Building a Foundation: 打好基礎
             Getting Loopy: 學習迴圈
-            Graph Paper Programming: 圖紙編程
+            Graph Paper Programming: 方格紙編程
             Happy Maps: 快樂地圖
             Move it, Move it: 移動它，移動它
             'Real-life Algorithms: Plant a Seed': '生活中的演算法 - 植物種植'
@@ -1311,7 +1312,7 @@ zh-TW:
             'Unplugged: The Design Recipe': '不插電活動 - 設計流程'
           description_audience: ''
         AlgebraB:
-          title: Computer Science in Algebra
+          title: 代數裡的計算機科學
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
           stage:
@@ -1338,7 +1339,7 @@ zh-TW:
           description: 通過函數式程式設計教代數
           description_short: 'Phase 1: Online Introduction'
           stage:
-            Course Overview: Course Overview
+            Course Overview: 課程概覽
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: PD 簡介
             Preparing for in-person PD: Preparing for in-person PD
@@ -1823,7 +1824,7 @@ zh-TW:
           description_audience: ''
         kinderTest:
           stage:
-            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditonals）'
+            'Bee: Conditionals': '蜜蜂 - 條件判斷（Conditionals）'
             Kindergarten Stage 1: Kindergarten Stage 1
           title: ''
           description_audience: ''
@@ -2038,32 +2039,32 @@ zh-TW:
             Test stage with bubbles: Test stage with bubbles
           description_audience: ''
         csd3:
-          title: CSD Unit 3 - Interactive Games and Animations
+          title: CSD 單元 3 -互動式遊戲和動畫
           description: U3 of Discoveries
-          description_short: Programming
+          description_short: 程式設計
           stage:
-            Booleans and Conditionals: Booleans and Conditionals
-            Complex Conditionals: Complex Conditionals
-            Conditionals and Keyboard Input: Conditionals and Keyboard Input
-            Draw Loop and Randomization: Draw Loop and Randomization
-            Drawing in Game Lab: Drawing in Game Lab
-            'Project: Interactive Card': 'Project: Interactive Card'
-            Sprites and Images: Sprites and Images
-            Sprites and Properties: Sprites and Properties
+            Booleans and Conditionals: 布林值和條件判斷
+            Complex Conditionals: 複合條件判斷
+            Conditionals and Keyboard Input: 條件判斷與鍵盤輸入
+            Draw Loop and Randomization: 繪圖迴圈和隨機取值
+            Drawing in Game Lab: 用 Game Lab 繪圖
+            'Project: Interactive Card': '專案：互動式卡片'
+            Sprites and Images: 角色和圖像
+            Sprites and Properties: 角色與屬性
             Variables Unplugged: Variables Unplugged
-            Variables and Animation: Variables and Animation
+            Variables and Animation: 變數與動畫
             Velocity: 速度
-            Collision Detection: Collision Detection
-            Complex Sprite Movement: Complex Sprite Movement
+            Collision Detection: 碰撞檢測
+            Complex Sprite Movement: 複雜的角色動作
             Collisions: Collisions
             Functions: 函式
             The Game Design Process: The Game Design Process
             Using the Game Design Process: 使用遊戲設計流程
-            'Project: Build a Game': 'Project: Build a Game'
-            'Project: Design a Game': 'Project: Design a Game'
+            'Project: Build a Game': '專案：創建一個遊戲'
+            'Project: Design a Game': '專案：設計一個遊戲'
           description_audience: ''
         grade2:
-          title: Grade 2
+          title: 年級 2
           description: Planning Script for CSF 2.0
           description_short: Planning Script for CSF 2.0
           description_audience: 年齡 5-18
@@ -2072,15 +2073,15 @@ zh-TW:
             Caring for My New Pet: Caring for My New Pet
             Exploring the Neighborhood: Exploring the Neighborhood
             Flappy: 像素鳥
-            Getting Loopy with Puppy: Getting Loopy with Puppy
+            Getting Loopy with Puppy: 從小狗身上學習迴圈
             Make a Dog Tag: Make a Dog Tag
             More CS with Run Marco: More CS with Run Marco
             New Home for My Pet: New Home for My Pet
             Online Internet Safety: Online Internet Safety
             Online My New Pet Jigsaw: Online My New Pet Jigsaw
-            Puppy Event: Puppy Event
-            Puppy Introduction: Puppy Introduction
-            Puppy Loops: Puppy Loops
+            Puppy Event: 小狗 - 事件（Event）
+            Puppy Introduction: 小狗 - 介紹
+            Puppy Loops: 小狗 - 迴圈（Loops）
             How to behave in the lab_How to use Code_org puzzles: How to behave in the lab/How to use Code.org puzzles
             Programming at home with my pet: Programming at home with my pet
             Binary Bracelets: 二進制手環
@@ -2090,15 +2091,15 @@ zh-TW:
           stage:
             20-hr Stage 2: 20 小時程式 階段 2
             20-hr Stage 9: 20 小時程式 階段 9
-            Course 2 Stage 17: Course 2 Stage 17
-            Course 3 Stage 16: Course 3 Stage 16
-            Course 3 Stage 17: Course 3 Stage 17
+            Course 2 Stage 17: 課程 2 階段 17
+            Course 3 Stage 16: 課程 3 階段 16
+            Course 3 Stage 17: 課程 3 階段 17
           title: ''
           description_audience: ''
           description_short: ''
           description: ''
         k5concepts:
-          title: K5 Concepts
+          title: K5 概念
           stage:
             Binary: 二進制（Binary）
             Conditionals: 條件判斷（Conditionals）
@@ -2188,6 +2189,12 @@ zh-TW:
             'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Unit 5 Overview: Unit 5 Overview
           description_audience: ''
         csp1-support:
           title: Unit 1 Online Professional Learning Course
@@ -2374,17 +2381,17 @@ zh-TW:
             'Real-life Algorithms: Paper Planes': '生活中的演算法 - 紙飛機'
             Programming in Collector: Programming in Collector
             Programming in Artist: Programming in Artist
-            'Loops: Getting Loopy': 'Loops: Getting Loopy'
+            'Loops: Getting Loopy': '迴圈：學習迴圈'
             Loops in Maze: Loops in Maze
             'Events: The Big Event': 'Events: The Big Event'
-            Puppy Introduction: Puppy Introduction
+            Puppy Introduction: 小狗 - 介紹
             Online Internet Safety: Online Internet Safety
             Build a Flappy Game: Build a Flappy Game
             More CS with Run Marco: More CS with Run Marco
             Binary Bracelets: 二進制手環
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: 你的數位足跡
-            Building a Foundation: 建立基礎
+            Building a Foundation: 打好基礎
             Screen Out the Mean: Screen Out the Mean
             Debugging in Maze: Debugging in Maze
             Loops in Harvester: Loops in Harvester
@@ -2538,8 +2545,8 @@ zh-TW:
             AP Preparation and Support: AP Preparation and Support
           title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 3
-          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
+          description_short: 教師專業學習課程 - CSP 單元 3
+          description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 3 作準備。
         csdgraveyard:
           stage:
             new stage: new stage
@@ -2564,8 +2571,8 @@ zh-TW:
             Unit 4 Overview: Unit 4 Overview
           title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 4
-          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
+          description_short: 教師專業學習課程 - CSP 單元 4
+          description: 這是一套線上支援，安排了 CSP 專業訓練課程，讓教師可以為教授單元 4 作準備。
         sciencepd4:
           stage:
             Welcome!: 歡迎！
@@ -2601,53 +2608,63 @@ zh-TW:
             Functions in Bee: Functions in Bee
             Functions in Farmer: Functions in Farmer
             Determine the Concept: Determine the Concept
-          title: New Functions Puzzles
+          title: 新的函式關卡
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
         sciencepd5:
           stage:
             Welcome!: 歡迎！
-            Earth Science Challenges: Earth Science Challenges
-            Life Science Challenges: Life Science Challenges
-            Physical Science Challenges: Physical Science Challenges
+            Earth Science Challenges: 地球科學挑戰
+            Life Science Challenges: 生命科學挑戰
+            Physical Science Challenges: 物理科學挑戰
             Wrap-Up: 總結
-          title: 'CS in Science: Part 5'
+          title: 科學中的 CS：第 5 部份
           description_audience: ''
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
         csp5-support:
-          stage: [ ]
-          title: Unit 5 Online Professional Learning Course
+          stage:
+            Unit 5 Overview: 單元 5 概覽
+            Event Driven Programming: 事件驅動的程式設計
+            Variables and Strings: 變數與字串
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: 發現學習
+            Measuring Student Learning: Measuring Student Learning
+          title: 單元 5 線上專業學習課程
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 1
-          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+          description_short: 教師專業學習課程 - CSP 單元 5
+          description: 即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。 
         csp6-support:
           stage: [ ]
-          title: Unit 6 Online Professional Learning Course
+          title: 單元 6 線上專業學習課程
           description_audience: ''
           description_short: ''
-          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
+          description: 即將推出：在 2 月中旬，這個頁面會有一系列提供給教師準備 AP 考試的資源。
         csppostap:
           stage:
-            Creating Javascript Objects: Creating Javascript Objects
+            Creating Javascript Objects: 創建 Javascript 物件
             Permanent Data Storage: Permanent Data Storage
-            Reading Records: Reading Records
-            Deleting Records: Deleting Records
-            Updating Records: Updating Records
-            Importing and Exporting Data: Importing and Exporting Data
+            Reading Records: 讀取紀錄
+            Deleting Records: 刪除紀錄
+            Updating Records: 更新紀錄
+            Importing and Exporting Data: 匯入和匯出資料
             Visualizing Data: Visualizing Data
-            Sample Apps: Sample Apps
+            Sample Apps: 應用程式範例
             Final Project: Final Project
-          title: CSP Post-AP - Databases and Using Data in Your Apps
+          title: CSP Post-AP - 數據庫和在你的 App 中使用資料
           description_audience: ''
           description_short: ''
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
         unit6-csd-draft:
           stage:
-            UI and Input: UI and Input
-            Computing Innovations: Computing Innovations
-            Input Unplugged: Input Unplugged
+            UI and Input: 使用者介面（UI）和輸入（Input）
+            Computing Innovations: 計算創新（Computing Innovations）
+            Input Unplugged: 不插電介紹輸入（Input）
             '': ''
           title: ''
           description_audience: ''
@@ -2655,17 +2672,101 @@ zh-TW:
           description: ''
         gamelab-demo:
           stage:
-            Simple Sprite Movement: Simple Sprite Movement
+            Simple Sprite Movement: 簡單的角色動作
         csd6-draft:
           stage:
-            UI and Input: UI and Input
-            Computing Innovations: Computing Innovations
-            Input Uplugged: Input Uplugged
-            The Circuit Playground: The Circuit Playground
+            UI and Input: 使用者介面（UI）和輸入（Input）
+            Computing Innovations: 計算創新（Computing Innovations）
+            Input Uplugged: 不插電介紹輸入（Input）
+            The Circuit Playground: 電路（Circuit ）遊樂場
             Foo: Foo
             Lists: 清單
-            Lights: Lights
-          title: Draft Unit 6
+            Lights: 燈光
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: 不插電介紹輸入（Input）
+            Timed Loop: 計時迴圈
+            Timed Loops: 計時迴圈
+            For Loops: 計數迴圈（For Loops）
+            Physical Input: Physical Input
+            List and For Loops: 清單和計數迴圈
+            'Project: Board Output': 'Project: Board Output'
+            For Loops with UI and Board: For Loops with UI and Board
+            Lists and For Loops: 清單和計數迴圈
+            Analog Input: 模擬輸入
+            Polling Events: 輪詢事件
+            Sensor Applications: 傳感器應用
+          title: 實驗單元 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-gamelab:
+          stage:
+            Introduction: 介紹
+            Sprites: 角色
+            Input: 輸入
+            'Project: Interactive Card': 'Project: Interactive Card'
+          title: Game Lab 工作坊
+          description_audience: Teachers attending an in-person Game Lab Workshop
+          description_short: Level progression to accompany an in-person Game Lab Workshop
+          description: This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of Game Lab.
+        csd5-draft:
+          stage:
+            new stage: 新的階段
+            Interpreting Data: 解譯數據
+            Data in the Real World: Data in the Real World
+            Combining Representations: 組合表示
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-1hour:
+          stage:
+            App Lab Workshop: App Lab 工作坊
+            Digital Design: 數位設計
+            Event Driven Programming: 事件驅動的程式設計
+            Basic App Functionality: 基本的 APP 函式
+            Event Types: 事件類型
+            Getters and Setters: Getters and Setters
+            Room Escape: 逃出房間
+            Extra: 額外的
+          title: App Lab 一小時工作坊
+          description_audience: 國中和高中學生
+          description_short: ''
+          description: 這個工作坊是要讓學生在一小時中學會 app lab 的基本操作。即便是不同的的計算機科學背景的學生也能夠參與其中創造樂趣。
+        applab-2hour:
+          stage:
+            new stage: 新的階段
+            Digital Design: 數位設計
+            Event Driven Programming: 事件驅動的程式設計
+            Basic App Functionality: 基本的 APP 函式
+            Event Types: 事件類型
+            Getters and Setters: Getters and Setters
+          title: App Lab 2 一小時工作坊
+          description_audience: 國中和高中學生
+          description_short: ''
+          description: 這個工作坊是要讓學生在二小時中學會 app lab 的基本操作。即便是不同的的計算機科學背景的學生也能夠參與其中創造樂趣。
+        coursed-ramp:
+          stage:
+            Introduction: 介紹
+          title: CS 基本原理：課程 D
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-maker:
+          stage:
+            App Lab Basics: App Lab 基礎
+            The Circuit Playground: 電路（Circuit ）遊樂場
+            Physical Input: Physical Input
+            Analog Input: 模擬輸入
+          title: Maker Toolkit 工作坊
+          description_audience: Maker Toolkit 工作坊的老師
+          description_short: Maker Toolkit 工作坊的階段規劃
+          description: 這是要提供給 Maker 親自動手做的工作坊的階段規劃，不是工具使用或是計算機科學概念的教程，內容是介紹 App Lab 和 Maker Toolkit 的應用廣度。
+        coursee-ramp:
+          stage:
+            Introduction: 介紹
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''
