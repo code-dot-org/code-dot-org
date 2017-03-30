@@ -125,8 +125,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params
           @fake_queue.handle_pending_messages if async_activity_writes
@@ -219,8 +219,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(GalleryActivity, UserLevel, UserScript) do
+    assert_creates(LevelSource) do
+      assert_does_not_create(GalleryActivity, Activity, UserLevel, UserScript) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params
         end
@@ -237,8 +237,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    assert_creates(Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity, LevelSource) do
+    assert_creates(UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity, Activity, LevelSource) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params.merge(program: "<hey>" * 10000)
         end
@@ -266,8 +266,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    assert_creates(Activity, UserLevel, UserScript, LevelSource) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(UserLevel, UserScript, LevelSource) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
         end
@@ -290,8 +290,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
 
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_no_difference('@user.reload.total_lines') do # update total lines
           post :milestone, params: @milestone_params.merge(lines: -20)
         end
@@ -306,9 +306,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-
-    # activity does not have unreasonable lines of code either
-    assert_equal 0, Activity.last.lines
   end
 
   test "logged in milestone does not allow unreasonably high lines of code" do
@@ -316,8 +313,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.expects :slog
 
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_difference('@user.reload.total_lines', 1000) do # update total lines
           post :milestone, params: @milestone_params.merge(lines: 9_999_999)
         end
@@ -332,9 +329,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-
-    # activity does not have unreasonable lines of code either
-    assert_equal 1000, Activity.last.lines
   end
 
   test "logged in milestone with messed up email" do
@@ -366,8 +360,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     )
     UserLevel.record_timestamps = true
 
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params
         end
@@ -410,14 +404,16 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_s3_upload
 
-    assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
-      assert_difference('@user.reload.total_lines', 20) do # update total lines
-        post :milestone,
-          params: @milestone_params.merge(
-            save_to_gallery: 'true',
-            image: Base64.encode64(@good_image)
-          )
-        @fake_queue.handle_pending_messages if async_activity_writes
+    assert_creates(LevelSource, UserLevel, GalleryActivity, LevelSourceImage) do
+      assert_does_not_create(Activity) do
+        assert_difference('@user.reload.total_lines', 20) do # update total lines
+          post :milestone,
+            params: @milestone_params.merge(
+              save_to_gallery: 'true',
+              image: Base64.encode64(@good_image)
+            )
+          @fake_queue.handle_pending_messages if async_activity_writes
+        end
       end
     end
 
@@ -426,8 +422,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
-    # created gallery activity and activity for user
-    assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
     assert_equal UserLevel.last.id, GalleryActivity.last.user_level_id
     assert_equal LevelSource.last.id,  GalleryActivity.last.level_source_id
@@ -440,14 +434,16 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_s3_upload
 
-    assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
-      assert_difference('@user.reload.total_lines', 20) do # update total lines
-        post :milestone,
-          params: @milestone_params.merge(
-            save_to_gallery: 'true',
-            image: Base64.encode64(@jpg_image),
-            image_type: 'jpg'
-          )
+    assert_creates(LevelSource, UserLevel, GalleryActivity, LevelSourceImage) do
+      assert_does_not_create(Activity) do
+        assert_difference('@user.reload.total_lines', 20) do # update total lines
+          post :milestone,
+            params: @milestone_params.merge(
+              save_to_gallery: 'true',
+              image: Base64.encode64(@good_image),
+              image_type: 'jpg'
+            )
+        end
       end
     end
 
@@ -456,8 +452,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
-    # created gallery activity and activity for user
-    assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
   end
 
@@ -468,8 +462,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone,
             params: @milestone_params.merge(
@@ -484,8 +478,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-
-    assert_equal @user, Activity.last.user
   end
 
   test "logged in milestone should not save to gallery when passing a level with false impressiveness" do
@@ -495,8 +487,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
     @controller.expects :slog
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone,
             params: @milestone_params.merge(
@@ -511,16 +503,14 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
-
-    assert_equal @user, Activity.last.user
   end
 
   test "logged in milestone not passing" do
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
           post :milestone,
             params: @milestone_params.merge(result: 'false', testResult: 10)
@@ -536,8 +526,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
           post :milestone,
             params: @milestone_params.merge(
@@ -599,7 +589,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
       @fake_queue.handle_pending_messages
     end
-    assert_equal original_activity_count + 1, Activity.count
+    assert_equal original_activity_count, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
     assert_not_nil UserLevel.where(
       user_id: @user,
@@ -634,8 +624,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone,
             params: @milestone_params.merge(
@@ -671,8 +661,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone,
             params: @milestone_params.merge(
@@ -706,8 +696,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone,
             params: @milestone_params.merge(
@@ -743,8 +733,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone,
             params: @milestone_params.merge(
@@ -794,8 +784,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     UserLevel.stubs(:where).returns(user_level_finder)
 
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(GalleryActivity, UserLevel) do
+    assert_creates(LevelSource) do
+      assert_does_not_create(GalleryActivity, UserLevel, Activity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, params: @milestone_params
         end
@@ -1200,8 +1190,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      assert_does_not_create(GalleryActivity) do
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(GalleryActivity, Activity) do
         assert_no_difference('@user.reload.total_lines') do # don't update total lines
           post :milestone,
             params: @milestone_params.merge(result: 'false', testResult: 10)
