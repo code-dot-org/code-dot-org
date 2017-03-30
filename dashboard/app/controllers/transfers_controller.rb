@@ -7,7 +7,19 @@ class TransfersController < ApplicationController
     new_section_code = params[:new_section_code]
     current_section_code = params[:current_section_code]
     unless new_section_code && current_section_code
-      render json: {error: 'Missing section code.'}, status: :bad_request
+      return head :bad_request
+    end
+
+    stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section].try(:to_bool)
+    if stay_enrolled_in_current_section.nil?
+      return head :bad_request
+    end
+
+    student_ids = params[:student_ids].try(:split, ',').try(:map, &:to_i)
+    if student_ids.nil? || student_ids.empty?
+      render json: {
+        error: I18n.t('move_students.student_ids_not_entered')
+      }, status: :bad_request
       return
     end
 
@@ -38,29 +50,6 @@ class TransfersController < ApplicationController
     # TODO(asher): Determine if this should be :manage (currently not granted) instead of :read.
     authorize! :read, current_section
 
-    # As of right now, this only applies to transfers to another teacher
-    # When students are allowed to be in multiple sections, this will also be needed
-    # for transfers between the current logged-in teacher
-    if new_section.user == current_user
-      stay_enrolled_in_current_section = false
-    elsif params.key?(:stay_enrolled_in_current_section)
-      stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] && params[:stay_enrolled_in_current_section] != 'false'
-    else
-      render json: {
-        error: I18n.t('move_students.stay_enrolled_not_entered')
-      }, status: :bad_request
-      return
-    end
-
-    if params.key?(:student_ids)
-      student_ids = params[:student_ids].split(',').map(&:to_i)
-    else
-      render json: {
-        error: I18n.t('move_students.student_ids_not_entered')
-      }, status: :bad_request
-      return
-    end
-
     students = User.where(id: student_ids).all
     if students.count != student_ids.count
       render json: {
@@ -85,6 +74,8 @@ class TransfersController < ApplicationController
       end
     end
 
+    stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
+      params[:stay_enrolled_in_current_section] != 'false'
     students.each do |student|
       if new_section.user == current_user
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
