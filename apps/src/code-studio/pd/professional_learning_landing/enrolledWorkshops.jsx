@@ -58,7 +58,7 @@ const EnrolledWorkshopsTable = React.createClass({
     if (workshop.course === 'CS Fundamentals') {
       window.open(`/pd/generate_csf_certificate/${workshop.enrollment_code}`);
     } else {
-      console.log('normally would open other controller');
+      window.open(`/pd/generate_workshop_certificate/${workshop.enrollment_code}`);
     }
   },
 
