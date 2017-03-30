@@ -6,11 +6,9 @@ class SessionsController < Devise::SessionsController
   def new
     session[:return_to] ||= params[:return_to]
     @already_hoc_registered = params[:already_hoc_registered]
-    @hide_oauth_sidebar = false
     if params[:providerNotLinked]
       flash.now[:alert] = I18n.t 'auth.not_linked', provider: I18n.t("auth.#{params[:providerNotLinked]}")
       @email = params[:email]
-      @hide_oauth_sidebar = true
     end
     super
   end
