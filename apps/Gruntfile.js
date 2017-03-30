@@ -429,6 +429,7 @@ testsContext.keys().forEach(testsContext);
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
     'teacher-dashboard/index': './src/sites/code.org/pages/teacher-dashboard/index.js',
+    'pd-workshop-survey/splat': './src/sites/code.org/pages/pd-workshop-survey/splat.js',
 
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
