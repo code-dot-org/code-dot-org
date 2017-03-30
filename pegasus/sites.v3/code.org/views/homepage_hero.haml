@@ -46,9 +46,9 @@
     .thegap{style: "height: 1px"}
       &nbsp;
     #desktop-header.desktop-feature
-      = view :header, variant: "desktop"
-    #mobile-header.mobile-feature
-      = view :header, variant: "mobile"
+      = view :header
+    #mobile-header.mobile-headers.mobile-feature
+      = view :mobile_header_responsive
 
   #caption_container.container_responsive
     .col-66.desktop-feature{style: "position:relative;"}

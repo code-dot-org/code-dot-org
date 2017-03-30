@@ -80,7 +80,7 @@ zh-TW:
         desc: '這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。'
         video: 'C1_planting_seed'
       'BuildingAFoundation':
-        title: '建立基礎'
+        title: '打好基礎'
         desc: '學生使用所提供的元素建立結構，建立的結構必須達到任務目標（能到達指定的高度或是能承受指定的重量），同時，在問題變得愈來愈複雜時，學生們可以學習互相討論持久性相關的問題。'
         video: 'C1_building_foundation'
       'GettingLoopy':

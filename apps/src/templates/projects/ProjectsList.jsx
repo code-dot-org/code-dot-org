@@ -5,12 +5,15 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
+const THUMBNAIL_SIZE = 50;
+
 /** @enum {number} */
 export const COLUMNS = {
-  PROJECT_NAME: 0,
-  STUDENT_NAME: 1,
-  APP_TYPE: 2,
-  LAST_EDITED: 3,
+  THUMBNAIL: 0,
+  PROJECT_NAME: 1,
+  STUDENT_NAME: 2,
+  APP_TYPE: 3,
+  LAST_EDITED: 4,
 };
 
 const styles = {
@@ -32,6 +35,12 @@ const styles = {
     border: '1px solid gray',
     padding: 10,
     backgroundColor: color.teal,
+  },
+  thumbnailCell: {
+    border: '1px solid gray',
+    width: THUMBNAIL_SIZE,
+    minWidth: THUMBNAIL_SIZE,
+    padding: 0
   },
 };
 
@@ -60,6 +69,12 @@ function typeFormatter(type) {
 function dateFormatter(dateString) {
   const date = new Date(dateString);
   return date.toLocaleDateString();
+}
+
+function thumbnailFormatter(thumbnailUrl) {
+  return thumbnailUrl ?
+    <img src={thumbnailUrl} width={THUMBNAIL_SIZE} height={THUMBNAIL_SIZE}/> :
+    '';
 }
 
 const ProjectsList = React.createClass({
@@ -120,6 +135,16 @@ const ProjectsList = React.createClass({
 
   getColumns(sortable) {
     return [
+      {
+        property: 'thumbnailUrl',
+        header: {
+          props: {style: styles.headerCell},
+        },
+          cell: {
+          format: thumbnailFormatter,
+          props: {style: styles.thumbnailCell}
+        }
+      },
       {
         property: 'name',
         header: {
