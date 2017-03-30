@@ -192,6 +192,50 @@ describe('Circuit Playground Components', () => {
         expect(soundSensor).to.haveOwnProperty('getAveragedValue');
         expect(soundSensor).to.haveOwnProperty('setScale');
       });
+
+      describe('setScale', () => {
+        it('adjusts the range of values provided by .value', () => {
+          // Simulate a raw value coming back from the board by calling the
+          // function registered with `analogRead` for this sensor's pin.
+          // The soundSensor is on pin 4.
+          const pinNumber = 4;
+          const pushAnalogValue = board.io.analogRead.args
+              .find(callArgs => callArgs[0] === pinNumber)[1];
+
+
+
+          // Before setting scale, raw values are passed through to .value
+          pushAnalogValue(0);
+          expect(soundSensor.value).to.equal(0);
+          pushAnalogValue(499);
+          expect(soundSensor.value).to.equal(499);
+          pushAnalogValue(1023);
+          expect(soundSensor.value).to.equal(1023);
+
+          // Also, values are not clamped
+          pushAnalogValue(-1);
+          expect(soundSensor.value).to.equal(-1);
+          pushAnalogValue(1024);
+          expect(soundSensor.value).to.equal(1024);
+
+          // We can set the scale to a different range.
+          soundSensor.setScale(0, 100);
+
+          // After setting scale, raw values are mapped to the new range
+          pushAnalogValue(0);
+          expect(soundSensor.value).to.equal(0);
+          pushAnalogValue(499);
+          expect(soundSensor.value).to.equal(48.77810287475586);
+          pushAnalogValue(1023);
+          expect(soundSensor.value).to.equal(100);
+
+          // And values ARE clamped
+          pushAnalogValue(-1);
+          expect(soundSensor.value).to.equal(0);
+          pushAnalogValue(1024);
+          expect(soundSensor.value).to.equal(100);
+        });
+      });
     });
 
     describe('tempSensor', () => {
@@ -592,6 +636,9 @@ function newBoard() {
   // they get called.
   io.sysexCommand = sinon.spy();
   io.sysexResponse = sinon.spy();
+
+  // Spy on this so we can retrieve and use the registered callbacks if needed
+  sinon.spy(io, 'analogRead');
 
   const board = new five.Board({
     io: io,
