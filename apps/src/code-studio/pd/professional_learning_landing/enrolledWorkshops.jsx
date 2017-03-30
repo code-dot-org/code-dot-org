@@ -18,6 +18,12 @@ const EnrolledWorkshops = React.createClass({
   }
 });
 
+const styles = {
+  buttonStyle: {
+    width: '100%'
+  }
+};
+
 const EnrolledWorkshopsTable = React.createClass({
   propTypes: {
     workshops: React.PropTypes.arrayOf(workshopShape)
@@ -61,19 +67,28 @@ const EnrolledWorkshopsTable = React.createClass({
       <div>
         {
           workshop.state === 'Not Started' && (
-            <Button data-code={workshop.enrollment_code} onClick={() => this.showCancelModal(workshop.enrollment_code)}>
+            <Button
+              onClick={() => this.showCancelModal(workshop.enrollment_code)}
+              style={styles.buttonStyle}
+            >
               Cancel enrollment
             </Button>
           )
         }
         {
           workshop.state === 'Ended' && (
-            <Button onClick={() => this.openCertificate(workshop)}>
+            <Button
+              onClick={() => this.openCertificate(workshop)}
+              style={styles.buttonStyle}
+            >
               Print Certificate
             </Button>
           )
         }
-        <Button onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}>
+        <Button
+          onClick={() => window.open(`/pd/workshop_enrollment/${workshop.enrollment_code}`, '_blank')}
+          style={styles.buttonStyle}
+        >
           Workshop Details
         </Button>
       </div>
@@ -93,7 +108,7 @@ const EnrolledWorkshopsTable = React.createClass({
             <th>Date</th>
             <th>Time</th>
             <th>Location</th>
-            <th/>
+            <th style={{width: '20%'}}/>
           </tr>
         </thead>
         <tbody>
@@ -166,7 +181,7 @@ const EnrolledWorkshopsTable = React.createClass({
           </Modal.Footer>
         </Modal>
         <h2>
-          My Upcoming Workshops
+          My Workshops
         </h2>
         {this.renderWorkshopsTable()}
       </div>
