@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
+import i18n from "@cdo/locale";
 
 const styles = {
   main: {
@@ -17,14 +18,17 @@ const styles = {
 
 const MiniViewTopRow = React.createClass({
   propTypes: {
+    scriptName: PropTypes.string.isRequired,
     linesOfCodeText: PropTypes.string.isRequired,
   },
 
   render() {
-    const { linesOfCodeText } = this.props;
+    const { scriptName, linesOfCodeText } = this.props;
     return (
       <div style={styles.main}>
-        <span>View Unit Overview</span>
+        <a href={`/s/${scriptName}`}>
+          <span>{i18n.viewUnitOverview()}</span>
+        </a>
         <span style={styles.linesOfCode}>
           {linesOfCodeText}
         </span>
