@@ -49,7 +49,9 @@ describe('project.saveThumbnail', () => {
   let updateTimestamp;
 
   beforeEach(() => {
-    updateTimestamp = sinon.stub(header, 'updateTimestamp').callsFake(() => {});
+    sinon.stub(header, 'updateTimestamp');
+    sinon.stub(filesApi, 'putFile');
+
     const projectData = {
       id: STUB_CHANNEL_ID,
       isOwner: true
@@ -58,18 +60,19 @@ describe('project.saveThumbnail', () => {
   });
 
   afterEach(() => {
-    updateTimestamp.restore();
+    project.updateCurrentData_(null, undefined);
+
+    filesApi.putFile.restore();
+    header.updateTimestamp.restore();
   });
 
-  it.only('calls filesApi.putFile with correct parameters', () => {
+  it('calls filesApi.putFile with correct parameters', () => {
     const blob = 'stub-binary-data';
-    const putFile = sinon.stub(filesApi, 'putFile');
 
     project.saveThumbnail(blob);
 
-    putFile.restore();
-    sinon.assert.calledOnce(putFile);
-    const call = putFile.getCall(0);
+    expect(filesApi.putFile).to.have.been.calledOnce;
+    const call = filesApi.putFile.getCall(0);
     expect(call.args[0]).to.equal('.metadata/thumbnail.png');
     expect(call.args[1]).to.equal(blob);
   });
