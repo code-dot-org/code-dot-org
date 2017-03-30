@@ -245,6 +245,3 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie'
 
 gem 'omniauth-openid-connect', github: 'wjordan/omniauth-openid-connect', ref: 'cdo'
-
-# Used to run commands on AWS Redshift.
-gem 'pg'
