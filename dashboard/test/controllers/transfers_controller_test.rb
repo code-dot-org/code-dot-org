@@ -20,7 +20,8 @@ class TransfersControllerTest < ActionController::TestCase
     @params = {
       student_ids: @word_student.id.to_s,
       current_section_code: @word_section.code,
-      new_section_code: @picture_section.code
+      new_section_code: @picture_section.code,
+      stay_enrolled_in_current_section: true
     }
 
     @other_teacher = create :teacher
@@ -34,7 +35,25 @@ class TransfersControllerTest < ActionController::TestCase
     assert_equal "Please provide student_ids.", json_response["error"]
   end
 
-  test "returns an error when new_section_code is invalid" do
+  test "returns an error when stay_enrolled_in_current_section is not provided" do
+    @params.delete(:stay_enrolled_in_current_section)
+    post :create, params: @params
+    assert_response :bad_request
+  end
+
+  test "returns an error when new_section_code is not provided" do
+    @params.delete(:new_section_code)
+    post :create, params: @params
+    assert_response :bad_request
+  end
+
+  test "returns an error when current_section_code is not provided" do
+    @params.delete(:current_section_code)
+    post :create, params: @params
+    assert_response :bad_request
+  end
+
+  test "returns an error when new_section_code does not exist" do
     @params[:new_section_code] = NONEXISTENT_SECTION_CODE
     post :create, params: @params
     assert_response :not_found
@@ -45,14 +64,7 @@ class TransfersControllerTest < ActionController::TestCase
     )
   end
 
-  test "returns an error when current_section_code is not provided" do
-    @params.delete(:current_section_code)
-    post :create, params: @params
-    assert_response :bad_request
-    assert_equal "Missing section code.", json_response["error"]
-  end
-
-  test "returns an error when the current_section_code is invalid" do
+  test "returns an error when the current_section_code does not exist" do
     @params[:current_section_code] = NONEXISTENT_SECTION_CODE
 
     post :create, params: @params
@@ -64,7 +76,7 @@ class TransfersControllerTest < ActionController::TestCase
     )
   end
 
-  test "returns an error when one of the student_ids is invalid" do
+  test "returns an error when one of the student_ids does not exist" do
     student_ids_with_invalid = [@word_student.id, User.last.id + 1].join(',')
     @params[:student_ids] = student_ids_with_invalid
     post :create, params: @params
@@ -72,6 +84,8 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "transferring without logging in fails" do
+    # TODO(asher): Make this test confirm that the transfer did not occur. Alternately, fix the
+    # controller to do something saner.
     sign_out(@teacher)
     post :create, params: @params
 
@@ -85,27 +99,6 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, params: @params
     assert_response :no_content
     refute Follower.exists?(student_user: @word_student, section: @word_section)
-  end
-
-  test "when the new section belongs to the same teacher, students should no longer be in the current section even if stay_enrolled_in_current_section is true" do
-    @params[:stay_enrolled_in_current_section] = true
-    post :create, params: @params
-    assert_response :no_content
-    refute Follower.exists?(student_user: @word_student, section: @word_section)
-  end
-
-  test "transferring to a new teacher errors without stay_enrolled_in_current_section" do
-    @params[:new_section_code] = @other_teacher_section.code
-    post :create, params: @params
-    assert_response :bad_request
-    assert Follower.exists?(
-      student_user: @word_student,
-      section: @word_section
-    )
-    refute Follower.exists?(
-      student_user: @word_student,
-      section: @other_teacher_section
-    )
   end
 
   test "when the new section belongs to a different teacher, students should stay enrolled in the current section if stay_enrolled_in_current_section is true" do
