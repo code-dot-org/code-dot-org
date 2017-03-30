@@ -148,16 +148,28 @@ class Section < ActiveRecord::Base
     self.followers_attributes = follower_params
   end
 
+  # @param student [User] The student to enroll in this section.
+  # @param move_for_same_teacher [Boolean] Whether the student should be unenrolled from other
+  #   sections belonging to the same teacher. (default true)
+  # @return [Follower] The newly created follower enrollment.
+  # TODO(asher): Change the default value of move_for_same_teacher to false. Determine whether it
+  #   is possible to eliminate this option.
   def add_student(student, move_for_same_teacher: true)
-    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: user_id))
-      # if this student is already in another section owned by the
-      # same teacher, move them to this section instead of creating a
-      # new one
-      follower.update_attributes!(section: self)
-    else
-      follower = Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
+    if move_for_same_teacher
+      sections_with_same_teacher = student.sections_as_student.where(user_id: user_id)
+      unless sections_with_same_teacher.empty?
+        # If this student is already in another section owned by the
+        # same teacher, move them to this section instead of creating a
+        # new one.
+        # TODO(asher): Presently, this only unenrolls the student from one of the existing sections.
+        # Change this to unenroll the student from all sections.
+        follower = sections_with_same_teacher.first.
+          followers.where(student_user_id: student.id).first
+        return follower.update_attributes!(section: self)
+      end
     end
-    follower
+
+    Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
   end
 
   private

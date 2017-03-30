@@ -41,6 +41,7 @@ export default function initPage(scriptEditorData) {
         hidden={scriptData.hidden}
         loginRequired={scriptData.loginRequired}
         hideableStages={scriptData.hideable_stages}
+        studentDetailProgressView={scriptData.student_detail_progress_view}
         professionalLearningCourse={scriptData.professionalLearningCourse}
         peerReviewsRequired={scriptData.peerReviewsRequired}
         wrapupVideo={scriptData.wrapupVideo}

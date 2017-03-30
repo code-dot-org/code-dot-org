@@ -706,6 +706,7 @@ el:
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
             Standalone video: Standalone video
+            Curriculum Reference: Curriculum Reference
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -2188,6 +2189,12 @@ el:
             'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Unit 5 Overview: Unit 5 Overview
           description_audience: ''
         csp1-support:
           title: Unit 1 Online Professional Learning Course
@@ -2617,11 +2624,21 @@ el:
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
         csp5-support:
-          stage: [ ]
+          stage:
+            Unit 5 Overview: Unit 5 Overview
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 1
-          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+          description_short: Teacher Professional Learning Course for CSP Unit 5
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
         csp6-support:
           stage: [ ]
           title: Unit 6 Online Professional Learning Course
@@ -2665,7 +2682,91 @@ el:
             Foo: Foo
             Lists: Λίστες
             Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: Βρόχοι Για
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
+            For Loops with UI and Board: For Loops with UI and Board
+            Lists and For Loops: Lists and For Loops
+            Analog Input: Analog Input
+            Polling Events: Polling Events
+            Sensor Applications: Sensor Applications
           title: Draft Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-gamelab:
+          stage:
+            Introduction: Εισαγωγή
+            Sprites: Sprites
+            Input: Input
+            'Project: Interactive Card': 'Project: Interactive Card'
+          title: Game Lab Workshop
+          description_audience: Teachers attending an in-person Game Lab Workshop
+          description_short: Level progression to accompany an in-person Game Lab Workshop
+          description: This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of Game Lab.
+        csd5-draft:
+          stage:
+            new stage: new stage
+            Interpreting Data: Interpreting Data
+            Data in the Real World: Data in the Real World
+            Combining Representations: Combining Representations
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-1hour:
+          stage:
+            App Lab Workshop: App Lab Workshop
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Room Escape: Room Escape
+            Extra: Extra
+          title: App Lab 1 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction to app lab in 1 hour. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        applab-2hour:
+          stage:
+            new stage: new stage
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+          title: App Lab 2 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction to app lab in 2 hours. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        coursed-ramp:
+          stage:
+            Introduction: Εισαγωγή
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-maker:
+          stage:
+            App Lab Basics: App Lab Basics
+            The Circuit Playground: The Circuit Playground
+            Physical Input: Physical Input
+            Analog Input: Analog Input
+          title: Maker Toolkit Workshop
+          description_audience: Teachers attending an in-person Maker Toolkit Workshop
+          description_short: Level progression to accompany an in-person Maker Toolkit Workshop
+          description: This level progression is intended to accompany an in-person Maker Toolkit Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of App Lab and the Maker Toolkit.
+        coursee-ramp:
+          stage:
+            Introduction: Εισαγωγή
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

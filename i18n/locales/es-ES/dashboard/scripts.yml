@@ -30,7 +30,7 @@ es:
           title: Curso 2
           description: El Curso 2 está diseñado para estudiantes que pueden leer y no tienen experiencia previa en programación. En este curso los estudiantes crearán programas para resolver problemas y desarrollar juegos interactivos o historias que pueden compartir. Se recomienda para los grados 2-5.
           description_short: El Curso 2 está diseñado para estudiantes que pueden leer.
-          description_audience: 6 ans et + (lecture indispensable)
+          description_audience: Edades mayores a 6 (leer es requisito)
           stage:
             'Artist: Debugging': 'Artista: Depuración'
             'Artist: Loops': 'Bucles'
@@ -53,7 +53,7 @@ es:
             Your Digital Footprint: Tu huella Digital
         course3:
           title: Curso 3
-          description: Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2 (8-10 ans).
+          description: Curso 3 está diseñado para estudiantes que han tomado el Curso 2. Los estudiantes van interacturar con conceptos programación mas avanzados que los vistosen el curso previo para crear soluciones mas flexibles a problemas mas complejos. Para el final del curso, los estudiantes crearán historias y juegos interativos que prodrán ser compartidos con cualquiera. Grados 4-5 son recomendados.
           description_short: El Curso 3 es una continuación del Curso 2.
           description_audience: Edades de 8 a 18 años
           stage:
@@ -246,7 +246,7 @@ es:
         20-hour:
           title: Curso acelerado de introducción a CS
           description: Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  
-          description_short: Este curso de 20 horas aborta os conceitos básicos de informática e programação nos cursos de 2 a 4.
+          description_short: Este curso de 20 horas los principales conceptos de informática y programación en cursos 2-4.
           description_audience: Edades de 10 a 18 años
           stage:
             Abstraction: Liberación abstracta
@@ -288,7 +288,7 @@ es:
             Bounce: Rebotar
             Calc: Calc
             Eval: Eval
-            Studio: Estúdio
+            Studio: Estudio
           description_audience: ''
         flappy:
           title: Código Flappy
@@ -323,14 +323,14 @@ es:
           description: Pruebe estos divertidos rompecabezas de codificación. Lo mejor!
           description_short: Desafíate tu mismo!
           stage:
-            Puzzles: Quebra-Cabeça
+            Puzzles: Rompecabezas
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - código Studio Desafio de Rompecabezas
           description: Pruebe estos divertidos rompecabezas de codificación. Lo mejor!
           description_short: Desafíate tu mismo!
           stage:
-            Puzzles: Quebra-Cabeça
+            Puzzles: Rompecabezas
           description_audience: ''
         cspunit1:
           title: "CSP Unit 1 - información Digital"
@@ -698,7 +698,7 @@ es:
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Estúdio
+            Studio: Estudio
             Swapped Levels: Swapped Levels
             Text Compression: Compresión de texto
             TextMatch: TextMatch
@@ -706,6 +706,7 @@ es:
             Multi page assessment: Multi page assessment
             Single page assessment: Single page assessment
             Standalone video: Standalone video
+            Curriculum Reference: Curriculum Reference
           description_audience: ''
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
@@ -2188,6 +2189,12 @@ es:
             'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Unit 5 Overview: Unit 5 Overview
           description_audience: ''
         csp1-support:
           title: Unit 1 Online Professional Learning Course
@@ -2210,10 +2217,10 @@ es:
         basketball:
           stage:
             Bounce: Rebotar
-          title: Crear un juego de baloncesto
+          title: Elije un equipo y crea un juego de basquetbol
           description_audience: ''
           description_short: Crear un juego de baloncesto
-          description: Crear un juego de baloncesto
+          description: Elije un equipo y crea un juego de basquetbol
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2486,10 +2493,10 @@ es:
         sports:
           stage:
             Sports: Спорт
-          title: Multideporte
+          title: Crea tu propio Juego de deportes
           description_audience: ''
           description_short: Multideporte
-          description: Multideporte
+          description: Mezclar y unir deportes
         2016_sciencePD-phase2b:
           stage:
             Welcome!: '¡Bienvenido!'
@@ -2617,11 +2624,21 @@ es:
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
         csp5-support:
-          stage: [ ]
+          stage:
+            Unit 5 Overview: Unit 5 Overview
+            Event Driven Programming: Event Driven Programming
+            Variables and Strings: Variables and Strings
+            Conditionals and Boolean Logic: Conditionals and Boolean Logic
+            While Loops and Introduction to Arrays: While Loops and Introduction to Arrays
+            Processing Arrays and Functions with Return Values: Processing Arrays and Functions with Return Values
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
           title: Unit 5 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Professional Learning Course for CSP Unit 1
-          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+          description_short: Teacher Professional Learning Course for CSP Unit 5
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
         csp6-support:
           stage: [ ]
           title: Unit 6 Online Professional Learning Course
@@ -2665,7 +2682,91 @@ es:
             Foo: Foo
             Lists: Listas
             Lights: Lights
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Input Unplugged: Input Unplugged
+            Timed Loop: Timed Loop
+            Timed Loops: Timed Loops
+            For Loops: Bucles Para
+            Physical Input: Physical Input
+            List and For Loops: List and For Loops
+            'Project: Board Output': 'Project: Board Output'
+            For Loops with UI and Board: For Loops with UI and Board
+            Lists and For Loops: Lists and For Loops
+            Analog Input: Analog Input
+            Polling Events: Polling Events
+            Sensor Applications: Sensor Applications
           title: Draft Unit 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-gamelab:
+          stage:
+            Introduction: Introducción
+            Sprites: Sprites
+            Input: Input
+            'Project: Interactive Card': 'Project: Interactive Card'
+          title: Game Lab Workshop
+          description_audience: Teachers attending an in-person Game Lab Workshop
+          description_short: Level progression to accompany an in-person Game Lab Workshop
+          description: This level progression is intended to accompany an in-person Game Lab Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of Game Lab.
+        csd5-draft:
+          stage:
+            new stage: new stage
+            Interpreting Data: Interpreting Data
+            Data in the Real World: Data in the Real World
+            Combining Representations: Combining Representations
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        applab-1hour:
+          stage:
+            App Lab Workshop: App Lab Workshop
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+            Room Escape: Room Escape
+            Extra: Extra
+          title: App Lab 1 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction to app lab in 1 hour. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        applab-2hour:
+          stage:
+            new stage: new stage
+            Digital Design: Digital Design
+            Event Driven Programming: Event Driven Programming
+            Basic App Functionality: Basic App Functionality
+            Event Types: Event Types
+            Getters and Setters: Getters and Setters
+          title: App Lab 2 Hour Workshop
+          description_audience: Middle and High School Students
+          description_short: ''
+          description: This workshop is designed to give students a basic introduction to app lab in 2 hours. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        coursed-ramp:
+          stage:
+            Introduction: Introducción
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        workshop-maker:
+          stage:
+            App Lab Basics: App Lab Basics
+            The Circuit Playground: The Circuit Playground
+            Physical Input: Physical Input
+            Analog Input: Analog Input
+          title: Maker Toolkit Workshop
+          description_audience: Teachers attending an in-person Maker Toolkit Workshop
+          description_short: Level progression to accompany an in-person Maker Toolkit Workshop
+          description: This level progression is intended to accompany an in-person Maker Toolkit Workshop. This is not intended to teach the tool or CS concepts, but rather to support a workshop facilitator in introducing attendees to the breadth of App Lab and the Maker Toolkit.
+        coursee-ramp:
+          stage:
+            Introduction: Introducción
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

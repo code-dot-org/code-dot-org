@@ -37,6 +37,7 @@ module ProjectsList
         channel: channel_id,
         name: project_value['name'],
         studentName: student.name,
+        thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
       }.with_indifferent_access
