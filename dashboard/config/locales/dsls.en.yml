@@ -647,9 +647,6 @@ en:
       CSD U5 data visualization sheet:
         description here: description here
         title: title
-      CSD U5 fixed-bits:
-        Find the Numbers: Find the Numbers
-        description here: description here
       CSD U5 student record:
         description here: description here
         title: title
@@ -672,20 +669,6 @@ en:
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
       'CSD: Accessing List Items': {}
       'CSD: Creating Variables In App Lab': {}
       'CSD: Dropdown & Conditionals': {}
@@ -7112,9 +7095,9 @@ en:
         I don't know.: I don't know.
         ? Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
         : Incorrect.  The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
-        Laurel will get all of the treasure along the top and side, but not along the bottom.: Laurel will get all of the treasure along the top and side, but not along the bottom.
-        Laurel will get all of the treasure.: Laurel will get all of the treasure.
-        Laurel will not get any treasure at all.: Laurel will not get any treasure at all.
+        Laurel collect all of the treasure.: Laurel collect all of the treasure.
+        Laurel will collect all of the treasure along the top and side, but not along the bottom.: Laurel will collect all of the treasure along the top and side, but not along the bottom.
+        Laurel will not collect any treasure at all.: Laurel will not collect any treasure at all.
         ? The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
         : The `repeat` loops allow Laurel to get all 7 pieces of treasure at the top, and all 6 down the side, but not all 7 along the bottom.
         The code below uses loops.  What will happen when you click "Run"?: The code below uses loops.  What will happen when you click "Run"?
@@ -7122,8 +7105,8 @@ en:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward five times.
-        Laurel will move forward and get treasure five times in a row.: Laurel will move forward and get treasure five times in a row.
-        Laurel will move forward and get treasure one time.: Laurel will move forward and get treasure one time.
+        Laurel will move forward and collect treasure five times in a row.: Laurel will move forward and collect treasure five times in a row.
+        Laurel will move forward and collect treasure one time.: Laurel will move forward and collect treasure one time.
         Laurel won't move at all.: Laurel won't move at all.
         Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
         The program uses a `repeat` loop to get Laurel to move forward five times.: The program uses a `repeat` loop to get Laurel to move forward five times.
@@ -7156,10 +7139,10 @@ en:
       courseB_multi_collector_loops3_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
-        Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.: Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.
+        Incorrect. The `repeat` loop only instructs Laurel to move forward and collect treasure three times.: Incorrect. The `repeat` loop only instructs Laurel to move forward and collect treasure three times.
         Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.: Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.
-        Laurel will move forward and get all of the treasure.: Laurel will move forward and get all of the treasure.
-        Laurel will move forward and get treasure three times in a row.: Laurel will move forward and get treasure three times in a row.
+        Laurel will move forward and collect all of the treasure.: Laurel will move forward and collect all of the treasure.
+        Laurel will move forward and collect treasure three times in a row.: Laurel will move forward and collect treasure three times in a row.
         Laurel won't move at all.: Laurel won't move at all.
         Look at the code below.  What do you think will happen when you click "Run"?: Look at the code below.  What do you think will happen when you click "Run"?
         The program uses a `repeat` loop to get Laurel to move forward three times.: The program uses a `repeat` loop to get Laurel to move forward three times.
@@ -7312,28 +7295,6 @@ en:
         The farmer will collect all of the produce, except the pumpkin.: The farmer will collect all of the produce, except the pumpkin.
         The farmer will collect all of the produce.: The farmer will collect all of the produce.
         The farmer will not collect any of the produce with the path she is taking.: The farmer will not collect any of the produce with the path she is taking.
-      courseD_multi_farmer_ramp13:
-        " ": " "
-        Correct!: Correct!
-        I don't know.: I don't know.
-        ? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
-        : Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
-        The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.: The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
-        The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.: The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.
-        The farmer will walk four spaces, then try to pick one pumpkin.: The farmer will walk four spaces, then try to pick one pumpkin.
-        The farmer will walk to the end of the path and harvest the pumpkin.: The farmer will walk to the end of the path and harvest the pumpkin.
-      courseD_multi_farmer_ramp14:
-        Correct!: Correct!
-        I don't know.: I don't know.
-        Incorrect. The farmer doesn't try to pick a pumpkin after each move up. Only each move to the right.: Incorrect. The farmer doesn't try to pick a pumpkin after each move up. Only each move to the right.
-        ? Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
-        : Incorrect. The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
-        Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?: Take a good look at the code below.  How many pumpkins will the farmer collect after you click "Run"?
-        ? The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
-        : The farmer loops the actions of walking up, walking over, then picking a pumpkin 5 times - but there is no pumpkin in the 5th spot.
-        The farmer will collect 4 pumpkins.: The farmer will collect 4 pumpkins.
-        The farmer will collect 5 pumpkins.: The farmer will collect 5 pumpkins.
-        The farmer will collect all 8 pumpkins.: The farmer will collect all 8 pumpkins.
       courseD_multi_farmer_while10_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7396,10 +7357,6 @@ en:
         The farmer will harvest the corn.: The farmer will harvest the corn.
         The farmer will harvest the lettuce.: The farmer will harvest the lettuce.
         The farmer will harvest two pumpkins.: The farmer will harvest two pumpkins.
-      courseE_multi_farmer_ramp12:
-        " ": " "
-        right answer: right answer
-        wrong answer: wrong answer
       courseE_prediction_artistFunction1:
         Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
         Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
@@ -7742,9 +7699,9 @@ en:
         'false': 'false'
         'true': 'true'
       cspu5_assess2_pseudoCode:
-        "<code>Time to start studying again!</code>": "<code>Time to start studying again!</code>"
-        "<code>You passed!</code>": "<code>You passed!</code>"
-        "<code>You passed!</code> and <code>Time to start studying again! </code>": "<code>You passed!</code> and <code>Time to start studying again! </code>"
+        " “Time to start studying again!” ": " “Time to start studying again!” "
+        " “You passed!” ": " “You passed!” "
+        " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
         An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
