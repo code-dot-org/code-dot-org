@@ -224,7 +224,7 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),
-      new webpack.optimize.OccurrenceOrderPlugin(true)
+      new webpack.optimize.OccurrenceOrderPlugin(true),
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
@@ -237,7 +237,10 @@ function create(options) {
         new webpack.optimize.UglifyJsPlugin({
           compressor: {
             warnings: false
-          }
+          },
+          // Don't generate source maps for our minified code, as these are expensive
+          // and we haven't been using them.
+          sourceMap: false
         }),
         new UnminifiedWebpackPlugin(),
       ]
