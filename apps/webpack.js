@@ -67,6 +67,9 @@ var baseConfig = {
         }
       },
     ],
+    noParse: [
+      /html2canvas/,
+    ],
   },
 };
 
