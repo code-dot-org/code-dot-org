@@ -13,6 +13,7 @@
   .container_responsive h3 { font-size: 12px; }
   .container_responsive h4 { font-size: 12px; }
   .container_responsive .solid-block-header * { font-size: 20px;}
+  .container_responsive .solid-block-subtitle { font-size: 14px; line-height: 1em; padding-right: 10px; padding-bottom: 10px;}
 }
 
 /* 601px-970px: capped to 600px */
