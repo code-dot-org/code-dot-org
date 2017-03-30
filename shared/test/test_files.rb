@@ -200,6 +200,81 @@ class FilesTest < FilesApiTestBase
     assert_equal [], file_infos['files']
   end
 
+  def test_thumbnail
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-dog-contents'
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+  end
+
+  def test_metadata_auth
+    thumbnail_filename = '.metadata/thumbnail.png'
+    thumbnail_body = 'stub-thumbnail-contents'
+    other_body = 'stub-other-contents'
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+
+    @api.put_object(thumbnail_filename, thumbnail_body)
+    assert successful?
+
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+
+      # non-owner can view
+      assert_equal thumbnail_body, non_owner_api.get_object(thumbnail_filename)
+
+      # non-owner cannot put
+      non_owner_api.put_object(thumbnail_filename, other_body)
+      refute successful?
+
+      # non-owner cannot delete
+      non_owner_api.delete_object(thumbnail_filename)
+      refute successful?
+    end
+
+    # file contents has not changed
+    assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
+
+    @api.delete_object(thumbnail_filename)
+    assert successful?
+
+    @api.get_object(thumbnail_filename)
+    assert not_found?
+  end
+
+  def test_bogus_metadata
+    bogus_metadata_filename = '.metadata/bogus.png'
+    bogus_metadata_body = 'stub-bogus-metadata-contents'
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+
+    @api.put_object(bogus_metadata_filename, bogus_metadata_body)
+    assert bad_request?
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+
+    @api.delete_object(bogus_metadata_filename)
+    assert bad_request?
+
+    @api.get_object(bogus_metadata_filename)
+    assert not_found?
+  end
+
   private
 
   def post_file(api, uploaded_file)

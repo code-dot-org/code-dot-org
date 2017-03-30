@@ -43,3 +43,26 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
   const fullyLockedStages = fullyLockedStageMapping(currentSection);
   return !!fullyLockedStages[lessonId];
 }
+
+/**
+ * @returns A friendly name for the icon name (that can be passed to FontAwesome)
+ *   for the given level.
+ */
+export function getIconForLevel(level) {
+  if (level.icon) {
+    // Eventually I'd like to have dashboard return an icon type. For now, I'm just
+    // going to treat the css class it sends as a type, and map it to an icon name.
+    const match = /fa-(.*)/.exec(level.icon);
+    if (!match || !match[1]) {
+      throw new Error('Unknown iconType: ' + level.icon);
+    }
+    return match[1];
+  }
+
+  if (level.isUnplugged) {
+    return 'scissors';
+  }
+
+  // default to desktop
+  return 'desktop';
+}

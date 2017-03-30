@@ -195,6 +195,14 @@ en:
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
 
       %{name}
+  section:
+    your_section: 
+      one: 'Your section:'
+      other: 'Your sections:'
+    code_with_teacher: '%{section_code} with %{teacher_name}'
+    confirm:
+      remove: 'Are you sure you want to leave this section?'
+    remove: '(remove section)'
   follower:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
@@ -325,7 +333,7 @@ en:
     students:
       dashboard: 'Go to Teacher Dashboard'
     user_not_found: 'The teacher could not be found.'
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    student_teacher_disassociated: 'You have left section %{section_code} with %{teacher_name}.'
     panel:
       answer_viewer: 'Teacher Panel'
       student: 'Student'

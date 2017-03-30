@@ -127,6 +127,17 @@ window.SignupManager = function (options) {
     lastUserType = "teacher";
   }
 
+  function getSchoolDropdownStudyGroup() {
+    const variationID = 8256420202; // comes from Optimizely config
+    if (window.optimizely && window.optimizely.data && window.optimizely.data.state) {
+      const variantNumber = window.optimizely.data.state.variationMap[variationID];
+      if (variantNumber === 1) {
+        return "show_school_dropdown";
+      }
+    }
+    return shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
+  }
+
   /**
    * Log signup-related analytics events to Firehose.
    * @param eventName name of the event to log
@@ -136,10 +147,10 @@ window.SignupManager = function (options) {
   function logAnalyticsEvent(eventName, extraData = {}) {
     const streamName = "analysis-events";
     const study = "signup_school_dropdown";
-    const studyGroup = shouldShowSchoolDropdown() ? "show_school_dropdown" : "control";
+    const studyGroup = getSchoolDropdownStudyGroup();
 
     let dataJson = extraData;
-    if (!!window.optimizely && !!window.optimizely.data) {
+    if (window.optimizely && window.optimizely.data) {
       const optimizelyData = {
         optimizely_data: window.optimizely.data.state
       };
@@ -168,28 +179,33 @@ window.SignupManager = function (options) {
     logAnalyticsEvent(event);
   }
 
+  function logEventWithInferredUserType(event, extraData = {}) {
+    logAnalyticsEvent(event + "_" + getUserTypeSelected(), extraData);
+  }
+
   function logFormSubmitted() {
-    const event = isTeacherSelected() ? "submit_teacher" : "submit_student";
-    logAnalyticsEvent(event);
+    logEventWithInferredUserType("submit");
   }
 
   function logFormError(err) {
-    const event = isTeacherSelected() ? "submit_error_teacher" : "submit_error_student";
-    logAnalyticsEvent(event, {error_info: err});
+    logEventWithInferredUserType("submit_error", {error_info: err});
   }
 
   function logFormSuccess() {
-    const event = isTeacherSelected() ? "submit_success_teacher" : "submit_success_student";
-    logAnalyticsEvent(event);
+    logEventWithInferredUserType("submit_success");
+  }
+
+  function getUserTypeSelected() {
+    const formData = $('#new_user').serializeArray();
+    const userType = $.grep(formData, e => e.name === "user[user_type]");
+    if (userType.length === 1) {
+      return userType[0].value;
+    }
+    return "no_user_type";
   }
 
   function isTeacherSelected() {
-    const formData = $('#new_user').serializeArray();
-    const userType = $.grep(formData, e => e.name === "user[user_type]");
-    if (userType.length === 1 && userType[0].value === "teacher") {
-      return true;
-    }
-    return false;
+    return getUserTypeSelected() === "teacher";
   }
 
   $(".signupform").submit(function () {
