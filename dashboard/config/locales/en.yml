@@ -101,6 +101,7 @@ en:
     forgot_password: 'Forgot your password?'
     need_confirmation: "Didn't receive confirmation instructions?"
     need_unlock: "Didn't receive unlock instructions?"
+    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'

@@ -14,6 +14,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @user.persisted?
       flash.notice = I18n.t('auth.signed_in')
       sign_in_and_redirect @user
+    elsif User.find_by_email_or_hashed_email(@user.email)
+      redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
     else
       session["devise.user_attributes"] = @user.attributes
       redirect_to new_user_registration_url
