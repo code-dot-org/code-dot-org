@@ -1,18 +1,30 @@
 import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
+import ProgressDetailToggle from "@cdo/apps/templates/progress/ProgressDetailToggle";
+import experiments from '@cdo/apps/util/experiments';
+
+const progressRedesignEnabled = experiments.isEnabled('progressRedesign');
 
 const styles = {
   main: {
     fontSize: 16,
     backgroundColor: color.teal,
     color: color.white,
-    padding: '12px 15px',
+    padding: 15,
     marginBottom: 0,
   },
-  linesOfCode: {
-    fontSize: 16,
-    float: 'right'
+  link: {
+    color: color.white,
+  },
+  linesOfCodeText: {
+    position: 'absolute',
+    right: progressRedesignEnabled ? 95 : 15
+  },
+  toggle: {
+    position: 'absolute',
+    top: 4,
+    right: 4
   }
 };
 
@@ -26,12 +38,20 @@ const MiniViewTopRow = React.createClass({
     const { scriptName, linesOfCodeText } = this.props;
     return (
       <div style={styles.main}>
-        <a href={`/s/${scriptName}`}>
+        <a href={`/s/${scriptName}`} style={styles.link}>
           <span>{i18n.viewUnitOverview()}</span>
         </a>
-        <span style={styles.linesOfCode}>
+        <span style={styles.linesOfCodeText}>
           {linesOfCodeText}
         </span>
+        {progressRedesignEnabled &&
+          <div style={styles.toggle}>
+            <ProgressDetailToggle
+              activeColor={color.teal}
+              whiteBorder={true}
+            />
+          </div>
+        }
       </div>
     );
   }

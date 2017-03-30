@@ -2,15 +2,21 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import CourseProgress from './CourseProgress';
 import MiniViewTopRow from './MiniViewTopRow';
+import { hasGroups } from '@cdo/apps/code-studio/progressRedux';
 import experiments from '@cdo/apps/util/experiments';
 
 const progressRedesignEnabled = experiments.isEnabled('progressRedesign');
 
 const styles = {
-  // We want a margin for the non-redesigned course progress
-  oldCourseProgress: {
+  // For our non-redesigned view, we want margins on the left and right
+  oldProgress: {
     marginLeft: 10,
     marginRight: 10
+  },
+  // For our redesigned view, we want margins on all side if we're in the detail
+  // view (and not inside groups).
+  detailView: {
+    margin: 10
   }
 };
 
@@ -22,12 +28,14 @@ const MiniView = React.createClass({
     linesOfCodeText: PropTypes.string.isRequired,
 
     // redux backed
+    isSummaryView: PropTypes.bool.isRequired,
+    hasGroups: PropTypes.bool.isRequired,
     scriptName: PropTypes.string.isRequired,
-    hasFullProgress: PropTypes.bool.isRequired
+    hasFullProgress: PropTypes.bool.isRequired,
   },
 
   render() {
-    const { linesOfCodeText, scriptName, hasFullProgress } = this.props;
+    const { linesOfCodeText, isSummaryView, hasGroups, scriptName, hasFullProgress } = this.props;
 
     let body;
     if (!hasFullProgress) {
@@ -37,7 +45,12 @@ const MiniView = React.createClass({
       body = <div className="loading"/>;
     } else {
       body = (
-        <div style={progressRedesignEnabled ? undefined : styles.oldCourseProgress}>
+        <div
+          style={{
+            ...(!progressRedesignEnabled && styles.oldProgress),
+            ...(progressRedesignEnabled && !isSummaryView && !hasGroups && styles.detailView)
+          }}
+        >
           <CourseProgress onOverviewPage={false}/>
         </div>
       );
@@ -58,6 +71,8 @@ const MiniView = React.createClass({
 export const UnconnectedMiniView = MiniView;
 
 export default connect(state => ({
+  isSummaryView: state.progress.isSummaryView,
   scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
+  hasGroups: hasGroups(state.progress)
 }))(MiniView);

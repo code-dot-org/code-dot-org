@@ -785,7 +785,6 @@ input.header_input {
   // margin-bottom is reused in JavaScript to determine how close to get to the bottom of the viewport.
   margin-bottom: 20px;
   width: 635px;
-  // border: 8px solid $bkgnd_color;
   border-color: $bkgnd_color;
   border-top: 5px;
   border-bottom: 5px;
@@ -799,22 +798,6 @@ input.header_input {
 .header_popup_scrollable {
   max-height: 560px;
   overflow-y: auto;
-}
-
-.header_popup_header {
-  padding: 12px 15px;
-  margin-bottom: 0;
-  text-align: left;
-  color: $header_text;
-  background-color: $hdr_color;
-  font-size: 22px;
-  cursor: pointer;
-
-  span {
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 }
 
 .header_popup_body {

@@ -84,7 +84,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
    */
   var isHeaderPopupVisible = false;
 
-  function showHeaderPopup(target) {
+  function showHeaderPopup() {
     sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
@@ -94,7 +94,13 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
       progressData.linesOfCodeText);
     isHeaderPopupVisible = true;
   }
-  function hideHeaderPopup() {
+  function hideHeaderPopup(event) {
+    // Clicks inside the popup shouldn't close it, unless it's on close button
+    const target = event.target;
+    if ($(".header_popup").find(target).length > 0 &&
+        !$(event.target).hasClass('header_popup_close')) {
+      return;
+    }
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
     $('.header_popup_link_text').text(dashboard.i18n.t('more'));
@@ -106,10 +112,6 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     e.stopPropagation();
     $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
   });
-  $('.header_popup').click(function (e) {
-    e.stopPropagation(); // Clicks inside the popup shouldn't close it
-  });
-  $('.header_popup_close').click(hideHeaderPopup);
 
   $(window).resize(_.debounce(function () {
     if (isHeaderPopupVisible) {
