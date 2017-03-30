@@ -49,7 +49,7 @@ class TransfersControllerTest < ActionController::TestCase
     @params.delete(:current_section_code)
     post :create, params: @params
     assert_response 400
-    assert_equal "Please provide current_section_code.", json_response["error"]
+    assert_equal "Missing section code.", json_response["error"]
   end
 
   test "returns an error when the current_section_code is invalid" do
