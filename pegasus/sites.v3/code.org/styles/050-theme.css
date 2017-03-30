@@ -23,7 +23,7 @@ body {
 #pageheader {
   width: 100%;
   background-color: rgb(0, 178, 192);
-  height: 4em;
+  height: 3em;
   margin: 0 0 30px 0;
 }
 
@@ -48,6 +48,7 @@ body {
   width: 87px;
   height: 87px;
   display: block;
+  margin-top: -5px;
 }
 
 #pageheader img#logo-uk {
@@ -65,7 +66,7 @@ body {
 .headerlink {
   display: inline-block;
   font-size: 18px;
-  margin: 0.9375em 0 0 30px;
+  margin: 0.5em 0 0 30px;
   font-family: 'Gotham 4r', sans-serif;
   color: white;
   text-decoration: none;
@@ -127,7 +128,6 @@ body {
   font-family: 'Gotham 4r', sans-serif;
 }
 
-
 /* styling for the embedded dashboard components... */
 #user_hero #contents {
   margin: 10px 0px;
@@ -174,7 +174,7 @@ body {
   margin-bottom: 0px;
   margin-left: 0px;
   margin-right: 0px;
-  margin-top: 0px;
+  margin-top: -6px;
   padding-bottom: 6px;
   padding-left: 12px;
   padding-right: 12px;
@@ -193,7 +193,7 @@ body {
 
 /* For mobile */
 .mobile-headers #pageheader {
-  height: 21px;
+  height: 40px;
   margin: 15px 0 0 0;
 }
 
@@ -206,8 +206,9 @@ body {
   margin: -8px 0 5px 0px;
 }
 .mobile-headers #pageheader img#logo {
-  width: 37px;
-  height: 37px;
+  width: 50px;
+  height: 50px;
+  margin-top: 3px;
 }
 
 .mobile-headers #pageheader img#logo-uk {
