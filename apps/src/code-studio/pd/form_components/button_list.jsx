@@ -91,7 +91,11 @@ const ButtonList = React.createClass({
       validationState = 'error';
     }
     return (
-      <FormGroup id={this.props.groupName} validationState={validationState}>
+      <FormGroup
+        id={this.props.groupName}
+        controlId={this.props.groupName}
+        validationState={validationState}
+      >
         <ControlLabel>
           {this.props.label}
           {this.props.required && (<span style={{color: 'red'}}> *</span>)}
