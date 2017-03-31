@@ -45,6 +45,8 @@ const DesignModeHeaders = React.createClass({
     const isRtl = this.props.localeDirection === 'rtl';
     const hasFocus = !this.props.isRunning;
 
+    const settingsCog = <SettingsCog isRunning={this.props.isRunning} runModeIndicators/>;
+
     return (
       <PaneHeader
         id="design-headers"
@@ -53,7 +55,7 @@ const DesignModeHeaders = React.createClass({
         style={{color: 'white'}}
       >
         <PaneSection id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
-          <SettingsCog/>
+          {settingsCog}
           <span>{applabMsg.designToolboxHeader()}</span>
           <span className="workspace-header-clickable" onClick={this.onToggleToolbox}>&nbsp;{msg.hideToolbox()}</span>
         </PaneSection>
@@ -63,7 +65,7 @@ const DesignModeHeaders = React.createClass({
           style={styles.showToolboxHeader}
         >
           <span className="workspace-header-clickable">{msg.showToolbox()}</span>
-          <SettingsCog/>
+          {settingsCog}
         </PaneSection>
         <PaneButton
           id="design-mode-versions-header"

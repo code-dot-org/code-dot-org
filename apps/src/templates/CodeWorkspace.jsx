@@ -11,6 +11,7 @@ var msg = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var color = require("../util/color");
 var utils = require('@cdo/apps/utils');
+import {shouldUseRunModeIndicators} from '../redux/selectors';
 import SettingsCog from '../lib/ui/SettingsCog';
 
 var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
@@ -22,6 +23,9 @@ var styles = {
   },
   chevron: {
     fontSize: 18,
+    ':hover': {
+      color: color.white,
+    },
   },
   runningIcon: {
     color: color.dark_charcoal
@@ -54,6 +58,7 @@ var CodeWorkspace = React.createClass({
     isRunning: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
+    runModeIndicators: React.PropTypes.bool.isRequired,
     withSettingsCog: React.PropTypes.bool,
   },
 
@@ -96,15 +101,11 @@ var CodeWorkspace = React.createClass({
     }
   },
 
-  runModeIndicators() {
-    // ignore runModeIndicators in MC
-    return !this.props.isMinecraft;
-  },
-
   renderToolboxHeaders() {
     const {
       editCode,
       isRunning,
+      runModeIndicators,
       readonlyWorkspace,
       withSettingsCog,
     } = this.props;
@@ -112,9 +113,8 @@ var CodeWorkspace = React.createClass({
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = [
       styles.chevron,
-      this.runModeIndicators() && isRunning && styles.runningIcon
+      runModeIndicators && isRunning && styles.runningIcon
     ];
-    const cogStyle = this.runModeIndicators() && isRunning ? styles.runningIcon : undefined;
     return [
       <PaneSection
         id="toolbox-header"
@@ -128,7 +128,7 @@ var CodeWorkspace = React.createClass({
         <span style={textStyle}>
           {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
         </span>
-        {showSettingsCog && <SettingsCog style={cogStyle}/>}
+        {showSettingsCog && <SettingsCog {...{isRunning, runModeIndicators}}/>}
       </PaneSection>,
       <PaneSection
         id="show-toolbox-header"
@@ -153,7 +153,7 @@ var CodeWorkspace = React.createClass({
     // By default, continue to show header as focused. When runModeIndicators
     // is enabled, remove focus while running.
     var hasFocus = true;
-    if (this.runModeIndicators() && props.isRunning) {
+    if (props.runModeIndicators && props.isRunning) {
       hasFocus = false;
     }
 
@@ -244,5 +244,6 @@ module.exports = connect(state => ({
   isRunning: !!state.runState.isRunning,
   showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-  isMinecraft: !!state.pageConstants.isMinecraft
+  isMinecraft: !!state.pageConstants.isMinecraft,
+  runModeIndicators: shouldUseRunModeIndicators(state),
 }))(Radium(CodeWorkspace));

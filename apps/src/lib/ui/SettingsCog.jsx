@@ -39,7 +39,8 @@ class SettingsCog extends Component {
   }
 
   static propTypes = {
-    style: PropTypes.any,
+    isRunning: PropTypes.bool,
+    runModeIndicators: PropTypes.bool,
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -80,9 +81,17 @@ class SettingsCog extends Component {
   }
 
   render() {
+    const {isRunning, runModeIndicators} = this.props;
+
+    // Adjust icon color when running
+    const rootStyle = {...style.iconContainer};
+    if (runModeIndicators && isRunning) {
+      rootStyle.color = color.dark_charcoal;
+    }
+
     return (
       <span
-        style={[style.iconContainer, this.props.style]}
+        style={rootStyle}
         ref={icon => this.setTargetPoint(icon)}
       >
         <FontAwesome
