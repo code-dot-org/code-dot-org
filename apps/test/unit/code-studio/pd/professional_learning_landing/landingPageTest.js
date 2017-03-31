@@ -23,7 +23,7 @@ describe("Tests for Professional Learning Landing Page", () => {
 
       expect(landingPage.childAt(2).is('TwoPartBanner')).to.be.true;
       expect(landingPage.childAt(2).shallow().text().indexOf('Order Supplies') >= 0).to.be.true;
-      expect(landingPage.childAt(3).is('UpcomingWorkshops')).to.be.true;
+      expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
 
@@ -36,7 +36,7 @@ describe("Tests for Professional Learning Landing Page", () => {
 
       expect(landingPage.childAt(2).is('TwoPartBanner')).to.be.true;
       expect(landingPage.childAt(2).shallow().text().indexOf('Order Supplies')).to.equal(-1);
-      expect(landingPage.childAt(3).is('UpcomingWorkshops')).to.be.true;
+      expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
 
@@ -45,7 +45,7 @@ describe("Tests for Professional Learning Landing Page", () => {
         professionalLearningCourseData: [{data: 'oh yeah'}]
       });
 
-      expect(landingPage.childAt(2).is('UpcomingWorkshops')).to.be.true;
+      expect(landingPage.childAt(2).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(3).is('ProfessionalLearningCourseProgress')).to.be.true;
     });
   });

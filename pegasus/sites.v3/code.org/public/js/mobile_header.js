@@ -6,7 +6,7 @@ $(function () {
   });
 
   $(document).on('click',function (e) {
-    let nav = $('#nav');
+    var nav = $('#nav');
     if (!nav.is(e.target)
         && nav.has(e.target).length === 0){
       nav.children('ul').hide();

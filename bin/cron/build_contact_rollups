@@ -3,11 +3,43 @@
 require_relative('../../dashboard/config/environment')
 require 'cdo/contact_rollups'
 require 'cdo/contact_rollups_validation'
+require 'cdo/pardot'
+require 'cdo/chat_client'
 require 'cdo/only_one'
 
+CHAT_CHANNEL = "cron-daily".freeze
+
 def main
+  time_start = Time.now
+
+  # Build new daily table of contact rollups
   ContactRollups.build_contact_rollups
-  ContactRollupsValidation.validate_contact_rollups
+
+  # Validate that daily contact rollups meets sanity exoectations
+  results = ContactRollupsValidation.validate_contact_rollups
+  unless results[:pass]
+    message = "Contact rollups process failed. "\
+              "Validation of daily rollup failed:\n#{results[:output]}"
+    ChatClient.message(CHAT_CHANNEL, message)
+    # Raise exception so this goes to HoneyBadger
+    raise message
+  end
+
+  # Sync daily rollup to master rollup and compute deltas
+  ContactRollups.sync_contact_rollups_to_main
+
+  # Sync deltas into Pardot
+  results = Pardot.sync_contact_rollups_to_pardot
+
+  time_elapsed = (Time.now - time_start).to_i
+  message = "Contact rollups process complete. #{results[:num_inserts]} "\
+    "inserts and #{results[:num_updates]} updates to Pardot. "\
+    "Total time: #{time_elapsed} sec"
+
+  ChatClient.message(CHAT_CHANNEL, message)
+
+  # Any other failures along the way will be unrescued exceptions that
+  # go to HoneyBadger
 end
 
 main if only_one_running?(__FILE__)

@@ -5300,7 +5300,6 @@ en:
       CommuteAssess - Cond 4a - block:
         "<pre>The word is just right!</pre>": "<pre>The word is just right!</pre>"
         "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
-        "<pre>The word is just right</pre>": "<pre>The word is just right</pre>"
         "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
         "<pre>The word is too short!</pre>": "<pre>The word is too short!</pre>"
         "<pre>The word it too long!</pre>": "<pre>The word it too long!</pre>"

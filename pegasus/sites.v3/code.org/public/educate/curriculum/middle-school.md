@@ -1,6 +1,7 @@
 ---
 title: CS Curriculum for grades 6-8
 nav: educate_nav
+video_player: true
 theme: responsive
 ---
 
@@ -12,28 +13,30 @@ Middle School
 
 Our current middle school curriculum focuses on a broad introduction to computer science topics. CS Discoveries, our newest course (to be released in Summer 2017), will be a year-long or semester computer science course designed for grades 7-9. In addition, the CS Fundamentals Accelerated course may be used at all grade levels. Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy). 
 
-[solid-block-header]
-
-Computer Science Discoveries
-
-[/solid-block-header]
+<%= view :solid_block_header, :title=>"Computer Science Discoveries", :subtitle=>"A semester or year-long introductory course designed for grades 7-9" %>
 
 <% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
 <% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>'Computer Science Discoveries @codeorg'} %>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="padding-right: 10px;">
 
 <%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
 
 </div>
 
+[col-50]
+
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school (grades 7-9). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.  This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
 
-<div style="float:right; padding:10px; width:49%">
+[/col-50]
+
+<div class="col-50" style="padding-right: 10px; float: right;">
 
 <img src="/images/fit-400/csdiscoveries-montage.jpg">
 
 </div>
+
+[col-50]
 
 ## Units of Study
 
@@ -44,15 +47,15 @@ Computer Science Discoveries is a full-year introductory computer science survey
 * **Unit 5:** The Internet: Data and Society
 * **Unit 6:** Programming: The Internet of Things
 
+[/col-50]
+
+<div style="clear: both;"></div>
+
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
-[solid-block-header]
+<%= view :solid_block_header, :title=>"Computer Science Fundamentals - Accelerated", :subtitle=>"A 20-hour course designed for grades 6-12" %>
 
-Computer Science Fundamentals - Accelerated
-
-[/solid-block-header]
-
-<img src="/images/code20hr.jpg">
+<img src="/images/code20hr.jpg" style="max-width: 100%">
 
 For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program,
 Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the
@@ -66,7 +69,7 @@ Computer Science in Science
 
 [/solid-block-header]
 
-<img src="<%= CDO.shared_image_url("courses/logo_science.png") %>">
+<img src="<%= CDO.shared_image_url("courses/logo_science.png") %>" style="max-width: 100%">
 
 <div> Code.org has partnered with the award-winning <a href="http://www.projectguts.org/">Project GUTS</a> (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
 <br><br>

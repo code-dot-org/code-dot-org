@@ -47,9 +47,9 @@ Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. 
 Attendees learn how to use Code.org's courses to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). Attendees also receive all the supplies they need to teach—at no cost.
 
 <br />
-[<button style="font-size: 22px; height: 50px">Learn more & find a local workshop</button>](/professional-development-workshops)<br />
+[<button>Learn more & find a local workshop</button>](/professional-development-workshops)<br />
 
-<img src="/images/k5teacherquotes.png" width="800"/>
+<img src="/images/k5teacherquotes.png" width="100%"/>
 
 ### <strong>No workshop in your area?</strong>
 [Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
