@@ -1,6 +1,7 @@
 ---
 title: Online, Self-Paced Courses for Teachers
 nav: educate_nav
+theme: responsive
 ---
 # Online, Self-Paced Courses for Teachers
 In addition to our in-person [professional development programs](/educate/professional-development) for Elementary, Middle and High School teachers, Code.org is pleased to offer free, self-paced online courses for teachers who wish to implement computer science curriculum in their classrooms. Below is a list of our current course offerings, which are available free of charge to any educator with a Code Studio account world wide.
