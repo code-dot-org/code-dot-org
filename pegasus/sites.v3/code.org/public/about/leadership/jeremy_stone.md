@@ -1,6 +1,7 @@
 ---
 title: Jeremy Stone
 nav: about_nav
+theme: responsive
 ---
 # Jeremy Stone
 
