@@ -13,9 +13,6 @@ High School
 
 For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9, and will be rolling out Summer 2017. The second, Computer Science Principles, is broadly available and can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy). 
 
-
-<!--<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">-->
-
 [solid-block-header]
 
 Computer Science Discoveries
@@ -25,19 +22,25 @@ Computer Science Discoveries
 <% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
 <% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>'Computer Science Discoveries @codeorg'} %>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="padding-right: 10px;">
 
 <%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
 
 </div>
 
+[col-50]
+
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school (grades 7-9). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.  This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
 
-<div style="float:right; padding:10px; width:49%">
+[/col-50]
+
+<div class="col-50" style="padding-right: 10px; float: right;">
 
 <img src="/images/fit-400/csdiscoveries-montage.jpg">
 
 </div>
+
+[col-50]
 
 ## Units of Study
 
@@ -47,6 +50,10 @@ Computer Science Discoveries is a full-year introductory computer science survey
 * **Unit 4:** Problem Solving: The Design Process
 * **Unit 5:** The Internet: Data and Society
 * **Unit 6:** Programming: The Internet of Things
+
+[/col-50]
+
+<div style="clear: both;"></div>
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
