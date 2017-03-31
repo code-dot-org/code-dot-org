@@ -44,6 +44,23 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
+"@code-dot-org/johnny-five@0.9.62-cdo.0":
+  version "0.9.62-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.0.tgz#cbb704f69ab78fd99b7a557e9725894f5e7fa986"
+  dependencies:
+    chalk latest
+    color-convert "~1.2.2"
+    ease-component latest
+    es6-shim latest
+    lodash.clonedeep "^4.3.0"
+    lodash.debounce "^4.0.3"
+    nanotimer "0.3.10"
+    temporal latest
+  optionalDependencies:
+    browser-serialport latest
+    firmata "^0.12.0"
+    serialport "^4.0.0"
+
 "@code-dot-org/js-interpreter":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.1.1.tgz#2a7ccbb6b1f31353445f82f777573d1c38e11d37"
@@ -6039,23 +6056,6 @@ jodid25519@^1.0.0:
   resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
   dependencies:
     jsbn "~0.1.0"
-
-johnny-five@code-dot-org/johnny-five#d284f5ff67e0e287e543d6a483375cdaa8b3c41d:
-  version "0.9.62-cdo.0"
-  resolved "https://codeload.github.com/code-dot-org/johnny-five/tar.gz/d284f5ff67e0e287e543d6a483375cdaa8b3c41d"
-  dependencies:
-    chalk latest
-    color-convert "~1.2.2"
-    ease-component latest
-    es6-shim latest
-    lodash.clonedeep "^4.3.0"
-    lodash.debounce "^4.0.3"
-    nanotimer "0.3.10"
-    temporal latest
-  optionalDependencies:
-    browser-serialport latest
-    firmata "^0.12.0"
-    serialport "^4.0.0"
 
 jquery-ui@1.10.5:
   version "1.10.5"
