@@ -1,8 +1,25 @@
 login_required true
 hideable_stages true
 
+stage 'Programming for Entertainment'
+named_level 'CSD U3 Entertainment'
+
+stage 'Drawing in Game Lab'
+named_level 'CSD-U3-SFLP Drawing'
+named_level 'CSD: Drawing in Game Lab 1'
+level 'CSD U3 rect'
+named_level 'CSD: Drawing in Game Lab 2'
+
 stage 'Shapes and Randomness'
 level 'CSD U3 Random Taller Rectangle'
 level 'CSD U3 Random Ellipse Behind'
 level 'CSD U3 Random Debug Grass'
 level 'CSD U3 Random Debug Cloud'
+
+stage 'Variables'
+level 'CSD U3 Variables Predict Where X'
+level 'CSD U3 Variables Predict Where XY'
+level 'CSD U3 Variables change circle size'
+level 'CSD U3 Variables Draw Poppy'
+level 'CSD U3 Variables naming rules v2'
+level 'CSD U3 Variables random with assignment'
