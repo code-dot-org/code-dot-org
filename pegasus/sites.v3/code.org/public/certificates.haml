@@ -1,6 +1,7 @@
 ---
 Title: Print Certificates
 allow_post: true
+theme: responsive
 ---
 -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
@@ -21,7 +22,7 @@ allow_post: true
 %form{:method=>"post", :action=>'/printcertificates'}
   -if course
     %input{:type=>"hidden", :name=>'course', :value=>course}
-  %textarea{:name=>'names', :rows=>"10", :cols=>"80"}
+  %textarea{:name=>'names', :rows=>"10", :cols=>"40"}
     -if request.params['names']
       - request.params['names'].each do |name|
         =CGI::unescape(name)
