@@ -1,4 +1,4 @@
-/* global Applab, dashboard */
+/* global Applab */
 import $ from 'jquery';
 import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
@@ -1204,7 +1204,6 @@ designMode.renderDesignWorkspace = function (element) {
     onDuplicate: designMode.onDuplicate.bind(this, element),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
-    handleManageAssets: dashboard.assets.showAssetManager,
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
     store: studioApp.reduxStore,

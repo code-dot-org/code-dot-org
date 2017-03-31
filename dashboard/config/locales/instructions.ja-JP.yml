@@ -26,7 +26,7 @@
       2-3 Artist 7_instruction: "子どもたちみんなを外を見ることができるように、学校のまどをぜんぶかき上げてください。それぞれの正方形のまどの辺の長さは25ピクセルです。 "
       2-3 Artist 8_instruction: "それぞれの動物のために、長方形を2つの同じサイズの四角形に分けて、部屋を完成させてください。長方形の幅は200ピクセルで、高さは100ピクセルです。"
       2-3 Artist 9 NEW_instruction: "この凧（たこ）を完成させてください"
-      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
+      2-3 Artist 9 REPLACEMENT_instruction: "これらの階段を書き終えてください！"
       2-3 Artist 9_instruction: "この凧（たこ）を完成させてください"
       2-3 Artist Assessment 1_instruction: "課題: 最後の歯をかき上げてください。歯の大きさはよこ25ピクセル、たて25ピクセルです。"
       2-3 Artist Debugging 1_instruction: "帽子のてっぺんのはばを50にしたいのです。直せますか?"
@@ -195,10 +195,7 @@
       2-3 Maze 12 (copy 1)_instruction: "さっきと同じ答えを２つのブロックだけで作ってみましょう。(ヒント：〜回繰り返すのブロックを使って、繰り返しましょう)"
       2-3 Maze 12 (copy 2)_instruction: "さっきと同じ答えを２つのブロックだけで作ってみましょう。(ヒント：〜回繰り返すのブロックを使って、繰り返しましょう)"
       2-3 Maze 12 (old)_instruction: "ぶたを捕まえて、今度は〜回繰り返すブロック！"
-      2-3 Maze 12 - One Move Block_instruction: |-
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
+      2-3 Maze 12 - One Move Block_instruction: "ブタのところに行ってください！しかし今回は、「まえにすすむ」ブロックを１つしか使えません。あなたを助ける、他のブロックがわかりますか？"
       2-3 Maze 12_instruction: "この５つのブロックの動きを２つのブロックで置き換えられる？ (ヒント：「〜回繰り返す」ブロックを使って繰り返しの作業を作りましょう)"
       2-3 Maze 13 (old)_instruction: "今度は「繰り返す」ブロックを使って、ブタのところまで行ってみよう。"
       2-3 Maze 13_instruction: "ブロックを2つだけ使ってブタを捕まえよう。"
@@ -526,11 +523,8 @@
       4-5 Maze Assessment 1_instruction: "課題：ヒマワリまで辿り着く。"
       4-5 Maze Conditionals 1_instruction: "「までを繰り返します」ブロックを使ってゾンビをヒマワリまで連れて行く。"
       4-5 Maze Conditionals 10_instruction: |-
-        Can you add just 3 blocks to help the
-        zombie solve a more complex maze? \r
-        \r
-        If you do it right, he can walk
-        any curvy path no matter the length!
+        ブロックをあと3つ足して、ゾンビがむずかしい迷路を歩くの助けてくれますか？\r
+        \rもしそれができれば、どんな長くカーブした道でも歩けるようになります。
       4-5 Maze Conditionals 2_instruction: "「までを繰り返します」ブロックを使ってゾンビをヒマワリまで連れて行く。"
       4-5 Maze Conditionals 3_instruction: "「もし」ブロックを使って、いつ曲がるかを決めてください。ヒント：あともう１つのブロックが必要です、どう設定しているかを学べば、次はひとりでできるようになります。"
       4-5 Maze Conditionals 4_instruction: Ok。さっきのパズルと同じです、でもどうやって"もし"ブロックと"繰り返し"ブロックを一緒に使ったかをもう一度思い出してみましょう。
@@ -597,7 +591,7 @@
         these blocks of code will make an additional quarter circle for the corners?
       aEfreeplay_instruction: Free Play!
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
-      Alien Defender_instruction: 'Project Idea: Make a defender game in Play Lab!'
+      Alien Defender_instruction: "プロジェクトのアイデア: Play Labでディフェンダーゲームを作ろう！"
       AllTheThings Applab - Turtle move with button_instruction: |-
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
@@ -676,6 +670,8 @@
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
         to know how our inspiration pattern was made? "
+      artistDebugVideo1_instruction: "「リピート」ループを使用して、水を波立たせることができます。"
+      artistFunctionsVideo1_instruction: "説明に従って、自分の関数を作ってみましょう。"
       artistLoopsK1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -718,6 +714,7 @@
         loop might be helpful. "
       Bee Recommended Blocks test_instruction: "紫の花の蜜は、1（ある）か 0（ない） かのどちらかですが、どのお花に蜜がある（1である）のかは分かりません！蜜のない花から蜜を集めないように気をつけてください。蜜が
         1 かどうかは、「もし」ブロックを使って確認しましょう。"
+      beeDebugVideo1_instruction: "全てのはなのみつを集めるのに繰り返しブロックを使ってみましょう。"
       Bergeron Robot Maze1_instruction: |
         Can you help me catch the naughty pig? Stack
         a couple of `move forward` blocks below the `when run` block and press "Run".
@@ -861,6 +858,9 @@
         your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
+      birdsDebugVideo1_instruction: |-
+        道をたどってお調子者のブタまで連れて行って。
+        でも、TNTの箱には注意してね。羽が飛ばされちゃうよ。
       Brad Spooky House Copy_instruction: |-
         Freeplay: Here are the functions you've
         written, and some more for you to play with. Draw something awesome! Play
@@ -1150,6 +1150,13 @@
       Collector Demo_instruction: |-
         Look at all this loot! Help me get as many coins
         as I can so I can improve my farm. I can only use 9 blocks though!
+      collector example_instruction: |-
+        Put these blocks in order to collect all of
+        the gold and solve the puzzle.
+      Collector Test_instruction: Collect all the gold!
+      collectorDebugVideo2_instruction: "金のカタマリを全部集めてパズルを解くため、これらのブロックを置きましょう。"
+      collectorSkinVideo1_instruction: "４つの山をすべて集め、このレベルをクリアしましょう。"
+      collectorSkinVideo2_instruction: "金の山を一つ集めて、このレベルをクリアしましょう。"
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? "
       Course 2 Bee Loops 13_instruction: |-
@@ -1172,11 +1179,8 @@
       Course 4 Artist 1_instruction: "箱を描くのを手伝ってほしいです。（各辺は、２００ピクセルです） "
       Course 4 Artist 10_instruction: "フリープレイの時間です！これが面白い形を描くためのコードです。繰り返すとどうなるでしょう？あなたの好きな絵を描いて楽しんでください。"
       Course 4 Artist 11_instruction: "次はちょっと難しいですよ。これはあなたがすでに使ったことがあるブロックたちだけを使う絵柄です。どうやって再現するかわかりますか？自由にいろいろ試してみてください。最初の一回目で完全に仕上げる事をあなたは期待されていません。もっとヒントを見てみたいですか？ここをクリック。"
-      Course 4 Artist 12_instruction: |-
-        Want a second peek at the inspiration design
-        or the hints?  Click here!\r
-        \r
-        Otherwise, make a design all your own!
+      Course 4 Artist 12_instruction: "インスピレーションデザインやヒントをもう一度見たいですか？ここをクリックして! \\r
+        \\r そうでなければ、自分のデザインを作りましょう！"
       Course 4 Artist 13_instruction: "もう少しやりますか？ここに何も描いていないカンバスがあります。あなたが望むがままに描いていいですよ。"
       Course 4 Artist 2_instruction: "灰色の四角形を描くためにこのコードを繰り返すことができますか？"
       Course 4 Artist 20_instruction: "もう少しやりますか？ここに何も描いていないカンバスがあります。望む事を何でも描いてもいいですよ。"
@@ -1186,64 +1190,28 @@
       Course 4 Artist 6_instruction: "これらの三角形を描くためにコードを完成させてください。ヒント：３６０度以下で回転する３つの三角形があります。・・・３６０の中に３は何回入るでしょうか？"
       Course 4 Artist 7_instruction: "１０個の三角形を描くため、別の「繰り返し（ループ）」の中に、このループを入れてみましょう。これを「入れ子型の繰り返し（ループ）」と言います。ヒント：１０個の三角形すべてでピッタリ360度回転します。"
       Course 4 Artist 8_instruction: "この全てのブロックを何回も繰り返してこの太陽の絵を描いてください。"
-      Course 4 Artist 8a_instruction: |-
-        Remember this shape?  Now we're going to
-        let you build it without giving you any blocks to start!
+      Course 4 Artist 8a_instruction: "この形を、おぼえてますか？さあ、はじめのブロックなしで、これを作ってみよう！"
       Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn between each shape that's drawn. \r
-      Course 4 Artist Binary 1_instruction: |-
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to follow them from left
-        to right, top to bottom.  The artist will fill-in the squares when it sees
-        a 1 and ignore the square when it sees a 0. \r
-        \r
-        Run this code to see how
-        the artist uses binary to draw this pattern.
-      Course 4 Artist Binary 1a_instruction: |-
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to follow them from left
-        to right, top to bottom.  The artist will fill-in the squares when it sees
-        a 1 and ignore the square when it sees a 0. \r
-        \r
-        Run this code to see how
-        the artist uses binary to draw this pattern.
-      Course 4 Artist Binary 2_instruction: |-
-        Which of these binary strings could
-        you loop 8 times to draw this image?
+        このデザインを 10 回くりかえしながら、それぞれの図形の間で、角度をかえてください。\r
+      Course 4 Artist Binary 1_instruction: "ここに 1 と 0 のバイナリ文字列を受け取り、左から右、上から下へとアーティストに教える関数があります。アーティストは1なら正方形をぬりつぶし、0なら次の正方形にいきます。\\r
+        \\r コードを実行して、バイナリをどのように使いながらアーティストがパターンを書くか、見てください。"
+      Course 4 Artist Binary 1a_instruction: "ここに 1 と 0 のバイナリ文字列を受け取り、左から右、上から下へとアーティストに教える関数があります。アーティストは1なら正方形をぬりつぶし、0なら次の正方形にいきます。\\r
+        \\r コードを実行して、バイナリをどのように使いながらアーティストがパターンを書くか、見てください。"
+      Course 4 Artist Binary 2_instruction: "このイメージをかくには、どのバイナリ文字列を8回くりかえせばよいですか？"
       Course 4 Artist Binary 3_instruction: 3つの2進数（0と1）だけのループでこのパターンを描くことができますか?
-      Course 4 Artist Binary 4_instruction: |-
-        Each binary string represents one row
-        of this picture. Can you rearrange them so it draws a smiley face instead
-        of a frowny face?
-      Course 4 Artist Binary 5_instruction: |-
-        Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: |-
-        What is the shortest binary string that
-        you can repeat to draw this image?
+      Course 4 Artist Binary 4_instruction: "バイナリ文字列は、絵の それぞれ1行を表しています。しかめっ面が、えがおになるように、ならびかえてください。"
+      Course 4 Artist Binary 5_instruction: "このイメージを書くのには、どのような6ケタのバイナリ文字列を、11回くりかえせばよいでしょうか？"
+      Course 4 Artist Binary 6_instruction: "このイメージをかくのに、一番短いバイナリ文字列は何ですか？"
       Course 4 Artist Binary 7_instruction: "終わりにする"
       Course 4 Artist Binary Free Play 2_instruction: "自由に描きましょう! \nこのまっさらなキャンバスは好きなように絵を描いて良い場所です。さあ何から描きましょうか!"
-      Course 4 Artist Binary Free Play 2a_instruction: |-
-        Here's a higher resolution
-        canvas to draw on - 16 pixels by 16 pixels!\r
-        \r
-        See what happens when we
-        start to get creative with the bits?
+      Course 4 Artist Binary Free Play 2a_instruction: "もっと細かいキャンバスがあります - 16 ピクセル
+        × 16 ピクセルです! \\r \\rこのビットで何ができるか、見てください。"
       Course 4 Artist Binary Free Play 2b_instruction: "ヒントを見たい場合は、ここをクリックします。"
       Course 4 Artist Binary Free Play_instruction: "自由に描きましょう! 2進数を使って好きなものを描きましょう!"
-      Course 4 Artist Binary pre1_instruction: |-
-        Use the blocks below to have the
-        artist draw "01010101" in binary in the first row.
-      Course 4 Artist Binary ryan_instruction: |-
-        Binary is a way of representing information
-        using only two options.  Here, we're going to use the options "off" (represented
-        by the number 0) and "on" (represented by the number 1).  \r
-        \r
-        We've
-        provided you with a grid of "pixels" that you can walk through and make
-        designs by turning on only certain squares.  Can you have the artist draw
-        "01010101" in binary in the first row?
+      Course 4 Artist Binary pre1_instruction: "アーティストが、はじめの行に、バイナリで「01010101」をかくように、下のブロックを使ってください。"
+      Course 4 Artist Binary ryan_instruction: バイナリは、 2 つのオプションだけを使って、情報を表すものです。 ここでは、「オフ」(0で表す)
+        と、「オン」(１で表す) を使います。\r \rあなたが歩き回って、指定の四角形をオンにし、デザインできる「ピクセル」のグリッドを用意しました。アーティストに、はじめの行に、バイナリで
+        "01010101"を、かかせることが出来ますか？
       Course 4 Artist For  Functions 10_instruction: |-
         Let's Step it up a little,
         can you draw a Star shape using the "Draw a Square Line" function? Good
@@ -1252,23 +1220,13 @@
         Let's Step it up a little,
         can you draw a Star shape using the "Draw a Square Line" function? Good
         luck!
-      Course 4 Artist For Loops 1_instruction: |-
-        Use a repeat block to draw this triangle
-        that is 50 pixels wide.
+      Course 4 Artist For Loops 1_instruction: "くりかえすブロックを使って、50 ピクセル はば の三角形をかきます。"
       Course 4 Artist For Loops 10_instruction: "自由時間です！学んだブロックの使い方をいかして、好きなものを描きましょう。"
-      Course 4 Artist For Loops 11_instruction: "Remember back in a previous stage\nwhen
-        we used a variable to control the number of sides in a shape? We are\ngoing
-        to do the same thing with the `counter` variable now. This pattern starts\nwith
-        a triangle and adds one side at a time until it draws a decagon (10 sides).\nEach
-        side should be 100 pixels long. "
-      Course 4 Artist For Loops 11a_instruction: |-
-        Let's put it all together!  Using
-        your knowledge of `for` loops and the `counter` variable, create this drawing
-        where each shape has two more sides than the last.  Make sure that each side
-        is 10 times as long as the number of sides in the polygon.\r
-        \r
-        Very little
-        of the code has been provided for you.
+      Course 4 Artist For Loops 11_instruction: "変数を使用して図形の辺の数をカウンターでコントロールした、前のステージを思い出してください。こんどは
+        `counter` 変数を使って同じことを行います。今回のパターンは、三角形で始まり、10角形(10辺) になるまで、1回毎に 1 つの辺を足していきます。それぞれの辺は、100
+        ピクセルの長さです。 "
+      Course 4 Artist For Loops 11a_instruction: "全部いっしょにして見ましょう! 'For' ループと 'カウンター'
+        変数を思い出して、前より 2 つ辺が多い図形を作ります。 それぞれの辺の長さは、多角形の辺の数の10倍にしましょう。 \\r \\r ほんの少しのコードが、あなたに用意されます。"
       Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
         like to draw each shape next to the last one. This time each side is\n20 pixels.
         Use a jump block to jump forward 40 pixels after each shape. "
@@ -1278,77 +1236,41 @@
         we use the counter variable to make the sides smaller as there are more of
         them? Instead of moving forward by a set amount, try moving forward (100 /
         counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |-
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try using
-        some of the code from the last level, but turning 89 degrees to create this
-        twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |-
-        Free Play: Try making some drawings
-        of your own using "for loops". We've added a few useful variables for you
-        as well.
-      Course 4 Artist For Loops 2_instruction: |-
-        I've put the code for drawing a
-        triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure
-        you look at the code before you hit "Run".
+      Course 4 Artist For Loops 14_instruction: "図形で、ふつうより、ちょっと大きいか小さいかの角度にすると、上手くいきます。前レベルのコードの一部を使いますが、このねじれた四角のグルグルを作るには、
+        89 度で曲がります。"
+      Course 4 Artist For Loops 15_instruction: "フリープレイ:「for loops」を使って、いくつかの図形を作ってみよう。いくつか便利な変数を追加しておきました。"
+      Course 4 Artist For Loops 2_instruction: "三角形をかくコードをくりかえしの中に入れ、50 から 100 まで
+        10 づつカウントするようにしました。 注:「実行」をクリックする前に、コードをよく見てみましょう。"
       Course 4 Artist For Loops 3_instruction: |
-        Use the last puzzle as a reference
-        to complete this one.  The smallest triangle has 20 pixel sides, the largest
-        has 200 pixel sides, and each triangle is 20 pixels larger than the last.
-      Course 4 Artist For Loops 4_instruction: "How would you modify what you've\nlearned
-        to draw these squares? They start at 15 pixels long, the largest is\n300 pixels
-        long, and each square is 15 pixels larger than the last. "
-      Course 4 Artist For Loops 5_instruction: "Good job on the last puzzle! Let's\nuse
-        that \"counter\" variable block again to draw this cool picture. "
+        これを終えるには、さいごのパズルを見て使ってください。一番小さい三角形は 20 ピクセルの辺を持ち、一番大きいのは 200 ピクセルの辺です。そして、それぞれの三角形は前より 20 ピクセル大きくします。
+      Course 4 Artist For Loops 4_instruction: "これまで四角形をかくために学んだことを、どのように使いますか？15
+        ピクセルの長さで始めて、最大で 300 ピクセルの長さ、それぞれの正方形は、前より 15 ピクセルのづつ大きくなるようにします。 "
+      Course 4 Artist For Loops 5_instruction: "前のパズルでは、グッドジョブ！もう一度「カウンター」変数ブロックを使って、カッコいい絵をかきましょう。 "
       Course 4 Artist For Loops 6_instruction: |-
         Free Play! Try using a for loop to
         draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 6a_instruction: |-
-        Make three small changes to the
-        code from the last level to get this!
+      Course 4 Artist For Loops 6a_instruction: "これをやるには、前のレベルから、コードを3ヵ所だけ、かえてみよう！"
       Course 4 Artist For Loops 7_instruction: |-
         What happens if you remove the "Repeat
         3" from this algorithm, keeping the "move" and "turn" blocks in the for
         loop? In this spiraling triangle, each side is 20 pixels longer than the last.
-      Course 4 Artist For Loops 8_instruction: |-
-        Just one little change to the code
-        from the last image can create this drawing. Can you figure out what that
-        change is?\r
-        \r
-        Hint:  You need to remove something!
-      Course 4 Artist For Loops 8a_instruction: |-
-        Just one little change to the code
-        from the last image can create this image. Can you figure out what that change
-        is?
+      Course 4 Artist For Loops 8_instruction: "さいごのイメージから、1ヵ所かえれば、この絵が作れます。それは何でしょう？
+        \\r \\r ヒント: 何かを消します!"
+      Course 4 Artist For Loops 8a_instruction: "さいごのイメージから、1ヵ所かえれば、このイメージが作れます。それは何でしょう？"
       Course 4 Artist For Loops 9_instruction: |-
         Can you make a spiral? Move forward
         from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops Challenge_instruction: |-
-        **Challenge:** Can you figure
-        out how to use all of the things you've learned to create this image of polygons,
-        all with 40 pixel sides?
-      Course 4 Artist For Loops Challenge_a_instruction: |-
-        Can you figure out how
-        to use all of the things you've learned to create this image?\r
-        \r
-        Need
-        a hint? Click here.
-      Course 4 Artist For Loops inspire_instruction: |-
-        Free-Play Inspiration: You've
-        now learned everything you need to know to make a pattern like this! If this
-        picture inspires you, try to make something similar. Otherwise, create something
-        all your own.\r
-        \r
-        Need a hint? Click here.
-      Course 4 Artist Functions 1_instruction: |-
-        Can you draw a square that is 100
-        pixels in length, using a loop?
+      Course 4 Artist For Loops Challenge_instruction: "* * ちょうせん：* * あなたが学んだことをすべて使って、ぜんぶの辺が40
+        ピクセルの多角形を作る事ができますか？"
+      Course 4 Artist For Loops Challenge_a_instruction: "あなたが学んだことをすべて使って、このイメージを作る事ができますか？
+        \\r \\r ヒントがほしい？ここをクリックします。"
+      Course 4 Artist For Loops inspire_instruction: "フリー プレー インスピレーション: このようなパターンの作りかたを、すべて学びました！この絵が気に入ったら、にたものを作ってみよう。または、まったく自分のを作ってみよう
+        \\r \\r ヒントがほしい？ここをクリックします。"
+      Course 4 Artist Functions 1_instruction: "くりかえしを使って、一辺が100ピクセルの正方形をかいてください。"
       Course 4 Artist Functions 10_instruction: |-
         Which block do you need to add to
         get the triangle to sit on top of the square?
-      Course 4 Artist Functions 11_instruction: |-
-        Check out this code that draws a
-        cube - can you move it into a function called "Draw a Cube"
+      Course 4 Artist Functions 11_instruction: "立方体をかくコードを見てください -これを「立方体をかく」関数の中に、動かすことができますか。"
       Course 4 Artist Functions 12.1_instruction: |-
         Let's create a function called
         "draw an octagon 20" that draws an octagon where each side is 20 pixels
@@ -1394,11 +1316,8 @@
       Course 4 Artist Functions 7_instruction: |-
         Can you draw a line of squares using
         a Square function? Each square is 40 pixel's in length.
-      Course 4 Artist Functions 8_instruction: "Are you getting the hang of how to\nuse
-        function blocks? Let's modify this square so that it is 200 pixels in\nsize.
-        Hint: click on \"edit\" to change the size of the \"draw a square\"\nfunction
-        editor. Remember to click on \"save and close\" to get out of the\nfunction
-        editor. "
+      Course 4 Artist Functions 8_instruction: "関数ブロックのつかいかたを、マスターした？この正方形を200 ピクセルのサイズに、かえてみよう。ヒント:
+        サイズをかえるには、「正方形をかく」関数エディタで、「edit」をクリックします。関数エディターから、もどるときは、「save and close」をクリックします。 "
       Course 4 Artist Functions 9_instruction: |-
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
@@ -1408,12 +1327,8 @@
       Course 4 Artist Functions inspire_instruction: |-
         Click here to see the inspiration
         picture again.
-      Course 4 Artist Inspire_instruction: |-
-        Want a second peek at the inspiration
-        design or the hints?  Click here!\r
-        \r
-        Otherwise, make a design all your
-        own!
+      Course 4 Artist Inspire_instruction: "インスピレーションデザインやヒントをもう一度見たいですか？ここをクリックして!
+        \\r \\r そうでなければ、自分のデザインを作りましょう！"
       Course 4 Artist Params 1_instruction: |-
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1430,18 +1345,15 @@
       Course 4 Artist Params 12_instruction: |-
         Use your "pinwheel" function to draw
         each of these shapes. The side length for each image is 50.
-      Course 4 Artist Params 13_instruction: |-
-        Freeplay: Here are the functions you've
-        written, and some more for you to play with. Draw something awesome!
+      Course 4 Artist Params 13_instruction: "フリープレイ: あなたが作った関数と、おまけ もあります。すごいものを、かいてみよう！"
       Course 4 Artist Params 2_instruction: |-
         That triangle function would be a whole
         lot more useful if it could draw triangles of different sizes. I've added
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: "Awesome, can you draw each of these\ntriangles
-        with that new function? The first is 25 pixels long, the second\nis 50, and
-        the third is 75. "
+      Course 4 Artist Params 3_instruction: "すばらしい！新しい関数で、それぞれの三角形をかけますか？始めは 25 、2
+        番目は 50、3 番目は 75ピクセルの長さです。 "
       Course 4 Artist Params 4_instruction: |-
         Can you add a new function called square?
         It should also take a length parameter, just like the triangle. This time
@@ -1452,12 +1364,8 @@
       Course 4 Artist Params 7_instruction: "「？？？」を埋めることでこれらの図形を描けますか？四角形と三角形は長さ１００ピクセルで、六角形のほうは長さ７５ピクセルです。 "
       Course 4 Artist Params 8_instruction: |
         どうやってこの図形を描くのかわかりますか？六角形と呼ばれている６つの辺（sides）の新しい関数（function）を作ることがヒントです。
-      Course 4 Artist Params 9_instruction: |-
-        Do you remember when we used the counter
-        loop but removed a loop within? Let's have some fun and use the "draw a
-        shape" function with "sides" and "length" parameters. Can you re create
-        these shapes? The square counter should be 5/100/5, the triangle counter should
-        be 10/100/10 and the hexagon is 2/100/2.
+      Course 4 Artist Params 9_instruction: "カウンター ループを使って、そこからループを消したのを、おぼえてますか？「辺」と「長さ」パラメーターを使って「図形をかく」関数を使い、楽しい時をすごしましょう。四角形カウンターは、5/100/5、三角形カウンターは、10/100/10、六角形は
+        2/100/2にしてください。"
       Course 4 Artist Var 9_instruction: "三角形を描くアルゴリズムがここにあります。　「辺（sides）」の変数を代わりに使ってこのアルゴリズムを変えてください。数字の３を「辺（sides）」の変数に置きかえてください。ヒント：「辺を設定する（set
         sides to）」ブロックを使う事を忘れないでください。"
       Course 4 Artist Vars 1_instruction: "正三角形を描くのを手伝ってくれますか。各辺が１００ピクセルぴったりの正三角形です。"
@@ -1467,86 +1375,35 @@
         variable to draw each triangle? Look through the code, and every time you
         see the number 3, replace it with your "sides" variable. Remember to use
         the "set sides" block.
-      Course 4 Artist Vars 11_instruction: |-
-        Here’s more complicated code using the
-        same concepts from the last puzzle - what should you set the "sides" variable
-        to in order to draw this picture made of squares?
-      Course 4 Artist Vars 12_instruction: |-
-        Let's set the "sides" variable to
-        5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Notice that there is another variable called "length". We can now
-        use that wherever we have a "move forward." Set the "length" variable
-        to 75 for this shape.
-      Course 4 Artist Vars 13_instruction: |-
-        When a shape has lots of sides, each
-        side needs to be shorter if you want the whole pattern to fit on the screen.
-        \r
-        Let's recreate the algorithm for this amazing pattern, but instead of
-        manually setting the `length` variable, let's use a math block with the `sides`
-        variable inside to make sure that each shape fits correctly. The perimeter
-        of each polygon is 300 pixels.\r
-        Need some hints?  Click here.
-      Course 4 Artist Vars 14_instruction: |-
-        Free Play: Check it out! Now your algorithm
-        is nested within one more loop. Experiment with changing the values of your
-        two variables to draw cool patterns.\r
-        \r
-        For even more effect, try playing
-        with color!  Use random colors inside loops to see how it changes your design.
-      Course 4 Artist Vars 2_instruction: |-
-        Instead of using "move forward by 150,"
-        the "move" block is now referencing a variable called "length." Can you
-        set "length" to 150 to draw this new triangle?
+      Course 4 Artist Vars 11_instruction: "前のパズルの考えを使ったさらに、入り組んだコードです - 正方形で作られたこの絵をかくために、「辺」変数には何をセットしますか？"
+      Course 4 Artist Vars 12_instruction: "「辺」変数に 5をセットします。このアルゴリズムに辺を足すたび、このパターンが大きくなっていきます!「長さ」という変数があることにも注意してください。これは、「まえにうごく」で使うことが出来ます。この図形では、「長さ」変数を75
+        にセットします。"
+      Course 4 Artist Vars 13_instruction: "図形には多くの辺があります、全てが画面に入るようにするには、それぞれの辺を短くします。\\r
+        このカッコいいパターンのためのアルゴリズムを、もう一度、作りましょう。'長さ' 変数を手動でセットするかわりに、それぞれの辺がちゃんと入るよう、「辺」変数を計算ブロックで使います。多角形の周りは、300
+        ピクセルです。 \\rヒントがほしい？ ここをクリックします。"
+      Course 4 Artist Vars 14_instruction: "フリー プレイ: 見てみて! 今あなたのアルゴリズムは、くりかえしの中に入れ子になっています。カッコいいパターンをかくために、2つの変数の中身をかえてみて下さい。\\r
+        \\r さらに良くするために、色で遊んでみてください！ループ内でランダムな色を使って、デザインがどうなるか見てみよう。"
+      Course 4 Artist Vars 2_instruction: 「前に動く150ピクセル」のかわりに、「前に動く」ブロックは、"length"という変数を使います。"length"に150をセットして、新しい三角形をかけますか？
       Course 4 Artist Vars 3_instruction: "Here's a loop that draws a square, but\nsomething's
         missing. Can you fix it so that it uses the variable \"length\"\nto figure
         out how long each side should be? "
-      Course 4 Artist Vars 4_instruction: |-
-        Now I want to make a rectangle that is
-        twice as tall as it is wide. We've got a variable called "width" that needs
-        to be set to 100. Can you use the math blocks to complete the code?
-      Course 4 Artist Vars 5_instruction: |-
-        Use the variable "sides" to control
-        how many times this loop gets run.
-      Course 4 Artist Vars 6_instruction: |-
-        Here’s some code that can draw any regular
-        polygon. There’s a new variable called sides that is set to 4. Can you use
-        the sides variable (along with the math block) to turn the right amount regardless
-        of how many sides there are in the polygon?\r
-        \r
-        Click here to go back to
-        the hint!
-      Course 4 Artist Vars 7_instruction: |-
-        Use what you learned in the last puzzle
-        to create this hexagon using the "sides" variable.\r
-        \r
-        See how you could
-        change just one value to draw a triangle,  square, pentagon, or octagon?
-      Course 4 Artist Vars 8_instruction: |-
-        Free Play: Experiment with the number
-        of sides this shape has. Can you change the algorithm so that the overall
-        size of the shape stays the same, no matter how many sides it has? Hint: If
-        you divide your starting length by the number of sides, the length of each
-        side will get shorter as the number of sides gets higher.
+      Course 4 Artist Vars 4_instruction: さて、はばより2倍高い四角形を作ります。"width" という変数に100 をセットします。計算ブロックを使ってプログラムを仕上げてください。
+      Course 4 Artist Vars 5_instruction: '"sides" 変数を使って、ループが何回くりかえされるかコントロールします。'
+      Course 4 Artist Vars 6_instruction: "これは、いろいろな多角形をかくコードです。 sidesという変数は4にセットされています。sidesという変数を(計算ブロックと共に)
+        使って、多角形にいくつ辺があっても関係なく、正しい角度で曲がれますか？\\r \\r ヒントはここをクリック!"
+      Course 4 Artist Vars 7_instruction: 前のパズルで学んだように、 "sides"を使って六角形を作りましょう。 \r
+        \r1 つだけ数字をかえて、三角形、四角形、五角形、八角形をつくれますか？
+      Course 4 Artist Vars 8_instruction: "フリー プレイ: この図形の辺の数を色々かえてみてください。アルゴリズムをかえて、いくつ辺があっても、全体のサイズは同じに出来ますか？ヒント：始めの長さを辺の数で
+        わり算すると、辺の数が多くなると、辺の長さは短くなります。"
       Course 4 Artist Vars 9_instruction: |-
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Don't forget to use
         the "set sides to" block.
-      Course 4 Bee 1_instruction: |-
-        The bee can't tell what's under the cloud! \r
-        \r
-        Use
-        the `if` block to check whether there is a flower under the cloud. \r
-        \r
-        Get
-        nectar one time, ONLY if there is a flower.
-      Course 4 Bee 2_instruction: |-
-        Use the "if/else" block to check each object
-        to see if it's a flower or a honeycomb . If it's a flower, collect one nectar...otherwise,
-        make one honey!
-      Course 4 Bee 3_instruction: |-
-        The unknown object is either a flower or a honeycomb.
-        This time, use the if/else block to collect one nectar if it is a flower,
-        else make one honey (because then it would be a honeycomb).
+      Course 4 Bee 1_instruction: "ミツバチは、雲の下に何があるか、分かりません！\\r \\r'if' ブロックを使って、雲の下にいくつ花があるかチェックしてください。\\r
+        \\r 花がある場合、1回だけみつを集めてください。"
+      Course 4 Bee 2_instruction: '"if/else"ブロックを使って、花やハチの巣か、チェックしてください！もし花なら、みつを集めて、もしちがうなら、みつを作ってください！'
+      Course 4 Bee 3_instruction: "？は花か、ハチの巣です。こんどは、「もし ならば」ブロックを使って、花ならみつを集め、それ以外
+        (つまりハチの巣) ならハチミツを作りましょう。"
       Course 4 Bee 4_instruction: |-
         This purple flower may have either 3, 2, or 1
         nectar. Here an if/else block is combined with another if/else block to create
@@ -1564,17 +1421,12 @@
         Use everything you have learned so far to collect
         all the nectar. The purple flower may have either 3, 2, or 1 nectar.
       Course 4 Bee For Loops 1_instruction: "ループを使って花からはちみつを集めましょう。"
-      Course 4 Bee For Loops 10_instruction: |-
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
+      Course 4 Bee For Loops 10_instruction: "くりかえしが、カウントダウンなら、それぞれのくりかえしで、カウンター変数から数を引きます。9、6、3
+        と みつ を集めるには、いくつ数を引くべきですか？"
       Course 4 Bee For Loops 11_instruction: |-
         What's wrong with this loop? See if
         you can fix it and make the bee collect all the nectar.
-      Course 4 Bee For Loops 2_instruction: |-
-        Here's a new kind of loop, called the
-        "for" loop. This particular for loop will count from 1 to 5 by 1, and run
-        the contents of the loop each time it counts. Help the Bee get the nectar.
+      Course 4 Bee For Loops 2_instruction: これは新しい くりかえし "for"ループです。この for ループは、1から5まで1づつカウントし、その度にループの中を実行します。ミツバチが、ハチミツを集めるのを助けてください。
       Course 4 Bee For Loops 3_instruction: |-
         You can solve this puzzle by using a
         for loop to count from 1 to 3 by 1. Now let's go get some nectar!
@@ -1586,75 +1438,37 @@
         the same number of times as the loop. Whew! That's a lot of loops.\nAll the
         code you need it there, take a look at how it is put together then\nclick
         on Run and see how it works. "
-      Course 4 Bee For Loops 6_instruction: |-
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
+      Course 4 Bee For Loops 6_instruction: Forループはカウント ダウンにも使えます。5 から 1 まで1づつカウント
+        ダウンして、みつを集めてください。
       Course 4 Bee For Loops 7_instruction: |-
         Use your for loop "counter" variable
         to control how far to move horizontally.
-      Course 4 Bee For Loops 8_instruction: |-
-        Can you use the loop variable to control
-        movement and nectar collection?
-      Course 4 Bee For Loops 9_instruction: |-
-        The last number in your for loop is
-        called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
-      Course 4 Bee Loops 5 NEW_instruction: |-
-        Here are three flowers. Can you find
-        the pattern of instructions that you need to repeat 3 times to collect the
-        nectar with the fewest number of blocks?
-      Course 4 Bee Loops 5a NEW_instruction: |-
-        Now, use loops to help the bee collect
-        all the nectar on its way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
-      Course 4 Bee Params 1_instruction: |-
-        Write a sequence to collect all of the
-        nectar using `get 3 nectar` which turns, moves to collect the nectar, and
-        then returns to the original location.
-      Course 4 Bee Params 2_instruction: |-
-        Modify the "get 3 nectar" function so
-        it makes me turn right instead of left to the flowers.
-      Course 4 Bee Params 3 (copy 1)_instruction: |-
-        Now there are flowers on both
-        sides! Maybe you can use a parameter so that the same function works for flowers
-        on either side. I've added a parameter called "direction" to the function.
-        If the "direction" parameter equals 0 I should turn left, if it's 1 I should
-        turn right.
-      Course 4 Bee Params 3_instruction: "Now there are flowers on both sides! We've\nadded
-        variables called \"left\" and \"right\" for you to use, and added a\nparameter
-        called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\"\nso that the
-        bee turns the correct direction when the variables \"left\" or\n\"right\"
-        are passed into the function.  "
-      Course 4 Bee Params 4 (copy 1)_instruction: |-
-        Try using your new function to
-        collect all of the flowers. Remember, 0 = left and 1 = right.
-      Course 4 Bee Params 4 - Two WhenRun_instruction: |-
-        Try using your new function
-        to collect all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 4 backup_instruction: |-
-        Wouldn't it be nice if we could
-        collect all of these nectars with the a single function? Try adding a new
-        parameter to your function called "nectars" to control the amount of nectar
-        to collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 4_instruction: |-
-        Try using your new function to collect
-        nectar from all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee For Loops 8_instruction: Loop変数で、動きと、みつを集めることをコントロール出来ますか？
+      Course 4 Bee For Loops 9_instruction: For loopの最後の数字は「増分（ぞうぶん）」といわれ、ループするたび増分の数字をカウンター変数の数字に足していきます。増分を2
+        にして、これらの花を集めてください。
+      Course 4 Bee Loops 5 NEW_instruction: "ここには3 つ花があります。3回のくりかえしで みつを集めて、ブロックが一番少なくなるようなパターンを見つけてください。"
+      Course 4 Bee Loops 5a NEW_instruction: "ミツバチがハチの巣へいくまでに、すべてのみつを集めれるよう、ループを使って、一番少ないブロックで助けてください。あなたがそこに着いたら、ハチミツを作るのを、わすれないで!"
+      Course 4 Bee Params 1_instruction: "「get 3 nectar」は、まがる、すすむ、はなのみつをとる、もどるを行います。これを使って、全ての
+        みつを集めてください。"
+      Course 4 Bee Params 2_instruction: "「get 3 nectar」関数をかえて、「ひだりにまがる」じゃなく、「みぎにまがる」にかえて、ボクが花のところに行けるようにして。"
+      Course 4 Bee Params 3 (copy 1)_instruction: こんどは、両方に花があります！パラメーターを使えば、同じ関数でどちらの花でも行けるようになります。"direction"（方向）というパラメーターを加えました。"direction"パラメーターが０だったらひだり、１だったらみぎにまがるようにしてください。
+      Course 4 Bee Params 3_instruction: "こんどは、両方に花があります！\"left\"（ひだり）と\"right\"（みぎ）という、値（あたい）を加えました。\nさらに\"direction\"（方向）というパラメーターを
+        \"get 3 nectar\"に加えました。ミツバチが正しい方向に曲がれるように、\"left\"か\"right\"を、関数に わたしてください。
+        \ "
+      Course 4 Bee Params 4 (copy 1)_instruction: "すべての花を集めるために、新しい関数を使ってください。0 =
+        ひだり、 1 = みぎですよ。"
+      Course 4 Bee Params 4 - Two WhenRun_instruction: "すべての花を集めるために、新しい関数を使ってください。left
+        = ひだり、 right = みぎですよ。"
+      Course 4 Bee Params 4 backup_instruction: 1 つの関数で全部のみつを集めることが出来るなんてステキですね。新しいパラメータを"nectars"
+        という関数に加えて、集めるみつの数をコントロールします。関数の名前もかえてください！
+      Course 4 Bee Params 4_instruction: "すべての花からみつを集めるために、新しい関数を使ってください。left = ひだり、
+        right = みぎですよ。"
       Course 4 Bee Params 5_instruction: "一からコードを書いてみましょう。方向をパラメーターとして「蜜を 5 個取る」という関数を作ってください。"
-      Course 4 Bee Params 6 (copy 1)_instruction: |-
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 6_instruction: |-
-        Wouldn't it be nice if we could collect
-        all of these nectars with a single function? Try adding a new parameter to
-        your function called "nectar units" to control the amount of nectar to collect.
-        You'll probably want to rename the function too!
-      Course 4 Bee Params 7 (copy 1)_instruction: |-
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 7_instruction: |-
-        Try using your new function to collect
-        all of this nectar.
+      Course 4 Bee Params 6 (copy 1)_instruction: "全てのみつを取るため、新しい関数を使ってください。"
+      Course 4 Bee Params 6_instruction: 1 つの関数で全部のみつを集めることが出来るなんてステキですね。新しいパラメータを
+        "nectar units" という関数に加えて、集めるみつの数をコントロールします。関数の名前もかえてください！
+      Course 4 Bee Params 7 (copy 1)_instruction: "全てのみつを取るため、新しい関数を使ってください。"
+      Course 4 Bee Params 7_instruction: "全てのみつを取るため、新しい関数を使ってください。"
       Course 4 Bee Params 8 Clone 2_instruction: |-
         Oooh, now there's honey to deal
         with too! How could you update your function to either get nectar or make
@@ -1670,14 +1484,8 @@
       Course 4 Bee Params 8 new_instruction: |-
         Oooh, now there's honey to deal with
         too! How could you update your function to either get nectar or make honey.
-      Course 4 Bee Params 8_instruction: |-
-        Challenge: Now there's honey to deal with
-        too! Rewrite your function to use both the number of honey units and the number
-        of nectar units.  How would you use those numbers to decide what you should
-        do?
-      Course 4 Bee Params Ex_instruction: |-
-        Try using your new function to collect
-        all of this nectar.
+      Course 4 Bee Params 8_instruction: "チャレンジ： はちみつが多すぎます！はちみつの数を数える単位と花のみつ単位の両方を使って自分の関数を書きなおしてみましょう。何をするか決めるためには、はちみつと花のみつの数をどう使えばいいでしょうか？"
+      Course 4 Bee Params Ex_instruction: "全てのみつを取るため、新しい関数を使ってください。"
       Course 4 Binary 1_instruction: |-
         Here's a function that takes a binary string
         of 1's and 0's and instructs the farmer to turn on the go from left to right,
@@ -1686,54 +1494,33 @@
       Course 4 Binary 2_instruction: |-
         What binary string could you loop 8 times to
         draw this image? Hint: the number "1" fills a hole.
-      Course 4 Binary 3_instruction: |-
-        Can you draw this pattern by looping a single
-        binary string?
-      Course 4 Binary 5 (copy 1)_instruction: |-
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 5_instruction: |-
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 6 (copy 1)_instruction: |-
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 6_instruction: |-
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 7_instruction: |-
-        Which binary string, repeated 10 times, will
-        draw this image?
+      Course 4 Binary 3_instruction: "たった一つのバイナリ文字列をループして、このパターンを描けるかな？"
+      Course 4 Binary 5 (copy 1)_instruction: "どのバイナリ文字列が１０回ループしたら、この絵を描くのかな？"
+      Course 4 Binary 5_instruction: "どのバイナリ文字列が１０回ループしたら、この絵を描くのかな？"
+      Course 4 Binary 6 (copy 1)_instruction: "どのバイナリ文字列が１０回ループしたら、この絵を描くのかな？"
+      Course 4 Binary 6_instruction: "どのバイナリ文字列が１０回ループしたら、この絵を描くのかな？"
+      Course 4 Binary 7_instruction: "どのバイナリ文字列が１０回ループしたら、この絵を描くのかな？"
       Course 4 Binary 8_instruction: |-
         You can complete the most of this image by
         looping a 5 bit binary number - then you'll need one more 4 bit number to
         get the bottom right-hand corner.
-      Course 4 EC 1a_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 1b_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 2a_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2b_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2c_instruction: |
-        **Extreme Challenge:**  No rules. No clues. Just
-        the challenge!
-      Course 4 EC 2d_instruction: No rules. No clues. Just the challenge!
-      Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
-        image like this. Note: The code becomes more simple if you incorporate\nparameters. "
+      Course 4 EC 1a_instruction: "ルールなし、ヒントなしでちょうせんしてみてね。"
+      Course 4 EC 1b_instruction: "ルールなし、ヒントなしでちょうせんしてみてね。"
+      Course 4 EC 2a_instruction: "ルールなし、ヒントなしでちょうせんしてみてね。"
+      Course 4 EC 2b_instruction: "ルールなし、ヒントなしでちょうせんしてみてね。"
+      Course 4 EC 2c_instruction: "ルールなし、ヒントなしでちょうせんしてみてね。"
+      Course 4 EC 2d_instruction: "ルールなし、ヒントなしでちょうせんしてみてね。"
+      Course 4 EC 3_instruction: "前のレベルで学んだことを使って、こんな絵を書いてみよう。ヒント：パラメーターを合体させると、コードはもっと見やすくなるよ。"
       Course 4 EC 3a_instruction: |-
         Extreme Challenge: No rules. No clues. Just the
         challenge!
-      Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
-      Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
+      Course 4 Maze 1_instruction: Angry Birdをぶたまでつれていって！
+      Course 4 Maze 2_instruction: TNTばくだんにきをつけて！
+      Course 4 Maze 3_instruction: 'Angry Birdをぶたのところまでつれていって。 '
       Course 4 Maze 4_instruction: "使用するブロックの数が少なくてすむように「リピート」ブロックを使ってみて…"
       Course 4 Maze 5_instruction: "このパズルを、出来る限り少ない数のブロックで解決できるかな？"
       Course 4 Maze 6_instruction: "このパズルを、出来る限り少ない数のブロックで解決できるかな？"
-      Course 4 Play Lab For Loops 2_instruction: |-
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Play Lab For Loops 2_instruction: "こんどは、1から100までのきすうをカウントしてください。"
       Course 4 Play Lab Params 1_instruction: |-
         Here's a function called `jump` that
         causes your main character to jump up 100 pixels. Run the program and use
@@ -1943,14 +1730,8 @@
         Freeplay: Use everything you've
         learned so far to make a game that includes a `for` loop!
       Course 4 Playlab For Loops 4b_instruction: |-
-        Now, these two characters are going
-        to race!  \r
-        \r
-        Each of them will move `counter` steps at a time, but their
-        counters will have different values because of the `for` loops.  \r
-        \r
-        Can
-        you change the increment in one of the loops so that the race is a tie?
+        Can you change the **increment**
+        in one of the loops so that the race is a tie?
       Course 4 Playlab For Loops 5b_instruction: |-
         Adjust the interval on these `for`
         loops so that the two characters end in the exact same place.
@@ -2153,39 +1934,39 @@
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: 'Challenge: Fix the stairs.'
       courseA_collector_loops1_instruction: |-
-        Move Laurel around and get as much gold
+        Move Laurel around and get as much treasure
         as you can!
       courseA_collector_loops10_instruction: |-
-        Help me get all of the gold from this
-        deep valley.
+        Help Laurel get all of the treasure
+        from this deep valley.
       courseA_collector_loops11_instruction: |-
-        Help me get all of the gold from this
-        cave.
+        Help Laurel get all of the treasure
+        from this cave.
       courseA_collector_loops12_instruction: |-
-        Eureka!  Collect as much gold as you
-        can!
+        Eureka!  Collect as much treasure as
+        you can!
       courseA_collector_loops2_instruction: |-
-        Here are three piles of gold!  Collect
-        all three.
+        Collect all three piles to pass this
+        level.
       courseA_collector_loops3_instruction: |-
         How can Laurel collect all five piles
-        of gold using only one `[E-->]` block?
+        of treasure using only one `[E-->]` block?
       courseA_collector_loops4_instruction: |-
         Fix Laurel's path to get all of this
-        gold.
+        treasure.
       courseA_collector_loops5_instruction: |-
         Use what you learned to get all of the
-        coins.
+        treasure.
       courseA_collector_loops6_instruction: |-
         Add blocks to this code to collect all
-        of the coins.
+        of the treasure.
       courseA_collector_loops7_instruction: |-
         What should you add to this code to
-        get all of the gold?
+        get all of the treasure?
       courseA_collector_loops8_instruction: Write the code to get all of this gold.
       courseA_collector_loops9_instruction: |-
-        **Challenge:** The gold goes all the
-        way up these stairs!  Write the code to help me get it all.
+        **Challenge:** The treasure goes all
+        the way up these stairs!  Write the code to help Laurel get it all.
       courseA_maze_seq1_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
@@ -2261,32 +2042,37 @@
         pond. Can you help the artist stay on the stones?
       courseB_collector_loops1_instruction: |-
         This is Laurel the Adventurer!  Can
-        you move her around and get gold?
+        you move her around and get treasure?
       courseB_collector_loops10_instruction: |-
-        Help Laurel get all of the gold from
-        this cave.
+        Help Laurel get all of the treasure
+        from this cave.
       courseB_collector_loops11_instruction: |-
-        Eureka!  Collect as much gold as you
-        can!
-      courseB_collector_loops2_instruction: Four piles of gold!  Collect all four.
+        Eureka!  Collect as much treasure as
+        you can!
+      courseB_collector_loops2_instruction: |-
+        Collect all four piles to pass this
+        level.
       courseB_collector_loops3_instruction: |-
         How can Laurel collect all five piles
-        of gold using only one `E -->` block?
+        of treasure using only one `E -->` block?
+      courseB_collector_loops3_predict1_instruction: |-
+        How can Laurel collect all
+        five piles of gold using only one `E -->` block?
       courseB_collector_loops4_instruction: |-
         Fix Laurel's path to get all of this
-        gold!
+        treasure!
       courseB_collector_loops5_instruction: "Add to the code from the last puzzle\nto
-        get all of the gold. "
+        get all of the treasure. "
       courseB_collector_loops6_instruction: |-
-        What should you add to this code to
-        get all of the gold?
+        Figure out the code to help Laurel get
+        all of the treasure!
       courseB_collector_loops7_instruction: Write the code to get all of this gold.
       courseB_collector_loops8_instruction: |-
-        **Challenge: ** The gold goes all the
-        way down these stairs!  Write the code to help Laurel get it all.
+        **Challenge: ** The treasure goes all
+        the way down these stairs!  Write the code to help Laurel get it all.
       courseB_collector_loops9_instruction: |-
-        *"Help me get the gold from this deep
-        valley."*
+        *"Help me get the treasure from this
+        deep valley."*
       courseB_collector_prog1_instruction: |-
         This is Laurel the Adventurer!  Can you
         move her around and get gold?
@@ -2376,16 +2162,16 @@
         side is 150 pixels)
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
-        you can help Laurel collect some gold.
+        you can help Laurel collect some treasure.
       courseC_collector_prog2_instruction: |-
-        Move Laurel to the gold, then use `collect`
-        to pick it up.
+        Move Laurel to the treasure, then use
+        `collect` to pick it up.
       courseC_collector_prog3_instruction: |-
-        Order these blocks to collect the coins
+        Order these blocks to collect the treasure
         and solve the puzzle.
       courseC_collector_prog4_instruction: |-
         Put these blocks in order to collect
-        all of the gold and solve the puzzle.
+        all of the treasure and solve the puzzle.
       courseC_collector_prog5_instruction: |-
         These blocks are in the wrong order.
         Can you fix them?
@@ -2397,7 +2183,7 @@
         all of the treasure.
       courseC_collector_prog8_instruction: |-
         *"Keep up the good work! Help me collect
-        all of the coins."*
+        all of the treasure."*
       courseC_collector_prog9_instruction: '*"Let''s get all of the coins!"*'
       courseC_collector_progA_instruction: Help Laurel collect all of the treasure.
       courseC_collector_progB_instruction: |-
@@ -2503,6 +2289,9 @@
       courseC_maze_programming8_instruction: |-
         *"Keep calm and help me find the bad
         pig."*
+      courseC_maze_programming8_predict1_instruction: |-
+        *"Keep calm and help me find
+        the bad pig."*
       courseC_maze_programming9_instruction: |-
         *"Now, help me sneak up on the pig
         any way you want to!"*
@@ -2577,13 +2366,12 @@
         \r
         Can you rearrange them so it draws a smiley face
         instead of a frown?
-      courseD_artist_binary6_instruction: |-
-        Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      courseD_artist_binary7_instruction: |-
-        What is the shortest binary string that
-        you can repeat to draw this image?
+      courseD_artist_binary6_instruction: "このイメージを書くのには、どのような6ケタのバイナリ文字列を、11回くりかえせばよいでしょうか？"
+      courseD_artist_binary7_instruction: "このイメージをかくのに、一番短いバイナリ文字列は何ですか？"
       courseD_artist_binary8_instruction: Finish the code to create this drawing.
+      courseD_artist_binary8_predict1_instruction: |-
+        Finish the code to create this
+        drawing.
       courseD_artist_binaryFP_instruction: |-
         Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r
@@ -2623,8 +2411,8 @@
         (Each side is 100 pixels long and you'll need to turn 120 degrees
         for each exterior angle.)
       courseD_artist_nestedLoops10_instruction: |-
-        Take the triangles from before,
-        but this time only make 7 of them, and lay them out in a row.
+        Take the squares from before, but
+        this time only make 7 of them, and lay them out in a row.
       courseD_artist_nestedLoops1a_instruction: |-
         Now loop the triangle 6 times. \r
         After
@@ -2656,18 +2444,28 @@
       courseD_artist_nestedLoops9_instruction: |-
         **Challenge:** Can you figure out
         how to make a picture like this?
+      courseD_artist_nestedLoops9_predict1_instruction: |-
+        **Challenge:** Can you figure
+        out how to make a picture like this?
       courseD_artist_nestedLoopsFP_instruction: |-
         Now it's your turn.  Take the skills
         you have learned and make something that you love!
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
+      courseD_artist_ramp11_instruction: Now make a square using Artist!
+      courseD_artist_ramp12_instruction: |-
+        Use what you've learned to draw this triangle
+        inside of a square.
       courseD_bee_conditionals1_instruction: |-
         Check to see if there's a flower under
         the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals10_instruction: |-
         Collect all of the nectar and make
         all of the honey.
+      courseD_bee_conditionals1_predict1_instruction: |-
+        Check to see if there's a
+        flower under the cloud. If there's a flower, get nectar.
       courseD_bee_conditionals2_instruction: |
         Check underneath every cloud to see
         if it is hiding a flower before you get nectar.  \r
@@ -2689,6 +2487,9 @@
       courseD_bee_conditionals7_instruction: |-
         Use the `if/else` block to collect
         nectar at flowers and make honey at honeycomb.
+      courseD_bee_conditionals7_predict2_instruction: |-
+        Use the `if/else` block to
+        collect nectar at flowers and make honey at honeycomb.
       courseD_bee_conditionals8_instruction: |-
         Collect nectar if there is a flower.\r
         Otherwise,
@@ -2720,6 +2521,9 @@
       courseD_bee_nestedLoops2_instruction: |-
         This time, help the bee collect all
         of the nectar using as few blocks as possible.
+      courseD_bee_nestedLoops2_predict1_instruction: |-
+        This time, help the bee collect
+        all of the nectar using as few blocks as possible.
       courseD_bee_nestedLoops3_instruction: |-
         Collect all of the nectar from each
         flower.
@@ -2732,6 +2536,10 @@
       courseD_bee_nestedLoops8_instruction: "Collect all of the nectar from each\nflower
         and make honey at the honeycomb. "
       courseD_bee_nestedLoops9_instruction: Make all of the honey.
+      courseD_bee_nestedLoops9_predict2_instruction: Make all of the honey.
+      courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
+      courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
+      courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
       courseD_debugging_1_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_2_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_3_instruction: "このブロックが気になります。蜜を集めてはちみつを作るためにエラーを直してください。"
@@ -2797,11 +2605,16 @@
       courseD_farmer_condLoops9_instruction: |-
         Collect all of the corn and lettuce,
         then pick the pumpkin.
+      courseD_farmer_condLoops9_predict1_instruction: |-
+        Collect all of the corn and
+        lettuce, then pick the pumpkin.
       courseD_farmer_while1_instruction: |-
         Move to the pile of dirt and use the `remove`
         block to remove it.
       courseD_farmer_while10_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
+      courseD_farmer_while10_predict2_instruction: "Flatten all of these piles using\nas
+        few blocks as possible. "
       courseD_farmer_while2_instruction: |-
         Move to the hole and fill it with six shovelfuls
         of dirt, using the `fill` block.
@@ -2811,6 +2624,9 @@
       courseD_farmer_while4_instruction: |-
         Help the farmer remove this entire pile
         using a `while` loop.
+      courseD_farmer_while4_predict1_instruction: |-
+        Help the farmer remove this entire
+        pile using a `while` loop.
       courseD_farmer_while5_instruction: 'Help me remove all of this dirt. '
       courseD_farmer_while6_instruction: |-
         Use the `while` loop to easily fill all
@@ -2828,13 +2644,29 @@
       courseD_maze_nestedLoops4_instruction: "Get the zombie to the sunflower using\nthe
         fewest blocks possible!  "
       courseD_maze_nestedLoops5_instruction: |-
-        Get the zombe to the sunflower using
+        Get the zombie to the sunflower using
         the fewest number of blocks possible!
       courseD_maze_nestedLoops6_instruction: |-
         Get the zombie to the sunflower using
         only the blocks available.
+      courseD_maze_ramp1_instruction: |-
+        For this puzzle, drag all of the blocks together
+        and click "Run" to watch it go!
+      courseD_maze_ramp2_instruction: |-
+        Drag an extra `move forward` block out of
+        the toolbox to finish your code.
+      courseD_maze_ramp3_instruction: |-
+        There is one extra block that is going to
+        cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseD_maze_ramp4_instruction: Avoid TNT or feathers will fly!
+      courseD_maze_ramp5_instruction: Avoid the TNT.
+      courseD_maze_ramp6_instruction: |-
+        "Keep calm and help me find the bad pig.
+        Otherwise I might get angry!"
+      courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
+      courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
       courseD_maze_until2_instruction: |-
         Now, use the `repeat until` loop to do the
         same thing without specifying how many times to move forward and turn.
@@ -2919,6 +2751,10 @@
       courseE_artist_functions9_instruction: |-
         Create this image using only the blocks
         provided.
+      courseE_artist_ramp11_instruction: Now make a square using Artist!
+      courseE_artist_ramp12_instruction: |-
+        Use what you've learned to draw this triangle
+        inside of a square.
       courseE_bee_concept1_instruction: "入れ子の繰り返し（ネスト・ループ）を使って、それぞれの花からすべての花のみつを集めてください。　 "
       courseE_bee_concept2_instruction: |-
         Help the bee make all of the honey. You
@@ -2960,6 +2796,9 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
+      courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
+      courseE_collector_ramp8_instruction: Help Laurel collect all of the treasure.
+      courseE_collector_ramp9_instruction: Help Laurel collect all of the treasure.
       courseE_farmer_concept1_instruction: |-
         Can you write a program that fills these
         holes until the ground is even?
@@ -3051,6 +2890,21 @@
       courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
         and collect all of the lettuce and corn along the way. "
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
+      courseE_maze_ramp1_instruction: |-
+        For this puzzle, drag all of the blocks together
+        and click "Run" to watch it go!
+      courseE_maze_ramp2_instruction: |-
+        Drag an extra `move forward` block out of
+        the toolbox to finish your code.
+      courseE_maze_ramp3_instruction: |-
+        There is one extra block that is going to
+        cause the bird to crash. Throw it away by dragging it back to the toolbox.
+      courseE_maze_ramp4_instruction: Avoid TNT or feathers will fly!
+      courseE_maze_ramp5_instruction: Avoid the TNT.
+      courseE_maze_ramp6_instruction: |-
+        "Keep calm and help me find the bad pig.
+        Otherwise I might get angry!"
+      courseE_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -3110,6 +2964,9 @@
       courseF_artist_fwp2_instruction: |-
         Edit the function to accept a parameter called
         `length`.
+      courseF_artist_fwp2_predict1_instruction: |-
+        Edit the function to accept a parameter
+        called `length`.
       courseF_artist_fwp3_instruction: |-
         Create a function called 'draw a square'
         and use it to outline these four boxes using parameters.
@@ -3241,6 +3098,9 @@
         honey as well.
       courseF_bee_fwp8_instruction: Use your new function to solve this spiral.
       courseF_bee_fwp9_instruction: Use your new function to solve this puzzle.
+      courseF_bee_fwp9_predict1_instruction: |-
+        Use your new function to solve this
+        puzzle.
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of choose your own adventure story in play lab.
@@ -3571,6 +3431,15 @@
       CSDU6 - Arrays - lengthMinus1_instruction: |-
         Use list.length - 1 to log the
         last item in the array to the console. (Click to see full instructions)
+      CSDU6 - for loop - color buttons with for_instruction: |-
+        Write the contents
+        of the array to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - color buttons_instruction: |-
+        Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)
+      CSDU6 - for loop - why for_instruction: |-
+        Write the contents of the array to
+        the screen in numerical order. (Click to see full instructions)
       CSP Data Unit - Counting Multiple Things_instruction: |-
         If you can count one
         thing you can count multiple things\r
@@ -4740,6 +4609,10 @@
       frozen square loop 3x_instruction: "しかくを3つかいてみましょう。つぎのしかくをかくまえに、かならず120どむきかえるのよ。"
       frozen square loop_instruction: "こんにちは、わたしはアレンデールおうこくのアナよ！「くりかえし」ブロックをつかって、さっきよりすくないブロックでしかくをかいてみましょう。なんかい(???)「くりかえし」ブロックのなかのブロックをくりかえせば、しかくがかけるかしら？"
       frozen square snowflake_instruction: "ゆきのけっしょうをつくることができるかしら？「くりかえし」ブロックをつかってしかくを１０こかいて、「むく」ブロックをつかってしかくとしかくを３６どずらしてつくるのよ。"
+      'Game Lab Workshop: Random_instruction': |-
+        Pick a shape block and use calls
+        to randomNumber() in place of one or more of the parameters. Maker sure you
+        run it a few times so you can see the effect of randomization.
       Geometric Pattern_instruction: |-
         Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!
@@ -4934,8 +4807,8 @@
         Challenge: This code has a lot of bugs.
         You'll need to remove blocks and add blocks.
       grade2_collector_10_instruction: |-
-        You're almost done! Collect as many coins
-        as you can to finish the stage!
+        You're almost done! Collect as many pieces
+        of treasure as you can to finish the stage!
       grade2_collector_2_instruction: |-
         Move Laurel to the gold, then use `collect`
         to pick it up.
@@ -5896,27 +5769,15 @@
       grade4_scaffolded_project6_instruction: |-
         You've finished! Now you can play
         your game or share it with your friends and classmates!
-      grade5_artist_binary1_instruction: |-
-        Binary is a way of representing information
-        using only two options.  Here, we're going to use the options "off" (represented
-        by the number 0) and "on" (represented by the number 1).  \r
-        \r
-        We've
-        provided you with a grid of "pixels" that you can walk through and make
-        designs by turning on only certain squares.  Can you have the artist draw
-        "01010101" in binary in the first row?
+      grade5_artist_binary1_instruction: バイナリは、 2 つのオプションだけを使って、情報を表すものです。 ここでは、「オフ」(0で表す)
+        と、「オン」(１で表す) を使います。\r \rあなたが歩き回って、指定の四角形をオンにし、デザインできる「ピクセル」のグリッドを用意しました。アーティストに、はじめの行に、バイナリで
+        "01010101"を、かかせることが出来ますか？
       grade5_artist_binary10_instruction: "ヒントを見たい場合は、ここをクリックします。"
       grade5_artist_binary11_instruction: |-
         Free Play: Here's a blank canvas for
         you to draw on.  Have fun!
-      grade5_artist_binary2_instruction: |-
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to follow them from left
-        to right, top to bottom.  The artist will fill-in the squares when it sees
-        a 1 and ignore the square when it sees a 0. \r
-        \r
-        Run this code to see how
-        the artist uses binary to draw this pattern.
+      grade5_artist_binary2_instruction: "ここに 1 と 0 のバイナリ文字列を受け取り、左から右、上から下へとアーティストに教える関数があります。アーティストは1なら正方形をぬりつぶし、0なら次の正方形にいきます。\\r
+        \\r コードを実行して、バイナリをどのように使いながらアーティストがパターンを書くか、見てください。"
       grade5_artist_binary3_instruction: |-
         Which of these binary strings could you
         loop 8 times to draw this image?
@@ -5930,9 +5791,7 @@
       grade5_artist_binary6_instruction: |-
         Which 6 digit binary string, repeated 11
         times, will draw this image?
-      grade5_artist_binary7_instruction: |-
-        What is the shortest binary string that
-        you can repeat to draw this image?
+      grade5_artist_binary7_instruction: "このイメージをかくのに、一番短いバイナリ文字列は何ですか？"
       grade5_artist_binary8_instruction: "終わりにする"
       grade5_artist_binary9_instruction: |-
         Here's a higher resolution canvas to draw
@@ -6000,13 +5859,8 @@
         \r
         Very little
         of the code has been provided for you.
-      grade5_artist_for_loopsfreeplay11_instruction: |-
-        Free-Play Inspiration: You've
-        now learned everything you need to know to make a pattern like this! If this
-        picture inspires you, try to make something similar. Otherwise, create something
-        all your own.\r
-        \r
-        Need a hint? Click here.
+      grade5_artist_for_loopsfreeplay11_instruction: "フリー プレー インスピレーション: このようなパターンの作りかたを、すべて学びました！この絵が気に入ったら、にたものを作ってみよう。または、まったく自分のを作ってみよう
+        \\r \\r ヒントがほしい？ここをクリックします。"
       grade5_artist_for_loopsfreeplay12_instruction: |-
         Free Play: Try using the `counter`
         variable with other drawing elements to make magical images like this one.
@@ -6711,6 +6565,9 @@
       K2.0 sequence pre_instruction: |-
         Play with these blocks to see if you can get
         me to the pig!
+      Kiki_StarWars_Test_3_instruction: "テキスト〔文字列（もじれつ）〕"
+      Kiki_StarWars_Test_4_instruction: "テキスト〔文字列（もじれつ）〕"
+      Kiki_StarWars_Test_5_instruction: "テキスト〔文字列（もじれつ）〕"
       kikiTesta_instruction: |-
         Our adventurer wants to collect coins.  But she can
         only use 4 blocks to get them.\r
@@ -6731,6 +6588,9 @@
       KTest2_instruction: |-
         Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!
+      LaurelDebugging4Video1_instruction: |-
+        Move Laurel around and get as much gold
+        as you can!
       level 'grade3_Loops_10_instruction: |-
         Such a busy bee!\r
         \r
@@ -7536,6 +7396,9 @@
         Have Robin talk back to Jorge when you click on
         her.
       playEventsK7_instruction: What else can you do in this fun scene?
+      playLabDebugVideo1_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       Poorva copy U3L2 Using Simple Commands_instruction: |-
         Draw a 1x1 square above
         and to the left of the turtle's starting position. Click to see full instructions.
@@ -7706,6 +7569,7 @@
         can you get it right on your first try?
       scrat 19_instruction: "”もし○○でなければ××”ブロックの練習をもう一回やりましょう。一度でクリアできるかな？"
       scrat 20_instruction: "ブロックをあと3つだけ足して、難しい迷路をクリアしてみよう。もしこの迷路をクリアできたら、どんなに長くてクネクネした道でも、ぼくはドングリまで歩くことができるよ。いそいで！氷がとけてきた！"
+      skratDebugVideo1_instruction: Get Skrat to the Acorn.
       SpecialFrozenLevel_instruction: "あなたは、マスターアーティストになったわ！じゆうに、ふゆのワンダーランドをつくりましょう。"
       Standalone_Artist_1_instruction: |-
         Welcome to Artist! First off, let's try

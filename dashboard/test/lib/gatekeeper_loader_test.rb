@@ -7,8 +7,8 @@ class GatekeeperLoaderTest < ActiveSupport::TestCase
     GatekeeperLoader.load("test/fixtures/gatekeeper.yaml")
 
     assert_equal Gatekeeper.allows("milestone"), false
-    assert_equal Gatekeeper.allows("milestone", where: { script_id: 38 }), true
-    assert_equal Gatekeeper.allows("milestone", where: { script_id: 40 }), false
+    assert_equal Gatekeeper.allows("milestone", where: {script_id: 38}), true
+    assert_equal Gatekeeper.allows("milestone", where: {script_id: 40}), false
   end
   test 'loading an invalid gatekeeper yml file' do
     Gatekeeper.expects(:set).never

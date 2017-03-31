@@ -21,7 +21,7 @@
 = view :share_buttons, facebook:facebook, twitter:twitter
 .share-buttons.clear
   %a{:href=>'/files/computer_science_advocacy.pptx'}
-    %button.button-color-share{:style=>'margin-left:5px'}<
+    %button.button-color-share<
       %i{:class=>"fa fa-download"}<
       Download presentation
 .stats-sources-link
@@ -40,7 +40,7 @@
     $(id + ' .slides').carouFredSel({
       items : 1,
       auto  : false,
-      responsive : false,
+      responsive : true,
       prev  : id + ' .slide-prev',
       next  : id + ' .slide-next',
       pagination : '#stats-carousel-pagination',

@@ -59,13 +59,6 @@ Security/JSONLoad:
 Style/AlignHash:
   Enabled: false
 
-# Offense count: 405
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: braces, no_braces, context_dependent
-Style/BracesAroundHashParameters:
-  Enabled: false
-
 # Offense count: 8
 Style/CaseEquality:
   Enabled: false
@@ -161,20 +154,6 @@ Style/RescueModifier:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: space, no_space
 Style/SpaceAroundEqualsInParameterDefault:
-  Enabled: false
-
-# Offense count: 1011
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
-# SupportedStyles: space, no_space
-Style/SpaceInsideBlockBraces:
-  Enabled: false
-
-# Offense count: 3700
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SupportedStyles.
-# SupportedStyles: space, no_space, compact
-Style/SpaceInsideHashLiteralBraces:
   Enabled: false
 
 # Offense count: 20

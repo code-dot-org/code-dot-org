@@ -1,0 +1,8 @@
+login_required true
+hideable_stages true
+
+stage 'Shapes and Randomness'
+level 'CSD U3 Random Taller Rectangle'
+level 'CSD U3 Random Ellipse Behind'
+level 'CSD U3 Random Debug Grass'
+level 'CSD U3 Random Debug Cloud'

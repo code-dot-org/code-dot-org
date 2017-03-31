@@ -130,7 +130,7 @@
   "whenBallInGoalTooltip": "Führe die nachfolgenden Aktionen aus, wenn der Ball im Tor ist.",
   "whenBallMissesPaddle": "wenn der Ball den Schläger verpasst",
   "whenBallMissesPaddleTooltip": "Führe die nachfolgenden Aktionen aus, wenn ein Ball den Schläger verpasst.",
-  "whenBallMissesPlayer": "wenn der Ball den Spieler nicht trifft",
+  "whenBallMissesPlayer": "wenn der Ball den Spieler verfehlt",
   "whenDown": "wenn Pfeil-nach-unten",
   "whenDownTooltip": "Führe die nachfolgenden Aktionen aus, wenn die Pfeil-nach-unten-Taste gedrückt wird.",
   "whenGameStarts": "Wenn Spiel gestartet wird",

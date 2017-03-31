@@ -12,9 +12,9 @@
 #
 # Indexes
 #
-#  index_followers_on_section_id                   (section_id)
-#  index_followers_on_student_user_id              (student_user_id)
-#  index_followers_on_user_id_and_student_user_id  (user_id,student_user_id)
+#  index_followers_on_section_id_and_student_user_id  (section_id,student_user_id)
+#  index_followers_on_student_user_id                 (student_user_id)
+#  index_followers_on_user_id_and_student_user_id     (user_id,student_user_id)
 #
 
 # Join table defining student-teacher relationships for Users
@@ -26,20 +26,16 @@ class Follower < ActiveRecord::Base
 
   accepts_nested_attributes_for :student_user
 
-  # controller code should actually prevent this from ever happening, but just in case..
+  # Controller code should actually prevent this from ever happening, but just in case.
   def cannot_follow_yourself
-    errors.add(:student_user_id, "can't be yourself") if student_user_id == user_id
+    errors.add(:student_user_id, "can't be yourself") if student_user_id == user.id
   end
 
   def teacher_must_be_teacher
     errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
 
-  def user_must_be_section_user
-    errors.add(:user_id, "must be section user") unless user_id == section.user_id
-  end
-
-  validate :cannot_follow_yourself, :teacher_must_be_teacher, :user_must_be_section_user
+  validate :cannot_follow_yourself, :teacher_must_be_teacher
 
   validates_presence_of :user, :student_user, :section
 

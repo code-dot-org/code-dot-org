@@ -9,7 +9,7 @@ namespace :firebase do
       raise "Cannot compile firebase security rules on production, because npm is not installed.\n"\
         "Instead, upload security rules from the apps package which was downloaded from s3."
     end
-    Dir.chdir(apps_dir) { RakeUtils.system 'grunt compile-firebase-rules' }
+    Dir.chdir(apps_dir) {RakeUtils.system 'grunt compile-firebase-rules'}
   end
 
   desc 'Uploads compiled security rules to firebase from the apps package.'

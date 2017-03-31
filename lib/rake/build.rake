@@ -144,5 +144,5 @@ end
 
 desc 'Builds everything.'
 task :build do
-  ChatClient.wrap('build') { Rake::Task['build:all'].invoke }
+  ChatClient.wrap('build') {Rake::Task['build:all'].invoke}
 end

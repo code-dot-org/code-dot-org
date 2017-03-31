@@ -33,15 +33,30 @@ class PdWorkshopSurvey
       result[:venue_feedback_s] = stripped data[:venue_feedback_s]
       result[:how_much_learned_s] = required_enum data, :how_much_learned_s
       result[:how_motivating_s] = required_enum data, :how_motivating_s
-      result[:how_clearly_presented_s] = required_enum data, :how_clearly_presented_s
-      result[:how_interesting_s] = required_enum data, :how_interesting_s
-      result[:how_often_given_feedback_s] = required_enum data, :how_often_given_feedback_s
-      result[:help_quality_s] = required_enum data, :help_quality_s
-      result[:how_comfortable_asking_questions_s] = required_enum data, :how_comfortable_asking_questions_s
-      result[:how_often_taught_new_things_s] = required_enum data, :how_often_taught_new_things_s
 
-      result[:things_facilitator_did_well_s] = stripped data[:things_facilitator_did_well_s]
-      result[:things_facilitator_could_improve_s] = stripped data[:things_facilitator_could_improve_s]
+      result[:who_facilitated_ss] = required data[:who_facilitated_ss]
+
+      unless result[:who_facilitated_ss].class == FieldError
+        result[:how_clearly_presented_s] = {}
+        result[:how_interesting_s] = {}
+        result[:how_often_given_feedback_s] = {}
+        result[:help_quality_s] = {}
+        result[:how_comfortable_asking_questions_s] = {}
+        result[:how_often_taught_new_things_s] = {}
+        result[:things_facilitator_did_well_s] = {}
+        result[:things_facilitator_could_improve_s] = {}
+
+        result[:who_facilitated_ss].each do |facilitator|
+          result[:how_clearly_presented_s][facilitator] = required_enum(data, :how_clearly_presented_s, facilitator)
+          result[:how_interesting_s][facilitator] = required_enum(data, :how_interesting_s, facilitator)
+          result[:how_often_given_feedback_s][facilitator] = required_enum(data, :how_often_given_feedback_s, facilitator)
+          result[:help_quality_s][facilitator] = required_enum(data, :help_quality_s, facilitator)
+          result[:how_comfortable_asking_questions_s][facilitator] = required_enum(data, :how_comfortable_asking_questions_s, facilitator)
+          result[:how_often_taught_new_things_s][facilitator] = required_enum(data, :how_often_taught_new_things_s, facilitator)
+          result[:things_facilitator_did_well_s][facilitator] = stripped(data[:things_facilitator_did_well_s].try(:[], facilitator))
+          result[:things_facilitator_could_improve_s][facilitator] = stripped(data[:things_facilitator_could_improve_s].try(:[], facilitator))
+        end
+      end
 
       result[:how_much_participated_s] = required_enum data, :how_much_participated_s
       result[:how_often_talk_about_ideas_outside_s] = required_enum data, :how_often_talk_about_ideas_outside_s
@@ -93,8 +108,10 @@ class PdWorkshopSurvey
     data[:enrollment_id_i]
   end
 
-  def self.required_enum(data, field_name)
-    required enum data[field_name], OPTIONS[field_name]
+  def self.required_enum(data, field_name, field_subname=nil)
+    value = data[field_name]
+    value = value[field_subname] unless value.nil? || field_subname.nil?
+    required enum value, OPTIONS[field_name]
   end
 
   def self.required_multi_enum(data, field_name)

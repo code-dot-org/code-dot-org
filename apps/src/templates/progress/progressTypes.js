@@ -6,6 +6,8 @@ export const levelType = (
     url: PropTypes.string,
     name: PropTypes.string,
     icon: PropTypes.string,
+    isUnplugged: PropTypes.bool,
+    levelNumber: PropTypes.number
   })
 );
 

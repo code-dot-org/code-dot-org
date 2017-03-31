@@ -92,7 +92,7 @@ class TablesApi < Sinatra::Base
     column_list = request.GET['column_list']
     unless column_list.nil?
       # filter out existing columns, as some may have been created during our ensure_metadata step
-      new_columns = JSON.parse(column_list).reject { |col| existing_columns.include?(col) }
+      new_columns = JSON.parse(column_list).reject {|col| existing_columns.include?(col)}
       table.add_columns(new_columns)
     end
 

@@ -41,10 +41,10 @@ class RegistrationsController < Devise::RegistrationsController
             redirect_to after_update_path_for(@user)
           end
         end
-        format.any { head :no_content }
+        format.any {head :no_content}
       else
-        format.html { render "edit", formats: [:html] }
-        format.any { head :unprocessable_entity }
+        format.html {render "edit", formats: [:html]}
+        format.any {head :unprocessable_entity}
       end
     end
   end

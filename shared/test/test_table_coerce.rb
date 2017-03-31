@@ -78,8 +78,8 @@ class TablesTest < Minitest::Test
   def test_column_types
     columns = %w(all_numbers all_bools all_strings bools_and_nums bools_and_strings nums_and_bools)
     records = [
-      { "all_numbers" => "1", "all_bools" => 'true', "all_strings" => 'hello', "bools_and_nums" => 'true', "bools_and_strings" => 'false', "nums_and_bools" => '3' },
-      { "all_numbers" => "2", "all_bools" => 'false', "all_strings" => 'world', "bools_and_nums" => '2', "bools_and_strings" => 'ruby', "nums_and_bools" => 'true' }
+      {"all_numbers" => "1", "all_bools" => 'true', "all_strings" => 'hello', "bools_and_nums" => 'true', "bools_and_strings" => 'false', "nums_and_bools" => '3'},
+      {"all_numbers" => "2", "all_bools" => 'false', "all_strings" => 'world', "bools_and_nums" => '2', "bools_and_strings" => 'ruby', "nums_and_bools" => 'true'}
     ]
     expected = [:number, :boolean, :string, :string, :string, :string]
 
@@ -89,32 +89,32 @@ class TablesTest < Minitest::Test
   def test_coerce
     columns = %w(all_numbers all_bools mixed)
     records = [
-      { "all_numbers" => "1", "all_bools" => "true", "mixed" => "true" },
-      { "all_numbers" => "2", "all_bools" => "false", "mixed" => "1" },
-      { "all_numbers" => "3", "all_bools" => "true", "mixed" => "asdf" },
+      {"all_numbers" => "1", "all_bools" => "true", "mixed" => "true"},
+      {"all_numbers" => "2", "all_bools" => "false", "mixed" => "1"},
+      {"all_numbers" => "3", "all_bools" => "true", "mixed" => "asdf"},
     ]
 
     expected = [
-      { "all_numbers" => 1, "all_bools" => true, "mixed" => "true" },
-      { "all_numbers" => 2, "all_bools" => false, "mixed" => "1" },
-      { "all_numbers" => 3, "all_bools" => true, "mixed" => "asdf" },
+      {"all_numbers" => 1, "all_bools" => true, "mixed" => "true"},
+      {"all_numbers" => 2, "all_bools" => false, "mixed" => "1"},
+      {"all_numbers" => 3, "all_bools" => true, "mixed" => "asdf"},
     ]
     assert_equal expected, TableCoerce.coerce_columns_from_data(records, columns)
   end
 
   def test_column_coerce
     records = [
-      { "all_numbers" => "1", "all_bools" => "true", "mixed" => "true" },
-      { "all_numbers" => "2", "all_bools" => "false", "mixed" => "1" },
-      { "all_numbers" => "3", "all_bools" => "true", "mixed" => "asdf" },
+      {"all_numbers" => "1", "all_bools" => "true", "mixed" => "true"},
+      {"all_numbers" => "2", "all_bools" => "false", "mixed" => "1"},
+      {"all_numbers" => "3", "all_bools" => "true", "mixed" => "asdf"},
     ]
 
     # coerce all_bools to bools
     records, all_converted = TableCoerce.coerce_column(records, 'all_bools', :boolean)
     expected = [
-      { "all_numbers" => "1", "all_bools" => true, "mixed" => "true" },
-      { "all_numbers" => "2", "all_bools" => false, "mixed" => "1" },
-      { "all_numbers" => "3", "all_bools" => true, "mixed" => "asdf" }
+      {"all_numbers" => "1", "all_bools" => true, "mixed" => "true"},
+      {"all_numbers" => "2", "all_bools" => false, "mixed" => "1"},
+      {"all_numbers" => "3", "all_bools" => true, "mixed" => "asdf"}
     ]
     assert_equal expected, records
     assert_equal true, all_converted
@@ -122,9 +122,9 @@ class TablesTest < Minitest::Test
     # now convert back to strings
     records, all_converted = TableCoerce.coerce_column(records, 'all_bools', :string)
     expected = [
-      { "all_numbers" => "1", "all_bools" => "true", "mixed" => "true" },
-      { "all_numbers" => "2", "all_bools" => "false", "mixed" => "1" },
-      { "all_numbers" => "3", "all_bools" => "true", "mixed" => "asdf" }
+      {"all_numbers" => "1", "all_bools" => "true", "mixed" => "true"},
+      {"all_numbers" => "2", "all_bools" => "false", "mixed" => "1"},
+      {"all_numbers" => "3", "all_bools" => "true", "mixed" => "asdf"}
     ]
     assert_equal expected, records
     assert_equal true, all_converted
@@ -132,9 +132,9 @@ class TablesTest < Minitest::Test
     # convert mixed to numbers, only one should be converted
     records, all_converted = TableCoerce.coerce_column(records, 'mixed', :number)
     expected = [
-      { "all_numbers" => "1", "all_bools" => "true", "mixed" => "true" },
-      { "all_numbers" => "2", "all_bools" => "false", "mixed" => 1 },
-      { "all_numbers" => "3", "all_bools" => "true", "mixed" => "asdf" }
+      {"all_numbers" => "1", "all_bools" => "true", "mixed" => "true"},
+      {"all_numbers" => "2", "all_bools" => "false", "mixed" => 1},
+      {"all_numbers" => "3", "all_bools" => "true", "mixed" => "asdf"}
     ]
     assert_equal expected, records
     assert_equal false, all_converted

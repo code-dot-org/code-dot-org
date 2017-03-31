@@ -49,7 +49,7 @@ class AdminReportsController < ApplicationController
 
       respond_to do |format|
         format.html
-        format.csv { return level_answers_csv }
+        format.csv {return level_answers_csv}
       end
     end
   end

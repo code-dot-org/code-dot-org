@@ -12,6 +12,7 @@ ko:
     attributes:
       user:
         name: '사용자 이름'
+        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: '이메일'
         username: 'username'
         password: 'password'
@@ -110,9 +111,31 @@ ko:
     user_type_student: "student"
     field_is_required: "이(가) 필요합니다."
     accept_terms: "회원가입에 동의해야 합니다."
+  school_info:
+    title: 'School Information (optional)'
+    school_country: 'School Country'
+    select_school_type: 'School Type'
+    charter: 'Charter'
+    private: 'Private'
+    public: 'Public'
+    homeschool: 'Homeschool'
+    after_school: 'After School'
+    other: '기타'
+    state: 'State'
+    district: 'District'
+    other_district_not_listed: 'Other district not listed above'
+    district_name: 'District Name'
+    school: 'School'
+    other_school_not_listed: 'Other school not listed above'
+    school_name: 'School Name'
+    school_zip: 'School Zip Code'
+    school_address: 'School Address'
+    school_organization_name: 'School/Organization Name'
+    school_organization_zip: 'School/Organization Zip Code'
   signin_form:
     title: '계정이 있으면? 로그인'
     login: '이메일'
+    login_username: 'Email or Username'
     password: '비밀번호'
     remember: '아이디 기억하기'
     submit: '로그인'
@@ -369,8 +392,12 @@ ko:
     announcement_how_code_studio: "강의에서 컴퓨터공학을 가르치기 위해 다른 경험이 필요하지 않습니다. Code.org는 커리큘럼, 강의계획, 고품질의 전문 학습 프로그램 그리고 모든 학년&mdash;필요한 모든 것을 관리할 수 있는 다양한 도구가 무료로 제공되고 있습니다. 어디에서 시작해야 될지 궁금하세요? <a href='%{video_download_url}'>이 비디오</a>를 다운로드 하세요!"
     announcement_go_beyond: "Hour of Code를 뛰어넘어 매주 학생들과 컴퓨터과학 개념을 탐구하세요. Code.org는 모든 학년에 적합한 커리큘럼, 강의계획, 고품질 전문 학습 프로그램 및 다양한도구를 제공하고&mdash;모두 무료로 사용할 수 있습니다. :) 강의에서 컴퓨터공학을 가르치기 위해 다른 경험이 필요하지 않습니다. <b>강의에 적합한 다음 단계를 찾아보세요.</b>"
     announcement_teacher_recruitment: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning."
+    announcement_teacher_recruitment2: "Teachers like you are leading the computer science education movement. You can participate in high-quality K-12th grade professional learning programs <strong>at absolutely no cost to you or your school</strong>. Take the lead on computer science in your school, and apply for professional learning. Middle and high school teachers, apply by March 17th."
+    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
     announcement_student_privacy: "At Code.org, we take student privacy very seriously. To protect your students’ privacy, we have made a change to your section’s login page to avoid displaying full names. Even though this update should reduce privacy concerns for the login page, we still encourage users to <i>not use full names for students</i>."
     announcement_apcsp_recruitment: "<strong>Computer Science Principles teachers:</strong> Your students could be featured in Code.org's next viral video encouraging students to take the AP CS Principles exam this year. We're inviting all CS Principles students to submit a 10-20 second video clip on Twitter, Instagram, or Facebook saying \"I'm taking the #APCSP exam because...\" The best submissions will be featured in our video and the winning students will receive Code.org swag!"
+    announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
+    announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
   move_students:
     new_section_dne: "죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
     section_code_not_entered: "Current_section_code를 입력 하십시오."
@@ -434,6 +461,10 @@ ko:
     upgrade:
       unsupported_message: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다."
       link: "더 알아보기"
+      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
+      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: '연결이 느립니다.'
   try_reloading: '페이지를 다시 로드 해 보세요.'
   next_stage: '모두 완료했습니다! 다음 단계를 계속하세요'
