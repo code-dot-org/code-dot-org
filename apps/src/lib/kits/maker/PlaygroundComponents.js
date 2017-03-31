@@ -11,7 +11,7 @@ import {
 } from './PlaygroundConstants';
 import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
