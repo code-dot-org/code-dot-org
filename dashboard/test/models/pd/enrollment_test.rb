@@ -33,7 +33,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment_with_user = create :pd_enrollment, user: teacher2
     enrollment_with_no_user = create :pd_enrollment
 
-    assert_nil enrollment_with_email.user
+    assert_equal teacher1, enrollment_with_email.user
     assert_equal teacher1, enrollment_with_email.resolve_user
 
     assert_equal teacher2, enrollment_with_user.user
