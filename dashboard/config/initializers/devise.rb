@@ -315,7 +315,7 @@ Devise.setup do |config|
     manager.failure_app = CustomDeviseFailure
   end
 
-  Warden::Manager.after_authentication do |user, auth|
+  Warden::Manager.after_set_user do |user, auth|
     if auth.cookies[:pm] == "new_header"
       cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
       auth.cookies[cookie_key] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
