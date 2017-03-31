@@ -1,5 +1,5 @@
 /** @file Settings menu cog icon */
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
 import Portal from 'react-portal';
 import msg from '@cdo/locale';
@@ -37,6 +37,10 @@ class SettingsCog extends Component {
     // Default icon bounding rect for first render
     this.targetPoint = {top: 0, left: 0};
   }
+
+  static propTypes = {
+    style: PropTypes.any,
+  };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
   // react-portal that prevents closing the portal by clicking on the icon
@@ -78,7 +82,7 @@ class SettingsCog extends Component {
   render() {
     return (
       <span
-        style={style.iconContainer}
+        style={[style.iconContainer, this.props.style]}
         ref={icon => this.setTargetPoint(icon)}
       >
         <FontAwesome
