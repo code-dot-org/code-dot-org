@@ -76,8 +76,6 @@ class ScriptDSL < BaseDSL
   def level(name, properties = {})
     active = properties.delete(:active)
     progression = properties.delete(:progression)
-    target = properties.delete(:target)
-    challenge = properties.delete(:challenge)
 
     level = {
       name: name,
@@ -114,11 +112,9 @@ class ScriptDSL < BaseDSL
         stage: @stage,
         levels: [level]
       }
-
-      script_level[:properties] = {}
-      script_level[:properties][:progression] = progression if progression
-      script_level[:properties][:target] = true if target
-      script_level[:properties][:challenge] = true if challenge
+      if progression
+        script_level[:properties] = {progression: progression}
+      end
 
       @scriptlevels << script_level
     end
@@ -193,7 +189,7 @@ class ScriptDSL < BaseDSL
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression))
         end
       end
       s << ''
@@ -201,7 +197,7 @@ class ScriptDSL < BaseDSL
     s.join("\n")
   end
 
-  def self.serialize_level(level, type, active = nil, progression = nil, target = nil, challenge = nil)
+  def self.serialize_level(level, type, active = nil, progression = nil)
     s = []
     if level.key.start_with? 'blockly:'
       s << "skin '#{level.skin}'" if level.try(:skin)
@@ -216,8 +212,6 @@ class ScriptDSL < BaseDSL
     l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
     l += ', active: false' unless active.nil? || active
     l += ", progression: '#{progression}'" if progression
-    l += ', target: true' if target
-    l += ', challenge: true' if challenge
     s << l
     s
   end
