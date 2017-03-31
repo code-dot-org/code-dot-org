@@ -82,7 +82,7 @@ class SettingsCog extends Component {
         ref={icon => this.setTargetPoint(icon)}
       >
         <FontAwesome
-          id="settings-cog"
+          className="settings-cog"
           icon="cog"
           style={style.assetsIcon}
           title={msg.settings()}
@@ -95,6 +95,7 @@ class SettingsCog extends Component {
           beforeClose={this.beforeClose}
         >
           <SettingsMenu
+            className="settings-cog-menu"
             targetPoint={this.targetPoint}
             handleClose={this.close}
           />
