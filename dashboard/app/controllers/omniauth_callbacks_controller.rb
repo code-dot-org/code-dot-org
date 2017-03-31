@@ -15,6 +15,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash.notice = I18n.t('auth.signed_in')
       sign_in_and_redirect @user
     elsif User.find_by_email_or_hashed_email(@user.email)
+      # Note that @user.email is populated by User.from_omniauth even for students
       redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
     else
       session["devise.user_attributes"] = @user.attributes
