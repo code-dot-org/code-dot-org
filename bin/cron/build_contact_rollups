@@ -7,7 +7,7 @@ require 'cdo/pardot'
 require 'cdo/chat_client'
 require 'cdo/only_one'
 
-CHAT_CHANNEL = "cron daily".freeze
+CHAT_CHANNEL = "cron-daily".freeze
 
 def main
   time_start = Time.now
