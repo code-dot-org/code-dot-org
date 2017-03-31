@@ -101,7 +101,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute enrollment.in_section?
 
     # in section: true
-    workshop.section.add_student teacher
+    workshop.section.add_student teacher, move_for_same_teacher: false
     assert enrollment.in_section?
   end
 
