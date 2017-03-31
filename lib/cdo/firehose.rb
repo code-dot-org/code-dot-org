@@ -24,6 +24,9 @@ class FirehoseClient
 
   # Initializes the @firehose to an AWS Firehose client.
   def initialize
+    if rack_env == :test
+      return
+    end
     @firehose = Aws::Firehose::Client.new(region: REGION)
   end
 
