@@ -22,7 +22,7 @@
   margin-bottom: 10px;
 }
 
-a:link, a:visited {
+.info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
   color: white;
   cursor: pointer;
   text-decoration: underline;

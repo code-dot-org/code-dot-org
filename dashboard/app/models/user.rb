@@ -481,7 +481,6 @@ class User < ActiveRecord::Base
       user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
 
       if auth.provider == :the_school_project
-
         user.username = auth.extra.raw_info.nickname
         user.user_type = auth.extra.raw_info.role
         user.locale = auth.extra.raw_info.locale

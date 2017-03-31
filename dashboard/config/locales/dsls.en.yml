@@ -566,6 +566,8 @@ en:
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
       CSD U3 Draw Loop Stop: {}
+      CSD U3 Entertainment:
+        Exploring CS in Entertainment: Exploring CS in Entertainment
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Functions Introduction: {}
       CSD U3 Functions SFLP: {}
@@ -669,6 +671,9 @@ en:
       CSD-U1-SFLP The Problem Solving Process: {}
       CSD-U1-SFLP What is a Computer?: {}
       CSD-U3-SFLP Draw Loop: {}
+      CSD-U3-SFLP Drawing:
+        description here: description here
+        title: title
       CSD-U3-SFLP Simple Drawing: {}
       CSD-U3-SFLP Sprites and Mod: {}
       CSD-U3-SFLP Variables: {}
@@ -5293,8 +5298,8 @@ en:
         "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
         What will be displayed after running this code?: What will be displayed after running this code?
       CommuteAssess - Cond 4a - block:
+        "<pre>The word is just right!</pre>": "<pre>The word is just right!</pre>"
         "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
-        "<pre>The word is just right</pre>": "<pre>The word is just right</pre>"
         "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
         "<pre>The word is too short!</pre>": "<pre>The word is too short!</pre>"
         "<pre>The word it too long!</pre>": "<pre>The word it too long!</pre>"
