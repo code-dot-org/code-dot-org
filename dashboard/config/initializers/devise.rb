@@ -315,12 +315,18 @@ Devise.setup do |config|
     manager.failure_app = CustomDeviseFailure
   end
 
-  Warden::Manager.after_authentication do |user|
-    auth.cookies[:user_type] = user.teacher? ? "teacher" : "student"
+  Warden::Manager.after_authentication do |user, auth|
+    if auth.cookies[:pm] == "new_header"
+      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+      auth.cookies[cookie_key] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    end
   end
 
-  Warden::Manager.before_logout do
-    auth.cookies.delete :user_type
+  Warden::Manager.before_logout do |_, auth|
+    if auth.cookies[:pm] == "new_header"
+      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+      auth.cookies[cookie_key] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    end
   end
 
   # ==> Mountable engine configurations
