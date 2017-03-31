@@ -7,7 +7,9 @@
   "properties": {
     "markdown_instructions": "# Missing Home Link\r\n\r\nCopying your hyperlinks to all your pages allowed you to get to most of the pages on your website from any other page. One hyperlink is missing - the one to get you to your home page (index.html).\r\n\r\n**Add a hyperlink to your home page from all the pages, even your home page itself.** Adding it to your home page will keep your navigation header consistent on all pages.",
     "project_template_level_name": "CSDU2 - Odd Stuff Site Template",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "encrypted_examples": "HXC0ch+dxecfoJADBm/ezVIJEbOr6pY8a+eu85jbzIkZOTTbh575nEvcs8Op\nRNCdgUqS9Rzx2ZSIfUPnhfGPzg==\n",
+    "hide_share_and_remix": "false"
   },
   "published": true,
   "notes": "",

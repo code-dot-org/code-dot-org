@@ -45,7 +45,7 @@ module LocaleHelper
         weight = (weight || 'q=1').split('=')[1].to_f
         [locale, weight]
       end
-      locale_codes.sort_by { |_, weight| -weight }.map { |locale, _| locale.strip }
+      locale_codes.sort_by {|_, weight| -weight}.map {|locale, _| locale.strip}
     rescue
       Logger.warn "Error parsing Accept-Language header: #{header}"
       []
@@ -54,7 +54,7 @@ module LocaleHelper
 
   # Strips regions off of accepted_locales.
   def accepted_languages
-    accepted_locales.map { |locale| locale.split('-')[0] }
+    accepted_locales.map {|locale| locale.split('-')[0]}
   end
 
   # Looks up a localized string driven by a database value.

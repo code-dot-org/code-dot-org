@@ -2,6 +2,7 @@
 title: CS Curriculum for grades 9-12
 nav: educate_nav
 video_player: true
+theme: responsive 
 ---
 
 [solid-block-header]
@@ -10,7 +11,7 @@ High School
 
 [/solid-block-header]
 
-For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9, and will be rolling out Summer 2017. The second, Computer Science Principles, is broadly available and can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
+For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9, and will be rolling out Summer 2017. The second, Computer Science Principles, is broadly available and can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy). 
 
 
 <!--<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/exploring-cs-testimonial.png") %>">-->
@@ -84,8 +85,8 @@ Computer Science Fundamentals - Accelerated
 
 [/solid-block-header]
 
-For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a high school after-school program, 
-Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the 
+For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a high school after-school program,
+Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the
 [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students, but at an accelerated pace designed for students ages 10-18.
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)

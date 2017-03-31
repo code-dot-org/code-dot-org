@@ -22,7 +22,8 @@ hero_teacher_man,widehero,homepage_hero_text_teacher2,49% 17%,teacher,bottom,,,,
 action_hoc_title,action,homepage_action_text_hoc,hoc_title,,,,,,,code.org,nah,all
 action_num_served,action,homepage_action_text_num_served,num_served,,,,,,,code.org,nah,all
 action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_learn,https://hourofcode.com,/learn,,,,code.org,nah,all
-action_cta_button,action,homepage_action_text_learn,cta_button,/student,,,,,,code.org,show,all
+action_cta_button,action,homepage_action_text_learn,cta_button,/student,,,,,,code.org,show,en
+action_cta_button_noten,action,homepage_action_text_learn,cta_button,/learn,,,,,,code.org,show,not en
 action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,//videos.code.org/social/what-most-schools-dont-teach.mp4,https://www.facebook.com/Code.org/videos/10100689712053311/,"Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321",,,code.org,show,all
 action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,//videos.code.org/social/hourofcode-2015-50MB.mp4,,,,,csedweek.org,nah,all
 action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,//videos.code.org/social/ChangeTheWorld_v5.mp4,,,,,code.org,nah,all

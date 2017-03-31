@@ -12,7 +12,7 @@ class LevelConceptDifficultyTest < ActiveSupport::TestCase
 
   test 'assign_attributes clears unassigned attributes' do
     assert_equal @level_concept_difficulty.repeat_loops, 2
-    @level_concept_difficulty.assign_attributes({ sequencing: 1})
+    @level_concept_difficulty.assign_attributes({sequencing: 1})
     assert_nil @level_concept_difficulty.repeat_loops
     assert_equal @level_concept_difficulty.sequencing, 1
   end

@@ -45,7 +45,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Hide the Code\r\n\r\n<img src=\"https://images.code.org/11fc50efd77b7245198dddc2f11c2e6f-image-1489606362106.32.21 PM.png\" style=\"width:200px;float:right\">\r\n\r\n<img src=\"https://images.code.org/b957534ed691290bdba5f2e1b9dd4e23-image-1489606362105.32.02 PM.png\" style=\"width:200px;float:right\">\r\n\r\nIts too easy to find the secret code right now. Put the picture in front of the secret code to hide it. \r\n\r\n# Do This\r\n\r\n* Move the picture in Design Mode to cover the secret code",
+    "markdown_instructions": "# Hide the Code\r\n\r\n<img src=\"https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png\" style=\"width:400px;float:right\">\r\n\r\n1. In Design Mode Click on the white square where it says \"CODE\". Change it to show a secret code of your choice\r\n2. Drag the picture down to cover the secret code\r\n\r\n![]()",
     "contained_level_names": null
   },
   "published": true,

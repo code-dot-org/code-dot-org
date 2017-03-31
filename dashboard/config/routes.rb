@@ -6,7 +6,7 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
-  resources :survey_results, only: [:create], defaults: { format: 'json' }
+  resources :survey_results, only: [:create], defaults: {format: 'json'}
 
   resource :pairing, only: [:show, :update]
 
@@ -252,7 +252,7 @@ Dashboard::Application.routes.draw do
   post '/report_abuse', to: 'report_abuse#report_abuse'
   get '/report_abuse', to: 'report_abuse#report_abuse_form'
 
-  get '/too_young', to: redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
+  get '/too_young', to: redirect {|_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/'}
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
@@ -362,6 +362,7 @@ Dashboard::Application.routes.draw do
     get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
+    get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -404,18 +405,18 @@ Dashboard::Application.routes.draw do
     namespace :v1 do
       concerns :api_v1_pd_routes
 
-      get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
-      get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
-      get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: { format: 'json' }
+      get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
+      get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
+      get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: {format: 'json'}
 
       # Routes used by UI test status pages
-      get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
-      get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: { format: 'json' }
+      get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
+      get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
     end
   end
 
-  get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
-  get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
-  get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: { format: 'json' }
-  get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
+  get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
+  get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
+  get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
 end

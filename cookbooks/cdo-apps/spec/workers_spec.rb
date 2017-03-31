@@ -22,8 +22,8 @@ describe 'cdo-apps::workers' do
     end.converge(described_recipe)
   end
   let(:varnish_suffix) {'G'}
-  let(:varnish) { 0 }
-  let(:node) { chef_run.node }
+  let(:varnish) {0}
+  let(:node) {chef_run.node}
 
   # Test various cpu/ram/varnish configurations and the number of workers calculated
   #        context          cpu mem dash peg varn

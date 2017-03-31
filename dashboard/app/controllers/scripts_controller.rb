@@ -7,6 +7,11 @@ class ScriptsController < ApplicationController
   before_action :set_script_file, only: [:edit, :update]
 
   def show
+    if @script.redirect_to?
+      redirect_to Script.get_from_cache(@script.redirect_to)
+      return
+    end
+
     if request.path != (canonical_path = script_path(@script))
       redirect_to canonical_path, status: :moved_permanently
       return
@@ -66,7 +71,7 @@ class ScriptsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    render 'levels/instructions', locals: { stages: script.stages }
+    render 'levels/instructions', locals: {stages: script.stages}
   end
 
   private

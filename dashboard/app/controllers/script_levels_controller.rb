@@ -61,6 +61,12 @@ class ScriptLevelsController < ApplicationController
   def show
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
+
+    if @script.redirect_to?
+      redirect_to build_script_level_path(Script.get_from_cache(@script.redirect_to).starting_level)
+      return
+    end
+
     configure_caching(@script)
     load_script_level
 
@@ -137,9 +143,9 @@ class ScriptLevelsController < ApplicationController
     script = Script.get_from_cache(params[:script_id])
 
     if params[:stage_position]
-      stage = script.stages.select {|s| !s.lockable? && s.relative_position == params[:stage_position].to_i }.first
+      stage = script.stages.select {|s| !s.lockable? && s.relative_position == params[:stage_position].to_i}.first
     else
-      stage = script.stages.select {|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
+      stage = script.stages.select {|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i}.first
     end
 
     render json: stage.summary_for_lesson_plans

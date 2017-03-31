@@ -21,8 +21,6 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 </div>
 
-<div style="clear: both;"></div>
-
 <br/>
 **[Working at Code.org](#info)**
 

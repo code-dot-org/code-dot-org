@@ -24,7 +24,17 @@
   %div{:class=>containerClass}
 
     -if header['theme'] == 'responsive'
-      =body
+      -if header['nav']
+        %div
+          .col-80-right
+            =body
+          .left-nav.desktop-feature
+            -if header['nav'].nil? || header['nav'] == 'blank'
+              &nbsp;
+            -else
+              = view(header['nav'])
+      -else
+        =body
 
       #clearboth{:style=>"clear:both"}
       .desktop-feature

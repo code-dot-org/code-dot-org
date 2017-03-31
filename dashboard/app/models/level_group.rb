@@ -50,7 +50,7 @@ ruby
       end
     end
 
-    Level.where(name: level_names).sort_by { |l| level_names.index(l.name) }
+    Level.where(name: level_names).sort_by {|l| level_names.index(l.name)}
   end
 
   class LevelGroupPage

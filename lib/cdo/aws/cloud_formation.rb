@@ -24,7 +24,7 @@ module AWS
     CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
       list_certificates(certificate_statuses: ['ISSUED']).
       certificate_summary_list.
-      find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
+      find {|cert| cert.domain_name == "*.#{DOMAIN}"}.
       certificate_arn
 
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
@@ -287,7 +287,7 @@ module AWS
       def render_template(dry_run: false)
         filename = aws_dir('cloudformation', TEMPLATE)
         template_string = File.read(filename)
-        azs = AVAILABILITY_ZONES.map { |zone| zone[-1].upcase }
+        azs = AVAILABILITY_ZONES.map {|zone| zone[-1].upcase}
         @@local_variables = OpenStruct.new(
           dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
@@ -326,7 +326,7 @@ module AWS
       # Input string, output ERB-processed file contents in CloudFormation JSON-compatible syntax (using Fn::Join operator).
       def source(str, filename, vars={})
         local_vars = @@local_variables.dup
-        vars.each { |k, v| local_vars[k] = v }
+        vars.each {|k, v| local_vars[k] = v}
         lines = erb_eval(str, filename, local_vars).each_line.map do |line|
           # Support special %{"Key": "Value"} syntax for inserting Intrinsic Functions into processed file contents.
           line.split(/(%{.*})/).map do |x|
@@ -344,7 +344,7 @@ module AWS
 
       def erb(filename, vars={})
         local_vars = @@local_variables.dup
-        vars.each { |k, v| local_vars[k] = v }
+        vars.each {|k, v| local_vars[k] = v}
         str = File.read(filename.start_with?('/') ? filename : aws_dir('cloudformation', filename))
         erb_eval(str, filename, vars)
       end

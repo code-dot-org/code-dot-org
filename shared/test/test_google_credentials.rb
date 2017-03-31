@@ -69,7 +69,7 @@ describe Cdo::GoogleCredentials do
         :assume_role_with_web_identity,
         credentials: credentials
       )
-      @system = Object.any_instance.stubs(:system).with { |x| x.match /aws configure set / }
+      @system = Object.any_instance.stubs(:system).with {|x| x.match /aws configure set /}
       @oauth_default = Google::Auth.stubs(:get_application_default).returns(oauth)
     end
 

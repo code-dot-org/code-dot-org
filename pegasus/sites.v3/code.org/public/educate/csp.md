@@ -8,7 +8,7 @@ video_player: true
 
 ## <a name="what"></a>Apply for Professional Learning
 
-Applications for the 2017-18 CS Principles Professional Learning Program are open until April 14, 2017. Apply now if you're ready to get started. 
+Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. Applications for the 2017-18 CS Principles Professional Learning Program are open until April 14, 2017. Apply now if you're ready to get started. 
 
 [<button>Apply now!</button>](/educate/professional-learning/cs-principles)
 

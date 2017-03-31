@@ -194,6 +194,29 @@ describe('animationListModule', function () {
       store.dispatch(setInitialAnimationList(animationList));
       expect(store.getState().animationTab.selectedAnimation).to.equal('');
     });
+
+    it('should not initialize with multiple animations of the same name', function () {
+      let animationList = createAnimationList(3);
+      animationList.propsByKey["animation_1"].name = 'cat';
+      animationList.propsByKey["animation_3"].name = 'cat';
+      store.dispatch(setInitialAnimationList(animationList));
+
+      expect(store.getState().animationList.propsByKey["animation_1"].name).to.equal('cat');
+      expect(store.getState().animationList.propsByKey["animation_2"].name).to.equal('animation_2');
+      expect(store.getState().animationList.propsByKey["animation_3"].name).to.equal('cat_1');
+    });
+
+    it('should not initialize with multiple animations of the same name with non alpha characters', function () {
+      let animationList = createAnimationList(3);
+      animationList.propsByKey["animation_1"].name = 'images (1).jpg_1';
+      animationList.propsByKey["animation_2"].name = 'images (1).jpg_1';
+      animationList.propsByKey["animation_3"].name = 'images (1).jpg_1';
+      store.dispatch(setInitialAnimationList(animationList));
+
+      expect(store.getState().animationList.propsByKey["animation_1"].name).to.equal('images (1).jpg_1');
+      expect(store.getState().animationList.propsByKey["animation_2"].name).to.equal('images (1).jpg_1_1');
+      expect(store.getState().animationList.propsByKey["animation_3"].name).to.equal('images (1).jpg_1_2');
+    });
   });
 
   describe('action: delete animation', function () {
