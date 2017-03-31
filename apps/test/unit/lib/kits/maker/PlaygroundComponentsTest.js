@@ -169,10 +169,11 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('soundSensor', () => {
-      let soundSensor;
+      let soundSensor, pin;
 
       beforeEach(() => {
         soundSensor = createCircuitPlaygroundComponents(board).soundSensor;
+        pin = soundSensor.pin;
       });
 
       it('creates a five.Sensor', () => {
@@ -195,45 +196,57 @@ describe('Circuit Playground Components', () => {
 
       describe('setScale', () => {
         it('adjusts the range of values provided by .value', () => {
-          // Simulate a raw value coming back from the board by calling the
-          // function registered with `analogRead` for this sensor's pin.
-          // The soundSensor is on pin 4.
-          const pinNumber = 4;
-          const pushAnalogValue = board.io.analogRead.args
-              .find(callArgs => callArgs[0] === pinNumber)[1];
-
-
-
           // Before setting scale, raw values are passed through to .value
-          pushAnalogValue(0);
+          setRawAnalogValue(pin, 0);
           expect(soundSensor.value).to.equal(0);
-          pushAnalogValue(499);
-          expect(soundSensor.value).to.equal(499);
-          pushAnalogValue(1023);
+          setRawAnalogValue(pin, 500);
+          expect(soundSensor.value).to.equal(500);
+          setRawAnalogValue(pin, 1023);
           expect(soundSensor.value).to.equal(1023);
 
-          // Also, values are not clamped
-          pushAnalogValue(-1);
-          expect(soundSensor.value).to.equal(-1);
-          pushAnalogValue(1024);
-          expect(soundSensor.value).to.equal(1024);
-
-          // We can set the scale to a different range.
           soundSensor.setScale(0, 100);
 
           // After setting scale, raw values are mapped to the new range
-          pushAnalogValue(0);
+          setRawAnalogValue(pin, 0);
           expect(soundSensor.value).to.equal(0);
-          pushAnalogValue(499);
-          expect(soundSensor.value).to.equal(48.77810287475586);
-          pushAnalogValue(1023);
+          setRawAnalogValue(pin, 512);
+          expect(soundSensor.value).to.equal(50);
+          setRawAnalogValue(pin, 1023);
           expect(soundSensor.value).to.equal(100);
+        });
 
-          // And values ARE clamped
-          pushAnalogValue(-1);
+        it('clamps values provided by .value to the given range', () => {
+          // Before setting scale, values are not clamped
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, -1);
+          expect(soundSensor.value).to.equal(-1);
+          setRawAnalogValue(pin, 1024);
+          expect(soundSensor.value).to.equal(1024);
+
+          soundSensor.setScale(0, 100);
+
+          // Afterward, values ARE clamped
+          setRawAnalogValue(pin, -1);
           expect(soundSensor.value).to.equal(0);
-          pushAnalogValue(1024);
+          setRawAnalogValue(pin, 1024);
           expect(soundSensor.value).to.equal(100);
+        });
+
+        it('rounds values provided by .value to integers', () => {
+          // Before setting scale, raw values are not rounded
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, Math.PI);
+          expect(soundSensor.value).to.equal(Math.PI);
+          setRawAnalogValue(pin, 543.21);
+          expect(soundSensor.value).to.equal(543.21);
+
+          soundSensor.setScale(0, 100);
+
+          // Afterward, only integer values are returned
+          for (let i = 0; i < 1024; i++) {
+            setRawAnalogValue(pin, i);
+            expect(soundSensor.value % 1).to.equal(0);
+          }
         });
       });
     });
@@ -617,6 +630,17 @@ describe('Circuit Playground Components', () => {
       });
     });
   });
+
+  /**
+   * Simulate a raw value coming back from the board on the given pin.
+   * @param {number} pin
+   * @param {number} rawValue - usually in range 0-1023.
+   * @throws if nothing is monitoring the given analog pin
+   */
+  function setRawAnalogValue(pin, rawValue) {
+    const readCallback = board.io.analogRead.args.find(callArgs => callArgs[0] === pin)[1];
+    readCallback(rawValue);
+  }
 });
 
 /**
