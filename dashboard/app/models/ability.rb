@@ -76,7 +76,6 @@ class Ability
         can :manage, SectionHiddenStage do |hidden_stage|
           userid == hidden_stage.section.user_id
         end
-        can :create, Pd::TeacherApplication, user_id: user.id
       end
 
       if user.facilitator?
