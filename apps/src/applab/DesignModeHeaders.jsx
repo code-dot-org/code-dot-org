@@ -1,6 +1,8 @@
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import msg from '@cdo/locale';
+import commonStyles from '../commonStyles';
+import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import SettingsCog from '../lib/ui/SettingsCog';
 
@@ -17,6 +19,47 @@ const DesignModeHeaders = React.createClass({
     this.props.onToggleToolbox();
   },
 
+  chevronStyle(collapse) {
+    const style = {
+      display: 'inline-block',
+      position: 'absolute',
+      top: 0,
+      left: 8,
+      lineHeight: '30px',
+      fontSize: 18,
+      cursor: 'pointer',
+      color: this.props.isRunning ? color.dark_charcoal : color.lighter_purple,
+      ':hover': {
+        color: color.white,
+      },
+    };
+
+    if (collapse) {
+      style.transform = 'scale(-1, 1)';
+    }
+
+    return style;
+  },
+
+  hideToolboxIcon() {
+    return (
+      <i
+        style={[commonStyles.hidden, this.chevronStyle(true)]}
+        className="hide-toolbox-icon fa fa-chevron-circle-right"
+        onClick={this.onToggleToolbox}
+      />
+    );
+  },
+
+  showToolboxIcon() {
+    return (
+      <i
+        style={[commonStyles.hidden, this.chevronStyle(false)]}
+        className="show-toolbox-icon fa fa-chevron-circle-right"
+      />
+    );
+  },
+
   render: function () {
     var styles = {
       toolboxHeader: {
@@ -29,6 +72,12 @@ const DesignModeHeaders = React.createClass({
         float: 'left',
         display: this.props.isToolboxVisible ? 'none' : 'block',
         paddingLeft: 10
+      },
+      showToolboxClickable: {
+        marginLeft: 18,
+        ':hover': {
+          color: color.white,
+        },
       },
       iconContainer: {
         float: 'right',
@@ -55,16 +104,23 @@ const DesignModeHeaders = React.createClass({
         style={{color: 'white'}}
       >
         <PaneSection id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
+          {this.hideToolboxIcon()}
           {settingsCog}
           <span>{applabMsg.designToolboxHeader()}</span>
-          <span className="workspace-header-clickable" onClick={this.onToggleToolbox}>&nbsp;{msg.hideToolbox()}</span>
         </PaneSection>
         <PaneSection
           className="workspace-header"
-          onClick={this.onToggleToolbox}
           style={styles.showToolboxHeader}
         >
-          <span className="workspace-header-clickable">{msg.showToolbox()}</span>
+          <span
+            key="show-toolbox-clickable"
+            className="workspace-header-clickable"
+            style={styles.showToolboxClickable}
+            onClick={this.onToggleToolbox}
+          >
+            {this.showToolboxIcon()}
+            {msg.showToolbox()}
+          </span>
           {settingsCog}
         </PaneSection>
         <PaneButton
