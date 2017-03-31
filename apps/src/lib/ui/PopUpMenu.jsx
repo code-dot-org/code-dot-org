@@ -49,11 +49,14 @@ class PopUpMenu extends Component {
   };
 
   renderMenuItems() {
-    const {children} = this.props;
+    let {children} = this.props;
+    if (Array.isArray(children)) {
+      children = children.filter(x => x);
+    }
     const childCount = Children.count(children);
     if (childCount === 0) {
       return <div><em>{msg.noMenuItemsAvailable()}</em></div>;
-  }
+    }
     return (
       <div>
         {Children.map(children, (child, index) => {
