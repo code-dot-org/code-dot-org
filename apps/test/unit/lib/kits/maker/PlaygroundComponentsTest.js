@@ -278,10 +278,11 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('lightSensor', () => {
-      let lightSensor;
+      let lightSensor, pin;
 
       beforeEach(() => {
         lightSensor = createCircuitPlaygroundComponents(board).lightSensor;
+        pin = lightSensor.pin;
       });
 
       it('creates a five.Sensor', () => {
@@ -300,6 +301,62 @@ describe('Circuit Playground Components', () => {
         expect(lightSensor).to.haveOwnProperty('start');
         expect(lightSensor).to.haveOwnProperty('getAveragedValue');
         expect(lightSensor).to.haveOwnProperty('setScale');
+      });
+
+      describe('setScale', () => {
+        it('adjusts the range of values provided by .value', () => {
+          // Before setting scale, raw values are passed through to .value
+          setRawAnalogValue(pin, 0);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 500);
+          expect(lightSensor.value).to.equal(500);
+          setRawAnalogValue(pin, 1023);
+          expect(lightSensor.value).to.equal(1023);
+
+          lightSensor.setScale(0, 100);
+
+          // After setting scale, raw values are mapped to the new range
+          setRawAnalogValue(pin, 0);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 512);
+          expect(lightSensor.value).to.equal(50);
+          setRawAnalogValue(pin, 1023);
+          expect(lightSensor.value).to.equal(100);
+        });
+
+        it('clamps values provided by .value to the given range', () => {
+          // Before setting scale, values are not clamped
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, -1);
+          expect(lightSensor.value).to.equal(-1);
+          setRawAnalogValue(pin, 1024);
+          expect(lightSensor.value).to.equal(1024);
+
+          lightSensor.setScale(0, 100);
+
+          // Afterward, values ARE clamped
+          setRawAnalogValue(pin, -1);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 1024);
+          expect(lightSensor.value).to.equal(100);
+        });
+
+        it('rounds values provided by .value to integers', () => {
+          // Before setting scale, raw values are not rounded
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, Math.PI);
+          expect(lightSensor.value).to.equal(Math.PI);
+          setRawAnalogValue(pin, 543.21);
+          expect(lightSensor.value).to.equal(543.21);
+
+          lightSensor.setScale(0, 100);
+
+          // Afterward, only integer values are returned
+          for (let i = 0; i < 1024; i++) {
+            setRawAnalogValue(pin, i);
+            expect(lightSensor.value % 1).to.equal(0);
+          }
+        });
       });
     });
 
