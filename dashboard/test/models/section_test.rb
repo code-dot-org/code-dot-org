@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class SectionTest < ActiveSupport::TestCase
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @student = create :student
     @teacher = create :teacher
     @section = create :section, teacher: @teacher
@@ -10,11 +11,10 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test "create assigns unique section codes" do
-    sections = []
-    3.times do |_i|
+    sections = 3.times.map do
       # Repeatedly seed the RNG so we get the same "random" codes.
       srand 1
-      sections << Section.create!(@default_attrs)
+      Section.create!(@default_attrs)
     end
 
     assert_equal 3, sections.map(&:code).uniq.count
@@ -60,7 +60,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test "can create section with duplicate name" do
     assert_difference -> {Section.count}, 2 do
-      2.times do |_i|
+      2.times do
         Section.create! @default_attrs
       end
     end
