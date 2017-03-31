@@ -1,6 +1,6 @@
 %script{src: "/js/raphael.js"}
 %script{src: "/js/extended_us_map.js"}
-%link{:href=>"/css/interactive_map.css", :rel=>"stylesheet"}
+
 - require 'state_abbr'
 
 #state-list.phone-feature
@@ -40,7 +40,7 @@
       %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'} summary of state efforts
 
 :javascript
-  var webServiceLocation = "/promote/state/";
+  var webServiceLocation = '/promote/state/';
 
   $(document).ready(function() {
     if (#{use_url}) {
