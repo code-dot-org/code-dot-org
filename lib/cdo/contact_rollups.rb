@@ -235,7 +235,7 @@ class ContactRollups
   end
 
   def self.log(s)
-    puts s unless Rails.env.test?
+    # puts s unless Rails.env.test?
     CDO.log.info s
   end
 
