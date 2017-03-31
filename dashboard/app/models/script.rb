@@ -437,6 +437,8 @@ class Script < ActiveRecord::Base
       ['calc', 'eval']
     elsif name.start_with?('csp')
       ['applab']
+    elsif name.start_with?('csd')
+      []
     else
       ['playlab', 'artist']
     end

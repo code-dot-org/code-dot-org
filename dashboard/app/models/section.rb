@@ -42,8 +42,8 @@ class Section < ActiveRecord::Base
 
   has_many :section_hidden_stages
 
-  LOGIN_TYPE_PICTURE = 'picture'
-  LOGIN_TYPE_WORD = 'word'
+  LOGIN_TYPE_PICTURE = 'picture'.freeze
+  LOGIN_TYPE_WORD = 'word'.freeze
 
   TYPES = [
     # Insert non-workshop section types here.

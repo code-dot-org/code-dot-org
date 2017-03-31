@@ -25,6 +25,12 @@
   line-height: 1.2em;
 }
 
+.solid-block-subtitle {
+  color: white;
+  font-size: 16px;
+  font-family: 'Gotham 4r', sans-serif;
+}
+
 .video-smalltext {
   padding: 10px;
 }

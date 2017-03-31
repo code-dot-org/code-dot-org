@@ -2,6 +2,7 @@
 title: Tools and videos
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 
@@ -11,7 +12,7 @@ We are building a growing library of educational videos available for re-use by 
 
 ## Computer Science Principles
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://www.youtube.com/watch?t=66&v=15aqFQQVBWU'} %>
 <% twitter = {:url=>'https://www.youtube.com/watch?t=66&v=15aqFQQVBWU', :related=>'codeorg', :text=>'Instagram founder explains PIXELS @codeorg'} %>
@@ -19,17 +20,17 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/By30SCp-Tsw'} %>
 <% twitter = {:url=>'https://youtu.be/By30SCp-Tsw', :related=>'codeorg', :text=>'Aloe Blacc explains DIGITAL COMPRESSION @codeorg'} %>
 <%=view :display_video_thumbnail, id: "compression", video_code: "By30SCp-Tsw", caption: "Aloe Blacc explains DIGITAL COMPRESSION", play_button: 'center', facebook: facebook, twitter: twitter %>
 
-</div>
+[/col-50]
 
 <div style="clear: both;"></div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/bMrDHtGHFR4'} %>
 <% twitter = {:url=>'https://youtu.be/bMrDHtGHFR4', :related=>'codeorg', :text=>'Computer science in Data and Medicine @codeorg'} %>
@@ -37,19 +38,19 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/Dxcc6ycZ73M'} %>
 <% twitter = {:url=>'https://youtu.be/Dxcc6ycZ73M', :related=>'codeorg', :text=>'What is the internet? @codeorg'} %>
 <%=view :display_video_thumbnail, id: "what_is_the_internet", video_code: "Dxcc6ycZ73M", caption: "What is the internet?", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/what_is_the_internet.mp4"%>
 
-</div>
+[/col-50]
 
 <div style="clear: both;"></div>
 
 ## How the internet works
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/ZhEf7e4kopM'} %>
 <% twitter = {:url=>'https://youtu.be/ZhEf7e4kopM', :related=>'codeorg', :text=>'THE INTERNET: Wires, Cables & Wifi @codeorg'} %>
@@ -57,7 +58,7 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/5o8CwafCxnU'} %>
 <% twitter = {:url=>'https://youtu.be/5o8CwafCxnU', :related=>'codeorg', :text=>'THE INTERNET: IP Addresses and DNS @codeorg'} %>
@@ -65,7 +66,7 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/AYdF7b3nMto'} %>
 <% twitter = {:url=>'https://youtu.be/AYdF7b3nMto', :related=>'codeorg', :text=>'THE INTERNET: Packets, Routing and Reliability @codeorg'} %>
@@ -73,7 +74,7 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/kBXQZMmiA4s'} %>
 <% twitter = {:url=>'https://youtu.be/kBXQZMmiA4s', :related=>'codeorg', :text=>'THE INTERNET: HTTP and HTML @codeorg'} %>
@@ -81,7 +82,7 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/ZghMPWGXexs'} %>
 <% twitter = {:url=>'https://youtu.be/ZghMPWGXexs', :related=>'codeorg', :text=>'THE INTERNET: Encryption & Public Keys @codeorg'} %>
@@ -89,7 +90,7 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/AuYNXgO_f3Y'} %>
 <% twitter = {:url=>'https://youtu.be/AuYNXgO_f3Y', :related=>'codeorg', :text=>'THE INTERNET: Cybersecurity & Crime @codeorg'} %>
@@ -101,7 +102,7 @@ We are building a growing library of educational videos available for re-use by 
 
 ## The basics of computer science
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/fVUL-vzrIcM'} %>
 <% twitter = {:url=>'https://youtu.be/fVUL-vzrIcM', :related=>'codeorg', :text=>'Bill Gates explains IF/ELSE statements @codeorg'} %>
@@ -109,7 +110,7 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/vgkahOzFH2Q'} %>
 <% twitter = {:url=>'https://youtu.be/vgkahOzFH2Q', :related=>'codeorg', :text=>'How to use PAIR PROGRAMMING @codeorg'} %>
@@ -119,7 +120,7 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style='clear:both'></div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/hYvcoRkAkOU'} %>
 <% twitter = {:url=>'https://youtu.be/hYvcoRkAkOU', :related=>'codeorg', :text=>'Mark Zuckerberg explains REPEAT LOOPS @codeorg'} %>
@@ -127,7 +128,7 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/8T5acEwfJbw'} %>
 <% twitter = {:url=>'https://youtu.be/8T5acEwfJbw', :related=>'codeorg', :text=>'Chris Bosh explains FUNCTIONS @codeorg'} %>
@@ -137,7 +138,7 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style='clear:both'></div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/jsUN0NV5RfQ'} %>
 <% twitter = {:url=>'https://youtu.be/jsUN0NV5RfQ', :related=>'codeorg', :text=>'Chris Bosh explains REPEAT UNTIL @codeorg'} %>
@@ -145,7 +146,7 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+<div class="col-50" style="float: left; padding: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/eZqKqI8AvnA'} %>
 <% twitter = {:url=>'https://youtu.be/eZqKqI8AvnA', :related=>'codeorg', :text=>'PERSISTENCE and building a foundation @codeorg'} %>
@@ -175,58 +176,57 @@ The celebrities and video "cast" members appearing in Code.org tutorial videos r
 
 # Create apps in minutes with App Lab
 
-[col-50]
+<div class="col-50" style="padding-right: 20px;">
 
 <%= view :display_video_thumbnail, id: "app_lab_in_classroom", video_code: "e1St8LB4VJA", play_button: 'center', download_path: "//videos.code.org/applab/in-the-classroom.mp4" %>
 
-[/col-50]
+</div>
 
-<div style="float:left; padding:20px; width:49%">
+[col-50]
 
 App Lab is a JavaScript programming environment for students to make simple apps that live on the web.  Use this standalone tool in your classroom to supplement any CS course. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
 
-<br>
-<br>
 <a href="/educate/applab"><button>Learn more</button></a>
 
-</div>
+[/col-50]
 
 <div style='clear:both'></div>
 
 # Build on problem solving skills with these digital tools
 
+<div class="col-50" style="padding-right: 20px;">
+
+<img src='<%= CDO.shared_image_url('/teacher-announcement/csp-widgets.png') %>' style='max-width: 100%'>
+
+</div>
+
 [col-50]
-
-<img src='<%= CDO.shared_image_url('/teacher-announcement/csp-widgets.png') %>' style='width: 400px'>
-
-[/col-50]
-
-<div style="float:left; padding:20px; width:49%">
 
 Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Let them encrypt and decrypt messages, compress song lyrics, and more! Use the widgets on their own, or create a single-concept lesson for your class using the plans linked below.
 
-<br>
-<br>
 <a href="/educate/csp/widgets"><button>Learn more</button></a>
 
-</div>
+[/col-50]
 
 <div style='clear:both'></div>
 
 # Find a guest speaker for your classroom
  
-<div style="float:left; padding:10px; width: 49%">
+<div class="col-50" style="padding-right: 20px;">
 
 <img src='/images/fill-350x230/guest-speaker-alice.jpg' style='border-radius: 5px;'>
  
 </div>
 
-<div style="float:left; padding: 5px; width: 49%">
+[col-50]
 
 Connect what your students are learning to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
 
-<br>
-<br>
 <a href="/volunteer/local"><button>Find a guest speaker</button></a>
 
-</div>
+[/col-50]
+
+<div style='clear:both'></div>
+
+<br>
+<br>
