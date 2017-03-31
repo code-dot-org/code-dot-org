@@ -230,4 +230,16 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     teacher_application.expects(:regional_partner).never
     assert_equal new_partner_name, teacher_application.regional_partner_name
   end
+
+  test 'accidental student accounts are upgraded to teacher on save' do
+    email = 'a_teacher@school.edu'
+    accidental_student = create :student, email: email
+    application = build :pd_teacher_application, user: accidental_student, primary_email: email
+    refute accidental_student.teacher?
+    assert accidental_student.email.blank?
+
+    application.save!
+    assert accidental_student.teacher?
+    assert_equal email, accidental_student.email
+  end
 end
