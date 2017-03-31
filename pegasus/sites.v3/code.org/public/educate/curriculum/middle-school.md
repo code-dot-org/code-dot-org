@@ -13,11 +13,7 @@ Middle School
 
 Our current middle school curriculum focuses on a broad introduction to computer science topics. CS Discoveries, our newest course (to be released in Summer 2017), will be a year-long or semester computer science course designed for grades 7-9. In addition, the CS Fundamentals Accelerated course may be used at all grade levels. Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy). 
 
-[solid-block-header]
-
-Computer Science Discoveries
-
-[/solid-block-header]
+<%= view :solid_block_header, :title=>"Computer Science Discoveries", :subtitle=>"A semester or year-long introductory course designed for grades 7-9" %>
 
 <% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
 <% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>'Computer Science Discoveries @codeorg'} %>
@@ -57,11 +53,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
-[solid-block-header]
-
-Computer Science Fundamentals - Accelerated
-
-[/solid-block-header]
+<%= view :solid_block_header, :title=>"Computer Science Fundamentals - Accelerated", :subtitle=>"A 20-hour course designed for grades 6-12" %>
 
 <img src="/images/code20hr.jpg" style="max-width: 100%">
 
