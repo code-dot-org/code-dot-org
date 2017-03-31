@@ -45,6 +45,7 @@ class PopUpMenu extends Component {
       left: PropTypes.number.isRequired,
     }).isRequired,
     children: PropTypes.any,
+    className: PropTypes.string,
   };
 
   renderMenuItems() {
@@ -70,7 +71,7 @@ class PopUpMenu extends Component {
   }
 
   render() {
-    const {targetPoint} = this.props;
+    const {targetPoint, className} = this.props;
     const style = {
       ...menuStyle,
       ...targetPoint,
@@ -78,7 +79,7 @@ class PopUpMenu extends Component {
     };
 
     return (
-      <div style={style}>
+      <div style={style} className={className}>
         {this.renderMenuItems()}
         {/* These elements are used to draw the 'tail' with CSS */}
         <span style={tailBorderStyle}/>
@@ -115,7 +116,11 @@ class Item extends Component {
       paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 2,
     };
     return (
-      <div style={style} onClick={onClick}>
+      <div
+        className="pop-up-menu-item"
+        style={style}
+        onClick={onClick}
+      >
         {children}
       </div>
     );

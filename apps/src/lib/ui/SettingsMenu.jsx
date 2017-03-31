@@ -20,6 +20,7 @@ export default class SettingsMenu extends Component {
       left: PropTypes.number.isRequired,
     }).isRequired,
     handleClose: PropTypes.func.isRequired,
+    className: PropTypes.string,
   };
 
   manageAssets() {
@@ -33,9 +34,9 @@ export default class SettingsMenu extends Component {
   }
 
   render() {
-    const {targetPoint} = this.props;
+    const {className, targetPoint} = this.props;
     return (
-      <PopUpMenu targetPoint={targetPoint}>
+      <PopUpMenu className={className} targetPoint={targetPoint}>
         <PopUpMenu.Item onClick={this.manageAssets}>
           {msg.manageAssets()}
         </PopUpMenu.Item>
