@@ -2096,11 +2096,13 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
-  const hideToolboxIcon = document.getElementById('hide-toolbox-icon');
-  const showToolboxHeader = document.getElementById('show-toolbox-header');
-  if (hideToolboxIcon && showToolboxHeader) {
+  var hideToolboxHeader = document.getElementById('toolbox-header');
+  var hideToolboxIcon = document.getElementById('hide-toolbox-icon');
+  var showToolboxHeader = document.getElementById('show-toolbox-header');
+  if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
+    hideToolboxHeader.className += ' toggleable';
     hideToolboxIcon.style.display = 'inline-block';
-    const handleTogglePalette = () => {
+    var handleTogglePalette = (function () {
       if (this.editor) {
         this.editor.enablePalette(!this.editor.paletteEnabled);
         showToolboxHeader.style.display =
@@ -2109,8 +2111,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
             !this.editor.paletteEnabled ? 'none' : 'inline-block';
         this.resizeToolboxHeader();
       }
-    };
-    dom.addClickTouchEvent(hideToolboxIcon, handleTogglePalette);
+    }).bind(this);
+    dom.addClickTouchEvent(hideToolboxHeader, handleTogglePalette);
     dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
   }
 
