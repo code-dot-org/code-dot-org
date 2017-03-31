@@ -289,8 +289,8 @@ DSL
           stage: "Stage1",
           scriptlevels: [
             {stage: "Stage1", levels: [{name: "Level 1"}], properties: {}},
-            {stage: "Stage1", levels: [{name: "Level 2"}], properties: { progression: 'Foo' }},
-            {stage: "Stage1", levels: [{name: "Level 3"}], properties: { progression: 'Foo' }},
+            {stage: "Stage1", levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
+            {stage: "Stage1", levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
           ]
         }
       ],

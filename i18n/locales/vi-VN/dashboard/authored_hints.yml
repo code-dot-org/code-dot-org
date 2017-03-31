@@ -90,7 +90,7 @@ vi:
         2-3_Artist_Nested_Loops_1_a: Remember to put all of the grey blocks inside of your loop.
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
-        2-3_Artist_Nested_Loops_3_b: Remeber to put all of the grey code and your turn block inside of a loop.
+        2-3_Artist_Nested_Loops_3_b: Remember to put all of the grey code and your turn block inside of a loop.
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: "Need help with the angles?  \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
@@ -300,6 +300,9 @@ vi:
           
           
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
+      artistDebugVideo1_authored_hint:
+        courseA_artist_loops7_a: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
+      artistFunctionsVideo1_authored_hint: [ ]
       artistLoopsK2_authored_hint:
         artistLoopsK2_a: If you want the loop to repeat more than 4 times, you can change the number at the top of the block.
       artistLoopsK2gradek_artist_loops3_authored_hint:
@@ -588,6 +591,7 @@ vi:
         courseA_artist_loops10_a: Use the jump block to move forward without drawing a line.
       courseA_artist_loops11_authored_hint:
         courseA_artist_loops11_a: There should be 2 blocks inside of your loop to solve this puzzle.
+      courseA_artist_loops11_predict2_authored_hint: [ ]
       courseA_artist_loops12_authored_hint: [ ]
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: Can't figure out how to draw a line?  Start attaching blocks to the `when run` block to see what happens.
@@ -611,8 +615,10 @@ vi:
         courseA_collector_loops10_a: If you can't figure out where to put the loops, try writing the code out step-by-step and look for a pattern.
       courseA_collector_loops11_authored_hint:
         courseA_collector_loops11_a: If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns.
+      courseA_collector_loops11_predict2_authored_hint: [ ]
       courseA_collector_loops3_authored_hint:
         courseA_collector_loops3: Try using a `repeat` loop to do the job!
+      courseA_collector_loops3_predict1_authored_hint: [ ]
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: To change how far the adventurer goes, change the number of times that the loop runs.
         courseA_collector_loops4_b: Don't forget that the adventurer needs to walk down and collect gold after she finishes the `repeat` loop!
@@ -636,10 +642,12 @@ vi:
         courseA_maze_seq11_a: Use 2 different arrow blocks to solve this puzzle!
       courseA_maze_seq12_authored_hint:
         courseA_maze_seq12_a: If the pig isn't moving far enough, try adding another block.
+      courseA_maze_seq12_predict2_authored_hint: [ ]
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: If the path you need is unclear, use your finger to trace your way from the bird to the pig.
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: This program is missing one block. Can you figure out which one?
+      courseA_maze_seq2_predict1_authored_hint: [ ]
       courseA_maze_seq3_authored_hint:
         courseA_maze_seq3_a: One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?
       courseA_maze_seq4_authored_hint:
@@ -701,10 +709,13 @@ vi:
         courseB_artist_loops7_c: "The loops should do this:\n- Loop 1\n  - Right\n  - Down\n  \n- Loop 2\n  - Right\n  - Up\n\n- Loop 3\n  - Left\n  - Up\n\n- Loop 4\n  - Left\n  - Down"
       courseB_artist_loops8_authored_hint:
         courseB_artist_loops8_a: How many times should you repeat the pattern to make the ladder?
+      courseB_artist_loops8_predict1_authored_hint: [ ]
       courseB_artist_loops9_authored_hint: [ ]
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: You'll need three `repeat` loops to solve this puzzle.
       courseB_collector_loops3_authored_hint:
+        courseB_collector_prog3_a: Try using a `repeat` block to collect your treasure.
+      courseB_collector_loops3_predict1_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
       courseB_collector_loops4_authored_hint:
         courseB_collector_loops4_a: Is something not right? Try using the step button to figure out where things go wrong.
@@ -725,8 +736,10 @@ vi:
       courseB_maze_seq1_authored_hint: [ ]
       courseB_maze_seq10_authored_hint:
         courseB_maze_seq10_a: If you're having trouble, try writing down the steps on a piece of paper first.
+      courseB_maze_seq10_predict1_authored_hint: [ ]
       courseB_maze_seq11_authored_hint:
         courseB_maze_seq11_a: If you're having trouble, try writing down the steps on a piece of paper first.
+      courseB_maze_seq1_predict1_authored_hint: [ ]
       courseB_maze_seq2_authored_hint:
         courseB_maze_seq2_a: This program is missing one block. Can you figure out which one?
       courseB_maze_seq3_authored_hint:
@@ -823,6 +836,7 @@ vi:
         courseC_artist_prog6_a: The artist is already facing the correct way to draw his first line.
         courseC_artist_prog6_b: This diamond is really just a square that's standing on its corner.
         courseC_artist_prog6_c: Since this diamond is also a square, be sure to turn 90 degrees at the corners.
+      courseC_artist_prog6_predict1_authored_hint: [ ]
       courseC_artist_prog7_authored_hint:
         courseC_artist_prog7_a: Every angle is either 45 or 90 degrees.
         courseC_artist_prog7_b: "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?"
@@ -888,14 +902,20 @@ vi:
           - What is Skrat supposed to do?
           - What does Skrat do?
           - What does that tell you?
+      courseC_maze_debugging8_predict1_authored_hint: [ ]
       courseC_maze_debugging9_authored_hint:
         courseC_maze_debugging9_a: |-
           - What is Skrat supposed to do?
           - What does Skrat do?
           - What does that tell you?
       courseC_maze_loops10_authored_hint: [ ]
+      courseC_maze_loops10_predict2_authored_hint: [ ]
       courseC_maze_loops11_authored_hint: [ ]
       courseC_maze_loops2_authored_hint:
+        courseC_maze_loops2_a: You can solve this puzzle with just three blocks, including `when run`.
+        courseC_maze_loops2_b: Try putting the `move forward` block inside of a `repeat` block to create a loop.
+        courseC_maze_loops2_c: You need to repeat the `move forward` command 5 times to solve this puzzle.
+      courseC_maze_loops2_predict1_authored_hint:
         courseC_maze_loops2_a: You can solve this puzzle with just three blocks, including `when run`.
         courseC_maze_loops2_b: Try putting the `move forward` block inside of a `repeat` block to create a loop.
         courseC_maze_loops2_c: You need to repeat the `move forward` command 5 times to solve this puzzle.
@@ -935,6 +955,7 @@ vi:
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through block by block and look for errors.
       courseC_maze_programming8_authored_hint: [ ]
+      courseC_maze_programming8_predict1_authored_hint: [ ]
       courseC_maze_programming9_authored_hint: [ ]
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: You only need to move Jorge to the right by about 25 pixels to solve this puzzle.
@@ -1020,7 +1041,7 @@ vi:
       courseD_artist_nestedLoops1_authored_hint:
         courseD_artist_nestedLoops1_a: The easiest way to draw this is to move forward and use right turns.
       courseD_artist_nestedLoops10_authored_hint:
-        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the second half of the last puzzle.
+        courseD_artist_nestedLoops10_a: To start this pattern, reuse the code from the first half of the last puzzle.
         courseD_artist_nestedLoops10_b: Make sure the outer loop of the code is set to run 7 times and remove the outer turn.
       courseD_artist_nestedLoops1a_authored_hint:
         courseD_artist_nestedLoops1a_a: 'You will need to draw a total of 6 triangles, each rotated 60 degrees.  '
@@ -1062,6 +1083,9 @@ vi:
       courseD_artist_nestedLoops9_authored_hint:
         courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before, but this time, make it with squares.
         courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end of the first set, but this time use triangles.
+      courseD_artist_nestedLoops9_predict1_authored_hint:
+        courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before, but this time, make it with squares.
+        courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end of the first set, but this time use triangles.
       courseD_artist_nestedLoopsFP_authored_hint:
         courseD_artist_nestedLoopsFP_a: |-
           <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
@@ -1076,7 +1100,17 @@ vi:
           
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
       courseD_artist_nestedLoopsPre1_authored_hint: [ ]
+      courseD_artist_ramp11_authored_hint:
+        courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
+        courseD_artist_ramp11b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          
+          Don't forget to turn afterward!
+      courseD_artist_ramp12_authored_hint:
+        courseD_artist_ramp12_a: You can either draw the square first, then the triangle, or do it the other way around!
       courseD_bee_conditionals1_authored_hint:
+        courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
+      courseD_bee_conditionals1_predict1_authored_hint:
         courseD_bee_conditionals1_a: You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar.
       courseD_bee_conditionals2_authored_hint:
         courseD_bee_conditionals2_a: Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.
@@ -1088,6 +1122,8 @@ vi:
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for honeycomb beneath each cloud.
       courseD_bee_conditionals7_authored_hint:
+        courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
+      courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
@@ -1150,10 +1186,12 @@ vi:
       courseD_bee_debugging9_authored_hint:
         courseD_bee_debugging9_a: There are several ways to solve this problem...but they all involve turns!
         courseD_bee_debugging9_b: Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head.
+      courseD_bee_debugging9_predict1_authored_hint: [ ]
       courseD_bee_nestedLoops1_authored_hint:
         courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see what happens line by line.
       courseD_bee_nestedLoops2_authored_hint:
         courseD_bee_nestedLoops2_a: To solve this puzzle, you will need to nest one `repeat` loop inside of another.
+      courseD_bee_nestedLoops2_predict1_authored_hint: [ ]
       courseD_bee_nestedLoops3_authored_hint:
         grade4_bee_nestedLoops1_a: If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.
       courseD_bee_nestedLoops5_authored_hint:
@@ -1182,6 +1220,17 @@ vi:
           
           Altogether, you should be using 3 loops.
       courseD_bee_nestedLoops9_authored_hint: [ ]
+      courseD_bee_nestedLoops9_predict2_authored_hint: [ ]
+      courseD_collector_ramp10_authored_hint:
+        courseD_artist_ramp10_a: |-
+          Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
+          <xml><block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          </block></xml>
+        courseD_artist_ramp10_b: Don't forget to collect one piece of treasure, then turn after each set of steps!
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -1274,9 +1323,13 @@ vi:
         courseD_farmer_condLoops8_a: This puzzle uses almost the exact same code as the last level, except you only need to repeat 4 times.
       courseD_farmer_condLoops9_authored_hint:
         courseD_farmer_condLoops9_a: You shouldn't need the `while path ahead` loop this time.
+      courseD_farmer_condLoops9_predict1_authored_hint:
+        courseD_farmer_condLoops9_a: You shouldn't need the `while path ahead` loop this time.
       courseD_farmer_while10_authored_hint: [ ]
+      courseD_farmer_while10_predict2_authored_hint: [ ]
       courseD_farmer_while4_authored_hint:
         courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while` loop to keep digging until the pile is gone.
+      courseD_farmer_while4_predict1_authored_hint: [ ]
       courseD_farmer_while5_authored_hint:
         courseD_farmer_conditionals5a: Try nesting a `while` loop inside of a `repeat` loop.
       courseD_farmer_while6_authored_hint:
@@ -1304,9 +1357,27 @@ vi:
         courseD_maze_nestedLoops6_a: If you are stuck, try writing out the code out on paper without loops first and look for patterns.
         courseD_maze_nestedLoops6_b: Nesting `repeat` loops can help decrease the number of blocks used.
         courseD_maze_nestedLoops6_c: It will take two sets of nested `repeat` loops to solve this puzzle.
+      courseD_maze_ramp1_authored_hint:
+        courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
+      courseD_maze_ramp2_authored_hint:
+        courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
+      courseD_maze_ramp3_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
+      courseD_maze_ramp4_authored_hint:
+        courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
+        courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
+      courseD_maze_ramp5_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
+      courseD_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+      courseD_maze_ramp7_authored_hint:
+        courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
       courseD_maze_until10_authored_hint: [ ]
+      courseD_maze_until10_predict2_authored_hint: [ ]
       courseD_maze_until2_authored_hint:
         courseD_maze_until2_a: An `until pig` loop will help you keep going until you succeed!
+      courseD_maze_until2_predict1_authored_hint: [ ]
       courseD_maze_until3_authored_hint:
         courseD_maze_until3_a: |-
           - What does your code do?
@@ -1395,6 +1466,16 @@ vi:
       courseE_artist_functions9_authored_hint:
         courseD_artist_functions9_a: To get around the need to have multiple `move forward` blocks, create a `draw triangle` function and call that multiple times.
         courseD_artist_functions9_b: This drawing is made by creating a line of triangles and turning either 60 or 120 degrees after each time you draw the triangle line.
+      courseE_artist_functions_predict1_authored_hint: [ ]
+      courseE_artist_functions_predict2_authored_hint: [ ]
+      courseE_artist_ramp11_authored_hint:
+        courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
+        courseD_artist_ramp11b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          
+          Don't forget to turn afterward!
+      courseE_artist_ramp12_authored_hint:
+        courseD_artist_ramp12_a: You can either draw the square first, then the triangle, or do it the other way around!
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_a: If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.
       courseE_bee_concept2_authored_hint:
@@ -1431,6 +1512,16 @@ vi:
         courseE_bee_functions8_b: Use `while nectar > 0` to make sure you get all of the nectar.
       courseE_bee_functions9_authored_hint:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
+      courseE_collector_ramp10_authored_hint:
+        courseD_artist_ramp10_a: |-
+          Instead of using four `move forward` blocks for each side, try putting one `move forward` block inside of a `repeat` loop, like this:
+          <xml><block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          </block></xml>
+        courseD_artist_ramp10_b: Don't forget to collect one piece of treasure, then turn after each set of steps!
       courseE_farmer_concept1_authored_hint:
         courseE_farmer_concept1_a: A `while there is a hole` block will help you fill any hole until it's flat.
       courseE_farmer_concept2_authored_hint:
@@ -1442,6 +1533,7 @@ vi:
         4-5_Artist_Patterns_3_b: If your code becomes too confusing, you can always click "Start Over" and try again!
       courseE_farmer_functions10_authored_hint: [ ]
       courseE_farmer_functions10b_authored_hint: [ ]
+      courseE_farmer_functions11_predict_authored_hint: [ ]
       courseE_farmer_functions1a_authored_hint:
         courseE_farmer_functions1a_a: Nested `if` and `if/else` statements will really help you out here.
       courseE_farmer_functions2a_authored_hint: [ ]
@@ -1480,6 +1572,22 @@ vi:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
       courseE_farmer_functions9b_authored_hint: [ ]
+      courseE_maze_ramp1_authored_hint:
+        courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
+      courseE_maze_ramp2_authored_hint:
+        courseC_maze_programming2_a: To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.
+      courseE_maze_ramp3_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
+      courseE_maze_ramp4_authored_hint:
+        courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
+        courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
+      courseE_maze_ramp5_authored_hint:
+        courseC_maze_programming5_a: Try using the "Step" button to run your code line by line. Can you figure out what you need to do next?
+      courseE_maze_ramp6_authored_hint:
+        courseC_maze_programming6_a: There are two ways to solve this puzzle!
+      courseE_maze_ramp7_authored_hint:
+        courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through block by block and look for errors.
+        courseD_maze_ramp7_a: Use repeat blocks to run either a single block or a chunk of code over and over.
       courseE_playLab_scaffold2_authored_hint:
         courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.
       courseE_playLab_scaffold3_authored_hint:
@@ -1496,6 +1604,7 @@ vi:
           Want to know how the sample image was done?
           
           ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
+      courseF_artist_for10_predict1_authored_hint: [ ]
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
@@ -1522,6 +1631,7 @@ vi:
       courseF_artist_fwp2_authored_hint:
         courseF_artist_fwp2_a: You need to click the "edit" button to get into the function.  Once you're there, add a parameter called `length` and use it inside your `move forward` block!
         courseF_artist_fwp2_b: When calling your function, use a `for loop` for the best possible code!
+      courseF_artist_fwp2_predict1_authored_hint: [ ]
       courseF_artist_fwp3_authored_hint:
         courseF_artist_fwp3_a: This gets easier if you put it all in a `for` loop.
         courseF_artist_fwp3_b: |-
@@ -1577,6 +1687,7 @@ vi:
       courseF_bee_for3_authored_hint:
         courseF_bee_for3_a: 'Use the `counter` variable inside the `repeat` loop where nectar is gathered to solve this puzzle. '
         courseF_bee_for3_b: Your `for` loop will need to count from 1 to 5 with an increment of 1.
+      courseF_bee_for3_predict1_authored_hint: [ ]
       courseF_bee_for4_authored_hint:
         courseF_bee_for4_a: Use a `for` loop that goes from 1 to 7 with an increment of 1 to solve this puzzle.
         courseF_bee_for4_b: Make sure to use the `counter` variable inside your nested `repeat` loop to get enough nectar!
@@ -1613,6 +1724,7 @@ vi:
         courseF_bee_fwp7_a: You don't need a second parameter for this function, only a second `if` statement.
       courseF_bee_fwp8_authored_hint: [ ]
       courseF_bee_fwp9_authored_hint: [ ]
+      courseF_bee_fwp9_predict1_authored_hint: [ ]
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block that is connected to the purple `set shout to` block.
       courseF_playlab_variables3b_authored_hint:
@@ -2519,6 +2631,8 @@ vi:
           
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
+      playLabDebugVideo1_authored_hint:
+        courseA_playLab_events2_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       sample3_authored_hint:
         sample3_a: |-
           Try writing the code once and looping it seven times:

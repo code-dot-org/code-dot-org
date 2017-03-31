@@ -94,7 +94,7 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
       finalLevelSourceId: 15
     }
 
-    post(:create, params: { hints: [data] }, format: :json)
+    post(:create, params: {hints: [data]}, format: :json)
 
     record = AuthoredHintViewRequest.last
 

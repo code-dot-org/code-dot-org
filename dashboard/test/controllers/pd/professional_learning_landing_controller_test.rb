@@ -28,10 +28,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_response :success
     response = assigns(:landing_page_data)
 
-    assert_equal [Pd::Workshop::COURSE_CSF, Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP], response[:courses_teaching]
-    assert_equal [Pd::Workshop::COURSE_CSF, Pd::Workshop::COURSE_CSD], response[:courses_completed]
     assert_equal "#{CDO.code_org_url}/pd-workshop-survey/#{@ended_enrollment.code}", response[:last_workshop_survey_url]
-    assert_equal CDO.studio_url("/pd/generate_csf_certificate/#{@ended_enrollment.code}"), response[:print_csf_certificate_url]
     assert_equal Pd::Workshop::COURSE_CSF, response[:last_workshop_survey_course]
   end
 
@@ -52,6 +49,6 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_response :success
     response = assigns(:landing_page_data)
 
-    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map { |enrollment| enrollment[:courseName]}
+    assert_equal ['CSP Support', 'ECS Support', 'Bills Fandom 101'], response[:summarized_plc_enrollments].map {|enrollment| enrollment[:courseName]}
   end
 end

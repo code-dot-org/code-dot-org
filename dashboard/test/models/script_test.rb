@@ -8,7 +8,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..5).map { |n| create(:level, name: "Level #{n}", game: @game) }
+    @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -483,26 +483,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'expect error on bad module types' do
     script_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
-    assert_raises RuntimeError do
-      Script.setup([script_file])
-    end
-  end
-
-  test 'Can setup script where none of the stages have flex categories' do
-    script_file = File.join(self.class.fixture_path, 'test-plc-script-no-categories.script')
-    Script.setup([script_file])
-  end
-
-  test 'Cannot setup script where some of the stages are missing flex categories' do
-    script_file = File.join(self.class.fixture_path, 'test-bad-plc-script-missing-categories.script')
-    assert_raises RuntimeError do
-      Script.setup([script_file])
-    end
-  end
-
-  test 'Cannot setup script where some of the stages are not properly sorted' do
-    script_file = File.join(self.class.fixture_path, 'test-bad-plc-unsorted-categories.script')
-    assert_raises RuntimeError do
+    assert_raises ActiveRecord::RecordInvalid do
       Script.setup([script_file])
     end
   end

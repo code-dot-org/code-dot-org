@@ -58,8 +58,9 @@ module Slog
     def parse(buffer)
       buffer.split("\n").map do |entry|
         info, payload = entry.split(', ', 2)
-        date_time = info.split(' ')[0..2].join(' ')
-        ({timestamp: DateTime.parse(date_time)}).merge(JSON.parse(payload))
+        date_time_string = info.split(' ')[0..2].join(' ')
+        date_time = DateTime.parse(date_time_string)
+        {timestamp: date_time}.merge(JSON.parse(payload || '{}'))
       end
     end
 

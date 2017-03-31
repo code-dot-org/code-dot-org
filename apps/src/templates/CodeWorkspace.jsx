@@ -11,6 +11,7 @@ var msg = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var color = require("../util/color");
 var utils = require('@cdo/apps/utils');
+import SettingsCog from '../lib/ui/SettingsCog';
 
 var BLOCKS_GLYPH_LIGHT = "data:image/gif;base64,R0lGODlhEAAQAIAAAP///////yH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
 var BLOCKS_GLYPH_DARK = "data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==";
@@ -52,7 +53,8 @@ var CodeWorkspace = React.createClass({
     style: React.PropTypes.bool,
     isRunning: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-    isMinecraft: React.PropTypes.bool.isRequired
+    isMinecraft: React.PropTypes.bool.isRequired,
+    withSettingsCog: React.PropTypes.bool,
   },
 
   shouldComponentUpdate: function (nextProps) {
@@ -94,21 +96,63 @@ var CodeWorkspace = React.createClass({
     }
   },
 
-  render: function () {
-    var props = this.props;
-
+  runModeIndicators() {
     // ignore runModeIndicators in MC
-    var runModeIndicators = !props.isMinecraft;
+    return !this.props.isMinecraft;
+  },
 
-    var chevronStyle = [
+  renderToolboxHeaders() {
+    const {
+      editCode,
+      isRunning,
+      readonlyWorkspace,
+      withSettingsCog,
+    } = this.props;
+    const showSettingsCog = withSettingsCog && !readonlyWorkspace;
+    const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
+    const chevronStyle = [
       styles.chevron,
-      runModeIndicators && props.isRunning && styles.runningChevron
+      this.runModeIndicators() && isRunning && styles.runningChevron
     ];
+    return [
+      <PaneSection
+        id="toolbox-header"
+        key="toolbox-header"
+      >
+        <i
+          id="hide-toolbox-icon"
+          style={[commonStyles.hidden, chevronStyle]}
+          className="fa fa-chevron-circle-right"
+        />
+        <span style={textStyle}>
+          {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
+        </span>
+        {showSettingsCog && <SettingsCog/>}
+      </PaneSection>,
+      <PaneSection
+        id="show-toolbox-header"
+        key="show-toolbox-header"
+        style={commonStyles.hidden}
+      >
+        <i
+          id="show-toolbox-icon"
+          style={chevronStyle}
+          className="fa fa-chevron-circle-right"
+        />
+        <span>
+          {msg.showToolbox()}
+        </span>
+      </PaneSection>
+    ];
+  },
+
+  render() {
+    var props = this.props;
 
     // By default, continue to show header as focused. When runModeIndicators
     // is enabled, remove focus while running.
     var hasFocus = true;
-    if (runModeIndicators && props.isRunning) {
+    if (this.runModeIndicators() && props.isRunning) {
       hasFocus = false;
     }
 
@@ -134,14 +178,7 @@ var CodeWorkspace = React.createClass({
           className={props.isRunning ? 'is-running' : ''}
         >
           <div id="codeModeHeaders">
-            <PaneSection id="toolbox-header">
-              <i id="hide-toolbox-icon" style={[commonStyles.hidden, chevronStyle]} className="fa fa-chevron-circle-right"/>
-              <span>{props.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}</span>
-            </PaneSection>
-            <PaneSection id="show-toolbox-header" style={commonStyles.hidden}>
-              <i id="show-toolbox-icon" style={chevronStyle} className="fa fa-chevron-circle-right"/>
-              <span>{msg.showToolbox()}</span>
-            </PaneSection>
+            {this.renderToolboxHeaders()}
             <PaneButton
               id="show-code-header"
               hiddenImage={blocksGlyphImage}

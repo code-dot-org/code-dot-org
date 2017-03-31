@@ -59,7 +59,7 @@ class BucketHelper
     target_object_prefix = s3_path owner_id, channel_id, target_object
 
     objects = @s3.list_objects(bucket: @bucket, prefix: app_prefix).contents
-    target_object = objects.find { |x| x.key == target_object_prefix }
+    target_object = objects.find {|x| x.key == target_object_prefix}
 
     app_size = objects.map(&:size).reduce(:+).to_i
     object_size = target_object.nil? ? nil : target_object.size.to_i
@@ -139,14 +139,14 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: { abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
+    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: {abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
   def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, channel_id, filename
-    response = @s3.put_object(bucket: @bucket, key: key, body: body, metadata: { abuse_score: abuse_score.to_s})
+    response = @s3.put_object(bucket: @bucket, key: key, body: body, metadata: {abuse_score: abuse_score.to_s})
 
     # Delete the old version, if doing an in-place replace
     @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
@@ -188,9 +188,9 @@ class BucketHelper
 
   def delete_multiple(encrypted_channel_id, filenames)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-    objects = filenames.map { |filename| { key: s3_path(owner_id, channel_id, filename) } }
+    objects = filenames.map {|filename| {key: s3_path(owner_id, channel_id, filename)}}
 
-    @s3.delete_objects(bucket: @bucket, delete: { objects: objects, quiet: true})
+    @s3.delete_objects(bucket: @bucket, delete: {objects: objects, quiet: true})
   end
 
   def list_versions(encrypted_channel_id, filename)

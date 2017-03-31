@@ -45,7 +45,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Setting Up Rooms\r\n\r\n<img src=\"https://images.code.org/b396cab3cc82356d040aca5f5d55df6d-image-1489603205329.39.21 PM.png\" style=\"width:200px; float:right\">\r\n\r\nIn order to make your room escape you will need to set up the room the user will be able to adventure around in. Some of the work has already been done for you.  You just need to decide what the different parts of the room will look like by picking pictures!\r\n\r\n# Do This\r\n\r\n* The level starts in design mode\r\n* For each image element that is blank add an appropriate image. For example you will need a door image for the image element labeled door.\r\n* An example of what the room might look like are on the right.",
+    "markdown_instructions": "# Setting Up Rooms\r\n\r\n<img src=\"https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44 AM.png\" style=\"width:200px; float:right\">\r\n\r\nIn order to make your room escape you will need to set up the room the user will be able to adventure around in. Some of the work has already been done for you.  You just need to decide what the different parts of the room will look like by picking pictures!\r\n\r\n# Do This\r\n\r\n* The level starts in Design Mode\r\n* For each image element that is blank (gray rectangle) add an appropriate image. For example you will need a door image for the image element labeled door.\r\n* An example of what the room might look like are on the right.",
     "contained_level_names": null
   },
   "published": true,

@@ -15,8 +15,9 @@ const MakerState = Immutable.Record({
 
 // Selectors
 function getRoot(state) {
-  // Global knowledge eww
-  return state.maker;
+  // Default value allows non-maker code to refer to Maker selectors safely,
+  // even in contexts where Maker isn't provided or Redux isn't set up.
+  return (state && state.maker) || new MakerState();
 }
 
 export function isEnabled(state) {
