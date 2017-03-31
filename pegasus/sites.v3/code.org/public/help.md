@@ -1,5 +1,6 @@
 ---
 title: How to help
+theme: responsive
 ---
 
 # How to Help
@@ -13,7 +14,7 @@ Petition your state to allow computer science to count towards math or science h
 
 ## Ask your school to teach computer science
 Encourage local elementary schools to teach our [elementary curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
- 
+
 [<button>Sample letter</button>](/promote/letter)&nbsp;&nbsp; [<button>See options for schools</button>](/educate)
 
 ## Host an Hour of Code - at work, in your community, or local school
@@ -27,7 +28,7 @@ Volunteer to teach the Hour of Code or our [Code Studio courses](http://studio.c
 [<button>Volunteer in a classroom</button>](/volunteer)
 
 ## Buy a CODE hat or t-shirt
-Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
+Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too.
 
 <br/>
 ![Code.org cap](/images//fit-160/swag7.jpg)
@@ -56,7 +57,7 @@ Code.org's online platform [Code Studio](https://studio.code.org) enables studen
 
 [col-33]
 
-<img src="/images/fit-300/teals/quincy.jpg" style="margin-top: 10px; margin-left: 10px;">
+<img src="/images/fit-300/teals/quincy.jpg" style="border-radius: 5px; margin-left: 0px;">
 
 [/col-33]
 
@@ -69,4 +70,3 @@ Code.org's online platform [Code Studio](https://studio.code.org) enables studen
 [/col-66]
 
 <div style="clear: both;"></div>
-

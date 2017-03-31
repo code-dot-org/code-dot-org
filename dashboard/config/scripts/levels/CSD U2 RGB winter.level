@@ -181,6 +181,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "teacher_markdown": "Color solution for Winter Blue: (red, green, blue) = (195, 230, 255)",
     "contained_level_names": null
   },
   "published": true,

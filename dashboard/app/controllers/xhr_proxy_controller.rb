@@ -47,6 +47,7 @@ class XhrProxyController < ApplicationController
     noaa.gov
     rhcloud.com
     swapi.co
+    translate.yandex.net
     wikipedia.org
   ).freeze
 

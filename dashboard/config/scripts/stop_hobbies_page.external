@@ -30,13 +30,10 @@ Review the header and paragraph elements with students. Use any of the following
 
 **Set up:** If you had students bring in recipes, ask them to take them out. If they don't have recipes, you can give them a chance to find a recipe or share one with them to use for the next part of the lesson.
 
-discussion!!!discussion-1
 
-!!!discussion <discussion-1>
-
-    Students should identify that a recipe needs a **list** of ingredients and a **list** of instructions.  This is something they don't know how to create yet.
+    Students should identify that a recipe needs a LIST of ingredients and a LIST of instructions.  This is something they don't know how to create yet.
     
 **Prompt:** Looking the recipes you brought in. Let’s brainstorm some elements a recipe should include.
 
-&fa-desktop; **Transition:** Ask students to return to Code Studio continue working.
+**Transition:** Ask students to return to Code Studio continue working.
 MARKDOWN

@@ -213,6 +213,8 @@
     "makerlab_enabled": "true",
     "display_name": "Color LEDs Example",
     "teacher_markdown": "# Analyzing the Exemplar\r\n\r\nAs students explore the exemplar, ask them to consider the following questions:\r\n\r\n* Where is input being taken? _(three sliders and a button)_\r\n\t* What events do you think are being used for each input? _(\"input\" and \"click\")_\r\n* What information is being output through the board? _(the color mixed by the sliders)_\r\n* Where might this program be using a loop? _(changing the color on each LED)_\r\n\t* For each identified loop - is it more likely a _for loop_ or a _timed loop_? Why? _(a for loop because it changes all of the LEDs at once)_",
+    "encrypted_examples": "ewoIvgrjdyRktPlmuG/v+6g+OaADQoHUT0ellRaOikV00UM2rnI1yAygUQUM\nBG+p\n",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

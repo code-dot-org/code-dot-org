@@ -13,7 +13,7 @@ module Api::V1::Pd
       survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[params[:course]]
 
       survey_report[:all_my_workshops_for_course], facilitator_scores = get_score_for_workshops(
-        ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id), facilitator_breakdown: true
+        ::Pd::Workshop.where(course: params[:course], organizer_id: current_user.id).in_state(::Pd::Workshop::STATE_ENDED), facilitator_breakdown: true
       )
       survey_report.merge!(facilitator_scores)
 

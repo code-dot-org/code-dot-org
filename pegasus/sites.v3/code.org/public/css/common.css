@@ -3,13 +3,15 @@
 }
 
 .solid-block-header {
-  font-size: 32px;
+  font-size: 30px;
   font-family: 'Gotham 7r', sans-serif;
   line-height: 1.2em;
   background-color: #7665a0;
   color: white;
-  height: 60px;
+  height: auto;
+  width: 100%;
   padding-top: 12px;
+  padding-bottom: 6px;
   padding-left: 15px;
   margin: 50px 0 10px 0;
 }
@@ -403,6 +405,11 @@
   padding-right: .5em;
 }
 
+button {
+  margin-top: 10px;
+}
+
+
 /* Promote page */
 #promote-page h1 {
   float: left;
@@ -634,6 +641,7 @@
   line-height: 20px;
   box-sizing: border-box;
   cursor: pointer;
+  margin-top: -6px;
   a:hover {
     text-decoration: none;
     background-color: #ffa400;

@@ -1056,6 +1056,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     left: 8px;
     line-height: $workspace-headers-height;
     color: $lighter_purple;
+    cursor: pointer;
+    &:hover.fa {
+      color: $white;
+    }
   }
 
   #hide-toolbox-icon {
@@ -1066,13 +1070,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     width: 270px;
     border-right: 1px solid gray;
     float: left;
-
-    &.toggleable {
-      cursor: pointer;
-      &:hover .fa {
-        color: $white;
-      }
-    }
   }
   #show-toolbox-header {
     border: 0;

@@ -3,7 +3,7 @@
 # If there are no provided answers, any input will match.
 class TextMatchDSL < ContentDSL
   def initialize
-    @hash = { answers: [] }
+    @hash = {answers: []}
   end
 
   def height(text) @hash[:height] = text end

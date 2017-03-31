@@ -56,7 +56,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Door Open\r\n\r\nGetting close! Lets set up the door to get ready for opening it.\r\n\r\n# Do This\r\n\r\n* Add image for the outdoors that is hidden. It will be shown when door opens\r\n* Add an `onEvent` block for clicking on the door\r\n* Add an `if` statement inside the `onEvent` to check if gotKey is true\r\n* Inside the `if` statement use `showElement` to show the hidden outdoors image if they got the key",
+    "markdown_instructions": "# Door Open\r\n\r\n<img src=\"https://images.code.org/71be23f252752b52d69f2771bd744afe-image-1490371601633.05.53 PM.png\" style=\"width:200px;float:right\">\r\n\r\nGetting close! Lets set up the door to get ready for opening it.\r\n\r\n# Do This\r\n\r\n* Add image for the outdoors that is hidden. It will be shown when door opens",
     "contained_level_names": null
   },
   "published": true,

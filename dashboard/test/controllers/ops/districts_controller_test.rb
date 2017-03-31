@@ -20,7 +20,7 @@ module Ops
     end
 
     test 'Ops team can list all districts' do
-      assert_routing({ path: "#{API}/districts", method: :get }, { controller: 'ops/districts', action: 'index' })
+      assert_routing({path: "#{API}/districts", method: :get}, {controller: 'ops/districts', action: 'index'})
 
       get :index
       assert_response :success
@@ -52,7 +52,7 @@ module Ops
 
     test 'Ops team can create Districts' do
       #87053952
-      assert_routing({ path: "#{API}/districts", method: :post }, { controller: 'ops/districts', action: 'create' })
+      assert_routing({path: "#{API}/districts", method: :post}, {controller: 'ops/districts', action: 'create'})
 
       assert_difference 'District.count' do
         post :create, params: {district: {name: 'test district'}}
@@ -62,7 +62,7 @@ module Ops
 
     test 'Ops team can create District with district contact' do
       #87053952
-      assert_routing({ path: "#{API}/districts", method: :post }, { controller: 'ops/districts', action: 'create' })
+      assert_routing({path: "#{API}/districts", method: :post}, {controller: 'ops/districts', action: 'create'})
 
       assert_creates(District, User) do
         post :create, params: {
@@ -97,14 +97,14 @@ module Ops
     end
 
     test 'read district info' do
-      assert_routing({ path: "#{API}/districts/1", method: :get }, { controller: 'ops/districts', action: 'show', id: '1' })
+      assert_routing({path: "#{API}/districts/1", method: :get}, {controller: 'ops/districts', action: 'show', id: '1'})
 
       get :show, params: {id: @district.id}
       assert_response :success
     end
 
     test 'update district info' do
-      assert_routing({ path: "#{API}/districts/1", method: :patch }, { controller: 'ops/districts', action: 'update', id: '1' })
+      assert_routing({path: "#{API}/districts/1", method: :patch}, {controller: 'ops/districts', action: 'update', id: '1'})
 
       new_name = 'New district name'
       patch :update, params: {id: @district.id, district: {name: new_name}}
@@ -117,7 +117,7 @@ module Ops
     test 'assigning district contact to district creates new user' do
       old_district_contact = @district.contact
 
-      assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
+      assert_routing({path: "#{API}/districts/1", method: :put}, {controller: 'ops/districts', action: 'update', id: '1'})
       assert_creates(User) do
         put :update, params: {
           id: @district.id,
@@ -153,7 +153,7 @@ module Ops
       assert dc.teacher?
       refute dc.district_contact?
 
-      assert_routing({ path: "#{API}/districts/1", method: :put }, { controller: 'ops/districts', action: 'update', id: '1' })
+      assert_routing({path: "#{API}/districts/1", method: :put}, {controller: 'ops/districts', action: 'update', id: '1'})
       assert_does_not_create(User) do
         put :update, params: {
           id: @district.id,
@@ -178,7 +178,7 @@ module Ops
     end
 
     test 'delete district' do
-      assert_routing({ path: "#{API}/districts/1", method: :delete }, { controller: 'ops/districts', action: 'destroy', id: '1' })
+      assert_routing({path: "#{API}/districts/1", method: :delete}, {controller: 'ops/districts', action: 'destroy', id: '1'})
 
       assert_difference 'District.count', -1 do
         delete :destroy, params: {id: @district.id}

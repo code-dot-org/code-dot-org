@@ -140,15 +140,15 @@ def analyze_day_fast(date)
     'countries' => countries,
     'tutorials' => tutorials,
     'codedotorg_tutorial_count' => codedotorg_tutorial_count,
-    'votes' => { 'boys' => '0', 'girls' => '0' },
+    'votes' => {'boys' => '0', 'girls' => '0'},
   }
 end
 
 def add_hashes(h1, h2)
   unsorted = {}
-  (h1.keys + h2.keys).uniq.each { |key| unsorted[key] = h1[key].to_i + h2[key].to_i }
+  (h1.keys + h2.keys).uniq.each {|key| unsorted[key] = h1[key].to_i + h2[key].to_i}
 
   sorted = {}
-  unsorted.keys.sort { |a, b| unsorted[b] <=> unsorted[a] }.each { |i| sorted[i] = unsorted[i] }
+  unsorted.keys.sort {|a, b| unsorted[b] <=> unsorted[a]}.each {|i| sorted[i] = unsorted[i]}
   sorted
 end

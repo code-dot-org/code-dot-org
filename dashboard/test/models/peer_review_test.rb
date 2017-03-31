@@ -170,7 +170,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'pull review from pool handles stale reviews' do
     reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
-      3.times { teachers << create(:teacher) }
+      3.times {teachers << create(:teacher)}
     end
 
     level_source = create(:level_source, data: 'Some answer')
@@ -195,7 +195,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     @script.update(peer_reviews_to_complete: 2)
     Plc::EnrollmentUnitAssignment.stubs(:exists?).returns(true)
     reviewer_1, reviewer_2, reviewer_3 = [].tap do |teachers|
-      3.times { teachers << create(:teacher) }
+      3.times {teachers << create(:teacher)}
     end
 
     level_source = create(:level_source, data: 'Some answer')

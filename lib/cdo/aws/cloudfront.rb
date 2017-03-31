@@ -119,7 +119,7 @@ module AWS
       invalidations.map do |app, id, invalidation|
         cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
           waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
-          waiter.before_wait { |_| puts "Waiting for #{app} cache invalidation.." }
+          waiter.before_wait {|_| puts "Waiting for #{app} cache invalidation.."}
         end
         puts "#{app} cache invalidated!"
       end
@@ -170,7 +170,7 @@ module AWS
       ids.map do |app, id|
         cloudfront.wait_until(:distribution_deployed, id: id) do |waiter|
           waiter.max_attempts = 60 # wait up to an hour for CloudFront distribution to deploy
-          waiter.before_wait { |_| puts "Waiting for #{app} distribution to deploy.." }
+          waiter.before_wait {|_| puts "Waiting for #{app} distribution to deploy.."}
         end
         puts "#{app} distribution deployed!"
       end
@@ -207,7 +207,7 @@ module AWS
           IO.write(alias_cache, JSON.pretty_generate(out))
         end
       end
-      mapping.select { |_, v| v.include? hostname }.keys.first
+      mapping.select {|_, v| v.include? hostname}.keys.first
     end
 
     # Returns a CloudFront DistributionConfig Hash compatible with the AWS SDK for Ruby v2.

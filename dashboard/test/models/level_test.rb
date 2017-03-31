@@ -37,6 +37,22 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal({'maze' => [[0, 1], [1, 2]].to_json}, maze)
   end
 
+  test "karel checks total value" do
+    json = [[
+      {tileType: 1, value: 1},
+      {tileType: 1, value: 2},
+      {tileType: 1, value: 3},
+    ]].to_json
+
+    assert_nothing_raised do
+      Karel.parse_maze(json, 6)
+    end
+
+    assert_raises ArgumentError do
+      Karel.parse_maze(json, 7)
+    end
+  end
+
   test "cannot create two custom levels with same name" do
     assert_no_difference('Level.count') do
       level2 = Level.create(@custom_maze_data)

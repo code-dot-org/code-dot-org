@@ -10,7 +10,7 @@ video_player: true
 
 Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.  
 
-If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 

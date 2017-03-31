@@ -6,12 +6,13 @@
 {
   .phone-feature { }
 
-  .container_responsive { width: 100%; margin: 0 auto }
+  .container_responsive { width: 100%; margin: 0 auto; padding-left: 10px; padding-right: 10px}
 
-  .container_responsive h1 { font-size: 18px; margin-top: 1em; margin-bottom: .5em; }
-  .container_responsive h2 { font-size: 15px; }
+  .container_responsive h1 { font-size: 20px; margin-top: 1em; margin-bottom: .5em; }
+  .container_responsive h2 { font-size: 18px; }
   .container_responsive h3 { font-size: 12px; }
   .container_responsive h4 { font-size: 12px; }
+  .container_responsive .solid-block-header * { font-size: 20px;}
 }
 
 /* 601px-970px: capped to 600px */
@@ -48,12 +49,18 @@
   .col-23 { width: 23%; float:left; }
   .col-25 { width: 25%; float:left; }
   .col-26 { width: 26%; float:left; }
+  .col-32 { width: 32%; float:left; }
   .col-33 { width: 33%; float:left; }
   .col-36 { width: 36%; float:left; }
+  .col-40 { width: 40%; float:left; }
+  .col-45 { width: 45%; float:left; }
   .col-50 { width: 50%; float:left; }
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
   .col-80 { width: 80%; float:left; }
+  .col-95 { width: 95%; float:left; }
+  .col-80-right { width: 80%; float: right; }
+  .left-nav { width: 140px; float: left; }
 
   .desktop-pad-right { padding-right: 30px; }
 
@@ -63,7 +70,6 @@
 
   .i-agree-button { width: 9%; }
 }
-
 
 /* 970px and down: minimal headers */
 
@@ -78,12 +84,18 @@
   .col-23 { width: 100%; }
   .col-25 { width: 100%; }
   .col-26 { width: 100%; }
+  .col-32 { width: 100%; }
   .col-33 { width: 100% }
+  .col-33 img { margin-left: 25px; }
   .col-36 { width: 100% }
+  .col-40 { width: 100% }
+  .col-45 { width: 100%; float:left; }
   .col-50 { width: 100%; float:left; }
   .col-63 { width: 100%;}
-  .col-66 { width: 100% }
+  .col-66 { width: 100%; float:left; }
+  .col-66 ul { margin-left: 0px;}
   .col-80 { width: 100% }
+  .col-95 { width: 95%; float:left; }
 
   .col-mobile-50 { width: 50%; float:left; }
   .col-mobile-44 { width: 44%; float:left; }
@@ -96,7 +108,10 @@
   .mobile-pad-left64 { padding-left: 64px; }
 
   .mobile-pad-edge { padding: 20px; }
+
 }
+
+
 
 /* 512 and down: some mobile styling collapses even more */
 
@@ -109,5 +124,5 @@
   .mobile-show-medium { display: none }
 
   .mobile-small-hide { display: none }
-}
 
+}

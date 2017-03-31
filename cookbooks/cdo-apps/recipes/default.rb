@@ -55,12 +55,12 @@ include_recipe 'cdo-ruby'
 locale = 'en_US.UTF-8'
 
 execute "locale-gen #{locale}" do
-  not_if { File.exist? '/var/lib/locales/supported.d/local' }
+  not_if {File.exist? '/var/lib/locales/supported.d/local'}
 end
 
 execute 'update-locale' do
   environment LANG: locale
-  not_if { File.exist? '/etc/default/locale' }
+  not_if {File.exist? '/etc/default/locale'}
 end
 
 include_recipe 'cdo-repository'
