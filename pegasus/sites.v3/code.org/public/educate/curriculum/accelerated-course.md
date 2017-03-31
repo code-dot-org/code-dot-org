@@ -1,6 +1,7 @@
 ---
 title: K-8 Intro to Computer Science
 nav: educate_nav
+theme: responsive
 social:
   "og:description": "K-8 Intro to Computer Science is a free course that aims to demystify computer science and show K-8 students that it’s fun, collaborative, and creative."
   "og:image": "http://code.org/images/20-hour-banner.jpg"
@@ -13,7 +14,7 @@ social:
 ---
 # Teach our K-8 Intro to Computer Science
 
-<img src="/images/20-hour-banner.jpg" />
+<img src="/images/20-hour-banner.jpg" style="max-width: 100%"/>
 
 K-8 Intro to Computer Science is a free course that aims to demystify computer science and show K-8 students that it’s fun, collaborative, and creative. The course is designed to motivate students and educators to continue learning computer science to improve real world relationships, connections, and life.
 
