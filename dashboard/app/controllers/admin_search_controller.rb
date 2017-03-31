@@ -31,7 +31,7 @@ class AdminSearchController < ApplicationController
         end
         if teachers.first
           array_of_student_ids = Follower.
-            where(user_id: teachers.first[:id]).pluck('student_user_id').to_a
+            where(user: teachers.first).pluck('student_user_id').to_a
           users = users.where(id: array_of_student_ids)
         end
       end

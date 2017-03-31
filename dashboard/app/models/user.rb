@@ -729,7 +729,7 @@ class User < ActiveRecord::Base
   end
 
   def student_of?(teacher)
-    followeds.find_by_user_id(teacher.id).present?
+    teachers.include? teacher
   end
 
   def locale
@@ -1207,7 +1207,7 @@ class User < ActiveRecord::Base
   end
 
   def section_for_script(script)
-    followeds.collect(&:section).find {|section| section.script_id == script.id}
+    sections_as_student.find {|section| section.script_id == script.id}
   end
 
   # Returns the version of our Terms of Service we consider the user as having
@@ -1218,14 +1218,7 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
-    # As of August 2016, it may be the case that the `followed` exists but
-    # `followed.user` does not as the result of user deletion. In this case, we
-    # ignore any terms of service versions associated with deleted teacher
-    # accounts.
-    followeds.
-      collect {|followed| followed.user.try(:terms_of_service_version)}.
-      compact.
-      max
+    teachers.map {|teacher| teacher.try(:terms_of_service_version)}.try(:compact).try(:max)
   end
 
   # Returns whether the user has accepted the latest major version of the Terms of Service

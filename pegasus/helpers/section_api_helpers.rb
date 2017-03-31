@@ -10,11 +10,11 @@ require 'cdo/section_helpers'
 class DashboardStudent
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
-    Dashboard.db[:users].
-      join(:followers, student_user_id: :users__id).
-      join(Sequel.as(:users, :users_students), id: :followers__student_user_id).
-      where(followers__user_id: user_id, followers__deleted_at: nil).
-      where(users_students__deleted_at: nil).
+    Dashboard.db[:sections].
+      join(:followers, section_id: :sections__id).
+      join(:users, id: :followers__student_user_id).
+      where(sections__user_id: user_id).
+      where(users__deleted_at: nil, followers__deleted_at: nil).
       select(*fields).
       all
   end
@@ -105,12 +105,12 @@ class DashboardStudent
   end
 
   def self.update_if_allowed(params, dashboard_user_id)
-    user_to_update = Dashboard.db[:users].
-      where(id: params[:id], deleted_at: nil)
+    user_to_update = Dashboard.db[:users].where(id: params[:id], deleted_at: nil)
     return if user_to_update.empty?
-    return if Dashboard.db[:followers].
-      where(student_user_id: params[:id], user_id: dashboard_user_id).
-      where(deleted_at: nil).
+    return if Dashboard.db[:sections].
+      join(:followers, section_id: :sections__id).
+      where(followers__student_user_id: params[:id], sections__user_id: dashboard_user_id).
+      where(followers__deleted_at: nil).
       empty?
 
     fields = {updated_at: DateTime.now}
@@ -383,9 +383,8 @@ class DashboardSection
     created_at = DateTime.now
     Dashboard.db[:followers].insert(
       {
-        user_id: @row[:teacher_id],
-        student_user_id: student_id,
         section_id: @row[:id],
+        student_user_id: student_id,
         created_at: created_at,
         updated_at: created_at,
       }
