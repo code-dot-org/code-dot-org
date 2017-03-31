@@ -1,6 +1,6 @@
 ---
 title: Code.org Advocacy Coalition
-
+theme: responsive
 ---
 
 # Code.org Advocacy Coalition
