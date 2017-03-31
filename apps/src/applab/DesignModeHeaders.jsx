@@ -1,16 +1,21 @@
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import msg from '@cdo/locale';
+import FontAwesome from '../templates/FontAwesome';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
-import SettingsCog from '../lib/ui/SettingsCog';
 
 const DesignModeHeaders = React.createClass({
   propTypes: {
+    handleManageAssets: React.PropTypes.func.isRequired,
     handleVersionHistory: React.PropTypes.func.isRequired,
     onToggleToolbox: React.PropTypes.func.isRequired,
     isToolboxVisible: React.PropTypes.bool.isRequired,
     localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
     isRunning: React.PropTypes.bool.isRequired,
+  },
+
+  handleManageAssets: function () {
+    this.props.handleManageAssets();
   },
 
   onToggleToolbox: function () {
@@ -42,6 +47,19 @@ const DesignModeHeaders = React.createClass({
       }
     };
 
+    var manageAssetsIcon = (
+      <span style={styles.iconContainer}>
+        <FontAwesome
+          icon="cog"
+          className="workspace-header-clickable"
+          id="manage-assets-button"
+          style={styles.assetsIcon}
+          onClick={this.handleManageAssets}
+          title={applabMsg.manageAssets()}
+        />
+      </span>
+    );
+
     const isRtl = this.props.localeDirection === 'rtl';
     const hasFocus = !this.props.isRunning;
 
@@ -53,7 +71,7 @@ const DesignModeHeaders = React.createClass({
         style={{color: 'white'}}
       >
         <PaneSection id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
-          <SettingsCog/>
+          {manageAssetsIcon}
           <span>{applabMsg.designToolboxHeader()}</span>
           <span className="workspace-header-clickable" onClick={this.onToggleToolbox}>&nbsp;{msg.hideToolbox()}</span>
         </PaneSection>
@@ -63,7 +81,7 @@ const DesignModeHeaders = React.createClass({
           style={styles.showToolboxHeader}
         >
           <span className="workspace-header-clickable">{msg.showToolbox()}</span>
-          <SettingsCog/>
+          {manageAssetsIcon}
         </PaneSection>
         <PaneButton
           id="design-mode-versions-header"

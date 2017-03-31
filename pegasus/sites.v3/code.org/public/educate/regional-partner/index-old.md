@@ -7,7 +7,7 @@ video_player: true
 
 ## About the Program
 
-Code.org is selecting United States based organizations, as partners, to help spread computer science in a local, sustainable fashion. The goal of the Regional Partner program is to help each organization establish itself as the K-12 computer science hub for their region, offering professional leaerning opportunities for teachers and building a strong local community. In the long-run, the expectation is that each partner organization can sustain this work independently of Code.org.
+Code.org is selecting United States based organizations, as partners, to help spread computer science in a local, sustainable fashion. The goal of the Regional Partner program is to help each organization establish itself as a local partner of the Code.org professional learning community, with an expectation that in the long-run each partner organization can sustain this work independently of Code.org.
 
 Each partner's program manager will attend our Program Manager Summit, a fabulous experience designed to welcome Regional Partners to the extended Code.org family. In addition, we will provide funding based on demonstrated need to help each organization establish itself as a local Code.org Regional Partner.
 
