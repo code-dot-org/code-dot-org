@@ -55,7 +55,7 @@ describe("Tests for Teacher Application", () => {
   });
 
   const defaultAccountEmail = 'ben@upenn.edu';
-  const getEmailHash = email => MD5(email).toString();
+  const getEmailHash = email => MD5(email.toLowerCase()).toString();
   const defaultAccountInfo = {
     email: defaultAccountEmail,
     hashedEmail: getEmailHash(defaultAccountEmail)
