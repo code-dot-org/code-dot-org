@@ -1,6 +1,7 @@
 ---
 title: Full Team
 nav: about_nav
+theme: responsive
 ---
 
 # Our Team
