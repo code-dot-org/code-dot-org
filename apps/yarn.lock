@@ -6040,9 +6040,9 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-johnny-five@0.9.62:
-  version "0.9.62"
-  resolved "https://registry.yarnpkg.com/johnny-five/-/johnny-five-0.9.62.tgz#155f80d9ceea098d601b9c5d2eee0a0c4e9d3189"
+johnny-five@code-dot-org/johnny-five#d284f5ff67e0e287e543d6a483375cdaa8b3c41d:
+  version "0.9.62-cdo.0"
+  resolved "https://codeload.github.com/code-dot-org/johnny-five/tar.gz/d284f5ff67e0e287e543d6a483375cdaa8b3c41d"
   dependencies:
     chalk latest
     color-convert "~1.2.2"
