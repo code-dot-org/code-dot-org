@@ -437,7 +437,7 @@ en:
     student_ids_not_entered: "Please provide student_ids."
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
-    already_enrolled_in_new_section: "You cannot move these students because this teacher already has them in another section."
+    already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
   share:
     title: "Learn on Code Studio"
     description: "Anyone can learn computer science. Make games, apps and art with code."
