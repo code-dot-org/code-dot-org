@@ -2098,6 +2098,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
   const hideToolboxIcon = document.getElementById('hide-toolbox-icon');
   const showToolboxHeader = document.getElementById('show-toolbox-header');
+  const showToolboxClickTarget = document.getElementById('show-toolbox-click-target');
   if (hideToolboxIcon && showToolboxHeader) {
     hideToolboxIcon.style.display = 'inline-block';
     const handleTogglePalette = () => {
@@ -2111,7 +2112,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       }
     };
     dom.addClickTouchEvent(hideToolboxIcon, handleTogglePalette);
-    dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
+    dom.addClickTouchEvent(showToolboxClickTarget, handleTogglePalette);
   }
 
   this.resizeToolboxHeader();
