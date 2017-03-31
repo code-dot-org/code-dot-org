@@ -145,16 +145,18 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'section_type validation' do
-    @section.section_type = 'invalid_section_type'
-    refute @section.valid?
-    assert_equal 1, @section.errors.count
-    assert_equal 'Section type is not included in the list', @section.errors.full_messages.first
+    section = create :section
 
-    @section.section_type = Section::TYPES.first
-    assert @section.valid?
+    section.section_type = 'invalid_section_type'
+    refute section.valid?
+    assert_equal 1, section.errors.count
+    assert_equal 'Section type is not included in the list', section.errors.full_messages.first
 
-    @section.section_type = nil
-    assert @section.valid?
+    section.section_type = Section::TYPES.first
+    assert section.valid?
+
+    section.section_type = nil
+    assert section.valid?
   end
 
   test 'workshop_section?' do
