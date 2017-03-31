@@ -135,7 +135,6 @@ var storybookConfig = _.extend({}, baseConfig, {
       BUILD_STYLEGUIDE: JSON.stringify(true),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
-    new webpack.IgnorePlugin(/^serialport$/),
   ]
 });
 

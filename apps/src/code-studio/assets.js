@@ -1,3 +1,4 @@
-import showAssetManager from './assets/show';
-import listStore from './assets/assetListStore';
-export {showAssetManager, listStore};
+module.exports = {
+  showAssetManager: require('./assets/show'),
+  listStore: require('./assets/assetListStore')
+};
