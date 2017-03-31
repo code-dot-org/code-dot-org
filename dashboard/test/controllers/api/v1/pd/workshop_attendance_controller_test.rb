@@ -11,14 +11,14 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     @workshop.start!
 
     @teacher = create :teacher, sign_in_count: 1
-    @workshop.section.add_student @teacher
+    @workshop.section.add_student @teacher, move_for_same_teacher: false
     @session = @workshop.sessions.first
 
     @other_workshop = create :pd_workshop, num_sessions: 1
     @other_workshop.start!
 
     @other_teacher = create :teacher, sign_in_count: 1
-    @other_workshop.section.add_student @other_teacher
+    @other_workshop.section.add_student @other_teacher, move_for_same_teacher: false
   end
 
   API = '/api/v1/pd/workshops'
