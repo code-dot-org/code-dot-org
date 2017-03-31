@@ -1,8 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {UpcomingWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/upcomingWorkshops';
+import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/enrolledWorkshops';
 import {expect} from 'chai';
-import ReactTestUtils from 'react-addons-test-utils';
 
 describe("Tests for the upcoming workshops page", () => {
   const workshops = [
@@ -18,7 +17,8 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_code: 'code1'
+      enrollment_code: 'code1',
+      state: 'Not Started'
     },
     {
       id: 2,
@@ -32,7 +32,8 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_code: 'code2'
+      enrollment_code: 'code2',
+      state: 'In Progress'
     },
     {
       id: 3,
@@ -46,26 +47,27 @@ describe("Tests for the upcoming workshops page", () => {
       capacity: 15,
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_code: ''
+      enrollment_code: 'code3',
+      state: 'Ended'
     }
   ];
 
   it("Clicking cancel enrollment cancels the enrollment", () => {
-    const upcomingWorkshopsTable = shallow(
-      <UpcomingWorkshopsTable
+    const enrolledWorkshopsTable = shallow(
+      <EnrolledWorkshopsTable
         workshops={workshops}
       />
     );
 
     // We expect there to be a table with 3 rows in the body, two of which have two buttons
-    expect(upcomingWorkshopsTable.find('tbody tr')).to.have.length(3);
-    expect(upcomingWorkshopsTable.find('tbody tr Button')).to.have.length(4);
-    expect(upcomingWorkshopsTable.state('showCancelModal')).to.be.false;
-    expect(upcomingWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
+    expect(enrolledWorkshopsTable.find('tbody tr')).to.have.length(3);
+    expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(5);
+    expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.false;
+    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(undefined);
 
     // Pushing the button should bring up the modal
-    upcomingWorkshopsTable.find('tbody tr Button').first().simulate('click');
-    expect(upcomingWorkshopsTable.state('showCancelModal')).to.be.true;
-    expect(upcomingWorkshopsTable.state('enrollmentCodeToCancel')).to.equal('code1');
+    enrolledWorkshopsTable.find('tbody tr Button').first().simulate('click');
+    expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.true;
+    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal('code1');
   });
 });
