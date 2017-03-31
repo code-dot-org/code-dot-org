@@ -115,6 +115,9 @@ var CodeWorkspace = React.createClass({
       styles.chevron,
       runModeIndicators && isRunning && styles.runningIcon
     ];
+
+    const settingsCog = showSettingsCog &&
+        <SettingsCog {...{isRunning, runModeIndicators}}/>;
     return [
       <PaneSection
         id="toolbox-header"
@@ -128,21 +131,24 @@ var CodeWorkspace = React.createClass({
         <span style={textStyle}>
           {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
         </span>
-        {showSettingsCog && <SettingsCog {...{isRunning, runModeIndicators}}/>}
+        {settingsCog}
       </PaneSection>,
       <PaneSection
         id="show-toolbox-header"
         key="show-toolbox-header"
         style={commonStyles.hidden}
       >
-        <i
-          id="show-toolbox-icon"
-          style={chevronStyle}
-          className="fa fa-chevron-circle-right"
-        />
-        <span>
-          {msg.showToolbox()}
+        <span id="show-toolbox-click-target">
+          <i
+            id="show-toolbox-icon"
+            style={chevronStyle}
+            className="fa fa-chevron-circle-right"
+          />
+          <span>
+            {msg.showToolbox()}
+          </span>
         </span>
+        {settingsCog}
       </PaneSection>
     ];
   },
