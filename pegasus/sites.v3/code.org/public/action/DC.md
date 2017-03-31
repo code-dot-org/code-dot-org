@@ -55,7 +55,7 @@ What’s a good way to get kids excited about computer science?
 
 + Try the [Hour of Code](http://hourofcode.com)! Or one of the [other tutorials](/learn/beyond) from Code.org and our many partners. Students have written over 5 billion lines of code, 1 billion of which was written in January 2015. Students of all ages love learning how to code and about computer science through fun and interactive curriculum.
 
-How can our district get more girls and underrepresented students of color taking computer science?
+How can our district get more girls and underrepresented minorities taking computer science?
 
 + Research shows that underrepresented students—especially girls—are more likely to take computer science if it counts as academic credit.
 + The Hour of Code is a great way to de-mystify computer science. In 2014 alone, of the 60 million students who tried the Hour of Code nearly 48% were female (among all participants) and 36% were African American, Hispanic American, or Native American (among the US participants). 

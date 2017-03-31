@@ -37,7 +37,7 @@ Designed for ages 6 and up, the “Minecraft” tutorial introduces players to b
 
 “‘Minecraft’ is a special game that girls and boys alike often can’t be pried away from,” said Code.org CEO and Co-founder Hadi Partovi. “Microsoft continues to be Code.org’s most generous donor and one of the largest supporters of the worldwide movement to give every student the opportunity to learn computer science. This year’s ‘Minecraft’ tutorial will empower millions of learners around the world to explore how a game they love actually works and will inspire them to impact the world by creating their own technology or apps.” 
 
-To date, more than 100 million students across 180 countries and 40 languages have participated in the Hour of Code, including one in three students in U.S. schools. This year, the campaign expects to exceed 100,000 events during Dec. 7−13 and to continue introducing more girls and underrepresented students of color to this foundational 21st century field. 
+To date, more than 100 million students across 180 countries and 40 languages have participated in the Hour of Code, including one in three students in U.S. schools. This year, the campaign expects to exceed 100,000 events during Dec. 7−13 and to continue introducing more girls and underrepresented minorities to this foundational 21st century field. 
 
 In support of Code.org and the global Hour of Code campaign, Microsoft will also lead thousands of Hour of Code events in more than 50 countries around the world. Events will take place at Microsoft stores, offices and innovation centers as well as facilities of Microsoft’s YouthSpark nonprofit partners and schools. They will be led by over 7,000 Microsoft Student Partners, Most Valuable Professionals (MVPs) and employee volunteers. In addition, Microsoft is gifting Windows Store credit to every educator who organizes an Hour of Code event worldwide. 
 
@@ -49,7 +49,7 @@ In support of Code.org and the global Hour of Code campaign, Microsoft will also
 
 **About Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding access to computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer science. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Ballmer Family Giving, Google, Infosys Foundation USA, Microsoft, Omidyar Network and others.
+Code.org is a 501c3 public non-profit dedicated to expanding access to computer science and increasing participation by women and underrepresented minorities. Its vision is that every student in every school should have the opportunity to learn computer science. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Ballmer Family Giving, Google, Infosys Foundation USA, Microsoft, Omidyar Network and others.
 
  **About Microsoft**
 
