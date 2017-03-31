@@ -23,7 +23,7 @@ var styles = {
   chevron: {
     fontSize: 18,
   },
-  runningChevron: {
+  runningIcon: {
     color: color.dark_charcoal
   },
   blocksGlyph: {
@@ -112,8 +112,9 @@ var CodeWorkspace = React.createClass({
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = [
       styles.chevron,
-      this.runModeIndicators() && isRunning && styles.runningChevron
+      this.runModeIndicators() && isRunning && styles.runningIcon
     ];
+    const cogStyle = this.runModeIndicators() && isRunning ? styles.runningIcon : undefined;
     return [
       <PaneSection
         id="toolbox-header"
@@ -127,7 +128,7 @@ var CodeWorkspace = React.createClass({
         <span style={textStyle}>
           {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
         </span>
-        {showSettingsCog && <SettingsCog/>}
+        {showSettingsCog && <SettingsCog style={cogStyle}/>}
       </PaneSection>,
       <PaneSection
         id="show-toolbox-header"
