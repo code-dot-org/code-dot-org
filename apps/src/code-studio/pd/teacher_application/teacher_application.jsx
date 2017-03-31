@@ -102,13 +102,14 @@ const TeacherApplication = React.createClass({
     // Validate primary email is a valid email string, and that it matches the account email.
     // In case it's an accidental student account (which will be converted to teacher on submit)
     // compare with the hashed email.
+    // Note: this function relies on the props.hashedAccountEmail, so it must be created in a lifecycle method.
     const validatePrimaryEmail = (value) => {
       const isEmailError = isEmail(value);
       if (isEmailError) {
         return isEmailError;
       }
 
-      if (MD5(value).toString() !== this.props.hashedAccountEmail) {
+      if (MD5(value.toLowerCase()).toString() !== this.props.hashedAccountEmail) {
         return (
           <div>
             Primary email must match your login.
