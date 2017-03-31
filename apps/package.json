@@ -118,7 +118,7 @@
     "http-proxy": "1.11.1",
     "http-server": "^0.9.0",
     "immutable": "3.8.1",
-    "johnny-five": "0.9.62",
+    "johnny-five": "code-dot-org/johnny-five#d284f5ff67e0e287e543d6a483375cdaa8b3c41d",
     "jquery": "2.1.4",
     "jquery-ui": "1.10.5",
     "js-cookie": "^2.1.2",
