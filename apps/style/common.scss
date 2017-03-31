@@ -1081,7 +1081,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     }
 
     & > span {
-      margin: auto 18px;
+      margin: auto auto auto 18px;
     }
   }
   #blockCounter, #blockUsed {
