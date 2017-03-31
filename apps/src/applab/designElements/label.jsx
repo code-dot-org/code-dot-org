@@ -198,7 +198,7 @@ export default {
         size.width = Math.min(clone.width() + 1 + 2 * padding, applabConstants.APP_WIDTH - clone.position().left);
       }
       if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
-        size.height = clone.height() + 1 + 2 * padding + 'px';
+        size.height = clone.height() + 1 + 2 * padding;
       }
 
       clone.remove();
@@ -210,6 +210,20 @@ export default {
 
   resizeToFitText: function (element) {
     var size = this.getBestSize(element);
+    if (element.style.textAlign !== 'left') {
+      var left = parseInt(element.style.left, 10);
+      var width = parseInt(element.style.width, 10);
+      // Positive delta means that it is getting wider
+      var delta = size.width - width;
+      if (element.style.textAlign === 'right') {
+        left -= delta;
+      } else {
+        // assume middle
+        left -= delta / 2;
+      }
+      // Don't move text past the left side
+      element.style.left = Math.max(0, left) + 'px';
+    }
     element.style.width = size.width + 'px';
     element.style.height = size.height + 'px';
   },
