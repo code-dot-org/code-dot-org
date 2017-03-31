@@ -2,11 +2,12 @@
 title: Teacher Resources - MINECRAFT
 nav: hoc_teacher_resources_nav
 video_player: true
+theme: responsive
 ---
 
 # MINECRAFT Hour of Code
 
-<div style="width: 600px;">
+<div style="width: 600px; max-width:100%">
 <%= view :display_video_thumbnail, id: "mc_video", video_code: "dfPF33rG9ms", play_button: 'center' %>
 </div>
 

@@ -2,6 +2,7 @@
 title: Volunteer in a Classroom
 require_https: true
 video_player: true
+theme: responsive
 ---
 
 # Employees Volunteer in a Classroom
@@ -130,40 +131,34 @@ Your employees are volunteering in their communities and spreading the word abou
 
 <div class="col-33" style="float:left; padding:10px">
 
-  <%= view :display_video_thumbnail, id: "uniqueid", video_code: "nKIu9yen5nc", letterbox: 'false' %>
-What most schools don't teach
+  <%= view :display_video_thumbnail, id: "uniqueid", video_code: "nKIu9yen5nc", letterbox: 'false', caption: "What most schools don't teach" %>
 </div>
 
 <div class="col-33" style="float:left; padding:10px">
 
-  <%= view :display_video_thumbnail, id: "uniqueid2", video_code: "QvyTEx1wyOY", letterbox: 'false' %>
-Computer Science is Changing Everything
+  <%= view :display_video_thumbnail, id: "uniqueid2", video_code: "QvyTEx1wyOY", letterbox: 'false', caption: "Computer Science is Changing Everything" %>
 </div>
 
 <div class="col-33" style="float:left; padding:10px">
 
-  <%= view :display_video_thumbnail, id: "uniqueid6", video_code: "qYZF6oIZtfc", letterbox: 'false' %>
-Anybody Can Learn
+  <%= view :display_video_thumbnail, id: "uniqueid6", video_code: "qYZF6oIZtfc", letterbox: 'false', caption: "Anybody Can Learn" %>
 </div>
 
 <div style="clear: both;"></div>
 
 <div class="col-33" style="float:left; padding:10px">
 
-  <%= view :display_video_thumbnail, id: "uniqueid4", video_code: "cFdncBMDtP8", letterbox: 'false' %>
-Malala Challenges Girls to do the Hour of Code
+  <%= view :display_video_thumbnail, id: "uniqueid4", video_code: "cFdncBMDtP8", letterbox: 'false', caption: "Malala Challenges Girls to do the Hour of Code" %>
 </div>
 
 <div class="col-33" style="float:left; padding:10px">
 
-  <%= view :display_video_thumbnail, id: "uniqueid5", video_code: "KsOIlDT145A", download_path: '//videos.code.org/social/what-most-schools-dont-teach.mp4', letterbox: 'false' %>
-Hour of Code - WORLDWIDE
+  <%= view :display_video_thumbnail, id: "uniqueid5", video_code: "KsOIlDT145A", download_path: '//videos.code.org/social/what-most-schools-dont-teach.mp4', letterbox: 'false', caption: "Hour of Code - WORLDWIDE" %>
 </div>
 
 <div class="col-33" style="float:left; padding:10px">
 
-  <%= view :display_video_thumbnail, id: "uniqueid3", video_code: "FC5FbmsH4fw", letterbox: 'false' %>
-The Hour of Code is Here
+  <%= view :display_video_thumbnail, id: "uniqueid3", video_code: "FC5FbmsH4fw", letterbox: 'false', caption: "The Hour of Code is Here" %>
 </div>
 
 <div style="clear: both;"></div>

@@ -1,5 +1,6 @@
 ---
 title: Support Computer Science in Washington
+theme: responsive
 social:
   "og:title": "60 business and education leaders ask Washington to expand computer science"
   "og:description": "Washington CEOs, superintendents and nonprofit leaders unite around comprehensive legislation. In a letter, they urge Washington state to help schools catch up to 21st century demands."
