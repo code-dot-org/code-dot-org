@@ -431,11 +431,8 @@ en:
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
-    section_code_not_entered: "Please provide current_section_code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
     current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
-    students_not_yours: "You cannot move students from a section that does not belong to you."
-    stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
     student_ids_not_entered: "Please provide student_ids."
     student_not_found: "One or more students could not be found."
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
