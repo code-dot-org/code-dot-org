@@ -83,7 +83,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'add_student adds student to section' do
     # even when the student is in another section from a different teacher
-    create(:section).add_student @student
+    create(:section).add_student @student, move_for_same_teacher: false
 
     assert_creates(Follower) do
       @section.add_student @student
