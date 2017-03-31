@@ -188,7 +188,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   test 'create attendance' do
     sign_in @organizer
     teacher = create :teacher
-    @workshop.section.add_student teacher
+    @workshop.section.add_student teacher, move_for_same_teacher: false
 
     # set_attendance is idempotent
     assert_creates Pd::Attendance do
@@ -243,7 +243,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   test 'delete_attendance' do
     sign_in @organizer
     teacher = create :teacher
-    @workshop.section.add_student teacher
+    @workshop.section.add_student teacher, move_for_same_teacher: false
     create :pd_attendance, session: @session, teacher: teacher
 
     # delete_attendance is idempotent
@@ -258,7 +258,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   test 'create delete and create restores the original record' do
     sign_in @organizer
     teacher = create :teacher
-    @workshop.section.add_student teacher
+    @workshop.section.add_student teacher, move_for_same_teacher: false
 
     create_attendance @workshop, @session, teacher
     assert_response :success

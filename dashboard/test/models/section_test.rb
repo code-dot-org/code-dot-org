@@ -86,14 +86,14 @@ class SectionTest < ActiveSupport::TestCase
     create(:section).add_student @student, move_for_same_teacher: false
 
     assert_creates(Follower) do
-      @section.add_student @student
+      @section.add_student @student, move_for_same_teacher: false
     end
     assert @section.students.exists?(@student.id)
     assert_equal 2, Follower.where(student_user_id: @student.id).count
   end
 
   test 'add_student in another section from the same teacher moves student' do
-    @section.add_student @student
+    @section.add_student @student, move_for_same_teacher: true
     new_section = create :section, user: @teacher
 
     # Initially, student is in original_section
@@ -101,7 +101,7 @@ class SectionTest < ActiveSupport::TestCase
     refute new_section.students.exists?(@student.id)
 
     assert_does_not_create(Follower) do
-      new_section.add_student @student
+      new_section.add_student @student, move_for_same_teacher: true
     end
 
     # Verify student has been moved to new_section
@@ -128,7 +128,7 @@ class SectionTest < ActiveSupport::TestCase
     organizer = create :teacher
     attendee = create :teacher
     original_section = create :section, user: organizer
-    original_section.add_student attendee
+    original_section.add_student attendee, move_for_same_teacher: false
     new_section = create :section, user: organizer
 
     # Initially, student is in original_section
@@ -172,7 +172,7 @@ class SectionTest < ActiveSupport::TestCase
     def verify(actual, expected)
       section = create :section
       actual.each do |name|
-        section.add_student(create(:student, name: name))
+        section.add_student create(:student, name: name), move_for_same_teacher: false
       end
       result = section.name_safe_students.map(&:name)
       assert_equal expected, result
