@@ -1,7 +1,7 @@
 export const N_COLOR_LEDS = 10;
 export const TOUCH_PINS = [0, 1, 2, 3, 6, 9, 10, 12];
 
-export const SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
+export const SENSOR_VARS = ['soundSensor', 'lightSensor'];
 export const BUTTON_VARS = ['buttonL', 'buttonR'];
 // TODO (captouch)
 // const TOUCH_PAD_VARS = TOUCH_PINS.map(pin => `touchPad${pin}`);

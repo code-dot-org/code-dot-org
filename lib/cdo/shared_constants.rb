@@ -221,6 +221,8 @@ module SharedConstants
       "setScale": null,
       "start": null,
       "getAveragedValue": null,
+      "tempSensor.F": null,
+      "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     }
