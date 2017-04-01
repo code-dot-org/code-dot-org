@@ -119,6 +119,9 @@ export const blocks = [
   {func: 'setScale', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.setScale", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['0', '100'], paletteParams: ['low', 'high']},
   {func: 'threshold', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.threshold", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, type: 'property', tipPrefix: '[Sensor].' },
 
+  {func: 'tempSensor.F', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
+  {func: 'tempSensor.C', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
+
   // TODO(bjordan): re-add when dropdowns work with object refs
   //{func: 'toggleSwitch', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'toggleSwitch.isOpen', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
