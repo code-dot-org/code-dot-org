@@ -86,6 +86,22 @@ class Pd::TeacherApplication < ActiveRecord::Base
     end
   end
 
+  validate :primary_email_must_match_user_email
+  def primary_email_must_match_user_email
+    if user && user.hashed_email != Digest::MD5.hexdigest(primary_email)
+      account_settings_link = ActionController::Base.helpers.link_to('account settings', '/users/edit')
+      errors.add(
+        :primary_email,
+        "must match your login. If you want to use this email instead, first update it in #{account_settings_link}."
+      )
+    end
+  end
+
+  after_create :ensure_user_is_a_teacher
+  def ensure_user_is_a_teacher
+    user.update!(user_type: User::TYPE_TEACHER, email: primary_email) if user.email.blank?
+  end
+
   def application_json=(json)
     write_attribute :application, json
 
