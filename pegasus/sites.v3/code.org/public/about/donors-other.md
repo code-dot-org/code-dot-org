@@ -1,6 +1,7 @@
 ---
 title: All Other Donors
 nav: about_nav
+theme: responsive
 ---
 # All Other Donors
 

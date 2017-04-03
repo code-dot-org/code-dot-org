@@ -1,6 +1,7 @@
 ---
 title: CS Learning Impact Research, June 2014 - June 2015 
 nav: about_nav
+theme: responsive
 ---
 
 # June 2014 - June 2015 Program Report

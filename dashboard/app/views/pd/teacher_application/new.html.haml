@@ -35,4 +35,4 @@
 = render partial: 'shared/school_info', locals: {form_name: "school_info", suppress_scrolling: true, assume_usa: true}
 
 %div#application-container
-%script{src: minifiable_asset_path('js/pd/teacher_application/new.js')}
+%script{src: minifiable_asset_path('js/pd/teacher_application/new.js'), data: {applicationData: @application_data.to_json}}
