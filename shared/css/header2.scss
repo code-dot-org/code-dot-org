@@ -1,14 +1,16 @@
+@import 'color';
+
 #pageheader2-wrapper {
-  padding-top: 0px;
+  padding-top: 0;
 
   .pageheader-translucent {
-    background-color: #59cad3 !important;
+    background-color: $light_teal !important;
   }
 
   #pageheader {
     width: 100%;
-    background-color: rgb(0, 178, 192);
-    height: 48px;
+    background-color: $light_teal;
+    height: 40px;
     margin: 0 0 30px 0;
 
     .content {
@@ -21,18 +23,18 @@
     #left {
       padding: 10px;
       float: left;
-      margin: 0 0 0 0;
-      background-color: #00adbc;
+      margin: 0;
+      background-color: $teal;
     }
 
-    img#logo {
+    #logo {
       width: 64px;
       height: 64px;
       display: block;
       margin-top: -5px;
     }
 
-    img#logo-uk {
+    #logo-uk {
       width: 364px;
       height: 87px;
       display: block;
@@ -53,17 +55,17 @@
         font-size: 14px;
         margin: 0.5em 0 0 30px;
         font-family: 'Gotham 4r', sans-serif;
-        color: white;
+        color: $white;
         text-decoration: none;
 
         &:link, &:visited {
-          color: white;
+          color: $white;
           text-decoration: none;
         }
 
         &:hover, &:active {
-          color: white;
-          border-bottom: solid 2px rgb(255, 164, 0);
+          color: $white;
+          border-bottom: solid 2px $orange;
         }
       }
     }
@@ -75,5 +77,12 @@
     #sign_in_or_user {
       margin: 5px 0 0 0px;
     }
+  }
+
+  .user_menu {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    height: 34px;
   }
 }
