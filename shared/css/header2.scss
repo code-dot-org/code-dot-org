@@ -75,14 +75,14 @@
     }
 
     #sign_in_or_user {
-      margin: 5px 0 0 0px;
+      margin: 5px 0 0 0;
     }
   }
 
   .user_menu {
-    color: white;
+    color: $white;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid $white;
     height: 34px;
   }
 }
