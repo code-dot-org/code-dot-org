@@ -49,6 +49,7 @@ class Pd::Enrollment < ActiveRecord::Base
   validate :validate_school_name, unless: :created_before_school_info?
   validates_presence_of :school_info, unless: :created_before_school_info?
 
+  before_validation :autoupdate_user_field
   after_create :enroll_in_corresponding_online_learning
 
   def self.for_user(user)
@@ -184,6 +185,10 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   protected
+
+  def autoupdate_user_field
+    self.user = user || resolve_user
+  end
 
   def enroll_in_corresponding_online_learning
     if user && workshop.associated_online_course
