@@ -110,9 +110,12 @@ export const blocks = [
   // TODO(bjordan): re-add when dropdowns work with object refs
   //{func: 'buttonL', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   //{func: 'buttonR', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
+  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {func: 'isPressed', objectDropdown: {options: BUTTON_VARS, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${BUTTON_VARS[0]}.`, modeOptionName: "*.isPressed", type: 'readonlyproperty', tipPrefix: '[Button].'},
+  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {func: 'holdtime', objectDropdown: {options: BUTTON_VARS, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${BUTTON_VARS[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
 
+  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {func: 'value', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.value", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, type: 'readonlyproperty', tipPrefix: '[Sensor].'},
   {func: 'getAveragedValue', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.getAveragedValue", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['500'], paletteParams: ['ms'], type: 'value'},
   {func: 'start', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.start", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].'},
