@@ -13,10 +13,26 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
 
     teacher_application.user = create :teacher
     teacher_application.application = build(:pd_teacher_application_hash).to_json
-    teacher_application.primary_email = 'teacher@example.net'
+    teacher_application.primary_email = teacher_application.user.email
     teacher_application.secondary_email = 'teacher+tag@my.school.edu'
 
     assert teacher_application.valid?
+  end
+
+  test 'primary email must match user email' do
+    teacher = create :teacher
+    application = build :pd_teacher_application, user: teacher, primary_email: 'mismatch@example.net'
+
+    refute application.valid?
+    assert_equal 1, application.errors.count
+    assert_equal(
+      'Primary email must match your login. If you want to use this email instead, '\
+        'first update it in <a href="/users/edit">account settings</a>.',
+      application.errors.full_messages.first
+    )
+
+    application.primary_email = teacher.email
+    assert application.valid?
   end
 
   test 'required application field validations' do
@@ -48,7 +64,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     e = assert_raises ActiveRecord::RecordInvalid do
       create :pd_teacher_application, primary_email: 'invalid@ example.net'
     end
-    assert_equal 'Validation failed: Primary email does not appear to be a valid e-mail address', e.message
+    assert e.message.include? 'Validation failed: Primary email does not appear to be a valid e-mail address'
 
     e = assert_raises ActiveRecord::RecordInvalid do
       create :pd_teacher_application, secondary_email: 'invalid@ example.net'
@@ -123,9 +139,8 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
   end
 
   test 'validate selected course' do
-    application_hash = build :pd_teacher_application_hash
-    application_hash['selectedCourse'] = 'invalid'
-    teacher_application = build :pd_teacher_application, application_hash: application_hash
+    teacher_application = build :pd_teacher_application
+    teacher_application.update_application_hash(selectedCourse: 'invalid')
 
     refute teacher_application.valid?
     assert_equal 1, teacher_application.errors.count
@@ -214,5 +229,17 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     teacher_application.unstub(:regional_partner)
     teacher_application.expects(:regional_partner).never
     assert_equal new_partner_name, teacher_application.regional_partner_name
+  end
+
+  test 'accidental student accounts are upgraded to teacher on save' do
+    email = 'a_teacher@school.edu'
+    accidental_student = create :student, email: email
+    application = build :pd_teacher_application, user: accidental_student, primary_email: email
+    refute accidental_student.teacher?
+    assert accidental_student.email.blank?
+
+    application.save!
+    assert accidental_student.teacher?
+    assert_equal email, accidental_student.email
   end
 end

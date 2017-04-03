@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {TeacherApplication} from '@cdo/apps/code-studio/pd/teacher_application/teacher_application.jsx';
+import getScriptData from '@cdo/apps/util/getScriptData';
+
+const applicationData = getScriptData('applicationData');
 
 let schoolDistrictData = {
   ['us-or-international']: '',
@@ -23,6 +26,7 @@ ReactDOM.render(
   <TeacherApplication
     schoolDistrictData={schoolDistrictData}
     districtErrorMessageHandler={districtErrorMessageHandler}
+    {...applicationData}
   />,
   document.getElementById('application-container')
 );
@@ -60,6 +64,7 @@ let redrawApplicationFunction = function (event) {
           workshopDays={workshopDays ? `${regionalPartnerName}: ${workshopDays}` : workshopDays}
           schoolDistrictData={schoolDistrictData}
           districtErrorMessageHandler={districtErrorMessageHandler}
+          {...applicationData}
         />,
         document.getElementById('application-container')
       );
@@ -71,6 +76,7 @@ let redrawApplicationFunction = function (event) {
       <TeacherApplication
         schoolDistrictData={schoolDistrictData}
         districtErrorMessageHandler={districtErrorMessageHandler}
+        {...applicationData}
       />,
       document.getElementById('application-container')
     );
