@@ -408,6 +408,8 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
+      post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
+      get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}

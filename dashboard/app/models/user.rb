@@ -108,7 +108,7 @@ class User < ActiveRecord::Base
     closed_dialog
     nonsense
   ).freeze
-  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
+  serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races using_text_mode)
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
