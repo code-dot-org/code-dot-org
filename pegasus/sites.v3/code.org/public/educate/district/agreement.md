@@ -2,6 +2,7 @@
 title: Template District Partnership Agreement
 nav: educate_nav
 right: blank
+theme: responsive
 ---
 # Template Language for School District Agreements
 

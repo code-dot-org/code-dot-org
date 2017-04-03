@@ -1,5 +1,6 @@
 ---
 title: Code.org Diversity Advisory Council
+theme: responsive
 ---
 # Code.org Diversity Advisory Council
 

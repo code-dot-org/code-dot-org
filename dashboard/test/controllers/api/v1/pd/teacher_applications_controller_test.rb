@@ -1,35 +1,43 @@
 require 'test_helper'
 
 class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestCase
-  setup do
+  self.use_transactional_test_case = true
+  setup_all do
     @school_district = create :school_district
-    SchoolDistrict.stubs(find: @school_district)
-
     @school = create :public_school
+
+    @teacher = create :teacher
+    @test_params = {
+      application: build(:pd_teacher_application_hash, user: @teacher)
+    }
+  end
+
+  setup do
+    SchoolDistrict.stubs(find: @school_district)
     School.stubs(find: @school)
   end
 
   test 'logged in teachers can create teacher applications' do
-    sign_in create(:teacher)
+    sign_in @teacher
 
     assert_creates Pd::TeacherApplication do
-      put :create, params: test_params
-
+      put :create, params: @test_params
       assert_response :success
     end
   end
 
   # For now. Perhaps we'll render a different view explaining how to upgrade to teacher account in the future.
   test 'students can create teacher applications' do
-    sign_in create(:student)
+    @teacher.update!(user_type: :student)
+    sign_in @teacher
 
     assert_creates Pd::TeacherApplication do
-      put :create, params: test_params
+      put :create, params: @test_params
       assert_response :success
     end
   end
 
-  test_redirect_to_sign_in_for :create, method: :put, params: -> {test_params}
+  test_redirect_to_sign_in_for :create, method: :put, params: -> {@test_params}
 
   test 'admins can index teacher applications' do
     5.times do
@@ -61,9 +69,9 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
   test_user_gets_response_for :index, user: :teacher, response: :not_found
 
   test 'strip_utf8mb4' do
-    sign_in create(:teacher)
+    sign_in @teacher
 
-    application_hash = build(:pd_teacher_application_hash)
+    application_hash = build(:pd_teacher_application_hash, user: @teacher)
     application_hash['whyCsIsImportant'] = "My favorite emoji, the #{panda_panda}, would not be possible without CS"
     application_hash['subjects2017'] = ['Math', "#{panda_panda} training"]
 
@@ -78,26 +86,16 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
   end
 
   test 'multiple submissions ignores the first ones' do
-    sign_in create(:teacher)
+    sign_in @teacher
 
     assert_creates Pd::TeacherApplication do
-      put :create, params: test_params
-
+      put :create, params: @test_params
       assert_response :success
     end
 
     assert_no_difference 'Pd::TeacherApplication.count' do
-      put :create, params: test_params
-
+      put :create, params: @test_params
       assert_response :success
     end
-  end
-
-  private
-
-  def test_params
-    {
-      application: build(:pd_teacher_application_hash)
-    }
   end
 end

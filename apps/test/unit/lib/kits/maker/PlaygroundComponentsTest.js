@@ -1,5 +1,5 @@
 /** @file Playground Component setup tests */
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
@@ -169,10 +169,11 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('soundSensor', () => {
-      let soundSensor;
+      let soundSensor, pin;
 
       beforeEach(() => {
         soundSensor = createCircuitPlaygroundComponents(board).soundSensor;
+        pin = soundSensor.pin;
       });
 
       it('creates a five.Sensor', () => {
@@ -191,6 +192,62 @@ describe('Circuit Playground Components', () => {
         expect(soundSensor).to.haveOwnProperty('start');
         expect(soundSensor).to.haveOwnProperty('getAveragedValue');
         expect(soundSensor).to.haveOwnProperty('setScale');
+      });
+
+      describe('setScale', () => {
+        it('adjusts the range of values provided by .value', () => {
+          // Before setting scale, raw values are passed through to .value
+          setRawAnalogValue(pin, 0);
+          expect(soundSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 500);
+          expect(soundSensor.value).to.equal(500);
+          setRawAnalogValue(pin, 1023);
+          expect(soundSensor.value).to.equal(1023);
+
+          soundSensor.setScale(0, 100);
+
+          // After setting scale, raw values are mapped to the new range
+          setRawAnalogValue(pin, 0);
+          expect(soundSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 512);
+          expect(soundSensor.value).to.equal(50);
+          setRawAnalogValue(pin, 1023);
+          expect(soundSensor.value).to.equal(100);
+        });
+
+        it('clamps values provided by .value to the given range', () => {
+          // Before setting scale, values are not clamped
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, -1);
+          expect(soundSensor.value).to.equal(-1);
+          setRawAnalogValue(pin, 1024);
+          expect(soundSensor.value).to.equal(1024);
+
+          soundSensor.setScale(0, 100);
+
+          // Afterward, values ARE clamped
+          setRawAnalogValue(pin, -1);
+          expect(soundSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 1024);
+          expect(soundSensor.value).to.equal(100);
+        });
+
+        it('rounds values provided by .value to integers', () => {
+          // Before setting scale, raw values are not rounded
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, Math.PI);
+          expect(soundSensor.value).to.equal(Math.PI);
+          setRawAnalogValue(pin, 543.21);
+          expect(soundSensor.value).to.equal(543.21);
+
+          soundSensor.setScale(0, 100);
+
+          // Afterward, only integer values are returned
+          for (let i = 0; i < 1024; i++) {
+            setRawAnalogValue(pin, i);
+            expect(soundSensor.value % 1).to.equal(0);
+          }
+        });
       });
     });
 
@@ -221,10 +278,11 @@ describe('Circuit Playground Components', () => {
     });
 
     describe('lightSensor', () => {
-      let lightSensor;
+      let lightSensor, pin;
 
       beforeEach(() => {
         lightSensor = createCircuitPlaygroundComponents(board).lightSensor;
+        pin = lightSensor.pin;
       });
 
       it('creates a five.Sensor', () => {
@@ -243,6 +301,62 @@ describe('Circuit Playground Components', () => {
         expect(lightSensor).to.haveOwnProperty('start');
         expect(lightSensor).to.haveOwnProperty('getAveragedValue');
         expect(lightSensor).to.haveOwnProperty('setScale');
+      });
+
+      describe('setScale', () => {
+        it('adjusts the range of values provided by .value', () => {
+          // Before setting scale, raw values are passed through to .value
+          setRawAnalogValue(pin, 0);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 500);
+          expect(lightSensor.value).to.equal(500);
+          setRawAnalogValue(pin, 1023);
+          expect(lightSensor.value).to.equal(1023);
+
+          lightSensor.setScale(0, 100);
+
+          // After setting scale, raw values are mapped to the new range
+          setRawAnalogValue(pin, 0);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 512);
+          expect(lightSensor.value).to.equal(50);
+          setRawAnalogValue(pin, 1023);
+          expect(lightSensor.value).to.equal(100);
+        });
+
+        it('clamps values provided by .value to the given range', () => {
+          // Before setting scale, values are not clamped
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, -1);
+          expect(lightSensor.value).to.equal(-1);
+          setRawAnalogValue(pin, 1024);
+          expect(lightSensor.value).to.equal(1024);
+
+          lightSensor.setScale(0, 100);
+
+          // Afterward, values ARE clamped
+          setRawAnalogValue(pin, -1);
+          expect(lightSensor.value).to.equal(0);
+          setRawAnalogValue(pin, 1024);
+          expect(lightSensor.value).to.equal(100);
+        });
+
+        it('rounds values provided by .value to integers', () => {
+          // Before setting scale, raw values are not rounded
+          // (although this should not be necessary)
+          setRawAnalogValue(pin, Math.PI);
+          expect(lightSensor.value).to.equal(Math.PI);
+          setRawAnalogValue(pin, 543.21);
+          expect(lightSensor.value).to.equal(543.21);
+
+          lightSensor.setScale(0, 100);
+
+          // Afterward, only integer values are returned
+          for (let i = 0; i < 1024; i++) {
+            setRawAnalogValue(pin, i);
+            expect(lightSensor.value % 1).to.equal(0);
+          }
+        });
       });
     });
 
@@ -573,6 +687,17 @@ describe('Circuit Playground Components', () => {
       });
     });
   });
+
+  /**
+   * Simulate a raw value coming back from the board on the given pin.
+   * @param {number} pin
+   * @param {number} rawValue - usually in range 0-1023.
+   * @throws if nothing is monitoring the given analog pin
+   */
+  function setRawAnalogValue(pin, rawValue) {
+    const readCallback = board.io.analogRead.args.find(callArgs => callArgs[0] === pin)[1];
+    readCallback(rawValue);
+  }
 });
 
 /**
@@ -592,6 +717,9 @@ function newBoard() {
   // they get called.
   io.sysexCommand = sinon.spy();
   io.sysexResponse = sinon.spy();
+
+  // Spy on this so we can retrieve and use the registered callbacks if needed
+  sinon.spy(io, 'analogRead');
 
   const board = new five.Board({
     io: io,

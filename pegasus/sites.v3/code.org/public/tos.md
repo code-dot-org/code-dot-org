@@ -1,5 +1,6 @@
 ---
 title: Terms of Service
+theme: responsive
 ---
 
 # Terms of Service
