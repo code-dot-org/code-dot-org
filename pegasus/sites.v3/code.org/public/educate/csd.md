@@ -2,6 +2,7 @@
 title: CS Discoveries
 nav: educate_nav
 video_player: true
+theme: responsive
 ---
 
 # Our newest course: CS Discoveries #
@@ -18,14 +19,13 @@ Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. 
 
 CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
 
-<div style="float:right; margin:20px 0px 20px 20px;">
+<div class="col-50" style="float:right; padding: 20px 0px 20px 20px;">
 
 <%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center' %>
 
 <i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
 
 </div>
-
 
 ### <a name="equity"></a>A CS course for everyone, designed with equity in mind
 CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
@@ -82,7 +82,7 @@ Computer Science encompasses far more than just coding, and CS Discoveries will 
 
 The first semester of CS Discoveries introduces students to computer science as a vehicle for problem solving, communication, and personal expression. As a whole this semester focuses on the visible aspects of computing and computer science, encouraging students to see where computer science exists around them and how they can engage with it as a tool for exploration and expression.
 
-<div style="float:left; padding:10px; width:33%">
+<div class="col-33" style="float:left; padding:10px;">
 
 <h4> Unit 1 - Problem Solving: Computers and Logic </h4>
 
@@ -90,7 +90,7 @@ Computers are all around us, and for students much of their everyday action is i
 
 </div>
 
-<div style="float:left; padding:10px; width:33%">
+<div class="col-33" style="float:left; padding:10px;">
 
 <h4> Unit 2 - The Internet: Web Development </h4>
 
@@ -98,7 +98,7 @@ Students will find empowerment through the realization that they too can take pa
 
 </div>
 
-<div style="float:left; padding:10px; width:33%">
+<div class="col-33" style="float:left; padding:10px;">
 
 <h4> Unit 3 - Programming: Interactive Games and Animations </h4>
 
@@ -112,7 +112,7 @@ Starting off with simple primitive shapes and building up to more sophisticated 
 
 Where the first semester centers on the immediately observable and personally applicable elements of computer science, the second semester asks students to look outward and explore the impact of computer science on society. Students will see how a thorough user-centered design process produces a better application, how their personal data is collected and used on the web, and they will work with bare circuit boards to see how computers collect input and return output in a variety of ways. Through the entirety of this semester student groups will continue to iterate on and refine a mobile app that integrates everything they’ve learned throughout the course into one capstone project.
 
-<div style="float:left; padding:10px; width:33%">
+<div class="col-33" style="float:left; padding:10px;">
 
 <h4> Unit 4 - Problem Solving: The Design Process </h4>
 
@@ -120,7 +120,7 @@ With the Problem Solving Process as a basis, students will start to look at how 
 
 </div>
 
-<div style="float:left; padding:10px; width:33%">
+<div class="col-33" style="float:left; padding:10px;">
 
 <h4> Unit 5 - The Internet: Data and Society </h4>
 
@@ -128,7 +128,7 @@ Students will learn what information they leave behind online, and ways to contr
 
 </div>
 
-<div style="float:left; padding:10px; width:33%">
+<div class="col-33" style="float:left; padding:10px;">
 
 <h4> Unit 6 - Programming: The Internet of Things </h4>
 
@@ -140,7 +140,7 @@ By exploring innovative computing devices from a variety of fields, students wil
 
 ## <a name="involved"></a>Get Involved
 
-<div style="float:left; padding:25px; width:33%">
+<div class="col-33" style="float:left; padding:25px;">
 
 <h4>Try out and give feedback on drafted lessons</h4>
 
@@ -151,7 +151,7 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 </div>
 
-<div style="float:left; padding:25px; width:33%">
+<div class="col-33" style="float:left; padding:25px;">
 
 <h4>Apply now for professional learning!</h4>
 
@@ -163,7 +163,7 @@ We are now accepting applications for the 2017-18 Professional Learning Program 
 
 </div>
 
-<div style="float:left; padding:25px; width:33%">
+<div class="col-33" style="float:left; padding:25px;">
 
 <h4> Stay up to date on our progress </h4>
 
