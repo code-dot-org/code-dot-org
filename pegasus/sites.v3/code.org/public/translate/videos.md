@@ -1,6 +1,7 @@
 ---
 title: Translate Video Subtitles
 nav: translate_nav
+theme: responsive
 ---
 
 # Translate Video Subtitles
@@ -186,6 +187,6 @@ Please contact [Common Sense Media](https://www.commonsensemedia.org/contact) ab
 
 ## How to Use Amara
 
-<embed src="/files/amara.swf" width=800 height=550 />
+<embed src="/files/amara.swf" style="max-width: 100%; max-height: 550px;"/>
 
 Watch the [demo video](/files/amara.swf) in full screen.

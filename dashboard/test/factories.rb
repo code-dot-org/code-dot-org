@@ -79,7 +79,7 @@ FactoryGirl.define do
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
           create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
-          evaluator.workshop.section.add_student teacher if evaluator.in_section
+          evaluator.workshop.section.add_student teacher, move_for_same_teacher: false if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
             attended_sessions.each do |session|
@@ -586,10 +586,10 @@ FactoryGirl.define do
   end
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
+    association :user, factory: :teacher, strategy: :create
     transient do
-      application_hash {build(:pd_teacher_application_hash)}
+      application_hash {build :pd_teacher_application_hash, user: user}
     end
-    association :user, factory: :teacher, strategy: :build
     application {application_hash.to_json}
     primary_email {application_hash['primaryEmail']}
     secondary_email {application_hash['secondaryEmail']}
@@ -598,6 +598,7 @@ FactoryGirl.define do
   # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
   factory :pd_teacher_application_hash, class: 'Hash' do
     transient do
+      user nil
       association :school, factory: :public_school, strategy: :build
       association :school_district, strategy: :build
     end
@@ -608,7 +609,7 @@ FactoryGirl.define do
         'school-district' => school_district.id,
         firstName: 'Rubeus',
         lastName: 'Hagrid',
-        primaryEmail: 'rubeus@hogwarts.co.uk',
+        primaryEmail: user ? user.email : 'rubeus@hogwarts.co.uk',
         secondaryEmail: 'rubeus+also@hogwarts.co.uk',
         principalPrefix: 'Mrs.',
         principalFirstName: 'Minerva',

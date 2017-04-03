@@ -1,12 +1,12 @@
 ---
 title: Live Events for Teachers
-
+theme: responsive
 ---
 
 # Live Events for Teachers
 
 <br><br>
-<img src="/images/sotm31.jpg" width=“80%”/>
+<img src="/images/sotm31.jpg" style="max-width: 100%"/>
 
 Code.org hosts regular, free virtual events for our community. 
 

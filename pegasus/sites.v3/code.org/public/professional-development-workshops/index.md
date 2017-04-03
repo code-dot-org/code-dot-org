@@ -1,5 +1,6 @@
 ---
 title: Find a workshop
+theme: responsive
 ---
 # Find a workshop (for US teachers only, grades K-5)
 We welcome elementary school teachers to sign up for a free, high-quality professional development workshop from an experienced computer science facilitator. The workshop will provide an intro to computer science, pedagogy, overview of the online curriculum, teacher dashboard, and strategies for teaching “unplugged” classroom activities. Workshops last 6-7 hours and will prepare you to teach the Code Studio courses for grades K-5. See [what else you'll get](#get) from attending a workshop.
@@ -21,9 +22,25 @@ We welcome elementary school teachers to sign up for a free, high-quality profes
 <li>a certificate of completion</li>
 <li>a bag of Code.org swag</li></ul>
 
-<img src="/images/swagbag.png" width="175"/>
-<img src="/images/coursebook.png" width="175"/>
-<img src="/images/k5certificate.png" width="175"/> 
+[col-33]
+
+<img src="/images/fit-200/swagbag.png"/>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/fit-200/coursebook.png"/>
+
+[/col-33]
+
+[col-33]
+
+<img src="/images/fit-200/k5certificate.png"/> 
+
+[/col-33]
+
+<div style="clear:both"></div>
 
 ## Become a CS Fundamentals Facilitator for your district or region
 Learn more about our CS Fundamentals Facilitator program [here](/educate/professional-learning/cs-fundamentals-facilitator)
