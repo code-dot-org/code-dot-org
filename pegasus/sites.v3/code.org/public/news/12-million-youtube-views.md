@@ -1,5 +1,6 @@
 ---
 title: Code.org Film gets 12 million views
+theme: responsive
 ---
 
 

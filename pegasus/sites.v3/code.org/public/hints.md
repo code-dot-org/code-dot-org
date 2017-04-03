@@ -1,5 +1,6 @@
 ---
 title: Add hints to Code.org tutorials
+theme: responsive
 ---
 
 

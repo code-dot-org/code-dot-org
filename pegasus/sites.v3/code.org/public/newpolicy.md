@@ -1,5 +1,6 @@
 ---
 title: Congratulations AL, MD and WI
+theme: responsive
 social:
   "og:description": "Three U.S. states - Alabama, Maryland and Wisconsin - all passed legislation to allow rigorous computer science courses to satisfy a math or science credit for high school graduation."
   "og:image": "http://code.org/images/map.png"
@@ -22,7 +23,10 @@ Thanks to your support and our advocacy, this legislative change means 6 U.S. st
 
 And help spread this change to all American schools by [signing our petition](http://code.org).
 
-![image](/images/map.png)
+<img src="/images/map.png" style="max-width: 100%">
 
 <%= view :share_buttons, :facebook=>{:u=>'http://code.org/newpolicy'}, :twitter=>{:url=>"http://code.org/newpolicy", :related=>'codeorg', :hashtags=>'CODE', :text=>'3 new states make computer science count! @codeorg'} %>
 <%= view 'popup_window.js' %>
+
+<br>
+<br>
