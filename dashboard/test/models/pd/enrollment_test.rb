@@ -29,11 +29,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'resolve_user' do
     teacher1 = create :teacher
     teacher2 = create :teacher
-    enrollment_with_email = create :pd_enrollment, email: teacher1.email
-    enrollment_with_user = create :pd_enrollment, user: teacher2
-    enrollment_with_no_user = create :pd_enrollment
+    enrollment_with_email = build :pd_enrollment, email: teacher1.email
+    enrollment_with_user = build :pd_enrollment, user: teacher2
+    enrollment_with_no_user = build :pd_enrollment
 
-    assert_equal teacher1, enrollment_with_email.user
+    assert_nil enrollment_with_email.user
     assert_equal teacher1, enrollment_with_email.resolve_user
 
     assert_equal teacher2, enrollment_with_user.user
@@ -41,6 +41,15 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert_nil enrollment_with_no_user.user
     assert_nil enrollment_with_no_user.resolve_user
+  end
+
+  test 'autoupdate_user_field called on validation' do
+    teacher = create :teacher
+    enrollment = build :pd_enrollment, email: teacher.email
+
+    enrollment.valid?
+
+    assert_equal teacher, enrollment.user
   end
 
   test 'required field validations without country' do
