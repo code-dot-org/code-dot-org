@@ -39,6 +39,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 ## Other Code.org Resources
 * See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
+* Code.org partnered with MassCAN, EDC, ECEP, SageFox, and ECS to create the [State of the States Landscape Report](code.org/public/files/State_of_the_states.pdf) on state-level policies that support equitable K-12 computer science education.
 
 
 ## International K-12 computer science
