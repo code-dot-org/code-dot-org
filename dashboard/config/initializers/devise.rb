@@ -290,7 +290,7 @@ Devise.setup do |config|
     name: :the_school_project,
     scope: [:profile, :email, :school],
     response_type: :code,
-    issuer: 'https://www.kleio.fr/openid',
+    issuer: 'https://www.cleio.fr/openid',
     discovery: true,
     client_options: {
       port: 443,
