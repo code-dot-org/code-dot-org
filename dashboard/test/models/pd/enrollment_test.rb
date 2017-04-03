@@ -272,7 +272,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey]
     without_surveys = [enrollment_no_survey]
     PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where:
-        [{source_id: enrollment_with_unprocessed_survey.id.to_s}]
+        [
+          {source_id: enrollment_with_unprocessed_survey.id.to_s},
+          {source_id: enrollment_with_processed_survey.id.to_s}
+        ]
       )
     )
 
