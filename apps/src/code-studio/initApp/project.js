@@ -1,5 +1,6 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
+import msg from '@cdo/locale';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 
@@ -532,32 +533,23 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
    */
-  save(sourceAndHtml, callback, forceNewVersion, preparingRemix) {
+  save(...args) {
+    let [sourceAndHtml, callback, forceNewVersion, preparingRemix] = args;
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
     }
 
-    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
+    $('.project_updated_at').text(msg.saving());
 
-    if (typeof arguments[0] === 'function' || !sourceAndHtml) {
-      // If no source is provided, shift the arguments and ask for the source
-      // ourselves.
-      var args = Array.prototype.slice.apply(arguments);
-      callback = args[0];
-      forceNewVersion = args[1];
-      preparingRemix = args[2];
+    if (typeof args[0] === 'function' || !sourceAndHtml) {
+      // If no save data is provided, shift the arguments and ask for the
+      // latest save data ourselves.
+      [callback, forceNewVersion, preparingRemix] = args;
 
-      let completeAsyncSave = function () {
-        this.sourceHandler.getAnimationList(animations => {
-          this.sourceHandler.getLevelSource().then(response => {
-            const source = response;
-            const html = this.sourceHandler.getLevelHtml();
-            const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-            this.save({source, html, animations, makerAPIsEnabled}, callback, forceNewVersion);
-          });
-        });
-      }.bind(this);
+      let completeAsyncSave = () =>
+        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
+          this.save(sourceAndHtml, callback, forceNewVersion));
 
       if (preparingRemix) {
         this.sourceHandler.prepareForRemix().then(completeAsyncSave);
@@ -594,6 +586,44 @@ var projects = module.exports = {
         executeCallback(callback, data);
       }.bind(this));
     }.bind(this));
+  },
+
+  /**
+   * Ask the configured sourceHandler for the latest project save data and
+   * pass it to the provided callback.
+   * @param {function} callback
+   * @private
+   */
+  getUpdatedSourceAndHtml_(callback) {
+    this.sourceHandler.getAnimationList(animations =>
+      this.sourceHandler.getLevelSource().then(response => {
+        const source = response;
+        const html = this.sourceHandler.getLevelHtml();
+        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+        callback({source, html, animations, makerAPIsEnabled});
+      }));
+  },
+
+  /**
+   * Save the project with the maker API state toggled, then reload the page
+   * so that the toolbox gets re-initialized.
+   * @returns {Promise} (mostly useful for tests)
+   */
+  toggleMakerEnabled() {
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.save(
+          {
+            ...sourceAndHtml,
+            makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled,
+          },
+          () => {
+            resolve();
+            window.location.reload();
+          }
+        );
+      });
+    });
   },
   updateCurrentData_(err, data, isNewChannel) {
     if (err) {

@@ -199,6 +199,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   end
 
   def test_process_decisions_row_waitlist
+    @mock_teacher_application.id = 12345
     result = @processor.process_decision_row(
       {
         'Application ID' => 1,
@@ -212,6 +213,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
       course_name_s: 'CS Principles',
+      teacher_application_id_s: 12345
     }
     assert_equal expected, result
     assert_result_in_set :waitlist, result

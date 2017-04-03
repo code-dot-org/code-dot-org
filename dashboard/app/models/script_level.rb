@@ -76,15 +76,9 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def progression
-    JSON.parse(properties)['progression'] if properties
-  end
-
-  def target
-    JSON.parse(properties)['target'] if properties
-  end
-
-  def challenge
-    JSON.parse(properties)['challenge'] if properties
+    return nil unless properties
+    properties_hash = JSON.parse(properties)
+    properties_hash['progression']
   end
 
   def has_another_level_to_go_to?

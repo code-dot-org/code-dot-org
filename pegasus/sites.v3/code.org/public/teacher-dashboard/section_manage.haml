@@ -145,7 +145,10 @@ content-type: text/ng-template
 
   %div{"ng-if" => "section.login_type !== 'email'"}
     %h3{"ng-show" => 'section.students.length > 0'}
-      = I18n.t('dashboard_students_share_section')
+      = I18n.t 'dashboard_students_share_section', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
+      %br/
+      %br/
+      = I18n.t('dashboard_students_share_section_secondary')
       %a{"ng-href" => CDO.studio_url("/sections/{{section.code}}"), target: "_blank"}
         http:#{CDO.studio_url('/sections/{{section.code}}')}
     %h3{"ng-show" => 'section.students.length > 0'}

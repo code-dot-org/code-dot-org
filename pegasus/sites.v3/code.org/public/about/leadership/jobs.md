@@ -1,6 +1,7 @@
 ---
 title: Jobs at Code.org
 nav: about_nav
+theme: responsive
 ---
 
 # Job Openings at Code.org

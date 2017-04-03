@@ -44,6 +44,23 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
+"@code-dot-org/johnny-five@0.9.62-cdo.0":
+  version "0.9.62-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.0.tgz#cbb704f69ab78fd99b7a557e9725894f5e7fa986"
+  dependencies:
+    chalk latest
+    color-convert "~1.2.2"
+    ease-component latest
+    es6-shim latest
+    lodash.clonedeep "^4.3.0"
+    lodash.debounce "^4.0.3"
+    nanotimer "0.3.10"
+    temporal latest
+  optionalDependencies:
+    browser-serialport latest
+    firmata "^0.12.0"
+    serialport "^4.0.0"
+
 "@code-dot-org/js-interpreter":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.1.1.tgz#2a7ccbb6b1f31353445f82f777573d1c38e11d37"
@@ -6040,23 +6057,6 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-johnny-five@0.9.62:
-  version "0.9.62"
-  resolved "https://registry.yarnpkg.com/johnny-five/-/johnny-five-0.9.62.tgz#155f80d9ceea098d601b9c5d2eee0a0c4e9d3189"
-  dependencies:
-    chalk latest
-    color-convert "~1.2.2"
-    ease-component latest
-    es6-shim latest
-    lodash.clonedeep "^4.3.0"
-    lodash.debounce "^4.0.3"
-    nanotimer "0.3.10"
-    temporal latest
-  optionalDependencies:
-    browser-serialport latest
-    firmata "^0.12.0"
-    serialport "^4.0.0"
-
 jquery-ui@1.10.5:
   version "1.10.5"
   resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.10.5.tgz#826aed3dd1f88d32ae75d74df48643dc431a5815"
@@ -8979,6 +8979,10 @@ react-overlays@^0.6.6:
     dom-helpers "^2.4.0"
     react-prop-types "^0.4.0"
     warning "^3.0.0"
+
+react-portal:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-3.0.0.tgz#9304fce836e8a3216b22588f8dc91b447728f0ae"
 
 react-prop-types@^0.4.0:
   version "0.4.0"

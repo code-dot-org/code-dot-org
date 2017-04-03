@@ -1,6 +1,7 @@
 ---
 title: Leadership
 nav: about_nav
+theme: responsive
 ---
 # Leadership
 
