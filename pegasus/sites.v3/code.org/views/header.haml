@@ -1,54 +1,20 @@
-- variant ||= "unknown"
+- if request.cookies['pm'] == 'new_header'
+  %link{:href=>"/shared/css/header2.css", :rel=>"stylesheet"}
+  - wrapper_id = 'pageheader2-wrapper'
+- else
+  - wrapper_id = 'pageheader-wrapper'
+  - legacy_header = true
 
-:css
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- user_type = request.cookies[cookie_key]
 
-  .arrow_box:after {
-    bottom: 100%;
-    left: 50px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(54, 72, 84, 0);
-    border-bottom-color: rgb(88, 103, 113);
-    border-width: 8px;
-    margin-left: -10px;
-  }
-
-  #headerlinks {
-    float: right;
-    position: relative;
-  }
-
-  .downorangearrow {
-    display: inline-block;
-  }
-
-  .downorangearrow:hover:after,
-  .downorangearrow:active:after {
-    top: 100%;
-    left: 40px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(54, 72, 84, 0);
-    border-top-color: rgb(255, 128, 0);
-    border-width: 8px;
-    margin-left: 0px;
-  }
-
-#pageheader-wrapper
+%div{id: wrapper_id}
   - pageheader_class = request.path_info == "/" ? "pageheader-translucent" : ""
   #pageheader{class: pageheader_class}
     .content
       #left
         %a{:href=>"/"}
-          %img#logo{:src=>'/images/logo.png', :style=>'margin-left:5px'}
+          %img#logo{:src=>'/images/logo.png'}
 
       #right
         #sign_in_or_user{:style=>'display:block; float: right; margin: .6875em 0 0 30px;'}
@@ -57,17 +23,36 @@
         -else
           .desktop-feature
             #headerlinks
-              %a.headerlink{:href=>"/student"}LEARN
-              %a.headerlink{:href=>"/educate"}TEACH
-              %a.headerlink{:href=>"/promote"}STATS
-              %a.headerlink{:href=>"/help"}HELP US
-              %a.headerlink{:href=>"/about"}ABOUT
+              - if legacy_header
+                %a.headerlink{:href=>"/student"}LEARN
+                %a.headerlink{:href=>"/educate"}TEACH
+                %a.headerlink{:href=>"/promote"}STATS
+                %a.headerlink{:href=>"/help"}HELP US
+                %a.headerlink{:href=>"/about"}ABOUT
+              - elsif user_type == "teacher"
+                %a.headerlink{:href=>"/student"}Home
+                %a.headerlink{:href=>"/educate"}Courses
+                %a.headerlink{:href=>"/promote"}Projects Gallery
+                %a.headerlink{:href=>"/help"}Sections
+                %a.headerlink{:href=>"/about"}Professional Learning
+              - elsif user_type == "student"
+                %a.headerlink{:href=>"/student"}Home
+                %a.headerlink{:href=>"/educate"}Courses
+                %a.headerlink{:href=>"/promote"}Projects Gallery
+              - else
+                %a.headerlink{:href=>"/student"}Learn
+                %a.headerlink{:href=>"/educate"}Teach
+                %a.headerlink{:href=>"/promote"}Stats
+                %a.headerlink{:href=>"/help"}Help us
+                %a.headerlink{:href=>"/about"}About
 
     #clear{:style=>'clear:both'}
 
     #loc.desktop-feature
       -if banner = @header['banner']
         =view banner
+
+  #clear{:style=>'clear:both'}
 
 :javascript
   var headerSetup = false;
