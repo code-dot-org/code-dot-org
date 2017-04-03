@@ -4,7 +4,6 @@ import color from '../../../util/color';
 import {getFirstParam} from '../../../dropletUtils';
 import {
   N_COLOR_LEDS,
-  SENSOR_VARS,
   BUTTON_VARS,
   COMPONENT_EVENTS,
   SONG_CHARGE
@@ -115,12 +114,17 @@ export const blocks = [
   // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {func: 'holdtime', objectDropdown: {options: BUTTON_VARS, dropdownOnly: true}, category: CIRCUIT_CATEGORY, blockPrefix: `${BUTTON_VARS[0]}.`, modeOptionName: "*.holdtime", type: 'readonlyproperty', tipPrefix: '[Button].'},
 
-  // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
-  {func: 'value', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.value", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, type: 'readonlyproperty', tipPrefix: '[Sensor].'},
-  {func: 'getAveragedValue', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.getAveragedValue", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['500'], paletteParams: ['ms'], type: 'value'},
-  {func: 'start', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.start", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].'},
-  {func: 'setScale', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.setScale", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, tipPrefix: '[Sensor].', params: ['0', '100'], paletteParams: ['low', 'high']},
-  {func: 'threshold', objectDropdown: { options: SENSOR_VARS }, modeOptionName: "*.threshold", blockPrefix: `${SENSOR_VARS[0]}.`, category: CIRCUIT_CATEGORY, type: 'property', tipPrefix: '[Sensor].' },
+  {func: 'soundSensor.start', category: CIRCUIT_CATEGORY},
+  {func: 'soundSensor.value', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
+  {func: 'soundSensor.getAveragedValue', category: CIRCUIT_CATEGORY, params: ['500'], paletteParams: ['ms'], type: 'value'},
+  {func: 'soundSensor.setScale', category: CIRCUIT_CATEGORY, params: ['0', '100'], paletteParams: ['low', 'high']},
+  {func: 'soundSensor.threshold', category: CIRCUIT_CATEGORY, type: 'property' },
+
+  {func: 'lightSensor.start', category: CIRCUIT_CATEGORY},
+  {func: 'lightSensor.value', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
+  {func: 'lightSensor.getAveragedValue', category: CIRCUIT_CATEGORY, params: ['500'], paletteParams: ['ms'], type: 'value'},
+  {func: 'lightSensor.setScale', category: CIRCUIT_CATEGORY, params: ['0', '100'], paletteParams: ['low', 'high']},
+  {func: 'lightSensor.threshold', category: CIRCUIT_CATEGORY, type: 'property' },
 
   {func: 'tempSensor.F', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
   {func: 'tempSensor.C', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
