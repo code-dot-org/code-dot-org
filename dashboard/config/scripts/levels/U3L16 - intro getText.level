@@ -41,7 +41,8 @@
     "project_template_level_name": "U3L16 - nameAgeTemplate",
     "encrypted_examples": "33yVJUbnXqpsDc7F+neThWPBNsFARgKR5FgYA34FCL4WOa2E3J+eFX0YfVyq\nwguR\n",
     "lock_zero_param_functions": "false",
-    "execute_palette_apis_only": "false"
+    "execute_palette_apis_only": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": ""

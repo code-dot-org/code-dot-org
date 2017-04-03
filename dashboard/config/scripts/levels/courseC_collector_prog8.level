@@ -59,7 +59,7 @@
           <title name="DIR">turnLeft</title>
         </block>
         <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">???</title>
+          <title name="TIMES" config="2-10">???</title>
         </block>
         <block type="collector_collect"/>
       </xml>
