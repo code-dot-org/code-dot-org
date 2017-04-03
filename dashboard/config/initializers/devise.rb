@@ -315,6 +315,20 @@ Devise.setup do |config|
     manager.failure_app = CustomDeviseFailure
   end
 
+  Warden::Manager.after_set_user do |user, auth|
+    if auth.cookies[:pm] == "new_header"
+      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+      auth.cookies[cookie_key] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    end
+  end
+
+  Warden::Manager.before_logout do |_, auth|
+    if auth.cookies[:pm] == "new_header"
+      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+      auth.cookies[cookie_key] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    end
+  end
+
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
   # is mountable, there are some extra configurations to be taken into account.
