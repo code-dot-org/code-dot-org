@@ -1,5 +1,6 @@
 ---
 title: Hour of Code with Star Wars
+theme: responsive
 social:
   "og:title": "Hour of Code tutorial features Star Wars: The Force Awakens"
   "og:description": "Build-your-own-game lesson Features Leia and Rey from Star Wars: The Force Awakens, as well as R2-D2, C-3PO and BB-8 in honor of the Hour of Code campaign coming in December."

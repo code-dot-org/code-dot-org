@@ -1,6 +1,6 @@
 ---
 title: Educator Information
-
+theme: responsive
 ---
 ## Thank you for registering for Code.org's professional development program. 
 
