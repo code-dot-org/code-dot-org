@@ -100,14 +100,14 @@ export const blocks = [
   {func: 'buzzer.stop', category: CIRCUIT_CATEGORY},
   {func: 'buzzer.play', category: CIRCUIT_CATEGORY, paletteParams: ['notes', 'tempo'], params: [stringifySong(SONG_CHARGE), 120], paramButtons: { minArgs: 1, maxArgs: 2}},
 
-  // TODO(bjordan): re-add when dropdowns work with object refs
+  // TODO(bbuchanan): re-add when dropdowns work with object refs
   //{func: 'accelerometer', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'accelerometer.getOrientation', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"inclination"'], dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}},
   {func: 'accelerometer.getAcceleration', category: CIRCUIT_CATEGORY, type: 'value', paletteParams: ['orientationType'], params: ['"x"'], dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}},
   {func: 'accelerometer.start', category: CIRCUIT_CATEGORY},
   {func: 'accelerometer.sensitivity', category: CIRCUIT_CATEGORY, type: 'property' },
 
-  // TODO(bjordan): re-add when dropdowns work with object refs
+  // TODO(bbuchanan): re-add when dropdowns work with object refs
   //{func: 'buttonL', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   //{func: 'buttonR', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   // TODO(bbuchanan): Known issue - objectDropdown doesn't work with type:'readonlyproperty'
@@ -125,7 +125,7 @@ export const blocks = [
   {func: 'tempSensor.F', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
   {func: 'tempSensor.C', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
 
-  // TODO(bjordan): re-add when dropdowns work with object refs
+  // TODO(bbuchanan): re-add when dropdowns work with object refs
   //{func: 'toggleSwitch', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
   {func: 'toggleSwitch.isOpen', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
 ];
