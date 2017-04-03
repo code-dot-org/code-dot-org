@@ -1,6 +1,7 @@
 ---
 title: Cameron Wilson
 nav: about_nav
+theme: responsive
 ---
 # Cameron Wilson
 

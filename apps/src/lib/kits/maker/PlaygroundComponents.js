@@ -11,7 +11,7 @@ import {
 } from './PlaygroundConstants';
 import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
@@ -183,6 +183,8 @@ function initializeThermometer(board) {
     pin: "A0",
     freq: 100
   });
+  // TODO (bbuchanan): This doesn't really work for the thermometer
+  // It doesn't have a scale function, doesn't update like the other sensors.
   addSensorFeatures(five.Board.fmap, sensor);
   return sensor;
 }

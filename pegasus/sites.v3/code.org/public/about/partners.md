@@ -1,6 +1,7 @@
 ---
 title: Partners
 nav: about_nav
+theme: responsive
 ---
 # Major Partners and Corporate Supporters
 

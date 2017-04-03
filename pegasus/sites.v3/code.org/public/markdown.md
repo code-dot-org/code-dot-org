@@ -1,6 +1,7 @@
 ---
 chart: true
 video_player: true
+theme: responsive
 ---
 
 # Markdown (Title)

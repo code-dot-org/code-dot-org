@@ -1,6 +1,7 @@
 ---
 title: All Hour of Code tutorials and lesson plans
 nav: educate_nav
+theme: responsive
 ---
 <a name="top"></a>
 # All Hour of Code Tutorials

@@ -9,7 +9,7 @@ class FollowersController < ApplicationController
 
   # join a section as a logged in student
   def create
-    @section.add_student(current_user)
+    @section.add_student current_user, move_for_same_teacher: true
 
     redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: @section.teacher.name)
   end
@@ -56,7 +56,7 @@ class FollowersController < ApplicationController
     end
 
     if current_user && @section
-      @section.add_student(current_user)
+      @section.add_student current_user, move_for_same_teacher: true
 
       redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
     else
@@ -88,7 +88,7 @@ class FollowersController < ApplicationController
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       if @user.save
-        @section.add_student(@user)
+        @section.add_student @user, move_for_same_teacher: true
         sign_in(:user, @user)
         redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
         return
