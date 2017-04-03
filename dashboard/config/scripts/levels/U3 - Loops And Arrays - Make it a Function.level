@@ -41,7 +41,8 @@
     "debugger_disabled": "false",
     "project_template_level_name": "U3 - Loops And Arrays - Linear Search Function Template",
     "encrypted_examples": "LMqCPCMfOqMxE3fQFKwsNOTScr9bFvYhTsCc6KzJNzomHWO1y/qynOFXS1/R\n53/l\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

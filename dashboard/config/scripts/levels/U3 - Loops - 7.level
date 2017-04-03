@@ -55,7 +55,8 @@
     "start_blocks": "var num = -1;\r\nwhile (num != 6) { \r\n   write(\"Number is: \" + num);\r\n   num = randomNumber(1, 6);\r\n}\r\nwrite(\"Done.\");",
     "instructions": "Without adding any lines of code, reorder the code so that it prints all the values of num. (Click to see full instructions)",
     "encrypted_examples": "MyfoTh6Bhci1kxpnSKntFJPgYsiDdN7hV2Ry9U0UpzWk+wND/Th/C2N2cyDA\nK2un\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
