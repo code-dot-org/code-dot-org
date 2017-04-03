@@ -1,0 +1,99 @@
+#!/usr/bin/env ruby
+
+# This script creates a UserScript for every row in the input CSV file.
+#
+# This script will be run with a CSV containing the user IDs, script IDs, and associated timestamps
+# for the approximately ZZZK production UserScripts that remain to be backfilled by
+# User#backfill_user_scripts. As there other instances of a UserLevel (with a script_id) existing
+# without the corresponding UserScript existing, we "fix" them here as well.
+#
+# This CSV will be created via SQL run on AWS Redshift, as the reporting database is not performant
+# enough.
+#
+#   SELECT DISTINCT
+#     users.id AS user_id,
+#     user_levels.script_id,
+#     MIN(user_levels.created_at) AS started_at,
+#     MAX(user_levels.updated_at) AS last_progress_at,
+#     COUNT(0) AS num_levels
+#   FROM users
+#   INNER JOIN user_levels
+#     ON user_levels.user_id = users.id
+#   LEFT OUTER JOIN user_scripts
+#     ON user_scripts.user_id = users.id
+#       AND user_scripts.script_id = user_levels.script_id
+#   WHERE user_scripts.id IS NULL
+#   GROUP BY 1,2;
+#
+# After this script is run, User#backfill_user_scripts will be removed.
+
+require 'csv'
+require_relative '../../../dashboard/config/environment'
+
+NUM_LEVELS_REQUIRED = {
+  # A hash mapping a script_id to the number of levels required for "completion".
+  1 => 100,
+  2 => 1,
+  18 => 100
+}.freeze
+SCRIPTS = Script.all.pluck(:id).freeze
+TRANSACTION_SIZE = 5_000
+TIME_NOW = Time.now.freeze
+
+# An array of (user_id, script_id, started_at, last_progress_at) triples.
+data = []
+# The CSV filename.
+filename = ARGV[0]
+
+# Process the CSV, reading the CSV line by line and writing the rows in
+# transaction batches.
+CSV.foreach(filename, headers: true) do |line|
+  # Append the CSV row to our list of rows to create.
+  user_id = line['user_id'].to_i
+  script_id = line['script_id'].to_i
+  started_at = line['started_at']
+  last_progress_at = line['last_progress_at']
+  num_levels = line['num_levels'].to_i
+
+  # As the existence of a UserScript for deleted scripts causes errors on various pages of ours, we
+  # skip creating a UserScript.
+  next unless SCRIPTS.include? script_id
+
+  completed_at = nil
+  if (NUM_LEVELS_REQURIED.key? script_id) && num_levels >= NUM_LEVELS_REQUIRED[key]
+    completed_at = last_progress_at
+  end
+
+  data << [user_id, script_id, started_at, last_progress_at, completed_at]
+end
+
+# A variable to shadow a loop variable, used for its larger scope.
+user_id_script_id = nil
+begin
+  data.each_slice(TRANSACTION_SIZE) do |data_slice|
+    ActiveRecord::Base.transaction do
+      data_slice.each do |user_id, script_id, started_at, last_progress_at, completed_at|
+        user_id_script_id = "#{user_id} , #{script_id}"
+
+        user_script = UserScript.find_by(
+          user_id: user_id,
+          script_id: script_id
+        )
+        next if user_script
+
+        UserScript.create!(
+          user_id: user_id,
+          script_id: script_id,
+          created_at: TIME_NOW,
+          updated_at: TIME_NOW,
+          started_at: started_at,
+          last_progress_at: last_progress_at,
+          completed_at: completed_at
+        )
+      end
+    end
+  end
+rescue Exception => e
+  puts "EXCEPTION: #{user_id_script_id}..."
+  raise e
+end
