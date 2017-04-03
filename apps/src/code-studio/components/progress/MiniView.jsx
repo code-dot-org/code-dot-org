@@ -13,10 +13,13 @@ const styles = {
     marginLeft: 10,
     marginRight: 10
   },
-  // For our redesigned view, we want margins on all side if we're in the detail
-  // view (and not inside groups).
+  // For the detail view (without groups) we want some margins
   detailView: {
     margin: 10
+  },
+  // For group view, we want larger margins to match the gap between groups
+  groupView: {
+    margin: 20
   }
 };
 
@@ -48,7 +51,8 @@ const MiniView = React.createClass({
         <div
           style={{
             ...(!progressRedesignEnabled && styles.oldProgress),
-            ...(progressRedesignEnabled && !isSummaryView && !hasGroups && styles.detailView)
+            ...(progressRedesignEnabled && !hasGroups && !isSummaryView && styles.detailView),
+            ...(progressRedesignEnabled && hasGroups && styles.groupView)
           }}
         >
           <CourseProgress onOverviewPage={false}/>
