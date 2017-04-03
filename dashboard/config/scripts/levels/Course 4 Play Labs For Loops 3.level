@@ -38,7 +38,8 @@
     "never_autoplay_video": "false",
     "first_sprite_index": "19",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
