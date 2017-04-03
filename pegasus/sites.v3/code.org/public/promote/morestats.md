@@ -1,5 +1,6 @@
 ---
 chart: true
+theme: responsive
 ---
 # Make Your Own Advocacy Materials
 

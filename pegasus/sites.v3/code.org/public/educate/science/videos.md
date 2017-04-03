@@ -1,6 +1,7 @@
 ---
 title: CS in Science Videos
 nav: educate_nav
+theme: responsive
 ---
 # Middle School CS in Science Videos
 
@@ -12,7 +13,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
 
 ## Videos
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Curriculum Overview</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/iDSluSl9I3o?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -22,7 +23,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Professional Development Overview</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/t29Ann5323w?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -32,7 +33,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Intro to Complex Adaptive Systems</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/R4lov0SaFpI?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -42,7 +43,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>What is Computational Science?</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/C-9vMx0O3d8?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -52,7 +53,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Agent-based Modeling of Complex Adaptive Systems</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/W7_kU2IWuXU?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -62,7 +63,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Using Computer Models in Scientific Inquiry</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/aycgUIfl9DQ?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -72,7 +73,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Models in the Classroom</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/eiMascD1h2A?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -82,7 +83,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Dispositions and Classroom Culture</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/bR_pGotQ3wY?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -92,7 +93,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Computational Thinking and the NRC Framework</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/kP8C6qoUgxs?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>
@@ -102,7 +103,7 @@ The videos introduce teachers to the curriculum materials and tools, agent-based
   </p>
 </div>
 
-<div style="float:left; padding:10px; width:50%">
+<div class="col-50" style="float:left; padding:10px;">
   <h3>Introduction to StarLogo Nova</h3>
   <iframe allowfullscreen="" frameborder="0" height="195" src="https://www.youtube.com/embed/QrXe-nCV1xM?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
   <p>

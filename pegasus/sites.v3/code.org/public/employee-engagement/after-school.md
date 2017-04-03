@@ -1,3 +1,8 @@
+---
+title: After School Coding Program
+theme: responsive
+---
+
 # After School Coding Program
 
 Every 21st-century student should have the opportunity to learn computer science. The basics help nurture creativity and problem-solving skills, and prepare students for future careers. Your company, in partnership with a local after school organization (i.e. YMCA, Girl Scouts, Boys and Girls Club, etc.), can help bring computer science opportunities to students in your area.
