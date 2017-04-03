@@ -12,9 +12,7 @@ class HttpCache
     # Language drop-down selection.
     'language_',
     # Page mode, for A/B experiments and feature-flag rollouts.
-    'pm',
-    # Signed-in user type (student/teacher), or signed-out if cookie is not present.
-    'user_type'
+    'pm'
   ]
 
   # A map from script name to script level URL pattern.
@@ -49,6 +47,10 @@ class HttpCache
     session_key = "_learn_session#{env_suffix}"
     storage_id = "storage_id#{env_suffix}"
 
+    # Signed-in user type (student/teacher), or signed-out if cookie is not present.
+    user_type = "_user_type#{env_suffix}"
+    default_cookies = DEFAULT_COOKIES.concat([user_type])
+
     # These cookies are whitelisted on all session-specific (not cached) pages.
     whitelisted_cookies = [
       'hour_of_code',
@@ -60,7 +62,7 @@ class HttpCache
       'rack.session',
       session_key,
       storage_id,
-    ].concat(DEFAULT_COOKIES)
+    ].concat(default_cookies)
 
     {
       pegasus: {
@@ -108,7 +110,7 @@ class HttpCache
         # Remaining Pegasus paths are cached, and vary only on language and default cookies.
         default: {
           headers: LANGUAGE_HEADER,
-          cookies: DEFAULT_COOKIES
+          cookies: default_cookies
         }
       },
       dashboard: {
@@ -145,7 +147,7 @@ class HttpCache
           {
             path: CACHED_SCRIPTS_MAP.values,
             headers: LANGUAGE_HEADER,
-            cookies: DEFAULT_COOKIES
+            cookies: default_cookies
           },
           {
             path: '/api/*',
