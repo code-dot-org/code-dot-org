@@ -572,6 +572,9 @@ en:
       CSD U3 Functions Introduction: {}
       CSD U3 Functions SFLP: {}
       CSD U3 Keypress Stop: {}
+      CSD U3 L2 Challenges:
+        description here: description here
+        title: title
       CSD U3 Project Build a Game SFLP: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}

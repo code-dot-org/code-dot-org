@@ -29,7 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "fast_get_nectar_animation": "false",
     "step_speed": "1",
     "callout_json": "[]",

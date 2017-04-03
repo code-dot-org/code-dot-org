@@ -2699,6 +2699,7 @@ en:
             Polling Events: Polling Events
             Sensor Applications: Sensor Applications
             'Project: Prototype an Innovation': 'Project: Prototype an Innovation'
+            Map: Map
           title: Draft Unit 6
           description_audience: ''
           description_short: ''
@@ -2813,7 +2814,28 @@ en:
             Drawing in Game Lab: Drawing in Game Lab
             Variables: Variables
             Programming for Entertainment: Programming for Entertainment
+            Sprites: Sprites
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
           description_short: Animations and Games
+          description: ''
+        csd5:
+          stage:
+            Representation Matters: Representation Matters
+            Patterns and Representation: Patterns and Representation
+            ASCII and Binary Representation: ASCII and Binary Representation
+            Representing Images: Representing Images
+            Representing Numbers Part 1: Representing Numbers Part 1
+            Representing Numbers Part 2: Representing Numbers Part 2
+            Combining Representations: Combining Representations
+            Project - Create a Representation: Project - Create a Representation
+            Problem Solving and Data: Problem Solving and Data
+            Making Decisions with Data: Making Decisions with Data
+            Interpreting Data: Interpreting Data
+            Automating Data Decisions: Automating Data Decisions
+            Problem Solving with Big Data: Problem Solving with Big Data
+            Project - Solve a Data Problem: Project - Solve a Data Problem
+          title: CSD Unit 5 - Data and Society
+          description_audience: ''
+          description_short: ''
           description: ''
