@@ -103,6 +103,19 @@ var level;
 var skin;
 var copyrightStrings;
 
+/**
+ * @type {boolean} Whether a screenshot capture is pending.
+ */
+let isCapturePending = false;
+
+/**
+ * Whether the thumbnail screenshot capture is complete. Needed for testing.
+ * @returns {boolean}
+ */
+Applab.isCaptureComplete = function () {
+  return !isCapturePending;
+};
+
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
 
@@ -295,12 +308,6 @@ Applab.setLevelHtml = function (html) {
   designMode.serializeToLevelHtml();
 };
 
-// Number of ticks after which to capture a thumbnail image of the play space.
-// 300 ticks equates to approximately 1-1.5 seconds in apps that become idle
-// after the first few ticks, or 10-15 seconds in apps that are drawing
-// constantly.
-const CAPTURE_TICK_COUNT = 300;
-
 Applab.onTick = function () {
   if (!Applab.running) {
     return;
@@ -309,12 +316,11 @@ Applab.onTick = function () {
   Applab.tickCount++;
   queueOnTick();
 
+  if (Applab.tickCount === applabConstants.CAPTURE_TICK_COUNT) {
+    Applab.captureScreenshot();
+  }
   if (Applab.JSInterpreter) {
     Applab.JSInterpreter.executeInterpreter(Applab.tickCount === 1);
-
-    if (Applab.tickCount === CAPTURE_TICK_COUNT) {
-      Applab.captureScreenshot();
-    }
   }
 
   if (checkFinished()) {
@@ -332,6 +338,7 @@ Applab.captureScreenshot = function () {
     return;
   }
 
+  isCapturePending = true;
   let didPinVizSize = false;
 
   if (!visualization.style.maxWidth) {
@@ -366,6 +373,14 @@ Applab.captureScreenshot = function () {
       Applab.clearVisualizationSize();
     }
 
+    if (!isCapturePending) {
+      // We most likely got here because a level test triggered a screenshot
+      // capture, the test completed, and then another test started before the
+      // capture completed.
+      console.log('not saving screenshot because no capture is pending');
+      return;
+    }
+
     // Scale the image down so we don't send so much data over the network.
     const thumbnailCanvas = document.createElement('canvas');
     thumbnailCanvas.width = THUMBNAIL_SIZE;
@@ -379,10 +394,14 @@ Applab.captureScreenshot = function () {
     thumbnailContext.drawImage(canvas, 0, 0, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
 
     thumbnailCanvas.toBlob(pngBlob => {
-      project.saveThumbnail(pngBlob);
+      return project.saveThumbnail(pngBlob);
     });
+  }).then(() => {
+    isCapturePending = false;
   }).catch(e => {
-    console.warn(`html2canvas error: ${e}`);
+    console.warn(`error capturing screenshot: ${e}`);
+
+    isCapturePending = false;
 
     if (didPinVizSize) {
       Applab.clearVisualizationSize();
@@ -423,6 +442,9 @@ Applab.init = function (config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
+
+  // Necessary for tests. Make this a member once we can instantiate applab.
+  isCapturePending = false;
 
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
