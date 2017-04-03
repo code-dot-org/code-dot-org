@@ -11,7 +11,7 @@
     width: 100%;
     background-color: $light_teal;
     height: 40px;
-    margin: 0 0 30px 0;
+    margin: 0 0 40px 0;
 
     .content {
       width: 970px;
@@ -21,29 +21,31 @@
     }
 
     #left {
-      padding: 10px;
       float: left;
       margin: 0;
+    }
+
+    #logo-wrapper {
       background-color: $teal;
-    }
-
-    #logo {
-      width: 64px;
-      height: 64px;
-      display: block;
+      display: inline-block;
       margin-top: -5px;
-    }
+      padding: 10px;
+      float: left;
 
-    #logo-uk {
-      width: 364px;
-      height: 87px;
-      display: block;
+      #logo {
+        width: 60px;
+        height: 60px;
+      }
+
+      #logo-uk {
+        width: 364px;
+        height: 87px;
+        display: block;
+      }
     }
 
     #right {
-      width: 780px;
-      float: left;
-      text-align: left;
+      float: right;
     }
 
     #headerlinks {
