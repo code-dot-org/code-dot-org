@@ -13,9 +13,13 @@ const styles = {
     color: color.white,
     padding: 15,
     marginBottom: 0,
+    height: 18
   },
+  // absolutely position children so that they're located correctly in RTL as well
   link: {
     color: color.white,
+    position: 'absolute',
+    left: 15
   },
   linesOfCodeText: {
     position: 'absolute',
