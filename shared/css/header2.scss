@@ -78,6 +78,12 @@
 
     #sign_in_or_user {
       margin: 5px 0 0 0;
+
+      .button-signin {
+        background-color: transparent;
+        border: 2px solid $white;
+        color: $white;
+      }
     }
   }
 
