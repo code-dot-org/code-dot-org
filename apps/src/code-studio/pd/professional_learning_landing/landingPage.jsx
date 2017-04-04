@@ -51,7 +51,7 @@ const LandingPage = React.createClass({
       return (
         <div>
           <h3>
-            Order Supplies
+            Complete Survey and Order Free Course Kit
           </h3>
           <p>
             Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
@@ -66,11 +66,12 @@ const LandingPage = React.createClass({
       return (
         <div>
           <h3>
-            Thank you
+            Submit your feedback!
           </h3>
           <p>
-            Thank you for completing a Code.org professional learning workshop! Please complete this survey so that we
-            may improve your experience.
+            Thank you for completing a {this.props.lastWorkshopSurveyCourse} workshop!
+            Please complete this survey about your experience to help us improve future
+            workshops.
           </p>
           <Button bsStyle="primary" onClick={() => {window.open(this.props.lastWorkshopSurveyUrl, '_blank');}}>
             Start survey
