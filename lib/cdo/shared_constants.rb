@@ -210,7 +210,7 @@ module SharedConstants
       "led.pulse": null,
       "buzzer.frequency": null,
       "buzzer.note": null,
-      "buzzer.off": null,
+      "buzzer.stop": null,
       "buzzer.play": null,
       "accelerometer.getOrientation": null,
       "accelerometer.start": null,
