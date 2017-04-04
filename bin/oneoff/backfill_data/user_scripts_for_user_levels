@@ -47,6 +47,7 @@ filename = ARGV[0]
 
 # Process the CSV, reading the CSV line by line and writing the rows in
 # transaction batches.
+puts 'READING CSV...'
 CSV.foreach(filename, headers: true) do |line|
   # Append the CSV row to our list of rows to create.
   user_id = line['user_id'].to_i
@@ -66,11 +67,14 @@ CSV.foreach(filename, headers: true) do |line|
 
   data << [user_id, script_id, started_at, last_progress_at, completed_at]
 end
+puts "READ CSV (kept #{data.length} rows)."
 
-# A variable to shadow a loop variable, used for its larger scope.
 user_id_script_id = nil
+slice_count = 0
+puts 'BEGINNING DB WRITES...'
 begin
   data.each_slice(TRANSACTION_SIZE) do |data_slice|
+    puts "  WRITING SLICE #{slice_count}."
     ActiveRecord::Base.transaction do
       data_slice.each do |user_id, script_id, started_at, last_progress_at, completed_at|
         user_id_script_id = "#{user_id} , #{script_id}"
@@ -92,8 +96,11 @@ begin
         )
       end
     end
+
+    slice_count += 1
   end
 rescue Exception => e
   puts "EXCEPTION: #{user_id_script_id}..."
   raise e
 end
+puts 'FINISHED DB WRITES.'
