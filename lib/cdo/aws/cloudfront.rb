@@ -4,6 +4,7 @@ require 'securerandom'
 require 'aws-sdk'
 require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
+require 'active_support/core_ext/object/try'
 
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
@@ -223,7 +224,7 @@ module AWS
         certificate_summary_list.
         select {|cert| cert.domain_name == "*.#{ssl_cert}" || cert.domain_name == ssl_cert}.
         max_by {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate.not_after }.
-        certificate_arn
+        try(:certificate_arn)
       {
         aliases: {
           quantity: cloudfront[:aliases].length, # required
