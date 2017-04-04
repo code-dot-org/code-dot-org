@@ -35,9 +35,9 @@
     "fast_get_nectar_animation": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The function has been written for you, but you will need to call it at each flower.\",\"hint_id\":\"courseE_bee_functions2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d65619db4e352e999bd8ebeb33d549d3/courseE_bee_functions2.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

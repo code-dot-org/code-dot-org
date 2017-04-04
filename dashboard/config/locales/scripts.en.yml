@@ -2423,6 +2423,7 @@ en:
             Artist Binary: Artist Binary
             Nested Loops in Bee: Nested Loops in Bee
             Nested Loops: Nested Loops
+            Introduction: Introduction
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2782,7 +2783,7 @@ en:
         coursee-ramp:
           stage:
             Introduction: Introduction
-          title: ''
+          title: coursee-ramp
           description_audience: ''
           description_short: ''
           description: ''
@@ -2815,6 +2816,7 @@ en:
             Variables: Variables
             Programming for Entertainment: Programming for Entertainment
             Sprites: Sprites
+            Plotting Shapes: Plotting Shapes
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
           description_short: Animations and Games
@@ -2835,6 +2837,8 @@ en:
             Automating Data Decisions: Automating Data Decisions
             Problem Solving with Big Data: Problem Solving with Big Data
             Project - Solve a Data Problem: Project - Solve a Data Problem
+            Representing Numbers: Representing Numbers
+            8-bit Numbers: 8-bit Numbers
           title: CSD Unit 5 - Data and Society
           description_audience: ''
           description_short: ''
