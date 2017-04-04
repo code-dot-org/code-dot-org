@@ -26,12 +26,11 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try counting the spaces with your finger. Remember not to count the space where you start!\",\"hint_id\":\"courseA_maze_seq_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19f2fad04613d5272c11142d8178e36c/courseA_maze_seq_challenge2.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try counting the spaces with your finger. Remember not to count the space where you start!\",\"hint_id\":\"courseA_maze_seq_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19f2fad04613d5272c11142d8178e36c/courseA_maze_seq_challenge2.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

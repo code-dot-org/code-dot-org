@@ -1,18 +1,20 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2016-06-10T18:34:51.000Z",
+  "created_at": "2017-04-03T21:27:04.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
     "skin": "gamelab",
-    "show_d_pad": "false",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null
+    },
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "// Create kite sprite and set animation\r\nvar kite = createSprite(300, 50);\r\n\r\nfunction draw() {\r\n  // Draw background\r\n  background(\"skyblue\");\r\n\r\n  // Draw grass\r\n  fill(\"green\");\r\n  noStroke();\r\n  rect(0, 300, 400, 100);\r\n\r\n  // Draw string\r\n  stroke(\"black\");\r\n  strokeWeight(5);\r\n  line(150, 300, 300, 50);\r\n\r\n  // Draw sprite\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,16 +34,21 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
+    "show_d_pad": "false",
+    "callout_json": "[]",
+    "start_blocks": "var my_sprite = createSprite(300, 100);\r\ndrawSprites();",
+    "hide_animation_mode": "true",
+    "pause_animations_by_default": "false",
     "instructions_important": "false",
-    "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
-    "expand_debugger": "false",
-    "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "pause_animations_by_default": "false",
-    "contained_level_names": null
+    "show_debug_watch": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "contained_level_names": [
+      "CSD U3 Sprites intro predict multi"
+    ]
   },
   "published": true,
   "notes": "",
