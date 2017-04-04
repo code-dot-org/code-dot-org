@@ -43,8 +43,8 @@ describe('Circuit Playground Components', () => {
           'toggleSwitch',
           'buzzer',
           'soundSensor',
-          'tempSensor',
           'lightSensor',
+          'tempSensor',
           'accelerometer',
           'buttonL',
           'buttonR',
@@ -270,10 +270,12 @@ describe('Circuit Playground Components', () => {
         expect(tempSensor.pin).to.equal(0);
       });
 
-      it('with sensor methods', () => {
-        expect(tempSensor).to.haveOwnProperty('start');
-        expect(tempSensor).to.haveOwnProperty('getAveragedValue');
-        expect(tempSensor).to.haveOwnProperty('setScale');
+      it('with a F (farenheit) property', () => {
+        expect(tempSensor).to.have.ownProperty('F');
+      });
+
+      it('and a C (celsius) property', () => {
+        expect(tempSensor).to.have.ownProperty('C');
       });
     });
 
