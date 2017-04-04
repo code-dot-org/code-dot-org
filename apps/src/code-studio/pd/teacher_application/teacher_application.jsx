@@ -133,13 +133,7 @@ const TeacherApplication = React.createClass({
   },
 
   getInitialState() {
-    if (this.props.accountEmail) {
-      return {
-        primaryEmail: this.props.accountEmail
-      };
-    }
-
-    return {};
+    return this.props.accountEmail ? {primaryEmail: this.props.accountEmail} : {};
   },
 
   handleSubformDataChange(changedData) {
