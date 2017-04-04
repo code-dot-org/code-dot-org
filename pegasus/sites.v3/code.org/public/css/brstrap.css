@@ -45,6 +45,7 @@
   .mobile-feature { display: none }
   .desktop-feature { }
 
+  .col-16 { width: 16%; float:left; }
   .col-18 { width: 18%; float:left; }
   .col-20 { width: 20%; float:left; }
   .col-23 { width: 23%; float:left; }
@@ -114,8 +115,6 @@
   .avatar_container p { padding-right: 0px;  }
 
 }
-
-
 
 /* 512 and down: some mobile styling collapses even more */
 
