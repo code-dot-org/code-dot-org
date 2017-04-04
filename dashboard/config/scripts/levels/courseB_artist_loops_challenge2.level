@@ -37,8 +37,8 @@
     "images": "[\r\n  {\"filename\": \"https://images.code.org/0c3a39c9f5802f419d5300ae25af83b1-image-1490792107287.47.39 AM.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "markdown_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?"
+    "markdown_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
