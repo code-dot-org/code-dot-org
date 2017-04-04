@@ -63,7 +63,7 @@ export default class ShowCodeToggle extends Component {
     }
 
     if (this.props.onToggle) {
-      this.props.onToggle(studioApp.editor.currentlyUsingBlocks);
+      this.props.onToggle(studioApp.editCode ? studioApp.editor.currentlyUsingBlocks : true);
     }
   }
 
