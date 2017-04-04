@@ -96,7 +96,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
   }
   function hideHeaderPopup(event) {
     // Clicks inside the popup shouldn't close it, unless it's on close button
-    const target = event.target;
+    const target = event && event.target;
     if ($(".header_popup").find(target).length > 0 &&
         !$(event.target).hasClass('header_popup_close')) {
       return;
