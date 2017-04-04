@@ -223,7 +223,7 @@ module AWS
         list_certificates(certificate_statuses: ['ISSUED']).
         certificate_summary_list.
         select {|cert| cert.domain_name == "*.#{ssl_cert}" || cert.domain_name == ssl_cert}.
-        max_by {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate.not_after }.
+        max_by {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate.not_after}.
         try(:certificate_arn)
       {
         aliases: {
