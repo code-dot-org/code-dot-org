@@ -1,5 +1,8 @@
 require 'test_helper'
 
+# TODO(asher): This file probablys belongs in the lib/test/cdo/ subdirectory rather than the
+# dashboard/test/models/ subdirectory. Move this there, making the requisite test framework
+# changes.
 class UserHelpersTest < ActiveSupport::TestCase
   test 'UserHelpers.sponsor_message' do
     teacher = create :teacher
