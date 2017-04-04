@@ -3,6 +3,10 @@
  * of code studio apps.
  */
 
+// Export html2canvas as a non-default so that it can be stubbed by tests.
+import html2canvas from 'html2canvas';
+export {html2canvas};
+
 /**
  * Paint an image of an existing canvas onto a new thumbnail canvas. The new
  * canvas has a white background, and width and height equal to thumbnailSize.
