@@ -768,7 +768,7 @@ class Script < ActiveRecord::Base
       hideable_stages: script_data[:hideable_stages] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
-      student_detail_progress_view: script_data[:student_summary_progress_view] || false
+      student_detail_progress_view: script_data[:student_detail_progress_view] || false
     }.compact
   end
 end
