@@ -36,9 +36,9 @@
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Nest your loops by surrounding your triangle code with another `repeat` loop.\",\"hint_id\":\"courseD_artist_nestedLoops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/3a0b8ee90afb4ea0483f5c536a35b043/courseD_artist_nestedLoops2.mp3\"}]",
     "video_key": "C3_artist_nested_loops",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
