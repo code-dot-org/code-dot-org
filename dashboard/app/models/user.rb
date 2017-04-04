@@ -1218,7 +1218,7 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
-    teachers.map {|teacher| teacher.try(:terms_of_service_version)}.try(:compact).try(:max)
+    teachers.map(&:terms_of_service_version).try(:compact).try(:max)
   end
 
   # Returns whether the user has accepted the latest major version of the Terms of Service
