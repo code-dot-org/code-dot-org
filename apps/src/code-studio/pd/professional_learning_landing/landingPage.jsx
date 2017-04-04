@@ -51,7 +51,7 @@ const LandingPage = React.createClass({
       return (
         <div>
           <h3>
-            Complete Survey and Order Free Course Kit
+            Submit feedback and order free course kit
           </h3>
           <p>
             Thank you for taking a CS Fundamentals workshop! Please complete this survey about your experience and you
