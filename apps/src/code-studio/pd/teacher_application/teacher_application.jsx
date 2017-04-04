@@ -133,6 +133,12 @@ const TeacherApplication = React.createClass({
   },
 
   getInitialState() {
+    if (this.props.accountEmail) {
+      return {
+        primaryEmail: this.props.accountEmail
+      };
+    }
+
     return {};
   },
 
