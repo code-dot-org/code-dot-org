@@ -62,12 +62,11 @@ import {
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
-var project = require('../code-studio/initApp/project');
-import {createThumbnail} from '../util/thumbnail';
-import html2canvas from 'html2canvas';
+import project from '../code-studio/initApp/project';
+import * as thumbnailUtils from '../util/thumbnail';
 
 // Needed by html2canvas in SVGContainer.hasFabric to work on IE 11.
-window.html2canvas = html2canvas;
+window.html2canvas = thumbnailUtils.html2canvas;
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -369,7 +368,7 @@ Applab.captureScreenshot = function () {
 
   // html2canvas can take up to 2 seconds to capture the visualization contents
   // onto the canvas.
-  html2canvas(visualization, options).catch(e => {
+  thumbnailUtils.html2canvas(visualization, options).catch(e => {
     if (didPinVizSize) {
       Applab.clearVisualizationSize();
     }
@@ -390,13 +389,15 @@ Applab.captureScreenshot = function () {
     }
 
     // Scale the image down so we don't send so much data over the network.
-    const thumbnailCanvas = createThumbnail(canvas, THUMBNAIL_SIZE);
+    const thumbnailCanvas = thumbnailUtils.createThumbnail(canvas, THUMBNAIL_SIZE);
 
-    thumbnailCanvas.toBlob(pngBlob => {
-      return project.saveThumbnail(pngBlob);
+    return new Promise((resolve, reject) => {
+      thumbnailCanvas.toBlob(pngBlob => {
+        project.saveThumbnail(pngBlob).then(resolve, reject);
+      });
     });
   }).catch(e => {
-    console.warn(`error capturing screenshot: ${e}`);
+    console.log(`error capturing screenshot: ${e}`);
   }).then(() => {
     isCapturePending = false;
   });
