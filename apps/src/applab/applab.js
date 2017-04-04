@@ -62,7 +62,8 @@ import {
 } from '../lib/tools/jsdebugger/redux';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
-var project = require('@cdo/apps/code-studio/initApp/project');
+var project = require('../code-studio/initApp/project');
+import {createThumbnail} from '../util/thumbnail';
 import html2canvas from 'html2canvas';
 
 // Needed by html2canvas in SVGContainer.hasFabric to work on IE 11.
@@ -368,7 +369,14 @@ Applab.captureScreenshot = function () {
 
   // html2canvas can take up to 2 seconds to capture the visualization contents
   // onto the canvas.
-  html2canvas(visualization, options).then(canvas => {
+  html2canvas(visualization, options).catch(e => {
+    if (didPinVizSize) {
+      Applab.clearVisualizationSize();
+    }
+    return Promise.reject(e);
+  }).then(canvas => {
+    // Unpin the visualization column ASAP to minimize the chances that the user
+    // will resize the visualization column while we have it pinned.
     if (didPinVizSize) {
       Applab.clearVisualizationSize();
     }
@@ -382,30 +390,15 @@ Applab.captureScreenshot = function () {
     }
 
     // Scale the image down so we don't send so much data over the network.
-    const thumbnailCanvas = document.createElement('canvas');
-    thumbnailCanvas.width = THUMBNAIL_SIZE;
-    thumbnailCanvas.height = THUMBNAIL_SIZE;
-
-    // Make sure any empty areas appear white.
-    const thumbnailContext = thumbnailCanvas.getContext('2d');
-    thumbnailContext.fillStyle = 'white';
-    thumbnailContext.fillRect(0, 0, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
-
-    thumbnailContext.drawImage(canvas, 0, 0, THUMBNAIL_SIZE, THUMBNAIL_SIZE);
+    const thumbnailCanvas = createThumbnail(canvas, THUMBNAIL_SIZE);
 
     thumbnailCanvas.toBlob(pngBlob => {
       return project.saveThumbnail(pngBlob);
     });
-  }).then(() => {
-    isCapturePending = false;
   }).catch(e => {
     console.warn(`error capturing screenshot: ${e}`);
-
+  }).then(() => {
     isCapturePending = false;
-
-    if (didPinVizSize) {
-      Applab.clearVisualizationSize();
-    }
   });
 };
 
