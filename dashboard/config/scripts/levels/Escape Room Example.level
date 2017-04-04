@@ -212,8 +212,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Room Escape\r\n\r\nIn today's workshop you are going to be working on making a room escape app!  This level has an example app that you should play around with to get the feel for what you will be creating.\r\n\r\n# Do This\r\n\r\n* Click RUN to start the app\r\n* Try to find the key that will open the door.",
-    "contained_level_names": null,
-    "encrypted_examples": "Cie21/xpN2Mgf75oM2qEuXQRm8vDMYvz4OB4z6WwOwLvRJfEgAVuq0494Jd4\nJg0r\n"
+    "encrypted_examples": "Cie21/xpN2Mgf75oM2qEuXQRm8vDMYvz4OB4z6WwOwLvRJfEgAVuq0494Jd4\nJg0r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -31,10 +31,9 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure you're using an `if/else` block to keep the zombie headed the right direction.\",\"hint_id\":\"courseD_maze_until8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/655ea7b266ef67789b0d769feca1edef/courseD_maze_until8.mp3\"}]",
     "ideal": "5",
     "video_key": "if_else",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
