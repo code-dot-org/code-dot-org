@@ -358,10 +358,6 @@ class StudioApp {
     this.cdoSounds = options.cdoSounds;
     this.Dialog = options.Dialog;
 
-    // Bind assetUrl to the instance so that we don't need to depend on callers
-    // binding correctly as they pass this function around.
-    this.assetUrl = _.bind(this.assetUrl_, this);
-
     this.maxVisualizationWidth = options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
     this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
   }
@@ -577,21 +573,20 @@ class StudioApp {
 
     var vizResizeBar = document.getElementById('visualizationResizeBar');
     if (vizResizeBar) {
-      dom.addMouseDownTouchEvent(vizResizeBar,
-                                 _.bind(this.onMouseDownVizResizeBar, this));
+      dom.addMouseDownTouchEvent(vizResizeBar, this.onMouseDownVizResizeBar);
 
       // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
       // all touchend events on the page, breaking click events...
       document.body.addEventListener('mouseup',
-                                     _.bind(this.onMouseUpVizResizeBar, this));
+                                     this.onMouseUpVizResizeBar);
       var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
       if (mouseUpTouchEventName) {
         document.body.addEventListener(mouseUpTouchEventName,
-                                       _.bind(this.onMouseUpVizResizeBar, this));
+                                       this.onMouseUpVizResizeBar);
       }
     }
 
-    window.addEventListener('resize', _.bind(this.onResize, this));
+    window.addEventListener('resize', this.onResize);
 
     this.reset(true);
 
@@ -603,9 +598,7 @@ class StudioApp {
       Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
         utils.showUnusedBlockQtip(e.target);
       });
-      Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
-        this.updateBlockCount();
-      }, this));
+      Blockly.mainBlockSpaceEditor.addChangeListener(() => this.updateBlockCount());
 
       if (config.level.openFunctionDefinition) {
         this.openFunctionDefinition_(config);
@@ -901,7 +894,7 @@ class StudioApp {
   /**
    * Get the url of path appended to BASE_URL
    */
-  assetUrl_(path) {
+  assetUrl = (path) => {
     if (this.BASE_URL === undefined) {
       throw new Error('StudioApp BASE_URL has not been set. ' +
                       'Call configure() first');
@@ -1224,22 +1217,20 @@ class StudioApp {
       hideOptions.endTarget = endTargetSelector;
     }
 
-    var hideFn = _.bind(function () {
-      // Set focus to ace editor when instructions close:
-      if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
-        this.editor.aceEditor.focus();
-      }
-
-      // update redux
-      this.reduxStore.dispatch(closeInstructionsDialog());
-    }, this);
-
     this.instructionsDialog = this.createModalDialog({
       markdownMode: isMarkdownMode,
       contentDiv: instructionsDiv,
       icon: this.icon,
       defaultBtnSelector: '#ok-button',
-      onHidden: hideFn,
+      onHidden: () => {
+        // Set focus to ace editor when instructions close:
+        if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
+          this.editor.aceEditor.focus();
+        }
+
+        // update redux
+        this.reduxStore.dispatch(closeInstructionsDialog());
+      },
       scrollContent: true,
       scrollableSelector: ".instructions-content",
       header: headerElement
@@ -1256,18 +1247,16 @@ class StudioApp {
     });
 
     if (autoClose) {
-      setTimeout(_.bind(function () {
-        this.instructionsDialog.hide();
-      }, this), 32000);
+      setTimeout(() => this.instructionsDialog.hide(), 32000);
     }
 
     var okayButton = buttons.querySelector('#ok-button');
     if (okayButton) {
-      dom.addClickTouchEvent(okayButton, _.bind(function () {
+      dom.addClickTouchEvent(okayButton, () => {
         if (this.instructionsDialog) {
           this.instructionsDialog.hide();
         }
-      }, this));
+      });
     }
 
     this.instructionsDialog.show({hideOptions: hideOptions});
@@ -1276,7 +1265,7 @@ class StudioApp {
   /**
    *  Resizes the blockly workspace.
    */
-  onResize() {
+  onResize = () => {
     var workspaceWidth = document.getElementById('codeWorkspace').clientWidth;
 
     // Keep blocks static relative to the right edge in RTL mode
@@ -1298,11 +1287,11 @@ class StudioApp {
   }
 
 
-  onMouseDownVizResizeBar(event) {
+  onMouseDownVizResizeBar = (event) => {
     // When we see a mouse down in the resize bar, start tracking mouse moves:
 
     if (!this.onMouseMoveBoundHandler) {
-      this.onMouseMoveBoundHandler = _.bind(this.onMouseMoveVizResizeBar, this);
+      this.onMouseMoveBoundHandler = this.onMouseMoveVizResizeBar;
       document.body.addEventListener('mousemove', this.onMouseMoveBoundHandler);
       this.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
       if (this.mouseMoveTouchEventName) {
@@ -1319,7 +1308,7 @@ class StudioApp {
    *  styles on each of the elements directly, overriding the normal responsive
    *  classes that would typically adjust width and scale.
    */
-  onMouseMoveVizResizeBar(event) {
+  onMouseMoveVizResizeBar = (event) => {
     var visualizationResizeBar = document.getElementById('visualizationResizeBar');
 
     var rect = visualizationResizeBar.getBoundingClientRect();
@@ -1407,7 +1396,7 @@ class StudioApp {
     utils.fireResizeEvent();
   }
 
-  onMouseUpVizResizeBar(event) {
+  onMouseUpVizResizeBar = (event) => {
     // If we have been tracking mouse moves, remove the handler now:
     if (this.onMouseMoveBoundHandler) {
       document.body.removeEventListener('mousemove', this.onMouseMoveBoundHandler);
@@ -1791,8 +1780,8 @@ class StudioApp {
     var runClick = this.runButtonClick.bind(this);
     var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
     var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
-    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-    dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+    dom.addClickTouchEvent(runButton, throttledRunClick.bind(this));
+    dom.addClickTouchEvent(resetButton, this.resetButtonClick.bind(this));
 
     // TODO (cpirich): make conditional for applab
     var belowViz = document.getElementById('belowVisualization');
