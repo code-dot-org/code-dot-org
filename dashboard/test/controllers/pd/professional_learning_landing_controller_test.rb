@@ -6,7 +6,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     @csd_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, subject: nil
     @csp_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
 
-    @teacher = create(:admin, email: 'test_email@foo.com', user_type: 'teacher')
+    @teacher = create(:teacher, email: 'test_email@foo.com', user_type: 'teacher')
     other_teacher = create :teacher
 
     [@csf_workshop, @csd_workshop, @csp_workshop].each do |workshop|
@@ -32,7 +32,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_equal Pd::Workshop::COURSE_CSF, response[:last_workshop_survey_course]
   end
 
-  test_user_gets_response_for :index, name: 'admins only', user: :teacher, response: :forbidden
+  test_redirect_to_sign_in_for :index
 
   test 'courses are sorted as expected' do
     sign_in(@teacher)
