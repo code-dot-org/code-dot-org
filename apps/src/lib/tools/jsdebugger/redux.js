@@ -250,7 +250,7 @@ function appendLogOutput(logOutput, output) {
 export function reducer(state, action) {
   if (!state) {
     state = new JSDebuggerState({
-      isOpen: !experiments.isEnabled('collapse-debugger'),
+      isOpen: false,
     });
   }
   if (action.type === INITIALIZE) {
