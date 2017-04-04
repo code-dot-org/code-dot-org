@@ -60,7 +60,7 @@ CSV.foreach(filename, headers: true) do |line|
   next unless SCRIPTS.include? script_id
 
   completed_at = nil
-  if (NUM_LEVELS_REQURIED.key? script_id) && num_levels >= NUM_LEVELS_REQUIRED[key]
+  if (NUM_LEVELS_REQUIRED.key? script_id) && num_levels >= NUM_LEVELS_REQUIRED[script_id]
     completed_at = last_progress_at
   end
 
