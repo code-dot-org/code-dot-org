@@ -2,17 +2,15 @@ require 'test_helper'
 
 class SectionHiddenStageTest < ActiveSupport::TestCase
   test "can only manage SectionHiddenStage for section you own" do
-    teacher1 = create(:teacher)
-    teacher2 = create(:teacher)
-    student = create(:student)
-
+    teacher = create :teacher
+    other_teacher = create :teacher
+    student = create :student
     stage = create :stage
+    section = create :section, user: teacher
+    section_hidden_stage = create :section_hidden_stage, section: section, stage: stage
 
-    # Create section owned by teacher 1.
-    section = Section.create!(user: teacher1, name: "section 1")
-
-    assert Ability.new(teacher1).can?(:manage, SectionHiddenStage.create(stage_id: stage.id, section_id: section.id))
-    assert !Ability.new(teacher2).can?(:manage, SectionHiddenStage.create(stage_id: stage.id, section_id: section.id))
-    assert !Ability.new(student).can?(:manage, SectionHiddenStage.create(stage_id: stage.id, section_id: section.id))
+    assert Ability.new(teacher).can?(:manage, section_hidden_stage)
+    refute Ability.new(other_teacher).can?(:manage, section_hidden_stage)
+    refute Ability.new(student).can?(:manage, section_hidden_stage)
   end
 end
