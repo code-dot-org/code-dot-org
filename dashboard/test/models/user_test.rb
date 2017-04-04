@@ -1477,7 +1477,7 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher
     section = create :section, user_id: teacher.id
 
-    follow = Follower.create!(section_id: section.id, student_user_id: student.id, user_id: teacher.id)
+    follow = Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
     teacher.reload
     student.reload
