@@ -14,7 +14,8 @@ class DashboardStudent
       join(:followers, section_id: :sections__id).
       join(:users, id: :followers__student_user_id).
       where(sections__user_id: user_id).
-      where(users__deleted_at: nil, followers__deleted_at: nil).
+      where(followers__deleted_at: nil).
+      where(users__deleted_at: nil).
       select(*fields).
       all
   end
@@ -109,8 +110,8 @@ class DashboardStudent
     return if user_to_update.empty?
     return if Dashboard.db[:sections].
       join(:followers, section_id: :sections__id).
-      where(followers__student_user_id: params[:id], sections__user_id: dashboard_user_id).
-      where(followers__deleted_at: nil).
+      where(sections__user_id: dashboard_user_id).
+      where(followers__student_user_id: params[:id], followers__deleted_at: nil).
       empty?
 
     fields = {updated_at: DateTime.now}
