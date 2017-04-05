@@ -5,6 +5,14 @@ FactoryGirl.define do
   factory :experiment do
     name "fancyFeature"
 
+    factory :user_based_experiment, class: 'UserBasedExperiment' do
+      type "UserBasedExperiment"
+      percentage 50
+    end
+    factory :section_based_experiment, class: 'SectionBasedExperiment' do
+      type "SectionBasedExperiment"
+      percentage 50
+    end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
       type "SingleSectionExperiment"
       section
