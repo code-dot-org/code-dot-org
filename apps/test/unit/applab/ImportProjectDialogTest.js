@@ -1,4 +1,3 @@
-import ReactTestUtils from 'react-addons-test-utils';
 import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';

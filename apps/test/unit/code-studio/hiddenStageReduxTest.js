@@ -1,9 +1,7 @@
 import { assert } from 'chai';
 import sinon from 'sinon';
-import Immutable from 'immutable';
 
 import reducer, { toggleHidden, getHiddenStages } from '@cdo/apps/code-studio/hiddenStageRedux';
-import experiments from '@cdo/apps/util/experiments';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 
 function fakeStageLockReducer(state, action) {

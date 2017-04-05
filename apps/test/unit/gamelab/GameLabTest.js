@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 import experiments from '@cdo/apps/util/experiments';

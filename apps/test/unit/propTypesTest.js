@@ -1,5 +1,4 @@
 import React from 'react';
-import sinon from 'sinon';
 import { expect } from '../util/configuredChai';
 var propTypes = require('@cdo/apps/propTypes');
 
