@@ -3,8 +3,6 @@ title: Leadership
 nav: about_nav
 theme: responsive
 ---
-<script src="/js/about_headshots.js">
-</script>
 
 # Leadership
 

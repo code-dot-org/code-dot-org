@@ -3,8 +3,6 @@ title: Full Team
 nav: about_nav
 theme: responsive
 ---
-<script src="/js/about_headshots.js">
-</script>
 
 # Our Team
 
