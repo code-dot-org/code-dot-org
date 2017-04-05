@@ -566,8 +566,7 @@ en:
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
       CSD U3 Draw Loop Stop: {}
-      CSD U3 Entertainment:
-        Exploring CS in Entertainment: Exploring CS in Entertainment
+      CSD U3 Entertainment: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Functions Introduction: {}
       CSD U3 Functions SFLP: {}
@@ -4735,8 +4734,6 @@ en:
       CSDU6 LED predict multi:
         Alternate between on and off each click: Alternate between on and off each click
         Blink on and off randomly: Blink on and off randomly
-        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
-        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
         ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?
         : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?
         Never turn on: Never turn on
