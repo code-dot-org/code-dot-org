@@ -73,7 +73,7 @@ module Pd::Payment
       summary = PaymentCalculatorCSF.instance.calculate(@workshop)
       assert_equal 2, summary.num_teachers
       assert_equal 1, summary.num_qualified_teachers
-      assert_equal @qualified_teacher, summary.teacher_summaries.first.teacher
+      assert_equal @qualified_teacher, summary.teacher_summaries.find(&:qualified?).teacher
     end
   end
 end
