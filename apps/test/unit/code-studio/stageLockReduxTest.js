@@ -1,5 +1,4 @@
 import { assert } from 'chai';
-import { combineReducers } from 'redux';
 import _ from 'lodash';
 import sinon from 'sinon';
 import fakeSectionData from './fakeSectionData';
