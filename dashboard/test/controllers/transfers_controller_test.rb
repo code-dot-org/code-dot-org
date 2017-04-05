@@ -125,25 +125,6 @@ class TransfersControllerTest < ActionController::TestCase
     assert Follower.exists?(student_user: @word_student, section: @word_section)
   end
 
-  # TODO(asher): Determine what the desired behavior is, uncommenting this test
-  # or fixing the controller code appropriately.
-  # test "transferring a student to a section owned by a teacher the student "\
-  #      "already follows causes the student to transfer sections under that teacher" do
-  #   existing_section = create :section, user: @other_teacher, login_type: 'word'
-  #   Follower.create!(
-  #     user: @other_teacher,
-  #     student_user: @word_student,
-  #     section: existing_section
-  #   )
-  #   @params[:new_section_code] = @other_teacher_section.code
-  #   @params[:stay_enrolled_in_current_section] = false
-  #   post :create, params: @params
-  #
-  #   assert_response :no_content
-  #   refute Follower.exists?(student_user: @word_student, section: existing_section)
-  #   assert Follower.exists?(student_user: @word_student, section: @other_teacher_section)
-  # end
-
   test "transferring a student with a messed up email succeeds" do
     @word_student.update_attribute(:email, '')
     @word_student.update_attribute(:hashed_email, '')
@@ -156,7 +137,7 @@ class TransfersControllerTest < ActionController::TestCase
   test "multiple students can be transferred" do
     new_student = create(:student)
     Follower.create!(
-      user_id: @teacher.id,
+      user: @teacher,
       student_user: new_student,
       section: @word_section
     )
@@ -169,22 +150,31 @@ class TransfersControllerTest < ActionController::TestCase
     assert Follower.exists?(student_user: @word_student, section: @picture_section)
   end
 
-  test "students cannot be transferred to other teachers if they already belong to a section belonging to the other teacher" do
+  test "students can be transferred to other teachers if they already belong to a section belonging to the other teacher" do
     already_enrolled_section = create(:section, user: @other_teacher, login_type: 'word')
     Follower.create!(
-      user_id: @other_teacher.id,
+      user: @other_teacher,
       student_user: @word_student,
       section: already_enrolled_section
     )
     @params[:new_section_code] = @other_teacher_section.code
-    @params[:stay_enrolled_in_current_section] = false
 
-    post :create, params: @params
-    assert_response :bad_request
-    assert_equal(
-      "You cannot move these students because this teacher already has them in another section.",
-      json_response["error"]
-    )
+    assert_creates(Follower) do
+      post :create, params: @params
+      assert_response :no_content
+    end
+    assert Follower.find_by(section: @other_teacher_section, student_user: @word_student)
+  end
+
+  test "student cannot be transferred to another section if already in the section" do
+    Follower.create! section: @picture_section, student_user: @word_student
+
+    assert_does_not_create(Follower) do
+      post :create, params: @params
+      assert_response :bad_request
+      assert_equal "You cannot move these students because they are already in the new section.",
+        json_response["error"]
+    end
   end
 
   test "students cannot be transferred to other soft-deleted teachers" do

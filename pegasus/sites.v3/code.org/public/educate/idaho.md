@@ -1,5 +1,6 @@
 ---
 title: Bring Computer Science to Your Idaho School
+theme: responsive
 ---
 
 # Teach Computer Science at Your School

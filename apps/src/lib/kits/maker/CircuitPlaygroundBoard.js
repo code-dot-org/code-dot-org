@@ -1,7 +1,7 @@
 /** @file Board controller for Adafruit Circuit Playground */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import Firmata from 'firmata';
 import {

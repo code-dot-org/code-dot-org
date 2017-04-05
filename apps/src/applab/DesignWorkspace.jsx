@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 const DesignWorkspace = React.createClass({
   propTypes: {
-    handleManageAssets: React.PropTypes.func.isRequired,
     handleVersionHistory: React.PropTypes.func.isRequired,
     handleDragStart: React.PropTypes.func,
     element: React.PropTypes.instanceOf(HTMLElement),
@@ -38,7 +37,6 @@ const DesignWorkspace = React.createClass({
   render: function () {
     return (<div id="designWorkspaceWrapper">
       <DesignModeHeaders
-        handleManageAssets={this.props.handleManageAssets}
         handleVersionHistory={this.props.handleVersionHistory}
         onToggleToolbox={this.onToggleToolbox}
         isToolboxVisible={this.state.isToolboxVisible}

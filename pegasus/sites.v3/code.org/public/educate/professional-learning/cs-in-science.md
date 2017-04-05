@@ -1,6 +1,7 @@
 ---
 title: CS in Science Professional Learning Program
 nav: plc_science_nav
+theme: responsive
 ---
 # CS in Science Professional Learning Program #
 

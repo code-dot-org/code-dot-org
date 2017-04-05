@@ -1,6 +1,7 @@
 ---
 title: CS Discoveries Professional Learning Program
 nav: plc_csd_nav
+theme: responsive
 ---
 # CS Discoveries Professional Learning Program
 

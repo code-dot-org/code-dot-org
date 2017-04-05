@@ -90,7 +90,8 @@ Feature: App Lab Scenarios
   @no_mobile
   Scenario: Upload Image Asset
     When I press "designModeButton"
-    And I press "manage-assets-button"
+    And I press the settings cog
+    And I press the settings cog menu item "Manage Assets"
     And I wait to see a dialog titled "Manage Assets"
     And I wait until element "#upload-asset" is visible
     And I upload the file named "artist_image_1.png"

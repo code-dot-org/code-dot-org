@@ -49,6 +49,7 @@ class Pd::Enrollment < ActiveRecord::Base
   validate :validate_school_name, unless: :created_before_school_info?
   validates_presence_of :school_info, unless: :created_before_school_info?
 
+  before_validation :autoupdate_user_field
   after_create :enroll_in_corresponding_online_learning
 
   def self.for_user(user)
@@ -104,7 +105,12 @@ class Pd::Enrollment < ActiveRecord::Base
     ids_with_processed_surveys, ids_without_processed_surveys =
       enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
 
-    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: ids_without_processed_surveys).map(:id)
+    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(
+      kind: 'PdWorkshopSurvey',
+      source_id: ids_without_processed_surveys
+    ).map do |survey|
+      survey[:source_id].to_i
+    end
 
     filtered_ids = select_completed ?
       ids_with_processed_surveys + ids_with_unprocessed_surveys :
@@ -184,6 +190,10 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   protected
+
+  def autoupdate_user_field
+    self.user = user || resolve_user
+  end
 
   def enroll_in_corresponding_online_learning
     if user && workshop.associated_online_course

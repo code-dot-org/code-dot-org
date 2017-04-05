@@ -85,17 +85,14 @@ module FakeDashboard
   #
   FOLLOWERS = [
     {
-      user_id: TEACHER[:id],
       student_user_id: STUDENT[:id],
       section_id: SECTION_NORMAL[:id]
     },
     {
-      user_id: TEACHER_WITH_DELETED[:id],
       student_user_id: DELETED_STUDENT[:id],
       section_id: SECTION_DELETED_FOLLOWERS[:id]
     },
     {
-      user_id: TEACHER_WITH_DELETED[:id],
       student_user_id: SELF_STUDENT[:id],
       section_id: SECTION_DELETED_FOLLOWERS[:id],
       deleted_at: '2016-01-01 00:01:02'
