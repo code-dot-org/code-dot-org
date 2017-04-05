@@ -44,7 +44,14 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null
+    }
   },
   "published": true,
   "notes": "",

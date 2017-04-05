@@ -44,7 +44,7 @@
     "@code-dot-org/blockly": "1.6.9",
     "@code-dot-org/bramble": "0.1.13",
     "@code-dot-org/johnny-five": "0.9.62-cdo.0",
-    "@code-dot-org/js-interpreter-tyrant": "^0.0.1",
+    "@code-dot-org/js-interpreter-tyrant": "^0.1.1",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
     "@code-dot-org/p5.play": "1.1.6-cdo",
     "@code-dot-org/piskel": "0.10.0-cdo.0",
@@ -203,7 +203,6 @@
   },
   "dependencies": {
     "@code-dot-org/js-interpreter": "^1.1.1",
-    "@code-dot-org/js-interpreter-tyrant": "^0.1.1",
     "crypto-js": "^3.1.9-1",
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
