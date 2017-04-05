@@ -424,7 +424,11 @@ class User < ActiveRecord::Base
     User.find(user_id)
   end
 
-  validate :presence_of_email, if: :teacher?
+  # On creation, always check for an email for teachers. Otherwise, only check if
+  # it has changed, so that we can still update other parts of the model if the
+  # teacher has no email, which is true of some old accounts
+  validate :presence_of_email, if: 'teacher? && email_changed?'
+  validate :presence_of_email, if: :teacher?, on: :create
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
