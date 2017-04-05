@@ -112,7 +112,10 @@ class Overlay extends Component {
     // viz scaling - but if it's set the user has dragged the resize bar, and
     // we need to set scale directly.
     if (typeof this.props.scale === 'number') {
-      rootStyle.transform = `scale(${this.props.scale})`;
+      const transform = `scale(${this.props.scale})`;
+      rootStyle.transform = transform;
+      rootStyle.msTransform = transform;
+      rootStyle.webkitTransform = transform;
     }
     return (
       <div style={rootStyle}>
