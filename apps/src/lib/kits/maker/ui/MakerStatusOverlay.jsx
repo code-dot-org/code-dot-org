@@ -7,14 +7,20 @@ import {isConnecting, hasConnectionError} from '../redux';
 import {singleton as studioApp} from '../../../../StudioApp';
 import OverlayButton from './OverlayButton';
 
+const overlayDimensionsPropTypes = {
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  scale: PropTypes.number,
+};
+
 /**
  * Overlay for the play space that displays maker status updates
  * when there are connection issues.
  */
 export class UnconnectedMakerStatusOverlay extends Component {
   render() {
-    const {width, height, isConnecting, hasConnectionError} = this.props;
-    const dimensions = {width, height};
+    const {width, height, scale, isConnecting, hasConnectionError} = this.props;
+    const dimensions = {width, height, scale};
     if (isConnecting) {
       return <WaitingToConnect {...dimensions}/>;
     } else if (hasConnectionError) {
@@ -24,13 +30,13 @@ export class UnconnectedMakerStatusOverlay extends Component {
   }
 }
 UnconnectedMakerStatusOverlay.propTypes = {
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  ...overlayDimensionsPropTypes,
   isConnecting: PropTypes.bool.isRequired,
   hasConnectionError: PropTypes.bool.isRequired,
 };
 export default connect(
   state => ({
+    scale: state.layout.visualizationScale,
     isConnecting: isConnecting(state),
     hasConnectionError: hasConnectionError(state),
   })
@@ -95,12 +101,19 @@ class Overlay extends Component {
   }
 
   render() {
-    const rootStyle = {
+    let rootStyle = {
       ...style.root,
       width: this.props.width,
       height: this.props.height,
       backgroundColor: this.props.backgroundColor,
     };
+
+    // If scale is undefined we are still letting media queries handle the
+    // viz scaling - but if it's set the user has dragged the resize bar, and
+    // we need to set scale directly.
+    if (typeof this.props.scale === 'number') {
+      rootStyle.transform = `scale(${this.props.scale})`;
+    }
     return (
       <div style={rootStyle}>
         <div style={style.padding}/>
@@ -115,8 +128,7 @@ class Overlay extends Component {
   }
 }
 Overlay.propTypes = {
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  ...overlayDimensionsPropTypes,
   icon: PropTypes.string.isRequired,
   iconModifiers: PropTypes.string,
   text: PropTypes.string.isRequired,
@@ -129,8 +141,7 @@ class WaitingToConnect extends Component {
   render() {
     return (
         <Overlay
-          width={this.props.width}
-          height={this.props.height}
+          {...this.props}
           icon="cog"
           iconModifiers="fa-spin"
           text="Waiting for board to connect..."
@@ -140,16 +151,14 @@ class WaitingToConnect extends Component {
   }
 }
 WaitingToConnect.propTypes = {
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  ...overlayDimensionsPropTypes,
 };
 
 class BoardNotFound extends Component {
   render() {
     return (
         <Overlay
-          width={this.props.width}
-          height={this.props.height}
+          {...this.props}
           icon="exclamation-triangle"
           text="Make sure your board is plugged in."
           backgroundColor={color.red}
