@@ -22,7 +22,7 @@ class SingleSectionExperiment < Experiment
       where(section_id: section.id)
   end
 
-  def is_enabled(user: nil, section: nil)
+  def enabled?(user: nil, section: nil)
     return !section.nil? && section_id == section.id
   end
 end
