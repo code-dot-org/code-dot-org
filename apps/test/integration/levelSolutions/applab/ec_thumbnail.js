@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import tickWrapper from '../../util/tickWrapper';
 import { TestResults } from '@cdo/apps/constants';
 import sinon from 'sinon';
@@ -22,6 +23,12 @@ export default {
         sinon.spy(Applab, 'pinVisualizationSize');
         sinon.spy(Applab, 'clearVisualizationSize');
 
+        let beforeHtml;
+        tickWrapper.runOnAppTick(Applab, 1, () => {
+          expect(Applab.pinVisualizationSize).not.to.have.been.called;
+          beforeHtml = $('#visualizationColumn')[0].innerHTML;
+        });
+
         tickWrapper.runOnAppTick(Applab, CAPTURE_TICK_COUNT + 1, () => {
           expect(Applab.isCaptureComplete()).to.be.false;
           tickWrapper.tickAppUntil(Applab, Applab.isCaptureComplete).then(() => {
@@ -34,7 +41,18 @@ export default {
             expect(Applab.clearVisualizationSize).to.have.been.calledOnce;
             Applab.clearVisualizationSize.restore();
 
+            const afterHtml = $('#visualizationColumn')[0].innerHTML;
+
+            expect(beforeHtml.length).to.be.above(0);
+            expect(beforeHtml).to.equal(afterHtml,
+              'html unchanged after pinning and unpinning viz column width');
+
             Applab.onPuzzleComplete();
+          }).catch(e => {
+            // Make sure any error details are visible in the test output.
+            setTimeout(() => {
+              throw new Error(`error within tickWrapper.tickAppUntil: ${e}`);
+            }, 0);
           });
         });
       },
