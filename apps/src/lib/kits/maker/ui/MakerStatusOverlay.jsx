@@ -3,6 +3,7 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
+import {getVisualizationScale} from '../../../../redux/layout';
 import {isConnecting, hasConnectionError} from '../redux';
 import {singleton as studioApp} from '../../../../StudioApp';
 import OverlayButton from './OverlayButton';
@@ -36,7 +37,7 @@ UnconnectedMakerStatusOverlay.propTypes = {
 };
 export default connect(
   state => ({
-    scale: state.layout.visualizationScale,
+    scale: getVisualizationScale(state),
     isConnecting: isConnecting(state),
     hasConnectionError: hasConnectionError(state),
   })

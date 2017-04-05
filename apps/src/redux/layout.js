@@ -19,6 +19,16 @@ export default function reducer(state = initialState, action) {
  * @param {number} scale the new visualization scale.
  * @returns {{type: string, scale: number}}
  */
+
 export function setVisualizationScale(scale) {
   return {type: SET_VISUALIZATION_SCALE, scale};
+}
+
+function getRoot(state) {
+  // Should be the only global knowledge here
+  return state.layout;
+}
+
+export function getVisualizationScale(state) {
+  return getRoot(state).visualizationScale;
 }
