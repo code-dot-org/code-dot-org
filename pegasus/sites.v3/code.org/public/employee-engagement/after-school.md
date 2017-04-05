@@ -1,9 +1,10 @@
 ---
 title: After School Coding Program
 theme: responsive
+nav: employee_engagement_nav
 ---
 
-# After School Coding Program
+# Employees host an after school club
 
 Every 21st-century student should have the opportunity to learn computer science. The basics help nurture creativity and problem-solving skills, and prepare students for future careers. Your company, in partnership with a local after school organization (i.e. YMCA, Girl Scouts, Boys and Girls Club, etc.), can help bring computer science opportunities to students in your area.
 
@@ -22,10 +23,10 @@ Your employees can help bring computer science after school programs to their co
 Code.org has developed curriculum that allows even the youngest students to explore the limitless world of computing. Our courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer – which is an important consideration in places where access to an internet-connected computer isn’t available. Each course consists of 20 lessons and can be adapted depending on the length of the program. 
 
 Code.org offers a variety of resources to make sure that your employees have everything they need to go out into their communities and start an after school computer science program. 
-</ul>
-<li>Fun and innovative computer science curriculum</li>
-<li>Flyer templates and messaging for community outreach</li>
-<li>Access to an experienced CS facilitator to train volunteers</li>
-</ul>
+
+* Fun and innovative computer science curriculum</li>
+* Flyer templates and messaging for community outreach</li>
+* Access to an experienced CS facilitator to train volunteers</li>
+
 <br/>
 Inspire your employees to join the CS education movement by participating in the After School Coding program!

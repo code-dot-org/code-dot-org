@@ -105,7 +105,12 @@ class Pd::Enrollment < ActiveRecord::Base
     ids_with_processed_surveys, ids_without_processed_surveys =
       enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
 
-    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: ids_without_processed_surveys).map(:id)
+    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(
+      kind: 'PdWorkshopSurvey',
+      source_id: ids_without_processed_surveys
+    ).map do |survey|
+      survey[:source_id].to_i
+    end
 
     filtered_ids = select_completed ?
       ids_with_processed_surveys + ids_with_unprocessed_surveys :
