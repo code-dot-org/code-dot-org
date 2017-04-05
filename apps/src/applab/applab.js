@@ -104,6 +104,11 @@ var skin;
 var copyrightStrings;
 
 /**
+ * @type {number} The last time at which a screenshot capture was attempted.
+ */
+let lastCaptureTimeMs = 0;
+
+/**
  * @type {boolean} Whether a screenshot capture is pending.
  */
 let isCapturePending = false;
@@ -332,6 +337,18 @@ Applab.onTick = function () {
 const THUMBNAIL_SIZE = 180;
 
 Applab.captureScreenshot = function () {
+  const isOwner = project.isOwner();
+  const {isShareView, isEmbedView} = getStore().getState().pageConstants;
+  if (isShareView || isEmbedView || !isOwner) {
+    return;
+  }
+
+  // Skip capturing a screenshot if we just captured one recently.
+  if (Date.now() - lastCaptureTimeMs < applabConstants.MIN_CAPTURE_INTERVAL_MS) {
+    return;
+  }
+  lastCaptureTimeMs = Date.now();
+
   const visualization = document.getElementById('visualization');
   if (!visualization) {
     console.warn(`visualization not found. skipping screenshot.`);
@@ -437,8 +454,9 @@ Applab.init = function (config) {
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
 
-  // Necessary for tests. Make this a member once we can instantiate applab.
+  // Necessary for tests. Make these members once we can instantiate applab.
   isCapturePending = false;
+  lastCaptureTimeMs = 0;
 
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);

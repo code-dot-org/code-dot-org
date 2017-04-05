@@ -19,6 +19,7 @@ import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -123,6 +124,15 @@ describe('Level tests', function () {
 
     wrappedEventListener.attach();
 
+    // For some reason, these commands don't always get called when they are
+    // placed inside the existing window.Applab block below.
+    if (window.Applab) {
+      sinon.stub(project, 'saveThumbnail');
+      sinon.stub(project, 'isOwner').returns(true);
+      sinon.spy(Applab, 'pinVisualizationSize');
+      sinon.spy(Applab, 'clearVisualizationSize');
+    }
+
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
     originalRender = Blockly.BlockSvg.prototype.render;
@@ -176,6 +186,13 @@ describe('Level tests', function () {
     if (window.Studio) {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
+    }
+
+    if (window.Applab) {
+      project.saveThumbnail.restore();
+      project.isOwner.restore();
+      Applab.pinVisualizationSize.restore();
+      Applab.clearVisualizationSize.restore();
     }
 
     tickWrapper.reset();
