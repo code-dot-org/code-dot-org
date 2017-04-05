@@ -291,6 +291,8 @@ module AWS
         enabled: true, # required
         viewer_certificate: ssl_cert ? {
           acm_certificate_arn: certificate_arn,
+          certificate: certificate_arn,
+          certificate_source: 'acm',
           ssl_support_method: 'sni-only', # accepts sni-only, vip
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {
