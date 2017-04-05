@@ -5,7 +5,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
   def index
     if Pd::Enrollment.for_user(current_user).empty?
-      redirect_to "https://#{CDO.pegasus_hostname}/professional-development-workshops"
+      redirect_to CDO.code_org_url('professional-development-workshops')
       return
     end
 
