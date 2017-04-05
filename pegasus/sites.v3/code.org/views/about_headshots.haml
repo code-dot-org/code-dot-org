@@ -5,14 +5,18 @@
     .col-33.avatar_container{ :id => person[:id] }
       - unless person[:url_s].nil_or_empty?
         %a{:href=>person[:url_s], :target=>"_self"}
+          - unless avatar_url.nil_or_empty?
+            %img{:src=>avatar_url, :style=>'max-height: 200px; border-radius: 100px;'}
+          %h3{:style=>'height:20px'}
+            = person[:name_s]
+      - else
+        - unless avatar_url.nil_or_empty?
           %img{:src=>avatar_url, :style=>'max-height: 200px; border-radius: 100px;'}
-        %h3{:style=>'height:20px'}= person[:name_s]
+        %h3{:style=>'height: 20px;'}
+          = person[:name_s]
+      -unless person[:title_s].nil_or_empty?
         %p{:style=>'height: 40px;'}= person[:title_s]
-        %p{:style=>'font-size: 13px;'}= person[:description_t]
-      -  else
-        %img{:src=>avatar_url, :style=>'max-height: 200px; border-radius: 100px;'}
-        %h3{:style=>'height:20px'}= person[:name_s]
-        %p{:style=>'height: 40px;'}= person[:title_s]
-        %p{:style=>'font-size: 13px;'}= person[:description_t]
+      %p{:style=>'font-size: 13px;'}= person[:description_t]
+
 
 %br{:style=>'clear: both;'}
