@@ -2,6 +2,14 @@ require 'cdo/activity_constants'
 
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :experiment do
+    name "fancyFeature"
+
+    factory :single_section_experiment, class: 'SingleSectionExperiment' do
+      type "SingleSectionExperiment"
+      section
+    end
+  end
   factory :section_hidden_stage do
     section nil
     stage nil
