@@ -1,7 +1,6 @@
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
-var _ = require('lodash');
 var $ = require('jquery');
 var ReactTestUtils = require('react-addons-test-utils');
 

@@ -1,11 +1,9 @@
 var testUtils = require('../util/testUtils');
 testUtils.setExternalGlobals();
 import {assert} from '../util/configuredChai';
-var ReactTestUtils = require('react-addons-test-utils');
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');
 
-var msg = require('@cdo/locale');
 var shareWarnings = require('@cdo/apps/shareWarnings');
 
 describe('shareWarnings', function () {
