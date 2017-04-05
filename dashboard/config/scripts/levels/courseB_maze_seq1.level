@@ -26,9 +26,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"\",\"hint_id\":\"\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d41d8cd98f00b204e9800998ecf8427e/courseB_maze_seq1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Drag three of these `S` arrows out and connect them to the `when run` block to get your bird to the pig.\\n\\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\"><next><block type=\\\"maze_moveSouth\\\"><next><block type=\\\"maze_moveSouth\\\"><next><block type=\\\"maze_moveSouth\\\"></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"courseB_maze_seq1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db77e6263476ee0660be402034a874be/courseB_maze_seq1.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

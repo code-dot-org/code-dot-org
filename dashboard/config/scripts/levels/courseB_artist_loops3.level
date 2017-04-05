@@ -8,7 +8,7 @@
     "skin": "artist",
     "instructions": "Help the artist draw a line 7 times to make a garden wall.",
     "x": "200",
-    "y": "50",
+    "y": "40",
     "start_direction": "180",
     "is_k1": "true",
     "skip_instructions_popup": "false",
@@ -36,6 +36,9 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseB_artist_loops3_1\",\r\n  \"callout_text\": \"There is only one of these blocks in the toolbox.  How will you use it?\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 10,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/d88fa03d0c42a961968b1b50a96bf4b9-image-1478557169080.png\", \"position\": [0,0]}\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "permitted_errors": "0",
     "contained_level_names": null
   },
   "published": true,
