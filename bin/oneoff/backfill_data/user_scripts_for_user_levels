@@ -113,7 +113,7 @@ NUM_LEVELS_REQUIRED = {
   171 => 2,  # This may be an under-estimate as the result of LevelGroup UserLevel's.
   172 => 2,  # This may be an under-estimate as the result of LevelGroup UserLevel's.
   173 => 2,  # This may be an under-estimate as the result of LevelGroup UserLevel's.
-  177=> 2,  # This may be an under-estimate as the result of LevelGroup UserLevel's.
+  177 => 2,  # This may be an under-estimate as the result of LevelGroup UserLevel's.
   178 => 2,  # This may be an under-estimate as the result of LevelGroup UserLevel's.
   179 => 2  # This may be an under-estimate as the result of LevelGroup UserLevel's.
   # 181
@@ -130,7 +130,7 @@ NUM_LEVELS_REQUIRED = {
   # 198 => 12,
   # 199 => 8,
   # 203
-  # 204 
+  # 204
 }.freeze
 SCRIPTS = Script.all.pluck(:id).freeze
 TRANSACTION_SIZE = 5_000
