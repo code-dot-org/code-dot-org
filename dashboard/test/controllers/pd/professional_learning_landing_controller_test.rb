@@ -34,6 +34,14 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
   test_redirect_to_sign_in_for :index
 
+  test 'teachers without enrollments are redirected' do
+    new_teacher = create :teacher
+    sign_in new_teacher
+
+    get :index
+    assert_redirected_to "https://#{CDO.pegasus_hostname}/professional-development-workshops"
+  end
+
   test 'courses are sorted as expected' do
     sign_in(@teacher)
 

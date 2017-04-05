@@ -4,6 +4,11 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    if Pd::Enrollment.for_user(current_user).empty?
+      redirect_to "https://#{CDO.pegasus_hostname}/professional-development-workshops"
+      return
+    end
+
     last_enrollment_with_pending_survey = Pd::Enrollment.filter_for_survey_completion(
       Pd::Enrollment.where(email: current_user.email).where.not(survey_sent_at: nil),
       false
