@@ -6,8 +6,6 @@ var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
-var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
 var fakeShard = NetSimTestUtils.fakeShard;
 
