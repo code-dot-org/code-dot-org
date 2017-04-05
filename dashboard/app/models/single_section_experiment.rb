@@ -16,6 +16,8 @@
 #
 
 class SingleSectionExperiment < Experiment
+  belongs_to :section
+
   def self.get_enabled(user: nil, section: nil)
     return Experiment.none unless section
     Experiment.where(type: SingleSectionExperiment.to_s).

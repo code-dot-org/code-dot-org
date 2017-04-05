@@ -16,6 +16,8 @@
 #
 
 class SectionBasedExperiment < Experiment
+  validates :percentage, inclusion: 0..100
+
   def self.get_enabled(user: nil, section: nil)
     return Experiment.none unless section
     Experiment.where(type: SectionBasedExperiment.to_s).
@@ -30,6 +32,6 @@ class SectionBasedExperiment < Experiment
       (earliest_section_start.nil? ||
         earliest_section_start < section.first_activity_time) &&
       (latest_section_start.nil? ||
-        latest_section_start < section.first_activity_time)
+        latest_section_start > section.first_activity_time)
   end
 end
