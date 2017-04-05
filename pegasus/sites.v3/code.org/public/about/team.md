@@ -3,12 +3,16 @@ title: Full Team
 nav: about_nav
 theme: responsive
 ---
+<script src="/js/about_headshots.js">
+</script>
 
 # Our Team
 
 <img src="/images/fullteam.png" width="100%;" >
 
+
 <%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'team') %>
+
 
 <a id="extended"></a>
 # Our Extended Team
