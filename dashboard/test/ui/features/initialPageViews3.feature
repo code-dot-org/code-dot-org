@@ -1,5 +1,5 @@
 @eyes
-Feature: Looking at a few things with Applitools Eyes
+Feature: Looking at a few things with Applitools Eyes - Part 3
 
   Background:
     Given I am on "http://studio.code.org/reset_session"
