@@ -47,3 +47,9 @@ Feature: Pixelation levels
     And I press keys "110011001100110011111111" for element "#pixel_data"
     And I save pixelation data and reload
     Then pixelation data has text "04 04 18 FF0000 00AAAA 999999 CCCCFF"
+
+  Scenario: Pixelation with encoding controls hidden
+    Given I am on the 4th pixelation test level
+    And pixelation data has text "04 04 18 FF0000 00AAAA"
+    Then element "input[value='hex']" is not visible
+    And element "input[value='hex']" is not visible
