@@ -1,5 +1,4 @@
 import { assert } from 'chai';
-import { combineReducers } from 'redux';
 import sinon from 'sinon';
 import Immutable from 'immutable';
 
