@@ -115,7 +115,7 @@ class Overlay extends Component {
       const transform = `scale(${this.props.scale})`;
       rootStyle.transform = transform;
       rootStyle.msTransform = transform;
-      rootStyle.webkitTransform = transform;
+      rootStyle.WebkitTransform = transform;
     }
     return (
       <div style={rootStyle}>
