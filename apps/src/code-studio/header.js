@@ -130,9 +130,8 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     var popupTop = parseInt(headerWrapper.css('padding-top'), 10) +
         parseInt(headerPopup.css('top'), 10);
     var popupBottom = parseInt(headerPopup.css('margin-bottom'), 10);
-    var footerHeight = headerPopup.find('.header_popup_footer').outerHeight();
     headerPopup.find('.header_popup_scrollable').css('max-height',
-        viewportHeight - (popupTop + popupBottom + footerHeight));
+        viewportHeight - (popupTop + popupBottom));
   }
 };
 
