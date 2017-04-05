@@ -1,7 +1,7 @@
 
 #headshots{:style => 'margin-top: 20px;'}
 - people.each_slice(3) do |trio|
-  .headshot_row{:style=>'width: 100%; padding: 0; margin: 0; overflow: auto;'}
+  .headshot_row{:style=>'width: 100%; padding: 0; margin: 0;'}
     - trio.each do |person|
       - avatar_url = avatar_image(person[:name_s], 200, true)
       .col-33.avatar_container{ :id => person[:id] }
@@ -20,5 +20,4 @@
           %p{:style=>'height: 40px;'}= person[:title_s]
         %p{:style=>'font-size: 13px;'}= person[:description_t]
 
-
-%br{:style=>'clear: both;'}
+  %br{:style=>'clear: both;'}
