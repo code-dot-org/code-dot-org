@@ -93,7 +93,9 @@ const MINIBLOCKS_TO_DISPLAY_TEXT = {
   poppy: i18n.miniBlockPoppy(),
 };
 
-const MINIBLOCKS = Object.keys(MINIBLOCKS_TO_DISPLAY_TEXT).sort();
+
+// Don't allow
+const MINIBLOCKS = Object.keys(MINIBLOCKS_TO_DISPLAY_TEXT).filter(b => b !== 'sheep');
 
 const SOUNDS_TO_DISPLAY_TEXT = {
   dig_wood1: i18n.soundTypeDig_wood1(),
