@@ -168,7 +168,7 @@ class Section < ActiveRecord::Base
       end
     end
 
-    Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
+    Follower.find_or_create_by!(student_user: student, section: self)
   end
 
   private
