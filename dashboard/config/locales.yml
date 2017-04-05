@@ -46,6 +46,12 @@
   english: "Catalan"
   native: "Català"
 
+"co": "co-CO"
+"co-CO":
+  english: "Corsican"
+  native: "Corsu"
+  debug: true
+
 "cs": "cs-CZ"
 "cs-CZ":
   english: "Czech"

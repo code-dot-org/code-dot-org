@@ -487,10 +487,11 @@ class FilesApi < Sinatra::Base
     end
     new_entry_hash = JSON.parse new_entry_json
     # Replace downcased filename with original filename (to preserve case in the manifest)
-    new_entry_hash['filename'] = filename
+    new_entry_hash['filename'] = CGI.unescape(filename)
     manifest_is_unchanged = false
 
-    existing_entry = manifest.detect {|e| e['filename'].downcase == filename.downcase}
+    manifest_comparison_filename = new_entry_hash['filename'].downcase
+    existing_entry = manifest.detect {|e| e['filename'].downcase == manifest_comparison_filename}
     if existing_entry.nil?
       manifest << new_entry_hash
     else
@@ -503,7 +504,8 @@ class FilesApi < Sinatra::Base
 
     # if we're also deleting a file (on rename), remove it from the manifest
     if params['delete']
-      reject_result = manifest.reject! {|e| e['filename'].downcase == params['delete'].downcase}
+      manifest_delete_comparison_filename = CGI.unescape(params['delete']).downcase
+      reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
       manifest_is_unchanged = false unless reject_result.nil?
     end
 
@@ -607,7 +609,8 @@ class FilesApi < Sinatra::Base
     manifest = JSON.load manifest_result[:body]
 
     # remove the file from the manifest
-    reject_result = manifest.reject! {|e| e['filename'].downcase == filename.downcase}
+    manifest_delete_comparison_filename = CGI.unescape(filename).downcase
+    reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
     not_found if reject_result.nil?
 
     # write the manifest
