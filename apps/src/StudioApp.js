@@ -50,6 +50,9 @@ import {
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 
+// Make sure polyfills are available in all code studio apps and level tests.
+import './polyfills';
+
 var copyrightStrings;
 
 /**
