@@ -28,7 +28,7 @@
     "lock_zero_param_functions": "false",
     "free_play": "false",
     "text_mode_at_start": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions_important": "false",
@@ -65,8 +65,11 @@
     "pause_animations_by_default": "false",
     "callout_json": "[]",
     "markdown_instructions": "# Create Your Scene - Text\r\n\r\nThe final piece of your scene is to add text.\r\n\r\n# Do This\r\n\r\n* Add a `text()` command for each separate line of text\r\n* If necessary, use `fill()` and `textSize()` to change the appearance of your text\r\n\r\n_Hint: Most scenes have the text on top of everything else, which would require your `text()` commands to be the last lines in your program. If, however, you want the text layered in with other elements you might consider changing the order._",
-    "project_template_level_name": "CSD U3 Sprites text debug",
-    "contained_level_names": null
+    "project_template_level_name": "CSD U3 Sprites scene template",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
