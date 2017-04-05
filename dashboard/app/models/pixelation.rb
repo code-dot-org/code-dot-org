@@ -28,6 +28,7 @@ class Pixelation < Widget
     version
     data
     hex
+    hide_encoding_controls
   )
 
   before_validation do
