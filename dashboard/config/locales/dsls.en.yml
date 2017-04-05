@@ -4737,6 +4737,8 @@ en:
         Blink on and off randomly: Blink on and off randomly
         ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
         : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?
+        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?
         Never turn on: Never turn on
         Turn on and stay on: Turn on and stay on
       'CSP U4L04 Assessment 1 ':
@@ -8420,6 +8422,11 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
+      unique level name here:
+        ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
+        : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
+        When run, where will the sprite `my_sprite` be located?: When run, where will the sprite `my_sprite` be located?
+        right answer: right answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
