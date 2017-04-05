@@ -1,5 +1,6 @@
 ---
 title: Bring Computer Science to Your School (Columbus)
+theme: responsive
 ---
 
 # Teach Computer Science at Your School

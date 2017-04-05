@@ -1,5 +1,6 @@
 ---
 title: Diversity in K-12 computer science
+theme: responsive
 social:
   "og:title": "Code.org's plan for diversity in K-12 computer science"
   "og:description": "A summary of our plans (and results) to address gender and ethnic diversity in computer science in K-12 schools."
@@ -21,12 +22,12 @@ The fields of software, computing and computer science are plagued by tremendous
 
 This problem extends into the software workplace, which suffers a similar lack of diversity. Obviously there are many issues to address to solve the entire problem of diversity in the tech workforce - from unconscious bias in hiring or retention practices, or capacity-building in university programs. 
 
-<center><img src="/images/diversitypipeline2.png" /></center>
+<center><img src="/images/diversitypipeline2.png" style="max-width: 100%"/></center>
 <br/><br/>
 Our focus is primarily on K-12 learning, which is where the diversity problem begins: Among women, those who try AP Computer Science in high school are 10 times more likely to major in computer science. Black and Hispanic students who try AP Computer Science in high school are 7-8 times more likely to major in computer science (see tables 3, 7, 8 in [this document](http://research.collegeboard.org/sites/default/files/publications/2012/7/researchreport-2007-4-ap-students-college-analysis-five-year-academic-careers.pdf)). But more importantly, computer science is now a foundational science for all 21st century careers, making access in K-12 to this knowledge an equity issue the country must address.
 
 ## Diversity of students in our courses
-<center><img src="/images/infographics/fit-800/diversity-courses.png"/></center>
+<center><img src="/images/infographics/fit-800/diversity-courses.png" style="max-width: 100%"/></center>
 
 Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among underrepresented minorities: African Americans, Hispanic/Latino students, Native American/Alaskans, and Native Hawaiian/Pacific Islanders. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diversity. Below are examples of some of the other tactics we use address diversity issues:
 
@@ -82,7 +83,7 @@ The results speak for themselves, with 100 million “hours served”, and 48% o
 
 We’ve also distributed [recruitment posters, videos, and other marketing materials](http://code.org/educate/inspire) for CS teachers to help them recruit more women to their classrooms.  For example, we’ve produced this video specifically highlighting female role models talking about the importance of learning computer science.
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe style="max-width: 100%" width="560" height="315" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe></center>
 
 
 

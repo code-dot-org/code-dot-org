@@ -1,5 +1,6 @@
 ---
 title: Promoting Equity in the K-12 Classroom
+theme: responsive
 social:
   "og:title": "Promoting Equity in the K-12 Classroom"
   "og:description": "Next steps for creating an inclusive environment in the classroom."
@@ -18,9 +19,6 @@ social:
 # Code.org and Diversity in Computer Science
 
 The fields of software, computing and computer science are plagued by tremendous underrepresentation of women, African Americans, and Hispanics.  In high school, the Advanced Placement exam in Computer Science has the worst gender diversity across all courses, with 78 percent participation by men and 22 percent by women. Participation by students of color is 13 percent. These underrepresented groups represent 65 percent of the entire US population! 
-
-
-<center><img src="/images/diversitypipeline.png" /></center>
 
 This problem extends into the software workplace, which suffers a similar lack of diversity. Obviously there are many issues to address to solve the entire problem of diversity in the tech workforce - from unconscious bias in hiring or retention practices, or capacity-building in university programs. 
 
@@ -58,7 +56,7 @@ Instead, all of our professional development workshops include a session on equi
 
 **The results:** among our school district partnerships, the students in our high school computer science classes are 37% female, and 56% black or Hispanic.  
 
-<center><img width="70%" src="/images/2015AR/diversity.jpg" /></center>
+<center><img style="max-width: 100%" src="/images/2015AR/diversity.jpg" /></center>
 
 ## Changing state level policies to increase participation in CS
 

@@ -9,8 +9,8 @@ class FollowerTest < ActiveSupport::TestCase
   test "cannot follow yourself" do
     assert_does_not_create(Follower) do
       follower = Follower.create(
-        user_id: @laurel.id,
-        student_user_id: @laurel.id,
+        user: @laurel,
+        student_user: @laurel,
         section: @laurel_section
       )
       refute follower.valid?

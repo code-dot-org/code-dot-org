@@ -1,11 +1,12 @@
 ---
 title: Teacher Resources - Make a Flappy Game
 nav: hoc_teacher_resources_nav
+theme: responsive
 ---
 
 # Make a Flappy Game: An Hour of Code Tutorial
 
-<center><iframe width="600" height="337" src="https://www.youtube.com/embed/VQ4lo6Huylc" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe style="max-width:100%" width="600" height="337" src="https://www.youtube.com/embed/VQ4lo6Huylc" frameborder="0" allowfullscreen></iframe></center>
 
 [col-50]
 

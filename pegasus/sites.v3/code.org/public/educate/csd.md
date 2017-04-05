@@ -10,7 +10,7 @@ video_player: true
 
 Applications for the 2017-18 CS Discoveries Professional Learning Program have closed.  
 
-Our curriculum is [completely free](/commitment) for anyone, anywhere to teach. If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
+Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
@@ -153,13 +153,13 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 <div style="float:left; padding:25px; width:33%">
 
-<h4>Apply now for professional learning!</h4>
+<h4>Apply for professional learning!</h4>
 
-We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries! This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
+If you are interested in joining in 2018-19, sign up below to be added to our contact list. This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
 
 <br><br>
 
-<a href="/educate/professional-learning/cs-discoveries"><button>Apply now!</button></a>
+<a href="https://goo.gl/forms/jBWAHg5jvEV8lSV52"> <button>Join our contact list</button> </a>
 
 </div>
 

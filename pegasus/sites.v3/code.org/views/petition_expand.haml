@@ -60,7 +60,7 @@
         -if request.language  == 'en'
           %span{style: "color:#ffa400; font-size:16px; margin-right:20px", onclick: "expandPetition();"}
             = I18n.t :homepage_diversity_pledge
-        %button{onclick: "expandPetition();", style: "margin-bottom:5px"}
+        %button{onclick: "expandPetition();", style: "margin-top: 0px; margin-bottom:5px"}
           -if request.language  == 'en'
             = I18n.t :homepage_signpetition_dropdown
           -else

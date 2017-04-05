@@ -1477,7 +1477,7 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher
     section = create :section, user_id: teacher.id
 
-    follow = Follower.create!(section_id: section.id, student_user_id: student.id, user_id: teacher.id)
+    follow = Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
     teacher.reload
     student.reload
@@ -1526,7 +1526,7 @@ class UserTest < ActiveSupport::TestCase
 
     # can_pair_with? method
     classmate = create :student
-    section.add_student classmate
+    section.add_student classmate, move_for_same_teacher: false
     assert classmate.can_pair_with?(student)
     assert student.can_pair_with?(classmate)
     refute student.can_pair_with?(other_user)

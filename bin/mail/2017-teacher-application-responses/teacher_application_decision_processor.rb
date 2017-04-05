@@ -94,7 +94,7 @@ class TeacherApplicationDecisionProcessor
       when DECISIONS[:decline]
         process :decline, teacher_application
       when DECISIONS[:waitlist]
-        process :waitlist, teacher_application
+        process_waitlist teacher_application
       else
         raise "Unexpected decision #{decision} for application #{application_id}"
     end
@@ -203,6 +203,10 @@ class TeacherApplicationDecisionProcessor
       workshop_dates_s: workshop_info[:dates]
     }
     process :accept_partner, teacher_application, params
+  end
+
+  def process_waitlist(teacher_application)
+    process :waitlist, teacher_application, {teacher_application_id_s: teacher_application.id}
   end
 
   def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override = nil)

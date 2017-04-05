@@ -1,6 +1,7 @@
 ---
 title: Teacher led Hour of Code lesson plans - by grade and subject
 nav: educate_nav
+theme: responsive
 ---
 # Teacher-Led Hour of Code Lesson Plans
 

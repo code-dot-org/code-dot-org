@@ -70,7 +70,8 @@
     "debugger_disabled": "false",
     "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Original: \" + myArray);\r\nconsole.log(\"Values greater than 5\");\r\n\r\n// Your code goes here",
     "encrypted_examples": "kVvcEXvCFx5TDpvTTozp9VZwxMHzN0YgWCSUDy/cXQoTU0EIThYlcmO7hPN0\ndHG/\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

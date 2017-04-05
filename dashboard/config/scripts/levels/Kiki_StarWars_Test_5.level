@@ -36,7 +36,7 @@
     "disable_examples": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "true",
-    "free_play": "false",
+    "free_play": "true",
     "disable_sharing": "false",
     "edge_collisions": "false",
     "projectile_collisions": "false",

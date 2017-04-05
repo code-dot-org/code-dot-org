@@ -1,6 +1,7 @@
 ---
 title: Facilitator Development Program
 nav: educate_nav
+theme: responsive
 ---
 
 # Facilitating with Code.org

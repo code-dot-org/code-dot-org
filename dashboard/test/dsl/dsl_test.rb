@@ -41,6 +41,7 @@ class DslTest < ActiveSupport::TestCase
       login_required: false,
       professional_learning_course: nil,
       hideable_stages: false,
+      student_detail_progress_view: false,
       peer_reviews_to_complete: nil
     }
 
@@ -84,6 +85,7 @@ level 'Level 3'
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -217,6 +219,7 @@ DSL
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -254,6 +257,7 @@ DSL
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -273,6 +277,19 @@ level 'Level 2'
 DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:hideable_stages]
+  end
+
+  test 'can set student_detail_progress_view' do
+    input_dsl = <<DSL
+student_detail_progress_view 'true'
+
+stage 'Stage1'
+level 'Level 1'
+stage 'Stage2'
+level 'Level 2'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:student_detail_progress_view]
   end
 
   test 'Script DSL with level progressions' do
@@ -298,6 +315,7 @@ DSL
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -339,6 +357,7 @@ level 'Level 3'
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
