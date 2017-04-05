@@ -394,7 +394,21 @@ class ApiControllerTest < ActionController::TestCase
       }
     ]
 
-    assert_equal expected_response, JSON.parse(@response.body)
+    response_body = JSON.parse(@response.body)
+    # Since the order of the levelgroup_results with the response isn't defined, we manually
+    # compare the actual and expected responses.
+    # TODO(asher): Generalize this to somewhere where it can be reused.
+    assert_equal 1, response_body.length
+    assert_equal ['stage', 'levelgroup_results'], response_body[0].keys
+    assert_equal expected_response[0]['stage'], response_body[0]['stage']
+    assert_equal expected_response[0]['levelgroup_results'].count,
+      response_body[0]['levelgroup_results'].count
+    expected_response[0]['levelgroup_results'].each do |result|
+      assert response_body[0]['levelgroup_results'].include? result
+    end
+    response_body[0]['levelgroup_results'].each do |result|
+      assert expected_response[0]['levelgroup_results'].include? result
+    end
   end
 
   test "should get surveys for section with script with single page anonymous level_group assessment" do

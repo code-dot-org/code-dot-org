@@ -5,7 +5,8 @@
 module.exports = {
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "mocha",
   ],
   "extends": [
     "eslint:recommended",
@@ -36,6 +37,7 @@ module.exports = {
     "eqeqeq": "error",
     "jsx-quotes": "error", // autofixable
     "keyword-spacing": "error",
+    "mocha/no-exclusive-tests": "error",
     "no-array-constructor": "error",
     "no-console": "off",
     "no-duplicate-imports": "error",
