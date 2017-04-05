@@ -218,8 +218,6 @@ en:
       blank_code: "Please enter a section code"
       cant_join_own_section: "Sorry, you can't join your own section."
     mail:
-      invite_student:
-        subject: "Join a class with %{teacher_name} at Code.org!"
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
   reports:
