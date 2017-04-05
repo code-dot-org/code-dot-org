@@ -1412,17 +1412,16 @@ function checkForCollisions() {
 
   for (var i = 0; i < Studio.spriteCount; i++) {
     var sprite = Studio.sprite[i];
-    if (!sprite.visible) {
-      // hidden sprite can't collide with anything
-      continue;
-    }
     var iHalfWidth = sprite.width / 2;
     var iHalfHeight = sprite.height / 2;
     var iPos = getNextPosition(i, false);
     var iXCenter = iPos.x + iHalfWidth;
     var iYCenter = iPos.y + iHalfHeight;
     for (var j = 0; j < Studio.spriteCount; j++) {
-      if (i === j || !Studio.sprite[j].visible) {
+      if (i === j || !sprite.visible || !Studio.sprite[j].visible) {
+        // If either sprite isn't visible, only finish queues that have already
+        // started.
+        executeCollision(i, j);
         continue;
       }
       var jPos = getNextPosition(j, false);
@@ -1440,42 +1439,44 @@ function checkForCollisions() {
       }
       executeCollision(i, j);
     }
+    if (sprite.visible) {
+      handleActorCollisionsWithCollidableList(i,
+                                              iXCenter,
+                                              iYCenter,
+                                              Studio.projectiles);
+      handleActorCollisionsWithCollidableList(i,
+                                              iXCenter,
+                                              iYCenter,
+                                              Studio.items,
+                                              level.removeItemsWhenActorCollides);
 
-    handleActorCollisionsWithCollidableList(i,
-                                            iXCenter,
-                                            iYCenter,
-                                            Studio.projectiles);
-    handleActorCollisionsWithCollidableList(i,
-                                            iXCenter,
-                                            iYCenter,
-                                            Studio.items,
-                                            level.removeItemsWhenActorCollides);
+      handleEdgeCollisions(
+          sprite,
+          iXCenter,
+          iYCenter,
+          createActorEdgeCollisionHandler(i));
 
-    handleEdgeCollisions(
-        sprite,
-        iXCenter,
-        iYCenter,
-        createActorEdgeCollisionHandler(i));
+      if (level.wallMapCollisions) {
+        if (Studio.willSpriteTouchWall(sprite, iPos.x, iPos.y)) {
+          if (level.blockMovingIntoWalls) {
+            cancelQueuedMovements(i, false);
+            cancelQueuedMovements(i, true);
 
-    if (level.wallMapCollisions) {
-      if (Studio.willSpriteTouchWall(sprite, iPos.x, iPos.y)) {
-        if (level.blockMovingIntoWalls) {
-          cancelQueuedMovements(i, false);
-          cancelQueuedMovements(i, true);
+            // Since we never overlap the wall/obstacle when blockMovingIntoWalls
+            // is set, throttle the event so it doesn't fire every frame while
+            // attempting to move into a wall:
 
-          // Since we never overlap the wall/obstacle when blockMovingIntoWalls
-          // is set, throttle the event so it doesn't fire every frame while
-          // attempting to move into a wall:
+            Studio.throttledCollideSpriteWithWallFunctions[i]();
 
-          Studio.throttledCollideSpriteWithWallFunctions[i]();
-
+          } else {
+            Studio.collideSpriteWith(i, 'wall');
+          }
         } else {
-          Studio.collideSpriteWith(i, 'wall');
+          sprite.endCollision('wall');
         }
-      } else {
-        sprite.endCollision('wall');
       }
     }
+
 
     // Don't execute actor collision queue(s) until we've handled all
     // wall, projectile, item, and edge collisions. Not sure this is strictly
