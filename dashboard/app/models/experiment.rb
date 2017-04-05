@@ -18,6 +18,7 @@
 MAX_CACHE_AGE = 1.minutes
 
 class Experiment < ApplicationRecord
+  validates :name, presence: true
   after_create {Experiment.update_cache}
 
   @@experiments = nil
