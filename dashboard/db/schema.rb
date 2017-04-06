@@ -163,16 +163,16 @@ ActiveRecord::Schema.define(version: 20170403224005) do
   end
 
   create_table "experiments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name"
-    t.string   "type"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "name",                   null: false
+    t.string   "type",                   null: false
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer  "section_id"
     t.integer  "percentage"
     t.datetime "earliest_section_start"
     t.datetime "latest_section_start"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
   end
 
   create_table "facilitators_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

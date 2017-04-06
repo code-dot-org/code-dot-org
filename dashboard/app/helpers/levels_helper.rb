@@ -221,8 +221,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section).map(&:name)
       if section && section.first_activity_time.nil?
-        section.first_activity_time = DateTime.now
-        section.save
+        section.update!(first_activity_time: DateTime.now)
       end
     end
 
