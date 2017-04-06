@@ -4,8 +4,6 @@ import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'templates/watchers/AutocompleteSelector.story.jsx',
-  'templates/watchers/Watchers.story.jsx',
   'templates/VersionHistory.jsx',
   'templates/PaginationWrapper.story.jsx',
   'templates/Button.story.jsx',
