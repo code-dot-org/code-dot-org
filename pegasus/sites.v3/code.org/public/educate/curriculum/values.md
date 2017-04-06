@@ -7,9 +7,9 @@ nav: educate_nav
 
 While Code.org offers a wide range of curricular materials across a wide range of ages, the following values permeate and drive the creation of every lesson we write.
 
-## Computer Science is Foundational for Every Student 
+## Computer Science is for Every Student 
 
-We believe that computing is so fundamental to understanding and participating in society that it should be something that *everyone* learns. Like reading and writing, computer science belongs among the foundational subjects that make up a modern education. We see computer science as a liberal art, which provides students with a critical lens for interpreting the world around them. Computer science prepares all students to be active and informed contributors to our increasingly technological society whether they pursue careers in technology or not. Computer science can be life-changing, not just skill training.
+We believe that computing is so fundamental to understanding and participating in society that it is valuable for *every student* to learn as part of a modern education. We see computer science as a liberal art, a subject that provides students with a critical lens for interpreting the world around them. Computer science prepares all students to be active and informed contributors to our increasingly technological society whether they pursue careers in technology or not. Computer science can be life-changing, not just skill training.
 
 ## Teachers in Classrooms
 
@@ -41,7 +41,7 @@ We take great care to design learning experiences in which students have an acti
 
 ## Materials and Tools
 
-Our materials and tools are specifically created for learners and learning experiences, and focus on foundational concepts that are most likely to stand the test of time. They are designed to support exploration and discovery by those without computer science knowledge, so that students can develop an understanding of these concepts through “play” and experimentation. From our coding environments to other non-coding tools and videos, all our resources have been engineered to support the lessons in our curriculum, and thus our philosophy about student engagement and learning. In that vein, our videos can be a great tool for sensemaking about CS concepts and provide a resource for students to return to when they want to refresh their knowledge. They are usually packed with information and “star” a diverse collection of presenters and CS role models.
+Our materials and tools are specifically created for learners and learning experiences, and focus on foundational concepts that allow them to stand the test of time. They are designed to support exploration and discovery by those without computer science knowledge, so that students can develop an understanding of these concepts through “play” and experimentation. From our coding environments to other non-coding tools and videos, all our resources have been engineered to support the lessons in our curriculum, and thus our philosophy about student engagement and learning. In that vein, our videos can be a great tool for sensemaking about CS concepts and provide a resource for students to return to when they want to refresh their knowledge. They are usually packed with information and “star” a diverse collection of presenters and CS role models.
 
 ## Creation and Personal Expression
 
@@ -50,3 +50,6 @@ Many of the projects, assignments, and activities in our curriculum ask students
 ## The Classroom Community
 
 Our lessons almost always call for students to interact with other students in the class in some way.  Whether it’s simply conferring with a partner during a warm up discussion, or engaging in a long-term group project, our belief is that a classroom where students are communicating, solving problems, and creating things is a classroom that not only leads to active and better learning for students, but also leads to a more inclusive classroom culture in which all students share ideas and listen to ideas of others. For example, classroom discussions usually follow a Think-Pair-Share pattern; we ask students to write computer code in pairs; and we strive to include projects for teams in which everyone must play a critical role.
+
+# Our commitment to free curriculum and open source technology
+All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for noncommercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by English language learners. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).

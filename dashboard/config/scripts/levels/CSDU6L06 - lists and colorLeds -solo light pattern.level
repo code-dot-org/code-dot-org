@@ -48,7 +48,7 @@
       "led.on": null,
       "led.off": null,
       "buzzer.note": null,
-      "buzzer.off": null
+      "buzzer.stop": null
     },
     "edit_code": true,
     "embed": "false",
@@ -88,7 +88,11 @@
     "project_template_level_name": "CSDU6 - L06 - Light Display Template",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",

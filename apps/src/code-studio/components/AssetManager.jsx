@@ -101,11 +101,12 @@ var AssetManager = React.createClass({
   },
 
   deleteAssetRow: function (name) {
+    assetListStore.remove(name);
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
     this.setState({
-      assets: assetListStore.remove(name),
+      assets: assetListStore.list(this.props.allowedExtensions),
       statusMessage: 'File "' + name + '" successfully deleted!'
     });
   },

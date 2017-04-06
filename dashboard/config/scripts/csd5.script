@@ -17,11 +17,12 @@ level 'CSD U5 black white images pixelation'
 level 'CSD U5 black white images pixelation 2'
 level 'CSD U5 black white images pixelation 3'
 level 'CSD U5 black white images pixelation 4'
+level 'CSD U5 black white images pixelation 5'
 
-stage 'Representing Numbers Part 1'
+stage 'Representing Numbers'
 named_level 'CSD-U5-SFLP Representing Numbers Part 1'
 
-stage 'Representing Numbers Part 2'
+stage '8-bit Numbers'
 named_level 'CSD-U5-SFLP Representing Numbers Part 2'
 level 'CSD U5 fixed-bits'
 

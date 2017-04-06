@@ -137,7 +137,7 @@ class TransfersControllerTest < ActionController::TestCase
   test "multiple students can be transferred" do
     new_student = create(:student)
     Follower.create!(
-      user_id: @teacher.id,
+      user: @teacher,
       student_user: new_student,
       section: @word_section
     )
@@ -153,7 +153,7 @@ class TransfersControllerTest < ActionController::TestCase
   test "students can be transferred to other teachers if they already belong to a section belonging to the other teacher" do
     already_enrolled_section = create(:section, user: @other_teacher, login_type: 'word')
     Follower.create!(
-      user_id: @other_teacher.id,
+      user: @other_teacher,
       student_user: @word_student,
       section: already_enrolled_section
     )

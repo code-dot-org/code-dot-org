@@ -82,10 +82,11 @@ module Dashboard
     # @return [Array[Integer]] the subset of other_user_ids that are followeds
     #   of the user encapsulated by this class.
     def get_followed_bys(other_user_ids)
-      Dashboard.db[:followers].
+      Dashboard.db[:sections].
+        join(:followers, section_id: :sections__id).
         join(:users, id: :followers__student_user_id).
+        where(sections__user_id: id).
         where(followers__student_user_id: other_user_ids).
-        where(followers__user_id: id).
         where(users__deleted_at: nil, followers__deleted_at: nil).
         select_map(:followers__student_user_id)
     end
@@ -94,10 +95,11 @@ module Dashboard
     # @return [Boolean] whether other_user_id is a followed of the user
     #   encapsulated by this class.
     def followed_by?(other_user_id)
-      Dashboard.db[:followers].
+      Dashboard.db[:sections].
+        join(:followers, section_id: :sections__id).
         join(:users, id: :followers__student_user_id).
+        where(sections__user_id: id).
         where(followers__student_user_id: other_user_id).
-        where(followers__user_id: id).
         where(users__deleted_at: nil, followers__deleted_at: nil).
         any?
     end

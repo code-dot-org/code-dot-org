@@ -201,6 +201,7 @@ March 2017:
 
 - Guest Speaker Series: NCWIT [Video](http://videos.code.org/plp/NCWIT_March17.mp4)
 - Guest Speaker Series: NCWIT [Slides](https://docs.google.com/presentation/d/1nxC--kbLdFF41laOZqKFmKjMZmfsFUMAwf2VZkF59q4/edit)
+- CS Principles Webinar for Teachers [Video](http://videos.code.org/plp/3-28-2017_CSPrinciples_Webinar.mp4)
 
 [**Back to the top**](#top)
 <br/>
