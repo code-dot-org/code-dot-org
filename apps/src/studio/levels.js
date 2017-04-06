@@ -1882,7 +1882,6 @@ levels.js_hoc2015_move_right = {
   'startBlocks': [
     'moveRight();',
     ''].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -1952,7 +1951,6 @@ levels.js_hoc2015_move_right_down = {
   'startBlocks': [
     'moveRight();',
     ''].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -2001,7 +1999,6 @@ levels.js_hoc2015_move_backtrack = {
   'startBlocks': [
     'moveRight();',
     ''].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -2053,7 +2050,6 @@ levels.js_hoc2015_move_diagonal = {
   'startBlocks': [
     'moveDown();',
     ''].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -2125,7 +2121,6 @@ levels.js_hoc2015_move_around = {
   'startBlocks': [
     'moveRight();',
     ''].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -2177,7 +2172,6 @@ levels.js_hoc2015_move_finale = {
   'startBlocks': [
     'moveDown();',
     ''].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
@@ -2258,7 +2252,6 @@ levels.js_hoc2015_event_two_items = {
     'function whenDown() {',
     '  ',
     '}'].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'removeItemsWhenActorCollides': true,
@@ -2360,7 +2353,6 @@ levels.js_hoc2015_event_four_items = {
     'function whenDown() {',
     '  ',
     '}'].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'removeItemsWhenActorCollides': true,
@@ -2433,7 +2425,6 @@ levels.js_hoc2015_score =
       'R2-D2sound4': true
     }
   },
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
@@ -2551,7 +2542,6 @@ levels.js_hoc2015_win_lose = {
       'R2-D2sound4': true
     }
   },
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
@@ -2667,7 +2657,6 @@ levels.js_hoc2015_add_characters = {
       'PufferPigSound3': true
     }
   },
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
@@ -2777,7 +2766,6 @@ levels.js_hoc2015_chain_characters = {
       'MynockSound3': true,
     }
   },
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
@@ -2864,7 +2852,6 @@ levels.js_hoc2015_multiply_characters = {
       'MouseDroidSound3': true
     }
   },
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
@@ -2981,7 +2968,6 @@ levels.js_hoc2015_change_setting = {
       'ProbotSound3': true,
     }
   },
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
@@ -3146,7 +3132,6 @@ levels.js_hoc2015_event_free = {
     '  goRight();',
     '}',
     ''].join('\n'),
-  'sortDrawOrder': true,
   'wallMapCollisions': true,
   'blockMovingIntoWalls': true,
   'itemGridAlignedMovement': true,
