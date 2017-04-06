@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {throwOnConsoleErrors, throwOnConsoleWarnings} from './testUtils';
+import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../../util/testUtils';
 
 /**
  * Generate and run a suite of simple tests that make sure all of provided
