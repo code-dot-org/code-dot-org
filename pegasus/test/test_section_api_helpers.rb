@@ -4,6 +4,7 @@ require_relative '../src/env'
 require 'mocha/mini_test'
 require 'sequel'
 require_relative '../helpers/section_api_helpers'
+require_relative 'fixtures/fake_dashboard'
 
 # 'section_helpers.rb' gets included by section_api_helpers
 
@@ -12,6 +13,41 @@ def remove_dates(string)
 end
 
 class SectionApiHelperTest < Minitest::Test
+  describe DashboardStudent do
+    before do
+      FakeDashboard.use_fake_database
+    end
+
+    describe 'fetch_user_students' do
+      it 'does return students' do
+        students = DashboardStudent.fetch_user_students(FakeDashboard::TEACHER[:id])
+        assert_equal 1, students.length
+        assert_equal 'Sally Student', students.first[:name]
+      end
+
+      it 'does not return deleted sections' do
+        assert_equal(
+          [],
+          DashboardStudent.fetch_user_students(FakeDashboard::TEACHER_WITH_DELETED_SECTION[:id])
+        )
+      end
+
+      it 'does not return deleted followers' do
+        assert_equal(
+          [],
+          DashboardStudent.fetch_user_students(FakeDashboard::TEACHER_WITH_DELETED_FOLLOWER[:id])
+        )
+      end
+
+      it 'does not return deleted students' do
+        assert_equal(
+          [],
+          DashboardStudent.fetch_user_students(FakeDashboard::TEACHER_WITH_DELETED_USER[:id])
+        )
+      end
+    end
+  end
+
   describe DashboardSection do
     before do
       # see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
@@ -94,9 +130,6 @@ class SectionApiHelperTest < Minitest::Test
         assert_match %r(INSERT INTO `sections` \(`user_id`, `name`, `login_type`, `grade`, `script_id`, `code`, `created_at`, `updated_at`\) VALUES \(15, 'My cool section', 'word', NULL, NULL, '[A-Z&&[^AEIOU]]{6}', DATE, DATE\)), remove_dates(@fake_db.sqls.first)
       end
     end
-  end
-
-  describe DashboardStudent do
   end
 
   describe DashboardUserScript do

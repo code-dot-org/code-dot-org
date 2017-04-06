@@ -33,23 +33,29 @@ module FakeDashboard
   # Fake Data: Users
   #
   UNUSED_USER_ID = 12345
-  STUDENT = {id: 1, name: 'Sally Student', user_type: 'student', admin: false}
-  TEACHER = {id: 2, name: 'Terry Teacher', user_type: 'teacher', admin: false}
+  STUDENT = {id: 1, name: 'Sally Student', user_type: 'student'}
+  STUDENT_OTHER = {id: 8, name: 'Sam Student', user_type: 'student'}
+  TEACHER = {id: 2, name: 'Terry Teacher', user_type: 'teacher'}
   ADMIN = {id: 3, name: 'Alice Admin', user_type: 'teacher', admin: true}
-  FACILITATOR = {id: 4, name: 'Fran Facilitator', user_type: 'teacher', admin: false}
-  SELF_STUDENT = {
-    id: 5, name: 'Self Studying Student', user_type: 'student', admin: false
-  }
+  FACILITATOR = {id: 4, name: 'Fran Facilitator', user_type: 'teacher'}
+  SELF_STUDENT = {id: 5, name: 'Self Studying Student', user_type: 'student'}
   DELETED_STUDENT = {
-    id: 6, name: 'Stricken Student', user_type: 'student', admin: false,
-    deleted_at: '2016-01-01 12:34:56'
+    id: 6, name: 'Stricken Student', user_type: 'student', deleted_at: '2016-01-01 12:34:56'
   }
-  TEACHER_WITH_DELETED = {
-    id: 7, name: 'Temporary Teacher', user_type: 'teacher', admin: false
-  }
+  TEACHER_WITH_DELETED_SECTION = {id: 7, name: 'Temporary Teacher', user_type: 'teacher'}
+  TEACHER_WITH_DELETED_FOLLOWER = {id: 9, name: 'Transient Teacher', user_type: 'teacher'}
+  TEACHER_WITH_DELETED_USER = {id: 10, name: 'Transient Teacher', user_type: 'teacher'}
   USERS = [
-    STUDENT, TEACHER, ADMIN, FACILITATOR, SELF_STUDENT, DELETED_STUDENT,
-    TEACHER_WITH_DELETED
+    STUDENT,
+    STUDENT_OTHER,
+    TEACHER,
+    ADMIN,
+    FACILITATOR,
+    SELF_STUDENT,
+    DELETED_STUDENT,
+    TEACHER_WITH_DELETED_SECTION,
+    TEACHER_WITH_DELETED_FOLLOWER,
+    TEACHER_WITH_DELETED_USER
   ]
 
   #
@@ -70,14 +76,17 @@ module FakeDashboard
   SECTION_NORMAL = {id: 150001, user_id: TEACHER[:id], name: 'Fake Section A'}
   SECTION_EMPTY = {id: 150002, user_id: TEACHER[:id], name: 'Fake Section B'}
   SECTION_DELETED = {
-    id: 150003, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section C',
+    id: 150003, user_id: TEACHER_WITH_DELETED_SECTION[:id], name: 'Fake Section C',
     deleted_at: '2015-01-01 12:34:56'
   }
-  SECTION_DELETED_FOLLOWERS = {
-    id: 150004, user_id: TEACHER_WITH_DELETED[:id], name: 'Fake Section D'
+  SECTION_DELETED_FOLLOWER = {
+    id: 150004, user_id: TEACHER_WITH_DELETED_FOLLOWER[:id], name: 'Fake Section D'
+  }
+  SECTION_DELETED_USER = {
+    id: 150005, user_id: TEACHER_WITH_DELETED_USER[:id], name: 'Fake Section E'
   }
   TEACHER_SECTIONS = [
-    SECTION_NORMAL, SECTION_EMPTY, SECTION_DELETED, SECTION_DELETED_FOLLOWERS
+    SECTION_NORMAL, SECTION_EMPTY, SECTION_DELETED, SECTION_DELETED_FOLLOWER, SECTION_DELETED_USER
   ]
 
   #
@@ -89,13 +98,17 @@ module FakeDashboard
       section_id: SECTION_NORMAL[:id]
     },
     {
-      student_user_id: DELETED_STUDENT[:id],
-      section_id: SECTION_DELETED_FOLLOWERS[:id]
+      student_user_id: STUDENT[:id],
+      section_id: SECTION_DELETED[:id]
     },
     {
-      student_user_id: SELF_STUDENT[:id],
-      section_id: SECTION_DELETED_FOLLOWERS[:id],
+      student_user_id: STUDENT_OTHER[:id],
+      section_id: SECTION_DELETED_FOLLOWER[:id],
       deleted_at: '2016-01-01 00:01:02'
+    },
+    {
+      student_user_id: DELETED_STUDENT[:id],
+      section_id: SECTION_DELETED_USER[:id]
     }
   ]
 
