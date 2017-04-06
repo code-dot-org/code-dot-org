@@ -5,11 +5,10 @@
 # AWS DMS tasks in the us-east-1 region.
 # (https://console.aws.amazon.com/dms/home?region=us-east-1#tasks:)
 
-require File.expand_path('../../../deployment', __FILE__)
-require 'cdo/chat_client'
-require 'cdo/only_one'
-require 'cdo/redshift'
-require 'cdo/slack'
+require_relative '../../../lib/cdo/chat_client'
+require_relative '../../../lib/cdo/only_one'
+require_relative '../../../lib/cdo/redshift'
+require_relative '../../../lib/cdo/slack'
 
 REPLICATION_TASK_TYPE = 'reload-target'.freeze
 SECONDS_PER_MINUTE = 60
