@@ -52,7 +52,7 @@ const WorkshopTableLoader = React.createClass({
     .done(data => {
       this.setState({
         loading: false,
-        workshops: data
+        workshops: Array.isArray(data) ? data : [data]
       });
     });
   },

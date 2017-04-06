@@ -89,6 +89,38 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_escaping_insensitivity
+    filename = @api.randomize_filename('has space.html')
+    escaped_filename = URI.escape(filename)
+    filename2 = @api.randomize_filename('another has spaces.html')
+    escaped_filename2 = URI.escape(filename2)
+    delete_all_file_versions(filename)
+    delete_all_file_versions(escaped_filename)
+    delete_all_file_versions(filename2)
+    delete_all_file_versions(escaped_filename2)
+    delete_all_manifest_versions
+
+    post_file_data(@api, filename, 'stub-contents', 'test/html')
+    assert successful?
+
+    @api.get_object(escaped_filename)
+    assert successful?
+
+    @api.delete_object(escaped_filename)
+    assert successful?
+
+    post_file_data(@api, escaped_filename2, 'stub-contents-2', 'test/html')
+    assert successful?
+
+    @api.get_object(escaped_filename2)
+    assert successful?
+
+    @api.delete_object(escaped_filename2)
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   def test_case_insensitivity
     filename = @api.randomize_filename('casesensitive.PNG')
     different_case_filename = filename.gsub(/PNG$/, 'png')

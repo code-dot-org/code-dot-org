@@ -566,8 +566,7 @@ en:
       CSD U3 Counters match outputs: {}
       CSD U3 Defender SFLP: {}
       CSD U3 Draw Loop Stop: {}
-      CSD U3 Entertainment:
-        Exploring CS in Entertainment: Exploring CS in Entertainment
+      CSD U3 Entertainment: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Functions Introduction: {}
       CSD U3 Functions SFLP: {}
@@ -612,6 +611,7 @@ en:
       CSD U3 setSpeed STOP:
         Stop Here: Stop Here
         description here: description here
+      CSD U3L02 SFLP: {}
       CSD U4L01 SFLP: {}
       CSD U4L02 SFLP: {}
       CSD U4L03 SFLP: {}
@@ -2709,6 +2709,8 @@ en:
         title: title
       courseD_external_binary1:
         Binary Drawing: Binary Drawing
+      courseE_external_ramp14:
+        Good Job!: Good Job!
       courseF_external_variableConstant: {}
       coursee-privateandpersonalinformation: {}
       coursef_powerofwords:
@@ -4692,6 +4694,16 @@ en:
         Neither square will be drawn. There is an error in the code.: Neither square will be drawn. There is an error in the code.
         The green square will be drawn but the red one will not You cannot call functions before they are created.: The green square will be drawn but the red one will not You cannot call functions before they are created.
         The red square will be drawn but the green one will not. You cannot call functions after they are created.: The red square will be drawn but the green one will not. You cannot call functions after they are created.
+      CSD U3 Sprites intro predict multi:
+        ? '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png" style="width: 150px; border: 1px solid">'
+        ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
+        : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'
+        When run, where will the sprite <code>my_sprite</code> be located?: When run, where will the sprite <code>my_sprite</code> be located?
       CSD U3 Variables Reassign Predict Multi:
         A 10 will be displayed. Once a variable is full you cannot put another value in it: A 10 will be displayed. Once a variable is full you cannot put another value in it
         A 20 will be displayed. New values replace old values in a variable: A 20 will be displayed. New values replace old values in a variable
@@ -4724,8 +4736,8 @@ en:
       CSDU6 LED predict multi:
         Alternate between on and off each click: Alternate between on and off each click
         Blink on and off randomly: Blink on and off randomly
-        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
-        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when when you click the repeatedly.
+        ? Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?
+        : Here's a new block called <code>led.toggle()</code>. In this program <code>led.toggle()</code> is called every time you click the red button. What do you think will happen when you click the repeatedly?
         Never turn on: Never turn on
         Turn on and stay on: Turn on and stay on
       'CSP U4L04 Assessment 1 ':
@@ -8409,6 +8421,11 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
+      unique level name here:
+        ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
+        : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
+        When run, where will the sprite `my_sprite` be located?: When run, where will the sprite `my_sprite` be located?
+        right answer: right answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

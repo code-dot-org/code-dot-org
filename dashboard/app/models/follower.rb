@@ -32,7 +32,7 @@ class Follower < ActiveRecord::Base
   end
 
   def teacher_must_be_teacher
-    errors.add(:user_id, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
+    errors.add(:user, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
 
   validate :cannot_follow_yourself, :teacher_must_be_teacher
