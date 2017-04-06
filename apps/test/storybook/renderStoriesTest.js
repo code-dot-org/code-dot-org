@@ -4,7 +4,6 @@ import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'code-studio/components/ImagePicker.story.jsx',
   'code-studio/components/ShareDialog.story.jsx',
   'code-studio/components/progress/MiniViewTopRow.story.jsx',
   'code-studio/components/progress/ProgressDot.story.jsx',
