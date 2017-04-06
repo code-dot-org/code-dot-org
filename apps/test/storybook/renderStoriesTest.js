@@ -1,9 +1,9 @@
 // Load all .story.jsx files and render them with enzyme, checking for
 // render errors and other problems.
+import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'applab/ImportScreensDialog.story.jsx',
   'applab/ApplabVisualizationColumn.story.jsx',
   'code-studio/components/ImagePicker.story.jsx',
   'code-studio/components/ShareDialog.story.jsx',
@@ -45,6 +45,10 @@ const BLACKLIST = [
 ];
 
 describe('Rendering stories', () => {
+  throwOnConsoleErrors();
+  throwOnConsoleWarnings();
+
+  // Test all the *.story.jsx files that aren't blacklisted
   const context = require.context('../../src/', true, /.*\.story\.jsx$/);
   context.keys()
       .filter(storyFile => !BLACKLIST.some(taboo => storyFile.includes(taboo)))

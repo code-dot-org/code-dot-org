@@ -1,6 +1,5 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../../util/testUtils';
 
 /**
  * Generate and run a suite of simple tests that make sure all of provided
@@ -15,40 +14,41 @@ export default function testStorybook(storiesFn) {
 }
 
 class FakeStorybook {
-  componentName = 'Anonymous component';
-  stories = [];
+  groups = [];
 
   storiesOf(name) {
-    this.componentName = name;
+    this.groups.push({
+      name,
+      stories: [],
+    });
     return this;
   }
 
+  latestGroup() {
+    return this.groups[this.groups.length-1];
+  }
+
   addWithInfo(name, _, story) {
-    this.stories.push({name, story});
+    this.latestGroup().stories.push({name, story});
     return this;
   }
 
   addStoryTable(tableStories) {
-    Array.prototype.push.apply(this.stories, tableStories);
+    Array.prototype.push.apply(this.latestGroup().stories, tableStories);
     return this;
   }
 
-  action(_) {
+  action() {
     // Intentional no-op
     return function () {};
   }
 
   test() {
-    describe(`Stories of ${this.componentName}`, () => {
-      throwOnConsoleErrors();
-      throwOnConsoleWarnings();
-      this.stories.forEach(story => {
-        if (!story.name) {
-          console.log(story);
-          console.log(this.componentName);
-          return;
-        }
-        it(story.name, () => mount(story.story()));
+    this.groups.forEach(group => {
+      describe(`Stories of ${group.name}`, () => {
+        group.stories.forEach(story => {
+          it(story.name, () => mount(story.story()));
+        });
       });
     });
   }
