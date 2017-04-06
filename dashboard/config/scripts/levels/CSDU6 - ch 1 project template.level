@@ -98,11 +98,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "display_name": "Challenge: Get Loopy",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

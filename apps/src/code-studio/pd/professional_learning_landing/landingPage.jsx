@@ -22,7 +22,7 @@ const LandingPage = React.createClass({
         style={{
           width: '100%',
           height: '300px',
-          background: `url(https://code.org/images/homepage/sheryl.jpg) no-repeat`,
+          background: `url(/blockly/media/BannerKids.png) no-repeat`,
           backgroundSize: 'cover',
           display: 'flex',
           alignItems: 'center',

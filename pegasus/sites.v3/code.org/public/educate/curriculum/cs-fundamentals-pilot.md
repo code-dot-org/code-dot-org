@@ -106,8 +106,7 @@ As these updates won’t be officially released until August 2017, there are a f
 
 | Course |Recommended Student prerequisites |
 | :------------------:|-----------|
-| *Courses A, B and C* | None |
-| *Course D* | Concept needed: Simple repeat loops <br>Recommended prerequisite: [Course 1](http://studio.code.org/s/course1) or [Course 2](http://studio.code.org/s/course2) or Code.org [Hour of Code tutorial](http://hourofcode.com/learn) |
+| *Courses A, B, C, and D* | None |
 | *Course E* | Concepts needed: Loops, conditionals (if/else statements)<br>Recommended prerequisite: [Course 2](http://studio.code.org/s/course2) |
 | *Course F* | Concepts needed: Loops, conditionals (if/else statements), functions <br>Recommended prerequisite: [Course 3](http://studio.code.org/s/course3) |
 
