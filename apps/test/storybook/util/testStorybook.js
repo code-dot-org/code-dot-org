@@ -20,7 +20,7 @@ class FakeStorybook {
     this.groups.push({
       name,
       stories: [],
-      decorators: [],
+      decorate: story => story(),
     });
     return this;
   }
@@ -44,7 +44,9 @@ class FakeStorybook {
   }
 
   addDecorator(decoratorFn) {
-    this.latestGroup().decorators.push(decoratorFn);
+    const latestGroup = this.latestGroup();
+    const oldDecorator = latestGroup.decorate;
+    latestGroup.decorate = story => decoratorFn(oldDecorator.bind(null, story));
     return this;
   }
 
@@ -58,10 +60,7 @@ class FakeStorybook {
       describe(`Stories of ${group.name}`, () => {
         group.stories.forEach(story => {
           it(story.name, () => {
-            const decoratedStory = group.decorators.reduce(
-                (wrappedStory, nextDecorator) => nextDecorator.bind(null, wrappedStory),
-                story.story);
-            mount(decoratedStory());
+            mount(group.decorate(story.story));
           });
         });
       });
