@@ -5,9 +5,10 @@
 # AWS DMS tasks in the us-east-1 region.
 # (https://console.aws.amazon.com/dms/home?region=us-east-1#tasks:)
 
-require File.expand_path('../../../deployment', __FILE__)
+require File.expand_path('../../../../deployment', __FILE__)
 require 'cdo/chat_client'
 require 'cdo/only_one'
+require 'cdo/rake_utils'
 require 'cdo/redshift'
 require 'cdo/slack'
 
@@ -95,4 +96,6 @@ rescue Aws::DatabaseMigrationService::Errors::ServiceError => e
   raise e
 end
 
-main if only_one_running?(__FILE__)
+RakeUtils.with_bundle_dir(File.dirname(__FILE__)) do
+  main if only_one_running?(__FILE__)
+end
