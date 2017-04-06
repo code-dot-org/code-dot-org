@@ -1,4 +1,4 @@
-- create_params = {cookieDomain: (Rails.env.development? ? 'none' : 'auto')}
+- create_params = {cookieDomain: (Rails.env.development? ? 'none' : 'auto'), allowLinker: true}
 -# The following dimensions must match in order the custom dimension settings in our Google Analytics account.
 - selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio, has_teacher = (1..7).map{|x|"dimension#{x}"}
 - dimensions = {}
@@ -18,6 +18,8 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-37745279-1', 'auto', #{create_params.to_json});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['code.org', 'studio.code.org', 'hourofcode.com']);
 
   var dimensions = #{dimensions.to_json};
   if ('devicePixelRatio' in window) {
@@ -26,6 +28,7 @@
 
   ga('set', dimensions);
   ga('send', 'pageview');
+
   function trackEvent(category, action, label, value) {
     ga('send', 'event', category, action, label, value);
   }
