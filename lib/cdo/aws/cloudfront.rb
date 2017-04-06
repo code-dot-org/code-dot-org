@@ -73,7 +73,7 @@ module AWS
     # so we can compare against the existing config to detect whether an update is needed.
     def self.sort_config!(config)
       config[:cache_behaviors][:items].sort_by! {|item| item[:path_pattern]}
-      config[:cache_behaviors][:items].each do |item|
+      config[:cache_behaviors][:items].concat([config[:default_cache_behavior]]).each do |item|
         item[:forwarded_values][:headers][:items].sort!
         name = item[:forwarded_values][:cookies][:whitelisted_names]
         name[:items].sort! if name
