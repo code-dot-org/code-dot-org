@@ -9,12 +9,12 @@ import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../../util/testUtils
  * @param {function(Storybook)} storiesFn
  */
 export default function testStorybook(storiesFn) {
-  const testBook = new StorybookTester();
+  const testBook = new FakeStorybook();
   storiesFn(testBook);
   testBook.test();
 }
 
-class StorybookTester {
+class FakeStorybook {
   componentName = 'Anonymous component';
   stories = [];
 
@@ -23,9 +23,19 @@ class StorybookTester {
     return this;
   }
 
-  addWithInfo(name, _, storyFn) {
-    this.stories.push({name, storyFn});
+  addWithInfo(name, _, story) {
+    this.stories.push({name, story});
     return this;
+  }
+
+  addStoryTable(tableStories) {
+    Array.prototype.push.apply(this.stories, tableStories);
+    return this;
+  }
+
+  action(_) {
+    // Intentional no-op
+    return function () {};
   }
 
   test() {
@@ -33,7 +43,12 @@ class StorybookTester {
       throwOnConsoleErrors();
       throwOnConsoleWarnings();
       this.stories.forEach(story => {
-        it(story.name, () => mount(story.storyFn()));
+        if (!story.name) {
+          console.log(story);
+          console.log(this.componentName);
+          return;
+        }
+        it(story.name, () => mount(story.story()));
       });
     });
   }
