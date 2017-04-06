@@ -26,6 +26,7 @@ level 'CSD U3 Random background'
 level 'CSD U3 Random Debug Grass'
 level 'CSD U3 Random Debug Cloud'
 level 'CSD U3 Random random ellipse'
+level 'CSD U3 Random rainbow snake'
 
 stage 'Variables'
 level 'CSD U3 Variables Predict Where X'
