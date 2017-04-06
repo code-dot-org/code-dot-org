@@ -4,7 +4,6 @@ import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'templates/VersionHistory.jsx',
   'templates/PaginationWrapper.story.jsx',
   'templates/Button.story.jsx',
   'templates/HrefButton.story.jsx',
