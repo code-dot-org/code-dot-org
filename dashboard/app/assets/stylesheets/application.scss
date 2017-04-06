@@ -238,6 +238,10 @@ img.video_thumbnail {
       background-color: $orange;
     }
   }
+
+  .project_updated_at {
+    font-size: 10px;
+  }
 }
 
 .header2-wrapper {
@@ -323,6 +327,10 @@ img.video_thumbnail {
       text-decoration: none;
       background-color: $orange;
     }
+  }
+
+  .project_updated_at {
+    font-size: 10px;
   }
 }
 
@@ -756,10 +764,6 @@ $default-modal-width: 640px;
   white-space: nowrap;
   overflow: hidden;
   vertical-align: middle;
-}
-
-.project_updated_at {
-  font-size: 10px;
 }
 
 .project_save[disabled] {
