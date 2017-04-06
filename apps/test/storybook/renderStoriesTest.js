@@ -4,7 +4,6 @@ import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'code-studio/pd/workshop_dashboard/components/date_picker.story.jsx',
   'lib/tools/jsdebugger/JsDebugger.story.jsx',
   'publicKeyCryptography/NumberedSteps.story.jsx',
   'publicKeyCryptography/PublicKeyCryptographyWidget.story.jsx',
