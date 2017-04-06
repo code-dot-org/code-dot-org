@@ -3,16 +3,16 @@
 # Table name: experiments
 #
 #  id                     :integer          not null, primary key
-#  name                   :string(255)
-#  type                   :string(255)
-#  start_time             :datetime
-#  end_time               :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  name                   :string(255)      not null
+#  type                   :string(255)      not null
+#  start_time             :datetime
+#  end_time               :datetime
+#  section_id             :integer
 #  percentage             :integer
 #  earliest_section_start :datetime
 #  latest_section_start   :datetime
-#  section_id             :integer
 #
 
 class SectionBasedExperiment < Experiment
