@@ -5,7 +5,8 @@ const EXAMPLE_CARD_DATA = {
   title: "Teacher Community",
   description: "Ask questions about curriculum, share ideas from your lessons, and get help from other teachers",
   image: "./GradientCardTestPic-REMOVE.jpg",
-  buttonText: "Connect Today"
+  buttonText: "Connect Today",
+  link: "link to wherever you want the button to go..."
 };
 
 export default storybook => {
