@@ -3,7 +3,6 @@
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'applab/ImportProjectDialog.story.jsx',
   'applab/ImportScreensDialog.story.jsx',
   'applab/ApplabVisualizationColumn.story.jsx',
   'code-studio/components/ImagePicker.story.jsx',
