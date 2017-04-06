@@ -3,11 +3,12 @@
 import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
+// Add story files here to exclude them from the storybook render tests.
 const BLACKLIST = [
-  'templates/progress/ProgressLessonTeacherInfo.story.jsx',
+  // 'templates/progress/ProgressLessonTeacherInfo.story.jsx',
 ];
 
-describe('Rendering stories', () => {
+describe('react-storybook stories render without errors or warnings', () => {
   throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
