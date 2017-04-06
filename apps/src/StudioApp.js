@@ -48,6 +48,7 @@ import {
   closeDialog as closeInstructionsDialog
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
+import { setVisualizationScale } from './redux/layout';
 var commonReducers = require('./redux/commonReducers');
 
 // Make sure polyfills are available in all code studio apps and level tests.
@@ -1367,6 +1368,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
     visualization.style.width = newVizWidthString;
   }
   var scale = (newVizWidth / this.nativeVizWidth);
+  this.reduxStore.dispatch(setVisualizationScale(scale));
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
 
