@@ -12,6 +12,7 @@ const ToggleButton = React.createClass({
     last: React.PropTypes.bool,
     activeColor: React.PropTypes.string,
     title: React.PropTypes.string,
+    style: React.PropTypes.object,
     onClick: React.PropTypes.func,
     children: React.PropTypes.node,
   },
@@ -44,7 +45,10 @@ const ToggleButton = React.createClass({
         backgroundColor: this.props.activeColor
       },
       this.props.first ? styles.firstButtonStyle: null,
-      this.props.last ? styles.lastButtonStyle : null);
+      this.props.last ? styles.lastButtonStyle : null,
+      // used to override any style properties
+      this.props.style
+    );
   }
 });
 export default Radium(ToggleButton);
