@@ -52,6 +52,11 @@ class StudioEC < Studio
     %w()
   end
 
+  # List of possible palette categories
+  def self.palette_categories
+    %w(commands events)
+  end
+
   def update_palette
     if code_functions.present? && code_functions.is_a?(String)
       self.code_functions = JSON.parse(code_functions)
