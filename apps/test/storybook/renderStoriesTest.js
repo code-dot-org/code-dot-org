@@ -4,7 +4,6 @@ import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'code-studio/components/progress/MiniViewTopRow.story.jsx',
   'code-studio/components/progress/ProgressDot.story.jsx',
   'code-studio/components/progress/StatusProgressDot.story.jsx',
   'code-studio/pd/workshop_dashboard/components/date_picker.story.jsx',
