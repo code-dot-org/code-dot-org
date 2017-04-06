@@ -88,10 +88,15 @@
       "led.toggle": null,
       "led.intensity": null,
       "buzzer.note": null,
-      "buzzer.off": null,
+      "buzzer.stop": null,
       "buzzer.frequency": null
     },
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
