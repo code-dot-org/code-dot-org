@@ -70,7 +70,7 @@ const GradientNavCard = React.createClass({
         <img src={require('./GradientNavCard-img-REMOVE.png')} style={styles.image}></img>
         <h2 style={styles.title}>{cardData.title}</h2>
         <h4 style={styles.description}>{cardData.description}</h4>
-        <ProgressButton href="/foo/bar" color="gray" text={cardData.buttonText} style={styles.button}/>
+        <ProgressButton href={cardData.link} color="gray" text={cardData.buttonText} style={styles.button}/>
         <div style={styles.overlay}></div>
       </div>
     );
