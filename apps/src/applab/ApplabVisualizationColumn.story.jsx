@@ -1,6 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
+import {ApplabInterfaceMode} from './constants';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 
 export default function (storybook) {
@@ -20,7 +21,11 @@ export default function (storybook) {
     children: React.PropTypes.node.isRequired,
   };
 
+  const globalState = {
+    interfaceMode: ApplabInterfaceMode.CODE,
+  };
   const pageConstants = {
+    channelId: '12345',
     isReadOnlyWorkspace: false,
     visualizationHasPadding: true,
     isShareView: false,
@@ -29,9 +34,13 @@ export default function (storybook) {
     hideSource: true,
     playspacePhoneFrame: false,
     pinWorkspaceToBottom: true,
+    hasDataMode: false,
+    hasDesignMode: false,
     isProjectLevel: false,
+    isResponsive: false,
     isSubmittable: false,
     isSubmitted: false,
+    isViewDataButtonHidden: false,
   };
   const runState = {
     isRunning: false,
@@ -48,6 +57,7 @@ export default function (storybook) {
         story: () => (
           <StubProvider
             state={{
+              ...globalState,
               runState,
               pageConstants
             }}
@@ -66,6 +76,7 @@ export default function (storybook) {
         story: () => (
           <StubProvider
             state={{
+              ...globalState,
               runState,
               pageConstants: {
                 ...pageConstants,
@@ -89,6 +100,7 @@ export default function (storybook) {
         story: () => (
           <StubProvider
             state={{
+              ...globalState,
               runState,
               pageConstants: {
                 ...pageConstants,
@@ -114,6 +126,7 @@ export default function (storybook) {
         story: () => (
           <StubProvider
             state={{
+              ...globalState,
               runState: {
                 ...runState,
                 isRunning: true,
