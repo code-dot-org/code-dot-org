@@ -4,8 +4,6 @@ import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'templates/projects/ProjectsList.story.jsx',
-  'templates/projects/SectionProjectsList.story.jsx',
   'templates/DialogButtons.story.jsx',
   'templates/Dialog.story.jsx',
   'templates/BaseDialog.story.jsx',
