@@ -18,10 +18,16 @@ class FakeStorybook {
 
   storiesOf(name) {
     this.groups.push({
-      name,
+      name: `Stories of ${name}`,
       stories: [],
       decorate: story => story(),
+      deprecated: false,
     });
+    return this;
+  }
+
+  deprecatedStoriesOf(name) {
+    this.storiesOf(`${name} (deprecated)`);
     return this;
   }
 
@@ -57,7 +63,7 @@ class FakeStorybook {
 
   test() {
     this.groups.forEach(group => {
-      describe(`Stories of ${group.name}`, () => {
+      describe(group.name, () => {
         group.stories.forEach(story => {
           it(story.name, () => {
             mount(group.decorate(story.story));
