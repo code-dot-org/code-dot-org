@@ -66,10 +66,7 @@
     "callout_json": "[]",
     "markdown_instructions": "# Create Your Scene - Sprites\r\n\r\nWith your background in place, it's time to add your sprites.\r\n# Do This\r\n\r\n* Add or create all of your sprite images in the Animation Tab\r\n* Create a variable for each sprite at the top of your program and use `setAnimation()` to assign the images you created in the Animation Tab\r\n* Call `drawSprites()` once at the end of your program\r\n\r\n_Hint: You probably want to call `drawSprites()` at the very end of your program so the sprites are on top of your background, but for some designs you may want to call `drawSprites()` earlier so that your sprites are on top of some shapes but below others._",
     "project_template_level_name": "CSD U3 Sprites scene template",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
