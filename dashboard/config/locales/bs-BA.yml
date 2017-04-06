@@ -353,7 +353,7 @@
     students:
       dashboard: Idi na upravljačku ploču učitelja
     user_not_found: Učitelj nije pronađen.
-    student_teacher_disassociated: "%{teacher_name} je uklonjen kao učitelj za %{student_name}"
+    student_teacher_disassociated: You have removed %{teacher_name} as your teacher.
     panel:
       answer_viewer: Preglednik Odgovora
       student: Učenik

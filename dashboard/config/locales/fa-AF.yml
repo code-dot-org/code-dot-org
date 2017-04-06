@@ -353,8 +353,7 @@
     students:
       dashboard: "رفتن به صفحهٔ معلم"
     user_not_found: "معلم یا دانش آموز مورد نظر یافت نشد"
-    student_teacher_disassociated: "%{teacher_name}  به عنوان یک معلم برای %{student_name}
-      حذف شده است"
+    student_teacher_disassociated: You have removed %{teacher_name} as your teacher.
     panel:
       answer_viewer: "بیننده پاسخ"
       student: "دانش آموز"
