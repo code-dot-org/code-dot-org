@@ -52,7 +52,7 @@ class ExperimentTest < ActiveSupport::TestCase
       percentage: 50,
       earliest_section_start: DateTime.now + 1.days
     section = create :section,
-      first_activity_time: DateTime.now
+      first_activity_at: DateTime.now
     assert_empty Experiment.get_all_enabled(section: section)
   end
 
@@ -61,7 +61,7 @@ class ExperimentTest < ActiveSupport::TestCase
       percentage: 50,
       latest_section_start: DateTime.now - 1.days
     section = create :section,
-      first_activity_time: DateTime.now
+      first_activity_at: DateTime.now
     assert_empty Experiment.get_all_enabled(section: section)
   end
 

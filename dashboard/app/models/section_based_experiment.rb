@@ -22,16 +22,16 @@ class SectionBasedExperiment < Experiment
     return Experiment.none unless section
     Experiment.where(type: SectionBasedExperiment.to_s).
       where('percentage > ?', section.id % 100).
-      where('earliest_section_start IS NULL OR earliest_section_start < ?', section.first_activity_time).
-      where('latest_section_start IS NULL OR latest_section_start > ?', section.first_activity_time)
+      where('earliest_section_start IS NULL OR earliest_section_start < ?', section.first_activity_at).
+      where('latest_section_start IS NULL OR latest_section_start > ?', section.first_activity_at)
   end
 
   def enabled?(user: nil, section: nil)
     return false unless section
     return percentage > section.id % 100 &&
       (earliest_section_start.nil? ||
-        earliest_section_start < section.first_activity_time) &&
+        earliest_section_start < section.first_activity_at) &&
       (latest_section_start.nil? ||
-        latest_section_start > section.first_activity_time)
+        latest_section_start > section.first_activity_at)
   end
 end
