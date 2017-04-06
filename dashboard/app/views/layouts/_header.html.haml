@@ -4,6 +4,9 @@
 - level = local_assigns[:level]
 - full_width = local_assigns[:full_width]
 
+%link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+%script{src: '/shared/js/hamburger.js'}
+
 = render partial: 'layouts/unsupported_browser'
 
 - show_bug_links = script_level || (level && level.try(:is_project_level))
@@ -77,6 +80,9 @@
                 %i.fa.fa-mobile
             - if params[:controller] !~ /^sessions/ and signin_button_enabled
               = render partial: 'shared/user_header_ajax'
+
+              &nbsp;
+              = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml')
 
 - if script_level
   - view_as = @user || current_user
