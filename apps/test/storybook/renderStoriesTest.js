@@ -4,8 +4,6 @@ import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
-  'publicKeyCryptography/NumberedSteps.story.jsx',
-  'publicKeyCryptography/PublicKeyCryptographyWidget.story.jsx',
   'storage/dataBrowser/ConfirmDeleteButton.story.jsx',
   'templates/projects/ProjectsList.story.jsx',
   'templates/projects/SectionProjectsList.story.jsx',
