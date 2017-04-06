@@ -15,6 +15,9 @@ class ProjectsController < ApplicationController
     playlab: {
       name: 'New Play Lab Project'
     },
+    starwars: {
+      name: 'New Star Wars Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true
