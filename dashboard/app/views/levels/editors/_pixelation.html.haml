@@ -7,6 +7,10 @@
   %p When checked, interpret the pixel data as hex digits.  Otherwise binary.
   = boolean_check_box f, :hex
 .field
+  = f.label :hide_encoding_controls, 'Hide encoding controls'
+  %p This will prevent students from changing the encoding from binary to hexadecimal or vice-versa.
+  = boolean_check_box f, :hide_encoding_controls
+.field
   = f.label :data, 'Pixel data'
   %p Default pixel data for the level.
   = f.text_area :data, rows: 20

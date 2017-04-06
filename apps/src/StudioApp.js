@@ -50,6 +50,9 @@ import {
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
 
+// Make sure polyfills are available in all code studio apps and level tests.
+import './polyfills';
+
 var copyrightStrings;
 
 /**
@@ -2809,7 +2812,7 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 
   // Not the most efficient of algo's, but we shouldn't have enough blocks for
   // it to matter.
-  return block.getVars().some(function (varName) {
+  return innerBlock && block.getVars().some(function (varName) {
     return innerBlock.getDescendants().some(function (descendant) {
       if (descendant.type !== 'controls_for' &&
           descendant.type !== 'controls_for_counter') {
