@@ -121,7 +121,7 @@ Certain capabilities linked from the Code.org Website may be implemented by thir
 
 Student and teacher profiles can NOT be customized with a photo.
 
-As part of “App Lab,” “Game Lab” or "Web Lab" (in-browser programming tools available on Code Studio), students 13 years of age and older as well as students under the age of 13 in a classroom whose teacher has approved the Code.org Terms of Service and this Privacy Policy can upload custom images, text, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
+As part of “App Lab,” “Game Lab,” or "Web Lab" (in-browser programming tools available on Code Studio), students 13 years of age and older as well as students under the age of 13 in a classroom whose teacher has approved the Code.org Terms of Service and this Privacy Policy can upload custom images, text, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
 ## Message Sending Between Users
 
