@@ -5,7 +5,6 @@ import testStorybook from './util/testStorybook';
 
 const BLACKLIST = [
   'templates/progress/ProgressLessonTeacherInfo.story.jsx',
-  'templates/SpeedSlider.story.jsx',
 ];
 
 describe('Rendering stories', () => {
