@@ -28,10 +28,9 @@
     "examples_required": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What is Skrat supposed to do?\\n- What does Skrat do?\\n- What does that tell you?\",\"hint_id\":\"courseC_maze_debugging6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1f2f515c2c3d72a2a377e432d9489403/courseC_maze_debugging6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Once you've found and fixed the first bug, go through the debugging process again to find the second one.\\n\\nRepeat the process until the program works!\",\"hint_id\":\"courseC_maze_debugging6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f54db445c20a2ed2a1a3f657ceea6289/courseC_maze_debugging6.mp3\"}]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "\r\n",

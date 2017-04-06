@@ -2783,6 +2783,7 @@ en:
         coursee-ramp:
           stage:
             Introduction: Introduction
+            Conditionals: Conditionals
           title: coursee-ramp
           description_audience: ''
           description_short: ''
