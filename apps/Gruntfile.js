@@ -307,6 +307,10 @@ testsContext.keys().forEach(testsContext);
     generateSharedConstants: './script/generateSharedConstants.rb'
   };
 
+  var junitReporterBaseConfig = {
+    outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
+  };
+
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
@@ -335,6 +339,9 @@ testsContext.keys().forEach(testsContext);
           { type: 'lcovonly' }
         ]
       },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'unit.xml',
+      }),
       files: [
         {src: ['test/unit-tests.js'], watched: false},
       ],
@@ -347,6 +354,9 @@ testsContext.keys().forEach(testsContext);
           { type: 'lcovonly' }
         ]
       },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'integration.xml',
+      }),
       files: [
         {src: ['test/integration-tests.js'], watched: false},
       ],

@@ -68,6 +68,7 @@ module.exports = function (config) {
 
     junitReporter: {
       outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
+      outputFile: 'all.xml',
     },
     coverageReporter: {
       dir: 'coverage',
