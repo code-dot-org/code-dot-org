@@ -121,11 +121,10 @@ class DashboardTest < Minitest::Test
         assert !@admin.followed_by?(@student.id)
       end
 
-      # TODO(asher): Fix followed_by? so it does indeed ignore deleted sections.
-      # it 'ignores deleted sections' do
-      #   teacher_deleted_section = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_SECTION[:id])
-      #   refute teacher_deleted_section.followed_by?(FakeDashboard::STUDENT_DELETED_SECTION[:id])
-      # end
+      it 'ignores deleted sections' do
+        teacher_deleted_section = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_SECTION[:id])
+        refute teacher_deleted_section.followed_by?(FakeDashboard::STUDENT_DELETED_SECTION[:id])
+      end
 
       it 'ignores deleted followers' do
         teacher_deleted_follower = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_FOLLOWER[:id])
@@ -144,12 +143,11 @@ class DashboardTest < Minitest::Test
           @teacher.get_followed_bys([@admin.id, @student.id, @teacher.id])
       end
 
-      # TODO(asher): Fix get_followed_bys so it does indeed ignore deleted sections.
-      # it 'ignores_deleted_sections' do
-      #   teacher_deleted_section = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_SECTION[:id])
-      #   assert_equal [],
-      #     teacher_deleted_section.get_followed_bys([FakeDashboard::STUDENT_DELETED_SECTION[:id]])
-      # end
+      it 'ignores_deleted_sections' do
+        teacher_deleted_section = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_SECTION[:id])
+        assert_equal [],
+          teacher_deleted_section.get_followed_bys([FakeDashboard::STUDENT_DELETED_SECTION[:id]])
+      end
 
       it 'ignores deleted followers' do
         teacher_deleted_follower = Dashboard::User.get(FakeDashboard::TEACHER_DELETED_FOLLOWER[:id])
