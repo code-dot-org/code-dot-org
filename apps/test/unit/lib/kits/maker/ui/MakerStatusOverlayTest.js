@@ -14,6 +14,8 @@ describe('MakerStatusOverlay', () => {
         height={15}
         isConnecting={false}
         hasConnectionError={false}
+        handleTryAgain={() => {}}
+        handleDisableMaker={() => {}}
       />
     );
     expect(wrapper.html()).to.be.null;
@@ -28,6 +30,8 @@ describe('MakerStatusOverlay', () => {
           scale={0.65}
           isConnecting={true}
           hasConnectionError={false}
+          handleTryAgain={() => {}}
+          handleDisableMaker={() => {}}
         />
       );
       expect(wrapper).to.have.style('transform', 'scale(0.65)');
@@ -42,6 +46,8 @@ describe('MakerStatusOverlay', () => {
           height={10}
           isConnecting={true}
           hasConnectionError={false}
+          handleTryAgain={() => {}}
+          handleDisableMaker={() => {}}
         />
       );
       expect(wrapper).not.to.have.style('transform');
@@ -60,6 +66,8 @@ describe('MakerStatusOverlay', () => {
           height={15}
           isConnecting={true}
           hasConnectionError={false}
+          handleTryAgain={() => {}}
+          handleDisableMaker={() => {}}
         />
       );
     });
@@ -87,9 +95,10 @@ describe('MakerStatusOverlay', () => {
   });
 
   describe('on error', () => {
-    let wrapper, handleDisableMaker;
+    let wrapper, handleTryAgain, handleDisableMaker;
 
     beforeEach(() => {
+      handleTryAgain = sinon.spy();
       handleDisableMaker = sinon.spy();
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
@@ -97,6 +106,7 @@ describe('MakerStatusOverlay', () => {
           height={16}
           isConnecting={false}
           hasConnectionError={true}
+          handleTryAgain={handleTryAgain}
           handleDisableMaker={handleDisableMaker}
         />
       );
