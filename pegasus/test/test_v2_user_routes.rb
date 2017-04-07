@@ -108,8 +108,15 @@ class V2UserRoutesTest < Minitest::Test
         )
       end
 
-      it 'returns no deleted students or deleted followers' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+      it 'returns no deleted followers' do
+        with_role FakeDashboard::TEACHER_WITH_DELETED_FOLLOWER
+        @pegasus.get '/v2/students'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal [], JSON.parse(@pegasus.last_response.body)
+      end
+
+      it 'returns no deleted users' do
+        with_role FakeDashboard::TEACHER_WITH_DELETED_USER
         @pegasus.get '/v2/students'
         assert_equal 200, @pegasus.last_response.status
         assert_equal [], JSON.parse(@pegasus.last_response.body)
@@ -173,7 +180,7 @@ class V2UserRoutesTest < Minitest::Test
       end
 
       it 'returns 403 when seeking former student' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_WITH_DELETED_FOLLOWER
         @pegasus.get "/v2/students/#{FakeDashboard::SELF_STUDENT[:id]}"
         assert_equal 403, @pegasus.last_response.status
       end
@@ -193,9 +200,9 @@ class V2UserRoutesTest < Minitest::Test
       end
 
       it 'returns 403 "Forbidden" when signed in as unconnected teacher' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER
         Dashboard.db.transaction(rollback: :always) do
-          @pegasus.post "/v2/students/#{FakeDashboard::STUDENT[:id]}/update",
+          @pegasus.post "/v2/students/#{FakeDashboard::STUDENT_OTHER[:id]}/update",
             {name: NEW_NAME}.to_json,
             'CONTENT_TYPE' => 'application/json;charset=utf-8'
           assert_equal 403, @pegasus.last_response.status
@@ -219,9 +226,9 @@ class V2UserRoutesTest < Minitest::Test
       end
 
       it 'returns 403 "Forbidden" when signed in as former teacher' do
-        with_role FakeDashboard::TEACHER_WITH_DELETED
+        with_role FakeDashboard::TEACHER_WITH_DELETED_FOLLOWER
         Dashboard.db.transaction(rollback: :always) do
-          @pegasus.post "/v2/students/#{FakeDashboard::SELF_STUDENT[:id]}/update",
+          @pegasus.post "/v2/students/#{FakeDashboard::STUDENT_OTHER[:id]}/update",
             {name: NEW_NAME}.to_json,
             'CONTENT_TYPE' => 'application/json;charset=utf-8'
           assert_equal 403, @pegasus.last_response.status
