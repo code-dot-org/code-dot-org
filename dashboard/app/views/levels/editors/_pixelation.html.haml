@@ -1,3 +1,5 @@
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/levelbuilder_pixelation.js')}
 .field
   = f.label :version, 'Pixelation version'
   %p Integer representing which sprite to use for the first character. Default is 0.
@@ -10,6 +12,20 @@
   = f.label :hide_encoding_controls, 'Hide encoding controls'
   %p This will prevent students from changing the encoding from binary to hexadecimal or vice-versa.
   = boolean_check_box f, :hide_encoding_controls
+.field.initial-dimensions
+  = f.label :nil, 'Initial image dimensions'
+  %p
+    Set the initial width and height of the image.
+    <em>Note: This option is only available for the "1-bit, with dimension sliders"
+    version of the widget.  Initial width and height is set as part of the pixel
+    data in the other versions.</em>
+  %table
+    %tr
+      %td= f.label :v1_initial_height, 'Width'
+      %td= f.number_field :v1_initial_width
+    %tr
+      %td= f.label :v1_initial_height, 'Height'
+      %td= f.number_field :v1_initial_height
 .field
   = f.label :data, 'Pixel data'
   %p Default pixel data for the level.
