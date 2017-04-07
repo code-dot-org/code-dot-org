@@ -74,5 +74,5 @@ end
 # returns all experiment types. Classes are eager loaded in production anyway,
 # but not in development.
 require_dependency 'user_based_experiment'
-require_dependency 'section_based_experiment'
+require_dependency 'teacher_based_experiment'
 require_dependency 'single_section_experiment'

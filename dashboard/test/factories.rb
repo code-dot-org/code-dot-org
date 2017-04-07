@@ -9,8 +9,8 @@ FactoryGirl.define do
       type "UserBasedExperiment"
       percentage 50
     end
-    factory :section_based_experiment, class: 'SectionBasedExperiment' do
-      type "SectionBasedExperiment"
+    factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
+      type "TeacherBasedExperiment"
       percentage 50
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
