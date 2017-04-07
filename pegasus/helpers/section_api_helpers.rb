@@ -13,7 +13,7 @@ class DashboardStudent
     Dashboard.db[:sections].
       join(:followers, section_id: :sections__id).
       join(:users, id: :followers__student_user_id).
-      where(sections__user_id: user_id).
+      where(sections__user_id: user_id, sections__deleted_at: nil).
       where(followers__deleted_at: nil).
       where(users__deleted_at: nil).
       select(*fields).
