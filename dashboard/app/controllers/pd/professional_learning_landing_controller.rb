@@ -1,9 +1,14 @@
 class Pd::ProfessionalLearningLandingController < ApplicationController
-  before_action :require_admin
-
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
+  before_action :authenticate_user!
+
   def index
+    if Pd::Enrollment.for_user(current_user).empty?
+      redirect_to CDO.code_org_url('professional-development-workshops', Rails.env.development? ? 'http:' : 'https:')
+      return
+    end
+
     last_enrollment_with_pending_survey = Pd::Enrollment.filter_for_survey_completion(
       Pd::Enrollment.where(email: current_user.email).where.not(survey_sent_at: nil),
       false

@@ -74,7 +74,7 @@ class Ability
           !script.professional_learning_course?
         end
         can :manage, SectionHiddenStage do |hidden_stage|
-          userid == hidden_stage.section.user_id
+          user.id == hidden_stage.section.user_id
         end
       end
 

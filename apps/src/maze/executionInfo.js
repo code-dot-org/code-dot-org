@@ -55,7 +55,7 @@ ExecutionInfo.prototype.queueAction = function (command, blockId) {
  */
 ExecutionInfo.prototype.getActions = function (singleStep) {
   var actions = [];
-  if (singleStep) {
+  if (singleStep && this.stepsRemaining()) {
     actions.push(this.steps_.shift());
     // dont leave queue with just a finish in it
     if (onLastStep(this.steps_)) {

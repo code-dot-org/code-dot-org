@@ -15,7 +15,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @admin = create :admin
     @section = create :section, user_id: @teacher.id
-    Follower.create!(section_id: @section.id, student_user_id: @student.id, user_id: @teacher.id)
+    Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
     @custom_script = create(:script, name: 'laurel', hideable_stages: true)
     @custom_stage_1 = create(:stage, script: @custom_script, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
@@ -1248,7 +1248,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   def put_student_in_section(student, teacher, script)
     section = create :section, user_id: teacher.id, script_id: script.id
-    Follower.create!(section_id: section.id, student_user_id: student.id, user_id: teacher.id)
+    Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
     section
   end
 

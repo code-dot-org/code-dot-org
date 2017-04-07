@@ -70,7 +70,8 @@
     "debugger_disabled": "false",
     "start_blocks": "var randomArray = [];\r\nfor (var i = 0; i < 15; i++) {\r\n  appendItem(randomArray, randomNumber(0,10));\r\n}\r\n\r\nconsole.log(\"Original: \" + randomArray);\r\n\r\nfor (var i = 0; i < randomArray.length; i++) {\r\n  // Your code goes here \r\n}",
     "encrypted_examples": "8g66rBBK56MXZvuvJW9YxTVowt2wEQKm0eqXAlZykuwLbkrelR7/lzhokn5J\nw1Ef\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

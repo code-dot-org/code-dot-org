@@ -9,8 +9,8 @@
     "code_functions": {
       "drawSprites": null,
       "background": null,
-      "Game.mouseX": null,
-      "Game.mouseY": null,
+      "World.mouseX": null,
+      "World.mouseY": null,
       "var sprite = createSprite": null,
       "x": null,
       "y": null,

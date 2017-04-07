@@ -60,6 +60,8 @@ module ScriptConstants
       CSD2_NAME = 'csd2'.freeze,
       CSD3_NAME = 'csd3'.freeze,
       CSD4_NAME = 'csd4'.freeze,
+      CSD5_NAME = 'csd5'.freeze,
+      CSD6_NAME = 'csd6'.freeze,
     ],
     csp: [
       CSP_UNIT1_NAME = 'cspunit1'.freeze,

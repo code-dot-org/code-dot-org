@@ -32,7 +32,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There should be 6 blocks inside your `repeat` loop when you're done.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_6_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you can't tell what should go into the `repeat` loop, try dragging blocks out one by one and see if you can find a pattern.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_6_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n  {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There should be 6 blocks inside your `repeat` loop when you're done.\",\r\n  \"hint_id\": \"2-3_Bee_Loops_6_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
