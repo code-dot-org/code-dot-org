@@ -10,7 +10,7 @@ Do you enjoy learning new technology and want to volunteer to help bring compute
 	* **Create an account and set up your classroom**
 	* **[Fill out this form to let us know you’re creating a new computer science club](https://docs.google.com/forms/d/e/1FAIpQLScH17jl8j_6T0bR9OiMWFin-wz1HtLg3VyYkj5jeGf5_llESw/viewform?usp=sf_link)!**
 1. Teach!
-	* If you’re new to teaching, here are some teaching tips.
+	* If you’re new to teaching, here are some [teaching tips](#tips).
 	* Tweet about your club to inspire others!
 
 
@@ -58,36 +58,119 @@ Best,
 <a name="curriculum"></a>
 ## Implementation Guidance
 ### How to set up your program
-Code.org’s Computer Science Fundamentals curriculum can be accessed within Code.org’s online education platform. This completely free curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented and adapted based on the length of your program
+Code.org’s Computer Science Fundamentals curriculum can be accessed within Code.org’s online education platform. This curriculum is available at no cost for the volunteers and after school organizations. It consists of multiple courses, each of which has about 20 lessons that may be implemented and adapted based on the length of your program.
 
 **Hardware**
 
 Code.org works on all browsers and on any kind of computer or tablet: Cromebooks, windows, ipads, android, etc. You’ll need computers/tablets for at least 50% of the class, and headphones are nice but not required. 
 
-Don’t worry if computers are in short supply, your students can work in pairs with [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q)! This is a great way for students to partner up and help each other through the exercises while relying on each other and less on the instructors. They will also see that computer science is social and collaborative. 
+Don’t worry if computers are in short supply, your students can work in pairs with [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q)! This is a great way for students to partner up and help each other through the exercises while relying on each other and less on the instructors. They will also see that computer science is social and collaborative.
 
 **Internet Access**
 
-You’ll need internet access for at least 50% of the class. We suggest utilizing “[unplugged](/curriculum/unplugged)” activities throughout the course. These are hands on exercises that foster collaboration and don’t require a computer or internet access.
+You’ll need internet access for at least 50% of the class sessions. We suggest utilizing “[unplugged](/curriculum/unplugged)” activities throughout the course. These are hands on exercises that foster collaboration and don’t require a computer or internet access.
 
-Don’t forget to check to make sure Code.org is not blocked! Check out our IT Requirements page for more information.
+Don’t forget to check to make sure Code.org is not blocked! Check out our [IT Requirements](/educate/it) page for more information.
 
 **Timing**
 
 Recommendation: 45-60 minute class once per week for 20 weeks.  But, there are a lot of ways the coding club can be structured and it will vary from club to club depending on you and the partner organization’s capacity. The curriculum materials are flexible and can be taught in longer/shorter blocks - the curriculum and resources are here to help guide you, but we suggest that you go through the materials provided with your “co-teacher” and make them your own. 
 
-If for some reason you can only hold one or two sessions for the students, we suggest going through one of the many Hour of Code [tutorials](/learn).
+If for some reason you can only hold one or two sessions for the students, we suggest going through one of the many Hour of Code [tutorials](/learn) instead of the full curriculum.
 
 
 **Picking the right course for your students**
 
 * Pre readers: [Course 1](/educate/curriculum/elementary-school#overview)
-* Beginners in elementary school: [Course 2-3](/educate/curriculum/elementary-school#overview)
-* Middle school or high school: [Accelerated courses](https://studio.code.org/s/20-hour)
+* Beginners in elementary school: [Course 2](/educate/curriculum/elementary-school#overview) (and then move onto Courses 3 and 4 for your next session)
+* Middle school or high school: [Accelerated course](https://studio.code.org/s/20-hour)
 
 We strongly encourage you to try the courses while structuring your coding club. This will help you get a sense of what your students will be doing and learning.
 
-### Setting up your classroom
+### How to teach the class
+
+## Setting up your classroom
 
 **Create a Code Studio account**
+
+Before you can set up a class, make sure you have a teacher Code Studio account.  If you don’t already have an account, you can sign up from [here](https://studio.code.org/users/sign_up).  Make sure to choose the “Teacher” account type in the sign up form.
+
+**Create a new section and assign a tutorial**
+ 
+When you log on, you’ll start at your “Teacher homepage.” Click on “Student Accounts and Progress” to create a section and assign the tutorial.  You can also just go directly to this [link](/teacher-dashboard#/sections).  Click on the “New section” button you see at the top left:
+
+<img src="/images/afterschool1.png"/>
+
+Give your section a name, pick the login type (generally “picture” for younger students), and choose the grade:
+
+<img src="/images/afterschool2.png"/>
+
+For “Course,” pick the appropriate course you chose for your coding club in the dropdown.  
+
+Check “Stage Extras” so that students who finish a lesson early can work on projects while they wait for other students to finish.  
+
+Once you pick the course, hit “Save” to finish creating your section.
+
+**Add students to your section (picture or word login type)**
+
+If you chose “picture” or “word” login type, you can manually add students to your section to auto-create their accounts. To do this, first click on “Manage students” below your section name:
+
+<img src="/images/afterschool3.png"/>
+
+This will take you to a page where you’ll be able to see a list of all your students.  To quickly add students, click on the “Add multiple students” button.
+
+<img src="/images/afterschool4.png"/>
+
+You should get a box that lets you type in your students’ names.  Simply type one per line and hit “Done.” You should see something like the following: 
+
+<img src="/images/afterschool5.png"/>
+
+Input your students’ ages and gender, and hit “Save all.”  You now have a section with all your students!
+
+Print out cards for your students’ login information by choosing that option under the section URL link in the “Manage students” tab:
+
+<img src="/images/afterschool6.png"/>
+
+**Add students to your section (email login type)**
+
+If you chose the “email” login type, students will need to create their own accounts either from [here](https://studio.code.org/users/sign_up) or via Clever, if you are doing your program in partnership with a school that uses Clever. They can then join in your section by going to your section link (which can be found by clicking on the “Manage students” link under the given section on [this page](/teacher-dashboard#/sections)):
+
+<img src="/images/afterschool7.png"/>
+
+You should see a message like this:
+
+<img src="/images/afterschool8.png"/>
+<a name="tips"></a>
+## How to run the class: 
+
+We’ve provided detailed lesson plans to help you structure your class time. Log in with your teacher account, go to the “courses” button. Click “view” on the course of your choice. From the teacher account, you’ll see links to the lesson plans for each lesson in the course. 
+
+**Teaching Tips**
+
+Although you may be an experienced engineer or teacher, we suggest that you familiarize yourself with the curriculum and look over the teaching resources below.
+
+Tips for Introducing computer science:
+
+1. **Describe programs as instructions** to connect programming with students’ every day lift
+	* Ex: Programming is just bossing a computer around!
+2. **Point out products of CS** to help students see computing around them
+	* Ex: Traffic lights are controlled by computer programs!
+3. **Explain that bugs are expected** to encourage students to embrace mistakes
+	* Ex: Even for professional programmers, programs never work at first!
+4. **Introduce synonyms for CS** to demystify terms describing CS jobs
+	* Ex: There are lots of names to describe doing CS!
+5. **Promote collaboration & creativity** to dispel stereotypes about CS
+	* Ex: You’ll work together today like computer scientists do!
+6. **Model programming** to show problem solving strategies
+	* Ex: That didn’t work like I expected! What could I try next?
+7. **Publicize resources for learning CS** to help students see how they can continue learning CS
+	* Ex: If you want to learn more CS, you can find resources at [X]
+	
+**Other teaching resources:**
+
+- Tips for introducing computer science [1-pager](/files/CSTT_IntroducingCS.PDF)
+- Learn on your own with Code.org’s teacher [online training](/educate/professional-development-online)
+- How to run a [1-hour workshop](https://hourofcode.com/us/how-to) 
+- Check out Code.org’s [teacher community](http://teacherblog.code.org/)
+- Check out [Google’s CS First](https://www.cs-first.com) program
 

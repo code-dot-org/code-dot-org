@@ -567,8 +567,6 @@ describe('RecordListener', function () {
 describe("Applab.init()", () => {
   before(() => sinon.stub(Applab, 'render'));
   after(() => Applab.render.restore());
-  before(() => experiments.setEnabled('collapse-debugger', true));
-  after(() => experiments.setEnabled('collapse-debugger', false));
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
