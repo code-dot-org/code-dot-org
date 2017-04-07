@@ -356,6 +356,7 @@ class User < ActiveRecord::Base
     :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
     :hide_email_and_full_address_for_students,
+    :hide_school_info_for_students,
     :sanitize_race_data
 
   def make_teachers_21
@@ -393,6 +394,10 @@ class User < ActiveRecord::Base
       self.unconfirmed_email = nil
       self.full_address = nil
     end
+  end
+
+  def hide_school_info_for_students
+    self.school_info = nil if student?
   end
 
   def sanitize_race_data

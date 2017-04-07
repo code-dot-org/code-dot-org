@@ -1099,6 +1099,8 @@ en:
         to make a larger square."
       CSD U3 Variables TEMPLATE square_instruction: "Change the value of petalSize
         multiple times. How does it change your drawing?"
+      CSD U3 Variables change circle size_instruction: "Change the value of petalSize
+        multiple times. How does it change your drawing?"
       CSD U3 Variables create and assign_instruction: "Create and assign size in
         a single line of code."
       CSD U3 Variables draw loop newVars_instruction: "Extend this project to create
@@ -1117,6 +1119,8 @@ en:
         times. How does it change your drawing?"
       CSD U3 Variables multiple assignments_instruction: "Change the value of petalSize
         multiple times. How does it change your drawing?"
+      CSD U3 Variables naming rules v2_instruction: "Change the value of petalSize
+        multiple times. How does it change your drawing?"
       CSD U3 Variables naming rules_instruction: "Change the value of petalSize multiple
         times. How does it change your drawing?"
       CSD U3 Variables random assignment_instruction: "Change the value of petalSize
@@ -1125,6 +1129,8 @@ en:
         you move the assignment of eyeSize inside the draw loop. Then try it out"
       CSD U3 Variables random drawing exemplar_instruction: "Check out this example
         randomized drawing."
+      CSD U3 Variables random with assignment_instruction: "Change the value of petalSize
+        multiple times. How does it change your drawing?"
       CSD U3 Variables use value rect_instruction: "Predict: What will get displayed
         in the console?"
       CSD U3 Variables write_instruction: "Use the write block to display the value
@@ -1137,6 +1143,8 @@ en:
         results of each expression. Then create your own."
       CSD U4 - Events Template_instruction: "Add a large red button to your screen
         using Design Mode. (Click for full instructions.)"
+      CSD U5 black white images pixelation_instruction: "Complete the X shape by
+        typing 0s and 1s"
       CSDU4 - AppLab - 1_instruction: "Read the documentation for penColor() and
         penWidth() before using them to draw the blue square."
       CSDU4 - AppLab - 2_instruction: "Write a program that acts as a simple calculator.
@@ -1479,7 +1487,7 @@ en:
         > and <. (Click to see full instructions)"
       CSPU5_U3 - Loops - 3_instruction: "Change the if statement to a while loop
         so the program will run until it rolls a 6. (Click to see full instructions)"
-      CSPU5_U3 - Loops - 4_instruction: " Use the Debug Commands to make a list of
+      CSPU5_U3 - Loops - 4_instruction: "Use the Debug Commands to make a list of
         all the values rolled before a 6. (Click to see full instructions)"
       CSPU5_U3 - Loops - 5_instruction: "Add code inside the while loop which will
         update the variable num so that the condition will eventually become false.
@@ -5429,23 +5437,24 @@ en:
         from this deep valley."
       courseA_collector_loops11_instruction: "Help Laurel get all of the treasure
         from this cave."
-      courseA_collector_loops12_instruction: "Eureka!  Collect as much treasure as
-        you can!"
-      courseA_collector_loops2_instruction: "Collect all three piles to pass this
-        level."
-      courseA_collector_loops3_instruction: "How can Laurel collect all five piles
-        of treasure using only one `[E-->]` block?"
+      courseA_collector_loops12_instruction: "Eureka!  Get as much treasure as you
+        can!"
+      courseA_collector_loops2_instruction: "Get all three piles to pass this level."
+      courseA_collector_loops3_instruction: "How can Laurel get all five piles of
+        treasure using only one `[E-->]` block?"
       courseA_collector_loops4_instruction: "Fix Laurel's path to get all of this
         treasure."
       courseA_collector_loops5_instruction: "Use what you learned to get all of the
         treasure."
-      courseA_collector_loops6_instruction: "Add blocks to this code to collect all
-        of the treasure."
+      courseA_collector_loops6_instruction: "Add blocks to this code to get all of
+        the treasure."
       courseA_collector_loops7_instruction: "What should you add to this code to
         get all of the treasure?"
       courseA_collector_loops8_instruction: "Write the code to get all of this treasure."
       courseA_collector_loops9_instruction: "**Challenge:** The treasure goes all
         the way up these stairs!  Write the code to help Laurel get it all."
+      courseA_collector_loops_challenge2_instruction: "This time you can only use
+        one of each arrow block. Get all of the treasure! "
       courseA_maze_seq1_instruction: "Get the bird to the bad pig!"
       courseA_maze_seq10_instruction: "Challenge: Go around the TNT to get the bird
         to the pig! "
@@ -5464,6 +5473,10 @@ en:
       courseA_maze_seq8_instruction: "Solve this level and get the bird to the pig!"
       courseA_maze_seq9_instruction: "Debug this level by adding blocks to get the
         bird to the pig!"
+      courseA_maze_seq_challenge1_instruction: "Debug this level. Remove the extra
+        blocks and add the missing blocks. Get the bird to the pig!"
+      courseA_maze_seq_challenge2_instruction: "Trace the path and lead me to the
+        silly pig. Avoid TNT or the feathers will fly!"
       courseA_playLab_events1_instruction: "This is a Play Lab level.  Move blocks
         to the workspace and see what happens!"
       courseA_playLab_events2_instruction: "Jorge the Dog wants to say \"Hi there.\"  Can
@@ -5498,16 +5511,17 @@ en:
         to help the artist get down?"
       courseB_artist_loops9_instruction: "Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?"
+      courseB_artist_loops_challenge2_instruction: "Let's play a game! Draw as many
+        X's as you can! Can you get 3 in a row?"
       courseB_collector_loops1_instruction: "This is Laurel the Adventurer!  Can
         you move her around and get treasure?"
       courseB_collector_loops10_instruction: "Help Laurel get all of the treasure
         from this cave."
-      courseB_collector_loops11_instruction: "Eureka!  Collect as much treasure as
-        you can!"
-      courseB_collector_loops2_instruction: "Collect all four piles to pass this
-        level."
-      courseB_collector_loops3_instruction: "How can Laurel collect all five piles
-        of treasure using only one `E -->` block?"
+      courseB_collector_loops11_instruction: "Eureka!  Get as much treasure as you
+        can!"
+      courseB_collector_loops2_instruction: "Get all four piles to pass this level."
+      courseB_collector_loops3_instruction: "How can Laurel get all five piles of
+        treasure using only one `E -->` block?"
       courseB_collector_loops3_predict1_instruction: "How can Laurel collect all
         five piles of gold using only one `E -->` block?"
       courseB_collector_loops4_instruction: "Fix Laurel's path to get all of this
@@ -5560,8 +5574,8 @@ en:
       courseB_playlab_events6_instruction: "Help your knight get all of the flags!\r\n\r\nTo
         do this, you'll need to add events to help the knight move up and down."
       courseB_playlab_events7_instruction: "Make this game fun by setting the knight
-        to vanish when he runs into the dragon!  Play a sound when they collide to
-        make it feel more real."
+        to vanish when he runs into the dragon on his way to get the flags!  Play
+        a sound when they collide to make it feel more real."
       courseB_playlab_events8_instruction: "Use your imagination. What can you do
         to make this game more fun?"
       courseB_playlab_eventsFP_instruction: "Use your imagination. What can you do
@@ -5927,7 +5941,7 @@ en:
       courseD_maze_ramp1_instruction: "For this puzzle, drag all of the blocks together
         and click \"Run\" to watch it go!"
       courseD_maze_ramp2_instruction: "Drag an extra `move forward` block out of
-        the toolbox to finish your code."
+        the toolbox, then attach all blocks to `when run` to finish your code."
       courseD_maze_ramp3_instruction: "There is one extra block that is going to
         cause the bird to crash. Throw it away by dragging it back to the toolbox."
       courseD_maze_ramp4_instruction: "Avoid TNT or feathers will fly!"
@@ -5995,9 +6009,13 @@ en:
         as you think you need to make this drawing of 50 pixel squares."
       courseE_artist_functions9_instruction: "Create this image using only the blocks
         provided."
+      courseE_artist_ramp10_instruction: "Now, drag the code for the last triangle
+        into a new loop to spin it around and make a snowflake!"
       courseE_artist_ramp11_instruction: "Now make a square using Artist!"
       courseE_artist_ramp12_instruction: "Use what you've learned to draw this triangle
         inside of a square."
+      courseE_artist_ramp8_instruction: "Now make a square using Artist!"
+      courseE_artist_ramp9_instruction: "Use what you've learned to draw this triangle."
       courseE_bee_concept1_instruction: "Collect all of the nectar from each flower."
       courseE_bee_concept2_instruction: "Help the bee make all of the honey. You
         can only make honey at a honeycomb, but you can check any space to see if
@@ -6097,17 +6115,24 @@ en:
       courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the
         pumpkin and collect all of the lettuce and corn along the way. "
       courseE_farmer_functions9_instruction: "Use conditionals to simplify your program."
+      courseE_farmer_ramp11_instruction: "This puzzle also uses nested loops.  Can
+        you figure out how?"
+      courseE_farmer_ramp12_instruction: "Pick lettuce only while there is still
+        lettuce to pick. "
+      courseE_farmer_ramp13_instruction: "Pick corn if there is corn, and pick lettuce
+        while there is lettuce."
       courseE_maze_ramp1_instruction: "For this puzzle, drag all of the blocks together
         and click \"Run\" to watch it go!"
       courseE_maze_ramp2_instruction: "Drag an extra `move forward` block out of
-        the toolbox to finish your code."
+        the toolbox, then attach all blocks to `when run` to finish your code."
       courseE_maze_ramp3_instruction: "There is one extra block that is going to
         cause the bird to crash. Throw it away by dragging it back to the toolbox."
       courseE_maze_ramp4_instruction: "Avoid TNT or feathers will fly!"
       courseE_maze_ramp5_instruction: "Avoid the TNT."
       courseE_maze_ramp6_instruction: "\"Keep calm and help me find the bad pig.
         Otherwise I might get angry!\""
-      courseE_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
+      courseE_maze_ramp7_instruction: "Use what you've learned to get the bird to
+        the pig!"
       courseE_playLab_exampleProject2_instruction: "Here's all of your code to choose
         a card - try adding some other fun features!"
       courseE_playLab_scaffold1_instruction: "Choose a background and map, and pick
@@ -6117,9 +6142,10 @@ en:
       courseE_playLab_scaffold3_instruction: "Add two or more additional actors to
         your game and make them move."
       courseE_playLab_scaffold4_instruction: "Find some interesting ways to change
-        the score in your game."
+        the score in your game. Get the score to show something other than 0 to continue."
       courseE_playLab_scaffold5_instruction: "Now spend some time making sure the
-        game works the way you want. Try including a way to win or lose your game."
+        game works the way you want. Include a way to win or lose your game, then
+        play until you meet one of those conditions."
       courseE_playLab_scaffold6_instruction: "You've finished! Now you can play
         your game or share it with your friends and classmates!"
       courseE_video_createFunctions_instruction: "We don't have a video for creating
@@ -7596,6 +7622,8 @@ en:
       group test_instruction: "Make a game"
       harvey_pixelation_instruction: "Encode an image of anything you like using
         binary. The binary language will be represented with '0' and '1' only."
+      harvey_tictactoe_instruction: "Let's play a game! Draw as many X's as you
+        can! Can you get 3 in a row?"
       jessie-test_instruction: "Lots of instructions"
       k-1 maze 1_instruction: "Can you make me move West to get to the pig?"
       kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can

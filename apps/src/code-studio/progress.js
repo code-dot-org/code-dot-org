@@ -138,12 +138,15 @@ progress.renderCourseProgress = function (scriptData) {
  * @param {HTMLElement} element - DOM element we want to render into
  * @param {string} scriptName - name of current script
  * @param {string} currentLevelId - Level that we're current on.
+ * @param {string} linesOfCodeText - i18n'd string staging how many lines of code
+ *   user has
  */
-progress.renderMiniView = function (element, scriptName, currentLevelId) {
+progress.renderMiniView = function (element, scriptName, currentLevelId,
+    linesOfCodeText) {
   const store = getStore();
   ReactDOM.render(
     <Provider store={store}>
-      <MiniView/>
+      <MiniView linesOfCodeText={linesOfCodeText}/>
     </Provider>,
     element
   );

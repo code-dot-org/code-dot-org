@@ -4,24 +4,38 @@ require_relative '../src/env'
 require 'mocha/mini_test'
 require 'sequel'
 require_relative '../helpers/section_api_helpers'
-
-# 'section_helpers.rb' gets included by section_api_helpers
+require_relative 'fixtures/fake_dashboard'
 
 def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
 end
 
 class SectionApiHelperTest < Minitest::Test
-  describe SectionHelpers do
-    describe 'random code' do
-      it 'does not generate the same code twice' do
-        codes = 10.times.map {SectionHelpers.random_code}
-        assert_equal 10, codes.uniq.length
+  describe DashboardStudent do
+    before do
+      FakeDashboard.use_fake_database
+    end
+
+    describe 'fetch_user_students' do
+      it 'returns followers' do
+        students = DashboardStudent.fetch_user_students(FakeDashboard::TEACHER[:id])
+        assert_equal 1, students.length
+        assert_equal FakeDashboard::STUDENT[:id], students.first[:id]
       end
 
-      it 'does not generate vowels' do
-        codes = 10.times.map {SectionHelpers.random_code}
-        assert codes.grep(/[AEIOU]/).empty?
+      it 'does not return followers of deleted sections' do
+        students = DashboardStudent.fetch_user_students FakeDashboard::TEACHER_DELETED_SECTION[:id]
+        assert_equal [], students
+      end
+
+      it 'does not return deleted followers' do
+        students = DashboardStudent.fetch_user_students FakeDashboard::TEACHER_DELETED_FOLLOWER[:id]
+        assert_equal [], students
+      end
+
+      it 'does not return deleted users' do
+        students = DashboardStudent.fetch_user_students FakeDashboard::TEACHER_DELETED_USER[:id]
+        assert_equal [], students
       end
     end
   end
@@ -110,9 +124,7 @@ class SectionApiHelperTest < Minitest::Test
     end
   end
 
-  describe DashboardStudent do
-  end
-
   describe DashboardUserScript do
+    # TODO(asher): Add tests here.
   end
 end

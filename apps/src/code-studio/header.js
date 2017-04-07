@@ -63,9 +63,6 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
       $('.' + item + '_free_play').show();
     });
   }
-  if (progressData.linesOfCodeText) {
-    $('.header_popup .header_text').text(progressData.linesOfCodeText);
-  }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
   progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation, signedIn);
@@ -87,16 +84,23 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
    */
   var isHeaderPopupVisible = false;
 
-  function showHeaderPopup(target) {
+  function showHeaderPopup() {
     sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
     $('.header_popup_link_text').text(dashboard.i18n.t('less'));
     $(document).on('click', hideHeaderPopup);
-    progress.renderMiniView($('.user-stats-block')[0], scriptName, currentLevelId);
+    progress.renderMiniView($('.user-stats-block')[0], scriptName, currentLevelId,
+      progressData.linesOfCodeText);
     isHeaderPopupVisible = true;
   }
-  function hideHeaderPopup() {
+  function hideHeaderPopup(event) {
+    // Clicks inside the popup shouldn't close it, unless it's on close button
+    const target = event && event.target;
+    if ($(".header_popup").find(target).length > 0 &&
+        !$(event.target).hasClass('header_popup_close')) {
+      return;
+    }
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
     $('.header_popup_link_text').text(dashboard.i18n.t('more'));
@@ -108,10 +112,6 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     e.stopPropagation();
     $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
   });
-  $('.header_popup').click(function (e) {
-    e.stopPropagation(); // Clicks inside the popup shouldn't close it
-  });
-  $('.header_popup_close').click(hideHeaderPopup);
 
   $(window).resize(_.debounce(function () {
     if (isHeaderPopupVisible) {
@@ -130,9 +130,8 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     var popupTop = parseInt(headerWrapper.css('padding-top'), 10) +
         parseInt(headerPopup.css('top'), 10);
     var popupBottom = parseInt(headerPopup.css('margin-bottom'), 10);
-    var footerHeight = headerPopup.find('.header_popup_footer').outerHeight();
     headerPopup.find('.header_popup_scrollable').css('max-height',
-        viewportHeight - (popupTop + popupBottom + footerHeight));
+        viewportHeight - (popupTop + popupBottom));
   }
 };
 
