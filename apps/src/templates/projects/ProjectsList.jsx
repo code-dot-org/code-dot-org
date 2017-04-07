@@ -6,9 +6,11 @@ import experiments from '../../util/experiments';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
-// Check the experiment at the top level so that the enableExperiments and
-// disableExperiments url params will have effect anywhere in teacher dashboard.
-const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
+// Make sure enableExperiments and disableExperiments url params will cause
+// a persistent setting to be stored from any page in teacher dashboard.
+// Check whether the experiment is again later before deciding what to render
+// so that the experiment value can be manipulated in unit tests.
+experiments.isEnabled('showProjectThumbnails');
 
 const THUMBNAIL_SIZE = 50;
 
@@ -199,6 +201,7 @@ const ProjectsList = React.createClass({
       },
     ];
 
+    const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
     return showProjectThumbnails ? [thumbnailColumn].concat(standardColumns) :
       standardColumns;
   },
