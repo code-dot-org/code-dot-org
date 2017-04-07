@@ -44,7 +44,8 @@ const CourseProgress = React.createClass({
       professionalLearningCourse,
       focusAreaPositions,
       scriptName,
-      viewAs
+      viewAs,
+      onOverviewPage
     } = this.props;
     const groups = _.groupBy(stages, stage => (stage.flex_category || 'Content'));
     const showGroupHeaders = _.size(groups) > 1;
@@ -62,7 +63,7 @@ const CourseProgress = React.createClass({
 
     return (
       <div>
-        {this.props.onOverviewPage && (
+        {onOverviewPage && (
           <CourseOverviewTopRow
             professionalLearningCourse={professionalLearningCourse}
             hasLevelProgress={hasLevelProgress}

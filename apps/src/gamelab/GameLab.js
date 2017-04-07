@@ -1080,8 +1080,8 @@ GameLab.prototype.captureInitialImage = function () {
   if (!project.isOwner() || this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
     return;
   }
-  captureImage(THUMBNAIL_SIZE);
   this.initialCaptureComplete = true;
+  captureImage(THUMBNAIL_SIZE);
 };
 
 /**

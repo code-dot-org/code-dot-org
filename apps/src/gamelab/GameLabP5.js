@@ -756,8 +756,12 @@ GameLabP5.prototype.getGlobalPropertyList = function () {
   // Create a 'p5' object in the global namespace:
   propList.p5 = [{ Vector: window.p5.Vector }, window];
 
-  // Create a 'Game' object in the global namespace:
+  // Create a 'Game' object in the global namespace
+  // to make older blocks compatible:
   propList.Game = [this.gameLabGame, this];
+
+  // Create a 'World' object in the global namespace:
+  propList.World = [this.gameLabGame, this];
 
   return propList;
 };
