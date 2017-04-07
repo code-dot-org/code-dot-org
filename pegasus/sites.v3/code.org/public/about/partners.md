@@ -15,9 +15,7 @@ theme: responsive
 
 <HR>
 
-
 # School district partners
-
 
 Code.org has over 100 partnerships with school districts around the USA. [See the full list here](/educate/partner-districts).
 
