@@ -46,6 +46,20 @@ class SectionApiHelperTest < Minitest::Test
         )
       end
     end
+
+    describe 'update_if_allowed' do
+      it 'updates student of teacher' do
+      end
+
+      it 'noops if student is not follower of teacher' do
+      end
+
+      it 'noops if student is deleted follower of teacher' do
+      end
+
+      it 'noops if student is in deleted section of teacher' do
+      end
+    end
   end
 
   describe DashboardSection do
