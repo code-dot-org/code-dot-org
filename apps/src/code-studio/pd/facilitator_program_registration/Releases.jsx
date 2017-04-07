@@ -35,11 +35,11 @@ export default class Releases extends ProgramRegistrationComponent {
             publication of Code.org digital marketing, from liability for any
             claims by me or any third party in connection with my participation.
           </p>
-          {this.buildButtonsFromOptions(
-            'photoRelease',
-            "I agree",
-            'check'
-          )}
+          {this.buildButtonsFromOptions({
+            name: 'photoRelease',
+            label: "I agree",
+            type: 'check'
+          })}
         </FormGroup>
         <FormGroup>
           <h4>Part 3 of 4: Liability Waiver</h4>
@@ -89,11 +89,11 @@ export default class Releases extends ProgramRegistrationComponent {
             be effective and binding for all future Code.org professional
             learning events after checking YES below.
           </p>
-          {this.buildButtonsFromOptions(
-            'liabilityWaiver',
-            "I agree",
-            'check'
-          )}
+          {this.buildButtonsFromOptions({
+            name: 'liabilityWaiver',
+            label: "I agree",
+            type: 'check'
+          })}
         </FormGroup>
         <Demographics
           options={this.props.options}
