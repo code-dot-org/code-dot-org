@@ -28,12 +28,9 @@ $(function () {
     e.preventDefault();
   });
 
-  var hamburger = document.querySelector( '#nav-hamburger' );
-
-  if (hamburger) {
-    hamburger.addEventListener( 'click', function () {
-      this.classList.toggle( 'active' );
-    });
-  }
+  document.querySelector( '#nav-hamburger' )
+    .addEventListener( 'click', function () {
+    this.classList.toggle( 'active' );
+  });
 
 });
