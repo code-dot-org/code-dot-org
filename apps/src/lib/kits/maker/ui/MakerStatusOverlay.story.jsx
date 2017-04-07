@@ -25,6 +25,7 @@ export default storybook => {
             height={APP_HEIGHT}
             isConnecting={false}
             hasConnectionError={true}
+            handleDisableMaker={storybook.action('Disable maker')}
           />
         ),
       },
