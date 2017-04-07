@@ -370,6 +370,9 @@ testsContext.keys().forEach(testsContext);
           { type: 'lcovonly' }
         ]
       },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'storybook.xml',
+      }),
       files: [
         {src: ['test/storybook-tests.js'], watched: false},
       ],
