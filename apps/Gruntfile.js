@@ -318,6 +318,7 @@ testsContext.keys().forEach(testsContext);
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/storybook/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/unit/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/util/**/*', watched: false, included: false, nocache: true},
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
@@ -359,6 +360,21 @@ testsContext.keys().forEach(testsContext);
       }),
       files: [
         {src: ['test/integration-tests.js'], watched: false},
+      ],
+    },
+    storybook: {
+      coverageReporter: {
+        dir: 'coverage/storybook',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'storybook.xml',
+      }),
+      files: [
+        {src: ['test/storybook-tests.js'], watched: false},
       ],
     },
     all: {
@@ -764,6 +780,10 @@ testsContext.keys().forEach(testsContext);
     'exec:generateSharedConstants',
     'concat',
     'karma:unit'
+  ]);
+
+  grunt.registerTask('storybookTest', [
+    'karma:storybook',
   ]);
 
   grunt.registerTask('integrationTest', [
