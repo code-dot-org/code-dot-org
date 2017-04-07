@@ -385,6 +385,7 @@ testsContext.keys().forEach(testsContext);
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
     'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
+    'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
