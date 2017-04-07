@@ -3,6 +3,7 @@ import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsLis
 import {COLUMNS} from '@cdo/apps/templates/projects/ProjectsList';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
+import experiments from '@cdo/apps/util/experiments';
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 
@@ -69,6 +70,7 @@ describe('SectionProjectsList', () => {
   let root;
 
   beforeEach(() => {
+    experiments.setEnabled('showProjectThumbnails', true);
     root = mount(
       <SectionProjectsList
         projectsData={STUB_PROJECTS_DATA}
