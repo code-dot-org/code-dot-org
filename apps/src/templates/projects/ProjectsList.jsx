@@ -23,6 +23,14 @@ export const COLUMNS = {
   LAST_EDITED: 4,
 };
 
+/** @enum {number} */
+export const COLUMNS_WITHOUT_THUMBNAILS = {
+  PROJECT_NAME: 0,
+  STUDENT_NAME: 1,
+  APP_TYPE: 2,
+  LAST_EDITED: 3,
+};
+
 const styles = {
   table: {
     width: '100%',
@@ -93,8 +101,10 @@ const ProjectsList = React.createClass({
   },
 
   getInitialState() {
+    const sortingColumn = experiments.isEnabled('showProjectThumbnails') ?
+      COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
     const sortingColumns = {
-      [COLUMNS.LAST_EDITED]: {
+      [sortingColumn]: {
         direction: 'desc',
         position: 0
       }
