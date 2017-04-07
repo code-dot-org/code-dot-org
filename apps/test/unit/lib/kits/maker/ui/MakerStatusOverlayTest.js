@@ -4,7 +4,6 @@ import {expect} from '../../../../../util/configuredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 describe('MakerStatusOverlay', () => {
   it('renders nothing by default', () => {
@@ -110,13 +109,6 @@ describe('MakerStatusOverlay', () => {
           handleDisableMaker={handleDisableMaker}
         />
       );
-      sinon.stub(studioApp, 'resetButtonClick');
-      sinon.stub(studioApp, 'runButtonClick');
-    });
-
-    afterEach(() => {
-      studioApp.resetButtonClick.restore();
-      studioApp.runButtonClick.restore();
     });
 
     it('renders an overlay', () => {
@@ -141,12 +133,10 @@ describe('MakerStatusOverlay', () => {
       expect(wrapper.find('button').text()).to.include('Try Again');
     });
 
-    it('that triggers a reset and run when clicked', () => {
-      expect(studioApp.resetButtonClick).not.to.have.been.called;
-      expect(studioApp.runButtonClick).not.to.have.been.called;
+    it('that calls the provided try again handler', () => {
+      expect(handleTryAgain).not.to.have.been.called;
       wrapper.find('button').simulate('click');
-      expect(studioApp.resetButtonClick).to.have.been.calledOnce;
-      expect(studioApp.runButtonClick).to.have.been.calledOnce;
+      expect(handleTryAgain).to.have.been.calledOnce;
     });
 
     it('and a "Get Help" link', () => {
