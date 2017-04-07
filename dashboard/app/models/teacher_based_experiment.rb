@@ -13,12 +13,13 @@
 #  percentage             :integer
 #  earliest_section_start :datetime
 #  latest_section_start   :datetime
+#  script_id              :integer
 #
 
 class TeacherBasedExperiment < Experiment
   validates :percentage, inclusion: 0..100
 
-  def self.get_enabled(user: nil, section: nil)
+  def self.get_enabled(user: nil, section: nil, script: nil)
     return Experiment.none unless section
     Experiment.where(type: TeacherBasedExperiment.to_s).
       where('percentage > (? + CONV(SUBSTRING(SHA1(name), 1, 10), 16, 10)) % 100', section.user_id).
@@ -28,6 +29,7 @@ class TeacherBasedExperiment < Experiment
 
   def enabled?(user: nil, section: nil)
     return false unless section
+
     return percentage > (section.user_id + id_offset) % 100 &&
       (earliest_section_start.nil? ||
         earliest_section_start < section.first_activity_at) &&

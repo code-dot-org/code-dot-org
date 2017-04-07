@@ -12,6 +12,7 @@ FactoryGirl.define do
     factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
       type "TeacherBasedExperiment"
       percentage 50
+      script nil
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
       type "SingleSectionExperiment"

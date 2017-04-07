@@ -13,12 +13,13 @@
 #  percentage             :integer
 #  earliest_section_start :datetime
 #  latest_section_start   :datetime
+#  script_id              :integer
 #
 
 class SingleSectionExperiment < Experiment
   belongs_to :section
 
-  def self.get_enabled(user: nil, section: nil)
+  def self.get_enabled(user: nil, section: nil, script: nil)
     return Experiment.none unless section
     Experiment.where(type: SingleSectionExperiment.to_s).
       where(section_id: section.id)
