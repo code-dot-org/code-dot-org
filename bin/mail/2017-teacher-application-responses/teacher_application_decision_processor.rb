@@ -63,7 +63,8 @@ class TeacherApplicationDecisionProcessor
     @results = {
       accept_teachercon: [],
       accept_partner: [],
-      decline: [],
+      decline_csd: [],
+      decline_csp: [],
       waitlist: []
     }
   end
@@ -92,7 +93,7 @@ class TeacherApplicationDecisionProcessor
       when DECISIONS[:accept]
         process_accept teacher_application, program, workshop_string, regional_partner_override
       when DECISIONS[:decline]
-        process :decline, teacher_application
+        process_decline teacher_application
       when DECISIONS[:waitlist]
         process_waitlist teacher_application
       else
@@ -207,6 +208,22 @@ class TeacherApplicationDecisionProcessor
 
   def process_waitlist(teacher_application)
     process :waitlist, teacher_application, {teacher_application_id_s: teacher_application.id}
+  end
+
+  def process_decline(teacher_application)
+    decision = get_decline_decision(teacher_application)
+    process decision, teacher_application, {regional_partner_name_s: teacher_application.regional_partner_name}
+  end
+
+  def get_decline_decision(teacher_application)
+    case teacher_application.selected_course
+      when 'csd'
+        :decline_csd
+      when 'csp'
+        :decline_csp
+      else
+        raise "Unrecognized course: #{teacher_application.selected_course} for teacher application #{teacher_application.id}"
+    end
   end
 
   def save_accepted_workshop(teacher_application, program, accepted_workshop, regional_partner_override = nil)
