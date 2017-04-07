@@ -2,8 +2,13 @@ import React from 'react';
 import {Table, sort} from 'reactabular';
 import color from "../../util/color";
 import commonMsg from '@cdo/locale';
+import experiments from '../../util/experiments';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+
+// Check the experiment at the top level so that the enableExperiments and
+// disableExperiments url params will have effect anywhere in teacher dashboard.
+const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
 
 const THUMBNAIL_SIZE = 50;
 
@@ -134,17 +139,17 @@ const ProjectsList = React.createClass({
   },
 
   getColumns(sortable) {
-    return [
-      {
-        property: 'thumbnailUrl',
-        header: {
-          props: {style: styles.headerCell},
-        },
-          cell: {
-          format: thumbnailFormatter,
-          props: {style: styles.thumbnailCell}
-        }
+    const thumbnailColumn = {
+      property: 'thumbnailUrl',
+      header: {
+        props: {style: styles.headerCell},
       },
+      cell: {
+        format: thumbnailFormatter,
+        props: {style: styles.thumbnailCell}
+      }
+    };
+    const standardColumns = [
       {
         property: 'name',
         header: {
@@ -193,6 +198,9 @@ const ProjectsList = React.createClass({
         }
       },
     ];
+
+    return showProjectThumbnails ? [thumbnailColumn].concat(standardColumns) :
+      standardColumns;
   },
 
   render() {
