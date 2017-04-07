@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Button,
-  FormGroup
-} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap';
 
 import ProgramRegistrationComponent from './ProgramRegistrationComponent';
 
@@ -53,12 +50,17 @@ export default class Demographics extends ProgramRegistrationComponent {
           label: "For how many years have you taught Computer Science?",
           required: true,
         })}
-        <FormGroup>
-          <Button bsStyle="primary" type="submit">
-            Submit
-          </Button>
-        </FormGroup>
       </FormGroup>
     );
   }
 }
+
+Demographics.associatedFields = [
+  "gender",
+  "race",
+  "age",
+  "gradesTaught",
+  "gradesPlanningToTeach",
+  "subjectsTaught",
+  "csYearsTaught"
+];
