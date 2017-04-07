@@ -162,14 +162,14 @@ module FakeDashboard
       perm.merge! @@fake_db[:user_permissions][id: new_id]
     end
 
-    FOLLOWERS.each do |follower|
-      new_id = @@fake_db[:followers].insert(follower)
-      follower.merge! @@fake_db[:followers][id: new_id]
-    end
-
     TEACHER_SECTIONS.each do |section|
       new_id = @@fake_db[:sections].insert(section)
       section.merge! @@fake_db[:sections][id: new_id]
+    end
+
+    FOLLOWERS.each do |follower|
+      new_id = @@fake_db[:followers].insert(follower)
+      follower.merge! @@fake_db[:followers][id: new_id]
     end
   end
 
