@@ -24,7 +24,7 @@ module AWS
     CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
       list_certificates(certificate_statuses: ['ISSUED']).
       certificate_summary_list.
-      find {|cert| cert.domain_name == "*.#{DOMAIN}"}.
+      find {|cert| cert.domain_name == "*.#{DOMAIN}" || cert.domain_name == DOMAIN}.
       certificate_arn
 
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.

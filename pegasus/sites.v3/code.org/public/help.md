@@ -63,7 +63,7 @@ Code.org's online platform [Code Studio](https://studio.code.org) enables studen
 
 [col-66]
 
-- [TEALS](http://c.tealsk12.org/l/667) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
+- [TEALS](http://r.tealsk12.org/tbz7xx) brings together hundreds of software engineers and teachers to help build sustainable CS classes across the country. Join the more than 1,500 CS professionals who have made an impact in local high schools by volunteering 2 days a week to teacher Intro and AP CS classes.
 - [CoderDojo](http://www.coderdojo.com) - Start a Dojo in your neighborhood, mentor children to learn to code.
 - [Citizen Schools](https://www.citizenschools.org/volunteer) - Volunteer to teach computer programming in extended-day programs at schools.
 

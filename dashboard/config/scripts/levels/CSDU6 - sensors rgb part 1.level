@@ -158,16 +158,19 @@
       "led.off": null,
       "buzzer.frequency": null,
       "buzzer.note": null,
-      "buzzer.off": null,
+      "buzzer.stop": null,
       "buzzer.play": null,
       "accelerometer.getOrientation": null,
       "accelerometer.start": null,
       "accelerometer.getAcceleration": null,
       "isPressed": null,
       "holdtime": null,
-      "value": null,
-      "setScale": null,
-      "start": null,
+      "tempSensor.C": null,
+      "tempSensor.F": null,
+      "soundSensor.value": null,
+      "soundSensor.setScale": null,
+      "lightSensor.value": null,
+      "lightSensor.setScale": null,
       "getAveragedValue": null,
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
@@ -211,7 +214,10 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - sensors rgb template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

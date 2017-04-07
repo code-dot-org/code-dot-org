@@ -2783,6 +2783,8 @@ en:
         coursee-ramp:
           stage:
             Introduction: Introduction
+            Conditionals: Conditionals
+            'Real Life Algorithms: Dice Race': 'Real Life Algorithms: Dice Race'
           title: coursee-ramp
           description_audience: ''
           description_short: ''
