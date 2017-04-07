@@ -2,6 +2,7 @@
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
+import project from '../../../../code-studio/initApp/project';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {getVisualizationScale} from '../../../../redux/layout';
@@ -49,6 +50,9 @@ export default connect(
     scale: getVisualizationScale(state),
     isConnecting: isConnecting(state),
     hasConnectionError: hasConnectionError(state),
+  }),
+  () => ({
+    handleDisableMaker: () => project.toggleMakerEnabled()
   })
 )(UnconnectedMakerStatusOverlay);
 
