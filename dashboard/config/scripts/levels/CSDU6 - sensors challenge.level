@@ -112,10 +112,7 @@
     "makerlab_enabled": "true",
     "markdown_instructions": "# Challenge\r\n\r\n_Check with your teacher before pursuing this challenge_\r\n\r\nNow that you've practiced taking input from the various analog sensors and changing their scale to meet your needs, can you come up with an interesting use for sensor data? It's easy to display the raw numbers coming out of a sensor, but far more interesting to present that data in different ways.\r\n\r\nConsider the following ways you might communicate sensor data:\r\n\r\n* Use the board outputs\r\n* Change the width, height, or position of a UI element\r\n* Use conditionals to display different images based on sensor values",
     "display_name": "Challenge: Making Sense of Sensors",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
