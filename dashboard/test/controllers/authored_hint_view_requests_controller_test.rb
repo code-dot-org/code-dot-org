@@ -61,8 +61,8 @@ class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
     driver = @user
     navigator = create :user
     section = create :section
-    section.add_student driver
-    section.add_student navigator
+    section.add_student driver, move_for_same_teacher: false
+    section.add_student navigator, move_for_same_teacher: false
 
     @controller.send :pairings=, [navigator]
 

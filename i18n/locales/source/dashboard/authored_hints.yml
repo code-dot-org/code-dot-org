@@ -737,7 +737,7 @@ en:
       courseA_collector_loops3_predict1_authored_hint: {}
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: To change how far the adventurer goes, change the number of times that the loop runs.
-        courseA_collector_loops4_b: Don't forget that the adventurer needs to walk down and collect gold after she finishes the `repeat` loop!
+        courseA_collector_loops4_b: Don't forget that the adventurer needs to walk down and collect the treasure after she finishes the `repeat` loop!
       courseA_collector_loops5_authored_hint:
         courseA_collector_loops5_a: If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.
       courseA_collector_loops6_authored_hint:
@@ -747,7 +747,16 @@ en:
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and look for a pattern.
       courseA_collector_loops9_authored_hint:
-        courseA_collector_loops9_a: Does the code feel really long?  Try putting two of your `repeat` loops inside of another loop to make it much shorter!
+        courseA_collector_loops9_a: 'If you can''t spot the best places to use loops, try coding it out step-by-step and look for a pattern. '
+        courseA_collector_loops9_b: Does the code feel really long?  Try putting two of your `repeat` loops inside of another loop to make it much shorter!
+      courseA_collector_loops_challenge2_authored_hint:
+        courseA_collector_loops_challenge2_b: |+
+          You only need to use one ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) block to solve this.
+
+        courseA_collector_loops_challenge2_a: |-
+          You can move back over the path a second time before moving south.
+
+          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: If you are having trouble getting the bird to move, make sure blocks are clicked in under the `when run` event.
         courseA_maze_seq1_b: The bird will need to move `W <--` three times to get to the pig.
@@ -779,6 +788,10 @@ en:
         courseA_maze_seq8_a: If you're stuck, try drawing the image on paper to see how the bird should move.
       courseA_maze_seq9_authored_hint:
         courseA_maze_seq9_a: Stuck? Try tracing the bird's path with your finger.
+      courseA_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge1_a: Some paths will lead to TNT, if you move too far.
+      courseA_maze_seq_challenge2_authored_hint:
+        courseA_maze_seq_challenge2_a: Try counting the spaces with your finger. Remember not to count the space where you start!
       courseA_playLab_events2_authored_hint:
         courseA_playLab_events2_a: "Here is the block you should connect to the `when run` block: \n\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)"
       courseA_playLab_events3_authored_hint:
@@ -827,6 +840,8 @@ en:
         courseB_artist_loops8_a: How many times should you repeat the pattern to make the ladder?
       courseB_artist_loops8_predict1_authored_hint: {}
       courseB_artist_loops9_authored_hint: {}
+      courseB_artist_loops_challenge2_authored_hint:
+        harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: You'll need three `repeat` loops to solve this puzzle.
       courseB_collector_loops3_authored_hint:
@@ -849,7 +864,11 @@ en:
           Does this seem too hard?  Break it up into 4 little problems to make it feel easier.
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: Try using a `repeat` block to collect your gold.
-      courseB_maze_seq1_authored_hint: {}
+      courseB_maze_seq1_authored_hint:
+        courseB_maze_seq1_a: |-
+          Drag three of these `S` arrows out and connect them to the `when run` block to get your bird to the pig.
+
+          <xml><block type="when_run" deletable="false" movable="false"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"></block></next></block></next></block></next></block></xml>
       courseB_maze_seq10_authored_hint:
         courseB_maze_seq10_a: If you're having trouble, try writing down the steps on a piece of paper first.
       courseB_maze_seq10_predict1_authored_hint: {}
@@ -1584,6 +1603,8 @@ en:
         courseD_artist_functions9_b: This drawing is made by creating a line of triangles and turning either 60 or 120 degrees after each time you draw the triangle line.
       courseE_artist_functions_predict1_authored_hint: {}
       courseE_artist_functions_predict2_authored_hint: {}
+      courseE_artist_ramp10_authored_hint:
+        courseD_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?
       courseE_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
         courseD_artist_ramp11b: |-
@@ -1592,6 +1613,14 @@ en:
           Don't forget to turn afterward!
       courseE_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: You can either draw the square first, then the triangle, or do it the other way around!
+      courseE_artist_ramp8_authored_hint:
+        courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.
+        courseE_artist_ramp8_b: |-
+          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+
+          Don't forget to turn afterward!
+      courseE_artist_ramp9_authored_hint:
+        courseD_artist_ramp12_a: How is this similar to a square?  How is it different?
       courseE_bee_concept1_authored_hint:
         courseE_bee_concept1_a: If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.
       courseE_bee_concept2_authored_hint:
@@ -1688,6 +1717,14 @@ en:
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the corn, gets all of the corn, then turns around and comes back.
       courseE_farmer_functions9b_authored_hint: {}
+      courseE_farmer_ramp11_authored_hint:
+        courseE_farmer_ramp11_a: If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.
+        courseE_farmer_ramp11_b: How can you use a `repeat` loop to pick lettuce, instead of dragging out 5 `pick lettuce` blocks?
+        courseE_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a `move forward` block, and you'll have it!)
+      courseE_farmer_ramp12_authored_hint:
+        courseE_farmer_ramp12_a: 'Instead of using a `repeat` loop to tell the farmer how many times to pick lettuce, now you can use a `while there is lettuce` block.  '
+        courseE_farmer_ramp12_b: You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce.
+      courseE_farmer_ramp13_authored_hint: {}
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click "Run" again.
       courseE_maze_ramp2_authored_hint:
@@ -2612,6 +2649,8 @@ en:
           2) Play a random sound when you click the actor.
 
           Now, make sure both of those actions are attached underneath the same event!
+      harvey_tictactoe_authored_hint:
+        harvey_tictactoe: You can use `jump` blocks to move to other spaces.
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: You should end up with five blocks inside your loop.
       level 'grade3_Loops_11_authored_hint:

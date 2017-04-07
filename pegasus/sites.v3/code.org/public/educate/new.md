@@ -1,6 +1,7 @@
 ---
 title: New Middle Level Computer Science
 nav: educate_nav
+theme: responsive
 ---
 
 # Our newest course for Middle Level Education #
@@ -70,18 +71,5 @@ Of course! If schools prefer to continue using the ECS v5 curriculum, we will co
 
 For existing ECS teachers who want to try the new curriculum, we’ll also offer a short transitional PD to help familiarize them to the new content. The core pedagogy surrounding equity and inquiry as well as the high level conceptual material should be very familiar to ECS teachers. You will also be welcome to integrate parts of CSE into your current ECS course at your own pace and as you see fit.
 
-<!--
-#### Can I pilot the new course?
-
-We will be formally piloting the course with select groups in the Spring of the 16/17 school year - if you are interested in participating in this pilot please complete the application form here.
-
-As lessons are completed we will also be publishing them on the website we invite anyone to try them out - both the lessons and any new tools or software - and let us know how it went.  Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the forum.
-
-#### How/Where can I get professional development for this course?
-
-In-person professional development for the Code.org CSE course will be available for partner districts starting in Summer 2017.
-
-#### How can I learn more about the progress of the curriculum?
-
-We will be sending out regular status emails for members of the computer science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. [Sign up for future emails](http://code.org/educate/cse/CSEStatus_Signup).
--->
+<br>
+<br>

@@ -33,7 +33,8 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
     "markdown_instructions": "**Extreme Challenge:**  No rules. No clues. Just the challenge!",
-    "step_speed": "1"
+    "step_speed": "1",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

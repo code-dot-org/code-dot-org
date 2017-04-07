@@ -1,5 +1,6 @@
 ---
 title: Short Film by Code.org
+theme: responsive
 ---
 
 # Bill Gates, Mark Zuckerberg, will.i.am, and Chris Bosh Star in Short Film by Code.org

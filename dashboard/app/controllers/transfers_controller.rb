@@ -65,13 +65,11 @@ class TransfersController < ApplicationController
       return
     end
 
-    if new_section.user != current_user
-      if students.any? {|student| Follower.exists?(student_user: student, user_id: new_section.user_id)}
-        render json: {
-          error: I18n.t('move_students.already_enrolled_in_new_section')
-        }, status: :bad_request
-        return
-      end
+    if students.any? {|student| Follower.exists?(section: new_section, student_user: student)}
+      render json: {
+        error: I18n.t('move_students.already_enrolled_in_new_section')
+      }, status: :bad_request
+      return
     end
 
     stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
@@ -82,7 +80,7 @@ class TransfersController < ApplicationController
         follower_same_user_teacher.update_attributes!(section_id: new_section.id)
       else
         unless student.followeds.exists?(section_id: new_section.id)
-          student.followeds.create!(user_id: new_section.user_id, section: new_section)
+          student.followeds.create!(user: new_section.user, section: new_section)
         end
 
         unless stay_enrolled_in_current_section

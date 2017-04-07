@@ -39,17 +39,14 @@
     "data_tables": "{\r\n \"myContacts:\r\n [\r\n  {\r\n    \"name\": \"Friend 1\",\r\n    \"phone\": \"555-555-5555\",\r\n    \"birthday\": \"1/1/1970\",\r\n    \"imageURL\": \"https://images.code.org/53a5bdfb7f4ec83174756c8e094558fd-image-1449518131328.png\",\r\n    \"id\": 1\r\n  },\r\n  {\r\n    \"name\": \"Friend 2\",\r\n    \"phone\": \"888-888-8888\",\r\n    \"birthday\": \"May 25\",\r\n    \"imageURL\": \"https://images.code.org/80dc1da570b6f600df22ac28afbb801a-image-1455824673727.com-crop.gif\",\r\n    \"id\": 2\r\n  },\r\n  {\r\n    \"name\": \"Friend 3\",\r\n    \"phone\": \"777-777-7777\",\r\n    \"birthday\": \"3-12-2000\",\r\n    \"imageURL\": \"https://images.code.org/3e17f830fbe3b455bcc6b9aa5e85fd6b-image-1455825132871.com-crop%20(1).gif\",\r\n    \"id\": 3\r\n  }\r\n]\r\n}",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

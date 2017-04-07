@@ -1,5 +1,5 @@
 /** @file Wrapper around Johnny-Five Piezo component to modify play() */
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import '../../../utils'; // For Function.prototype.inherits
 
 /**
@@ -38,3 +38,22 @@ Piezo.prototype.play = function (notes, tempo = 120) {
     tempo
   });
 };
+
+/**
+ * We override johnny-five's stop() and off() functions so that they do the
+ * same thing.
+ * The original implementations did the following:
+ *   stop() : Cancelled play(), clearing an interval to prevent the current
+ *            song from continuting.
+ *   off()  : Cancelled frequency() or note(), calling noTone() to stop the
+ *            current note from playing.
+ * In practice, we expect our students to always want both of these behaviors
+ * together (stop the current note AND stop the song) so now that's what both
+ * methods do.
+ * @override
+ */
+Piezo.prototype.stop = function () {
+  five.Piezo.prototype.stop.call(this);
+  five.Piezo.prototype.off.call(this);
+};
+Piezo.prototype.off = Piezo.prototype.stop;

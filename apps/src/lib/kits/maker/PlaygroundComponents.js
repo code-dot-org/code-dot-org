@@ -11,7 +11,7 @@ import {
 } from './PlaygroundConstants';
 import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
 import Thermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
@@ -44,9 +44,9 @@ export function createCircuitPlaygroundComponents(board) {
     // pin 4 on the board.
     soundSensor: initializeSoundSensor(board),
 
-    tempSensor: initializeThermometer(board),
-
     lightSensor: initializeLightSensor(board),
+
+    tempSensor: initializeThermometer(board),
 
     accelerometer: initializeAccelerometer(board),
 
@@ -91,16 +91,16 @@ export function destroyCircuitPlaygroundComponents(components) {
   }
   delete components.soundSensor;
 
+  if (components.lightSensor) {
+    components.lightSensor.disable();
+  }
+  delete components.lightSensor;
+
   // five.Thermometer makes an untracked setInterval call, so it can't be
   // cleaned up.
   // TODO: Fork / fix johnny-five Thermometer to be clean-uppable
   // See https://github.com/rwaldron/johnny-five/issues/1297
   delete components.tempSensor;
-
-  if (components.lightSensor) {
-    components.lightSensor.disable();
-  }
-  delete components.lightSensor;
 
   if (components.accelerometer) {
     components.accelerometer.stop();
@@ -129,8 +129,8 @@ export const componentConstructors = {
   Button: five.Button,
   Switch: five.Switch,
   Piezo,
-  Thermometer: five.Thermometer,
   Sensor: five.Sensor,
+  Thermometer: five.Thermometer,
   Pin: five.Pin,
   Accelerometer: five.Accelerometer,
   Animation: five.Animation,
@@ -176,17 +176,6 @@ function initializeLightSensor(board) {
   return sensor;
 }
 
-function initializeThermometer(board) {
-  const sensor = new five.Thermometer({
-    board,
-    controller: Thermometer,
-    pin: "A0",
-    freq: 100
-  });
-  addSensorFeatures(five.Board.fmap, sensor);
-  return sensor;
-}
-
 /**
  * Adds `getAveragedValue` using LookbackLogger to a five.Sensor instance.
  * @param {five.Board.fmap} fmap mapping function
@@ -218,6 +207,16 @@ function addSensorFeatures(fmap, sensor) {
     // store scale in public state for scaling recorded data
     scale = [low, high];
   };
+}
+
+function initializeThermometer(board) {
+  const sensor = new five.Thermometer({
+    board,
+    controller: Thermometer,
+    pin: "A0",
+    freq: 100
+  });
+  return sensor;
 }
 
 function initializeButton(board, pin) {
