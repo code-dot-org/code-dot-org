@@ -49,6 +49,8 @@ export default function (storybook) {
   };
   const globalState = {
     interfaceMode: ApplabInterfaceMode.CODE,
+    pageConstants,
+    runState,
     layout,
   };
 
@@ -60,11 +62,7 @@ export default function (storybook) {
         description: 'In the edit view, we do not show the phone frame at all',
         story: () => (
           <StubProvider
-            state={{
-              ...globalState,
-              runState,
-              pageConstants
-            }}
+            state={globalState}
           >
             <ApplabVisualizationColumn
               isEditingProject={false}
@@ -81,7 +79,6 @@ export default function (storybook) {
           <StubProvider
             state={{
               ...globalState,
-              runState,
               pageConstants: {
                 ...pageConstants,
                 isReadOnlyWorkspace: true,
@@ -105,7 +102,6 @@ export default function (storybook) {
           <StubProvider
             state={{
               ...globalState,
-              runState,
               pageConstants: {
                 ...pageConstants,
                 isReadOnlyWorkspace: true,
