@@ -73,7 +73,7 @@ module AWS
     # so we can compare against the existing config to detect whether an update is needed.
     def self.sort_config!(config)
       config[:cache_behaviors][:items].sort_by! {|item| item[:path_pattern]}
-      config[:cache_behaviors][:items].each do |item|
+      config[:cache_behaviors][:items].concat([config[:default_cache_behavior]]).each do |item|
         item[:forwarded_values][:headers][:items].sort!
         name = item[:forwarded_values][:cookies][:whitelisted_names]
         name[:items].sort! if name
@@ -291,6 +291,8 @@ module AWS
         enabled: true, # required
         viewer_certificate: ssl_cert ? {
           acm_certificate_arn: certificate_arn,
+          certificate: certificate_arn,
+          certificate_source: 'acm',
           ssl_support_method: 'sni-only', # accepts sni-only, vip
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {
