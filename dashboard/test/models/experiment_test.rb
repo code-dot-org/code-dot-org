@@ -65,6 +65,22 @@ class ExperimentTest < ActiveSupport::TestCase
     assert_empty Experiment.get_all_enabled(section: section)
   end
 
+  test "teacher based experiment is disabled if other script assigned" do
+    script = create :script
+    create :teacher_based_experiment,
+      percentage: 100,
+      script_id: script.id + 1
+    assert_empty Experiment.get_all_enabled(section: create(:section), script: script)
+  end
+
+  test "teacher based experiment is enabled if same script assigned" do
+    script = create :script
+    experiment = create :teacher_based_experiment,
+      percentage: 100,
+      script_id: script.id
+    assert_equal [experiment], Experiment.get_all_enabled(section: create(:section), script: script)
+  end
+
   test "single section experiment is enabled" do
     section = create :section
     experiment = create :single_section_experiment,

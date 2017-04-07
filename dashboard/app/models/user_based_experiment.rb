@@ -13,10 +13,11 @@
 #  percentage             :integer
 #  earliest_section_start :datetime
 #  latest_section_start   :datetime
+#  script_id              :integer
 #
 
 class UserBasedExperiment < Experiment
-  def self.get_enabled(user: nil, section: nil)
+  def self.get_enabled(user: nil, section: nil, script: nil)
     return Experiment.none unless user
     Experiment.where(type: UserBasedExperiment.to_s).
       where('percentage > (? + CONV(SUBSTRING(SHA1(name), 1, 10), 16, 10)) % 100', user.id)

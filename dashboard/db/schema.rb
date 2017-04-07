@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403224005) do
+ActiveRecord::Schema.define(version: 20170404175302) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -173,6 +173,7 @@ ActiveRecord::Schema.define(version: 20170403224005) do
     t.integer  "percentage"
     t.datetime "earliest_section_start"
     t.datetime "latest_section_start"
+    t.integer  "script_id"
   end
 
   create_table "facilitators_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

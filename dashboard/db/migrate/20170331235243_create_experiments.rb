@@ -11,6 +11,7 @@ class CreateExperiments < ActiveRecord::Migration[5.0]
       t.integer :percentage
       t.datetime :earliest_section_start
       t.datetime :latest_section_start
+      t.integer :script_id
     end
   end
 end
