@@ -92,7 +92,7 @@ const ProjectsList = React.createClass({
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: React.PropTypes.string.isRequired,
-    showProjectThumbnails: React.PropTypes.bool,
+    showProjectThumbnails: React.PropTypes.bool.isRequired,
   },
 
   getInitialState() {
