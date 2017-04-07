@@ -4,9 +4,9 @@ import GradientNavCard from './GradientNavCard';
 const EXAMPLE_CARD_DATA = {
   title: "Teacher Community",
   description: "Ask questions about curriculum, share ideas from your lessons, and get help from other teachers",
-  image: "./GradientCardTestPic-REMOVE.jpg",
+  image: "./GradientCardTestPic-REMOVE.jpg", //This photo is still in the works; waiting on confirmation from Mike/Tanya
   buttonText: "Connect Today",
-  link: "link to wherever you want the button to go..."
+  link: "link to wherever Tanya wants the button to go..."
 };
 
 export default storybook => {

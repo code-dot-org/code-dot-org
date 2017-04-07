@@ -1,15 +1,13 @@
 import React from 'react';
 import ProgressButton from './progress/ProgressButton';
 
-
 const styles = {
   card: {
     flex: 1,
     overflow: 'hidden',
-    // backgroundImage: 'require(./GradientNavCard-img-REMOVE.png)',
     position: 'relative',
     height: 200,
-    width: 400
+    width: 450
   },
   overlay: {
     background: 'linear-gradient(to right, rgba(2,130,132,.95), rgba(2,130,132,0))',
