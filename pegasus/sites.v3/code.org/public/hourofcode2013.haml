@@ -1,6 +1,6 @@
 ---
 title: the Hour of Code is coming
+theme: responsive
 ---
-%div{:style=>'width: 970px; padding: 0; margin: 0 auto;'}
-  %div{:style=>'width: 630px; float: left; margin: 0; padding: 0'}= view :hourofcode_content
-  %div{:style=>'width: 320px; float: right;'}= view :hourofcode_sidebar
+%div{:class=>'col-66', :style=>'float: left; margin: 0; padding: 0 20px 0 0;'}= view :hourofcode_content
+%div{:class=>'col-33', :style=>'float: right;'}= view :hourofcode_sidebar

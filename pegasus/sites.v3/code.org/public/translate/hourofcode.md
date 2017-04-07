@@ -1,6 +1,7 @@
 ---
 title: Translate Hour of Code
 nav: translate_nav
+theme: responsive
 ---
 
 # Translating the Hour of Code
@@ -28,7 +29,7 @@ The files folder contains the text for handouts and posters. The pdfs are not au
 
 ## How to Use CrowdIn
 
-<embed src="/files/crowdin.swf" width=800 height=550 />
+<embed src="/files/crowdin.swf" style="max-width: 100%; max-height: 550px;"/>
 
 Watch the [demo video](/files/crowdin.swf) in full screen.
 

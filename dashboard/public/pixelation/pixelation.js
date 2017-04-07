@@ -47,7 +47,10 @@ function pixelationInit() {
 function customizeStyles() {
   if (!window.options) {
     // Default is version 3 (all features enabled).
-    window.options = {version: '3'};
+    window.options = {
+      version: '3',
+      hideEncodingControls: false,
+    };
   }
   if (options.version === '1') {
     $('.hide_on_v1').hide();
@@ -63,6 +66,9 @@ function customizeStyles() {
   }
   if (isHexLevel()) {
     $('input[name="binHex"][value="hex"]').prop('checked', true);
+  }
+  if (options.hideEncodingControls === true || options.hideEncodingControls === 'true') {
+    $('.encoding_controls').hide();
   }
   if (options.instructions) {
     $('#below_viz_instructions').text(options.instructions).show();

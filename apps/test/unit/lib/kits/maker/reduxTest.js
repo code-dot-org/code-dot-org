@@ -14,7 +14,7 @@ import {
   hasConnectionError
 } from '@cdo/apps/lib/kits/maker/redux';
 
-describe('Maker Toolkit redux module', () => {
+describe('maker/redux.js', () => {
   let store;
 
   beforeEach(() => {
@@ -22,11 +22,18 @@ describe('Maker Toolkit redux module', () => {
   });
 
   describe('without maker state', () => {
-    it('can safely call selectors', () => {
+    it('can safely call selectors with empty state', () => {
       expect(isEnabled({})).to.be.false;
       expect(isConnecting({})).to.be.false;
       expect(isConnected({})).to.be.false;
       expect(hasConnectionError({})).to.be.false;
+    });
+
+    it('can safely call selectors with undefined state', () => {
+      expect(isEnabled()).to.be.false;
+      expect(isConnecting()).to.be.false;
+      expect(isConnected()).to.be.false;
+      expect(hasConnectionError()).to.be.false;
     });
   });
 

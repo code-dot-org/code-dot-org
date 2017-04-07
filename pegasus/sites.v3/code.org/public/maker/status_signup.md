@@ -1,6 +1,7 @@
 ---
 title: Maker APIs
 nav: educate_nav
+theme: responsive
 ---
 
 # Maker APIs Status Updates

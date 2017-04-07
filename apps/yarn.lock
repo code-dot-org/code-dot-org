@@ -44,6 +44,23 @@
     semver "^4.1.0"
     xmldoc "^0.1.2"
 
+"@code-dot-org/johnny-five@0.9.62-cdo.0":
+  version "0.9.62-cdo.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-0.9.62-cdo.0.tgz#cbb704f69ab78fd99b7a557e9725894f5e7fa986"
+  dependencies:
+    chalk latest
+    color-convert "~1.2.2"
+    ease-component latest
+    es6-shim latest
+    lodash.clonedeep "^4.3.0"
+    lodash.debounce "^4.0.3"
+    nanotimer "0.3.10"
+    temporal latest
+  optionalDependencies:
+    browser-serialport latest
+    firmata "^0.12.0"
+    serialport "^4.0.0"
+
 "@code-dot-org/js-interpreter":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.1.1.tgz#2a7ccbb6b1f31353445f82f777573d1c38e11d37"
@@ -3745,6 +3762,12 @@ eshost@^3.3.2, "eshost@github:pcardune/eshost#f3fa7fa":
     socket.io "^1.3.7"
     temp "^0.8.3"
 
+eslint-plugin-mocha@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-mocha/-/eslint-plugin-mocha-4.9.0.tgz#917a8b499ab8d0c01d69c6e4f81d362ee099b6fd"
+  dependencies:
+    ramda "^0.23.0"
+
 eslint-plugin-react@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-5.2.2.tgz#7db068e1f5487f6871e4deef36a381c303eac161"
@@ -6039,23 +6062,6 @@ jodid25519@^1.0.0:
   resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
   dependencies:
     jsbn "~0.1.0"
-
-johnny-five@0.9.62:
-  version "0.9.62"
-  resolved "https://registry.yarnpkg.com/johnny-five/-/johnny-five-0.9.62.tgz#155f80d9ceea098d601b9c5d2eee0a0c4e9d3189"
-  dependencies:
-    chalk latest
-    color-convert "~1.2.2"
-    ease-component latest
-    es6-shim latest
-    lodash.clonedeep "^4.3.0"
-    lodash.debounce "^4.0.3"
-    nanotimer "0.3.10"
-    temporal latest
-  optionalDependencies:
-    browser-serialport latest
-    firmata "^0.12.0"
-    serialport "^4.0.0"
 
 jquery-ui@1.10.5:
   version "1.10.5"
@@ -8757,6 +8763,10 @@ raf@^3.1.0:
   dependencies:
     performance-now "~0.2.0"
 
+ramda@^0.23.0:
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.23.0.tgz#ccd13fff73497a93974e3e86327bfd87bd6e8e2b"
+
 random-bytes@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/random-bytes/-/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
@@ -8979,6 +8989,10 @@ react-overlays@^0.6.6:
     dom-helpers "^2.4.0"
     react-prop-types "^0.4.0"
     warning "^3.0.0"
+
+react-portal:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-3.0.0.tgz#9304fce836e8a3216b22588f8dc91b447728f0ae"
 
 react-prop-types@^0.4.0:
   version "0.4.0"

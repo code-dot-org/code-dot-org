@@ -26,9 +26,11 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are two ways to solve this puzzle!\",\"hint_id\":\"courseC_maze_programming6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3d3459fcb98e0e773913c91ec2561814/courseC_maze_programming6.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are two ways to solve this puzzle!\",\"hint_id\":\"courseC_maze_programming6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3d3459fcb98e0e773913c91ec2561814/courseC_maze_programming6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Follow your finger from the bird to the pig, which steps did you take?\",\"hint_id\":\"courseC_maze_programming6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a6492363309ebaa363036f03ba046511/courseC_maze_programming6.mp3\"}]",
     "markdown_instructions": "*\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"*\r\n\r\nGet the bird to the pig and avoid the TNT.",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
