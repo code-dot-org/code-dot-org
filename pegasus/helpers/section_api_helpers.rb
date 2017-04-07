@@ -346,9 +346,8 @@ class DashboardSection
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = Dashboard.db[:sections].
-      join(:users, id: :user_id).
       select(*fields).
-      where(sections__id: id, sections__deleted_at: nil).
+      where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
       first
 
     section = new(row)
