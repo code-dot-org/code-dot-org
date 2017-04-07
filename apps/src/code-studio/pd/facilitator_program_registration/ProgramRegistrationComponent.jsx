@@ -9,15 +9,9 @@ export default class ProgramRegistrationComponent extends React.Component {
     if (this.constructor === ProgramRegistrationComponent) {
       throw new TypeError("ProgramRegistrationComponent is an abstract class; cannot construct instances directly");
     }
-
-    this.state = {
-      data: {},
-    };
   }
 
   handleChange(newState) {
-    const data = Object.assign({}, this.state.data, newState);
-    this.setState({ data });
     this.props.onChange(newState);
   }
 
@@ -35,7 +29,7 @@ export default class ProgramRegistrationComponent extends React.Component {
         label={label}
         validationState={this.getValidationState(name)}
         onChange={this.handleChange.bind(this)}
-        value={this.state.data[name] || ''}
+        value={this.props.data[name] || ''}
         required={required}
       >
         {Object.keys(this.props.options[name]).map(key => (
@@ -53,7 +47,7 @@ export default class ProgramRegistrationComponent extends React.Component {
         label={label}
         validationState={this.getValidationState(name)}
         onChange={this.handleChange.bind(this)}
-        value={this.state.data[name] || ''}
+        value={this.props.data[name] || ''}
         required={required}
         {...props}
       />
@@ -67,7 +61,7 @@ export default class ProgramRegistrationComponent extends React.Component {
         groupName={name}
         label={label}
         onChange={this.handleChange.bind(this)}
-        selectedItems={this.state.data[name]}
+        selectedItems={this.props.data[name]}
         validationState={this.getValidationState(name)}
         required={true}
         type={type}
@@ -79,5 +73,6 @@ export default class ProgramRegistrationComponent extends React.Component {
 ProgramRegistrationComponent.propTypes = {
   options: React.PropTypes.object.isRequired,
   errors: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  data: React.PropTypes.object.isRequired,
   onChange: React.PropTypes.func.isRequired
 };
