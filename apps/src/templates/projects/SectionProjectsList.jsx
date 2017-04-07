@@ -3,6 +3,13 @@ import ProjectsList from './ProjectsList';
 import StudentFilterDropdown, {ALL_STUDENTS} from './StudentFilterDropdown';
 import _ from 'lodash';
 import color from "../../util/color";
+import experiments from '../../util/experiments';
+
+// Make sure enableExperiments and disableExperiments url params will cause
+// a persistent setting to be stored from any page in teacher dashboard.
+// Check whether the experiment is again later before deciding what to render
+// so that the experiment value can be manipulated in unit tests.
+experiments.isEnabled('showProjectThumbnails');
 
 const styles = {
   filterComponent: {
@@ -63,6 +70,7 @@ class SectionProjectsList extends Component {
     const filteredProjectsData = this.props.projectsData.filter(project => (
       [ALL_STUDENTS, project['studentName']].includes(this.state.selectedStudent)
     ));
+    const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
 
     return (
       <div>
@@ -78,6 +86,7 @@ class SectionProjectsList extends Component {
         <ProjectsList
           projectsData={filteredProjectsData}
           studioUrlPrefix={this.props.studioUrlPrefix}
+          showProjectThumbnails={showProjectThumbnails}
         />
       </div>
     );

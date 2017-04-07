@@ -2,15 +2,9 @@ import React from 'react';
 import {Table, sort} from 'reactabular';
 import color from "../../util/color";
 import commonMsg from '@cdo/locale';
-import experiments from '../../util/experiments';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
-// Make sure enableExperiments and disableExperiments url params will cause
-// a persistent setting to be stored from any page in teacher dashboard.
-// Check whether the experiment is again later before deciding what to render
-// so that the experiment value can be manipulated in unit tests.
-experiments.isEnabled('showProjectThumbnails');
 
 const THUMBNAIL_SIZE = 50;
 
@@ -98,10 +92,11 @@ const ProjectsList = React.createClass({
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: React.PropTypes.string.isRequired,
+    showProjectThumbnails: React.PropTypes.bool,
   },
 
   getInitialState() {
-    const sortingColumn = experiments.isEnabled('showProjectThumbnails') ?
+    const sortingColumn = this.props.showProjectThumbnails ?
       COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
     const sortingColumns = {
       [sortingColumn]: {
@@ -211,9 +206,8 @@ const ProjectsList = React.createClass({
       },
     ];
 
-    const showProjectThumbnails = experiments.isEnabled('showProjectThumbnails');
-    return showProjectThumbnails ? [thumbnailColumn].concat(standardColumns) :
-      standardColumns;
+    return this.props.showProjectThumbnails ?
+      [thumbnailColumn].concat(standardColumns) : standardColumns;
   },
 
   render() {
