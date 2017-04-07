@@ -28,7 +28,7 @@ $(function () {
     e.preventDefault();
   });
 
-  let hamburger = document.querySelector( '#nav-hamburger' );
+  var hamburger = document.querySelector( '#nav-hamburger' );
 
   if (hamburger) {
       hamburger.addEventListener( 'click', function () {
