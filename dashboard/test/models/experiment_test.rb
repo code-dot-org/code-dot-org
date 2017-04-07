@@ -21,8 +21,8 @@ class ExperimentTest < ActiveSupport::TestCase
 
   test "user based experiment at 50 percent is enabled for only some users" do
     experiment = create :user_based_experiment, percentage: 50
-    user_on = build :user, id: 1025
-    user_off = build :user, id: 1075
+    user_on = build :user, id: 1025 - experiment.id_offset
+    user_off = build :user, id: 1075 - experiment.id_offset
 
     assert_equal [experiment], Experiment.get_all_enabled(user: user_on)
     assert_empty Experiment.get_all_enabled(user: user_off)
@@ -40,8 +40,8 @@ class ExperimentTest < ActiveSupport::TestCase
 
   test "section based experiment at 50 percent is enabled for only some users" do
     experiment = create :section_based_experiment, percentage: 50
-    section_on = build :section, id: 25
-    section_off = build :section, id: 75
+    section_on = build :section, id: 1025 - experiment.id_offset
+    section_off = build :section, id: 1075 - experiment.id_offset
 
     assert_equal [experiment], Experiment.get_all_enabled(section: section_on)
     assert_empty Experiment.get_all_enabled(section: section_off)
@@ -49,7 +49,7 @@ class ExperimentTest < ActiveSupport::TestCase
 
   test "section based experiment is disabled if start_time is too late" do
     create :section_based_experiment,
-      percentage: 50,
+      percentage: 100,
       earliest_section_start: DateTime.now + 1.days
     section = create :section,
       first_activity_at: DateTime.now
@@ -58,7 +58,7 @@ class ExperimentTest < ActiveSupport::TestCase
 
   test "section based experiment is disabled if end_time is too early" do
     create :section_based_experiment,
-      percentage: 50,
+      percentage: 100,
       latest_section_start: DateTime.now - 1.days
     section = create :section,
       first_activity_at: DateTime.now

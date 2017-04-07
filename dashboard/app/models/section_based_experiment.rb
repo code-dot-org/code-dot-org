@@ -21,14 +21,14 @@ class SectionBasedExperiment < Experiment
   def self.get_enabled(user: nil, section: nil)
     return Experiment.none unless section
     Experiment.where(type: SectionBasedExperiment.to_s).
-      where('percentage > ?', section.id % 100).
+      where('percentage > (? + CONV(SUBSTRING(SHA1(name), 1, 10), 16, 10)) % 100', section.id).
       where('earliest_section_start IS NULL OR earliest_section_start < ?', section.first_activity_at).
       where('latest_section_start IS NULL OR latest_section_start > ?', section.first_activity_at)
   end
 
   def enabled?(user: nil, section: nil)
     return false unless section
-    return percentage > section.id % 100 &&
+    return percentage > (section.id + id_offset) % 100 &&
       (earliest_section_start.nil? ||
         earliest_section_start < section.first_activity_at) &&
       (latest_section_start.nil? ||
