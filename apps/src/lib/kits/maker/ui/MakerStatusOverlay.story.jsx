@@ -14,6 +14,8 @@ export default storybook => {
             height={APP_HEIGHT}
             isConnecting={true}
             hasConnectionError={false}
+            handleTryAgain={storybook.action('Try Again')}
+            handleDisableMaker={storybook.action('Disable Maker Toolkit')}
           />
         ),
       },
@@ -25,7 +27,8 @@ export default storybook => {
             height={APP_HEIGHT}
             isConnecting={false}
             hasConnectionError={true}
-            handleDisableMaker={storybook.action('Disable maker')}
+            handleTryAgain={storybook.action('Try Again')}
+            handleDisableMaker={storybook.action('Disable Maker Toolkit')}
           />
         ),
       },

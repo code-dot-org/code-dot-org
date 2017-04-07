@@ -25,12 +25,13 @@ export class UnconnectedMakerStatusOverlay extends Component {
     ...overlayDimensionsPropTypes,
     isConnecting: PropTypes.bool.isRequired,
     hasConnectionError: PropTypes.bool.isRequired,
+    handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func,
   };
 
   render() {
     const {width, height, scale, isConnecting, hasConnectionError,
-      handleDisableMaker} = this.props;
+      handleTryAgain, handleDisableMaker} = this.props;
     const dimensions = {width, height, scale};
     if (isConnecting) {
       return <WaitingToConnect {...dimensions}/>;
@@ -38,6 +39,7 @@ export class UnconnectedMakerStatusOverlay extends Component {
       return (
         <BoardNotFound
           {...dimensions}
+          handleTryAgain={handleTryAgain}
           handleDisableMaker={handleDisableMaker}
         />
       );
@@ -52,7 +54,11 @@ export default connect(
     hasConnectionError: hasConnectionError(state),
   }),
   () => ({
-    handleDisableMaker: () => project.toggleMakerEnabled()
+    handleDisableMaker: () => project.toggleMakerEnabled(),
+    handleTryAgain: () => {
+      studioApp.resetButtonClick();
+      studioApp.runButtonClick();
+    },
   })
 )(UnconnectedMakerStatusOverlay);
 
@@ -165,40 +171,40 @@ class WaitingToConnect extends Component {
 class BoardNotFound extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
+    handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func,
   };
 
-  render() {
+  renderFooter() {
     const {handleDisableMaker} = this.props;
-    const footer=(
+    return (
       <span>
         <Text><em>Not sure what's going on?</em></Text>
         <Text>
           <Link href="/maker/setup">Get Help</Link>
           {handleDisableMaker && ' or '}
           {handleDisableMaker &&
-            <Link onClick={this.props.handleDisableMaker}>
+            <Link onClick={handleDisableMaker}>
               Disable Maker Toolkit
             </Link>
           }
         </Text>
       </span>
     );
+  }
 
+  render() {
     return (
       <Overlay
         {...this.props}
         backgroundColor={color.red}
-        footer={footer}
+        footer={this.renderFooter()}
       >
         <Icon icon="exclamation-triangle"/>
         <Text>Make sure your board is plugged in.</Text>
         <OverlayButton
           text="Try Again"
-          onClick={() => {
-            studioApp.resetButtonClick();
-            studioApp.runButtonClick();
-          }}
+          onClick={this.props.handleTryAgain}
         />
       </Overlay>
     );
