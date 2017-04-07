@@ -87,15 +87,17 @@ describe('MakerStatusOverlay', () => {
   });
 
   describe('on error', () => {
-    let wrapper;
+    let wrapper, handleDisableMaker;
 
     beforeEach(() => {
+      handleDisableMaker = sinon.spy();
       wrapper = mount(
         <UnconnectedMakerStatusOverlay
           width={11}
           height={16}
           isConnecting={false}
           hasConnectionError={true}
+          handleDisableMaker={handleDisableMaker}
         />
       );
       sinon.stub(studioApp, 'resetButtonClick');
@@ -120,7 +122,7 @@ describe('MakerStatusOverlay', () => {
       expect(wrapper).to.have.descendants('i.fa-exclamation-triangle');
     });
 
-    it('and waiting text', () => {
+    it('and error text', () => {
       expect(wrapper.text()).to.include('Make sure your board is plugged in.');
     });
 
@@ -135,6 +137,26 @@ describe('MakerStatusOverlay', () => {
       wrapper.find('button').simulate('click');
       expect(studioApp.resetButtonClick).to.have.been.calledOnce;
       expect(studioApp.runButtonClick).to.have.been.calledOnce;
+    });
+
+    it('and a "Get Help" link', () => {
+      expect(wrapper).to.have.descendants('a[children="Get Help"]');
+    });
+
+    it('that opens the maker setup page in a new tab', () => {
+      const link = wrapper.find('a[children="Get Help"]');
+      expect(link).to.have.prop('href', '/maker/setup');
+      expect(link).to.have.prop('target', '_blank');
+    });
+
+    it('and a "Disable Maker Toolkit" link', () => {
+      expect(wrapper).to.have.descendants('a[children="Disable Maker Toolkit"]');
+    });
+
+    it('that calls the provided disable handler', () => {
+      expect(handleDisableMaker).not.to.have.been.called;
+      wrapper.find('a[children="Disable Maker Toolkit"]').simulate('click');
+      expect(handleDisableMaker).to.have.been.calledOnce;
     });
   });
 });
