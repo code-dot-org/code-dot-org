@@ -5,12 +5,13 @@ require 'mocha/mini_test'
 require 'sequel'
 require_relative '../helpers/section_api_helpers'
 require_relative 'fixtures/fake_dashboard'
+require_relative 'sequel_test_case'
 
 def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
 end
 
-class SectionApiHelperTest < Minitest::Test
+class SectionApiHelperTest < SequelTestCase
   describe DashboardStudent do
     before do
       FakeDashboard.use_fake_database
@@ -73,7 +74,7 @@ class SectionApiHelperTest < Minitest::Test
         )
         assert_nil updated_student
         assert_equal FakeDashboard::STUDENT_DELETED[:name],
-          Dashboard::User.get(FakeDashboard::STUDENT_DELETED_USER[:id]).to_hash[:name]
+          Dashboard::User.get(FakeDashboard::STUDENT_DELETED[:id]).to_hash[:name]
       end
     end
   end
