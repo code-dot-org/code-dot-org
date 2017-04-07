@@ -5,7 +5,6 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
-
 const THUMBNAIL_SIZE = 50;
 
 /** @enum {number} */
