@@ -61,8 +61,12 @@ class Experiment < ApplicationRecord
 
   def self.update_cache
     return unless Experiment.should_cache?
-    @@experiments = Experiment.all
+    @@experiments = Experiment.all.to_a
     @@experiments_loaded = DateTime.now
+  end
+
+  def id_offset
+    Digest::SHA1.hexdigest(name)[0..9].to_i(16) % 100
   end
 end
 

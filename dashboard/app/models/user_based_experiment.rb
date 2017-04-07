@@ -19,10 +19,10 @@ class UserBasedExperiment < Experiment
   def self.get_enabled(user: nil, section: nil)
     return Experiment.none unless user
     Experiment.where(type: UserBasedExperiment.to_s).
-      where('percentage > ?', user.id % 100)
+      where('percentage > (? + CONV(SUBSTRING(SHA1(name), 1, 10), 16, 10)) % 100', user.id)
   end
 
   def enabled?(user: nil, section: nil)
-    return !user.nil? && percentage > user.id % 100
+    return !user.nil? && percentage > (user.id + id_offset) % 100
   end
 end
