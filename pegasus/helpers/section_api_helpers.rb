@@ -279,6 +279,7 @@ class DashboardSection
     grade = valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil
     script_id = params[:course] && valid_course_id?(params[:course][:id]) ?
       params[:course][:id].to_i : params[:script_id]
+    stage_extras = params[:stage_extras]
     created_at = DateTime.now
 
     row = nil
@@ -292,6 +293,7 @@ class DashboardSection
           grade: grade,
           script_id: script_id,
           code: SectionHelpers.random_code,
+          stage_extras: stage_extras,
           created_at: created_at,
           updated_at: created_at,
         }
