@@ -67,31 +67,31 @@ export default class TravelInformation extends ProgramRegistrationComponent {
         </FormGroup>
 
         <FormGroup> {/* Misc */}
-          {this.buildButtonsFromOptions(
-            'dietaryNeeds',
-            "Please list any dietary needs or food allergies you may have",
-            'check'
-          )}
-          {this.buildButtonsFromOptions(
-            'liveFarAway',
-            "Do you live more than 25 miles from downtown Houston?",
-            'radio'
-          )}
-          {this.buildButtonsFromOptions(
-            'howTraveling',
-            "How will you be traveling to TeacherCon?",
-            'radio'
-          )}
-          {this.buildButtonsFromOptions(
-            'needHotel',
-            "Code.org will cover the cost of each participant's hotel room. Will you need a hotel room during TeacherCon?",
-            'radio'
-          )}
-          {this.buildButtonsFromOptions(
-            'needAda',
-            "Do you require an ADA accessible hotel room?",
-            'radio'
-          )}
+          {this.buildButtonsFromOptions({
+            name: 'dietaryNeeds',
+            label: "Please list any dietary needs or food allergies you may have",
+            type: 'check'
+          })}
+          {this.buildButtonsFromOptions({
+            name: 'liveFarAway',
+            label: "Do you live more than 25 miles from downtown Houston?",
+            type: 'radio'
+          })}
+          {this.buildButtonsFromOptions({
+            name: 'howTraveling',
+            label: "How will you be traveling to TeacherCon?",
+            type: 'radio'
+          })}
+          {this.buildButtonsFromOptions({
+            name: 'needHotel',
+            label: "Code.org will cover the cost of each participant's hotel room. Will you need a hotel room during TeacherCon?",
+            type: 'radio'
+          })}
+          {this.buildButtonsFromOptions({
+            name: 'needAda',
+            label: "Do you require an ADA accessible hotel room?",
+            type: 'radio'
+          })}
           {this.buildFieldGroup({
             name: "notes",
             componentClass: "textarea",

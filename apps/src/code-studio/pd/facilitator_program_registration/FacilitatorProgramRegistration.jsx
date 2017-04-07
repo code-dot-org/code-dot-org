@@ -21,11 +21,11 @@ class DeclineTrainingDate extends ProgramRegistrationComponent {
       } else if (type === 'csp') {
         name = "cspAlternateTrainingDate";
       }
-      followup = this.buildButtonsFromOptions(
-        name,
-        "I am instead available to attend the following Facilitator-in-Training workshop (TeacherCon Part 2):",
-        'check'
-      );
+      followup = this.buildButtonsFromOptions({
+        name: name,
+        label: "I am instead available to attend the following Facilitator-in-Training workshop (TeacherCon Part 2):",
+        type: 'check'
+      });
     }
 
     return (
@@ -46,11 +46,11 @@ class DeclineTrainingDate extends ProgramRegistrationComponent {
   render() {
     return (
       <FormGroup>
-        {this.buildButtonsFromOptions(
-          'declineTrainingDate',
-          'Why Not?',
-          'radio'
-        )}
+        {this.buildButtonsFromOptions({
+          name: 'declineTrainingDate',
+          label: 'Why Not?',
+          type: 'radio'
+        })}
         {this.renderNext()}
       </FormGroup>
     );
@@ -81,11 +81,11 @@ class TrainingDateConfirm extends ProgramRegistrationComponent {
   render() {
     return (
       <FormGroup>
-        {this.buildButtonsFromOptions(
-          "confirmTrainingDate",
-          "Your assigned Facilitator in Training date is: <Facilitator in Training dates & location>. Please confirm you can make your assigned Facilitator in Training.",
-          "radio"
-        )}
+        {this.buildButtonsFromOptions({
+          name: "confirmTrainingDate",
+          label: "Your assigned Facilitator in Training date is: <Facilitator in Training dates & location>. Please confirm you can make your assigned Facilitator in Training.",
+          type: "radio"
+        })}
         {this.renderNext()}
       </FormGroup>
     );
@@ -109,7 +109,11 @@ class ConfirmationQuestions extends ProgramRegistrationComponent {
       `;
       return (
         <div>
-          {this.buildButtonsFromOptions('alternateTeacherconDate', label, 'check')}
+          {this.buildButtonsFromOptions({
+            name: 'alternateTeacherconDate',
+            label: label,
+            type: 'check'
+          })}
           <TrainingDateConfirm
             options={this.props.options}
             onChange={this.handleChange.bind(this)}
@@ -145,11 +149,11 @@ class ConfirmationQuestions extends ProgramRegistrationComponent {
     return (
       <FormGroup>
         {this.renderErrorFeedback()}
-        {this.buildButtonsFromOptions(
-          "confirmTeacherconDate",
-          "Your assigned summer training is TeacherCon <TeacherCon dates & location>. Please confirm you can make your assigned TeacherCon training",
-          "radio"
-        )}
+        {this.buildButtonsFromOptions({
+          name: "confirmTeacherconDate",
+          label: "Your assigned summer training is TeacherCon <TeacherCon dates & location>. Please confirm you can make your assigned TeacherCon training",
+          type: "radio"
+        })}
         {this.renderNext()}
       </FormGroup>
     );
