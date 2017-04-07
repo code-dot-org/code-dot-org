@@ -19,6 +19,37 @@ describe('MakerStatusOverlay', () => {
     expect(wrapper.html()).to.be.null;
   });
 
+  describe('scale property', () => {
+    it('sets scale transform if scale property is provided', () => {
+      const wrapper = mount(
+        <UnconnectedMakerStatusOverlay
+          width={10}
+          height={10}
+          scale={0.65}
+          isConnecting={true}
+          hasConnectionError={false}
+        />
+      );
+      expect(wrapper).to.have.style('transform', 'scale(0.65)');
+      expect(wrapper).to.have.style('msTransform', 'scale(0.65)');
+      expect(wrapper).to.have.style('WebkitTransform', 'scale(0.65)');
+    });
+
+    it('sets no transform if scale property is absent', () => {
+      const wrapper = mount(
+        <UnconnectedMakerStatusOverlay
+          width={10}
+          height={10}
+          isConnecting={true}
+          hasConnectionError={false}
+        />
+      );
+      expect(wrapper).not.to.have.style('transform');
+      expect(wrapper).not.to.have.style('msTransform');
+      expect(wrapper).not.to.have.style('WebkitTransform');
+    });
+  });
+
   describe('when connecting', () => {
     let wrapper;
 
