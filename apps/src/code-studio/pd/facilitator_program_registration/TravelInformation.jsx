@@ -5,7 +5,6 @@ import {
 } from 'react-bootstrap';
 
 import ProgramRegistrationComponent from './ProgramRegistrationComponent';
-import Releases from './Releases';
 
 export default class TravelInformation extends ProgramRegistrationComponent {
   render() {
@@ -99,12 +98,22 @@ export default class TravelInformation extends ProgramRegistrationComponent {
             required: false,
           })}
         </FormGroup>
-        <Releases
-          options={this.props.options}
-          onChange={this.handleChange.bind(this)}
-          errors={this.props.errors}
-        />
       </FormGroup>
     );
   }
 }
+
+TravelInformation.associatedFields = [
+  "addressStreet",
+  "addressCity",
+  "addressState",
+  "addressZip",
+  "contactName",
+  "contactRelationship",
+  "contactPhone",
+  "dietaryNeeds",
+  "liveFarAway",
+  "howTraveling",
+  "needHotel",
+  "needAda",
+];
