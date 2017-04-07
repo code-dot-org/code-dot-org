@@ -1,5 +1,6 @@
 /** @file Maker connection status visualization overlay */
 import React, {Component, PropTypes} from 'react';
+import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
@@ -19,22 +20,30 @@ const overlayDimensionsPropTypes = {
  * when there are connection issues.
  */
 export class UnconnectedMakerStatusOverlay extends Component {
+  static propTypes = {
+    ...overlayDimensionsPropTypes,
+    isConnecting: PropTypes.bool.isRequired,
+    hasConnectionError: PropTypes.bool.isRequired,
+    handleDisableMaker: PropTypes.func,
+  };
+
   render() {
-    const {width, height, scale, isConnecting, hasConnectionError} = this.props;
+    const {width, height, scale, isConnecting, hasConnectionError,
+      handleDisableMaker} = this.props;
     const dimensions = {width, height, scale};
     if (isConnecting) {
       return <WaitingToConnect {...dimensions}/>;
     } else if (hasConnectionError) {
-      return <BoardNotFound {...dimensions}/>;
+      return (
+        <BoardNotFound
+          {...dimensions}
+          handleDisableMaker={handleDisableMaker}
+        />
+      );
     }
     return null;
   }
 }
-UnconnectedMakerStatusOverlay.propTypes = {
-  ...overlayDimensionsPropTypes,
-  isConnecting: PropTypes.bool.isRequired,
-  hasConnectionError: PropTypes.bool.isRequired,
-};
 export default connect(
   state => ({
     scale: getVisualizationScale(state),
@@ -64,42 +73,40 @@ const style = {
     padding: '2em',
     textAlign: 'center',
   },
+  footer: {
+    flex: '0 0 0',
+    padding: '1em',
+    textAlign: 'center',
+  },
   icon: {
     display: 'block',
   },
   text: {
     margin: '1em',
   },
+  link: {
+    display: 'inline-block',
+    fontWeight: 'bold',
+    color: color.white,
+    textDecoration: 'none',
+    lineHeight: 1.5,
+    paddingLeft: 5,
+    paddingRight: 5,
+    borderRadius: 3,
+    ':hover': {
+      color: color.black,
+      backgroundColor: color.white,
+    }
+  }
 };
 
 class Overlay extends Component {
-  icon() {
-    const classNames = [this.props.iconModifiers || '', "fa-3x"].join(' ');
-    return (
-      <FontAwesome
-        icon={this.props.icon}
-        className={classNames}
-        style={style.icon}
-      />
-    );
-  }
-
-  text() {
-    return (
-      <div style={style.text}>
-        {this.props.text}
-      </div>
-    );
-  }
-
-  button() {
-    return (
-      <OverlayButton
-        text={this.props.buttonText}
-        onClick={this.props.onClick}
-      />
-    );
-  }
+  static propTypes = {
+    ...overlayDimensionsPropTypes,
+    backgroundColor: PropTypes.string.isRequired,
+    children: PropTypes.any,
+    footer: PropTypes.any,
+  };
 
   render() {
     let rootStyle = {
@@ -122,57 +129,133 @@ class Overlay extends Component {
       <div style={rootStyle}>
         <div style={style.padding}/>
         <div style={style.content}>
-          {this.icon()}
-          {this.text()}
-          {this.props.buttonText && this.button()}
+          {this.props.children}
         </div>
         <div style={style.padding}/>
+        {this.props.footer &&
+          <div style={style.footer}>
+            {this.props.footer}
+          </div>
+        }
       </div>
     );
   }
 }
-Overlay.propTypes = {
-  ...overlayDimensionsPropTypes,
-  icon: PropTypes.string.isRequired,
-  iconModifiers: PropTypes.string,
-  text: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-  buttonText: PropTypes.string,
-};
 
 class WaitingToConnect extends Component {
+  static propTypes = overlayDimensionsPropTypes;
+
   render() {
     return (
-        <Overlay
-          {...this.props}
-          icon="cog"
-          iconModifiers="fa-spin"
-          text="Waiting for board to connect..."
-          backgroundColor={color.light_gray}
-        />
+      <Overlay
+        {...this.props}
+        backgroundColor={color.light_gray}
+      >
+        <Icon icon="cog" spin/>
+        <Text>Waiting for board to connect...</Text>
+      </Overlay>
     );
   }
 }
-WaitingToConnect.propTypes = {
-  ...overlayDimensionsPropTypes,
-};
 
 class BoardNotFound extends Component {
+  static propTypes = {
+    ...overlayDimensionsPropTypes,
+    handleDisableMaker: PropTypes.func,
+  };
+
   render() {
+    const {handleDisableMaker} = this.props;
+    const footer=(
+      <span>
+        <Text><em>Not sure what's going on?</em></Text>
+        <Text>
+          <Link href="/maker/setup">Get Help</Link>
+          {handleDisableMaker && ' or '}
+          {handleDisableMaker &&
+            <Link onClick={this.props.handleDisableMaker}>
+              Disable Maker Toolkit
+            </Link>
+          }
+        </Text>
+      </span>
+    );
+
     return (
-        <Overlay
-          {...this.props}
-          icon="exclamation-triangle"
-          text="Make sure your board is plugged in."
-          backgroundColor={color.red}
+      <Overlay
+        {...this.props}
+        backgroundColor={color.red}
+        footer={footer}
+      >
+        <Icon icon="exclamation-triangle"/>
+        <Text>Make sure your board is plugged in.</Text>
+        <OverlayButton
+          text="Try Again"
           onClick={() => {
-              studioApp.resetButtonClick();
-              studioApp.runButtonClick();
-            }}
-          buttonText="Try Again"
+            studioApp.resetButtonClick();
+            studioApp.runButtonClick();
+          }}
         />
+      </Overlay>
     );
   }
 }
-BoardNotFound.propTypes = WaitingToConnect.propTypes;
+
+/**
+ * Render a line of text in overlay style.
+ */
+function Text({children}) {
+  return <div style={style.text}>{children}</div>;
+}
+Text.propTypes = {
+  children: PropTypes.any,
+};
+
+/**
+ * Render a font-awesome icon in the overlay style.
+ */
+function Icon({icon, spin=false}) {
+  const classNames = ['fa-3x'];
+  if (spin) {
+    classNames.push('fa-spin');
+  }
+  return (
+    <FontAwesome
+      icon={icon}
+      className={classNames.join(' ')}
+      style={style.icon}
+    />
+  );
+}
+Icon.propTypes = {
+  icon: PropTypes.string.isRequired,
+  spin: PropTypes.bool,
+};
+
+const Link = Radium(React.createClass({
+  propTypes: {
+    href: PropTypes.string,
+    onClick: PropTypes.func,
+    children: PropTypes.any,
+  },
+
+  onClick(e) {
+    if (this.props.onClick) {
+      this.props.onClick(e);
+      e.preventDefault();
+    }
+  },
+
+  render() {
+    return (
+      <a
+        href={this.props.href || '#'}
+        target={this.props.href ? '_blank' : undefined}
+        onClick={this.onClick}
+        style={style.link}
+      >
+        {this.props.children}
+      </a>
+    );
+  }
+}));
