@@ -2,6 +2,16 @@ require 'cdo/activity_constants'
 
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+
+  factory :pd_payment_term, class: 'Pd::PaymentTerm' do
+    regional_partner nil
+    start_date "2017-04-06"
+    end_date nil
+    course nil
+    subject nil
+    properties {{}}
+  end
+
   factory :section_hidden_stage do
     section nil
     stage nil

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170324200221) do
+ActiveRecord::Schema.define(version: 20170406215340) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -357,6 +357,18 @@ ActiveRecord::Schema.define(version: 20170324200221) do
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true, using: :btree
     t.index ["email"], name: "index_pd_enrollments_on_email", using: :btree
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id", using: :btree
+  end
+
+  create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "regional_partner_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "course"
+    t.string   "subject"
+    t.text     "properties",          limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id", using: :btree
   end
 
   create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1013,6 +1025,7 @@ ActiveRecord::Schema.define(version: 20170324200221) do
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
+  add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_workshops", "regional_partners"
   add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
