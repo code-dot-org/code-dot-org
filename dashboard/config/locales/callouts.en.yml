@@ -84,7 +84,17 @@ en:
       CSD U3 Random Intro_callout: {}
       CSD U3 Random Min Max_callout: {}
       CSD U3 Simple Drawing - Animation 2_callout: {}
+      CSD U3 Sprites anitab 1_callout: {}
+      CSD U3 Sprites intro debug_callout: {}
+      CSD U3 Sprites intro predict_callout: {}
       CSD U3 Sprites intro sprites_callout: {}
+      CSD U3 Sprites scene challenge_callout: {}
+      CSD U3 Sprites scene drawing_callout: {}
+      CSD U3 Sprites scene sprites_callout: {}
+      CSD U3 Sprites scene template_callout: {}
+      CSD U3 Sprites scene text_callout: {}
+      CSD U3 Sprites text debug_callout: {}
+      CSD U3 Sprites text_callout: {}
       CSD U3 UP_ARROW_callout: {}
       CSD U3 Variables TEMPLATE square_callout: {}
       CSD U3 Variables make a big square_callout: {}
@@ -179,12 +189,27 @@ en:
         CSD_U3_L13_S6_C1: Change this block.
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Add your code here.
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
       CSD U3 game variables_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Here is the "Run" button.
+      CSD U3 picture_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
@@ -195,6 +220,12 @@ en:
         CSD_U3_L17_S7_C1: Score is printed here.
       CSD U3 platform variable1_callout:
         callout: This block creates a variable.
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Here is the "Run" button.
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: Here is the code
+        CSD_U3_rect_c2: Drag this block into the code area.
       CSDU4 - Design Mode - 3_callout: {}
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -598,10 +629,15 @@ en:
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseE_artist_functions_predict1_callout: {}
+      courseE_artist_ramp10_callout: {}
       courseE_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
       courseE_artist_ramp12_callout: {}
+      courseE_artist_ramp8_callout:
+        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+      courseE_artist_ramp9_callout: {}
       courseE_collector_ramp10_callout: {}
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
@@ -640,6 +676,8 @@ en:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
       courseE_maze_ramp7_callout:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseE_playLab_scaffold3_callout:
+        courseE_playLab_scaffold3_1: Get the actor to this flag to move on to the next level.
       courseF_artist_for1_callout:
         courseF_artist_for1_1: The toolbox is in "category" mode to make more room for your code.  The `for` loops live in here.
       courseF_artist_for4_callout: {}
@@ -920,5 +958,9 @@ en:
         sample9_1: This should be something other than artist, but it's here to connect the previous levels to freeplay
       sample9a_callout:
         sample9a_1: This would be a puzzle to connect stage to freeplay, but playlab does not have "turn" or "move forward". Also, the goals are not flexible (size or sprites).
+      small_actors_playlab_projects_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
       testing code callout_callout:
         testing_code_callout: This makes the sprite move!

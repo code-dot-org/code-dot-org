@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "# Make a Prediction\r\n\r\nRead the code in this program and make a prediction below. What do you think this program will do when you run it? How is the user intended to interact with the board?",
+    "markdown_instructions": "# Make a Prediction\r\n\r\nRead the code in this program and make a prediction below. What do you think this program will do when you run it? How is the user intended to interact with the board? You may need to use a flashlight or other bright light source to see the full range of this app.",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",
@@ -14,6 +14,8 @@
     "skip_sound": true
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

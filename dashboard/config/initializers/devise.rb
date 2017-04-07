@@ -290,7 +290,7 @@ Devise.setup do |config|
     name: :the_school_project,
     scope: [:profile, :email, :school],
     response_type: :code,
-    issuer: 'https://www.kleio.fr/openid',
+    issuer: 'https://www.cleio.fr/openid',
     discovery: true,
     client_options: {
       port: 443,
@@ -313,6 +313,20 @@ Devise.setup do |config|
   require 'custom_devise_failure'
   config.warden do |manager|
     manager.failure_app = CustomDeviseFailure
+  end
+
+  Warden::Manager.after_set_user do |user, auth|
+    if auth.cookies[:pm] == "new_header"
+      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+      auth.cookies[cookie_key] = {value: user.teacher? ? "teacher" : "student", domain: :all, httponly: true}
+    end
+  end
+
+  Warden::Manager.before_logout do |_, auth|
+    if auth.cookies[:pm] == "new_header"
+      cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+      auth.cookies[cookie_key] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    end
   end
 
   # ==> Mountable engine configurations

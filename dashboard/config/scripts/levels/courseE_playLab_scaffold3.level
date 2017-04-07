@@ -48,6 +48,9 @@
     ],
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `repeat forever` loop to have extra actors patrol up and down, or left and right for the entire game.\",\"hint_id\":\"courseE_playLab_scaffold3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6964def0a3f9c9b2a0b38e52f158bad1/courseE_playLab_scaffold3.mp3\"}]",
     "instructions_important": "true",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_playLab_scaffold3_1\",\r\n  \"callout_text\": \"Get the actor to this flag to move on to the next level.\",\r\n  \"element_id\": \"#background\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": -20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
