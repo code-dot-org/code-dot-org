@@ -74,6 +74,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
   def test_process_decisions_row_accept_teachercon
     teachercon_name = 'June 18 - 23, 2017: Houston'
     @processor.expects(:save_accepted_workshop).with(@mock_teacher_application, 'csd', teachercon_name, nil)
+    @mock_teacher_application.program_name = 'CS Discoveries'
     @mock_teacher_application.expects(:regional_partner_name).returns('Code Partner')
 
     result = @processor.process_decision_row(
@@ -89,7 +90,7 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       name: 'Tracy Teacher',
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
-      course_name_s: 'CS Principles',
+      course_name_s: 'CS Discoveries',
       teachercon_location_s: 'Houston',
       teachercon_dates_s: 'June 18 - 23, 2017',
       regional_partner_name_s: 'Code Partner'
@@ -179,7 +180,10 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
     assert_equal 'Unexpected workshop: nonexistent', e.message
   end
 
-  def test_process_decisions_row_decline
+  def test_process_decisions_row_decline_csp
+    @mock_teacher_application.expects(:regional_partner_name).returns('Code Partner')
+    @mock_teacher_application.expects(:selected_course).returns('csp')
+
     result = @processor.process_decision_row(
       {
         'Application ID' => 1,
@@ -193,9 +197,34 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       email: 'tracy.teacher@example.net',
       preferred_first_name_s: 'Tracy',
       course_name_s: 'CS Principles',
+      regional_partner_name_s: 'Code Partner'
     }
     assert_equal expected, result
-    assert_result_in_set :decline, result
+    assert_result_in_set :decline_csp, result
+  end
+
+  def test_process_decisions_row_decline_csd
+    @mock_teacher_application.program_name = 'CS Discoveries'
+    @mock_teacher_application.expects(:regional_partner_name).returns('Code Partner')
+    @mock_teacher_application.expects(:selected_course).returns('csd')
+
+    result = @processor.process_decision_row(
+      {
+        'Application ID' => 1,
+        'Decision' => 'Decline',
+        'Workshop' => "doesn't matter"
+      }
+    )
+
+    expected = {
+      name: 'Tracy Teacher',
+      email: 'tracy.teacher@example.net',
+      preferred_first_name_s: 'Tracy',
+      course_name_s: 'CS Discoveries',
+      regional_partner_name_s: 'Code Partner'
+    }
+    assert_equal expected, result
+    assert_result_in_set :decline_csd, result
   end
 
   def test_process_decisions_row_waitlist
@@ -226,9 +255,9 @@ class TeacherApplicationDecisionProcessorTest < Minitest::Test
       {
         'Application ID' => 1,
         # It doesn't matter which decision: any will update the primary_email.
-        # Using Decline so we don't need a matching workshop, as that
+        # Using Waitlist so we don't need a matching workshop, as that
         # functionality is tested separately.
-        'Decision' => 'Decline',
+        'Decision' => 'Waitlist',
         'Workshop' => "doesn't matter",
         'Primary Email' => new_primary_email
       }
