@@ -46,6 +46,44 @@
   <blocks>
     <start_blocks>
       <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" inline="false">
+              <mutation name="draw a polygon">
+                <arg name="length"/>
+              </mutation>
+              <value name="ARG0">
+                <block type="math_number">
+                  <title name="NUM">100</title>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" inline="false">
+                  <mutation name="draw a polygon">
+                    <arg name="length"/>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="math_number">
+                      <title name="NUM">100</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" inline="false">
+                      <mutation name="draw a polygon">
+                        <arg name="length"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="math_number">
+                          <title name="NUM">100</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
         <block type="procedures_defnoreturn" editable="false">
           <mutation>
             <arg name="length"/>
@@ -81,40 +119,6 @@
               </statement>
             </block>
           </statement>
-        </block>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="controls_for_counter" inline="true">
-              <mutation counter="counter"/>
-              <value name="FROM">
-                <block type="math_number">
-                  <title name="NUM">3</title>
-                </block>
-              </value>
-              <value name="TO">
-                <block type="math_number">
-                  <title name="NUM">6</title>
-                </block>
-              </value>
-              <value name="BY">
-                <block type="math_number">
-                  <title name="NUM">1</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="procedures_callnoreturn" inline="false">
-                  <mutation name="draw a polygon">
-                    <arg name="length"/>
-                  </mutation>
-                  <value name="ARG0">
-                    <block type="math_number">
-                      <title name="NUM">100</title>
-                    </block>
-                  </value>
-                </block>
-              </statement>
-            </block>
-          </next>
         </block>
       </xml>
     </start_blocks>
