@@ -21,18 +21,19 @@ export default class ProgramRegistrationComponent extends React.Component {
     this.props.onChange(newState);
   }
 
-  buildSelectFieldGroupFromOptions({name, label, required, ...props}) {
-    let validationState;
+  getValidationState(name) {
     if (this.props.errors.includes(name)) {
-      validationState = 'error';
+      return 'error';
     }
+  }
 
+  buildSelectFieldGroupFromOptions({name, label, required, ...props}) {
     return (
       <FieldGroup
         id={name}
         componentClass="select"
         label={label}
-        validationState={validationState}
+        validationState={this.getValidationState(name)}
         onChange={this.handleChange.bind(this)}
         value={this.state.data[name] || ''}
         required={required}
@@ -45,17 +46,12 @@ export default class ProgramRegistrationComponent extends React.Component {
   }
 
   buildFieldGroup({name, label, type, required, ...props}) {
-    let validationState;
-    if (this.props.errors.includes(name)) {
-      validationState = 'error';
-    }
-
     return (
       <FieldGroup
         id={name}
         type={type}
         label={label}
-        validationState={validationState}
+        validationState={this.getValidationState(name)}
         onChange={this.handleChange.bind(this)}
         value={this.state.data[name] || ''}
         required={required}
@@ -64,12 +60,7 @@ export default class ProgramRegistrationComponent extends React.Component {
     );
   }
 
-  buildButtonsFromOptions(name, label, type) {
-    let validationState;
-    if (this.props.errors.includes(name)) {
-      validationState = 'error';
-    }
-
+  buildButtonsFromOptions({name, label, type}) {
     return (
       <ButtonList
         answers={this.props.options[name]}
@@ -77,7 +68,7 @@ export default class ProgramRegistrationComponent extends React.Component {
         label={label}
         onChange={this.handleChange.bind(this)}
         selectedItems={this.state.data[name]}
-        validationState={validationState}
+        validationState={this.getValidationState(name)}
         required={true}
         type={type}
       />
