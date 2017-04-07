@@ -8,11 +8,6 @@ import StageProgressBar from './StageProgressBar';
 
 const ANIMATION_OVERLAP = 0.05;
 
-const COMPLETION_POINTS = 1;
-const PERFECT_SOLUTION_POINTS = 3;
-const NO_HINTS_POINTS = 2;
-const ONE_HINT_POINTS = 1;
-
 const styles = {
   checkmarks: {
     position: 'absolute',
@@ -130,7 +125,7 @@ const AchievementDialog = Radium(React.createClass({
     );
   },
 
-  achievementRowGenerator(show, successful, points, message) {
+  achievementRowGenerator(show, successful, message) {
     if (!show) {
       return null;
     }
@@ -176,16 +171,13 @@ const AchievementDialog = Radium(React.createClass({
       numBlocks: this.props.idealBlocks,
     };
     const feedbackMessage = locale[tooManyBlocks ? 'numBlocksNeeded' : 'nextLevel'](params);
-    const completionPoints = COMPLETION_POINTS;
-    const numBlocksPoints = showNumBlocksRow && !tooManyBlocks ? PERFECT_SOLUTION_POINTS : 0;
-    const hintsPoints = this.props.hintsUsed === 0 ? NO_HINTS_POINTS : this.props.hintsUsed === 1 ? ONE_HINT_POINTS : 0;
 
     const achievementRowGenerators = [
-      this.achievementRowGenerator(true /* show */, true /* success */, completionPoints,
+      this.achievementRowGenerator(true /* show */, true /* success */,
           locale.puzzleCompleted()),
-      this.achievementRowGenerator(showNumBlocksRow, !tooManyBlocks, numBlocksPoints,
+      this.achievementRowGenerator(showNumBlocksRow, !tooManyBlocks,
           this.blocksUsedMessage(blockDelta, params)),
-      this.achievementRowGenerator(true /* show */, !tooManyHints, hintsPoints,
+      this.achievementRowGenerator(true /* show */, !tooManyHints,
           this.hintsMessage(this.props.hintsUsed)),
     ].filter(row => row);
 
