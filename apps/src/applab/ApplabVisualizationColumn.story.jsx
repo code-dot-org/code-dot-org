@@ -21,9 +21,6 @@ export default function (storybook) {
     children: React.PropTypes.node.isRequired,
   };
 
-  const globalState = {
-    interfaceMode: ApplabInterfaceMode.CODE,
-  };
   const pageConstants = {
     channelId: '12345',
     isReadOnlyWorkspace: false,
@@ -46,6 +43,13 @@ export default function (storybook) {
     isRunning: false,
     isDebuggerPaused: false,
     awaitingContainedResponse: false,
+  };
+  const layout = {
+    visualizationScale: 1,
+  };
+  const globalState = {
+    interfaceMode: ApplabInterfaceMode.CODE,
+    layout,
   };
 
   storybook
