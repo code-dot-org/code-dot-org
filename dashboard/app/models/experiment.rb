@@ -57,7 +57,7 @@ class Experiment < ApplicationRecord
     end
     now = DateTime.now
     @@experiments.select do |experiment|
-      experiment.enabled?(user: user, section: section, script: script) &&
+      experiment.enabled?(user: user, section: section) &&
         (experiment.start_time.nil? || experiment.start_time < now) &&
         (experiment.end_time.nil? || experiment.end_time > now) &&
         (experiment.script_id.nil? || experiment.script_id == script.try(:id))
