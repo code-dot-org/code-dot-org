@@ -2,12 +2,10 @@
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import project from '../../../../code-studio/initApp/project';
 import color from '../../../../util/color';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {getVisualizationScale} from '../../../../redux/layout';
 import {isConnecting, hasConnectionError} from '../redux';
-import {singleton as studioApp} from '../../../../StudioApp';
 import OverlayButton from './OverlayButton';
 
 const overlayDimensionsPropTypes = {
@@ -52,13 +50,6 @@ export default connect(
     scale: getVisualizationScale(state),
     isConnecting: isConnecting(state),
     hasConnectionError: hasConnectionError(state),
-  }),
-  () => ({
-    handleDisableMaker: () => project.toggleMakerEnabled(),
-    handleTryAgain: () => {
-      studioApp.resetButtonClick();
-      studioApp.runButtonClick();
-    },
   })
 )(UnconnectedMakerStatusOverlay);
 
