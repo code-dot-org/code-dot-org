@@ -28,27 +28,27 @@ class ExperimentTest < ActiveSupport::TestCase
     assert_empty Experiment.get_all_enabled(user: user_off)
   end
 
-  test "section based experiment at 0 percent is not enabled" do
-    create :section_based_experiment, percentage: 0
+  test "teacher based experiment at 0 percent is not enabled" do
+    create :teacher_based_experiment, percentage: 0
     assert_empty Experiment.get_all_enabled(section: create(:section))
   end
 
-  test "section based experiment at 100 percent is enabled" do
-    experiment = create :section_based_experiment, percentage: 100
+  test "teacher based experiment at 100 percent is enabled" do
+    experiment = create :teacher_based_experiment, percentage: 100
     assert_equal [experiment], Experiment.get_all_enabled(section: create(:section))
   end
 
-  test "section based experiment at 50 percent is enabled for only some users" do
-    experiment = create :section_based_experiment, percentage: 50
-    section_on = build :section, id: 1025 - experiment.id_offset
-    section_off = build :section, id: 1075 - experiment.id_offset
+  test "teacher based experiment at 50 percent is enabled for only some users" do
+    experiment = create :teacher_based_experiment, percentage: 50
+    section_on = build :section, user_id: 1025 - experiment.id_offset
+    section_off = build :section, user_id: 1075 - experiment.id_offset
 
     assert_equal [experiment], Experiment.get_all_enabled(section: section_on)
     assert_empty Experiment.get_all_enabled(section: section_off)
   end
 
-  test "section based experiment is disabled if start_time is too late" do
-    create :section_based_experiment,
+  test "teacher based experiment is disabled if start_time is too late" do
+    create :teacher_based_experiment,
       percentage: 100,
       earliest_section_start: DateTime.now + 1.days
     section = create :section,
@@ -56,8 +56,8 @@ class ExperimentTest < ActiveSupport::TestCase
     assert_empty Experiment.get_all_enabled(section: section)
   end
 
-  test "section based experiment is disabled if end_time is too early" do
-    create :section_based_experiment,
+  test "teacher based experiment is disabled if end_time is too early" do
+    create :teacher_based_experiment,
       percentage: 100,
       latest_section_start: DateTime.now - 1.days
     section = create :section,
