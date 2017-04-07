@@ -55,6 +55,16 @@ function customizeStyles() {
   if (options.version === '1') {
     $('.hide_on_v1').hide();
 
+    // Default initial width and height (only available to widget v1)
+    const initialWidth = parseInt(options.v1InitialWidth, 10);
+    const initialHeight = parseInt(options.v1InitialHeight, 10);
+    if (!isNaN(initialWidth)) {
+      $('#width').val(initialWidth);
+    }
+    if (!isNaN(initialHeight)) {
+      $('#height').val(initialHeight);
+    }
+
     // The layout is fundamentally different in version 1 than it is in other versions.
     // Rearrange the DOM so that the visualization column sits at the top left.
     var visualizationColumn = document.getElementById('visualizationColumn');
