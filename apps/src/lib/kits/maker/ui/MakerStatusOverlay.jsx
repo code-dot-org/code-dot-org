@@ -67,15 +67,15 @@ const style = {
     color: color.white,
   },
   padding: {
-    flex: '1 0 0',
+    flex: '1 0 auto',
   },
   content: {
-    flex: '0 0 0',
+    flex: '0 0 auto',
     padding: '2em',
     textAlign: 'center',
   },
   footer: {
-    flex: '0 0 0',
+    flex: '0 0 auto',
     padding: '1em',
     textAlign: 'center',
   },
