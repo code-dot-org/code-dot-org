@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
-import SettingsCog, {SettingsMenu} from '@cdo/apps/lib/ui/SettingsCog';
+import SettingsCog, {SettingsMenu, ManageAssets, ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
@@ -65,51 +65,37 @@ describe('SettingsCog', () => {
     }, 0);
   });
 
-  describe('SettingsMenu', () => {
-    const targetPoint = {left: 0, top: 0};
-    let handleManageAssets, handleToggleMaker;
-
-    beforeEach(() => {
-      handleManageAssets = sinon.spy();
-      handleToggleMaker = sinon.spy();
-      sinon.stub(maker, 'isAvailable');
-      sinon.stub(maker, 'isEnabled');
-    });
-
-    afterEach(() => {
-      maker.isEnabled.restore();
-      maker.isAvailable.restore();
-    });
-
+  describe('menu items', () => {
     describe('manage assets', () => {
       it('opens the asset manager and calls handleManageAssets when clicked', () => {
+        const handleManageAssets = sinon.spy();
         const wrapper = mount(
-          <SettingsMenu
-            targetPoint={targetPoint}
-            handleManageAssets={handleManageAssets}
-            handleToggleMaker={handleToggleMaker}
-          />
+          <ManageAssets onClick={handleManageAssets}/>
         );
-
-        const menuItem = wrapper.find(PopUpMenu.Item).first();
-        expect(menuItem.text()).to.equal(msg.manageAssets());
+        expect(wrapper.text()).to.equal(msg.manageAssets());
 
         expect(handleManageAssets).not.to.have.been.called;
-        menuItem.simulate('click');
+        wrapper.simulate('click');
         expect(handleManageAssets).to.have.been.calledOnce;
       });
     });
 
     describe('maker toggle', () => {
+      beforeEach(() => {
+        sinon.stub(maker, 'isAvailable');
+        sinon.stub(maker, 'isEnabled');
+      });
+
+      afterEach(() => {
+        maker.isEnabled.restore();
+        maker.isAvailable.restore();
+      });
+
       it('renders with enable maker option if maker is available and disabled', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(false);
         const wrapper = mount(
-          <SettingsMenu
-            targetPoint={targetPoint}
-            handleManageAssets={handleManageAssets}
-            handleToggleMaker={handleToggleMaker}
-          />
+          <ToggleMaker/>
         );
         expect(wrapper.text()).to.include(msg.enableMaker());
       });
@@ -118,11 +104,7 @@ describe('SettingsCog', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(true);
         const wrapper = mount(
-          <SettingsMenu
-            targetPoint={targetPoint}
-            handleManageAssets={handleManageAssets}
-            handleToggleMaker={handleToggleMaker}
-          />
+          <ToggleMaker/>
         );
         expect(wrapper.text()).to.include(msg.disableMaker());
       });
@@ -130,34 +112,22 @@ describe('SettingsCog', () => {
       it('hides maker toggle if maker is not available', () => {
         maker.isAvailable.returns(false);
         const wrapper = mount(
-          <SettingsMenu
-            targetPoint={targetPoint}
-            handleManageAssets={handleManageAssets}
-            handleToggleMaker={handleToggleMaker}
-          />
+          <ToggleMaker/>
         );
-        expect(wrapper.text())
-            .not.to.include(msg.enableMaker())
-            .and.not.to.include(msg.disableMaker());
+        expect(wrapper).to.be.blank;
       });
 
       it('calls project.toggleMakerEnabled and handleToggleMaker when clicked', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(false);
+        const handleToggleMaker = sinon.spy();
         const wrapper = mount(
-          <SettingsMenu
-            targetPoint={targetPoint}
-            handleManageAssets={handleManageAssets}
-            handleToggleMaker={handleToggleMaker}
-          />
+          <ToggleMaker onClick={handleToggleMaker}/>
         );
-
-        // Make sure we grab the right menu item
-        const menuItem = wrapper.find(PopUpMenu.Item).last();
-        expect(menuItem.text()).to.equal(msg.enableMaker());
+        expect(wrapper.text()).to.equal(msg.enableMaker());
 
         expect(handleToggleMaker).not.to.have.been.called;
-        menuItem.simulate('click');
+        wrapper.simulate('click');
         expect(handleToggleMaker).to.have.been.calledOnce;
       });
     });

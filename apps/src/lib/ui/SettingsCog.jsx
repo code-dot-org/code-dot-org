@@ -1,7 +1,6 @@
 /** @file Settings menu cog icon */
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
-import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import FontAwesome from '../../templates/FontAwesome';
 import color from '../../util/color';
@@ -116,18 +115,13 @@ class SettingsCog extends Component {
           title={msg.settings()}
           onClick={this.state.canOpen ? this.open : undefined}
         />
-        <Portal
-          closeOnEsc
-          closeOnOutsideClick
-          isOpened={this.state.open}
+        <SettingsMenu
+          targetPoint={this.targetPoint}
+          handleManageAssets={this.manageAssets}
+          handleToggleMaker={this.toggleMakerToolkit}
+          isOpen={this.state.open}
           beforeClose={this.beforeClose}
-        >
-          <SettingsMenu
-            targetPoint={this.targetPoint}
-            handleManageAssets={this.manageAssets}
-            handleToggleMaker={this.toggleMakerToolkit}
-          />
-        </Portal>
+        />
       </span>
     );
   }
@@ -142,20 +136,46 @@ export class SettingsMenu extends Component {
     }).isRequired,
     handleManageAssets: PropTypes.func.isRequired,
     handleToggleMaker: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool,
+    beforeClose: PropTypes.func,
   };
 
   render() {
     return (
-      <PopUpMenu className="settings-cog-menu" targetPoint={this.props.targetPoint}>
-        <PopUpMenu.Item onClick={this.props.handleManageAssets}>
-          {msg.manageAssets()}
-        </PopUpMenu.Item>
-        {maker.isAvailable() &&
-        <PopUpMenu.Item onClick={this.props.handleToggleMaker}>
-          {maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
-        </PopUpMenu.Item>
-        }
+      <PopUpMenu
+        className="settings-cog-menu"
+        targetPoint={this.props.targetPoint}
+        isOpen={this.props.isOpen}
+        beforeClose={this.props.beforeClose}
+      >
+        <ManageAssets onClick={this.props.handleManageAssets}/>
+        <ToggleMaker onClick={this.props.handleToggleMaker}/>
       </PopUpMenu>
     );
   }
 }
+
+export function ManageAssets(props) {
+  return (
+    <PopUpMenu.Item {...props}>
+      {msg.manageAssets()}
+    </PopUpMenu.Item>
+  );
+}
+ManageAssets.propTypes = {
+  onClick: PropTypes.func,
+  first: PropTypes.bool,
+  last: PropTypes.bool,
+};
+
+export function ToggleMaker(props) {
+  if (!maker.isAvailable()) {
+    return null;
+  }
+  return (
+    <PopUpMenu.Item {...props}>
+      {maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
+    </PopUpMenu.Item>
+  );
+}
+ToggleMaker.propTypes = ManageAssets.propTypes;
