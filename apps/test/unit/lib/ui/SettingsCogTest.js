@@ -3,8 +3,7 @@ import {mount} from 'enzyme';
 import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
-import SettingsCog, {SettingsMenu, ManageAssets, ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
+import SettingsCog, {ManageAssets, ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
 

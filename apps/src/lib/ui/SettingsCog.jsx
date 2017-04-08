@@ -115,45 +115,20 @@ class SettingsCog extends Component {
           title={msg.settings()}
           onClick={this.state.canOpen ? this.open : undefined}
         />
-        <SettingsMenu
+        <PopUpMenu
+          className="settings-cog-menu"
           targetPoint={this.targetPoint}
-          handleManageAssets={this.manageAssets}
-          handleToggleMaker={this.toggleMakerToolkit}
           isOpen={this.state.open}
           beforeClose={this.beforeClose}
-        />
+        >
+          <ManageAssets onClick={this.manageAssets}/>
+          <ToggleMaker onClick={this.toggleMakerToolkit}/>
+        </PopUpMenu>
       </span>
     );
   }
 }
 export default Radium(SettingsCog);
-
-export class SettingsMenu extends Component {
-  static propTypes = {
-    targetPoint: PropTypes.shape({
-     top: PropTypes.number.isRequired,
-      left: PropTypes.number.isRequired,
-    }).isRequired,
-    handleManageAssets: PropTypes.func.isRequired,
-    handleToggleMaker: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool,
-    beforeClose: PropTypes.func,
-  };
-
-  render() {
-    return (
-      <PopUpMenu
-        className="settings-cog-menu"
-        targetPoint={this.props.targetPoint}
-        isOpen={this.props.isOpen}
-        beforeClose={this.props.beforeClose}
-      >
-        <ManageAssets onClick={this.props.handleManageAssets}/>
-        <ToggleMaker onClick={this.props.handleToggleMaker}/>
-      </PopUpMenu>
-    );
-  }
-}
 
 export function ManageAssets(props) {
   return (
