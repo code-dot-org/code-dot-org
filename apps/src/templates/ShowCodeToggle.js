@@ -68,9 +68,6 @@ export default class ShowCodeToggle extends Component {
   }
 
   render() {
-    if (!studioApp.enableShowCode) {
-      return null;
-    }
     const blocksGlyphImage = (
       <img
         src={this.props.hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
@@ -91,6 +88,7 @@ export default class ShowCodeToggle extends Component {
         isMinecraft={this.props.isMinecraft}
         headerHasFocus={this.props.hasFocus}
         onClick={this.onClick}
+        style={studioApp.enableShowCode ? {display: 'inline-block'} : {display: 'none'}}
       />
     );
   }
