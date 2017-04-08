@@ -137,7 +137,8 @@ export const PaneButton = Radium(function (props) {
     (props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
     props.isMinecraft && styles.headerButtonMinecraft,
     props.isPressed && styles.headerButtonPressed,
-    !props.headerHasFocus && styles.headerButtonUnfocused
+    !props.headerHasFocus && styles.headerButtonUnfocused,
+    props.style,
   ];
   var iconStyle = [
     styles.headerButtonIcon,
@@ -172,6 +173,7 @@ PaneButton.propTypes = {
   hiddenImage: React.PropTypes.element,
   isMinecraft: React.PropTypes.bool,
   id: React.PropTypes.string,
+  style: React.PropTypes.object,
 };
 
 export default PaneHeader;
