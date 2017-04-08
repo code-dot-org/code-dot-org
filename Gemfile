@@ -230,7 +230,6 @@ gem 'addressable'
 gem 'bcrypt'
 gem 'firebase'
 gem 'firebase_token_generator'
-gem 'selectize-rails'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
