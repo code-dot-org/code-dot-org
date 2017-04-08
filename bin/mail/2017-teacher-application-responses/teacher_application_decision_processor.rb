@@ -230,7 +230,7 @@ class TeacherApplicationDecisionProcessor
     teacher_application.update_application_hash('selectedCourse': program)
     teacher_application.accepted_workshop = accepted_workshop
     teacher_application.regional_partner_override = regional_partner_override if regional_partner_override.present?
-    teacher_application.save!
+    teacher_application.save!(validate: false)
   end
 
   def update_primary_email(teacher_application, primary_email)
