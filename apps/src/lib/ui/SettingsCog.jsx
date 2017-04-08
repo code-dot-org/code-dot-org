@@ -5,7 +5,10 @@ import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import FontAwesome from '../../templates/FontAwesome';
 import color from '../../util/color';
-import SettingsMenu from './SettingsMenu';
+import * as assets from '../../code-studio/assets';
+import project from '../../code-studio/initApp/project';
+import * as maker from '../kits/maker/toolkit';
+import PopUpMenu from './PopUpMenu';
 
 const style = {
   iconContainer: {
@@ -33,6 +36,8 @@ class SettingsCog extends Component {
     this.open = this.open.bind(this);
     this.beforeClose = this.beforeClose.bind(this);
     this.close = this.close.bind(this);
+    this.manageAssets = this.manageAssets.bind(this);
+    this.toggleMakerToolkit = this.toggleMakerToolkit.bind(this);
 
     // Default icon bounding rect for first render
     this.targetPoint = {top: 0, left: 0};
@@ -65,6 +70,16 @@ class SettingsCog extends Component {
 
   close() {
     this.setState({open: false});
+  }
+
+  manageAssets() {
+    this.close();
+    assets.showAssetManager();
+  }
+
+  toggleMakerToolkit() {
+    this.close();
+    project.toggleMakerEnabled();
   }
 
   setTargetPoint(icon) {
@@ -108,9 +123,9 @@ class SettingsCog extends Component {
           beforeClose={this.beforeClose}
         >
           <SettingsMenu
-            className="settings-cog-menu"
             targetPoint={this.targetPoint}
-            handleClose={this.close}
+            handleManageAssets={this.manageAssets}
+            handleToggleMaker={this.toggleMakerToolkit}
           />
         </Portal>
       </span>
@@ -118,3 +133,29 @@ class SettingsCog extends Component {
   }
 }
 export default Radium(SettingsCog);
+
+export class SettingsMenu extends Component {
+  static propTypes = {
+    targetPoint: PropTypes.shape({
+     top: PropTypes.number.isRequired,
+      left: PropTypes.number.isRequired,
+    }).isRequired,
+    handleManageAssets: PropTypes.func.isRequired,
+    handleToggleMaker: PropTypes.func.isRequired,
+  };
+
+  render() {
+    return (
+      <PopUpMenu className="settings-cog-menu" targetPoint={this.props.targetPoint}>
+        <PopUpMenu.Item onClick={this.props.handleManageAssets}>
+          {msg.manageAssets()}
+        </PopUpMenu.Item>
+        {maker.isAvailable() &&
+        <PopUpMenu.Item onClick={this.props.handleToggleMaker}>
+          {maker.isEnabled() ? msg.disableMaker() : msg.enableMaker()}
+        </PopUpMenu.Item>
+        }
+      </PopUpMenu>
+    );
+  }
+}
