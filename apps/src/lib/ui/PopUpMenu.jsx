@@ -1,6 +1,7 @@
 /** @file Pop-over menu component.  Combine with react-portal to use. */
 import React, {Component, PropTypes, Children} from 'react';
 import Radium from 'radium';
+import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
 
@@ -39,6 +40,37 @@ const tailFillStyle = {
 };
 
 class PopUpMenu extends Component {
+  static propTypes = {
+    targetPoint: PropTypes.shape({
+      top: PropTypes.number.isRequired,
+      left: PropTypes.number.isRequired,
+    }).isRequired,
+    children: PropTypes.any,
+    className: PropTypes.string,
+    isOpen: PropTypes.bool,
+    beforeClose: PropTypes.func,
+  };
+
+  render() {
+    return (
+      <Portal
+        closeOnEsc
+        closeOnOutsideClick
+        isOpened={this.props.isOpen}
+        beforeClose={this.props.beforeClose}
+      >
+        <RadiumMenuBubble
+          targetPoint={this.props.targetPoint}
+          className={this.props.className}
+          children={this.props.children}
+        />
+      </Portal>
+    );
+  }
+}
+export default PopUpMenu;
+
+class MenuBubble extends Component {
   static propTypes = {
     targetPoint: PropTypes.shape({
       top: PropTypes.number.isRequired,
@@ -91,7 +123,7 @@ class PopUpMenu extends Component {
     );
   }
 }
-export default Radium(PopUpMenu);
+export const RadiumMenuBubble = Radium(MenuBubble);
 
 class Item extends Component {
   static propTypes = {
