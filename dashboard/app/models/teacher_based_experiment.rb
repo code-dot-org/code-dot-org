@@ -10,10 +10,19 @@
 #  start_time             :datetime
 #  end_time               :datetime
 #  section_id             :integer
-#  percentage             :integer
+#  min_user_id            :integer
+#  max_user_id            :integer
+#  overflow_max_user_id   :integer
 #  earliest_section_start :datetime
 #  latest_section_start   :datetime
 #  script_id              :integer
+#
+# Indexes
+#
+#  index_experiments_on_max_user_id           (max_user_id)
+#  index_experiments_on_min_user_id           (min_user_id)
+#  index_experiments_on_overflow_max_user_id  (overflow_max_user_id)
+#  index_experiments_on_section_id            (section_id)
 #
 
 class TeacherBasedExperiment < Experiment
@@ -21,16 +30,20 @@ class TeacherBasedExperiment < Experiment
 
   def self.get_enabled(user: nil, section: nil, script: nil)
     return Experiment.none unless section
+    user_id = section.user_id % 100
     Experiment.where(type: TeacherBasedExperiment.to_s).
-      where('percentage > (? + CONV(SUBSTRING(SHA1(name), 1, 10), 16, 10)) % 100', section.user_id).
-      where('earliest_section_start IS NULL OR earliest_section_start < ?', section.first_activity_at).
+      where('(? >= min_user_id AND ? < max_user_id) OR (? < overflow_max_user_id)',
+        user_id, user_id, user_id
+      ).where('earliest_section_start IS NULL OR earliest_section_start < ?', section.first_activity_at).
       where('latest_section_start IS NULL OR latest_section_start > ?', section.first_activity_at)
   end
 
   def enabled?(user: nil, section: nil)
     return false unless section
 
-    return percentage > (section.user_id + id_offset) % 100 &&
+    user_id = section.user_id % 100
+    return ((user_id >= min_user_id && user_id < max_user_id) ||
+        user_id < overflow_max_user_id) &&
       (earliest_section_start.nil? ||
         earliest_section_start < section.first_activity_at) &&
       (latest_section_start.nil? ||

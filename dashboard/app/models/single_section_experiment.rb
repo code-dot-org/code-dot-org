@@ -10,10 +10,19 @@
 #  start_time             :datetime
 #  end_time               :datetime
 #  section_id             :integer
-#  percentage             :integer
+#  min_user_id            :integer
+#  max_user_id            :integer
+#  overflow_max_user_id   :integer
 #  earliest_section_start :datetime
 #  latest_section_start   :datetime
 #  script_id              :integer
+#
+# Indexes
+#
+#  index_experiments_on_max_user_id           (max_user_id)
+#  index_experiments_on_min_user_id           (min_user_id)
+#  index_experiments_on_overflow_max_user_id  (overflow_max_user_id)
+#  index_experiments_on_section_id            (section_id)
 #
 
 class SingleSectionExperiment < Experiment

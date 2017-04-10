@@ -10,10 +10,19 @@
 #  start_time             :datetime
 #  end_time               :datetime
 #  section_id             :integer
-#  percentage             :integer
+#  min_user_id            :integer
+#  max_user_id            :integer
+#  overflow_max_user_id   :integer
 #  earliest_section_start :datetime
 #  latest_section_start   :datetime
 #  script_id              :integer
+#
+# Indexes
+#
+#  index_experiments_on_max_user_id           (max_user_id)
+#  index_experiments_on_min_user_id           (min_user_id)
+#  index_experiments_on_overflow_max_user_id  (overflow_max_user_id)
+#  index_experiments_on_section_id            (section_id)
 #
 
 MAX_CACHE_AGE = 1.minutes
@@ -70,8 +79,20 @@ class Experiment < ApplicationRecord
     @@experiments_loaded = DateTime.now
   end
 
-  def id_offset
-    Digest::SHA1.hexdigest(name)[0..9].to_i(16) % 100
+  def percentage
+    return nil unless max_user_id && min_user_id
+    max_user_id - min_user_id
+  end
+
+  def percentage=(val)
+    self.min_user_id = Digest::SHA1.hexdigest(name)[0..9].to_i(16) % 100
+    self.max_user_id = min_user_id + val
+    if max_user_id > 100
+      self.overflow_max_user_id = max_user_id - 100
+      self.max_user_id = 100
+    else
+      self.overflow_max_user_id = 0
+    end
   end
 end
 
