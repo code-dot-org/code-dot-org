@@ -30,7 +30,6 @@ export class ConfirmEnableMakerDialog extends Component {
         isOpen={this.props.isOpen}
         confirmText={msg.enable()}
         onConfirm={this.props.handleConfirm}
-        cancelText={msg.dialogCancel()}
         onCancel={this.props.handleCancel}
         handleClose={this.props.handleCancel}
       >

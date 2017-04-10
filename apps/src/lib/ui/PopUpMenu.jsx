@@ -39,7 +39,7 @@ const tailFillStyle = {
   borderColor: `transparent transparent ${BACKGROUND_COLOR} transparent`,
 };
 
-class PopUpMenu extends Component {
+export default class PopUpMenu extends Component {
   static propTypes = {
     targetPoint: PropTypes.shape({
       top: PropTypes.number.isRequired,
@@ -59,7 +59,7 @@ class PopUpMenu extends Component {
         isOpened={this.props.isOpen}
         beforeClose={this.props.beforeClose}
       >
-        <RadiumMenuBubble
+        <MenuBubble
           targetPoint={this.props.targetPoint}
           className={this.props.className}
           children={this.props.children}
@@ -68,9 +68,8 @@ class PopUpMenu extends Component {
     );
   }
 }
-export default PopUpMenu;
 
-class MenuBubble extends Component {
+export const MenuBubble = Radium(class extends Component {
   static propTypes = {
     targetPoint: PropTypes.shape({
       top: PropTypes.number.isRequired,
@@ -122,10 +121,9 @@ class MenuBubble extends Component {
       </div>
     );
   }
-}
-export const RadiumMenuBubble = Radium(MenuBubble);
+});
 
-class Item extends Component {
+PopUpMenu.Item = Radium(class extends Component {
   static propTypes = {
     children: PropTypes.string.isRequired,
     onClick: PropTypes.func,
@@ -146,7 +144,7 @@ class Item extends Component {
   render() {
     const {first, last, onClick, children} = this.props;
     const style = {
-      ...Item.style,
+      ...PopUpMenu.Item.style,
       paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 2,
       paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 2,
     };
@@ -160,5 +158,4 @@ class Item extends Component {
       </div>
     );
   }
-}
-PopUpMenu.Item = Radium(Item);
+});

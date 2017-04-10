@@ -7,7 +7,7 @@ export default storybook => {
       .add('overview', () => {
         return (
           <ConfirmEnableMakerDialog
-            isOpen={true}
+            isOpen
             handleConfirm={storybook.action('Confirm')}
             handleCancel={storybook.action('Cancel')}
           />
