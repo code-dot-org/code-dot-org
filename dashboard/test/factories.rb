@@ -638,6 +638,12 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
+    association :user, factory: :facilitator, strategy: :create
+    tc1_arrive Date.new(2017, 8, 23)
+    tc1_depart Date.new(2017, 8, 29)
+  end
+
   # school info
 
   # this is the only factory used for testing the deprecated data formats (without country).
