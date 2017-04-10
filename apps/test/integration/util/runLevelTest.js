@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import Dialog from '@cdo/apps/code-studio/dialog';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
@@ -17,8 +17,8 @@ function finished() {
   if (Blockly.mainBlockSpace) {
     Blockly.mainBlockSpace.clear();
   }
-  Dialog.prototype.show.reset();
-  Dialog.prototype.hide.reset();
+  LegacyDialog.prototype.show.reset();
+  LegacyDialog.prototype.hide.reset();
   if (done) {
     done();
   }
@@ -111,11 +111,11 @@ const appLoaders = {
 };
 function runLevel(app, skinId, level, onAttempt, testData) {
 
-  sinon.stub(Dialog.prototype, 'show').callsFake(function () {
+  sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
     finished();
   });
 
-  sinon.stub(Dialog.prototype, 'hide');
+  sinon.stub(LegacyDialog.prototype, 'hide');
 
 
   var loadApp = appLoaders[app];

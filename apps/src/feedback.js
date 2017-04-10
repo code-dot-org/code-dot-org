@@ -6,7 +6,7 @@ import { trySetLocalStorage } from './utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
-import Dialog from './code-studio/dialog';
+import LegacyDialog from './code-studio/LegacyDialog';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1587,7 +1587,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
 
   var scrollableSelector = options.scrollableSelector || '.modal-content';
   var elementToScroll = options.scrollContent ? scrollableSelector : null;
-  return new Dialog({
+  return new LegacyDialog({
     body: modalBody,
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,

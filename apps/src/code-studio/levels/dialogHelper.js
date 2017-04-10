@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import StageAchievementDialog from '@cdo/apps/templates/StageAchievementDialog';
 import Feedback from '@cdo/apps/feedback';
 import { getResult } from './codeStudioLevels';
-import Dialog from '@cdo/apps/code-studio/dialog';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -32,7 +32,7 @@ export function showDialog(type, callback, onHidden) {
 
   // Use our prefabricated dialog content.
   var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-  var dialog = new Dialog({
+  var dialog = new LegacyDialog({
     body: content,
     onHidden: onHidden || dialogHidden,
     autoResizeScrollableElement: '.scrollable-element'
@@ -150,7 +150,7 @@ export function processResults(onComplete, beforeHook) {
             />,
             body
           );
-          const dialog = new Dialog({
+          const dialog = new LegacyDialog({
             body: body,
             width: 800,
             redirect: lastServerResponse.nextRedirect
