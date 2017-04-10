@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     <FacilitatorProgramRegistration
       options={getScriptData('options')}
       course={getScriptData('course')}
+      teachercon={getScriptData('teachercon')}
       attendanceDates={getScriptData('attendanceDates')}
       teacherconLocation={getScriptData('teacherconLocation')}
       apiEndpoint="/api/v1/pd/facilitator_program_registrations"
