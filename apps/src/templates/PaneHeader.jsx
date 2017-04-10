@@ -82,7 +82,7 @@ var styles = {
  * A purple pane header that can have be focused (purple), unfocused (light purple)
  * or read only (charcoal).
  */
-const PaneHeader = Radium(React.createClass({
+var PaneHeader = React.createClass({
   propTypes: {
     hasFocus: React.PropTypes.bool.isRequired,
     readOnly: React.PropTypes.bool,
@@ -105,13 +105,13 @@ const PaneHeader = Radium(React.createClass({
       <div {...props} style={style}/>
     );
   }
-}));
+});
 
 /**
  * A section of our Pane Header. Essentially this is just a div with some
  * particular styles applied
  */
-export const PaneSection = Radium(React.createClass({
+const PaneSection = React.createClass({
   propTypes: {
     style: React.PropTypes.object,
   },
@@ -125,20 +125,19 @@ export const PaneSection = Radium(React.createClass({
       />
     );
   },
-}));
+});
 
 /**
  * A button within or PaneHeader, whose styles change whether or not the pane
  * has focus
  */
-export const PaneButton = Radium(function (props) {
+var PaneButton = function (props) {
   var divStyle = [
     styles.headerButton,
     (props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
     props.isMinecraft && styles.headerButtonMinecraft,
     props.isPressed && styles.headerButtonPressed,
-    !props.headerHasFocus && styles.headerButtonUnfocused,
-    props.style,
+    !props.headerHasFocus && styles.headerButtonUnfocused
   ];
   var iconStyle = [
     styles.headerButtonIcon,
@@ -160,7 +159,7 @@ export const PaneButton = Radium(function (props) {
       </span>
     </div>
   );
-});
+};
 PaneButton.propTypes = {
   headerHasFocus: React.PropTypes.bool.isRequired,
   iconClass: React.PropTypes.string.isRequired,
@@ -173,7 +172,9 @@ PaneButton.propTypes = {
   hiddenImage: React.PropTypes.element,
   isMinecraft: React.PropTypes.bool,
   id: React.PropTypes.string,
-  style: React.PropTypes.object,
 };
 
-export default PaneHeader;
+module.exports = Radium(PaneHeader);
+
+module.exports.PaneSection = Radium(PaneSection);
+module.exports.PaneButton = Radium(PaneButton);
