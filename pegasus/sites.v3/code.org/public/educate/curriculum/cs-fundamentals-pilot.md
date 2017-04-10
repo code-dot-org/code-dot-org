@@ -1,6 +1,7 @@
 ---
 title: CS Fundamentals Courses A-F Pilot 
 nav: educate_nav
+theme: responsive
 ---
 
 [solid-block-header]
@@ -14,7 +15,7 @@ CS Fundamentals Courses A-F Pilot
 ### We’re looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017.
 
 <br />
-[<button style="font-size: 22px; height: 50px">Sign up for the pilot!</button>](http://go.pardot.com/l/153401/2017-01-31/djn4q4)<br />
+[<button>Sign up for the pilot</button>](http://go.pardot.com/l/153401/2017-01-31/djn4q4)<br />
 
 Teachers like you play a critical role in building our computer science curriculum for all students. We're getting ready to release exciting new updates to Computer Science Fundamentals Courses 1-4 and we are eager to hear your feedback before these updates fully go live in August 2017 for the ‘17 - ‘18 school year. Help us by piloting the updated CS Fundamentals in your class now!
 
@@ -64,7 +65,19 @@ The biggest update to CS Fundamentals is that content will move from four course
 
 ### End-of-Course Projects for 4th & 5th Graders
 
-<img src="/images/csfundamentalspilot/endofcourse.png" align="left" width="30%"/>While the familiar puzzle-style levels will continue to feature prominently in our online stages, we have received feedback around incorporating open-ended opportunities for students to showcase what they’ve learned and take a project in a direction of their choosing. At the end of Courses E and F we created a series of stages that teachers will support students through to create an Artist or Play Lab project. These stages include exploring existing project ideas, planning the drawing or story/game, building the project, incorporating feedback, and presenting the project to their peers. <br><br>
+[col-33]
+
+<img src="/images/csfundamentalspilot/endofcourse.png" style="max-width: 100%"/>
+
+[/col-33]
+
+[col-66]
+
+While the familiar puzzle-style levels will continue to feature prominently in our online stages, we have received feedback around incorporating open-ended opportunities for students to showcase what they’ve learned and take a project in a direction of their choosing. At the end of Courses E and F we created a series of stages that teachers will support students through to create an Artist or Play Lab project. These stages include exploring existing project ideas, planning the drawing or story/game, building the project, incorporating feedback, and presenting the project to their peers.
+
+[/col-66]
+
+<div style="clear:both;"></div>
 
 <a name="puzzle"></a>  
  
@@ -74,9 +87,13 @@ We've created several tools that improve the way that concepts within a stage ar
 
 - <img src="/images/csfundamentalspilot/moveforward.png" align="right" width="100px"/>**Limited number of blocks**: Many puzzles in Courses A - F now use “limited blocks” to only give students a certain number of times they can pull a block from the toolbox to use in their solution.<br><br>
 - <img src="/images/csfundamentalspilot/morehints.png" align="right" width="15%"/>**More hints**: We now have the ability for students to receive hints on-demand rather than the system automatically giving them. With this, we can ramp up to more challenging puzzles in a stage but support students   who need it with lots of hints that they can request.<br><br>
-- **New puzzle types**: Some concepts can be tricky to motivate. Our new “Collector” puzzle type (left) lets students freely try to collect as much treasure as they can. After learning loops, students will find out how much more treasure they can collect with the power of loops. The farmer (right) is an old friend, but she now grows corn, lettuce, and pumpkins! With conditional statements, the farmer can be programmed to pick the right type of veggie.<br><br>
-<p align="center"><img src="/images/csfundamentalspilot/puzzle2.png" width="200px"/>
-   <img src="/images/csfundamentalspilot/puzzle3.png" width="200px"/></p> <br>
+- **New puzzle types**: Some concepts can be tricky to motivate. Our new “Collector” puzzle type (left) lets students freely try to collect as much treasure as they can. After learning loops, students will find out how much more treasure they can collect with the power of loops. The farmer (right) is an old friend, but she now grows corn, lettuce, and pumpkins! With conditional statements, the farmer can be programmed to pick the right type of veggie.
+
+<div style="text-align: center;">
+  <img src="/images/csfundamentalspilot/puzzle2.png" width="200px"/>
+  <img src="/images/csfundamentalspilot/puzzle3.png" width="200px"/>
+</div>
+
 - <img src="/images/csfundamentalspilot/unpluggedbridge.png" align="right" width="50%"/>**Bridging Activities from Unplugged → Plugged**: The lesson plans for plugged stages on Code Studio now contain new guidance and a paper block toolkit that can be used to practice coding with blocks with your students offline before bringing them to the online puzzles!  <br><br>
 
 <a name="whatsthere"></a>
@@ -89,8 +106,7 @@ As these updates won’t be officially released until August 2017, there are a f
 
 | Course |Recommended Student prerequisites |
 | :------------------:|-----------|
-| *Courses A, B and C* | None |
-| *Course D* | Concept needed: Simple repeat loops <br>Recommended prerequisite: [Course 1](http://studio.code.org/s/course1) or [Course 2](http://studio.code.org/s/course2) or Code.org [Hour of Code tutorial](http://hourofcode.com/learn) |
+| *Courses A, B, C, and D* | None |
 | *Course E* | Concepts needed: Loops, conditionals (if/else statements)<br>Recommended prerequisite: [Course 2](http://studio.code.org/s/course2) |
 | *Course F* | Concepts needed: Loops, conditionals (if/else statements), functions <br>Recommended prerequisite: [Course 3](http://studio.code.org/s/course3) |
 

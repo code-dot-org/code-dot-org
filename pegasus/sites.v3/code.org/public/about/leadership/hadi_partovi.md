@@ -1,6 +1,7 @@
 ---
 title: Hadi Partovi
 nav: about_nav
+theme: responsive
 ---
 # Hadi Partovi
 
@@ -29,19 +30,19 @@ Educators: [Request a visit to your school assembly](/visit)
 
 <br/><br/>
 
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FNASDAQ%2Fvideos%2F10154693804912429%2F&show_text=0&width=640" width="640" height="360" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+<iframe style="max-width: 100%" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FNASDAQ%2Fvideos%2F10154693804912429%2F&show_text=0&width=640" width="640" height="360" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 
 <br/><br/>
 
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/m-U9wzC9xLk" frameborder="0" allowfullscreen></iframe>
+<iframe style="max-width: 100%" width="640" height="360" src="//www.youtube.com/embed/m-U9wzC9xLk" frameborder="0" allowfullscreen></iframe>
 
 <br/><br/><br/>
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/GsagBkLXtRE" frameborder="0" allowfullscreen></iframe>
+<iframe style="max-width: 100%" width="640" height="360" src="//www.youtube.com/embed/GsagBkLXtRE" frameborder="0" allowfullscreen></iframe>
 
 
 <br/><br/><br/>
 ## Hadi and Ali Partovi return to their highschool as commencement speakers
 
-<iframe width="480" height="360" src="https://www.youtube.com/embed/mVMKC6t0c8I" frameborder="0" allowfullscreen></iframe>
+<iframe style="max-width: 100%" width="480" height="360" src="https://www.youtube.com/embed/mVMKC6t0c8I" frameborder="0" allowfullscreen></iframe>

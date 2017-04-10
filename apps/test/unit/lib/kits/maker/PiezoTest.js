@@ -1,7 +1,7 @@
 /** @file Tests for our johnny-five Piezo wrapper */
 import {expect} from '../../../../util/configuredChai';
 import sinon from 'sinon';
-import five from 'johnny-five';
+import five from '@code-dot-org/johnny-five';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 
 describe('Piezo', function () {
@@ -17,7 +17,7 @@ describe('Piezo', function () {
 
   it('is a johnny-five Piezo component', function () {
     const piezo = new Piezo({
-      controller: fakePiezoController
+      controller: makeStubPiezoController()
     });
     expect(piezo).to.be.an.instanceOf(five.Piezo);
   });
@@ -28,7 +28,7 @@ describe('Piezo', function () {
     beforeEach(function () {
       sinon.stub(five.Piezo.prototype, 'play');
       piezo = new Piezo({
-        controller: fakePiezoController
+        controller: makeStubPiezoController()
       });
     });
 
@@ -66,13 +66,75 @@ describe('Piezo', function () {
       });
     });
   });
+
+  // These two methods should be identical in our implementation, so run them
+  // through the same set of tests.
+  ['stop', 'off'].forEach(methodUnderTest => {
+    describe(`${methodUnderTest}()`, () => {
+      let clock, controller, piezo;
+
+      beforeEach(() => {
+        clock = sinon.useFakeTimers();
+        controller = makeStubPiezoController();
+        piezo = new Piezo({controller});
+      });
+
+      afterEach(() => {
+        clock.restore();
+      });
+
+      it('cancels frequency()', () => {
+        // Start the tone
+        piezo.frequency(440, 10000);
+        expect(controller.frequency.value).to.have.been.calledOnce;
+        expect(controller.noTone.value).not.to.have.been.called;
+
+        // Stop the tone
+        piezo[methodUnderTest]();
+        expect(controller.frequency.value).to.have.been.calledOnce;
+        expect(controller.noTone.value).to.have.been.calledOnce;
+      });
+
+      it('cancels note()', () => {
+        // Start the tone
+        piezo.note('A4', 10000);
+        expect(controller.frequency.value).to.have.been.calledOnce;
+        expect(controller.noTone.value).not.to.have.been.called;
+
+        // Stop the tone
+        piezo[methodUnderTest]();
+        expect(controller.frequency.value).to.have.been.calledOnce;
+        expect(controller.noTone.value).to.have.been.calledOnce;
+      });
+
+      it('cancels play()', () => {
+        // Start the song
+        const tempo = 100; // bpm - 600ms per beat, 150ms per quarter-note
+        piezo.play(['C4', 'D4', 'E4'], tempo);
+        expect(controller.frequency.value).to.have.been.calledOnce;
+
+        // Let the second note play
+        clock.tick(150);
+        expect(controller.frequency.value).to.have.been.calledTwice;
+
+        // Stop the song
+        piezo[methodUnderTest]();
+
+        // Make sure the third note didn't play
+        clock.tick(150);
+        expect(controller.frequency.value).to.have.been.calledTwice;
+      });
+    });
+  });
 });
 
-const fakePiezoController = {
-  frequency: {
-    value: function () {}
-  },
-  noTone: {
-    value: function () {}
-  }
-};
+function makeStubPiezoController() {
+  return {
+    frequency: {
+      value: sinon.spy()
+    },
+    noTone: {
+      value: sinon.spy()
+    }
+  };
+}

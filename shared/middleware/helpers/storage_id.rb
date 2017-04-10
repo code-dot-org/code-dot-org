@@ -134,4 +134,6 @@ end
 def owns_channel?(encrypted_channel_id)
   owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
   owner_storage_id == storage_id('user')
+rescue ArgumentError, OpenSSL::Cipher::CipherError
+  false
 end

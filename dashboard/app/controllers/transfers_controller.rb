@@ -4,34 +4,41 @@ class TransfersController < ApplicationController
 
   # POST /sections/:id/transfers
   def create
-    # TODO(asher): Much of the permissioning here should be done through CanCan.
     new_section_code = params[:new_section_code]
-
-    new_section = Section.find_by_code(new_section_code)
-    unless new_section
-      render json: {
-        error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
-      }, status: :not_found
-      return
+    current_section_code = params[:current_section_code]
+    unless new_section_code && current_section_code
+      return head :bad_request
     end
 
-    # This is needed when we eventually allow students to be in multiple sections
-    if params.key?(:current_section_code)
-      current_section_code = params[:current_section_code]
-    else
+    stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section].try(:to_bool)
+    if stay_enrolled_in_current_section.nil?
+      return head :bad_request
+    end
+
+    student_ids = params[:student_ids].try(:split, ',').try(:map, &:to_i)
+    if student_ids.nil? || student_ids.empty?
       render json: {
-        error: I18n.t('move_students.section_code_not_entered')
+        error: I18n.t('move_students.student_ids_not_entered')
       }, status: :bad_request
       return
     end
 
+    # Rather than noop, we return a bad_request if the source and destination sections are the same.
     if new_section_code == current_section_code
       render json: {
         error: I18n.t('move_students.section_code_cant_be_current_section')
       }, status: :bad_request
       return
     end
-
+    # Verify the destination section and destination teacher exist (are not soft-deleted).
+    new_section = Section.find_by_code(new_section_code)
+    unless new_section && new_section.user
+      render json: {
+        error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
+      }, status: :not_found
+      return
+    end
+    # Verify the source section exists (is not soft-deleted).
     current_section = Section.find_by_code(current_section_code)
     unless current_section
       render json: {
@@ -40,35 +47,8 @@ class TransfersController < ApplicationController
       return
     end
 
-    if current_section.user != current_user
-      render json: {
-        error: I18n.t('move_students.students_not_yours')
-      }, status: :forbidden
-      return
-    end
-
-    # As of right now, this only applies to transfers to another teacher
-    # When students are allowed to be in multiple sections, this will also be needed
-    # for transfers between the current logged-in teacher
-    if new_section.user == current_user
-      stay_enrolled_in_current_section = false
-    elsif params.key?(:stay_enrolled_in_current_section)
-      stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] && params[:stay_enrolled_in_current_section] != 'false'
-    else
-      render json: {
-        error: I18n.t('move_students.stay_enrolled_not_entered')
-      }, status: :bad_request
-      return
-    end
-
-    if params.key?(:student_ids)
-      student_ids = params[:student_ids].split(',').map(&:to_i)
-    else
-      render json: {
-        error: I18n.t('move_students.student_ids_not_entered')
-      }, status: :bad_request
-      return
-    end
+    # TODO(asher): Determine if this should be :manage (currently not granted) instead of :read.
+    authorize! :read, current_section
 
     students = User.where(id: student_ids).all
     if students.count != student_ids.count
@@ -85,30 +65,22 @@ class TransfersController < ApplicationController
       return
     end
 
-    if new_section.user != current_user
-      new_section_teacher = new_section.user
-      if new_section_teacher.nil?
-        # This occurs when the new section teacher is (soft)-deleted.
-        render json: {
-          error: I18n.t('move_students.new_section_dne', new_section_code: new_section_code)
-        }, status: :not_found
-        return
-      end
-      if students.any? {|student| Follower.exists?(student_user: student, user_id: new_section_teacher.id)}
-        render json: {
-          error: I18n.t('move_students.already_enrolled_in_new_section')
-        }, status: :bad_request
-        return
-      end
+    if students.any? {|student| Follower.exists?(section: new_section, student_user: student)}
+      render json: {
+        error: I18n.t('move_students.already_enrolled_in_new_section')
+      }, status: :bad_request
+      return
     end
 
+    stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
+      params[:stay_enrolled_in_current_section] != 'false'
     students.each do |student|
       if new_section.user == current_user
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
         follower_same_user_teacher.update_attributes!(section_id: new_section.id)
       else
         unless student.followeds.exists?(section_id: new_section.id)
-          student.followeds.create!(user_id: new_section.user_id, section: new_section)
+          student.followeds.create!(user: new_section.user, section: new_section)
         end
 
         unless stay_enrolled_in_current_section

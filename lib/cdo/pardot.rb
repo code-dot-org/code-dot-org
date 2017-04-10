@@ -64,6 +64,8 @@ class Pardot
   class InvalidApiKeyException < Exception
   end
 
+  # Perform inserts, updates and reconciliation from contact rollups into Pardot
+  # @return [Hash] Hash containing number of insert and update operations performed
   def self.sync_contact_rollups_to_pardot
     # In case previous process was interrupted, first look in Pardot to see if
     # it has any Pardot IDs that we have not yet recorded on our side. This will
@@ -72,7 +74,7 @@ class Pardot
     update_pardot_ids_of_new_contacts
 
     # Handle any new contacts and create corresponding prospects in Pardot.
-    sync_new_contacts_with_pardot
+    num_inserts = sync_new_contacts_with_pardot
 
     # Retrieve Pardot IDs for newly created contacts and store them in our DB.
     # We do this as a separate pass for efficient batching of API calls to help
@@ -81,7 +83,9 @@ class Pardot
 
     # Handle any contact changes that should update existing prospects in
     # Pardot.
-    sync_updated_contacts_with_pardot
+    num_updates = sync_updated_contacts_with_pardot
+
+    {num_inserts: num_inserts, num_updates: num_updates}
   end
 
   # Query Pardot for recently created contacts and retrieve the Pardot-side ID
@@ -136,20 +140,21 @@ class Pardot
       update(pardot_sync_at: Time.utc(1970, 1, 1, 0, 0))
   end
 
+  # Inserts newly added contacts from contact rollups into Pardot
+  # @return [Integer] number of contacts inserted
   def self.sync_new_contacts_with_pardot
     # Set up config params to insert new contacts into Pardot.
     config = {
       operation_name: "insert",
-      # Temporarily limit the accounts synced into Pardot to just those in
-      # Teacher role, which is about 25% of total contacts. We will need to
-      # purchase additional Pardot capacity to be able import all contacts.
-      where_clause: "pardot_sync_at is NULL AND pardot_id IS NULL AND "\
-                    "Roles like '%Teacher%'",
+      where_clause: "pardot_sync_at IS NULL AND pardot_id IS NULL AND "\
+                    "opted_out IS NULL",
       pardot_url: PARDOT_BATCH_CREATE_URL
     }
     sync_contacts_with_pardot(config)
   end
 
+  # Updates changed contacts from contact rollups into Pardot
+  # @return [Integer] number of contacts updated
   def self.sync_updated_contacts_with_pardot
     # Set up config params to update existing contacts in Pardot.
     config = {
@@ -162,6 +167,7 @@ class Pardot
 
   # Helper function to either create new Pardot prospects or update existing prospects
   # @param config [Hash] hash of config params to use to control create vs update behavior
+  # @return [Integer] number of contacts inserted or updated
   def self.sync_contacts_with_pardot(config)
     log "Contact #{config[:operation_name]} pass starting."
 
@@ -223,6 +229,8 @@ class Pardot
     submit_prospect_batch(prospects, config) unless prospects.empty?
     num_operations += prospects.length
     log "Contact #{config[:operation_name]} pass completed. #{num_operations} total operations."
+
+    num_operations
   end
 
   # Do special transformation of some fields from database to Pardot
@@ -315,7 +323,7 @@ class Pardot
     unless malformed_emails.empty?
       PEGASUS_DB[:contact_rollups].
         where("email in ?", malformed_emails).
-        update(email_malformed: true)
+        update(email_malformed: true, pardot_sync_at: DateTime.now)
     end
 
     @consecutive_timeout_errors = 0
@@ -467,7 +475,7 @@ class Pardot
   end
 
   def self.log(s)
-    puts s
+    # puts s
     CDO.log.info s
   end
 end

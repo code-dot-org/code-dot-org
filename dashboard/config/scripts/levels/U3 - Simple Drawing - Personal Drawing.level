@@ -68,6 +68,9 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "show_debug_watch": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,

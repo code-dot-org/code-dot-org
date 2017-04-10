@@ -5,14 +5,14 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "markdown_instructions": "# Do This\r\n\r\nUse the pixelation widget to draw something a smiley face",
+    "markdown_instructions": "# Do This\r\n\r\nUse the pixelation widget to draw a smiley face\r\n\r\n![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png)",
     "instructions_important": "false",
     "display_name": "Black and White Pixelation Widget",
     "version": "1",
     "hex": "false",
     "skip_dialog": true,
     "href": "pixelation/pixelation.html",
-    "data": "1100"
+    "instructions": "Draw a smiley face (click here to see image)"
   },
   "published": true,
   "notes": "",

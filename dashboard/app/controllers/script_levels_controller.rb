@@ -61,6 +61,12 @@ class ScriptLevelsController < ApplicationController
   def show
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
+
+    if @script.redirect_to?
+      redirect_to build_script_level_path(Script.get_from_cache(@script.redirect_to).starting_level)
+      return
+    end
+
     configure_caching(@script)
     load_script_level
 
@@ -207,10 +213,8 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
-      # TODO(asher): Determine if the ordering of level_source and @user_level
-      # assignment can be reversed to make level_source rely on @user_level.
-      level_source = @user.last_attempt(@level).try(:level_source)
       @user_level = @user.user_level_for(@script_level, @level)
+      level_source = @user_level.try(:level_source)
       readonly_view_options
     elsif current_user
       # load user's previous attempt at this puzzle.

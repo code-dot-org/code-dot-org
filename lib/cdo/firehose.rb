@@ -24,6 +24,9 @@ class FirehoseClient
 
   # Initializes the @firehose to an AWS Firehose client.
   def initialize
+    if rack_env == :test
+      return
+    end
     @firehose = Aws::Firehose::Client.new(region: REGION)
   end
 
@@ -32,6 +35,12 @@ class FirehoseClient
   # @param data [hash] The data to insert into the stream.
   def put_record(stream_name, data)
     data_with_common_values = add_common_values(data)
+
+    if [:development, :test].include? rack_env
+      CDO.log.info "Skipped sending record to #{stream_name}: "
+      CDO.log.info data
+      return
+    end
 
     # TODO(asher): Determine whether these should be cached and batched via
     # put_record_batch. See

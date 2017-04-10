@@ -5,8 +5,19 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 
+const THUMBNAIL_SIZE = 50;
+
 /** @enum {number} */
 export const COLUMNS = {
+  THUMBNAIL: 0,
+  PROJECT_NAME: 1,
+  STUDENT_NAME: 2,
+  APP_TYPE: 3,
+  LAST_EDITED: 4,
+};
+
+/** @enum {number} */
+export const COLUMNS_WITHOUT_THUMBNAILS = {
   PROJECT_NAME: 0,
   STUDENT_NAME: 1,
   APP_TYPE: 2,
@@ -32,6 +43,12 @@ const styles = {
     border: '1px solid gray',
     padding: 10,
     backgroundColor: color.teal,
+  },
+  thumbnailCell: {
+    border: '1px solid gray',
+    width: THUMBNAIL_SIZE,
+    minWidth: THUMBNAIL_SIZE,
+    padding: 0
   },
 };
 
@@ -62,17 +79,26 @@ function dateFormatter(dateString) {
   return date.toLocaleDateString();
 }
 
+function thumbnailFormatter(thumbnailUrl) {
+  return thumbnailUrl ?
+    <img src={thumbnailUrl} width={THUMBNAIL_SIZE} height={THUMBNAIL_SIZE}/> :
+    '';
+}
+
 const ProjectsList = React.createClass({
   propTypes: {
     projectsData: React.PropTypes.array.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: React.PropTypes.string.isRequired,
+    showProjectThumbnails: React.PropTypes.bool.isRequired,
   },
 
   getInitialState() {
+    const sortingColumn = this.props.showProjectThumbnails ?
+      COLUMNS.LAST_EDITED : COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED;
     const sortingColumns = {
-      [COLUMNS.LAST_EDITED]: {
+      [sortingColumn]: {
         direction: 'desc',
         position: 0
       }
@@ -119,7 +145,17 @@ const ProjectsList = React.createClass({
   },
 
   getColumns(sortable) {
-    return [
+    const thumbnailColumn = {
+      property: 'thumbnailUrl',
+      header: {
+        props: {style: styles.headerCell},
+      },
+      cell: {
+        format: thumbnailFormatter,
+        props: {style: styles.thumbnailCell}
+      }
+    };
+    const standardColumns = [
       {
         property: 'name',
         header: {
@@ -168,6 +204,9 @@ const ProjectsList = React.createClass({
         }
       },
     ];
+
+    return this.props.showProjectThumbnails ?
+      [thumbnailColumn].concat(standardColumns) : standardColumns;
   },
 
   render() {

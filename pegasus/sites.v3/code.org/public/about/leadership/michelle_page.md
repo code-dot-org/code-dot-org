@@ -1,6 +1,7 @@
 ---
 title: Michelle Page
 nav: about_nav
+theme: responsive
 ---
 # Michelle Page
 

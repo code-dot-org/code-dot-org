@@ -338,7 +338,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get 'my_professional_learning', to: 'pd/professional_learning_landing#index'
+  get 'my-professional-learning', to: 'pd/professional_learning_landing#index'
 
   namespace :pd do
     # React-router will handle sub-routes on the client.
@@ -362,6 +362,7 @@ Dashboard::Application.routes.draw do
     get 'mimeo/:enrollment_code/error', controller: 'mimeo_sso', action: 'error'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
+    get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

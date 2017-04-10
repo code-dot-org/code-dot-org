@@ -3,6 +3,7 @@
  */
 
 import runState from './runState';
+import layout from './layout';
 import authoredHints from './authoredHints';
 import pageConstants from './pageConstants';
 import instructions from './instructions';
@@ -11,6 +12,7 @@ import watchedExpressions from './watchedExpressions';
 
 module.exports = {
   runState,
+  layout,
   authoredHints,
   pageConstants,
   instructions,

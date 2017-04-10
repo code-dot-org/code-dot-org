@@ -94,6 +94,8 @@ class Script < ActiveRecord::Base
     hideable_stages
     peer_reviews_to_complete
     professional_learning_course
+    redirect_to
+    student_detail_progress_view
   )
 
   def self.twenty_hour_script
@@ -423,7 +425,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
@@ -435,6 +437,8 @@ class Script < ActiveRecord::Base
       ['calc', 'eval']
     elsif name.start_with?('csp')
       ['applab']
+    elsif name.start_with?('csd')
+      []
     else
       ['playlab', 'artist']
     end
@@ -730,7 +734,8 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       stages: stages.map(&:summarize),
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewStage: peer_review_stage
+      peerReviewStage: peer_review_stage,
+      student_detail_progress_view: student_detail_progress_view?
     }
 
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
@@ -762,7 +767,8 @@ class Script < ActiveRecord::Base
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil
+      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
+      student_detail_progress_view: script_data[:student_detail_progress_view] || false
     }.compact
   end
 end

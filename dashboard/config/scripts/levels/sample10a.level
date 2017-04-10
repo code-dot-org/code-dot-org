@@ -37,7 +37,8 @@
     "block_moving_into_walls": "false",
     "callout_json": "[]",
     "instructions": "You have helped the adventurer and her bee!  As a reward, please stay and play around in my magical village. \r\n\r\nYou should have everything you need to create a game of your own.",
-    "markdown_instructions": "<h4>You have helped the adventurer and her bee!  \r\nAs a reward, please stay and play around in my magical village.  \r\n<br/>\r\n\r\nYou should have everything you need to create a game of your own.</h4>"
+    "markdown_instructions": "<h4>You have helped the adventurer and her bee!  \r\nAs a reward, please stay and play around in my magical village.  \r\n<br/>\r\n\r\nYou should have everything you need to create a game of your own.</h4>",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Freeplay\r\n\r\nIssues:\r\n* Flags are too big (and boring) \r\n* No \"turn\" or \"move forward\"",

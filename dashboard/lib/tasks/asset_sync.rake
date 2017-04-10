@@ -9,5 +9,9 @@ namespace :assets do
 end
 
 Rake::Task['assets:precompile'].enhance do
+  application_js_path = dashboard_dir('public', ActionController::Base.helpers.asset_path("application.js"))
+  puts "minifying", application_js_path
+  uglified = Uglifier.compile(File.read(application_js_path))
+  File.write(application_js_path, uglified)
   Rake::Task['assets:sync'].invoke if CDO.sync_assets
 end

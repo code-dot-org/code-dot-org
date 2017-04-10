@@ -10,7 +10,7 @@ social:
   "og:video:width": ""
   "og:video:height": ""
   "og:video:type": ""
-
+theme: responsive
 ---
 
 # What's the impact of the Hour of Code?
