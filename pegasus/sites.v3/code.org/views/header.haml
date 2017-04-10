@@ -33,6 +33,8 @@
 
         #right
           #sign_in_or_user{:style=>'display:block; float: right; margin: .6875em 0 0 30px;'}
+          -if user_type == "student" || user_type == "teacher"
+            = view :hamburger, user_type: user_type
 
       #clear{:style=>'clear:both'}
 

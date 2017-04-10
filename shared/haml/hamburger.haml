@@ -1,5 +1,29 @@
+- extra_items_class = (defined? @level) ? "show-always" : "show-mobile"
+
 #nav
   %ul.hide-responsive-menu
+    -# If we're a teacher, then we have special items showing here.
+    - if user_type == "teacher"
+      %div{class: extra_items_class}
+        %li
+          %a{href: '/teacher'} Home
+        %li
+          %a{:href=>"/educate"}Courses
+        %li
+          %a{:href=>"/promote"}Projects Gallery
+        %li
+          %a{:href=>"/help"}Sections
+        %li
+          %a{:href=>"/about"}Professional Learning
+    - elsif user_type == "student"
+      %div{class: extra_items_class}
+        %li
+          %a{href: '/teacher'} Home
+        %li
+          %a{:href=>"/educate"}Courses
+        %li
+          %a{:href=>"/promote"}Projects Gallery
+
     %li
       %a{href: '/student'} Learn
     %li

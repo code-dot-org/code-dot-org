@@ -1,5 +1,27 @@
 $(function () {
 
+/*  var mainHeaderAreaAvailable;
+
+  if (typeof appOptions !== 'undefined') {
+    console.log(appOptions);
+    mainHeaderAreaAvailable = false;
+  } else {
+    console.log('no appOptions');
+    mainHeaderAreaAvailable = true;
+  }
+
+  if (!mainHeaderAreaAvailable) {
+    // we are going to force the show-always options to show.
+    // and we are going to disable the show-mobile options because they will be duplicates.
+    //$(".show-always").show();
+    //$(".show-mobile").hide();
+
+    $('.show-mobile').removeClass('show-mobile').addClass('show-always');
+
+  } else {
+    $('.headerlinks').animate({opacity: 1});
+  } */
+
   $('#nav-hamburger').click(function (e){
     $('#nav ul').slideToggle();
     e.preventDefault();

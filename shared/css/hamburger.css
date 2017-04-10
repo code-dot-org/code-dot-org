@@ -1,3 +1,20 @@
+
+.show-mobile {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+.show-always {
+  display: block !important;
+}
+
+
+
 #pageheader-wrapper {
   z-index: 99;
 }
@@ -101,7 +118,7 @@
   font-family: 'Gotham 4r', sans-serif;
   font-size: 18px;
   color: white;
-  text-transform: uppercase;
+  xtext-transform: uppercase;
   text-decoration: none;
 }
 
@@ -113,7 +130,8 @@
 #nav-hamburger {
   vertical-align: middle;
   text-decoration: none;
-  display: none;
+  xdisplay: none;
+  display: inline-block;
   float: right;
   margin-top: 8px;
 }
@@ -131,7 +149,7 @@
   display: none;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1970px) {
   #pageheader-wrapper {
     padding-top: 5px;
   }
