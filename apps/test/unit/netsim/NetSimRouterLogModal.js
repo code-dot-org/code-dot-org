@@ -69,10 +69,9 @@ describe("NetSimRouterLogModal", function () {
   });
 
   describe(`Traffic filtering modes`, function () {
-    var modal, rootDiv, testShard, localNode, router, levelConfig;
+    var modal, rootDiv, testShard, localNode, router;
 
     beforeEach(function () {
-      levelConfig = NetSimGlobals.getLevelConfig();
       testShard = fakeShard();
       rootDiv = $('<div>');
       modal = new NetSimRouterLogModal(rootDiv, {user: {}});

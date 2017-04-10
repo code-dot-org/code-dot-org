@@ -86,7 +86,7 @@ describe('shareWarnings', function () {
 
       it('should call the onWarningsComplete callback if specified', () => {
         var onWarningsComplete = sinon.spy();
-        var dialog = checkSharedAppWarnings({
+        checkSharedAppWarnings({
           channelId: 'some-channel',
           isSignedIn: false,
           onWarningsComplete,

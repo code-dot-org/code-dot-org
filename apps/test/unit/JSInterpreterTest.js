@@ -131,10 +131,9 @@ describe("JSInterpreter", function () {
       });
 
       describe("native event callbacks", () => {
-        let lastCallback, lastCallbackReturnValue, config;
+        let lastCallback, config;
 
         beforeEach(() => {
-          lastCallbackReturnValue = null;
           lastCallback = null;
           config = (allDone) => ({
             code:`
