@@ -1,3 +1,8 @@
+---
+title: Start a computer science club
+theme: responsive
+---
+
 # Start a computer science club!
 
 Do you enjoy learning new technology and want to volunteer to help bring computer science to students in your local area? Start an after school club teaching computer science or partner with your local Boys and Girls Club, school, community center or other organizations. 
@@ -25,7 +30,7 @@ Below is a list of organizations we recommend partnering with to run your comput
 - [Boy Scouts](http://www.scouting.org/)
 - [Boys and Girls Club](https://www.bgca.org/)
 - [YMCA](http://www.ymca.net/)
-- [4-H](www.4-h.org)
+- [4-H](http://www.4-h.org)
 - A local community center
 - A local church or religious group
 - A local school
@@ -64,7 +69,7 @@ Code.org’s Computer Science Fundamentals curriculum can be accessed within Cod
 
 Code.org works on all browsers and on any kind of computer or tablet: Cromebooks, windows, ipads, android, etc. You’ll need computers/tablets for at least 50% of the class, and headphones are nice but not required. 
 
-Don’t worry if computers are in short supply, your students can work in pairs with [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q)! This is a great way for students to partner up and help each other through the exercises while relying on each other and less on the instructors. They will also see that computer science is social and collaborative.
+Don’t worry if computers are in short supply, your students can work in pairs with <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="_blank">pair programming</a>! This is a great way for students to partner up and help each other through the exercises while relying on each other and less on the instructors. They will also see that computer science is social and collaborative.
 
 **Internet Access**
 
@@ -81,65 +86,93 @@ If for some reason you can only hold one or two sessions for the students, we su
 
 **Picking the right course for your students**
 
-* Pre readers: [Course 1](/educate/curriculum/elementary-school#overview)
-* Beginners in elementary school: [Course 2](/educate/curriculum/elementary-school#overview) (and then move onto Courses 3 and 4 for your next session)
-* Middle school or high school: [Accelerated course](https://studio.code.org/s/20-hour)
+* Pre readers: [Course 1](/educate/curriculum/elementary-school#course1)
+* Beginners in elementary school: [Course 2](/educate/curriculum/elementary-school#course2) (and then move onto Courses 3 and 4 for your next session)
+* Middle school or high school: [Accelerated course](/educate/curriculum/accelerated-course)
 
 We strongly encourage you to try the courses while structuring your coding club. This will help you get a sense of what your students will be doing and learning.
 
-### How to teach the class
+## How to set up your classroom
 
-## Setting up your classroom
-
-**Create a Code Studio account**
+### **Create a Code Studio account**
 
 Before you can set up a class, make sure you have a teacher Code Studio account.  If you don’t already have an account, you can sign up from [here](https://studio.code.org/users/sign_up).  Make sure to choose the “Teacher” account type in the sign up form.
 
-**Create a new section and assign a tutorial**
+<br>
+
+### **Create a new section and assign a tutorial**
  
-When you log on, you’ll start at your “Teacher homepage.” Click on “Student Accounts and Progress” to create a section and assign the tutorial.  You can also just go directly to this [link](/teacher-dashboard#/sections).  Click on the “New section” button you see at the top left:
+1. When you log on, you’ll start at your “Teacher homepage.” Click on “Student Accounts and Progress” to create a section and assign the tutorial.  You can also just go directly to this [link](/teacher-dashboard#/sections).
+1. Click on the “New section” button you see at the top left (see Image 1).
+1. Give your section a name, pick the login type (generally “picture” for younger students), and choose the grade (see Image 2).
+1. For “Course,” pick the appropriate course you chose for your coding club in the dropdown.
+1. Check “Stage Extras” so that students who finish a lesson early can work on projects while they wait for other students to finish.  
+1. Once you set up your section, hit “Save” to finish creating your section.
 
-<img src="/images/afterschool1.png"/>
+<div style="margin-left: 50px">
 
-Give your section a name, pick the login type (generally “picture” for younger students), and choose the grade:
+<strong>Image 1:</strong><br>
+<img src="/images/employee-engagement/afterschool1.png" style="max-width: 100%; width: 800px"/>
+<br>
+<br>
+<strong>Image 2:</strong><br>
+<img src="/images/employee-engagement/afterschool2.png" style="max-width: 100%; width: 800px"/>
 
-<img src="/images/afterschool2.png"/>
+</div>
 
-For “Course,” pick the appropriate course you chose for your coding club in the dropdown.  
+<br>
+<br>
 
-Check “Stage Extras” so that students who finish a lesson early can work on projects while they wait for other students to finish.  
+### **Add students to your section (picture or word login type)**
 
-Once you pick the course, hit “Save” to finish creating your section.
+1. If you chose “picture” or “word” login type, you can manually add students to your section to auto-create their accounts.
+1. To do this, first click on “Manage students” below your section name (see Image 3).
+1. This will take you to a page where you’ll be able to see a list of all your students. To quickly add students, click on the “Add multiple students” button (see Image 4).
+1. You should get a box that lets you type in your students’ names. Simply type one per line and hit “Done” (see Image 5). 
+1. Input your students’ ages and gender, and hit “Save all.” You now have a section with all your students!
+1. Print out cards for your students’ login information by choosing that option under the section URL link in the “Manage students” tab (see Image 6).
 
-**Add students to your section (picture or word login type)**
+<div style="margin-left: 50px">
+<strong>Image 3:</strong><br>
+<img src="/images/employee-engagement/afterschool3.png" style="max-width: 100%; width: 800px"/>
+<br>
+<br>
+<strong>Image 4:</strong><br>
+<img src="/images/employee-engagement/afterschool4.png" style="max-width: 100%; width: 800px"/>
+<br>
+<br>
+<strong>Image 5:</strong><br>
+<img src="/images/employee-engagement/afterschool5.png" style="max-width: 100%; width: 800px"/>
+<br>
+<br>
+<strong>Image 6:</strong><br>
+<img src="/images/employee-engagement/afterschool6.png" style="max-width: 100%; width: 800px"/>
 
-If you chose “picture” or “word” login type, you can manually add students to your section to auto-create their accounts. To do this, first click on “Manage students” below your section name:
+</div>
 
-<img src="/images/afterschool3.png"/>
+<br>
+<br>
 
-This will take you to a page where you’ll be able to see a list of all your students.  To quickly add students, click on the “Add multiple students” button.
+### **Add students to your section (email login type)**
 
-<img src="/images/afterschool4.png"/>
+1. If you chose the “email” login type, students will need to create their own accounts either from [here](https://studio.code.org/users/sign_up) or via Clever, if you are doing your program in partnership with a school that uses Clever.
+1. They can then join in your section by going to your section link (which can be found by clicking on the “Manage students” link under the given section on [this page](/teacher-dashboard#/sections)) (see Image 7).
+1. Look for the link for your students to join your section at the bottom of the page (see Image 8).
 
-You should get a box that lets you type in your students’ names.  Simply type one per line and hit “Done.” You should see something like the following: 
 
-<img src="/images/afterschool5.png"/>
+<div style="margin-left: 50px">
+<strong>Image 7:</strong><br>
+<img src="/images/employee-engagement/afterschool7.png" style="max-width: 100%; width: 800px"/>
+<br>
+<br>
+<strong>Image 8:</strong><br>
+<img src="/images/employee-engagement/afterschool8.png" style="max-width: 100%; width: 800px"/>
 
-Input your students’ ages and gender, and hit “Save all.”  You now have a section with all your students!
+</div>
 
-Print out cards for your students’ login information by choosing that option under the section URL link in the “Manage students” tab:
+<br>
+<br>
 
-<img src="/images/afterschool6.png"/>
-
-**Add students to your section (email login type)**
-
-If you chose the “email” login type, students will need to create their own accounts either from [here](https://studio.code.org/users/sign_up) or via Clever, if you are doing your program in partnership with a school that uses Clever. They can then join in your section by going to your section link (which can be found by clicking on the “Manage students” link under the given section on [this page](/teacher-dashboard#/sections)):
-
-<img src="/images/afterschool7.png"/>
-
-You should see a message like this:
-
-<img src="/images/afterschool8.png"/>
 <a name="tips"></a>
 ## How to run the class: 
 
@@ -151,21 +184,19 @@ Although you may be an experienced engineer or teacher, we suggest that you fami
 
 Tips for Introducing computer science:
 
-1. **Describe programs as instructions** to connect programming with students’ every day lift
-	* Ex: Programming is just bossing a computer around!
-2. **Point out products of CS** to help students see computing around them
-	* Ex: Traffic lights are controlled by computer programs!
-3. **Explain that bugs are expected** to encourage students to embrace mistakes
-	* Ex: Even for professional programmers, programs never work at first!
-4. **Introduce synonyms for CS** to demystify terms describing CS jobs
-	* Ex: There are lots of names to describe doing CS!
-5. **Promote collaboration & creativity** to dispel stereotypes about CS
-	* Ex: You’ll work together today like computer scientists do!
-6. **Model programming** to show problem solving strategies
-	* Ex: That didn’t work like I expected! What could I try next?
-7. **Publicize resources for learning CS** to help students see how they can continue learning CS
-	* Ex: If you want to learn more CS, you can find resources at [X]
+| Tip | Example |
+|-----|-----|
+| Describe programs as instructions to connect programming with students’ every day lift | Programming is just bossing a computer around! |
+| Point out products of CS to help students see computing around them | Traffic lights are controlled by computer programs! |
+| Explain that bugs are expected to encourage students to embrace mistakes | Even for professional programmers, programs never work at first! |
+| Introduce synonyms for CS to demystify terms describing CS jobs | There are lots of names to describe doing CS! |
+| Promote collaboration & creativity to dispel stereotypes about CS | You’ll work together today like computer scientists do! |
+| Model programming to show problem solving strategies | That didn’t work like I expected! What could I try next? |
+| Publicize resources for learning CS to help students see how they can continue learning CS | If you want to learn more CS, you can find resources at [X] |
 	
+<br>
+<br>
+
 **Other teaching resources:**
 
 - Tips for introducing computer science [1-pager](/files/CSTT_IntroducingCS.PDF)

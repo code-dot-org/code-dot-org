@@ -50,6 +50,7 @@ function customizeStyles() {
     window.options = {
       version: '3',
       hideEncodingControls: false,
+      v1HideSliders: false,
     };
   }
   if (options.version === '1') {
@@ -63,6 +64,12 @@ function customizeStyles() {
     }
     if (!isNaN(initialHeight)) {
       $('#height').val(initialHeight);
+    }
+
+    // Hide sliders option (only available to widget v1)
+    if (options.v1HideSliders) {
+      $('#heightRange, #widthRange').hide();
+      $('#height, #width').prop('readonly', true);
     }
 
     // The layout is fundamentally different in version 1 than it is in other versions.
