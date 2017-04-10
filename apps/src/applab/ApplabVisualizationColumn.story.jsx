@@ -1,6 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
+import {ApplabInterfaceMode} from './constants';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 
 export default function (storybook) {
@@ -21,6 +22,7 @@ export default function (storybook) {
   };
 
   const pageConstants = {
+    channelId: '12345',
     isReadOnlyWorkspace: false,
     visualizationHasPadding: true,
     isShareView: false,
@@ -29,14 +31,27 @@ export default function (storybook) {
     hideSource: true,
     playspacePhoneFrame: false,
     pinWorkspaceToBottom: true,
+    hasDataMode: false,
+    hasDesignMode: false,
     isProjectLevel: false,
+    isResponsive: false,
     isSubmittable: false,
     isSubmitted: false,
+    isViewDataButtonHidden: false,
   };
   const runState = {
     isRunning: false,
     isDebuggerPaused: false,
     awaitingContainedResponse: false,
+  };
+  const layout = {
+    visualizationScale: 1,
+  };
+  const globalState = {
+    interfaceMode: ApplabInterfaceMode.CODE,
+    pageConstants,
+    runState,
+    layout,
   };
 
   storybook
@@ -47,10 +62,7 @@ export default function (storybook) {
         description: 'In the edit view, we do not show the phone frame at all',
         story: () => (
           <StubProvider
-            state={{
-              runState,
-              pageConstants
-            }}
+            state={globalState}
           >
             <ApplabVisualizationColumn
               isEditingProject={false}
@@ -66,7 +78,7 @@ export default function (storybook) {
         story: () => (
           <StubProvider
             state={{
-              runState,
+              ...globalState,
               pageConstants: {
                 ...pageConstants,
                 isReadOnlyWorkspace: true,
@@ -89,7 +101,7 @@ export default function (storybook) {
         story: () => (
           <StubProvider
             state={{
-              runState,
+              ...globalState,
               pageConstants: {
                 ...pageConstants,
                 isReadOnlyWorkspace: true,
@@ -114,6 +126,7 @@ export default function (storybook) {
         story: () => (
           <StubProvider
             state={{
+              ...globalState,
               runState: {
                 ...runState,
                 isRunning: true,

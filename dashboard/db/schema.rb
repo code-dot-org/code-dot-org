@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170324200221) do
+ActiveRecord::Schema.define(version: 20170404194722) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -168,7 +168,6 @@ ActiveRecord::Schema.define(version: 20170324200221) do
   end
 
   create_table "followers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id"
     t.integer  "student_user_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -176,7 +175,6 @@ ActiveRecord::Schema.define(version: 20170324200221) do
     t.datetime "deleted_at"
     t.index ["section_id", "student_user_id"], name: "index_followers_on_section_id_and_student_user_id", using: :btree
     t.index ["student_user_id"], name: "index_followers_on_student_user_id", using: :btree
-    t.index ["user_id", "student_user_id"], name: "index_followers_on_user_id_and_student_user_id", using: :btree
   end
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

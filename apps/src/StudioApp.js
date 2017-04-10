@@ -304,6 +304,7 @@ StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
+  this.config = config;
 
   this.hasContainedLevels = config.hasContainedLevels;
 
@@ -388,34 +389,6 @@ StudioApp.prototype.init = function (config) {
   var viewport = document.querySelector('meta[name="viewport"]');
   if (viewport) {
     this.fixViewportForSmallScreens_(viewport, config);
-  }
-
-  var showCode = document.getElementById('show-code-header');
-  if (showCode && this.enableShowCode) {
-    dom.addClickTouchEvent(showCode, _.bind(function () {
-      if (this.editCode) {
-        var result;
-        var nonDropletError = false;
-        // are we trying to toggle from blocks to text (or the opposite)
-        var fromBlocks = this.editor.currentlyUsingBlocks;
-        try {
-          result = this.editor.toggleBlocks();
-        } catch (err) {
-          nonDropletError = true;
-          result = {error: err};
-        }
-        if (result && result.error) {
-          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
-            dropletError: !nonDropletError,
-            fromBlocks: fromBlocks
-          });
-          this.feedback_.showToggleBlocksError(this.Dialog);
-        }
-        this.onDropletToggle_();
-      } else {
-        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
-      }
-    }, this));
   }
 
   var blockCount = document.getElementById('blockCounter');
@@ -1054,6 +1027,14 @@ StudioApp.prototype.arrangeBlockPosition = function (startBlocks, arrangement) {
 StudioApp.prototype.createModalDialog = function (options) {
   options.Dialog = utils.valueOr(options.Dialog, this.Dialog);
   return this.feedback_.createModalDialog(options);
+};
+
+StudioApp.prototype.showToggleBlocksError = function () {
+  this.feedback_.showToggleBlocksError(this.Dialog);
+};
+
+StudioApp.prototype.showGeneratedCode = function () {
+  this.feedback_.showGeneratedCode(this.Dialog, this.config.appStrings);
 };
 
 /**
@@ -1790,9 +1771,6 @@ function runButtonClickWrapper(callback) {
  */
 StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
-  if (!this.enableShowCode) {
-    document.getElementById('show-code-header').style.display = 'none';
-  }
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
   var runButton = container.querySelector('#runButton');
@@ -2156,7 +2134,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // droplet may now be in code mode if it couldn't parse the code into
   // blocks, so update the UI based on the current state (don't autofocus
   // if we have already created an instructionsDialog at this stage of init)
-  this.onDropletToggle_(!this.instructionsDialog);
+  this.onDropletToggle(!this.instructionsDialog);
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
@@ -2409,45 +2387,10 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 };
 
 /**
- * Modify the workspace header after a droplet blocks/code or palette toggle
- */
-StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
-  // Update header titles:
-  var showCodeHeader = document.getElementById('show-code-header');
-  var contentSpan = showCodeHeader.firstChild;
-  var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
-    return /\bfa\b/.test(node.className);
-  });
-  var imgBlocksGlyph = document.getElementById('blocks_glyph');
-
-  // Change glyph
-  if (usingBlocks) {
-    if (fontAwesomeGlyph && imgBlocksGlyph) {
-      fontAwesomeGlyph.style.display = 'inline-block';
-      imgBlocksGlyph.style.display = 'none';
-    }
-    contentSpan.lastChild.textContent = msg.showTextHeader();
-  } else {
-    if (fontAwesomeGlyph && imgBlocksGlyph) {
-      fontAwesomeGlyph.style.display = 'none';
-      imgBlocksGlyph.style.display = 'inline-block';
-    }
-    contentSpan.lastChild.textContent = msg.showBlocksHeader();
-  }
-
-  var blockCount = document.getElementById('blockCounter');
-  if (blockCount) {
-    blockCount.style.display =
-      (usingBlocks && this.enableShowBlockCount) ? 'inline-block' : 'none';
-  }
-};
-
-/**
  * Handle updates after a droplet toggle between blocks/code has taken place
  */
-StudioApp.prototype.onDropletToggle_ = function (autoFocus) {
+StudioApp.prototype.onDropletToggle = function (autoFocus) {
   autoFocus = utils.valueOr(autoFocus, true);
-  this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
   if (!this.editor.currentlyUsingBlocks) {
     if (autoFocus) {
       this.editor.aceEditor.focus();
