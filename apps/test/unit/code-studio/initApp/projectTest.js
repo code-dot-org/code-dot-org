@@ -1,5 +1,4 @@
 import {expect} from '../../../util/configuredChai';
-import React from 'react';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -99,7 +98,6 @@ describe('project.js', () => {
 
 describe('project.saveThumbnail', () => {
   const STUB_CHANNEL_ID = 'STUB-CHANNEL-ID';
-  let updateTimestamp;
 
   beforeEach(() => {
     sinon.stub(header, 'updateTimestamp');

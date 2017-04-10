@@ -23,7 +23,7 @@ function finished() {
 
 module.exports = function (testCollection, testData, dataItem, done) {
   cb = done;
-  var data = dataItem();
+  dataItem();
   var app = testCollection.app;
 
   // skin shouldn't matter for most cases
@@ -85,10 +85,6 @@ module.exports = function (testCollection, testData, dataItem, done) {
 
   runLevel(app, skinId, level, validateResult, testData);
 };
-
-function logError(msg) {
-  console.log('Log: ' + msg + '\n');
-}
 
 function StubDialog(options) {
   this.options = options;
