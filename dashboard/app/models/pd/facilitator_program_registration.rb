@@ -16,7 +16,6 @@
 #
 
 require 'state_abbr'
-require 'csv'
 
 class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
   LOCATIONS = [
@@ -254,28 +253,16 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
   end
 
   def self.attendance_dates(user, teachercon)
-    user_row = CSV.read('config/teachercon_facilitator_dates.csv', {headers: true}).find do |row|
-      row['Email'] == user.email
-    end
-    return unless user_row
+    attendance = Pd::FacilitatorTeacherconAttendance.find_by(user: user)
+    return unless attendance
 
-    dates = {}
+    attendance.attendance_dates(teachercon)
+  end
 
-    unless user_row["Week #{teachercon} Arrive"].nil?
-      dates['teachercon'] = {
-        arrive: user_row["Week #{teachercon} Arrive"],
-        depart: user_row["Week #{teachercon} Depart"],
-      }
-    end
+  def self.program(user, teachercon)
+    attendance = Pd::FacilitatorTeacherconAttendance.find_by(user: user)
+    return unless attendance
 
-    unless user_row["week_#{teachercon}_fit"].nil?
-      dates['training'] = {
-        arrive: user_row["week #{teachercon} fit"],
-        depart: user_row["week #{teachercon} fit"],
-      }
-    end
-
-    return if dates.empty?
-    dates
+    attendance.program(teachercon)
   end
 end
