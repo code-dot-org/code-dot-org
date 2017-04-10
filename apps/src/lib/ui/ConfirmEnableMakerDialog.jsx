@@ -1,7 +1,21 @@
 import React, {Component, PropTypes} from 'react';
 import Portal from 'react-portal';
 import msg from '@cdo/locale';
+import color from '../../util/color';
 import Dialog, {Title, Body} from '../../templates/Dialog';
+
+const style = {
+  description: {
+    fontSize: 'smaller',
+  },
+  warning: {
+    color: color.red,
+    fontSize: 'smaller',
+    fontStyle: 'italic',
+    textAlign: 'center',
+    padding: 10,
+  },
+};
 
 export class ConfirmEnableMakerDialog extends Component {
   static propTypes = {
@@ -22,16 +36,16 @@ export class ConfirmEnableMakerDialog extends Component {
       >
         <Title>{msg.enableMakerDialogTitle()}</Title>
         <Body>
-          <p>
-            {msg.enableMakerDialogBody()}
-          </p>
-          <ul>
-            <li>
-              <a href="/maker/setup" target="_blank">
-                {msg.enableMakerDialogSetupPageLinkText()}
-              </a>
-            </li>
-          </ul>
+          <div style={style.description}>
+            {msg.enableMakerDialogDescription()}
+            {' '}
+            <a href="/maker/setup" target="_blank">
+              {msg.enableMakerDialogSetupPageLinkText()}
+            </a>
+          </div>
+          <div style={style.warning}>
+            {msg.enableMakerDialogWarning()}
+          </div>
         </Body>
       </Dialog>
     );
