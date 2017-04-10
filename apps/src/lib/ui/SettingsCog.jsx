@@ -82,7 +82,14 @@ class SettingsCog extends Component {
 
   toggleMakerToolkit() {
     this.close();
-    this.setState({confirmingEnableMaker: true});
+    if (!maker.isEnabled()) {
+      // Pop a confirmation dialog when trying to enable maker,
+      // because we've had several users do this accidentally.
+      this.setState({confirmingEnableMaker: true});
+    } else {
+      // Disable without confirmation is okay.
+      project.toggleMakerEnabled();
+    }
   }
 
   confirmEnableMaker() {
