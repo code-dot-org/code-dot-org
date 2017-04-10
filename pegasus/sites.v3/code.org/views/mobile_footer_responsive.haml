@@ -1,49 +1,58 @@
 %link{:href=>'/css/mobile-footer.css', :rel=>'stylesheet'}
 %script{src: '/js/mobile-footer.js'}
 
-%footer#pagefooter
-  #footer-links
-    %ul
-      %li#privacy
-        %a{:href=>'/privacy'} Privacy Policy
-      %li
-        %a{:href=>'/about'} About
-      %li
-        %a{:href =>'/partners'} Partners
-      %li
-        %a{:href=>'http://blog.code.org', :target=>'_blank'} Blog
-      %li
-        %a{:href=>'/donate'} Donate
-      %li
-        %a{:href=>'/shop'} Store
-      %li
-        %a{:href=>'https://support.code.org/'} Support
-      %li
-        %a{:href=>'/tos'} Terms
+-if request.language == "en"
+  %footer#pagefooter
+    #footer-links
+      %ul
+        %li#privacy
+          %a{:href=>'/privacy'} Privacy Policy
+        %li
+          %a{:href=>'/about'} About
+        %li
+          %a{:href =>'/partners'} Partners
+        %li
+          %a{:href=>'http://blog.code.org', :target=>'_blank'} Blog
+        %li
+          %a{:href=>'/donate'} Donate
+        %li
+          %a{:href=>'/shop'} Store
+        %li
+          %a{:href=>'https://support.code.org/'} Support
+        %li
+          %a{:href=>'/tos'} Terms
 
-    #footer-toggle
-      Code.org
-      %i#up{:class=>'fa fa-chevron-up'}
-      %i#down{:class=>'fa fa-chevron-down'}
+      #footer-toggle
+        Code.org
+        %i#up{:class=>'fa fa-chevron-up'}
+        %i#down{:class=>'fa fa-chevron-down'}
 
-  .social-language-box
+    .social-language-box
+      .language-dropdown
+        =view :language
+
+      .social-media
+        %a.social-icon{:href=>'https://www.facebook.com/Code.org', :target=>'_blank'}
+          %i.fa.fa-facebook.fa-lg
+          &nbsp; &nbsp;
+        %a.social-icon{:href=>'https://twitter.com/codeorg', :target=>'_blank'}
+          %i.fa.fa-twitter.fa-lg
+          &nbsp; &nbsp;
+        %a.social-icon{:href=>'https://www.instagram.com/codeorg', :target=>'_blank'}
+          %i.fa.fa-instagram.fa-lg
+          &nbsp; &nbsp;
+        %a.social-icon{:href=>'http://blog.code.org', :target=>'_blank'}
+          %i.fa.fa-tumblr.fa-lg
+
+    #copyright
+      !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."
+      %br
+      Powered by Amazon Web Services
+
+-else
+  %footer#pagefooter#non-en
     .language-dropdown
       =view :language
-
-    .social-media
-      %a.social-icon{:href=>'https://www.facebook.com/Code.org', :target=>'_blank'}
-        %i.fa.fa-facebook.fa-lg
-        &nbsp; &nbsp;
-      %a.social-icon{:href=>'https://twitter.com/codeorg', :target=>'_blank'}
-        %i.fa.fa-twitter.fa-lg
-        &nbsp; &nbsp;
-      %a.social-icon{:href=>'https://www.instagram.com/codeorg', :target=>'_blank'}
-        %i.fa.fa-instagram.fa-lg
-        &nbsp; &nbsp;
-      %a.social-icon{:href=>'http://blog.code.org', :target=>'_blank'}
-        %i.fa.fa-tumblr.fa-lg
-
-  #copyright
-    !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."
-    %br
-    Powered by Amazon Web Services
+    #copyright-non-en
+      !="&copy; Code.org, #{Time.now.year}."
+      %br
