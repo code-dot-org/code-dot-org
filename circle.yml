@@ -118,7 +118,7 @@ experimental:
         - staging
 deployment:
   storybook:
-    branch: staging
+    branch: ["staging", "pcardune-reenable-storybook-deploy"]
     commands:
       - 'echo "sync_assets: false" >> locals.yml'
       - 'cd apps && npm run storybook:deploy'
