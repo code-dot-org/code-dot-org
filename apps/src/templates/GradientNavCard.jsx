@@ -57,7 +57,13 @@ const styles = {
 
 const GradientNavCard = React.createClass({
   propTypes: {
-    cardData: React.PropTypes
+    cardData: React.PropTypes.shape({
+      title: React.PropTypes.string.isRequired,
+      description: React.PropTypes.string.isRequired,
+      image: React.PropTypes.string.isRequired,
+      buttonText: React.PropTypes.string.isRequired,
+      link: React.PropTypes.string.isRequired
+    })
   },
 
   render() {
@@ -65,11 +71,11 @@ const GradientNavCard = React.createClass({
 
     return (
       <div style={styles.card}>
-        <img src={require('./GradientNavCard-img-REMOVE.png')} style={styles.image}></img>
+        <img src={require('.../static/GradientNavCard-img-REMOVE.png')} style={styles.image}/>
         <h2 style={styles.title}>{cardData.title}</h2>
         <h4 style={styles.description}>{cardData.description}</h4>
         <ProgressButton href={cardData.link} color="gray" text={cardData.buttonText} style={styles.button}/>
-        <div style={styles.overlay}></div>
+        <div style={styles.overlay}/>
       </div>
     );
   }
