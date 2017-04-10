@@ -152,7 +152,7 @@ export default class DateConfirm extends ProgramRegistrationComponent {
 
 DateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
   attendanceDates: React.PropTypes.object.isRequired,
-  course: React.PropTypes.string.isRequired,
+  course: React.PropTypes.string,
 });
 
 TeacherconDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
@@ -161,7 +161,7 @@ TeacherconDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent
 
 TrainingDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
   attendanceDates: React.PropTypes.object.isRequired,
-  course: React.PropTypes.string.isRequired,
+  course: React.PropTypes.string,
 });
 
 DateConfirm.associatedFields = [

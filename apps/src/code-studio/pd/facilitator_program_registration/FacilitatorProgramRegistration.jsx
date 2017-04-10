@@ -79,7 +79,8 @@ export default class FacilitatorProgramRegistration extends React.Component {
       contentType: "application/json",
       dataType: "json",
       data: JSON.stringify({
-        form_data: this.state.data
+        form_data: this.state.data,
+        teachercon: this.props.teachercon
       })
     }).done(() => {
       window.location.reload(true);
@@ -190,7 +191,8 @@ export default class FacilitatorProgramRegistration extends React.Component {
 FacilitatorProgramRegistration.propTypes = {
   apiEndpoint: React.PropTypes.string.isRequired,
   attendanceDates: React.PropTypes.object.isRequired,
-  course: React.PropTypes.string.isRequired,
+  course: React.PropTypes.string,
   options: React.PropTypes.object.isRequired,
+  teachercon: React.PropTypes.number.isRequired,
   teacherconLocation: React.PropTypes.string.isRequired,
 };
