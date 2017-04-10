@@ -56,11 +56,16 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
   OTHER = 'Other'.freeze
 
+  TEACHERCON_DECLINE = 'No - I\'m no longer interested'.freeze
+  TEACHERCON_ALTERNATE = 'No - but I need to attend a different date.'.freeze
+  TRAINING_DECLINE = 'No'.freeze
+  TRAINING_ALTERNATE_DECLINE = 'I am no longer interested in the Code.org Facilitator Development Program.'.freeze
+
   OPTIONS = {
     confirm_teachercon_date: [
       'Yes',
-      'No - but I need to attend a different date.',
-      'No - I\'m no longer interested'
+      TEACHERCON_ALTERNATE,
+      TEACHERCON_DECLINE
     ],
 
     alternate_teachercon_date: [
@@ -71,12 +76,12 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
     confirm_training_date: [
       'Yes',
-      'No'
+      TRAINING_DECLINE
     ],
 
     decline_training_date: [
       'I want to participate in the program, but I\'m no longer able to attend these dates.',
-      'I am no longer interested in the Code.org Facilitator Development Program.'
+      TRAINING_ALTERNATE_DECLINE
     ],
 
     csd_alternate_training_date: [
@@ -203,15 +208,15 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
   def validate_required_fields
     hash = form_data_hash.transform_keys {|key| key.underscore.to_sym}
 
-    if hash.try(:[], :confirm_teachercon_date) == 'No - but I need to attend a different date.'
+    if hash.try(:[], :confirm_teachercon_date) == TEACHERCON_ALTERNATE
       add_key_error(:alternate_teachercon_date) unless hash.key?(:alternate_teachercon_date)
     end
 
-    if hash.try(:[], :confirm_training_date) == 'No'
+    if hash.try(:[], :confirm_training_date) == TRAINING_DECLINE
       add_key_error(:decline_training_date) unless hash.key?(:decline_training_date)
     end
 
-    if hash.try(:[], :confirm_teachercon_date) == 'No - I\'m no longer interested' || hash.try(:[], :confirm_training_date) == 'No'
+    if hash.try(:[], :confirm_teachercon_date) == TEACHERCON_DECLINE || hash.try(:[], :confirm_training_date) == TRAINING_DECLINE
       # then we don't really care about the rest of the fields
       return
     end
