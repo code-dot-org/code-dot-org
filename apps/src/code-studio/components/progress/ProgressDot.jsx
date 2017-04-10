@@ -239,10 +239,6 @@ export const ProgressDot = Radium(React.createClass({
     return '';
   },
 
-  tooltipId() {
-    return (this.props.level.title || "").toString();
-  },
-
   tooltipContent() {
     const { level } = this.props;
     if (level.name === undefined) {
@@ -251,12 +247,12 @@ export const ProgressDot = Radium(React.createClass({
     return level.title +". "+ level.name;
   },
 
-  renderTooltip() {
+  renderTooltip(tooltipId) {
     const { courseOverviewPage } = this.props;
     if (!courseOverviewPage) {
       return (
         <ReactTooltip
-          id={this.tooltipId()}
+          id={tooltipId}
           role="tooltip"
           effect="solid"
         >
@@ -283,6 +279,8 @@ export const ProgressDot = Radium(React.createClass({
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = status === LevelStatus.locked;
 
+    const tooltipId = _.uniqueId();
+
     return (
       <a
         key="link"
@@ -297,8 +295,8 @@ export const ProgressDot = Radium(React.createClass({
         {(iconClassFromIconType[level.icon] && !isPeerReview) ?
           <div
             data-tip
-            data-for={this.tooltipId()}
-            aria-describedby={this.tooltipId()}
+            data-for={tooltipId}
+            aria-describedby={tooltipId}
             style={styles.iconBasedDot}
           >
             <i
@@ -313,7 +311,7 @@ export const ProgressDot = Radium(React.createClass({
                 outlineCurrent && {textShadow: createOutline(color.level_current)}
               ]}
             />
-            {this.renderTooltip()}
+            {this.renderTooltip(tooltipId)}
           </div> :
 
           <div
@@ -332,15 +330,15 @@ export const ProgressDot = Radium(React.createClass({
 
           <div
             data-tip
-            data-for={this.tooltipId()}
-            aria-describedby={this.tooltipId()}
+            data-for={tooltipId}
+            aria-describedby={tooltipId}
           >
             <BubbleInterior
               showingIcon={!!this.iconClassName()}
               showingLevelName={showLevelName}
-              title={this.tooltipId() || undefined}
+              title={this.props.level.title || undefined}
             />
-            {this.renderTooltip()}
+            {this.renderTooltip(tooltipId)}
           </div>
 
         </div>

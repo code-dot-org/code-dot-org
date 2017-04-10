@@ -4,7 +4,7 @@ import MultiCheckboxSelector from './MultiCheckboxSelector';
 const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
 };
-ItemComponent.propTypes = {item: React.PropTypes.string.isRequired};
+ItemComponent.propTypes = {item: React.PropTypes.string};
 const ComplexItemComponent = function ({style, screen}) {
   return (
     <div style={style}>
@@ -18,7 +18,7 @@ ComplexItemComponent.propTypes = {
   screen: React.PropTypes.shape({
     id: React.PropTypes.string,
     name: React.PropTypes.string,
-  }).isRequired
+  })
 };
 
 export default storybook => {

@@ -44,6 +44,10 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
+    "code_functions": {
+      "drawSprites": null,
+      "var sprite = createSprite": null
+    },
     "contained_level_names": null
   },
   "published": true,

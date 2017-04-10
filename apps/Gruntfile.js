@@ -307,6 +307,10 @@ testsContext.keys().forEach(testsContext);
     generateSharedConstants: './script/generateSharedConstants.rb'
   };
 
+  var junitReporterBaseConfig = {
+    outputDir: envConstants.CIRCLECI ? `${envConstants.CIRCLE_TEST_REPORTS}/apps` : '',
+  };
+
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
@@ -314,6 +318,7 @@ testsContext.keys().forEach(testsContext);
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/storybook/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/unit/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/util/**/*', watched: false, included: false, nocache: true},
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
@@ -335,6 +340,9 @@ testsContext.keys().forEach(testsContext);
           { type: 'lcovonly' }
         ]
       },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'unit.xml',
+      }),
       files: [
         {src: ['test/unit-tests.js'], watched: false},
       ],
@@ -347,8 +355,26 @@ testsContext.keys().forEach(testsContext);
           { type: 'lcovonly' }
         ]
       },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'integration.xml',
+      }),
       files: [
         {src: ['test/integration-tests.js'], watched: false},
+      ],
+    },
+    storybook: {
+      coverageReporter: {
+        dir: 'coverage/storybook',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'storybook.xml',
+      }),
+      files: [
+        {src: ['test/storybook-tests.js'], watched: false},
       ],
     },
     all: {
@@ -385,6 +411,7 @@ testsContext.keys().forEach(testsContext);
     'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
     'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
     'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
+    'levelbuilder_pixelation':      './src/sites/studio/pages/levelbuilder_pixelation.js',
     'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
     'levels/_curriculum_reference': './src/sites/studio/pages/levels/_curriculum_reference.js',
     'levels/submissionHelper':      './src/sites/studio/pages/levels/submissionHelper.js',
@@ -753,6 +780,10 @@ testsContext.keys().forEach(testsContext);
     'exec:generateSharedConstants',
     'concat',
     'karma:unit'
+  ]);
+
+  grunt.registerTask('storybookTest', [
+    'karma:storybook',
   ]);
 
   grunt.registerTask('integrationTest', [
