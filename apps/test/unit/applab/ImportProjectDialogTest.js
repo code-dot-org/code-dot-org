@@ -24,10 +24,6 @@ describe("Applab ImportProjectDialog component", function () {
     channelsApi.ajax.restore();
   });
 
-  beforeEach(() => {
-    onProjectFetched = sinon.spy();
-  });
-
   function render(theForm) {
     form = shallow(theForm);
     urlInput = form.find('input');
