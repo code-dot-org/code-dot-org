@@ -25,8 +25,8 @@ const styles = {
 
 const ProjectCardGrid = React.createClass({
   propTypes: {
-    projects: React.PropTypes.array,
-    galleryType: React.PropTypes.string
+    projects: React.PropTypes.array.isRequired,
+    galleryType: React.PropTypes.oneOf(['personal', 'class', 'public'])
   },
 
 // Most recently edited projects should display 1st. This might not be needed dependent on whether the projects returned from the query are already sorted by recency or not. ****ASK DAVE****
@@ -38,7 +38,7 @@ const ProjectCardGrid = React.createClass({
     return sortedProjects;
   },
 
-  sortByType(projects) {
+  groupByType(projects) {
     let projectLists = {};
 
     projects.forEach(project => {
@@ -57,7 +57,7 @@ const ProjectCardGrid = React.createClass({
       return (
         <div style={styles.grid}>
           <h2 style={styles.labHeading}> {i18n.projectTypeApplab()} </h2>
-          {this.sortByType(projects).applab.slice(0,4).map((project, index) => (
+          {this.groupByType(projects).applab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
@@ -66,7 +66,7 @@ const ProjectCardGrid = React.createClass({
             </div>
           ))}
           <h2 style={styles.labHeading}> {i18n.projectTypeGamelab()} </h2>
-          {this.sortByType(projects).gamelab.slice(0,4).map((project, index) => (
+          {this.groupByType(projects).gamelab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
@@ -75,7 +75,7 @@ const ProjectCardGrid = React.createClass({
             </div>
           ))}
           <h2 style={styles.labHeading}> {i18n.projectTypeArtist()} </h2>
-          {this.sortByType(projects).artist.slice(0,4).map((project, index) => (
+          {this.groupByType(projects).artist.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
@@ -84,7 +84,7 @@ const ProjectCardGrid = React.createClass({
             </div>
           ))}
           <h2 style={styles.labHeading}> {i18n.projectTypePlaylab()} </h2>
-          {this.sortByType(projects).playlab.slice(0,4).map((project, index) => (
+          {this.groupByType(projects).playlab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
@@ -93,7 +93,7 @@ const ProjectCardGrid = React.createClass({
             </div>
           ))}
           <h2 style={styles.labHeading}> {i18n.projectTypeWeblab()} </h2>
-          {this.sortByType(projects).weblab.slice(0,4).map((project, index) => (
+          {this.groupByType(projects).weblab.slice(0,4).map((project, index) => (
             <div key={index} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
