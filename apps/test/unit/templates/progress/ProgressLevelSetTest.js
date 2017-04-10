@@ -2,7 +2,6 @@ import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { fakeLevels, fakeLevel } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('ProgressLevelSet', function () {
