@@ -245,7 +245,6 @@ describe('saveLockDialog', () => {
 
     store.dispatch(saveLockDialog(section1Id, newLockStatus));
 
-    const student1 = fakeSectionData[section1Id].stages[stage1Id][0];
     const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
     const student3 = fakeSectionData[section1Id].stages[stage1Id][2];
 

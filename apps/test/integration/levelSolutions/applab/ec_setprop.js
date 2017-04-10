@@ -548,8 +548,6 @@ step: 3`);
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
-          var image = document.getElementById('my_image');
-
           Applab.onPuzzleComplete();
         });
       },
@@ -575,8 +573,6 @@ step: 3`);
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
-          var image = document.getElementById('my_image');
-
           Applab.onPuzzleComplete();
         });
       },

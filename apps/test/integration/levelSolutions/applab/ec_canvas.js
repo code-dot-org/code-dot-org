@@ -148,7 +148,6 @@ module.exports = {
           var move3 = testUtils.createMouseEvent('mousemove', point3.x, point3.y);
           var move4 = testUtils.createMouseEvent('mousemove', point4.x, point4.y);
 
-          var expectedOutput = '';
           // The first mousemove event does not have movementX/Y since there is no previous event.
           $('#canvas1')[0].dispatchEvent(move1);
           assert.equal($('#movementX')[0].textContent, '0');

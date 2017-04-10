@@ -12,7 +12,7 @@ import {
 
 describe("Applab ImportProjectDialog component", function () {
 
-  var form, urlInput, nextButton, onProjectFetched;
+  var form, urlInput, nextButton;
 
   beforeEach(() => {
     sinon.stub(sourcesApi, "ajax");

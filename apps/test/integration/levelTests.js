@@ -29,6 +29,7 @@ import {setupBlocklyFrame, getStudioAppSingleton} from './util/testBlockly';
 
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
+// eslint-disable-next-line
 var example = {
   // app name
   app: "turtle",
@@ -82,7 +83,6 @@ function loadSource(src) {
 }
 
 describe('Level tests', function () {
-  var studioApp;
   var originalRender;
   var clock, tickInterval;
 
