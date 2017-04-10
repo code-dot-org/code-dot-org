@@ -50,10 +50,27 @@ function customizeStyles() {
     window.options = {
       version: '3',
       hideEncodingControls: false,
+      v1HideSliders: false,
     };
   }
   if (options.version === '1') {
     $('.hide_on_v1').hide();
+
+    // Default initial width and height (only available to widget v1)
+    const initialWidth = parseInt(options.v1InitialWidth, 10);
+    const initialHeight = parseInt(options.v1InitialHeight, 10);
+    if (!isNaN(initialWidth)) {
+      $('#width').val(initialWidth);
+    }
+    if (!isNaN(initialHeight)) {
+      $('#height').val(initialHeight);
+    }
+
+    // Hide sliders option (only available to widget v1)
+    if (options.v1HideSliders) {
+      $('#heightRange, #widthRange').hide();
+      $('#height, #width').prop('readonly', true);
+    }
 
     // The layout is fundamentally different in version 1 than it is in other versions.
     // Rearrange the DOM so that the visualization column sits at the top left.
