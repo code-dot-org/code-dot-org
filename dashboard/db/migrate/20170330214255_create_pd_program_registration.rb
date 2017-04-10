@@ -1,4 +1,4 @@
-class CreatePdProgramRegistration < ActiveRecord::Migration[5.0]
+class CreatePdFacilitatorProgramRegistration < ActiveRecord::Migration[5.0]
   def change
     create_table :pd_facilitator_program_registrations do |t|
       t.references :user, index: true
