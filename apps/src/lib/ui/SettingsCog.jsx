@@ -32,15 +32,6 @@ class SettingsCog extends Component {
   constructor(props) {
     super(props);
 
-    // Bind methods to instance
-    this.open = this.open.bind(this);
-    this.beforeClose = this.beforeClose.bind(this);
-    this.close = this.close.bind(this);
-    this.manageAssets = this.manageAssets.bind(this);
-    this.toggleMakerToolkit = this.toggleMakerToolkit.bind(this);
-    this.confirmEnableMaker = this.confirmEnableMaker.bind(this);
-    this.hideConfirmation = this.hideConfirmation.bind(this);
-
     // Default icon bounding rect for first render
     this.targetPoint = {top: 0, left: 0};
   }
@@ -61,45 +52,39 @@ class SettingsCog extends Component {
     confirmingEnableMaker: false,
   };
 
-  open() {
-    this.setState({open: true, canOpen: false});
-  }
+  open = () => this.setState({open: true, canOpen: false});
+  close = () => this.setState({open: false});
 
-  beforeClose(_, resetPortalState) {
+  beforeClose = (_, resetPortalState) => {
     resetPortalState();
     this.setState({open: false});
     window.setTimeout(() => this.setState({canOpen: true}), 0);
-  }
+  };
 
-  close() {
-    this.setState({open: false});
-  }
-
-  manageAssets() {
+  manageAssets = () => {
     this.close();
     assets.showAssetManager();
-  }
+  };
 
-  toggleMakerToolkit() {
+  toggleMakerToolkit = () => {
     this.close();
     if (!maker.isEnabled()) {
       // Pop a confirmation dialog when trying to enable maker,
       // because we've had several users do this accidentally.
-      this.setState({confirmingEnableMaker: true});
+      this.showConfirmation();
     } else {
       // Disable without confirmation is okay.
       project.toggleMakerEnabled();
     }
-  }
+  };
 
-  confirmEnableMaker() {
+  confirmEnableMaker = () => {
     project.toggleMakerEnabled();
-    this.setState({confirmingEnableMaker: false});
-  }
+    this.hideConfirmation();
+  };
 
-  hideConfirmation() {
-    this.setState({confirmingEnableMaker: false});
-  }
+  showConfirmation = () => this.setState({confirmingEnableMaker: true});
+  hideConfirmation = () => this.setState({confirmingEnableMaker: false});
 
   setTargetPoint(icon) {
     if (!icon) {
