@@ -17,8 +17,6 @@ function finished() {
   if (Blockly.mainBlockSpace) {
     Blockly.mainBlockSpace.clear();
   }
-  LegacyDialog.prototype.show.reset();
-  LegacyDialog.prototype.hide.reset();
   if (done) {
     done();
   }
@@ -94,6 +92,13 @@ function logError(msg) {
   console.log('Log: ' + msg + '\n');
 }
 
+sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
+  finished();
+});
+
+sinon.stub(LegacyDialog.prototype, 'hide');
+
+
 const appLoaders = {
   applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
   bounce: require('@cdo/apps/sites/studio/pages/init/loadBounce'),
@@ -110,14 +115,6 @@ const appLoaders = {
   weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
 };
 function runLevel(app, skinId, level, onAttempt, testData) {
-
-  sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
-    finished();
-  });
-
-  sinon.stub(LegacyDialog.prototype, 'hide');
-
-
   var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
