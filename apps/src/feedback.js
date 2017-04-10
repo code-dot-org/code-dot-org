@@ -1530,6 +1530,24 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
 };
 
 /**
+ * Fire off a click event in a cross-browser supported manner. This code is
+ * similar to Blockly.fireUIEvent (without taking a Blockly dependency).
+ */
+function simulateClick(element) {
+  if (document.createEvent) {
+    // W3
+    const evt = document.createEvent('UIEvents');
+    evt.initEvent('click', true, true);  // event type, bubbling, cancelable
+    element.dispatchEvent(evt);
+  } else if (document.createEventObject) {
+    // MSIE
+    element.fireEvent('onClick', document.createEventObject());
+  } else {
+    throw 'FireEvent: No event creation mechanism.';
+  }
+}
+
+/**
  * Show a modal dialog without an icon.
  * @param {Object} options
  * @param {Dialog} options.Dialog
@@ -1565,13 +1583,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function (e) {
     if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
-      // Simulate a 'click':
-      var event = new MouseEvent('click', {
-        view: window,
-        bubbles: true,
-        cancelable: true
-      });
-      btn.dispatchEvent(event);
+      simulateClick(btn);
 
       e.stopPropagation();
       e.preventDefault();
