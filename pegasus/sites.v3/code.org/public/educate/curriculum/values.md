@@ -7,7 +7,7 @@ nav: educate_nav
 
 While Code.org offers a wide range of curricular materials across a wide range of ages, the following values permeate and drive the creation of every lesson we write.
 
-## Computer Science is for Every Student 
+## Computer Science is Foundational for Every Student 
 
 We believe that computing is so fundamental to understanding and participating in society that it is valuable for *every student* to learn as part of a modern education. We see computer science as a liberal art, a subject that provides students with a critical lens for interpreting the world around them. Computer science prepares all students to be active and informed contributors to our increasingly technological society whether they pursue careers in technology or not. Computer science can be life-changing, not just skill training.
 
