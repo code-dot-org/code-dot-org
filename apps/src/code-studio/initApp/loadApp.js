@@ -16,7 +16,7 @@ var chrome34Fix = require('@cdo/apps/code-studio/initApp/chrome34Fix');
 var project = require('@cdo/apps/code-studio/initApp/project');
 var createCallouts = require('@cdo/apps/code-studio/callouts');
 var reporting = require('@cdo/apps/code-studio/reporting');
-var Dialog = require('@cdo/apps/code-studio/dialog');
+var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
 import {
   lockContainedLevelAnswers,
@@ -106,7 +106,6 @@ export function setupApp(appOptions) {
   // Sets up default options and initializes blockly
   var baseOptions = {
     containerId: 'codeApp',
-    Dialog: Dialog,
     cdoSounds: CDOSounds,
     position: {blockYCoordinateInterval: 25},
     onInitialize: function () {
@@ -196,7 +195,7 @@ export function setupApp(appOptions) {
           />,
           body
         );
-        const dialog = new Dialog({
+        const dialog = new LegacyDialog({
           body: body,
           width: 800,
           redirect: lastServerResponse.nextRedirect

@@ -46,7 +46,7 @@ function sizeDialogToViewport(scrollableElementSelector) {
  * 'autoResizeScrollableElement': if selected, makes the specified selector's
  *           element scrollable and auto-resizes dialog to window's dimensions
  */
-var Dialog = module.exports = function (options) {
+var LegacyDialog = module.exports = function (options) {
   // Cache visibility to avoid expensive lookup during debounced window resizing
   this.isVisible = true;
 
@@ -159,7 +159,7 @@ var Dialog = module.exports = function (options) {
  * close the dialog when clicked.
  * The caller can also specify hideOptions, for special behavior when the dialog is dismissed.
  */
-Dialog.prototype.show = function (options) {
+LegacyDialog.prototype.show = function (options) {
   options = options || {};
 
   $(this.div).modal({
@@ -179,11 +179,11 @@ Dialog.prototype.show = function (options) {
   this.div.offset(options);
 };
 
-Dialog.prototype.hide = function () {
+LegacyDialog.prototype.hide = function () {
   $(this.div).modal('hide');
 };
 
-Dialog.prototype.focus = function () {
+LegacyDialog.prototype.focus = function () {
   if (this.isVisible) {
     $(this.div).focus();
   }
@@ -196,7 +196,7 @@ Dialog.prototype.focus = function () {
  * Certain elements are faded out more quickly so that they are gone before
  * the dialog gets too small.
  */
-Dialog.prototype.processHideOptions = function (options) {
+LegacyDialog.prototype.processHideOptions = function (options) {
 
   var startCss = {};
   startCss.opacity = '1';
