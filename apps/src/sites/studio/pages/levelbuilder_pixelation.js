@@ -13,14 +13,14 @@ $(() => {
 
   // When the version changes, show/hide relevant fields
   pixelationVersionDropdown.change(() => {
-    showAndHideFieldsForVersion(pixelationVersionDropdown.val());
+    showAndHideFieldsForVersion(pixelationVersionDropdown.val(), true);
   });
 
   // On load, show/hide fields based on version without animation
   showAndHideFieldsForVersion(pixelationVersionDropdown.val(), false);
 });
 
-function showAndHideFieldsForVersion(version, animate=true) {
+function showAndHideFieldsForVersion(version, animate) {
   // Only show the initial width/height fields and the hide sliders checkbox
   // for version 1
   const version1Fields = [hideSlidersField, initialDimensionsField];
