@@ -3,22 +3,35 @@
 # Table name: pd_facilitator_program_registrations
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
+#  user_id    :integer          not null
 #  form_data  :text(65535)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  teachercon :integer
 #
 # Indexes
 #
+#  index_pd_fac_prog_reg_on_user_id_and_teachercon        (user_id,teachercon) UNIQUE
 #  index_pd_facilitator_program_registrations_on_user_id  (user_id)
 #
 
 require 'state_abbr'
+require 'csv'
 
 class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
+  LOCATIONS = [
+    'Houston',
+    'Phoenix',
+    'Philadelphia'
+  ].freeze
+
+  DATES = [
+    'June 18 - 23',
+    'July 16 - 21',
+    'July 30 - August 4'
+  ].freeze
+
   REQUIRED_FIELDS = [
-    :confirm_teachercon_date,
-    :confirm_training_date,
     :address_street,
     :address_city,
     :address_state,
@@ -40,10 +53,9 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     :grades_planning_to_teach,
     :subjects_taught,
     :cs_years_taught,
-  ]
+  ].freeze
 
   OTHER = 'Other'.freeze
-  FOOD_ALLERGY = 'Food Allergy'.freeze
 
   OPTIONS = {
     confirm_teachercon_date: [
@@ -53,9 +65,9 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     ],
 
     alternate_teachercon_date: [
-      'TeacherCon 1: June 18 - 23',
-      'TeacherCon 2: July 16 - 21',
-      'TeacherCon 3: July 30 - August 4'
+      "TeacherCon 1: #{DATES[0]}",
+      "TeacherCon 2: #{DATES[1]}",
+      "TeacherCon 3: #{DATES[2]}"
     ],
 
     confirm_training_date: [
@@ -85,7 +97,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
       'None',
       'Vegetarian',
       'Gluten Free',
-      FOOD_ALLERGY,
+      'Food allergy',
       OTHER
     ],
 
@@ -239,5 +251,31 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
   def form_data_hash
     form_data ? JSON.parse(form_data) : {}
+  end
+
+  def self.attendance_dates(user, teachercon)
+    user_row = CSV.read('config/teachercon_facilitator_dates.csv', {headers: true}).find do |row|
+      row['Email'] == user.email
+    end
+    return unless user_row
+
+    dates = {}
+
+    unless user_row["Week #{teachercon} Arrive"].nil?
+      dates['teachercon'] = {
+        arrive: user_row["Week #{teachercon} Arrive"],
+        depart: user_row["Week #{teachercon} Depart"],
+      }
+    end
+
+    unless user_row["week_#{teachercon}_fit"].nil?
+      dates['training'] = {
+        arrive: user_row["week #{teachercon} fit"],
+        depart: user_row["week #{teachercon} fit"],
+      }
+    end
+
+    return if dates.empty?
+    dates
   end
 end

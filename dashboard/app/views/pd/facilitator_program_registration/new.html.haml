@@ -1,8 +1,7 @@
 - @page_title = 'Code.org TeacherCon Registration for Facilitators'
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
-  - options_json = Pd::FacilitatorProgramRegistration::OPTIONS.camelize_keys.to_json
-  %script{src: minifiable_asset_path('js/pd/facilitator_program_registration/new.js'), data: {options: options_json}}
+  %script{src: minifiable_asset_path('js/pd/facilitator_program_registration/new.js'), data: @script_data}
 
 #application-header
   %h2
