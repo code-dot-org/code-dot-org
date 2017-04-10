@@ -4,10 +4,11 @@ import FacilitatorProgramRegistration from '@cdo/apps/code-studio/pd/facilitator
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  console.log(getScriptData('options'));
   ReactDOM.render(
     <FacilitatorProgramRegistration
       options={getScriptData('options')}
+      attendanceDates={getScriptData('attendanceDates')}
+      teacherconLocation={getScriptData('teacherconLocation')}
       apiEndpoint="/api/v1/pd/facilitator_program_registrations"
     />,
     document.getElementById('application-container')
