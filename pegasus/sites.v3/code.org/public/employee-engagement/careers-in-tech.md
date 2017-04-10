@@ -36,7 +36,7 @@ The best career visits allow the students to participate in an interactive proje
 
 [letter]
 
-To: School
+To: School<br>
 Subject: [Company] is hosting a career day!
 
 Dear [Name],

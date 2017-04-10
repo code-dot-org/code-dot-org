@@ -46,7 +46,7 @@ var AssetThumbnail = Radium(React.createClass({
     type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     style: React.PropTypes.object,
     iconStyle: React.PropTypes.object,
-    useFilesApi: React.PropTypes.bool.isRequired,
+    useFilesApi: React.PropTypes.bool,
   },
 
   render: function () {
