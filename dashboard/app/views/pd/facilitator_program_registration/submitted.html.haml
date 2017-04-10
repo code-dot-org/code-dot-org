@@ -2,12 +2,12 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
--if @registration.form_data_hash["confirmTeacherconDate"] == 'No - I\'m no longer interested'
+-if @registration.form_data_hash["confirmTeacherconDate"] == Pd::FacilitatorProgramRegistration::TEACHERCON_DECLINE
   %p
     Thanks for letting us know you are not attending a TeacherCon. Attendance at
     TeacherCon is a requirement of the Facilitator Development Program.
 
--elsif @registration.form_data_hash["confirmTeacherconDate"] == 'No - but I need to attend a different date.'
+-elsif @registration.form_data_hash["confirmTeacherconDate"] == Pd::FacilitatorProgramRegistration::TEACHERCON_ALTERNATE
   %p
     Thanks for registering and letting us know you need to attend a different
     TeacherCon than the one you’re assigned. We will follow-up with you directly
@@ -17,7 +17,7 @@
     If you have any questions, please contact
     %a{href:'mailto:facilitators@code.org'}facilitators@code.org
 
--elsif @registration.form_data_hash["declineTrainingDate"] == 'I am no longer interested in the Code.org Facilitator Development Program.'
+-elsif @registration.form_data_hash["declineTrainingDate"] == Pd::FacilitatorProgramRegistration::TRAINING_ALTERNATE_DECLINE
   %p
     Thanks for letting us know you have declined to attend the Facilitator
     Development Program.
