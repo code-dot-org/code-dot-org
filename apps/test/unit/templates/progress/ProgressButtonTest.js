@@ -50,7 +50,7 @@ describe('ProgressButton', () => {
   it('throws if we try to provide an href and an onClick', () => {
     const onClick = () => console.log('clicked');
     assert.throws(() => {
-      const wrapper = shallow(
+      shallow(
         <ProgressButton
           onClick={onClick}
           href="/foo/bar"

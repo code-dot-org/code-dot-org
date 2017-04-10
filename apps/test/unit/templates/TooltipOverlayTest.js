@@ -10,8 +10,6 @@ import TooltipOverlay, {
     TEXT_RECT_RADIUS,
     BETWEEN_RECT_MARGIN
 } from '@cdo/apps/templates/TooltipOverlay';
-// ES5-style require necessary to stub gridUtils.draggedElementDropPoint
-var gridUtils = require('@cdo/apps/applab/gridUtils');
 
 describe('TooltipOverlay', () => {
   const TEST_APP_WIDTH = 300, TEST_APP_HEIGHT = 200;

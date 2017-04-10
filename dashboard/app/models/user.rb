@@ -868,8 +868,6 @@ class User < ActiveRecord::Base
   end
 
   def in_progress_and_completed_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.compact.reject do |user_script|
       begin
         user_script.script.nil?
@@ -909,24 +907,18 @@ class User < ActiveRecord::Base
   end
 
   def working_on_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
   # NOTE: Changes to this method should be mirrored in
   # in_progress_and_completed_scripts.
   def working_on_user_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.where('user_scripts.completed_at is null')
   end
 
   # NOTE: Changes to this method should be mirrored in
   # in_progress_and_completed_scripts.
   def completed_user_scripts
-    backfill_user_scripts if needs_to_backfill_user_scripts?
-
     user_scripts.where('user_scripts.completed_at is not null')
   end
 
@@ -934,50 +926,9 @@ class User < ActiveRecord::Base
     working_on_scripts.first.try(:cached)
   end
 
-  def needs_to_backfill_user_scripts?
-    # Backfill only applies to users created before UserScript model was introduced.
-    created_at < Date.new(2014, 9, 15) &&
-      user_scripts.empty? &&
-      !user_levels.empty?
-  end
-
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
-  end
-
-  # Creates UserScript information based on data contained in UserLevels.
-  # Provides backwards compatibility with users created before the UserScript model
-  # was introduced (cf. code-dot-org/website-ci#194).
-  # TODO apply this migration to all users in database, then remove.
-  def backfill_user_scripts(scripts = Script.all)
-    # backfill progress in scripts
-    scripts.each do |script|
-      Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-        user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
-        ul_map = user_levels_by_level(script)
-        script.script_levels.each do |sl|
-          ul = ul_map[sl.level_id]
-          next unless ul
-          # is this the first level we started?
-          user_script.started_at = ul.created_at if
-            ul.created_at &&
-            (!user_script.started_at || ul.created_at < user_script.started_at)
-
-          # is this the last level we worked on?
-          user_script.last_progress_at = ul.updated_at if
-            ul.updated_at &&
-            (!user_script.last_progress_at || ul.updated_at > user_script.last_progress_at)
-        end
-
-        # backfill completed scripts
-        if user_script.last_progress_at && user_script.check_completed?
-          user_script.completed_at = user_script.last_progress_at
-        end
-
-        user_script.save! if user_script.changed? && !user_script.empty?
-      end
-    end
   end
 
   def self.track_script_progress(user_id, script_id)
