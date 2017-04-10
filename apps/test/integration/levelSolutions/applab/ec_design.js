@@ -209,7 +209,7 @@ module.exports = {
         };
 
         var shouldNotBeResizable = function () {
-          var rootDiv, screen1, resizable, button;
+          var rootDiv, screen1, button;
 
           rootDiv = $('#divApplab');
           assert.equal(rootDiv.is(':visible'), true, 'divApplab is visible');

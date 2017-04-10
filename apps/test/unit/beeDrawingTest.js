@@ -30,9 +30,6 @@ function createFakeSkin() {
 
 var skin = createFakeSkin();
 
-var Q = 0; // question mark index
-var FC = 12; // flower comb index
-
 function validateImages(setup, defaultFlower) {
 
   // create a 1 row map with all of our values

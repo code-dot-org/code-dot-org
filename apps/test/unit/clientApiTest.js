@@ -3,7 +3,7 @@ import {expect, assert} from '../util/configuredChai';
 var clientApi = require('@cdo/apps/clientApi');
 
 describe('clientApi module', () => {
-  var server, xhr, requests, oldWindowDashboard;
+  var xhr, requests, oldWindowDashboard;
 
   beforeEach(() => {
     // override window.dashboard... ugh...
