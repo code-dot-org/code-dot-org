@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import Portal from 'react-portal';
-import Dialog from '../../templates/Dialog';
+import msg from '@cdo/locale';
+import Dialog, {Title, Body} from '../../templates/Dialog';
 
 export class ConfirmEnableMakerDialog extends Component {
   static propTypes = {
@@ -13,14 +14,26 @@ export class ConfirmEnableMakerDialog extends Component {
     return (
       <Dialog
         isOpen={this.props.isOpen}
-        title="Enable Maker Toolkit?"
-        body="This is a new feature that requires access to a Circuit Playground board."
-        confirmText="Enable"
+        confirmText={msg.enable()}
         onConfirm={this.props.handleConfirm}
-        cancelText="Cancel"
+        cancelText={msg.dialogCancel()}
         onCancel={this.props.handleCancel}
         handleClose={this.props.handleCancel}
-      />
+      >
+        <Title>{msg.enableMakerDialogTitle()}</Title>
+        <Body>
+          <p>
+            {msg.enableMakerDialogBody()}
+          </p>
+          <ul>
+            <li>
+              <a href="/maker/setup" target="_blank">
+                {msg.enableMakerDialogSetupPageLinkText()}
+              </a>
+            </li>
+          </ul>
+        </Body>
+      </Dialog>
     );
   }
 }
