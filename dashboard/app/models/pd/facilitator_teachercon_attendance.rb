@@ -8,17 +8,17 @@
 #  tc1_depart  :date
 #  fit1_arrive :date
 #  fit1_depart :date
-#  tc1_program :string(255)
+#  fit1_course :string(255)
 #  tc2_arrive  :date
 #  tc2_depart  :date
 #  fit2_arrive :date
 #  fit2_depart :date
-#  tc2_program :string(255)
+#  fit2_course :string(255)
 #  tc3_arrive  :date
 #  tc3_depart  :date
 #  fit3_arrive :date
 #  fit3_depart :date
-#  tc3_program :string(255)
+#  fit3_course :string(255)
 #
 # Indexes
 #
@@ -51,7 +51,7 @@ class Pd::FacilitatorTeacherconAttendance < ActiveRecord::Base
     dates
   end
 
-  def program(teachercon)
-    self["tc#{teachercon}_program"]
+  def course(teachercon)
+    self["fit#{teachercon}_course"]
   end
 end
