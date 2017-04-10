@@ -4,7 +4,7 @@ var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
 var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
 var dropletUtils = require('../dropletUtils');
-import Dialog from '../code-studio/dialog';
+import LegacyDialog from '../code-studio/LegacyDialog';
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -133,7 +133,7 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
   }
 
   $('.tooltipstered').tooltipster('hide');
-  var dialog = new Dialog({
+  var dialog = new LegacyDialog({
     body: $('<iframe>')
       .addClass('markdown-instructions-container')
       .width('100%')
