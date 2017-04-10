@@ -198,6 +198,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
   validates_presence_of :user
   validates_presence_of :form_data
+  validates_inclusion_of :teachercon, in: 1..3
 
   def add_key_error(key)
     key = key.to_s.camelize(:lower)
