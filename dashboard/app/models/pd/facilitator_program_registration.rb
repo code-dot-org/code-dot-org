@@ -79,7 +79,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
       'August 5 - 6 (immediately following TeacherCon 3)'
     ],
 
-    address_state: STATE_ABBR_WITH_DC_HASH,
+    address_state: STATE_ABBR_WITH_DC_HASH.stringify_keys,
 
     dietary_needs: [
       'None',
@@ -190,7 +190,6 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
   validate :validate_required_fields
   def validate_required_fields
-    return unless form_data
     hash = form_data_hash.transform_keys {|key| key.underscore.to_sym}
 
     if hash.try(:[], :confirm_teachercon_date) == 'No - but I need to attend a different date.'
@@ -213,7 +212,6 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
   validate :validate_options
   def validate_options
-    return unless form_data
     hash = form_data_hash.transform_keys {|key| key.underscore.to_sym}
 
     hash_with_options = hash.select do |key, _value|
