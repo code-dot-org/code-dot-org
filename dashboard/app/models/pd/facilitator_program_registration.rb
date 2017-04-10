@@ -264,10 +264,10 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     attendance.attendance_dates(teachercon)
   end
 
-  def self.program(user, teachercon)
+  def self.course(user, teachercon)
     attendance = Pd::FacilitatorTeacherconAttendance.find_by(user: user)
     return unless attendance
 
-    attendance.program(teachercon)
+    attendance.course(teachercon)
   end
 end
