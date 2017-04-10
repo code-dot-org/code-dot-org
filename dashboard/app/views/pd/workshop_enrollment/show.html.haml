@@ -1,6 +1,7 @@
 = render partial: 'workshop_details'
 
-%p
-  If you need to cancel, click
-  %a{href: @cancel_url}
-    = @cancel_url
+- if @workshop.state == Pd::Workshop::STATE_NOT_STARTED
+  %p
+    If you need to cancel, click
+    %a{href: @cancel_url}
+      here

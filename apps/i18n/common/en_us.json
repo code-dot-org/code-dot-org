@@ -222,6 +222,7 @@
   "lockStage": "Lock stage",
   "lockStageInstructions": "Once time is up, \"Lock stage\" to hide questions.",
   "lockWhenDone": "Lock when students finish",
+  "progress": "Progress",
   "makeMyOwn": "Make my own",
   "makeYourOwnFlappy": "Make Your Own Flappy Game",
   "manageAssets": "Manage Assets",
@@ -361,6 +362,7 @@
   "viewLessonPlan": "View Lesson Plan",
   "viewPageAs": "View page as:",
   "viewSection": "View section",
+  "viewUnitOverview": "View Unit Overview",
   "visible": "Visible",
   "wantToLearn": "Want to learn to code?",
   "watchVideo": "Watch the Video",
@@ -368,6 +370,5 @@
   "whenRun": "when run",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Yes",
-  "yourProgress": "Your Progress"
+  "yes": "Yes"
 }

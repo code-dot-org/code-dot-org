@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+student_detail_progress_view true
 
 stage 'Representation Matters'
 named_level 'CSD-U5-SFLP Representation Matters'
@@ -17,6 +18,7 @@ level 'CSD U5 black white images pixelation'
 level 'CSD U5 black white images pixelation 2'
 level 'CSD U5 black white images pixelation 3'
 level 'CSD U5 black white images pixelation 4'
+level 'CSD U5 black white images pixelation 5'
 
 stage 'Representing Numbers'
 named_level 'CSD-U5-SFLP Representing Numbers Part 1'

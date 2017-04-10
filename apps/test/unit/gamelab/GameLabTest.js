@@ -18,9 +18,6 @@ describe("GameLab", () => {
   before(() => sinon.stub(ReactDOM, 'render'));
   after(() => ReactDOM.render.restore());
 
-  before(() => experiments.setEnabled('collapse-debugger', true));
-  after(() => experiments.setEnabled('collapse-debugger', false));
-
   beforeEach(stubRedux);
   afterEach(restoreRedux);
 
