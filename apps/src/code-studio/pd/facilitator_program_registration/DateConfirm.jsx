@@ -10,14 +10,8 @@ class DeclineTrainingDate extends ProgramRegistrationComponent {
   renderNext() {
     let followup;
     if (this.props.data.declineTrainingDate === 'I want to participate in the program, but I\'m no longer able to attend these dates.') {
-      let name;
-      console.log("TODO: determine if CSD or CSP");
-      let type = 'csd';
-      if (type === 'csd') {
-        name = "csdAlternateTrainingDate";
-      } else if (type === 'csp') {
-        name = "cspAlternateTrainingDate";
-      }
+      const name = (this.props.course === 'CSD') ? "csdAlternateTrainingDate" : "cspAlternateTrainingDate";
+
       followup = this.buildButtonsFromOptions({
         name: name,
         label: "I am instead available to attend the following Facilitator-in-Training workshop (TeacherCon Part 2):",
@@ -147,6 +141,7 @@ export default class DateConfirm extends ProgramRegistrationComponent {
             onChange={this.handleChange.bind(this)}
             errors={this.props.errors}
             data={this.props.data}
+            course={this.props.course}
             attendanceDates={this.props.attendanceDates}
           />
         }
@@ -157,6 +152,7 @@ export default class DateConfirm extends ProgramRegistrationComponent {
 
 DateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
   attendanceDates: React.PropTypes.object.isRequired,
+  course: React.PropTypes.string.isRequired,
 });
 
 TeacherconDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
@@ -165,6 +161,7 @@ TeacherconDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent
 
 TrainingDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
   attendanceDates: React.PropTypes.object.isRequired,
+  course: React.PropTypes.string.isRequired,
 });
 
 DateConfirm.associatedFields = [
