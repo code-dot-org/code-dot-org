@@ -1,8 +1,5 @@
 var testUtils = require('../../../util/testUtils');
-import sinon from 'sinon';
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-import ReactTestUtils from 'react-addons-test-utils';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 var reqBlocks = function () {
   // stick this inside a function so that it's only loaded when needed
@@ -21,23 +18,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       missingBlocks: [],
-      xml: '<xml><block type="when_run"><next><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_moveForward" /></next></block></next></block></next></block></xml>',
-      runBeforeClick: function (assert) {
-        assert(studioApp.enableShowCode, "expected enableShowCode to be true");
-        assert(!studioApp.editCode, "Expected editCode to be false");
-        // stub out the Dialog.show() so it does not trigger the end of the test.
-        // ugh...
-        // TODO: fix this nonsense!
-        sinon.stub(studioApp.Dialog.prototype, 'show');
-        const el = document.getElementById('show-code-header');
-        assert(el, "Expected there to be a show-code-header button");
-        try {
-          // Clicking the "show code" button shouldn't throw any errors...
-          ReactTestUtils.Simulate.click(el);
-        } finally {
-          studioApp.Dialog.prototype.show.restore();
-        }
-      },
+      xml: '<xml><block type="when_run"><next><block type="maze_moveForward"><next><block type="maze_moveForward"><next><block type="maze_moveForward" /></next></block></next></block></next></block></xml>'
     },
     {
       description: "Single move forward block",
