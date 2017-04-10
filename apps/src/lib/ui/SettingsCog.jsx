@@ -8,6 +8,7 @@ import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
 import * as maker from '../kits/maker/toolkit';
 import PopUpMenu from './PopUpMenu';
+import ConfirmEnableMakerDialog from "./ConfirmEnableMakerDialog";
 
 const style = {
   iconContainer: {
@@ -37,6 +38,8 @@ class SettingsCog extends Component {
     this.close = this.close.bind(this);
     this.manageAssets = this.manageAssets.bind(this);
     this.toggleMakerToolkit = this.toggleMakerToolkit.bind(this);
+    this.confirmEnableMaker = this.confirmEnableMaker.bind(this);
+    this.hideConfirmation = this.hideConfirmation.bind(this);
 
     // Default icon bounding rect for first render
     this.targetPoint = {top: 0, left: 0};
@@ -55,6 +58,7 @@ class SettingsCog extends Component {
   state = {
     open: false,
     canOpen: true,
+    confirmingEnableMaker: false,
   };
 
   open() {
@@ -78,7 +82,16 @@ class SettingsCog extends Component {
 
   toggleMakerToolkit() {
     this.close();
+    this.setState({confirmingEnableMaker: true});
+  }
+
+  confirmEnableMaker() {
     project.toggleMakerEnabled();
+    this.setState({confirmingEnableMaker: false});
+  }
+
+  hideConfirmation() {
+    this.setState({confirmingEnableMaker: false});
   }
 
   setTargetPoint(icon) {
@@ -124,6 +137,11 @@ class SettingsCog extends Component {
           <ManageAssets onClick={this.manageAssets}/>
           <ToggleMaker onClick={this.toggleMakerToolkit}/>
         </PopUpMenu>
+        <ConfirmEnableMakerDialog
+          isOpen={this.state.confirmingEnableMaker}
+          handleConfirm={this.confirmEnableMaker}
+          handleCancel={this.hideConfirmation}
+        />
       </span>
     );
   }
