@@ -28,10 +28,9 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 **We are currently hiring for:**
 
 
-- **Advocacy and Government Affairs**
-	- [Director of State Government Affairs](#govaffairs)
-- **Fundraising**
-	- [Fundraising Consultant](#fund)
+- **Events (Spring/Summer)**
+	- [Event Manager, Professional Learning Team (Contract)](#events)
+	- [Events Intern, Professional Learning Team](#intern)
 - **Marketing**
 	- [Director of Marketing & Communications](#director)
 	- [Marketing Associate](#associate)
@@ -42,82 +41,74 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
 - **Internships**
+	- [Events Intern, Professional Learning Team](#intern)
 
 **Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="govaffairs"href="#govaffairs">Director of State Government Affairs (Seattle, WA; location flexible)</a>
 
-**Job Summary:**
-
-Code.org is a leading voice in the national dialogue on expanding access to K12 computer science education. We are looking for an experienced professional with a background in state government affairs and/or policy development to lead the transformation of the K-12 US education policy landscape as it relates to computer science. 
-
-Our team is working with policymakers and education leaders in dozens of states to advance policy reforms that reduce barriers or boost access to K-12 computer science courses. This is a unique opportunity to harness unprecedented bipartisan support for this important issue to shape education policy at the state and local levels. You will have a chance to bring computer science policies to a state for the first time, rather than just incrementally change existing education policy.
-
-The primary role for this position is managing existing and developing new relationships with state leaders (state departments of education, state boards of education, legislators and governors) and developing overall strategy for engagement in the assigned states while leading and carrying out the tactics associated with the strategy. 
-
-The person in this role will be responsible for: 
-
-- Developing and updating policy positions
-- Public speaking at events, including testimony before state authorities, interviews with the media
-- Communicate policy agenda to various audiences (stakeholder groups, legislators, - Governors and staff, educators, media, etc.) and tailor messaging for each
-Guiding the team in defining a legislative strategy and/or administrative strategy (rules and regulations) around answering three questions:
-	- What are the goals for our legislative or administrative strategy approach?
-	- How will these goals affect implementation of K-12 computer science?
-	- What’s the plan to achieve these goals?
-- Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
-- Creating, organizing and managing policy-related events with policy makers and/or partner organizations
-- Managing Code.org’s Governors Partnership for K-12 Computer Science
-- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and non-profits with shared goals
-- Managing and building Code.org’s Advocacy Coalition
-	- Forming and leading local coalition of supporters/advocates
-	- Leveraging local targeted support (industry partnerships, local education nonprofits, school districts)
-- Creating and managing grassroots support for policy-related efforts
-- Coordinate state and federal policy efforts internally and with partners
-
-Some of the responsibilities may shift depending on a candidate’s skill set for this position, but the primary responsibility of owning end-to-end engagement in a state will not. Ability and willingness to travel up to 35% of the time (depending on location)is required.
-
-**Experience and Qualifications:**
-
-A successful candidate’s main experience should be in working directly with legislators and governors’ education advisors and/or with state boards of education and state departments of education. Candidates should have experience with and working knowledge of the legislative process or policy development process within state education authorities. 
-
-We are a small, tight-knit, fast-moving dynamic team that leverages each person’s unique backgrounds to support one another in our work with states. We are seeking a team member with expertise and experience that will enable them to contribute ideas and support in areas such as higher education policy development experience, marketing and PR, and coalition and partnership development.
-
-We are a non-partisan organization and the position requires working with representatives from all political parties at the state, local (and possibly federal) level. Candidates should be have a demonstrated ability to work across political parties and ideologies.
-
-Candidates must be extremely detail-oriented, possess exceptional writing and interpersonal communication ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Google Docs is required.
-
-
-Additionally, the ideal candidate has:
-
-- Passion for our mission of #CSForAll
-- Bachelor’s degree required; Master’s degree desired
-- 5-8+ years of experience in government relations/advocacy/policy development in education (required, preferably at the state level)
-- Experience in developing K-12 computer science education policy (nice to have, but not required) 
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="fund"href="#fund">Fundraising Consultant (Seattle, WA; location flexible)</a>
+## <a name="events"href="#events">Events Manager, Professional Learning Team (Seattle, WA; looking to fill contract role immediately)</a>
 
 **Scope of Work:**
 
-Code.org is seeking a part-time Fundraising Consultant to conduct research and provide consultation services to select Code.org partners regarding the feasibility and process for applying to various grant programs.
+Code.org is looking for a Event Coordinator to manage logistics for Code.org’s Professional Learning & Community (PLC) team’s 2017 summer conference-style events. The event manager will work collaboratively with a team of program managers and coordinators. We are looking for someone able to start immediately; this is a full-time, contract role through mid-August. 
+
+The PLC team is responsible for the success of Code.org professional development for teachers. This summer, Code.org is hosting three 8-day summer professional development conferences for middle and high school computer science teachers and facilitators from across the country. Venues are already booked in Houston, Phoenix, and Philadelphia; attendance at each of the three events will be 500+ participants. These conferences are intensive, hands-on, in-person workshops providing foundational experiences with computer science and the Code.org suite of tools. Participants will explore Code.org’s curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum.
+
+The event manager will: 
+
+- Manage all event logistics (travel, accommodations, catering, and swag/supplies); act as primary logistics point-of-contact 
+- Provide on-site coordination and support for all events 
+- Draft communications to stakeholders and respond to requests for information
+- Update and managing event attendee lists and track numbers and teacher activity across programs
+- Provide excellent internal and external customer service and support 
 
 **Experience Required:**
 
-We are looking for a consultant with 3+ years experience seeking grants, able to identify early-stage potential opportunities, stay abreast of new opportunities that are released, and quickly be able to understand how to apply for and win funding. Consultant must have proven experience in successfully applying for at least one of the following:
+We are looking for a self-starter who can hit the ground running; you should be skilled in successfully managing large conference-style events, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented and tech-savvy. Proficiency with Google Apps (Docs, Sheets, Slides, Forms) is required. You should be flexible and willing to work in a fast-paced, start-up environment. 
 
-- Grants from private individuals, family foundations, or large, established foundations (corporate, family, or other)
-- Grants and/or contracts from cities, counties, states, and/or the Federal government, preferably including i3/EIR, NSF, Dept. of Ed, etc.
 
-The person we contract for this role will be experienced in building relationships with grantmakers and/or policymakers to access funds or give input into funding opportunities, and be able to guide and coach others in both seeking grants and building relationships.
+Additional requirements:
 
-**Contract Terms:**
+- Proven experience as an events planner or organizer 
+- Excellent time management and communication skills
+- Ability to submit references or referrals from previous clients 
+- Ability and willingness to travel for all three events: June 16-25, July 14-23, and July 28-August 6 
 
-Consultant will be expected to devote up to 15 hours per week for at least the next year (as needed, on contract); the work will require a minimum of 5 hours per month to cover ongoing communications and research time to stay current on grant opportunities, Code.org activities, and activities of our Regional Partners. 
+**To Apply:**
 
-Interested contractors should email a resume and cover letter, and any relevant work samples, to <a href="mailto:jobs@code.org">jobs@code.org</a>. You may also choose to include a LinkedIn or related online profile. Compensation will be a contracted hourly rate, depending on experience. 
+If you are interested please submit resume or application materials to <a href="mailto:megan@code.org">megan@code.org</a>. Position is open immediately. Applications must be received by COB Wednesday, April 12th, 2017.  
+
+## <a name="intern"href="#intern">Events Intern, Professional Learning Team (Seattle, WA)</a>
+
+**Internship Summary:** 
+
+Code.org is looking for an Events Intern to work with and support Code.org’s professional learning team. Our Professional Learning and Community (PLC) team is responsible for the success of Code.org professional development across the U.S. This is a spring/summer internship, part-time, approximately 20-30 hours per week. 
+
+Intern’s responsibilities would include:
+
+- Provide planning and on-site event support    
+- Formatting, printing and organizing materials, packing and mailing supplies, proofreading and checking information (rooming lists, flight information, attendee lists and program tracks), and more. 
+- Utilizing our customer service system to respond to events-related as well as professional development questions from teachers and facilitators in a timely manner.
+- Attending and participating in meetings and recording notes/follow-up items, as appropriate.
+- Responding to requests for information, distributing materials externally.
+- Special projects (enter, clean, or analyze simple data, prepare documentation, develop templates, etc.)
+- Opportunity to travel to and support up to three nine-day events this summer
+
+**Experience and Qualifications:**
+
+Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+- 2 years of undergraduate studies preferred (no Computer Science background necessary) 
+- 1 year of work experience preferred 
+- Experience with Google Sheets and suite of products
+- Ability to work legally in the United States
+- Ability to and willingness to travel to support events in the United States, if needed
+
+To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+ 
 
 ## <a name="director"href="#director">Director of Marketing & Communications (Seattle, WA)</a>
 **Job Summary:**
@@ -362,32 +353,6 @@ In addition, candidates:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-## <a name="fundintern"href="#fundintern">Fundraising Team Intern (Seattle, WA)</a>
-
-**Internship Summary:**
-
-Code.org is looking for a Fundraising Intern to join Code.org’s Fundraising team. Our team is responsible for raising funds to sustain Code.org’s operations. This is a spring (March-May) internship, part-time, approximately 10-15 hours per week on a flexible schedule. Intern’s responsibilities would include:
-
-- Researching potential fundraising sources using the Foundation Center and other online resources for Code.org and our regional partners 
-- Developing reports of qualified potential funding sources 
-- Developing an application calendar to assist the Fundraising team in prioritizing work
-- Other special projects, as needed
-
-
-**Experience and Qualifications:**
-
-Must be extremely detail-oriented, possess strong research skills, excel at written and verbal communications in English, and be tech-savvy (computer science background/experience not required). Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-Required Qualifications:
-
-- Minimum 2 years of undergraduate studies completed
-- Experience with Google suite of products
-- Have interest and prior experience in gathering online research
-- Ability to work legally in the United States
-
-
-To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="info" href="#info">Working at Code.org</a>
