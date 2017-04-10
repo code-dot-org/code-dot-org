@@ -34,7 +34,6 @@ class DeclineTrainingDate extends ProgramRegistrationComponent {
         </p>
       </FormGroup>
     );
-
   }
 
   render() {
@@ -52,9 +51,10 @@ class DeclineTrainingDate extends ProgramRegistrationComponent {
 }
 
 class TrainingDateConfirm extends ProgramRegistrationComponent {
-  renderNext() {
+  render() {
+    let followup;
     if (this.props.data.confirmTrainingDate === "No") {
-      return (
+      followup = (
         <DeclineTrainingDate
           options={this.props.options}
           onChange={this.handleChange.bind(this)}
@@ -63,75 +63,109 @@ class TrainingDateConfirm extends ProgramRegistrationComponent {
         />
       );
     }
-  }
+    const label = `
+      Your assigned Facilitator in Training date is:
+      ${this.props.attendanceDates.training.arrive} -
+      ${this.props.attendanceDates.training.depart}. Please confirm you can make
+      your assigned Facilitator in Training.
+    `;
 
-  render() {
     return (
       <FormGroup>
         {this.buildButtonsFromOptions({
           name: "confirmTrainingDate",
-          label: "Your assigned Facilitator in Training date is: <Facilitator in Training dates & location>. Please confirm you can make your assigned Facilitator in Training.",
+          label: label,
           type: "radio"
         })}
-        {this.renderNext()}
+        {followup}
       </FormGroup>
     );
   }
 }
 
-export default class DateConfirm extends ProgramRegistrationComponent {
-  renderNext() {
-    if (this.props.data.confirmTeacherconDate === "Yes") {
-      return (
-        <TrainingDateConfirm
-          options={this.props.options}
-          onChange={this.handleChange.bind(this)}
-          errors={this.props.errors}
-          data={this.props.data}
-        />
-      );
-    } else if (this.props.data.confirmTeacherconDate === 'No - but I need to attend a different date.') {
+class TeacherconDateConfirm extends ProgramRegistrationComponent {
+  render() {
+    let followup;
+    if (this.props.data.confirmTeacherconDate === 'No - but I need to attend a different date.') {
       const label = `
         I want to participate in the program, but I’m no longer able to attend
         these dates. I am instead available to attend the following:
       `;
-      return (
+      followup = (
         <div>
           {this.buildButtonsFromOptions({
             name: 'alternateTeacherconDate',
             label: label,
             type: 'check'
           })}
-          <TrainingDateConfirm
-            options={this.props.options}
-            onChange={this.handleChange.bind(this)}
-            errors={this.props.errors}
-            data={this.props.data}
-          />
         </div>
       );
     } else if (this.props.data.confirmTeacherconDate === 'No - I\'m no longer interested') {
-      return (
+      followup = (
         <FormGroup>
           <ControlLabel>I am no longer interested in the Code.org Facilitator Development Program.</ControlLabel>
         </FormGroup>
       );
     }
-  }
 
-  render() {
+    const label = `
+      Your assigned summer training is TeacherCon
+      ${this.props.attendanceDates.teachercon.arrive} -
+      ${this.props.attendanceDates.teachercon.depart}. Please confirm you can
+      make your assigned TeacherCon training
+    `;
+
     return (
       <FormGroup>
         {this.buildButtonsFromOptions({
           name: "confirmTeacherconDate",
-          label: "Your assigned summer training is TeacherCon <TeacherCon dates & location>. Please confirm you can make your assigned TeacherCon training",
+          label: label,
           type: "radio"
         })}
-        {this.renderNext()}
+        {followup}
       </FormGroup>
     );
   }
 }
+
+export default class DateConfirm extends ProgramRegistrationComponent {
+  render() {
+    return (
+      <FormGroup>
+        {this.props.attendanceDates.teachercon &&
+          <TeacherconDateConfirm
+            options={this.props.options}
+            onChange={this.handleChange.bind(this)}
+            errors={this.props.errors}
+            data={this.props.data}
+            attendanceDates={this.props.attendanceDates}
+          />
+        }
+        {this.props.attendanceDates.training &&
+          <TrainingDateConfirm
+            options={this.props.options}
+            onChange={this.handleChange.bind(this)}
+            errors={this.props.errors}
+            data={this.props.data}
+            attendanceDates={this.props.attendanceDates}
+          />
+        }
+      </FormGroup>
+    );
+  }
+}
+
+DateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
+  attendanceDates: React.PropTypes.object.isRequired,
+});
+
+TeacherconDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
+  attendanceDates: React.PropTypes.object.isRequired,
+});
+
+TrainingDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
+  attendanceDates: React.PropTypes.object.isRequired,
+});
 
 DateConfirm.associatedFields = [
   "confirmTeacherconDate",
