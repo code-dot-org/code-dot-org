@@ -890,65 +890,15 @@ class UserTest < ActiveSupport::TestCase
   test 'user should prefer working on 20hour instead of hoc' do
     user = create :user
 
-    start_date = Time.now - 3.months
-
     twenty_hour = Script.twenty_hour_script
     hoc = Script.find_by(name: 'hourofcode')
 
     # do a level that is both in script 1 and hoc
     [twenty_hour, hoc].each do |script|
-      UserLevel.create!(
-        user_id: user.id,
-        level_id: Script.twenty_hour_script.script_levels[1].level.id,
-        script: script,
-        created_at: start_date,
-        updated_at: start_date
-      )
+      UserScript.create! user: user, script: script
     end
 
-    user.backfill_user_scripts([twenty_hour, hoc])
     assert_equal [twenty_hour, hoc], user.working_on_scripts
-  end
-
-  test "user scripts backfills started_at and completed_at" do
-    begin
-      start_date = Time.now - 15.days
-      progress_date = Time.now - 4.days
-
-      user = create(:student)
-      script = Script.find_by_name("course2")
-      sl1 = script.script_levels[1]
-      sl2 = script.script_levels[5]
-
-      UserLevel.record_timestamps = false # ooh
-      UserLevel.create!(
-        user_id: user.id,
-        level_id: sl1.level.id,
-        script: script,
-        created_at: start_date,
-        updated_at: start_date
-      )
-
-      UserLevel.create!(
-        user_id: user.id,
-        level_id: sl2.level.id,
-        script: script,
-        created_at: progress_date,
-        updated_at: progress_date
-      )
-
-      assert_creates(UserScript) do
-        user.backfill_user_scripts([script])
-      end
-
-      user_script = UserScript.last
-      assert_equal start_date.to_i, user_script.started_at.to_i
-      assert_equal progress_date.to_i, user_script.last_progress_at.to_i
-      assert_nil user_script.assigned_at
-      assert_nil user_script.completed_at
-    ensure
-      UserLevel.record_timestamps = true
-    end
   end
 
   def complete_script_for_user(user, script, completed_date = Time.now)
@@ -974,94 +924,6 @@ class UserTest < ActiveSupport::TestCase
       created_at: completed_date,
       updated_at: completed_date
     )
-  end
-
-  test "backfill user_scripts backfills completed_at" do
-    begin
-      UserLevel.record_timestamps = false
-
-      completed_date = Time.now - 20.days
-
-      student = create :student
-      script = Script.find_by_name('playlab')
-
-      complete_script_for_user(student, script, completed_date)
-
-      assert_creates(UserScript) do
-        student.backfill_user_scripts([script])
-      end
-
-      user_script = UserScript.last
-      assert_equal completed_date.to_i - 1.day, user_script.started_at.to_i
-      assert_equal completed_date.to_i, user_script.last_progress_at.to_i
-      assert_nil user_script.assigned_at
-      assert_equal completed_date.to_i, user_script.completed_at.to_i
-
-    ensure
-      UserLevel.record_timestamps = true
-    end
-  end
-
-  test "backfill user_scripts does not backfill completed_at if last level not passed" do
-    begin
-      UserLevel.record_timestamps = false
-
-      completed_date = Time.now - 20.days
-
-      student = create :student
-      script = Script.find_by_name('playlab')
-
-      # complete the script
-      complete_script_for_user(student, script, completed_date)
-
-      # and then modify so the last level is...
-      sl = script.script_levels.last
-      ul = UserLevel.where(user_id: student.id, level_id: sl.level_id).first
-      ul.best_result = 10 # ... not passed
-      ul.save!
-
-      assert_creates(UserScript) do
-        student.backfill_user_scripts [script]
-      end
-
-      user_script = UserScript.last
-      assert_equal completed_date.to_i - 1.day, user_script.started_at.to_i
-      assert_equal completed_date.to_i, user_script.last_progress_at.to_i
-      assert_nil user_script.assigned_at
-      assert_nil user_script.completed_at
-
-    ensure
-      UserLevel.record_timestamps = true
-    end
-  end
-
-  test "needs_to_backfill_user_scripts?" do
-    user = create :student, created_at: Date.new(2014, 9, 10)
-    refute user.needs_to_backfill_user_scripts?
-
-    script = Script.find_by_name("course2")
-
-    create :user_level, user: user, level: script.script_levels.first.level, script: script
-    # now has progress
-    assert user.needs_to_backfill_user_scripts?
-
-    assert_creates(UserScript) do
-      user.backfill_user_scripts [script]
-    end
-
-    # now is backfilled (has a user script)
-    user = user.reload
-    refute user.needs_to_backfill_user_scripts?
-  end
-
-  test "needs_to_backfill_user_scripts? is false for recent users" do
-    user = create :student, created_at: Date.new(2015, 9, 10)
-    refute user.needs_to_backfill_user_scripts?
-
-    script = Script.find_by_name("course2")
-    # In normal usage, UserScript will be created alongside UserLevel.
-    create :user_level, user: user, level: script.script_levels.first.level, script: script
-    refute user.needs_to_backfill_user_scripts?
   end
 
   test 'can_edit_password? is true for user with password' do

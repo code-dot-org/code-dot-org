@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404194722) do
+ActiveRecord::Schema.define(version: 20170407201709) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -379,6 +379,32 @@ ActiveRecord::Schema.define(version: 20170404194722) do
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
     t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+    t.integer  "pd_enrollment_id",                           null: false
+    t.integer  "user_id",                                    null: false
+    t.string   "school_or_company"
+    t.string   "street",                                     null: false
+    t.string   "apartment_or_suite"
+    t.string   "city",                                       null: false
+    t.string   "state",                                      null: false
+    t.string   "zip_code",                                   null: false
+    t.string   "phone_number",                               null: false
+    t.datetime "order_attempted_at"
+    t.datetime "ordered_at"
+    t.text     "order_response",               limit: 65535
+    t.text     "order_error",                  limit: 65535
+    t.string   "order_id"
+    t.string   "order_status"
+    t.datetime "order_status_last_checked_at"
+    t.datetime "order_status_changed_at"
+    t.string   "tracking_id"
+    t.string   "tracking_url"
+    t.index ["pd_enrollment_id"], name: "index_pd_workshop_material_orders_on_pd_enrollment_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_workshop_material_orders_on_user_id", unique: true, using: :btree
   end
 
   create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
