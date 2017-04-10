@@ -35,8 +35,12 @@ export default class ShowCodeToggle extends Component {
   };
 
   state = {
-    showingCode: false,
+    showingBlocks: true,
   };
+
+  componentWillMount() {
+    this.setState({showingBlocks: studioApp.editor.currentlyUsingBlocks});
+  }
 
   onClick = () => {
     if (studioApp.editCode) {
@@ -55,9 +59,10 @@ export default class ShowCodeToggle extends Component {
           fromBlocks,
         });
         studioApp.showToggleBlocksError();
+      } else {
+        studioApp.onDropletToggle();
+        this.setState({showingBlocks: studioApp.editor.currentlyUsingBlocks});
       }
-      studioApp.onDropletToggle();
-      this.setState({showingCode: !studioApp.editor.currentlyUsingBlocks});
     } else {
       studioApp.showGeneratedCode();
     }
@@ -74,7 +79,7 @@ export default class ShowCodeToggle extends Component {
         style={[
           styles.blocksGlyph,
           this.props.isRtl && styles.blocksGlyphRtl,
-          this.state.showingCode ? {display: 'inline-block'} : {display: 'none'},
+          this.state.showingBlocks ? {display: 'none'} : {display: 'inline-block'},
         ]}
       />
     );
@@ -82,11 +87,11 @@ export default class ShowCodeToggle extends Component {
       <PaneButton
         id="show-code-header"
         hiddenImage={blocksGlyphImage}
-        iconClass={this.state.showingCode ? "" : "fa fa-code"}
-        label={this.state.showingCode ? msg.showBlocksHeader() : msg.showCodeHeader()}
-        isRtl={this.props.isRtl}
-        isMinecraft={this.props.isMinecraft}
-        headerHasFocus={this.props.hasFocus}
+        iconClass={this.state.showingBlocks ? "fa fa-code" : ""}
+        label={this.state.showingBlocks ? msg.showCodeHeader() : msg.showBlocksHeader()}
+        isRtl={!!this.props.isRtl}
+        isMinecraft={!!this.props.isMinecraft}
+        headerHasFocus={!!this.props.hasFocus}
         onClick={this.onClick}
         style={studioApp.enableShowCode ? {display: 'inline-block'} : {display: 'none'}}
       />
