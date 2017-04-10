@@ -1,0 +1,198 @@
+import sinon from 'sinon';
+import React from 'react';
+import {mount} from 'enzyme';
+import {expect} from '../../util/configuredChai';
+import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+
+describe('ShowCodeToggle', () => {
+  let toggle, containerDiv, codeWorkspaceDiv;
+
+  beforeEach(() => sinon.stub(LegacyDialog.prototype, 'show'));
+  afterEach(() => LegacyDialog.prototype.show.restore());
+
+  beforeEach(() => sinon.stub(studioApp, 'handleEditCode_').callsFake(function () {
+    this.editor = {
+      currentlyUsingBlocks: true,
+      getValue: () => '',
+      toggleBlocks() {
+        this.currentlyUsingBlocks = !this.currentlyUsingBlocks;
+      },
+      aceEditor: {
+        focus(){},
+      },
+    };
+  }));
+  afterEach(() => studioApp.handleEditCode_.restore());
+
+  beforeEach(() => {
+    const config = {
+      enableShowCode: true,
+      containerId: 'foo',
+      level: {
+        editCode: true,
+        codeFunctions: {},
+      },
+      dropletConfig: {
+        blocks: [],
+      },
+      skin: {},
+    };
+
+    codeWorkspaceDiv = document.createElement('div');
+    codeWorkspaceDiv.id = 'codeWorkspace';
+    document.body.appendChild(codeWorkspaceDiv);
+
+    containerDiv = document.createElement('div');
+    containerDiv.id = config.containerId;
+    containerDiv.innerHTML = `
+<button id="runButton" />
+<button id="resetButton" />
+<div id="visualizationColumn" />
+<div id="toolbox-header" />
+`;
+    document.body.appendChild(containerDiv);
+
+    studioApp.configureRedux({});
+    studioApp.configure(config);
+    studioApp.init(config);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(codeWorkspaceDiv);
+    document.body.removeChild(containerDiv);
+  });
+
+  beforeEach(() => sinon.stub(studioApp, 'onDropletToggle'));
+  afterEach(() => studioApp.onDropletToggle.restore());
+
+  beforeEach(() => sinon.stub(studioApp, 'showGeneratedCode'));
+  afterEach(() => studioApp.showGeneratedCode.restore());
+
+  describe("when initially mounted", () => {
+    beforeEach(() => {
+      toggle = mount(
+        <ShowCodeToggle />
+      );
+    });
+
+    it("renders a PaneButton with a 'Show Code' label", () => {
+      expect(toggle.containsMatchingElement(
+        <PaneButton
+          id="show-code-header"
+          headerHasFocus={false}
+          isRtl={false}
+          iconClass="fa fa-code"
+          label="Show Code"
+          style={{display: 'inline-block'}}
+        />
+      )).to.be.true;
+    });
+
+    describe("after being clicked", () => {
+      beforeEach(() => toggle.simulate('click'));
+
+      it("renders a 'Show Blocks' label", () => {
+        expect(toggle.containsMatchingElement(
+          <PaneButton
+            id="show-code-header"
+            headerHasFocus={false}
+            isRtl={false}
+            iconClass=""
+            label="Show Blocks"
+            style={{display: 'inline-block'}}
+          />
+        )).to.be.true;
+      });
+
+      it("makes the editor stop using blocks", () => {
+        expect(studioApp.editor.currentlyUsingBlocks).to.be.false;
+      });
+
+      describe("and after being clicked again", () => {
+        beforeEach(() => toggle.simulate('click'));
+
+        it("will switch back to the way it was", () => {
+          expect(toggle.containsMatchingElement(
+            <PaneButton
+              id="show-code-header"
+              headerHasFocus={false}
+              isRtl={false}
+              iconClass="fa fa-code"
+              label="Show Code"
+              style={{display: 'inline-block'}}
+            />
+          )).to.be.true;
+        });
+
+        it("will make the editor start using blocks", () => {
+          expect(studioApp.editor.currentlyUsingBlocks).to.be.true;
+        });
+      });
+    });
+  });
+
+
+  describe("when passed in an onToggle prop", () => {
+    let onToggle;
+    beforeEach(() => {
+      onToggle = sinon.spy();
+      toggle = mount(
+        <ShowCodeToggle onToggle={onToggle}/>
+      );
+    });
+
+    it("will call onToggle with whether or not it is using blocks when it gets clicked", () => {
+      toggle.simulate('click');
+      expect(onToggle).to.have.been.calledOnce;
+      expect(onToggle).to.have.been.calledWith(false);
+      toggle.simulate('click');
+      expect(onToggle).to.have.been.calledTwice;
+      expect(onToggle.secondCall).to.have.been.calledWith(true);
+    });
+  });
+
+  describe("When studioApp has been configured with editCode turned off", () => {
+    beforeEach(() => {
+      studioApp.editCode = false;
+      toggle = mount(
+        <ShowCodeToggle />
+      );
+    });
+
+    describe("and the show code button is pressed", () => {
+      beforeEach(() => toggle.simulate('click'));
+      it("will not call onDropletToggle", () => {
+        expect(studioApp.onDropletToggle).not.to.have.been.called;
+      });
+      it("will instead show the generated code", () => {
+        expect(studioApp.showGeneratedCode).to.have.been.called;
+      });
+    });
+  });
+
+  describe("when studioApp is configured with enableShowCode turned off", () => {
+    beforeEach(() => {
+      studioApp.enableShowCode = false;
+      toggle = mount(
+        <ShowCodeToggle />
+      );
+    });
+
+    it("will appear hidden", () => {
+      expect(toggle.containsMatchingElement(
+        <PaneButton
+          id="show-code-header"
+          headerHasFocus={false}
+          isRtl={false}
+          iconClass="fa fa-code"
+          label="Show Code"
+          style={{display: 'none'}}
+        />
+      )).to.be.true;
+    });
+  });
+
+});
