@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404175302) do
+ActiveRecord::Schema.define(version: 20170403224005) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -170,10 +170,16 @@ ActiveRecord::Schema.define(version: 20170404175302) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer  "section_id"
-    t.integer  "percentage"
+    t.integer  "min_user_id"
+    t.integer  "max_user_id"
+    t.integer  "overflow_max_user_id"
     t.datetime "earliest_section_start"
     t.datetime "latest_section_start"
     t.integer  "script_id"
+    t.index ["max_user_id"], name: "index_experiments_on_max_user_id", using: :btree
+    t.index ["min_user_id"], name: "index_experiments_on_min_user_id", using: :btree
+    t.index ["overflow_max_user_id"], name: "index_experiments_on_overflow_max_user_id", using: :btree
+    t.index ["section_id"], name: "index_experiments_on_section_id", using: :btree
   end
 
   create_table "facilitators_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

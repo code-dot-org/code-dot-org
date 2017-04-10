@@ -21,8 +21,8 @@ class ExperimentTest < ActiveSupport::TestCase
 
   test "user based experiment at 50 percent is enabled for only some users" do
     experiment = create :user_based_experiment, percentage: 50
-    user_on = build :user, id: 1025 - experiment.id_offset
-    user_off = build :user, id: 1075 - experiment.id_offset
+    user_on = build :user, id: 1025 + experiment.min_user_id
+    user_off = build :user, id: 1075 + experiment.min_user_id
 
     assert_equal [experiment], Experiment.get_all_enabled(user: user_on)
     assert_empty Experiment.get_all_enabled(user: user_off)
@@ -40,8 +40,8 @@ class ExperimentTest < ActiveSupport::TestCase
 
   test "teacher based experiment at 50 percent is enabled for only some users" do
     experiment = create :teacher_based_experiment, percentage: 50
-    section_on = build :section, user_id: 1025 - experiment.id_offset
-    section_off = build :section, user_id: 1075 - experiment.id_offset
+    section_on = build :section, user_id: 1025 + experiment.min_user_id
+    section_off = build :section, user_id: 1075 + experiment.min_user_id
 
     assert_equal [experiment], Experiment.get_all_enabled(section: section_on)
     assert_empty Experiment.get_all_enabled(section: section_off)
