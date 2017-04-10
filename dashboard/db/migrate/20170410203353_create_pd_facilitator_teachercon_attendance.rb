@@ -7,17 +7,17 @@ class CreatePdFacilitatorTeacherconAttendance < ActiveRecord::Migration[5.0]
       t.date :tc1_depart
       t.date :fit1_arrive
       t.date :fit1_depart
-      t.string :tc1_program
+      t.string :fit1_course
       t.date :tc2_arrive
       t.date :tc2_depart
       t.date :fit2_arrive
       t.date :fit2_depart
-      t.string :tc2_program
+      t.string :fit2_course
       t.date :tc3_arrive
       t.date :tc3_depart
       t.date :fit3_arrive
       t.date :fit3_depart
-      t.string :tc3_program
+      t.string :fit3_course
     end
   end
 end
