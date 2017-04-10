@@ -115,14 +115,16 @@ class FirehoseClient {
    * @return {string | null} A unique user ID.
    */
   getAnalyticsUuid() {
-    if (!!window.localStorage && !!window.localStorage.getItem("analyticsID")) {
-      return window.localStorage.getItem("analyticsID");
+    try {
+      if (!!window.localStorage && !!window.localStorage.getItem("analyticsID")) {
+        return window.localStorage.getItem("analyticsID");
+      }
+    } catch (e) {
+      // ignore, create ID below
     }
     let analytics_uuid = createUuid();
-    if (trySetLocalStorage("analyticsID", analytics_uuid)) {
-      return analytics_uuid;
-    }
-    return null;
+    trySetLocalStorage("analyticsID", analytics_uuid);
+    return analytics_uuid;
   }
 
   /**
