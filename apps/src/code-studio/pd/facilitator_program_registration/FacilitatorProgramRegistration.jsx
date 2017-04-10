@@ -35,7 +35,6 @@ export default class FacilitatorProgramRegistration extends React.Component {
 
   handleChange(newState) {
     const data = Object.assign({}, this.state.data, newState);
-    console.log(data);
     this.setState({ data });
   }
 
@@ -116,6 +115,8 @@ export default class FacilitatorProgramRegistration extends React.Component {
         onChange={this.handleChange.bind(this)}
         errors={this.state.errors}
         data={this.state.data}
+        attendanceDates={this.props.attendanceDates}
+        teacherconLocation={this.props.teacherconLocation}
       />
     );
   }
@@ -187,5 +188,7 @@ export default class FacilitatorProgramRegistration extends React.Component {
 
 FacilitatorProgramRegistration.propTypes = {
   apiEndpoint: React.PropTypes.string.isRequired,
+  attendanceDates: React.PropTypes.object.isRequired,
   options: React.PropTypes.object.isRequired,
+  teacherconLocation: React.PropTypes.string.isRequired,
 };

@@ -73,7 +73,7 @@ export default class TravelInformation extends ProgramRegistrationComponent {
           })}
           {this.buildButtonsFromOptions({
             name: 'liveFarAway',
-            label: "Do you live more than 25 miles from downtown Houston?",
+            label: `Do you live more than 25 miles from downtown ${this.props.teacherconLocation}?`,
             type: 'radio'
           })}
           {this.buildButtonsFromOptions({
@@ -102,6 +102,10 @@ export default class TravelInformation extends ProgramRegistrationComponent {
     );
   }
 }
+
+TravelInformation.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
+  teacherconLocation: React.PropTypes.string.isRequired,
+});
 
 TravelInformation.associatedFields = [
   "addressStreet",
