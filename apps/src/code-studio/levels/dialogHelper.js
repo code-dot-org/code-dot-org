@@ -1,4 +1,4 @@
-/* globals appOptions, Dialog, CDOSounds */
+/* globals appOptions, CDOSounds */
 import $ from 'jquery';
 import experiments from '@cdo/apps/util/experiments';
 import React from 'react';
@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import StageAchievementDialog from '@cdo/apps/templates/StageAchievementDialog';
 import Feedback from '@cdo/apps/feedback';
 import { getResult } from './codeStudioLevels';
+import Dialog from '@cdo/apps/code-studio/dialog';
 
 /*
  * This file contains general logic for displaying modal dialogs
@@ -31,7 +32,7 @@ export function showDialog(type, callback, onHidden) {
 
   // Use our prefabricated dialog content.
   var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
-  var dialog = new window.Dialog({
+  var dialog = new Dialog({
     body: content,
     onHidden: onHidden || dialogHidden,
     autoResizeScrollableElement: '.scrollable-element'

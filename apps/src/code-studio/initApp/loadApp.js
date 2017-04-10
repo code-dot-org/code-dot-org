@@ -106,7 +106,6 @@ export function setupApp(appOptions) {
   // Sets up default options and initializes blockly
   var baseOptions = {
     containerId: 'codeApp',
-    Dialog: Dialog,
     cdoSounds: CDOSounds,
     position: {blockYCoordinateInterval: 25},
     onInitialize: function () {
