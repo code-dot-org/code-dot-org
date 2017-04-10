@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410181336) do
+ActiveRecord::Schema.define(version: 20170410203353) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -365,6 +365,26 @@ ActiveRecord::Schema.define(version: 20170410181336) do
     t.integer  "teachercon"
     t.index ["user_id", "teachercon"], name: "index_pd_fac_prog_reg_on_user_id_and_teachercon", unique: true, using: :btree
     t.index ["user_id"], name: "index_pd_facilitator_program_registrations_on_user_id", using: :btree
+  end
+
+  create_table "pd_facilitator_teachercon_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "user_id",     null: false
+    t.date    "tc1_arrive"
+    t.date    "tc1_depart"
+    t.date    "fit1_arrive"
+    t.date    "fit1_depart"
+    t.string  "tc1_program"
+    t.date    "tc2_arrive"
+    t.date    "tc2_depart"
+    t.date    "fit2_arrive"
+    t.date    "fit2_depart"
+    t.string  "tc2_program"
+    t.date    "tc3_arrive"
+    t.date    "tc3_depart"
+    t.date    "fit3_arrive"
+    t.date    "fit3_depart"
+    t.string  "tc3_program"
+    t.index ["user_id"], name: "index_pd_facilitator_teachercon_attendances_on_user_id", using: :btree
   end
 
   create_table "pd_sessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
