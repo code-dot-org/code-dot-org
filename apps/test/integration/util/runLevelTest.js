@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import sinon from 'sinon';
+import Dialog from '@cdo/apps/code-studio/dialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
@@ -15,6 +17,8 @@ function finished() {
   if (Blockly.mainBlockSpace) {
     Blockly.mainBlockSpace.clear();
   }
+  Dialog.prototype.show.reset();
+  Dialog.prototype.hide.reset();
   if (done) {
     done();
   }
@@ -90,21 +94,6 @@ function logError(msg) {
   console.log('Log: ' + msg + '\n');
 }
 
-function StubDialog(options) {
-  this.options = options;
-}
-
-StubDialog.prototype.show = function () {
-  if (this.options.body) {
-    // Examine content of the feedback in future tests?
-    // console.log(this.options.body.innerHTML);
-  }
-  finished();
-};
-
-StubDialog.prototype.hide = function () {
-};
-
 const appLoaders = {
   applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
   bounce: require('@cdo/apps/sites/studio/pages/init/loadBounce'),
@@ -121,6 +110,13 @@ const appLoaders = {
   weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
 };
 function runLevel(app, skinId, level, onAttempt, testData) {
+
+  sinon.stub(Dialog.prototype, 'show').callsFake(function () {
+    finished();
+  });
+
+  sinon.stub(Dialog.prototype, 'hide');
+
 
   var loadApp = appLoaders[app];
 
@@ -148,7 +144,6 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     channel: 'applab-channel-id',
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
-    Dialog: StubDialog,
     embed: testData.embed,
     // Fail fast if firebase is used without testData.useFirebase being specified.
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
