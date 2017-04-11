@@ -359,8 +359,7 @@
     students:
       dashboard: Go to Teacher Dashboard
     user_not_found: The teacher or student could not be found
-    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
-      for %{student_name}"
+    student_teacher_disassociated: You have removed %{teacher_name} as your teacher.
     panel:
       answer_viewer: "শিক্ষক প্যানেল"
       student: "ছাত্র"

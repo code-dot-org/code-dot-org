@@ -354,8 +354,7 @@
     students:
       dashboard: Go to Teacher Dashboard
     user_not_found: Guru atau pelajar tidak dapat dijumpai
-    student_teacher_disassociated: "%{teacher_name} telah dikeluarkan sebagai guru
-      %{student_name}"
+    student_teacher_disassociated: You have removed %{teacher_name} as your teacher.
     panel:
       answer_viewer: Panel Guru
       student: pelajar

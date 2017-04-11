@@ -360,7 +360,7 @@
     students:
       dashboard: "Żur il-Pannell tal-Kontroll tal-Għalliem"
     user_not_found: L-għalliem jew student ma nstabx
-    student_teacher_disassociated: "%{teacher_name} tneħħa bħala għalliem ta' %{student_name}"
+    student_teacher_disassociated: You have removed %{teacher_name} as your teacher.
     panel:
       answer_viewer: Werrej tar-risposta
       student: Student
