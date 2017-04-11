@@ -21,7 +21,7 @@ export default class ProgramRegistrationComponent extends React.Component {
     }
   }
 
-  buildSelectFieldGroupFromOptions({name, label, required, ...props}) {
+  buildSelectFieldGroupFromOptions({name, label, placeholder, required, ...props}) {
     return (
       <FieldGroup
         id={name}
@@ -32,6 +32,7 @@ export default class ProgramRegistrationComponent extends React.Component {
         value={this.props.data[name] || ''}
         required={required}
       >
+        {placeholder && <option key="placeholder">{placeholder}</option>}
         {Object.keys(this.props.options[name]).map(key => (
           <option key={key} value={key}>{this.props.options[name][key]}</option>
         ))}
