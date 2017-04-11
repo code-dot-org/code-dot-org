@@ -27,10 +27,29 @@ const importedByStage={
     teacherDescription: 'This is the new description of what the teacher will see'
   },
   'The Need for Addressing': {
-    studentDescription: 'This is the new description of what the student will see',
-    teacherDescription: 'This is the new description of what the teacher will see'
+    studentDescription: 'This is what the student will see',
+    teacherDescription: 'This is what the teacher will see'
   }
 };
+
+/**
+ * Hack that gives us a ref to a child so that we can modify it's state;
+ */
+const ModifyState = React.createClass({
+  propTypes: {
+    children: React.PropTypes.element,
+  },
+
+  componentDidMount() {
+    this.refs.child.setState(this.props);
+  },
+
+  render() {
+    const child = this.props.children;
+    return <child.type ref="child" {...child.props}/>;
+  }
+});
+
 
 export default storybook => {
   storybook
@@ -40,33 +59,34 @@ export default storybook => {
         name:'stage descriptions',
         story: () => (
           <StageDescriptions
-            isImporting={false}
             inputStyle={inputStyle}
             currentByStage={currentByStage}
-            importedByStage={{}}
           />
         )
       },
       {
         name:'While merging',
         story: () => (
-          <StageDescriptions
-            isImporting={true}
-            inputStyle={inputStyle}
-            currentByStage={currentByStage}
-            importedByStage={{}}
-          />
+          <ModifyState isImporting={true}>
+            <StageDescriptions
+              inputStyle={inputStyle}
+              currentByStage={currentByStage}
+            />
+          </ModifyState>
         )
       },
       {
         name:'stage descriptions with changes after merging',
         story: () => (
-          <StageDescriptions
-            isImporting={false}
-            inputStyle={inputStyle}
-            currentByStage={currentByStage}
+          <ModifyState
             importedByStage={importedByStage}
-          />
+            hasImported={true}
+          >
+            <StageDescriptions
+              inputStyle={inputStyle}
+              currentByStage={currentByStage}
+            />
+          </ModifyState>
         )
       }
     ]);
