@@ -129,8 +129,6 @@ describe('Level tests', function () {
     if (window.Applab) {
       sinon.stub(project, 'saveThumbnail');
       sinon.stub(project, 'isOwner').returns(true);
-      sinon.spy(Applab, 'pinVisualizationSize');
-      sinon.spy(Applab, 'clearVisualizationSize');
     }
 
     // For some reason, svg rendering is taking a long time in phantomjs. None
@@ -191,8 +189,6 @@ describe('Level tests', function () {
     if (window.Applab) {
       project.saveThumbnail.restore();
       project.isOwner.restore();
-      Applab.pinVisualizationSize.restore();
-      Applab.clearVisualizationSize.restore();
     }
 
     tickWrapper.reset();
