@@ -1,4 +1,4 @@
-var GameLabGame = function (p5Inst) {
+var GameLabWorld = function (p5Inst) {
   this.p5Inst = p5Inst;
 };
 
@@ -16,7 +16,7 @@ function createP5PropertyAlias(name, readonly) {
       this.p5Inst[name] = value;
     };
   }
-  Object.defineProperty(GameLabGame.prototype, name, options);
+  Object.defineProperty(GameLabWorld.prototype, name, options);
 }
 
 createP5PropertyAlias('width', READONLY);
@@ -26,8 +26,8 @@ createP5PropertyAlias('mouseY', READONLY);
 createP5PropertyAlias('allSprites', READONLY);
 createP5PropertyAlias('frameCount', READONLY);
 
-// Transform p5play's frameRate() API into a property on the GameLabGame object:
-Object.defineProperty(GameLabGame.prototype, 'frameRate', {
+// Transform p5play's frameRate() API into a property on the GameLabWorld object:
+Object.defineProperty(GameLabWorld.prototype, 'frameRate', {
   enumerable: true,
   get: function () {
     return this.p5Inst.frameRate();
@@ -37,4 +37,4 @@ Object.defineProperty(GameLabGame.prototype, 'frameRate', {
   }
 });
 
-module.exports = GameLabGame;
+module.exports = GameLabWorld;
