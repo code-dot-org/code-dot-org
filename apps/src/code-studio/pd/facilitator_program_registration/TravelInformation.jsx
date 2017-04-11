@@ -30,6 +30,7 @@ export default class TravelInformation extends ProgramRegistrationComponent {
             name: "addressState",
             label: "State:",
             required: true,
+            placeholder: "Choose your state"
           })}
           {this.buildFieldGroup({
             name: "addressZip",
