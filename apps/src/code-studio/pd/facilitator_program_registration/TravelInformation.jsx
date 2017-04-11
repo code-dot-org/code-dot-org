@@ -72,6 +72,18 @@ export default class TravelInformation extends ProgramRegistrationComponent {
             label: "Please list any dietary needs or food allergies you may have",
             type: 'check'
           })}
+          {this.props.data.dietaryNeeds &&
+            (
+              this.props.data.dietaryNeeds.includes("Food allergy") ||
+              this.props.data.dietaryNeeds.includes("Other")
+            ) &&
+            this.buildFieldGroup({
+              name: "dietaryNeedsNotes",
+              componentClass: "textarea",
+              label: "Please explain (optional):",
+              required: false,
+            })
+          }
           {this.buildButtonsFromOptions({
             name: 'liveFarAway',
             label: `Do you live more than 25 miles from downtown ${this.props.teacherconLocation}?`,
