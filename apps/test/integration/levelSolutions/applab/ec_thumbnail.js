@@ -6,6 +6,7 @@ import {expect} from '../../../util/configuredChai';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {CAPTURE_TICK_COUNT} from '@cdo/apps/applab/constants';
 import * as thumbnailUtils from '@cdo/apps/util/thumbnail';
+import {isCaptureComplete} from '@cdo/apps/applab/applabThumbnail';
 
 export default {
   app: "applab",
@@ -21,8 +22,8 @@ export default {
       runBeforeClick(assert) {
         project.saveThumbnail.resolves();
         tickWrapper.runOnAppTick(Applab, CAPTURE_TICK_COUNT + 1, () => {
-          expect(Applab.isCaptureComplete()).to.be.false;
-          tickWrapper.tickAppUntil(Applab, Applab.isCaptureComplete).then(() => {
+          expect(isCaptureComplete()).to.be.false;
+          tickWrapper.tickAppUntil(Applab, isCaptureComplete).then(() => {
             expect(project.saveThumbnail).to.have.been.calledOnce;
             Applab.onPuzzleComplete();
           }).catch(e => {
@@ -54,8 +55,8 @@ export default {
         project.saveThumbnail.rejects('foobar');
         sinon.stub(console, 'log');
         tickWrapper.runOnAppTick(Applab, CAPTURE_TICK_COUNT + 1, () => {
-          expect(Applab.isCaptureComplete()).to.be.false;
-          tickWrapper.tickAppUntil(Applab, Applab.isCaptureComplete).then(() => {
+          expect(isCaptureComplete()).to.be.false;
+          tickWrapper.tickAppUntil(Applab, isCaptureComplete).then(() => {
             expect(project.saveThumbnail).to.have.been.calledOnce;
 
             expect(console.log).to.have.been.calledOnce;
@@ -92,8 +93,8 @@ export default {
         sinon.stub(thumbnailUtils, 'html2canvas').rejects('foobar');
         sinon.stub(console, 'log');
         tickWrapper.runOnAppTick(Applab, CAPTURE_TICK_COUNT + 1, () => {
-          expect(Applab.isCaptureComplete()).to.be.false;
-          tickWrapper.tickAppUntil(Applab, Applab.isCaptureComplete).then(() => {
+          expect(isCaptureComplete()).to.be.false;
+          tickWrapper.tickAppUntil(Applab, isCaptureComplete).then(() => {
             expect(project.saveThumbnail).not.to.have.been.called;
 
             expect(thumbnailUtils.html2canvas).to.have.been.calledOnce;
