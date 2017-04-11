@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import sinon from 'sinon';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
@@ -23,7 +25,7 @@ function finished() {
 
 module.exports = function (testCollection, testData, dataItem, done) {
   cb = done;
-  var data = dataItem();
+  dataItem();
   var app = testCollection.app;
 
   // skin shouldn't matter for most cases
@@ -86,24 +88,12 @@ module.exports = function (testCollection, testData, dataItem, done) {
   runLevel(app, skinId, level, validateResult, testData);
 };
 
-function logError(msg) {
-  console.log('Log: ' + msg + '\n');
-}
-
-function StubDialog(options) {
-  this.options = options;
-}
-
-StubDialog.prototype.show = function () {
-  if (this.options.body) {
-    // Examine content of the feedback in future tests?
-    // console.log(this.options.body.innerHTML);
-  }
+sinon.stub(LegacyDialog.prototype, 'show').callsFake(function () {
   finished();
-};
+});
 
-StubDialog.prototype.hide = function () {
-};
+sinon.stub(LegacyDialog.prototype, 'hide');
+
 
 const appLoaders = {
   applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
@@ -121,7 +111,6 @@ const appLoaders = {
   weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
 };
 function runLevel(app, skinId, level, onAttempt, testData) {
-
   var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
@@ -148,7 +137,6 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     channel: 'applab-channel-id',
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
-    Dialog: StubDialog,
     embed: testData.embed,
     // Fail fast if firebase is used without testData.useFirebase being specified.
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',

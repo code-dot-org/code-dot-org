@@ -25,10 +25,11 @@ var testCollectionUtils = require('./util/testCollectionUtils');
 
 var testUtils = require('../util/testUtils');
 testUtils.setExternalGlobals();
-import {setupBlocklyFrame, getStudioAppSingleton} from './util/testBlockly';
+import {setupBlocklyFrame} from './util/testBlockly';
 
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
+// eslint-disable-next-line
 var example = {
   // app name
   app: "turtle",
@@ -82,7 +83,6 @@ function loadSource(src) {
 }
 
 describe('Level tests', function () {
-  var studioApp;
   var originalRender;
   var clock, tickInterval;
 
@@ -120,7 +120,6 @@ describe('Level tests', function () {
     clock = sinon.useFakeTimers(Date.now());
 
     setupBlocklyFrame();
-    studioApp = getStudioAppSingleton();
 
     wrappedEventListener.attach();
 

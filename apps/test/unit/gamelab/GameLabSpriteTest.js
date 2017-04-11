@@ -133,13 +133,13 @@ describe('GameLabSprite', function () {
       var sprite3 = createSprite(150, 150, 100, 100);
       var sprite4 = createSprite(200, 200, 100, 100);
       var isTouching3to4 = sprite3.isTouching(sprite4);
-      var isTouching4to3 = sprite4.isTouching(sprite3);
+      sprite4.isTouching(sprite3);
       expect(isTouching3to4).to.equal(true).and.to.equal(isTouching3to4);
 
       var sprite5 = createSprite(101, 101, 100, 100);
       var sprite6 = createSprite(200, 200, 100, 100);
       var isTouching5to6 = sprite5.isTouching(sprite6);
-      var isTouching6to5 = sprite6.isTouching(sprite5);
+      sprite6.isTouching(sprite5);
       expect(isTouching5to6).to.equal(true).and.to.equal(isTouching5to6);
     });
 
