@@ -43,8 +43,8 @@ Object.defineProperty(GameLabGame.prototype, 'frameRate', {
 Object.defineProperty(GameLabGame.prototype, 'seconds', {
   enumerable: true,
   get: function () {
-    let currentDate = new Date();
-    let currentTime = currentDate.getTime();
+    const currentDate = new Date();
+    const currentTime = currentDate.getTime();
     return Math.round((currentTime - this.startTime) / 1000);
   }
 });
