@@ -2,8 +2,8 @@ import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
 import {assert} from './configuredChai';
-import project from '@cdo/apps/code-studio/initApp/project';
-import * as assets from '@cdo/apps/code-studio/assets';
+const project = require('@cdo/apps/code-studio/initApp/project');
+const assets = require('@cdo/apps/code-studio/assets');
 import i18n from '@cdo/apps/code-studio/i18n';
 
 export function setExternalGlobals() {
