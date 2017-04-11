@@ -43,7 +43,6 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     :how_traveling,
     :need_hotel,
     :need_ada,
-    :photo_release,
     :liability_waiver,
     :gender,
     :race,
@@ -51,7 +50,6 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     :grades_taught,
     :grades_planning_to_teach,
     :subjects_taught,
-    :cs_years_taught,
   ].freeze
 
   OTHER = 'Other'.freeze
