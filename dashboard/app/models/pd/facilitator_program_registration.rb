@@ -57,6 +57,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
   TEACHERCON_DECLINE = 'No - I\'m no longer interested'.freeze
   TEACHERCON_ALTERNATE = 'No - but I need to attend a different date.'.freeze
   TRAINING_DECLINE = 'No'.freeze
+  TRAINING_ALTERNATE = 'I want to participate in the program, but I\'m no longer able to attend these dates.'.freeze
   TRAINING_ALTERNATE_DECLINE = 'I am no longer interested in the Code.org Facilitator Development Program.'.freeze
 
   OPTIONS = {
@@ -78,7 +79,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     ],
 
     decline_training_date: [
-      'I want to participate in the program, but I\'m no longer able to attend these dates.',
+      TRAINING_ALTERNATE,
       TRAINING_ALTERNATE_DECLINE
     ],
 
@@ -213,6 +214,13 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
 
     if hash.try(:[], :confirm_training_date) == TRAINING_DECLINE
       add_key_error(:decline_training_date) unless hash.key?(:decline_training_date)
+    end
+
+    if hash.try(:[], :decline_training_date) == TRAINING_ALTERNATE
+      unless hash.key?(:csd_alternate_training_date) || hash.key?(:csp_alternate_training_date)
+        add_key_error(:csd_alternate_training_date)
+        add_key_error(:csp_alternate_training_date)
+      end
     end
 
     if hash.try(:[], :confirm_teachercon_date) == TEACHERCON_DECLINE || hash.try(:[], :confirm_training_date) == TRAINING_DECLINE
