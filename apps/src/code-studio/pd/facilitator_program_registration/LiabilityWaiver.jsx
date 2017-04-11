@@ -12,7 +12,7 @@ export default class LiabilityWaiver extends ProgramRegistrationComponent {
             I understand that by registering for and attending a
             Code.org-sponsored professional learning event, including but not
             limited to Facilitation Training Events and TeacherCon, I am
-            agreeing to the terms of this Waiver & Release of Liability.
+            agreeing to the terms of this Waiver & Release of Liability. &nbsp;
           </em>
           All attendees are asked to agree to this form before completing
           registration for this event.
