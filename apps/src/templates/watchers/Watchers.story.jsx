@@ -3,6 +3,13 @@ import Immutable from 'immutable';
 import {Watchers} from './Watchers';
 
 export default storybook => {
+  const defaultProps = {
+    debugButtons: false,
+    add: () => {},
+    update: () => {},
+    remove: () => {},
+  };
+
   storybook
     .storiesOf('Watchers', module)
     .addStoryTable([
@@ -11,7 +18,8 @@ export default storybook => {
         story: () => (
           <div style={{width: 100, height: 100}}>
             <Watchers
-              watchedExpressions={[]}
+              {...defaultProps}
+              watchedExpressions={Immutable.List()}
               isRunning={true}
             />
           </div>
@@ -22,6 +30,7 @@ export default storybook => {
         story: () => (
           <div style={{width: 100, height: 100}}>
             <Watchers
+              {...defaultProps}
               watchedExpressions={Immutable.fromJS([{expression: 'cool', uuid: 1234}])}
               isRunning={true}
             />

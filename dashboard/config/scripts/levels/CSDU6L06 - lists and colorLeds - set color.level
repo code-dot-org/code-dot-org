@@ -88,12 +88,9 @@
     "markdown_instructions": "# Adding Some Color\r\n\r\nYou probably noticed when you used `colorLeds[0].on()` in the last level, the LEDs turned on as white. If you don't specify a color, `on()` will turn on all three parts of the LED (red, green, and blue) to produce white. You'll see a new command in the toolbox called `colorLeds[0].color()` which lets you specify a color, either as a string like \"blue\" or an RGB value using color `color()` command.\r\n\r\n# Do This\r\n\r\nUse the `.color()` command to set each of the color LEDs to a different color.",
     "start_blocks": "colorLeds[0].color(\"teal\");",
     "hide_share_and_remix": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

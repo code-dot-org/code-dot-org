@@ -1,5 +1,4 @@
 import {assert} from '../util/configuredChai';
-var testUtils = require('./../util/testUtils');
 
 
 function setGlobals() {
@@ -30,9 +29,6 @@ function createFakeSkin() {
 }
 
 var skin = createFakeSkin();
-
-var Q = 0; // question mark index
-var FC = 12; // flower comb index
 
 function validateImages(setup, defaultFlower) {
 

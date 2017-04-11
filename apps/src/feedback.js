@@ -2,10 +2,10 @@
 
 import $ from 'jquery';
 import { getStore } from './redux';
-import { trySetLocalStorage } from './utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ClientState from '@cdo/apps/code-studio/clientState';
+import ClientState from './code-studio/clientState';
+import LegacyDialog from './code-studio/LegacyDialog';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -42,8 +42,6 @@ var authoredHintUtils = require('./authoredHintUtils');
 import experiments from './util/experiments';
 import AchievementDialog from './templates/AchievementDialog';
 import StageAchievementDialog from './templates/StageAchievementDialog';
-
-const POINTS_KEY = 'tempPoints';
 
 /**
  * @typedef {Object} TestableBlock
@@ -197,7 +195,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 
-  if (experiments.isEnabled('gamification')) {
+  if (!options.level.freePlay && experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
     const hintsUsed = (options.response.hints_used || 0) +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
@@ -232,24 +230,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       };
     }
 
-    let totalPoints = 0;
-    if (experiments.isEnabled('g.bannermode')) {
-      const newPoints = 1 +
-        (isFinite(idealBlocks) && actualBlocks <= idealBlocks ? 1 : 0) +
-        (hintsUsed < 2 ? 1 : 0);
-
-      let pointsData = JSON.parse(localStorage.getItem(POINTS_KEY) || '{}');
-      if (typeof pointsData !== 'object') {
-        pointsData = {};
-      }
-      pointsData[window.appOptions.serverLevelId] = newPoints;
-      trySetLocalStorage(POINTS_KEY, JSON.stringify(pointsData));
-
-      for (let id in pointsData) {
-        totalPoints += pointsData[id];
-      }
-    }
-
     document.body.appendChild(container);
     ReactDOM.render(
       <AchievementDialog
@@ -259,8 +239,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         hintsUsed={hintsUsed}
         assetUrl={this.studioApp_.assetUrl}
         onContinue={onContinue}
-        bannerMode={experiments.isEnabled('g.bannermode')}
-        totalPoints={totalPoints}
         showStageProgress={experiments.isEnabled('g.stageprogress')}
         oldStageProgress={progress.oldStageProgress}
         newPassedProgress={progress.newPassedProgress}
@@ -271,7 +249,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
 
   var feedbackDialog = this.createModalDialog({
-    Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
     defaultBtnSelector: defaultBtnSelector,
@@ -439,11 +416,16 @@ FeedbackUtils.calculateStageProgress = function (
   const progress = ClientState.allLevelsProgress();
   const oldFinishedHints = authoredHintUtils.getOldFinishedHints();
 
-  let numPassed = 0,
+  let numLevels = 0,
+    numPassed = 0,
     numPerfect = 0,
     numZeroHints = 0,
     numOneHint = 0;
   for (let i = 0; i < levels.length; i++) {
+    if (levels[i].freePlay) {
+      continue;
+    }
+    numLevels++;
     if (levels[i].ids.indexOf(currentLevelId) !== -1 ) {
       continue;
     }
@@ -462,10 +444,10 @@ FeedbackUtils.calculateStageProgress = function (
     }
   }
 
-  const passedScore = numPassed / levels.length;
-  const perfectScore = numPerfect / levels.length;
-  const hintScore = numZeroHints / levels.length +
-    0.5 * numOneHint / levels.length;
+  const passedScore = numPassed / numLevels;
+  const perfectScore = numPerfect / numLevels;
+  const hintScore = numZeroHints / numLevels +
+    0.5 * numOneHint / numLevels;
   const oldStageProgress = 0.3 * passedScore +
     0.4 * perfectScore +
     0.3 * hintScore;
@@ -483,9 +465,9 @@ FeedbackUtils.calculateStageProgress = function (
   const passedWeight = finiteIdealBlocks ? 0.3 : 0.7;
   const perfectWeight = finiteIdealBlocks ? 0.4 : 0;
 
-  const newPassedProgress = newPassedLevels * passedWeight / levels.length;
-  const newPerfectProgress = newPerfectLevels * perfectWeight / levels.length;
-  const newHintUsageProgress = newHintUsageLevels * 0.3 / levels.length;
+  const newPassedProgress = newPassedLevels * passedWeight / numLevels;
+  const newPerfectProgress = newPerfectLevels * perfectWeight / numLevels;
+  const newHintUsageProgress = newHintUsageLevels * 0.3 / numLevels;
 
   const newStageProgress = oldStageProgress +
     newPassedProgress +
@@ -1049,12 +1031,11 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
 
 /**
  * Display the 'Show Code' modal dialog.
- * @param {Dialog} Dialog
  * @param {Object} [appStrings] - optional app strings to override
  * @param {string} [appStrings.generatedCodeDescription] - string
  *        to display instead of the usual show code description
  */
-FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
+FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   var codeDiv = document.createElement('div');
 
   var generatedCodeProperties = this.getGeneratedCodeProperties_({
@@ -1067,7 +1048,6 @@ FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
   </div>, codeDiv);
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: codeDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#ok-button'
@@ -1087,8 +1067,8 @@ FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
  * Display the "Clear Puzzle" confirmation dialog.  Takes a parameter to hide
  * the icon.  Calls `callback` if the user confirms they want to clear the puzzle.
  */
-FeedbackUtils.prototype.showClearPuzzleConfirmation = function (Dialog, hideIcon, callback) {
-  this.showSimpleDialog(Dialog, {
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function (hideIcon, callback) {
+  this.showSimpleDialog({
     headerText: msg.clearPuzzleConfirmHeader(),
     bodyText: msg.clearPuzzleConfirm(),
     confirmText: msg.clearPuzzle(),
@@ -1122,7 +1102,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (Dialog, hideIcon
  * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
-FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
+FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var textBoxStyle = {
     marginBottom: 10
   };
@@ -1144,7 +1124,6 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     document.createElement('div'));
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: contentDiv,
     icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button'
@@ -1185,7 +1164,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
 /**
  *
  */
-FeedbackUtils.prototype.showToggleBlocksError = function (Dialog) {
+FeedbackUtils.prototype.showToggleBlocksError = function () {
   var contentDiv = document.createElement('div');
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
@@ -1196,7 +1175,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function (Dialog) {
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: contentDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#ok-button'
@@ -1530,9 +1508,26 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
 };
 
 /**
+ * Fire off a click event in a cross-browser supported manner. This code is
+ * similar to Blockly.fireUIEvent (without taking a Blockly dependency).
+ */
+function simulateClick(element) {
+  if (document.createEvent) {
+    // W3
+    const evt = document.createEvent('UIEvents');
+    evt.initEvent('click', true, true);  // event type, bubbling, cancelable
+    element.dispatchEvent(evt);
+  } else if (document.createEventObject) {
+    // MSIE
+    element.fireEvent('onClick', document.createEventObject());
+  } else {
+    throw 'FireEvent: No event creation mechanism.';
+  }
+}
+
+/**
  * Show a modal dialog without an icon.
  * @param {Object} options
- * @param {Dialog} options.Dialog
  * @param {string} options.icon
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
@@ -1565,13 +1560,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function (e) {
     if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
-      // Simulate a 'click':
-      var event = new MouseEvent('click', {
-        view: window,
-        bubbles: true,
-        cancelable: true
-      });
-      btn.dispatchEvent(event);
+      simulateClick(btn);
 
       e.stopPropagation();
       e.preventDefault();
@@ -1580,7 +1569,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
 
   var scrollableSelector = options.scrollableSelector || '.modal-content';
   var elementToScroll = options.scrollContent ? scrollableSelector : null;
-  return new options.Dialog({
+  return new LegacyDialog({
     body: modalBody,
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,
