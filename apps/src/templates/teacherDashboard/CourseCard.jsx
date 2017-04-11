@@ -124,20 +124,12 @@ const CourseCard = React.createClass({
   tooltipContent() {
     const { cardData } = this.props;
     const sections = cardData.assignedSections.slice(0,2).join(", ");
-
-    if (cardData.assignedSections.length > 2) {
-      return (
-        <span style={styles.tooltip}>
-          Assigned to {sections} ...
-        </span>
-      );
-    } else {
-      return (
-          <span style={styles.tooltip}>
-            Assigned to {sections}
-          </span>
-      );
-    }
+    const ellipsis = (cardData.assignedSections.length > 2 ? " ..." : "");
+    return (
+      <span style={styles.tooltip}>
+        Assigned to {sections}{ellipsis}
+      </span>
+    );
   },
 
   render() {
