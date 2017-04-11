@@ -28,10 +28,12 @@ require 'full-name-splitter'
 require 'rambling-trie'
 
 class Section < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :user
   alias_attribute :teacher, :user
 
-  has_many :followers, dependent: :restrict_with_error
+  has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 
   has_many :students, -> {order('name')}, through: :followers, source: :student_user
