@@ -13,7 +13,7 @@ gem 'rails', '~> 5.0.1'
 gem 'rails-controller-testing'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
-# Ref: https://github.com/rails/sprockets/pull/469
+# Ref: https://github.com/rails/sprockets/pull/470
 gem 'sprockets', github: 'wjordan/sprockets', ref: 'concurrent_asset_bundle_3.x'
 gem 'sprockets-rails'
 
