@@ -98,7 +98,7 @@ const CourseCard = React.createClass({
     })
   },
 
-  checkEnrollment() {
+  renderEnrollmentIcon() {
     const { cardData } = this.props;
     const tooltipId = _.uniqueId();
 
@@ -147,7 +147,7 @@ const CourseCard = React.createClass({
       <div style={styles.card}>
         <img src={require('../../../static/navcard-placeholder.png')} style={styles.image}/>
 
-        {this.checkEnrollment()}
+        {this.renderEnrollmentIcon()}
 
         <h2 style={styles.courseName}>
           {cardData.courseName}
