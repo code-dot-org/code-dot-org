@@ -114,13 +114,13 @@ describe("Applab Screens Reducer", function () {
       describe("and when sources and channels finish loading", () => {
         var sourcesSuccess, sourcesFail,
             channelsSuccess, channelsFail,
-            assetsSuccess, assetsFail,
-            existingAssetsSuccess, existingAssetsFail;
+            assetsSuccess,
+            existingAssetsSuccess;
         beforeEach(() => {
           [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.firstCall.args;
           [, , channelsSuccess, channelsFail] = channelsApi.ajax.firstCall.args;
-          [existingAssetsSuccess, existingAssetsFail] = assetsApi.getFiles.firstCall.args;
-          [assetsSuccess, assetsFail] = assetsApi.getFiles.secondCall.args;
+          [existingAssetsSuccess] = assetsApi.getFiles.firstCall.args;
+          [assetsSuccess] = assetsApi.getFiles.secondCall.args;
         });
 
         describe("and sources fail", () => {
@@ -162,7 +162,7 @@ describe("Applab Screens Reducer", function () {
 
   describe("the importIntoProject action", () => {
 
-    var designModeViz, resolve, reject;
+    var resolve, reject;
 
     beforeEach(() => {
       sinon.stub(importFuncs, 'importScreensAndAssets').returns(

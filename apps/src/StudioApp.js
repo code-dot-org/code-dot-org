@@ -1,4 +1,4 @@
-/* global trackEvent, Blockly, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, droplet, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
@@ -34,7 +34,11 @@ var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import SmallFooter from './code-studio/components/SmallFooter';
+import project from './code-studio/initApp/project';
+import assets from './code-studio/assets';
+import i18n from './code-studio/i18n';
+import AbuseError from './code-studio/components/abuse_error';
 
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import { getStore, registerReducers } from './redux';
@@ -95,7 +99,6 @@ function StudioApp() {
    * @type {AudioPlayer}
    */
   this.cdoSounds = null;
-  this.Dialog = null;
   /**
    * @type {?Droplet.Editor}
    */
@@ -236,7 +239,6 @@ StudioApp.prototype.configure = function (options) {
   }
 
   this.cdoSounds = options.cdoSounds;
-  this.Dialog = options.Dialog;
 
   // Bind assetUrl to the instance so that we don't need to depend on callers
   // binding correctly as they pass this function around.
@@ -289,7 +291,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
-    isOwner: dashboard.project.isOwner(),
+    isOwner: project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
     onTooYoung: config.shareWarningInfo.onTooYoung,
@@ -340,7 +342,7 @@ StudioApp.prototype.init = function (config) {
 
     // Pre-populate asset list
     assetsApi.getFiles(result => {
-      dashboard.assets.listStore.reset(result.files);
+      assets.listStore.reset(result.files);
     }, xhr => {
       // Unable to load asset list
     });
@@ -409,11 +411,11 @@ StudioApp.prototype.init = function (config) {
             dropletError: !nonDropletError,
             fromBlocks: fromBlocks
           });
-          this.feedback_.showToggleBlocksError(this.Dialog);
+          this.feedback_.showToggleBlocksError();
         }
         this.onDropletToggle_();
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
+        this.feedback_.showGeneratedCode(config.appStrings);
       }
     }, this));
   }
@@ -538,7 +540,7 @@ StudioApp.prototype.init = function (config) {
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function () {
-      this.feedback_.showClearPuzzleConfirmation(this.Dialog, hideIcon, (function () {
+      this.feedback_.showClearPuzzleConfirmation(hideIcon, (function () {
         this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
@@ -548,7 +550,7 @@ StudioApp.prototype.init = function (config) {
 
   if (this.isUsingBlockly() && Blockly.contractEditor) {
     Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
-      this.feedback_.showSimpleDialog(this.Dialog, {
+      this.feedback_.showSimpleDialog({
         headerText: undefined,
         bodyText: msg.examplesFailedOnClose(),
         cancelText: msg.ignore(),
@@ -574,7 +576,6 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
     var contentDiv = document.createElement('div');
     var dialog = this.createModalDialog({
-      Dialog: this.Dialog,
       contentDiv: contentDiv,
       defaultBtnSelector: 'again-button',
       id: 'showVersionsModal'
@@ -775,7 +776,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
-    baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
+    baseMoreMenuString: i18n.t('footer.built_on_code_studio'),
     baseStyle: {
       paddingLeft: 0,
       width: $("#visualization").width()
@@ -783,32 +784,32 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     className: 'dark',
     menuItems: [
       {
-        text: window.dashboard.i18n.t('footer.try_hour_of_code'),
+        text: i18n.t('footer.try_hour_of_code'),
         link: 'https://code.org/learn',
         newWindow: true
       },
       {
-        text: window.dashboard.i18n.t('footer.report_abuse'),
+        text: i18n.t('footer.report_abuse'),
         link: "/report_abuse",
         newWindow: true
       },
       {
-        text: window.dashboard.i18n.t('footer.how_it_works'),
+        text: i18n.t('footer.how_it_works'),
         link: location.href + "/edit",
         newWindow: false
       },
       {
-        text: window.dashboard.i18n.t('footer.copyright'),
+        text: i18n.t('footer.copyright'),
         link: '#',
         copyright: true
       },
       {
-        text: window.dashboard.i18n.t('footer.tos'),
+        text: i18n.t('footer.tos'),
         link: "https://code.org/tos",
         newWindow: true
       },
       {
-        text: window.dashboard.i18n.t('footer.privacy'),
+        text: i18n.t('footer.privacy'),
         link: "https://code.org/privacy",
         newWindow: true
       }
@@ -955,8 +956,7 @@ StudioApp.prototype.inject = function (div, options) {
     rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
-    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_,
-        this.Dialog)
+    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
   Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
@@ -1052,7 +1052,6 @@ StudioApp.prototype.arrangeBlockPosition = function (startBlocks, arrangement) {
 };
 
 StudioApp.prototype.createModalDialog = function (options) {
-  options.Dialog = utils.valueOr(options.Dialog, this.Dialog);
   return this.feedback_.createModalDialog(options);
 };
 
@@ -1463,7 +1462,6 @@ StudioApp.prototype.clearHighlighting = function () {
 *     this.TestResults).
 */
 StudioApp.prototype.displayFeedback = function (options) {
-  options.Dialog = this.Dialog;
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
@@ -1923,8 +1921,8 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
           ReactDOM.render(React.createElement(WireframeButtons, {
-            channelId: dashboard.project.getCurrentId(),
-            appType: dashboard.project.getStandaloneApp(),
+            channelId: project.getCurrentId(),
+            appType: project.getStandaloneApp(),
             isLegacyShare: options.isLegacyShare,
           }), div);
         }
@@ -1982,9 +1980,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   }
 
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
-  // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
+  // We didn't have access to project.useFirebase() when dropletConfig
   // was initialized, so include it initially, and conditionally remove it here.
-  if (!window.dashboard.project.useFirebase()) {
+  if (!project.useFirebase()) {
     // Remove onRecordEvent from the palette
     delete config.level.codeFunctions.onRecordEvent;
 
@@ -1998,9 +1996,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   }
 
   // Remove maker API blocks from palette and autocomplete, unless maker APIs are enabled.
-  // We didn't have access to window.dashboard.project.useMakerAPIs() when dropletConfig
+  // We didn't have access to project.useMakerAPIs() when dropletConfig
   // was initialized, so include it initially, and conditionally remove it here.
-  if (!window.dashboard.project.useMakerAPIs()) {
+  if (!project.useMakerAPIs()) {
     //// Remove maker blocks from the palette
     makerDropletBlocks.forEach(block => {
       delete config.level.codeFunctions[block.func];
@@ -2093,7 +2091,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     config.dropletConfig,
     config.level.codeFunctions,
     config.level.autocompletePaletteApisOnly,
-    this.Dialog,
     config.app);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
@@ -2762,13 +2759,16 @@ StudioApp.prototype.displayAlert = function (selector, props, alertContents) {
  * If the current project is considered abusive, display a small alert box
  */
 StudioApp.prototype.alertIfAbusiveProject = function () {
-  if (window.dashboard && dashboard.project &&
-      dashboard.project.exceedsAbuseThreshold()) {
-    var i18n = {
-      tos: window.dashboard.i18n.t('project.abuse.tos'),
-      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-    };
-    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
+  if (project.exceedsAbuseThreshold()) {
+    this.displayWorkspaceAlert(
+      'error',
+      <AbuseError
+        i18n={{
+          tos: i18n.t('project.abuse.tos'),
+          contact_us: i18n.t('project.abuse.contact_us')
+        }}
+      />
+    );
   }
 };
 
@@ -2777,13 +2777,16 @@ StudioApp.prototype.alertIfAbusiveProject = function () {
  * display a small alert box.
  */
 StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function () {
-  if (window.dashboard && dashboard.project &&
-      dashboard.project.hasPrivacyProfanityViolation()) {
-    var i18n = {
-      tos: window.dashboard.i18n.t('project.abuse.policy_violation'),
-      contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
-    };
-    this.displayWorkspaceAlert('error', <dashboard.AbuseError i18n={i18n}/>);
+  if (project.hasPrivacyProfanityViolation()) {
+    this.displayWorkspaceAlert(
+      'error',
+      <AbuseError
+        i18n={{
+          tos: i18n.t('project.abuse.policy_violation'),
+          contact_us: i18n.t('project.abuse.contact_us')
+        }}
+      />
+    );
   }
 };
 
@@ -2911,8 +2914,8 @@ StudioApp.prototype.showRateLimitAlert = function () {
   }
 
   logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
-    isEditing: window.dashboard.project.isEditing(),
-    isOwner: window.dashboard.project.isOwner(),
+    isEditing: project.isEditing(),
+    isOwner: project.isOwner(),
     share: !!this.share,
   });
 };

@@ -3,9 +3,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.9":
-  version "1.6.9"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.9.tgz#151a0dc7e6ec85603f5aa0abdb40910cbadf2d62"
+"@code-dot-org/blockly@1.6.12":
+  version "1.6.12"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.12.tgz#f3e5523460d8ab0f6f20787c8a9d8d1de707ce12"
 
 "@code-dot-org/bramble@0.1.13":
   version "0.1.13"

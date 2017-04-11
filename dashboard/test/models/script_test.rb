@@ -4,7 +4,9 @@ require 'cdo/shared_constants'
 class ScriptTest < ActiveSupport::TestCase
   include SharedConstants
 
-  def setup
+  self.use_transactional_test_case = true
+
+  setup_all do
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'

@@ -230,6 +230,8 @@ window.SignupManager = function (options) {
       // (But we left it showing in the form UI in case they
       // reattempt.)
       $.grep(formData, e => e.name === "user[email]")[0].value = "";
+      $.grep(formData, e => e.name.startsWith("user[school_info_attributes]"))
+        .forEach(x => x.value = "");
     }
 
     // Hide all errors that might be showing from a previous attempt.
