@@ -12,5 +12,6 @@ describe('seconds', function () {
 
     let gameLabGame = new GameLabGame({});
     expect(gameLabGame.seconds).to.equal(5);
+    Date.prototype.getTime.restore();
   });
 });
