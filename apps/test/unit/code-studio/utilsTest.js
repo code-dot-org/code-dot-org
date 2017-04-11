@@ -5,7 +5,6 @@ import {
   queryParams,
   updateQueryParam
 } from '@cdo/apps/code-studio/utils';
-import sinon from 'sinon';
 
 describe('utils', () => {
   let fakeWindowLocation = {
