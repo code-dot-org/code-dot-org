@@ -7,7 +7,7 @@ import _ from 'lodash';
 import popupWindow from './popup-window';
 import ShareDialog from './components/ShareDialog';
 import progress from './progress';
-import Dialog from './dialog';
+import Dialog from './LegacyDialog';
 import {Provider} from 'react-redux';
 
 /**

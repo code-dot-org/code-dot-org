@@ -1,4 +1,3 @@
-var testUtils = require('../../../util/testUtils');
 var studioApp = require('@cdo/apps/StudioApp').singleton;
 
 module.exports = {
