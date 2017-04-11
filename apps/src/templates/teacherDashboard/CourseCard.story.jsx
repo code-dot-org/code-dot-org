@@ -9,6 +9,16 @@ const EXAMPLE_CARD_DATA = {
   assignedSections: [] //<-- this info will be used in the tooltip
 };
 
+const ENROLLED_ONE = {
+   ...EXAMPLE_CARD_DATA,
+   assignedSections: ["Section 1"]
+ };
+
+ const ENROLLED_MANY = {
+    ...EXAMPLE_CARD_DATA,
+    assignedSections: ["Section 1", "Section 2", "Section 3"]
+  };
+
 export default storybook => {
   return storybook
     .storiesOf('CourseCard', module)
@@ -27,7 +37,7 @@ export default storybook => {
         description: `This is an example course card where the teacher does have a section enrolled in the course.`,
         story: () => (
           <CourseCard
-            cardData={EXAMPLE_CARD_DATA}
+            cardData={ENROLLED_ONE}
           />
         )
       },
@@ -36,7 +46,7 @@ export default storybook => {
         description: `This is an example course card where the teacher has multiple sections enrolled in the course.`,
         story: () => (
           <CourseCard
-            cardData={EXAMPLE_CARD_DATA}
+            cardData={ENROLLED_MANY}
           />
         )
       },

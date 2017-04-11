@@ -1,8 +1,9 @@
 import React from 'react';
 import color from "../../util/color";
-// import ReactTooltip from 'react-tooltip';
+import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
+import _ from 'lodash';
 
 const styles = {
   card: {
@@ -30,7 +31,7 @@ const styles = {
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 5,
-    marginTop: 20,
+    marginTop: 15,
     fontSize: 18,
     fontFamily: '"Gotham 3r", sans-serif',
     color: 'rgba(255, 255, 255, .9)',
@@ -83,8 +84,7 @@ const styles = {
   linkBox: {
     display: 'block',
     paddingBottom: 10
-  }
-
+  },
 };
 
 const CourseCard = React.createClass({
@@ -100,12 +100,43 @@ const CourseCard = React.createClass({
 
   checkEnrollment() {
     const { cardData } = this.props;
+    const tooltipId = _.uniqueId();
+
     if (cardData.assignedSections.length > 0) {
-      //display the checkmark
       return (
-        <FontAwesome icon="check" style={styles.checkIcon}/>
+        <span>
+          <FontAwesome icon="check" style={styles.checkIcon} data-tip data-for={tooltipId}/>
+
+          <ReactTooltip
+            id={tooltipId}
+            role="tooltip"
+            wrapper="span"
+            effect="solid"
+            place="top"
+          >
+            {this.tooltipContent()}
+          </ReactTooltip>
+        </span>
       );
-        //the checkmark should have a tooltip that maps the assigned sections
+    }
+  },
+
+  tooltipContent() {
+    const { cardData } = this.props;
+    const sections = cardData.assignedSections.slice(0,2).join(", ");
+
+    if (cardData.assignedSections.length > 2) {
+      return (
+        <span style={styles.tooltip}>
+          Assigned to {sections} ...
+        </span>
+      );
+    } else {
+      return (
+          <span style={styles.tooltip}>
+            Assigned to {sections}
+          </span>
+      );
     }
   },
 
@@ -118,21 +149,21 @@ const CourseCard = React.createClass({
 
         {this.checkEnrollment()}
 
-        <h2 style={styles.courseName}>{cardData.courseName}</h2>
+        <h2 style={styles.courseName}>
+          {cardData.courseName}
+        </h2>
 
         <h4 style={styles.description}>
           {cardData.description}
 
-          <span style={styles.linkBox}>
-            <h3 style={styles.continueLink}>      {i18n.continueCourse()}
+          <a href={cardData.link} style={styles.linkBox}>
+            <h3 style={styles.continueLink}>
+              {i18n.viewCourse()}
             </h3>
 
             <FontAwesome icon="chevron-right" style={styles.chevron}/>
-
-          </span>
-
+          </a>
         </h4>
-
 
         <div style={styles.overlay}/>
       </div>
