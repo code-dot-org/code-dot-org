@@ -98,7 +98,7 @@ const SessionAttendance = React.createClass({
 
       this.setState({
         loading: false,
-        attendance: data.attendance
+        attendance: _.sortBy(data.attendance, ['last_name', 'first_name'])
       });
     });
   },

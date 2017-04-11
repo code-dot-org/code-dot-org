@@ -339,6 +339,26 @@ GameLabP5.prototype.init = function (options) {
     return this;
   };
 
+  // Save the original implementation to allow for optional parameters.
+  if (!window.p5.prototype.originalEllipse_) {
+    window.p5.prototype.originalEllipse_ = window.p5.prototype.ellipse;
+    window.p5.prototype.ellipse = function (x, y, w, h) {
+      w = (w) ? w : 50;
+      h = (w && !h) ? w : h;
+      this.originalEllipse_(x, y, w, h);
+    };
+  }
+
+  // Save the original implementation to allow for optional parameters.
+  if (!window.p5.prototype.originalRect_) {
+    window.p5.prototype.originalRect_ = window.p5.prototype.rect;
+    window.p5.prototype.rect = function (x, y, w, h) {
+      w = (w) ? w : 50;
+      h = (w && !h) ? w : h;
+      this.originalRect_(x, y, w, h);
+    };
+  }
+
   window.p5.prototype.rgb = function (r, g, b, a) {
     // convert a from 0 to 255 to 0 to 1
     if (!a) {

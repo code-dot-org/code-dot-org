@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170324200221) do
+ActiveRecord::Schema.define(version: 20170407201709) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -162,13 +162,32 @@ ActiveRecord::Schema.define(version: 20170324200221) do
     t.index ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
   end
 
+  create_table "experiments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "name",                 null: false
+    t.string   "type",                 null: false
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.integer  "section_id"
+    t.integer  "min_user_id"
+    t.integer  "max_user_id"
+    t.integer  "overflow_max_user_id"
+    t.datetime "earliest_section_at"
+    t.datetime "latest_section_at"
+    t.integer  "script_id"
+    t.index ["max_user_id"], name: "index_experiments_on_max_user_id", using: :btree
+    t.index ["min_user_id"], name: "index_experiments_on_min_user_id", using: :btree
+    t.index ["overflow_max_user_id"], name: "index_experiments_on_overflow_max_user_id", using: :btree
+    t.index ["section_id"], name: "index_experiments_on_section_id", using: :btree
+  end
+
   create_table "facilitators_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "workshop_id",    null: false
     t.integer "facilitator_id", null: false
   end
 
   create_table "followers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id"
     t.integer  "student_user_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -176,7 +195,6 @@ ActiveRecord::Schema.define(version: 20170324200221) do
     t.datetime "deleted_at"
     t.index ["section_id", "student_user_id"], name: "index_followers_on_section_id_and_student_user_id", using: :btree
     t.index ["student_user_id"], name: "index_followers_on_student_user_id", using: :btree
-    t.index ["user_id", "student_user_id"], name: "index_followers_on_user_id_and_student_user_id", using: :btree
   end
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -381,6 +399,32 @@ ActiveRecord::Schema.define(version: 20170324200221) do
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
     t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+    t.integer  "pd_enrollment_id",                           null: false
+    t.integer  "user_id",                                    null: false
+    t.string   "school_or_company"
+    t.string   "street",                                     null: false
+    t.string   "apartment_or_suite"
+    t.string   "city",                                       null: false
+    t.string   "state",                                      null: false
+    t.string   "zip_code",                                   null: false
+    t.string   "phone_number",                               null: false
+    t.datetime "order_attempted_at"
+    t.datetime "ordered_at"
+    t.text     "order_response",               limit: 65535
+    t.text     "order_error",                  limit: 65535
+    t.string   "order_id"
+    t.string   "order_status"
+    t.datetime "order_status_last_checked_at"
+    t.datetime "order_status_changed_at"
+    t.string   "tracking_id"
+    t.string   "tracking_url"
+    t.index ["pd_enrollment_id"], name: "index_pd_workshop_material_orders_on_pd_enrollment_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_workshop_material_orders_on_user_id", unique: true, using: :btree
   end
 
   create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -677,17 +721,18 @@ ActiveRecord::Schema.define(version: 20170324200221) do
   end
 
   create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                        null: false
+    t.integer  "user_id",                             null: false
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "code"
     t.integer  "script_id"
     t.string   "grade"
-    t.string   "login_type",   default: "email", null: false
+    t.string   "login_type",        default: "email", null: false
     t.datetime "deleted_at"
-    t.boolean  "stage_extras", default: false,   null: false
+    t.boolean  "stage_extras",      default: false,   null: false
     t.string   "section_type"
+    t.datetime "first_activity_at"
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end

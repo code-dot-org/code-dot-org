@@ -244,6 +244,7 @@ class ScriptLevel < ActiveRecord::Base
       icon: icon,
       title: level_display_text,
       url: build_script_level_url(self),
+      freePlay: level.try(:free_play) == "true",
     }
 
     summary[:progression] = progression if progression
