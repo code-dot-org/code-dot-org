@@ -1,8 +1,11 @@
 import { assert } from '../../../util/configuredChai';
+import { testStories } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
+
+import { stories } from '@cdo/apps/templates/progress/DetailProgressTable.story';
 
 describe('DetailProgressTable', () => {
   const lessons = [
@@ -30,4 +33,6 @@ describe('DetailProgressTable', () => {
     const rows = wrapper.props().children;
     assert.equal(rows.length, 4);
   });
+
+  testStories(stories);
 });
