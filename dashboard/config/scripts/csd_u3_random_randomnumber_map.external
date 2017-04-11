@@ -27,5 +27,8 @@ If you use `randomNumber()` multiple times in your program it will generate new 
 
 ![](https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33 PM.png)
 
-<img src="https://images.code.org/3ff0345b3ffdf3373e34053e696f7068-image-1491708429815.22.05 PM.png" style="float:left;height:150px">
+
+|Run 1|Run 2|Run 3|
+|---|---|---|
+|<img src="https://images.code.org/3ff0345b3ffdf3373e34053e696f7068-image-1491708429815.22.05 PM.png" style="float:left;height:150px">|<img src="https://images.code.org/5721e766b1b85fbe817cf65f635f3d27-image-1491862776557.17.17 PM.png" style="float:left;height:150px">|<img src="https://images.code.org/1fe406c05feb8bc2c135dac45152f881-image-1491862780106.18.05 PM.png" style="float:left;height:150px">|
 MARKDOWN
