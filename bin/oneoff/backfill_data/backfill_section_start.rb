@@ -1,8 +1,14 @@
 #!/usr/bin/env ruby
 require_relative '../../../dashboard/config/environment'
+require 'optparse'
+
+min_id = 1
+OptionParser.new do |opt|
+  opt.on('-s', '--starting-id ID') {|o| min_id = o.to_i}
+end.parse!
 
 ActiveRecord::Base.record_timestamps = false
-Section.find_in_batches do |group|
+Section.find_in_batches(start: min_id) do |group|
   puts "Processing sections #{group.first.id} - #{group.last.id}"
   group.each do |section|
     first_activity_at = section.students.map do |student|
