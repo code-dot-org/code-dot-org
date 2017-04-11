@@ -127,7 +127,7 @@ const CourseCard = React.createClass({
     const ellipsis = (cardData.assignedSections.length > 2 ? " ..." : "");
     return (
       <span style={styles.tooltip}>
-        Assigned to {sections}{ellipsis}
+        {i18n.assignedTo()} {sections}{ellipsis}
       </span>
     );
   },
