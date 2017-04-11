@@ -1,4 +1,3 @@
-/* global dashboard */
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
