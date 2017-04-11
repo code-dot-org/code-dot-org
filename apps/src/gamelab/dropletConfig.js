@@ -50,6 +50,7 @@ module.exports.blocks = [
   {func: 'World.mouseY', category: 'World', type: 'readonlyproperty' },
   {func: 'World.frameRate', category: 'World', type: 'property' },
   {func: 'World.frameCount', category: 'World', type: 'readonlyproperty' },
+  {func: 'World.seconds', category: 'World', type: 'readonlyproperty' },
   {...audioApi.dropletConfig.playSound, category: 'World'},
   {...audioApi.dropletConfig.stopSound, category: 'World'},
   {func: 'keyIsPressed', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
