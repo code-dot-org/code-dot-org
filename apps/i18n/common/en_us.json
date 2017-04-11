@@ -33,6 +33,7 @@
   "codeTooltip": "See generated JavaScript code.",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "continue": "Continue",
+  "continueCourse": "Continue Course",
   "copy": "Copy",
   "copyright": "Copyright",
   "currentVersion": "Current Version",
