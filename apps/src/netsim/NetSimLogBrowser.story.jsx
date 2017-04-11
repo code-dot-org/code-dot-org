@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import NetSimLogBrowser from './NetSimLogBrowser';
 import Packet from './Packet';
+import {createUuid} from '@cdo/apps/utils';
 
 const range = function (i) {
   return new Array(i).fill().map((_, i) => i);
@@ -48,6 +49,7 @@ export default storybook => {
     const packetCount = 1 + randInt(4);
     const packetNum = 1 + randInt(packetCount);
     return {
+      'uuid': createUuid(),
       'timestamp': Date.now() - randInt(600000),
       'sent-by': lipsumWords[randInt(lipsumWords.length)],
       'logged-by': `Router ${routerNum}`,

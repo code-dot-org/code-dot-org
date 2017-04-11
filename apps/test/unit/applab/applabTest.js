@@ -7,7 +7,6 @@ testUtils.setExternalGlobals();
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
-import experiments from '@cdo/apps/util/experiments';
 var Applab = require('@cdo/apps/applab/applab');
 var RecordListener = require('@cdo/apps/applab/RecordListener');
 var designMode = require('@cdo/apps/applab/designMode');

@@ -5,7 +5,8 @@ import { getStore } from './redux';
 import { trySetLocalStorage } from './utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ClientState from '@cdo/apps/code-studio/clientState';
+import ClientState from './code-studio/clientState';
+import LegacyDialog from './code-studio/LegacyDialog';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -271,7 +272,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
 
   var feedbackDialog = this.createModalDialog({
-    Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
     defaultBtnSelector: defaultBtnSelector,
@@ -1049,12 +1049,11 @@ FeedbackUtils.prototype.getGeneratedCodeDescription = function (codeInfoMsgParam
 
 /**
  * Display the 'Show Code' modal dialog.
- * @param {Dialog} Dialog
  * @param {Object} [appStrings] - optional app strings to override
  * @param {string} [appStrings.generatedCodeDescription] - string
  *        to display instead of the usual show code description
  */
-FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
+FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   var codeDiv = document.createElement('div');
 
   var generatedCodeProperties = this.getGeneratedCodeProperties_({
@@ -1067,7 +1066,6 @@ FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
   </div>, codeDiv);
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: codeDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#ok-button'
@@ -1087,8 +1085,8 @@ FeedbackUtils.prototype.showGeneratedCode = function (Dialog, appStrings) {
  * Display the "Clear Puzzle" confirmation dialog.  Takes a parameter to hide
  * the icon.  Calls `callback` if the user confirms they want to clear the puzzle.
  */
-FeedbackUtils.prototype.showClearPuzzleConfirmation = function (Dialog, hideIcon, callback) {
-  this.showSimpleDialog(Dialog, {
+FeedbackUtils.prototype.showClearPuzzleConfirmation = function (hideIcon, callback) {
+  this.showSimpleDialog({
     headerText: msg.clearPuzzleConfirmHeader(),
     bodyText: msg.clearPuzzleConfirm(),
     confirmText: msg.clearPuzzle(),
@@ -1122,7 +1120,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (Dialog, hideIcon
  * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
-FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
+FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var textBoxStyle = {
     marginBottom: 10
   };
@@ -1144,7 +1142,6 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
     document.createElement('div'));
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: contentDiv,
     icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button'
@@ -1185,7 +1182,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
 /**
  *
  */
-FeedbackUtils.prototype.showToggleBlocksError = function (Dialog) {
+FeedbackUtils.prototype.showToggleBlocksError = function () {
   var contentDiv = document.createElement('div');
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
@@ -1196,7 +1193,6 @@ FeedbackUtils.prototype.showToggleBlocksError = function (Dialog) {
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
-    Dialog: Dialog,
     contentDiv: contentDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#ok-button'
@@ -1530,9 +1526,26 @@ FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks
 };
 
 /**
+ * Fire off a click event in a cross-browser supported manner. This code is
+ * similar to Blockly.fireUIEvent (without taking a Blockly dependency).
+ */
+function simulateClick(element) {
+  if (document.createEvent) {
+    // W3
+    const evt = document.createEvent('UIEvents');
+    evt.initEvent('click', true, true);  // event type, bubbling, cancelable
+    element.dispatchEvent(evt);
+  } else if (document.createEventObject) {
+    // MSIE
+    element.fireEvent('onClick', document.createEventObject());
+  } else {
+    throw 'FireEvent: No event creation mechanism.';
+  }
+}
+
+/**
  * Show a modal dialog without an icon.
  * @param {Object} options
- * @param {Dialog} options.Dialog
  * @param {string} options.icon
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
@@ -1565,13 +1578,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function (e) {
     if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
-      // Simulate a 'click':
-      var event = new MouseEvent('click', {
-        view: window,
-        bubbles: true,
-        cancelable: true
-      });
-      btn.dispatchEvent(event);
+      simulateClick(btn);
 
       e.stopPropagation();
       e.preventDefault();
@@ -1580,7 +1587,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
 
   var scrollableSelector = options.scrollableSelector || '.modal-content';
   var elementToScroll = options.scrollContent ? scrollableSelector : null;
-  return new options.Dialog({
+  return new LegacyDialog({
     body: modalBody,
     onHidden: options.onHidden,
     onKeydown: btn ? keydownHandler : undefined,
