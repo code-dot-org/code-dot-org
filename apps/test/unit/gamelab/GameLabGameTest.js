@@ -11,7 +11,6 @@ describe('seconds', function () {
     Date.prototype.getTime.onCall(1).returns(10000);
 
     let gameLabGame = new GameLabGame({});
-    console.log("game" + gameLabGame.startTime);
     expect(gameLabGame.seconds).to.equal(5);
   });
 });
