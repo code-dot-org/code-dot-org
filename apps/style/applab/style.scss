@@ -7,6 +7,8 @@
 @import "skins/modern.scss";
 
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
+$defaultWidth: 320px;
+$defaultFooterlessHeight: 450px;
 
 div#visualization {
   height: 562.5px;
@@ -32,11 +34,24 @@ div#visualizationResizeBar {
   width: 340px;
 }
 
-/* Shrink the visualization area on small displays. */
+/*
+ * Shrink the visualization area on small displays.
+ *
+ * Above 1150px, the play space is 400px wide. Between 1150px and 950px, the
+ * play space width responsively decreases by 50px as the window width is
+ * reduced by 50px. The scale factor and the play space height are scaled down
+ * so as to preserve the aspect ratio.
+ *
+ * Vertical responsiveness causes the playspace width to grow and shrink by the
+ * same increments. min-height and max-height breakpoints are chosen
+ * experimentally to keep about the same amount of space below the phone frame
+ * throughout the responsive range.
+ */
 
 @media screen and (min-width: 1151px), screen and (min-height: 849px) {
   $width: 400px;
-  $height: 562.5px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $height;
@@ -65,15 +80,16 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    transform: scale(1.25);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
 @media screen and (min-width: 1101px) and (max-width: 1150px), screen and (min-height: 777px) and (max-height: 848px) {
   $width: 350px;
-  $height: 492.188px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $height;
@@ -102,15 +118,16 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(1.09375);
-    -ms-transform: scale(1.09375);
-    transform: scale(1.09375);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px), screen and (min-height: 708px) and (max-height: 778px) {
   $width: 300px;
-  $height: 421.875px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $height;
@@ -139,15 +156,16 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(0.9375);
-    -ms-transform: scale(0.9375);
-    transform: scale(0.9375);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px), screen and (min-height: 638px) and (max-height: 707px) {
   $width: 250px;
-  $height: 351.562px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $height;
@@ -176,15 +194,16 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(0.78125);
-    -ms-transform: scale(0.78125);
-    transform: scale(0.78125);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
 @media screen and (max-width: 1000px), screen and (max-height: 637px) {
   $width: 200px;
-  $height: 281.25px;
+  $scaleFactor: $width / $defaultWidth;
+  $height: $scaleFactor * $defaultFooterlessHeight;
   $colWidth: $width + 2;
   div#visualization.responsive {
     max-height: $height;
@@ -213,9 +232,9 @@ div#visualizationResizeBar {
     right: $width;
   }
   div#visualization.responsive > * {
-    -webkit-transform: scale(0.625);
-    -ms-transform: scale(0.625);
-    transform: scale(0.625);
+    -webkit-transform: scale($scaleFactor);
+    -ms-transform: scale($scaleFactor);
+    transform: scale($scaleFactor);
   }
 }
 
