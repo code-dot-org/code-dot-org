@@ -44,12 +44,16 @@ export default class Demographics extends ProgramRegistrationComponent {
           label: "What subjects have you taught (check all that apply)?",
           type: 'check'
         })}
-        {this.buildFieldGroup({
-          name: "csYearsTaught",
-          type: "number",
-          label: "For how many years have you taught Computer Science?",
-          required: true,
-        })}
+        {this.props.data.subjectsTaught &&
+          this.props.data.subjectsTaught.includes("Computer Science") &&
+          this.buildFieldGroup({
+            name: "csYearsTaught",
+            type: "number",
+            label: "For how many years have you taught Computer Science?",
+            required: true,
+            min: 0
+          })
+        }
       </FormGroup>
     );
   }
