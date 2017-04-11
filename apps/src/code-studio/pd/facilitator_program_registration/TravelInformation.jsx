@@ -80,7 +80,7 @@ export default class TravelInformation extends ProgramRegistrationComponent {
             this.buildFieldGroup({
               name: "dietaryNeedsNotes",
               componentClass: "textarea",
-              label: "Please explain (optional):",
+              label: "Please provide details (optional):",
               required: false,
             })
           }
