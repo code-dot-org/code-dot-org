@@ -3,11 +3,10 @@ import ProgressButton from './progress/ProgressButton';
 
 const styles = {
   card: {
-    flex: 1,
     overflow: 'hidden',
     position: 'relative',
     height: 200,
-    width: 450
+    width: 400
   },
   overlay: {
     background: 'linear-gradient(to right, rgba(2,130,132,.95), rgba(2,130,132,0))',
@@ -19,7 +18,6 @@ const styles = {
     zIndex: 1,
   },
   image: {
-    flex: 1,
     position: 'absolute',
   },
   title: {

@@ -4,7 +4,7 @@ import GradientNavCard from './GradientNavCard';
 const EXAMPLE_CARD_DATA = {
   title: "Teacher Community",
   description: "Ask questions about curriculum, share ideas from your lessons, and get help from other teachers",
-  image: "./GradientCardTestPic-REMOVE.jpg", //This photo is still in the works; waiting on confirmation from Mike/Tanya
+  image: "../../static/navcard-placeholder.png",
   buttonText: "Connect Today",
   link: "link to wherever Tanya wants the button to go..."
 };
