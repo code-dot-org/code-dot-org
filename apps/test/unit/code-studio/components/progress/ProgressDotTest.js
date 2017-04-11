@@ -4,17 +4,10 @@ import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 import sinon from 'sinon';
 import saveAnswers from '@cdo/apps/code-studio//levels/saveAnswers';
-import $ from 'jquery';
 
 import { ProgressDot, BubbleInterior } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
-
-// If we set a color as something like #fff, the browser converts it to rgb(255, 255, 255)
-// This is a semi-hacky helper function that allows us to get the rgb string for a color
-function colorToRgb(color) {
-  return $("<div>").css("background-color", color)[0].style.backgroundColor;
-}
 
 describe('ProgressDot component tests', () => {
   let renderer, level;

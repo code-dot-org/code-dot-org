@@ -98,6 +98,7 @@ var CodeWorkspace = React.createClass({
       // an order of operations problem with regards to emitting
       // and listening to the resize events.
       textbox.style.bottom = debuggerHeight + 'px';
+      utils.fireResizeEvent();
     }
   },
 
