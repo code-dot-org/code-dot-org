@@ -55,7 +55,11 @@ export default class ProgramRegistrationComponent extends React.Component {
     );
   }
 
-  buildButtonsFromOptions({name, label, type}) {
+  buildButtonsFromOptions({name, label, type, required}) {
+    if (required === undefined) {
+      required = true;
+    }
+
     return (
       <ButtonList
         answers={this.props.options[name]}
@@ -64,7 +68,7 @@ export default class ProgramRegistrationComponent extends React.Component {
         onChange={this.handleChange.bind(this)}
         selectedItems={this.props.data[name]}
         validationState={this.getValidationState(name)}
-        required={true}
+        required={required}
         type={type}
       />
     );
