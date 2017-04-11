@@ -53,7 +53,7 @@ window.dashboard.codeStudioLevels = { registerGetResult, registerLevel, onAnswer
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio
-window.Dialog = require('@cdo/apps/code-studio/dialog');
+window.Dialog = require('@cdo/apps/code-studio/LegacyDialog');
 
 // When we were in browserify world, all modules in a bundle (i.e. code-studio-common)
 // would get preloaded. In webpack, they're only loaded as needed. We were

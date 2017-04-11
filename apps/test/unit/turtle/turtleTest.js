@@ -1,5 +1,4 @@
 import {expect} from '../../util/configuredChai';
-const testUtils = require('../../util/testUtils');
 const Artist = require('@cdo/apps/turtle/turtle');
 const constants = require('@cdo/apps/constants');
 

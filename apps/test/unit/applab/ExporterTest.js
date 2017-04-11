@@ -3,7 +3,7 @@ import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {setAppOptions, getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import { setAppOptions } from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
 testUtils.setExternalGlobals();
 

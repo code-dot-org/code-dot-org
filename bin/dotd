@@ -271,6 +271,14 @@ def main
   puts_script_intro
   ask_for_name
 
+  should_i 'mark robo-DTT as green' do
+    test_sha = GitHub.sha 'test'
+    InfraTestTopic.set_green_commit test_sha
+    should_i 'reset DTT message to yes' do
+      DevelopersTopic.set_dtt 'yes'
+    end
+  end
+
   do_dtt_subroutine
 
   should_i 'commit content changes from staging' do
