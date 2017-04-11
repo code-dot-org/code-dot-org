@@ -16,7 +16,7 @@ Learn more about the Hour of Code [here](https://www.hourofcode.com).
 
 ## Steps:
 
-1. **[Reach out](#school) to a local high school.** You should do this 3-4 months prior to the event.
+1. **[Reach out](#school) to a local school.** You should do this 3-4 months prior to the event.
 2. **[Register](https://hourofcode.com) your event and plan and finalize event strategy**. Discuss with the school where the event should be held, agenda, and other logistics.
 3. **[Message](#communication) out to your employees.** Let them know about the event and how they can get involved.
 4. **Host the event!**
@@ -54,7 +54,7 @@ How you can get involved:
 Join us as [COMPANY]'s Hour of Code event! 
 [EVENT DETAILS]
 
-You can also volunteer in a classroom! To learn more about this opportunity, check out Code.org's [volunteer guide](/volunteer/guide).
+You can also volunteer in a classroom! To learn more about this opportunity, check out Code.org's [volunteer guide](https://code.org/volunteer/guide).
 
 [COMPANY] is proud to participate in this worldwide campaign. Our efforts will help introduce many students to computer science who might not have discovered it otherwise. Technology is transforming the globe—the Hour of Code is our opportunity to transform technology by promoting equity and diversity in the field’s education and career pathways.
 
