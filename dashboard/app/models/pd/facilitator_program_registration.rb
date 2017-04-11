@@ -19,9 +19,9 @@ require 'state_abbr'
 
 class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
   LOCATIONS = [
-    'Houston',
-    'Phoenix',
-    'Philadelphia'
+    'Houston, TX',
+    'Phoenix, AZ',
+    'Philadelphia, PA'
   ].freeze
 
   DATES = [
