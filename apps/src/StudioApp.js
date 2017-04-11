@@ -1322,48 +1322,6 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   this.resizeVisualization(newVizWidth);
 };
 
-StudioApp.prototype.clearVisualizationSize = function () {
-  if ($('#visualizationColumn').hasClass('wireframeShare')) {
-    return;
-  }
-
-  const editorColumn = $(".editor-column");
-  const visualization = document.getElementById('visualization');
-  const visualizationResizeBar = document.getElementById('visualizationResizeBar');
-  const visualizationColumn = document.getElementById('visualizationColumn');
-
-  if (this.isRtl()) {
-    visualizationResizeBar.style.right = '';
-    editorColumn.css('right', '');
-  } else {
-    visualizationResizeBar.style.left = '';
-    editorColumn.css('left', '');
-  }
-
-  visualizationResizeBar.style.lineHeight = '';
-  visualizationColumn.style.maxWidth = '';
-  visualization.style.maxWidth = '';
-  visualization.style.maxHeight = '';
-
-  if (!utils.browserSupportsCssMedia()) {
-    visualization.style.height = '';
-    visualization.style.width = '';
-  }
-
-  applyTransformScaleToChildren(visualization, '');
-
-  $('#soft-buttons').removeClass('soft-buttons-compact');
-
-  const smallFooter = document.querySelector('#page-small-footer .small-footer-base');
-  if (smallFooter) {
-    smallFooter.style.maxWidth = '';
-    const smallPrint = smallFooter.querySelector('small');
-    smallPrint.style.float = '';
-  }
-
-  utils.fireResizeEvent();
-};
-
 /**
  * Resize the visualization to the given width. If no width is provided, the
  * scale of child elements is updated to the current width.
@@ -1373,17 +1331,17 @@ StudioApp.prototype.resizeVisualization = function (width) {
     return;
   }
 
-  const editorColumn = $(".editor-column");
-  const visualization = document.getElementById('visualization');
-  const visualizationResizeBar = document.getElementById('visualizationResizeBar');
-  const visualizationColumn = document.getElementById('visualizationColumn');
+  var editorColumn = $(".editor-column");
+  var visualization = document.getElementById('visualization');
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualizationColumn = document.getElementById('visualizationColumn');
 
-  const oldVizWidth = $(visualizationColumn).width();
-  const newVizWidth = Math.max(this.minVisualizationWidth,
+  var oldVizWidth = $(visualizationColumn).width();
+  var newVizWidth = Math.max(this.minVisualizationWidth,
                          Math.min(this.maxVisualizationWidth, width || oldVizWidth));
-  const newVizWidthString = newVizWidth + 'px';
-  const newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
-  const vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
+  var newVizWidthString = newVizWidth + 'px';
+  var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
+  var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
 
   if (this.isRtl()) {
     visualizationResizeBar.style.right = newVizWidthString;
@@ -1404,7 +1362,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
     visualization.style.height = newVizHeightString;
     visualization.style.width = newVizWidthString;
   }
-  const scale = (newVizWidth / this.nativeVizWidth);
+  var scale = (newVizWidth / this.nativeVizWidth);
   this.reduxStore.dispatch(setVisualizationScale(scale));
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
@@ -1415,14 +1373,14 @@ StudioApp.prototype.resizeVisualization = function (width) {
     $('#soft-buttons').addClass('soft-buttons-compact');
   }
 
-  const smallFooter = document.querySelector('#page-small-footer .small-footer-base');
+  var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
 
     // If the small print and language selector are on the same line,
     // the small print should float right.  Otherwise, it should float left.
-    const languageSelector = smallFooter.querySelector('form');
-    const smallPrint = smallFooter.querySelector('small');
+    var languageSelector = smallFooter.querySelector('form');
+    var smallPrint = smallFooter.querySelector('small');
     if (languageSelector && smallPrint.offsetTop === languageSelector.offsetTop) {
       smallPrint.style.float = 'right';
     } else {

@@ -356,16 +356,6 @@ Applab.captureScreenshot = function () {
   }
 
   isCapturePending = true;
-  let didPinVizSize = false;
-
-  if (!visualization.style.maxWidth) {
-    // The user has not manually resized the visualization column with the
-    // grippy. In order for the screenshot to take correctly, we need to set the
-    // column size, and then remember to clear it later so that the layout
-    // becomes responsive again.
-    Applab.pinVisualizationSize();
-    didPinVizSize = true;
-  }
 
   // Record a square image showing the top two thirds of the app window.
   //
@@ -385,18 +375,7 @@ Applab.captureScreenshot = function () {
 
   // html2canvas can take up to 2 seconds to capture the visualization contents
   // onto the canvas.
-  thumbnailUtils.html2canvas(visualization, options).catch(e => {
-    if (didPinVizSize) {
-      Applab.clearVisualizationSize();
-    }
-    return Promise.reject(e);
-  }).then(canvas => {
-    // Unpin the visualization column ASAP to minimize the chances that the user
-    // will resize the visualization column while we have it pinned.
-    if (didPinVizSize) {
-      Applab.clearVisualizationSize();
-    }
-
+  thumbnailUtils.html2canvas(visualization, options).then(canvas => {
     if (!isCapturePending) {
       // We most likely got here because a level test triggered a screenshot
       // capture, the test completed, and then another test started before the
@@ -418,14 +397,6 @@ Applab.captureScreenshot = function () {
   }).then(() => {
     isCapturePending = false;
   });
-};
-
-Applab.clearVisualizationSize = function () {
-  studioApp.clearVisualizationSize();
-};
-
-Applab.pinVisualizationSize = function () {
-  studioApp.resizeVisualization($('#visualization').width());
 };
 
 /**
