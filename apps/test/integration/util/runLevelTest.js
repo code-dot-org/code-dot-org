@@ -4,6 +4,7 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
 import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
+const project = require('@cdo/apps/code-studio/initApp/project');
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
@@ -120,13 +121,8 @@ function runLevel(app, skinId, level, onAttempt, testData) {
   }
   setAppSpecificGlobals(app);
 
-  window.dashboard.project.useFirebase = function () {
-    return Boolean(testData.useFirebase);
-  };
-
-  window.dashboard.project.isOwner = function () {
-    return true;
-  };
+  project.useFirebase.returns(!!testData.useFirebase);
+  project.isOwner.returns(true);
   const unexpectedExecutionErrorMsg = 'Unexpected execution error. ' +
     'Define onExecutionError() in your level test case to handle this.';
 
