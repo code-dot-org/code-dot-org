@@ -19,7 +19,6 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
       "Form data howTraveling",
       "Form data needHotel",
       "Form data needAda",
-      "Form data photoRelease",
       "Form data liabilityWaiver",
       "Form data gender",
       "Form data race",
@@ -27,7 +26,6 @@ class Pd::FacilitatorProgramRegistrationTest < ActiveSupport::TestCase
       "Form data gradesTaught",
       "Form data gradesPlanningToTeach",
       "Form data subjectsTaught",
-      "Form data csYearsTaught",
       "Teachercon is not included in the list"
     ], registration.errors.full_messages
 
