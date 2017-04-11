@@ -11,7 +11,7 @@ import "script!@code-dot-org/p5.play/examples/lib/p5";
 import "script!@code-dot-org/p5.play/lib/p5.play";
 
 describe("GameLab", () => {
-  before(setExternalGlobals);
+  setExternalGlobals();
 
   before(() => sinon.stub(ReactDOM, 'render'));
   after(() => ReactDOM.render.restore());

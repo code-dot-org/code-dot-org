@@ -2,44 +2,51 @@ import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
 import {assert} from './configuredChai';
+import project from '@cdo/apps/code-studio/initApp/project';
+import * as assets from '@cdo/apps/code-studio/assets';
+import i18n from '@cdo/apps/code-studio/i18n';
 
 export function setExternalGlobals() {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
-  window.dashboard = Object.assign({}, window.dashboard, {
-    i18n: {
-      t: function (selector) { return selector; }
-    },
-    // Right now we're just faking some of our dashboard project interactions.
-    // If this becomes insufficient, we might be able to require the project.js
-    // file from shared here.
-    project: {
-      clearHtml: function () {},
-      exceedsAbuseThreshold: function () { return false; },
-      hasPrivacyProfanityViolation: function () { return false; },
-      getCurrentId: function () { return 'fake_id'; },
-      isEditing: function () { return true; },
-      useFirebase: function () { return false; },
-      useMakerAPIs: function () { return false; },
-      isOwner: () => true,
-    },
-    assets: {
-      showAssetManager: function () {},
-      listStore: {
-        reset() {},
-        add() {
-          return [];
-        },
-        remove() {
-          return [];
-        },
-        list() {
-          return [];
-        },
-      },
-    }
+  window.dashboard = {...window.dashboard, i18n, assets, project};
+
+  before(() => {
+    sinon.stub(i18n, 't').callsFake((selector) => selector);
+
+    sinon.stub(project, 'clearHtml');
+    sinon.stub(project, 'exceedsAbuseThreshold').returns(false);
+    sinon.stub(project, 'hasPrivacyProfanityViolation').returns(false);
+    sinon.stub(project, 'getCurrentId').returns('fake_id');
+    sinon.stub(project, 'isEditing').returns(true);
+    sinon.stub(project, 'useFirebase').returns(false);
+    sinon.stub(project, 'useMakerAPIs').returns(false);
+    sinon.stub(project, 'isOwner').returns(true);
+
+    sinon.stub(assets.listStore, 'reset');
+    sinon.stub(assets.listStore, 'add').returns([]);
+    sinon.stub(assets.listStore, 'remove').returns([]);
+    sinon.stub(assets.listStore, 'list').returns([]);
   });
+  after(() => {
+    i18n.t.restore();
+
+    project.clearHtml.restore();
+    project.exceedsAbuseThreshold.restore();
+    project.hasPrivacyProfanityViolation.restore();
+    project.getCurrentId.restore();
+    project.isEditing.restore();
+    project.useFirebase.restore();
+    project.useMakerAPIs.restore();
+    project.isOwner.restore();
+
+    assets.listStore.reset.restore();
+    assets.listStore.add.restore();
+    assets.listStore.remove.restore();
+    assets.listStore.list.restore();
+  });
+
   window.marked = function (str) {
     return str;
   };
