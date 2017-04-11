@@ -162,6 +162,26 @@ ActiveRecord::Schema.define(version: 20170407201709) do
     t.index ["user_id", "district_id"], name: "index_districts_users_on_user_id_and_district_id", using: :btree
   end
 
+  create_table "experiments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "name",                 null: false
+    t.string   "type",                 null: false
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.integer  "section_id"
+    t.integer  "min_user_id"
+    t.integer  "max_user_id"
+    t.integer  "overflow_max_user_id"
+    t.datetime "earliest_section_at"
+    t.datetime "latest_section_at"
+    t.integer  "script_id"
+    t.index ["max_user_id"], name: "index_experiments_on_max_user_id", using: :btree
+    t.index ["min_user_id"], name: "index_experiments_on_min_user_id", using: :btree
+    t.index ["overflow_max_user_id"], name: "index_experiments_on_overflow_max_user_id", using: :btree
+    t.index ["section_id"], name: "index_experiments_on_section_id", using: :btree
+  end
+
   create_table "facilitators_workshops", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer "workshop_id",    null: false
     t.integer "facilitator_id", null: false
@@ -701,17 +721,18 @@ ActiveRecord::Schema.define(version: 20170407201709) do
   end
 
   create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                        null: false
+    t.integer  "user_id",                             null: false
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "code"
     t.integer  "script_id"
     t.string   "grade"
-    t.string   "login_type",   default: "email", null: false
+    t.string   "login_type",        default: "email", null: false
     t.datetime "deleted_at"
-    t.boolean  "stage_extras", default: false,   null: false
+    t.boolean  "stage_extras",      default: false,   null: false
     t.string   "section_type"
+    t.datetime "first_activity_at"
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end

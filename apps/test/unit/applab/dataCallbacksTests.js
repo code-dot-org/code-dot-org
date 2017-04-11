@@ -6,7 +6,6 @@ import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();
 
-var Applab = require('@cdo/apps/applab/applab');
 var applabCommands = require('@cdo/apps/applab/commands');
 var AppStorage = require('@cdo/apps/applab/appStorage');
 
