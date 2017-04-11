@@ -6,13 +6,13 @@ const project = require('@cdo/apps/code-studio/initApp/project');
 const assets = require('@cdo/apps/code-studio/assets');
 import i18n from '@cdo/apps/code-studio/i18n';
 
-export function setExternalGlobals() {
+export function setExternalGlobals(beforeFunc=before, afterFunc=after) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
   window.dashboard = {...window.dashboard, i18n, assets, project};
 
-  before(() => {
+  beforeFunc(() => {
     sinon.stub(i18n, 't').callsFake((selector) => selector);
 
     sinon.stub(project, 'clearHtml');
@@ -29,7 +29,7 @@ export function setExternalGlobals() {
     sinon.stub(assets.listStore, 'remove').returns([]);
     sinon.stub(assets.listStore, 'list').returns([]);
   });
-  after(() => {
+  afterFunc(() => {
     i18n.t.restore();
 
     project.clearHtml.restore();

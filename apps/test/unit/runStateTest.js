@@ -4,7 +4,7 @@ var testUtils = require('./../util/testUtils');
 
 var runState = require('@cdo/apps/redux/runState');
 
-describe(() => {
+describe('runState', () => {
   testUtils.setExternalGlobals();
 
 describe('isRunning reducer', function () {

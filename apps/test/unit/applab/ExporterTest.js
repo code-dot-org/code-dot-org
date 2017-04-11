@@ -5,6 +5,7 @@ var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import { setAppOptions } from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
+const assets = require('@cdo/apps/code-studio/assets');
 
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
 const APPLAB_LOCALE_JS_CONTENT = 'applab_locale.js content';
@@ -41,7 +42,7 @@ a.third-rule {
 `;
 
 describe('The Exporter,', function () {
-  var server, listStub;
+  var server;
 
   testUtils.setExternalGlobals();
 
@@ -70,12 +71,11 @@ describe('The Exporter,', function () {
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
 
-    sinon.stub(dashboard.assets.listStore, 'list').returns([
+    assets.listStore.list.returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
       {filename: 'zoo.mp3'},
     ]);
-    listStub = dashboard.assets.listStore.list;
     server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
     server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
     server.respondWith('/v3/assets/some-channel-id/zoo.mp3', 'zoo.mp3 content');
@@ -190,7 +190,6 @@ describe('The Exporter,', function () {
   afterEach(function () {
     server.restore();
     assetPrefix.init({});
-    listStub.restore();
   });
 
   describe("when assets can't be fetched,", function () {
