@@ -5,7 +5,6 @@ var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 var NetSimSendPanel = require('@cdo/apps/netsim/NetSimSendPanel');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 var constants = require('@cdo/apps/constants');

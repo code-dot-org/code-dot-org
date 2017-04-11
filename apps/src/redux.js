@@ -61,7 +61,7 @@ if (IN_UNIT_TEST) {
   };
 }
 
-if (IN_STORYBOOK) {
+if (IN_STORYBOOK || IN_UNIT_TEST) {
   // Storybooks need the ability to create multiple distinct stores instead of
   // using a singleton
   module.exports.createStoreWithReducers = createStoreWithReducers;

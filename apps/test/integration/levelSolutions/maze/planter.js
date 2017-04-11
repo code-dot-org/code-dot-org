@@ -1,6 +1,4 @@
-var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
 var Planter = require('@cdo/apps/maze/planter');
 
 var levelDef = {
