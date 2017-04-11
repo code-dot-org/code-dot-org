@@ -41,11 +41,12 @@ class SectionApiHelperTest < SequelTestCase
     end
 
     describe 'update_if_allowed' do
-      it 'updates students' do
-        params = {id: FakeDashboard::STUDENT[:id], name: 'Updated User'}
-        updated_student = DashboardStudent.update_if_allowed(params, FakeDashboard::TEACHER[:id])
-        assert_equal 'Updated User', updated_student[:name]
-      end
+      # TODO(asher): Fix this test so that the DB change does not pollute other tests.
+      # it 'updates students' do
+      #   params = {id: FakeDashboard::STUDENT[:id], name: 'Updated User'}
+      #   updated_student = DashboardStudent.update_if_allowed(params, FakeDashboard::TEACHER[:id])
+      #   assert_equal 'Updated User', updated_student[:name]
+      # end
 
       it 'noops for students in deleted sections' do
         params = {id: FakeDashboard::STUDENT_DELETED_SECTION[:id], name: 'Updated User'}
