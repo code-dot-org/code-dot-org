@@ -163,18 +163,18 @@ ActiveRecord::Schema.define(version: 20170407201709) do
   end
 
   create_table "experiments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "name",                   null: false
-    t.string   "type",                   null: false
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "name",                 null: false
+    t.string   "type",                 null: false
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.integer  "section_id"
     t.integer  "min_user_id"
     t.integer  "max_user_id"
     t.integer  "overflow_max_user_id"
-    t.datetime "earliest_section_start"
-    t.datetime "latest_section_start"
+    t.datetime "earliest_section_at"
+    t.datetime "latest_section_at"
     t.integer  "script_id"
     t.index ["max_user_id"], name: "index_experiments_on_max_user_id", using: :btree
     t.index ["min_user_id"], name: "index_experiments_on_min_user_id", using: :btree
