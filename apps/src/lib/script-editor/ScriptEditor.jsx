@@ -70,9 +70,7 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <StageDescriptions
-          isImporting={false}
           currentByStage={this.props.i18nData.stageDescriptions}
-          importedByStage={{}}
           inputStyle={styles.input}
         />
         <h2>Basic Settings</h2>

@@ -2,6 +2,13 @@ import React, { PropTypes } from 'react';
 import _ from 'lodash';
 
 const styles = {
+  main: {
+    border: '1px solid lightgray',
+    padding: 10
+  },
+  note: {
+    paddingBottom: 10
+  },
   stageName: {
     fontSize: 16,
     textDecoration: 'underline'
@@ -18,14 +25,7 @@ const styles = {
  */
 const StageDescriptions = React.createClass({
   propTypes: {
-    isImporting: PropTypes.bool.isRequired,
     currentByStage: PropTypes.objectOf(
-      PropTypes.shape({
-        studentDescription: PropTypes.string.isRequired,
-        teacherDescription: PropTypes.string.isRequired,
-      })
-    ).isRequired,
-    importedByStage: PropTypes.objectOf(
       PropTypes.shape({
         studentDescription: PropTypes.string.isRequired,
         teacherDescription: PropTypes.string.isRequired,
@@ -34,71 +34,95 @@ const StageDescriptions = React.createClass({
     inputStyle: PropTypes.object.isRequired,
   },
 
+  getInitialState() {
+    return {
+      isImporting: false,
+      hasImported: false,
+      importedByStage: {}
+    };
+  },
+
+  importDescriptions() {
+    this.setState({
+      isImporting: true
+    });
+
+    // TODO - import
+  },
+
   render() {
-    const { isImporting, inputStyle, currentByStage, importedByStage } = this.props;
+    const { inputStyle, currentByStage } = this.props;
+    const { isImporting, hasImported, importedByStage } = this.state;
 
     const stageNames = _.uniq(Object.keys(currentByStage).concat(Object.keys(importedByStage)));
 
     return (
       <div>
         <h3>Stage Descriptions</h3>
-        <div>Note: We only show info for stages that have descriptions</div>
-        {stageNames.map((stageName, index) => {
-          const currentStudent = (currentByStage[stageName] || {}).studentDescription;
-          const currentTeacher = (currentByStage[stageName] || {}).teacherDescription;
-          const updatedStudent = (importedByStage[stageName] || {}).studentDescription;
-          const updatedTeacher = (importedByStage[stageName] || {}).teacherDescription;
+        <div style={styles.main}>
+          <div style={styles.note}>Note: We only show info for stages that have descriptions</div>
+          {stageNames.map((stageName, index) => {
+            const currentStudent = (currentByStage[stageName] || {}).studentDescription;
+            const currentTeacher = (currentByStage[stageName] || {}).teacherDescription;
+            const updatedStudent = (importedByStage[stageName] || {}).studentDescription;
+            const updatedTeacher = (importedByStage[stageName] || {}).teacherDescription;
 
-          if (!currentStudent && !currentTeacher && !updatedStudent && !updatedTeacher) {
-            // show nothing if we have nothing
-            return;
-          }
+            if (!currentStudent && !currentTeacher && !updatedStudent && !updatedTeacher) {
+              // show nothing if we have nothing
+              return;
+            }
 
-          return (
-            <div key={index}>
-              <div style={styles.stageName}>{stageName}</div>
-              <label>
-                Current Student Description
-                <input
-                  defaultValue={currentStudent}
-                  style={inputStyle}
-                  readOnly
-                />
-              </label>
-              {importedByStage[stageName] &&
+            return (
+              <div key={index}>
+                <div style={styles.stageName}>{stageName}</div>
                 <label>
-                  Updated Student Description
+                  Current Student Description
                   <input
-                    defaultValue={updatedStudent}
-                    style={{...inputStyle, ...styles.inputUpdate}}
+                    defaultValue={currentStudent}
+                    style={inputStyle}
                     readOnly
                   />
                 </label>
-              }
-              <label>
-                Current Teacher Description
-                <input
-                  defaultValue={currentTeacher}
-                  style={inputStyle}
-                  readOnly
-                />
-              </label>
-              {importedByStage[stageName] &&
+                {importedByStage[stageName] && updatedStudent !== currentStudent &&
+                  <label>
+                    Updated Student Description
+                    <input
+                      defaultValue={updatedStudent}
+                      style={{...inputStyle, ...styles.inputUpdate}}
+                      readOnly
+                    />
+                  </label>
+                }
                 <label>
-                  Updated Teacher Description
+                  Current Teacher Description
                   <input
-                    defaultValue={updatedTeacher}
-                    style={{...inputStyle, ...styles.inputUpdate}}
+                    defaultValue={currentTeacher}
+                    style={inputStyle}
                     readOnly
                   />
                 </label>
-              }
-            </div>
-          );
-        })}
-        <button>
-          {isImporting ? "Querying server..." : "Import from Curriculum Builder"}
-        </button>
+                {importedByStage[stageName] && updatedTeacher !== currentTeacher &&
+                  <label>
+                    Updated Teacher Description
+                    <input
+                      defaultValue={updatedTeacher}
+                      style={{...inputStyle, ...styles.inputUpdate}}
+                      readOnly
+                    />
+                  </label>
+                }
+              </div>
+            );
+          })}
+          <button
+            className="btn"
+            disabled={isImporting || hasImported}
+            onClick={this.importDescriptions}
+          >
+            {isImporting ? "Querying server..." : (
+              hasImported ? "Imported" : "Import from Curriculum Builder")}
+          </button>
+        </div>
       </div>
     );
   }
