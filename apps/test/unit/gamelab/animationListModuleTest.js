@@ -186,7 +186,6 @@ describe('animationListModule', function () {
     });
 
     it('when animationList has 0 items, selectedAnimation should be the empty string', function () {
-      const key0 = 'animation_1';
       let animationList = {
         orderedKeys: [],
         propsByKey: {}
@@ -362,8 +361,6 @@ describe('animationListModule', function () {
     });
 
     it('new blank animations get name next available number appended', function () {
-      const key0 = 'animation_1';
-      const key1 = 'animation_2';
       let animationList = createAnimationList(2);
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(addBlankAnimation());
@@ -373,9 +370,7 @@ describe('animationListModule', function () {
     });
 
     it('new blank animations get name next available number appended when available number is in the middle of the list', function () {
-      const key0 = 'animation_1';
       const key1 = 'animation_2';
-      const key2 = 'animation_3';
       let animationList = createAnimationList(3);
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key1));

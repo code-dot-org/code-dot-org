@@ -159,22 +159,22 @@ describe('GameLabP5', function () {
     });
 
     it('draws the same ellipse when called with all arguments', function () {
-      const ellipse = gameLabP5.p5.ellipse(100, 100, 50, 50);
-      const originalEllipse = gameLabP5.p5.originalEllipse_(100, 100, 50, 50);
+      gameLabP5.p5.ellipse(100, 100, 50, 50);
+      gameLabP5.p5.originalEllipse_(100, 100, 50, 50);
       expect(gameLabP5.p5.originalEllipse_.calledTwice).to.equal(true);
       expect(gameLabP5.p5.originalEllipse_.args[0]).to.deep.equal(gameLabP5.p5.originalEllipse_.args[1]);
     });
 
     it('draws a circle with radius equal to half of width, when no height given', function () {
-      const ellipse = gameLabP5.p5.ellipse(100, 100, 60);
-      const originalEllipse = gameLabP5.p5.originalEllipse_(100, 100, 60, 60);
+      gameLabP5.p5.ellipse(100, 100, 60);
+      gameLabP5.p5.originalEllipse_(100, 100, 60, 60);
       expect(gameLabP5.p5.originalEllipse_.calledTwice).to.equal(true);
       expect(gameLabP5.p5.originalEllipse_.args[0]).to.deep.equal(gameLabP5.p5.originalEllipse_.args[1]);
     });
 
     it('draws a circle with diameter 50 if no width or height given', function () {
-      const ellipse = gameLabP5.p5.ellipse(100, 100);
-      const originalEllipse = gameLabP5.p5.originalEllipse_(100, 100, 50, 50);
+      gameLabP5.p5.ellipse(100, 100);
+      gameLabP5.p5.originalEllipse_(100, 100, 50, 50);
       expect(gameLabP5.p5.originalEllipse_.calledTwice).to.equal(true);
       expect(gameLabP5.p5.originalEllipse_.args[0]).to.deep.equal(gameLabP5.p5.originalEllipse_.args[1]);
     });
@@ -191,22 +191,22 @@ describe('GameLabP5', function () {
     });
 
     it('draws the same rect when called with all arguments', function () {
-      const rect = gameLabP5.p5.rect(100, 100, 50, 50);
-      const originalRect = gameLabP5.p5.originalRect_(100, 100, 50, 50);
+      gameLabP5.p5.rect(100, 100, 50, 50);
+      gameLabP5.p5.originalRect_(100, 100, 50, 50);
       expect(gameLabP5.p5.originalRect_.calledTwice).to.equal(true);
       expect(gameLabP5.p5.originalRect_.args[0]).to.deep.equal(gameLabP5.p5.originalRect_.args[1]);
     });
 
     it('draws a square with height equal to width, when no height given', function () {
-      const rect = gameLabP5.p5.rect(100, 100, 60);
-      const originalRect = gameLabP5.p5.originalRect_(100, 100, 60, 60);
+      gameLabP5.p5.rect(100, 100, 60);
+      gameLabP5.p5.originalRect_(100, 100, 60, 60);
       expect(gameLabP5.p5.originalRect_.calledTwice).to.equal(true);
       expect(gameLabP5.p5.originalRect_.args[0]).to.deep.equal(gameLabP5.p5.originalRect_.args[1]);
     });
 
     it('draws a size 50 square if no width or height given', function () {
-      const rect = gameLabP5.p5.rect(100, 100);
-      const originalRect = gameLabP5.p5.originalRect_(100, 100, 50, 50);
+      gameLabP5.p5.rect(100, 100);
+      gameLabP5.p5.originalRect_(100, 100, 50, 50);
       expect(gameLabP5.p5.originalRect_.calledTwice).to.equal(true);
       expect(gameLabP5.p5.originalRect_.args[0]).to.deep.equal(gameLabP5.p5.originalRect_.args[1]);
     });
