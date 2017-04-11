@@ -36,7 +36,8 @@ export default class PhotoRelease extends ProgramRegistrationComponent {
         {this.buildButtonsFromOptions({
           name: 'photoRelease',
           label: "I agree",
-          type: 'check'
+          type: 'check',
+          required: false
         })}
       </FormGroup>
     );
