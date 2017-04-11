@@ -77,7 +77,6 @@ testsContext.keys().forEach(testsContext);
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
-  var dotMinIfNotDev = envConstants.DEV ? '' : '.min';
   var piskelRoot = String(child_process.execSync('`npm bin`/piskel-root')).replace(/\s+$/g,'');
   var PISKEL_DEVELOPMENT_MODE = grunt.option('piskel-dev');
   if (PISKEL_DEVELOPMENT_MODE) {
@@ -429,7 +428,8 @@ testsContext.keys().forEach(testsContext);
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
-    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',
+    'home/teacher_homepage':        './src/sites/studio/pages/home/teacher_homepage.js'
   };
 
   var otherEntries = {
