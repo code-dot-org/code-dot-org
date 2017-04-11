@@ -1,5 +1,4 @@
 import {assert} from '../../util/configuredChai';
-import testUtils from '../../util/testUtils';
 import LevelModel from '@cdo/apps/craft/simple/game/LevelMVC/LevelModel';
 
 let _ = require('lodash');

@@ -3,7 +3,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { UnconnectedProgressLesson as ProgressLesson } from '@cdo/apps/templates/progress/ProgressLesson';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import Immutable from 'immutable';
 import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from "@cdo/apps/util/color";
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
