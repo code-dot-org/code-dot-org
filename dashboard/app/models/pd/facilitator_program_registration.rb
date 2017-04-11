@@ -89,7 +89,7 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
     ],
 
     csp_alternate_training_date: [
-      'June 22-23 (immediately following TeacherCon 1)',
+      'June 24 - 25 (immediately following TeacherCon 1)',
       'July 22 - 23 (immediately following TeacherCon 2)',
       'August 5 - 6 (immediately following TeacherCon 3)'
     ],
