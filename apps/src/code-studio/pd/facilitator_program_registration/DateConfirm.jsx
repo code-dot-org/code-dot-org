@@ -104,6 +104,7 @@ class TeacherconDateConfirm extends ProgramRegistrationComponent {
 
     const label = `
       Your assigned summer training is TeacherCon
+      ${this.props.teacherconLocation}
       ${this.props.attendanceDates.teachercon.arrive} -
       ${this.props.attendanceDates.teachercon.depart}. Please confirm you can
       make your assigned TeacherCon training
@@ -133,6 +134,7 @@ export default class DateConfirm extends ProgramRegistrationComponent {
             errors={this.props.errors}
             data={this.props.data}
             attendanceDates={this.props.attendanceDates}
+            teacherconLocation={this.props.teacherconLocation}
           />
         }
         {this.props.attendanceDates.training &&
@@ -152,11 +154,13 @@ export default class DateConfirm extends ProgramRegistrationComponent {
 
 DateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
   attendanceDates: React.PropTypes.object.isRequired,
+  teacherconLocation: React.PropTypes.string.isRequired,
   course: React.PropTypes.string,
 });
 
 TeacherconDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
   attendanceDates: React.PropTypes.object.isRequired,
+  teacherconLocation: React.PropTypes.string.isRequired,
 });
 
 TrainingDateConfirm.propTypes = Object.assign({}, ProgramRegistrationComponent.propTypes, {
