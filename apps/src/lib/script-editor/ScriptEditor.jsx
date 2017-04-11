@@ -1,5 +1,6 @@
 import React from 'react';
 import FlexGroup from './FlexGroup';
+import StageDescriptions from './StageDescriptions';
 
 const styles = {
   input: {
@@ -68,6 +69,12 @@ const ScriptEditor = React.createClass({
             style={styles.input}
           />
         </label>
+        <StageDescriptions
+          isImporting={false}
+          currentByStage={this.props.i18nData.stageDescriptions}
+          importedByStage={{}}
+          inputStyle={styles.input}
+        />
         <h2>Basic Settings</h2>
         <label>
           Visible in Teacher Dashboard
