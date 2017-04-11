@@ -71,7 +71,7 @@ const GradientNavCard = React.createClass({
 
     return (
       <div style={styles.card}>
-        <img src={require('.../static/GradientNavCard-img-REMOVE.png')} style={styles.image}/>
+        <img src={require('../../static/navcard-placeholder.png')} style={styles.image}/>
         <h2 style={styles.title}>{cardData.title}</h2>
         <h4 style={styles.description}>{cardData.description}</h4>
         <ProgressButton href={cardData.link} color="gray" text={cardData.buttonText} style={styles.button}/>
