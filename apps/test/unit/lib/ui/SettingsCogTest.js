@@ -1,11 +1,14 @@
 import React from 'react';
-import {mount} from 'enzyme';
 import Portal from 'react-portal';
+import {mount, ReactWrapper} from 'enzyme';
+import sinon from 'sinon';
 import msg from '@cdo/locale';
 import {expect} from '../../../util/configuredChai';
-import SettingsCog, {ManageAssets, ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
+import SettingsCog, {ToggleMaker} from '@cdo/apps/lib/ui/SettingsCog';
+import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
+import * as assets from '@cdo/apps/code-studio/assets';
 
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
@@ -16,10 +19,10 @@ describe('SettingsCog', () => {
   it('opens the menu when the cog is clicked', () => {
     const wrapper = mount(<SettingsCog/>);
     const cog = wrapper.find(FontAwesome).first();
-    const menu = wrapper.find(Portal).first();
-    expect(menu).to.have.prop('isOpened', false);
+    const portal = wrapper.find(Portal).first();
+    expect(portal).to.have.prop('isOpened', false);
     cog.simulate('click');
-    expect(menu).to.have.prop('isOpened', true);
+    expect(portal).to.have.prop('isOpened', true);
   });
 
   it('can close the menu', () => {
@@ -64,18 +67,45 @@ describe('SettingsCog', () => {
     }, 0);
   });
 
-  describe('menu items', () => {
-    describe('manage assets', () => {
-      it('opens the asset manager and calls handleManageAssets when clicked', () => {
-        const handleManageAssets = sinon.spy();
-        const wrapper = mount(
-          <ManageAssets onClick={handleManageAssets}/>
-        );
-        expect(wrapper.text()).to.equal(msg.manageAssets());
 
-        expect(handleManageAssets).not.to.have.been.called;
-        wrapper.simulate('click');
-        expect(handleManageAssets).to.have.been.calledOnce;
+  describe('menu items', () => {
+    let wrapper, portal, menuWrapper;
+
+    beforeEach(() => {
+      wrapper = mount(<SettingsCog/>);
+      const cog = wrapper.find(FontAwesome).first();
+      portal = wrapper.find(Portal).first();
+      expect(portal).to.have.prop('isOpened', false);
+      cog.simulate('click');
+      expect(portal).to.have.prop('isOpened', true);
+      menuWrapper = getPortalContent(wrapper);
+    });
+
+    describe('manage assets', () => {
+      beforeEach(() => {
+        sinon.stub(assets, 'showAssetManager');
+      });
+
+      afterEach(() => {
+        assets.showAssetManager.restore();
+      });
+
+      it('is the first menu item', () => {
+        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first();
+        expect(firstMenuItem.text()).to.equal(msg.manageAssets());
+      });
+
+      it('calls showAssetManager when clicked', () => {
+        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first();
+        expect(assets.showAssetManager).not.to.have.been.called;
+        firstMenuItem.simulate('click');
+        expect(assets.showAssetManager).to.have.been.calledOnce;
+      });
+
+      it('closes the menu when clicked', () => {
+        const firstMenuItem = menuWrapper.find(PopUpMenu.Item).first();
+        firstMenuItem.simulate('click');
+        expect(portal).to.have.prop('isOpened', false);
       });
     });
 
@@ -116,7 +146,7 @@ describe('SettingsCog', () => {
         expect(wrapper).to.be.blank;
       });
 
-      it('calls project.toggleMakerEnabled and handleToggleMaker when clicked', () => {
+      it('calls handleToggleMaker when clicked', () => {
         maker.isAvailable.returns(true);
         maker.isEnabled.returns(false);
         const handleToggleMaker = sinon.spy();
@@ -132,3 +162,18 @@ describe('SettingsCog', () => {
     });
   });
 });
+
+/**
+ * @param {ReactWrapper} wrapper - enzyme wrapper containing a mounted Portal component
+ * @returns ReactWrapper - the content of the portal
+ */
+function getPortalContent(wrapper) {
+  const portal = wrapper.find(Portal);
+  if (portal.length > 0) {
+    const contentNode = portal.node.portal;
+    if (contentNode) {
+      return new ReactWrapper(contentNode, contentNode);
+    }
+  }
+  return null;
+}
