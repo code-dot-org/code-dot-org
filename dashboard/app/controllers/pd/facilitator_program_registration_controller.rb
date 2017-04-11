@@ -1,4 +1,7 @@
 class Pd::FacilitatorProgramRegistrationController < ApplicationController
+  # here we handle the CanCan error manually so that we can present
+  # non-authorized users with a custom page explaining that they must be logged
+  # in as a facilitator account, rather than giving them the generic 404
   rescue_from CanCan::AccessDenied do
     render :unauthorized
   end
