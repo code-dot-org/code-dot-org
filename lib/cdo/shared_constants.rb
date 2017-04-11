@@ -247,6 +247,7 @@ module SharedConstants
       "World.mouseY": null,
       "World.frameRate": null,
       "World.frameCount": null,
+      "World.seconds": null,
       "playSound": null,
       "stopSound": null,
       "keyDown": null,
