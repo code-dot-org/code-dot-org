@@ -90,7 +90,7 @@ const styles = {
 
 const ProjectCard = React.createClass({
   propTypes: {
-    projectData: React.PropTypes.isRequired,
+    projectData: React.PropTypes.object.isRequired,
     currentGallery: React.PropTypes.string.isRequired,
   },
 

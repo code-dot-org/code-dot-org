@@ -26,7 +26,7 @@ const styles = {
 const ProjectCardGrid = React.createClass({
   propTypes: {
     projects: React.PropTypes.array.isRequired,
-    galleryType: React.PropTypes.oneOf(['personal', 'class', 'public'])
+    galleryType: React.PropTypes.oneOf(['personal', 'class', 'public']).isRequired
   },
 
 // Most recently edited projects should display 1st. This might not be needed dependent on whether the projects returned from the query are already sorted by recency or not. ****ASK DAVE****
