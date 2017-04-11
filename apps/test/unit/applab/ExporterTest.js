@@ -5,7 +5,6 @@ var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import { setAppOptions } from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
-testUtils.setExternalGlobals();
 
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
 const APPLAB_LOCALE_JS_CONTENT = 'applab_locale.js content';
@@ -43,6 +42,8 @@ a.third-rule {
 
 describe('The Exporter,', function () {
   var server, listStub;
+
+  testUtils.setExternalGlobals();
 
   beforeEach(function () {
     server = sinon.fakeServerWithClock.create();
