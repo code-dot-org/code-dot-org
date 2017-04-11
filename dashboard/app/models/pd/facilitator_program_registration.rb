@@ -208,6 +208,12 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
   def validate_required_fields
     hash = form_data_hash.transform_keys {|key| key.underscore.to_sym}
 
+    # empty fields may come about when the user selects then unselects an
+    # option. They should be treated as if they do not exist
+    hash.delete_if do |_key, value|
+      value.empty?
+    end
+
     if hash.try(:[], :confirm_teachercon_date) == TEACHERCON_ALTERNATE
       add_key_error(:alternate_teachercon_date) unless hash.key?(:alternate_teachercon_date)
     end
