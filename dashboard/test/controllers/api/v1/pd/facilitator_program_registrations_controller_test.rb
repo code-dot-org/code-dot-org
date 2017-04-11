@@ -23,7 +23,7 @@ class Api::V1::Pd::FacilitatorProgramRegistrationsControllerTest < ::ActionContr
     sign_in @facilitator
 
     program_registration_hash = build(:pd_facilitator_program_registration_hash)
-    program_registration_hash.delete('photoRelease')
+    program_registration_hash.delete('liabilityWaiver')
 
     assert_no_difference 'Pd::FacilitatorProgramRegistration.count' do
       put :create, params: {
@@ -33,7 +33,7 @@ class Api::V1::Pd::FacilitatorProgramRegistrationsControllerTest < ::ActionContr
       assert_response :bad_request
     end
 
-    program_registration_hash['photoRelease'] = "Invalid response"
+    program_registration_hash['liabilityWaiver'] = "Invalid response"
 
     assert_no_difference 'Pd::FacilitatorProgramRegistration.count' do
       put :create, params: {
@@ -43,7 +43,7 @@ class Api::V1::Pd::FacilitatorProgramRegistrationsControllerTest < ::ActionContr
       assert_response :bad_request
     end
 
-    program_registration_hash['photoRelease'] = "Yes"
+    program_registration_hash['liabilityWaiver'] = "Yes"
 
     assert_creates Pd::FacilitatorProgramRegistration do
       put :create, params: {
