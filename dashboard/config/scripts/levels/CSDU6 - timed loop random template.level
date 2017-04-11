@@ -100,10 +100,7 @@
     "makerlab_enabled": "true",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

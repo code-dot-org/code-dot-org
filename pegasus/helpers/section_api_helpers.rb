@@ -13,7 +13,7 @@ class DashboardStudent
     Dashboard.db[:sections].
       join(:followers, section_id: :sections__id).
       join(:users, id: :followers__student_user_id).
-      where(sections__user_id: user_id).
+      where(sections__user_id: user_id, sections__deleted_at: nil).
       where(followers__deleted_at: nil).
       where(users__deleted_at: nil).
       select(*fields).
@@ -346,9 +346,8 @@ class DashboardSection
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = Dashboard.db[:sections].
-      join(:users, id: :user_id).
       select(*fields).
-      where(sections__id: id, sections__deleted_at: nil).
+      where(sections__id: id, sections__user_id: user_id, sections__deleted_at: nil).
       first
 
     section = new(row)

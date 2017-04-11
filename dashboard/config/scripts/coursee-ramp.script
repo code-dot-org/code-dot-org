@@ -1,3 +1,6 @@
+stage 'Real Life Algorithms: Dice Race'
+level 'DiceRace'
+
 stage 'Introduction'
 level 'courseE_video_ramp1'
 level 'courseE_maze_ramp1'

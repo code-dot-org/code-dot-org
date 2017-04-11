@@ -48,6 +48,7 @@ import {
   closeDialog as closeInstructionsDialog
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
+import { setVisualizationScale } from './redux/layout';
 var commonReducers = require('./redux/commonReducers');
 
 // Make sure polyfills are available in all code studio apps and level tests.
@@ -94,7 +95,6 @@ function StudioApp() {
    * @type {AudioPlayer}
    */
   this.cdoSounds = null;
-  this.Dialog = null;
   /**
    * @type {?Droplet.Editor}
    */
@@ -235,7 +235,6 @@ StudioApp.prototype.configure = function (options) {
   }
 
   this.cdoSounds = options.cdoSounds;
-  this.Dialog = options.Dialog;
 
   // Bind assetUrl to the instance so that we don't need to depend on callers
   // binding correctly as they pass this function around.
@@ -408,11 +407,11 @@ StudioApp.prototype.init = function (config) {
             dropletError: !nonDropletError,
             fromBlocks: fromBlocks
           });
-          this.feedback_.showToggleBlocksError(this.Dialog);
+          this.feedback_.showToggleBlocksError();
         }
         this.onDropletToggle_();
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
+        this.feedback_.showGeneratedCode(config.appStrings);
       }
     }, this));
   }
@@ -537,7 +536,7 @@ StudioApp.prototype.init = function (config) {
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function () {
-      this.feedback_.showClearPuzzleConfirmation(this.Dialog, hideIcon, (function () {
+      this.feedback_.showClearPuzzleConfirmation(hideIcon, (function () {
         this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
@@ -547,7 +546,7 @@ StudioApp.prototype.init = function (config) {
 
   if (this.isUsingBlockly() && Blockly.contractEditor) {
     Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
-      this.feedback_.showSimpleDialog(this.Dialog, {
+      this.feedback_.showSimpleDialog({
         headerText: undefined,
         bodyText: msg.examplesFailedOnClose(),
         cancelText: msg.ignore(),
@@ -573,7 +572,6 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
     var contentDiv = document.createElement('div');
     var dialog = this.createModalDialog({
-      Dialog: this.Dialog,
       contentDiv: contentDiv,
       defaultBtnSelector: 'again-button',
       id: 'showVersionsModal'
@@ -954,8 +952,7 @@ StudioApp.prototype.inject = function (div, options) {
     rtl: this.isRtl(),
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
-    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_,
-        this.Dialog)
+    customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
   };
   Blockly.inject(div, utils.extend(defaults, options), this.cdoSounds);
 };
@@ -1051,7 +1048,6 @@ StudioApp.prototype.arrangeBlockPosition = function (startBlocks, arrangement) {
 };
 
 StudioApp.prototype.createModalDialog = function (options) {
-  options.Dialog = utils.valueOr(options.Dialog, this.Dialog);
   return this.feedback_.createModalDialog(options);
 };
 
@@ -1367,6 +1363,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
     visualization.style.width = newVizWidthString;
   }
   var scale = (newVizWidth / this.nativeVizWidth);
+  this.reduxStore.dispatch(setVisualizationScale(scale));
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
 
@@ -1461,7 +1458,6 @@ StudioApp.prototype.clearHighlighting = function () {
 *     this.TestResults).
 */
 StudioApp.prototype.displayFeedback = function (options) {
-  options.Dialog = this.Dialog;
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.sendToPhone = this.sendToPhone;
@@ -2091,7 +2087,6 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     config.dropletConfig,
     config.level.codeFunctions,
     config.level.autocompletePaletteApisOnly,
-    this.Dialog,
     config.app);
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);

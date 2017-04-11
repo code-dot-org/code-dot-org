@@ -25,7 +25,6 @@ module.exports = {
     var level;
 
     var data = dataItem();
-    var app = testCollection.app;
 
     // Each testCollection file must either specify a file from which to get the
     // level, or provide it's own custom level

@@ -91,12 +91,9 @@
       "buzzer.stop": null,
       "buzzer.frequency": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "disable_if_else_editing": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

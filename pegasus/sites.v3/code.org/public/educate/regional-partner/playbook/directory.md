@@ -1,12 +1,4 @@
-
----
-title: directory
-nav: regional_partner_playbook_nav
----
-
-<a id="top"></a>
-
-# Regional Partner Directory
+﻿# Regional Partner Directory
 
 Each of our Regional Partners is listed below in alphabetical order by organization name. To visit their website, click on the name of the organization. You'll find the region of service and contact information, as well as a brief description of the organization below.
 
@@ -664,7 +656,7 @@ CS Discoveries<br/>
 
 **Contact Information**<br/>
 Jen Noborikawa<br/>
-jen@weare.ci
+jen@codeinteractive.org
 
 [**Back to the top**](#top)
 <br/>
