@@ -10,7 +10,6 @@ class ScriptDSL < BaseDSL
     @current_scriptlevel = nil
     @scriptlevels = []
     @stages = []
-    @i18n_strings = Hash.new({})
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
@@ -139,12 +138,12 @@ class ScriptDSL < BaseDSL
   end
 
   def i18n_strings
-    @i18n_strings['stage'] = {}
+    i18n_strings = {}
     @stages.each do |stage|
-      @i18n_strings['stage'][stage[:stage]] = stage[:stage]
+      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {'name' => {@name => @i18n_strings}}
+    {'name' => {@name => {'stages' => i18n_strings}}}
   end
 
   def self.parse_file(filename)
