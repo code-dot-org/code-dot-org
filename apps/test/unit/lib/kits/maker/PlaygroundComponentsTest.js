@@ -156,7 +156,7 @@ describe('Circuit Playground Components', () => {
           });
         });
 
-        it.skip('CSS functional notation "rgb(30, 60, 90)"', () => {
+        it('CSS functional notation "rgb(30, 60, 90)"', () => {
           led.color('rgb(30, 60, 90)');
           expect(led.color()).to.deep.equal({
             red: 30,
@@ -165,25 +165,25 @@ describe('Circuit Playground Components', () => {
           });
         });
 
-        it.skip('CSS functional notation "rgba(30, 60, 90, 0.5)"', () => {
+        it('CSS functional notation "rgba(30, 60, 90, 0.5)"', () => {
           led.color('rgba(30, 60, 90, 0.5)');
           expect(led.color()).to.deep.equal({
-            red: 30,
-            green: 60,
-            blue: 90,
+            red: 15,
+            green: 30,
+            blue: 45,
           });
         });
 
-        it.skip('CSS3 functional notation "rgb(30, 60, 90, 0.5)"', () => {
+        it('CSS4 functional notation "rgb(30, 60, 90, 0.5)"', () => {
           led.color('rgb(30, 60, 90, 0.5)');
           expect(led.color()).to.deep.equal({
-            red: 30,
-            green: 60,
-            blue: 90,
+            red: 15,
+            green: 30,
+            blue: 45,
           });
         });
 
-        it.skip('CSS3 functional notation "rgba(30, 60, 90)"', () => {
+        it('CSS4 functional notation "rgba(30, 60, 90)"', () => {
           led.color('rgba(30, 60, 90)');
           expect(led.color()).to.deep.equal({
             red: 30,
