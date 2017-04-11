@@ -2,7 +2,9 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  setup do
+  self.use_transactional_test_case = true
+
+  setup_all do
     @good_data = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
     @good_data_young = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
   end
