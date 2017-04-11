@@ -98,7 +98,8 @@ export default class FacilitatorProgramRegistration extends React.Component {
   }
 
   renderErrorFeedback() {
-    if (this.state.errors.length) {
+    const pageFields = this.pageComponents[this.state.currentPage].associatedFields;
+    if (pageFields.some(field => this.state.errors.includes(field))) {
       return (
         <Alert id="errorFeedback" bsStyle="danger">
           <h3>Please correct the errors below.</h3>
