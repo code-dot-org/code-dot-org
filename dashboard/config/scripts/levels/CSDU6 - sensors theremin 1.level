@@ -109,10 +109,7 @@
     "makerlab_enabled": "true",
     "project_template_level_name": "CSDU6 - sensors theremin template",
     "markdown_instructions": "# Light Theremin: Collecting and Scaling Input\r\n\r\nWhich sensor do you need to take input from?\r\nWhat scale of input is appropriate for this app?\r\n\r\n# Do This\r\n\r\nAdd an event handler to continually collect data from your chosen sensor and use `console.log()` to track how it changes to user interaction. If necessary, change the scale of your input to meet your needs.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

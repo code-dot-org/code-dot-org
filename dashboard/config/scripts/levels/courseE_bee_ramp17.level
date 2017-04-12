@@ -32,7 +32,7 @@
     "instructions": "Use what you have learned to solve this puzzle.",
     "ideal": "11",
     "step_speed": "2",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Because we don't have a repeat block to do something a certain number of times, what block should we use to get us along the path?\",\"hint_id\":\"courseE_bee_ramp17_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/48f6cd43f546d8d9b0d703ec1eae2733/courseE_bee_ramp17.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you were to solve this puzzle without a while block, where would you see repeated code? How can you use this repeated code to shape how you must use a while block to solve the problem?\",\"hint_id\":\"courseE_bee_ramp17\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/15d6d7fcec3115f97788262fde8c56b4/courseE_bee_ramp17.mp3\"}]",
     "markdown_instructions": "For the final puzzle in this stage, use what you have learned to collect all of the nectar and make all of the honey.  \r\n\r\nYou'll need every block in the toolbox to complete this one!",
     "contained_level_names": null
   },
