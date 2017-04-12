@@ -36,10 +36,6 @@
                 %script{src: minifiable_asset_path('js/levelbuilder.js')}
               :javascript
                 window.levelbuilder.ajaxSubmit('.clone_level');
-                $('.clone_level').on('ajax:beforeSend', function (e, xhr) {
-                  var validation_error = $('#validation-error').detach();
-                  $(e.target).parent().append(validation_error);
-                });
             -if @level.is_a? LevelGroup
               %li
                 sublevels
