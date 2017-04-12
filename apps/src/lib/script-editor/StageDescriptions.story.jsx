@@ -50,6 +50,7 @@ export default storybook => {
         name:'stage descriptions',
         story: () => (
           <StageDescriptions
+            scriptName="csd2"
             currentByStage={currentByStage}
           />
         )
@@ -59,6 +60,7 @@ export default storybook => {
         story: () => (
           <ModifyState importText="Querying server..." >
             <StageDescriptions
+              scriptName="csd2"
               currentByStage={currentByStage}
             />
           </ModifyState>
@@ -72,6 +74,7 @@ export default storybook => {
             importText="Imported"
           >
             <StageDescriptions
+              scriptName="csd2"
               currentByStage={currentByStage}
             />
           </ModifyState>
