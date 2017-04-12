@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import _ from 'lodash';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
@@ -7,7 +6,7 @@ const NBSP = "\u00a0";
 
 const styles = {
   main: {
-    border: '1px solid lightgray',
+    border: '1px solid ' + color.light_gray,
     padding: 10
   },
   stage: {
@@ -24,14 +23,17 @@ const styles = {
   update: {
     backgroundColor: 'lightgreen'
   },
+  diff: {
+    backgroundColor: color.realyellow
+  },
   expander: {
     paddingLeft: 10
   },
   collapsed: {
     display: 'none'
   },
-  warning: {
-    backgroundColor: color.realyellow
+  mismatch: {
+    backgroundColor: color.realyellow,
   }
 };
 
@@ -43,10 +45,10 @@ const styles = {
 const StageDescriptions = React.createClass({
   propTypes: {
     scriptName: PropTypes.string.isRequired,
-    // TODO - can we do this by lesson position instead of name, but then still
-    // warn when names are different
-    currentByStage: PropTypes.objectOf(
+    // TODO - update stories.
+    currentDescriptions: PropTypes.arrayOf(
       PropTypes.shape({
+        name: PropTypes.string.isRequired,
         studentDescription: PropTypes.string.isRequired,
         teacherDescription: PropTypes.string.isRequired,
       })
@@ -57,9 +59,9 @@ const StageDescriptions = React.createClass({
     return {
       // start collapsed
       collapsed: true,
-      importText: null,
-      importedByStage: {},
-      ignoredStages: []
+      buttonText: null,
+      importedDescriptions: [],
+      mismatchedStages: [],
     };
   },
 
@@ -70,49 +72,55 @@ const StageDescriptions = React.createClass({
   },
 
   processImport(result) {
-    let importedByStage = {};
-    const { currentByStage } = this.props;
+    let importedDescriptions = [];
+    const { currentDescriptions } = this.props;
 
-    const ignoredStages = [];
+    const mismatchedStages = [];
 
-    result.lessons.forEach(lesson => {
-      const current = currentByStage[lesson.title];
-      if (!current) {
-        ignoredStages.push(lesson.title);
+    result.lessons.forEach((lesson, index) => {
+      if (index >= currentDescriptions.length) {
+        // CB gave us more lessons that we have on LB. throw the extras away
+        mismatchedStages.push(lesson.title);
         return;
       }
-      importedByStage[lesson.title] = {
+
+      if (currentDescriptions[index].name !== lesson.title) {
+        mismatchedStages.push(lesson.title);
+      }
+
+      importedDescriptions.push({
+        name: lesson.title,
         studentDescription: lesson.student_desc,
         teacherDescription: lesson.teacher_desc
-      };
+      });
     });
 
     this.setState({
-      importText: 'Imported',
-      importedByStage,
-      ignoredStages
+      buttonText: 'Imported',
+      importedDescriptions,
+      mismatchedStages
     });
   },
 
   importDescriptions() {
     this.setState({
-      importText: 'Querying server...'
+      buttonText: 'Querying server...'
     });
 
     $.getJSON(`https://curriculum.code.org/metadata/${this.props.scriptName}.json`)
     .done(this.processImport)
     .fail(jqXHR => {
       this.setState({
-        importText: jqXHR.statusText
+        buttonText: jqXHR.statusText
       });
     });
   },
 
   render() {
-    const { currentByStage } = this.props;
-    const { importedByStage } = this.state;
+    const { currentDescriptions } = this.props;
+    const { importedDescriptions } = this.state;
 
-    const stageNames = _.uniq(Object.keys(currentByStage).concat(Object.keys(importedByStage)));
+    const hasImported = importedDescriptions.length > 0;
 
     return (
       <div>
@@ -125,46 +133,60 @@ const StageDescriptions = React.createClass({
           }
           {!this.state.collapsed &&
             <div>
-              {stageNames.map((stageName, index) => {
-                const currentStudent = (currentByStage[stageName] || {}).studentDescription;
-                const currentTeacher = (currentByStage[stageName] || {}).teacherDescription;
-                const updatedStudent = (importedByStage[stageName] || {}).studentDescription;
-                const updatedTeacher = (importedByStage[stageName] || {}).teacherDescription;
+              {currentDescriptions.map((stage, index) => {
+                const currentStudent = stage.studentDescription;
+                const currentTeacher = stage.teacherDescription;
+
+                const importedStage = importedDescriptions[index];
+                const updatedStudent = hasImported && importedStage.studentDescription;
+                const updatedTeacher = hasImported && importedStage.teacherDescription;
 
                 return (
                   <div style={styles.stage} key={index}>
-                    <div style={styles.stageName}>{stageName}</div>
+                    <div style={styles.stageName}>
+                      {stage.name}
+                    </div>
+                    {hasImported && importedStage.name !== stage.name &&
+                      <div>
+                        Lesson name on Curriculum Builder:{" "}
+                        <span style={styles.diff}>{importedStage.name}</span>
+                      </div>
+                    }
                     <label>
                       Student Description
                       <div style={styles.original}>{currentStudent || NBSP}</div>
-                      {importedByStage[stageName] && updatedStudent !== currentStudent &&
+                      {hasImported && updatedStudent !== currentStudent &&
                         <div style={styles.update}>{updatedStudent}</div>
                       }
                     </label>
                     <label>
                       Teacher Description
                       <div style={styles.original}>{currentTeacher || NBSP}</div>
-                      {importedByStage[stageName] && updatedTeacher !== currentTeacher &&
+                      {hasImported && updatedTeacher !== currentTeacher &&
                         <div style={styles.update}>{updatedTeacher}</div>
                       }
                     </label>
                   </div>
                 );
               })}
-              {this.state.ignoredStages.length > 0 &&
-                <div style={styles.warning}>
-                  Stages from Curriculum Builder that don't have matching stages in levelbuilder:
-                  {this.state.ignoredStages.map((name, index) => (
-                    <div key={index}>{name}</div>
+              {this.state.mismatchedStages.length > 0 &&
+                <div style={styles.mismatch}>
+                  <div style={{fontWeight: 'bold'}}>
+                    Curriculum Builder stages with different names than their levelbuilder
+                    counterparts. If there are a lot of these, it may indicate them being
+                    ordered differently in the two environments.
+                  </div>
+                  {this.state.mismatchedStages.map((name, index) => (
+                    <div key={index}>- {name}</div>
                   ))}
                 </div>
               }
               <button
                 className="btn"
-                disabled={!!this.state.importText}
+                disabled={!!this.state.buttonText}
                 onClick={this.importDescriptions}
               >
-                {this.state.importText || "Import from Curriculum Builder"}
+                {this.state.buttonText || "Import from Curriculum Builder"}
               </button>
             </div>
           }

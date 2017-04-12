@@ -72,7 +72,7 @@ const ScriptEditor = React.createClass({
         </label>
         <StageDescriptions
           scriptName={this.props.name}
-          currentByStage={this.props.i18nData.stageDescriptions}
+          currentDescriptions={this.props.i18nData.stageDescriptions}
         />
         <h2>Basic Settings</h2>
         <label>
