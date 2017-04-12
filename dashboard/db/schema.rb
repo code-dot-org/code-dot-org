@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410203353) do
+ActiveRecord::Schema.define(version: 20170412065832) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -324,6 +324,15 @@ ActiveRecord::Schema.define(version: 20170410203353) do
     t.index ["navigator_user_level_id"], name: "index_paired_user_levels_on_navigator_user_level_id", using: :btree
   end
 
+  create_table "pd_accepted_programs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "workshop_name",          null: false
+    t.string   "course",                 null: false
+    t.integer  "user_id",                null: false
+    t.integer  "teacher_application_id"
+  end
+
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_session_id",    null: false
     t.integer  "teacher_id"
@@ -435,7 +444,6 @@ ActiveRecord::Schema.define(version: 20170410203353) do
     t.string   "primary_email",                           null: false
     t.string   "secondary_email",                         null: false
     t.text     "application",               limit: 65535, null: false
-    t.string   "accepted_workshop"
     t.string   "regional_partner_override"
     t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
     t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree

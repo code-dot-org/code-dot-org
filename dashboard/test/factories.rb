@@ -2,6 +2,23 @@ require 'cdo/activity_constants'
 
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :experiment do
+    name "fancyFeature"
+
+    factory :user_based_experiment, class: 'UserBasedExperiment' do
+      type "UserBasedExperiment"
+      percentage 50
+    end
+    factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
+      type "TeacherBasedExperiment"
+      percentage 50
+      script nil
+    end
+    factory :single_section_experiment, class: 'SingleSectionExperiment' do
+      type "SingleSectionExperiment"
+      section
+    end
+  end
   factory :section_hidden_stage do
     section nil
     stage nil
@@ -675,6 +692,13 @@ FactoryGirl.define do
         liabilityWaiver: ["Yes"]
       }.stringify_keys
     end
+  end
+
+  factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
+    workshop_name 'a workshop'
+    course 'csd'
+    association :user, factory: :teacher, strategy: :create
+    association :teacher_application, factory: :pd_teacher_application, strategy: :create
   end
 
   factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
