@@ -75,7 +75,7 @@ class SectionApiHelperTest < SequelTestCase
         )
         assert_nil updated_student
         assert_equal FakeDashboard::STUDENT_DELETED[:name],
-          Dashboard::User.get(FakeDashboard::STUDENT_DELETED[:id]).to_hash[:name]
+          Dashboard::User.get_with_deleted(FakeDashboard::STUDENT_DELETED[:id]).to_hash[:name]
       end
     end
   end
